@@ -1,6 +1,6 @@
 ---
 title: "Converting Terraform to Pulumi Just Got Easier"
-date: 2025-02-25
+date: 2025-02-28
 meta_desc: "Pulumi's conversion tools now automatically handle any Terraform provider, making migration easier than ever"
 meta_image: meta.png
 authors:
@@ -10,13 +10,9 @@ tags:
   - terraform
   - features
 ---
-Big news for infrastructure teams looking to migrate-we've just supercharged Pulumi's Terraform conversion capabilities, making it easier than ever to modernize your infrastructure as code.
+Big news for infrastructure teams looking to migrate – we've just supercharged Pulumi's Terraform conversion capabilities, making it easier than ever to modernize your infrastructure as code.
 
-Pulumi already lets you use [any Terraform/OpenTofu provider](/blog/any-terraform-provider/)
-in your existing projects, and now we've taken it to the next level. With
-[Pulumi CLI version 3.145.0](https://github.com/pulumi/pulumi/releases/tag/v3.145.0) and above, you
-can now automatically convert **ANY** Terraform project to Pulumi _and_
-import its resources - even if it uses providers that don't have native Pulumi equivalents!
+Pulumi already lets you use [any Terraform/OpenTofu provider](/blog/any-terraform-provider/) in your existing projects, and now we've taken it to the next level. With [Pulumi CLI version 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0) and above, you can now automatically convert **ANY** Terraform project to Pulumi _and_ import its resources - even if it uses providers that don't have native Pulumi equivalents!
 
 <!--more-->
 
@@ -82,17 +78,15 @@ pulumi convert --from terraform --language yaml
 
 {{% /chooser %}}
 
-This will download the necessary plugins, run the conversion and output it in
-the current directory, generating all necessary project files.
+This will download the necessary plugins, run the conversion and output it in the current directory, generating all necessary project files.
 
-You can then run `pulumi preview` to see if the project can deploy
-successfully.
+You can then run `pulumi preview` to see if the project can deploy successfully.
 
 ## See It In Action: A Real-World Example
 
-Let's look at something cool - we'll convert a project that combines Google Cloud with PlanetScale (a provider that isn't available in the Pulumi registry yet!). This example shows how the new converter handles mixed provider scenarios effortlessly.
+Let's look at something cool – we'll convert a project that combines Google Cloud with PlanetScale (a provider that isn't available in the Pulumi registry yet!). This example shows how the new converter handles mixed provider scenarios effortlessly.
 
-Here is the Terraform code in a single main.tf file:
+Here is the Terraform code in a single `main.tf` file:
 
 ```terraform
 terraform {
@@ -192,20 +186,14 @@ resource "google_compute_instance" "vm" {
 ```
 
 {{% notes type="warning" %}}
-**Never** store secrets or keys in plain text in your code or commited
-configuration files. I only have a db_password stored here in plain text for
-the sake of readability.
+**Never** store secrets or keys in plain text in your code or configuration files committed to a code repository. We are only storing a `db_password` here in plain text for the sake of readability.
 
-Consider using [Pulumi ESC](https://www.pulumi.com/docs/esc/) to store these types of
-secrets (and any other configuration!) and access them directly from your
-Pulumi programs or as environmental variables with CLI.
+Consider using [Pulumi ESC](https://www.pulumi.com/docs/esc/) to store these types of secrets (and any other configuration!) and access them directly from your Pulumi programs or as environment variables with the CLI.
 {{% /notes %}}
 
-This alone works if you run `terraform plan`--however without *real*
-credentials nothing will really deploy, of course! You can set these in `.tfvars`,
-environmental variables, command line, etc.  
+Note that while this program will `terraform plan` successfully, you'll need *real* credentials in order to actually `apply` and deploy it. You can set these in `.tfvars`, environment variables, or on the command line, for instance.
 
-You can convert this into a new project with the following command:
+We'll convert this into a new Pulumi project with the following command:
 
 {{% chooser language "typescript,python,go,java,yaml" %}}
 
@@ -215,7 +203,7 @@ You can convert this into a new project with the following command:
 pulumi convert --from terraform --language typescript --out pulumi-ts-program
 ```
 
-I have opted to output it to a different directory to preserve the contents of my Terraform project.
+Here we've opted to output generated code to a different directory (`pulumi-ts-program`) to preserve the contents of our Terraform project.
 
 ### Project structure
 
@@ -223,8 +211,8 @@ If we navigate to the `pulumi-ts-program` directory, we can see a few things:
 
 - `Pulumi.yaml`, the Pulumi configuration file.
 - `index.ts`, our equivalent to `main.tf` for TypeScript projects.
-- sdks directory, where the generated bridged provider is output.
-- other node project artifacts such as package.json, node_modules, tsconfig.json, etc.
+- An `sdks` directory, where generated code for providers not in the Pulumi registry (in this case, `planetscale`) has been placed.
+- Other Node.js project artifacts such as `package.json`, `node_modules`, `tsconfig.json`, and so on.
 
 {{% /choosable %}}
 
@@ -234,16 +222,16 @@ If we navigate to the `pulumi-ts-program` directory, we can see a few things:
 pulumi convert --from terraform --language python --out pulumi-python-program
 ```
 
-I have opted to output it to a different directory to preserve the contents of my Terraform project.
+Here we've opted to output generated code to a different directory (`pulumi-python-program`) to preserve the contents of our Terraform project.
 
 ### Project structure
 
 If we navigate to the `pulumi-python-program` directory, we can see a few things:
 
 - `Pulumi.yaml`, the Pulumi configuration file.
-- `__main__.py`, our equivalent to main.tf for Python projects.
-- sdks directory, where the generated bridged provider is output.
-- other Python project artifacts (eg `requirements.txt`, `pyproject.toml`, etc).
+- `__main__.py`, our equivalent to `main.tf` for Python projects.
+- An `sdks` directory, where generated code for providers not in the Pulumi registry (in this case, `planetscale`) has been placed.
+- Other Python project artifacts such as `requirements.txt` or `pyproject.toml`.
 
 {{% /choosable %}}
 
@@ -253,76 +241,63 @@ If we navigate to the `pulumi-python-program` directory, we can see a few things
 pulumi convert --from terraform --language go --out pulumi-go-program
 ```
 
-I have opted to output it to a different directory to preserve the contents of my Terraform project.
+Here we've opted to output generated code to a different directory (`pulumi-go-program`) to preserve the contents of our Terraform project.
 
 ### Project structure
 
 If we navigate to the `pulumi-go-program` directory, we can see a few things:
 
-- main.go, our equivalent to main.tf for golang projects
-- sdks directory, where the generated bridged provider is output
-- other golang project artifacts (go.mod, go.sum)
+- `Pulumi.yaml`, the Pulumi configuration file.
+- `main.go`, our equivalent to `main.tf` for Go projects.
+- An `sdks` directory, where generated code for providers not in the Pulumi registry (in this case, `planetscale`) has been placed.
+- Other Go project artifacts such as `go.mod` and `go.sum`.
 
-### Go specific cleanup
+### Go-specific cleanup
 
-The go code generator outputs everything in the Terraform code, even if it is
-unused. This is an error in a go program, so you'll have to assign the results
-(or the variables which are unused) to the go special `_` for gcpProject,
-region, and planetscaleServiceToken.
-
-These are part of the converted output because in it's current iteration the code
-converter will convert everything unconditionally, even if ultimately it is provider
-configuration (see [cleanup](#cleanup)) and not actual code.
-
-We plan on continuing to polish the go experience to remove manual steps like this.
+Pulumi's Go code generation currently produces code for everything in the Terraform code, even if it is unused. This is an error in a Go program, so we'll have to rename variables such as `gcpProject`, `region`, and `planetscaleServiceToken` to the special `_` identifier in order to avoid compilation errors. We plan on continuing to polish the Go experience to remove manual steps like this.
 
 {{% /choosable %}}
 
 {{% choosable language java %}}
 
 ```shell
-pulumi convert --from terraform --language go --out pulumi-go-program
+pulumi convert --from terraform --language java --out pulumi-java-program
 ```
 
-I have opted to output it to a different directory to preserve the contents of my Terraform project.
+Here we've opted to output generated code to a different directory (`pulumi-java-program`) to preserve the contents of our Terraform project.
 
 ### Project structure
 
-If we navigate to the `pulumi-go-program` directory, we can see a few things:
+If we navigate to the `pulumi-java-program` directory, we can see a few things:
 
-- main.go, our equivalent to main.tf for golang projects
-- sdks directory, where the generated bridged provider is output
-- other golang project artifacts (go.mod, go.sum)
+- `Pulumi.yaml`, the Pulumi configuration file.
+- An `App.java` file under the `src/main/java/generated_program` directory, our equivalent to `main.tf` for Java projects.
+- An `sdks` directory, where generated code for providers not in the Pulumi registry (in this case, `planetscale`) has been placed.
+- Other Java project artifacts such as `pom.xml`.
 
-### Java specific cleanup
+### Java-specific cleanup
 
-The java code generator does not set up the maven dependencies for you so you
-need to copy the code into your source directory (as the printed instructions
-say) in the output directory.
+Pulumi's Java code generation currently does not set up Maven project dependencies for you when generating SDKs for Terraform providers not in the Pulumi registry. As a result you will need to follow the printed instructions and copy the relevant SDK code into your source directory:
 
 ```sh
 cp -r sdks/planetscale/src/* src/
 ```
 
-You also might notice the generated code is using the wrong overload for
-setting the metadata in your GCP instance to set environmental variables.
-Quickly making sure you call "toString" on all values in the map fixes the
-issue.  The code generator does it's best to make compilable code from the get
-go, but sometimes there is ambiguity like these types that the user needs to go
-in and fix.
+You might also notice that the generated Java code is using the wrong overload for setting the metadata in our GCP instance to set environment variables. We can fix this by modifying the relevant calls to invoke `toString` on the values being passed:
 
 ```diff
 .metadata(Map.ofEntries(
-+    Map.entry("DB_HOST", db.url().toString()),
 -    Map.entry("DB_HOST", db.url()),
-    Map.entry("DB_USER", "root"),
-+   Map.entry("DB_PASS", dbPassword.plaintext().toString()),
--   Map.entry("DB_PASS", dbPassword.plaintext()),
-+   Map.entry("DB_NAME", db.name().toString())
--   Map.entry("DB_NAME", db.name())
++    Map.entry("DB_HOST", db.url().toString()),
+     Map.entry("DB_USER", "root"),
+-    Map.entry("DB_PASS", dbPassword.plaintext()),
++    Map.entry("DB_PASS", dbPassword.plaintext().toString()),
+-    Map.entry("DB_NAME", db.name())
++    Map.entry("DB_NAME", db.name().toString())
 ))
+```
 
-We plan on continuing to polish the java experience to remove manual steps like this.
+While Pulumi's code generation does its best to infer the correct types from what can be quite dynamic Terraform code, there are some cases like these where manual intervention is required. We plan on continuing to polish the Java experience to remove work like this.
 
 {{% /choosable %}}
 
@@ -332,34 +307,25 @@ We plan on continuing to polish the java experience to remove manual steps like 
 pulumi convert --from terraform --language yaml --out pulumi-yaml-program
 ```
 
-I have opted to output it to a different directory to preserve the contents of my Terraform project.
+Here we've opted to output generated code to a different directory (`pulumi-yaml-program`) to preserve the contents of our Terraform project.
 
 ### Project structure
 
 If we navigate to the `pulumi-yaml-program` directory, we can see a few things:
 
 - `Pulumi.yaml`, the Pulumi configuration file.
-- `Main.yaml`, our equivalent to main.tf for golang projects.
-- sdks directory, where the generated bridged provider is output.
+- `Main.yaml`, our equivalent to `main.tf` for YAML projects.
+- An `sdks` directory, where generated code for providers not in the Pulumi registry (in this case, `planetscale`) has been placed.
 
 {{% /choosable %}}
 
 {{% /chooser %}}
 
-### Cleanup
+### Configuration
 
-If we simply run `pulumi up` this project unfortunately won't run right away.
-We need to create our stack configuration that contains the GCP and PlanetScale credentials
-(you may have noticed some warnings to the tune of
-`warning: /Users/PulumiUser/src/MyAwesomeProject/deployment/main.tf:16,1-18: Failed to evaluate provider config; Could not evaluate expression for gcp:project`
-that indicate these config values need to be set up in Pulumi).
+While our project's code is now ready to go, if we simply run `pulumi up` things won't work right away. We first need to create a stack configuration containing our GCP and PlanetScale credentials (you may have noticed some warnings to the tune of `warning: /Users/PulumiUser/src/MyAwesomeProject/deployment/main.tf:16,1-18: Failed to evaluate provider config; Could not evaluate expression for gcp:project` that indicate these configuration values need to be set up in Pulumi). This is akin to using e.g. `.tfvars` files in Terraform.
 
-These were part of our `main.tf` file `variables` (and potentially set in our
-`.tfvars`), but the code generator doesn't distinguish between provider config
-and code, so we need to handle this part on our own (for now).
-
-These can go in either your `Pulumi.yaml` or your stack configuration.  Places
-for them are already generated, you just need to fill them in:
+Pulumi has generated placeholders in the `Pulumi.yaml` file for these values, so we just need to fill them in:
 
 ```yaml
 name: terraform-convert-example
@@ -377,7 +343,7 @@ config:
     value: planetscaletoken
 ```
 
-After filling things in the `Pulumi.yaml` should look something like this:
+After replacing all the placeholders we have something like this:
 
 ```yaml
 name: terraform-convert-example
@@ -396,45 +362,23 @@ config:
 ```
 
 {{% notes type="warning" %}}
-Once again-and it is worth reiterating-**never *ever*** store secrets in a git repository
-that is publicly visible. Even in a private repository, certain secrets might
-not be something everyone with access to the source in your repository should
-have access to.
-
-We highly recommend you use a secrets and configuration service like [Pulumi ESC](https://www.pulumi.com/docs/esc/)
-to handle this kind of thing.
+Once again—and it is worth reiterating—**never, ever** store secrets or keys in plain text in your code or configuration files committed to a code repository. Even in a private repository, certain secrets might not be something everyone with access to the source in your repository should have access to. Consider using [Pulumi ESC](https://www.pulumi.com/docs/esc/) to store these types of secrets, or consult the documentation on Pulumi's [rich set of built-in features](https://www.pulumi.com/docs/iac/concepts/secrets/) for working with secrets and encrypted configuration values.
 {{% /notes %}}
 
-Now if you run `pulumi preview` it successfully generates a plan, and if you
-used real credentials in your `Pulumi.yaml` it'll deploy with `pulumi up`.
+Now we can run `pulumi preview` to see the plan that will be executed. With real credentials, we can follow with `pulumi up` to deploy our infrastructure.
 
-The generated code could of course be cleaned up a bit since there may be some unused variables,
-repeated code, etc-just as before `pulumi convert` is a good starting point, but now that your
-infrastructure is just there is so much _more_ that you can do.
+Of course, the code generated by `pulumi convert` is just a starting point – from here there is so much _more_ that we can do! Here are some suggestions:
 
-Here are some starting suggestions:
+- Abstract functionality that is shared, perhaps by extracting it into reusable functions or classes.
+- Consider moving any functions that you will use in different infrastructure projects to a shared dependency or a [Component Resource](/docs/iac/concepts/resources/components/#component-resources).
+- Do anything you need to have your infrastructure behave how you want: consolidate functionality from scripts, read information from files and services, the sky is the limit! A Pulumi program is _just a program_!
 
-- Extract functionality that is shared into functions.
-- Consider moving any functions that you will use in different infrastructure
-  projects to a shared dependency or a
-  [Component Resource](/docs/iac/concepts/resources/components/#component-resources).
-- Do anything you need to have your [infrastructure behave how you want](blog/next-level-iac-pulumi-runtime-logic/).
-  Consolidate functionality from scripts, read information from files and
-  services-the sky is the limit. A pulumi program is _just a program_!
+## Importing Resources from Any Terraform Provider
 
-## Importing Resources from Any Terraform Providers
+With the release of [Pulumi 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0), we have also added the ability to import resources from any Terraform provider. See the [documentation for `pulumi import`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_import/) for more details. As an example, let's import a resource from [Backblaze](https://backblaze.com), a block storage service that doesn't have a native Pulumi provider:
 
-With the release of [Pulumi 3.146.0](https://github.com/pulumi/pulumi/releases/tag/v3.146.0),
-we have also added the ability to import resources from any Terraform provider.
-These will be managed by the Pulumi Terraform parameterized provider and code
-will also be generated to manage these resources from within Pulumi.  See the
-[documentation for `pulumi import`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_import/) for more
-details.
-
-Here is an example of importing a resource using [Backblaze](https://backblaze.com), a block storage service.
-
-1. First create your application keys on the Backblaze portal.
-1. Run `terraform apply` on the following:
+1. First, we'll create our application keys on the Backblaze portal.
+1. Next, we'll run `terraform apply` on the following `main.tf` file to create some infrastructure that we can later import into Pulumi:
 
     ```terraform
     terraform {
@@ -457,15 +401,13 @@ Here is an example of importing a resource using [Backblaze](https://backblaze.c
     }
     ```
 
-1. Now from your Pulumi project be sure to add the Terraform provider, this is
-   not automatic on import yet because the Pulumi project needs to be made
-   aware of which particular package contains the providers.
+1. From our Pulumi project, we'll use Pulumi's support for any Terraform provider to add Backblaze support to our project:
 
     ```
     pulumi package add terraform-provider backblaze/b2
     ```
 
-1. Configure the stack for your provider by adding the appropriate keys to the configuration:
+1. We can then configure the provider in our Pulumi stack by adding the appropriate keys to our `Pulumi.yaml`:
 
     ```yaml
     name: pulumi_project
@@ -484,46 +426,39 @@ Here is an example of importing a resource using [Backblaze](https://backblaze.c
         value: 'YOUR_KEY'
     ```
 
-1. Get the `type` that you are importing, you can confirm this by inspecting the schema.
+1. To import a resource, we'll need both its Pulumi `type` and the internal ID used by the cloud provider (here, Backblaze) to identify the resource. We'll start with the Pulumi `type`, which we can find by inspecting the provider's schema:
 
-    ```
+    ```shell
     pulumi package get-schema terraform-provider backblaze/b2
     ```
 
-    Inside this json response you can find the "types" section and it contains
-    "b2:index/bucket:Bucket", the type corresponding to "b2_bucket" in Terraform.
-1. Find the internal provider ID to import into the Pulumi
-   project.  This can usually be found by running `terraform show` and copying
-   the ID.
-1. Use this ID in the `import` command
+    Inside the JSON response we can find the `types` section and from here extract the type corresponding to the resource we want to import. In this case, the type we're after is `b2:index/bucket:Bucket`.
 
-    ```
+    For the internal provider ID, we can exploit the fact that this is part of
+    the Terraform state and use the `terraform show` command to find it.
+
+1. With all the pieces in hand, we run `pulumi import`:
+
+    ```shell
     pulumi import "b2:index/bucket:Bucket" example_bucket "YOUR_BUCKET_ID"
     ```
 
-1. After import, code will be generated for you to add to your project as you
-   see fit to manage this resource from Pulumi.  By default it is created as
-   `protected`, you can use `--protect=false` to disable that.
+1. As part of the import, code will be generated for you to add to your project as you see fit to manage the resource from Pulumi. By default, Pulumi will set the `protect` option when generating code, which prevents the resources from being deleted by Pulumi; you can use `--protect=false` to disable this.
 
 ## Considerations
 
-- We still have a bit of [unimplemented Terraform functionality](https://github.com/pulumi/pulumi-converter-terraform/issues/65) that we're tracking.  For now when these unimplemented functions are detected, they will require some manual intervention on the converted project.
-- If you define your Terraform Module in a parent directory of your deployment code, you'll encounter a [known bug](https://github.com/pulumi/pulumi-converter-terraform/issues/194), but a simple workaround is to restructure your Terraform code before running a conversion.
-- Terraform programs are dynamically typed, when converting to a type safe language sometimes the return type of certain existing Terraform functions is dynamic.  When this happens your generated code will have types erased (eg `any` in TypeScript, `interface{}` in golang).
+- While Pulumi's [coverage of Terraform functionality](https://github.com/pulumi/pulumi-converter-terraform/issues/65) is fairly mature at this point, some functions are still not fully implemented and may require manual intervention.
+- If you define your Terraform Module in a parent directory of your deployment code, you'll encounter a [known bug](https://github.com/pulumi/pulumi-converter-terraform/issues/194) when converting. You can work around this issue by restructuring your Terraform code before starting a conversion.
+- Terraform programs are dynamically typed. When converting to a type-safe language such as TypeScript or Go, it may be necessary to use "catch-all" types such as `any` in TypeScript or `interface{}` in Go in order to capture the full range of behaviour supported by the source program.
 - Variables and configuration are not yet converted automatically, so `.tfvars` files etc will need to be manually converted into Pulumi stack configurations.
 - We have [some improvements](https://github.com/pulumi/pulumi/issues/18020) we're still working on to make the code generation as seamless as possible, so expect more updates soon!
-- Many Terraform modules utilize the
-  [`try`](https://developer.hashicorp.com/terraform/language/functions/try)
-  function.  We hope to tackle handling converting this (very dynamic) function
-  soon...stay tuned.
+- A large number of Terraform modules utilize the [`try`](https://developer.hashicorp.com/terraform/language/functions/try) function.  We hope to tackle handling converting this (very dynamic) function soon – stay tuned!
 
 ## What's Really New Here? 🚀
 
 1. **Automatic Provider Bridging**: The converter now automatically handles any Terraform provider, even ones without Pulumi equivalents
-1. **Increased Terraform Compatibility**: As part of this effort, we've bumped
-   up our converage of built in Terraform functions to over 90% using code generation and
-   our [Pulumi Std Provider](github.com/pulumi/pulumi-std)
-1. **Improved Import Support**: With [Pulumi 3.146.0](https://github.com/pulumi/pulumi/releases/tag/v3.146.0), you can now import resources from any bridged provider
+1. **Increased Terraform Compatibility**: As part of this effort, we've bumped up our converage of built in Terraform functions to over 90% using code generation and our [`pulumi-std` Provider](github.com/pulumi/pulumi-std)
+1. **Improved Import Support**: With [Pulumi 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0), you can now import resources from any Terraform provider
 1. **Seamless Integration**: Generated code works right out of the box with minimal to no tweaking needed
 
 ## The Road Ahead
