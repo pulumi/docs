@@ -1,6 +1,7 @@
 ---
-title: "Iac Recommended Practices: Wrapping Up"
+title: "IaC Best Practices: Wrapping Up"
 date: 2024-04-08
+updated: 2025-03-03
 draft: false
 meta_desc: This wraps up the series on IaC recommended practices, summarizing the previous posts and pointing out areas of future growth for the Zephyr team.
 meta_image: meta.png
