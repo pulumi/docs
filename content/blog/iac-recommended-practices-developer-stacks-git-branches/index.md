@@ -1,6 +1,7 @@
 ---
-title: "IaC Recommended Practices: Developer Stacks and Git Branches"
+title: "IaC Best Practices: Developer Stacks and Git Branches"
 date: 2023-03-10
+updated: 2025-03-03
 meta_desc: This is the second in a series of blog posts on recommended practices for using Pulumi. Developer stacks and Git-branching practices are the focus areas.
 meta_image: meta.png
 authors:
