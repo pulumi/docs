@@ -294,7 +294,9 @@
 
     {{- if eq hugo.Environment "production" }}
         <!-- 6sense -->
-        <script id="6senseWebTag" src="https://j.6sc.co/j/a4dca4b3-351c-4764-bda9-03c5caf5fedf.js"></script>
+        <script type="text/javascript">
+            !function(){window._6si=window._6si||[],window._6si.push(["setToken","1e475d2ad21c8c778810aef34ac27197"]),window._6si.push(["disableCookies",!1]),window._6si.push(["enableIPv6Ping",!0]),window._6si.push(["enableIgnorePageUrlHash",!0]),window._6si.push(["enableRetargeting",!1]),window._6si.push(["setWhiteListFields",[]]),window._6si.push(["setCustomMetatags",[]]),window._6si.push(["storeTagId","a4dca4b3-351c-4764-bda9-03c5caf5fedf"]),window._6si.push(["enableEventTracking",!0]),window._6si.push(["setCompanyDetailsExpiration",!1]);for(var n,e,o=[],i=0;i<o.length;i++)window._6si.push(["addSFF",o[i]]);window._6si.push(["enableMapCookieCapture",!1]),window._6si.push(["enableCompanyDetails",!1]),(n=document.createElement("script")).type="text/javascript",n.async=!0,null!=(e=null===document||void 0===document?void 0:document.currentScript)&&e.nonce&&(n.nonce=null==(e=null===document||void 0===document?void 0:document.currentScript)?void 0:e.nonce),n.src="https://j.6sc.co/6si.min.js",(e=document.getElementsByTagName("script")[0]).parentNode.insertBefore(n,e)}();
+        </script>
     {{- end }}
 
     <!--Segment tracking-->
