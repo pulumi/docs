@@ -16,6 +16,22 @@ aliases:
 <dl class="tabular tabular-5-col break-words">
     <dt>
         <span class="font-mono">
+            PULUMI_STACK
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Specifies the selected pulumi stack, overriding the stack selected with <a href="/docs/iac/cli/commands/pulumi_stack_select/"><code class="text-xs">pulumi stack select STACK</code></a>
+            The priority is as follows:
+            <ol>
+                <li>The <code class="text-xs">--stack</code> command line flag</li>
+                <li><span class="font-mono">PULUMI_STACK</span></li>
+                <li>Stack selected with <code class="text-xs">pulumi stack select &ltSTACK&gt</code></li>
+            </ol>
+        </p>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_AI_SERVICE_ENDPOINT
         </span>
     </dt>
