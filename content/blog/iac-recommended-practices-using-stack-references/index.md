@@ -1,6 +1,7 @@
 ---
-title: "IaC Recommended Practices: Using Stack References"
+title: "IaC Best Practices: Using Stack References"
 date: 2023-03-31
+updated: 2025-03-03
 meta_desc: This post discusses the use of stack references to share information among multiple Pulumi projects, and the recommended practices around their use.
 meta_image: meta.png
 authors:
