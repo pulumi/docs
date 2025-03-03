@@ -1,3 +1,5 @@
+block_external_search_index: true
+redirect_to: /pulumi-up/
 ---
 title: "Announcing PulumiUP Conference 2024"
 
