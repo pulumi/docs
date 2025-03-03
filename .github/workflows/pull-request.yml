@@ -47,7 +47,7 @@ jobs:
           CDN_PULUMI_URN: ${{ vars.CDN_PULUMI_URN }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
-          DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
+          DEPLOYMENT_ENVIRONMENT: "production"
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PULUMI_BOT_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}

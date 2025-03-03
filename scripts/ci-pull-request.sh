@@ -7,18 +7,18 @@ set -o errexit -o pipefail
 if [ -z "${AWS_ACCESS_KEY_ID:-}" ] || [ -z "${AWS_SECRET_ACCESS_KEY:-}" ] || [ -z "${PULUMI_ACCESS_TOKEN:-}" ]; then
     echo "Missing secret tokens, possibly due to a forked PR."
     echo "Running a build, but will skip the sync to S3 and Pulumi preview."
-    ./scripts/build-site.sh preview
+    ./scripts/build-site.sh
     exit
 fi
 
 source ./scripts/ci-login.sh
 
-./scripts/build-site.sh preview
-./scripts/sync-and-test-bucket.sh preview
+./scripts/build-site.sh
+./scripts/sync-and-test-bucket.sh
 
 ./scripts/generate-search-index.sh
 
-./scripts/run-pulumi.sh preview
+./scripts/run-pulumi.sh
 ./scripts/make-s3-redirects.sh
 
 # Temporarily disable 404 detection (too many false positives)
