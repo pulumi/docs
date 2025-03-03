@@ -1,6 +1,7 @@
 ---
-title: "IaC Recommended Practices: Using Automation API"
+title: "IaC Best Practices: Using Automation API"
 date: 2023-07-26
+updated: 2025-03-03
 meta_desc: In this post in the continuing series on IaC recommended practices, the Zephyr teams starts using the Pulumi Automation API to orchestrate multiple stacks.
 meta_image: meta.png
 authors:
