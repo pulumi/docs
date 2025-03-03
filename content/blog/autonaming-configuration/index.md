@@ -48,7 +48,7 @@ The original [feature request](https://github.com/pulumi/pulumi/issues/1518) I o
 
 Check out the full story:
 
-{{< youtube "Y7tedYSZly4&t?rel=0" >}}
+{{< youtube "Y7tedYSZly4?rel=0" >}}
 
 ## Introducing Auto-naming Configuration
 
