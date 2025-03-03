@@ -46,6 +46,10 @@ Today, I'm excited to introduce resource auto-naming configuration. Now you can 
 
 The original [feature request](https://github.com/pulumi/pulumi/issues/1518) I opened in June 2018 when I was a Pulumi customer. It has generated extensive discussion, with users sharing various use cases and requirements. Today, I'm happy to finally close that issue with a solution that addresses the community's needs while maintaining Pulumi's robust resource management capabilities.
 
+Check out the full story:
+
+{{< youtube "Y7tedYSZly4&t?rel=0" >}}
+
 ## Introducing Auto-naming Configuration
 
 With the new auto-naming configuration feature, you now have full control over how Pulumi generates resource names. Here are some common scenarios you can achieve:
