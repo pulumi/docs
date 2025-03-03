@@ -1,6 +1,7 @@
 ---
 title: "Introducing Customizable Resource Auto-naming in Pulumi"
 date: 2025-01-16
+updated: 2025-03-03
 meta_desc: "Discover how to customize Pulumi's resource naming to align with your organization's standards and naming conventions."
 meta_image: meta.png
 authors:
