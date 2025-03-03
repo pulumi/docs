@@ -1,3 +1,5 @@
+block_external_search_index: true
+redirect_to: /pulumi-up/
 ---
 title: "Announcing PulumiUP 2022: The Cloud Awakens on May 4th"
 date: 2022-03-31
