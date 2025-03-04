@@ -434,7 +434,7 @@ With the release of [Pulumi 3.153.0](https://github.com/pulumi/pulumi/releases/t
     pulumi package get-schema terraform-provider backblaze/b2
     ```
 
-    Inside the JSON response we can find the `types` section and from here extract the type corresponding to the resource we want to import. In this case, the type we're after is `b2:index/bucket:Bucket`.
+    Inside the JSON response we can find the `resources` section and from here extract the type corresponding to the resource we want to import. In this case, the type we're after is `b2:index/bucket:Bucket`.
 
     For the internal provider ID, we can exploit the fact that this is part of
     the Terraform state and use the `terraform show` command to find it.
