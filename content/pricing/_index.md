@@ -300,24 +300,19 @@ comparison_table:
             ## Pulumi Insights Table
             - header: Pulumi Insights
               rows:
-                - title: Workflow cost per minute
-                  items:
-                    - content: _blank
-                    - content: $0.01
-                    - content: $.01 / Custom
-                    - content: $.01 / Custom
                 - title: Price per resource/month
                   items:
-                    - content: 200
+                    - content: 200 free
                     - content: $0.37, after 200 free
                     - content: $1.10 / Custom
                     - content: Custom
-                - title: Minutes included/month
+                - title: Workflow cost per minute/ included per month
+                  link: /pricing#faq
                   items:
-                    - content: 500
-                    - content: 3,000
-                    - content: 3,000
-                    - content: 3,000                  
+                    - content: 500 free
+                    - content: $0.01, <br>3,000 included
+                    - content: $.01 / Custom, <br>3,000 included
+                    - content: $.01 / Custom, <br>3,000 included                  
                 - title: Resource search
                   link: /docs/insights/search/
                   items:
