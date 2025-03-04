@@ -1,7 +1,9 @@
 ---
 title: Infrastructure as Code Resource Naming
+canonical_url: https://www.pulumi.com/blog/autonaming-configuration/
 date: 2019-09-10
-meta_desc: "Answers to your questions about Infrastructure as Code Resource Naming."
+updated: 2025-03-03
+meta_desc: "Understand Pulumi resource naming—eliminate confusion, customize auto-naming, and simplify updates. Discover how to take full control."
 meta_image: meta.png
 authors:
     - eric-rudder
@@ -21,7 +23,7 @@ Usually, folks ask, "Why are resources created with funny characters at the end?
 
 ## Logical vs. Physical Names
 
-Cloud resources typically have both a logical and a physical name, and given this level of abstraction, these names may not always match.  More often than not, the physical resource names in Pulumi are "auto-named," and it's this auto-naming that appends a few random characters to end of the physical name.
+Cloud resources typically have both a logical and a physical name, and given this level of abstraction, these names may not always match.  More often than not, the [physical resource names](/docs/iac/concepts/resources/names/#autonaming) in Pulumi are "auto-named," and it's this auto-naming that appends a few random characters to end of the physical name.
 
 Say that you have IAM role with a logical name of `role-friar`.  Pulumi will choose a physical name for this that looks something more like: `role-friar-3742fb`, for several good reasons.
 
