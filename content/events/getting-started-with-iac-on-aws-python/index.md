@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: Getting Started with Infrastructure as Code on AWS - Python
-meta_desc: This introductory workshop is designed to help new users become familiar with the core concepts needed to effectively deploy resources on AWS using Pulumi.
+title: Introduction to Pulumi IaC with AWS in Python
+meta_desc: Learn how Pulumi makes working with AWS easier by using general purpose languages like Python to manage infrastructure resources.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -31,7 +31,7 @@ url_slug: getting-started-with-iac-on-aws-python
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Getting Started with Infrastructure as Code on AWS - Python
+    title: Introduction to Pulumi IaC with AWS in Python
 
     event_type: workshop # workshop | event
 
@@ -39,30 +39,31 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-05-22T09:00:00.000-07:00
+    sortable_date: 2025-03-19T09:00:00.000-07:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
 
     # Description of the webinar.
     description: |
-        In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
+        This workshop offers a hands-on exploration of how modern infrastructure management can be streamlined using familiar programming languages. In this workshop, you'll discover how Pulumi empowers developers and operations teams to define cloud infrastructure using Python - eliminating the need to learn domain-specific languages while unlocking the full power of software engineering practices for infrastructure code.
 
-        This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi."
+        Participants will experience firsthand how Pulumi's approach bridges the gap between application and infrastructure development, allowing teams to manage AWS resources with the same tools, practices, and languages they already use for application development. This workshop demonstrates how this unified approach not only accelerates productivity but enables organizations to build more reliable, scalable, and secure cloud architectures.
+
 
     learn:
-        - How to use Python with Pulumi.
-        - The basics of the Pulumi Programming Model
-        - How to provision, update, and destroy AWS resources
+        - How to use Python with Pulumi to provision AWS resources, bringing modern software development practices to your infrastructure management.
+        - How Pulumi's intuitive programming model can help you deploy cloud architecture on AWS with greater confidence and control.
+        - How Pulumi's ecosystem supports your infrastructure needs across different environments and cloud providers.
 
     # The webinar presenters
     presenters:
-        - name: Marina Novikova
-          role: Sr. Partner Solutions Architect, AWS
-          photo: /images/team/marina-novikova.jpg
+        - name: Torian Crane
+          role: Senior Technical Content Engineer, Pulumi
+          photo: /images/team/torian-crane.jpg
 
     # case-sensitive
     tags:
@@ -74,6 +75,16 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 5d97ebfb-ea71-4887-b6ae-f74347948e38
-    salesforce_campaign_id: 701PQ000009K1SbYAK
+    hubspot_form_id: 2008e062-29d1-47d5-8d80-d35e9e74e9d7
+    salesforce_campaign_id: 701PQ00000TEJoWYAX
+
+event_data:
+  name: "Introduction to Pulumi IaC with AWS in Python"
+  start_date: 2025-03-19T09:00:00-07:00
+  end_date: 2025-03-10T10:00:00-07:00
+  url: "https://www.pulumi.com/events/getting-started-with-iac-on-aws-python/"
+  description: |
+    This workshop offers a hands-on exploration of how modern infrastructure management can be streamlined using familiar programming languages. In this workshop, you'll discover how Pulumi empowers developers and operations teams to define cloud infrastructure using Python - eliminating the need to learn domain-specific languages while unlocking the full power of software engineering practices for infrastructure code.
+
+    Participants will experience firsthand how Pulumi's approach bridges the gap between application and infrastructure development, allowing teams to manage AWS resources with the same tools, practices, and languages they already use for application development. This workshop demonstrates how this unified approach not only accelerates productivity but enables organizations to build more reliable, scalable, and secure cloud architectures.
 ---

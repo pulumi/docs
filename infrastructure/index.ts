@@ -712,7 +712,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     viewerCertificate: {
         acmCertificateArn: config.certificateArn,
         sslSupportMethod: "sni-only",
-        minimumProtocolVersion: "TLSv1.2_2018",
+        minimumProtocolVersion: "TLSv1.2_2021",
     },
 
     loggingConfig: {

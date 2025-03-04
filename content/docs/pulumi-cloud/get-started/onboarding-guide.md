@@ -5,7 +5,7 @@ menu:
     cloud:
         name: Onboarding guide
         parent: pulumi-cloud-get-started
-        weight: 1
+        weight: 2
         identifier: pulumi-onboarding-guide
 ---
 

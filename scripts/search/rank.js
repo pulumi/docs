@@ -1,7 +1,9 @@
+module.exports = {
+
     // Return the explicit or implicit rank for a given page. See the Algolia documentation to learn
     // more about how Algolia ranking and relevance work.
     // https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/
-    export function get(page) {
+    get(page) {
 
         // If the page is explicitly ranked zero, return zero.
         const explicitRank = this.getExplicitRank(page);
@@ -16,21 +18,21 @@
 
         // Otherwise, return its implicit rank.
         return this.getImplicitRank(page);
-    }
+    },
 
     // Rank can be set at the page level as well (e.g., in YAML frontmatter: `search.rank: 123`).
-    export function getExplicitRank(page) {
+    getExplicitRank(page) {
         return page.params?.search?.rank;
-    }
+    },
 
     // Pages can be boosted at the page level also (e.g., `search.boost: true`)
-    export function isExplicitlyBoosted(page) {
+    isExplicitlyBoosted(page) {
         return !!page.params?.search?.boost;
-    }
+    },
 
     // Implicit keywords are derived from the page's URL. We do this to make string matches more
     // likely. (For example, to surface both AWS Classic and AWS Native for queries for 'aws'.)
-    export function getImplicitKeywords(page) {
+    getImplicitKeywords(page) {
         const match = page.href.match(/^\/registry\/packages\/(aws|aws-native|azure|azure-native|gcp|google-native|kubernetes)\/$/);
 
         if (match && match[1]) {
@@ -40,12 +42,12 @@
         }
 
         return [];
-    }
+    },
 
     // Implicit rankings allow us to codify how relevant our pages are in relation to one another.
     // Rankings are applied in descending order numerically (i.e., for a given query, higher-ranked
     // pages will will show up before lower-ranked ones).
-    export function getImplicitRank(page) {
+    getImplicitRank(page) {
 
         // Get-started pages.
         if (page.href.match(/^\/docs\/clouds\/(aws|azure|gcp|kubernetes)\/get-started\//)) {
@@ -163,9 +165,9 @@
         if (page.href.startsWith("/blog")) {
             return 290;
         }
-    }
+    },
 
-    export function isImplicitlyBoosted(page) {
+    isImplicitlyBoosted(page) {
 
         // Tier-1 provider pages also get boosted.
         if (page.href.match(/^\/registry\/packages\/(aws|azure-native|gcp|kubernetes)\/$/)) {
@@ -174,3 +176,4 @@
 
         return false;
     }
+}

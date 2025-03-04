@@ -33,13 +33,13 @@ values:
       state:
         previous:
           accessKeyId: AKIA...
-          secretAccessKey: 
-            fn::secret: 
+          secretAccessKey:
+            fn::secret:
               ciphertext: ...
         current:
           accessKeyId: AKIA...
-          secretAccessKey: 
-            fn::secret: 
+          secretAccessKey:
+            fn::secret:
               ciphertext: ...
 ```
 

@@ -17,6 +17,8 @@ Infrastructure as Code tools like Pulumi require systems for coordinating deploy
 
 ## Costs and Complexities of DIY Backends
 
+{{< youtube "I5lKzCtIj18?rel=0" >}}
+
 Building and maintaining your own Infrastructure as Code backend involves a significant engineering and operational commitment. On the engineering front, you face security and compliance challenges, as well as the need to develop features that ensure enterprise readiness. Operationally, the backend must be highly available and reliable, and it should facilitate easy onboarding for the rest of the organization when the time comes. Beyond these immediate concerns, there are also hidden personnel costs associated with running your own backend. Let's break down some of those hidden costs.
 
 {{% notes type="tip" %}}

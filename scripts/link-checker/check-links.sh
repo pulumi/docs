@@ -6,4 +6,4 @@ source ./scripts/common.sh
 echo "Checking links..."
 
 base_url="$1"
-node "./scripts/link-checker/check-links.cjs" "$base_url" 2
+node "./scripts/link-checker/check-links.js" "$base_url" 2

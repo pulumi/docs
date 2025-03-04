@@ -1,10 +1,7 @@
-import * as fs from "fs";
-import * as yaml from "js-yaml";
-import * as markdownlint from "markdownlint/sync";
-import * as path from "path";
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const fs = require("fs");
+const yaml = require("js-yaml");
+const markdownlint = require("markdownlint");
+const path = require("path");
 
 /**
  * REGEX for grabbing the front matter of a Hugo markdown file. Example:
@@ -257,9 +254,7 @@ const filesToLint = getMarkdownFiles(`../../content`);
  *
  * See: https://github.com/DavidAnson/markdownlint
  */
-
-// Lint the markdown files.
-const result = markdownlint.lint({
+const opts = {
     // The array of markdown files to lint.
     files: filesToLint.files,
     config: {
@@ -279,6 +274,8 @@ const result = markdownlint.lint({
         // Allow all code block styles in a file. Code block styles
         // are created equal and we shall not discriminate.
         MD046: false,
+        // Allow indents on unordered lists to be 4 spaces instead of 2.
+        MD007: { indent: 4 },
         // Allow duplicate headings.
         MD024: false,
         // Allow headings to be indendented.
@@ -291,29 +288,14 @@ const result = markdownlint.lint({
         MD034: false,
         // Allow bold/italicized paragraphs
         MD036: false,
-        // Images should have alternate text (alt text)
-        MD045: false,
-        // Emphasis style
-        MD049: false,
-        // Strong style
-        MD050: false,
-        // Link fragments should be valid
-        MD051: false,
-        // Link and image reference definitions should be needed
-        MD053: false,
-        // Table pipe style
-        MD055: false,
-        // Table column count
-        MD056: false,
     },
     customRules: [
         {
-            parser: "markdownit",
             names: ["relref"],
             description: "Hugo relrefs are no longer supported. Use standard [Markdown](/links) instead",
             tags: ["hugo-relref"],
             function: (params, onError) => {
-                params.parsers.markdownit.tokens
+                params.tokens
                     .filter(token => {
                         return token.type === "inline";
                     })
@@ -328,7 +310,10 @@ const result = markdownlint.lint({
             },
         },
     ],
-});
+};
+
+// Lint the markdown files.
+const result = markdownlint.sync(opts);
 
 // Group the lint errors by file.
 const errors = groupLintErrorOutput(result);

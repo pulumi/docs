@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "PulumiUP Europe 2024"
-meta_desc: Attend to hear from industry leaders and learn best practices, real-world solutions, and lessons learned in DevOps, Platform Engineering, and Security.
+title: PulumiUP 2025 - Europe & Americas Edition
+meta_desc: Join our flagship virtual event to explore enterprise platform engineering stories, demos, and expert insights on automating infrastructure with Pulumi.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,12 +26,12 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://info.pulumi.com/pulumiup-2024-europe
+url_slug: /pulumi-up
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "PulumiUP Europe 2024"
+    title: PulumiUP 2025 - Europe & Americas Edition
 
     event_type: event # workshop | event
 
@@ -39,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-11-20T09:00:00+00:00
+    sortable_date: 2025-05-06T14:00:00+00:00
 
     # Duration of the webinar.
     duration: 1 hour

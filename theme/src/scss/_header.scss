@@ -20,7 +20,7 @@
             white-space: nowrap;
         }
 
-        .top-nav-banner-cta-container {
+        .top-nav-banner-container {
             @apply w-full text-right;
 
             @screen lg {
@@ -29,7 +29,7 @@
 
             background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%) !important;
 
-            .top-nav-banner-cta {
+            .top-nav-banner {
                 @apply px-3 py-2 text-left;
 
                 @screen lg {
@@ -39,7 +39,7 @@
                 // TODO: update color
                 background-color: #edeffa; //rgba(77, 91, 217, 0.15);
 
-                .top-nav-banner-cta-text {
+                .top-nav-banner-text {
                     // TODO: update color
                     color:  #505bd1; //#4d5bd9;
                 }
@@ -280,7 +280,7 @@
 
                     .learn {
                         @apply -right-48;
-                        min-width: 69ch;
+                        min-width: 78ch;
                     }
 
                     .company {

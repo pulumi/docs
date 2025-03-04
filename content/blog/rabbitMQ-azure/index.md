@@ -70,11 +70,9 @@ We will start by defining a few constants, the constructor, an empty method call
 Now that we have our initial class, we can start writing methods for the resources we will be creating:
 
 - Resource groups:
-
 <br>
 {{< gist ItayPodhajcer 4c57e537f0d9cc15b801035d556c2504 >}}
 <br>
-
 - Private DNS zone:
 
 {{< gist ItayPodhajcer 52af6ba0a8f1a92d5352c3218505eefa >}}

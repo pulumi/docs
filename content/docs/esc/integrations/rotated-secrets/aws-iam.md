@@ -82,12 +82,12 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
   "iam": {
    "current": {
       "accessKeyId": "AKIA...",
-      "createDate": "2025-01-01T12:00:00Z",
+      "createdAt": "2025-01-01T12:00:00Z",
       "secretAccessKey": "[secret]"
     },
     "previous": {
       "accessKeyId": "AKIA...",
-      "createDate": "2025-01-01T13:00:00Z",
+      "createdAt": "2025-01-01T13:00:00Z",
       "secretAccessKey": "[secret]"
     }
   }
@@ -153,4 +153,4 @@ The minimum permissions required for the rotation role are:
 |-------------------|--------|------------------------------------------------|
 | `accessKeyId`     | string | The AWS access key ID                          |
 | `secretAccessKey` | string | The AWS secret access key, stored as a secret. |
-| `createDate`      | string | Creation timestamp (in ISO 8601 format)        |
+| `createdAt`       | string | Creation timestamp (in RFC3339 format)         |

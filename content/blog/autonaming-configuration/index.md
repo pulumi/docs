@@ -1,6 +1,7 @@
 ---
 title: "Introducing Customizable Resource Auto-naming in Pulumi"
 date: 2025-01-16
+updated: 2025-03-03
 meta_desc: "Discover how to customize Pulumi's resource naming to align with your organization's standards and naming conventions."
 meta_image: meta.png
 authors:
@@ -45,6 +46,10 @@ Today, I'm excited to introduce resource auto-naming configuration. Now you can 
 ## The Road to Better Resource Naming
 
 The original [feature request](https://github.com/pulumi/pulumi/issues/1518) I opened in June 2018 when I was a Pulumi customer. It has generated extensive discussion, with users sharing various use cases and requirements. Today, I'm happy to finally close that issue with a solution that addresses the community's needs while maintaining Pulumi's robust resource management capabilities.
+
+Check out the full story:
+
+{{< youtube "Y7tedYSZly4?rel=0" >}}
 
 ## Introducing Auto-naming Configuration
 

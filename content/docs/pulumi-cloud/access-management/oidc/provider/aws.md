@@ -61,7 +61,7 @@ Once you have created the identity provider, you will see a notification at the 
 
 Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your service.
 
-For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/pulumi-cloud/oidc/#token-claims) for each service. The `sub` claim can be customized as shown below.
+For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/pulumi-cloud/access-management/oidc/provider/#custom-claims) for each service. The `sub` claim can be customized as shown below.
 
 ### Pulumi Deployments
 

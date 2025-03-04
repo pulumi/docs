@@ -13,6 +13,7 @@ import { Filter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 export namespace Components {
     interface CopilotSidebar {
+        "atlasUrl": string;
         "copilotSrc": string;
     }
     interface EventSessionRegistrationModal {
@@ -507,6 +508,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface CopilotSidebar {
+        "atlasUrl"?: string;
         "copilotSrc"?: string;
     }
     interface EventSessionRegistrationModal {

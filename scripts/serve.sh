@@ -17,7 +17,7 @@ export REL_CSS_BUNDLE="/css/styles.${ASSET_BUNDLE_ID}.css"
 export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 
 # URL to the Pulumi conversion service.
-export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production url)}"
+export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production-www url)}"
 
 # Default to building future content unless explicitly disabled
 BUILD_FUTURE_FLAG="--buildFuture"

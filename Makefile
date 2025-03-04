@@ -166,5 +166,5 @@ destroy-dev-stack:
 
 .PHONY: generate-compliance-pages
 generate-compliance-pages:
-	node scripts/aws-compliance-scraper/scrape.cjs
+	node scripts/aws-compliance-scraper/scrape.js
 	./scripts/content/generate-compliance-pages.sh

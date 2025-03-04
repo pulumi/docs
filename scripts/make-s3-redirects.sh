@@ -14,10 +14,10 @@ redirects_file="./redirects.txt"
 aws s3 cp "s3://${destination_bucket}/redirects.txt" "$redirects_file" --region "$(aws_region)"
 
 echo "Processing S3 redirects for ${destination_bucket}..."
-node scripts/make-s3-redirects.cjs "${destination_bucket}" "${build_dir}/redirects.txt" "$(aws_region)"
+node scripts/make-s3-redirects.js "${destination_bucket}" "${build_dir}/redirects.txt" "$(aws_region)"
 
 echo "Processing custom redirects in scripts/redirects..."
 ls -l "./scripts/redirects/" | tail -n +2 | awk '{print $9}' | while read line; do
     redirect_file="./scripts/redirects/$line"
-    node scripts/make-s3-redirects.cjs "${destination_bucket}" "${redirect_file}" "$(aws_region)"
+    node scripts/make-s3-redirects.js "${destination_bucket}" "${redirect_file}" "$(aws_region)"
 done

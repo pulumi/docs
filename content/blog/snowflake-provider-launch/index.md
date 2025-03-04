@@ -29,5 +29,5 @@ Pulumi is bringing management of your Snowflake resources into the same place as
 - Create a service user and push the key into the secrets manager of your choice
 - Rotate keys
 
-You can check out the details in the official [Snowflake Provider documentation](/registry/packages/snowflake/api-docs/provider/), with
-references for Python, Go, TypeScript, and C#!
+You can check out the details in the official [Snowflake Provider documentation
+](/registry/packages/snowflake/api-docs/provider/), with references for Python, Go, TypeScript, and C#!

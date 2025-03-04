@@ -73,12 +73,12 @@ $ pulumi stack output ip
 
 > **If using Minikube:** Minikube does not support type `LoadBalancer`. Instead, forward the nginx service:
 >
-> ```bash
-> $ kubectl get service
-> NAME             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
-> kubernetes       ClusterIP   10.96.0.1        <none>        443/TCP   44h
-> nginx-9e5d5cd4   ClusterIP   10.103.199.118   <none>        80/TCP    6m47s
-> ```
+>  ```bash
+>  $ kubectl get service
+>  NAME             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
+>  kubernetes       ClusterIP   10.96.0.1        <none>        443/TCP   44h
+>  nginx-9e5d5cd4   ClusterIP   10.103.199.118   <none>        80/TCP    6m47s
+>  ```
 >
 > Note: The assigned name for this particular nginx service is `nginx-9e5d5cd4`; yours will be different. In a new terminal window, run:
 >

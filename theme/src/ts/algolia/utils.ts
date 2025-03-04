@@ -49,7 +49,7 @@ export function getTagsPlugin(baseTags) {
                 {
                     sourceId: "section",
                     getTag: ({ item }) => {
-                        return item as any;
+                        return item;
                     },
                 },
             ];

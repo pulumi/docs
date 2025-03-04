@@ -9,6 +9,7 @@ security:
       - PULUMI_CONVERT_URL
       - PULUMI_AI_WS_URL
       - PULUMI_COPILOT_URL
+      - PULUMI_ATLAS_URL
       - DEV_PULUMI_COPILOT_BASE_PATH
       - GITHUB_TOKEN
       - ALGOLIA_APP_ID
@@ -47,12 +48,9 @@ outputs:
   section:
     - HTML
 
-disableKinds:
-  - taxonomy
-
 taxonomies:
-  author: authors
   tag: tags
+  author: authors
   collection: collections
 
 permalinks:

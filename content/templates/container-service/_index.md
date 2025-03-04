@@ -13,7 +13,6 @@ weight: 1
 [Containers](/containers/) are lightweight virtualized operating system environments in which developers can package and run an application and its dependencies as isolated runtime environments. The benefits of containers include better scalability, portability, and fault isolation. Docker is most commonly used to create container images. Containers are great for scenarios such as microservices, batch jobs, and migrating a legacy application. In the cloud, containers are typically run using container services that manage the container orchestration, cluster management, and compute for you.
 
 **On AWS,** these are the main ways to run containers:
-
 |                                         |                                                                                                                                                       |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Amazon Elastic Container Service (ECS)  | Fully managed container orchestration service created by AWS. Deploy containers to EC2 instances you manage or serverless instances from AWS Fargate. |

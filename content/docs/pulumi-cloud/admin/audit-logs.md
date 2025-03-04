@@ -38,7 +38,7 @@ of the call the user made.
 
 ## View Audit Logs
 
-Audit logs are a Enterprise Edition and Business Critical feature. Only organization admins can view audit logs.
+Audit logs are an  Enterprise Edition and Business Critical feature. Only organization admins can view audit logs.
 
 To view audit logs:
 
@@ -176,48 +176,64 @@ Custom defined keys:
 
 ## List of Audit Log Events
 
-| Event                                      | Description                                                                                                                                                       |
-|--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Auth Failure Organization Role           | indicates that a user tried to perform an operation but did not have the necessary organization role to do so     |
+| Event                                    | Description                                                                                                      |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Auth Failure Organization Role           | indicates that a user tried to perform an operation but did not have the necessary organization role to do so    |
 | Auth Failure SCIM Access Token           | indicates that a request to use an organization's SCIM support was made, but the provided auth token was invalid |
-| Auth Failure Stack Permission            | indicates that a user tried to perform an operation but did not have the necessary stack permissions to do so   |
-| Member Added                             | indicates the adding of a member to an organization                                                            |
-| Member Removed                           | indicates the removal of a member from an organization                                                       |
-| Member Role Changed                      | indicates the changing of a member's role in an organization                                             |
-| Organization Settings Changed            | indicates a change in organization settings                                                                |
-| Policy Group Created                     | indicates the creation of a policy group                                                                             |
-| Policy Group Deleted                     | indicates the deletion of a policy group                                                                             |
-| Policy Group Updated                     | indicates the updating of a policy group                                                                             |
-| Policy Pack Created                      | indicates the creation of a policy pack                                                                              |
-| Policy Pack Deleted                      | indicates the deletion of a policy pack                                                                              |
-| Policy Pack Disabled                     | indicates the disabling of a policy pack                                                                             |
-| Policy Pack Enabled                      | indicates the enabling of a policy pack                                                                              |
-| Secret Decrypted                         | indicates the decryption of a secret value associated with a stack                                                                  |
-| Stack Collaborator Added                 | indicates the adding of a collaborator to a stack                                                               |
-| Stack Collaborator Permissions Changed   | indicates a change in permissions for a stack collaborator                                         |
-| Stack Collaborator Removed               | indicates the removal of a collaborator to a stack                                                            |
-| Stack Created From Template              | indicates the creation of a stack from a template                                                                                         |
-| Stack Created                            | indicates the creation of a stack                                                             |
-| Stack Deleted                            | indicates the deletion of a stack                                                                                         |
-| Stack Exported                           | indicates the exporting of a stack                                                                                       |
-| Stack Imported                           | indicates the importing of a stack                                                                                       |
-| Stack Renamed                            | indicates the renaming of a stack                                                                                         |
-| Stack Transferred to Organization        | indicates the transfer of a stack from one organization to another                                                       |
-| Stack Update Canceled                    | indicates the canceling of a stack update                                                                          |
-| Stack Update Completed                   | indicates the completion of a stack update                                                                        |
-| Stack Update Started                     | indicates the starting of a stack update                                                                            |
-| Team Created                             | indicates the creation of a team in an organization                                                                        |
-| Team Deleted                             | indicates the deletion of a team from organization                                                                         |
-| Team Updated                             | indicates the updating of a team in an organization                                                                        |
-| User Added New Identity to Their Account | indicates a user has associated a new identity with their Pulumi account                                            |
-| User Login                               | indicates a user has successfully logged into the Pulumi Cloud                                                             |
-| User Login Failed                        | indicates a user tried and failed to log into the Pulumi Cloud        |
-| SAML Configuration Updated               | indicates the organization's SAML configuration has been updated  |
-| Environment Created                      | indicates the creation of an environment |
-| Environment Updated                      | indicates the updating of an environment |
-| Environment Deleted                      | indicates the deletion of an environment |
-| Environment Open                         | indicates the opening of an environment |
-| Environment Read                         | indicates the reading of an open environment |
-| Environment Read Open                    | indicates the opening and reading of an environment |
-| Environment Unauthorized Open            | indicates the attempt to open an environment the user does not have permission to |
-| Stack Provider Open                      | indicates the opening of a stack provider within an environment |
+| Auth Failure Stack Permission            | indicates that a user tried to perform an operation but did not have the necessary stack permissions to do so    |
+| Member Added                             | indicates the adding of a member to an organization                                                              |
+| Member Removed                           | indicates the removal of a member from an organization                                                           |
+| Member Role Changed                      | indicates the changing of a member's role in an organization                                                     |
+| Organization Settings Changed            | indicates a change in organization settings                                                                      |
+| Policy Group Created                     | indicates the creation of a policy group                                                                         |
+| Policy Group Deleted                     | indicates the deletion of a policy group                                                                         |
+| Policy Group Updated                     | indicates the updating of a policy group                                                                         |
+| Policy Pack Created                      | indicates the creation of a policy pack                                                                          |
+| Policy Pack Deleted                      | indicates the deletion of a policy pack                                                                          |
+| Policy Pack Disabled                     | indicates the disabling of a policy pack                                                                         |
+| Policy Pack Enabled                      | indicates the enabling of a policy pack                                                                          |
+| Secret Decrypted                         | indicates the decryption of a secret value associated with a stack                                               |
+| Stack Collaborator Added                 | indicates the adding of a collaborator to a stack                                                                |
+| Stack Collaborator Permissions Changed   | indicates a change in permissions for a stack collaborator                                                       |
+| Stack Collaborator Removed               | indicates the removal of a collaborator to a stack                                                               |
+| Stack Created From Template              | indicates the creation of a stack from a template                                                                |
+| Stack Created                            | indicates the creation of a stack                                                                                |
+| Stack Deleted                            | indicates the deletion of a stack                                                                                |
+| Stack Exported                           | indicates the exporting of a stack                                                                               |
+| Stack Imported                           | indicates the importing of a stack                                                                               |
+| Stack Renamed                            | indicates the renaming of a stack                                                                                |
+| Stack Transferred to Organization        | indicates the transfer of a stack from one organization to another                                               |
+| Stack Update Canceled                    | indicates the canceling of a stack update                                                                        |
+| Stack Update Completed                   | indicates the completion of a stack update                                                                       |
+| Stack Update Started                     | indicates the starting of a stack update                                                                         |
+| Team Created                             | indicates the creation of a team in an organization                                                              |
+| Team Deleted                             | indicates the deletion of a team from an organization                                                            |
+| Team Updated                             | indicates the updating of a team in an organization                                                              |
+| User Added New Identity to Their Account | indicates a user has associated a new identity with their Pulumi account                                         |
+| User Login                               | indicates a user has successfully logged into the Pulumi Cloud                                                   |
+| User Login Failed                        | indicates a user tried and failed to log into the Pulumi Cloud                                                   |
+| SAML Configuration Updated               | indicates the organization's SAML configuration has been updated                                                 |
+| Environment Created                      | indicates the creation of an environment                                                                         |
+| Environment Updated                      | indicates the updating of an environment                                                                         |
+| Environment Deleted                      | indicates the deletion of an environment                                                                         |
+| Environment Open                         | indicates the opening of an environment                                                                          |
+| Environment Read                         | indicates the reading of an open environment                                                                     |
+| Environment Read Open                    | indicates the opening and reading of an environment                                                              |
+| Environment Unauthorized Open            | indicates the attempt to open an environment the user does not have permission to                                |
+| Environment Tag Created                  | indicates the creation of an environment tag                                                                     |
+| Environment Tag Updated                  | indicates the updating of an environment tag                                                                     |
+| Environment Tag Deleted                  | indicates the deletion of an environment tag                                                                     |
+| Environment Version Retracted            | indicates the retracting of an environment version                                                               |
+| Environment Version Tag Open             | indicates the opening of an environment at a specific version tag                                                |
+| Environment Version Tag Created          | indicates the creation of an environment version tag                                                             |
+| Environment Version Tag Read             | indicates the reading of an environment version tag                                                              |
+| Environment Version Tag Update           | indicates the updating of an environment version tag                                                             |
+| Environment Version Tag Delete           | indicates the deletion of an environment version tag                                                             |
+| Environment Decrypted                    | indicates the decryption of an environment                                                                       |
+| Environment Clone                        | indicates the cloning of an environment                                                                          |
+| Environment Restored                     | indicates the restoring of an environment                                                                        |
+| Environment Schedule Created             | indicates the creation of an environment schedule                                                                |
+| Environment Schedule Updated             | indicates the updating of an environment schedule                                                                |
+| Environment Schedule Deleted             | indicates the deletion of an environment schedule                                                                |
+| Environment Rotated                      | indicates the rotation of secrets in an environment                                                              |
+| Stack Provider Open                      | indicates the opening of a stack provider within an environment                                                  |
