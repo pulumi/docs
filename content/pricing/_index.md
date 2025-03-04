@@ -20,6 +20,9 @@ tiers:
               esc_price: $0
               esc_unit:
               esc_note:
+              insights_price: $0
+              insights_unit:
+              insights_note:
               primary_cta: Create a free organization
               primary_cta_link: /docs/quickstart
               items: |
@@ -36,6 +39,9 @@ tiers:
               esc_price: $0.50
               esc_unit: per secret/month
               esc_note:
+              insights_price: $0.37
+              insights_unit: per resource/month
+              insights_note:
               primary_cta: Start free trial
               primary_cta_link: https://app.pulumi.com/signup
               items: |
@@ -54,6 +60,9 @@ tiers:
               esc_price: $0.75
               esc_unit: per secret/month
               esc_note: (Volume pricing available)
+              insights_price: $1.10
+              insights_unit: per resource/month
+              insights_note: (Volume pricing available)
               primary_cta: Start free trial
               primary_cta_link: https://app.pulumi.com/signup
               secondary_cta: Contact Sales
@@ -76,6 +85,9 @@ tiers:
               esc_price: Custom
               esc_unit:
               esc_note:
+              insights_price: Custom
+              insights_unit:
+              insights_note:
               primary_cta: Contact Sales
               primary_cta_link: /contact/?form=sales
               items: |
@@ -288,16 +300,35 @@ comparison_table:
             ## Pulumi Insights Table
             - header: Pulumi Insights
               rows:
+                - title: Price per resource/month
+                  items:
+                    - content: 200 free
+                    - content: $0.37, after 200 free
+                    - content: $1.10 / Custom
+                    - content: Custom
+                - title: Workflow cost per minute/ included per month
+                  link: /pricing#faq
+                  items:
+                    - content: 500 free
+                    - content: $0.01, <br>3,000 included
+                    - content: $.01 / Custom, <br>3,000 included
+                    - content: $.01 / Custom, <br>3,000 included                  
                 - title: Resource search
                   link: /docs/insights/search/
                   items:
+                    - content: _blank
                     - content: _check
                     - content: _check
                     - content: _check
-                    - content: _check
+                - title: Primary Accounts
+                  items:
+                    - content: 1
+                    - content: 1
+                    - content: 10
+                    - content: 20
                 - title: Per query limits in UI
                   items:
-                    - content: 2K results
+                    - content: _blank
                     - content: 2K results
                     - content: 10K results
                     - content: 10K results
@@ -315,6 +346,13 @@ comparison_table:
                     - content: _blank
                     - content: _check
                     - content: _check
+                - title: Policy enforcement
+                  link: /docs/insights/policy-as-code/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: _check
         ####
         # Key Capabilities
         ####
@@ -323,7 +361,7 @@ comparison_table:
             ## Pulumi Deployments table
             - header: Pulumi Deployments
               rows:
-                - title: Cost per minute
+                - title: Workflow cost per minute
                   items:
                     - content: _blank
                     - content: $0.01
@@ -626,6 +664,9 @@ faq:
             You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/cloud-rest-api/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05.
 
             API usage include any calls from the [CLI](/docs/esc-cli/), [SDK](/docs/esc/sdk/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/cloud-rest-api/) call that hits the ReadOpen API endpoint
+        - question: What are workflow minutes?
+          answer: |
+            Workflow Minutes represent the total time used across both Pulumi Insights and Deployments. All usage draws from a single, shared pool of minutes. For Insights, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
         - question: What can I do with 200 free resources per month?
           answer: |
             You could manage 200 S3 buckets or 200 EC2 instances for a month using this amount. Note that free resources translate to 150K monthly Pulumi credits.
