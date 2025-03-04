@@ -65,6 +65,7 @@ main:
     presenters:
         - name: Laci Videmsky
           role: Solutions Architect, Pulumi
+          photo: /images/team/laci-videmsky.png
         - name: Aurélien Requiem
           role: Customer Engineer, Pulumi
           photo: /images/team/aurelien-requiem.jpg
