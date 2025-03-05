@@ -61,9 +61,9 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Torian Crane
-          role: Senior Technical Content Engineer, Pulumi
-          photo: /images/team/torian-crane.jpg
+        - name: Adam Gordon Bell
+          role: Community Engineer, Pulumi
+          photo: /images/team/adam-gordon-bell.jpg
 
     # case-sensitive
     tags:
