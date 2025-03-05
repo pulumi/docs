@@ -246,7 +246,3 @@ const rawkodeShorts = new Controller("rawko.de", {
 ```
 
 Pulumi facilitates all these abstractions that allow us to make our lives easier. This is what I do with my Pulumi programs, but what do you do with yours?
-
-Drop me an [email](mailto:rawkode@pulumi.com) or [tweet](https://twitter.com/rawkode) and share what you're doing with Pulumi.
-
-Speak soon.
