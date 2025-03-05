@@ -1,6 +1,6 @@
 ---
 title: "Announcing the Pulumi ESC GitHub Action"
-date: "2025-03-04"
+date: "2025-03-05"
 meta_desc: "Simplify Secrets Management and CI/CD with Pulumi ESC."
 authors: 
   - "komal-ali"
@@ -8,9 +8,12 @@ tags:
   - esc
   - secrets
   - github
+  - features
 ---
 
-We’re excited to share our latest addition to the Pulumi Ecosystem: the [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This new GitHub Action streamlines how you manage secrets, configurations, and CI/CD tasks using Pulumi ESC, helping your team securely scale and automate your software delivery pipelines.
+We’re excited to share our latest addition to the Pulumi Ecosystem: the [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This new GitHub Action streamlines how you manage secrets, configurations, and CI/CD tasks using [Pulumi ESC](/product/esc), helping your team securely scale and automate your software delivery pipelines.
+
+---more
 
 ## Why We Built It
 
@@ -67,10 +70,10 @@ jobs:
           echo "TEST_ENV=$TEST_ENV"
 ```
 
-## What This Does
+The GitHub Action workflow above does the following:
 
-1.	Authenticate with Pulumi Cloud using pulumi/auth-actions. Instead of storing a permanent token, we use a short-lived token to authenticate with Pulumi Cloud.
-2.	Inject the environment variables from tinyco/someProject/myEnv into the current GitHub Actions environment, making them accessible to subsequent steps in the workflow.
+1.	Authenticate with Pulumi Cloud using pulumi/auth-actions. Instead of storing a permanent token, we use a [short-lived token to authenticate with Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/github/).
+2.	Inject the environment variables from `tinyco/someProject/myEnv` into the current GitHub Actions environment, making them accessible to subsequent steps in the workflow.
 
 ## Use Cases
 
@@ -78,17 +81,10 @@ jobs:
 2.	**Automated Environment Management** - Use Pulumi ESC commands to create and manage environments directly from GitHub Actions. This can be part of a larger GitOps strategy where infrastructure changes are tracked in version control.
 3.	**Secret Rotation for Compliance** - By using ESC’s built-in rotation, you can achieve compliance requirements and best practices without manual overhead or reliance on multiple external secrets stores.
 
-## Getting Started
-
-1.	**Add the Pulumi ESC Action** - In your existing GitHub Actions workflow, reference pulumi/esc-action@v1.
-2.	**Set Up Pulumi ESC** - Ensure you have your environment defined in Pulumi ESC with the required variables and files.
-3.	**Authenticate Securely with Pulumi Cloud** - We recommend using pulumi/auth-actions to generate and pass a short-lived token as PULUMI_ACCESS_TOKEN.
-4.	**Run and Validate** - Push your changes to GitHub, run your workflow, and verify that your secrets and environment variables are successfully injected.
-
 ## What’s Next?
 
-- Explore More ESC Features: Dive deeper into ESC’s environment management, secrets rotation, and dynamic credentials.
-- Contribute to the GitHub Action: The Pulumi ESC GitHub Action is open source. Feel free to open issues, submit PRs, or suggest enhancements.
+- Explore More ESC Features: Dive deeper into ESC’s [environment management](/docs/esc/environments/working-with-environments), [secret rotation](/docs/esc/environments/rotation), and [dynamic credentials](/docs/esc/integrations/dynamic-login-credentials).
+- Contribute to the GitHub Action: The Pulumi ESC GitHub Action is [open source](https://github.com/pulumi/esc-action). Feel free to open issues, submit PRs, or suggest enhancements.
 - Join the Pulumi Community: Connect with other Pulumi users and share best practices in our Community Slack.
 
 We’re thrilled to bring you the Pulumi ESC GitHub Action, allowing you to automate your infrastructure and streamline secrets management from within GitHub. This integration makes it simpler than ever to adopt best-in-class secrets management and environment configuration practices, all while speeding up your CI/CD pipelines.
