@@ -263,7 +263,7 @@ As you build out your self-service approach, consider how Pulumi might fit in. W
 - [Component resources](https://www.pulumi.com/docs/iac/concepts/resources/components/) for creating reusable infrastructure modules that encapsulate best practices.
 - [Organization templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/) for building a catalog of infrastructure templates.
 - [Packages](https://www.pulumi.com/product/packages/) in your language of choice for a code-first self-service workflow.
-- A [Platform-in-the-box](https://www.pulumi.com/docs/pulumi-cloud/deployments/) experience for those who want a portal-first experience for self-service infrastructure.
+- A [Platform-in-the-box](https://www.pulumi.com/product/internal-developer-platforms/) experience for those who want a portal-first experience for self-service infrastructure.
 - [A Backstage plugin](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/backstage/) for those who prefer to use Backstage for an IDP.
 
 A great self-service workflow and abstraction layer are key to making platform engineering work. [Next in this series](/blog/tag/platform-engineering-pillars/), we’ll tackle developer experience directly.
