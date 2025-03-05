@@ -1,39 +1,42 @@
 ---
-title: "IaC Recommended Practices: Using Automation API"
+title: "IaC Best Practices: Using Automation API"
+canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stacks/
 date: 2023-07-26
-meta_desc: In this post in the continuing series on IaC recommended practices, the Zephyr teams starts using the Pulumi Automation API to orchestrate multiple stacks.
+updated: 2025-03-04
+meta_desc: Review key learnings from the IaC best practices series. Recap insights on structuring Pulumi projects, security, automation, and scaling infrastructure.
 meta_image: meta.png
 authors:
     - scott-lowe
 tags:
     - best-practices
-    - zephyr
     - automation-api
     - go
+aliases:
+    - /blog/iac-recommended-practices-using-automation-api/
 ---
 
-Welcome to the sixth post in our series of blog posts focused on infrastructure as code (IaC) recommended practices. So far in this series, you've seen how Zephyr Archaeotech Emporium---the fictional company at the center of this series---uses Pulumi to manage their online retail store. You read how Zephyr's initial use of Pulumi changed to use short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, incorporated Stack References, and used Pulumi Cloud's role-based access control (RBAC) functionality to control access to their stacks. This post focuses on how Zephyr takes advantage of the [Pulumi Automation API](/docs/using-pulumi/automation-api/concepts-terminology) to bring an even greater level of orchestration to the stacks that represent their online store.<!--more-->
+Welcome to the sixth post in our series of blog posts focused on Infrastructure as Code (IaC) best practices. So far in this series, you've seen how Zephyr Archaeotech Emporium---the fictional company at the center of this series---uses Pulumi to manage their online retail store. You read how Zephyr's initial use of Pulumi changed to use short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, incorporated Stack References, and used Pulumi Cloud's role-based access control (RBAC) functionality to control access to their stacks. This post focuses on how Zephyr takes advantage of the [Pulumi Automation API](/docs/using-pulumi/automation-api/concepts-terminology) to bring an even greater level of orchestration to the stacks that represent their online store.<!--more-->
 
-The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. These practices have unfolded organically, as a direct response to Zephyr's evolving needs. The aim is to demonstrate that recommended practices (or best practices) are not set in stone, but are rather "point in time" recommendations that adapt as your company grows.
+The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. These practices have unfolded organically, as a direct response to Zephyr's evolving needs. The aim is to demonstrate that best practices are not set in stone, but are rather "point in time" recommendations that adapt as your company grows.
 
 For ease of navigation, here are links to all the posts in the series:
 
-* [IaC Recommended Practices: Code Organization and Stacks](/blog/iac-recommended-practices-code-organization-and-stacks/)
-* [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
-* [IaC Recommended Practices: Structuring Pulumi Projects](/blog/iac-recommended-practices-structuring-pulumi-projects/)
-* [IaC Recommended Practices: Using Stack References](/blog/iac-recommended-practices-using-stack-references/)
-* [IaC Recommended Practices: RBAC and Security](/blog/iac-recommended-practices-rbac-and-security/)
-* **IaC Recommended Practices: Using Automation API** (you are here)
-* [IaC Recommended Practices: Wrapping Up](/blog/iac-recommended-practices-wrapping-up)
+* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
+* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
+* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
+* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
+* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
+* **IaC Best Practices: Using Automation API** (you are here)
+* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
 
-## Reviewing the state of Pulumi at Zephyr
+## Managing Complexity in a Multi-Project Pulumi Setup
 
 Over the course of this series, you've seen how Zephyr's use of Pulumi has grown and changed. For the sake of completeness, here's a quick recap:
 
-* Zephyr started with a single project in a single repository with two stacks, one for production and one for testing. _(Details are available in [the first blog post](/blog/iac-recommended-practices-code-organization-and-stacks/) in the series.)_
-* To unlock developer velocity, Zephyr quickly added per-developer stacks. _(You can read about per-developer stacks in [the second post](/blog/iac-recommended-practices-developer-stacks-git-branches/) in the series.)_
-* As Zephyr grew and expanded, their single Pulumi project grew into three different Pulumi projects: one for base infrastructure, one for their Kubernetes platform, and one for the online store application. _(The [third post in the series](/blog/iac-recommended-practices-structuring-pulumi-projects/) describes the reasoning for adopting multiple projects.)_
-* Accompanying the switch to multiple projects, Zephyr implemented stack references (to pass information between stacks in different projects) and applied role-based access control (RBAC) to the stacks in Pulumi Cloud. _(Refer back to [the fourth post](/blog/iac-recommended-practices-using-stack-references/) and [the fifth post](/blog/iac-recommended-practices-rbac-and-security/) in the series for more details on each of these areas.)_
+* Zephyr started with a single project in a single repository with two stacks, one for production and one for testing. _(Details are available in [understanding code organization and stacks](/blog/iac-best-practices-understanding-code-organization-stacks/) post.)_
+* To unlock developer velocity, Zephyr quickly added per-developer stacks. _(You can read about [per-developer stacks](/blog/iac-best-practices-enabling-developer-stacks-git-branches/) post in the series.)_
+* As Zephyr grew and expanded, their single Pulumi project grew into three different Pulumi projects: one for base infrastructure, one for their Kubernetes platform, and one for the online store application. _(The [structuring Pulumi projects](/blog/iac-best-practices-structuring-pulumi-projects/) post describes the reasoning for adopting multiple projects.)_
+* Accompanying the switch to multiple projects, Zephyr implemented stack references (to pass information between stacks in different projects) and applied role-based access control (RBAC) to the stacks in Pulumi Cloud. _(Refer back to the [stack references](/blog/iac-best-practices-applying-stack-references/) and [RBAC & security](/blog/iac-best-practices-implementing-rbac-and-security/) posts in the series for more details on each of these areas.)_
 
 {{% notes type="info" %}}
 To see the state of Zephyr's Pulumi implementation before the changes described in this article, please look at the `blog/multi-project` branch in each of the GitHub repositories (`zephyr-infra`, `zephyr-k8s`, and `zephyr-app`).
@@ -49,7 +52,7 @@ Because Zephyr was already using a modular approach to their overall application
 
 The resulting four project architecture looks like this:
 
-![An illustration of Zephyr's four project architecture](four-stack-architecture.png)
+![An illustration of Zephyr's four project architecture](four-project-architecture.jpg)
 
 {{% notes type="info" %}}
 To see the state of the code after the changes described above---the addition of the `zephyr-data` project and the changes to use Amazon Aurora---please review the `blog/automation-api` branch in each of the Zephyr repositories.
@@ -61,7 +64,7 @@ With only four projects, this is not an insurmountable challenge by any stretch.
 
 The Zephyr team started asking some questions: How can we make this process simpler? How can we remove room for error? How can we prepare our teams for greater scale?
 
-## Taking automation further
+## Simplifying Advanced Deployments with Automation API
 
 The challenges facing the Zephyr teams are not unique to Zephyr. Many IaC vendors recommend using a modular approach. Unfortunately, most IaC products rely on less-than-ideal approaches---like Bash scripts or Makefiles---to "stitch" together the different modules.
 
@@ -76,7 +79,7 @@ When the Zephyr team started evaluating options for simplifying the deployment o
 
 Let's take a look at Zephyr's initial foray into using Pulumi Automation API.
 
-## Digging into Zephyr's Automation API Program
+## Performing Stack Operations Efficiently
 
 {{% notes type="info" %}}
 You can view the Pulumi Automation API program that Zephyr wrote in the `local-source` directory of [the `pulumi/zephyr-automation` repository](https://github.com/pulumi/zephyr-automation/) on GitHub, in the `blog/automation-api` branch.
@@ -149,7 +152,7 @@ if err != nil {
 fmt.Printf("Successfully created/selected %s stack\n", env.BaseProject.Nickname)
 ```
 
-In this particular program, Zephyr decided to start with a _local workspace._ (You can read a bit more about workspaces in the context of  Pulumi Automation API [in the docs](/docs/using-pulumi/automation-api/getting-started-automation-api/#associate-with-a-stack).) This is reflected in the use of the `UpsertStackLocalSource` method shown above, which will create or select a stack for a Pulumi program found in a local filesystem location.
+In this particular program, Zephyr decided to start with a _local workspace._ (You can read more about workspaces in the [Pulumi Automation API docs](/docs/using-pulumi/automation-api/getting-started-automation-api/#associate-with-a-stack).) This is reflected in the use of the `UpsertStackLocalSource` method shown above, which will create or select a stack for a Pulumi program found in a local filesystem location.
 
 Users can also use `UpsertStackInlineSource`, which embeds the Pulumi program into the Automation API program as a function. There are trade-offs to each approach:
 
@@ -188,11 +191,11 @@ In the end, using Pulumi's Automation API enabled Zephyr's platform team to simp
 Although Zephyr uses multiple GitHub repositories, the Pulumi Automation API has no requirements for multiple repositories. You could use a monorepo, if that better suits your particular requirements.
 {{% /notes %}}
 
-## Summarizing recommended practices
+## Summarizing Best Practices: Automation API
 
-This post discussed the following recommended practices when using Pulumi Automation API:
+This post discussed the following best practices when using Pulumi Automation API:
 
-* **Use the Automation API to orchestrate operations on multiple stacks.** In cases where you've split Pulumi projects (per the recommendations in [the post on structuring Pulumi projects](/blog/iac-recommended-practices-structuring-pulumi-projects/)), you've introduced a potential opportunity for using Automation API to orchestrate operations. This is a great counter-balance to offset the relative increase in complexity that comes from breaking large Pulumi projects into smaller, more focused Pulumi projects.
+* **Use the Automation API to orchestrate operations on multiple stacks.** In cases where you've split Pulumi projects (per the recommendations in the post on [structuring Pulumi projects](/blog/iac-best-practices-structuring-pulumi-projects/)), you've introduced a potential opportunity for using Automation API to orchestrate operations. This is a great counter-balance to offset the relative increase in complexity that comes from breaking large Pulumi projects into smaller, more focused Pulumi projects.
 * **Separate configuration from code.** This is already a generally-accepted recommendation in most programming circles, and it applies to Automation API programs as well. Doing so enables you, if you wish, to distribute binary artifacts to teams instead of requiring them to execute the source code of your Automation API programs.
 * **Use local source to decouple Automation API programs from Pulumi programs when separate teams are involved.** When separate teams are creating, managing, or maintaining the Automation API programs and the Pulumi programs, using local source instead of inline source enables the teams to operate somewhat independently.
 * **When there is a single team managing both Automation API programs and Pulumi programs, use inline source.** This is also true when, perhaps due to compliance or regulatory concerns, the Automation API program should be more tightly coupled to the Pulumi programs it is automating.

@@ -1,11 +1,14 @@
 ---
-title: "My Pulumi: Managing My DNS"
+title: "Managing my DNS with Pulumi"
 date: 2022-03-29T10:00:00Z
+updated: 2025-03-05
 draft: false
 meta_desc: In this aritcle, Rawkode shows how he uses Pulumi to manage the DNS records for his many domains.
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["Domains", "DNS"]
+aliases:
+  - /blog/2022-03-22-my-pulumi-managing-my-dns
 ---
 
 Hello, my name is David Flanagan, and I own more domains than I need. The problem is I have too many ideas; and as we all know, ideas don't become real until you buy the domain name. Unfortunately, more often than not, that's about as far as my ideas go---because, **life**. That being said, I do try to keep my DNS records under control in the event that life affords me the time to follow-up on one of these ideas. Today, I want to show you how I do that.
