@@ -24,7 +24,9 @@ social:
             🛠️ The Solution:
             Implement modular, intent-based infrastructure with a two-level abstraction model as a core pillar of your internal developer platform.
 ---
-In our previous articles, we looked at platform engineering principles and how Infrastructure as Code creates a solid foundation. But there's still an important challenge to address: the infrastructure provisioning process itself. Without proper modularity and a clear separation between intent and infrastructure details, things get messy—leading to friction, delays, and unnecessary complexity.
+[Previous articles](/blog/tag/platform-engineering-pillars/) in this series explored [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) principles and how Infrastructure as Code creates a solid foundation. But there's still an important challenge to address: the infrastructure provisioning process itself. Without proper modularity and a clear separation between intent and infrastructure details, things get messy—leading to friction, delays, and unnecessary complexity.
+
+<!--more-->
 
 ## The Missing Layer: Abstraction Through Modularity
 
@@ -38,21 +40,30 @@ You end up with
 
 This approach burdens developers with low-level details they don’t need to worry about, while platform teams become gatekeepers, reviewing intricate configurations. Alternatively, a traditional ticketing model takes over, discarding the benefits of modern practices.
 
-What’s missing is a proper abstraction layer between raw infrastructure code and developer needs. Without modular, reusable infrastructure patterns, every new application deployment becomes an exercise in starting from scratch and defining every detail instead of just stating what the application requires.
+<div style="text-align: center; width: 100%; margin: 0 auto;">
+    <img src="platform.png" alt="" style="width: 100%;">
+    <figcaption>
+        <i>Solution: A Platform Engineering Approach</i>
+    </figcaption>
+</div>
+
+What’s missing is a proper abstraction layer between raw infrastructure code and developer needs. **That layer is the platform. A Platform for self-service infrastructure.** Without modular, reusable infrastructure patterns, every new application deployment becomes an exercise in starting from scratch and defining every detail instead of just stating what the application requires and deferring details to the platform.
 
 ### Common Anti-Patterns Without Proper Abstraction
 
-Without modular infrastructure, organizations typically fall into one of two problematic patterns.
+Without this modular platform approach to cloud infrastructure, organizations typically fall into one of two problematic patterns.
 
 **The Copy-Paste Anti-Pattern**
 
-What happens in practice? Developers often copy infrastructure code from previous projects. They find something similar, duplicate large chunks of configuration, make a few changes, and hope everything right and submit it for review. This leads to a brittle system with siloed knowledge—security fixes must be applied manually across every instance, no one has a full picture of the infrastructure and Day 2 Operations become error prone.
+Developers copy infrastructure code from previous projects. They find something similar, duplicate large chunks of configuration, make a few changes, and hope everything is right, and submit it for review. This leads to a brittle system with siloed knowledge. Security fixes must be applied manually across every instance – no one has a full picture of the infrastructure – and Day 2 Operations become error prone.
+
+And this isn't limited to infrastructure: CI scripts get copied and modified, Dockerfiles and Kubernetes manifests get copied and modified.
 
 It feels like control, but it's not. Developers still rely on platform specialists to validate changes and catch mistakes.
 
 **The Ticketing Anti-Pattern**
 
-Alternatively, some organizations rely on rigid ticketing systems for infrastructure changes. A platform specialist applies the changes, ensuring security and consistency—but also creating bottlenecks. Developers might wait days or weeks for simple modifications, left out of the process entirely.
+Alternatively, some organizations rely on rigid ticketing systems for infrastructure changes. A platform specialist applies writes and applies all changes, ensuring consistency — but also creating bottlenecks. Developers might wait days or weeks for simple modifications, leaving the process entirely unfinished.
 
 This guarantees expert oversight but strips developers of autonomy, making the platform team a bottleneck for every deployment.
 
@@ -62,9 +73,9 @@ Neither anti-pattern strikes a balance between standardization and autonomy, lea
 
 #### Day 1 Bottleneck: Slow, Manual Infrastructure = Developer Gridlock
 
-When provisioning becomes a bottleneck, developers with finished code wait days for infrastructure. This disrupts focus and forces frequent context switching. They juggle tasks to stay productive, then have to rebuild focus when infrastructure is ready.
+When provisioning becomes a bottleneck, developers with finished code wait days for infrastructure. This disrupts focus and forces frequent context switching. They juggle tasks to stay productive and then have to rebuild focus when the requested infrastructure is ready.
 
-These delays slow the entire delivery pipeline. Teams add buffer time for infrastructure delays, projects slip, and the business sees technology as slow-moving. Meanwhile, the real culprit—slow provisioning that kills momentum—gets buried in ticket queues and approvals.
+These delays slow the entire delivery pipeline. Teams add buffer time for infrastructure delays, projects slip, and the business sees technology as slow-moving. Meanwhile, the real culprit is slow provisioning that kills momentum.
 
 #### Day 2 And Beyond Chaos: Sprawling, Unpredictable Infrastructure = Operational Nightmare
 
@@ -72,9 +83,9 @@ Day 1 bottlenecks frustrate developers, but the real long-term cost is patching 
 
 Operations teams are overwhelmed by the basic, critical task of simply keeping the lights on across a sprawling, inconsistent landscape.
 
-## The Solution: Two-Level Abstraction and Self Service
+## The Solution: A Platform of Options and Self Service
 
-Self-service works best with a two-layer model: what developers need (intent) and how it's implemented (infrastructure details). This lets teams move fast without losing control.
+A Self-service platform is the solution to these problems. The platform is this curated list of modules, providing application developers with a set of pre-built options that let them work at a higher level of abstraction. By choosing from these modules, developers express their intent for infrastructure, leaving the platform to handle the implementation details. Let me explain.
 
 A strong self-service approach divides responsibilities into two clear layers:
 
@@ -82,7 +93,7 @@ A strong self-service approach divides responsibilities into two clear layers:
 
 - Builds and updates reusable infrastructure modules
 - Bakes in security, compliance, and best practices
-- Hides complexity so developers don’t need to worry about low-level details
+- Hides complexity so developers don’t need to worry about copy and pasting low-level details
 - Sets guardrails for scalability, security, and compliance
 - Updates modules as technologies and needs change
 
@@ -98,30 +109,41 @@ This setup keeps things fast and flexible. Developers get the autonomy to build 
 
 ## The Power of Intent-Based Specification
 
+<div style="text-align: center; width: 100%; margin: 0 auto;">
+    <img src="developer-intent.png" alt="" style="width: 100%;">
+    <figcaption>
+        <i>Layer of Abstraction to the Rescue</i>
+    </figcaption>
+</div>
+
 The two-level approach works by replacing over-specification with intent-based design.
 
 Over-specification happens when developers specify too many infrastructure details that:
+
 - Require expertise they might not have
-- Tightly couple infrastructure to specific implementations
+- Tightly coupled infrastructure to specific implementations
 - Make future changes hard or even impossible
 
 Intent-based specification means developers state what their app needs, not how to implement it, meaning:
+
 - Platform teams can update underlying infrastructure without breaking applications
 - New capabilities can be added without disrupting existing applications
 
-By focusing on what developers need, not how it's built, it creates a system that’s easier to maintain and evolve for both platform teams and developers.
+Focusing on what developers need, not how it's built, creates a system that’s easier to maintain and evolve for both platform teams and developers.
+
+Let's walk through an example.
 
 ## Practical Example: Java Application with Kafka, PostgreSQL, and Redis
 
 The platform team provides reusable modules:
 
-#### Java Application Module
+### Java Application Module
 
 This module handles everything needed to run a Java app. It covers the Java runtime, memory settings, JVM options, scaling rules, health checks, monitoring, and Kubernetes namespacing. It also manages containers, security scans, resource limits, and logging integration—so developers don’t have to.
 
 #### Kafka Integration Module
 
-Similarly this module simplifies Kafka integration, handling broker connections, authentication, topics, and security. It takes care of SASL/SSL authentication, replication factors, ACLs, and encryption. Developers just specify topics and schemas.
+Similarly, this module simplifies Kafka integration, handling broker connections, authentication, topics, and security. It takes care of SASL/SSL authentication, replication factors, ACLs, and encryption. Developers just specify topics and schemas.
 
 And so on for common infrastructure components used in the org.
 
@@ -130,7 +152,7 @@ And so on for common infrastructure components used in the org.
 Developers use a simpler interface. To deploy a new Java service with Kafka, PostgreSQL, and Redis, they only need to specify the required input parameters in the platform-defined modules:
 
 ```yaml
-# Developer's intent based configuration
+# Developer's intent-based configuration
 application:
   name: order-processing-service
   module: java-application
@@ -159,43 +181,33 @@ integrations:
     ttl: 3600
 ```
 
-( Note: YAML not required. This code could be UI driven, or it could be written in your programming langague of choice. The point is it only specifies intent and defers specifics to the platform. )
+( Note: YAML not required. This pseudo-code could be UI driven, or it could be written in your programming language of choice. The point is it specifies intent and defers specifics to the platform. )
 
 ## Solving Day 1 and Day 2 Challenges
 
-The intent-based specification solves immediate and long term problems:
-
-**Eliminating Day 1 Bottlenecks**
-- **From Weeks to Minutes**: Developers who previously waited days for infrastructure can now self-provision in minutes using pre-approved modules
-- **Focus Preservation**: By removing the context-switching penalty of infrastructure delays, developers maintain creative momentum
-- **Reduced Learning Curve**: New team members can be productive immediately without extensive infrastructure knowledge
+The intent-based specification solves immediate and long-term problems:
 
 **The Self-Service Transformation in Action:**
 
 | Developer Experience | Platform Response |
 |---|---|
-| Submits simple YAML with intent-based configuration | Validates against policies and expands into complete infrastructure |
+| Submits simple intent-based configuration | Expands into complete infrastructure |
 | Focuses on application needs, not infrastructure details | Provisions resources with appropriate sizing and security controls |
 | Specifies "what" is needed, not "how" to configure it | Handles networking, monitoring, backups, and credentials |
-| No expertise required in Kubernetes, networking, or security | Implements best practices automatically across all deployments |
+| Limited expertise required in Kubernetes, networking, or security | Implements best practices automatically across all deployments |
 | | Maintains and updates the underlying implementation over time |
-
-**Preventing Day 2 Chaos**
-- **Consistency By Design**: The copy-paste anti-pattern disappears as all applications use the same underlying modules, creating natural standardization
-- **Simplified Patching and Updates**: When security vulnerabilities emerge, platform teams update modules once rather than hunting for every custom implementation
-- **Evolution Without Disruption**: Infrastructure can be upgraded, replaced, or migrated without breaking dependent applications
-- **Operational Clarity**: Operations teams gain predictable, consistent environments that follow established patterns
 
 This approach transforms infrastructure from a developer burden into an organizational asset that becomes more valuable over time, rather than decaying into technical debt.
 
 ### **Developer Interaction Models: Choosing Your Platform Interface**
 
-The next key decision is how developers will actually *use* this platform.  The ideal interface balances ease of use with necessary flexibility.  Each organization may have different needs and so a spectrum of interaction models exist, each with its own trade-offs. Tree common approaches are: CLI-Driven Infrastructure as Code, the Self-Service Portal, and a Hybrid model.
+Hopefully, now you are bought in on the value of separate layers of abstraction and building a platform to expose those.
 
+The next key decision is how developers will actually *use* this platform.  The ideal interface balances ease of use with the necessary flexibility.  Organizations and requirements vary, so a spectrum of interaction models exists, each with its own trade-offs. Tree common approaches are: CLI-Driven Infrastructure as Code, the Self-Service Portal, and a Hybrid model.
 
 | Aspect | CLI-Driven | Self-Service Portal | Hybrid Approach |
 |--------|------------|---------------------|-----------------|
-| **Developer Experience** | Code-based, using IaC tools directly | Click-based UI with forms and catalogs | Portal for common tasks, code for customization |
+| **Developer Experience** | Code-based, using IaC modules and components directly | Click-based UI with forms and catalogs | Portal for common tasks, code for customization |
 | **Code Visibility** | Full visibility and control | Limited or no visibility | Visible but with varying levels of access |
 | **Governance** | Trust-based or PR reviews | Enforced through portal constraints | Guided paths with managed exceptions |
 | **Learning Curve** | Higher (requires IaC knowledge) | Lower (minimal infrastructure knowledge) | Moderate (basic UI with optional advanced use) |
@@ -205,9 +217,9 @@ The next key decision is how developers will actually *use* this platform.  The 
 
 In this approach, platform teams build reusable infrastructure modules while developers consume them directly through code. Developers use familiar IaC tools like Pulumi CLI to instantiate these modules, with changes flowing through version control like any other code.
 
-The key strength is transparency and familarity. Developers maintain visibility and ownership of their intent based defintions. This code-centric workflow integrates naturally with existing development practices.
+The key strength is transparency and familiarity. Developers maintain visibility and ownership of their intent-based defintions. This code-centric workflow integrates naturally with existing development practices.
 
-However, this flexibility creates governance challenges. Appliation teams can work around standards requires either strong trust or approval processes that might reintroduce bottlenecks. The approach also assumes developers have some IaC knowledge, making it best suited for organizations with mature DevOps practices and experienced teams.
+However, this flexibility creates governance challenges and requires either strong trust or approval processes that might reintroduce bottlenecks. The approach also assumes developers have some IaC knowledge, making it best suited for organizations with mature DevOps practices and experienced teams.
 
 #### **2. Self-Service Portal: Click-Ops Simplicity for Rapid Provisioning**
 
@@ -215,7 +227,7 @@ The self-service portal approach creates a web interface where developers provis
 
 This approach keeps infrastructure code completely centralized and hidden from developers. The portal translates simple selections ("Add Database: Medium Size") into the appropriate underlying configurations, ensuring perfect compliance with organizational standards.
 
-The result is dramatically reduced friction and learning curve, enabling even infrastructure novices to deploy resources in minutes. However, this simplicity comes at the cost of flexibility—customizations typically require platform team involvement, making this model ideal for organizations with predictable workloads or where standardization outweighs customization needs.
+The result is dramatically reduced friction and learning curve, enabling even infrastructure novices to deploy resources in minutes. However, this simplicity comes at the cost of flexibility. Customizations and unique needs typically require platform team involvement, making this model ideal for organizations with predictable workloads or where standardization outweighs customization needs.
 
 #### **3. Hybrid Approach: Code-Backed Self-Service**
 
@@ -223,27 +235,35 @@ The hybrid approach generates and modifies infrastructure code via pull requests
 
 This model provides both simplicity and flexibility. Routine tasks remain point-and-click while complex scenarios allow direct code editing within the same PR workflow. The approach maintains a complete audit trail through commit history while giving platform teams visibility into all changes.
 
-The significant tradeoff is implementation complexity: building a system that generates commits and PRs based on version control integration requires substantial investment. Organizations must weigh this upfront cost against the long-term benefits of combining UI simplicity with code transparency.
+A significant tradeoff is implementation complexity: building a system that generates commits and PRs based on version control integration requires substantial investment. Organizations must weigh this upfront cost against the long-term benefits of combining UI simplicity with code transparency.
 
 #### Lifecycle Management
 
-Effective lifecycle management is critical for maintaining stability and predictability in your internal developer platform. Consider migrating from Kafka to AWS Kinesis. Traditionally, this would involve significant application developer effort, including updating connection details, authentication, and application logic. However, with the two-level abstraction and intent-based approach described earlier, this migration becomes simpler. Platform teams introduce a new Kinesis module matching the existing Kafka module's intent-based interface, allowing developers to switch modules. Migration will not be free, but efforts will be reduced.
+More effective lifecycle management is an advantage of a platform approach. Consider migrating from Kafka to AWS Kinesis. Traditionally, this would involve significant application developer effort, including updating connection details, authentication, and application logic. However, with the two-level abstraction and intent-based approach described earlier, this migration becomes simpler. Platform teams introduce a new Kinesis module matching the existing Kafka module's intent-based interface. Data is mirrored, and developers can plan a switchover. Migration will not be free, but efforts and coordination will be reduced.
 
-( Life-Cycle management is a huge topic in Day 2 operations and outside the scope of what can be covered here. )
+Life-Cycle management is a huge topic in Day 2 operations and outside the scope of what can be covered here, but introducing abstractions and a platform of modules will pay off long term.
 
 ### Looking Ahead: Operational Excellence and Beyond
 
-The two-level abstraction model we've introduced here doesn't just simplify provisioning and accelerate developer workflows—it also lays a strong foundation for operational excellence. By standardizing infrastructure through reusable modules and intent-based specifications, we create consistency and visibility that significantly simplify critical operational concerns such as:
+The two-level abstraction model does not just simplify provisioning. It also lays a strong foundation for operational excellence. By standardizing infrastructure through reusable modules and intent-based specifications, we create consistency and visibility that significantly simplify critical operational concerns such as:
 
 - **Drift Detection and Reconciliation:** Standardized modules make it easier to detect and correct deviations from desired state.
 - **Continuous Compliance and Security:** Centralized module definitions allow security and compliance controls to be consistently enforced and audited.
 - **Cost Management and FinOps:** Intent-based specifications enable clearer cost attribution and optimization opportunities.
 - **Observability and Incident Response:** Consistent infrastructure patterns simplify monitoring, alerting, and troubleshooting.
 
-These operational topics—and more—are essential to a mature platform engineering practice. We'll explore each of these areas in greater depth later in this series, demonstrating how the two-level abstraction approach provides a powerful foundation for addressing them effectively.
+Later articles in this series will explore each of these areas in greater depth, demonstrating how a platform approach provides a powerful foundation for addressing them effectively.
 
-## Conclusion
+## Self-Service with Pulumi
 
-The two-level architecture of IDP self service creates a powerful interface between platform teams and application developers. By embracing intent-based specification, this approach enables developers to clearly express what they need with minimal complexity while giving platform teams the flexibility to implement and evolve the underlying infrastructure.
+The two-level architecture of IDP self-service creates a powerful interface between platform teams and application developers. By embracing intent-based specification, this approach enables developers to clearly express what they need with minimal complexity while giving platform teams the flexibility to implement and evolve the underlying infrastructure.
 
-This approach ensures that developers can self-serve their infrastructure needs through composable modules, while platform teams maintain control over how those needs are ultimately fulfilled. The result is a development environment that balances speed and autonomy with standardization and control, creating a system that can evolve gracefully over time without disrupting the developer experience.
+As you build out your self-service approach, consider how Pulumi might fit in. With Pulumi, you get:
+
+- [Component resources](https://www.pulumi.com/docs/iac/concepts/resources/components/) for creating reusable infrastructure modules that encapsulate best practices.
+- [Organization templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/) for building a catalog of infrastructure templates.
+- [Packages](https://www.pulumi.com/product/packages/) in your language of choice for a code-first self-service workflow.
+- A [Platform-in-the-box](https://www.pulumi.com/docs/pulumi-cloud/deployments/) experience for those who want a portal-first experience for self-service infrastructure.
+- [A Backstage plugin](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/backstage/) for those who prefer to use Backstage for an IDP.
+
+A great self-service workflow and abstraction layer are key to making platform engineering work. [Next in this series](/blog/tag/platform-engineering-pillars/), we’ll tackle developer experience directly.
