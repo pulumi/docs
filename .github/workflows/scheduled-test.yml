@@ -30,7 +30,7 @@ jobs:
     strategy:
       matrix:
         platform:
-          - pulumi-service-ubuntu-22.04-16core
+          - ubuntu-22.04
         go-version:
           - 1.21.x
         node-version:
@@ -80,7 +80,7 @@ jobs:
 
       - name: Check out the code
         uses: actions/checkout@v3
-      
+
       - name: Fetch master branch
         if: github.ref != 'refs/heads/master'
         run: git fetch origin master:master
