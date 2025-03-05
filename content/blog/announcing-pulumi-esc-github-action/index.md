@@ -13,30 +13,30 @@ tags:
 
 We’re excited to share our latest addition to the Pulumi Ecosystem: the [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This new GitHub Action streamlines how you manage secrets, configurations, and CI/CD tasks using [Pulumi ESC](/product/esc), helping your team securely scale and automate your software delivery pipelines.
 
----more
+<!--more-->
 
-## Why We Built It
+## Why we built it
 
-Secrets management continues to be a challenge for organizations of all sizes. Storing long-lived credentials in multiple places (e.g., GitHub, third-party CI systems, and internal servers) often leads to “secret sprawl” and potential security gaps. With Pulumi ESC, you can centralize and manage short-lived dynamic credentials, rotate them automatically, and ensure secrets don’t persist beyond their necessary lifetime.
+Secret management continues to be a challenge for organizations of all sizes. Storing long-lived credentials in multiple places (e.g., GitHub, third-party CI systems, and internal servers) often leads to “secret sprawl” and potential security gaps. With Pulumi ESC, you can migrate to dynamic credentials, and ensure secrets don’t persist beyond their necessary lifetime. If your process requires longer-lived static credentials, with ESC you can manage credentials in a central place and [rotate them automatically](/docs/esc/environments/rotation).
 
 By packaging ESC functionality into a GitHub Action, we’re enabling teams to inject secrets and run ESC commands directly within their GitHub workflows. This allows for a streamlined approach to environment management and secrets rotation—without leaving GitHub.
 
-## Key Benefits
+## Key benefits
 
 1.	**Secure Secrets Injection** - Inject secrets into your GitHub Actions workflows as they are needed, rather than storing them as static, long-lived secrets. This dynamic approach reduces the risk of secrets leaking in logs or pulled from unauthorized sources.
 2.	**Automatic Secret Rotation** - Pulumi ESC handles rotation for you, ensuring that any secrets or credentials you inject into GitHub Actions remain fresh and invalid once your workflow completes.
 3.	**Streamlined CI/CD Pipeline** - In addition to secrets management, you can run any Pulumi ESC command directly in your GitHub Actions workflows. Automate the creation, update, or teardown of environments as part of your CI/CD process.
 4.	**Seamless Integration with Pulumi Cloud** - Combine the Pulumi ESC GitHub Action with [pulumi/auth-actions](https://github.com/marketplace/actions/pulumi-auth-action) to authenticate securely with Pulumi Cloud. No need for long-lived tokens—simply leverage short-lived tokens provided at runtime.
 
-## How It Works
+## How it works
 
 At a high level, the Pulumi ESC GitHub Action can do three things:
 
 1. **Download the Pulumi ESC CLI** - By default, the action ensures the ESC CLI is installed in your GitHub Actions environment. If you provide a specific version, that version is installed.
-2. **Inject all environment variables from an ESC environment** - If you specify an environment (for example, tinyco/someProject/myEnv), the action will inject all environment variables and projected files associated with that environment into the GitHub Actions context.
+2. **Inject all environment variables from an ESC environment** - If you specify an environment (for example, `tinyco/someProject/myEnv`), the action will inject all environment variables and projected files associated with that environment into the GitHub Actions context.
 3. **Inject specific environment variables from an ESC environment** - If you only need certain keys, you can specify them in the action’s inputs to pick and choose what gets injected, giving you fine-grained control.
 
-## Example Workflow
+## Example workflow
 
 Below is a minimal workflow that showcases injecting an entire environment’s variables into your GitHub Actions job:
 
@@ -62,7 +62,7 @@ jobs:
       - name: Install and inject ESC environment variables
         uses: pulumi/esc-action@v1
         with:
-          environment: 'tinyco/someProject/myEnv'
+          environment: 'tinyco/someProject/myEnv@stable'
       - name: Verify environment variables
         run: |
           echo "FOO=$FOO"
