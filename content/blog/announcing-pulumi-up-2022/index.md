@@ -7,6 +7,8 @@ authors:
     - george-huang
 tags:
     - pulumi-events
+block_external_search_index: true
+redirect_to: /pulumi-up/
 ---
 
 Calling all cloud engineers! Today we announce the second annual [PulumiUP](/pulumi-up/) virtual conference taking place on May 4, 2022. We will also host the inaugural Pulumi Community Summit on May 5 to virtually assemble the world’s cloud, infrastructure, and Pulumi practitioners of all experience levels (hint: that’s you---all are welcome)! [Register for both events here](/pulumi-up/).
@@ -28,7 +30,7 @@ We’ve worked hard to curate a half-day of learning and expert insights from th
 
 In the coming weeks, we will be announcing even more speakers. Stay tuned!
 
-## What’s in store at PulumiUP 2022
+## What’s in store at PulumiUP 2022?
 
 Stay tuned as we will announce the full agenda and speakers soon on our website and in an email to registrants. Here’s what you can expect at this year’s event:
 
@@ -46,6 +48,6 @@ Stay tuned as we will announce the full agenda and speakers soon on our website 
 
 **Workshops**: Get hands-on with Pulumi and cloud engineering in 1-hour workshops that will cover the fundamentals of Infrastructure as Code as well as more advanced subjects for experienced Pulumi users.
 
-## Join us on May 4 and 5!
+## Join us on May 4 and 5
 
 [Register for PulumiUP and the Community Summit now](/pulumi-up/)! We will send you updates on the final agenda and speakers and post-event updates such as session recordings and upcoming events.
