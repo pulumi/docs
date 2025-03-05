@@ -1,5 +1,3 @@
-block_external_search_index: true
-redirect_to: /pulumi-up/
 ---
 title: "Announcing PulumiUP Conference 2024"
 
@@ -38,6 +36,8 @@ tags:
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+block_external_search_index: true
+redirect_to: /pulumi-up/
 ---
 
 Today we announce our annual PulumiUP virtual conference taking place on September 18, 2024. PulumiUP is our global cloud and IaC conference for anyone interested in infrastructure as code, cloud, AI, platform engineering, DevOps, and cloud culture. Every year, we strive to build a program packed with technical talks, demos, and best practices to empower you with new learnings and inspiration that you can apply in your professional life. Attend to hear from industry leaders, experts, and community peers.
