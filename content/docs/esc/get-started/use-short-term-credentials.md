@@ -25,10 +25,7 @@ To use dynamic credentials, you need to configure [OpenID Connect (OIDC)](/docs/
 1. Navigate to the [IAM console](https://console.aws.amazon.com/iam/)
 2. In the navigation pane, choose **Identity providers**, then **Add provider**
 3. Select **OpenID Connect** as the provider type
-4. For the Provider URL, enter:
-   ```
-   https://api.pulumi.com/oidc
-   ```
+4. For the Provider URL, enter: `https://api.pulumi.com/oidc`
 5. For the Audience, enter your Pulumi organization name
 6. Click **Add provider**
 
@@ -83,7 +80,6 @@ Be sure to replace `<your-oidc-iam-role-arn>` with the ARN of the IAM role you c
 
 ![An image of the ESC environment editor role trust policy](/docs/esc/assets/esc-environment-editor.png)
 
-
 Click **Save** to store your environment configuration.
 
 ## Use esc run to execute AWS commands
@@ -93,9 +89,11 @@ Click **Save** to store your environment configuration.
 ```bash
 esc run <your-org-name>/<your-project-name>/<your-environment-name> aws s3 ls
 ```
+
 You should be presented with a list of S3 buckets in the account associated with your credentials.
 
 ```bash
+
 # example command and output
 esc run pulumi/my-project/dev-environment aws s3 ls
 
