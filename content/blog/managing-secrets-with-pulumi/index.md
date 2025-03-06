@@ -1,7 +1,8 @@
 ---
-title: "Managing Secrets with Pulumi"
+title: "How to Manage Secrets with Pulumi"
 date: "2019-05-17"
-meta_desc: "Pulumi supports automatic tracking of secret values, and client-side encryption, giving you full control over secrets encryption and decryption."
+updated: 2025-03-06
+meta_desc: "Learn how to securely manage secrets in Pulumi with automatic encryption and client-side control. Protect sensitive data in your infrastructure."
 authors: ["matt-ellis"]
 tags: ["features","Security"]
 ---
@@ -35,7 +36,7 @@ this feature, enabling them to use our online hosted SaaS with even
 greater confidence.
 <!--more-->
 
-## Secrets and State
+## Why Secrets Management Matters in Cloud Infrastructure
 
 Like many [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
 systems, Pulumi uses a state file to describe the current state of your infrastructure.
@@ -60,7 +61,7 @@ ensure that secret values are encrypted in the state file. This means
 you can use secrets confidently without worrying about accidentally
 leaking plain text values. Let's take a look at how it works!
 
-## Output and Secrets
+## How Pulumi Encrypts & Manages Secrets Automatically
 
 To start, let's talk a bit about `Output`, one of the centerpieces of
 the Pulumi programming model. `Output<T>` ties together a value (which
@@ -101,8 +102,8 @@ secret if any of the inputs values where themselves secrets. This means
 that just like dependency information, the "secret-ness" of an output
 flow naturally as you combine it with other data.
 
-Let's take a look at a small program which creates an AWS Systems
-Manager parameter, based on a secret configuration value.
+Let's take a look at a small program which creates an [AWS Systems
+Manager parameter](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html), based on a secret configuration value.
 
 Here's the program we'll be using:
 
@@ -203,12 +204,12 @@ of other property names you want treated as secrets including computed
 output properties of a resource which might be sensitive, like generated
 passwords or access credentials.
 
-## Configuring your secrets provider
+## Configuring Your Secrets Provider
 
 You might be wondering how these values are actually encrypted. We use
 the same encryption that we have always used for our configuration
 system. This means when storing state with
-<https://app.pulumi.com>, we use a key managed by the <https://app.pulumi.com> service, specific to your stack, to
+[Pulumi Cloud](https://app.pulumi.com), we use a key managed by the <https://app.pulumi.com> service, specific to your stack, to
 encrypt everything. Some users have asked for more control over what key
 is used (and the ability to use a key not managed by Pulumi at all!)
 
@@ -272,7 +273,7 @@ Support for changing the secrets provider for an existing stack is on
 its way. To track progress on this feature, please see GitHub issue
 [pulumi/pulumi#481](https://github.com/pulumi/pulumi/issues/481).
 
-## What's Next
+## What's Next for Secrets Management
 
 In addition to passphrase based encryption, we plan to add support for
 encrypting using AWS KMS, Azure KeyVault and GCP KMS in the coming
@@ -280,8 +281,8 @@ weeks.
 
 The whole team is super excited about this feature and we love how
 nicely we were able to integrate it into our overall programming model.
-With these two new features, Pulumi users gain full control over how
-their secrets are managed, but without sacrificing usability and
+With these two new features, Pulumi users gain full control over [how
+their secrets are managed](/docs/iac/concepts/secrets/), but without sacrificing usability and
 productivity. We're excited for you all to start playing around with it!
 Pulumi is open source, free to use, and works today with variety of
 clouds. Try it today!

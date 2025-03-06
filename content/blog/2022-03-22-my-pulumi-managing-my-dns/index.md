@@ -8,11 +8,9 @@ authors: ["david-flanagan"]
 tags: ["Domains", "DNS"]
 ---
 
-Managing DNS records manually across multiple domains is time-consuming and error-prone. What if you could automate it all with Pulumi?
+Managing DNS records efficiently is crucial for anyone who owns multiple domains. Whether you’re handling infrastructure for a business, securing brand assets, or just keeping personal projects organized, having a structured approach to DNS management can save time and prevent headaches.
 
-You may own more domains than you need (because ideas don’t feel real until you buy the domain, right? 😅). Keeping DNS records under control can be a hassle, especially when switching providers. With Pulumi, I’ve automated my DNS management—handling MX, TXT, CNAME, and A records dynamically while keeping my setup portable across multiple DNS providers.
-
-Let’s explore how I do it.
+With Pulumi, you can automate DNS configuration, ensure consistency across providers, and make changes programmatically—reducing manual work and human error. In this post, we’ll walk through how to use Pulumi to manage DNS records dynamically and effectively.
 
 ## Overview
 
