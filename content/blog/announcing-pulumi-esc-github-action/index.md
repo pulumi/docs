@@ -11,7 +11,7 @@ tags:
   - features
 ---
 
-We’re excited to share our latest addition to the Pulumi Ecosystem: the [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This new GitHub Action streamlines how you manage secrets, configurations, and CI/CD tasks using [Pulumi ESC](/product/esc), helping your team securely scale and automate your software delivery pipelines.
+We’re excited to share our latest addition to the Pulumi Ecosystem: the [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This Action lets you inject secrets and configuration securely into your GitHub Actions workflows as they are needed, rather than storing them as static, long-lived secrets.
 
 <!--more-->
 
@@ -24,9 +24,9 @@ By packaging ESC functionality into a GitHub Action, we’re enabling teams to i
 ## Key benefits
 
 1.	**Secure Secrets Injection** - Inject secrets into your GitHub Actions workflows as they are needed, rather than storing them as static, long-lived secrets. This dynamic approach reduces the risk of secrets leaking in logs or pulled from unauthorized sources.
-2.	**Automatic Secret Rotation** - Pulumi ESC handles rotation for you, ensuring that any secrets or credentials you inject into GitHub Actions remain fresh and invalid once your workflow completes.
-3.	**Streamlined CI/CD Pipeline** - In addition to secrets management, you can run any Pulumi ESC command directly in your GitHub Actions workflows. Automate the creation, update, or teardown of environments as part of your CI/CD process.
-4.	**Seamless Integration with Pulumi Cloud** - Combine the Pulumi ESC GitHub Action with [pulumi/auth-actions](https://github.com/marketplace/actions/pulumi-auth-action) to authenticate securely with Pulumi Cloud. No need for long-lived tokens—simply leverage short-lived tokens provided at runtime.
+2.	**Automatic Secret Rotation** - Pulumi ESC handles rotation for you behind the scenes, ensuring that any secrets or credentials you inject into GitHub Actions are valid at the time of use, but rotated on a regular schedule to avoid the risks that come with long-lived static secrets.
+3.	**Streamlined CI/CD Pipeline** - In addition to injecting environment variables, you can run any Pulumi ESC command directly in your GitHub Actions workflows. Automate the creation, update, or teardown of ESC Environments as part of your CI/CD process.
+4.	**Seamless Integration with Pulumi Cloud** - Combine the Pulumi ESC GitHub Action with [pulumi/auth-actions](https://github.com/marketplace/actions/pulumi-auth-action) to authenticate securely with Pulumi Cloud. No need for long-lived tokens — simply leverage short-lived tokens provided at runtime.
 
 ## How it works
 
@@ -74,12 +74,6 @@ The GitHub Action workflow above does the following:
 
 1.	Authenticate with Pulumi Cloud using pulumi/auth-actions. Instead of storing a permanent token, we use a [short-lived token to authenticate with Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/github/).
 2.	Inject the environment variables from `tinyco/someProject/myEnv` into the current GitHub Actions environment, making them accessible to subsequent steps in the workflow.
-
-## Use Cases
-
-1.	**Dynamic Credentials in CI/CD** - Inject ephemeral secrets for short-lived tasks, such as integrating with third-party APIs or standing up ephemeral infrastructure. This ensures credentials are invalidated once your pipeline finishes running.
-2.	**Automated Environment Management** - Use Pulumi ESC commands to create and manage environments directly from GitHub Actions. This can be part of a larger GitOps strategy where infrastructure changes are tracked in version control.
-3.	**Secret Rotation for Compliance** - By using ESC’s built-in rotation, you can achieve compliance requirements and best practices without manual overhead or reliance on multiple external secrets stores.
 
 ## What’s Next?
 
