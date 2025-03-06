@@ -8,7 +8,11 @@ authors: ["david-flanagan"]
 tags: ["Domains", "DNS"]
 ---
 
-Hello, my name is David Flanagan, and I own more domains than I need. The problem is I have too many ideas; and as we all know, ideas don't become real until you buy the domain name. Unfortunately, more often than not, that's about as far as my ideas go---because, **life**. That being said, I do try to keep my DNS records under control in the event that life affords me the time to follow-up on one of these ideas. Today, I want to show you how I do that.
+Managing DNS records manually across multiple domains is time-consuming and error-prone. What if you could automate it all with Pulumi?
+
+You may own more domains than you need (because ideas don’t feel real until you buy the domain, right? 😅). Keeping DNS records under control can be a hassle, especially when switching providers. With Pulumi, I’ve automated my DNS management—handling MX, TXT, CNAME, and A records dynamically while keeping my setup portable across multiple DNS providers.
+
+Let’s explore how I do it.
 
 ## Overview
 
