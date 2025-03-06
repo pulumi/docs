@@ -1,7 +1,7 @@
 ---
 title: "Announcing the Pulumi ESC GitHub Action"
 date: "2025-03-05"
-meta_desc: "Simplify Secrets Management and CI/CD with Pulumi ESC."
+meta_desc: "Securely inject secrets into GitHub Actions with Pulumi ESC. Automate secret rotation, environment variables, and CI/CD pipelines—no long-lived credentials."
 authors: 
   - "komal-ali"
 tags:
@@ -17,7 +17,7 @@ We’re excited to share our latest addition to the Pulumi Ecosystem: the [Pulum
 
 ## Why we built it
 
-Secret management continues to be a challenge for organizations of all sizes. Storing long-lived credentials in multiple places (e.g., GitHub, third-party CI systems, and internal servers) often leads to “secret sprawl” and potential security gaps. With Pulumi ESC, you can migrate to dynamic credentials, and ensure secrets don’t persist beyond their necessary lifetime. If your process requires longer-lived static credentials, with ESC you can manage credentials in a central place and [rotate them automatically](/docs/esc/environments/rotation).
+[Secret management](/what-is/what-is-secrets-management/) continues to be a challenge for organizations of all sizes. Storing long-lived credentials in multiple places (e.g., GitHub, third-party CI systems, and internal servers) often leads to “secret sprawl” and potential security gaps. With Pulumi ESC, you can migrate to dynamic credentials, and ensure secrets don’t persist beyond their necessary lifetime. If your process requires longer-lived static credentials, with ESC you can manage credentials in a central place and [rotate them automatically](/docs/esc/environments/rotation).
 
 By packaging ESC functionality into a GitHub Action, we’re enabling teams to inject secrets and run ESC commands directly within their GitHub workflows. This allows for a streamlined approach to environment management and secrets rotation—without leaving GitHub.
 
