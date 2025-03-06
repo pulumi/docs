@@ -1,15 +1,13 @@
 ---
-title_tag: OpenID Connect provider integration | Pulumi ESC
-meta_desc: This page provides an overview of how to configure OpenID Connect integration between
-           Pulumi ESC and supported cloud providers.
-title: OpenID Connect provider integration with ESC
-h1: OpenID Connect provider integration for ESC
+title_tag: Configuring OpenID Connect | Pulumi ESC
+meta_desc: This page provides an overview of how to configure OpenID Connect integration between Pulumi ESC and supported cloud providers.
+title: Configuring OIDC
+h1: Configuring OIDC for ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
-    name: OIDC Provider
-    parent: esc-integrations
-    weight: 5
+    parent: esc-environments
+    weight: 6
 ---
 
 Pulumi can be configured to act as an OpenID Connect (OIDC) provider, issuing signed, short-lived tokens. These tokens can then be exchanged by external systems for temporary cloud provider credentials, eliminating the need for hardcoded credentials.
