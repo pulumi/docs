@@ -1,7 +1,9 @@
 ---
-title: "IaC Recommended Practices: Developer Stacks and Git Branches"
+title: "IaC Best Practices: Enabling Developer Stacks & Git Branches"
+canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stacks/
 date: 2023-03-10
-meta_desc: This is the second in a series of blog posts on recommended practices for using Pulumi. Developer stacks and Git-branching practices are the focus areas.
+updated: 2025-03-04
+meta_desc: See how to enable team collaboration with Pulumi stacks and Git workflows. Learn best practices for managing feature branches and development environments.
 meta_image: meta.png
 authors:
     - christian-nunciato
@@ -9,28 +11,29 @@ authors:
 tags:
     - best-practices
     - cloud-engineering
-    - zephyr
     - aws
     - eks
+aliases:
+    - /blog/iac-recommended-practices-developer-stacks-git-branches/
 ---
 
-In the [first post](/blog/iac-recommended-practices-code-organization-and-stacks/) of this series, we introduced Zephyr, a fictional company that uses Pulumi to manage its online retail store. Following on from that post, which discusses code organization and stacks, this post explores two more questions users frequently ask when working with Pulumi in teams --- namely, How can I best enable multiple developers to collaborate on a Pulumi project? And how can I use Git and Git branching to support this kind of collaboration? In this post, we'll provide some guidance and recommended practices around these topics, using Zephyr and its online store as the use case.
+In the first post about [code organization and stacks](/blog/iac-best-practices-understanding-code-organization-stacks/), we introduced Zephyr, a fictional company that uses Pulumi to manage its online retail store. Following on from that post, which discusses code organization and stacks, this post explores two more questions users frequently ask when working with Pulumi in teams --- namely, How can I best enable multiple developers to collaborate on a Pulumi project? And how can I use Git and Git branching to support this kind of collaboration? In this post, we'll provide some guidance and best practices around these topics, using Zephyr and its online store as the use case.
 
-The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. However, it's important to note that these recommended practices will emerge over the course of the series --- not all immediately, and not all in the beginning. This is a deliberate decision to allow you to see how Zephyr's use of Pulumi evolves as the company grows and its retail application changes to accommodate its growth.
+The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. However, it's important to note that these practices will emerge over the course of the series --- not all immediately, and not all in the beginning. This is a deliberate decision to allow you to see how Zephyr's use of Pulumi evolves as the company grows and its retail application changes to accommodate its growth.
 
 Here are links to all of the posts in the series:
 
-* [IaC Recommended Practices: Code Organization and Stacks](/blog/iac-recommended-practices-code-organization-and-stacks/)
-* **IaC Recommended Practices: Developer Stacks and Git Branches** (this post)
-* [IaC Recommended Practices: Structuring Pulumi Projects](/blog/iac-recommended-practices-structuring-pulumi-projects/)
-* [IaC Recommended Practices: Using Stack References](/blog/iac-recommended-practices-using-stack-references/)
-* [IaC Recommended Practices: RBAC and Security](/blog/iac-recommended-practices-rbac-and-security/)
-* [IaC Recommended Practices: Using Automation API](/blog/iac-recommended-practices-using-automation-api/)
-* [IaC Recommended Practices: Wrapping Up](/blog/iac-recommended-practices-wrapping-up)
+* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
+* **IaC Best Practices: Enabling Developer Stacks and Git Branches** (this post)
+* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
+* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
+* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
+* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
+* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
 
-## Catching up with Team Zephyr
+## Existing IaC Workflow
 
-When we [last met up](/blog/iac-recommended-practices-code-organization-and-stacks/) with the Zephyr team, they were off and running, managing their newly refactored online store, Zephyr Archaeotech Emporium, with a single Pulumi [project](/docs/concepts/projects/) and two Pulumi [stacks](/docs/concepts/stack/) --- one for development (`dev`) and another for production (`prod`). The team had chosen to use one Git repository (a monorepo) to manage the code for the online store and its infrastructure after refactoring the store into a set of containerized microservices deployed with Kubernetes on [Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html).
+When we last met up with the Zephyr team, they were off and running, managing their newly refactored online store, Zephyr Archaeotech Emporium, with a single [Pulumi project](/docs/concepts/projects/) and two [Pulumi stacks](/docs/concepts/stack/) --- one for development (`dev`) and another for production (`prod`). The team had chosen to use one Git repository (a monorepo) to manage the code for the online store and its infrastructure after refactoring the store into a set of containerized microservices deployed with Kubernetes on [Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html).
 
 {{% notes %}}
 For a snapshot of the code as it was at the end of the first post in the series, see the [`blog/original`](https://github.com/pulumi/zephyr-app/tree/blog/original) branch of the [`pulumi/zepyhr-app`](https://github.com/pulumi/zephyr-app) repository on GitHub.
@@ -68,7 +71,7 @@ A few more details worth noting out about Team Zephyr's current setup:
 
 * Zephyr is using the Pulumi Service backend with a single organization (that everyone on the team belongs to) and separate AWS accounts for the `dev` and `prod` environments. Everyone on the team has read/write access to the AWS account used for development, but only the team lead has access to the AWS account used for production.
 
-## First growing pains
+## Growing Pains
 
 Life for Team Zephyr was good --- for a while.
 
@@ -123,7 +126,7 @@ This approach definitely works --- but it presents at least a few problems:
 
     But if they didn't, the developer's ad-hoc deployment would be lost. At best, it'd force both team members to drop what they were doing and get in touch to figure out what to do next. At worst, it could lead to confusion and the potential for shipping untested code.
 
-3. In addition to raising the risk of developers overwriting each other's work, active collaboration on the same stack increases the likelihood of deployment conflicts. On the one hand, this is a good thing in that Pulumi prevents same-stack updates from running concurrently:
+3. In addition to raising the risk of developers overwriting each other's work, active collaboration the same stack increases the likelihood of deployment conflicts. On the one hand, this is a good thing in that Pulumi prevents same-stack updates from running concurrently:
 
     ```
     $ pulumi up
@@ -134,7 +137,7 @@ This approach definitely works --- but it presents at least a few problems:
 
 So facing these issues, what should the Zephyr team do? The `dev` stack had originally been created for rapid development --- and that worked well, when there was only one developer working on infrastructure. With several, however, things clearly get complicated. Should the team be using a `dev` stack at all? If so, how? And if not, what should they be doing instead?
 
-## Stepping back to reassess
+## Stepping Back to Reassess
 
 With what we've learned so far, we can return to the questions we raised at the beginning of this post and begin to sketch out a few recommendations for Team Zephyr. Those questions, again, were:
 
@@ -144,11 +147,11 @@ With what we've learned so far, we can return to the questions we raised at the 
 
 Let's answer these questions now by taking a look at how the Zephyr team handled them.
 
-### Using developer stacks
+### Using Developer Stacks
 
 We've seen a few ways that having multiple developers share a single stack for ad-hoc deployment can lead to various problems. But we've also seen at least one situation in which being able to run ad-hoc deployments --- without the risk of colliding with existing environments --- can be quite valuable. In fact there are many reasons you might want to do this --- and fortunately Pulumi makes it quite easy to do so.
 
-The recommended practice is to allow developers to create and manage their own Pulumi stacks. In this workflow, developers working on feature branches are able to iterate freely on both application and infrastructure, deploying as often as necessary into a shared cloud environment (typically a sandbox environment, isolated from production) and destroying cloud infrastructure when it's no longer needed.
+The best practice is to allow developers to create and manage their own Pulumi stacks. In this workflow, developers working on feature branches are able to iterate freely on both application and infrastructure, deploying as often as necessary into a shared cloud environment (typically a sandbox environment, isolated from production) and destroying cloud infrastructure when it's no longer needed.
 
 For the developer, the typical workflow looks something like this:
 
@@ -164,7 +167,7 @@ The benefits of a workflow like this one are many:
 * No more deployment conflicts. When every developer has a stack of their own, they can deploy to the sandboxed environment as often as necessary, without having to wait for another deployment to finish first.
 * Everyone on the team has their own production-like environment to use for end-to-end testing.
 
-![An image showing the main branch deploying with test and prod stacks and feature branches deploying with developer stacks](./dev-stacks-git-branches.png)
+![An image showing the main branch deploying with test and prod stacks and feature branches deploying with developer stacks](./dev-stacks-git-branches-workflow.jpg)
 
 For Zephyr, the quickest path to adopting this workflow was to use the `dev` stack as a foundation for new developer stacks. To do that, team members simply ran the following Pulumi commands:
 
@@ -175,13 +178,13 @@ pulumi up
 
 Developer stacks are considered ephemeral, so they're torn down with `pulumi destroy` when not in use in order to cut down on cost. Stack configuration files (e.g., `Pulumi.developer-name.yaml`) are checked into version control and stored alongside other stacks like `Pulumi.dev.yaml` and `Pulumi.prod.yaml`.
 
-### Keeping feature-branch workflows
+### Keeping Feature-Branch Workflows
 
 We've also seen that the Zephyr team's existing Git workflow (short-lived feature branches merged frequently into a long-lived base branch) has worked well for them --- and it turns out this workflow also works well when combined with the use of developer stacks.
 
 For example, after creating and deploying a new stack to validate and test the proposed Redis upgrade, our Zephyr developer simply included a link to the application (deployed with their dev stack) in the associated GitHub pull request. Reviewers were then able to follow the link to the online store to see the effects of the shopping-cart change firsthand, which meant they were able to approve and get the change merged quickly and confidently knowing it'd work when deployed into production.
 
-### Naming stacks clearly
+### Naming Stacks Clearly
 
 Lastly, having adopted the use of developer stacks, the Zephyr team realized the name "dev" probably didn't work quite as well as it once had for the `dev` stack. Since the stack and its long-running deployment had essentially been serving (and continued to serve) as an environment for testing changes before releasing them into production, the team decided to rename the `dev` stack `test` instead. To do that, they simply ran:
 
@@ -190,15 +193,15 @@ pulumi stack select zephyr/dev
 pulumi stack rename zephyr/test
 ```
 
-## Viewing the second iteration of Zephyr's code
+## Viewing the Next Iteration of Code
 
-You can view the second iteration of Zephyr's Pulumi and application code --- the iteration that corresponds to the decisions described in this blog post --- by navigating to [this GitHub repository](https://github.com/pulumi/zephyr-app/). From the branch/tag dropdown, switch from the `main` branch to the [`blog/dev-stacks`](https://github.com/pulumi/zephyr-app/tree/blog/dev-stacks) branch.
+You can view the second iteration of Zephyr's Pulumi and application code --- the iteration that corresponds to the decisions described in this blog post --- by navigating to the [Zephyr App GitHub repository](https://github.com/pulumi/zephyr-app/). From the branch/tag dropdown, switch from the `main` branch to the [`blog/dev-stacks`](https://github.com/pulumi/zephyr-app/tree/blog/dev-stacks) branch.
 
 From that GitHub repository, you can also choose to deploy the Pulumi code yourself. Full instructions for deploying the code are found in the repository.
 
-## Summarizing recommended practices
+## Summarizing Best Practices: Developer Stacks and Git Branches
 
-In this post, we covered several new recommended practices for working collaboratively with Pulumi, all aimed at optimizing for high team and developer velocity:
+In this post, we covered several new guidelines for working collaboratively with Pulumi, all aimed at optimizing for high team and developer velocity:
 
 * **Use short-lived feature branches** and merge them frequently into a single base branch.
 * **Deploy the base branch regularly into a long-running pre-prod environment** to continuously test the integration of the components of the system.
