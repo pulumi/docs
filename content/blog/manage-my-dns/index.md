@@ -1,11 +1,14 @@
 ---
-title: "My Pulumi: Managing My DNS"
+title: "Managing my DNS with Pulumi"
 date: 2022-03-29T10:00:00Z
+updated: 2025-03-05
 draft: false
 meta_desc: In this aritcle, Rawkode shows how he uses Pulumi to manage the DNS records for his many domains.
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["Domains", "DNS"]
+aliases:
+  - /blog/2022-03-22-my-pulumi-managing-my-dns
 ---
 
 Managing DNS records efficiently is crucial for anyone who owns multiple domains. Whether you’re handling infrastructure for a business, securing brand assets, or just keeping personal projects organized, having a structured approach to DNS management can save time and prevent headaches.
@@ -245,7 +248,3 @@ const rawkodeShorts = new Controller("rawko.de", {
 ```
 
 Pulumi facilitates all these abstractions that allow us to make our lives easier. This is what I do with my Pulumi programs, but what do you do with yours?
-
-Drop me an [email](mailto:rawkode@pulumi.com) or [tweet](https://twitter.com/rawkode) and share what you're doing with Pulumi.
-
-Speak soon.
