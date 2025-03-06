@@ -1,6 +1,6 @@
 ---
 title: "Platform Engineering Pillars 3: Self-Service Infrastructure"
-date: 2025-03-06T10:06:40-05:00
+date: 2025-03-06
 draft: false
 meta_desc: Unlock developer productivity with self-service infrastructure through modular abstraction and intent-based specifications for your internal developer platform.
 meta_image: meta.png
