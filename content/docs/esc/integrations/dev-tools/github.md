@@ -80,9 +80,7 @@ jobs:
     name: Export GitHub secrets to ESC
     steps:
       - name: Install ESC CLI
-        run: |
-          curl -fsSL https://get.pulumi.com/esc/install.sh | sh
-          echo "$HOME/.pulumi/bin" >> $GITHUB_PATH
+        uses: pulumi/esc-action@v1
       - name: Authenticate with Pulumi Cloud
         uses: pulumi/auth-actions@v1
         with:
