@@ -1,5 +1,5 @@
 ---
-title_tag: "Self-hosting the Pulumi ESC"
+title_tag: "Self-hosting Pulumi ESC"
 meta_desc: Pulumi Business Critical Edition gives you the option to self-host Pulumi within your organization's infrastructure.
 title: Self-hosting
 h1: Self-hosting Pulumi ESC

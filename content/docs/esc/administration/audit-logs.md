@@ -42,29 +42,29 @@ This will show the most recent events in descending order. You can also filter l
 
 | Event                                      | Description                                                                                                                                                       |
 |--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Environment Created                      | indicates the creation of an environment                                                                         |
-| Environment Updated                      | indicates the updating of an environment                                                                         |
-| Environment Deleted                      | indicates the deletion of an environment                                                                         |
-| Environment Open                         | indicates the opening of an environment                                                                          |
-| Environment Read                         | indicates the reading of an open environment                                                                     |
-| Environment Read Open                    | indicates the opening and reading of an environment                                                              |
-| Environment Unauthorized Open            | indicates the attempt to open an environment the user does not have permission to                                |
-| Environment Tag Created                  | indicates the creation of an environment tag                                                                     |
-| Environment Tag Updated                  | indicates the updating of an environment tag                                                                     |
-| Environment Tag Deleted                  | indicates the deletion of an environment tag                                                                     |
-| Environment Version Retracted            | indicates the retracting of an environment version                                                               |
-| Environment Version Tag Open             | indicates the opening of an environment at a specific version tag                                                |
-| Environment Version Tag Created          | indicates the creation of an environment version tag                                                             |
-| Environment Version Tag Read             | indicates the reading of an environment version tag                                                              |
-| Environment Version Tag Update           | indicates the updating of an environment version tag                                                             |
-| Environment Version Tag Delete           | indicates the deletion of an environment version tag                                                             |
-| Environment Decrypted                    | indicates the decryption of an environment                                                                       |
-| Environment Clone                        | indicates the cloning of an environment                                                                          |
-| Environment Restored                     | indicates the restoring of an environment                                                                        |
-| Environment Schedule Created             | indicates the creation of an environment schedule                                                                |
-| Environment Schedule Updated             | indicates the updating of an environment schedule                                                                |
-| Environment Schedule Deleted             | indicates the deletion of an environment schedule                                                                |
-| Environment Rotated                      | indicates the rotation of secrets in an environment                                                              |
+| Environment Created                      | records the creation of an environment, including the timestamp, name, login, and description
+| Environment Updated                      | records the updating of an environment, including the timestamp, name, login, and description                                                                         |
+| Environment Deleted                      | records the deletion of an environment, including the timestamp, name, login, and description                                                                         |
+| Environment Open                         | records the opening of an environment, including the timestamp, name, login, and description                                                                          |
+| Environment Read                         | records the reading of an open environment, including the timestamp, name, login, and description                                                                     |
+| Environment Read Open                    | records the opening and reading of an environment, including the timestamp, name, login, and description                                                              |
+| Environment Unauthorized Open            | records the attempt to open an environment the user does not have permission to, including the timestamp, name, login, and description                                |
+| Environment Tag Created                  | records the creation of an environment tag, including the timestamp, name, login, and description                                                                     |
+| Environment Tag Updated                  | records the updating of an environment tag, including the timestamp, name, login, and description                                                                     |
+| Environment Tag Deleted                  | records the deletion of an environment tag, including the timestamp, name, login, and description                                                                     |
+| Environment Version Retracted            | records the retracting of an environment version, including the timestamp, name, login, and description                                                               |
+| Environment Version Tag Open             | records the opening of an environment at a specific version tag, including the timestamp, name, login, and description                                                |
+| Environment Version Tag Created          | records the creation of an environment version tag, including the timestamp, name, login, and description                                                             |
+| Environment Version Tag Read             | records the reading of an environment version tag, including the timestamp, name, login, and description                                                              |
+| Environment Version Tag Update           | records the updating of an environment version tag, including the timestamp, name, login, and description                                                             |
+| Environment Version Tag Delete           | records the deletion of an environment version tag, including the timestamp, name, login, and description                                                             |
+| Environment Decrypted                    | records the decryption of an environment, including the timestamp, name, login, and description                                                                       |
+| Environment Clone                        | records the cloning of an environment, including the timestamp, name, login, and description                                                                          |
+| Environment Restored                     | records the restoring of an environment, including the timestamp, name, login, and description                                                                        |
+| Environment Schedule Created             | records the creation of an environment schedule, including the timestamp, name, login, and description                                                                |
+| Environment Schedule Updated             | records the updating of an environment schedule, including the timestamp, name, login, and description                                                                |
+| Environment Schedule Deleted             | records the deletion of an environment schedule, including the timestamp, name, login, and description                                                                |
+| Environment Rotated                      | records the rotation of secrets in an environment, including the timestamp, name, login, and description                                                              |
 
 For a full list of Pulumi Cloud audit log events see the [Pulumi Cloud audit logs](/docs/pulumi-cloud/admin/audit-logs/) documentation.
 
