@@ -25,6 +25,8 @@ One of Pulumi's core Infrastructure as Code (IaC) features is the ability to [mo
 
 <!--more-->
 
+{{< youtube "GJLp6NjC2rE" >}}
+
 We’ve grown our Java support based on feedback from the expanding set of companies that have adopted Pulumi Java in production workloads. Let’s look at some examples of using Java to power your Pulumi programs.
 
 ## Familiar Composability
