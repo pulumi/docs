@@ -1,5 +1,5 @@
 ---
-title: "AWS CDK vs Pulumi: Why SST Chose Pulumi for Cloud Infra"
+title: "AWS CDK vs Pulumi: Why SST Chose Pulumi"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
