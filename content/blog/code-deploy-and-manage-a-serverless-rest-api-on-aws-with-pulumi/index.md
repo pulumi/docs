@@ -189,7 +189,7 @@ To clean up the resources, run `pulumi destroy`.
 ## Next steps
 
 The
-[sample code for this application](https://github.com/pulumi/examples/tree/master/cloud-js-httpserver)
+[sample code for this application](https://github.com/pulumi/examples/)
 is available in the Pulumi examples repo on GitHub. For an end-to-end
 TypeScript application with a frontend, see the
 [URL shortener sample](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener).
