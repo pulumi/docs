@@ -372,6 +372,15 @@ $ esc env open myorg/myproject/test 'aws.secrets.app-secret' | jq -r 'fromjson |
 secretValue
 ```
 
+{{% notes type="warning" %}}
+
+**Why is my environment failing to open**
+
+Extremely large environments (>10mb) may fail to open due to timeouts. It's recommended to keep only values you
+are using within your environment.
+{{% /notes %}}
+
+
 ## Projecting environment variables
 
 Pulumi ESC can automatically project the settings of a given environment as a set of environment variables. This projection does not happen by default, however; instead, you must define which settings to project, as well as how to name and format them.
