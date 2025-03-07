@@ -86,7 +86,7 @@ When importing multiple environments into Pulumi IaC Stack Config, each environm
 
 ## Configuring trust relationships
 
-As part of the process that exchanges your service's OIDC token for cloud provider credentials, the cloud provider must check the OIDC token's claims against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the **Audience**, **Subject**, and **Issuer** claims. These claims can be used to restrict trust to specific organizations, projects, stacks, environments:
+As part of the process that exchanges your service's OIDC token for cloud provider credentials, the cloud provider must check the [OIDC token's claims](https://openid.net/specs/openid-connect-core-1_0.html#Claims) against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the **Audience**, **Subject**, and **Issuer** claims. These claims can be used to restrict trust to specific organizations, projects, stacks, environments:
 
 - The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
 - The Audience claim contains the name of the organization, prefixed with the provider's platform (`aws`, `azure`, `gcp`). You can use this claim to restrict credentials to a specific organization or organizations.

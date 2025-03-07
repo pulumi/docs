@@ -2,7 +2,7 @@
 title_tag: Use Short Term Cloud Credentials | Pulumi ESC
 title: Use short term cloud credentials
 h1: "Use Short Term Cloud Credentials to Run Commands Without Local Secrets"
-meta_desc: This page provides an overview on how to get short term cloud credeitnals and run commands without using local secrets using the "esc run" command.
+meta_desc: This page provides an overview on how to get short term cloud credentials and run commands without using local secrets using the "esc run" command.
 weight: 6
 menu:
   esc:
@@ -37,7 +37,7 @@ To use dynamic credentials, you need to configure [OpenID Connect (OIDC)](/docs/
    - The `api.pulumi.com/oidc` provider is selected
    - Your Pulumi organization is selected as the audience
 4. Click **Next**
-5. Select the permissions your role needs (**AmazonS3FullAccess** for S3 operations)
+5. Select the permissions your role needs (e.g. **AmazonS3FullAccess** for S3 operations)
 6. Click **Next**
 7. Name your role (e.g., `pulumi-esc-s3-role`) and add an optional description
 8. Click **Edit** on the Select trusted entities' section

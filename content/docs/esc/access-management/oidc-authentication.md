@@ -1,6 +1,6 @@
 ---
 title_tag: Configure OpenID Connect authentication | Pulumi ESC
-meta_desc: This page provides an overview of how Pulumi ESC can OIDC for authentication with a trusted identity provider.
+meta_desc: This page provides an overview of how Pulumi ESC can be configured for OIDC authentication with a trusted identity provider.
 title: Configure OpenID authentication with ESC
 h1: Configure OpenID Connect authentication
 meta_image: /images/docs/meta-images/docs-meta.png
