@@ -1,9 +1,10 @@
 ---
 title: "Understanding State"
 date: 2021-12-13
+updated: 2025-03-07
 draft: false
 meta_desc: |
-    Do a quick dive into state and state management via some real-life physics.
+    Understand state and state management in infrastructure. Learn how Pulumi tracks state, automates storage, and simplifies cloud infrastructure changes.
 meta_image: meta.png
 authors:
     - laura-santamaria
@@ -15,6 +16,10 @@ Let's talk about state, shall we? State is the collective properties of the
 system from one point in time. Think of it effectively as a snapshot of a
 system. State in computer science is actually a lot like state in physics, so
 let's start with something that's a bit easier to understand.
+
+<!--more-->
+
+### State in the Physical World
 
 We're going to examine a physical system: A ball dropping from my hand to the
 ground one meter (1m) below. The ball starts out at one point in time where it
@@ -35,6 +40,8 @@ from the ground all change in each snapshot of time, or each state. We can use
 this knowledge to predict how the ball's state will change, allowing us to
 identify patterns.
 
+### State in Infrastructure
+
 When we think about our infrastructure that we manage with systems like Pulumi,
 we're thinking about states of the infrastructure system. How we move from one
 state to another, which variables change from state to state, and what the
@@ -43,6 +50,8 @@ infrastructure-as-code systems track state in some fashion, though most rely on
 you, the user, to manage that state tracking with state files or other systems
 that you have to manage and choose. For this deep dive, though, I'm going to
 focus on how the hosted Pulumi service manages state.
+
+### Tracking State Transitions
 
 When considering the state of your infrastructure over time, we need to think
 about the transition of the infrastructure's state between one point in time and
@@ -62,6 +71,8 @@ feed those changes into other systems for observation, like a shared monitoring
 system with your security team or a distributed team that can't look over your
 shoulder as something deploys.
 
+### The Complexity of State Machines
+
 Now, code execution doesn't always happen *exactly* as we want it to due to all
 kinds of environmental factors from different chipsets to varying network
 connectivity and more. If you *really* want to go down the rabbit hole here, I'm
@@ -79,6 +90,8 @@ ever,&mdash;knowing the various states, changes, and combinations thereof is
 extremely important to ensuring that the one path we *want* the system to take
 to a final desired state is the one that is taken.
 
+### How Pulumi Manages State For You
+
 When using Pulumi, you don't have to worry about the state machine. The Pulumi
 Service tracks all of those states for you once the infrastructure's initial
 state is declared by importing the infrastructure to or creating it with Pulumi.
@@ -90,20 +103,23 @@ moment in time. The Pulumi dashboard, by extension, is your window into the
 Pulumi Service where you can see current state, desired state, and the behaviors
 of the system.
 
+### Conclusion
+
 I hope this short introduction to how state works, especially with
 infrastructure-as-code platforms, helps get you on your way! If you want to read
 more about state with Pulumi (and get some nifty diagrams), head to
 [State and Backends](/docs/iac/concepts/state-and-backends/). Until
 next time!
 
----
+### Additional Resources
 
 Leslie Lamport has some fantastic, free resources and videos about the formal
 specifications in TLA+, which he created, at [his site on TLA+](http://lamport.azurewebsites.net/tla/tla.html). I'm a huge fan.
 
 Also, if you want to watch a short video on state to get a better sense of the
-physics example, head on over to
-[PulumiTV](https://www.youtube.com/c/PulumiTV/videos) for [episode
-3](https://youtu.be/u2C71uF0rdM) of our [Quick Bites of Cloud Engineering
-series](https://youtube.com/playlist?list=PLyy8Vx2ZoWlohOiedbaQqT5xYRkcDsm10)
+physics example, check out:
+
+{{< youtube "u2C71uF0rdM?rel=0" >}}
+
+You can also head on over to [PulumiTV](https://www.youtube.com/c/PulumiTV/videos) for more educational videos and our [Quick Bites of Cloud Engineering series](https://youtube.com/playlist?list=PLyy8Vx2ZoWlohOiedbaQqT5xYRkcDsm10)
 all about state.
