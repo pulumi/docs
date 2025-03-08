@@ -1,12 +1,14 @@
 ---
-title: "Introducing Pulumi Registry: your window to the cloud"
+title: "Introducing Pulumi Registry: Deploy Cloud Infra Faster"
 date: 2021-10-18T00:00:00-07:00
-meta_desc: Pulumi Registry is a searchable collection of Pulumi Packages—Providers and Components–published by Pulumi and our partners.
+updated: 2025-03-06
+meta_desc: Pulumi Registry helps you discover, deploy, and manage cloud infrastructure faster. Browse 60+ providers & components, with full API docs & best practices.
 meta_image: meta.png
 authors:
     - alex-mullans
 tags:
     - features
+    - cloud-engineering
 ---
 
 Pulumi offers the most complete [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform for building, deploying, and managing modern cloud infrastructure and applications. When you use Pulumi, a vast library of cloud resources—from compute, storage, and other cloud infrastructure to databases to identity providers to monitoring systems—is at your fingertips. As the Pulumi community has grown, we’ve [heard from many of you](https://github.com/pulumi/pulumi/issues/3297) that we needed a central hub where you could find all of those resources. We’ve also heard from Pulumi partners that they wanted a great place to showcase their integrations with Pulumi so that their customers can more easily learn how to use Pulumi to deploy and manage their products.
@@ -21,19 +23,19 @@ Pulumi Registry is launching with support for 64 of the leading cloud providers 
 
 We’re excited to enable any developer to take advantage of the power of these offerings, and we can’t wait to see what you achieve with them and Pulumi.
 
-## Everything you need to build for the modern cloud
+## Find & Deploy Cloud Infrastructure with Pulumi Registry
 
 The modern cloud has put more power and more capability to delight customers in developers’ hands than ever before. In Azure, Amazon Web Services, and Google Cloud alone, there are more than 6,300 distinct services, each of which might be the service that gives your team, or your company, the competitive advantage you need to win in the marketplace. But, with all of this power comes cloud complexity: you need to pick the right service, configure it correctly and securely, and integrate it with all of your existing cloud infrastructure.
 
-Pulumi Registry, an integral part of the Pulumi Cloud Engineering Platform, tames this complexity by bringing together everything you can do with the cloud into a single location. At [pulumi.com/registry](/registry), you can see all of our [Pulumi Packages](/product/packages/), including our Native Providers for the largest and most popular clouds; our broad range of Providers for various cloud, database, networking, monitoring, and other offerings; and all the Components that get you to production faster than ever before. You can easily filter packages by these categories or to find packages for your modern cloud use case, including Serverless, Containers, or Kubernetes.
+Pulumi Registry, an integral part of the [Pulumi Cloud Engineering Platform](/product/pulumi-cloud/), tames this complexity by bringing together everything you can do with the cloud into a single location. You can see all of our [Pulumi Packages](/product/packages/), including our Native Providers for the largest and most popular clouds; our broad range of Providers for various cloud, database, networking, monitoring, and other offerings; and all the Components that get you to production faster than ever before. You can easily filter packages by these categories or to find packages for your modern cloud use case, including Serverless, Containers, or Kubernetes.
 
 Once you find a package of interest, everything you need to know to build, deploy, and manage cloud infrastructure with that package is at your fingertips. If you’re using a package for the first time or using a service you haven’t used before, Pulumi Registry has tutorials and scenario-specific how-to guides to help you get started. If you want to jump right in, you can install the package–whether you need the NuGet package, the npm package, the Python package, or the Go module–right from Pulumi Registry. If you’re already familiar with the package and need the API reference, it’s only a click away. We’ve also taken this opportunity to make some improvements to the API documentation (which was previously hosted on pulumi.com/docs), like adding a left navigation and type-ahead filter so it’s easier to quickly find the resource or method you’re looking for.
 
 ![A GIF showing the functionality of Pulumi Registry](https://www.pulumi.com/uploads/content/blog/introducing-pulumi-registry/registry.gif)
 
-👉 [Visit the Registry](/registry/)
+👉 Visit the [Pulumi Registry](/registry/)
 
-## Providers: the most complete and consistent way to program the modern cloud
+## Pulumi Providers: The Most Complete Cloud IaC Solution
 
 Pulumi Registry’s packages come in two categories: Providers and Components. Providers are direct representations of all of the resources available from your choice of cloud or SaaS provider: everything from Alicloud to Cloudflare to Okta to Yandex. They’re a great choice when you want to work directly with individual cloud resources and define your infrastructure from scratch. (For higher-level building blocks, skip to the next section.)
 
@@ -43,23 +45,23 @@ Just a few weeks ago, we launched the [AWS Cloud Control Provider](/registry/pac
 
 ![A screenshot showing the Native Providers in Pulumi Registry](native-providers.png)
 
-### Full access to the Terraform ecosystem
+### Use Any Terraform Provider with Pulumi Registry
 
-If Pulumi Registry doesn’t yet have a native provider for your preferred cloud service, that’s OK! With Pulumi, you have full access to the Terraform ecosystem and can use any Terraform provider via our Terraform bridge. A number of bridged Terraform providers are already available in Pulumi Registry, including providers for popular services like Auth0, CloudFlare, Datadog, DigitalOcean, GitHub, and PagerDuty.
+If Pulumi Registry doesn’t yet have a native provider for your preferred cloud service, that’s OK! With Pulumi, you have full access to the Terraform ecosystem and can use any [Terraform provider](https://registry.terraform.io/browse/providers) via our Terraform bridge. A number of bridged Terraform providers are already available in Pulumi Registry, including providers for popular services like Auth0, CloudFlare, Datadog, DigitalOcean, GitHub, and PagerDuty.
 
-### Authoring new Providers
+### Create & Publish Custom Pulumi Providers
 
 We also invite the entire Pulumi community to contribute new Providers to Pulumi Registry. You can enable your customers to manage your cloud service or cloud resources using Pulumi’s modern infrastructure-as-code by authoring a Native Provider, or by bridging an existing Terraform provider into the Pulumi ecosystem, and publishing it to the Pulumi Registry. We’ve also seen passionate customers and community members author Native Providers for cloud services with public, well-known APIs! Pulumi Registry will enable fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Provider.
 
 👉 [Build and publish a Pulumi Provider](/docs/iac/packages-and-automation/pulumi-packages/authoring/)
 
-## Components: from new to production, faster than ever
+## Pulumi Components: Prebuilt IaC for Faster Cloud Deployments
 
 When you need full control over the cloud resources you’re building, Providers are a great choice, because they give you access to all of the resources, all of the settings, and everything else you need to build and deploy infrastructure from scratch. But, we frequently hear from developers and infrastructure engineers that they need higher-level building blocks that "just work": things like secure and production-ready Kubernetes clusters or complete serverless configurations for popular combos like AWS Lambda and API Gateway or Azure Functions and API Management. Pulumi Components are the answer to those requests.
 
 Components are higher-level building blocks that come with best practices and sensible defaults built in. They frequently encode the opinions of the component author so that you don’t have to configure every setting and understand every detail of all the cloud resources you want to use. Let’s look at some examples to understand the power of Components.
 
-### Example: Production-ready EKS cluster in 15 lines of code
+### Deploy a Production-Ready EKS Cluster with Pulumi (in 15 Lines)
 
 Amazon’s Elastic Kubernetes Service (EKS) is a great example of a powerful but complex service. With Pulumi’s AWS Cloud Control Provider, you can define a production-ready EKS cluster, but you need to know a fair amount about EKS. If you’re a platform team building out a custom Kubernetes shared services platform for a big organization, that’s OK, as you’ll likely want (and expect) full control over every setting on your cluster. For many other scenarios, you just want a well-configured EKS cluster with minimal configuration. Pulumi’s [EKS Component](/registry/packages/eks/) gives you just that, with just 15 lines of code:
 
@@ -177,7 +179,7 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-### Example: Lambda serverless function and API Gateway in 21 lines of code
+### Build a Serverless App with AWS Lambda & API Gateway in 21 Lines
 
 For event-driven and stateless workloads, serverless compute can be a great choice that enables you to pay only for the compute time you need instead of keeping VMs or containers idle. But, setting up serverless functions and the networking required for them to work together isn’t always straightforward. Pulumi’s [AWS API Gateway package](/registry/packages/aws-apigateway/) makes it easy to create a serverless function (or several!) and make them accessible via an API Gateway:
 
@@ -318,16 +320,16 @@ class MyStack : Stack
 
 {{< /chooser >}}
 
-### Author your own Components
+### Create & Publish Your Own Pulumi Components
 
 Want to share your own best practices and cloud configurations with the Pulumi community? You can author a Pulumi Component and publish it to Pulumi Registry. We’ll have fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Component. You can get started using the link below.
 
 👉 [Build and publish a Pulumi Component](/docs/iac/packages-and-automation/pulumi-packages/authoring/)
 
-## What’s next
+## What's Next for Pulumi Registry?
 
 Today’s announcements are just the start of the journey for Pulumi Registry. In the coming months, we’ll continue to invest in making it even easier to author and publish a Pulumi Package. In 2022, we’ll also launch self-service publishing on Pulumi Registry, so you can share your packages directly with the Pulumi community. And, soon we’ll be bringing all of the goodness of Registry–the central index, the easy-to-use documentation, and more–to Pulumi Enterprise customers, so you can host Pulumi Packages private to your organization.
 
-👉 [Visit Pulumi Registry](/registry/)
+✅ Explore the Registry Now: [Pulumi Registry](/registry/)
 
-👉 [Contact sales to learn more about today’s announcements and get started with Pulumi](/contact?form=sales)
+✅ Try Pulumi: [Sign Up for Pulumi Cloud](https://app.pulumi.com/signup)
