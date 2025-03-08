@@ -25,7 +25,7 @@ Azure Deployment Environments is a service that enables developers to quickly sp
 
 Azure Deployment Environments natively supports the Azure Resource Manager (ARM) and Bicep IaC frameworks. In addition, ADE provides an extensibility model that enables customers to create custom container images to author environment definitions.
 
-The Azure Deployment Environments and Pulumi teams collaborated to publish a standard container image that our joint customers can use directly to run Pulumi programs in ADE: [`pulumi/azure-deployment-environments`](https://hub.docker.com/repository/docker/pulumi/azure-deployment-environments). The image leverages ADE’s extensibility model to run Pulumi programs in the container.
+The Azure Deployment Environments and Pulumi teams collaborated to publish a standard container image that our joint customers can use directly to run Pulumi programs in ADE: [`pulumi/azure-deployment-environments`](https://hub.docker.com/r/pulumi/azure-deployment-environments). The image leverages ADE’s extensibility model to run Pulumi programs in the container.
 
 When used with Pulumi, each environment definition consists of two components:
 
@@ -75,7 +75,7 @@ Finally, **navigate to the [Microsoft developer portal](https://devportal.micros
 
 ## Bring a Custom Container Image
 
-The Pulumi container image [`pulumi/azure-deployment-environments`](https://hub.docker.com/repository/docker/pulumi/azure-deployment-environments) is a great starting point for your environment definitions. However, if you want to customize the behavior to your needs, you can also bring your own container image to run Pulumi programs in ADE. To do so, refer to the [Configure a container image to execute deployments with Pulumi](https://aka.ms/ade/pulumi-docs) article on Microsoft Learn.
+The Pulumi container image [`pulumi/azure-deployment-environments`](https://hub.docker.com/r/pulumi/azure-deployment-environments) is a great starting point for your environment definitions. However, if you want to customize the behavior to your needs, you can also bring your own container image to run Pulumi programs in ADE. To do so, refer to the [Configure a container image to execute deployments with Pulumi](https://aka.ms/ade/pulumi-docs) article on Microsoft Learn.
 
 One benefit of using a custom image is the ability to provide a Pulumi Cloud access token to the image via the `PULUMI_ACCESS_TOKEN` environment variable. This allows the image to authenticate with the Pulumi Cloud backend without requiring additional configuration. Pulumi Cloud securely encrypts and stores your infrastructure state, manages secrets, provides search and clear visibility across all your cloud resources, runs remote deployments, integrates with CI/CD pipelines, detects configuration drift, and enables centralized policy enforcement. Additional features such as RBAC and audit logging enable your team to collaborate easily, ship faster, more securely and with confidence for every deployment.
 
