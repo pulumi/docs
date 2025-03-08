@@ -17,12 +17,12 @@ event_links:
     description: |
       Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
     items:
-        # - title: RSVP to “Down the Rabbit Hole” Happy Hour
-        #   icon: security
-        #   icon_color: violet
-        #   description: with Pulumi, Oso and Apollo GraphGL for an evening of mountain magic Wednesday, November 13, 8-10pm MT at Lake Effect, 155 W 200 S, Salt Lake City
-        #   link: https://lu.ma/qzgd18gp
-        #   cta: RSVP to Happy Hour
+        - title: RSVP to Happy Hour at The Oiler Bar
+          icon: team
+          icon_color: violet
+          description: Join us Thursday, April 3, 16:30-19:00 at The Oiler Bar, Royal Victoria Docks, London
+          link:
+          cta: RSVP to Happy Hour
 
         - title: Request a 1:1 demo
           icon: pen
