@@ -23,6 +23,9 @@
                 {{ range $item := .Params.links.items }}
                     <div class="w-full lg:w-1/2 p-4 my-2">
                         <div class="card h-full relative flex flex-col bg-white p-8">
+                            <div class="icon-section">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
                             <h5>{{ $item.heading }}</h5>
                             <p class="flex-1">{{ $item.description | markdownify }}</p>
                             <div class="mt-4">
@@ -121,34 +124,6 @@
             </div>
         </section>
     {{ end }}
-
-    <section id="templates" class="container mx-auto my-16 text-center">
-        <div class=" text-center mx-auto my-8">
-            <h3>Pulumi Templates for Common Use Cases</h3>
-            <p>
-                Pulumi templates are the fastest way to deploy infrastructure. Templates come with predefined infrastructure as code so you can get started instantly. Find some of
-                our templates below, and Happy Templating!
-            </p>
-        </div>
-        <div class="container mx-auto">
-            <div class="flex flex-wrap items-stretch justify-center">
-                {{ range $item := .Params.templates.items }}
-                    <div class="lg:w-1/3 md:w-1/2 w-full my-4">
-                        <div class="card h-full relative flex flex-col bg-white pb-8 mx-4">
-                            <img class="rounded h-40 mx-auto" src="{{ $item.image }}" />
-                            <h5 class="mt-4">{{ $item.heading }}</h5>
-                            <p class="flex-1 px-8 pb-4">{{ $item.description }}</p>
-                            <div>
-                                <a href="{{ $item.link }}" target="_blank" style="font-size: 0.9rem" class="btn-secondary">{{ $item.action }}</a>
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-        </div>
-    </section>
-
-    {{ partial "virtual-communities" . }}
 
     {{ partial "help-links" . }}
 {{ end }}
