@@ -3,8 +3,8 @@ title: "7 Ways to Deal with Application Secrets in Azure"
 authors: ["mikhail-shilkov"]
 tags: ["Azure", "Security"]
 date: "2019-07-26"
-updated: 2025-03-09
-meta_desc: In this post, we will look at 7 ways to deal with application secrects in Azure.
+updated: 2025-03-10
+meta_desc: Learn secure ways to manage application secrets in Azure. From Key Vault to environment variables, discover best practices to safeguard sensitive data.
 meta_image: feature.png
 ---
 
@@ -19,9 +19,17 @@ Examples of secret configuration values include:
 
 There's no one universal way to manage secrets, as a lot depends on the context in which they are used. In this article, I go through seven ways to use secret values in a .NET Core application running in Azure. I start with naively hard-coded strings and build up from there to more secure options.
 
-While the concepts are universally applicable, my code samples focus on a .NET application running in **Azure App Service** and configured with Pulumi.
+While the concepts are universally applicable, my code samples focus on a .NET application running in **Azure App Service** and configured with Pulumi. Consider them best practices for managing client secrets in Azure.
 
-## 1. Hard-Coded Secrets
+1. [Hard-Coded Application Secrets](/blog/7-ways-to-deal-with-application-secrets-in-azure/#1-hard-coded-application-secrets)
+2. [Configuration Files](/blog/7-ways-to-deal-with-application-secrets-in-azure/#2-configuration-files)
+3. [Environvment Variables](/blog/7-ways-to-deal-with-application-secrets-in-azure/#3-environment-variables)
+4. [Azure Key Vault](/blog/7-ways-to-deal-with-application-secrets-in-azure/#4-azure-key-vault)
+5. [Accessing Key Vault with Managed Identities](/blog/7-ways-to-deal-with-application-secrets-in-azure/#5-accessing-key-vault-with-managed-identities)
+6. [Accessing Key Vault from Application Settings](/blog/7-ways-to-deal-with-application-secrets-in-azure/#6-accessing-key-vault-from-application-settings)
+7. [Role-Based Access Control (RBAC)](/blog/7-ways-to-deal-with-application-secrets-in-azure/#5-role-based-access-control-(rbac))
+
+## 1. Hard-Coded Application Secrets
 
 Whenever you want to try a new API requiring a secret access token, it's natural to copy-paste that secret into your code and run it&mdash;simply to make sure that the setup works.
 
@@ -46,7 +54,7 @@ Avoid the "Secrets as Code" practice: there are bots scanning your GitHub reposi
 
 ## 2. Configuration Files
 
-Traditionally, putting secrets in a configuration file is considered more secure. For classic .NET applications, this would be an `app.config` or a `web.config` file. The idea is that the values on a developer machine are different from the values in the production environment. Non-sensitive development settings are kept on disk and maybe in source control, while the real secrets are only injected by a deployment script or a CI/CD system, so they are not exposed publicly.
+Traditionally, putting secrets in a configuration file is considered more secure. For classic .NET applications, this would be an `app.config` or a `web.config` file. The idea is that the values on a developer machine are different from the values in the production environment. Non-sensitive development settings are kept on disk and maybe in [source control](/docs/iac/concepts/secrets/), while the real secrets are only injected by a deployment script or a CI/CD system, so they are not exposed publicly.
 
 In the .NET Core world, a configuration is usually stored in an `appsettings.json` file:
 
@@ -131,7 +139,7 @@ In the previous example, both secrets end up in Application Settings. Every pers
 
 In some cases, compliance to a certain standard may *require* the use of a certified key management service offering enhanced security for sensitive secrets.
 
-Azure has a dedicated service for storing secrets, **Azure Key Vault**. You can create and populate a Key Vault with all the secrets from the same Pulumi program:
+Azure has a dedicated service for storing secrets, [**Azure Key Vault**](https://learn.microsoft.com/en-us/azure/key-vault/). You can create and populate a Key Vault with all the secrets from the same Pulumi program:
 
 ``` ts
 const vault = new azure.keyvault.KeyVault("vault", {
@@ -239,7 +247,7 @@ With that, the API key is loaded into the App Service environment variable witho
 
 What is the most secure way to deal with secrets? *Have no secrets*. The Storage Account connection string is a great example when it's possible to avoid storing and reading the sensitive value altogether.
 
-**Role-based access control** (RBAC) of **Azure Active Directory** (AAD) is a great tool to manage permissions in a declarative way. Let's assume our application only needs to send messages to one Storage Queue. Instead of storing a full connection string with an access token, the connection string should point to the account, and the identity behind the App Service should be granted write permissions to the required Storage Queue:
+**Role-Based Access Control** (RBAC) of **Azure Active Directory** (AAD) is a great tool to manage permissions in a declarative way. Let's assume our application only needs to send messages to one Storage Queue. Instead of storing a full connection string with an access token, the connection string should point to the account, and the identity behind the App Service should be granted write permissions to the required Storage Queue:
 
 ``` ts
 const permission = new azure.role.Assignment("send", {
