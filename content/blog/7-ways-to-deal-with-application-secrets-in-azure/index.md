@@ -3,6 +3,7 @@ title: "7 Ways to Deal with Application Secrets in Azure"
 authors: ["mikhail-shilkov"]
 tags: ["Azure", "Security"]
 date: "2019-07-26"
+updated: 2025-03-09
 meta_desc: In this post, we will look at 7 ways to deal with application secrects in Azure.
 meta_image: feature.png
 ---
@@ -20,7 +21,7 @@ There's no one universal way to manage secrets, as a lot depends on the context 
 
 While the concepts are universally applicable, my code samples focus on a .NET application running in **Azure App Service** and configured with Pulumi.
 
-## 1. Hard-coded Secrets
+## 1. Hard-Coded Secrets
 
 Whenever you want to try a new API requiring a secret access token, it's natural to copy-paste that secret into your code and run it&mdash;simply to make sure that the setup works.
 
@@ -234,7 +235,7 @@ const app = new azure.appservice.AppService("app", {
 
 With that, the API key is loaded into the App Service environment variable without its value being publicly exposed anywhere!
 
-## 7. Role-based Access Control
+## 7. Role-Based Access Control
 
 What is the most secure way to deal with secrets? *Have no secrets*. The Storage Account connection string is a great example when it's possible to avoid storing and reading the sensitive value altogether.
 
@@ -286,4 +287,4 @@ While security practices may vary depending on application requirements, Pulumi 
 - It provides a built-in mechanism to manage external secrets.
 - It is a great way to take advantage of Azure features like Managed identities and RBAC in a cohesive way.
 
-Infrastructure as Code helps make your applications secure and reliable. Refer to [this full example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-msi-keyvault-rbac) of using Key Vault, Managed identities, RBAC with App Service and Pulumi.
+Infrastructure as Code helps make your applications secure and reliable. Refer to the [full example of using Key Vault, Managed identities, RBAC with App Service and Pulumi]((https://github.com/pulumi/examples/tree/master/classic-azure-ts-msi-keyvault-rbac)).
