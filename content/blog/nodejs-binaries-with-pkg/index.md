@@ -1,7 +1,8 @@
 ---
 title: "Node.js Native Binary Compilation Using vercel/pkg"
 date: 2022-09-13
-meta_desc: "Building standalone native binaries for Node.js programs using vercel/pkg"
+updated: 2025-03-10
+meta_desc: "Learn how to build standalone native binaries for Node.js applications using vercel/pkg. Package your Node.js project for easy distribution without dependencies."
 
 authors:
 - daniel-bradley
@@ -141,10 +142,12 @@ In summary the above code does the following:
     * Run `pkg` with the `$TARGET` set in (1) and the name of the current output (`$@`).
 3. Define `bins` "phony target" which builds all listed bins.
 
+{{< related-posts >}}
+
 ## Recap
 
 I hope this gives you a good overview of the vercel/pkg tool and how you can use it to create standalone programs using Node.js.
 
 ### Historical Note
 
-We used to do a similar process using the [nexe](https://github.com/nexe/nexe) project, but there’s been no releases since 2017 and therefore no support for newer versions of Node.js and we therefore consider this package as unmaintained at this point in time.
+We used to do a similar process using the [nexe project](https://github.com/nexe/nexe), but there’s been no releases since 2017 and therefore no support for newer versions of Node.js and we therefore consider this package as unmaintained at this point in time.
