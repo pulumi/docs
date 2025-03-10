@@ -102,9 +102,9 @@ Additionally, as the SST's team expanded its focus beyond the AWS ecosystem and 
 |-------------------------|----------------------------|--------------------------------|
 | **Multi-Cloud Support** | ❌ AWS-Only                | ✅ AWS, Azure, GCP, On-Prem   |
 | **Debugging**           | ❌ Hard due to CloudFormation | ✅ Real-time debugging       |
-| **Language Support**    | ✅ TypeScript, Python       | ✅ Any programming language  |
-| **Deployment Speed**    | ⏳ Slower due to CloudFormation | ⚡ Faster direct execution  |
-| **Visibility**          | 🔍 Hard to trace errors     | ✅ Clear deployment state     |
+| **Language Support**    | ⚠️ TypeScript, Python       | ✅ Any programming language  |
+| **Deployment Speed**    | ❌ Slower due to CloudFormation | ✅ Faster direct execution  |
+| **Visibility**          | ❌ Hard to trace errors     | ✅ Clear deployment state     |
 | **Extensibility**       | ⚠️ Limited to AWS ecosystem | ✅ Custom providers & workflows |
 | **State Management**    | ❌ CloudFormation state file | ✅ Pulumi-managed state       |
 | **Secrets Management**  | ❌ AWS Secrets Manager only | ✅ Cross-cloud secret support |
