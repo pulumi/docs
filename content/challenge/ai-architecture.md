@@ -18,7 +18,7 @@ Why write your Pulumi programs yourself when you can have AI do it for you? Pulu
 
 For the **GPT Your IaC Challenge**, your goal is to have Pulumi AI write a Pulumi program for any architecture you want and run a successful `pulumi up` with the program created. To participate in the challenge, you'll need to either visit [pulumi.com/ai](/ai) or download the [CLI](https://github.com/pulumi/pulumi-ai) so you can use Pulumi AI.
 
-We will send you limited edition swag for completion of the challenge. We will also send you an even better piece of swag if you document this via a blog post, social media, or video. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com), and we will help spread the word about your experience. All submissions will be judged at the end of the challenge, and the best submissions (there will be a few categories) will receive a special prize.
+Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com), and we will help spread the word about your experience.
 
 ## Prerequisites
 
@@ -176,14 +176,6 @@ Outputs:
 ```
 
 There you go! Pulumi AI has helped us generate a program to provision important database infrastructure for our new app. What did Pulumi AI generate for you?
-
-## Congratulations
-
-Congratulations! You've completed this **Pulumi Challenge**. Follow the link below and complete your submission to receive limited edition swag for this challenge. You will need to upload a screenshot of the `pulumi up` output for us to verify completion.
-
-{{< challenge/open-form-button >}}
-
-If you want, please create a blog post, social media, or video documenting your work on this challenge. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com) to claim another piece of even more special swag. Winners will be chosen in a few months and receive a special prize.
 
 ### What you have learned
 
