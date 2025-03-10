@@ -12,11 +12,11 @@ menu:
         identifier: iac-extending-pulumi
 ---
 
-Pulumi offers a number of ways to extend its functionality including [providers](#), [components](#), and [packages](#), and more. 
+Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), and [packages](/docs/iac/concepts/resources/packages/), and more.
 
 ## What are my options?
 
-Deciding which way to extend Pulumi will depend on your use case. Some options require more or less code, have certain language or functionality limitations, and can be shared in different ways. 
+Deciding which way to extend Pulumi will depend on your use case. Some options require more or less code, have certain language or functionality limitations, and can be shared in different ways.
 
 This comparison chart will help guide you on how to invest your time and energy into customizing Pulumi to your needs.
 
@@ -31,23 +31,23 @@ This comparison chart will help guide you on how to invest your time and energy 
 
 ## Resources, Providers, and Components
 
-Pulumi programs work with three core concepts; *resources*, *providers*, and *components*. 
+Pulumi programs work with three core concepts; *resources*, *providers*, and *components*.
 
-### Resources 
+### Resources
 
 In the simplest terms, the purpose of a Pulumi program is to manage cloud *resources*. A resource is a representation of an artifact that exists within an external cloud service. A Pulumi *program* describes the *desired state* of the resources, while the Pulumi *backend* keeps track of the state of those resources.
 
-### Providers 
+### Providers
 
 Pulumi manages resources by interacting with *providers*, which are plugins that create, update, and destroy resources. During an update, the Pulumi *engine* will compare what is described in the Pulumi program to the state stored in the backend, determining what operations, if any, are needed to update the resources to match. The Pulumi engine will then load and interact with one or more provider plugins, calling the necessary operations through a standard provider API. The provider plugin implements the necessary resource-specific create, update, and delete operations, often by calling external cloud service APIs directly.
 
-### Components 
+### Components
 
 Components are higher-level abstractions of one or more resources that work together in a logical unit. Imagine that you need to create multiple instances of a web server, its backing database, and the network they communicate over. All of those need to be in compliance with your company's security policy and coding standards, but also need some customization for each instance of this group of resources. A component can be created that encodes those required standards and surfaces the configurable parts in a simple-to-use usable API for your internal developers.
 
 While providers sometimes surface higher-level components for common use cases, they usually only provide the low-level resources. Custom components can be developed alongside your Pulumi programs, and used locally, shared via a git repo, or packaged and published in the Pulumi Registry, without the need to implement CRUD operations directly against the underlying cloud service APIs. This makes them a very flexible way to extend and customize Pulumi as long as there is a provider available for the cloud service you want to interact with.
 
-### Do I need a Component or a Provider? 
+### Do I need a Component or a Provider?
 
 Here's some quick rules-of-thumb for deciding whether to create a component or a provider:
 
@@ -59,7 +59,7 @@ Here's some quick rules-of-thumb for deciding whether to create a component or a
 
 ## Packaging and Publishing
 
-Pulumi [*packages*](#) are a standardized way to share providers and components. After building a provider or component, the next steps involve generating docs and end-user SDK code in various target languages, both of which are based on the [`schema.json` file](schema/). Those user-facing assets are packaged up in a tarball. Once you have a package, this can either be used locally or shared via the Pulumi Registry.
+Pulumi [*packages*](/docs/iac/concepts/resources/packages/) are a standardized way to share providers and components. After building a provider or component, the next steps involve generating docs and end-user SDK code in various target languages, both of which are based on the [`schema.json` file](schema/). Those user-facing assets are packaged up in a tarball. Once you have a package, this can either be used locally or shared via the Pulumi Registry.
 
 ![A diagram showing how Pulumi Package code can be authored in one language and made available in all other languages supported by Pulumi](../../concepts/img/pulumi-package-concepts.png)
 
@@ -83,7 +83,7 @@ This flexibility is made possible through code generation. When you author a com
 
 Another great thing about Pulumi is that it exists within a vast ecosystem of tooling and community. Before writing a component or provider, we strongly encourage you to look for prior art within the ecosystem. Some places you can look for help are:
 
-- **The [Pulumi Registry](/registry)**: our hosted repository of providers and components contains hundreds of existing packages that can be used directly within Pulumi. These are all open-source code, with their code repository linked directly on every page. 
+- **The [Pulumi Registry](/registry)**: our hosted repository of providers and components contains hundreds of existing packages that can be used directly within Pulumi. These are all open-source code, with their code repository linked directly on every page.
 - **The [Terraform Provider Registry](https://registry.terraform.io/)**: any Terraform-compatible provider can be [*bridged*](/blog/any-terraform-provider/) to work within Pulumi. That gives you access to thousands of existing providers! If the provider you need isn't in our registry, but does exist in Terraform's registry, you can use it immediately via the [terraform-provider](https://www.pulumi.com/registry/packages/terraform-provider/).
 - **The [OpenTofu Registry](https://search.opentofu.org/providers)**: a fork of Terraform that maintains its own registry of thousands of Terraform-compatible providers, which can also be [bridged into Pulumi](/blog/any-terraform-provider/).
 

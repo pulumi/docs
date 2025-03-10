@@ -57,7 +57,7 @@ Your repository name should start with `pulumi-` followed by the name of your pr
 
 ## Author your resources or components
 
-See the instructions in your new repository's `README.md` file for specific instructions on how to author your package. We also have guides you can follow for building [components](#) and [providers](#) without the template repos.
+See the instructions in your new repository's `README.md` file for specific instructions on how to author your package. We also have guides you can follow for building [components](/docs/iac/concepts/resources/components/) and [providers](/docs/iac/concepts/resources/providers/) without the template repos.
 
 ## Write documentation
 
