@@ -1,6 +1,7 @@
 ---
 title: "Pulumi is SOC 2 Certified"
 date: 2021-01-07
+updated: 2025-03-07
 meta_desc: "Pulumi achieved SOC 2 certification for reporting on the design of controls, testing, and operating effectiveness of processes for a service organization."
 meta_image: soc2.png
 authors:
@@ -11,13 +12,13 @@ tags:
 
 ## Pulumi’s Commitment
 
-Pulumi is committed to operational excellence for our customers and one of the ways that we decided to demonstrate this was by completing our SOC 2 Type 2 Audit. After a lot of hard work these past few months, we are pleased to announce that Pulumi is now SOC 2 compliant!
+Pulumi is committed to operational excellence for our customers and one of the ways that we decided to demonstrate this was by completing our SOC 2 Type 2 Audit. After a lot of hard work these past few months, we are pleased to announce that Pulumi is now [SOC 2](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services) compliant!
 
 <!--more-->
 
 The audit involved the entire Pulumi team. We needed to have proper controls in place across the organization and ensure that our key processes were documented and exercised. In addition, we reviewed our vendor selection process and made sure that all of our key partners were compliant with SOC as well. Our team used the overall process as an opportunity to review our overall governance and risk management procedures. Interestingly, the change in our work environment caused by Covid-19 actually helped us stress some of our process and policies, since we were forced to work remotely, much as if we had any type of interesting “event” at our headquarters.
 
-Of course, we spent a large amount of time reviewing the security of our service. Security is already baked into our culture, with processes around training, code reviews, and the like, however, there’s no doubt this process helped us “up our game.” The policies that we already had in place (encryption of data at rest and in transit, auditing, logging, secure backup, etc.) gave us a strong foundation, however, as we reviewed key areas we found several areas for simplification and improvement.
+Of course, we spent a large amount of time reviewing the [security of our service](/security/). Security is already baked into our culture, with processes around training, code reviews, and the like, however, there’s no doubt this process helped us “up our game.” The policies that we already had in place (encryption of data at rest and in transit, auditing, logging, secure backup, etc.) gave us a strong foundation, however, as we reviewed key areas we found several areas for simplification and improvement.
 
 ## The SOC 2 Journey
 
@@ -37,4 +38,4 @@ We have a leadership team that reviews key areas of the SOC profile quarterly, w
 
 Most importantly, the journey isn’t over! Pulumi will continue to evolve. The SOC standards will continue to evolve. Industry tools and best practices will continue to evolve. We’ve come a long way since we started our SOC 2 journey and we’re committed to continuing to improve our operational excellence every day.
 
-![SOC 2](soc2.png)
+If you're interested in learning more about how we approach security at Pulumi or have questions about our SOC 2 process, please [reach out](/contact/). We're happy to share what we've learned along the way.
