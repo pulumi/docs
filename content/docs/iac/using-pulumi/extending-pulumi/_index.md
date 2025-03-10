@@ -57,13 +57,19 @@ Here's some quick rules-of-thumb for deciding whether to create a component or a
 | **Language Support** | Components can be both *used* and *written* in any Pulumi language | Providers can be *used* in any Pulumi language, but can only be *written* in Go |
 | **Sharing and Reusablity** | Components can be used locally (from another directory on the filesystem), downloaded from a Git repo, or published and shared via the Pulumi Registry | Providers must be published to the Pulumi Registry to be used (with the exception of [Dynamic Providers](/docs/iac/concepts/resources/dynamic-providers)) |
 
+## Local vs Remote
+
+In our documentation we sometimes refer to things as being "local" vs "remote" (e.g. using a local package). This has to do with where the Pulumi Engine is running. When you run the `pulumi up` command via the CLI, the Pulumi Engine will run on the same machine. That engine loads and runs the plugins and interacts with the backend to manage state. In this mode, it is running *locally*, and therefore has access to the filesystem on that machine, and could load a plugin directly from a locally stored directory. However, when using Pulumi Deployments in the Pulumi Cloud, the Pulumi Engine is running in a virtual machine on our infrastructure. In that case, it is running "remotely".
+
+This matters when we talk about components and providers because Pulumi Deployments might fail to load a plugin that doesn't exist in its environment. In order for Pulumi Deployments to access the plugin, it needs to be packaged and published to the Pulumi Registry, so that it can be downloaded at runtime. Or, in the case of components and dynamic providers, the code needs to be committed alongside your normal Pulumi program code, in the same Git repository.
+
 ## Packaging and Publishing
 
 Pulumi [*packages*](/docs/iac/concepts/resources/packages/) are a standardized way to share providers and components. After building a provider or component, the next steps involve generating docs and end-user SDK code in various target languages, both of which are based on the [`schema.json` file](schema/). Those user-facing assets are packaged up in a tarball. Once you have a package, this can either be used locally or shared via the Pulumi Registry.
 
-![A diagram showing how Pulumi Package code can be authored in one language and made available in all other languages supported by Pulumi](../../concepts/img/pulumi-package-concepts.png)
-
 Learn more in the [package documentation](/docs/iac/concepts/packages).
+
+![A diagram showing how Pulumi Package code can be authored in one language and made available in all other languages supported by Pulumi](../../concepts/img/pulumi-package-concepts.png)
 
 ### Language Limitations
 
@@ -83,9 +89,10 @@ This flexibility is made possible through code generation. When you author a com
 
 Another great thing about Pulumi is that it exists within a vast ecosystem of tooling and community. Before writing a component or provider, we strongly encourage you to look for prior art within the ecosystem. Some places you can look for help are:
 
-- **The [Pulumi Registry](/registry)**: our hosted repository of providers and components contains hundreds of existing packages that can be used directly within Pulumi. These are all open-source code, with their code repository linked directly on every page.
-- **The [Terraform Provider Registry](https://registry.terraform.io/)**: any Terraform-compatible provider can be [*bridged*](/blog/any-terraform-provider/) to work within Pulumi. That gives you access to thousands of existing providers! If the provider you need isn't in our registry, but does exist in Terraform's registry, you can use it immediately via the [terraform-provider](https://www.pulumi.com/registry/packages/terraform-provider/).
-- **The [OpenTofu Registry](https://search.opentofu.org/providers)**: a fork of Terraform that maintains its own registry of thousands of Terraform-compatible providers, which can also be [bridged into Pulumi](/blog/any-terraform-provider/).
+- **The [Pulumi Registry](/registry)** - our hosted repository of providers and components contains hundreds of existing packages that can be used directly within Pulumi. These are all open-source code, with their code repository linked directly on every page.
+- **The [Terraform Provider Registry](https://registry.terraform.io/)** - any Terraform-compatible provider can be [*bridged*](/blog/any-terraform-provider/) to work within Pulumi. That gives you access to thousands of existing providers! If the provider you need isn't in our registry, but does exist in Terraform's registry, you can use it immediately via the [terraform-provider](https://www.pulumi.com/registry/packages/terraform-provider/).
+- **The [OpenTofu Registry](https://search.opentofu.org/providers)** - a fork of Terraform that maintains its own registry of thousands of Terraform-compatible providers, which can also be [bridged into Pulumi](/blog/any-terraform-provider/).
+- **The [Pulumi Command Provider](https://www.pulumi.com/registry/packages/command/)** - a Pulumi provider that allows you to run arbitrary shell commands. Many use cases can be covered by using this provider, shelling out to use the third-party CLI tool for a new cloud product, instead of writing a provider from scratch. This is often the lightest-weight way to extend Pulumi.
 
 If you're not having luck finding what you need on your own, you can always reach out to other Pulumi users via our [Community Slack](https://slack.pulumi.com) channel.
 
