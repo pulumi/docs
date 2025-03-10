@@ -1,10 +1,11 @@
 ---
 title: "Kubernetes Best Practices I Wish I Had Known Before"
 date: 2025-01-20
+updated: 2025-03-10
 draft: false
 
 meta_desc: |
-  Best practices for Kubernetes that I wish I had known earlier. Learn from my experience with Kubernetes in production and avoid common pitfalls.
+  Discover essential Kubernetes best practices I wish I had known earlier. Avoid pitfalls, optimize your setup, and streamline deployments with expert insights.
 
 meta_image: meta.png
 
@@ -38,6 +39,24 @@ As a cloud-native citizen and Kubernetes enthusiast, I’ve learned the hard way
 {{< figure alt="The 'Kubernetes is easy'-iceberg meme is a classic example of how Kubernetes can be deceivingly complex" src="img.png" caption="The 'Kubernetes is easy'-iceberg meme is a classic example of how Kubernetes can be deceivingly complex" width=100% >}}
 
 In this post, I will highlight some crucial Kubernetes best practices. They are from my years of experience with Kubernetes in production. Think of this as the curated “Kubernetes cheat sheet” you wish you had from Day 1. Buckle up; it’s going to be an exciting ride.
+
+1. [Don’t Skimp on Resource Requests and Limits](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#1-dont-skimp-on-resource-requests-and-limits)
+2. [Namespace Like Your Life Depends on It](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#2-namespace-like-your-life-depends-on-it)
+3. [Avoid Running Multiple Containers in One Pod Unless Necessary](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#3-avoid-running-multiple-containers-in-one-pod-unless-necessary)
+4. [Use a Package Manager for Your YAML Files](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#4-use-a-package-manager-for-your-yaml-files)
+5. [Ingress and Networking Best Practices](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#5-ingress-and-networking-best-practices)
+6. [Lean On Liveness, Readiness, and Startup Probes](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#6-lean-on-liveness-readiness-and-startup-probes)
+7. [Mind Your Security: RBAC, Pod Security, and Secrets](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#7-mind-your-security-rbac-pod-security-and-secrets)
+8. [Monitor Everything (And Then Monitor Some More)](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#8-monitor-everything-and-then-monitor-some-more)
+9. [Automate Deployments with CI/CD](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#9-automate-deployments-with-cicd)
+10. [Keep Your Kubernetes Cluster and Components Updated](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#10-keep-your-kubernetes-cluster-and-components-updated)
+11. [Use Labels and Annotations Wisely](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#11-use-labels-and-annotations-wisely)
+12. [Adopt a Multi-Environment Approach](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#12-adopt-a-multi-environment-approach)
+13. [Optimize Your Container Images](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#13-optimize-your-container-images)
+14. [Implement a Reliable Logging Strategy](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#14-implement-a-reliable-logging-strategy)
+15. [Treat Kubernetes Like Cattle, Not a Pet](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#15-treat-kubernetes-like-cattle-not-a-pet)
+16. [Consider a Higher-Level Approach for Complex Deployments](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#16-consider-a-higher-level-approach-for-complex-deployments)
+17. [Final Thoughts](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#final-thoughts)
 
 ## 1. Don’t Skimp on Resource Requests and Limits
 
@@ -100,7 +119,7 @@ In Kubernetes, networking can get complicated fast. Between Services, Ingress Co
 - Ingress is a powerful concept in Kubernetes, spend time setting it up properly. A messy Ingress config is like a pothole-filled driveway leading to a beautiful mansion.
 
 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
-    <img src="img_1.png" alt="Description of image" style="width: 80%; height: 100%">
+    <img src="img_1.png" alt="A meme featuring two side-by-side images of Mr. Incredible. The left side shows a normal, happy face labeled “I’M LEARNING KUBERNETES”, while the right side is a dark, distorted version of his face with the same caption, humorously implying the increasing complexity and challenges of learning Kubernetes." style="width: 80%; height: 100%">
 </div>
 
 ## 6. Lean On Liveness, Readiness, and Startup Probes
@@ -226,7 +245,7 @@ By adopting Pulumi, you can avoid the complexity of juggling endless YAML files 
 ## Final Thoughts
 
 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
-    <img src="img_2.png" alt="Description of image" style="width: 60%; height: 100%">
+    <img src="img_2.png" alt="A meme featuring a man slamming a card on a table, labeled “ME”, using “KUBERNETES” to solve “ANY PROBLEM TO SOLVE”, humorously depicting overuse of Kubernetes." style="width: 60%; height: 100%">
 </div>
 
 Kubernetes is like a Swiss Army knife: powerful, versatile, but also easy to misuse if you’re not careful. By adopting these best practices, declarative configuration, sensible resource allocations, strong security, robust observability, and automated deployments, you’ll keep your cluster humming smoothly.
