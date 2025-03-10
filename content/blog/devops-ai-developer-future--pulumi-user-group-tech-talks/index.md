@@ -1,37 +1,13 @@
 ---
-title: "AI in DevOps | AI Talks for DevOps Overview"
-
-# The date represents the post's publish date, and by default corresponds with
-# the date and time this file was generated. Dates are used for display and
-# ordering purposes only; they have no effect on whether or when a post is
-# published. To influence the ordering of posts published on the same date, use
-# the time portion of the date value; posts are sorted in descending order by
-# date/time.
+title: "How AI is Transforming DevOps: AI Talks for DevOps Insights"
 date: 2023-11-13T22:05:34Z
-
-# The draft setting determines whether a post is published. Set it to true if
-# you want to be able to merge the post without publishing it.
+updated: 2025-03-10
 draft: false
-
-# Use the meta_desc property to provide a brief summary (one or two sentences)
-# of the content of the post, which is useful for targeting search results or
-# social-media previews. This field is required or the build will fail the
-# linter test. Max length is 160 characters.
-meta_desc: AI-driven Development is Here - Watch the discussion on AI in DevOps and how AI will impact the future of DevOps and Software Engineering.
-
-# The meta_image appears in social-media previews and on the blog home page. A
-# placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
+meta_desc: Explore how AI is transforming DevOps. Learn about AI-driven automation, monitoring, security, and how DevOps teams can leverage AI for efficiency and innovation.
 meta_image: ai-in-devops-meta-image.png
-
-# At least one author is required. The values in this list correspond with the
-# `id` properties of the team member files at /data/team/team. Create a file for
-# yourself if you don't already have one.
 authors:
     - sara-huddleston
     - scott-lowe
-
-# At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - devops
     - pulumi-events
@@ -39,27 +15,20 @@ tags:
     - ml
     - community
     - platform-engineering
-
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
 ---
 
 The integration of artificial intelligence (AI) with DevOps signals a new era in software development. DevOps possesses unique characteristics and needs that make it exceptionally compatible with AI augmentation. Given that code fundamentally relies on language, and large language models (LLMs) serve as the core of GPT functionality, these models are particularly well-suited for tasks such as code generation. This article unwraps the topics addressed during our “AI: Friends or Foe | AI Talks for DevOps” event in San Francisco.
 
 <!--more-->
 
-Watch the discussion between Luke Hoban, Pulumi's CTO and cofounder of TypeScript, and Nana from TechWorld of Nana, moderated by community engineer Adora Nwodo.
-
-## On this AI in DevOps article:
-
-- [How will AI Impact the Future of DevOps](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#how-will-ai-impact-the-future-of-devops)
-- [What is DevOps in AI](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#what-is-devops-in-ai)
-- [What is AI in DevOps](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#what-is-ai-in-devops)
-- [How AI is Currently Used in DevOps](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#how-ai-is-currently-used-in-devops)
-- [How Can a DevOps Team Take Advantage of Artificial Intelligence](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#how-can-a-devops-team-take-advantage-of-artificial-intelligence)
-- [Top 5 Skills for DevOps Engineers in the AI era](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#top-5-skills-for-devops-engineers-in-the-ai-era)
-- [How to Overcome AI for DevOps Challenges](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#how-to-overcome-ai-for-devops-challenges)
-- [Frequently Asked Questions](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#frequently-asked-questions)
+1. [How will AI Impact the Future of DevOps](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#how-will-ai-impact-the-future-of-devops)
+2. [What is DevOps in AI](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#what-is-devops-in-ai)
+3. [What is AI in DevOps](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#what-is-ai-in-devops)
+4. [How AI is Currently Used in DevOps](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#how-ai-is-currently-used-in-devops)
+5. [How Can a DevOps Team Take Advantage of Artificial Intelligence](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#how-can-a-devops-team-take-advantage-of-artificial-intelligence)
+6. [Top 5 Skills for DevOps Engineers in the AI era](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#top-5-skills-for-devops-engineers-in-the-ai-era)
+7. [How to Overcome AI for DevOps Challenges](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#how-to-overcome-ai-for-devops-challenges)
+8. [Frequently Asked Questions](/blog/devops-ai-developer-future--pulumi-user-group-tech-talks/#frequently-asked-questions)
 
 ## How will AI Impact the Future of DevOps
 
@@ -71,7 +40,7 @@ In the Fireside chat, Luke Hoban expressed his enthusiasm for incorporating AI i
 
 When considering the adoption of AI and AI engineering, such as prompt engineering and other specific disciplines, AI engineers rely heavily on the cloud. Many AI-based systems are built around cloud-native tools, practices, and managed services.
 
-The extensive use of cloud-native primitives means that AI is fundamentally a cloud adoption story. Consequently, established DevOps and infrastructure as code tooling and best practices play an important role in AI engineering, in what is being done, and in leveraging its use.
+The extensive use of cloud-native primitives means that AI is fundamentally a cloud adoption story. Consequently, established DevOps and [infrastructure as code](/what-is/what-is-infrastructure-as-code/) tooling and best practices play an important role in AI engineering, in what is being done, and in leveraging its use.
 
 ## What is AI in DevOps
 
@@ -95,7 +64,7 @@ AI assists DevOps teams to refine their operations by detecting inefficiencies a
 
 AI-driven automation can also help the software development process with code generation. The operations teams from both departments quickly pinpoint any issues in their workflows while speeding up decision-making processes.
 
-In the long term, the AI may use cloud credentials to create and autonomously automate deployment and management and perform DevOps tasks on behalf of the DevOps or platform engineering team. In the near term, it is used to assist humans, from DevOps professionals to developers.
+In the long term, the AI may use cloud credentials to create and autonomously automate deployment and management and perform DevOps tasks on behalf of the DevOps or [platform engineering](/what-is/what-is-platform-engineering/) team. In the near term, it is used to assist humans, from DevOps professionals to developers.
 
 > ***“In the near term, AI usage in DevOps is about how do you keep the human in the loop, how do you use it as a learning tool, as a code generation tool, and for auditing to provide actionable notifications, all of which are still very human-dependent. There is so much more it can be used for. Currently, it's a tool serving humans. But it is fascinating to imagine it in the future when it can be trusted to be an autonomous agent.”*** - *Luke Hoban, CTO of Pulumi and co-creator of TypeScript*
 
@@ -139,7 +108,7 @@ When using Pulumi Cloud, you can leverage [AI Assist](https://www.pulumi.com/blo
 - show azure and azure native security groups
 - show all AWS VPCs
 
-### Remediation tool: Continuous and Automatic Compliance
+### Remediation Tool: Continuous and Automatic Compliance
 
 Defining and managing security rules, criteria, and conditions are key to enabling security at scale. Policy as Code, or Compliance as Code, has the ability to verify and spot problems before deploying the infrastructure. When policies are written with code, you can apply software development practices such as testing, automated deployment, and version control.
 
