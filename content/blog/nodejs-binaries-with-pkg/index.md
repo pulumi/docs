@@ -2,7 +2,7 @@
 title: "Node.js Native Binary Compilation Using vercel/pkg"
 date: 2022-09-13
 updated: 2025-03-10
-meta_desc: "Learn how to build standalone native binaries for Node.js applications using vercel/pkg. Package your Node.js project for easy distribution without dependencies."
+meta_desc: "Learn how to build standalone native binaries for Node.js apps using vercel/pkg. Package your Node.js project for easy distribution without dependencies."
 
 authors:
 - daniel-bradley
