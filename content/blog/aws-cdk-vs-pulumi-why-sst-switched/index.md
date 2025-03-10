@@ -61,15 +61,13 @@ aliases:
 ---
 Cloud computing tools evolve, and so must the frameworks developers rely on. For SST (Serverless Stack), AWS CDK was a great starting point—but it had limitations.
 
-🪢 CDK tied infrastructure to AWS.
-
-😣 Debugging was frustrating due to CloudFormation templates.
-
-☁️ Multi-cloud was nearly impossible.
+- CDK tied infrastructure to AWS.
+- Debugging was frustrating due to CloudFormation templates.
+- Multi-cloud was nearly impossible.
 
 The solution? Pulumi. In this post, we’ll explore why SST moved to Pulumi, what challenges they overcame, and what this means for developers building modern cloud applications.
 
-👀 TL;DR: Pulumi lets SST offer a faster, more flexible, and provider-agnostic infrastructure experience.
+TL;DR: Pulumi lets SST offer a faster, more flexible, and provider-agnostic infrastructure experience.
 
 <!--more-->
 
