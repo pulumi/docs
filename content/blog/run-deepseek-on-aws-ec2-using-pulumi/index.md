@@ -4,7 +4,7 @@ date: 2025-01-27
 updated: 2025-03-10
 draft: false
 meta_desc: |
-    Learn how to set up and run DeepSeek-R1 on an AWS EC2 instance using Ollama.
+    Learn how to set up and run DeepSeek-R1 on an AWS EC2 instance using Ollama and Pulumi. Follow this step-by-step guide for AI deployment in the cloud.
 
 meta_image: meta.png
 
