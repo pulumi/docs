@@ -171,7 +171,6 @@ As the SST team continues to evolve with Pulumi at its core, they aim to deliver
 If you're interested in exploring Pulumi further, here are several ways to get involved:
 
 - Discover how Pulumi Crosswalk for AWS simplifies “day one” tasks in our [AWS guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/)
-- Join an upcoming Platform Engineering & DevOps in-person meetup, [find a location near you](https://info.pulumi.com/platform-engineering-devops-series)
 - Watch our on-demand workshop [Getting Stated with Infrastructure as Code on AWS](https://www.pulumi.com/resources/getting-started-with-iac-pulumi-aws/)
 - Register for one of our upcoming [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming)
 - But most importantly, [try Pulumi](https://app.pulumi.com/signup) today!
