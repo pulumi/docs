@@ -1,18 +1,20 @@
 ---
-title_tag: "How to Debug Pulumi Provider Packages"
+title_tag: "How to Debug Pulumi Provider"
 meta_desc: "Learn the process for debugging Pulumi providers locally."
-title: Debugging provider packages
-h1: Debugging Pulumi provider packages
+title: Debugging providers
+h1: Debugging Pulumi providers
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Debugging packages
-        parent: iac-using-pulumi-packages
+        name: Debugging providers
+        parent: iac-extending-pulumi
         weight: 2
 aliases:
     - /docs/using-pulumi/pulumi-packages/
     - /docs/using-pulumi/pulumi-packages/debugging-provider-packages/
     - /docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/
+    - /docs/using-pulumi/pulumi-packages/debugging-provider-packages/
+    - /docs/iac/using-pulumi/pulumi-packages/debugging-provider-packages/
 ---
 
 When developing or troubleshooting Pulumi providers, you may need to debug the provider code locally. This guide walks you through starting your provider in debug mode, setting breakpoints, and running tests.
@@ -27,7 +29,7 @@ For GoLand you can follow these steps.
 
 1. Configure the working directory to the program you are going to run to mirror how Pulumi would start the provider
 
-![Screenshot of GoLand configuration for debugging providers](/docs/iac/using-pulumi/pulumi-packages/img/goland-debug-config.png)
+![Screenshot of GoLand configuration for debugging providers](/docs/iac/using-pulumi/extending-pulumi/img/goland-debug-config.png)
 
 ### Example for VS Code
 
@@ -35,11 +37,11 @@ For VS Code you can follow these steps.
 
 1. Navigate to **Run -> Add Configuration** and add the **Go: launch package** configuration
 2. Edit `"program": "${fileDirname}"` to point to `cmd/pulumi-resource-<PROVIDER>` , e.g., `cmd/pulumi-resource-azure-native` for the Azure Native provider
-![Screenshot of VS Code configuration for debugging providers](/docs/iac/using-pulumi/pulumi-packages/img/vscode-launch-config.png)
+![Screenshot of VS Code configuration for debugging providers](/docs/iac/using-pulumi/extending-pulumi/img/vscode-launch-config.png)
 3. Edit "name": `"Launch Package"` to give it a descriptive name
 4. Launch package
 
-![Screenshot of VS Code configuration for debugging providers](/docs/iac/using-pulumi/pulumi-packages/img/vscode-debug-config.png)
+![Screenshot of VS Code configuration for debugging providers](/docs/iac/using-pulumi/extending-pulumi/img/vscode-debug-config.png)
 
 ## Setting breakpoints
 
@@ -126,9 +128,9 @@ make tfgen_build_only
 For VS Code you can follow these steps to connect to the debugger.
 
 1. Navigate to **Run -> Add Configuration** and add the **Go: Connect to server** configuration
-![Screenshot of VS Code configuration for debugging providers](/docs/iac/using-pulumi/pulumi-packages/img/vscode-launch-config-connect-to-server.png)
+![Screenshot of VS Code configuration for debugging providers](/docs/iac/using-pulumi/extending-pulumi/img/vscode-launch-config-connect-to-server.png)
 
 2. Edit "name": `"Connect to server"` to give it a descriptive name
 3. Connect to server
 
-![Screenshot of VS Code configuration for debugging tfgen](/docs/iac/using-pulumi/pulumi-packages/img/vscode-debug-config-connect-to-server.png)
+![Screenshot of VS Code configuration for debugging tfgen](/docs/iac/using-pulumi/extending-pulumi/img/vscode-debug-config-connect-to-server.png)

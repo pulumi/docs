@@ -1,13 +1,13 @@
 ---
-title_tag: "How to Author & Publish Pulumi Packages"
-meta_desc: "Learn how to create a Pulumi Package: create a Native Provider, author a Component, or bridge a Terraform provider into the Pulumi ecosystem."
-title: Author packages
-h1: Authoring and publishing Pulumi packages
+title_tag: "Publishing Packages"
+meta_desc: "Learn how to create and publish a Pulumi Package to share a custom component, provider, or bridge an existing Terraform provider into the Pulumi ecosystem."
+title: Publishing packages
+h1: Publishing Pulumi packages
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Authoring packages
-        parent: iac-using-pulumi-packages
+        name: Publishing packages
+        parent: iac-extending-pulumi
         weight: 1
 aliases:
 - /docs/guides/pulumi-packages/how-to-author/
@@ -15,12 +15,13 @@ aliases:
 - /docs/using-pulumi/pulumi-packages/how-to-author
 - /docs/using-pulumi/pulumi-packages/authoring/
 - /docs/iac/packages-and-automation/pulumi-packages/authoring/
+- /docs/iac/using-pulumi/pulumi-packages/authoring/
 ---
 
-This guide will take you step-by-step through creating and publishing a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a Native Provider, a provider bridged from an existing Terraform provider, or a Component. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
+This guide will take you step-by-step through creating and publishing a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a component, custom provider, or an existing Terraform provider packaged for use within Pulumi. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
 
 {{% notes type="info" %}}
-If you are a cloud or SaaS provider interested in publishing a provider or component, please [contact us to start publishing to Pulumi Registry](/contact/?form=registry) to reach out partners team.
+If you are a cloud or SaaS provider interested in publishing a Pulumi provider or component, please [reach out partners team](/contact/?form=registry) to start publishing to the Pulumi Registry.
 {{% /notes %}}
 
 ## Prerequisites
@@ -30,37 +31,37 @@ If you are a cloud or SaaS provider interested in publishing a provider or compo
 - Pulumi Packages are multi-language: you can write your package once in either Go, Python, or TypeScript/JavaScript and then make it available to all Pulumi users, even if they use another language. To develop them, you need to have Git, Go, .NET, Python, and TypeScript installed on your system.
 - To follow the whole guide, you need a GitHub account. However, using GitHub is not a requirement; you may still find this guide useful even if you use another system to store your source code.
 
-## Create a repository
+## Create a repository and author your package
 
 To get started, create a repository for your Pulumi Package. We recommend hosting your Pulumi Package in a public repository on GitHub. We also recommend following the naming conventions below to help the community find the source code for your packages.
 
 ### Select a template
 
-To get started, click the link for the boilerplate repository template that you want to use, then click "Use this template" to make a copy of it.
+We've created some template repositories for you to use as a starting point for your package. Click the link for the boilerplate repository template that you want to use, then click "Use this template" to make a copy of it.
 
-- Author a **Native Pulumi Provider** for resources or components: [`pulumi/pulumi-provider-boilerplate`](https://github.com/pulumi/pulumi-provider-boilerplate)
+- Author a custom Pulumi provider: [`pulumi/pulumi-provider-boilerplate`](https://github.com/pulumi/pulumi-provider-boilerplate)
 - Bridge an existing Terraform Provider to use with Pulumi: [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate)
 
 {{% notes type="info" %}}
-If you need access to a terraform provider, but don't need the full customisation of a published provider, the ["Any Terraform Provider" Pulumi Provider](/registry/packages/terraform-provider) can provide instant access via locally generating SDKs.
+If you need access to a Terraform provider, but don't need the full customisation of a published provider, the ["Any Terraform Provider" Pulumi Provider](/registry/packages/terraform-provider) can provide instant access via locally generating SDKs.
 {{% /notes %}}
 
 ### Name your provider and repository
 
-If publishing to the [Pulumi Package Registry](https://www.pulumi.com/registry/), you will need to pick a unique name. This is normally named after the cloud provider or service the provider configures.
+When you publish to the [Pulumi Package Registry](https://www.pulumi.com/registry/), you will need to pick a unique name. This is normally named after the cloud provider or service the provider configures.
 
 Your repository name should start with `pulumi-` followed by the name of your provider e.g. [`pulumi-aws`](https://github.com/pulumi/pulumi-aws) for AWS, or [`pulumi-kubernetes`](https://github.com/pulumi/pulumi-kubernetes) for the Kubernetes provider.
 
-- If you're bridging a terraform provider, re-use the Terraform provider's name - replacing `terraform-provider-` with `pulumi-` e.g. use `pulumi-auth0` for bridging `terraform-provider-auth0`.
-- If you're building a component for an existing provider, consider using the provider name followed by the component name. For example, if building an API Gateway component using the AWS provider, name your project `pulumi-aws-apigateway`.
+- If you're bridging a Terraform provider, re-use the Terraform provider's name - replacing `terraform-provider-` with `pulumi-` e.g. use `pulumi-auth0` for bridging `terraform-provider-auth0`.
+- If you're building a component on top of an existing provider, consider using the provider name followed by the component name. For example, if building an API Gateway component using the AWS provider, name your project `pulumi-aws-apigateway`.
 
 ## Author your resources or components
 
-See the instructions in your new repository's `README.md` file for specific instructions on how to author your package.
+See the instructions in your new repository's `README.md` file for specific instructions on how to author your package. We also have guides you can follow for building [components](#) and [providers](#) without the template repos.
 
 ## Write documentation
 
-We recommend authoring documentation to help others in the Pulumi community use your package. In your repository, there should be a `docs/` folder with a few template pages you can use that correspond to the various tabs on a package page in Pulumi Registry (like the [Azure Native](/registry/packages/azure-native/) package). Use the guidance in the following sections to author content in these pages.
+We recommend writing documentation to help others in the Pulumi community use your package. In your repository, there should be a `docs/` folder containing markdown files (the templates include a few suggested pages). The files should correspond to the various tabs on a package page in Pulumi Registry (like the [Azure Native](/registry/packages/azure-native/) package). Use the guidance in the following sections to author content in these pages.
 
 ### Overview, installation, & configuration
 
@@ -75,7 +76,7 @@ We recommend keeping the contents of `README.md` and `_index.md` similar or the 
 
 ### Package metadata
 
-Metadata for your package is generated from the [`schema.json`](/docs/using-pulumi/pulumi-packages/schema) in your repository. To make sure your package looks great in Pulumi Registry, ensure you add metadata like:
+Metadata for your package is generated from the [`schema.json`](/docs/using-pulumi/extending-pulumi/schema) in your repository. To make sure your package looks great in the Pulumi Registry, don't forget to add metadata like:
 
 - `displayName`: the friendly name for your package displayed on the Registry's browse page; this name should match the title of the `_index.md` file.
 - `description`: a short description of your package; it should include the package name
@@ -93,7 +94,7 @@ Pulumi will interpolate `${VERSION}`, `${OS}` and `${ARCH}` with their respectiv
 
 ### API docs
 
-API docs for your package are automatically generated from the `schema.json` in your repository. Many Pulumi users learn to use a Pulumi Package via the API docs, since they appear automatically in many IDEs' auto-complete and inline documentation features, like Visual Studio Code's IntelliSense feature. Investing in API docs for your package is one of the best ways to improve its usability. Check out the [`pulumi-eks` schema](https://github.com/pulumi/pulumi-eks/blob/master/provider/cmd/pulumi-resource-eks/schema.json) and how it translates to [Pulumi Registry](/registry/packages/eks/api-docs/) for an example of great API docs.
+API docs for your package are automatically generated from the `schema.json` in your repository. Many Pulumi users learn to use a Pulumi Package via the API docs, since they appear automatically in many IDEs' auto-complete and inline documentation features, like Visual Studio Code's IntelliSense feature. Investing in API docs for your package is one of the best ways to improve its usability. Check out the [`pulumi-eks` schema](https://github.com/pulumi/pulumi-eks/blob/master/provider/cmd/pulumi-resource-eks/schema.json) to see how it translates to the [Pulumi Registry](/registry/packages/eks/api-docs/) for an example of great API docs.
 
 ### How-to guides
 
@@ -121,7 +122,7 @@ ${pluginDownloadURL}/pulumi-${kind}-${name}-v${version}-${os}-${arch}.tar.gz
 - `os`: the target operating system (one of `darwin`, `linux`, `windows`)
 - `arch`: the target system architecture (one of `amd64`, `arm64`)
 
-Pulumi packages consist of SDKs, as well as a binary to facilitate the actual task (creating cloud resources, ect.). Package
+Pulumi packages consist of SDKs, as well as a binary to facilitate the actual task (creating cloud resources, etc.). Package
 managers (npm, NuGet, Pip, GitHub) host the SDKs, but we need to know where the plugin is hosted. When a package embeds its
 `pluginDownloadURL`, we can automatically fetch the plugin. This means that `pulumi up` just works, and there is no need to run
 `pulumi plugin install ${NAME} ${VERSION} --server ${pluginDownloadURL}`. If `pluginDownloadURL` is not supplied, then the Pulumi
@@ -154,7 +155,7 @@ gitlab://${gitlab api host}/{<project_id>}
 
 ## Publish the documentation
 
-All package documentation on Pulumi Registry is published via the [`pulumi/registry` repository on GitHub](https://github.com/pulumi/registry). To publish your package on Pulumi Registry:
+All package documentation in the Pulumi Registry is published via the [`pulumi/registry` repository on GitHub](https://github.com/pulumi/registry). To publish your package to the Pulumi Registry:
 
 1. Fork and clone the [`pulumi/registry` repository](https://github.com/pulumi/registry).
 1. Add your package to [the community package list](https://github.com/pulumi/registry/blob/master/community-packages/package-list.json)
@@ -163,7 +164,7 @@ All package documentation on Pulumi Registry is published via the [`pulumi/regis
 1. Open a pull request with the above changes and await review from a Pulumi team member.
 
 {{% notes %}}
-API docs for your package will be automatically generated at the time of building the registry site. You do not need to take any action to generate API docs other than make sure your package repository has the right `schema.json` (or `.yaml`).
+API docs for your package will be automatically generated at the time of building the registry site. You do not need to take any action to generate API docs other than making sure your package repository has the right `schema.json` (or `.yaml`).
 {{% /notes %}}
 
 From there, a Pulumi employee will work with you to get your Pulumi Package published. To do so, they'll:
