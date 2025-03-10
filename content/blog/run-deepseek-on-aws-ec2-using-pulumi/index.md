@@ -1,6 +1,7 @@
 ---
 title: "Run DeepSeek-R1 on AWS EC2 Using Ollama"
 date: 2025-01-27
+updated: 2025-03-10
 draft: false
 meta_desc: |
     Learn how to set up and run DeepSeek-R1 on an AWS EC2 instance using Ollama.
@@ -46,13 +47,19 @@ This weekend, my "for you" page on all of my social media accounts was filled wi
 
 **But why?** The answer is simple: DeepSeek entered the market as an open-source (MIT license) project with excellent performance and reasoning capabilities.
 
-## The company behind DeepSeek
+1. [The Company Behind DeepSeek](/blog/run-deepseek-on-aws-ec2-using-pulumi/#the-company-behind-deepseek)
+2. [DeepSeek R1 Model](/blog/run-deepseek-on-aws-ec2-using-pulumi/#deepseek-r1-model)
+3. [What Are Distilled Models?](/blog/run-deepseek-on-aws-ec2-using-pulumi/#what-are-distilled-models)
+4. [Setting Up The Environment](/blog/run-deepseek-on-aws-ec2-using-pulumi/#setting-up-the-environment)
+5. [Next Steps](/blog/run-deepseek-on-aws-ec2-using-pulumi/#next-steps)
+
+## The Company Behind DeepSeek
 
 DeepSeek is a Chinese AI startup founded in 2023 by Lian Wenfeng. One interesting fact about DeepSeek is that the cost of training and developing DeepSeek's models was only a fraction of what OpenAI or Meta spent on their models.
 
 This on its own sparked a lot of interest and curiosity in the AI community. DeepSeek R1 is near or even better than its rival models on some of the important benchmarks like AIME 2024 for mathematics, Codeforces for coding, and MMUL for general knowledge.
 
-![img_1.png](img_1.png)
+![A bar chart compares the performance of DeepSeek and OpenAI models across six benchmarks: AIME 2024, Codeforces, GPQA Diamond, MATH-500, MMLU, and SWE-bench Verified. The models evaluated include DeepSeek-R1, DeepSeek-R1-32B, DeepSeek-V3, OpenAI-o1-1217, and OpenAI-o1-mini, with accuracy or percentile scores represented as bars. DeepSeek-R1 (blue-striped) consistently ranks among the top performers, particularly excelling in MATH-500 (97.3%), MMLU (90.8%), and Codeforces (96.3%). The chart visually distinguishes each model using different colors and shading.](img_1.png)
 
 ### Mathematics: AIME 2024 & MATH-500
 
@@ -60,13 +67,13 @@ DeepSeek-R1 shows robust multi-step reasoning, scoring **79.8%** on AIME 2024, e
 On MATH-500—which tests a wide range of high-school-level problems—DeepSeek-R1 again leads with **97.3%**, slightly
 above OpenAI o1-1217’s **96.4%**.
 
-### Coding: Codeforces & SWE-bench verified
+### Coding: Codeforces & SWE-bench Verified
 
 In algorithmic reasoning (Codeforces), OpenAI o1-1217 stands at **96.6%**, marginally ahead of DeepSeek-R1’s **96.3%**.
 Yet on SWE-bench Verified, which focuses on software engineering reasoning, DeepSeek-R1 scores **49.2%**, surpassing
 OpenAI o1-1217’s **48.9%** and showcasing strong software verification capabilities.
 
-### General knowledge: GPQA Diamond & MMLU
+### General Knowledge: GPQA Diamond & MMLU
 
 OpenAI o1-1217 excels in factual queries (GPQA Diamond) with **75.7%**, outperforming DeepSeek-R1 at **71.5%**. For
 broader academic coverage (MMLU), the margin is still tight: **91.8%** (OpenAI o1-1217) vs. **90.8%** (DeepSeek-R1),
@@ -74,19 +81,19 @@ indicating near-parity in multitask language understanding.
 
 {{< related-posts >}}
 
-## DeepSeek R1 model
+## DeepSeek R1 Model
 
 DeepSeek R1 is a large language model developed with a strong focus on reasoning tasks. It excels at problems requiring multi-step analysis and logical thinking. Unlike typical models that rely heavily on Supervised Fine-Tuning (SFT), DeepSeek R1 uses Reinforcement Learning (RL) as its primary training strategy. This emphasis on RL empowers it to figure out solutions with greater independence.
 
-## What Are Distilled models?
+## What Are Distilled Models?
 
 Besides the main model, DeepSeek AI has introduced distilled versions in various parameter sizes—1.5B, 7B, 8B, 14B, 32B, and 70B. These distilled models draw on Qwen and Llama architectures, preserving much of the original model’s reasoning capabilities while being more accessible for personal computer use.
 
 Notably, the 8B and smaller models can operate on standard CPUs, GPUs, or Apple Silicon machines, making them convenient for anyone interested in experimenting at home.
 
-That's why I decided to run DeepSeek on an AWS EC2 instance using Pulumi. I wanted to see how easy it is to set up and run DeepSeek on the cloud using Infrastructure as Code (IaC). So, let's get started!
+That's why I decided to run DeepSeek on an AWS EC2 instance using Pulumi. I wanted to see how easy it is to set up and run DeepSeek on the cloud using [Infrastructure as Code (IaC)](/blog/what-is/what-is-infrastructure-as-code/). So, let's get started!
 
-## Setting up the environment
+## Setting Up The Environment
 
 ### Prerequisites
 
@@ -99,7 +106,7 @@ Before we start, make sure you have the following prerequisites:
 
 ### What Is Ollama?
 
-![img_2.png](img_2.png)
+![A black-and-white digital illustration of Ollama’s mascot, a stylized llama, wearing a “WORK!!” headband while intensely focused on paperwork. The mascot sits at a desk surrounded by towering stacks of documents, with scattered sheets and a coffee mug, conveying a sense of heavy workload and determination.](img_2.png)
 
 Ollama allows you to run and manage large language models (LLMs) on your own computer. By simplifying the process of downloading, running, and using these models. It supports macOS, Linux, and Windows, making it accessible across different operating systems. Ollama is easy to use. It has simple commands to pull, run, and manage models.
 
@@ -107,9 +114,9 @@ In addition to local usage, Ollama provides an API for integrating LLMs into oth
 
 Ollama provides strong support for many large language models such as Llama 2, Code Llama, or in our case DeepSeek R1, granting users secure, private, and local access. It offers GPU acceleration on macOS and Linux and provides libraries for Python and JavaScript.
 
-### Running DeepSeek on AWS EC2
+### Running DeepSeek On AWS EC2
 
-![img_4.png](img_4.png)
+![A diagram illustrating an AWS-based deployment with an EC2 GPU-enabled instance running Ollama and Open-WebUI within a public subnet of a VPC. The setup includes a Docker container and is connected to an external LLM (DeepSeek-R1:7B), represented by a blue box with an arrow pointing from the EC2 instance. The Ollama mascot is depicted as part of the architecture.](img_4.png)
 
 First, we need to create a new Pulumi project. You can do this by running the following command:
 
@@ -124,7 +131,7 @@ This will create a new Pulumi project with the necessary files and configuration
 
 Since you will not be using the sample code, feel free to delete it. After that, you can copy and paste the following code snippets into your Pulumi project.
 
-#### Create an instance role with S3 access
+#### Create An Instance Role With S3 Access
 
 To download the NVIDIA drivers needed to create an instance role with S3 access. Copy the following code to your Pulumi project:
 
@@ -174,7 +181,7 @@ To download the NVIDIA drivers needed to create an instance role with S3 access.
 
 {{% /choosable %}}
 
-#### Create the network
+#### Create The Network
 
 Next, we need to create a VPC, subnet, Internet Gateway, and route table. Copy the following code to your Pulumi project:
 
@@ -226,7 +233,7 @@ Next, we need to create a VPC, subnet, Internet Gateway, and route table. Copy t
 
 {{% /choosable %}}
 
-#### Create the EC2 instance
+#### Create An EC2 Instance
 
 Finally, we need to create the EC2 instance. For this, we need to create our SSH key pair and retrieve the Amazon Machine Images to use in our instances. We are going to use `Amazon Linux`, as it is the most common and has all the necessary packages installed for us.
 
@@ -288,7 +295,7 @@ ssh-keygen -f mykey.pub -i -mPKCS8 > deepseek.pem
 
 {{% /choosable %}}
 
-#### Install Ollama and run DeepSeek
+#### Install Ollama And Run DeepSeek
 
 After we set up all the infrastructure needed for our GPU-powered EC2 instance, we can install Ollama and run DeepSeek. This will all be done as part of the user data script we pass to the EC2 instance.
 
@@ -332,19 +339,19 @@ runcmd:
 
 {{< related-posts >}}
 
-#### Using DeepSeek models via Ollama
+#### Using DeepSeek Models via Ollama
 
 DeepSeek provides a diverse range of models in the Ollama library, each tailored to different resource requirements and use cases. Below is a concise overview:
 
-##### Model sizes
+##### Model Sizes
 
 The library offers models in sizes like 1.5B, 7B, 8B, 14B, 32B, 70B, and even 671B parameters (where “B” indicates billions). While larger models tend to deliver stronger performance, they also demand more computational power.
 
-##### Quantized models
+##### Quantized Models
 
 Certain DeepSeek models come in quantized variants (for example, q4_K_M or q8_0). These are optimized to use less memory and may run faster, though there can be a minor trade-off in quality.
 
-##### Distilled versions
+##### Distilled Versions
 
 DeepSeek also releases distilled models (e.g., qwen-distill, llama-distill). These versions are lighter, having been trained to mimic the behavior of larger models and offering a more balanced mix of performance and resource efficiency.
 
@@ -365,7 +372,7 @@ In our case, we will pull the 7B model:
 ollama pull deepseek-r1:7b
 ```
 
-### Deploy the infrastructure
+### Deploy the Infrastructure
 
 Before deploying the infrastructure, make sure you have the necessary AWS credentials set up. You can do this by running the following command:
 
@@ -464,7 +471,7 @@ bf4bb3b7ede1   ollama/ollama                        "/bin/ollama serve"   8 minu
 [ec2-user@ip-10-0-58-122 ~]$
 ```
 
-### Accessing the web UI
+### Accessing the Web UI
 
 When the EC2 instance is up and running and the containers are started, you can access the Ollama Web UI by navigating to `http://<ec2-public-ip>:3000`.
 
@@ -476,17 +483,17 @@ Keep in mind that the Ollama Web UI is not secure by default. Make sure to secur
 
 We can give it a spin by running a few queries. For example, we can ask DeepSeek to solve a math problem:
 
-![img_6.png](img_6.png)
+![A screenshot of a chat interface with DeepSeek-R1:7B, showing a query asking for the square root of 144. The AI responds with a step-by-step explanation, defining the square root, setting up the equation, solving for x, and confirming that \sqrt{144} = 12. The interface has a dark theme, with the query displayed at the top and the AI’s structured response below.](img_6.png)
 
 What is nice about DeepSeek is that we can also see the reasoning behind the answer. This is very helpful to understand how the model came to a conclusion.
 
-### Accessing DeepSeek with Ollama OpenAI-compatible API
+### Accessing DeepSeek with Ollama OpenAI-Compatible API
 
 Ollama provides an OpenAI-compatible API that allows you to interact with DeepSeek models programmatically. This allows you to use existing OpenAI-compatible tools and applications with your local Ollama server.
 
 I am not going to cover how to use the API in this post, but you can find more information in the [Ollama documentation](https://github.com/ollama/ollama/blob/main/docs/api.md).
 
-### Cleaning up
+### Cleaning Up
 
 After you are done experimenting with DeepSeek, you can clean up the resources by running the following command:
 
@@ -494,7 +501,7 @@ After you are done experimenting with DeepSeek, you can clean up the resources b
 pulumi destroy
 ```
 
-## Conclusion
+## Next Steps
 
 This post demonstrated how easy it is to set up and run DeepSeek on an AWS EC2 instance using Pulumi. By leveraging IaC, we were able to create the necessary infrastructure with a few lines of code. From here, we can easily configure the code to run any other AI model on the cloud, change the instance type, or even set additional infrastructure for the application connection to the model.
 
@@ -502,4 +509,5 @@ If you have any questions or need help with the code, feel free to reach out to 
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
 
-If you want to learn more about what we learned from using GenAI in production, head to this [blog post](/blog/codegen-learnings/)
+If you want to learn more about what we learned from using GenAI in production, check out the [Recipe for a Better AI-based Code Generator
+](/blog/codegen-learnings/) blog post.
