@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "Kubernetes on AWS: Streamlining Deployments with Pulumi IaC"
+title: "From Zero to Production: Kubernetes on AWS"
 meta_desc: Learn how to manage Kubernetes on AWS with infrastructure as code. Simplify deployments, automate workloads, and integrate cloud services efficiently.
 meta_image:
 
@@ -31,7 +31,7 @@ url_slug: kubernetes-on-aws
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Kubernetes on AWS: Streamlining Deployments with Pulumi IaC"
+    title: "From Zero to Production: Kubernetes on AWS"
 
     event_type: workshop # workshop | event
 
