@@ -22,7 +22,7 @@ There are two ways Pulumi can integrate using OpenID Connect. Pulumi can operate
 
 ## Solving the Secret Zero problem
 
-Often before to integrate with Pulumi from a cloud or CICD provider you would have to maintain a static, long-term access token, sometimes known as "secret zero". These secrets are often set and forgotten, leading to security issues if they need to be rotated or or in the event they are compromised.
+Often, before integrating with Pulumi from a cloud or CICD provider, you would have to maintain a static, long-term access token, sometimes known as "secret zero." These secrets are often set and forgotten, leading to security issues if they need to be rotated or or in the event they are compromised.
 
 OIDC is an alternative to distributing long-term, static credentials by relying on digitally-signed identity tokens issued by the cloud provider. The process involves configuring a trust relationship between providers based on public-key cryptography.
 
