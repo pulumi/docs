@@ -59,7 +59,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Pulumi now handles [stack secrets](https://www.pulumi.com/docs/concepts/secrets/) more efficiently through optimized encryption and decryption processes, reducing deployment times while maintaining security standards. Users of [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/) for state management will notice the most improvement due to new bulk API processing capabilities, while those with [DIY backends](https://www.pulumi.com/docs/concepts/state/) will also benefit from enhanced encryption cache sharing between operations.
+Pulumi now handles [stack secrets](https://www.pulumi.com/docs/concepts/secrets/) more efficiently through optimized encryption and decryption processes, reducing deployment times while maintaining security standards. Users of [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/) for state management will notice the most improvement due to new batch API capabilities.
 
 <!--more-->
 
@@ -81,39 +81,31 @@ While security is paramount, performance is equally crucial for developer produc
 
 Previously, when working with stacks containing numerous secrets, users could experience noticeable delays during operations that required encryption or decryption. This was primarily due to:
 
-- Individual network requests for each secret operation (Pulumi Cloud users)
-- Network latency compounding with each separate request (Pulumi Cloud users)
-- Redundant re-encryption of unchanged secrets during updates (all users)
-- Lack of shared encryption caching between operations (all users)
+- Individual network requests for each secret operation
+- Network latency compounding with each separate request
 
 For teams with complex infrastructure containing dozens or hundreds of secrets, these delays could add up to significant wait times.
 
 ## Our Performance Improvements
 
-We've implemented several key optimizations to improve secrets management performance, with benefits for both Pulumi Cloud and DIY backend users:
-
-### 1. Smart Change Detection (All Users)
-
-Our first improvement identifies scenarios where no secrets within a stack have changed. By implementing intelligent diffing of secret values, we can completely bypass the work of re-encrypting all secrets when nothing has changed. This optimization eliminates unnecessary processing for the most common update scenarios, benefiting users of both Pulumi Cloud and DIY backends.
-
-### 2. Request Batching (Pulumi Cloud Users)
-
-For Pulumi Cloud users, we've reduced network overhead by batching encryption work into a single request instead of making separate encryption requests for each secret. This batching approach:
+We've reduced network overhead by batching encryption work into a single request instead of making separate encryption requests for each secret. This batching approach:
 
 - Reduces the total number of HTTP requests
 - Minimizes the impact of network latency
 - Allows for more efficient server-side processing
 
-## Measurable Performance Gains
+This is combined with identifying when no secrets have changed between intermediate deployment steps to bypass the work of re-encrypting all secrets.
+
+### Measurable Performance Gains
 
 The performance improvements are particularly noticeable for stacks with many secrets or in environments with higher network latency:
 
 | Secrets Count | Network Latency | Typical Time Savings |
-|---------------|-----------------|----------------------|****
+|---------------|-----------------|----------------------|
 | 10            | 100ms           | ~1 second            |
 | 25            | 150ms           | ~4 seconds           |
-| 50+           | 200ms           | 10+ seconds          |
-| 100+          | 400ms           | 20+ seconds          |
+| 50+           | 150ms           | 10+ seconds          |
+| 100+          | 150ms           | 20+ seconds          |
 
 The performance improvements are noticeable for stacks with many secrets or in environments with higher network latency. For teams running CI/CD pipelines with frequent deployments, these savings compound throughout the day, potentially saving significant cumulative wait time across your engineering organization.
 
