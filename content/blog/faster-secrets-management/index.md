@@ -52,8 +52,8 @@ tags:
 social:
     twitter: "Faster. Stack. Secrets.
     
-    We've optimized secrets management in Pulumi IaC to reduce deployment times while maintaining security. Stacks with many secrets can save up to 10 seconds per operation. Update to version 3.x to experience these performance improvements."
-    linkedin: "Pulumi Infrastructure as Code now processes stack secrets more efficiently, reducing deployment times while maintaining robust security. Our latest update optimizes encryption and decryption operations through intelligent batching and smart change detection, eliminating unnecessary processing during updates. For stacks with many secrets, these improvements can save up to 10 seconds per operation, which adds up to significant time savings across your deployment pipeline. Update to version 3.x today to experience these performance improvements without any configuration changes required."
+    We've optimized secrets management in Pulumi IaC to reduce deployment times while maintaining security. Stacks with many secrets can save up to 10 seconds per operation. Update to version 3.155.0 to experience these performance improvements."
+    linkedin: "Pulumi Infrastructure as Code now processes stack secrets more efficiently, reducing deployment times while maintaining robust security. Our latest update optimizes encryption and decryption operations through intelligent batching and smart change detection, eliminating unnecessary processing during updates. For stacks with many secrets, these improvements can save up to 10 seconds per operation, which adds up to significant time savings across your deployment pipeline. Update to version 3.155.0 today to experience these performance improvements without any configuration changes required."
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
@@ -113,7 +113,7 @@ The performance improvements are noticeable for stacks with many secrets or in e
 
 To benefit from these performance improvements:
 
-1. Update to [Pulumi IaC version 3.x](https://www.pulumi.com/docs/install/) or later
+1. Update to [Pulumi IaC version 3.155.0](https://www.pulumi.com/docs/install/) or later
 2. No configuration changes are needed—the optimizations work automatically
 3. Ensure you're using Pulumi Cloud as your secrets provider for additional speed gains
 
@@ -125,4 +125,4 @@ At Pulumi, we're committed to providing both robust security and exceptional per
 
 By reducing wait times during encryption and decryption operations, we're helping teams be more productive while maintaining the same high level of protection for sensitive information. This update exemplifies our philosophy that security and performance should complement rather than compete with each other.
 
-Update to Pulumi IaC 3.x today to experience these performance improvements and [let us know what you think](https://github.com/pulumi/pulumi/issues/new)!
+Update to Pulumi IaC 3.155.0 today to experience these performance improvements and [let us know what you think](https://github.com/pulumi/pulumi/issues/new)!
