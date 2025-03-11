@@ -184,7 +184,7 @@ Upload an .mp4 video to your S3 bucket, making sure to encode the
 desired time index in the filename. For instance,
 use `myvideo_00-02.mp4` to extract the frame at 0 minutes and 2 seconds.
 
-You can [use this video of my cat](https://github.com/pulumi/examples/blob/master/cloud-js-thumbnailer/sample/cat.mp4),
+You can [use this video of my cat](https://github.com/pulumi/examples),
 which you should save as `cat_00-01.mp4`.
 
 Upload this video in the S3 console. Or, use the AWS CLI along with
@@ -216,10 +216,10 @@ In this post, we saw how easy it is to use containers and serverless
 functions in one application. With Pulumi, you get the best of both
 worlds, and don't have to choose one or the other.
 
-The [sample code for this post](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is
+The [sample code for this post](https://github.com/pulumi/examples) is
 available in the [Pulumi examples repo on
 GitHub](https://github.com/pulumi/examples).
 
 For a version of this sample that includes AWS Rekognition, see
-the [Video Thumbnailer with Machine Learning](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer-machine-learning) JavaScript
+the [Video Thumbnailer with Machine Learning](https://github.com/pulumi/examples) JavaScript
 example.
