@@ -14,8 +14,32 @@ menu:
 Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud with ESC, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
-Pulumi ESC, as part of the fully managed Pulumi Cloud service, provides secrets and configuration management capabilities without the overhead of infrastructure management. As a managed service, Pulumi handles all aspects of availability, scaling, and maintenance.
+Pulumi ESC is available in a self-hosted model, providing the same secrets and configuration management capabilities as the managed Pulumi Cloud. ESC helps teams securely manage infrastructure configurations, enforce best practices, and simplify access controls. All ESC features including hierarchical environments, fine-grained access controls, and integrations with identity providers are fully available in the self-hosted deployment.
 
-The self-hosted version of ESC provides the same secrets and configuration management capabilities as the managed service. While self-hosting requires that your organization manages deployment, data backups, and keeping the service running and up to date, it allows you to run ESC fully within your own environment.
+## Why self-host Pulumi ESC?
 
-For comprehensive information about self-hosting the Pulumi ESC, please refer to the [Self-hosting the Pulumi Cloud](/docs/pulumi-cloud/admin/self-hosted/) documentation, which provides an overview of the deployment topology, step-by-step deployment instructions and maintenance and upgrade procedures.
+While Pulumi ESC is available as a managed service within Pulumi Cloud, some organizations may prefer to self-host for:
+
+- Compliance and data residency – Ensuring sensitive infrastructure configurations remain within your own environment.
+- Custom security policies – Meeting internal security, regulatory, or audit requirements.
+- Network control – Deploying within a private network or air-gapped environment.
+
+{{% notes type="info" %}}
+Self-hosting Pulumi ESC means your organization is responsible for deploying, managing infrastructure, configuring security, performing backups, applying updates, and ensuring availability and scaling.
+{{% /notes %}}
+
+## Deployment options
+
+Pulumi offers a number of deployment options for self-hosting Pulumi ESC.
+
+- [Docker Compose](quickstart-docker-compose/)
+- [ECS](ecs-hosted/)
+- [EKS](eks-hosted/)
+- [AKS](aks-hosted/)
+- [GKE](gke-hosted/)
+- [Local Docker](local-docker/)
+- [Bring-your-own infra](byo-infra-hosted/)
+
+## Self-hosting documentation
+
+See the [Self-hosting Pulumi ESC](/docs/pulumi-cloud/admin/self-hosted/) documentatio for complete deployment instructions, maintenance guidelines, and upgrade procedures.
