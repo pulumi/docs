@@ -1,0 +1,35 @@
+# This file contains programs that should be ignored by the example code test script.
+
+# This also supports grep compatible regex patterns so we can ignore all programs that match
+# a given pattern. You can also include comments in the file to explain why the program is being ignored.
+
+# No need to include a leading anchor (^) or trailing EOL ($) as these are handled by the script to support
+# matching directories listed specifically.
+
+# Example:
+# aws-.* will ignore all programs that start with "aws-"
+#
+
+
+# Java examples of LoadBalancedFargateService erroneously complain about missing container declarations.
+# https://github.com/pulumi/pulumi-awsx/issues/820
+awsx-vpc-fargate-service-java
+awsx-load-balanced-fargate-ecr-java
+awsx-load-balanced-fargate-nginx-java
+
+# API Gateway authorizer parameter `providerArns` is mistyped.
+# https://github.com/pulumi/pulumi-aws-apigateway/issues/121
+awsx-apigateway-auth-cognito-java
+
+# Skipping - for now this code is not consumed anywhere and needs some updates.
+aws-import-iac-iam-role-.*
+
+# Custom-domain examples won't work because of the hosted-zone lookup (which will fail unless
+# the credentials can access the specified Route 53 zone).
+awsx-apigateway-custom-domain-.*
+
+# Skipping all kubernetes examples for now as they are expected to fail until we provision
+# a Kubernetes cluster in CI.
+kubernetes-.*
+k8s-.*
+helm-.*

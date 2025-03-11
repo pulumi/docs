@@ -63,6 +63,8 @@ else
     org="$(pulumi whoami -v --json | jq -r .user)"
 fi
 
+ignore_file="$(pwd)/scripts/programs/ignore.txt"
+
 pushd "$programs_dir"
     found_first_program=false
 
@@ -87,16 +89,20 @@ pushd "$programs_dir"
             fi
         fi
 
-        # Skip programs we know don't compile.
-
-        # API Gateway authorizer parameter `providerArns` is mistyped.
-        # https://github.com/pulumi/pulumi-aws-apigateway/issues/121
-        if [[ "$project" == "awsx-apigateway-auth-cognito-java" ]]; then
-            continue
-        fi
-        # Skipping - for now this code is not consumed anywhere and needs some updates.
-        if [[ "$project" == "aws-import-iac-iam-role-"* ]]; then
-            continue
+        # Skip programs listed in the ignore.txt file
+        if [ -f "${ignore_file}" ]; then
+            # yes this is a nested loop, but in practice it accounts for a negligible amount of time
+            # compared to the rest of the overall test process.
+            while IFS= read -r pattern; do
+                # Skips empty lines and comments to allow for comments in the ignore.txt file.
+                [[ -z "$pattern" || "$pattern" =~ ^[[:space:]]*# ]] && continue
+                
+                if [[ "$project" =~ ^${pattern}$ ]]; then
+                    echo "Skipping ${project} (matches '${pattern}' in ignore.txt file)"
+                    # continue 2 means exit this loop as well as the outer loop.
+                    continue 2
+                fi
+            done < "${ignore_file}"
         fi
 
         echo
@@ -125,24 +131,6 @@ pushd "$programs_dir"
         # Install dependencies.
         if ! pulumi -C "$project" install; then
             failed_projects+=("$project")
-            continue
-        fi
-
-        # Skip programs we know don't successfully preview.
-
-        # Java examples of FargateService erroneously complain about missing container declarations.
-        # https://github.com/pulumi/pulumi-awsx/issues/820
-        if [[ "$project" == "awsx-vpc-fargate-service-java" ]]; then
-            continue
-        elif [[ "$project" == "awsx-load-balanced-fargate-ecr-java" ]]; then
-            continue
-        elif [[ "$project" == "awsx-load-balanced-fargate-nginx-java" ]]; then
-            continue
-        fi
-
-        # Custom-domain examples won't work because of the hosted-zone lookup (which will fail unless
-        # the credentials can access the specified Route 53 zone).
-        if [[ "$project" == "awsx-apigateway-custom-domain-"* ]]; then
             continue
         fi
 
