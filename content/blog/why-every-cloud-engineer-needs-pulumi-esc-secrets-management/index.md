@@ -84,6 +84,12 @@ Secrets management has changed significantly over the past decade. Gone are the 
 
 Pulumi ESC addresses these issues head-on, redefining how cloud engineers manage secrets efficiently, securely, and at scale.
 
+{{% notes type="tip" %}}
+Jk Jensen, Team Lead at Mysten Labs, explains:
+
+"*Pulumi ESC has been a lifesaver for us. It’s nice to throw everything behind an ESC environment and eliminate one-off granting/IAM permissions and other issues related to static credentials. It gives us peace of mind knowing that we can grant permissions quickly and revoke easily limiting blast radius for any access.*"
+{{% /notes %}}
+
 ## What is Pulumi ESC?
 
 Pulumi ESC simplifies how organizations manage secrets and configurations. It is designed to secure sensitive configurations across modern cloud environments and supports seamless integration, enabling engineers to:
@@ -95,12 +101,6 @@ Pulumi ESC simplifies how organizations manage secrets and configurations. It is
 - Set role-based access controls (RBAC), making securing secrets and configurations easy by assigning permissions to users based on their roles.
 
 Whether integrated with Pulumi's Infrastructure as Code (IaC) platform or used as a standalone service, Pulumi ESC enables cloud engineers to streamline secrets management with centralized control.
-
-{{% notes type="tip" %}}
-Jk Jensen, Team Lead at Mysten Labs, explains:
-
-"*PPulumi ESC has been a lifesaver for us. It’s nice to throw everything behind an ESC environment and eliminate one-off granting/IAM permissions and other issues related to static credentials. It gives us peace of mind knowing that we can grant permissions quickly and revoke easily limiting blast radius for any access.*"
-{{% /notes %}}
 
 ## Key Features of Pulumi ESC
 
@@ -154,15 +154,15 @@ Kubernetes' default secrets offer limited security and scalability. Pulumi ESC w
 
 Manual secrets management often leads to errors such as expired credentials or outdated tokens. Pulumi ESC automates the entire lifecycle of secrets—creation, rotation, replication, and expiry—guaranteeing uninterrupted services.
 
+### Developer-Friendly Workflows
+
+Tools should make engineers' lives easier, not harder. Pulumi ESC's CLI, SDKs, and API provide intuitive ways to integrate into existing workflows. For cloud engineers leveraging Infrastructure as Code with Pulumi, managing secrets alongside the stack becomes effortless.
+
 {{% notes type="tip" %}}
 Thomas Meckel, Senior Cloud Architect at Ophios GmbH, explains:
 
 "*Pulumi's built-in encryption of secrets sets it apart as a leader in secure infrastructure management. Unlike other tools that leave sensitive data exposed or require complex configurations, Pulumi ensures secrets are encrypted by default, leveraging flexible options like Azure Key Vault or AWS KMS. This eliminates the risk of plaintext exposure and simplifies secure deployments. For any organization serious about cloud security, Pulumi's approach to secrets management is a critical differentiator, combining ease of use with robust protection against breaches.*"
 {{% /notes %}}
-
-### Developer-Friendly Workflows
-
-Tools should make engineers' lives easier, not harder. Pulumi ESC's CLI, SDKs, and API provide intuitive ways to integrate into existing workflows. For cloud engineers leveraging Infrastructure as Code with Pulumi, managing secrets alongside the stack becomes effortless.
 
 ### Kubernetes Integration with External Secrets Operator (ESO) and Secrets Store CSI Driver
 
