@@ -92,7 +92,7 @@ Want to geek out and get the inside scoop on AI/ML using Kubernetes? Meet us at:
 Don’t miss the chance to see Pulumi in action, ask questions, and explore AI/ML innovations on Kubernetes.🚀
 {{% /notes %}}
 
-## Deploying AI/ML Workloads on Kubernetes with Pulumi
+## Deploying AI/ML Workloads on Kubernetes
 
 Below, we explore two use cases for running AI/ML workloads on Google Kubernetes Engine (GKE) using Pulumi.
 
@@ -205,10 +205,8 @@ Pulumi provides several advantages for AI/ML teams running workloads on Kubernet
 Pulumi makes it easy to deploy, scale, and manage AI/ML workloads on Kubernetes, leveraging Google Cloud's AI infrastructure. Whether you're serving LLMs, training custom models, or automating ML pipelines, Pulumi provides a developer-friendly, scalable, and secure solution.
 
 - [Explore AI/ML Projects using Pulumi](https://www.pulumi.com/blog/tag/ml/)
-- [Get Started with Pulumi](https://www.pulumi.com/docs/iac/)
-- [Try Pulumi AI](https://www.pulumi.com/ai)
+- [Get Started with Pulumi on Google Cloud](https://www.pulumi.com/docs/iac/clouds/gcp/)
 - [Pulumi Kubernetes Documentation](https://www.pulumi.com/docs/iac/clouds/kubernetes/)
-- [Register for a Workshop](https://www.pulumi.com/events/#upcoming)
 - [Sign up for Pulumi ➡️](https://app.pulumi.com/signup)
 
 By combining Kubernetes, Google Cloud, and Pulumi, you can accelerate AI/ML innovation while reducing infrastructure complexity.
