@@ -1,7 +1,8 @@
 ---
-title: "Low-Code LLM Apps with LocalAI, Flowise, and Pulumi on AWS"
+title: "Deploy Low-Code LLM Apps on AWS with Flowise and LocalAI"
 date: "2024-02-26T06:00:00-08:00"
-meta_desc: "Build low-code LLM applications with LocalAI, Flowise, and Pulumi on AWS EKS"
+updated: 2025-03-12
+meta_desc: "Quickly build & deploy low-code LLM apps on AWS EKS using Flowise, LocalAI, and Pulumi. Follow this step-by-step guide & streamline your AI workflows."
 meta_image: meta.png
 authors:
 - engin-diri
@@ -17,22 +18,21 @@ tags:
 - llamaindex
 ---
 
-In a previous [blog post](/blog/easy-ai-apps-with-langserve-and-pulumi) from me, we discussed how easy it is to build
-your [🦜️🔗 LangChain](https://github.com/langchain-ai/langchain) LLM application and use [🦜️🏓
-LangServe](https://github.com/langchain-ai/langserve) and Pulumi to deploy it on an AWS Fargate cluster. We even went a
-step further and deployed a Pinecone index,
-all in a few lines of [Pulumi](https://www.pulumi.com/) code, to provide a vector store for our LLM application.
+Building low-code LLM applications just got easier! With [Flowise](https://flowiseai.com/), [LocalAI](https://localai.io/), and Pulumi, you can quickly create, deploy, and manage AI-powered workflows on AWS EKS—without writing complex code.
 
-Let me walk you this time a different path on creating a LLM applications. This LLM-powered
-application is using [Flowise](https://flowiseai.com/), a low-code/node drag & drop tool to visualize and build our LLM
-application and LocalAI.
-[LocalAI](https://localai.io/) is a local inference engine that allows us to run LLMs locally or on-prem with consumer
-grade hardware.
-Everything will be deployed on an [AWS](https://aws.amazon.com/) EKS cluster using Pulumi and TypeScript.
+In this guide, you’ll learn how to:
 
-## What is Flowise?
+1. Set up a low-code LLM application using Flowise & LocalAI
+2. Deploy it on AWS EKS with Pulumi & TypeScript
+3. Create a chatbot workflow and expose it via API
 
-![Flowise](flowise.gif)
+Flowise simplifies LLM orchestration with a drag-and-drop interface, while LocalAI enables local inference without requiring a GPU. Pulumi streamlines cloud infrastructure deployment with just a few lines of code.
+
+Whether you’re a developer looking to experiment with LLMs on AWS or an AI enthusiast exploring serverless AI applications, this step-by-step tutorial will guide you through the entire process. Let’s dive in!
+
+## Flowise: The Low-Code Tool for LLM Orchestration
+
+![gift depicting Flowise in action](flowise.gif)
 
 Flowise is an open-source low-code/node tool for developers to build customized LLM orchestration workflows and AI
 agents. The low-code approach helps developers to cut down on the time and effort required to build LLM applications by
@@ -40,9 +40,9 @@ delivering quick iterations to from testing to production. In Flowise nodes are 
 build a customized LLM orchestration flow, chatbot, or AI agent by dragging and dropping these integrations. There are
 plenty of ready-to-use integrations available in Flowise, like LangChain or [LlamaIndex](https://www.llamaindex.ai/).
 
-## What is LocalAI?
+## LocalAI: Open-Source LLM Inference for AWS & On-Prem
 
-![LocalAI](localai.png)
+![LocalAI logo](localai.png)
 
 LocalAI is a free and Open Source alternative to OpenAI. It acts as a drop-in replacement for OpenAI's REST API that is
 fully compatible with the OpenAI API specifications for local inference. It allows you to run LLMs, generate images, or
@@ -55,19 +55,19 @@ models directly on your local machine or on-prem. Additionally, you are not send
 which may contain sensitive information. This is a big advantage, especially in large enterprises or in the public
 sector where data privacy is a big concern.
 
-## Getting Started
+## Deploying Flowise & LocalAI on AWS with Pulumi
 
 Covered a lot of the basics, but let's get started with the real thing. To quickly get started, you can use the example
 project from the Pulumi examples repository.
 
 The AWS architecture of the example project is as follows:
 
-![AWS Architecture](architecture.png)
+![AWS Architecture diagram of a low-code LLM app using Pulumi, Flowise, LocalAI, and EKS](architecture.png)
 
 The Pulumi AWS architecture consists of the following resources:
 
 - An EKS cluster with a managed node group.
-- [EBS volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes.html) support for the [EKS](https://aws.amazon.com/eks/) cluster to store the downloaded LocalAI models.
+- [EBS volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes.html) support for the [EKS cluster](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) to store the downloaded LocalAI models.
 - Deployment of the Helm chart for Flowise and LocalAI.
 - A VPC, two subnets in different availability zones, and an internet gateway, and security groups for the EKS cluster.
 
@@ -205,7 +205,7 @@ kubectl port-forward svc/$(kubectl get svc -n flowise | grep flowise | awk '{pri
 Open the Flowise UI in your browser with the following URL: [http://localhost:3000](http://localhost:3000) and click
 the `Chartflows` menu item in the left sidebar. And then click the blue button `+ Add New`
 
-![flowise-charflow.png](flowise-charflow.png)
+![FlowiseAI dashboard depicting the Chatflows page where new chatflows can be added](flowise-charflow.png)
 
 This should open a new window where you can drag and drop the nodes to the main window. To display
 the available nodes, click the `+` button on the left.
@@ -286,7 +286,7 @@ API for this purpose. Head in your workflow view to the top right corner and cli
 new dialog with all the different methods you can use. This range from embedding the chatbot in your website to using to
 directly call the REST API.
 
-![integration.png](integration.png)
+![Flowise chatbot embed options showing JavaScript code snippet for integrating a chatbot into a website.](integration.png)
 
 There is even the option to enable authorization for the REST API. This is a great way to secure your chatbot and only
 allow authorized users to access it.
