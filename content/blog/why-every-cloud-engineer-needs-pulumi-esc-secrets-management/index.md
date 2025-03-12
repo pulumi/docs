@@ -18,12 +18,12 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Simplify and secure Kubernetes and multi-cloud secrets with Pulumi ESC. Learn how it integrates with ESO and revolutionizes your cloud operations.
+meta_desc: Managing secrets in the cloud is harder than ever. Learn how cloud engineers can streamline security, eliminate risks, and simplify secrets management at scale.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
+meta_image: pulumi-esc-quote.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -38,6 +38,8 @@ tags:
     - external-secrets-operator
     - kubernetes
     - secrets-management
+    - csi
+    - secrets
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
