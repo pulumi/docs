@@ -163,7 +163,7 @@ With Pulumi, you get:
 
 - [Pulumi Deployments](/docs/pulumi-cloud/deployments/) to streamline CI/CD workflows and enable self-service infrastructure
 
-- [Review Stacks](/docs/pulumi-cloud/deployments/) for creating ephemeral, on-demand testing environments
+- [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks/) for creating ephemeral, on-demand testing environments
 
 - [Automation API](/docs/iac/packages-and-automation/automation-api/) for programmatically managing infrastructure and implementing platform workflows
 
