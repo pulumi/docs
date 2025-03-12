@@ -85,7 +85,7 @@ Secrets management has changed significantly over the past decade. Gone are the 
 Pulumi ESC addresses these issues head-on, redefining how cloud engineers manage secrets efficiently, securely, and at scale.
 
 {{% notes type="tip" %}}
-Jk Jensen, Team Lead at Mysten Labs, explains:
+Jk Jensen, Team Lead at Mysten Labs, said:
 
 "*Pulumi ESC has been a lifesaver for us. It’s nice to throw everything behind an ESC environment and eliminate one-off granting/IAM permissions and other issues related to static credentials. It gives us peace of mind knowing that we can grant permissions quickly and revoke easily limiting blast radius for any access.*"
 {{% /notes %}}
@@ -94,11 +94,11 @@ Jk Jensen, Team Lead at Mysten Labs, explains:
 
 Pulumi ESC simplifies how organizations manage secrets and configurations. It is designed to secure sensitive configurations across modern cloud environments and supports seamless integration, enabling engineers to:
 
-- Access, share, and manage secrets, passwords, API keys, and configuration settings like network and deployment options.
-- Synchronize secrets and configuration from any store to any app, tool, or CI/CD platform.
-- Access secrets securely through CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
-- Connect to cloud providers and secrets stores via OIDC to generate dynamic, short-lived, auto-expiring credentials.
-- Set role-based access controls (RBAC), making securing secrets and configurations easy by assigning permissions to users based on their roles.
+- **Access, share, and manage** secrets, passwords, API keys, and configuration settings like network and deployment options.
+- **Synchronize secrets and configuration** from any store to any app, tool, or CI/CD platform.
+- **Access secrets securely** through CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+- **Connect to cloud providers and secrets stores** via OIDC to generate dynamic, short-lived, auto-expiring credentials.
+- **Set role-based access controls (RBAC)**, making securing secrets and configurations easy by assigning permissions to users based on their roles.
 
 Whether integrated with Pulumi's Infrastructure as Code (IaC) platform or used as a standalone service, Pulumi ESC enables cloud engineers to streamline secrets management with centralized control.
 
