@@ -1,6 +1,6 @@
 ---
 title: "Faster Secrets in Pulumi IaC"
-date: 2025-03-13
+date: 2025-03-13T01:00:00-07:00
 draft: false
 meta_desc: Pulumi IaC now processes stack secrets significantly faster improving deployment times without compromising security.
 meta_image: meta.png
@@ -24,7 +24,7 @@ Pulumi now handles [secrets](https://www.pulumi.com/docs/concepts/secrets/) more
 
 ## Secrets Management in Pulumi
 
-Pulumi's built-in secrets management encrypts individual _secrets_ within the stack for fine-grained protection. Pulumi Cloud transmits and stores stack state securely, ensuring that sensitive information—such as database passwords, API keys, and access tokens—remains protected even if someone gains access to your stack file. For organizations with more complex secrets management needs, Pulumi also offers [Pulumi ESC](/product/esc/) (Environments, Secrets, and Configuration), which provides centralized secrets management with hierarchical environments and dynamic credential generation.
+Pulumi Infrastructure as Code (IaC)'s built-in secrets management encrypts individual _secrets_ within the stack for fine-grained protection. Pulumi Cloud transmits and stores stack state securely, ensuring that sensitive information—such as database passwords, API keys, and access tokens—remains protected even if someone gains access to your stack file. For organizations with more complex secrets management needs, Pulumi also offers [Pulumi ESC](/product/esc/) (Environments, Secrets, and Configuration), which provides centralized secrets management with hierarchical environments and dynamic credential generation.
 
 Beyond simple encryption, Pulumi tracks the transitive use of secrets to prevent accidental exposure of sensitive values. This tracking works across your entire infrastructure definition, ensuring secrets remain protected:
 
