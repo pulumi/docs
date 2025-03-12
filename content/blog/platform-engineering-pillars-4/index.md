@@ -1,6 +1,6 @@
 ---
 title: "Developer Experience: From Friction to Flow"
-date: 2025-03-06
+date: 2025-03-13
 draft: false
 meta_desc: Transform your platform engineering strategy by prioritizing developer experience - reduce friction, streamline workflows, and create a flow state.
 meta_image: meta.png
