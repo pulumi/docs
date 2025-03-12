@@ -333,14 +333,6 @@ Ready to streamline your database infrastructure management?
 
 ## Summary
 
-| **Feature**            | **Azure Cosmos DB**          | **PostgreSQL**              | **MongoDB**                  | **DynamoDB**                   |
-|------------------------|----------------------------|----------------------------|------------------------------|-------------------------------|
-| **Best For**           | Global, scalable NoSQL     | Relational apps, analytics | Flexible document storage    | High-scale key-value workloads |
-| **Scalability**        | Auto-scaled, multi-region  | Vertical scaling needed    | Horizontal scaling with sharding | Auto-scaled, per-request pricing |
-| **Query Language**     | SQL-like NoSQL, Mongo API  | SQL                        | MongoDB Query Language      | Key-value queries only       |
-| **Consistency Levels** | 5 tunable levels          | Strong consistency         | Eventual consistency        | Strong/Eventual consistency  |
-| **Operational Overhead** | Fully managed            | Requires DB admin          | Requires DB admin           | Fully managed                 |
-
 If you need something that is document-based, scales globally, and handles different consistency levels well, Cosmos DB could be a great choice - especially if you're already using Azure. Azure takes it seriously - it's in every data center they have, and they treat it as mission-critical. But here's the thing - while it's easier to manage than the alternatives we looked at, you'll pay more for that convenience.
 
 Many times, that cost is not the variable being optimized for. Data is paramount, and Cosmos DB works well for many. James Thurley, Co-founder of Canopy Simulations, found it a perfect fit for their needs:
