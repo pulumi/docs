@@ -73,6 +73,22 @@ pushd "$programs_dir"
     for dir in "${dirs_to_test[@]}"; do
         project="$(basename $dir)"
 
+        # Skip programs listed in the ignore.txt file
+        if [ -f "${ignore_file}" ]; then
+            # yes this is a nested loop, but in practice it accounts for a negligible amount of time
+            # compared to the rest of the overall test process.
+            while IFS= read -r pattern; do
+                # Skips empty lines and comments to allow for comments in the ignore.txt file.
+                [[ -z "$pattern" || "$pattern" =~ ^[[:space:]]*# ]] && continue
+                
+                if [[ "$project" =~ ^${pattern}$ ]]; then
+                    echo "Skipping ${project} (matches '${pattern}' in ignore.txt file)"
+                    # continue 2 means exit this loop as well as the outer loop.
+                    continue 2
+                fi
+            done < "${ignore_file}"
+        fi
+
         # Optionally test only selected examples by setting an ONLY_TEST="<example-path>"
         # environment variable (e.g., ONLY_TEST="awsx-ecr-repository").
         if [[ ! -z "$ONLY_TEST" && "$project" != "$ONLY_TEST"* ]]; then
@@ -88,22 +104,6 @@ pushd "$programs_dir"
             if [ "$found_first_program" == false ]; then
                 continue
             fi
-        fi
-
-        # Skip programs listed in the ignore.txt file
-        if [ -f "${ignore_file}" ]; then
-            # yes this is a nested loop, but in practice it accounts for a negligible amount of time
-            # compared to the rest of the overall test process.
-            while IFS= read -r pattern; do
-                # Skips empty lines and comments to allow for comments in the ignore.txt file.
-                [[ -z "$pattern" || "$pattern" =~ ^[[:space:]]*# ]] && continue
-                
-                if [[ "$project" =~ ^${pattern}$ ]]; then
-                    echo "Skipping ${project} (matches '${pattern}' in ignore.txt file)"
-                    # continue 2 means exit this loop as well as the outer loop.
-                    continue 2
-                fi
-            done < "${ignore_file}"
         fi
 
         echo
