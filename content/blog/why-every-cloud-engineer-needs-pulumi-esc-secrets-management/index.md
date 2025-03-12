@@ -96,7 +96,6 @@ Pulumi ESC simplifies how organizations manage secrets and configurations. It is
 
 Whether integrated with Pulumi's Infrastructure as Code (IaC) platform or used as a standalone service, Pulumi ESC enables cloud engineers to streamline secrets management with centralized control.
 
-
 {{% notes type="tip" %}}
 Jk Jensen, Team Lead at Mysten Labs, explains:
 
@@ -171,36 +170,24 @@ For secrets management in Kubernetes environments, Pulumi ESC becomes even more 
 
 #### Using Pulumi ESC with External Secrets Operator
 
-[External Secrets Operator](https://www.pulumi.com/blog/cloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator/) is an open-source Kubernetes operator that syncs secrets from external providers (like Pulumi ESC) into Kubernetes as native secrets.
+External Secrets Operator is an open-source Kubernetes operator that syncs secrets from external providers (like Pulumi ESC) into Kubernetes as native secrets.
 
 1. **Centralized Storage**: Store secrets securely in Pulumi ESC and synchronize them with Kubernetes across multiple clusters.
 2. **Dynamic Updates**: Whenever a secret is updated in ESC, ESO automatically replicates the changes into Kubernetes, eliminating manual intervention.
 3. **Granular Management**: Define which secrets are synchronized and to which namespaces, ensuring tight access controls and minimizing risk.
 4. **Automated Secret Rotation**: By leveraging ESC's rotation capabilities, ESO ensures Kubernetes receives refreshed credentials without requiring downtime.
 
-##### Example Use Case
-
-Consider a cloud engineer deploying an application in Kubernetes that requires database credentials. Instead of hardcoding these credentials, the engineer can:
-
-1. Store them securely in Pulumi ESC.
-2. Use ESO to sync the secrets into the Kubernetes cluster.
-3. Access these secrets securely from within the application.
-
-This approach not only boosts security but also ensures compliance with enterprise-grade standards.
+Learn how to manage Kubernetes secrets with [Pulumi ESC and External Secrets Operator: The Perfect Solution for Today's Cloud-Native Secret Management](https://www.pulumi.com/blog/cloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator/).
 
 #### Using Pulumi ESC with Secrets Store CSI Driver
 
-The [Secret Store CSI Driver](https://www.pulumi.com/blog/master-kubernetes-secrets-with-pulumi-esc-secrets-store-csi-driver/) mounts secrets, certificates, and keys from external stores into Kubernetes pods as volumes.
+The Secret Store CSI Driver mounts secrets, certificates, and keys from external stores into Kubernetes pods as volumes.
 
 1. **Automated Secrets Injection**: Secrets Store CSI Driver enables Pulumi ESC to automatically inject secrets into Kubernetes pods as mounted volumes or environment variables. This reduces the manual overhead of managing secrets directly in Kubernetes.
 2. **Secure and Dynamic Secret Access**: By leveraging Pulumi ESC, Kubernetes applications can securely fetch secrets from external providers, ensuring dynamic access without exposing credentials in pod specifications.
 3. **Streamlined Operations**: This integration simplifies the process of synchronizing secrets from Pulumi ESC with Kubernetes-native constructs. The automation reduces errors and boosts efficiency.
 
-##### Example Use Case
-
-1. Use Pulumi with the pulumi-kubernetes provider to deploy the Secrets Store CSI Driver and the Pulumi ESC CSI Provider to your Kubernetes cluster.
-2. Create a SecretProviderClass. Define an external secret in Pulumi ESC.
-3. Deploy an application pod configured to access the mounted secret.
+Learn how to [Master Kubernetes Secrets with Pulumi ESC + Secrets Store CSI Driver](https://www.pulumi.com/blog/master-kubernetes-secrets-with-pulumi-esc-secrets-store-csi-driver/).
 
 ## The Future of Secrets Management with Pulumi ESC
 
