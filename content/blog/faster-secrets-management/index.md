@@ -1,6 +1,6 @@
 ---
 title: "Faster Secrets in Pulumi IaC"
-date: 2025-03-12
+date: 2025-03-13
 draft: false
 meta_desc: Pulumi IaC now processes stack secrets significantly faster improving deployment times without compromising security.
 meta_image: meta.png
@@ -18,13 +18,13 @@ social:
     linkedin: "Pulumi Infrastructure as Code now processes stack secrets more efficiently, reducing deployment times while maintaining robust security. Our latest update optimizes encryption and decryption operations through intelligent batching and smart change detection, eliminating unnecessary processing during updates. For stacks with many secrets, these improvements can save up to 10 seconds per operation, which adds up to significant time savings across your deployment pipeline. Update to version 3.155.0 today to experience these performance improvements without any configuration changes required."
 ---
 
-Pulumi now handles [secrets](https://www.pulumi.com/docs/concepts/secrets/) more efficiently through optimized encryption and decryption processes, reducing deployment times while maintaining security standards. Users of [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/) for state management will notice the most improvement due to new batch API capabilities.
+Pulumi now handles [secrets](https://www.pulumi.com/docs/concepts/secrets/) more efficiently through optimized encryption and decryption processes, reducing deployment times while maintaining security standards. Users of [Pulumi Cloud](https://www.app.pulumi.com) for state management will notice the most improvement due to new batch API capabilities.
 
 <!--more-->
 
 ## Secrets Management in Pulumi
 
-Pulumi Cloud transmits and stores stack state securely and in addition encrypts individual _secrets_ within the stack for more fine-grained protection. This encryption ensures that sensitive information—such as database passwords, API keys, and access tokens—remains protected even if someone gains access to your stack file. For organizations with more complex secrets management needs, Pulumi also offers [Pulumi ESC](/product/esc/) (Environments, Secrets, and Configuration), which provides centralized secrets management with hierarchical environments and dynamic credential generation.
+Pulumi's built-in secrets management encrypts individual _secrets_ within the stack for fine-grained protection. Pulumi Cloud transmits and stores stack state securely, ensuring that sensitive information—such as database passwords, API keys, and access tokens—remains protected even if someone gains access to your stack file. For organizations with more complex secrets management needs, Pulumi also offers [Pulumi ESC](/product/esc/) (Environments, Secrets, and Configuration), which provides centralized secrets management with hierarchical environments and dynamic credential generation.
 
 Beyond simple encryption, Pulumi tracks the transitive use of secrets to prevent accidental exposure of sensitive values. This tracking works across your entire infrastructure definition, ensuring secrets remain protected:
 
