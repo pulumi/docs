@@ -63,6 +63,7 @@ else
     org="$(pulumi whoami -v --json | jq -r .user)"
 fi
 
+# The ignore file contains a list of programs to skip.
 ignore_file="$(pwd)/scripts/programs/ignore.txt"
 
 pushd "$programs_dir"
