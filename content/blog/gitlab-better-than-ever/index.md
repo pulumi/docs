@@ -18,7 +18,7 @@ social:
     linkedin: "We're excited to announce significant improvements to Pulumi's GitLab integration. From enhanced merge request comments to organizational templates, these updates make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before."
 ---
 
-Pulumi's integration with GitLab has reached new heights with enhancements designed to streamline your infrastructure as code workflows. Today, we're excited to announce several significant improvements to our GitLab integration that make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before: enhanced merge request comments GitLab as a first-class VCS in Pulumi Cloud, organizational templates in GitLab, and later this year, Pulumi Deployments for GitLab.
+Pulumi's integration with GitLab has reached new heights with enhancements designed to streamline your infrastructure as code workflows. Today, we're excited to announce several significant improvements to our GitLab integration that make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before: GitLab as a first-class VCS in Pulumi Cloud, enhanced merge request comments, organizational templates in GitLab, and later this year, Pulumi Deployments for GitLab.
 
 <!--more-->
 
@@ -30,7 +30,7 @@ Our GitLab Merge Request integration allows teams to visualize infrastructure ch
 
 ### Enhanced Merge Request Comments
 
-We've revamped how Pulumi interacts with GitLab merge requests by building a Gitlab application to handle the authentication. Previously, only customers using Gitlab as an identity provider to Pulumi Cloud could leverage it. Now, Pulumi provides even more detailed and actionable comments on your merge requests, giving reviewers comprehensive insights into proposed infrastructure changes.
+We've revamped how Pulumi interacts with GitLab by building a Gitlab application to handle the authentication. Previously, only customers using Gitlab as an identity provider to Pulumi Cloud could leverage it. Now, Pulumi provides even more detailed and actionable comments on your merge requests, giving reviewers comprehensive insights into proposed infrastructure changes.
 
 These comments include:
 
@@ -40,7 +40,7 @@ These comments include:
 
 ![Enhanced GitLab Merge Request Comments](diff-comment.png)
 
-To configure this integration:
+To configure the GitLab integration:
 
 1. Navigate to **Organization Settings → Integrations** in Pulumi Cloud
 2. Select GitLab and enter your access token
@@ -48,7 +48,7 @@ To configure this integration:
 
 ### GitLab as a First-Class VCS in Pulumi Cloud
 
-Version control system is now a first-class, configurable concept in Pulumi Cloud. When you select GitLab as your VCS, the Pulumi Cloud interface adapts to show only relevant options and terminology, creating a more intuitive experience for GitLab users.
+Version control systems are a first-class, configurable concept in Pulumi Cloud. When you select GitLab as your VCS, the Pulumi Cloud interface adapts to show only relevant options and terminology, creating a more intuitive experience for GitLab users.
 
 This integration enables:
 
@@ -58,7 +58,7 @@ This integration enables:
 
 ### Organizational Templates in GitLab
 
-Pulumi Cloud now fully supports organizational templates stored in GitLab repositories. This powerful feature allows platform teams to define standardized infrastructure templates that developers across the organization can easily discover and use.
+Pulumi Cloud now fully supports [organizational templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#using-organization-templates-within-your-pulumi-organization) stored in GitLab repositories. This powerful feature allows platform teams to define standardized infrastructure templates that developers across the organization can easily discover and use to create new projects.
 
 Once a GitLab repository is registered as a template source, Pulumi automatically detects `pulumi.yaml` files and surfaces them in the template gallery. These templates can be:
 
@@ -70,13 +70,13 @@ This integration makes it easier than ever to standardize infrastructure pattern
 
 ## Coming Soon: Pulumi Deployments for GitLab
 
-We're also hopeful that [Pulumi Deployments](/docs/pulumi-cloud/deployments) will soon support GitLab, enabling fully automated infrastructure provisioning directly from your GitLab pipelines. This integration will provide:
+[Pulumi Deployments](/docs/pulumi-cloud/deployments) will also soon support GitLab, enabling fully automated infrastructure provisioning directly from your GitLab pipelines. This integration will provide:
 
 - Fully managed compute for running Pulumi operations
 - Click to deploy self service workflows in the Pulumi Cloud UI
 - Rich new out of the box functionality like Time to Live Stacks, Drift Detection, Click to Deploy, Git Push to Deploy, Review Stacks and Scheduled Deployments.
 
-All this functionality is available today by specifying the raw git credentials, but we hope to make the integration more frictionless to set up in the future. To learn more about Pulumi Deployments read our [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments).
+All this functionality is available today by specifying the raw git credentials, but we look forward to making the integration frictionless in the future. To learn more about Pulumi Deployments read our [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments).
 
 ## Getting Started
 
