@@ -206,12 +206,12 @@ fi
 
 # Report passing and failing projects.
 if [ ${#failed_projects[@]} -ne 0 ]; then
-    echo -e "\n\nThe following projects failed:"
-    for project in "${failed_projects[@]}"; do
-        echo "- $project"
-    done
     echo -e "\n\nThe following projects passed:"
     for project in "${passing_projects[@]}"; do
+        echo "- $project"
+    done
+    echo -e "\n\nThe following projects failed:"
+    for project in "${failed_projects[@]}"; do
         echo "- $project"
     done
     exit 1
