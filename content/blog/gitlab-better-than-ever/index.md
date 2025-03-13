@@ -70,7 +70,7 @@ This integration makes it easier than ever to standardize infrastructure pattern
 
 ## Coming Soon: Pulumi Deployments for GitLab
 
-We're also hopeful that [Pulumi Deployments](/docs/pulumi-cloud/deployments) will soon support GitLab, enabling fully automated infrastructure provisioning directly from your GitLab pipelines. This integration will provide:
+[Pulumi Deployments](/docs/pulumi-cloud/deployments) will also soon support GitLab, enabling fully automated infrastructure provisioning directly from your GitLab pipelines. This integration will provide:
 
 - Fully managed compute for running Pulumi operations
 - Click to deploy self service workflows in the Pulumi Cloud UI
