@@ -40,7 +40,7 @@ These comments include:
 
 ![Enhanced GitLab Merge Request Comments](diff-comment.png)
 
-To configure this integration:
+To configure the GitLab integration:
 
 1. Navigate to **Organization Settings → Integrations** in Pulumi Cloud
 2. Select GitLab and enter your access token
