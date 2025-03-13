@@ -61,9 +61,9 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Managing secrets is one of the most critical responsibilities in cloud engineering. Secrets like API keys, database credentials, and encryption tokens are the backbone of secure and seamless cloud operations. However, the complexity of modern cloud-native and multi-cloud environments has made traditional secrets management solutions inadequate. 
+Managing secrets is one of the most critical responsibilities in cloud engineering. Secrets like API keys, database credentials, and encryption tokens are the backbone of secure and seamless cloud operations. Yet they are so often an afterthought. They get replicated across cloud-specific secrets managers and stuffed in GitHub secrets, compromising security for the sake of simplicity. ¿Por que no los dos? Why can't secrets management be secure and simple?
 
-Enter **Pulumi ESC (Environments, Secrets, and Configuration)**—a breakthrough in taming secrets sprawl and streamlining configuration management across infrastructure. Let's explore why Pulumi ESC is a necessity for cloud engineers, its seamless integration with the External Secrets Operator (ESO), and the practical applications that make it the ultimate solution for modern secrets management.
+Enter **Pulumi ESC (Environments, Secrets, and Configuration)**—a breakthrough in taming secrets sprawl and streamlining configuration management across infrastructure. Let's explore why Pulumi ESC is a necessity for cloud engineers, helping make secrets management secure while keeping it simple.
 
 <!--more-->
 
@@ -77,9 +77,9 @@ Enter **Pulumi ESC (Environments, Secrets, and Configuration)**—a breakthrough
 
 ## The Challenge of Secrets Management in Modern Cloud Environments
 
-Secrets management has changed significantly over the past decade. Gone are the days when secrets could be manually maintained within static locations like configuration files or plain text databases. Nowadays, cloud environments demand a higher level of sophistication:
+Secrets management has changed significantly over the past decade. Gone are the days when secrets could be hardcoded, manually maintained in static configuration files, or left floating around in plaintext on dev machines. Nowadays, cloud environments demand a higher level of sophistication:
 
-1. **Distributed Systems**: Even in multi-cloud and hybrid setups, secrets must be accessible across varied platforms without exposing vulnerabilities
+1. **Distributed Systems**: Even in multi-cloud and hybrid setups, secrets must be accessible across varied platforms without exposing vulnerabilities.
 2. **Dynamic Infrastructure**: Kubernetes, serverless architectures, and ephemeral environments must have secrets that adapt dynamically.
 3. **Security Risks**: Hardcoded or poorly managed secrets can lead to catastrophic breaches, costing companies millions in data recovery and compliance penalties.
 4. **Operational Burdens**: Manual secrets management is error-prone, inefficient, unscalable, and needs to align with DevOps and DevSecOps best practices.
@@ -97,7 +97,7 @@ Jk Jensen, Team Lead at Mysten Labs, said:
 Pulumi ESC simplifies how organizations manage secrets and configurations. It is designed to secure sensitive configurations across modern cloud environments and supports seamless integration, enabling engineers to:
 
 - **Access, share, and manage** secrets, passwords, API keys, and configuration settings like network and deployment options.
-- **Synchronize secrets and configuration** from any store to any app, tool, or CI/CD platform.
+- **Synchronize secrets and configuration** from any secrets manager to any app, tool, or CI/CD platform.
 - **Access secrets securely** through CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
 - **Connect to cloud providers and secrets stores** via OIDC to generate dynamic, short-lived, auto-expiring credentials.
 - **Set role-based access controls (RBAC)**, making securing secrets and configurations easy by assigning permissions to users based on their roles.
