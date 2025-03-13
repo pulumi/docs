@@ -76,7 +76,7 @@ This integration makes it easier than ever to standardize infrastructure pattern
 - Click to deploy self service workflows in the Pulumi Cloud UI
 - Rich new out of the box functionality like Time to Live Stacks, Drift Detection, Click to Deploy, Git Push to Deploy, Review Stacks and Scheduled Deployments.
 
-All this functionality is available today by specifying the raw git credentials, but we hope to make the integration more frictionless to set up in the future. To learn more about Pulumi Deployments read our [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments).
+All this functionality is available today by specifying the raw git credentials, but we look forward to making the integration frictionless in the future. To learn more about Pulumi Deployments read our [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments).
 
 ## Getting Started
 
