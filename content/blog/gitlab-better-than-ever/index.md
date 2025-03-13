@@ -58,7 +58,7 @@ This integration enables:
 
 ### Organizational Templates in GitLab
 
-Pulumi Cloud now fully supports organizational templates stored in GitLab repositories. This powerful feature allows platform teams to define standardized infrastructure templates that developers across the organization can easily discover and use.
+Pulumi Cloud now fully supports [organizational templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#using-organization-templates-within-your-pulumi-organization) stored in GitLab repositories. This powerful feature allows platform teams to define standardized infrastructure templates that developers across the organization can easily discover and use to create new projects.
 
 Once a GitLab repository is registered as a template source, Pulumi automatically detects `pulumi.yaml` files and surfaces them in the template gallery. These templates can be:
 
