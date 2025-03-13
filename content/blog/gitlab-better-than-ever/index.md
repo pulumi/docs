@@ -14,8 +14,8 @@ tags:
     - releases
     - features
 social:
-    twitter:
-    linkedin:
+    twitter: "Pulumi's GitLab integration just got a major upgrade! Enhanced merge request comments, first-class VCS support, and organizational templates make managing cloud infrastructure easier than ever."
+    linkedin: "We're excited to announce significant improvements to Pulumi's GitLab integration. From enhanced merge request comments to organizational templates, these updates make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before."
 ---
 
 Pulumi's integration with GitLab has reached new heights with enhancements designed to streamline your infrastructure as code workflows. Today, we're excited to announce several significant improvements to our GitLab integration that make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before: enhanced merge request comments GitLab as a first-class VCS in Pulumi Cloud, organizational templates in GitLab, and later this year, Pulumi Deployments for GitLab.
@@ -34,7 +34,7 @@ We've revamped how Pulumi interacts with GitLab merge requests by building a Git
 
 These comments include:
 
-- Streamlined discoverability of infrasturcture changes
+- Streamlined discoverability of infrastructure changes
 - Resource-by-resource breakdown of changes
 - Direct links to the Pulumi Console for deeper analysis
 
@@ -70,13 +70,13 @@ This integration makes it easier than ever to standardize infrastructure pattern
 
 ## Coming Soon: Pulumi Deployments for GitLab
 
-We're also hopeful that Pulumi Deployments will soon support GitLab, enabling fully automated infrastructure provisioning directly from your GitLab pipelines. This integration will provide:
+We're also hopeful that [Pulumi Deployments](/docs/pulumi-cloud/deployments) will soon support GitLab, enabling fully automated infrastructure provisioning directly from your GitLab pipelines. This integration will provide:
 
 - Fully managed compute for running Pulumi operations
 - Click to deploy self service workflows in the Pulumi Cloud UI
 - Rich new out of the box functionality like Time to Live Stacks, Drift Detection, Click to Deploy, Git Push to Deploy, Review Stacks and Scheduled Deployments.
 
-All this functionality is avaiavle today by specificing the raw git credientials, but we hope to make the integrtion more frictionless to set up in the future. To learn more about Pulumi Deployments read our Pulumi Deployments documentation.
+All this functionality is available today by specifying the raw git credentials, but we hope to make the integration more frictionless to set up in the future. To learn more about Pulumi Deployments read our [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments).
 
 ## Getting Started
 
@@ -90,4 +90,4 @@ Ready to try these new GitLab integrations? Here's how to get started:
 
 With these enhancements, Pulumi's GitLab integration is better than ever, providing a seamless experience for managing infrastructure as code within your GitLab workflows. We're committed to continuing to improve this integration based on your feedback.
 
-Have questions or feedback? Join our [Community Slack](https://slack.pulumi.com/) to connect with the Pulumi team and other users, or open an issue on our [Pulumi Cloud Request GitHub repository](https://github.com/pulumi-cloud-requests).
+Have questions or feedback? Join our [Community Slack](https://slack.pulumi.com/) to connect with the Pulumi team and other users, or open an issue on our [GitHub repository](https://github.com/pulumi/pulumi).
