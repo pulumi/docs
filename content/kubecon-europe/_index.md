@@ -17,12 +17,15 @@ event_links:
     description: |
       Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
     items:
-        # - title: RSVP to “Down the Rabbit Hole” Happy Hour
-        #   icon: security
-        #   icon_color: violet
-        #   description: with Pulumi, Oso and Apollo GraphGL for an evening of mountain magic Wednesday, November 13, 8-10pm MT at Lake Effect, 155 W 200 S, Salt Lake City
-        #   link: https://lu.ma/qzgd18gp
-        #   cta: RSVP to Happy Hour
+        - title: "KubeCon London: Drinks on the Docks"
+          icon: ship
+          icon_color: violet
+          description: |
+            ​Join Incident.io, Kong, Oso, Pulumi and Sentry for an exclusive dockside happy hour as we unwind after KubeCon with great drinks, great company, and unbeatable waterfront views.
+            
+            The Oiler Bar, Royal Victoria Docks, London
+          link: https://lu.ma/jc9diqel
+          cta: RSVP to Happy Hour
 
         - title: Request a 1:1 demo
           icon: pen
