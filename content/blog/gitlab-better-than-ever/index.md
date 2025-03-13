@@ -18,7 +18,7 @@ social:
     linkedin: "We're excited to announce significant improvements to Pulumi's GitLab integration. From enhanced merge request comments to organizational templates, these updates make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before."
 ---
 
-Pulumi's integration with GitLab has reached new heights with enhancements designed to streamline your infrastructure as code workflows. Today, we're excited to announce several significant improvements to our GitLab integration that make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before: enhanced merge request comments GitLab as a first-class VCS in Pulumi Cloud, organizational templates in GitLab, and later this year, Pulumi Deployments for GitLab.
+Pulumi's integration with GitLab has reached new heights with enhancements designed to streamline your infrastructure as code workflows. Today, we're excited to announce several significant improvements to our GitLab integration that make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before: GitLab as a first-class VCS in Pulumi Cloud, enhanced merge request comments, organizational templates in GitLab, and later this year, Pulumi Deployments for GitLab.
 
 <!--more-->
 
