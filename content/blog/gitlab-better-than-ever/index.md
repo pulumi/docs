@@ -88,6 +88,6 @@ Ready to try these new GitLab integrations? Here's how to get started:
 
 ## Conclusion
 
-With these enhancements, Pulumi's GitLab integration is better than ever, providing a seamless experience for managing infrastructure as code within your GitLab workflows. We're committed to continuing to improve this integration based on your feedback.
+With these enhancements, Pulumi's GitLab integration is better than ever, providing a seamless experience for managing infrastructure as code within your GitLab workflows. Learn more in the [Pulumi GitLab documentation](/docs/iac/using-pulumi/continuous-delivery/github-app). We're committed to continuing to improve this integration based on your feedback.
 
 Have questions or feedback? Join our [Community Slack](https://slack.pulumi.com/) to connect with the Pulumi team and other users, or open an issue on our [GitHub repository](https://github.com/pulumi/pulumi).
