@@ -1,85 +1,93 @@
 ---
-title: "Gitlab Better Than Ever"
-
-# The date represents the post's publish date, and by default corresponds with
-# the date and time this file was generated. Dates are used for display and
-# ordering purposes only; they have no effect on whether or when a post is
-# published. To influence the ordering of posts published on the same date, use
-# the time portion of the date value; posts are sorted in descending order by
-# date/time.
-date: 2025-03-11T15:06:24-07:00
-
-# The draft setting determines whether a post is published. Set it to true if
-# you want to be able to merge the post without publishing it.
+title: "Pulumi + Gitlab: Better Than Ever"
+date: 2025-03-14
 draft: false
-
-# Use the meta_desc property to provide a brief summary (one or two sentences)
-# of the content of the post, which is useful for targeting search results or
-# social-media previews. This field is required or the build will fail the
-# linter test. Max length is 160 characters.
-meta_desc:
-
-# The meta_image appears in social-media previews and on the blog home page. A
-# placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
+meta_desc: Pulumi's integration with GitLab has reached new heights with a suite of powerful enhancements designed to streamline your infrastructure as code workflows.
 meta_image: meta.png
-
-# At least one author is required. The values in this list correspond with the
-# `id` properties of the team member files at /data/team/team. Create a file for
-# yourself if you don't already have one.
 authors:
-    - joe-duffy
-
-# At least one tag is required. Lowercase, hyphen-delimited is recommended.
+    - meagan-cojocar
+    - derek-schaller
 tags:
-    - change-me
-
-
-# The social copy used to promote this post on Twitter and Linkedin. These
-# properties do not actually create the post and have no effect on the
-# generated blog page. They are here strictly for reference.
-
-# Here are some examples of posts we have made in the past for inspiration:
-# https://www.linkedin.com/feed/update/urn:li:activity:7171191945841561601
-# https://www.linkedin.com/feed/update/urn:li:activity:7169021002394296320
-# https://www.linkedin.com/feed/update/urn:li:activity:7155606616455737345
-# https://twitter.com/PulumiCorp/status/1763265391042654623
-# https://twitter.com/PulumiCorp/status/1762900472489185492
-# https://twitter.com/PulumiCorp/status/1755637618631405655
-
+    - gitlab
+    - integrations
+    - pulumi-cloud
+    - releases
+    - features
 social:
     twitter:
     linkedin:
-
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
 ---
 
-What you put here will appear on the index page. In most cases, you'll also want to add a Read More link after this paragraph (though technically, that's optional. To do that, just add an HTML comment like the one below.
+Pulumi's integration with GitLab has reached new heights with enhancements designed to streamline your infrastructure as code workflows. Today, we're excited to announce several significant improvements to our GitLab integration that make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before: enhanced merge request comments GitLab as a first-class VCS in Pulumi Cloud, organizational templates in GitLab, and later this year, Pulumi Deployments for GitLab.
 
 <!--more-->
 
-And then everything _after_ that comment will appear on the post page itself.
+Pulumi and GitLab have long enjoyed a productive partnership. From supporting GitLab sign-in to enabling GitLab CI/CD pipelines for infrastructure deployments, we've consistently worked to ensure GitLab users can leverage Pulumi's powerful infrastructure as code capabilities within their existing workflows.
 
-Either way, avoid using images or code samples [in the first 70 words](https://gohugo.io/content-management/summaries/#automatic-summary-splitting) of your post, as these may not render properly in summary contexts (e.g., on the blog home page or in social-media previews).
+Our GitLab Merge Request integration allows teams to visualize infrastructure changes directly within merge requests, making code reviews more effective and infrastructure changes more transparent.
 
-## Writing the Post
+## What's New in Our GitLab Integration
 
-For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://github.com/pulumi/docs/blob/master/STYLE-GUIDE.md).
+### Enhanced Merge Request Comments
 
-## Code Samples
+We've revamped how Pulumi interacts with GitLab merge requests by building a Gitlab application to handle the authentication. Previously, only customers using Gitlab as an identity provider to Pulumi Cloud could leverage it. Now, Pulumi provides even more detailed and actionable comments on your merge requests, giving reviewers comprehensive insights into proposed infrastructure changes.
 
-```typescript
-let bucket = new aws.s3.Bucket("stuff");
-...
-```
+These comments include:
 
-## Images
+- Streamlined discoverability of infrasturcture changes
+- Resource-by-resource breakdown of changes
+- Direct links to the Pulumi Console for deeper analysis
 
-![Placeholder Image](meta.png)
+![Enhanced GitLab Merge Request Comments](diff-comment.png)
 
-## Videos
+To configure this integration:
 
-{{< youtube "kDB-YRKFfYE?rel=0" >}}
+1. Navigate to **Organization Settings → Integrations** in Pulumi Cloud
+2. Select GitLab and enter your access token
+3. Choose which projects or groups should receive Pulumi comments
 
-Note the `?rel=0` param, which tells YouTube to suggest only videos from same channel.
+### GitLab as a First-Class VCS in Pulumi Cloud
+
+Version control system is now a first-class, configurable concept in Pulumi Cloud. When you select GitLab as your VCS, the Pulumi Cloud interface adapts to show only relevant options and terminology, creating a more intuitive experience for GitLab users.
+
+This integration enables:
+
+- Direct linking to GitLab repositories, branches, and commits
+- Automatic detection of Pulumi projects in GitLab repositories
+- Streamlined setup for GitLab-based CI/CD workflows, using the CI/CD wizard on a stack's page
+
+### Organizational Templates in GitLab
+
+Pulumi Cloud now fully supports organizational templates stored in GitLab repositories. This powerful feature allows platform teams to define standardized infrastructure templates that developers across the organization can easily discover and use.
+
+Once a GitLab repository is registered as a template source, Pulumi automatically detects `pulumi.yaml` files and surfaces them in the template gallery. These templates can be:
+
+- Public or private repositories
+- Subject to Pulumi's role-based access control (RBAC)
+- Available in both the UI and CLI via `pulumi new`
+
+This integration makes it easier than ever to standardize infrastructure patterns across your organization while leveraging GitLab for version control and collaboration.
+
+## Coming Soon: Pulumi Deployments for GitLab
+
+We're also hopeful that Pulumi Deployments will soon support GitLab, enabling fully automated infrastructure provisioning directly from your GitLab pipelines. This integration will provide:
+
+- Fully managed compute for running Pulumi operations
+- Click to deploy self service workflows in the Pulumi Cloud UI
+- Rich new out of the box functionality like Time to Live Stacks, Drift Detection, Click to Deploy, Git Push to Deploy, Review Stacks and Scheduled Deployments.
+
+All this functionality is avaiavle today by specificing the raw git credientials, but we hope to make the integrtion more frictionless to set up in the future. To learn more about Pulumi Deployments read our Pulumi Deployments documentation.
+
+## Getting Started
+
+Ready to try these new GitLab integrations? Here's how to get started:
+
+1. If you're new to Pulumi, [sign up for a free account](https://app.pulumi.com/signup)
+2. For existing users, navigate to your organization settings to configure the GitLab integration
+3. Check out our updated documentation for detailed setup instructions
+
+## Conclusion
+
+With these enhancements, Pulumi's GitLab integration is better than ever, providing a seamless experience for managing infrastructure as code within your GitLab workflows. We're committed to continuing to improve this integration based on your feedback.
+
+Have questions or feedback? Join our [Community Slack](https://slack.pulumi.com/) to connect with the Pulumi team and other users, or open an issue on our [Pulumi Cloud Request GitHub repository](https://github.com/pulumi-cloud-requests).
