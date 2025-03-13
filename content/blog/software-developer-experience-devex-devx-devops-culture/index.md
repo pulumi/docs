@@ -1,46 +1,19 @@
 ---
-title: "Beyond Productivity: Developer Experience is Business Critical"
+title: "Why Developer Experience (DevEx) is Business Critical"
 allow_long_title: true
-
-# The date represents the post's publish date, and by default corresponds with
-# the date and time this file was generated. Dates are used for display and
-# ordering purposes only; they have no effect on whether or when a post is
-# published. To influence the ordering of posts published on the same date, use
-# the time portion of the date value; posts are sorted in descending order by
-# date/time.
 date: 2024-02-20T20:47:44Z
-
-# The draft setting determines whether a post is published. Set it to true if
-# you want to be able to merge the post without publishing it.
+updated: 2025-03-13
 draft: false
-
-# Use the meta_desc property to provide a brief summary (one or two sentences)
-# of the content of the post, which is useful for targeting search results or
-# social-media previews. This field is required or the build will fail the
-# linter test. Max length is 160 characters.
-meta_desc: Improving developer experience does more than increase productivity and efficiency. It is crucial for business success. Here's what you need to know.
-
-# The meta_image appears in social-media previews and on the blog home page. A
-# placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
+meta_desc: Developer Experience (DevEx) is more than productivity—it drives business success. Learn how DevEx improves innovation, retention, and revenue.
 meta_image: developer-experience-devex-business-value-business-critical.png
-
-# At least one author is required. The values in this list correspond with the
-# `id` properties of the team member files at /data/team/team. Create a file for
-# yourself if you don't already have one.
 authors:
     - sara-huddleston
-
-# At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - developer-experience-devex
     - devops
     - platform-engineering
     - developer-portals
     - software-development
-
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
 ---
 
 "Developer experience is hard to sell," said Cleve Littlefield, Engineering Manager at Pulumi, during a casual meeting. With experience as both an end-user developer and a lead in self-service platform implementation, Cleve's observation stuck with me.
