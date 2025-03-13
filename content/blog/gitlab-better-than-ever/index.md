@@ -48,7 +48,7 @@ To configure this integration:
 
 ### GitLab as a First-Class VCS in Pulumi Cloud
 
-Version control system is now a first-class, configurable concept in Pulumi Cloud. When you select GitLab as your VCS, the Pulumi Cloud interface adapts to show only relevant options and terminology, creating a more intuitive experience for GitLab users.
+Version control systems are a first-class, configurable concept in Pulumi Cloud. When you select GitLab as your VCS, the Pulumi Cloud interface adapts to show only relevant options and terminology, creating a more intuitive experience for GitLab users.
 
 This integration enables:
 
