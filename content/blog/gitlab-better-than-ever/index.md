@@ -30,7 +30,7 @@ Our GitLab Merge Request integration allows teams to visualize infrastructure ch
 
 ### Enhanced Merge Request Comments
 
-We've revamped how Pulumi interacts with GitLab merge requests by building a Gitlab application to handle the authentication. Previously, only customers using Gitlab as an identity provider to Pulumi Cloud could leverage it. Now, Pulumi provides even more detailed and actionable comments on your merge requests, giving reviewers comprehensive insights into proposed infrastructure changes.
+We've revamped how Pulumi interacts with GitLab by building a Gitlab application to handle the authentication. Previously, only customers using Gitlab as an identity provider to Pulumi Cloud could leverage it. Now, Pulumi provides even more detailed and actionable comments on your merge requests, giving reviewers comprehensive insights into proposed infrastructure changes.
 
 These comments include:
 
