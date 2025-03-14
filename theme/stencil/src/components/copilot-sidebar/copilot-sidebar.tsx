@@ -43,7 +43,7 @@ export class CopilotSidebar {
         this.showSidebar = gb.isOn("copilot-on-docs");
         gb.setRenderer(() => (this.showSidebar = gb.isOn("copilot-on-docs")));
 
-        this.showAtlas = this.atlasUrl && window.localStorage.getItem(ATLAS_LOCAL_STORAGE_KEY) === "true";
+        this.showAtlas = this.atlasUrl && window.localStorage.getItem(ATLAS_LOCAL_STORAGE_KEY) !== "false";
         if (this.showAtlas) {
             await this.loadAtlasScripts();
         }
