@@ -44,7 +44,7 @@ If you are a Premium or Ultimate GitLab customer, you have access to GitLab Grou
 
 For the Pulumi preview command to run, you need to add a GitLab pipeline file to your project. If you are already using pipelines, you just need to update your pipeline file.
 
-1. [Generate a Pulumi](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/) token that has the ability to access the stack the preview is running against.
+1. [Generate a Pulumi](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/) token using the account that you would like to post the merge request notes. Save this token as we will use this momentarily in a following step.
 2. In GitLab, set the newly generated token as a CI Variable for your project. Name it `PULUMI_ACCESS_TOKEN`.
 3. In your GitLab project, create a `.gitlab-ci.yml` if one doesn't already exist.
 4. Add the following content to the `.gitlab-ci.yml` file, updating `pulumi/gitlab-demo/dev` to be the path to your stack
