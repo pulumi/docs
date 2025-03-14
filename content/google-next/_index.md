@@ -1,7 +1,7 @@
 ---
 title: Google Cloud Next 2025
 meta_desc: Join Pulumi at Google Next 2025 to learn about the latest developments in Infrastructure as Code, Google Cloud integrations, platform engineering, and more.
-meta_image: /images/google-next/google-next-2-meta.png
+meta_image: /images/google-next/google-next-25-meta.png
 type: page
 layout: google-next
 
