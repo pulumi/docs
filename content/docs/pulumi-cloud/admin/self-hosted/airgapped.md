@@ -24,7 +24,13 @@ In this guide, we will explore how to deploy Pulumi Self-Hosted in an air-gapped
 
 ## Why Deploy Pulumi in an Air-Gapped Environment?
 
-Air-gapped environments are completely isolated from the public internet, for scenarios where data security and compliance are paramount. Common use cases include:
+Pulumi Cloud is a secure service with compliance built in. The default mode is to use Pulumi as a multi-tenanted software-as-a-service (SaaS) over the internet. Pulumi also offers a Self-Hosted edition for those who want more control over their configuration, often for advanced security and compliance reasons. Air-gapped Self-Host builds upon this even further to use Pulumi in the most rigorous and secure configuration possible.
+
+{{% notes type="info" %}}
+For most information about Pulumi Cloud's security and compliance posture, [download our security whitepaper](/security/pulumi-cloud-security-whitepaper.pdf).
+{{% /notes %}}
+
+Air-gapped environments are completely isolated from the public internet, for scenarios with heightened data security and compliance. Common air-gapped scenarios include:
 
 * **Financial Services**: Ensuring sensitive transaction data remains within internal networks.
 * **Healthcare**: Complying with HIPAA and other patient data protection regulations.
@@ -37,14 +43,15 @@ Pulumi Self-Hosted offers a robust solution for these environments, enabling inf
 
 Here are the general areas to consider when preparing to use Pulumi in an air-gapped environment:
 
-* Obtain Pulumi Self-Hosted
+* Obtain Pulumi Self-Hosted License Key and Images
 * Provision Internal Infrastructure and Install Pulumi Cloud
 * Create and Configure Artifact Mirrors
 
-### Obtain Pulumi Self-Hosted
+### Obtain Pulumi Self-Hosted License Key and Images
 
-Ensure you have access to Pulumi Self-Hosted, which includes the Pulumi API and backend services. If you don't have
-access, you can either [contact us](/contact) or [request access here](/product/self-hosted/#self-hosted-trial).
+Ensure you have access to Pulumi Self-Hosted which requires a license key as well as the
+[Pulumi Cloud Docker images](/docs/pulumi-cloud/admin/self-hosted/components/) for the various backend services. If you
+don't have these, [contact us](/contact) and/or [request a license key here](/product/self-hosted/#self-hosted-trial).
 
 ### Provision Internal Infrastructure and Install Pulumi Cloud
 
@@ -79,15 +86,19 @@ Here are more detailed instructions on how to install Pulumi Self-Hosted to your
 
 Pulumi Self-Hosted can be installed using Kubernetes, Docker, or virtual machines. In an air-gapped setup, follow these steps:
 
-1. Download the Pulumi Self-Hosted release
+1. Set up storage services.
+    * MySQL 8.0+ for application data storage.
+    * Object storage for state management, for instance, MinIO or an internal S3-compatible service.
+2. Download the [Pulumi Self-Hosted images](/docs/pulumi-cloud/admin/self-hosted/components)
     * Retrieve the necessary installation files and images from a networked machine.
     * Transfer them to your air-gapped environment using an offline medium (USB drive, offline repository, etc.).
-2. Install Pulumi Self-Hosted (for instance, on Kubernetes)
+3. Install Pulumi Self-Hosted (for instance, on Kubernetes) per [these instructions](/docs/pulumi-cloud/admin/self-hosted/deployment-options)
     * Deploy the Pulumi API server, database, and storage backend using Helm or static manifests.
     * Configure internal object storage (e.g., MinIO or an internal S3-compatible service) for state management.
-3. Configure Authentication and Access Control
+4. Configure Authentication and Access Control
     * Integrate with your organization's internal identity provider (OIDC, LDAP, SAML).
     * Define role-based access controls (RBAC) to ensure proper permissions.
+    * For more detailed organization configuration options, refer to [this onboarding guide](/docs/pulumi-cloud/get-started/onboarding-guide/).
 
 ### Step 2: Configure the Pulumi CLI and SDKs
 
