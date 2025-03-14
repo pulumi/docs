@@ -22,9 +22,8 @@ There are two ways Pulumi can integrate using OpenID Connect. Pulumi can operate
 
 ## Solving the Secret Zero problem
 
-When teams adopt Pulumi, securely managing authentication becomes a key challenge. One approach is to integrate Pulumi with a cloud or CI/CD provider using a long-term access token, but this introduces security risks, also known as the "secret zero problem". These credentials are often set once and forgotten, making them vulnerable if rotation is needed or if they become compromised.
+When teams adopt Pulumi, securely managing authentication is the cornerstone of a strong security posture. One approach is to integrate Pulumi with a cloud or CI/CD provider using a long-term access token, but this introduces the "secret zero problem" and potential security risks. These credentials are often set once and forgotten, making them vulnerable if rotation is needed or if they become compromised.
 
-The best practice for securing Pulumi and provider authentication is to use OIDC, which replaces static credentials with digitally signed identity tokens issued by the cloud provider. This approach eliminates the need for long-lived secrets by establishing a trust relationship using public-key cryptography.
+The best practice for securing Pulumi and provider authentication is to use OIDC, which replaces static credentials with short-term digitally signed identity tokens issued by the cloud provider. This approach eliminates the need for long-lived secrets by establishing a trust relationship using public-key cryptography.
 
 An OIDC token represents an application's or workload's identity in a cloud environment—often called a workload identity. It includes claims such as the application's name, which a service provider can use to grant access to resources based on best-practice security policies.
-
