@@ -22,8 +22,7 @@ With this GitLab integration, Pulumi is able to add Pulumi Previews to a GitLab 
 
 There are two ways to integrate Pulumi and GitLab.
 
-* If you are a Premium or Ultimate GitLab customer, you will use a GitLab Group Access Token. This integration type is simpler to setup and is not tied to a specific user.
-  * The user configuring the integration will need to be a GitLab Organization Owner.
+* If you are a Premium or Ultimate GitLab customer, you will use a GitLab Group Access Token. This integration type is simpler to setup and is not tied to a specific user. The user configuring the integration will need to be a GitLab Organization Owner.
 * If you are not a paying GitLab customer, you will use a User OAuth Token. You will also need to configure a webhook, as described below.
 
 {{% notes type="info" %}}
