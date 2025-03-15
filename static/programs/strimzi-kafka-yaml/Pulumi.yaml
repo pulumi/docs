@@ -1,0 +1,27 @@
+name: strimzi-kafka-yaml
+description: Example on how to deploy Strimzi Kafka
+runtime: yaml
+variables:
+  appLabels:
+    app: nginx
+resources:
+  deployment:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      spec:
+        selector:
+          matchLabels: ${appLabels}
+        replicas: 1
+        template:
+          metadata:
+            labels: ${appLabels}
+          spec:
+            containers:
+              - name: nginx
+                image: nginx
+outputs:
+  name: ${deployment.metadata.name}
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-yaml
