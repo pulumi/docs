@@ -1,6 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: "RSVP to Meetup: Development & Data Productivity in the Age of AI"
+allow_long_title: true
 meta_desc: Join Docker, Pulumi, Tailscale, and New Relic for drinks, snacks, and casual conversations.
 meta_image:
 

@@ -1,6 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Connecting, Securing and Scaling Microservices with Kubernetes
+allow_long_title: true
 meta_desc: Listen in and you will learn practical insights on how organizations can ease growing pains and successfully take Kubernetes from test to production.
 meta_image:
 
