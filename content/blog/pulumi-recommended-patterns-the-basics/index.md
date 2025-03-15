@@ -1,6 +1,7 @@
 ---
-title: "Pulumi Recommended Patterns: The basics"
+title: "Pulumi Recommended Patterns: The Basics"
 date: 2021-11-04T23:20:26Z
+updated: 2025-03-06
 draft: false
 meta_desc: Learn and apply Pulumi recommended patterns to improve your infrastructure and easily scale your deployments using modern infrastructure as code.
 meta_image: article-1-meta.png
@@ -18,7 +19,7 @@ Let's dive in!
 
 ## It all starts with the cloud
 
-Pulumi is an infrastructure-as-code tool, and it is at the center of many other services, platforms, and products. Pulumi can act as a unifying agent for many of these services, enabling users to combine multiple services seamlessly at once to create exciting and innovative platforms. In this way, Pulumi is the 'hub' connecting the diverse 'spokes' of your solution, allowing you to really get rolling.
+Pulumi is an [infrastructure-as-code](/what-is/what-is-infrastructure-as-code/) tool, and it is at the center of many other services, platforms, and products. Pulumi can act as a unifying agent for many of these services, enabling users to combine multiple services seamlessly at once to create exciting and innovative platforms. In this way, Pulumi is the 'hub' connecting the diverse 'spokes' of your solution, allowing you to really get rolling.
 
 Pulumi is predominantly used with cloud providers like Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), and Kubernetes. But many more are available and supported in the [Registry](/registry/). At the time of this writing, Pulumi supports 52 providers.
 
@@ -26,10 +27,10 @@ With such an impressive ecosystem, it's quite normal to follow your vendors' bes
 
 Here are a few links to get you started:
 
-* [AWS](https://aws.amazon.com/organizations/getting-started/best-practices/)
-* [Azure](https://docs.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns)
-* [GCP](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations)
-* [Kubernetes](https://kubernetes.io/docs/setup/best-practices/)
+* [AWS Best Practices](https://aws.amazon.com/organizations/getting-started/best-practices/)
+* [Azure Best Practices](https://docs.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns)
+* [GCP Best Practices](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations)
+* [Kubernetes Best Practices](https://kubernetes.io/docs/setup/best-practices/)
 
 While these recommendations are important, you don't have to wait to adopt them all before you start using Pulumi. Rather, integrating Pulumi early in your cloud journey will empower you to implement better cloud practices with more integrated security and improved development velocity.
 
