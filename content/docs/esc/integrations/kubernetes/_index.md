@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: esc-kubernetes-integrations
     parent: esc-integrations
-    weight: 5
+    weight: 6
 aliases:
   - /docs/esc/kubernetes-integrations
 ---
