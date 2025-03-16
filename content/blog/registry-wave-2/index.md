@@ -31,7 +31,7 @@ This milestone is made possible by Pulumi's new capability to support [any Terra
 
 This release represents just the first wave of our expanded provider documentation initiative. We've prioritized these initial 27 providers based on direct user and customer feedback. We're committed to continuing this effort, with plans to add documentation for many more providers to the Pulumi Registry in the coming months. Our goal is to create the most comprehensive and user-friendly infrastructure as code ecosystem, making it even easier for you to manage your entire cloud infrastructure from a single platform.
 
-This update is designed with developers in mind and features enriched documentation directly in the Registry, ensuring you have all the resources you need right at your fingertips. We're also spotlighting a few providers providers:
+This update is designed with developers in mind and features enriched documentation directly in the Registry, ensuring you have all the resources you need right at your fingertips. We're also spotlighting a few partner providers:
   
 - **Temporal** – Manage your Temporal Cloud workflows as code.
 - **Vantage** – Gain cost visibility and optimize cloud spending.
