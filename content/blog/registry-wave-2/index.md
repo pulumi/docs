@@ -36,7 +36,7 @@ This update is designed with developers in mind and features enriched documentat
 - **Temporal** – Manage your Temporal Cloud workflows as code.
 - **Vantage** – Gain cost visibility and optimize cloud spending.
 - **Honeycomb** – Seamlessly integrate observability best practices.
-
+- **Timescale** – Time series and real time analytics on PostgreSQL.
 ### Full List of New Providers
 
 Explore the complete list of new providers now available in the Pulumi Registry:
