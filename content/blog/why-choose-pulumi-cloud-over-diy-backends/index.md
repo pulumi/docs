@@ -11,7 +11,7 @@ tags:
 
 Pulumi Cloud empowers engineers to automate, secure, and manage modern infrastructure platforms.
 
-Many companies are building internal developer platforms or modern infrastructure platforms to provide developer self-service while maintaining security and compliance. Companies adopt Pulumi IaC so they can apply software engineering to their infrastructure scaling problems and because it is fully open source with a strong community and public roadmap.
+Many companies are building internal developer platforms or modern infrastructure platforms to provide developer self-service while maintaining security and compliance. Companies adopt Pulumi IaC so they can apply software engineering practices to their infrastructure scaling problems and because it is fully open source with a strong community and public roadmap.
 
 At Pulumi, we’re committed to open source—always have been, always will be. Our Pulumi IaC is entirely open source (Apache 2.0 license), meaning you can adopt and extend it however you like. If you’re new to Pulumi, the open source edition is an excellent way to start modernizing your infrastructure. But as your organization grows and the complexity of your environment increases, you may find yourself devoting significant time to rolling your own enterprise IaC backend features. That’s why we built Pulumi Cloud—to help you avoid building and maintaining these capabilities from scratch while ensuring you can automate, secure, and manage your infrastructure at scale.
 
