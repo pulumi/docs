@@ -32,5 +32,3 @@ const certman = new kubernetes.helm.v4.Chart(
     },
     { transforms: [applyPatchForceAnnotation] },
 );
-
-export const namespace = ns.metadata.name;
