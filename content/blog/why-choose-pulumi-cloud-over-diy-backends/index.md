@@ -73,7 +73,7 @@ When you build and operate your own enterprise backend, you’ll need to dedicat
 
 ### Operational reliability and availability
 
-One of the primary functions of the enterprise backend is managing state. State management involves managing concurrency controls, preventing state corruption, ensuring backup and recovery, maintaining high availability of the state service, and providing consistent visibility across all managed resources; this is easy to get wrong. Manual human intervention is frequently required to recover and repair state files, a process that is time-consuming, extends outages, and carries significant risk.
+One of the primary functions of the enterprise backend is managing state. State management involves managing concurrency controls, preventing state corruption, ensuring backup and recovery, maintaining high availability of the state service, and providing consistent visibility across all managed resources; this is easy to get wrong. Manual human intervention is frequently required to recover and repair state files, a process that is time-consuming, can create or prolong outages, and carries significant risk.
 
 ### Security and compliance
 
