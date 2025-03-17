@@ -20,7 +20,7 @@ Pulumi Cloud provides enterprise capabilities that make it easier to automate, s
 As companies expand or platform engineering mandates become more expansive, challenges arise around collaboration, security, governance, and scaling. Some questions that need answering include:
 
 - How do teams collaborate?
-- How do you manage infrastructure state?
+- How do you securely manage infrastructure state?
 - How do you enable self-service infrastructure?
 - How do you adhere to IT security standards?
 - How do you enforce governance policies?
