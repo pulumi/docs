@@ -1,6 +1,6 @@
 ---
 title: "Expanding the Pulumi Registry: 27 New Providers to Expand the Ecosystem"
-date: 2025-03-17
+date: 2025-03-18
 draft: false
 allow_long_title: true
 meta_desc: "Pulumi announces dozens of new providers to the Registry, expanding our ecosystem with support for Any Terraform Provider and enriched docs for a seamless developer experience."
@@ -12,7 +12,7 @@ tags:
     - providers
     - releases
 social:
-    twitter: "We've added 27 new providers to the Pulumi Registry including Temporal, Vantage, and Honeycomb.io. Explore our expanded ecosystem with enriched docs for a seamless developer experience."
+    twitter: "We've added 27 new providers to the Pulumi Registry including Temporal, Vantage, and Honeycomb. Explore our expanded ecosystem with enriched docs for a seamless developer experience."
     linkedin: |
       We're thrilled to announce 27 new providers to the Pulumi Registry, significantly expanding our ecosystem!
       
@@ -37,6 +37,9 @@ This update is designed with developers in mind and features enriched documentat
 - **Vantage** – Gain cost visibility and optimize cloud spending.
 - **Honeycomb** – Seamlessly integrate observability best practices.
 - **Timescale** – Time series and real time analytics on PostgreSQL.
+
+> "Timescale Cloud brings high-performance PostgreSQL to time-series, real-time analytics, and AI workloads, now with a seamless Pulumi integration. Developers can deploy and manage their infrastructure using their preferred language, making it easier than ever to scale PostgreSQL without resource-management headaches." - Mike Freedman, CTO Timescale
+
 ### Full List of New Providers
 
 Explore the complete list of new providers now available in the Pulumi Registry:
