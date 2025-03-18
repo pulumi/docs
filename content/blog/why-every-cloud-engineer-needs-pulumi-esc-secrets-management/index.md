@@ -166,7 +166,7 @@ Thomas Meckel, Senior Cloud Architect at Ophios GmbH, explains:
 "*Pulumi's built-in encryption of secrets sets it apart as a leader in secure infrastructure management. Unlike other tools that leave sensitive data exposed or require complex configurations, Pulumi ensures secrets are encrypted by default, leveraging flexible options like Azure Key Vault or AWS KMS. This eliminates the risk of plaintext exposure and simplifies secure deployments. For any organization serious about cloud security, Pulumi's approach to secrets management is a critical differentiator, combining ease of use with robust protection against breaches.*"
 {{% /notes %}}
 
-### Kubernetes Integration with External Secrets Operator (ESO) and Secrets Store CSI Driver
+### Kubernetes Secrets Management
 
 For secrets management in Kubernetes environments, Pulumi ESC becomes even more powerful when paired with External Secrets Operator (ESO) or the Secrets Store CSI Driver. Here's how it works:
 
