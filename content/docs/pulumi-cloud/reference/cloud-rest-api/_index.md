@@ -4221,15 +4221,15 @@ Status: 200 OK
 
 ```
 {
-	"environments": [
-		{
-			"organization": "{organization}",
-      "project": "my-first-project",
-			"name": "my-first-environment",
-			"created": "2023-10-10 11:28:01",
-			"modified" :"2023-10-10 12:24:03",
-		}
-	]
+    "environments": [
+        {
+            "organization": "{organization}",
+            "project": "my-first-project",
+            "name": "my-first-environment",
+            "created": "2023-10-10 11:28:01",
+            "modified" :"2023-10-10 12:24:03"
+        }
+    ]
 }
 
 ```
