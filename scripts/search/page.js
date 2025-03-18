@@ -116,15 +116,17 @@ module.exports = {
 
             return !(isDraft || isBlockedFromExternalSearch || isRedirect || isMissingObjectID || isZeroRanked);
         })
-        .slice(0, 50);
+        // .filter(item => item.href.startsWith("/docs/") || item.href.startsWith("/tutorials/"))
+        // .slice(0, 10);
 
-        console.log("filteredItems", filteredItems.length);
+        console.log("processing", filteredItems.length, "pages");
 
         // Process in batches of 12
         const batchSize = 9;
         const results = [];
         
         for (let i = 0; i < filteredItems.length; i += batchSize) {
+            console.log("processing batch", i / batchSize + 1, "of", Math.ceil(filteredItems.length / batchSize));
             const batch = filteredItems.slice(i, i + batchSize);
             const batchResults = await Promise.all(batch.map(async item => {
                 return {

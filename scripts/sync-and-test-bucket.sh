@@ -31,7 +31,7 @@ fi
 
 # For previews, name the destination bucket with the PR number, to reduce the number of
 # buckets we create and to facilitate shorter sync times.
-destination_bucket="$(origin_bucket_prefix)-$(build_identifier)"
+destination_bucket="$(origin_bucket_prefix)-$(build_identifier)" | tr '_' '-'
 destination_bucket_uri="s3://${destination_bucket}"
 
 # Translate Hugo redirects into a file we'll use for making 301 redirects later. Note that
