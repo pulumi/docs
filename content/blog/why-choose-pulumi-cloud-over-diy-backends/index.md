@@ -9,15 +9,15 @@ tags:
     - infrastructure-as-code
 ---
 
-Pulumi Cloud empowers engineers to automate, secure, and manage modern infrastructure platforms.
+**Pulumi Cloud empowers engineers to automate, secure, and manage modern infrastructure platforms.**
 
-Many companies are building internal developer platforms or modern infrastructure platforms to provide developer self-service while maintaining security and compliance. Companies adopt Pulumi IaC so they can apply software engineering practices to their infrastructure scaling problems and because it is fully open source with a strong community and public roadmap.
+Many companies are building internal developer platforms or modern infrastructure platforms to provide developer self-service while maintaining security and compliance. Companies adopt Pulumi IaC so they can apply software engineering practices to their infrastructure scaling problems and because it is fully open source with a strong community and [public roadmap](https://github.com/orgs/pulumi/projects/44/).
 
-At Pulumi, we’re committed to open source&mdash;always have been; always will be. Pulumi IaC is entirely open source (Apache 2.0 license), meaning you can adopt and extend it however you like. If you’re new to Pulumi, the open source edition is an excellent way to start modernizing your infrastructure. But as your organization grows and the complexity of your environment increases, you may find yourself devoting significant time to rolling your own enterprise IaC backend features.
+At Pulumi, we’re committed to open source&mdash;always have been; always will be. Pulumi IaC is [entirely open source](https://github.com/pulumi/pulumi) (Apache 2.0 license), meaning you can adopt and extend it however you like. If you’re new to Pulumi, the open source edition is an excellent way to start modernizing your infrastructure. But as your organization grows and the complexity of your environment increases, you may find yourself devoting significant time to rolling your own enterprise IaC backend features.
 
-That’s why we built Pulumi Cloud&mdash;to help you avoid building and maintaining these capabilities from scratch while ensuring you can automate, secure, and manage your infrastructure at scale. Pulumi Cloud provides enterprise capabilities that make it easier to build modern infrastructure platforms. Companies receive increasing value from Pulumi Cloud as their organization and their infrastructure platforms grow in size and complexity.
+That’s why we built [Pulumi Cloud](/product/pulumi-cloud/)&mdash;to help you avoid building and maintaining these capabilities from scratch while ensuring you can automate, secure, and manage your infrastructure at scale. Pulumi Cloud provides enterprise capabilities that make it easier to build modern infrastructure platforms. Companies receive increasing value from Pulumi Cloud as their organization and their infrastructure platforms grow in size and complexity.
 
-As companies expand or platform engineering mandates become more expansive, challenges arise around collaboration, security, governance, and scaling. Some questions that need answering include:
+As companies expand or [platform engineering](/what-is/what-is-platform-engineering/) mandates become more expansive, challenges arise around collaboration, security, governance, and scaling. Some questions that need answering include:
 
 - How do teams collaborate?
 - How do you securely manage infrastructure state?
@@ -53,9 +53,9 @@ Pulumi Cloud also makes it easy to build developer portals for developer self-se
 
 Another reason your organization is investing in an infrastructure platform is so that security and compliance can be automated as infrastructure is self-serviced. Your platform needs to prevent infrastructure deployments that violate policies related to security, reliability, cost, or compliance. Pulumi Cloud, through Pulumi CrossGuard, provides out-of-the-box support for common security and compliance policies, ensuring PCIDSS, ISO27001, SOC2, and CIS compliance for cloud applications and infrastructure.
 
-For applications being built across the organization, securing sensitive information like database passwords, cloud credentials, and API keys is paramount. Secrets can inadvertently end up in insecurely stored state files, leading to potential breaches. Pulumi Cloud, however, encrypts all data in transit and at rest, utilizing hardware security module (HSM) based encryption. Read the Pulumi Cloud Security Whitepaper for more information.
+For applications being built across the organization, securing sensitive information like database passwords, cloud credentials, and API keys is paramount. Secrets can inadvertently end up in insecurely stored state files, leading to potential breaches. Pulumi Cloud, however, encrypts all data in transit and at rest, utilizing hardware security module (HSM) based encryption. Read the [Pulumi Cloud Security Whitepaper](/security/pulumi-cloud-security-whitepaper.pdf) for more information.
 
-Pulumi Cloud further enhances security with Pulumi ESC, a centralized secrets management and orchestration service. This service pulls and syncs secrets from various stores like HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, and 1Password, making it easy to adopt dynamic, short-lived secrets on demand. Secrets can be accessed via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with TypeScript/JavaScript, Python, and Go SDKs. Pulumi ESC leverages the same identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used by Pulumi IaC, ensuring that secrets management complies with enterprise security policies.
+Pulumi Cloud further enhances security with Pulumi ESC, a centralized [secrets management](/what-is/what-is-secrets-management/) and orchestration service. This service pulls and syncs secrets from various stores like HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, and 1Password, making it easy to adopt dynamic, short-lived secrets on demand. Secrets can be accessed via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with TypeScript/JavaScript, Python, and Go SDKs. Pulumi ESC leverages the same identity, RBAC, Teams, SAML/SCIM, OIDC, and scoped access tokens used by Pulumi IaC, ensuring that secrets management complies with enterprise security policies.
 
 ### Savings
 
@@ -81,10 +81,12 @@ Building your own enterprise backend also requires you to design and manage the 
 
 ### Customer support
 
-You will also be giving up 12x5 or 24x7 customer support, which helps ensure your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Pulumi also has an experienced group of Solutions Architects and Customer Success Architects that have experience scaling infrastructure as code and building modern infrastructure platforms.
+You will also be giving up 12x5 or 24x7 customer support, which helps ensure your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Pulumi also has an experienced group of Solutions Architects and Customer Success Architects that have experience scaling [infrastructure as code](/what-is/what-is-infrastructure-as-code/) and building modern infrastructure platforms.
 
 ## Conclusion
 
 Pulumi Cloud is an enterprise-ready solution that comes with less risk and less maintenance costs than the DIY approach. With Pulumi Cloud, you get a fully managed service that automates deployments, ensures compliance, and offers comprehensive security features out-of-the-box. You’ll get a clear understanding of the product roadmap as well as talented engineers supporting your architecture and use cases.
 
 Pulumi Cloud gives you the platform to automate, secure, and manage your modern infrastructure platform so your company can choose to focus on innovation and growth.
+
+[Try Pulumi Cloud for free](https://app.pulumi.com/) and see how it can accelerate your infrastructure automation. Sign up today and start building with Pulumi Cloud.
