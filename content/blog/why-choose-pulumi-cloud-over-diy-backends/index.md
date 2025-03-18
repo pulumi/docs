@@ -29,7 +29,7 @@ As companies expand or platform engineering mandates become more expansive, chal
 - How do you maintain uptime or get support for your architecture?
 - How do you manage the cost and complexity of multi-cloud environments?
 
-If some of these questions apply to you or your team, learn more about Pulumi Cloud below to understand when it makes sense to transition to a paid Pulumi offering.
+If some of these questions apply to you or your team, learn more about Pulumi Cloud below to understand when it makes sense to transition to a [paid Pulumi offering](/pricing/).
 
 ## What drives the most value in Pulumi Cloud?
 
