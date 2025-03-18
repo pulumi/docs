@@ -1,6 +1,7 @@
 const fs = require("fs");
 const page = require("./page");
 
+async function main() {
 // As part of the Hugo build, we generate a JSON file at /index.json containing a record for every
 // page of the website. We use this file to generate primary search records for Algolia.
 const pathToFullSiteJSON = "./public/index.json";
@@ -9,12 +10,12 @@ const hugoPageItems = JSON.parse(fs.readFileSync(pathToFullSiteJSON, "utf-8").to
 // Generate a list of primary page objects. This list contains one record for every page of the site.
 console.log("\nBuilding search index...");
 console.log(" ↳ Building primary page objects...");
-const primaryPageObjects = page.getPrimaryObjects(hugoPageItems);
+const primaryPageObjects = await page.getPrimaryObjects(hugoPageItems);
 
 // Generate a list of secondary objects. This list contains additional records for things like H2
 // headings and other DOM-resident content that we can't get as easily by other means.
 console.log(" ↳ Building secondary page objects...");
-const secondaryPageObjects = page.getSecondaryObjects(primaryPageObjects);
+const secondaryPageObjects = await page.getSecondaryObjects(primaryPageObjects);
 
 // Incorporate any additional objects. This list is provided as a hand-crafted list for now, because pragmatism,
 // but it should probably be pulled out into a proper module at some point.
@@ -114,3 +115,7 @@ allObjects = allObjects.filter(o => !o.href.includes("azure-native-v1"));
 console.log(" ↳ Writing results...");
 fs.writeFileSync("./public/search-index.json", JSON.stringify(allObjects, null, 4));
 console.log(" ↳ Done. ✨\n");
+
+}
+
+main();

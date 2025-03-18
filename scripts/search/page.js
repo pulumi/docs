@@ -3,6 +3,7 @@ const path = require("path");
 const crypto = require("crypto");
 const cheerio = require("cheerio");
 const rank = require("./rank");
+const { spawn } = require('child_process');
 
 module.exports = {
 
@@ -29,14 +30,26 @@ module.exports = {
     },
 
     // Fetch a list of the explicit and implicit keywords associated with the page.
-    getKeywords(page) {
-        return (page.params?.search?.keywords || []).concat(rank.getImplicitKeywords(page));
+    async getKeywords(page) {
+        if (page.href.startsWith("/docs/") || page.href.startsWith("/tutorials/")) {
+            const pageContent = await this.getDOMContent(page);
+            const content = pageContent.subheads.reduce((acc, curr) => acc + curr.content + " ", "");
+            const extractedKeywords = await this.extractKeywords(page.title + " " + page.title + " " + (content || ""));
+            // console.log("keywords", pageContent.subheads.map(subhead => subhead.keywords || []).flat() || []);
+            console.log("keywords", extractedKeywords);
+            return (page.params?.search?.keywords || [])
+                .concat(rank.getImplicitKeywords(page))
+                .concat(extractedKeywords)
+                .concat(pageContent.subheads.map(subhead => subhead.keywords || []).flat() || []);
+        }
+        return (page.params?.search?.keywords || [])
+            .concat(rank.getImplicitKeywords(page));
     },
 
     // Fetch a summary of any DOM content to use for the index. Things like H2s, their immediately
     // following paragraphs, and any of their explicitly provided keywords (as we also support this
     // also) are included.
-    getDOMContent({ href }) {
+    async getDOMContent({ href }) {
         // Assemble the local path to the file using its href.
         const filePath = path.join("public", href, "index.html");
 
@@ -73,8 +86,8 @@ module.exports = {
             subheads.push({
                 title,
                 anchor: id,
-                keywords: keywords || undefined,
-                content: content || undefined,
+                keywords: keywords || [],
+                content: content || "",
             });
         });
 
@@ -92,28 +105,28 @@ module.exports = {
     },
 
     // Fetch a list of primary objects. These objects are generated directly from Hugo-rendered JSON.
-    getPrimaryObjects(hugoPageItems) {
-        return hugoPageItems
+    async getPrimaryObjects(hugoPageItems) {
+        // Filter items first to avoid processing items we'll exclude anyway
+        const filteredItems = hugoPageItems.filter(item => {
+            const isDraft = !!item.params.draft;
+            const isBlockedFromExternalSearch = item.block_external_search_index === true;
+            const isMissingObjectID = item.objectID === "";
+            const isZeroRanked = this.getRank(item) === 0;
+            const isRedirect = (item.params.redirect_to && item.params.redirect_to !== "");
 
-            // Exclude drafts, pages blocked from external search listings, those missing object IDs
-            // (as this means they probably aren't actual Hugo pages), and those with explicit
-            // rankings of zero.
-            .filter(item => {
-                const isDraft = !!item.params.draft;
-                const isBlockedFromExternalSearch = item.block_external_search_index === true;
-                const isMissingObjectID = item.objectID === "";
-                const isZeroRanked = this.getRank(item) === 0;
-                const isRedirect = (item.params.redirect_to && item.params.redirect_to !== "");
+            return !(isDraft || isBlockedFromExternalSearch || isRedirect || isMissingObjectID || isZeroRanked);
+        })
+        .slice(0, 50);
 
-                if (isDraft || isBlockedFromExternalSearch || isRedirect || isMissingObjectID || isZeroRanked) {
-                    return false;
-                }
+        console.log("filteredItems", filteredItems.length);
 
-                return true;
-            })
-
-            // Convert Hugo page items into Algolia index objects.
-            .map(item => {
+        // Process in batches of 12
+        const batchSize = 9;
+        const results = [];
+        
+        for (let i = 0; i < filteredItems.length; i += batchSize) {
+            const batch = filteredItems.slice(i, i + batchSize);
+            const batchResults = await Promise.all(batch.map(async item => {
                 return {
                     objectID: this.getObjectID(item),
                     section: this.getTopLevelSection(item),
@@ -125,22 +138,26 @@ module.exports = {
                     tags: item.params.tags,
                     rank: this.getRank(item),
                     boosted: this.isBoosted(item),
-                    keywords: this.getKeywords(item),
+                    keywords: await this.getKeywords(item),
                     ancestors: this.makeAncestorsList(item.ancestors),
                 };
-            });
+            }));
+            results.push(...batchResults);
+        }
+        
+        return results;
     },
 
     // Fetch a list of secondary objects. These are things like H2 headings (along with any
     // explicitly defined keywords, associated content, etc.) that we want to be findable in
     // addition to page titles, descriptions, and keywords.
-    getSecondaryObjects(sitePageObjects) {
+    async getSecondaryObjects(sitePageObjects) {
         const secondaries = [];
 
-        sitePageObjects
+        await sitePageObjects
             .filter(pageObject => !pageObject.href.match(/registry|pkg|blog/))
-            .forEach(pageObject => {
-                const domContent = this.getDOMContent(pageObject);
+            .forEach(async pageObject => {
+                const domContent = await this.getDOMContent(pageObject);
                 const ancestors = pageObject.ancestors;
 
                 if (domContent.subheads) {
@@ -154,7 +171,7 @@ module.exports = {
                             title: subhead.title,
                             description: (subhead.content || "").substr(0, 200),
                             href,
-                            keywords: subhead.keywords || undefined,
+                            keywords: [...(subhead.keywords || []), ...(pageObject.keywords || [])]
                         });
                     });
                 }
@@ -182,5 +199,41 @@ module.exports = {
     // add another parameter to the list and hash both.
     getObjectID({ href }) {
         return crypto.createHash("md5").update(href).digest("hex");
+    },
+
+    async extractKeywords(text) {
+        const venvPath = "/scripts/search/keywords/venv/bin/python";     
+        
+        const pythonPath = path.join(process.cwd(), venvPath);
+        
+        return new Promise((resolve, reject) => {
+            const pythonProcess = spawn(pythonPath, [
+                "scripts/search/keywords/keyword_gen.py",
+                text
+            ]);
+    
+            let result = '';
+    
+            pythonProcess.stdout.on("data", (data) => {
+                result += data.toString();
+            });
+    
+            pythonProcess.stderr.on("data", (data) => {
+                console.error(`Error: ${data}`);
+            });
+    
+            pythonProcess.on("close", (code) => {
+                if (code !== 0) {
+                    reject(new Error(`Process exited with code ${code}`));
+                    return;
+                }
+                try {
+                    const keywords = JSON.parse(result);
+                    resolve(keywords);
+                } catch (error) {
+                    reject(error);
+                }
+            });
+        });
     }
 };
