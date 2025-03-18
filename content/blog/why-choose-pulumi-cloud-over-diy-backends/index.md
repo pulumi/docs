@@ -39,7 +39,7 @@ The most frequent business values that our existing customers experience with Pu
 
 ### Speed
 
-There are three speed benefits that customers typically experience with regards to building the infrastructure platform, developer productivity, and operations. Pulumi Cloud simplifies building and running complex infrastructure automation workflows through the Automation API. It also makes it easy to componentize best practices that can be easily shared and distributed through a centralized repository.
+There are speed benefits that customers typically experience across three areas:  the infrastructure platform, developer productivity, and operations. Pulumi Cloud simplifies building and running complex infrastructure automation workflows through the Automation API. It also makes it easy to componentize best practices that can be easily shared and distributed through a centralized repository.
 
 Pulumi Cloud streamlines the software delivery pipeline through Pulumi Deployments and a wide range of 3rd party CICD integrations.
 
