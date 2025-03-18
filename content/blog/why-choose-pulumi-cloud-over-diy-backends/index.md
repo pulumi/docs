@@ -61,7 +61,7 @@ Pulumi Cloud further enhances security with Pulumi ESC, a centralized [secrets m
 
 ### Savings
 
-Building a platform and managing cloud infrastructure demands considerable time and energy. As discussed above, Pulumi Insights X-Rays your entire cloud footprint, so you can observe, plan, and drive changes across your infrastructure. With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, which can lead to substantial cost savings.
+Building a platform and managing cloud infrastructure demands considerable time and energy. As discussed above, [Pulumi Insights](/product/pulumi-insights/) X-Rays your entire cloud footprint, so you can observe, plan, and drive changes across your infrastructure. With this total visibility, Pulumi Insights helps you reduce waste by showing you usage information and identifying potentially stale infrastructure, which can lead to substantial cost savings.
 
 You can also have a conversation with [Pulumi Copilot](/product/copilot/) about your infrastructure in natural language and get answers to operational questions that would take hours to piece together from other sources.
 
