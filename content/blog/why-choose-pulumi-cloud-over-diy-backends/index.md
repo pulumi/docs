@@ -53,7 +53,7 @@ Pulumi Cloud also makes it easy to build developer portals for developer self-se
 
 ### Security
 
-Another reason your organization is investing in an infrastructure platform is so that security and compliance can be automated as infrastructure is self-serviced. Your platform needs to prevent infrastructure deployments that violate policies related to security, reliability, cost, or compliance. Pulumi Cloud, through Pulumi CrossGuard, provides out-of-the-box support for common security and compliance policies, ensuring PCIDSS, ISO27001, SOC2, and CIS compliance for cloud applications and infrastructure.
+Another reason your organization is investing in an infrastructure platform is so that security and compliance can be automated as infrastructure is self-serviced. Your platform must prevent infrastructure deployments that violate security, reliability, cost, or compliance policies. Pulumi Cloud, through Pulumi CrossGuard, provides out-of-the-box support for common security and compliance policies, ensuring PCIDSS, ISO27001, SOC2, and CIS compliance for cloud applications and infrastructure.
 
 For applications being built across the organization, securing sensitive information like database passwords, cloud credentials, and API keys is paramount. Secrets can inadvertently end up in insecurely stored state files, leading to potential breaches. Pulumi Cloud, however, encrypts all data in transit and at rest, utilizing hardware security module (HSM) based encryption. Read the [Pulumi Cloud Security Whitepaper](/security/pulumi-cloud-security-whitepaper.pdf) for more information.
 
