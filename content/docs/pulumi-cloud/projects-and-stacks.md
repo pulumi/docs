@@ -10,8 +10,6 @@ menu:
     parent: cloud-home
     weight: 2
     identifier: pulumi-cloud-projects-and-stacks
-  pulumicloud:
-    weight: 3
 aliases:
 - /docs/intro/console/project-and-stack-management/
 - /docs/reference/service/roles-and-access-controls/

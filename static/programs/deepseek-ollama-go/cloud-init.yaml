@@ -1,0 +1,32 @@
+#cloud-config
+users:
+  - default
+
+package_update: true
+
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - openjdk-17-jre-headless
+  - gcc
+
+runcmd:
+  - yum install -y gcc kernel-devel-$(uname -r)
+  - aws s3 cp --recursive s3://ec2-linux-nvidia-drivers/latest/ .
+  - chmod +x NVIDIA-Linux-x86_64*.run
+  - /bin/sh ./NVIDIA-Linux-x86_64*.run --tmpdir . --silent
+  - touch /etc/modprobe.d/nvidia.conf
+  - echo "options nvidia NVreg_EnableGpuFirmware=0" | sudo tee --append /etc/modprobe.d/nvidia.conf
+  - yum install -y docker
+  - usermod -a -G docker ec2-user
+  - systemctl enable docker.service
+  - systemctl start docker.service
+  - curl -s -L https://nvidia.github.io/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
+  - yum install -y nvidia-container-toolkit
+  - nvidia-ctk runtime configure --runtime=docker
+  - systemctl restart docker
+  - docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama --restart always ollama/ollama
+  - docker exec ollama ollama run deepseek-r1:7b
+  - docker exec ollama ollama run deepseek-r1:14b
+  - docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main

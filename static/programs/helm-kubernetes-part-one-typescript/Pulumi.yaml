@@ -1,0 +1,10 @@
+name: helm-kubernetes-part-one-typescript
+description: Demo Code Part 1 of the Tutorial around Helm in Kubernetes
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: helm-kubernetes-typescript

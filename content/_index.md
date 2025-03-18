@@ -8,10 +8,10 @@ hero:
   title: [ "Automate, Secure, and Manage", "Everything You Run in the Cloud" ]
   description: |
     Powered by the #1 open source infrastructure as code tool.
-  cta_text: Get Started for Free
-  cta_link: /docs/get-started/
-  secondary_cta_text: Contact Sales
-  secondary_cta_link: /contact/?form=sales
+  cta_text: Try Pulumi Cloud for Free
+  cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
+  secondary_cta_text: Download Open Source
+  secondary_cta_link: /docs/iac/download-install
 
 pillars:
     items:

@@ -6,6 +6,7 @@ on:
   repository_dispatch:
     types:
       - pulumi-cli
+
 jobs:
   pull-request:
     runs-on: ubuntu-latest
@@ -67,7 +68,7 @@ jobs:
         with:
           python-version: ${{matrix.pythonversion}}
       - name: Install Pipenv
-        run:  pip3 install pipenv==2022.10.12
+        run:  pip3 install pipenv
       - name: Install dotnet
         uses: actions/setup-dotnet@v1
         with:
@@ -123,7 +124,7 @@ jobs:
         goversion:
           - 1.16.x
         pythonversion:
-          - "3.7"
+          - "3.13"
         nodeversion:
           - "18.x"
   notify:

@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-access-management
     weight: 5
     identifier: pulumi-cloud-access-management-billing-managers
-  pulumicloud:
-    parent: access-management
-    weight: 3
 aliases:
 - /docs/intro/pulumi-service/billing-managers/
 - /docs/intro/pulumi-cloud/billing-managers/

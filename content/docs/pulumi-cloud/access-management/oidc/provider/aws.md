@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-oidc-provider
     weight: 1
     identifier: pulumi-cloud-access-management-oidc-provider-aws
-  pulumicloud:
-    parent: openid-connect-provider
-    weight: 1
-
 aliases:
 - /docs/guides/oidc/provider/aws
 - /docs/intro/deployments/oidc/provider/aws/
@@ -32,18 +28,18 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
 {{< /notes >}}
 
-## Create the Identity Provider
+## Create the identity provider
 
 1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
   {{< video title="Starting the Create Identity Provider wizard" src="https://www.pulumi.com/uploads/create-idp-start.mp4" autoplay="true" loop="true" >}}
 2. In the **Provider type** section, click the radio button next to **OpenID Connect**.
 3. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
-4. For the **Audience** field, the value will differ between pulumi deployments and ESC. For Deployments the value is only the name of your Pulumi organization. For ESC the value is the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`). Then click **Add provider**.
+4. For the **Audience** field, the value will differ between Pulumi deployments and ESC. For Deployments the value is only the name of your Pulumi organization. For ESC the value is the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`). Then click **Add provider**.
   {{< notes type="info" >}}
   For environments in the `default` project, the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
   {{< /notes >}}
 
-## Configure the IAM Role and Trust Policy
+## Configure the IAM role and trust policy
 
 Once you have created the identity provider, you will see a notification at the top of your screen prompting you to assign an IAM role.
 
@@ -65,7 +61,7 @@ Once you have created the identity provider, you will see a notification at the 
 
 Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your service.
 
-For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/pulumi-cloud/oidc/#token-claims) for each service. The `sub` claim can be customized as shown below.
+For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/pulumi-cloud/access-management/oidc/provider/#custom-claims) for each service. The `sub` claim can be customized as shown below.
 
 ### Pulumi Deployments
 
@@ -132,7 +128,7 @@ If you are integrating Pulumi ESC with Pulumi IaC, the default subject identifie
 
 {{< /notes >}}
 
-## Configure OIDC via the Pulumi Console
+## Configure OIDC via the Pulumi console
 
 ### Pulumi Deployments
 
@@ -159,9 +155,9 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 1. Click the **Environments** link.
 2. Click the **Create environment** button.
 3. Provide a project to create your new environment in and a name for your environment.
-4. Click the  **Create environment** button.
+4. Click the **Create environment** button.
   {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
-5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
+5. You will be presented with a split-pane editor. Delete the default placeholder content in the editor and replace it with the following code:
 
     ```yaml
     values:
@@ -212,7 +208,7 @@ Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` wi
 
 To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [relevant Pulumi documentation](/docs/esc/integrations/)
 
-## Automate OIDC Configuration
+## Automate OIDC configuration
 
 Our [Examples](https://github.com/pulumi/examples) repository provides a wide variety of automations using Pulumi Infrastructure as Code (IaC). If you want to automate the configuration and deployment of OIDC between Pulumi and AWS, take a look at the following examples to help you get started:
 

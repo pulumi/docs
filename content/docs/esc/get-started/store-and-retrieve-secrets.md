@@ -26,15 +26,15 @@ values:
 
 You can store and retrieve values in an environment via one of the following methods:
 
-- the Pulumi Cloud console Editor view
+- the Pulumi Cloud console Document view
 - the Pulumi Cloud console Table view
 - the ESC CLI
 
-## Store Environment Values
+## Store Environment values
 
-### Store via the Editor view
+### Store via the document view
 
-To store values in your environment using the Editor view, first click on the name of the environment to open it. You will be presented with a split pane view. The left side is the YAML-based code editor view, and this is where you will write the definition of your environment configuration. The right side will show a preview of your configuration in JSON format.
+To store values in your environment using the Document view, first click on the name of the environment to open it. You will be presented with a split pane view. The left side is the YAML-based code document view, and this is where you will write the definition of your environment configuration. The right side will show a preview of your configuration in JSON format.
 
 ![Open environment in Pulumi ESC console](/docs/esc/assets/esc-open-env.png)
 
@@ -51,15 +51,15 @@ As shown above, you can specify that a value should be stored as a secret by usi
 
 {{< video title="Adding values to the environment in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-add-env-values.mp4" autoplay="true" loop="true" >}}
 
-The **Environment preview** pane on the right hand side will then update to show your added configuration in JSON format. You will notice that the value of "myPassword" has been hidden from view in both the defintion and preview panes.
+The **Environment preview** pane on the right-hand side will then update to show your added configuration in JSON format. You will notice that the value of "myPassword" has been hidden from view in both the definition and preview panes.
 
 ### Store via the Table view
 
-To store values in your environment using the Editor view, first click on the name of the environment to open it. Then, at the top of the Editor view view, click the **Table view** button to switch the editor from the YAML view to the table view.
+To store values in your environment using the Document view, first click on the name of the environment to open it. From the **Editor** menu, click the **Table view** button to switch the editor from the document YAML view to the table view.
 
 {{< video title="Adding values to the environment in the Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-open-env-table-view.mp4" autoplay="true" loop="true" >}}
 
-Next, under the **Configuration** section section, you will see fields labeled **Path** and **Value**. You will define your configuraton values using these fields. In the **Path** field, type in `myEnvironment`, and in the **Value** field, type in `development`. Then click **Done** and **Save**.
+Next, under the **Configuration** section, you will see fields labeled **Path** and **Value**. You will define your configuration values using these fields. In the **Path** field, type in `myEnvironment`, and in the **Value** field, type in `development`. Then click **Done** and **Save**.
 
 ![Adding values to the environment in the Pulumi ESC console](/docs/esc/assets/esc-add-env-values.png)
 
@@ -94,11 +94,11 @@ esc env edit <project-name>/<environment-name>
 
 Using this method enables you to add your configuration values in the same way that you would [via the console](/docs/esc/get-started/store-and-retrieve-secrets/#store-via-the-console).
 
-## Retrieve Environment Values
+## Retrieve Environment values
 
-### Retrieve via the Editor view
+### Retrieve via the Document view
 
-To retrieve values using the Editor view, scroll to the bottom of your environment page and click the **Open** button. This will return any statically defined plain-text values and definitions.
+To retrieve values using the Document view, click the **Open** button. This will return any statically defined plain-text values and definitions.
 
 ![Clicking the open button in the Pulumi ESC console](/docs/esc/assets/esc-open-environment.png)
 

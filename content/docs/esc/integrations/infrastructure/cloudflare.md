@@ -137,7 +137,7 @@ There are two options for managing the `.dev.vars` definition.
   ```bash
   esc run -i ${ESC_ENV} -- sh -c 'cat $DEV_VARS > .dev.vars'
   ```
-  
+
   For additional options and details, see `esc run --help`.
 
 ### 4. Use ESC with `wrangler secret put`

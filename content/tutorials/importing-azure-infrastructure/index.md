@@ -44,8 +44,8 @@ prereqs:
 estimated_time: 15
 
 # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
-# collections:
-#     - some-non-existent-collection
+collections:
+    - azure
 ---
 
 ## Create initial resources

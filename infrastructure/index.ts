@@ -4,7 +4,7 @@ import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
-import { getAIAnswersRewriteAssociation, getAnswersEdgeRedirectAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
+import { getAIAnswersRewriteAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 
 const stackConfig = new pulumi.Config();
 
@@ -650,10 +650,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: '/ai/*',
             originRequestPolicyId: allViewerExceptHostHeaderId,
             cachePolicyId: cachingDisabledId,
-            lambdaFunctionAssociations: [
-                ...config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
-                getAnswersEdgeRedirectAssociation(config.websiteDomain),
-            ],
+            lambdaFunctionAssociations: config.doAIAnswersRewrites ? [getAIAnswersRewriteAssociation()] : [],
             forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
         },
 
@@ -715,7 +712,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     viewerCertificate: {
         acmCertificateArn: config.certificateArn,
         sslSupportMethod: "sni-only",
-        minimumProtocolVersion: "TLSv1.2_2018",
+        minimumProtocolVersion: "TLSv1.2_2021",
     },
 
     loggingConfig: {

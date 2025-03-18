@@ -8,6 +8,26 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: Kargo Community Meeting
+  title: Pulumi + Kargo
+  url: https://x.com/akuityio/status/1894765745499689426
+  date: 2025-02-26T15:00:00.000-07:00  
+- event: "Konstruct Live Stream"
+  title: "Progressive Infrastructure Delivery using Kargo and Argo CD"
+  url: "https://www.youtube.com/watch?v=zoL4N7EyLGU"
+  date: 2025-02-13T15:00:00.000-07:00  
+- event: "CfgMgmtCamp 2025 Ghent"
+  title: "Discover Pulumi Through Hands-On Practice"
+  url: "https://cfp.cfgmgmtcamp.org/ghent2025/talk/SAMLJM/"
+  date: 2025-02-05T15:00:00.000-07:00
+- event: "CfgMgmtCamp 2025 Ghent"
+  title: "Progressive Infrastructure Delivery using Kargo and Argo CD"
+  url: "https://cfp.cfgmgmtcamp.org/ghent2025/talk/DGYEV7/"
+  date: 2025-02-04T15:00:00.000-07:00  
+- event: "CfgMgmtCamp 2025 Ghent"
+  title: "Got a Secret, Can You Keep It? - Mastering Secret Management in Kubernetes"
+  url: "https://cfp.cfgmgmtcamp.org/ghent2025/talk/HS8ELE/"
+  date: 2025-02-03T15:00:00.000-07:00
 - event: "apidays Paris 2024"
   title: "Got a Secret, Can You Keep It? - Secrets on Kubernetes"
   url: "https://www.apidays.global/paris/"
@@ -170,8 +190,8 @@ giveaway:
     hubspot_form_id: def7a2d4-6f77-4027-8654-ce10958be85a
 ---
 
-Engin is a Senior Solutions Architect at Pulumi and has been in the IT industry for over 15 years.
+As a Senior Solutions Architect at Pulumi with over 15 years of experience in the IT industry, including roles at the [Schwarz Group](https://schwarz-digits.de/) and [W&W Versicherungen](https://www.ww-ag.com/de/ww-informatik), I bring extensive expertise with an end-user and enterprise focus. Currently working for a startup while collaborating with enterprise clients has further enriched my experience!
 
-He started as a Java backend developer and later migrated to the fronted development. This is where he found his passion for CI/CD, Cloud technologies and in particular Kubernetes.
+I began my career as a Java backend developer, transitioned to frontend development, and ultimately specialized in CI/CD and DevOps. Working with ANT and Cruise Control to switch to [Jenkins](https://www.jenkins.io/) and [Microsoft Team Foundation Server](https://learn.microsoft.com/en-us/previous-versions/azure/devops/all/overview?view=tfs-2018) added some traumas on top! But as they say, what doesn't kill you makes you stronger.
 
-Engin is a very curious person and loves learning and testing new technologies.
+I have now embraced the dynamic world of DevOps and Platform Engineering, leveraging cloud technologies and Kubernetes.

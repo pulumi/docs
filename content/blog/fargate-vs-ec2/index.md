@@ -145,6 +145,8 @@ Fargate on EKS could be a great solution for this type of chunky, resource-heavy
 
 But there are lots of situations where Fargate is less of a fit.
 
+{{< related-posts >}}
+
 ## Example: Go Services for E-commerce
 
 <img src="cash-register.webp" alt="sketch of fog clearing" style="width: 30%; float: right; margin-left: 10px;">
@@ -189,6 +191,21 @@ But really, pure compute cost calculations are an insufficient metric for making
    While it handles node scaling, you still face ENI limits, longer pod startup times (30-60s), and potential networking bottlenecks.
 - **It's simpler and more reliable**
   It may be, but it may not be. The complexity shifts to networking, pod configuration, and working within Fargate's constraints. You trade node management for new operational challenges like slower startups and possible networking complexity.
+
+## Managing Container Orchestration with Pulumi
+
+Whether you choose EC2 or Fargate, Pulumi makes it easy to manage in your favorite programming languages. With its rich AWS support and infrastructure as code capabilities, you can define, deploy, and manage your entire Kubernetes infrastructure using familiar tools and practices. Pulumi's [AWS provider](/docs/iac/clouds/aws/) helps you implement the right solution for your needs.
+
+With Pulumi, you get:
+
+- [Complete control over EKS cluster configuration](/docs/iac/clouds/aws/guides/eks/), including node types, scaling policies, and networking setup
+- [Built-in support for both EC2 node groups and Fargate profiles](/docs/iac/clouds/kubernetes/guides/worker-nodes/) within the same cluster
+- [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your cluster configuration before deployment
+- [Automation APIs](/docs/iac/packages-and-automation/automation-api/) for programmatic infrastructure management and custom tooling
+
+Ready to streamline your EKS infrastructure management?
+
+{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
 
 ## Why Not Both
 

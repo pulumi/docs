@@ -8,9 +8,6 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 3
     identifier: pulumi-cloud-deployments-customer-managed-agents
-  pulumicloud:
-    parent: deployments
-    weight: 2
 ---
 
 Customer-Managed Agents allow you to self-host deployment agents bringing the same power and flexibility as Pulumi-hosted deployments. Self-hosting your agents comes with many benefits:

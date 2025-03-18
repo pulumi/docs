@@ -10,8 +10,6 @@ menu:
         parent: pulumi-cloud-access-management
         weight: 1
         identifier: pulumi-cloud-access-management-accounts
-    pulumicloud:
-        weight: 1
 aliases:
 - /docs/intro/console/accounts/
 - /docs/intro/console/accounts/account/

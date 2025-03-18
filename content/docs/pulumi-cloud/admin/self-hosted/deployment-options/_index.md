@@ -10,10 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted
         weight: 1
         identifier: pulumi-cloud-admin-self-hosted-deployment-options
-    pulumicloud:
-        parent: self-hosted
-        identifier: deployment-options
-        weight: 1
 aliases:
   - /docs/pulumi-cloud/self-hosted/deployment-options/
 ---

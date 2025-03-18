@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-oidc-client
     weight: 1
     identifier: pulumi-cloud-access-management-oidc-client-github
-  pulumicloud:
-    parent: openid-connect-client
-    weight: 1
 aliases:
 - /docs/pulumi-cloud/oidc/client/github/
 ---
@@ -84,7 +81,7 @@ jobs:
           organization: org-name
           requested-token-type: urn:pulumi:token-type:access_token:organization
 
-      - uses: pulumi/actions@v5
+      - uses: pulumi/actions@v6
         with:
           command: preview
           stack-name: org-name/stack-name

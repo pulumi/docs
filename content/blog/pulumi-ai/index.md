@@ -29,7 +29,7 @@ We’ve seen amazing engagement and stories from Pulumi users about the impact t
 We've got a few upcoming opportunities to learn more about Pulumi Insights and Pulumi AI. Come join us!
 
 * May 3rd: [Reddit AMA: Pulumi Insights](https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/)
-* May 11th: [Workshop: Getting Started with Pulumi Insights](/resources/getting-started-with-pulumi-insights/)
+* May 11th: [Workshop: Getting Started with Pulumi Insights](/events/getting-started-with-pulumi-insights/)
 * Anytime: [Pulumi Challenge: GPT Your IaC](/challenge/ai-architecture/)
 {{% /notes %}}
 
@@ -97,6 +97,6 @@ Pulumi AI is already offering practical value for thousands of users. We have an
 
 We’re just getting started and hope you join us on our journey!  Experience [Pulumi AI](/ai) today and join us for one of these upcoming events to learn more:
 
-* [Workshop: Getting Started with Pulumi Insights](/resources/getting-started-with-pulumi-insights/)
+* [Workshop: Getting Started with Pulumi Insights](/events/getting-started-with-pulumi-insights/)
 * [Reddit AMA: Pulumi Insights](https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/)
 * [Pulumi Challenge: GPT Your IaC](/challenge/ai-architecture/)

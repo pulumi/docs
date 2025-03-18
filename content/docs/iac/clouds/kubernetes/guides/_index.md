@@ -35,7 +35,7 @@ Kubernetes offerings such as [Amazon Elastic Kubernetes Service (EKS)][eks], [Az
 Kubernetes Service (AKS)][aks], or [Google Kubernetes Engine (GKE)][gke].
 
 Discover solutions to the hardest Kubernetes problems to avoid mitigating
-pitfalls around infrastructure, security, governance, reliablity, and
+pitfalls around infrastructure, security, governance, reliability, and
 maintainability of the cluster, it's workloads, and underlying resources.
 
 [Get started][cw-playbooks] with the playbooks to manage Kubernetes in production with your team.

@@ -248,7 +248,7 @@ $ uv add ${PACKAGE_NAME}
 
 ### Dev Versions
 
-Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch.  If you would like to install a pre-release version, you can use the `--pre` flag with `pip` or the `--allow-prereleaases` flag with `poetry`. For example:
+Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch.  If you would like to install a pre-release version, you can use the `--pre` flag with `pip` or the `--allow-prereleases` flag with `poetry`. For example:
 
 ```bash
 pip install --pre -r requirements.txt

@@ -8,10 +8,14 @@ authors:
     - adam-gordon-bell
 tags:
     - k8s, containers, cloud-native, docker
+    - k8s
+    - kubernetes
+    - containers
+    - cloud-native
+    - docker
 social:
     twitter: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
     linkedin: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
-
 ---
 If a computer can be connected to the internet, someone has tried to run a [container](https://www.pulumi.com/containers) on it. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there's many ways to deploy containers. While most people only know about the mainstream cloud providers at the surface, there's actually a vast world of increasingly unusual and specialized options beneath.
 
@@ -23,13 +27,13 @@ This guide serves two purposes: to showcase the surprising breadth of container 
 
 But first, we need ground rules for our container adventures. All listed items should:
 
-- **Technically Possible:** Must work today with existing tech, even if the setup makes you question your life choices.
-- **Runs Real Containers:** OCI containers only. No JavaScript "containers" pretending to be the real thing.
-- **Actually Doable:** You can set this up right now with a laptop and a credit card. No theoretical schemes allowed.
+- **Technically possible:** Must work today with existing tech, even if the setup makes you question your life choices.
+- **Runs real containers:** OCI containers only. No JavaScript "containers" pretending to be the real thing.
+- **Actually doable:** You can set this up right now with a laptop and a credit card. No theoretical schemes allowed.
 
 ![The Cursed Container Iceberg](iceberg.jpg)
 
-## Above the Iceberg – The Usual Suspects
+## Above the iceberg – The usual suspects
 
 These are the familiar faces of container orchestration—the ones you'd introduce to your parents. Reliable, well-documented, and about as exciting as watching paint dry.
 
@@ -44,7 +48,7 @@ These are the familiar faces of container orchestration—the ones you'd introdu
 - **Azure App Service for Containers**
 - **Google Compute Engine with Containers**
 
-## On the Iceberg – The Slightly Less Obvious
+## On the iceberg – The slightly less obvious
 
 As we dip just below the surface, we find services like a rare B-side acoustic release from a big band. It's not as mainstream but still a respectable choice for running your containers.
 
@@ -54,7 +58,7 @@ As we dip just below the surface, we find services like a rare B-side acoustic r
 - **Google App Engine Flexible Environment** – PaaS for Containerized Apps
 - **Azure Container Instances (ACI)** – Kubernetes without the chaos
 
-## The Kubernetes Multiverse – Because One Universe of K8s Wasn't Enough
+## The kubernetes multiverse – Because one Universe of k8s wasn't enough
 
 Diving deeper, we discover there's an entire multiverse of regional and specialty K8s providers, helpfully cataloged [by the CNCF](https://landscape.cncf.io/guide#platform--certified-kubernetes-hosted
 ). Think parallel universes, but instead of evil twins, you get slightly different container runtime implementations.
@@ -67,7 +71,7 @@ Diving deeper, we discover there's an entire multiverse of regional and specialt
 
 - **The Specialists' Society** – For when regular K8s isn't quirky enough: OKESTRO VIOLA orchestrates your containers with musical flair, while Petasus, De Novo, Aruba, and Taikun provide enough specialty K8s options to ensure every cluster is a unique snowflake.
 
-## Below the Water – Kubernetes Everywhere – Let a Thousand K8s Bloom
+## Below the water – Kubernetes everywhere – Let a thousand K8s bloom
 
 Let's plunge deeper. Because one Kubernetes cluster is never enough, why not sprinkle them everywhere? On-premises, in the cloud, under your desk—there's a K8s solution for all that.
 
@@ -90,7 +94,9 @@ Let's plunge deeper. Because one Kubernetes cluster is never enough, why not spr
 - **Nutanix Karbon** - Because regular Kubernetes wasn't converged enough
 - **Metal Stack Cloud Kubernetes** - For when virtual machines are too virtual
 
-## Middle of the Iceberg – Serverless and Function Containers – Now You See Me, Now You Don't
+{{< related-posts >}}
+
+## Middle of the iceberg – Serverless and function containers – Now you see me, now you don't
 
 As we descend to the depths, we find containers with commitment issues. They appear, do their job, and disappear.
 
@@ -100,7 +106,7 @@ As we descend to the depths, we find containers with commitment issues. They app
 - **Google Cloud Functions** – Containers pretending to be functions, but now on Google Cloud.
 - **Alibaba Function Compute** – You get the idea.
 
-## Bottom of the Iceberg – Specialized and Hybrid Platforms – The Swiss Army Knife of Container Hosting
+## Bottom of the iceberg – Specialized and hybrid platforms – The swiss army knife of container hosting
 
 Down here, containers run in ways that make people question your life choices. These platforms let you host containers in environments many fear to tread.
 
@@ -109,7 +115,7 @@ Down here, containers run in ways that make people question your life choices. T
 - **IBM Cloud Code Engine** – Run anything, anywhere, if you can figure it out
 - **Alibaba Elastic Container Instance (ECI)** – Containers that disappear faster than you can say "Jack Ma"
 
-## Below the Iceberg – Containers on the Edge of Reason
+## Below the iceberg – Containers on the edge of reason
 
 In these lightless depths, you want your containers to live life on the edge—literally. Because nothing says "enterprise-ready" like running production workloads on a smart toaster.
 
@@ -126,7 +132,7 @@ In these lightless depths, you want your containers to live life on the edge—l
 - **StarlingX** - Edge computing platform for when 5G and IoT buzzwords aren't enough
 - **ZStack Edge** - Edge computing with Chinese characteristics, now at the edge of the network, too
 
-## The Abyss – Where Containers Fear to Tread
+## The abyss – Where containers fear to tread
 
 And now we reach the darkest depths. For the bravest souls who look at conventional container platforms and think, "Not edgy enough." Here lie the most unusual ways to run containers in production.
 
@@ -140,7 +146,7 @@ And now we reach the darkest depths. For the bravest souls who look at conventio
 - **Azure Cognitive Services in Containers** – Offline AI containers that promise not to become self-aware. Terms and conditions may apply.
 - **Azure DevTest Labs** – Run containerized test environments that self-destruct like Mission Impossible tapes. Perfect for when temporary becomes permanent.
 
-## Beyond the Abyss
+## Beyond the abyss
 
 There you have it, the container iceberg. And I didn't even have room to add the extra cursed ways you can run containers. Here is some of what didn't make it:
 
@@ -148,7 +154,23 @@ There you have it, the container iceberg. And I didn't even have room to add the
 
 - **GitHub Actions et al.** – Ever wanted to run a production service disguised as a CI job? Just label your production API start-up script as "integration_test_step_42", add a `sleep 21600` and a call to retrigger itself, and hope nobody notices your "test" has been running for months. Apply this same trick to AWS CodeBuild, GitLab CI/CD, CircleCI, Azure Pipelines, Travis CI, Bitbucket Pipelines, Drone CI, Jenkins Cloud, TeamCity Cloud, and Google Cloud Build for Bonus points.
 
-## The Final Word
+## Managing your container zoo with pulumi
+
+Whether you're deploying containers to mainstream cloud providers or attempting to run them on quantum computers (really, please let us know how that goes), Pulumi helps you manage it all with real code instead of config file soup. Our [Kubernetes support](/registry/packages/kubernetes/) means you can wrangle your containers wherever they might roam – from AWS to Azure, GCP to Kubernetes, or even that smart toaster you're eyeing for production deployment.
+
+With Pulumi, you get:
+
+- [Cloud-native container orchestration](https://www.pulumi.com/registry/) across all major platforms and Kubernetes distributions
+- [Infrastructure testing](/docs/iac/concepts/testing/) to ensure your containers deploy correctly (even in the weird places)
+- [Provider templates](/blog/pulumi-go-boilerplate-v2/) for when you invent yet another way to run containers
+- [Stack references](/docs/concepts/stack/#stackreferences) for managing multiple environments without losing your mind
+- [Automation API](/docs/iac/packages-and-automation/automation-api/) for programmatically herding your container fleets
+
+Ready to bring some sanity to your container deployment strategy? Get started with Pulumi:
+
+{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
+
+## The final word
 
 At this point, **105** options in, you might wonder: "Has cloud container hosting gone too far?" Well, I've a solution to propose:
 

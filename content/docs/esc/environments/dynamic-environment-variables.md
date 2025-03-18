@@ -8,7 +8,7 @@ menu:
     name: Dynamic environment variables
     identifier: esc-dynamic-environmeant-variables
     parent: esc-environments
-    weight: 4
+    weight: 5
 ---
 
 The Pulumi ESC CLI includes a [`run` command](/docs/esc-cli/commands/esc_run/) that allows you to run commands with Pulumi ESC managed environment variables, without exporting them to your shell.

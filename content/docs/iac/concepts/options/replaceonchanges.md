@@ -63,7 +63,7 @@ widget = apiextensions.CustomResource("widget",
 {{% choosable language go %}}
 
 ```go
-widget, err = apiextensions.NewCustomResource(ctx, "widgt", &apiextensions.CustomResourceArgs{
+widget, err = apiextensions.NewCustomResource(ctx, "widget", &apiextensions.CustomResourceArgs{
     ApiVersion: pulumi.String("acmecorp.com/v1alpha1"),
     Kind:       pulumi.String("Widget"),
     OtherFields: kubernetes.UntypedArgs{

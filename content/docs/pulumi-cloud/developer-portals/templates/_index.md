@@ -9,9 +9,6 @@ menu:
     parent: pulumi-cloud-developer-portals
     weight: 1
     identifier: pulumi-cloud-developer-portals-organizational-templates
-  pulumicloud:
-    weight: 1
-    parent: developer-portals
 ---
 
 {{% notes "info" %}}

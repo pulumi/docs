@@ -69,6 +69,7 @@ export class Choosable {
         this.mode = "global";
 
         if (this.mode === "global") {
+            // @ts-ignore-next-line
             this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
                 const {
                     preferences: { language, k8sLanguage, os, cloud, persona, backend },

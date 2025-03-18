@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted-deployment-options
         weight: 1
         identifier: pulumi-cloud-admin-self-hosted-deployment-options-quickstart-docker-compose
-    pulumicloud:
-        parent: deployment-options
-        weight: 1
 aliases:
   - /docs/guides/self-hosted/quickstart-docker-compose/
   - /docs/pulumi-cloud/self-hosted/deployment-options/quickstart-docker-compose/

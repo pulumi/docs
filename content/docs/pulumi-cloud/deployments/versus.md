@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 10
     identifier: pulumi-cloud-deployments-versus
-  pulumicloud:
-    parent: deployments
-    weight: 7
 aliases:
   - /docs/intro/deployments/versus/
 ---

@@ -9,6 +9,8 @@ menu:
     weight: 1
 expanded_menu_ids:
     - esc-environments
+    - esc-integrations
+    - esc-development
 aliases:
   - /docs/pulumi-cloud/esc/
 

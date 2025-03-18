@@ -18,22 +18,23 @@ The `aws-secrets` provider enables you to dynamically import Secrets from AWS Se
 ## Example
 
 ```yaml
-aws:
-  login:
-    fn::open::aws-login:
-      oidc:
-        roleArn: arn:aws:iam::123456789:role/esc-oidc
-        sessionName: pulumi-environments-session
-  secrets:
-    fn::open::aws-secrets:
-      region: us-west-1
-      login: ${aws.login}
-      get:
-        api-key:
-          # Secret name as shown in the AWS Console, or secret ARN:
-          secretId: api-key
-        app-secret:
-          secretId: app-secret
+values:
+  aws:
+    login:
+      fn::open::aws-login:
+        oidc:
+          roleArn: arn:aws:iam::123456789:role/esc-oidc
+          sessionName: pulumi-environments-session
+    secrets:
+      fn::open::aws-secrets:
+        region: us-west-1
+        login: ${aws.login}
+        get:
+          api-key:
+            # Secret name as shown in the AWS Console, or secret ARN:
+            secretId: api-key
+          app-secret:
+            secretId: app-secret
 ```
 
 ## Configuring OIDC

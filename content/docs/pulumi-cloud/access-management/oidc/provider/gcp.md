@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-oidc-provider
     weight: 3
     identifier: pulumi-cloud-access-management-oidc-provider-gcp
-  pulumicloud:
-    parent: openid-connect-provider
-    weight: 1
-
 aliases:
 - /docs/guides/oidc/provider/gcp
 - /docs/intro/deployments/oidc/provider/gcp/
@@ -150,7 +146,7 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 2. Open the stack's "Settings" tab.
 3. Choose the "Deploy" panel.
 4. Under the "OpenID Connect" header, toggle "Enable Google Cloud Integration".
-5. Enter the numerical ID of your Google Cloud project in the "Project ID" field.
+5. Enter the numerical ID of your Google Cloud project in the "Project Number" field.
 6. Enter the workload pool ID, identity provider ID, and service account email address in the "Workload Pool ID", "Identity Provider ID", and "Service Account Email Address" fields.
 7. If desired, enter the stack's Google Cloud region in the "Region" field. This is typically unnecessary.
 8. If you would like to constrain the duration of the temporary Google Cloud credentials, enter a duration in the form "XhYmZs" in the "Session Duration" field.
@@ -166,9 +162,9 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 2. Click the **Create environment** button.
 3. Provide a project to create your new environment in and a name for your environment.
     * This should be the same as the identifier provided in the subject claim of your federated credentials.
-4. Click the  **Create environment** button.
+4. Click the **Create environment** button.
   {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
-5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
+5. You will be presented with a split-pane document and table view. Delete the default placeholder content in the editor and replace it with the following code:
 
     ```yaml
     values:

@@ -68,7 +68,7 @@ values:
 
 ### Dynamic and Projected Values
 
-Dynamic secrets are defined in YAML as provider references. The interpolation mechanism can also be used to *project* these any ESC values as environment variables or files.
+Dynamic secrets are defined in YAML as provider references. The interpolation mechanism can also be used to *project* these ESC values as environment variables or files.
 
 **Example:** *Defining dynamic secrets and projecting environment variables.*
 

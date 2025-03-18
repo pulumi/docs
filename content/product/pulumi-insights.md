@@ -6,7 +6,6 @@ meta_desc: Pulumi Insights is Intelligent Cloud Management. Gain security, compl
 
 aliases:
 - /insights
-- /product/waitlist/
 
 overview:
     header: Intelligent Cloud Management
@@ -58,9 +57,9 @@ features:
     subheader: Converse about your infrastructure
     body: Pulumi Copilot makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question. 
     graphic: /images/product/insights-copilot.png
-  - header: Scan & Sync AWS Resources
-    subheader: Gain Visibility Across All Your AWS Resources
-    body: Pulumi Insights scans and syncs your entire AWS infrastructure, including resources not managed Pulumi IaC. This brings all the features of Pulumi Insights to all your organization’s cloud infrastructure.
+  - header: Scan & Sync
+    subheader: Gain Visibility Across All Your Cloud Resources
+    body: Pulumi Insights scans and syncs your entire cloud infrastructure, including resources not managed Pulumi IaC. This brings all the features of Pulumi Insights to all your organization’s cloud infrastructure.
     graphic: /images/product/insights-scan-sync.png
 
 ai:

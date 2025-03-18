@@ -6,7 +6,7 @@ meta_desc: This page provides an overview on how to use Pulumi ESC Go SDK.
 menu:
   esc:
     parent: esc-languages-sdks
-    identifier: go-sdk
+    identifier: esc-go-sdk
     weight: 3
 aliases:
   - /docs/esc/sdk/go/
@@ -17,7 +17,7 @@ The [Go SDK](https://github.com/pulumi/esc-sdk) for [Pulumi ESC (Environments, S
 Here are some of the scenarios the SDK can automate:
 
 * List environments and read environment definitions
-* Open enviroments to access config and resolve secrets
+* Open environments to access config and resolve secrets
 * Create, update, decrypt, and delete environment definitions
     * Supports both structured types and yaml text
 * List environment revisions and create new revision tags
@@ -170,3 +170,7 @@ func main() {
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Documentation
+
+* [API Reference Documentation](https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go)

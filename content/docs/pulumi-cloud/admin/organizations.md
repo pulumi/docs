@@ -10,8 +10,6 @@ menu:
         parent: pulumi-cloud-admin
         weight: 1
         identifier: pulumi-cloud-admin-organizations
-    pulumicloud:
-        weight: 2
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/
@@ -164,7 +162,7 @@ members that they can add or invite to the Pulumi organization.
 Pulumi Enterprise and Business Critical provide support for any SAML 2.0-based identity provider.
 
 * [SAML-based configuration guide](/docs/pulumi-cloud/access-management/saml/)
-* [Azure Active Directory](/docs/pulumi-cloud/access-management/saml/aad/)
+* [Microsoft Entra ID](/docs/pulumi-cloud/access-management/saml/entra/)
 * [Google Workspace](/docs/pulumi-cloud/access-management/saml/gsuite/)
 * [Auth0](/docs/pulumi-cloud/access-management/saml/auth0/)
 * [Okta](/docs/pulumi-cloud/access-management/saml/okta/)

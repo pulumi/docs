@@ -82,7 +82,7 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make ensure` resolves and installs all dependencies
 * `make lint` checks all Markdown files for correctness
 * `make format` formats all applicable files to ensure they conform to style guidelines
-* `make serve` runs the Hugo server locally at http://localhost:1313 and watches for changes
+* `make serve` runs the Hugo server locally at http://localhost:1313 and watches for changes. You can set `BUILD_FUTURE=false` to simulate production behavior by excluding future-dated content (e.g., `BUILD_FUTURE=false make serve`)
 * `make serve-all` does the same as `make serve`, but also watches for changes to CSS and JS source files
 * `make build` generates the website and writes it to `./public`
 * `make build-assets` builds only the CSS and JavaScript asset bundles

@@ -1,8 +1,9 @@
 ---
 title: "When to Use Cosmos DB"
 date: 2024-11-11T17:39:54-05:00
+updated: 2025-03-11
 draft: false
-meta_desc: A practical guide comparing Azure Cosmos DB with PostgreSQL, MongoDB, Cassandra, and DynamoDB, helping you decide when to use—or avoid—each database option.
+meta_desc: Discover when to use Cosmos DB and how it compares with PostgreSQL, MongoDB, Cassandra, and DynamoDB. Learn about scalability, performance, cost & use cases.
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -12,8 +13,6 @@ social:
     twitter:
     linkedin:
 
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
 ---
 
 When should you use Cosmos DB on Azure? It's a hard question to answer.
@@ -23,9 +22,9 @@ Azure Cosmos DB tries to do it all - which makes it both powerful and, honestly,
 I'm going to break all that down. Here's a roadmap:
 
 <!--more-->
-![Artcle Roadmap](roadmap.png)
+![Roadmap depicting stages when to use Azure Cosmos DB in comnparison to relational, Mongo, Cassandra, and Dynamo databases, in addition to recommedations](roadmap.png)
 
-## TLDR
+## TL;DR
 
 The short version is: **you should use it on Azure when you'd use DynamoDB on AWS.** That's to say, you should use it when you're OK with being cloud-specific, when you want hands-off scalability, and when you know the query pattern and potential cost ramifications ahead of time.
 
@@ -33,9 +32,9 @@ The short version is: **you should use it on Azure when you'd use DynamoDB on AW
 
 But let's start at the beginning.
 
-## What is Cosmos DB
+## What is Cosmos DB? Features & Architecture Explained
 
-Cosmos DB is Microsoft high availability distributed database. First released as DocumentDB in 2014 and rebranded to Cosmos DB in 2017, its used interally at MS for Bing and Office 365 and available on Azure in all regions.
+[Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db) is Microsoft high availability distributed database. First released as DocumentDB in 2014 and rebranded to Cosmos DB in 2017, its used interally at MS for Bing and Office 365 and available on Azure in all regions.
 
 ## Types Of Databases
 
@@ -51,7 +50,7 @@ Different databases are good at different things. Relational databases focus on 
 
 Cosmos DB can look like each of those categories. This is because it's a multi-model DB, with a number of APIs that correspond to each model type. Despite it having a SQL interface (often recognized as the most used and recommended interface), and despite it purporting to be multi-model, at its lowest layer, it is actually backed by a document-based storage layer. It is a powerful document database, one with tunable consistency, distribution by logical and physical partition, and more, but it's helpful to know how the storage layer works to understand everything else. I'm going to show some examples, but first let's clear up what Cosmos DB is not.
 
-![Cosmos DB APIs](apis.png)
+![Diagram showing Azure Cosmos DB’s multi-model architecture. SQL, MQL, and CQL interact via NoSQL, MongoDB, and Cassandra APIs, converting data into JSON for storage in DocumentDB’s JSON-based ARS format.](apis.png)
 
 {{% notes type="info" %}}
 If you are going to use Cosmos DB, you should probably be using the Core API, also called the "API for NoSQL". It's the quickest to get new features. Confusingly, despite being called a NoSQL API, data is queried and added using SQL.
@@ -63,7 +62,7 @@ This is a personal opinion, but if you have a use case that is well served by a 
 
 If you grab our [CosmoDB how to guide](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/azure-cs-cosmosdb-logicapp/) and `pulumi up`, you'll see from that, the first hint of its [document roots](https://github.com/pulumi/examples/blob/master/azure-cs-cosmosdb-logicapp/MyStack.cs#L6) in that the pulumi namespace is `Pulumi.AzureNative.DocumentDB`, but it goes deeper because although I can insert and select with sql in Cosmos DB, there is no schema.
 
-### Cosmos DB NoSQL Inserting and Querying
+### How to Insert & Query Data in Cosmos DB NoSQL
 
 If I insert this customer:
 
@@ -157,9 +156,9 @@ With MongoDB, you're setting up shards, configuring keys, and managing replica s
 
 In Cosmos DB, scaling and partitioning are more hands-off – you just have to enable 'automatic scaling' – but you need the correct partition key from the start. So you need to understand your access patterns and be aware that 'automatic scaling' does what it says, but costs will increase as you scale.
 
-## Cosmos DB Partitions
+## How Cosmos DB Partitions & Scales Data Efficiently
 
-![Partitioning vs Shards](shards.png)
+![Diagram comparing MongoDB sharding and Cosmos DB partitioning. MongoDB uses config servers and a Mongos router to distribute data across shards with replica sets, while Cosmos DB partitions data into logical partitions mapped to physical partitions via its managed service.](shards.png)
 
 In MongoDB, a shard is a collection of data stored on a specific server, used to distribute data across multiple servers for horizontal scaling. Partitioning is really an improvement on this idea. Cosmos separates partitions into logical and physical partitions. You choose the logical partitions only and leave the DB to decide the best way to group these onto specific physical servers. The physical groupings are physical partitions, and the system manages scaling by handling data distribution across physical partitions without user intervention.
 
@@ -170,7 +169,7 @@ In MongoDB, a shard is a collection of data stored on a specific server, used to
 
 ### Comparison To MongoDB
 
-| Feature                       | MongoDB Sharding                                  | Cosmos DB Partitioning                      |
+| **Feature**                       | **MongoDB Sharding**                                  | **Cosmos DB Partitioning**                      |
 |-------------------------------|--------------------------------------------------|---------------------------------------------|
 | **Data Distribution**          | Manual sharding with shard key and replica sets  | Automatic partitioning with partition key   |
 | **Scaling**                    | Manual scaling (add shards)                      | Automatic scaling (Azure-managed)           |
@@ -198,6 +197,8 @@ See also [Cosmos DB vs MongoDB, Know The Differences](/what-is/cosmos-db-vs-mong
 {{< figure alt="" src="cassandra.png" width=75% >}}
 
 After learning about partitioning and seeing the Cassandra API, you might think Cosmos DB is basically managed by Cassandra. And there are some key similarities. In many ways, Cosmos DB is Cassandra-inspired, but there are key differences.
+
+{{< related-posts >}}
 
 ### How Cosmos DB and Cassandra Relate
 
@@ -239,7 +240,7 @@ foreach (var row in results)
 
 ```
 
-### When to Use
+### When to Use Cassandra Vs Cosmos DB
 
 - **Cassandra**: Use when you need control and can manage partitioning and scaling manually.
 - **Cosmos DB**: Use when you want hands-off scalability and a fully managed service with the option to use Cassandra-like APIs.
@@ -281,7 +282,7 @@ While both offer similar functionality, Cosmos DB's advanced features will cost 
 
 ## When Cosmos DB Makes Sense
 
-![Pros And Cons](pro-con.png)
+![Diagram outlining the pros and cons of Cosmos DB. Pros include scale, flexibility, and consistency, while cons include cost, tooling limitations, and vendor lock-in.](pro-con.png)
 
 OK, I think all these comparisons give us a solid grounding to talk about trade-offs. So, with all this in mind, when should you use Cosmos DB?
 
@@ -313,6 +314,22 @@ Since this article came out, I've had a chance to talk to several Cosmos DB user
 
 - **Guaranteed Low Latency:** Cosmos DB offers SLAs on read and write latency (<10ms P99), a guarantee few other databases can match.  This speed is achieved by co-locating compute and storage on the same cluster, minimizing data access times.
 {{% /notes %}}
+
+## Managing Database Infrastructure with Pulumi
+
+Whether you choose Cosmos DB, PostgreSQL, or Azure Table Storage Pulumi simplifies the process of provisioning and managing database infrastructure on Azure. With infrastructure as code in your favorite programming languages, you can define, deploy, and maintain your entire database infrastructure using familiar development practices. Pulumi's [Azure Native provider](/docs/iac/clouds/aws/) helps you implement the right database solution for your specific needs.
+
+With Pulumi, you get:
+
+- [Rich Azure database provisioning](/docs/iac/clouds/azure/) capabilities for Cosmos DB, PostgreSQL, and Azure SQL
+- [Automated configuration management](/docs/iac/concepts/config/) to handle connection strings and secrets securely
+- [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your database configuration before deployment
+- [Stack references](/docs/concepts/stack/#stackreferences) for managing multiple database environments
+- [Custom components](/docs/concepts/resources/components/) for creating reusable database infrastructure patterns
+
+Ready to streamline your database infrastructure management?
+
+{{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
 
 ## Summary
 

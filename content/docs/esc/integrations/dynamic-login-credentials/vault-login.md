@@ -19,6 +19,7 @@ The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID
 ## Examples
 
 ```yaml
+values:
   vault:
     login:
       fn::open::vault-login:
@@ -28,6 +29,7 @@ The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID
 ```
 
 ```yaml
+values:
   vault:
     login:
       fn::open::vault-login:

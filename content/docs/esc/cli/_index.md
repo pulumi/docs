@@ -26,7 +26,7 @@ The Pulumi ESC CLI is open source and free to use:
 
 The most common commands in the CLI that you'll be using are as follows:
 
-* [esc env](//docs/esc/cli/commands/esc_env/) - Manage environments
+* [esc env](/docs/esc/cli/commands/esc_env/) - Manage environments
 * [esc env diff](/docs/esc/cli/commands/esc_env_diff/) - Show the difference between versions of an environment
 * [esc env edit](/docs/esc/cli/commands/esc_env_edit/) - Edit an environment definition
 * [esc env get](/docs/esc/cli/commands/esc_env_get/) - Get a value within an environment
@@ -46,7 +46,7 @@ The most common commands in the CLI that you'll be using are as follows:
 To see a full list of Pulumi ESC CLI commands, you can run the following command:
 
 ```bash
-pulumi esc --help
+esc --help
 ```
 
 For more detailed help on a specific command, you can append `--help` to any command.

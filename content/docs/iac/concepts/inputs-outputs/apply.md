@@ -625,7 +625,7 @@ vpc.vpc_id.apply(lambda id: print('VPC ID:', id))
 ```
 
 {{% notes %}}
-**A note on error handling** The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accomodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. Error handling may also be achieved using an `error` `chan`.
+**A note on error handling** The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accommodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. Error handling may also be achieved using an `error` `chan`.
 {{% /notes %}}
 
 {{% /choosable %}}
@@ -982,7 +982,7 @@ export const InstanceUrl = url;
 {{< example-program-snippet path="aws-ec2-instance-with-sg" language="python" from="17" to="20" >}}
 {{< example-program-snippet path="aws-ec2-instance-with-sg" language="python" from="22" to="22" >}}
 
-url = instance.public_dns.apply(
+url = server.public_dns.apply(
     lambda dns_name: "https://" + dns_name
 )
 

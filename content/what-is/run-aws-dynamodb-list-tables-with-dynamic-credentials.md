@@ -71,7 +71,7 @@ Once you have OIDC configured between Pulumi and AWS, the next step is to create
 
 ### Step 4: Add the AWS provider integration
 
-Once you’ve created your new environment, you will be presented with a split-pane editor view.
+Once you’ve created your new environment, you will be presented with a split-pane document view.
 
 - Clear out the default placeholder content in the editor on the left-hand side.
 - Replace it with the following code, making sure to replace `<your-oidc-iam-role-arn>` with the value of your IAM role ARN from the configure OIDC step:

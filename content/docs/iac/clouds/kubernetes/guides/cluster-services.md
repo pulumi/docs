@@ -350,7 +350,7 @@ Enable logging for the control plane, and monitoring of all metrics in the
 ```ts
 import * as azure from "@pulumi/azure";
 
-// Enable the Monitoring Diagonostic control plane component logs and AllMetrics
+// Enable the Monitoring Diagnostic control plane component logs and AllMetrics
 const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting(name, {
     logAnalyticsWorkspaceId: config.logAnalyticsWorkspaceId,
     targetResourceId: config.clusterId,

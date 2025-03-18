@@ -10,7 +10,7 @@ aliases:
 - /docs/clouds/aws/get-started/modify-program/
 ---
 
-Now that your S3 bucket is provisioned, let's add a file to it. First, from within your project directory, create a new file called `index.html` file along with some content:
+Now that your S3 bucket is provisioned, let's add a file to it. First, from within your project directory, create a new file called `index.html` along with some content:
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -52,7 +52,7 @@ echo '<html>
 
 {{% /choosable %}}
 
-Now, open the program and add this file to the S3 bucket. To do this, you'll use Pulumi's `FileAsset` resource to assign the content of the file to a new  `BucketObject`:
+Now, open the program and add this file to the S3 bucket. To do this, you'll use Pulumi's [`FileAsset`](/docs/iac/concepts/assets-archives/#assets) to assign the content of the file to a new  [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/):
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
@@ -72,7 +72,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
 
 {{% choosable language typescript %}}
 
-In `index.ts`, create the `BucketObject` right after creating the bucket itself:
+In `index.ts`, create the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) right after creating the bucket itself:
 
 ```typescript
 // Create an S3 Bucket object
@@ -101,12 +101,12 @@ bucketObject = s3.BucketObject(
 
 {{% choosable language go %}}
 
-In `main.go`, create the `BucketObject` right after creating the bucket itself:
+In `main.go`, create the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) right after creating the bucket itself:
 
 ```go
 // Create an S3 Bucket object
 _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
-    Bucket:  bucket.ID(),
+    Bucket: bucket.ID(),
     Source: pulumi.NewFileAsset("./index.html"),
 })
 if err != nil {
@@ -118,7 +118,7 @@ if err != nil {
 
 {{% choosable language csharp %}}
 
-In `Program.cs`, create a new `BucketObject` right after creating the bucket itself.
+In `Program.cs`, create a new [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) right after creating the bucket itself.
 
 ```csharp
 // Create an S3 Bucket object
@@ -133,7 +133,7 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 
 {{% choosable language java %}}
 
-In {{< langfile >}}, import the `FileAsset`, `BucketObject`, and `BucketObjectArgs` classes, then create the `BucketObject` right after creating the bucket itself.
+In {{< langfile >}}, import the [`FileAsset`](/docs/iac/concepts/assets-archives/#assets), [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/), and `BucketObjectArgs` classes, then create the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) right after creating the bucket itself.
 
 ```java
 package myproject;
@@ -170,7 +170,7 @@ public class App {
 
 {{% choosable language "yaml" %}}
 
-In {{< langfile >}}, create the `BucketObject` right below the bucket itself.
+In {{< langfile >}}, create the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) right below the bucket itself.
 
 ```yaml
 name: quickstart
@@ -197,9 +197,9 @@ outputs:
 
 {{% /choosable %}}
 
-This bucket object is part of the `Bucket` that we deployed earlier because we _reference_ the bucket name in the properties of the bucket object.
+This bucket object is part of the [`Bucket`](/registry/packages/aws/api-docs/s3/bucket/) that we deployed earlier because we _reference_ the bucket name in the properties of the bucket object.
 
-We refer to this relationship as the `BucketObject` being a _child_ resource of the S3 `Bucket` that is the _parent_ resource. This is how Pulumi knows what S3 bucket the object should live in.
+We refer to this relationship as the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) being a _child_ resource of the S3 `Bucket` that is the _parent_ resource. This is how Pulumi knows what S3 bucket the object should live in.
 
 Next, you'll deploy your changes.
 

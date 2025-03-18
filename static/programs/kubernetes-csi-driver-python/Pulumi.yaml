@@ -1,0 +1,11 @@
+name: kubernetes-csi-driver-python
+description: Example on how to deploy the Pulumi ESC CSI Provider
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-python

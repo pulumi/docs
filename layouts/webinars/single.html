@@ -15,9 +15,9 @@
             <div class="md:mx-auto w-full">
                 <a><div class=""></div></a>
                 {{ if .Params.main.youtube_url }}
-                    <a href="/resources/#on-demand"><div class="text-blue-600 mb-4"><i class="fa fa-arrow-left mr-2"></i>All on-demand recordings</div></a>
+                    <a href="/events/#on-demand"><div class="text-blue-600 mb-4"><i class="fa fa-arrow-left mr-2"></i>All on-demand recordings</div></a>
                 {{ else }}
-                    <a href="/resources/#upcoming"><div class="text-blue-600 mb-4"><i class="fa fa-arrow-left mr-2"></i>All upcoming events</div></a>
+                    <a href="/events/#upcoming"><div class="text-blue-600 mb-4"><i class="fa fa-arrow-left mr-2"></i>All upcoming events</div></a>
                 {{ end }}
                 <span class="font-medium">{{ .Params.main.event_type | upper }}</span>
                 <span class="text-gray-300">&#8226;</span>

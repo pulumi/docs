@@ -33,7 +33,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-base text-gray-700 mb-6">
-                                            {{ $item.Description }}
+                                           {{ $item.Description | markdownify }}
                                         </p>
                                         <div class="inline-flex flex-wrap gap-2 text-sm">
                                             {{ $estimated_time := 0 }}

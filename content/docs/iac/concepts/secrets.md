@@ -17,7 +17,7 @@ aliases:
 - /secrets/
 ---
 
-All resource input and output values are recorded as stack [_state_](/docs/concepts/state) and stored in Pulumi Cloud, in a state file, or in your self-managed [backend](/docs/concepts/state/) of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, however, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.
+All resource input and output values are recorded as stack [_state_](/docs/concepts/state) and stored in Pulumi Cloud, in a state file, or in your DIY backend of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, however, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.
 
 Pulumi Cloud transmits and stores entire state files securely, but Pulumi also supports encrypting individual values as _secrets_ for additional protection. Encryption ensures that these values never appear as plain text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
@@ -311,7 +311,7 @@ Password: [secret]
 
 ### Explicitly denote unencrypted values
 
-By default, configuration values are saved in plain text. Given this, there may be times where you need to explictly denote a value as plain text or unencrypted. For example, for security purposes, the Pulumi CLI tries to detect when something that looks like an API token or password is supplied to as a Pulumi configuration value. There are some scenarios where it will incorrectly assume a string is a secret and will alert you in the command line while aborting the task.
+By default, configuration values are saved in plain text. Given this, there may be times where you need to explicitly denote a value as plain text or unencrypted. For example, for security purposes, the Pulumi CLI tries to detect when something that looks like an API token or password is supplied to as a Pulumi configuration value. There are some scenarios where it will incorrectly assume a string is a secret and will alert you in the command line while aborting the task.
 
 To avoid this, you can pass the `--plaintext` flag when creating your configuration value. This flag can be used to indicate that you did not want an encrypted secret.
 
@@ -619,7 +619,7 @@ config:
     secure: AAABAIIlW0ewSuZ1FJxw/+Rpw6BNqTUvGJ30O8WkpL2hB4aPyS7UU68=
 ```
 
-Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/pulumi-cloud/projects-and-stacks/#stack-permissions) to the stack. For self-managed backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
+Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/pulumi-cloud/projects-and-stacks/#stack-permissions) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
 
 It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/cli/commands/pulumi_config_refresh/).
 

@@ -1,0 +1,52 @@
+name: helm-kubernetes-part-one-yaml
+description: Demo Code Part 1 of the Tutorial around Helm in Kubernetes
+runtime: yaml
+template:
+  description: A Pulumi YAML program to deploy a Helm chart onto a Kubernetes cluster
+  config:
+    k8sNamespace:
+      default: nginx-ingress
+      description: The Kubernetes namespace to deploy into
+
+config:
+  # Use this user-supplied value to create a Kubernetes namespace later
+  k8sNamespace:
+    default: nginx-ingress
+    type: string
+
+variables:
+  # Define some labels that will be applied to resources
+  appLabels:
+    app: nginx-ingress
+
+resources:
+  # Create a namespace (name of the namespace supplied by the user)
+  ingressns:
+    type: kubernetes:core/v1:Namespace
+    properties:
+      metadata:
+        labels: ${appLabels}
+        name: ${k8sNamespace}
+  # Use Helm to install the Nginx ingress controller
+  ingresscontroller:
+    type: kubernetes:helm.sh/v3:Release
+    properties:
+      chart: nginx-ingress
+      namespace: ${ingressns.metadata.name}
+      repositoryOpts:
+        repo: https://helm.nginx.com/stable
+      skipCrds: true
+      values:
+        controller:
+          enableCustomResources: false
+          appprotect:
+            enable: false
+          appprotectdos:
+            enable: false
+          service:
+            extraLabels: ${appLabels}
+      version: "0.14.1"
+
+# Export some values for use elsewhere
+outputs:
+  name: ${ingresscontroller.name}

@@ -216,7 +216,7 @@ body.section-registry {
                 }
             }
 
-            @media (min-width: 1280px) {
+            @media (min-width: 1024px) {
                 width: 240px;
                 flex-basis: 240px;
                 box-shadow: none;
@@ -354,7 +354,7 @@ body.section-registry {
                 flex-direction: column;
             }
 
-            @media (min-width: 1280px) {
+            @media (min-width: 1024px) {
                 margin-left: 24px;
                 max-width: 700px;
                 min-width: 0;
@@ -418,7 +418,7 @@ body.section-registry {
                 padding: 8px 0;
             }
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1280px) {
                 width: 240px;
             }
 
@@ -444,7 +444,7 @@ body.section-registry {
         }
 
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1280px) {
             flex-direction: row;
             gap: 24px;
 
@@ -695,7 +695,7 @@ body.section-registry {
             }
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1280px) {
             display: flex;
             flex-direction: column;
             gap: 24px;
@@ -744,7 +744,7 @@ body.section-registry {
             }
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1280px) {
             .accordion-checkbox-table-of-contents,
             label {
                 pointer-events: none;

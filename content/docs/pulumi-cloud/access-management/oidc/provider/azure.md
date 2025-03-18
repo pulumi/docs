@@ -10,10 +10,6 @@ menu:
     parent: pulumi-cloud-access-management-oidc-provider
     weight: 2
     identifier: pulumi-cloud-access-management-oidc-provider-azure
-  pulumicloud:
-    parent: openid-connect-provider
-    weight: 1
-
 aliases:
 - /docs/guides/oidc/provider/azure
 - /docs/intro/deployments/oidc/provider/azure/
@@ -62,7 +58,7 @@ Once you have created your new application registration, you will be redirected 
     * **Issuer:** `https://api.pulumi.com/oidc`
     * **Subject Identifier:** must be a valid subject claim (see examples at the end of this section).
     * **Name:** An arbitrary name for the credential, e.g. "pulumi-oidc-credentials"
-    * **Audience:** This is different between pulumi deployments and ESC. For Deployments this is only the name of your Pulumi organization. For ESC this is the name of your Pulumi organization prefixed with `azure:` (e.g. `azure:{org}`).
+    * **Audience:** This is different between Pulumi deployments and ESC. For Deployments this is only the name of your Pulumi organization. For ESC this is the name of your Pulumi organization prefixed with `azure:` (e.g. `azure:{org}`).
 {{< notes type="info" >}}
 For environments in the `default` project the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
 {{< /notes >}}
@@ -128,7 +124,7 @@ values:
 
 The subject will be `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:project/development:pulumi.user.login:userLogin`. Note how the keys and values are appended along with the prefix.
 
-## Create a Service Principal
+## Create a service principal
 
 To provide Pulumi services the ability to deploy, manage, and interact with Azure resources, you need to associate your Microsoft Entra application with your Subscription or Resource Group.
 
@@ -142,7 +138,7 @@ To provide Pulumi services the ability to deploy, manage, and interact with Azur
 7. Enter the name of the application you created in a previous step, select it from the list, then click **Select**.
 8. Click **Next** and then **Review + assign**.
 
-## Configure OIDC in the Pulumi Console
+## Configure OIDC in the Pulumi console
 
 ### Pulumi Deployments
 
@@ -154,7 +150,7 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 2. Open the stack's **Settings** tab.
 3. Choose the **Deploy** panel.
 4. Under the **OpenID Connect** header, toggle **Enable Azure Integration**.
-5. Enter the client and tenant IDs for the app registration created above in the **Client ID** and **Tenant ID** fields, repsectively.
+5. Enter the client and tenant IDs for the app registration created above in the **Client ID** and **Tenant ID** fields, respectively.
 6. Enter the ID of the subscription you want to use in the **Subscription ID** field.
 7. Click the **Save deployment configuration** button.
 
@@ -170,7 +166,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
     * This should be the same as the identifier provided in the subject claim of your federated credentials.
 4. Click the  **Create environment** button.
   {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
-5. You will be presented with a split-pane editor view. Delete the default placeholder content in the editor and replace it with the following code:
+5. You will be presented with a split-pane view. Delete the default placeholder content in the editor and replace it with the following code:
 
     ```yaml
     values:

@@ -16,7 +16,7 @@ Now let's deploy your changes.
 $ pulumi up
 ```
 
-Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
+Pulumi will run the [`preview`](/docs/iac/cli/commands/pulumi_preview/) step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
 
 ```
 Previewing update (dev):
@@ -124,7 +124,7 @@ Now that `index.html` is in the bucket, update the program to turn the bucket in
 
 ## Update the program
 
-Add a new `BucketWebsiteConfiguration` resource to make `index.html` the home page of the website:
+Add a new [`BucketWebsiteConfiguration`](/registry/packages/aws/api-docs/s3/bucketwebsiteconfigurationv2/) resource to make `index.html` the home page of the website:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
@@ -132,7 +132,7 @@ Add a new `BucketWebsiteConfiguration` resource to make `index.html` the home pa
 
 ```typescript
 const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
-    bucket: myBucket.id,
+    bucket: bucket.id,
     indexDocument: {
         suffix: "index.html",
     },
@@ -144,8 +144,8 @@ const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
 {{% choosable language python %}}
 
 ```python
-website = aws.s3.BucketWebsiteConfigurationV2("website",
-    bucket=my_bucket.id,
+website = s3.BucketWebsiteConfigurationV2("website",
+    bucket=bucket.id,
     index_document={
         "suffix": "index.html",
     })
@@ -157,7 +157,7 @@ website = aws.s3.BucketWebsiteConfigurationV2("website",
 
 ```go
 website, err := s3.NewBucketWebsiteConfigurationV2(ctx, "website", &s3.BucketWebsiteConfigurationV2Args{
-    Bucket: myBucket.ID(),
+    Bucket: bucket.ID(),
     IndexDocument: &s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
         Suffix: pulumi.String("index.html"),
     },
@@ -174,7 +174,7 @@ if err != nil {
 ```csharp
 var website = new Aws.S3.BucketWebsiteConfigurationV2("website", new()
 {
-    Bucket = myBucket.Id,
+    Bucket = bucket.Id,
     IndexDocument = new Aws.S3.Inputs.BucketWebsiteConfigurationV2IndexDocumentArgs
     {
         Suffix = "index.html",
@@ -192,7 +192,7 @@ import com.pulumi.aws.s3.BucketWebsiteConfigurationV2Args;
 import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationV2IndexDocumentArgs;
 
 var website = new BucketWebsiteConfigurationV2("website", BucketWebsiteConafigurationV2Args.builder()
-    .bucket(myBucket.id())
+    .bucket(bucket.id())
     .indexDocument(BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
         .suffix("index.html")
         .build())
@@ -216,9 +216,9 @@ website:
 
 Lastly, you'll make a few adjustments to make these resources accessible on the Internet.
 
-For the bucket itself, you'll need two new resources: a `BucketOwnershipControls` resource, to define the bucket's file-ownership settings, and a `BucketPublicAccessBlock` resource to allow the bucket to be accessed publicly.
+For the bucket itself, you'll need two new resources: a [`BucketOwnershipControls`](/registry/packages/aws/api-docs/s3/bucketownershipcontrols/) resource, to define the bucket's file-ownership settings, and a [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/) resource to allow the bucket to be accessed publicly.
 
-For the `BucketObject`, you'll need an access-control (ACL) setting of `public-read` to allow the page to be accessed anonymously (e.g., in a browser) and a content type of `text/html` to tell AWS to serve the file as a web page. Add the following lines to your program, updating the `BucketObject` in place:
+For the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobjectv2/), you'll need an access-control (ACL) setting of `public-read` to allow the page to be accessed anonymously (e.g., in a browser) and a content type of `text/html` to tell AWS to serve the file as a web page. Add the following lines to your program, updating the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobjectv2/) in place:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
@@ -430,7 +430,7 @@ resources:
 
 {{% /choosable %}}
 
-Note that the `BucketObject` also includes the Pulumi resource _option_ [`dependsOn`](/docs/concepts/options/dependson/). This setting tells Pulumi that the `BucketObject` relies indirectly on the `BucketPublicAccessBlock`, which is responsible for enabling public access to its contents. If you omitted this setting, the attempt to grant `public-read` access to `index.html` would fail, as all S3 buckets and their objects are blocked from public access by default.
+Note that the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobjectv2/) also includes the Pulumi resource option [`dependsOn`](/docs/concepts/options/dependson/). This setting tells Pulumi that the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobjectv2/) relies indirectly on the [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/), which is responsible for enabling public access to its contents. If you omitted this setting, the attempt to grant `public-read` access to `index.html` would fail, as all S3 buckets and their objects are blocked from public access by default.
 
 Finally, at the end of the program, export the resulting bucket’s endpoint URL so you can browse to it easily:
 
@@ -564,7 +564,7 @@ Resources:
 Duration: 8s
 ```
 
-When the deployment completes, you can check out your new website at the URL in the `Outputs` section of your update or make a `curl` request and see the contents of `index.html` in your terminal:
+When the deployment completes, you can check out your new website at the URL in the [`Outputs`](/docs/iac/concepts/inputs-outputs/#outputs) section of your update or make a `curl` request and see the contents of `index.html` in your terminal:
 
 {{% choosable language javascript %}}
 

@@ -1,0 +1,11 @@
+name: helm-kubernetes-part-two-python
+description: Demo Code Part 2 of the Tutorial around Helm in Kubernetes
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-python

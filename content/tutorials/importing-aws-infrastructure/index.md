@@ -44,8 +44,8 @@ prereqs:
 estimated_time: 15
 
 # An optional list of collections this tutorial should be belong to. Collections are defined in data/tutorials/collections.yaml.
-# collections:
-#     - some-non-existent-collection
+collections:
+    - aws
 
 aliases:
 - /tutorials/importing-infrastructure
@@ -55,7 +55,7 @@ aliases:
 
 To start, login to the [AWS Console](https://console.aws.amazon.com/s3) and [create a new S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html). You can create the bucket using default settings, making sure to provide a globally unique name for the bucket. For the purposes of this tutorial, we have created an S3 bucket named `pulumi-import-tutorial-bucket`.
 
-{{< video title="Creating S3 Bucket in AWS" src="/tutorials/importing-infrastructure/aws-console-create-s3-bucket.mp4" autoplay="true" loop="true" >}}
+{{< video title="Creating S3 Bucket in AWS" src="/tutorials/importing-aws-infrastructure/aws-console-create-s3-bucket.mp4" autoplay="true" loop="true" >}}
 
 Then, login to the [Pulumi CLI](/tutorials/cli-authentication/) and ensure it is [configured to use your AWS account](/docs/iac/get-started/aws/begin/#configure-pulumi-to-access-your-aws-account).
 

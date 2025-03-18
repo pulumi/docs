@@ -11,10 +11,6 @@ menu:
     parent: pulumi-cloud-access-management-saml
     weight: 4
     identifier: pulumi-cloud-access-management-saml-gsuite
-  pulumicloud:
-    parent: saml
-    weight: 2
-
 aliases:
 - /docs/reference/service/saml-gsuite/
 - /docs/console/accounts/saml/gsuite/

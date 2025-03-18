@@ -4,7 +4,46 @@ set -o errexit -o pipefail
 
 source ./scripts/programs/common.sh
 
+# The directory containing the example code programs to test.
 programs_dir="static/programs"
+
+# Directories that need to be tested
+dirs_to_test=( $(find "${programs_dir}" -maxdepth 1 -type d -not -path '*/\.*' -not -path "${programs_dir}") )
+# Track projects that failed tests
+failed_projects=()
+# Track projects that passed tests
+passing_projects=()
+
+# Get the list of changed directories in the static/programs directory. 
+if [[ "$TEST_MODE" == "pull_request" ]]; then
+
+    # Clear the dirs_to_test array  
+    dirs_to_test=()
+    # Get the list of changed directories in the static/programs directory.
+    git_changes="$(git diff --name-only master)"
+    # Filter out only the static/programs directories from the git diff output.
+    # Use or true to ignore grep errors when grep comes up empty.
+    grep_result="$(echo "$git_changes" | grep "^static/programs/" || true)"
+    # Extract only the program directory from the git diff output.
+    dirs="$(echo "$grep_result" | cut -d'/' -f3)"
+    # Pipe to sort and uniq to deduplicate the list of directories.
+    programs="$(echo "$dirs" | sort | uniq)"
+    
+    # If there are programs to test, add them to the dirs_to_test array.
+    if [[ -n "$programs" ]]; then
+        while IFS= read -r line; do
+            dirs_to_test+=("$line")
+        done <<< "$programs"
+    fi
+
+    echo "Number of programs to test: ${#dirs_to_test[@]}"
+
+    # Check if the array is empty and if it is exit.
+    if [[ ${#dirs_to_test[@]} -eq 0 ]]; then
+        echo "No new programs to test in static/programs directories."
+        exit 0
+    fi
+fi
 
 # Delete install artifacts.
 git clean -fdX "${programs_dir}/*"
@@ -24,11 +63,31 @@ else
     org="$(pulumi whoami -v --json | jq -r .user)"
 fi
 
+# The ignore file contains a list of programs to skip.
+ignore_file="$(pwd)/scripts/programs/ignore.txt"
+
 pushd "$programs_dir"
     found_first_program=false
 
-    for dir in */; do
+    # Iterate over the dirs_to_test array and test each program.
+    for dir in "${dirs_to_test[@]}"; do
         project="$(basename $dir)"
+
+        # Skip programs listed in the ignore.txt file
+        if [ -f "${ignore_file}" ]; then
+            # yes this is a nested loop, but in practice it accounts for a negligible amount of time
+            # compared to the rest of the overall test process.
+            while IFS= read -r pattern; do
+                # Skips empty lines and comments to allow for comments in the ignore.txt file.
+                [[ -z "$pattern" || "$pattern" =~ ^[[:space:]]*# ]] && continue
+                
+                if [[ "$project" =~ ^${pattern}$ ]]; then
+                    echo "Skipping ${project} (matches '${pattern}' in ignore.txt file)"
+                    # continue 2 means exit this loop as well as the outer loop.
+                    continue 2
+                fi
+            done < "${ignore_file}"
+        fi
 
         # Optionally test only selected examples by setting an ONLY_TEST="<example-path>"
         # environment variable (e.g., ONLY_TEST="awsx-ecr-repository").
@@ -47,45 +106,32 @@ pushd "$programs_dir"
             fi
         fi
 
-        # Skip programs we know don't compile.
-
-        # API Gateway authorizer parameter `providerArns` is mistyped.
-        # https://github.com/pulumi/pulumi-aws-apigateway/issues/121
-        if [[ "$project" == "awsx-apigateway-auth-cognito-java" ]]; then
-            continue
-        fi
-        # Skipping - for now this code is not consumed anywhere and needs some updates.
-        if [[ "$project" == "aws-import-iac-iam-role-"* ]]; then
-            continue
-        fi
-
         echo
         echo "***"
         echo "* $project"
         echo "***"
         echo
 
+        # Check for a Makefile. If one exists, run `make test`, otherwise,
+        # try to run as a Pulumi program
+        makefile="${project}/Makefile"
+        if [ -f "${makefile}" ]; then
+            echo "File ${makefile} exists. Running 'make test' in ${dir} "
+            if ! make -C ${project} test; then
+                failed_projects+=("$project")
+                continue
+            fi
+
+            passing_projects+=("$project")
+            continue
+        fi
+
         stack="dev"
         fqsn="${org}/${project}/${stack}"
 
         # Install dependencies.
-        pulumi -C "$project" install
-
-        # Skip programs we know don't successfully preview.
-
-        # Java examples of FargateService erroneously complain about missing container declarations.
-        # https://github.com/pulumi/pulumi-awsx/issues/820
-        if [[ "$project" == "awsx-vpc-fargate-service-java" ]]; then
-            continue
-        elif [[ "$project" == "awsx-load-balanced-fargate-ecr-java" ]]; then
-            continue
-        elif [[ "$project" == "awsx-load-balanced-fargate-nginx-java" ]]; then
-            continue
-        fi
-
-        # Custom-domain examples won't work because of the hosted-zone lookup (which will fail unless
-        # the credentials can access the specified Route 53 zone).
-        if [[ "$project" == "awsx-apigateway-custom-domain-"* ]]; then
+        if ! pulumi -C "$project" install; then
+            failed_projects+=("$project")
             continue
         fi
 
@@ -118,14 +164,22 @@ pushd "$programs_dir"
                 continue
             fi
 
-            pulumi -C "$project" up --yes
+            if ! pulumi -C "$project" up --yes; then
+                failed_projects+=("$project")
+                continue
+            fi
         else
-            pulumi -C "$project" preview
+            if ! pulumi -C "$project" preview; then
+                failed_projects+=("$project")
+                continue
+            fi
         fi
 
         # Destroy and remove.
         pulumi -C "$project" destroy --yes --remove
 
+        passing_projects+=("$project")
+        
         # Clean up artifacts.
         git clean -fdX .
     done
@@ -137,4 +191,19 @@ clean_gomods
 if [[ "$mode" == "preview" ]]; then
     unset PULUMI_CONFIG_PASSPHRASE
     pulumi logout --local
+fi
+
+# Report passing and failing projects.
+if [ ${#failed_projects[@]} -ne 0 ]; then
+    echo -e "\n\nThe following projects passed:"
+    for project in "${passing_projects[@]}"; do
+        echo "- $project"
+    done
+    echo -e "\n\nThe following projects failed:"
+    for project in "${failed_projects[@]}"; do
+        echo "- $project"
+    done
+    exit 1
+else
+    echo "All projects passed successfully :)"
 fi

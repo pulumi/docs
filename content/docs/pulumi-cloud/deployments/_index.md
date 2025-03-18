@@ -10,10 +10,6 @@ menu:
     parent: cloud-home
     identifier: pulumi-cloud-deployments
     weight: 3
-  pulumicloud:
-    identifier: deployments
-    weight: 5
-
 aliases:
 - /docs/intro/pulumi-service/deployments/
 - /docs/intro/deployments/
@@ -21,50 +17,64 @@ aliases:
 - /docs/pulumi-cloud/deployments/platform/
 ---
 
-Pulumi Deployments is a fully managed platform for managing infrastructure at scale. Whether you are just getting started in the cloud and want the easiest path to set up secure CI/CD, or are a platform engineer building a self-service platform to support thousands of engineers, Pulumi Deployments is the fastest way to go from code to cloud. We provide the building blocks that enable you to scale your cloud footprint without scaling your headcount, with tools that are designed to power public and private cloud platforms, APIs, and self-service infrastructure portals.
+Pulumi Deployments is a managed CI/CD platform purpose-built for infrastructure as code. It provides everything you need to securely deploy infrastructure changes across your organization, including managed compute, secure secrets handling, and deep integration with version control systems.
 
-It provides:
+## Key features
 
-- **Compute** - run infrastructure deployments and workloads (i.e. `pulumi up`) on fully managed, secure, and elastic compute.
-- **Configuration** - A simple, centralized place to specify everything you need to deploy your infrastructure at the stack level. Source code, cloud credentials, OpenID Connect (OIDC), environment variables, build prerequisites, and dependencies are bundled in an atomic unit.
-- **Composition** - Trigger deployments via our REST API, click to deploy in the Pulumi Cloud UI, Git Push to Deploy, Review Stacks, Remote Automation API, and other programmatic building blocks that you can compose to build custom cloud automation.
+### Managed infrastructure CI/CD
 
-While Pulumi Deployments has some overlap in functionality offered by a traditional CI/CD system (such as GitHub Actions) it is far more flexible and does not have the constraints and limitations of a CI/CD system. When you configure your infrastructure for Deployments, you get to choose what triggers will cause your stack to update. You may choose a `git push` based workflow, as you get with many CI/CD systems, or trigger deployments via the REST API, or choose multiple triggers.
+- **Zero Touch CI/CD**: App teams can select a template from Pulumi Cloud's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) and deploy infrastructure in minutes. Learn how with our [Getting Started guide](/docs/pulumi-cloud/deployments/get-started).
+- **Git Integration**: Automatically preview infrastructure changes on pull requests and deploy on merge with our GitHub integration.
+- **Live Preview Environments**: Each pull request can automatically create a [review stack](/docs/pulumi-cloud/deployments/review-stacks) with real infrastructure, letting you validate changes in a production-like environment before merging.
+- **Secure by Default**: Integration with [Pulumi ESC](/docs/pulumi-cloud/esc) ensures your secrets and cloud credentials are securely handled.
 
-![Pulumi Deployments Platform Architecture](deployments.png)
+### Beyond CI/CD
 
-## Deployment Settings
+- **Drift Detection**: [Automatically detect](/docs/pulumi-cloud/deployments/drift) when your infrastructure differs from its desired state.
+- **Scheduled Operations**: Run any Pulumi operation (up/preview/refresh) on a [schedule](/docs/pulumi-cloud/deployments/schedules).
+- **Temporary Infrastructure**: Automatically tear down development or testing environments with [TTL stacks](/docs/pulumi-cloud/deployments/ttl).
+- **Custom Compute**: Run Pulumi operations on your own infrastructure with [customer-managed agents](/docs/pulumi-cloud/deployments/customer-managed-agents).
 
-Each stack in your organization can be configured with deployment settings that describe everything needed to run an update. Deployment settings turns a stack into an atomic, deployable unit of infrastructure that self-describes all of its requirements and dependencies. That includes:
+### Platform engineering features
 
-- Source Control - the Pulumi program and stack configuration
-- Deployment Prerequisites - custom docker images, build steps, npm package resolution, and acquisition of necessary tools like `ssh`, and environment variables
-- Cloud Auth - IAM roles, OIDC configuration for temporary credentials, and any other identity-related config required to deploy into your cloud of choice
+- **REST API**: Automate infrastructure operations with our [REST API](/docs/pulumi-cloud/deployments/api/) to build custom workflows and self-service platforms.
+- **Deployment Settings**: Define all deployment requirements (source code, credentials, environment variables) in a single configuration, either through the UI or declaratively using the [Pulumi Cloud Provider](/registry/packages/pulumiservice).
+- **Multiple Triggers**: Trigger deployments via git push, REST API, UI button, or schedule to support any workflow.
+- **Best Practices Built-in**: Follow our [deployment patterns](/docs/pulumi-cloud/deployments/reference/) to implement infrastructure automation at scale.
 
-These settings can be configured with the Pulumi Cloud console, Pulumi Cloud REST API, or Pulumi itself using Pulumi Cloud Service provider. The console interface is simple and lets you configure settings in just a few minutes, while the REST API and Pulumi Service provider allows you to build tools on top of Pulumi Deployments such as internal dev portals and service catalogs that help internal users kickstart their infrastructure journey with a secure, best practice workflow.
+## How it works
 
-Once configured, every deployment will inherit stack settings. A one-line POST payload can trigger a new deployment run, without having to restate any configuration or cloud credentials. This means that privileged users can configure deployments, and less privileged users can subsequently trigger updates without having direct access to sensitive credentials and data on their local machines.
+Pulumi Deployments combines three key components to enable secure, scalable infrastructure deployments:
 
-## Deployment Triggers
+1. **Deployment Settings**: Define everything needed to deploy your infrastructure:
 
-Pulumi Deployments offers several triggers that you can compose to build higher-level infrastructure automation. Because each trigger inherits deployment settings, you only have to configure a stack once.
+   - Source code location and branch
+   - Cloud credentials and OIDC configuration
+   - Environment variables and secrets
+   - Build requirements and custom Docker images
 
-- Deployments REST API - an endpoint available at api.pulumi.com that can trigger a variety of pulumi (`up/destroy/refresh/preview`) operations. Calls to this trigger can override individual settings to customize deployment behavior (i.e. - deploy a different branch, or override a particular environment variable).
-- `git push` to Deploy - Deep integration with the Pulumi GitHub App that enables automatic previews on every pull request, and an automated update whenever code is pushed to the target branch.
-- [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) - dedicated cloud environments that get created automatically every time a pull request is opened.
-- Click to Deploy - trigger a deployment from the Pulumi Cloud Console with the push of a button. Very useful for day-to-day operational activities such as debugging a stuck stack, or rectifying drift via a refresh without having to pull a stack and its accompanying source code onto your machine.
-- [Scheduled Deployments](/docs/pulumi-cloud/deployments/schedules) - schedule deployment on a cron schedule or one time deployment.
-- Remote Automation API - Your favorite strongly typed Pulumi orchestration tool, Automation API, lets you offload update workloads into the cloud. Write deployment scripts that update thousands of environments simultaneously without worrying about compute.
+1. **Managed Compute**: Run Pulumi operations on secure, isolated compute instances that:
 
-Triggers can be used together, or not at all. Some users like to use the REST API to trigger deployments from GitHub Actions and disable the built-in `git push` integration. Doing so gives them the flexibility to compose deployment settings, the REST API, and click to deploy into useful platform workflows outside of CI/CD.
+   - Scale automatically with your deployment needs
+   - Handle concurrent deployments across your organization
+   - Provide detailed logs and status updates
+   - Can be replaced with your own compute resources if needed
 
-Deployment settings plus triggers are the key building blocks of the deployment platforms. With them, you can build highly customized infrastructure automation and developer platforms such as service catalogs, drift detection, temporary infrastructure workflows for cost savings, infrastructure REST APIs, and more. These scenarios and more are discussed further with demos and source code.
+1. **Flexible Triggers**: Choose how deployments are initiated:
 
-## Additional features
+   - Git push to deploy
+   - Pull request preview environments
+   - REST API calls
+   - UI-triggered deployments
+   - Scheduled operations
+   - Custom automation via the Remote Automation API
 
-- [Drift](/docs/pulumi-cloud/deployments/drift) - detect drift between the cloud and Pulumi state.
-- [Time to Live](/docs/pulumi-cloud/deployments/ttl) - configure a schedule to automatically tear down resources for a stack.
+## Getting started
 
-## Configuring OpenID Connect (OIDC)
+The fastest way to get started with Pulumi Deployments is to:
 
-Deployments supports connectivity between Pulumi and various cloud providers via OIDC. To learn more about configuring OIDC and trust relationships in Pulumi, please refer to the [Pulumi OIDC documentation](/docs/pulumi-cloud/oidc/).
+1. Create a new project using the Pulumi Cloud [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard), which will automatically configure Deployments for your repository
+1. Follow our [Getting Started guide](/docs/pulumi-cloud/deployments/get-started) to configure an existing project
+1. Explore our [deployment patterns](/docs/pulumi-cloud/deployments/reference/) to implement common infrastructure automation scenarios
+
+[Get Started](/docs/pulumi-cloud/deployments/get-started) today!

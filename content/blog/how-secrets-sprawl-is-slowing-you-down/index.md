@@ -12,9 +12,9 @@ authors:
 - engin-diri
 
 tags:
+- esc
 - secrets-management
 - secrets-sprawl
-- esc
 - pulumi
 
 
@@ -83,6 +83,8 @@ As the company grows, one DevOps engineer is responsible for multiple Kubernetes
 But what if the company grows even more and the team decides to use multiple cloud providers? There are many reasons for this, like costs, different service offerings, and better disaster recovery when using multiple cloud providers.
 
 Sticking to the built-in secrets managers of the cloud providers is not a good idea as it will lead to secrets sprawl.
+
+{{< related-posts >}}
 
 ### Why Pulumi ESC is the right choice for centralized multi-cloud secrets management
 

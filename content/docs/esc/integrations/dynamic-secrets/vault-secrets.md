@@ -18,6 +18,7 @@ The `vault-secrets` provider enables you to dynamically import Secrets from Hash
 ## Example
 
 ```yaml
+values:
   vault:
     login:
       fn::open::vault-login:

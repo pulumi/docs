@@ -33,7 +33,7 @@ Setting up Webhooks is straightforward. You can use the Pulumi Cloud Console, th
 - Select your desired integration (Slack, Microsoft Teams, Pulumi Deployments, or generic JSON Webhooks).
 - Configure the Webhook details, including the events you want to trigger notifications on.
 
-![Key-Value Table Editor](esc-webhooks.png)
+![Table view](esc-webhooks.png)
 
 ### Using Pulumi Service Provider
 

@@ -15,8 +15,8 @@ quote_block:
   quote: |
       "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
   quote_attrib: Matt Stephenson, Senior Principal Software Engineer
-  headline_stat: Two weeks
-  headline: Reduced to three hour deployments
+  headline_stat: Three hour
+  headline: Deployments reduced from two weeks
 
 sections:
     - label: Exec Summary

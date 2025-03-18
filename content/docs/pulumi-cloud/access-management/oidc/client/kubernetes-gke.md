@@ -6,13 +6,10 @@ h1: Configuring OpenID Connect for Google Kubernetes Engine
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: Google Kubernetes Engine
+    name: Google GKE
     parent: pulumi-cloud-access-management-oidc-client
     weight: 2
     identifier: pulumi-cloud-access-management-oidc-client-kubernetes-gke
-  pulumicloud:
-    parent: openid-connect-client
-    weight: 1
 aliases:
 - /docs/pulumi-cloud/oidc/client/kubernetes-gke/
 ---
@@ -66,9 +63,9 @@ const script = new kubernetes.core.v1.ConfigMap("script", {
     data: {
         "entrypoint.sh": `#!/bin/bash
 apt -qq install -y jq
-OIDC_GH_TOKEN=$(</var/run/secrets/pulumi/token)
+OIDC_GKE_TOKEN=$(</var/run/secrets/pulumi/token)
 echo "OIDC Token:"
-echo $OIDC_GH_TOKEN
+echo $OIDC_GKE_TOKEN
 export PULUMI_ACCESS_TOKEN=$(curl -sS -X POST  \
     -H 'Content-Type: application/x-www-form-urlencoded' \
     -d 'audience=${tokenParams.audience}' \
@@ -77,7 +74,7 @@ export PULUMI_ACCESS_TOKEN=$(curl -sS -X POST  \
     -d 'requested_token_type=${tokenParams.token_type}' \
     -d 'expiration=${tokenParams.expiration}' \
     -d 'scope=${tokenParams.scope}' \
-    -d "subject_token=$OIDC_GH_TOKEN" \
+    -d "subject_token=$OIDC_GKE_TOKEN" \
     https://api.pulumi.com/api/oauth/token | jq -r '.access_token')
 echo "Access Token:"
 echo $PULUMI_ACCESS_TOKEN

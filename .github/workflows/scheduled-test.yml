@@ -1,7 +1,10 @@
-name: "Scheduled Jobs: Run Tests"
+name: "Run Example Code Tests"
 on:
   schedule:
     - cron: "0 8 * * *"
+  pull_request:
+    branches:
+      - master
   workflow_dispatch: {}
 
 env:
@@ -12,14 +15,22 @@ env:
   ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
   ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+  GOOGLE_CI_SERVICE_ACCOUNT_EMAIL: pulumi-ci@pulumi-ci-gcp-provider.iam.gserviceaccount.com
+  GOOGLE_CI_WORKLOAD_IDENTITY_POOL: pulumi-ci
+  GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER: pulumi-ci
+  GOOGLE_PROJECT: pulumi-ci-gcp-provider
+  GOOGLE_PROJECT_NUMBER: 895284651812
 
 jobs:
   test:
     runs-on: ${{ matrix.platform }}
+    permissions:
+      contents: read
+      id-token: write
     strategy:
       matrix:
         platform:
-          - pulumi-service-ubuntu-22.04-16core
+          - pulumi-service-ubuntu-24.04-4core
         go-version:
           - 1.21.x
         node-version:
@@ -61,7 +72,7 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.126.0"
+          hugo-version: "0.135.0"
           extended: true
 
       - name: Install Pulumi
@@ -69,6 +80,10 @@ jobs:
 
       - name: Check out the code
         uses: actions/checkout@v3
+
+      - name: Fetch master branch
+        if: github.ref != 'refs/heads/master'
+        run: git fetch origin master:master
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -80,5 +95,33 @@ jobs:
           role-session-name: pulumi-docs-examples@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
 
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/${{ env.GOOGLE_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ env.GOOGLE_CI_SERVICE_ACCOUNT_EMAIL }}
+      
+      - name: Kubernetes KinD Cluster
+        id: kind
+        uses: helm/kind-action@v1
+
       - name: Run the tests
         run: make test
+        env:
+          TEST_MODE: ${{ github.event_name }}
+  notify:
+    # Only send slack notifications for failures during scheduled cron runs.
+    if: (failure() && github.event_name == 'schedule')
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    needs: [test]
+    steps:
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "Failing code example tests in `pulumi/docs` :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png

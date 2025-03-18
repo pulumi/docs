@@ -292,11 +292,6 @@
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    {{- if eq hugo.Environment "production" }}
-        <!-- 6sense -->
-        <script async defer id="6senseWebTag" src="https://j.6sc.co/j/a4dca4b3-351c-4764-bda9-03c5caf5fedf.js"></script>
-    {{- end }}
-
     <!--Segment tracking-->
     <script>
         // Do not load Segment for these user agents.
@@ -485,6 +480,23 @@
             });
         </script>
     {{ end }}
+
+    {{ if .Params.math }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},  // Block
+                    {left: "$", right: "$", display: false}    // Inline
+                ]
+            });
+        });
+    </script>
+    {{ end }}
+
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}
     {{ if and (eq .Type "blog") (eq .BundleType "leaf") .IsPage }}

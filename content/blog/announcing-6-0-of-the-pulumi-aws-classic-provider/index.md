@@ -20,7 +20,7 @@ This blog post walks you through the list of notable changes in the new major ve
 <!--more-->
 
 {{% notes type="info" %}}
-Join Pulumi on Thursday, September 7, 2023 for a live workshop on [getting started with infrastructure as code on AWS](/resources/getting-started-with-iac-pulumi-aws/), which will feature the new AWS 6.0 provider.
+Join Pulumi on Thursday, September 7, 2023 for a live workshop on [getting started with infrastructure as code on AWS](/events/getting-started-with-iac-pulumi-aws/), which will feature the new AWS 6.0 provider.
 {{% /notes %}}
 
 ### Terraform Plugin Framework Support
@@ -65,4 +65,4 @@ You can see a full list of changes and learn more about migrating your existing 
 
 ### Get Started Today
 
-You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Provider](https://github.com/pulumi/pulumi-aws) repository to get started today! And don't forget [to register for the live workshop](/resources/getting-started-with-iac-pulumi-aws/) on September 7, 2023 to see AWS 6.0 in action!
+You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Provider](https://github.com/pulumi/pulumi-aws) repository to get started today! And don't forget [to register for the live workshop](/events/getting-started-with-iac-pulumi-aws/) on September 7, 2023 to see AWS 6.0 in action!

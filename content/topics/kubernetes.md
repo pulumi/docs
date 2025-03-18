@@ -207,8 +207,8 @@ kubernetes_overview:
     list:
         - Manage Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
-        - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/iac/packages-and-automation/continuous-delivery/).
-        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/).
+        - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/iac/using-pulumi/continuous-delivery/).
+        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/).
         - Use Kubernetes [Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) to safely manage shared Kubernetes resources with Pulumi and your existing controllers.
     cta: Learn More
     cta_url: "/blog/new-kubernetes-superpowers"
@@ -227,7 +227,7 @@ superpowers:
 
     - title: Intelligent Cloud Management
       cta: Learn more
-      cta_url: "/docs/pulumi-cloud/insights/"
+      cta_url: "/docs/insights/"
       icon_type: cloud-with-nodes
       icon_color: purple
       description: |
@@ -235,7 +235,7 @@ superpowers:
 
     - title: Automate Delivery
       cta: Learn more
-      cta_url: "/docs/iac/packages-and-automation/continuous-delivery/"
+      cta_url: "/docs/iac/using-pulumi/continuous-delivery/"
       icon_type: delivery
       icon_color: blue
       description: |
@@ -254,7 +254,7 @@ superpowers:
 
     - title: Be Proactive, Not Reactive
       cta: Learn more
-      cta_url: "/docs/iac/packages-and-automation/crossguard/"
+      cta_url: "/docs/iac/using-pulumi/crossguard/"
       icon_type: shield
       icon_color: yellow
       description: |

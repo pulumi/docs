@@ -10,9 +10,6 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 2
     identifier: pulumi-cloud-deployments-reference
-  pulumicloud:
-    parent: deployments
-    weight: 1
 aliases:
   - /docs/intro/deployments/reference/
 ---

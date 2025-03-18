@@ -38,7 +38,7 @@ Both approaches allow you to adopt and begin managing existing cloud resources w
 
 Import uses the selected stack's configured [provider](/docs/concepts/resources/providers/) to look up the desired resource in the cloud provider, read its current configuration, and add the resource to the stack to bring it under management by Pulumi from that point forward. For this, it requires two pieces of information:
 
-* The _type_ of cloud resource to import --- either as a type _token_ (a string that uniquely identifies a Pulumi resource type) when using the CLI or as a resource declaration when importing in code. The type token of an Amazon S3 Bucket resource, for example, is `aws:s3/bucketv2:BucketV2`.
+* The _type_ of cloud resource to import --- either as a type _token_ (a string that uniquely identifies a Pulumi resource type) when using the CLI or as a resource declaration when importing in code. The type token of an Amazon S3 Bucket resource, for example, is `aws:s3/bucketV2:BucketV2`.
 
 * The _name_ and _value_ of the property to use for the resource lookup. Lookup properties vary by resource. For an Amazon S3 bucket, the property used for lookup is [`bucket`](/registry/packages/aws/api-docs/s3/bucket/#bucket_nodejs), so the value to use for the lookup would be the bucket's globally unique name. For an Amazon VPC, however, the property used for lookup is [`id`](/registry/packages/aws/api-docs/ec2/vpc/#id_nodejs), so the value to use for it would be its AWS-assigned unique identifier.
 
@@ -64,7 +64,7 @@ $ pulumi import <type> <name> <id>
 
 * The first argument, `type`, is the Pulumi type token to use for the imported resource.
 
-    As mentioned in [Where to find the type token and lookup property](#how-import-works), you'll find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucketv2/#import) resource, for example, is `aws:s3/bucketv2:BucketV2`.
+    As mentioned in [Where to find the type token and lookup property](#how-import-works), you'll find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucketv2/#import) resource, for example, is `aws:s3/bucketV2:BucketV2`.
 
 * The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported. The generated code will use this name for the resource declaration (the first parameter in any resource), so like all Pulumi resource names, it must be unique among all resources for this type within the scope of the containing project. (That is, you may have an S3 bucket and a VPC named `foo`, but you cannot have two S3 buckets named `foo`.)
 
@@ -77,7 +77,7 @@ For help identifying a resource's type token and lookup property, see [Where to 
 In this example, a previously provisioned Amazon S3 bucket named `company-infra-logs` is imported into a Pulumi stack named `dev` (the currently [selected](/docs/cli/commands/pulumi_stack_select/) stack) and given a resource name of `infra-logs`:
 
 ```bash
-$ pulumi import aws:s3/bucketv2:BucketV2 infra-logs company-infra-logs
+$ pulumi import aws:s3/bucketV2:BucketV2 infra-logs company-infra-logs
 
 Previewing import (dev)
 

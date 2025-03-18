@@ -8,9 +8,6 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 1
     identifier: pulumi-cloud-deployments-get-started
-  pulumicloud:
-    parent: deployments
-    weight: 1
 ---
 
 ## Prerequisites

@@ -10,8 +10,6 @@ menu:
     parent: cloud-home
     weight: 5
     identifier: pulumi-cloud-copilot
-  pulumicloud:
-    weight: 2
 aliases:
 - /docs/intro/copilot/
 - /docs/intro/pulumi-cloud/copilot/

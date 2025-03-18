@@ -11,10 +11,6 @@ menu:
     parent: pulumi-cloud-access-management-oidc
     weight: 1
     identifier: pulumi-cloud-access-management-oidc-client
-  pulumicloud:
-    parent: openid-connect
-    identifier: openid-connect-client
-    weight: 4
 aliases:
 - /docs/pulumi-cloud/oidc/client/
 ---
@@ -66,6 +62,10 @@ To prevent a range of security attacks, Pulumi stores the provider's TLS certifi
 
 ### Configure the authorization policies
 
+{{< notes type="info" >}}
+The max amount of policies is limited to 20 policies per OIDC Issuer.
+{{< /notes >}}
+
 When a new OIDC issuer is registered, a default authorization policy is provisioned denying any token exchange. Explicitly configuring **allow** policies is required.
 
 When configuring a policy, it is required to explicitly state what kind of token can be requested and what team or user the token should be scoped to.
@@ -94,7 +94,7 @@ You can target the pod name by defining the path as `"kubernetes.io".pod.name`.
 
 Note the use of quotes to escape dots in the object keys.
 
-For the claim values, it is possible to use the following wildcard notation for flexible matching:
+It is possible to use the following wildcard notation for flexible matching for the claim values and team name:
 
 - `*`: match zero or more characters
 - `?`: match zero or one character

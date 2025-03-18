@@ -1,0 +1,7 @@
+name: deepseek-ollama-go
+description: DeepSeek Ollama AWS example
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-go

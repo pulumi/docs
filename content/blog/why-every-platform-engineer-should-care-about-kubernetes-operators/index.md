@@ -215,7 +215,7 @@ Or use Pulumi to deploy the CloudNativePG Operator:
 ```go
 {{< example-program-snippet path="helm-kubernetes" language="go" from="1" to="14" >}}
 {{< example-program-snippet path="helm-kubernetes" language="go" from="15" to="31" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="273" to="276" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="268" to="276" >}}
 ```
 
 {{% /choosable %}}
@@ -226,7 +226,7 @@ Or use Pulumi to deploy the CloudNativePG Operator:
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="1" to="10" >}}
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="75" to="78" >}}
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="79" to="93" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="353" to="359" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="347" to="353" >}}
 ```
 
 {{% /choosable %}}
@@ -275,7 +275,7 @@ Or use Pulumi:
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="helm-kubernetes" language="typescript" from="48" to="86" >}}
+{{< example-program-snippet path="helm-kubernetes" language="typescript" from="43" to="80" >}}
 ```
 
 {{% /choosable %}}
@@ -283,7 +283,7 @@ Or use Pulumi:
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="helm-kubernetes" language="javascript" from="49" to="87" >}}
+{{< example-program-snippet path="helm-kubernetes" language="javascript" from="44" to="81" >}}
 ```
 
 {{% /choosable %}}
@@ -291,8 +291,8 @@ Or use Pulumi:
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="helm-kubernetes" language="python" from="54" to="55" >}}
-{{< example-program-snippet path="helm-kubernetes" language="python" from="56" to="92" >}}
+{{< example-program-snippet path="helm-kubernetes" language="python" from="49" to="50" >}}
+{{< example-program-snippet path="helm-kubernetes" language="python" from="51" to="87" >}}
 ```
 
 {{% /choosable %}}
@@ -301,8 +301,8 @@ Or use Pulumi:
 
 ```go
 {{< example-program-snippet path="helm-kubernetes" language="go" from="1" to="14" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="77" to="114" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="273" to="276" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="72" to="109" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="268" to="276" >}}
 ```
 
 {{% /choosable %}}
@@ -312,8 +312,8 @@ Or use Pulumi:
 ```csharp
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="1" to="25" >}}
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="75" to="78" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="133" to="183" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="353" to="359" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="127" to="178" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="347" to="353" >}}
 ```
 
 {{% /choosable %}}
@@ -321,6 +321,8 @@ Or use Pulumi:
 #### Summary
 
 CloudNativePG Operator is a great way to deploy and manage PostgreSQL databases on Kubernetes. It simplifies a wide range of tasks, including backups, high availability, and scaling, making it a must-have for PostgreSQL users.
+
+{{< related-posts >}}
 
 ### Flux Operator
 
@@ -350,7 +352,7 @@ Or use Pulumi to deploy the Flux Operator:
 
 ```typescript
 {{< example-program-snippet path="helm-kubernetes" language="typescript" from="1" to="3" >}}
-{{< example-program-snippet path="helm-kubernetes" language="typescript" from="16" to="31" >}}
+{{< example-program-snippet path="helm-kubernetes" language="typescript" from="16" to="26" >}}
 ```
 
 {{% /choosable %}}
@@ -359,7 +361,7 @@ Or use Pulumi to deploy the Flux Operator:
 
 ```javascript
 {{< example-program-snippet path="helm-kubernetes" language="javascript" from="1" to="4" >}}
-{{< example-program-snippet path="helm-kubernetes" language="javascript" from="17" to="32" >}}
+{{< example-program-snippet path="helm-kubernetes" language="javascript" from="17" to="27" >}}
 ```
 
 {{% /choosable %}}
@@ -368,7 +370,7 @@ Or use Pulumi to deploy the Flux Operator:
 
 ```python
 {{< example-program-snippet path="helm-kubernetes" language="python" from="1" to="4" >}}
-{{< example-program-snippet path="helm-kubernetes" language="python" from="19" to="35" >}}
+{{< example-program-snippet path="helm-kubernetes" language="python" from="19" to="30" >}}
 ```
 
 {{% /choosable %}}
@@ -377,8 +379,8 @@ Or use Pulumi to deploy the Flux Operator:
 
 ```go
 {{< example-program-snippet path="helm-kubernetes" language="go" from="1" to="14" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="33" to="54" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="273" to="276" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="33" to="49" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="268" to="276" >}}
 ```
 
 {{% /choosable %}}
@@ -387,8 +389,8 @@ Or use Pulumi to deploy the Flux Operator:
 
 ```csharp
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="1" to="10" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="94" to="112" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="353" to="359" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="94" to="107" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="347" to="353" >}}
 ```
 
 {{% /choosable %}}
@@ -444,7 +446,7 @@ Or use Pulumi:
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="helm-kubernetes" language="typescript" from="87" to="131" >}}
+{{< example-program-snippet path="helm-kubernetes" language="typescript" from="82" to="125" >}}
 ```
 
 {{% /choosable %}}
@@ -452,7 +454,7 @@ Or use Pulumi:
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="helm-kubernetes" language="javascript" from="88" to="132" >}}
+{{< example-program-snippet path="helm-kubernetes" language="javascript" from="83" to="126" >}}
 ```
 
 {{% /choosable %}}
@@ -460,8 +462,8 @@ Or use Pulumi:
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="helm-kubernetes" language="python" from="54" to="55" >}}
-{{< example-program-snippet path="helm-kubernetes" language="python" from="94" to="149" >}}
+{{< example-program-snippet path="helm-kubernetes" language="python" from="49" to="50" >}}
+{{< example-program-snippet path="helm-kubernetes" language="python" from="89" to="144" >}}
 ```
 
 {{% /choosable %}}
@@ -471,8 +473,8 @@ Or use Pulumi:
 ```go
 {{< example-program-snippet path="helm-kubernetes" language="go" from="1" to="11" >}}
 {{< example-program-snippet path="helm-kubernetes" language="go" from="12" to="14" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="115" to="173" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="273" to="276" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="110" to="168" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="268" to="276" >}}
 ```
 
 {{% /choosable %}}
@@ -482,8 +484,8 @@ Or use Pulumi:
 ```csharp
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="1" to="10" >}}
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="27" to="37" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="185" to="260" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="353" to="359" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="179" to="254" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="347" to="353" >}}
 ```
 
 {{% /choosable %}}
@@ -522,7 +524,7 @@ Or use Pulumi to deploy the Strimzi Operator:
 
 ```typescript
 {{< example-program-snippet path="helm-kubernetes" language="typescript" from="1" to="3" >}}
-{{< example-program-snippet path="helm-kubernetes" language="typescript" from="32" to="47" >}}
+{{< example-program-snippet path="helm-kubernetes" language="typescript" from="28" to="41" >}}
 ```
 
 {{% /choosable %}}
@@ -531,7 +533,7 @@ Or use Pulumi to deploy the Strimzi Operator:
 
 ```javascript
 {{< example-program-snippet path="helm-kubernetes" language="javascript" from="1" to="4" >}}
-{{< example-program-snippet path="helm-kubernetes" language="javascript" from="33" to="48" >}}
+{{< example-program-snippet path="helm-kubernetes" language="javascript" from="29" to="42" >}}
 ```
 
 {{% /choosable %}}
@@ -540,7 +542,7 @@ Or use Pulumi to deploy the Strimzi Operator:
 
 ```python
 {{< example-program-snippet path="helm-kubernetes" language="python" from="1" to="4" >}}
-{{< example-program-snippet path="helm-kubernetes" language="python" from="36" to="53" >}}
+{{< example-program-snippet path="helm-kubernetes" language="python" from="32" to="47" >}}
 ```
 
 {{% /choosable %}}
@@ -550,8 +552,8 @@ Or use Pulumi to deploy the Strimzi Operator:
 ```go
 {{< example-program-snippet path="helm-kubernetes" language="go" from="1" to="8" >}}
 {{< example-program-snippet path="helm-kubernetes" language="go" from="9" to="12" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="55" to="76" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="273" to="276" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="51" to="71" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="268" to="276" >}}
 ```
 
 {{% /choosable %}}
@@ -561,8 +563,8 @@ Or use Pulumi to deploy the Strimzi Operator:
 ```csharp
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="1" to="9" >}}
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="75" to="78" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="113" to="132" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="353" to="359" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="108" to="126" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="347" to="353" >}}
 ```
 
 {{% /choosable %}}
@@ -647,7 +649,7 @@ Or use Pulumi:
 {{% choosable language typescript %}}
 
 ```typescript
-{{< example-program-snippet path="helm-kubernetes" language="typescript" from="132" to="217" >}}
+{{< example-program-snippet path="helm-kubernetes" language="typescript" from="127" to="217" >}}
 ```
 
 {{% /choosable %}}
@@ -655,7 +657,7 @@ Or use Pulumi:
 {{% choosable language javascript %}}
 
 ```javascript
-{{< example-program-snippet path="helm-kubernetes" language="javascript" from="133" to="219" >}}
+{{< example-program-snippet path="helm-kubernetes" language="javascript" from="128" to="219" >}}
 ```
 
 {{% /choosable %}}
@@ -663,8 +665,8 @@ Or use Pulumi:
 {{% choosable language python %}}
 
 ```python
-{{< example-program-snippet path="helm-kubernetes" language="python" from="54" to="55" >}}
-{{< example-program-snippet path="helm-kubernetes" language="python" from="151" to="240" >}}
+{{< example-program-snippet path="helm-kubernetes" language="python" from="49" to="50" >}}
+{{< example-program-snippet path="helm-kubernetes" language="python" from="146" to="240" >}}
 ```
 
 {{% /choosable %}}
@@ -674,8 +676,8 @@ Or use Pulumi:
 ```go
 {{< example-program-snippet path="helm-kubernetes" language="go" from="1" to="11" >}}
 {{< example-program-snippet path="helm-kubernetes" language="go" from="12" to="14" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="115" to="271" >}}
-{{< example-program-snippet path="helm-kubernetes" language="go" from="273" to="276" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="169" to="267" >}}
+{{< example-program-snippet path="helm-kubernetes" language="go" from="268" to="276" >}}
 ```
 
 {{% /choosable %}}
@@ -685,8 +687,8 @@ Or use Pulumi:
 ```csharp
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="1" to="10" >}}
 {{< example-program-snippet path="helm-kubernetes" language="csharp" from="39" to="78" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="261" to="352" >}}
-{{< example-program-snippet path="helm-kubernetes" language="csharp" from="353" to="359" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="255" to="345" >}}
+{{< example-program-snippet path="helm-kubernetes" language="csharp" from="347" to="353" >}}
 ```
 
 {{% /choosable %}}

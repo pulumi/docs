@@ -208,6 +208,49 @@ runtime:
     typescript: false
 ```
 
+## Native ESM Support
+
+The default Pulumi templates compile TypeScript code to [CommonJS](https://nodejs.org/api/modules.html) modules. You can use ESM syntax like `import` or `export` in your code, but it will be compiled to CommonJS behind the scenes.
+
+If you wish to instead use [ESM](https://nodejs.org/api/esm.html) natively, you can set the `type` field in your `package.json` to `module`. This will tell Node.js to treat your package as an ESM package.
+
+```json
+{
+    "name": "my-package",
+    "version": "1.0.0",
+    "type": "module",
+    ...
+}
+```
+
+Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM, by setting the [`module`](https://www.typescriptlang.org/tsconfig/#module) field to `ESNext`, or one of `ES2015/ES6/ES2020/ES2022`.
+
+```json
+{
+    "compilerOptions": {
+        ...
+        "module": "ESNext",
+        ...
+    }
+}
+```
+
+Install a recent version of `ts-node` to use its [ESM loader](https://typestrong.org/ts-node/docs/imports#native-ecmascript-modules).
+
+```bash
+npm install ts-node@^10
+```
+
+Lastly, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`.
+
+```yaml
+name: project-using-native-esm
+runtime:
+  name: nodejs
+  options:
+    nodeargs: "--loader ts-node/esm --no-warnings"
+```
+
 ## Package Management
 
 Pulumi has official support for NPM and Yarn Classic. Pulumi does
@@ -320,15 +363,4 @@ In addition to the standard and cloud-agnostic packages the [Pulumi Registry](/r
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/policy">@pulumi/policy</a></dd>
     <dt>Pulumi Terraform</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/terraform">@pulumi/terraform</a></dd>
-</dl>
-
-### Cloud-Agnostic Packages
-
-<dl class="tabular">
-    <dt>Pulumi Cloud Framework</dt>
-    <dd>
-        <a href="/docs/reference/pkg/nodejs/pulumi/cloud">@pulumi/cloud</a>
-        <span class="ml-2 badge badge-preview">PREVIEW</span>
-        <p>A highly productive, cloud-agnostic package for container and serverless programming.</p>
-    </dd>
 </dl>

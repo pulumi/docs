@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted-components
         weight: 4
         identifier: pulumi-cloud-admin-self-hosted-components-deployments
-    pulumicloud:
-        parent: self-hosted-components
-        weight: 1
 aliases:
   - /docs/guides/self-hosted/components/deployments/
   - /docs/pulumi-cloud/self-hosted/components/deployments/

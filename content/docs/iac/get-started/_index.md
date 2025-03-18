@@ -45,11 +45,22 @@ Select one of the following options to get started:
             </div>
         </a>
     </div>
-     <div class="pb-4 md:pr-4 md:w-1/2">
+    <div class="pb-4 md:pr-4 md:w-1/2">
         <a data-track="esc-get-started" href="/docs/esc/get-started/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-key text-blue-400 pr-2"></i>Pulumi ESC</h4>
                 <p>This guide helps you install Pulumi ESC, create an environment and manage your first secret.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="insights-get-started" href="/docs/insights/get-started/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-search-plus text-blue-400 pr-2"></i>Pulumi Insights</h4>
+                <p>This guide helps you get started with Pulumi Insight to discover and manage any cloud infrastructure</p>
                 <div class="flex flex-grow items-end">
                     <div class="btn btn-secondary">Get Started</div>
                 </div>
@@ -89,18 +100,7 @@ Select one of the following options to get started:
             </div>
         </a>
     </div>
-    <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="aws-vm" href="/templates/virtual-machine/aws/" class="tile h-full">
-            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-                <h4 class="no-anchor"><i class="fas fa-server text-blue-400 pr-2"></i>EC2</h4>
-                <p>Create an Amazon EC2 for the virtual machine and VPC for the virtual network.</p>
-                <div class="flex flex-grow items-end">
-                    <div class="btn btn-secondary">Get Started</div>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
+ </div>
 
 {{< /choosable >}}
 
@@ -123,6 +123,17 @@ Select one of the following options to get started:
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-key text-blue-400 pr-2"></i>Pulumi ESC</h4>
                 <p>This guide helps you install Pulumi ESC, create an environment and manage your first secret.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
+        <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="insights-get-started" href="/docs/insights/get-started/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-search-plus text-blue-400 pr-2"></i>Pulumi Insights</h4>
+                <p>This guide helps you get started with Pulumi Insight to discover and manage any cloud infrastructure</p>
                 <div class="flex flex-grow items-end">
                     <div class="btn btn-secondary">Get Started</div>
                 </div>
@@ -164,19 +175,6 @@ Select one of the following options to get started:
             </div>
         </a>
     </div>
-    <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="azure-vm" href="/templates/virtual-machine/azure/" class="tile h-full">
-            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-                <h4 class="no-anchor"><i class="fas fa-server text-blue-400 pr-2"></i>Virtual Machine</h4>
-                <p>
-                    Create an Azure Virtual Machine and Azure Virtual Network for the virtual network.
-                </p>
-                <div class="flex flex-grow items-end">
-                    <div class="btn btn-secondary">Get Started</div>
-                </div>
-            </div>
-        </a>
-    </div>
 </div>
 
 {{< /choosable >}}
@@ -195,11 +193,22 @@ Select one of the following options to get started:
             </div>
         </a>
     </div>
-         <div class="pb-4 md:pr-4 md:w-1/2">
+    <div class="pb-4 md:pr-4 md:w-1/2">
         <a data-track="esc-get-started" href="/docs/esc/get-started/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-key text-blue-400 pr-2"></i>Pulumi ESC</h4>
                 <p>This guide helps you install Pulumi ESC, create an environment and manage your first secret.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="insights-get-started" href="/docs/insights/get-started/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-search-plus text-blue-400 pr-2"></i>Pulumi Insights</h4>
+                <p>This guide helps you get started with Pulumi Insight to discover and manage any cloud infrastructure</p>
                 <div class="flex flex-grow items-end">
                     <div class="btn btn-secondary">Get Started</div>
                 </div>
@@ -241,19 +250,6 @@ Select one of the following options to get started:
             </div>
         </a>
     </div>
-    <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="google-vm" href="/templates/virtual-machine/gcp/" class="tile h-full">
-            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-                <h4 class="no-anchor"><i class="fas fa-server text-blue-400 pr-2"></i>Virtual Machine</h4>
-                <p>
-                    Use Compute Engine to create a virtual machine and virtual network.
-                </p>
-                <div class="flex flex-grow items-end">
-                    <div class="btn btn-secondary">Get Started</div>
-                </div>
-            </div>
-        </a>
-    </div>
 </div>
 
 {{< /choosable >}}
@@ -277,6 +273,17 @@ Select one of the following options to get started:
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-key text-blue-400 pr-2"></i>Pulumi ESC</h4>
                 <p>This guide helps you install Pulumi ESC, create an environment and manage your first secret.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="insights-get-started" href="/docs/insights/get-started/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-search-plus text-blue-400 pr-2"></i>Pulumi Insights</h4>
+                <p>This guide helps you get started with Pulumi Insight to discover and manage any cloud infrastructure</p>
                 <div class="flex flex-grow items-end">
                     <div class="btn btn-secondary">Get Started</div>
                 </div>
@@ -310,19 +317,6 @@ Select one of the following options to get started:
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-cubes text-blue-400 pr-2"></i>Amazon Elastic Kubernetes Service (EKS)</h4>
                 <p>Create an EKS cluster that provides a managed Kubernetes control plane.</p>
-                <div class="flex flex-grow items-end">
-                    <div class="btn btn-secondary">Get Started</div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="kubernetes-azure" href="/templates/kubernetes/azure/" class="tile h-full">
-            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-                <h4 class="no-anchor"><i class="fas fa-cubes text-blue-400 pr-2"></i>Azure Kubernetes Service (AKS)</h4>
-                <p>
-                    Create an Azure Virtual Network with three subnets and deploy an Azure Kubernetes Service (AKS) cluster.
-                </p>
                 <div class="flex flex-grow items-end">
                     <div class="btn btn-secondary">Get Started</div>
                 </div>

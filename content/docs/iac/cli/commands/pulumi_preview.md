@@ -23,40 +23,61 @@ The program to run is loaded from the project in the current directory. Use the 
 `--cwd` flag to use a different directory.
 
 ```
-pulumi preview [flags]
+pulumi preview [url] [flags]
 ```
 
 ## Options
 
 ```
-      --attach-debugger                       Enable the ability to attach a debugger to the program being executed
-  -c, --config stringArray                    Config to use during the preview and save to the stack config file
-      --config-file string                    Use the configuration values in the specified file rather than detecting the file name
-      --config-path                           Config keys contain a path to a property in a map or list to set
-  -d, --debug                                 Print detailed debugging output during resource operations
-      --diff                                  Display operation as a rich diff showing the overall change
-      --expect-no-changes                     Return an error if any changes are proposed by this preview
-  -h, --help                                  help for preview
-      --import-file string                    Save any creates seen during the preview into an import file to use with 'pulumi import'
-  -j, --json                                  Serialize the preview diffs, operations, and overall output as JSON
-  -m, --message string                        Optional message to associate with the preview operation
-  -p, --parallel int32                        Allow P resource operations to run in parallel at once (1 for no parallelism). (default 16)
-      --policy-pack strings                   Run one or more policy packs as part of this update
-      --policy-pack-config strings            Path to JSON file containing the config for the policy pack of the corresponding "--policy-pack" flag
-  -r, --refresh string[="true"]               Refresh the state of the stack's resources before this update
-      --replace stringArray                   Specify resources to replace. Multiple resources can be specified using --replace urn1 --replace urn2
-      --show-config                           Show configuration keys and variables
-      --show-policy-remediations              Show per-resource policy remediation details instead of a summary
-      --show-reads                            Show resources that are being read in, alongside those being managed directly in the stack
-      --show-replacement-steps                Show detailed resource replacement creates and deletes instead of a single step
-      --show-sames                            Show resources that needn't be updated because they haven't changed, alongside those that do
-  -s, --stack string                          The name of the stack to operate on. Defaults to the current stack
-      --suppress-outputs                      Suppress display of stack outputs (in case they contain sensitive values)
-      --suppress-permalink string[="false"]   Suppress display of the state permalink
-      --suppress-progress                     Suppress display of periodic progress dots
-  -t, --target stringArray                    Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2
-      --target-dependents                     Allows updating of dependent targets discovered but not specified in --target list
-      --target-replace stringArray            Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.
+      --attach-debugger                               Enable the ability to attach a debugger to the program being executed
+  -c, --config stringArray                            Config to use during the preview and save to the stack config file
+      --config-file string                            Use the configuration values in the specified file rather than detecting the file name
+      --config-path                                   Config keys contain a path to a property in a map or list to set
+  -d, --debug                                         Print detailed debugging output during resource operations
+      --diff                                          Display operation as a rich diff showing the overall change
+      --expect-no-changes                             Return an error if any changes are proposed by this preview
+  -h, --help                                          help for preview
+      --import-file string                            Save any creates seen during the preview into an import file to use with 'pulumi import'
+  -j, --json                                          Serialize the preview diffs, operations, and overall output as JSON
+  -m, --message string                                Optional message to associate with the preview operation
+  -p, --parallel int32                                Allow P resource operations to run in parallel at once (1 for no parallelism). (default 16)
+      --policy-pack strings                           Run one or more policy packs as part of this update
+      --policy-pack-config strings                    Path to JSON file containing the config for the policy pack of the corresponding "--policy-pack" flag
+  -r, --refresh string[="true"]                       Refresh the state of the stack's resources before this update
+      --remote                                        [EXPERIMENTAL] Run the operation remotely
+      --remote-agent-pool-id string                   [EXPERIMENTAL] The agent pool to use to run the deployment job. When empty, the Pulumi Cloud shared queue will be used.
+      --remote-env --remote-env FOO=bar               [EXPERIMENTAL] Environment variables to use in the remote operation of the form NAME=value (e.g. --remote-env FOO=bar)
+      --remote-env-secret --remote-env FOO=secret     [EXPERIMENTAL] Environment variables with secret values to use in the remote operation of the form NAME=secretvalue (e.g. --remote-env FOO=secret)
+      --remote-executor-image string                  [EXPERIMENTAL] The Docker image to use for the executor
+      --remote-executor-image-password string         [EXPERIMENTAL] The password for the credentials with access to the Docker image to use for the executor
+      --remote-executor-image-username string         [EXPERIMENTAL] The username for the credentials with access to the Docker image to use for the executor
+      --remote-git-auth-access-token string           [EXPERIMENTAL] Git personal access token
+      --remote-git-auth-password string               [EXPERIMENTAL] Git password; for use with username or with an SSH private key
+      --remote-git-auth-ssh-private-key string        [EXPERIMENTAL] Git SSH private key; use --remote-git-auth-password for the password, if needed
+      --remote-git-auth-ssh-private-key-path string   [EXPERIMENTAL] Git SSH private key path; use --remote-git-auth-password for the password, if needed
+      --remote-git-auth-username string               [EXPERIMENTAL] Git username
+      --remote-git-branch string                      [EXPERIMENTAL] Git branch to deploy; this is mutually exclusive with --remote-git-commit; either value needs to be specified
+      --remote-git-commit string                      [EXPERIMENTAL] Git commit hash of the commit to deploy (if used, HEAD will be in detached mode); this is mutually exclusive with --remote-git-branch; either value needs to be specified
+      --remote-git-repo-dir string                    [EXPERIMENTAL] The directory to work from in the project's source repository where Pulumi.yaml is located; used when Pulumi.yaml is not in the project source root
+      --remote-inherit-settings                       [EXPERIMENTAL] Inherit deployment settings from the current stack
+      --remote-pre-run-command stringArray            [EXPERIMENTAL] Commands to run before the remote operation
+      --remote-skip-install-dependencies              [EXPERIMENTAL] Whether to skip the default dependency installation step
+      --replace stringArray                           Specify resources to replace. Multiple resources can be specified using --replace urn1 --replace urn2
+      --save-plan string                              [EXPERIMENTAL] Save the operations proposed by the preview to a plan file at the given path
+      --show-config                                   Show configuration keys and variables
+      --show-policy-remediations                      Show per-resource policy remediation details instead of a summary
+      --show-reads                                    Show resources that are being read in, alongside those being managed directly in the stack
+      --show-replacement-steps                        Show detailed resource replacement creates and deletes instead of a single step
+      --show-sames                                    Show resources that needn't be updated because they haven't changed, alongside those that do
+      --show-secrets false                            Show secrets in plaintext in the CLI output, if used with --save-plan the secrets will also be shown in the plan file. Defaults to false
+  -s, --stack string                                  The name of the stack to operate on. Defaults to the current stack
+      --suppress-outputs                              Suppress display of stack outputs (in case they contain sensitive values)
+      --suppress-permalink string[="false"]           Suppress display of the state permalink
+      --suppress-progress                             Suppress display of periodic progress dots
+      --suppress-stream-logs                          [EXPERIMENTAL] Suppress log streaming of the deployment job
+  -t, --target stringArray                            Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2
+      --target-dependents                             Allows updating of dependent targets discovered but not specified in --target list
+      --target-replace stringArray                    Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.
 ```
 
 ## Options inherited from parent commands
@@ -80,4 +101,4 @@ pulumi preview [flags]
 
 * [pulumi](/docs/iac/cli/commands/pulumi/)	 - Pulumi command line
 
-###### Auto generated by spf13/cobra on 26-Nov-2024
+###### Auto generated by spf13/cobra on 13-Mar-2025

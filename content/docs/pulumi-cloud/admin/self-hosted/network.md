@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted
         weight: 4
         identifier: pulumi-cloud-admin-self-hosted-network
-    pulumicloud:
-        parent: self-hosted
-        weight: 4
 aliases:
   - /docs/guides/self-hosted/requirements/
   - /docs/guides/self-hosted/requirements/network/
@@ -23,11 +20,9 @@ aliases:
 Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
-The containers running the self-hosted Pulumi Cloud require several kinds of incoming and outgoing network access as well as access to various services depending on where you're deploying it to.
+Self-hosted Pulumi Cloud comprises [three containers](/docs/pulumi-cloud/self-hosted/components): the API, Console, and Migrations. These containers require several kinds of incoming and outgoing network access as well as access to various services depending on where you're deploying it to.
 
-The self-hosted Pulumi Cloud comprises [three containers](/docs/pulumi-cloud/self-hosted/components), the API, the Console and the Migrations containers.
-
-The self-hosted Pulumi Cloud can be hosted in an air-gapped environment.
+Although these containers require networking access by default, self-hosted Pulumi Cloud can configured to run in an air-gapped environment without external ingress and egress. Learn more in the [Deploying Pulumi Self-Hosted in Air-Gapped Environments guide](/docs/pulumi-cloud/admin/self-hosted/airgapped).
 
 ## Ingress
 

@@ -1,0 +1,11 @@
+name: k8s-deployment-service-for-minikube-javascript
+description: An example that deploys a Deployment and Service for Minikube on Kubernetes.
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-javascript

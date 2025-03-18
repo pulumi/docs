@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted
         weight: 2
         identifier: pulumi-cloud-admin-self-hosted-components
-    pulumicloud:
-        parent: self-hosted
-        identifier: self-hosted-components
 aliases:
 - /docs/guides/self-hosted/console/
 - /docs/guides/self-hosted/components/

@@ -334,7 +334,7 @@ open_source:
     description: |
         Pulumi Cloud is a managed service for Pulumi IaC's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/iac/concepts/state-and-backends/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/concepts/how-pulumi-works/).
 
-        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/iac/concepts/state-and-backends/#logging-into-a-self-managed-backend).
+        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/iac/concepts/state-and-backends/#using-a-diy-backend).
 
 security:
     title: Pulumi takes security seriously

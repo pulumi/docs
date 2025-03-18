@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted-deployment-options
         weight: 6
         identifier: pulumi-cloud-admin-self-hosted-deployment-options-local-docker
-    pulumicloud:
-        parent: deployment-options
-        weight: 6
 aliases:
   - /docs/guides/self-hosted/local-docker/
   - /docs/pulumi-cloud/self-hosted/deployment-options/local-docker/
@@ -30,7 +27,7 @@ The customer is required to provide and manage the following:
   * At least 20GB SSD storage space.
 * MySQL 8.0 database with
   * At least 20GB SSD storage space,
-  * A database user with the folling grants:
+  * A database user with the following grants:
     * `GRANT ALL PRIVILEGES ON 'pulumi'.* TO 'pulumi'@'%'`
     * `GRANT CREATE USER ON *.* TO 'pulumi'@'%' WITH GRANT OPTION`
 * Object storage (e.g. Minio) with

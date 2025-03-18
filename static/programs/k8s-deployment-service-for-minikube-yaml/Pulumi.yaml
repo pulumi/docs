@@ -1,0 +1,35 @@
+name: k8s-deployment-service-for-minikube-yaml
+description: An example that deploys a Deployment and Service for Minikube on Kubernetes.
+runtime: yaml
+
+variables:
+  appLabels:
+    app: nginx
+
+resources:
+  deployment:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      spec:
+        selector:
+          matchLabels: ${appLabels}
+        replicas: 1
+        template:
+          metadata:
+            labels: ${appLabels}
+          spec:
+            containers:
+              - name: nginx
+                image: nginx
+  service:
+    type: kubernetes:core/v1:Service
+    properties:
+      metadata:
+        labels: ${appLabels}
+      spec:
+        type: ClusterIP
+        selector: ${appLabels}
+        ports:
+          - port: 80
+            targetPort: 80
+            protocol: TCP

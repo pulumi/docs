@@ -10,9 +10,6 @@ menu:
         parent: pulumi-cloud-admin-self-hosted-deployment-options
         weight: 5
         identifier: pulumi-cloud-admin-self-hosted-deployment-options-gke
-    pulumicloud:
-        parent: deployment-options
-        weight: 4
 aliases:
   - /docs/guides/self-hosted/gke-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/gke-hosted/

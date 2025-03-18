@@ -35,8 +35,8 @@ This command will walk you through creating a new Pulumi project.
 Enter a value or leave blank to accept the (default), and press <ENTER>.
 Press ^C at any time to quit.
 
-project name (pulumi-esc-iac):  
-project description (A minimal Python Pulumi program):  
+project name (pulumi-esc-iac):
+project description (A minimal Python Pulumi program):
 Created project 'pulumi-esc-iac'
 
 Please enter your desired stack name.
