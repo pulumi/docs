@@ -43,7 +43,7 @@ There are speed benefits that customers typically experience across three areas:
 
 Pulumi Cloud streamlines the software delivery pipeline through Pulumi Deployments and a wide range of 3rd party CICD integrations.
 
-Pulumi Cloud provides Pulumi Insights, offering search, analytics, and AI-driven insights over your infrastructure. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets, reducing the operational time it takes to find needles in haystacks.
+Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets, reducing the operational time it takes to find needles in haystacks.
 
 ### Scale
 
