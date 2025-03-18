@@ -1,8 +1,8 @@
 ---
 title: "Why Choose Pulumi Cloud Over DIY Backends?"
-date: 2025-03-14T09:00:00-07:00
+date: 2025-03-19T09:00:00-07:00
 meta_desc: "Discover why to use Pulumi Cloud versus DIY IaC backends. Save time, reduce costs, and ensure compliance."
-meta_image:
+meta_image: meta.png
 authors:
     - aaron-kao
 tags:
@@ -41,7 +41,7 @@ The most frequent business values that our existing customers experience with Pu
 
 There are speed benefits that customers typically experience across three areas:  the infrastructure platform, developer productivity, and operations. Pulumi Cloud simplifies building and running complex infrastructure automation workflows through the Automation API. It also makes it easy to componentize best practices that can be easily shared and distributed through a centralized repository.
 
-Pulumi Cloud streamlines the software delivery pipeline with [Pulumi Deployments](/docs/pulumi-cloud/deployments/) and a wide range of 3rd party [CI/CD integrations](/docs/iac/using-pulumi/continuous-delivery/).
+Pulumi Cloud streamlines the software delivery pipeline with [Pulumi Deployments](/product/pulumi-deployments/) and a wide range of 3rd party [CI/CD integrations](/docs/iac/using-pulumi/continuous-delivery/).
 
 Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets, reducing the operational time it takes to find needles in haystacks.
 
