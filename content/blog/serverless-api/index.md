@@ -82,7 +82,7 @@ What we'll cover:
 6. [Why I love this approach](/blog/serverless-api/#why-i-love-this-approach)
 7. [Conclusion](/blog/serverless-api/#conclusion)
 
-## **Why this approach is different**
+## **Why AWS Lambda is Ideal for Low-Traffic Python Apps**
 
 "But Lambda means one function per REST endpoint, right?" While that's how serverless was initially positioned, the Lambda monolith approach here is a more straightforward pattern. Take any REST API service, package it as a container, put it in Lambda, and give it an entire HTTP route behind an IP, domain name, or API Gateway prefix. Done.
 
@@ -105,7 +105,7 @@ Containers let us package everything—code, system dependencies, runtime—into
 
 {{< /notes >}}
 
-## **Building our Flask application**
+## **Building our Flask application in Python**
 
 Let's start with the fun part - writing some Python code, but I will keep it really simple. We'll build a simple Flask application that demonstrates why running a full web framework in Lambda makes sense.
 
@@ -224,7 +224,7 @@ And since this is just a standard Python application in a container, you can use
 
 ## **Infrastructure as code with Pulumi**
 
-Now let's get our containerized Flask app into AWS. While you could click around in the AWS console, we're going to do this properly with infrastructure as code. You are welcome to use Cloudformation or manual setup, but it's nice to be able to keep everything in Python, and this is the Pulumi blog. Using Python to define our AWS resources means we get type-checking and proper IDE support.
+Now let's get our containerized Flask app into AWS. While you could click around in the AWS console, we're going to do this properly with infrastructure as code. You are welcome to use [Cloudformation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) or manual setup, but it's nice to be able to keep everything in Python, and this is the Pulumi blog. Using Python to define our AWS resources means we get type-checking and proper IDE support.
 
 Here's our infrastructure code:
 
