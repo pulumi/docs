@@ -1,6 +1,7 @@
 ---
 title: Join a Pulumi User Group (PUG) Meetup!
 date: 2023-05-01
+updated: 2025-05-19
 meta_desc: The PUGs will feature in-person meetups, in-person and virtual workshops, and other events to help members stay up-to-date with the latest developments.
 meta_image: meta.png
 authors:
