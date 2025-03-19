@@ -1,7 +1,8 @@
 ---
 title: "Provisioned Concurrency: Avoiding Cold Starts in AWS Lambda"
 date: 2019-12-19
-meta_desc: "Using Pulumi to configure AWS Lambda provisioned concurrency"
+updated: 2025-03-19
+meta_desc: "Learn how to configure AWS Lambda Provisioned Concurrency to minimize cold starts and improve performance with Pulumi."
 meta_image: variable.png
 authors: ["mikhail-shilkov"]
 tags: ["AWS", "Serverless"]
@@ -9,11 +10,19 @@ tags: ["AWS", "Serverless"]
 
 AWS Lambda cold starts (the time it takes for AWS to assign a worker to a request) are a major frustration point of many serverless programmers. In this article, we will take a look at the problem of latency-critical serverless applications, and how [Provisioned Concurrency](https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/) impacts the status-quo.
 
+1. [Concurrency Model of AWS Lambda](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/#concurrency-model-of-aws-lambda)
+2. [Cold Starts](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/#cold-starts)
+3. [Warming](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/#warming)
+4. [Provisioned Concurrency](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/#provisioned-concurrency)
+5. [Dynamic Provisioned Concurrency](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/#dynamic-provisioned-concurrency)
+6. [Pricing](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/#pricing)
+7. [Conclusion](/blog/aws-lambda-provisioned-concurrency-no-cold-starts/#conclusion)
+
 ## Concurrency Model of AWS Lambda
 
 Despite being serverless, AWS Lambda uses lightweight containers to process incoming requests. Every container, or worker, can process only a single request at any given time.
 
-{{< figure src="./executions.png" caption="Overlapping executions land on separate workers" >}}
+{{< figure src="./executions.png" caption="Overlapping executions land on separate workers" alt="AWS Lambda concurrency model showing overlapping executions on separate workers">}}
 
 Because of this, the number of concurrent requests defines the number of required workers that a specific AWS Lambda function needs to serve a response at any given moment.
 
@@ -67,7 +76,7 @@ The snippet sets the provisioned concurrency for `mylambda` to a fixed value of 
 
 A fixed level of provisioned concurrency works well for stable workloads.
 
-{{< figure src="./steady.png" caption="Fixed provisioned concurrency for uniform workloads" >}}
+{{< figure src="./steady.png" caption="Fixed provisioned concurrency for uniform workloads" alt="Diagram illustrating fixed provisioned concurrency for steady workloads in AWS Lambda">}}
 
 However, many workloads fluctuate a lot. Extreme elasticity and lack of configuration parameters have always been the essential benefits of AWS Lambda. It works great if you can tolerate the cold starts that come during scale-out. If not, you can explore more advanced scenarios for provisioning concurrency dynamically.
 
@@ -90,7 +99,7 @@ The second component is the autoscaling policy, which defines the conditions whe
 
 Quite often, increases in request rates are partially predictable. For example, usage increases during business hours and decreases at night.
 
-{{< figure src="./scheduled.png" caption="Provisioned concurrency matches predictable workload changes" >}}
+{{< figure src="./scheduled.png" caption="Provisioned concurrency matches predictable workload changes" alt="Graph showing how AWS Lambda provisioned concurrency adjusts to predictable workload fluctuations" >}}
 
 The following snippet sets two scheduled rules that switch between two levels of provisioned concurrency every day.
 
@@ -118,7 +127,7 @@ The example defines a helper function and calls it twice to set two schedules wi
 
 If your workload pattern is less predictable, you can configure autoscaling for provisioned concurrency based on the measured utilization.
 
-{{< figure src="./variable.png" caption="Provisioned concurrency matches the variation in workload" >}}
+{{< figure src="./variable.png" caption="Provisioned concurrency matches the variation in workload" alt="Graph depicting how AWS Lambda provisioned concurrency scales dynamically with fluctuating workloads" >}}
 
 Here is a basic example of a dynamic scaling policy.
 
@@ -139,7 +148,11 @@ const scaledConcurrency = new aws.appautoscaling.Policy("autoscaling", {
 
 Currently, there are issues with autoscaling based on the metrics, which makes provisioned concurrency scale less effectively than what the chart above shows. Hopefully, Amazon will fix these issues soon.
 
-## Pricing
+## AWS Pricing
+
+{{% notes type="info" %}}
+The most up-to-date pricing can be found on the [AWS Pricing page](https://aws.amazon.com/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all).
+{{% /notes %}}
 
 While hand-crafted Lambda warmers are virtually free, provisioned concurrency can be costly. The new pricing is an integral part of the change: Instead of purely per-call model, AWS charges per hour for provisioned capacity.
 
@@ -147,7 +160,7 @@ You would pay $0.015 per hour per GB of provisioned worker memory, even if a wor
 
 The per-invocation price gets a discount: $0.035 per GB-hour instead of the regular $0.06 per GB-hour. This change means that fully-utilized workers would be cheaper if provisioned compared to on-demand workers.
 
-{{< figure src="./pricing.png" caption="Comparison of the cost of a 1GB worker for two billing models" >}}
+{{< figure src="./pricing.png" caption="Comparison of the cost of a 1GB worker for two billing models" alt="Bar chart comparing the cost of a 1GB AWS Lambda worker under on-demand and provisioned concurrency pricing models" >}}
 
 The equilibrium point is at 60% utilization. Note that because the billed duration is rounded up to the nearest 100 ms for each execution, the utilization is not limited to 100%. A series of sequential executions can be processed by a single worker. If each execution is 10 ms, the charge is still 100 ms, and the total utilization can be as high as 1000% in terms of the chart above!
 
