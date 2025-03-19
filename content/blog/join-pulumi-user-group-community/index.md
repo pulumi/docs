@@ -46,6 +46,9 @@ PUGs are led by Pulumi employees and [Puluminaries](/community/puluminaries/), w
 * [Berlin Pulumi User Group](https://www.meetup.com/berlin-pulumi-user-group/)
 * [Munich Pulumi User Group](https://www.meetup.com/munich-pulumi-user-group/)
 * [Prague Pulumi User Group](https://www.meetup.com/prague-pulumi-user-group/)
+
+### Middle East Pulumi User Groups
+
 * [Tel Aviv Pulumi User Group](https://www.meetup.com/tel-aviv-pulumi-user-group/)
 
 ### Asia Pulumi User Groups
