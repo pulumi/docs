@@ -27,9 +27,3 @@ aws-import-iac-iam-role-.*
 # Custom-domain examples won't work because of the hosted-zone lookup (which will fail unless
 # the credentials can access the specified Route 53 zone).
 awsx-apigateway-custom-domain-.*
-
-# Skipping all kubernetes examples for now as they are expected to fail until we provision
-# a Kubernetes cluster in CI.
-kubernetes-.*
-k8s-.*
-helm-.*
