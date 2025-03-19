@@ -1,6 +1,7 @@
 ---
 title: Join a Pulumi User Group (PUG) Meetup!
 date: 2023-05-01
+updated: 2025-05-19
 meta_desc: The PUGs will feature in-person meetups, in-person and virtual workshops, and other events to help members stay up-to-date with the latest developments.
 meta_image: meta.png
 authors:
@@ -45,10 +46,10 @@ PUGs are led by Pulumi employees and [Puluminaries](/community/puluminaries/), w
 * [Berlin Pulumi User Group](https://www.meetup.com/berlin-pulumi-user-group/)
 * [Munich Pulumi User Group](https://www.meetup.com/munich-pulumi-user-group/)
 * [Prague Pulumi User Group](https://www.meetup.com/prague-pulumi-user-group/)
+* [Tel Aviv Pulumi User Group](https://www.meetup.com/tel-aviv-pulumi-user-group/)
 
 ### Asia Pulumi User Groups
 
-* [Tel Aviv Pulumi User Group](https://www.meetup.com/tel-aviv-pulumi-user-group/)
 * [Singapore Pulumi User Group](https://www.meetup.com/singapore-pulumi-user-group/)
 
 ### Oceania Pulumi User Groups
