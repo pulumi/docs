@@ -20,45 +20,28 @@ Members of PUGs will have access to a global network of experts who can offer he
 
 PUGs are led by Pulumi employees and [Puluminaries](/community/puluminaries/), who are passionate community members that are experts in topics related to cloud infrastructure, Pulumi Cloud, cloud-native software development, and much more, and are willing to share their knowledge with the community.
 
-### United States Pulumi User Groups
-
-* [Seattle Pulumi User Group](https://www.meetup.com/pulumi-seattle/)
-* [New York Pulumi User Group](https://www.meetup.com/new-york-pulumi-user-group/)
-* [San Francisco Pulumi User Group](https://www.meetup.com/san-francisco-pulumi-user-group/)
-* [San Diego Pulumi User Group](https://www.meetup.com/san-diego-pulumi-user-group/)
+* [Auckland Pulumi User Group](https://www.meetup.com/auckland-pulumi-user-group/)
 * [Austin Pulumi User Group](https://www.meetup.com/austin-pulumi-user-group/)
-* [Denver Pulumi User Group](https://www.meetup.com/denver-pulumi-user-group/)
+* [Australia Pulumi User Group](https://www.meetup.com/australia-pulumi-user-group/)
+* [Berlin Pulumi User Group](https://www.meetup.com/berlin-pulumi-user-group/)
+* [Boston Pulumi User Group](https://www.meetup.com/boston-pulumi-user-group)
 * [Chicago Pulumi User Group](https://www.meetup.com/chicago-pulumi-user-group/)
 * [Columbus Pulumi User Group](https://www.meetup.com/columbus-pulumi-user-group/)
-* [Philadelphia Pulumi User Group](https://www.meetup.com/philadelphia-pulumi-user-group/)
-* [Boston Pulumi User Group](https://www.meetup.com/boston-pulumi-user-group)
+* [Denver Pulumi User Group](https://www.meetup.com/denver-pulumi-user-group/)
 * [Detroit Pulumi User Group](https://www.meetup.com/detroit-pulumi-user-group)
-* [Nashville Pulumi User Group](https://www.meetup.com/nashville-pulumi-user-group)
-
-### South America Pulumi User Groups
-
-* [São Paulo Pulumi User Group](https://www.meetup.com/sao-paulo-pulumi-user-group)
-
-### European Pulumi User Groups
-
 * [London Pulumi User Group](https://www.meetup.com/london-pulumi-user-group/)
-* [Oslo Pulumi User Group](https://www.meetup.com/oslo-pulumi-user-group/)
-* [Berlin Pulumi User Group](https://www.meetup.com/berlin-pulumi-user-group/)
 * [Munich Pulumi User Group](https://www.meetup.com/munich-pulumi-user-group/)
+* [Nashville Pulumi User Group](https://www.meetup.com/nashville-pulumi-user-group)
+* [New York Pulumi User Group](https://www.meetup.com/new-york-pulumi-user-group/)
+* [Oslo Pulumi User Group](https://www.meetup.com/oslo-pulumi-user-group/)
+* [Philadelphia Pulumi User Group](https://www.meetup.com/philadelphia-pulumi-user-group/)
 * [Prague Pulumi User Group](https://www.meetup.com/prague-pulumi-user-group/)
-
-### Middle East Pulumi User Groups
-
-* [Tel Aviv Pulumi User Group](https://www.meetup.com/tel-aviv-pulumi-user-group/)
-
-### Asia Pulumi User Groups
-
+* [San Diego Pulumi User Group](https://www.meetup.com/san-diego-pulumi-user-group/)
+* [San Francisco Pulumi User Group](https://www.meetup.com/san-francisco-pulumi-user-group/)
+* [Seattle Pulumi User Group](https://www.meetup.com/pulumi-seattle/)
 * [Singapore Pulumi User Group](https://www.meetup.com/singapore-pulumi-user-group/)
-
-### Oceania Pulumi User Groups
-
-* [Australia Pulumi User Group](https://www.meetup.com/australia-pulumi-user-group/)
-* [Auckland Pulumi User Group](https://www.meetup.com/auckland-pulumi-user-group/)
+* [São Paulo Pulumi User Group](https://www.meetup.com/sao-paulo-pulumi-user-group)
+* [Tel Aviv Pulumi User Group](https://www.meetup.com/tel-aviv-pulumi-user-group/)
 
 ## The First PUG in person
 
