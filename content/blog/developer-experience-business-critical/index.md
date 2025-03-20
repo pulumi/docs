@@ -1,46 +1,20 @@
 ---
-title: "Beyond Productivity: Developer Experience is Business Critical"
+title: "Why Developer Experience (DevEx) is Business Critical"
 allow_long_title: true
-
-# The date represents the post's publish date, and by default corresponds with
-# the date and time this file was generated. Dates are used for display and
-# ordering purposes only; they have no effect on whether or when a post is
-# published. To influence the ordering of posts published on the same date, use
-# the time portion of the date value; posts are sorted in descending order by
-# date/time.
 date: 2024-02-20T20:47:44Z
-
-# The draft setting determines whether a post is published. Set it to true if
-# you want to be able to merge the post without publishing it.
-draft: false
-
-# Use the meta_desc property to provide a brief summary (one or two sentences)
-# of the content of the post, which is useful for targeting search results or
-# social-media previews. This field is required or the build will fail the
-# linter test. Max length is 160 characters.
-meta_desc: Improving developer experience does more than increase productivity and efficiency. It is crucial for business success. Here's what you need to know.
-
-# The meta_image appears in social-media previews and on the blog home page. A
-# placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
+updated: 2025-03-19
+meta_desc: Developer Experience (DevEx) is more than productivity—it drives business success. Learn how DevEx improves innovation, retention, and revenue.
 meta_image: developer-experience-devex-business-value-business-critical.png
-
-# At least one author is required. The values in this list correspond with the
-# `id` properties of the team member files at /data/team/team. Create a file for
-# yourself if you don't already have one.
 authors:
     - sara-huddleston
-
-# At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - developer-experience-devex
     - devops
     - platform-engineering
     - developer-portals
     - software-development
-
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
+aliases:
+    - /blog/software-developer-experience-devex-devx-devops-culture
 ---
 
 "Developer experience is hard to sell," said Cleve Littlefield, Engineering Manager at Pulumi, during a casual meeting. With experience as both an end-user developer and a lead in self-service platform implementation, Cleve's observation stuck with me.
@@ -63,7 +37,7 @@ Intriguingly, engineering teams may perceive its value differently. Therefore, w
 - [What DevEx is not](/blog/software-developer-experience-devex-devx-devops-culture/#what-devex-is-not)
 - [Frequently asked questions](/blog/software-developer-experience-devex-devx-devops-culture/#frequently-asked-questions)
 
-## What is developer experience
+## What is developer experience?
 
 Developer experience (DevEx), also referred to as DevX or DX, encompasses systems, technology, processes, and culture that collectively impact the effectiveness of software development. It looks at all components of a developer's ecosystem—from environment to workflows to tools—and evaluates how they contribute to developer productivity, satisfaction, and operational impact.
 
@@ -71,7 +45,7 @@ Developer experience revolves around the ease or difficulty of executing essenti
 
 The quality of the experience is equally vital for developers building and managing internal software as it is for those involved in developing customer-facing software products.
 
-## Is developer experience important
+## Is developer experience important?
 
 It is not just important. **It's business critical.** If your company is in the business of creating and selling software or relies on critical internal software, developers are vital internal stakeholders to your business foundation.
 
@@ -114,7 +88,7 @@ Noah Gift, the founder of Pragmatic AI Labs and a professor at Duke University s
 
 Merely having skilled developers is insufficient. Developers also require the appropriate tools and processes to excel in their work. Top-tier developers anticipate the availability of such resources, influencing the hiring and retention of talent.
 
-## What does a great developer experience look like
+## What does a great developer experience look like?
 
 Engineering teams that have good developer experiences are more productive and efficient. Great DevEx is often enabled by a platform where the end-users are the developers.
 
@@ -128,7 +102,7 @@ Engineering teams that have good developer experiences are more productive and e
 
 Without the proper tools, progress may slow down the development process and hinder developer productivity. It becomes crucial to implement appropriate measures to avoid disruptions that could impact everyone involved, including the developers themselves. Although not often mentioned, [DevOps](https://www.pulumi.com/what-is/what-is-devops/) and [Platform Engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) also aim to enhance the developer experience and achieve the associated benefits.
 
-## How does DevEx intersect with DevOps
+## How does DevEx intersect with DevOps?
 
 DevOps is about developers and operations working together and sharing values, assumptions, and responsibility for the software they build and maintain.
 
