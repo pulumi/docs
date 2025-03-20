@@ -26,7 +26,7 @@ on AWS using [Pulumi](https://www.pulumi.com), a modern infrastructure as code (
 
 Large Language Models (LLMs) are sophisticated AI models trained on vast amounts of text data, enabling them to generate human-like text responses.  Retrieval-Augmented Generated (RAG) is a cutting-edge approach to chatbot development that combines the capabilities of LLMs with information retrieval techniques. RAG chatbots can generate responses based on both the input query and relevant information retrieved from a knowledge base, resulting in more contextually relevant and informative interactions.
 
-![A diagram of the LM and RAG chatbot workflows](./diagram.png)
+![A diagram of a LM chatbot workflow and RAG chatbot workflows](./diagram.png)
 
 ## What's an Embedchain?
 
@@ -36,7 +36,7 @@ Embedchain supports configuration for various [data sources](https://docs.embedc
 
 ## Creating a Slack bot
 
-![A screenshot of a Slack conversation with the Arti Slack bot](./arti-slack.png)
+![A screenshot of a Slack conversation with a custom built Slack bot, Arti](./arti-slack.png)
 
 Start by cloning the project:
 
@@ -159,7 +159,7 @@ The configuration module in this application normalizes retrieval of secrets fro
 
 Once our bot is ready, we'll deploy it on AWS using Pulumi. Pulumi allows us to define our cloud infrastructure using familiar programming languages like TypeScript or Python, making it easy to manage and scale our deployment.
 
-![A diagram of the Arti Slack bot archirecture](arti-architecture.png)
+![A diagram of the Arti Slack bot archirecture from user to Slack to Amazon API Gateway to Embedchain api_handler to OpenAI](arti-architecture.png)
 
 It's important to note that in this selected architecture, we're working within a few limitations. Lambda's only writable directory is `/tmp` and it's limited to 500MB, and we need to use a Docker container to overcome the 250MB filesize limitation of our application, which we'll be bundling our data with.
 
