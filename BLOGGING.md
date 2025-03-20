@@ -129,17 +129,15 @@ let bucket = new aws.s3.BucketV2("stuff");
 Shortcode for a warning note:
 
 ```
-{{% notes type="warning" %}}
-**DANGER** Will Robinson!
-{{% /notes %}}
+> [!WARNING]
+> **DANGER** Will Robinson!
 ```
 
 Shortcode for an info note:
 
 ```
-{{% notes type="info" %}}
-Using Bastion hosts is a best practice.
-{{% /notes %}}
+> [!INFO]
+> Using Bastion hosts is a best practice.
 ```
 
 ### Media
