@@ -1,6 +1,5 @@
 ---
-title: "Create an AI Slack Bot to Chat with Your Data Using Embedchain, Pulumi on AWS"
-allow_long_title: true
+title: "Build an AI Slack Bot on AWS Using Embedchain & Pulumi"
 authors:
 - tyler-mulligan
 tags:
@@ -10,8 +9,9 @@ tags:
 - slack
 - chatbot
 - ai
-meta_desc: "Create an AI Slack bot to chat with your data using Embedchain, Pulumi on AWS"
+meta_desc: "Learn how to build an AI-powered Slack bot with Embedchain & Pulumi on AWS."
 date: 2024-03-18T17:21:02+01:00
+updated: 2025-03-20
 meta_image: meta.png
 ---
 
@@ -28,9 +28,9 @@ Large Language Models (LLMs) are sophisticated AI models trained on vast amounts
 
 ![A diagram of the LM and RAG chatbot workflows](./diagram.png)
 
-## Embedchain
+## What's an Embedchain?
 
-Embedchain is an RAG framework powered by LangChain. It simplifies the process of creating RAG applications by providing high-level abstractions that reduce the complexity of AI technologies. With Embedchain, developers can focus on defining conversational flows and configuring the bot's behavior using YAML configuration files, rather than dealing with low-level implementation details.
+Embedchain is a RAG framework powered by LangChain. It simplifies the process of creating RAG applications by providing high-level abstractions that reduce the complexity of AI technologies. With Embedchain, developers can focus on defining conversational flows and configuring the bot's behavior using YAML configuration files, rather than dealing with low-level implementation details.
 
 Embedchain supports configuration for various [data sources](https://docs.embedchain.ai/components/data-sources/overview), [LLMs](https://docs.embedchain.ai/components/llms), [vector databases](https://docs.embedchain.ai/components/vector-databases), [embedding models](https://docs.embedchain.ai/components/embedding-models), and [evaluation](https://docs.embedchain.ai/components/evaluation).
 
@@ -202,6 +202,9 @@ make deploy DEPLOY_ENVIRONMENT=dev
 ```
 
 At this point, you should be able to use `/arti` to interact with your data via Slack.
+
+You might also like:
+{{< related-posts >}}
 
 ## Conclusion
 
