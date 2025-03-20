@@ -10,20 +10,39 @@ menu:
     weight: 6
 ---
 
-Pulumi can be configured to act as an OpenID Connect (OIDC) provider, issuing signed, short-lived tokens. These tokens can then be exchanged by external systems for temporary cloud provider credentials, eliminating the need for hardcoded credentials.
+Pulumi ESC uses OpenID Connect (OIDC) to obtain short-lived dynamic login credentials from [supported cloud providers](/docs/esc/integrations/dynamic-login-credentials/), including AWS, Azure, Google Cloud, and Vault. This feature enhances security by eliminating the necessity for hard-coded cloud provider credentials and facilitates the exchange of tokens for accessing cloud resources and retrieving secrets.
 
-## OIDC authentication configuration
+```yaml
+values:
+  aws:
+    login:
+      fn::open::aws-login:
+        oidc:
+          duration: 1h
+          roleArn: arn:aws:iam::123456789123:role/aws-role
+          sessionName: esc-${context.pulumi.user.login}
+  environmentVariables:
+    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
+    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
+    AWS_SESSION_TOKEN: ${aws.login.sessionToken}
+```
 
-Set up OIDC between Pulumi ESC and your cloud provider:
+In this example we have an environment definition and ARN that identifies us to AWS. We're requesting a short term token that will live for 1 hour for the session `sessionName: esc-${context.pulumi.user.login}`. This token will be used to provide access to the AWS services defined in the permissions policies set for the role.
 
-- [Configuring OIDC for AWS](/docs/pulumi-cloud/oidc/provider/aws/)
-- [Configuring OIDC for Azure](/docs/pulumi-cloud/oidc/provider/azure/)
-- [Configuring OIDC for Google Cloud](/docs/pulumi-cloud/oidc/provider/gcp/)
-- [Configuring OIDC for Vault](/docs/pulumi-cloud/oidc/provider/vault/)
+## Configuring trust relationships
 
-### Pulumi ESC token claim
+As part of the process that exchanges your service's OIDC token for cloud provider credentials, the cloud provider must check the [OIDC token's claims](https://openid.net/specs/openid-connect-core-1_0.html#Claims) against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the **Audience**, **Subject**, and **Issuer** claims. These claims can be used to restrict trust to specific organizations, projects, stacks, environments:
 
-The OIDC token issued by Pulumi ESC includes several claims that you can use to configure trust relationships with your cloud provider. The token contains the following claims:
+- The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
+- The Audience claim contains the name of the organization, prefixed with the provider's platform (`aws`, `azure`, `gcp`). You can use this claim to restrict credentials to a specific organization or organizations.
+- The Subject claim contains a variety of information about the service. You can use this claim to restrict credentials to a specific organization/scope.
+- The various custom claims contain the same information as the Subject claim. If your cloud provider supports configuring trust relationships based on custom claims, you can use these claims for the same purposes as the Subject claim.
+
+The subject and custom claims are particularly useful for configuring trust relationships, as they allow you to set very fine-grained conditions for credentials.
+
+## Default token claim
+
+Pulumi ESC's default issued OIDC tokens include the following claims:
 
 | Claim         | Description |
 |:--------------|:------------|
@@ -34,13 +53,11 @@ The OIDC token issued by Pulumi ESC includes several claims that you can use to 
 | trigger_user  | _(Trigger User)_ The user whose credentials are used to open an environment. |
 | sub           | _(Subject)_ The subject of the OIDC token. Often used for configuring trust relationships, it contains information about the associated service. Each component is also available as a custom claim. |
 
-### Pulumi ESC custom claim
+## Custom token claim
 
-The default format of the subject claim for this service is:
+To tailor token claims for more granular control, you can modify the default subject claim format by using the `subjectAttributes` property. This allows you to reference specific attributes in your cloud provider’s trust policy. This is especially useful if you plan to reference subject claims within your cloud provider’s trust policy.
 
-`pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
-
-To enforce more granular permissions you can customize the OIDC subject claims using the `subjectAttributes` property. This is especially useful if you plan to reference subject claims within your cloud provider’s trust policy. The default prefix when using `subjectAttributes` will be:
+Default subject claim format:
 
 `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}`
 
@@ -51,9 +68,7 @@ Additional options for customization include:
 - `pulumi.user.login`: the login identifier of the user opening the environment
 - `pulumi.organization.login`: the login identifier of the organization
 
-## Example: Resolving rootEnvironment.name and currentEnvironment.name
-
-Consider the following definitions for two environments, `Project/Environment-A` and `Project/Environment-B`:
+Consider the following example definitions for two environments, `Project/Environment-A` and `Project/Environment-B`:
 
 ```yaml
 #Project/Environment-A
@@ -83,16 +98,5 @@ When you open `Project/Environment-B`, the output would be:
 Notice how `enva-rootEnv-name` is resolved to `Project/Environment-B`. That's because Project/Environment-A is opened from Project/Environment-B which is the root, i.e. the top-level environment to be opened.
 
 When importing multiple environments into Pulumi IaC Stack Config, each environment is resolved separately. For example, if you import multiple environments into your Pulumi Stack with `rootEnvironment.name` attribute defined in all of them, then each `rootEnvironment.name` will resolve to the environment name where it is defined.
-
-## Configuring trust relationships
-
-As part of the process that exchanges your service's OIDC token for cloud provider credentials, the cloud provider must check the [OIDC token's claims](https://openid.net/specs/openid-connect-core-1_0.html#Claims) against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the **Audience**, **Subject**, and **Issuer** claims. These claims can be used to restrict trust to specific organizations, projects, stacks, environments:
-
-- The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
-- The Audience claim contains the name of the organization, prefixed with the provider's platform (`aws`, `azure`, `gcp`). You can use this claim to restrict credentials to a specific organization or organizations.
-- The Subject claim contains a variety of information about the service. You can use this claim to restrict credentials to a specific organization/scope.
-- The various custom claims contain the same information as the Subject claim. If your cloud provider supports configuring trust relationships based on custom claims, you can use these claims for the same purposes as the Subject claim.
-
-The subject and custom claims are particularly useful for configuring trust relationships, as they allow you to set very fine-grained conditions for credentials.
 
 For further details on additional OIDC integration and managing Pulumi Cloud access see our [OIDC Overview documentation](/docs/pulumi-cloud/access-management/oidc/).
