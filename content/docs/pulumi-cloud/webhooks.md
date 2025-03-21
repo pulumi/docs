@@ -47,6 +47,10 @@ The Webhooks page is under the Stack or Organization Settings tab.
 
 If you are looking for Environment Webhook documentation, it's [here](/docs/esc/webhooks/).
 
+{{% notes "info" %}}
+No guarantee is provided over the order of events sent via webhooks. You should not rely on events to be received in the order they occurred.
+{{% /notes %}}
+
 ### Create a Webhook
 
 Pulumi Webhooks may be created through the UI using the steps outlined below, by using the
