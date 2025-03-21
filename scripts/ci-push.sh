@@ -7,7 +7,7 @@ source ./scripts/ci-login.sh
 ./scripts/build-site.sh
 ./scripts/sync-and-test-bucket.sh update
 
-./scripts/generate-search-index.sh
+# ./scripts/generate-search-index.sh
 
 node ./scripts/await-in-progress.js
 
