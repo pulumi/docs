@@ -2,13 +2,21 @@
 title: Importing other environments
 title_tag: Importing other environments | Pulumi ESC
 h1: Importing other environments
-meta_desc: Pulumi ESC allows you to import and compose configurations from multiple environments, reducing duplication and ensuring consistency.
+meta_desc: Pulumi ESC allows you to import and compose configurations from multiple
+  environments, reducing duplication and ensuring consistency.
 menu:
   esc:
     name: Importing environments
     identifier: esc-importing-environments
     parent: esc-environments
     weight: 2
+search:
+  keywords:
+    - environments
+    - environment
+    - imports
+    - importing
+    - environmentvariables
 ---
 
 Environments can be composed from other environments.

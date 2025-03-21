@@ -1,8 +1,13 @@
 ---
 title: "esc env set"
+search:
+  keywords:
+    - esc_env
+    - env
+    - esc
+    - environment
+    - command
 ---
-
-
 
 Set a value within an environment.
 

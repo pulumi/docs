@@ -1,8 +1,13 @@
 ---
 title: "esc env version tag rm"
+search:
+  keywords:
+    - esc_env_version_tag
+    - esc
+    - env
+    - command
+    - versions
 ---
-
-
 
 Remove a tagged version.
 
