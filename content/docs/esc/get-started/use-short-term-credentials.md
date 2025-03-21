@@ -33,7 +33,7 @@ To use dynamic credentials, you need to configure OpenID Connect (OIDC) between 
 
 1. After creating the provider, click **Assign role** in the notification prompt
 2. Select **Create a new role**
-3. Ensure **Web identity** is selected, and verify that 
+3. Ensure **Web identity** is selected, and verify that
    - `api.pulumi.com/oidc` provider is selected
    - Your Pulumi organization is selected as the audience
 4. Click **Next**
@@ -43,6 +43,28 @@ To use dynamic credentials, you need to configure OpenID Connect (OIDC) between 
 8. Click **Edit** on the Select trusted entities' section
 9. Ensure the "Condition" subject claim includes `aws:` before your organization name (i.e.`"api.pulumi.com/oidc:aud": "aws:myorg"` )
 10. Review and click **Create role**
+
+Example trust policy:
+
+```yaml
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::123456789123:oidc-provider/api.pulumi.com/oidc"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "api.pulumi.com/oidc:aud": "aws:my-org"
+                }
+            }
+        }
+    ]
+}
+```
 
 Note the ARN of your new role as you'll need it in the next step.
 

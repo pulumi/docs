@@ -1,8 +1,8 @@
 ---
-title_tag: Configuring OpenID Connect | Pulumi ESC
-meta_desc: This page provides an overview of how to configure OpenID Connect integration between Pulumi ESC and supported cloud providers.
-title: Configuring OIDC
-h1: Configuring OIDC for ESC
+title_tag: Configuring OIDC Claims | Pulumi ESC
+meta_desc: This page provides an overview of how to configure OpenID claims between Pulumi ESC and supported cloud providers.
+title: Configuring OIDC Claims
+h1: Configuring OIDC claims for ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
