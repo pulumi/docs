@@ -50,10 +50,11 @@ export class CopilotSidebar {
     }
 
     private async loadAtlasScripts() {
-        const atlasWebComponentPath = this.atlasUrl + "/main.js";
         const atlasWebComponentPolyfillsPath = this.atlasUrl + "/polyfills.js";
+        const atlasWebComponentPath = this.atlasUrl + "/main.js";
         try {
-            await Promise.all([this.loadScriptOnce(atlasWebComponentPath), this.loadScriptOnce(atlasWebComponentPolyfillsPath)]);
+            await this.loadScriptOnce(atlasWebComponentPolyfillsPath);
+            await this.loadScriptOnce(atlasWebComponentPath);
             this.atlasScriptsLoaded = true;
         } catch (error) {
             console.error("Failed to load Atlas scripts:", error);
