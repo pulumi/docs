@@ -73,13 +73,6 @@ Google Cloud Kubernetes (GKE) provides a robust foundation for AI/ML workloads, 
 
 <!--more-->
 
-> [!INFO]
-> Let's talk about Kubernetes and all you can do! Meet us at:
->
-> - **KubeCon Europe Booth S450** - [Request a 1:1 Demo](https://www.pulumi.com/kubecon-europe/)
-> - **Google Next'25 booth 1589** - [Join us for a Happy House and/or Request your 1:1 Demo](https://www.pulumi.com/google-next/)
->
-> Don’t miss the chance to see Pulumi in action, ask questions, and explore why Kubernetes + Google  Cloud + Pulumi go better together. 🚀
 
 ## Pulumi: Automating AI/ML Infrastructure on Google Cloud
 
