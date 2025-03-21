@@ -15,7 +15,7 @@ In this example, you will use the `esc run` command to execute AWS CLI operation
 
 ## Create the AWS OIDC configuration
 
-To use dynamic credentials, you need to configure [OpenID Connect (OIDC)](/docs/esc/environments/configuring-oidc/) between Pulumi ESC and AWS. This requires creating two resources in AWS:
+To use dynamic credentials, you need to configure OpenID Connect (OIDC) between Pulumi ESC and AWS. This requires creating two resources in AWS:
 
 1. An IAM OIDC provider
 2. An IAM role that trusts this provider and provides the necessary permissions
