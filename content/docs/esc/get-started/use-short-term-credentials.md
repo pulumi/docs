@@ -22,7 +22,7 @@ To use dynamic credentials, you need to configure OpenID Connect (OIDC) between 
 
 ### Create the OIDC provider
 
-1. Navigate to the [IAM console](https://console.aws.amazon.com/iam/)
+1. Navigate to the [AWS IAM console](https://console.aws.amazon.com/iam/)
 2. In the navigation pane, choose **Identity providers**, then **Add provider**
 3. Select **OpenID Connect** as the provider type
 4. For the Provider URL, enter: `https://api.pulumi.com/oidc`
