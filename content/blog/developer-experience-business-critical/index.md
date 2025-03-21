@@ -186,7 +186,7 @@ You will need to understand how developers work, the developer workflow, what th
 - **Key performance indicators (KPIs)**: Define and track key metrics such as deployment frequency, lead time, and mean time to recovery to measure the effectiveness of the DevEx strategy
 - **Iterative optimization**: Continuously iterate and optimize DevEx based on performance metrics and user feedback
 
-[Implementing developer experience ](https://www.pulumi.com/blog/platform-engineering-pillars-4/)requires a holistic approach that blends cultural aspects with powerful DevOps and platform engineering tools. Watch Daniel Tao, Head of Engineering at [Atlassian](https://www.pulumi.com/case-studies/atlassian/), and Sven Peters, developer evangelist, discuss how to build a great developer experience through culture and an integrated approach to developer tools.
+[Implementing a Developer Experience](https://www.pulumi.com/blog/platform-engineering-pillars-4/) requires a holistic approach that blends cultural aspects with powerful DevOps and platform engineering tools. Watch Daniel Tao, Head of Engineering at [Atlassian](https://www.pulumi.com/case-studies/atlassian/), and Sven Peters, developer evangelist, discuss how to build a great developer experience through culture and an integrated approach to developer tools.
 
 {{< youtube "xriRD7ugX20?si=LurTGLx1KfgRGIQZ&t=192?rel=0" >}}
 
