@@ -27,43 +27,51 @@
         </div>
     </section>
 
-    <section class="container mx-auto text-center overflow-hidden px-3 mt-6">
-        <h3 class="text-center mb-4">{{ .Params.customer_logos.title }}</h3>
+    <section class="container flex flex-col justify-center lg:flex-row mx-auto my-16 px-8 lg:px-0">
+        <div class="flex flex-col lg:flex-row"></div>
+            <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
+                    </pulumi-choosable>
 
-        <div class="w-full order-first pb-16 items-center justify-center hidden lg:block">
-            <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
-                {{ range $logo := .Params.customer_logos.logos }}
-                    <pulumi-swipeable>
-                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
-                            {{ if $logo.link }}
-                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
-                                </a>
-                            {{ else }}
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
-                            {{ end }}
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
-        </div>
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.awsx.py "lang" "go") }}
+                    </pulumi-choosable>
 
-        <div class="w-full order-first pb-16 items-center justify-center block lg:hidden">
-            <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
-                {{ range $logo := .Params.customer_logos.logos }}
-                    <pulumi-swipeable>
-                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
-                            {{ if $logo.link }}
-                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
-                                </a>
-                            {{ else }}
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
-                            {{ end }}
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.awsx.go "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.awsx.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.awsx.java "lang" "java") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.awsx.yaml "lang" "yaml") }}
+                    </pulumi-choosable>
+                </pulumi-chooser>
+            </div>
+            <div class="w-full lg:w-1/2 px-8">
+                <h3>Pulumi + AWS: Better Together</h3>
+                <p>{{"Ship faster, secure your secrets, and enforce cloud compliance and security with [Pulumi IaC](/product/infrastructure-as-code/) (infrastructure as code), [ESC](/product/secrets-management/) (secrets management and orchestration), and [Insights](/product/pulumi-insights/) (cloud asset and compliance management). Our partnership with AWS offers a robust solution for complex cloud deployments, enabling you to:" | markdownify}}</p>
+                <h5>Automate your AWS infrastructure with Pulumi IaC.</h5>
+                <p class="mt-0">
+                    Build and ship infrastructure faster using languages you know and love, like TypeScript, Python, Go, C#, and Java.
+                </p>
+                <h5>Secure your cloud secrets with Pulumi ESC.</h5>
+                <p>
+                    Centrally manage all your secrets and configurations. Pull and sync secrets with any secrets store. Consume in any application, tool, or CI/CD platform.
+                </p>
+                <h5>Manage your AWS resources with Pulumi Insights.</h5>
+                <p>
+                    Search, compliance remediation, resource visualizations, cost optimization, and AI insights over all your AWS infrastructure.
+                </p>
+            </div>
         </div>
     </section>
 
