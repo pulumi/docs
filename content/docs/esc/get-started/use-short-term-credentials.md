@@ -9,7 +9,7 @@ menu:
     parent: esc-get-started
 ---
 
-Managing cloud credentials presents significant challenges for organizations of all sizes. Static, long-lived credentials, especially those stored in local environments introduce security risks and operational issues. Pulumi ESC’s built-in support for [dynamic login providers](/docs/esc/integrations/dynamic-login-credentials/), allows for best-practices like generating signed, short-term, scoped credentials issued via OIDC. These credentials can then be used in both Pulumi IaC workflows and external CLIs such as `aws`, `kubectl`.
+Managing cloud credentials presents significant challenges for organizations of all sizes. Static, long-lived credentials, especially those stored in local environments introduce security risks and operational issues. Pulumi ESC’s built-in support for [dynamic login providers](/docs/esc/integrations/dynamic-login-credentials/), allows you to generate short-term, scoped credentials via OIDC. These credentials can then be used in your CLI workflows, CI/CD, Pulumi IaC, and more!
 
 In this example, you will use the `esc run` command to execute AWS CLI operations without having to manually configure AWS credentials in your local environment.
 
