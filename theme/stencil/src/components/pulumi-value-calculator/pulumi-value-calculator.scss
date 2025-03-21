@@ -78,88 +78,6 @@
         }
     }
 
-    .outputs {
-        width: 50%;
-        max-width: 530px;
-        border-radius: 12px;
-        background: #fff;
-        box-shadow: 0px 6px 36px 0px rgba(0, 0, 0, 0.14);
-
-        .contents {
-            display: flex;
-            padding: 36px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 36px;
-        }
-
-        .gradient {
-            border-radius: 12px 12px 0px 0px;
-            height: 8px;
-            background: linear-gradient(
-                90deg,
-                #f7bf2a 0%,
-                #f26e7e 18.23%,
-                #be5188 38.02%,
-                #8a3391 53.65%,
-                #805ac3 74.48%,
-                #7682f4 100%
-            );
-        }
-
-        .items,
-        .deployment-total {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            color: #2f3032;
-            font-family: "Inter";
-            font-size: 16px;
-            font-weight: 400;
-            width: 100%;
-
-            .item {
-                flex-grow: 1;
-                display: flex;
-                gap: 36px;
-                justify-content: space-between;
-            }
-        }
-
-        .divider {
-            width: 100%;
-            border-bottom: 1px solid #bebfc9;
-        }
-
-        .deployment-total {
-            display: none;
-
-            &.visible {
-                display: flex;
-            }
-
-            .subtitle {
-                font-weight: 600;
-            }
-
-            .item {
-                margin-left: 16px;
-            }
-        }
-
-        .total {
-            display: flex;
-            width: 100%;
-            color: #805ac3;
-            font-family: "Inter";
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 700;
-            justify-content: end;
-            gap: 4px;
-        }
-    }
-
     // Remove number incrementer from input
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -171,7 +89,7 @@
         -moz-appearance: textfield;
     }
 
-    .deployments {
+    .assumptions {
         border-radius: 4px;
         border: 1px solid #805ac3;
         display: flex;
@@ -197,25 +115,11 @@
             align-items: center;
             gap: 24px;
 
-            .details {
-                flex-grow: 1;
-                display: flex;
-                flex-direction: column;
-                color: #2f3032;
-
-                .title {
-                    font-family: "Inter";
-                    font-size: 18px;
-                    font-weight: 600;
-                    margin-bottom: 16px;
-                }
-
-                .subtitle {
-                    font-family: "Inter";
-                    font-size: 16px;
-                    font-weight: 400;
-                    line-height: normal;
-                }
+            .subtitle {
+                font-family: "Inter";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
             }
         }
 
@@ -226,6 +130,27 @@
             flex-direction: column;
             &.visible {
                 display: flex;
+            }
+
+            .percent {
+                color: lightgray;
+            }
+
+            .details {
+                flex-grow: 1;
+                display: flex;
+                color: #2f3032;
+    
+                .title {
+                    font-family: "Gilroy";
+                    font-size: 24px;
+                    font-weight: 400;
+                    margin: 12px 0 12px 0;
+                }
+    
+                .description {
+                    margin-bottom: 16px;
+                }
             }
         }
     }
@@ -307,40 +232,10 @@
 }
 
 @media(max-width: 1280px) {
-    .calculator .field {
-        .details {
-            flex-direction: column;
-
-            .input {
-                margin-top: 16px;
-            }
-        }
-    }
 }
 
 @media(max-width: 1024px) {
-    .calculator {
-        .content {
-            flex-direction: column;
-        }
-        .outputs {
-            width: 100%;
-            max-width: 1200px;
-        }
-    }
 }
 
 @media(max-width: 640px) {
-    .calculator .field .details {
-        .description {
-            width: 100%
-        }
-        .input {
-            width: 100%;
-        }
-    }
-
-    .range {
-        width: 100%;
-    }
 }
