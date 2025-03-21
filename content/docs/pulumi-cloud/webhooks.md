@@ -48,7 +48,7 @@ The Webhooks page is under the Stack or Organization Settings tab.
 If you are looking for Environment Webhook documentation, it's [here](/docs/esc/webhooks/).
 
 {{% notes "info" %}}
-No guarantee is provided over the order of events sent via webhooks. You should not rely on events to be received in the order they occurred.
+Webhooks do not guarantee event order. You should not assume events will be received in the order they occurred.
 {{% /notes %}}
 
 ### Create a Webhook
