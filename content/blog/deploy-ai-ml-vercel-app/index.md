@@ -1,8 +1,9 @@
 ---
 date: 2023-09-13
-title: "Deploying Your AI/ML Chatbot Frontend To Vercel Using Pulumi"
+updated: 2025-03-20
+title: "Deploy an AI/ML Chatbot Frontend on Vercel with Pulumi"
 allow_long_title: true
-meta_desc: "Learn how to effortlessly deploy your AI/ML chatbot frontend to Vercel using Pulumi and Python to take your AI DevOps skills to the next level"
+meta_desc: "Deploy your AI chatbot frontend on Vercel using Pulumi and Python. Follow this step-by-step guide to streamline your AI DevOps workflow."
 meta_image: meta.png
 authors:
     - adora-nwodo
@@ -16,7 +17,7 @@ tags:
 
 ---
 
-The process of taking an idea and turning it into reality has been nothing short of extraordinary since we started innovating with Artificial Intelligence. With this technology, machines learn about and communicate with people, while also helping us in ways we never could have imagined only a few years ago. If you've been following along, you might recall our [previous article](https://www.pulumi.com/blog/mlops-the-ai-challenge-is-cloud-not-code/) where we used Python and Pulumi to a chatbot API (named katwalk) to the cloud.
+The process of taking an idea and turning it into reality has been nothing short of extraordinary since we started innovating with Artificial Intelligence. With this technology, machines learn about and communicate with people, while also helping us in ways we never could have imagined only a few years ago. If you've been following along, you might recall that [the real AI challenge is cloud, not code](https://www.pulumi.com/blog/mlops-the-ai-challenge-is-cloud-not-code/) where we used Python and Pulumi to a chatbot API (named katwalk).
 
 But our AI adventure hasn't ended there; it's only just begun.
 
@@ -25,7 +26,7 @@ But our AI adventure hasn't ended there; it's only just begun.
 Now, imagine this: A Vue.js chatbot frontend, seamlessly integrating human interaction and the AI chatbot API. This blog post is part of the series on AI Infrastructure as Python. We'd delve into the creation of a captivating Vue.js chatbot frontend, and with Pulumi, we'll deploy it to Vercel.
 
 > Figure 1. Architecture diagram
-![architecture](./architecture.png)
+![Diagram showing the Katwalk AI chatbot workflow. A user sends a prompt via the Katwalk frontend, which sends an API request to the Katwalk server (deployed with Pulumi). The server processes it using a LLaMA model and returns a response to the user.](./architecture.png)
 
 The complexity of building end-to-end AI/ML applications rests not only in the algorithms and models, but also in the several layers of infrastructure required to bring them to life. Consider this: You have a Vue.js chatbot frontend, a chatbot API powered by LLaMA models, a Vercel cloud hosting environment for the frontend, and a Runpod environment for the API. But here's the catch: you have to weave all of these pieces together seamlessly.
 
@@ -38,7 +39,7 @@ Before we get into the details of using Pulumi to deploy a Vue.js frontend app t
 - [Katwalk Frontend](https://github.com/pulumiverse/katwalk/tree/main/src/app/katwalk-frontend) is a demo Vue.js application that integrates with the [Katwalk Server](https://github.com/pulumiverse/katwalk) to produce a function web interface for you to communicate with your chatbot. 
 - [Vercel](https://vercel.com/) is a modern web development cloud platform and hosting provider. It specialises in making web application deployment simple and efficient.
 
-## Integrate Your Chatbot Service With a Frontend And Deploy It!
+## How to Integrate Your Chatbot Frontend and Deploy to Vercel
 If you are ready to integrate your chatbot and deploy it to Vercel along with us, then let's double check a few requirements before we continue. While Pulumi supports many languages, we chose Python for this project, as Python is a familiar language in the AI industry and this is part of the *#PulumiMLOps* challenge.
 
 ### Requirements
@@ -115,7 +116,7 @@ pulumi up
 Once your web app is running, you can visit the website at `https://{vcl_project_name}.vercel.app`, send prompts and see the response in real-time!
 
 > Figure 2. A prompt and response screenshot from our Katwalk Frontend
-![chatbot-webapp](./chatbot-webapp.png)
+![A prompt and response screenshot from Katwalk Frontend on Vercel](./chatbot-webapp.png)
 
 ### 6. Tear down resources
 
@@ -125,7 +126,7 @@ Now that you've tested out this code and you can see the chatbot in action, reme
 pulumi destroy
 ```
 
-## Explaining the Pulumi code
+## Understanding the Pulumi Code for Vercel Deployment
 
 If you'd like to learn about what the Pulumi code is doing, then stick around. In this section, we'll dive into the Python Pulumi code which is responsible for deploying the Vue.js project to Vercel using Pulumi. Let's break down the code step by step to understand how it works. 
 

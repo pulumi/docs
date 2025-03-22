@@ -1,6 +1,5 @@
 ---
-title: "Create an AI Slack Bot to Chat with Your Data Using Embedchain, Pulumi on AWS"
-allow_long_title: true
+title: "Build an AI Slack Bot on AWS Using Embedchain & Pulumi"
 authors:
 - tyler-mulligan
 tags:
@@ -10,8 +9,9 @@ tags:
 - slack
 - chatbot
 - ai
-meta_desc: "Create an AI Slack bot to chat with your data using Embedchain, Pulumi on AWS"
+meta_desc: "Learn how to build an AI-powered Slack bot with Embedchain & Pulumi on AWS."
 date: 2024-03-18T17:21:02+01:00
+updated: 2025-03-20
 meta_image: meta.png
 ---
 
@@ -26,17 +26,17 @@ on AWS using [Pulumi](https://www.pulumi.com), a modern infrastructure as code (
 
 Large Language Models (LLMs) are sophisticated AI models trained on vast amounts of text data, enabling them to generate human-like text responses.  Retrieval-Augmented Generated (RAG) is a cutting-edge approach to chatbot development that combines the capabilities of LLMs with information retrieval techniques. RAG chatbots can generate responses based on both the input query and relevant information retrieved from a knowledge base, resulting in more contextually relevant and informative interactions.
 
-![A diagram of the LM and RAG chatbot workflows](./diagram.png)
+![A diagram of a LM chatbot workflow and RAG chatbot workflows](./diagram.png)
 
-## Embedchain
+## What's an Embedchain?
 
-Embedchain is an RAG framework powered by LangChain. It simplifies the process of creating RAG applications by providing high-level abstractions that reduce the complexity of AI technologies. With Embedchain, developers can focus on defining conversational flows and configuring the bot's behavior using YAML configuration files, rather than dealing with low-level implementation details.
+Embedchain is a RAG framework powered by LangChain. It simplifies the process of creating RAG applications by providing high-level abstractions that reduce the complexity of AI technologies. With Embedchain, developers can focus on defining conversational flows and configuring the bot's behavior using YAML configuration files, rather than dealing with low-level implementation details.
 
 Embedchain supports configuration for various [data sources](https://docs.embedchain.ai/components/data-sources/overview), [LLMs](https://docs.embedchain.ai/components/llms), [vector databases](https://docs.embedchain.ai/components/vector-databases), [embedding models](https://docs.embedchain.ai/components/embedding-models), and [evaluation](https://docs.embedchain.ai/components/evaluation).
 
 ## Creating a Slack bot
 
-![A screenshot of a Slack conversation with the Arti Slack bot](./arti-slack.png)
+![A screenshot of a Slack conversation with a custom built Slack bot, Arti](./arti-slack.png)
 
 Start by cloning the project:
 
@@ -159,7 +159,7 @@ The configuration module in this application normalizes retrieval of secrets fro
 
 Once our bot is ready, we'll deploy it on AWS using Pulumi. Pulumi allows us to define our cloud infrastructure using familiar programming languages like TypeScript or Python, making it easy to manage and scale our deployment.
 
-![A diagram of the Arti Slack bot archirecture](arti-architecture.png)
+![A diagram of the Arti Slack bot archirecture from user to Slack to Amazon API Gateway to Embedchain api_handler to OpenAI](arti-architecture.png)
 
 It's important to note that in this selected architecture, we're working within a few limitations. Lambda's only writable directory is `/tmp` and it's limited to 500MB, and we need to use a Docker container to overcome the 250MB filesize limitation of our application, which we'll be bundling our data with.
 
@@ -202,6 +202,9 @@ make deploy DEPLOY_ENVIRONMENT=dev
 ```
 
 At this point, you should be able to use `/arti` to interact with your data via Slack.
+
+You might also like:
+{{< related-posts >}}
 
 ## Conclusion
 

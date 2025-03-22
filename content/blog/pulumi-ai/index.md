@@ -2,8 +2,9 @@
 title: "Pulumi AI: The Fastest Way to Discover, Learn, and Build Infrastructure as Code"
 allow_long_title: true
 authors: ["luke-hoban"]
-meta_desc: "Explore Pulumi AI, a powerful AI Assistant that simplifies cloud infrastructure creation using Large Language Models and GPT, saving developers time and effort"
+meta_desc: "Discover Pulumi AI—your AI-powered assistant for building cloud infrastructure faster and smarter. Reduce complexity and deploy in minutes."
 date: "2023-04-27T10:00:00-08:00"
+updated: 2025-03-20
 meta_image: "meta.png"
 tags:
     - features
@@ -12,7 +13,7 @@ tags:
 ---
 
 {{% notes type="info" %}}
-There are new intelligent cloud management capabilities available in **Pulumi Copilot**. [Learn More](/blog/pulumi-copilot)
+There are new intelligent cloud management capabilities available in [**Pulumi Copilot**](/blog/pulumi-copilot).
 {{% /notes %}}
 
 We recently released [Pulumi AI](/ai/), a purpose-built AI Assistant that can create cloud infrastructure using Pulumi. It builds on the power of Large Language Models (LLMs) and GPT to dramatically reduce the time it takes to discover, learn and use new cloud infrastructure APIs.

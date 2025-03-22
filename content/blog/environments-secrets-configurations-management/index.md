@@ -1,21 +1,16 @@
 ---
 title: "Introducing Pulumi ESC: Easy and Secure Environments, Secrets and Configuration"
 allow_long_title: true
-
 date: 2023-10-10T04:00:00-07:00
-
-meta_desc: "Introducing Pulumi ESC: Hierarchical Environments, Secrets Management and Configuration-as-Code for the Cloud"
-
+updated: 2025-03-20
+meta_desc: "Manage cloud secrets, configuration, and environments effortlessly with Pulumi ESC. Try the new CLI for secure, automated workflows."
 meta_image: meta.png
-
 authors:
     - luke-hoban
-
 tags:
     - esc
     - secrets
     - platform-engineering
-
 ---
 
 Today, we’re excited to introduce [**Pulumi ESC**](/product/esc/), a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments.  Pulumi ESC introduces a new category of configuration-as-code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.
@@ -28,7 +23,7 @@ Pulumi ESC enables teams to aggregate secrets and configuration from many source
 
 For example, the Pulumi ESC CLI (`esc`) makes it possible to give your developers immediate, just-in-time authenticated and short-lived access to cloud credentials across any cloud provider with just a single command: `esc run aws-staging -- aws s3 ls`.
 
-![Pulumi ESC Overview GIF](esc.gif)
+![Pulumi ESC Overview in the Command Line Interface](esc.gif)
 
 Here are just a few of the exciting use cases we've seen for Pulumi ESC:
 
@@ -40,12 +35,11 @@ Here are just a few of the exciting use cases we've seen for Pulumi ESC:
 
 Pulumi ESC is available today in preview via the new `esc` CLI, as part of Pulumi Cloud, via the Pulumi Cloud REST API, and has direct integration with Pulumi IaC stack configuration and new `pulumi env` commands.  It also supports dynamically pulling secrets and configuration from other sources of truth, including AWS OIDC, AWS Secrets Manager, Azure OIDC, Azure KeyVault, Google Cloud OIDC, Google Secrets Manager, HashiCorp Vault, and Pulumi IaC Stack References - with many more sources like 1Password coming soon.
 
-[Get Started](/docs/pulumi-cloud/esc/) with Pulumi ESC today!
 
-![ESC Overview](esc-overview.png)
+![Diagram of Pulumi ESC architecture, showing how configuration and secrets from multiple sources (AWS, Azure, Google Cloud, Vault, 1Password) are managed within Pulumi ESC environments and securely delivered to execution environments like Pulumi CLI, GitHub Actions, AWS, Kubernetes, and Cloudflare Workers.](esc-overview.png)
 
 
-## A Taste of Pulumi ESC
+## Pulumi ESC: How It Works & Key Features
 
 Pulumi ESC allows you to define _environments_, each of which specifies a collection of _secrets_ and _configuration_ values. Environments are specified as _code_, and each environment can import one or more other environments (for composition and inheritance), and can specify its own configuration values directly, or be pulled from another secrets provider.
 
@@ -67,7 +61,7 @@ values:
   aws:region: us-west-2
 ```
 
-## Why Pulumi ESC?
+## Why Use Pulumi ESC for Cloud Secrets & Configuration?
 
 Working with Pulumi customers, we’ve seen the incredible benefits they get from managing IaC complexity in their code using Pulumi, and yet they frequently end up with a lot of complexity remaining at the boundary to their IaC code - at the configuration and secrets they need to get into Pulumi IaC.  Users frequently show us configuration files that are hundreds of lines long, with tons of copy/paste both between Pulumi configuration and between other sources of truth and Pulumi configuration, and with more long lived static secrets being copied around than they would like - creating maintenance burden, security concerns, frequent drift, and operational risk.
 
@@ -77,7 +71,7 @@ As we looked at solving these problems for Pulumi we quickly realized that none 
 * __Duplication and Copy/Paste__: Secrets are duplicated in many places. Frequently coupled to application/system-specific configuration stores.
 * __Too Many Long-lived Static Secrets__: Long lived static credentials are over-used, exposing companies to significant security risk.  Rotation is operationally challenging. Not all systems support direct integration with OIDC and other dynamic secrets provisioning systems.
 
-While customers frequently had good solutions for pure secrets management (AWS Secrets Manager, HashiCorp Vault, etc.), none of these solutions extended into managing the complexities of actually getting these secrets as well as non-secret configuration into the collection of logical environments that define how they will be consumed in infrastructure and applications.  Customers struggled with too many walled gardens for secrets management and configuration, and lack of any consistent set of tools and workflows to help manage the complexity of how secrets and configuration flow between these systems.
+While customers frequently had good solutions for pure [secrets management](/what-is/what-is-secrets-management/) (AWS Secrets Manager, HashiCorp Vault, etc.), none of these solutions extended into managing the complexities of actually getting these secrets as well as non-secret configuration into the collection of logical environments that define how they will be consumed in infrastructure and applications.  Customers struggled with too many walled gardens for secrets management and configuration, and lack of any consistent set of tools and workflows to help manage the complexity of how secrets and configuration flow between these systems.
 
 Pulumi ESC was born to address these problems and needs head on.  It does so through a few core design principles:
 
@@ -91,9 +85,11 @@ Pulumi ESC was born to address these problems and needs head on.  It does so thr
 
 Pulumi ESC enables a new kind of solution for configuration management of modern cloud infrastructure.
 
-## A Tour of Pulumi ESC
+## Pulumi ESC Overview
 
 We can start by creating a few simple environments using Pulumi ESC.  This can be done in the Pulumi Cloud console, using the new `esc` CLI, or using the new `pulumi env` sub-commands in the Pulumi CLI. Let’s take a look at these in action.
+
+{{< related-posts >}}
 
 ### Creating and Managing Environments, Secrets and Configuration
 
@@ -235,7 +231,7 @@ environment:
   - shopping-service-staging
 ```
 
-If I run `pulumi preview` now on my Pulumi IaC project (in this case, a project which just outputs the configuration values), we will see that configuration values for `aws:region`, `numInstances`, and `dbPassword` are all available. I didn’t have to copy them into this stack, they were automatically pulled out of the environment in Pulumi ESC.  And note that the secretness of the `dbPassword` configuration value flowed through into Pulumi IaC’s config system to ensure this value is encrypted in any place it is used within our infrastructure as code.
+If I run `pulumi preview` now on my Pulumi IaC project (in this case, a project which just outputs the configuration values), we will see that configuration values for `aws:region`, `numInstances`, and `dbPassword` are all available. I didn’t have to copy them into this stack, they were automatically pulled out of the environment in Pulumi ESC.  And note that the secretness of the `dbPassword` configuration value flowed through into Pulumi IaC’s config system to ensure this value is encrypted in any place it is used within our [infrastructure as code](/what-is/what-is-infrastructure-as-code/).
 
 ```
 Previewing update (pulumi/staging)
