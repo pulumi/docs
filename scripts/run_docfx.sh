@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Usage: run_docfx
 
 set -o nounset -o errexit -o pipefail

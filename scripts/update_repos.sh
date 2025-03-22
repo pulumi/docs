@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Usage: update_repos
 
 set -o nounset -o errexit -o pipefail
