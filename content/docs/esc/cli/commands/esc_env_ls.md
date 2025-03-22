@@ -1,8 +1,13 @@
 ---
 title: "esc env ls"
+search:
+  keywords:
+    - esc_env
+    - environments
+    - env
+    - environment
+    - esc
 ---
-
-
 
 List environments.
 

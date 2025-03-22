@@ -10,6 +10,13 @@ menu:
     weight: 3
 aliases:
   - /docs/esc/sdk/go/
+search:
+  keywords:
+    - pulumi_access_token
+    - esc
+    - pulumi_org
+    - createenvironment
+    - sdk
 ---
 
 The [Go SDK](https://github.com/pulumi/esc-sdk) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.

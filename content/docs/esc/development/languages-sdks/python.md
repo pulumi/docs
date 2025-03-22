@@ -10,6 +10,13 @@ menu:
     weight: 2
 aliases:
   - /docs/esc/sdk/python/
+search:
+  keywords:
+    - pulumi_esc_sdk
+    - pulumi_access_token
+    - update_environment
+    - create_environment
+    - pulumi_org
 ---
 
 The [Python SDK](https://pypi.org/project/pulumi-esc-sdk/) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.
