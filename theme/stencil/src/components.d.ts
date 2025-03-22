@@ -202,6 +202,8 @@ export namespace Components {
     interface PulumiUserToggle {
         "userId": string;
     }
+    interface PulumiValueCalculator {
+    }
     interface PulumiWebinarFormSelect {
         "labelClass"?: string;
         "selectClass"?: string;
@@ -455,6 +457,12 @@ declare global {
         prototype: HTMLPulumiUserToggleElement;
         new (): HTMLPulumiUserToggleElement;
     };
+    interface HTMLPulumiValueCalculatorElement extends Components.PulumiValueCalculator, HTMLStencilElement {
+    }
+    var HTMLPulumiValueCalculatorElement: {
+        prototype: HTMLPulumiValueCalculatorElement;
+        new (): HTMLPulumiValueCalculatorElement;
+    };
     interface HTMLPulumiWebinarFormSelectElement extends Components.PulumiWebinarFormSelect, HTMLStencilElement {
     }
     var HTMLPulumiWebinarFormSelectElement: {
@@ -503,6 +511,7 @@ declare global {
         "pulumi-tooltip": HTMLPulumiTooltipElement;
         "pulumi-top-button": HTMLPulumiTopButtonElement;
         "pulumi-user-toggle": HTMLPulumiUserToggleElement;
+        "pulumi-value-calculator": HTMLPulumiValueCalculatorElement;
         "pulumi-webinar-form-select": HTMLPulumiWebinarFormSelectElement;
     }
 }
@@ -692,6 +701,8 @@ declare namespace LocalJSX {
     interface PulumiUserToggle {
         "userId"?: string;
     }
+    interface PulumiValueCalculator {
+    }
     interface PulumiWebinarFormSelect {
         "labelClass"?: string;
         "selectClass"?: string;
@@ -739,6 +750,7 @@ declare namespace LocalJSX {
         "pulumi-tooltip": PulumiTooltip;
         "pulumi-top-button": PulumiTopButton;
         "pulumi-user-toggle": PulumiUserToggle;
+        "pulumi-value-calculator": PulumiValueCalculator;
         "pulumi-webinar-form-select": PulumiWebinarFormSelect;
     }
 }
@@ -787,6 +799,7 @@ declare module "@stencil/core" {
             "pulumi-tooltip": LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
             "pulumi-top-button": LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
             "pulumi-user-toggle": LocalJSX.PulumiUserToggle & JSXBase.HTMLAttributes<HTMLPulumiUserToggleElement>;
+            "pulumi-value-calculator": LocalJSX.PulumiValueCalculator & JSXBase.HTMLAttributes<HTMLPulumiValueCalculatorElement>;
             "pulumi-webinar-form-select": LocalJSX.PulumiWebinarFormSelect & JSXBase.HTMLAttributes<HTMLPulumiWebinarFormSelectElement>;
         }
     }
