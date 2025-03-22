@@ -41,6 +41,10 @@ Organization webhooks can be managed on the Organization Settings page. Environm
 
 Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/pulumi-cloud/webhooks).
 
+{{% notes "info" %}}
+Webhooks do not guarantee event order. You should not assume events will be received in the order they occurred.
+{{% /notes %}}
+
 ### Create a Webhook
 
 Pulumi Webhooks may be created through any of the following methods:
