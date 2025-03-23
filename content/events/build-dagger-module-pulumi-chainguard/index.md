@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: "Codefest: Build a Dagger Module with Pulumi & Chainguard"
-meta_desc: Join Pulumi, Dagger, and Chainguard for an evening of networking, coding, and talks. Learn basics with Dagger's tutorial, then showcase your module with lightning demos.
+meta_desc: Join Pulumi, Dagger, and Chainguard for an evening of networking, coding, and talks.
 meta_image:
 
 # A featured webinar will display first in the list.
