@@ -110,7 +110,7 @@ export class PulumiPricingCalculator {
                         </div>
                         <div class="details flex flex-row">
                             <div class="info-side">
-                                <div class="title">How much time to these developers spend managing cloud infrastructure?</div>
+                                <div class="title">How much time do these developers spend managing cloud infrastructure?</div>
                                 <div class="description">Average is 20%</div>
                                 <div class="input">
                                     <input type="number" readOnly value={this.devTime}></input><span class="percent">%</span>
