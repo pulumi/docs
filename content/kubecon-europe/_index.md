@@ -24,7 +24,7 @@ event_links:
             Apr 2, 2025 12 pm BST
 
             Meet Thoughtworks Distinguished Engineer and author, Kief Morris, who will be signing the latest edition of his O’Reilly book: Infrastructure as Code. We’ll have limited copies available in the booth at no cost on a first-come-first-served basis.
-          link: https://drive.google.com/file/d/1W-Rt9W6SD70d0F_KISpZjYTNobYmdtEH/view?usp=sharing
+          link: https://4429525.fs1.hubspotusercontent-na1.net/hubfs/4429525/Meet-Kief-Morris-Infrastructure-as-Code-Book-Signing.ics
           cta: Add to Calendar
           
         - title: "KubeCon London: Drinks on the Docks"
