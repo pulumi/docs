@@ -25,7 +25,7 @@ the [GitHub CLI](https://cli.github.com/), etc. The token will expire after 1 ho
 ## App Registration
 
 To use the provider, you must register a new GitHub App into your personal GitHub account or an organization account.
-Other GitHub accounts then install the application into their account to grant access to you, with the permissions
+Other GitHub accounts then install the application into their account to grant you access with the permissions
 defined by your GitHub App.
 
 - To register an app on a personal account, visit: [https://github.com/settings/apps/new](https://github.com/settings/apps/new?contents=read&metadata=read&webhook_active=false&description=Enables%20access%20for%20a%20Pulumi%20ESC%20environment.&url=https://www.pulumi.com/product/esc/).
@@ -34,7 +34,7 @@ defined by your GitHub App.
 Replace ORGANIZATION with the name of the organization where you'd like to register the app.
 
 It is fine to deploy a separate GitHub app for each Pulumi environment, or to reuse an app across environments.
-Consider storing the app's credentials in a reusable environment that you import as-needed.
+It is recommended that you store the app’s credentials in a reusable environment that you can import as needed.
 
 ## Provider Configuration
 
@@ -57,13 +57,16 @@ privateKey:
 
 ### Owner
 
-An installation access token is always scoped to a particular Github account, set by the environment as `owner`. The `owner` property may refer to a personal account or an organization account. The owner or app manager of the account must first install
+An installation access token is always scoped to a particular Github account, set by the environment as `owner`.
+The `owner` property may refer to a personal account or an organization account. The owner or app manager of the account must first install
 the GitHub App that was registered earlier. For more information, see "[Installing your own GitHub App](https://docs.github.com/en/apps/using-github-apps/installing-your-own-github-app)"
 and "[Sharing your GitHub App](https://docs.github.com/en/apps/sharing-github-apps/sharing-your-github-app)".
 
 ```yaml
 owner: octocat
 ```
+
+Use multiple instances of the gh-login provider to create installation access tokens for multiple accounts.
 
 ### Repository Access
 
