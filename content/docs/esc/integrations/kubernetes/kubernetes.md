@@ -1,7 +1,7 @@
 ---
-title: Kubernetes
-title_tag: Integrate with Kubernetes | Pulumi ESC
-h1: "Pulumi ESC: Integrate with Kubernetes"
+title: Kubernetes Cluster Access
+title_tag: Kubernetes Cluster Access | Pulumi ESC
+h1: "Pulumi ESC: Kubernetes Cluster Access"
 meta_desc: Pulumi ESC integrates with Kubernetes to manage configurations, credentials, and kubeconfig files, with kubectl and helm, and Pulumi Kubernetes provider.
 weight: 2
 menu:
@@ -14,8 +14,8 @@ aliases:
 
 ## Overview
 
-Pulumi ESC integrates with [Kubernetes](https://kubernetes.io/) to help developers connect to Kubernetes
-clusters using centrally-managed configurations and credentials. This works with Kubernetes tools
+Pulumi ESC integrates with [Kubernetes](https://kubernetes.io/) to help developers and operators connect to Kubernetes
+clusters using centrally-managed configuration and credentials. This works with Kubernetes CLI tools
 such as `kubectl` and `helm`, and with Pulumi programs that use the
 [Kubernetes provider for Pulumi](/registry/packages/kubernetes/).
 
@@ -27,13 +27,13 @@ To complete the steps in this tutorial, you will need to install the following p
 - a Kubernetes cluster
 - [kubectl](https://kubernetes.io/releases/download/#kubectl)
 
-## Manage Kubernetes Configuration Files
+## Access Kubernetes Clusters from Command Line Tools
 
 ESC integrates with Kubernetes client tools by setting the `KUBECONFIG` environment variable to point to a
 generated [Kubernetes configuration file](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
 
 The kubeconfig content is determined by the ESC environment definition, and may include
-information from a variety of sources, including stack outputs.
+information from a variety of sources, including Pulumi IaC stack outputs.
 
 ### Generate a kubeconfig file
 
@@ -63,9 +63,7 @@ the `KUBECONFIG` environment variable to refer to the file, and then runs a `kub
 ### Use stack outputs to generate a kubeconfig file
 
 Instead of hardcoding a kubeconfig, you also have the option of using ESC providers to dynamically import
-cluster information. The [`pulumi-stacks`](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) provider is especially useful here, if the Kubernetes cluster
-was provisioned by a Pulumi program. Such programs often export the cluster's kubeconfig as a stack output.
-Check out the [Getting Started](/docs/clouds/kubernetes/) guide if you need help setting up a Kubernetes cluster.
+cluster information from [stack outputs](/docs/iac/concepts/stacks/#outputs) of Pulumi IaC programs. The [`pulumi-stacks`](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) ESC provider allows you to read Pulumi IaC stack outputs (in this example, a kubeconfig for an EKS cluster) at runtime and map those values to environment variables, to temporary files, or directly to other Pulumi IaC programs as stack configuration values. Check out the [Getting Started](/docs/clouds/kubernetes/) guide if you need help setting up a Kubernetes cluster.
 
 The following environment defines a kubeconfig file based on a stack output:
 
@@ -84,7 +82,7 @@ values:
 This definition loads a Pulumi stack named `eks-cluster/demo`, parses the `kubeconfig` output as a JSON object,
 and then defines a file named `KUBECONFIG` with the object.
 
-## Use the kubeconfig in a Pulumi program
+## Use the kubeconfig in a Pulumi IaC program
 
 To use the kubeconfig in a Pulumi program, use the `pulumiConfig` section of your environment file to directly
 configure the Pulumi Kubernetes provider.
@@ -103,7 +101,7 @@ values:
     kubernetes:kubeconfig: ${kubeconfig}
 ```
 
-In practice, your environment should define both a kubeconfig file and a provider configuration.
+In practice, your environment should define both a kubeconfig file and a provider configuration in order to reuse the same environment for both CLI access and Pulumi IaC.
 
 Next, you will need to import your environment file into your Pulumi project. To do this,
 open your `Pulumi.<your-stack-name>.yaml` file and update it to import your environment as shown below,
@@ -117,16 +115,16 @@ environment:
 ## Authenticate to a Kubernetes Cluster
 
 ESC enables you to connect to your Kubernetes cluster using credentials obtained from an ESC provider. For example,
-to connect using AWS credentials returned by the [aws-login](/docs/esc/integrations/dynamic-login-credentials/aws-login/) provider.
+to connect to an AWS EKS cluster using AWS OIDC credentials returned by the [aws-login](/docs/esc/integrations/dynamic-login-credentials/aws-login/) provider.
 
 Kubernetes tools typically execute an external command to obtain user credentials
 (see [documentation](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins)).
-These commands rely on environment variables and/or configuration files, and we'll use Pulumi ESC to set
-them up.
+These credential plugin commands rely on environment variables and/or configuration files, and we'll use Pulumi ESC to set
+up the necessary values.
 
 ### Configure AWS credentials
 
-Taking an EKS cluster as an example, your environment can produce temporary AWS credentials using the `aws-login` provider.
+Taking an EKS cluster as an example, your environment can produce temporary AWS credentials using the `aws-login` provider. The choice of AWS and EKS is only for the purposes of this example. Pulumi ESC has similar plugins to obtain temporary credentials for [Microsoft Azure](/docs/esc/integrations/dynamic-login-credentials/azure-login/) and [Google Cloud](/docs/esc/integrations/dynamic-login-credentials/gcp-login/).
 
 ```yaml
 values:
