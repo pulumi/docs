@@ -1,7 +1,8 @@
 ---
-title: "Google Cloud Run: Serverless Containers"
+title: "Deploy Serverless Containers on Google Cloud Run with Pulumi"
 date: 2020-02-04
-meta_desc: "Running serverless containers in Google Cloud Run with TypeScript and Pulumi"
+updated: 2025-03-24
+meta_desc: "Learn how to deploy serverless containers on Google Cloud Run using Pulumi and Docker. Compare it to AWS Fargate and Azure for cost-effective scaling."
 meta_image: "meta.png"
 authors:
     - mikhail-shilkov
@@ -247,13 +248,13 @@ Multiple requests can share the allocated CPU and memory, so it makes sense to s
 
 Despite the existence of multiple services that look somewhat similar, Cloud Run is unique in its capabilities.
 
-### Google Cloud Functions
+### Google Cloud Run vs Functions
 
 [Google Cloud Functions](https://cloud.google.com/functions/) (GCF) service deploys snippets of code as functions, while Cloud Run deploys a web application packaged as a Docker image. Currently, GCF only supports three runtimes (Node.js, Python, and Go), while Cloud Run can run practically any language and any runtime.
 
 GCF has a notion of events and triggers: it can natively integrate with Pub/Sub, Cloud Storage, Cloud Firestore. Cloud Run is all about handling HTTP requests: Any connection to another service has to go via HTTP.
 
-### AWS Fargate
+### Google Cloud Run vs AWS Fargate
 
 [AWS Fargate](https://aws.amazon.com/fargate/) deploys container images. It requires an ECS cluster to run on and imposes more configuration burden on the user, including networking, load balancing, auto-scaling, and service discovery. Pulumi Crosswalk for AWS [can help](https://www.pulumi.com/docs/iac/clouds/aws/guides/ecs/) with these tasks.
 
@@ -261,7 +262,7 @@ Fargate is capable of hosting long-running workloads. Therefore, Fargate's scali
 
 With Cloud Run, there's no notion of a cluster to manage, the scaling and billing models are based on individual requests. However, the workloads are HTTP-only, with a maximum duration of 15 minutes per call.
 
-### Azure Container Instances
+### Google Cloud Run vs Azure Container Instances
 
 [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/) (ACI) can also run arbitrary containers and has built-in HTTP endpoints. However, there's no auto-scaling: you get a single host for each instance. Also, there's no load balancing capability across multiple instances.
 

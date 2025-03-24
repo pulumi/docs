@@ -1,8 +1,9 @@
 ---
-title: "Python for DevOps"
+title: "Top 15 Python Tools for DevOps"
 date: 2025-01-06T00:23:24-05:00
+updated: 2025-03-21
 draft: false
-meta_desc: From quick fixes to enterprise solutions, discover 15 essential python tools. 
+meta_desc: From quick fixes to scalable enterprise solutions—explore 15 essential Python tools for automation, monitoring, and cloud deployment. 
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -29,7 +30,7 @@ Have you ever had one of those moments: Elasticsearch is crashing, logs are fill
 </span>
 </span>
 
-That's where Python really shines. It lets you be the scrappy problem-solver who can travel up and down the stack. But Python isn't just for quick fixes. The same language that helps you hack tomorrow's solution can also build your company's long-term infrastructure.
+That's where Python really shines. It lets you be the scrappy problem-solver who can travel up and down the stack. But [Python isn't just for quick fixes](/why-is-python-so-popular/). The same language that helps you hack tomorrow's solution can also build your company's long-term infrastructure.
 
 This guide covers both ends of that spectrum. I'll show you python packages for "we need it yesterday" moments, and then move into solutions that can grow with your team. And along the way I'll build [a little example service monitor and package capturer](https://github.com/adamgordonbell/service-status-monitor) to demonstrate the python packages I'm covering. I'll wrap it in a CLI, in a web dashboard and deploy it to AWS, all while staying in Python.
 
