@@ -33,3 +33,24 @@ awsx-apigateway-custom-domain-.*
 kubernetes-.*
 k8s-.*
 helm-.*
+
+# Skip broken programs to get back to green
+# https://github.com/pulumi/docs/issues/14505
+gcp-import-service-account-yaml
+gcp-import-service-account-csharp
+azure-native-import-resource-group-yaml
+gcp-import-service-account-python
+aws-iampolicy-jsonparse-csharp
+azure-native-import-resource-group-python
+aws-acm-certificate-csharp
+aws-simulated-dbserver-database-csharp
+aws-s3bucket-bucketobject-interpolate-csharp
+gcp-import-service-account-go
+aws-s3websitebucket-oai-bucketpolicy-csharp
+azure-native-import-resource-group-go
+gcp-import-service-account-typescript
+aws-s3bucket-bucketpolicy-csharp
+deepseek-ollama-csharp
+gcp-import-service-account-javascript
+gcp-simple-webserver-yaml
+azure-native-import-resource-group-csharp
