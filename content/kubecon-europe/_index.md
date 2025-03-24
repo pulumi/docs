@@ -27,7 +27,7 @@ event_links:
           link: https://drive.google.com/file/d/1W-Rt9W6SD70d0F_KISpZjYTNobYmdtEH/view?usp=sharing
           cta: RSVP for Workshop
           
-          - title: "KubeCon London: Drinks on the Docks"
+        - title: "KubeCon London: Drinks on the Docks"
           icon: ship
           icon_color: violet
           description: |
