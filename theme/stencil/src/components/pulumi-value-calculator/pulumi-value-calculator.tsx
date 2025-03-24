@@ -75,11 +75,11 @@ export class PulumiPricingCalculator {
                     <div class="info-side">
                         <div class="title">How many developers are in your company?</div>
                         <div class="input">
-                            <input type="number" min="5" max="1000" readOnly value={this.devCount}/>
+                            <input type="number" min="5" max="250" readOnly value={this.devCount}/>
                         </div>
                     </div>
                     <div class="slider-side">
-                        <input type="range" min="5" max="1000" step="5" onInput={event => this.updateDevCount(event as any)} value={this.devCount} class="range purple w-full"/>
+                        <input type="range" min="5" max="250" step="5" onInput={event => this.updateDevCount(event as any)} value={this.devCount} class="range purple w-full"/>
                         <div class="w-full flex flex-row ticks"></div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ export class PulumiPricingCalculator {
                                 </div>
                             </div>
                             <div class="slider-side content-center">
-                                <input type="range" min="85000" max="250000" step="5" onInput={event => this.updateDevSalary(event as any)} value={this.devSalary} class="range purple w-full"/>
+                                <input type="range" min="85000" max="200000" step="5" onInput={event => this.updateDevSalary(event as any)} value={this.devSalary} class="range purple w-full"/>
                                 <div class="w-full flex flex-row ticks"></div>
                             </div>
                         </div>
