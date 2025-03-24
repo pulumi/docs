@@ -19,7 +19,7 @@ event_links:
     items:
         - title: Book Signing - Meet Kief Morris
           icon: pen
-          icon_color: salmon
+          icon_color: yellow
           description: |
             Apr 2, 2025 12 pm BST
 
