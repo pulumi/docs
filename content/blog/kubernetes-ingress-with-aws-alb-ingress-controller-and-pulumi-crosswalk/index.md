@@ -1,6 +1,5 @@
 ---
 title: Deploy Kubernetes Ingress with AWS ALB & Pulumi
-h1: Deploy Kubernetes Ingress with AWS ALB & Pulumi
 date: "2019-07-09"
 updated: 2025-03-24
 meta_desc: "Learn how to deploy Kubernetes Ingress on AWS using the ALB Ingress Controller and Pulumi. Step-by-step guide with EKS setup, Helm, and sample app."
