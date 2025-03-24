@@ -1,7 +1,8 @@
 ---
-title: "Infrastructure Testing in Practice"
+title: "How to Test Infrastructure with Pulumi"
 date: 2021-07-23
-meta_desc: "Infrastructure testing is core to cloud engineering; this article examines unit, property, and integration testing using infrastructure as code."
+updated: 2025-03-24
+meta_desc: "Learn how to test infrastructure as code with Pulumi. This guide covers unit, property, and integration testing with mocks, Automation API, and real examples."
 meta_image: testing-in-practice.png
 authors:
     - sophia-parafina
@@ -10,7 +11,7 @@ tags:
     - cloud engineering
 ---
 
-In the [previous article](/blog/infrastructure-testing-concepts/) we discussed how to apply software testing methodologies to cloud engineering. We also examined testing regimes starting from the testing pyramid to the trophy and honeycomb models of testing better suited to distributed and cloud architectures. These testing regimes include three types of tests suited for cloud architectures:
+In the [Testing Practices for Cloud Engineering](/blog/infrastructure-testing-concepts/) article we discussed how to apply software testing methodologies to cloud engineering. We also examined testing regimes starting from the testing pyramid to the trophy and honeycomb models of testing better suited to distributed and cloud architectures. These testing regimes include three types of tests suited for cloud architectures:
 
 - unit tests for testing methods and functions within a service
 - property tests for validating specified service outputs
@@ -88,7 +89,7 @@ def test_server_tags():
 
 The test has two assertions: one for tags on the server urn and another if the instance has a `Name` tag. When we call the test, we pass the server urn and tags. Note that we did not instantiate an EC2 instance and used a mock. This is why it can run unit tests frequently with quick results.
 
-## Property tests
+## Validating cloud resource properties in tests
 
 In addition to unit tests, we want to test the properties of a cloud resource. For example, we want to restrict access to a resource by creating a policy that limits ingress. For this use case, we need a property test to ensure the exact values required by a policy. The resource graph from our simple example shows that a `SecurityGroupRule sets ingress to the web server`. We can test if port 22 is open, which would enable logging into the server via ssh.
 
@@ -127,7 +128,7 @@ In this simple example, we'll use Automation API to create an S3 bucket and perf
 - delete the file
 - delete the stack with the bucket
 
-The following code sets up the Pulumi [stack](/docs/concepts/) and S3 bucket with Automation API. It's interesting to note that the tests don't import the Pulumi AWS SDK and uses a combination of Python's built-in `unittest` framework and Amazon's [`boto3`](https://aws.amazon.com/sdk-for-python/) Python library. This illustrates the extensibility and flexibility of infrastructure as code by letting developers choose the tools and SDKs.
+The following code sets up the Pulumi [stack](/docs/concepts/) and S3 bucket with Automation API. It's interesting to note that the tests don't import the Pulumi AWS SDK and uses a combination of Python's built-in `unittest` framework and Amazon's [`boto3`](https://aws.amazon.com/sdk-for-python/) Python library. This illustrates the extensibility and flexibility of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) by letting developers choose the tools and SDKs.
 
 ```python
 import os
@@ -166,6 +167,6 @@ The `TestS3` class has a second `@classmethod` decorator for the tests; for exam
 
 When we run the test, it creates the stack and resource, runs the tests, and tears down the infrastructure. This process can be part of a CI/CD pipeline to run an automated integration test as part of the build process. The complete example for integration testing is available on [Github](https://github.com/pulumi/examples/tree/master/testing-integration-py).
 
-## Summary
+## Infrastructure testing strategy: final thoughts
 
 Although distributed infrastructure presents some unique challenges because of its asynchronous nature, we can perform efficient and automated testing. Whether it is unit and property testing that uses mocks and stubs or integration testing that requires deployed resources, infrastructure as code lets you use familiar testing frameworks and SDKs. Moreover, Pulumi's Automation API makes it simple to create stacks and spin up ephemeral infrastructure for integration testing. Learn more about [infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/) with [Pulumi's Testing User Guide](/docs/iac/concepts/testing/) and get hands-on with our [testing examples](https://github.com/pulumi/examples/#testing).
