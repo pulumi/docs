@@ -31,6 +31,8 @@ event_links:
           icon: ship
           icon_color: violet
           description: |
+            Apr 3, 2025 6pm BST
+            
             ​Join Incident.io, Kong, Oso, Pulumi and Sentry for an exclusive dockside happy hour as we unwind after KubeCon with great drinks, great company, and unbeatable waterfront views.
             
             The Oiler Bar, Royal Victoria Docks, London
