@@ -1,10 +1,11 @@
 ---
-title: "Announcing the General Availability of Pulumi’s AWS Cloud Control Provider (formerly AWS Native) "
+title: "Pulumi AWS Cloud Control Provider is Generally Available"
 allow_long_title: true
 date: 2024-10-01T09:00:00-07:00
+updated: 2024-03-24
 draft: false
 meta_desc: >-
-    Pulumi announces the GA of its AWS Cloud Control Provider, offering Day 1 support for new AWS features and enhancing cloud management tools.
+    Discover Pulumi’s AWS Cloud Control Provider—now GA with Day 1 AWS support, extended IaC capabilities, and seamless CloudFormation migration tools.
 meta_image: meta-aws.png
 authors:
     - tejitha-raju
@@ -17,7 +18,7 @@ tags:
 We're excited to announce the general availability of the new [AWS Cloud Control Provider] for Pulumi (previously "AWS Native"). AWS is one of the most-used cloud providers across the Pulumi ecosystem, and we are committed to providing the fastest possible access to new AWS capabilities to all Pulumi users. This provider delivers on that promise by providing native support for all resources in the AWS Cloud Control APIs. As part of this launch, we are also renaming the provider from “AWS Native” to "AWS Cloud Control Provider," based on customer feedback during the preview phase, to provide users with a broader range of advanced cloud management tools exposed by the AWS Cloud Control API. This provider includes the following features and benefits,
 
 * __Day 1 support for AWS Resources__: Provides full coverage of the [AWS Cloud Control API], typically on the day of the launch, ensuring users can adopt new features immediately.
-* __Complementary Pulumi Experience__: Works alongside Pulumi’s AWS Provider, enhancing Infrastructure as Code (IaC) projects with the latest AWS capabilities without requiring significant changes to existing setups.
+* __Complementary Pulumi Experience__: Works alongside Pulumi’s AWS Provider, enhancing [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) projects with the latest AWS capabilities without requiring significant changes to existing setups.
 * __Extended support for third-party resources__: Our platform offers enhanced flexibility and interoperability by supporting third-party resources available in the CloudFormation Registry, such as Atlassian, MongoDB, Datadog, and more.
 * __Easy CloudFormation to Pulumi Migration__: [cf2pulumi](https://www.pulumi.com/cf2pulumi/) provides the ability to migrate existing CloudFormation templates into Pulumi programs in your favorite language.
 
@@ -419,10 +420,9 @@ The [AWS Cloud Control Provider] for Pulumi is a major step forward in fully and
 
 Our goal is to continually improve and simplify the Pulumi experience, empowering developers with the tools they need to manage cloud infrastructure seamlessly. This new provider represents our commitment to delivering cutting-edge capabilities as quickly as possible.
 
-We look forward to your feedback and encourage you to explore the full potential of the Pulumi AWS Cloud Control Provider. Don’t hesitate to reach out via our [GitHub repository](https://github.com/pulumi/pulumi-aws-native) with any questions or suggestions as we continue to refine and enhance this experience.
+We look forward to your feedback and encourage you to explore the full potential of the Pulumi AWS Cloud Control Provider. Don’t hesitate to reach out via our [Pulumi AWS Cloud Control Provider GitHub repository](https://github.com/pulumi/pulumi-aws-native) with any questions or suggestions as we continue to refine and enhance this experience.
 
 [AWS Cloud Control Provider]: https://www.pulumi.com/registry/packages/aws-native/
 [Pulumi AWS Provider]: https://www.pulumi.com/registry/packages/aws/
-[standard AWS Provider]: https://www.pulumi.com/registry/packages/aws/
+[Standard AWS Provider]: https://www.pulumi.com/registry/packages/aws/
 [AWS Cloud Control API]: https://aws.amazon.com/cloudcontrolapi/
-
