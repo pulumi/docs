@@ -41,8 +41,7 @@ event_links:
           icon: code-window
           icon_color: blue
           description: See how Pulumi can help you ship infrastructure faster and manage your resources at scale.  Reserve your time today.
-          https://calendly.com/pulumi-meetings/kubecon-booth-demo
-om/pulumi-meetings/kubecon-booth-demo
+          link: https://calendly.com/pulumi-meetings/kubecon-booth-demo
           cta: Schedule a Meeting
 
         - title: Workshop - Advanced Secrets Management on Kubernetes
