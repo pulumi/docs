@@ -25,7 +25,7 @@ event_links:
 
             Meet Thoughtworks Distinguished Engineer and author, Kief Morris, who will be signing the latest edition of his O’Reilly book: Infrastructure as Code. We’ll have limited copies available in the booth at no cost on a first-come-first-served basis.
           link: https://drive.google.com/file/d/1W-Rt9W6SD70d0F_KISpZjYTNobYmdtEH/view?usp=sharing
-          cta: RSVP for Workshop
+          cta: Add to Calendar
           
         - title: "KubeCon London: Drinks on the Docks"
           icon: ship
@@ -41,7 +41,7 @@ event_links:
           icon: code-window
           icon_color: blue
           description: See how Pulumi can help you ship infrastructure faster and manage your resources at scale.  Reserve your time today.
-          link: https://calendly.c[Uploading Meet-Kief-Morris-Infrastructure-as-Code-Book-Signing.ics…]()
+          https://calendly.com/pulumi-meetings/kubecon-booth-demo
 om/pulumi-meetings/kubecon-booth-demo
           cta: Schedule a Meeting
 
