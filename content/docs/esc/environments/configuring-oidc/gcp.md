@@ -82,7 +82,7 @@ Use 'subjectAttributes' to customize the subject identifier to work with Pulumi 
 
 {{< /notes >}}
 
-##### Subject customization
+### Subject customization
 
 It is possible to customize the OIDC token subject claim by setting configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 

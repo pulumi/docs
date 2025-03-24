@@ -125,6 +125,7 @@ EOF
 ```
 
 ## Configure ESC for OIDC
+
 To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud console](https://app.pulumi.com/). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
 
   1. Click the **Environments** link.
@@ -199,7 +200,7 @@ $ esc open <my-org>/<my-project>/<my-environment>
 
 To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [Pulumi ESC providers documentation](/docs/pulumi-cloud/esc/providers/).
 
-#### Subject customization
+### Subject customization
 
 It is possible to customize the OIDC token subject claim by setting configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 
