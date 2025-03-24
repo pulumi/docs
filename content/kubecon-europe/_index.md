@@ -17,10 +17,22 @@ event_links:
     description: |
       Pulumi streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters.
     items:
+        - title: Book Signing - Meet Kief Morris
+          icon: pen
+          icon_color: yellow
+          description: |
+            Apr 2, 2025 12 pm BST
+
+            Meet Thoughtworks Distinguished Engineer and author, Kief Morris, who will be signing the latest edition of his O’Reilly book: Infrastructure as Code. We’ll have limited copies available in the booth at no cost on a first-come-first-served basis.
+          link: https://4429525.fs1.hubspotusercontent-na1.net/hubfs/4429525/Meet-Kief-Morris-Infrastructure-as-Code-Book-Signing.ics
+          cta: Add to Calendar
+          
         - title: "KubeCon London: Drinks on the Docks"
           icon: ship
           icon_color: violet
           description: |
+            Apr 3, 2025 6pm BST
+            
             ​Join Incident.io, Kong, Oso, Pulumi and Sentry for an exclusive dockside happy hour as we unwind after KubeCon with great drinks, great company, and unbeatable waterfront views.
             
             The Oiler Bar, Royal Victoria Docks, London
@@ -28,8 +40,8 @@ event_links:
           cta: RSVP to Happy Hour
 
         - title: Request a 1:1 demo
-          icon: pen
-          icon_color: yellow
+          icon: code-window
+          icon_color: blue
           description: See how Pulumi can help you ship infrastructure faster and manage your resources at scale.  Reserve your time today.
           link: https://calendly.com/pulumi-meetings/kubecon-booth-demo
           cta: Schedule a Meeting
