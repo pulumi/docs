@@ -66,8 +66,6 @@ Are you constrained by Terraform or OpenTofu? Let us help you migrate to Pulumi 
 
 {{< get-started >}}
 
-</div>
-
 ## Terraform and OpenTofu Alternative
 
 The following sections provide a detailed explanation of why Pulumi is a better alternative to both Terraform and OpenTofu.
