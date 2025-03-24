@@ -68,7 +68,9 @@ Are you constrained by Terraform or OpenTofu? Let us help you migrate to Pulumi 
 
 </div>
 
-The following sections go into detail on why Pulumi is a better alternative to Terraform and OpenTofu.
+## Terraform and OpenTofu Alternative
+
+The following sections provide a detailed explanation of why Pulumi is a better alternative to both Terraform and OpenTofu.
 
 ### OSS License {#license}
 
@@ -155,4 +157,3 @@ Pulumi allows you to convert templates by Terraform HCL, Kubernetes YAML, and Az
 ## Get Started with Pulumi
 
 Pulumi’s Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).
-<!-- markdownlint-enable MD033 -->
