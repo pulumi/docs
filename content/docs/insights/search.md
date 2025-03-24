@@ -377,15 +377,6 @@ The managed by column classifies resources into three categories:
 - **Pulumi Discovered** – Resources that exist in both a Pulumi stack and have also been discovered by Pulumi’s scanning engine.
 - **None** – Resources that were detected by Pulumi’s scanning engine but are not managed by any Pulumi stack.
 
-## Understanding Pulumi Discovered Resources
-
-A **Pulumi Discovered** resource appears when Pulumi identifies a resource in both a Pulumi stack and through resource discovery. These resources are not deduplicated, meaning that a single real-world resource may appear twice in the list:
-
-- Once under **Pulumi** (as part of a stack)
-- Once under **Pulumi Discovered** (as a discovered resource)
-
-This occurs because multiple Pulumi stacks may reference the same external resource. For example, if two Pulumi stacks each define infrastructure that references the same cloud resource, both stacks will be associated with that resource.
-
 ## Column filtering
 
 Expanding the "Column Filter" menu shows you the set of values found for that column along with a count for each value.
