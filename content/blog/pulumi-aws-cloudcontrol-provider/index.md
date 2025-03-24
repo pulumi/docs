@@ -420,7 +420,7 @@ The [AWS Cloud Control Provider] for Pulumi is a major step forward in fully and
 
 Our goal is to continually improve and simplify the Pulumi experience, empowering developers with the tools they need to manage cloud infrastructure seamlessly. This new provider represents our commitment to delivering cutting-edge capabilities as quickly as possible.
 
-We look forward to your feedback and encourage you to explore the full potential of the Pulumi AWS Cloud Control Provider. Don’t hesitate to reach out via our [Pulumi AWS Cloud Control Provider GitHub repository](https://github.com/pulumi/pulumi-aws-native) with any questions or suggestions as we continue to refine and enhance this experience.
+We look forward to your feedback and encourage you to explore the full potential of the Pulumi AWS Cloud Control Provider. Don’t hesitate to reach out via the [Pulumi AWS Cloud Control Provider GitHub repository](https://github.com/pulumi/pulumi-aws-native) with any questions or suggestions as we continue to refine and enhance this experience.
 
 [AWS Cloud Control Provider]: https://www.pulumi.com/registry/packages/aws-native/
 [Pulumi AWS Provider]: https://www.pulumi.com/registry/packages/aws/
