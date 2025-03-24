@@ -32,9 +32,12 @@
     }
 
     .field {
-        display: flex;
-        margin-bottom: 36px;
-        align-content: center;
+        .details {
+            margin: 24px 0 24px 0;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+        }
 
         .title {
             color: #131314;
@@ -124,9 +127,7 @@
         }
 
         .field {
-            margin-top: 24px;
             display: none;
-            margin-bottom: 0px;
             flex-direction: column;
             &.visible {
                 display: flex;
@@ -137,8 +138,8 @@
             }
 
             .details {
-                flex-grow: 1;
                 display: flex;
+                flex-grow: 1;
                 color: #2f3032;
     
                 .title {
@@ -182,26 +183,28 @@
     .ticks {
         height: 16px;
         margin-top: 4px;
+        padding-left: 3px;
+        padding-right: 3px;
         background: linear-gradient(to right, 
         #aaa,
         #aaa 0.1%,
         #fff 0.1%,
-        #fff 19.95%,
-        #aaa 19.95%,
-        #aaa 20.05%,
-        #fff 20.05%,
-        #fff 39.95%,
-        #aaa 39.95%,
-        #aaa 40.04%,
-        #fff 40.05%,
-        #fff 59.95%,
-        #aaa 59.95%,
-        #aaa 60.05%,
-        #fff 60.05%,
-        #fff 79.95%,
-        #aaa 79.95%,
-        #aaa 80.05%,
-        #fff 80.05%,
+        #fff 19.9%,
+        #aaa 19.9%,
+        #aaa 20.1%,
+        #fff 20.1%,
+        #fff 39.9%,
+        #aaa 39.9%,
+        #aaa 40.1%,
+        #fff 40.1%,
+        #fff 59.9%,
+        #aaa 59.9%,
+        #aaa 60.1%,
+        #fff 60.1%,
+        #fff 79.9%,
+        #aaa 79.9%,
+        #aaa 80.1%,
+        #fff 80.1%,
         #fff 99.9%,
         #aaa 99.9%,
         #aaa 100%);
@@ -232,10 +235,57 @@
 }
 
 @media(max-width: 1280px) {
+    .value-calculator {
+        .field {
+            .info-side {
+                width: 40%;
+            }
+    
+            .slider-side {
+                width: 60%
+            }
+        }
+    }
 }
 
 @media(max-width: 1024px) {
+    .value-calculator {
+        .field {
+            .details {
+                flex-direction: column;
+                margin-top: 24px;
+            }
+            .info-side {
+                width: 100%;
+            }
+    
+            .slider-side {
+                width: 100%;
+            }
+        }
+        .details {
+            flex-direction: column;
+        }
+        .ticks {
+            display: none;
+        }
+    }
 }
 
 @media(max-width: 640px) {
+    .value-calculator {
+        .field {
+            .details {
+                flex-direction: column;
+                margin-top: 24px;
+            }
+            .info-side {
+                width: 100%;
+            }
+    
+            .slider-side {
+                width: 100%;
+            }
+        }
+    }
 }

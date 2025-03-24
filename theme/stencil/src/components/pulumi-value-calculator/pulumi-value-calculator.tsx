@@ -72,22 +72,26 @@ export class PulumiPricingCalculator {
             <h5>Improve your cloud ROI by unleashing developer productivity</h5>
             <div class="main-content">
                 <div class="field">
-                    <div class="info-side">
-                        <div class="title">How many developers are in your company?</div>
-                        <div class="input">
-                            <input type="number" min="5" max="250" readOnly value={this.devCount}/>
+                    <div class="details">
+                        <div class="info-side">
+                            <div class="title">How many developers are in your company?</div>
+                            <div class="input">
+                                <input type="number" min="5" max="250" readOnly value={this.devCount}/>
+                            </div>
                         </div>
-                    </div>
-                    <div class="slider-side">
-                        <input type="range" min="5" max="250" step="5" onInput={event => this.updateDevCount(event as any)} value={this.devCount} class="range purple w-full"/>
-                        <div class="w-full flex flex-row ticks"></div>
+                        <div class="slider-side">
+                            <input type="range" min="5" max="250" step="5" onInput={event => this.updateDevCount(event as any)} value={this.devCount} class="range purple w-full"/>
+                            <div class="w-full flex flex-row ticks"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
-                    <div class="info-side content-center">
-                        <div class="title">Your estimated annual developer cost savings* are:</div>
+                    <div class="details">
+                        <div class="info-side content-center">
+                            <div class="title">Your estimated annual developer cost savings* are:</div>
+                        </div>
+                        <div class="rainbow-text">{this.showFormattedTotal()}</div>
                     </div>
-                    <div class="rainbow-text">{this.showFormattedTotal()}</div>
                 </div>
                 <div class={this.assumptionsExpanded ? "assumptions" : " assumptions collapsed" }>
                     <div class="default justify-between">
@@ -95,7 +99,7 @@ export class PulumiPricingCalculator {
                         <button onClick={()=> this.updateAssumptionsExpanded()}><i class={this.assumptionsExpanded ? "fas fa-minus" : "fas fa-plus" }></i></button>
                     </div>
                     <div class={ this.assumptionsExpanded ? "field visible" : "field" }>
-                        <div class="details flex flex-row">
+                        <div class="details">
                             <div class="info-side">
                                 <div class="title">What is the average developer salary in your company?</div>
                                 <div class="description">US National average is $138K</div>
@@ -108,7 +112,7 @@ export class PulumiPricingCalculator {
                                 <div class="w-full flex flex-row ticks"></div>
                             </div>
                         </div>
-                        <div class="details flex flex-row">
+                        <div class="details">
                             <div class="info-side">
                                 <div class="title">How much time do these developers spend managing cloud infrastructure?</div>
                                 <div class="description">Average is 20%</div>
