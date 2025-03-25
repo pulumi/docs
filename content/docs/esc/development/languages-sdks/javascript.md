@@ -37,9 +37,9 @@ import * as esc from "@pulumi/esc-sdk";
 const client = esc.DefaultClient();
 ```
 
-This method will first look for `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, will fall back to CLI credentials that are present on your machine if you have logged in using Pulumi CLI or ESC CLI.
+This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using Pulumi CLI or ESC CLI.
 
-If the default behaviour does not work for you, you can always manually initialize the client Configuration and pass it into the client constructor:
+If the default behavior does not work for you, you can always manually initialize the client configuration and pass it into the client constructor:
 
 ```typescript
 import * as esc from "@pulumi/esc-sdk";
