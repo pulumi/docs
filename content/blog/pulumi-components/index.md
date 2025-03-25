@@ -112,7 +112,7 @@ TODO
 
 - **Managing Dependencies**: Once you've run `pulumi package add <repo-url>`, Pulumi will generate a local SDK in your project. Check in these files if you want fully reproducible builds; or add them to `.gitignore` if you prefer to regenerate them on each checkout.
 
-- **Leveraging Private Repos**: If you need to keep your components private, you can still point to a Git source in a private repository. Just make sure your CLI environment has the right credentials (for example, an SSH key or a personal access token).
+- **Leveraging Private Repos**: If you need to keep your components private, you can still point to a Git source in a private repository. Just make sure the correct access tokens are set in the environment [TODO: link to a docs page]
 
 ## Conclusion
 
