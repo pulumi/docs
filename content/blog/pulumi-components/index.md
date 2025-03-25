@@ -30,7 +30,7 @@ For platform teams, the new Pulumi Components offer a more intuitive, more secur
 
 ## Understanding Component Resources
 
-At their core, Component Resources in Pulumi are logical groupings of resources that encapsulate infrastructure patterns and best practices. Unlike standard resources that map directly to cloud provider resources, component resources are higher-level abstractions that can contain multiple child resources working together to implement a specific capability. While similar in concept to Terraform modules, Pulumi Components offer significantly more power through full programming language capabilities, stronger typing, inheritance patterns, and now, cross-language support.
+At their core, Pulumi Component Resources are logical groupings of resources that encapsulate infrastructure patterns and best practices. Unlike standard resources that map directly to cloud provider resources, component resources are higher-level abstractions that can contain multiple child resources working together to implement a specific capability. While similar in concept to Terraform modules, Pulumi Components offer significantly more power through full programming language capabilities, stronger typing, inheritance patterns, and now, cross-language support.
 
 For example, a `WebService` component might include a load balancer, compute instances, security groups, and networking configuration—all bundled together as a single, reusable unit.
 
