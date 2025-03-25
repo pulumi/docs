@@ -857,6 +857,18 @@ $ mkdir use-static-page-component
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
+
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in JavaScript*
+
+```yaml
+name: use-static-page-component
+description: A minimal JavaScript Pulumi program that uses the custom Static Page component
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+```
+
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
@@ -940,6 +952,53 @@ plugins:
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
+
+#### Add the NodeJS project file
+
+Now lets create our `package.json`. We'll need the standard `pulumi` SDK and our custom component. To use that, just add the path to the generated JavaScript SDK using the format `file:<path>` instead of a package version spec.
+
+***Example:** `package.json`*
+
+```json
+{
+    "name": "use-static-page-component",
+    "dependencies": {
+        "@pulumi/pulumi": "3.157.0",
+        "@pulumi/static-page-component": "file:sdks/static-page-component"
+    }
+}
+```
+
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+
+#### Install dependencies
+
+Next, install the `pulumi` dependencies:
+
+```bash
+pulumi install
+```
+
+#### Create the Pulumi program
+
+***Example:** `index.js` that uses the Static Page component*
+
+```typescript
+"use strict";
+
+const pulumi = require("@pulumi/pulumi");
+const staticpagecomponent = require("@pulumi/static-page-component");
+
+const pageHTML = "<h1>I love Pulumi!</h1>";
+
+const page = new staticpagecomponent.StaticPage("my-static-page", {
+    indexContent: pageHTML
+})
+
+// Export the URL to the index page
+exports.websiteURL = pulumi.interpolate `http://${page.websiteEndpoint}`;
+```
+
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
@@ -996,7 +1055,7 @@ The TypeScript config is the same as any standard Pulumi program.
 Next, install the `pulumi` dependencies:
 
 ```bash
-pulum install
+pulumi install
 ```
 
 #### Create the Pulumi program
