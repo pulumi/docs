@@ -1,8 +1,10 @@
 ---
-title: "Top 5 Things an Azure Developer Needs to Know: Serverless"
+title: "Top Azure Services Every Developer Should Know: Serverless"
+h1: How to Build and Deploy Azure Serverless Functions
+allow_long_title: true
 date: 2021-08-06
-allow_long_title: True
-meta_desc: "Building and deploying serverless functions with Azure."
+updated: 2025-03-25
+meta_desc: "Learn how to create and deploy Azure serverless functions using Visual Studio Code and Pulumi. Build event-driven apps with scalable architecture."
 meta_image: azure-top-5.png
 authors:
     - sophia-parafina
@@ -10,14 +12,20 @@ tags:
     - azure
     - serverless
     - cloud engineering
-
 ---
 
-The [previous article](/blog/top-5-things-for-azure-devs-vm/) was a deep dive into virtual machines. First, we used the Azure Portal to create and deploy a virtual machine; then, we repeated the process using infrastructure as code. We further demonstrated how to automate provisioning as part of cloud engineering's build and deploy processes.
+The previous article was a [deep dive into virtual machines](/blog/top-5-things-for-azure-devs-vm/). First, we used the Azure Portal to create and deploy a virtual machine; then, we repeated the process using infrastructure as code. We further demonstrated how to automate provisioning as part of cloud engineering's build and deploy processes.
 
 This article will explore the other end of the cloud infrastructure with serverless, which is an on-demand, fully-managed cloud architecture.
 
-<!--more-->
+Here are the links to all of the articles in the guide:
+* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
+* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
+* **Top Azure Services Every Developer Should Know: Serverless** (this post)
+* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
+* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
+* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
+* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 ## What is serverless, and when to use it?
 
