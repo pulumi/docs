@@ -1,8 +1,10 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: Kubernetes Applications"
+h1: How to Deploy Applications on Azure Kubernetes Service (AKS)
 date: 2021-08-16
+updated: 2025-03-25
 allow_long_title: True
-meta_desc: "Deploying applications on Azure Kubernetes Service (AKS) with the Azure CLI and Infrastructure as Code."
+meta_desc: "Learn how to deploy apps to Azure Kubernetes Service (AKS) using Helm, manifests, and Infrastructure as Code. Includes CLI and Pulumi examples."
 meta_image: azure-top-5.png
 authors:
     - sophia-parafina
@@ -10,14 +12,20 @@ tags:
     - kubernetes
     - Azure
     - helm
-
 ---
 
 All modern software is cloud software, and it's more than likely that it runs on Kubernetes. Developers are faced with the challenge of deploy applications composed of many microservices. And each microservice adds to the complexity of the deployment.
 
 This article reviews the different methods for deploying applications on Azure Kubernetes Service (AKS).
 
-<!--more-->
+In this series we cover:
+* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
+* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
+* [Top Azure Services Every Developer Should Know: Serverless](/blog/top-5-things-for-azure-devs-serverless/)
+* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
+* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
+* **Top Azure Services Every Developer Should Know: Deploying on AKS** (this post)
+* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 ## A quick review on application deployment
 
@@ -290,4 +298,4 @@ This example provides a sketch of the process to create an AKS cluster and deplo
 
 There are many ways to deploy applications on AKS, including  [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) and [Kustomize](https://kustomize.io/) which were not discussed. We've covered deploying with Helm, manifests, and infrastructure as code. This article covers the basics of application deployment using Deployments and Services. To review, Deployments are declarative updates to a Pod such as specifying a container to run, and Services route traffic to Pods either within the cluster or permitting ingress with a LoadBalancer. We should note that templating methods such as Helm or manifests require file management, whereas using cloud engineering practices enables managing both infrastructure and application deployment in a versioned and repeatable way.
 
-The following article will wrap up the series. We'll examine how to implement DevOps practices with Azure.
+The following article will wrap up the series. We'll examine [how to implement DevOps practices with Azure](/blog/top-5-things-for-azure-devs-devops/).
