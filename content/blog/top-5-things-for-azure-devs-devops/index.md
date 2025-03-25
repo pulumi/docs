@@ -1,5 +1,5 @@
 ---
-title: "Top 5 Things an Azure Developer Needs to Know: DevOps"
+title: "Top Azure Services Every Developer Should Know: DevOps"
 h1: How to Set Up Azure DevOps Pipelines for CI/CD with Pulumi
 date: 2021-08-26
 updated: 2025-03-25
