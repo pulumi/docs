@@ -1,8 +1,10 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: DevOps"
+h1: How to Set Up Azure DevOps Pipelines for CI/CD with Pulumi
 date: 2021-08-26
+updated: 2025-03-25
 allow_long_title: True
-meta_desc: "DevOps is the way modern cloud teams work together to deploy applications. Azure Pipelines is a way to implement DevOps with Continuous Integration and Continuous Delivery"
+meta_desc: "Learn how to configure Azure Pipelines for CI/CD using Pulumi. Automate application deployment with YAML and the Azure DevOps task extension."
 meta_image: azure-top-5.png
 authors:
     - sophia-parafina
@@ -16,7 +18,14 @@ What comes to mind when you hear DevOps? Frequently, DevOps is described as a cu
 
 DevOps processes rely on tooling to automate delivering and maintaining applications. This article demonstrates how to implement Azure Pipelines to build and deploy applications.
 
-<!--more-->
+In this series guide, we've covered:
+* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
+* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
+* [Top Azure Services Every Developer Should Know: Serverless](/blog/top-5-things-for-azure-devs-serverless/)
+* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
+* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
+* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
+* **Top Azure Services Every Developer Should Know: DevOps** (this post)
 
 ## Azure Pipelines
 
