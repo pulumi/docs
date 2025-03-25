@@ -1,7 +1,10 @@
 ---
-title: "Top 5 Things an Azure Developer Needs to Know: Introduction"
+title: "Top Azure Services Every Developer Should Know: Overview"
+h1: Top Azure Services Every Developer Should Know
+allow_long_title: true
 date: 2021-08-02
-meta_desc: "Introduction to Azure Cloud series for developers."
+updated: 2025-03-25
+meta_desc: "Discover the essential Azure services every developer should master—from VMs to DevOps. Start building smarter in the cloud."
 meta_image: azure-top-5.png
 authors:
     - sophia-parafina
@@ -15,11 +18,18 @@ tags:
 
 The Azure cloud platform includes over 200 products and cloud services. Wherever you are in your Microsoft cloud engineering journey, you should be familiar with these top 5 cloud tasks that are essential building blocks commonly used to deploy applications and infrastructure to the Azure cloud.
 
-In this series of articles, we'll go in-depth on [virtual machines](/blog/top-5-things-for-azure-devs-vm/), [Azure Functions](/blog/top-5-things-for-azure-devs-serverless/), [static websites](/blog/top-5-things-for-azure-devs-static-websites/), [building an Azure Kubernetes Service cluster](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/) and [deploying applications on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/), and [DevOps with Azure App Service](/blog/top-5-things-for-azure-devs-devops/).
+In this series guide, we'll go in-depth on:
+* **Top Azure Services Every Developer Should Know: Overview** (this post)
+* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
+* [Top Azure Services Every Developer Should Know: Azure Functions](/blog/top-5-things-for-azure-devs-serverless/)
+* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
+* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
+* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
+* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 <!--more-->
 
-## Azure - a comprehensive cloud platform
+## Microsoft Azure - a comprehensive cloud platform
 
 With Azure, you can develop, test, deploy and manage your applications in an integrated cloud computing environment. With the Azure Portal, you can manage the cloud infrastructure for your applications. Azure gives you the choice of a portal for managing services or managing them programmatically using service APIs and templates.
 
@@ -35,7 +45,7 @@ Azure provides Infrastructure as a Service (IaaS) for deploying your application
 
 If your application doesn't fit into a Platform as a Service (PaaS) model, consider using virtual machines to provide the fine-grained control required for your deployment.
 
-![VM in Azure Portal](./image3.png)
+![Screenshot of Virtual Machine in Azure Portal](./image3.png)
 
 ## Serverless
 
@@ -45,7 +55,7 @@ Azure Functions lets you focus on the application's business logic, and the code
 
 If you don’t need a completely hosted project and only pay for what you use, choose Azure Functions triggered by web-based events, a schedule, or other Azure services.
 
-![Serverless function](./image2.png)
+![Serverless function code](./image2.png)
 
 ## Static websites
 
@@ -95,7 +105,7 @@ We'll examine these options and do a deep dive on application deployment in a fo
 
 Before Continuous integration (CI) and Continuous Deployment (CD) became prevalent, applications were manually built, compiled, and maintained in a large codebase. CI/CD automation lets you build quickly, test, and deploy services. Both application fixes and new features are shipped quickly to your customers, and you can rapidly respond to changing customer demands. For example, if demand increases, you can quickly add resources to your application or add a serverless function that increases and decreases resources as needed.
 
-![Devops architecture](./image1.png)
+![Workflow of Devops architecture depicting Azure Cotnainer Registry, Engineer, VS Code, GitHub, Jenkins, Azuer Kubernetes Services, Azure Cosmos DB, Gracana, and Azure Monitor](./image1.png)
 
 If you're deploying applications on Azure Functions, virtual machines, AKS, or provisioning infrastructure, the build process should be automated. Azure offers a range of services such as Azure Container Registry, AKS, and Azure Cosmos DB that can integrate with popular CI/CD pipelines like Azure DevOps, Jenkins, Github, and TeamCity.
 
@@ -111,4 +121,4 @@ So here are the top 5 things essential to know as an Azure developer:
 - configuring Azure Kubernetes Service and deploying containerized applications
 - using Azure DevOps to automate the building and deployment of infrastructure and applications
 
-First up and next in this series of articles is deploying Azure virtual machines with an application.
+First up and next in this series of articles is [deploying Azure virtual machines with an application](/blog/top-5-things-for-azure-devs-vm/).
