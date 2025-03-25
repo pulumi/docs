@@ -20,7 +20,7 @@ Azure provides many ways to create and configure virtual machines ranging from [
 Here are links to all of the posts in the series:
 * [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
 * **Top Azure Services Every Developer Should Know: Virtual Machines** (this post)
-* [Top Azure Services Every Developer Should Know: Azure Functions](/blog/top-5-things-for-azure-devs-serverless/)
+* [Top Azure Services Every Developer Should Know: Serverless](/blog/top-5-things-for-azure-devs-serverless/)
 * [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
 * [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
 * [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
