@@ -8,7 +8,7 @@ menu:
     iac:
         name: Publishing packages
         parent: iac-extending-pulumi
-        weight: 1
+        weight: 7
 aliases:
 - /docs/guides/pulumi-packages/how-to-author/
 - /docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/

@@ -9,7 +9,7 @@ menu:
     iac:
         name: Schema reference
         parent: iac-extending-pulumi
-        weight: 3
+        weight: 8
 aliases:
 - /docs/guides/pulumi-packages/schema/
 - /docs/using-pulumi/pulumi-packages/schema/
