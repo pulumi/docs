@@ -898,6 +898,16 @@ runtime:
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in YAML*
+
+```yaml
+name: use-static-page-component
+description: A minimal YAML Pulumi program that uses the custom Static Page component
+runtime:
+  name: yaml
+```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -911,6 +921,12 @@ pulumi package add ../static-page-component
 ```
 
 This will create a new subdirectory called `sdks/`, and in it, there will be a directory for your language SDK. One of: `dotnet`, `go`, `java`, `nodejs`, and `python`.
+
+{{% notes type="tip" %}}
+If you're authoring your Pulumi project in YAML, it is not necessary to generate a SDK! Skip ahead to the next step.
+{{% /notes %}}
+
+#### Add the component reference in Pulumi.YAML
 
 Now, in your `Pulumi.yaml` file add the following section to load the component from source:
 
@@ -1054,6 +1070,23 @@ pulumi.export('website_url', website_url)
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
+#### Create the Pulumi program
+
+Now we can define our Static Page component resource in the `Pulumi.yaml` file. Add the following section:
+
+***Example:** `Pulumi.yaml` that uses the Static Page component*
+
+```yaml
+resources:
+  my-static-page:
+    type: static-page-component:StaticPage
+    properties:
+      indexContent: "<h1>I love Pulumi!</h1>"
+outputs:
+  website_url: http://${my-static-page.websiteEndpoint}
+```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
