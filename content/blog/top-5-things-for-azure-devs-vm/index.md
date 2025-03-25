@@ -1,7 +1,10 @@
 ---
-title: "Top 5 Things an Azure Developer Needs to Know: VMs"
+title: "Top Azure Services Every Developer Should Know: Virtual Machines"
+h1: How to Create and Automate Azure Virtual Machines
+allow_long_title: true
 date: 2021-08-04
-meta_desc: "Building and deploying virtual machines for Azure developers"
+updated: 2025-03-25
+meta_desc: "Learn how to create, configure, and automate Azure virtual machines using the Portal and infrastructure as code with Pulumi."
 meta_image: azure-top-5.png
 authors:
     - sophia-parafina
@@ -10,11 +13,18 @@ tags:
     - virtual machines
 ---
 
-So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the [previous article](/blog/top-5-things-for-azure-devs-intro/), the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.
+So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the [previous introductary article](/blog/top-5-things-for-azure-devs-intro/), the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.
 
 Azure provides many ways to create and configure virtual machines ranging from [the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) to [the Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/). In this article, we'll first create a virtual machine using the portal to understand the requirements and process; then, we'll do it with code using [Pulumi's Azure Native provider](https://www.pulumi.com/registry/packages/azure/), which is built directly from the Azure Resource Manager API.
 
-<!--more-->
+Here are links to all of the posts in the series:
+* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
+* **Top Azure Services Every Developer Should Know: Virtual Machines** (this post)
+* [Top Azure Services Every Developer Should Know: Azure Functions](/blog/top-5-things-for-azure-devs-serverless/)
+* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
+* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
+* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
+* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 ## Creating a VM with the Azure Portal
 
