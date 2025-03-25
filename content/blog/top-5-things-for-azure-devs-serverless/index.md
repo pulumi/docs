@@ -218,4 +218,4 @@ Isn't infrastructure as code supposed to simplify infrastructure deployments? Th
 
 Try out the complete example in either [Typescript](https://github.com/pulumi/examples/tree/master/azure-ts-functions) or [C#](https://github.com/pulumi/examples/tree/master/azure-ts-functions) to get familiar with Azure Functions. You can also learn how Functions are written in all supported languages by checking out the [Azure Functions in All Supported Languages](https://github.com/pulumi/examples/tree/master/azure-ts-functions-many) example.
 
-In the following article, we'll do a deep dive into Azure static websites, which is a popular option for [Jamstacks](https://jamstack.org/).
+In the following article, we'll do a [deep dive into Azure static websites](/blog/top-5-things-for-azure-devs-static-websites/).
