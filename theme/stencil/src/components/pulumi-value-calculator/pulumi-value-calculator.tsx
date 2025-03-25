@@ -6,7 +6,7 @@ import { Component, State, h } from '@stencil/core';
   shadow: false,
 })
 
-export class PulumiPricingCalculator {
+export class PulumiValueCalculator {
   @State()
   devCount: number = 5;
 
