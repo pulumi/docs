@@ -215,7 +215,7 @@ def extract_tfidf_keywords(tfidf_matrix, feature_names, file_paths, num_keywords
         top_keywords = []
         for idx in sorted_indices:
             term = feature_names[idx]
-            if tfidf_scores[idx] > 0.01 and len(top_keywords) < num_keywords:
+            if tfidf_scores[idx] > 0.02 and len(top_keywords) < num_keywords:
                 # Check if the term is in the disallow list
                 if not any(disallowed_term.lower() in term.lower() for disallowed_term in disallow):
                     top_keywords.append(term)
@@ -229,10 +229,6 @@ def extract_keybert_keywords(documents: List[Dict[str, Any]], vectorizer, num_ke
     Extract keywords using KeyBERT
     """
     print("Extracting KeyBERT keywords...")
-    
-    # Initialize disallow list if not provided
-    if disallow is None:
-        disallow = []
     
     # Initialize KeyBERT model
     kw_model = KeyBERT()
@@ -341,7 +337,7 @@ def write_keywords_to_files(files: List[str], file_keyword_map: Dict[str, List[s
 
 def main():
     # Root directory to start processing markdown files. Will recurse through subdirs.
-    docs_dir = "content/docs/"
+    docs_dir = "content/docs/esc/"
     
     # list of terms to exclude from generated keywords
     disallow = [
