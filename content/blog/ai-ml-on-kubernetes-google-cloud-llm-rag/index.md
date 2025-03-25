@@ -97,7 +97,7 @@ Don’t miss the chance to see Pulumi in action, ask questions, and explore AI/M
 
 Below, we explore two use cases for running AI/ML workloads on Google Kubernetes Engine (GKE) using Pulumi.
 
-{{< youtube "CoZM9BCJcJ4?rel=0" >}}
+{{< youtube "CoZM9BCJcJ4&list=PLyy8Vx2ZoWloabJJW13bcLStud4LxJ0Cw" >}}
 
 ### Use Case 1: Deploying a Large Language Model (LLM) with Retrieval Augmented Generation (RAG)
 
