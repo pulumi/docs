@@ -1,5 +1,5 @@
 ---
-title: "Top 5 Things an Azure Developer Needs to Know: Kubernetes Applications"
+title: "Top Azure Services Every Developer Should Know: Deploying on AKS"
 h1: How to Deploy Applications on Azure Kubernetes Service (AKS)
 date: 2021-08-16
 updated: 2025-03-25
