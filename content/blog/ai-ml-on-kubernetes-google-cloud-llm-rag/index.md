@@ -8,7 +8,7 @@ allow_long_title: true
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2025-03-25T07:32:19Z
+date: 2025-03-24T07:32:19Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -80,7 +80,7 @@ Pulumi is a modern Infrastructure as Code (IaC) tool that allows teams to define
 
 With Pulumi, you can:
 
-- **Provision and scale Kubernetes clusters** on Google Cloud automatically.
+- **Provision and scale Kubernetes clusters** on [Google Cloud](https://www.pulumi.com/docs/iac/clouds/gcp/) automatically.
 - **Define AI/ML environments as code**, making deployments repeatable and version-controlled.
 - **Integrate infrastructure with machine learning pipelines**, reducing operational overhead.
 
@@ -95,15 +95,15 @@ Don’t miss the chance to see Pulumi in action, ask questions, and explore AI/M
 
 ## Deploying AI/ML Workloads on Kubernetes
 
-Below, we explore two use cases for running AI/ML workloads on Google Kubernetes Engine (GKE) using Pulumi.
+Below, we explore two use cases for running AI/ML workloads on [Google Kubernetes Engine (GKE)](https://www.pulumi.com/templates/kubernetes/gcp/) using Pulumi.
 
-{{< youtube "CoZM9BCJcJ4&list=PLyy8Vx2ZoWloabJJW13bcLStud4LxJ0Cw" >}}
+{{< youtube "CoZM9BCJcJ4?rel=0" >}}
 
 ### Use Case 1: Deploying a Large Language Model (LLM) with Retrieval Augmented Generation (RAG)
 
 Large Language Models (LLMs) like **GPT-3, Whisper, and DALL-E** require significant infrastructure for training and inference. **Retrieval Augmented Generation (RAG)** enhances LLMs by integrating external knowledge sources, improving accuracy and relevance.
 
-Using Pulumi, you can **automate the deployment of an open-source LLM with RAG** on Kubernetes.
+Using Pulumi, you can **automate the deployment of an open-source [LLM with RAG](https://www.pulumi.com/blog/codegen-learnings/)** on Kubernetes.
 
 #### Step 1: Set Up a Kubernetes Cluster on Google Cloud
 
@@ -147,7 +147,7 @@ This Pulumi script:
 
 #### Step 2: Deploy the LLM with RAG Model
 
-Once the cluster is set up, we can deploy the **LLM with RAG model** using Pulumi’s Kubernetes provider:
+Once the cluster is set up, we can deploy the **LLM with RAG model** using Pulumi’s [Kubernetes provider](https://www.pulumi.com/blog/pko-2-0-ga/):
 
 1. Define **Kubernetes Deployments** for the LLM and RAG model.
 2. Package models as **Docker containers** and deploy them to the cluster.
@@ -158,7 +158,7 @@ By defining these resources in Pulumi, deployments become **fully automated, rep
 
 ### Use Case 2: Training and Serving Custom Machine Learning Models
 
-Beyond pre-trained LLMs, Kubernetes is ideal for **training and serving custom AI/ML models**. Pulumi can help automate every stage of the ML lifecycle.
+Beyond pre-trained LLMs, [Kubernetes](https://www.pulumi.com/docs/iac/clouds/kubernetes/) is ideal for **training and serving custom AI/ML models**. Pulumi can help automate every stage of the ML lifecycle.
 
 #### Step 1: Set Up the Model Training Environment
 
@@ -191,7 +191,7 @@ Pulumi provides several advantages for AI/ML teams running workloads on Kubernet
 
 ### 2. Automate AI/ML Workflows
 
-- Define infrastructure, training jobs, and model serving in **one unified IaC framework**.
+- Define infrastructure, training jobs, and model serving in **[one unified IaC framework](https://www.pulumi.com/blog/unified-programmatic-approach-infrastructure-management-bmw-using-pulumi/)**.
 - Ensure **consistency** across development, staging, and production environments.
 
 ### 3. Improve Scalability and Cost Efficiency
@@ -201,15 +201,15 @@ Pulumi provides several advantages for AI/ML teams running workloads on Kubernet
 
 ### 4. Increase Security and Compliance
 
-- Manage credentials and secrets securely with **Pulumi ESC (Secrets Management)**.
-- Apply **policy-as-code** to enforce security best practices.
+- Manage credentials and secrets securely with **[Pulumi ESC (Secrets Management)](https://www.pulumi.com/docs/esc/)**.
+- Apply **[policy-as-code](https://www.pulumi.com/docs/iac/using-pulumi/crossguard/)** to enforce security best practices.
 
 ## Get Started with AI/ML on Kubernetes with Pulumi
 Pulumi makes it easy to deploy, scale, and manage AI/ML workloads on Kubernetes, leveraging Google Cloud's AI infrastructure. Whether you're serving LLMs, training custom models, or automating ML pipelines, Pulumi provides a developer-friendly, scalable, and secure solution.
 
 - [Explore AI/ML Projects using Pulumi](https://www.pulumi.com/blog/tag/ml/)
+- [Discover Essential Kubernetes Best Practices](https://www.pulumi.com/blog/kubernetes-best-practices-i-wish-i-had-known-before/)
 - [Get Started with Pulumi on Google Cloud](https://www.pulumi.com/docs/iac/clouds/gcp/)
-- [Pulumi Kubernetes Documentation](https://www.pulumi.com/docs/iac/clouds/kubernetes/)
 - [Sign up for Pulumi ➡️](https://app.pulumi.com/signup)
 
 By combining Kubernetes, Google Cloud, and Pulumi, you can accelerate AI/ML innovation while reducing infrastructure complexity.
