@@ -150,23 +150,23 @@ To bridge the gap between their infrastructure code and Kubernetes, Imagine Lear
 
 ```
 const clusterSecret = new k8s.core.v1.Secret("cluster-secret", {
-metadata: {
-name: "cluster-secret",
-annotations: {
-"pulumi.com/secret": "true",
-"pulumi.com/secret-encryption-context": JSON.stringify({
-"pulumi:project": pulumi.getProject(),
-"pulumi:stack": pulumi.getStack(),
-}),
-},
-},
-type: "Opaque",
-stringData: {
-"eks-cluster-name": eksCluster.name,
-"eks-cluster-arn": eksCluster.arn,
-"eks-cluster-endpoint": eksCluster.endpoint,
-"eks-cluster-certificate-authority": eksCluster.certificateAuthority.data,
-},
+    metadata: {
+        name: "cluster-secret",
+        annotations: {
+            "pulumi.com/secret": "true",
+            "pulumi.com/secret-encryption-context": JSON.stringify({
+                "pulumi:project": pulumi.getProject(),
+                "pulumi:stack": pulumi.getStack(),
+            }),
+        },
+    },
+    type: "Opaque",
+    stringData: {
+        "eks-cluster-name": eksCluster.name,
+        "eks-cluster-arn": eksCluster.arn,
+        "eks-cluster-endpoint": eksCluster.endpoint,
+        "eks-cluster-certificate-authority": eksCluster.certificateAuthority.data,
+    },
 }, { provider: k8s.provider });
 ...
 ```
