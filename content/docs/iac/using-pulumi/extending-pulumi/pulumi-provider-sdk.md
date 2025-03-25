@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Provider SDK"
-meta_desc: "Learn about the Pulumi Provider SDK for Go."
+meta_desc: "Learn about the Pulumi Provider SDK for Go to create your own Pulumi providers."
 title: Pulumi Provider SDK
 h1: Pulumi Provider SDK
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,8 +11,7 @@ menu:
         weight: 9
 ---
 
-
-The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a high-level library that simplifies the process of writing a Pulumi provider in Go. It abstracts much of the complexity involved in defining custom infrastructure resources, allowing developers to focus on business logic rather than boilerplate code. 
+The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a high-level library that simplifies the process of writing a Pulumi provider in Go. It abstracts much of the complexity involved in defining custom infrastructure resources, allowing developers to focus on business logic rather than boilerplate code.
 
 Some key advantages of the SDK are:
 
@@ -22,14 +21,16 @@ Some key advantages of the SDK are:
 - **Simplified Resource Definition**: Use the `infer` and `resourcex` libraries to streamline provider development.
 
 ## Using the Pulumi Provider SDK
+
 > - **Repository**: [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) on GitHub
 > - **Examples**: The repository includes a number of [example providers](https://github.com/pulumi/pulumi-go-provider/tree/main/examples).
 > - **Guide**: Follow the [Build a Packaged Provider](/docs/iac/using-pulumi/extending-pulumi/build-a-packaged-provider) guide for step-by-step instructions.
 > - **Reference Documentation**: [pulumi-go-provider](https://pkg.go.dev/github.com/pulumi/pulumi-go-provider) package on go.dev
 
-Here's a quick example of the minimal code necessary to make a provider that can be used in any language. This example creates a provider called `greetings` that has two parameters (`name` and `loud`), which stores the product of its work (the constructed greeting message) as resource state. 
+Here's a quick example of the minimal code necessary to make a provider that can be used in any language. This example creates a provider called `greetings` that has two parameters (`name` and `loud`), which stores the product of its work (the constructed greeting message) as resource state.
 
 ### Example: "Hello, Pulumi" Provider
+
 ```go
 func main() {
 	p.RunProvider("greetings", "0.1.0", provider())
@@ -94,14 +95,17 @@ The Pulumi Provider SDK follows a modular architecture with key components:
 - **ResourceX**: Utilities for enhancing and extending provider capabilities.
 
 ## Testing
+
 The SDK includes a built-in testing framework for validating provider behavior. Tests can be written in Go and executed using standard test frameworks.
 
-Example:
+***Example:** Testing a provider built with the Pulumi Provider SDK*
+
 ```go
 // TBD need SME to provider HelloWorld provider test example
 ```
 
 ## Comparing to the Traditional Authoring Experience
+
 | Feature                | Traditional SDKs | Pulumi Provider SDK |
 |----------------------|----------------|------------------|
 | Language Support   | JSON-based Schema & Boilerplate Code | Code-first in Go, automatic multi-language generation |
@@ -110,7 +114,9 @@ Example:
 | Middleware Support | Limited | Built-in middleware system |
 
 ## Migration Guide
+
 For users transitioning from traditional Pulumi provider authoring:
+
 1. Convert schema definitions into Go structs.
 2. Replace manual CRUD implementations with `infer`.
 3. Leverage built-in middleware for authentication and resource handling.
@@ -119,18 +125,23 @@ For users transitioning from traditional Pulumi provider authoring:
 ## Gotchas and FAQs
 
 ### Handling Default Values
+
 *TODO: need SME to write this up*
 
 ### When will I get this in my favorite language?
+
 The Pulumi Go Provider SDK primarily targets Go-based providers, but its schema generation allows multi-language support.
 
 ### Why did we build it and how does Pulumi use it?
+
 This SDK simplifies provider development and ensures consistent, maintainable infrastructure definitions across Pulumi’s ecosystem. We use the same SDK to implement providers like `pulumi-eks`.
 
 ### Can I expect this library to be maintained?
+
 Yes! This SDK is actively developed and maintained by Pulumi, and since we use it in the providers we author and maintain, it will always get attention from our engineering team.
 
 ### Does this entirely replace other SDKs/boilerplates?
+
 No, but it offers a streamlined alternative. Existing SDKs will continue to be supported alongside this new approach.
 
 ---

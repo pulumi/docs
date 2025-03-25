@@ -11,7 +11,9 @@ menu:
         parent: iac-extending-pulumi
         weight: 5
 ---
-Create new page titled "Using an existing Terraform Provider".
+TODO: write this page
+
+<!-- Create new page titled "Using an existing Terraform Provider".
 
 Location in docs menu: Pulumi IaC-> Using Pulumi-> Extending Pulumi -> Using an existing Terraform Provider
 
@@ -24,4 +26,4 @@ Page IA:
 
 Notes:
 
-Discusses how to reuse an existing custom Terraform provider within Pulumi, e.g. build, package, and publish a bridged provider, discusses limitations.
+Discusses how to reuse an existing custom Terraform provider within Pulumi, e.g. build, package, and publish a bridged provider, discusses limitations. -->

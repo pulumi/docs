@@ -15,9 +15,11 @@ This guide will walk you through the steps of making a Pulumi Component suitable
 
 {{< notes type="info" >}}
 **Prerequisites:**
+
 - The [Pulumi CLI](/docs/install/)
 - One of Pulumi’s [supported language runtimes](/docs/languages-sdks/) installed
 - Access to a Git hosting environment *(optional)*
+
 {{< /notes >}}
 
 ## Why Write a Component?
@@ -25,6 +27,7 @@ This guide will walk you through the steps of making a Pulumi Component suitable
 [Pulumi Components](/docs/iac/concepts/resources/components/) provide a way to encapsulate best practices, ensuring that security policies and deployment patterns remain consistent across projects. They also help reduce code duplication by allowing you to define reusable infrastructure patterns. By structuring infrastructure as components, maintainability improves, and teams can work more efficiently.
 
 ### Key features:
+
 - **Sharing and Reusability**: Do more with less code. Don't repeat yourself.
 - **Best Practices and Policy**: Encode company standards and policy, across all languages and cloud environments.
 - **Multi-language Support**: Write in one language, use in any language.
@@ -42,15 +45,17 @@ A Pulumi Component consists of three main parts. The **component resource** enca
 ## Example: Static Web Page Component
 
 In this example, we'll create a static website component in AWS Simple Storage Service (S3). The component will manage the following five sub-resources necessary to implement a basic S3 hosted static website:
+
 - a [`BucketV2`](/registry/packages/aws/api-docs/s3/bucketV2/) resource
-- a [`BucketWebsiteConfigurationV2`]() resource to set up the website configuration
+- a [`BucketWebsiteConfigurationV2`](/registry/packages/aws/api-docs/s3/bucketWebsiteConfigurationV2/) resource to set up the website configuration
 - a [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) resource to hold the raw site content
-- a [`BucketPublicAccessBlock`]() resource to manage public access
+- a [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketPublicAccessBlock/) resource to manage public access
 - a [`BucketPolicy`](/registry/packages/aws/api-docs/s3/bucketpolicy/) resource to set the Bucket policy
 
 The component will take as input the contents of the file you wish to host, and will output the S3 endpoint used to access it.
 
 ***Example:** Using a custom StaticPage component in a Pulumi Program*
+
 ```yaml
 name: static-page-yaml
 description: A minimal Pulumi YAML program
@@ -86,6 +91,7 @@ $ cd static-page-component
 The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
 ***Example:** `PulumiPlugin.yaml` for JavaScript*
+
 ```yaml
 runtime:
   name: nodejs
@@ -98,13 +104,14 @@ runtime:
 Next, we need to define our dependencies in `package.json`.
 
 ***Example:** `package.json` for a Pulumi Component*
+
 ```json
 {
     "name": "static-page-component",
     "version": "0.1.0",
     "description": "Static Page Component",
     "dependencies": {
-        "@pulumi/aws": "6.73.0",        
+        "@pulumi/aws": "6.73.0",
         "@pulumi/pulumi": "^3.157.0"
     }
 }
@@ -121,6 +128,7 @@ The `@pulumi` SDK contains everything we need for making a component. It should 
 The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
 ***Example:** `PulumiPlugin.yaml` for TypeScript*
+
 ```yaml
 runtime: nodejs
 ```
@@ -130,13 +138,14 @@ runtime: nodejs
 Next, we need to define our dependencies in `package.json`.
 
 ***Example:** `package.json` for a Pulumi Component*
+
 ```json
 {
     "name": "static-page-component",
     "description": "Static Page Component",
     "version": "0.1.0",
     "dependencies": {
-        "@pulumi/aws": "6.73.0",        
+        "@pulumi/aws": "6.73.0",
         "@pulumi/pulumi": "^3.157.0"
     },
     "devDependencies": {
@@ -183,6 +192,7 @@ We'll also need a TypeScript project file called `tsconfig.json`.
 The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
 ***Example:** `PulumiPlugin.yaml` for Python*
+
 ```yaml
 runtime: python
 ```
@@ -192,6 +202,7 @@ runtime: python
 Next, we need to define our dependencies in `requirements.txt`.
 
 ***Example:** `requirements.txt` for a Pulumi Component*
+
 ```toml
 pulumi>=3.153.0,<4.0
 pulumi_aws>=6.0.0
@@ -207,6 +218,7 @@ The `pulumi` SDK contains everything we need for making a component. It should b
 The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
 ***Example:** `PulumiPlugin.yaml` for Go*
+
 ```yaml
 runtime: go
 ```
@@ -216,12 +228,12 @@ runtime: go
 Next, we need to define our dependencies in `go.mod`.
 
 ***Example:** `go.mod` for a Pulumi Component*
+
 ```
 TODO: language-specific package management info
 ```
 
 The `pulumi` SDK contains everything we need for making a component. It should be version `3.157.0` or newer. The `pulumi-aws` package is the AWS provider that we are building on top of.
-
 
 {{% /choosable %}}
 
@@ -232,6 +244,7 @@ The `pulumi` SDK contains everything we need for making a component. It should b
 The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
 ***Example:** `PulumiPlugin.yaml` for C#*
+
 ```yaml
 runtime: dotnet
 ```
@@ -241,6 +254,7 @@ runtime: dotnet
 Next, we need to define our dependencies in `StaticPageComponent.csproj`.
 
 ***Example:** `StaticPageComponent.csproj` for a Pulumi Component*
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
@@ -271,6 +285,7 @@ Note that the `AssemblyName` specifies the name of the component package. This n
 The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
 ***Example:** `PulumiPlugin.yaml` for Java*
+
 ```yaml
 runtime: java
 ```
@@ -280,6 +295,7 @@ runtime: java
 Next, we need to define our dependencies in a Maven `pom.xml`.
 
 ***Example:** `pom.xml` for a Pulumi Component*
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -337,9 +353,10 @@ The `com.pulumi.pulumi` SDK contains everything we need for making a component. 
 
 #### PulumiPlugin.yaml
 
-The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. It's also where we will define the component implementation later. For now, just add the `runtime` and `name` properties. 
+The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. It's also where we will define the component implementation later. For now, just add the `runtime` and `name` properties.
 
 ***Example:** `PulumiPlugin.yaml` for Java*
+
 ```yaml
 runtime: yaml
 name: static-page-component
@@ -354,24 +371,30 @@ name: static-page-component
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
+
 First, create the `index.js` file, where we will define an entry point for the component.
 
 ***Example:** `index.js` component entry point*
+
 ```javascript
 TODO: JavaScript implementation
 ```
+
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
 First, create the `index.ts` file, where we will define an entry point for the component.
 
 ***Example:** `index.ts` component entry point*
+
 ```typescript
 import { componentProviderHost } from "@pulumi/pulumi/provider/experimental";
 
 declare const __dirname: string;
 componentProviderHost(__dirname);
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -379,6 +402,7 @@ componentProviderHost(__dirname);
 First, create the `__main__.py` file, where we will define an entry point for the component.
 
 ***Example:** `__main__.py` component entry point*
+
 ```python
 from pulumi.provider.experimental import Metadata, component_provider_host
 
@@ -394,9 +418,11 @@ Here, the `component_provider_host` call invokes a Pulumi provider implmentation
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 First, create the `main.go` file, where we will define an entry point for the component.
 
 ***Example:** `main.go` component entry point*
+
 ```go
 package main
 
@@ -458,9 +484,11 @@ Then the `Metadata` defines a `LanguageMap` that tells the code-generation libra
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 First, create the `Program.cs` file, where we will define an entry point for the component.
 
 ***Example:** `Program.cs` component entry point*
+
 ```csharp
 using System.Threading.Tasks;
 
@@ -476,12 +504,15 @@ Here, the `ComponentProviderHost.Serve` call invokes a Pulumi provider implmenta
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 First, create the `src/main/java/com/pulumi/example/staticpagecomponent` sub-directory and in it, create the `App.java` file, where we will define an entry point for the component.
 
 ***Example:** `App.java` component entry point*
+
 ```java
 TODO: Java implementation
 ```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
@@ -494,7 +525,7 @@ Because YAML is entirely declarative, unlike in our other languages, there's no 
 
 ### Implement the Component
 
-Next we will define the classes that implement our custom component. 
+Next we will define the classes that implement our custom component.
 
 Components typically require two parts: a subclass of `pulumi.ComponentResource` that implements the component, and an *arguments* class, which is used to configure the component during construction.
 
@@ -519,6 +550,7 @@ TODO: TypeScript component implementation
 First create a file called `staticpage.py`, and add the imports we will need:
 
 ***Example:** `staticpage.py` required dependencies*
+
 ```python
 import json
 from typing import Optional, TypedDict
@@ -529,9 +561,11 @@ from pulumi_aws import s3
 ```
 
 ### Define the Component arguments
+
 Next, we will implement the arguments class. In our example here, we will pass the contents of the webpage we want to host to the component.
 
 ***Example:** `staticpage.py` the Component arguments implmentation*
+
 ```python
 class StaticPageArgs(TypedDict):
     index_content: pulumi.Input[str]
@@ -545,6 +579,7 @@ Note that argument classes must be *serializable* and use `pulumi.Input` types, 
 Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via calls to `self.register_outputs`.
 
 ***Example:** `staticpage.py` the Component implmentation*
+
 ```python
 class StaticPage(pulumi.ComponentResource):
     website_endpoint: pulumi.Output[str]
@@ -557,19 +592,19 @@ class StaticPage(pulumi.ComponentResource):
 
         super().__init__('static-page-component:index:StaticPage', name, {}, opts)
 
-        # Create a bucket 
+        # Create a bucket
         bucket = s3.BucketV2(
             f'{name}-bucket',
             opts=ResourceOptions(parent=self))
 
-        # Configure the bucket website 
+        # Configure the bucket website
         bucket_website = s3.BucketWebsiteConfigurationV2(
             f'{name}-website',
             bucket=bucket.bucket,
             index_document={"suffix": "index.html"},
             opts=ResourceOptions(parent=bucket))
 
-        # Create a bucket object for the index document.
+        # Create a bucket object for the index document
         s3.BucketObject(
             f'{name}-index-object',
             bucket=bucket.bucket,
@@ -580,8 +615,8 @@ class StaticPage(pulumi.ComponentResource):
 
         # Create a public access block for the bucket
         bucket_public_access_block = s3.BucketPublicAccessBlock(
-            f'{name}-public-access-block', 
-            bucket=bucket.id, 
+            f'{name}-public-access-block',
+            bucket=bucket.id,
             block_public_acls=False,
             opts=ResourceOptions(parent=bucket))
 
@@ -629,7 +664,7 @@ class StaticPage(pulumi.ComponentResource):
 # ...
 ```
 
-Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine. It also allows the underlying library to find and infer the schema of the component. 
+Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine. It also allows the underlying library to find and infer the schema of the component.
 
 ```python
 class StaticPage(pulumi.ComponentResource):
@@ -639,7 +674,7 @@ class StaticPage(pulumi.ComponentResource):
 
 #### The Component constructor
 
-We use a class property to store the output value. Note that it's using `pulumi.Output[str]` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program. 
+We use a class property to store the output value. Note that it's using `pulumi.Output[str]` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
 
 ```python
 # ...
@@ -652,7 +687,8 @@ We use a class property to store the output value. Note that it's using `pulumi.
 # ...
 ```
 
-The constructor has a few standard arguments: 
+The constructor has a few standard arguments:
+
 - `name`: The name given to an instance of this component. When writing a Pulumi program, resources are named by the end-user. Later on in the implementation we will use this base component name to uniquely name the resources it contains.
 - `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
@@ -665,19 +701,19 @@ Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`
 
 ```python
 # ...
-        # Create a bucket 
+        # Create a bucket
         bucket = s3.BucketV2(
             f'{name}-bucket',
             opts=ResourceOptions(parent=self))
 
-        # Configure the bucket website 
+        # Configure the bucket website
         bucket_website = s3.BucketWebsiteConfigurationV2(
             f'{name}-website',
             bucket=bucket.bucket,
             index_document={"suffix": "index.html"},
             opts=ResourceOptions(parent=bucket))
 
-        # Create a bucket object for the index document.
+        # Create a bucket object for the index document
         s3.BucketObject(
             f'{name}-index-object',
             bucket=bucket.bucket,
@@ -688,8 +724,8 @@ Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`
 
         # Create a public access block for the bucket
         bucket_public_access_block = s3.BucketPublicAccessBlock(
-            f'{name}-public-access-block', 
-            bucket=bucket.id, 
+            f'{name}-public-access-block',
+            bucket=bucket.id,
             block_public_acls=False,
             opts=ResourceOptions(parent=bucket))
 
@@ -708,7 +744,7 @@ The `BucketV2` resource represents an S3 bucket, which is similar to a directory
 
 Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources.
 
-Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new instance of `ResourceOptions` and pass the component instance as the `parent` of the `BucketV2` resource, via `parent=self` in the `ResourceOptions` class. This is an essential step to tie the sub-resources into the dependency graph. 
+Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new instance of `ResourceOptions` and pass the component instance as the `parent` of the `BucketV2` resource, via `parent=self` in the `ResourceOptions` class. This is an essential step to tie the sub-resources into the dependency graph.
 
 ##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
 
@@ -732,9 +768,9 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the constructor handles output values. First we set the `website_endpoint` class property to the end-point URL from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output[str]`, not a regular Python string. Outputs must use `pulumi.Output` types. 
+The last part of the constructor handles output values. First we set the `website_endpoint` class property to the end-point URL from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output[str]`, not a regular Python string. Outputs must use `pulumi.Output` types.
 
-Finally, calling `self.register_outputs` provides the output value to Pulumi and ensures the execution order and dependency graph are able to be properly managed by the Pulumi engine. 
+Finally, calling `self.register_outputs` provides the output value to Pulumi and ensures the execution order and dependency graph are able to be properly managed by the Pulumi engine.
 
 ```python
 # ...
@@ -755,6 +791,7 @@ Finally, calling `self.register_outputs` provides the output value to Pulumi and
 In addition to the constructor logic, we also have a helper function `_allow_getobject_policy`:
 
 ***Example:** `staticpage.py` a helper function*
+
 ```python
 # ...
 def _allow_getobject_policy(bucket_name: str) -> str:
@@ -772,7 +809,6 @@ def _allow_getobject_policy(bucket_name: str) -> str:
         ],
     })
 # ...
-
 ```
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `apply(...)`. That means that the `bucket_name`, which is normally a `pulumi.Output[str]` value, can be materialized as a normal Python string, and is passed into this function that way. Note that you can't modify the value of `bucket_name`, but you can *read* the value and use it to construct the policy document. The `json.dumps(...)` function takes the dictionary as input and returns it as a JSON formatted string.
@@ -824,7 +860,9 @@ $ mkdir use-static-page-component
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
 ***Example:** A `Pulumi.yaml` file for a Pulumi project written in TypeScript*
+
 ```yaml
 name: use-static-page-component
 description: A minimal TypeScript Pulumi program that uses the custom Static Page component
@@ -837,9 +875,10 @@ runtime:
 {{% choosable language python %}}
 
 ***Example:** A `Pulumi.yaml` file for a Pulumi project written in Python*
+
 ```yaml
 name: use-static-page-component
-description: A minimal Python Pulumi program that uses the custom Static Page component 
+description: A minimal Python Pulumi program that uses the custom Static Page component
 runtime:
   name: python
   options:
@@ -873,7 +912,8 @@ pulumi package add ../static-page-component
 
 This will create a new subdirectory called `sdks/`, and in it, there will be a directory for your language SDK. One of: `dotnet`, `go`, `java`, `nodejs`, and `python`.
 
-Now, in your `Pulumi.yaml` file add the following section to load the component from source: 
+Now, in your `Pulumi.yaml` file add the following section to load the component from source:
+
 ```yaml
 plugins:
   providers:
@@ -890,9 +930,10 @@ plugins:
 
 #### Add the NodeJS and TypeScript project files
 
-Now lets create our `package.json` and `tsconfig.json`. We'll need the standard `pulumi` SDK and our custom component. To use that, just add the path to the generated TypeScript SDK using the format `file:<path>` instead of a package version spec. 
+Now lets create our `package.json` and `tsconfig.json`. We'll need the standard `pulumi` SDK and our custom component. To use that, just add the path to the generated TypeScript SDK using the format `file:<path>` instead of a package version spec.
 
 ***Example:** `package.json`*
+
 ```json
 {
     "name": "use-static-page-component",
@@ -911,6 +952,7 @@ Note that we don't need to add the Pulumi AWS provider library here, because tha
 The TypeScript config is the same as any standard Pulumi program.
 
 ***Example:** `tsconfig.json` for a Pulumi program*
+
 ```json
 {
     "compilerOptions": {
@@ -944,6 +986,7 @@ pulum install
 #### Create the Pulumi program
 
 ***Example:** `index.ts` that uses the Static Page component*
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import { StaticPage } from "@pulumi/static-page-component";
@@ -964,7 +1007,7 @@ export const websiteURL = pulumi.interpolate`http://${page.websiteEndpoint}`;
 
 #### Add the package dependencies
 
-Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK and our custom component. To use that, just add the path to the generated Python SDK: 
+Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK and our custom component. To use that, just add the path to the generated Python SDK:
 
 ```toml
 sdk/python
@@ -986,6 +1029,7 @@ $ pip install -r requirements.txt
 #### Create the Pulumi program
 
 ***Example:** `__main__.py` that uses the Static Page component*
+
 ```python
 import pulumi
 from pulumi_static_page_component import StaticPage
@@ -997,6 +1041,7 @@ page = StaticPage('my-static-page', index_content=page_html)
 website_url = page.website_endpoint.apply(lambda v: f"http://{v}")
 pulumi.export('website_url', website_url)
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1039,7 +1084,7 @@ Resources:
 Duration: 10s
 ```
 
-Success! We were able to use our component as just a single resource within our Pulumi program and it managed five other resources under the hood for us. This greatly reduces the amount of code an end user has to write to be able to host an HTML file in S3. 
+Success! We were able to use our component as just a single resource within our Pulumi program and it managed five other resources under the hood for us. This greatly reduces the amount of code an end user has to write to be able to host an HTML file in S3.
 
 ## Sharing and Reuse
 
@@ -1072,7 +1117,6 @@ You can then import the SDK in your Python code with:
 {{% notes type="warning" %}}
 Authentication for private repos is not currently supported.
 {{% /notes %}}
-
 
 ### Sharing via Pulumi Package
 

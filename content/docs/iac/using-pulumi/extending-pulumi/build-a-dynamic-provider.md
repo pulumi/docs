@@ -10,8 +10,9 @@ menu:
         parent: iac-extending-pulumi
         weight: 3
 ---
+TODO: Write this page
 
-Create new page titled "Build a Dynamic Provider".
+<!-- Create new page titled "Build a Dynamic Provider".
 
 Location in docs menu: Pulumi IaC-> Using Pulumi-> Extending Pulumi -> Build a Dynamic Provider
 
@@ -28,4 +29,4 @@ Page IA:
 Notes:
 
 Covers creating a dynamic provider that is included w/ your program, serialized, and run in a provider host shim, discusses limitations (languages, reusability,… e.g. how dynamic providers are NOT native providers, and when you’d need a native provider instead)
-Consider reusing existing page on dynamic providers, then reduce the scope of that page (which is a similar tutorial) and instead discuss them as a concept and link to this page from there)
+Consider reusing existing page on dynamic providers, then reduce the scope of that page (which is a similar tutorial) and instead discuss them as a concept and link to this page from there) -->

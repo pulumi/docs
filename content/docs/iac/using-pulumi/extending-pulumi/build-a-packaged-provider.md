@@ -10,7 +10,9 @@ menu:
         parent: iac-extending-pulumi
         weight: 4
 ---
-Create new page titled "Build a Packaged Provider".
+TODO: Write this page
+
+<!-- Create new page titled "Build a Packaged Provider".
 
 Location in docs menu: Pulumi IaC-> Using Pulumi-> Extending Pulumi -> Build a Packaged Provider
 
@@ -45,4 +47,4 @@ Page IA:
 Notes:
 
 Covers creating a packaged provider (aka native provider) in various authoring languages, generating sdks for various target languages, packaging, publishing, and how to use the package, discuss limitations in each language choosable as needed
-Based this on file provider example (or maybe there's something better to show?)
+Based this on file provider example (or maybe there's something better to show?) -->
