@@ -1,8 +1,10 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: Kubernetes Infrastructure"
+h1: How to Deploy Azure Kubernetes Service (AKS) Clusters with Portal & IaC
 date: 2021-08-12
+updated: 2025-03-25
 allow_long_title: True
-meta_desc: "Configuring Azure Kubernetes Service (AKS) through the Azure Portal and Infrastructure as Code."
+meta_desc: "Learn how to deploy and configure Azure Kubernetes Service (AKS) clusters using the Azure Portal and Pulumi. Includes code samples and step-by-step setup."
 meta_image: azure-top-5.png
 authors:
     - sophia-parafina
@@ -16,7 +18,14 @@ History lesson time! In 2011, microservices debuted as an architectural style su
 
 Kubernetes streamlines container deployment and management, making applications scale and accessible. This article demonstrates configuring and deploying Kubernetes with Azure.
 
-<!--more-->
+In this series, we go in-depth on:
+* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
+* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
+* [Top Azure Services Every Developer Should Know: Serverless](/blog/top-5-things-for-azure-devs-serverless/)
+* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
+* **Top Azure Services Every Developer Should Know: Building on AKS** (this post)
+* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
+* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 ## A Kubernetes Review
 
@@ -563,4 +572,4 @@ The complete code for deploying AKS is available on GitHub for [Typescript](http
 
 Azure Kubernetes Service lets you deploy a Kubernetes cluster quickly and efficiently. An AKS deployment configures the worker nodes since the master nodes are provided by Azure. The Azure Portal provides a simplified interface for configuration, but if you want fine-grain control over the deployment, infrastructure as code is an option. This is particularly true for production deployments where the configuration requires tuning for an application deployment.
 
-In the next article in this series, we'll deploy an application on an AKS cluster using different methods.
+In the next article in this series, we'll [deploy an application on an AKS cluster](/blog/top-5-things-for-azure-devs-kubernetes-apps/) using different methods.
