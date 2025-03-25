@@ -1,9 +1,10 @@
 ---
-title: "Introducing the new Docker Build provider"
+title: "Introducing The New Docker Build Provider"
 date: 2024-04-25T09:00:00-07:00
+updated: 2025-03-10
 draft: false
 meta_desc: >-
-    Pulumi's new Docker Build provider offers support for Docker builds using modern buildx/BuildKit APIs.
+    Speed up Docker builds with Pulumi’s new Build provider. Leverage BuildKit, buildx, and caching for faster, more efficient container workflows.
 meta_image: meta.png
 authors:
     - bryce-lampe
@@ -32,12 +33,12 @@ The new provider exposes Docker's next-gen [buildx] interface, so now even your 
 
 ## A brief history
 
-Pulumi first introduced the [Docker provider] in 2018, and it has been widely adopted since. Over the years, Pulumi has invested in the Docker provider, notably introducing version 4.0 [last year](../build-images-50x-faster-docker-v4) and additional improvements like `build-on-preview` behavior.
+Pulumi first introduced the [Docker provider] in 2018, and it has been widely adopted since. Over the years, Pulumi has invested in the Docker provider, notably [introducing version 4.0](../build-images-50x-faster-docker-v4) last year and additional improvements like `build-on-preview` behavior.
 
-At the same time, the Docker build ecosystem has seen tremendous advancements in how images can be built and distributed. These changes were initially experimental, but they became official when [BuildKit] graduated to become the
+At the same time, the Docker build ecosystem has seen tremendous advancements in how images can be built and distributed. These changes were initially experimental, but they became official when BuildKit graduated to become the
 default builder in Docker version 23.
 
-We have heard many requests from users to expose more [BuildKit] functionality in the Docker provider. After some consideration, we decided that a new, standalone provider focused exclusively on building images would provide the best overall user experience. In addition, it allows Pulumi to stay current with the evolving Docker build landscape.
+We have heard many requests from users to expose more BuildKit functionality in the Docker provider. After some consideration, we decided that a new, standalone provider focused exclusively on building images would provide the best overall user experience. In addition, it allows Pulumi to stay current with the evolving Docker build landscape.
 
 ## Getting started
 
@@ -661,9 +662,9 @@ const v4Migrated = new dockerbuild.Image("v4-to-buildx", {
 
 ## Conclusion
 
-Launching the new [Docker Build provider] marks a significant milestone in modernizing container management for developers. The new package, which contains the `docker_build.Image` resource reflects our commitment to innovation and user-centric development. By incorporating the latest [BuildKit] technology, the Docker Build provider supports the newest features, enhances multi-architecture builds, and improves caching strategies. Moreover, its integration with [Docker Build Cloud](https://www.docker.com/products/build-cloud/) underscores our dedication to providing a cutting-edge toolset for developers. This launch is a testament to our ongoing efforts to modernize and improve how developers build images.
+Launching the new [Docker Build provider] marks a significant milestone in modernizing container management for developers. The new package, which contains the `docker_build.Image` resource reflects our commitment to innovation and user-centric development. By incorporating the latest BuildKit technology, the Docker Build provider supports the newest features, enhances multi-architecture builds, and improves caching strategies. Moreover, its integration with [Docker Build Cloud](https://www.docker.com/products/build-cloud/) underscores our dedication to providing a cutting-edge toolset for developers. This launch is a testament to our ongoing efforts to modernize and improve how developers build images.
 
-Check out our [documentation](https://www.pulumi.com/registry/packages/docker-build/) for more details on utilizing the Docker Build provider.
+Check out the [Pulumi Docker Build documentation](https://www.pulumi.com/registry/packages/docker-build/) for more details on utilizing the Docker Build provider.
 
 If you are still wondering, "Which provider should I use?" the answer depends on whether you are doing anything related to `docker build`.
 

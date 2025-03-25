@@ -1,7 +1,8 @@
 ---
-title: "Protecting Your APIs with Lambda Authorizers and Pulumi"
+title: "Secure APIs with Auth0 Lambda Authorizers Using Pulumi & AWS"
 date: "2019-04-24"
-meta_desc: "With Pulumi's new AWSX package, you can quickly define a Lambda and an AWS Lambda authorizer to protect it in three easy steps."
+updated: 2025-03-24
+meta_desc: "Learn how to secure AWS API Gateway endpoints using Lambda authorizers and Auth0 with Pulumi. Build OAuth-protected serverless APIs in 3 steps."
 meta_image: "lambda-authorizer.png"
 authors: ["erin-krengel"]
 tags: ["Serverless","AWS", "lambda", "api-gateway"]
@@ -9,7 +10,7 @@ tags: ["Serverless","AWS", "lambda", "api-gateway"]
 
 Creating serverless applications just got even easier! You can now
 protect your application APIs in just three easy steps. We've already
-posted about how [easy it is to create serverless apps in Pulumi](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/).
+posted about [how easy it is to create serverless apps in Pulumi](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/).
 Now, we're helping you simplify protecting those apps with API
 Gateway and Lambda authorizers.
 
@@ -80,7 +81,7 @@ will create our API Gateway and Hello World Lambda. In Step 2, we will
 set up the logic for our Lambda authorizer. And finally in Step 3, we
 will bring it all together by telling API Gateway to use our authorizer.
 
-![lambda_authorizer](./lambda-authorizer.png)
+![lambda_authorizer workflow to be used by Pulumi for set up: Auth0, Client, API Gateway, Lambda Authorizer, Hello World Lambda](./lambda-authorizer.png)
 
 ### 1 - Define Your Routes
 

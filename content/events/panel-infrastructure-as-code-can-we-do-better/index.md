@@ -75,7 +75,7 @@ main:
     tags:
         level: # Beginner, Intermediate, Advanced
         topics: ["DevOps", "Automation"]
-        languages: ["AWS", "Azure", "Google Cloud"]
+        clouds: ["AWS", "Azure", "Google Cloud"]
 
 # The right hand side form section.
 form:

@@ -1,7 +1,8 @@
 ---
-title: "Simpler configuration management with project level config"
+title: "Simplify Configuration Management with Project-level Config"
 date: 2022-11-02T06:00:00-07:00
-meta_desc: The introduction of project level config makes infrastructure configuration even easier with Pulumi.
+updated: 2025-03-07
+meta_desc: Pulumi’s project-level config simplifies infrastructure setup, enabling seamless configuration across all stacks. Learn how to use it effectively.
 meta_image: meta.png
 authors:
     - fraser-waters
@@ -15,7 +16,7 @@ One of our most up-voted feature requests (with 78 thumbs ups) is to [support hi
 
 Pulumi will now allow you to set configuration values in your `Pulumi.yaml` file, using the given value as a default for all stacks in the project. While we expect even this first level of support will be incredibly useful to many people we also want to assure you that we have many more plans in place to make this feature even better.
 
-### Project level configuration values
+### How to Use Project-level Configuration
 
 Pulumi has always had the concept of [configuration per stack](/docs/concepts/config/), and the changes for project level configuration haven't fundamentally changed that. You can still set config for stacks via the `pulumi config` CLI command, or by editing the `Pulumi.<stack>.yaml` file. Project level config just gives you the ability to set default values for all stacks in your `Pulumi.yaml`.
 
@@ -51,11 +52,11 @@ config:
 
 This allows the engine to distinguish between values and schemas, which we will show below.
 
-### Configuration specification
+### Defining Configuration Schemas in Pulumi
 
 A related feature to defining values for config at the project level is [being able to define a schema for the config](https://github.com/pulumi/pulumi/issues/1052). This allows you to define what configuration settings you expect in your `Pulumi.yaml` so that the engine can use that information to validate configuration for every stack.
 
-This is done using a very similar declaration to JSON schema, or our Pulumi JSON schema (the schemas from resource providers that drive our code generators). Below is a small example of some of the things you can declare:
+This is done using a very similar declaration to [JSON schema](https://json-schema.org/), or our Pulumi JSON schema (the schemas from resource providers that drive our code generators). Below is a small example of some of the things you can declare:
 
 ```yaml
 config:
@@ -84,14 +85,32 @@ config:
         default: false
 ```
 
-### Deprecation of 'configuration' in YAML
+### Pulumi YAML Configuration: What's Changing?
 
 When we released our support for simple Pulumi programs in YAML we added some support for configuration with it. This was done via the [`configuration` key](https://www.pulumi.com/docs/languages-sdks/yaml/yaml-language-reference/#configuration) in the `Pulumi.yaml` file. We'll be deprecating support for that key now, as YAML will instead use the new standard project configuration.
 
-### Future plans
+### What's Next for Pulumi Configuration?
 
 This is just the start of our support for better config. We posted [a long comment to GitHub](https://github.com/pulumi/pulumi/issues/2307#issuecomment-1225592223) earlier this year to explain some of our future plans, and we do intend to continue improving this part of the Pulumi system as described in that comment.
 
-## Feedback
+### FAQ: Project-Level Configuration in Pulumi
 
-We'd love to hear how you plan on using these new configuration features, and if you have questions or concerns about this change let us know in our community [Slack](https://slack.pulumi.com/) or [in GitHub Discussions](https://github.com/pulumi/pulumi/discussions).
+#### What is project-level config in Pulumi?
+
+Project-level config allows you to set default configuration values for all stacks in a Pulumi.yaml file.
+
+#### Can I override project-level config for specific stacks?
+
+Yes! You can override default values in Pulumi.<stack>.yaml or via the CLI.
+
+#### How does Pulumi handle object values in config?
+
+Objects must be nested under a value key to distinguish them from schemas.
+
+#### Is the configuration key still supported in YAML?
+
+No, it is now deprecated in favor of project-level configuration.
+
+#### Where can I give feedback or ask questions?
+
+Join the [Pulumi Community Slack](https://slack.pulumi.com/) or joine the [GitHub Discussions](https://github.com/pulumi/pulumi/discussions).

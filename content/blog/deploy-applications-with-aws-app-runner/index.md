@@ -1,7 +1,8 @@
 ---
-title: "Easily Deploy Applications With AWS App Runner"
+title: "How to Deploy Apps with AWS App Runner and Pulumi"
 date: 2021-05-18
-meta_desc: "AWS App Runner configures networking, scaling, and security, letting deploy applications via source code or container."
+updated: 2025-03-24
+meta_desc: "Learn how to deploy containerized apps using AWS App Runner and Pulumi. Automate scaling, networking, and security in minutes with minimal configuration."
 meta_image: aws-app-runner.png
 authors:
     - lee-zen
@@ -15,7 +16,7 @@ There are loads of benefits to packaging up an application as a container. You c
 
 <!--more-->
 
-AWS recently introduced App Runner, which allows you to easily deploy an application via either source code that lives in GitHub or container image repository. It handles all the configurations of networking, scaling, and security. In this blog post, we’ll show you how easy it is to use Pulumi to set up the necessary infrastructure to use App Runner.
+[AWS recently introduced App Runner](https://aws.amazon.com/about-aws/whats-new/2021/05/aws-announces-aws-app-runner/), which allows you to easily deploy an application via either source code that lives in GitHub or container image repository. It handles all the configurations of networking, scaling, and security. In this blog post, we’ll show you how easy it is to use Pulumi to set up the necessary infrastructure to use App Runner.
 
 In our case, we’ll build a container-based application. To create an App Runner service, we will be using Amazon's Elastic Container Registry (ECR) to create a repository to host our container images. In addition, we’ll need to push our image to the repository and ensure that App Runner has permissions to pull images from our repository.
 
@@ -25,7 +26,7 @@ We’ll use Go for our examples today. First, let’s setup the ECR repository:
 repo, err := ecr.NewRepository(ctx, "sampleapp", &ecr.RepositoryArgs{})
 ```
 
-Note that we’re using Pulumi’s auto-naming support to generate the repository name.
+Note that we’re using Pulumi’s [auto-naming support](/docs/iac/concepts/resources/names/) to generate the repository name.
 
 Next, let’s make sure that the App Runner service can pull images from the repository. To do so, we’ll create a role:
 
@@ -163,3 +164,32 @@ ctx.Export("serviceEndpoint", appRunnerService.ServiceUrl)
 We’re excited at how easy it is to use Pulumi to deploy applications via AWS App Runner, and we can’t wait to see what exciting things you build with it! See AWS App Runner in action in this episode of Modern Infrastructure Wednesday.
 
 {{< youtube "XdMynboheiA?rel=0" >}}
+<div>
+    <div class="accordion-item text-2xl py-3 border-b-2 border-t-2">
+        <input type="checkbox" class="absolute hidden" id="Transcript" />
+        <label for="Transcript" class="accordion-label">
+            <h5 class="mt-2 w-2/3">Video Transcript</h5>
+            <div class="flex flex-grow justify-end items-center">
+                <span class="closed-accordion">+</span>
+                <span class="open-accordion hidden">-</span>
+            </div>
+        </label>
+        <div class="accordion-item-body-no-animation text-base">
+            <p>
+                Hello, and welcome to another episode of Modern Infrastructure Wednesday. I’m your host, Lee Zen, and today we’re going to be covering how easy it is to use Pulumi to deploy an application using AWS App Runner. App Runner is a new service from Amazon that lets you deploy a container image or a source code repository as an application, without having to do too much around configuring anything. You don’t have to configure load balancers—you don’t have to configure any of that stuff you typically have to configure.
+            </p>
+            <p>
+And so, here you can see I’m running the main.go file, and it’s going to create all the necessary resources along with, finally, the App Runner service. We’re going to go into all the source code to explain how all this works, but right now you can see what’s happening is—we’re actually doing the Docker build that’s going to publish. We’re doing the Docker build, and then after the Docker build completes, it’s pushing the image into our ECR repository. And then finally, you can see here the update succeeds, and then we actually get the service URL. So now let’s go take a look at our service. And while the service is updating—you can see it takes a little bit of time, not too much, but just a little bit of time to get going—we’re going to go in to see how our code actually works.
+            </p>
+            <p>
+All right, so what’s actually happening here? Let’s look at our deployment.go file, which main.go actually calls. So we actually built an Automation API-based program, and you can see, you know, in the outputs, we create this image, we create these various things. And so let’s look at the code. The first thing we do is we create an ECR repository, and here we use auto-naming, so it just creates the name. Then next, we create a role so that App Runner can actually go ahead and pull the image from our repository. And so we create the role, we give it the correct policy, and then after that, we basically publish our image. You can see here we have the image resource, and there we actually just feed it the repository credentials.
+            </p>
+            <p>
+So let’s take a quick look at the Dockerfile of the thing we’re building. It’s just copying that index.html file over—it’s a very simple file. So that’s really all there is to the infrastructure. It’s super simple. If we look at the Automation API side of things, all we’re doing is doing the usual Automation API stuff. We’re setting up a stack, we’re deploying our program. Actually, we point out the part where we’re deploying the program right up here, and as soon as we are complete, as soon as we finish deploying the program, we’re going to use the outputs of that program—namely, the image URL and the access role—and we’ll feed that to App Runner. That’ll basically invoke the Create Service API call here, and that’s actually what’s going to do the work.
+            </p>
+            <p>
+So let’s go back to the console, and you can see here we have the app running—and voila! Exactly what we expect to see. So hopefully you enjoyed this demo. And really, yeah, like I said, just so easy to get everything running with App Runner in just a few simple lines of code and Pulumi. Thanks for watching, and have a great day.
+            </p>
+        </div>
+    </div>
+</div>

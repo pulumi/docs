@@ -1,8 +1,9 @@
 ---
 title: "Host your Python app for $1.28 a month"
 date: 2025-01-29T00:00:00
+updated: 2025-03-13
 draft: false
-meta_desc: How to run web services for practically nothing. AWS Lambda hosting for containers
+meta_desc: Learn how to deploy a Flask API in an AWS Lambda container for just $1.28/month. Zero cost when idle, instant scaling – great for low-traffic apps.
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -71,7 +72,17 @@ A Flask app on AWS Lambda with 512 MB memory and 40,000 requests per month would
     </figcaption>
 </div>
 
-## **Why this approach is different**
+What we'll cover:
+
+1. [Why this approach is different](/blog/serverless-api/#why-this-approach-is-different)
+2. [Building Flask application](/blog/serverless-api/#building-our-flask-application)
+3. [Containerizing for Lambda](/blog/serverless-api/#containerizing-for-lambda)
+4. [No special Lambda knowledge required](/blog/serverless-api/#no-special-lambda-knowledge-required)
+5. [Infrastructure as code with Pulumi](/blog/serverless-api/#infrastructure-as-code-with-pulumi)
+6. [Why I love this approach](/blog/serverless-api/#why-i-love-this-approach)
+7. [Conclusion](/blog/serverless-api/#conclusion)
+
+## **Why AWS Lambda is Ideal for Low-Traffic Python Apps**
 
 "But Lambda means one function per REST endpoint, right?" While that's how serverless was initially positioned, the Lambda monolith approach here is a more straightforward pattern. Take any REST API service, package it as a container, put it in Lambda, and give it an entire HTTP route behind an IP, domain name, or API Gateway prefix. Done.
 
@@ -88,13 +99,13 @@ Let me show you how to set this up. With some Pulumi Python code for setting up 
 
 {{< notes type="info" >}}
 
-## Why containers?
+### Why containers?
 
 Containers let us package everything—code, system dependencies, runtime—into one unit. Any HTTP service that fits in a container will work: Flask, Express, Rails, plus whatever system tools you need. Local testing? Just start the container. No Lambda-specific configuration is required.
 
 {{< /notes >}}
 
-## **Building our Flask application**
+## **Building our Flask application in Python**
 
 Let's start with the fun part - writing some Python code, but I will keep it really simple. We'll build a simple Flask application that demonstrates why running a full web framework in Lambda makes sense.
 
@@ -213,7 +224,7 @@ And since this is just a standard Python application in a container, you can use
 
 ## **Infrastructure as code with Pulumi**
 
-Now let's get our containerized Flask app into AWS. While you could click around in the AWS console, we're going to do this properly with infrastructure as code. You are welcome to use Cloudformation or manual setup, but it's nice to be able to keep everything in Python, and this is the Pulumi blog. Using Python to define our AWS resources means we get type-checking and proper IDE support.
+Now let's get our containerized Flask app into AWS. While you could click around in the AWS console, we're going to do this properly with infrastructure as code. You are welcome to use [Cloudformation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) or manual setup, but it's nice to be able to keep everything in Python, and this is the Pulumi blog. Using Python to define our AWS resources means we get type-checking and proper IDE support.
 
 Here's our infrastructure code:
 
@@ -343,7 +354,7 @@ You can find the full code in the [service status monitor repo](https://github.c
 
 {{< notes type="info" >}}
 
-## **Alternative approaches**
+### **Alternative approaches**
 
 There are other ways to run containers that scale to zero. [Google Cloud Run](https://www.pulumi.com/registry/packages/gcp/api-docs/cloudrun/service/) offers similar functionality on GCP, and [AWS App Runner](https://www.pulumi.com/blog/deploy-applications-with-aws-app-runner/) is another AWS service that can do this. Both have similar pricing models—very cheap for low-volume services. And [SST](https://www.pulumi.com/blog/from-cdk-pulumi-evolution-of-sst/) is a similar solution for getting TypeScript / JavaScript solutions into an AWS Lambda.
 

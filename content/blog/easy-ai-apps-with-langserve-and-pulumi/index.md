@@ -1,7 +1,8 @@
 ---
-title: "Easy LangServe Apps with Pulumi on AWS"
+title: "Deploy LangServe Apps with Pulumi on AWS (RAG & Chatbot)"
 date: "2024-02-13T06:00:00-08:00"
-meta_desc: "Create a LangServe app. With Pulumi, you can create, deploy, and manage Langserve apps using your favorite language."
+updated: 2025-03-24
+meta_desc: "Learn to deploy LangServe LLM apps on AWS using Pulumi. Includes real-world examples: a Gandalf chatbot and a Pinecone-powered RAG system with LangChain."
 meta_image: meta.png
 authors:
 - engin-diri
@@ -13,7 +14,7 @@ tags:
 ---
 
 We all know how easy it is to create, deploy, and manage any cloud infrastructure
-with [Pulumi](https://www.pulumi.com/) using your favorite
+with Pulumi using your favorite
 programming language. With the rise of artificial intelligence (AI) more and more developers are working on [LLM-powered
 applications and services](https://www.thoughtworks.com/en-de/radar/techniques/llm-powered-autonomous-agents). And with
 this, the need to have the same ease of use for creating, deploying, and managing
@@ -22,7 +23,7 @@ the infrastructure for these applications is growing.
 In this blog post, we will show you how to this can be achieved with combining Pulumi
 and [LangServe](https://python.langchain.com/docs/langserve).
 
-## What is 🦜️🏓 LangServe?
+## What is LangServe and How Does it Work with LongChain?
 
 [LangServe](https://github.com/langchain-ai/langserve) is part of the
 awesome [🦜️🔗 LangChain](https://github.com/langchain-ai/langchain)
@@ -52,7 +53,7 @@ repository.
 
 The AWS architecture you will get out of the box will look like this:
 
-![LangServe AWS Architecture](./architecture.png)
+![Flowchart depicting LangServe AWS Architecture interactions among user's AWS account, ECR, LangServe Container, Fargate, ALB, Sercrets Manager, Internet gateway, and internet](./architecture.png)
 
 The Pulumi LangServe AWS architecture consists of the following components:
 
@@ -129,7 +130,7 @@ langchain serve
 You can either use the `playground` or `curl` to test the chain. The `playground` is a web interface where you can test
 the chain. You can access it by opening your browser and navigating to `http://localhost:8000/openai/playground`.
 
-![Playground](./playground.png)
+![LangServe Playground with outputted result from an inputted prompt](./playground.png)
 
 Or you can use `curl` to test the chain:
 
@@ -170,7 +171,7 @@ app either with the `playground` or `curl`. Same as you did locally. The URL wil
 https://<your-alb-dns-name>/openai/playground
 ```
 
-![Gandalf AWS](./gandalf-aws.png)
+![Gandalf AWS app in a web browser depicting LangServe Playground with outputted result from an inputted prompt](./gandalf-aws.png)
 
 If you want to destroy the stack, you can use the following command:
 
@@ -402,12 +403,12 @@ have been ingested from Wikipedia about Gandalf the Grey.
 
 Here a screenshot of the Pinecone console:
 
-![Pinecone Console](./pinecone-console.png)
+![Screenshot of Pinecone Console](./pinecone-console.png)
 
 And if you want to test the LangServe app, you can use the playground UI, where you should be able to ask questions
 about Gandalf the Grey and get answers based on the documents ingested into the Pinecone index.
 
-![LangServe Pinecone](./langserve-pinecone.png)
+![LangServe Playground with outputted result from an inputted prompt "Who is Gandalf and what is so special about him?" including intermediate steps](./langserve-pinecone.png)
 
 When you're ready to destroy the stack, you can use the following command:
 
@@ -418,7 +419,7 @@ pulumi destroy
 The Pulumi CLI will ask you to confirm the changes, and if you are happy with the changes, you can confirm them by
 typing `yes` and all the resources will be deleted, including the Pinecone index.
 
-## In Conclusion
+## Conclusion
 
 In this blog post, we showed you how easy it is to create, deploy, and manage LangServe apps with Pulumi. The
 example projects from the Pulumi examples repository provide an excellent starting point to build your own LLM-powered
@@ -426,14 +427,7 @@ apps.
 In the second example, we showed you how to extend the Pulumi code to deploy additional cloud resources, in this case a
 Pinecone serverless index to hold custom data for our Gandalf app.
 
-{{% notes type="info" %}}
-
-Want to get hands on with LangServe and walk through it live? We have two upcoming dates for a workshop focused on LangChain and LangServe!
-
-- [Deploying LangChain Applications on AWS with Pulumi](https://www.pulumi.com/resources/deploying-langchain-applications-on-aws-with-pulumi) on March 14, 2024
-- [Deploying LangChain Applications on AWS with Pulumi](https://www.pulumi.com/resources/deploying-langchain-apps-on-aws-with-pulumi) again on April 17, 2024
-
-{{% /notes %}}
+{{< related-posts >}}
 
 As always, we welcome your feedback and contributions in
 the [Pulumi Community Slack](https://slack.pulumi.com/), [GitHub repository,](https://github.com/pulumi/pulumi)

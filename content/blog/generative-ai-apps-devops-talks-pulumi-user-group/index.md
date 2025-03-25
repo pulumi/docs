@@ -1,7 +1,8 @@
 ---
-title: "Unlocking the Benefits of LangChain AI for Dev, Sec and Ops"
+title: "LangChain for DevOps: Learn LLM & GenAI for Dev, Sec & Ops"
 date: 2023-10-26
-meta_desc: "Learn LLMs and GenAI using LangChain AI, with key lessons for DevOps broken down into Development, Operations, and Security."
+updated: 2025-03-24
+meta_desc: "Explore how to use LangChain with LLMs and GenAI in DevSecOps. Learn real-world examples, security strategies, and tools for developers, ops, and infosec."
 meta_image: langchain-ai-gen-ai-workshop-llm-devops.png
 authors:
     - sara-huddleston
@@ -21,9 +22,19 @@ The emergence of DevOps revolutionized software development. Now, with AI powere
 
 This article unwraps the topics addressed during our "Generative AI, Apps, and DevOps | AI/ML Talks" event in Seattle, focusing on Langchain and GenAI for DevOps. You'll be able to [watch Patrick Debois teach LangChain to learn LLMs and GenAI](https://www.pulumi.com/blog/generative-ai-apps-devops-talks-pulumi-user-group/#how-to-use-langchain-to-learn-llms-and-genai-for-devsecops), with code examples and lessons that are easily understood by traditional software engineering.
 
+1. [What is LangChain used for?](/blog/generative-ai-apps-devops-talks-pulumi-user-group/#what-is-langchain-used-for)
+2. [Why is LangChain becoming popular?](/blog/generative-ai-apps-devops-talks-pulumi-user-group/#why-is-langchain-becoming-popular)
+3. [LangChain Accelerating DevOps](/blog/generative-ai-apps-devops-talks-pulumi-user-group/#langchain-accelerating-devops)
+4. [How to Use LangChain to Learn LLMs and GenAI for Dev(Sec)Ops](/blog/generative-ai-apps-devops-talks-pulumi-user-group/#how-to-use-langchain-to-learn-llms-and-genai-for-devsecops)
+5. [Real-World Applications of LangChain AI in DevOps](/blog/generative-ai-apps-devops-talks-pulumi-user-group/#real-world-applications-of-langchain-ai-in-devops)
+6. [Monitoring and Anomaly Detection with LangChain AI](/blog/generative-ai-apps-devops-talks-pulumi-user-group/#monitoring-and-anomaly-detection-with-langchain-ai)
+7. [Future: AI, Apps, and DevOps](/blog/generative-ai-apps-devops-talks-pulumi-user-group/#future-ai-apps-and-devops)
+8. [Conclusion](/blog/generative-ai-apps-devops-talks-pulumi-user-group/#conclusion)
+9. [Frequently Asked Questions](/blog/generative-ai-apps-devops-talks-pulumi-user-group/#frequently-asked-questions)
+
 ## What is LangChain used for?
 
-LangChain is an open-source Python framework designed to empower developers to construct robust generative AI applications. It facilitates the integration of advanced AI models such as OpenAI's GPT, [Google's BARD](https://bard.google.com), and [Meta's LLaMA](https://ai.meta.com/llama). This versatile tool finds application in developing retrieval-augmented chatbots and other personalized assistants, utilizing technologies like ChatGPT. Furthermore, it enables tasks such as question-answering (GQA), summarization, code comprehension, API interactions, data cleansing, and much more.
+LangChain is an open-source Python framework designed to empower developers to construct robust generative AI applications. It facilitates the integration of advanced AI models such as OpenAI's GPT, [Google's Gemini](https://gemini.google.com), and [Meta's LLaMA](https://ai.meta.com/llama). This versatile tool finds application in developing retrieval-augmented chatbots and other personalized assistants, utilizing technologies like ChatGPT. Furthermore, it enables tasks such as question-answering (GQA), summarization, code comprehension, API interactions, data cleansing, and much more.
 
 ## Why is LangChain becoming popular?
 
@@ -45,7 +56,7 @@ Patrick teaches in the way he would like to be taught. The workshop mainly uses 
 
 {{< youtube "iIl1bQnVwEs?rel=0" >}}
 
-You can see the breakdown of the lessons per role below, and find the code examples on this repo: [https://github.com/jedi4ever/learning-llms-and-genai-for-dev-sec-ops/tree/main](https://github.com/jedi4ever/learning-llms-and-genai-for-dev-sec-ops/tree/main)
+You can see the breakdown of the lessons per role below, and find the code examples in the [Learning LLMs and GenAI for DevSecOps repo](https://github.com/jedi4ever/learning-llms-and-genai-for-dev-sec-ops/tree/main).
 
 ### Developer
 
@@ -100,7 +111,7 @@ Keep in mind that monitoring LLM performance is important to ensure you can rely
 
 ## Future: AI, Apps, and DevOps
 
-[Platform engineering](https://www.pulumi.com/product/internal-developer-platforms/), DevOps, or MLOps may be the next steps in the AI-driven software development future. AI tools are the gateway to giving developers access to big language models that allow them to create highly sophisticated solutions.
+[Platform engineering](/what-is/what-is-platform-engineering/), DevOps, or MLOps may be the next steps in the AI-driven software development future. AI tools are the gateway to giving developers access to big language models that allow them to create highly sophisticated solutions.
 
 ### Accelerating Development with AI-Powered Tools
 
