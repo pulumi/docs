@@ -8,7 +8,17 @@ tags:
   - automation-api
 date: "2021-03-01"
 meta_image: "gha.png"
-meta_desc: "Simen A. W. Olsen and Paul Stack talk about the new GitHub Action powered by the Pulumi Automation API"
+meta_desc: "Simen A. W. Olsen and Paul Stack talk about the new GitHub Action powered
+  by the Pulumi Automation API"
+search:
+  keywords:
+    - supercharging
+    - automation
+    - olsen
+    - action
+    - api
+    - simen
+    - paul
 ---
 
 **Guest Article:** [Simen A. W. Olsen](https://github.com/cobraz) is a Software Architect and Manager at [Bjerk](https://bjerk.io),

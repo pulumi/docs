@@ -4,10 +4,19 @@ date: 2022-02-23
 meta_desc: Introducing the new resource option RetainOnDelete.
 meta_image: meta.png
 authors:
-    - fraser-waters
+  - fraser-waters
 tags:
-    - features
+  - features
 
+search:
+  keywords:
+    - retain
+    - retainondelete
+    - delete
+    - option
+    - introducing
+    - resource
+    - new
 ---
 
 Pulumi is frequently used to manage the entire lifecycle of a resource, from creation, to updates, to replacement, to deletion. However, there are some cases where it is important to ensure that a resource's life can extend beyond the lifetime of the Pulumi program that created it. To support these use cases, Pulumi now supports a new resource option `RetainOnDelete` which allows a resource to be retained in a cloud provider even after it is deleted from the Pulumi stack it is part of.

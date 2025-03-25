@@ -2,13 +2,23 @@
 title: "The Present and (Near) Future of AI and Infrastructure as Code"
 allow_long_title: true
 authors: ["luke-hoban"]
-meta_desc: "The future of AI and Infrastructure as Code (IaC), for how we author and build cloud solutions and AI-driven applications"
+meta_desc: "The future of AI and Infrastructure as Code (IaC), for how we author and
+  build cloud solutions and AI-driven applications"
 date: "2024-02-14T07:00:00-08:00"
 meta_image: "meta.png"
 tags:
+  - ai
+  - llm
+  - infrastructure-as-code
+search:
+  keywords:
+    - infrastructure
     - ai
-    - llm
-    - infrastructure-as-code
+    - near
+    - future
+    - present
+    - code
+    - author
 ---
 
 AI is impacting almost every industry today, and for good reason - we are seeing fundamentally new experiences being made possible across a wide variety of products, and a set of new AI capabilities that promise even more incredible change in the near future.

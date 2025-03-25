@@ -1,5 +1,6 @@
 ---
-title: "How a Bank Modernized Its Software Engineering With Infrastructure as Code Automation"
+title: "How a Bank Modernized Its Software Engineering With Infrastructure as Code
+  Automation"
 allow_long_title: true
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -17,7 +18,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Digital transformation in Financial Services. Learn how Washington Trust Bank modernized with infrastructure as code automation.
+meta_desc: Digital transformation in Financial Services. Learn how Washington Trust
+  Bank modernized with infrastructure as code automation.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,20 +30,30 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - george-huang
+  - george-huang
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - azure
-    - fintech
-    - case-studies
-    - enterprise
-    - crossguard
-    - policy-as-code
+  - azure
+  - fintech
+  - case-studies
+  - enterprise
+  - crossguard
+  - policy-as-code
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - bank
+    - modernized
+    - washington
+    - financial
+    - automation
+    - trust
+    - digital
 ---
+
 {{% notes type="info" %}}
 This blog post summarizes a presentation by Dennis Sauvé at [PulumiUP 2023](/pulumi-up/).
 {{% /notes %}}

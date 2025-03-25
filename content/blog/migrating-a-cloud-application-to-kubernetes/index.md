@@ -1,10 +1,20 @@
 ---
 title: "Migrating a cloud application to Kubernetes"
 date: 2020-09-14
-meta_desc: Using Pulumi to integrate applications with Kubernetes for on-demand scalability and freedom of design.
+meta_desc: Using Pulumi to integrate applications with Kubernetes for on-demand scalability
+  and freedom of design.
 meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "kubernetes", "docker"]
+search:
+  keywords:
+    - migrating
+    - kubernetes
+    - freedom
+    - application
+    - scalability
+    - demand
+    - design
 ---
 
 {{% notes type="warning" %}}

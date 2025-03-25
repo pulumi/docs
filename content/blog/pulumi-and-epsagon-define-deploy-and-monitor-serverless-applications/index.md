@@ -3,8 +3,18 @@ title: "Epsagon: Define, Deploy and Monitor Serverless Applications"
 authors: ["luke-hoban"]
 tags: ["Serverless"]
 date: "2018-11-29"
-meta_desc: "Use the Pulumi Epsagon package to get the benefits of Epsagon monitoring for all of the serverless functions defined in your Pulumi application."
+meta_desc: "Use the Pulumi Epsagon package to get the benefits of Epsagon monitoring
+  for all of the serverless functions defined in your Pulumi application."
 meta_image: "espagon-console-2.png"
+search:
+  keywords:
+    - epsagon
+    - serverless
+    - monitor
+    - define
+    - applications
+    - deploy
+    - monitoring
 ---
 
 [Pulumi](/) makes it incredibly easy to use serverless

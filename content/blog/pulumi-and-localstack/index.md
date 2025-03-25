@@ -2,19 +2,31 @@
 title: "Pulumi and LocalStack — beyond the basics"
 date: 2022-01-10T11:10:06-06:00
 draft: false
-canonical_url: https://delitescere.medium.com/pulumi-and-localstack-beyond-the-basics-d993f3b94d17
-meta_desc: A review of using Pulumi to spin up a LocalStack environment using good engineering practices.
+canonical_url: 
+  https://delitescere.medium.com/pulumi-and-localstack-beyond-the-basics-d993f3b94d17
+meta_desc: A review of using Pulumi to spin up a LocalStack environment using good
+  engineering practices.
 meta_image: meta.png
 authors:
-    - josh-graham
+  - josh-graham
 
 tags:
-    - aws
-    - community
+  - aws
+  - community
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - localstack
+    - basics
+    - spin
+    - review
+    - good
+    - using
+    - engineering
 ---
+
 Recently, Pulumi community member Josh Graham decided to bootstrap a simple application using a serverless approach, with a focus on using good engineering practices and being able to run the application locally. Given that Josh is the (OG) SaaS architect of Atlassian and an AWS user, [LocalStack](https://github.com/localstack/localstack#overview) was a natural choice.
 
 <!--more-->

@@ -1,12 +1,22 @@
 ---
 title: "Benefits of Policy as Code"
 date: 2020-05-27
-meta_desc: "An organization can benefit from Policy as Code through cost control, compliance, and best practices."
+meta_desc: "An organization can benefit from Policy as Code through cost control,
+  compliance, and best practices."
 meta_image: pac-benefits.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - policy-as-code
+  - policy-as-code
+search:
+  keywords:
+    - policy
+    - benefits
+    - code
+    - cost
+    - benefit
+    - compliance
+    - practices
 ---
 
 Writing infrastructure policy in a high-level programming language helps automate and enforce best practices. When policies are written with code, you can apply software development practices such as testing, automated deployment, and version control. Cloud providers typically offer a GUI to create policies,  but creating policies is not easily repeatable, nor can you version policies. Moreover, policies must be tested against a live system, which means using an existing system or configuring and deploying an ephemeral version.

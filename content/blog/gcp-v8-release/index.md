@@ -5,9 +5,18 @@ draft: false
 meta_desc: "Release of the next version of the Pulumi Provider for Google Cloud"
 meta_image: meta.png
 authors:
-    - guinevere-saenger
+  - guinevere-saenger
 tags:
+  - gcp
+  - release
+search:
+  keywords:
+    - cloud
+    - google
+    - provider
+    - version
     - gcp
+    - registry
     - release
 ---
 

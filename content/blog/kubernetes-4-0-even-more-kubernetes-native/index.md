@@ -3,19 +3,29 @@ title: "Pulumi Kubernetes 4.0: Even More Kubernetes-Native"
 
 date: 2023-07-19T16:00:00-04:00
 
-meta_desc: The Pulumi Kubernetes Provider 4.0; Shared Resource Management with Server-Side Apply
+meta_desc: The Pulumi Kubernetes Provider 4.0; Shared Resource Management with Server-Side
+  Apply
 
 meta_image: meta.png
 
 authors:
-    - levi-blackstone
-    - luke-hoban
-    - monica-rodriguez
+  - levi-blackstone
+  - luke-hoban
+  - monica-rodriguez
 
 tags:
-    - kubernetes
-    - providers
+  - kubernetes
+  - providers
 
+search:
+  keywords:
+    - kubernetes
+    - native
+    - shared
+    - server
+    - apply
+    - provider
+    - resource
 ---
 
 Since the very earliest days of the Pulumi project, Kubernetes has been a core part of the Pulumi platform.  The initial Pulumi Kubernetes provider supported the entire API surface area of the Kubernetes platform, derived directly and automatically from the Kubernetes OpenAPI specifications, and available to all of Pulumi's familiar programming languages.  Since then, we have offered day one support for every new Kubernetes version, added support for Helm, YAML, Kustomize and CRDs, added tools for converting to Pulumi (kube2pulumi and crd2pulumi) and delivered the Pulumi Kubernetes Operator.  During that same time, Kubernetes usage has continued to expand within the ecosystem and among Pulumi users, with the Kubernetes provider growing from the fourth most used to the second most used provider on the platform.

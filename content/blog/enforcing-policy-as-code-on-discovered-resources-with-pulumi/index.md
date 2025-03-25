@@ -1,20 +1,30 @@
 ---
-title: Enforcing Policy as Code on Discovered Resources with Pulumi  
-date: 2025-02-04  
-meta_desc: "Learn how Pulumi's new feature enables policy as code on discovered resources, including how to set it up and view policy violations."  
-meta_image: crossguard-meta.png  
-authors:  
-   - tyler-dunkel
-tags: 
-   - features
-   - releases 
-   - "Policy as Code"  
-   - "Pulumi"  
-   - "CrossGuard"  
-   - "AWS"  
-   - "Azure" 
-   - "OCI"
-   - "K8s" 
+title: Enforcing Policy as Code on Discovered Resources with Pulumi
+date: 2025-02-04
+meta_desc: "Learn how Pulumi's new feature enables policy as code on discovered resources,
+  including how to set it up and view policy violations."
+meta_image: crossguard-meta.png
+authors:
+  - tyler-dunkel
+tags:
+  - features
+  - releases
+  - "Policy as Code"
+  - "Pulumi"
+  - "CrossGuard"
+  - "AWS"
+  - "Azure"
+  - "OCI"
+  - "K8s"
+search:
+  keywords:
+    - policies
+    - discovered
+    - policy
+    - enforcing
+    - violations
+    - resources
+    - code
 ---
 
 In this post, we're introducing a powerful new capability in Pulumi Insights that extends policy as code (PaC) beyond infrastructure as code to automatically govern all cloud resources in your environment. By unifying policy enforcement across both IaC and discovered resources, you can now write policies once and apply them universally - dramatically simplifying how organizations maintain security and compliance standards at scale.

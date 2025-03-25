@@ -1,15 +1,26 @@
 ---
 title: "Pulumi Deployments: the Fastest Way to Go from Code to Cloud"
 date: 2022-11-02T06:10:00-07:00
-meta_desc: "New Deployments-as-a-Service technology lets engineers manage ten times more infrastructure, unlocking innovation and scale in the cloud"
+meta_desc: "New Deployments-as-a-Service technology lets engineers manage ten times
+  more infrastructure, unlocking innovation and scale in the cloud"
 meta_image: pulumi-deployments.png
 authors:
-    - evan-boyle
+  - evan-boyle
 tags:
-    - pulumi deployments
-    - automation api
+  - pulumi deployments
+  - automation api
+  - deployments
+search:
+  keywords:
     - deployments
+    - fastest
+    - unlocking
+    - innovation
+    - cloud
+    - technology
+    - times
 ---
+
 {{% notes type="warning" %}}
 Portions of this blog post are out of date. See the [drift detection](/blog/drift-detection/) and [time-to-live stacks](/blog/ttl/) blog posts for an updated overview and examples.
 {{% /notes %}}

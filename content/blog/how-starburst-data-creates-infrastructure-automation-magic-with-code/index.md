@@ -18,7 +18,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Learn how Starburst Data built infrastructure automation into its data lake platform to ship more frequent updates to its customers with zero downtime.
+meta_desc: Learn how Starburst Data built infrastructure automation into its data
+  lake platform to ship more frequent updates to its customers with zero downtime.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,20 +30,30 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - george-huang
+  - george-huang
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - case-studies
-    - kubernetes
-    - cloud-native
-    - automation-api
-    - community
-    - pulumi-events
+  - case-studies
+  - kubernetes
+  - cloud-native
+  - automation-api
+  - community
+  - pulumi-events
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - starburst
+    - automation
+    - magic
+    - data
+    - creates
+    - lake
+    - infrastructure
 ---
+
 {{% notes type="info" %}}
 This blog post summarizes a presentation by Matt Stephenson at [PulumiUP 2023](/pulumi-up/).
 {{% /notes %}}

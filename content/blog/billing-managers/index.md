@@ -4,17 +4,27 @@ allow_long_title: true
 
 date: 2022-08-11T15:00:22-07:00
 
-meta_desc: Starting today all Pulumi Organizations can have a Billing Manager, a role designed for your finance function.
+meta_desc: Starting today all Pulumi Organizations can have a Billing Manager, a role
+  designed for your finance function.
 
 meta_image: meta.png
 
 authors:
-    - isabel-suchanek
-    - meagan-cojocar
+  - isabel-suchanek
+  - meagan-cojocar
 
 tags:
-    - features
-    - pulumi-service
+  - features
+  - pulumi-service
+search:
+  keywords:
+    - service
+    - billing
+    - managers
+    - role
+    - finance
+    - manager
+    - introducing
 ---
 
 We are excited to announce that starting today Pulumi customers can create a Billing Manager role for their organization on the [Pulumi Service](https://app.pulumi.com). We have heard from our customers that having a Billing Manager would solve internal process challenges and are aiming to solve these pain points with the new Billing Manager role.

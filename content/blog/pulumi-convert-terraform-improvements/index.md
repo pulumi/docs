@@ -1,15 +1,26 @@
 ---
 title: "Converting Terraform to Pulumi Just Got Easier"
 date: 2025-03-04
-meta_desc: "Pulumi's conversion tools now automatically handle any Terraform provider, making migration easier than ever"
+meta_desc: "Pulumi's conversion tools now automatically handle any Terraform provider,
+  making migration easier than ever"
 meta_image: meta.png
 authors:
-    - brandon-pollack
-    - meagan-cojocar
+  - brandon-pollack
+  - meagan-cojocar
 tags:
   - terraform
   - features
+search:
+  keywords:
+    - terraform
+    - converting
+    - got
+    - easier
+    - conversion
+    - migration
+    - just
 ---
+
 Big news for infrastructure teams looking to migrate – we've just supercharged Pulumi's Terraform conversion capabilities, making it easier than ever to modernize your infrastructure as code.
 
 Pulumi already lets you use [any Terraform/OpenTofu provider](/blog/any-terraform-provider/) in your existing projects, and now we've taken it to the next level. With [Pulumi CLI version 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0) and above, you can now automatically convert **ANY** Terraform project to Pulumi _and_ import its resources - even if it uses providers that don't have native Pulumi equivalents!

@@ -1,14 +1,24 @@
 ---
 title: How to Create and Share a Pulumi Template
 date: 2022-12-12
-meta_desc: Learn how to design and build Pulumi project templates and share them with others on GitHub.
+meta_desc: Learn how to design and build Pulumi project templates and share them with
+  others on GitHub.
 meta_image: meta.png
 authors:
-    - christian-nunciato
+  - christian-nunciato
 tags:
+  - templates
+  - yaml
+  - aws
+search:
+  keywords:
     - templates
-    - yaml
-    - aws
+    - template
+    - share
+    - design
+    - create
+    - project
+    - learn
 ---
 
 Last month, we released our first set of [architecture templates](/templates/) --- configurable Pulumi projects designed to make it easy to bootstrap new stacks for common cloud architectures like [static websites](/templates/static-website/), [containers](/templates/container-service/), [virtual machines](/templates/virtual-machine/), and [Kubernetes clusters](/templates/kubernetes/). Architecture templates are a great way to get a new project up and running quickly, and they've already grown quite popular with our users, several of whom have asked if whether it's possible to create templates of their own.

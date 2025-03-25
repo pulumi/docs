@@ -3,12 +3,22 @@ title: "Pulumi Recommended Patterns: The Basics"
 date: 2021-11-04T23:20:26Z
 updated: 2025-03-06
 draft: false
-meta_desc: Learn and apply Pulumi recommended patterns to improve your infrastructure and easily scale your deployments using modern infrastructure as code.
+meta_desc: Learn and apply Pulumi recommended patterns to improve your infrastructure
+  and easily scale your deployments using modern infrastructure as code.
 meta_image: article-1-meta.png
 authors:
-    - aurelien-requiem
+  - aurelien-requiem
 tags:
-    - cloud-engineering
+  - cloud-engineering
+search:
+  keywords:
+    - patterns
+    - recommended
+    - basics
+    - improve
+    - infrastructure
+    - modern
+    - easily
 ---
 
 As a customer engineer, one of the most rewarding aspects of my work is to listen to customers and our diverse community to learn and share how they succeed in their day-to-day projects.

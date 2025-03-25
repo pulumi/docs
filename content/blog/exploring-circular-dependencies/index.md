@@ -11,6 +11,15 @@ authors:
 tags:
   - features
   - hackathon
+search:
+  keywords:
+    - circular
+    - dependencies
+    - exploring
+    - hack
+    - solve
+    - solving
+    - approaches
 ---
 
 As part of our hackathon near the end of last year, we decided to explore solutions to a common problem when people are using Pulumi for their systems. A question that’s been asked in a few different forms is how to resolve circular dependencies between resources in a Pulumi program.

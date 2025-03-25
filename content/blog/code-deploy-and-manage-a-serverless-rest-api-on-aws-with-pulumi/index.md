@@ -2,10 +2,20 @@
 title: Code, Deploy, and Manage a Serverless REST API on AWS
 h1: "Code, Deploy, and Manage a Serverless REST API on AWS with Pulumi"
 date: "2018-06-22"
-meta_desc: "In this post, we'll use Pulumi to create a simple serverless REST API using JavaScript to define both the infrastructure and application code."
+meta_desc: "In this post, we'll use Pulumi to create a simple serverless REST API
+  using JavaScript to define both the infrastructure and application code."
 meta_image: "counter-arch.png"
 authors: ["donna-malayeri"]
-tags: ["JavaScript","Serverless","AWS"]
+tags: ["JavaScript", "Serverless", "AWS"]
+search:
+  keywords:
+    - serverless
+    - rest
+    - aws
+    - api
+    - count
+    - code
+    - wow
 ---
 
 Pulumi makes it easy to build serverless

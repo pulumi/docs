@@ -3,7 +3,8 @@ title: "Unveiling Pulumi ESC Versioning: Manage Secrets and Deployments with Con
 allow_long_title: true
 date: 2024-06-05T00:00:00-03:00
 draft: false
-meta_desc: "The new ESC Versioning features allows you bring agile practices to your secrets and configuration management, and streamline deployments"
+meta_desc: "The new ESC Versioning features allows you bring agile practices to your
+  secrets and configuration management, and streamline deployments"
 meta_image: "meta.png"
 authors:
   - arun-loganathan
@@ -12,6 +13,15 @@ tags:
   - esc
   - secrets
   - features
+search:
+  keywords:
+    - esc
+    - confidence
+    - deployments
+    - versioning
+    - unveiling
+    - secrets
+    - agile
 ---
 
 Since the launch of [Pulumi Environments, Secrets and Configuration](/product/esc) (ESC), our developer-first configuration and secrets management platform, we've seen exponential growth in usage. Customers have used it to simplify their secrets and configuration management by organizing them into composable collections called 'environments'. Today, we are thrilled to introduce a comprehensive suite of versioning features, giving you unprecedented control and confidence in managing your environments.
@@ -90,4 +100,4 @@ The versioning capabilities in Pulumi ESC mark a significant step towards a more
 
 We're excited to see how you leverage these powerful capabilities. Your feedback is crucial in helping us shape the product to better serve your needs. We encourage you to open new issues on our [GitHub repository](https://github.com/pulumi/esc/issues/new/choose), upvote existing [ones](https://github.com/pulumi/esc/issues), or join the conversation on our [community Slack](https://slack.pulumi.com/) channel.
 
-Check out the [ESC CLI](/docs/esc-cli/) and [Versioning](/docs/esc/environments/#versioning-environments) docs. 
+Check out the [ESC CLI](/docs/esc-cli/) and [Versioning](/docs/esc/environments/#versioning-environments) docs.

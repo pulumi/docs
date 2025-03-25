@@ -2,13 +2,23 @@
 title: "Pulumi's Declarative and Imperative Approach to IaC"
 date: 2022-09-23
 allow_long_title: true
-meta_desc: Pulumi provides an imperative and declarative approach to infrastructure as code (IaC).
+meta_desc: Pulumi provides an imperative and declarative approach to infrastructure
+  as code (IaC).
 meta_image: meta.png
 authors:
-    - ringo-de-smet
+  - ringo-de-smet
 tags:
-    - cloud-engineering
-    - infrastructure-as-code
+  - cloud-engineering
+  - infrastructure-as-code
+search:
+  keywords:
+    - imperative
+    - iac
+    - declarative
+    - approach
+    - provides
+    - bucket
+    - infrastructure
 ---
 
 On a regular basis, articles and tweets pass by discussing whether some specific tool is imperative or declarative.

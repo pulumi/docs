@@ -1,12 +1,22 @@
 ---
 title: "Build Self-Service Cloud Infrastructure with Automation API "
 date: 2020-11-10
-meta_desc: "With Pulumi's Automation API, you can build a REST API for creating, reading, updating, and deleting (CRUD) cloud resources."
+meta_desc: "With Pulumi's Automation API, you can build a REST API for creating, reading,
+  updating, and deleting (CRUD) cloud resources."
 meta_image: automation_api.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - automation-api
+  - automation-api
+search:
+  keywords:
+    - automation
+    - api
+    - self
+    - build
+    - crud
+    - deleting
+    - cloud
 ---
 
 If you could create infrastructure without using a cloud provider's console, a CLI, or a templating engine, what would you build? Pulumi's Automation API lets you create declarative infrastructure defined by your best practices and expose it behind a REST, gRPC, or custom API.

@@ -4,14 +4,24 @@ canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stack
 date: 2024-04-08
 updated: 2025-03-04
 draft: false
-meta_desc: This wraps up the series on IaC recommended practices, summarizing the previous posts and pointing out areas of future growth for the Zephyr team.
+meta_desc: This wraps up the series on IaC recommended practices, summarizing the
+  previous posts and pointing out areas of future growth for the Zephyr team.
 meta_image: meta.png
 authors:
-    - scott-lowe
+  - scott-lowe
 tags:
-    - best-practices
+  - best-practices
 aliases:
-    - /blog/iac-recommended-practices-wrapping-up/
+  - /blog/iac-recommended-practices-wrapping-up/
+search:
+  keywords:
+    - practices
+    - iac
+    - summarizing
+    - learnings
+    - zephyr
+    - best
+    - key
 ---
 
 Welcome to the final post in our series of articles focused on Infrastructure as Code best practices. In this post, we'll wrap up our recommendations for [IaC with Pulumi](/product/infrastructure-as-code/), summarizing the best practices from previous posts as well as highlighting some areas of potential future growth for the team at Zephyr Archaeotech Emporium---the fictional company at the center of the story throughout this series.<!--more-->

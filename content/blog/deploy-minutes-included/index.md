@@ -1,15 +1,26 @@
 ---
-title: "New Pulumi Deployments Free Tier for Everyone: Automate Your Infrastructure Workflows"
-allow_long_title: True
+title: "New Pulumi Deployments Free Tier for Everyone: Automate Your Infrastructure
+  Workflows"
+allow_long_title: true
 date: 2024-04-24T07:00:01-08:00
 draft: false
-meta_desc: Pulumi enhances its Deployments feature to offer free minutes, making it easier for customers to test and adopt cloud infrastructure management solutions.
+meta_desc: Pulumi enhances its Deployments feature to offer free minutes, making it
+  easier for customers to test and adopt cloud infrastructure management solutions.
 meta_image: deployments-free-tier.png
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 tags:
-    - features
-    - infrastructure-lifecycle-management
+  - features
+  - infrastructure-lifecycle-management
+search:
+  keywords:
+    - deployments
+    - tier
+    - free
+    - automate
+    - workflows
+    - enhances
+    - infrastructure
 ---
 
 At Pulumi, we are committed to empowering developers and infrastructure teams with the tools they need to efficiently manage cloud resources at scale. As part of our ongoing efforts to enhance user experience and ease of use, we are excited to share some significant updates to Pulumi Deployments pricing, making it easier for _all_ customers to experiment with and adopt the easiest way to go from code to cloud. 

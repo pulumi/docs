@@ -1,16 +1,26 @@
 ---
 title: Building an ETL pipeline with Amazon Redshift and AWS Glue
 date: 2022-12-23
-meta_desc: Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi.
+meta_desc: Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated
+  ETL pipeline with Pulumi.
 meta_image: meta.png
 authors:
-    - christian-nunciato
+  - christian-nunciato
 tags:
-    - aws
-    - redshift
+  - aws
+  - redshift
+  - glue
+  - etl
+  - data-warehouse
+search:
+  keywords:
+    - pipeline
     - glue
+    - redshift
     - etl
-    - data-warehouse
+    - amazon
+    - aws
+    - combine
 ---
 
 In our last episode, [Deploying a Data Warehouse with Pulumi and Amazon Redshift](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/), we covered using Pulumi to load unstructured data from Amazon S3 into an Amazon Redshift cluster. That went well, but you may recall that at the end of that post, we were left with a few unanswered questions:

@@ -5,9 +5,18 @@ draft: false
 meta_desc: It's now possible to provide resource methods from Pulumi Packages
 meta_image: pulumi-mlc-packages.png
 authors:
-    - justin-vanpatten
+  - justin-vanpatten
 tags:
+  - packages
+search:
+  keywords:
     - packages
+    - methods
+    - introducing
+    - resource
+    - message
+    - possible
+    - provide
 ---
 
 It's now possible to provide resource methods from Pulumi Packages. Resource methods are similar to functions, but instead of being exposed as top-level functions in a module, methods are exposed as methods on a resource class. This allows for a more object-oriented approach to exposing functionality&mdash;operations performed by a resource (that potentially use the resource's state) can now be exposed as methods on the resource. Resource methods can be implemented once, in your language of choice, and made available to users in all Pulumi languages.

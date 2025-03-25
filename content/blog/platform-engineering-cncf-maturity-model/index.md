@@ -18,7 +18,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Discover Cloud Native Platforms, the Platform Maturity Model, how to approach Platforms as Products, the CNCF Platform Working Group, and more. Get involved!
+meta_desc: Discover Cloud Native Platforms, the Platform Maturity Model, how to approach
+  Platforms as Products, the CNCF Platform Working Group, and more. Get involved!
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,13 +30,13 @@ meta_image: platform-engineering-dominik-tech-talk-cncf.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - platform-engineering
-    - community
-    - pulumi-events
+  - platform-engineering
+  - community
+  - pulumi-events
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -50,11 +51,24 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter: Explore platform engineering essentials! Read the article or watch Dominik Kress's talk on Cloud Native Platforms, the Platform Maturity Model, and managing Platforms as Products.
-    linkedin: Explore platform engineering essentials! Read the article or watch Dominik Kress's talk on Cloud Native Platforms, the Platform Maturity Model, and managing Platforms as Products.
+  twitter: Explore platform engineering essentials! Read the article or watch Dominik
+    Kress's talk on Cloud Native Platforms, the Platform Maturity Model, and managing
+    Platforms as Products.
+  linkedin: Explore platform engineering essentials! Read the article or watch Dominik
+    Kress's talk on Cloud Native Platforms, the Platform Maturity Model, and managing
+    Platforms as Products.
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - maturity
+    - platforms
+    - platform
+    - products
+    - native
+    - models
+    - cncf
 ---
 
 The Platform Engineering & DevOps in-person series launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” in which he discussed Cloud-Native Platforms, The Platform Maturity Model, and approaching Platforms as Products. 

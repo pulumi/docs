@@ -1,15 +1,25 @@
 ---
 title: "Easier IaC adoption with improved `pulumi import` experience"
 date: 2022-03-15
-meta_desc: Recent improvements to `pulumi import` make it an even smoother way to import existing cloud infrastructure into Pulumi.
+meta_desc: Recent improvements to `pulumi import` make it an even smoother way to
+  import existing cloud infrastructure into Pulumi.
 meta_image: meta.png
 authors:
-    - fraser-waters
-    - david-flanagan
+  - fraser-waters
+  - david-flanagan
 tags:
-    - features
-    - migration
+  - features
+  - migration
+  - import
+search:
+  keywords:
+    - adoption
     - import
+    - improved
+    - smoother
+    - easier
+    - experience
+    - recent
 ---
 
 Last year, we [introduced a new Pulumi feature](/blog/pulumi-import-generate-iac-for-existing-cloud-resources/) that allows you to import existing infrastructure into your Pulumi program. Not only did it bring the resource into the Pulumi state file, but it could generate the source code for your Pulumi program too. Today, we're excited to announce that we've listened to feedback and delivered a plethora of updates and fixes to streamline the import experience; to make it **more useful**, **more convenient**, and **more powerful**.

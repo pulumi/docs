@@ -2,9 +2,19 @@
 title: "Introducing kx: Kubernetes for Everyone"
 authors: ["levi-blackstone"]
 tags: ["Kubernetes"]
-meta_desc: "The Kubernetes Extensions (kx) library for Pulumi is designed to simplify the declaration of Kubernetes resources, and make the API easier to use."
+meta_desc: "The Kubernetes Extensions (kx) library for Pulumi is designed to simplify
+  the declaration of Kubernetes resources, and make the API easier to use."
 date: "2019-11-14"
 meta_image: feature.png
+search:
+  keywords:
+    - simplify
+    - kx
+    - kubernetes
+    - introducing
+    - declaration
+    - extensions
+    - designed
 ---
 
 Kubernetes provides a rich, standards-based API that works across cloud and on-premise

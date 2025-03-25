@@ -4,8 +4,18 @@ title_tag: "Persisting Kubernetes workloads with Amazon EFS CSI volumes"
 date: "2019-07-15"
 authors: ["nishi-davidson"]
 tags: ["AWS", "Kubernetes", "eks"]
-meta_desc: "In this blog, we will show how to use AWS EFS CSI storage components with Kubernetes workloads running on Amazon EKS worker nodes (EKS, AWS, and AWSX)."
+meta_desc: "In this blog, we will show how to use AWS EFS CSI storage components with
+  Kubernetes workloads running on Amazon EKS worker nodes (EKS, AWS, and AWSX)."
 meta_image: "featured-img-efs-csi-driver.png"
+search:
+  keywords:
+    - efs
+    - persisting
+    - csi
+    - volumes
+    - workloads
+    - amazon
+    - kubernetes
 ---
 
 {{% notes type="warning" %}}

@@ -7,6 +7,15 @@ date: "2019-08-19"
 
 meta_desc: "Protect your Pulumi Access Tokens with GitHub Token Scanning."
 meta_image: feature.png
+search:
+  keywords:
+    - tokens
+    - github
+    - scanning
+    - forces
+    - token
+    - protect
+    - safe
 ---
 
 We are very excited to announce that we have partnered with GitHub to offer our users better protection for their [Pulumi Access Tokens](/docs/pulumi-cloud/accounts#access-tokens).

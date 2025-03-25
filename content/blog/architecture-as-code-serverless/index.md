@@ -1,12 +1,22 @@
 ---
 title: "Architecture as Code: Serverless"
 date: 2020-04-28
-meta_desc: "Serverless can benefit from reusable resources created by infrastructure as code."
+meta_desc: "Serverless can benefit from reusable resources created by infrastructure
+  as code."
 meta_image: serverless.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
+  - serverless
+search:
+  keywords:
     - serverless
+    - architecture
+    - code
+    - benefit
+    - reusable
+    - created
+    - resources
 ---
 
 In this fourth installment of Architecture as Code series, we’ll take a look at serverless, an architectural pattern that has quickly gained popularity among cloud practitioners. There are two reasons why serverless usage has proliferated: a cost-saving pay as you go model and elasticity that goes from zero to as many as needed to complete the task without managing servers.

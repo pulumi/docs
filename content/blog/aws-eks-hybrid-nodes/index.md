@@ -2,13 +2,23 @@
 title: "Amazon EKS Hybrid Nodes: Bridging Cloud and On-Premises"
 date: 2024-12-01T15:06:25-05:00
 draft: false
-meta_desc: "Manage Amazon EKS Hybrid Nodes with Pulumi: Use AWS's control plane while running workloads on-premises or at the edge."
+meta_desc: "Manage Amazon EKS Hybrid Nodes with Pulumi: Use AWS's control plane while
+  running workloads on-premises or at the edge."
 meta_image: meta.png
 authors:
-    - josh-kodroff
+  - josh-kodroff
 tags:
-    - aws
-    - kubernetes
+  - aws
+  - kubernetes
+search:
+  keywords:
+    - bridging
+    - cloud
+    - hybrid
+    - premises
+    - eks
+    - nodes
+    - amazon
 ---
 
 AWS has introduced a new feature for Amazon Elastic Kubernetes Service (EKS): [Amazon EKS Hybrid Nodes](https://aws.amazon.com/eks/hybrid-nodes/?trk=f4bc0305-3e3d-470e-bbb5-02917c6bc4c6&sc_channel=el). This addition to the Amazon EKS Hybrid/Edge portfolio allows organizations to maintain their Kubernetes control plane in AWS while running workloads on-premises or at the edge. This hybrid approach offers the best of both worlds - AWS's reliable and scalable control plane management combined with the flexibility to run workloads wherever they make the most sense for your business.

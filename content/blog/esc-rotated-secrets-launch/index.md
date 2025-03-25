@@ -3,7 +3,8 @@ title: "Introducing Rotated Secrets in Pulumi ESC"
 allow_long_title: true
 date: 2025-02-19T00:00:00-04:00
 draft: false
-meta_desc: "Pulumi ESC's Rotated Secrets automates credential rotation, enhancing security, reducing manual effort, and ensuring compliance for long-lived secrets"
+meta_desc: "Pulumi ESC's Rotated Secrets automates credential rotation, enhancing
+  security, reducing manual effort, and ensuring compliance for long-lived secrets"
 meta_image: "meta.png"
 authors:
   - claire-gaestel
@@ -12,6 +13,15 @@ tags:
   - esc
   - secrets
   - features
+search:
+  keywords:
+    - esc
+    - secrets
+    - rotated
+    - rotation
+    - introducing
+    - credential
+    - automates
 ---
 
 Managing secrets effectively is no longer a "nice-to-have"—it's a must-have for any organization building and scaling applications in the cloud. Static, long-lived credentials like database passwords, API keys, and IAM user credentials are a major security vulnerability. They're often overexposed, residing in source code, configuration files, or other easily accessible locations. Manual rotation processes are tedious, error-prone, and infrequent, leaving a wide window of opportunity for potential breaches. Today, we're thrilled to announce a powerful new capability in [Pulumi ESC](/product/secrets-management/) that directly addresses this challenge: Rotated Secrets.

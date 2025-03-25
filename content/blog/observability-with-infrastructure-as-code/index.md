@@ -1,18 +1,28 @@
 ---
 title: "Observability with Infrastructure as Code"
 date: 2021-02-26
-meta_desc: "Andy Davies from Reaktor introduces observability into infrastructure as code with the Pulumi Automation API"
+meta_desc: "Andy Davies from Reaktor introduces observability into infrastructure
+  as code with the Pulumi Automation API"
 
 #meta_image: infra-observability.png
 authors:
-- andy-davies
+  - andy-davies
 tags:
-- guest-post
-- automation-api
-- observability
-- honeycomb
+  - guest-post
+  - automation-api
+  - observability
+  - honeycomb
 
 meta_image: "reaktor.png"
+search:
+  keywords:
+    - observability
+    - reaktor
+    - davies
+    - andy
+    - infrastructure
+    - beeline
+    - err
 ---
 
 **Guest Article:** [Andy Davies](https://andydote.co.uk) is a Senior Software Developer at [Reaktor](https://reaktor.com),

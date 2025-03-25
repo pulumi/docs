@@ -3,7 +3,17 @@ title: "Pulumi’s Coronavirus Plan"
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
 date: "2020-03-18"
-meta_desc: "Together, we’re facing an unprecedented situation with the COVID-19 pandemic. Learn about the steps we've taken."
+meta_desc: "Together, we’re facing an unprecedented situation with the COVID-19 pandemic.
+  Learn about the steps we've taken."
+search:
+  keywords:
+    - coronavirus
+    - plan
+    - pandemic
+    - covid
+    - unprecedented
+    - situation
+    - facing
 ---
 
 Together, we’re facing an unprecedented situation with the COVID-19 pandemic. In this note, I'd like to tell you about the steps we've taken to ensure the health of our employees, community, and to ensure business continuity throughout.

@@ -2,17 +2,27 @@
 title: "Node.js Native Binary Compilation Using vercel/pkg"
 date: 2022-09-13
 updated: 2025-03-10
-meta_desc: "Learn how to build standalone native binaries for Node.js apps using vercel/pkg. Package your Node.js project for easy distribution without dependencies."
+meta_desc: "Learn how to build standalone native binaries for Node.js apps using vercel/pkg.
+  Package your Node.js project for easy distribution without dependencies."
 
 authors:
-- daniel-bradley
+  - daniel-bradley
 tags:
-- engineering
-- nodejs
-- publishing
-- providers
+  - engineering
+  - nodejs
+  - publishing
+  - providers
 
 meta_image: "meta.png"
+search:
+  keywords:
+    - vercel
+    - compilation
+    - native
+    - pkg
+    - js
+    - binary
+    - node
 ---
 
 In Pulumi's engineering department, we often build and distribute tools as native binaries to avoid the need for additional dependencies on user machines. Most of these tools are written in Go, which has good support for building self-contained binaries that target modern operating systems.

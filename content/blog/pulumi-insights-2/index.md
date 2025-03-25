@@ -1,14 +1,25 @@
 ---
 title: "Introducing Pulumi Insights 2.0"
-date: 2024-09-18T8:57:00-00:00
+date: 2024-09-18T08:57:00-00:00
 draft: false
-meta_desc: Pulumi Insights 2.0 brings the power of a new suite of Insights tools to all of your cloud infrastructure, not just the infrastructure managed by Pulumi IaC.
+meta_desc: Pulumi Insights 2.0 brings the power of a new suite of Insights tools to
+  all of your cloud infrastructure, not just the infrastructure managed by Pulumi
+  IaC.
 
 meta_image: meta.png
 authors:
-    - craig-symonds
+  - craig-symonds
 tags:
+  - insights
+search:
+  keywords:
     - insights
+    - introducing
+    - suite
+    - brings
+    - infrastructure
+    - column
+    - iac
 ---
 
 Pulumi Insights 2.0 brings the power of Insights to all of your cloud infrastructure, not just the infrastructure managed by Pulumi IaC. Insights 2.0 also brings an exciting new suite of tools that make it easy to discover your entire infrastructure, assess security and efficiency of it, and bring it under management of IaC for best-in-class infrastructure management practices.

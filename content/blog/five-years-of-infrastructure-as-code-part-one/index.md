@@ -10,7 +10,8 @@ date: 2022-05-03T10:16:25-07:00
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: "We just celebrated Pulumi's 5th birthday! To commemorate, we are publishing a multi-part series on all things infrastructure as code, starting with the why."
+meta_desc: "We just celebrated Pulumi's 5th birthday! To commemorate, we are publishing
+  a multi-part series on all things infrastructure as code, starting with the why."
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -21,14 +22,23 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - joe-duffy
+  - joe-duffy
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - infrastructure-as-code
+  - infrastructure-as-code
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - roads
+    - lead
+    - commemorate
+    - birthday
+    - celebrated
+    - 5th
+    - infrastructure
 ---
 
 Our mission with Pulumi was to make it 100x easier to program the cloud. We saw amazing new architectures and capabilities made possible by the modern cloud, and new and exciting software and business outcomes fueled by adopting them. And yet, back in 2017 when we began, we found the models for programming, composing, and building modern cloud software sorely lacking. “Infrastructure as code” is widely accepted as the table stakes solution, yet most people were copy-and-pasting config scripts in bash, encoding architecture in thousands of lines of YAML, and the best in class technologies used proprietary domain-specific languages that lacked great IDEs and true sharing and reuse, and were simply reinventing the wheel.

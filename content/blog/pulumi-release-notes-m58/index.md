@@ -2,13 +2,23 @@
 title: "July 7 releases: new pricing, replaceOnChanges, and more"
 date: 2021-07-07T08:00:00-07:00
 draft: false
-meta_desc: "Confluent Cloud, new `skipAwait` in K8s, new `replaceOnChanges` option, restrict `pulumi watch` to paths, and usage-based pricing"
+meta_desc: "Confluent Cloud, new `skipAwait` in K8s, new `replaceOnChanges` option,
+  restrict `pulumi watch` to paths, and usage-based pricing"
 meta_image: meta.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
+search:
+  keywords:
+    - pricing
+    - releases
+    - replaceonchanges
+    - july
+    - confluent
+    - skipawait
+    - new
 ---
 
 In this update:

@@ -1,11 +1,20 @@
 ---
 title: "Building a future of cloud engineering"
 date: "2018-10-22"
-meta_desc: "Using your favorite general purpose programming language to define your cloud infrastructure and applications. Program the cloud with Pulumi."
+meta_desc: "Using your favorite general purpose programming language to define your
+  cloud infrastructure and applications. Program the cloud with Pulumi."
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
+search:
+  keywords:
+    - engineering
+    - future
+    - cloud
+    - building
+    - favorite
+    - purpose
+    - general
 ---
-
 
 We founded Pulumi because of a deeply held belief that the cloud
 promises to change all aspects of software development and that there

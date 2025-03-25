@@ -1,5 +1,6 @@
 ---
-title: "Pulumi Release Notes: Pulumi Import Improvements, RetainOnDelete as a resource option, and more!"
+title: "Pulumi Release Notes: Pulumi Import Improvements, RetainOnDelete as a resource
+  option, and more!"
 allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
@@ -11,7 +12,10 @@ date: 2022-03-15T08:47:42-08:00
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: The latest Pulumi updates also include the new `pulumi state rename` command, changing the default `pulumi plugin install` to the latest version, adding console output in non-interactive mode, and `pulumi cancel` support for self-managed state backends.
+meta_desc: The latest Pulumi updates also include the new `pulumi state rename` command,
+  changing the default `pulumi plugin install` to the latest version, adding console
+  output in non-interactive mode, and `pulumi cancel` support for self-managed state
+  backends.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,12 +26,21 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
+search:
+  keywords:
+    - retainondelete
+    - cancel
+    - improvements
+    - rename
+    - option
+    - import
+    - interactive
 ---
 
 The team has been busy releasing new features and improvements in the last 3 weeks. Read on to learn about what's new in this release!

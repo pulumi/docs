@@ -17,7 +17,9 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: PulumiUP 2024 is back! Register to attend on September 18, and dive into the future of cloud, Infrastructure as Code (IaC), AI, platform engineering, and more.
+meta_desc: PulumiUP 2024 is back! Register to attend on September 18, and dive into
+  the future of cloud, Infrastructure as Code (IaC), AI, platform engineering, and
+  more.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,16 +30,25 @@ meta_image: pulumiup-2024-announcement.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - pulumi-events
+  - pulumi-events
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 block_external_search_index: true
 redirect_to: /pulumi-up/
+search:
+  keywords:
+    - '2024'
+    - announcing
+    - conference
+    - september
+    - attend
+    - ai
+    - '18'
 ---
 
 Today we announce our annual PulumiUP virtual conference taking place on September 18, 2024. PulumiUP is our global cloud and IaC conference for anyone interested in infrastructure as code, cloud, AI, platform engineering, DevOps, and cloud culture. Every year, we strive to build a program packed with technical talks, demos, and best practices to empower you with new learnings and inspiration that you can apply in your professional life. Attend to hear from industry leaders, experts, and community peers.

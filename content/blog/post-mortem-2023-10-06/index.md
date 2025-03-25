@@ -28,14 +28,23 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - casey-huang
+  - casey-huang
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - postmortem
+  - postmortem
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - outage
+    - '2023'
+    - october
+    - friday
+    - discussion
+    - seen
+    - details
 ---
 
 At Pulumi, we understand that Pulumi Cloud plays an important role in how our customers address their infrastructure management challenges. As a result, we strive for the highest levels of availability and performance in Pulumi Cloud. Unfortunately, on Friday, October 6, 2023, Pulumi Cloud suffered a 24 minute outage during which we failed to process 74.7% of received requests. In this post, we'd like to share our findings on the root cause of this outage, and the steps we are taking to ensure this sort of outage doesn't happen again.

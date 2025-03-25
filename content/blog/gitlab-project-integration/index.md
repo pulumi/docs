@@ -3,8 +3,18 @@ title: "Amp-up GitLab Merge Requests With Pulumi"
 authors: ["praneet-loke"]
 tags: ["continuous-delivery", "gitlab"]
 date: "2020-08-26"
-meta_desc: "We are excited to announce the launch of first-class support for integrating GitLab Merge Requests with Pulumi."
+meta_desc: "We are excited to announce the launch of first-class support for integrating
+  GitLab Merge Requests with Pulumi."
 meta_image: pulumi_gitlab.png
+search:
+  keywords:
+    - gitlab
+    - amp
+    - integrating
+    - announce
+    - merge
+    - requests
+    - launch
 ---
 
 We are excited to announce the launch of native support for integrating GitLab Merge Requests with Pulumi.

@@ -1,16 +1,27 @@
 ---
-title: "Pulumi Release Notes: Pulumi ESC, Deployments GA, Pulumi AI Improvements, AWS S3 Express One Zone Support, and more!"
+title: "Pulumi Release Notes: Pulumi ESC, Deployments GA, Pulumi AI Improvements,
+  AWS S3 Express One Zone Support, and more!"
 allow_long_title: true
 date: 2024-02-01T11:06:04-08:00
 draft: false
-meta_desc: The latest Pulumi updates include Pulumi ESC, Deployments GA, Pulumi AI Improvements, AWS S3 Express One Zone Support, and more
+meta_desc: The latest Pulumi updates include Pulumi ESC, Deployments GA, Pulumi AI
+  Improvements, AWS S3 Express One Zone Support, and more
 meta_image: meta.png
 authors:
-    - arun-loganathan
-    - justin-vanpatten
+  - arun-loganathan
+  - justin-vanpatten
 tags:
-    - features
-    - release-notes
+  - features
+  - release-notes
+search:
+  keywords:
+    - zone
+    - ga
+    - ai
+    - esc
+    - express
+    - improvements
+    - s3
 ---
 
 We've had a busy last few months at Pulumi. From shipping a brand new product offering, Pulumi ESC, to adding several major features in Pulumi Cloud and updates to various Pulumi providers - there is lots to catch up on. In addition to reading these release notes, check out the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) to stay up to date with CLI enhancements after each CLI release. For Pulumi Cloud updates, follow the [new features blogs](/blog/tag/features) to stay updated on the latest feature releases. Let's walk through the major updates across Pulumi from the last few months!

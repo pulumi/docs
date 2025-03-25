@@ -14,7 +14,8 @@ date: 2023-05-19
 # which is useful for targeting search results or social-media previews.
 # This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Pulumi Cloud recently launched Resource Search. Today we are announcing two new improvements to the feature- advanced filtering and Pulumi Teams support.
+meta_desc: Pulumi Cloud recently launched Resource Search. Today we are announcing
+  two new improvements to the feature- advanced filtering and Pulumi Teams support.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect ratio
@@ -26,16 +27,25 @@ meta_image: meta.png
 # of the team member files at /data/team/team.
 # Create a file for yourself if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required.
 # Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
+  - features
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,
 # and please remove these comments before submitting for review.
+search:
+  keywords:
+    - search
+    - haystack
+    - needle
+    - resource
+    - filtering
+    - advanced
+    - teams
 ---
 
 Last month we announced a new [Pulumi Cloud](/product/pulumi-cloud/) feature available for everyone: Resource Search. In the past month, Resource Search has been the fastest adopted feature since launching Pulumi Cloud, with thousands of users leveraging the feature to find resources across cloud environments, projects, stacks, teams, and users. Today we are announcing two new improvements to Resource Search: advanced filtering and Pulumi Teams support.

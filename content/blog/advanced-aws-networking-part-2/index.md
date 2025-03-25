@@ -14,7 +14,8 @@ date: 2023-04-20
 # which is useful for targeting search results or social-media previews.
 # This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Learn how to create a hub-and-spoke architecture in AWS using Pulumi with Python. This is Part 2 of a 2 part series.
+meta_desc: Learn how to create a hub-and-spoke architecture in AWS using Pulumi with
+  Python. This is Part 2 of a 2 part series.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect ratio
@@ -26,21 +27,30 @@ meta_image: meta.png
 # of the team member files at /data/team/team.
 # Create a file for yourself if you don't already have one.
 authors:
-    - josh-kodroff
-    - andy-taylor
-    - jose-juhala
+  - josh-kodroff
+  - andy-taylor
+  - jose-juhala
 
 # At least one tag is required.
 # Lowercase, hyphen-delimited is recommended.
 tags:
-    - aws
-    - networking
-    - hub-and-spoke
-    - python
+  - aws
+  - networking
+  - hub-and-spoke
+  - python
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,
 # and please remove these comments before submitting for review.
+search:
+  keywords:
+    - networking
+    - advanced
+    - aws
+    - spoke
+    - hub
+    - vpc
+    - architecture
 ---
 
 In this blog series, you will learn how to create a hub-and-spoke network architecture in AWS with centralized egress and traffic inspection. In this second installment, we'll show you how to create spoke VPCs to run your workloads, verify centralized egress is working, and then add centralized traffic inspection using Pulumi, the infrastructure as code tool that enables you to manage infrastructure with real programming languages!

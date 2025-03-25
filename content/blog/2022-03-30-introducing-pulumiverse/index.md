@@ -2,11 +2,22 @@
 title: "Introducing the Pulumiverse"
 date: 2022-03-30T10:00:00Z
 draft: false
-meta_desc: The Pulumiverse is a community organized project to help people contribute and use Pulumi more effectively
+meta_desc: The Pulumiverse is a community organized project to help people contribute
+  and use Pulumi more effectively
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["community"]
+search:
+  keywords:
+    - introducing
+    - contribute
+    - organized
+    - people
+    - effectively
+    - community
+    - project
 ---
+
 Today, we're excited to announce that we're working with the Pulumi community to provide a place to interact and collaborate on Pulumi-based libraries, projects, and educational materials: the [Pulumiverse](https://github.com/pulumiverse).
 
 <!--more-->

@@ -3,18 +3,28 @@ title: "Why Developer Experience (DevEx) is Business Critical"
 allow_long_title: true
 date: 2024-02-20T20:47:44Z
 updated: 2025-03-19
-meta_desc: Developer Experience (DevEx) is more than productivity—it drives business success. Learn how DevEx improves innovation, retention, and revenue.
+meta_desc: Developer Experience (DevEx) is more than productivity—it drives business
+  success. Learn how DevEx improves innovation, retention, and revenue.
 meta_image: developer-experience-devex-business-value-business-critical.png
 authors:
-    - sara-huddleston
+  - sara-huddleston
 tags:
-    - developer-experience-devex
-    - devops
-    - platform-engineering
-    - developer-portals
-    - software-development
+  - developer-experience-devex
+  - devops
+  - platform-engineering
+  - developer-portals
+  - software-development
 aliases:
-    - /blog/software-developer-experience-devex-devx-devops-culture
+  - /blog/software-developer-experience-devex-devx-devops-culture
+search:
+  keywords:
+    - devex
+    - developer
+    - business
+    - experience
+    - critical
+    - retention
+    - revenue
 ---
 
 "Developer experience is hard to sell," said Cleve Littlefield, Engineering Manager at Pulumi, during a casual meeting. With experience as both an end-user developer and a lead in self-service platform implementation, Cleve's observation stuck with me.

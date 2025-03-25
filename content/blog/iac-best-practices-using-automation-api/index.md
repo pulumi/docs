@@ -3,16 +3,26 @@ title: "IaC Best Practices: Using Automation API"
 canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stacks/
 date: 2023-07-26
 updated: 2025-03-04
-meta_desc: Review key learnings from the IaC best practices series. Recap insights on structuring Pulumi projects, security, automation, and scaling infrastructure.
+meta_desc: Review key learnings from the IaC best practices series. Recap insights
+  on structuring Pulumi projects, security, automation, and scaling infrastructure.
 meta_image: meta.png
 authors:
-    - scott-lowe
+  - scott-lowe
 tags:
-    - best-practices
-    - automation-api
-    - go
+  - best-practices
+  - automation-api
+  - go
 aliases:
-    - /blog/iac-recommended-practices-using-automation-api/
+  - /blog/iac-recommended-practices-using-automation-api/
+search:
+  keywords:
+    - automation
+    - practices
+    - iac
+    - best
+    - api
+    - structuring
+    - recap
 ---
 
 Welcome to the sixth post in our series of blog posts focused on Infrastructure as Code (IaC) best practices. So far in this series, you've seen how Zephyr Archaeotech Emporium---the fictional company at the center of this series---uses Pulumi to manage their online retail store. You read how Zephyr's initial use of Pulumi changed to use short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, incorporated Stack References, and used Pulumi Cloud's role-based access control (RBAC) functionality to control access to their stacks. This post focuses on how Zephyr takes advantage of the [Pulumi Automation API](/docs/using-pulumi/automation-api/concepts-terminology) to bring an even greater level of orchestration to the stacks that represent their online store.<!--more-->

@@ -1,13 +1,23 @@
 ---
 title: "Getting Started With Kubernetes: Advanced Deployment"
 date: 2020-07-09
-meta_desc: "Part 3 of a 3-part tutorial for getting started with Kubernetes using Infrastructure as Code."
+meta_desc: "Part 3 of a 3-part tutorial for getting started with Kubernetes using
+  Infrastructure as Code."
 meta_image: getting-started.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - Kubernetes
+  - Kubernetes
 
+search:
+  keywords:
+    - kubernetes
+    - getting
+    - advanced
+    - started
+    - deployment
+    - tutorial
+    - orders
 ---
 
 Welcome to the third article in a series using infrastructure as code to deploy applications with Kubernetes. In the previous post, we reviewed basic Kubernetes objects and abstractions used when deploying an application. We examined code examples across the cloud providers to show how to use infrastructure as code to deploy an application using Kubernetes objects. In this installment, we’ll progress from a simple deployment with just a single application container to a complex application with multiple containers and Pods.

@@ -2,18 +2,28 @@
 date: 2023-09-13
 title: "Deploying Your AI/ML Chatbot Frontend To Vercel Using Pulumi"
 allow_long_title: true
-meta_desc: "Learn how to effortlessly deploy your AI/ML chatbot frontend to Vercel using Pulumi and Python to take your AI DevOps skills to the next level"
+meta_desc: "Learn how to effortlessly deploy your AI/ML chatbot frontend to Vercel
+  using Pulumi and Python to take your AI DevOps skills to the next level"
 meta_image: meta.png
 authors:
-    - adora-nwodo
+  - adora-nwodo
 tags:
-    - ai
-    - ml
-    - iac
-    - vercel
-    - vuejs
-    - chatbot
+  - ai
+  - ml
+  - iac
+  - vercel
+  - vuejs
+  - chatbot
 
+search:
+  keywords:
+    - chatbot
+    - vercel
+    - frontend
+    - ml
+    - ai
+    - deploying
+    - effortlessly
 ---
 
 The process of taking an idea and turning it into reality has been nothing short of extraordinary since we started innovating with Artificial Intelligence. With this technology, machines learn about and communicate with people, while also helping us in ways we never could have imagined only a few years ago. If you've been following along, you might recall our [previous article](https://www.pulumi.com/blog/mlops-the-ai-challenge-is-cloud-not-code/) where we used Python and Pulumi to a chatbot API (named katwalk) to the cloud.

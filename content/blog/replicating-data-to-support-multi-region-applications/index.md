@@ -2,18 +2,28 @@
 title: "Replicating Data to Support Multi-Region Applications"
 date: 2023-12-27T11:03:10Z
 draft: false
-meta_desc: Learn about the tradeoffs in distributed databases and data replication when using them for multi-region applications.
+meta_desc: Learn about the tradeoffs in distributed databases and data replication
+  when using them for multi-region applications.
 meta_image: meta.png
 authors:
-    - adora-nwodo
+  - adora-nwodo
 tags:
-    - multi-region-databases
-    - data-replication
-    - cloud-deployment
-    - distributed-systems
-    - geographic-distribution
-    - high-availability
+  - multi-region-databases
+  - data-replication
+  - cloud-deployment
+  - distributed-systems
+  - geographic-distribution
+  - high-availability
 
+search:
+  keywords:
+    - region
+    - replication
+    - replicating
+    - multi
+    - data
+    - applications
+    - tradeoffs
 ---
 
 In [the previous article](/blog/scaling-apps-across-multiple-regions/), we covered multi-region scaling, its importance, and how you can use Pulumi stacks to represent multiple regions and environments. The big takeaway from that article is that scaling your application across multiple regions is an important architectural decision to enable scalability and availability, but it comes with its own set of considerations. One of these considerations is around the data that your application needs or uses. Data replication is typically necessary in multi-region architectures because if you have multiple application instances worldwide making calls to just one database instance, the latency of your application will be high. After all, it will take a long time for that database instance to perform data operations and send back a result to the user through the application. Some requests might have repeated timeouts. In this article, we will cover data replication in multi-region applications and how it plays a pivotal role in distributed systems.

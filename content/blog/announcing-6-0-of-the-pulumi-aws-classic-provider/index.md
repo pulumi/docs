@@ -2,15 +2,25 @@
 title: "Announcing 6.0 of the Pulumi AWS Provider"
 date: 2023-08-29T09:00:00-04:00
 draft: false
-meta_desc: "Announcing 6.0 of the Pulumi AWS Provider, including SDK size optimization, TF plugin framework support, new resources, and more."
+meta_desc: "Announcing 6.0 of the Pulumi AWS Provider, including SDK size optimization,
+  TF plugin framework support, new resources, and more."
 meta_image: meta.png
 authors:
-    - mikhail-shilkov
-    - monica-rodriguez
+  - mikhail-shilkov
+  - monica-rodriguez
 tags:
-    - aws
-    - providers
+  - aws
+  - providers
 
+search:
+  keywords:
+    - optimization
+    - announcing
+    - aws
+    - provider
+    - tf
+    - plugin
+    - framework
 ---
 
 We are excited to announce 6.0 of the [Pulumi AWS provider](https://www.pulumi.com/registry/packages/aws/). The AWS provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages. The [6.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.2) brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.

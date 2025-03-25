@@ -1,15 +1,26 @@
 ---
 title: "Announcing the Speaker Lineup for PulumiUP 2023"
 date: 2023-05-24
-meta_desc: Attend PulumiUP 2023's tech talks and hands-on demos about infrastructure as code, platform engineering, multi-cloud, AI, modern cloud architectures, and more!
+meta_desc: Attend PulumiUP 2023's tech talks and hands-on demos about infrastructure
+  as code, platform engineering, multi-cloud, AI, modern cloud architectures, and
+  more!
 meta_image: meta.png
 authors:
-    - george-huang
-    - sara-huddleston
-    - isaac-harris
+  - george-huang
+  - sara-huddleston
+  - isaac-harris
 tags:
-    - announcements
-    - pulumi-events
+  - announcements
+  - pulumi-events
+search:
+  keywords:
+    - announcing
+    - lineup
+    - speaker
+    - '2023'
+    - demos
+    - attend
+    - talks
 ---
 
 [PulumiUP](https://www.pulumi.com/pulumi-up/) is our virtual user conference for the Pulumi community and anyone interested in Infrastructure as Code. Every year, we strive to build a program packed with technical talks, demos, and best practices with the goal of leaving you with new learnings and inspiration that will help you become a better cloud engineer. You'll hear from industry leaders and experts about IaC, software engineering, DevOps, Platform engineering, and AI.

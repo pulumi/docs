@@ -18,7 +18,9 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Learn platform engineering best practices in this 7-step guide, covering security, internal developer portals, self-service, and team-building for scalable success
+meta_desc: Learn platform engineering best practices in this 7-step guide, covering
+  security, internal developer portals, self-service, and team-building for scalable
+  success
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,17 +31,17 @@ meta_image: platform-engineering-guide.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
-    - josh-kodroff
+  - sara-huddleston
+  - josh-kodroff
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - platform-engineering
-    - developer-portals
-    - policy-as-code
-    - finops
-    - cost-efficiency
-    
+  - platform-engineering
+  - developer-portals
+  - policy-as-code
+  - finops
+  - cost-efficiency
+
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
 # generated blog page. They are here strictly for reference.
@@ -53,8 +55,17 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - platform
+    - engineering
+    - guide
+    - steps
+    - covering
+    - portals
+    - scalable
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

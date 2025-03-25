@@ -4,10 +4,19 @@ date: 2020-06-16
 meta_desc: "Policy as Code for Python available as GA in the 2.0 release."
 meta_image: python-pac.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - "Python"
-    - "Policy as Code"
+  - "Python"
+  - "Policy as Code"
+search:
+  keywords:
+    - python
+    - policy
+    - ga
+    - code
+    - release
+    - resourcevalidationpolicy
+    - available
 ---
 
 Policy as Code for Python is now GA in Pulumi 2.0. Policies written in code let you test, automate deployment, and enable version control. Python is a popular scripting language used for machine learning and artificial intelligence, data science, web development, and devops. It's an ideal language for developers and operators to use in common.

@@ -2,15 +2,25 @@
 title: "Backstage Plugin Now Available for Pulumi"
 date: 2023-10-06T15:00:48-04:00
 draft: false
-meta_desc: "Seamlessly integrate and manage your infrastructure with the official Pulumi Backstage plugin."
+meta_desc: "Seamlessly integrate and manage your infrastructure with the official
+  Pulumi Backstage plugin."
 meta_image: meta.png
 authors:
-    - engin-diri
+  - engin-diri
 tags:
-- backstage
-- developer-portals
-- features
+  - backstage
+  - developer-portals
+  - features
 
+search:
+  keywords:
+    - integrate
+    - available
+    - backstage
+    - plugin
+    - official
+    - seamlessly
+    - infrastructure
 ---
 
 [Backstage](https://backstage.io/) is an open source framework for building developer portals, created at Spotify and donated to the CNCF. It allows engineers to create their own development portal internally. Backstage makes it easy for teams to create a unified portal for their infrastructure tooling, software templates, services, documentation and [plugins](https://backstage.spotify.com/plugins/) for external tools.

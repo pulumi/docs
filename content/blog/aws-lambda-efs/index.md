@@ -4,12 +4,21 @@ date: 2020-06-16
 meta_desc: "Pulumi supports Amazon EFS with Lambda and Fargate services."
 meta_image: aws-lambda-efs.png
 authors:
-    - luke-hoban
+  - luke-hoban
 tags:
-    - aws
-    - serverless
-    - lambda
+  - aws
+  - serverless
+  - lambda
+  - efs
+search:
+  keywords:
     - efs
+    - lambda
+    - elastic
+    - amazon
+    - fargate
+    - file
+    - supports
 ---
 
 {{% notes type="warning" %}}

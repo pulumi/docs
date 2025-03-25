@@ -5,10 +5,19 @@ draft: false
 meta_desc: "Pulumi adds Kustomize support to their Kubernetes provider"
 meta_image: kustomize_twcard.png
 authors:
-    - levi-blackstone
+  - levi-blackstone
 
 tags:
+  - kubernetes
+search:
+  keywords:
+    - kustomize
+    - announcing
+    - support
+    - adds
     - kubernetes
+    - provider
+    - directory
 ---
 
 Kubernetes is complex, and there are many ways to manage Kubernetes resources. Pulumi supports many of these options, including native code SDKs, YAML, Helm, and now, Kustomize. There's no need to rewrite your existing configurations to get started with Pulumi. You can efficiently adopt existing resources to deploy your modern application and save time and effort.

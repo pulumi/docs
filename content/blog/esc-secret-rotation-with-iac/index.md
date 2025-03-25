@@ -5,10 +5,19 @@ draft: false
 meta_desc: "Extending ESC to perform automated secret rotation."
 meta_image: meta.png
 authors:
-    - claire-gaestel
+  - claire-gaestel
 tags:
   - esc
   - secrets
+search:
+  keywords:
+    - esc
+    - credential
+    - rotation
+    - secret
+    - extending
+    - perform
+    - automated
 ---
 
 {{% notes "info" %}}

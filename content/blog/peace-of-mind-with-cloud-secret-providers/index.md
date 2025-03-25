@@ -6,10 +6,19 @@ draft: false
 meta_desc: "Encrypt your Pulumi secrets with a cloud secrets provider"
 meta_image: secrets.png
 authors:
-    - lee-briggs
+  - lee-briggs
 tags:
-    - features
-    - security
+  - features
+  - security
+search:
+  keywords:
+    - mind
+    - providers
+    - peace
+    - encrypt
+    - secrets
+    - secret
+    - kms
 ---
 
 The secrets in your infrastructure are a vital part of your security model, and provisioning infrastructure is an inherently privileged process. [Previously](/blog/managing-secrets-with-pulumi/) we introduced secret encryption and started encrypting secret configuration values inside the Pulumi state so that users could be confident their passwords, tokens, and other secret values were viewable only by them while managing their infrastructure.

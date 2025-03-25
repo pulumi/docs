@@ -1,10 +1,21 @@
 ---
 title: "If you liked ksonnet, you'll love Pulumi!"
 date: "2019-02-13"
-meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes API, and supports additional features like modules/imports, components, functions, and more."
+meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes API,
+  and supports additional features like modules/imports, components, functions, and
+  more."
 meta_image: "kube-update.png"
 authors: ["mike-metral"]
 tags: ["Kubernetes", "cloud-native"]
+search:
+  keywords:
+    - ksonnet
+    - liked
+    - love
+    - ll
+    - raw
+    - imports
+    - kubernetes
 ---
 
 The Kubernetes landscape is constantly evolving as end users and

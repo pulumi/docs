@@ -1,19 +1,29 @@
 ---
-title: "Pulumi Release Notes: AI in the CLI, Go generics, AWS 6.0, Review Stacks and so much more!"
+title: "Pulumi Release Notes: AI in the CLI, Go generics, AWS 6.0, Review Stacks and
+  so much more!"
 allow_long_title: true
 date: 2023-09-29T09:00:00-04:00
 draft: false
-meta_desc: The latest Pulumi updates include AI in the CLI, Go generics, AWS 6.0, Review Stacks and so much more!
+meta_desc: The latest Pulumi updates include AI in the CLI, Go generics, AWS 6.0,
+  Review Stacks and so much more!
 meta_image: meta.png
 authors:
-    - monica-rodriguez
+  - monica-rodriguez
 
 tags:
-    - features
-    - releases
+  - features
+  - releases
 
+search:
+  keywords:
+    - generics
+    - ai
+    - review
+    - stacks
+    - cli
+    - aws
+    - release
 ---
-
 
 We've had an exciting quarter at Pulumi, shipping all kinds of improvements from our providers to our Cloud service. To stay up-to-date on all the details and additional improvements between release blogs, be sure to check out the [pulumi/pulumi repo](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) changelog for CLI enhancements and the Pulumi Cloud features in the [new features blogs](/blog/tag/features) for updates on Pulumi Service features. We have a lot to cover, so let's get started!
 

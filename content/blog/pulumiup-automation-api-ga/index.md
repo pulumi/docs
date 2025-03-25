@@ -4,9 +4,18 @@ date: 2021-04-20T00:00:02-07:00
 meta_desc: Automation API brings the Pulumi modern IaC engine to any application
 meta_image: meta.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
-    - automation-api
+  - automation-api
+search:
+  keywords:
+    - automation
+    - iac
+    - perfect
+    - api
+    - interface
+    - brings
+    - engine
 ---
 
 Pulumi Automation API exposes the full power of infrastructure as code through a programmatic interface, instead of through CLI commands. With Automation API, you can create software that has the capability to provision and configure infrastructure: create, update, configure, and destroy infrastructure dynamically. You can create new classes of Software-as-a-Service that provision unique infrastructure for every customer. You can build the perfect cloud interface for your organization, combining all of your infrastructure knowledge and best practices into a purpose-built tool, whether it's a SaaS offering, an internal web app, a purpose-built CLI tool, a CI/CD integration, or something else entirely.

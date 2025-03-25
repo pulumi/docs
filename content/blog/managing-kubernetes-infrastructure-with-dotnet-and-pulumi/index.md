@@ -1,10 +1,20 @@
 ---
 title: "Managing Kubernetes Infrastructure with .NET and Pulumi"
 authors: ["luke-hoban"]
-tags: [".NET","kubernetes"]
+tags: [".NET", "kubernetes"]
 date: "2019-12-10"
-meta_desc: "Manage Kubernetes with .NET using the Pulumi.Kubernetes resource provider for Pulumi."
+meta_desc: "Manage Kubernetes with .NET using the Pulumi.Kubernetes resource provider
+  for Pulumi."
 meta_image: "k8s-dotnet.png"
+search:
+  keywords:
+    - kubernetes
+    - net
+    - managing
+    - infrastructure
+    - provider
+    - manage
+    - pod
 ---
 
 Last month, we announced [.NET support for Pulumi](https://devblogs.microsoft.com/dotnet/building-modern-cloud-applications-using-pulumi-and-net-core/), including support for AWS, Azure, GCP, and many other clouds.  One of the biggest questions we heard was about Kubernetes --- *"can I use Pulumi to manage Kubernetes infrastructure in C#, F#, and VB.NET as I can already in TypeScript and Python today?"*  With last week's release of [`Pulumi.Kubernetes`](https://www.nuget.org/packages/Pulumi.Kubernetes/) on NuGet, you can now also deploy Kubernetes infrastructure using your favorite .NET languages.

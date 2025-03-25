@@ -3,14 +3,24 @@ title: "Pulumi + Azure Deployment Environments: Better Together for Enterprise D
 allow_long_title: true
 date: 2024-05-21
 draft: false
-meta_desc: Author Azure Deployment Environments definitions with Pulumi using your favorite programming language.
+meta_desc: Author Azure Deployment Environments definitions with Pulumi using your
+  favorite programming language.
 meta_image: meta.png
 authors:
-    - mikhail-shilkov
+  - mikhail-shilkov
 tags:
+  - azure
+  - announcement
+  - platform-engineering
+search:
+  keywords:
     - azure
-    - announcement
-    - platform-engineering
+    - environments
+    - deployment
+    - definitions
+    - enterprise
+    - author
+    - ade
 ---
 
 We are excited to announce the support for authoring [Azure Deployment Environments (ADE)](https://learn.microsoft.com/en-us/azure/deployment-environments/) environment definitions in Pulumi Infrastructure as Code (IaC) empowering developers to self-serve app infrastructure required to deploy and test cloud-based applications. With Pulumi support, you can now manage your Azure resources in these environments using the same familiar programming model and the full power of our IaC platform.

@@ -1,18 +1,28 @@
 ---
 title: "Dependent Stack Updates with Pulumi Deployments"
 date: 2023-06-20
-meta_desc: Automatically keep dependent stacks up to date with Deployment Webhook Destinations and the pulumi-auto-deploy package.
+meta_desc: Automatically keep dependent stacks up to date with Deployment Webhook
+  Destinations and the pulumi-auto-deploy package.
 meta_image: meta.png
 authors:
-    - evan-boyle
-    - komal-ali
+  - evan-boyle
+  - komal-ali
 tags:
-    - cloud engineering
-    - pulumi deployments
-    - automation api
+  - cloud engineering
+  - pulumi deployments
+  - automation api
+  - deployments
+  - stack references
+  - webhooks
+search:
+  keywords:
+    - dependent
+    - updates
+    - destinations
+    - webhook
     - deployments
-    - stack references
-    - webhooks
+    - stack
+    - auto
 ---
 
 As infrastructure projects grow in size and complexity, you need to decompose infrastructure into smaller stacks to limit the blast radius of errors, extract and reference common layers like networking, and limit access to sensitive components. This comes with a coordination cost as you now need to figure out how to detect and propagate changes to downstream stacks in your dependency graph. Today we’re announcing two features that can help you manage this complexity by automatically updating dependent stacks:

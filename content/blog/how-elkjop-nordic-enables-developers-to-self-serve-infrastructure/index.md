@@ -2,21 +2,31 @@
 title: How Elkjøp Nordic enables self-service infrastructure for developers
 allow_long_title: true
 date: 2022-07-01
-meta_desc: Learn how Elkjøp Nordic enables its developers to self-service Azure infrastructure with compliance guardrails using Pulumi infrastructure as code.
+meta_desc: Learn how Elkjøp Nordic enables its developers to self-service Azure infrastructure
+  with compliance guardrails using Pulumi infrastructure as code.
 meta_image: meta.png
 authors:
-    - george-huang
+  - george-huang
 tags:
-    - automation-api
-    - aks
-    - azure
-    - infrastructure-as-code
-    - kubernetes
-    - typescript
-    - pulumi-enterprise
-    - cloud-engineering
-    - GitHub-actions
+  - automation-api
+  - aks
+  - azure
+  - infrastructure-as-code
+  - kubernetes
+  - typescript
+  - pulumi-enterprise
+  - cloud-engineering
+  - GitHub-actions
 
+search:
+  keywords:
+    - elkjøp
+    - azure
+    - nordic
+    - self
+    - enables
+    - developers
+    - infrastructure
 ---
 
 At PulumiUP 2022, Tomas Jansson, software architect at Elkjøp Nordic, gave a presentation on how to enable developers to self-service infrastructure by using Pulumi’s [Automation API](/automation/).

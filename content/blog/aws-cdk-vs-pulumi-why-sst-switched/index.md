@@ -18,7 +18,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Why did SST move from AWS CDK to Pulumi? Learn how this shift unlocks multi-cloud flexibility, faster deployments, and a better developer experience.
+meta_desc: Why did SST move from AWS CDK to Pulumi? Learn how this shift unlocks multi-cloud
+  flexibility, faster deployments, and a better developer experience.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,14 +30,14 @@ meta_image: "sst-with-pulumi-infrastructure-as-code-deployments.png"
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - cloudformation
-    - aws-cdk
-    - case-studies
-    - developer-experience-devex
+  - cloudformation
+  - aws-cdk
+  - case-studies
+  - developer-experience-devex
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -51,14 +52,31 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter: Curious about SST's evolution from CDK to Pulumi? Discover how this transition is empowering developers with a more flexible, provider-agnostic approach to infrastructure management.
-    linkedin: The evolution of cloud computing has reshaped how developers interact with infrastructure. For SST, a framework built to empower application developers, the journey began with AWS CDK but soon encountered limitations, and the search for a more flexible, provider-agnostic solution led them to Pulumi. Discover how Pulumi is redefining infrastructure management and what this means for the future of SST. Dive into the full story at [link].
+  twitter: Curious about SST's evolution from CDK to Pulumi? Discover how this transition
+    is empowering developers with a more flexible, provider-agnostic approach to infrastructure
+    management.
+  linkedin: The evolution of cloud computing has reshaped how developers interact
+    with infrastructure. For SST, a framework built to empower application developers,
+    the journey began with AWS CDK but soon encountered limitations, and the search
+    for a more flexible, provider-agnostic solution led them to Pulumi. Discover how
+    Pulumi is redefining infrastructure management and what this means for the future
+    of SST. Dive into the full story at [link].
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
 aliases:
-    - /blog/from-cdk-pulumi-evolution-of-sst/
+  - /blog/from-cdk-pulumi-evolution-of-sst/
+search:
+  keywords:
+    - sst
+    - cdk
+    - chose
+    - vs
+    - aws
+    - unlocks
+    - shift
 ---
+
 Cloud computing tools evolve, and so must the frameworks developers rely on. For SST (Serverless Stack), AWS CDK was a great starting point—but it had limitations.
 
 - CDK tied infrastructure to AWS.

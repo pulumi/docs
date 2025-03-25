@@ -11,7 +11,8 @@ date: 2022-08-09T08:57:51-07:00
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: In this blog post, you will learn how Pulumi solved their data visualizing challenges and how you can solve your challenges with Pulumi's Metabase Package.
+meta_desc: In this blog post, you will learn how Pulumi solved their data visualizing
+  challenges and how you can solve your challenges with Pulumi's Metabase Package.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,15 +23,24 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - zack-chase
+  - zack-chase
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - aws
-    - metabase
+  - aws
+  - metabase
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - fargate
+    - metabase
+    - unlocking
+    - metabaseservice
+    - data
+    - challenges
+    - visualizing
 ---
 
 I love data. I mean, I really love data. Data gives you the ability to understand the world around you and, to a certain degree, project what the future could look like. At Pulumi we use data every day to help make smarter product and business decisions.

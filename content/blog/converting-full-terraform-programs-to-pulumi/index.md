@@ -1,12 +1,22 @@
 ---
 title: "Converting Full Terraform Programs to Pulumi"
 date: 2023-06-12
-meta_desc: Learn how to convert whole Terraform programs to Pulumi using the new Terraform converter
+meta_desc: Learn how to convert whole Terraform programs to Pulumi using the new Terraform
+  converter
 meta_image: meta.png
 authors:
-    - justin-vanpatten
+  - justin-vanpatten
 tags:
-    - migration
+  - migration
+search:
+  keywords:
+    - terraform
+    - programs
+    - converting
+    - converter
+    - convert
+    - learn
+    - new
 ---
 
 Over the last 2 years, we've seen an increasing trend of cloud development teams migrating to Pulumi from Terraform. These teams often have experience with and meaningful investment in Terraform, but have also typically run into limits of expressivity, productivity, scalability, or reliability with their existing tools. One of the first questions we hear when they decide to move to Pulumi is "how will I migrate my existing Terraform projects over?".

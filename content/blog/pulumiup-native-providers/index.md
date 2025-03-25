@@ -1,12 +1,22 @@
 ---
 title: "Model and program the cloud with Pulumi native providers"
 date: 2021-04-20T00:00:05-07:00
-meta_desc: Native providers are your most complete and consistent interface for the modern cloud
+meta_desc: Native providers are your most complete and consistent interface for the
+  modern cloud
 meta_image: meta.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
-    - native-providers
+  - native-providers
+search:
+  keywords:
+    - native
+    - providers
+    - cloud
+    - model
+    - consistent
+    - program
+    - modern
 ---
 
 Pulumi native providers are a new type of [Pulumi Package](/blog/pulumiup-pulumi-packages-multi-language-components/) that give you the most complete and consistent interface for the modern cloud. Pulumi native providers bring the full power of the top cloud providers to the Pulumi Cloud Engineering Platform, faster and with more complete coverage than any other infrastructure as code offering. Today at PulumiUP, we announced native providers for Microsoft Azure (GA), [Google Cloud (public preview)](/blog/pulumiup-google-native-provider), and AWS (later this year). Along with an existing native provider for Kubernetes, these providers enable you to build, deploy, and manage cloud infrastructure and applications for the most common cloud vendors and technologies. This best-in-class support for the major clouds joins our library of more than 50 cloud providers in the [Registry](/registry/) and delivers on our promise of cloud engineering for any cloud, any architecture, and any language.

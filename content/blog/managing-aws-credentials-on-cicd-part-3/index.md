@@ -4,12 +4,21 @@ date: 2020-05-14
 meta_desc: "Best practices for managing AWS credentials on CI/CD - Part 3 in the series"
 meta_image: cicd.png
 authors:
-    - chris-smith
-    - sophia-parafina
+  - chris-smith
+  - sophia-parafina
 tags:
-    - continuous-delivery
-    - security
-    - secrets
+  - continuous-delivery
+  - security
+  - secrets
+search:
+  keywords:
+    - credentials
+    - iam
+    - ci
+    - cd
+    - managing
+    - aws
+    - series
 ---
 
 This article is the third part of a series on best practices for securely managing AWS credentials on CI/CD. In this article, we cover the

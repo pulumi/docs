@@ -5,7 +5,16 @@ meta_image: "blog.png"
 meta_desc: "Some of our favorite recent community posts about Infrastructure as Code."
 date: "2019-10-24"
 tags:
-    - guest-post
+  - guest-post
+search:
+  keywords:
+    - blog
+    - posts
+    - recent
+    - infrastructure
+    - code
+    - favorite
+    - read
 ---
 
 We are always excited when people join the Infrastructure as Code community and write about their experiences. Pulumi can be used for a range of common tasks such as standardizing VPC builds, building VSphere virtual machines, or deploying your infrastructure from a CI/CD pipeline. Whether it's `TypeScript`, `JavaScript`, or `Python` you can build your infrastructure with your language and tools of choice. Here are three new blog posts that show how to use Pulumi with code examples to perform these tasks.

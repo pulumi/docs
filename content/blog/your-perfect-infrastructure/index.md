@@ -4,8 +4,8 @@ date: 2024-12-16T10:43:07Z
 draft: false
 
 meta_desc: |
-    Building systems designed for easy change is more valuable than
-    attempting to create the perfect future-proof architecture.
+  Building systems designed for easy change is more valuable than
+  attempting to create the perfect future-proof architecture.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -16,18 +16,18 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - simen-a-w-olsen
+  - simen-a-w-olsen
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - architecture
-    - developer-first-infrastructure
-    - best-practices
-    - cloud-engineering
-    - cloud-deployment
-    - developer-experience-devex
-    - people-ops
-    - application-scalability
+  - architecture
+  - developer-first-infrastructure
+  - best-practices
+  - cloud-engineering
+  - cloud-deployment
+  - developer-experience-devex
+  - people-ops
+  - application-scalability
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -43,24 +43,34 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter: |
-        Perfect architecture is a myth. Simen's take: Make 👏 Change 👏 Cheap 👏
-        
-        Read this candid take on why designing for change beats trying to
-        predict the future - and why your over-engineered system might be holding you back.
-    linkedin: |
-        "I was basically the Leonardo da Vinci of system design... if
-        Leonardo had been really into Kubernetes and had a concerning
-        addiction to coffee." @Simen A. W. Olsen shares how his
-        "future-proof" architecture became a constraint rather
-        than an enabler, and why trying to predict every future need
-        is like bringing a fully packed suitcase to a first date.
+  twitter: |
+    Perfect architecture is a myth. Simen's take: Make 👏 Change 👏 Cheap 👏
+
+    Read this candid take on why designing for change beats trying to
+    predict the future - and why your over-engineered system might be holding you back.
+  linkedin: |
+    "I was basically the Leonardo da Vinci of system design... if
+    Leonardo had been really into Kubernetes and had a concerning
+    addiction to coffee." @Simen A. W. Olsen shares how his
+    "future-proof" architecture became a constraint rather
+    than an enabler, and why trying to predict every future need
+    is like bringing a fully packed suitcase to a first date.
 aliases:
   - /blog/your-perfect-infrastructure-sucks/
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - perfect
+    - infrastructure
+    - proof
+    - attempting
+    - future
+    - architecture
+    - valuable
 ---
+
 **Guest Article:** *Simen A. W. Olsen from [Bjerk](https://bjerk.io), is here to share his lessons learned on why designing the perfect architecture for your future needs might be a mistake*
 
 I remember standing in front of our engineering team in 2018, proudly presenting what I believed was the future-proof architectural design for our new distributed system. The diagrams were immaculate, the technology choices were cutting-edge, and the scalability patterns were ready for any possible future scenario.

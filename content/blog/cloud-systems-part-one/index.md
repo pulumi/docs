@@ -5,17 +5,27 @@ date: 2021-12-15
 
 draft: false
 
-meta_desc: In this series, learn modern cloud engineering practices and tooling, starting with using Pulumi to deploy a static site to AWS S3!
+meta_desc: In this series, learn modern cloud engineering practices and tooling, starting
+  with using Pulumi to deploy a static site to AWS S3!
 
 meta_image: meta.png
 
 authors:
-    - kat-cosgrove
+  - kat-cosgrove
 
 tags:
-    - 101
-    - tutorials
-    - cloud-engineering
+  - 101
+  - tutorials
+  - cloud-engineering
+search:
+  keywords:
+    - s3
+    - sites
+    - static
+    - aws
+    - systems
+    - site
+    - cloud
 ---
 
 Cloud engineering is taking over software development. In a lot of ways, this is great; it allows us to build and deploy more complicated applications with less difficulty, and maintaining those applications becomes less troublesome too. We can release smaller updates more quickly than ever, ensuring that we can stay on top of feature requests and security issues. That said, the rise of cloud engineering has also introduced a lot of complexity in the form of dozens of services even within just one cloud provider. Figuring out where to start can be tough, so let’s take a practical tour! In this series, I’ll walk you through building a personal website and deploying it using modern cloud engineering practices.

@@ -3,19 +3,31 @@ title: "Pulumi Patterns and Practices Platform (P3): Some Assembly Required"
 allow_long_title: true
 date: 2024-11-11
 draft: false
-social_media: "Assembly instructions for building the Pulumi Patterns and Practices Platform (P3) reference architecture of a Pulumi-based internal developer platform (IDP)."
-meta_desc: "Assembly instructions for building the Pulumi Patterns and Practices Platform (P3) reference architecture of a Pulumi-based internal developer platform (IDP)."
+social_media: "Assembly instructions for building the Pulumi Patterns and Practices
+  Platform (P3) reference architecture of a Pulumi-based internal developer platform
+  (IDP)."
+meta_desc: "Assembly instructions for building the Pulumi Patterns and Practices Platform
+  (P3) reference architecture of a Pulumi-based internal developer platform (IDP)."
 meta_image: meta.png
 authors:
-    - troy-howard
+  - troy-howard
 tags:
-    - platform-engineering
-    - patterns-and-practices-platform
-    - developer-experience-devex
-    - devsecops
-    - architecture
-    - enterprise
-    - devops
+  - platform-engineering
+  - patterns-and-practices-platform
+  - developer-experience-devex
+  - devsecops
+  - architecture
+  - enterprise
+  - devops
+search:
+  keywords:
+    - p3
+    - patterns
+    - assembly
+    - platform
+    - practices
+    - idp
+    - required
 ---
 
 Setting up an internal developer platform (IDP) can be a daunting task. There are a lot of tools out there that do some of the work for you, but none of them do all of it. Pulumi P3 is no different. Pulumi Patterns & Practices Platform (P3) is a [reference architecture](https://www.pulumi.com/blog/pulumi-patterns-and-practices/) that we will be describing, and providing code for, through this series of articles.

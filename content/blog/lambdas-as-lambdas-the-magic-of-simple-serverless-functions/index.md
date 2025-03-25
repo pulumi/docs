@@ -1,10 +1,20 @@
 ---
 title: "Lambdas as Lambdas: The magic of simple serverless Functions"
 date: "2018-10-10"
-meta_desc: "Infrastructure as code using familiar languages instead of YAML or DSLs. See how with Pulumi, serverless programming becomes simpler."
+meta_desc: "Infrastructure as code using familiar languages instead of YAML or DSLs.
+  See how with Pulumi, serverless programming becomes simpler."
 meta_image: "closure.png"
 authors: ["cyrus-najmabadi"]
-tags: ["Serverless","TypeScript"]
+tags: ["Serverless", "TypeScript"]
+search:
+  keywords:
+    - lambdas
+    - serverless
+    - magic
+    - functions
+    - dsls
+    - simple
+    - simpler
 ---
 
 Pulumi's approach to infrastructure as code uses familiar languages instead

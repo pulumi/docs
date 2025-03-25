@@ -1,15 +1,25 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: Kubernetes Infrastructure"
 date: 2021-08-12
-allow_long_title: True
-meta_desc: "Configuring Azure Kubernetes Service (AKS) through the Azure Portal and Infrastructure as Code."
+allow_long_title: true
+meta_desc: "Configuring Azure Kubernetes Service (AKS) through the Azure Portal and
+  Infrastructure as Code."
 meta_image: azure-top-5.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - Kubernetes
-    - AKS
-    - Azure
+  - Kubernetes
+  - AKS
+  - Azure
+search:
+  keywords:
+    - kubernetes
+    - know
+    - azure
+    - aks
+    - portal
+    - configuring
+    - things
 ---
 
 History lesson time! In 2011, microservices debuted as an architectural style suited for the cloud. In 2013, Docker simplified building containers. Combining containers and microservices sparked a change in how applications were built and distributed in the cloud. As performance, scaling, and reliability became an increasing concern, container orchestration platforms became widely available. Kubernetes became the dominant container orchestration through community and corporate support, and some have suggested it was [inevitable](https://elastisys.com/why-kubernetes-was-inevitable/). Every major cloud service provider, including Azure, offers a version of Kubernetes.

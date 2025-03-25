@@ -3,16 +3,26 @@ title: "IaC Best Practices: Applying Stack References"
 canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stacks/
 date: 2023-03-31
 updated: 2025-03-04
-meta_desc: Learn how to apply Pulumi stack references to share data across projects. Improve modularity and maintainability with best practices for stack dependencies.
+meta_desc: Learn how to apply Pulumi stack references to share data across projects.
+  Improve modularity and maintainability with best practices for stack dependencies.
 meta_image: meta.png
 authors:
-    - scott-lowe
+  - scott-lowe
 tags:
-    - best-practices
-    - cloud-engineering
-    - kubernetes
+  - best-practices
+  - cloud-engineering
+  - kubernetes
 aliases:
-    - /blog/iac-recommended-practices-using-stack-references/
+  - /blog/iac-recommended-practices-using-stack-references/
+search:
+  keywords:
+    - iac
+    - maintainability
+    - references
+    - applying
+    - stack
+    - practices
+    - best
 ---
 
 This is the fourth post in a series of blog posts focused on Zephyr Archaeotech Emporium---our fictional company---and their use of Pulumi to manage their online retail store. In the first three posts, you saw how Zephyr's initial use of Pulumi changed as the company grew, and how the use of short-lived per-developer stacks helped Zephyr's application development team meet the demands of a fast-growing company. This post is a complement to the earlier post on structuring Pulumi projects, discussing how Zephyr uses [Stack References](/tutorials/building-with-pulumi/stack-references/) to link their projects together and sharing some IaC best practices around the use of Stack References.<!--more-->

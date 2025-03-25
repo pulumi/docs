@@ -5,6 +5,15 @@ authors: ["albert-zhong"]
 meta_desc: "A reflection on my Pulumi intern experiences (summer 2020 edition)"
 tags: ["pulumi-interns"]
 date: "2020-09-18"
+search:
+  keywords:
+    - intern
+    - reflections
+    - summer
+    - reflection
+    - '2020'
+    - edition
+    - experiences
 ---
 
 Hi everyone! I'm Albert, a soon-to-be sophomore studying computer science at the University of Washington. Today marks my last day as a Pulumi intern, so I figure I'd reflect on my experiences up until this point.

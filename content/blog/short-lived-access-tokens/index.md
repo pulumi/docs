@@ -5,16 +5,26 @@ date: 2024-06-25T09:08:31-07:00
 
 draft: false
 
-meta_desc: Introducing short-lived access tokens in Pulumi Cloud for enhanced security and flexibility, now available in the console and REST API.
+meta_desc: Introducing short-lived access tokens in Pulumi Cloud for enhanced security
+  and flexibility, now available in the console and REST API.
 
 meta_image: meta.png
 
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 tags:
-    - releases
+  - releases
 
+search:
+  keywords:
+    - announcing
+    - cloud
+    - tokens
+    - lived
+    - short
+    - access
+    - enhanced
 ---
 
 We are excited to introduce a new feature that our users have been eagerly awaiting: Short-Lived Access Tokens! This enhancement allows you to set an optional expiry date on [Personal Access Token](/docs/pulumi-cloud/access-management/access-tokens/#personal-access-tokens), [Team Access Token](/docs/pulumi-cloud/access-management/access-tokens/#team-access-tokens), and [Organization Access Token](/docs/pulumi-cloud/access-management/access-tokens/#organization-access-tokens), making them automatically invalid after a specified date. This feature is now available in the [Pulumi Cloud console](https://app.pulumi.com) and the [Pulumi Cloud REST API](/blog/short-lived-access-tokens/create-token.mp4), providing enhanced security and control over your access tokens.

@@ -5,9 +5,18 @@ draft: false
 meta_desc: "Announcing a significant improvement to the pulumi preview experience."
 meta_image: preview_update.png
 authors:
-    - paul-stack
+  - paul-stack
 tags:
-    - features
+  - features
+search:
+  keywords:
+    - previews
+    - improved
+    - improvement
+    - significant
+    - announcing
+    - preview
+    - experience
 ---
 
 Today we are announcing a minor but significant improvement to the Pulumi [preview](/docs/cli/commands/pulumi_preview/)

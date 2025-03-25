@@ -3,18 +3,19 @@ title: "Why Every Platform Engineer Should Care About Kubernetes Operators"
 date: 2024-12-10T09:31:38+01:00
 allow_long_title: true
 draft: false
-meta_desc: "Highlighting how Kubernetes Operators empower platform engineers to automate and streamline application deployment, management, and scaling on Kubernetes."
+meta_desc: "Highlighting how Kubernetes Operators empower platform engineers to automate
+  and streamline application deployment, management, and scaling on Kubernetes."
 meta_image: meta.png
 
 authors:
-- engin-diri
+  - engin-diri
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-- kubernetes
-- operators
-- devops
-- platform-engineering
+  - kubernetes
+  - operators
+  - devops
+  - platform-engineering
 
 social:
   twitter: |
@@ -24,6 +25,15 @@ social:
     This helps platform engineers to focus on strategic tasks and let the operators handle the routine operational tasks. 
 
     Do not miss this blog post to learn more about Kubernetes Operators and some of the advanced operators you should use in your Kubernetes powered platform.
+search:
+  keywords:
+    - kubernetes
+    - operators
+    - care
+    - engineer
+    - platform
+    - highlighting
+    - empower
 ---
 
 In one of my recent talks, I mentioned that the foundation of a successful [Kubernetes](/kubernetes)-powered platform is the use of [Kubernetes Operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/), as they are a great way to automate operational tasks and the lifecycle of complex applications and services on Kubernetes.

@@ -2,21 +2,34 @@
 title: "The Cloud Container Iceberg"
 date: 2024-12-03T10:29:54-05:00
 draft: false
-meta_desc: Discover unique and unconventional ways to run OCI containers. Explore beyond the traditional platforms.
+meta_desc: Discover unique and unconventional ways to run OCI containers. Explore
+  beyond the traditional platforms.
 meta_image: meta.png
 authors:
-    - adam-gordon-bell
+  - adam-gordon-bell
 tags:
-    - k8s, containers, cloud-native, docker
-    - k8s
-    - kubernetes
-    - containers
-    - cloud-native
-    - docker
+  - k8s, containers, cloud-native, docker
+  - k8s
+  - kubernetes
+  - containers
+  - cloud-native
+  - docker
 social:
-    twitter: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
-    linkedin: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
+  twitter: There are 105+ ways to run containers in production! From familiar cloud
+    providers to quantum computers, smart toasters, and even phone farms.
+  linkedin: There are 105+ ways to run containers in production! From familiar cloud
+    providers to quantum computers, smart toasters, and even phone farms.
+search:
+  keywords:
+    - iceberg
+    - container
+    - unconventional
+    - oci
+    - containers
+    - cloud
+    - discover
 ---
+
 If a computer can be connected to the internet, someone has tried to run a [container](https://www.pulumi.com/containers) on it. From quantum computers to smart toasters, from phones in AWS racks to CI pipelines, there's many ways to deploy containers. While most people only know about the mainstream cloud providers at the surface, there's actually a vast world of increasingly unusual and specialized options beneath.
 
 This guide serves two purposes: to showcase the surprising breadth of container options available today, and to help you understand the full spectrum of choices – from practical to very experimental. Whether you're looking for production-ready solutions or just curious about what's out there in the dark depths, you'll find something interesting here.

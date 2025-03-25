@@ -5,10 +5,19 @@ draft: false
 meta_desc: Explore cloud native tech via the KubeCrash courses and content
 meta_image: meta.png
 authors:
-    - kat-cosgrove
+  - kat-cosgrove
 tags:
-    - cloud-native
-    - pulumi-news
+  - cloud-native
+  - pulumi-news
+search:
+  keywords:
+    - kubecrash
+    - introducing
+    - courses
+    - crash
+    - native
+    - tech
+    - cloud
 ---
 
 Can’t make it to Valencia for KubeCon this year? Timezone doesn’t work for the virtual conference either? We can’t fix time, but if you’re feeling left out and still want some of that sweet cloud native content, you can still join us for [KubeCrash](https://kubecrash.io/), a new event hosting live crash courses and sessions on cloud native tech. Come hang out and learn directly from the maintainers of cloud native open source projects!

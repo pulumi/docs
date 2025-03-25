@@ -1,14 +1,25 @@
 ---
-title: "Pulumi AI: The Fastest Way to Discover, Learn, and Build Infrastructure as Code"
+title: "Pulumi AI: The Fastest Way to Discover, Learn, and Build Infrastructure as
+  Code"
 allow_long_title: true
 authors: ["luke-hoban"]
-meta_desc: "Explore Pulumi AI, a powerful AI Assistant that simplifies cloud infrastructure creation using Large Language Models and GPT, saving developers time and effort"
+meta_desc: "Explore Pulumi AI, a powerful AI Assistant that simplifies cloud infrastructure
+  creation using Large Language Models and GPT, saving developers time and effort"
 date: "2023-04-27T10:00:00-08:00"
 meta_image: "meta.png"
 tags:
-    - features
+  - features
+  - ai
+  - llm
+search:
+  keywords:
     - ai
-    - llm
+    - fastest
+    - discover
+    - gpt
+    - assistant
+    - saving
+    - infrastructure
 ---
 
 {{% notes type="info" %}}

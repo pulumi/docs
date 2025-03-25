@@ -1,15 +1,25 @@
 ---
 title: "Announcing dependency caching for Pulumi Deployments"
 date: 2024-11-12T11:30:00-07:00
-meta_desc: "Dependency caching for Pulumi Deployments is now available, speeding up your deployments by reusing dependencies across runs."
+meta_desc: "Dependency caching for Pulumi Deployments is now available, speeding up
+  your deployments by reusing dependencies across runs."
 meta_image: meta.png
 authors:
-- komal-ali
-- iaroslav-titov
+  - komal-ali
+  - iaroslav-titov
 tags:
-- features
-- pulumi-deployments
-- caching
+  - features
+  - pulumi-deployments
+  - caching
+search:
+  keywords:
+    - caching
+    - deployments
+    - dependencies
+    - dependency
+    - announcing
+    - speeding
+    - reusing
 ---
 
 We’re excited to announce dependency caching for [Pulumi Deployments](/docs/pulumi-cloud/deployments/)! This new feature is designed to significantly speed up deployment times by reducing dependency installation time by up to 80%, ensuring faster and more efficient workflows for every Pulumi user.

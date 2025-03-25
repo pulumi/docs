@@ -2,15 +2,26 @@
 title: "What Exactly Is Cloud Engineering?"
 date: 2021-07-23T12:46:42-05:00
 draft: false
-meta_desc: "We talk a lot about cloud engineering. But what exactly is it? Let's find out!"
+meta_desc: "We talk a lot about cloud engineering. But what exactly is it? Let's find
+  out!"
 meta_image: cloud-engineering.png
 authors:
-    - matt-stratton
+  - matt-stratton
 tags:
-    - cloud-engineering
+  - cloud-engineering
 aliases:
-    - /blog/wtf-is-cloud-engineering/
+  - /blog/wtf-is-cloud-engineering/
+search:
+  keywords:
+    - engineering
+    - cloud
+    - checklists
+    - exactly
+    - talk
+    - lot
+    - let
 ---
+
 When we think about the idea of "cloud engineering," we often think about the concept of taking standard software engineering practices and tools, and making them available and consistent across development, infrastructure, and compliance teams.
 
 It sounds a lot like what DevOps was supposed to accomplish, right? Many great practices have come out of software engineering that we can apply to operations and infrastructure. Likewise, practices from operational disciplines are equally applicable to development teams.

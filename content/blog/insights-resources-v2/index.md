@@ -2,14 +2,24 @@
 title: "Introducing the new Resources view"
 date: 2024-10-02T14:35:35-07:00
 draft: false
-meta_desc: The updated Resources page provides a new user experience for creating custom views that help you gain an understanding and insights into your infrastructure.
+meta_desc: The updated Resources page provides a new user experience for creating
+  custom views that help you gain an understanding and insights into your infrastructure.
 
 meta_image: meta.png
 authors:
-    - craig-symonds
+  - craig-symonds
 tags:
-    - insights
+  - insights
+  - resources
+search:
+  keywords:
     - resources
+    - new
+    - view
+    - introducing
+    - views
+    - insights
+    - page
 ---
 
 Pulumi Insights gives you the tools to stay informed about your cloud infrastructure. Our Resource explorer provides advanced search and filtering too [find what you need](/blog/resource-search). Today, we are excited to release an update that adds new ways to factor your resource data, and share those views with other users in your organization!

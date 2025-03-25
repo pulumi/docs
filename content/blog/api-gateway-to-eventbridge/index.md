@@ -2,23 +2,32 @@
 title: "API Gateway to EventBridge with Pulumi"
 date: 2022-01-12T13:00:00-07:00
 meta_desc: |
-    Use Pulumi with Amazon API Gateway and EventBridge, Amazon's serverless event bus, to
-    build scalable and easily maintainable apps and systems.
+  Use Pulumi with Amazon API Gateway and EventBridge, Amazon's serverless event bus, to
+  build scalable and easily maintainable apps and systems.
 summary: |
-    If you've spent any time with Amazon API Gateway, you know it's all about making it easier to
-    manage a serverless REST API. But did you know you can do more with API Gateway than just invoke
-    Lambdas? In this post, you'll learn how to use Pulumi to connect API Gateway with EventBridge,
-    Amazon's serverless event bus, to build loosely coupled, scalable and maintainable
-    apps and systems.
+  If you've spent any time with Amazon API Gateway, you know it's all about making it easier to
+  manage a serverless REST API. But did you know you can do more with API Gateway than just invoke
+  Lambdas? In this post, you'll learn how to use Pulumi to connect API Gateway with EventBridge,
+  Amazon's serverless event bus, to build loosely coupled, scalable and maintainable
+  apps and systems.
 meta_image: meta.png
 authors:
-    - christian-nunciato
+  - christian-nunciato
 tags:
-    - aws
-    - api-gateway
+  - aws
+  - api-gateway
+  - eventbridge
+  - lambda
+  - serverless
+search:
+  keywords:
     - eventbridge
-    - lambda
-    - serverless
+    - gateway
+    - api
+    - bus
+    - amazon
+    - maintainable
+    - event
 ---
 
 If you're familiar with [Amazon API Gateway](https://aws.amazon.com/api-gateway/), you know it's all about making it easier to provision and manage a web API. Maybe you've used it, as I have, with [Crosswalk](/docs/iac/clouds/aws/guides/), our AWS extension library, to stand up a REST API and handle requests with AWS Lambda functions:

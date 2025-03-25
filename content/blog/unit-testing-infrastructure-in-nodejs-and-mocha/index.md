@@ -3,8 +3,18 @@ title: "Unit Testing Your Infrastructure with Node.js and Mocha"
 authors: ["joe-duffy"]
 tags: ["Testing"]
 date: "2019-07-13"
-meta_desc: "This post shows how to use Node.js, the Mocha test framework, and the Chai assertion library to embed tests alongside your infrastructure-as-code definitions."
+meta_desc: "This post shows how to use Node.js, the Mocha test framework, and the
+  Chai assertion library to embed tests alongside your infrastructure-as-code definitions."
 meta_image: "meta.png"
+search:
+  keywords:
+    - infrastructure
+    - mocha
+    - js
+    - unit
+    - node
+    - chai
+    - testing
 ---
 
 {{% notes type="warning" %}}

@@ -4,9 +4,18 @@ date: 2020-07-30
 meta_desc: "A review of networking inside and outside of Kubernetes"
 meta_image: getting-started.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - Kubernetes
+  - Kubernetes
+search:
+  keywords:
+    - kubernetes
+    - networking
+    - outside
+    - getting
+    - review
+    - inside
+    - started
 ---
 
 In previous installments, we examined how to deploy applications. However, we only touched on how applications talk to each other inside and outside the cluster. Whether you are building a modern application or modernizing a legacy application, understanding how resources and components talk to each other is essential. In this installment, we’ll examine networking in Kubernetes.

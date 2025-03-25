@@ -3,7 +3,8 @@ title: "Infrastructure as Code in Any Programming Language"
 canonical_url: https://thenewstack.io/infrastructure-as-code-in-any-programming-language/
 date: 2023-10-31T22:36:29Z
 draft: false
-meta_desc: Not every engineer has a deep infrastructure background and yet needs to get more hands-on with it these days. That’s where Infrastructure as Code can help.
+meta_desc: Not every engineer has a deep infrastructure background and yet needs to
+  get more hands-on with it these days. That’s where Infrastructure as Code can help.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -11,12 +12,21 @@ meta_desc: Not every engineer has a deep infrastructure background and yet needs
 meta_image: meta.png
 
 authors:
-    - joe-duffy
+  - joe-duffy
 tags:
-    - infrastructure-as-code
-    - fundamentals
+  - infrastructure-as-code
+  - fundamentals
 
 
+search:
+  keywords:
+    - infrastructure
+    - code
+    - programming
+    - language
+    - background
+    - hands
+    - deep
 ---
 
 *This is the first of a three-part series originally published on The New Stack.*

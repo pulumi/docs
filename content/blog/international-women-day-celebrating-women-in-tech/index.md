@@ -3,12 +3,21 @@ title: "International Women's Day: Celebrating our Women in Tech"
 date: 2023-03-08T13:00:00-08:00
 meta_image: meta.png
 meta_desc: |
-    On International Women's Day (IWD), we celebrate women in tech. Meet some of Pulumi's tech women - their experience, why they chose tech, and advice to thrive.
+  On International Women's Day (IWD), we celebrate women in tech. Meet some of Pulumi's tech women - their experience, why they chose tech, and advice to thrive.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 tags:
-    - pulumi-culture
-    - community
+  - pulumi-culture
+  - community
+search:
+  keywords:
+    - women
+    - tech
+    - celebrate
+    - international
+    - celebrating
+    - day
+    - iwd
 ---
 
 Today is International Women's Day, and this year the theme is #EmbraceEquity - which means creating an equitable environment. An equitable work environment means understanding that everyone, regardless of gender, religion, ethnicity, background, or resources, brings strength to the workforce and that opportunities should be given to them based on their individual needs.

@@ -22,16 +22,25 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - isaac-harris
-    - josh-kodroff
+  - isaac-harris
+  - josh-kodroff
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - aws
-    - lambda
+  - aws
+  - lambda
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - lambda
+    - streaming
+    - response
+    - aws
+    - newly
+    - announced
+    - support
 ---
 
 Since its introduction in 2014, AWS Lambda has rapidly expanded its capabilities from simple “functions in the cloud” at launch to a comprehensive serverless platform with [support for containerized functions](https://www.pulumi.com/blog/aws-lambda-container-support/) and [public per-function URL endpoints](https://www.pulumi.com/blog/lambda-urls-launch/).

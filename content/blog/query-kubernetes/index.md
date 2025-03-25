@@ -2,9 +2,19 @@
 title: Introducing Pulumi Query for Kubernetes
 authors: ["alex-clemmer"]
 tags: ["Kubernetes"]
-meta_desc: "Announcing Pulumi Query for Kubernetes, an SDK for programmatically querying cloud resources."
+meta_desc: "Announcing Pulumi Query for Kubernetes, an SDK for programmatically querying
+  cloud resources."
 date: "2019-11-20"
 meta_image: "pulumi-crosswalk-k8s.png"
+search:
+  keywords:
+    - kubernetes
+    - querying
+    - query
+    - introducing
+    - programmatically
+    - announcing
+    - sdk
 ---
 
 We often need answers to simple questions about Kubernetes resources. Questions like:

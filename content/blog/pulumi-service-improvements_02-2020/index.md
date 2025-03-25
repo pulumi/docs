@@ -3,8 +3,18 @@ title: "Pulumi Service Improvements, February 2020"
 authors: ["chris-smith"]
 tags: ["features"]
 date: "2020-03-02"
-meta_desc: "Recent improvements to the Pulumi Service: stack tags, audit logs, CI/CD integration, downloadable checkpoint files"
+meta_desc: "Recent improvements to the Pulumi Service: stack tags, audit logs, CI/CD
+  integration, downloadable checkpoint files"
 meta_image: "pretty-print-multiline-json.png"
+search:
+  keywords:
+    - '2020'
+    - service
+    - february
+    - improvements
+    - downloadable
+    - checkpoint
+    - tags
 ---
 
 We've been hard at work making it easier to manage stacks, permissions, and organizations in the Pulumi Service. Adding

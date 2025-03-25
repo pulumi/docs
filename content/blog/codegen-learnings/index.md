@@ -6,13 +6,22 @@ meta_desc: Learnings from building a RAG for Pulumi code generator
 meta_image: meta.png
 math: true
 authors:
-    - artur-laksberg
-    - simon-howe
+  - artur-laksberg
+  - simon-howe
 tags:
-    - Copilot
-    - ai
-    - iac
+  - Copilot
+  - ai
+  - iac
 
+search:
+  keywords:
+    - recipe
+    - ai
+    - generator
+    - rag
+    - learnings
+    - code
+    - better
 ---
 
 When asked about his research process, Anthony Bourdain would describe how he'd blend his formal culinary training with deep dives into local food culture - from market stalls to family recipes. Modern AI code generation follows a similar path: it can't just rely on what it knows - it must tap into continuously evolving, domain-specific knowledge bases. Just as Bourdain would combine his classical French training with techniques learned from local kitchens, AI code generators blend their built-in knowledge with retrieved code snippets and type definitions to generate code that accurately represents the user's intent.

@@ -5,6 +5,15 @@ meta_desc: "A glimpse into my work and experiences at Pulumi as a summer intern"
 meta_image: intern.png
 authors: ["sashu-shankar"]
 tags: ["pulumi-interns"]
+search:
+  keywords:
+    - intern
+    - experience
+    - glimpse
+    - summer
+    - experiences
+    - work
+    - thank
 ---
 
 What is the cloud? Three months ago, that one word simply meant a bunch of water suspended in the atmosphere, but now it means more than that.

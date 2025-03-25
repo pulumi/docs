@@ -1,10 +1,20 @@
 ---
 title: "Improving Kubernetes Management with Pulumi's Await Logic"
 date: "2019-03-05"
-meta_desc: "In this post, we discuss await logic, which allows users to have better visibility into the state of Kubernetes resources as they're created and deployed."
+meta_desc: "In this post, we discuss await logic, which allows users to have better
+  visibility into the state of Kubernetes resources as they're created and deployed."
 meta_image: "status-rich.png"
 authors: ["levi-blackstone"]
 tags: ["Kubernetes"]
+search:
+  keywords:
+    - logic
+    - await
+    - kubernetes
+    - improving
+    - management
+    - discuss
+    - visibility
 ---
 
 Pulumi enables customers to create, deploy, and manage modern

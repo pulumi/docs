@@ -1,13 +1,23 @@
 ---
 title: "Hitesh's Intern Experience at Pulumi"
 date: 2021-06-11T09:53:45-07:00
-meta_desc: A reflection on Hitesh's experience as a Pulumi Intern, including what he worked on and learned.
+meta_desc: A reflection on Hitesh's experience as a Pulumi Intern, including what
+  he worked on and learned.
 meta_image: pulumi_mascot_3.0.png
 authors:
-    - hitesh-boinpally
+  - hitesh-boinpally
 tags:
-    - pulumi-interns
+  - pulumi-interns
 
+search:
+  keywords:
+    - hitesh
+    - intern
+    - experience
+    - reflection
+    - learned
+    - worked
+    - including
 ---
 
 Hi everyone, I’m [Hitesh Boinpally](https://www.linkedin.com/in/hitesh-boinpally), a junior studying Computer Science at the University of Washington. I was offered the opportunity to intern for Pulumi over the past three months, and here’s how it looked!

@@ -17,7 +17,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Pulumi Cloud Resource Search adds new I'm Feeling Lucky functionality, new and easier to use toggle and expands access outside of waitlist.
+meta_desc: Pulumi Cloud Resource Search adds new I'm Feeling Lucky functionality,
+  new and easier to use toggle and expands access outside of waitlist.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,16 +29,25 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
-    - ai
-    - data-and-analytics
+  - features
+  - ai
+  - data-and-analytics
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - generally
+    - toggle
+    - waitlist
+    - expands
+    - assist
+    - search
+    - ai
 ---
 
 Pulumi Cloud [Resource Search](/docs/pulumi-cloud/insights/search) AI assist functionality is now generally available to all organizations! In addition we have shipped some improvements to the feature to make it easier to use and more discoverable: a toggle on the search bar, suggested queries and an "I'm Feeling Lucky" button to generate a random query for you.

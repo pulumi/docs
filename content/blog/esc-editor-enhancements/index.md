@@ -3,7 +3,8 @@ title: "Introducing the Latest ESC Editor Enhancements for Improved Authoring"
 allow_long_title: true
 date: 2024-02-22T00:00:00-07:00
 draft: false
-meta_desc: "The new enhancements to Pulumi ESC Editor streamlines the authoring experience of environments for developers"
+meta_desc: "The new enhancements to Pulumi ESC Editor streamlines the authoring experience
+  of environments for developers"
 meta_image: "meta.png"
 authors:
   - pat-gavlin
@@ -12,6 +13,15 @@ tags:
   - esc
   - secrets
   - features
+search:
+  keywords:
+    - editor
+    - esc
+    - enhancements
+    - streamlines
+    - authoring
+    - improved
+    - introducing
 ---
 
 With [Pulumi ESC](/product/esc), our goal is to not only create a tool that simplifies the development process but also one that developers love. In pursuit of this goal, we're excited to announce enhancements to the Pulumi ESC environment editor. These enhancements are focused on addressing common challenges encountered when authoring environments: syntax errors, type errors, frequent context switches to and from documentation, and more. Our aim is to make the process of authoring environments as straightforward as possible by removing common hurdles.

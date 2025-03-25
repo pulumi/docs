@@ -11,7 +11,8 @@ date: 2022-08-29
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Pulumi Service, the easiest way to use Pulumi’s open-source universal infrastructure as code, just got better with a new and improved console.
+meta_desc: Pulumi Service, the easiest way to use Pulumi’s open-source universal infrastructure
+  as code, just got better with a new and improved console.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,15 +23,24 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - pulumi-service
-    - user-experience
+  - pulumi-service
+  - user-experience
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - console
+    - improved
+    - service
+    - new
+    - universal
+    - easiest
+    - favorites
 ---
 
 The [Pulumi Service](/product/pulumi-service/) is the easiest way to use Pulumi’s open source, universal infrastructure as code SDK at scale and provides a fully managed experience. It handles infrastructure state and secrets, sets up SAML SSO, integrates with CI/CD pipelines, and enforces compliance rules.

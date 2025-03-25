@@ -3,9 +3,20 @@ date: "2021-10-12"
 title: "Pulumi Kubernetes Operator 1.0"
 authors: ["luke-hoban", "vivek-lakshmanan"]
 tags: ["Kubernetes", "Continuous-Delivery", "operators"]
-meta_desc: "Pulumi Kubernetes Operator 1.0: GitOps, Automation API, State Backends, Safe Upgrades and Metrics"
+meta_desc: "Pulumi Kubernetes Operator 1.0: GitOps, Automation API, State Backends,
+  Safe Upgrades and Metrics"
 meta_image: operator.png
+search:
+  keywords:
+    - kubernetes
+    - operator
+    - upgrades
+    - gitops
+    - safe
+    - backends
+    - metrics
 ---
+
 {{% notes type="info" %}}
 Check out version 2.0 of the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-2-0/).
 {{% /notes %}}

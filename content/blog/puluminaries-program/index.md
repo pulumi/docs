@@ -3,16 +3,16 @@ title: "Introducing the Pulumi Puluminaries 2.0 Program"
 date: 2025-02-10T12:15:00-08:00
 allow_long_title: true
 meta_desc: |
-    We are excited to announce the Pulumi Puluminaries 2.0 Program. This is a fresh and revitalized way to celebrate and support Pulumi’s most passionate community members. Pulumi Puluminaries are individuals who demonstrate leadership in the Pulumi ecosystem by sharing best practices, creating valuable content, and helping fellow practitioners succeed.
+  We are excited to announce the Pulumi Puluminaries 2.0 Program. This is a fresh and revitalized way to celebrate and support Pulumi’s most passionate community members. Pulumi Puluminaries are individuals who demonstrate leadership in the Pulumi ecosystem by sharing best practices, creating valuable content, and helping fellow practitioners succeed.
 meta_image: meta.png
 
 authors:
-- engin-diri
+  - engin-diri
 
 tags:
-- puluminaries
-- community
-- program
+  - puluminaries
+  - community
+  - program
 
 social:
   twitter: |
@@ -21,11 +21,20 @@ social:
     We are thrilled to announce the Pulumi Puluminaries 2.0 Program, designed to celebrate the dedication and expertise of our amazing community. Similar to how other ambassador programs bring together dedicated advocates, this initiative unites those who champion Pulumi’s approach to cloud engineering.
 
     By participating, you will gain early access to new features, collaborate one-on-one with our team, and share your unique insights with fellow Pulumi users. If you have been creating content, helping others adopt Pulumi, or promoting best practices, we want to hear your story.
-    
+
     Check out our latest blog post to learn how you can apply or nominate someone who embodies the Pulumi spirit: <link>
-    
+
     Ready to build the future of cloud engineering with us? Join the Pulumi Puluminaries 2.0 Program today.
-    
+
+search:
+  keywords:
+    - celebrate
+    - introducing
+    - program
+    - revitalized
+    - leadership
+    - fellow
+    - passionate
 ---
 
 We are excited to announce the Pulumi Puluminaries 2.0 Program. This is a fresh and revitalized way to celebrate and support Pulumi’s most passionate community members. Pulumi Puluminaries are individuals who demonstrate leadership in the Pulumi ecosystem by sharing best practices, creating valuable content, and helping fellow practitioners succeed.

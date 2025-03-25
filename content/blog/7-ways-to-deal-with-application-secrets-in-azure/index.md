@@ -4,8 +4,18 @@ authors: ["mikhail-shilkov"]
 tags: ["Azure", "Security"]
 date: "2019-07-26"
 updated: 2025-03-10
-meta_desc: Learn secure ways to manage application secrets in Azure. From Key Vault to environment variables, discover best practices to safeguard sensitive data.
+meta_desc: Learn secure ways to manage application secrets in Azure. From Key Vault
+  to environment variables, discover best practices to safeguard sensitive data.
 meta_image: feature.png
+search:
+  keywords:
+    - azure
+    - deal
+    - secrets
+    - ways
+    - application
+    - vault
+    - safeguard
 ---
 
 Every non-trivial application relies on configuration values that may depend on the current execution environment. Some of these values contain sensitive information that shouldn't be shared publicly. In general, the fewer parties that have access to those secret values, the safer the application will be&mdash;in fact, in an ideal world, no one would be granted direct access to those secrets.

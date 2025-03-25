@@ -1,21 +1,32 @@
 ---
-title: "Secrets and Configuration for Software Engineers: Pulumi ESC Versioning, SDKs and More"
+title: "Secrets and Configuration for Software Engineers: Pulumi ESC Versioning, SDKs
+  and More"
 allow_long_title: true
 
 date: 2024-06-05T04:00:00-07:00
 
-meta_desc: "Major new features for Pulumi ESC bring best-in-class software engineering capabilities to secrets and configuration management"
+meta_desc: "Major new features for Pulumi ESC bring best-in-class software engineering
+  capabilities to secrets and configuration management"
 
 meta_image: meta.png
 
 authors:
-    - luke-hoban
+  - luke-hoban
 
 tags:
-    - esc
-    - secrets
-    - platform-engineering
+  - esc
+  - secrets
+  - platform-engineering
 
+search:
+  keywords:
+    - esc
+    - engineering
+    - secrets
+    - versioning
+    - software
+    - configuration
+    - sdks
 ---
 
 Last October we launched [Pulumi ESC](https://www.pulumi.com/docs/esc/), a new secrets and configuration management offering from Pulumi that manages and tames secrets and configuration complexity across all of your cloud applications and infrastructure.  We’ve seen incredible adoption of ESC over the last 6 months, with thousands of developers now managing their secrets and configuration via ESC.

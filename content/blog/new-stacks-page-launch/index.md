@@ -3,15 +3,25 @@ title: "Unveiling the New Stacks Page"
 date: 2024-10-24T00:00:00-07:00
 draft: false
 allow_long_title: true
-meta_desc: "The new Stacks page is optimized for performance and flexibility with rich grouping and sorting options."
+meta_desc: "The new Stacks page is optimized for performance and flexibility with
+  rich grouping and sorting options."
 meta_image: "meta.png"
 authors:
-- german-lena
-- kimberley-mackenzie
-- arun-loganathan
+  - german-lena
+  - kimberley-mackenzie
+  - arun-loganathan
 tags:
   - features
   - releases
+search:
+  keywords:
+    - unveiling
+    - stacks
+    - page
+    - sorting
+    - grouping
+    - optimized
+    - new
 ---
 
 We're thrilled to unveil the redesigned [Pulumi Infrastructure as Code (IaC)](/product/infrastructure-as-code/) Stacks page within Pulumi Cloud console, addressing one of the [most upvoted](https://github.com/pulumi/pulumi-cloud-requests/issues/56) issues in our [Pulumi Cloud Requests repository](https://github.com/pulumi/pulumi-cloud-requests)! This revamped experience delivers a significant boost in performance and usability, empowering even the most complex organizations to manage their infrastructure with ease.

@@ -3,16 +3,26 @@ title: "Get to Know Pulumi's UX Team"
 
 date: 2022-03-28T12:06:33-04:00
 
-meta_desc: Get to know Pulumi's UX Team! Learn more about how Pulumi's designers and engineers collaborate to deliver smooth user experiences.
+meta_desc: Get to know Pulumi's UX Team! Learn more about how Pulumi's designers and
+  engineers collaborate to deliver smooth user experiences.
 
 meta_image: "meta.png"
 
 authors:
-    - anita-trimbur
+  - anita-trimbur
 
 tags:
-    - pulumi-culture
+  - pulumi-culture
 
+search:
+  keywords:
+    - know
+    - collaborate
+    - engineers
+    - ux
+    - team
+    - designers
+    - smooth
 ---
 
 What is user experience, or UX? There are plenty of answers depending on who you ask. At the core, UX is about asking questions and solving problems.

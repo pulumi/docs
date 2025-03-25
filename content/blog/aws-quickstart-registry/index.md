@@ -4,15 +4,24 @@ date: 2022-01-05
 meta_desc: "Pulumi releases AWS Quick Start packages in the Pulumi registry"
 meta_image: pulumi-aws-quickstart-registry.png
 authors:
-    - aidan-hoolachan
+  - aidan-hoolachan
 tags:
-    - aws
-    - vpc
-    - postgres
-    - postgresql
-    - aurora
-    - redshift
+  - aws
+  - vpc
+  - postgres
+  - postgresql
+  - aurora
+  - redshift
+  - registry
+search:
+  keywords:
     - registry
+    - quick
+    - starts
+    - aws
+    - releases
+    - start
+    - packages
 ---
 
 As somebody who works on AWS projects across numerous projects, teams, and industries; I see the following three common types of infrastructure problems. I think the Pulumi Registry provides an incredible solution to each of these problems and will fundamentally change how people interact with AWS.

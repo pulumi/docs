@@ -2,12 +2,22 @@
 title: "Relaunching Pulumi's Public Roadmap"
 date: 2021-09-29T08:00:00-07:00
 draft: false
-meta_desc: Announcing a new public roadmap for Pulumi, where you can follow along with and influence our plans for the Pulumi Cloud Engineering Platform.
+meta_desc: Announcing a new public roadmap for Pulumi, where you can follow along
+  with and influence our plans for the Pulumi Cloud Engineering Platform.
 meta_image: meta.png
-authors: 
-    - alex-mullans
+authors:
+  - alex-mullans
 tags:
-    - pulumi-news
+  - pulumi-news
+search:
+  keywords:
+    - roadmap
+    - relaunching
+    - public
+    - theme
+    - influence
+    - plans
+    - announcing
 ---
 
 Today, I’m excited to announce the (re-)launch of the [Pulumi public roadmap](https://github.com/orgs/pulumi/projects/44), now built on top of the new [GitHub Issues](https://github.blog/2021-06-23-introducing-new-github-issues/). The roadmap is a core part of the commitment we’re making to our open source product, the Pulumi CLI and SDK, as well as the Pulumi Service. As we’ve talked to many of you that use Pulumi, or are considering using it, we’ve heard that the roadmap is a key tool to help understand what new and exciting work is coming to Pulumi. Open source contributors have told us that it can also help them figure out good places to contribute new and expanded features.

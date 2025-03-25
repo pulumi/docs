@@ -2,7 +2,8 @@
 title: "Pulumi Kubernetes Operator 2.0 is Now Generally Available!"
 date: 2025-02-20
 draft: false
-meta_desc: "Today, we're announcing the GA of Pulumi Kubernetes Operator 2.0! Discover the new features and improvements that make managing Kubernetes easier than ever."
+meta_desc: "Today, we're announcing the GA of Pulumi Kubernetes Operator 2.0! Discover
+  the new features and improvements that make managing Kubernetes easier than ever."
 meta_image: "meta.png"
 authors:
   - eron-wright
@@ -15,9 +16,23 @@ tags:
   - features
 
 social:
-    twitter: "The GA release of Pulumi Kubernetes Operator 2.0 is here! Enhanced logging control, improved observability, and smarter workspace management make infrastructure automation easier than ever. Get started today!"
-    linkedin: "Announcing Pulumi Kubernetes Operator 2.0 GA: Now with enhanced logging control, richer controller events, and flexible workspace management. Experience enterprise-grade infrastructure automation with improved observability and resource management in your Kubernetes clusters."
+  twitter: "The GA release of Pulumi Kubernetes Operator 2.0 is here! Enhanced logging
+    control, improved observability, and smarter workspace management make infrastructure
+    automation easier than ever. Get started today!"
+  linkedin: "Announcing Pulumi Kubernetes Operator 2.0 GA: Now with enhanced logging
+    control, richer controller events, and flexible workspace management. Experience
+    enterprise-grade infrastructure automation with improved observability and resource
+    management in your Kubernetes clusters."
 
+search:
+  keywords:
+    - operator
+    - kubernetes
+    - generally
+    - workspace
+    - ga
+    - 09aa1aad
+    - random
 ---
 
 Today marks an exciting milestone as we announce the General Availability (GA) release of the Pulumi Kubernetes Operator 2.0! This release builds upon the foundation we [laid during the beta phase](/blog/pulumi-kubernetes-operator-2-0/), delivering a production-ready solution that transforms how teams manage their cloud infrastructure.

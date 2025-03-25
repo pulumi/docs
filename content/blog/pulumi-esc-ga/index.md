@@ -1,9 +1,12 @@
 ---
-title: "Announcing the General Availability of Pulumi ESC - Welcome to a New Era of Secrets Management"
+title: "Announcing the General Availability of Pulumi ESC - Welcome to a New Era of
+  Secrets Management"
 allow_long_title: true
-date: 2024-09-18T8:59:00-00:00
+date: 2024-09-18T08:59:00-00:00
 draft: false
-meta_desc: "Pulumi ESC is the centralized secrets management and orchestration service that enables taming secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications."
+meta_desc: "Pulumi ESC is the centralized secrets management and orchestration service
+  that enables taming secrets sprawl and configuration complexity securely across
+  all your cloud infrastructure and applications."
 meta_image: "meta.png"
 authors:
   - arun-loganathan
@@ -11,6 +14,15 @@ authors:
 tags:
   - esc
   - secrets
+search:
+  keywords:
+    - welcome
+    - esc
+    - secrets
+    - era
+    - management
+    - taming
+    - availability
 ---
 
 At Pulumi, we've been at the forefront of revolutionizing infrastructure management and DevOps processes. We've built the industry's most comprehensive [secrets management solution for IaC](/docs/iac/concepts/secrets/), securing production cloud credentials and secrets for countless organizations. Now, we're taking that expertise and applying it to the broader challenges of managing secrets at scale with an open ecosystem approach. 
@@ -111,4 +123,4 @@ Check out our [pricing](/pricing/) page for more information about the various p
 
 Pulumi ESC represents a significant advancement in secrets and config management. By addressing the challenges faced by organizations today, such as secrets sprawl and the trade-off between speed and security, Pulumi ESC offers a modern, flexible solution. Its unique features, including support for dynamic, short-lived credentials and seamless integration with major cloud providers, GitHub, etc. make it an invaluable asset for teams looking to maintain agility without compromising on security. Pulumi ESC is set to redefine the standards of secrets management, enabling organizations to achieve their security and operational goals more effectively.
 
-We can’t wait to see how you leverage Pulumi ESC. [Sign-up](https://app.pulumi.com/signup?_gl=1*u5yfkh*_gcl_au*NTc2MTc3MzIwLjE3MjY1MzU3OTI.) for Pulumi Cloud to start using Pulumi ESC and check out our [getting started](/docs/esc/get-started/) guide to learn more about Pulumi ESC. 
+We can’t wait to see how you leverage Pulumi ESC. [Sign-up](https://app.pulumi.com/signup?_gl=1*u5yfkh*_gcl_au*NTc2MTc3MzIwLjE3MjY1MzU3OTI.) for Pulumi Cloud to start using Pulumi ESC and check out our [getting started](/docs/esc/get-started/) guide to learn more about Pulumi ESC.

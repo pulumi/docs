@@ -5,13 +5,22 @@ meta_desc: "Benchmarking and improving the performance of Pulumi Python programs
 meta_image: meta.png
 
 authors:
-    - justin-vanpatten
-    - robbie-mckinstry
+  - justin-vanpatten
+  - robbie-mckinstry
 
 tags:
+  - performance
+  - platform
+  - engineering
+search:
+  keywords:
+    - benchmarking
+    - python
     - performance
-    - platform
-    - engineering
+    - improving
+    - programs
+    - experiments
+    - experiment
 ---
 
 This is the second post in a series about performance optimizations we've made

@@ -2,10 +2,20 @@
 title: "Converting Bicep code to Pulumi"
 date: 2023-09-29
 draft: false
-meta_desc: In this article, we will look at a new language converter that takes Bicep code and converts it to any of supported Pulumi languages. 
+meta_desc: In this article, we will look at a new language converter that takes Bicep
+  code and converts it to any of supported Pulumi languages.
 meta_image: meta.png
 authors: ["zaid-ajaj"]
 tags: ["community", "bicep", "pulumi", "convert"]
+search:
+  keywords:
+    - bicep
+    - converting
+    - converter
+    - code
+    - converts
+    - takes
+    - currentresourcegroup
 ---
 
 Bicep is a DSL developed by Microsoft to simplify the authoring of ARM templates and deploy resources to Azure. Today I will be sharing with you a new Pulumi converter plugin that I have been working on that converts Bicep code to any of the supported Pulumi languages.

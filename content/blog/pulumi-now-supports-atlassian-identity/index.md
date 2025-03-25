@@ -1,10 +1,20 @@
 ---
 title: "Pulumi now supports Atlassian Identity"
 authors: ["praneet-loke"]
-tags: ["features","continuous-delivery"]
+tags: ["features", "continuous-delivery"]
 date: "2019-01-30"
-meta_desc: "Connect your Pulumi account with your Atlassian identity, invite members of your Bitbucket team, and start collaborating on Pulumi stacks."
+meta_desc: "Connect your Pulumi account with your Atlassian identity, invite members
+  of your Bitbucket team, and start collaborating on Pulumi stacks."
 meta_image: "atlassian-1.png"
+search:
+  keywords:
+    - atlassian
+    - supports
+    - identity
+    - bitbucket
+    - collaborating
+    - invite
+    - connect
 ---
 
 Today we added support for yet another developer favorite product,

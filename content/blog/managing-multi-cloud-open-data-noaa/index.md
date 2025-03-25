@@ -11,7 +11,8 @@ date: 2022-11-08T21:01:21Z
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Learn how the North Carolina Institute for Climate Studies manages open data for the NOAA on multiple clouds using Pulumi.
+meta_desc: Learn how the North Carolina Institute for Climate Studies manages open
+  data for the NOAA on multiple clouds using Pulumi.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,20 +23,29 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - denis-willett
+  - denis-willett
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - aws
-    - azure
-    - google-cloud
-    - python
-    - guest-post
-    - infrastructure-as-code
-    - community
+  - aws
+  - azure
+  - google-cloud
+  - python
+  - guest-post
+  - infrastructure-as-code
+  - community
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - noaa
+    - clouds
+    - climate
+    - data
+    - carolina
+    - multiple
+    - institute
 ---
 
 > Denis Willett is a software engineer at the [North Carolina Institute of Climate Studies](https://ncics.org) who works on the NOAA Open Data Dissemination Program. His work focuses on leveraging cloud technologies for the development of data processing and machine learning pipelines. Denis did his PhD in Entomology and Nematology at University of Florida and his undergraduate and masters work in Earth Systems at Stanford University. You can read his full bio [here](https://ncics.org/people/denis-willet-2/).

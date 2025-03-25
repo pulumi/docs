@@ -2,10 +2,20 @@
 title: "Pulumi 2.0 Roadmap"
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
-meta_desc: "We've published Pulumi's 2.0 roadmap. This release will support great productivity, deeper support for enterprise workloads, and a whole lot more."
+meta_desc: "We've published Pulumi's 2.0 roadmap. This release will support great
+  productivity, deeper support for enterprise workloads, and a whole lot more."
 date: "2019-12-02"
 
 meta_image: "pulumi-1-0.png"
+search:
+  keywords:
+    - roadmap
+    - published
+    - support
+    - deeper
+    - enterprise
+    - productivity
+    - lot
 ---
 
 Today we've published [Pulumi's 2.0 roadmap](https://github.com/pulumi/pulumi/issues/3591). 2.0 is the next major phase in Pulumi's journey, and will include better productivity through languages, libraries, and tools, in addition to advanced features for teams in production. And, though we are excited to share our own thoughts, more than anything else, we'd love to hear your feedback to help make sure it's right.

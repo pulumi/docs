@@ -1,12 +1,22 @@
 ---
 title: "Announcing New Pulumi Open Source Projects for Kubernetes"
 date: 2020-08-12
-meta_desc: "Announcing new features that advance Pulumi's Kubernetes support for deployment automation, cloud native ecosystem integration, and easy Pulumi adoption."
+meta_desc: "Announcing new features that advance Pulumi's Kubernetes support for deployment
+  automation, cloud native ecosystem integration, and easy Pulumi adoption."
 meta_image: k8s-enhancements.png
 authors:
-    - luke-hoban
+  - luke-hoban
 tags:
+  - kubernetes
+search:
+  keywords:
+    - announcing
     - kubernetes
+    - advance
+    - projects
+    - open
+    - new
+    - source
 ---
 
 Today, we’re excited to [announce](https://info.pulumi.com/press-release/kubernetes) several new open source projects that advance Pulumi’s Kubernetes support.  These projects and features have been developed while helping leading cloud native engineering teams like Snowflake, Lemonade, and Mercedes-Benz go into production with Kubernetes, and include new deployment automation options, improved ecosystem integrations, and tools to make it easier than ever to adopt Pulumi for new and existing projects.

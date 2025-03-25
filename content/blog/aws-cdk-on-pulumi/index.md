@@ -1,12 +1,22 @@
 ---
 title: "Introducing AWS CDK on Pulumi"
 date: 2022-05-04T06:56:00-07:00
-meta_desc: "Use AWS CDK constructs from within Pulumi, combining Pulumi and AWS CDK resources, and getting the performance and rich features of the Pulumi platform."
+meta_desc: "Use AWS CDK constructs from within Pulumi, combining Pulumi and AWS CDK
+  resources, and getting the performance and rich features of the Pulumi platform."
 meta_image: aws-cdk-on-pulumi.png
 authors:
-    - luke-hoban
+  - luke-hoban
 tags:
-    - aws-cdk
+  - aws-cdk
+search:
+  keywords:
+    - cdk
+    - aws
+    - introducing
+    - fargatestack
+    - constructs
+    - combining
+    - rich
 ---
 
 {{% notes type="warning" %}}

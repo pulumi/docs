@@ -1,15 +1,25 @@
 ---
 title: "Deploy a Serverless RabbitMQ Cluster on Azure with .NET"
 date: 2020-07-16
-meta_desc: "Deploying a Geo-Redundant Serverless RabbitMQ Cluster on Azure Using Pulumi for .NET"
+meta_desc: "Deploying a Geo-Redundant Serverless RabbitMQ Cluster on Azure Using Pulumi
+  for .NET"
 meta_image: 1.png
 authors:
-    - itay-podhajcer
+  - itay-podhajcer
 tags:
-    - Azure
-    - .NET
-    - rabbitmq
+  - Azure
+  - .NET
+  - rabbitmq
 
+search:
+  keywords:
+    - azure
+    - rabbitmq
+    - serverless
+    - net
+    - redundant
+    - geo
+    - cluster
 ---
 
 Itay Podhajcer is Chief Architect at Velocity Career Labs and a highly experienced software development and technology professional, consultant, architect & project manager. He shared his article on building an Azure serverless cluster for deploying RabbitMQ with C#. The original article was published [here](https://medium.com/microsoftazure/deploying-a-geo-redundant-serverless-rabbitmq-cluster-on-azure-using-pulumi-for-net-71e6b417378d).

@@ -2,22 +2,32 @@
 title: "Next-level IaC: How Pulumi Supports Your API Economy Strategy"
 allow_long_title: true
 date: 2024-05-15
-meta_desc: Learn how to use Pulumi Automation API to build your own Service API and expose it to your organization.
+meta_desc: Learn how to use Pulumi Automation API to build your own Service API and
+  expose it to your organization.
 meta_image: meta.png
 
 authors:
 
-- engin-diri
+  - engin-diri
 
 tags:
 
-- next-level-iac
-- automation-api
-- api-economy
-- cloudformation
-- terraform
-- hcl
+  - next-level-iac
+  - automation-api
+  - api-economy
+  - cloudformation
+  - terraform
+  - hcl
 
+search:
+  keywords:
+    - economy
+    - api
+    - strategy
+    - level
+    - supports
+    - expose
+    - iac
 ---
 
 When I am talking with community members, who are not using Pulumi yet, I often get asked what would be a good way to include their Infrastructure as Code (IaC) into existing software like a REST API. And my answer is always the same: Use our [Pulumi Automation API](/docs/using-pulumi/automation-api/).

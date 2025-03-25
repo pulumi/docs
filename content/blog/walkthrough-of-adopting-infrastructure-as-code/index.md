@@ -3,14 +3,24 @@ title: "A Walkthrough of Adopting Infrastructure as Code"
 canonical_url: https://thenewstack.io/a-walkthrough-of-adopting-infrastructure-as-code/
 date: 2023-11-14T19:54:55Z
 draft: false
-meta_desc: A look at the basics of how to get going with Infrastructure as Code, and then a dive into some advanced use cases to show what you can do from there.
+meta_desc: A look at the basics of how to get going with Infrastructure as Code, and
+  then a dive into some advanced use cases to show what you can do from there.
 meta_image: meta.png
 authors:
-    - joe-duffy
+  - joe-duffy
 tags:
-    - infrastructure-as-code
-    - fundamentals
+  - infrastructure-as-code
+  - fundamentals
 
+search:
+  keywords:
+    - walkthrough
+    - adopting
+    - infrastructure
+    - code
+    - basics
+    - advanced
+    - cases
 ---
 
 *This is the second of a three-part series originally published on The New Stack.*

@@ -1,16 +1,26 @@
 ---
 title: "Pinecone Provider Now Available for Pulumi"
 date: 2024-01-16
-meta_desc: "Seamlessly integrate and manage your Pinecone indexes with the official Pulumi Pinecone provider."
+meta_desc: "Seamlessly integrate and manage your Pinecone indexes with the official
+  Pulumi Pinecone provider."
 meta_image: meta.png
 authors:
-- engin-diri
+  - engin-diri
 
 tags:
-- pinecone
-- providers
-- serverless
-- ai
+  - pinecone
+  - providers
+  - serverless
+  - ai
+search:
+  keywords:
+    - pinecone
+    - indexes
+    - provider
+    - official
+    - seamlessly
+    - integrate
+    - available
 ---
 
 ## Hello, Pulumi Pinecone Provider!  👋

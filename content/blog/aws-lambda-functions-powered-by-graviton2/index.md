@@ -4,12 +4,21 @@ date: 2021-09-29
 meta_desc: Deploy AWS Lambda Functions powered by AWS Graviton2 Processors
 meta_image: meta.png
 authors:
-    - paul-stack
+  - paul-stack
 tags:
-    - aws
-    - lambda
-    - arm64
+  - aws
+  - lambda
+  - arm64
 
+search:
+  keywords:
+    - graviton2
+    - processors
+    - lambda
+    - powered
+    - aws
+    - functions
+    - deploy
 ---
 
 In late 2018, [AWS launched their first EC2 instances](https://aws.amazon.com/blogs/aws/new-ec2-instances-a1-powered-by-arm-based-aws-graviton-processors/)

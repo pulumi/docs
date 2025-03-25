@@ -1,18 +1,28 @@
 ---
 title: "Pulumi's Latest Kubernetes Updates from KubeCon North America"
-allow_long_title: True
-date: 2024-11-12T8:00:00-00:00
+allow_long_title: true
+date: 2024-11-12T08:00:00-00:00
 draft: false
-meta_desc: Inspired by KubeCon North America 2024, this post presents a collection of recent Kubernetes-focused updates to Pulumi software
+meta_desc: Inspired by KubeCon North America 2024, this post presents a collection
+  of recent Kubernetes-focused updates to Pulumi software
 meta_image: meta.png
 authors:
-    - gavin-johnson
+  - gavin-johnson
 tags:
-    - kubecon
-    - kubernetes
-    - conferences
+  - kubecon
+  - kubernetes
+  - conferences
 aliases:
-    - /blog/kubecon-2024-launches
+  - /blog/kubecon-2024-launches
+search:
+  keywords:
+    - north
+    - kubernetes
+    - '2024'
+    - america
+    - kubecon
+    - updates
+    - presents
 ---
 
 Pulumi is excited to be at KubeCon North America this week, the premier event for all things Kubernetes and cloud-native. KubeCon is the gathering place for developers, enterprises, and cloud native experts to meet and further the education and advancement of Kubernetes and cloud native computing. At Pulumi, we are strongly committed to Kubernetes and continue to support the ecosystem with infrastructure management solutions that empower teams to automate, secure, and manage Kubernetes at scale.

@@ -2,24 +2,35 @@
 title: "Tap-Pulumi-Cloud: Simplifying Pulumi Cloud Data Integration"
 date: 2024-09-03T09:00:00-07:00
 draft: false
-meta_desc: We have released a tap-pulumi-cloud connector to be able to export Pulumi Cloud data into your own Data Warehouse.
+meta_desc: We have released a tap-pulumi-cloud connector to be able to export Pulumi
+  Cloud data into your own Data Warehouse.
 meta_image: meta.png
 authors:
-    - pablo-seibelt
-    - lucas-crespo
+  - pablo-seibelt
+  - lucas-crespo
 
 tags:
-    - data-warehouse
-    - meltano
-    - api
-    - data
+  - data-warehouse
+  - meltano
+  - api
+  - data
 
 social:
-  twitter: "Your Pulumi Data in your Warehouse: See how the tap-pulumi-cloud extractor helps you export your Pulumi data into your own Data Warehouse."
+  twitter: "Your Pulumi Data in your Warehouse: See how the tap-pulumi-cloud extractor
+    helps you export your Pulumi data into your own Data Warehouse."
   linkedin: |
     See how the tap-pulumi-cloud extractor helps you export your Pulumi data into your own Data Warehouse.
     We show how you can use this connector to download Pulumi Cloud data into any destination of your choice; helping you to track infrastructure metrics alongside the rest of your data.
 
+search:
+  keywords:
+    - simplifying
+    - cloud
+    - tap
+    - data
+    - integration
+    - connector
+    - warehouse
 ---
 
 Integrating various infrastructure data sources into your data warehouse has long been a challenge for Platform Teams. Whether it’s dealing with multiple API endpoints, managing complex authentication processes, or just trying to get a consistent, reliable data feed, the process can be daunting and time-consuming. Especially when you factor in the various cloud providers, and the inconsistency in data formats across them all.

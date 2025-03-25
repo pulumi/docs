@@ -18,7 +18,9 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: "Pulumi 2024: Innovation, growth, and community. Discover ESC, Insights 2.0, Copilot, Kubernetes Operator, Drift Detection, and more from a transformative year!"
+meta_desc: "Pulumi 2024: Innovation, growth, and community. Discover ESC, Insights
+  2.0, Copilot, Kubernetes Operator, Drift Detection, and more from a transformative
+  year!"
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,12 +31,12 @@ meta_image: 2024-year-in-review.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - community
-    - features
+  - community
+  - features
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -50,8 +52,17 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - '2024'
+    - innovation
+    - appreciation
+    - growth
+    - year
+    - review
+    - transformative
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

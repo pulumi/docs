@@ -17,7 +17,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Pulumi introduces a golden path for platform teams to enable their developers to provision new services from a set of best practice templates.
+meta_desc: Pulumi introduces a golden path for platform teams to enable their developers
+  to provision new services from a set of best practice templates.
 
 
 # The meta_image appears in social-media previews and on the blog home page. A
@@ -29,19 +30,28 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-- developer-portals
-- templates
-- policy-as-code
-- backstage
-- platform-engineering
+  - developer-portals
+  - templates
+  - policy-as-code
+  - backstage
+  - platform-engineering
 
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - portals
+    - developer
+    - building
+    - golden
+    - templates
+    - introduces
+    - backstage
 ---
 
 At Pulumi, we work with organizations that range from a few platform team members to entire departments for managing infrastructure. Many organizations, like [Mercedes-Benz](https://www.pulumi.com/case-studies/mercedes-benz/), have built internal developer platforms on top of Pulumi to enable developers to self-serve infrastructure templates, and partners like [AWS Proton](https://www.pulumi.com/blog/aws-proton-pulumi/) and [Port](https://www.getport.io/blog/using-pulumi-with-an-internal-developer-portal) have built integrations with Pulumi to enable self-service scenarios. We are thrilled to have [announced yesterday](/blog/developer-portal-platform-teams) the launch of our new suite of tools to build internal developer portals with Pulumi, a result of working directly with our customers to understand their problems and how Pulumi can solve it.

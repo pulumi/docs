@@ -1,18 +1,29 @@
 ---
-title: "Next-level IaC: Drop those wrapper scripts and let your language do that for you"
+title: "Next-level IaC: Drop those wrapper scripts and let your language do that for
+  you"
 allow_long_title: true
 date: 2024-04-30
-meta_desc: Learn how to use your language of choice to do more than just declare cloud resources.
+meta_desc: Learn how to use your language of choice to do more than just declare cloud
+  resources.
 meta_image: meta.png
 authors:
-    - christian-nunciato
+  - christian-nunciato
 tags:
-    - next-level-iac
-    - nodejs
-    - python
-    - cloudformation
-    - terraform
-    - hcl
+  - next-level-iac
+  - nodejs
+  - python
+  - cloudformation
+  - terraform
+  - hcl
+search:
+  keywords:
+    - iac
+    - wrapper
+    - drop
+    - scripts
+    - language
+    - declare
+    - choice
 ---
 
 Our users are always telling us (particularly the ones who come to Pulumi from other IaC tools) that being able to use general-purpose languages to manage their infrastructure was a game changer for them.

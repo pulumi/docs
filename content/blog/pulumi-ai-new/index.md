@@ -2,14 +2,24 @@
 title: "Deploy Cloud Infrastructure in 30 Seconds with Pulumi AI"
 allow_long_title: true
 authors: ["luke-hoban", "aaron-friel"]
-meta_desc: "Pulumi AI turns your ideas into cloud infrastructure in seconds. Learn how <pulumi new> and the [Deploy with Pulumi] button make cloud deployment effortless!"
+meta_desc: "Pulumi AI turns your ideas into cloud infrastructure in seconds. Learn
+  how <pulumi new> and the [Deploy with Pulumi] button make cloud deployment effortless!"
 date: "2023-12-20T15:00:00-08:00"
 updated: 2025-03-07
 meta_image: "ai_new.png"
 tags:
-    - features
+  - features
+  - ai
+  - llm
+search:
+  keywords:
+    - seconds
     - ai
-    - llm
+    - '30'
+    - cloud
+    - deploy
+    - effortless
+    - infrastructure
 ---
 
 {{% notes type="info" %}}

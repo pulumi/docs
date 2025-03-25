@@ -2,23 +2,32 @@
 title: Six Things You Might Not Know About the Pulumi Service
 date: 2022-01-24
 meta_desc: |
-    In this post, we'll highlight a number of the lesser-known features of the Pulumi Service that make it even easier to manage your infrastructure with Pulumi.
+  In this post, we'll highlight a number of the lesser-known features of the Pulumi Service that make it even easier to manage your infrastructure with Pulumi.
 summary: |
-    As a reader of this blog, you've probably heard of the Pulumi Service, the default state-management backend of the Pulumi CLI, and if that's the case, there's a good chance you've also heard of many of its key features. But did you know we're adding new features to the Service all the time---some of which are incredibly easy to miss? In this post, we'll highlight a few of those lesser-known features that we think make it even easier to manage your infrastructure with Pulumi.
+  As a reader of this blog, you've probably heard of the Pulumi Service, the default state-management backend of the Pulumi CLI, and if that's the case, there's a good chance you've also heard of many of its key features. But did you know we're adding new features to the Service all the time--some of which are incredibly easy to miss? In this post, we'll highlight a few of those lesser-known features that we think make it even easier to manage your infrastructure with Pulumi.
 meta_image: meta.png
 authors:
-    - chris-smith
-    - christian-nunciato
-    - laura-santamaria
+  - chris-smith
+  - christian-nunciato
+  - laura-santamaria
 tags:
-    - pulumi-news
-    - features
-    - cloud engineering
-    - policy-as-code
-    - pulumi-service
-    - infrastructure as code
-    - pulumi-enterprise
-    - continuous-delivery
+  - pulumi-news
+  - features
+  - cloud engineering
+  - policy-as-code
+  - pulumi-service
+  - infrastructure as code
+  - pulumi-enterprise
+  - continuous-delivery
+search:
+  keywords:
+    - githubusercontent
+    - lesser
+    - service
+    - things
+    - know
+    - highlight
+    - '274700'
 ---
 
 As a reader of this blog, you've probably heard of the [Pulumi Service](/product/pulumi-service/), the default state-management [backend](/docs/iac/concepts/state-and-backends/) of the Pulumi CLI. If that's the case, there's also a good chance you've heard of a number of the Service's key features, like helping you organize your [projects and stacks](/docs/pulumi-cloud/projects-and-stacks/), collaborate with others with the help of [organizations](/docs/pulumi-cloud/admin/organizations/), or handle sensitive data securely with built-in support for [encrypted secrets](https://www.pulumi.com/docs/concepts/secrets/).

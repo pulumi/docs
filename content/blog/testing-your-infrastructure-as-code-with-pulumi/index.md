@@ -1,10 +1,20 @@
 ---
 title: "Testing Your Infrastructure as Code with Pulumi"
 authors: ["joe-duffy"]
-tags: ["JavaScript","TypeScript","continuous-delivery","Python"]
+tags: ["JavaScript", "TypeScript", "continuous-delivery", "Python"]
 date: "2019-04-17"
-meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock new automation capabilities that improve your team's productivity and confidence."
+meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock new
+  automation capabilities that improve your team's productivity and confidence."
 meta_image: "InfraTesting.png"
+search:
+  keywords:
+    - infrastructure
+    - testing
+    - acceptance
+    - unlock
+    - confidence
+    - code
+    - test
 ---
 
 {{% notes type="warning" %}}

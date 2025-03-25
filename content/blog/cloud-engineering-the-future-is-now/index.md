@@ -1,12 +1,22 @@
 ---
 title: "Cloud Engineering: The Future Is Now"
 date: 2021-04-29
-meta_desc: "The PulumiUP event featured industry leaders discussing the current state of cloud engineering and its future impacts on DevOps."
+meta_desc: "The PulumiUP event featured industry leaders discussing the current state
+  of cloud engineering and its future impacts on DevOps."
 meta_image: pulumiup_recap.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - cloud-engineering
+  - cloud-engineering
+search:
+  keywords:
+    - future
+    - engineering
+    - discussing
+    - cloud
+    - impacts
+    - featured
+    - leaders
 ---
 
 Thank you for joining the PulumiUP event. We had a stellar set of speakers and panelists discussing the future of DevOps and how Cloud Engineering is providing the tools and processes that enable faster delivery, the right mix of architecture, and foster collaboration among teams in an organization. Here are some of the highlights and takeaways from our speakers.

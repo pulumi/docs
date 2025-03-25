@@ -1,14 +1,24 @@
 ---
 title: "Announcing the Pulumi ESC GitHub Action"
 date: "2025-03-05"
-meta_desc: "Securely inject secrets into GitHub Actions with Pulumi ESC. Automate secret rotation, environment variables, and CI/CD pipelines—no long-lived credentials."
-authors: 
+meta_desc: "Securely inject secrets into GitHub Actions with Pulumi ESC. Automate
+  secret rotation, environment variables, and CI/CD pipelines—no long-lived credentials."
+authors:
   - "komal-ali"
 tags:
   - esc
   - secrets
   - github
   - features
+search:
+  keywords:
+    - esc
+    - github
+    - action
+    - announcing
+    - inject
+    - rotation
+    - lived
 ---
 
 We’re excited to share our latest addition to the Pulumi Ecosystem: the [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This Action lets you inject secrets and configuration securely into your GitHub Actions workflows as they are needed, rather than storing them as static, long-lived secrets.

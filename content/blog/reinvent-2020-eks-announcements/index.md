@@ -4,11 +4,20 @@ date: 2020-12-07
 meta_desc: "A recap of the re:Invent 2020 EKS announcements and their impacts"
 meta_image: reinvent-2020.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - kubernetes
-    - aws
-    - pulumi-events
+  - kubernetes
+  - aws
+  - pulumi-events
+search:
+  keywords:
+    - invent
+    - releases
+    - eks
+    - '2020'
+    - announcements
+    - recap
+    - impacts
 ---
 
 Amazon announced several Elastic Kubernetes Service feature releases and updates during the first week of AWS re:Invent 2020. If we look at all the announcements as a whole, we can see the Kubernetes ecosystem maturing to make deployments and management easier for organizations. Let's take a look at how they can benefit your use of EKS.

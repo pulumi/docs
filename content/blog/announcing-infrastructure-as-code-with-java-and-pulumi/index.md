@@ -2,14 +2,24 @@
 title: "Infrastructure as Code with Java and Pulumi"
 date: 2022-05-04T06:59:00-07:00
 draft: false
-meta_desc: Learn about Pulumi's support for Java and JVM languages, which enable you to use Infrastructure As Code on any Cloud with the JVM ecosystem.
+meta_desc: Learn about Pulumi's support for Java and JVM languages, which enable you
+  to use Infrastructure As Code on any Cloud with the JVM ecosystem.
 meta_image: meta.png
 authors:
-    - mikhail-shilkov
+  - mikhail-shilkov
 tags:
+  - java
+  - cloud-engineering
+  - infrastructure-as-code
+search:
+  keywords:
     - java
-    - cloud-engineering
-    - infrastructure-as-code
+    - infrastructure
+    - jvm
+    - code
+    - ecosystem
+    - languages
+    - enable
 ---
 
 Infrastructure has become a core part of application development as modern cloud capabilities such as microservices, containers, serverless, and data stores define your application's architecture. The term "infrastructure" covers all of the cloud resources your application needs to run. Modern architectures require thinking deeply about infrastructure while building your application, instead of treating it as an afterthought. Pulumi's approach helps developers, infrastructure engineers, and platform teams work together to leverage everything the modern cloud has to offer.

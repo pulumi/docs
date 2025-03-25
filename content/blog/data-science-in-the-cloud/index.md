@@ -1,16 +1,26 @@
 ---
 title: "Data Science in the Cloud"
 date: 2021-03-18
-meta_desc: "With Pulumi Automation API, deploy and manage infrastructure such as websites, storage, and databases within a Jupyter notebook."
+meta_desc: "With Pulumi Automation API, deploy and manage infrastructure such as websites,
+  storage, and databases within a Jupyter notebook."
 meta_image: data_science.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - data-and-analytics
-    - automation-api
-    - python
+  - data-and-analytics
+  - automation-api
+  - python
+  - jupyter
+  - data-science
+search:
+  keywords:
+    - cloud
+    - science
     - jupyter
-    - data-science
+    - data
+    - websites
+    - databases
+    - automation
 ---
 
 Data science has advanced because tools like Jupyter Notebook hide complexity by running high level code for the specific problem they are trying to solve. Increasing the level of abstraction lets a data scientist be more productive by reducing the effort to try multiple approaches to near zero, which encourages experimentation and better results.

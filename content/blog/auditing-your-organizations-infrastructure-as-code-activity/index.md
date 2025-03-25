@@ -1,10 +1,20 @@
 ---
 title: "Auditing Your Organization's Infrastructure as Code Activity"
 date: "2020-02-20"
-meta_desc: "Pulumi now supports Audit Logs. Learn how to audit your organization's infrastructure as code activity"
+meta_desc: "Pulumi now supports Audit Logs. Learn how to audit your organization's
+  infrastructure as code activity"
 meta_image: "auditlogs.png"
 authors: ["sean-holung"]
 tags: ["features", "pulumi-enterprise", "audit-logs"]
+search:
+  keywords:
+    - infrastructure
+    - activity
+    - audit
+    - auditing
+    - organization
+    - logs
+    - code
 ---
 
 We are excited to announce the release of Audit Logs on

@@ -1,14 +1,24 @@
 ---
 title: Deploying a Data Warehouse with Pulumi and Amazon Redshift
 date: 2022-11-29
-meta_desc: In this post, you'll use Pulumi to deploy an Amazon Redshift cluster into a VPC and learn how to load data into the cluster from Amazon S3.
+meta_desc: In this post, you'll use Pulumi to deploy an Amazon Redshift cluster into
+  a VPC and learn how to load data into the cluster from Amazon S3.
 meta_image: meta.png
 authors:
-    - christian-nunciato
+  - christian-nunciato
 tags:
-    - aws
+  - aws
+  - redshift
+  - data-warehouse
+search:
+  keywords:
+    - deploying
     - redshift
-    - data-warehouse
+    - warehouse
+    - amazon
+    - data
+    - cluster
+    - vpc
 ---
 
 It's fun to think about how much data there is swirling around in the global datasphere these days. However you choose to measure it (and there are various ways), it's a quantity so massive --- [hundreds of zettabytes](https://en.wikipedia.org/wiki/Zettabyte_Era), by some estimates --- that it's kind of a hard thing to quite get your head around.

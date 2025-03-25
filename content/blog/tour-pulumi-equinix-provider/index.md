@@ -1,14 +1,24 @@
 ---
 title: "A Tour of the Pulumi Equinix Provider"
 date: 2023-06-28
-meta_desc: Learn to use the capabilities of the Pulumi Equinix Provider, including how to deploy Kubernetes on Equinix Metal.
+meta_desc: Learn to use the capabilities of the Pulumi Equinix Provider, including
+  how to deploy Kubernetes on Equinix Metal.
 meta_image: tour-equinix-provider.png
 authors:
-    - josh-kodroff
-    - oscar-cobles
+  - josh-kodroff
+  - oscar-cobles
 tags:
+  - equinix
+  - kubernetes
+search:
+  keywords:
     - equinix
+    - tour
+    - metal
+    - provider
     - kubernetes
+    - capabilities
+    - cluster
 ---
 
 Equinix recently released their self-maintained, fully-supported Pulumi provider, available in the [Pulumi Registry](https://www.pulumi.com/registry/packages/equinix/). In this post, you'll get an overview of the Equinix resources the provider can manage and we'll show you how to deploy a Kubernetes cluster and associated workloads on Equinix Metal.

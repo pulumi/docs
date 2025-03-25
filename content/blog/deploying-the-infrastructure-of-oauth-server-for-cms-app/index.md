@@ -5,7 +5,16 @@ draft: false
 meta_desc: "Implementing and deploying an OAuth server for Netlify CMS on Fargate."
 meta_image: cms-oauth.png
 authors: ["zephyr-zhou"]
-tags: ["aws","github-actions", "netlify", "oauth", "ecs", "fargate"]
+tags: ["aws", "github-actions", "netlify", "oauth", "ecs", "fargate"]
+search:
+  keywords:
+    - netlify
+    - oauth
+    - cms
+    - server
+    - deploying
+    - fargate
+    - implementing
 ---
 
 {{% notes type="warning" %}}

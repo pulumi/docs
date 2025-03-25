@@ -1,5 +1,6 @@
 ---
-title: "Pulumi Release Notes: Colorized Stack Traces, Output Methods for JSON, OIDC integration, and much more!"
+title: "Pulumi Release Notes: Colorized Stack Traces, Output Methods for JSON, OIDC
+  integration, and much more!"
 allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
@@ -11,7 +12,8 @@ date: 2023-03-22
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: The latest Pulumi updates include our providers updates, enhancements made in the CLI and any Pulumi Service features released in January and February 2023.
+meta_desc: The latest Pulumi updates include our providers updates, enhancements made
+  in the CLI and any Pulumi Service features released in January and February 2023.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,16 +24,25 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-   - mikhail-shilkov
-   - meagan-cojocar
+  - mikhail-shilkov
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-   - features
-   - pulumi-releases
+  - features
+  - pulumi-releases
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - traces
+    - oidc
+    - colorized
+    - methods
+    - february
+    - january
+    - updates
 ---
 
 We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from January and February. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi-aws-native/releases) and Pulumi Service features in the [new features blogs](/blog/tag/features).

@@ -1,12 +1,21 @@
 ---
 title: "How we use Pulumi to build Pulumi"
 date: "2018-06-26"
-meta_desc: "In this post, we discuss how we use Pulumi ourselves to build, deploy and manage the Pulumi platform."
+meta_desc: "In this post, we discuss how we use Pulumi ourselves to build, deploy
+  and manage the Pulumi platform."
 meta_image: "image-4.png"
 authors: ["luke-hoban"]
-tags: ["Serverless","AWS","containers"]
+tags: ["Serverless", "AWS", "containers"]
+search:
+  keywords:
+    - build
+    - use
+    - discuss
+    - post
+    - platform
+    - deploy
+    - manage
 ---
-
 
 Here at Pulumi we are (perhaps unsurprisingly!) huge fans of using
 Pulumi to manage our cloud infrastructure and services. We author our

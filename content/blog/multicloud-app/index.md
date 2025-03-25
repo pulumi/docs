@@ -1,11 +1,22 @@
 ---
 title: "Multicloud Kubernetes: Running Apps Across EKS, AKS, and GKE"
 authors: ["mike-metral"]
-tags: ["Kubernetes","aws", "azure", "google-cloud", "eks", "aks", "gke"]
-meta_desc: "Run Kubernetes apps using a multicloud strategy. We'll walk through how to leverage multiple Kubernetes providers for deployments across AWS, Azure, and GCP."
+tags: ["Kubernetes", "aws", "azure", "google-cloud", "eks", "aks", "gke"]
+meta_desc: "Run Kubernetes apps using a multicloud strategy. We'll walk through how
+  to leverage multiple Kubernetes providers for deployments across AWS, Azure, and
+  GCP."
 date: "2019-08-14"
 
 meta_image: "multicloud.png"
+search:
+  keywords:
+    - multicloud
+    - kubernetes
+    - gke
+    - aks
+    - apps
+    - eks
+    - running
 ---
 
 Kubernetes clusters from the managed platforms of AWS Elastic Kubernetes Service (EKS),

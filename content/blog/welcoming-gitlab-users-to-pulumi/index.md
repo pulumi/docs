@@ -3,8 +3,18 @@ title: "Welcoming GitLab users to Pulumi"
 authors: ["praneet-loke"]
 tags: ["continuous-delivery"]
 date: "2018-12-03"
-meta_desc: "Pulumi supports signing in with your GitLab! Invite GitLab group members, integrate with your CI pipeline, and link your projects, branches, and commits."
+meta_desc: "Pulumi supports signing in with your GitLab! Invite GitLab group members,
+  integrate with your CI pipeline, and link your projects, branches, and commits."
 meta_image: "gl-2.png"
+search:
+  keywords:
+    - gitlab
+    - welcoming
+    - users
+    - signing
+    - invite
+    - commits
+    - branches
 ---
 
 We are very pleased to announce that [Pulumi](/) now

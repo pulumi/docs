@@ -1,13 +1,23 @@
 ---
 title: "Announcing the Pulumi REST API"
 date: 2021-09-20
-meta_desc: "The Pulumi REST API lets you manage projects, stacks, cloud resources, policies, and more, all with a simple, programmatic web interface."
+meta_desc: "The Pulumi REST API lets you manage projects, stacks, cloud resources,
+  policies, and more, all with a simple, programmatic web interface."
 meta_image: rest-api.png
 authors:
-    - joe-duffy
+  - joe-duffy
 tags:
-    - pulumi-news
-    - rest-api
+  - pulumi-news
+  - rest-api
+search:
+  keywords:
+    - rest
+    - announcing
+    - api
+    - programmatic
+    - stacks
+    - lets
+    - policies
 ---
 
 Pulumi was designed to be highly extensible from the outset. That includes core languages and cloud providers, of course, but our community is often using Pulumi as a central part of building and connecting their cloud engineering and automation systems, using features like the Automation API. Today we are happy to announce the next major step in enabling these kind of scenarios: the Pulumi REST API. This REST API offers functionality to manage projects and stacks, cloud resources, policies, and more. It has, in fact, been there all along, powering the Pulumi SDK, CLI, and Console behind the scenes, although we haven't fully documented or supported it until now. That changes today! We've already seen some amazing things built with this API and we're excited to see what you build with it too.

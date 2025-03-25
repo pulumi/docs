@@ -1,12 +1,22 @@
 ---
 title: "Policy as Code for Any Cloud Provider"
 date: 2020-10-27
-meta_desc: "Create policies for all clouds from AWS, Azure, Google Cloud Platform, and Kubernetes"
+meta_desc: "Create policies for all clouds from AWS, Azure, Google Cloud Platform,
+  and Kubernetes"
 meta_image: meta.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - policy as code
+  - policy as code
+search:
+  keywords:
+    - policies
+    - azure
+    - policy
+    - cloud
+    - clouds
+    - provider
+    - google
 ---
 
 Policies protect your infrastructure by controlling access, set limits that reduce the blast radius of an incident, and manage infrastructure operations. Policies are commonly created through a form on a cloud provider's administrative console, making replicating or versioning the policy more difficult. With Policy as Code, you can apply software engineering practices such as automated testing, deployment, and version control when creating policies.

@@ -1,19 +1,31 @@
 ---
-title: "Announcing the General Availability of Pulumi’s AWS Cloud Control Provider (formerly AWS Native) "
+title: "Announcing the General Availability of Pulumi’s AWS Cloud Control Provider
+  (formerly AWS Native) "
 allow_long_title: true
 date: 2024-10-01T09:00:00-07:00
 draft: false
 meta_desc: >-
-    Pulumi announces the GA of its AWS Cloud Control Provider, offering Day 1 support for new AWS features and enhancing cloud management tools.
+  Pulumi announces the GA of its AWS Cloud Control Provider, offering Day 1 support
+  for new AWS features and enhancing cloud management tools.
 meta_image: meta-aws.png
 authors:
-    - tejitha-raju
-    - matt-jeffryes
+  - tejitha-raju
+  - matt-jeffryes
 tags:
+  - aws
+  - provider
+  - cloudcontrol
+search:
+  keywords:
+    - announces
     - aws
+    - control
     - provider
-    - cloudcontrol
+    - cloud
+    - availability
+    - announcing
 ---
+
 We're excited to announce the general availability of the new [AWS Cloud Control Provider] for Pulumi (previously "AWS Native"). AWS is one of the most-used cloud providers across the Pulumi ecosystem, and we are committed to providing the fastest possible access to new AWS capabilities to all Pulumi users. This provider delivers on that promise by providing native support for all resources in the AWS Cloud Control APIs. As part of this launch, we are also renaming the provider from “AWS Native” to "AWS Cloud Control Provider," based on customer feedback during the preview phase, to provide users with a broader range of advanced cloud management tools exposed by the AWS Cloud Control API. This provider includes the following features and benefits,
 
 * __Day 1 support for AWS Resources__: Provides full coverage of the [AWS Cloud Control API], typically on the day of the launch, ensuring users can adopt new features immediately.
@@ -425,4 +437,3 @@ We look forward to your feedback and encourage you to explore the full potential
 [Pulumi AWS Provider]: https://www.pulumi.com/registry/packages/aws/
 [standard AWS Provider]: https://www.pulumi.com/registry/packages/aws/
 [AWS Cloud Control API]: https://aws.amazon.com/cloudcontrolapi/
-

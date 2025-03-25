@@ -2,28 +2,45 @@
 title: "Self-Service Infrastructure: From Tickets to Tools"
 date: 2025-03-06
 draft: false
-meta_desc: Unlock developer productivity with self-service infrastructure through modular abstraction and intent-based specifications for your internal developer platform.
+meta_desc: Unlock developer productivity with self-service infrastructure through
+  modular abstraction and intent-based specifications for your internal developer
+  platform.
 meta_image: meta.png
 authors:
-    - adam-gordon-bell
+  - adam-gordon-bell
 tags:
-    - platform-engineering
-    - platform-engineering-pillars
+  - platform-engineering
+  - platform-engineering-pillars
 social:
-    twitter: >
-            Self-Service Infrastructure: the key to scaling platform engineering! Learn how to break free from approval bottlenecks, implement modular abstractions, and create two-level architectures that empower developers while maintaining governance. Stop fighting manual processes and start building platforms that scale.
-    linkedin: >
-            Self-service infrastructure is critical for successful platform engineering. Is your organization trapped in approval bottlenecks?
+  twitter: >
+    Self-Service Infrastructure: the key to scaling platform engineering! Learn how
+    to break free from approval bottlenecks, implement modular abstractions, and create
+    two-level architectures that empower developers while maintaining governance.
+    Stop fighting manual processes and start building platforms that scale.
+  linkedin: >
+    Self-service infrastructure is critical for successful platform engineering. Is
+    your organization trapped in approval bottlenecks?
 
-            🚨 The Challenges:
-            • Copy-paste infrastructure anti-patterns
-            • Ticketing system bottlenecks
-            • Developers grappling with low-level details
-            • Slow provisioning and inconsistent implementations
+    🚨 The Challenges:
+    • Copy-paste infrastructure anti-patterns
+    • Ticketing system bottlenecks
+    • Developers grappling with low-level details
+    • Slow provisioning and inconsistent implementations
 
-            🛠️ The Solution:
-            Implement modular, intent-based infrastructure with a two-level abstraction model as a core pillar of your internal developer platform.
+    🛠️ The Solution:
+    Implement modular, intent-based infrastructure with a two-level abstraction model
+    as a core pillar of your internal developer platform.
+search:
+  keywords:
+    - infrastructure
+    - tickets
+    - self
+    - intent
+    - service
+    - developer
+    - modular
 ---
+
 [Previous articles](/blog/tag/platform-engineering-pillars/) in this series explored [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) principles and how Infrastructure as Code creates a solid foundation. But there's still an important challenge to address: the infrastructure provisioning process itself. Without proper modularity and a clear separation between intent and infrastructure details, things get messy—leading to friction, delays, and unnecessary complexity.
 
 <!--more-->

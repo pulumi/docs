@@ -1,15 +1,26 @@
 ---
-title: "Pulumi Release Notes: Resource Search, Deployment Actions, Projects in Self-Managed Backends, and more"
+title: "Pulumi Release Notes: Resource Search, Deployment Actions, Projects in Self-Managed
+  Backends, and more"
 allow_long_title: true
 date: 2023-05-24
-meta_desc: The latest Pulumi updates include our providers updates, enhancements made in the CLI and any Pulumi Cloud features released in March and April 2023.
+meta_desc: The latest Pulumi updates include our providers updates, enhancements made
+  in the CLI and any Pulumi Cloud features released in March and April 2023.
 meta_image: meta.png
 authors:
-   - mikhail-shilkov
-   - meagan-cojocar
+  - mikhail-shilkov
+  - meagan-cojocar
 tags:
-   - features
-   - pulumi-releases
+  - features
+  - pulumi-releases
+search:
+  keywords:
+    - backends
+    - search
+    - self
+    - march
+    - actions
+    - april
+    - updates
 ---
 
 We have been busy shipping improvements in the last 2 months. Let's walk through the release highlights across Pulumi engineering areas from March and April. If you want to learn more between release blogs, follow the CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/releases) and Pulumi Cloud features in the [new features blogs](/blog/tag/features).

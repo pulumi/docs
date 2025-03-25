@@ -1,10 +1,20 @@
 ---
 title: "Upcoming AWS + Pulumi Webinar on Feb 5"
 authors: ["erin-xue"]
-tags: ["AWS","continuous-delivery"]
+tags: ["AWS", "continuous-delivery"]
 date: "2019-01-09"
-meta_desc: "In February, Pulumi & Learning Machine hosted a webinar with AWS Fargate which covered how to implement cloud native infrastructure across using AWS."
+meta_desc: "In February, Pulumi & Learning Machine hosted a webinar with AWS Fargate
+  which covered how to implement cloud native infrastructure across using AWS."
 meta_image: code-comparison.png
+search:
+  keywords:
+    - webinar
+    - upcoming
+    - aws
+    - fargate
+    - feb
+    - february
+    - learning
 ---
 
 Pulumi is hosting a webinar with AWS Fargate **on

@@ -1,21 +1,33 @@
 ---
-title: "Pulumi Patterns and Practices Platform (P3): A reference architecture for large-scale organizations"
+title: "Pulumi Patterns and Practices Platform (P3): A reference architecture for
+  large-scale organizations"
 allow_long_title: true
 date: 2024-08-05
 draft: false
 social_media: "TBD"
-meta_desc: "Pulumi Patterns and Practices Platform (P3) is a reference architecture of a Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
+meta_desc: "Pulumi Patterns and Practices Platform (P3) is a reference architecture
+  of a Pulumi-based internal platform for infrastructure management and secure deployments
+  in a large-scale environment."
 meta_image: meta.png
 authors:
-    - troy-howard
+  - troy-howard
 tags:
-    - platform-engineering
-    - patterns-and-practices-platform
-    - developer-experience-devex
-    - devsecops
+  - platform-engineering
+  - patterns-and-practices-platform
+  - developer-experience-devex
+  - devsecops
+  - architecture
+  - enterprise
+  - devops
+search:
+  keywords:
+    - practices
+    - p3
+    - patterns
+    - platform
     - architecture
-    - enterprise
-    - devops
+    - large
+    - reference
 ---
 
 Infrastructure management is all fun and games until you find yourself scrolling through 1000+ resources in your AWS console. Worse, when one rogue product team wants to use Azure and your data team wants to be on GCP, you're ARM wrestling in Azure and watching your economies of scale tip the wrong direction as you're copy-pasting CloudFormation templates into yet another git repo. This. Needs. To. Be. A. Platform!

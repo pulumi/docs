@@ -1,5 +1,6 @@
 ---
-title: "Pulumi Deployments is Generally Available: Scale Your Infrastructure, Not Your Headcount"
+title: "Pulumi Deployments is Generally Available: Scale Your Infrastructure, Not
+  Your Headcount"
 
 allow_long_title: true
 
@@ -19,7 +20,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Pulumi Deployments is now generally available, with pricing and support available across all Pulumi Cloud editions.
+meta_desc: Pulumi Deployments is now generally available, with pricing and support
+  available across all Pulumi Cloud editions.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -30,13 +32,22 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
+  - features
 
 
+search:
+  keywords:
+    - headcount
+    - generally
+    - deployments
+    - scale
+    - available
+    - pricing
+    - editions
 ---
 
 We are thrilled to announce the general availability (GA) of [Pulumi Deployments](/docs/pulumi-cloud/deployments), a fully managed platform designed to simplify and accelerate your journey from code to cloud. Whether you're an organization just beginning your cloud journey or a platform team supporting thousands of engineers, Pulumi Deployments is your go-to solution for managing infrastructure at scale. With the GA of Pulumi Deployments comes a suite of feature improvements since launch and a pricing model starting November 1st.

@@ -1,14 +1,24 @@
 ---
 title: "Pulumi Universal IaC: New Support For Java, YAML and AWS CDK"
 date: 2022-05-04T07:00:00-07:00
-meta_desc: "Pulumi's Universal Infrastructure as Code platform now supports Java, YAML, AWS CDK interop, Oracle Cloud and a Pulumi Service provider."
+meta_desc: "Pulumi's Universal Infrastructure as Code platform now supports Java,
+  YAML, AWS CDK interop, Oracle Cloud and a Pulumi Service provider."
 meta_image: pulumi-evolution.png
 authors:
-    - luke-hoban
+  - luke-hoban
 tags:
+  - java
+  - yaml
+  - crosswalk
+search:
+  keywords:
+    - cdk
     - java
+    - universal
+    - interop
     - yaml
-    - crosswalk
+    - aws
+    - oracle
 ---
 
 {{% notes type="warning" %}}

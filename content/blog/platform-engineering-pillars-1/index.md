@@ -2,26 +2,42 @@
 title: "Platform Pillars: Build Platforms, Not Infrastructure"
 date: 2025-02-26
 draft: false
-meta_desc: Explore the essential pillars of Platform Engineering and learn how to transform infrastructure chaos into a streamlined development experience.
+meta_desc: Explore the essential pillars of Platform Engineering and learn how to
+  transform infrastructure chaos into a streamlined development experience.
 meta_image: meta.png
 authors:
-    - adam-gordon-bell
+  - adam-gordon-bell
 tags:
-    - platform-engineering
-    - platform-engineering-pillars
+  - platform-engineering
+  - platform-engineering-pillars
 social:
-    twitter: >
-        Introducing our new series on Platform Engineering Pillars! Learn how to transform infrastructure chaos and developer friction into a streamlined development experience. Dive into the 6 essential capabilities every successful platform needs.
-    linkedin: > 
-        Platform Engineering is transforming how organizations build and deliver software. But what makes a successful developer platform?
+  twitter: >
+    Introducing our new series on Platform Engineering Pillars! Learn how to transform
+    infrastructure chaos and developer friction into a streamlined development experience.
+    Dive into the 6 essential capabilities every successful platform needs.
+  linkedin: >
+    Platform Engineering is transforming how organizations build and deliver software.
+    But what makes a successful developer platform?
 
-        In this new series, we explore the 6 essential pillars of Platform Engineering - from infrastructure automation to governance at scale. Learn how to overcome common challenges and create a platform that truly empowers developers.
+    In this new series, we explore the 6 essential pillars of Platform Engineering
+    - from infrastructure automation to governance at scale. Learn how to overcome
+    common challenges and create a platform that truly empowers developers.
 
-        Read the first article to discover:
-        • Why traditional approaches create friction
-        • The core capabilities every platform needs
-        • How to start your platform engineering journey
+    Read the first article to discover:
+    • Why traditional approaches create friction
+    • The core capabilities every platform needs
+    • How to start your platform engineering journey
+search:
+  keywords:
+    - platforms
+    - pillars
+    - platform
+    - chaos
+    - infrastructure
+    - build
+    - transform
 ---
+
 Software drives innovation. Development teams face pressure to ship features faster. But speed collides with infrastructure complexity. Developers struggle with cloud setups, juggle scattered tools, and wait on operations teams for resources. The result is friction and slower innovation.
 
 This is where [Platform Engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) comes in. It helps developers move faster by creating tools that actually work. A good internal platform lets teams self-serve infrastructure, find documentation, follow best practices, and focus on what they do best: writing useful software.

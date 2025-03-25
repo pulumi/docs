@@ -4,11 +4,20 @@ date: 2020-08-17
 meta_desc: "Pinpoint uses Pulumi to streamline deployments and scale Kubernetes"
 meta_image: pinpoint.png
 authors:
-    - andrew-kunzel
-    - michael-goode
+  - andrew-kunzel
+  - michael-goode
 tags:
-    - guest-post
-    - Kubernetes
+  - guest-post
+  - Kubernetes
+search:
+  keywords:
+    - pinpoint
+    - kubernetes
+    - instancetype
+    - deployments
+    - manages
+    - costs
+    - streamline
 ---
 
 *This guest blog was contributed by Andrew Kunzel and Michael Goode of [Pinpoint](https://www.pinpointhq.com/). Andrew is the Director of Backend Engineering, and Michael is a Platform Operations Engineer.*

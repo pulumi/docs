@@ -1,12 +1,23 @@
 ---
 title: Manage DigitalOcean Kubernetes Clusters and Workloads
-h1: "Manage DigitalOcean Kubernetes Clusters and Workloads using Infrastructure as Code"
+h1: "Manage DigitalOcean Kubernetes Clusters and Workloads using Infrastructure as
+  Code"
 authors: ["joe-duffy"]
 tags: ["digitalocean", "kubernetes"]
-meta_desc: "We've partnered with DigitalOcean to publish a new tutorial showing how to provision a Kubernetes cluster, deploy an app to it, and assign a stable domain."
+meta_desc: "We've partnered with DigitalOcean to publish a new tutorial showing how
+  to provision a Kubernetes cluster, deploy an app to it, and assign a stable domain."
 date: "2019-09-30"
 
 meta_image: "digitalocean-kubernetes.png"
+search:
+  keywords:
+    - digitalocean
+    - kubernetes
+    - workloads
+    - publish
+    - clusters
+    - partnered
+    - manage
 ---
 
 We recently partnered with DigitalOcean to publish a new tutorial, [*How to Manage DigitalOcean and Kubernetes Infrastructure with Pulumi*](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi). This short tutorial walks you through provisioning a new DigitalOcean Kubernetes cluster, deploying an application to it, and then assigninging a stable domain name to your application's load balancer &mdash; all in a handful of lines of infrastructure as code.

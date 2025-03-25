@@ -14,7 +14,8 @@ date: 2023-06-13
 # which is useful for targeting search results or social-media previews.
 # This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Pulumi Cloud launches Property Search, a feature on top of Resource Search that opens search to resource properties.
+meta_desc: Pulumi Cloud launches Property Search, a feature on top of Resource Search
+  that opens search to resource properties.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect ratio
@@ -26,18 +27,27 @@ meta_image: meta.png
 # of the team member files at /data/team/team.
 # Create a file for yourself if you don't already have one.
 authors:
-    - meagan-cojocar
-    - bryce-lampe
+  - meagan-cojocar
+  - bryce-lampe
 
 # At least one tag is required.
 # Lowercase, hyphen-delimited is recommended.
 tags:
-    - pulumi-cloud
-    - features
+  - pulumi-cloud
+  - features
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,
 # and please remove these comments before submitting for review.
+search:
+  keywords:
+    - cloud
+    - search
+    - property
+    - enhanced
+    - resource
+    - launches
+    - opens
 ---
 
 Two months ago we launched [Resource Search for Pulumi Cloud](/blog/pulumi-insights) to offer multi-cloud resource search and analytics across every cloud environment in your organization. Today, we're excited to announce that we are taking this a step further and exposing a much larger set of data to search over: resource properties.

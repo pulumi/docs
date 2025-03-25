@@ -3,17 +3,27 @@ title: "Using Pulumi Securely"
 
 date: 2022-10-13
 
-meta_desc: See how to use organization access tokens, team access tokens, teams and managed federated identities to make your Pulumi usage more secure.
+meta_desc: See how to use organization access tokens, team access tokens, teams and
+  managed federated identities to make your Pulumi usage more secure.
 
 meta_image: meta.png
 
 authors:
-    - tushar-shah
+  - tushar-shah
 
 tags:
-    - security
-    - pulumi-enterprise
+  - security
+  - pulumi-enterprise
 
+search:
+  keywords:
+    - securely
+    - tokens
+    - using
+    - federated
+    - identities
+    - access
+    - organization
 ---
 
 Cloud computing’s greatest strength and weakness is the proliferation of a massive number of services globally. To adequately assess and mitigate the inherent risks for your company, customers, and employees, cloud architects are typically responsible for a vast surface area of potential endpoints and vectors of attack.

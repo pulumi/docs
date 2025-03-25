@@ -11,7 +11,8 @@ date: 2023-03-08T14:00:00-08:00
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Create Docker images up to 50x faster with reduced need for rebuilds, Docker BuildKit, and caching improvements.
+meta_desc: Create Docker images up to 50x faster with reduced need for rebuilds, Docker
+  BuildKit, and caching improvements.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,18 +23,27 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - monica-rodriguez
-    - guinevere-saenger
+  - monica-rodriguez
+  - guinevere-saenger
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - containers
-    - docker
-    - providers
-    - pulumi-releases
-    - features
-    - pulumi-news
+  - containers
+  - docker
+  - providers
+  - pulumi-releases
+  - features
+  - pulumi-news
 
+search:
+  keywords:
+    - 50x
+    - docker
+    - buildkit
+    - images
+    - faster
+    - rebuilds
+    - caching
 ---
 
 The [Pulumi Docker Provider](/registry/packages/docker) has been a top Pulumi provider since it launched in 2018. It can be used to provision any of the resources available in Docker, including containers, images, networks, volumes and more.

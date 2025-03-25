@@ -2,13 +2,23 @@
 title: "Introducing `pulumi state move`: Move Resources Between Stacks or Projects"
 allow_long_title: true
 date: 2024-07-25
-meta_desc: Introducing the new `pulumi state move` command that allows moving resources between stacks and projects
+meta_desc: Introducing the new `pulumi state move` command that allows moving resources
+  between stacks and projects
 meta_image: meta.png
 authors:
-    - thomas-gummerer
+  - thomas-gummerer
 tags:
-    - announcement
-    - CLI
+  - announcement
+  - CLI
+search:
+  keywords:
+    - resources
+    - randompet
+    - introducing
+    - stacks
+    - state
+    - projects
+    - moving
 ---
 
 Today we're announcing the [`pulumi state move`](/docs/cli/commands/pulumi_state_move/) command, which can be used to move resources that are managed by Pulumi between different stacks and/or projects. With the `pulumi state move` command, you can refactor your Pulumi Infrastructure as Code without any disruption to your deployed cloud infrastructure, enabling you to evolve and scale with confidence.

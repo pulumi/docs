@@ -3,17 +3,27 @@ title: "Secure your Kubernetes toolchain with Pulumi ESC and OIDC"
 date: 2023-11-21T00:00:00-07:00
 
 meta_desc: >-
-  With Pulumi and ESC, we provide an automated workflow that generates a kubeconfig on the fly for every command using short term credentials issued via OIDC.
+  With Pulumi and ESC, we provide an automated workflow that generates a kubeconfig
+  on the fly for every command using short term credentials issued via OIDC.
 
 meta_image: meta.png
 
 authors:
-    - levi-blackstone
-    - eron-wright
+  - levi-blackstone
+  - eron-wright
 
 tags:
+  - esc
+  - kubernetes
+search:
+  keywords:
+    - oidc
     - esc
+    - toolchain
     - kubernetes
+    - secure
+    - kubeconfig
+    - issued
 ---
 
 Keeping long-lived kubeconfig around on disk is insecure and error-prone. You need a secure workflow that removes tedium.

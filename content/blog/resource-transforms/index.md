@@ -1,14 +1,25 @@
 ---
-title: "Introducing Resource Transforms: Enhancing Flexibility for Packaged Component Resources"
+title: "Introducing Resource Transforms: Enhancing Flexibility for Packaged Component
+  Resources"
 allow_long_title: true
 date: 2024-07-19
-meta_desc: Announcing a new Transform system with support for transforming child resources of packaged components.
+meta_desc: Announcing a new Transform system with support for transforming child resources
+  of packaged components.
 meta_image: meta.png
 authors:
-    - fraser-waters
-    - justin-vanpatten
+  - fraser-waters
+  - justin-vanpatten
 tags:
-    - features
+  - features
+search:
+  keywords:
+    - flexibility
+    - packaged
+    - transforms
+    - enhancing
+    - transforming
+    - child
+    - component
 ---
 
 Pulumi has supported a [Transformations](/docs/concepts/options/transformations) system for a number of years now. This has proved to be a powerful and flexible escape hatch for modifying resource properties and options across your entire program. For example, you could use Transformations to [automatically apply tags](/blog/automatically-enforcing-aws-resource-tagging-policies/#automatically-applying-tags) to all taggable resources in your program, including the children of component resources.

@@ -2,19 +2,29 @@
 title: "IaC Best Practices: Understanding Code Organization & Stacks"
 date: 2023-02-20
 updated: 2025-03-04
-meta_desc: Learn best practices for organizing Pulumi code and managing stacks. Discover how to structure projects for maintainability and scalability.
+meta_desc: Learn best practices for organizing Pulumi code and managing stacks. Discover
+  how to structure projects for maintainability and scalability.
 meta_image: meta.png
 authors:
-    - aaron-kao
-    - christian-nunciato
-    - scott-lowe
+  - aaron-kao
+  - christian-nunciato
+  - scott-lowe
 tags:
-    - best-practices
-    - cloud-engineering
-    - aws
-    - eks
+  - best-practices
+  - cloud-engineering
+  - aws
+  - eks
 aliases:
-    - /blog/iac-recommended-practices-code-organization-and-stacks/
+  - /blog/iac-recommended-practices-code-organization-and-stacks/
+search:
+  keywords:
+    - stacks
+    - iac
+    - practices
+    - understanding
+    - best
+    - maintainability
+    - code
 ---
 
 This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) best practices around these topics, using Zephyr and their online store as the use case.<!--more-->

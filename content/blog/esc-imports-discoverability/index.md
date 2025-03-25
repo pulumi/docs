@@ -3,17 +3,27 @@ title: "Pulumi ESC: Discovering Environment Imports"
 date: 2024-12-13T00:00:00-07:00
 draft: false
 allow_long_title: true
-meta_desc: "The new Pulumi ESC Environment imports discoverability features empower you to manage and update your secrets and configuration with confidence."
+meta_desc: "The new Pulumi ESC Environment imports discoverability features empower
+  you to manage and update your secrets and configuration with confidence."
 meta_image: "meta.png"
 authors:
-- sean-yeh
-- arun-loganathan
+  - sean-yeh
+  - arun-loganathan
 tags:
   - esc
   - secrets
   - config management
   - features
   - releases
+search:
+  keywords:
+    - esc
+    - environments
+    - imports
+    - discovering
+    - environment
+    - discoverability
+    - confidence
 ---
 
 Managing secrets and configuration across multiple environments and stacks can easily become complex, leading to duplicated values, inconsistencies, and security risks. [Pulumi ESC](/product/esc) solves this with composable environments via [imports](/docs/esc/environments/imports/), allowing you to define configuration once and reuse it organization-wide.  Now, with the new capabilities to discover environment imports, you gain unprecedented visibility and control, simplifying the management of even the most complex infrastructure and applications.
@@ -39,4 +49,4 @@ We've added powerful discoverability features to give you clear insight into you
 
 ## Conclusion 
 
-Pulumi ESC's import feature is a paradigm shift in how you manage your secrets and configuration. The new suite of import discoverability features gives you the confidence to manage complex deployments with ease. Explore the new features and share your feedback through our [Community Slack](/community/) or [GitHub Repo](https://github.com/pulumi/esc/issues/new/choose). 
+Pulumi ESC's import feature is a paradigm shift in how you manage your secrets and configuration. The new suite of import discoverability features gives you the confidence to manage complex deployments with ease. Explore the new features and share your feedback through our [Community Slack](/community/) or [GitHub Repo](https://github.com/pulumi/esc/issues/new/choose).

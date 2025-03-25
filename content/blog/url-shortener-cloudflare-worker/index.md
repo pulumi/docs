@@ -11,7 +11,8 @@ date: 2022-06-29T23:00:09+01:00
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Need a URL shortener that responds is milliseconds from anywhere, delivered from over 250 edge locations? Let's deploy one with Pulumi to Cloudflare Workers.
+meta_desc: Need a URL shortener that responds is milliseconds from anywhere, delivered
+  from over 250 edge locations? Let's deploy one with Pulumi to Cloudflare Workers.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,15 +23,24 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - david-flanagan
+  - david-flanagan
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - cloudflare
-    - serverless
+  - cloudflare
+  - serverless
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - cloudflare
+    - shortener
+    - workers
+    - url
+    - zone
+    - deploying
+    - milliseconds
 ---
 
 Cloudflare Workers provides a serverless execution environment that allows you to create entirely new applications or augment existing ones without configuring or maintaining infrastructure. They support NodeJS and WebAssembly (WASM), as well as any language that can compile to WASM.

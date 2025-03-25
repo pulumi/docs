@@ -2,21 +2,31 @@
 date: 2023-08-30
 title: "The Real AI Challenge is Cloud, not Code!"
 allow_long_title: true
-meta_desc: "Accelerating AI/ML innovation with infrastructure as code through a hands-on journey to deploy your own chatbot"
+meta_desc: "Accelerating AI/ML innovation with infrastructure as code through a hands-on
+  journey to deploy your own chatbot"
 meta_image: "deploy-your-own-chatbot-with-pulumi-huggingface.png"
 authors:
-    - kat-morgan
+  - kat-morgan
 tags:
+  - ai
+  - ml
+  - iac
+  - llm
+  - vllm
+  - mlops
+  - azure
+  - llama
+  - llama2
+  - python
+search:
+  keywords:
     - ai
+    - challenge
+    - chatbot
     - ml
-    - iac
-    - llm
-    - vllm
-    - mlops
-    - azure
-    - llama
-    - llama2
-    - python
+    - accelerating
+    - real
+    - hands
 ---
 
 The AI industry is stealing the show as tech's goldrush of the '20s. Just looking at ChatGPT's [record setting user growth](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/), and rapid 3rd party integration [by top brands](https://www.forbes.com/sites/bernardmarr/2023/05/30/10-amazing-real-world-examples-of-how-companies-are-using-chatgpt-in-2023/?sh=ed1c90f14418), it is not surprising the hype suggests this is the beginning of a major digital transformation.

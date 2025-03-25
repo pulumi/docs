@@ -1,16 +1,26 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: Kubernetes Applications"
 date: 2021-08-16
-allow_long_title: True
-meta_desc: "Deploying applications on Azure Kubernetes Service (AKS) with the Azure CLI and Infrastructure as Code."
+allow_long_title: true
+meta_desc: "Deploying applications on Azure Kubernetes Service (AKS) with the Azure
+  CLI and Infrastructure as Code."
 meta_image: azure-top-5.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - kubernetes
-    - Azure
-    - helm
+  - kubernetes
+  - Azure
+  - helm
 
+search:
+  keywords:
+    - kubernetes
+    - developer
+    - azure
+    - aks
+    - applications
+    - things
+    - know
 ---
 
 All modern software is cloud software, and it's more than likely that it runs on Kubernetes. Developers are faced with the challenge of deploy applications composed of many microservices. And each microservice adds to the complexity of the deployment.

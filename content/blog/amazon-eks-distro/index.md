@@ -5,12 +5,21 @@ draft: false
 meta_desc: Use Pulumi to provision an Amazon EKS Distro cluster.
 meta_image: meta.png
 authors:
-    - luke-hoban
-    - lee-briggs
+  - luke-hoban
+  - lee-briggs
 tags:
-    - kubernetes
-    - aws
+  - kubernetes
+  - aws
+  - eks
+search:
+  keywords:
+    - distro
     - eks
+    - started
+    - amazon
+    - cluster
+    - provision
+    - getting
 ---
 
 As Kubernetes grows in popularity, the number of options for Kubernetes users continues to increase. Providers of managed Kubernetes offerings will often learn lessons about operating large numbers of clusters at scale; it's increasingly common that they will contribute this knowledge back to the ecosystem, allowing those organizations who need more control and flexibility to reap the benefits.

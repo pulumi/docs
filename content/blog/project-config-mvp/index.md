@@ -2,14 +2,24 @@
 title: "Simplify Configuration Management with Project-level Config"
 date: 2022-11-02T06:00:00-07:00
 updated: 2025-03-07
-meta_desc: Pulumi’s project-level config simplifies infrastructure setup, enabling seamless configuration across all stacks. Learn how to use it effectively.
+meta_desc: Pulumi’s project-level config simplifies infrastructure setup, enabling
+  seamless configuration across all stacks. Learn how to use it effectively.
 meta_image: meta.png
 authors:
-    - fraser-waters
-    - zaid-ajaj
+  - fraser-waters
+  - zaid-ajaj
 tags:
-    - features
+  - features
+  - config
+search:
+  keywords:
+    - simplify
+    - configuration
+    - seamless
     - config
+    - level
+    - project
+    - management
 ---
 
 One of our most up-voted feature requests (with 78 thumbs ups) is to [support hierarchical config](https://github.com/pulumi/pulumi/issues/2307). We're happy to announce that we've now released the first part of plans to support this feature.

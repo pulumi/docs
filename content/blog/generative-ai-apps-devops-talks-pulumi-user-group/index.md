@@ -1,18 +1,28 @@
 ---
 title: "Unlocking the Benefits of LangChain AI for Dev, Sec and Ops"
 date: 2023-10-26
-meta_desc: "Learn LLMs and GenAI using LangChain AI, with key lessons for DevOps broken down into Development, Operations, and Security."
+meta_desc: "Learn LLMs and GenAI using LangChain AI, with key lessons for DevOps broken
+  down into Development, Operations, and Security."
 meta_image: langchain-ai-gen-ai-workshop-llm-devops.png
 authors:
-    - sara-huddleston
-    - kat-morgan
+  - sara-huddleston
+  - kat-morgan
 tags:
-   - pulumi-events
-   - community
-   - ai
-   - devops
-   - langchain
-   - ml
+  - pulumi-events
+  - community
+  - ai
+  - devops
+  - langchain
+  - ml
+search:
+  keywords:
+    - langchain
+    - sec
+    - ai
+    - ops
+    - unlocking
+    - genai
+    - llms
 ---
 
 The emergence of DevOps revolutionized software development. Now, with AI powered tools like LangChain, these transformations are being accelerated. Unsurprisingly, our distinguished speaker at the launch of Pulumi's in-person AI Talks, Patrick Debois, who coined the term "DevOps," has recently tuned into LLM and GenAI Ops using the Langchain framework.

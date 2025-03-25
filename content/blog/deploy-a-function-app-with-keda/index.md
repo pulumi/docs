@@ -4,8 +4,18 @@ h1: "Deploy a Function App with KEDA (Kubernetes-based Event-Driven Autoscaling)
 authors: ["mikhail-shilkov"]
 tags: ["Azure", "Kubernetes", "Serverless"]
 meta_image: "meta.png"
-meta_desc: "Hosting Azure Functions in Kubernetes with KEDA: How It Works and the Simplest Way to Get Started"
+meta_desc: "Hosting Azure Functions in Kubernetes with KEDA: How It Works and the
+  Simplest Way to Get Started"
 date: "2019-10-10"
+search:
+  keywords:
+    - functions
+    - azure
+    - keda
+    - kubernetes
+    - simplest
+    - hosting
+    - works
 ---
 
 **Azure Functions** is a managed service for serverless applications in the Azure cloud. More broadly, Azure Functions is a runtime with multiple hosting possibilities. **KEDA** ([Kubernetes-based Event-Driven Autoscaling](https://cloudblogs.microsoft.com/opensource/2019/05/06/announcing-keda-kubernetes-event-driven-autoscaling-containers/)) is an emerging option to host this runtime in **Kubernetes**.

@@ -1,13 +1,23 @@
 ---
 title: "Architecture as Code: Microservices"
 date: 2020-04-07
-meta_desc: "Build microservices with reusable components created with common programming languages and Pulumi"
+meta_desc: "Build microservices with reusable components created with common programming
+  languages and Pulumi"
 meta_image: microservices.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - architecture-as-code
+  - architecture-as-code
+  - microservices
+search:
+  keywords:
     - microservices
+    - architecture
+    - reusable
+    - code
+    - components
+    - common
+    - programming
 ---
 
 This article is the third in a series about Architecture as Code. The [first article](/blog/architecture-as-code-intro/) provided an overview of virtual machines, microservices, serverless, and Kubernetes. The [second](/blog/architecture-as-code-vm/) one went in-depth on deploying virtual machines as reusable components. In this third installment, we'll look at microservices and how to implement them as reusable components with Pulumi.

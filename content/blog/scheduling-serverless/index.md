@@ -4,10 +4,19 @@ date: 2020-02-25
 meta_desc: "Automate maintenance tasks by writing and scheduling serverless functions"
 meta_image: meta.png
 authors:
-    - cyrus-najmabadi
+  - cyrus-najmabadi
 tags:
+  - serverless
+  - lambda
+search:
+  keywords:
     - serverless
-    - lambda
+    - scheduling
+    - maintenance
+    - automate
+    - functions
+    - tasks
+    - writing
 ---
 
 Scheduling events has long been an essential part of automation; many tasks need to run at specific times or intervals. You could be checking StackOverflow for new questions every 20 minutes or compiling a report that is emailed every other Friday at 4:00 pm. Today, many of these tasks can be efficiently accomplished in the cloud. While each cloud has its flavor of scheduled functions, this post steps you through an example using [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) with the help of Pulumi.

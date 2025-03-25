@@ -2,20 +2,30 @@
 title: "Scaling Applications Across Multiple Regions"
 date: 2023-12-06T20:24:40Z
 draft: false
-meta_desc: Learn about deploying applications to multiple regions globally. Uncover strategies for achieving high availability in a distributed environment.
+meta_desc: Learn about deploying applications to multiple regions globally. Uncover
+  strategies for achieving high availability in a distributed environment.
 meta_image: meta.png
 authors:
-    - adora-nwodo
+  - adora-nwodo
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - multi-region-scaling
-    - cloud-deployment
-    - application-scalability
-    - distributed-systems
-    - geographic-distribution
-    - high-availability
+  - multi-region-scaling
+  - cloud-deployment
+  - application-scalability
+  - distributed-systems
+  - geographic-distribution
+  - high-availability
 
+search:
+  keywords:
+    - regions
+    - scaling
+    - multiple
+    - applications
+    - uncover
+    - achieving
+    - globally
 ---
 
 As a team building a distributed cloud service that will be used by different people around the world, you will need strategies to cater to users globally, ensuring uninterrupted service even in the face of disruptions. Have you ever wondered how businesses operate and deliver high-level performance across different regions?  Well, that is the result of scaling applications across multiple regions --- in a bid to ensure constant access and flexibility, organizations distribute their applications and databases across various geographic regions so that if one part faces issues, the service remains available elsewhere.

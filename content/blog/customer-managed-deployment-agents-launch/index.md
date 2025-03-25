@@ -19,7 +19,9 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Customer-Managed Agents for Pulumi Deployments is now available, allowing users to self-host deployment agents and get the same power and flexibility of Pulumi Deployments.
+meta_desc: Customer-Managed Agents for Pulumi Deployments is now available, allowing
+  users to self-host deployment agents and get the same power and flexibility of Pulumi
+  Deployments.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -30,14 +32,23 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - arun-loganathan
-    - german-lena
+  - arun-loganathan
+  - german-lena
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
+  - features
 
 
+search:
+  keywords:
+    - agents
+    - customer
+    - deployments
+    - managed
+    - introducing
+    - host
+    - flexibility
 ---
 
 At Pulumi, we constantly strive to build solutions that not only simplify infrastructure management but also align with the diverse and specific needs of our customers. To that end, we're thrilled to announce the general availability of Customer-Managed Agents for Pulumi Deployments.

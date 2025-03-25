@@ -1,9 +1,19 @@
 ---
 title: "Introducing Pulumi, a Cloud Development Platform"
 date: "2018-06-18"
-meta_desc: "Announcing the launch of Pulumi, an open source cloud development platform, and the cloud's first true programming model using familiar programming languages."
+meta_desc: "Announcing the launch of Pulumi, an open source cloud development platform,
+  and the cloud's first true programming model using familiar programming languages."
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
+search:
+  keywords:
+    - introducing
+    - cloud
+    - programming
+    - platform
+    - development
+    - announcing
+    - languages
 ---
 
 Ahoy!

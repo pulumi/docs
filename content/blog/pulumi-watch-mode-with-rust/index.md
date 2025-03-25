@@ -4,14 +4,24 @@ date: 2022-09-21
 updated: 2025-03-07
 
 meta_desc: >
-    Speed up Pulumi deployments with watch mode. Learn how Pulumi Watch enables real-time infrastructure updates and faster iterations.
+  Speed up Pulumi deployments with watch mode. Learn how Pulumi Watch enables real-time
+  infrastructure updates and faster iterations.
 meta_image: meta.png
 authors:
-    - aaron-friel
+  - aaron-friel
 tags:
-    - features
-    - watch
+  - features
+  - watch
+  - rust
+search:
+  keywords:
     - rust
+    - prototyping
+    - rapid
+    - watch
+    - enabling
+    - iterations
+    - mode
 ---
 
 Pulumi enables engineers to employ the best practices of their field to [infrastructure as code](/what-is/what-is-infrastructure-as-code/). The

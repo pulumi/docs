@@ -1,16 +1,27 @@
 ---
-title: "Pulumi Announces Drift Detection and Remediation: Continuously Monitor Your Infrastructure Changes"
-allow_long_title: True
+title: "Pulumi Announces Drift Detection and Remediation: Continuously Monitor Your
+  Infrastructure Changes"
+allow_long_title: true
 date: 2024-04-24T07:00:04-08:00
 draft: false
-meta_desc: Pulumi introduces Drift Detection and Remediation to continuously monitor and correct configuration drift in cloud infrastructures.
+meta_desc: Pulumi introduces Drift Detection and Remediation to continuously monitor
+  and correct configuration drift in cloud infrastructures.
 meta_image: drift.png
 authors:
-    - meagan-cojocar
-    - komal-ali
+  - meagan-cojocar
+  - komal-ali
 tags:
-    - features
-    - infrastructure-lifecycle-management
+  - features
+  - infrastructure-lifecycle-management
+search:
+  keywords:
+    - drift
+    - detection
+    - remediation
+    - monitor
+    - continuously
+    - announces
+    - infrastructures
 ---
 
 At Pulumi, we recognize the challenges platform teams face in maintaining the stability and compliance of their cloud infrastructures. One of the primary challenges is configuration drift, where the actual state of the infrastructure deviates from its intended state. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider’s console, unintended consequences of scripts, or unauthorized changes. Such drift can lead to significant problems including security vulnerabilities that open up potential breaches, compliance violations that can result in penalties, operational disruptions that affect user experience and business operations, and increased costs from unnecessary resource spend.

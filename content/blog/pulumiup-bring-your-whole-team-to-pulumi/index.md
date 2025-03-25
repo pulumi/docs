@@ -2,13 +2,23 @@
 title: Easily bring your team to Pulumi with SAML SSO and SCIM
 title_tag: Bring your team to Pulumi with SAML SSO & SCIM
 date: 2021-04-20T00:00:00-07:00
-meta_desc: Pulumi has full support for enterprise authentication standards like SAML and SCIM. 
+meta_desc: Pulumi has full support for enterprise authentication standards like SAML
+  and SCIM.
 meta_image: sso.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
-    - pulumi-enterprise
-    - security
+  - pulumi-enterprise
+  - security
+search:
+  keywords:
+    - scim
+    - sso
+    - bring
+    - saml
+    - standards
+    - authentication
+    - enterprise
 ---
 
 Pulumi's Cloud Engineering Platform helps teams of all sizes deliver and manage cloud apps and infrastructure. In the Pulumi Service, everyone on the team can see the infrastructure the team is responsible for, when it was last deployed, how it’s configured, and more. You can see a full breakdown of the infrastructure and understand how the team brings together individual cloud services to create applications. When you bring your teams together on Pulumi, you get a “single pane of glass” over all the cloud applications and infrastructure managed with Pulumi.

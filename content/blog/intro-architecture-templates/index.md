@@ -2,13 +2,23 @@
 title: "Introducing Pulumi Architecture Templates"
 date: 2022-10-19T10:59:37-05:00
 updated: 2025-03-05
-meta_desc: "Accelerate cloud infrastructure deployments with Pulumi’s architecture templates. Get prebuilt, best-practice templates for AWS, GCP, Azure, and more."
+meta_desc: "Accelerate cloud infrastructure deployments with Pulumi’s architecture
+  templates. Get prebuilt, best-practice templates for AWS, GCP, Azure, and more."
 meta_image: meta.png
 authors:
-    - laura-santamaria
+  - laura-santamaria
 tags:
+  - templates
+  - architecture
+search:
+  keywords:
     - templates
+    - introducing
     - architecture
+    - prebuilt
+    - accelerate
+    - gcp
+    - practice
 ---
 
 🚀 Deploying cloud infrastructure is hard. Getting the architecture right from the start can be time-consuming. What if you could skip the hassle and start with prebuilt, best-practice templates?

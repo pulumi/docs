@@ -10,7 +10,8 @@ date: 2022-05-03T10:16:25-07:00
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: "We just celebrated Pulumi's 5th birthday! To commemorate, we are publishing a multi-part series on all things infrastructure as code."
+meta_desc: "We just celebrated Pulumi's 5th birthday! To commemorate, we are publishing
+  a multi-part series on all things infrastructure as code."
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -21,14 +22,23 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - joe-duffy
+  - joe-duffy
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - infrastructure-as-code
+  - infrastructure-as-code
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - birthday
+    - infrastructure
+    - years
+    - commemorate
+    - celebrated
+    - 5th
+    - code
 ---
 
 Unbelievably, we just celebrated Pulumi's 5th birthday. To commemorate, we are publishing multi-part series on all things infrastructure as code, starting with why we’re so excited about it:

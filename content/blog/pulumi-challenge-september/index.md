@@ -1,19 +1,29 @@
 ---
 title: "Pulumi Challenge: One Quickstart to Rule them All"
 
-date: 2022-09-30T9:24:50-07:00
+date: 2022-09-30T09:24:50-07:00
 
-meta_desc: Take the Pulumi Challenge - use a template to build a serverless application with AWS API Gateway and Lambda in less than 5 mins.
+meta_desc: Take the Pulumi Challenge - use a template to build a serverless application
+  with AWS API Gateway and Lambda in less than 5 mins.
 
 meta_image: meta.png
 
 authors:
-    - kat-cosgrove
+  - kat-cosgrove
 
 tags:
-    - pulumi-challenge
-    - announcements
+  - pulumi-challenge
+  - announcements
 
+search:
+  keywords:
+    - quickstart
+    - gateway
+    - challenge
+    - rule
+    - mins
+    - swag
+    - lambda
 ---
 
 The Pulumi Challenge continues! We think Pulumi is an amazing IaC tool that increases developer velocity and handles the scale of the cloud with ease. To prove it, take this month's challenge and win another unique piece of swag!

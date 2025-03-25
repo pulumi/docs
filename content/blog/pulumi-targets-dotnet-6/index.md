@@ -2,10 +2,20 @@
 title: "Improved Pulumi Experience with .NET 6"
 authors: ["zaid-ajaj"]
 tags: ["dotnet", "csharp", "fsharp", "vb.net"]
-meta_desc: "Pulumi projects default to .NET 6 with simplified program structure and leaner generated C# code"
+meta_desc: "Pulumi projects default to .NET 6 with simplified program structure and
+  leaner generated C# code"
 meta_image: thumbnail.png
 date: "2022-07-22"
 updated: 2025-03-06
+search:
+  keywords:
+    - net
+    - improved
+    - leaner
+    - experience
+    - simplified
+    - structure
+    - generated
 ---
 
 In this blog post, we will talk about how Pulumi is now using [.NET 6](https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-6), the latest Long-Term Support version of .NET, as our default across the ecosystem. We will discuss the changes applied to templates, program structure and code generation. We also explain how Pulumi C# projects can benefit from the latest features in .NET 6 and how it simplifies your programs overall. Let's dive in, shall we?

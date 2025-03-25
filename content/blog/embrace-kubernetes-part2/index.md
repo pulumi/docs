@@ -1,13 +1,23 @@
 ---
 title: "It’s Time to Embrace Kubernetes! Really? (Part 2)"
 date: 2020-12-11
-meta_desc: "How to evaluate your choices when choosing Kubernetes as your application platform."
+meta_desc: "How to evaluate your choices when choosing Kubernetes as your application
+  platform."
 meta_image: embrace-k8s.png
 authors:
-    - lee-briggs
+  - lee-briggs
 tags:
-    - kubernetes
+  - kubernetes
 
+search:
+  keywords:
+    - embrace
+    - kubernetes
+    - evaluate
+    - choices
+    - really
+    - choosing
+    - time
 ---
 
 In the [first article](/blog/embrace-kubernetes-part1/) in this series,  we gave you some questions to help you and others at your company decide if Kubernetes is right for you. In this post, we’ll give you an example of where Kubernetes can be a good fit.

@@ -1,5 +1,6 @@
 ---
-title: "Jan. releases: Pulumi Packages support for plugins hosted anywhere and Pulumi Service 3rd party audit for secrets decryption"
+title: "Jan. releases: Pulumi Packages support for plugins hosted anywhere and Pulumi
+  Service 3rd party audit for secrets decryption"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
@@ -16,7 +17,8 @@ draft: false
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: The latest Pulumi updates also include Pulumi import support for Kubernetes CRD, various improvements to Helm Release, and native ES Module support.
+meta_desc: The latest Pulumi updates also include Pulumi import support for Kubernetes
+  CRD, various improvements to Helm Release, and native ES Module support.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -27,15 +29,24 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - decryption
+    - plugins
+    - audit
+    - es
+    - jan
+    - support
+    - party
 ---
 
 Over the holidays we have been releasing new features and improvements. Read on to learn about what's new in this release!

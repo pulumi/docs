@@ -12,7 +12,8 @@ date: 2023-01-06T11:10:50-08:00
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Starting today you can use Open ID Connect (OIDC) for temporary cloud credentials when using Pulumi Deployments
+meta_desc: Starting today you can use Open ID Connect (OIDC) for temporary cloud credentials
+  when using Pulumi Deployments
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -23,15 +24,24 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - pat-gavlin
+  - pat-gavlin
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - credentials
+    - deployments
+    - oidc
+    - connect
+    - id
+    - open
+    - temporary
 ---
 
 After [launching Pulumi Deployments](/blog/pulumi-deployments) a few months ago and receiving a ton of community feedback (thank you!) today we are launching an integration with OpenID Connect (OIDC) to enable temporary credentials and granular access controls. We would like to thank GitHub user [eriklz](https://github.com/eriklz) for creating the [original request](https://github.com/pulumi/pulumi-cloud-requests/issues/144) for this functionality.

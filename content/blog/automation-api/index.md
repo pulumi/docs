@@ -1,12 +1,22 @@
 ---
 title: "The Pulumi Automation API - The Next Quantum Leap in IaC"
 date: 2020-10-19
-meta_desc: "Introducing the Pulumi Automation API - Scaling Cloud Projects with Software, Not Humans"
+meta_desc: "Introducing the Pulumi Automation API - Scaling Cloud Projects with Software,
+  Not Humans"
 meta_image: automation_api.png
 authors:
-    - evan-boyle
+  - evan-boyle
 tags:
-    - automation api
+  - automation api
+search:
+  keywords:
+    - quantum
+    - leap
+    - automation
+    - humans
+    - api
+    - scaling
+    - introducing
 ---
 
 Today’s [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) platforms let organizations build rich, reliable, and complex cloud-based applications and architectures. But as teams move to modern cloud technologies,  they continue to search for ways to drive increased software-driven automation. Although modern Infrastructure as Code tools bring key software engineering benefits to cloud engineering, they remain focused on human-driven workflows. For example, a person running `pulumi up` at their terminal or wiring the Pulumi CLI into their CI/CD system.

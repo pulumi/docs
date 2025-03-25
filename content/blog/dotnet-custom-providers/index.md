@@ -2,10 +2,20 @@
 title: "Preview of .NET resource providers"
 authors: ["fraser-waters"]
 tags: ["pulumi-news", ".net", "c#", "packages", "features", "native-providers"]
-meta_desc: "Today we are releasing preview support for writing Pulumi providers in any .NET language, including C#, F#, and VB.NET."
+meta_desc: "Today we are releasing preview support for writing Pulumi providers in
+  any .NET language, including C#, F#, and VB.NET."
 date: "2023-01-18"
 
 meta_image: "meta.png"
+search:
+  keywords:
+    - preview
+    - dotnet
+    - including
+    - net
+    - providers
+    - vb
+    - resource
 ---
 
 Today we are pleased to announce the Preview of .NET support for custom resource providers. This means you can build custom providers using your favorite .NET language, including C#, F#, and VB.NET.

@@ -3,16 +3,26 @@ title: "Announcing KubeCrash Fall 2022 — the KubeCon Detroit Warm-up"
 
 date: 2022-09-23T10:19:23-05:00
 
-meta_desc: Arrive in style and up to date on the biggest trends for KubeCon + CloudNativeCon North America this October in Detroit, Michigan!
+meta_desc: Arrive in style and up to date on the biggest trends for KubeCon + CloudNativeCon
+  North America this October in Detroit, Michigan!
 
 meta_image: meta.png
 
 authors:
-    - kat-cosgrove
+  - kat-cosgrove
 
 tags:
+  - kubecrash
+  - events
+search:
+  keywords:
+    - kubecon
+    - fall
+    - '2022'
+    - detroit
     - kubecrash
-    - events
+    - warm
+    - michigan
 ---
 
 **100% Virtual. 100% Free. 100% Open Source.** Arrive in style and up to date on the biggest trends for KubeCon + CloudNativeCon North America this October in Detroit, Michigan! KubeCrash is a fully-virtual two-day event curated by the coolest companies in cloud native, providing you with a practical, hands-on learning opportunity in the run-up to the conference. All for free! Held October 5 and 6 in both Americas and European time zones, you’ll emerge with new development skills and conversation starters for KubeCon. [Take a peek at the program and register online!](https://www.kubecrash.io/)

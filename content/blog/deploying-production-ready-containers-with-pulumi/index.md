@@ -1,10 +1,20 @@
 ---
 title: "Deploying production-ready containers with Pulumi"
 date: "2018-06-20"
-meta_desc: "This blog covers creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer."
+meta_desc: "This blog covers creating a container registry instance in ECR, creating
+  task definitions in ECS, and configuring a load balancer."
 meta_image: "hello-world-page.png"
 authors: ["donna-malayeri"]
-tags: ["JavaScript","AWS","containers"]
+tags: ["JavaScript", "AWS", "containers"]
+search:
+  keywords:
+    - containers
+    - ready
+    - production
+    - deploying
+    - ecr
+    - covers
+    - balancer
 ---
 
 Containers are a great way to deploy applications to the cloud,

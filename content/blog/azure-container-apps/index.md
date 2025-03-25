@@ -1,12 +1,22 @@
 ---
 title: "Deploying new Azure Container Apps with familiar languages"
 date: 2021-11-02T09:00:00-07:00
-meta_desc: "Use the Pulumi Azure Native Provider to deploy containerized apps to Microsoft's new Azure Container Apps platform for serverless apps."
+meta_desc: "Use the Pulumi Azure Native Provider to deploy containerized apps to Microsoft's
+  new Azure Container Apps platform for serverless apps."
 meta_image: container-apps.png
 authors:
-    - mikhail-shilkov
+  - mikhail-shilkov
 tags:
+  - azure
+search:
+  keywords:
     - azure
+    - languages
+    - apps
+    - container
+    - familiar
+    - deploying
+    - new
 ---
 
 Today, Microsoft [announced](https://aka.ms/containerapps/ignite-blog) a new general-purpose serverless container platform: [Azure Container Apps](https://aka.ms/containerapps/). Container Apps is a fully managed platform for microservice applications that runs on top of Kubernetes and open-source technologies like KEDA, Envoy, and Dapr.

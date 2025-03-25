@@ -1,20 +1,31 @@
 ---
-title: "Pulumi ESC and External Secrets Operator: The Perfect Solution for Today's Cloud-Native Secret Management"
+title: "Pulumi ESC and External Secrets Operator: The Perfect Solution for Today's
+  Cloud-Native Secret Management"
 allow_long_title: true
 date: "2024-10-04"
-meta_desc: "Learn how to manage Kubernetes secrets with Pulumi ESC and External Secrets Operator"
+meta_desc: "Learn how to manage Kubernetes secrets with Pulumi ESC and External Secrets
+  Operator"
 meta_image: meta.png
 authors:
-- engin-diri
+  - engin-diri
 
 tags:
-- pulumi
-- esc
-- external-secrets-operator
-- kubernetes
-- cloud-native
-- security
-- secret-management
+  - pulumi
+  - esc
+  - external-secrets-operator
+  - kubernetes
+  - cloud-native
+  - security
+  - secret-management
+search:
+  keywords:
+    - secrets
+    - operator
+    - kubernetes
+    - esc
+    - external
+    - secret
+    - perfect
 ---
 
 Managing secrets in a cloud-native environment can be challenging, but it is crucial for ensuring the security and integrity of any application or infrastructure. We encounter a lot of different types of secrets, from API keys, database passwords, and certificates to tokens and passwords. These secrets need to be stored securely and accessed by different services in a secure way without exposing any sensitive information to unauthorized users.

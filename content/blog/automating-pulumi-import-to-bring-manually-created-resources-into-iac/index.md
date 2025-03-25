@@ -4,10 +4,19 @@ date: 2023-01-30
 meta_desc: How to bring order to the chaos of manually created cloud resources.
 meta_image: automating-pulumi-import.png
 authors:
-    - josh-kodroff
+  - josh-kodroff
 tags:
-    - aws
+  - aws
+  - import
+search:
+  keywords:
+    - manually
+    - automating
+    - created
+    - chaos
     - import
+    - resources
+    - bring
 ---
 
 A few weeks ago, I was speaking with a consultant at one of the big firms who asked me how he could introduce Pulumi into a client’s organization when that client had created many infrastructure resources manually through the AWS console and was running production workloads on those resources.

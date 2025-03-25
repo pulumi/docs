@@ -8,6 +8,15 @@ meta_desc: >-
 meta_image: meta.png
 authors: [abhinav-gupta]
 tags: [features, stack-reference]
+search:
+  keywords:
+    - streamline
+    - outputdetails
+    - outputs
+    - stack
+    - transform
+    - calling
+    - references
 ---
 
 You can use the new `StackReference.getOutputDetails` method

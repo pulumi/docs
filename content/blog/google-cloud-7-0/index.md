@@ -2,7 +2,8 @@
 title: "Pulumi Google Cloud Classic 7.0"
 date: 2023-11-10T09:00:00-04:00
 draft: false
-meta_desc: "The Latest for Your Modern Cloud Infrastructure: Pulumi Google Cloud Provider 7.0."
+meta_desc: "The Latest for Your Modern Cloud Infrastructure: Pulumi Google Cloud Provider
+  7.0."
 meta_image: meta.png
 authors:
   - monica-rodriguez
@@ -10,6 +11,15 @@ tags:
   - google-cloud
   - releases
 
+search:
+  keywords:
+    - cloud
+    - google
+    - classic
+    - gcp
+    - modern
+    - provider
+    - latest
 ---
 
 The latest major release of the Pulumi Google Cloud Classic Provider is available now! This [7.0 release](https://github.com/pulumi/pulumi-gcp/releases/tag/v7.0.0) contains the latest upstream changes to keep you up-to-date along with a highly requested bug fix, keeping your journey in managing Google Cloud resources fresh and smooth.

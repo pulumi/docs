@@ -3,17 +3,27 @@ title: "Announcing the Pulumi Challenge!"
 
 date: 2022-08-30T11:24:50-07:00
 
-meta_desc: Try Pulumi out for yourself by taking a Pulumi Challenge! Learn how it works, and get super secret swag in return.
+meta_desc: Try Pulumi out for yourself by taking a Pulumi Challenge! Learn how it
+  works, and get super secret swag in return.
 
 meta_image: meta.png
 
 authors:
-    - kat-cosgrove
+  - kat-cosgrove
 
 tags:
-    - pulumi-challenge
-    - announcements
+  - pulumi-challenge
+  - announcements
 
+search:
+  keywords:
+    - announcing
+    - challenge
+    - swag
+    - super
+    - taking
+    - secret
+    - works
 ---
 
 Introducing the Pulumi Challenge, launching today! We think Pulumi is an amazing IaC tool that increases developer velocity and handles the scale of the cloud with ease. Try it out for yourself by taking a Pulumi Challenge! You'll build something cool, and we'll send you some super secret swag in return. We promise it's better than a t-shirt.

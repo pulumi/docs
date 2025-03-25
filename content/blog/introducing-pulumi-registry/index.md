@@ -2,13 +2,23 @@
 title: "Introducing Pulumi Registry: Deploy Cloud Infra Faster"
 date: 2021-10-18T00:00:00-07:00
 updated: 2025-03-06
-meta_desc: Pulumi Registry helps you discover, deploy, and manage cloud infrastructure faster. Browse 60+ providers & components, with full API docs & best practices.
+meta_desc: Pulumi Registry helps you discover, deploy, and manage cloud infrastructure
+  faster. Browse 60+ providers & components, with full API docs & best practices.
 meta_image: meta.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
-    - features
-    - cloud-engineering
+  - features
+  - cloud-engineering
+search:
+  keywords:
+    - registry
+    - faster
+    - infra
+    - introducing
+    - deploy
+    - cloud
+    - browse
 ---
 
 Pulumi offers the most complete [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform for building, deploying, and managing modern cloud infrastructure and applications. When you use Pulumi, a vast library of cloud resources—from compute, storage, and other cloud infrastructure to databases to identity providers to monitoring systems—is at your fingertips. As the Pulumi community has grown, we’ve [heard from many of you](https://github.com/pulumi/pulumi/issues/3297) that we needed a central hub where you could find all of those resources. We’ve also heard from Pulumi partners that they wanted a great place to showcase their integrations with Pulumi so that their customers can more easily learn how to use Pulumi to deploy and manage their products.
