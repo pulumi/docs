@@ -1,5 +1,5 @@
 ---
-title: "Top 5 Things an Azure Developer Needs to Know: Kubernetes Infrastructure"
+title: "Top Azure Services Every Developer Should Know: Building on AKS"
 h1: How to Deploy Azure Kubernetes Service (AKS) Clusters with Portal & IaC
 date: 2021-08-12
 updated: 2025-03-25
