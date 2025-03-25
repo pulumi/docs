@@ -2,9 +2,16 @@
 title: "pulumi about"
 aliases:
   - /docs/reference/cli/pulumi_about/
+search:
+  keywords:
+    - transitive
+    - stack
+    - current
+    - information
+    - verbose
+    - emit
+    - tracing
 ---
-
-
 
 Print information about the Pulumi environment.
 

@@ -1,22 +1,32 @@
 ---
 title_tag: "Configuration | Pulumi Concepts"
-meta_desc: This page provides an overview of how Pulumi manages cloud application configuration settings.
+meta_desc: This page provides an overview of how Pulumi manages cloud application
+  configuration settings.
 title: Configuration
 h1: Configuration
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Configuration
-        parent: iac-concepts
-        weight: 6
-    concepts:
-        weight: 6
+  iac:
+    name: Configuration
+    parent: iac-concepts
+    weight: 6
+  concepts:
+    weight: 6
 aliases:
-- /docs/reference/config/
-- /docs/tour/programs-configuration/
-- /docs/tour/programs-configuring/
-- /docs/intro/concepts/config/
-- /docs/concepts/config
+  - /docs/reference/config/
+  - /docs/tour/programs-configuration/
+  - /docs/tour/programs-configuring/
+  - /docs/intro/concepts/config/
+  - /docs/concepts/config
+search:
+  keywords:
+    - configuration
+    - manages
+    - config
+    - application
+    - overview
+    - provides
+    - settings
 ---
 
 In many cases, different stacks for a single project will need differing values. For instance, you may want to use a different size for your AWS EC2 instance, or a different number of servers for your Kubernetes cluster between your development and production stacks.

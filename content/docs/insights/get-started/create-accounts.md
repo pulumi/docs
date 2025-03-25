@@ -2,13 +2,23 @@
 title_tag: Create an Insights Account | Pulumi Insights
 title: Create an Insights Account
 h1: "Pulumi Insights: Create an Insights Account"
-meta_desc: This page provides an overview on how to get started with Pulumi Insights Accounts.
+meta_desc: This page provides an overview on how to get started with Pulumi Insights
+  Accounts.
 weight: 3
 menu:
   insights:
     parent: insights-get-started
     identifier: insights-get-started-accounts
     weight: 3
+search:
+  keywords:
+    - insights
+    - accounts
+    - account
+    - create
+    - page
+    - overview
+    - discovery
 ---
 
 Now that you have set up your ESC and your cloud account, let’s create your first Pulumi Insights account and kick off a discovery scan. In this example you will see the steps for AWS and you can follow along with any cloud provider.

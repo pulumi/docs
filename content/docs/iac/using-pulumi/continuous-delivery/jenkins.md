@@ -1,22 +1,32 @@
 ---
 title_tag: "Set Up A Jenkins Pipeline | CI/CD"
-meta_desc: This document will help you setup a Jenkins Pipeline to deploy a sample app to Azure using Pulumi.
+meta_desc: This document will help you setup a Jenkins Pipeline to deploy a sample
+  app to Azure using Pulumi.
 title: Jenkins
 h1: Pulumi CI/CD & Jenkins Pipelines
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Jenkins
-        parent: iac-using-pulumi-cicd
-        weight: 11
-    usingpulumi:
-        parent: cont_delivery
-        weight: 1
+  iac:
+    name: Jenkins
+    parent: iac-using-pulumi-cicd
+    weight: 11
+  usingpulumi:
+    parent: cont_delivery
+    weight: 1
 aliases:
-- /docs/console/continuous-delivery/jenkins/
-- /docs/guides/continuous-delivery/jenkins/
-- /docs/using-pulumi/continuous-delivery/jenkins/
-- /docs/iac/packages-and-automation/continuous-delivery/jenkins/
+  - /docs/console/continuous-delivery/jenkins/
+  - /docs/guides/continuous-delivery/jenkins/
+  - /docs/using-pulumi/continuous-delivery/jenkins/
+  - /docs/iac/packages-and-automation/continuous-delivery/jenkins/
+search:
+  keywords:
+    - jenkins
+    - pipeline
+    - sample
+    - setup
+    - document
+    - azure
+    - app
 ---
 
 This document will help you setup a [Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/) to deploy a sample app to Azure using Pulumi.

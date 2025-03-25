@@ -1,6 +1,7 @@
 ---
 title_tag: Configure OpenID Connect for Google Cloud | OIDC
-meta_desc: This page describes how to configure OIDC token exchange in Google Cloud for use with Pulumi
+meta_desc: This page describes how to configure OIDC token exchange in Google Cloud
+  for use with Pulumi
 title: Google Cloud
 h1: Configuring OpenID Connect for Google Cloud
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,11 +12,20 @@ menu:
     weight: 3
     identifier: pulumi-cloud-access-management-oidc-provider-gcp
 aliases:
-- /docs/guides/oidc/provider/gcp
-- /docs/intro/deployments/oidc/provider/gcp/
-- /docs/pulumi-cloud/deployments/oidc/provider/gcp/
-- /docs/pulumi-cloud/oidc/provider/gcp/
-- /docs/pulumi-cloud/oidc/gcp/
+  - /docs/guides/oidc/provider/gcp
+  - /docs/intro/deployments/oidc/provider/gcp/
+  - /docs/pulumi-cloud/deployments/oidc/provider/gcp/
+  - /docs/pulumi-cloud/oidc/provider/gcp/
+  - /docs/pulumi-cloud/oidc/gcp/
+search:
+  keywords:
+    - cloud
+    - google
+    - oidc
+    - exchange
+    - describes
+    - token
+    - configure
 ---
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Google Cloud. OIDC in Google Cloud uses [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation) to allow access to resources. Access to the resources is authorized using attribute conditions that validate the contents of the OIDC token issued by the Pulumi Cloud.

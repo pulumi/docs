@@ -9,6 +9,15 @@ menu:
     identifier: esc-rotated-secrets
     parent: esc-integrations
     weight: 2
+search:
+  keywords:
+    - secrets
+    - various
+    - rotated
+    - credential
+    - rotator
+    - rotation
+    - enables
 ---
 
 Pulumi ESC Rotators enable you to rotate credentials both automatically and manually for a number of supported services.

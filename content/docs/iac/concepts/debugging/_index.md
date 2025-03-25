@@ -1,19 +1,29 @@
 ---
 title_tag: "Debugging Pulumi Programs"
-meta_desc: "Guide to attaching a debugger to Pulumi programs and stepping through the code."
+meta_desc: "Guide to attaching a debugger to Pulumi programs and stepping through
+  the code."
 title: Debugging
 h1: Debugging Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        Name: Debugging
-        parent: iac-concepts
-        weight: 16
-    usingpulumi:
-        identifier: debugging
-        weight: 9
+  iac:
+    Name: Debugging
+    parent: iac-concepts
+    weight: 16
+  usingpulumi:
+    identifier: debugging
+    weight: 9
 aliases:
-    - /docs/using-pulumi/debugging/
+  - /docs/using-pulumi/debugging/
+search:
+  keywords:
+    - debugging
+    - debugger
+    - stepping
+    - attaching
+    - programs
+    - debug
+    - code
 ---
 
 Because Pulumi uses general purpose programming languages to provision cloud resources, you can take advantage of native debugging tools to troubleshoot your infrastructure definitions.

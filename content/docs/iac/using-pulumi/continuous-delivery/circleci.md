@@ -5,18 +5,27 @@ title: CircleCI
 h1: Pulumi CI/CD & CircleCI
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: CircleCI
-        parent: iac-using-pulumi-cicd
-        weight: 4
+  iac:
+    name: CircleCI
+    parent: iac-using-pulumi-cicd
+    weight: 4
 aliases:
-- /docs/reference/cd-circleci/
-- /docs/console/continuous-delivery/circleci/
-- /docs/guides/continuous-delivery/circleci/
-- /docs/using-pulumi/continuous-delivery/cd-circleci/
-- /docs/guides/continuous-delivery/cd-circleci/
-- /docs/using-pulumi/continuous-delivery/circleci/
-- /docs/iac/packages-and-automation/continuous-delivery/circleci/
+  - /docs/reference/cd-circleci/
+  - /docs/console/continuous-delivery/circleci/
+  - /docs/guides/continuous-delivery/circleci/
+  - /docs/using-pulumi/continuous-delivery/cd-circleci/
+  - /docs/guides/continuous-delivery/cd-circleci/
+  - /docs/using-pulumi/continuous-delivery/circleci/
+  - /docs/iac/packages-and-automation/continuous-delivery/circleci/
+search:
+  keywords:
+    - circleci
+    - cd
+    - stacks
+    - orbs
+    - orb
+    - ci
+    - deploy
 ---
 
 This page details how to use [CircleCI](https://circleci.com/) to deploy Pulumi stacks.

@@ -2,9 +2,16 @@
 title: "pulumi state move"
 aliases:
   - /docs/reference/cli/pulumi_state_move/
+search:
+  keywords:
+    - resources
+    - state
+    - stack
+    - parents
+    - string
+    - verbose
+    - tracing
 ---
-
-
 
 Move resources from one stack to another
 

@@ -1,6 +1,7 @@
 ---
 title_tag: azure-login Pulumi ESC Provider
-meta_desc: The azure-login Pulumi ESC Provider enables you to log in to Azure using OIDC or static credentials.
+meta_desc: The azure-login Pulumi ESC Provider enables you to log in to Azure using
+  OIDC or static credentials.
 title: azure-login
 h1: azure-login
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: esc-dynamic-login-credentials
     weight: 2
 aliases:
-    - /docs/pulumi-cloud/esc/providers/azure-login/
-    - /docs/esc/providers/azure-login/
+  - /docs/pulumi-cloud/esc/providers/azure-login/
+  - /docs/esc/providers/azure-login/
+search:
+  keywords:
+    - azure
+    - login
+    - oidc
+    - credentials
+    - enables
+    - static
+    - provider
 ---
 
 The `azure-login` provider enables you to log in to Azure using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to access Azure resources or fetch secrets using the `azure-secrets` provider.

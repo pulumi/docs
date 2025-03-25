@@ -1,8 +1,15 @@
 ---
 title: "esc env run"
+search:
+  keywords:
+    - run
+    - env
+    - esc
+    - command
+    - environment
+    - arguments
+    - given
 ---
-
-
 
 Open the environment with the given name and run a command.
 

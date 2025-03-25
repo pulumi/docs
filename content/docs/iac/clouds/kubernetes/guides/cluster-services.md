@@ -1,6 +1,7 @@
 ---
 title_tag: Deploy Kubernetes Cluster Services | Crosswalk
-meta_desc: This page will provide an overview on how to deploy Kubernetes Cluster Services.
+meta_desc: This page will provide an overview on how to deploy Kubernetes Cluster
+  Services.
 title: Cluster services
 h1: Kubernetes cluster services
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
@@ -13,6 +14,15 @@ menu:
 aliases:
   - /docs/guides/crosswalk/kubernetes/cluster-services/
   - /docs/clouds/kubernetes/guides/cluster-services/
+search:
+  keywords:
+    - cluster
+    - services
+    - kubernetes
+    - cloudwatch
+    - provide
+    - deploy
+    - overview
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

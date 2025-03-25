@@ -2,9 +2,16 @@
 title: "pulumi env init"
 aliases:
   - /docs/reference/cli/pulumi_env_init/
+search:
+  keywords:
+    - environment
+    - init
+    - env
+    - file
+    - given
+    - verbose
+    - tracing
 ---
-
-
 
 Create an empty environment with the given name.
 

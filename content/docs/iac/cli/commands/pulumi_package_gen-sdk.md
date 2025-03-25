@@ -2,9 +2,16 @@
 title: "pulumi package gen-sdk"
 aliases:
   - /docs/reference/cli/pulumi_package_gen-sdk/
+search:
+  keywords:
+    - sdk
+    - schema
+    - gen
+    - package
+    - generate
+    - schema_source
+    - folder
 ---
-
-
 
 Generate SDK(s) from a package or schema
 

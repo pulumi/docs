@@ -1,6 +1,7 @@
 ---
 title_tag: Before You Begin | Kubernetes
-meta_desc: This page provides an overview on how to get started with Pulumi when starting an Kubernetes project.
+meta_desc: This page provides an overview on how to get started with Pulumi when starting
+  an Kubernetes project.
 title: Before you begin
 h1: "Pulumi & Kubernetes: Before you begin"
 weight: 2
@@ -10,15 +11,24 @@ menu:
     identifier: kubernetes-begin
 
 aliases:
-- /docs/quickstart/kubernetes/begin/
-- /docs/quickstart/kubernetes/install-pulumi/
-- /docs/quickstart/kubernetes/install-language-runtime/
-- /docs/quickstart/kubernetes/configure/
-- /docs/get-started/kubernetes/install-pulumi/
-- /docs/get-started/kubernetes/install-language-runtime/
-- /docs/get-started/kubernetes/configure/
-- /get-started/kubernetes/begin/
-- /docs/iac/get-started/kubernetes/begin/
+  - /docs/quickstart/kubernetes/begin/
+  - /docs/quickstart/kubernetes/install-pulumi/
+  - /docs/quickstart/kubernetes/install-language-runtime/
+  - /docs/quickstart/kubernetes/configure/
+  - /docs/get-started/kubernetes/install-pulumi/
+  - /docs/get-started/kubernetes/install-language-runtime/
+  - /docs/get-started/kubernetes/configure/
+  - /get-started/kubernetes/begin/
+  - /docs/iac/get-started/kubernetes/begin/
+search:
+  keywords:
+    - kubernetes
+    - starting
+    - begin
+    - install
+    - language
+    - overview
+    - project
 ---
 
 Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.

@@ -2,9 +2,16 @@
 title: "pulumi stack history"
 aliases:
   - /docs/reference/cli/pulumi_stack_history/
+search:
+  keywords:
+    - dates
+    - history
+    - stack
+    - int
+    - page
+    - results
+    - size
 ---
-
-
 
 Display history for a stack
 

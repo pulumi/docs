@@ -2,9 +2,16 @@
 title: "pulumi state repair"
 aliases:
   - /docs/reference/cli/pulumi_state_repair/
+search:
+  keywords:
+    - invalid
+    - repair
+    - state
+    - stack
+    - attempt
+    - verbose
+    - tracing
 ---
-
-
 
 Repair an invalid state
 

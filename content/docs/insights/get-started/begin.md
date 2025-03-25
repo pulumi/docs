@@ -2,13 +2,23 @@
 title_tag: Before You Begin | Pulumi Insights
 title: Before you begin
 h1: "Pulumi Insights: Before you begin"
-meta_desc: This page provides an overview on how to get started with Pulumi Insights Accounts.
+meta_desc: This page provides an overview on how to get started with Pulumi Insights
+  Accounts.
 weight: 2
 menu:
   insights:
     parent: insights-get-started
     identifier: insights-get-started-begin
     weight: 2
+search:
+  keywords:
+    - begin
+    - insights
+    - accounts
+    - overview
+    - provides
+    - page
+    - started
 ---
 
 ## Before you begin

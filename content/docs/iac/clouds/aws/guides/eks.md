@@ -2,8 +2,8 @@
 title_tag: "Using AWS Elastic Kubernetes Service (EKS) | Crosswalk"
 title: EKS
 h1: AWS Elastic Kubernetes Service (EKS)
-meta_desc: Pulumi Crosswalk for AWS simplifies the creation, configuration, and management of EKS clusters
-           offering a single programming model and deployment workflow.
+meta_desc: Pulumi Crosswalk for AWS simplifies the creation, configuration, and management
+  of EKS clusters offering a single programming model and deployment workflow.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -13,10 +13,19 @@ menu:
     weight: 7
 
 aliases:
- - /docs/reference/crosswalk/aws/eks/
- - /eks/
- - /docs/guides/crosswalk/aws/eks/
- - /docs/clouds/aws/guides/eks/
+  - /docs/reference/crosswalk/aws/eks/
+  - /eks/
+  - /docs/guides/crosswalk/aws/eks/
+  - /docs/clouds/aws/guides/eks/
+search:
+  keywords:
+    - eks
+    - crosswalk
+    - cluster
+    - simplifies
+    - offering
+    - deployment
+    - workflow
 ---
 
 {{< crosswalk-header >}}

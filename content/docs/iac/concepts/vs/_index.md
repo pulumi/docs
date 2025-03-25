@@ -1,22 +1,32 @@
 ---
 title_tag: "Pulumi Compared to Alternatives"
-meta_desc: Learn how Pulumi compares with alternative infrastructure as code solutions that may share overlapping capabilities.
+meta_desc: Learn how Pulumi compares with alternative infrastructure as code solutions
+  that may share overlapping capabilities.
 title: Compare to...
 h1: Compare Pulumi to other solutions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Compare to...
-        parent: iac-concepts
-        weight: 18
-        identifier: iac-concepts-compare
-    concepts:
-        identifier: vs
-        weight: 16
+  iac:
+    name: Compare to...
+    parent: iac-concepts
+    weight: 18
+    identifier: iac-concepts-compare
+  concepts:
+    identifier: vs
+    weight: 16
 aliases:
-- /docs/reference/vs/
-- /docs/intro/vs/
-- /docs/concepts/vs/
+  - /docs/reference/vs/
+  - /docs/intro/vs/
+  - /docs/concepts/vs/
+search:
+  keywords:
+    - compares
+    - capabilities
+    - compare
+    - vs
+    - overlapping
+    - solutions
+    - concepts
 ---
 
 Pulumi is a cloud-native infrastructure as code project. It lets you provision and manage resources across many clouds---AWS, Azure, Google Cloud, Kubernetes, OpenStack---using your favorite language. It works great for a wide range of

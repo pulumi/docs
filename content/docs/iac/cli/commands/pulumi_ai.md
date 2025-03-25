@@ -2,9 +2,16 @@
 title: "pulumi ai"
 aliases:
   - /docs/reference/cli/pulumi_ai/
+search:
+  keywords:
+    - commands
+    - ai
+    - verbose
+    - tracing
+    - disable
+    - cli
+    - auto
 ---
-
-
 
 Basic Pulumi AI CLI commands.
 

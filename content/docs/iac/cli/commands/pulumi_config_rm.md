@@ -2,9 +2,16 @@
 title: "pulumi config rm"
 aliases:
   - /docs/reference/cli/pulumi_config_rm/
+search:
+  keywords:
+    - rm
+    - config
+    - remove
+    - inner
+    - value
+    - outer
+    - path
 ---
-
-
 
 Remove configuration value
 

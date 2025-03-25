@@ -2,13 +2,23 @@
 title: Dynamic environment variables
 title_tag: Dynamic environment variables | Pulumi ESC
 h1: Running commands with environment variables
-meta_desc: Pulumi ESC allows you to securely run commands with managed environment variables using the esc run command, without exporting them to your shell.
+meta_desc: Pulumi ESC allows you to securely run commands with managed environment
+  variables using the esc run command, without exporting them to your shell.
 menu:
   esc:
     name: Dynamic environment variables
     identifier: esc-dynamic-environmeant-variables
     parent: esc-environments
     weight: 5
+search:
+  keywords:
+    - dynamic
+    - environment
+    - exporting
+    - variables
+    - esc
+    - run
+    - s3
 ---
 
 The Pulumi ESC CLI includes a [`run` command](/docs/esc-cli/commands/esc_run/) that allows you to run commands with Pulumi ESC managed environment variables, without exporting them to your shell.

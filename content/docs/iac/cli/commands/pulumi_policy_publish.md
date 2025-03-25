@@ -2,9 +2,16 @@
 title: "pulumi policy publish"
 aliases:
   - /docs/reference/cli/pulumi_policy_publish/
+search:
+  keywords:
+    - publish
+    - commands
+    - policy
+    - pack
+    - verbose
+    - tracing
+    - disable
 ---
-
-
 
 Publish a Policy Pack to the Pulumi Cloud
 

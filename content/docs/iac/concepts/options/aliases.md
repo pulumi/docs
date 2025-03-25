@@ -13,6 +13,15 @@ aliases:
   - /docs/intro/concepts/resources/#aliases
   - /docs/intro/concepts/resources/options/aliases/
   - /docs/concepts/options/aliases/
+search:
+  keywords:
+    - aliases
+    - refactoring
+    - db
+    - commonly
+    - programs
+    - database
+    - option
 ---
 
 The `aliases` resource option provides a list of aliases for a resource or component resource. If you’re changing the name, type, or parent path of a resource or component resource, you can add the old name to the list of aliases for a resource to ensure that existing resources will be migrated to the new name instead of being deleted and replaced with the new named resource.

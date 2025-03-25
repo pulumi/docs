@@ -2,7 +2,8 @@
 title: Dev tools
 title_tag: Dev tools integrations | Pulumi ESC
 h1: ESC dev tools integrations
-meta_desc: Pulumi ESC integrates with popular developer tools like Cloudflare, Docker, and Terraform, for management of environment variables, secrets, and configurations.
+meta_desc: Pulumi ESC integrates with popular developer tools like Cloudflare, Docker,
+  and Terraform, for management of environment variables, secrets, and configurations.
 menu:
   esc:
     identifier: esc-dev-tools-integrations
@@ -10,6 +11,15 @@ menu:
     weight: 5
 aliases:
   - /docs/esc/other-integrations
+search:
+  keywords:
+    - tools
+    - esc
+    - docker
+    - dev
+    - popular
+    - direnv
+    - variables
 ---
 
 Pulumi ESC's rich metadata and support for popular configuration formats enables easy integration with other developer tools.

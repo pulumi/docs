@@ -5,18 +5,27 @@ title: Project file reference
 h1: Pulumi project file reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Project file reference
-        parent: iac-concepts-projects
-        weight: 1
-    concepts:
-        parent: projects
-        weight: 1
+  iac:
+    name: Project file reference
+    parent: iac-concepts-projects
+    weight: 1
+  concepts:
+    parent: projects
+    weight: 1
 
 aliases:
-- /docs/reference/pulumi-yaml/
-- /docs/reference/project-file/
-- /docs/concepts/projects/project-file/
+  - /docs/reference/pulumi-yaml/
+  - /docs/reference/project-file/
+  - /docs/concepts/projects/project-file/
+search:
+  keywords:
+    - project
+    - file
+    - reference
+    - valid
+    - settings
+    - optional
+    - description
 ---
 
 Every Pulumi program has a project file, `Pulumi.yaml`, which specifies metadata about your project, such as the project name and language runtime. The project file must begin with a capital `P` and have an extension of either `.yml` or `.yaml`. For more information about Pulumi projects, see the following [Pulumi projects overview](/docs/intro/concepts/project/).

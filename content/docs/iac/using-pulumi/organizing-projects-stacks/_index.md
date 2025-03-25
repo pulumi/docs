@@ -1,22 +1,32 @@
 ---
 title_tag: "Organizing Projects & Stacks"
-meta_desc: An overview of best practices when organizing and structuring cloud projects and stacks.
+meta_desc: An overview of best practices when organizing and structuring cloud projects
+  and stacks.
 title: Organizing projects
 h1: Organizing Pulumi projects & stacks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Organizing Projects & Stacks
-        parent: iac-using-pulumi
-        weight: 1
+  iac:
+    name: Organizing Projects & Stacks
+    parent: iac-using-pulumi
+    weight: 1
 aliases:
-- /docs/reference/organizing-stacks-projects/
-- /docs/intro/concepts/organizing-stacks-projects/
-- /docs/guides/organizing-projects-stacks/
-- /docs/using-pulumi/organizing-projects-stacks/
-- /docs/concepts/organizing-stacks-projects/
-- /docs/iac/packages-and-automation/organizing-stacks-projects/
-- /docs/iac/packages-and-automation/organizing-projects-stacks/
+  - /docs/reference/organizing-stacks-projects/
+  - /docs/intro/concepts/organizing-stacks-projects/
+  - /docs/guides/organizing-projects-stacks/
+  - /docs/using-pulumi/organizing-projects-stacks/
+  - /docs/concepts/organizing-stacks-projects/
+  - /docs/iac/packages-and-automation/organizing-stacks-projects/
+  - /docs/iac/packages-and-automation/organizing-projects-stacks/
+search:
+  keywords:
+    - projects
+    - organizing
+    - structuring
+    - practices
+    - best
+    - stacks
+    - overview
 ---
 
 [Projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/) are intentionally flexible so that they can accommodate

@@ -2,9 +2,16 @@
 title: "pulumi env get"
 aliases:
   - /docs/reference/cli/pulumi_env_get/
+search:
+  keywords:
+    - environment
+    - env
+    - value
+    - string
+    - verbose
+    - tracing
+    - path
 ---
-
-
 
 Get a value within an environment.
 

@@ -2,9 +2,16 @@
 title: "pulumi env tag get"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_get/
+search:
+  keywords:
+    - utc
+    - tag
+    - env
+    - environment
+    - verbose
+    - tracing
+    - string
 ---
-
-
 
 Get an environment tag
 

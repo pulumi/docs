@@ -1,8 +1,15 @@
 ---
 title: "esc env version retract"
+search:
+  keywords:
+    - retract
+    - revision
+    - latest
+    - env
+    - esc
+    - version
+    - retracted
 ---
-
-
 
 Retract a specific revision of an environment
 

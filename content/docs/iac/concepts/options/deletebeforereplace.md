@@ -1,6 +1,7 @@
 ---
 title_tag: "deleteBeforeReplace | Resource Options"
-meta_desc: Setting the deleteBeforeReplace option to true means that Pulumi will delete the existing resource before creating its replacement.
+meta_desc: Setting the deleteBeforeReplace option to true means that Pulumi will delete
+  the existing resource before creating its replacement.
 title: "deleteBeforeReplace"
 h1: "Resource option: deleteBeforeReplace"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: options-concepts
     weight: 4
 aliases:
-- /docs/intro/concepts/resources/options/deletebeforereplace/
-- /docs/concepts/options/deletebeforereplace/
+  - /docs/intro/concepts/resources/options/deletebeforereplace/
+  - /docs/concepts/options/deletebeforereplace/
+search:
+  keywords:
+    - deletebeforereplace
+    - replacement
+    - db
+    - 'true'
+    - option
+    - means
+    - resource
 ---
 
 A resource may need to be replaced if an immutable property changes. In these cases, cloud providers do not support updating an existing resource so a new instance will be created and the old one deleted. By default, to minimize downtime, Pulumi creates new instances of resources before deleting old ones.

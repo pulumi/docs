@@ -2,9 +2,16 @@
 title: "pulumi policy disable"
 aliases:
   - /docs/reference/cli/pulumi_policy_disable/
+search:
+  keywords:
+    - disabled
+    - verbose
+    - policy
+    - disable
+    - pack
+    - group
+    - string
 ---
-
-
 
 Disable a Policy Pack for a Pulumi organization
 

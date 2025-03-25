@@ -2,9 +2,16 @@
 title: "pulumi plugin"
 aliases:
   - /docs/reference/cli/pulumi_plugin/
+search:
+  keywords:
+    - plugins
+    - plugin
+    - commands
+    - iac
+    - resource
+    - verbose
+    - tracing
 ---
-
-
 
 Manage language and resource provider plugins
 

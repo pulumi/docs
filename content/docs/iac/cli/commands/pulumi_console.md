@@ -2,9 +2,16 @@
 title: "pulumi console"
 aliases:
   - /docs/reference/cli/pulumi_console/
+search:
+  keywords:
+    - console
+    - tracing
+    - stack
+    - verbose
+    - string
+    - disable
+    - auto
 ---
-
-
 
 Opens the current stack in the Pulumi Console
 

@@ -2,9 +2,16 @@
 title: "pulumi stack"
 aliases:
   - /docs/reference/cli/pulumi_stack/
+search:
+  keywords:
+    - workspace
+    - stack
+    - commands
+    - iac
+    - cli
+    - display
+    - docs
 ---
-
-
 
 Manage stacks and view stack state
 

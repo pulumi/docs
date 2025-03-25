@@ -1,15 +1,25 @@
 ---
 title_tag: "Pulumi Cloud: What is it?"
-meta_desc: Learn how Pulumi Cloud relates to the open source Pulumi infrastructure as code tool.
+meta_desc: Learn how Pulumi Cloud relates to the open source Pulumi infrastructure
+  as code tool.
 title: "What is it?"
 h1: "What is Pulumi Cloud, and how does it relate to Pulumi's open source IaC tool?"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: "What is it?"
-        parent: pulumi-cloud-get-started
-        weight: 1
-        identifier: pulumi-cloud-what-is-it
+  cloud:
+    name: "What is it?"
+    parent: pulumi-cloud-get-started
+    weight: 1
+    identifier: pulumi-cloud-what-is-it
+search:
+  keywords:
+    - relates
+    - tool
+    - cloud
+    - source
+    - open
+    - infrastructure
+    - code
 ---
 
 So you've chosen to use Pulumi infrastructure as code, and are now deciding how to manage your state and whether Pulumi Cloud is a good fit? Or you've heard Pulumi is open source but aren't entirely clear on what part is fully open and free, and what is a paid Pulumi product? This page will give you a better understanding about the answers to these questions and everything in between.

@@ -1,21 +1,31 @@
 ---
 title_tag: "Pulumi Support Overview"
-meta_desc: Pulumi is here to help! Try reviewing our troubleshooting or FAQ docs, or reach out to support.
+meta_desc: Pulumi is here to help! Try reviewing our troubleshooting or FAQ docs,
+  or reach out to support.
 title: Support
 h1: Pulumi support overview
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Support
-        parent: iac-home
-        weight: 90
-        identifier: iac-support
-    support:
-        name: Overview
-        weight: 9
+  iac:
+    name: Support
+    parent: iac-home
+    weight: 90
+    identifier: iac-support
+  support:
+    name: Overview
+    weight: 9
 aliases:
-    - /docs/troubleshooting/overview/
-    - /docs/support/
+  - /docs/troubleshooting/overview/
+  - /docs/support/
+search:
+  keywords:
+    - troubleshooting
+    - support
+    - border
+    - faq
+    - reviewing
+    - reach
+    - h3
 ---
 
 We're here to help! Try reviewing our troubleshooting or FAQ docs, or reach out at [support@pulumi.com](mailto:support@pulumi.com).

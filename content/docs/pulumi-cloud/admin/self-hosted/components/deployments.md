@@ -1,18 +1,28 @@
 ---
 title_tag: Deployments | Self-Hosting Pulumi
-meta_desc: Deployments are available on Self-hosting. Self-hosting is available as part of the Pulumi Business Critical Edition.
+meta_desc: Deployments are available on Self-hosting. Self-hosting is available as
+  part of the Pulumi Business Critical Edition.
 title: Deployments
 h1: Pulumi Cloud self-hosted Deployments
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Pulumi Deployments
-        parent: pulumi-cloud-admin-self-hosted-components
-        weight: 4
-        identifier: pulumi-cloud-admin-self-hosted-components-deployments
+  cloud:
+    name: Pulumi Deployments
+    parent: pulumi-cloud-admin-self-hosted-components
+    weight: 4
+    identifier: pulumi-cloud-admin-self-hosted-components-deployments
 aliases:
   - /docs/guides/self-hosted/components/deployments/
   - /docs/pulumi-cloud/self-hosted/components/deployments/
+search:
+  keywords:
+    - deployments
+    - critical
+    - self
+    - hosting
+    - available
+    - edition
+    - business
 ---
 
 {{% notes type="info" %}}

@@ -2,9 +2,16 @@
 title: "pulumi env diff"
 aliases:
   - /docs/reference/cli/pulumi_env_diff/
+search:
+  keywords:
+    - diff
+    - env
+    - argument
+    - environment
+    - second
+    - portion
+    - string
 ---
-
-
 
 Show changes between versions.
 

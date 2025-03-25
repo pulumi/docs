@@ -2,9 +2,16 @@
 title: "pulumi policy ls"
 aliases:
   - /docs/reference/cli/pulumi_policy_ls/
+search:
+  keywords:
+    - ls
+    - enable
+    - policy
+    - packs
+    - emit
+    - verbose
+    - tracing
 ---
-
-
 
 List all Policy Packs for a Pulumi organization
 

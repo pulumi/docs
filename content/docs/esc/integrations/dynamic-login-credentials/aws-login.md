@@ -1,6 +1,7 @@
 ---
 title_tag: aws-login Pulumi ESC Provider
-meta_desc: The aws-login Pulumi ESC Provider enables you to log in to AWS using OIDC or static credentials.
+meta_desc: The aws-login Pulumi ESC Provider enables you to log in to AWS using OIDC
+  or static credentials.
 title: aws-login
 h1: aws-login
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: esc-dynamic-login-credentials
     weight: 1
 aliases:
-    - /docs/pulumi-cloud/esc/providers/aws-login/
-    - /docs/esc/providers/aws-login/
+  - /docs/pulumi-cloud/esc/providers/aws-login/
+  - /docs/esc/providers/aws-login/
+search:
+  keywords:
+    - log
+    - login
+    - aws
+    - oidc
+    - static
+    - credentials
+    - enables
 ---
 
 The `aws-login` provider enables you to log in to your AWS account using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to access AWS resources or fetch secrets using the `aws-secrets` provider.

@@ -1,6 +1,7 @@
 ---
 title_tag: "Deploy with Pulumi button"
-meta_desc: The “Deploy with Pulumi” button lets you easily create new Pulumi projects from the browser. Learn how to create this deployment button in this guide.
+meta_desc: The “Deploy with Pulumi” button lets you easily create new Pulumi projects
+  from the browser. Learn how to create this deployment button in this guide.
 title: Deploy with Pulumi button
 h1: Deploy with Pulumi button
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,12 +12,21 @@ menu:
     weight: 8
     identifier: pulumi-cloud-pulumi-button
 aliases:
-- /docs/reference/service/pulumi-button/
-- /docs/console/extensions/pulumi-button/
-- /docs/intro/console/extensions/pulumi-button/
-- /docs/intro/console/pulumi-button/
-- /docs/intro/pulumi-service/pulumi-button/
-- /docs/intro/pulumi-cloud/pulumi-button/
+  - /docs/reference/service/pulumi-button/
+  - /docs/console/extensions/pulumi-button/
+  - /docs/intro/console/extensions/pulumi-button/
+  - /docs/intro/console/pulumi-button/
+  - /docs/intro/pulumi-service/pulumi-button/
+  - /docs/intro/pulumi-cloud/pulumi-button/
+search:
+  keywords:
+    - button
+    - https
+    - deploy
+    - dark
+    - browser
+    - template
+    - create
 ---
 
 The "Deploy with Pulumi" button lets you easily create new Pulumi projects from the browser. You can embed the button in README files within GitHub repositories or gists, blog posts, or other web pages.

@@ -1,23 +1,33 @@
 ---
 title_tag: "YAML | Languages & SDKs"
-meta_desc: An overview of how to use Pulumi YAML for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
+meta_desc: An overview of how to use Pulumi YAML for infrastructure as code on any
+  cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: YAML
 h1: Pulumi & YAML
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: YAML
-        parent: iac-languages
-        weight: 6
-        identifier: iac-languages-yaml
-    languages:
-        identifier: yaml-language
-        weight: 6
+  iac:
+    name: YAML
+    parent: iac-languages
+    weight: 6
+    identifier: iac-languages-yaml
+  languages:
+    identifier: yaml-language
+    weight: 6
 
 aliases:
-- /yaml/
-- /docs/intro/languages/yaml/
-- /docs/languages-sdks/yaml/
+  - /yaml/
+  - /docs/intro/languages/yaml/
+  - /docs/languages-sdks/yaml/
+search:
+  keywords:
+    - yaml
+    - infrastructure
+    - cloud
+    - bucket
+    - aws
+    - google
+    - azure
 ---
 
 <img src="/logos/tech/yaml.svg" align="right" width="150" style="padding:8px; margin-top: -64px">

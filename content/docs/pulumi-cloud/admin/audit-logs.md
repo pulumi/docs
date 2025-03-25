@@ -1,22 +1,33 @@
 ---
 title_tag: "Pulumi Cloud: Audit Logs"
-meta_desc: Pulumi’s audit logs allow you to account for user activity within your organization. Learn how to view, interpret, and export audit logs here.
+meta_desc: Pulumi’s audit logs allow you to account for user activity within your
+  organization. Learn how to view, interpret, and export audit logs here.
 title: "Audit Logs"
 h1: Pulumi Cloud audit logs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Audit Logs
-        parent: pulumi-cloud-admin
-        weight: 3
-        identifier: pulumi-cloud-admin-audit-logs
+  cloud:
+    name: Audit Logs
+    parent: pulumi-cloud-admin
+    weight: 3
+    identifier: pulumi-cloud-admin-audit-logs
 aliases:
-- /docs/intro/console/collaboration/auditing/
-- /docs/intro/console/auditing/
-- /docs/intro/pulumi-service/audit-logs/
-- /docs/intro/pulumi-cloud/audit-logs/
-- /docs/pulumi-cloud/audit-logs/
+  - /docs/intro/console/collaboration/auditing/
+  - /docs/intro/console/auditing/
+  - /docs/intro/pulumi-service/audit-logs/
+  - /docs/intro/pulumi-cloud/audit-logs/
+  - /docs/pulumi-cloud/audit-logs/
+search:
+  keywords:
+    - logs
+    - audit
+    - indicates
+    - interpret
+    - activity
+    - user
+    - organization
 ---
+
 {{% notes "info" %}}
 Audit Logs are available to organizations using the Enterprise and Business Critical editions.
 To learn more about editions, visit the [pricing page](/pricing/).

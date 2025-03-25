@@ -5,9 +5,18 @@ title: Deploy stack
 h1: "Pulumi & Azure: Deploy stack"
 weight: 5
 aliases:
-- /docs/quickstart/azure/deploy-stack/
-- /docs/get-started/azure/deploy-stack/
-- /docs/clouds/azure/get-started/deploy-stack/
+  - /docs/quickstart/azure/deploy-stack/
+  - /docs/get-started/azure/deploy-stack/
+  - /docs/clouds/azure/get-started/deploy-stack/
+search:
+  keywords:
+    - deploy
+    - stack
+    - azure
+    - guide
+    - resourcegroup
+    - primarystoragekey
+    - learn
 ---
 
 Let's go ahead and deploy your stack:

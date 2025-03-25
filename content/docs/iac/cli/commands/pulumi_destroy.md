@@ -2,9 +2,16 @@
 title: "pulumi destroy"
 aliases:
   - /docs/reference/cli/pulumi_destroy/
+search:
+  keywords:
+    - destroy
+    - remote
+    - experimental
+    - git
+    - suppress
+    - string
+    - executor
 ---
-
-
 
 Destroy all existing resources in the stack
 

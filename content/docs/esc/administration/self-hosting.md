@@ -1,13 +1,23 @@
 ---
 title_tag: "Self-hosting Pulumi ESC"
-meta_desc: Pulumi Business Critical Edition gives you the option to self-host Pulumi within your organization's infrastructure.
+meta_desc: Pulumi Business Critical Edition gives you the option to self-host Pulumi
+  within your organization's infrastructure.
 title: Self-hosting
 h1: Self-hosting Pulumi ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    esc:
-        parent: pulumi-esc-admin
-        weight: 2
+  esc:
+    parent: pulumi-esc-admin
+    weight: 2
+search:
+  keywords:
+    - hosting
+    - critical
+    - infrastructure
+    - self
+    - host
+    - edition
+    - gives
 ---
 
 {{% notes type="info" %}}

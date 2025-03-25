@@ -5,9 +5,18 @@ h1: "Pulumi & AWS: Review project"
 meta_desc: This page provides an overview on how to a review a new AWS project.
 weight: 4
 aliases:
-- /docs/quickstart/aws/review-project/
-- /docs/get-started/aws/review-project/
-- /docs/clouds/aws/get-started/review-project/
+  - /docs/quickstart/aws/review-project/
+  - /docs/get-started/aws/review-project/
+  - /docs/clouds/aws/get-started/review-project/
+search:
+  keywords:
+    - review
+    - project
+    - bucket
+    - aws
+    - bucketname
+    - s3
+    - overview
 ---
 
 Let's review some of the generated project files:

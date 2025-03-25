@@ -12,6 +12,15 @@ menu:
     identifier: pulumi-cloud-deployments-reference
 aliases:
   - /docs/intro/deployments/reference/
+search:
+  keywords:
+    - deployments
+    - ref
+    - using
+    - configuring
+    - reference
+    - autodeploy
+    - deployment
 ---
 
 This page highlights some common patterns and workflows using Pulumi Deployments.

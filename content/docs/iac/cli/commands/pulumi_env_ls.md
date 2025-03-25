@@ -2,9 +2,16 @@
 title: "pulumi env ls"
 aliases:
   - /docs/reference/cli/pulumi_env_ls/
+search:
+  keywords:
+    - verbose
+    - ls
+    - env
+    - environments
+    - string
+    - returned
+    - tracing
 ---
-
-
 
 List environments.
 

@@ -9,7 +9,16 @@ menu:
     weight: 3
     parent: iac-cli
 aliases:
-    - /docs/cli/command-line-completion/
+  - /docs/cli/command-line-completion/
+search:
+  keywords:
+    - information
+    - bash_completion
+    - completion
+    - line
+    - command
+    - fish
+    - gen
 ---
 
 The Pulumi CLI also has a command to generate a command-line completion script for Bash, Zsh, and Fish. This gives you tab completion for all commands,

@@ -1,6 +1,7 @@
 ---
 title_tag: "Review stacks"
-meta_desc: Pull request environments that deploy application and infrastructure code changes.
+meta_desc: Pull request environments that deploy application and infrastructure code
+  changes.
 title: "Review stacks"
 h1: "Review stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,6 +11,15 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 5
     identifier: pulumi-cloud-deployments-review-stacks
+search:
+  keywords:
+    - review
+    - stacks
+    - pull
+    - request
+    - application
+    - changes
+    - deploy
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VvQcx51YL4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

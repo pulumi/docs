@@ -8,7 +8,16 @@ menu:
     parent: esc-dev-tools-integrations
     weight: 2
 aliases:
-    - /docs/esc/other-integrations/docker/
+  - /docs/esc/other-integrations/docker/
+search:
+  keywords:
+    - docker
+    - esc_org
+    - esc
+    - environment
+    - esc_hello_user
+    - overview
+    - provides
 ---
 
 ## Overview

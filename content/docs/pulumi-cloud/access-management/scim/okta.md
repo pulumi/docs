@@ -1,6 +1,7 @@
 ---
 title_tag: Configuring Okta | SCIM
-meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi and Okta.
+meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi
+  and Okta.
 title: Okta
 h1: "SCIM: Configuring Okta"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,6 +13,15 @@ menu:
     identifier: pulumi-cloud-access-management-scim-okta
 aliases:
   - /docs/guides/scim/okta/
+search:
+  keywords:
+    - okta
+    - scim
+    - functionality
+    - describes
+    - support
+    - page
+    - provisioning
 ---
 
 This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.

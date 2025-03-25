@@ -10,7 +10,16 @@ menu:
     parent: esc-cli-overview
     weight: 2
 aliases:
-    - /docs/esc-cli/command-line-completion/
+  - /docs/esc-cli/command-line-completion/
+search:
+  keywords:
+    - bash_completion
+    - esc
+    - completion
+    - line
+    - command
+    - fish
+    - information
 ---
 
 The Pulumi ESC CLI also has a command to generate a command-line completion script for Bash, Zsh, and Fish. This gives you tab completion for all commands,

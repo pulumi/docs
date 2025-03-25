@@ -1,21 +1,31 @@
 ---
 title_tag: "Unit Testing Pulumi Programs"
-meta_desc: "Guide to unit testing of Pulumi programs: mock-based tests across Node.js, Python, Go, and .NET."
+meta_desc: "Guide to unit testing of Pulumi programs: mock-based tests across Node.js,
+  Python, Go, and .NET."
 title: Unit testing
 h1: Unit testing Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 weight: 1
 menu:
-    iac:
-        name: Unit testing
-        parent: iac-concepts-testing
-        weight: 1
-    usingpulumi:
-        parent: testing
+  iac:
+    name: Unit testing
+    parent: iac-concepts-testing
+    weight: 1
+  usingpulumi:
+    parent: testing
 aliases:
-    - /docs/guides/testing/unit/
-    - /docs/using-pulumi/testing/property-testing/
-    - /docs/using-pulumi/testing/unit/
+  - /docs/guides/testing/unit/
+  - /docs/using-pulumi/testing/property-testing/
+  - /docs/using-pulumi/testing/unit/
+search:
+  keywords:
+    - unit
+    - testing
+    - tests
+    - mock
+    - js
+    - net
+    - programs
 ---
 
 Pulumi programs are authored in a general-purpose language like TypeScript, Python, Go, C# or Java. The full power of each language is available, including access to tools and libraries for that runtime, including testing frameworks.

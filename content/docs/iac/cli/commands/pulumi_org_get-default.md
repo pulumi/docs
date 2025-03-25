@@ -2,9 +2,16 @@
 title: "pulumi org get-default"
 aliases:
   - /docs/reference/cli/pulumi_org_get-default/
+search:
+  keywords:
+    - default
+    - org
+    - backend
+    - verbose
+    - tracing
+    - current
+    - disable
 ---
-
-
 
 Get the default org for the current backend
 

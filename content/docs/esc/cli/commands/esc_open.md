@@ -1,8 +1,15 @@
 ---
 title: "esc open"
+search:
+  keywords:
+    - esc
+    - property
+    - json
+    - open
+    - environment
+    - lifetime
+    - given
 ---
-
-
 
 Open the environment with the given name.
 

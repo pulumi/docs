@@ -2,9 +2,16 @@
 title: "pulumi stack ls"
 aliases:
   - /docs/reference/cli/pulumi_stack_ls/
+search:
+  keywords:
+    - verbose
+    - ls
+    - stack
+    - stacks
+    - tag
+    - returned
+    - string
 ---
-
-
 
 List stacks
 

@@ -1,6 +1,7 @@
 ---
 title_tag: "ESC Webhooks"
-meta_desc: ESC Webhooks allow you to notify external services of events happening within your ESC environments. Learn how to create and manage webhooks here.
+meta_desc: ESC Webhooks allow you to notify external services of events happening
+  within your ESC environments. Learn how to create and manage webhooks here.
 title: "Webhooks"
 h1: ESC Webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -9,8 +10,17 @@ menu:
     parent: esc-environments
     weight: 6
 aliases:
-- /docs/esc-cli/commands/
-- /docs/esc/webhooks/
+  - /docs/esc-cli/commands/
+  - /docs/esc/webhooks/
+search:
+  keywords:
+    - webhooks
+    - webhook
+    - notify
+    - happening
+    - events
+    - esc
+    - external
 ---
 
 {{% notes "info" %}}

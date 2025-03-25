@@ -8,8 +8,16 @@ menu:
   concepts:
     weight: 15
 aliases:
-- /docs/reference/glossary/
-- /docs/concepts/glossary/
+  - /docs/reference/glossary/
+  - /docs/concepts/glossary/
+search:
+  keywords:
+    - glossary
+    - terms
+    - definitions
+    - common
+    - list
+    - relating
 ---
 
 {{< glossary >}}

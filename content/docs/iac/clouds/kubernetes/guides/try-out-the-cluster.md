@@ -1,6 +1,7 @@
 ---
 title_tag: Access Created Kubernetes Cluster | Crosswalk
-meta_desc: This page provides a guide on how to try out a newly created Kubernetes cluster.
+meta_desc: This page provides a guide on how to try out a newly created Kubernetes
+  cluster.
 title: Access clusters
 h1: Accessing Kubernetes clusters
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
@@ -13,6 +14,15 @@ menu:
 aliases:
   - /docs/guides/crosswalk/kubernetes/try-out-the-cluster/
   - /docs/clouds/kubernetes/guides/try-out-the-cluster/
+search:
+  keywords:
+    - clusters
+    - access
+    - cluster
+    - newly
+    - kubeconfig
+    - kubernetes
+    - try
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

@@ -1,8 +1,15 @@
 ---
 title: "esc env get"
+search:
+  keywords:
+    - value
+    - definition
+    - environment
+    - env
+    - esc
+    - print
+    - path
 ---
-
-
 
 Get a value within an environment.
 

@@ -1,6 +1,7 @@
 ---
 title_tag: Configure OpenID Connect for Vault | OIDC
-meta_desc: This page describes how to configure OIDC token exchange in Vault for use with Pulumi
+meta_desc: This page describes how to configure OIDC token exchange in Vault for use
+  with Pulumi
 title: Vault
 h1: Configuring OpenID Connect for Vault
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,7 +12,16 @@ menu:
     weight: 4
     identifier: pulumi-cloud-access-management-oidc-provider-vault
 aliases:
-- /docs/pulumi-cloud/oidc/provider/vault/
+  - /docs/pulumi-cloud/oidc/provider/vault/
+search:
+  keywords:
+    - vault
+    - jwt
+    - exchange
+    - oidc
+    - describes
+    - token
+    - configure
 ---
 
 This document outlines the steps required to use Pulumi with OpenID Connect to authenticate with Vault. This is accomplished using [Vault's JWT authentication method](https://developer.hashicorp.com/vault/docs/auth/jwt#jwt-authentication) to assume a role. Access to the role is authorized using a [Vault policy](https://developer.hashicorp.com/vault/docs/concepts/policies) that validates the contents of the OIDC token issued by Pulumi Cloud.

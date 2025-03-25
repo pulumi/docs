@@ -1,8 +1,15 @@
 ---
 title: "esc env open"
+search:
+  keywords:
+    - json
+    - 1h30m
+    - open
+    - env
+    - esc
+    - environment
+    - lifetime
 ---
-
-
 
 Open the environment with the given name.
 

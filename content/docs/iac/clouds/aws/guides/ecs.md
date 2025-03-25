@@ -2,8 +2,8 @@
 title_tag: "Using AWS Elastic Container Service (ECS) | Crosswalk"
 title: ECS
 h1: AWS Elastic Container Service (ECS)
-meta_desc: Pulumi Crosswalk for AWS ECS simplifies deploying containerized applications into ECS and managing all of the
-            associated resources.
+meta_desc: Pulumi Crosswalk for AWS ECS simplifies deploying containerized applications
+  into ECS and managing all of the associated resources.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -13,9 +13,18 @@ menu:
     weight: 6
 
 aliases:
-- /docs/reference/crosswalk/aws/ecs/
-- /docs/guides/crosswalk/aws/ecs/
-- /docs/clouds/aws/guides/ecs/
+  - /docs/reference/crosswalk/aws/ecs/
+  - /docs/guides/crosswalk/aws/ecs/
+  - /docs/clouds/aws/guides/ecs/
+search:
+  keywords:
+    - ecs
+    - crosswalk
+    - containerized
+    - simplifies
+    - applications
+    - aws
+    - associated
 ---
 
 {{< crosswalk-header >}}

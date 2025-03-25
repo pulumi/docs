@@ -1,23 +1,33 @@
 ---
 title_tag: "Pulumi Cloud: Create Accounts"
-meta_desc: Learn how to create and configure accounts in the Pulumi Cloud in this guide.
+meta_desc: Learn how to create and configure accounts in the Pulumi Cloud in this
+  guide.
 title: Accounts
 h1: Pulumi Cloud accounts
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Accounts
-        parent: pulumi-cloud-access-management
-        weight: 1
-        identifier: pulumi-cloud-access-management-accounts
+  cloud:
+    name: Accounts
+    parent: pulumi-cloud-access-management
+    weight: 1
+    identifier: pulumi-cloud-access-management-accounts
 aliases:
-- /docs/intro/console/accounts/
-- /docs/intro/console/accounts/account/
-- /docs/intro/console/accounts-and-organizations/
-- /docs/intro/console/accounts-and-organizations/accounts/
-- /docs/intro/pulumi-service/accounts/
-- /docs/intro/pulumi-cloud/accounts/
-- /docs/pulumi-cloud/accounts/
+  - /docs/intro/console/accounts/
+  - /docs/intro/console/accounts/account/
+  - /docs/intro/console/accounts-and-organizations/
+  - /docs/intro/console/accounts-and-organizations/accounts/
+  - /docs/intro/pulumi-service/accounts/
+  - /docs/intro/pulumi-cloud/accounts/
+  - /docs/pulumi-cloud/accounts/
+search:
+  keywords:
+    - accounts
+    - mfa
+    - guide
+    - configure
+    - account
+    - cloud
+    - email
 ---
 
 To create your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.com) and sign up. You may use any of the following identities to sign up:

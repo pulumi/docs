@@ -1,21 +1,31 @@
 ---
 title_tag: "Crossplane"
-meta_desc: Learn about the major differences between Pulumi and configuration management tools like Chef, Puppet, Ansible, Salt, and more.
+meta_desc: Learn about the major differences between Pulumi and configuration management
+  tools like Chef, Puppet, Ansible, Salt, and more.
 title: Crossplane
 h1: Crossplane vs Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Crossplane
-        parent: iac-concepts-compare
-        weight: 9
-    concepts:
-        parent: vs
-        weight: 10
+  iac:
+    name: Crossplane
+    parent: iac-concepts-compare
+    weight: 9
+  concepts:
+    parent: vs
+    weight: 10
 aliases:
-- /docs/reference/vs/crossplane/
-- /docs/intro/vs/crossplane/
-- /docs/concepts/vs/crossplane/
+  - /docs/reference/vs/crossplane/
+  - /docs/intro/vs/crossplane/
+  - /docs/concepts/vs/crossplane/
+search:
+  keywords:
+    - crossplane
+    - ansible
+    - salt
+    - puppet
+    - chef
+    - major
+    - differences
 ---
 
 <style>

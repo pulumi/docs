@@ -8,6 +8,15 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 1
     identifier: pulumi-cloud-deployments-get-started
+search:
+  keywords:
+    - started
+    - '50'
+    - placeholder
+    - meta
+    - '150'
+    - characters
+    - description
 ---
 
 ## Prerequisites

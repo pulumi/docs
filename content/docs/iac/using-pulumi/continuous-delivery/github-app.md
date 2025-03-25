@@ -1,21 +1,30 @@
 ---
 title_tag: "Using Pulumi GitHub App | CI/CD"
 meta_desc: Pulumi's GitHub app integrates the results of Pulumi stack updates. It
-           will show you any potential infrastructure changes on Pull Requests and commit Checks.
+  will show you any potential infrastructure changes on Pull Requests and commit Checks.
 title: Pulumi GitHub App
 h1: Pulumi Github App
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: GitHub App
-        parent: iac-using-pulumi-cicd
-        weight: 7
+  iac:
+    name: GitHub App
+    parent: iac-using-pulumi-cicd
+    weight: 7
 aliases:
-- /docs/reference/cd-github/
-- /docs/console/continuous-delivery/github-app/
-- /docs/guides/continuous-delivery/github-app/
-- /docs/using-pulumi/continuous-delivery/github-app/
-- /docs/iac/packages-and-automation/continuous-delivery/github-app/
+  - /docs/reference/cd-github/
+  - /docs/console/continuous-delivery/github-app/
+  - /docs/guides/continuous-delivery/github-app/
+  - /docs/using-pulumi/continuous-delivery/github-app/
+  - /docs/iac/packages-and-automation/continuous-delivery/github-app/
+search:
+  keywords:
+    - github
+    - app
+    - checks
+    - pull
+    - results
+    - potential
+    - commit
 ---
 
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/pulumi-cloud/deployments/). Once installed and

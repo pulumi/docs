@@ -1,8 +1,15 @@
 ---
 title: "esc completion"
+search:
+  keywords:
+    - autocompletion
+    - generate
+    - fish
+    - powershell
+    - cli
+    - completion
+    - esc
 ---
-
-
 
 Generate the autocompletion script for the specified shell
 

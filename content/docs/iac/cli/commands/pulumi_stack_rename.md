@@ -2,9 +2,16 @@
 title: "pulumi stack rename"
 aliases:
   - /docs/reference/cli/pulumi_stack_rename/
+search:
+  keywords:
+    - verbose
+    - rename
+    - stack
+    - tracing
+    - string
+    - disable
+    - fully
 ---
-
-
 
 Rename an existing stack
 

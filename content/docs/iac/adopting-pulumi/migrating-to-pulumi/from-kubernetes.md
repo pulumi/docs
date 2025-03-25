@@ -1,20 +1,30 @@
 ---
 title_tag: "Migrating from Kubernetes YAML or Helm Charts"
-meta_desc: Migrate your existing Kubernetes YAML or Helm Charts and/or coexist with existing templates.
+meta_desc: Migrate your existing Kubernetes YAML or Helm Charts and/or coexist with
+  existing templates.
 title: Kubernetes YAML & Helm Charts
 h1: Migrating from Kubernetes YAML or Helm Charts to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Kubernetes YAML or Helm Charts
-        parent: iac-adopting-migrate
-        weight: 4
-    usingpulumi:
-        parent: migrating
-        weight: 5
+  iac:
+    name: Kubernetes YAML or Helm Charts
+    parent: iac-adopting-migrate
+    weight: 4
+  usingpulumi:
+    parent: migrating
+    weight: 5
 aliases:
-- /docs/guides/adopting/from_kubernetes/
-- /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/
+  - /docs/guides/adopting/from_kubernetes/
+  - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/
+search:
+  keywords:
+    - kubernetes
+    - charts
+    - helm
+    - yaml
+    - coexist
+    - existing
+    - migrate
 ---
 
 <img src="/logos/tech/k8s.svg" align="right" class="h-16 px-8 pb-4">

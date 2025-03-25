@@ -2,7 +2,8 @@
 title: Accounts
 title_tag: Create and manage Insights accounts | Pulumi Insights
 h1: Create and manage Insights accounts
-meta_desc: This page describes how to create accounts used by Pulumi Insights to scan provider resources for use within Pulumi Cloud.
+meta_desc: This page describes how to create accounts used by Pulumi Insights to scan
+  provider resources for use within Pulumi Cloud.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
@@ -11,6 +12,15 @@ menu:
 aliases:
   - /docs/pulumi-cloud/insights/accounts/
   - /docs/pulumi-cloud/insights/import/
+search:
+  keywords:
+    - accounts
+    - scan
+    - insights
+    - account
+    - describes
+    - create
+    - provider
 ---
 
 This document outlines the steps required to create and manage a Pulumi Insights account used to scan provider resources.

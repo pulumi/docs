@@ -2,9 +2,16 @@
 title: "pulumi stack import"
 aliases:
   - /docs/reference/cli/pulumi_stack_import/
+search:
+  keywords:
+    - import
+    - deployment
+    - stack
+    - standard
+    - force
+    - string
+    - verbose
 ---
-
-
 
 Import a deployment from standard in into an existing stack
 

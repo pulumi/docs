@@ -1,8 +1,15 @@
 ---
 title: "esc env set"
+search:
+  keywords:
+    - value
+    - environment
+    - env
+    - esc
+    - set
+    - 'true'
+    - plaintext
 ---
-
-
 
 Set a value within an environment.
 

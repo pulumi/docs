@@ -1,21 +1,31 @@
 ---
 title_tag: "Stacks | Pulumi Concepts"
-meta_desc: Every Pulumi program is deployed to a stack and a project can have as many stacks as you need. Learn more about Pulumi stacks and how to use them.
+meta_desc: Every Pulumi program is deployed to a stack and a project can have as many
+  stacks as you need. Learn more about Pulumi stacks and how to use them.
 title: Stacks
 h1: Stacks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Stacks
-        parent: iac-concepts
-        weight: 2
-    concepts:
-        weight: 2
+  iac:
+    name: Stacks
+    parent: iac-concepts
+    weight: 2
+  concepts:
+    weight: 2
 aliases:
-- /docs/reference/stack/
-- /docs/tour/programs-exports/
-- /docs/intro/concepts/stack/
-- /docs/concepts/stack/
+  - /docs/reference/stack/
+  - /docs/tour/programs-exports/
+  - /docs/intro/concepts/stack/
+  - /docs/concepts/stack/
+search:
+  keywords:
+    - stacks
+    - stack
+    - deployed
+    - infra
+    - program
+    - project
+    - stackreference
 ---
 
 Every Pulumi program is deployed to a _stack_. A stack is an isolated, independently [configurable](/docs/concepts/config/)

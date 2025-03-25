@@ -2,7 +2,8 @@
 title: Concepts
 title_tag: Pulumi ESC Concepts
 h1: Pulumi ESC Concepts
-meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of
+  configuration and secrets and consume them in various ways.
 menu:
   esc:
     parent: esc-home
@@ -10,6 +11,15 @@ menu:
     weight: 3
 aliases:
   - /docs/concepts/environments/
+search:
+  keywords:
+    - concepts
+    - esc
+    - compose
+    - secrets
+    - hierarchical
+    - collections
+    - consume
 ---
 
 Pulumi ESC (Environments, Secrets, and Configuration) simplifies how organizations manage secrets and configurations across multiple environments. It enables teams to compose collections of configuration and secrets called *environments*, which can be consumed by various infrastructure and application services. ESC helps ensure security, consistency, and efficiency in handling secrets and configuration.

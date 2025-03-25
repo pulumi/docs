@@ -1,8 +1,15 @@
 ---
 title: "esc env rotate"
+search:
+  keywords:
+    - rotate
+    - environment
+    - secrets
+    - esc_env
+    - env
+    - esc
+    - paths
 ---
-
-
 
 Rotate secrets in an environment
 

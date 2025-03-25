@@ -1,8 +1,15 @@
 ---
 title: "esc env version tag"
+search:
+  keywords:
+    - tag
+    - revision
+    - utc
+    - version
+    - esc
+    - env
+    - tagged
 ---
-
-
 
 Manage tagged versions
 

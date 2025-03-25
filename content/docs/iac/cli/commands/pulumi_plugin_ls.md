@@ -2,9 +2,16 @@
 title: "pulumi plugin ls"
 aliases:
   - /docs/reference/cli/pulumi_plugin_ls/
+search:
+  keywords:
+    - ls
+    - disable
+    - plugin
+    - plugins
+    - emit
+    - verbose
+    - tracing
 ---
-
-
 
 List plugins
 

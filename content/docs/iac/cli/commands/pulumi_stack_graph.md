@@ -2,9 +2,16 @@
 title: "pulumi stack graph"
 aliases:
   - /docs/reference/cli/pulumi_stack_graph/
+search:
+  keywords:
+    - graph
+    - dependency
+    - stack
+    - edges
+    - dot
+    - sets
+    - ignores
 ---
-
-
 
 Export a stack's dependency graph to a file
 

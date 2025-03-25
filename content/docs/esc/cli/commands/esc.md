@@ -1,8 +1,15 @@
 ---
 title: "esc"
+search:
+  keywords:
+    - definition
+    - command
+    - esc
+    - env
+    - environment
+    - commands
+    - open
 ---
-
-
 
 Pulumi ESC command line
 

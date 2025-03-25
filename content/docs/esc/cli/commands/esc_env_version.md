@@ -1,8 +1,15 @@
 ---
 title: "esc env version"
+search:
+  keywords:
+    - utc
+    - esc
+    - env
+    - version
+    - versions
+    - revision
+    - retract
 ---
-
-
 
 Manage versions
 

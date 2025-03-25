@@ -2,8 +2,8 @@
 title_tag: "Using AWS Elastic Load Balancing (ELB) | Crosswalk"
 title: ELB
 h1: AWS Elastic Load Balancing (ELB)
-meta_desc: Pulumi Crosswalk for AWS ELB provides easy provisioning Application and Network Load Balancers, and easily
-           integrates with functionality of AWS other services.
+meta_desc: Pulumi Crosswalk for AWS ELB provides easy provisioning Application and
+  Network Load Balancers, and easily integrates with functionality of AWS other services.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -13,9 +13,18 @@ menu:
     weight: 9
 
 aliases:
-- /docs/reference/crosswalk/aws/elb/
-- /docs/guides/crosswalk/aws/elb/
-- /docs/clouds/aws/guides/elb/
+  - /docs/reference/crosswalk/aws/elb/
+  - /docs/guides/crosswalk/aws/elb/
+  - /docs/clouds/aws/guides/elb/
+search:
+  keywords:
+    - elb
+    - load
+    - balancers
+    - aws
+    - balancer
+    - crosswalk
+    - integrates
 ---
 
 {{< crosswalk-header >}}

@@ -2,9 +2,16 @@
 title: "pulumi policy new"
 aliases:
   - /docs/reference/cli/pulumi_policy_new/
+search:
+  keywords:
+    - templates
+    - policy
+    - new
+    - pack
+    - template
+    - publish
+    - verbose
 ---
-
-
 
 Create a new Pulumi Policy Pack
 

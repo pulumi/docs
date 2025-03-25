@@ -1,21 +1,31 @@
 ---
 title_tag: "Continuous Delivery for the Cloud"
-meta_desc: Pulumi's approach to infrastructure as code is great for CI/CD because it uses source code to model cloud resources and integrates into any CI/CD system.
+meta_desc: Pulumi's approach to infrastructure as code is great for CI/CD because
+  it uses source code to model cloud resources and integrates into any CI/CD system.
 title: Continuous Delivery
 h1: Pulumi & Continuous delivery
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Continuous delivery
-        parent: iac-using-pulumi
-        weight: 5
-        identifier: iac-using-pulumi-cicd
+  iac:
+    name: Continuous delivery
+    parent: iac-using-pulumi
+    weight: 5
+    identifier: iac-using-pulumi-cicd
 aliases:
-- /docs/reference/cd/
-- /docs/console/continuous-delivery/
-- /docs/guides/continuous-delivery/
-- /docs/using-pulumi/continuous-delivery/
-- /docs/iac/packages-and-automation/continuous-delivery/
+  - /docs/reference/cd/
+  - /docs/console/continuous-delivery/
+  - /docs/guides/continuous-delivery/
+  - /docs/using-pulumi/continuous-delivery/
+  - /docs/iac/packages-and-automation/continuous-delivery/
+search:
+  keywords:
+    - continuous
+    - delivery
+    - logos
+    - h4
+    - ci
+    - cd
+    - anchor
 ---
 
 Pulumi's approach to infrastructure as code is great for continuous delivery, because it uses source code to model

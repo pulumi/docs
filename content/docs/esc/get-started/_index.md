@@ -2,7 +2,8 @@
 title: Get started
 title_tag: Get Started with Pulumi ESC (Environments, Secrets, and Configuration)
 h1: Get Started with Pulumi ESC (Environments, Secrets, and Configuration)
-meta_desc: Learn how to manage secrets and hierarchical configuration with Pulumi ESC.
+meta_desc: Learn how to manage secrets and hierarchical configuration with Pulumi
+  ESC.
 menu:
   esc:
     parent: esc-home
@@ -10,6 +11,15 @@ menu:
     weight: 2
 aliases:
   - /docs/pulumi-cloud/esc/get-started/
+search:
+  keywords:
+    - esc
+    - learn
+    - started
+    - hierarchical
+    - secrets
+    - configuration
+    - manage
 ---
 
 In a typical application or infrastructure development workflow, there's often a need to maintain multiple environments such as development, staging, and production. Each of these environments might have its own set of configuration values: API endpoints, database connection strings, third-party secrets, and more.

@@ -2,9 +2,16 @@
 title: "pulumi stack tag rm"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_rm/
+search:
+  keywords:
+    - rm
+    - tag
+    - stack
+    - verbose
+    - tracing
+    - string
+    - disable
 ---
-
-
 
 Remove a stack tag
 

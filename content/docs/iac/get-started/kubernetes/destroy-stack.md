@@ -1,6 +1,7 @@
 ---
 title_tag: Destroy the Stack | Kubernetes
-meta_desc: This page provides an overview of how to destroy a Pulumi stack of a Kubernetes project.
+meta_desc: This page provides an overview of how to destroy a Pulumi stack of a Kubernetes
+  project.
 title: Destroy stack
 h1: "Pulumi & Kubernetes: Destroy stack"
 weight: 8
@@ -10,9 +11,18 @@ menu:
     identifier: kubernetes-destroy-stack
 
 aliases:
-- /docs/quickstart/kubernetes/destroy-stack/
-- /docs/get-started/kubernetes/destroy-stack/
-- /docs/iac/get-started/kubernetes/destroy-stack/
+  - /docs/quickstart/kubernetes/destroy-stack/
+  - /docs/get-started/kubernetes/destroy-stack/
+  - /docs/iac/get-started/kubernetes/destroy-stack/
+search:
+  keywords:
+    - destroy
+    - stack
+    - kubernetes
+    - dev
+    - overview
+    - delete
+    - provides
 ---
 
 Now that we've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of our stack.

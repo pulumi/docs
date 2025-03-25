@@ -2,9 +2,16 @@
 title: "pulumi env rm"
 aliases:
   - /docs/reference/cli/pulumi_env_rm/
+search:
+  keywords:
+    - rm
+    - env
+    - environment
+    - verbose
+    - tracing
+    - string
+    - disable
 ---
-
-
 
 Remove an environment or a value from an environment.
 

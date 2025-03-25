@@ -1,8 +1,15 @@
 ---
 title: "esc version"
+search:
+  keywords:
+    - esc
+    - version
+    - flags
+    - mar
+    - cobra
+    - help
+    - print
 ---
-
-
 
 Print esc's version number
 

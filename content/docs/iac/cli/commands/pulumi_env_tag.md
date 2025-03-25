@@ -2,9 +2,16 @@
 title: "pulumi env tag"
 aliases:
   - /docs/reference/cli/pulumi_env_tag/
+search:
+  keywords:
+    - environment
+    - commands
+    - tags
+    - iac
+    - tag
+    - env
+    - utc
 ---
-
-
 
 Manage environment tags
 

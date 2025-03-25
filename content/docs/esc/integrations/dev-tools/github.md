@@ -8,6 +8,15 @@ menu:
   esc:
     identifier: esc-dev-tools-integrations-github
     parent: esc-dev-tools-integrations
+search:
+  keywords:
+    - github
+    - esc
+    - actions
+    - overview
+    - action
+    - provides
+    - page
 ---
 
 ## Pulumi ESC GitHub Action

@@ -1,12 +1,22 @@
 ---
 title: Administration
 title_tag: Pulumi ESC administration
-meta_desc: Learn about managing Pulumi ESC organizations, self-hosting options, audit logs, and identity and access management features.
+meta_desc: Learn about managing Pulumi ESC organizations, self-hosting options, audit
+  logs, and identity and access management features.
 menu:
-    esc:
-        parent: esc-home
-        identifier: pulumi-esc-admin
-        weight: 9
+  esc:
+    parent: esc-home
+    identifier: pulumi-esc-admin
+    weight: 9
+search:
+  keywords:
+    - logs
+    - esc
+    - administration
+    - audit
+    - hosting
+    - organizations
+    - self
 ---
 
 Pulumi ESC is built upon [Pulumi Cloud](/docs/pulumi-cloud/), our managed cloud service for individuals and teams that allows you to manage and secure infrastructure at scale. Learn how to configure organizations, monitor audit logs, manage identity and access and enable self-hosting.

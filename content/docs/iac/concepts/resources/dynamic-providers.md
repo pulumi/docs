@@ -1,20 +1,30 @@
 ---
 title_tag: "Dynamic Resource Providers"
-meta_desc: Dynamic resource providers are providers that can be written inside your Pulumi program. Learn how to use dynamic providers and use cases for them.
+meta_desc: Dynamic resource providers are providers that can be written inside your
+  Pulumi program. Learn how to use dynamic providers and use cases for them.
 title: Dynamic providers
 h1: Dynamic resource providers
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Dynamic providers
-        parent: iac-concepts-resources
-        weight: 6
-    concepts:
-        parent: resources
-        weight: 6
+  iac:
+    name: Dynamic providers
+    parent: iac-concepts-resources
+    weight: 6
+  concepts:
+    parent: resources
+    weight: 6
 aliases:
-- /docs/intro/concepts/resources/dynamic-providers/
-- /docs/concepts/resources/dynamic-providers/
+  - /docs/intro/concepts/resources/dynamic-providers/
+  - /docs/concepts/resources/dynamic-providers/
+search:
+  keywords:
+    - dynamic
+    - providers
+    - resource
+    - written
+    - inside
+    - cases
+    - use
 ---
 
 The dynamic resource provider construct can be used to build a local provider for simple APIs and use-cases. Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model. For more sophisticated APIs, one can create a [bridged or native provider](/docs/iac/packages-and-automation/pulumi-packages/).

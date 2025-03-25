@@ -1,6 +1,7 @@
 ---
 title_tag: "customTimeouts | Resource Options"
-meta_desc: The customTimeouts resource option specifies the default retry/timeout behavior for resource provisioning.
+meta_desc: The customTimeouts resource option specifies the default retry/timeout
+  behavior for resource provisioning.
 title: "customTimeouts"
 h1: "Resource option: customTimeouts"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: options-concepts
     weight: 3
 aliases:
-- /docs/intro/concepts/resources/options/customtimeouts/
-- /docs/concepts/options/customtimeouts/
+  - /docs/intro/concepts/resources/options/customtimeouts/
+  - /docs/concepts/options/customtimeouts/
+search:
+  keywords:
+    - customtimeouts
+    - retry
+    - behavior
+    - timeout
+    - specifies
+    - resource
+    - db
 ---
 
 The `customTimeouts` resource option provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts are specified using a duration string such as "5m" (5 minutes), "40s" (40 seconds), or "12h" (12 hours). Supported duration units are "ns", "us" (or "µs"), "ms", "s", "m", and "h" (nanoseconds, microseconds, milliseconds, seconds, minutes, and hours, respectively).

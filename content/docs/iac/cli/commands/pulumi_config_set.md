@@ -2,9 +2,16 @@
 title: "pulumi config set"
 aliases:
   - /docs/reference/cli/pulumi_config_set/
+search:
+  keywords:
+    - config
+    - set
+    - value
+    - treated
+    - nested
+    - path
+    - values
 ---
-
-
 
 Set configuration value
 

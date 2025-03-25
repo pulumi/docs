@@ -2,9 +2,16 @@
 title: "pulumi refresh"
 aliases:
   - /docs/reference/cli/pulumi_refresh/
+search:
+  keywords:
+    - refresh
+    - remote
+    - experimental
+    - git
+    - suppress
+    - string
+    - executor
 ---
-
-
 
 Refresh the resources in a stack
 

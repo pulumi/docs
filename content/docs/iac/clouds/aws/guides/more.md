@@ -33,6 +33,15 @@ aliases:
   - /docs/clouds/aws/aws-guides/sns/
   - /docs/clouds/aws/aws-guides/sqs/
   - /docs/clouds/aws/guides/more/
+search:
+  keywords:
+    - aws
+    - ecr
+    - common
+    - const
+    - resources
+    - topic
+    - help
 ---
 
 In addition to the higher-level abstractions in [Pulumi Crosswalk](/docs/clouds/aws/guides/), the [`@pulumi/aws`](/registry/packages/aws/) library offers complete, fine-grained control over all available AWS resources. The snippets below are designed to help you address some of the most common scenarios.

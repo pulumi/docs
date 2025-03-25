@@ -2,12 +2,22 @@
 title: Pulumi Service Provider
 title_tag: Manage Pulumi ESC resources using a Pulumi Program
 h1: Manage Pulumi ESC resources using a Pulumi Program
-meta_desc: Pulumi Service Provider allows you to create and manage ESC resources like environments, permissions and version tags using a Pulumi program.
+meta_desc: Pulumi Service Provider allows you to create and manage ESC resources like
+  environments, permissions and version tags using a Pulumi program.
 menu:
   esc:
     identifier: esc-psp
     parent: esc-development
     weight: 2
+search:
+  keywords:
+    - provider
+    - esc
+    - service
+    - environments
+    - environment
+    - tags
+    - permissions
 ---
 
 Pulumi Service Provider empowers you to manage your entire infrastructure and application landscape through a unified approach. This means you can define [environments](/docs/esc/environments/), add [version tags](/docs/esc/environments/#tagging-versions), and even control access using familiar Infrastructure as Code (IaC) practices ensuring consistency and repeatability across your deployments.

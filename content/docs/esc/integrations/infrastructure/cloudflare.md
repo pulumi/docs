@@ -8,7 +8,16 @@ menu:
     parent: esc-inf-tools-integrations
     weight: 4
 aliases:
-    - /docs/esc/other-integrations/cloudflare/
+  - /docs/esc/other-integrations/cloudflare/
+search:
+  keywords:
+    - cloudflare
+    - esc
+    - wrangler
+    - overview
+    - top_secret
+    - provides
+    - page
 ---
 
 ## Overview

@@ -1,22 +1,32 @@
 ---
 title_tag: "C#, VB, F# (.NET) | Languages & SDKs"
-meta_desc: An overview of how to use .NET languages like C# and F# with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
+meta_desc: An overview of how to use .NET languages like C# and F# with Pulumi for
+  infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: C#, VB, F# (.NET)
 h1: Pulumi & C#, VB, F# (.NET)
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: C#, F#, VB (.NET)
-        parent: iac-languages
-        weight: 3
-        identifier: iac-languages-dotnet
-    languages:
-        identifier: dotnet
-        weight: 3
+  iac:
+    name: C#, F#, VB (.NET)
+    parent: iac-languages
+    weight: 3
+    identifier: iac-languages-dotnet
+  languages:
+    identifier: dotnet
+    weight: 3
 aliases:
-    - /dotnet/
-    - /docs/intro/languages/dotnet/
-    - /docs/languages-sdks/dotnet/
+  - /dotnet/
+  - /docs/intro/languages/dotnet/
+  - /docs/languages-sdks/dotnet/
+search:
+  keywords:
+    - vb
+    - net
+    - dotnet
+    - azure
+    - microsoft
+    - cloud
+    - netcore
 ---
 
 <img src="/logos/tech/dotnet.png" align="right" width="150" style="padding:8px; margin-top: -64px">

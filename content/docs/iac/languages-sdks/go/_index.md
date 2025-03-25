@@ -1,23 +1,33 @@
 ---
 title_tag: "Go | Languages & SDKs"
-meta_desc: An overview of how to use the Go language with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
+meta_desc: An overview of how to use the Go language with Pulumi for infrastructure
+  as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: Go
 h1: Pulumi & Go
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Go
-        parent: iac-languages
-        weight: 4
-        identifier: iac-languages-go
-    languages:
-        identifier: go
-        weight: 4
+  iac:
+    name: Go
+    parent: iac-languages
+    weight: 4
+    identifier: iac-languages-go
+  languages:
+    identifier: go
+    weight: 4
 aliases:
-    - /docs/intro/languages/go/
-    - /go/
-    - /golang/
-    - /docs/languages-sdks/go/
+  - /docs/intro/languages/go/
+  - /go/
+  - /golang/
+  - /docs/languages-sdks/go/
+search:
+  keywords:
+    - azure
+    - kubernetes
+    - cloud
+    - infrastructure
+    - google
+    - code
+    - aws
 ---
 
 <img src="/logos/tech/logo-golang.png" align="right" width="150" style="padding:8px; margin-top: -64px">

@@ -2,9 +2,16 @@
 title: "pulumi env tag mv"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_mv/
+search:
+  keywords:
+    - mv
+    - environment
+    - utc
+    - tag
+    - env
+    - verbose
+    - tracing
 ---
-
-
 
 Move an environment tag
 

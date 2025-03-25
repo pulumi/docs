@@ -1,6 +1,7 @@
 ---
 title_tag: Deploy the Changes | Google Cloud
-meta_desc: This page provides an overview of how deploy changes to a Google Cloud project.
+meta_desc: This page provides an overview of how deploy changes to a Google Cloud
+  project.
 title: Deploy changes
 h1: "Pulumi & Google Cloud: Deploy changes"
 weight: 7
@@ -10,9 +11,18 @@ menu:
     identifier: gcp-deploy-changes
 
 aliases:
-- /docs/quickstart/gcp/deploy-changes/
-- /docs/get-started/gcp/deploy-changes/
-- /docs/clouds/gcp/get-started/deploy-changes/
+  - /docs/quickstart/gcp/deploy-changes/
+  - /docs/get-started/gcp/deploy-changes/
+  - /docs/clouds/gcp/get-started/deploy-changes/
+search:
+  keywords:
+    - changes
+    - deploy
+    - bucket
+    - google
+    - website
+    - overview
+    - storage
 ---
 
 Now let's deploy your changes.

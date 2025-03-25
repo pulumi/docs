@@ -1,19 +1,28 @@
 ---
 title_tag: "Using Pulumi GitLab Integration | CI/CD"
-meta_desc: Integrate the results of Pulumi stack previews to GitLab Merge Requests. It
-           will show you any potential infrastructure changes on Merge Requests.
+meta_desc: Integrate the results of Pulumi stack previews to GitLab Merge Requests.
+  It will show you any potential infrastructure changes on Merge Requests.
 title: GitLab Integration
 h1: Pulumi CI/CD & GitLab Integration
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: GitLab Integration
-        parent: iac-using-pulumi-cicd
-        weight: 8
+  iac:
+    name: GitLab Integration
+    parent: iac-using-pulumi-cicd
+    weight: 8
 aliases:
-- /docs/guides/continuous-delivery/gitlab-app/
-- /docs/using-pulumi/continuous-delivery/gitlab-app/
-- /docs/iac/packages-and-automation/continuous-delivery/gitlab-app/
+  - /docs/guides/continuous-delivery/gitlab-app/
+  - /docs/using-pulumi/continuous-delivery/gitlab-app/
+  - /docs/iac/packages-and-automation/continuous-delivery/gitlab-app/
+search:
+  keywords:
+    - gitlab
+    - integration
+    - merge
+    - requests
+    - potential
+    - previews
+    - integrate
 ---
 
 With this GitLab integration, Pulumi is able to add Pulumi Previews to a GitLab Merge Request.

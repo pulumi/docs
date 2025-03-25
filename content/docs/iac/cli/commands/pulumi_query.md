@@ -2,9 +2,16 @@
 title: "pulumi query"
 aliases:
   - /docs/reference/cli/pulumi_query/
+search:
+  keywords:
+    - query
+    - stack
+    - program
+    - verbose
+    - tracing
+    - mode
+    - string
 ---
-
-
 
 Run query program against cloud resources
 

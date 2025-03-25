@@ -1,8 +1,15 @@
 ---
 title: "esc env clone"
+search:
+  keywords:
+    - environment
+    - dest
+    - identifier
+    - clone
+    - env
+    - esc
+    - preserve
 ---
-
-
 
 Clone an existing environment into a new environment.
 

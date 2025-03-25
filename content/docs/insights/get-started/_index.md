@@ -2,15 +2,25 @@
 title: Get started
 title_tag: Get Started with Pulumi Insights Account Discovery
 h1: Get Started with Pulumi Insights Account Discovery
-meta_desc: Learn how to set up and manage Pulumi Insights accounts to gain visibility into your cloud infrastructure.
+meta_desc: Learn how to set up and manage Pulumi Insights accounts to gain visibility
+  into your cloud infrastructure.
 weight: 1
 menu:
   insights:
     parent: insights-home
     identifier: insights-get-started
     weight: 1
+search:
+  keywords:
+    - started
+    - insights
+    - visibility
+    - gain
+    - accounts
+    - infrastructure
+    - cloud
 ---
- 
+
 Pulumi Insights is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
 Pulumi Insights gives you the tools to:

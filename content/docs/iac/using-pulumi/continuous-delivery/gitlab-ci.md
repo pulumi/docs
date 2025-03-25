@@ -1,23 +1,32 @@
 ---
 title_tag: "Using GitLab CI | CI/CD"
 meta_desc: This page details how to use GitLab CI to manage deploying staging and
-           production stacks based on commits to specific Git branches.
+  production stacks based on commits to specific Git branches.
 title: GitLab CI
 h1: Pulumi CI/CD & GitLab
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: GitLab CI
-        parent: iac-using-pulumi-cicd
-        weight: 9
+  iac:
+    name: GitLab CI
+    parent: iac-using-pulumi-cicd
+    weight: 9
 aliases:
-- /docs/reference/cd-gitlab-ci/
-- /docs/console/continuous-delivery/gitlab-ci/
-- /docs/guides/continuous-delivery/gitlab-ci/
-- /docs/using-pulumi/continuous-delivery/cd-gitlab-ci/
-- /docs/guides/continuous-delivery/cd-gitlab-ci/
-- /docs/using-pulumi/continuous-delivery/gitlab-ci/
-- /docs/iac/packages-and-automation/continuous-delivery/gitlab-ci/
+  - /docs/reference/cd-gitlab-ci/
+  - /docs/console/continuous-delivery/gitlab-ci/
+  - /docs/guides/continuous-delivery/gitlab-ci/
+  - /docs/using-pulumi/continuous-delivery/cd-gitlab-ci/
+  - /docs/guides/continuous-delivery/cd-gitlab-ci/
+  - /docs/using-pulumi/continuous-delivery/gitlab-ci/
+  - /docs/iac/packages-and-automation/continuous-delivery/gitlab-ci/
+search:
+  keywords:
+    - gitlab
+    - ci
+    - branches
+    - commits
+    - git
+    - staging
+    - deploying
 ---
 
 [GitLab CI/CD](https://docs.gitlab.com/ee/topics/build_your_application.html) enables the management of deploying

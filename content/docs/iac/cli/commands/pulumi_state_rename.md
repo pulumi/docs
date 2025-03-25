@@ -2,9 +2,16 @@
 title: "pulumi state rename"
 aliases:
   - /docs/reference/cli/pulumi_state_rename/
+search:
+  keywords:
+    - renames
+    - rename
+    - state
+    - stack
+    - urns
+    - resource
+    - urn
 ---
-
-
 
 Renames a resource from a stack's state
 

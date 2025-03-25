@@ -2,9 +2,16 @@
 title: "pulumi stack init"
 aliases:
   - /docs/reference/cli/pulumi_stack_init/
+search:
+  keywords:
+    - init
+    - stack
+    - secrets
+    - provider
+    - passphrase
+    - awskms
+    - copy
 ---
-
-
 
 Create an empty stack with the given name, ready for updates
 

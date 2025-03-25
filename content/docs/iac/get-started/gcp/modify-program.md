@@ -1,6 +1,7 @@
 ---
 title_tag: Modify the Program | Google Cloud
-meta_desc: This page provides an overview on how to update Google Cloud (GCP) project from a Pulumi program.
+meta_desc: This page provides an overview on how to update Google Cloud (GCP) project
+  from a Pulumi program.
 title: Modify program
 h1: "Pulumi & Google Cloud: Modify program"
 weight: 6
@@ -10,9 +11,18 @@ menu:
     identifier: gcp-modify-program
 
 aliases:
-- /docs/quickstart/gcp/modify-program/
-- /docs/get-started/gcp/modify-program/
-- /docs/clouds/gcp/get-started/modify-program/
+  - /docs/quickstart/gcp/modify-program/
+  - /docs/get-started/gcp/modify-program/
+  - /docs/clouds/gcp/get-started/modify-program/
+search:
+  keywords:
+    - program
+    - gcp
+    - objectviewer
+    - modify
+    - bucket
+    - bucketobject
+    - storage
 ---
 
 Now that your storage bucket is provisioned, let's add an object to it. First, from within your project directory, create a new `index.html` file with some content in it.

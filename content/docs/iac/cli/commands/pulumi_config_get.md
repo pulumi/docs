@@ -2,9 +2,16 @@
 title: "pulumi config get"
 aliases:
   - /docs/reference/cli/pulumi_config_get/
+search:
+  keywords:
+    - config
+    - value
+    - inner
+    - outer
+    - path
+    - file
+    - stack
 ---
-
-
 
 Get a single configuration value
 

@@ -1,6 +1,7 @@
 ---
 title_tag: Pulumi ESC SDK
-meta_desc: An overview of how to use Node.js, Go, and Python when using Pulumi ESC in your application and infrastructure code. 
+meta_desc: An overview of how to use Node.js, Go, and Python when using Pulumi ESC
+  in your application and infrastructure code.
 title: Languages & SDKs
 h1: Pulumi ESC SDK Languages
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,7 +11,16 @@ menu:
     parent: esc-development
     weight: 3
 aliases:
-    - /docs/esc/sdk/
+  - /docs/esc/sdk/
+search:
+  keywords:
+    - sdks
+    - languages
+    - class
+    - mx
+    - pb
+    - text
+    - alt
 ---
 
 Pulumi ESC SDKs support multiple languages. Each language is as capable as the

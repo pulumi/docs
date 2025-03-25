@@ -1,8 +1,15 @@
 ---
 title: "esc login"
+search:
+  keywords:
+    - login
+    - esc
+    - cloud
+    - log
+    - insecure
+    - backend
+    - url
 ---
-
-
 
 Log in to the Pulumi Cloud
 

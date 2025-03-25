@@ -1,6 +1,7 @@
 ---
 title_tag: "additionalSecretOutputs | Resource Options"
-meta_desc: The additionalSecretOutputs resource option specifies a list of named output properties that should be treated as secrets.
+meta_desc: The additionalSecretOutputs resource option specifies a list of named output
+  properties that should be treated as secrets.
 title: "additionalSecretOutputs"
 h1: "Resource option: additionalSecretOutputs"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: options-concepts
     weight: 1
 aliases:
-- /docs/intro/concepts/resources/options/additionalsecretoutputs/
-- /docs/concepts/options/additionalsecretoutputs/
+  - /docs/intro/concepts/resources/options/additionalsecretoutputs/
+  - /docs/concepts/options/additionalsecretoutputs/
+search:
+  keywords:
+    - additionalsecretoutputs
+    - password
+    - db
+    - treated
+    - specifies
+    - option
+    - named
 ---
 
 The `additionalSecretOutputs` resource option specifies a list of named output properties that should be treated as [secrets](/docs/concepts/secrets/), which means they will be encrypted. It augments the list of values that Pulumi detects, based on secret inputs to the resource.

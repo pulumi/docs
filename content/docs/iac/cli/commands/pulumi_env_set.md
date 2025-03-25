@@ -2,9 +2,16 @@
 title: "pulumi env set"
 aliases:
   - /docs/reference/cli/pulumi_env_set/
+search:
+  keywords:
+    - string
+    - env
+    - set
+    - value
+    - environment
+    - verbose
+    - tracing
 ---
-
-
 
 Set a value within an environment.
 

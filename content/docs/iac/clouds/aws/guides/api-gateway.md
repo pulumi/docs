@@ -2,7 +2,8 @@
 title_tag: "Configuring AWS API Gateway | Crosswalk"
 title: API Gateway
 h1: Amazon API Gateway
-meta_desc: Pulumi Crosswalk for AWS provides a significantly easier way of programming API Gateway. Here is how.
+meta_desc: Pulumi Crosswalk for AWS provides a significantly easier way of programming
+  API Gateway. Here is how.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -12,9 +13,18 @@ menu:
     weight: 1
 
 aliases:
-- /docs/reference/crosswalk/aws/api-gateway/
-- /docs/guides/crosswalk/aws/api-gateway/
-- /docs/clouds/aws/guides/api-gateway/
+  - /docs/reference/crosswalk/aws/api-gateway/
+  - /docs/guides/crosswalk/aws/api-gateway/
+  - /docs/clouds/aws/guides/api-gateway/
+search:
+  keywords:
+    - gateway
+    - api
+    - significantly
+    - crosswalk
+    - easier
+    - programming
+    - aws
 ---
 
 {{< crosswalk-header >}}

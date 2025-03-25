@@ -1,6 +1,7 @@
 ---
 title_tag: "deletedWith | Resource Options"
-meta_desc: The deletedWith resource option allows you to skip running resource deletion if another resource is being deleted as well.
+meta_desc: The deletedWith resource option allows you to skip running resource deletion
+  if another resource is being deleted as well.
 title: "deletedWith"
 h1: "Resource option: deletedWith"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: options-concepts
     weight: 5
 aliases:
-- /docs/intro/concepts/resources/options/deletedwith/
-- /docs/concepts/options/deletedwith/
+  - /docs/intro/concepts/resources/options/deletedwith/
+  - /docs/concepts/options/deletedwith/
+search:
+  keywords:
+    - res1
+    - deletedwith
+    - ns
+    - resource
+    - res2
+    - deletion
+    - deleted
 ---
 
 The `deletedWith` resource option allows you to skip resource deletion if a another resource is being deleted as well.

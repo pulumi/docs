@@ -2,9 +2,16 @@
 title: "pulumi watch"
 aliases:
   - /docs/reference/cli/pulumi_watch/
+search:
+  keywords:
+    - watch
+    - config
+    - stack
+    - pack
+    - update
+    - parallel
+    - file
 ---
-
-
 
 Continuously update the resources in a stack
 

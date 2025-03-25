@@ -2,9 +2,16 @@
 title: "pulumi version"
 aliases:
   - /docs/reference/cli/pulumi_version/
+search:
+  keywords:
+    - version
+    - verbose
+    - commands
+    - tracing
+    - disable
+    - auto
+    - enable
 ---
-
-
 
 Print Pulumi's version number
 

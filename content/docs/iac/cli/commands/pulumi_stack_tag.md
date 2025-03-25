@@ -2,9 +2,16 @@
 title: "pulumi stack tag"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag/
+search:
+  keywords:
+    - tag
+    - stack
+    - tags
+    - commands
+    - iac
+    - cli
+    - verbose
 ---
-
-
 
 Manage stack tags
 

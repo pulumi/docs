@@ -1,7 +1,7 @@
 ---
 title_tag: Configuring Google Workspace | SAML SSO
-meta_desc: This page provides a walkthrough important aspects of configuring
-           Google Workspace as a SAML SSO identity provider (IDP).
+meta_desc: This page provides a walkthrough important aspects of configuring Google
+  Workspace as a SAML SSO identity provider (IDP).
 title: Google Workspace
 h1: "SAML: Configuring Google Workspace"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,9 +12,18 @@ menu:
     weight: 4
     identifier: pulumi-cloud-access-management-saml-gsuite
 aliases:
-- /docs/reference/service/saml-gsuite/
-- /docs/console/accounts/saml/gsuite/
-- /docs/guides/saml/gsuite/
+  - /docs/reference/service/saml-gsuite/
+  - /docs/console/accounts/saml/gsuite/
+  - /docs/guides/saml/gsuite/
+search:
+  keywords:
+    - workspace
+    - gsuite
+    - google
+    - saml
+    - sso
+    - idp
+    - walkthrough
 ---
 
 This guide walks you through configuring your Google Workspace (formerly known as G Suite) service as a SAML SSO identity provider

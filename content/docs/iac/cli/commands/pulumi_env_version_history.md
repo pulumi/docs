@@ -2,9 +2,16 @@
 title: "pulumi env version history"
 aliases:
   - /docs/reference/cli/pulumi_env_version_history/
+search:
+  keywords:
+    - revision
+    - history
+    - env
+    - version
+    - string
+    - utc
+    - verbose
 ---
-
-
 
 Show revision history.
 

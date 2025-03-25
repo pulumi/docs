@@ -2,9 +2,16 @@
 title: "pulumi plugin rm"
 aliases:
   - /docs/reference/cli/pulumi_plugin_rm/
+search:
+  keywords:
+    - plugins
+    - plugin
+    - rm
+    - cache
+    - kind
+    - removal
+    - remove
 ---
-
-
 
 Remove one or more plugins from the download cache
 

@@ -2,9 +2,16 @@
 title: "pulumi config set-all"
 aliases:
   - /docs/reference/cli/pulumi_config_set-all/
+search:
+  keywords:
+    - config
+    - set
+    - plaintext
+    - value
+    - value2
+    - nested
+    - secret
 ---
-
-
 
 Set multiple configuration values
 

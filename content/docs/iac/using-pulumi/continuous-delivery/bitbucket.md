@@ -1,14 +1,24 @@
 ---
 title_tag: "Using Bitbucket Pipelines | CI/CD"
-meta_desc: This page details how to use Bitbucket Pipelines to manage deploying staging and production stacks based on commits to specific Git branches.
+meta_desc: This page details how to use Bitbucket Pipelines to manage deploying staging
+  and production stacks based on commits to specific Git branches.
 title: Bitbucket Pipelines
 h1: Pulumi CI/CD with Bitbucket Pipelines
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Bitbucket Pipelines
-        parent: iac-using-pulumi-cicd
-        weight: 3
+  iac:
+    name: Bitbucket Pipelines
+    parent: iac-using-pulumi-cicd
+    weight: 3
+search:
+  keywords:
+    - bitbucket
+    - pipelines
+    - branches
+    - commits
+    - git
+    - staging
+    - production
 ---
 
 [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/) is an CI/CD service built into Bitbucket Cloud. It allows you to build, test, and deploy your code automatically to your Pulumi staging and production stacks based on commits to specific Git branches.

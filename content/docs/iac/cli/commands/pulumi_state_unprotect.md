@@ -2,9 +2,16 @@
 title: "pulumi state unprotect"
 aliases:
   - /docs/reference/cli/pulumi_state_unprotect/
+search:
+  keywords:
+    - unprotect
+    - state
+    - stack
+    - urns
+    - resources
+    - verbose
+    - tracing
 ---
-
-
 
 Unprotect resources in a stack's state
 

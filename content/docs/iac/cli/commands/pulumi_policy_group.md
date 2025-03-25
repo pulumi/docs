@@ -2,9 +2,16 @@
 title: "pulumi policy group"
 aliases:
   - /docs/reference/cli/pulumi_policy_group/
+search:
+  keywords:
+    - verbose
+    - commands
+    - group
+    - policy
+    - tracing
+    - groups
+    - disable
 ---
-
-
 
 Manage policy groups
 

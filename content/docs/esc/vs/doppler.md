@@ -5,12 +5,21 @@ title: Pulumi ESC vs Doppler
 h1: Pulumi ESC vs Doppler
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    esc:
-        Name: Doppler
-        identifier: Doppler
-        parent: esc-vs
-        weight: 3
+  esc:
+    Name: Doppler
+    identifier: Doppler
+    parent: esc-vs
+    weight: 3
 aliases:
+search:
+  keywords:
+    - doppler
+    - esc
+    - differences
+    - td
+    - vs
+    - tr
+    - major
 ---
 
 <style>

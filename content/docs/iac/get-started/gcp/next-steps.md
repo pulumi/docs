@@ -1,7 +1,7 @@
 ---
 title_tag: Next Steps | Google Cloud
-meta_desc: This page provides a list of tutorials that take a deeper dive into
-            Google Cloud cloud resources.
+meta_desc: This page provides a list of tutorials that take a deeper dive into Google
+  Cloud cloud resources.
 title: Next steps
 h1: "Pulumi & Google Cloud: Next steps"
 weight: 9
@@ -11,9 +11,18 @@ menu:
     identifier: gcp-next-steps
 
 aliases:
-- /docs/quickstart/gcp/next-steps/
-- /docs/get-started/gcp/next-steps/
-- /docs/clouds/gcp/get-started/next-steps/
+  - /docs/quickstart/gcp/next-steps/
+  - /docs/get-started/gcp/next-steps/
+  - /docs/clouds/gcp/get-started/next-steps/
+search:
+  keywords:
+    - gcp
+    - steps
+    - deeper
+    - tutorials
+    - cloud
+    - google
+    - gs
 ---
 
 Congrats! You've deployed your first project on Google Cloud with Pulumi. Here are some next steps, depending on your learning style.

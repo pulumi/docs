@@ -1,7 +1,7 @@
 ---
 title_tag: Configuring Okta | SAML SSO
-meta_desc: This page provides a walkthrough important aspects of configuring
-           Okta as a SAML SSO identity provider (IdP).
+meta_desc: This page provides a walkthrough important aspects of configuring Okta
+  as a SAML SSO identity provider (IdP).
 title: Okta
 h1: "SAML: Configuring Okta"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,9 +12,18 @@ menu:
     weight: 5
     identifier: pulumi-cloud-access-management-saml-okta
 aliases:
-- /docs/reference/service/saml-okta/
-- /docs/console/accounts/saml/okta/
-- /docs/guides/saml/okta/
+  - /docs/reference/service/saml-okta/
+  - /docs/console/accounts/saml/okta/
+  - /docs/guides/saml/okta/
+search:
+  keywords:
+    - okta
+    - saml
+    - sso
+    - idp
+    - walkthrough
+    - aspects
+    - identity
 ---
 
 This guide walks you through configuring Okta as a SAML SSO identity provider (IdP) for the Pulumi Cloud.

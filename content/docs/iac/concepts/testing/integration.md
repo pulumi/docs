@@ -6,15 +6,24 @@ h1: Integration testing for Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 weight: 3
 menu:
-    iac:
-        name: Integration testing
-        parent: iac-concepts-testing
-        weight: 3
-    usingpulumi:
-        parent: testing
+  iac:
+    name: Integration testing
+    parent: iac-concepts-testing
+    weight: 3
+  usingpulumi:
+    parent: testing
 aliases:
-    - /docs/guides/testing/integration/
-    - /docs/using-pulumi/testing/integration/
+  - /docs/guides/testing/integration/
+  - /docs/using-pulumi/testing/integration/
+search:
+  keywords:
+    - integration
+    - testing
+    - ephemeral
+    - programs
+    - guide
+    - environments
+    - test
 ---
 
 Integration testing focuses on black-box testing of Pulumi programs. An integration test runs the program in combination with the Pulumi CLI to deploy infrastructure to an ephemeral environment. It verifies the properties of the created resources and then destroys the infrastructure again.

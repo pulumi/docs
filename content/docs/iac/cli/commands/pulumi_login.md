@@ -2,9 +2,16 @@
 title: "pulumi login"
 aliases:
   - /docs/reference/cli/pulumi_login/
+search:
+  keywords:
+    - login
+    - cloud
+    - state
+    - log
+    - local
+    - hosted
+    - insecure
 ---
-
-
 
 Log in to the Pulumi Cloud
 

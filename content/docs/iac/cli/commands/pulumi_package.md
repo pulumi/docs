@@ -2,9 +2,16 @@
 title: "pulumi package"
 aliases:
   - /docs/reference/cli/pulumi_package/
+search:
+  keywords:
+    - commands
+    - package
+    - schema
+    - mapping
+    - iac
+    - sdk
+    - packages
 ---
-
-
 
 Work with Pulumi packages
 

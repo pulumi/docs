@@ -1,26 +1,36 @@
 ---
 title_tag: "TypeScript and Node.js | Languages & SDKs"
-meta_desc: Learn to use Node.js languages like JavaScript and TypeScript with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
+meta_desc: Learn to use Node.js languages like JavaScript and TypeScript with Pulumi
+  for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: TypeScript (Node.js)
 h1: Pulumi & TypeScript & JavaScript (Node.js)
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: TypeScript (Node.js)
-        parent: iac-languages
-        weight: 1
-        identifier: iac-languages-javascript
-    languages:
-        identifier: javascript
-        weight: 1
+  iac:
+    name: TypeScript (Node.js)
+    parent: iac-languages
+    weight: 1
+    identifier: iac-languages-javascript
+  languages:
+    identifier: javascript
+    weight: 1
 aliases:
-    - /docs/reference/javascript/
-    - /docs/reference/typescript/
-    - /docs/intro/languages/javascript/
-    - /docs/intro/languages/typescript/
-    - /javascript/
-    - /typescript/
-    - /docs/languages-sdks/javascript/
+  - /docs/reference/javascript/
+  - /docs/reference/typescript/
+  - /docs/intro/languages/javascript/
+  - /docs/intro/languages/typescript/
+  - /javascript/
+  - /typescript/
+  - /docs/languages-sdks/javascript/
+search:
+  keywords:
+    - kubernetes
+    - js
+    - node
+    - typescript
+    - javascript
+    - cloud
+    - languages
 ---
 
 <img src="/logos/tech/logo-nodejs.png" align="right" width="150" style="padding:8px; margin-top: -64px">

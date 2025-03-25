@@ -2,9 +2,16 @@
 title: "pulumi convert"
 aliases:
   - /docs/reference/cli/pulumi_convert/
+search:
+  keywords:
+    - conversion
+    - directory
+    - convert
+    - source
+    - converted
+    - languages
+    - string
 ---
-
-
 
 Convert Pulumi programs from a supported source program into other supported languages
 

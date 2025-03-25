@@ -5,14 +5,24 @@ title: Compliance Ready Gcp Policies
 h1: List of Compliance Ready Policies for Gcp
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: GCP Policies
-        parent: iac-using-pulumi-policy-compliance
-        weight: 6
+  iac:
+    name: GCP Policies
+    parent: iac-using-pulumi-policy-compliance
+    weight: 6
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-gcp/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-gcp/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-gcp/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-gcp/
+search:
+  keywords:
+    - compliance
+    - gcp
+    - ready
+    - firewallpolicyrule
+    - compute
+    - policies
+    - inbound
 ---
+
 There's a total of 1 Compliance Ready Policies for the Gcp provider.
 
 All those policies are available in the `@pulumi/google-compliance-policies` package.

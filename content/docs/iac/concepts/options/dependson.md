@@ -1,6 +1,7 @@
 ---
 title_tag: "dependsOn | Resource Options"
-meta_desc: The dependsOn resource option specifies additional resource dependencies in addition to those in the dependency graph.
+meta_desc: The dependsOn resource option specifies additional resource dependencies
+  in addition to those in the dependency graph.
 title: "dependsOn"
 h1: "Resource option: dependsOn"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: options-concepts
     weight: 6
 aliases:
-- /docs/intro/concepts/resources/options/dependson/
-- /docs/concepts/options/dependson/
+  - /docs/intro/concepts/resources/options/dependson/
+  - /docs/concepts/options/dependson/
+search:
+  keywords:
+    - graph
+    - dependencies
+    - dependson
+    - res1
+    - res2
+    - myresource
+    - dependency
 ---
 
 The `dependsOn` resource option creates a list of explicit dependencies between resources.

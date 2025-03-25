@@ -1,22 +1,32 @@
 ---
 title_tag: "Java | Languages & SDKs"
-meta_desc: An overview of how to use the Java language with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
+meta_desc: An overview of how to use the Java language with Pulumi for infrastructure
+  as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: Java
 h1: Pulumi & Java
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Java
-        parent: iac-languages
-        weight: 5
-        identifier: iac-languages-java
-    languages:
-        identifier: java
-        weight: 5
+  iac:
+    name: Java
+    parent: iac-languages
+    weight: 5
+    identifier: iac-languages-java
+  languages:
+    identifier: java
+    weight: 5
 aliases:
-    - /docs/intro/languages/java/
-    - /java/
-    - /docs/languages-sdks/java/
+  - /docs/intro/languages/java/
+  - /java/
+  - /docs/languages-sdks/java/
+search:
+  keywords:
+    - cloud
+    - java
+    - mainclass
+    - google
+    - infrastructure
+    - gradle
+    - azure
 ---
 
 <img src="/logos/tech/java.svg" alt="java" align="right" width="90" style="padding:8px; margin-top: -64px">

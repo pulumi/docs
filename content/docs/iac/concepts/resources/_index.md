@@ -1,21 +1,31 @@
 ---
 title_tag: "Resources | Pulumi Concepts"
-meta_desc: Resources represent the fundamental units that make up your cloud infrastructure. Learn how Pulumi resources work and how to use them in this guide.
+meta_desc: Resources represent the fundamental units that make up your cloud infrastructure.
+  Learn how Pulumi resources work and how to use them in this guide.
 title: Resources
 h1: Resources
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Resources
-        parent: iac-concepts
-        weight: 3
-        identifier: iac-concepts-resources
-    concepts:
-        identifier: resources
-        weight: 3
+  iac:
+    name: Resources
+    parent: iac-concepts
+    weight: 3
+    identifier: iac-concepts-resources
+  concepts:
+    identifier: resources
+    weight: 3
 aliases:
-- /docs/intro/concepts/resources/
-- /docs/concepts/resources/
+  - /docs/intro/concepts/resources/
+  - /docs/concepts/resources/
+search:
+  keywords:
+    - resources
+    - border
+    - units
+    - concepts
+    - represent
+    - fundamental
+    - h3
 ---
 
 <script>

@@ -2,9 +2,16 @@
 title: "pulumi env open"
 aliases:
   - /docs/reference/cli/pulumi_env_open/
+search:
+  keywords:
+    - open
+    - env
+    - environment
+    - lifetime
+    - string
+    - given
+    - property
 ---
-
-
 
 Open the environment with the given name.
 

@@ -10,9 +10,18 @@ menu:
     identifier: gcp-review-project
 
 aliases:
-- /docs/quickstart/gcp/review-project/
-- /docs/get-started/gcp/review-project/
-- /docs/clouds/gcp/get-started/review-project/
+  - /docs/quickstart/gcp/review-project/
+  - /docs/get-started/gcp/review-project/
+  - /docs/clouds/gcp/get-started/review-project/
+search:
+  keywords:
+    - review
+    - bucketname
+    - project
+    - bucket
+    - google
+    - storage
+    - overview
 ---
 
 Let's review some of the generated project files:

@@ -2,9 +2,16 @@
 title: "pulumi env version"
 aliases:
   - /docs/reference/cli/pulumi_env_version/
+search:
+  keywords:
+    - env
+    - version
+    - versions
+    - commands
+    - revision
+    - retract
+    - history
 ---
-
-
 
 Manage versions
 

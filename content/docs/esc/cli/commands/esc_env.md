@@ -1,8 +1,15 @@
 ---
 title: "esc env"
+search:
+  keywords:
+    - environment
+    - commands
+    - possibly
+    - esc
+    - env
+    - cli
+    - docs
 ---
-
-
 
 Manage environments
 

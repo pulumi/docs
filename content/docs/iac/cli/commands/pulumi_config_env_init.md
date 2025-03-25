@@ -2,9 +2,16 @@
 title: "pulumi config env init"
 aliases:
   - /docs/reference/cli/pulumi_config_env_init/
+search:
+  keywords:
+    - init
+    - env
+    - config
+    - stack
+    - environment
+    - string
+    - values
 ---
-
-
 
 Creates an environment for a stack
 

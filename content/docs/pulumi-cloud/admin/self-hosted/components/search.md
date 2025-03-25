@@ -1,18 +1,28 @@
 ---
 title_tag: Resource Search Cluster | Self-Hosting Pulumi
-meta_desc: An OpenSearch cluster is required for Resource Search features. Self-hosting is available as part of the Pulumi Business Critical Edition.
+meta_desc: An OpenSearch cluster is required for Resource Search features. Self-hosting
+  is available as part of the Pulumi Business Critical Edition.
 title: OpenSearch cluster
 h1: Pulumi Cloud self-hosted OpenSearch cluster
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: OpenSearch cluster
-        parent: pulumi-cloud-admin-self-hosted-components
-        weight: 3
-        identifier: pulumi-cloud-admin-self-hosted-components-search
+  cloud:
+    name: OpenSearch cluster
+    parent: pulumi-cloud-admin-self-hosted-components
+    weight: 3
+    identifier: pulumi-cloud-admin-self-hosted-components-search
 aliases:
   - /docs/guides/self-hosted/components/search/
   - /docs/pulumi-cloud/self-hosted/components/search/
+search:
+  keywords:
+    - opensearch
+    - cluster
+    - search
+    - self
+    - hosting
+    - edition
+    - critical
 ---
 
 {{% notes type="info" %}}
