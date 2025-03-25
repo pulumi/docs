@@ -1,12 +1,12 @@
 ---
 title_tag: "OpenTofu vs. Terraform"
 meta_desc: Compare and contrast OpenTofu and Terraform across key features. Learn how they differ and why many teams are migrating to Pulumi.
-title: Terraform vs. OpenTofu
-h1: Terraform vs. OpenTofu
+title: OpenTofu vs. Terraform
+h1: OpenTofu vs. Terraform
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Terraform vs. OpenTofu
+        name: OpenTofu vs. Terraform
         parent: iac-concepts-compare-terraform
         weight: 2
     concepts:
@@ -66,7 +66,7 @@ Are you constrained by Terraform or OpenTofu? Let us help you migrate to Pulumi 
 
 {{< get-started >}}
 
-## Terraform and OpenTofu Alternative
+## Pulumi: Terraform and OpenTofu Alternative
 
 The following sections provide a detailed explanation of why Pulumi is a better alternative to both Terraform and OpenTofu.
 

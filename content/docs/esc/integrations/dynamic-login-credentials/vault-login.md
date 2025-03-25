@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: vault-login
     parent: esc-dynamic-login-credentials
-    weight: 4
+    weight: 5
 aliases:
     - /docs/pulumi-cloud/esc/providers/vault-login/
     - /docs/esc/providers/vault-login/
