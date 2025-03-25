@@ -68,7 +68,7 @@ export class PulumiPricingCalculator {
   render() {
     return (
         <div class="value-calculator">
-            <h3>Platform Engineering ROI Estimator</h3>
+            <h3>Platform Engineering Value ROI Estimator</h3>
             <h5>Improve your cloud ROI by unleashing developer productivity</h5>
             <div class="main-content">
                 <div class="field">
@@ -108,7 +108,7 @@ export class PulumiPricingCalculator {
                                 </div>
                             </div>
                             <div class="slider-side content-center">
-                                <input type="range" min="85000" max="200000" step="5" onInput={event => this.updateDevSalary(event as any)} value={this.devSalary} class="range purple w-full"/>
+                                <input type="range" min="85000" max="200000" step="1000" onInput={event => this.updateDevSalary(event as any)} value={this.devSalary} class="range purple w-full"/>
                                 <div class="w-full flex flex-row ticks"></div>
                             </div>
                         </div>
