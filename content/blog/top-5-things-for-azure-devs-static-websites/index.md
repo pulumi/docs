@@ -1,8 +1,10 @@
 ---
-title: "Top 5 Things an Azure Developer Needs to Know: Static Websites"
+title: "Top Azure Services Every Developer Should Know: Static Websites"
+h1: How to Deploy Static Websites on Azure with Storage and Static Web Apps
 date: 2021-08-09
+updated: 2025-03-25
 allow_long_title: True
-meta_desc: "Two ways to build and deploy static websites with Azure"
+meta_desc: "Learn how to deploy static websites on Azure using Blob Storage and Static Web Apps. Explore both portal-based and code-based methods with Pulumi."
 meta_image: azure-top-5.png
 authors:
     - sophia-parafina
@@ -11,11 +13,18 @@ tags:
     - static websites
 ---
 
-Static web applications are a popular way to publish websites. There are many reasons for adopting static web applications, including speed, security, version control, scalability, and reduced cost.
+Hosting a static website on Azure is one of the fastest and most cost-effective ways to publish web content. In this guide, we’ll walk through two popular deployment methods: using Azure Blob Storage and using Azure Static Web Apps. Whether you’re building a simple HTML/CSS site or a modern React or Vue app, Azure makes it easy to deploy and scale static content.
 
 This article goes into depth about the two types of static web applications that Azure offers. The first uses Azure Blob Storage to serve static data. The second method is Azure Static Web Apps which follows the pattern of [Jamstack](https://jamstack.org) applications that use a static website generator integrated with source control that publishes to a [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network). We'll take an in-depth look at both methods and consider the pros and cons of each.
 
-<!--more-->
+This series goes in-depth on:
+* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
+* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
+* [Top Azure Services Every Developer Should Know: Serverless](/blog/top-5-things-for-azure-devs-serverless/)
+* **Top Azure Services Every Developer Should Know: Static Websites** (this post)
+* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
+* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
+* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 ## Static Websites with Azure Storage
 
