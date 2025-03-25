@@ -1,6 +1,7 @@
 ---
 title_tag: Frequently Asked Questions (FAQ) | SCIM
-meta_desc: This page describes how to resolve issues that may occur when configuring SCIM provisioning
+meta_desc: This page describes how to resolve issues that may occur when configuring
+  SCIM provisioning
 title: FAQ
 h1: Pulumi Cloud SCIM FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,6 +13,15 @@ menu:
     identifier: pulumi-cloud-access-management-scim-faq
 aliases:
   - /docs/guides/scim/faq/
+search:
+  keywords:
+    - faq
+    - occur
+    - scim
+    - resolve
+    - provisioning
+    - describes
+    - issues
 ---
 
 ## FAQ

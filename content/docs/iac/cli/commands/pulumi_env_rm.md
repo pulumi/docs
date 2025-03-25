@@ -2,9 +2,16 @@
 title: "pulumi env rm"
 aliases:
   - /docs/reference/cli/pulumi_env_rm/
+search:
+  keywords:
+    - rm
+    - env
+    - environment
+    - respectively
+    - emojis
+    - skip
+    - processes
 ---
-
-
 
 Remove an environment or a value from an environment.
 

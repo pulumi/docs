@@ -5,9 +5,18 @@ h1: "Pulumi & AWS: Deploy stack"
 meta_desc: Learn how to deploy your stack to an AWS project in this guide.
 weight: 5
 aliases:
-- /docs/quickstart/aws/deploy-stack/
-- /docs/get-started/aws/deploy-stack/
-- /docs/clouds/aws/get-started/deploy-stack/
+  - /docs/quickstart/aws/deploy-stack/
+  - /docs/get-started/aws/deploy-stack/
+  - /docs/clouds/aws/get-started/deploy-stack/
+search:
+  keywords:
+    - deploy
+    - stack
+    - bucketname
+    - guide
+    - learn
+    - aws
+    - project
 ---
 
 Let's go ahead and deploy your stack:

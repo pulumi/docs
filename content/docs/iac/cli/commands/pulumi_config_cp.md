@@ -2,9 +2,16 @@
 title: "pulumi config cp"
 aliases:
   - /docs/reference/cli/pulumi_config_cp/
+search:
+  keywords:
+    - cp
+    - config
+    - plugins
+    - emojis
+    - logflow
+    - memprofilerate
+    - execution
 ---
-
-
 
 Copy config to another stack
 

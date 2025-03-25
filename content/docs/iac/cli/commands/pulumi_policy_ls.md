@@ -2,9 +2,16 @@
 title: "pulumi policy ls"
 aliases:
   - /docs/reference/cli/pulumi_policy_ls/
+search:
+  keywords:
+    - ls
+    - policy
+    - policies
+    - like
+    - cwd
+    - enable
+    - '2025'
 ---
-
-
 
 List all Policy Packs for a Pulumi organization
 

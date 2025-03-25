@@ -4,11 +4,20 @@ title: "Frequently Asked Questions"
 h1: "Pulumi Cloud: Frequently Asked Questions"
 meta_desc: A collection of Frequently Asked Questions (FAQ) about Pulumi Cloud.
 menu:
-    cloud:
-        name: FAQ
-        parent: cloud-home
-        weight: 12
-        identifier: pulumi-cloud-faq
+  cloud:
+    name: FAQ
+    parent: cloud-home
+    weight: 12
+    identifier: pulumi-cloud-faq
+search:
+  keywords:
+    - frequently
+    - asked
+    - questions
+    - faq
+    - collection
+    - cloud
+    - diagnostics
 ---
 
 ## General

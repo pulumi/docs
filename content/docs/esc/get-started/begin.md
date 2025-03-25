@@ -8,6 +8,15 @@ menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-begin
+search:
+  keywords:
+    - begin
+    - esc
+    - overview
+    - provides
+    - page
+    - started
+    - oidc
 ---
 
 Before you get started using Pulumi ESC, let's run through a few quick steps to ensure your environment is set up correctly.

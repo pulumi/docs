@@ -1,6 +1,7 @@
 ---
 title_tag: "protect | Resource Options"
-meta_desc: The protect resource option prevents accidental deletion of a resource by marking it as protected.
+meta_desc: The protect resource option prevents accidental deletion of a resource
+  by marking it as protected.
 title: "protect"
 h1: "Resource option: protect"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: options-concepts
     weight: 10
 aliases:
-- /docs/intro/concepts/resources/options/protect/
-- /docs/concepts/options/protect/
+  - /docs/intro/concepts/resources/options/protect/
+  - /docs/concepts/options/protect/
+search:
+  keywords:
+    - protect
+    - marking
+    - accidental
+    - protected
+    - prevents
+    - resource
+    - deletion
 ---
 
 The `protect` resource option marks a resource as protected. A protected resource cannot be deleted directly, and it will be an error to do a Pulumi deployment which tries to delete a protected resource for any reason.

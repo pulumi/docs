@@ -1,8 +1,15 @@
 ---
 title: "esc completion powershell"
+search:
+  keywords:
+    - powershell
+    - completion
+    - esc
+    - autocompletion
+    - script
+    - descriptions
+    - completions
 ---
-
-
 
 Generate the autocompletion script for powershell
 

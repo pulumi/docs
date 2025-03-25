@@ -5,16 +5,25 @@ title: Reference
 h1: Pulumi YAML reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Reference
-        parent: iac-languages-yaml
-        weight: 1
-    languages:
-        parent: yaml-language
-        weight: 1
+  iac:
+    name: Reference
+    parent: iac-languages-yaml
+    weight: 1
+  languages:
+    parent: yaml-language
+    weight: 1
 aliases:
-- /docs/reference/yaml/
-- /docs/languages-sdks/yaml/yaml-language-reference/
+  - /docs/reference/yaml/
+  - /docs/languages-sdks/yaml/yaml-language-reference/
+search:
+  keywords:
+    - reference
+    - specification
+    - functions
+    - built
+    - format
+    - yaml
+    - references
 ---
 
 Pulumi programs can be defined in many languages, and the Pulumi YAML dialect offers an additional language for authoring Pulumi programs.

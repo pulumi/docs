@@ -2,9 +2,16 @@
 title: "pulumi env tag get"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_get/
+search:
+  keywords:
+    - tag
+    - env
+    - environment
+    - tags
+    - emojis
+    - qualify
+    - logtostderr
 ---
-
-
 
 Get an environment tag
 

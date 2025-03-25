@@ -2,6 +2,15 @@
 title: "Programming Model"
 url: /docs/reference/programming-model
 block_external_search_index: true
+search:
+  keywords:
+    - programming
+    - concepts
+    - equiv
+    - redirects
+    - model
+    - redirecting
+    - moved
 ---
 
 <!--

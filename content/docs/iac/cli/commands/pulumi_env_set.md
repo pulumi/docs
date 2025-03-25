@@ -2,9 +2,16 @@
 title: "pulumi env set"
 aliases:
   - /docs/reference/cli/pulumi_env_set/
+search:
+  keywords:
+    - set
+    - env
+    - value
+    - emojis
+    - commands
+    - logflow
+    - yaml
 ---
-
-
 
 Set a value within an environment.
 

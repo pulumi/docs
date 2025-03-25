@@ -1,6 +1,7 @@
 ---
 title_tag: "Pulumi supported Clouds"
-meta_desc: Pulumi supports AWS, Azure, Google Cloud, Kubernetes, and over 100 other packages.
+meta_desc: Pulumi supports AWS, Azure, Google Cloud, Kubernetes, and over 100 other
+  packages.
 title: "Clouds"
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,6 +13,15 @@ menu:
     identifier: iac-clouds
 aliases:
   - /docs/clouds/
+search:
+  keywords:
+    - '100'
+    - azure
+    - kubernetes
+    - google
+    - supports
+    - packages
+    - cloud
 ---
 
 Pulumi supports AWS, Azure, Google Cloud, Kubernetes, and over 100 other packages.

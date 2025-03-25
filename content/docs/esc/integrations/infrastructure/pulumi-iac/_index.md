@@ -2,12 +2,22 @@
 title: Pulumi IaC
 title_tag: Pulumi ESC and IaC integration
 h1: ESC Pulumi IaC Integration
-meta_desc: Pulumi ESC integrates with Pulumi IaC to expose environment settings and secrets to Pulumi stacks, simplifying configuration management.
+meta_desc: Pulumi ESC integrates with Pulumi IaC to expose environment settings and
+  secrets to Pulumi stacks, simplifying configuration management.
 menu:
   esc:
     identifier: esc-pulumi-iac-integrations
     parent: esc-inf-tools-integrations
     weight: 1
+search:
+  keywords:
+    - iac
+    - simplifying
+    - expose
+    - integrates
+    - stacks
+    - esc
+    - management
 ---
 
 With support for Pulumi ESC built into the Pulumi CLI, you can expose an environment's settings and secrets to any or all of your Pulumi stacks, bypassing the need to define and maintain individual configuration settings or secrets "locally" in Pulumi config files. The optional `pulumiConfig` key enables this.

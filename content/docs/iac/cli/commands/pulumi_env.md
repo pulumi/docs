@@ -2,9 +2,16 @@
 title: "pulumi env"
 aliases:
   - /docs/reference/cli/pulumi_env/
+search:
+  keywords:
+    - iac
+    - env
+    - environment
+    - commands
+    - cli
+    - respectively
+    - like
 ---
-
-
 
 Manage environments
 

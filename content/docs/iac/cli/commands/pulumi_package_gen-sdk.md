@@ -2,9 +2,16 @@
 title: "pulumi package gen-sdk"
 aliases:
   - /docs/reference/cli/pulumi_package_gen-sdk/
+search:
+  keywords:
+    - sdk
+    - gen
+    - package
+    - emojis
+    - spf13
+    - schema
+    - parameters
 ---
-
-
 
 Generate SDK(s) from a package or schema
 

@@ -6,14 +6,23 @@ h1: Compliance Ready Policies
 weight:
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Compliance-ready policies
-        parent: iac-using-pulumi-policy
-        weight: 7
-        identifier: iac-using-pulumi-policy-compliance
+  iac:
+    name: Compliance-ready policies
+    parent: iac-using-pulumi-policy
+    weight: 7
+    identifier: iac-using-pulumi-policy-compliance
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies/
+search:
+  keywords:
+    - ready
+    - policies
+    - compliance
+    - contains
+    - page
+    - policy
+    - configureaccesslogging
 ---
 
 Pulumi Compliance Ready Policies, with a comprehensive coverage of AWS, Azure, Google, and Kubernetes, provide

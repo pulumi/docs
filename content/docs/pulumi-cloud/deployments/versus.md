@@ -12,6 +12,15 @@ menu:
     identifier: pulumi-cloud-deployments-versus
 aliases:
   - /docs/intro/deployments/versus/
+search:
+  keywords:
+    - traditional
+    - ci
+    - vs
+    - cd
+    - compare
+    - systems
+    - deployments
 ---
 
 Pulumi Deployments is a cloud automation platform. It can serve as a CI/CD system, but it has the flexibility to do much more. How does it compare to something like GitHub Actions, GitLab CI, or Terraform Enterprise?

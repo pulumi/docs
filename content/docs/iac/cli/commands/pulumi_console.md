@@ -2,9 +2,16 @@
 title: "pulumi console"
 aliases:
   - /docs/reference/cli/pulumi_console/
+search:
+  keywords:
+    - console
+    - docs
+    - respectively
+    - logflow
+    - endpoint
+    - inherited
+    - flags
 ---
-
-
 
 Opens the current stack in the Pulumi Console
 

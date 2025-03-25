@@ -1,8 +1,15 @@
 ---
 title: "esc completion"
+search:
+  keywords:
+    - completion
+    - esc
+    - generate
+    - powershell
+    - autocompletion
+    - script
+    - zsh
 ---
-
-
 
 Generate the autocompletion script for the specified shell
 

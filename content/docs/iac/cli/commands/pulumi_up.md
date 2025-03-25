@@ -2,9 +2,16 @@
 title: "pulumi up"
 aliases:
   - /docs/reference/cli/pulumi_up/
+search:
+  keywords:
+    - executor
+    - remote
+    - experimental
+    - git
+    - suppress
+    - string
+    - update
 ---
-
-
 
 Create or update the resources in a stack
 

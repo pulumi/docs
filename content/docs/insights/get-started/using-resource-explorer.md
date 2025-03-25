@@ -2,13 +2,23 @@
 title_tag: Using Research Explorer | Pulumi Insights
 title: Using Insights Resource Explorer
 h1: "Pulumi Insights: Using Resources Explorer"
-meta_desc: This page provides an overview on how to get started with Pulumi Insights Accounts.
+meta_desc: This page provides an overview on how to get started with Pulumi Insights
+  Accounts.
 weight: 5
 menu:
   insights:
     parent: insights-get-started
     identifier: insights-get-started-resource-explorer
     weight: 5
+search:
+  keywords:
+    - explorer
+    - insights
+    - resource
+    - using
+    - accounts
+    - overview
+    - provides
 ---
 
 [Pulumi Resource Explorer](/docs/insights/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.

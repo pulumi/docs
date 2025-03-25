@@ -2,9 +2,16 @@
 title: "pulumi plugin"
 aliases:
   - /docs/reference/cli/pulumi_plugin/
+search:
+  keywords:
+    - plugins
+    - plugin
+    - logflow
+    - respectively
+    - cwd
+    - string
+    - memprofilerate
 ---
-
-
 
 Manage language and resource provider plugins
 

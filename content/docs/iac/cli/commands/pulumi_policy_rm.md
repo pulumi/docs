@@ -2,9 +2,16 @@
 title: "pulumi policy rm"
 aliases:
   - /docs/reference/cli/pulumi_policy_rm/
+search:
+  keywords:
+    - rm
+    - policy
+    - pack
+    - policies
+    - respectively
+    - skip
+    - prompts
 ---
-
-
 
 Removes a Policy Pack from a Pulumi organization
 

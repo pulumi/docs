@@ -5,14 +5,24 @@ title: Compliance Ready Azure Policies
 h1: List of Compliance Ready Policies for Azure
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Azure Policies
-        parent: iac-using-pulumi-policy-compliance
-        weight: 4
+  iac:
+    name: Azure Policies
+    parent: iac-using-pulumi-policy-compliance
+    weight: 4
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-azure/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azure/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-azure/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azure/
+search:
+  keywords:
+    - ready
+    - policies
+    - azure
+    - linuxvirtualmachine
+    - compliance
+    - contains
+    - list
 ---
+
 There's a total of 3 Compliance Ready Policies for the Azure provider.
 
 All those policies are available in the `@pulumi/azure-compliance-policies` package.

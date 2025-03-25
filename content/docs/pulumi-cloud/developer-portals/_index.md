@@ -9,6 +9,15 @@ menu:
     parent: cloud-home
     weight: 7
     identifier: pulumi-cloud-developer-portals
+search:
+  keywords:
+    - portals
+    - used
+    - backstage
+    - developer
+    - internal
+    - high
+    - summary
 ---
 
 At Pulumi, we work with companies that range in size from a few engineers to entire departments responsible for managing infrastructure.

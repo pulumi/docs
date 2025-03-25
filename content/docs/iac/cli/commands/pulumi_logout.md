@@ -2,9 +2,16 @@
 title: "pulumi logout"
 aliases:
   - /docs/reference/cli/pulumi_logout/
+search:
+  keywords:
+    - logout
+    - logtostderr
+    - enable
+    - flags
+    - colorize
+    - run
+    - directory
 ---
-
-
 
 Log out of the Pulumi Cloud
 

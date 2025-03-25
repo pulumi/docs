@@ -2,9 +2,16 @@
 title: "pulumi stack rename"
 aliases:
   - /docs/reference/cli/pulumi_stack_rename/
+search:
+  keywords:
+    - rename
+    - stack
+    - renaming
+    - emojis
+    - run
+    - colorize
+    - memprofilerate
 ---
-
-
 
 Rename an existing stack
 

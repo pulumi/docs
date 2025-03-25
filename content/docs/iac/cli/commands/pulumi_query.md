@@ -2,9 +2,16 @@
 title: "pulumi query"
 aliases:
   - /docs/reference/cli/pulumi_query/
+search:
+  keywords:
+    - query
+    - querying
+    - endpoint
+    - defaults
+    - colorize
+    - expensive
+    - verbose
 ---
-
-
 
 Run query program against cloud resources
 

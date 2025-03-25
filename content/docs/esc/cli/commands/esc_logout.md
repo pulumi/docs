@@ -1,8 +1,15 @@
 ---
 title: "esc logout"
+search:
+  keywords:
+    - logout
+    - esc
+    - commands
+    - flags
+    - defaults
+    - just
+    - spf13
 ---
-
-
 
 Log out of the Pulumi Cloud
 

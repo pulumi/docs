@@ -2,9 +2,16 @@
 title: "pulumi stack history"
 aliases:
   - /docs/reference/cli/pulumi_stack_history/
+search:
+  keywords:
+    - stack
+    - dates
+    - history
+    - like
+    - logtostderr
+    - flags
+    - manage
 ---
-
-
 
 Display history for a stack
 

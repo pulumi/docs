@@ -2,9 +2,16 @@
 title: "pulumi watch"
 aliases:
   - /docs/reference/cli/pulumi_watch/
+search:
+  keywords:
+    - watch
+    - watches
+    - values
+    - sames
+    - parallelism
+    - '2025'
+    - memprofilerate
 ---
-
-
 
 Continuously update the resources in a stack
 

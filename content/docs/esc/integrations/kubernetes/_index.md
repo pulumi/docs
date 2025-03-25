@@ -2,7 +2,8 @@
 title: Kubernetes
 title_tag: Kubernetes integrations | Pulumi ESC
 h1: ESC Kubernetes integrations
-meta_desc: Pulumi ESC integrates with Kubernetes to manage configurations, credentials, and kubeconfig files.
+meta_desc: Pulumi ESC integrates with Kubernetes to manage configurations, credentials,
+  and kubeconfig files.
 menu:
   esc:
     identifier: esc-kubernetes-integrations
@@ -10,6 +11,15 @@ menu:
     weight: 5
 aliases:
   - /docs/esc/kubernetes-integrations
+search:
+  keywords:
+    - kubernetes
+    - integrates
+    - esc
+    - kubeconfig
+    - configurations
+    - credentials
+    - files
 ---
 
 Pulumi ESC's rich metadata and support for popular configuration formats enables easy integration with Kubernetes. This allows you to manage configurations, credentials, and `kubeconfig` files for Kubernetes clusters, and to interact with Kubernetes tools such as `kubectl` and `helm`. Additionally, Pulumi ESC integrates with different tools in the Kubernetes ecosystem, such as the Pulumi Kubernetes provider and the External Secrets Operator (ESO).

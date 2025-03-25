@@ -2,9 +2,16 @@
 title: "pulumi login"
 aliases:
   - /docs/reference/cli/pulumi_login/
+search:
+  keywords:
+    - login
+    - logtostderr
+    - directory
+    - way
+    - ssl
+    - flags
+    - enable
 ---
-
-
 
 Log in to the Pulumi Cloud
 

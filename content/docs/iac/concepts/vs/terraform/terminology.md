@@ -1,20 +1,30 @@
 ---
 title_tag: "Pulumi vs. Terraform: Terminology and Commands"
-meta_desc: Many of the terms you may know from working with Terraform have direct equivalents in Pulumi. Here is a list of common terms and how they relate to Pulumi.
+meta_desc: Many of the terms you may know from working with Terraform have direct
+  equivalents in Pulumi. Here is a list of common terms and how they relate to Pulumi.
 title: Pulumi equivalents
 h1: Pulumi terms & command equivalents
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Pulumi terminology
-        parent: iac-concepts-compare-terraform
-        weight: 2
-    concepts:
-        parent: vs-terraform
-        weight: 1
+  iac:
+    name: Pulumi terminology
+    parent: iac-concepts-compare-terraform
+    weight: 2
+  concepts:
+    parent: vs-terraform
+    weight: 1
 aliases:
-- /docs/intro/vs/terraform/terminology/
-- /docs/concepts/vs/terraform/terminology/
+  - /docs/intro/vs/terraform/terminology/
+  - /docs/concepts/vs/terraform/terminology/
+search:
+  keywords:
+    - equivalents
+    - terraform
+    - know
+    - terms
+    - relate
+    - direct
+    - common
 ---
 
 <style>

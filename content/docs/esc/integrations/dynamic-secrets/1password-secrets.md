@@ -1,7 +1,8 @@
 ---
 title: 1password-secrets
 title_tag: 1password-secrets Pulumi ESC Provider
-meta_desc: The `1password-secrets` provider enables you to dynamically import Secrets from 1Password into your Pulum ESC environment.
+meta_desc: The `1password-secrets` provider enables you to dynamically import Secrets
+  from 1Password into your Pulum ESC environment.
 h1: 1password-secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
@@ -10,8 +11,17 @@ menu:
     parent: esc-dynamic-secrets
     weight: 6
 aliases:
-    - /docs/pulumi-cloud/esc/providers/1password-secrets/
-    - /docs/esc/providers/1password-secrets/
+  - /docs/pulumi-cloud/esc/providers/1password-secrets/
+  - /docs/esc/providers/1password-secrets/
+search:
+  keywords:
+    - 1password
+    - secrets
+    - pulum
+    - dynamically
+    - enables
+    - import
+    - provider
 ---
 
 The `1password-secrets` provider enables you to dynamically import Secrets from 1Password into your Environment. The provider will return a map of names to Secrets.

@@ -2,9 +2,16 @@
 title: "pulumi stack unselect"
 aliases:
   - /docs/reference/cli/pulumi_stack_unselect/
+search:
+  keywords:
+    - unselect
+    - stack
+    - selection
+    - plugins
+    - enable
+    - like
+    - tracing
 ---
-
-
 
 Resets stack selection from the current workspace
 

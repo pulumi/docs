@@ -2,9 +2,16 @@
 title: "pulumi policy publish"
 aliases:
   - /docs/reference/cli/pulumi_policy_publish/
+search:
+  keywords:
+    - publish
+    - policy
+    - policies
+    - docs
+    - emojis
+    - mode
+    - logflow
 ---
-
-
 
 Publish a Policy Pack to the Pulumi Cloud
 

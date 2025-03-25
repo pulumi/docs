@@ -2,9 +2,16 @@
 title: "pulumi"
 aliases:
   - /docs/reference/cli/pulumi/
+search:
+  keywords:
+    - iac
+    - commands
+    - cli
+    - docs
+    - stack
+    - respectively
+    - prompt
 ---
-
-
 
 Pulumi command line
 

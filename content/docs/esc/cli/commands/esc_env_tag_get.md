@@ -1,8 +1,15 @@
 ---
 title: "esc env tag get"
+search:
+  keywords:
+    - environment
+    - utc
+    - esc_env_tag
+    - tag
+    - env
+    - esc
+    - tags
 ---
-
-
 
 Get an environment tag
 

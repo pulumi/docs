@@ -1,8 +1,15 @@
 ---
 title: "esc env edit"
+search:
+  keywords:
+    - edit
+    - env
+    - esc
+    - editor
+    - environment
+    - definition
+    - esc_env
 ---
-
-
 
 Edit an environment definition
 

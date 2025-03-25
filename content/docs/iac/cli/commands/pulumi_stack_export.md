@@ -2,9 +2,16 @@
 title: "pulumi stack export"
 aliases:
   - /docs/reference/cli/pulumi_stack_export/
+search:
+  keywords:
+    - export
+    - stack
+    - logflow
+    - like
+    - synopsis
+    - non
+    - inconsistencies
 ---
-
-
 
 Export a stack's deployment to standard out
 

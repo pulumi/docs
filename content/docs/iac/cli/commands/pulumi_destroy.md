@@ -2,9 +2,16 @@
 title: "pulumi destroy"
 aliases:
   - /docs/reference/cli/pulumi_destroy/
+search:
+  keywords:
+    - destroy
+    - remote
+    - experimental
+    - git
+    - periodic
+    - needed
+    - wildcards
 ---
-
-
 
 Destroy all existing resources in the stack
 

@@ -9,6 +9,15 @@ menu:
     weight: 1
     parent: iac-cli
     identifier: iac-cli-commands
+search:
+  keywords:
+    - commands
+    - cli
+    - preview
+    - docs
+    - execute
+    - offers
+    - line
 ---
 
 ## Common Commands

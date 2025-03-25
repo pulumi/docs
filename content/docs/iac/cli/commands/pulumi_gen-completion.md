@@ -2,9 +2,16 @@
 title: "pulumi gen-completion"
 aliases:
   - /docs/reference/cli/pulumi_gen-completion/
+search:
+  keywords:
+    - completion
+    - gen
+    - generate
+    - plugins
+    - spf13
+    - logflow
+    - inherited
 ---
-
-
 
 Generate completion scripts for the Pulumi CLI
 

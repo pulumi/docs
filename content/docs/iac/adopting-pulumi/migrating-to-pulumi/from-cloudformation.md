@@ -1,21 +1,31 @@
 ---
 title_tag: "Migrating from AWS CloudFormation"
-meta_desc: Migrate your existing AWS CloudFormation JSON/YAML and/or coexist with existing stacks.
+meta_desc: Migrate your existing AWS CloudFormation JSON/YAML and/or coexist with
+  existing stacks.
 title: AWS CloudFormation
 h1: "Migrating from AWS CloudFormation to Pulumi"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: AWS CloudFormation
-        parent: iac-adopting-migrate
-        weight: 2
-    usingpulumi:
-        identifier: from-aws-cloudformation
-        parent: migrating
-        weight: 3
+  iac:
+    name: AWS CloudFormation
+    parent: iac-adopting-migrate
+    weight: 2
+  usingpulumi:
+    identifier: from-aws-cloudformation
+    parent: migrating
+    weight: 3
 aliases:
-- /docs/guides/adopting/from_aws/
-- /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/
+  - /docs/guides/adopting/from_aws/
+  - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/
+search:
+  keywords:
+    - cloudformation
+    - aws
+    - coexist
+    - existing
+    - migrate
+    - json
+    - stacks
 ---
 
 <img src="/logos/tech/aws_cloudformation.png" align="right" class="h-32 px-8 pb-4">

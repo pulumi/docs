@@ -2,9 +2,16 @@
 title: "pulumi stack import"
 aliases:
   - /docs/reference/cli/pulumi_stack_import/
+search:
+  keywords:
+    - import
+    - stack
+    - allocation
+    - emojis
+    - inconsistencies
+    - processes
+    - expensive
 ---
-
-
 
 Import a deployment from standard in into an existing stack
 

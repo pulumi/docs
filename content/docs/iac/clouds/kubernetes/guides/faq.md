@@ -12,6 +12,15 @@ menu:
 aliases:
   - /docs/guides/crosswalk/kubernetes/faq/
   - /docs/clouds/kubernetes/guides/faq/
+search:
+  keywords:
+    - faq
+    - questions
+    - collection
+    - usage
+    - kubernetes
+    - common
+    - markdownlint
 ---
 
 1. **What does Crosswalk for Kubernetes include?**

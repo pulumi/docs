@@ -2,9 +2,16 @@
 title: "pulumi policy"
 aliases:
   - /docs/reference/cli/pulumi_policy/
+search:
+  keywords:
+    - policy
+    - pack
+    - commands
+    - iac
+    - cli
+    - policies
+    - list
 ---
-
-
 
 Manage resource policies
 

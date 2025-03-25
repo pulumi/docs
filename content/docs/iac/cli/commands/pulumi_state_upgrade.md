@@ -2,9 +2,16 @@
 title: "pulumi state upgrade"
 aliases:
   - /docs/reference/cli/pulumi_state_upgrade/
+search:
+  keywords:
+    - upgrade
+    - state
+    - commands
+    - logflow
+    - fully
+    - '2025'
+    - endpoint
 ---
-
-
 
 Migrates the current backend to the latest supported version
 

@@ -1,6 +1,7 @@
 ---
 title_tag: "parent | Resource Options"
-meta_desc: The parent resource option establishes an explicit parent/child relationship between resources.
+meta_desc: The parent resource option establishes an explicit parent/child relationship
+  between resources.
 title: "parent"
 h1: "Resource option: parent"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: options-concepts
     weight: 9
 aliases:
-- /docs/intro/concepts/resources/options/parent/
-- /docs/concepts/options/parent/
+  - /docs/intro/concepts/resources/options/parent/
+  - /docs/concepts/options/parent/
+search:
+  keywords:
+    - parent
+    - establishes
+    - relationship
+    - explicit
+    - option
+    - child
+    - resource
 ---
 
 The `parent` resource option specifies a parent for a resource. It is used to associate children with the parents that encapsulate or are responsible for them. Good examples of this are [component resources](/docs/concepts/resources/components/). The default behavior is to parent each resource to the implicitly-created `pulumi:pulumi:Stack` component resource that is a root resource for all Pulumi stacks.

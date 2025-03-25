@@ -2,9 +2,16 @@
 title: "pulumi import"
 aliases:
   - /docs/reference/cli/pulumi_import/
+search:
+  keywords:
+    - import
+    - resource
+    - strings
+    - allocation
+    - optionallogicalname
+    - converter
+    - added
 ---
-
-
 
 Import resources into an existing stack
 

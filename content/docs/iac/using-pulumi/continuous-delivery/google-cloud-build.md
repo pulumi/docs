@@ -1,22 +1,32 @@
 ---
 title_tag: "Integrate Google Cloud Build | CI/CD"
-meta_desc: This page gives an overview of how to integrate Google Cloud Build with a Pulumi program.
+meta_desc: This page gives an overview of how to integrate Google Cloud Build with
+  a Pulumi program.
 title: Google Cloud Build
 h1: Pulumi CI/CD & Google Cloud Build
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Google Cloud Build
-        parent: iac-using-pulumi-cicd
-        weight: 10
+  iac:
+    name: Google Cloud Build
+    parent: iac-using-pulumi-cicd
+    weight: 10
 aliases:
-- /docs/reference/cd-google-cloud-build/
-- /docs/console/continuous-delivery/google-cloud-build/
-- /docs/guides/continuous-delivery/google-cloud-build/
-- /docs/using-pulumi/continuous-delivery/cd-google-cloud-build/
-- /docs/guides/continuous-delivery/cd-google-cloud-build/
-- /docs/using-pulumi/continuous-delivery/google-cloud-build/
-- /docs/iac/packages-and-automation/continuous-delivery/google-cloud-build/
+  - /docs/reference/cd-google-cloud-build/
+  - /docs/console/continuous-delivery/google-cloud-build/
+  - /docs/guides/continuous-delivery/google-cloud-build/
+  - /docs/using-pulumi/continuous-delivery/cd-google-cloud-build/
+  - /docs/guides/continuous-delivery/cd-google-cloud-build/
+  - /docs/using-pulumi/continuous-delivery/google-cloud-build/
+  - /docs/iac/packages-and-automation/continuous-delivery/google-cloud-build/
+search:
+  keywords:
+    - cloud
+    - google
+    - build
+    - gives
+    - integrate
+    - overview
+    - program
 ---
 
 ## Prerequisites

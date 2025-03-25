@@ -5,9 +5,18 @@ title: Deploy changes
 h1: "Pulumi & Azure: Deploy changes"
 weight: 7
 aliases:
-- /docs/quickstart/azure/deploy-changes/
-- /docs/get-started/azure/deploy-changes/
-- /docs/clouds/azure/get-started/deploy-changes/
+  - /docs/quickstart/azure/deploy-changes/
+  - /docs/get-started/azure/deploy-changes/
+  - /docs/clouds/azure/get-started/deploy-changes/
+search:
+  keywords:
+    - deploy
+    - staticendpoint
+    - changes
+    - azure
+    - guide
+    - learn
+    - project
 ---
 
 Deploy your changes by using `pulumi up` again.

@@ -2,7 +2,8 @@
 title: Infrastructure
 title_tag: Infrastructure tools integrations | Pulumi ESC
 h1: ESC infrastructure tools integrations
-meta_desc: Pulumi ESC integrates with infrastructure tools like Pulumi IaC, Cloudflare, and Terraform for management of environment variables, secrets, and configurations.
+meta_desc: Pulumi ESC integrates with infrastructure tools like Pulumi IaC, Cloudflare,
+  and Terraform for management of environment variables, secrets, and configurations.
 menu:
   esc:
     identifier: esc-inf-tools-integrations
@@ -10,6 +11,15 @@ menu:
     weight: 5
 aliases:
   - /docs/esc/other-integrations
+search:
+  keywords:
+    - infrastructure
+    - cloudflare
+    - terraform
+    - esc
+    - integrates
+    - tools
+    - configurations
 ---
 
 Pulumi ESC's rich metadata and support for popular configuration formats enables easy integration with other developer tools.

@@ -6,15 +6,24 @@ h1: Property testing for Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 weight: 2
 menu:
-    iac:
-        name: Property testing
-        parent: iac-concepts-testing
-        weight: 2
-    usingpulumi:
-        parent: testing
+  iac:
+    name: Property testing
+    parent: iac-concepts-testing
+    weight: 2
+  usingpulumi:
+    parent: testing
 aliases:
-    - /docs/guides/testing/property-testing/
-    - /docs/using-pulumi/testing/property-testing/
+  - /docs/guides/testing/property-testing/
+  - /docs/using-pulumi/testing/property-testing/
+search:
+  keywords:
+    - property
+    - crossguard
+    - testing
+    - programs
+    - policy
+    - guide
+    - code
 ---
 
 [Policy as Code](/docs/using-pulumi/crossguard/) (also known as "CrossGuard") is Pulumi's offering to set guardrails and enforce compliance for cloud resources. Typically, policy packs would run across multiple projects and stacks to apply organization-wide rules.

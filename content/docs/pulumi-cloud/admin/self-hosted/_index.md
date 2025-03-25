@@ -1,18 +1,28 @@
 ---
 title_tag: "Self-hosting the Pulumi Cloud"
-meta_desc: Pulumi Business Critical Edition gives you the option to self-host Pulumi within your organization's infrastructure.
+meta_desc: Pulumi Business Critical Edition gives you the option to self-host Pulumi
+  within your organization's infrastructure.
 title: Self-hosting
 h1: Self-hosting the Pulumi Cloud
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Self-hosting
-        parent: pulumi-cloud-admin
-        weight: 2
-        identifier: pulumi-cloud-admin-self-hosted
+  cloud:
+    name: Self-hosting
+    parent: pulumi-cloud-admin
+    weight: 2
+    identifier: pulumi-cloud-admin-self-hosted
 aliases:
   - /docs/guides/self-hosted/
   - /docs/pulumi-cloud/self-hosted/
+search:
+  keywords:
+    - hosting
+    - gives
+    - self
+    - edition
+    - host
+    - business
+    - critical
 ---
 
 {{% notes type="info" %}}

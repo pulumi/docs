@@ -11,6 +11,15 @@ menu:
     identifier: faq
 aliases:
   - /docs/pulumi-cloud/esc/faq
+search:
+  keywords:
+    - faq
+    - esc
+    - roadmap
+    - pricing
+    - frequently
+    - asked
+    - questions
 ---
 
 ## Why did Pulumi launch ESC?

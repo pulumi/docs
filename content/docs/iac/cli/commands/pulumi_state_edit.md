@@ -2,9 +2,16 @@
 title: "pulumi state edit"
 aliases:
   - /docs/reference/cli/pulumi_state_edit/
+search:
+  keywords:
+    - edit
+    - state
+    - editor
+    - stack
+    - logflow
+    - docs
+    - used
 ---
-
-
 
 Edit the current stack's state in your EDITOR
 

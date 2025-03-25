@@ -2,9 +2,16 @@
 title: "pulumi stack select"
 aliases:
   - /docs/reference/cli/pulumi_stack_select/
+search:
+  keywords:
+    - select
+    - stack
+    - selecting
+    - respectively
+    - like
+    - processes
+    - inherited
 ---
-
-
 
 Switch the current workspace to the given stack
 

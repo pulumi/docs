@@ -2,9 +2,16 @@
 title: "pulumi config refresh"
 aliases:
   - /docs/reference/cli/pulumi_config_refresh/
+search:
+  keywords:
+    - refresh
+    - config
+    - enable
+    - commands
+    - deployment
+    - profiles
+    - memprofilerate
 ---
-
-
 
 Update the local configuration based on the most recent deployment of the stack
 

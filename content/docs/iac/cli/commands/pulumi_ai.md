@@ -2,9 +2,16 @@
 title: "pulumi ai"
 aliases:
   - /docs/reference/cli/pulumi_ai/
+search:
+  keywords:
+    - ai
+    - commands
+    - contains
+    - iac
+    - logflow
+    - opens
+    - memprofilerate
 ---
-
-
 
 Basic Pulumi AI CLI commands.
 

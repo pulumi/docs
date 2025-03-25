@@ -2,9 +2,16 @@
 title: "pulumi schema"
 aliases:
   - /docs/reference/cli/pulumi_schema/
+search:
+  keywords:
+    - schemas
+    - schema
+    - verbose
+    - spf13
+    - cwd
+    - runtime
+    - enable
 ---
-
-
 
 Analyze package schemas
 

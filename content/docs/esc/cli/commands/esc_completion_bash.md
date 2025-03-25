@@ -1,8 +1,15 @@
 ---
 title: "esc completion bash"
+search:
+  keywords:
+    - completion
+    - bash
+    - esc
+    - autocompletion
+    - script
+    - shell
+    - bash_completion
 ---
-
-
 
 Generate the autocompletion script for bash
 

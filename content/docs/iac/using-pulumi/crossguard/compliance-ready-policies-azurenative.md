@@ -1,19 +1,29 @@
 ---
 title_tag: "Compliance Ready Policies (Azurenative) | CrossGuard"
 meta_desc: This page contains the list of Compliance Policies for Azurenative.
-title:  Compliance Ready Azurenative Policies
+title: Compliance Ready Azurenative Policies
 h1: List of Compliance Ready Policies for Azurenative
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Azure Native Policies
-        parent: iac-using-pulumi-policy-compliance
-        weight: 5
+  iac:
+    name: Azure Native Policies
+    parent: iac-using-pulumi-policy-compliance
+    weight: 5
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-azurenative/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azurenative/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-azurenative/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azurenative/
+search:
+  keywords:
+    - policies
+    - ready
+    - azurenative
+    - compliance
+    - disallow
+    - contains
+    - list
 ---
+
 There's a total of 1914 Compliance Ready Policies for the Azurenative provider.
 
 All those policies are available in the `@pulumi/azure-compliance-policies` package.

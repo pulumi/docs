@@ -2,9 +2,16 @@
 title: "pulumi policy validate-config"
 aliases:
   - /docs/reference/cli/pulumi_policy_validate-config/
+search:
+  keywords:
+    - validate
+    - policy
+    - config
+    - pack
+    - configuration
+    - flags
+    - logflow
 ---
-
-
 
 Validate a Policy Pack configuration
 

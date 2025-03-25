@@ -1,20 +1,30 @@
 ---
 title_tag: "Secrets | Pulumi Concepts"
-meta_desc: This page provides an overview of how Pulumi manages sensitive configuration data using secrets.
+meta_desc: This page provides an overview of how Pulumi manages sensitive configuration
+  data using secrets.
 title: Secrets
 h1: Secrets
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Secrets
-        parent: iac-concepts
-        weight: 7
-    concepts:
-        weight: 7
+  iac:
+    name: Secrets
+    parent: iac-concepts
+    weight: 7
+  concepts:
+    weight: 7
 aliases:
-- /docs/intro/concepts/secrets/
-- /docs/concepts/secrets/
-- /secrets/
+  - /docs/intro/concepts/secrets/
+  - /docs/concepts/secrets/
+  - /secrets/
+search:
+  keywords:
+    - secrets
+    - manages
+    - sensitive
+    - overview
+    - provides
+    - page
+    - data
 ---
 
 All resource input and output values are recorded as stack [_state_](/docs/concepts/state) and stored in Pulumi Cloud, in a state file, or in your DIY backend of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, however, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.

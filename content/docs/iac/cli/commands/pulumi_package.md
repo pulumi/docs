@@ -2,9 +2,16 @@
 title: "pulumi package"
 aliases:
   - /docs/reference/cli/pulumi_package/
+search:
+  keywords:
+    - package
+    - schema
+    - mapping
+    - commands
+    - filename
+    - spf13
+    - respectively
 ---
-
-
 
 Work with Pulumi packages
 

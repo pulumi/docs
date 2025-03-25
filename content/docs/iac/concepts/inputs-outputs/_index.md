@@ -1,27 +1,34 @@
 ---
 title_tag: "Inputs & Outputs | Pulumi Concepts"
-meta_desc: Resource properties are treated specially in Pulumi, both for purposes of input and output. Learn how to work with inputs and outputs in this guide.
+meta_desc: Resource properties are treated specially in Pulumi, both for purposes
+  of input and output. Learn how to work with inputs and outputs in this guide.
 title: "Inputs & outputs"
 h1: "Inputs & outputs"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Inputs & outputs
-        parent: iac-concepts
-        weight: 5
-        identifier: iac-concepts-inputs-outputs
-    concepts:
-        identifier: inputs-outputs
-        weight: 5
+  iac:
+    name: Inputs & outputs
+    parent: iac-concepts
+    weight: 5
+    identifier: iac-concepts-inputs-outputs
+  concepts:
+    identifier: inputs-outputs
+    weight: 5
 aliases:
-    - /docs/reference/inputs-outputs/
-    - /docs/intro/concepts/inputs-outputs/
-    - /docs/concepts/inputs-outputs/
+  - /docs/reference/inputs-outputs/
+  - /docs/intro/concepts/inputs-outputs/
+  - /docs/concepts/inputs-outputs/
 search:
-    boost: true
-    keywords:
-        - output
-        - input
+  boost: true
+  keywords:
+    - output
+    - input
+    - inputs
+    - outputs
+    - specially
+    - treated
+    - purposes
+    - properties
 ---
 
 ## Inputs

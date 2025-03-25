@@ -1,19 +1,29 @@
 ---
 title_tag: "Embedding Pulumi with the Automation API"
-meta_desc: The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. View our Automation API guides here.
+meta_desc: The Pulumi Automation API is a programmatic interface for running Pulumi
+  programs without the Pulumi CLI. View our Automation API guides here.
 title: Automation API
 h1: Embedding Pulumi with the Automation API
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Automation API
-        parent: iac-using-pulumi
-        weight: 2
-        identifier: iac-using-pulumi-automation-api
+  iac:
+    name: Automation API
+    parent: iac-using-pulumi
+    weight: 2
+    identifier: iac-using-pulumi-automation-api
 aliases:
-- /docs/guides/automation-api/
-- /docs/using-pulumi/automation-api/
-- /docs/iac/packages-and-automation/automation-api/
+  - /docs/guides/automation-api/
+  - /docs/using-pulumi/automation-api/
+  - /docs/iac/packages-and-automation/automation-api/
+search:
+  keywords:
+    - automation
+    - api
+    - programmatic
+    - interface
+    - programs
+    - blob
+    - guides
 ---
 
 The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. Conceptually, this can be thought of as encapsulating the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, etc.) but with more flexibility. It is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers, without requiring invoking the CLI from a shell process.

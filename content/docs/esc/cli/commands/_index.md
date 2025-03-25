@@ -9,8 +9,17 @@ menu:
     parent: esc-cli-overview
     weight: 1
 aliases:
-    - /docs/esc/cli/commands/
-    - /docs/esc-cli/commands/
+  - /docs/esc/cli/commands/
+  - /docs/esc-cli/commands/
+search:
+  keywords:
+    - commands
+    - offers
+    - line
+    - esc
+    - execute
+    - cli
+    - command
 ---
 
 {{% notes type="info" %}}

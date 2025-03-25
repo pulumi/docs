@@ -2,9 +2,16 @@
 title: "pulumi stack tag rm"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_rm/
+search:
+  keywords:
+    - rm
+    - tag
+    - stack
+    - logflow
+    - like
+    - allocation
+    - mem
 ---
-
-
 
 Remove a stack tag
 

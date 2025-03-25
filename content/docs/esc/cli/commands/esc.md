@@ -1,8 +1,15 @@
 ---
 title: "esc"
+search:
+  keywords:
+    - esc
+    - env
+    - environment
+    - commands
+    - list
+    - configuration
+    - spf13
 ---
-
-
 
 Pulumi ESC command line
 

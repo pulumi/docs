@@ -11,6 +11,15 @@ menu:
 aliases:
   - /docs/intro/insights/export/
   - /docs/pulumi-cloud/insights/export/
+search:
+  keywords:
+    - export
+    - data
+    - csv
+    - schema
+    - insights
+    - feature
+    - resource
 ---
 
 ## CSV Format

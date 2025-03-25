@@ -2,9 +2,16 @@
 title: "pulumi state rename"
 aliases:
   - /docs/reference/cli/pulumi_state_rename/
+search:
+  keywords:
+    - rename
+    - state
+    - renames
+    - colorize
+    - single
+    - skip
+    - kubernetes
 ---
-
-
 
 Renames a resource from a stack's state
 

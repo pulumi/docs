@@ -1,8 +1,15 @@
 ---
 title: "esc env version tag ls"
+search:
+  keywords:
+    - ls
+    - versions
+    - environment
+    - esc_env_version_tag
+    - tag
+    - env
+    - esc
 ---
-
-
 
 List tagged versions.
 

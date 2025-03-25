@@ -1,14 +1,24 @@
 ---
 title_tag: "Pulumi vs. Cloud Templates"
-meta_desc: Learn about the major differences between Pulumi and cloud templating solutions like AWS CloudFormation and Microsoft Azure Resource Manager (ARM).
+meta_desc: Learn about the major differences between Pulumi and cloud templating solutions
+  like AWS CloudFormation and Microsoft Azure Resource Manager (ARM).
 title: Cloud Templates
 h1: Pulumi vs. Cloud templates
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
-- /docs/reference/vs/cloud_templates/
-- /docs/intro/vs/cloud_templates/
-- /docs/intro/vs/cloud-templates/
-- /docs/concepts/vs/cloud-templates/
+  - /docs/reference/vs/cloud_templates/
+  - /docs/intro/vs/cloud_templates/
+  - /docs/intro/vs/cloud-templates/
+  - /docs/concepts/vs/cloud-templates/
+search:
+  keywords:
+    - templates
+    - cloud
+    - templating
+    - cloudformation
+    - arm
+    - solutions
+    - major
 ---
 
 Several cloud providers offer their own form of infrastructure-as-code, typically by way of JSON- or YAML-based templating solutions. Examples include AWS CloudFormation for Amazon Web Services and Azure Resource Manager (ARM) for Microsoft Azure. Template files containing cloud resource configurations are usually uploaded to a hosted service in the target cloud, which then processes the files to create, update, or delete cloud infrastructure resources as necessary.

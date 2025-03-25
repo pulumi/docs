@@ -5,14 +5,24 @@ title: Compliance Ready Kubernetes Policies
 h1: List of Compliance Ready Policies for Kubernetes
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Kubernetes Policies
-        parent: iac-using-pulumi-policy-compliance
-        weight: 8
+  iac:
+    name: Kubernetes Policies
+    parent: iac-using-pulumi-policy-compliance
+    weight: 8
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-kubernetes/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-kubernetes/    
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-kubernetes/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-kubernetes/
+search:
+  keywords:
+    - kubernetes
+    - policies
+    - compliance
+    - ready
+    - disallow
+    - contains
+    - v1beta1
 ---
+
 There's a total of 237 Compliance Ready Policies for the Kubernetes provider.
 
 All those policies are available in the `@pulumi/kubernetes-compliance-policies` package.

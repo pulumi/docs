@@ -1,14 +1,23 @@
 ---
 title_tag: Next Steps | Azure
-meta_desc: This page provides a list of tutorials that take a deeper dive into
-            Azure cloud resources.
+meta_desc: This page provides a list of tutorials that take a deeper dive into Azure
+  cloud resources.
 title: Next steps
 h1: "Pulumi & Azure: Next steps"
 weight: 9
 aliases:
-- /docs/quickstart/azure/next-steps/
-- /docs/get-started/azure/next-steps/
-- /docs/clouds/azure/get-started/next-steps/
+  - /docs/quickstart/azure/next-steps/
+  - /docs/get-started/azure/next-steps/
+  - /docs/clouds/azure/get-started/next-steps/
+search:
+  keywords:
+    - steps
+    - deeper
+    - tutorials
+    - azure
+    - list
+    - provides
+    - page
 ---
 
 Congrats! You've deployed your first project on Microsoft Azure with Pulumi. Here are some next steps, depending on your learning style.

@@ -1,19 +1,29 @@
 ---
 title_tag: "Configurable Policy Packs | CrossGuard"
-meta_desc: Configuration allows you to write flexible policies that can be reused across you organization.
+meta_desc: Configuration allows you to write flexible policies that can be reused
+  across you organization.
 title: Config
 h1: Configuring policy packs
 weight: 5
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Policy configuration
-        parent: iac-using-pulumi-policy
-        weight: 4
+  iac:
+    name: Policy configuration
+    parent: iac-using-pulumi-policy
+    weight: 4
 aliases:
-- /docs/guides/crossguard/configuration/
-- /docs/using-pulumi/crossguard/configuration/
-- /docs/iac/packages-and-automation/crossguard/configuration/
+  - /docs/guides/crossguard/configuration/
+  - /docs/using-pulumi/crossguard/configuration/
+  - /docs/iac/packages-and-automation/crossguard/configuration/
+search:
+  keywords:
+    - config
+    - reused
+    - flexible
+    - policies
+    - allows
+    - organization
+    - configuration
 ---
 
 <!-- markdownlint-disable ul code -->

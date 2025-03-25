@@ -2,9 +2,16 @@
 title: "pulumi env get"
 aliases:
   - /docs/reference/cli/pulumi_env_get/
+search:
+  keywords:
+    - env
+    - value
+    - environment
+    - logflow
+    - fetches
+    - just
+    - plaintext
 ---
-
-
 
 Get a value within an environment.
 

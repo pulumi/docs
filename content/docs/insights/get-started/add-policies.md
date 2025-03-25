@@ -2,13 +2,23 @@
 title: Using Insights Policies
 title_tag: "Policies | Pulumi Insights"
 h1: "Pulumi Insights: Using Policies and Policy Remediation"
-meta_desc: Learn how to use Pulumi CrossGuard policies to evaluate cloud resources discovered through Pulumi Insights account discovery.
+meta_desc: Learn how to use Pulumi CrossGuard policies to evaluate cloud resources
+  discovered through Pulumi Insights account discovery.
 weight: 6
 menu:
   insights:
     parent: insights-get-started
-    identifier: insights-get-started-policies 
+    identifier: insights-get-started-policies
     weight: 6
+search:
+  keywords:
+    - policies
+    - insights
+    - using
+    - discovery
+    - discovered
+    - evaluate
+    - crossguard
 ---
 
 Now that you have scanned your cloud accounts and discovered resources, you can use Pulumi CrossGuard policies to evaluate those resources for compliance, security, and adherence to best practices. Insights runs policy evaluations automatically whenever it discovers new or changed resources, providing continuous visibility into your infrastructure's compliance status.

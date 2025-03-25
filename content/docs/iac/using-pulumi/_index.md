@@ -1,19 +1,29 @@
 ---
 title_tag: "Using Pulumi"
-meta_desc: Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, continuous delivery, policy as code, pulumi packages, and test Pulumi code.
+meta_desc: Learn how to adopt Pulumi, organize projects & stacks, use the Automation
+  API, continuous delivery, policy as code, pulumi packages, and test Pulumi code.
 title: Using Pulumi
 h1: Using Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Using Pulumi
-        parent: iac-home
-        weight: 50
-        identifier: iac-using-pulumi
+  iac:
+    name: Using Pulumi
+    parent: iac-home
+    weight: 50
+    identifier: iac-using-pulumi
 aliases:
-- /docs/guides/
-- /docs/using-pulumi/
-- /docs/iac/packages-and-automation/
+  - /docs/guides/
+  - /docs/using-pulumi/
+  - /docs/iac/packages-and-automation/
+search:
+  keywords:
+    - automation
+    - delivery
+    - continuous
+    - projects
+    - iac
+    - using
+    - packages
 ---
 
 Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, continuous delivery, policy as code, pulumi packages, and test Pulumi code.

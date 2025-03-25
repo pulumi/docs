@@ -1,25 +1,35 @@
 ---
 title_tag: How Pulumi Works
-meta_desc: This page provides an overview of how Pulumi works and interacts with different Cloud Providers like AWS, Azure, Kubernetes, and more.
+meta_desc: This page provides an overview of how Pulumi works and interacts with different
+  Cloud Providers like AWS, Azure, Kubernetes, and more.
 title: How Pulumi works
 h1: How Pulumi works
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: How Pulumi works
-        weight: 1
-        parent: iac-concepts
-    concepts:
-        weight: 1
+  iac:
+    name: How Pulumi works
+    weight: 1
+    parent: iac-concepts
+  concepts:
+    weight: 1
 aliases:
-    - /docs/reference/how/
-    - /docs/tour/basics-programs/
-    - /docs/tour/programs-packages/
-    - /docs/tour/programs-properties/
-    - /docs/tour/programs-resources/
-    - /docs/tour/programs-stacks/
-    - /docs/intro/concepts/how-pulumi-works/
-    - /docs/concepts/how-pulumi-works/
+  - /docs/reference/how/
+  - /docs/tour/basics-programs/
+  - /docs/tour/programs-packages/
+  - /docs/tour/programs-properties/
+  - /docs/tour/programs-resources/
+  - /docs/tour/programs-stacks/
+  - /docs/intro/concepts/how-pulumi-works/
+  - /docs/concepts/how-pulumi-works/
+search:
+  keywords:
+    - works
+    - interacts
+    - aws
+    - different
+    - providers
+    - azure
+    - kubernetes
 ---
 
 Pulumi uses a desired state (declarative) model for orchestrating and managing infrastructure with the flexibility to author your infrastructure code using programming languages you know such as TypeScript, Javascript, Python, Go, C#, and Java. This model provides the advantages of programming structures like loops, conditionals and functions as well as your IDE with autocomplete, type checking, and documentation. When you author a Pulumi program the end result will be the state you declare, regardless of the current state of your infrastructure.

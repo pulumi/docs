@@ -2,13 +2,23 @@
 title: New Project Wizard
 title_tag: Get started with New Project Wizard
 h1: The Pulumi Cloud New Project Wizard
-meta_desc: Learn how to create new projects from Organization Templates, with Pulumi Deployments configured out-of-the-box.
+meta_desc: Learn how to create new projects from Organization Templates, with Pulumi
+  Deployments configured out-of-the-box.
 menu:
   cloud:
     name: New Project Wizard
     parent: pulumi-cloud-developer-portals
     weight: 2
     identifier: pulumi-cloud-developer-portals-npw
+search:
+  keywords:
+    - wizard
+    - projects
+    - new
+    - project
+    - box
+    - deployments
+    - templates
 ---
 
 Pulumi Cloud provides a New Project Wizard to help walk your organization's members through the process of creating new Pulumi projects. This provides a more turnkey alternative to the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) or custom-built integrations.

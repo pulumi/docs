@@ -1,6 +1,7 @@
 ---
 title_tag: "provider | Resource Options"
-meta_desc: The provider resource option passes an explicitly configured provider to be used instead of the global or ambient provider.
+meta_desc: The provider resource option passes an explicitly configured provider to
+  be used instead of the global or ambient provider.
 title: "provider"
 h1: "Resource option: provider"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: options-concepts
     weight: 11
 aliases:
-- /docs/concepts/resources/options/provider/
-- /docs/concepts/options/provider/
+  - /docs/concepts/resources/options/provider/
+  - /docs/concepts/options/provider/
+search:
+  keywords:
+    - provider
+    - ambient
+    - passes
+    - global
+    - vpc
+    - explicitly
+    - option
 ---
 
 The `provider` resource option sets a provider for the resource. For more information, see [Providers](../providers). The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.

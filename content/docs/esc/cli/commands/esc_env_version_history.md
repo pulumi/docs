@@ -1,8 +1,15 @@
 ---
 title: "esc env version history"
+search:
+  keywords:
+    - revision
+    - history
+    - env
+    - esc
+    - version
+    - utc
+    - environment
 ---
-
-
 
 Show revision history.
 

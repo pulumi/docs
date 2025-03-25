@@ -1,5 +1,14 @@
 ---
 title: API Reference (.NET)
+search:
+  keywords:
+    - reference
+    - dotnet
+    - sdk
+    - html
+    - net
+    - api
+    - fsharp
 ---
 
 ### General Purpose Packages

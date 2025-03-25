@@ -1,21 +1,31 @@
 ---
 title_tag: "Using Codefresh | CI/CD"
-meta_desc: This page will walk you through setting up Codefresh CI/CD with a Pulumi program.
+meta_desc: This page will walk you through setting up Codefresh CI/CD with a Pulumi
+  program.
 title: Codefresh
 h1: Pulumi CI/CD & Codefresh
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Codefresh
-        parent: iac-using-pulumi-cicd
-        weight: 5
+  iac:
+    name: Codefresh
+    parent: iac-using-pulumi-cicd
+    weight: 5
 aliases:
-- /docs/reference/cd-codefresh/
-- /docs/console/continuous-delivery/codefresh/
-- /docs/guides/continuous-delivery/codefresh/
-- /docs/using-pulumi/continuous-delivery/circleci/
-- /docs/using-pulumi/continuous-delivery/codefresh/
-- /docs/iac/packages-and-automation/continuous-delivery/codefresh/
+  - /docs/reference/cd-codefresh/
+  - /docs/console/continuous-delivery/codefresh/
+  - /docs/guides/continuous-delivery/codefresh/
+  - /docs/using-pulumi/continuous-delivery/circleci/
+  - /docs/using-pulumi/continuous-delivery/codefresh/
+  - /docs/iac/packages-and-automation/continuous-delivery/codefresh/
+search:
+  keywords:
+    - codefresh
+    - walk
+    - ci
+    - cd
+    - program
+    - page
+    - setting
 ---
 
 [Codefresh](https://codefresh.io) is a CI/CD platform designed for containers and microservices. It has built-in support for Docker, Kubernetes and Helm.

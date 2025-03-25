@@ -1,6 +1,7 @@
 ---
 title_tag: "Pulumi Cloud Webhooks"
-meta_desc: Pulumi Cloud Webhooks allow you to notify external services of events happening within your Pulumi organization. Learn how to create and manage webhooks here.
+meta_desc: Pulumi Cloud Webhooks allow you to notify external services of events happening
+  within your Pulumi organization. Learn how to create and manage webhooks here.
 title: "Webhooks"
 h1: Pulumi Cloud Webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,12 +12,21 @@ menu:
     weight: 6
     identifier: pulumi-cloud-webhooks
 aliases:
-- /docs/reference/service/webhooks/
-- /docs/console/extensions/webhooks/
-- /docs/intro/console/extensions/webhooks/
-- /docs/intro/console/webhooks/
-- /docs/intro/pulumi-service/webhooks/
-- /docs/intro/pulumi-cloud/webhooks/
+  - /docs/reference/service/webhooks/
+  - /docs/console/extensions/webhooks/
+  - /docs/intro/console/extensions/webhooks/
+  - /docs/intro/console/webhooks/
+  - /docs/intro/pulumi-service/webhooks/
+  - /docs/intro/pulumi-cloud/webhooks/
+search:
+  keywords:
+    - webhooks
+    - notify
+    - happening
+    - events
+    - external
+    - organization
+    - services
 ---
 
 {{% notes "info" %}}

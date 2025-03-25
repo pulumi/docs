@@ -6,9 +6,18 @@ meta_desc: This page provides an overview of how to create a new AWS + Pulumi pr
 weight: 3
 
 aliases:
-- /docs/quickstart/aws/create-project/
-- /docs/get-started/aws/create-project/
-- /docs/clouds/aws/get-started/create-project/
+  - /docs/quickstart/aws/create-project/
+  - /docs/get-started/aws/create-project/
+  - /docs/clouds/aws/get-started/create-project/
+search:
+  keywords:
+    - create
+    - project
+    - aws
+    - overview
+    - provides
+    - page
+    - new
 ---
 
 Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,

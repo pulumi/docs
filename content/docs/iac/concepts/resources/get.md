@@ -1,20 +1,30 @@
 ---
 title_tag: "Get Functions"
-meta_desc: Each Pulumi resource has a `get` function to get a reference to an existing instance of the resource. Learn more about these `get` functions in this guide.
+meta_desc: Each Pulumi resource has a `get` function to get a reference to an existing
+  instance of the resource. Learn more about these `get` functions in this guide.
 title: Get functions
 h1: Get functions
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Get functions
-        parent: iac-concepts-resources
-        weight: 7
-    concepts:
-        parent: resources
-        weight: 7
+  iac:
+    name: Get functions
+    parent: iac-concepts-resources
+    weight: 7
+  concepts:
+    parent: resources
+    weight: 7
 aliases:
-- /docs/intro/concepts/resources/get/
-- /docs/concepts/resources/get/
+  - /docs/intro/concepts/resources/get/
+  - /docs/concepts/resources/get/
+search:
+  keywords:
+    - functions
+    - resource
+    - function
+    - instance
+    - group
+    - existing
+    - reference
 ---
 
 You can use the static `get` function, which is available on all resource types, to look up an existing resource that is not managed by Pulumi. The `get` function is different from the [`import` CLI command](/docs/cli/commands/pulumi_import): `pulumi import` is used to bring an existing resource under management by Pulumi. `get` is used to allow the attributes of an existing resource to be used within a Pulumi program. A resource read with the `get` function will never be updated or deleted by Pulumi during an update.

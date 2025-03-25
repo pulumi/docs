@@ -5,11 +5,20 @@ title: Air-Gapped
 h1: Deploying Pulumi Self-Hosted into Air-Gapped Environments
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Air-Gapped
-        parent: pulumi-cloud-admin-self-hosted
-        weight: 5
-        identifier: pulumi-cloud-admin-self-hosted-airgapped
+  cloud:
+    name: Air-Gapped
+    parent: pulumi-cloud-admin-self-hosted
+    weight: 5
+    identifier: pulumi-cloud-admin-self-hosted-airgapped
+search:
+  keywords:
+    - air
+    - gapped
+    - hosted
+    - self
+    - deploy
+    - environments
+    - learn
 ---
 
 {{% notes type="info" %}}

@@ -1,12 +1,22 @@
 ---
 title: Setting Up Pulumi for Your Organization
-meta_desc: Learn how to onboard your entire team to Pulumi, and build out your infrastructure platform, with built-in security, best practices, and compliance.
+meta_desc: Learn how to onboard your entire team to Pulumi, and build out your infrastructure
+  platform, with built-in security, best practices, and compliance.
 menu:
-    cloud:
-        name: Onboarding guide
-        parent: pulumi-cloud-get-started
-        weight: 2
-        identifier: pulumi-onboarding-guide
+  cloud:
+    name: Onboarding guide
+    parent: pulumi-cloud-get-started
+    weight: 2
+    identifier: pulumi-onboarding-guide
+search:
+  keywords:
+    - organization
+    - setting
+    - onboard
+    - platform
+    - entire
+    - compliance
+    - practices
 ---
 
 In this guide, you’ll find everything you need to know about using Pulumi within your organization, from setting things up to recommended usage patterns and practices.

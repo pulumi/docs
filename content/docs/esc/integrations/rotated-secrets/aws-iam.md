@@ -1,13 +1,23 @@
 ---
 title: aws-iam
 title_tag: aws-iam Pulumi ESC Rotator
-meta_desc: The `aws-iam` rotator enables you to rotate access credentials for an AWS IAM User.
+meta_desc: The `aws-iam` rotator enables you to rotate access credentials for an AWS
+  IAM User.
 h1: aws-iam
 menu:
   esc:
     identifier: aws-iam
     parent: esc-rotated-secrets
     weight: 1
+search:
+  keywords:
+    - aws
+    - rotate
+    - iam
+    - rotator
+    - credentials
+    - enables
+    - user
 ---
 
 The `aws-iam` rotator enables you to rotate access credentials for an AWS IAM user in your Environment. Check out the [aws-login documentation](/docs/esc/integrations/dynamic-login-credentials/aws-login/) to learn more about authenticating with AWS.

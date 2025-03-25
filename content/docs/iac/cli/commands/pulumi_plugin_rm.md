@@ -2,9 +2,16 @@
 title: "pulumi plugin rm"
 aliases:
   - /docs/reference/cli/pulumi_plugin_rm/
+search:
+  keywords:
+    - rm
+    - plugin
+    - respectively
+    - prompts
+    - colorize
+    - emojis
+    - memprofilerate
 ---
-
-
 
 Remove one or more plugins from the download cache
 

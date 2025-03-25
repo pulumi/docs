@@ -2,13 +2,22 @@
 title_tag: Next Steps | AWS
 title: Next steps
 h1: Next Steps with Pulumi & AWS
-meta_desc: This page provides a list of tutorials that take a deeper dive into
-            AWS cloud resources.
+meta_desc: This page provides a list of tutorials that take a deeper dive into AWS
+  cloud resources.
 weight: 9
 aliases:
-- /docs/quickstart/aws/next-steps/
-- /docs/get-started/aws/next-steps/
-- /docs/clouds/aws/get-started/next-steps/
+  - /docs/quickstart/aws/next-steps/
+  - /docs/get-started/aws/next-steps/
+  - /docs/clouds/aws/get-started/next-steps/
+search:
+  keywords:
+    - steps
+    - deeper
+    - tutorials
+    - aws
+    - list
+    - provides
+    - page
 ---
 
 Congrats! You've deployed your first project on AWS with Pulumi. Here are some next steps, depending on your learning style.

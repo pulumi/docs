@@ -2,9 +2,16 @@
 title: "pulumi cancel"
 aliases:
   - /docs/reference/cli/pulumi_cancel/
+search:
+  keywords:
+    - cancel
+    - cancellation
+    - commands
+    - logflow
+    - endpoint
+    - fully
+    - memprofilerate
 ---
-
-
 
 Cancel a stack's currently running update, if any
 

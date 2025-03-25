@@ -1,20 +1,30 @@
 ---
 title_tag: "Resource Providers"
-meta_desc: A resource provider handles communications with a cloud service to create, read, update, and delete the resources you define in your Pulumi programs.
+meta_desc: A resource provider handles communications with a cloud service to create,
+  read, update, and delete the resources you define in your Pulumi programs.
 title: Providers
 h1: Resource providers
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Providers
-        parent: iac-concepts-resources
-        weight: 4
-    concepts:
-        parent: resources
-        weight: 4
+  iac:
+    name: Providers
+    parent: iac-concepts-resources
+    weight: 4
+  concepts:
+    parent: resources
+    weight: 4
 aliases:
-- /docs/intro/concepts/resources/providers/
-- /docs/concepts/resources/providers/
+  - /docs/intro/concepts/resources/providers/
+  - /docs/concepts/resources/providers/
+search:
+  keywords:
+    - providers
+    - communications
+    - handles
+    - programs
+    - define
+    - delete
+    - provider
 ---
 
 A resource provider handles communications with a cloud service to create, read, update, and delete the resources you define in your Pulumi programs. Pulumi passes your code to a language host such as Node.js, waits to be notified of resource registrations, assembles a model of your desired state, and calls on the resource provider to produce that state. The resource provider translates those requests into API calls to the cloud service.

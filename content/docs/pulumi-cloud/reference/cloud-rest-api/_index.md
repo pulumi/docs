@@ -1,20 +1,30 @@
 ---
 title_tag: "Pulumi Cloud: REST API"
-meta_desc: An overview of the Pulumi Cloud REST API for querying Organization, Stack, State, etc. information.
+meta_desc: An overview of the Pulumi Cloud REST API for querying Organization, Stack,
+  State, etc. information.
 title: "REST API docs"
 h1: Pulumi Cloud REST API docs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: REST API docs
-        parent: pulumi-cloud-reference
-        weight: 1
-        identifier: pulumi-cloud-reference-cloud-rest-api
+  cloud:
+    name: REST API docs
+    parent: pulumi-cloud-reference
+    weight: 1
+    identifier: pulumi-cloud-reference-cloud-rest-api
 aliases:
   - /docs/reference/service-rest-api/
   - /docs/intro/insights/api/
   - /docs/reference/cloud-rest-api/
   - /docs/pulumi-cloud/cloud-rest-api/
+search:
+  keywords:
+    - rest
+    - api
+    - docs
+    - querying
+    - organization
+    - state
+    - overview
 ---
 
 The Pulumi Cloud REST API is used by the Pulumi CLI to query and interact with state information, history, stack tags, etc. This API is available for end users to integrate into their own automation use cases.

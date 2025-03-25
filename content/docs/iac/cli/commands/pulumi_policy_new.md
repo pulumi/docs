@@ -2,9 +2,16 @@
 title: "pulumi policy new"
 aliases:
   - /docs/reference/cli/pulumi_policy_new/
+search:
+  keywords:
+    - policy
+    - new
+    - pack
+    - template
+    - list
+    - emojis
+    - logflow
 ---
-
-
 
 Create a new Pulumi Policy Pack
 

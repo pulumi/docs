@@ -2,12 +2,22 @@
 title_tag: Run Commands Without Local Secrets | Pulumi ESC
 title: Run commands without local secrets
 h1: "Pulumi ESC: Run Commands Without Local Secrets"
-meta_desc: This page provides an overview on how to run commands without using local secrets using the "esc run" command.
+meta_desc: This page provides an overview on how to run commands without using local
+  secrets using the "esc run" command.
 weight: 6
 menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-esc-run-command
+search:
+  keywords:
+    - commands
+    - secrets
+    - local
+    - run
+    - using
+    - esc
+    - command
 ---
 
 ## Overview

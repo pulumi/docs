@@ -1,32 +1,39 @@
 ---
 title_tag: "Download & Install Pulumi"
-meta_desc: This page contains detailed instructions for downloading and installing Pulumi.
+meta_desc: This page contains detailed instructions for downloading and installing
+  Pulumi.
 title: "Download & install"
 h1: Download & install Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        parent: iac-home
-        weight: 10
-        identifier: iac-install
-    install:
-        name: Overview
-        weight: 1
+  iac:
+    parent: iac-home
+    weight: 10
+    identifier: iac-install
+  install:
+    name: Overview
+    weight: 1
 
 aliases:
-- /get-started/install/
-- /docs/reference/install/
-- /docs/get-started/install/
-- /install/
-- /docs/install
+  - /get-started/install/
+  - /docs/reference/install/
+  - /docs/get-started/install/
+  - /install/
+  - /docs/install
 
 search:
-   boost: true
-   keywords:
-      - install
-      - homebrew
-      - msi
-      - cli
+  boost: true
+  keywords:
+    - install
+    - homebrew
+    - msi
+    - cli
+    - instructions
+    - download
+    - downloading
+    - installing
+    - detailed
+    - contains
 ---
 
 The latest version of Pulumi is **{{< latest-version >}}**. For previous versions, see [Available versions](/docs/install/versions/). For a list of features, bug fixes, and more see the [CHANGELOG](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md).

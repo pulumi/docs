@@ -1,8 +1,15 @@
 ---
 title: "esc run"
+search:
+  keywords:
+    - esc
+    - run
+    - command
+    - environment
+    - commands
+    - cobra
+    - flags
 ---
-
-
 
 Open the environment with the given name and run a command.
 

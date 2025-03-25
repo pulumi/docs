@@ -1,20 +1,30 @@
 ---
 title_tag: "Migrating from Azure Resource Manager"
-meta_desc: Migrate your existing Azure Resource Manager (ARM) templates and/or coexist with existing deployments.
+meta_desc: Migrate your existing Azure Resource Manager (ARM) templates and/or coexist
+  with existing deployments.
 title: Azure Resource Manager
 h1: Migrating from Azure Resource Manager to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Azure Resource Manager
-        parent: iac-adopting-migrate
-        weight: 3
-    usingpulumi:
-        parent: migrating
-        weight: 4
+  iac:
+    name: Azure Resource Manager
+    parent: iac-adopting-migrate
+    weight: 3
+  usingpulumi:
+    parent: migrating
+    weight: 4
 aliases:
-- /docs/guides/adopting/from_azure/
-- /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/
+  - /docs/guides/adopting/from_azure/
+  - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/
+search:
+  keywords:
+    - manager
+    - migrate
+    - azure
+    - resource
+    - coexist
+    - arm
+    - existing
 ---
 
 <img src="/logos/tech/azure_arm.png" align="right" class="h-32 px-8 pb-4">

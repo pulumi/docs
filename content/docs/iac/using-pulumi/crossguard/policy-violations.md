@@ -1,18 +1,28 @@
 ---
 title_tag: "Policy Violations | Pulumi CrossGuard"
-meta_desc: Learn about Policy Violations in Pulumi CrossGuard and how to manage compliance in your cloud infrastructure.
+meta_desc: Learn about Policy Violations in Pulumi CrossGuard and how to manage compliance
+  in your cloud infrastructure.
 title: Policy Violations
 h1: Policy Violations
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Policy violations
-        parent: iac-using-pulumi-policy
-        weight: 3
+  iac:
+    name: Policy violations
+    parent: iac-using-pulumi-policy
+    weight: 3
 aliases:
-    - /docs/using-pulumi/crossguard/policy-violations/
-    - /docs/iac/packages-and-automation/crossguard/policy-violations/
+  - /docs/using-pulumi/crossguard/policy-violations/
+  - /docs/iac/packages-and-automation/crossguard/policy-violations/
+search:
+  keywords:
+    - violations
+    - crossguard
+    - policy
+    - compliance
+    - infrastructure
+    - learn
+    - cloud
 ---
 
 ## Overview

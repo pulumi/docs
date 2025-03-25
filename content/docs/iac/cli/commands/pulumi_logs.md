@@ -2,9 +2,16 @@
 title: "pulumi logs"
 aliases:
   - /docs/reference/cli/pulumi_logs/
+search:
+  keywords:
+    - logs
+    - processes
+    - docs
+    - string
+    - respectively
+    - memprofilerate
+    - colorize
 ---
-
-
 
 Show aggregated resource logs for a stack
 

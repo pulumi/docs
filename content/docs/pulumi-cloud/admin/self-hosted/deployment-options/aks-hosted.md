@@ -1,18 +1,28 @@
 ---
 title_tag: AKS-Hosted Install | Self-Hosting Pulumi
-meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi Cloud in AKS.
+meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi
+  Cloud in AKS.
 title: AKS
 h1: Pulumi Cloud self-hosted AKS install
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: AKS
-        parent: pulumi-cloud-admin-self-hosted-deployment-options
-        weight: 4
-        identifier: pulumi-cloud-admin-self-hosted-deployment-options-aks
+  cloud:
+    name: AKS
+    parent: pulumi-cloud-admin-self-hosted-deployment-options
+    weight: 4
+    identifier: pulumi-cloud-admin-self-hosted-deployment-options-aks
 aliases:
   - /docs/guides/self-hosted/aks-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/aks-hosted/
+search:
+  keywords:
+    - aks
+    - installer
+    - hosted
+    - instructions
+    - self
+    - deploying
+    - installation
 ---
 
 The [AKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/aks-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Azure Kubernetes Service (AKS)

@@ -1,8 +1,15 @@
 ---
 title: "esc completion zsh"
+search:
+  keywords:
+    - zsh
+    - completion
+    - esc
+    - shell
+    - autocompletion
+    - esc_completion
+    - commands
 ---
-
-
 
 Generate the autocompletion script for zsh
 

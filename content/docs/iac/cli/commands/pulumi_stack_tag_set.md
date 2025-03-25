@@ -2,9 +2,16 @@
 title: "pulumi stack tag set"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_set/
+search:
+  keywords:
+    - tag
+    - set
+    - stack
+    - logflow
+    - like
+    - operate
+    - spf13
 ---
-
-
 
 Set a stack tag
 

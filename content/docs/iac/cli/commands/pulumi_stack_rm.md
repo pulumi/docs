@@ -2,9 +2,16 @@
 title: "pulumi stack rm"
 aliases:
   - /docs/reference/cli/pulumi_stack_rm/
+search:
+  keywords:
+    - rm
+    - stack
+    - emojis
+    - processes
+    - distinct
+    - skip
+    - inherited
 ---
-
-
 
 Remove a stack and its configuration
 

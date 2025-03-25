@@ -2,9 +2,16 @@
 title: "pulumi whoami"
 aliases:
   - /docs/reference/cli/pulumi_whoami/
+search:
+  keywords:
+    - whoami
+    - logflow
+    - string
+    - instead
+    - cwd
+    - flags
+    - colorize
 ---
-
-
 
 Display the current logged-in user
 

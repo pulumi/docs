@@ -1,8 +1,15 @@
 ---
 title: "esc env init"
+search:
+  keywords:
+    - init
+    - env
+    - esc
+    - environment
+    - esc_env
+    - commands
+    - ready
 ---
-
-
 
 Create an empty environment with the given name.
 

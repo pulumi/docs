@@ -1,8 +1,15 @@
 ---
 title: "esc env tag ls"
+search:
+  keywords:
+    - ls
+    - tags
+    - environment
+    - utc
+    - esc_env_tag
+    - pager
+    - tag
 ---
-
-
 
 List environment tags.
 

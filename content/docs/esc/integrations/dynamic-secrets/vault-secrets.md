@@ -1,7 +1,8 @@
 ---
 title: vault-secrets
 title_tag: vault-secrets Pulumi ESC provider
-meta_desc: The `vault-secrets` provider enables you to dynamically import secrets from HashiCorp Vault into your environment.
+meta_desc: The `vault-secrets` provider enables you to dynamically import secrets
+  from HashiCorp Vault into your environment.
 h1: vault-secrets
 menu:
   esc:
@@ -9,8 +10,17 @@ menu:
     parent: esc-dynamic-secrets
     weight: 5
 aliases:
-    - /docs/pulumi-cloud/esc/providers/vault-secrets/
-    - /docs/esc/providers/vault-secrets/
+  - /docs/pulumi-cloud/esc/providers/vault-secrets/
+  - /docs/esc/providers/vault-secrets/
+search:
+  keywords:
+    - vault
+    - secrets
+    - hashicorp
+    - dynamically
+    - enables
+    - import
+    - environment
 ---
 
 The `vault-secrets` provider enables you to dynamically import Secrets from HashiCorp Vault into your Environment. The provider will return a map of names to Secrets.

@@ -9,8 +9,17 @@ menu:
     weight: 2
     parent: iac-cli
 aliases:
-    - /docs/reference/cli/environment-variables/
-    - /docs/cli/environment-variables/
+  - /docs/reference/cli/environment-variables/
+  - /docs/cli/environment-variables/
+search:
+  keywords:
+    - environment
+    - variables
+    - supports
+    - different
+    - dt
+    - list
+    - dd
 ---
 
 <dl class="tabular tabular-5-col break-words">

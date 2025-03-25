@@ -1,6 +1,7 @@
 ---
 title_tag: Download & Install Pulumi ESC
-meta_desc: Detailed instructions for downloading and installing Pulumi ESC (Environments, Secrets and Configuration).
+meta_desc: Detailed instructions for downloading and installing Pulumi ESC (Environments,
+  Secrets and Configuration).
 title: Download & Install
 h1: Download & Install Pulumi ESC
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -9,14 +10,20 @@ menu:
     parent: esc-home
     weight: 1
 search:
-   boost: true
-   keywords:
-      - install
-      - homebrew
-      - cli
+  boost: true
+  keywords:
+    - install
+    - homebrew
+    - cli
+    - instructions
+    - download
+    - downloading
+    - installing
+    - esc
+    - detailed
 aliases:
-- /docs/install/esc/
-- /docs/esc/install
+  - /docs/install/esc/
+  - /docs/esc/install
 ---
 
 ## Select an Operating System

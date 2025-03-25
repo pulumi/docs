@@ -2,9 +2,16 @@
 title: "pulumi state unprotect"
 aliases:
   - /docs/reference/cli/pulumi_state_unprotect/
+search:
+  keywords:
+    - unprotect
+    - state
+    - plugins
+    - cwd
+    - '2025'
+    - respectively
+    - logflow
 ---
-
-
 
 Unprotect resources in a stack's state
 

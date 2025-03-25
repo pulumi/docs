@@ -1,23 +1,33 @@
 ---
 title_tag: "Pulumi Languages & SDKs"
-meta_desc: An overview of how to use Node.js, Python, Go, .NET, Java, and YAML when writing cloud applications for AWS, Azure, Google Cloud, Kubernetes, etc.
+meta_desc: An overview of how to use Node.js, Python, Go, .NET, Java, and YAML when
+  writing cloud applications for AWS, Azure, Google Cloud, Kubernetes, etc.
 title: Languages & SDKs
 h1: Pulumi languages & SDKs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Languages & SDKs
-        parent: iac-home
-        weight: 40
-        identifier: iac-languages
-    languages:
-        name: Overview
-        weight: 7
+  iac:
+    name: Languages & SDKs
+    parent: iac-home
+    weight: 40
+    identifier: iac-languages
+  languages:
+    name: Overview
+    weight: 7
 aliases:
-    - /docs/reference/languages/
-    - /docs/intro/languages/
-    - /docs/reference/pulumi-sdk/
-    - /docs/languages-sdks/
+  - /docs/reference/languages/
+  - /docs/intro/languages/
+  - /docs/reference/pulumi-sdk/
+  - /docs/languages-sdks/
+search:
+  keywords:
+    - sdks
+    - languages
+    - class
+    - mx
+    - js
+    - writing
+    - net
 ---
 
 Pulumi is a multi-language infrastructure as code tool. Each language is as capable as the

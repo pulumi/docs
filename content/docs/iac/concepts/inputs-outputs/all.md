@@ -5,15 +5,24 @@ title: Accessing multiple outputs with All
 h1: Accessing multiple outputs with All
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: All
-        parent: iac-concepts-inputs-outputs
-    concepts:
-        weight: 2
-        parent: inputs-outputs
+  iac:
+    name: All
+    parent: iac-concepts-inputs-outputs
+  concepts:
+    weight: 2
+    parent: inputs-outputs
 aliases:
-    - /docs/concepts/inputs-outputs/all/
-    - /docs/concepts/inputs-outputs/outputs-and-strings/
+  - /docs/concepts/inputs-outputs/all/
+  - /docs/concepts/inputs-outputs/outputs-and-strings/
+search:
+  keywords:
+    - outputs
+    - accessing
+    - multiple
+    - method
+    - output
+    - values
+    - learn
 ---
 
 If you need to access and use multiple outputs together, the `all` function acts like an [`apply`](/docs/concepts/inputs-outputs/apply/) across many resources, allowing you to retrieve and use multiple outputs at the same time. The `all` function waits for all output values to become available and then provides them as _plain values_ to the {{< pulumi-apply >}} function.

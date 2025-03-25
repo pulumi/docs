@@ -2,12 +2,22 @@
 title_tag: Retrieve External Secrets | Pulumi ESC
 title: Retrieve secrets from external sources
 h1: "Pulumi ESC: Retrieve Secrets from External Sources"
-meta_desc: This page provides an overview on how to retrieve secrets from external sources.
+meta_desc: This page provides an overview on how to retrieve secrets from external
+  sources.
 weight: 7
 menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-retrieve-external-secrets
+search:
+  keywords:
+    - retrieve
+    - external
+    - secrets
+    - sources
+    - overview
+    - provides
+    - page
 ---
 
 ## Overview

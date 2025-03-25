@@ -1,8 +1,7 @@
 ---
 title_tag: SAML Single Sign-On (SSO) Guides
-meta_desc:
-  This page provides an overview of how to configure any SAML 2.0 identity provider
-  with the Pulumi Cloud.
+meta_desc: This page provides an overview of how to configure any SAML 2.0 identity
+  provider with the Pulumi Cloud.
 title: SAML(SSO)
 h1: Pulumi Cloud SAML(SSO)
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -13,9 +12,18 @@ menu:
     weight: 6
     identifier: pulumi-cloud-access-management-saml
 aliases:
-- /docs/reference/service/saml-overview/
-- /docs/console/accounts/saml/
-- /docs/guides/saml/
+  - /docs/reference/service/saml-overview/
+  - /docs/console/accounts/saml/
+  - /docs/guides/saml/
+search:
+  keywords:
+    - saml
+    - sso
+    - identity
+    - page
+    - overview
+    - configure
+    - provider
 ---
 
 The [Pulumi Cloud](https://app.pulumi.com) can be configured to work with any SAML 2.0 identity provider. SAML support requires Pulumi Enterprise or Pulumi Business Critical. To learn more about the capabilities of Pulumi Enterprise or Pulumi Business Critical, refer to the [pricing page](/pricing/).

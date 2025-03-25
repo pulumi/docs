@@ -2,9 +2,16 @@
 title: "pulumi env tag rm"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_rm/
+search:
+  keywords:
+    - rm
+    - tag
+    - env
+    - tags
+    - logflow
+    - colorize
+    - memprofilerate
 ---
-
-
 
 Remove an environment tag.
 

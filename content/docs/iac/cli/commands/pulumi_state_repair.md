@@ -2,9 +2,16 @@
 title: "pulumi state repair"
 aliases:
   - /docs/reference/cli/pulumi_state_repair/
+search:
+  keywords:
+    - repair
+    - state
+    - emojis
+    - cwd
+    - respectively
+    - mar
+    - endpoint
 ---
-
-
 
 Repair an invalid state
 

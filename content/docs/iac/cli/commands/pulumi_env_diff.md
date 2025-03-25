@@ -2,9 +2,16 @@
 title: "pulumi env diff"
 aliases:
   - /docs/reference/cli/pulumi_env_diff/
+search:
+  keywords:
+    - diff
+    - env
+    - processes
+    - yaml
+    - qualify
+    - ciphertext
+    - flags
 ---
-
-
 
 Show changes between versions.
 

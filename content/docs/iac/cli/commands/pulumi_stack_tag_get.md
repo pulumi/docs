@@ -2,9 +2,16 @@
 title: "pulumi stack tag get"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_get/
+search:
+  keywords:
+    - verbose
+    - tag
+    - stack
+    - tracing
+    - string
+    - logflow
+    - emojis
 ---
-
-
 
 Get a single stack tag value
 

@@ -2,9 +2,16 @@
 title: "pulumi env version tag rm"
 aliases:
   - /docs/reference/cli/pulumi_env_version_tag_rm/
+search:
+  keywords:
+    - tagged
+    - rm
+    - tag
+    - env
+    - version
+    - commands
+    - logflow
 ---
-
-
 
 Remove a tagged version.
 

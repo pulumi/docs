@@ -2,9 +2,16 @@
 title: "pulumi env open"
 aliases:
   - /docs/reference/cli/pulumi_env_open/
+search:
+  keywords:
+    - env
+    - open
+    - opens
+    - respectively
+    - cwd
+    - flags
+    - iac
 ---
-
-
 
 Open the environment with the given name.
 

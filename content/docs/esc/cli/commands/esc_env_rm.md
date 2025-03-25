@@ -1,8 +1,15 @@
 ---
 title: "esc env rm"
+search:
+  keywords:
+    - rm
+    - env
+    - esc
+    - environment
+    - esc_env
+    - removes
+    - commands
 ---
-
-
 
 Remove an environment or a value from an environment.
 

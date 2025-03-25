@@ -2,12 +2,22 @@
 title: Automation API
 title_tag: Manage Pulumi ESC resources in your automation workflows
 h1: Manage Pulumi ESC resources in your automation workflows
-meta_desc: Pulumi Automation API allows you to interact with ESC resources like environments, permissions and version tags.
+meta_desc: Pulumi Automation API allows you to interact with ESC resources like environments,
+  permissions and version tags.
 menu:
   esc:
     identifier: esc-automation-api
     parent: esc-development
     weight: 1
+search:
+  keywords:
+    - automation
+    - api
+    - interact
+    - environments
+    - permissions
+    - tags
+    - esc
 ---
 
 Pulumi Automation API includes methods for interacting with Pulumi ESC Environments programmatically. This enables you to seamlessly integrate environment management into your automated workflows and build sophisticated custom tooling.

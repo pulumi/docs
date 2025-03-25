@@ -1,15 +1,25 @@
 ---
 title_tag: "Pulumi Copilot API"
-meta_desc: Learn about Pulumi Copilot REST APIs for integrating Pulumi Copilot capabilities into your applications and workplace platforms.
+meta_desc: Learn about Pulumi Copilot REST APIs for integrating Pulumi Copilot capabilities
+  into your applications and workplace platforms.
 title: Pulumi Copilot API
 h1: Pulumi Copilot API Overview
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Pulumi Copilot API
-        parent: pulumi-cloud-copilot
-        weight: 1
-        identifier: pulumi-cloud-copilot-api
+  cloud:
+    name: Pulumi Copilot API
+    parent: pulumi-cloud-copilot
+    weight: 1
+    identifier: pulumi-cloud-copilot-api
+search:
+  keywords:
+    - copilot
+    - integrating
+    - apis
+    - api
+    - workplace
+    - platforms
+    - capabilities
 ---
 
 {{% notes "info" %}}

@@ -1,8 +1,15 @@
 ---
 title: "esc env tag"
+search:
+  keywords:
+    - tags
+    - utc
+    - tag
+    - env
+    - esc
+    - environment
+    - commands
 ---
-
-
 
 Manage environment tags
 

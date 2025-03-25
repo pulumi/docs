@@ -1,6 +1,7 @@
 ---
 title_tag: Deploy the Stack | Google Cloud
-meta_desc: This page provides an overview of how to deploy changes to a Google Cloud project.
+meta_desc: This page provides an overview of how to deploy changes to a Google Cloud
+  project.
 title: Deploy stack
 h1: "Pulumi & Google Cloud: Deploy stack"
 weight: 5
@@ -10,9 +11,18 @@ menu:
     identifier: gcp-deploy-stack
 
 aliases:
-- /docs/quickstart/gcp/deploy-stack/
-- /docs/get-started/gcp/deploy-stack/
-- /docs/clouds/gcp/get-started/deploy-stack/
+  - /docs/quickstart/gcp/deploy-stack/
+  - /docs/get-started/gcp/deploy-stack/
+  - /docs/clouds/gcp/get-started/deploy-stack/
+search:
+  keywords:
+    - deploy
+    - stack
+    - bucketname
+    - google
+    - changes
+    - overview
+    - provides
 ---
 
 Let's go ahead and deploy your stack:

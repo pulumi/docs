@@ -2,18 +2,28 @@
 title_tag: Before You Begin | AWS
 title: Before you begin
 h1: "Pulumi & AWS: Before you begin"
-meta_desc: This page provides an overview on how to get started with Pulumi when starting an AWS project.
+meta_desc: This page provides an overview on how to get started with Pulumi when starting
+  an AWS project.
 weight: 2
 aliases:
-- /docs/quickstart/aws/begin/
-- /docs/quickstart/aws/install-pulumi/
-- /docs/quickstart/aws/install-language-runtime/
-- /docs/quickstart/aws/configure/
-- /docs/get-started/aws/install-pulumi/
-- /docs/get-started/aws/install-language-runtime/
-- /docs/get-started/aws/configure/
-- /docs/get-started/aws/begin/
-- /docs/clouds/aws/get-started/begin/
+  - /docs/quickstart/aws/begin/
+  - /docs/quickstart/aws/install-pulumi/
+  - /docs/quickstart/aws/install-language-runtime/
+  - /docs/quickstart/aws/configure/
+  - /docs/get-started/aws/install-pulumi/
+  - /docs/get-started/aws/install-language-runtime/
+  - /docs/get-started/aws/configure/
+  - /docs/get-started/aws/begin/
+  - /docs/clouds/aws/get-started/begin/
+search:
+  keywords:
+    - begin
+    - starting
+    - aws
+    - overview
+    - provides
+    - page
+    - started
 ---
 
 Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.

@@ -2,9 +2,16 @@
 title: "pulumi policy enable"
 aliases:
   - /docs/reference/cli/pulumi_policy_enable/
+search:
+  keywords:
+    - enable
+    - policy
+    - pack
+    - profiles
+    - commands
+    - runtime
+    - colorize
 ---
-
-
 
 Enable a Policy Pack for a Pulumi organization
 

@@ -1,6 +1,7 @@
 ---
 title_tag: "retainOnDelete | Resource Options"
-meta_desc: The `retainOnDelete` resource option marks a resource to be retained during a delete operation.
+meta_desc: The `retainOnDelete` resource option marks a resource to be retained during
+  a delete operation.
 title: "retainOnDelete"
 h1: "Resource option: retainOnDelete"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,17 @@ menu:
     parent: options-concepts
     weight: 14
 aliases:
-- /docs/intro/concepts/resources/options/retainondelete/
-- /docs/concepts/options/retainondelete/
+  - /docs/intro/concepts/resources/options/retainondelete/
+  - /docs/concepts/options/retainondelete/
+search:
+  keywords:
+    - retainondelete
+    - retained
+    - marks
+    - resource
+    - delete
+    - option
+    - operation
 ---
 
 The `retainOnDelete` resource option marks a resource to be retained. If this option is set then Pulumi will not call through to the resource provider's `Delete` method when deleting or replacing the resource during `pulumi up` or `pulumi destroy`. As a result, the resource will not be deleted from the backing cloud provider, but will be removed from the Pulumi state.

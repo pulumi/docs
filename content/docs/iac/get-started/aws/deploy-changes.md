@@ -5,9 +5,18 @@ h1: "Pulumi & AWS: Deploy changes"
 meta_desc: Learn how to deploy changes to an AWS project in this guide.
 weight: 7
 aliases:
-- /docs/quickstart/aws/deploy-changes/
-- /docs/get-started/aws/deploy-changes/
-- /docs/clouds/aws/get-started/deploy-changes/
+  - /docs/quickstart/aws/deploy-changes/
+  - /docs/get-started/aws/deploy-changes/
+  - /docs/clouds/aws/get-started/deploy-changes/
+search:
+  keywords:
+    - changes
+    - deploy
+    - guide
+    - aws
+    - learn
+    - project
+    - bucket
 ---
 
 Now let's deploy your changes.

@@ -2,9 +2,16 @@
 title: "pulumi plugin install"
 aliases:
   - /docs/reference/cli/pulumi_plugin_install/
+search:
+  keywords:
+    - plugin
+    - install
+    - plugins
+    - installation
+    - profiles
+    - emojis
+    - colorize
 ---
-
-
 
 Install one or more plugins
 

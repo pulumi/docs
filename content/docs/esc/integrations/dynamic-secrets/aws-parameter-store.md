@@ -1,7 +1,8 @@
 ---
 title: aws-parameter-store
 title_tag: aws-parameter-store Pulumi ESC Provider
-meta_desc: The `aws-parameter-store` provider enables you to dynamically import parameters from AWS Systems Manager - Parameter Store.
+meta_desc: The `aws-parameter-store` provider enables you to dynamically import parameters
+  from AWS Systems Manager - Parameter Store.
 h1: aws-parameter-store
 menu:
   esc:
@@ -9,8 +10,17 @@ menu:
     parent: esc-dynamic-secrets
     weight: 1
 aliases:
-    - /docs/pulumi-cloud/esc/providers/aws-parameter-store/
-    - /docs/esc/providers/aws-parameter-store/
+  - /docs/pulumi-cloud/esc/providers/aws-parameter-store/
+  - /docs/esc/providers/aws-parameter-store/
+search:
+  keywords:
+    - parameter
+    - store
+    - aws
+    - parameters
+    - systems
+    - dynamically
+    - manager
 ---
 
 The `aws-parameter-store` provider enables you to dynamically import parameters from AWS Systems Manager - Parameter Store into your Environment. The provider will return a map of names to parameters.

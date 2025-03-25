@@ -1,6 +1,7 @@
 ---
 title_tag: Configure OpenID Connect for Azure | OIDC
-meta_desc: This page describes how to configure OIDC token exchange in Azure for use with Pulumi
+meta_desc: This page describes how to configure OIDC token exchange in Azure for use
+  with Pulumi
 title: Azure
 h1: Configuring OpenID Connect for Azure
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,11 +12,20 @@ menu:
     weight: 2
     identifier: pulumi-cloud-access-management-oidc-provider-azure
 aliases:
-- /docs/guides/oidc/provider/azure
-- /docs/intro/deployments/oidc/provider/azure/
-- /docs/pulumi-cloud/deployments/oidc/provider/azure/
-- /docs/pulumi-cloud/oidc/provider/azure/
-- /docs/pulumi-cloud/oidc/azure/ 
+  - /docs/guides/oidc/provider/azure
+  - /docs/intro/deployments/oidc/provider/azure/
+  - /docs/pulumi-cloud/deployments/oidc/provider/azure/
+  - /docs/pulumi-cloud/oidc/provider/azure/
+  - /docs/pulumi-cloud/oidc/azure/
+search:
+  keywords:
+    - azure
+    - exchange
+    - oidc
+    - describes
+    - token
+    - configure
+    - page
 ---
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via a Microsoft Entra App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by the Pulumi Cloud.

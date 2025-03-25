@@ -2,9 +2,16 @@
 title: "pulumi policy group ls"
 aliases:
   - /docs/reference/cli/pulumi_policy_group_ls/
+search:
+  keywords:
+    - ls
+    - group
+    - policy
+    - choices
+    - emojis
+    - log
+    - spf13
 ---
-
-
 
 List all Policy Groups for a Pulumi organization
 

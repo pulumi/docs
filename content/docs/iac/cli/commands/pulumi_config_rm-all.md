@@ -2,9 +2,16 @@
 title: "pulumi config rm-all"
 aliases:
   - /docs/reference/cli/pulumi_config_rm-all/
+search:
+  keywords:
+    - rm
+    - config
+    - key1
+    - outer
+    - inner
+    - disable
+    - memprofilerate
 ---
-
-
 
 Remove multiple configuration values
 

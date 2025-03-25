@@ -2,7 +2,8 @@
 title_tag: "Using CDK Constructs with Pulumi"
 title: Pulumi CDK Adapter
 h1: Pulumi CDK Adapter
-meta_desc: Using CDK Constructs with Pulumi provides a significantly easier way of creating infrastructure for AWS. Here is how.
+meta_desc: Using CDK Constructs with Pulumi provides a significantly easier way of
+  creating infrastructure for AWS. Here is how.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -10,6 +11,15 @@ menu:
     name: AWS CDK
     identifier: aws-guides-cdk
     weight: 1
+search:
+  keywords:
+    - cdk
+    - adapter
+    - constructs
+    - significantly
+    - easier
+    - aws
+    - way
 ---
 
 The pulumi-cdk library provides access to the many high-level libraries ('constructs') built by service

@@ -1,21 +1,31 @@
 ---
 title_tag: "Convert Code to Pulumi"
-meta_desc: Pulumi convert allows you to convert ARM, CloudFormation, Kubernetes CustomResources, Kubernetes YAML, and Terraform to Pulumi.
+meta_desc: Pulumi convert allows you to convert ARM, CloudFormation, Kubernetes CustomResources,
+  Kubernetes YAML, and Terraform to Pulumi.
 title: Convert code
 h1: Convert code to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Conversion tools
-        parent: iac-adopting
-        weight: 3
-    usingpulumi:
-        identifier: converters
-        parent: adopting-pulumi
-        weight: 4
+  iac:
+    name: Conversion tools
+    parent: iac-adopting
+    weight: 3
+  usingpulumi:
+    identifier: converters
+    parent: adopting-pulumi
+    weight: 4
 aliases:
-- /docs/converters/
-- /docs/using-pulumi/adopting-pulumi/converters/
+  - /docs/converters/
+  - /docs/using-pulumi/adopting-pulumi/converters/
+search:
+  keywords:
+    - code
+    - customresources
+    - kubernetes
+    - convert
+    - arm
+    - cloudformation
+    - terraform
 ---
 
 The `pulumi convert` command allows you translate supported sources to the various [languages that Pulumi supports](/docs/languages-sdks/), such as TypeScript, JavaScript, Go, Python, C#, or Java.). Conversion sources are supported via a plugin model, and include other IaC tools like Terraform. Pulumi YAML programs can also be converted to any other supported Pulumi language.

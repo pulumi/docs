@@ -2,12 +2,22 @@
 title: Policy as Code
 title_tag: Enforce Policy as Code on Discovered Resources | Pulumi Insights
 h1: Enforce Policy as Code on Discovered Resources
-meta_desc: This page describes how to Enforce Policy as Code on Discovered Resources with Pulumi Insights.
+meta_desc: This page describes how to Enforce Policy as Code on Discovered Resources
+  with Pulumi Insights.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: insights-home
     weight: 5
+search:
+  keywords:
+    - policy
+    - code
+    - discovered
+    - insights
+    - enforce
+    - describes
+    - page
 ---
 
 Policy as Code (PaC) for discovered resources extends [Pulumi Crossguard](/docs/iac/using-pulumi/crossguard/) policy enforcement capabilities beyond Pulumi managed infrastructure as code (IaC) to include resources discovered through Pulumi Insights. This feature enables organizations to maintain consistent compliance and governance across their entire cloud infrastructure, regardless of how resources were provisioned.

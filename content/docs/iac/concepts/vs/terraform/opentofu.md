@@ -1,20 +1,30 @@
 ---
 title_tag: "Terraform vs. OpenTofu"
-meta_desc: Terraform and OpenTofu have a few similarities and key differences. This page helps provide a rundown of these major differences.
+meta_desc: Terraform and OpenTofu have a few similarities and key differences. This
+  page helps provide a rundown of these major differences.
 title: Terraform vs. OpenTofu
 h1: Terraform vs. OpenTofu
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Terraform vs. OpenTofu
-        parent: iac-concepts-compare-terraform
-        weight: 2
-    concepts:
-        parent: vs-terraform
-        weight: 2
+  iac:
+    name: Terraform vs. OpenTofu
+    parent: iac-concepts-compare-terraform
+    weight: 2
+  concepts:
+    parent: vs-terraform
+    weight: 2
 aliases:
-    - /docs/intro/vs/terraform/opentofu/
-    - /docs/concepts/vs/terraform/opentofu/
+  - /docs/intro/vs/terraform/opentofu/
+  - /docs/concepts/vs/terraform/opentofu/
+search:
+  keywords:
+    - opentofu
+    - terraform
+    - differences
+    - vs
+    - rundown
+    - similarities
+    - helps
 ---
 
 <style>

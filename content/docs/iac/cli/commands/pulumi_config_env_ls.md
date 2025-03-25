@@ -2,9 +2,16 @@
 title: "pulumi config env ls"
 aliases:
   - /docs/reference/cli/pulumi_config_env_ls/
+search:
+  keywords:
+    - ls
+    - env
+    - config
+    - processes
+    - emojis
+    - lists
+    - enable
 ---
-
-
 
 Lists imported environments.
 

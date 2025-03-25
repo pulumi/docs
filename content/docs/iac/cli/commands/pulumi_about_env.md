@@ -2,9 +2,16 @@
 title: "pulumi about env"
 aliases:
   - /docs/reference/cli/pulumi_about_env/
+search:
+  keywords:
+    - env
+    - transitive
+    - stack
+    - verbose
+    - emit
+    - tracing
+    - choices
 ---
-
-
 
 An overview of the environmental variables used by pulumi
 

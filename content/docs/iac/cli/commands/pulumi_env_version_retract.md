@@ -2,9 +2,16 @@
 title: "pulumi env version retract"
 aliases:
   - /docs/reference/cli/pulumi_env_version_retract/
+search:
+  keywords:
+    - revision
+    - retract
+    - env
+    - version
+    - retracted
+    - retracts
+    - commands
 ---
-
-
 
 Retract a specific revision of an environment
 

@@ -1,13 +1,23 @@
 ---
 title_tag: Modify the Program | Azure
-meta_desc: This page provides an overview on how to update an Azure project from a Pulumi program.
+meta_desc: This page provides an overview on how to update an Azure project from a
+  Pulumi program.
 title: Modify program
 h1: "Pulumi & Azure: Modify program"
 weight: 6
 aliases:
-- /docs/quickstart/azure/modify-program/
-- /docs/get-started/azure/modify-program/
-- /docs/clouds/azure/get-started/modify-program/
+  - /docs/quickstart/azure/modify-program/
+  - /docs/get-started/azure/modify-program/
+  - /docs/clouds/azure/get-started/modify-program/
+search:
+  keywords:
+    - program
+    - modify
+    - azure
+    - overview
+    - provides
+    - page
+    - update
 ---
 
 Now that your storage account is provisioned, let's add an object to it. First, from within your project directory, create a new `index.html` file with some content in it.

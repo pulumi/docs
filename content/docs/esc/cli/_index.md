@@ -1,7 +1,8 @@
 ---
 title: ESC CLI
 title_tag: Pulumi ESC CLI Overview
-meta_desc: An overview of the Pulumi ESC (Environments, Secrets, and Configuration) CLI.
+meta_desc: An overview of the Pulumi ESC (Environments, Secrets, and Configuration)
+  CLI.
 h1: Pulumi ESC CLI overview
 no_on_this_page: true
 menu:
@@ -10,7 +11,16 @@ menu:
     identifier: esc-cli-overview
     weight: 7
 aliases:
-    - /docs/esc-cli/
+  - /docs/esc-cli/
+search:
+  keywords:
+    - cli
+    - rollback
+    - esc
+    - environments
+    - overview
+    - secrets
+    - configuration
 ---
 
 Pulumi ESC is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi Cloud

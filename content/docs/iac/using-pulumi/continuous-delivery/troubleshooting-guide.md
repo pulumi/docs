@@ -1,18 +1,28 @@
 ---
 title_tag: "Troubleshooting CI | CI/CD"
-meta_desc: This page walks through the common failures encountered while running Pulumi in CI, as well as tips on how to fix them.
+meta_desc: This page walks through the common failures encountered while running Pulumi
+  in CI, as well as tips on how to fix them.
 title: Troubleshooting
 h1: Troubleshooting Pulumi CI/CD
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Troubleshooting
-        parent: iac-using-pulumi-cicd
-        weight: 99
+  iac:
+    name: Troubleshooting
+    parent: iac-using-pulumi-cicd
+    weight: 99
 aliases:
-- /docs/guides/continuous-delivery/troubleshooting-guide/
-- /docs/using-pulumi/continuous-delivery/troubleshooting-guide/
-- /docs/iac/packages-and-automation/continuous-delivery/troubleshooting-guide/
+  - /docs/guides/continuous-delivery/troubleshooting-guide/
+  - /docs/using-pulumi/continuous-delivery/troubleshooting-guide/
+  - /docs/iac/packages-and-automation/continuous-delivery/troubleshooting-guide/
+search:
+  keywords:
+    - troubleshooting
+    - tips
+    - encountered
+    - failures
+    - walks
+    - fix
+    - ci
 ---
 
 In order to understand the errors encountered during an automated pipeline execution, it is important to understand

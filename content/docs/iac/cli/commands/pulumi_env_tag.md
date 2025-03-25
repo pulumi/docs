@@ -2,9 +2,16 @@
 title: "pulumi env tag"
 aliases:
   - /docs/reference/cli/pulumi_env_tag/
+search:
+  keywords:
+    - tag
+    - env
+    - environment
+    - tags
+    - subcommands
+    - qualify
+    - logtostderr
 ---
-
-
 
 Manage environment tags
 

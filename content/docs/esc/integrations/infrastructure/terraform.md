@@ -8,7 +8,16 @@ menu:
     parent: esc-inf-tools-integrations
     weight: 3
 aliases:
-    - /docs/esc/other-integrations/terraform/
+  - /docs/esc/other-integrations/terraform/
+search:
+  keywords:
+    - terraform
+    - esc
+    - overview
+    - provides
+    - page
+    - use
+    - tf_var_instance_type
 ---
 
 ## Overview

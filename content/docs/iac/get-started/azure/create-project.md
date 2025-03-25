@@ -5,9 +5,18 @@ title: Create project
 h1: "Pulumi & Azure: Create project"
 weight: 3
 aliases:
-    - /docs/quickstart/azure/create-project/
-    - /docs/get-started/azure/create-project/
-    - /docs/clouds/azure/get-started/create-project/
+  - /docs/quickstart/azure/create-project/
+  - /docs/get-started/azure/create-project/
+  - /docs/clouds/azure/get-started/create-project/
+search:
+  keywords:
+    - create
+    - project
+    - azure
+    - overview
+    - provides
+    - page
+    - new
 ---
 
 Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,

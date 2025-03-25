@@ -1,18 +1,28 @@
 ---
 title_tag: "Using Spinnaker | CI/CD"
-meta_desc: "This page provides an overview of how to use Pulumi Plugin for Spinnaker to run Pulumi apps."
+meta_desc: "This page provides an overview of how to use Pulumi Plugin for Spinnaker
+  to run Pulumi apps."
 title: Spinnaker
 h1: Pulumi CI/CD & Spinnaker
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Spinnaker
-        parent: iac-using-pulumi-cicd
-        weight: 14
+  iac:
+    name: Spinnaker
+    parent: iac-using-pulumi-cicd
+    weight: 14
 aliases:
-- /docs/guides/continuous-delivery/spinnaker/
-- /docs/using-pulumi/continuous-delivery/spinnaker/
-- /docs/iac/packages-and-automation/continuous-delivery/spinnaker/
+  - /docs/guides/continuous-delivery/spinnaker/
+  - /docs/using-pulumi/continuous-delivery/spinnaker/
+  - /docs/iac/packages-and-automation/continuous-delivery/spinnaker/
+search:
+  keywords:
+    - spinnaker
+    - plugin
+    - apps
+    - overview
+    - provides
+    - page
+    - git_pat
 ---
 
 This page provides an overview of how to use the Pulumi Plugin for Spinnaker to run Pulumi apps. Pulumi doesn't require

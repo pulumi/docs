@@ -2,9 +2,16 @@
 title: "pulumi env init"
 aliases:
   - /docs/reference/cli/pulumi_env_init/
+search:
+  keywords:
+    - init
+    - env
+    - respectively
+    - logflow
+    - like
+    - flags
+    - '2025'
 ---
-
-
 
 Create an empty environment with the given name.
 

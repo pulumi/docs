@@ -2,9 +2,16 @@
 title: "pulumi stack output"
 aliases:
   - /docs/reference/cli/pulumi_stack_output/
+search:
+  keywords:
+    - output
+    - stack
+    - emit
+    - outputs
+    - emojis
+    - plaintext
+    - endpoint
 ---
-
-
 
 Show a stack's output properties
 

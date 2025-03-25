@@ -2,9 +2,16 @@
 title: "pulumi stack tag ls"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_ls/
+search:
+  keywords:
+    - ls
+    - tag
+    - stack
+    - emoji
+    - logflow
+    - list
+    - qualify
 ---
-
-
 
 List all stack tags
 

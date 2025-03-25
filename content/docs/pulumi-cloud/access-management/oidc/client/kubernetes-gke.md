@@ -1,6 +1,7 @@
 ---
 title_tag: Configure OpenID Connect for Google Kubernetes Engine | OIDC
-meta_desc: This page describes how to configure Pulumi to accept Google Kubernetes Engine OIDC tokens
+meta_desc: This page describes how to configure Pulumi to accept Google Kubernetes
+  Engine OIDC tokens
 title: Google Kubernetes Engine
 h1: Configuring OpenID Connect for Google Kubernetes Engine
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,7 +12,16 @@ menu:
     weight: 2
     identifier: pulumi-cloud-access-management-oidc-client-kubernetes-gke
 aliases:
-- /docs/pulumi-cloud/oidc/client/kubernetes-gke/
+  - /docs/pulumi-cloud/oidc/client/kubernetes-gke/
+search:
+  keywords:
+    - kubernetes
+    - describes
+    - engine
+    - google
+    - tokens
+    - accept
+    - oidc
 ---
 
 This document outlines the steps required to configure Pulumi to accept Google Kubernetes Engine id_tokens to be exchanged for Organization access tokens. With this configuration, Kubernetes pods authenticate to Pulumi Cloud using OIDC tokens issued by GKE.

@@ -1,23 +1,33 @@
 ---
 title_tag: "Python | Languages & SDKs"
-meta_desc: An overview of how to use Python with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
+meta_desc: An overview of how to use Python with Pulumi for infrastructure as code
+  on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: Python
 h1: Pulumi & Python
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Python
-        parent: iac-languages
-        weight: 2
-        identifier: iac-languages-python
-    languages:
-        identifier: python
-        weight: 2
+  iac:
+    name: Python
+    parent: iac-languages
+    weight: 2
+    identifier: iac-languages-python
+  languages:
+    identifier: python
+    weight: 2
 aliases:
-    - /docs/reference/python/
-    - /docs/intro/languages/python/
-    - /python/
-    - /docs/languages-sdks/python/
+  - /docs/reference/python/
+  - /docs/intro/languages/python/
+  - /python/
+  - /docs/languages-sdks/python/
+search:
+  keywords:
+    - python
+    - kubernetes
+    - cloud
+    - google
+    - azure
+    - overview
+    - infrastructure
 ---
 
 <img src="/logos/tech/logo-python.svg" align="right" width="150" style="padding:8px; margin-top: -64px">

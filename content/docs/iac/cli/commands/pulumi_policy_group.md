@@ -2,9 +2,16 @@
 title: "pulumi policy group"
 aliases:
   - /docs/reference/cli/pulumi_policy_group/
+search:
+  keywords:
+    - group
+    - policy
+    - choices
+    - emojis
+    - log
+    - spf13
+    - '2025'
 ---
-
-
 
 Manage policy groups
 

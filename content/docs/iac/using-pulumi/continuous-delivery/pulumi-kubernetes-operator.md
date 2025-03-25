@@ -1,19 +1,28 @@
 ---
 title_tag: "Using Pulumi Kubernetes Operator | CI/CD"
 meta_desc: This page details how to use the Pulumi Kubernetes Operator to manage deploying
-           stacks based on commits in git, Kubernetes objects, or Flux sources.
+  stacks based on commits in git, Kubernetes objects, or Flux sources.
 title: Pulumi Kubernetes Operator
 h1: Pulumi Kubernetes Operator
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Pulumi Kubernetes Operator
-        parent: iac-using-pulumi-cicd
-        weight: 13
+  iac:
+    name: Pulumi Kubernetes Operator
+    parent: iac-using-pulumi-cicd
+    weight: 13
 aliases:
-- /docs/guides/continuous-delivery/pulumi-kubernetes-operator/
-- /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
-- /docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/
+  - /docs/guides/continuous-delivery/pulumi-kubernetes-operator/
+  - /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
+  - /docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/
+search:
+  keywords:
+    - operator
+    - kubernetes
+    - flux
+    - commits
+    - sources
+    - git
+    - objects
 ---
 
 This page details how to use the [Pulumi Kubernetes

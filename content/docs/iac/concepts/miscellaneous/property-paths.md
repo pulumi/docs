@@ -5,10 +5,19 @@ title: Property Paths
 h1: Property Paths
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Property Paths
-        parent: miscellaneous-concepts
-        weight: 2
+  iac:
+    name: Property Paths
+    parent: miscellaneous-concepts
+    weight: 2
+search:
+  keywords:
+    - paths
+    - property
+    - elements
+    - configuration
+    - root
+    - refer
+    - object
 ---
 
 Property paths represent a key or series of keys that one can use to refer to elements in an object or array.

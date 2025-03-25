@@ -1,8 +1,15 @@
 ---
 title: "esc login"
+search:
+  keywords:
+    - login
+    - esc
+    - cloud
+    - log
+    - commands
+    - flags
+    - spf13
 ---
-
-
 
 Log in to the Pulumi Cloud
 

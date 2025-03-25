@@ -10,9 +10,18 @@ menu:
     identifier: kubernetes-review-project-get-started
 
 aliases:
-- /docs/quickstart/kubernetes/review-project/
-- /docs/get-started/kubernetes/review-project/
-- /docs/iac/get-started/kubernetes/review-project/
+  - /docs/quickstart/kubernetes/review-project/
+  - /docs/get-started/kubernetes/review-project/
+  - /docs/iac/get-started/kubernetes/review-project/
+search:
+  keywords:
+    - review
+    - project
+    - kubernetes
+    - overview
+    - provides
+    - page
+    - new
 ---
 
 Let's review some of the generated project files:
