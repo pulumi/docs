@@ -33,6 +33,7 @@ For Pulumi programs specifically written in Pulumi YAML, the project file not on
 | `runtime` | required | Installed language runtime of the project: `nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`. | [runtime options](#runtime-options)
 | `description` | optional | A brief description of the project. | None |
 | `config` | optional | Project level config (Added in v3.44). | [config options](#config-options) |
+| `packages` | optional | Additional packages to be used in the program (Added in v3.157.0 | [packages](#packages-options) |
 | `main` | optional | Path to the Pulumi program, relative to the location of `Pulumi.yaml`. The default is the current working directory. | None |
 | `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None |
 | `backend` | optional | [Backend](/docs/concepts/state/) of the project. | [backend options](#backend-options) |
@@ -93,6 +94,24 @@ New Python projects created with `pulumi new` have this option set by default. I
 #### About `typechecker`
 
 This option can be set to `mypy` or `pyright`. (For additional type checkers, file an issue at [https://github.com/pulumi/pulumi/issues](https://github.com/pulumi/pulumi/issues).). If set, the given type checker will be invoked to check the Python code before running the Pulumi program.
+
+### `packages` options
+
+`packages` is a map of package names to either `package add` arguments or structured package declarations.  It lists the packages that  list of packages that the program is using. `pulumi install` will install the packages, and generate SDKs for them.
+
+#### Values
+
+| Property | Type | Required | Expression | Description |
+| - | - | - | - | - |
+| `argument` | string | No | No | A string in the same format as it would be when passed to [`package add`](/docs/iac/cli/commands/pulumi_package_add/) |
+
+#### Package declarations
+
+| Property | Type | Required | Expression | Description |
+| - | - | - | - | - |
+| `source` | string | Yes | No | The source of the package. Can be a path to a local plugin, a URL to a Git repository, or a pulumi plugin name. |
+| `version` | string | No | No | The version of the package. |
+| `parameters` | List<string> | No | No | A list of parameters for the `source` package |
 
 ### `config` options
 
