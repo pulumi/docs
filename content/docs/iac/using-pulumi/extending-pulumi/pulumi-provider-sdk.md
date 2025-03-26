@@ -15,7 +15,7 @@ The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a hi
 
 Some key advantages of the SDK are:
 
-- **Schema Generation**: Automatically generate provider schemas for seamless multi-language support.
+- **Schema Generation**: Automatically generates provider schemas for seamless multi-language support.
 - **Code-First Approach**: Define providers using Go structures and interfaces.
 - **Middleware Support**: Enhances providers with layers like token dispatch, schema generation, and cancellation propagation.
 - **Simplified Resource Definition**: Use the `infer` and `resourcex` libraries to streamline provider development.
