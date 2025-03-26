@@ -67,7 +67,7 @@ type HelloWorldState struct {
 	Message string `pulumi:"message"`
 }
 
-// All resources must implement Create at a minumum.
+// All resources must implement Create at a minimum.
 func (HelloWorld) Create(
 	ctx context.Context, name string, input HelloWorldArgs, preview bool,
 ) (string, HelloWorldState, error) {
