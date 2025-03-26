@@ -178,9 +178,15 @@ We'll also need a TypeScript project file called `tsconfig.json`.
     },
     "files": [
         "index.ts",
-        "static-page-component.ts"
+        "staticpage.ts"
     ]
 }
+```
+
+Finally, install dependencies via NPM:
+
+```bash
+$ npm install
 ```
 
 {{% /choosable %}}
@@ -539,7 +545,257 @@ TODO: JavaScript component implementation
 
 {{% choosable language typescript %}}
 
-TODO: TypeScript component implementation
+#### Add the required imports
+
+First create a file called `staticpage.ts`, and add the imports we will need:
+
+***Example:** `staticpage.ts` required imports*
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+```
+
+### Define the Component arguments
+
+Next, we will implement the arguments class. In our example here, we will pass the contents of the webpage we want to host to the component.
+
+***Example:** `staticpage.ts` the Component arguments implmentation*
+
+```typescript
+export interface StaticPageArgs {
+    // The HTML content for index.html
+    indexContent: pulumi.Input<string>;
+}
+```
+
+Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types.
+
+### Define the Component resource
+
+Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via calls to `self.register_outputs`.
+
+***Example:** `staticpage.ts` the Component implmentation*
+
+```typescript
+export class StaticPage extends pulumi.ComponentResource {
+    // The URL of the static website.
+    public readonly endpoint: pulumi.Output<string>;
+
+    constructor(name: string, args: StaticPageArgs, opts?: pulumi.ComponentResourceOptions) {
+        super("static-page-component:index:StaticPage", name, args, opts);
+
+        // Create a bucket
+        const bucket = new aws.s3.BucketV2(`${name}-bucket`, {}, { parent: this });
+
+        // Configure the bucket website
+        const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2(`${name}-website`, {
+            bucket: bucket.bucket,
+            indexDocument: { suffix: "index.html" },
+        }, { parent: bucket });
+
+        // Create a bucket object for the index document.
+        const bucketObject = new aws.s3.BucketObject(`${name}-index-object`, {
+            bucket: bucket.bucket,
+            key: 'index.html',
+            content: args.indexContent,
+            contentType: 'text/html',
+        }, { parent: bucket });
+
+        // Create a public access block for the bucket
+        const publicAccessBlock = new aws.s3.BucketPublicAccessBlock(`${name}-public-access-block`, {
+            bucket: bucket.id,
+            blockPublicAcls: false,
+        }, { parent: bucket });
+
+        // Set the access policy for the bucket so all objects are readable
+        const bucketPolicy = new aws.s3.BucketPolicy(`${name}-bucket-policy`, {
+            bucket: bucket.id, // refer to the bucket created earlier
+            policy: bucket.bucket.apply(this.allowGetObjectPolicy),
+        }, { parent: bucket, dependsOn: publicAccessBlock });
+
+        this.endpoint = bucketWebsite.websiteEndpoint;
+
+        // By registering the outputs on which the component depends, we ensure
+        // that the Pulumi CLI will wait for all the outputs to be created before
+        // considering the component itself to have been created.
+        this.registerOutputs({
+            endpoint: bucketWebsite.websiteEndpoint,
+        });
+    }
+
+    allowGetObjectPolicy(bucketName: string) {
+        return JSON.stringify({
+            Version: "2012-10-17",
+            Statement: [{
+                Effect: "Allow",
+                Principal: "*",
+                Action: [
+                    "s3:GetObject"
+                ],
+                Resource: [
+                    `arn:aws:s3:::${bucketName}/*`
+                ]
+            }]
+        });
+    }
+}
+```
+
+### Detailed implementation breakdown
+
+Let's dissect this component implementation piece-by-piece:
+
+#### Inheriting from the base class
+
+```typescript
+export class StaticPage extends pulumi.ComponentResource {
+    // ...
+}
+```
+
+Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
+
+#### Outputs as class properties
+
+```typescript
+export class StaticPage extends pulumi.ComponentResource {
+    // The URL of the static website
+    public readonly endpoint: pulumi.Output<string>;
+// ...
+}
+```
+
+We use a class property to store the output value. Note that it's using `pulumi.Output<string>` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
+
+#### The Component constructor
+
+```typescript
+// ...
+    constructor(name: string, args: StaticPageArgs, opts?: pulumi.ComponentResourceOptions) {
+        super("static-page-component:index:StaticPage", name, args, opts);
+// ...
+```
+
+The constructor has a few standard arguments:
+
+- `name`: The name given to an instance of this component. When writing a Pulumi program, resources are named by the end-user. Later on in the implementation we will use this base component name to uniquely name the resources it contains.
+- `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
+- `opts`: This is an *optional* set of common resource configuration values. The [`ResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
+
+Since we're inheriting, we also need to call the base class constructor `super(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implmentation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+
+#### Creating and managing sub-resources, dependencies, and execution order
+
+Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+
+```typescript
+// ...
+        // Create a bucket
+        const bucket = new aws.s3.BucketV2(`${name}-bucket`, {}, { parent: this });
+
+        // Configure the bucket website
+        const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2(`${name}-website`, {
+            bucket: bucket.bucket,
+            indexDocument: { suffix: "index.html" },
+        }, { parent: bucket });
+
+        // Create a bucket object for the index document.
+        const bucketObject = new aws.s3.BucketObject(`${name}-index-object`, {
+            bucket: bucket.bucket,
+            key: 'index.html',
+            content: args.indexContent,
+            contentType: 'text/html',
+        }, { parent: bucket });
+
+        // Create a public access block for the bucket
+        const publicAccessBlock = new aws.s3.BucketPublicAccessBlock(`${name}-public-access-block`, {
+            bucket: bucket.id,
+            blockPublicAcls: false,
+        }, { parent: bucket });
+
+        // Set the access policy for the bucket so all objects are readable
+        const bucketPolicy = new aws.s3.BucketPolicy(`${name}-bucket-policy`, {
+            bucket: bucket.id, // refer to the bucket created earlier
+            policy: bucket.bucket.apply(this.allowGetObjectPolicy),
+        }, { parent: bucket, dependsOn: publicAccessBlock });
+// ...
+```
+
+##### The Bucket sub-resource
+
+The `BucketV2` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
+
+Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources.
+
+Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new instance of `ResourceOptions` and pass the component instance as the `parent` of the `BucketV2` resource, via `parent: this` in the `ResourceOptions` class. This is an essential step to tie the sub-resources into the dependency graph.
+
+##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
+
+The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
+
+Notice that this time we pass the `BucketV2` instance in as the `parent` to the `ResourceOptions` instances for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `BucketV2` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
+
+Managing the dependency graph of your sub-resources is very important in a component!
+
+Another point of interest here is the use of `args`. In the `BucketObject` constructor, we pass the contents of the `index.html` page we want to host via the `args` class. It's available as a strongly typed property accessor on the args class.
+
+##### The BucketPublicAccessBlock and BucketPolicy sub-resources
+
+By default the `BucketObject` we created is not accessible to the public, so we need to unlock that access with the `BucketPublicAccessBlock` and `BucketPolicy` resources.
+
+The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use `bucket.bucket.apply(...)` to generate an S3 policy document using the `allowGetObjectPolicy` helper function. This respects the asynchronous workflow, materializing that value only after the bucket has been created. If we attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 policy document needs to use the bucket's name within its definition, and we won't know what that value is until the Bucket creation operation has completed. Using `apply` here will ensure that execution of the `allowGetObjectPolicy` function doesn't happen until the bucket has been created successfully.
+
+Just like in a Pulumi program, it's important to understand and respect the asynchronous flow of resource creation within our code. The `apply` function encodes the dependency and required order-of-operations.
+
+The `BucketPolicy` resource also shows another technique: resource dependencies. We use the `dependsOn` resource option to indicate that the `BucketPolicy` depends on the `BucketPublicAccessBlock`. This relationship is important to encode so that resource creation, modification, and deletion happens as expected.
+
+#### Handling outputs
+
+The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output<str>`, not a regular Python string. Outputs must use `pulumi.Output` types.
+
+Finally, calling `this.registerOutputs` provides the output value to Pulumi and ensures the execution order and dependency graph are able to be properly managed by the Pulumi engine.
+
+```typescript
+// ...
+        this.endpoint = bucketWebsite.websiteEndpoint;
+
+        // By registering the outputs on which the component depends, we ensure
+        // that the Pulumi CLI will wait for all the outputs to be created before
+        // considering the component itself to have been created.
+        this.registerOutputs({
+            endpoint: bucketWebsite.websiteEndpoint,
+        });
+// ...
+```
+
+#### Helper functions
+
+In addition to the constructor logic, we also have a helper function `allowGetObjectPolicy`:
+
+***Example:** `staticpage.ts` a helper function*
+
+```typescript
+// ...
+    allowGetObjectPolicy(bucketName: string) {
+        return JSON.stringify({
+            Version: "2012-10-17",
+            Statement: [{
+                Effect: "Allow",
+                Principal: "*",
+                Action: [
+                    "s3:GetObject"
+                ],
+                Resource: [
+                    `arn:aws:s3:::${bucketName}/*`
+                ]
+            }]
+        });
+    }
+// ...
+```
+
+This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `apply(...)`. That means that the `bucketName`, which is normally a `pulumi.Output<str>` value, can be materialized as a normal TypeScript string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `JSON.stringify(...)` function takes the object as input and returns it as a JSON formatted string.
 
 {{% /choosable %}}
 
@@ -655,7 +911,7 @@ def _allow_getobject_policy(bucket_name: str) -> str:
 
 ### Detailed implementation breakdown
 
-Let's dissect this Component implementation piece-by-piece:
+Let's dissect this component implementation piece-by-piece:
 
 #### Inheriting from the base class
 
