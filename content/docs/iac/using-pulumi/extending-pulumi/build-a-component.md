@@ -36,7 +36,7 @@ This guide will walk you through the steps of making a Pulumi Component suitable
 
 Pulumi Components are implemented as custom classes in any Pulumi-supported language. Once defined, they can be used locally, referenced from a Git repository, or published as a Pulumi package for broader distribution. A component extends `pulumi.ComponentResource` and groups multiple resources into a single, reusable abstraction. This approach enables developers to define infrastructure once and apply it consistently across multiple environments.
 
-Pulumi Components inherently support multi-language use. Regardless of the language a component was written in, it is a fast one-step process to generate a SDK allowing you to use it in all Pulumi-supported languages.
+Pulumi Components inherently support multi-language use. Regardless of the language a component was written in, it is a fast one-step process to generate a SDK, allowing you to use it in all Pulumi-supported languages.
 
 ## Structure of a Component
 
@@ -124,7 +124,7 @@ Next, we need to define our dependencies in `package.json`.
 }
 ```
 
-The `@pulumi` SDK contains everything we need for making a component. It should be version `3.157.0` or newer. The `@pulumi/aws` package is the AWS provider that we are building on top of.
+The `@pulumi/pulumi` SDK contains everything we need for making a component. It should be version `3.157.0` or newer. The `@pulumi/aws` package is the AWS provider that we are building on top of.
 
 #### TypeScript project file
 
@@ -980,7 +980,7 @@ Another point of interest here is the use of `args`. In the `BucketObject` const
 
 By default the `BucketObject` we created is not accessible to the public, so we need to unlock that access with the `BucketPublicAccessBlock` and `BucketPolicy` resources.
 
-The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use `bucket.bucket.apply(...)` to generate an S3 policy document using the `_allow_getobject_policy` helper function. This respects the asynchronous workflow, materializing that value only after the bucket has been created. If we attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 Policy document needs to use the bucket's name within S3, and we won't know what that value is until the Bucket creation operation has completed. Using `apply` here will ensure that execution of the `_allow_getobject_policy` function doesn't happen until the Bucket has been created successfully.
+The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use `bucket.bucket.[apply](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/apply/)(...)` to generate an S3 policy document using the `_allow_getobject_policy` helper function. This respects the asynchronous workflow, materializing that value only after the bucket has been created. If we attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 Policy document needs to use the bucket's name within S3, and we won't know what that value is until the Bucket creation operation has completed. Using `apply` here will ensure that execution of the `_allow_getobject_policy` function doesn't happen until the Bucket has been created successfully.
 
 Just like in a Pulumi program, it's important to understand and respect the asynchronous flow of resource creation within our code. The `apply` function encodes the dependency and required order-of-operations.
 
@@ -2018,10 +2018,6 @@ You can then import the SDK in your Python code with:
 
   import pulumi_static_page_component as static_page_component
 ```
-
-{{% notes type="warning" %}}
-Authentication for private repos is not currently supported.
-{{% /notes %}}
 
 ### Sharing via Pulumi Package
 
