@@ -2019,6 +2019,12 @@ You can then import the SDK in your Python code with:
   import pulumi_static_page_component as static_page_component
 ```
 
+{{< notes type="tip" >}}
+
+Pulumi also supports private repos in GitHub and GitLab. Pulumi will read standard environment variables like `GITHUB_TOKEN` and `GITLAB_TOKEN` if available in order to authenticate access to a private repo during `pulumi package add`.
+
+{{< /notes >}}
+
 ### Sharing via Pulumi Package
 
 Publishing a component as a Pulumi package makes it easier to distribute and integrate into Pulumi workflows. This method enables community contributions and ensures that infrastructure components remain modular and maintainable. By packaging the component, it becomes easier to reuse across teams and projects, improving consistency and efficiency in infrastructure management. It also makes your component available for use within Pulumi Cloud Deployments.
