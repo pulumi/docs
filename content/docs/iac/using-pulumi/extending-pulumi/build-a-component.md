@@ -36,7 +36,7 @@ This guide will walk you through the steps of making a Pulumi Component suitable
 
 Pulumi Components are implemented as custom classes in any Pulumi-supported language. Once defined, they can be used locally, referenced from a Git repository, or published as a Pulumi package for broader distribution. A component extends `pulumi.ComponentResource` and groups multiple resources into a single, reusable abstraction. This approach enables developers to define infrastructure once and apply it consistently across multiple environments.
 
-Pulumi Components inherently support multi-language use. Regardless of the language a component was written in, it is a fast one-step process to generate a SDK allowing you to use it in all Pulumi-supported languages.
+Pulumi Components inherently support multi-language use. Regardless of the language a component was written in, it is a fast one-step process to generate a SDK, allowing you to use it in all Pulumi-supported languages.
 
 ## Structure of a Component
 
