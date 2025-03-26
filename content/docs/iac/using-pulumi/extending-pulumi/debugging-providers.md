@@ -8,7 +8,7 @@ menu:
     iac:
         name: Debugging providers
         parent: iac-extending-pulumi
-        weight: 2
+        weight: 6
 aliases:
     - /docs/using-pulumi/pulumi-packages/
     - /docs/using-pulumi/pulumi-packages/debugging-provider-packages/

@@ -2,8 +2,9 @@
 title: "Pulumi Announces Drift Detection and Remediation: Continuously Monitor Your Infrastructure Changes"
 allow_long_title: True
 date: 2024-04-24T07:00:04-08:00
+updated: 2025-03-24
 draft: false
-meta_desc: Pulumi introduces Drift Detection and Remediation to continuously monitor and correct configuration drift in cloud infrastructures.
+meta_desc: Automatically detect and fix infrastructure drift with Pulumi’s new Drift Detection and Remediation—available for Pulumi Cloud Enterprise and Busienss users.
 meta_image: drift.png
 authors:
     - meagan-cojocar
@@ -47,7 +48,7 @@ To get started with Drift Detection in Pulumi, select which deployment route you
 
 ### Setting it Up in the Pulumi Cloud Console
 
-![set up drift in the UI](set-up-drift.png)
+![Pulumi Cloud UI showing the 'Create a schedule' panel with options for Drift Detection, Time-to-Live, and Raw operation, including auto-remediation and cron input.](set-up-drift.png)
 
 In order to set up Drift Detection and Remediation in the Pulumi Cloud console, follow these steps:
 
@@ -60,7 +61,7 @@ In order to set up Drift Detection and Remediation in the Pulumi Cloud console, 
 
 And just like that, you have Drift Detection! To test what the output will look like you can use the Actions button in the top right on the Stack page to run an ad hoc Drift Detection operation or an Auto-remediate operation. Note: if you have never run a `pulumi refresh` on that stack before, you will want to run one before setting up Drift Detection and ensure a clean refresh state. More details on getting a clean refresh state in our documentation.
 
-![Summary of drift that was detected](drift-summary.png)
+![Pulumi Cloud timeline view showing a drift check that ran 5 days ago and detected a deleted AWS S3 bucket object (index.html) in the stack.](drift-summary.png)
 
 You will now see on the Drift tab, a summary of what resources have been updated or deleted, the properties that have changed, when the drift run happened and a link to the Deployment with further details.
 
@@ -68,7 +69,7 @@ When drift is detected, you have a couple of options:
 1. _Run remediation from Pulumi Cloud_:  If you want to overwrite the changes made in your cloud provider with the most recently specified desired state of your Pulumi program.  This can be done via the "Remediate drift" option in the Actions drop down on your stack page.
 2. _Run refresh from Pulumi Cloud_:  If you want to accept the changes made in your cloud provider back into your Pulumi desired state.  This can be done via the "Refresh" option in the Actions drop down on your stack page. You may also want to update your Pulumi program to align with the changes made in the cloud provider.
 
-<img width="300" src="actions.png" alt="Actions menu" />
+<img width="300" src="actions.png" alt="Pulumi Cloud Actions menu showing options including Update, Preview, Refresh, Destroy, Detect drift, and Remediate drift to manage stack state." />
 
 ### Setting it Up via the API
 

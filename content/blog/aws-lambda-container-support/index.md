@@ -1,8 +1,9 @@
 ---
 title: Running Container Images in AWS Lambda
 date: 2020-12-01
+updated: 2025-03-11
 draft: false
-meta_desc: AWS Lambda launches support for packaging and deploying functions as container images
+meta_desc: Learn how to deploy AWS Lambda functions as container images. Explore setup, benefits, and a hands-on example using Pulumi to streamline serverless workflows.
 meta_image: meta.png
 authors:
     - mikhail-shilkov
@@ -38,7 +39,7 @@ For additional information on how Lambda Containers work, and more advanced opti
 
 </div>
 
-## Why Use Container Images for AWS Lambda?
+## Why Deploy AWS Lambda Functions as Container Images?
 
 The first production-ready version of Docker was released in October 2014, just one month before the announcement of AWS Lambda. Container images are now the de-facto standard of application packaging. Containers run in local development loops, in Kubernetes clusters, including Amazon EKS, as well as in Amazon ECS and AWS Fargate. Docker is embraced across the cloud industry, for instance, Google Cloud Run is a serverless offering centered around container images.
 
@@ -55,7 +56,7 @@ Here are essential scenarios enabled and improved by container image deployments
 
 AWS Lambda functions packaged as container images will continue to benefit from the event-driven execution model, consumption-based billing, automatic scaling, high availability, fast start-up, and native integrations with numerous AWS services.
 
-## How It Works
+## How AWS Lambda Container Images Work
 
 You can get started with deploying containers to AWS Lambda in three steps:
 
@@ -72,7 +73,7 @@ Therefore, not every container image may be deployed to AWS Lambda. You have two
 - **Choose a base image provided by AWS**, which already includes the Runtime Interface Client (RIC). AWS provides base images for Node.js, Python, Java, Go, .NET Core, and Ruby.
 - **Use an arbitrary base image** and implement the API with an AWS Lambda runtime client SDK. Using a custom base image, you can leverage open-source AWS Lambda Runtime Interface Client to make the image compatible with Lambda’s runtime API.
 
-## Container Images in AWS Lambda vs. AWS Fargate
+## AWS Lambda vs. AWS Fargate: Choosing the Right Container Service
 
 Lambda Container image support further blurs the lines between Lambda and Fargate. It’s important to understand the remaining differences to decide which service to use in a given scenario:
 
@@ -84,6 +85,8 @@ Lambda Container image support further blurs the lines between Lambda and Fargat
 - **Resource limits**. Lambda executions are limited to 15 minutes and may only consume up to 10 GB of RAM. Fargate may be the only option for long-running resource-demanding jobs.
 
 Overall, Lambda shines for unpredictable or inconsistent workloads and applications easily expressed as isolated functions triggered by events in other AWS services.
+
+{{< related-posts >}}
 
 ## Example: Serverless Video Thumbnailer with AWS Lambda and Pulumi
 
@@ -103,7 +106,7 @@ Here are the key features of the container image for our Thumbnailer:
 
 You can find the full Dockerfile [here](https://github.com/pulumi/examples/blob/master/aws-ts-lambda-thumbnailer/app/Dockerfile).
 
-### Create an S3 Bucket
+### Create a S3 Bucket
 
 Now, let's start composing our Pulumi program in TypeScript. The first step is to define an S3 bucket.
 
@@ -114,7 +117,7 @@ import * as aws from "@pulumi/aws";
 const bucket = new aws.s3.Bucket("bucket");
 ```
 
-### Build the container image and publish it to ECR
+### Build and Publish the Container Image
 
 We can use [Pulumi Crosswalk for AWS](https://www.pulumi.com/docs/iac/clouds/aws/guides/) to build the Docker image and publish it to a new ECR repository with just three lines of code.
 
@@ -133,7 +136,7 @@ const image = new awsx.ecr.Image("image", {
 
 The local `app` folder contains the application files (`Dockerfile` and `index.js`).
 
-### Setup a role
+### Setup a Role
 
 Next, we define an IAM role and a policy attachment to grant AWS Lambda access to S3 and CloudWatch.
 
@@ -148,7 +151,7 @@ new aws.iam.RolePolicyAttachment("lambdaFullAccess", {
 });
 ```
 
-### Configure your AWS Lambda function
+### Configure AWS Lambda for Video Processing
 
 It's time to define the AWS Lambda function itself! It's as simple as giving it a name and pointing to the image URI returned from the ECR. Also, we assign the role and increase the timeout to 15 minutes, as video processing may take a while.
 
@@ -161,7 +164,7 @@ const thumbnailer = new aws.lambda.Function("thumbnailer", {
 });
 ```
 
-### Trigger on new videos
+### Automate AWS Lambda Triggers for New Video Uploads
 
 Finally, we can assign a trigger to the function using the `bucket.onObjectCreated` helper method. We want to limit the function to only process `mp4` files.
 

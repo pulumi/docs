@@ -1,7 +1,8 @@
 ---
 title: "Aligning Projects between Service and DIY Backend"
 date: 2023-04-03
-meta_desc: Pulumi's DIY backend now supports stack names scoped by project name.
+updated: 2025-03-24
+meta_desc: Pulumi DIY backends now support project-scoped stacks—aligning with the Pulumi Service and enabling easier stack management across projects and environments.
 meta_image: meta.png
 authors:
     - justin-vanpatten
@@ -42,7 +43,7 @@ isolated instance of your infrastructure.
 For example, you might have an "app" project for your application,
 deploying to the "test" and "prod" stacks.
 
-![Projects and stacks](projects-and-stacks.png)
+![Depiction of projects and stacks where an app is connected to a test and prod environment](projects-and-stacks.png)
 
 ### What's a state backend?
 
@@ -64,7 +65,7 @@ or on your local filesystem.
 Using this backend trades reliability and convenience of the Service backend
 for additional control over where the information is stored.
 
-![What's a state backend](whats-a-backend.png)
+![Diagram showing how 'pulumi up' stores state in either a Service Backend (app.pulumi.com or self-hosted) or a Self-Managed Backend (cloud storage or local folder).](whats-a-backend.png)
 
 If you're unsure of which backend to use,
 see [Deciding On a State Backend](/docs/iac/concepts/state-and-backends/#deciding-on-a-state-backend).
@@ -80,14 +81,14 @@ Each of these projects will have their own stacks, e.g. "test" and "prod".
 The Pulumi Service backend scopes stacks to the project they belong to,
 so we can re-use the names "test" and "prod" across different projects.
 
-![Project-scoped stacks in Service backend](service-project-scoped-stack.png)
+![Diagram of a Pulumi organization 'myorg' with three projects (net, k8s, app), each containing 'test' and 'prod' stacks.](service-project-scoped-stack.png)
 
 This was not the case for the DIY backend,
 where stack names were global across all projects.
 To work around this, users resorted to qualifying stack names
 in the form `<project>-<stack>` when using the DIY backend.
 
-![Multiple qualified stacks in a DIY backend](self-managed-unscoped-stacks.png)
+![Diagram of a self-managed Pulumi backend with flat stack names like net-test, k8s-test, and app-prod stored in a shared folder.](self-managed-unscoped-stacks.png)
 
 We're pleased to announce that such workarounds are no longer necessary!
 
@@ -102,7 +103,7 @@ With this change,
 you can now use stack names like "test" and "prod" across your projects
 without risk of conflict&mdash;the same way you do with the Service backend.
 
-![Project-scoped stacks in a self-managed backend](self-managed-project-scoped-stack.png)
+![Diagram of a self-managed Pulumi backend with project-scoped stacks—separate folders for net, k8s, and app, each containing test and prod stacks.](self-managed-project-scoped-stack.png)
 
 ### Upgrading existing backends
 
@@ -138,7 +139,7 @@ you can use the `pulumi stack rename` command to clean up these names after the 
 $ pulumi stack rename --stack app-test test
 ```
 
-![Upgrading and renaming stacks](upgrade-and-rename.png)
+![Diagram showing migration from a flat Pulumi stack name (app-test) to a project-scoped layout (app/test) using 'pulumi state upgrade' and 'pulumi stack rename test'.](upgrade-and-rename.png)
 
 ## Referencing stacks in the CLI
 

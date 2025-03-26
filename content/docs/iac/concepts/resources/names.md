@@ -281,7 +281,7 @@ resources:
 
 ## Configuring Auto-Naming {#autonaming-configuration}
 
-You can customize how Pulumi generates resource names through the `pulumi:autonaming` configuration setting. This can be set at the stack, project, or organization level.
+You can customize how Pulumi generates resource names through the `pulumi:autonaming` configuration setting. This can be set at the stack or project level. And by leveraging [Pulumi ESC](/docs/esc/), autonaming can be managed at the organization level.
 
 {{% notes %}}
 When configuring auto-naming in your project configuration (`Pulumi.yaml`), you need to wrap the configuration in a `value` key:
@@ -290,7 +290,7 @@ When configuring auto-naming in your project configuration (`Pulumi.yaml`), you 
 config:
   pulumi:autonaming:
     value:
-      mode: verbatim
+      pattern: ${name}-${project}-${stack}
 ```
 
 However, when configuring it in a stack configuration file (`Pulumi.<stack-name>.yaml`), you can specify the configuration directly:
@@ -298,7 +298,16 @@ However, when configuring it in a stack configuration file (`Pulumi.<stack-name>
 ```yaml
 config:
   pulumi:autonaming:
-    mode: verbatim
+    pattern: ${name}-${project}-${stack}
+```
+
+And when configuring it in an [ESC environment](/docs/esc/get-started/integrate-with-pulumi-iac/), you can specify the configuration as such:
+
+```yaml
+pulumiConfig:
+  pulumi:autonaming:
+    # Note the "$$".
+    pattern: $${name}-$${project}-$${stack}
 ```
 
 {{% /notes %}}

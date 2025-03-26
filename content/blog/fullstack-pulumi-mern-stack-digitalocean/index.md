@@ -1,7 +1,8 @@
 ---
-title: "Fullstack Pulumi: Deploying the MERN Stack on DigitalOcean"
+title: "Deploy MERN Stack on DigitalOcean with Pulumi [Guide]"
 date: 2022-03-11
-meta_desc: Use Pulumi with DigitalOcean's App Platform to deploy and manage a three-tier web application.
+updated: 2025-03-24
+meta_desc: Learn how to deploy a MERN stack app using Pulumi and DigitalOcean App Platform. Follow this step-by-step guide to automate fullstack deployments with ease.
 meta_image: meta.png
 authors:
     - christian-nunciato
@@ -23,7 +24,7 @@ MERN-stack apps are three-tier web apps built with [MongoDB](https://www.mongodb
 
 Still, once I'm _finished_ building my app, I'm often faced with a whole other problem: figuring out how to get the app off of my laptop and onto the web.
 
-The cloud hasn't made this an easy task for developers. Choosing a cloud provider, deciding which resources to use (and how to use them), setting up networking, debugging permissions, navigating billing, and all the rest, can be overwhelming---and that's before you've given a single thought to anything having to do with automation or infrastructure as code. What we want, I think, is to be able to focus on our apps, and when we're ready to ship, push our code to a repository and wait patiently for a URL to emerge that we can paste into a browser and have everything _just work_.
+The cloud hasn't made this an easy task for developers. Choosing a cloud provider, deciding which resources to use (and how to use them), setting up networking, debugging permissions, navigating billing, and all the rest, can be overwhelming---and that's before you've given a single thought to anything having to do with automation or [infrastructure as code](/what-is/what-is-infrastructure-as-code/). What we want, I think, is to be able to focus on our apps, and when we're ready to ship, push our code to a repository and wait patiently for a URL to emerge that we can paste into a browser and have everything _just work_.
 
 Which is why I was so delighted when I discovered [DigitalOcean's App Platform](https://www.digitalocean.com/products/app-platform).
 
