@@ -82,44 +82,7 @@ $ mkdir static-page-component
 $ cd static-page-component
 ```
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-#### PulumiPlugin.yaml
-
-The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
-
-***Example:** `PulumiPlugin.yaml` for JavaScript*
-
-```yaml
-runtime:
-  name: nodejs
-  options:
-    typescript: false
-```
-
-#### Manage dependencies
-
-Next, we need to define our dependencies in `package.json`.
-
-***Example:** `package.json` for a Pulumi Component*
-
-```json
-{
-    "name": "static-page-component",
-    "version": "0.1.0",
-    "description": "Static Page Component",
-    "dependencies": {
-        "@pulumi/aws": "6.73.0",
-        "@pulumi/pulumi": "^3.157.0"
-    }
-}
-```
-
-The `@pulumi/pulumi` SDK contains everything we need for making a component. It should be version `3.157.0` or newer. The `@pulumi/aws` package is the AWS provider that we are building on top of.
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
