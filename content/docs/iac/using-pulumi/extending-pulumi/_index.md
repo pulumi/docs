@@ -12,7 +12,7 @@ menu:
         identifier: iac-extending-pulumi
 ---
 
-Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), and [packages](/docs/iac/concepts/resources/packages/), and more.
+Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), and [packages](/docs/iac/using-pulumi/pulumi-packages/), and more.
 
 ## What are my options?
 
@@ -65,7 +65,7 @@ This matters when we talk about components and providers because Pulumi Deployme
 
 ## Packaging and Publishing
 
-Pulumi [*packages*](/docs/iac/concepts/resources/packages/) are a standardized way to share providers and components. After building a provider or component, the next steps involve generating docs and end-user SDK code in various target languages, both of which are based on the [`schema.json` file](schema/). Those user-facing assets are packaged up in a tarball. Once you have a package, this can either be used locally or shared via the Pulumi Registry.
+Pulumi [packages](/docs/iac/using-pulumi/pulumi-packages/) are a standardized way to share providers and components. After building a provider or component, the next steps involve generating docs and end-user SDK code in various target languages, both of which are based on the [`schema.json` file](schema/). Those user-facing assets are packaged up in a tarball. Once you have a package, this can either be used locally or shared via the Pulumi Registry.
 
 Learn more in the [package documentation](/docs/iac/concepts/packages).
 
