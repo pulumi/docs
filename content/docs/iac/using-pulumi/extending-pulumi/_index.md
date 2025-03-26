@@ -98,6 +98,6 @@ If you're not having luck finding what you need on your own, you can always reac
 
 ### Contributing
 
-If there is an existing provider, but it lacks functionality you need, instead of writing a new provider, consider filing and issue and/or contributing to the open source code. This will both solve your problem and also make that solution available to anyone else who might encounter it.
+If there is an existing provider, but it lacks functionality you need, instead of writing a new provider, consider filing an issue and/or contributing to the open source code. This will both solve your problem and also make that solution available to anyone else who might encounter it.
 
 That said, there are times when you need to write an entirely new provider from scratch. While you can absolutely build, host, use, and maintain that provider privately, we strongly encourage you to make the code public and share it via the Pulumi Registry. [Packaging](/docs/iac/concepts/packages) up and [publishing](publishing-packages) your components and providers allows others to both benefit from your work as well contribute to the code, reducing your long-term maintenance costs. It's a great way to connect with other Pulumi users and attract talented engineers to your company.
