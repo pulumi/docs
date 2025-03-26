@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Oslo PUG 2025 Workshop"
+  title: "Discover Pulumi Through Hands-On Practice"
+  url: "https://www.meetup.com/oslo-pulumi-user-group/events/306321063"
+  date: 2025-03-05T15:00:00.000-07:00
 - event: Kargo Community Meeting
   title: Pulumi + Kargo
   url: https://x.com/akuityio/status/1894765745499689426
