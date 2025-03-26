@@ -117,7 +117,7 @@ Next, we need to define our dependencies in `package.json`.
 }
 ```
 
-The `@pulumi` SDK contains everything we need for making a component. It should be version `3.157.0` or newer. The `@pulumi/aws` package is the AWS provider that we are building on top of.
+The `@pulumi/pulumi` SDK contains everything we need for making a component. It should be version `3.157.0` or newer. The `@pulumi/aws` package is the AWS provider that we are building on top of.
 
 {{% /choosable %}}
 
@@ -155,7 +155,7 @@ Next, we need to define our dependencies in `package.json`.
 }
 ```
 
-The `@pulumi` SDK contains everything we need for making a component. It should be version `3.157.0` or newer. The `@pulumi/aws` package is the AWS provider that we are building on top of.
+The `@pulumi/pulumi` SDK contains everything we need for making a component. It should be version `3.157.0` or newer. The `@pulumi/aws` package is the AWS provider that we are building on top of.
 
 #### TypeScript project file
 
