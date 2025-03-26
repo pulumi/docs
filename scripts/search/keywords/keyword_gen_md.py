@@ -356,9 +356,9 @@ def main():
     ]
     
     # Configure normalized weights - must sum to 1.0
-    title_weight = 0.25     # title 25%
-    meta_desc_weight = 0.25 # meta_desc 25% 
-    content_weight = 0.5    # content 50%
+    title_weight = 0.05     # title 5%
+    meta_desc_weight = 0.05 # meta_desc 5% 
+    content_weight = 0.9    # content 90%
     
     # Number of keywords to extract per document
     num_keywords = 7
