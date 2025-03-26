@@ -39,13 +39,13 @@ In the simplest terms, the purpose of a Pulumi program is to manage cloud *resou
 
 ### Providers
 
-Pulumi manages resources by interacting with *providers*, which are plugins that create, update, and destroy resources. During an update, the Pulumi *engine* will compare what is described in the Pulumi program to the state stored in the backend, determining what operations, if any, are needed to update the resources to match. The Pulumi engine will then load and interact with one or more provider plugins, calling the necessary operations through a standard provider API. The provider plugin implements the necessary resource-specific create, update, and delete operations, often by calling external cloud service APIs directly.
+Pulumi manages resources by interacting with *providers*, which are plugins that create, update, and destroy resources. During an update, the provider will compare what is described in the Pulumi program to the state stored in the backend, determining what operations, if any, are needed to update the resources to match. The Pulumi engine will then load and interact with one or more provider plugins, calling the necessary operations through a standard provider API. The provider plugin implements the necessary resource-specific create, update, and delete operations, often by calling external cloud service APIs directly.
 
 ### Components
 
 Components are higher-level abstractions of one or more resources that work together in a logical unit. Imagine that you need to create multiple instances of a web server, its backing database, and the network they communicate over. All of those need to be in compliance with your company's security policy and coding standards, but also need some customization for each instance of this group of resources. A component can be created that encodes those required standards and surfaces the configurable parts in a simple-to-use usable API for your internal developers.
 
-While providers sometimes surface higher-level components for common use cases, they usually only provide the low-level resources. Custom components can be developed alongside your Pulumi programs, and used locally, shared via a git repo, or packaged and published in the Pulumi Registry, without the need to implement CRUD operations directly against the underlying cloud service APIs. This makes them a very flexible way to extend and customize Pulumi as long as there is a provider available for the cloud service you want to interact with.
+While providers sometimes surface higher-level components for common use cases, they usually only provide the low-level resources. Components–which under the hood are resources themselves–can be developed alongside your Pulumi programs, and used locally, shared via a git repo, or packaged and published in the Pulumi Registry, without the need to implement CRUD operations directly against the underlying cloud service APIs. This makes them a very flexible way to extend and customize Pulumi as long as there is a provider available for the cloud service you want to interact with.
 
 ### Do I need a Component or a Provider?
 
@@ -77,7 +77,7 @@ One of the most powerful aspects of using Pulumi is the flexibility to author in
 
 When extending Pulumi, you get the same great flexibility, with some caveats:
 
-- [Components](/docs/iac/concepts/resources/components/) can be written and used in any of Pulumi's supported languages.
+- [Components](/docs/iac/concepts/resources/components/) can be written and used in any of Pulumi's supported languages except for JavaScript.
 - [Providers](/docs/iac/concepts/resources/providers/) can be written in Go, and used in any of Pulumi's supported languages.
 - [Dynamic Providers](/docs/iac/concepts/resources/dynamic-providers) can be written in TypeScript, JavaScript, and Python, and can only be used in the same language they were authored in. Also, the code [must be serializable](/docs/iac/concepts/miscellaneous/function-serialization/).
 
