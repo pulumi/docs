@@ -1222,7 +1222,7 @@ return await Deployment.RunAsync(() =>
 
 #### Add the Maven project file
 
-Now lets create our `pom.xml`. We'll need the standard `pulumi` SDK and our custom component. 
+Now lets create our `pom.xml`. We'll need the standard `pulumi` SDK and our custom component.
 
 We'll need to add the sources from the generated SDK output into the build sources Maven looks for, and also add the dependencies. The output of the `pulumi package add` command should have given instructions on the necessary dependencies to add, in XML format. It will also suggest copying the source files into your `src/main` folder. Instead, we'll leave the SDK files in place, and modify our build configuration to look in that directory as well as our normal source directory.
 
@@ -1374,7 +1374,7 @@ public class App {
         Pulumi.run(ctx -> {
             final var pageHTML = "<h1>I love Pulumi!</h1>";
 
-            var page = new StaticPage("my-bucket", StaticPageArgs.builder() 
+            var page = new StaticPage("my-bucket", StaticPageArgs.builder()
                 .indexContent(pageHTML).build()
             );
 
