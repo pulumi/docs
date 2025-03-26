@@ -374,19 +374,7 @@ name: static-page-component
 
 #### Define the entrypoint
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
-
-First, create the `index.js` file, where we will define an entry point for the component.
-
-***Example:** `index.js` component entry point*
-
-```javascript
-TODO: JavaScript implementation
-```
-
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
