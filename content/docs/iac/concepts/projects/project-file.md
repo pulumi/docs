@@ -97,7 +97,7 @@ This option can be set to `mypy` or `pyright`. (For additional type checkers, fi
 
 ### `packages` options
 
-`packages` is a map of package names to either `package add` arguments or structured package declarations.  It lists the packages that  list of packages that the program is using. `pulumi install` will install the packages, and generate SDKs for them.
+`packages` is a map of package names to either `package add` arguments or structured package declarations. It specifies the packages that the program is utilizing. The command `pulumi install` will install these packages and generate the corresponding SDKs for them.
 
 #### Values
 
