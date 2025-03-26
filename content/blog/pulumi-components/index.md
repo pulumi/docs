@@ -30,9 +30,9 @@ For platform teams, the new Pulumi Components offer a more intuitive, more secur
 
 ## Understanding Component Resources
 
-At their core, Pulumi Component Resources are logical groupings of resources that encapsulate infrastructure patterns and best practices. Unlike standard resources that map directly to cloud provider resources, component resources are higher-level abstractions that can contain multiple child resources working together to implement a specific capability. While similar in concept to Terraform modules, Pulumi Components offer significantly more power through full programming language capabilities, stronger typing, inheritance patterns, and now, cross-language support.
+At their core, Pulumi Component Resources are logical groupings of resources that encapsulate infrastructure patterns and best practices. Unlike standard resources that map directly to cloud provider resources, component resources are higher-level abstractions that can contain multiple child resources working together to implement a specific capability. While similar in concept to Terraform modules, Pulumi Components offer more power through full programming language capabilities, stronger typing, and now, cross-language support.
 
-For example, a `WebService` component might include a load balancer, compute instances, security groups, and networking configuration—all bundled together as a single, reusable unit.
+For example, an `S3BucketComponent` might include a bucket, versioning configuration, encryption settings, and tagging policies—all bundled together as a single, reusable unit that enforces your organization's security and compliance standards.
 
 ## What's New with Pulumi Components
 
@@ -50,8 +50,63 @@ Our latest enhancements focus on making components more accessible and easier to
 
 Creating a component remains the same as before—define a class that extends `ComponentResource`:
 
-```ts
-TODO
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+export interface S3BucketComponentArgs {
+    bucketName?: string;
+    versioning?: boolean;
+    encryption?: boolean;
+    tags?: { [key: string]: string };
+}
+
+export class S3BucketComponent extends pulumi.ComponentResource {
+    public readonly bucket: aws.s3.Bucket;
+    public readonly bucketName: pulumi.Output<string>;
+
+    constructor(name: string, args: S3BucketComponentArgs = {}, opts?: pulumi.ComponentResourceOptions) {
+        super("my:components:S3BucketComponent", name, {}, opts);
+
+        // Create an S3 bucket with best practices by default
+        this.bucket = new aws.s3.Bucket(`${name}-bucket`, {
+            bucket: args.bucketName,
+            tags: {
+                ManagedBy: "Pulumi",
+                ...args.tags,
+            },
+        }, { parent: this });
+
+        // Conditionally enable versioning
+        if (args.versioning !== false) {
+            new aws.s3.BucketVersioningV2(`${name}-versioning`, {
+                bucket: this.bucket.id,
+                versioningConfiguration: {
+                    status: "Enabled",
+                },
+            }, { parent: this });
+        }
+
+        // Conditionally enable encryption
+        if (args.encryption !== false) {
+            new aws.s3.BucketServerSideEncryptionConfigurationV2(`${name}-encryption`, {
+                bucket: this.bucket.id,
+                rules: [{
+                    applyServerSideEncryptionByDefault: {
+                        sseAlgorithm: "AES256",
+                    },
+                }],
+            }, { parent: this });
+        }
+
+        this.bucketName = this.bucket.id;
+
+        this.registerOutputs({
+            bucket: this.bucket,
+            bucketName: this.bucketName,
+        });
+    }
+}
 ```
 
 ### Sharing Components
@@ -64,8 +119,8 @@ Once you've authored your component, sharing it is as simple as pushing your cod
 
 For example, after pushing your S3BucketComponent to GitHub and tagging it as v1.0.0, others can consume it by running:
 
-```ts
-TODO
+```bash
+pulumi package add github.com/myorg/secure-s3-component@v1.0.0
 ```
 
 Under the hood, Pulumi:
@@ -78,8 +133,8 @@ Under the hood, Pulumi:
 
 For scenarios when you're not wanting to publish components publicly, you can reference local source code directly:
 
-```ts
-TODO
+```bash
+pulumi package add /path/to/local/secure-s3-component
 ```
 
 Pulumi will identify the folder as a Pulumi component project, generate a local SDK, and make it available for import in your program—even if your consumer program is in a different language.
@@ -88,23 +143,162 @@ Pulumi will identify the folder as a Pulumi component project, generate a local 
 
 The real power comes in how these components can now be consumed in any Pulumi language:
 
-**TypeScript:**
+{{< chooser language "typescript,python,csharp,go,java,yaml" >}}
 
-```ts
-TODO
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import { S3BucketComponent } from "@myorg/secure-s3-component";
+
+const secureBucket = new S3BucketComponent("my-secure-bucket", {
+    bucketName: "my-company-secure-assets",
+    tags: {
+        Environment: "production",
+        Department: "engineering",
+    },
+});
+
+export const bucketName = secureBucket.bucketName;
 ```
 
-**Python:**
+{{% /choosable %}}
 
-```ts
-TODO
+{{% choosable language python %}}
+
+```python
+import pulumi
+from myorg_secure_s3_component import S3BucketComponent
+
+secure_bucket = S3BucketComponent("my-secure-bucket", 
+    bucket_name="my-company-secure-assets",
+    tags={
+        "Environment": "production",
+        "Department": "engineering",
+    })
+
+pulumi.export("bucket_name", secure_bucket.bucket_name)
 ```
 
-**Pulumi YAML:**
+{{% /choosable %}}
 
-```ts
-TODO
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using MyOrg.SecureS3Component;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tags = new Dictionary<string, string>
+        {
+            { "Environment", "production" },
+            { "Department", "engineering" }
+        };
+        
+        var secureBucket = new S3BucketComponent("my-secure-bucket", new S3BucketComponentArgs
+        {
+            BucketName = "my-company-secure-assets",
+            Tags = tags
+        });
+
+        this.BucketName = secureBucket.BucketName;
+    }
+
+    [Output] public Output<string> BucketName { get; set; }
+}
 ```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	secures3 "github.com/myorg/secure-s3-component/sdk/go/secure-s3-component"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tags := make(map[string]string)
+		tags["Environment"] = "production"
+		tags["Department"] = "engineering"
+		
+		secureBucket, err := secures3.NewS3BucketComponent(ctx, "my-secure-bucket", &secures3.S3BucketComponentArgs{
+			BucketName: pulumi.String("my-company-secure-assets"),
+			Tags:       pulumi.ToStringMap(tags),
+		})
+		if err != nil {
+			return err
+		}
+		
+		ctx.Export("bucketName", secureBucket.BucketName)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package mypackage;
+
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.myorg.secures3component.S3BucketComponent;
+import com.myorg.secures3component.S3BucketComponentArgs;
+
+import java.util.Map;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var tags = Map.of(
+                "Environment", "production",
+                "Department", "engineering"
+            );
+            
+            var bucketArgs = S3BucketComponentArgs.builder()
+                .bucketName("my-company-secure-assets")
+                .tags(tags)
+                .build();
+                
+            var secureBucket = new S3BucketComponent("my-secure-bucket", bucketArgs);
+            
+            ctx.export("bucketName", secureBucket.bucketName());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  secureBucket:
+    type: myorg:secure-s3-component:S3BucketComponent
+    properties:
+      bucketName: my-company-secure-assets
+      tags:
+        Environment: production
+        Department: engineering
+
+outputs:
+  bucketName: ${secureBucket.bucketName}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Pro Tips
 
@@ -112,7 +306,23 @@ TODO
 
 - **Managing Dependencies**: Once you've run `pulumi package add <repo-url>`, Pulumi will generate a local SDK in your project. Check in these files if you want fully reproducible builds; or add them to `.gitignore` if you prefer to regenerate them on each checkout.
 
-- **Leveraging Private Repos**: If you need to keep your components private, you can still point to a Git source in a private repository. Just make sure the correct access tokens are set in the environment [TODO: link to a docs page]
+- **Leveraging Private Repos**: If you need to keep your components private, you can still point to a Git source in a private repository. Just make sure the correct access tokens are set in the environment [as described in our package management documentation](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/package-management/).
+
+## The Spectrum of Pulumi Components
+
+You can use Pulumi Components with more flexibility and control depending on your use case. This table shows the variety of use cases:
+
+| Feature | Single language | Multi-language with Auto-Generated SDKs | Manual Schema and SDKs |
+|---------|--------------------------|-------------------------------------------|--------------------------|
+| **Best for** | Quick development within a single language ecosystem | Cross-language teams needing to share components | More flexibility and control needed or strict API requirements |
+| **Cross-language consumption** | No - limited to original language | Yes - consume in any Pulumi language | Yes - consume in any Pulumi language but YAML|
+| **Setup complexity** | Minimal - standard programming patterns | Minimal - just requires package management | High - requires schema authoring and validation |
+| **Development workflow** | Fast iteration with direct code changes | Requires SDK regeneration when component changes | Complex with schema updates and SDK publishing |
+| **API control** | N/A | Moderate - auto-generated from source | Full - ship the same interface to all consumers |
+| **Version management** | Simple - standard code versioning | Moderate - requires careful API changes | Complex - strict semantic versioning needed |
+| **Typical user** | Individual developers or same-language teams | Platform teams sharing with developers | Enterprise teams with strict requirements or package publishers |
+| **Ideal use cases** | • Rapid prototyping<br>• Single team projects<br>• Simple components | • Organization-wide libraries<br>• Platform engineering<br>• Multi-language environments | • Published packages<br>• Complex validation needs |
+| **Limitations** | • Single language only<br>• | • SDK regeneration overhead<br>• Runtime dependencies<br>• Some translation limitations | • Complex setup<br>• Steep learning curve<br>• Slower iteration |
 
 ## Conclusion
 
