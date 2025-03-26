@@ -11,7 +11,7 @@ menu:
         weight: 9
 ---
 
-The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a high-level library that simplifies the process of writing a Pulumi provider in Go. It abstracts much of the complexity involved in defining custom infrastructure resources, allowing developers to focus on business logic rather than boilerplate code.
+The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a high-level library that simplifies the process of writing a Pulumi [provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/) in Go. It abstracts much of the complexity involved in defining custom infrastructure resources, allowing developers to focus on business logic rather than boilerplate code.
 
 Some key advantages of the SDK are:
 
