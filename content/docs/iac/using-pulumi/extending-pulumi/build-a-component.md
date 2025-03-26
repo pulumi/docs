@@ -582,7 +582,7 @@ Now we can implement the component itself. Components should inherit from `pulum
 
 ```python
 class StaticPage(pulumi.ComponentResource):
-    website_endpoint: pulumi.Output[str]
+    endpoint: pulumi.Output[str]
     """The URL of the static website."""
 
     def __init__(self,
@@ -627,13 +627,13 @@ class StaticPage(pulumi.ComponentResource):
             policy=bucket.bucket.apply(_allow_getobject_policy),
             opts=ResourceOptions(parent=bucket, depends_on=[bucket_public_access_block]))
 
-        self.website_endpoint = bucket_website.website_endpoint
+        self.endpoint = bucket_website.website_endpoint
 
         # By registering the outputs on which the component depends, we ensure
         # that the Pulumi CLI will wait for all the outputs to be created before
         # considering the component itself to have been created.
         self.register_outputs({
-            'websiteEndpoint': bucket_website.website_endpoint
+            'endpoint': bucket_website.website_endpoint
         })
 
 
@@ -668,7 +668,7 @@ Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-sce
 
 ```python
 class StaticPage(pulumi.ComponentResource):
-    website_endpoint: pulumi.Output[str]
+    endpoint: pulumi.Output[str]
 # ...
 ```
 
@@ -768,19 +768,19 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the constructor handles output values. First we set the `website_endpoint` class property to the end-point URL from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output[str]`, not a regular Python string. Outputs must use `pulumi.Output` types.
+The last part of the constructor handles output values. First we set the `endpoint` class property to the end-point URL from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output[str]`, not a regular Python string. Outputs must use `pulumi.Output` types.
 
 Finally, calling `self.register_outputs` provides the output value to Pulumi and ensures the execution order and dependency graph are able to be properly managed by the Pulumi engine.
 
 ```python
 # ...
-        self.website_endpoint = bucket_website.website_endpoint
+        self.endpoint = bucket_website.website_endpoint
 
         # By registering the outputs on which the component depends, we ensure
         # that the Pulumi CLI will wait for all the outputs to be created before
         # considering the component itself to have been created.
         self.register_outputs({
-            'websiteEndpoint': bucket_website.website_endpoint
+            'endpoint': bucket_website.website_endpoint
         })
 
 # ...
@@ -901,12 +901,42 @@ runtime:
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in Go*
+
+```yaml
+name: use-static-page-component
+description: A minimal Go Pulumi program that uses the custom Static Page component
+runtime:
+  name: go
+```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in C#*
+
+```yaml
+name: use-static-page-component
+description: A minimal C# Pulumi program that uses the custom Static Page component
+runtime:
+  name: dotnet
+```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in Java*
+
+```yaml
+name: use-static-page-component
+description: A minimal Java Pulumi program that uses the custom Static Page component
+runtime:
+  name: java
+```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
@@ -983,7 +1013,7 @@ pulumi install
 
 ***Example:** `index.js` that uses the Static Page component*
 
-```typescript
+```javascript
 "use strict";
 
 const pulumi = require("@pulumi/pulumi");
@@ -996,7 +1026,7 @@ const page = new staticpagecomponent.StaticPage("my-static-page", {
 })
 
 // Export the URL to the index page
-exports.websiteURL = pulumi.interpolate `http://${page.websiteEndpoint}`;
+exports.websiteURL = pulumi.interpolate `http://${page.endpoint}`;
 ```
 
 {{% /choosable %}}
@@ -1073,7 +1103,7 @@ const page = new StaticPage('my-static-page', {
 });
 
 // Export the URL to the index page
-export const websiteURL = pulumi.interpolate`http://${page.websiteEndpoint}`;
+export const websiteURL = pulumi.interpolate`http://${page.endpoint}`;
 ```
 
 {{% /choosable %}}
@@ -1113,8 +1143,8 @@ page_html = "<h1>I love Pulumi!</h1>"
 page = StaticPage('my-static-page', index_content=page_html)
 
 # Export the URL to the index page
-website_url = page.website_endpoint.apply(lambda v: f"http://{v}")
-pulumi.export('website_url', website_url)
+website_url = page.endpoint.apply(lambda v: f"http://{v}")
+pulumi.export('websiteURL', website_url)
 ```
 
 {{% /choosable %}}
@@ -1123,6 +1153,69 @@ pulumi.export('website_url', website_url)
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
+#### Add the .NET project file
+
+Now lets create our `.csproj`. We'll need the standard `pulumi` SDK and our custom component. To use the generated .NET SDK, just add the relative path to the project file in the `Include` attribute instead of the name of the library.
+
+***Example:** `use-static-page-component.csproj`*
+
+```json
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AssemblyName>use-static-page-component</AssemblyName>
+    <DefaultItemExcludes>$(DefaultItemExcludes);sdks/**/*.cs</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pulumi" Version="3.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="sdks\static-page-component\Pulumi.StaticPageComponent.csproj" />
+  </ItemGroup>
+</Project>
+```
+
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+
+#### Install dependencies
+
+Next, install the `pulumi` dependencies:
+
+```bash
+pulumi install
+```
+
+#### Create the Pulumi program
+
+***Example:** `Program.cs` that uses the Static Page component*
+
+```typescript
+using Pulumi;
+using Pulumi.StaticPageComponent;
+using System.Collections.Generic;
+
+return await Deployment.RunAsync(() =>
+{
+    var pageHTML = "<h1>I love Pulumi!</h1>";
+
+    var page = new StaticPage("my-bucket", new() {
+        IndexContent = pageHTML
+    });
+
+   // Export the name of the bucket
+   return new Dictionary<string, object?>
+   {
+      ["websiteURL"] = Output.Format($"http://{page.Endpoint}")
+   };
+});
+```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
@@ -1143,7 +1236,7 @@ resources:
     properties:
       indexContent: "<h1>I love Pulumi!</h1>"
 outputs:
-  website_url: http://${my-static-page.websiteEndpoint}
+  websiteURL: http://${my-static-page.endpoint}
 ```
 
 {{% /choosable %}}
@@ -1168,7 +1261,7 @@ Policies:
     ✅ pulumi-internal-policies@v0.0.6
 
 Outputs:
-    website_url: "http://my-static-page-bucket-abcd123.s3-website-us-west-2.amazonaws.com"
+    websiteURL: "http://my-static-page-bucket-abcd123.s3-website-us-west-2.amazonaws.com"
 
 Resources:
     + 7 created
