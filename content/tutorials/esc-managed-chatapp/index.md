@@ -457,12 +457,9 @@ from openai import OpenAI
 app = Flask(__name__)
 
 # Set up the ESC client to manage secrets
-accessToken = os.getenv("PULUMI_ACCESS_TOKEN")
 escOrg = os.getenv("ESC_ORG")
 escProjectName = os.getenv("ESC_PROJECT")
 escEnvironment = os.getenv("ESC_ENVIRONMENT")
-
-escClientConfig = esc.Configuration(access_token=accessToken)
 
 def get_openai_response(api_key, model, prompt):
     client = OpenAI(api_key=api_key)
@@ -482,7 +479,7 @@ def home():
 @app.route('/chat', methods=['POST'])
 def chat():
     # Fetch most recent configuration from ESC
-    esc_client = esc.EscClient(escClientConfig)
+    esc_client = esc.esc_client.default_client()
     _, values, _ = esc_client.open_and_read_environment(escOrg, escProjectName, escEnvironment)
 
     # Access the configuration values and set the local variables
