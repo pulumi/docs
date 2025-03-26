@@ -27,9 +27,30 @@ Here are some of the scenarios the SDK can automate:
 
 Run `npm install @pulumi/esc-sdk` or `yarn add @pulumi/esc-sdk` to install the SDK package.
 
-## Examples
+## Initializing the SDK client
 
-These samples show how to create an `EscApi` client with an access token and use it to perform various ESC tasks.
+The easiest way to initialize an ESC SDK client is to run:
+
+```typescript
+import * as esc from "@pulumi/esc-sdk";
+
+const client = esc.DefaultClient();
+```
+
+This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using Pulumi CLI or ESC CLI.
+
+If the default behavior does not work for you, you can always manually initialize the client configuration and pass it into the client constructor:
+
+```typescript
+import * as esc from "@pulumi/esc-sdk";
+
+const configuration = new esc.Configuration({
+    accessToken: myAccessToken
+})
+const client = new esc.EscApi(configuration);
+```
+
+## Examples
 
 All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
 
@@ -45,10 +66,8 @@ This example creates a new environment, opens that environment to access a secre
 import * as esc from "@pulumi/esc-sdk";
 
 async function main() {
-    const PULUMI_ACCESS_TOKEN = process.env.PULUMI_ACCESS_TOKEN!;
     const orgName = process.env.PULUMI_ORG!;
-    const config = new esc.Configuration({ accessToken: PULUMI_ACCESS_TOKEN });
-    const client = new esc.EscApi(config);
+    const client = esc.DefaultClient();
 
     const projName = "examples";
     const envName = "sdk-typescript-example";
@@ -112,10 +131,8 @@ This example lists revisions for an environment, tags a revision, and lists revi
 import * as esc from "@pulumi/esc-sdk";
 
 async function main() {
-    const PULUMI_ACCESS_TOKEN = process.env.PULUMI_ACCESS_TOKEN!;
     const orgName = process.env.PULUMI_ORG!;
-    const config = new esc.Configuration({ accessToken: PULUMI_ACCESS_TOKEN });
-    const client = new esc.EscApi(config);
+    const client = esc.DefaultClient();
 
     const projName = "examples";
     const envName = "sdk-typescript-example";
