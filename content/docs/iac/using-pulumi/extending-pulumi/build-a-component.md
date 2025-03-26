@@ -1219,6 +1219,171 @@ return await Deployment.RunAsync(() =>
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
+#### Add the Maven project file
+
+Now lets create our `pom.xml`. We'll need the standard `pulumi` SDK and our custom component. 
+
+We'll need to add the sources from the generated SDK output into the build sources Maven looks for, and also add the dependencies. The output of the `pulumi package add` command should have given instructions on the necessary dependencies to add, in XML format. It will also suggest copying the source files into your `src/main` folder. Instead, we'll leave the SDK files in place, and modify our build configuration to look in that directory as well as our normal source directory.
+
+***Example:** `pom.xml`*
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.pulumi</groupId>
+    <artifactId>use-static-page-component</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <encoding>UTF-8</encoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.release>11</maven.compiler.release>
+        <mainClass>myproject.App</mainClass>
+        <mainArgs />
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.pulumi</groupId>
+            <artifactId>pulumi</artifactId>
+            <version>[1.3,2.0)</version>
+        </dependency>
+        <!-- Add the SDK's dependencies, based on the output from the `pulumi package add` command -->
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- Change the root directory that Maven uses to look for sources -->
+        <sourceDirectory>.</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>${mainClass}</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>${mainClass}</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-my-jar-with-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>${mainClass}</mainClass>
+                    <commandlineArgs>${mainArgs}</commandlineArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-wrapper-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mavenVersion>3.8.5</mavenVersion>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+
+                    <!-- Add path glob specs for our two source locations -->
+                    <includes>
+                        <include>src/main/**/*.java</include>
+                        <include>sdks/static-page-component/src/main/**/*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+```
+
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK, and add its dependencies, which will provide us access to the component via RPC, which is running inside of its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+
+#### Install dependencies
+
+Next, install the `pulumi` dependencies:
+
+```bash
+pulumi install
+```
+
+#### Create the Pulumi program
+
+Make a new subdirectory called `src/main/java/myproject` and in it, create a file called `App.java`.
+
+***Example:** `App.java` that uses the Static Page component*
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.staticpagecomponent.StaticPage;
+import com.pulumi.staticpagecomponent.StaticPageArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            final var pageHTML = "<h1>I love Pulumi!</h1>";
+
+            var page = new StaticPage("my-bucket", StaticPageArgs.builder() 
+                .indexContent(pageHTML).build()
+            );
+
+            ctx.export("websiteURL", page.endpoint().applyValue(v->String.format("http://%s", v)));
+        });
+    }
+}
+```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
