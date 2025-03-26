@@ -1150,6 +1150,83 @@ pulumi.export('websiteURL', website_url)
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
+#### Add the Go project file
+
+Now lets create our `go.mod`. We'll need the standard `pulumi` SDK and our custom component. To use the generated Go SDK, we'll use a `replace` directive to map the package name to the SDK source directory.
+
+***Example:** `go.mod` for our Pulumi project*
+
+```go
+module use-static-page-component
+
+go 1.20
+
+require github.com/pulumi/pulumi/sdk/v3 v3.157.0
+
+replace example.com/pulumi-static-page-component/sdk/go/static-page-component => ./sdks/static-page-component/staticpagecomponent
+```
+
+{{% notes type="warning" %}}
+The `pulumi package add` command may have added a `replace` directive into your `go.mod` already. If so, remove it and replace with the above example. There's a known bug w/ Go SDK generation which causes this.
+
+The same bug also causes the Go SDK to be generated without its necessary `go.mod`. Let's create that file in the `sdks/static-page-component/staticpagecomponent` directory with the following contents:
+
+***Example:** `go.mod` patch for our generated SDK*
+
+```
+module example.com/pulumi-static-page-component/sdk/go/static-page-component
+
+go 1.22
+
+toolchain go1.23.5
+
+require github.com/pulumi/pulumi/sdk/v3 v3.147.0
+```
+
+{{% /notes %}}
+
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+
+#### Install dependencies
+
+Next, install the `pulumi` dependencies:
+
+```bash
+pulumi install
+```
+
+#### Create the Pulumi program
+
+***Example:** `main.go` that uses the Static Page component*
+
+```go
+package main
+
+import (
+	staticpagecomponent "example.com/pulumi-static-page-component/sdk/go/static-page-component"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		page, err := staticpagecomponent.NewStaticPage(ctx, "my-static-page", &staticpagecomponent.StaticPageArgs{
+			IndexContent: pulumi.String("<h1>I love Pulumi!</h1>"),
+		})
+		if err != nil {
+			return err
+		}
+
+		url := page.Endpoint.ApplyT(func(endpoint string) string {
+			return "http://" + endpoint
+		}).(pulumi.StringOutput)
+
+		ctx.Export("websiteURL", url)
+		return nil
+	})
+}
+```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1160,7 +1237,7 @@ Now lets create our `.csproj`. We'll need the standard `pulumi` SDK and our cust
 
 ***Example:** `use-static-page-component.csproj`*
 
-```json
+```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -1195,7 +1272,7 @@ pulumi install
 
 ***Example:** `Program.cs` that uses the Static Page component*
 
-```typescript
+```csharp
 using Pulumi;
 using Pulumi.StaticPageComponent;
 using System.Collections.Generic;
