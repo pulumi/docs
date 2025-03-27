@@ -12,7 +12,7 @@ menu:
         identifier: iac-extending-pulumi
 ---
 
-Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), and [packages](/docs/iac/concepts/resources/packages/), and more.
+Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), [packages](/docs/iac/concepts/resources/packages/), and more.
 
 ## What are my options?
 
