@@ -245,7 +245,7 @@ Next, we need to define our dependencies in `StaticPageComponent.csproj`.
 </Project>
 ```
 
-The `Pulumi` SDK contains everything we need for making a component. It should be version `3.75.2` or newer. The `Pulumi.Aws` package is the AWS provider that we are building on top of.
+The `Pulumi` SDK contains everything we need for making a component. It should be version `3.77.0` or newer. The `Pulumi.Aws` package is the AWS provider that we are building on top of.
 
 Note that the `AssemblyName` specifies the name of the component package. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
