@@ -4,7 +4,7 @@ const algoliasearch = require("algoliasearch");
 
 // URL of the JSON file
 const registrySearchIndexUrl = "https://www.pulumi.com/registry/search-index.json";
-const docsSearchIndexUrl = "https://www.pulumi.com/search-index.json";
+const docsSearchIndexUrl = "https://www.pulumi-test.io/search-index.json";
 
 // Configuration values required for updating the Algolia index.
 const config = {
