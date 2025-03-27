@@ -12,20 +12,12 @@ tags:
     - kubernetes
     - Azure
     - helm
+    - azure-devs-series
 ---
 
 All modern software is cloud software, and it's more than likely that it runs on Kubernetes. Developers are faced with the challenge of deploy applications composed of many microservices. And each microservice adds to the complexity of the deployment.
 
 This article reviews the different methods for deploying applications on Azure Kubernetes Service (AKS).
-
-In this series we cover:
-* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
-* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
-* [Top Azure Services Every Developer Should Know: Serverless](/blog/top-5-things-for-azure-devs-serverless/)
-* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
-* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
-* **Top Azure Services Every Developer Should Know: Deploying on AKS** (this post)
-* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 ## A quick review on application deployment
 
