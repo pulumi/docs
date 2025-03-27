@@ -15,7 +15,7 @@ tags:
     - iac
     - components
 social:
-    twitter: "Introducing enhanced Pulumi Components: Create in one language, consume in any other—even YAML! Perfect for platform teams building reusable infrastructure that developers can easily adopt."
+    twitter: "Introducing enhanced Pulumi Components: Create in one language, consume in any other—even YAML! Perfect for platform teams building reusable infrastructure that developers can easily adopt. Meet your engineers where they already are."
     linkedin: "We're excited to announce significant enhancements to Pulumi Components! Now platform teams can build sophisticated infrastructure abstractions in their preferred language, while developers can easily consume these components using simpler interfaces or YAML. It's a more intuitive, more secure way to codify organizational standards while giving developers straightforward access to rock-solid abstractions—without worrying about the underlying details. A true win-win that accelerates innovation and drives productivity across your organization."
 ---
 
@@ -26,8 +26,6 @@ Pulumi Components enable you to create, share, and consume reusable infrastructu
 With this release, we've made it possible to author components in one language and consume them in any other Pulumi language—including Pulumi YAML. This breakthrough enables platform teams to build sophisticated infrastructure abstractions in their preferred programming language while application developers can easily consume these components using simpler interfaces or even YAML, all without sacrificing type safety or functionality.
 
 For platform teams, the new Pulumi Components offer a more intuitive, more secure way to codify organizational standards. For developers, it's a straightforward way to pull in platform-approved abstractions without having to worry about all the underlying details. It's a win-win that drastically accelerates innovation and drives productivity across your teams.
-
-"Pulumi's reusable components have transformed our infrastructure collaboration," said Kevin Keeler, Vice President - DevOps, QA, and Architecture at A+E Networks. "Our developers interact with Pulumi YAML to provision infrastructure quickly and easily, while our platform team leverages Pulumi's programming capabilities to build robust, reusable components. This ensures compliance with organizational standards and best practices without burdening developers with complexity. By streamlining this workflow, we've enhanced productivity and focused more on delivering customer value."
 
 ## Understanding Pulumi Components
 
@@ -337,6 +335,8 @@ Check out this video of authoring components in Java and consuming them in YAML 
 - **Leveraging Private Repos**: If you need to keep your components private, you can still point to a Git source in a private repository. Just make sure the correct access tokens are set in the environment [as described in our package management documentation](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/package-management/).
 
 ## The Spectrum of Pulumi Components You Can Build
+
+![Spectrum of Pulumi Components Options](spectrum-diagram.png)
 
 You can use Pulumi Components with more flexibility and control depending on your use case. This table shows the variety of use cases:
 
