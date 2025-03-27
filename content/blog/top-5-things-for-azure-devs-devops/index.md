@@ -12,20 +12,12 @@ tags:
     - azure
     - pipelines
     - devops
+    - azure-devs-series
 ---
 
 What comes to mind when you hear DevOps? Frequently, DevOps is described as a cultural practice that enables an organization to deliver high-quality applications quickly. The DevOps model emphasizes the "breaking down of silos" and combining development and operations into a single team. Developing, deploying, and maintaining an application is the responsibility of both developers and operators across the application lifecycle.
 
 DevOps processes rely on tooling to automate delivering and maintaining applications. This article demonstrates how to implement Azure Pipelines to build and deploy applications.
-
-In this series guide, we've covered:
-* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
-* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
-* [Top Azure Services Every Developer Should Know: Serverless](/blog/top-5-things-for-azure-devs-serverless/)
-* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
-* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
-* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
-* **Top Azure Services Every Developer Should Know: DevOps** (this post)
 
 ## Azure Pipelines
 
