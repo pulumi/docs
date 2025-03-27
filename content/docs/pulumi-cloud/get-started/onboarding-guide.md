@@ -167,8 +167,6 @@ First, **components** are IaC resources that you define to abstract and encapsul
 
 Components enjoy all of the benefits of native language packages, such as the ability to store them in package managers, version them, ensure secure dependencies, and so on. [Read more about component resources here](https://www.pulumi.com/docs/iac/concepts/resources/components).
 
-By default, component resources are single-language, which is often fine. For organizations that require multi-language usage, however, components can be made multi-language as noted earlier. The [Pulumi Packages](https://www.pulumi.com/docs/iac/packages-and-automation/pulumi-packages/) guide describes how.
-
 Next, **templates** are blueprints that help scaffold entirely new projects. Although a component often encapsulates a cloud resource usage pattern, templates are standard “starting points” for entire projects that typically consist of many resources. [Pulumi Templates](https://pulumi.com/templates), for instance, are available for many common architectures and patterns, but you can create your own. You can also register your own organization’s templates so they’re easily available in the Pulumi Cloud New Project Wizard. Learn more about [building your own templates here](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/).
 
 ## Part six: Working together
