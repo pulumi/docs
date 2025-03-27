@@ -12,20 +12,12 @@ tags:
     - azure
     - serverless
     - cloud engineering
+    - azure-devs-series
 ---
 
 The previous article was a [deep dive into virtual machines](/blog/top-5-things-for-azure-devs-vm/). First, we used the Azure Portal to create and deploy a virtual machine; then, we repeated the process using infrastructure as code. We further demonstrated how to automate provisioning as part of cloud engineering's build and deploy processes.
 
 This article will explore the other end of the cloud infrastructure with serverless, which is an on-demand, fully-managed cloud architecture.
-
-Here are the links to all of the articles in the guide:
-* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
-* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
-* **Top Azure Services Every Developer Should Know: Serverless** (this post)
-* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
-* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
-* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
-* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 ## What is serverless, and when to use it?
 
