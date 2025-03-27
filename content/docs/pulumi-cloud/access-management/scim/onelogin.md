@@ -114,10 +114,6 @@ At this point, SCIM provisioning of users into the Pulumi organization will work
 
 Beyond managing users, Pulumi's SCIM support enables you to manage Pulumi Teams and team membership. To set this up, Pulumi supports using OneLogin's Role-Group mapping to manage Pulumi teams membership.
 
-    {{% notes type="warning" %}}
-**Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your OneLogin group name is longer than this limit, you’ll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
-    {{% /notes %}}
-
 ### Set up OneLogin Application to Manage Groups in Pulumi
 
 Navigate to the SCIM application in OneLogin.
