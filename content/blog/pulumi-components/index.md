@@ -29,21 +29,23 @@ For platform teams, the new Pulumi Components offer a more intuitive, more secur
 
 "Pulumi's reusable components have transformed our infrastructure collaboration," said Kevin Keeler, Vice President - DevOps, QA, and Architecture at A+E Networks. "Our developers interact with Pulumi YAML to provision infrastructure quickly and easily, while our platform team leverages Pulumi's programming capabilities to build robust, reusable components. This ensures compliance with organizational standards and best practices without burdening developers with complexity. By streamlining this workflow, we've enhanced productivity and focused more on delivering customer value."
 
-## Understanding Component Resources
+## Understanding Pulumi Components
 
-At their core, Pulumi Component Resources are logical groupings of resources that encapsulate infrastructure patterns and best practices. Unlike standard resources that map directly to cloud provider resources, component resources are higher-level abstractions that can contain multiple child resources working together to implement a specific capability. While similar in concept to Terraform modules, Pulumi Components offer more power through full programming language capabilities, stronger typing, and now, cross-language support.
+At their core, Pulumi Components are logical groupings of resources that encapsulate infrastructure patterns and best practices. Unlike standard resources that map directly to cloud provider resources, components are higher-level abstractions that can contain multiple child resources working together to implement a specific capability. While similar in concept to Terraform modules, Pulumi Components offer more power through full programming language capabilities, stronger typing, and now, cross-language support.
 
-For example, a `SecureBucket` might include a bucket, versioning configuration, encryption settings, and tagging policies—all bundled together as a single, reusable unit that enforces your organization's security and compliance standards.
+For example, a `SecureBucket` component might include a bucket, versioning configuration, encryption settings, and tagging policies—all bundled together as a single, reusable unit that enforces your organization's security and compliance standards.
 
 ## What's New with Pulumi Components
 
 Our latest enhancements focus on making components more accessible and easier to share:
 
-1. **Cross-language consumption**: Components authored in one language can now be consumed in any Pulumi language, including Pulumi YAML.
+1. **Cross-language consumption**: Components authored in one language can now be consumed in any Pulumi language, now including Pulumi YAML.
 
 2. **Simplified sharing**: Share components by simply pushing code to a git repository - no need to manually publish SDKs.
 
 3. **Streamlined consumption**: Use the `pulumi package add` command with any git URL (like `github.com/org/repo`) to easily incorporate any components into your projects.
+
+4. **YAML authoring support**: For the first time, you can now author components directly in YAML, making it easier for teams with limited programming experience to create and maintain reusable infrastructure patterns.
 
 ## How It Works
 
@@ -110,9 +112,19 @@ export class SecureBucket extends pulumi.ComponentResource {
 }
 ```
 
+In addition to your component code, you'll need a `PulumiPlugin.yaml` file in your project directory. This file tells Pulumi that this directory is a component, rather than a standard Pulumi program. In it, you define the language runtime needed to load the plugin:
+
+***Example:** `PulumiPlugin.yaml` for TypeScript*
+
+```yaml
+runtime: nodejs
+```
+
+For other languages, you'd use `python`, `dotnet`, `go`, `java`, or `yaml` respectively. This file is essential as it signals to Pulumi that your project should be treated as a reusable component package rather than a standalone program.
+
 ### Sharing Components
 
-Pulumi's new Components capability is designed to make sharing infrastructure building blocks as easy as possible, whether you're publishing them to a Git repository or referencing them from a local folder in a monorepo.
+Pulumi Components new capability is designed to make sharing infrastructure building blocks as easy as possible, whether you're publishing them to a Git repository or referencing them from a local folder in a monorepo.
 
 #### Publishing to Git
 
@@ -135,10 +147,10 @@ Under the hood, Pulumi:
 For scenarios like monorepos, rapid development iterations, or when you're working with components that don't need to be published to a repository, you can reference local source code directly:
 
 ```bash
-pulumi package add /path/to/local/secure-s3-component
+pulumi package add ./components/secure-s3-component
 ```
 
-Pulumi will identify the folder as a Pulumi component project, generate a local SDK, and make it available for import in your program—even if your consumer program is in a different language.
+Pulumi will identify the folder as a Pulumi component project, generate a local SDK, and make it available for import in your program—even if your consumer program is in a different language. Both relative paths (as shown above) and absolute paths (like /path/to/local/secure-s3-component) are supported, giving you flexibility for different project layouts.
 
 ### Consuming Components Across Languages
 
@@ -200,7 +212,7 @@ return await Deployment.RunAsync(() =>
     
     var secureBucket = new SecureBucket("my-secure-bucket", new SecureBucketArgs
     {
-        BucketName = "my-company-secure-assets",
+        bucketName = "my-company-secure-assets",
         Tags = tags
     });
 
@@ -312,7 +324,7 @@ outputs:
 
 - **Tagging Releases**: If you're working with Git-based components, you can tag version releases (both stable and preview versions). This ensures downstream users can easily choose specific versions without chasing a moving target.
 
-- **Managing Dependencies**: Once you've run `pulumi package add <repo-url>`, Pulumi will generate a local SDK in your project and add an entry to the `packages` section of your Pulumi.yaml file. Check in these files if you want fully reproducible builds; or add them to `.gitignore` if you prefer to regenerate them on each checkout. When using `.gitignore`, team members can simply run `pulumi install` to restore all packages listed in Pulumi.yaml and regenerate the SDK.
+- **Managing Dependencies**: Once you've added an entry to the `packages` section of your Pulumi.yaml file, you can run `pulumi install` to generate a local SDK in your project. This command will process all packages listed in your Pulumi.yaml and create the necessary SDK files. Check in these files if you want fully reproducible builds; or add them to `.gitignore` if you prefer to regenerate them on each checkout. When using `.gitignore`, team members will need to run `pulumi install` after checkout to regenerate the SDK.
 
 - **Leveraging Private Repos**: If you need to keep your components private, you can still point to a Git source in a private repository. Just make sure the correct access tokens are set in the environment [as described in our package management documentation](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/package-management/).
 
@@ -323,14 +335,14 @@ You can use Pulumi Components with more flexibility and control depending on you
 | Feature | Single language | Multi-language with Auto-Generated SDKs | Manual Schema and SDKs |
 |---------|--------------------------|-------------------------------------------|--------------------------|
 | **Best for** | Quick development within a single language ecosystem | Cross-language teams needing to share components | More flexibility and control needed or strict API requirements |
-| **Cross-language consumption** | No - limited to original language | Yes - consume in any Pulumi language | Yes - consume in any Pulumi language but YAML|
+| **Cross-language consumption** | No - limited to original language | Yes - consume in any Pulumi language | Yes - consume in any Pulumi language |
 | **Setup complexity** | Minimal - standard programming patterns | Minimal - just requires package management | High - requires schema authoring and validation |
-| **Development workflow** | Fast iteration with direct code changes | Requires SDK regeneration when component changes | Complex with schema updates and SDK publishing |
-| **API control** | N/A | Moderate - auto-generated from source | Full - ship the same interface to all consumers |
+| **Development workflow** | Fast iteration with direct code changes | Fast, requires SDK regeneration when component changes | Complex with schema updates and SDK publishing |
+| **API control** | Full control within your language | Moderate - auto-generated from source | Full - ship the same interface to all consumers |
 | **Version management** | Simple - standard code versioning | Moderate - requires careful API changes | Complex - strict semantic versioning needed |
 | **Typical user** | Individual developers or same-language teams | Platform teams sharing with developers | Enterprise teams with strict requirements or package publishers |
 | **Ideal use cases** | • Rapid prototyping<br>• Single team projects<br>• Simple components | • Organization-wide libraries<br>• Platform engineering<br>• Multi-language environments | • Published packages<br>• Complex validation needs |
-| **Limitations** | • Single language only<br>• | • SDK regeneration overhead<br>• Runtime dependencies<br>• Some translation limitations | • Complex setup<br>• Steep learning curve<br>• Slower iteration |
+| **Limitations** | • Single language only<br> | • SDK regeneration overhead<br>• Runtime dependencies<br>• Some translation limitations | • Complex setup<br>• Steep learning curve<br>• Slower iteration |
 
 ## Conclusion
 
