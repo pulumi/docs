@@ -469,7 +469,7 @@ class Program
 2. Create a new instance of `ComponentProviderHost` in the entry point
 
 ```java
-package io.mikhail.components;
+package com.example.components;
 
 import java.io.IOException;
 import com.pulumi.provider.internal.Metadata;
