@@ -488,7 +488,7 @@ public class App {
 
 ### Publishing the Component
 
-Once a component is authored, it can be pushed to a git repo and consumed remotely; or, in situations like monorepos, the comonpent can be referenced locally.
+Once a component is authored, it can be pushed to a git repo and consumed remotely; or, in situations like monorepos, the component can be referenced locally.
 
 #### Git Consumption
 
