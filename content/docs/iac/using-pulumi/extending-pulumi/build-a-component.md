@@ -112,7 +112,7 @@ Next, we need to define our dependencies in `package.json`.
     "description": "Static Page Component",
     "dependencies": {
         "@pulumi/aws": "6.73.0",
-        "@pulumi/pulumi": "^3.157.0"
+        "@pulumi/pulumi": "^3.159.0"
     },
     "devDependencies": {
         "@types/node": "^18.0.0",
