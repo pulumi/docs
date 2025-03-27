@@ -40,7 +40,11 @@ Pulumi Components inherently support multi-language use. Regardless of the langu
 
 ## Structure of a Component
 
-A Pulumi Component consists of three main parts. The **component resource** encapsulates multiple Pulumi resources, grouping them into a logical unit. The **component resource arguments** define configurable input properties, allowing users to specify parameters that tailor the component’s behavior to specific needs. The **provider host** defines and registers resource types, acting as the foundational layer for component creation.
+A Pulumi Component consists of three main parts:
+
+- The **component resource** encapsulates multiple Pulumi resources, grouping them into a logical unit.
+- The **component resource arguments** define configurable input properties, allowing users to specify parameters that tailor the component’s behavior to specific needs.
+- The **provider host** registers and runs your component resources, acting as the foundational layer for component creation.
 
 ## Example: Static Web Page Component
 
@@ -54,7 +58,7 @@ In this example, we'll create a static website component in AWS Simple Storage S
 
 The component will take as input the contents of the file you wish to host, and will output the S3 endpoint used to access it.
 
-***Example:** Using a custom StaticPage component in a Pulumi Program*
+***Example:** Using the custom StaticPage component in a Pulumi Program*
 
 ```yaml
 name: static-page-yaml
@@ -80,12 +84,19 @@ $ mkdir static-page-component
 $ cd static-page-component
 ```
 
-{{< chooser language "javascript,typescript,python,csharp,java" >}}
+{{< chooser language "typescript,python,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
+{{% notes type="info" %}}
 Authoring sharable components in JavaScript is not currently supported. Considering writing in TypeScript instead!
+{{% /notes %}}
 
+{{% /choosable %}}
+
+{{% choosable language go %}}
+{{% /choosable %}}
+{{% choosable language yaml %}}
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
@@ -309,9 +320,9 @@ The `com.pulumi.pulumi` SDK contains everything we need for making a component. 
 
 {{< /chooser >}}
 
-#### Define the entrypoint
+### Implement the entrypoint
 
-{{< chooser language "javascript,typescript,python,csharp,java" >}}
+{{< chooser language "typescript,python,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -405,21 +416,18 @@ Because YAML is entirely declarative, unlike in our other languages, there's no 
 
 ### Implement the Component
 
-Next we will define the classes that implement our custom component.
+Next we will define the classes that implement our reusable component.
 
 Components typically require two parts: a subclass of `pulumi.ComponentResource` that implements the component, and an *arguments* class, which is used to configure the component during construction.
 
-{{< chooser language "javascript,typescript,python,csharp,java" >}}
+#### Add the required imports
+
+{{< chooser language "typescript,python,csharp,java" >}}
 
 {{% choosable language javascript %}}
-
-Authoring sharable components in JavaScript is not currently supported. Considering writing in TypeScript instead!
-
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
-
-#### Add the required imports
 
 First create a file called `staticpage.ts`, and add the imports we will need:
 
@@ -430,9 +438,100 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 ```
 
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+First create a file called `staticpage.py`, and add the imports we will need:
+
+***Example:** `staticpage.py` required dependencies*
+
+```python
+import json
+from typing import Optional, TypedDict
+
+import pulumi
+from pulumi import ResourceOptions
+from pulumi_aws import s3
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+First create a file called `StaticPage.cs`, and add the imports we will need:
+
+***Example:** `StaticPage.cs` required imports*
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+using Pulumi;
+using Pulumi.Aws.S3;
+using Pulumi.Aws.S3.Inputs;
+
+using Newtonsoft.Json;
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+First create a file called `StaticPage.java`, and add the imports we will need:
+
+***Example:** `StaticPage.java` required imports*
+
+```java
+package staticpagecomponent;
+
+import java.util.Map;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+import com.pulumi.aws.s3.BucketObject;
+import com.pulumi.aws.s3.BucketObjectArgs;
+import com.pulumi.aws.s3.BucketPolicy;
+import com.pulumi.aws.s3.BucketPolicyArgs;
+import com.pulumi.aws.s3.BucketPublicAccessBlock;
+import com.pulumi.aws.s3.BucketPublicAccessBlockArgs;
+import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.BucketWebsiteConfigurationV2;
+import com.pulumi.aws.s3.BucketWebsiteConfigurationV2Args;
+import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationV2IndexDocumentArgs;
+
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Export;
+import com.pulumi.core.annotations.Import;
+
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.resources.ResourceArgs;
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### Define the Component arguments
 
 Next, we will implement the arguments class. In our example here, we will pass the contents of the webpage we want to host to the component.
+
+{{< chooser language "typescript,python,csharp,java" >}}
+
+{{% choosable language javascript %}}
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
 
 ***Example:** `staticpage.ts` the Component arguments implmentation*
 
@@ -445,7 +544,85 @@ export interface StaticPageArgs {
 
 Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types.
 
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+***Example:** `staticpage.py` the Component arguments implmentation*
+
+```python
+class StaticPageArgs(TypedDict):
+    index_content: pulumi.Input[str]
+    """The HTML content for index.html."""
+```
+
+Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types.
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+***Example:** `StaticPage.cs` the Component arguments implmentation*
+
+```csharp
+public sealed class StaticPageArgs : ResourceArgs {
+    [Input("indexContent")]
+    public Input<string> IndexContent { get; set; } = null!;
+}
+```
+
+Note that argument classes must be *serializable* and use `Pulumi.Input` types, rather than the language's default types.
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+***Example:** `StaticPage.java` the Component arguments implmentation*
+
+```java
+class StaticPageArgs extends ResourceArgs {
+    @Import(name = "indexContent", required = true)
+    private Output<String> IndexContent;
+
+    public Output<String> indexContent() {
+        return this.IndexContent;
+    }
+
+    private StaticPageArgs() {
+    }
+
+    public StaticPageArgs(Output<String> indexContent) {
+        this.IndexContent = indexContent;
+    }
+}
+```
+
+Note that argument classes must be *serializable* and use `com.pulumi.core.Output<T>` types, rather than the language's default types.
+
+The `@Import` decorator marks this as a *required* input and allows use to give a name for the input that could be different from the implementation here.
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### Define the Component resource
+
+{{< chooser language "typescript,python,csharp,java" >}}
+
+{{% choosable language javascript %}}
+
+Authoring sharable components in JavaScript is not currently supported.
+Considering writing in TypeScript instead!
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
 
 Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
@@ -516,9 +693,286 @@ export class StaticPage extends pulumi.ComponentResource {
 }
 ```
 
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
+
+***Example:** `staticpage.py` the Component implmentation*
+
+```python
+class StaticPage(pulumi.ComponentResource):
+    endpoint: pulumi.Output[str]
+    """The URL of the static website."""
+
+    def __init__(self,
+                 name: str,
+                 args: StaticPageArgs,
+                 opts: Optional[ResourceOptions] = None) -> None:
+
+        super().__init__('static-page-component:index:StaticPage', name, {}, opts)
+
+        # Create a bucket
+        bucket = s3.BucketV2(
+            f'{name}-bucket',
+            opts=ResourceOptions(parent=self))
+
+        # Configure the bucket website
+        bucket_website = s3.BucketWebsiteConfigurationV2(
+            f'{name}-website',
+            bucket=bucket.bucket,
+            index_document={"suffix": "index.html"},
+            opts=ResourceOptions(parent=bucket))
+
+        # Create a bucket object for the index document
+        s3.BucketObject(
+            f'{name}-index-object',
+            bucket=bucket.bucket,
+            key='index.html',
+            content=args.get("index_content"),
+            content_type='text/html',
+            opts=ResourceOptions(parent=bucket))
+
+        # Create a public access block for the bucket
+        bucket_public_access_block = s3.BucketPublicAccessBlock(
+            f'{name}-public-access-block',
+            bucket=bucket.id,
+            block_public_acls=False,
+            opts=ResourceOptions(parent=bucket))
+
+        # Set the access policy for the bucket so all objects are readable.
+        s3.BucketPolicy(
+            f'{name}-bucket-policy',
+            bucket=bucket.bucket,
+            policy=bucket.bucket.apply(_allow_getobject_policy),
+            opts=ResourceOptions(parent=bucket, depends_on=[bucket_public_access_block]))
+
+        self.endpoint = bucket_website.website_endpoint
+
+        # By registering the outputs on which the component depends, we ensure
+        # that the Pulumi CLI will wait for all the outputs to be created before
+        # considering the component itself to have been created.
+        self.register_outputs({
+            'endpoint': bucket_website.website_endpoint
+        })
+
+
+def _allow_getobject_policy(bucket_name: str) -> str:
+    return json.dumps({
+        'Version': '2012-10-17',
+        'Statement': [
+            {
+                'Effect': 'Allow',
+                'Principal': '*',
+                'Action': ['s3:GetObject'],
+                'Resource': [
+                    f'arn:aws:s3:::{bucket_name}/*',  # policy refers to bucket name explicitly
+                ],
+            },
+        ],
+    })
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.RegisterOutputs` signals Pulumi that the process of creating the component resource has completed.
+
+***Example:** `StaticPage.cs` the Component implmentation*
+
+```csharp
+class StaticPage : ComponentResource {
+    [Output("endpoint")]
+    public Output<string> endpoint { get; set; }
+
+    public StaticPage(string name, StaticPageArgs args, ComponentResourceOptions? opts = null)
+        : base("static-page-component:index:StaticPage", name, args, opts)
+    {
+        // Create a bucket
+        var bucket = new BucketV2($"{name}-bucket", new() { }, new() { Parent = this });
+
+        // Configure the bucket website
+        var bucketWebsite = new BucketWebsiteConfigurationV2($"{name}-website", new() {
+            Bucket = bucket.Id,
+            IndexDocument = new BucketWebsiteConfigurationV2IndexDocumentArgs { Suffix = "index.html" },
+        }, new() { Parent = bucket });
+
+        // Create a bucket object for the index document
+        var bucketObject = new BucketObject($"{name}-index-object", new BucketObjectArgs {
+            Bucket = bucket.Bucket,
+            Key = "index.html",
+            Content = args.IndexContent,
+            ContentType = "text/html",
+        }, new() { Parent = bucket });
+
+        // Create a public access block for the bucket
+        var publicAccessBlock = new BucketPublicAccessBlock($"{name}-public-access-block", new() {
+            Bucket = bucket.Id,
+            BlockPublicAcls = false,
+        }, new() { Parent = bucket });
+
+        // Set the access policy for the bucket so all objects are readable
+        var bucketPolicy = new BucketPolicy($"{name}-bucket-policy", new() {
+            Bucket = bucket.Id,
+            Policy = bucket.Bucket.Apply(this.AllowGetObjectPolicy),
+        }, new() { Parent = bucket, DependsOn = publicAccessBlock });
+
+        this.endpoint = bucketWebsite.WebsiteEndpoint;
+
+        // By registering the outputs on which the component depends, we ensure
+        // that the Pulumi CLI will wait for all the outputs to be created before
+        // considering the component itself to have been created.
+        this.RegisterOutputs(new Dictionary<string, object?> {
+            ["endpoint"] = bucketWebsite.WebsiteEndpoint
+        });
+    }
+
+    private string AllowGetObjectPolicy(string bucketName) {
+        return JsonConvert.SerializeObject(new {
+            Version = "2012-10-17",
+            Statement = new[] { new {
+                Effect = "Allow",
+                Principal = "*",
+                Action = new[] {
+                    "s3:GetObject"
+                },
+                Resource = new[] {
+                    $"arn:aws:s3:::{bucketName}/*"
+                }
+            }}
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
+
+***Example:** `StaticPage.java` the Component implmentation*
+
+```java
+class StaticPage extends ComponentResource {
+    @Export(name = "endpoint", refs = { String.class }, tree = "[0]")
+    public final Output<String> endpoint;
+
+    public StaticPage(String name, StaticPageArgs args, ComponentResourceOptions opts) {
+        super("static-page-component:index:StaticPage", name, null, opts);
+
+        // Create a bucket
+        var bucket = new BucketV2(
+                String.format("%s-bucket", name),
+                null,
+                CustomResourceOptions.builder()
+                        .parent(this)
+                        .build());
+
+        // Configure the bucket website
+        var bucketWebsite = new BucketWebsiteConfigurationV2(
+                String.format("%s-website", name),
+                BucketWebsiteConfigurationV2Args.builder()
+                        .bucket(bucket.id())
+                        .indexDocument(
+                                BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
+                                        .suffix("index.html")
+                                        .build())
+                        .build(),
+                CustomResourceOptions.builder()
+                        .parent(bucket)
+                        .build());
+
+        // Create a bucket object for the index document
+        var bucketObject = new BucketObject(
+                String.format("%s-index-object", name),
+                BucketObjectArgs.builder()
+                        .bucket(bucket.bucket())
+                        .key("index.html")
+                        .content(args.indexContent())
+                        .contentType("text/html")
+                        .build(),
+                CustomResourceOptions.builder()
+                        .parent(bucket)
+                        .build());
+
+        // Create a public access block for the bucket
+        var publicAccessBlock = new BucketPublicAccessBlock(
+                String.format("%s-public-access-block", name),
+                BucketPublicAccessBlockArgs.builder()
+                        .bucket(bucket.id())
+                        .blockPublicAcls(false)
+                        .build(),
+                CustomResourceOptions.builder()
+                        .parent(bucket)
+                        .build());
+
+        // Set the access policy for the bucket so all objects are readable
+        var bucketPolicy = new BucketPolicy(
+                String.format("%s-bucket-policy", name),
+                BucketPolicyArgs.builder()
+                        .bucket(bucket.id())
+                        .policy(bucket.bucket().applyValue(
+                                bucketName -> this.allowGetObjectPolicy(bucketName)))
+                        .build(),
+                CustomResourceOptions.builder()
+                        .parent(bucket)
+                        .dependsOn(publicAccessBlock)
+                        .build());
+
+        this.endpoint = bucketWebsite.websiteEndpoint();
+
+        // By registering the outputs on which the component depends, we ensure
+        // that the Pulumi CLI will wait for all the outputs to be created before
+        // considering the component itself to have been created.
+        this.registerOutputs(Map.of(
+                "endpoint", bucketWebsite.websiteEndpoint()));
+    }
+
+    private String allowGetObjectPolicy(String bucketName) {
+        var policyDoc = new JsonObject();
+        var statementArray = new JsonArray();
+        var statement = new JsonObject();
+        var actionArray = new JsonArray();
+        var resourceArray = new JsonArray();
+
+        policyDoc.addProperty("Version", "2012-10-17");
+        policyDoc.add("Statement", statementArray);
+        statementArray.add(statement);
+        statement.addProperty("Effect", "Allow");
+        statement.addProperty("Principal", "*");
+        statement.add("Action", actionArray);
+        actionArray.add("s3:GetObject");
+        statement.add("Resource", resourceArray);
+        resourceArray.add(String.format("arn:aws:s3:::%s/*", bucketName));
+
+        return new Gson().toJson(policyDoc);
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### Detailed implementation breakdown
 
 Let's dissect this component implementation piece-by-piece:
+
+{{< chooser language "typescript,python,csharp,java" >}}
+
+{{% choosable language javascript %}}
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
 
 #### Inheriting from the base class
 
@@ -674,118 +1128,6 @@ This function is used to create a S3 policy document, allowing public access to 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-
-#### Add the required dependencies
-
-First create a file called `staticpage.py`, and add the imports we will need:
-
-***Example:** `staticpage.py` required dependencies*
-
-```python
-import json
-from typing import Optional, TypedDict
-
-import pulumi
-from pulumi import ResourceOptions
-from pulumi_aws import s3
-```
-
-### Define the Component arguments
-
-Next, we will implement the arguments class. In our example here, we will pass the contents of the webpage we want to host to the component.
-
-***Example:** `staticpage.py` the Component arguments implmentation*
-
-```python
-class StaticPageArgs(TypedDict):
-    index_content: pulumi.Input[str]
-    """The HTML content for index.html."""
-```
-
-Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types.
-
-### Define the Component resource
-
-Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
-
-***Example:** `staticpage.py` the Component implmentation*
-
-```python
-class StaticPage(pulumi.ComponentResource):
-    endpoint: pulumi.Output[str]
-    """The URL of the static website."""
-
-    def __init__(self,
-                 name: str,
-                 args: StaticPageArgs,
-                 opts: Optional[ResourceOptions] = None) -> None:
-
-        super().__init__('static-page-component:index:StaticPage', name, {}, opts)
-
-        # Create a bucket
-        bucket = s3.BucketV2(
-            f'{name}-bucket',
-            opts=ResourceOptions(parent=self))
-
-        # Configure the bucket website
-        bucket_website = s3.BucketWebsiteConfigurationV2(
-            f'{name}-website',
-            bucket=bucket.bucket,
-            index_document={"suffix": "index.html"},
-            opts=ResourceOptions(parent=bucket))
-
-        # Create a bucket object for the index document
-        s3.BucketObject(
-            f'{name}-index-object',
-            bucket=bucket.bucket,
-            key='index.html',
-            content=args.get("index_content"),
-            content_type='text/html',
-            opts=ResourceOptions(parent=bucket))
-
-        # Create a public access block for the bucket
-        bucket_public_access_block = s3.BucketPublicAccessBlock(
-            f'{name}-public-access-block',
-            bucket=bucket.id,
-            block_public_acls=False,
-            opts=ResourceOptions(parent=bucket))
-
-        # Set the access policy for the bucket so all objects are readable.
-        s3.BucketPolicy(
-            f'{name}-bucket-policy',
-            bucket=bucket.bucket,
-            policy=bucket.bucket.apply(_allow_getobject_policy),
-            opts=ResourceOptions(parent=bucket, depends_on=[bucket_public_access_block]))
-
-        self.endpoint = bucket_website.website_endpoint
-
-        # By registering the outputs on which the component depends, we ensure
-        # that the Pulumi CLI will wait for all the outputs to be created before
-        # considering the component itself to have been created.
-        self.register_outputs({
-            'endpoint': bucket_website.website_endpoint
-        })
-
-
-def _allow_getobject_policy(bucket_name: str) -> str:
-    return json.dumps({
-        'Version': '2012-10-17',
-        'Statement': [
-            {
-                'Effect': 'Allow',
-                'Principal': '*',
-                'Action': ['s3:GetObject'],
-                'Resource': [
-                    f'arn:aws:s3:::{bucket_name}/*',  # policy refers to bucket name explicitly
-                ],
-            },
-        ],
-    })
-```
-
-### Detailed implementation breakdown
-
-Let's dissect this component implementation piece-by-piece:
 
 #### Inheriting from the base class
 
@@ -947,114 +1289,10 @@ This function is used to create a S3 policy document, allowing public access to 
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
-
-#### Add the required imports
-
-First create a file called `StaticPage.cs`, and add the imports we will need:
-
-***Example:** `StaticPage.cs` required imports*
-
-```csharp
-using System;
-using System.Collections.Generic;
-
-using Pulumi;
-using Pulumi.Aws.S3;
-using Pulumi.Aws.S3.Inputs;
-
-using Newtonsoft.Json;
-```
-
-### Define the Component arguments
-
-Next, we will implement the arguments class. In our example here, we will pass the contents of the webpage we want to host to the component.
-
-***Example:** `StaticPage.cs` the Component arguments implmentation*
-
-```csharp
-public sealed class StaticPageArgs : ResourceArgs {
-    [Input("indexContent")]
-    public Input<string> IndexContent { get; set; } = null!;
-}
-```
-
-Note that argument classes must be *serializable* and use `Pulumi.Input` types, rather than the language's default types.
-
-### Define the Component resource
-
-Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.RegisterOutputs` signals Pulumi that the process of creating the component resource has completed.
-
-***Example:** `StaticPage.cs` the Component implmentation*
-
-```csharp
-class StaticPage : ComponentResource {
-    [Output("endpoint")]
-    public Output<string> endpoint { get; set; }
-
-    public StaticPage(string name, StaticPageArgs args, ComponentResourceOptions? opts = null)
-        : base("static-page-component:index:StaticPage", name, args, opts)
-    {
-        // Create a bucket
-        var bucket = new BucketV2($"{name}-bucket", new() { }, new() { Parent = this });
-
-        // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfigurationV2($"{name}-website", new() {
-            Bucket = bucket.Id,
-            IndexDocument = new BucketWebsiteConfigurationV2IndexDocumentArgs { Suffix = "index.html" },
-        }, new() { Parent = bucket });
-
-        // Create a bucket object for the index document
-        var bucketObject = new BucketObject($"{name}-index-object", new BucketObjectArgs {
-            Bucket = bucket.Bucket,
-            Key = "index.html",
-            Content = args.IndexContent,
-            ContentType = "text/html",
-        }, new() { Parent = bucket });
-
-        // Create a public access block for the bucket
-        var publicAccessBlock = new BucketPublicAccessBlock($"{name}-public-access-block", new() {
-            Bucket = bucket.Id,
-            BlockPublicAcls = false,
-        }, new() { Parent = bucket });
-
-        // Set the access policy for the bucket so all objects are readable
-        var bucketPolicy = new BucketPolicy($"{name}-bucket-policy", new() {
-            Bucket = bucket.Id,
-            Policy = bucket.Bucket.Apply(this.AllowGetObjectPolicy),
-        }, new() { Parent = bucket, DependsOn = publicAccessBlock });
-
-        this.endpoint = bucketWebsite.WebsiteEndpoint;
-
-        // By registering the outputs on which the component depends, we ensure
-        // that the Pulumi CLI will wait for all the outputs to be created before
-        // considering the component itself to have been created.
-        this.RegisterOutputs(new Dictionary<string, object?> {
-            ["endpoint"] = bucketWebsite.WebsiteEndpoint
-        });
-    }
-
-    private string AllowGetObjectPolicy(string bucketName) {
-        return JsonConvert.SerializeObject(new {
-            Version = "2012-10-17",
-            Statement = new[] { new {
-                Effect = "Allow",
-                Principal = "*",
-                Action = new[] {
-                    "s3:GetObject"
-                },
-                Resource = new[] {
-                    $"arn:aws:s3:::{bucketName}/*"
-                }
-            }}
-        });
-    }
-}
-```
-
-### Detailed implementation breakdown
-
-Let's dissect this component implementation piece-by-piece:
 
 #### Inheriting from the base class
 
@@ -1212,178 +1450,6 @@ This function is used to create a S3 policy document, allowing public access to 
 {{% /choosable %}}
 
 {{% choosable language java %}}
-
-#### Add the required imports
-
-First create a file called `StaticPage.java`, and add the imports we will need:
-
-***Example:** `StaticPage.java` required imports*
-
-```java
-package staticpagecomponent;
-
-import java.util.Map;
-
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-
-import com.pulumi.aws.s3.BucketObject;
-import com.pulumi.aws.s3.BucketObjectArgs;
-import com.pulumi.aws.s3.BucketPolicy;
-import com.pulumi.aws.s3.BucketPolicyArgs;
-import com.pulumi.aws.s3.BucketPublicAccessBlock;
-import com.pulumi.aws.s3.BucketPublicAccessBlockArgs;
-import com.pulumi.aws.s3.BucketV2;
-import com.pulumi.aws.s3.BucketWebsiteConfigurationV2;
-import com.pulumi.aws.s3.BucketWebsiteConfigurationV2Args;
-import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationV2IndexDocumentArgs;
-
-import com.pulumi.core.Output;
-import com.pulumi.core.annotations.Export;
-import com.pulumi.core.annotations.Import;
-
-import com.pulumi.resources.ComponentResource;
-import com.pulumi.resources.ComponentResourceOptions;
-import com.pulumi.resources.CustomResourceOptions;
-import com.pulumi.resources.ResourceArgs;
-```
-
-### Define the Component arguments
-
-Next, we will implement the arguments class. In our example here, we will pass the contents of the webpage we want to host to the component.
-
-***Example:** `StaticPage.java` the Component arguments implmentation*
-
-```java
-class StaticPageArgs extends ResourceArgs {
-    @Import(name = "indexContent", required = true)
-    private Output<String> IndexContent;
-
-    public Output<String> indexContent() {
-        return this.IndexContent;
-    }
-
-    private StaticPageArgs() {
-    }
-
-    public StaticPageArgs(Output<String> indexContent) {
-        this.IndexContent = indexContent;
-    }
-}
-```
-
-Note that argument classes must be *serializable* and use `com.pulumi.core.Output<T>` types, rather than the language's default types.
-
-The `@Import` decorator marks this as a *required* input and allows use to give a name for the input that could be different from the implementation here.
-
-### Define the Component resource
-
-Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
-
-***Example:** `StaticPage.java` the Component implmentation*
-
-```java
-class StaticPage extends ComponentResource {
-    @Export(name = "endpoint", refs = { String.class }, tree = "[0]")
-    public final Output<String> endpoint;
-
-    public StaticPage(String name, StaticPageArgs args, ComponentResourceOptions opts) {
-        super("static-page-component:index:StaticPage", name, null, opts);
-
-        // Create a bucket
-        var bucket = new BucketV2(
-                String.format("%s-bucket", name),
-                null,
-                CustomResourceOptions.builder()
-                        .parent(this)
-                        .build());
-
-        // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfigurationV2(
-                String.format("%s-website", name),
-                BucketWebsiteConfigurationV2Args.builder()
-                        .bucket(bucket.id())
-                        .indexDocument(
-                                BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
-                                        .suffix("index.html")
-                                        .build())
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .build());
-
-        // Create a bucket object for the index document
-        var bucketObject = new BucketObject(
-                String.format("%s-index-object", name),
-                BucketObjectArgs.builder()
-                        .bucket(bucket.bucket())
-                        .key("index.html")
-                        .content(args.indexContent())
-                        .contentType("text/html")
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .build());
-
-        // Create a public access block for the bucket
-        var publicAccessBlock = new BucketPublicAccessBlock(
-                String.format("%s-public-access-block", name),
-                BucketPublicAccessBlockArgs.builder()
-                        .bucket(bucket.id())
-                        .blockPublicAcls(false)
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .build());
-
-        // Set the access policy for the bucket so all objects are readable
-        var bucketPolicy = new BucketPolicy(
-                String.format("%s-bucket-policy", name),
-                BucketPolicyArgs.builder()
-                        .bucket(bucket.id())
-                        .policy(bucket.bucket().applyValue(
-                                bucketName -> this.allowGetObjectPolicy(bucketName)))
-                        .build(),
-                CustomResourceOptions.builder()
-                        .parent(bucket)
-                        .dependsOn(publicAccessBlock)
-                        .build());
-
-        this.endpoint = bucketWebsite.websiteEndpoint();
-
-        // By registering the outputs on which the component depends, we ensure
-        // that the Pulumi CLI will wait for all the outputs to be created before
-        // considering the component itself to have been created.
-        this.registerOutputs(Map.of(
-                "endpoint", bucketWebsite.websiteEndpoint()));
-    }
-
-    private String allowGetObjectPolicy(String bucketName) {
-        var policyDoc = new JsonObject();
-        var statementArray = new JsonArray();
-        var statement = new JsonObject();
-        var actionArray = new JsonArray();
-        var resourceArray = new JsonArray();
-
-        policyDoc.addProperty("Version", "2012-10-17");
-        policyDoc.add("Statement", statementArray);
-        statementArray.add(statement);
-        statement.addProperty("Effect", "Allow");
-        statement.addProperty("Principal", "*");
-        statement.add("Action", actionArray);
-        actionArray.add("s3:GetObject");
-        statement.add("Resource", resourceArray);
-        resourceArray.add(String.format("arn:aws:s3:::%s/*", bucketName));
-
-        return new Gson().toJson(policyDoc);
-    }
-}
-```
-
-### Detailed implementation breakdown
-
-Let's dissect this component implementation piece-by-piece:
 
 #### Inheriting from the base class
 
@@ -1572,6 +1638,9 @@ In addition to the constructor logic, we also have a helper function `allowGetOb
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `applyValue(...)`. That means that the `bucketName`, which is normally a `com.pulumi.core.Output<String>` value, can be materialized as a normal Java string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. We use `JsonObject` and `JsonArray` to construct the necessary JSON object then pass those to the `Gson.toJson(...)` function which returns it as a JSON formatted string.
 
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
 {{% /choosable %}}
 
 {{< /chooser >}}
