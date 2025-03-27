@@ -2,6 +2,7 @@
 title: "Announcing the Next-Generation of Pulumi Components: Enabling Infrastructure Abstractions"
 date: 2025-03-27
 draft: false
+allow_long_title: true
 meta_desc: Pulumi Components enable you to create, share, and consume reusable infrastructure building blocks across your organization and the broader community.
 meta_image: meta.png
 authors:
@@ -170,7 +171,7 @@ export const bucketName = secureBucket.bucketName;
 import pulumi
 from myorg_secure_s3_component import SecureBucket
 
-secure_bucket = SecureBucket("my-secure-bucket", 
+secure_bucket = SecureBucket("my-secure-bucket",
     bucket_name="my-company-secure-assets",
     tags={
         "Environment": "production",
