@@ -60,10 +60,8 @@ The component will take as input the contents of the file you wish to host, and 
 name: static-page-yaml
 description: A minimal Pulumi YAML program
 runtime: yaml
-plugins:
-  providers:
-    - name: static-page-component
-      path: ..
+packages:
+  static-page-component: ../
 resources:
   mystaticpage:
     type: static-page-component:StaticPage
@@ -112,7 +110,6 @@ Next, we need to define our dependencies in `package.json`.
 {
     "name": "static-page-component",
     "description": "Static Page Component",
-    "version": "0.1.0",
     "dependencies": {
         "@pulumi/aws": "6.73.0",
         "@pulumi/pulumi": "^3.157.0"
@@ -365,15 +362,12 @@ Authoring sharable components in JavaScript is not currently supported. Consider
 
 {{% choosable language typescript %}}
 
-First, create the `index.ts` file, where we will define an entry point for the component.
+First, create the `index.ts` file, where we will export the component class.
 
-***Example:** `index.ts` component entry point*
+***Example:** `index.ts` component export*
 
 ```typescript
-import { componentProviderHost } from "@pulumi/pulumi/provider/experimental";
-
-declare const __dirname: string;
-componentProviderHost(__dirname);
+export { StaticPage } from "./staticpage";
 ```
 
 {{% /choosable %}}
@@ -386,15 +380,13 @@ First, create the `__main__.py` file, where we will define an entry point for th
 
 ```python
 from pulumi.provider.experimental import Metadata, component_provider_host
+from staticpage import StaticPage
 
 if __name__ == "__main__":
-    # Call the component provider host. This will discover any ComponentResource
-    # subclasses in this package, infer their schema and host a provider that
-    # allows constructing these components from a Pulumi program.
-    component_provider_host(Metadata("static-page-component", "0.1.0"))
+    component_provider_host(metadata=Metadata("static-page-component"), components=[StaticPage])
 ```
 
-Here, the `component_provider_host` call invokes a Pulumi provider implmentation which acts as a shim for the component. The `Metadata` we pass to it specifies the name and version of the component. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
+Here, the `component_provider_host` call invokes a Pulumi provider implmentation which acts as a shim for the component. The `Metadata` we pass to it specifies the name of the component. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
 {{% /choosable %}}
 
@@ -408,59 +400,28 @@ First, create the `main.go` file, where we will define an entry point for the co
 package main
 
 import (
-	p "github.com/pulumi/pulumi-go-provider"
 	"github.com/pulumi/pulumi-go-provider/infer"
-	"github.com/pulumi/pulumi-go-provider/middleware/schema"
 )
 
-func Provider() p.Provider {
-	return infer.Provider(infer.Options{
-		Components: []infer.InferredComponent{
-			infer.Component[*StaticPageComponent, StaticPageComponentArgs, *StaticPageComponentState](),
-		},
-		Metadata: schema.Metadata{
-			LanguageMap: map[string]any{
-				"nodejs": map[string]any{
-					"dependencies": map[string]any{
-						"@pulumi/pulumi-aws": "^6.73.0",
-					},
-					"respectSchemaVersion": true,
-				},
-				"go": map[string]any{
-					"generateResourceContainerTypes": true,
-					"respectSchemaVersion":           true,
-				},
-				"python": map[string]any{
-					"requires": map[string]any{
-						"pulumi":        ">=3.0.0,<4.0.0",
-						"pulumi_aws":    ">=6.0.0,<7.0.0",
-					},
-					"respectSchemaVersion": true,
-				},
-				"csharp": map[string]any{
-					"packageReferences": map[string]any{
-						"Pulumi":        "3.*",
-						"Pulumi.Aws":    "6.*",
-					},
-					"respectSchemaVersion": true,
-				},
-			},
-		},
-	})
-}
-
 func main() {
-	p.RunProvider("static-page-component", "0.1.0", Provider())
+	err := infer.NewProviderBuilder().
+		WithName("static-page-component").
+		WithComponents(
+			infer.Component(NewStaticPage),
+		).
+		BuildAndRun()
+
+	if err != nil {
+		panic(err)
+	}
 }
 ```
 
-Here, the `RunProvider` call invokes a Pulumi provider implmentation which acts as a shim for the component. The arguments we pass to it specify the name and version of the component. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
+Here, the `BuildAndRun` method creates and runs a Pulumi provider which acts as a shim for the component. We use `NewProviderBuilder()` to construct our provider and configure it with various parameters.
 
-The `Provider` function defines two things, the structs that will implement our component and information about the dependencies, and their representation in various languages.
+The `WithName` method specifies the name of the component resource provider. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
-First, the `infer.Component` call tells the Pulumi SDK which types to look at for our component implementation. The `infer` library scans these structs and does a lot of heavy lifting to infer some necessary middleware, so that our component implementations can be involve minimal coding.
-
-Then the `Metadata` defines a `LanguageMap` that tells the code-generation library what packages the component depends on, and how to reference those packages in the various language-specific package management formats. This will be important for generating the SDKs that your users will need to work with your component in thier various Pulumi-compatiable languages. While the code generation library can infer a lot of information, dependency declarations must still be manually described for each language.
+The `WithComponents` method registers the components that will be available through this provider. The `infer.Component` call tells the Pulumi SDK which types to look at for our component implementation. The `infer` library scans these structs and does a lot of heavy lifting to infer schema and necessary middleware, so that our component implementations can involve minimal coding.
 
 {{% /choosable %}}
 
@@ -499,12 +460,12 @@ import com.pulumi.provider.internal.ComponentProviderHost;
 
 public class App {
     public static void main(String[] args) throws IOException, InterruptedException {
-        new ComponentProviderHost(new Metadata("static-page-component", "0.1.0"), App.class.getPackage()).start(args);
+        new ComponentProviderHost(new Metadata("static-page-component"), App.class.getPackage()).start(args);
     }
 }
 ```
 
-Here, the `ComponentProviderHost.start(...)` call invokes a Pulumi provider implmentation which acts as a shim for the component. The `Metadata` we pass to it specifies the name and version of the component. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
+Here, the `ComponentProviderHost.start(...)` call invokes a Pulumi provider implmentation which acts as a shim for the component. The `Metadata` we pass to it specifies the name of the component. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
 We also need to pass the Java package so that your component classes can be inferred by the Pulumi SDK.
 
@@ -1835,10 +1796,8 @@ If you're authoring your Pulumi project in YAML, it is not necessary to generate
 Now, in your `Pulumi.yaml` file add the following section to load the component from source:
 
 ```yaml
-plugins:
-  providers:
-    - name: static-page-component
-      path: ../static-page-component
+packages:
+  static-page-component: ../static-page-component
 ```
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
