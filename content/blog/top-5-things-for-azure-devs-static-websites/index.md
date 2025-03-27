@@ -11,6 +11,7 @@ authors:
 tags:
     - azure
     - static websites
+    - azure-devs-series
 ---
 
 Hosting a static website on Azure is one of the fastest and most cost-effective ways to publish web content. In this guide, we’ll walk through two popular deployment methods: using Azure Blob Storage and using Azure Static Web Apps. Whether you’re building a simple HTML/CSS site or a modern React or Vue app, Azure makes it easy to deploy and scale static content.
