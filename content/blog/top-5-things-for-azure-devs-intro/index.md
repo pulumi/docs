@@ -14,18 +14,10 @@ tags:
     - serverless
     - AKS
     - devops
+    - azure-devs-series
 ---
 
 The Azure cloud platform includes over 200 products and cloud services. Wherever you are in your Microsoft cloud engineering journey, you should be familiar with these top 5 cloud tasks that are essential building blocks commonly used to deploy applications and infrastructure to the Azure cloud.
-
-In this series guide, we'll go in-depth on:
-* **Top Azure Services Every Developer Should Know: Overview** (this post)
-* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
-* [Top Azure Services Every Developer Should Know: Serverless](/blog/top-5-things-for-azure-devs-serverless/)
-* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
-* [Top Azure Services Every Developer Should Know: Building on AKS](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/)
-* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
-* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 <!--more-->
 
