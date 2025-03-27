@@ -80,7 +80,7 @@ $ mkdir static-page-component
 $ cd static-page-component
 ```
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "javascript,typescript,python,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -181,32 +181,6 @@ pulumi_aws>=6.0.0
 ```
 
 The `pulumi` SDK contains everything we need for making a component. It should be version `3.159.0` or newer. The `pulumi_aws` package is the AWS provider that we are building on top of.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-#### PulumiPlugin.yaml
-
-The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
-
-***Example:** `PulumiPlugin.yaml` for Go*
-
-```yaml
-runtime: go
-```
-
-#### Manage dependencies
-
-Next, we need to define our dependencies in `go.mod`.
-
-***Example:** `go.mod` for a Pulumi Component*
-
-```
-TODO: language-specific package management info
-```
-
-The `pulumi` SDK contains everything we need for making a component. It should be version `3.157.0` or newer. The `pulumi-aws` package is the AWS provider that we are building on top of.
-
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -333,26 +307,11 @@ The `com.pulumi.pulumi` SDK contains everything we need for making a component. 
 
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
-
-#### PulumiPlugin.yaml
-
-The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. It's also where we will define the component implementation later. For now, just add the `runtime` and `name` properties.
-
-***Example:** `PulumiPlugin.yaml` for YAML*
-
-```yaml
-runtime: yaml
-name: static-page-component
-```
-
-{{% /choosable %}}
-
 {{< /chooser >}}
 
 #### Define the entrypoint
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "javascript,typescript,python,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -387,41 +346,6 @@ if __name__ == "__main__":
 ```
 
 Here, the `component_provider_host` call invokes a Pulumi provider implmentation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-First, create the `main.go` file, where we will define an entry point for the component.
-
-***Example:** `main.go` component entry point*
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-go-provider/infer"
-)
-
-func main() {
-	err := infer.NewProviderBuilder().
-		WithName("static-page-component").
-		WithComponents(
-			infer.Component(NewStaticPage),
-		).
-		BuildAndRun()
-
-	if err != nil {
-		panic(err)
-	}
-}
-```
-
-Here, the `BuildAndRun` method creates and runs a Pulumi provider which acts as a shim for the component. We use `NewProviderBuilder()` to construct our provider and configure it with various parameters.
-
-The `WithName` method specifies the name of the component resource provider. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
-
-The `WithComponents` method registers the components that will be available through this provider. The `infer.Component` call tells the Pulumi SDK which types to look at for our component implementation. The `infer` library scans these structs and does a lot of heavy lifting to infer schema and necessary middleware, so that our component implementations can involve minimal coding.
 
 {{% /choosable %}}
 
@@ -485,7 +409,7 @@ Next we will define the classes that implement our custom component.
 
 Components typically require two parts: a subclass of `pulumi.ComponentResource` that implements the component, and an *arguments* class, which is used to configure the component during construction.
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "javascript,typescript,python,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -1020,12 +944,6 @@ def _allow_getobject_policy(bucket_name: str) -> str:
 ```
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `apply(...)`. That means that the `bucket_name`, which is normally a `pulumi.Output[str]` value, can be materialized as a normal Python string, and is passed into this function that way. Note that you can't modify the value of `bucket_name`, but you can *read* the value and use it to construct the policy document. The `json.dumps(...)` function takes the dictionary as input and returns it as a JSON formatted string.
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-TODO: Go component implementation
 
 {{% /choosable %}}
 
@@ -1653,12 +1571,6 @@ In addition to the constructor logic, we also have a helper function `allowGetOb
 ```
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `applyValue(...)`. That means that the `bucketName`, which is normally a `com.pulumi.core.Output<String>` value, can be materialized as a normal Java string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. We use `JsonObject` and `JsonArray` to construct the necessary JSON object then pass those to the `Gson.toJson(...)` function which returns it as a JSON formatted string.
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-TODO: YAML component implementation
 
 {{% /choosable %}}
 
