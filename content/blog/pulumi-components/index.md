@@ -35,6 +35,8 @@ At their core, Pulumi Components are logical groupings of resources that encapsu
 
 For example, a `SecureBucket` component might include a bucket, versioning configuration, encryption settings, and tagging policies—all bundled together as a single, reusable unit that enforces your organization's security and compliance standards.
 
+Pulumi has always supported creating components within a single language - you can simply create a class that extends `ComponentResource` in your language of choice and use it within programs written in that same language. This approach works well for teams working within a single language ecosystem, requiring no additional setup beyond standard programming patterns. However, these traditional single-language components can't be consumed from other Pulumi languages, limiting their shareability across teams with different language preferences.
+
 ## What's New with Pulumi Components
 
 Our latest enhancements focus on making components more accessible and easier to share:
@@ -51,7 +53,7 @@ Our latest enhancements focus on making components more accessible and easier to
 
 ### Creating Components
 
-Creating a component remains the same as before—define a class that extends `ComponentResource`:
+The code for creating a cross-language component starts similarly to a single-language component: define a class that extends `ComponentResource`:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -112,7 +114,7 @@ export class SecureBucket extends pulumi.ComponentResource {
 }
 ```
 
-In addition to your component code, you'll need a `PulumiPlugin.yaml` file in your project directory. This file tells Pulumi that this directory is a component, rather than a standard Pulumi program. In it, you define the language runtime needed to load the plugin:
+This file tells Pulumi that this directory is a component package that can be consumed across languages (it is not required for a single language component), rather than a standard Pulumi program. In it, you define the language runtime needed to load the plugin:
 
 ***Example:** `PulumiPlugin.yaml` for TypeScript*
 
@@ -120,7 +122,7 @@ In addition to your component code, you'll need a `PulumiPlugin.yaml` file in yo
 runtime: nodejs
 ```
 
-For other languages, you'd use `python`, `dotnet`, `go`, `java`, or `yaml` respectively. This file is essential as it signals to Pulumi that your project should be treated as a reusable component package rather than a standalone program.
+For other languages, you'd use `python`, `dotnet`, `go`, `java`, or `yaml` respectively. This file is the key that enables Pulumi to generate SDKs in other languages from your component code.
 
 ### Sharing Components
 
@@ -342,7 +344,7 @@ You can use Pulumi Components with more flexibility and control depending on you
 | **Version management** | Simple - standard code versioning | Moderate - requires careful API changes | Complex - strict semantic versioning needed |
 | **Typical user** | Individual developers or same-language teams | Platform teams sharing with developers | Enterprise teams with strict requirements or package publishers |
 | **Ideal use cases** | • Rapid prototyping<br>• Single team projects<br>• Simple components | • Organization-wide libraries<br>• Platform engineering<br>• Multi-language environments | • Published packages<br>• Complex validation needs |
-| **Limitations** | • Single language only<br> | • SDK regeneration overhead<br>• Runtime dependencies<br>• Some translation limitations | • Complex setup<br>• Steep learning curve<br>• Slower iteration |
+| **Limitations** | • Single language only<br>• No additional setup required | • SDK regeneration overhead<br>• Runtime dependencies<br>• Some translation limitations | • Complex setup<br>• Steep learning curve<br>• Slower iteration |
 
 ## Conclusion
 
