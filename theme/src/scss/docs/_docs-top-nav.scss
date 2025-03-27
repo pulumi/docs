@@ -106,6 +106,7 @@ nav.actually-docs {
             li.docs,
             li.registry,
             li.ai,
+            li.contact,
             div.get-started   {
                 display: none;
             }
@@ -124,7 +125,8 @@ nav.actually-docs {
                 }
             }
 
-            li.ai {
+            li.ai,
+            li.contact {
                 @media (min-width: 475px) {
                     display: flex
                 }
