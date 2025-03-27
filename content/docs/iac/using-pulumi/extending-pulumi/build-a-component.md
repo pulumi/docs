@@ -304,7 +304,7 @@ Next, we need to define our dependencies and project configuration in a Maven `p
     <dependency>
       <groupId>com.pulumi</groupId>
       <artifactId>pulumi</artifactId>
-      <version>[1.6,)</version>
+      <version>[1.8,)</version>
     </dependency>
     <dependency>
       <groupId>com.pulumi</groupId>
