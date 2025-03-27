@@ -135,11 +135,7 @@ To set this up, you need to enable Push Groups as a supported provisioning actio
 ## Setting up Group Provisioning {#setupgroupprovisioning}
 
     {{% notes type="warning" %}}
- **Important:** If there are members in a group that are not yet assigned to the Pulumi Cloud application in Okta, they will not be added to the team in the Pulumi Cloud. Ensure that all members in the group have been assigned to the application before pushing the group.
-    {{% /notes %}}
-
-    {{% notes type="warning" %}}
-**Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your Okta group name is longer than this limit, you’ll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
+ >**Important:** If there are members in a group that are not yet assigned to the Pulumi Cloud application in Okta, they will not be added to the team in the Pulumi Cloud. Ensure that all members in the group have been assigned to the application before pushing the group.
     {{% /notes %}}
 
 To specify which groups you would like to push with group provisioning, select the **Push Groups** tab in your Pulumi Cloud application in Okta and complete the following steps.
