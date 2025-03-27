@@ -17,7 +17,7 @@ aliases:
 - /docs/concepts/resources/components/
 ---
 
-Pulumi Components enable you to create, share, and consume reusable infrastructure building blocks across your organization and the broader community. Components instantiate a set of related resources, actng as an abstraction to encapsulates the resources' implementation details.
+Pulumi Components enable you to create, share, and consume reusable infrastructure building blocks across your organization and the broader community. Components instantiate a set of related resources, acting as an abstraction to encapsulate the resources' implementation details.
 
 Here are a few examples of component resources:
 
@@ -415,14 +415,14 @@ from pulumi.provider.experimental import Metadata, component_provider_host
 from staticpage import StaticPage
 
 if __name__ == "__main__":
-    component_provider_host(metadata=Metadata("python-components"), components=[MyComponent])
+    component_provider_host(name="python-components", components=[MyComponent])
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 1. Define a `main.go` file
-2. Declare an instance of `NewProviderBuilder`,  passing in a name space and the components being built
+2. Declare an instance of `NewProviderBuilder`,  passing in a name, namespace and the components being built
 
 ```go
 package main
@@ -488,17 +488,17 @@ public class App {
 
 ### Publishing the Component
 
-Once a component is authored, it can be pushed to a git repo and consumed remotely; or, in situations like monorepos, the comonpent can be referenced via locally.
+Once a component is authored, it can be pushed to a git repo and consumed remotely; or, in situations like monorepos, the comonpent can be referenced locally.
 
 #### Git Consumption
 
-In the consuming Pulumi application, add the component as a depdency.
+In the consuming Pulumi application, add the component as a dependency.
 
 ```bash
 pulumi package add github.com/myorg/my-component
 ```
 
-If you're using version tags, you can specify those as well
+If you're using version tags, you can specify those as well.
 
 ```bash
 pulumi package add github.com/myorg/my-component@v1.0.0
