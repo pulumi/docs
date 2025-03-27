@@ -11,6 +11,7 @@ authors:
 tags:
     - azure
     - virtual machines
+    - azure-devs-series
 ---
 
 So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the [previous introductary article](/blog/top-5-things-for-azure-devs-intro/), the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.
