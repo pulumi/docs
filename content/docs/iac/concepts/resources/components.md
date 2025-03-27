@@ -346,7 +346,7 @@ var component = new MyResource("...",
 
 If a component resource is itself a child of another component resource, its set of providers is inherited from its parent by default.
 
-## Add Multi-language Support
+## Adding Multi-language Support
 
 By default, components are authored and consumed in the same programming language by extending the `ComponentResource` class. The class can then be imported or referenced using the language's applicable pattern. To support consuming components in other languages, Pulumi can introspect your component class and generate the necessary SDKs. To support multi-language consumption, a couple additional steps are required.
 
