@@ -38,10 +38,10 @@ Each component can have the following top level sections:
 | - | - | - | - | - |
 | `inputs` | [config options](/docs/reference/pulumi-yaml/#config-options) | No | No | Inputs specifies the inputs to the components. |
 | `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/concepts/resources/) that the component will consist of. |
-| `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values of the program, the values of variables are expressions that can be re-used. |
+| `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values, the values of variables are expressions that can be re-used. |
 | `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the component. |
 
-In many locations within this schema, values may be expressions which computed a value based on the `inputs`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
+In many locations within this schema, values may be expressions which compute a value based on the `inputs`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
 
 * If an object is provided as a value, and has a key that has the prefix `fn::`, the object is treated as an expression, and the expression will be resolved to a new value that will be used in place of the object.
 * Any string value is interpreted as an interpolation, with `${...}` being replaced by evaluating the expression in the `...`.
@@ -62,7 +62,7 @@ The value of `inputs` is an object whose keys are logical names by which the con
 
 ### Resources
 
-The value of `resources` is an object whose keys are logical resource names by which the resource will be referenced in expressions within the program, and whose values which are elements of the schema below.  Each item in this object represents a resource which will be managed by the Pulumi Component.
+The value of `resources` is an object whose keys are logical resource names by which the resource will be referenced in expressions within the program, and whose values are elements of the schema below.  Each item in this object represents a resource which will be managed by the Pulumi Component.
 
 | Property  |  Type | Required | Expressions | Description |
 |- | - | - | - | - |
