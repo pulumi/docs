@@ -465,7 +465,7 @@ public class App {
 }
 ```
 
-Here, the `ComponentProviderHost.start(...)` call invokes a Pulumi provider implmentation which acts as a shim for the component. The `Metadata` we pass to it specifies the name of the component. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
+Here, the `ComponentProviderHost.start(...)` call invokes a Pulumi provider implmentation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
 We also need to pass the Java package so that your component classes can be inferred by the Pulumi SDK.
 
