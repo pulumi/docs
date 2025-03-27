@@ -180,7 +180,7 @@ pulumi>=3.159.0,<4.0
 pulumi_aws>=6.0.0
 ```
 
-The `pulumi` SDK contains everything we need for making a component. It should be version `3.153.0` or newer. The `pulumi_aws` package is the AWS provider that we are building on top of.
+The `pulumi` SDK contains everything we need for making a component. It should be version `3.159.0` or newer. The `pulumi_aws` package is the AWS provider that we are building on top of.
 {{% /choosable %}}
 
 {{% choosable language go %}}
