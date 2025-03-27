@@ -562,7 +562,7 @@ Note that argument classes must be *serializable* and use `pulumi.Input` types, 
 
 ### Define the Component resource
 
-Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via calls to `self.registerOutputs`.
+Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `staticpage.ts` the Component implmentation*
 
@@ -743,7 +743,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output<string>`, not a regular TypeScript string. Outputs must use `pulumi.Output` types.
 
-Finally, calling `this.registerOutputs` provides the output value to Pulumi and ensures the execution order and dependency graph are able to be properly managed by the Pulumi engine.
+Finally, calling `this.registerOutputs` signals Pulumi that the component creation process has completed.
 
 ```typescript
 // ...
@@ -821,7 +821,7 @@ Note that argument classes must be *serializable* and use `pulumi.Input` types, 
 
 ### Define the Component resource
 
-Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via calls to `self.register_outputs`.
+Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `staticpage.py` the Component implmentation*
 
@@ -1017,7 +1017,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 The last part of the constructor handles output values. First we set the `endpoint` class property to the end-point URL from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output[str]`, not a regular Python string. Outputs must use `pulumi.Output` types.
 
-Finally, calling `self.register_outputs` provides the output value to Pulumi and ensures the execution order and dependency graph are able to be properly managed by the Pulumi engine.
+Finally, calling `self.register_outputs` signals Pulumi that the component creation process has completed.
 
 ```python
 # ...
@@ -1104,7 +1104,7 @@ Note that argument classes must be *serializable* and use `Pulumi.Input` types, 
 
 ### Define the Component resource
 
-Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via calls to `this.RegisterOutputs`.
+Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.RegisterOutputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `StaticPage.cs` the Component implmentation*
 
@@ -1287,7 +1287,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `Pulumi.Output<string>`, not a regular .NET string. Outputs must use `Pulumi.Output` types.
 
-Finally, calling `this.RegisterOutputs` provides the output value to Pulumi and ensures the execution order and dependency graph are able to be properly managed by the Pulumi engine.
+Finally, calling `this.RegisterOutputs` signals Pulumi that the component creation process has completed.
 
 ```csharp
 // ...
@@ -1400,7 +1400,7 @@ The `@Import` decorator marks this as a *required* input and allows use to give 
 
 ### Define the Component resource
 
-Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via calls to `this.registerOutputs`.
+Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `StaticPage.java` the Component implmentation*
 
@@ -1645,9 +1645,9 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `com.pulumi.core.Output<String>`, not a regular Python string. Outputs must use `com.pulumi.core.Output<T>` types.
+The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `com.pulumi.core.Output<String>`, not a regular Java string. Outputs must use `com.pulumi.core.Output<T>` types.
 
-Finally, calling `this.registerOutputs` provides the output value to Pulumi and ensures the execution order and dependency graph are able to be properly managed by the Pulumi engine.
+Finally, calling `this.registerOutputs` signals Pulumi that the component creation process has completed.
 
 ```java
 // ...
@@ -1691,7 +1691,7 @@ In addition to the constructor logic, we also have a helper function `allowGetOb
 // ...
 ```
 
-This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `applyValue(...)`. That means that the `bucketName`, which is normally a `com.pulumi.core.Output<String>` value, can be materialized as a normal .NET string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. We use `JsonObject` and `JsonArray` to construct the necessary JSON object then pass those to the `Gson.toJson(...)` function which returns it as a JSON formatted string.
+This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `applyValue(...)`. That means that the `bucketName`, which is normally a `com.pulumi.core.Output<String>` value, can be materialized as a normal Java string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. We use `JsonObject` and `JsonArray` to construct the necessary JSON object then pass those to the `Gson.toJson(...)` function which returns it as a JSON formatted string.
 
 {{% /choosable %}}
 
