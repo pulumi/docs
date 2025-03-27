@@ -383,7 +383,7 @@ from pulumi.provider.experimental import Metadata, component_provider_host
 from staticpage import StaticPage
 
 if __name__ == "__main__":
-    component_provider_host(metadata=Metadata("static-page-component"), components=[StaticPage])
+    component_provider_host(name="static-page-component", components=[StaticPage])
 ```
 
 Here, the `component_provider_host` call invokes a Pulumi provider implmentation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
