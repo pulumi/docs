@@ -412,7 +412,7 @@ Not required for TypeScript.
 
 ```python
 from pulumi.provider.experimental import Metadata, component_provider_host
-from staticpage import StaticPage
+from staticpage import MyComponent
 
 if __name__ == "__main__":
     component_provider_host(name="python-components", components=[MyComponent])
