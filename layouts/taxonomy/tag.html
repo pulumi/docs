@@ -10,7 +10,7 @@
                 {{ $blogPosts := where .Data.Pages "Section" "blog" }}
                 
                 <!-- List of tags that should be displayed in chronological order (oldest first) -->
-                {{ $chronologicalTags := slice "platform-engineering-pillars" "zephyr" }}
+                {{ $chronologicalTags := slice "platform-engineering-pillars" "zephyr" "azure-devs-series" }}
                 
                 <!-- Conditionally set sort order but keep everything else the same -->
                 {{ if in $chronologicalTags .Data.Term }}
