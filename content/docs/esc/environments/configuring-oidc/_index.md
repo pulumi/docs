@@ -52,10 +52,10 @@ If you need to define fine-grained trust policies—such as allowing only a spec
 
 The following claims are commonly used when configuring trust relationships:
 
-- The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
-- The Audience claim contains the name of the organization, prefixed with the provider's platform (`aws`, `azure`, `gcp`). You can use this claim to restrict credentials to a specific organization or organizations.
-- The Subject claim contains a variety of information about the service. You can use this claim to restrict credentials to a specific organization/scope.
-- The various custom claims contain the same information as the Subject claim. If your cloud provider supports configuring trust relationships based on custom claims, you can use these claims for the same purposes as the Subject claim.
+* The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
+* The Audience claim contains the name of the organization, prefixed with the provider's platform (`aws`, `azure`, `gcp`). You can use this claim to restrict credentials to a specific organization or organizations.
+* The Subject claim contains a variety of information about the service. You can use this claim to restrict credentials to a specific organization/scope.
+* The various custom claims contain the same information as the Subject claim. If your cloud provider supports configuring trust relationships based on custom claims, you can use these claims for the same purposes as the Subject claim.
 
 ## Default token claim
 
@@ -80,10 +80,10 @@ Default subject claim format:
 
 Additional options for customization include:
 
-- `rootEnvironment.name`: the name of the environment that is opened first. This root environment in turn opens other imported environments
-- `currentEnvironment.name`: the name of the environment where the ESC login provider and `subjectAttributes` are defined
-- `pulumi.user.login`: the login identifier of the user opening the environment
-- `pulumi.organization.login`: the login identifier of the organization
+* `rootEnvironment.name`: the name of the environment that is opened first. This root environment in turn opens other imported environments
+* `currentEnvironment.name`: the name of the environment where the ESC login provider and `subjectAttributes` are defined
+* `pulumi.user.login`: the login identifier of the user opening the environment
+* `pulumi.organization.login`: the login identifier of the organization
 
 Consider the following example definitions for two environments, `Project/Environment-A` and `Project/Environment-B`:
 
