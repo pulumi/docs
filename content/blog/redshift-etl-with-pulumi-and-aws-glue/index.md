@@ -1,7 +1,8 @@
 ---
-title: Building an ETL pipeline with Amazon Redshift and AWS Glue
+title: How To Build An ETL Pipeline With Amazon Redshift & AWS Glue
 date: 2022-12-23
-meta_desc: Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi.
+updated: 2025-03-20
+meta_desc: Build an automated ETL pipeline using AWS Glue & Redshift. Learn step-by-step with Pulumi to avoid duplicate data & streamline ingestion.
 meta_image: meta.png
 authors:
     - christian-nunciato
@@ -27,7 +28,7 @@ There's a [lot more](https://aws.amazon.com/glue/features/) you can do with AWS 
 
 But first ...
 
-## Picking up where we left off
+## Set Up Redshift & Glue Integration
 
 If you haven't already, I'd encourage you to [read through the previous post](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/) to get up to speed on what we're building and why. In that post, the situation was such that some hypothetical application was generating "events" --- little bits of JSON, essentially --- and writing them periodically to a text file in S3, and as data scientists, we needed some way to gather up all of these events and load them into a Redshift cluster in order to analyze them later.
 
@@ -282,7 +283,7 @@ When the deployment completes, you should see that eight new resources were crea
 
 Now it's time to start adding the Glue components to --- well, glue it all together.
 
-## Extending the program
+## Automating ETL Jobs in AWS Glue
 
 At a high-level, we'll need three components to complete our ETL pipeline-to-be:
 
@@ -698,7 +699,7 @@ Duration: 7s
 
 You should see that the Glue components were created. Now let's load some sample data.
 
-## Upload some data
+## Load Sample Data into AWS Glue
 
 As before, we'll simulate this part, since we don't have an actual application generating real data for us. Run the following command to write a few JSON records to a file called `events-1.txt`:
 
@@ -749,7 +750,7 @@ and sit back while the pipeline ingests this new data, blissfully ignoring the f
 
 ![Screenshot of the Redshift query editor showing the new records](./aws-console-redshift-query-2.png)
 
-## Tidying up
+## Clean Up AWS Resources with Pulumi
 
 When you're finished experimenting, be sure to tear down the Redshift cluster and all other resources with a single `pulumi destroy`:
 
@@ -785,7 +786,7 @@ Resources:
     - 16 deleted
 ```
 
-## See it in action
+## Watch the AWS Glue ETL Pipeline in Action
 
 If you'd like to see a demonstration of what you've read in this blog post, then this [Modern Infrastructure video](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw) covers the whole process:
 
