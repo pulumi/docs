@@ -176,7 +176,7 @@ Next, we need to define our dependencies in `requirements.txt`.
 ***Example:** `requirements.txt` for a Pulumi Component*
 
 ```toml
-pulumi>=3.153.0,<4.0
+pulumi>=3.159.0,<4.0
 pulumi_aws>=6.0.0
 ```
 
