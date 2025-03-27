@@ -12,20 +12,12 @@ tags:
     - Kubernetes
     - AKS
     - Azure
+    - azure-devs-series
 ---
 
 History lesson time! In 2011, microservices debuted as an architectural style suited for the cloud. In 2013, Docker simplified building containers. Combining containers and microservices sparked a change in how applications were built and distributed in the cloud. As performance, scaling, and reliability became an increasing concern, container orchestration platforms became widely available. Kubernetes became the dominant container orchestration through community and corporate support, and some have suggested it was [inevitable](https://elastisys.com/why-kubernetes-was-inevitable/). Every major cloud service provider, including Azure, offers a version of Kubernetes.
 
 Kubernetes streamlines container deployment and management, making applications scale and accessible. This article demonstrates configuring and deploying Kubernetes with Azure.
-
-In this series, we go in-depth on:
-* [Top Azure Services Every Developer Should Know: Overview](/blog/top-5-things-for-azure-devs-intro/)
-* [Top Azure Services Every Developer Should Know: Virtual Machines](/blog/top-5-things-for-azure-devs-vm/)
-* [Top Azure Services Every Developer Should Know: Serverless](/blog/top-5-things-for-azure-devs-serverless/)
-* [Top Azure Services Every Developer Should Know: Static Websites](/blog/top-5-things-for-azure-devs-static-websites/)
-* **Top Azure Services Every Developer Should Know: Building on AKS** (this post)
-* [Top Azure Services Every Developer Should Know: Deploying on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/)
-* [Top Azure Services Every Developer Should Know: DevOps](/blog/top-5-things-for-azure-devs-devops/)
 
 ## A Kubernetes Review
 
