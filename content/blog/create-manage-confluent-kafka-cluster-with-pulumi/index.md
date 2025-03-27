@@ -1,7 +1,8 @@
 ---
-title: "Managing Confluent Kafka Clusters with Pulumi"
+title: "How to Manage Kafka Clusters in Confluent Cloud with Pulumi"
 date: 2023-02-15
-meta_desc: Create and manage a Confluent Kafka cluster using Pulumi. Follow the blog tutorial for creating a Kafka cluster, topic, and service accounts.
+updated: 2025-03-26
+meta_desc: Learn how to manage Confluent Kafka clusters with Pulumi—create topics, service accounts, and secure infrastructure using real code with IaC best practices.
 meta_image: "managing-confluent-clusters.png"
 authors: ["josh-kodroff"]
 tags: ["confluent", "kafka"]
@@ -11,7 +12,13 @@ Event streaming is used across diverse industries that demand real-time data pro
 
 In this blog post, you'll use the [Confluent Cloud Pulumi provider](https://www.pulumi.com/registry/packages/confluentcloud/) and Pulumi to create a Kafka cluster, topic, and customer account.
 
-<!--more-->
+1. [About Apache Kafka and Confluent Cloud](/blog/create-manage-confluent-kafka-cluster-with-pulumi/#about-apache-kafka-and-confluent-cloud)
+2. [Initializing the Project](/blog/create-manage-confluent-kafka-cluster-with-pulumi/#initializing-the-project)
+3. [Adding Resources](/blog/create-manage-confluent-kafka-cluster-with-pulumi/#adding-resources)
+4. [Testing Kafka Cluster](/blog/create-manage-confluent-kafka-cluster-with-pulumi/#testing-kafka-cluster)
+5. [See it in action](/blog/create-manage-confluent-kafka-cluster-with-pulumi/#see-it-in-action)
+6. [Conclusion](/blog/create-manage-confluent-kafka-cluster-with-pulumi/#conclusion)
+7. [Additional Resources](/blog/create-manage-confluent-kafka-cluster-with-pulumi/#additional-resources)
 
 ## About Apache Kafka and Confluent Cloud
 
@@ -277,7 +284,7 @@ pulumi up
 
 After a short wait, your cluster is up and running, and you are ready to test your infrastructure!
 
-## Testing
+## Testing Kafka Cluster
 
 To simulate your producer and consumer, you can use the [Confluent CLI](https://docs.confluent.io/confluent-cli/current/overview.html) to send messages to and read messages from your topic. You will use the values of your Pulumi stack outputs to formulate the command.
 
@@ -330,6 +337,32 @@ The producer is able to write events to your topic, and the consumer is able to 
 Want to see this in action? Here is a [Modern Infrastructure video](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw) demonstrating everything discussed in this blog post:
 
 {{< youtube "NWm9kAzQGXY?rel=0" >}}
+<div>
+    <div class="accordion-item text-2xl py-3 border-b-2 border-t-2">
+        <input type="checkbox" class="absolute hidden" id="Transcript" />
+        <label for="Transcript" class="accordion-label">
+            <h5 class="mt-2 w-2/3">Video Transcript</h5>
+            <div class="flex flex-grow justify-end items-center">
+                <span class="closed-accordion">+</span>
+                <span class="open-accordion hidden">-</span>
+            </div>
+        </label>
+        <div class="accordion-item-body-no-animation text-base">
+            <p>
+                Hello, and welcome to another episode of Modern Infrastructure Wednesday. I’m your host, Lee Zen, and today we’re going to be covering how easy it is to use Pulumi to deploy an application using AWS App Runner. App Runner is a new service from Amazon that lets you deploy a container image or a source code repository as an application without having to do too much configuration. You don’t have to configure load balancers or any of the typical stuff you usually have to set up. Here, you can see I’m running the main.go file, and it’s going to create all the necessary resources, along with, finally, the App Runner service.
+            </p>
+            <p>
+We’re going to dive into all the source code to explain how this works, but right now you can see what’s happening: we’re actually doing the Docker build that’s going to publish the image. After the Docker build completes, it’s pushing the image into our ECR repository. Finally, you can see here the update succeeds, and we actually get the service URL. Now let’s go take a look at our service. While the service is updating, you’ll notice it takes a little bit of time—not too much—but just a little bit to get going.
+            </p>
+            <p>
+Now we’re going to see how our code actually works. Let’s look at our deployment.go file, which main.go actually calls. We’ve built an Automation API-based program, and as you can see in the outputs, we create the image and various other resources. Let’s take a closer look at the code: the first thing we do is create an ECR repository using auto-naming, so it automatically generates the name. Next, we create a role so that App Runner can pull the image from our repository. We create this role and give it the appropriate policy. Afterward, we publish our image. You can see here we have the image resource, and there we feed it the repository credentials. Let’s also take a quick look at the Dockerfile we’re building—it’s just copying an index.html file over, making it a very simple setup.
+            </p>
+            <p>
+That’s really all there is to the infrastructure—it’s super simple. If we look at the Automation API side of things, all we’re doing is the usual Automation API stuff: setting up a stack and deploying our program. Right here, we point out where we’re deploying the program. Once we’ve finished deploying, we’re going to use the outputs from that program—namely, the image URL and the access role—and we’ll feed those to App Runner. This will invoke the Create Service API call, which is what’s actually doing the work. Going back to the console, you can now see we have the app running, and voilà, exactly what we expected to see! Hopefully, you enjoyed this demo. Like I said, it’s just so easy to get everything running with App Runner in just a few simple lines of code and Pulumi. Thanks for watching, and have a great day!
+            </p>
+        </div>
+    </div>
+</div>
 
 ## Conclusion
 
