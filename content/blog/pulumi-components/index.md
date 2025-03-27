@@ -322,6 +322,12 @@ outputs:
 
 {{< /chooser >}}
 
+## See It In Action
+
+Check out this video of authoring components in Java and consuming them in YAML to see Pulumi Components in action:
+
+{{< youtube "wWpTegnYsSE?rel=0" >}}
+
 ## Pro Tips
 
 - **Tagging Releases**: If you're working with Git-based components, you can tag version releases (both stable and preview versions). This ensures downstream users can easily choose specific versions without chasing a moving target.
