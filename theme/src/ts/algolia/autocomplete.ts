@@ -121,20 +121,21 @@ function initAutocomplete(el: HTMLElement) {
                     // transformResponse is called for each set of results, allowing us to operate
                     // on the result set before it is returned.
                     transformResponse(results) {
+                        // If on the blog page, return the results as is.
+                        if (window.location.pathname.includes("/blog")) {
+                            return results.hits;
+                        }
                         // Enables us to deprioritize blog results. We down rank them since we do not
                         // want them competing with docs results in this portion of the site, but should
                         // be shown in results as it is helpful when there are no results returned from
                         // the other sections of the site.
-                        if (window.location.pathname.includes("/blog")) {
-                            return results.hits;
-                        }
                         return results.hits.map(set => {
                             // Sort results set and push blog results to the bottom.
                             return set.sort((a: SearchResultHit, b: SearchResultHit) => {
-                                if (a.section === 'Blog' && b.section !== 'Blog') {
+                                if (a.section === "Blog" && b.section !== "Blog") {
                                     return 1;
                                 }
-                                if (a.section !== 'Blog' && b.section === 'Blog') {
+                                if (a.section !== "Blog" && b.section === "Blog") {
                                     return -1;
                                 }
                                 return 0;
