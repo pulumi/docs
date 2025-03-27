@@ -238,7 +238,7 @@ Next, we need to define our dependencies in `StaticPageComponent.csproj`.
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pulumi" Version="3.75.2" />
+    <PackageReference Include="Pulumi" Version="3.77.0" />
     <PackageReference Include="Pulumi.Aws" Version="6.*" />
     <PackageReference Include="Newtonsoft.Json" Version="13.*" />
   </ItemGroup>
