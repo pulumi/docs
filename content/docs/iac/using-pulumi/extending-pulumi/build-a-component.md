@@ -329,7 +329,7 @@ Next, we need to define our dependencies and project configuration in a Maven `p
 </project>
 ```
 
-The `com.pulumi.pulumi` SDK contains everything we need for making a component. It should be version `1.6` or newer. The `com.pulumi.aws` package is the AWS provider that we are building on top of. We've also included a couple helper libraries like `gson` and `slf4j-nop` which are helpful for this example.
+The `com.pulumi.pulumi` SDK contains everything we need for making a component. It should be version `1.8` or newer. The `com.pulumi.aws` package is the AWS provider that we are building on top of. We've also included a couple helper libraries like `gson` and `slf4j-nop` which are helpful for this example.
 
 {{% /choosable %}}
 
