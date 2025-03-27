@@ -460,7 +460,7 @@ import com.pulumi.provider.internal.ComponentProviderHost;
 
 public class App {
     public static void main(String[] args) throws IOException, InterruptedException {
-        new ComponentProviderHost(new Metadata("static-page-component"), App.class.getPackage()).start(args);
+        new ComponentProviderHost("static-page-component", App.class.getPackage()).start(args);
     }
 }
 ```
