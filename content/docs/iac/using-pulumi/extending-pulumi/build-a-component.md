@@ -2372,4 +2372,4 @@ Pulumi also supports private repos in GitHub and GitLab. Pulumi will read standa
 
 Publishing a component as a Pulumi package makes it easier to distribute and integrate into Pulumi workflows. This method enables community contributions and ensures that infrastructure components remain modular and maintainable. By packaging the component, it becomes easier to reuse across teams and projects, improving consistency and efficiency in infrastructure management. It also makes your component available for use within Pulumi Cloud Deployments.
 
-Learn more in the [Package and publish a Component](/docs/iac/using-pulumi/extending-pulumi/package-and-publish-a-component/) guide.
+Learn more in the [Publishing packages](/docs/iac/using-pulumi/extending-pulumi/publishing-packages/) guide.
