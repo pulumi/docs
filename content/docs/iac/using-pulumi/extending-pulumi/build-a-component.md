@@ -562,7 +562,7 @@ Note that argument classes must be *serializable* and use `pulumi.Input` types, 
 
 ### Define the Component resource
 
-Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via calls to `self.register_outputs`.
+Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via calls to `self.registerOutputs`.
 
 ***Example:** `staticpage.ts` the Component implmentation*
 
@@ -741,7 +741,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output<str>`, not a regular Python string. Outputs must use `pulumi.Output` types.
+The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output<string>`, not a regular TypeScript string. Outputs must use `pulumi.Output` types.
 
 Finally, calling `this.registerOutputs` provides the output value to Pulumi and ensures the execution order and dependency graph are able to be properly managed by the Pulumi engine.
 
