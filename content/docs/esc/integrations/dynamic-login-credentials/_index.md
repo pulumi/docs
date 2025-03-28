@@ -13,7 +13,7 @@ menu:
 
 Pulumi ESC integrates with the following dynamic login providers to enables you to log in to your account using OpenID Connect (OIDC) or by providing static credentials. The provider will return a set of credentials that can be used to access resources or fetch secrets.
 
-To learn how to set up and use each provider, follow the links below. To learn how to configure OpenID Connect (OIDC) for the providers that support it, see [OpenID Connect integration](/docs/pulumi-cloud/oidc/) in the Pulumi Cloud documentation.
+To learn how to set up and use each provider, follow the links below. To learn how to configure OpenID Connect (OIDC) for the providers that support it, see [OpenID Connect integration](/docs/esc/environments/configuring-oidc/).
 
 | Provider                                                                 | Description                                                                                                                   |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|

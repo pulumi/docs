@@ -124,7 +124,7 @@ The AWS scanner for Pulumi Cloud requires access to the AWS account you want to 
   Learn more about the [AWS ReadOnlyAccess policy](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/ReadOnlyAccess.html).  
 {{< /notes >}}
 
-3. **Create an ESC environment**: Configure it to assume the role via OIDC. See [ESC AWS provider documentation](/docs/pulumi-cloud/access-management/oidc/provider/aws/).
+3. **Create an ESC environment**: Configure it to assume the role via OIDC. See [ESC AWS provider documentation](/docs/esc/environments/configuring-oidc/aws/).
 
 4. **Assign the ESC environment**: Link the ESC environment to your Insights account during account creation.
 
@@ -159,7 +159,7 @@ values:
 ```
 
 {{< notes type="info" >}}
-  For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/pulumi-cloud/access-management/oidc/provider/azure/).
+  For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/esc/environments/configuring-oidc/azure/).
 {{< /notes >}}
 3. Once the ESC environment is set up with the proper credentials, assign it to your Insights account during the account creation phase.
 

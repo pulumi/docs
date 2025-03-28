@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     parent: esc-home
-    weight: 11
+    weight: 12
     identifier: faq
 aliases:
   - /docs/pulumi-cloud/esc/faq
