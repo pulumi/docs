@@ -59,8 +59,8 @@ import * as aws from "@pulumi/aws";
 
 export interface SecureBucketArgs {
     bucketName?: pulumi.Input<string>;
-    versioning?: boolean;
-    encryption?: boolean;
+    versioning?: pulumi.Input<boolean>;
+    encryption?: pulumi.Input<boolean>;
     tags?: { [key: string]: pulumi.Input<string> };
 }
 
