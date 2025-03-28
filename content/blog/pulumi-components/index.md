@@ -605,6 +605,98 @@ runtime: yaml
 
 For other languages, you'd use the appropriate runtime value. This file is the key that enables Pulumi to generate SDKs in other languages from your component code.
 
+### Define an Entry Point
+
+The entrypoint analyzes components to automatically build a schema, and interact with the Pulumi engine to mange the component lifecycle.
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+Not required for TypeScript.
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+1. Create a `_main_.py` file in your component directory
+2. In the `main` function, add a call to `component_provider_host`, specifying a list of components for the `components` argument
+
+```python
+from pulumi.provider.experimental import Metadata, component_provider_host
+from staticpage import MyComponent
+
+if __name__ == "__main__":
+    component_provider_host(name="python-components", components=[MyComponent])
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+1. Define a `main.go` file
+2. Declare an instance of `NewProviderBuilder`,  passing in a name, namespace and the components being built
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi-go-provider/infer"
+)
+
+func main() {
+    err := infer.NewProviderBuilder().
+            WithName("go-components").
+            WithNamespace("your-org-name").
+            WithComponents(
+                infer.Component(MyComponent),
+            ).
+            BuildAndRun()
+
+    if err != nil {
+        panic(err)
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+1. Create a `Program.cs` file
+2. Add an entry point that calls the `ComponentProviderHost`
+
+```csharp
+using System.Threading.Tasks;
+
+class Program
+{
+    public static Task Main(string []args) =>
+        Pulumi.Experimental.Provider.ComponentProviderHost.Serve(args);
+}
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+1. Create an `App.java` file
+2. Create a new instance of `ComponentProviderHost` in the entry point
+
+```java
+package com.example.components;
+
+import java.io.IOException;
+import com.pulumi.provider.internal.Metadata;
+import com.pulumi.provider.internal.ComponentProviderHost;
+
+public class App {
+    public static void main(String[] args) throws IOException, InterruptedException {
+        new ComponentProviderHost("java-components", App.class.getPackage()).start(args);
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### Sharing Components
 
 Pulumi Components new capability is designed to make sharing infrastructure building blocks as easy as possible, whether you're publishing them to a Git repository or referencing them from a local folder in a monorepo.
