@@ -53,6 +53,10 @@ Our latest enhancements focus on making components more accessible and easier to
 
 The code for creating a [cross-language component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) starts similarly to a single-language component: define a class that extends `ComponentResource`:
 
+{{< chooser language "typescript,python,csharp,go,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -65,14 +69,14 @@ export interface SecureBucketArgs {
 }
 
 export class SecureBucket extends pulumi.ComponentResource {
-    public readonly bucket: aws.s3.Bucket;
+    public readonly bucket: aws.s3.BucketV2;
     public readonly bucketName: pulumi.Output<string>;
 
     constructor(name: string, args: SecureBucketArgs = {}, opts?: pulumi.ComponentResourceOptions) {
-        super("my:components:SecureBucket", name, {}, opts);
+        super("mycomponents:index:SecureBucket", name, {}, opts);
 
         // Create an S3 bucket with best practices by default
-        this.bucket = new aws.s3.Bucket(`${name}`, {
+        this.bucket = new aws.s3.BucketV2(`${name}`, {
             bucket: args.bucketName,
             tags: {
                 ManagedBy: "Pulumi",
@@ -112,15 +116,494 @@ export class SecureBucket extends pulumi.ComponentResource {
 }
 ```
 
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+from typing import Optional, Dict, Any, Mapping
+
+class SecureBucketArgs(TypedDict):
+    bucket_name: Optional[pulumi.Input[str]]
+    versioning: Optional[bool]
+    encryption: Optional[bool]
+    tags: Optional[Mapping[str, pulumi.Input[str]]]
+
+class SecureBucket(pulumi.ComponentResource):
+    bucket_name: pulumi.Output[str]
+    def __init__(self, name: str, args: SecureBucketArgs, opts: Optional[pulumi.ResourceOptions] = None):
+        super().__init__('mycomponents:index:SecureBucket', name, {}, opts)
+        
+        args = args or SecureBucketArgs()
+        
+        # Create an S3 bucket with best practices by default
+        bucket = aws.s3.BucketV2(
+            f"{name}",
+            bucket=args.get("bucket_name"),
+            tags={
+                "ManagedBy": "Pulumi",
+                **args.get("tags", {})
+            },
+            opts=pulumi.ResourceOptions(parent=self)
+        )
+        
+        # Conditionally enable versioning
+        if args.get("versioning", True):
+            aws.s3.BucketVersioningV2(
+                f"{name}-versioning",
+                bucket=bucket.id,
+                versioning_configuration=aws.s3.BucketVersioningV2VersioningConfigurationArgs(
+                    status="Enabled"
+                ),
+                opts=pulumi.ResourceOptions(parent=self)
+            )
+            
+        # Conditionally enable encryption
+        if args.get("encryption", True):
+            aws.s3.BucketServerSideEncryptionConfigurationV2(
+                f"{name}-encryption",
+                bucket=bucket.id,
+                rules=[aws.s3.BucketServerSideEncryptionConfigurationV2RuleArgs(
+                    apply_server_side_encryption_by_default=aws.s3.BucketServerSideEncryptionConfigurationV2RuleApplyServerSideEncryptionByDefaultArgs(
+                        sse_algorithm="AES256"
+                    )
+                )],
+                opts=pulumi.ResourceOptions(parent=self)
+            )
+            
+        self.bucket_name = bucket.id
+        
+        self.register_outputs({
+            "bucketName": self.bucket_name
+        })
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Pulumi.Aws.S3;
+using Pulumi.Aws.S3.Inputs;
+
+namespace MyComponents
+{
+    public class SecureBucketArgs : ResourceArgs
+    {
+        [Input("bucketName")]
+        public Input<string>? BucketName { get; set; }
+
+        [Input("versioning")]
+        public bool? Versioning { get; set; }
+
+        [Input("encryption")]
+        public bool? Encryption { get; set; }
+
+        [Input("tags")]
+        public Dictionary<string, Input<string>>? Tags { get; set; }
+    }
+
+    public class SecureBucket : ComponentResource
+    {
+        [Output("bucketName")]
+        public Output<string> BucketName { get; private set; }
+
+        public SecureBucket(string name, SecureBucketArgs? args, ComponentResourceOptions? opts = null)
+            : base("mycomponents:index:SecureBucket", name, opts)
+        {
+            args ??= new SecureBucketArgs();
+            
+            // Create an S3 bucket with best practices by default
+            var tags = new InputMap<string>
+            {
+                { "ManagedBy", "Pulumi" }
+            };
+            
+            if (args.Tags != null)
+            {
+                foreach (var tag in args.Tags)
+                {
+                    tags[tag.Key] = tag.Value;
+                }
+            }
+
+            var bucket = new BucketV2($"{name}", new BucketV2Args
+            {
+                Bucket = args.BucketName,
+                Tags = tags
+            }, new CustomResourceOptions { Parent = this });
+
+            // Conditionally enable versioning
+            if (args.Versioning != false)
+            {
+                new BucketVersioningV2($"{name}-versioning", new BucketVersioningV2Args
+                {
+                    Bucket = bucket.Id,
+                    VersioningConfiguration = new BucketVersioningV2VersioningConfigurationArgs
+                    {
+                        Status = "Enabled"
+                    }
+                }, new CustomResourceOptions { Parent = this });
+            }
+
+            // Conditionally enable encryption
+            if (args.Encryption != false)
+            {
+                new BucketServerSideEncryptionConfigurationV2($"{name}-encryption", new BucketServerSideEncryptionConfigurationV2Args
+                {
+                    Bucket = bucket.Id,
+                    Rules = new[]
+                    {
+                        new BucketServerSideEncryptionConfigurationV2RuleArgs
+                        {
+                            ApplyServerSideEncryptionByDefault = new BucketServerSideEncryptionConfigurationV2RuleApplyServerSideEncryptionByDefaultArgs
+                            {
+                                SseAlgorithm = "AES256"
+                            }
+                        }
+                    }
+                }, new CustomResourceOptions { Parent = this });
+            }
+
+            BucketName = bucket.Id;
+
+            RegisterOutputs(new Dictionary<string, object?>
+            {
+                { "BucketName", BucketName }
+            });
+        }
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package components
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+// SecureBucketArgs contains the arguments for creating a SecureBucket
+type SecureBucketArgs struct {
+	BucketName pulumi.StringInput            `pulumi:"bucketName,optional"`
+	Versioning *bool                         `pulumi:"versioning,optional"`
+	Encryption *bool                         `pulumi:"encryption,optional"`
+	Tags       map[string]pulumi.StringInput `pulumi:"tags,optional"`
+}
+
+// SecureBucket is a component that creates an S3 bucket with security best practices
+type SecureBucket struct {
+	pulumi.ResourceState
+
+	BucketName pulumi.StringOutput `pulumi:"bucketName"`
+}
+
+// NewSecureBucket creates a new SecureBucket component
+func NewSecureBucket(ctx *pulumi.Context, name string, args SecureBucketArgs, opts ...pulumi.ResourceOption) (*SecureBucket, error) {
+	component := &SecureBucket{}
+	err := ctx.RegisterComponentResource("mycomponents:index:SecureBucket", name, component, opts...)
+	if err != nil {
+		return nil, err
+	}
+
+	// Create an S3 bucket with best practices by default
+	tags := pulumi.StringMap{
+		"ManagedBy": pulumi.String("Pulumi"),
+	}
+	if args.Tags != nil {
+		for k, v := range args.Tags {
+			tags[k] = v
+		}
+	}
+
+	bucket, err := s3.NewBucketV2(ctx, name, &s3.BucketV2Args{
+		Bucket: args.BucketName,
+		Tags:   tags,
+	}, pulumi.Parent(component))
+	if err != nil {
+		return nil, err
+	}
+
+	// Conditionally enable versioning
+	if args.Versioning != nil && !*args.Versioning {
+		// Skip versioning
+	} else {
+		_, err = s3.NewBucketVersioningV2(ctx, name+"-versioning", &s3.BucketVersioningV2Args{
+			Bucket: bucket.ID(),
+			VersioningConfiguration: &s3.BucketVersioningV2VersioningConfigurationArgs{
+				Status: pulumi.String("Enabled"),
+			},
+		}, pulumi.Parent(component))
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	// Conditionally enable encryption
+	if args.Encryption != nil && !*args.Encryption {
+		// Skip encryption
+	} else {
+		_, err = s3.NewBucketServerSideEncryptionConfigurationV2(ctx, name+"-encryption", &s3.BucketServerSideEncryptionConfigurationV2Args{
+			Bucket: bucket.ID(),
+			Rules: s3.BucketServerSideEncryptionConfigurationV2RuleArray{
+				&s3.BucketServerSideEncryptionConfigurationV2RuleArgs{
+					ApplyServerSideEncryptionByDefault: &s3.BucketServerSideEncryptionConfigurationV2RuleApplyServerSideEncryptionByDefaultArgs{
+						SseAlgorithm: pulumi.String("AES256"),
+					},
+				},
+			},
+		}, pulumi.Parent(component))
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	component.BucketName = bucket.ID().ToStringOutput()
+	return component, nil
+}
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package io.mikhail.components;
+
+import com.pulumi.core.Output;
+import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.BucketV2Args;
+import com.pulumi.aws.s3.BucketVersioningV2;
+import com.pulumi.aws.s3.BucketVersioningV2Args;
+import com.pulumi.aws.s3.inputs.BucketVersioningV2VersioningConfigurationArgs;
+import com.pulumi.aws.s3.BucketServerSideEncryptionConfigurationV2;
+import com.pulumi.aws.s3.BucketServerSideEncryptionConfigurationV2Args;
+import com.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationV2RuleArgs;
+import com.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationV2RuleApplyServerSideEncryptionByDefaultArgs;
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.CustomResourceOptions;
+import com.pulumi.core.annotations.Export;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+
+public class SecureBucket extends ComponentResource {
+    @Export
+    public final Output<String> bucketName;
+
+    public SecureBucket(String name, SecureBucketArgs args, ComponentResourceOptions options) {
+        super("mycomponents:index:SecureBucket", name, options);
+
+        // Create an S3 bucket with best practices by default
+        Map<String, Output<String>> tags = new HashMap<>();
+        tags.put("ManagedBy", Output.of("Pulumi"));
+        if (args.tags() != null && !args.tags().isEmpty()) {
+            tags.putAll(args.tags());
+        }
+
+        var bucket = new BucketV2(name, BucketV2Args.builder()
+                .bucket(args.bucketName())
+                //.tags(tags)
+                .build(),
+                CustomResourceOptions.builder().parent(this).build());
+
+        // Conditionally enable versioning
+        if (args.versioning() != Boolean.FALSE) {
+            new BucketVersioningV2(name + "-versioning", BucketVersioningV2Args.builder()
+                    .bucket(bucket.id())
+                    .versioningConfiguration(BucketVersioningV2VersioningConfigurationArgs.builder()
+                            .status("Enabled")
+                            .build())
+                    .build(),
+                    CustomResourceOptions.builder().parent(this).build());
+        }
+
+        // Conditionally enable encryption
+        if (args.encryption() != Boolean.FALSE) {
+            new BucketServerSideEncryptionConfigurationV2(name + "-encryption", 
+                    BucketServerSideEncryptionConfigurationV2Args.builder()
+                            .bucket(bucket.id())
+                            .rules(List.of(BucketServerSideEncryptionConfigurationV2RuleArgs.builder()
+                                    .applyServerSideEncryptionByDefault(
+                                            BucketServerSideEncryptionConfigurationV2RuleApplyServerSideEncryptionByDefaultArgs.builder()
+                                                    .sseAlgorithm("AES256")
+                                                    .build())
+                                    .build()))
+                            .build(),
+                    CustomResourceOptions.builder().parent(this).build());
+        }
+
+        this.bucketName = bucket.id();
+
+        this.registerOutputs(Map.of(
+                "bucketName", this.bucketName
+        ));
+    }
+}
+```
+
+```java
+package io.mikhail.components;
+
+import com.pulumi.core.Output;
+import com.pulumi.resources.ResourceArgs;
+import com.pulumi.core.annotations.Import;
+
+import java.util.Map;
+import java.util.HashMap;
+
+public class SecureBucketArgs extends ResourceArgs {
+    @Import(name="bucketName")
+    private Output<String> bucketName;
+
+    public Output<String> bucketName() {
+        return this.bucketName;
+    }
+
+    @Import(name="versioning")
+    private Boolean versioning;
+
+    public Boolean versioning() {   
+        return this.versioning;
+    }
+
+    @Import(name="encryption")
+    private Boolean encryption;
+
+    public Boolean encryption() {
+        return this.encryption;
+    }
+
+    @Import(name="tags")
+    private Map<String, Output<String>> tags = new HashMap<>();
+
+    public Map<String, Output<String>> tags() {
+        return this.tags;
+    }
+
+    private SecureBucketArgs() {}
+
+    public SecureBucketArgs(Output<String> bucketName, Boolean versioning, Boolean encryption, Map<String, Output<String>> tags) {
+        this.bucketName = bucketName;
+        this.versioning = versioning;
+        this.encryption = encryption;
+        this.tags = tags;
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+# YAML doesn't directly support authoring complex components
+# For a complete component, you'd typically write it in another language
+# This is a simplified component without conditionals or tags merges
+runtime: yaml
+name: my-components
+components:
+  SecureBucket:
+    inputs:
+      bucketName:
+        type: string
+    resources:
+      bucket:
+        type: aws:s3/bucketV2:BucketV2
+        properties:
+          bucket: ${bucketName}
+          tags:
+            ManagedBy: Pulumi
+
+      bucketVersioning:
+        type: aws:s3/bucketVersioningV2:BucketVersioningV2
+        properties:
+          bucket: ${bucket.id}
+          versioningConfiguration:
+            status: Enabled
+
+      bucketEncryption:
+        type: aws:s3/bucketServerSideEncryptionConfigurationV2:BucketServerSideEncryptionConfigurationV2
+        properties:
+          bucket: ${bucket.id}
+          rules:
+            - applyServerSideEncryptionByDefault:
+                sseAlgorithm: AES256
+
+    outputs:
+      bucketName: ${bucket.id}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 This file tells Pulumi that this directory is a component package that can be consumed across languages (it is not required for a single language component), rather than a standard Pulumi program. In it, you define the language runtime needed to load the plugin:
 
-***Example:** `PulumiPlugin.yaml` for TypeScript*
+{{< chooser language "typescript,python,csharp,go,java,yaml" >}}
+
+{{% choosable language typescript %}}
 
 ```yaml
 runtime: nodejs
 ```
 
-For other languages, you'd use `python`, `dotnet`, `go`, `java`, or `yaml` respectively. This file is the key that enables Pulumi to generate SDKs in other languages from your component code.
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```yaml
+runtime: python
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```yaml
+runtime: dotnet
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```yaml
+runtime: go
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```yaml
+runtime: java
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+runtime: yaml
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+For other languages, you'd use the appropriate runtime value. This file is the key that enables Pulumi to generate SDKs in other languages from your component code.
 
 ### Sharing Components
 
