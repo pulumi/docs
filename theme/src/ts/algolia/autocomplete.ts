@@ -122,7 +122,7 @@ function initAutocomplete(el: HTMLElement) {
                     // on the result set before it is returned.
                     transformResponse(results) {
                         // If on the blog page, return the results as is.
-                        if (window.location.pathname.includes("/blog")) {
+                        if (window.location.pathname.startsWith("/blog")) {
                             return results.hits;
                         }
                         // Enables us to deprioritize blog results. We down rank them since we do not
