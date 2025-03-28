@@ -2,6 +2,15 @@ import algoliasearch, { SearchClient } from "algoliasearch/lite";
 import { autocomplete, getAlgoliaResults, getAlgoliaFacets } from "@algolia/autocomplete-js";
 import { getTags, getTagsPlugin, setTags, Tag, iconForTag, labelForTag, mapTagsToFilters, groupBy, formatCount, debounce, listenForEvents } from "./utils";
 
+interface SearchResultHit {
+    objectID: string;
+    section: string;
+    href: string;
+    ancestors?: string[];
+    h1?: string;
+    title: string;
+}
+
 // CSS selector of the element to convert into an autocomplete control.
 const autocompleteContainer = "#search";
 
@@ -109,6 +118,30 @@ function initAutocomplete(el: HTMLElement) {
                             },
                         },
                     ],
+                    // transformResponse is called for each set of results, allowing us to operate
+                    // on the result set before it is returned.
+                    transformResponse(results) {
+                        // If on the blog page, return the results as is.
+                        if (window.location.pathname.startsWith("/blog")) {
+                            return results.hits;
+                        }
+                        // Enables us to deprioritize blog results. We down rank them since we do not
+                        // want them competing with docs results in this portion of the site, but should
+                        // be shown in results as it is helpful when there are no results returned from
+                        // the other sections of the site.
+                        return results.hits.map(set => {
+                            // Sort results set and push blog results to the bottom.
+                            return set.sort((a: SearchResultHit, b: SearchResultHit) => {
+                                if (a.section === "Blog" && b.section !== "Blog") {
+                                    return 1;
+                                }
+                                if (a.section !== "Blog" && b.section === "Blog") {
+                                    return -1;
+                                }
+                                return 0;
+                            });
+                        });
+                    },
                 })
             },
 
