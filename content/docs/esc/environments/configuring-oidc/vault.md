@@ -132,9 +132,6 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
   2. Click the **Create environment** button.
   3. Provide a project to create your new environment in and a name for your environment.
   4. Click the **Create environment** button.
-
-      {{< video title="Creating a new Pulumi ESC environment" src="https://www.pulumi.com/uploads/create-new-environment.mp4" autoplay="true" loop="true" >}}
-
   5. You will be presented with a split-pane document view. Delete the default placeholder content in the editor and replace it with the following code:
 
       ```yaml
