@@ -2304,6 +2304,10 @@ Status: 200 OK
 For GitHub-backed organizations the `teamType` path parameter must be `github`. For all other organization types the `teamType` path parameter must be `pulumi`.
 {{% /notes %}}
 
+    {{% notes type="warning" %}}
+ **Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your group name is longer than this limit, you’ll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
+     {{% /notes %}}
+
 ```
 POST /api/orgs/{org}/teams/{teamType}
 ```

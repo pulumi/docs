@@ -27,6 +27,10 @@ Please note that some advanced SCIM features aren't supported yet. For more info
 
 ## Enabling Automatic Provisioning
 
+     {{% notes type="warning" %}}
+ **Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your Entra group name is longer than this limit, you’ll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
+     {{% /notes %}}
+
 1. Navigate to the Microsoft Entra ID application where you have configured Single Sign On using SAML with Pulumi.
 2. Select **Enterprise Applications** and select the app in which you configured Single Sign On with Pulumi earlier.
 3. Select the **Provisioning** feature, and change the value of **Provisioning Mode** to **Automatic**.
