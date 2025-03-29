@@ -58,6 +58,13 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 * [Pulumi](https://www.pulumi.com/docs/install)
 * [Pulumi ESC](https://www.pulumi.com/docs/install/esc)
 
+Alternatively, you can quickly launch a shell environment with all the required dependencies using [devbox](https://www.jetpack.io/devbox/):
+```
+# Install devbox if needed
+$ which devbox || curl -fsSL https://get.jetpack.io/devbox | bash
+$ devbox shell
+```
+
 ### Repository layout
 
 * **Documentation and page content**: We generally follow Hugo's [directory-structure conventions](https://gohugo.io/getting-started/directory-structure/), with Markdown files in `./content`, layout files (including partials and shortcodes) in `./layout`, and data files in `./data`. There are also several [Hugo templates](https://gohugo.io/content-management/archetypes/) available in `./archetypes` for bootstrapping common content types like blog posts and Learn modules.

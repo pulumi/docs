@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 aws_region() {
     echo "$(pulumi -C infrastructure config get 'aws:region')"
