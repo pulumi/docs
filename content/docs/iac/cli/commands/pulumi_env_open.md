@@ -2,9 +2,14 @@
 title: "pulumi env open"
 aliases:
   - /docs/reference/cli/pulumi_env_open/
+search:
+  keywords:
+    - environment
+    - open
+    - environment name
+    - output format
+    - command options
 ---
-
-
 
 Open the environment with the given name.
 

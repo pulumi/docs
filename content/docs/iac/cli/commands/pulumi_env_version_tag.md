@@ -2,9 +2,13 @@
 title: "pulumi env version tag"
 aliases:
   - /docs/reference/cli/pulumi_env_version_tag/
+search:
+  keywords:
+    - version
+    - tag
+    - tagged version
+    - manage tagged
 ---
-
-
 
 Manage tagged versions
 

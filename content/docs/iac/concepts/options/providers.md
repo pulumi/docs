@@ -1,6 +1,7 @@
 ---
 title_tag: "providers | Resource Options"
-meta_desc: The providers resource option specifies a set of explicitly configured providers to be used for a resource and all of its children.
+meta_desc: The providers resource option specifies a set of explicitly configured
+  providers to be used for a resource and all of its children.
 title: "providers"
 h1: "Resource option: providers"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,16 @@ menu:
     parent: options-concepts
     weight: 12
 aliases:
-- /docs/concepts/resources/options/providers/
-- /docs/concepts/options/providers/
+  - /docs/concepts/resources/options/providers/
+  - /docs/concepts/options/providers/
+search:
+  keywords:
+    - providers
+    - resource
+    - map
+    - resource option
+    - providers map
+    - aws provider
 ---
 
 The `providers` resource option sets a map of providers for the resource and its children. This map is combined with resource parent's `providers` map. If no value is provided, the providers map is identical to the parent's providers map. When determining which provider to use for a resource, the `providers` map is used if [provider](/docs/concepts/options/provider/) is not supplied.

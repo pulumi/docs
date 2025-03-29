@@ -2,11 +2,17 @@
 title: Get started with Pulumi Cloud
 meta_desc: How to set up an account and get started with Pulumi Cloud.
 menu:
-    cloud:
-        name: Get started
-        parent: cloud-home
-        weight: 1
-        identifier: pulumi-cloud-get-started
+  cloud:
+    name: Get started
+    parent: cloud-home
+    weight: 1
+    identifier: pulumi-cloud-get-started
+search:
+  keywords:
+    - Cloud
+    - Security
+    - Identity providers
+    - Hosted Deployments
 ---
 
 {{% notes type="info" %}}

@@ -1,20 +1,28 @@
 ---
 title_tag: "Component Resources"
-meta_desc: A component resource is a logical grouping of resources. Learn how to author a new component resource, create child resources, and more in this guide.
+meta_desc: A component resource is a logical grouping of resources. Learn how to author
+  a new component resource, create child resources, and more in this guide.
 title: Components
 h1: Component resources
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Components
-        parent: iac-concepts-resources
-        weight: 3
-    concepts:
-        parent: resources
-        weight: 3
+  iac:
+    name: Components
+    parent: iac-concepts-resources
+    weight: 3
+  concepts:
+    parent: resources
+    weight: 3
 aliases:
-- /docs/intro/concepts/resources/components/
-- /docs/concepts/resources/components/
+  - /docs/intro/concepts/resources/components/
+  - /docs/concepts/resources/components/
+search:
+  keywords:
+    - component
+    - resource
+    - component resource
+    - child resources
+    - register outputs
 ---
 
 A component resource is a logical grouping of resources. Components usually instantiate a set of related resources in their constructor, aggregate them as children, and create a larger, useful abstraction that encapsulates their implementation details.

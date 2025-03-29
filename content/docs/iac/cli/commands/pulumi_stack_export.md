@@ -2,9 +2,14 @@
 title: "pulumi stack export"
 aliases:
   - /docs/reference/cli/pulumi_stack_export/
+search:
+  keywords:
+    - stack
+    - export
+    - stack export
+    - stack import
+    - deployment export
 ---
-
-
 
 Export a stack's deployment to standard out
 

@@ -11,12 +11,20 @@ menu:
     weight: 3
     identifier: pulumi-cloud-access-management-access-tokens
 aliases:
-- /docs/intro/pulumi-service/organization-access-tokens/
-- /docs/intro/pulumi-cloud/organization-access-tokens/
-- /docs/intro/pulumi-service/team-access-tokens/
-- /docs/intro/pulumi-cloud/team-access-tokens/
-- /docs/pulumi-cloud/access-management/organization-access-tokens/
-- /docs/pulumi-cloud/access-management/team-access-tokens/
+  - /docs/intro/pulumi-service/organization-access-tokens/
+  - /docs/intro/pulumi-cloud/organization-access-tokens/
+  - /docs/intro/pulumi-service/team-access-tokens/
+  - /docs/intro/pulumi-cloud/team-access-tokens/
+  - /docs/pulumi-cloud/access-management/organization-access-tokens/
+  - /docs/pulumi-cloud/access-management/team-access-tokens/
+search:
+  keywords:
+    - tokens
+    - access
+    - organization
+    - access tokens
+    - personal tokens
+    - organization tokens
 ---
 
 Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usage of the Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/pulumi-cloud/cloud-rest-api/).

@@ -1,6 +1,7 @@
 ---
 title_tag: "Pulumi Deployments REST API Documentation"
-meta_desc: Documentation for the Pulumi Deployments REST API including configuring settings and OIDC
+meta_desc: Documentation for the Pulumi Deployments REST API including configuring
+  settings and OIDC
 title: "REST API"
 h1: Pulumi Deployments REST API
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,10 +12,16 @@ menu:
     weight: 7
     identifier: pulumi-cloud-deployments-api
 aliases:
-- /docs/reference/deployments-rest-api/
-- /docs/intro/deployments/api/
+  - /docs/reference/deployments-rest-api/
+  - /docs/intro/deployments/api/
+search:
+  keywords:
+    - API
+    - Deployment
+    - REST API
+    - Deployment Settings
+    - Source Context
 ---
-
 
 The Pulumi Deployments REST API provides a fully-managed remote execution interface for your Pulumi programs.
 

@@ -2,9 +2,14 @@
 title: "pulumi config env add"
 aliases:
   - /docs/reference/cli/pulumi_config_env_add/
+search:
+  keywords:
+    - config
+    - stack
+    - config env
+    - add environments
+    - import list
 ---
-
-
 
 Add environments to a stack
 

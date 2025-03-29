@@ -2,9 +2,13 @@
 title: "pulumi import"
 aliases:
   - /docs/reference/cli/pulumi_import/
+search:
+  keywords:
+    - import
+    - resources
+    - existing stack
+    - resource definitions
 ---
-
-
 
 Import resources into an existing stack
 

@@ -1,8 +1,14 @@
 ---
 title: "esc env version rollback"
+search:
+  keywords:
+    - rollback
+    - version
+    - environment
+    - version rollback
+    - environment definition
+    - specific version
 ---
-
-
 
 Roll back to a specific version
 

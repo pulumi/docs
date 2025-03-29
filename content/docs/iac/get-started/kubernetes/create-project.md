@@ -1,6 +1,7 @@
 ---
 title_tag: Create a New Project | Kubernetes
-meta_desc: This page provides an overview of how to create a new Kubernetes + Pulumi project.
+meta_desc: This page provides an overview of how to create a new Kubernetes + Pulumi
+  project.
 title: Create project
 h1: "Pulumi & Kubernetes: Create project"
 weight: 3
@@ -10,10 +11,17 @@ menu:
     identifier: kubernetes-get-started-create-project
 
 aliases:
-- /docs/quickstart/kubernetes/create-project/
-- /docs/get-started/kubernetes/create-project/
-- /docs/iac/get-started/kubernetes/create-project/
+  - /docs/quickstart/kubernetes/create-project/
+  - /docs/get-started/kubernetes/create-project/
+  - /docs/iac/get-started/kubernetes/create-project/
+search:
+  keywords:
+    - Kubernetes
+    - project
+    - Kubernetes project
+    - create project
 ---
+
 Now that you have set up your environment let's create your first Pulumi program.
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}

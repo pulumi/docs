@@ -9,8 +9,15 @@ menu:
     parent: esc-cli-overview
     weight: 1
 aliases:
-    - /docs/esc/cli/commands/
-    - /docs/esc-cli/commands/
+  - /docs/esc/cli/commands/
+  - /docs/esc-cli/commands/
+search:
+  keywords:
+    - CLI
+    - Commands
+    - Environment
+    - ESC Projects
+    - Common Commands
 ---
 
 {{% notes type="info" %}}

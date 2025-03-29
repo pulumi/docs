@@ -2,9 +2,14 @@
 title: "pulumi stack select"
 aliases:
   - /docs/reference/cli/pulumi_stack_select/
+search:
+  keywords:
+    - stack
+    - select
+    - stack select
+    - workspace switch
+    - create flag
 ---
-
-
 
 Switch the current workspace to the given stack
 

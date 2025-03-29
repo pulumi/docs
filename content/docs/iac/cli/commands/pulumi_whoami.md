@@ -2,9 +2,14 @@
 title: "pulumi whoami"
 aliases:
   - /docs/reference/cli/pulumi_whoami/
+search:
+  keywords:
+    - whoami
+    - user
+    - logged-in user
+    - current user
+    - command line
 ---
-
-
 
 Display the current logged-in user
 

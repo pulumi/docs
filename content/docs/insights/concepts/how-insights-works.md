@@ -10,6 +10,13 @@ menu:
     parent: insights-concepts
     identifier: how-pulumi-insights-account-discovery-works
     weight: 1
+search:
+  keywords:
+    - Insights
+    - Account
+    - Account Discovery
+    - Resource Explorer
+    - Cloud Infrastructure
 ---
 
 Insights Account Discovery enables organizations to gain visibility into their entire cloud infrastructure through the Pulumi Insights platform. It works by scanning cloud provider accounts and building a comprehensive inventory of resources in the Insights supergraph, regardless of how those resources were created or are currently managed.

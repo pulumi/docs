@@ -9,6 +9,12 @@ menu:
     parent: pulumi-cloud-developer-portals
     weight: 3
     identifier: pulumi-cloud-developer-portals-backstage
+search:
+  keywords:
+    - Backstage
+    - Plugin
+    - Backstage Plugin
+    - Developer Portals
 ---
 
 We’ve seen many developer portal technologies rapidly growing in popularity over the last few years.  In particular, we’ve seen Pulumi users adopting [Backstage](https://backstage.io/) and as a result we built the [Pulumi Backstage Plugin](/blog/pulumi-backstage-plugin/) to address the needs of organizations using Backstage and Pulumi together.

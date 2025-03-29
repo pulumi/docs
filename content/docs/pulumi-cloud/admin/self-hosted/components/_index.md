@@ -5,15 +5,20 @@ title: Components
 h1: Pulumi Cloud self-hosted components
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Components
-        parent: pulumi-cloud-admin-self-hosted
-        weight: 2
-        identifier: pulumi-cloud-admin-self-hosted-components
+  cloud:
+    name: Components
+    parent: pulumi-cloud-admin-self-hosted
+    weight: 2
+    identifier: pulumi-cloud-admin-self-hosted-components
 aliases:
-- /docs/guides/self-hosted/console/
-- /docs/guides/self-hosted/components/
-- /docs/pulumi-cloud/self-hosted/components/
+  - /docs/guides/self-hosted/console/
+  - /docs/guides/self-hosted/components/
+  - /docs/pulumi-cloud/self-hosted/components/
+search:
+  keywords:
+    - Components
+    - Self-hosted
+    - Docker Hub
 ---
 
 {{% notes type="info" %}}

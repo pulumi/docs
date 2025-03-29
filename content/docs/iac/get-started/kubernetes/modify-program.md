@@ -1,6 +1,7 @@
 ---
 title_tag: Modify the Program | Kubernetes
-meta_desc: This page provides an overview on how to update Kubernetes project from a Pulumi program.
+meta_desc: This page provides an overview on how to update Kubernetes project from
+  a Pulumi program.
 title: Modify program
 h1: "Pulumi & Kubernetes: Modify program"
 weight: 6
@@ -10,9 +11,15 @@ menu:
     identifier: kubernetes-modify-program
 
 aliases:
-- /docs/quickstart/kubernetes/modify-program/
-- /docs/get-started/kubernetes/modify-program/
-- /docs/iac/get-started/kubernetes/modify-program/
+  - /docs/quickstart/kubernetes/modify-program/
+  - /docs/get-started/kubernetes/modify-program/
+  - /docs/iac/get-started/kubernetes/modify-program/
+search:
+  keywords:
+    - Kubernetes
+    - Deployment
+    - LoadBalancer service
+    - Kubernetes project
 ---
 
 Now that we have an instance of our Pulumi program deployed, let's update it to do something a little more interesting.

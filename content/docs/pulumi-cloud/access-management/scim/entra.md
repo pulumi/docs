@@ -1,6 +1,7 @@
 ---
 title_tag: Configuring Microsoft Entra ID | SCIM
-meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi and Entra ID.
+meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi
+  and Entra ID.
 title: Microsoft Entra ID
 h1: "SCIM: Configuring Microsoft Entra ID"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -13,6 +14,13 @@ menu:
 aliases:
   - /docs/guides/scim/azuread/
   - /docs/pulumi-cloud/access-management/scim/azuread
+search:
+  keywords:
+    - SCIM
+    - Entra
+    - Microsoft Entra
+    - Automatic Provisioning
+    - User Attribute
 ---
 
 This document outlines the steps required to configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.

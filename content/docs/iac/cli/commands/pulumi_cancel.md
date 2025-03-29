@@ -2,9 +2,13 @@
 title: "pulumi cancel"
 aliases:
   - /docs/reference/cli/pulumi_cancel/
+search:
+  keywords:
+    - cancel
+    - stack
+    - stack update
+    - command cancels
 ---
-
-
 
 Cancel a stack's currently running update, if any
 

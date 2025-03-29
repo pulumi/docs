@@ -10,9 +10,16 @@ menu:
     identifier: kubernetes-deploy-changes
 
 aliases:
-- /docs/quickstart/kubernetes/deploy-changes/
-- /docs/get-started/kubernetes/deploy-changes/
-- /docs/iac/get-started/kubernetes/deploy-changes/
+  - /docs/quickstart/kubernetes/deploy-changes/
+  - /docs/get-started/kubernetes/deploy-changes/
+  - /docs/iac/get-started/kubernetes/deploy-changes/
+search:
+  keywords:
+    - Kubernetes
+    - nginx
+    - deploy changes
+    - stack output
+    - service creation
 ---
 
 Deploy the stack changes.

@@ -9,6 +9,12 @@ menu:
     parent: esc-concepts
     identifier: how-pulumi-esc-works
     weight: 1
+search:
+  keywords:
+    - ESC
+    - secrets
+    - configuration-as-code
+    - dynamic secrets
 ---
 
 This article details how Pulumi ESC works, including its architecture, supported integrations, and core functionalities. To understand some of the core ESC concepts, like *environments*, *dynamic secrets*, and *configuration-as-code*, please read through the [ESC Concepts](/docs/esc/concepts/) doc.

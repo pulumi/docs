@@ -1,6 +1,7 @@
 ---
 title_tag: "Resource Options | Pulumi Concepts"
-meta_desc: Resource options can be used to configure how all Pulumi resources are managed. Learn more about the types of resource options and how to use them here.
+meta_desc: Resource options can be used to configure how all Pulumi resources are
+  managed. Learn more about the types of resource options and how to use them here.
 title: Resource options
 h1: Resource options
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,15 @@ menu:
     identifier: options-concepts
     weight: 4
 aliases:
-- /docs/intro/concepts/resources/options/
-- /docs/concepts/options/
+  - /docs/intro/concepts/resources/options/
+  - /docs/concepts/options/
+search:
+  keywords:
+    - resources
+    - options
+    - resource options
+    - resource management
+    - resource constructors
 ---
 
 All Pulumi IaC resources support a common set of options that allow you to customize how your resources are managed. Resource options allow you to do things like protect resources from being deleted, express more fine-grained control to the order in which resources are changed, or apply custom code that will allow you to change the properties of your resources.

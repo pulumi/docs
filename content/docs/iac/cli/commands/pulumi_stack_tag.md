@@ -2,9 +2,14 @@
 title: "pulumi stack tag"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag/
+search:
+  keywords:
+    - stack
+    - tag
+    - stack tags
+    - manage tags
+    - stack metadata
 ---
-
-
 
 Manage stack tags
 

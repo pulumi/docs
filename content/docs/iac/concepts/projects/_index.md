@@ -1,25 +1,32 @@
 ---
 title_tag: "Projects | Pulumi Concepts"
-meta_desc: A Pulumi project is any folder which contains a Pulumi.yaml file. Learn about how to use Pulumi projects, as well as example use cases.
+meta_desc: A Pulumi project is any folder which contains a Pulumi.yaml file. Learn
+  about how to use Pulumi projects, as well as example use cases.
 title: Projects
 h1: Projects
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Projects
-        parent: iac-concepts
-        weight: 1
-        identifier: iac-concepts-projects
-    concepts:
-        identifier: projects
-        weight: 1
+  iac:
+    name: Projects
+    parent: iac-concepts
+    weight: 1
+    identifier: iac-concepts-projects
+  concepts:
+    identifier: projects
+    weight: 1
 
 aliases:
-- /docs/reference/project/
-- /docs/tour/basics-projects/
-- /docs/tour/programs/
-- /docs/intro/concepts/project/
-- /docs/concepts/projects/
+  - /docs/reference/project/
+  - /docs/tour/basics-projects/
+  - /docs/tour/programs/
+  - /docs/intro/concepts/project/
+  - /docs/concepts/projects/
+search:
+  keywords:
+    - Projects
+    - YAML
+    - project file
+    - stack settings
 ---
 
 A Pulumi project is any folder that contains a `Pulumi.yaml` project file. At runtime, the nearest parent folder containing a `Pulumi.yaml` file determines the current project. Projects are created with the [`pulumi new`](/docs/cli/commands/pulumi_new/) command.

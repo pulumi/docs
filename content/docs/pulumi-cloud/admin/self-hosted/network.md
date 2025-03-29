@@ -5,15 +5,21 @@ title: Network reqs
 h1: Pulumi Cloud self-hosted network requirements
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Network reqs
-        parent: pulumi-cloud-admin-self-hosted
-        weight: 4
-        identifier: pulumi-cloud-admin-self-hosted-network
+  cloud:
+    name: Network reqs
+    parent: pulumi-cloud-admin-self-hosted
+    weight: 4
+    identifier: pulumi-cloud-admin-self-hosted-network
 aliases:
   - /docs/guides/self-hosted/requirements/
   - /docs/guides/self-hosted/requirements/network/
   - /docs/pulumi-cloud/self-hosted/network/
+search:
+  keywords:
+    - Network
+    - Requirements
+    - Self-hosted
+    - Network access
 ---
 
 {{% notes type="info" %}}

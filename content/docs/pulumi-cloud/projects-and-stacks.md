@@ -1,6 +1,7 @@
 ---
 title_tag: "Pulumi Cloud: Project and Stack Management"
-meta_desc: Learn how to manage projects and stacks in the Pulumi Cloud, including creating a project and managing stack permissions.
+meta_desc: Learn how to manage projects and stacks in the Pulumi Cloud, including
+  creating a project and managing stack permissions.
 title: "Projects & stacks"
 h1: "Projects & stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,18 +12,23 @@ menu:
     weight: 2
     identifier: pulumi-cloud-projects-and-stacks
 aliases:
-- /docs/intro/console/project-and-stack-management/
-- /docs/reference/service/roles-and-access-controls/
-- /docs/console/collaboration/stack-permissions/
-- /docs/intro/console/stack-permissions/
-- /docs/intro/console/projects-and-stacks/
-- /docs/intro/pulumi-service/projects-and-stacks/
-- /docs/intro/pulumi-cloud/projects-and-stacks/
+  - /docs/intro/console/project-and-stack-management/
+  - /docs/reference/service/roles-and-access-controls/
+  - /docs/console/collaboration/stack-permissions/
+  - /docs/intro/console/stack-permissions/
+  - /docs/intro/console/projects-and-stacks/
+  - /docs/intro/pulumi-service/projects-and-stacks/
+  - /docs/intro/pulumi-cloud/projects-and-stacks/
 search:
   keywords:
     - delete a stack
     - deleting a stack
     - delete a stack in Pulumi cloud
+    - Stack
+    - Project
+    - Stack Permissions
+    - Project Management
+    - Stack Resources
 ---
 
 Projects group stacks together and contain a Pulumi.yaml file.

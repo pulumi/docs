@@ -2,9 +2,14 @@
 title: "pulumi stack output"
 aliases:
   - /docs/reference/cli/pulumi_stack_output/
+search:
+  keywords:
+    - stack
+    - output
+    - stack output
+    - output properties
+    - command lists
 ---
-
-
 
 Show a stack's output properties
 

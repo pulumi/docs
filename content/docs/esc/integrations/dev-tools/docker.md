@@ -8,7 +8,14 @@ menu:
     parent: esc-dev-tools-integrations
     weight: 2
 aliases:
-    - /docs/esc/other-integrations/docker/
+  - /docs/esc/other-integrations/docker/
+search:
+  keywords:
+    - Docker
+    - Environment
+    - Docker container
+    - Environment variables
+    - Docker registry
 ---
 
 ## Overview

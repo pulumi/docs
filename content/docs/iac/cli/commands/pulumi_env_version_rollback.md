@@ -2,9 +2,13 @@
 title: "pulumi env version rollback"
 aliases:
   - /docs/reference/cli/pulumi_env_version_rollback/
+search:
+  keywords:
+    - rollback
+    - version
+    - version rollback
+    - environment definition
 ---
-
-
 
 Roll back to a specific version
 

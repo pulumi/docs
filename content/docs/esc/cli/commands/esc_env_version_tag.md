@@ -1,8 +1,14 @@
 ---
 title: "esc env version tag"
+search:
+  keywords:
+    - tag
+    - version
+    - environment
+    - tagged version
+    - manage versions
+    - command creates
 ---
-
-
 
 Manage tagged versions
 

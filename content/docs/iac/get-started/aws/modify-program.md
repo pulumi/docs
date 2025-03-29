@@ -2,12 +2,20 @@
 title_tag: Modify the Program | AWS
 title: Modify program
 h1: "Pulumi & AWS: Modify program"
-meta_desc: This page provides an overview on how to update an AWS project from a Pulumi program.
+meta_desc: This page provides an overview on how to update an AWS project from a Pulumi
+  program.
 weight: 6
 aliases:
-- /docs/quickstart/aws/modify-program/
-- /docs/get-started/aws/modify-program/
-- /docs/clouds/aws/get-started/modify-program/
+  - /docs/quickstart/aws/modify-program/
+  - /docs/get-started/aws/modify-program/
+  - /docs/clouds/aws/get-started/modify-program/
+search:
+  keywords:
+    - AWS
+    - S3
+    - S3 bucket
+    - BucketObject
+    - FileAsset
 ---
 
 Now that your S3 bucket is provisioned, let's add a file to it. First, from within your project directory, create a new file called `index.html` along with some content:

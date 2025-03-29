@@ -5,19 +5,26 @@ title: Update plans
 h1: Update  plans
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Update plans
-        parent: iac-concepts
-        weight: 11
-    concepts:
-        weight: 11
+  iac:
+    name: Update plans
+    parent: iac-concepts
+    weight: 11
+  concepts:
+    weight: 11
 aliases:
-- /updateplans/
-- /docs/intro/concepts/plans/
-- /docs/intro/concepts/update-plans/
-- /docs/intro/vs/
-- /docs/concepts/plans/
-- /docs/concepts/update-plans/
+  - /updateplans/
+  - /docs/intro/concepts/plans/
+  - /docs/intro/concepts/update-plans/
+  - /docs/intro/vs/
+  - /docs/concepts/plans/
+  - /docs/concepts/update-plans/
+search:
+  keywords:
+    - plans
+    - update
+    - update plans
+    - experimental preview
+    - plan file
 ---
 
 {{% notes type="warning" %}}

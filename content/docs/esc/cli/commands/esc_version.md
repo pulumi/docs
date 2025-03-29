@@ -1,8 +1,14 @@
 ---
 title: "esc version"
+search:
+  keywords:
+    - esc
+    - version
+    - help
+    - esc version
+    - version number
+    - command line
 ---
-
-
 
 Print esc's version number
 

@@ -1,8 +1,14 @@
 ---
 title: "esc env clone"
+search:
+  keywords:
+    - clone
+    - environment
+    - project
+    - existing environment
+    - preserve access
+    - environment identifier
 ---
-
-
 
 Clone an existing environment into a new environment.
 

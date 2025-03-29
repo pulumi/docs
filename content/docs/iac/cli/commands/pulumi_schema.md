@@ -2,9 +2,13 @@
 title: "pulumi schema"
 aliases:
   - /docs/reference/cli/pulumi_schema/
+search:
+  keywords:
+    - schema
+    - package
+    - package schemas
+    - analyze package
 ---
-
-
 
 Analyze package schemas
 

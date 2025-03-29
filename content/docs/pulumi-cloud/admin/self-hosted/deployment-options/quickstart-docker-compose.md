@@ -1,18 +1,25 @@
 ---
-title_tag: Quickstart Docker Compose | Self-Hosting Pulumi 
-meta_desc: Quickstart Docker compose installer for testing of the self-hosted Pulumi Cloud.
+title_tag: Quickstart Docker Compose | Self-Hosting Pulumi
+meta_desc: Quickstart Docker compose installer for testing of the self-hosted Pulumi
+  Cloud.
 title: Docker Compose
 h1: Pulumi Cloud self-hosted Docker Compose install
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Docker Compose
-        parent: pulumi-cloud-admin-self-hosted-deployment-options
-        weight: 1
-        identifier: pulumi-cloud-admin-self-hosted-deployment-options-quickstart-docker-compose
+  cloud:
+    name: Docker Compose
+    parent: pulumi-cloud-admin-self-hosted-deployment-options
+    weight: 1
+    identifier: pulumi-cloud-admin-self-hosted-deployment-options-quickstart-docker-compose
 aliases:
   - /docs/guides/self-hosted/quickstart-docker-compose/
   - /docs/pulumi-cloud/self-hosted/deployment-options/quickstart-docker-compose/
+search:
+  keywords:
+    - Docker
+    - Containers
+    - Docker Compose
+    - Quickstart Docker
 ---
 
 The Pulumi Cloud Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.

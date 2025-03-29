@@ -2,9 +2,14 @@
 title: "pulumi org set-default"
 aliases:
   - /docs/reference/cli/pulumi_org_set-default/
+search:
+  keywords:
+    - organization
+    - backend
+    - default organization
+    - current backend
+    - set-default
 ---
-
-
 
 Set the local default organization for the current backend
 

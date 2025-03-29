@@ -1,6 +1,7 @@
 ---
 title_tag: Deploy the Stack | Kubernetes
-meta_desc: This page provides an overview of how to deploy a Kubernetes project as a Pulumi Stack.
+meta_desc: This page provides an overview of how to deploy a Kubernetes project as
+  a Pulumi Stack.
 title: Deploy stack
 h1: "Pulumi & Kubernetes: Deploy stack"
 weight: 5
@@ -10,9 +11,15 @@ menu:
     identifier: kubernetes-deploy-stack
 
 aliases:
-- /docs/quickstart/kubernetes/deploy-stack/
-- /docs/get-started/kubernetes/deploy-stack/
-- /docs/iac/get-started/kubernetes/deploy-stack/
+  - /docs/quickstart/kubernetes/deploy-stack/
+  - /docs/get-started/kubernetes/deploy-stack/
+  - /docs/iac/get-started/kubernetes/deploy-stack/
+search:
+  keywords:
+    - Kubernetes
+    - Deployment
+    - Deploy stack
+    - Kubernetes project
 ---
 
 Deploy the stack:

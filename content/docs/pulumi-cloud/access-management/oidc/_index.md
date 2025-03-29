@@ -11,7 +11,13 @@ menu:
     weight: 4
     identifier: pulumi-cloud-access-management-oidc
 aliases:
-- /docs/pulumi-cloud/oidc/
+  - /docs/pulumi-cloud/oidc/
+search:
+  keywords:
+    - OpenID
+    - OIDC
+    - OpenID Connect
+    - short-lived tokens
 ---
 
 Pulumi supports OpenID Connect (OIDC) integration across various services by leveraging signed, short-lived tokens and eliminating the necessity for hardcoded cloud provider credentials and facilitates the exchange of these tokens for short-term credentials.

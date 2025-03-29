@@ -2,9 +2,14 @@
 title: "pulumi config cp"
 aliases:
   - /docs/reference/cli/pulumi_config_cp/
+search:
+  keywords:
+    - config
+    - stack
+    - config cp
+    - current stack
+    - destination stack
 ---
-
-
 
 Copy config to another stack
 

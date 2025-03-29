@@ -2,9 +2,13 @@
 title: "pulumi state delete"
 aliases:
   - /docs/reference/cli/pulumi_state_delete/
+search:
+  keywords:
+    - state
+    - delete
+    - resource deletion
+    - stack state
 ---
-
-
 
 Deletes a resource from a stack's state
 

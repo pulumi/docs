@@ -2,9 +2,13 @@
 title: "pulumi install"
 aliases:
   - /docs/reference/cli/pulumi_install/
+search:
+  keywords:
+    - install
+    - plugins
+    - install packages
+    - policy pack
 ---
-
-
 
 Install packages and plugins for the current program or policy pack.
 

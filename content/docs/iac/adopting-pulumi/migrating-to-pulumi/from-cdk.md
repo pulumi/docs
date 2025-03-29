@@ -5,14 +5,20 @@ title: AWS CDK
 h1: "Migrating from AWS CDK to Pulumi"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: AWS CDK
-        parent: iac-adopting-migrate
-        weight: 2
-    usingpulumi:
-        identifier: from-aws-cdk
-        parent: migrating
-        weight: 3
+  iac:
+    name: AWS CDK
+    parent: iac-adopting-migrate
+    weight: 2
+  usingpulumi:
+    identifier: from-aws-cdk
+    parent: migrating
+    weight: 3
+search:
+  keywords:
+    - AWS
+    - CDK
+    - AWS CDK
+    - Stack Outputs
 ---
 
 If your team has already provisioned infrastructure using AWS CDK, and you'd like to adopt Pulumi, you have two primary strategies you can take:

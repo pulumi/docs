@@ -2,14 +2,22 @@
 title: External Secrets Operator (ESO)
 title_tag: Integrate with External Secrets Operator (ESO) | Pulumi ESC
 h1: "Pulumi ESC: Integrate with External Secrets Operator (ESO)"
-meta_desc: Pulumi ESC integrates with the External Secrets Operator (ESO) to manage and deliver secrets in Kubernetes clusters.
+meta_desc: Pulumi ESC integrates with the External Secrets Operator (ESO) to manage
+  and deliver secrets in Kubernetes clusters.
 weight: 2
 menu:
   esc:
     identifier: esc-external-secrets-operator
     parent: esc-kubernetes-integrations
 aliases:
-- /docs/esc/other-integrations/external-secrets-operator/
+  - /docs/esc/other-integrations/external-secrets-operator/
+search:
+  keywords:
+    - Kubernetes
+    - Secrets
+    - External Secrets
+    - SecretStore
+    - ClusterSecretStore
 ---
 
 ## Overview

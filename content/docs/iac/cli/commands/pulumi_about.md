@@ -2,9 +2,12 @@
 title: "pulumi about"
 aliases:
   - /docs/reference/cli/pulumi_about/
+search:
+  keywords:
+    - CLI
+    - environment
+    - current stack
 ---
-
-
 
 Print information about the Pulumi environment.
 

@@ -1,8 +1,14 @@
 ---
 title: "esc env diff"
+search:
+  keywords:
+    - diff
+    - environment
+    - versions
+    - environment diff
+    - show changes
+    - output format
 ---
-
-
 
 Show changes between versions.
 

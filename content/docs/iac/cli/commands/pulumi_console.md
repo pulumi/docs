@@ -2,9 +2,13 @@
 title: "pulumi console"
 aliases:
   - /docs/reference/cli/pulumi_console/
+search:
+  keywords:
+    - console
+    - stack
+    - stack view
+    - help console
 ---
-
-
 
 Opens the current stack in the Pulumi Console
 

@@ -1,18 +1,25 @@
 ---
 title_tag: EKS-Hosted Install | Self-Hosting Pulumi
-meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi Cloud in EKS.
+meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi
+  Cloud in EKS.
 title: EKS
 h1: Pulumi Cloud self-hosted EKS install
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: EKS
-        parent: pulumi-cloud-admin-self-hosted-deployment-options
-        weight: 3
-        identifier: pulumi-cloud-admin-self-hosted-deployment-options-eks
+  cloud:
+    name: EKS
+    parent: pulumi-cloud-admin-self-hosted-deployment-options
+    weight: 3
+    identifier: pulumi-cloud-admin-self-hosted-deployment-options-eks
 aliases:
   - /docs/guides/self-hosted/eks-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/eks-hosted/
+search:
+  keywords:
+    - EKS
+    - Kubernetes
+    - EKS-hosted
+    - Amazon Elastic
 ---
 
 The [EKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Amazon Elastic Kubernetes Service (EKS).

@@ -2,9 +2,14 @@
 title: "pulumi env ls"
 aliases:
   - /docs/reference/cli/pulumi_env_ls/
+search:
+  keywords:
+    - environments
+    - command
+    - list environments
+    - filter environments
+    - help command
 ---
-
-
 
 List environments.
 

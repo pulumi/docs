@@ -12,6 +12,14 @@ aliases:
   - /docs/intro/insights/search/
   - /docs/pulumi
   - /docs/pulumi-cloud/insights/search/
+search:
+  keywords:
+    - search
+    - resource
+    - query
+    - resource search
+    - query syntax
+    - field queries
 ---
 
 Resource Search allows you to explore your resources, stacks and projects in detail.

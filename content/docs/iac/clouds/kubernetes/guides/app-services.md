@@ -1,7 +1,7 @@
 ---
 title_tag: Deploy Kubernetes App Services | Crosswalk
-meta_desc: This page provides an overview of how to deploy Kubernetes App services to different
-           cloud providers.
+meta_desc: This page provides an overview of how to deploy Kubernetes App services
+  to different cloud providers.
 title: App services
 h1: Kubernetes App services
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
@@ -12,8 +12,16 @@ menu:
     identifier: kubernetes-guides-app-svcs
     weight: 8
 aliases:
-    - /docs/guides/crosswalk/kubernetes/app-services/
-    - /docs/clouds/kubernetes/guides/app-services/
+  - /docs/guides/crosswalk/kubernetes/app-services/
+  - /docs/clouds/kubernetes/guides/app-services/
+search:
+  keywords:
+    - Kubernetes
+    - App
+    - Services
+    - Kubernetes App
+    - App Services
+    - Cloud Providers
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

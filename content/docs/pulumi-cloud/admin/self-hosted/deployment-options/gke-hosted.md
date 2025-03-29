@@ -1,18 +1,24 @@
 ---
 title_tag: GKE-Hosted Install | Self-Hosting Pulumi
-meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi Cloud on Google Kubernetes Engine (GKE).
+meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi
+  Cloud on Google Kubernetes Engine (GKE).
 title: GKE
 h1: Pulumi Cloud self-hosted GKE install
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: GKE
-        parent: pulumi-cloud-admin-self-hosted-deployment-options
-        weight: 5
-        identifier: pulumi-cloud-admin-self-hosted-deployment-options-gke
+  cloud:
+    name: GKE
+    parent: pulumi-cloud-admin-self-hosted-deployment-options
+    weight: 5
+    identifier: pulumi-cloud-admin-self-hosted-deployment-options-gke
 aliases:
   - /docs/guides/self-hosted/gke-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/gke-hosted/
+search:
+  keywords:
+    - GKE
+    - Installer
+    - Google Kubernetes
 ---
 
 The [GKE-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/gke-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Google Kubernetes Engine (GKE).

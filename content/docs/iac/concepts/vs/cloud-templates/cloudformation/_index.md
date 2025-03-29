@@ -1,21 +1,29 @@
 ---
 title_tag: "Pulumi vs. AWS CloudFormation"
-meta_desc: Pulumi and AWS CloudFormation share some similarities, but there are many key differences. Learn about these major differences here.
+meta_desc: Pulumi and AWS CloudFormation share some similarities, but there are many
+  key differences. Learn about these major differences here.
 title: AWS CloudFormation
 h1: Pulumi vs AWS CloudFormation
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: AWS CloudFormation
-        parent: iac-concepts-compare
-        weight: 2
-        identifier: iac-concepts-compare-cloudformation
-    concepts:
-        parent: vs
-        weight: 2
+  iac:
+    name: AWS CloudFormation
+    parent: iac-concepts-compare
+    weight: 2
+    identifier: iac-concepts-compare-cloudformation
+  concepts:
+    parent: vs
+    weight: 2
 aliases:
-- /docs/intro/vs/cloud-templates/cloudformation/
-- /docs/concepts/vs/cloud-templates/cloudformation/
+  - /docs/intro/vs/cloud-templates/cloudformation/
+  - /docs/concepts/vs/cloud-templates/cloudformation/
+search:
+  keywords:
+    - CloudFormation
+    - AWS
+    - AWS CloudFormation
+    - infrastructure code
+    - programming languages
 ---
 
 <style>

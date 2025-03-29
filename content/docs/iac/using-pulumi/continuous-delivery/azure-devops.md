@@ -1,23 +1,29 @@
 ---
 title_tag: "Using Azure DevOps | CI/CD"
-meta_desc: This page details how to use Azure DevOps to manage deploying stacks based on
-           commits to specific Git branches, and based on the build reason.
+meta_desc: This page details how to use Azure DevOps to manage deploying stacks based
+  on commits to specific Git branches, and based on the build reason.
 title: Azure DevOps
 h1: Pulumi CI/CD & Azure DevOps
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Azure DevOps
-        parent: iac-using-pulumi-cicd
-        weight: 2
+  iac:
+    name: Azure DevOps
+    parent: iac-using-pulumi-cicd
+    weight: 2
 aliases:
-- /docs/reference/cd-azure-devops/
-- /docs/console/continuous-delivery/azure-devops/
-- /docs/guides/continuous-delivery/azure-devops/
-- /docs/guides/continuous-delivery/cd-azure-devops/
-- /docs/using-pulumi/continuous-delivery/cd-azure-devops/
-- /docs/using-pulumi/continuous-delivery/azure-devops/
-- /docs/iac/packages-and-automation/continuous-delivery/azure-devops/
+  - /docs/reference/cd-azure-devops/
+  - /docs/console/continuous-delivery/azure-devops/
+  - /docs/guides/continuous-delivery/azure-devops/
+  - /docs/guides/continuous-delivery/cd-azure-devops/
+  - /docs/using-pulumi/continuous-delivery/cd-azure-devops/
+  - /docs/using-pulumi/continuous-delivery/azure-devops/
+  - /docs/iac/packages-and-automation/continuous-delivery/azure-devops/
+search:
+  keywords:
+    - Azure
+    - DevOps
+    - Azure DevOps
+    - CI/CD
 ---
 
 This page details how to use [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) to manage deploying

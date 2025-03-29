@@ -1,23 +1,29 @@
 ---
 title_tag: "Using AWS Code Services | CI/CD"
-meta_desc: This page provides an overview of how to use Pulumi with Amazon Code
-           Services CI/CD tools.
+meta_desc: This page provides an overview of how to use Pulumi with Amazon Code Services
+  CI/CD tools.
 title: AWS Code Services
 h1: Pulumi CI/CD & AWS Code Services
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: AWS Code Services
-        parent: iac-using-pulumi-cicd
-        weight: 1
+  iac:
+    name: AWS Code Services
+    parent: iac-using-pulumi-cicd
+    weight: 1
 aliases:
-- /docs/reference/cd-aws-code-services/
-- /docs/console/continuous-delivery/aws-code-services/
-- /docs/guides/continuous-delivery/aws-code-services/
-- /docs/guides/continuous-delivery/cd-aws-code-services/
-- /docs/using-pulumi/continuous-delivery/cd-aws-code-services/
-- /docs/using-pulumi/continuous-delivery/aws-code-services/
-- /docs/iac/packages-and-automation/continuous-delivery/aws-code-services/
+  - /docs/reference/cd-aws-code-services/
+  - /docs/console/continuous-delivery/aws-code-services/
+  - /docs/guides/continuous-delivery/aws-code-services/
+  - /docs/guides/continuous-delivery/cd-aws-code-services/
+  - /docs/using-pulumi/continuous-delivery/cd-aws-code-services/
+  - /docs/using-pulumi/continuous-delivery/aws-code-services/
+  - /docs/iac/packages-and-automation/continuous-delivery/aws-code-services/
+search:
+  keywords:
+    - AWS
+    - CodeBuild
+    - AWS Code
+    - Code Services
 ---
 
 [Amazon Code Services](https://aws.amazon.com/products/developer-tools/) encompases a variety

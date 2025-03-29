@@ -1,23 +1,31 @@
 ---
 title_tag: "Terraform vs. Pulumi"
-meta_desc: Pulumi and Terraform have a few similarities, but they differ in many key ways. This page helps provide a rundown of these major differences.
+meta_desc: Pulumi and Terraform have a few similarities, but they differ in many key
+  ways. This page helps provide a rundown of these major differences.
 title: Terraform
 h1: Terraform vs. Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Terraform
-        parent: iac-concepts-compare
-        weight: 1
-        identifier: iac-concepts-compare-terraform
-    concepts:
-        identifier: vs-terraform
-        parent: vs
-        weight: 1
+  iac:
+    name: Terraform
+    parent: iac-concepts-compare
+    weight: 1
+    identifier: iac-concepts-compare-terraform
+  concepts:
+    identifier: vs-terraform
+    parent: vs
+    weight: 1
 aliases:
-- /docs/reference/vs/terraform/
-- /docs/intro/vs/terraform/
-- /docs/concepts/vs/terraform/
+  - /docs/reference/vs/terraform/
+  - /docs/intro/vs/terraform/
+  - /docs/concepts/vs/terraform/
+search:
+  keywords:
+    - Terraform
+    - Infrastructure
+    - Infrastructure code
+    - Open source
+    - Programming languages
 ---
 
 <style>

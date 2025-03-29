@@ -2,9 +2,14 @@
 title: "pulumi stack tag ls"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_ls/
+search:
+  keywords:
+    - stack
+    - tag
+    - stack tags
+    - command options
+    - help flags
 ---
-
-
 
 List all stack tags
 

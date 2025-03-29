@@ -2,9 +2,13 @@
 title: "pulumi policy new"
 aliases:
   - /docs/reference/cli/pulumi_policy_new/
+search:
+  keywords:
+    - Policy
+    - Template
+    - Policy Pack
+    - Organization Administrators
 ---
-
-
 
 Create a new Pulumi Policy Pack
 

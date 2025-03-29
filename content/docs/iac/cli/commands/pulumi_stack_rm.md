@@ -2,9 +2,14 @@
 title: "pulumi stack rm"
 aliases:
   - /docs/reference/cli/pulumi_stack_rm/
+search:
+  keywords:
+    - stack
+    - configuration
+    - stack removal
+    - force deletion
+    - preserve config
 ---
-
-
 
 Remove a stack and its configuration
 

@@ -1,8 +1,14 @@
 ---
 title: "esc env tag ls"
+search:
+  keywords:
+    - tags
+    - environment
+    - command
+    - environment tags
+    - list environment
+    - esc env
 ---
-
-
 
 List environment tags.
 

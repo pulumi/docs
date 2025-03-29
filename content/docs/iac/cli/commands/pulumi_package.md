@@ -2,9 +2,11 @@
 title: "pulumi package"
 aliases:
   - /docs/reference/cli/pulumi_package/
+search:
+  keywords:
+    - package
+    - plugins
 ---
-
-
 
 Work with Pulumi packages
 

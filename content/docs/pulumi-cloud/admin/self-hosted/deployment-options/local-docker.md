@@ -1,18 +1,24 @@
 ---
 title_tag: Local-Docker Install | Self-Hosting Pulumi
-meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi Cloud in docker.
+meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi
+  Cloud in docker.
 title: Local-Docker
 h1: Pulumi Cloud self-hosted local-Docker install
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Local-Docker
-        parent: pulumi-cloud-admin-self-hosted-deployment-options
-        weight: 6
-        identifier: pulumi-cloud-admin-self-hosted-deployment-options-local-docker
+  cloud:
+    name: Local-Docker
+    parent: pulumi-cloud-admin-self-hosted-deployment-options
+    weight: 6
+    identifier: pulumi-cloud-admin-self-hosted-deployment-options-local-docker
 aliases:
   - /docs/guides/self-hosted/local-docker/
   - /docs/pulumi-cloud/self-hosted/deployment-options/local-docker/
+search:
+  keywords:
+    - Docker
+    - Installation
+    - Local-Docker Install
 ---
 
 The [Local-Docker Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker) is generally meant to be used where an on-premise solution is needed or where the cloud-based installation solutions (i.e. EKS, ECS, AKS) are not possible.

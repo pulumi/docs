@@ -2,9 +2,13 @@
 title: "pulumi config"
 aliases:
   - /docs/reference/cli/pulumi_config/
+search:
+  keywords:
+    - config
+    - stack
+    - configuration value
+    - config file
 ---
-
-
 
 Manage configuration
 

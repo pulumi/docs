@@ -2,9 +2,13 @@
 title: "pulumi env rm"
 aliases:
   - /docs/reference/cli/pulumi_env_rm/
+search:
+  keywords:
+    - environment
+    - remove
+    - environment removal
+    - remove environment
 ---
-
-
 
 Remove an environment or a value from an environment.
 

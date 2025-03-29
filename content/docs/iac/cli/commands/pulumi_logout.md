@@ -2,9 +2,13 @@
 title: "pulumi logout"
 aliases:
   - /docs/reference/cli/pulumi_logout/
+search:
+  keywords:
+    - logout
+    - cloud
+    - stored credentials
+    - multiple backends
 ---
-
-
 
 Log out of the Pulumi Cloud
 

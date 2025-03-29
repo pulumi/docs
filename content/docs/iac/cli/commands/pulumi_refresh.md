@@ -2,9 +2,13 @@
 title: "pulumi refresh"
 aliases:
   - /docs/reference/cli/pulumi_refresh/
+search:
+  keywords:
+    - refresh
+    - stack
+    - resource state
+    - cloud provider
 ---
-
-
 
 Refresh the resources in a stack
 

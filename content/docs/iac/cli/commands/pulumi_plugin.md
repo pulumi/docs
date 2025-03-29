@@ -2,9 +2,13 @@
 title: "pulumi plugin"
 aliases:
   - /docs/reference/cli/pulumi_plugin/
+search:
+  keywords:
+    - plugin
+    - resource
+    - resource provider
+    - language plugins
 ---
-
-
 
 Manage language and resource provider plugins
 

@@ -1,6 +1,8 @@
 ---
 title_tag: "Pulumi Cloud: Billing Managers"
-meta_desc: The Billing Manager role gives customers the ability to have someone in their Pulumi Organization manage billing operations. Learn more about this role here.
+meta_desc: The Billing Manager role gives customers the ability to have someone in
+  their Pulumi Organization manage billing operations. Learn more about this role
+  here.
 title: "Billing managers"
 h1: "Billing managers"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,8 +13,15 @@ menu:
     weight: 5
     identifier: pulumi-cloud-access-management-billing-managers
 aliases:
-- /docs/intro/pulumi-service/billing-managers/
-- /docs/intro/pulumi-cloud/billing-managers/
+  - /docs/intro/pulumi-service/billing-managers/
+  - /docs/intro/pulumi-cloud/billing-managers/
+search:
+  keywords:
+    - billing
+    - manager
+    - organization
+    - billing manager
+    - billing operations
 ---
 
 The Billing Manager role gives customers the ability to have someone in their Pulumi Organization manage billing operations without granting them any additional permissions to view or modify your stacks, policies, or other organizational settings.

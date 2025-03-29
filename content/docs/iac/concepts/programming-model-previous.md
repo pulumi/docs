@@ -2,6 +2,13 @@
 title: "Programming Model"
 url: /docs/reference/programming-model
 block_external_search_index: true
+search:
+  keywords:
+    - Programming
+    - Model
+    - Redirecting
+    - Programming Model
+    - External Search
 ---
 
 <!--

@@ -2,9 +2,14 @@
 title: "pulumi state move"
 aliases:
   - /docs/reference/cli/pulumi_state_move/
+search:
+  keywords:
+    - state
+    - move
+    - stack move
+    - move resources
+    - state move
 ---
-
-
 
 Move resources from one stack to another
 

@@ -2,9 +2,14 @@
 title: "pulumi config rm"
 aliases:
   - /docs/reference/cli/pulumi_config_rm/
+search:
+  keywords:
+    - config
+    - remove
+    - configuration value
+    - path flag
+    - options inherited
 ---
-
-
 
 Remove configuration value
 

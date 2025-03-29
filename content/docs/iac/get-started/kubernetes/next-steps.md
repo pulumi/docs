@@ -1,7 +1,7 @@
 ---
 title_tag: Next Steps | Kubernetes
 meta_desc: This page provides a list of tutorials that take a deeper dive into Kubernetes
-           across all major cloud providers.
+  across all major cloud providers.
 title: Next steps
 h1: "Pulumi & Kubernetes: Next steps"
 weight: 9
@@ -11,9 +11,15 @@ menu:
     identifier: kubernetes-next-steps
 
 aliases:
-- /docs/quickstart/kubernetes/next-steps/
-- /docs/get-started/kubernetes/next-steps/
-- /docs/iac/get-started/kubernetes/next-steps/
+  - /docs/quickstart/kubernetes/next-steps/
+  - /docs/get-started/kubernetes/next-steps/
+  - /docs/iac/get-started/kubernetes/next-steps/
+search:
+  keywords:
+    - Kubernetes
+    - Secrets
+    - How-to Guides
+    - Blog Posts
 ---
 
 Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.

@@ -1,8 +1,13 @@
 ---
 title: "esc env get"
+search:
+  keywords:
+    - environment
+    - value
+    - command
+    - environment name
+    - show secrets
 ---
-
-
 
 Get a value within an environment.
 

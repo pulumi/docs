@@ -2,9 +2,13 @@
 title: "pulumi env clone"
 aliases:
   - /docs/reference/cli/pulumi_env_clone/
+search:
+  keywords:
+    - clone
+    - environment
+    - preserve access
+    - preserve history
 ---
-
-
 
 Clone an existing environment into a new environment.
 

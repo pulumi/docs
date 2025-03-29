@@ -2,9 +2,13 @@
 title: "pulumi package add"
 aliases:
   - /docs/reference/cli/pulumi_package_add/
+search:
+  keywords:
+    - package
+    - provider
+    - package schema
+    - resource plugin
 ---
-
-
 
 Add a package to your Pulumi project
 

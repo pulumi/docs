@@ -8,7 +8,13 @@ menu:
     parent: esc-dev-tools-integrations
     weight: 1
 aliases:
-    - /docs/esc/other-integrations/direnv/
+  - /docs/esc/other-integrations/direnv/
+search:
+  keywords:
+    - Direnv
+    - Environment
+    - Environment variables
+    - .envrc file
 ---
 
 ## Overview

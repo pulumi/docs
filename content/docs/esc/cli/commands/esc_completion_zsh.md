@@ -1,8 +1,14 @@
 ---
 title: "esc completion zsh"
+search:
+  keywords:
+    - zsh
+    - completion
+    - script
+    - autocompletion script
+    - shell session
+    - load completions
 ---
-
-
 
 Generate the autocompletion script for zsh
 

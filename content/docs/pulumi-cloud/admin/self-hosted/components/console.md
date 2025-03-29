@@ -2,17 +2,24 @@
 title_tag: Pulumi Console | Self-Hosting Pulumi
 title: Pulumi console
 h1: Pulumi Cloud self-hosted console
-meta_desc: Pulumi console is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Pulumi Business Critical Edition.
+meta_desc: Pulumi console is one of the components required for self-hosting Pulumi.
+  Self-hosting is available as part of the Pulumi Business Critical Edition.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Pulumi console
-        parent: pulumi-cloud-admin-self-hosted-components
-        weight: 2
-        identifier: pulumi-cloud-admin-self-hosted-components-console
+  cloud:
+    name: Pulumi console
+    parent: pulumi-cloud-admin-self-hosted-components
+    weight: 2
+    identifier: pulumi-cloud-admin-self-hosted-components-console
 aliases:
   - /docs/guides/self-hosted/components/console/
   - /docs/pulumi-cloud/self-hosted/components/console/
+search:
+  keywords:
+    - Console
+    - OAuth
+    - Self-hosting
+    - Environment Variables
 ---
 
 {{% notes type="info" %}}

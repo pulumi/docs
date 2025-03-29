@@ -2,7 +2,8 @@
 title_tag: "Using AWS Elastic Container Registry (ECR) | Crosswalk"
 title: ECR
 h1: AWS Elastic Container Registry (ECR)
-meta_desc: Pulumi Crosswalk for AWS ECR makes the provisioning of new ECR repositories as simple as one line of code.
+meta_desc: Pulumi Crosswalk for AWS ECR makes the provisioning of new ECR repositories
+  as simple as one line of code.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -13,9 +14,16 @@ menu:
 
 
 aliases:
-- /docs/reference/crosswalk/aws/ecr/
-- /docs/guides/crosswalk/aws/ecr/
-- /docs/clouds/aws/guides/ecr/
+  - /docs/reference/crosswalk/aws/ecr/
+  - /docs/guides/crosswalk/aws/ecr/
+  - /docs/clouds/aws/guides/ecr/
+search:
+  keywords:
+    - ECR
+    - Docker
+    - Elastic Container
+    - Container Registry
+    - Lifecycle Policies
 ---
 
 {{< crosswalk-header >}}

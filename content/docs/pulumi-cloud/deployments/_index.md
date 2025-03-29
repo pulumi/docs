@@ -1,6 +1,7 @@
 ---
 title_tag: "Pulumi Deployments"
-meta_desc: Pulumi Deployments is the fast way for individuals, teams, enterprises, and platforms to go from code to cloud.
+meta_desc: Pulumi Deployments is the fast way for individuals, teams, enterprises,
+  and platforms to go from code to cloud.
 title: "Deployments"
 h1: "Pulumi Deployments"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,10 +12,16 @@ menu:
     identifier: pulumi-cloud-deployments
     weight: 3
 aliases:
-- /docs/intro/pulumi-service/deployments/
-- /docs/intro/deployments/
-- /docs/intro/deployments/platform/
-- /docs/pulumi-cloud/deployments/platform/
+  - /docs/intro/pulumi-service/deployments/
+  - /docs/intro/deployments/
+  - /docs/intro/deployments/platform/
+  - /docs/pulumi-cloud/deployments/platform/
+search:
+  keywords:
+    - Deployments
+    - Infrastructure
+    - Managed Compute
+    - Git Integration
 ---
 
 Pulumi Deployments is a managed CI/CD platform purpose-built for infrastructure as code. It provides everything you need to securely deploy infrastructure changes across your organization, including managed compute, secure secrets handling, and deep integration with version control systems.

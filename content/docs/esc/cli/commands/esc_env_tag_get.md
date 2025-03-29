@@ -1,8 +1,14 @@
 ---
 title: "esc env tag get"
+search:
+  keywords:
+    - environment
+    - command
+    - tag
+    - environment tag
+    - get tag
+    - esc env
 ---
-
-
 
 Get an environment tag
 

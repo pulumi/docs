@@ -2,9 +2,14 @@
 title: "pulumi state unprotect"
 aliases:
   - /docs/reference/cli/pulumi_state_unprotect/
+search:
+  keywords:
+    - state
+    - unprotect
+    - stack state
+    - protect bit
+    - resource URN
 ---
-
-
 
 Unprotect resources in a stack's state
 

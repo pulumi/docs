@@ -2,9 +2,13 @@
 title: "pulumi env tag ls"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_ls/
+search:
+  keywords:
+    - environment
+    - tags
+    - environment tags
+    - command lists
 ---
-
-
 
 List environment tags.
 

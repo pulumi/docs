@@ -2,9 +2,13 @@
 title: "pulumi env get"
 aliases:
   - /docs/reference/cli/pulumi_env_get/
+search:
+  keywords:
+    - environment
+    - value
+    - environment name
+    - static secrets
 ---
-
-
 
 Get a value within an environment.
 

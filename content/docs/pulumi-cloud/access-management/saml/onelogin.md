@@ -1,7 +1,7 @@
 ---
 title_tag: Configuring OneLogin | SAML SSO
-meta_desc: This page provides a walkthrough important aspects of configuring
-  OneLogin as a SAML SSO identity provider (IdP).
+meta_desc: This page provides a walkthrough important aspects of configuring OneLogin
+  as a SAML SSO identity provider (IdP).
 title: OneLogin
 h1: "SAML: Configuring OneLogin"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,9 +12,15 @@ menu:
     weight: 3
     identifier: pulumi-cloud-access-management-saml-onelogin
 aliases:
-- /docs/reference/service/saml-onelogin/
-- /docs/console/accounts/saml/onelogin/
-- /docs/guides/saml/onelogin/
+  - /docs/reference/service/saml-onelogin/
+  - /docs/console/accounts/saml/onelogin/
+  - /docs/guides/saml/onelogin/
+search:
+  keywords:
+    - OneLogin
+    - SAML
+    - SAML SSO
+    - OneLogin Application
 ---
 
 This guide walks you through configuring OneLogin as a SAML SSO identity provider (IdP) for the Pulumi Cloud.

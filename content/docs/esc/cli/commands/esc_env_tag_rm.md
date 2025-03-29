@@ -1,8 +1,14 @@
 ---
 title: "esc env tag rm"
+search:
+  keywords:
+    - tag
+    - environment
+    - remove
+    - environment tag
+    - tag name
+    - command removes
 ---
-
-
 
 Remove an environment tag.
 

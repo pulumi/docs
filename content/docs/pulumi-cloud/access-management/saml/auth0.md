@@ -11,9 +11,16 @@ menu:
     weight: 2
     identifier: pulumi-cloud-access-management-saml-auth0
 aliases:
-- /docs/reference/service/saml-auth0/
-- /docs/console/accounts/saml/auth0/
-- /docs/guides/saml/auth0/
+  - /docs/reference/service/saml-auth0/
+  - /docs/console/accounts/saml/auth0/
+  - /docs/guides/saml/auth0/
+search:
+  keywords:
+    - Auth0
+    - SAML
+    - SAML SSO
+    - identity provider
+    - Auth0 dashboard
 ---
 
 This guide walks you through configuring your Auth0 Authentication Platform as a SAML SSO identity provider

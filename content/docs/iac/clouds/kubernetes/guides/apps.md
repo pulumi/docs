@@ -1,6 +1,7 @@
 ---
 title_tag: Deploy Kubernetes Apps | Crosswalk
-meta_desc: This page gives you an overview on how to deploy Kubernetes applications to different cloud providers.
+meta_desc: This page gives you an overview on how to deploy Kubernetes applications
+  to different cloud providers.
 title: Apps
 h1: Kubernetes Apps
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
@@ -13,6 +14,14 @@ menu:
 aliases:
   - /docs/guides/crosswalk/kubernetes/apps/
   - /docs/clouds/kubernetes/guides/apps/
+search:
+  keywords:
+    - Kubernetes
+    - Deployment
+    - Docker
+    - Kubernetes Apps
+    - Deploy Kubernetes
+    - Cloud Providers
 ---
 
 The following are examples of how to create and use various types of Kubernetes

@@ -5,10 +5,17 @@ title: Miscellaneous
 h1: Miscellaneous Concepts
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        parent: iac-concepts
-        identifier: miscellaneous-concepts
-        weight: 20
+  iac:
+    parent: iac-concepts
+    identifier: miscellaneous-concepts
+    weight: 20
+search:
+  keywords:
+    - Concepts
+    - Miscellaneous
+    - Function Serialization
+    - Property Paths
+    - Miscellaneous Concepts
 ---
 
 Learn more about miscellaneous Pulumi concepts.

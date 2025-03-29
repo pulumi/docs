@@ -1,8 +1,14 @@
 ---
 title: "esc env"
+search:
+  keywords:
+    - environments
+    - manage
+    - command
+    - manage environments
+    - environment definition
+    - environment tags
 ---
-
-
 
 Manage environments
 

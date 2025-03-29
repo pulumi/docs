@@ -2,9 +2,13 @@
 title: "pulumi ai"
 aliases:
   - /docs/reference/cli/pulumi_ai/
+search:
+  keywords:
+    - ai
+    - cli
+    - ai service
+    - cli commands
 ---
-
-
 
 Basic Pulumi AI CLI commands.
 

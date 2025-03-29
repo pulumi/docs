@@ -2,9 +2,13 @@
 title: "pulumi new"
 aliases:
   - /docs/reference/cli/pulumi_new/
+search:
+  keywords:
+    - project
+    - template
+    - secrets provider
+    - source control
 ---
-
-
 
 Create a new Pulumi project
 

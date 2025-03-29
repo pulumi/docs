@@ -1,21 +1,29 @@
 ---
 title_tag: "Policies for AWS (AWSGuard) | CrossGuard"
-meta_desc: AWSGuard codifies best practices for AWS in a library that you can configure and
-           use to enforce these best practices for your own Pulumi stacks or organization.
+meta_desc: AWSGuard codifies best practices for AWS in a library that you can configure
+  and use to enforce these best practices for your own Pulumi stacks or organization.
 title: AWSGuard
 h1: AWSGuard policies
 weight: 3
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: AWSGuard
-        parent: iac-using-pulumi-policy
-        weight: 6
+  iac:
+    name: AWSGuard
+    parent: iac-using-pulumi-policy
+    weight: 6
 aliases:
-- /docs/guides/crossguard/awsguard/
-- /docs/using-pulumi/crossguard/awsguard/
-- /docs/iac/packages-and-automation/crossguard/awsguard/
+  - /docs/guides/crossguard/awsguard/
+  - /docs/using-pulumi/crossguard/awsguard/
+  - /docs/iac/packages-and-automation/crossguard/awsguard/
+search:
+  keywords:
+    - AWSGuard
+    - policies
+    - Policy Pack
+    - best practices
+    - enforcement level
 ---
+
 <!-- markdownlint-disable ul code -->
 
 ## Overview

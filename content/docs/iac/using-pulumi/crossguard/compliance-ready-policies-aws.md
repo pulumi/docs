@@ -5,14 +5,23 @@ title: Compliance Ready Aws Policies
 h1: List of Compliance Ready Policies for Aws
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: AWS Policies
-        parent: iac-using-pulumi-policy-compliance
-        weight: 2
+  iac:
+    name: AWS Policies
+    parent: iac-using-pulumi-policy-compliance
+    weight: 2
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-aws/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-aws/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-aws/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-aws/
+search:
+  keywords:
+    - AWS
+    - Policies
+    - Compliance
+    - Compliance Ready
+    - Access Logging
+    - Customer Managed
 ---
+
 There's a total of 93 Compliance Ready Policies for the Aws provider.
 
 All those policies are available in the `@pulumi/aws-compliance-policies` package.

@@ -2,9 +2,14 @@
 title: "pulumi state repair"
 aliases:
   - /docs/reference/cli/pulumi_state_repair/
+search:
+  keywords:
+    - state
+    - repair
+    - state repair
+    - invalid state
+    - repair command
 ---
-
-
 
 Repair an invalid state
 

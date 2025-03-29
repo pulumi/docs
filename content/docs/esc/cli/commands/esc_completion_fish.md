@@ -1,8 +1,14 @@
 ---
 title: "esc completion fish"
+search:
+  keywords:
+    - fish
+    - completion
+    - script
+    - autocompletion script
+    - fish shell
+    - load completions
 ---
-
-
 
 Generate the autocompletion script for fish
 

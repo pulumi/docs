@@ -2,9 +2,14 @@
 title: "pulumi logs"
 aliases:
   - /docs/reference/cli/pulumi_logs/
+search:
+  keywords:
+    - logs
+    - stack
+    - resource logs
+    - command aggregates
+    - log entries
 ---
-
-
 
 Show aggregated resource logs for a stack
 

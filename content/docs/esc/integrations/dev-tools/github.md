@@ -8,6 +8,13 @@ menu:
   esc:
     identifier: esc-dev-tools-integrations-github
     parent: esc-dev-tools-integrations
+search:
+  keywords:
+    - GitHub
+    - secrets
+    - GitHub Actions
+    - ESC commands
+    - environment variables
 ---
 
 ## Pulumi ESC GitHub Action

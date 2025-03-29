@@ -1,6 +1,7 @@
 ---
 title_tag: "Pulumi Deployments: FAQ & Pricing"
-meta_desc: Frequently asked questions including pricing, general availability, and roadmap.
+meta_desc: Frequently asked questions including pricing, general availability, and
+  roadmap.
 title: FAQ
 h1: Pulumi Deployments FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,6 +13,13 @@ menu:
     identifier: pulumi-cloud-deployments-faq
 aliases:
   - /docs/intro/deployments/faq/
+search:
+  keywords:
+    - Deployments
+    - Caching
+    - Dependency caching
+    - Security isolation
+    - Deployment queue
 ---
 
 ## Security and Isolation

@@ -1,8 +1,11 @@
 ---
 title: "esc login"
+search:
+  keywords:
+    - login
+    - cloud
+    - access token
 ---
-
-
 
 Log in to the Pulumi Cloud
 

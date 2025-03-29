@@ -1,6 +1,7 @@
 ---
 title_tag: gcp-login Pulumi ESC Provider
-meta_desc: The gcp-login Pulumi ESC Provider enables you to log in to Google Cloud using OIDC or by providing static credentials.
+meta_desc: The gcp-login Pulumi ESC Provider enables you to log in to Google Cloud
+  using OIDC or by providing static credentials.
 title: gcp-login
 h1: gcp-login
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,15 @@ menu:
     parent: esc-dynamic-login-credentials
     weight: 3
 aliases:
-    - /docs/pulumi-cloud/esc/providers/gcp-login/
-    - /docs/esc/providers/gcp-login/
+  - /docs/pulumi-cloud/esc/providers/gcp-login/
+  - /docs/esc/providers/gcp-login/
+search:
+  keywords:
+    - gcp
+    - login
+    - oidc
+    - gcp-login
+    - google cloud
 ---
 
 The `gcp-login` provider enables you to log in to Google Cloud using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to access Google Cloud resources or fetch secrets using the `gcp-secrets` provider.

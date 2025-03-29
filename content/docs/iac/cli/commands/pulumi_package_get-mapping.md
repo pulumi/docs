@@ -2,9 +2,14 @@
 title: "pulumi package get-mapping"
 aliases:
   - /docs/reference/cli/pulumi_package_get-mapping/
+search:
+  keywords:
+    - package
+    - mapping
+    - get-mapping
+    - provider key
+    - schema source
 ---
-
-
 
 Get the mapping information for a given key from a package
 

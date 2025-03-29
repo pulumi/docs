@@ -2,9 +2,13 @@
 title: "pulumi gen-completion"
 aliases:
   - /docs/reference/cli/pulumi_gen-completion/
+search:
+  keywords:
+    - completion
+    - scripts
+    - gen-completion
+    - completion scripts
 ---
-
-
 
 Generate completion scripts for the Pulumi CLI
 

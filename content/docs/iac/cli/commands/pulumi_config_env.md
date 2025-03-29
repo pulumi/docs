@@ -2,9 +2,13 @@
 title: "pulumi config env"
 aliases:
   - /docs/reference/cli/pulumi_config_env/
+search:
+  keywords:
+    - config
+    - env
+    - config env
+    - stack management
 ---
-
-
 
 Manage ESC environments for a stack
 

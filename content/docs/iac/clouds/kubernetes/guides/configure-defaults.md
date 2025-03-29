@@ -1,7 +1,7 @@
 ---
 title_tag: Configure Kubernetes Cluster Defaults | Crosswalk
 meta_desc: This page will walk you through how to configure Kubernetes Cluster Defaults
-           on AWS, Azure, and Google Cloud.
+  on AWS, Azure, and Google Cloud.
 title: Cluster defaults
 h1: Kubernetes cluster defaults
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
@@ -14,6 +14,14 @@ menu:
 aliases:
   - /docs/guides/crosswalk/kubernetes/configure-defaults/
   - /docs/clouds/kubernetes/guides/configure-defaults/
+search:
+  keywords:
+    - Kubernetes
+    - Cluster
+    - Defaults
+    - Kubernetes Cluster
+    - Pod Security
+    - Resource Quota
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

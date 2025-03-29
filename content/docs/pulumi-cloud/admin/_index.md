@@ -1,12 +1,19 @@
 ---
 title: Administration
 title_tag: Pulumi Cloud administration
-meta_desc: Learn about managing Pulumi Cloud organizations, self-hosting options, audit logs, and identity and access management features.
+meta_desc: Learn about managing Pulumi Cloud organizations, self-hosting options,
+  audit logs, and identity and access management features.
 menu:
-    cloud:
-        parent: cloud-home
-        weight: 9
-        identifier: pulumi-cloud-admin
+  cloud:
+    parent: cloud-home
+    weight: 9
+    identifier: pulumi-cloud-admin
+search:
+  keywords:
+    - Cloud
+    - Administration
+    - Audit logs
+    - Identity management
 ---
 
 Pulumi Cloud helps you manage infrastructure and operations at scale. Learn how to configure organizations, enable self-hosting, monitor audit logs, and manage identity and access.

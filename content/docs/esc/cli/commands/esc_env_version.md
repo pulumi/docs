@@ -1,8 +1,14 @@
 ---
 title: "esc env version"
+search:
+  keywords:
+    - version
+    - environment
+    - manage
+    - manage versions
+    - environment version
+    - revision history
 ---
-
-
 
 Manage versions
 

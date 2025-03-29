@@ -9,6 +9,12 @@ menu:
     parent: esc-get-started
     identifier: esc-get-started-create-environment
 
+search:
+  keywords:
+    - environment
+    - project
+    - create environment
+    - environment creation
 ---
 
 ## Overview

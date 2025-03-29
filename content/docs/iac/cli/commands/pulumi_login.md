@@ -2,9 +2,13 @@
 title: "pulumi login"
 aliases:
   - /docs/reference/cli/pulumi_login/
+search:
+  keywords:
+    - login
+    - cloud
+    - access token
+    - self-hosted backend
 ---
-
-
 
 Log in to the Pulumi Cloud
 

@@ -2,9 +2,13 @@
 title: "pulumi"
 aliases:
   - /docs/reference/cli/pulumi/
+search:
+  keywords:
+    - CLI
+    - stack
+    - Infrastructure Code
+    - resource management
 ---
-
-
 
 Pulumi command line
 

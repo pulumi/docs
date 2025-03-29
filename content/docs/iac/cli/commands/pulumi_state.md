@@ -2,9 +2,13 @@
 title: "pulumi state"
 aliases:
   - /docs/reference/cli/pulumi_state/
+search:
+  keywords:
+    - state
+    - stack
+    - stack state
+    - edit state
 ---
-
-
 
 Edit the current stack's state
 

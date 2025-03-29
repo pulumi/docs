@@ -1,6 +1,7 @@
 ---
 title_tag: "Pulumi CLI Overview"
-meta_desc: An overview of the Pulumi CLI and common commands used to deploy cloud applications.
+meta_desc: An overview of the Pulumi CLI and common commands used to deploy cloud
+  applications.
 title: Pulumi CLI
 h1: Pulumi CLI overview
 no_on_this_page: true
@@ -12,14 +13,20 @@ menu:
     identifier: iac-cli
     parent: iac-home
 aliases:
-    - /docs/reference/commands/
-    - /docs/tour/basics-deploying/
-    - /docs/tour/basics-destroying/
-    - /docs/tour/basics-previewing/
-    - /docs/tour/basics-up/
-    - /docs/tour/basics-updating/
-    - /docs/reference/cli/
-    - /docs/cli
+  - /docs/reference/commands/
+  - /docs/tour/basics-deploying/
+  - /docs/tour/basics-destroying/
+  - /docs/tour/basics-previewing/
+  - /docs/tour/basics-up/
+  - /docs/tour/basics-updating/
+  - /docs/reference/cli/
+  - /docs/cli
+search:
+  keywords:
+    - CLI
+    - commands
+    - cloud applications
+    - command line
 ---
 
 Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi Cloud

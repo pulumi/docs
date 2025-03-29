@@ -10,6 +10,12 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 4
     identifier: pulumi-cloud-deployments-drift
+search:
+  keywords:
+    - drift
+    - detection
+    - drift detection
+    - drift remediation
 ---
 
 Drift detection is the process of identifying changes in the actual state of your cloud environment that deviate from the expected state stored in Pulumi Cloud. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider’s console, unintended consequences of scripts, or unauthorized changes.

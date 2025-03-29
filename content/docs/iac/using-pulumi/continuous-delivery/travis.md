@@ -1,23 +1,30 @@
 ---
 title_tag: "Using Travis CI | CI/CD"
-meta_desc: This page details how to use Travis CI to manage deploying
-           staging and production stacks based on commits to specific Git branches.
+meta_desc: This page details how to use Travis CI to manage deploying staging and
+  production stacks based on commits to specific Git branches.
 title: Travis CI
 h1: Pulumi CI/CD & Travis CI
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Travis CI
-        parent: iac-using-pulumi-cicd
-        weight: 13
+  iac:
+    name: Travis CI
+    parent: iac-using-pulumi-cicd
+    weight: 13
 aliases:
-- /docs/reference/cd-travis/
-- /docs/console/continuous-delivery/travis/
-- /docs/guides/continuous-delivery/travis/
-- /docs/using-pulumi/continuous-delivery/cd-travis/
-- /docs/guides/continuous-delivery/cd-travis/
-- /docs/using-pulumi/continuous-delivery/travis/
-- /docs/iac/packages-and-automation/continuous-delivery/travis/
+  - /docs/reference/cd-travis/
+  - /docs/console/continuous-delivery/travis/
+  - /docs/guides/continuous-delivery/travis/
+  - /docs/using-pulumi/continuous-delivery/cd-travis/
+  - /docs/guides/continuous-delivery/cd-travis/
+  - /docs/using-pulumi/continuous-delivery/travis/
+  - /docs/iac/packages-and-automation/continuous-delivery/travis/
+search:
+  keywords:
+    - Travis
+    - Stacks
+    - Travis CI
+    - Push-to-Deploy
+    - Continuous Integration
 ---
 
 This page details how to use [Travis CI](https://travis-ci.com/) to manage deploying

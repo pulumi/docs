@@ -2,9 +2,14 @@
 title: "pulumi org"
 aliases:
   - /docs/reference/cli/pulumi_org/
+search:
+  keywords:
+    - org
+    - configuration
+    - organization configuration
+    - default organization
+    - manage organization
 ---
-
-
 
 Manage Organization configuration
 

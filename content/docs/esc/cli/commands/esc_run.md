@@ -1,8 +1,14 @@
 ---
 title: "esc run"
+search:
+  keywords:
+    - environment
+    - command
+    - interactive
+    - environment variables
+    - command run
+    - environment name
 ---
-
-
 
 Open the environment with the given name and run a command.
 

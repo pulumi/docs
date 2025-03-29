@@ -2,9 +2,13 @@
 title: "pulumi stack change-secrets-provider"
 aliases:
   - /docs/reference/cli/pulumi_stack_change-secrets-provider/
+search:
+  keywords:
+    - stack
+    - secrets
+    - secrets provider
+    - change secrets
 ---
-
-
 
 Change the secrets provider for a stack
 

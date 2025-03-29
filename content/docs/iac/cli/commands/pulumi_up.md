@@ -2,9 +2,13 @@
 title: "pulumi up"
 aliases:
   - /docs/reference/cli/pulumi_up/
+search:
+  keywords:
+    - stack
+    - resources
+    - resource operations
+    - goal state
 ---
-
-
 
 Create or update the resources in a stack
 

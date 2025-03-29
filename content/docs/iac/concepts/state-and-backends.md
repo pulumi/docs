@@ -1,25 +1,32 @@
 ---
 title_tag: "State and Backends | Pulumi Concepts"
-meta_desc: Learn about how Pulumi handles your infrastructure state files and supported backend options for these state files.
+meta_desc: Learn about how Pulumi handles your infrastructure state files and supported
+  backend options for these state files.
 title: "State & backends"
 h1: Managing state & backend options
 keywords:
- - IaC
- - infrastructure state
- - state backend
+  - IaC
+  - infrastructure state
+  - state backend
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: State & backends
-        parent: iac-concepts
-        weight: 9
-    concepts:
-        weight: 9
+  iac:
+    name: State & backends
+    parent: iac-concepts
+    weight: 9
+  concepts:
+    weight: 9
 
 aliases:
-- /docs/reference/state/
-- /docs/intro/concepts/state/
-- /docs/concepts/state/
+  - /docs/reference/state/
+  - /docs/intro/concepts/state/
+  - /docs/concepts/state/
+search:
+  keywords:
+    - backend
+    - state
+    - infrastructure state
+    - DIY backend
 ---
 
 Pulumi stores metadata about your infrastructure so that it can manage your cloud resources. This metadata is called _state_. Each [stack](/docs/concepts/stack/) has its own state, and state is how Pulumi knows when and how to create, read, delete, or update cloud resources.

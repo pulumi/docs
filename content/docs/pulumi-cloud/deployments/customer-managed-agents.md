@@ -1,13 +1,20 @@
 ---
 title: Customer-managed agents
 title_tag: Get started with customer-managed agents
-meta_desc: Customer-managed agents allows you to self-host deployment agents and get all the power and flexibility of Pulumi Deployments in your isolated environments
+meta_desc: Customer-managed agents allows you to self-host deployment agents and get
+  all the power and flexibility of Pulumi Deployments in your isolated environments
 menu:
   cloud:
     name: Customer-managed agents
     parent: pulumi-cloud-deployments
     weight: 3
     identifier: pulumi-cloud-deployments-customer-managed-agents
+search:
+  keywords:
+    - agents
+    - deployment
+    - customer-managed agents
+    - deployment agents
 ---
 
 Customer-Managed Agents allow you to self-host deployment agents bringing the same power and flexibility as Pulumi-hosted deployments. Self-hosting your agents comes with many benefits:

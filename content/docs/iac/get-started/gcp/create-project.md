@@ -1,13 +1,20 @@
 ---
 title_tag: Create a New Project | Google Cloud
-meta_desc: This page provides an overview of how to create a new Google Cloud + Pulumi project.
+meta_desc: This page provides an overview of how to create a new Google Cloud + Pulumi
+  project.
 title: Create project
 h1: "Pulumi & Google Cloud: Create project"
 weight: 3
 aliases:
-- /docs/quickstart/gcp/create-project/
-- /docs/get-started/gcp/create-project/
-- /docs/clouds/gcp/get-started/create-project/
+  - /docs/quickstart/gcp/create-project/
+  - /docs/get-started/gcp/create-project/
+  - /docs/clouds/gcp/get-started/create-project/
+search:
+  keywords:
+    - Google
+    - project
+    - Google Cloud
+    - stack name
 ---
 
 Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,

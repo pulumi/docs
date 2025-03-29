@@ -1,7 +1,7 @@
 ---
 title_tag: OpenID Connect client integration for Pulumi
-meta_desc: This page provides an overview of how to configure OpenID Connect integration between
-           third party OIDC Providers and Pulumi.
+meta_desc: This page provides an overview of how to configure OpenID Connect integration
+  between third party OIDC Providers and Pulumi.
 title: OpenID client
 h1: OpenID Connect integration
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,7 +12,14 @@ menu:
     weight: 1
     identifier: pulumi-cloud-access-management-oidc-client
 aliases:
-- /docs/pulumi-cloud/oidc/client/
+  - /docs/pulumi-cloud/oidc/client/
+search:
+  keywords:
+    - OpenID
+    - OIDC
+    - OpenID Connect
+    - token exchange
+    - authorization policy
 ---
 
 Pulumi supports establishing trust relationships with third party OIDC providers by leveraging id_tokens and allowing it to be exchanged for a short-lived Pulumi access token. This mechanism enhances security by eliminating the necessity for hardcoded credentials.

@@ -2,9 +2,14 @@
 title: "pulumi env version tag ls"
 aliases:
   - /docs/reference/cli/pulumi_env_version_tag_ls/
+search:
+  keywords:
+    - version
+    - tag
+    - tagged versions
+    - environment's tagged
+    - command lists
 ---
-
-
 
 List tagged versions.
 

@@ -1,22 +1,30 @@
 ---
 title_tag: "Pulumi vs. OpenTofu"
-meta_desc: Pulumi and OpenTofu have a few similarities, but they differ in many key ways. This page helps provide a rundown of these major differences.
+meta_desc: Pulumi and OpenTofu have a few similarities, but they differ in many key
+  ways. This page helps provide a rundown of these major differences.
 title: OpenTofu
 h1: Pulumi vs. OpenTofu
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: OpenTofu
-        parent: iac-concepts-compare
-        weight: 6
-    concepts:
-        identifier: vs-opentofu
-        parent: vs
-        weight: 6
+  iac:
+    name: OpenTofu
+    parent: iac-concepts-compare
+    weight: 6
+  concepts:
+    identifier: vs-opentofu
+    parent: vs
+    weight: 6
 aliases:
-- /docs/reference/vs/opentofu/
-- /docs/intro/vs/opentofu/
-- /docs/concepts/vs/opentofu/
+  - /docs/reference/vs/opentofu/
+  - /docs/intro/vs/opentofu/
+  - /docs/concepts/vs/opentofu/
+search:
+  keywords:
+    - OpenTofu
+    - Infrastructure
+    - Infrastructure as code
+    - Domain-specific language
+    - Programming languages
 ---
 
 <style>

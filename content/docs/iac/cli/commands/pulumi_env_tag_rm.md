@@ -2,9 +2,13 @@
 title: "pulumi env tag rm"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_rm/
+search:
+  keywords:
+    - tag
+    - environment
+    - environment tag
+    - tag name
 ---
-
-
 
 Remove an environment tag.
 

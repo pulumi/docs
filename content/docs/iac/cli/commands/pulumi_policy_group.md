@@ -2,9 +2,13 @@
 title: "pulumi policy group"
 aliases:
   - /docs/reference/cli/pulumi_policy_group/
+search:
+  keywords:
+    - policy
+    - group
+    - policy group
+    - manage policy
 ---
-
-
 
 Manage policy groups
 

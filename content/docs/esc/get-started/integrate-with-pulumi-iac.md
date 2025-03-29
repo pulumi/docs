@@ -8,6 +8,11 @@ menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-integrate-with-pulumi-iac
+search:
+  keywords:
+    - Configuration
+    - Project
+    - Environment file
 ---
 
 ## Overview

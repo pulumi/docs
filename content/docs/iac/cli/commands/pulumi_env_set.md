@@ -2,9 +2,13 @@
 title: "pulumi env set"
 aliases:
   - /docs/reference/cli/pulumi_env_set/
+search:
+  keywords:
+    - environment
+    - value
+    - environment name
+    - property path
 ---
-
-
 
 Set a value within an environment.
 

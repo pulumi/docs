@@ -2,9 +2,13 @@
 title: "pulumi stack tag get"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_get/
+search:
+  keywords:
+    - stack
+    - tag
+    - stack tag
+    - tag value
 ---
-
-
 
 Get a single stack tag value
 

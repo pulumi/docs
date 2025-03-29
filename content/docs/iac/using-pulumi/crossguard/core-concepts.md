@@ -1,21 +1,32 @@
 ---
 title_tag: "Core Concepts | CrossGuard"
-meta_desc: This page contains an overview of core concepts when interacting with Pulumi CrossGuard and
-           Policy Pack.
+meta_desc: This page contains an overview of core concepts when interacting with Pulumi
+  CrossGuard and Policy Pack.
 title: Concepts
 h1: Pulumi policy as code concepts
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Concepts
-        parent: iac-using-pulumi-policy
-        weight: 2
-        identifier: iac-using-pulumi-policy-concepts
+  iac:
+    name: Concepts
+    parent: iac-using-pulumi-policy
+    weight: 2
+    identifier: iac-using-pulumi-policy-concepts
 aliases:
-- /docs/guides/crossguard/core-concepts/
-- /docs/using-pulumi/crossguard/core-concepts/
-- /docs/iac/packages-and-automation/crossguard/core-concepts/
+  - /docs/guides/crossguard/core-concepts/
+  - /docs/using-pulumi/crossguard/core-concepts/
+  - /docs/iac/packages-and-automation/crossguard/core-concepts/
+search:
+  keywords:
+    - Policies
+    - CrossGuard
+    - Policy Packs
+    - Resource Policies
+    - Policy as Code
+    - Infrastructure as Code
+    - Policy Violations
+    - Enforcement Levels
+    - Policy Fundamentals
 ---
 
 Pulumi CrossGuard provides policy as code capabilities that can be used in two key ways:

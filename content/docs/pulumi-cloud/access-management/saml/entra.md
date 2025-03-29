@@ -1,7 +1,7 @@
 ---
 title_tag: Configuring Microsoft Entra ID | SAML SSO
-meta_desc: This page provides a walkthrough important aspects of configuring 
-           Entra ID as a SAML SSO identity provider (IDP).
+meta_desc: This page provides a walkthrough important aspects of configuring Entra
+  ID as a SAML SSO identity provider (IDP).
 title: Microsoft Entra ID
 h1: "SAML: Configuring Microsoft Entra ID"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,10 +12,16 @@ menu:
     weight: 3
     identifier: pulumi-cloud-access-management-saml-entra
 aliases:
-- /docs/reference/service/saml-aad/
-- /docs/console/accounts/saml/aad/
-- /docs/guides/saml/aad/
-- /docs/pulumi-cloud/access-management/saml/aad/
+  - /docs/reference/service/saml-aad/
+  - /docs/console/accounts/saml/aad/
+  - /docs/guides/saml/aad/
+  - /docs/pulumi-cloud/access-management/saml/aad/
+search:
+  keywords:
+    - Entra
+    - SAML
+    - Microsoft Entra
+    - SAML SSO
 ---
 
 This guide walks you through configuring Microsoft Entra ID as a SAML SSO identity provider

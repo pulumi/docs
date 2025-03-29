@@ -1,16 +1,22 @@
 ---
 title: pulumi-stacks
 title_tag: pulumi-stacks Pulumi ESC Provider
-meta_desc: The pulumi-stacks provider enables you to import Stack outputs from Pulumi into your Environment.
+meta_desc: The pulumi-stacks provider enables you to import Stack outputs from Pulumi
+  into your Environment.
 h1: pulumi-stacks
 menu:
-    esc:
-        identifier: pulumi-stacks
-        parent: esc-pulumi-iac-integrations
-        weight: 1
+  esc:
+    identifier: pulumi-stacks
+    parent: esc-pulumi-iac-integrations
+    weight: 1
 aliases:
-    - /docs/pulumi-cloud/esc/providers/pulumi-stacks/
-    - /docs/esc/providers/pulumi-stacks/
+  - /docs/pulumi-cloud/esc/providers/pulumi-stacks/
+  - /docs/esc/providers/pulumi-stacks/
+search:
+  keywords:
+    - provider
+    - environment
+    - stack outputs
 ---
 
 The `pulumi-stacks` provider enables you to import Stack outputs from Pulumi into your Environment.

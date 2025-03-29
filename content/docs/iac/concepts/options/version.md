@@ -1,6 +1,7 @@
 ---
 title_tag: "version | Resource Options"
-meta_desc: The version resource option specifies a provider version to use when operating on a resource.
+meta_desc: The version resource option specifies a provider version to use when operating
+  on a resource.
 title: "version"
 h1: "Resource option: version"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,15 @@ menu:
     parent: options-concepts
     weight: 15
 aliases:
-- /docs/intro/concepts/resources/options/version/
-- /docs/concepts/options/version/
+  - /docs/intro/concepts/resources/options/version/
+  - /docs/concepts/options/version/
+search:
+  keywords:
+    - version
+    - resource
+    - provider
+    - resource option
+    - provider version
 ---
 
 The `version` resource option specifies a provider version to use when operating on a resource. This version overrides the version information inferred from the current package. This option was built to be used directly by the Pulumi SDK. `version` should not be used directly during normal operations.

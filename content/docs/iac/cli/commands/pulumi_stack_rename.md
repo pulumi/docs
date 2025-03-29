@@ -2,9 +2,13 @@
 title: "pulumi stack rename"
 aliases:
   - /docs/reference/cli/pulumi_stack_rename/
+search:
+  keywords:
+    - stack
+    - rename
+    - stack rename
+    - resource name
 ---
-
-
 
 Rename an existing stack
 

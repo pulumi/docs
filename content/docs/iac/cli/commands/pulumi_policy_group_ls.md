@@ -2,9 +2,13 @@
 title: "pulumi policy group ls"
 aliases:
   - /docs/reference/cli/pulumi_policy_group_ls/
+search:
+  keywords:
+    - policy
+    - group
+    - policy groups
+    - command options
 ---
-
-
 
 List all Policy Groups for a Pulumi organization
 

@@ -2,9 +2,14 @@
 title: "pulumi config get"
 aliases:
   - /docs/reference/cli/pulumi_config_get/
+search:
+  keywords:
+    - config
+    - get
+    - configuration value
+    - path flag
+    - json output
 ---
-
-
 
 Get a single configuration value
 

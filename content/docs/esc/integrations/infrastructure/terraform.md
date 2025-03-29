@@ -8,7 +8,14 @@ menu:
     parent: esc-inf-tools-integrations
     weight: 3
 aliases:
-    - /docs/esc/other-integrations/terraform/
+  - /docs/esc/other-integrations/terraform/
+search:
+  keywords:
+    - Terraform
+    - ESC
+    - Terraform CLI
+    - environment variables
+    - AWS credentials
 ---
 
 ## Overview

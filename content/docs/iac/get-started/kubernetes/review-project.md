@@ -10,9 +10,15 @@ menu:
     identifier: kubernetes-review-project-get-started
 
 aliases:
-- /docs/quickstart/kubernetes/review-project/
-- /docs/get-started/kubernetes/review-project/
-- /docs/iac/get-started/kubernetes/review-project/
+  - /docs/quickstart/kubernetes/review-project/
+  - /docs/get-started/kubernetes/review-project/
+  - /docs/iac/get-started/kubernetes/review-project/
+search:
+  keywords:
+    - Kubernetes
+    - NGINX
+    - Kubernetes project
+    - NGINX deployment
 ---
 
 Let's review some of the generated project files:

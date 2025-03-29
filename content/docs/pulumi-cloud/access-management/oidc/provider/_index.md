@@ -1,7 +1,7 @@
 ---
 title_tag: OpenID Connect provider integration for Pulumi
-meta_desc: This page provides an overview of how to configure OpenID Connect integration between
-           Pulumi and supported cloud providers.
+meta_desc: This page provides an overview of how to configure OpenID Connect integration
+  between Pulumi and supported cloud providers.
 title: OpenID provider
 h1: OpenID Connect provider integration
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,7 +12,14 @@ menu:
     weight: 3
     identifier: pulumi-cloud-access-management-oidc-provider
 aliases:
-- /docs/pulumi-cloud/oidc/provider/
+  - /docs/pulumi-cloud/oidc/provider/
+search:
+  keywords:
+    - OIDC
+    - token
+    - OpenID Connect
+    - cloud provider
+    - trust relationships
 ---
 
 Pulumi supports OpenID Connect (OIDC) integration across various services. OIDC enables secure interactions between Pulumi services and cloud providers by leveraging signed, short-lived tokens issued by the Pulumi Cloud. This mechanism enhances security by eliminating the necessity for hardcoded cloud provider credentials and facilitates the exchange of these tokens for short-term credentials from your cloud provider.

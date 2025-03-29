@@ -1,20 +1,29 @@
 ---
 title_tag: "Import Existing Cloud Infrastructure"
-meta_desc: Learn how to import existing cloud infrastructure into Pulumi no matter how it was provisioned.
+meta_desc: Learn how to import existing cloud infrastructure into Pulumi no matter
+  how it was provisioned.
 title: "Import resources"
 h1: "Importing resources"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Importing resources
-        parent: iac-adopting
-        weight: 2
-    usingpulumi:
-        parent: adopting-pulumi
-        weight: 3
+  iac:
+    name: Importing resources
+    parent: iac-adopting
+    weight: 2
+  usingpulumi:
+    parent: adopting-pulumi
+    weight: 3
 aliases:
-- /docs/guides/adopting/import/
-- /docs/using-pulumi/adopting-pulumi/import/
+  - /docs/guides/adopting/import/
+  - /docs/using-pulumi/adopting-pulumi/import/
+search:
+  keywords:
+    - import
+    - resources
+    - cloud infrastructure
+    - resource import
+    - existing resources
+    - cloud provider
 ---
 
 Most infrastructure as code projects require working with existing cloud resources, whether those resources were originally created with another IaC tool or manually provisioned with a cloud provider console or CLI. Interacting with a previously created cloud resource with Pulumi typically happens in one of two ways:

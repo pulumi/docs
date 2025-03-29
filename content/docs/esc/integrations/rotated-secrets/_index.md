@@ -9,6 +9,13 @@ menu:
     identifier: esc-rotated-secrets
     parent: esc-integrations
     weight: 2
+search:
+  keywords:
+    - Rotators
+    - Credentials
+    - credential rotation
+    - external services
+    - OpenID Connect
 ---
 
 Pulumi ESC Rotators enable you to rotate credentials both automatically and manually for a number of supported services.

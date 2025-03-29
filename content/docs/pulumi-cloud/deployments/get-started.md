@@ -8,6 +8,12 @@ menu:
     parent: pulumi-cloud-deployments
     weight: 1
     identifier: pulumi-cloud-deployments-get-started
+search:
+  keywords:
+    - GitHub
+    - Deployments
+    - New Project
+    - GitHub repository
 ---
 
 ## Prerequisites

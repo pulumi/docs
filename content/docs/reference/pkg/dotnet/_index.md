@@ -1,5 +1,11 @@
 ---
 title: API Reference (.NET)
+search:
+  keywords:
+    - API
+    - SDK
+    - Automation API
+    - General Purpose
 ---
 
 ### General Purpose Packages

@@ -1,8 +1,14 @@
 ---
 title: "esc env tag"
+search:
+  keywords:
+    - tags
+    - environment
+    - command
+    - environment tags
+    - manage environment
+    - subcommands exist
 ---
-
-
 
 Manage environment tags
 

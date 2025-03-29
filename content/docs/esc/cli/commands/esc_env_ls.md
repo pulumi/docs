@@ -1,8 +1,14 @@
 ---
 title: "esc env ls"
+search:
+  keywords:
+    - environments
+    - command
+    - options
+    - list environments
+    - filter environments
+    - manage environments
 ---
-
-
 
 List environments.
 

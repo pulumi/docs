@@ -1,21 +1,28 @@
 ---
 title_tag: "Frequently Asked Questions (FAQs) | CrossGuard"
-meta_desc: This page contains Frequently Asked Questions about Pulumi CrossGuard and Policy Packs.
+meta_desc: This page contains Frequently Asked Questions about Pulumi CrossGuard and
+  Policy Packs.
 title: FAQ
 h1: Pulumi CrossGuard (Policy as code) FAQ
 weight: 7
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: FAQ
-        parent: iac-using-pulumi-policy
-        weight: 8
-        identifier: iac-using-pulumi-policy-faq
+  iac:
+    name: FAQ
+    parent: iac-using-pulumi-policy
+    weight: 8
+    identifier: iac-using-pulumi-policy-faq
 aliases:
-- /docs/guides/crossguard/faq/
-- /docs/using-pulumi/crossguard/faq/
-- /docs/iac/packages-and-automation/crossguard/
-- /docs/iac/packages-and-automation/crossguard/faq/
+  - /docs/guides/crossguard/faq/
+  - /docs/using-pulumi/crossguard/faq/
+  - /docs/iac/packages-and-automation/crossguard/
+  - /docs/iac/packages-and-automation/crossguard/faq/
+search:
+  keywords:
+    - CrossGuard
+    - Policy
+    - Policy Packs
+    - Policy Groups
 ---
 
 ## Is CrossGuard open source?

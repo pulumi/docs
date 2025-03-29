@@ -2,9 +2,14 @@
 title: "pulumi config rm-all"
 aliases:
   - /docs/reference/cli/pulumi_config_rm-all/
+search:
+  keywords:
+    - config
+    - remove
+    - configuration values
+    - path flag
+    - command options
 ---
-
-
 
 Remove multiple configuration values
 

@@ -2,9 +2,14 @@
 title: "pulumi config env rm"
 aliases:
   - /docs/reference/cli/pulumi_config_env_rm/
+search:
+  keywords:
+    - config
+    - environment
+    - environment removal
+    - stack import
+    - command options
 ---
-
-
 
 Remove environment from a stack
 

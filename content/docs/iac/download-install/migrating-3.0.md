@@ -6,11 +6,17 @@ no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 
 aliases:
-- /docs/get-started/install/migrating-3.0/
-- /docs/get-started/install/migrating-2.0/
-- /docs/install/migrating-2.0
-- /docs/install/migrating-3.0
-- /docs/iac/install
+  - /docs/get-started/install/migrating-3.0/
+  - /docs/get-started/install/migrating-2.0/
+  - /docs/install/migrating-2.0
+  - /docs/install/migrating-3.0
+  - /docs/iac/install
+search:
+  keywords:
+    - upgrade
+    - SDK
+    - CLI behavior
+    - MockResourceArgs
 ---
 
 Pulumi 3.0 is generally available. It’s simple to upgrade:

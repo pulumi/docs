@@ -1,19 +1,27 @@
 ---
 title_tag: Before You Begin | Google Cloud
-meta_desc: This page provides an overview on how to get started with Pulumi and Google Cloud.
+meta_desc: This page provides an overview on how to get started with Pulumi and Google
+  Cloud.
 title: Before you begin
 h1: "Pulumi & Google Cloud: Before you begin"
 weight: 2
 aliases:
-- /docs/quickstart/gcp/begin/
-- /docs/quickstart/gcp/install-pulumi/
-- /docs/quickstart/gcp/install-language-runtime/
-- /docs/quickstart/gcp/configure/
-- /docs/get-started/gcp/install-pulumi/
-- /docs/get-started/gcp/install-language-runtime/
-- /docs/get-started/gcp/configure
-- /docs/get-started/gcp/begin/
-- /docs/clouds/gcp/get-started/begin/
+  - /docs/quickstart/gcp/begin/
+  - /docs/quickstart/gcp/install-pulumi/
+  - /docs/quickstart/gcp/install-language-runtime/
+  - /docs/quickstart/gcp/configure/
+  - /docs/get-started/gcp/install-pulumi/
+  - /docs/get-started/gcp/install-language-runtime/
+  - /docs/get-started/gcp/configure
+  - /docs/get-started/gcp/begin/
+  - /docs/clouds/gcp/get-started/begin/
+search:
+  keywords:
+    - Google
+    - Cloud
+    - Google Cloud
+    - Language Runtime
+    - IAM User
 ---
 
 Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.

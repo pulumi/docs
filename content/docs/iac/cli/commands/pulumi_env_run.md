@@ -2,9 +2,14 @@
 title: "pulumi env run"
 aliases:
   - /docs/reference/cli/pulumi_env_run/
+search:
+  keywords:
+    - environment
+    - command
+    - environment variables
+    - interactive commands
+    - output filters
 ---
-
-
 
 Open the environment with the given name and run a command.
 

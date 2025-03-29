@@ -1,25 +1,30 @@
 ---
 title_tag: "Pulumi Troubleshooting Guide"
-meta_desc: This guide covers common troubleshooting techniques when using Pulumi, such as tracing, manually editing deployments, and resolving common errors.
+meta_desc: This guide covers common troubleshooting techniques when using Pulumi,
+  such as tracing, manually editing deployments, and resolving common errors.
 title: Troubleshooting
 h1: Pulumi troubleshooting
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Troubleshooting
-        parent: iac-support
-        weight: 2
-        identifier: iac-support-troubleshooting
-    support:
-        weight: 1
+  iac:
+    name: Troubleshooting
+    parent: iac-support
+    weight: 2
+    identifier: iac-support-troubleshooting
+  support:
+    weight: 1
 search:
-    keywords:
-        - debugging pulumi programs
-
+  keywords:
+    - debugging pulumi programs
+    - troubleshooting
+    - debugging
+    - verbose logging
+    - common errors
+    - performance tracing
 aliases:
-    - /docs/reference/troubleshooting/
-    - /docs/troubleshooting/
-    - /docs/support/troubleshooting/
+  - /docs/reference/troubleshooting/
+  - /docs/troubleshooting/
+  - /docs/support/troubleshooting/
 ---
 
 Sometimes things go wrong. If you can't update your stack, or there's another problem that is

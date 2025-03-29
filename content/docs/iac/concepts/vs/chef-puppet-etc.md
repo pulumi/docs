@@ -1,21 +1,29 @@
 ---
 title_tag: "Pulumi vs. Chef, Puppet, Ansible, and Salt"
-meta_desc: Learn about the major differences between Pulumi and configuration management tools like Chef, Puppet, Ansible, Salt, and more.
+meta_desc: Learn about the major differences between Pulumi and configuration management
+  tools like Chef, Puppet, Ansible, Salt, and more.
 title: Chef & Puppet
 h1: Chef, Puppet, Ansible, & Salt vs Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Chef & Puppet
-        parent: iac-concepts-compare
-        weight: 8
-    concepts:
-        parent: vs
-        weight: 9
+  iac:
+    name: Chef & Puppet
+    parent: iac-concepts-compare
+    weight: 8
+  concepts:
+    parent: vs
+    weight: 9
 aliases:
-- /docs/reference/vs/chef_puppet_etc/
-- /docs/intro/vs/chef_puppet_etc/
-- /docs/concepts/vs/chef-puppet-etc/
+  - /docs/reference/vs/chef_puppet_etc/
+  - /docs/intro/vs/chef_puppet_etc/
+  - /docs/concepts/vs/chef-puppet-etc/
+search:
+  keywords:
+    - Chef
+    - Puppet
+    - configuration management
+    - cloud infrastructure
+    - virtual machines
 ---
 
 Chef, Puppet, Ansible, and Salt are all popular _configuration management tools_. These tools help you install and

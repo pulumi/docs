@@ -1,23 +1,28 @@
 ---
 title_tag: "Using Pulumi GitHub Actions | CI/CD"
-meta_desc: Pulumi's Github Actions help you deploy apps and infrastructure to your cloud of
-           choice, using nothing but code in your favorite language and GitHub.
+meta_desc: Pulumi's Github Actions help you deploy apps and infrastructure to your
+  cloud of choice, using nothing but code in your favorite language and GitHub.
 title: GitHub Actions
 h1: GitHub Actions for Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: GitHub Actions
-        parent: iac-using-pulumi-cicd
-        weight: 6
+  iac:
+    name: GitHub Actions
+    parent: iac-using-pulumi-cicd
+    weight: 6
 aliases:
-- /docs/reference/cd-github-actions/
-- /docs/console/continuous-delivery/github-actions/
-- /docs/guides/continuous-delivery/github-actions/
-- /docs/using-pulumi/continuous-delivery/cd-github-actions/
-- /docs/guides/continuous-delivery/cd-github-actions/
-- /docs/using-pulumi/continuous-delivery/github-actions/
-- /docs/iac/packages-and-automation/continuous-delivery/github-actions/
+  - /docs/reference/cd-github-actions/
+  - /docs/console/continuous-delivery/github-actions/
+  - /docs/guides/continuous-delivery/github-actions/
+  - /docs/using-pulumi/continuous-delivery/cd-github-actions/
+  - /docs/guides/continuous-delivery/cd-github-actions/
+  - /docs/using-pulumi/continuous-delivery/github-actions/
+  - /docs/iac/packages-and-automation/continuous-delivery/github-actions/
+search:
+  keywords:
+    - GitHub
+    - Actions
+    - GitHub Actions
 ---
 
 {{% notes type="info" %}}

@@ -1,6 +1,7 @@
 ---
 title_tag: vault-login Pulumi ESC Provider
-meta_desc: The vault-login Pulumi ESC Provider enables you to log in to HashiCorp Vault using OpenID Connect or by providing static credentials.
+meta_desc: The vault-login Pulumi ESC Provider enables you to log in to HashiCorp
+  Vault using OpenID Connect or by providing static credentials.
 title: vault-login
 h1: vault-login
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -10,8 +11,15 @@ menu:
     parent: esc-dynamic-login-credentials
     weight: 4
 aliases:
-    - /docs/pulumi-cloud/esc/providers/vault-login/
-    - /docs/esc/providers/vault-login/
+  - /docs/pulumi-cloud/esc/providers/vault-login/
+  - /docs/esc/providers/vault-login/
+search:
+  keywords:
+    - vault
+    - OIDC
+    - vault-login
+    - HashiCorp Vault
+    - OpenID Connect
 ---
 
 The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to fetch secrets using the `vault-secrets` provider.

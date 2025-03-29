@@ -1,8 +1,14 @@
 ---
 title: "esc env rm"
+search:
+  keywords:
+    - environment
+    - remove
+    - command
+    - remove environment
+    - environment value
+    - confirmation prompts
 ---
-
-
 
 Remove an environment or a value from an environment.
 

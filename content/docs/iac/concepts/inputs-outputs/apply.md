@@ -5,15 +5,23 @@ title: Accessing single outputs with Apply
 h1: Accessing single outputs with Apply
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Apply
-        parent: iac-concepts-inputs-outputs
-        weight: 1
-    concepts:
-        weight: 2
-        parent: inputs-outputs
+  iac:
+    name: Apply
+    parent: iac-concepts-inputs-outputs
+    weight: 1
+  concepts:
+    weight: 2
+    parent: inputs-outputs
 aliases:
-    - /docs/concepts/inputs-outputs/apply/
+  - /docs/concepts/inputs-outputs/apply/
+search:
+  keywords:
+    - Outputs
+    - Apply
+    - single output
+    - AWSX VPC
+    - resource properties
+    - asynchronous outputs
 ---
 
 [Outputs](/docs/concepts/inputs-outputs/#outputs) are asynchronous, meaning their actual plain values are not immediately available. Their values will only become available once the resource has finished provisioning. The asynchronous nature of Outputs is also why, when certain operations such as [`pulumi preview`](/docs/cli/commands/pulumi_preview/) runs, the outputs for a new resource do not yet have any possible values. As such, there are limitations on the ways in which you can retrieve and interact with these values.

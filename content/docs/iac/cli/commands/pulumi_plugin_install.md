@@ -2,9 +2,14 @@
 title: "pulumi plugin install"
 aliases:
   - /docs/reference/cli/pulumi_plugin_install/
+search:
+  keywords:
+    - plugin
+    - install
+    - plugin install
+    - specific version
+    - command options
 ---
-
-
 
 Install one or more plugins
 

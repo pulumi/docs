@@ -2,7 +2,8 @@
 title_tag: TypeScript/JavaScript SDK | Pulumi ESC
 title: TypeScript (Node.js)
 h1: "Pulumi ESC: TypeScript/JavaScript SDK"
-meta_desc: This page provides an overview on how to use Pulumi ESC TypeScript/JavaScript SDK.
+meta_desc: This page provides an overview on how to use Pulumi ESC TypeScript/JavaScript
+  SDK.
 menu:
   esc:
     parent: esc-languages-sdks
@@ -10,6 +11,13 @@ menu:
     weight: 1
 aliases:
   - /docs/esc/sdk/javascript/
+search:
+  keywords:
+    - TypeScript
+    - Node.js
+    - JavaScript SDK
+    - environment definitions
+    - access token
 ---
 
 The [JavaScript/TypeScript SDK](https://www.npmjs.com/package/@pulumi/esc-sdk) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.

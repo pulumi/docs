@@ -1,8 +1,12 @@
 ---
 title: "esc logout"
+search:
+  keywords:
+    - logout
+    - backends
+    - stored credentials
+    - cloud URL
 ---
-
-
 
 Log out of the Pulumi Cloud
 

@@ -2,9 +2,13 @@
 title: "pulumi policy rm"
 aliases:
   - /docs/reference/cli/pulumi_policy_rm/
+search:
+  keywords:
+    - Policy
+    - Removal
+    - Policy Pack
+    - Command Options
 ---
-
-
 
 Removes a Policy Pack from a Pulumi organization
 

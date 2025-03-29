@@ -1,6 +1,7 @@
 ---
 title_tag: "Pulumi Copilot"
-meta_desc: Learn about Pulumi Copilot, a new conversational chat interface integrated throughout Pulumi Cloud.
+meta_desc: Learn about Pulumi Copilot, a new conversational chat interface integrated
+  throughout Pulumi Cloud.
 title: Pulumi Copilot
 h1: Pulumi Copilot Overview
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -11,8 +12,14 @@ menu:
     weight: 5
     identifier: pulumi-cloud-copilot
 aliases:
-- /docs/intro/copilot/
-- /docs/intro/pulumi-cloud/copilot/
+  - /docs/intro/copilot/
+  - /docs/intro/pulumi-cloud/copilot/
+search:
+  keywords:
+    - Copilot
+    - Cloud
+    - Cloud Infrastructure
+    - Generative AI
 ---
 
 Pulumi Copilot is a new conversational chat interface integrated throughout Pulumi Cloud, enabling Pulumi Cloud users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the combination of generative AI and the rich capabilities of Pulumi Cloud.

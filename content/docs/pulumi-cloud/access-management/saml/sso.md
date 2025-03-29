@@ -1,7 +1,6 @@
 ---
 title_tag: Configuring SAML | SAML SSO
-meta_desc:
-  This page provides a walkthrough important aspects of configuring any SAML
+meta_desc: This page provides a walkthrough important aspects of configuring any SAML
   (Security Assertion Markup Language) 2.0 identity provider.
 title: Using SAML
 h1: "SAML: Terminology & concepts"
@@ -13,8 +12,15 @@ menu:
     weight: 1
     identifier: pulumi-cloud-access-management-saml-sso
 aliases:
-- /docs/intro/pulumi-cloud/accounts/saml/
-- /docs/guides/saml/sso/
+  - /docs/intro/pulumi-cloud/accounts/saml/
+  - /docs/guides/saml/sso/
+search:
+  keywords:
+    - SAML
+    - IdP
+    - SAML configuration
+    - identity provider
+    - service provider
 ---
 
 This document walks through the important aspects of configuring any SAML (Security Assertion Markup Language) 2.0 identity provider to work

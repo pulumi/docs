@@ -2,9 +2,13 @@
 title: "pulumi schema check"
 aliases:
   - /docs/reference/cli/pulumi_schema_check/
+search:
+  keywords:
+    - schema
+    - check
+    - package schema
+    - schema check
 ---
-
-
 
 Check a Pulumi package schema for errors
 

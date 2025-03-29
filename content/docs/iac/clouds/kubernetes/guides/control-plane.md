@@ -1,7 +1,7 @@
 ---
 title_tag: Create a Kubernetes Control Plane | Crosswalk
 meta_desc: This page will walk you through how to create on a Kubernetes Control Pane
-           on AWS, Azure, and Google Cloud.
+  on AWS, Azure, and Google Cloud.
 title: Control Plane
 h1: Kubernetes Control Plane
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
@@ -15,6 +15,14 @@ aliases:
   - /docs/guides/crosswalk/kubernetes/control-plane/
   - /docs/clouds/kubernetes/guides/configure-defaults/
   - /docs/clouds/kubernetes/guides/control-plane/
+search:
+  keywords:
+    - Kubernetes
+    - Control
+    - Plane
+    - Kubernetes Control
+    - Managed Infrastructure
+    - Identity Management
 ---
 
 {{< chooser cloud "aws,azure,gcp" / >}}

@@ -2,9 +2,13 @@
 title: "pulumi version"
 aliases:
   - /docs/reference/cli/pulumi_version/
+search:
+  keywords:
+    - version
+    - commands
+    - command line
+    - help version
 ---
-
-
 
 Print Pulumi's version number
 

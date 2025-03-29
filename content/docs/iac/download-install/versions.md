@@ -6,9 +6,15 @@ menu:
     weight: 1
 
 aliases:
-- /docs/reference/changelog/
-- /docs/get-started/install/versions/
-- /docs/install/versions/
+  - /docs/reference/changelog/
+  - /docs/get-started/install/versions/
+  - /docs/install/versions/
+search:
+  keywords:
+    - CLI
+    - versions
+    - stable version
+    - changelog table
 ---
 
 The current stable version of Pulumi is **{{< latest-version >}}**.

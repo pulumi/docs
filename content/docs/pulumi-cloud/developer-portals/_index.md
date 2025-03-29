@@ -9,6 +9,13 @@ menu:
     parent: cloud-home
     weight: 7
     identifier: pulumi-cloud-developer-portals
+search:
+  keywords:
+    - Backstage
+    - Templates
+    - Developer portals
+    - Organization Templates
+    - New Project
 ---
 
 At Pulumi, we work with companies that range in size from a few engineers to entire departments responsible for managing infrastructure.

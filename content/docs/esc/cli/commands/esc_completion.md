@@ -1,8 +1,14 @@
 ---
 title: "esc completion"
+search:
+  keywords:
+    - autocompletion
+    - script
+    - shell
+    - autocompletion script
+    - specified shell
+    - esc completion
 ---
-
-
 
 Generate the autocompletion script for the specified shell
 

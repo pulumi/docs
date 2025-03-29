@@ -2,9 +2,13 @@
 title: "pulumi query"
 aliases:
   - /docs/reference/cli/pulumi_query/
+search:
+  keywords:
+    - query
+    - resources
+    - query program
+    - cloud resources
 ---
-
-
 
 Run query program against cloud resources
 

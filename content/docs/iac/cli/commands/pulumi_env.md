@@ -2,9 +2,14 @@
 title: "pulumi env"
 aliases:
   - /docs/reference/cli/pulumi_env/
+search:
+  keywords:
+    - environments
+    - command
+    - manage environments
+    - environment definition
+    - dynamic data
 ---
-
-
 
 Manage environments
 

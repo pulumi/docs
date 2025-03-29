@@ -4,18 +4,25 @@ meta_desc: This page provides an overview and guide on how to get started with A
 title: Get started
 h1: Get started with Pulumi & Azure
 menu:
-    iac:
-        name: Azure
-        parent: iac-get-started
-        weight: 2
-    clouds:
-        parent: azure
-        identifier: azure-get-started
-        weight: 2
+  iac:
+    name: Azure
+    parent: iac-get-started
+    weight: 2
+  clouds:
+    parent: azure
+    identifier: azure-get-started
+    weight: 2
 aliases:
-    - /docs/quickstart/azure/
-    - /docs/get-started/azure/
-    - /docs/clouds/azure/get-started/
+  - /docs/quickstart/azure/
+  - /docs/get-started/azure/
+  - /docs/clouds/azure/get-started/
+search:
+  keywords:
+    - Azure
+    - Overview
+    - Get started
+    - Microsoft Azure
+    - Azure guide
 ---
 
 {{< cloud-intro "Microsoft Azure" >}}

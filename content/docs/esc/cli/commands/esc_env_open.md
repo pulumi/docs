@@ -1,8 +1,14 @@
 ---
 title: "esc env open"
+search:
+  keywords:
+    - environment
+    - open
+    - format
+    - environment open
+    - property path
+    - output format
 ---
-
-
 
 Open the environment with the given name.
 

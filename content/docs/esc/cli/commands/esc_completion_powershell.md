@@ -1,8 +1,14 @@
 ---
 title: "esc completion powershell"
+search:
+  keywords:
+    - powershell
+    - completion
+    - script
+    - autocompletion script
+    - shell session
+    - powershell profile
 ---
-
-
 
 Generate the autocompletion script for powershell
 

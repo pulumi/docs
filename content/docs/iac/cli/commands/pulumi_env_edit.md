@@ -2,9 +2,14 @@
 title: "pulumi env edit"
 aliases:
   - /docs/reference/cli/pulumi_env_edit/
+search:
+  keywords:
+    - environment
+    - edit
+    - environment definition
+    - editor variable
+    - command options
 ---
-
-
 
 Edit an environment definition
 

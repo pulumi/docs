@@ -8,6 +8,11 @@ menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-begin
+search:
+  keywords:
+    - ESC
+    - CLI
+    - access token
 ---
 
 Before you get started using Pulumi ESC, let's run through a few quick steps to ensure your environment is set up correctly.

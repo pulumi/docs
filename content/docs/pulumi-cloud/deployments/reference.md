@@ -12,6 +12,12 @@ menu:
     identifier: pulumi-cloud-deployments-reference
 aliases:
   - /docs/intro/deployments/reference/
+search:
+  keywords:
+    - Deployments
+    - API
+    - Deployment Settings
+    - GitHub App
 ---
 
 This page highlights some common patterns and workflows using Pulumi Deployments.

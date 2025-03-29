@@ -2,9 +2,13 @@
 title: "pulumi plugin ls"
 aliases:
   - /docs/reference/cli/pulumi_plugin_ls/
+search:
+  keywords:
+    - plugin
+    - ls
+    - plugin ls
+    - command options
 ---
-
-
 
 List plugins
 

@@ -2,9 +2,13 @@
 title: "pulumi stack"
 aliases:
   - /docs/reference/cli/pulumi_stack/
+search:
+  keywords:
+    - stack
+    - manage
+    - stack state
+    - update history
 ---
-
-
 
 Manage stacks and view stack state
 

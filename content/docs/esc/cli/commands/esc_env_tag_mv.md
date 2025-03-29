@@ -1,8 +1,14 @@
 ---
 title: "esc env tag mv"
+search:
+  keywords:
+    - mv
+    - tag
+    - environment
+    - environment tag
+    - move tag
+    - command updates
 ---
-
-
 
 Move an environment tag
 

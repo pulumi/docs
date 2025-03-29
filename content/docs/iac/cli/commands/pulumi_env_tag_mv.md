@@ -2,9 +2,14 @@
 title: "pulumi env tag mv"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_mv/
+search:
+  keywords:
+    - environment
+    - tag
+    - environment tag
+    - move tag
+    - command updates
 ---
-
-
 
 Move an environment tag
 

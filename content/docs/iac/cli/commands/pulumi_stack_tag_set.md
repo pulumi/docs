@@ -2,9 +2,13 @@
 title: "pulumi stack tag set"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_set/
+search:
+  keywords:
+    - stack
+    - tag
+    - stack tag
+    - tag set
 ---
-
-
 
 Set a stack tag
 

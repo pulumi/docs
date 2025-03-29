@@ -2,7 +2,8 @@
 title_tag: "Using AWS CloudWatch | Crosswalk"
 title: CloudWatch
 h1: AWS CloudWatch
-meta_desc: Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS CloudWatch metrics, resources and applications.
+meta_desc: Pulumi Crosswalk for AWS CloudWatch help you operationally understand and
+  manage your AWS CloudWatch metrics, resources and applications.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -12,9 +13,15 @@ menu:
     weight: 2
 
 aliases:
-- /docs/reference/crosswalk/aws/cloudwatch/
-- /docs/guides/crosswalk/aws/cloudwatch/
-- /docs/clouds/aws/guides/cloudwatch/
+  - /docs/reference/crosswalk/aws/cloudwatch/
+  - /docs/guides/crosswalk/aws/cloudwatch/
+  - /docs/clouds/aws/guides/cloudwatch/
+search:
+  keywords:
+    - CloudWatch
+    - Metrics
+    - AWS CloudWatch
+    - CloudWatch Metrics
 ---
 
 {{< crosswalk-header >}}

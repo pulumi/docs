@@ -10,9 +10,16 @@ menu:
     identifier: azure-review-project
 
 aliases:
-- /docs/quickstart/azure/review-project/
-- /docs/get-started/azure/review-project/
-- /docs/clouds/azure/get-started/review-project/
+  - /docs/quickstart/azure/review-project/
+  - /docs/get-started/azure/review-project/
+  - /docs/clouds/azure/get-started/review-project/
+search:
+  keywords:
+    - Azure
+    - Storage
+    - Azure project
+    - Resource Group
+    - Storage Account
 ---
 
 Let's review some of the generated project files:

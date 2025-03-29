@@ -5,13 +5,19 @@ title: Changelog
 h1: Self-Hosted Changelog
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    cloud:
-        name: Changelog
-        parent: pulumi-cloud-admin-self-hosted
-        weight: 5
-        identifier: pulumi-cloud-admin-self-hosted-changelog
+  cloud:
+    name: Changelog
+    parent: pulumi-cloud-admin-self-hosted
+    weight: 5
+    identifier: pulumi-cloud-admin-self-hosted-changelog
 aliases:
   - /docs/pulumi-cloud/self-hosted/changelog/
+search:
+  keywords:
+    - Changelog
+    - Self-hosted
+    - Self-hosted Changelog
+    - Access tokens
 ---
 
 {{% notes type="info" %}}

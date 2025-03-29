@@ -2,9 +2,13 @@
 title: "pulumi stack init"
 aliases:
   - /docs/reference/cli/pulumi_stack_init/
+search:
+  keywords:
+    - stack
+    - secrets
+    - stack init
+    - secrets provider
 ---
-
-
 
 Create an empty stack with the given name, ready for updates
 

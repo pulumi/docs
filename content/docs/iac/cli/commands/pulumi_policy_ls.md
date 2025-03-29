@@ -2,9 +2,14 @@
 title: "pulumi policy ls"
 aliases:
   - /docs/reference/cli/pulumi_policy_ls/
+search:
+  keywords:
+    - policy
+    - organization
+    - Policy Packs
+    - command options
+    - output JSON
 ---
-
-
 
 List all Policy Packs for a Pulumi organization
 

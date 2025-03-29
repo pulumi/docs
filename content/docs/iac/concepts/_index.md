@@ -1,22 +1,30 @@
 ---
 title_tag: What is Pulumi?
-meta_desc: Learn about what Pulumi is, how it works, and how its components work together to deliver a robust platform for creating and managing cloud infrastructure.
+meta_desc: Learn about what Pulumi is, how it works, and how its components work together
+  to deliver a robust platform for creating and managing cloud infrastructure.
 title: Concepts
 h1: What is Pulumi?
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Concepts
-        weight: 30
-        parent: iac-home
-        identifier: iac-concepts
-    concepts:
-        name: Overview
-        weight: 4
+  iac:
+    name: Concepts
+    weight: 30
+    parent: iac-home
+    identifier: iac-concepts
+  concepts:
+    name: Overview
+    weight: 4
 aliases:
-- /docs/reference/concepts/
-- /docs/intro/concepts/
-- /docs/concepts/
+  - /docs/reference/concepts/
+  - /docs/intro/concepts/
+  - /docs/concepts/
+search:
+  keywords:
+    - Infrastructure
+    - Cloud
+    - Infrastructure as code
+    - Command-Line interface
+    - Software development kit
 ---
 
 Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. It leverages existing programming languages---TypeScript, JavaScript, Python, Go, .NET, Java, and markup languages like YAML---and their native ecosystems to interact with cloud resources. A [downloadable CLI](/docs/install/), runtime, libraries, and a hosted service work together to deliver a robust platform for provisioning, updating, and managing cloud infrastructure.

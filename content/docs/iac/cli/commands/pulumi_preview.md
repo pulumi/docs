@@ -2,9 +2,13 @@
 title: "pulumi preview"
 aliases:
   - /docs/reference/cli/pulumi_preview/
+search:
+  keywords:
+    - preview
+    - stack
+    - stack resources
+    - state file
 ---
-
-
 
 Show a preview of updates to a stack's resources
 

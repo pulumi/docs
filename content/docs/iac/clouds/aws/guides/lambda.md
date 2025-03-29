@@ -2,7 +2,8 @@
 title_tag: "Using AWS Lambda & Serverless Events | Crosswalk"
 title: Lambda
 h1: AWS Lambda & Serverless Events
-meta_desc: Pulumi Crosswalk for AWS brings a more natural, and easier to use, way of building serverless applications using AWS Lambda.
+meta_desc: Pulumi Crosswalk for AWS brings a more natural, and easier to use, way
+  of building serverless applications using AWS Lambda.
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
@@ -11,37 +12,42 @@ menu:
     identifier: aws-guides-lambda
     weight: 11
 search:
-    keywords:
-        - aws-apigateway.RestAPI
-        - aws.cloudwatch.onSchedule
-        - aws.cloudwatch.EventRule.onEvent
-        - aws.cloudwatch.LogGroup.onEvent
-        - aws.dynamodb.Table.onEvent
-        - aws.kinesis.Stream.onEvent
-        - aws.s3.Bucket.onObjectCreated
-        - aws.s3.Bucket.onObjectRemoved
-        - aws.s3.Bucket.onEvent
-        - aws.sns.Topic.onEvent
-        - aws.sqs.Queue.onEvent
-        - APIGatewayProxyEvent
-        - aws.s3.BucketEvent
-        - aws.dynamodb.TableEvent
-        - aws.kinesis.StreamEvent
-        - aws.sns.TopicEvent
-        - aws.sqs.QueueEvent
-        - aws.cloudwatch.LogGroupEvent
-        - aws.cloudwatch.EventRuleEvent
-        - aws.lambda.CallbackFunction
-        - aws.lambda.Function
-        - aws.lambda.LayerVersion
-        - codePathOptions
-        - magic functions
-        - lambda layers
-        - tsconfig paths baseUrl
+  keywords:
+    - aws-apigateway.RestAPI
+    - aws.cloudwatch.onSchedule
+    - aws.cloudwatch.EventRule.onEvent
+    - aws.cloudwatch.LogGroup.onEvent
+    - aws.dynamodb.Table.onEvent
+    - aws.kinesis.Stream.onEvent
+    - aws.s3.Bucket.onObjectCreated
+    - aws.s3.Bucket.onObjectRemoved
+    - aws.s3.Bucket.onEvent
+    - aws.sns.Topic.onEvent
+    - aws.sqs.Queue.onEvent
+    - APIGatewayProxyEvent
+    - aws.s3.BucketEvent
+    - aws.dynamodb.TableEvent
+    - aws.kinesis.StreamEvent
+    - aws.sns.TopicEvent
+    - aws.sqs.QueueEvent
+    - aws.cloudwatch.LogGroupEvent
+    - aws.cloudwatch.EventRuleEvent
+    - aws.lambda.CallbackFunction
+    - aws.lambda.Function
+    - aws.lambda.LayerVersion
+    - codePathOptions
+    - magic functions
+    - lambda layers
+    - tsconfig paths baseUrl
+    - Lambda
+    - AWS
+    - AWS Lambda
+    - serverless applications
+    - event sources
 aliases:
-- /docs/reference/crosswalk/aws/lambda/
-- /docs/guides/crosswalk/aws/lambda/
-- /docs/clouds/aws/guides/lambda/
+  - /docs/reference/crosswalk/aws/lambda/
+  - /docs/guides/crosswalk/aws/lambda/
+  - /docs/clouds/aws/guides/lambda/
 ---
 
 {{< crosswalk-header >}}

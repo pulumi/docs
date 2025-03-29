@@ -6,14 +6,21 @@ h1: Automation API concepts & terminology
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Concepts
-        parent: iac-using-pulumi-automation-api
-        weight: 2
+  iac:
+    name: Concepts
+    parent: iac-using-pulumi-automation-api
+    weight: 2
 aliases:
-- /docs/guides/automation-api/concepts-terminology/
-- /docs/using-pulumi/automation-api/concepts-terminology/
-- /docs/iac/packages-and-automation/automation-api/concepts-terminology/
+  - /docs/guides/automation-api/concepts-terminology/
+  - /docs/using-pulumi/automation-api/concepts-terminology/
+  - /docs/iac/packages-and-automation/automation-api/concepts-terminology/
+search:
+  keywords:
+    - Workspace
+    - Stack
+    - Automation API
+    - LocalWorkspace
+    - RemoteWorkspace
 ---
 
 Automation API lets you define a Pulumi program as a function within your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically.

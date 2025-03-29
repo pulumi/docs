@@ -1,22 +1,28 @@
 ---
 title_tag: "Add Support for CI/CD Systems"
-meta_desc: This guide walks you through how you can configure your CI/CD environment manually
-           to surface data in the Pulumi Cloud.
+meta_desc: This guide walks you through how you can configure your CI/CD environment
+  manually to surface data in the Pulumi Cloud.
 title: Adding CI/CD support
 h1: Adding Pulumi support for CI/CD systems
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Adding CI/CD support
-        parent: iac-using-pulumi-cicd
-        weight: 98
+  iac:
+    name: Adding CI/CD support
+    parent: iac-using-pulumi-cicd
+    weight: 98
 aliases:
-- /docs/reference/cd-supporting-new-ci/
-- /docs/console/continuous-delivery/other/
-- /docs/guides/continuous-delivery/other/
-- /docs/guides/continuous-delivery/add-support-for-cicd-systems/
-- /docs/using-pulumi/continuous-delivery/add-support-for-cicd-systems/
-- /docs/iac/packages-and-automation/continuous-delivery/add-support-for-cicd-systems/
+  - /docs/reference/cd-supporting-new-ci/
+  - /docs/console/continuous-delivery/other/
+  - /docs/guides/continuous-delivery/other/
+  - /docs/guides/continuous-delivery/add-support-for-cicd-systems/
+  - /docs/using-pulumi/continuous-delivery/add-support-for-cicd-systems/
+  - /docs/iac/packages-and-automation/continuous-delivery/add-support-for-cicd-systems/
+search:
+  keywords:
+    - CI
+    - metadata
+    - CI/CD support
+    - environment variables
 ---
 
 If the Pulumi CLI doesn't automatically detect your CI/CD system, this guide

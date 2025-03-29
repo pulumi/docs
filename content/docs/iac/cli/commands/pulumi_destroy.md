@@ -2,9 +2,13 @@
 title: "pulumi destroy"
 aliases:
   - /docs/reference/cli/pulumi_destroy/
+search:
+  keywords:
+    - destroy
+    - stack
+    - existing resources
+    - state file
 ---
-
-
 
 Destroy all existing resources in the stack
 

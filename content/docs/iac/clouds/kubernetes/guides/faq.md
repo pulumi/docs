@@ -12,6 +12,12 @@ menu:
 aliases:
   - /docs/guides/crosswalk/kubernetes/faq/
   - /docs/clouds/kubernetes/guides/faq/
+search:
+  keywords:
+    - Kubernetes
+    - Crosswalk
+    - Crosswalk Kubernetes
+    - Kubernetes FAQ
 ---
 
 1. **What does Crosswalk for Kubernetes include?**

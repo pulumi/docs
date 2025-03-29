@@ -2,9 +2,14 @@
 title: "pulumi stack tag rm"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_rm/
+search:
+  keywords:
+    - stack
+    - tag
+    - stack tag
+    - remove tag
+    - command options
 ---
-
-
 
 Remove a stack tag
 

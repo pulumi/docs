@@ -1,6 +1,7 @@
 ---
 title_tag: Configuring OneLogin | SCIM
-meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi and OneLogin.
+meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi
+  and OneLogin.
 title: OneLogin
 h1: "SCIM: Configuring OneLogin"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,6 +13,13 @@ menu:
     identifier: pulumi-cloud-access-management-scim-onelogin
 aliases:
   - /docs/guides/scim/onelogin/
+search:
+  keywords:
+    - OneLogin
+    - SCIM
+    - SCIM provisioning
+    - OneLogin Application
+    - SAML SSO
 ---
 
 This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.

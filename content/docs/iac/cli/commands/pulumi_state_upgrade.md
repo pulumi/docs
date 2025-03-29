@@ -2,9 +2,14 @@
 title: "pulumi state upgrade"
 aliases:
   - /docs/reference/cli/pulumi_state_upgrade/
+search:
+  keywords:
+    - upgrade
+    - backend
+    - state upgrade
+    - current backend
+    - latest supported
 ---
-
-
 
 Migrates the current backend to the latest supported version
 

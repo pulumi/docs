@@ -1,21 +1,29 @@
 ---
 title_tag: "Testing Pulumi Programs"
-meta_desc: "Guide to automated testing of Pulumi programs: unit testing, property testing, integration testing."
+meta_desc: "Guide to automated testing of Pulumi programs: unit testing, property
+  testing, integration testing."
 title: Testing
 h1: Testing Pulumi programs
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Testing
-        parent: iac-concepts
-        weight: 15
-        identifier: iac-concepts-testing
-    usingpulumi:
-        identifier: testing
-        weight: 8
+  iac:
+    name: Testing
+    parent: iac-concepts
+    weight: 15
+    identifier: iac-concepts-testing
+  usingpulumi:
+    identifier: testing
+    weight: 8
 aliases:
-- /docs/guides/testing/
-- /docs/using-pulumi/testing/
+  - /docs/guides/testing/
+  - /docs/using-pulumi/testing/
+search:
+  keywords:
+    - Testing
+    - Infrastructure
+    - Unit Testing
+    - Property Testing
+    - Integration Testing
 ---
 
 Because Pulumi uses general purpose programming languages to provision cloud resources, you can take advantage of native testing frameworks and perform **automated tests** of your infrastructure.

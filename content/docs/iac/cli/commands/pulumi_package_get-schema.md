@@ -2,9 +2,14 @@
 title: "pulumi package get-schema"
 aliases:
   - /docs/reference/cli/pulumi_package_get-schema/
+search:
+  keywords:
+    - schema
+    - package
+    - get-schema
+    - schema.json
+    - plugin binary
 ---
-
-
 
 Get the schema.json from a package
 

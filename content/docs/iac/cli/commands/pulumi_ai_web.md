@@ -2,9 +2,13 @@
 title: "pulumi ai web"
 aliases:
   - /docs/reference/cli/pulumi_ai_web/
+search:
+  keywords:
+    - AI
+    - web
+    - local browser
+    - default browser
 ---
-
-
 
 Opens Pulumi AI in your local browser
 
