@@ -5,11 +5,17 @@ draft: false
 meta_desc: "Release of the next version of the Pulumi Provider for AWS EKS"
 meta_image: meta.png
 authors:
-    - florian-stadler
+  - florian-stadler
 tags:
-    - aws
-    - eks
-    - release
+  - aws
+  - eks
+  - release
+search:
+  keywords:
+    - EKS
+    - AWS
+    - Amazon Linux
+    - Managed Addons
 ---
 
 The latest major release of the Pulumi EKS Provider is available now!

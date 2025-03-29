@@ -1,13 +1,20 @@
 ---
 title: "Pulumi Interstellar"
 date: 2021-04-01
-meta_desc: "Infrastructure as code was just the start. Today we announce Pulumi Interstellar for Terraforming as Code."
+meta_desc: "Infrastructure as code was just the start. Today we announce Pulumi Interstellar
+  for Terraforming as Code."
 meta_image: pulumi_interstellar.png
 authors:
-    - zack-chase
-    - sophia-parafina
+  - zack-chase
+  - sophia-parafina
 tags:
-    - pulumi-news
+  - pulumi-news
+search:
+  keywords:
+    - Terraforming
+    - Rockets
+    - Resource Providers
+    - Planetary Travel
 ---
 
 Earth is just the beginning. We are putting down the foundations of space so our children can build their future.  At Pulumi, we are committed to making life multi-planetary. We are excited to announce Pulumi Interstellar, a collection of resource providers that will help us reach the future of a space-faring and multi-planet species.

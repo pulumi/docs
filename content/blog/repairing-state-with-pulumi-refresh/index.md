@@ -3,15 +3,22 @@ title: "Repairing State With Pulumi Refresh"
 
 date: 2022-09-01T10:19:47+02:00
 
-meta_desc: A walkthrough of how Pulumi's state can diverge from provider reality, and how `pulumi refresh` can correct Pulumi's state.
+meta_desc: A walkthrough of how Pulumi's state can diverge from provider reality,
+  and how `pulumi refresh` can correct Pulumi's state.
 
 meta_image: meta.png
 
 authors:
-    - ian-wahbe
+  - ian-wahbe
 
 tags:
-    - features
+  - features
+search:
+  keywords:
+    - Refresh
+    - State
+    - State engine
+    - Pending operations
 ---
 
 Under the hood, Pulumi is a desired state engine. This means that you tell Pulumi what you want, Pulumi knows what already exists, and it makes targeted changes to match the state of the world with your desired state. This works great as long as Pulumi understands the state of the world, which it nearly always does. We will discuss how `pulumi refresh` can be used to bring Pulumi's state back inline with external state.

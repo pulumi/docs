@@ -3,7 +3,7 @@ title: "Simplify OIDC Trust with the New Pulumi GitHub Action"
 
 date: 2024-05-20T21:45:13Z
 
-meta_desc: Introducing Pulumi GitHub Action for OIDC Trust Relationships 
+meta_desc: Introducing Pulumi GitHub Action for OIDC Trust Relationships
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -14,18 +14,24 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - german-lena
-    - arun-loganathan
-    
+  - german-lena
+  - arun-loganathan
+
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - oidc
-    - openid-connect
-    - features
+  - oidc
+  - openid-connect
+  - features
 
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - OIDC
+    - GitHub
+    - OIDC Trust
+    - GitHub Action
 ---
 
 We're excited to announce a new GitHub Action that simplifies the integration of Pulumi's powerful [OpenID Connect](/docs/pulumi-cloud/oidc/client/) (OIDC) Trust feature into your [GitHub Actions](/docs/pulumi-cloud/oidc/client/github/) workflows. This action streamlines secure authentication with Pulumi Cloud, allowing you to leverage GitHub as an identity provider and eliminate the need for long-lived Pulumi access tokens.

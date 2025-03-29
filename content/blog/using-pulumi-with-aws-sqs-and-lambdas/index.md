@@ -1,10 +1,18 @@
 ---
 title: "Using Pulumi with AWS SQS and Lambdas"
 authors: ["cyrus-najmabadi"]
-tags: ["JavaScript","Serverless","AWS"]
+tags: ["JavaScript", "Serverless", "AWS"]
 date: "2018-07-10"
-meta_desc: "Learn how to use Amazon's SQS with Pulumi in order to post a Slack notification upon receipt of a message via SQS."
+meta_desc: "Learn how to use Amazon's SQS with Pulumi in order to post a Slack notification
+  upon receipt of a message via SQS."
 
+search:
+  keywords:
+    - AWS
+    - Lambda
+    - AWS SQS
+    - Serverless computing
+    - Slack notification
 ---
 
 [Two weeks ago](https://aws.amazon.com/blogs/aws/aws-lambda-adds-amazon-simple-queue-service-to-supported-event-sources/)

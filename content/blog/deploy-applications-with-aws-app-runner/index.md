@@ -1,14 +1,22 @@
 ---
 title: "Easily Deploy Applications With AWS App Runner"
 date: 2021-05-18
-meta_desc: "AWS App Runner configures networking, scaling, and security, letting deploy applications via source code or container."
+meta_desc: "AWS App Runner configures networking, scaling, and security, letting deploy
+  applications via source code or container."
 meta_image: aws-app-runner.png
 authors:
-    - lee-zen
+  - lee-zen
 tags:
-    - AWS
-    - App Runner
+  - AWS
+  - App Runner
 
+search:
+  keywords:
+    - AWS
+    - Docker
+    - App Runner
+    - container application
+    - ECR repository
 ---
 
 There are loads of benefits to packaging up an application as a container. You can ensure that your application has all the required dependencies and runs in the isolated, predictable environment you expect. When it comes to running that containerized application, there are many options, including Kubernetes, Amazon Elastic Container Service (ECS), and Docker. Often, running a container application at scale requires setting up a container orchestrator and providing network infrastructure to the containers. Configuring this can be complex, especially if you’re not familiar with virtual networking concepts such as virtual private clouds, load balancers, and the like.

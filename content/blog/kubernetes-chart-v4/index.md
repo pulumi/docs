@@ -2,16 +2,24 @@
 title: "New: Helm Chart v4 resource with new features and languages"
 date: 2024-06-13T00:00:00-07:00
 meta_desc: >-
-  Pulumi Kubernetes v4.13 offers a new resource for applying Helm charts consistently across Pulumi SDKs, with new features and SDK support.
+  Pulumi Kubernetes v4.13 offers a new resource for applying Helm charts consistently
+  across Pulumi SDKs, with new features and SDK support.
 meta_image: chartv4.png
 authors:
-    - eron-wright
+  - eron-wright
 
 tags:
-    - kubernetes
-    - yaml
-    - java
-    - helm
+  - kubernetes
+  - yaml
+  - java
+  - helm
+search:
+  keywords:
+    - Helm
+    - Kubernetes
+    - Helm chart
+    - OCI registry
+    - Chart values
 ---
 
 Today we're happy to announce a new "v4" version of the Chart resource, available now in v4.13 of the Pulumi Kubernetes provider.

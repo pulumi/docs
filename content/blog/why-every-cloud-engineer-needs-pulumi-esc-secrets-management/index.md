@@ -18,7 +18,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Managing secrets in the cloud is harder than ever. Learn how cloud engineers can streamline security, eliminate risks, and simplify secrets management at scale.
+meta_desc: Managing secrets in the cloud is harder than ever. Learn how cloud engineers
+  can streamline security, eliminate risks, and simplify secrets management at scale.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,17 +30,17 @@ meta_image: pulumi-esc-quote.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - security
-    - esc
-    - external-secrets-operator
-    - kubernetes
-    - secrets-management
-    - csi
-    - secrets
+  - security
+  - esc
+  - external-secrets-operator
+  - kubernetes
+  - secrets-management
+  - csi
+  - secrets
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -54,8 +55,14 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - secrets
+    - cloud
+    - secrets management
+    - cloud engineers
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

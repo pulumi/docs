@@ -17,7 +17,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: 'Introducing Dev Releases for the Pulumi CLI and SDKs: early releases to enable customers to access changes as soon as they have been merged.'
+meta_desc: 'Introducing Dev Releases for the Pulumi CLI and SDKs: early releases to
+  enable customers to access changes as soon as they have been merged.'
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,13 +29,20 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - thomas-gummerer
+  - thomas-gummerer
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
   - cli
   - sdk
   - pre-release
+search:
+  keywords:
+    - CLI
+    - SDK
+    - dev releases
+    - stable releases
+    - bug fixes
 ---
 
 At Pulumi, the stability of our CLI and SDK releases is critically important.  A lot of infrastructure is built and deployed using Pulumi, and any bugs in how that infrastructure is deployed can cause outages.  While we put a lot of emphasis on unit and integration testing, we are also constantly investing in new ways to provide additional safeguards to ensure we always deliver stable releases.  To that end, we are introducing new dev releases of our CLI and SDKs, which will enable users who want to work with the very latest bits to try them out before they are deployed widely to the entire Pulumi user base.  This blog post will walk you through how we are using them internally, and how you can too!

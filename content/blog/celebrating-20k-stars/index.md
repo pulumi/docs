@@ -3,14 +3,24 @@ title: "Celebrating 20,000 Stars: A Milestone for the Pulumi Community"
 allow_long_title: true
 date: 2024-05-23T18:48:50Z
 draft: false
-meta_desc: "Pulumi celebrates 20,000 stars on GitHub! We couldn't have reached this incredible milestone without y'all. Over the last 7 years, the project has had 4,400+ contributors, 75,000+ pull requests, and over 100 million downloads. Check out a quick recap of the journey, key futures, and future roadmap."
-social_media: "We just past 20k stars on GitHub! We couldn't have reached this incredible milestone without y'all. Read a quick recap of the journey and key features"
+meta_desc: "Pulumi celebrates 20,000 stars on GitHub! We couldn't have reached this
+  incredible milestone without y'all. Over the last 7 years, the project has had 4,400+
+  contributors, 75,000+ pull requests, and over 100 million downloads. Check out a
+  quick recap of the journey, key futures, and future roadmap."
+social_media: "We just past 20k stars on GitHub! We couldn't have reached this incredible
+  milestone without y'all. Read a quick recap of the journey and key features"
 meta_image: meta.png
 authors:
-    - aaron-kao
+  - aaron-kao
 tags:
-    - pulumi-news
-    - opensource
+  - pulumi-news
+  - opensource
+search:
+  keywords:
+    - GitHub
+    - Infrastructure
+    - Cloud Infrastructure
+    - Open Source
 ---
 
 Today, we're excited to announce that the [Pulumi open source project](https://github.com/pulumi/pulumi) has crossed the incredible milestone of 20,000 stars on GitHub. 🎉 This is a huge achievement, and it wouldn't have been possible without y'all - our incredible global community of developers.

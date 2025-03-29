@@ -5,6 +5,12 @@ authors: ["eron-wright"]
 tags: ["Kubernetes", "Continuous-Delivery", "operators"]
 meta_desc: "Pulumi Kubernetes Operator 2.0: Horizontal Scaling, Multi-Tenancy"
 meta_image: operator.png
+search:
+  keywords:
+    - Kubernetes
+    - Operator
+    - Kubernetes Operator
+    - Stack Resource
 ---
 
 _Update: ["Pulumi Kubernetes Operator 2.0 is Now Generally Available!"](/blog/pko-2-0-ga/)_

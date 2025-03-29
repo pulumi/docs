@@ -1,13 +1,22 @@
 ---
 title: "Getting Started With Kubernetes: Application Basics"
 date: 2020-06-30
-meta_desc: "Part 2 of a 3-part tutorial for getting started with Kubernetes using Infrastructure as Code."
+meta_desc: "Part 2 of a 3-part tutorial for getting started with Kubernetes using
+  Infrastructure as Code."
 meta_image: getting-started.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - Kubernetes
+  - Kubernetes
 
+search:
+  keywords:
+    - Kubernetes
+    - Pods
+    - Deployment
+    - Kubernetes cluster
+    - Infrastructure as Code
+    - Persistent Volumes
 ---
 
 Welcome to the second article in a series using infrastructure as code to deploy applications with Kubernetes. The series walks you through building a Kubernetes cluster on cloud providers, deploying applications, and “Day 2” activities such as migrating Node groups. In the [previous article](/blog/getting-started-with-k8s-part1/), we showed how to create a Kubernetes cluster for AWS, Azure, and GCP. In this installment, we’ll learn how to deploy an application using Kubernetes objects.

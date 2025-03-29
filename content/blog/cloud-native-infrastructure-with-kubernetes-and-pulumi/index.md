@@ -1,10 +1,18 @@
 ---
 title: "Cloud Native Infrastructure with Kubernetes and Pulumi"
 date: "2018-09-12"
-meta_desc: "Pulumi for Kubernetes lets you create, deploy, & manage Kubernetes apps using programming language across AWS, Azure, Google Cloud, and native environments."
+meta_desc: "Pulumi for Kubernetes lets you create, deploy, & manage Kubernetes apps
+  using programming language across AWS, Azure, Google Cloud, and native environments."
 meta_image: "meta.png"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
+search:
+  keywords:
+    - Kubernetes
+    - Infrastructure
+    - Cloud Native
+    - Programming Languages
+    - Deployment Orchestration
 ---
 
 Kubernetes has quickly become the "gold standard" for running containers

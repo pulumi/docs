@@ -1,10 +1,17 @@
 ---
 title: "Managing your MySQL databases with Pulumi"
 date: "2019-05-28"
-meta_desc: "In this post, we'll walk through a quick tutorial of how to use the Pulumi MySQL provider to manage new and existing MySQL databases."
+meta_desc: "In this post, we'll walk through a quick tutorial of how to use the Pulumi
+  MySQL provider to manage new and existing MySQL databases."
 meta_image: "hero.png"
 authors: ["linio-engineering"]
 tags: ["guest-post", "mysql"]
+search:
+  keywords:
+    - MySQL
+    - database
+    - MySQL provider
+    - MySQL databases
 ---
 
 One of the most critical components of an application’s infrastructure is its

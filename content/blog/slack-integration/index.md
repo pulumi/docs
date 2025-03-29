@@ -2,15 +2,22 @@
 title: "Announcing Slack and Deployment Notifications for Pulumi Cloud"
 allow_long_title: true
 date: 2023-05-30
-meta_desc: Pulumi Cloud now has an easy to set up Slack integration, Pulumi Deployments notifications and event filtering.
+meta_desc: Pulumi Cloud now has an easy to set up Slack integration, Pulumi Deployments
+  notifications and event filtering.
 
 meta_image: meta.png
 authors:
-    - meagan-cojocar
-    - komal-ali
+  - meagan-cojocar
+  - komal-ali
 tags:
-    - features
-    - pulumi-cloud
+  - features
+  - pulumi-cloud
+search:
+  keywords:
+    - Slack
+    - Webhooks
+    - Slack integration
+    - Deployment notifications
 ---
 
 Today, we are excited to introduce a set of improvements to [Pulumi Cloud Webhooks](/docs/pulumi-cloud/webhooks) designed to deliver your deployment notifications to where you already spend your time, enabling faster response times to critical issues. Getting your deployment notifications into Slack is now easier than ever on Pulumi Cloud with our new Slack integration. We are also announcing two new improvements to our webhooks feature: Pulumi Deployments events and fine-grained event filtering.

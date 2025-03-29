@@ -11,7 +11,9 @@ date: 2022-03-02
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: Today we are launching a new Business Critical Edition for the Pulumi Service, a 30 day Self-Hosted Pulumi Service trial, and the option to purchase Pulumi Enterprise and Business Critical through the AWS Marketplace!
+meta_desc: Today we are launching a new Business Critical Edition for the Pulumi Service,
+  a 30 day Self-Hosted Pulumi Service trial, and the option to purchase Pulumi Enterprise
+  and Business Critical through the AWS Marketplace!
 
 
 # The meta_image appears in social-media previews and on the blog home page.
@@ -23,15 +25,23 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
+  - features
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - Enterprise
+    - Modernization
+    - Business Critical
+    - Self-Hosted
+    - AWS Marketplace
 ---
+
 In the last 12 months, we have experienced 350% year-over-year growth of our enterprise customers, including Mercedes-Benz, Snowflake, Atlassian and SANS Institute. Given the growth in our enterprise customer base, we are excited to launch today a new Business Critical Edition for the Pulumi Service, a 30 day Self-Hosted Pulumi Service trial, and the option to purchase Pulumi Enterprise and Business Critical through the AWS Marketplace!
 
 <!--more-->

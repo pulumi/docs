@@ -1,13 +1,21 @@
 ---
 title: "Accessing Secrets Safely in Lambda Functions"
 date: 2022-10-12T17:19:53+01:00
-meta_desc: Follow along and see how you can use Pulumi to securely store secrets and access them in your Lambda Functions.
+meta_desc: Follow along and see how you can use Pulumi to securely store secrets and
+  access them in your Lambda Functions.
 meta_image: meta.png
 authors:
-    - piers-karsenbarg
+  - piers-karsenbarg
 tags:
-    - security
-    - serverless
+  - security
+  - serverless
+search:
+  keywords:
+    - Lambda
+    - Secrets
+    - Lambda Functions
+    - Secrets Manager
+    - Environment Variables
 ---
 
 The subject of how to make use of secrets in Lambda Functions comes up a fair bit, and although there seems to be a lot of discussion on where you _should_ store them, the one thing that comes up is that **you should never store the plain text values of secrets in the Lambda Function's environment variables**. One such discussion I was having with a customer made me think about how it should be possible to take the secrets that you've got on your [stack config file](https://www.pulumi.com/docs/concepts/config) and then use them to configure your Lambda Function, with the plain text values going into the Function's environment variables and the encrypted secret values going into AWS' Secrets Manager.

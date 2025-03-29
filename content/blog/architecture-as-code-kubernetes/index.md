@@ -4,9 +4,17 @@ date: 2020-05-12
 meta_desc: "Using infrastructure as code to deploy Kubernetes to support hard multi-tenancy"
 meta_image: kubernetes.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - kubernetes
+  - kubernetes
+search:
+  keywords:
+    - Kubernetes
+    - Architecture
+    - Code
+    - Architecture as Code
+    - Multi-tenancy
+    - Cloud service providers
 ---
 
 This is the fifth and last installment of the [Architecture as Code](/blog/architecture-as-code-intro/) series. In previous articles, we examined how to create reusable components for the primary architectural patterns for cloud infrastructure. Starting with [virtual machines](/blog/architecture-as-code-vm/), we examined how to create and configure VMs. In the follow-up article, we demonstrated how to create reusable components from resources that comprise a [microservices](/blog/architecture-as-code-microservices/) architecture. After microservices, we looked at [serverless](/blog/architecture-as-code-serverless/) architecture, which despite its name, also requires additional resources to deploy a function or application. In this article, we’ll look at deployment patterns for Kubernetes with a focus on multi-tenancy issues.

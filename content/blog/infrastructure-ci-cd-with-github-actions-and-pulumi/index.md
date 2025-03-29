@@ -1,15 +1,22 @@
 ---
 title: "Infrastructure CI/CD With Github Actions and Pulumi"
 date: 2020-12-14
-meta_desc: "See how GitHub Actions and the new Pulumi CI/CD Assistant help you achieve continuous delivery for your cloud applications and infrastructure."
+meta_desc: "See how GitHub Actions and the new Pulumi CI/CD Assistant help you achieve
+  continuous delivery for your cloud applications and infrastructure."
 meta_image: GH Partners - Social 2_ 1200x630.png
 authors:
-    - paul-stack
-    - praneet-loke
-    - isaac-harris
+  - paul-stack
+  - praneet-loke
+  - isaac-harris
 tags:
-    - "github actions"
+  - "github actions"
 
+search:
+  keywords:
+    - GitHub
+    - CI/CD
+    - GitHub Actions
+    - infrastructure automation
 ---
 
 [GitHub Actions](https://github.com/features/actions) help automate tasks within your software development life cycle. At Pulumi, we use GitHub Actions internally as part of every build/release cycle, and we run these tasks many, many times per day. This helps us to automate our CI/CD process and eliminate manual steps. Pulumi and many of our customers also deliver infrastructure resources as part of a CI/CD process: delivering infrastructure and applications in a single, integrated pipeline.

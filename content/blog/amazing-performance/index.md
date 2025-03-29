@@ -1,16 +1,23 @@
 ---
 title: "Achieving Amazing Performance in the Pulumi CLI"
 date: 2023-01-26
-meta_desc: "Introducing the Amazing Performance initiative, and an overview of performance tooling we've developed for Pulumi."
+meta_desc: "Introducing the Amazing Performance initiative, and an overview of performance
+  tooling we've developed for Pulumi."
 meta_image: meta.png
 
 authors:
-    - robbie-mckinstry
+  - robbie-mckinstry
 
 tags:
-    - performance
-    - platform
-    - engineering
+  - performance
+  - platform
+  - engineering
+search:
+  keywords:
+    - Performance
+    - Tracing
+    - Amazing Performance
+    - Analytics Dashboard
 ---
 
 This is the first post in a series about performance optimizations we've made to the Pulumi CLI. Over the last six months at Pulumi, the Platform Team has been working on a project we call "Amazing Performance." Amazing Performance is a new initiative to improve the throughput and latency of the Pulumi CLI not only for power users but for everyone. By the end of June 2022, we assembled a list of issues containing both high-value improvements requiring a sizable investment and low-hanging fruit for quick wins. The full list, including the items we have yet to tackle, is contained in [a tracking issue on GitHub](https://github.com/pulumi/pulumi/issues/11598). This blog series will cover the highlights.

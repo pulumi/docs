@@ -28,15 +28,22 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - thomas-gummerer
+  - thomas-gummerer
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - error-handling
-    - announcement
+  - error-handling
+  - announcement
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - CLI
+    - error
+    - continue on
+    - error handling
+    - resource operations
 ---
 
 When managing many resources with Pulumi, a `pulumi up` or `pulumi destroy` can lead to a complex graph of resource operations being performed as concurrently as possible relative to the dependencies in your program. If one of those operations fails, you may have noticed that Pulumi takes the most conservative approach, letting already in-flight operations complete, but not starting any new operations. Most often, that's what you want -- there might be no point in bringing up more infrastructure if a resource fails.

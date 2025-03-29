@@ -1,16 +1,24 @@
 ---
 title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
 date: 2021-01-19
-meta_desc: "Build Kubernetes applications and provision infrastructure with Pulumi and Codefresh's CI/CD pipelines"
+meta_desc: "Build Kubernetes applications and provision infrastructure with Pulumi
+  and Codefresh's CI/CD pipelines"
 meta_image: codefresh.png
 authors:
-    - sophia-parafina
-    - kostis-kapelonis
+  - sophia-parafina
+  - kostis-kapelonis
 tags:
-    - continuous-delivery
-    - codefresh
-    - Kubernetes
+  - continuous-delivery
+  - codefresh
+  - Kubernetes
 
+search:
+  keywords:
+    - Kubernetes
+    - Codefresh
+    - CI/CD pipelines
+    - Continuous Integration
+    - Continuous Delivery
 ---
 
 Delivering modern applications is complicated and requires the coordination of many moving parts. Applications are frequently updated to implement new features and improve security and performance, translating to a better user experience for your customers. To further complicate matters, infrastructure must also be deployed and maintained simultaneously with applications to avoid conflicts or dependencies.

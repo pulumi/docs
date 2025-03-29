@@ -2,7 +2,8 @@
 title: "Introducing the Table Editor for Pulumi ESC"
 date: 2024-03-26T00:00:00-07:00
 draft: false
-meta_desc: "The Table view introduces a new visual interface for managing configuration and secrets using Pulumi ESC."
+meta_desc: "The Table view introduces a new visual interface for managing configuration
+  and secrets using Pulumi ESC."
 meta_image: "meta.png"
 authors:
   - arun-loganathan
@@ -12,8 +13,14 @@ tags:
   - secrets
   - config management
   - features
+search:
+  keywords:
+    - Table
+    - Editor
+    - Table Editor
+    - Config Management
+    - Secrets Management
 ---
-
 
 We're excited to announce the launch of the Pulumi Environments, Secrets, and Configurations ([ESC](/product/esc)) Table Editor. At Pulumi, we're committed to providing flexible solutions that cater to diverse development needs and practices. This latest addition underscores our dedication to this principle by offering a user-friendly interface for managing complex configurations and secrets.
 

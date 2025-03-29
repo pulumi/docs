@@ -4,10 +4,18 @@ date: 2021-02-16
 meta_desc: "How to build a registry and push Docker images with code."
 meta_image: registry.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
+  - containers
+  - docker
+search:
+  keywords:
     - containers
+    - registry
     - docker
+    - container registry
+    - docker images
+    - cloud provider
 ---
 
 Whether you are working with Kubernetes or serverless, your application uses containers. If you use the Docker desktop client, images are pushed to Docker Hub by default. Pulling images from Docker Hub is convenient, but there are many reasons to store images in your own registry. For example, Docker Hub doesn’t guarantee to produce the same image on repeated pulls, i.e., your base image might have changed. It’s also possible to inadvertently expose secrets in an intermediate image used to build the image stored on Docker Hub. There is also the possibility of vulnerabilities in even official images. This article shows how to create a repository and how to build and push images to that repository

@@ -1,10 +1,18 @@
 ---
 title: "Protecting Your APIs with Lambda Authorizers and Pulumi"
 date: "2019-04-24"
-meta_desc: "With Pulumi's new AWSX package, you can quickly define a Lambda and an AWS Lambda authorizer to protect it in three easy steps."
+meta_desc: "With Pulumi's new AWSX package, you can quickly define a Lambda and an
+  AWS Lambda authorizer to protect it in three easy steps."
 meta_image: "lambda-authorizer.png"
 authors: ["erin-krengel"]
-tags: ["Serverless","AWS", "lambda", "api-gateway"]
+tags: ["Serverless", "AWS", "lambda", "api-gateway"]
+search:
+  keywords:
+    - Lambda
+    - API
+    - Lambda authorizers
+    - API Gateway
+    - AWS Lambda
 ---
 
 Creating serverless applications just got even easier! You can now

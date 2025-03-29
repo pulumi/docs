@@ -3,24 +3,34 @@ title: "Expanding the Pulumi Registry: 27 New Providers to Expand the Ecosystem"
 date: 2025-03-18
 draft: false
 allow_long_title: true
-meta_desc: "Pulumi announces dozens of new providers to the Registry, expanding our ecosystem with support for Any Terraform Provider and enriched docs for a seamless developer experience."
+meta_desc: "Pulumi announces dozens of new providers to the Registry, expanding our
+  ecosystem with support for Any Terraform Provider and enriched docs for a seamless
+  developer experience."
 meta_image: meta.png
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 tags:
-    - registry
-    - providers
-    - releases
+  - registry
+  - providers
+  - releases
 social:
-    twitter: "We've added 27 new providers to the Pulumi Registry including Temporal, Vantage, and Honeycomb. Explore our expanded ecosystem with enriched docs for a seamless developer experience."
-    linkedin: |
-      We're thrilled to announce 27 new providers to the Pulumi Registry, significantly expanding our ecosystem!
-      
-      This expansion includes providers like Temporal, Vantage, and Honeycomb.io, making it even easier to manage diverse cloud and SaaS services with Pulumi.
-      
-      With our new capability to support any Terraform provider and comprehensive documentation directly in the Registry, you can find everything you need right where you're already spending time.
-      
-      Check out the full list of new providers in our blog post!
+  twitter: "We've added 27 new providers to the Pulumi Registry including Temporal,
+    Vantage, and Honeycomb. Explore our expanded ecosystem with enriched docs for
+    a seamless developer experience."
+  linkedin: |
+    We're thrilled to announce 27 new providers to the Pulumi Registry, significantly expanding our ecosystem!
+
+    This expansion includes providers like Temporal, Vantage, and Honeycomb.io, making it even easier to manage diverse cloud and SaaS services with Pulumi.
+
+    With our new capability to support any Terraform provider and comprehensive documentation directly in the Registry, you can find everything you need right where you're already spending time.
+
+    Check out the full list of new providers in our blog post!
+search:
+  keywords:
+    - Registry
+    - Providers
+    - New Providers
+    - Infrastructure Code
 ---
 
 Pulumi is excited to announce the addition of 27 new providers to the Pulumi Registry, significantly expanding our ecosystem and empowering developers with more choices for infrastructure as code. This expansion includes providers like Temporal, Vantage, and Honeycomb, among many others, making it even easier to manage diverse cloud and SaaS services with Pulumi.

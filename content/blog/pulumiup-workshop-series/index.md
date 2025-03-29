@@ -1,16 +1,23 @@
 ---
 title: "PulumiUP Workshop Series"
 date: 2022-05-03T08:46:08-05:00
-meta_desc: This year for PulumiUP, we’re excited to announce that we’ve teamed up with a number of partners to deliver a workshop track!
+meta_desc: This year for PulumiUP, we’re excited to announce that we’ve teamed up
+  with a number of partners to deliver a workshop track!
 meta_image: meta.png
 authors:
-    - matt-stratton
-    - isaac-harris
+  - matt-stratton
+  - isaac-harris
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - pulumi-up
-    - workshop
+  - pulumi-up
+  - workshop
+search:
+  keywords:
+    - Workshop
+    - Kubernetes
+    - Infrastructure as Code
+    - Cloud Infrastructure
 ---
 
 At Pulumi, we’re incredibly fortunate to have over 70 integration partners in our ecosystem – helping shared end-users to build, deploy and manage practically any cloud service they can imagine. Our most popular content often includes workshops that show end-users how to use these powerful integrations. This year for PulumiUP, we’re excited to announce that we’ve teamed up with a number of partners to deliver a workshop track that provides hands-on labs and demonstrations for a variety of platforms and scenarios.

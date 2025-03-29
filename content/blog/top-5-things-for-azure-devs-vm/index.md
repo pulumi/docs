@@ -4,10 +4,17 @@ date: 2021-08-04
 meta_desc: "Building and deploying virtual machines for Azure developers"
 meta_image: azure-top-5.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - azure
+  - azure
+  - virtual machines
+search:
+  keywords:
+    - Azure
+    - VMs
     - virtual machines
+    - infrastructure as code
+    - Azure Portal
 ---
 
 So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the [previous article](/blog/top-5-things-for-azure-devs-intro/), the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.

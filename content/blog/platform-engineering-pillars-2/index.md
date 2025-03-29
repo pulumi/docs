@@ -2,39 +2,56 @@
 title: "Provisioning: From Chaos to Control"
 date: 2025-02-27
 draft: false
-meta_desc: Build a reliable infrastructure provisioning foundation with version control, automation, and golden-path templates for your internal developer platform.
+meta_desc: Build a reliable infrastructure provisioning foundation with version control,
+  automation, and golden-path templates for your internal developer platform.
 meta_image: meta.png
 authors:
-    - adam-gordon-bell
+  - adam-gordon-bell
 tags:
-    - platform-engineering
-    - platform-engineering-pillars
+  - platform-engineering
+  - platform-engineering-pillars
 social:
-    twitter: >
-            ️ Mastering Infrastructure Provisioning: the foundation of successful platform engineering! Learn how to eliminate bottlenecks, standardize with IaC, and create golden paths that empower developers while maintaining security and consistency. Stop fighting infrastructure chaos and start building platforms that scale.
-    linkedin: >
-            Infrastructure provisioning is the foundation of successful platform engineering. Is your organization struggling with infrastructure chaos?
+  twitter: >
+    ️ Mastering Infrastructure Provisioning: the foundation of successful platform
+    engineering! Learn how to eliminate bottlenecks, standardize with IaC, and create
+    golden paths that empower developers while maintaining security and consistency.
+    Stop fighting infrastructure chaos and start building platforms that scale.
+  linkedin: >
+    Infrastructure provisioning is the foundation of successful platform engineering.
+    Is your organization struggling with infrastructure chaos?
 
-            🚨 The Challenges:
-            • Knowledge silos and "go ask Sarah" bottlenecks
-            • Configuration drift between environments
-            • Slow, error-prone manual deployments
-            • Security and compliance risks
+    🚨 The Challenges:
+    • Knowledge silos and "go ask Sarah" bottlenecks
+    • Configuration drift between environments
+    • Slow, error-prone manual deployments
+    • Security and compliance risks
 
-            🛠️ The Solution:
-            Implement consistent, automated infrastructure provisioning as the first pillar of your internal developer platform.
+    🛠️ The Solution:
+    Implement consistent, automated infrastructure provisioning as the first pillar
+    of your internal developer platform.
 
-            ✅ Key Components:
-            • Version-controlled infrastructure as code
-            • Standardized security patterns
-            • Environment separation with proper boundaries
-            • Golden path templates for common services
-            • CI/CD automation for every deployment
+    ✅ Key Components:
+    • Version-controlled infrastructure as code
+    • Standardized security patterns
+    • Environment separation with proper boundaries
+    • Golden path templates for common services
+    • CI/CD automation for every deployment
 
-            The result? Developers get self-service access to infrastructure that's secure, consistent, and follows best practices—without needing to become cloud experts.
+    The result? Developers get self-service access to infrastructure that's secure,
+    consistent, and follows best practices—without needing to become cloud experts.
 
-            Learn how to implement this critical platform engineering pillar in our latest article.
+    Learn how to implement this critical platform engineering pillar in our latest
+    article.
+search:
+  keywords:
+    - Provisioning
+    - Automation
+    - Infrastructure
+    - Infrastructure provisioning
+    - Version control
+    - Platform engineering
 ---
+
 Provisioning is the first [pillar of platform engineering](/blog/tag/platform-engineering-pillars/). Without consistent infrastructure provisioning – the automated creation and management of the underlying cloud resources – the rest of the platform suffers. Self-service, governance, and streamlined developer workflows all depend on it. Ultimately, a self-service layer on top of your cloud infrastructure is the goal, enabling developers to quickly and safely provision the resources they need, while adhering to organizational best practices and policies. But before self-service, the foundation of a good IDP is a robust and reliable provisioning system.
 
 By defining cloud resources as code and automating deployments, platform engineering teams ensure every environment – development, staging, and production – stays consistent and maintainable. This cuts down on configuration drift, reduces manual work, and supports auditable, collaborative workflows for every change.

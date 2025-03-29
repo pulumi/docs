@@ -3,25 +3,28 @@ title: "Pulumi in a Cloud Native World"
 date: 2024-08-02
 draft: false
 allow_long_title: true
-meta_desc: "See how Pulumi fits into the Cloud Native landscape and how several CNCF projects can be combined with Pulumi to create a standardized GitOps stack."
+meta_desc: "See how Pulumi fits into the Cloud Native landscape and how several CNCF
+  projects can be combined with Pulumi to create a standardized GitOps stack."
 meta_image: meta.png
 
 authors:
-- engin-diri
+  - engin-diri
 
 tags:
-- platform-engineering
-- cloud-native
-- kubernetes
-- external-secrets-operator
-- backstage
-- argo-cd
-- pulumi
-- kyverno
-- gitops
+  - platform-engineering
+  - cloud-native
+  - kubernetes
+  - external-secrets-operator
+  - backstage
+  - argo-cd
+  - pulumi
+  - kyverno
+  - gitops
 
 social:
-  twitter: "Pulumi in a Cloud Native World: See how Pulumi fits into the Cloud Native landscape and how several CNCF projects can be combined with Pulumi to create an internal developer platform. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage"
+  twitter: "Pulumi in a Cloud Native World: See how Pulumi fits into the Cloud Native
+    landscape and how several CNCF projects can be combined with Pulumi to create
+    an internal developer platform. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage"
   linkedin: |
     See how well Pulumi plays with other CNCF projects in a Cloud Native world. Learn how we combined several CNCF projects with Pulumi to create an internal developer platform.
     - Kubernetes
@@ -31,6 +34,14 @@ social:
     - Pulumi
 
     Read about the benefits and challenges of this approach and how it can help you to build an internal developer platform from scratch.
+search:
+  keywords:
+    - Kubernetes
+    - GitOps
+    - Cloud Native
+    - Internal Developer Platform
+    - Infrastructure as Code
+    - External Secrets Operator
 ---
 
 In today's complex digital landscape, organizations are increasingly turning

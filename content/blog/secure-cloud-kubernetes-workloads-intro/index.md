@@ -2,14 +2,23 @@
 title: "Securely access cloud resources in Kubernetes workloads"
 date: 2020-10-29
 draft: true
-meta_desc: An introduction for running accessing cloud resources securely for Kubernetes workloads.
+meta_desc: An introduction for running accessing cloud resources securely for Kubernetes
+  workloads.
 meta_image: meta.png
 authors:
-    - lee-briggs
+  - lee-briggs
 tags:
-    - kubernetes
-    - security
-    - cloud-engineering
+  - kubernetes
+  - security
+  - cloud-engineering
+search:
+  keywords:
+    - Kubernetes
+    - Security
+    - Authentication
+    - Cloud resources
+    - Static credentials
+    - IAM roles
 ---
 
 As you build your cloud-native Kubernetes applications, you might eventually find you need to access cloud resources that reside outside your Kubernetes cluster. Perhaps you need to store static files in an object store (Amazon S3, Google Cloud Storage, or Azure Blog Storage) or use a queuing system to pass messages to other services (Amazon SQS, Azure Service Bus, or Google Pub/Sub).

@@ -17,7 +17,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: "Pulumi Copilot is now available in Visual Studio Code Copilot- offload tasks to Copilot right in your IDE by typing @pulumi in VS Code Copilot chat."
+meta_desc: "Pulumi Copilot is now available in Visual Studio Code Copilot- offload
+  tasks to Copilot right in your IDE by typing @pulumi in VS Code Copilot chat."
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,25 +29,36 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - meagan-cojocar
-    - eron-wright
+  - meagan-cojocar
+  - eron-wright
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - releases
-    - features
+  - releases
+  - features
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
 # generated blog page. They are here strictly for reference.
 
 social:
-    twitter: "🎉 Pulumi Copilot is now available in Visual Studio Code! Offload tasks to Pulumi Copilot right in your IDE by typing @pulumi in Copilot Chat. Build, deploy, and manage cloud infrastructure more efficiently than ever."
-    linkedin: "Exciting news! Pulumi Copilot is now available in Visual Studio Code Copilot, bringing AI-powered cloud infrastructure management directly to your IDE. Simply install the Pulumi extension and type @pulumi in Copilot Chat to access Pulumi's cloud intelligence and streamline your infrastructure workflows. 
-    
-    Learn how Pulumi Copilot is revolutionizing cloud development: [Link]"
+  twitter: "🎉 Pulumi Copilot is now available in Visual Studio Code! Offload tasks
+    to Pulumi Copilot right in your IDE by typing @pulumi in Copilot Chat. Build,
+    deploy, and manage cloud infrastructure more efficiently than ever."
+  linkedin: "Exciting news! Pulumi Copilot is now available in Visual Studio Code
+    Copilot, bringing AI-powered cloud infrastructure management directly to your
+    IDE. Simply install the Pulumi extension and type @pulumi in Copilot Chat to access
+    Pulumi's cloud intelligence and streamline your infrastructure workflows.\nLearn
+    how Pulumi Copilot is revolutionizing cloud development: [Link]"
 
+search:
+  keywords:
+    - Copilot
+    - VSCode
+    - Visual Studio
+    - Infrastructure Code
 ---
+
 Programming languages offer dozens of advantages for writing Infrastructure as Code (IaC). One of them is that Large Language Models are  effective at using general-purpose programming languages, thanks to the vast amount of high-quality training data available. Building on this advantage, we introduced Pulumi AI and Pulumi Copilot last year to enhance Infrastructure-as-Code development with generative AI capabilities. These tools have significantly streamlined infrastructure deployment for tens of thousands of developers.
 
 Today, we are thrilled to announce that Pulumi Copilot is now available directly within [Visual Studio Code Copilot](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools). By simply typing @pulumi in Copilot Chat, developers can now access the power of Pulumi Copilot right within their IDE, saving them time on writing IaC and getting infrastructure deployed.

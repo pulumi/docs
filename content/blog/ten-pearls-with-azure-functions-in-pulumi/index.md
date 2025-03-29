@@ -4,7 +4,15 @@ date: 2019-08-21
 meta_image: meta.png
 authors: ["mikhail-shilkov"]
 tags: ["Azure", "Serverless"]
-meta_desc: "Ten bite-sized code snippets that use Pulumi to build serverless applications with Azure Functions and infrastructure as code."
+meta_desc: "Ten bite-sized code snippets that use Pulumi to build serverless applications
+  with Azure Functions and infrastructure as code."
+search:
+  keywords:
+    - Azure
+    - Functions
+    - Azure Functions
+    - Serverless Applications
+    - Infrastructure Code
 ---
 
 In this post, we'll take a look at 10 "pearls"&mdash;bite-sized code snippets&mdash;that demonstrate using Pulumi to build serverless applications with Azure Functions and infrastructure as code. These pearls are organized into four categories, each demonstrating a unique scenario:

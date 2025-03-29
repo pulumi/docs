@@ -1,13 +1,21 @@
 ---
 title: "Unit Testing Cloud Deployments with .NET"
 date: 2020-05-21
-meta_desc: "Developing infrastructure programs in C# and F# with unit tests, TDD, and mocks"
+meta_desc: "Developing infrastructure programs in C# and F# with unit tests, TDD,
+  and mocks"
 meta_image: dotnet-testing.png
 authors:
-    - mikhail-shilkov
+  - mikhail-shilkov
 tags:
-    - testing
+  - testing
+  - .NET
+search:
+  keywords:
     - .NET
+    - testing
+    - unit testing
+    - cloud deployments
+    - resource group
 ---
 
 Because Pulumi uses general-purpose programming languages to provision cloud resources, you can take advantage of native tools and perform automated tests of your infrastructure. The full power of each language is available, including access to libraries and frameworks for testing.

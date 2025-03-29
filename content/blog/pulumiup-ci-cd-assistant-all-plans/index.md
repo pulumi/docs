@@ -1,12 +1,19 @@
 ---
 title: "Unify app and infra delivery with Pulumi's CI/CD Assistant"
 date: 2021-04-20T00:00:01-07:00
-meta_desc: Set up a combined CI/CD pipeline for your applications and infrastructure using Pulumi
+meta_desc: Set up a combined CI/CD pipeline for your applications and infrastructure
+  using Pulumi
 meta_image: meta.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
-    - continuous-delivery
+  - continuous-delivery
+search:
+  keywords:
+    - CI/CD
+    - infrastructure
+    - CI/CD pipeline
+    - version control
 ---
 
 Pulumi's CI/CD Assistant helps you bring your infrastructure under version control and create a continuous integration and delivery pipeline that deploys changes to your cloud applications and infrastructure whenever you make a change in source control. Using CI/CD secures your production delivery while ensuring that every deployment is expressed in a committed Pulumi program and quickly reflected in your deployed infrastructure.  With the CI/CD Assistant, it's easier than ever before to set up version control and a CI/CD pipeline for your favorite CI/CD system, even if you're new to CI/CD workflows.

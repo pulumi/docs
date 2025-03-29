@@ -4,11 +4,18 @@ date: 2023-03-21
 meta_desc: How one process helped us decrease our error rate 17x in one year.
 meta_image: meta.png
 authors:
-    - evan-boyle
+  - evan-boyle
 tags:
-    - cloud-engineering
+  - cloud-engineering
+search:
+  keywords:
+    - errors
+    - reliability
+    - process
+    - error rate
+    - API traffic
+    - on-call engineer
 ---
-
 
 At Pulumi we read every single error message that our API produces. This is the primary mechanism that led to a 17x YoY reduction in our error rate. You’re probably wondering how reading error messages make them go away.<!--more-->
 

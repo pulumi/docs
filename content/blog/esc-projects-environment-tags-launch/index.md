@@ -3,7 +3,8 @@ title: "Introducing Pulumi ESC Projects and Environment Tags"
 allow_long_title: true
 date: 2024-09-12T13:00:00-04:00
 draft: false
-meta_desc: "ESC Projects and Environment Tags allow you to organize your environments and collaborate effectively."
+meta_desc: "ESC Projects and Environment Tags allow you to organize your environments
+  and collaborate effectively."
 meta_image: "meta.png"
 authors:
   - derek-schaller
@@ -12,6 +13,12 @@ tags:
   - esc
   - secrets
   - features
+search:
+  keywords:
+    - Projects
+    - Tags
+    - Environment Tags
+    - Cloud Environments
 ---
 
 We're thrilled to unveil two new features that will empower you to organize your collection of [Pulumi ESC](/docs/esc/) Environments: <b>Projects</b> and <b>Environment Tags</b>.  Projects offer a structured way to group related environments and Environment Tags allow you to add contextual information to each environment. Together, they offer a powerful way for you to manage, navigate, and collaborate on your secrets and configurations.
@@ -94,5 +101,4 @@ Pulumi ESC Projects and Environment Tags are powerful additions that bring order
 
 We're excited to see how you leverage these new capabilities. Check out the docs to learn more about Pulumi ESC Projects and Environment Tags and start organizing your environments today!
 
-As always, please share your [feedback](https://github.com/pulumi/esc/issues/new/choose) on how we can further improve Pulumi ESC to suit your needs. 
-
+As always, please share your [feedback](https://github.com/pulumi/esc/issues/new/choose) on how we can further improve Pulumi ESC to suit your needs.

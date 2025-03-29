@@ -8,7 +8,7 @@ title: "Announcing Public Preview of Insights Account Discovery"
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 #date: 2024-12-2T11:00:00-08:00
-date: 2024-12-02T9:10:00-00:00
+date: 2024-12-02T09:10:00-00:00
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -18,7 +18,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Insights Account Discovery makes it easy for you to gain visibility of your entire infrastructure regardless of how it is managed
+meta_desc: Insights Account Discovery makes it easy for you to gain visibility of
+  your entire infrastructure regardless of how it is managed
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,12 +30,12 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - craig-symonds
+  - craig-symonds
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - insights
-    - resources
+  - insights
+  - resources
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -49,8 +50,15 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - Insights
+    - Discovery
+    - Infrastructure
+    - Account Discovery
+    - Resource Explorer
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

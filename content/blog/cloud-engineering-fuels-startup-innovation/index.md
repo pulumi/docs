@@ -1,6 +1,6 @@
 ---
 title: "Cloud engineering fuels the next chapter of startup innovation"
-allow_long_title: True
+allow_long_title: true
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
 # but excluded from production builds. Use the time and timezone-offset portions of
@@ -15,7 +15,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 meta_desc: |
-    Cloud engineering is fueling startup innovation. Read on for three mini-stories of cloud engineering in action with startups.
+  Cloud engineering is fueling startup innovation. Read on for three mini-stories of cloud engineering in action with startups.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -26,16 +26,24 @@ meta_image: startup.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - george-huang
+  - george-huang
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - cloud-engineering
-    - case-studies
+  - cloud-engineering
+  - case-studies
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - cloud
+    - startups
+    - cloud engineering
+    - infrastructure code
+    - modern cloud
 ---
+
 The story of how the cloud fuels startup innovation seems never ending. In the beginning, AWS birthed cloud computing with its first service, SQS, in 2004 and quickly released several additional services (like S3, EC2, and SimpleDB). From this innovation, startups flourished because they were able to build, experiment, and grow faster than before at much lower cost. Airbnb, Netflix, Zynga, and many more were born, and the rest is history.
 
 Today, a new generation of startups is flourishing because of the cloud, but this time with modern cloud architectures that are distributed, API-driven, and more resilient and scalable than ever. Today’s startups have to get to market even faster and rapidly innovate in order to delight customers and carve out market share. Most startups understand the benefits of adopting the modern cloud to help them achieve this goal. However, their ability to reap these benefits for competitive advantage depends on how well they can harness the modern cloud.

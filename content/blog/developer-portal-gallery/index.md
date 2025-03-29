@@ -1,6 +1,7 @@
 ---
-title: "Developer Portal Gallery: Org Templates, Pulumi Templates and AI Generated Templates"
-allow_long_title: True
+title: "Developer Portal Gallery: Org Templates, Pulumi Templates and AI Generated
+  Templates"
+allow_long_title: true
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
 # ordering purposes only; they have no effect on whether or when a post is
@@ -17,7 +18,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Pulumi Cloud adds a template gallery to make creating cloud infrastructure easier than ever.
+meta_desc: Pulumi Cloud adds a template gallery to make creating cloud infrastructure
+  easier than ever.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,16 +30,22 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
-    - developer-portals
-    - platform-engineering
+  - features
+  - developer-portals
+  - platform-engineering
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - Templates
+    - Gallery
+    - Developer Portals
+    - AI Generated
 ---
 
 Late last year [we announced Pulumi for Developer Portals](/blog/building-developer-portals): a suite of features designed to empower organizations to construct robust internal developer portals. Since launching the level of adoption and customer interest has led us to make further improvements to enhance developer productivity and collaboration in the authoring experience. We are excited to announce the latest enhancement in Pulumi Cloud: the introduction of a template gallery in New Project Wizard, making creating cloud infrastructure easier than ever.

@@ -2,7 +2,8 @@
 title: "Announcing 1Password Support for Pulumi ESC in Public Preview"
 date: 2024-03-27T12:00:00-06:00
 allow_long_title: true
-meta_desc: "Pulumi ESC adds integration support for 1Password (public preview) to empower developers to work more efficiently and securely using their preferred tools"
+meta_desc: "Pulumi ESC adds integration support for 1Password (public preview) to
+  empower developers to work more efficiently and securely using their preferred tools"
 meta_image: meta.png
 authors:
   - tejitha-raju
@@ -13,6 +14,12 @@ tags:
   - 1password
   - features
 
+search:
+  keywords:
+    - 1Password
+    - integration
+    - 1Password integration
+    - secrets management
 ---
 
 Today, we are thrilled to add integration support for 1Password in preview within Pulumi Environments, Secrets, and Configuration ([ESC](/product/esc)). Since its launch, numerous organizations have leveraged Pulumi ESC to manage secrets and simplify configurations using composable environments. Leveraging Pulumi ESC’s comprehensive set of providers, users have obtained dynamic cloud provider credentials and retrieved secrets from other secrets management platforms, including HashiCorp Vault.

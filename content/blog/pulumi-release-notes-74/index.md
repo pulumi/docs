@@ -11,7 +11,9 @@ date: 2022-07-06T08:28:39-07:00
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: The latest Pulumi updates also include our providers updates, compression of filestate backends, adding --stack to `pulumi about`, adding local policy packs to Automation API and much more!
+meta_desc: The latest Pulumi updates also include our providers updates, compression
+  of filestate backends, adding --stack to `pulumi about`, adding local policy packs
+  to Automation API and much more!
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,15 +24,21 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - YAML
+    - Stack
+    - Stack READMEs
+    - Automation API
 ---
 
 Our first release notes since the frenzy of [releases for PulumiUP](/blog/pulumi-universal-iac/)! The latest Pulumi updates also include our providers updates, compression of filestate backends, adding --stack to `pulumi about`, adding local policy packs to Automation API and much more! Learn about what's new.

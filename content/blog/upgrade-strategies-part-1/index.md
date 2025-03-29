@@ -1,13 +1,22 @@
 ---
 title: "Upgrade Strategies: An Introduction for IaC"
 date: 2022-03-07T09:59:56-06:00
-meta_desc: Explore upgrade strategies for infrastructure using infrastructure as code in part 1 of this series.
+meta_desc: Explore upgrade strategies for infrastructure using infrastructure as code
+  in part 1 of this series.
 meta_image: meta.png
 authors:
-    - laura-santamaria
+  - laura-santamaria
 tags:
-    - cloud-native
-    - continuous-delivery
+  - cloud-native
+  - continuous-delivery
+search:
+  keywords:
+    - IaC
+    - infrastructure
+    - deployment
+    - blue-green deployment
+    - canary deployment
+    - rolling deployment
 ---
 
 When you're working with infrastructure, you're inevitably going to need to upgrade or update that infrastructure. Whether it's an operating system update or a desire to get CPU or memory upgrades, you will need the ability to pick resources and change them as necessary. In the past, this kind of upgrade would be done on the basis of individual resources, with each one being updated and checked either by hand or programmatically before moving onto the next resource. If you've ever done a database migration or if you ever did the recommended way of upgrading your computer's operating system including all of the backup steps, you're familiar with this process. Stand up the new resource. Check everything works. Move over the data. Check again. Tear down the old infrastructure. In a cloud computing environment, though, you're often dealing with hundreds or thousands of resources, and doing one-by-one replacement is a nightmare that takes ages. However, there are other options, many borrowed from the application deployment world, that we have available to us because we write infrastructure as code.

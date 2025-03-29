@@ -1,14 +1,23 @@
 ---
 title: "Keeping Your Secrets Secret"
 date: 2021-03-23
-meta_desc: "Passwords, tokens, and environmental variables are secrets needed to for infrastructure to run. Learn how to protect them and your infrastructure."
+meta_desc: "Passwords, tokens, and environmental variables are secrets needed to for
+  infrastructure to run. Learn how to protect them and your infrastructure."
 meta_image: secrets.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - security
-    - secrets
+  - security
+  - secrets
 
+search:
+  keywords:
+    - secrets
+    - security
+    - encryption
+    - data breach
+    - cloud provider
+    - secret manager
 ---
 
 Companies that have suffered data breaches are, unfortunately, frequently in the news. A data breach is when information that should be private, such as credit card numbers or even trade secrets, is stolen. These thefts can be because of an actual cyber-attack, but they can also be due to simple carelessness, such as disposing of computer equipment without taking proper precautions.

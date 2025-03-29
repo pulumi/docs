@@ -1,12 +1,20 @@
 ---
 title: "Automation API: Supercharged Cloud Tooling"
 date: 2021-01-14
-meta_desc: "Pulumi's Automation API enables you to build cloud tools to increase developer productivity."
+meta_desc: "Pulumi's Automation API enables you to build cloud tools to increase developer
+  productivity."
 meta_image: automation_api_v2.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - automation-api
+  - automation-api
+search:
+  keywords:
+    - Automation
+    - Infrastructure
+    - Automation API
+    - Cloud Tooling
+    - Virtual Machines
 ---
 
 "Why use a programming language to build and maintain infrastructure?" is a question we hear frequently. There are apparent advantages such as using a mature and well-known language across a team, enabling cloud engineers to use software development best practices, and an ecosystem of tools for building robust systems.

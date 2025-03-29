@@ -1,22 +1,31 @@
 ---
-title: "Pulumi for Platform Teams: New Features for Developer Portals, Policy and Deployments"
+title: "Pulumi for Platform Teams: New Features for Developer Portals, Policy and
+  Deployments"
 allow_long_title: true
 
 date: 2023-10-11T04:00:00-07:00
 
-meta_desc: "Announcing new features in Pulumi Cloud to support platform teams across developer portals, policy and compliance, and deployments and delivery"
+meta_desc: "Announcing new features in Pulumi Cloud to support platform teams across
+  developer portals, policy and compliance, and deployments and delivery"
 
 meta_image: meta.png
 
 authors:
-    - luke-hoban
+  - luke-hoban
 
 tags:
-    - developer-portals
-    - templates
-    - policy-as-code
-    - backstage
-    - platform-engineering
+  - developer-portals
+  - templates
+  - policy-as-code
+  - backstage
+  - platform-engineering
+search:
+  keywords:
+    - Platform
+    - Teams
+    - Developer Portals
+    - Policy Compliance
+    - Infrastructure Delivery
 ---
 
 Over the last two years, we’ve seen a huge surge in adoption of Pulumi by __Platform Teams__ -- centralized teams within a business responsible for building out core cloud infrastructure and providing tools to the rest of the organization to maximize the productivity, cost efficacy, compliance and velocity of application and service delivery throughout the organization. These teams use Pulumi to manage their own cloud infrastructure complexity, to offer best practices components to their organizations, to enforce organizational policy, and to drive infrastructure delivery automation.

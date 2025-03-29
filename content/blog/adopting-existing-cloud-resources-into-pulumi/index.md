@@ -1,10 +1,22 @@
 ---
 title: "Adopting Existing Cloud Resources into Pulumi"
 date: "2019-08-15"
-meta_desc: "Migrating from Terraform or another IaC tool? Learn how to adopt existing cloud infrastructure from Terraform, CloudFormation, ARM, YAML, and more into Pulumi."
+meta_desc: "Migrating from Terraform or another IaC tool? Learn how to adopt existing
+  cloud infrastructure from Terraform, CloudFormation, ARM, YAML, and more into Pulumi."
 meta_image: "meta.png"
 authors: ["luke-hoban"]
 tags: ["migration"]
+search:
+  keywords:
+    - Terraform
+    - CloudFormation
+    - infrastructure
+    - migration
+    - existing resources
+    - cloud provider
+    - import option
+    - infrastructure projects
+    - resource management
 ---
 
 {{% notes %}}

@@ -2,10 +2,18 @@
 title: Full Access to Helm Features with new Helm Release Resource
 h1: "Full Access to Helm Features with new Helm Release Resource for Kubernetes"
 date: "2021-09-14"
-meta_desc: "The Helm Release resource adds native support for Helm, enabling full access to Helm features for Kubernetes users."
+meta_desc: "The Helm Release resource adds native support for Helm, enabling full
+  access to Helm features for Kubernetes users."
 meta_image: "k8s-helm-release.png"
 authors: ["vivek-lakshmanan"]
 tags: ["Kubernetes", "helm"]
+search:
+  keywords:
+    - Helm
+    - Kubernetes
+    - Helm Release
+    - Helm Chart
+    - Kubernetes Provider
 ---
 
 Kubernetes has been a significant focus of Pulumi since its very beginnings. Pulumi added support for installing [Helm charts](https://helm.sh/) way back in [2018](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/) and it has seen significant adoption by users since. However, Pulumi's current Chart integration lacks support for some increasingly common advanced features in Helm charts, e.g.:

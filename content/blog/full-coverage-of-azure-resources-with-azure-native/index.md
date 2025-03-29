@@ -1,12 +1,20 @@
 ---
 title: "Full Coverage of Azure Resources with Azure-Native"
 date: 2021-03-02
-meta_desc: "Pulumi’s Azure-Native provider is the most comprehensive IaC solution for Microsoft Azure"
+meta_desc: "Pulumi’s Azure-Native provider is the most comprehensive IaC solution
+  for Microsoft Azure"
 meta_image: azure-native.png
 authors:
   - mikhail-shilkov
 tags:
   - azure
+search:
+  keywords:
+    - Azure
+    - provider
+    - Azure Native
+    - native provider
+    - infrastructure code
 ---
 
 Last September, we [announced the beta release of Pulumi Azure NextGen](/blog/announcing-nextgen-azure-provider/): a new Microsoft Azure provider for Pulumi that combines same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) with the excellent Pulumi experience you know and love, including version-less resources, auto-naming, and auto-location.

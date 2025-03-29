@@ -1,16 +1,24 @@
 ---
 title: Deploy Static Websites to AWS using 10 lines of YAML
 date: 2022-07-07
-meta_desc: Learn how to easily deploy your AWS S3 static website using the AWS Static Website Component and 10 lines of YAML. JSON is also supported.
+meta_desc: Learn how to easily deploy your AWS S3 static website using the AWS Static
+  Website Component and 10 lines of YAML. JSON is also supported.
 meta_image: "react_app_yaml.png"
 authors:
-    - sean-holung
+  - sean-holung
 tags:
-    - aws
-    - yaml
-    - configuration
-    - components
-    - static-websites
+  - aws
+  - yaml
+  - configuration
+  - components
+  - static-websites
+search:
+  keywords:
+    - AWS
+    - YAML
+    - static website
+    - CloudFront CDN
+    - AWS account
 ---
 
 The [AWS Static Website](/registry/packages/aws-static-website/) component makes it easy to deploy an AWS S3 static website and, optionally, add a CloudFront content distribution network (CDN). While you can use any of the programming languages Pulumi supports (TypeScript, JavaScript, Python, Go, .NET, Java, and YAML), the component is particularly useful if you use YAML or JSON. With the AWS Static Website component, you’ll have a complete, functioning site in a few minutes. Without it, you can spend hours or even days to get the same result.

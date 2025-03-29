@@ -1,17 +1,24 @@
 ---
 title: Create an AWS Static Website Fast with Angular and Pulumi
 date: 2022-08-24
-meta_desc: "Learn how to create and deploy an Angular static website to AWS using the static website component."
+meta_desc: "Learn how to create and deploy an Angular static website to AWS using
+  the static website component."
 meta_image: "meta_image.png"
 authors:
-    - sean-holung
+  - sean-holung
 tags:
-    - aws
-    - yaml
-    - configuration
-    - components
-    - static-websites
-    - angular
+  - aws
+  - yaml
+  - configuration
+  - components
+  - static-websites
+  - angular
+search:
+  keywords:
+    - AWS
+    - Angular
+    - static website
+    - Angular components
 ---
 
 In this blog post, we’re going to use some Angular framework components to assemble a static website and then use Pulumi and its AWS Static Website component to deploy it to AWS. The website is for a café called the Pulumi Café. It will contain two pages, one an About page and the other a Menu page, as well as some navigational pieces.

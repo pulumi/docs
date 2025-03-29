@@ -1,12 +1,20 @@
 ---
 title: "Dynamic Providers"
 date: 2020-01-16
-meta_desc: "Pulumi Dynamic Providers manage resources that are not covered in pre-built providers"
+meta_desc: "Pulumi Dynamic Providers manage resources that are not covered in pre-built
+  providers"
 meta_image: meta.png
 authors:
-    - praneet-loke
+  - praneet-loke
 tags:
-    - features
+  - features
+search:
+  keywords:
+    - Providers
+    - Resources
+    - Dynamic Providers
+    - Resource Provider
+    - Life-cycle Hooks
 ---
 
 Pulumi has many resource providers that allow you to interact with your favorite cloud or resource. There are times when a provider may not deliver on the specific task that you want to accomplish. Dynamic Providers can be a powerful tool to help accomplish your infrastructure tasks.

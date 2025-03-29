@@ -3,8 +3,16 @@ title: "An Update on our Roadmap"
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
 date: "2020-03-09"
-meta_desc: "Learn about some of Pulumi's progress rounding out our .NET and Go SDKs in addition to infrastructure validation using testing and Policy as Code."
+meta_desc: "Learn about some of Pulumi's progress rounding out our .NET and Go SDKs
+  in addition to infrastructure validation using testing and Policy as Code."
 meta_image: "pulumi-1-0.png"
+search:
+  keywords:
+    - SDK
+    - Policy
+    - .NET SDK
+    - Go SDK
+    - Policy as Code
 ---
 
 2020 is off to a big start for us! The .NET and Go SDKs are now more idiomatic and easier to use, Policy as Code is ready for prime-time, and many other useful features and foundational improvements have been released. I'd like to take a moment to highlight these improvements and ask for feedback &mdash; we want to make sure these new features work great for you!

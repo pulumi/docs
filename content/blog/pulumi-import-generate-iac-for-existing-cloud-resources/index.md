@@ -1,10 +1,17 @@
 ---
 title: "Pulumi Import: Generate IaC for Existing Cloud Resources"
 date: "2020-11-24"
-meta_desc: "Introducing the new pulumi import command that will automatically scaffold your Pulumi application code when importing existing cloud resources."
+meta_desc: "Introducing the new pulumi import command that will automatically scaffold
+  your Pulumi application code when importing existing cloud resources."
 meta_image: cloud_engineering.png
 authors: ["paul-stack"]
 tags: ["features", "migration", "import"]
+search:
+  keywords:
+    - Import
+    - Resources
+    - Cloud Resources
+    - Infrastructure Projects
 ---
 
 Most infrastructure projects require working with existing cloud resources, either by building on top of existing resources

@@ -1,5 +1,6 @@
 ---
-title: "Unified and Programmatic Approach to Infrastructure Management at BMW Using Pulumi"
+title: "Unified and Programmatic Approach to Infrastructure Management at BMW Using
+  Pulumi"
 allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
@@ -18,7 +19,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Explore how BMW leverages Pulumi for efficient infrastructure management, boosting scalability, productivity, and compliance in automotive software development
+meta_desc: Explore how BMW leverages Pulumi for efficient infrastructure management,
+  boosting scalability, productivity, and compliance in automotive software development
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,18 +31,18 @@ meta_image: bmw-pulumi-deployments.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - infrastructure-as-code
-    - cloud-management
-    - infrastructure-lifecycle-management
-    - platform-engineering
-    - developer-experience-devex
-    - ansible
-    - containers
-    - pulumi-deployments
+  - infrastructure-as-code
+  - cloud-management
+  - infrastructure-lifecycle-management
+  - platform-engineering
+  - developer-experience-devex
+  - ansible
+  - containers
+  - pulumi-deployments
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -56,8 +58,15 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - BMW
+    - infrastructure
+    - infrastructure management
+    - software development
+    - shared modules
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
@@ -157,4 +166,3 @@ To learn more about Pulumi and how it can transform your software development an
 - Get started with [Pulumi Tutorials](https://www.pulumi.com/tutorials/)
 - Attend an [upcoming workshop](https://www.pulumi.com/resources/#upcoming)
 - Try out the [Pulumi AI](https://www.pulumi.com/ai) code assistant to accelerate your infrastructure as code journey
-

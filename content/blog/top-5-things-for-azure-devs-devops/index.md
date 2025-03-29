@@ -1,15 +1,25 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: DevOps"
 date: 2021-08-26
-allow_long_title: True
-meta_desc: "DevOps is the way modern cloud teams work together to deploy applications. Azure Pipelines is a way to implement DevOps with Continuous Integration and Continuous Delivery"
+allow_long_title: true
+meta_desc: "DevOps is the way modern cloud teams work together to deploy applications.
+  Azure Pipelines is a way to implement DevOps with Continuous Integration and Continuous
+  Delivery"
 meta_image: azure-top-5.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - azure
-    - pipelines
-    - devops
+  - azure
+  - pipelines
+  - devops
+search:
+  keywords:
+    - DevOps
+    - Azure
+    - Pipelines
+    - Azure Pipelines
+    - Continuous Integration
+    - Continuous Delivery
 ---
 
 What comes to mind when you hear DevOps? Frequently, DevOps is described as a cultural practice that enables an organization to deliver high-quality applications quickly. The DevOps model emphasizes the "breaking down of silos" and combining development and operations into a single team. Developing, deploying, and maintaining an application is the responsibility of both developers and operators across the application lifecycle.

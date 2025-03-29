@@ -2,14 +2,23 @@
 title: "Preview of the Manage Track at Cloud Engineering Summit 2021"
 date: 2021-09-13T08:00:00-05:00
 draft: false
-meta_desc: "Highlights and hot takes of the Cloud Engineering Summit Manage track with Matt Stratton."
+meta_desc: "Highlights and hot takes of the Cloud Engineering Summit Manage track
+  with Matt Stratton."
 meta_image: cloud-eng-manage.png
 authors:
-    - matt-stratton
+  - matt-stratton
 tags:
-    - cloud-engineering
-    - security
-    - pulumi-events
+  - cloud-engineering
+  - security
+  - pulumi-events
+search:
+  keywords:
+    - Cloud
+    - Summit
+    - Infrastructure
+    - Cloud Engineering
+    - Policy Code
+    - Risk Radar
 ---
 
 The [Cloud Engineering Summit 2021](https://www.pulumi.com/cloud-engineering-summit/) is coming up fast, and the speakers are out! To get you ready to attend, let’s take a look at the sessions for the Manage track.

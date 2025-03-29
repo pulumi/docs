@@ -4,18 +4,20 @@ allow_long_title: true
 date: 2024-10-28T12:40:10+02:00
 draft: false
 
-meta_desc: "Secrets sprawl is a real problem that can slow down our teams and impact our productivity. But it also affects how fast an organization can scale its development and operations teams. Learn how to overcome secrets sprawl and regain your productivity."
+meta_desc: "Secrets sprawl is a real problem that can slow down our teams and impact
+  our productivity. But it also affects how fast an organization can scale its development
+  and operations teams. Learn how to overcome secrets sprawl and regain your productivity."
 
 meta_image: meta.png
 
 authors:
-- engin-diri
+  - engin-diri
 
 tags:
-- esc
-- secrets-management
-- secrets-sprawl
-- pulumi
+  - esc
+  - secrets-management
+  - secrets-sprawl
+  - pulumi
 
 
 social:
@@ -26,6 +28,13 @@ social:
     Secrets sprawl is a real problem that can slow down our teams and impact our productivity. 
     But it also affects how fast an organization can scale its development and operations teams. 
     Learn how to overcome secrets sprawl and regain your productivity.
+search:
+  keywords:
+    - Secrets
+    - Management
+    - Productivity
+    - Secrets sprawl
+    - Centralized management
 ---
 
 Only a few things are certain in the lives of developers and DevOps engineers: taxes, yearly performance reviews, and secret sprawl. While the first two are inevitable, the last one is something that can be managed.

@@ -3,8 +3,15 @@ date: "2020-04-21"
 title: "Announcing Pulumi 2.0, Now with Superpowers"
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
-meta_desc: "Today we are announcing Pulumi 2.0, a modern infrastructure as code platform with advanced capabilities including new languages, testing, and policy as code."
+meta_desc: "Today we are announcing Pulumi 2.0, a modern infrastructure as code platform
+  with advanced capabilities including new languages, testing, and policy as code."
 meta_image: "pulumi-2-0.png"
+search:
+  keywords:
+    - Superpowers
+    - Infrastructure
+    - Infrastructure as code
+    - Cloud engineering
 ---
 
 Today we are excited to announce Pulumi 2.0, the next major stage in our journey as an open source project, company, and community. This release expands on our original vision of using your favorite languages and tools to do all things infrastructure as code, now with new cloud engineering superpowers that will help you and your team adopt modern cloud architectures.

@@ -3,15 +3,22 @@ title: "Introducing Pulumi Copilot: Intelligent Cloud Management"
 allow_long_title: true
 date: 2024-06-12T04:00:00-07:00
 updated: 2025-03-12
-meta_desc: "Introducing Pulumi Copilot—an AI-powered assistant for cloud infrastructure management in Pulumi Cloud. Automate, analyze, and deploy faster."
+meta_desc: "Introducing Pulumi Copilot—an AI-powered assistant for cloud infrastructure
+  management in Pulumi Cloud. Automate, analyze, and deploy faster."
 meta_image: copilot.png
 authors:
-    - luke-hoban
+  - luke-hoban
 tags:
-    - ai
-    - copilot
-    - insights
+  - ai
+  - copilot
+  - insights
 
+search:
+  keywords:
+    - AI
+    - Cloud
+    - Cloud Infrastructure
+    - Infrastructure Management
 ---
 
 AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception.  Last year we launched [Pulumi AI](/ai/) to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using Infrastructure-as-Code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.

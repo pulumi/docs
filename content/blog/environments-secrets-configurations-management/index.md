@@ -4,18 +4,25 @@ allow_long_title: true
 
 date: 2023-10-10T04:00:00-07:00
 
-meta_desc: "Introducing Pulumi ESC: Hierarchical Environments, Secrets Management and Configuration-as-Code for the Cloud"
+meta_desc: "Introducing Pulumi ESC: Hierarchical Environments, Secrets Management
+  and Configuration-as-Code for the Cloud"
 
 meta_image: meta.png
 
 authors:
-    - luke-hoban
+  - luke-hoban
 
 tags:
-    - esc
-    - secrets
-    - platform-engineering
+  - esc
+  - secrets
+  - platform-engineering
 
+search:
+  keywords:
+    - ESC
+    - secrets
+    - configuration management
+    - cloud infrastructure
 ---
 
 Today, we’re excited to introduce [**Pulumi ESC**](/product/esc/), a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments.  Pulumi ESC introduces a new category of configuration-as-code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.

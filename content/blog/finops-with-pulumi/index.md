@@ -11,7 +11,8 @@ date: 2023-02-14
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: FinOps must know. What is FinOps? Who is responsible, and what are the responsibilities? Cloud FinOps principles and FinOps with Pulumi in practice.
+meta_desc: FinOps must know. What is FinOps? Who is responsible, and what are the
+  responsibilities? Cloud FinOps principles and FinOps with Pulumi in practice.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,18 +23,25 @@ meta_image: FinOps automation policy check tag cloud resource label.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - matt-small
-    - richard-shade
+  - matt-small
+  - richard-shade
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - finops
-    - policy-as-code
-    - cloud-engineering
-    - automation-api
+  - finops
+  - policy-as-code
+  - cloud-engineering
+  - automation-api
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - FinOps
+    - Cloud
+    - FinOps practice
+    - Cloud engineering
+    - Automation API
 ---
 
 ## What is FinOps?

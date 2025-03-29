@@ -2,12 +2,20 @@
 title: "Functions Now Accept Outputs"
 date: 2021-11-12T13:14:58-05:00
 draft: false
-meta_desc: With Pulumi 3.17.1 you can now call functions directly with resource outputs without an extra apply.
+meta_desc: With Pulumi 3.17.1 you can now call functions directly with resource outputs
+  without an extra apply.
 meta_image: meta.png
 authors:
-    - anton-tayanovskyy
+  - anton-tayanovskyy
 tags:
-    - features
+  - features
+search:
+  keywords:
+    - Functions
+    - Outputs
+    - resource outputs
+    - Output form
+    - getCredentialsOutput
 ---
 
 Pulumi 3.17.1 makes it easier to compose function calls and resources.

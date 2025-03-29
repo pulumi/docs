@@ -2,13 +2,21 @@
 title: "Oct. 27 releases: Pulumi Registry, K8s Operator 1.0"
 date: 2021-10-27T08:00:00-07:00
 draft: false
-meta_desc: Cloud Engineering Summit sessions on-demand, Pulumi Kubernetes Operator 1.0 & Pulumi Registry launches, new features in Pulumi Packages and .NET Automation API
+meta_desc: Cloud Engineering Summit sessions on-demand, Pulumi Kubernetes Operator
+  1.0 & Pulumi Registry launches, new features in Pulumi Packages and .NET Automation
+  API
 meta_image: meta.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
+search:
+  keywords:
+    - Kubernetes
+    - Registry
+    - Kubernetes Operator
+    - Cloud Engineering
 ---
 
 It's been an incredibly busy few weeks at Pulumi. We've met thousands of you at our second annual Cloud Engineering Summit, shipped major new releases like Pulumi Registry and Pulumi Kubernetes Operator 1.0 and continued to innovate on and improve the entire Pulumi Cloud Engineering Platform. [Get caught up on Cloud Engineering Summit](/cloud-engineering-summit/replay/) to learn what's coming in cloud engineering, or read on for this month's news.

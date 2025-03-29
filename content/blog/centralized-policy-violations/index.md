@@ -1,15 +1,24 @@
 ---
-title: "Introducing the Centralized Policy Violations Page: Streamlined Compliance Management"
+title: "Introducing the Centralized Policy Violations Page: Streamlined Compliance
+  Management"
 allow_long_title: true
 date: 2024-08-26T09:00:00-07:00
 draft: false
-meta_desc: The new Centralized Policy Violations page in Pulumi offers enhanced visibility and control by consolidating all policy violations.
+meta_desc: The new Centralized Policy Violations page in Pulumi offers enhanced visibility
+  and control by consolidating all policy violations.
 meta_image: meta.png
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 tags:
-    - releases
-    - policy
+  - releases
+  - policy
+search:
+  keywords:
+    - Compliance
+    - Violations
+    - Policy Violations
+    - Compliance Management
+    - Policy Packs
 ---
 
 We’re excited to introduce a new centralized Policy Violations destination in Pulumi Cloud to simplify policy management and compliance. This powerful addition provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure.

@@ -2,21 +2,37 @@
 title: "Python for DevOps"
 date: 2025-01-06T00:23:24-05:00
 draft: false
-meta_desc: From quick fixes to enterprise solutions, discover 15 essential python tools. 
+meta_desc: From quick fixes to enterprise solutions, discover 15 essential python
+  tools.
 meta_image: meta.png
 authors:
-    - adam-gordon-bell
+  - adam-gordon-bell
 tags:
-    - python
-    - devops
-    - iac
+  - python
+  - devops
+  - iac
 social:
-    twitter: >
-        🚀 Unlock the power of Python for DevOps! From quick fixes to enterprise solutions, discover 15 essential tools including Django for custom dashboards, Airflow for workflow automation, and Pulumi for infrastructure as code. Transform your DevOps game with the perfect mix of rapid solutions and scalable architecture.
-    linkedin: >
-        🚀 Unlock the power of Python for DevOps! From quick fixes to enterprise solutions, discover 15 essential tools including Django for custom dashboards, Airflow for workflow automation, and Pulumi for infrastructure as code. Transform your DevOps game with the perfect mix of rapid solutions and scalable architecture.
+  twitter: >
+    🚀 Unlock the power of Python for DevOps! From quick fixes to enterprise solutions,
+    discover 15 essential tools including Django for custom dashboards, Airflow for
+    workflow automation, and Pulumi for infrastructure as code. Transform your DevOps
+    game with the perfect mix of rapid solutions and scalable architecture.
+  linkedin: >
+    🚀 Unlock the power of Python for DevOps! From quick fixes to enterprise solutions,
+    discover 15 essential tools including Django for custom dashboards, Airflow for
+    workflow automation, and Pulumi for infrastructure as code. Transform your DevOps
+    game with the perfect mix of rapid solutions and scalable architecture.
 
+search:
+  keywords:
+    - Python
+    - DevOps
+    - Infrastructure
+    - Python tools
+    - Infrastructure automation
+    - Workflow automation
 ---
+
 Have you ever had one of those moments: Elasticsearch is crashing, logs are filling up too fast, or a deployment needs data from three different APIs. The big enterprise solutions aren't quite right, and your team estimates six months to build something proper. But you know that with Python and a few choice libraries, you could hack something together by tomorrow.
 
 <!--more-->

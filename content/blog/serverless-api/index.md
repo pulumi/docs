@@ -3,46 +3,59 @@ title: "Host your Python app for $1.28 a month"
 date: 2025-01-29T00:00:00
 updated: 2025-03-13
 draft: false
-meta_desc: Learn how to deploy a Flask API in an AWS Lambda container for just $1.28/month. Zero cost when idle, instant scaling – great for low-traffic apps.
+meta_desc: Learn how to deploy a Flask API in an AWS Lambda container for just $1.28/month.
+  Zero cost when idle, instant scaling – great for low-traffic apps.
 meta_image: meta.png
 authors:
-    - adam-gordon-bell
+  - adam-gordon-bell
 tags:
-    - python
-    - serverless
+  - python
+  - serverless
 social:
-    twitter: >
-            🚀 Transform your low-traffic Flask APIs into cost-efficient serverless apps! Package your entire REST API as a container, deploy to AWS Lambda, and pay $0 when idle. Simple local development, standard Flask patterns, and automatic scaling - all with minimal serverless expertise needed. 
-    linkedin: >
-            Ever wondered how to run web services for practically nothing? Adam shares an approach that's perfect for side projects and low-traffic applications.
+  twitter: >
+    🚀 Transform your low-traffic Flask APIs into cost-efficient serverless apps! Package
+    your entire REST API as a container, deploy to AWS Lambda, and pay $0 when idle.
+    Simple local development, standard Flask patterns, and automatic scaling - all
+    with minimal serverless expertise needed. 
+  linkedin: >
+    Ever wondered how to run web services for practically nothing? Adam shares an
+    approach that's perfect for side projects and low-traffic applications.
 
-            💡 The Challenge:
-            Running services 24/7 that barely get used, but need to be reliable when called.
-            🎯 The Solution:
-            Package your entire web app as a container and run it on AWS Lambda!
-            ✨ Why This Works:
+    💡 The Challenge:
+    Running services 24/7 that barely get used, but need to be reliable when called.
+    🎯 The Solution:
+    Package your entire web app as a container and run it on AWS Lambda!
+    ✨ Why This Works:
 
-            Zero cost when idle - literally $0!
-            Instant activation when needed
-            Pennies per month for low traffic
-            Compatible with all web frameworks
+    Zero cost when idle - literally $0!
+    Instant activation when needed
+    Pennies per month for low traffic
+    Compatible with all web frameworks
 
-            🛠️ The Beauty of Simplicity:
-            No serverless expertise needed! Just:
+    🛠️ The Beauty of Simplicity:
+    No serverless expertise needed! Just:
 
-            Write your code normally
-            Containerize it
-            Deploy to Lambda
-            Add API Gateway
-            You're live!
+    Write your code normally
+    Containerize it
+    Deploy to Lambda
+    Add API Gateway
+    You're live!
 
-            💰 Real Cost Example:
-            Flask app running with:
+    💰 Real Cost Example:
+    Flask app running with:
 
-            512MB memory
-            40,000 requests/month
-            Total cost: $0.28/month (!!)
-            Zero traffic = Zero cost
+    512MB memory
+    40,000 requests/month
+    Total cost: $0.28/month (!!)
+    Zero traffic = Zero cost
+search:
+  keywords:
+    - Python
+    - AWS
+    - Lambda
+    - AWS Lambda
+    - Flask API
+    - serverless apps
 ---
 
 Most developers maintain at least one low-traffic service that still needs to be reliably available. It might be an internal reporting API that gets a few calls per hour or a side project with occasional use. While these services don't handle much load, they need to exist and remain responsive.

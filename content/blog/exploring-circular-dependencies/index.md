@@ -11,6 +11,13 @@ authors:
 tags:
   - features
   - hackathon
+search:
+  keywords:
+    - dependencies
+    - hackathon
+    - circular dependencies
+    - Callback Function
+    - resource dependencies
 ---
 
 As part of our hackathon near the end of last year, we decided to explore solutions to a common problem when people are using Pulumi for their systems. A question that’s been asked in a few different forms is how to resolve circular dependencies between resources in a Pulumi program.

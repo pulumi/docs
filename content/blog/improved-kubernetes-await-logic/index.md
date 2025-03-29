@@ -30,11 +30,11 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - bryce-lampe
+  - bryce-lampe
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - kubernetes
+  - kubernetes
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -50,8 +50,15 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - Kubernetes
+    - readiness
+    - Kubernetes provider
+    - deletion propagation
+    - custom readiness
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

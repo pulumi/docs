@@ -2,12 +2,20 @@
 title: "Pulumi is SOC 2 Certified"
 date: 2021-01-07
 updated: 2025-03-07
-meta_desc: "Pulumi achieved SOC 2 certification for reporting on the design of controls, testing, and operating effectiveness of processes for a service organization."
+meta_desc: "Pulumi achieved SOC 2 certification for reporting on the design of controls,
+  testing, and operating effectiveness of processes for a service organization."
 meta_image: soc2.png
 authors:
-   - eric-rudder
+  - eric-rudder
 tags:
-   - pulumi-enterprise
+  - pulumi-enterprise
+search:
+  keywords:
+    - SOC
+    - security
+    - SOC 2
+    - operational excellence
+    - audit process
 ---
 
 ## Pulumi’s Commitment

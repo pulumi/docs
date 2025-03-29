@@ -1,16 +1,24 @@
 ---
 title: "Pulumi Launches Scheduled Deployments: Automate Recurring Workflows"
-allow_long_title: True
+allow_long_title: true
 date: 2024-04-24T07:00:02-08:00
 draft: false
-meta_desc: Pulumi introduces Scheduled Deployments to enhance cloud management, allowing for automated operations based on customizable schedules.
+meta_desc: Pulumi introduces Scheduled Deployments to enhance cloud management, allowing
+  for automated operations based on customizable schedules.
 meta_image: scheduled-deployments.png
 authors:
-    - meagan-cojocar
-    - levi-blackstone
+  - meagan-cojocar
+  - levi-blackstone
 tags:
-    - features
-    - infrastructure-lifecycle-management
+  - features
+  - infrastructure-lifecycle-management
+search:
+  keywords:
+    - Deployments
+    - Automation
+    - Scheduled Deployments
+    - Cloud Management
+    - Infrastructure Management
 ---
 
 We are excited to announce __Scheduled Deployments__ for Pulumi Cloud. This new feature, which builds upon the robust foundation of Pulumi Deployments, is designed to streamline cloud management by automating the deployment and deactivation of resources according to customizable schedules. Two new Pulumi features also announced today, [Drift Detection and Remediation](/blog/drift-detection) and [Time-to-Live Stacks](/blog/ttl), are built on top of the new Scheduled Deployments functionality. These three new features are available today on the Enterprise and Business Critical editions of Pulumi Cloud.

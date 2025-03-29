@@ -3,8 +3,16 @@ title: "Using Terraform Remote State with Pulumi"
 authors: ["paul-stack"]
 tags: ["features"]
 date: "2019-06-07"
-meta_desc: "Pulumi allows resources which were provisioned by CloudFormation, ARM, or Terraform to remain, while allowing those resources to be consumed by Pulumi."
+meta_desc: "Pulumi allows resources which were provisioned by CloudFormation, ARM,
+  or Terraform to remain, while allowing those resources to be consumed by Pulumi."
 
+search:
+  keywords:
+    - Terraform
+    - CloudFormation
+    - Terraform state
+    - RemoteStateReference
+    - Infrastructure as Code
 ---
 
 While some people coming to Pulumi are entirely new to Infrastructure as

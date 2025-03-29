@@ -11,7 +11,8 @@ date: 2022-05-19T09:35:01-07:00
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: Starting today you can add a README to your Pulumi Service Stacks to store key links, CLI commands and documentation.
+meta_desc: Starting today you can add a README to your Pulumi Service Stacks to store
+  key links, CLI commands and documentation.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,20 +23,26 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - evan-boyle
-    - devon-grove
-    - myles-haynes
-    - casey-huang
-    - meagan-cojocar
+  - evan-boyle
+  - devon-grove
+  - myles-haynes
+  - casey-huang
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
+  - features
 
 draft: false
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - README
+    - Stack
+    - Stack READMEs
+    - cloud infrastructure
 ---
 
 Starting today, users can create [Stack READMEs](https://www.pulumi.com/docs/pulumi-cloud/projects-and-stacks/#stack-readme) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs](https://www.pulumi.com/learn/building-with-pulumi/stack-outputs).

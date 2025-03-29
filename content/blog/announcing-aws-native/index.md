@@ -1,13 +1,22 @@
 ---
-title: "Announcing the Pulumi AWS Native Provider, Powered by the AWS Cloud Control API"
+title: "Announcing the Pulumi AWS Native Provider, Powered by the AWS Cloud Control
+  API"
 date: 2021-09-30
-meta_desc: "New Pulumi AWS Native Provider offers same-day support for all new AWS features, building on the AWS Cloud Control API"
+meta_desc: "New Pulumi AWS Native Provider offers same-day support for all new AWS
+  features, building on the AWS Cloud Control API"
 meta_image: aws_native_launch.png
-allow_long_title: True
+allow_long_title: true
 authors:
-   - luke-hoban
+  - luke-hoban
 tags:
-   - aws
+  - aws
+search:
+  keywords:
+    - AWS
+    - Provider
+    - AWS Native
+    - Cloud Control
+    - CloudFormation Registry
 ---
 
 {{% notes type="info" %}}

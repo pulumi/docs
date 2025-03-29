@@ -4,17 +4,25 @@ date: 2022-07-01T13:03:41-07:00
 meta_desc: "Bring EKS to Your Datacenter with Amazon EKS Anywhere Bare Metal."
 meta_image: meta.png
 authors:
-    - david-flanagan
+  - david-flanagan
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - kubernetes
-    - eks
-    - aws
+  - kubernetes
+  - eks
+  - aws
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - eks
+    - kubernetes
+    - aws
+    - eks anywhere
+    - bare metal
 ---
+
 {{% notes type="info" %}}
 Check out version 3.0 of the [Pulumi EKS Provider](/blog/eks-v3-release/).
 {{% /notes %}}

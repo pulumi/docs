@@ -15,7 +15,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 meta_desc: |
-    We are thrilled to have an amazing group of sponsors participating in the 2021 Cloud Engineering Summit, helping us pull off this amazing event.
+  We are thrilled to have an amazing group of sponsors participating in the 2021 Cloud Engineering Summit, helping us pull off this amazing event.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -26,14 +26,22 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - isaac-harris
+  - isaac-harris
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - cloud-engineering-summit
+  - cloud-engineering-summit
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - cloud
+    - summit
+    - sponsors
+    - Cloud Engineering
+    - AWS sessions
+    - Google Cloud
 ---
 
 When we launched the [first-ever Cloud Engineering Summit](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpE6LxGPnfLfBQLbC7zX8FT) last year, we were humbled by the generosity and support from partners and sponsors across the industry who helped to make the summit a success. For [this year’s event](/cloud-engineering-summit), we’re equally thrilled to have an amazing group of sponsors participating in the summit and it’s worth a quick ‘guided tour’ of the teams that are helping us to pull off this amazing event.

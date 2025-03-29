@@ -1,13 +1,22 @@
 ---
 title: "Refactoring Infrastructure as Code"
 date: 2021-06-01
-meta_desc: "Cloud engineering applies software engineering principles such as refactoring to improve and maintain infrastructure."
+meta_desc: "Cloud engineering applies software engineering principles such as refactoring
+  to improve and maintain infrastructure."
 meta_image: refactoring-iac.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - refactoring
-    - cloud engineering
+  - refactoring
+  - cloud engineering
+search:
+  keywords:
+    - Refactoring
+    - Infrastructure
+    - Code
+    - Infrastructure as Code
+    - Cloud Engineering
+    - Test-Driven Development
 ---
 
 The central principle of cloud engineering is adopting software engineering practices. Refactoring is a technique for making changes to code that improve maintainability, enhance performance, scalability, and security without changing its external behavior. In devops, refactoring often occurs with modern applications; however, we can apply those same techniques to cloud infrastructure with [infrastructure as code](/what-is/what-is-infrastructure-as-code/).

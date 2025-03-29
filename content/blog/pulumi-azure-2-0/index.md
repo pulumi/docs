@@ -1,12 +1,20 @@
 ---
 title: "Announcing Pulumi Azure Provider 2.0"
 date: 2020-03-16
-meta_desc: "Announcing the 2.0 release of Pulumi Azure provider and what's new in it."
+meta_desc: "Announcing the 2.0 release of Pulumi Azure provider and what's new in
+  it."
 meta_image: azure20.png
 authors:
-    - mikhail-shilkov
+  - mikhail-shilkov
 tags:
+  - Azure
+search:
+  keywords:
     - Azure
+    - Provider
+    - Azure Storage
+    - Virtual Machine
+    - Custom Timeouts
 ---
 
 {{% notes type="warning" %}}

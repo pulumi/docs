@@ -1,16 +1,23 @@
 ---
 title: "Announcing the Pulumi Visual Studio Code Extension"
-date: 2024-09-18T8:56:00-00:00
-meta_desc: "Enhance your Pulumi development experience with the new VS Code extension. Manage Pulumi IaC and Pulumi ESC directly in your editor."
+date: 2024-09-18T08:56:00-00:00
+meta_desc: "Enhance your Pulumi development experience with the new VS Code extension.
+  Manage Pulumi IaC and Pulumi ESC directly in your editor."
 meta_image: meta.png
 authors:
-    - meagan-cojocar
-    - eron-wright
-    - cleve-littlefield
+  - meagan-cojocar
+  - eron-wright
+  - cleve-littlefield
 
 tags:
-    - releases
-    - features
+  - releases
+  - features
+search:
+  keywords:
+    - Extension
+    - Debugging
+    - Visual Studio
+    - VS Code
 ---
 
 At the heart of Pulumi's approach to cloud infrastructure and secrets management is a belief in empowering engineers to use the best software engineering tools to manage complexity at scale and to be maximally productive building cloud infrastructure and applications for their businesses.  

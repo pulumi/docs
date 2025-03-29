@@ -1,19 +1,28 @@
 ---
-title: "Pulumi Copilot is Now Integrated with Pulumi Docs: A New Way to Learn and Explore"
-description: "Pulumi Copilot is now available across Pulumi Documentation, equipped with a new Documentation Skill, making learning Pulumi more interactive and intuitive."
+title: "Pulumi Copilot is Now Integrated with Pulumi Docs: A New Way to Learn and
+  Explore"
+description: "Pulumi Copilot is now available across Pulumi Documentation, equipped
+  with a new Documentation Skill, making learning Pulumi more interactive and intuitive."
 date: 2024-10-24T23:59:00-07:00
 allow_long_title: true
 draft: false
-meta_desc: Pulumi Copilot integrates with Pulumi Documentation, offering a conversational interface to make learning cloud infrastructure easier and more intuitive.
+meta_desc: Pulumi Copilot integrates with Pulumi Documentation, offering a conversational
+  interface to make learning cloud infrastructure easier and more intuitive.
 meta_image: meta.png
 authors:
-    - meagan-cojocar
-    - artur-laksberg
+  - meagan-cojocar
+  - artur-laksberg
 tags:
-    - releases
-    - features
+  - releases
+  - features
 social:
-    twitter: "Pulumi Copilot is now available across Pulumi Documentation and pulumi.com, and comes equipped with a powerful new Documentation Skill! Learn more by reading our blog:"
+  twitter: "Pulumi Copilot is now available across Pulumi Documentation and pulumi.com,
+    and comes equipped with a powerful new Documentation Skill! Learn more by reading
+    our blog:"
+search:
+  keywords:
+    - Copilot
+    - Cloud Infrastructure
 ---
 
 [Pulumi Copilot](/docs/pulumi-cloud/copilot/) has been making our customers' day-to-day tasks easier since its release, and today we’re excited to expand its capabilities—Pulumi Copilot is now available across Pulumi Documentation and pulumi.com, and comes equipped with a powerful new Documentation Skill!

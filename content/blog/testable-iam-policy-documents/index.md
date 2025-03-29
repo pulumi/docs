@@ -1,13 +1,21 @@
 ---
 title: "Testable IAM Policy Documents"
 date: 2021-05-12
-meta_desc: "Pulumi community member Thierry de Pauw introduces a Node module for checking and validating IAM policy documents."
+meta_desc: "Pulumi community member Thierry de Pauw introduces a Node module for checking
+  and validating IAM policy documents."
 meta_image: testable_iam_policy.png
 authors:
-    - thierry-de-pauw
+  - thierry-de-pauw
 tags:
-    - AWS
+  - AWS
+  - IAM
+search:
+  keywords:
     - IAM
+    - Policy
+    - IAM Policy
+    - AWS CDK
+    - Policy Document
 ---
 
 I was relieved to find Pulumi. Finally, we have testable Infrastructure as Code. We can write fast unit tests that we can execute locally without needing the cloud. However, I was a bit disappointed. Pulumi does not have a full representation of IAM Policy documents. Fortunately, it was relatively easy to build a library that did this!

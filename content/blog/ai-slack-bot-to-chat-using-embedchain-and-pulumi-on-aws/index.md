@@ -1,18 +1,27 @@
 ---
-title: "Create an AI Slack Bot to Chat with Your Data Using Embedchain, Pulumi on AWS"
+title: "Create an AI Slack Bot to Chat with Your Data Using Embedchain, Pulumi on
+  AWS"
 allow_long_title: true
 authors:
-- tyler-mulligan
+  - tyler-mulligan
 tags:
-- aws
-- pulumi
-- embedchain
-- slack
-- chatbot
-- ai
-meta_desc: "Create an AI Slack bot to chat with your data using Embedchain, Pulumi on AWS"
+  - aws
+  - pulumi
+  - embedchain
+  - slack
+  - chatbot
+  - ai
+meta_desc: "Create an AI Slack bot to chat with your data using Embedchain, Pulumi
+  on AWS"
 date: 2024-03-18T17:21:02+01:00
 meta_image: meta.png
+search:
+  keywords:
+    - AI
+    - Slack
+    - AI Slack
+    - Slack bot
+    - Embedchain framework
 ---
 
 The integration of artificial intelligence (AI) to improve user experiences is gaining popularity in today's world. One fascinating application of AI is the creation of chatbots, which can engage users in conversation and provide helpful information or services.

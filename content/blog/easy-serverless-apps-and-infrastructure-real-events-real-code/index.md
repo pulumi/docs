@@ -2,10 +2,18 @@
 title: Easy Serverless Apps and Infrastructure
 h1: "Easy Serverless Apps and Infrastructure — Real Events, Real Code"
 date: "2019-03-11"
-meta_desc: "Create a simple serverless app. With Pulumi, you can create, deploy, and manage serverless apps using your favorite language."
+meta_desc: "Create a simple serverless app. With Pulumi, you can create, deploy, and
+  manage serverless apps using your favorite language."
 meta_image: "hero.png"
 authors: ["joe-duffy"]
-tags: ["JavaScript","Serverless","AWS"]
+tags: ["JavaScript", "Serverless", "AWS"]
+search:
+  keywords:
+    - Serverless
+    - AWS
+    - Serverless Apps
+    - Event Handlers
+    - Lambda Function
 ---
 
 With Pulumi, you can create, deploy, and manage any cloud resource using

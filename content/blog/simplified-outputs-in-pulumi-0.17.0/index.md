@@ -3,8 +3,15 @@ title: "Simplified Outputs in Pulumi 0.17"
 authors: ["cyrus-najmabadi"]
 tags: ["features"]
 date: "2019-03-19"
-meta_desc: "Based on feedback from cloud developers, Pulumi Outputs have been simplified for JavaScript and TypeScript simplifying the user experience."
+meta_desc: "Based on feedback from cloud developers, Pulumi Outputs have been simplified
+  for JavaScript and TypeScript simplifying the user experience."
 meta_image: "comp-list.png"
+search:
+  keywords:
+    - Outputs
+    - JavaScript
+    - TypeScript simplification
+    - cloud developers
 ---
 
 Pulumi allows cloud developers to use programming languages like

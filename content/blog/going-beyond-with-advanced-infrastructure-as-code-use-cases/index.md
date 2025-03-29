@@ -1,16 +1,24 @@
 ---
 title: "Going Beyond With Advanced Infrastructure as Code Use Cases"
 date: 2023-11-21T03:53:33Z
-canonical_url: https://thenewstack.io/going-beyond-with-advanced-infrastructure-as-code-use-cases/
+canonical_url: 
+  https://thenewstack.io/going-beyond-with-advanced-infrastructure-as-code-use-cases/
 draft: false
-meta_desc: "Explore advanced Infrastructure as Code (IaC) with Pulumi, covering cloud development, testing, policy enforcement, and the Automation API in a concise guide."
+meta_desc: "Explore advanced Infrastructure as Code (IaC) with Pulumi, covering cloud
+  development, testing, policy enforcement, and the Automation API in a concise guide."
 meta_image: meta.png
 authors:
-    - joe-duffy
+  - joe-duffy
 tags:
-    - infrastructure-as-code
-    - fundamentals
+  - infrastructure-as-code
+  - fundamentals
 
+search:
+  keywords:
+    - Infrastructure
+    - Testing
+    - Infrastructure as Code
+    - Policy as Code
 ---
 
 *This is the third of a three-part series originally published on The New Stack. Read [Part 1](/blog/infrastructure-as-code-in-any-programming-language/) and [Part 2](/blog/walkthrough-of-adopting-infrastructure-as-code/).*

@@ -4,11 +4,18 @@ date: 2023-04-03
 meta_desc: Pulumi's DIY backend now supports stack names scoped by project name.
 meta_image: meta.png
 authors:
-    - justin-vanpatten
-    - abhinav-gupta
+  - justin-vanpatten
+  - abhinav-gupta
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
+search:
+  keywords:
+    - Backend
+    - Projects
+    - Project-scoped stacks
+    - DIY backend
+    - Infrastructure as Code
 ---
 
 At Pulumi, our goal is to offer the best Infrastructure as Code experience for all cloud developers.

@@ -1,12 +1,20 @@
 ---
 title: "Announcing Next Generation Pulumi Azure Provider"
 date: 2020-09-21
-meta_desc: "Next Generation Pulumi Azure Provider with 100% API Coverage and Same-Day Feature Support is now available in beta"
+meta_desc: "Next Generation Pulumi Azure Provider with 100% API Coverage and Same-Day
+  Feature Support is now available in beta"
 meta_image: azure-nextgen.png
 authors:
-   - mikhail-shilkov
+  - mikhail-shilkov
 tags:
-   - azure
+  - azure
+search:
+  keywords:
+    - Azure
+    - Provider
+    - Azure provider
+    - API coverage
+    - Resource Manager
 ---
 
 {{% notes type="info" %}}

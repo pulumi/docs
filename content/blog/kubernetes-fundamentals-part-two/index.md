@@ -3,13 +3,22 @@ title: "Kubernetes Fundamentals Part Two"
 date: 2021-09-02T12:54:53-05:00
 draft: false
 meta_image: k8s-fundamentals.png
-meta_desc: "In part 2 of this 2-part series, we'll learn about managed Kubernetes services, when to use them, and how to deploy one, starting with Google's K8s engine."
+meta_desc: "In part 2 of this 2-part series, we'll learn about managed Kubernetes
+  services, when to use them, and how to deploy one, starting with Google's K8s engine."
 authors:
-    - kat-cosgrove
+  - kat-cosgrove
 tags:
-    - kubernetes
-    - google-cloud
+  - kubernetes
+  - google-cloud
+search:
+  keywords:
+    - Kubernetes
+    - GKE
+    - managed Kubernetes
+    - Google Cloud
+    - Kubernetes Engine
 ---
+
 Kubernetes is everywhere now, but it’s primarily been the domain of people working on the ops side of infrastructure. What about devs, though? You benefit from knowing what Kubernetes is and how to use it, too&mdash;otherwise, we’re still putting teams in silos. In this blog, we're going to build off part one by learning about managed Kubernetes services: what they are, when they're useful, and how you can try deploying to one yourself, starting with Google's Kubernetes Engine (GKE).
 <!--more-->
 

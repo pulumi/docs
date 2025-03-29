@@ -1,14 +1,22 @@
 ---
 title: "Google Cloud Run: Serverless Containers"
 date: 2020-02-04
-meta_desc: "Running serverless containers in Google Cloud Run with TypeScript and Pulumi"
+meta_desc: "Running serverless containers in Google Cloud Run with TypeScript and
+  Pulumi"
 meta_image: "meta.png"
 authors:
-    - mikhail-shilkov
+  - mikhail-shilkov
 tags:
-    - google-cloud
-    - "Serverless"
-    - "containers"
+  - google-cloud
+  - "Serverless"
+  - "containers"
+search:
+  keywords:
+    - Cloud
+    - Containers
+    - Cloud Run
+    - Serverless Containers
+    - Google Cloud
 ---
 
 Google [Cloud Run](https://cloud.google.com/run/) is the latest addition to the serverless compute family. While it may look similar to existing services of public cloud, the feature set makes Cloud Run unique:

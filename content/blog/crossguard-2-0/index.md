@@ -4,9 +4,16 @@ date: 2020-05-05
 meta_desc: "New CrossGuard features part of Pulumi's 2.0 release"
 meta_image: crossguard-mascot.png
 authors:
-   - erin-krengel
+  - erin-krengel
 tags:
-   - "Policy as Code"
+  - "Policy as Code"
+search:
+  keywords:
+    - CrossGuard
+    - Policy
+    - Policy Packs
+    - Policy as Code
+    - Python Support
 ---
 
 In a [previous blog post](/blog/announcing-crossguard-preview/), I introduced CrossGuard, Pulumi's Policy as Code solution. As part of our [2.0 release](/blog/pulumi-2-0/), CrossGuard is now generally available and has some awesome new features to improve the user experience around managing Policy Packs.

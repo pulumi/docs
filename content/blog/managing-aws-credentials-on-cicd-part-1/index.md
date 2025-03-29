@@ -4,10 +4,17 @@ date: 2020-03-12
 meta_desc: "Best practices for managing AWS credentials on CI/CD"
 meta_image: meta.png
 authors:
-    - chris-smith
-    - sophia-parafina
+  - chris-smith
+  - sophia-parafina
 tags:
-    - continuous-delivery
+  - continuous-delivery
+search:
+  keywords:
+    - AWS
+    - CI/CD
+    - AWS credentials
+    - IAM User
+    - continuous delivery
 ---
 
 Continuous delivery requires providing highly sensitive credentials to your

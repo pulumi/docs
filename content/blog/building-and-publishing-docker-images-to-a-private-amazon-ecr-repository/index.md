@@ -4,8 +4,15 @@ h1: "Building and Publishing Docker Images to a Private Amazon ECR Repository"
 authors: ["cyrus-najmabadi"]
 tags: ["Kubernetes"]
 date: "2019-06-18"
-meta_desc: "See how Pulumi Crosswalk for AWS lets you use infrastructure as code to easily build, publish, and pull from private ECR repositories."
+meta_desc: "See how Pulumi Crosswalk for AWS lets you use infrastructure as code to
+  easily build, publish, and pull from private ECR repositories."
 meta_image: "pulumi-crosswalk-for-aws.png"
+search:
+  keywords:
+    - Docker
+    - ECR
+    - Docker images
+    - ECR repository
 ---
 
 {{% notes type="warning" %}}

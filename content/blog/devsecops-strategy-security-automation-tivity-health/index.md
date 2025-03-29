@@ -18,7 +18,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Accelerate security automation to achieve faster, cheaper, and more secure cloud deployments. Discover Tivity Health's cloud transformation journey with Pulumi
+meta_desc: Accelerate security automation to achieve faster, cheaper, and more secure
+  cloud deployments. Discover Tivity Health's cloud transformation journey with Pulumi
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,17 +30,17 @@ meta_image: david-tivity-healthy-quote.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - security
-    - devecops
-    - devops
-    - infrastructure-as-code
-    - platform-engineering
-    - infrastructure-lifecycle-management
-    - developer-experience-devex
+  - security
+  - devecops
+  - devops
+  - infrastructure-as-code
+  - platform-engineering
+  - infrastructure-lifecycle-management
+  - developer-experience-devex
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -55,8 +56,15 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - DevSecOps
+    - Automation
+    - Security Automation
+    - Infrastructure Management
+    - Cloud Deployment
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

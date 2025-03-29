@@ -29,18 +29,25 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - george-huang
+  - george-huang
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - case-studies
-    - kubernetes
-    - cloud-native
-    - azure
-    - testing
+  - case-studies
+  - kubernetes
+  - cloud-native
+  - azure
+  - testing
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - Azure
+    - Testing
+    - Infrastructure testing
+    - Policy testing
+    - Integration testing
 ---
 
 [Sam Cogan](https://github.com/sam-cogan) is Solutions Architect at [WTW](https://www.wtwco.com/en-us), with a background in IT and experience in software development. A highly visible member of the community, he is both a Microsoft Azure MVP and Puluminary. Sam’s core duties include the development of a resilient platform that supports customer-facing applications and working with DevOps teams on standardizing deployments and using infrastructure as code. Sam's team prioritizes crafting reusable components that adhere to security and compliance standards.

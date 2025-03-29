@@ -4,10 +4,16 @@ date: 2020-03-26
 meta_desc: "Cumundi uses Pulumi to build infrastructure components for their customers"
 meta_image: cumundi-pulumi.png
 authors:
-    - ringo-de-smet
+  - ringo-de-smet
 tags:
+  - aliases
+  - refactoring
+search:
+  keywords:
     - aliases
     - refactoring
+    - infrastructure patterns
+    - reusable libraries
 ---
 
 **Guest Article:** [Ringo De Smet](https://www.linkedin.com/in/ringodesmet/), Founder of Cumundi, standardizes on Pulumi for writing infrastructure as reusable code libraries for his customers. Pulumi enables him to rapidly iterate through the build-test-release cycle of these building blocks.

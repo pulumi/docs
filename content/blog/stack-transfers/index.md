@@ -11,7 +11,8 @@ date: 2022-12-07T11:11:45-08:00
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: We are excited to announce bulk stack transfer to address this feedback and a new organization set up wizard to improve discovery of the feature.
+meta_desc: We are excited to announce bulk stack transfer to address this feedback
+  and a new organization set up wizard to improve discovery of the feature.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,15 +23,22 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
-    - pulumi-service
+  - features
+  - pulumi-service
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - stacks
+    - transfer
+    - stack transfer
+    - bulk transfer
+    - organization setup
 ---
 
 Exactly 3 years ago we added support in the [Pulumi Service](/product/pulumi-service) to transfer stacks from an Individual account to a Pulumi organization and between Pulumi organizations. We heard from customers that they love this feature but found it both hard to discover and tedious when moving a large workload from one organization to another and from Individual accounts to organizations. We are excited to announce bulk stack transfer to address this feedback and a new organization set up wizard to improve discovery of the feature.

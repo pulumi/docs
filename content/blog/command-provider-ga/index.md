@@ -6,16 +6,17 @@ date: 2024-07-01T10:00:00-07:00
 draft: false
 
 meta_desc: >-
-    The 1.0 release of the Pulumi Command provider marks its general availability (GA) and expands support for copying assets to remote hosts.
+  The 1.0 release of the Pulumi Command provider marks its general availability (GA)
+  and expands support for copying assets to remote hosts.
 
 meta_image: meta.png
 
 authors:
-    - thomas-kappler
+  - thomas-kappler
 
 # None of the tags in BLOGGING.md seem to match, but `providers` exists already
 tags:
-    - providers
+  - providers
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -30,8 +31,14 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - Command
+    - Provider
+    - Command Provider
+    - General Availability
 ---
 
 Today, we’re happy to announce the 1.0 release of the [Pulumi Command](https://www.pulumi.com/registry/packages/command/) provider. This release marks the provider’s official transition from preview status to general availability (GA).

@@ -5,8 +5,14 @@ tags: ["aws", "data-and-analytics", "serverless", "architecture-as-code"]
 date: "2020-01-30"
 meta_desc: "Building a serverless data warehouse on AWS using architecture as code."
 meta_image: "ServerlessArchitecture.png"
+search:
+  keywords:
+    - AWS
+    - Serverless
+    - Analytics
+    - Serverless Analytics
+    - Data Warehouse
 ---
-
 
 Whether it’s an IoT installation, a website, or a mobile app, modern software systems generate a trove of usage and performance data. While it can be daunting to collect and manage, surfacing data empowers the business to make informed product investments. In this article, we’ll explore the following:
 

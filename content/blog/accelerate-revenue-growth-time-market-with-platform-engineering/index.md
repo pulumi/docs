@@ -2,15 +2,24 @@
 title: Accelerate Revenue Growth and Time to Market with Platform Engineering
 allow_long_title: true
 date: 2024-09-04
-meta_desc: When organizations build faster and more streamlined release cycles, they gain TTM advantage and a profound business edge over competitors.
+meta_desc: When organizations build faster and more streamlined release cycles, they
+  gain TTM advantage and a profound business edge over competitors.
 meta_image: meta.png
 authors:
-    - marlowe-fenne
+  - marlowe-fenne
 tags:
-    - platform-engineering
+  - platform-engineering
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - platform
+    - engineering
+    - cloud
+    - platform engineering
+    - time to market
+    - revenue growth
 ---
 
 With 62% of large organizations already using multi-cloud (Cloud Computing News), business leaders are looking for their next competitive advantage. Finding these next-gen business edges can be a real challenge, but some innovative organizations are discovering that time to market can be a big competitive lever. They are accelerating their development cycles by up to 70% and seizing opportunities to build new markets, establish new brands and capture market share. This Time To Market (TTM) advantage can apply to entire markets as well as any aspect of your product or service connected to the cloud.

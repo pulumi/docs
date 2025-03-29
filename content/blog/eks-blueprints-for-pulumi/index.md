@@ -2,10 +2,18 @@
 title: "EKS Blueprints for Pulumi"
 date: 2022-04-20T18:00:00Z
 draft: false
-meta_desc: "Announcing Amazon EKS Blueprints for Pulumi: patterns and best practices for Kubernetes deployments."
+meta_desc: "Announcing Amazon EKS Blueprints for Pulumi: patterns and best practices
+  for Kubernetes deployments."
 meta_image: meta.png
 authors: ["isaac-harris", "david-flanagan"]
 tags: ["aws", "eks", "kubernetes"]
+search:
+  keywords:
+    - EKS
+    - Kubernetes
+    - EKS Blueprints
+    - Shared Services
+    - Kubernetes clusters
 ---
 
 With the launch of [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/blogs/aws/amazon-eks-now-generally-available/) in 2017, it is now [easier than ever](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/) to build, secure, operate and maintain Kubernetes clusters in the cloud. Notably, EKS removed the need to manage and configure underlying compute resources and scaling for clusters. Further, [EKS Anywhere](https://aws.amazon.com/eks/eks-anywhere/) brings many benefits to hybrid and on-premises deployments.

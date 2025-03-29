@@ -4,13 +4,20 @@ date: 2020-02-18
 meta_desc: "Manage AWS, Azure, GCP, and Kubernetes with Policy as Code"
 meta_image: crossguard.png
 authors:
-   - sophia-parafina
+  - sophia-parafina
 tags:
-   - "Policy as Code"
-   - "AWS"
-   - "Azure"
-   - google-cloud
-   - "Kubernetes"
+  - "Policy as Code"
+  - "AWS"
+  - "Azure"
+  - google-cloud
+  - "Kubernetes"
+search:
+  keywords:
+    - Policy
+    - Infrastructure
+    - Policy as Code
+    - CrossGuard preview
+    - AWS monthly
 ---
 
 In an [earlier article](/blog/getting-started-with-pac/), we introduced examples of Policy as Code to prevent two of the most common causes of data breaches. Policies are the guardrails of infrastructure. They control access, set limits, and manage how infrastructure operates. In many systems, policies are created by clicking on a GUI, making it difficult to replicate or version. Pulumi implements policy by writing it in Typescript, which ensures that you can write policies using software development practices such as automated testing, deployment, and version control.

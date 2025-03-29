@@ -5,6 +5,13 @@ tags: ["go", "aws", google-cloud, "azure"]
 date: "2020-02-27"
 meta_desc: "Pulumi + Go is a powerful combo for your cloud-native infrastructure."
 meta_image: "pulumigo.png"
+search:
+  keywords:
+    - Go
+    - Infrastructure
+    - Cloud Infrastructure
+    - Infrastructure as Code
+    - Cloud Resources
 ---
 
 Here at Pulumi, everyone on our engineering team is a Gopher. Go has quickly become the "language of the cloud," and so when we chose to build our open-source [pulumi/pulumi engine](https://github.com/pulumi/pulumi) and SaaS backend, we chose Go. As such, we are very excited to welcome Go to the family of supported infrastructure as code languages as part of [Pulumi 2.0](/blog/pulumi-2-0-roadmap#better-language-support).

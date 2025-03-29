@@ -5,6 +5,13 @@ tags: ["continuous-delivery", "octopus"]
 meta_image: "octopus-pulumi.png"
 meta_desc: "Continuous delivery of Pulumi apps with Octopus Deploy "
 date: "2019-10-22"
+search:
+  keywords:
+    - Octopus
+    - Deployment
+    - Continuous Delivery
+    - Octopus Deploy
+    - Infrastructure Code
 ---
 
 Continuous delivery is about making changes in your application and getting them into production securely, quickly, and consistently. Pulumi's infrastructure as code approach uses source code to model cloud resources, making it ideal for continuous delivery. Your infrastructure code can share the same process as your application code including running unit and integration tests, performing code reviews via Pull Requests, and examining your infrastructure using linters or static analysis tools. Like your application, your cloud infrastructure can be validated and tested before deploying to production. Pulumi can integrate into any CI/CD system (such as Jenkins, Azure DevOps, CircleCI, TravisCI, Codefresh, and others), so let's take a look at how to implement a deployment server, using Octopus as an example.

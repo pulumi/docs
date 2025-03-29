@@ -5,14 +5,21 @@ draft: false
 meta_desc: The pulumi-eks package is now available in Python, Go, .NET, and TypeScript.
 meta_image: multi-lang.png
 authors:
-    - levi-blackstone
+  - levi-blackstone
 tags:
-    - aws
-    - eks
-    - .net
-    - python
-    - go
-    - typescript
+  - aws
+  - eks
+  - .net
+  - python
+  - go
+  - typescript
+search:
+  keywords:
+    - EKS
+    - components
+    - Amazon EKS
+    - multi-language components
+    - infrastructure as code
 ---
 
 {{% notes type="info" %}}

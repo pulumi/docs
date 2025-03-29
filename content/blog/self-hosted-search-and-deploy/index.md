@@ -3,12 +3,19 @@ title: "Self-Hosted Pulumi Cloud Support for Resource Search and Pulumi Deployme
 allow_long_title: true
 date: 2024-07-03T09:08:31-07:00
 draft: false
-meta_desc: Introducing Resource Search and Pulumi Deployments in Self-Hosted Pulumi Cloud for enhanced management and deployment of cloud infrastructure.
+meta_desc: Introducing Resource Search and Pulumi Deployments in Self-Hosted Pulumi
+  Cloud for enhanced management and deployment of cloud infrastructure.
 meta_image: meta.png
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 tags:
-    - releases
+  - releases
+search:
+  keywords:
+    - Deployments
+    - Resource
+    - Resource Search
+    - Self-Hosted
 ---
 
 We are excited to introduce two powerful new features for our Self-Hosted Pulumi Cloud offering: Resource Search and Pulumi Deployments. These two additions are the most significant features added to Pulumi Cloud in the last year and we are thrilled to bring them to our self-hosted customers. Resource Search and Pulumi Deployments both improve the way you can manage and deploy your cloud infrastructure, providing greater visibility, control, and automation.

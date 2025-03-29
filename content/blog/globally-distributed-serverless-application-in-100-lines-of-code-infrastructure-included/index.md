@@ -1,11 +1,20 @@
 ---
 title: Globally-distributed Serverless App in 100 Lines of Code
-h1: "Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!"
+h1: "Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure
+  Included!"
 date: "2019-07-02"
-meta_desc: "Build a serverless application with both the data store and the HTTP endpoint located close to end users to ensure prompt response time."
+meta_desc: "Build a serverless application with both the data store and the HTTP endpoint
+  located close to end users to ensure prompt response time."
 meta_image: feature.png
 authors: ["mikhail-shilkov"]
 tags: ["Serverless", "Azure"]
+search:
+  keywords:
+    - Serverless
+    - Azure
+    - Serverless application
+    - Cosmos DB
+    - Traffic Manager
 ---
 
 Pulumi is excellent at connecting multiple cloud components into a

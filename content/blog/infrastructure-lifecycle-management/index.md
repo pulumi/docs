@@ -1,15 +1,23 @@
 ---
 title: "Announcing New Infrastructure Lifecycle Management Features in Pulumi Cloud"
-allow_long_title: True
+allow_long_title: true
 date: 2024-04-24T07:00:05-08:00
 draft: false
-meta_desc: Discover new infrastructure lifecycle management capabilities in Pulumi Cloud, including Drift Detection, Time-to-Live Stacks, and more.
+meta_desc: Discover new infrastructure lifecycle management capabilities in Pulumi
+  Cloud, including Drift Detection, Time-to-Live Stacks, and more.
 meta_image: ilm.png
 authors:
-    - joe-duffy
+  - joe-duffy
 tags:
-    - features
-    - infrastructure-lifecycle-management
+  - features
+  - infrastructure-lifecycle-management
+search:
+  keywords:
+    - Infrastructure
+    - Features
+    - Infrastructure Lifecycle
+    - Drift Detection
+    - Scheduled Deployments
 ---
 
 Today we announced a new wave of Infrastructure Lifecycle Management capabilities in Pulumi Cloud. These build upon and extend our rich Pulumi Deployments foundation for deployment orchestration and workflow. This is an exciting, customer-driven release, with new features that help with Day 2 operations and management.

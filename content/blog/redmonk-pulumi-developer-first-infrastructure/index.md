@@ -2,16 +2,24 @@
 title: "Pulumi and RedMonk on developer-first infrastructure and why it matters"
 allow_long_title: true
 date: 2022-04-26
-meta_desc: Pulumi and RedMonk discuss developer-first infrastructure and how it empowers developers to build cloud applications through software engineering practices.
+meta_desc: Pulumi and RedMonk discuss developer-first infrastructure and how it empowers
+  developers to build cloud applications through software engineering practices.
 meta_image: meta.png
 authors:
-    - george-huang
+  - george-huang
 tags:
-    - cloud-engineering
-    - enterprise
-    - developer-first-infrastructure
-    - cloud-computing
-    - infrastructure-as-code
+  - cloud-engineering
+  - enterprise
+  - developer-first-infrastructure
+  - cloud-computing
+  - infrastructure-as-code
+search:
+  keywords:
+    - RedMonk
+    - infrastructure
+    - developer-first infrastructure
+    - cloud applications
+    - cloud complexity
 ---
 
 What do assembly languages and the cloud have in common? Are abstractions the future of cloud computing? What does "infrastructure" really mean? And why do these questions matter to the platform engineers, infrastructure engineers, and developers who are building modern cloud applications today?

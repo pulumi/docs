@@ -2,7 +2,8 @@
 title: "Introducing Webhooks for Pulumi ESC"
 date: 2024-09-13T00:00:00-03:00
 draft: false
-meta_desc: "Pulumi ESC Webhooks enable you to automate workflows, trigger actions, and streamline the management of your infrastructure and applications"
+meta_desc: "Pulumi ESC Webhooks enable you to automate workflows, trigger actions,
+  and streamline the management of your infrastructure and applications"
 meta_image: "meta.png"
 authors:
   - iaroslav-titov
@@ -11,6 +12,13 @@ tags:
   - esc
   - secrets
   - features
+search:
+  keywords:
+    - Webhooks
+    - Automation
+    - Integration
+    - Secrets Management
+    - Infrastructure Management
 ---
 
 Managing secrets and configurations across multiple environments and teams can be a complex juggling act for development teams. [Pulumi ESC](/docs/esc/), our developer-friendly secrets management product, simplifies this process and accelerates your development cycle. Today, we're excited to make this process even easier with the launch of Webhooks for Pulumi ESC, a powerful new feature that allows you to send a custom trigger to any URL endpoint, enabling you to automate workflows and keep your infrastructure and applications up to date. Pulumi ESC Webhooks also integrates seamlessly with popular communication platforms like Slack and Microsoft Teams.

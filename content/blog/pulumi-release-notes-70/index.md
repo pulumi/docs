@@ -1,5 +1,6 @@
 ---
-title: "Pulumi Release Notes: Display richer diffs, clear pending operations, and much more!"
+title: "Pulumi Release Notes: Display richer diffs, clear pending operations, and
+  much more!"
 allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
@@ -11,7 +12,8 @@ date: 2022-04-19T07:26:49-07:00
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: The latest Pulumi updates also include our providers updates, install Pulumi using winget, stack unselect command, GitHub release private plugins, and more.
+meta_desc: The latest Pulumi updates also include our providers updates, install Pulumi
+  using winget, stack unselect command, GitHub release private plugins, and more.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,15 +24,21 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - AWS
+    - CLI
+    - richer diffs
+    - pending operations
 ---
 
 The team has been busy releasing new features and improvements in the last month. The latest Pulumi updates include our providers updates, install Pulumi using winget, stack unselect command, GitHub release private plugins, and more. Read on to learn about what's new in this release!

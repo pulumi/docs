@@ -1,10 +1,18 @@
 ---
 title: "Getting Started on Google Cloud Platform with Pulumi"
 authors: ["luke-hoban"]
-tags: ["Serverless","Kubernetes","features","continuous-delivery",google-cloud]
+tags: ["Serverless", "Kubernetes", "features", "continuous-delivery", google-cloud]
 date: "2019-04-09"
-meta_desc: "Pulumi offers tooling that works with GCP and enables collaboration, sharing, and reuse. Pulumi gives you full access to the full Google Cloud Platform."
+meta_desc: "Pulumi offers tooling that works with GCP and enables collaboration, sharing,
+  and reuse. Pulumi gives you full access to the full Google Cloud Platform."
 meta_image: "pulumi_console.png"
+search:
+  keywords:
+    - Google
+    - Kubernetes
+    - Google Cloud
+    - Infrastructure Code
+    - Continuous Delivery
 ---
 
 Google Cloud is one of the most exciting cloud platforms available

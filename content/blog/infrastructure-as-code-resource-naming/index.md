@@ -3,12 +3,20 @@ title: Infrastructure as Code Resource Naming
 canonical_url: https://www.pulumi.com/blog/autonaming-configuration/
 date: 2019-09-10
 updated: 2025-03-03
-meta_desc: "Understand Pulumi resource naming—eliminate confusion, customize auto-naming, and simplify updates. Discover how to take full control."
+meta_desc: "Understand Pulumi resource naming—eliminate confusion, customize auto-naming,
+  and simplify updates. Discover how to take full control."
 meta_image: meta.png
 authors:
-    - eric-rudder
+  - eric-rudder
 tags:
-    - features
+  - features
+search:
+  keywords:
+    - naming
+    - resources
+    - auto-naming configuration
+    - physical names
+    - logical names
 ---
 
 {{% notes %}}

@@ -1,13 +1,21 @@
 ---
 title: "Demos from the Multi-Language Component Hackathon"
 date: 2021-06-24
-meta_desc: "Pulumi successful multi-lang package hackathon showed how to build multi-lang components and yielded demos exploring new concepts and capabcilities"
+meta_desc: "Pulumi successful multi-lang package hackathon showed how to build multi-lang
+  components and yielded demos exploring new concepts and capabcilities"
 meta_image: hackathon.png
 authors:
-    - lee-zen
+  - lee-zen
 tags:
-    - multi-language component
+  - multi-language component
+  - hackathon
+search:
+  keywords:
     - hackathon
+    - demos
+    - components
+    - multi-language component
+    - infrastructure abstractions
 ---
 
 At Pulumi, we have a tradition of hosting hackathons every so often to play with concepts and ideas that we may not typically encounter in our day-to-day product building activities. This past week, we’ve had two separate back-to-back hackathons. Our first hackathon, which was open to the community, focused on using our new [multi-language component capabilities](/blog/pulumiup-pulumi-packages-multi-language-components/). Multi-language components allow developers to author reusable infrastructure abstractions in one language and make them available to others in all the languages that Pulumi supports. We were really excited to see what everyone would build!

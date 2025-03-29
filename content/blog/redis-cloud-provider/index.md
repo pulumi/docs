@@ -1,13 +1,21 @@
 ---
 title: "Pulumi and Redis Cloud: Real-Time Data for Modern Apps"
 date: 2023-11-28
-meta_desc: Learn how to use Pulumi to provision fully managed Redis Enterprise Cloud clusters and connect them to your AWS workloads.
+meta_desc: Learn how to use Pulumi to provision fully managed Redis Enterprise Cloud
+  clusters and connect them to your AWS workloads.
 meta_image: redis-enterprise-cloud-pulumi.png
 authors:
-    - josh-kodroff
+  - josh-kodroff
 tags:
-    - redis-cloud
-    - aws
+  - redis-cloud
+  - aws
+search:
+  keywords:
+    - Redis
+    - AWS
+    - Redis Cloud
+    - Redis Enterprise
+    - AWS VPC
 ---
 
 Redis Enterprise Cloud makes apps faster by providing an in-memory database that enables teams to create a real-time data platform. In this post, you'll learn how to enable connectivity between Redis Enterprise Cloud and your workloads using Pulumi and the Redis Cloud provider.

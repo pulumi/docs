@@ -17,7 +17,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: "The year of Cloud Optimization is here! Explore the top 10 trends, including IaC, AI/ML, Kubernetes, platform engineering, security, FinOps, data, and more."
+meta_desc: "The year of Cloud Optimization is here! Explore the top 10 trends, including
+  IaC, AI/ML, Kubernetes, platform engineering, security, FinOps, data, and more."
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,22 +29,30 @@ meta_image: "cloud-computing-forecast.png.png"
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - ai
-    - cloud-native
-    - infrastructure-as-code
-    - cloud-computing
-    - multi-cloud
-    - finops
-    - platform-engineering
-    - devops
-    - devsecops
-    - security
+  - ai
+  - cloud-native
+  - infrastructure-as-code
+  - cloud-computing
+  - multi-cloud
+  - finops
+  - platform-engineering
+  - devops
+  - devsecops
+  - security
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - cloud
+    - security
+    - automation
+    - infrastructure as code
+    - platform engineering
+    - multi-cloud
 ---
 
 In 2025, several trends will dominate cloud computing, driving innovation, efficiency, and scalability. From Infrastructure as Code (IaC) to AI/ML, platform engineering to multi-cloud and hybrid strategies, and security practices, let's explore the 10 biggest emerging trends.

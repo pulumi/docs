@@ -3,12 +3,21 @@ title: "Manage Shared Kubernetes Resources Safely with Pulumi"
 
 date: 2022-07-27T00:00:00-00:00
 
-meta_desc: Manage shared Kubernetes resources safely with our new Server-Side Apply support
+meta_desc: Manage shared Kubernetes resources safely with our new Server-Side Apply
+  support
 meta_image: meta.png
 authors:
-    - levi-blackstone
+  - levi-blackstone
 tags:
-    - kubernetes
+  - kubernetes
+search:
+  keywords:
+    - Kubernetes
+    - Resources
+    - Server-Side Apply
+    - Kubernetes provider
+    - Shared resources
+    - Namespace Patch
 ---
 
 Kubernetes resources often have more than one controller making changes to them. These controllers can include `kubectl`, the Kubernetes control plane, custom operators, or infrastructure as code (IaC) tools like Pulumi.

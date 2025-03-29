@@ -4,9 +4,16 @@ date: 2020-09-29
 meta_desc: "Prevent Kubernetes anti-patterns with infrastructure as code."
 meta_image: anti-patterns.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - kubernetes
+  - kubernetes
+search:
+  keywords:
+    - Kubernetes
+    - ConfigMap
+    - infrastructure as code
+    - anti-patterns
+    - resource dependencies
 ---
 
 In software development, an anti-pattern is defined as an apparent solution that has unintended or negative consequences. The other side of anti-patterns is that they also offer solutions. Let's look at [container](https://codefresh.io/containers/docker-anti-patterns/) and [Kubernetes](https://betterprogramming.pub/10-antipatterns-for-kubernetes-deployments-e97ce1199f2d) anti-patterns and how to avoid them with infrastructure as code.

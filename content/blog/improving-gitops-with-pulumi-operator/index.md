@@ -2,10 +2,17 @@
 title: Improving the GitOps Pipeline with the Pulumi Operator
 date: 2021-12-24T17:08:06Z
 draft: false
-meta_desc: In this article, we look at how the Pulumi Operator can help us adhere to law of demeter and cleanup our GitOps pipelines.
+meta_desc: In this article, we look at how the Pulumi Operator can help us adhere
+  to law of demeter and cleanup our GitOps pipelines.
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["continuous-delivery", "gitops", "kubernetes"]
+search:
+  keywords:
+    - GitOps
+    - Kubernetes
+    - Law of Demeter
+    - continuous delivery
 ---
 
 {{% notes type="info" %}}

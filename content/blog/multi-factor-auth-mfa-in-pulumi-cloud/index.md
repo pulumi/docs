@@ -17,7 +17,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Pulumi Cloud Adds Multi-factor Authentication improving Pulumi customers' security posture.
+meta_desc: Pulumi Cloud Adds Multi-factor Authentication improving Pulumi customers'
+  security posture.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,14 +29,20 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
+  - features
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - Authentication
+    - Security
+    - Multi-factor Authentication
+    - Account Settings
 ---
 
 We are excited to announce that all users of Pulumi Cloud can now secure their account with multi-factor authentication (MFA). By requiring an additional verification step during the login process, MFA shields against unauthorized access, reducing the risk of breaches. This feature aligns with our commitment to providing robust security measures for our users. As an organization administrator, you can further protect your organization by having your members enable MFA.

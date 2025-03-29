@@ -1,17 +1,23 @@
 ---
 title: "Pulumi - Automate, Secure, and Manage Everything You Run in the Cloud"
-allow_long_title: True
-date: 2024-09-18T9:00:00-00:00
+allow_long_title: true
+date: 2024-09-18T09:00:00-00:00
 draft: false
-meta_desc: At PulumiUP 2024, we announced a new vision for Pulumi's vision, including Pulumi ESC general availability and Pulumi Insights 2.0 for visibility over your infrastructure.
+meta_desc: At PulumiUP 2024, we announced a new vision for Pulumi's vision, including
+  Pulumi ESC general availability and Pulumi Insights 2.0 for visibility over your
+  infrastructure.
 meta_image: meta.png
 authors:
-    - joe-duffy
+  - joe-duffy
 tags:
-    - pulumi-news
-    - iac
-    - esc
-    - insights
+  - pulumi-news
+  - iac
+  - esc
+  - insights
+search:
+  keywords:
+    - Cloud
+    - Infrastructure
 ---
 
 At our fourth annual PulumiUP conference, we unveiled a new vision for Pulumi, going beyond infrastructure as code to a comprehensive product suite. Pulumi’s platform now consists of three core products: Pulumi IaC is open source infrastructure as code in any programming language; Pulumi ESC is centralized secrets management that scales; and Pulumi Insights delivers instant visibility, intelligence, and control over all of your infrastructure. Each product can be adopted independently but is better together. In this post, we will share more about how Pulumi is your trusted partner to automate, secure, and manage everything you run in the cloud.

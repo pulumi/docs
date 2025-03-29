@@ -4,9 +4,16 @@ date: 2020-08-10
 meta_desc: "How to use infrastructure as code for day 2 maintenance tasks in Kubernetes."
 meta_image: day_2.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - kubernetes
+  - kubernetes
+search:
+  keywords:
+    - Kubernetes
+    - monitoring
+    - infrastructure as code
+    - cluster components
+    - logging and monitoring
 ---
 
 Your application made it out of the dev stage, passed the testing stage, and arrived in production. As a developer, you might think that it's an ops problem now. However, DevOps is a collaborative effort between developers and operators to build and maintain applications using shared techniques and processes, often called "Day 2" activities.

@@ -1,14 +1,23 @@
 ---
 title: "Using Kubernetes Arch Templates with Poetry and Python"
 date: 2022-12-07
-meta_desc: Set up a Google Kubernetes Engine cluster for a web application with archtecture templates, all with Python and Poetry.
+meta_desc: Set up a Google Kubernetes Engine cluster for a web application with archtecture
+  templates, all with Python and Poetry.
 meta_image: meta.png
 authors:
-    - laura-santamaria
+  - laura-santamaria
 tags:
-    - kubernetes
-    - arch-templates
-    - templates
+  - kubernetes
+  - arch-templates
+  - templates
+search:
+  keywords:
+    - Kubernetes
+    - Poetry
+    - Python
+    - Kubernetes templates
+    - Google Cloud
+    - Kubernetes cluster
 ---
 
 When building with Kubernetes for the first time, we often need to stand up a lot of infrastructure just to get to the point of having a base to build an application. Let's explore how we can wire together two of our architecture templates to generate a base for a web application running on Kubernetes on Google Cloud with Python and Poetry.

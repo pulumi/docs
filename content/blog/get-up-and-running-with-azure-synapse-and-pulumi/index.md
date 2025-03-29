@@ -5,10 +5,17 @@ draft: false
 meta_desc: Use infrastructure as code to automate deployment of an Azure Synapse workspace
 meta_image: synapse.png
 authors:
-   - mikhail-shilkov
+  - mikhail-shilkov
 tags:
-   - azure
+  - azure
 
+search:
+  keywords:
+    - Azure
+    - Synapse
+    - Azure Synapse
+    - infrastructure code
+    - data lake
 ---
 
 Azure Synapse is an integrated analytics service that combines enterprise data warehousing of Azure SQL Data Warehouse and Big Data analytics of Apache Spark. Azure Synapse is a managed service well integrated with other Azure services for data ingestion and business analytics.

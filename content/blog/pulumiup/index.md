@@ -1,13 +1,20 @@
 ---
 title: "PulumiUP: the Event for Cloud Engineers"
 date: 2021-04-14
-meta_desc: "PulumiUP is a two-hour keynote with cloud engineering industry leaders from Amazon Web Services, Snowflake, and Fenergo."
+meta_desc: "PulumiUP is a two-hour keynote with cloud engineering industry leaders
+  from Amazon Web Services, Snowflake, and Fenergo."
 meta_image: pulumiup.png
 authors:
-    - wendy-smith
+  - wendy-smith
 tags:
-    - cloud-engineering
-    - pulumi-events
+  - cloud-engineering
+  - pulumi-events
+search:
+  keywords:
+    - cloud
+    - event
+    - cloud engineering
+    - modern applications
 ---
 
 My professional background has included nearly ten years of managing field events and user conferences. I never thought I would say this, but I miss traveling. I even missed Vegas and AWS re:Invent this year. I miss connecting with customers and advocates in our communities. I wish we could all be looking forward to getting together in person in Seattle or Austin or _insert any city here_. As the year continued, it became clear we were not going back to in-person events anytime soon, and everyone in the industry pivoted to virtual programs while video conferencing became an all-day activity.

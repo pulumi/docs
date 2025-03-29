@@ -17,7 +17,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Using Pulumi with Node.js monorepo tooling like Nx to colocate reusable Pulumi components, Pulumi infrastructure programs and application code.
+meta_desc: Using Pulumi with Node.js monorepo tooling like Nx to colocate reusable
+  Pulumi components, Pulumi infrastructure programs and application code.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -28,16 +29,22 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - julien-poissonnier
+  - julien-poissonnier
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - development-environment
-    - monorepo
-    - nx
+  - development-environment
+  - monorepo
+  - nx
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - Node.js
+    - monorepo
+    - development environment
+    - Nx integration
 ---
 
 One of Pulumi's core goals is to provide cloud engineers with access to the very best software engineering tooling available.  Using traditional programming languages like Node.js, Python, Go, .NET and Java means the latest and greatest software engineering tools from each of these ecosystems is available to bring to bear on managing cloud infrastructure, natively integrated with your existing development environments.

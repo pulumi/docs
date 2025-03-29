@@ -5,10 +5,18 @@ draft: false
 meta_desc: "A look at the container solutions available in Azure"
 meta_image: "azure-top-5.png"
 authors:
-    - lee-briggs
+  - lee-briggs
 tags:
-    - azure
-    - containers
+  - azure
+  - containers
+search:
+  keywords:
+    - Azure
+    - Containers
+    - Kubernetes
+    - Azure Container
+    - Azure Kubernetes
+    - Azure App
 ---
 
 Containers have emerged as one of the de facto standards for running software. When adopted with the right mindset, they can drastically improve the development lifecycle and help to close the loop between local development and running your applications in the cloud.

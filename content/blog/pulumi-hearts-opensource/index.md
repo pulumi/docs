@@ -1,12 +1,19 @@
 ---
 title: "Pulumi 💜's Open Source"
 title_tag: "Pulumi Loves Open Source"
-allow_long_title: True
+allow_long_title: true
 authors: ["joe-duffy"]
 tags: ["opensource", "license", "apache", "bsl"]
 meta_desc: "The heart of Pulumi is open source"
 date: "2023-08-11"
 meta_image: "pulumi_hearts_opensource.png"
+search:
+  keywords:
+    - Open
+    - Source
+    - open source
+    - Apache license
+    - HashiCorp relicensing
 ---
 
 Pulumi stands with the open source community.

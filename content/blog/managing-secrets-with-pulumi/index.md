@@ -2,9 +2,17 @@
 title: "How to Manage Secrets with Pulumi"
 date: "2019-05-17"
 updated: 2025-03-06
-meta_desc: "Learn how to securely manage secrets in Pulumi with automatic encryption and client-side control. Protect sensitive data in your infrastructure."
+meta_desc: "Learn how to securely manage secrets in Pulumi with automatic encryption
+  and client-side control. Protect sensitive data in your infrastructure."
 authors: ["matt-ellis"]
-tags: ["features","Security"]
+tags: ["features", "Security"]
+search:
+  keywords:
+    - Secrets
+    - Encryption
+    - Secrets Management
+    - Cloud Infrastructure
+    - Secret Values
 ---
 
 {{% notes type="info" %}}

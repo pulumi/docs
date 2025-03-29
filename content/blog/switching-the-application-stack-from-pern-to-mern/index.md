@@ -1,10 +1,18 @@
 ---
 title: "Switching the application stack from PERN to MERN"
 date: 2020-09-18
-meta_desc: Demonstrating the simplicity, modularity, and reusability of running an application on Kubernetes using Pulumi.
+meta_desc: Demonstrating the simplicity, modularity, and reusability of running an
+  application on Kubernetes using Pulumi.
 meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "kubernetes", "docker"]
+search:
+  keywords:
+    - MERN
+    - PERN
+    - MongoDB
+    - application stack
+    - Kubernetes deployment
 ---
 
 {{% notes type="warning" %}}

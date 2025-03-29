@@ -2,12 +2,21 @@
 title: "Unit Testing Assets"
 date: 2020-06-11
 draft: false
-meta_desc: "Learn how unit testing your infrastructure assets can help ensure correctness of your deployments."
+meta_desc: "Learn how unit testing your infrastructure assets can help ensure correctness
+  of your deployments."
 meta_image: asset_testing.png
 authors:
-    - lee-zen
+  - lee-zen
 tags:
-    - Testing
+  - Testing
+search:
+  keywords:
+    - unit
+    - testing
+    - assets
+    - unit testing
+    - cloud function
+    - lambda function
 ---
 
 When deploying infrastructure, we want to ensure that what we're deploying matches our expectations.

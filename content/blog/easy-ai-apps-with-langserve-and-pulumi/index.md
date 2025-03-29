@@ -1,15 +1,23 @@
 ---
 title: "Easy LangServe Apps with Pulumi on AWS"
 date: "2024-02-13T06:00:00-08:00"
-meta_desc: "Create a LangServe app. With Pulumi, you can create, deploy, and manage Langserve apps using your favorite language."
+meta_desc: "Create a LangServe app. With Pulumi, you can create, deploy, and manage
+  Langserve apps using your favorite language."
 meta_image: meta.png
 authors:
-- engin-diri
+  - engin-diri
 
 tags:
-- ai
-- langserve
-- aws
+  - ai
+  - langserve
+  - aws
+search:
+  keywords:
+    - LangServe
+    - AWS
+    - LangServe apps
+    - generative AI
+    - Pinecone index
 ---
 
 We all know how easy it is to create, deploy, and manage any cloud infrastructure

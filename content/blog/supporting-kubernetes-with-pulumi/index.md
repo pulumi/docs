@@ -4,9 +4,16 @@ date: 2020-04-30
 meta_desc: "Scott Lowe uses Pulumi to quickly create Kubernetes environments for testing."
 meta_image: scott_lowe.png
 authors:
-    - scott-lowe
+  - scott-lowe
 tags:
+  - Kubernetes
+search:
+  keywords:
     - Kubernetes
+    - Infrastructure
+    - Cluster API
+    - Scott Lowe
+    - Test Environments
 ---
 
 Scott Lowe is a 20+ year veteran of the IT industry and a Staff Kubernetes Architect at VMWare. He’s a prolific author (seven books) and [blogger](https://blog.scottlowe.org). His technology-focused blog covers a range of topics that include cloud computing (AWS, Azure, and Kubernetes), virtualization (KVM, VMware vSphere), open-source tools (Terraform, Ansible, Vagrant, and others), and networking (Open vSwitch, Linux networking).

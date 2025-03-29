@@ -26,14 +26,20 @@ meta_image: meta.png
 # of the team member files at /data/team/team.
 # Create a file for yourself if you don't already have one.
 authors:
-    - thomas-kappler
+  - thomas-kappler
 
 # At least one tag is required.
 # Lowercase, hyphen-delimited is recommended.
 tags:
-    - azure
-    - security
+  - azure
+  - security
 
+search:
+  keywords:
+    - OIDC
+    - Azure
+    - OIDC authentication
+    - Azure providers
 ---
 
 We are happy to announce the delivery of Azure OIDC authentication, one of the [most requested features](https://github.com/pulumi/pulumi-azure-native/issues/1324) for the [Pulumi Azure Native Provider](https://www.pulumi.com/registry/packages/azure-native/). With the v1.100.0 release, OpenID Connect (OIDC) authentication is now fully supported in both the Azure Native and [Azure Classic](https://www.pulumi.com/registry/packages/azure/) providers. Let’s dig in to learn what it is, how it works, and why it’s useful.

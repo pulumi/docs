@@ -2,24 +2,35 @@
 title: "AI Engineering Lessons from Building Pulumi Copilot"
 date: 2024-12-12T13:56:13-05:00
 draft: false
-meta_desc: Learn key engineering lessons from building Pulumi Copilot, including how to minimize LLM workload, validate outputs, and deal with hallucination.
+meta_desc: Learn key engineering lessons from building Pulumi Copilot, including how
+  to minimize LLM workload, validate outputs, and deal with hallucination.
 meta_image: meta.png
 authors:
-    - artur-laksberg
-    - simon-howe
-    - adam-gordon-bell
+  - artur-laksberg
+  - simon-howe
+  - adam-gordon-bell
 tags:
-    - Copilot
-    - ai
-    - iac
+  - Copilot
+  - ai
+  - iac
 social:
-    twitter: > 
-        Building Pulumi Copilot taught us key lessons about AI-powered tools: hallucinations reveal missing features, prompt engineering isn’t always the answer, and balancing LLMs with traditional code is critical. Learn more: https://www.pulumi.com/blog/copilot-lessons/
-    linkedin: |
-        Building AI-powered tools often brings unexpected challenges—and valuable lessons. While developing Pulumi Copilot, we encountered surprising insights: hallucinations revealed missing product features, prompt engineering wasn't always the fix, and balancing LLM capabilities with traditional code proved essential.
-        One memorable turning point came from user feedback: "Your tool doesn't know anything!" Instead of seeing it as failure, we saw opportunity—leading to significant improvements.
-        Curious how we turned unexpected challenges into product breakthroughs? Learn more: https://www.pulumi.com/blog/copilot-lessons/
+  twitter: >
+    Building Pulumi Copilot taught us key lessons about AI-powered tools: hallucinations
+    reveal missing features, prompt engineering isn’t always the answer, and balancing
+    LLMs with traditional code is critical. Learn more: https://www.pulumi.com/blog/copilot-lessons/
+  linkedin: |
+    Building AI-powered tools often brings unexpected challenges—and valuable lessons. While developing Pulumi Copilot, we encountered surprising insights: hallucinations revealed missing product features, prompt engineering wasn't always the fix, and balancing LLM capabilities with traditional code proved essential.
+    One memorable turning point came from user feedback: "Your tool doesn't know anything!" Instead of seeing it as failure, we saw opportunity—leading to significant improvements.
+    Curious how we turned unexpected challenges into product breakthroughs? Learn more: https://www.pulumi.com/blog/copilot-lessons/
+search:
+  keywords:
+    - Copilot
+    - AI
+    - LLM
+    - prompt engineering
+    - traditional code
 ---
+
 Building AI-powered developer tools comes with unique challenges, and now that we've **[launched our REST API](/blog/pulumi-copilot-rest/)**, we want to share some lessons we've learned building Pulumi Copilot, an AI assistant for cloud infrastructure.
 
 One of the big challenges was determining what 'working' really meant. So when a message landed in our feedback channel after months of rigorous testing - 'Your tool doesn't know anything!' - it caused some mild panic. We'd just made some changes, so we braced for the worst. But our evals were still looking strong, so what was going on?

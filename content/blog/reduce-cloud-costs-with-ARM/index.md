@@ -1,14 +1,23 @@
 ---
 title: "Reduce Cloud Costs with EC2 ARM Instances"
 date: 2021-01-26
-meta_desc: "The cost of running cloud based infrastructure can make or break a deployment. You can use ARM instances to decrease the cloud spend and remain in budget."
+meta_desc: "The cost of running cloud based infrastructure can make or break a deployment.
+  You can use ARM instances to decrease the cloud spend and remain in budget."
 meta_image: arm.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
+  - AWS
+  - ec2
+  - virtual-machines
+search:
+  keywords:
+    - EC2
+    - ARM
     - AWS
-    - ec2
-    - virtual-machines
+    - cloud costs
+    - ARM instances
+    - Graviton2 instances
 ---
 
 Whether you're migrating to the cloud or have existing infrastructure, cloud spend can be a significant barrier to your success. Too small of a budget could prevent your organization from meeting your performance metrics. You can use different strategies to reduce cloud spend, such as using [Spot Instances](https://aws.amazon.com/ec2/spot/), which cost less than On-Demand Instances or scaling your infrastructure based on peak usage times.

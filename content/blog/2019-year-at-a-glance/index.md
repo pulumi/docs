@@ -2,9 +2,16 @@
 title: "2019 Year at a Glance"
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
-meta_desc: "As 2019 winds down, let's review Pulumi's most exciting recent milestones. This includes 1.0, our 2.0 roadmap, and dozens of other major features."
+meta_desc: "As 2019 winds down, let's review Pulumi's most exciting recent milestones.
+  This includes 1.0, our 2.0 roadmap, and dozens of other major features."
 meta_image: "pulumi-new-year.png"
 date: "2019-12-31"
+search:
+  keywords:
+    - Community
+    - Infrastructure
+    - Infrastructure as Code
+    - Policy as Code
 ---
 
 As we celebrate another incredible year in the books here at Pulumi, I wanted to share some reflections about our most exciting milestones over the past twelve months. The best part has been connecting with more customers worldwide, as we saw more than a 15x growth in our customer base, surely a sign of big things to come in 2020. We couldn't have done it without our amazing community; thank you deeply for your continued support and passion around Pulumi's bold mission to empower every engineer to program the cloud &mdash; you make it all worthwhile.

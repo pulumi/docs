@@ -1,10 +1,18 @@
 ---
 title: "Zephyr's Summer Intern Experience with Pulumi"
 date: "2020-09-18"
-meta_desc: "Zephyr's internship experience in Summer 2020, personal growth, skills learned and reflection"
+meta_desc: "Zephyr's internship experience in Summer 2020, personal growth, skills
+  learned and reflection"
 meta_image: zephyr-pulumi.png
 authors: ["zephyr-zhou"]
 tags: ["pulumi-interns"]
+search:
+  keywords:
+    - Internship
+    - Cloud
+    - Internship experience
+    - Content Management
+    - Cloud technology
 ---
 
 Hi, I am [Zephyr Zhou](https://www.linkedin.com/in/zephyr-zhou-a17741196/), a senior Computer Science student at the University of Washington. I spent this past summer interning at Pulumi. This is my first internship ever in my life. Thanks to Pulumi for providing this opportunity even in this difficult time of the Covid-19 epidemic. Despite the sad truth that I couldn't get in touch offline, I believe this will be one of my most precious memories.

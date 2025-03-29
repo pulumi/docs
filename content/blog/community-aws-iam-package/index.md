@@ -11,7 +11,8 @@ date: 2022-10-05T09:24:26-07:00
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: The Community AWS IAM Package helps users from all backgrounds quickly create IAM Roles, Policies, and Users.
+meta_desc: The Community AWS IAM Package helps users from all backgrounds quickly
+  create IAM Roles, Policies, and Users.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -22,15 +23,23 @@ meta_image: meta.png
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
-    - zack-chase
+  - zack-chase
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - aws
-    - iam
+  - aws
+  - iam
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - AWS
+    - IAM
+    - Package
+    - AWS IAM
+    - Community Package
+    - IAM Role
 ---
 
 Building on top of the cloud can be frustrating at times. You will likely run into resources that complicated to create, others that are very tedious to create, and worst of all resources that are complicated and tedious to create. As cloud engineers ourselves, we feel the same pain as our users and strive to build abstractions that make cloud engineering a more productive and pleasant experience.

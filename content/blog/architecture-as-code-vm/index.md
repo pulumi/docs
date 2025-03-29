@@ -1,13 +1,21 @@
 ---
 title: "Architecture as Code: Virtual Machines"
 date: 2020-03-31
-meta_desc: "Provisioning virtual machines and redeploying applications on existing instances using Pulumi"
+meta_desc: "Provisioning virtual machines and redeploying applications on existing
+  instances using Pulumi"
 meta_image: vm.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - architecture-as-code
-    - virtual-machines
+  - architecture-as-code
+  - virtual-machines
+search:
+  keywords:
+    - EC2
+    - PostgreSQL
+    - virtual machines
+    - security group
+    - dynamic provider
 ---
 
 In a [previous article](/blog/architecture-as-code-intro/), we presented an overview of four infrastructure patterns for deploying modern applications. The article reviewed virtual machines, serverless, Kubernetes, and microservices. In this post, we'll examine virtual machines in-depth.

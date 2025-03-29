@@ -4,14 +4,22 @@ date: 2022-07-19
 meta_desc: "Applying Attribute-Based Access Controls to AWS Lambda Functions"
 meta_image: meta.png
 authors:
-- paul-stack
-- lee-briggs
-- isaac-harris
+  - paul-stack
+  - lee-briggs
+  - isaac-harris
 tags:
-- aws
-- lambda
-- iam
-- serverless
+  - aws
+  - lambda
+  - iam
+  - serverless
+search:
+  keywords:
+    - Lambda
+    - IAM
+    - ABAC
+    - AWS Lambda
+    - Access Control
+    - Attribute-Based
 ---
 
 Event-driven, serverless functions have become a defining feature of many modern cloud architectures. With recent

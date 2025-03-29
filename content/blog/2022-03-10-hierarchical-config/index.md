@@ -2,10 +2,18 @@
 title: "Hierarchical Config: The Interim Solution"
 date: 2022-03-15T10:00:00Z
 draft: false
-meta_desc: In this aritcle, Rawkode takes a look at how he'd manage project and organizational configuration for Pulumi programs.
+meta_desc: In this aritcle, Rawkode takes a look at how he'd manage project and organizational
+  configuration for Pulumi programs.
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["config"]
+search:
+  keywords:
+    - Config
+    - Project
+    - Hierarchical Config
+    - Project Level
+    - Organization Level
 ---
 
 A really common question that we receive on the Pulumi team is, "How can we set config at a project level, that can be used across all stacks?".

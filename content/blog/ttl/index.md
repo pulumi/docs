@@ -1,17 +1,25 @@
 ---
 title: "Time-to-Live Stacks: Auto-Destroying Stacks"
-allow_long_title: True
+allow_long_title: true
 date: 2024-04-24T07:00:03-08:00
 draft: false
-meta_desc: Explore Pulumi Cloud's new Time-to-Live Stacks feature, designed to help teams manage infrastructure lifecycles and control cloud costs by automatically decommissioning stacks and resources.
+meta_desc: Explore Pulumi Cloud's new Time-to-Live Stacks feature, designed to help
+  teams manage infrastructure lifecycles and control cloud costs by automatically
+  decommissioning stacks and resources.
 meta_image: ttl.png
 authors:
-    - meagan-cojocar
+  - meagan-cojocar
 tags:
-    - features
-    - infrastructure-lifecycle-management
+  - features
+  - infrastructure-lifecycle-management
+search:
+  keywords:
+    - Stacks
+    - Infrastructure
+    - Time-to-Live Stacks
+    - Cloud Costs
+    - Infrastructure Lifecycle
 ---
-
 
 In the dynamic landscape of cloud-based software development, platform teams face the continuous challenge of balancing the need for innovation with the imperative to control cloud costs and security. Pulumi Cloud's new __Time-to-Live (TTL) Stacks__ feature directly addresses this challenge by empowering teams to manage infrastructure lifecycles automatically, mitigating the risks associated with stale infrastructure and resource costs ballooning.
 

@@ -4,9 +4,17 @@ date: 2020-07-21
 meta_desc: "How to deploy stateful applications in Kubernetes with Pulumi"
 meta_image: getting-started.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
+  - Kubernetes
+search:
+  keywords:
     - Kubernetes
+    - StatefulSets
+    - Pods
+    - stateful applications
+    - persistent storage
+    - infrastructure code
 ---
 
 This article is the fourth in a series using infrastructure as code to deploy applications with Kubernetes. This series walks you through:

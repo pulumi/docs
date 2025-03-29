@@ -1,15 +1,24 @@
 ---
 title: "Testing Practices for Cloud Engineering"
 date: 2021-06-22
-meta_desc: "Cloud engineering applies software engineering testing to ensure reliability, secure, and quality infrastructure."
+meta_desc: "Cloud engineering applies software engineering testing to ensure reliability,
+  secure, and quality infrastructure."
 meta_image: testing_concepts.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - cloud engineering
-    - unit testing
-    - integration testing
+  - cloud engineering
+  - unit testing
+  - integration testing
 
+search:
+  keywords:
+    - cloud
+    - testing
+    - infrastructure
+    - cloud engineering
+    - integration tests
+    - unit tests
 ---
 
 Cloud engineering brings industry-standard software development practices to building, deploying, and managing cloud infrastructure. Testing is a common practice for evaluating software to ensure that it meets requirements. Similarly, [infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/) checks for missing requirements, bugs, and errors; it also ensures security, reliability, and performance. Testing uses manual or automated tools to identify bugs that can cause unexpected infrastructure behavior.

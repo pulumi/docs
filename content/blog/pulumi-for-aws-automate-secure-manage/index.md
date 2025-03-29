@@ -1,8 +1,9 @@
 ---
 title: "Pulumi for AWS: Automate, Secure, and Manage Your Cloud"
-date: 2024-12-02T9:00:00-00:00
+date: 2024-12-02T09:00:00-00:00
 draft: false
-meta_desc: "Pulumi automates AWS cloud infrastructure through code, tames secrets sprawl, and manages cloud assets and compliance."
+meta_desc: "Pulumi automates AWS cloud infrastructure through code, tames secrets
+  sprawl, and manages cloud assets and compliance."
 meta_image: "meta.png"
 authors:
   - aaron-kao
@@ -10,6 +11,11 @@ authors:
 tags:
   - aws
   - infrastructure-as-code
+search:
+  keywords:
+    - AWS
+    - Infrastructure
+    - Infrastructure as Code
 ---
 
 Pulumi is excited to be at [AWS re:Invent](/reinvent/) this week, where we’re showcasing our broad and deep support for AWS across all our products. From automating infrastructure with Pulumi IaC to securing secrets with Pulumi ESC to managing cloud assets with Pulumi Insights, Pulumi makes AWS a competitive advantage. Whether you’re a developer, DevOps pro, or platform engineer, Pulumi delivers the tools you need to build and manage modern cloud applications with ease.

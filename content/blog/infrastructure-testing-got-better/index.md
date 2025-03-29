@@ -4,9 +4,16 @@ date: 2020-05-28
 meta_desc: "Pulumi accelerates infrastructure testing 60x with mocking and unit tests."
 meta_image: dustin-farris.png
 authors:
-    - dustin-farris
+  - dustin-farris
 tags:
-    - testing
+  - testing
+search:
+  keywords:
+    - Testing
+    - Infrastructure
+    - Infrastructure Testing
+    - Resource Mocking
+    - Data Lake
 ---
 
 **Guest Article:** Dustin Farris is an experienced cloud engineering consultant.  He’s currently building a new data lake for a large public university using Pulumi. The project handles sensitive student and research data and as a result, his team must meet stringent QA and security requirements.  Dustin shows how resource mocking in Pulumi makes testing and verification faster than ever before.

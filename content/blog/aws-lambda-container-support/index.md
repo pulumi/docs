@@ -3,14 +3,22 @@ title: Running Container Images in AWS Lambda
 date: 2020-12-01
 updated: 2025-03-11
 draft: false
-meta_desc: Learn how to deploy AWS Lambda functions as container images. Explore setup, benefits, and a hands-on example using Pulumi to streamline serverless workflows.
+meta_desc: Learn how to deploy AWS Lambda functions as container images. Explore setup,
+  benefits, and a hands-on example using Pulumi to streamline serverless workflows.
 meta_image: meta.png
 authors:
-    - mikhail-shilkov
+  - mikhail-shilkov
 tags:
-    - aws
-    - containers
-    - serverless
+  - aws
+  - containers
+  - serverless
+search:
+  keywords:
+    - Lambda
+    - Containers
+    - AWS Lambda
+    - Container Images
+    - Serverless Functions
 ---
 
 {{% notes type="warning" %}}

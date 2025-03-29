@@ -5,18 +5,26 @@ date: 2024-04-16T10:28:28+02:00
 
 draft: false
 
-meta_desc: The latest version of Pulumi's Node.js SDK now lets you easily pick the version of TypeScript to use.
+meta_desc: The latest version of Pulumi's Node.js SDK now lets you easily pick the
+  version of TypeScript to use.
 
 meta_image: meta.png
 
 authors:
-    - julien-poissonnier
+  - julien-poissonnier
 
 tags:
-    - typescript
-    - nodejs
-    - user-experience
+  - typescript
+  - nodejs
+  - user-experience
 
+search:
+  keywords:
+    - TypeScript
+    - Node.js
+    - TypeScript version
+    - Node.js SDK
+    - Template Literal
 ---
 
 Pulumi allows you to use the best features of programming languages to build your infrastructure while ensuring compatibility with your current development environments. To this end Pulumi provides a seamless experience when authoring TypeScript programs, managing the compilation of your program for you. With the latest release of our Node.js SDK, we've made this even more flexible by making it easier than ever to choose the version of TypeScript you want to use.

@@ -1,15 +1,23 @@
 ---
 title: "Test and Optimize Elasticsearch with Pulumi"
 date: 2020-03-05
-meta_desc: "BigData Boutique uses Pulumi to determine optimal Elasticsearch configurations for their customers"
+meta_desc: "BigData Boutique uses Pulumi to determine optimal Elasticsearch configurations
+  for their customers"
 meta_image: meta.png
 authors:
-    - itamar-syn-hershko
+  - itamar-syn-hershko
 tags:
-    - guest-post
-    - testing
-    - elasticsearch
+  - guest-post
+  - testing
+  - elasticsearch
 
+search:
+  keywords:
+    - Elasticsearch
+    - Benchmarking
+    - Elasticsearch configurations
+    - Capacity Planning
+    - Cost Optimization
 ---
 
 **Guest Article:** [Itamar Syn-Hershko](https://twitter.com/synhershko), Founder and CTO of [BigData Boutique](https://bigdataboutique.com/) shows how they use Pulumi to benchmark Elasticsearch configurations across cloud providers. Pulumi enables BigData Boutique to test deployments in parallel and gather metrics to produce performant and cost-effective solutions for its customers.

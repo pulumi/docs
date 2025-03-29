@@ -2,13 +2,21 @@
 title: "Keep your secrets secure, by default"
 date: 2021-02-19
 draft: false
-meta_desc: Pulumi keeps your infrastructure passwords, tokens, keys, and more secure, by default.
+meta_desc: Pulumi keeps your infrastructure passwords, tokens, keys, and more secure,
+  by default.
 meta_image: secure_by_default.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
+  - security
+  - secrets
+search:
+  keywords:
     - security
     - secrets
+    - secret storage
+    - infrastructure secrets
+    - encryption key
 ---
 
 An unauthorized user gaining access to your infrastructure can be catastrophic: data can be stolen or leaked, security holes can be exploited, and more. That risk makes it critical to keep the infrastructure secrets—the passwords, access tokens, keys, and so on—well-protected. This is particularly true in automated systems, like continuous integration and delivery and infrastructure-as-code systems.

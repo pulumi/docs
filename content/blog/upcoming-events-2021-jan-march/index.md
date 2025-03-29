@@ -1,14 +1,22 @@
 ---
 title: "Upcoming Workshops and Events"
 date: 2021-01-12
-meta_desc: "Events and workshops to introduce infrastructure as code to new users and advanced practitioners."
+meta_desc: "Events and workshops to introduce infrastructure as code to new users
+  and advanced practitioners."
 meta_image: events.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - pulumi-events
+  - pulumi-events
+  - Kubernetes
+  - serverless
+search:
+  keywords:
     - Kubernetes
-    - serverless
+    - Workshops
+    - Infrastructure as Code
+    - AWS Lambda
+    - CI/CD Pipelines
 ---
 
 It's a new year and it's time to level up your cloud engineering skills. Pulumi is there to get you started on your cloud engineering journey with workshops and technical sessions.

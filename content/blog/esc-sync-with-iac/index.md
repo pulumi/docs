@@ -2,13 +2,20 @@
 title: "Pushing Pulumi ESC Secrets into External Platforms"
 date: 2024-09-17T00:00:00-03:00
 draft: false
-meta_desc: "Sync secrets and configuration values across external platforms using Pulumi ESC and Pulumi IaC."
+meta_desc: "Sync secrets and configuration values across external platforms using
+  Pulumi ESC and Pulumi IaC."
 meta_image: "meta.png"
 authors:
   - komal-ali
 tags:
   - esc
   - secrets
+search:
+  keywords:
+    - Secrets
+    - Sync
+    - Secrets Manager
+    - Secret Management
 ---
 
 Managing secrets across multi-cloud infrastructures has long been a challenge for developers and operations teams. This article explores [Pulumi IaC](/docs/iac/)-based strategy to centrally define secrets and configuration in [Pulumi ESC](/docs/esc/) and automatically sync these values across the external platforms where they will be utilized, effectively reducing secret sprawl and manual overhead.

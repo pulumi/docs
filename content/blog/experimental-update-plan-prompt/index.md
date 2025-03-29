@@ -4,11 +4,18 @@ date: 2022-11-23T06:00:00-07:00
 meta_desc: Pulumi up will now prompt for users to try using update plans.
 meta_image: meta.png
 authors:
-    - fraser-waters
-    - mikhail-shilkov
+  - fraser-waters
+  - mikhail-shilkov
 tags:
-    - features
-    - plans
+  - features
+  - plans
+search:
+  keywords:
+    - CLI
+    - Plans
+    - Update Plans
+    - Update Command
+    - Preview Period
 ---
 
 Earlier this year we announced the experimental introduction of Update Plans as we heard from many of you that you need a strong guarantee about exactly which changes an update will make to your infrastructure, especially in critical and production environments. We have been making steady progress on this feature and are excited to further integrate it into your workflows. In the latest release of the Pulumi CLI ([v3.48.0](https://github.com/pulumi/pulumi/releases/tag/v3.48.0)), there’s a new prompt to use experimental Update Plans when running an update.

@@ -5,17 +5,25 @@ date: 2021-09-15T17:16:09-05:00
 
 draft: false
 
-meta_desc: Snowflake support is here! Pulumi's new Snowflake Provider gives you the ability to easily set up cloud storage and manage your connections to Snowflake.
+meta_desc: Snowflake support is here! Pulumi's new Snowflake Provider gives you the
+  ability to easily set up cloud storage and manage your connections to Snowflake.
 
 meta_image: meta.png
 
 authors:
-    - kat-cosgrove
+  - kat-cosgrove
 
 tags:
-    - snowflake
-    - pulumi
-    - releases
+  - snowflake
+  - pulumi
+  - releases
+search:
+  keywords:
+    - Snowflake
+    - Provider
+    - Snowflake Provider
+    - cloud storage
+    - manage connections
 ---
 
 Snowflake support is here! Pulumi's new Snowflake Provider gives you the ability to easily set up cloud storage and manage your connections to Snowflake, right alongside the rest of your code.

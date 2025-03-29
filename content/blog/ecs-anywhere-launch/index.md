@@ -2,14 +2,23 @@
 title: "Getting Started with ECS Anywhere"
 date: 2021-05-27
 draft: false
-meta_desc: Amazon Web Services' ECS Anywhere lets you run your ECS workload on any cloud provider, in any data center of your choosing.
+meta_desc: Amazon Web Services' ECS Anywhere lets you run your ECS workload on any
+  cloud provider, in any data center of your choosing.
 meta_image: ecs_anywhere.png
 authors:
-    - piers-karsenbarg
+  - piers-karsenbarg
 tags:
-    - aws
-    - ecs
+  - aws
+  - ecs
+  - containers
+search:
+  keywords:
+    - ECS
+    - AWS
     - containers
+    - ECS Anywhere
+    - Amazon Web Services
+    - Elastic Container
 ---
 
 {{% notes type="warning" %}}

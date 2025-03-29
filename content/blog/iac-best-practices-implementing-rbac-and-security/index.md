@@ -3,16 +3,23 @@ title: "IaC Best Practices: Implementing RBAC and Security"
 canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stacks/
 date: 2023-05-23
 updated: 2025-03-04
-meta_desc: Discover best practices for securing Pulumi stacks with role-based access control (RBAC). Learn how to manage permissions and enforce least privilege.
+meta_desc: Discover best practices for securing Pulumi stacks with role-based access
+  control (RBAC). Learn how to manage permissions and enforce least privilege.
 meta_image: meta.png
 authors:
-    - scott-lowe
+  - scott-lowe
 tags:
-    - best-practices
-    - rbac
-    - security
+  - best-practices
+  - rbac
+  - security
 aliases:
-    - /blog/iac-recommended-practices-rbac-and-security/
+  - /blog/iac-recommended-practices-rbac-and-security/
+search:
+  keywords:
+    - RBAC
+    - Security
+    - Role-based access
+    - Best practices
 ---
 
 This post continues our series of blog posts focused on IaC best practices. In earlier posts, we introduced Zephyr Archaeotech Emporium, the fictional company that sits at the center of this series, and discussed Zephyr's primary use case for Pulumi: managing their online retail store. You read how Zephyr's initial use of Pulumi changed to incorporate the use of short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, and incorporated the use of Stack References. This post is a complement to the post on structuring Pulumi projects, concentrating on the use of role-based access control (RBAC) and security in Zephyr's multi-project configuration.<!--more-->

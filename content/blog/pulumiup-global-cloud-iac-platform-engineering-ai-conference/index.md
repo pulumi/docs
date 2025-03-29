@@ -18,7 +18,8 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Join 5,000+ engineers at PulumiUP 2024! Explore talks on Cloud, DevOps, Platform Engineering & AI/ML. Register now to build your schedule and level up!
+meta_desc: Join 5,000+ engineers at PulumiUP 2024! Explore talks on Cloud, DevOps,
+  Platform Engineering & AI/ML. Register now to build your schedule and level up!
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -29,18 +30,18 @@ meta_image: pulumiup-speakers-sponsors-partners.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - sara-huddleston
+  - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - pulumi-events
-    - announcements
-    - platform-engineering
-    - ai
-    - cloud-computing
-    - infrastructure-as-code
-    - devsecops
-    - community
+  - pulumi-events
+  - announcements
+  - platform-engineering
+  - ai
+  - cloud-computing
+  - infrastructure-as-code
+  - devsecops
+  - community
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -56,8 +57,16 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter: Join 5,500+ engineers at PulumiUP 2024! Explore talks on Cloud, DevOps, Platform Engineering & AI/ML. Register now to build your schedule and level up!
-    linkedin:
+  twitter: Join 5,500+ engineers at PulumiUP 2024! Explore talks on Cloud, DevOps,
+    Platform Engineering & AI/ML. Register now to build your schedule and level up!
+  linkedin:
+search:
+  keywords:
+    - Cloud
+    - AI/ML
+    - Platform Engineering
+    - Infrastructure as Code
+    - Cloud Development
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

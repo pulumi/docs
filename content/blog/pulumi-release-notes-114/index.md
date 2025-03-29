@@ -2,23 +2,30 @@
 title: "The Past 6 Months of Pulumi Releases"
 date: 2024-12-24
 draft: false
-meta_desc: Explore Pulumi's major releases from July to December 2024, featuring Infrastructure as Code improvements, ESC enhancements, and AI innovations.
+meta_desc: Explore Pulumi's major releases from July to December 2024, featuring Infrastructure
+  as Code improvements, ESC enhancements, and AI innovations.
 meta_image: meta.png
 authors:
   - meagan-cojocar
 tags:
   - releases
 social:
-  twitter: "🚀 From IaC enhancements to expanded ESC capabilities, Pulumi Insights 2.0 and key AI innovations - walk through the product release notes for a summary of what's been shipped this year"
-  linkedin: "As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered- from Infrastructure as Code enhancements to expanded Pulumi ESC capabilities to the launch of Pulumi Insights 2.0 and key AI innovations, here's what's new in Pulumi:
-
-Key highlights include:
-• Visual Studio Code Extension
-• Pulumi ESC General Availability
-• Pulumi Insights 2.0 with Resource Explorer
-• Enhanced Kubernetes support with Auto Mode & Operator 2.0
-
-Check out all the new features empowering teams to build better cloud infrastructure."
+  twitter: "🚀 From IaC enhancements to expanded ESC capabilities, Pulumi Insights
+    2.0 and key AI innovations - walk through the product release notes for a summary
+    of what's been shipped this year"
+  linkedin: "As we wrap up 2024, let's look back at the significant features and improvements
+    Pulumi has delivered- from Infrastructure as Code enhancements to expanded Pulumi
+    ESC capabilities to the launch of Pulumi Insights 2.0 and key AI innovations,
+    here's what's new in Pulumi:\nKey highlights include: • Visual Studio Code Extension
+    • Pulumi ESC General Availability • Pulumi Insights 2.0 with Resource Explorer
+    • Enhanced Kubernetes support with Auto Mode & Operator 2.0\nCheck out all the
+    new features empowering teams to build better cloud infrastructure."
+search:
+  keywords:
+    - Kubernetes
+    - AI
+    - Infrastructure as Code
+    - Visual Studio Code
 ---
 
 As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered in the last half of the year. Some key highlights:

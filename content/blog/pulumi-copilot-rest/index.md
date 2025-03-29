@@ -5,21 +5,29 @@ draft: false
 meta_desc: Explore Pulumi Copilot's new REST API preview for IaC.
 meta_image: meta.png
 authors:
-    - artur-laksberg
+  - artur-laksberg
 tags:
-    - features
-    - ai
-    - llm
-    - copilot
+  - features
+  - ai
+  - llm
+  - copilot
 social:
-    twitter: |
-        The Pulumi Copilot REST API is here! Integrate Copilot’s AI-powered cloud management into your tools, apps, and workflows. Automate tasks, streamline processes, and build smarter cloud solutions. Learn more: https://www.pulumi.com/blog/pulumi-copilot-rest/
-    linkedin: |
-        The Pulumi Copilot REST API is now available. It allows you to integrate Copilot’s AI-powered cloud management into your own tools, apps, and workflows. Automate tasks, streamline processes, and extend cloud management capabilities to fit your needs. With features like multi-turn conversations and the ability to query specific resources, the API is built for flexibility and ease of integration. If you're looking to bring AI-driven infrastructure management into your stack, this API is a great starting point. Learn more and get started: https://www.pulumi.com/blog/pulumi-copilot-rest/
+  twitter: |
+    The Pulumi Copilot REST API is here! Integrate Copilot’s AI-powered cloud management into your tools, apps, and workflows. Automate tasks, streamline processes, and build smarter cloud solutions. Learn more: https://www.pulumi.com/blog/pulumi-copilot-rest/
+  linkedin: |
+    The Pulumi Copilot REST API is now available. It allows you to integrate Copilot’s AI-powered cloud management into your own tools, apps, and workflows. Automate tasks, streamline processes, and extend cloud management capabilities to fit your needs. With features like multi-turn conversations and the ability to query specific resources, the API is built for flexibility and ease of integration. If you're looking to bring AI-driven infrastructure management into your stack, this API is a great starting point. Learn more and get started: https://www.pulumi.com/blog/pulumi-copilot-rest/
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - Copilot
+    - API
+    - REST API
+    - cloud management
+    - infrastructure AI
 ---
+
 We built Pulumi Copilot to automate a broad spectrum of cloud management activities using the power of LLMs. Since its initial release earlier this year, hundreds of customers have used Pulumi Copilot to understand and manage cloud infrastructure more effectively and securely, and it is only getting better by the day.
 
 Today, we're excited to announce the availability of the Pulumi Copilot REST API. This new API exposes the full power of Pulumi Copilot, enabling you to integrate infrastructure AI into your own tools, applications, and platforms. While currently in preview, we are eager to get your feedback to ensure it works for anything you can dream up.

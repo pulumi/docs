@@ -1,14 +1,22 @@
 ---
-title: "Dec. 8 releases: K8s examples, exclude protected resources from destroy, easier invites to the Pulumi Service"
+title: "Dec. 8 releases: K8s examples, exclude protected resources from destroy, easier
+  invites to the Pulumi Service"
 date: 2021-12-08T08:00:00-07:00
 allow_long_title: true
-meta_desc: The latest Pulumi updates include support for locally-stored Helm charts, new examples in our Kubernetes documentation, and new features for the Pulumi Service
+meta_desc: The latest Pulumi updates include support for locally-stored Helm charts,
+  new examples in our Kubernetes documentation, and new features for the Pulumi Service
 meta_image: meta.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
+search:
+  keywords:
+    - Kubernetes
+    - Helm
+    - Kubernetes provider
+    - protected resources
 ---
 
 With the holiday season approaching, we've been focused on tidying up our products, delivering asks we've heard from you in GitHub and at conferences, and looking ahead to 2022! Read on to learn about what's new this release:

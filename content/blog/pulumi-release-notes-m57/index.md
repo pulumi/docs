@@ -2,13 +2,20 @@
 title: "June 10 release notes: AWS ECS Anywhere, Sumo Logic, & more!"
 date: 2021-06-10T09:00:00-07:00
 draft: false
-meta_desc: "New in Pulumi: Amazon ECS Anywhere and App Runner, Sumo Logic support, Pulumi Packages updates, and easier updates for teammates in the Pulumi Service"
+meta_desc: "New in Pulumi: Amazon ECS Anywhere and App Runner, Sumo Logic support,
+  Pulumi Packages updates, and easier updates for teammates in the Pulumi Service"
 meta_image: meta.png
 authors:
-    - alex-mullans
+  - alex-mullans
 tags:
-    - features
-    - pulumi-releases
+  - features
+  - pulumi-releases
+search:
+  keywords:
+    - AWS
+    - Sumo
+    - AWS ECS
+    - Sumo Logic
 ---
 
 We regularly ship updates across the Pulumi ecosystem, with a release of the Pulumi CLI every two weeks, frequent releases of our cloud providers in the [Registry](/registry/), and regular updates to the Pulumi Service. You can read about most of those changes in the `CHANGELOG.md` files in each open source repository. To highlight some of the most exciting releases—including, for the first time, updates to the Pulumi Service—we're trying something new: a regular release notes post for Pulumi release news, features, and updates. If you find it useful, or have ideas on how we could improve it, let us know [on Twitter](https://twitter.com/pulumicorp) or in the [Pulumi Community Slack](https://slack.pulumi.com)!

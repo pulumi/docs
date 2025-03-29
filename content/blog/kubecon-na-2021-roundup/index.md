@@ -2,14 +2,23 @@
 title: "Kubecon NA 2021 Roundup"
 date: 2021-11-08T22:50:38Z
 draft: false
-meta_desc: Kat Cosgrove's recording roundup of the trends, updates, and gems from Kubecon NA 2021!
+meta_desc: Kat Cosgrove's recording roundup of the trends, updates, and gems from
+  Kubecon NA 2021!
 meta_image: meta.png
 authors:
-    - kat-cosgrove
+  - kat-cosgrove
 tags:
-    - kubecon
-    - kubernetes
-    - conferences
+  - kubecon
+  - kubernetes
+  - conferences
+search:
+  keywords:
+    - Kubecon
+    - Kubernetes
+    - Security
+    - supply chain
+    - PodSecurityPolicy
+    - SIG Contributor
 ---
 
 KubeCon North America 2021 is over, but the recordings are now online! Every talk you wanted to attend and couldn’t is available on YouTube, so here’s some highlights&mdash;cloud native trends, updates from projects and SIGs, and a few of my favorite talks!

@@ -3,18 +3,26 @@ title: "IaC Best Practices: Enabling Developer Stacks & Git Branches"
 canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stacks/
 date: 2023-03-10
 updated: 2025-03-04
-meta_desc: See how to enable team collaboration with Pulumi stacks and Git workflows. Learn best practices for managing feature branches and development environments.
+meta_desc: See how to enable team collaboration with Pulumi stacks and Git workflows.
+  Learn best practices for managing feature branches and development environments.
 meta_image: meta.png
 authors:
-    - christian-nunciato
-    - scott-lowe
+  - christian-nunciato
+  - scott-lowe
 tags:
-    - best-practices
-    - cloud-engineering
-    - aws
-    - eks
+  - best-practices
+  - cloud-engineering
+  - aws
+  - eks
 aliases:
-    - /blog/iac-recommended-practices-developer-stacks-git-branches/
+  - /blog/iac-recommended-practices-developer-stacks-git-branches/
+search:
+  keywords:
+    - Git
+    - Stacks
+    - Developer Stacks
+    - Git Branches
+    - Best Practices
 ---
 
 In the first post about [code organization and stacks](/blog/iac-best-practices-understanding-code-organization-stacks/), we introduced Zephyr, a fictional company that uses Pulumi to manage its online retail store. Following on from that post, which discusses code organization and stacks, this post explores two more questions users frequently ask when working with Pulumi in teams --- namely, How can I best enable multiple developers to collaborate on a Pulumi project? And how can I use Git and Git branching to support this kind of collaboration? In this post, we'll provide some guidance and best practices around these topics, using Zephyr and its online store as the use case.

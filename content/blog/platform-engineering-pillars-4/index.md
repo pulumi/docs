@@ -2,28 +2,42 @@
 title: "Developer Experience: From Friction to Flow"
 date: 2025-03-13
 draft: false
-meta_desc: Transform your platform engineering strategy by prioritizing developer experience - reduce friction, streamline workflows, and create a flow state.
+meta_desc: Transform your platform engineering strategy by prioritizing developer
+  experience - reduce friction, streamline workflows, and create a flow state.
 meta_image: meta.png
 authors:
-    - adam-gordon-bell
+  - adam-gordon-bell
 tags:
-    - platform-engineering
-    - platform-engineering-pillars
+  - platform-engineering
+  - platform-engineering-pillars
 social:
-    twitter: >
-            Developer Experience: the key to platform engineering success! Learn how to eliminate friction points, implement standardized templates, and build fast CI/CD pipelines that help developers achieve flow state and ship features faster.
-    linkedin: >
-            Developer experience is critical for successful platform engineering. Is your organization creating unnecessary friction?
+  twitter: >
+    Developer Experience: the key to platform engineering success! Learn how to eliminate
+    friction points, implement standardized templates, and build fast CI/CD pipelines
+    that help developers achieve flow state and ship features faster.
+  linkedin: >
+    Developer experience is critical for successful platform engineering. Is your
+    organization creating unnecessary friction?
 
-            🚨 The Challenges:
-            • Inconsistent development environments
-            • Manual setup processes
-            • Slow feedback loops
-            • Fragmented tooling and documentation
+    🚨 The Challenges:
+    • Inconsistent development environments
+    • Manual setup processes
+    • Slow feedback loops
+    • Fragmented tooling and documentation
 
-            🛠️ The Solution:
-            Implement streamlined workflows, standardized templates, and integrated CI/CD pipelines as core components of your internal developer platform.
+    🛠️ The Solution:
+    Implement streamlined workflows, standardized templates, and integrated CI/CD
+    pipelines as core components of your internal developer platform.
+search:
+  keywords:
+    - developer
+    - platform
+    - templates
+    - developer experience
+    - service catalog
+    - CI/CD pipelines
 ---
+
 In the last article in this [Platform Engineering Pillars series](/blog/tag/platform-engineering-pillars/), we explored how self-service infrastructure sets developers free from bottlenecks and dependency gates. By providing reusable infrastructure modules and intent-based configurations, platform teams dramatically reduce infrastructure friction. This sefl-service then powers faster deployments, increased autonomy, and fewer delays.
 
 But infrastructure provisioning alone doesn't ensure happy, productive developers. Even with efficient, streamlined infrastructure interactions, developers still battle daily hurdles: from inconsistent local dev setups and sluggish CI/CD pipelines to poor documentation and fragmented knowledge. These obstacles quietly chip away at momentum, reduce feature velocity, and increase operational overhead.

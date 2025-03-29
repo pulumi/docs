@@ -1,18 +1,19 @@
 ---
 title: "Master Kubernetes Secrets with Pulumi ESC + Secrets Store CSI Driver"
-allow_long_title: True
+allow_long_title: true
 date: 2024-12-18T09:58:01+01:00
 meta_image: meta.png
-meta_desc: "Learn how to manage Kubernetes secrets securely with Pulumi ESC and the Secrets Store CSI Driver."
+meta_desc: "Learn how to manage Kubernetes secrets securely with Pulumi ESC and the
+  Secrets Store CSI Driver."
 
 authors:
-- engin-diri
+  - engin-diri
 tags:
-- kubernetes
-- pulumi
-- secrets
-- csi
-- esc
+  - kubernetes
+  - pulumi
+  - secrets
+  - csi
+  - esc
 
 social:
   twitter: |
@@ -21,16 +22,23 @@ social:
     Securely managing Kubernetes secrets is a critical challenge. In my latest blog post, I cover how to use Pulumi ESC with the Secrets Store CSI Driver to enhance security and scalability.
 
     Key takeaways:
-    
+
     - Why avoiding native Kubernetes secrets can improve security.
     - How the Secrets Store CSI Driver works to mount secrets directly into pods.
     - A step-by-step guide to integrating Pulumi ESC for seamless secret management.
     - A comparison of the Secrets Store CSI Driver and External Secrets Operator.
-    
+
     Read the full post here: <link>
-    
+
     Let me know how you're managing secrets in your Kubernetes clusters.
 
+search:
+  keywords:
+    - Kubernetes
+    - Secrets
+    - Kubernetes secrets
+    - Secrets Store
+    - CSI Driver
 ---
 
 Welcome to the second blog post of the [Pulumi ESC](/product/secrets-management/) and Kubernetes secrets series. If you haven't had the chance to read the first blog post, go ahead and read it [here](/blog/cloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator).

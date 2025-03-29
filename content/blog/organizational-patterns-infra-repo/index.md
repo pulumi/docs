@@ -11,7 +11,8 @@ date: 2021-12-17T05:46:04-06:00
 # Set this property to `false` before submitting your post for review.
 draft: false
 
-meta_desc: In this first post of a series, we explore an important organizational pattern of using Pulumi - the centralized platform infrastructure repository.
+meta_desc: In this first post of a series, we explore an important organizational
+  pattern of using Pulumi - the centralized platform infrastructure repository.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -20,11 +21,18 @@ meta_image: meta.png
 
 
 authors:
-    - matt-stratton
+  - matt-stratton
 
 tags:
-    - development-environment
+  - development-environment
 
+search:
+  keywords:
+    - infrastructure
+    - platform
+    - centralized platform
+    - platform team
+    - infrastructure repository
 ---
 
 Using Pulumi is more than just writing code and components. In addition to common software development practices, there are also a number of success patterns related to how your company or team builds and deploys Pulumi programs to successfully build, deploy, and manage your infrastructure and applications. In this first post of a series, I will explore one of these patterns - the centralized platform infrastructure repository.

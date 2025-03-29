@@ -2,10 +2,18 @@
 title: "Running AWS IAM Access Analyzer at Deployment Time"
 authors: ["joe-duffy"]
 tags: ["AWS", "Security", "policy-as-code"]
-meta_desc: "In this post, we will look at running AWS IAM Access Analyzer at deployment time."
+meta_desc: "In this post, we will look at running AWS IAM Access Analyzer at deployment
+  time."
 date: "2019-12-03"
 
 meta_image: "iam-aa-crossguard.png"
+search:
+  keywords:
+    - AWS
+    - Security
+    - IAM Access
+    - Access Analyzer
+    - Policy Pack
 ---
 
 Yesterday AWS announced an exciting new feature &mdash; [the AWS Identity and Access Management (IAM) Access Analyzer](https://aws.amazon.com/blogs/aws/identify-unintended-resource-access-with-aws-identity-and-access-management-iam-access-analyzer/) &mdash; a service powered by automated reasoning that detects potentially-insecure access to your AWS resources, including S3 Buckets, SQS Queues, Lambdas, and more. At the same time, Pulumi announced [a new policy as code solution, CrossGuard](/blog/announcing-crossguard-preview/), that validates policies at deployment time. The question is: Can IAM Access Analyzer and Pulumi CrossGuard be combined to get the best of both solutions? The answer is Yes!

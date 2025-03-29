@@ -2,14 +2,15 @@
 title: Accelerate, Scale and Secure AI Innovation with Pulumi Platform Engineering
 allow_long_title: true
 date: 2024-10-01
-meta_desc: Learn more about how innovators are changing the rules of the AI game with platform engineering.
+meta_desc: Learn more about how innovators are changing the rules of the AI game with
+  platform engineering.
 meta_image: meta.png
 authors:
-    - marlowe-fenne
+  - marlowe-fenne
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - platform-engineering
+  - platform-engineering
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -24,8 +25,15 @@ tags:
 # https://twitter.com/PulumiCorp/status/1755637618631405655
 
 social:
-    twitter:
-    linkedin:
+  twitter:
+  linkedin:
+search:
+  keywords:
+    - AI
+    - platform
+    - platform engineering
+    - infrastructure automation
+    - cloud infrastructure
 ---
 
 As leadership teams continue to bet big on AI, the tradeoffs between how much to invest and when to expect a reasonable return are ever-present. While exploring scenarios for accelerating this return on investment, organizations are discovering some unique ways to accelerate their AI payback with Platform Engineering.

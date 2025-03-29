@@ -1,13 +1,19 @@
 ---
 title: "Pulumi YAML General Availability"
 date: 2022-11-02T06:05:00-07:00
-meta_desc: "Pulumi YAML 1.0 with IDE integration, full convert support, simpler function syntax and Kubernetes Operator embedding"
+meta_desc: "Pulumi YAML 1.0 with IDE integration, full convert support, simpler function
+  syntax and Kubernetes Operator embedding"
 meta_image: yaml-ga.png
 authors:
-    - luke-hoban
+  - luke-hoban
 tags:
-    - yaml
-    - pulumi-releases
+  - yaml
+  - pulumi-releases
+search:
+  keywords:
+    - YAML
+    - Kubernetes
+    - IDE support
 ---
 
 Earlier this year we launched support for [Pulumi YAML](https://www.pulumi.com/blog/pulumi-yaml/) as a new supported language for Pulumi’s Universal Infrastructure as Code platform.  Pulumi YAML offers a simple declarative interface to the full breadth of the Pulumi platform, ideal for smaller scale use cases and composition of higher level component building blocks.  And with support for `pulumi convert`, Pulumi YAML programs can be converted into a program in any other Pulumi language, ensuring you can easily scale up if and when needed.

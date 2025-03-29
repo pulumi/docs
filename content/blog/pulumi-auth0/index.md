@@ -5,10 +5,16 @@ draft: false
 meta_desc: " Simplifying authentication to APIs with the Pulumi Auth0 provider"
 meta_image: credijusto.png
 authors:
-    - fernando-carletti
+  - fernando-carletti
 tags:
-    - guest-post
-    - auth0
+  - guest-post
+  - auth0
+search:
+  keywords:
+    - Auth0
+    - Credijusto
+    - Auth0 provider
+    - Github connection
 ---
 
 *Guest author Lead Devops Engineer Fernando Carletti, writes about using the Pulumi Auth0 provider to manage resources at Credijusto.*

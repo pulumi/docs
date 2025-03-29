@@ -28,17 +28,25 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - german-lena
-    - cleve-littlefield
+  - german-lena
+  - cleve-littlefield
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - oidc
-    - openid-connect
-    - features
+  - oidc
+  - openid-connect
+  - features
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+search:
+  keywords:
+    - OIDC
+    - authentication
+    - OpenID Connect
+    - Trust Relationships
+    - security
+    - token management
 ---
 
 We are excited to introduce a powerful addition to Pulumi's authentication capabilities: OpenID Connect (OIDC) Trust Relationships. This feature makes it easy to integrate Pulumi securely into any ecosystem that supports OIDC. By incorporating [OIDC](/docs/pulumi-cloud/oidc/client/), Pulumi is not only extending its compatibility with a broader range of environments but also reinforcing its commitment to delivering top-tier, secure, and scalable solutions to developers and enterprises alike. Whether you are working within CI/CD pipelines or engaging directly with cloud services, this new feature ensures that your infrastructure management is more secure, efficient, and aligned with industry best practices.

@@ -1,18 +1,27 @@
 ---
-title: "Org-only Template Gallery and Setting Default Repositories: Streamline Your Development"
-allow_long_title: True
+title: "Org-only Template Gallery and Setting Default Repositories: Streamline Your
+  Development"
+allow_long_title: true
 date: 2024-04-19
 draft: false
-meta_desc: Pulumi Cloud adds new usability improvements that give more control to platform teams and streamline the New Project Wizard flow to deploy infrastructure 
+meta_desc: Pulumi Cloud adds new usability improvements that give more control to
+  platform teams and streamline the New Project Wizard flow to deploy infrastructure
 meta_image: meta.png
 authors:
-    - arun-loganathan
+  - arun-loganathan
 tags:
-    - features
-    - new-project-wizard
-    - developer-portals
-    - platform-engineering
+  - features
+  - new-project-wizard
+  - developer-portals
+  - platform-engineering
 
+search:
+  keywords:
+    - Templates
+    - Repository
+    - New Project
+    - Developer Portal
+    - Platform Teams
 ---
 
 We're constantly evolving the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) to make it the preferred choice for platform teams to empower their internal teams to deploy resources quickly and in adherence to organizational standards. In January, we launched the [Developer Portal Gallery](/blog/developer-portal-gallery/) to boost development velocity and reduce operational friction.  Since then, we have seen strong adoption from our customers and received several new requests. We are excited to share the latest improvements we've made. 

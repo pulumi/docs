@@ -1,10 +1,17 @@
 ---
 title: "Unlocking Spinnaker With Pulumi"
 authors: ["praneet-loke"]
-tags: ["continuous-delivery","spinnaker"]
+tags: ["continuous-delivery", "spinnaker"]
 date: "2020-06-18"
-meta_desc: "We are excited to announce the launch of free, open-source Pulumi plugin for Spinnaker."
+meta_desc: "We are excited to announce the launch of free, open-source Pulumi plugin
+  for Spinnaker."
 meta_image: pulumi-spinnaker.png
+search:
+  keywords:
+    - Spinnaker
+    - plugin
+    - continuous delivery
+    - open source
 ---
 
 Spinnaker is an open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence.

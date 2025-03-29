@@ -2,9 +2,16 @@
 title: "Life of a Pulumi Intern"
 meta_image: meta.png
 authors: ["tasia-halim"]
-meta_desc: "Peek into the kind of things I've experienced and accomplished as Pulumi's first."
+meta_desc: "Peek into the kind of things I've experienced and accomplished as Pulumi's
+  first."
 tags: ["pulumi-interns"]
 date: "2020-04-02"
+search:
+  keywords:
+    - Intern
+    - Engineering
+    - Software Engineering
+    - Cloud Providers
 ---
 
 👋I'm Tasia, a Computer Science student at the University of Washington and Pulumi's very first intern. Read on to learn about some of my thoughts and experiences from these past few months!

@@ -1,14 +1,22 @@
 ---
 title: "Zero Downtime InfluxDB Migration with Pulumi and Aiven"
 date: 2021-02-25
-meta_desc: "Zero downtime Pulumi in Aiven when transferring InfluxDB from cloud to cloud."
+meta_desc: "Zero downtime Pulumi in Aiven when transferring InfluxDB from cloud to
+  cloud."
 meta_image: aiven.png
 authors:
-    - trevor-kennedy
+  - trevor-kennedy
 tags:
-    - aws
-    - python
-    - aiven
+  - aws
+  - python
+  - aiven
+search:
+  keywords:
+    - InfluxDB
+    - Aiven
+    - zero downtime
+    - cloud migration
+    - AWS Lambda
 ---
 
 In this article, I’ll show how Pulumi can be used with Aiven’s services to create infrastructure that can be migrated from cloud to cloud with no downtime.

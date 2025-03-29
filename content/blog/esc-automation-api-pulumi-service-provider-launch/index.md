@@ -3,7 +3,8 @@ title: "Introducing Pulumi ESC Support in Automation API and the Pulumi Service 
 allow_long_title: true
 date: 2024-06-05T00:00:00-05:00
 draft: false
-meta_desc: "Supercharge how you manage your infrastructure and application secrets and configurations using the Pulumi Service Provider and Automation API."
+meta_desc: "Supercharge how you manage your infrastructure and application secrets
+  and configurations using the Pulumi Service Provider and Automation API."
 meta_image: "meta.png"
 authors:
   - arun-loganathan
@@ -13,6 +14,12 @@ tags:
   - secrets
   - config management
   - features
+search:
+  keywords:
+    - Automation
+    - Environments
+    - Automation API
+    - Service Provider
 ---
 
 We're excited to announce two powerful new capabilities for [Pulumi Environments Secrets and Configurations](/product/esc) (ESC) that supercharge how you manage and control your infrastructure and application secrets and configurations:

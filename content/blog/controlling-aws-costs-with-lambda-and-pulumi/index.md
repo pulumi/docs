@@ -3,8 +3,16 @@ date: "2020-04-09"
 title: "Controlling AWS Costs with Pulumi and AWS Lambda"
 authors: ["paul-stack"]
 tags: ["aws", "serverless", "lambda"]
-meta_desc: "Learn how to use Pulumi and AWS Lambda to create and deploy an application that can control cloud costs."
+meta_desc: "Learn how to use Pulumi and AWS Lambda to create and deploy an application
+  that can control cloud costs."
 meta_image: "cost.png"
+search:
+  keywords:
+    - Lambda
+    - AWS
+    - AWS Lambda
+    - cloud costs
+    - IAM Role
 ---
 
 Due to the nature of the product we build, the Pulumi team needs to have access to several cloud providers to

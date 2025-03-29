@@ -1,14 +1,22 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: Static Websites"
 date: 2021-08-09
-allow_long_title: True
+allow_long_title: true
 meta_desc: "Two ways to build and deploy static websites with Azure"
 meta_image: azure-top-5.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - azure
-    - static websites
+  - azure
+  - static websites
+search:
+  keywords:
+    - Azure
+    - Static
+    - Websites
+    - Static websites
+    - Azure Storage
+    - Azure Portal
 ---
 
 Static web applications are a popular way to publish websites. There are many reasons for adopting static web applications, including speed, security, version control, scalability, and reduced cost.

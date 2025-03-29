@@ -1,13 +1,21 @@
 ---
 title: "Cloud Engineering on the Rise"
 date: 2021-08-03
-meta_desc: "Infrastructure as Code case studies with Pulumi, Atlassian, SANS, and Skai"
+meta_desc: "Infrastructure as Code case studies with Pulumi, Atlassian, SANS, and
+  Skai"
 meta_image: pulumi.png
 authors:
-    - george-huang
+  - george-huang
 tags:
-    - cloud engineering
+  - cloud engineering
 
+search:
+  keywords:
+    - Cloud
+    - Engineering
+    - Cloud Engineering
+    - Infrastructure Code
+    - Case Studies
 ---
 
 One of the most fulfilling aspects of working at Pulumi is learning how customers and the community practice cloud engineering in their teams. It’s exciting to see how they use cloud engineering and Pulumi to implement best practices that enable leveraging the cloud to accelerate innovation and enable better business outcomes.

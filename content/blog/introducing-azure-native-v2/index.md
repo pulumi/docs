@@ -4,17 +4,25 @@ allow_long_title: true
 
 date: 2023-06-14T14:00:00-04:00
 
-meta_desc: "Introducing Pulumi Azure Native Provider 2.0: Streamlined, Expanded, and More Powerful than Ever!"
+meta_desc: "Introducing Pulumi Azure Native Provider 2.0: Streamlined, Expanded, and
+  More Powerful than Ever!"
 
 meta_image: meta.png
 
 authors:
-    - monica-rodriguez
+  - monica-rodriguez
 
 tags:
-    - providers
-    - azure
+  - providers
+  - azure
 
+search:
+  keywords:
+    - Azure
+    - Provider
+    - Azure Native
+    - Native Provider
+    - Infrastructure Code
 ---
 
 {{% notes type="info" %}}

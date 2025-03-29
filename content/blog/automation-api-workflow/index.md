@@ -1,12 +1,20 @@
 ---
 title: "Orchestrating Cloud Workflows with Automation API"
 date: 2020-11-19
-meta_desc: "Using Automation API to provision infrastructure and applications with only code."
+meta_desc: "Using Automation API to provision infrastructure and applications with
+  only code."
 meta_image: automation_api.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
+  - Automation API
+search:
+  keywords:
+    - Automation
+    - Infrastructure
     - Automation API
+    - Cloud Workflows
+    - Database Migration
 ---
 
 There are many moving parts when deploying infrastructure and applications. Playbooks are step-by-step maps that standardize how infrastructure and applications are deployed across your organization. Typically playbooks describe every action to build and deploy, requiring an operator to complete each step before moving on to the next. It's a process that can be tedious and prone to human error.

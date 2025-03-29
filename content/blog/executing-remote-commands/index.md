@@ -3,12 +3,20 @@ title: Executing Remote Commands with Pulumi
 date: 2022-02-03T22:10:00Z
 updated: 2025-03-05
 draft: false
-meta_desc: Deploy Kubernetes on DigitalOcean with Pulumi’s Command package. Run remote commands, fetch kubeconfig, and streamline Kubernetes automation effortlessly.
+meta_desc: Deploy Kubernetes on DigitalOcean with Pulumi’s Command package. Run remote
+  commands, fetch kubeconfig, and streamline Kubernetes automation effortlessly.
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags:
   - kubernetes
   - digitalocean
+search:
+  keywords:
+    - Kubernetes
+    - Command
+    - remote commands
+    - DigitalOcean droplet
+    - kubeconfig fetching
 ---
 
 We recently announced in our [release blog (66)](https://www.pulumi.com/blog/pulumi-release-notes-66/) a new package: [Command](https://www.pulumi.com/registry/packages/command/). In this article, I want to show you a practical application of this that will allow us to deploy [k3s](https://k3s.io) to a [DigitalOcean Kubernetes droplet](https://digitalocean.com/products/kubernetes/). We'll then leverage the Command package to run a remote command to fetch the kubeconfig, generated on the VM, and pull it down to create a Kubernetes provider to deploy nginx.

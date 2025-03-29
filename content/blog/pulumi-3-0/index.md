@@ -1,14 +1,20 @@
 ---
 title: "Announcing Pulumi 3.0"
 date: 2021-04-20T00:00:06-07:00
-meta_desc: Announcing Pulumi 3.0, the next major version of the Pulumi open source project.
+meta_desc: Announcing Pulumi 3.0, the next major version of the Pulumi open source
+  project.
 meta_image: meta.png
 authors:
-    - luke-hoban
+  - luke-hoban
 tags:
-    - automation-api
-    - native-providers
-    - packages
+  - automation-api
+  - native-providers
+  - packages
+search:
+  keywords:
+    - Automation
+    - Providers
+    - Native Providers
 ---
 
 Today we’re excited to announce the availability of Pulumi 3.0, the next major version of the Pulumi open source project, and the foundation for Pulumi’s [Cloud Engineering Platform](/cloud-engineering/).

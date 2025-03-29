@@ -5,10 +5,16 @@ draft: false
 meta_image: meta.png
 meta_desc: See deployment times across different types of cloud provider resources.
 authors:
-    - kyle-dixler
-tags: 
+  - kyle-dixler
+tags:
   - pulumi
   - features
+search:
+  keywords:
+    - CLI
+    - resources
+    - deployment times
+    - cloud provider
 ---
 
 If you’ve deployed resources to your favorite cloud provider, you have probably found yourself sitting in the console thinking: “I don’t know how long this is going to take.” Then you deploy the resource and think: “When did I even start this?” When using Pulumi, the CLI prints out how long the update took after it ran, but while you’re in the moment, it feels like ages.

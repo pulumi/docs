@@ -1,12 +1,21 @@
 ---
 title: "The Past, Present, and Future of Cloud Engineering"
 date: 2020-10-08
-meta_desc: "Learn about the past, present, and future of Cloud Engineering, with the Cloud Engineering Summit keynote."
+meta_desc: "Learn about the past, present, and future of Cloud Engineering, with the
+  Cloud Engineering Summit keynote."
 meta_image: cloud_engineering.png
 authors:
-    - joe-duffy
+  - joe-duffy
 tags:
+  - cloud engineering
+search:
+  keywords:
+    - cloud
+    - infrastructure
+    - applications
     - cloud engineering
+    - cloud software
+    - cloud capabilities
 ---
 
 All software is cloud software. All modern applications interact with the cloud in some way, whether it's using cloud for storage, compute capabilities, or with rich cloud services for data, AI/ML, and so much more, to deliver amazing new experiences. As a result, all developers today are cloud developers, and infrastructure teams are key to enabling innovation across the entire organization. I had a great time telling this story at the [Cloud Engineering Summit](https://cloudengineeringsummit.com) today and wanted to take a moment to put pen to paper.

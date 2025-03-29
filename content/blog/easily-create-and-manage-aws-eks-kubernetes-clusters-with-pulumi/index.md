@@ -2,7 +2,8 @@
 title: Easily Create and Manage AWS EKS Kubernetes Clusters
 h1: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
 date: "2021-01-28"
-meta_desc: "Use Pulumi to easily deploy new clusters, manage AWS resources, and deploy Kubernetes apps. See how to provision an EKS cluster with a single CLI command."
+meta_desc: "Use Pulumi to easily deploy new clusters, manage AWS resources, and deploy
+  Kubernetes apps. See how to provision an EKS cluster with a single CLI command."
 meta_image: "pulumi_k8s.png"
 authors:
   - luke-hoban
@@ -11,6 +12,13 @@ tags:
   - aws
   - kubernetes
   - eks
+search:
+  keywords:
+    - AWS
+    - Kubernetes
+    - AWS EKS
+    - EKS cluster
+    - Kubernetes cluster
 ---
 
 Provisioning, managing, and monitoring a Kubernetes cluster is

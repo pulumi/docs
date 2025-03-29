@@ -5,10 +5,16 @@ draft: false
 meta_desc: "Release of the next version of the Azure Classic Pulumi Provider"
 meta_image: meta.png
 authors:
-    - daniel-bradley
+  - daniel-bradley
 tags:
-    - azure
-    - release
+  - azure
+  - release
+search:
+  keywords:
+    - Azure
+    - Provider
+    - Azure Classic
+    - Classic Provider
 ---
 
 The latest major release of the Azure Classic Pulumi Provider is available now!

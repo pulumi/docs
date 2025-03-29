@@ -1,18 +1,27 @@
 ---
-title: "Adding data to Pinecone using S3, Embedchain and Pulumi on AWS for an AI Slack bot"
+title: "Adding data to Pinecone using S3, Embedchain and Pulumi on AWS for an AI Slack
+  bot"
 allow_long_title: true
 authors:
-- tyler-mulligan
+  - tyler-mulligan
 tags:
-- aws
-- pulumi
-- embedchain
-- slack
-- chatbot
-- ai
-meta_desc: "Learn how to add data to Pinecone using S3, Embedchain and Pulumi on AWS for an AI Slack bot."
+  - aws
+  - pulumi
+  - embedchain
+  - slack
+  - chatbot
+  - ai
+meta_desc: "Learn how to add data to Pinecone using S3, Embedchain and Pulumi on AWS
+  for an AI Slack bot."
 date: 2024-04-10T17:00:00+01:00
 meta_image: meta.png
+search:
+  keywords:
+    - Pinecone
+    - AWS
+    - AI Slack
+    - data loader
+    - vector database
 ---
 
 In the introductory blog post, we learned to [Create an AI Slack Bot to Chat with Your Data Using Embedchain, Pulumi on AWS](/blog/ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws/).  However, we made a few concessions in the application logic to illustrate the broader picture of what we were able to achieve combining these three technologies.  Now that we have a solid foundation for deploying our Slack bot and querying our data, lets begin moving from proof-of-concept to production-ready, iteratively.

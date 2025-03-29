@@ -1,11 +1,19 @@
 ---
 title: "Building the Best Infrastructure as Code with $41M Series C Funding"
-allow_long_title: True
+allow_long_title: true
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
-meta_desc: "Today we announced a $41M Series C to build the best infrastructure as code and tackle more of our customers' toughest cloud challenges."
+meta_desc: "Today we announced a $41M Series C to build the best infrastructure as
+  code and tackle more of our customers' toughest cloud challenges."
 date: "2023-10-03"
 meta_image: "series-c.png"
+search:
+  keywords:
+    - Infrastructure
+    - Cloud
+    - Infrastructure as code
+    - Series C
+    - Open source
 ---
 
 Today we announced a $41M Series C fundraise from Madrona Ventures, NEA, Tola Capital, and Strike Capital. These new funds will help us accelerate momentum, keep innovating with the best infrastructure as code technology on the market, and expand into new product areas to solve even more of our customers’ most pressing cloud challenges. We’ve had a year of exciting milestones – surpassing 150,000 end users in our community, 2,000 customers, and 100 employees – and look forward to many more to come. The future is full of cloud, and yet incredibly bright!

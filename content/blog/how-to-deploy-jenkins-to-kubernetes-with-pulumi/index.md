@@ -3,7 +3,15 @@ title: "How to deploy Jenkins to Kubernetes with Pulumi"
 date: "2018-06-27"
 authors: ["sean-gillespie"]
 tags: ["Kubernetes"]
-meta_desc: "In this blog, we'll see how to run Jenkins on Kubernetes with Pulumi, based on adapting a Helm template."
+meta_desc: "In this blog, we'll see how to run Jenkins on Kubernetes with Pulumi,
+  based on adapting a Helm template."
+search:
+  keywords:
+    - Kubernetes
+    - Jenkins
+    - Jenkins deployment
+    - Kubernetes cluster
+    - Helm template
 ---
 
 In this blog post, we'll see how to run

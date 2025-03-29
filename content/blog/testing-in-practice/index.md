@@ -1,13 +1,21 @@
 ---
 title: "Infrastructure Testing in Practice"
 date: 2021-07-23
-meta_desc: "Infrastructure testing is core to cloud engineering; this article examines unit, property, and integration testing using infrastructure as code."
+meta_desc: "Infrastructure testing is core to cloud engineering; this article examines
+  unit, property, and integration testing using infrastructure as code."
 meta_image: testing-in-practice.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
+  - testing
+  - cloud engineering
+search:
+  keywords:
     - testing
+    - infrastructure
+    - infrastructure testing
     - cloud engineering
+    - unit tests
 ---
 
 In the [previous article](/blog/infrastructure-testing-concepts/) we discussed how to apply software testing methodologies to cloud engineering. We also examined testing regimes starting from the testing pyramid to the trophy and honeycomb models of testing better suited to distributed and cloud architectures. These testing regimes include three types of tests suited for cloud architectures:

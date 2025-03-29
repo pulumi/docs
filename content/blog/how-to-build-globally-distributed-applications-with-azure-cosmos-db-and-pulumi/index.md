@@ -4,8 +4,16 @@ h1: "How To Build Globally Distributed Applications with Azure Cosmos DB and Pul
 authors: ["mikhail-shilkov"]
 tags: ["Azure"]
 meta_image: "meta.png"
-meta_desc: "A reusable component to build highly-available, low-latency applications on Azure"
+meta_desc: "A reusable component to build highly-available, low-latency applications
+  on Azure"
 date: "2019-09-24"
+search:
+  keywords:
+    - Azure
+    - Cosmos
+    - Azure Cosmos
+    - Cosmos DB
+    - global application
 ---
 
 In a [previous blog post](/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/), I shared how easy it is to create a globally distributed, highly-available, low-latency application with Azure Functions, Azure Cosmos DB, and Pulumi.

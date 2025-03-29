@@ -2,12 +2,20 @@
 title: "The Beginner's Guide to AWS Serverless Step Functions"
 date: 2020-02-13
 updated: 2025-03-19
-meta_desc: "Learn how to build AWS Step Functions to automate workflows & connect AWS services. Follow this step-by-step guide to deploy serverless apps."
+meta_desc: "Learn how to build AWS Step Functions to automate workflows & connect
+  AWS services. Follow this step-by-step guide to deploy serverless apps."
 meta_image: meta-step-function.png
 authors:
-    - sophia-parafina
+  - sophia-parafina
 tags:
-    - serverless
+  - serverless
+search:
+  keywords:
+    - AWS
+    - Lambda
+    - AWS Step
+    - Step Functions
+    - Serverless Workflows
 ---
 
 [AWS Step Functions](https://aws.amazon.com/step-functions/) lets you build applications by connecting AWS services. Daisy-chaining steps into a workflow simplifies application development by creating a state machine diagram which shows how services are connected to each other in your application. We'll go into the details of creating a lambda function, IAM roles and policies, and creating a workflow. Once we have the example deployed, we'll walk through the process of adding another function and step to the workflow. Included in the walkthrough is a discussion of one of the aspects of the Pulumi programming model. The goal of this article is to provide a foundation for building your application using serverless workflows.

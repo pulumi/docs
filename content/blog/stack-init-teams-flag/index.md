@@ -1,16 +1,22 @@
 ---
 title: "Manage Pulumi Teams in Bulk with the New CLI Teams Flag"
 date: "2023-03-31"
-meta_desc: "We've added a new CLI flag to the stack init subcommand allowing users to grant team access to newly created stacks."
+meta_desc: "We've added a new CLI flag to the stack init subcommand allowing users
+  to grant team access to newly created stacks."
 meta_image: "meta.png"
 
 authors:
-    - "robbie-mckinstry"
-        
+  - "robbie-mckinstry"
 tags:
-    - "cli"
-    - "stack-init"
-    - "cli-flags"
+  - "cli"
+  - "stack-init"
+  - "cli-flags"
+search:
+  keywords:
+    - CLI
+    - Teams
+    - stack init
+    - CLI flag
 ---
 
 We've been hearing feedback from our customers that they need ways to manage permissions for their stacks at scale. Today we are announcing a `--teams` flag for [`pulumi stack init`](/docs/cli/commands/pulumi_stack_init), which allows customers to assign Teams to stacks from the CLI. This flag offers a third programmatic method for assigning permissions, supplementing [Pulumi Service REST API](/docs/reference/service-rest-api) or the [Pulumi Service Provider](/registry/packages/pulumiservice). Developers can now initialize their stacks with the right permissions directly from the CLI.

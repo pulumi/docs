@@ -1,14 +1,22 @@
 ---
 title: "Announcing PulumiUP 2022: The Cloud Awakens on May 4th"
 date: 2022-03-31
-meta_desc: Attend PulumiUP 2022 with virtual workshops, sessions, and talks about cloud engineering, infrastructure as code, and modern cloud architectures!
+meta_desc: Attend PulumiUP 2022 with virtual workshops, sessions, and talks about
+  cloud engineering, infrastructure as code, and modern cloud architectures!
 meta_image: meta.png
 authors:
-    - george-huang
+  - george-huang
 tags:
-    - pulumi-events
+  - pulumi-events
 block_external_search_index: true
 redirect_to: /pulumi-up/
+search:
+  keywords:
+    - Cloud
+    - Infrastructure
+    - Cloud Engineering
+    - Infrastructure as Code
+    - Community Summit
 ---
 
 Calling all cloud engineers! Today we announce the second annual [PulumiUP](/pulumi-up/) virtual conference taking place on May 4, 2022. We will also host the inaugural Pulumi Community Summit on May 5 to virtually assemble the world’s cloud, infrastructure, and Pulumi practitioners of all experience levels (hint: that’s you---all are welcome)! [Register for both events here](/pulumi-up/).

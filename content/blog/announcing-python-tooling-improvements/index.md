@@ -2,12 +2,21 @@
 title: "Announcing Python Tooling Improvements"
 date: 2020-08-27
 draft: false
-meta_desc: "Type annotations and support for passing nested values with data classes provides a significant improvement to the Python experience."
+meta_desc: "Type annotations and support for passing nested values with data classes
+  provides a significant improvement to the Python experience."
 meta_image: python-tooling.png
 authors:
-    - justin-vanpatten
+  - justin-vanpatten
 tags:
+  - python
+search:
+  keywords:
     - python
+    - annotations
+    - classes
+    - type annotations
+    - data classes
+    - nested values
 ---
 
 Today we're excited to announce some fairly significant improvements to the experience of writing Pulumi programs in Python. We've added type annotations to APIs and now allow passing nested data as strongly typed classes instead of raw `dict`s. This provides a much better editing experience in IDEs, improved type checking, and overall consistency.

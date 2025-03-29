@@ -2,14 +2,21 @@
 title: Join a Pulumi User Group (PUG) Meetup!
 date: 2023-05-01
 updated: 2025-05-19
-meta_desc: The PUGs will feature in-person meetups, in-person and virtual workshops, and other events to help members stay up-to-date with the latest developments.
+meta_desc: The PUGs will feature in-person meetups, in-person and virtual workshops,
+  and other events to help members stay up-to-date with the latest developments.
 meta_image: meta.png
 authors:
-    - sara-huddleston
+  - sara-huddleston
 tags:
-    - announcements
-    - community
-    - pulumi-events
+  - announcements
+  - community
+  - pulumi-events
+search:
+  keywords:
+    - Meetups
+    - Community
+    - User Group
+    - Cloud Infrastructure
 ---
 
 We have a global community made up of people from many different countries, but we also have many local communities. We want to enable our users to meet, share knowledge and ideas, answer questions, and learn about Pulumi and best practices. For that reason, we created the [Pulumi User Groups, aka PUGs](https://www.meetup.com/pro/pugs) on Meetup.

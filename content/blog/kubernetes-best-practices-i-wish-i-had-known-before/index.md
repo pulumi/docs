@@ -10,13 +10,13 @@ meta_desc: |
 meta_image: meta.png
 
 authors:
-- engin-diri
+  - engin-diri
 
 tags:
-- kubernetes
-- best-practices
-- k8s
-- devops
+  - kubernetes
+  - best-practices
+  - k8s
+  - devops
 social:
   twitter: |
     Learn best practices for Kubernetes that I wish I had known earlier. Avoid common pitfalls and save time, money, and headaches.
@@ -25,9 +25,17 @@ social:
     Kubernetes Best Practices I Wish I Had Known Before
 
     Embarking on your Kubernetes journey? Trust me, it can feel like climbing Mount Everest in flip-flops! Through years of hands-on experience in production environments, I've compiled a list of essential Kubernetes best practices that can save you time, money, and countless headaches.
-    
+
     Whether you're just starting or looking to refine your Kubernetes setup, these insights will help you navigate the complexities and harness the full power of Kubernetes.
     <link>
+search:
+  keywords:
+    - Kubernetes
+    - best-practices
+    - devops
+    - resource requests
+    - namespace strategy
+    - ingress controller
 ---
 
 Kubernetes has undeniably transformed the way we build, ship, and run applications. But let’s be honest, getting started with Kubernetes can feel like climbing Mount Everest in flip-flops.

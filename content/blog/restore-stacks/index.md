@@ -14,7 +14,8 @@ date: 2023-07-19
 # which is useful for targeting search results or social-media previews.
 # This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Pulumi Cloud launches new Restore Stacks feature for Enterprise and Business Critical editions.
+meta_desc: Pulumi Cloud launches new Restore Stacks feature for Enterprise and Business
+  Critical editions.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect ratio
@@ -26,17 +27,23 @@ meta_image: meta.png
 # of the team member files at /data/team/team.
 # Create a file for yourself if you don't already have one.
 authors:
-    - meagan-cojocar
-    - isabel-suchanek
+  - meagan-cojocar
+  - isabel-suchanek
 
 # At least one tag is required.
 # Lowercase, hyphen-delimited is recommended.
 tags:
-    - features
+  - features
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,
 # and please remove these comments before submitting for review.
+search:
+  keywords:
+    - Cloud
+    - Restore
+    - Restore Stacks
+    - Deleted Stacks
 ---
 
 Starting today, you can restore previously deleted stacks in the Pulumi Cloud console. We've had a number of requests from customers to recover stacks, either because the stack was accidentally deleted or the stack was intentionally deleted but, later on, they want to restore and preserve the activity history on the stack and just remove its resources.

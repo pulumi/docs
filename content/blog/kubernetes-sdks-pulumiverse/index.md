@@ -2,10 +2,18 @@
 title: Kubernetes SDKs from the Pulumiverse
 date: 2021-12-29T13:32:16Z
 draft: false
-meta_desc: In this article, we look at a new repository published on the Pulumiverse that delivers rich Kubernetes SDKs for popular CRDs.
+meta_desc: In this article, we look at a new repository published on the Pulumiverse
+  that delivers rich Kubernetes SDKs for popular CRDs.
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["kubernetes"]
+search:
+  keywords:
+    - Kubernetes
+    - SDKs
+    - Kubernetes SDKs
+    - Custom Resource
+    - GitHub Actions
 ---
 
 Pulumi provides an amazingly rich interface for developers and operators to define their Kubernetes workloads, providing typed access to recourses from the Kubernetes API and allowing our IDEs to provide code completion and refactoring opportunities through the native language plugins.

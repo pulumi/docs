@@ -4,9 +4,16 @@ date: 2020-05-19
 meta_desc: "Go is fully supported in Pulumi 2.0 for Infrastructure as Code."
 meta_image: superfriends.png
 authors:
-    - evan-boyle
+  - evan-boyle
 tags:
+  - Go
+search:
+  keywords:
     - Go
+    - Kubernetes
+    - Infrastructure as Code
+    - Cloud Platforms
+    - Serverless Workloads
 ---
 
 Over the last 10 years, Go has quickly become the "language of the cloud" for building application servers and services that run in and on today's cloud platforms. With [Pulumi 2.0](/blog/pulumi-2-0/), Go can also be used to manage and provision modern infrastructure as well.  Across any cloud (AWS, Azure, GCP, Kubernetes and [more than 50 others](/registry/)!) and across a variety of workloads (containers, serverless, kubernetes, core infrastructure and more), you can now use the rich software engineering strengths of the Go language and ecosystem to manage your cloud infrastructure.  The [Pulumi open source project](https://github.com/pulumi/pulumi) itself has been built on Go from day 1, and so we're really excited to bring full Go support for cloud infrastructure as code to the same language ecosystem that Pulumi itself has been part of.
