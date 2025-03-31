@@ -613,7 +613,7 @@ The entrypoint analyzes components to automatically build a schema, and interact
 
 {{% choosable language typescript %}}
 
-Not required for TypeScript.
+No separate entry point is required for TypeScript. All exported component classes will automatically be exposed to be consumed from other languages.
 
 {{% /choosable %}}
 {{% choosable language python %}}
