@@ -6,7 +6,7 @@ meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections 
 menu:
   esc:
     parent: esc-reference
-    identifier: well-known-properties
+    identifier: esc-ref-well-known-properties
     weight: 6
 ---
 
