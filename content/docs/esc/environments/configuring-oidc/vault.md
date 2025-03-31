@@ -19,7 +19,6 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 ## Prerequisites
 
-* You must be an admin of your Pulumi organization.
 * You must have admin access to Vault.
 * Pulumi Cloud must be able to access Vault.
 
@@ -197,9 +196,11 @@ $ esc open <my-org>/<my-project>/<my-environment>
 
 To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [Pulumi ESC providers documentation](/docs/pulumi-cloud/esc/providers/).
 
-### Subject customization
+## Subject claim customization
 
-It is possible to customize the OIDC token subject claim by setting configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
+You can [customize](/docs/esc/environments/customizing-oidc-claims/) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
+
+You do so by configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 
 * `rootEnvironment.name`: the name of the root environment being evaluated
 * `currentEnvironment.name`: the name of the current environment being evaluated

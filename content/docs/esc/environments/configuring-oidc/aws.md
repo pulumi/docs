@@ -15,7 +15,7 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 
 ## Prerequisites
 
-* You must be an admin of your Pulumi organization.
+* You must have sufficient AWS IAM privileges to create identity providers and IAM roles.
 
 {{< notes type="warning" >}}
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
@@ -26,9 +26,9 @@ Please note that this guide provides step-by-step instructions based on the offi
 1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
 2. In the **Provider type** section, click the radio button next to **OpenID Connect**.
 3. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
-4. For the **Audience** field, the value will differ between Pulumi deployments and ESC. For Deployments the value is only the name of your Pulumi organization. For ESC the value is the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`). Then click **Add provider**.
+4. For the **Audience** field, the value is the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`). Then click **Add provider**.
   {{< notes type="info" >}}
-  For environments in the `default` project, the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
+  For the `default` project, the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
   {{< /notes >}}
 
 ## Configure the IAM role and trust policy
@@ -70,9 +70,6 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
               duration: 1h
               roleArn: <your-oidc-iam-role-arn>
               sessionName: pulumi-environments-session
-              subjectAttributes:
-                - currentEnvironment.name
-                - pulumi.user.login
       environmentVariables:
         AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
         AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
@@ -105,6 +102,24 @@ Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` wi
   }
 }
 ```
+
+## Subject claim customization
+
+You can [customize](/docs/esc/environments/customizing-oidc-claims/) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
+
+By default, the subject claim has the following format:
+
+`pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
+
+To customize the subject, use the `subjectAttributes` property in your environment configuration. This produces a subject with the prefix:
+
+`pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}`
+
+{{< notes type="warning" >}}
+
+For environments within the legacy `default` project, the project will **not** be present in the subject to preserve backwards compatibility. The format of the subject claim when `subjectAttributes` are not set is `pulumi:environments:org:<organization name>:env:<environment name>`. If `currentEnvironment.name` is used as a custom subject attribute it will resolve to only the environment name (e.g. `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:personA`). Due to this it is recommended to move your environments out of the `default` project for best security practices.
+
+{{< /notes >}}
 
 ## Subject claim example
 
@@ -143,12 +158,6 @@ The subject always contains the prefix `pulumi:environments:pulumi.organization.
 When importing multiple environments into Pulumi IaC Stack Config, each environment is resolved separately. For example, if you import multiple environments into your Pulumi Stack with `rootEnvironment.name` attribute defined in all of them, then each `rootEnvironment.name` will resolve to the environment name where it is defined.
 
 The default format of the subject claim when `subjectAttributes` are not used is `pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
-
-{{< notes type="warning" >}}
-
-For environments within the legacy `default` project, the project will **not** be present in the subject to preserve backwards compatibility. The format of the subject claim when `subjectAttributes` are not set is `pulumi:environments:org:<organization name>:env:<environment name>`. If `currentEnvironment.name` is used as a custom subject attribute it will resolve to only the environment name (e.g. `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:personA`). Due to this it is recommended to move your environments out of the `default` project for best security practices.
-
-{{< /notes >}}
 
 {{< notes type="info" >}}
 
