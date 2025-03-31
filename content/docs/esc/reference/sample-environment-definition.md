@@ -1,15 +1,13 @@
 ---
-title: Syntax Reference
-title_tag: Syntax Reference
-h1: Pulumi ESC Syntax Reference
+title: Sample Environment Definition
+title_tag: Sample Environment Definition
+h1: Sample Environment Definition
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   esc:
-    parent: esc-home
-    identifier: esc-syntax-reference
-    weight: 5
-aliases:
-  - /docs/pulumi-cloud/esc/reference
+    parent: esc-reference
+    identifier: sample-environment-definition
+    weight: 7
 ---
 
 ```yaml
