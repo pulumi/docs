@@ -12,6 +12,8 @@ menu:
 
 The `fn::rotate` built-in function invokes a rotator to rotate secrets.
 
+Some of a rotator's inputs may only be evaluated when the environment containing the `fn::rotate` invocation is rotated. This can be combined with the `environments` built-in value to fetch managing credentials from other environments that may require additional permissions beyond those given to typical users of an environment. The exact inputs that are rotation-only are dependent on the rotator.
+
 ## Declaration
 
 ```yaml

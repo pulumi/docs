@@ -10,3 +10,10 @@ menu:
     weight: 5
 ---
 
+ESC provides several built-in values to allow users convenient access to data such as the user evaluating an environment, an environment's import, or other environments within the organization.
+
+## Values
+
+- [`context`](/docs/esc/reference/builtin-values/context)
+- [`environments`](/docs/esc/reference/builtin-values/environments)
+- [`imports`](/docs/esc/reference/builtin-values/imports)
