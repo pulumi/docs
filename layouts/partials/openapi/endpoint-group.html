@@ -1,0 +1,16 @@
+{{ define "openapi/endpoint-group.html" }}
+<h2 id="api-reference">API Reference</h2>
+{{ range $tag, $endpoints := .taggedEndpoints }}
+    <h3 id="{{ anchorize $tag }}">{{ $tag }}</h3>
+    {{ range $endpoints }}
+        {{ template "openapi/endpoint.html" (dict "method" .method "path" .path "details" .details "openapi" $.openapi) }}
+    {{ end }}
+{{ end }}
+
+{{ if .untaggedEndpoints }}
+    <h3 id="untagged">Untagged</h3>
+    {{ range .untaggedEndpoints }}
+        {{ template "openapi/endpoint.html" (dict "method" .method "path" .path "details" .details "openapi" $.openapi) }}
+    {{ end }}
+{{ end }}
+{{ end }} 

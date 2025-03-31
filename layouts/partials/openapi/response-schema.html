@@ -1,0 +1,75 @@
+{{ define "openapi/response-schema.html" }}
+{{ if .schema }}
+    {{ if isset .schema "$ref" }}
+        {{ $refPath := index .schema "$ref" }}
+        {{ $refParts := split $refPath "/" }}
+        {{ $schemaName := index $refParts (sub (len $refParts) 1) }}
+        {{ if isset $.openapi.definitions $schemaName }}
+            <h6>Response Schema</h6>
+            {{ $schemaDetails := index $.openapi.definitions $schemaName }}
+            {{ if $schemaDetails.properties }}
+                <table>
+                    <tr>
+                        <th>Property</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    {{ range $propName, $propDetails := $schemaDetails.properties }}
+                        <tr>
+                            <td><code>{{ $propName }}</code></td>
+                            <td>
+                                {{ if isset $propDetails "$ref" }}
+                                    {{ $propRef := index $propDetails "$ref" }}
+                                    {{ $propRefParts := split $propRef "/" }}
+                                    {{ index $propRefParts (sub (len $propRefParts) 1) }}
+                                {{ else if isset $propDetails "type" }}
+                                    {{ $propDetails.type }}
+                                    {{ if eq $propDetails.type "array" }}
+                                        {{ if isset $propDetails.items "$ref" }}
+                                            [{{ index (split (index $propDetails.items "$ref") "/") (sub (len (split (index $propDetails.items "$ref") "/")) 1) }}]
+                                        {{ else }}
+                                            [{{ $propDetails.items.type }}]
+                                        {{ end }}
+                                    {{ end }}
+                                {{ end }}
+                            </td>
+                            <td>{{ $propDetails.description | markdownify }}</td>
+                        </tr>
+                    {{ end }}
+                </table>
+            {{ end }}
+        {{ end }}
+    {{ else if .schema.properties }}
+        <h6>Response Schema</h6>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            {{ range $propName, $propDetails := .schema.properties }}
+                <tr>
+                    <td><code>{{ $propName }}</code></td>
+                    <td>
+                        {{ if isset $propDetails "$ref" }}
+                            {{ $propRef := index $propDetails "$ref" }}
+                            {{ $propRefParts := split $propRef "/" }}
+                            {{ index $propRefParts (sub (len $propRefParts) 1) }}
+                        {{ else if isset $propDetails "type" }}
+                            {{ $propDetails.type }}
+                            {{ if eq $propDetails.type "array" }}
+                                {{ if isset $propDetails.items "$ref" }}
+                                    [{{ index (split (index $propDetails.items "$ref") "/") (sub (len (split (index $propDetails.items "$ref") "/")) 1) }}]
+                                {{ else }}
+                                    [{{ $propDetails.items.type }}]
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    </td>
+                    <td>{{ $propDetails.description | markdownify }}</td>
+                </tr>
+            {{ end }}
+        </table>
+    {{ end }}
+{{ end }}
+{{ end }} 

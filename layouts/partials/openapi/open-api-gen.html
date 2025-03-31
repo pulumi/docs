@@ -1,0 +1,63 @@
+{{ with $.Params.api_url }}
+    {{ $openapi := dict }}
+    {{ $resource := resources.GetRemote . }}
+    {{ if $resource }}
+        {{ $openapi = $resource | transform.Unmarshal }}
+        <!-- Debug output -->
+        <div style="display: none;">
+            <pre>Debug: {{ printf "%#v" $openapi }}</pre>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: stretch;" data-openapi-content="true">
+            {{ $taggedEndpoints := dict }}
+            {{ $untaggedEndpoints := slice }}
+            
+            <!-- First collect all unique tags -->
+            {{ $allTags := slice }}
+            {{ range $path, $pathMethods := $openapi.paths }}
+                {{ range $pathMethod, $pathDetails := $pathMethods }}
+                    {{ if $pathDetails.tags }}
+                        {{ range $tag := $pathDetails.tags }}
+                            {{ $allTags = $allTags | append $tag }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            
+            <!-- Initialize empty slices for each tag -->
+            {{ range $tag := uniq $allTags }}
+                {{ $taggedEndpoints = merge $taggedEndpoints (dict $tag (slice)) }}
+            {{ end }}
+            
+            <!-- Group endpoints by tags -->
+            {{ range $path, $pathMethods := $openapi.paths }}
+                {{ range $pathMethod, $pathDetails := $pathMethods }}
+                    {{ $endpoint := dict "path" $path "method" $pathMethod "details" $pathDetails }}
+                    {{ if $pathDetails.tags }}
+                        {{ range $tag := $pathDetails.tags }}
+                            {{ $currentSlice := index $taggedEndpoints $tag }}
+                            {{ $taggedEndpoints = merge $taggedEndpoints (dict $tag ($currentSlice | append $endpoint)) }}
+                        {{ end }}
+                    {{ else }}
+                        {{ $untaggedEndpoints = $untaggedEndpoints | append $endpoint }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+
+            {{ template "openapi/endpoint-group.html" (dict "taggedEndpoints" $taggedEndpoints "untaggedEndpoints" $untaggedEndpoints "openapi" $openapi) }}
+        </div>
+        
+        <!-- Add script to regenerate table of contents after OpenAPI is loaded -->
+        <script>
+            // Wait for the document to be fully loaded
+            document.addEventListener("DOMContentLoaded", function() {
+                // Make sure the generateOnThisPage function is available
+                if (typeof window.generateOnThisPage === "function") {
+                    // Re-generate the table of contents
+                    window.generateOnThisPage();
+                } else {
+                    console.error("generateOnThisPage function not found");
+                }
+            });
+        </script>
+    {{ end }}
+{{ end }} 

@@ -1,0 +1,35 @@
+{{ define "openapi/parameters.html" }}
+{{ if .parameters }}
+    <h5>Parameters</h5>
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Type</th>
+            <th>In</th>
+            <th>Description</th>
+        </tr>
+        {{ range .parameters }}
+            {{ if isset . "$ref"}}
+                {{ $refPath := index . "$ref" }}
+                {{ $refParts := split $refPath "/" }}
+                {{ $paramName := index $refParts (sub (len $refParts) 1) }}
+                {{ if isset $.openapi.definitions.parameters $paramName }}
+                    <tr>
+                        <td><code>{{(index $.openapi.definitions.parameters $paramName).name}}</code></td>
+                        <td>{{(index $.openapi.definitions.parameters $paramName).type}}</td>
+                        <td>{{(index $.openapi.definitions.parameters $paramName).in}}</td>
+                        <td>{{(index $.openapi.definitions.parameters $paramName).description | markdownify}}</td>
+                    </tr>
+                {{ end }}
+            {{ else }}
+                <tr>
+                    <td><code>{{ .name }}</code></td>
+                    <td>{{ .schema.type }}</td>
+                    <td>{{ .in }}</td>
+                    <td>{{ .description | markdownify }}</td>
+                </tr>
+            {{ end }}
+        {{ end }}
+    </table>
+{{ end }}
+{{ end }} 

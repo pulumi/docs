@@ -100,7 +100,7 @@ export function generateOnThisPage() {
         var found = false;
         var headings = [];
 
-        $("h2, h3").each(function () {
+        $("h2, h3, h4").each(function () {
             var $el = $(this);
             // Skip if this heading is inside a hidden element
             if ($el.closest('.hidden').length > 0) {
@@ -147,6 +147,59 @@ export function generateOnThisPage() {
 
             setActiveItem();
         }
+    }
+}
+
+// Function to watch for OpenAPI content loading and regenerate table of contents
+function setupOpenAPIContentObserver() {
+    // Only set up the observer if we're on a page with OpenAPI content
+    if (document.querySelector('.docs-content') && document.querySelector('[data-openapi-content]')) {
+        return; // Observer already set up or not needed
+    }
+    
+    // Check if we're on an OpenAPI docs page
+    const metaTags = document.querySelectorAll('meta');
+    let isOpenAPIPage = false;
+    
+    metaTags.forEach(tag => {
+        if (tag.getAttribute('property') === 'openapi_docs' && tag.getAttribute('content') === 'true') {
+            isOpenAPIPage = true;
+        }
+    });
+    
+    if (!isOpenAPIPage) {
+        return; // Not an OpenAPI page
+    }
+
+    // Create a mutation observer to detect when API content is added
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                // If h3 elements have been added and table of contents is empty, regenerate it
+                const h3Elements = document.querySelectorAll('h3');
+                const tocItems = document.querySelectorAll('.table-of-contents-list li');
+                
+                if (h3Elements.length > 0 && tocItems.length === 0) {
+                    // Clear the existing table of contents
+                    const tocList = document.querySelector('.table-of-contents-list');
+                    if (tocList) {
+                        tocList.innerHTML = '';
+                    }
+                    
+                    // Regenerate the table of contents
+                    generateOnThisPage();
+                    
+                    // We've done our job, disconnect the observer
+                    observer.disconnect();
+                }
+            }
+        });
+    });
+    
+    // Start observing the docs content area
+    const docsContent = document.querySelector('.docs-content');
+    if (docsContent) {
+        observer.observe(docsContent, { childList: true, subtree: true });
     }
 }
 
@@ -204,6 +257,11 @@ export function generateOnThisPage() {
 
     // Create "On This Page" in the right nav.
     generateOnThisPage();
+    
+    // Set up observer for OpenAPI content
+    $(document).ready(function() {
+        setupOpenAPIContentObserver();
+    });
 
     // Mobile menu toggles.
     $(".nav-header-toggle").click(function () {

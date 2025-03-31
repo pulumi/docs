@@ -1,0 +1,20 @@
+{{ define "openapi/endpoint.html" }}
+<div>
+    <h4 id="{{ anchorize (printf "%s-%s" .method .path) }}">{{ .details.summary }}</h4>
+    <p>{{ .details.description | markdownify }}</p>
+    <pre><code>{{ upper .method }} {{ .path }}</code></pre>
+    
+    {{ template "openapi/parameters.html" (dict "parameters" .details.parameters "openapi" $.openapi) }}
+    
+    {{ range $responseCode, $responseDetails := .details.responses }}
+        <h5>Response: {{ $responseCode }}</h5>
+        {{ if isset $responseDetails "content" }}
+            {{ if isset $responseDetails.content "application/json" }}
+                {{ $schema := index $responseDetails.content "application/json" "schema" }}
+                {{ template "openapi/response-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
+                {{ template "openapi/examples.html" (dict "responseDetails" $responseDetails "responseCode" $responseCode "openapi" $.openapi) }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }} 
