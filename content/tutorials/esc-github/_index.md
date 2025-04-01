@@ -7,7 +7,7 @@ meta_desc: Use Pulumi ESC and Github Actions to manage secrets.
 meta_image: meta.png
 weight: 999
 summary: |
-    Use GitHub Actions and Pulumi ESC to inject secrets dynamically at runtime, instead of storing long-lived credentials in GitHub. This tutorial walks through using OpenID Connect (OIDC) to fetch a short-lived Pulumi token and AWS credentials for secure infrastructure deployments.
+    This tutorial demonstrates how you can use GitHub Actions and Pulumi ESC to inject secrets dynamically at runtime, instead of storing long-lived credentials in GitHub. You will use OpenID Connect (OIDC) to fetch a short-lived Pulumi token and AWS credentials for secure infrastructure deployments.
 youll_learn:
     - How to authenticate GitHub Actions with Pulumi Cloud using OIDC
     - How to Retrieve AWS credentials from Pulumi ESC dynamically
@@ -33,7 +33,7 @@ This helps you:
 - Use identity-based access control with Pulumi ESC
 - Follow security best practices for CI/CD
 
-## Step 1: Create a Pulumi IaC Project
+## Step 1: Create a Pulumi IaC project
 
 Let's start by creating a new Pulumi IaC Project using a template. In this example we'll use the TypeScript AWS template to deploy an S3 bucket, but you can follow along with your favorite language of choice.
 
@@ -51,6 +51,9 @@ Commit and push the project to your GitHub repository.
 GitHub Actions uses OpenID Connect (OIDC) to authenticate with Pulumi Cloud. You'll first register GitHub as an OIDC identity provider.
 
 1. In Pulumi Cloud, go to your organization's settings and select **OIDC Issuers**.
+
+{{< figure src="pulumi-oidc-issuers.png" caption="Figure: Pulumi Cloud Org settings">}}
+
 2. Click **Register issuer**, then fill in the following:
    - **Name:** A descriptive name like `GitHubActions`
    - **URL:** `https://token.actions.githubusercontent.com`
@@ -60,6 +63,8 @@ GitHub Actions uses OpenID Connect (OIDC) to authenticate with Pulumi Cloud. You
    - For the audience (`aud`), use `urn:pulumi:org:your-org`
    - Set the subject (`sub`) value to `repo:<github-org>/<repo>:*`, replacing with your actual GitHub values (case-sensitive)
 5. Click **Save policy** to finish.
+
+{{< figure src="pulumi-add-oidc-issuer.png" caption="Figure: Pulumi Cloud Add issuer">}}
 
 ### Step 3: Create a Pulumi ESC environment that returns temporary AWS credentials
 
@@ -72,7 +77,7 @@ You’ll now create an ESC environment in Pulumi Cloud that issues short-lived A
    - **Description:** `AWS credentials for GitHub OIDC deployments`
 3. Click **Create** to finish.
 
-Next, define the environment by editing the YAML configuration. This definition tells Pulumi ESC how to authenticate to AWS using your OIDC role. This environment will be used in your GitHub Actions workflow to inject the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` environment
+Next, define the environment by editing the YAML configuration. This definition tells Pulumi ESC how to authenticate to AWS using your OIDC role. This environment will be used in your GitHub Actions workflow to inject the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` environment.
 
 ```yaml
 values:
@@ -87,6 +92,9 @@ values:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
     AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
+```
+
+{{< figure src="esc-add-env.png" caption="Figure: Pulumi ESC add environment">}}
 
 {{% notes type="warning" %}}
 Replace the roleArn value with the ARN of your AWS IAM role configured for Pulumi Cloud OIDC access. See the [configuring OIDC guide](/docs/pulumi-cloud/access-management/oidc/provider/aws/ for details.
@@ -171,6 +179,8 @@ git commit -m "Add Pulumi GitHub Actions workflow" git push
 ```
 
 Go to your repository’s **Actions** tab to view the running workflow and monitor its progress.
+
+{{< figure src="github-actions.png" caption="Figure: GitHub Actions workflow">}}
 
 ## Conclusion
 
