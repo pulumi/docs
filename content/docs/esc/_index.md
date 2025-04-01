@@ -10,7 +10,6 @@ menu:
 expanded_menu_ids:
     - esc-environments
     - esc-integrations
-    - esc-reference
     - esc-development
 aliases:
   - /docs/pulumi-cloud/esc/
