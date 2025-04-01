@@ -2,6 +2,7 @@
 title: "Improved refresh and destroy experience for Pulumi IaC"
 date: 2025-04-02
 meta_desc: "Pulumi now runs your code before refresh and destroy operations, enabling dynamic credential updates and complex workflows"
+meta_image: meta.png
 authors:
     - will-jones
 tags:
