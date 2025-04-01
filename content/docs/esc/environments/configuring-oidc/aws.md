@@ -31,7 +31,7 @@ Please note that this guide provides step-by-step instructions based on the offi
   For the `default` project, the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
   {{< /notes >}}
 
-## Configure the IAM role and trust policy
+## Configure the IAM role
 
 Once you have created the identity provider, you will see a notification at the top of your screen prompting you to assign an IAM role.
 
@@ -42,14 +42,35 @@ Once you have created the identity provider, you will see a notification at the 
     * Select `api.pulumi.com/oidc` under **Identity provider**.
     * Select the name of your Pulumi organization under **Audience**. Then click **Next**.
 5. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi service. Then click **Next**.
-  {{< notes type="info" >}}
-  For setting up an AWS Pulumi insights account, you can use the role `ReadOnlyAccess` managed by [aws](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/ReadOnlyAccess.html).
-  {{< /notes >}}
 6. Provide a name and optional description for the IAM role. Then click **Create role**.
 
-Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your service.
+## Review trust policy
 
-For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/esc/environments/customizing-oidc-claims) for each service.
+Next, select the **trust relationships** tab, which is where the trust policy of the role is defined.
+
+```bash
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::616138583583:oidc-provider/api.pulumi.com/oidc"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "api.pulumi.com/oidc:aud": "aws:<pulumi-org-name>"
+                }
+            }
+        }
+    ]
+}
+```
+
+This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. For more detailed configuration for how you can set fine grained access control, see the following [customizing claims documenation](/docs/esc/environments/customizing-oidc-claims/).
+
+Before you log out of the AWS console, make sure to make a note of your role’s ARN value as you will need it in the next step.
 
 ## Configure ESC for OIDC
 
