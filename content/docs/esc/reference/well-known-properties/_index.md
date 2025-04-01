@@ -10,3 +10,9 @@ menu:
     weight: 6
 ---
 
+The [`esc` CLI](/docs/install/esc/) and other ESC consumers (e.g. the [`pulumi` CLI](/docs/install/)) conventially assign specific semantics to certain top-level properties of evaluated ESC environments.
+
+## Properties
+
+- [`environmentVariables`](/docs/esc/reference/well-known-properties/environment-variables.md`)
+- [`files`](/docs/esc/reference/well-known-properties/files.md`)
