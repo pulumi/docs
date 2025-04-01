@@ -14,5 +14,5 @@ The [`esc` CLI](/docs/install/esc/) and other ESC consumers (e.g. the [`pulumi` 
 
 ## Properties
 
-- [`environmentVariables`](/docs/esc/reference/well-known-properties/environment-variables.md`)
-- [`files`](/docs/esc/reference/well-known-properties/files.md`)
+- [`environmentVariables`](/docs/esc/reference/well-known-properties/environment-variables)
+- [`files`](/docs/esc/reference/well-known-properties/files)
