@@ -17,18 +17,21 @@ aliases:
 - /docs/concepts/resources/providers/
 ---
 
-A resource provider handles communications with a cloud service to create, read, update, and delete the resources you define in your Pulumi programs. Pulumi passes your code to a language host such as Node.js, waits to be notified of resource registrations, assembles a model of your desired state, and calls on the resource provider to produce that state. The resource provider translates those requests into API calls to the cloud service.
+A resource provider handles communications with a cloud or SaaS service to create, read, update, and delete the resources you define in your Pulumi programs.
 
-A resource provider is tied to the language that you use to write your programs. For example, if your cloud provider is AWS, the following providers are available:
+## Installing Providers
+
+You install a provider using your language's package management tool: npm in Node.js, PyPI in Python, etc. For example, if your cloud provider is AWS, the following providers are available:
 
 - JavaScript/TypeScript: `@pulumi/aws`
 - Python: `pulumi-aws`
 - Go: `github.com/pulumi/pulumi-aws/sdk/go/aws`
 - .NET: `Pulumi.Aws`
+- Java: `com.pulumi.aws`
 
-Normally, since you declare the language and cloud provider you intend to use when you write a program, Pulumi installs the provider for you as a plugin, using the appropriate package manager, such as NPM for Typescript.
+You reference the provider in your Pulumi program to define the desired state of the resources for that provider.
 
-The resource provider for custom resources is determined based on its package name. For example, the `aws` package loads a plugin named `pulumi-resource-aws`, and the `kubernetes` package loads a plugin named `pulumi-resource-kubernetes`.
+Providers are composed of two parts: a binary file, which makes the actual call to the cloud provider's API, and an SDK, which allows you to consume the provider in the language of your Pulumi program. When you install the SDK for a provider (e.g., via `npm install <package_name>` in Node.js), the package manager (npm in this example) automatically downloads and installs the provider binary along with the SDK if the binary is not already cached on your system. When you run your Pulumi program, Pulumi passes your code to a language host such as Node.js, waits to be notified of resource registrations, assembles a model of your desired state, and calls on the provider binary to produce that state. The resource provider translates those requests into API calls to the cloud service.
 
 ## Default Provider Configuration
 
@@ -457,8 +460,9 @@ final var myresource = new MyResource("myResource",
 ## Disabling Default Providers
 
 While default providers are enabled by default, they [can be disabled](/docs/concepts/config#special-configuration-options) on a per stack basis. Disabling default
-providers is a good idea if you want to ensure that your programs must be explicit about which provider they
-will use. For example, to disable the `aws` provider, you can run:
+providers is a good idea if you want to ensure that your providers must be explicitly configured and should never use the default system configuration. (The meaning of "default system configuration" depends on the provider: it may be environment variables which can differ between environments, or a configuration file in a default location, and so on.)
+
+For example, to disable the `aws` provider, you can run:
 
 ```sh
 $ pulumi config set --path 'pulumi:disable-default-providers[0]' aws
