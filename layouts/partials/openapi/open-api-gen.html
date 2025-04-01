@@ -1,6 +1,6 @@
 {{ with $.Params.api_url }}
     {{ $openapi := dict }}
-    {{ $resource := resources.GetRemote . }}
+    {{ $resource := resources.GetRemote . (dict "type" "application/json") }}
     {{ if $resource }}
         {{ $openapi = $resource | transform.Unmarshal }}
         <!-- Debug output -->
