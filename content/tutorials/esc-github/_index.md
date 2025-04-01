@@ -149,7 +149,7 @@ jobs:
 
       - name: Verify environment variables
         run: |
-          echo "ARM_OIDC_TOKEN=$ARM_OIDC_TOKEN"
+          echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID"
 
       - name: Pulumi Preview
         uses: pulumi/actions@v6
