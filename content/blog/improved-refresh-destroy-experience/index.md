@@ -15,7 +15,7 @@ Pulumi enables teams to manage their infrastructure using the programming langua
 
 We're excited to announce an improvement to the `pulumi refresh` and `pulumi destroy` commands, a flag for `--run program`! This new feature makes Pulumi even more powerful for teams with complex infrastructure workflows.
 
-This enhancement is particularly valuable for teams working with short-lived credentials, dynamic resources, or any workflow where your code needs to run to establish the right context. Whether you're using OIDC-based authentication, or dynamically fetching credentials from a secret manager, the `--run-program` flag ensures your infrastructure operations have the context they need to succeed.
+This enhancement is particularly valuable for teams working with short-lived credentials, dynamic resources, or any workflow where your code needs to run to establish the right context. Whether you're using OIDC-based authentication, dynamically fetching credentials from a secret manager, or working with [dynamic providers](/docs/iac/concepts/resources/dynamic-providers), the `--run-program` flag ensures your infrastructure operations have the context they need to succeed.
 
 <!--more-->
 
