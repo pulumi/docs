@@ -54,15 +54,15 @@ GitHub Actions uses OpenID Connect (OIDC) to authenticate with Pulumi Cloud. You
 
 {{< figure src="pulumi-oidc-issuers.png" caption="Figure: Pulumi Cloud Org settings">}}
 
-2. Click **Register issuer**, then fill in the following:
+1. Click **Register issuer**, then fill in the following:
    - **Name:** A descriptive name like `GitHubActions`
    - **URL:** `https://token.actions.githubusercontent.com`
-3. Click **Create issuer** to save.
-4. Under **Rules**, do the following:
+1. Click **Create issuer** to save.
+1. Under **Rules**, do the following:
    - Set **Decision** to **Allow**
    - For the audience (`aud`), use `urn:pulumi:org:your-org`
    - Set the subject (`sub`) value to `repo:<github-org>/<repo>:*`, replacing with your actual GitHub values (case-sensitive)
-5. Click **Save policy** to finish.
+1. Click **Save policy** to finish.
 
 {{< figure src="pulumi-add-oidc-issuer.png" caption="Figure: Pulumi Cloud Add issuer">}}
 
