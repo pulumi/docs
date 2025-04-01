@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-reference
     identifier: esc-ref-well-known-properties
-    weight: 6
+    weight: 7
 ---
 
 The [`esc` CLI](/docs/install/esc/) and other ESC consumers (e.g. the [`pulumi` CLI](/docs/install/)) conventially assign specific semantics to certain top-level properties of evaluated ESC environments.

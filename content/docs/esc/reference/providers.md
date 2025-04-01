@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-reference
     identifier: esc-ref-providers
-    weight: 2
+    weight: 5
 ---
 
 ESC providers allow users to access credentials, configuration, and secrets stored outside of ESC. These providers are accessed via the `fn::open` built-in function.

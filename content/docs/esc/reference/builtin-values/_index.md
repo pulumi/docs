@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-reference
     identifier: esc-ref-builtin-values
-    weight: 5
+    weight: 4
 ---
 
 ESC provides several built-in values to allow users convenient access to data such as the user evaluating an environment, an environment's import, or other environments within the organization.

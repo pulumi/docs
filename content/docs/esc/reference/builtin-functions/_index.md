@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-reference
     identifier: esc-ref-builtin-functions
-    weight: 4
+    weight: 3
 ---
 
 ESC provides a number of built-in functions to help perform common value manipulations and to help access information stored outside of ESC.

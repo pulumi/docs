@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-reference
     identifier: esc-ref-sample-environment-definition
-    weight: 7
+    weight: 8
 ---
 
 ```yaml

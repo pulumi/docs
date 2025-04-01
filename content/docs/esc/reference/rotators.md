@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-reference
     identifier: esc-ref-rotators
-    weight: 3
+    weight: 6
 ---
 
 ESC rotators allow users to rotate credentials and secrets using ESC. These providers are accessed via the `fn::rotate` built-in function.
