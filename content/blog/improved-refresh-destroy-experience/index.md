@@ -14,20 +14,12 @@ Pulumi enables teams to manage their infrastructure using the programming langua
 
 We're excited to announce an improvement to the `pulumi refresh` and `pulumi destroy` commands, a flag for `--run program`! This new feature makes Pulumi even more powerful for teams with complex infrastructure workflows.
 
+This enhancement is particularly valuable for teams working with short-lived credentials, dynamic resources, or any workflow where your code needs to run to establish the right context. Whether you're using OIDC-based authentication, dynamically fetching credentials from a secret manager, or working with dynamic providers that reference your Pulumi SDK, the `--run-program` flag ensures your infrastructure operations have the context they need to succeed.
+
 <!--more-->
 
 The `pulumi refresh` and `pulumi destroy` commands sit alongside `pulumi up` and support refreshing and destroying resources in your stack. While `refresh` and `destroy` take into account updated configuration (such as that specified in your `Pulumi.<stack>.yaml`), they have historically not taken into account changes in your *code*. For stacks which depend on code to update credentials for a provider, or to determine which resources to create, this can break or hamper the use of `refresh` and `destroy`. Well, no more! As of the latest release of Pulumi (v3.160.0), the `pulumi refresh` and `pulumi destroy` commands now support the `--run-program` flag, which allows you to run your program before refreshing or destroying your stack.
 
-```shell
-pulumi refresh --run-program
-pulumi destroy --run-program
-```
-
-The `--run-program` flag is particularly valuable in these common scenarios:
-
-1. **Short-lived credentials** - When using temporary tokens or OIDC-based authentication flows
-2. **External API calls** - When your program needs to fetch data from external services before determining resource configuration
-3. **Dynamic providers** - When using dynamic providers that reference the Pulumi SDK version, running the program can smooth the process of upgrading Pulumi
 
 ## Let's see it in action
 
