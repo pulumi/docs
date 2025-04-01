@@ -28,7 +28,7 @@ In the context of ESC, value references either refer to values in the evaluated 
 
 Value references are _early-bound_: each reference is evaluated within the context of the environment in which it is contained. This allows the author of an environment definition to reliably predict the form of the value referred to by a reference.
 
-Early binding contrasts with late binding, which would evalute references within the context of the top-level environment and its entire import stack. [ESC does not currently support late-bound references](https://github.com/pulumi/esc/issues/127).
+Early binding contrasts with late binding, which would evaluate references within the context of the top-level environment and its entire import stack. [ESC does not currently support late-bound references](https://github.com/pulumi/esc/issues/127).
 
 ## Bare references
 
