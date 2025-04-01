@@ -20,7 +20,6 @@ This enhancement is particularly valuable for teams working with short-lived cre
 
 The `pulumi refresh` and `pulumi destroy` commands sit alongside `pulumi up` and support refreshing and destroying resources in your stack. While `refresh` and `destroy` take into account updated configuration (such as that specified in your `Pulumi.<stack>.yaml`), they have historically not taken into account changes in your *code*. For stacks which depend on code to update credentials for a provider, or to determine which resources to create, this can break or hamper the use of `refresh` and `destroy`. Well, no more! As of the latest release of Pulumi (v3.160.0), the `pulumi refresh` and `pulumi destroy` commands now support the `--run-program` flag, which allows you to run your program before refreshing or destroying your stack.
 
-
 ## Let's see it in action
 
 We are writing a Pulumi program to deploy infrastructure to AWS. Our organization's platform team provides us with a library that we can use to dynamically fetch appropriate AWS credentials for our stack. We use this to retrieve some values and set up an explicit AWS provider ([1](https://www.pulumi.com/blog/disable-default-providers/), [2](https://www.pulumi.com/docs/iac/concepts/resources/providers/), [3](https://www.pulumi.com/registry/packages/aws/api-docs/provider/)):
