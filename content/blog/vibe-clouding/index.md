@@ -32,7 +32,9 @@ In just two months, vibe coding has transformed the entire coding profession. If
 
 [IaC](/product/infrastructure-as-code/) is now table stakes for anybody doing anything in the cloud. Pulumi's unique approach (which is [open source](https://github.com/pulumi/pulumi), by the way) allows you to use any programming language to declare cloud infrastructure, such as Python or TypeScript, and its declarative model brings you desired goal state into existence as if by magic.
 
-Now you can express infrastructure in any _language_, programming or otherwise. For example, this IaC "program" written in English creates a Python webserver in AWS that's accessible over the Internet:
+### Declaring Cloud Infrastructure in Natural Language
+
+Now you can express infrastructure in _any_ language, programming or otherwise. For example, this IaC "program" written in English creates a Python webserver in AWS that's accessible over the Internet:
 
 ```
 An AWS EC2 instance running a Python web server.
@@ -42,7 +44,7 @@ It accepts traffic over the Internet on port 80 and simply responds "Hello, Worl
 Capture and export its auto-assigned IP address and DNS name.
 ```
 
-We save this in a `*.pai` file (`pai` = Pulumi AI), and then deploy it like we normally would. First Pulumi Copilot figures out the infrastructure we've requested and shows us a preview:
+We save this in a `*.pai` file (`pai` = Pulumi AI), and then deploy it with `pulumi up` like normal. The new language host asks Pulumi's AI Copilot to figure out the infrastructure we've requested and then shows us a preview of what it will do:
 
 ```bash
 $ pulumi up
@@ -98,22 +100,7 @@ $ curl 54.189.144.3
 Hello, World.
 ```
 
-If you change your mind and want it to use a Node.js web server ... or listen on port 8080 ... or run on Azure instead of AWS ... with a different response ... Simply change your prompt:
-
-```
-A virtual machine in Azure running a Node.js web server.
-
-It accepts traffic over the Internet on port 8080 and simply responds "Hello, Vibe Coders!"
-
-Capture and export its auto-assigned IP address and DNS name.
-```
-
-We simply rerun `pulumi up` and it knows how to evolve our stack to the new goal state:
-
-```
-$ pulumi up
-...
-```
+### Not Just English
 
 This is a new language runtime just like Pulumi's other supported languages (`python`, `go`, `java`, `yaml`, etc). We almost called this new language `english`, except that we can use other languages:
 
@@ -154,7 +141,21 @@ name: py-webserver
 runtime: ai
 ```
 
-Your prompts can be as imprecise or specific as you'd like. For example, "Run a joke of the day application on AWS" needn't tell the LLM what sorts of infrastructure you want -- it will just intelligently decide between an EC2 instance, Lambda function, Kubernetes app, Docker container, etc.
+### It Is Feature Rich and Works for Real Workflows
+
+If you change your mind and want it to use a Node.js web server ... or listen on port 8080 ... or run on Azure instead of AWS ... with a different response ... Simply change your prompt:
+
+```
+A virtual machine in Azure running a Node.js web server.
+
+It accepts traffic over the Internet on port 8080 and simply responds "Hello, Vibe Coders!"
+
+Capture and export its auto-assigned IP address and DNS name.
+```
+
+We then rerun `pulumi up` and it knows how to evolve your infrastructure towards the new goal state.
+
+Your prompts can be as imprecise or specific as you'd like. For example, "Run a joke of the day application on Google" needn't tell the LLM what sorts of infrastructure you want -- it will just intelligently decide between a GCE VM, Docker container in Google Cloud Run, GKE app, etc.
 
 You can also spread your prompts across any number of `*.pai` files: so you can stick your webserver into `webserver.pai`, your database in `database.pai`, and so on, and you can even cross-references resources between files, and the LLM will figure it out. Just vibe and out pops cloud infrastructure!
 
@@ -192,7 +193,7 @@ The improvements to `pulumi watch` are real and already in the latest Pulumi rel
 If you want to get started, simply:
 
 * [Download Pulumi](/docs/iac/download-install/)
-* [Download the `pulumi-language-ai` host]() and ensure it's on your `PATH`
+* [Download the `pulumi-language-ai` host]() and ensure it's on your `PATH` (coming soon)
 * Set `OPENAI_API_KEY` to a valid OpenAI key
 * Run [`pulumi watch`](/docs/iac/cli/commands/pulumi_watch/), begin typing, copy and pasting, and vibing
 
