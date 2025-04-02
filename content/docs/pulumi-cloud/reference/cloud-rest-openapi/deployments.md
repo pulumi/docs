@@ -1,12 +1,12 @@
 ---
-title_tag: "Pulumi Cloud: Deployments REST API"
+title_tag: "Pulumi Cloud REST API: Deployments"
 meta_desc: API documentation for managing Pulumi Deployments in Pulumi Cloud.
-title: "Deployments API"
-h1: Pulumi Cloud Deployments API
+title: "Pulumi Cloud API: Deployments"
+h1: Deployments
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     cloud:
-        name: Deployments API
+        name: Deployments
         parent: pulumi-cloud-reference-cloud-rest-openapi
         weight: 3
 openapi_docs: true

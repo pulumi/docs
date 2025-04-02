@@ -1,12 +1,12 @@
 ---
-title_tag: "Pulumi Cloud: Environments REST API"
+title_tag: "Pulumi Cloud REST API: Environments"
 meta_desc: API documentation for managing Pulumi Environments in Pulumi Cloud.
-title: "Environments API"
-h1: Pulumi Cloud Environments API
+title: "Pulumi Cloud API: Environments"
+h1: Environments
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     cloud:
-        name: Environments API
+        name: Environments
         parent: pulumi-cloud-reference-cloud-rest-openapi
         weight: 2
 openapi_docs: true

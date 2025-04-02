@@ -1,12 +1,12 @@
 ---
-title_tag: "Pulumi Cloud: Insights REST API"
+title_tag: "Pulumi Cloud REST API: Insights"
 meta_desc: API documentation for calling Insights routes in Pulumi Cloud.
-title: "AI API"
-h1: Pulumi Cloud Insights API
+title: "Pulumi Cloud API: Insights"
+h1: Insights
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     cloud:
-        name: Insights API
+        name: Insights
         parent: pulumi-cloud-reference-cloud-rest-openapi
         weight: 1
 openapi_docs: true

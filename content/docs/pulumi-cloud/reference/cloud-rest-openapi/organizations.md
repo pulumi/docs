@@ -1,12 +1,12 @@
 ---
-title_tag: "Pulumi Cloud: Organizations REST API"
+title_tag: "Pulumi Cloud REST API: Organizations"
 meta_desc: API documentation for managing Pulumi Organizations in Pulumi Cloud.
-title: "Organizations API"
-h1: Pulumi Cloud Organizations API
+title: "Pulumi Cloud API: Organizations"
+h1: Organizations
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     cloud:
-        name: Organizations API
+        name: Organizations
         parent: pulumi-cloud-reference-cloud-rest-openapi
         weight: 5
 openapi_docs: true
