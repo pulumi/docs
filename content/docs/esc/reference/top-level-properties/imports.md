@@ -14,7 +14,7 @@ The `imports` top-level property is a list of other environments that this envir
 
 ## Environment names
 
-Each entry in the `imports` list names an environment to import. Environment names should be qualified with a project (e.g. `my-project/dev`). If no project name is given, the default project is assumed (e.g. the unqualidied name `foo` refers to `default/foo`):
+Each entry in the `imports` list names an environment to import. Environment names should be qualified with a project (e.g. `my-project/dev`). If no project name is given, the default project is assumed (e.g. the unqualified name `foo` refers to `default/foo`):
 
 ```yaml
 imports:
@@ -31,4 +31,4 @@ imports:
   - auth-core: { merge: false } # Import "default/auth-core", but do add it to the merge stack
 ```
 
-There is currently a single option, `merge`, which controls whether or not an imported environment is added to the merge stack. Unmerged imports are still available via the `imports` built-in property.
+There is currently a single option, `merge`, which controls whether or not an imported environment is added to the merge stack. Unmerged imports are still available via the [`imports` built-in property](/docs/esc/reference/builtin-values/imports).

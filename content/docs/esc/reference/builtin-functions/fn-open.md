@@ -10,7 +10,7 @@ menu:
     weight: 4
 ---
 
-The `fn::open` built-in function invokes a provider to fetch values from outside of ESC.
+The `fn::open` built-in function invokes a [provider](/docs/esc/reference/providers/) to fetch values from outside of ESC.
 
 ## Declaration
 
