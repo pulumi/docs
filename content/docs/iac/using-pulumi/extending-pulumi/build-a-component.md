@@ -2351,7 +2351,7 @@ Pulumi also supports private repos in GitHub and GitLab. Pulumi will read standa
 
 ### Generating Local SDKs with pulumi install
 
-Once you've added an entry to the packages section of your Pulumi.yaml file, you can run `pulumi install` to generate a local SDK in your project. This command will process all packages listed in your Pulumi.yaml and create the necessary SDK files. Check in these files if you want fully reproducible builds; or add them to .gitignore if you prefer to regenerate them on each checkout. When using .gitignore, team members will need to run `pulumi install` after checkout to regenerate the SDK.
+Once you've added an entry to the packages section of your Pulumi.yaml file, you can run `pulumi install` to generate a local SDK in your project. This command will process all packages listed in your Pulumi.yaml and create the necessary SDK files. Check in these files if you want fully reproducible builds, or add them to .gitignore if you prefer to regenerate them on each checkout. When using .gitignore, team members will need to run `pulumi install` after checkout to regenerate the SDK.
 
 ### Sharing via Pulumi Package
 
