@@ -549,7 +549,9 @@ components:
 
 {{< /chooser >}}
 
-This file tells Pulumi that this directory is a component package that can be consumed across languages (it is not required for a single language component), rather than a standard Pulumi program. In it, you define the language runtime needed to load the plugin:
+### The PulumiPlugin.yaml File
+
+The PulumiPlugin.yaml file tells Pulumi that this directory is a component package that can be consumed across languages (it is not required for a single language component), rather than a standard Pulumi program. In it, you define the language runtime needed to load the plugin:
 
 {{< chooser language "typescript,python,csharp,go,java,yaml" >}}
 
@@ -622,7 +624,7 @@ No separate entry point is required for TypeScript. All exported component class
 2. In the `main` function, add a call to `component_provider_host`, specifying a list of components for the `components` argument
 
 ```python
-from pulumi.provider.experimental import Metadata, component_provider_host
+from pulumi.provider.experimental import component_provider_host
 from staticpage import MyComponent
 
 if __name__ == "__main__":
