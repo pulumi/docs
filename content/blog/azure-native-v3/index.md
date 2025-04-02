@@ -2,7 +2,7 @@
 title: "Azure Native V3: A Leaner, Faster SDK for Microsoft Azure"
 date: 2025-04-03
 draft: false
-meta_desc: Announcing Azure Native V3 with 75% smaller SDK size, improved default API versions, and simplified explicit version management for a better developer experience.
+meta_desc: Azure Native V3 delivers 75% smaller SDK size, updated API versions, and a flexible approach for managing explicit versions for better developer experience.
 meta_image: meta.png
 authors:
     - thomas-kappler
