@@ -13,13 +13,15 @@ tags:
 
 Pulumi enables teams to manage their infrastructure using the programming languages and tools they are already familiar with, supporting use cases such as complex authentication workflows, dynamically configured resources, and more.
 
-In this post we're excited to announce an improvement to the `pulumi refresh` and `pulumi destroy` commands: the `--run program` flag! This new feature makes Pulumi even more powerful for teams with complex infrastructure workflows.
+In this post we're excited to announce an improvement to the `pulumi refresh` and `pulumi destroy` commands: the `--run-program` flag! This new feature makes Pulumi even more powerful for teams with complex infrastructure workflows.
 
 This enhancement is particularly valuable for teams working with short-lived credentials, dynamic resources, or any workflow where your code needs to run to establish the right context. Whether you're using OIDC-based authentication, dynamically fetching credentials from a secrets manager, or working with [dynamic providers](/docs/iac/concepts/resources/dynamic-providers), the `--run-program` flag ensures your infrastructure operations have the context they need to succeed.
 
 <!--more-->
 
 The `pulumi refresh` and `pulumi destroy` commands sit alongside `pulumi up` and support refreshing and destroying resources in your stack. While `refresh` and `destroy` take into account updated configuration (such as that specified in your `Pulumi.<stack>.yaml`), they have historically not taken into account changes in your *code*. For stacks which depend on code to update credentials for a provider, or to determine which resources to create, this can break or hamper the use of `refresh` and `destroy`. Well, no more! As of the latest release of Pulumi (v3.160.0), the `pulumi refresh` and `pulumi destroy` commands now support the `--run-program` flag, which allows you to run your program before refreshing or destroying your stack.
+
+We plan to make running your program the default behavior for refresh and destroy operations eventually. We're introducing this as an opt-in flag first to ensure a smooth transition. For more details and to provide feedback, please see our [RFC on making program execution the default behavior](https://github.com/pulumi/pulumi/discussions/19102).
 
 ## Let's see it in action
 
@@ -240,4 +242,8 @@ pulumi destroy --run-program
 
 Running the program for all Pulumi operations paves the way for several other highly-requested features. Top of our list is [lifecycle hooks](https://github.com/pulumi/pulumi/issues/1691) -- the ability to run arbitrary program code at various points in the lifecycle of a Pulumi resource.
 
-We'd love to hear how you're using the new `--run-program` flag! Share your experiences with us on [GitHub](https://github.com/pulumi/pulumi), [X](https://twitter.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
+{{% notes %}}
+As mentioned earlier, we plan to make the behavior of `--run-program` the default in a future release. This means that Pulumi will automatically run your program before refresh and destroy operations, without requiring the flag. For more details and to provide feedback, please see our [RFC on making program execution the default behavior for refresh and destroy](https://github.com/pulumi/pulumi/discussions/19102).
+{{% /notes %}}
+
+Share any issues with your experience with us on [GitHub](https://github.com/pulumi/pulumi), [X](https://twitter.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
