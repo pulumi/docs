@@ -14,7 +14,7 @@ The `values` top-level property defines the environment's values--i.e. the prope
 
 The value of this property must be a mapping from static strings (property names) to ESC values.
 
-ESC values include standard YAML values, [symbols and interpolations](/docs/esc/reference/value-references), and [function calls](/docs/esc/reference/builtin-functions).
+ESC values include standard YAML values, [value references](/docs/esc/reference/value-references), and [function calls](/docs/esc/reference/builtin-functions).
 
 Here is an example definition that uses the `values` section:
 
