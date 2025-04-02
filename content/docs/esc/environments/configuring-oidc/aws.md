@@ -55,7 +55,7 @@ Next, select the **trust relationships** tab, which is where the trust policy of
         {
             "Effect": "Allow",
             "Principal": {
-                "Federated": "arn:aws:iam::616138583583:oidc-provider/api.pulumi.com/oidc"
+                "Federated": "arn:aws:iam::123456789012:oidc-provider/api.pulumi.com/oidc"
             },
             "Action": "sts:AssumeRoleWithWebIdentity",
             "Condition": {
@@ -177,8 +177,6 @@ The subject always contains the prefix `pulumi:environments:pulumi.organization.
 * `pulumi.organization.login`: the login identifier of the organization
 
 When importing multiple environments into Pulumi IaC Stack Config, each environment is resolved separately. For example, if you import multiple environments into your Pulumi Stack with `rootEnvironment.name` attribute defined in all of them, then each `rootEnvironment.name` will resolve to the environment name where it is defined.
-
-The default format of the subject claim when `subjectAttributes` are not used is `pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
 
 {{< notes type="info" >}}
 

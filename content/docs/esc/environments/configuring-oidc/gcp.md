@@ -166,13 +166,3 @@ If you are integrating Pulumi ESC with Pulumi IaC, the default subject identifie
 Use 'subjectAttributes' to customize the subject identifier to work with Pulumi IaC. Alternatively, you can use this syntax: `pulumi:environments:org:contoso:env:<yaml>` when configuring the subject claim in your cloud provider account. Make sure to replace `contoso` with the name of your Pulumi organization and use the literal value of `<yaml>` as shown.
 
 {{< /notes >}}
-
-You can learn more about setting up OIDC for Pulumi ESC by referring to the [relevant Pulumi documentation](/docs/pulumi-cloud/access-management/oidc/).
-
-{{< notes type="warning" >}}
-
-If you are integrating Pulumi ESC with Pulumi IaC, the default subject identifier of the ESC environment will not work at this time. There is a [known issue](https://github.com/pulumi/pulumi/issues/14509) with the subject identifier's value sent to Azure from Pulumi.
-
-Use 'subjectAttributes' to customize the subject identifier to work with Pulumi IaC. Alternatively, you can use this syntax: `pulumi:environments:org:contoso:env:<yaml>` when configuring the subject claim in your cloud provider account. Make sure to replace `contoso` with the name of your Pulumi organization and use the literal value of `<yaml>` as shown.
-
-{{< /notes >}}
