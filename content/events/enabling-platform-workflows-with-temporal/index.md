@@ -82,8 +82,8 @@ form:
 
 event_data:
   name: Enabling Platform Workflows with Temporal
-  start_date: 2024-06-24T12:00:00-04:00
-  end_date: 2024-06-24T13:00:00-04:00
+  start_date: 2025-06-24T12:00:00-04:00
+  end_date: 2025-06-24T13:00:00-04:00
   url: "https://www.pulumi.com/resources/enabling-platform-workflows-with-temporal/"
   description: |
     Platform Engineering teams are responsible for giving developers clear, repeatable playbooks for orchestrating resilient, scalable applications. When using Temporal Cloud, managing Namespaces, Task Queues, and Worker configurations effectively is crucial to ensuring reliability and performance.

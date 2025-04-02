@@ -82,8 +82,8 @@ form:
 
 event_data:
   name: Designing Reusable Infrastructure as Code
-  start_date: 2024-05-14T12:00:00-04:00
-  end_date: 2024-05-14T13:00:00-04:00
+  start_date: 2025-05-14T12:00:00-04:00
+  end_date: 2025-05-14T13:00:00-04:00
   url: "https://www.pulumi.com/resources/designing-reusable-infrastructure-as-code/"
   description: |
     An important tenet of Platform Engineering is building infrastructure code that is DRY (don’t repeat yourself). This makes it easier to maintain core infrastructure components and ensures best practices are reflected in each new instance of your infrastructure.

@@ -81,8 +81,8 @@ form:
 
 event_data:
   name: Enabling Platform Workflows with Pulumi and Docker
-  start_date: 2024-05-21T12:00:00-04:00
-  end_date: 2024-05-21T13:00:00-04:00
+  start_date: 2025-05-21T12:00:00-04:00
+  end_date: 2025-05-21T13:00:00-04:00
   url: "https://www.pulumi.com/resources/enabling-platform-workflows-with-pulumi-and-docker/"
   description: |
     Modern workloads require frequent container builds and deployments, but traditional build processes can be slow and resource-intensive, creating bottlenecks in your delivery pipeline. Docker Build Cloud offers distributed, cached builds that can dramatically reduce build times, while Pulumi provides the orchestration layer to automate your entire deployment workflow using familiar programming languages.

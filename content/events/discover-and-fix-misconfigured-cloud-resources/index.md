@@ -79,8 +79,8 @@ form:
 
 event_data:
   name: Discover and Fix Misconfigured Cloud Resources with Pulumi
-  start_date: 2024-05-28T12:00:00-04:00
-  end_date: 2024-05-28T13:00:00-04:00
+  start_date: 2025-05-28T12:00:00-04:00
+  end_date: 2025-05-28T13:00:00-04:00
   url: "https://www.pulumi.com/resources/discover-and-fix-misconfigured-cloud-resources/"
   description: |
     In today's complex cloud environments, platform engineers face significant challenges in managing diverse and sprawling cloud infrastructure. This workshop introduces Pulumi Insights, a powerful solution designed to transform how organizations understand, control, and optimize their cloud estate across multiple deployment tools and platforms.
