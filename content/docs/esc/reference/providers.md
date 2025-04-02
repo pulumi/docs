@@ -10,7 +10,7 @@ menu:
     weight: 5
 ---
 
-ESC providers allow users to access credentials, configuration, and secrets stored outside of ESC. These providers are accessed via the `fn::open` built-in function.
+ESC providers allow users to access credentials, configuration, and secrets stored outside of ESC. These providers are accessed via the [`fn::open` built-in function](/esc/reference/builtin-functions/fn-open).
 
 ## Credential providers
 
