@@ -349,7 +349,7 @@ First, create the `__main__.py` file, where we will define an entry point for th
 ***Example:** `__main__.py` component entry point*
 
 ```python
-from pulumi.provider.experimental import Metadata, component_provider_host
+from pulumi.provider.experimental import component_provider_host
 from staticpage import StaticPage
 
 if __name__ == "__main__":
