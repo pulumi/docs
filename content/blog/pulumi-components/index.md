@@ -549,7 +549,9 @@ components:
 
 {{< /chooser >}}
 
-This file tells Pulumi that this directory is a component package that can be consumed across languages (it is not required for a single language component), rather than a standard Pulumi program. In it, you define the language runtime needed to load the plugin:
+### The PulumiPlugin.yaml File
+
+The PulumiPlugin.yaml file tells Pulumi that this directory is a component package that can be consumed across languages (it is not required for a single language component), rather than a standard Pulumi program. In it, you define the language runtime needed to load the plugin:
 
 {{< chooser language "typescript,python,csharp,go,java,yaml" >}}
 
