@@ -11,11 +11,11 @@ tags:
     - iac
 ---
 
-Pulumi enables teams to manage their infrastructure using the programming languages and tools they are already familiar with, supporting use cases such as more complex authentication workflows, dynamically configured resources, and more. Loops, conditionals, environment variables, external calls.
+Pulumi enables teams to manage their infrastructure using the programming languages and tools they are already familiar with, supporting use cases such as complex authentication workflows, dynamically configured resources, and more.
 
-We're excited to announce an improvement to the `pulumi refresh` and `pulumi destroy` commands, a flag for `--run program`! This new feature makes Pulumi even more powerful for teams with complex infrastructure workflows.
+In this post we're excited to announce an improvement to the `pulumi refresh` and `pulumi destroy` commands: the `--run program` flag! This new feature makes Pulumi even more powerful for teams with complex infrastructure workflows.
 
-This enhancement is particularly valuable for teams working with short-lived credentials, dynamic resources, or any workflow where your code needs to run to establish the right context. Whether you're using OIDC-based authentication, dynamically fetching credentials from a secret manager, or working with [dynamic providers](/docs/iac/concepts/resources/dynamic-providers), the `--run-program` flag ensures your infrastructure operations have the context they need to succeed.
+This enhancement is particularly valuable for teams working with short-lived credentials, dynamic resources, or any workflow where your code needs to run to establish the right context. Whether you're using OIDC-based authentication, dynamically fetching credentials from a secrets manager, or working with [dynamic providers](/docs/iac/concepts/resources/dynamic-providers), the `--run-program` flag ensures your infrastructure operations have the context they need to succeed.
 
 <!--more-->
 
@@ -224,13 +224,19 @@ We run `pulumi up` and everything works as we expect -- our program grabs the ap
 
 A few days, weeks, months, or even years later, we find that some tweaks have been made to the bucket in the AWS console. Before we update and re-run our program, we want to refresh Pulumi's state so that it picks up the current properties of the bucket. We run `pulumi refresh` and, after waiting a while... it fails! What has gone wrong?
 
+The issue is that our program needs to run to fetch the latest credentials using our platform team's library. However, `pulumi refresh` doesn't run our program by default. To fix this, we can use the new `--run-program` flag:
+
+```shell
+pulumi refresh --run-program
+```
+
 This time, Pulumi will run our program before refreshing the state of our stack. As a result, our program will fetch the latest credentials using the library provided by our platform team, and everything will work as expected! If in a few months we need to clean up our stack, `pulumi destroy` also accepts the new option:
 
 ```shell
 pulumi destroy --run-program
 ```
 
-## What's Next?
+## What's next?
 
 Running the program for all Pulumi operations paves the way for several other highly-requested features. Top of our list is [lifecycle hooks](https://github.com/pulumi/pulumi/issues/1691) -- the ability to run arbitrary program code at various points in the lifecycle of a Pulumi resource.
 
