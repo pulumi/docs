@@ -15,12 +15,9 @@
                 {{ range $pathMethod, $pathDetails := $pathMethods }}
                     {{ if $pathDetails.tags }}
                         {{ range $tag := $pathDetails.tags }}
+                            <!-- Get all tags by provided tag name or prefixed by provided tag name -->
                             {{ if $filterTag }}
                                 {{ if or (eq $tag $filterTag) (hasPrefix $tag (printf "%s: " $filterTag)) }}
-                                    {{ $allTags = $allTags | append $tag }}
-                                {{ end }}
-                            {{ else }}
-                                {{ if not $pathDetails.tags }}
                                     {{ $allTags = $allTags | append $tag }}
                                 {{ end }}
                             {{ end }}
@@ -28,7 +25,12 @@
                     {{ end }}
                 {{ end }}
             {{ end }}
-
+            
+            <!-- If no tags found and no filter tag specified, create default "Other Endpoints" tag -->
+            {{ if and (not $filterTag) (eq (len $allTags) 0) }}
+                {{ $allTags = $allTags | append "Other Endpoints" }}
+            {{ end }}
+            
             <!-- Initialize empty slices for each tag -->
             {{ range $tag := uniq $allTags }}
                 {{ $taggedEndpoints = merge $taggedEndpoints (dict $tag (slice)) }}
@@ -38,6 +40,7 @@
             {{ range $path, $pathMethods := $openapi.paths }}
                 {{ range $pathMethod, $pathDetails := $pathMethods }}
                     {{ $endpoint := dict "path" $path "method" $pathMethod "details" $pathDetails }}
+                    <!-- If we have a filter tag, only include endpoints that match the filter tag -->
                     {{ if $filterTag }}
                         {{ if $pathDetails.tags }}
                             {{ range $tag := $pathDetails.tags }}
@@ -47,9 +50,16 @@
                                 {{ end }}
                             {{ end }}
                         {{ end }}
+                    <!-- If we don't have a filter tag, include untagged endpoints -->
                     {{ else }}
-                        {{ if not $pathDetails.tags }}
-                            {{ $untaggedEndpoints = $untaggedEndpoints | append $endpoint }}
+                        {{ if $pathDetails.tags }}
+                            {{ range $tag := $pathDetails.tags }}
+                                {{ $currentSlice := index $taggedEndpoints $tag }}
+                                {{ $taggedEndpoints = merge $taggedEndpoints (dict $tag ($currentSlice | append $endpoint)) }}
+                            {{ end }}
+                        {{ else if eq (len $allTags) 1 }}
+                            {{ $currentSlice := index $taggedEndpoints "Other Endpoints" }}
+                            {{ $taggedEndpoints = merge $taggedEndpoints (dict "Other Endpoints" ($currentSlice | append $endpoint)) }}
                         {{ end }}
                     {{ end }}
                 {{ end }}
@@ -64,7 +74,7 @@
                         {{ $subsection := replace $tag (printf "%s: " $filterTag) "" 1 }}
                         {{ $currentSlice := index $subsections $subsection | default (slice) }}
                         {{ $subsections = merge $subsections (dict $subsection ($currentSlice | append $endpoints)) }}
-                    {{ else }}
+                    {{ else if eq $tag $filterTag }}
                         {{ $filteredEndpoints = merge $filteredEndpoints (dict $tag $endpoints) }}
                     {{ end }}
                 {{ end }}
