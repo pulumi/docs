@@ -624,7 +624,7 @@ No separate entry point is required for TypeScript. All exported component class
 2. In the `main` function, add a call to `component_provider_host`, specifying a list of components for the `components` argument
 
 ```python
-from pulumi.provider.experimental import Metadata, component_provider_host
+from pulumi.provider.experimental import component_provider_host
 from staticpage import MyComponent
 
 if __name__ == "__main__":
