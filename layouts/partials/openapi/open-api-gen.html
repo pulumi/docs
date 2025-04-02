@@ -4,25 +4,31 @@
     {{ if $resource }}
         {{ $openapi = $resource | transform.Unmarshal }}
         <!-- Debug output -->
-        <div style="display: none;">
-            <pre>Debug: {{ printf "%#v" $openapi }}</pre>
-        </div>
         <div style="display: flex; flex-direction: column; align-items: stretch;" data-openapi-content="true">
             {{ $taggedEndpoints := dict }}
             {{ $untaggedEndpoints := slice }}
+            {{ $filterTag := $.Params.filter_tag }}
             
-            <!-- First collect all unique tags -->
+            <!-- First collect all unique tags that match our criteria -->
             {{ $allTags := slice }}
             {{ range $path, $pathMethods := $openapi.paths }}
                 {{ range $pathMethod, $pathDetails := $pathMethods }}
                     {{ if $pathDetails.tags }}
                         {{ range $tag := $pathDetails.tags }}
-                            {{ $allTags = $allTags | append $tag }}
+                            {{ if $filterTag }}
+                                {{ if or (eq $tag $filterTag) (hasPrefix $tag (printf "%s: " $filterTag)) }}
+                                    {{ $allTags = $allTags | append $tag }}
+                                {{ end }}
+                            {{ else }}
+                                {{ if not $pathDetails.tags }}
+                                    {{ $allTags = $allTags | append $tag }}
+                                {{ end }}
+                            {{ end }}
                         {{ end }}
                     {{ end }}
                 {{ end }}
             {{ end }}
-            
+
             <!-- Initialize empty slices for each tag -->
             {{ range $tag := uniq $allTags }}
                 {{ $taggedEndpoints = merge $taggedEndpoints (dict $tag (slice)) }}
@@ -32,18 +38,41 @@
             {{ range $path, $pathMethods := $openapi.paths }}
                 {{ range $pathMethod, $pathDetails := $pathMethods }}
                     {{ $endpoint := dict "path" $path "method" $pathMethod "details" $pathDetails }}
-                    {{ if $pathDetails.tags }}
-                        {{ range $tag := $pathDetails.tags }}
-                            {{ $currentSlice := index $taggedEndpoints $tag }}
-                            {{ $taggedEndpoints = merge $taggedEndpoints (dict $tag ($currentSlice | append $endpoint)) }}
+                    {{ if $filterTag }}
+                        {{ if $pathDetails.tags }}
+                            {{ range $tag := $pathDetails.tags }}
+                                {{ if or (eq $tag $filterTag) (hasPrefix $tag (printf "%s: " $filterTag)) }}
+                                    {{ $currentSlice := index $taggedEndpoints $tag }}
+                                    {{ $taggedEndpoints = merge $taggedEndpoints (dict $tag ($currentSlice | append $endpoint)) }}
+                                {{ end }}
+                            {{ end }}
                         {{ end }}
                     {{ else }}
-                        {{ $untaggedEndpoints = $untaggedEndpoints | append $endpoint }}
+                        {{ if not $pathDetails.tags }}
+                            {{ $untaggedEndpoints = $untaggedEndpoints | append $endpoint }}
+                        {{ end }}
                     {{ end }}
                 {{ end }}
             {{ end }}
 
-            {{ template "openapi/endpoint-group.html" (dict "taggedEndpoints" $taggedEndpoints "untaggedEndpoints" $untaggedEndpoints "openapi" $openapi) }}
+            {{ if $filterTag }}
+                {{ $filteredEndpoints := dict }}
+                {{ $subsections := dict }}
+                
+                {{ range $tag, $endpoints := $taggedEndpoints }}
+                    {{ if hasPrefix $tag (printf "%s: " $filterTag) }}
+                        {{ $subsection := replace $tag (printf "%s: " $filterTag) "" 1 }}
+                        {{ $currentSlice := index $subsections $subsection | default (slice) }}
+                        {{ $subsections = merge $subsections (dict $subsection ($currentSlice | append $endpoints)) }}
+                    {{ else }}
+                        {{ $filteredEndpoints = merge $filteredEndpoints (dict $tag $endpoints) }}
+                    {{ end }}
+                {{ end }}
+                
+                {{ template "openapi/filtered-endpoint-group.html" (dict "filteredEndpoints" $filteredEndpoints "subsections" $subsections "openapi" $openapi) }}
+            {{ else }}
+                {{ template "openapi/endpoint-group.html" (dict "untaggedEndpoints" $untaggedEndpoints "openapi" $openapi) }}
+            {{ end }}
         </div>
         
         <!-- Add script to regenerate table of contents after OpenAPI is loaded -->

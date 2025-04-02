@@ -1,14 +1,14 @@
-{{ define "openapi/endpoint-group.html" }}
-{{ range $tag, $endpoints := .taggedEndpoints }}
+{{ define "openapi/filtered-endpoint-group.html" }}
+{{ range $tag, $endpoints := .filteredEndpoints }}
     <h3 id="{{ anchorize $tag }}">{{ $tag }}</h3>
     {{ range $endpoints }}
         {{ template "openapi/endpoint.html" (dict "method" .method "path" .path "details" .details "openapi" $.openapi) }}
     {{ end }}
 {{ end }}
 
-{{ if .untaggedEndpoints }}
-    <h3 id="untagged">Untagged Endpoints</h3>
-    {{ range .untaggedEndpoints }}
+{{ range $subsection, $endpoints := .subsections }}
+    <h3 id="{{ anchorize $subsection }}">{{ $subsection }}</h3>
+    {{ range $endpoints }}
         {{ template "openapi/endpoint.html" (dict "method" .method "path" .path "details" .details "openapi" $.openapi) }}
     {{ end }}
 {{ end }}
