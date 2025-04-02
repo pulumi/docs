@@ -70,6 +70,7 @@ The Pulumi Azure Native provider needs to manage two different versioning system
 ## Default API Versions
 
 Azure Native V3 includes refreshed default API versions across nearly all resources, ensuring you're automatically working with the latest stable Azure features and capabilities without any extra configuration. The new default versions unlock powerful new Azure functionality out of the box, such as:
+
 - EventGrid (now 2025-02-15): Support for advanced filtering, dead-lettering, and custom event schemas
 - MachineLearningServices (now 2024-10-01): Enhanced compute instance capabilities and new model deployment options
 - Storage (now 2024-01-01): Improved performance tiers and expanded security features
@@ -77,15 +78,15 @@ Azure Native V3 includes refreshed default API versions across nearly all resour
 
 ## Non-default API versions
 
-Most users (approximately 95% based on our Pulumi Cloud data) will be perfectly served by these default API versions. However, there are situations where you might need to use a specific API version. 
+Most users (approximately 95% based on our Pulumi Cloud data) will be perfectly served by these default API versions. However, there are situations where you might need to use a specific API version.
 
 For these cases, Azure Native V3 provides two flexible approaches:
 
-### Option 1: Accessing Explicit API Versions via Local Packages
+**Option 1: Accessing Explicit API Versions via Local Packages**
 
 The most type-safe way to use explicit API versions is through local packages. This approach gives you the full SDK experience with strong typing, auto-completion, and documentation.
 
-#### Step 1: Add the specific API version package
+### Step 1: Add the specific API version package
 
 Use the Pulumi CLI to add just the packages and versions you need:
 
@@ -204,6 +205,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```yaml
 name: azure-native-example
 runtime: yaml
@@ -223,9 +225,11 @@ resources:
         name: Standard_LRS
       kind: StorageV2
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```java
 package myproject;
 
@@ -246,7 +250,7 @@ public class App {
 
     private static void stack(Context ctx) {
         var resourceGroup = new ResourceGroup("resourceGroup");
-        
+
         var storageAccount = new StorageAccount("sa", StorageAccountArgs.builder()
             .resourceGroupName(resourceGroup.name())
             .sku(SkuArgs.builder()
@@ -257,11 +261,12 @@ public class App {
     }
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-## Option 2: Using the Generic Resource
+**Option 2: Using the Generic Resource**
 
 An alternative approach is to use the generic `azure-native.resources.Resource`. This special resource allows you to access any Azure resource at any API version, including older versions that might not be available through local packages.
 
@@ -336,13 +341,13 @@ generic = resources.Resource("generic",
     api_version="2022-09-01",
     # This property is required even when empty
     parent_resource_path="",
-    
+
     # These properties are optional and are defined on the generic resource
     kind="StorageV2",
     sku={
         "name": "Standard_LRS",
     },
-    
+
     # This is a generic property bag for all other properties
     properties={
         "allowBlobPublicAccess": False,
@@ -384,14 +389,14 @@ class MyStack : Stack
             ApiVersion = "2022-09-01",
             // This property is required even when empty
             ParentResourcePath = "",
-            
+
             // These properties are optional
             Kind = "StorageV2",
             Sku = new Dictionary<string, object>
             {
                 { "name", "Standard_LRS" },
             },
-            
+
             // This is a generic property bag for all other properties
             Properties = new Dictionary<string, object>
             {
@@ -446,13 +451,13 @@ func main() {
 			ApiVersion:               pulumi.String("2022-09-01"),
 			// This property is required even when empty
 			ParentResourcePath:       pulumi.String(""),
-			
+
 			// These properties are optional
 			Kind:                     pulumi.String("StorageV2"),
 			Sku: pulumi.Map{
 				"name": pulumi.String("Standard_LRS"),
 			},
-			
+
 			// This is a generic property bag for all other properties
 			Properties:               properties,
 		})
@@ -468,6 +473,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```yaml
 name: azure-native-example
 runtime: yaml
@@ -497,19 +503,21 @@ resources:
       apiVersion: 2022-09-01
       # This property is required even when empty
       parentResourcePath: ""
-      
+
       # These properties are optional
       kind: StorageV2
       sku:
         name: Standard_LRS
-      
+
       # This is a generic property bag for all other properties
       properties:
         allowBlobPublicAccess: false
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```java
 package myproject;
 
@@ -535,7 +543,7 @@ public class App {
 
     private static void stack(Context ctx) {
         var resourceGroup = new ResourceGroup("resourceGroup");
-        
+
         // Create a Storage Account using the typed resource
         var sa = new StorageAccount("sa", StorageAccountArgs.builder()
             .resourceGroupName(resourceGroup.name())
@@ -544,14 +552,14 @@ public class App {
                 .build())
             .kind(Kind.StorageV2)
             .build());
-        
+
         // Create a Storage Account using the generic resource
         Map<String, Object> sku = new HashMap<>();
         sku.put("name", "Standard_LRS");
-        
+
         Map<String, Object> properties = new HashMap<>();
         properties.put("allowBlobPublicAccess", false);
-        
+
         var generic = new Resource("generic", ResourceArgs.builder()
             .resourceGroupName(resourceGroup.name())
             .resourceProviderNamespace("Microsoft.Storage")
@@ -559,17 +567,18 @@ public class App {
             .apiVersion("2022-09-01")
             // This property is required even when empty
             .parentResourcePath("")
-            
+
             // These properties are optional
             .kind("StorageV2")
             .sku(sku)
-            
+
             // This is a generic property bag for all other properties
             .properties(properties)
             .build());
     }
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
