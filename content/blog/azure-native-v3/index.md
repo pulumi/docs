@@ -19,12 +19,24 @@ social:
     linkedin: 
 ---
 
-Today we're excited to announce the release of Pulumi Azure Native V3, a major update to our Azure Native provider that improves developer experience through significant SDK size reduction, up-to-date default API versions, and a flexible approach to managing explicit API versions.
+Today we're excited to announce the release of Pulumi Azure Native V3 - a major leap forward for the most comprehensive infrastructure as code solution for Microsoft Azure. This release delivers a remarkable 75% reduction in SDK size while maintaining our complete coverage of the Azure ecosystem.
 
-[Pulumi Azure Native](/registry/packages/azure-native/) is our native provider for Microsoft Azure, offering direct access to the  [Azure Resource Manager API](https://learn.microsoft.com/en-us/rest/api/resources/). Unlike traditional providers that abstract away cloud APIs, Azure Native gives you more coverage of Azure resources, properties, and up-to-date features by directly mapping to Azure's native REST API. This allows you to provision and manage any Azure resource with Pulumi in your favorite programming language while taking advantage of all the latest Azure capabilities as soon as they're released.
+## The Undisputed Leader for Azure Infrastructure as Code
+
+Pulumi Azure Native provides direct access to the [Azure Resource Manager API](https://learn.microsoft.com/en-us/rest/api/resources/), making it hands-down the best infrastructure as code solution for Microsoft Azure. Unlike traditional providers that abstract away cloud APIs, Azure Native gives you more than **2x the resource and property coverage** compared to Terraform by directly mapping to Azure's native REST API. This means:
+
+- **Complete API coverage**: 100% of Azure resources available in Azure Resource Manager
+- **Same-day access to new Azure features**: No waiting for provider updates
+- **Advanced property support**: Access to all resource properties, not just a subset
+- **Latest API versions**: Always up-to-date with the newest stable Azure APIs
+
+<!--more-->
+
+And now with V3's dramatic 75% SDK size reduction, we've eliminated the only potential drawback - making our Azure Native provider both the most comprehensive AND the most performant option for managing Azure infrastructure.
+
+![Resource and Property Coverage Comparison](https://www.pulumi.com/images/blog/azure-native-coverage-comparison.png)
 
 These improvements came about through our [RFC process](https://github.com/pulumi/pulumi-azure-native/issues/4004), where we explored various options to balance SDK size with the flexibility needed by advanced users.
-<!--more-->
 
 ## A Slimmer, More Efficient SDK
 
@@ -82,11 +94,11 @@ Most users (approximately 95% based on our Pulumi Cloud data) will be perfectly 
 
 For these cases, Azure Native V3 provides two flexible approaches:
 
-**Option 1: Accessing Explicit API Versions via Local Packages**
+### Option 1: Accessing Explicit API Versions via Local Packages
 
 The most type-safe way to use explicit API versions is through local packages. This approach gives you the full SDK experience with strong typing, auto-completion, and documentation.
 
-### Step 1: Add the specific API version package
+Add the specific API version package
 
 Use the Pulumi CLI to add just the packages and versions you need:
 
@@ -96,7 +108,7 @@ pulumi package add azure-native storage v20240101
 
 For more details on the `package add` command, see the [CLI documentation](/docs/cli/commands/pulumi_package_add/).
 
-### Step 2: Import and use the versioned package
+Step 2: Import and use the versioned package
 
 Once added, you can import and use the specific API version in your code:
 
@@ -266,324 +278,15 @@ public class App {
 
 {{< /chooser >}}
 
-**Option 2: Using the Generic Resource**
+### Option 2: Using the Generic Resource {#using-the-generic-resource}
 
 An alternative approach is to use the generic `azure-native.resources.Resource`. This special resource allows you to access any Azure resource at any API version, including older versions that might not be available through local packages.
 
 While not as type-safe as the local package approach, the generic resource offers maximum flexibility and is useful when you need to access a resource that is not yet supported by the Pulumi provider or when an issue prevents you from using a specific resource.
 
-Here's how to use the generic resource alongside a standard resource for comparison:
-
-{{< chooser language "typescript,python,csharp,go,yaml,java" >}}
-
-{{% choosable language typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const resourceGroup = new azure_native.resources.ResourceGroup("resourceGroup", {});
-
-// Create a Storage Account using the typed resource
-const sa = new azure_native.storage.StorageAccount("sa", {
-    resourceGroupName: resourceGroup.name,
-    sku: {
-        name: azure_native.storage.SkuName.Standard_LRS,
-    },
-    kind: azure_native.storage.Kind.StorageV2,
-});
-
-// Create another Storage Account using the generic resource
-const generic = new azure_native.resources.Resource("generic", {
-    resourceGroupName: resourceGroup.name,
-    resourceProviderNamespace: "Microsoft.Storage",
-    resourceType: "storageAccounts",
-    apiVersion: "2022-09-01",
-    // This property is required even when empty.
-    parentResourcePath: "",
-
-    // These properties are optional and are defined on the generic resource because many resources have a kind or a SKU.
-    kind: "StorageV2",
-    sku: {
-        name: "Standard_LRS",
-    },
-
-    // This is a generic property bag for all other properties of the targeted resource.
-    properties: {
-        allowBlobPublicAccess: false,
-    },
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-import pulumi
-from pulumi_azure_native import resources, storage
-
-resource_group = resources.ResourceGroup("resource_group")
-
-# Create a Storage Account using the typed resource
-sa = storage.StorageAccount("sa",
-    resource_group_name=resource_group.name,
-    sku=storage.SkuArgs(
-        name=storage.SkuName.STANDARD_LRS,
-    ),
-    kind=storage.Kind.STORAGE_V2)
-
-# Create another Storage Account using the generic resource
-generic = resources.Resource("generic",
-    resource_group_name=resource_group.name,
-    resource_provider_namespace="Microsoft.Storage",
-    resource_type="storageAccounts",
-    api_version="2022-09-01",
-    # This property is required even when empty
-    parent_resource_path="",
-
-    # These properties are optional and are defined on the generic resource
-    kind="StorageV2",
-    sku={
-        "name": "Standard_LRS",
-    },
-
-    # This is a generic property bag for all other properties
-    properties={
-        "allowBlobPublicAccess": False,
-    })
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-using Pulumi;
-using Pulumi.AzureNative.Resources;
-using Pulumi.AzureNative.Storage;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var resourceGroup = new ResourceGroup("resourceGroup");
-
-        // Create a Storage Account using the typed resource
-        var sa = new StorageAccount("sa", new StorageAccountArgs
-        {
-            ResourceGroupName = resourceGroup.Name,
-            Sku = new SkuArgs
-            {
-                Name = SkuName.Standard_LRS,
-            },
-            Kind = Kind.StorageV2,
-        });
-
-        // Create another Storage Account using the generic resource
-        var generic = new Resource("generic", new ResourceArgs
-        {
-            ResourceGroupName = resourceGroup.Name,
-            ResourceProviderNamespace = "Microsoft.Storage",
-            ResourceType = "storageAccounts",
-            ApiVersion = "2022-09-01",
-            // This property is required even when empty
-            ParentResourcePath = "",
-
-            // These properties are optional
-            Kind = "StorageV2",
-            Sku = new Dictionary<string, object>
-            {
-                { "name", "Standard_LRS" },
-            },
-
-            // This is a generic property bag for all other properties
-            Properties = new Dictionary<string, object>
-            {
-                { "allowBlobPublicAccess", false },
-            },
-        });
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
-		if err != nil {
-			return err
-		}
-
-		// Create a Storage Account using the typed resource
-		_, err = storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
-			ResourceGroupName: resourceGroup.Name,
-			Sku: &storage.SkuArgs{
-				Name: storage.SkuNameStandard_LRS,
-			},
-			Kind: storage.KindStorageV2,
-		})
-		if err != nil {
-			return err
-		}
-
-		// Create another Storage Account using the generic resource
-		properties := pulumi.Map{
-			"allowBlobPublicAccess": pulumi.Bool(false),
-		}
-
-		_, err = resources.NewResource(ctx, "generic", &resources.ResourceArgs{
-			ResourceGroupName:        resourceGroup.Name,
-			ResourceProviderNamespace: pulumi.String("Microsoft.Storage"),
-			ResourceType:             pulumi.String("storageAccounts"),
-			ApiVersion:               pulumi.String("2022-09-01"),
-			// This property is required even when empty
-			ParentResourcePath:       pulumi.String(""),
-
-			// These properties are optional
-			Kind:                     pulumi.String("StorageV2"),
-			Sku: pulumi.Map{
-				"name": pulumi.String("Standard_LRS"),
-			},
-
-			// This is a generic property bag for all other properties
-			Properties:               properties,
-		})
-		if err != nil {
-			return err
-		}
-
-		return nil
-	})
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-name: azure-native-example
-runtime: yaml
-description: A minimal Azure Native Pulumi YAML program
-resources:
-  resourceGroup:
-    type: azure-native:resources:ResourceGroup
-    properties:
-      location: westus2
-  
-  # Using the typed resource
-  storageAccount:
-    type: azure-native:storage:StorageAccount
-    properties:
-      resourceGroupName: ${resourceGroup.name}
-      sku:
-        name: Standard_LRS
-      kind: StorageV2
-  
-  # Using the generic resource
-  genericStorage:
-    type: azure-native:resources:Resource
-    properties:
-      resourceGroupName: ${resourceGroup.name}
-      resourceProviderNamespace: Microsoft.Storage
-      resourceType: storageAccounts
-      apiVersion: 2022-09-01
-      # This property is required even when empty
-      parentResourcePath: ""
-
-      # These properties are optional
-      kind: StorageV2
-      sku:
-        name: Standard_LRS
-
-      # This is a generic property bag for all other properties
-      properties:
-        allowBlobPublicAccess: false
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-```java
-package myproject;
-
-import com.pulumi.Context;
-import com.pulumi.Pulumi;
-import com.pulumi.azurenative.resources.ResourceGroup;
-import com.pulumi.azurenative.resources.ResourceGroupArgs;
-import com.pulumi.azurenative.resources.Resource;
-import com.pulumi.azurenative.resources.ResourceArgs;
-import com.pulumi.azurenative.storage.StorageAccount;
-import com.pulumi.azurenative.storage.StorageAccountArgs;
-import com.pulumi.azurenative.storage.enums.Kind;
-import com.pulumi.azurenative.storage.enums.SkuName;
-import com.pulumi.azurenative.storage.inputs.SkuArgs;
-
-import java.util.Map;
-import java.util.HashMap;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    private static void stack(Context ctx) {
-        var resourceGroup = new ResourceGroup("resourceGroup");
-
-        // Create a Storage Account using the typed resource
-        var sa = new StorageAccount("sa", StorageAccountArgs.builder()
-            .resourceGroupName(resourceGroup.name())
-            .sku(SkuArgs.builder()
-                .name(SkuName.Standard_LRS)
-                .build())
-            .kind(Kind.StorageV2)
-            .build());
-
-        // Create a Storage Account using the generic resource
-        Map<String, Object> sku = new HashMap<>();
-        sku.put("name", "Standard_LRS");
-
-        Map<String, Object> properties = new HashMap<>();
-        properties.put("allowBlobPublicAccess", false);
-
-        var generic = new Resource("generic", ResourceArgs.builder()
-            .resourceGroupName(resourceGroup.name())
-            .resourceProviderNamespace("Microsoft.Storage")
-            .resourceType("storageAccounts")
-            .apiVersion("2022-09-01")
-            // This property is required even when empty
-            .parentResourcePath("")
-
-            // These properties are optional
-            .kind("StorageV2")
-            .sku(sku)
-
-            // This is a generic property bag for all other properties
-            .properties(properties)
-            .build());
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 In most cases, we recommend using the local packages approach when you need a specific API version, and only falling back to the generic resource for special cases or resources not yet supported by the Pulumi provider.
+
+For more details, see the [Azure Native version guide](/registry/packages/azure-native/version-guide/#using-the-generic-resource).
 
 ## Getting Started
 
