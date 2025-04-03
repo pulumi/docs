@@ -43,7 +43,7 @@ For production or similarly sensitive environments:
 
 ### 1. Configure Stack and ESC Permissions
 
-Use Pulumi's role-based access control (RBAC) to enforce least privilege effectively:
+Use Pulumi's [role-based access control (RBAC)](/docs/pulumi-cloud/access-management/teams/) to enforce least privilege effectively:
 
 - **Organization-level defaults:**
   - Set conservative default permissions (`None` or `Read`) for both stacks and ESC environments.
