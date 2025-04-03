@@ -25,9 +25,7 @@ social:
 
 Today we're excited to announce the release of Pulumi Azure Native V3 - a major leap forward for the most comprehensive infrastructure as code solution for Microsoft Azure. This release delivers a remarkable 75% reduction in SDK size while maintaining our complete coverage of the Azure ecosystem.
 
-## The Undisputed Leader for Azure Infrastructure as Code
-
-Pulumi Azure Native provides direct access to the [Azure Resource Manager API](https://learn.microsoft.com/en-us/rest/api/resources/), making it hands-down the best infrastructure as code solution for Microsoft Azure. Unlike traditional providers that abstract away cloud APIs, Azure Native gives you more than **2x the resource and property coverage** compared to Terraform by directly mapping to Azure's native REST API. This means:
+Pulumi Azure Native provides direct access to the [Azure Resource Manager API](https://learn.microsoft.com/en-us/rest/api/resources/), making it hands-down the best infrastructure as code solution for Microsoft Azure. Unlike traditional providers that abstract away cloud APIs, Azure Native gives you more than resource and property coverage compared to Terraform by directly mapping to Azure's native REST API. This means:
 
 - **Complete API coverage**: 100% of Azure resources available in Azure Resource Manager
 - **Same-day access to new Azure features**: No waiting for provider updates
@@ -55,13 +53,7 @@ The most significant improvement in Azure Native V3 is the dramatic 75% reductio
 | Java (explicit versions were not supported in v2) | 68 MB | 71 MB | +4.4%  |
 | YAML | no SDK | no SDK | - |
 
-This transformation delivers immediate benefits that every developer will notice:
-
-- Faster IDE performance with reduced load times
-- More responsive language servers for better autocompletion and documentation
-- Reduced memory consumption for resource-constrained development environments
-- Significantly quicker package installation and project bootstrap times
-- Improved CI/CD pipeline performance with faster dependency installation
+This transformation delivers immediate benefits that every developer will notice: faster IDE performance with reduced load times, more responsive language servers for better autocompletion, reduced memory consumption, significantly quicker package installation, and improved CI/CD pipeline performance.
 
 ## Additional Improvements
 
