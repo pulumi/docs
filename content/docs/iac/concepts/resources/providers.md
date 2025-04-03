@@ -17,18 +17,40 @@ aliases:
 - /docs/concepts/resources/providers/
 ---
 
-A resource provider handles communications with a cloud service to create, read, update, and delete the resources you define in your Pulumi programs. Pulumi passes your code to a language host such as Node.js, waits to be notified of resource registrations, assembles a model of your desired state, and calls on the resource provider to produce that state. The resource provider translates those requests into API calls to the cloud service.
+A resource provider handles communications with a cloud or SaaS service to create, read, update, and delete the resources you define in your Pulumi programs.
 
-A resource provider is tied to the language that you use to write your programs. For example, if your cloud provider is AWS, the following providers are available:
+Providers are composed of two parts: an executable, which makes the actual call to the cloud provider's API, and an SDK, which allows you to consume the provider in the language of your Pulumi program. When you run your Pulumi program, Pulumi passes your code to a language host such as Node.js, waits to be notified of resource registrations, assembles a model of your desired state, and calls on the provider executable to produce that state. The resource provider translates those requests into API calls to the cloud service.
+
+## Installing Providers
+
+There are two methods for installing a provider and using it in your Pulumi program:
+
+1. **Adding a reference to a provider's SDK using a package manager** in the language of your Pulumi program (e.g., npm in Node.js). This method is more common and is used for nearly all packages in the [Pulumi Registry](/registry).
+1. **Using the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command**. This method is most commonly used for [parameterized providers](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/providers/parameterized.html), such as the [Any Terraform Provider](/registry/packages/terraform-provider). The `pulumi package add` command generates a local SDK on disk (as opposed to downloading a pre-generated SDK from a package feed like npm) and allows you to consume any provider in the OpenTofu registry in you Pulumi program, even if there is no corresponding provider in the Pulumi Registry.
+
+### Installing a Provider via a Package Manager
+
+The most common method of installing a provider is to use your language's package management tool: npm in Node.js, PyPI in Python, etc. For example, the [AWS provider](/registry/packages/aws/installation-configuration) has the following SDKs available:
 
 - JavaScript/TypeScript: `@pulumi/aws`
 - Python: `pulumi-aws`
 - Go: `github.com/pulumi/pulumi-aws/sdk/go/aws`
 - .NET: `Pulumi.Aws`
+- Java: `com.pulumi.aws`
 
-Normally, since you declare the language and cloud provider you intend to use when you write a program, Pulumi installs the provider for you as a plugin, using the appropriate package manager, such as NPM for Typescript.
+After installing the provider using your package manager, you reference the provider in your Pulumi program to define the desired state of the resources for that provider. When you install the SDK for a provider (e.g., via `npm install <package_name>` in Node.js), the package manager (npm in this example) automatically downloads and installs the provider executable along with the SDK if the executable is not already cached on your system.
 
-The resource provider for custom resources is determined based on its package name. For example, the `aws` package loads a plugin named `pulumi-resource-aws`, and the `kubernetes` package loads a plugin named `pulumi-resource-kubernetes`.
+## Installing a Parameterized Provider via `pulumi package add`
+
+Parameterized providers allow you to generate a local provider SDK in the language of your Pulumi program. This method of consuming a provider is most commonly applicable when a pre-built provider SDK does not exist for a given cloud provider, SaaS service, or on-prem device, but a provider does exist in [the OpenTofu registry](https://search.opentofu.org). The [Any Terraform Provider](/registry/packages/terraform-provider) is a parameterized provider that provides this capability.
+
+For example, to generate a local SDK for the [`hashicorp/random` provider](https://search.opentofu.org/provider/hashicorp/random/latest):
+
+```bash
+$ pulumi package add terraform-provider hashicorp/random
+```
+
+In order to make sure Pulumi users are aware of the Any Terraform Provider's capabilities, Pulumi has included select, popular providers that can be consumed in Pulumi via the Any Terraform Provider in the Pulumi Registry, such as [The Honeycomb provider](/registry/packages/honeycombio/).
 
 ## Default Provider Configuration
 
@@ -457,8 +479,9 @@ final var myresource = new MyResource("myResource",
 ## Disabling Default Providers
 
 While default providers are enabled by default, they [can be disabled](/docs/concepts/config#special-configuration-options) on a per stack basis. Disabling default
-providers is a good idea if you want to ensure that your programs must be explicit about which provider they
-will use. For example, to disable the `aws` provider, you can run:
+providers is a good idea if you want to ensure that your providers must be explicitly configured and should never use the default system configuration. (The meaning of "default system configuration" depends on the provider: it may be environment variables which can differ between environments, or a configuration file in a default location, and so on.)
+
+For example, to disable the `aws` provider, you can run:
 
 ```sh
 $ pulumi config set --path 'pulumi:disable-default-providers[0]' aws
