@@ -10,7 +10,7 @@
                 <h4>Europe & Americas |  May 6 at 9 am ET / 2 pm GMT / 4 pm PT</h4>
                 <h4 class="mt-0">Asia Pacific | May 7 at 9 am AEST</h4>
                 <p class="px-12">
-                    Join us for a 90-minute virtual event featuring real-world enterprise platform engineering success stories, technical demos, and expert discussions. Hear from Pulumi leaders, engineers, and industry experts on how they’ve built platforms that automate infrastructure with Pulumi.
+                    Join us for a virtual event featuring real-world enterprise platform engineering success stories, technical demos, and expert discussions. Hear from Pulumi leaders, engineers, and industry experts on how they’ve built platforms that automate infrastructure with Pulumi.
                 </p>
             </div>
             <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
@@ -23,7 +23,7 @@
         <h4>Session 1 |  May 6, 9 am ET / 2 pm GMT</h4>
         <h4 class="mt-0">Session 2 | May 6, 4 pm PT / May 7, 9 am AEST</h4>
         <p>
-             Join us for a 90-minute virtual event featuring real-world enterprise platform engineering success stories, technical demos, and expert discussions. Hear from Pulumi leaders, engineers, and industry experts on how they’ve built platforms that automate infrastructure with Pulumi.
+             Join us for a virtual event featuring real-world enterprise platform engineering success stories, technical demos, and expert discussions. Hear from Pulumi leaders, engineers, and industry experts on how they’ve built platforms that automate infrastructure with Pulumi.
         </p>
     </div>
 
@@ -40,10 +40,9 @@
                 </div>
             </div>
             <div class="lg:w-1/2 lg:pr-16">
-                <h3>Past PulumiUP Global</h3>
+                <h3>PulumiUP 2025: Why You Can't Miss It!</h3>
                 <p>
-                    Join us for a day filled with tech talks, panel discussions, demos, new product releases, and more.
-                    Learn trends, best practices, and lessons learned in:
+                    Join us for demos, new product releases, panel discussions, and more. Learn trends, best practices, and lessons learned in:
                     <ul>
                         <li>
                             Platform Engineering & DevOps
@@ -52,25 +51,19 @@
                             Cloud and IaC
                         </li>
                         <li>
-                            AI / ML
-                        </li>
-                        <li>
-                            Cloud Culture
+                            Security
                         </li>
                     </ul>
                     <p>
-                        Hear insights from industry leaders in panel discussions about trends that impact the future of
-                        cloud and IaC, AI, platform engineering, and security.
+                        Hear insights from industry leaders about the current state and future of cloud and IaC, platform engineering, and security.
                     </p>
                 </p>
                 <div class="my-8">
-                    <a class="btn-primary" href="/events/pulumiup-2024-keynote/">Watch On Demand</a>
+                    <a class="btn-primary" href="#register">Register Now</a>
                 </div>
             </div>
         </div>
     </section>
-
-    {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
 
     <section id="personas" class="my-8">
         <div class="container mx-auto px-4 py-8 text-center">
@@ -91,6 +84,10 @@
             </div>
         </div>
     </section>
+
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
+
+    {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
 
     {{ range .Params.panels }}
     <section id="panel" class="py-8 mb-12">
