@@ -15,12 +15,12 @@ tags:
     - releases
 
 social:
-    twitter: Announcing Azure Native V3: We've reduced SDK size by 75% while maintaining the expanded resource coverage of other IaC tools. The best solution for Azure infrastructure just got even better.
-    linkedin: Today we're announcing Pulumi Azure Native V3, delivering a remarkable 75% reduction in SDK size while maintaining our industry-leading coverage of Azure resources. With more resource and property coverage compared to alternatives, Azure Native continues to be the most comprehensive and now its the most performant infrastructure as code solution for Microsoft Azure. 
+    twitter: "Announcing Azure Native V3: We've reduced SDK size by 75% while maintaining the expanded resource coverage of other IaC tools. The best solution for Azure infrastructure just got even better."
+    linkedin: "Today we're announcing Pulumi Azure Native V3, delivering a remarkable 75% reduction in SDK size while maintaining our industry-leading coverage of Azure resources. With more resource and property coverage compared to alternatives, Azure Native continues to be the most comprehensive and now its the most performant infrastructure as code solution for Microsoft Azure. 
     
     V3 optimizes the SDK by focusing on default API versions while preserving access to explicit versions when needed. This balance between performance and flexibility came from our collaborative RFC process with the community, ensuring we addressed real-world needs while dramatically improving the developer experience.
     
-    For teams building on Azure, V3 makes development faster and more efficient without compromising on access to the complete Azure ecosystem - truly the best of both worlds.
+    For teams building on Azure, V3 makes development faster and more efficient without compromising on access to the complete Azure ecosystem - truly the best of both worlds."
 ---
 
 Today we're excited to announce the release of Pulumi Azure Native V3 - a major leap forward for the most comprehensive infrastructure as code solution for Microsoft Azure. This release delivers a remarkable 75% reduction in SDK size while maintaining our complete coverage of the Azure ecosystem.
