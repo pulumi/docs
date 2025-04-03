@@ -15,8 +15,12 @@ tags:
     - releases
 
 social:
-    twitter:
-    linkedin: 
+    twitter: Announcing Azure Native V3: We've reduced SDK size by 75% while maintaining the expanded resource coverage of other IaC tools. The best solution for Azure infrastructure just got even better.
+    linkedin: Today we're announcing Pulumi Azure Native V3, delivering a remarkable 75% reduction in SDK size while maintaining our industry-leading coverage of Azure resources. With more resource and property coverage compared to alternatives, Azure Native continues to be the most comprehensive and now its the most performant infrastructure as code solution for Microsoft Azure. 
+    
+    V3 optimizes the SDK by focusing on default API versions while preserving access to explicit versions when needed. This balance between performance and flexibility came from our collaborative RFC process with the community, ensuring we addressed real-world needs while dramatically improving the developer experience.
+    
+    For teams building on Azure, V3 makes development faster and more efficient without compromising on access to the complete Azure ecosystem - truly the best of both worlds.
 ---
 
 Today we're excited to announce the release of Pulumi Azure Native V3 - a major leap forward for the most comprehensive infrastructure as code solution for Microsoft Azure. This release delivers a remarkable 75% reduction in SDK size while maintaining our complete coverage of the Azure ecosystem.
@@ -34,19 +38,22 @@ Pulumi Azure Native provides direct access to the [Azure Resource Manager API](h
 
 And now with V3's dramatic 75% SDK size reduction, we've eliminated the only potential drawback - making our Azure Native provider both the most comprehensive AND the most performant option for managing Azure infrastructure.
 
-![Resource and Property Coverage Comparison](https://www.pulumi.com/images/blog/azure-native-coverage-comparison.png)
+![Resource and Property Coverage Comparison](tf-vs-an.png)
 
 These improvements came about through our [RFC process](https://github.com/pulumi/pulumi-azure-native/issues/4004), where we explored various options to balance SDK size with the flexibility needed by advanced users.
 
 ## A Slimmer, More Efficient SDK
 
-The most significant improvement in Azure Native V3 is the dramatic 75% reduction in SDK size across all languages. By optimizing the SDK to include only the most commonly used API versions, we've solved one of the most frequent pain points reported by our users:
+The most significant improvement in Azure Native V3 is the dramatic 75% reduction in SDK size across all languages. By optimizing the SDK to include only the default API versions, we've solved one of the main pain points reported by our users, the size of the package:
 
-| Language | Before | After | Reduction | Build Time Before | Build Time After |
-|----------|--------|-------|-----------|-------------------|------------------|
-| .NET     | 77MB | 15MB | 80.5% | 7m 52s | 47s |
-| JS/TS    | 494MB | 87MB | 82.4% | 166s | 25s |
-| Python   | 104.6 MB | 25MB | 76.3% | - | - |
+| Language | Before | After | Reduction |
+|----------|--------|-------|-----------|
+| .NET     | 77 MB | 15 MB | 80.5% |
+| JS/TS    | 494 MB | 87 MB | 82.4% |
+| Python   | 104.6 MB | 25 MB | 76.3% |
+| Go (source) | 910 MB | 167 MB | 81.6% |
+| Java (explicit versions were not supported in v2) | 68 MB | 71 MB | +4.4%  |
+| YAML | no SDK | no SDK | - |
 
 This transformation delivers immediate benefits that every developer will notice:
 
@@ -63,7 +70,7 @@ Azure Native V3 also includes several other enhancements:
 - **Reorganized module structure** better aligned with Azure SDK conventions
 - **Improved resource naming** for clearer distinction between similar resources
 - **Enhanced handling of nested properties** to avoid accidental overwriting
-- **Better state management** with the removal of unnecessary `__inputs` fields
+- **Better state management** with the removal of unnecessary `__inputs` fields (most noticeable with large stacks)
 
 ## Understanding Azure Versioning
 
@@ -298,7 +305,7 @@ For language-specific installation instructions, see our [Azure Native setup gui
 
 ## Conclusion
 
-Azure Native V3 represents a significant step forward in our mission to provide the best possible developer experience for cloud infrastructure. By dramatically reducing SDK size while maintaining flexibility for version management, it now easier to build and deploy Azure resources with Pulumi.
+Azure Native V3 represents a significant step forward in our mission to provide the best possible developer experience for cloud infrastructure. By dramatically reducing SDK size while maintaining flexibility for version management, it is now easier to build and deploy Azure resources with Pulumi.
 
 We'd like to thank our community for their valuable feedback throughout the development of V3. Your input helped shape this release, and we're excited to see what you'll build with it.
 
