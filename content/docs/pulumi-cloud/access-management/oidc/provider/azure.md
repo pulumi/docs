@@ -22,7 +22,6 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 
 ## Prerequisites
 
-* You must be an admin of your Pulumi organization.
 * You must have access in the Azure Portal to create and configure Microsoft Entra App registrations.
 
 {{< notes type="warning" >}}
