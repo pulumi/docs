@@ -6,7 +6,7 @@ h1: Lest privileged security for Pulumi IaC and ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Least Privilege Security
+        name: Least privilege security
         parent: iac-using-pulumi
         weight: 2
 ---
