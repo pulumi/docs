@@ -1,20 +1,19 @@
 ---
 title: Resource search
-title_tag: "Pulumi Insights: Resource search"
+title_tag: Resource search | Pulumi Insights
 h1: Resource search
 meta_desc: Documentation and query syntax for the Pulumi Insights search feature.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
-    parent: insights-home
-    weight: 4
-aliases:
-  - /docs/intro/insights/search/
-  - /docs/pulumi
-  - /docs/pulumi-cloud/insights/search/
+    parent: insights-resources
+    identifier: insights-resource-search
+    weight: 2
 ---
 
-Resource Search allows you to explore your resources, stacks and projects in detail.
+Resource Search gives you a powerful way to ask questions about your infrastructure using a structured query language. You can search across all stacks, projects, and cloud providers to find exactly what you're looking for—by tag, type, creation date, team, or even nested resource properties.
+
+Not sure how to write a query? Use [AI Assist](#ai-assist) to describe what you’re looking for in natural language—like *“show me all public S3 buckets”*—and let Pulumi generate the search syntax for you.
 
 ## Query Syntax
 
