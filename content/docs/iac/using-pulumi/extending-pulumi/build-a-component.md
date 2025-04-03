@@ -2349,6 +2349,10 @@ Pulumi also supports private repos in GitHub and GitLab. Pulumi will read standa
 
 {{< /notes >}}
 
+### Generating Local SDKs with pulumi install
+
+Once you've added an entry to the packages section of your Pulumi.yaml file, you can run `pulumi install` to generate a local SDK in your project. This command will process all packages listed in your Pulumi.yaml and create the necessary SDK files. Check in these files if you want fully reproducible builds, or add them to .gitignore if you prefer to regenerate them on each checkout. When using .gitignore, team members will need to run `pulumi install` after checkout to regenerate the SDK.
+
 ### Sharing via Pulumi Package
 
 Publishing a component as a Pulumi package makes it easier to distribute and integrate into Pulumi workflows. This method enables community contributions and ensures that infrastructure components remain modular and maintainable. By packaging the component, it becomes easier to reuse across teams and projects, improving consistency and efficiency in infrastructure management. It also makes your component available for use within Pulumi Cloud Deployments.
