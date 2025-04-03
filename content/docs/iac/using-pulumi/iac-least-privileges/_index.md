@@ -21,7 +21,7 @@ Given this capability, developers with direct access to execute IaC code inheren
 
 ## Balancing Developer Access Across Environments
 
-Clearly differentiate developer access between environments to balance security with productivity:
+To balance security with developer productivity, clearly differentiate access between environments:
 
 ### Development and Test Environments:
 
