@@ -15,6 +15,8 @@ Pulumi ESC Rotators enable you to rotate credentials both automatically and manu
 
 To learn how to set up and use each rotator, follow the links below. To learn how to configure OpenID Connect (OIDC) for the rotators that support it, see [OpenID Connect integration](/docs/pulumi-cloud/oidc/) in the Pulumi Cloud documentation.
 
-| Rotator                                                                        | Description                                                                                                                     |
-|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| [aws-iam](/docs/esc/integrations/rotated-secrets/aws-iam/)                     | The `aws-iam` rotator enables you rotate access credentials for an AWS IAM User.                                                |
+| Rotator                                                      | Description                                                                                                  |
+|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| [aws-iam](/docs/esc/integrations/rotated-secrets/aws-iam/)   | The `aws-iam` rotator enables you rotate access credentials for an AWS IAM User.                             |
+| [mysql](/docs/esc/integrations/rotated-secrets/mysql/)       | The `mysql` rotator enables you to rotate user credentials for a MySQL database in your Environment.         |
+| [postgres](/docs/esc/integrations/rotated-secrets/postgres/) | The `postgres` rotator enables you to rotate user credentials for a PostgreSQL database in your Environment. |
