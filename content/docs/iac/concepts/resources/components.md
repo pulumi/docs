@@ -22,7 +22,7 @@ Pulumi Components enable you to create, share, and consume reusable infrastructu
 Here are a few examples of component resources:
 
 - A `Vpc` that automatically comes with built-in best practices.
-- An `AcmeCorpVirtualMachine` that adheres to your company’s requirements, such as tagging.
+- An `AcmeCorpVirtualMachine` that adheres to your company's requirements, such as tagging.
 - A `KubernetesCluster` that can create EKS, AKS, and GKE clusters, depending on the target.
 
 The implicit `pulumi:pulumi:Stack` resource is itself a component resource that contains all top-level resources in a program.
@@ -31,7 +31,7 @@ The implicit `pulumi:pulumi:Stack` resource is itself a component resource that 
 
 To author a new component, either in a program or for a reusable library, create a subclass of [`ComponentResource`](/docs/reference/pkg/python/pulumi/#pulumi.ComponentResource). Inside of its constructor, chain to the base constructor, passing its type string, name, arguments, and options. Also inside of its constructor, allocate any child resources, passing the [`parent`](/docs/concepts/options/parent) option as appropriate to ensure component resource children are parented correctly.
 
-Here’s a simple component example:
+Here's a simple component example:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
@@ -79,7 +79,6 @@ func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponen
     if err != nil {
         return nil, err
     }
-
     return myComponent, nil
 }
 ```
@@ -93,10 +92,6 @@ class MyComponent : Pulumi.ComponentResource
     public MyComponent(string name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts)
         : base("pkg:index:MyComponent", name, opts)
     {
-        // initialization logic.
-
-        // Signal to the UI that this resource has completed construction.
-        this.RegisterOutputs();
     }
 }
 ```
@@ -111,10 +106,6 @@ import com.pulumi.resources.ComponentResourceOptions;
 class MyComponent extends ComponentResource {
     public MyComponent(String name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts) {
         super("pkg:index:MyComponent", name, null, opts);
-        // initialization logic.
-
-        // Signal to the UI that this resource has completed construction.
-        this.registerOutputs();
     }
 }
 ```
@@ -123,9 +114,9 @@ class MyComponent extends ComponentResource {
 
 {{< /chooser >}}
 
-Upon creating a new instance of MyComponent, the call to the base constructor (using `super/base`) registers the component resource instance with the Pulumi engine. This records the resource’s state and tracks it across program deployments so that you see diffs during updates just like with a regular resource (even though component resources have no provider logic associated with them). Since all resources must have a name, a component resource constructor should accept a name and pass it to super.
+Upon creating a new instance of MyComponent, the call to the base constructor (using `super/base`) registers the component resource instance with the Pulumi engine. This records the resource's state and tracks it across program deployments so that you see diffs during updates just like with a regular resource (even though component resources have no provider logic associated with them). Since all resources must have a name, a component resource constructor should accept a name and pass it to super.
 
-If you wish to have full control over one of the custom resource’s lifecycle in your component resource—including running specific code when a resource has been updated or deleted—you should look into [`dynamic providers`](/docs/concepts/resources/dynamic-providers). These let you create full-blown resource abstractions in your language of choice.
+If you wish to have full control over one of the custom resource's lifecycle in your component resource—including running specific code when a resource has been updated or deleted—you should look into [`dynamic providers`](/docs/concepts/resources/dynamic-providers). These let you create full-blown resource abstractions in your language of choice.
 
 A component resource must register a unique type name with the base constructor. In the example, the registration is `pkg:index:MyComponent`. To reduce the potential of other type name conflicts, this name contains the package and module name, in addition to the type: `<package>:<module>:<type>`. These names are namespaced alongside non-component resources, such as aws:lambda:Function.
 
@@ -133,7 +124,7 @@ For more information about component resources, see the [Pulumi Components tutor
 
 ## Creating Child Resources
 
-Component resources often contain child resources. The names of child resources are often derived from the component resources’s name to ensure uniqueness. For example, you might use the component resource’s name as a prefix. Also, when constructing a resource, children must be registered as such. To do this, pass the component resource itself as the `parent` option.
+Component resources often contain child resources. The names of child resources are often derived from the component resources's name to ensure uniqueness. For example, you might use the component resource's name as a prefix. Also, when constructing a resource, children must be registered as such. To do this, pass the component resource itself as the `parent` option.
 
 This example demonstrates both the naming convention and how to designate the component resource as the parent:
 
@@ -142,53 +133,121 @@ This example demonstrates both the naming convention and how to designate the co
 {{% choosable language javascript %}}
 
 ```javascript
-let bucket = new aws.s3.BucketV2(`${name}-bucket`,
-    {/*...*/}, { parent: this });
+class MyComponent extends pulumi.ComponentResource {
+    constructor(name, myComponentArgs, opts) {
+        super("pkg:index:MyComponent", name, {}, opts);
+
+        // Create Child Resource
+        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
+            {}, { parent: this });
+    }
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-let bucket = new aws.s3.BucketV2(`${name}-bucket`,
-    {/*...*/}, { parent: this });
+class MyComponent extends pulumi.ComponentResource {
+    bucket: aws.s3.BucketV2;
+
+    constructor(name: string, myComponentArgs: MyComponentArgs, opts: pulumi.ComponentResourceOptions) {
+        super("pkg:index:MyComponent", name, {}, opts);
+
+        // Create Child Resource
+        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
+            {}, { parent: this });
+    }
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-bucket = s3.BucketV2(f"{name}-bucket",
-    opts=pulumi.ResourceOptions(parent=self))
+class MyComponent(pulumi.ComponentResource):
+    def __init__(self, name, my_component_args, opts = None):
+        super().__init__('pkg:index:MyComponent', name, None, opts)
+
+        # Create Child Resource
+        self.bucket = s3.BucketV2(f"{name}-bucket",
+            opts=pulumi.ResourceOptions(parent=self))
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name),
-    &s3.BucketV2Args{ /*...*/ }, pulumi.Parent(myComponent))
+type MyComponent struct {
+    pulumi.ResourceState
+    Bucket *s3.BucketV2
+}
+
+func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponentArgs, opts ...pulumi.ResourceOption) (*MyComponent, error) {
+    myComponent := &MyComponent{}
+    err := ctx.RegisterComponentResource("pkg:index:MyComponent", name, myComponent, opts...)
+    if err != nil {
+        return nil, err
+    }
+
+    // Create Child Resource
+    bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name),
+        &s3.BucketV2Args{}, pulumi.Parent(myComponent))
+    if err != nil {
+        return nil, err
+    }
+    myComponent.Bucket = bucket
+
+    return myComponent, nil
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-var bucket = new Aws.S3.BucketV2($"{name}-bucket",
-    new Aws.S3.BucketV2Args(/*...*/), new CustomResourceOptions { Parent = this });
+class MyComponent : Pulumi.ComponentResource
+{
+    public Aws.S3.BucketV2 Bucket { get; private set; }
+
+    public MyComponent(string name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts)
+        : base("pkg:index:MyComponent", name, opts)
+    {
+        // Create Child Resource
+        this.Bucket = new Aws.S3.BucketV2($"{name}-bucket",
+            new Aws.S3.BucketV2Args(), new CustomResourceOptions { Parent = this });
+    }
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language java %}}
 
 ```java
-var bucket = new BucketV2(String.format("%s-bucket", name),
-    BucketV2Args.builder()
-    ...
-    .build(),
-    CustomResourceOptions.builder()
-    .parent(this)
-    .build());
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.BucketV2Args;
+import com.pulumi.resources.CustomResourceOptions;
+
+class MyComponent extends ComponentResource {
+    private final BucketV2 bucket;
+
+    public MyComponent(String name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts) {
+        super("pkg:index:MyComponent", name, null, opts);
+
+        // Create Child Resource
+        this.bucket = new BucketV2(String.format("%s-bucket", name),
+            BucketV2Args.builder().build(),
+            CustomResourceOptions.builder()
+                .parent(this)
+                .build());
+    }
+
+    public BucketV2 bucket() {
+        return this.bucket;
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -199,77 +258,170 @@ var bucket = new BucketV2(String.format("%s-bucket", name),
 
 Component resources can define their own output properties by using register_outputs . The Pulumi engine uses this information to display the logical outputs of the component resource and any changes to those outputs will be shown during an update.
 
-For example, this code registers an S3 bucket’s computed domain name, which won’t be known until the bucket is created:
+For example, this code registers an S3 bucket's computed domain name, which won't be known until the bucket is created:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-this.registerOutputs({
-    bucketDnsName: bucket.bucketDomainName,
-})
+class MyComponent extends pulumi.ComponentResource {
+    constructor(name, myComponentArgs, opts) {
+        super("pkg:index:MyComponent", name, {}, opts);
+
+        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
+            {}, { parent: this });
+
+        // Registering Component Outputs
+        this.registerOutputs({
+            bucketDnsName: this.bucket.bucketDomainName
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-this.registerOutputs({
-    bucketDnsName: bucket.bucketDomainName,
-})
+class MyComponent extends pulumi.ComponentResource {
+    bucket: aws.s3.BucketV2;
+
+    constructor(name: string, myComponentArgs: MyComponentArgs, opts: pulumi.ComponentResourceOptions) {
+        super("pkg:index:MyComponent", name, {}, opts);
+
+        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
+            {}, { parent: this });
+
+        // Registering Component Outputs
+        this.registerOutputs({
+            bucketDnsName: this.bucket.bucketDomainName
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-self.register_outputs({
-    "bucketDnsName": bucket.bucketDomainName
-})
+class MyComponent(pulumi.ComponentResource):
+    def __init__(self, name, my_component_args, opts = None):
+        super().__init__('pkg:index:MyComponent', name, None, opts)
+
+        self.bucket = s3.BucketV2(f"{name}-bucket",
+            opts=pulumi.ResourceOptions(parent=self))
+
+        # Registering Component Outputs
+        self.register_outputs({
+            "bucketDnsName": self.bucket.bucketDomainName
+        })
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-ctx.RegisterResourceOutputs(myComponent, pulumi.Map{
-    "bucketDnsName": bucket.BucketDomainName,
-})
+type MyComponent struct {
+    pulumi.ResourceState
+    Bucket *s3.BucketV2
+}
+
+func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponentArgs, opts ...pulumi.ResourceOption) (*MyComponent, error) {
+    myComponent := &MyComponent{}
+    err := ctx.RegisterComponentResource("pkg:index:MyComponent", name, myComponent, opts...)
+    if err != nil {
+        return nil, err
+    }
+
+    bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name),
+        &s3.BucketV2Args{}, pulumi.Parent(myComponent))
+    if err != nil {
+        return nil, err
+    }
+    myComponent.Bucket = bucket
+
+    //Registering Component Outputs
+    ctx.RegisterResourceOutputs(myComponent, pulumi.Map{
+        "bucketDnsName": bucket.BucketDomainName,
+    })
+
+    return myComponent, nil
+}
+
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-this.RegisterOutputs(new Dictionary<string, object>
+class MyComponent : Pulumi.ComponentResource
 {
-    { "bucketDnsName", bucket.BucketDomainName }
-});
+    public Aws.S3.BucketV2 Bucket { get; private set; }
+
+    public MyComponent(string name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts)
+        : base("pkg:index:MyComponent", name, opts)
+    {
+
+        this.Bucket = new Aws.S3.BucketV2($"{name}-bucket",
+            new Aws.S3.BucketV2Args(), new CustomResourceOptions { Parent = this });
+
+        // Registering Component Outputs
+        this.RegisterOutputs(new Dictionary<string, object>
+        {
+            { "bucketDnsName", Bucket.BucketDomainName }
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
 {{% choosable language java %}}
 
 ```java
-this.registerOutputs(Map.of(
-    "bucketDnsName", bucket.bucketDomainName()
-));
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.BucketV2Args;
+import com.pulumi.resources.CustomResourceOptions;
+
+class MyComponent extends ComponentResource {
+    private final BucketV2 bucket;
+
+    public MyComponent(String name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts) {
+        super("pkg:index:MyComponent", name, null, opts);
+
+        this.bucket = new BucketV2(String.format("%s-bucket", name),
+            BucketV2Args.builder().build(),
+            CustomResourceOptions.builder()
+                .parent(this)
+                .build());
+
+        // Registering Component Outputs
+        this.registerOutputs(Map.of(
+            "bucketDnsName", bucket.bucketDomainName()
+        ));
+    }
+
+    public BucketV2 bucket() {
+        return this.bucket;
+    }
+}
 ```
 
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-The call to `registerOutputs` typically happens at the very end of the component resource’s constructor.
+The call to `registerOutputs` typically happens at the very end of the component resource's constructor.
 
-The call to `registerOutputs` also tells Pulumi that the resource is done registering children and should be considered fully constructed, so—although it’s not enforced—the best practice is to call it in all components even if no outputs need to be registered.
+The call to `registerOutputs` also tells Pulumi that the resource is done registering children and should be considered fully constructed, so—although it's not enforced—the best practice is to call it in all components even if no outputs need to be registered.
 
 ## Inheriting Resource Providers
 
 One option all resources have is the ability to pass an [explicit resource provider](/docs/concepts/resources/providers/) to supply explicit configuration settings. For instance, you may want to ensure that all AWS resources are created in a different region than the globally configured region. In the case of component resources, the challenge is that these providers must flow from parent to children.
 
-To allow this, component resources accept a `providers` option that custom resources don’t have. This value contains a map from the provider name to the explicit provider instance to use for the component resource. The map is used by a component resource to fetch the proper `provider` object to use for any child resources. This example overrides the globally configured AWS region and sets it to us-east-1. Note that `myk8s` is the name of the Kubernetes provider.
+To allow this, component resources accept a `providers` option that custom resources don't have. This value contains a map from the provider name to the explicit provider instance to use for the component resource. The map is used by a component resource to fetch the proper `provider` object to use for any child resources. This example overrides the globally configured AWS region and sets it to us-east-1. Note that `myk8s` is the name of the Kubernetes provider.
 
 {{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
@@ -518,12 +670,12 @@ pulumi package add github.com/myorg/my-component@v1.0.0
 Under the hood, Pulumi:
 
 - Fetches your code from GitHub
-- Generates a local SDK from the component’s schema
+- Generates a local SDK from the component's schema
 - Makes the generated SDK available to your Pulumi program in your chosen language
 
 #### Referencing Components Locally
 
-For scenarios like monorepos, rapid development iterations, or when you’re working with components that don’t need to be published to a repository, you can reference local source code directly:
+For scenarios like monorepos, rapid development iterations, or when you're working with components that don't need to be published to a repository, you can reference local source code directly:
 
 ```bash
 pulumi package add /path/to/local/secure-s3-component
