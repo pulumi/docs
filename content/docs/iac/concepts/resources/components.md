@@ -158,8 +158,13 @@ let bucket = new aws.s3.BucketV2(`${name}-bucket`,
 {{% choosable language python %}}
 
 ```python
-bucket = s3.BucketV2(f"{name}-bucket",
-    opts=pulumi.ResourceOptions(parent=self))
+class MyComponent(pulumi.ComponentResource):
+    def __init__(self, name, my_component_args, opts = None):
+        super().__init__('pkg:index:MyComponent', name, None, opts)
+
+        # Create Child Resource
+        self.bucket = s3.BucketV2(f"{name}-bucket",
+            opts=pulumi.ResourceOptions(parent=self))
 ```
 
 {{% /choosable %}}
@@ -224,8 +229,17 @@ this.registerOutputs({
 {{% choosable language python %}}
 
 ```python
-self.register_outputs({
-    "bucketDnsName": bucket.bucketDomainName
+class MyComponent(pulumi.ComponentResource):
+    def __init__(self, name, my_component_args, opts = None):
+        super().__init__('pkg:index:MyComponent', name, None, opts)
+
+        # Create Child Resource
+        self.bucket = s3.BucketV2(f"{name}-bucket",
+            opts=pulumi.ResourceOptions(parent=self))
+
+        # Registering Component Outputs
+        self.register_outputs({
+            "bucketDnsName": bucket.bucketDomainName
 })
 ```
 
