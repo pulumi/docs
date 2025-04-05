@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # A script that facilitates generating resource docs using the tools/resourcedocsgen Go-based
 # tool. This script optionally allows passing the provider name (without the "pulumi-" prefix.)
 
