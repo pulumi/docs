@@ -984,6 +984,8 @@ Duration: 10s
 
 Now test out your new website -- it works like before, just with a tidier codebase now!
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
 $ curl $(pulumi stack output url)
 <html>
@@ -992,6 +994,21 @@ $ curl $(pulumi stack output url)
     </body>
 </html>
 ```
+
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+```powershell
+> curl (pulumi stack output url)
+<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>
+```
+
+{{% /choosable %}}
 
 Once you are ready to move on, let's destroy everything we've spun up in this tutorial.
 

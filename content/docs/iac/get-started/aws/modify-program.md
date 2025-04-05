@@ -489,9 +489,20 @@ that AWS assigns at deployment time, not a raw string, meaning its value isn't k
 
 To deploy the changes, run `pulumi up` again and it will figure out the deltas:
 
+{{% choosable "os" "macos,linux" %}}
+
 ```bash
 $ pulumi up
 ```
+
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi up
+```
+
+{{% /choosable %}}
 
 Just like the first time you will see a preview of the changes before they happen:
 
@@ -544,13 +555,25 @@ Duration: 8s
 
 In just a few seconds, your new website will be ready. Curl the endpoint to see it live:
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
 $ curl $(pulumi stack output url)
 ```
 
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+```powershell
+> curl (pulumi stack output url)
+```
+
+{{% /choosable %}}
+
 This will reveal your new website!
 
-```bash
+```
 <html>
     <body>
         <h1>Hello, Pulumi!</h1>

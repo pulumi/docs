@@ -22,9 +22,21 @@ Our final step is to clean up all of the resources we've allocated in this tutor
 
 Run the `pulumi destroy` command to delete all cloud resources in this project/stack:
 
+{{% choosable os "linux,macos" %}}
+
 ```bash
 $ pulumi destroy
 ```
+
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi destroy
+```
+
+{{% /choosable %}}
 
 Just like `pulumi up`, you'll be shown a preview to ensure that you want to proceed:
 

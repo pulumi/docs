@@ -87,6 +87,8 @@ however, so the update will finish in just a few seconds.
 The bucket ID can be accessed with the `pulumi stack output` command. You can use this to easily list
 the contents of your new bucket -- which of course will be empty:
 
+{{% choosable os "linux,macos" %}}
+
 {{% choosable language "javascript,typescript,go,csharp,java,yaml" %}}
 
 ```bash
@@ -100,6 +102,28 @@ $ aws s3 ls s3://$(pulumi stack output bucketName)
 ```bash
 $ aws s3 ls s3://$(pulumi stack output bucket_name)
 ```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+{{% choosable language "javascript,typescript,go,csharp,java,yaml" %}}
+
+```powershell
+$ aws s3 ls ("s3://" + (pulumi stack output bucketName))
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```powershell
+$ aws s3 ls ("s3://" + (pulumi stack output bucket_name))
+```
+
+{{% /choosable %}}
 
 {{% /choosable %}}
 
