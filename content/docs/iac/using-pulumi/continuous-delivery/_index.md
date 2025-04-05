@@ -8,7 +8,7 @@ menu:
     iac:
         name: Continuous delivery
         parent: iac-using-pulumi
-        weight: 5
+        weight: 6
         identifier: iac-using-pulumi-cicd
 aliases:
 - /docs/reference/cd/

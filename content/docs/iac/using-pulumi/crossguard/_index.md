@@ -9,7 +9,7 @@ menu:
     iac:
         name: Policy as code
         parent: iac-using-pulumi
-        weight: 3
+        weight: 4
         identifier: iac-using-pulumi-policy
 aliases:
 - /docs/guides/crossguard/
