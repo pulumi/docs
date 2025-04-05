@@ -99,7 +99,7 @@ To define a new component, create a class called `AwsS3Website` that derives fro
 constructor to start with but you will add the AWS S3 resources to it in the next step. You'll also define the inputs for the
 component -- the `files` to add to the website -- and outputs -- a single property with the website `url`.
 
-To get going, open a new file {{< compfile >}} alongside {{< langfile >}} and add the following:
+To get going, create a new file {{< compfile >}} alongside {{< langfile >}} and add the following:
 
 {{% choosable language javascript %}}
 
@@ -286,7 +286,7 @@ This defines a component but it doesn't do much yet.
 Next, make four changes:
 
 1. Move all resources from {{< langfile >}} ino the component's constructor
-2. Change each to use the component [as the `parent`](/docs/iac/concepts/options/parent/)
+2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/options/parent/)
 3. Generalize the creation of bucket objects by looping over the list of `files`
 4. Assign the resulting website URL to the `url` property of the component
 

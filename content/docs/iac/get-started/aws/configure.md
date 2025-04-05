@@ -28,7 +28,7 @@ Pulumi's CLI needs access to your AWS account to manage cloud resources.
 
 If you've already <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html" target="_blank">installed</a> and <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html" target="_blank">configured</a> the AWS CLI, Pulumi will respect and use your configuration settings.
 
-You must use an IAM user account that has [programmatic access](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html) with rights to deploy and manage the resources used throughout this tutorial.
+You must use an IAM user account that has [programmatic access](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html) with rights to deploy and manage S3 buckets.
 
 ### Testing access
 
