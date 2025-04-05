@@ -27,8 +27,8 @@ your code and then re-run `pulumi up` which will update your infrastructure.
 
 ### Add new resources
 
-Pulumi knows how to evolve your current infrastructure to your project, both for the first deployment
-as well as subseuqent updates.
+Pulumi knows how to evolve your current infrastructure to your project's new desired state, both for
+the first deployment as well as subseuqent updates.
 
 To turn your bucket into a static website, start by adding three new AWS S3 resources:
 

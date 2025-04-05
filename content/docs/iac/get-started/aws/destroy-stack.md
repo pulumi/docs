@@ -95,4 +95,21 @@ The final step is to remove the stack itself. Destroy keeps the stack around so 
 history of what happened to the stack. Running [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm) will
 delete it entirely, including all history and state snapshots. Be careful, this step cannot be undone!
 
+{{% choosable "os" "macos,linux" %}}
+
+```bash
+$ pulumi stack rm
+```
+
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi stack rm
+```
+
+{{% /choosable %}}
+
+You'll be prompted to confirm the removal. Confirm it to successfully complete this tutorial.
+
 {{< get-started-stepper >}}

@@ -946,7 +946,7 @@ you'll see that your old resources are being destroyed.
 {{% notes type="info" %}}
 
 If you're wondering why Pulumi didn't simply update the resources in place, it's because certain changes -- like
-refactoring resources into a component -- fundamentally changes a resource's identity. Many changes like updating
+refactoring resources into a component -- fundamentally change a resource's identity. Many changes like updating
 properties or moving resources between files are not disruptive like this. It such cases, you can assign
 [aliases](/docs/iac/concepts/options/aliases/) to prevent deletions from happening.
 
