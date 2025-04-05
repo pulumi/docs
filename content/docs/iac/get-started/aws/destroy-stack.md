@@ -1,24 +1,32 @@
 ---
 title_tag: Destroy the Stack | AWS
 title: Destroy stack
-h1: "Pulumi & AWS: Destroy stack"
+h1: "Get started with Pulumi and AWS"
 meta_desc: This page provides an overview of how to destroy a Pulumi stack of an AWS project.
 weight: 8
+menu:
+    iac:
+        name: Cleanup & destroy
+        parent: aws-get-started
+        weight: 8
+
 aliases:
 - /docs/quickstart/aws/destroy-stack/
 - /docs/get-started/aws/destroy-stack/
 - /docs/clouds/aws/get-started/destroy-stack/
 ---
 
-Now that you've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of your stack.
+## Cleanup & destroy the stack
 
-To destroy resources, run the following:
+Our final step is to clean up all of the resources we've allocated in this tutorial.
+
+Run the `pulumi destroy` command to delete all cloud resources in this project/stack:
 
 ```bash
 $ pulumi destroy
 ```
 
-You'll be prompted to make sure you really want to delete these resources. This can take a minute or two; Pulumi waits until all resources are shut down and deleted before it considers the destroy operation to be complete.
+Just like `pulumi up`, you'll be shown a preview to ensure that you want to proceed:
 
 ```
 Previewing destroy (dev):
@@ -38,7 +46,15 @@ Outputs:
 Resources:
     - 5 to delete
 
-Do you want to perform this destroy? yes
+Do you want to perform this destroy?
+> yes
+  no
+  details
+```
+
+As with an update, we can choose `no` or `details`; select `yes` to proceed:
+
+```
 Destroying (dev):
 
      Type                                    Name                 Status
@@ -59,16 +75,12 @@ Resources:
 Duration: 4s
 ```
 
-> To delete the stack itself, run [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm). Note that this removes the stack entirely from Pulumi Cloud, along with all of its update history.
+At this stage, your stack still exists, but all cloud resources have been deleted from it.
 
-Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
+## Remove the stack
 
-- Created a Pulumi new project.
-- Provisioned a new S3 bucket.
-- Added an `index.html` file to your bucket.
-- Served the `index.html` as a static website.
-- Destroyed the resources you've provisioned.
-
-On the next page, we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
+The final step is to remove the stack itself. Destroy keeps the stack around so that you still have the full
+history of what happened to the stack. Running [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm) will
+delete it entirely, including all history and state snapshots. Be careful, this step cannot be undone!
 
 {{< get-started-stepper >}}
