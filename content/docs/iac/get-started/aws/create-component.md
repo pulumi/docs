@@ -306,7 +306,11 @@ class AwsS3Website extends pulumi.ComponentResource {
         super("quickstart:index:AwsS3Website", name, args, opts);
 
         // Create an AWS resource (S3 Bucket)
-        const bucket = new aws.s3.BucketV2("my-bucket", {}, { parent: this });
+        const bucket = new aws.s3.BucketV2("my-bucket", {}, {
+            // Set the parent to the component (step #2) above.
+            // Also, do the same for all other resources below.
+            parent: this,
+        });
 
         // Turn the bucket into a website:
         const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
@@ -375,7 +379,11 @@ export class AwsS3Website extends pulumi.ComponentResource {
         super("quickstart:index:AwsS3Website", name, args, opts);
 
         // Create an AWS resource (S3 Bucket)
-        const bucket = new aws.s3.BucketV2("my-bucket", {}, { parent: this });
+        const bucket = new aws.s3.BucketV2("my-bucket", {}, {
+            // Set the parent to the component (step #2) above.
+            // Also, do the same for all other resources below.
+            parent: this,
+        });
 
         // Turn the bucket into a website:
         const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
@@ -435,6 +443,8 @@ class AwsS3Website(pulumi.ComponentResource):
 
         # Create an AWS resource (S3 Bucket)
         bucket = s3.BucketV2('my-bucket',
+            # Set the parent to the component (step #2) above.
+            # Also, do the same for all other resources below.
             opts=pulumi.ResourceOptions(parent=self),
         )
 
@@ -513,7 +523,10 @@ func NewAwsS3Website(ctx *pulumi.Context, name string, args AwsS3WebsiteArgs, op
 	}
 
 	// Create an AWS resource (S3 Bucket)
-	bucket, err := s3.NewBucketV2(ctx, "my-bucket", nil, pulumi.Parent(self))
+	bucket, err := s3.NewBucketV2(ctx, "my-bucket", nil,
+		// Set the parent to the component (step #2) above.
+		// Also, do the same for all other resources below.
+		pulumi.Parent(self))
 	if err != nil {
 		return nil, err
 	}
@@ -597,6 +610,8 @@ public class AwsS3Website : Pulumi.ComponentResource
         // Create an AWS resource (S3 Bucket)
         var bucket = new BucketV2("my-bucket", new(), new CustomResourceOptions
         {
+            // Set the parent to the component (step #2) above.
+            // Also, do the same for all other resources below.
             Parent = this,
         });
 
@@ -700,6 +715,8 @@ class AwsS3Website extends ComponentResource {
 
         // Create an AWS resource (S3 Bucket)
         var bucket = new BucketV2("my-bucket", null,
+            // Set the parent to the component (step #2) above.
+            // Also, do the same for all other resources below.
             CustomResourceOptions.builder().parent(this).build());
 
         // Turn the bucket into a website:
@@ -758,8 +775,6 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 {{% /notes %}}
 
 {{% /choosable %}}
-
-Ensure the original resources are deleted from the {{< langfile >}} so there aren't any duplicates.
 
 ### Instantiate the component
 
