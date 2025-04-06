@@ -88,7 +88,7 @@ pulumi:autonaming:
   pattern: ${project}-${stack}-${name}${alphanum(6)}
 ```
 
-See the [auto-naming configuration documentation](/docs/concepts/resources/names/#auto-naming-configuration) to see the full list of available expressions.
+See the [auto-naming configuration documentation](/docs/concepts/resources/names/#autonaming-configuration) to see the full list of available expressions.
 
 ## See It In Action
 
