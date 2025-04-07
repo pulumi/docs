@@ -33,7 +33,7 @@ For Pulumi programs specifically written in Pulumi YAML, the project file not on
 | `runtime` | required | Installed language runtime of the project: `nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`. | [runtime options](#runtime-options)
 | `description` | optional | A brief description of the project. | None |
 | `config` | optional | Project level config (Added in v3.44). | [config options](#config-options) |
-| `packages` | optional | Additional packages to be used in the program (Added in v3.157.0 | [packages](#packages-options) |
+| `packages` | optional | Additional packages to be used in the program (Added in v3.157.0.) | [packages](#packages-options) |
 | `main` | optional | Path to the Pulumi program, relative to the location of `Pulumi.yaml`. The default is the current working directory. | None |
 | `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None |
 | `backend` | optional | [Backend](/docs/concepts/state/) of the project. | [backend options](#backend-options) |
