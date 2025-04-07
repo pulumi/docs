@@ -1,5 +1,5 @@
 ---
-title: "Supercharge Your Infrastructure Workflow: AI-Assisted IaC with Pulumi's Model Context Protocol Server"
+title: "AI-Assisted Infrastructure as Code with Pulumi's Model Context Protocol Server"
 date: 2025-04-07
 draft: false
 allow_long_title: true
@@ -21,34 +21,31 @@ Infrastructure as Code (IaC) has revolutionized how we manage cloud resources, b
 
 <!--more-->
 
-This is where the **Pulumi Model Context Protocol (MCP) Server integration** shines. By connecting AI-powered code assistants with Pulumi's CLI and registry, we can bring real-time resource information and infrastructure management directly into the development environment, dramatically reducing friction and accelerating workflows.
+This is where the **Pulumi Model Context Protocol (MCP) Server integration** shines. MCP is a specification that allows language models (like the AI in your coding assistant) to interact with external tools and data sources in a structured way. By connecting AI-powered code assistants with Pulumi's CLI and registry via MCP, we can bring real-time resource information and infrastructure management directly into the development environment, dramatically reducing friction and accelerating workflows.
 
 Several AI coding assistants like GitHub Copilot, Anthropic's Claude Code, Windsurf and others are rapidly evolving; this post will use **Cursor** (an AI-first code editor) to demonstrate a real-world example of this synergy in action.
 
 ## Setting up the Pulumi MCP Integration in Cursor
 
-Before diving in, you typically need to configure your AI assistant to communicate with the Pulumi MCP server. In Cursor, this involves:
+Before diving in, you typically need to configure your AI assistant to communicate with the Pulumi MCP server. In Cursor, you create a configuration file named `mcp.json` within the `.cursor` directory in your project's root.
 
-1. Creating a configuration file named `mcp.json` within the `.cursor` directory in your project's root.
-2. Populating `mcp.json` with the necessary endpoint and authentication details for the Pulumi MCP server.
-
-    ```json
-    {
-        "mcpServers": {
-            "pulumi": {
-                "type": "stdio",
-                "command": "npx",
-                "args": ["@pulumi/mcp-server"]
-            }
+```json
+{
+    "mcpServers": {
+        "pulumi": {
+            "type": "stdio",
+            "command": "npx",
+            "args": ["@pulumi/mcp-server"]
         }
     }
-    ```
+}
+```
 
 3. Validating the connection within the assistant's settings (e.g., Cursor has a dedicated section to check the MCP connection status).
 
     ![Cursor MCP Settings](cursor-mcp-settings.png)
 
-Once configured, the AI assistant can leverage Pulumi tools seamlessly.
+Once configured, the AI assistant can leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
 
 ## The Goal: Provisioning an AKS Cluster
 
@@ -79,7 +76,7 @@ This tight loop keeps the developer focused within their editor environment, min
 
 ### Step-by-Step Walkthrough
 
-Here’s how the AKS provisioning task played out:
+Here's how the AKS provisioning task played out:
 
 #### The Request
 
@@ -91,8 +88,8 @@ The developer starts with a natural language request to the AI assistant within 
 
 Instead of the developer manually searching docs, the AI assistant leverages the MCP integration.
 
-- It first queries the Pulumi Registry via MCP to list resources within the Azure Native provider's `containerservice` module (using the `pulumi_registry_listResources` tool). This immediately identified `ManagedCluster` as the relevant resource.
-- It then requested detailed information *specifically* for `ManagedCluster` (using `pulumi_registry_getResource`), directly retrieving its required properties, descriptions, and structure without leaving the editor.
+- The AI assistant first queries the Pulumi Registry via MCP to list resources within the Azure Native provider's `containerservice` module (using the `pulumi_registry_listResources` tool). This immediately identified `ManagedCluster` as the relevant resource.
+- The AI assistant then requested detailed information *specifically* for `ManagedCluster` (using `pulumi_registry_getResource`), directly retrieving its required properties, descriptions, and structure without leaving the editor.
 
 ![Cursor calling Pulumi tools](registry-tools.png)
 
