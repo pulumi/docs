@@ -1,0 +1,9 @@
+id = "dimitry-figol"
+name = "Dimitry Figol"
+title = "Senior Cloud Infrastructure Architect"
+company= "AWS"
+status = "guest"
+role = "puluminary"
+[social]
+linkedin = "dmfigol"
+twitter = "dmfigol"
