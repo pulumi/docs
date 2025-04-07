@@ -142,8 +142,9 @@ jobs:
 - `pulumi/auth-actions` exchanges an OIDC token for a team-scoped Pulumi access token.
 - `pulumi/actions` executes `pulumi up` adhering to the assigned team permissions.
 
-**Detailed documentation:**  
-[Pulumi GitHub Actions and OIDC Integration](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/github-actions/)
+**Detailed documentation:**
+[GitHub OIDC Setup](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/github/)
+[Pulumi GitHub Actions](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/github-actions/)
 
 ---
 
@@ -157,6 +158,8 @@ Pulumi integrates seamlessly with many other popular CI/CD platforms beyond GitH
 - **CircleCI**
 
 These platforms can also leverage secure OIDC authentication or token-based workflows tailored to your security needs.
+
+You can [lock down access to specific pipelines](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/#configure-the-authorization-policies) using the `sub`, `aud`, and custom claims coming from your CI/CD provider.
 
 Explore integrations and detailed setup guides here in our [Continuous Delivery documentation.](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/)
 
