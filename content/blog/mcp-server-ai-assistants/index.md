@@ -21,7 +21,7 @@ Infrastructure as Code (IaC) has revolutionized how we manage cloud resources, b
 
 <!--more-->
 
-This is where the **Pulumi Model Context Protocol (MCP) Server integration** shines. MCP is a specification that allows language models (like the AI in your coding assistant) to interact with external tools and data sources in a structured way. By connecting AI-powered code assistants with Pulumi's CLI and registry via MCP, we can bring real-time resource information and infrastructure management directly into the development environment, dramatically reducing friction and accelerating workflows.
+This is where the **Pulumi Model Context Protocol (MCP) Server integration** shines. [MCP](https://modelcontextprotocol.io) is a specification that allows language models (like the AI in your coding assistant) to interact with external tools and data sources in a structured way. By connecting AI-powered code assistants with Pulumi's CLI and registry via MCP, we can bring real-time resource information and infrastructure management directly into the development environment, dramatically reducing friction and accelerating workflows.
 
 Several AI coding assistants like GitHub Copilot, Anthropic's Claude Code, Windsurf and others are rapidly evolving; this post will use **Cursor** (an AI-first code editor) to demonstrate a real-world example of this synergy in action.
 
