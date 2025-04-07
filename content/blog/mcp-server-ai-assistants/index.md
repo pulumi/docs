@@ -89,7 +89,7 @@ The developer starts with a natural language request to the AI assistant within 
 Instead of the developer manually searching docs, the AI assistant leverages the MCP integration.
 
 - The AI assistant first queries the Pulumi Registry via MCP to list resources within the Azure Native provider's `containerservice` module (using the `pulumi_registry_listResources` tool). This immediately identified `ManagedCluster` as the relevant resource.
-- The AI assistant then requested detailed information *specifically* for `ManagedCluster` (using `pulumi_registry_getResource`), directly retrieving its required properties, descriptions, and structure without leaving the editor.
+- The AI assistant then requests detailed information *specifically* for `ManagedCluster` (using `pulumi_registry_getResource`), directly retrieving its required properties, descriptions, and structure without leaving the editor.
 
 ![Cursor calling Pulumi tools](registry-tools.png)
 
