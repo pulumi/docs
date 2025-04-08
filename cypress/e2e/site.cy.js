@@ -1,4 +1,11 @@
-// Handle uncaught exceptions from third-party scripts
+/**
+ * Handle uncaught exceptions from third-party scripts.
+ * 
+ * The vector.co pixel.js script throws an uncaught exception when it detects a cloud provider environment.
+ * This happens in the GitHub Actions runner but not locally, causing tests to fail in CI.
+ * 
+ * We catch and ignore this specific error while still allowing other legitimate errors to fail the tests.
+ */
 Cypress.on('uncaught:exception', (err) => {
     // Return false to prevent the error from failing the test
     if (err.message.includes('Cloud provider detected')) {
