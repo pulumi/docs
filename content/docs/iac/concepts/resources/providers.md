@@ -68,7 +68,7 @@ You can add a list of your named provider packages under the [`packages`](/docs/
 
 ```yaml
 packages:
-  random: # This is an arbitrary name
+  random:
     source: terraform-provider
     parameters:
       - hashicorp/random
