@@ -10,7 +10,7 @@ menu:
     weight: 6
 ---
 
-ESC rotators allow users to rotate credentials and secrets using ESC. These providers are accessed via the `fn::rotate` built-in function.
+ESC rotators allow users to rotate credentials and secrets using ESC. These rotators are accessed via the `fn::rotate` built-in function. The credentials provided by a rotator are expected to be statically available, and should only change when the environment is [rotated](/docs/esc/environments/rotation/).
 
 | Rotator                                                                        | Description                                                                                                                     |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|

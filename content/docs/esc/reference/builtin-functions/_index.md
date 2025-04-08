@@ -25,3 +25,27 @@ All function invocations take the form of an object with a single key that names
 - [`fn::toBase64`](/docs/esc/reference/builtin-functions/fn-to-base64)
 - [`fn::toJSON`](/docs/esc/reference/builtin-functions/fn-to-json)
 - [`fn::toString`](/docs/esc/reference/builtin-functions/fn-to-string)
+
+## Examples
+
+### Valid function invocation
+
+```yaml
+valid:
+  fn::join: [ " ", [ "hello", "world" ] ]
+```
+
+### Too many keys
+
+```yaml
+tooManyKeys:
+  fn::join: [ " ", [ "hello", "world" ] ]
+  fn::toString: { "hello": "world" }
+```
+
+### Unknown function
+
+```yaml
+unknownFunction:
+  fn::undefined: {}
+```

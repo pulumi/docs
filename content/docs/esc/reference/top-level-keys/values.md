@@ -5,16 +5,16 @@ h1: values
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   esc:
-    parent: esc-ref-top-level-properties
+    parent: esc-ref-top-level-keys
     identifier: esc-ref-values
     weight: 2
 ---
 
-The `values` top-level property defines the environment's values--i.e. the properties and values that the environment will produce when evaluated.
+The `values` top-level key defines the environment's values--i.e. the properties and values that the environment will produce when evaluated.
 
-The value of this property must be a mapping from static strings (property names) to ESC values.
+The value of this key must be a mapping from string literals (property names) to ESC values.
 
-ESC values include standard YAML values, [value references](/docs/esc/reference/value-references), and [function calls](/docs/esc/reference/builtin-functions).
+ESC values include standard YAML values, [interpolations and references](/docs/esc/reference/interpolations-and-references), and [function calls](/docs/esc/reference/builtin-functions).
 
 Here is an example definition that uses the `values` section:
 

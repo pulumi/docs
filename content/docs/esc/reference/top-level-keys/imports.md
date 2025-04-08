@@ -5,12 +5,12 @@ h1: imports
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   esc:
-    parent: esc-ref-top-level-properties
+    parent: esc-ref-top-level-keys
     identifier: esc-ref-imports
     weight: 1
 ---
 
-The `imports` top-level property is a list of other environments that this environment imports. Imported environments are evaluated and merged to form the basis for the current environment, which is then evaluated and merged with the imported values. Merging is performed using the [JSON Merge Patch](https://www.rfc-editor.org/rfc/rfc7386) algorithm.
+The `imports` top-level key is a list of other environments that this environment imports. Imported environments are evaluated and merged to form the basis for the current environment, which is then evaluated and merged with the imported values. Merging is performed using the [JSON Merge Patch](https://www.rfc-editor.org/rfc/rfc7386) algorithm.
 
 ## Environment names
 
@@ -31,4 +31,4 @@ imports:
   - auth-core: { merge: false } # Import "default/auth-core", but don't add it to the merge stack
 ```
 
-There is currently a single option, `merge`, which controls whether or not an imported environment is added to the merge stack. Unmerged imports are still available via the [`imports` built-in property](/docs/esc/reference/builtin-values/imports).
+There is currently a single option, `merge`, which controls whether or not an imported environment is added to the merge stack. Unmerged imports are still available via the [`imports` built-in key](/docs/esc/reference/builtin-values/imports).

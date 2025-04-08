@@ -5,12 +5,12 @@ h1: context
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   esc:
-    parent: esc-ref-builtin-values
+    parent: esc-ref-builtin-properties
     identifier: esc-ref-builtin-context
     weight: 1
 ---
 
-The `context` built-in value provides information about the user evaluting an ESC environment.
+The `context` built-in proeprty provides information about the user evaluting an ESC environment.
 
 ## Properties
 
