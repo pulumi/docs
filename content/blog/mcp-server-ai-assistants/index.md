@@ -1,6 +1,6 @@
 ---
 title: "AI-Assisted Infrastructure as Code with Pulumi's Model Context Protocol Server"
-date: 2025-04-07
+date: 2025-04-08
 draft: false
 allow_long_title: true
 meta_desc: Learn how integrating AI coding assistants like Cursor with Pulumi's Model Context Protocol (MCP) server can accelerate your IaC workflow, reducing context switching and improving developer experience.
