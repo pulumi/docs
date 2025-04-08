@@ -70,9 +70,13 @@ You can add a list of your named provider packages under the [`packages`](/docs/
 packages:
   random:
     source: terraform-provider
+    version: 0.10.0 # The version of terraform-provider in the Pulumi registry
     parameters:
       - hashicorp/random
+      - 3.7.1 # The version of hashicorp/random in the OpenTofu Registry
 ```
+
+The versions specified above are optional, but recommended in order to ensure consistent behavior on all systems.
 
 You can install any packages tracked in the project configuration file with the [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) command:
 
