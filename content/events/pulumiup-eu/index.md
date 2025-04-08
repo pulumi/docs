@@ -65,4 +65,12 @@ form:
     # HubSpot form id.
     hubspot_form_id:
     salesforce_campaign_id:
+
+event_data:
+  name: PulumiUP 2025 - Europe & Americas Edition
+  start_date: 2025-05-06T14:00:00+00:00
+  end_date: 2025-05-06T15:30:00+00:00
+  url: "https://www.pulumi.com/pulumi-up/"
+  description: |
+    Join our flagship virtual event to explore enterprise platform engineering stories, demos, and expert insights on automating infrastructure with Pulumi.
 ---
