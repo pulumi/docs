@@ -54,7 +54,7 @@ $ pulumi package add terraform-provider hashicorp/random
 In order to make sure Pulumi users are aware of the Any Terraform Provider's capabilities, Pulumi has included select, popular providers that can be consumed in Pulumi via the Any Terraform Provider in the Pulumi Registry, such as [The Honeycomb provider](/registry/packages/honeycombio/).
 {{% /notes %}}
 
-The generated SDK will include a `.gitignore` so it can be safely committed to version control without including all of the SDK's dependencies. The SDK contains instructions to download the provider binary to a shared (and cached) location on your local system outside of the working directory - the binary is not committed to version control.
+The generated SDK will include a `.gitignore` so it can be safely committed to version control without including all of the SDK's dependencies. The SDK installation process also downloads the provider binary to a shared location on your local system outside of the working directory. The binary is cached, so it will not need to be downloaded more than once, and is not committed to version control.
 
 #### Adding Provider Packages to the Project Configuration File
 
