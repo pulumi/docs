@@ -1,3 +1,13 @@
+// Handle uncaught exceptions from third-party scripts
+Cypress.on('uncaught:exception', (err) => {
+    // Return false to prevent the error from failing the test
+    if (err.message.includes('Cloud provider detected')) {
+        return false;
+    }
+    // Return true for other errors to fail the test
+    return true;
+});
+
 describe("www.pulumi.com", () => {
 
     describe("home page", () => {
