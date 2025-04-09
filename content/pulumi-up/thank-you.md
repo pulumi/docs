@@ -40,6 +40,40 @@ speakers:
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
 
+schedule:
+  heading: Schedule At A Glance
+  subheading: Get inspired! Dive into the stories and experiences of innovators and experts, from Startup Founders to Industry Leaders.
+  items:
+    - title: 
+      description:
+      time: "Europe & Americas"
+      time2: "Asia Pacific"
+
+    - title: A Lap Around Pulumi
+      description:
+      time: "9:00 AM ET"
+      time2: "4:00 PM PT"
+    
+    - title: Real-world Enterprise Platform Engineering Success Stories
+      description:
+      time: "9:40 AM ET"
+      time2: "4:40 PM PT"
+
+    - title: "Panel: From Infrastructure Engineering to Platform Engineering"
+      description:
+      time: "9:55 AM ET"
+      time2: "4:55 PM PT"
+
+    - title: Interactive Wrap Up
+      description:
+      time: "10:20 AM ET"
+      time2: "5:20 PM PT"
+
+    - title: End
+      description:
+      time: "10:30 AM ET"
+      time2: "5:30 PM PT"
+
 templates:
     items:
         - heading: Serverless AWS, Azure and Google Cloud Templates

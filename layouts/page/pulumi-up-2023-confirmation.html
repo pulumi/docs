@@ -12,6 +12,8 @@
 
     {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
 
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
+
     <section id="templates" class="container mx-auto my-16 text-center">
         <div class=" text-center mx-auto my-8">
             <h3>Pulumi Templates for Common Use Cases</h3>
