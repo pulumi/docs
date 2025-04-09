@@ -59,7 +59,7 @@ Security responsibilities can be organized in different ways depending on your o
 
 ### The Solution: Embedding Security into Developer Workflows
 
-The key to truly solving security friction, therefore, isn't just adding earlier checkpoints—it's embedding security directly into the platform and the daily workflows of your developers. Instead of treating security as a final hurdle or a complex new responsibility solely for developers, platform engineering integrates security early and continuously through secure-by-default components and automated guardrails. Let's explore how this looks in practice.
+The key to truly solving security friction, therefore, isn't just adding earlier checkpoints—it's embedding security directly into the platform and the daily workflows of your developers. Instead of treating security as a final hurdle or a complex new responsibility solely for developers, platform engineering integrates security early and continuously through secure-by-default components and automated guardrails. 
 
 Let's explore how this looks in practice.
 
@@ -87,80 +87,9 @@ For Example:
 
 Integrating Policy-as-Code into your platform makes security automated, transparent, and unobtrusive. Developers gain clarity and confidence through immediate feedback, while security teams achieve consistency and control—allowing your organization to move swiftly without compromising security.
 
-## 🚨 Security Anti-Patterns: Common Mistakes and How to Avoid Them
-
-Even with good intentions, teams often fall into common security traps. These anti-patterns create friction, increase risk, and undermine your platform's security posture. Let's explore four frequent security mistakes—and how your platform can help teams avoid them.
-
-{{% notes %}}
-
-### 1. 📂 **Secrets in Developer `.env` Files**
-
-**What it looks like:**  
-Developers store sensitive credentials (API keys, passwords, tokens) in local `.env` files, risking accidental commits to version control or leaks.
-
-**Why it's risky:**  
-Exposed secrets can lead to unauthorized access, data breaches, and compliance violations.
-
-**How to avoid it:**  
-- Use centralized secrets management.
-- Automatically inject secrets at runtime, never storing them locally or in code.
-- Add `.env` files to `.gitignore` and use pre-commit hooks to detect accidental commits.
-
-{{% /notes %}}
-
-{{% notes type="tip" %}}
-
-### 2. 🌐 **Overly Permissive IAM Roles**
-
-**What it looks like:**  
-Developers grant overly broad permissions (e.g., `AdministratorAccess`, `*:*`) due to confusion or frustration with restrictive policies.
-
-**Why it's risky:**  
-Excessive permissions increase the blast radius of security incidents.
-
-**How to avoid it:**  
-- Provide reusable IAM role modules with least-privilege defaults.
-- Enforce least-privilege IAM policies automatically with policy-as-code (Pulumi CrossGuard).
-- Regularly audit IAM permissions and remove unused or overly broad permissions.
-
-{{% /notes %}}
-
-{{% notes type="info" %}}
-
-### 3. 📦 **Ignoring Software Supply Chain Security**
-
-**What it looks like:**  
-Teams blindly trust third-party dependencies, container images, or build artifacts without verifying integrity or scanning for vulnerabilities.
-
-**Why it's risky:**  
-Supply chain attacks introduce vulnerabilities or backdoors into your applications.
-
-**How to avoid it:**  
-- Generate and verify Software Bill of Materials (SBOM).
-- Implement automated vulnerability scanning (Dependabot, Snyk, Trivy).
-- Sign and verify container images and build artifacts (Cosign, Sigstore).
-
-{{% /notes %}}
-
-{{% notes type="tip" %}}
-
-### 4. 🖥️ **Security as "Someone Else's Job"**
-
-**What it looks like:**  
-Developers assume security is solely the responsibility of dedicated security teams, ignoring security implications during development.
-
-**Why it's risky:**  
-Security becomes reactive rather than proactive, missing opportunities to prevent vulnerabilities early.
-
-**How to avoid it:**  
-- Provide lightweight, developer-friendly security training and resources.
-- Foster collaboration between developers, platform teams, and security teams through shared responsibility.
-
-{{% /notes %}}
-
 ### Protecting Sensitive Credentials by Default
 
-Developers frequently handle sensitive credentials manually—copying database passwords, API keys, or tokens into local configuration files or environment variables. This manual approach creates significant security risks, complexity, and friction.
+While Policy-as-Code ensures the configuration of infrastructure is secure, a platform must also address how applications securely access sensitive resources like databases, APIs, and third-party services.
 
 Consider a common scenario: A developer setting up a new microservice manually copies sensitive credentials into a local `.env` file. Later, this file is accidentally committed to version control, exposing credentials publicly. Or perhaps the credentials are unintentionally included in a Docker image during a build step, making them accessible to anyone who can pull the image. Even worse, if the developer's machine is compromised, attackers can leverage these exposed credentials to move laterally into production systems. Each scenario triggers urgent security responses—credential rotations, incident investigations, and potential downtime—causing delays, frustration, and risk.
 
@@ -170,6 +99,8 @@ By embedding centralized secrets management into your platform, you eliminate ma
 
 ### Identity and Access Management: Frictionless Security through Identity
 
+Just as the platform secures application credentials, it must also streamline how developers and automated processes securely authenticate and gain authorization to interact with the resources.
+
 Developers frequently struggle with managing multiple static credentials—such as cloud provider keys, passwords, or tokens. These credentials can expire, get lost, or accidentally leak, creating friction, frustration, and security risks.
 
 Consider a common scenario: A developer urgently troubleshooting a production issue attempts to access critical cloud resources, only to discover their static credentials have expired or been rotated. They waste valuable time tracking down new credentials, interrupting colleagues, or filing support tickets—delaying resolution and increasing frustration.
@@ -177,6 +108,8 @@ Consider a common scenario: A developer urgently troubleshooting a production is
 Identity-based authentication solves this problem by tying permissions directly to user identities. Instead of juggling static keys or passwords, developers authenticate seamlessly through familiar identity providers. For example, when a developer logs into their corporate identity provider, they automatically gain secure, temporary access to cloud resources through integrations like OpenID Connect (OIDC) or SAML-based single sign-on (SSO). No manual credential management is required, and access is always up-to-date and secure.
 
 This approach dramatically simplifies access management, reduces complexity, and eliminates credential-related friction. Developers gain immediate, secure access to the resources they need, exactly when they need them—accelerating productivity without compromising security.
+
+These individual security practices don't operate in isolation, though. To truly understand their combined power as an enabler, let's walk through how they integrate seamlessly across the entire software lifecycle in a real-world scenario.
 
 ## Real-World Example: Security Enablement from Build to Incident Response
 
@@ -206,7 +139,7 @@ By consistently tracking these two metrics, you ensure your platform's security 
 
 ## Pulumi and Security Enablement
 
-Pulumi provides built-in capabilities that embed security directly into your platform, enabling frictionless developer workflows:
+Achieving these goals, a decreasing incident rate coupled with a low developer friction score, requires a platform built with the right foundations. Pulumi helps you construct such a platform by providing built-in capabilities that directly embed security into your infrastructure workflows:
 
 - **[Policy as Code (CrossGuard)](https://www.pulumi.com/product/crossguard/):** Automatically enforce security and compliance standards before deployment.
 - **[Secure Secrets Management (Pulumi ESC)](https://www.pulumi.com/product/esc/):** Centralize and securely inject secrets without manual handling.
