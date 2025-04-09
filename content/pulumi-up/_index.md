@@ -144,26 +144,30 @@ schedule:
       time2: "5:30 PM PT"
 
 workshops:
-  - title: Managing team secrets with 1Password & Pulumi ESC
-    meta_desc: Learn Pulumi ESC + 1Password for secure, automated secret management in multi-cloud setups. Store & fetch secrets easily in our workshop
-    datetime: 2024-09-25T09:00:00.000-07:00
-    link: /resources/managing-team-secrets-with-1password-pulumi-esc/
-  - title: Securing IaC Pipelines in Regulated Industries
-    meta_desc: Learn best practices for securing and ensuring compliance of AWS infrastructure using Pulumi ESC and Policy as Code in your IaC pipelines.
-    datetime: 2024-09-26T09:00:00-07:00
-    link: /resources/securing-iac-pipelines-in-regulated-industries/
-  - title: Observability as Code for AI Apps with New Relic and Pulumi
-    meta_desc: Learn how to use AWS to generate secure infrastructure code for deploying an AI Chatbot app with Pulumi, leveraging New Relic's LLM dashboards.  
-    datetime: 2024-10-30T09:00:00-07:00
-    link: /resources/observability-as-code-for-ai-apps-new-relic/
-  - title: Deploy Tailscale infrastructure in AWS with Pulumi
-    meta_desc: Join this webinar to explore how to quickly create AWS infrastructure using Pulumi and Tailscale, showcasing advanced features in Kubernetes and AWS environments  
-    datetime: 2024-10-15T09:00:00-07:00
-    link: /resources/deploy-tailscale-infrastructure-with-pulumi/
-  - title: Deploy and Manage LLMs on Google Cloud Run GPUs with Pulumi
-    meta_desc: Deploy and manage LLMs on Google Cloud Run GPUs with Pulumi. Join our workshop to explore scalable, cost-effective infrastructure for fast LLM inference  
-    datetime: 2024-10-17T09:00:00-07:00
-    link: /resources/deploying-llms-google-cloud-run-pulumi/
+  - title: Designing Reusable Infrastructure as Code
+    meta_desc: "Master Pulumi Components: Learn to create reusable infrastructure code across languages, enabling DRY principles and powerful cross-team infrastructure sharing."
+    datetime: 2025-05-14T12:00:00-04:00
+    link: /events/designing-reusable-infrastructure-as-code/
+  - title: Enabling Platform Workflows with Pulumi and Docker
+    meta_desc: Learn how Pulumi and Docker Build Cloud can enable teams to deliver containerized workloads faster than ever.
+    datetime: 2025-05-21T12:00:00-04:00
+    link: /events/enabling-platform-workflows-with-pulumi-and-docker/
+  - title: Discover and Fix Misconfigured Cloud Resources with Pulumi
+    meta_desc: "Solve cloud compliance with Pulumi Insights: Learn to discover, manage, and optimize legacy resources across multi-cloud environments using policy as code."
+    datetime: 2025-05-28T12:00:00-04:00
+    link: /events/discover-and-fix-misconfigured-cloud-resources/
+  - title: Modern Infrastructure Automation with Pulumi and GitLab
+    meta_desc: Learn how to automate and manage cloud infrastructure using Pulumi's enhanced GitLab integration features for streamlined DevOps workflows.
+    datetime: 2025-06-11T12:00:00-04:00
+    link: /events/modern-infrastructure-automation-with-pulumi-and-gitlab/
+  - title: Enabling Platform Workflows with Temporal
+    meta_desc: Unlock Temporal Cloud's full potential with Pulumi. Learn to automate resource management, enhance developer workflows, and build platform engineering solutions.
+    datetime: 2025-06-24T12:00:00-04:00
+    link: /events/enabling-platform-workflows-with-temporal/
+  - title: Workload Observability with Pulumi and Honeycomb
+    meta_desc: Deliver "observability as code" with Pulumi and Honeycomb. Automate SLOs, detect critical issues, and transform your platform engineering approach.
+    datetime: 2025-07-17T09:00:00-04:00
+    link: /events/workload-observability-with-pulumi-and-honeycomb/
   
 
 registration:

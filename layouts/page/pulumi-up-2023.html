@@ -122,6 +122,53 @@
     </section>
     {{ end }}
 
+    <section id="workshops" class="py-8 mt-8">
+        <div class="container mx-auto">
+            <h3 class="text-center ml-4">Workshops - Spring into Platform Engineering</h3>
+            <ul class="event-list flex flex-wrap list-none p-0 mb-8 sm:p-2 resource-list">
+            {{ range .Params.workshops }}
+            <li class="flex event-card w-full m-0 p-2 lg:w-1/2">
+                <article class="card bg-white h-80 md:h-72 flex flex-col mx-2 md:mx-0 border border-gray-200 hover:border-gray-500">
+                    <a href="" rel="" target="_blank" class="w-full h-full">
+                        <span class="block w-full h-full p-4 flex flex-col justify-between">
+                            <span>
+                                <span class="flex flex-row justify-between">
+                                    <span class="w-10/12 text-left">
+                                        <span class="font-medium text-gray-800">WORKSHOP</span>
+                                        <span class="text-gray-300">&#8226;</span>
+                                            <span class="font-normal text-gray-800">VIRTUAL</span>
+                                            <h6 class="mt-2 mb-0 text-left text-xl md:text-xl">
+                                                {{ .title }}
+                                            </h6>
+                                    </span>
+                                    <span class="flex flex-col justify-between border-2 border-gray-300 rounded w-16 overflow-visible h-16">
+                                        <div class="bg-white text-center text-2xl pt-0.5 text-gray-900 font-semibold">
+                                            {{ .datetime | time.Format "2" }}
+                                        </div>
+                                        <div class="bg-gray-300 text-center text-xs md:text-sm py-0.5 text-gray-900">
+                                            {{ upper ( .datetime | time.Format "Jan 06") }}
+                                        </div>
+                                    </span>
+                                </span>
+                                <span class="flex flex-col justify-start mt-3">
+                                    <p class="m-0 mb-4 pt-0 text-gray-700 text-left">
+                                        {{ .meta_desc }}
+                                    </p>
+                                </span>
+                            </span>
+                            <div class="pl-5 pb-8">
+                                <a class="btn-secondary w-4/12" href={{ .link }}>Register Now</a>
+                            </div>
+                                
+                        </span>
+                    </a>
+                </article>
+            </li>
+            {{ end }}
+            </ul>
+        </div>
+    </section>
+
     <section id="sponsors" class="my-0 mb-16 py-4 lg:py-12 overflow-hidden px-3 white-background">
         <div class="container mx-auto text-center">
             <h2 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h2>
