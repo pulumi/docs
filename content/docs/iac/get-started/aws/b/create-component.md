@@ -7,8 +7,11 @@ weight: 7
 menu:
     iac:
         name: Create a component
-        parent: aws-get-started
+        parent: aws-b-get-started
         weight: 7
+
+aliases:
+- /docs/iac/get-started/aws/b/create-component/
 ---
 
 ## Create a component
@@ -84,7 +87,7 @@ var website = new AwsS3Website("my-website",
 
 {{% notes type="warning" %}}
 
-Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/aws/destroy-stack/).
+Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/aws/b/destroy-stack/).
 
 {{% /notes %}}
 
@@ -273,7 +276,7 @@ public class AwsS3Website extends ComponentResource {
 
 {{% notes type="warning" %}}
 
-Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/aws/destroy-stack/).
+Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/aws/b/destroy-stack/).
 
 {{% /notes %}}
 
@@ -770,7 +773,7 @@ class AwsS3Website extends ComponentResource {
 
 {{% notes type="warning" %}}
 
-Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/aws/destroy-stack/).
+Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/aws/b/destroy-stack/).
 
 {{% /notes %}}
 
@@ -915,7 +918,7 @@ public class App {
 
 {{% notes type="warning" %}}
 
-Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/aws/destroy-stack/).
+Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/aws/b/destroy-stack/).
 
 {{% /notes %}}
 
