@@ -1,0 +1,14 @@
+<span>
+<pulumi-chooser type="language" options="javascript,typescript,python,go,csharp,java,yaml,fsharp,visualbasic" option-style="none" class="inline">
+    <pulumi-choosable type="language" value="javascript">javascript</pulumi-choosable>
+    <pulumi-choosable type="language" value="typescript">typescript</pulumi-choosable>
+    <pulumi-choosable type="language" value="python">python</pulumi-choosable>
+    <pulumi-choosable type="language" value="go">go</pulumi-choosable>
+    <pulumi-choosable type="language" value="csharp">csharp</pulumi-choosable>
+    <pulumi-choosable type="language" value="java">java</pulumi-choosable>
+    <pulumi-choosable type="language" value="yaml">yaml</pulumi-choosable>
+    <pulumi-choosable type="language" value="fsharp">fsharp</pulumi-choosable>
+    <pulumi-choosable type="language" value="visualbasic">visualbasic</pulumi-choosable>
+</pulumi-chooser>
+</span>
+{{- .Inner | replaceRE "\n+" "" | safeHTML -}}

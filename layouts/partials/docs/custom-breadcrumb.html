@@ -1,0 +1,10 @@
+<!-- Custom breadcrumb that masks the "B" in the AWS B path -->
+<ol class="docs-breadcrumb">
+    <li><a data-track="breadcrumb" href="/docs/">Docs</a></li>
+    <li><a data-track="breadcrumb" href="/docs/iac/">Pulumi IaC</a></li>
+    <li><a data-track="breadcrumb" href="/docs/iac/get-started/">Get started</a></li>
+    <li><a data-track="breadcrumb" href="/docs/iac/get-started/aws/b/">AWS</a></li>
+    {{ if ne .RelPermalink "/docs/iac/get-started/aws/b/" }}
+        <li class="active"><a data-track="breadcrumb" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+</ol>
