@@ -51,9 +51,9 @@ main:
     description: |
         Join us for a hands-on workshop where we’ll walk through deploying a large language model (LLM) on Google Kubernetes Engine (GKE) using NVIDIA GPUs and Pulumi’s modern Infrastructure as Code platform.
 
-You’ll follow along as we deploy the open-weight Mixtral 8x7B model using Hugging Face’s Text Generation Inference and GKE’s powerful GPU-backed workloads. Learn how to provision GKE clusters with NVIDIA L4 GPUs, containerize AI models, and orchestrate everything with Pulumi and Python—all while leveraging Google Cloud's scalable infrastructure.
+        You’ll follow along as we deploy the open-weight Mixtral 8x7B model using Hugging Face’s Text Generation Inference and GKE’s powerful GPU-backed workloads. Learn how to provision GKE clusters with NVIDIA L4 GPUs, containerize AI models, and orchestrate everything with Pulumi and Python—all while leveraging Google Cloud's scalable infrastructure.
 
-Whether you're building your own AI workloads or curious about how to manage LLMs in production-ready environments, this workshop will give you practical, real-world experience from two cloud and DevOps experts—featuring guest speaker Jason Smith from Google Cloud.
+        Whether you're building your own AI workloads or curious about how to manage LLMs in production-ready environments, this workshop will give you practical, real-world experience from two cloud and DevOps experts—featuring guest speaker Jason Smith from Google Cloud.
 
     learn:
         - How to configure Google Cloud for scalable AI workloads
