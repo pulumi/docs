@@ -1,6 +1,6 @@
 {{ define "hero" }}
     <header class="home-page-hero">
-        <div class="home-page-hero-background border-b border-gray-300">
+        <div class="home-page-hero-background">
             <div class="flex">
                 <div class="w-full p-6 home-page-hero-text lg:pt-8">
                     <h1 class="flex flex-col items-center">
@@ -8,17 +8,13 @@
                         <span class="inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
                     </h1>
 
-                    <p class="mt-6 text-center leading-7">{{ .Params.hero.description | markdownify }}</p>
+                    <p class="mt-6 text-center leading-7 text-xl">{{ .Params.hero.description | markdownify }}</p>
 
                     <div class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
                         <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ .Params.hero.cta_link }}">{{ .Params.hero.cta_text }}</a>
                         <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer" href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
                     </div>
                 </div>
-
-                <!--<div class="hidden lg:block lg:w-1/2 p-6 flex justify-center align-center">
-                    <img src="/images/home/dancing-music.svg" />
-                </div>-->
             </div>
         </div>
     </header>
@@ -27,12 +23,50 @@
 {{ define "main" }}
     {{ $pageContext := . }}
     <!-- Logos carousel -->
-    <section class="container mx-auto text-center overflow-hidden px-3 mt-12" style="margin-bottom: -35px;">
-        <h3 class="text-center text-xl">
+    <section class="container mx-auto text-center overflow-hidden px-3 mt-2">
+        <h3 class="text-center text-xl text-gray-700">
             <a href="/case-studies" class="hover:underline">{{ .Params.customer_logos.title }}</a>
         </h3>
         <div class="mb-6">
-            {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos "single_row" true "gray_hover" true ) }}
+            {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos "single_row" true) }}
+        </div>
+    </section>
+
+    <!-- Social proof -->
+    <section class="mt-8 mb-8 p-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+        <div class="container mx-auto z-10">
+            <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
+                <div class="w-full lg:w-4/12">
+                    <h4>The reviews are in</h4>
+                    <a href="https://www.g2.com/products/pulumi/reviews" target=_blank>
+                        <div class="flex flex-row mt-8 mx-auto">
+                            <div class="flex flex-col justify-center text-center">
+                                <img src="/images/home/g2.svg" class="h-24"></img>
+                            </div>
+                            <div class="flex flex-col justify-center text-center pl-8">
+                                <div class="flex flex-row">
+                                    <div class="mx-auto flex-col w-1/5"><img class="h-6" src="/images/home/g2-star.svg"></img></div>
+                                    <div class="mx-auto flex-col w-1/5"><img class="h-6" src="/images/home/g2-star.svg"></img></div>
+                                    <div class="mx-auto flex-col w-1/5"><img class="h-6" src="/images/home/g2-star.svg"></img></div>
+                                    <div class="mx-auto flex-col w-1/5"><img class="h-6" src="/images/home/g2-star.svg"></img></div>
+                                    <div class="mx-auto flex-col w-1/5"><img class="h-6" src="/images/home/g2-star-partial.svg"></img></div>
+                                </div>
+                                <div class="rainbow-text text-xl font-bold">4.9 out of 5 stars</div>
+                                <div>Read our reviews on G2</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden lg:block w-1/12">
+                    <!-- empty div to get flex to behave -->
+                </div>
+                <div class="w-full lg:w-7/12 xl:w-6/12 xxl:w-5/12 card bg-white shadow-xl p-6 block">
+                    <div>
+                    <!-- Snowflake quote -->
+                        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -59,7 +93,6 @@
             {{ end }}
         </div>
     </section>
-
 
     <!-- Code and ship faster -->
     <section class="mb-8 p-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
@@ -167,11 +200,6 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Snowflake quote -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
     </section>
 
     <!-- Built by engineers + tweets -->
