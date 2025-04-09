@@ -7,19 +7,11 @@ weight: 3
 menu:
     iac:
         name: Configure access
-        parent: aws-get-started
+        parent: aws-b-get-started
         weight: 3
 
 aliases:
-- /docs/quickstart/aws/begin/
-- /docs/quickstart/aws/install-pulumi/
-- /docs/quickstart/aws/install-language-runtime/
-- /docs/quickstart/aws/configure/
-- /docs/get-started/aws/install-pulumi/
-- /docs/get-started/aws/install-language-runtime/
-- /docs/get-started/aws/configure/
-- /docs/get-started/aws/begin/
-- /docs/clouds/aws/get-started/begin/
+- /docs/iac/get-started/aws/b/configure/
 ---
 
 ## Configure access to AWS

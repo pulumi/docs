@@ -28,11 +28,64 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
     {{ end }}
 {{ end }}
 
+{{ $isAWSGetStartedBVersion := false }}
+{{ $url := $page.RelPermalink }}
+{{ if in $url "/docs/iac/get-started/aws/b" }}
+    {{ $isAWSGetStartedBVersion = true }}
+{{ end }}
+
+<!-- Add CSS to hide duplicate AWS links -->
+<style>
+    {{ if $isAWSGetStartedBVersion }}
+    /* On B version, hide the regular AWS link */
+    .docs-main-nav [href="/docs/iac/get-started/aws/"] {
+        display: none !important;
+    }
+    .docs-main-nav [href="/docs/iac/get-started/aws/"] + button {
+        display: none !important;
+    }
+    .docs-main-nav [href="/docs/iac/get-started/aws/"] ~ span {
+        display: none !important;
+    }
+    {{ else }}
+    /* On regular version, hide the B version AWS link */
+    .docs-main-nav [href="/docs/iac/get-started/aws/b/"] {
+        display: none !important;
+    }
+    .docs-main-nav [href="/docs/iac/get-started/aws/b/"] + button {
+        display: none !important;
+    }
+    .docs-main-nav [href="/docs/iac/get-started/aws/b/"] ~ span {
+        display: none !important;
+    }
+    .docs-main-nav [data-menu-id="aws-b-get-started"] {
+        display: none !important;
+    }
+    {{ end }}
+</style>
+
 {{- with index site.Menus $menuID }}
     <nav class="text-sm mt-7 mr-2">
         <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
             <ul class="list-none pl-0">
-                {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuID "menuEntries" .) }}
+                {{- /* Just display all entries - we'll handle modifying menu item hrefs in walk.html */}}
+                {{- $filteredMenuEntries := slice }}
+                {{- /* Process top-level menu entries */}}
+                {{- range . }}
+                    {{- /* Keep all non-AWS entries */}}
+                    {{- if ne .URL "/docs/iac/get-started/aws/" }}
+                        {{- if ne .URL "/docs/iac/get-started/aws/b/" }}
+                            {{- $filteredMenuEntries = $filteredMenuEntries | append . }}
+                        {{- else if $isAWSGetStartedBVersion }}
+                            {{- /* Only include AWS B link when on B version */}}
+                            {{- $filteredMenuEntries = $filteredMenuEntries | append . }}
+                        {{- end }}
+                    {{- else if not $isAWSGetStartedBVersion }}
+                        {{- /* Only include regular AWS link when on regular version */}}
+                        {{- $filteredMenuEntries = $filteredMenuEntries | append . }}
+                    {{- end }}
+                {{- end }}
+                {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuID "menuEntries" $filteredMenuEntries "isAWSGetStartedBVersion" $isAWSGetStartedBVersion) }}
             </ul>
         </pulumi-docs-nav>
     </nav>
@@ -41,9 +94,11 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
 {{- define "partials/inline/menu/walk.html" }}
     {{- $page := .page }}
     {{- $rootMenuID := (printf "%s-home" .rootMenuID) }}
+    {{- $isAWSGetStartedBVersion := .isAWSGetStartedBVersion }}
 
     {{- range .menuEntries }}
-        {{- $attrs := dict "href" .URL }}
+        {{- $finalURL := .URL }}
+        {{- $attrs := dict "href" $finalURL }}
         {{- if $page.IsMenuCurrent .Menu . }}
             {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
         {{- else if $page.HasMenuCurrent .Menu .}}
@@ -73,7 +128,7 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
             </a>
             {{- with .Children }}
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID "isAWSGetStartedBVersion" $isAWSGetStartedBVersion) }}
                 </ul>
             {{- end }}
         </li>
