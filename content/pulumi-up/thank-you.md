@@ -19,6 +19,10 @@ speakers:
     title: Staff Software Engineer
     logo: /images/pulumiup-2023/speaker-logos/clear.png
     company: Clear
+  - name: Daniel Kisselman
+    image: /images/people/daniel-kisselman.jpg
+    title: Senior DevOps Engineer
+    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: General Manager, IaC
