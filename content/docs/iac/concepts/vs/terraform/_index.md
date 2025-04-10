@@ -34,14 +34,7 @@ aliases:
 <!-- New variant -->
 <div data-tf-variant="new" class="hidden">
 
-<div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-    <iframe
-        src="//www.youtube.com/embed/PqAP4BunQZU?rel=0"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-        allowfullscreen=""
-        title="Pulumi + AWS: Universal Infrastructure as Code"
-    ></iframe>
-</div>
+{{< youtube "v2XMEZ_LeCY?rel=0" >}}
 
 ## Your Infrastructure, Your Programming Language, Your Way
 
@@ -133,12 +126,7 @@ Pulumi is an open source [infrastructure as code](/what-is/what-is-infrastructur
 Terraform Cloud provides infrastructure as code software for cloud service management with a consistent CLI workflow. Terraform allows you to write, plan, and apply changes to deliver infrastructure as code.
 
 <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-    <iframe
-        src="//www.youtube.com/embed/PqAP4BunQZU?rel=0"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-        allowfullscreen=""
-        title="Pulumi + AWS: Universal Infrastructure as Code"
-    ></iframe>
+   {{< youtube "v2XMEZ_LeCY?rel=0" >}}
 </div>
 
 <div>
@@ -152,8 +140,8 @@ Terraform Cloud provides infrastructure as code software for cloud service manag
             </div>
         </label>
         <div class="accordion-item-body-no-animation text-base">
-            <p>
-                Hi, my name's Lee, and if you're a Terraform user who's curious about Pulumi, here's some things that you need to know.
+             <p>
+            Here's a question: Why do we write infrastructure code differently than app code?
             </p>
             <p>
                 If you've used Terraform, you've probably used the HCL 2 configuration language, which allows you to define the infrastructure in a DSL, in a domain-specific language. Pulumi uses languages that you're already using in your application life cycle. So you can write code in Python, you can write code in TypeScript, you can write code in Java, in .NET, and in Go, and you can also use YAML as a mechanism to offer those infrastructure as code programs. What that means is it's more familiar. You're already using these languages elsewhere, whether it's in your CI pipelines or whether it's in your application code. Pulumi brings this familiarity to your infrastructure. Something else that's really important to know about Pulumi is that it is declarative. So you use an imperative language to offer the code, and Pulumi's engine turns that code into a declarative graph that is executed. So you can always be sure when you run a Pulumi program over and over and over again that it is gonna have the same result and the same effect. This is very similar to Terraform, but that authoring experience is different, meaning that you get a more improved experience.
