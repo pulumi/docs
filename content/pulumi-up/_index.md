@@ -88,6 +88,10 @@ speakers:
     title: Staff Software Engineer
     logo: /images/pulumiup-2023/speaker-logos/clear.png
     company: Clear
+  - name: Daniel Kisselman
+    image: /images/people/daniel-kisselman.jpg
+    title: Senior DevOps Engineer
+    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: General Manager, IaC
@@ -190,10 +194,10 @@ customer_logos:
     - logos:
       - logo: 1password.png
         link: https://1password.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: dagger.png
-        link: https://dagger.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: pinecone.png
-        link: https://www.pinecone.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: gitlab.png
+        link: https://about.gitlab.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: temporal.png
+        link: https://temporal.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
       - logo: new-relic.png
         link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
