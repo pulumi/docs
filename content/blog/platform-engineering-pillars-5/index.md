@@ -1,6 +1,6 @@
 ---
 title: "Security as an Enabler: Building Trust into Your Platform"
-date: 2025-04-09T12:16:29-04:00
+date: 2025-04-10
 draft: false
 meta_desc: Learn how security can enable innovation by embedding guardrails directly into your platform.
 meta_image: meta.png
@@ -10,9 +10,28 @@ tags:
     - platform-engineering
     - platform-engineering-pillars
 social:
-    twitter:
-    linkedin:
+    twitter: >
+      Security doesn't have to be a roadblock! By embedding guardrails directly into your platform with policy-as-code, centralized secrets management, and identity-based authentication, you transform security from gatekeeper to enabler. Developers move faster WITH confidence, not despite security!
+    linkedin: >
+      Security isn't just a checkpoint - it's a POWERFUL ENABLER when built directly into your platform! 🔒 Transform security from frustrating gatekeeper to innovation accelerator by embedding guardrails that work WITH developers, not against them.
 
+      🚨 The Problem:
+      • Security as a last-minute bottleneck
+      • Unclear policies creating friction
+      • Developers taking risky shortcuts
+      • Innovation grinding to a halt
+
+      💡 The Solution:
+      Weave security directly into your platform with:
+
+      • Policy-as-Code for automated guardrails
+      • Secure-by-default components
+      • Centralized secrets management
+      • Identity-based authentication
+
+      The result? Developers move FASTER with MORE confidence. Security teams become partners instead of blockers. And your organization builds the trust that accelerates innovation rather than slowing it down.
+
+      Ready to make security your competitive advantage? Learn how in our latest platform engineering pillar article!
 ---
 In previous articles, we looked at how [platform engineering](/blog/tag/platform-engineering-pillars/) fixes infrastructure chaos, enables self-service, and improves developer workflows. These pillars work together to boost both developer productivity and organizational speed.
 
