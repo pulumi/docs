@@ -63,7 +63,11 @@ Several endpoints accept or return deployment settings. Deployment settings are 
 
 The executor context defines information about the executor where the Pulumi operation is executed. If unspecified, the default [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image is used.
 
-* **executorImage** (Optional[string]): Allows overriding the default executor image with a custom image.
+* **executorImage** (Optional[string | object]): Allows overriding the default executor image with a custom image, with optional credentials.
+  * **reference** (string): The reference to the image to use. This may be a public or private image.
+  * **credentials** (Optional[object]): The credentials to use for the image.
+    * **username** (string): The username to use for authentication
+    * **password** (Secret): The password to use for authentication
 
 Image requirements:
 
@@ -77,11 +81,27 @@ Using a custom image may result in slower execution due to time spent pulling th
 
 {{% /notes %}}
 
-#### Example
+#### Example without credentials
 
 ```json
 {
     "executorImage": "pulumi/pulumi-nodejs:latest"
+}
+```
+
+#### Example with credentials
+
+```json
+{
+    "executorImage": {
+        "reference": "myregistry.azurecr.io/myimage:latest",
+        "credentials": {
+            "username": "my-username",
+            "password": {
+              "secret": "my-secret-password"
+            }
+        }
+    }
 }
 ```
 
