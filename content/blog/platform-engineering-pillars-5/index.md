@@ -16,18 +16,18 @@ social:
       Security isn't just a checkpoint - it's a POWERFUL ENABLER when built directly into your platform! 🔒 Transform security from frustrating gatekeeper to innovation accelerator by embedding guardrails that work WITH developers, not against them.
 
       🚨 The Problem:
-      • Security as a last-minute bottleneck
-      • Unclear policies creating friction
-      • Developers taking risky shortcuts
-      • Innovation grinding to a halt
+      - Security as a last-minute bottleneck
+      - Unclear policies creating friction
+      - Developers taking risky shortcuts
+      - Innovation grinding to a halt
 
       💡 The Solution:
       Weave security directly into your platform with:
 
-      • Policy-as-Code for automated guardrails
-      • Secure-by-default components
-      • Centralized secrets management
-      • Identity-based authentication
+      - Policy-as-Code for automated guardrails
+      - Secure-by-default components
+      - Centralized secrets management
+      - Identity-based authentication
 
       The result? Developers move FASTER with MORE confidence. Security teams become partners instead of blockers. And your organization builds the trust that accelerates innovation rather than slowing it down.
 
@@ -37,7 +37,10 @@ In previous articles, we looked at how [platform engineering](/blog/tag/platform
 
 But there's still one critical element that can make or break all this progress: security.
 
-When you integrate security into your internal developer platform, it changes from a frustrating gatekeeper to an enabler. Developers can move faster and with more confidence.
+Traditional security efforts — even "shift-left" initiatives — often create friction instead of clearing the way for innovation. Embedding security directly into your platform changes that. By weaving in policy-as-code, centralized secrets management, and identity-based authentication, you turn security from a blocker into an enabler. And with the right metrics, you can measure how well your platform balances protection and speed.
+<!--more-->
+
+When security is baked into your internal developer platform, it stops being a gatekeeper. Developers move faster — and with more confidence.
 
 Done right, your teams gain autonomy without compromising safety. Security people become partners instead of blockers. Your organization builds trust that speeds up innovation rather than slowing it down.
 
