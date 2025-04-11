@@ -12,6 +12,8 @@
 
     {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
 
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
+
     <section id="templates" class="container mx-auto my-16 text-center">
         <div class=" text-center mx-auto my-8">
             <h3>Pulumi Templates for Common Use Cases</h3>
@@ -40,31 +42,56 @@
         </div>
     </section>
 
-    <!--<section id="workshops" style="background: linear-gradient(180deg, #cbeffe, #ddf6ff 100%);">
-        <div class="container mx-auto py-16">
-            <h2 class="px-4 pb-8">Workshops</h2>
-
-            <div class="flex flex-wrap justify-center items-stretch">
-                {{ range .Params.workshops }}
-                    <div class="w-full lg:w-1/2 p-3">
-                        <div class="card bg-white p-6 text-black h-full">
-                            <h5>{{ .title }}</h5>
-                            <span class="my-0 py-1 inline-block mr-3 text-gray-600">
-                                <i class="fas fa-calendar mr-2"></i>
-                                {{ .date }}
-                            </span>
-                            <p>{{ .description }}</p>
-                            <div class="my-8">
-                                <a href="{{ .url }}" class="btn-secondary">
-                                    <span class="text-violet-600">Watch On-Demand &#8594;</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
+    <section id="workshops" class="py-8 mt-8">
+        <div class="container mx-auto">
+            <h3 class="text-center ml-4">Workshops - Spring into Platform Engineering</h3>
+            <p class="text-lg text-center px-2">Platform engineering bridges development, infrastructure, and operations. This workshop series builds advanced skills for managing cloud infrastructure at scale—register for individual sessions or the full series.</p>
+            <div class="flex justify-center my-8">
+                <a href="https://info.pulumi.com/platform-engineering-workshop-series-intermediate" class="btn-primary" target="_blank">Register to All</a>
             </div>
+            <ul class="event-list flex flex-wrap list-none p-0 mb-8 sm:p-2 resource-list">
+            {{ range .Params.workshops }}
+            <li class="flex event-card w-full m-0 p-2 lg:w-1/2">
+                <article class="card bg-white h-80 md:h-72 flex flex-col mx-2 md:mx-0 border border-gray-200 hover:border-gray-500">
+                    <a href="" rel="" target="_blank" class="w-full h-full">
+                        <span class="block w-full h-full p-4 flex flex-col justify-between">
+                            <span>
+                                <span class="flex flex-row justify-between">
+                                    <span class="w-10/12 text-left">
+                                        <span class="font-medium text-gray-800">WORKSHOP</span>
+                                        <span class="text-gray-300">&#8226;</span>
+                                            <span class="font-normal text-gray-800">VIRTUAL</span>
+                                            <h6 class="mt-2 mb-0 text-left text-xl md:text-xl">
+                                                {{ .title }}
+                                            </h6>
+                                    </span>
+                                    <span class="flex flex-col justify-between border-2 border-gray-300 rounded w-16 overflow-visible h-16">
+                                        <div class="bg-white text-center text-2xl pt-0.5 text-gray-900 font-semibold">
+                                            {{ .datetime | time.Format "2" }}
+                                        </div>
+                                        <div class="bg-gray-300 text-center text-xs md:text-sm py-0.5 text-gray-900">
+                                            {{ upper ( .datetime | time.Format "Jan 06") }}
+                                        </div>
+                                    </span>
+                                </span>
+                                <span class="flex flex-col justify-start mt-3">
+                                    <p class="m-0 mb-4 pt-0 text-gray-700 text-left">
+                                        {{ .meta_desc }}
+                                    </p>
+                                </span>
+                            </span>
+                            <div class="pl-5 pb-8">
+                                <a class="btn-secondary w-4/12" href={{ .link }}>Register Now</a>
+                            </div>
+                                
+                        </span>
+                    </a>
+                </article>
+            </li>
+            {{ end }}
+            </ul>
         </div>
-    </section>-->
+    </section>
 
     <section id="automation-features" class="relative mt-12">
         <div class="container mx-auto mb-16">
