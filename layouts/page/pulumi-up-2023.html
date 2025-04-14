@@ -90,13 +90,13 @@
         <div class="container mx-auto text-center">
             <h2>{{ .title }}</h2>
             <h3>{{ .subtitle }}</h3>
-            <div class="container justify-center flex flex-col items-center lg:flex-row">
+            <div class="container justify-center flex flex-col items-center lg:items-start lg:flex-row">
                 {{ range .panelists }}
                     <div class="mx-2 flex flex-row lg:flex-col my-2">
                         <img src="{{ .image }}" class="rounded-l-md lg:rounded-b-none lg:rounded-t-md" style="height: 220px; width: 220px;" />
                         <div class="bg-gray-200	 w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left" style="width: 220px;">
                             <h6>{{ .name }}</h6>
-                            <p class="text-sm text-black my-2 flex flex-wrap">{{ .position }}</p>
+                            <p class="text-sm text-black my-2 flex-wrap h-10">{{ .position }}</p>
                             <p class="text-sm text-black my-2">{{ .company }}</p>
                             <div class="flex flex-row my-4">
                                 {{ range .socials }}
