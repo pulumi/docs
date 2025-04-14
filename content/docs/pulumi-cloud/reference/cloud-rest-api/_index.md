@@ -5829,9 +5829,21 @@ Status: 200 OK
 
 ### Get Resource Count Summary
 
-```http
-GET /orgs/{organization}/resources/summary?granularity=<granularity>&lookbackDays=<days>
 ```
+GET /orgs/{organization}/resources/summary
+```
+
+#### Parameters
+
+| Parameter       | Type           | In    | Description                                                                                |
+|-----------------|----------------|-------|--------------------------------------------------------------------------------------------|
+| `granularity`   | string         | query | How usage should be aggregated. Accepted values are: `hourly`, `daily`, `weekly`, `monthly`, or `yearly`.                                                                          |
+| `lookbackDays`  | string         | query | **One of `lookbackDays` or `lookbackStart` is required, not both.** Returns usage for a period of `lookbackDays` x 24 hours, starting from now.    |
+| `lookbackStart` | unix timestamp | query | **One of `lookbackDays` or `lookbackStart` is required, not both.**  Returns usage starting from the given timestamp.                          |
+
+{{% notes "info" %}}
+`lookbackDays` returns usage in 24-hour increments starting from the current time. This will truncate usage for the first day. To get complete usage for the first day, use `lookbackStart` to specify the start time.
+{{% /notes %}}
 
 #### Example (hourly)
 
