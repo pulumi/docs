@@ -28,12 +28,6 @@ aws-import-iac-iam-role-.*
 # the credentials can access the specified Route 53 zone).
 awsx-apigateway-custom-domain-.*
 
-# Skipping all kubernetes examples for now as they are expected to fail until we provision
-# a Kubernetes cluster in CI.
-kubernetes-.*
-k8s-.*
-helm-.*
-
 # Skip broken programs to get back to green
 # https://github.com/pulumi/docs/issues/14505
 gcp-import-service-account-yaml
