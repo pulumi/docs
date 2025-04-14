@@ -17,7 +17,7 @@ aliases:
 - /docs/concepts/resources/components/
 ---
 
-A component resource is a logical grouping of resources. Components usually instantiate a set of related resources in their constructor, aggregate them as children, and create a larger, useful abstraction that encapsulates their implementation details.
+Pulumi Components enable you to create, share, and consume reusable infrastructure building blocks across your organization and the broader community. Components instantiate a set of related resources, acting as an abstraction to encapsulate the resources' implementation details.
 
 Here are a few examples of component resources:
 
@@ -129,7 +129,7 @@ If you wish to have full control over one of the custom resource’s lifecycle i
 
 A component resource must register a unique type name with the base constructor. In the example, the registration is `pkg:index:MyComponent`. To reduce the potential of other type name conflicts, this name contains the package and module name, in addition to the type: `<package>:<module>:<type>`. These names are namespaced alongside non-component resources, such as aws:lambda:Function.
 
-For more information about component resources, see the [Pulumi Components tutorial](/registry/packages/aws/how-to-guides/s3-folder-component/).
+For more information about component resources, see the [Pulumi Components tutorial](/registry/packages/aws/how-to-guides/s3-folder-component/). For a detailed look at supporting component consumption in multiple languages, see the [Building a Component](/docs/iac/using-pulumi/extending-pulumi/build-a-component) guide
 
 ## Creating Child Resources
 
@@ -345,3 +345,193 @@ var component = new MyResource("...",
 {{< /chooser >}}
 
 If a component resource is itself a child of another component resource, its set of providers is inherited from its parent by default.
+
+## Adding Multi-language Support
+
+By default, components are authored and consumed in the same programming language by extending the `ComponentResource` class. The class can then be imported or referenced using the language's applicable pattern. To support consuming components in other languages, Pulumi can introspect your component class and generate the necessary SDKs. To support multi-language consumption, a couple additional steps are required.
+
+### Define a `PulumiPlugin.yaml` file
+
+In your component directory, create a `PulumiPlugin.yaml` file and specify the runtime the component is authored in.
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+runtime: nodejs
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+runtime: python
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+runtime: go
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+runtime: dotnet
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+runtime: java
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### Define an Entry Point
+
+The entrypoint analyzes components to automatically build a schema, and interact with the Pulumi engine to mange the component lifecycle.
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+Not required for TypeScript.
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+1. Create a `_main_.py` file in your component directory
+2. In the `main` function, add a call to `component_provider_host`, specifying a list of components for the `components` argument
+
+```python
+from pulumi.provider.experimental import Metadata, component_provider_host
+from staticpage import MyComponent
+
+if __name__ == "__main__":
+    component_provider_host(name="python-components", components=[MyComponent])
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+1. Define a `main.go` file
+2. Declare an instance of `NewProviderBuilder`,  passing in a name, namespace and the components being built
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi-go-provider/infer"
+)
+
+func main() {
+    err := infer.NewProviderBuilder().
+            WithName("go-components").
+            WithNamespace("your-org-name").
+            WithComponents(
+                infer.Component(MyComponent),
+            ).
+            BuildAndRun()
+
+    if err != nil {
+        panic(err)
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+1. Create a `Program.cs` file
+2. Add an entry point that calls the `ComponentProviderHost`
+
+```csharp
+using System.Threading.Tasks;
+
+class Program
+{
+    public static Task Main(string []args) =>
+        Pulumi.Experimental.Provider.ComponentProviderHost.Serve(args);
+}
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+1. Create an `App.java` file
+2. Create a new instance of `ComponentProviderHost` in the entry point
+
+```java
+package com.example.components;
+
+import java.io.IOException;
+import com.pulumi.provider.internal.Metadata;
+import com.pulumi.provider.internal.ComponentProviderHost;
+
+public class App {
+    public static void main(String[] args) throws IOException, InterruptedException {
+        new ComponentProviderHost("java-components", App.class.getPackage()).start(args);
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### Publishing the Component
+
+Once a component is authored, it can be pushed to a git repo and consumed remotely; or, in situations like monorepos, the component can be referenced locally.
+
+#### Git Consumption
+
+In the consuming Pulumi application, add the component as a dependency.
+
+```bash
+pulumi package add github.com/myorg/my-component
+```
+
+If you're using version tags, you can specify those as well.
+
+```bash
+pulumi package add github.com/myorg/my-component@v1.0.0
+```
+
+Under the hood, Pulumi:
+
+- Fetches your code from GitHub
+- Generates a local SDK from the component’s schema
+- Makes the generated SDK available to your Pulumi program in your chosen language
+
+#### Referencing Components Locally
+
+For scenarios like monorepos, rapid development iterations, or when you’re working with components that don’t need to be published to a repository, you can reference local source code directly:
+
+```bash
+pulumi package add /path/to/local/secure-s3-component
+```
+
+Pulumi will identify the folder as a Pulumi component project, generate a local SDK, and make it available for import in your program—even if your consumer program is in a different language.
+
+## The Spectrum of Pulumi Components You Can Build
+
+You can use Pulumi Components with more flexibility and control depending on your use case. This table shows the variety of use cases:
+
+| Feature | Single language | Multi-language with Auto-Generated SDKs | Manual Schema and SDKs |
+|---------|--------------------------|-------------------------------------------|--------------------------|
+| **Best for** | Quick development within a single language ecosystem | Cross-language teams needing to share components | More flexibility and control needed or strict API requirements |
+| **Cross-language consumption** | No - limited to original language | Yes - consume in any Pulumi language | Yes - consume in any Pulumi language but YAML|
+| **Setup complexity** | Minimal - standard programming patterns | Minimal - just requires package management | High - requires schema authoring and validation |
+| **Development workflow** | Fast iteration with direct code changes | Requires SDK regeneration when component changes | Complex with schema updates and SDK publishing |
+| **API control** | N/A | Moderate - auto-generated from source | Full - ship the same interface to all consumers |
+| **Version management** | Simple - standard code versioning | Moderate - requires careful API changes | Complex - strict semantic versioning needed |
+| **Typical user** | Individual developers or same-language teams | Platform teams sharing with developers | Enterprise teams with strict requirements or package publishers |
+| **Ideal use cases** | • Rapid prototyping<br>• Single team projects<br>• Simple components | • Organization-wide libraries<br>• Platform engineering<br>• Multi-language environments | • Published packages<br>• Complex validation needs |
+| **Limitations** | • Single language only<br> | • SDK regeneration overhead<br>• Runtime dependencies<br>• Some translation limitations | • Complex setup<br>• Steep learning curve<br>• Slower iteration |

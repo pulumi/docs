@@ -1,6 +1,6 @@
 id = "meagan-cojocar"
 name = "Meagan Cojocar"
-title = "Principal Product Manager"
+title = "General Manager, IaC"
 weight = 1
 
 status = "active"
@@ -8,4 +8,3 @@ status = "active"
 [social]
 linkedin = "meagancojocar"
 github = "meagancojocar"
-twitter = "meagancojocar"

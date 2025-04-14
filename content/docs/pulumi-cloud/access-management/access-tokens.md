@@ -216,3 +216,17 @@ To delete a team access token:
 1. Choose **Delete token**. You will be prompted in a dialog to confirm your choice.
 
 If you choose to delete a token, its access will immediately be revoked and all further operations using it will fail as unauthorized. The token name will remain reserved for your organization after deletion.
+
+## OIDC issued tokens
+
+OIDC-issued access tokens generated in CI/CD workflows (such as GitHub Actions) do not receive admin privileges by default. To perform operations that require elevated access—such as creating or deleting stacks—you must explicitly request the admin scope when exchanging the OIDC token.
+
+For example:
+
+```json
+{
+  "provider": "github",
+  "audience": "pulumi",
+  "scope": "admin"
+}
+```

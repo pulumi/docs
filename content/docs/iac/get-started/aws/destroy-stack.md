@@ -23,13 +23,12 @@ You'll be prompted to make sure you really want to delete these resources. This 
 ```
 Previewing destroy (dev):
 
-     Type                                    Name                 Status
- -   pulumi:pulumi:Stack                     quickstart-dev       delete
- -   ├─ aws:s3:BucketObject                  index.html           delete
- -   ├─ aws:s3:BucketOwnershipControls       ownership-controls   delete
- -   ├─ aws:s3:BucketPublicAccessBlock       public-access-block  delete
- -   ├─ aws:s3:BucketWebsiteConfigurationV2  website              delete
- -   └─ aws:s3:BucketV2                      my-bucket            delete
+     Type                               Name                 Plan
+ -   pulumi:pulumi:Stack                quickstart-dev       delete
+ -   ├─ aws:s3:BucketObject             index.html           delete
+ -   ├─ aws:s3:BucketOwnershipControls  ownership-controls   delete
+ -   ├─ aws:s3:BucketPublicAccessBlock  public-access-block  delete
+ -   └─ aws:s3:Bucket                   my-bucket            delete
 
 Outputs:
   - bucketEndpoint: "http://my-bucket-dfd6bd0.s3-website-us-east-1.amazonaws.com"
@@ -41,13 +40,12 @@ Resources:
 Do you want to perform this destroy? yes
 Destroying (dev):
 
-     Type                                    Name                 Status
- -   pulumi:pulumi:Stack                     quickstart-dev       deleted (0.31s)
- -   ├─ aws:s3:BucketObject                  index.html           deleted (1s)
- -   ├─ aws:s3:BucketPublicAccessBlock       public-access-block  deleted (0.67s)
- -   ├─ aws:s3:BucketWebsiteConfigurationV2  website              deleted (0.88s)
- -   ├─ aws:s3:BucketOwnershipControls       ownership-controls   deleted (1s)
- -   └─ aws:s3:BucketV2                      my-bucket            deleted (0.58s)
+     Type                               Name                 Status
+ -   pulumi:pulumi:Stack                quickstart-dev       deleted
+ -   ├─ aws:s3:BucketObject             index.html           deleted (1s)
+ -   ├─ aws:s3:BucketPublicAccessBlock  public-access-block  deleted (0.28s)
+ -   ├─ aws:s3:BucketOwnershipControls  ownership-controls   deleted (0.47s)
+ -   └─ aws:s3:Bucket                   my-bucket            deleted (0.39s)
 
 Outputs:
   - bucketEndpoint: "http://my-bucket-dfd6bd0.s3-website-us-east-1.amazonaws.com"

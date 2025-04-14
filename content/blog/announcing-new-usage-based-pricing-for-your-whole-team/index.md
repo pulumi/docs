@@ -1,7 +1,7 @@
 ---
 title: "Announcing New Usage-Based Pricing For Your Whole Team"
 date: 2021-06-29
-meta_desc: "New Pulumi Team Edition and Pulumi Enterprise Edition offer usage-based pricing for your whole team"
+meta_desc: "Discover Pulumi’s new usage-based pricing for teams and enterprises. Manage more resources, pay as you grow, and access advanced features with no user limits."
 meta_image: meta.png
 authors:
    - luke-hoban
@@ -9,6 +9,8 @@ tags:
    - features
    - ai
 ---
+> [!INFO]
+> This post is out-of-date. For the latest pricing and editions, please visit the [Pulumi Pricing page](/pricing/).
 
 Today we are launching **Pulumi Team Edition**, a new way for teams to adopt and use Pulumi and the Pulumi Service to collaborate on building, managing and deploying cloud infrastructure as code. Pulumi Team Edition is priced based on the number of cloud resources under management, with a generous free tier to ensure that teams can get up and running with Pulumi Team Edition at no cost.
 

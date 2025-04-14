@@ -2304,6 +2304,10 @@ Status: 200 OK
 For GitHub-backed organizations the `teamType` path parameter must be `github`. For all other organization types the `teamType` path parameter must be `pulumi`.
 {{% /notes %}}
 
+    {{% notes type="warning" %}}
+ **Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your group name is longer than this limit, you’ll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
+     {{% /notes %}}
+
 ```
 POST /api/orgs/{org}/teams/{teamType}
 ```
@@ -4240,7 +4244,7 @@ Status: 200 OK
 POST /api/esc/environments/{organization}
 ```
 
-### Body
+#### Body
 
 | Key                 | Type   | In    | Description       |
 |---------------------|--------|-------|-------------------|
@@ -4454,6 +4458,48 @@ Status: 200 OK
     "AWS_ACCESS_KEY_ID": "<redacted>",
     "AWS_SECRET_ACCESS_KEY": "<redacted>",
     "AWS_SESSION_TOKEN": "<redacted>""
+```
+
+### Clone Environment
+
+```
+POST /api/esc/environments/{organization}/{project}/{environment}/clone
+```
+
+#### Body
+
+| Key                       | Type   | In   | Description                            |
+|---------------------------|--------|------|----------------------------------------|
+| `project`                 | string | body | new project name                       |
+| `name`                    | string | body | new environment name                   |
+| `preserveAccess`          | bool   | body | whether to preserve access permissions |
+| `preserveHistory`         | bool   | body | whether to preserve history            |
+| `preserveEnvironmentTags` | bool   | body | whether to preserve environment tags   |
+| `preserveRevisionTags`    | bool   | body | whether to preserve version tags       |
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+| `project`           | string | path  | project name      |
+| `environment`       | string | path  | environment name  |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}/clone
+```
+
+#### Default response
+
+```
+Status: 200 OK
 ```
 
 ## Schedules

@@ -16,7 +16,7 @@ Now let's deploy your changes.
 $ pulumi up
 ```
 
-Pulumi will run the [`preview`](/docs/iac/cli/commands/pulumi_preview/) step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
+Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
 
 ```
 Previewing update (dev):
@@ -124,17 +124,16 @@ Now that `index.html` is in the bucket, update the program to turn the bucket in
 
 ## Update the program
 
-Add a new [`BucketWebsiteConfiguration`](/registry/packages/aws/api-docs/s3/bucketwebsiteconfigurationv2/) resource to make `index.html` the home page of the website:
+Update the `Bucket` declaration to add a `website` property and make `index.html` the home page of the website:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "javascript,typescript" %}}
 
 ```typescript
-const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
-    bucket: bucket.id,
-    indexDocument: {
-        suffix: "index.html",
+const bucket = new aws.s3.Bucket("my-bucket", {
+    website: {
+        indexDocument: "index.html",
     },
 });
 ```
@@ -144,11 +143,11 @@ const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
 {{% choosable language python %}}
 
 ```python
-website = s3.BucketWebsiteConfigurationV2("website",
-    bucket=bucket.id,
-    index_document={
-        "suffix": "index.html",
-    })
+bucket = s3.Bucket("my-bucket",
+    website={
+        "index_document": "index.html",
+    },
+)
 ```
 
 {{% /choosable %}}
@@ -156,10 +155,9 @@ website = s3.BucketWebsiteConfigurationV2("website",
 {{% choosable language go %}}
 
 ```go
-website, err := s3.NewBucketWebsiteConfigurationV2(ctx, "website", &s3.BucketWebsiteConfigurationV2Args{
-    Bucket: bucket.ID(),
-    IndexDocument: &s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
-        Suffix: pulumi.String("index.html"),
+bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
+    Website: &s3.BucketWebsiteArgs{
+        IndexDocument: pulumi.String("index.html"),
     },
 })
 if err != nil {
@@ -172,12 +170,13 @@ if err != nil {
 {{% choosable language csharp %}}
 
 ```csharp
-var website = new Aws.S3.BucketWebsiteConfigurationV2("website", new()
+using Pulumi.Aws.S3.Inputs;
+
+var bucket = new Bucket("my-bucket", new()
 {
-    Bucket = bucket.Id,
-    IndexDocument = new Aws.S3.Inputs.BucketWebsiteConfigurationV2IndexDocumentArgs
+    Website = new BucketWebsiteArgs
     {
-        Suffix = "index.html",
+        IndexDocument = "index.html",
     },
 });
 ```
@@ -187,14 +186,12 @@ var website = new Aws.S3.BucketWebsiteConfigurationV2("website", new()
 {{% choosable language java %}}
 
 ```java
-import com.pulumi.aws.s3.BucketWebsiteConfigurationV2;
-import com.pulumi.aws.s3.BucketWebsiteConfigurationV2Args;
-import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationV2IndexDocumentArgs;
+import com.pulumi.aws.s3.BucketArgs;
+import com.pulumi.aws.s3.inputs.BucketWebsiteArgs;
 
-var website = new BucketWebsiteConfigurationV2("website", BucketWebsiteConafigurationV2Args.builder()
-    .bucket(bucket.id())
-    .indexDocument(BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
-        .suffix("index.html")
+var bucket = new Bucket("my-bucket", BucketArgs.builder()
+    .website(BucketWebsiteArgs.builder()
+        .indexDocument("index.html")
         .build())
     .build());
 ```
@@ -204,21 +201,20 @@ var website = new BucketWebsiteConfigurationV2("website", BucketWebsiteConafigur
 {{% choosable language yaml %}}
 
 ```yaml
-website:
-  type: aws:s3:BucketWebsiteConfigurationV2
+my-bucket:
+  type: aws:s3:Bucket
   properties:
-    bucket: ${my-bucket.id}
-    indexDocument:
-      suffix: index.html
+    website:
+      indexDocument: index.html
 ```
 
 {{% /choosable %}}
 
 Lastly, you'll make a few adjustments to make these resources accessible on the Internet.
 
-For the bucket itself, you'll need two new resources: a [`BucketOwnershipControls`](/registry/packages/aws/api-docs/s3/bucketownershipcontrols/) resource, to define the bucket's file-ownership settings, and a [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/) resource to allow the bucket to be accessed publicly.
+For the bucket itself, you'll need two new resources: a `BucketOwnershipControls` resource, to define the bucket's file-ownership settings, and a `BucketPublicAccessBlock` resource to allow the bucket to be accessed publicly.
 
-For the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobjectv2/), you'll need an access-control (ACL) setting of `public-read` to allow the page to be accessed anonymously (e.g., in a browser) and a content type of `text/html` to tell AWS to serve the file as a web page. Add the following lines to your program, updating the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobjectv2/) in place:
+For the `BucketObject`, you'll need an access-control (ACL) setting of `public-read` to allow the page to be accessed anonymously (e.g., in a browser) and a content type of `text/html` to tell AWS to serve the file as a web page. Add the following lines to your program, updating the `BucketObject` in place:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
@@ -242,7 +238,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
     source: new pulumi.asset.FileAsset("./index.html"),
     contentType: "text/html",
     acl: "public-read",
-}, { dependsOn: [publicAccessBlock,ownershipControls,website] });
+}, { dependsOn: [publicAccessBlock,ownershipControls] });
 ```
 
 {{% /choosable %}}
@@ -268,7 +264,7 @@ bucket_object = s3.BucketObject(
     source=pulumi.FileAsset('index.html'),
     content_type='text/html',
     acl='public-read',
-    opts=pulumi.ResourceOptions(depends_on=[public_access_block, ownership_controls, website]),
+    opts=pulumi.ResourceOptions(depends_on=[public_access_block, ownership_controls]),
 )
 ```
 
@@ -309,7 +305,6 @@ _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
 }, pulumi.DependsOn([]pulumi.Resource{
 			publicAccessBlock,
 			ownershipControls,
-			website,
 }))
 if err != nil {
     return err
@@ -348,7 +343,6 @@ var indexHtml = new BucketObject("index.html", new()
     {
         publicAccessBlock,
         ownershipControls,
-        website,
     },
 });
 ```
@@ -386,8 +380,7 @@ var indexHtml = new BucketObject("index.html", BucketObjectArgs.builder()
     .build(), CustomResourceOptions.builder()
         .dependsOn(
             publicAccessBlock,
-            ownershipControls,
-            website)
+            ownershipControls)
         .build());
 ```
 
@@ -425,19 +418,18 @@ resources:
       dependsOn:
         - ${public-access-block}
         - ${ownership-controls}
-        - ${website}
 ```
 
 {{% /choosable %}}
 
-Note that the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobjectv2/) also includes the Pulumi resource option [`dependsOn`](/docs/concepts/options/dependson/). This setting tells Pulumi that the [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobjectv2/) relies indirectly on the [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/), which is responsible for enabling public access to its contents. If you omitted this setting, the attempt to grant `public-read` access to `index.html` would fail, as all S3 buckets and their objects are blocked from public access by default.
+Note that the `BucketObject` also includes the Pulumi resource _option_ [`dependsOn`](/docs/concepts/options/dependson/). This setting tells Pulumi that the `BucketObject` relies indirectly on the `BucketPublicAccessBlock`, which is responsible for enabling public access to its contents. If you omitted this setting, the attempt to grant `public-read` access to `index.html` would fail, as all S3 buckets and their objects are blocked from public access by default.
 
 Finally, at the end of the program, export the resulting bucket’s endpoint URL so you can browse to it easily:
 
 {{% choosable language javascript %}}
 
 ```javascript
-exports.bucketEndpoint = pulumi.interpolate`http://${website.websiteEndpoint}`;
+exports.bucketEndpoint = pulumi.interpolate`http://${bucket.websiteEndpoint}`;
 ```
 
 {{% /choosable %}}
@@ -445,7 +437,7 @@ exports.bucketEndpoint = pulumi.interpolate`http://${website.websiteEndpoint}`;
 {{% choosable language typescript %}}
 
 ```typescript
-export const bucketEndpoint = pulumi.interpolate`http://${website.websiteEndpoint}`;
+export const bucketEndpoint = pulumi.interpolate`http://${bucket.websiteEndpoint}`;
 ```
 
 {{% /choosable %}}
@@ -453,7 +445,7 @@ export const bucketEndpoint = pulumi.interpolate`http://${website.websiteEndpoin
 {{% choosable language python %}}
 
 ```python
-pulumi.export('bucket_endpoint', pulumi.Output.concat('http://', website.website_endpoint))
+pulumi.export('bucket_endpoint', pulumi.Output.concat('http://', bucket.website_endpoint))
 ```
 
 {{% /choosable %}}
@@ -461,7 +453,7 @@ pulumi.export('bucket_endpoint', pulumi.Output.concat('http://', website.website
 {{% choosable language go %}}
 
 ```go
-ctx.Export("bucketEndpoint", website.WebsiteEndpoint.ApplyT(func(websiteEndpoint string) (string, error) {
+ctx.Export("bucketEndpoint", bucket.WebsiteEndpoint.ApplyT(func(websiteEndpoint string) (string, error) {
     return fmt.Sprintf("http://%v", websiteEndpoint), nil
 }).(pulumi.StringOutput))
 ```
@@ -474,7 +466,7 @@ ctx.Export("bucketEndpoint", website.WebsiteEndpoint.ApplyT(func(websiteEndpoint
 return new Dictionary<string, object?>
 {
     // ...
-    ["bucketEndpoint"] = website.WebsiteEndpoint.Apply(websiteEndpoint => $"http://{websiteEndpoint}"),
+    ["bucketEndpoint"] = bucket.WebsiteEndpoint.Apply(websiteEndpoint => $"http://{websiteEndpoint}"),
 };
 ```
 
@@ -484,7 +476,7 @@ return new Dictionary<string, object?>
 
 ```java
 // ...
-ctx.export("bucketEndpoint", website.websiteEndpoint().applyValue(websiteEndpoint -> String.format("http://%s", websiteEndpoint)));
+ctx.export("bucketEndpoint", bucket.websiteEndpoint().applyValue(websiteEndpoint -> String.format("http://%s", websiteEndpoint)));
 ```
 
 {{% /choosable %}}
@@ -494,7 +486,7 @@ ctx.export("bucketEndpoint", website.websiteEndpoint().applyValue(websiteEndpoin
 ```yaml
 outputs:
   # ...
-  bucketEndpoint: http://${website.websiteEndpoint}
+  bucketEndpoint: http://${my-bucket.websiteEndpoint}
 ```
 
 {{% /choosable %}}
@@ -518,12 +510,12 @@ Again, you'll see a preview of the changes before they're deployed:
 ```
 Previewing update (dev):
 
-     Type                                    Name                 Plan       Info
-     pulumi:pulumi:Stack                     quickstart-dev
- +   ├─ aws:s3:BucketWebsiteConfigurationV2  website              create
- +   ├─ aws:s3:BucketOwnershipControls       ownership-controls   create
- +   ├─ aws:s3:BucketPublicAccessBlock       public-access-block  create
- ~   └─ aws:s3:BucketObject                  index.html           update     [diff: ~acl,contentType]
+     Type                               Name                 Plan       Info
+     pulumi:pulumi:Stack                quickstart-dev
+ ~   ├─ aws:s3:Bucket                   my-bucket            update     [diff: +website]
+ +   ├─ aws:s3:BucketOwnershipControls  ownership-controls   create
+ +   ├─ aws:s3:BucketPublicAccessBlock  public-access-block  create
+ ~   └─ aws:s3:BucketObject             index.html           update     [diff: ~acl,contentType]
 
 Outputs:
   + bucketEndpoint: output<string>
@@ -545,12 +537,12 @@ Choose `yes` to perform the deployment:
 Do you want to perform this update? yes
 Updating (dev):
 
-     Type                                    Name                 Status              Info
-     pulumi:pulumi:Stack.                    quickstart-dev
- +   ├─ aws:s3:BucketWebsiteConfigurationV2  website              created (0.51s)
- +   ├─ aws:s3:BucketOwnershipControls.      ownership-controls   created (0.84s)
- +   ├─ aws:s3:BucketPublicAccessBlock       public-access-block  created (1s)
- ~   └─ aws:s3:BucketObject                  index.html           updated (0.53s)     [diff: ~acl,contentType]
+     Type                               Name                 Status              Info
+     pulumi:pulumi:Stack                quickstart-dev
+ ~   ├─ aws:s3:Bucket                   my-bucket            updated (3s)        [diff: +website]
+ +   ├─ aws:s3:BucketOwnershipControls  ownership-controls   created (0.84s)
+ +   ├─ aws:s3:BucketPublicAccessBlock  public-access-block  created (1s)
+ ~   └─ aws:s3:BucketObject             index.html           updated (0.53s)     [diff: ~acl,contentType]
 
 Outputs:
   + bucketEndpoint: "http://my-bucket-dfd6bd0.s3-website-us-east-1.amazonaws.com"
@@ -564,7 +556,7 @@ Resources:
 Duration: 8s
 ```
 
-When the deployment completes, you can check out your new website at the URL in the [`Outputs`](/docs/iac/concepts/inputs-outputs/#outputs) section of your update or make a `curl` request and see the contents of `index.html` in your terminal:
+When the deployment completes, you can check out your new website at the URL in the `Outputs` section of your update or make a `curl` request and see the contents of `index.html` in your terminal:
 
 {{% choosable language javascript %}}
 

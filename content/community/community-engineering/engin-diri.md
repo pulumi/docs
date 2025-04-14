@@ -8,6 +8,14 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Cloud Native Rejekts - Europe 2025"
+  title: "MCPs In A DevOps World"
+  url: "https://cfp.cloud-native.rejekts.io/cloud-native-rejekts-europe-london-2025/talk/8XVTKJ/"
+  date: 2025-03-31T15:00:00.000-07:00
+- event: "Oslo PUG 2025 Workshop"
+  title: "Discover Pulumi Through Hands-On Practice"
+  url: "https://www.meetup.com/oslo-pulumi-user-group/events/306321063"
+  date: 2025-03-05T15:00:00.000-07:00
 - event: Kargo Community Meeting
   title: Pulumi + Kargo
   url: https://x.com/akuityio/status/1894765745499689426

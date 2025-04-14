@@ -180,9 +180,8 @@ const esc = require("@pulumi/esc-sdk");
 
 const startServers = () => {
 
-    // Configure and instantiate the ESC client.
-    const config = new esc.Configuration({ accessToken: process.env.PULUMI_ACCESS_TOKEN })
-    const client = new esc.EscApi(config);
+    // Instantiate the ESC client.
+    const client = esc.DefaultClient();
 
     // Start five web servers on successive ports, beginning with 8080.
     for (let i = 0; i < 5; i++) {
