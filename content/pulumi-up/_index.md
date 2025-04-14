@@ -11,50 +11,39 @@ event_date: 2024-09-18T08:00:00-07:00
 aliases:
     - /pulumiup
 
-# panels:
-#   - title: Cloud and IaC Panel
-#     subtitle: Infrastructure as Code - Can we do better?
-#     schedule_link: /resources/panel-infrastructure-as-code-can-we-do-better/
-#     panelists:
-#       - name: Joe Duffy
-#         image: /images/team/joe-duffy.jpg
-#         position: Co-Founder / CEO
-#         company: Pulumi
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/joejduffy/
-#           - site: twitter
-#             link: https://x.com/funcofjoe/
-#       - name: Brian Grant
-#         image: /images/pulumiup-2023/2024-speakers/brian-grant.jpeg
-#         position: CTO
-#         company: Stealth
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/bgrant0607/
-#       - name: Elad Ben-Israel
-#         image: /images/team/elad-ben-isreal.jpg
-#         position: Co-Founder / CEO
-#         company: Winglang
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/hackingonstuff/
-#       - name: Adam Jacob
-#         image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
-#         position: Co-Founder / CEO
-#         company: System Initiative
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/adamjacob/
-#       - name: Luke Hoban
-#         image: /images/team/luke-hoban.jpg
-#         position: CTO
-#         company: Pulumi
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/lukejhoban/
-#           - site: twitter
-#             link: https://x.com/lukehoban/
+panels:
+  - title: From Infrastructure Engineering to Platform Engineering
+    subtitle:
+    schedule_link: "#register"
+    panelists:
+      - name: Josh Kodroff
+        image: /images/team/josh-kodroff.jpg
+        position: Principal Customer Success Architect
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/joshkodroff/
+      - name: Zachary Cook
+        image: /images/people/zachary-cook.jpg
+        position: Sr. Manager DevOps
+        company: Modivcare
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/zacc/
+      - name: James Forcier
+        image: /images/people/james-forcier.jpg
+        position: Staff Software Engineer
+        company: Clear
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/james-forcier-8b115941/
+      - name: Simen A. W. Olsen
+        image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
+        position: CEO
+        company: Sokkel
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/simenandre/
 
 personas:
   groups:
@@ -88,10 +77,26 @@ speakers:
     title: Staff Software Engineer
     logo: /images/pulumiup-2023/speaker-logos/clear.png
     company: Clear
+  - name: Miki Manor
+    image: /images/team/miki-manor.jpg
+    title: Director of Infrastructure Engineering
+    logo: /logos/customers/skai-logo.svg
+    company: Skai
+  - name: Simen A. W. Olsen
+    image: /images/team/simen-a-w-olsen.jpg
+    title: CEO
+    logo: /images/pulumiup-2023/speaker-logos/sokkel.svg
+    company: Sokkel
   - name: Daniel Kisselman
     image: /images/people/daniel-kisselman.jpg
     title: Senior DevOps Engineer
     logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
+    company: XMCyber
+  - name: Ido Ozeri
+    image: /images/people/ido-ozeri.jpg
+    title: DevOps Tech Lead
+    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
+    company: XMCyber
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: General Manager, IaC
@@ -102,14 +107,14 @@ speakers:
     title: Co-Founder and CEO
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Cleve Littlefield
-    image: /images/team/cleve-littlefield.jpg
-    title: General Manager, ESC
+  - name: Josh Kodroff
+    image: /images/team/josh-kodroff.jpg
+    title: Principal Customer Success Architect
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Craig Symonds
-    image: /images/team/craig-symonds.jpg
-    title: SVP, GM of Insights
+  - name: Mark Huber
+    image: /images/team/mark-huber.jpg
+    title: Sr Product Manager
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
  

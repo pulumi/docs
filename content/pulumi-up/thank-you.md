@@ -19,10 +19,26 @@ speakers:
     title: Staff Software Engineer
     logo: /images/pulumiup-2023/speaker-logos/clear.png
     company: Clear
+  - name: Miki Manor
+    image: /images/team/miki-manor.jpg
+    title: Director of Infrastructure Engineering
+    logo: /logos/customers/skai-logo.svg
+    company: Skai
+  - name: Simen A. W. Olsen
+    image: /images/team/simen-a-w-olsen.jpg
+    title: CEO
+    logo: /images/pulumiup-2023/speaker-logos/sokkel.svg
+    company: Sokkel
   - name: Daniel Kisselman
     image: /images/people/daniel-kisselman.jpg
     title: Senior DevOps Engineer
     logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
+    company: XMCyber
+  - name: Ido Ozeri
+    image: /images/people/ido-ozeri.jpg
+    title: DevOps Tech Lead
+    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
+    company: XMCyber
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: General Manager, IaC
@@ -33,14 +49,14 @@ speakers:
     title: Co-Founder and CEO
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Cleve Littlefield
-    image: /images/team/cleve-littlefield.jpg
-    title: General Manager, ESC
+  - name: Josh Kodroff
+    image: /images/team/josh-kodroff.jpg
+    title: Principal Customer Success Architect
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Craig Symonds
-    image: /images/team/craig-symonds.jpg
-    title: SVP, GM of Insights
+  - name: Mark Huber
+    image: /images/team/mark-huber.jpg
+    title: Sr Product Manager
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
 
@@ -77,6 +93,40 @@ schedule:
       description:
       time: "10:30 AM ET"
       time2: "5:30 PM PT"
+
+panels:
+  - title: From Infrastructure Engineering to Platform Engineering
+    subtitle:
+    schedule_link: "#register"
+    panelists:
+      - name: Josh Kodroff
+        image: /images/team/josh-kodroff.jpg
+        position: Principal Customer Success Architect
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/joshkodroff/
+      - name: Zachary Cook
+        image: /images/people/zachary-cook.jpg
+        position: Sr. Manager DevOps
+        company: Modivcare
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/zacc/
+      - name: James Forcier
+        image: /images/people/james-forcier.jpg
+        position: Staff Software Engineer
+        company: Clear
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/james-forcier-8b115941/
+      - name: Simen A. W. Olsen
+        image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
+        position: CEO
+        company: Sokkel
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/simenandre/
 
 templates:
     items:

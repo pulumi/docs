@@ -65,7 +65,7 @@
         </div>
     </section>
 
-    <section id="personas" class="my-8">
+    <section id="personas" class="my-8 bg-gray-100">
         <div class="container mx-auto px-4 py-8 text-center">
             <h2>A MUST attend for...</h2>
             <div class="mx-auto py-4 flex flex-col lg:flex-row">
@@ -85,22 +85,18 @@
         </div>
     </section>
 
-    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
-
-    {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
-
     {{ range .Params.panels }}
     <section id="panel" class="py-8 mb-12">
         <div class="container mx-auto text-center">
             <h2>{{ .title }}</h2>
             <h3>{{ .subtitle }}</h3>
-            <div class="container justify-center flex flex-col lg:flex-row">
+            <div class="container justify-center flex flex-col items-center lg:flex-row">
                 {{ range .panelists }}
                     <div class="mx-2 flex flex-row lg:flex-col my-2">
                         <img src="{{ .image }}" class="rounded-l-md lg:rounded-b-none lg:rounded-t-md" style="height: 220px; width: 220px;" />
-                        <div class="bg-gray-200	 w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left">
+                        <div class="bg-gray-200	 w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left" style="width: 220px;">
                             <h6>{{ .name }}</h6>
-                            <p class="text-sm text-black my-2 flex-wrap">{{ .position }}</p>
+                            <p class="text-sm text-black my-2 flex flex-wrap">{{ .position }}</p>
                             <p class="text-sm text-black my-2">{{ .company }}</p>
                             <div class="flex flex-row my-4">
                                 {{ range .socials }}
@@ -115,12 +111,16 @@
             </div>
             <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
             <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
-                <a class="m-4 sm:m-2 btn-primary" href="{{ .schedule_link }}">Watch On Demand</a>
+                <a class="m-4 sm:m-2 btn-primary" href="{{ .schedule_link }}">Register Now</a>
                 </a>
             </div>
         </div>
     </section>
     {{ end }}
+
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
+
+    {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
 
     <section id="workshops" class="py-8 mt-8">
         <div class="container mx-auto">
