@@ -38,7 +38,7 @@ panels:
           - site: linkedin
             link: https://www.linkedin.com/in/james-forcier-8b115941/
       - name: Simen A. W. Olsen
-        image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
+        image: /images/team/simen-a-w-olsen.jpg
         position: CEO
         company: Sokkel
         socials:
