@@ -32,6 +32,7 @@ tags:
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
+canonical_url: "https://www.pulumi.com/docs/iac/clouds/aws/guides/lambda/"
 ---
 
 Since its introduction in 2014, AWS Lambda has rapidly expanded its capabilities from simple “functions in the cloud” at launch to a comprehensive serverless platform with [support for containerized functions](https://www.pulumi.com/blog/aws-lambda-container-support/) and [public per-function URL endpoints](https://www.pulumi.com/blog/lambda-urls-launch/).

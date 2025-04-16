@@ -10,6 +10,7 @@ tags:
     - features
     - migration
     - import
+canonical_url: "https://www.pulumi.com/docs/iac/adopting-pulumi/import/"
 ---
 
 Last year, we [introduced a new Pulumi feature](/blog/pulumi-import-generate-iac-for-existing-cloud-resources/) that allows you to import existing infrastructure into your Pulumi program. Not only did it bring the resource into the Pulumi state file, but it could generate the source code for your Pulumi program too. Today, we're excited to announce that we've listened to feedback and delivered a plethora of updates and fixes to streamline the import experience; to make it **more useful**, **more convenient**, and **more powerful**.

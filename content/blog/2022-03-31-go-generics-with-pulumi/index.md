@@ -6,6 +6,7 @@ meta_desc: In this article, @rawkode shows you how to take advantage of Go's lat
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["community"]
+canonical_url: "https://www.pulumi.com/docs/languages-sdks/go/"
 ---
 
 {{% notes type="warning" %}}

@@ -10,6 +10,7 @@ tags:
     - java
     - cloud-engineering
     - infrastructure-as-code
+canonical_url: "https://www.pulumi.com/docs/languages-sdks/java/"
 ---
 
 Infrastructure has become a core part of application development as modern cloud capabilities such as microservices, containers, serverless, and data stores define your application's architecture. The term "infrastructure" covers all of the cloud resources your application needs to run. Modern architectures require thinking deeply about infrastructure while building your application, instead of treating it as an afterthought. Pulumi's approach helps developers, infrastructure engineers, and platform teams work together to leverage everything the modern cloud has to offer.

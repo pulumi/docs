@@ -13,6 +13,7 @@ tags:
     - python
     - go
     - typescript
+canonical_url: "https://www.pulumi.com/registry/packages/eks/"
 ---
 
 {{% notes type="info" %}}

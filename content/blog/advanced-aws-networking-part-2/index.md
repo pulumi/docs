@@ -41,6 +41,7 @@ tags:
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,
 # and please remove these comments before submitting for review.
+canonical_url: "https://www.pulumi.com/docs/iac/clouds/aws/guides/networking/"
 ---
 
 In this blog series, you will learn how to create a hub-and-spoke network architecture in AWS with centralized egress and traffic inspection. In this second installment, we'll show you how to create spoke VPCs to run your workloads, verify centralized egress is working, and then add centralized traffic inspection using Pulumi, the infrastructure as code tool that enables you to manage infrastructure with real programming languages!

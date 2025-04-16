@@ -13,6 +13,7 @@ summary: |
     Manually-Managed Node Groups in EC2. In this post, we'll see how to use each of these
     compute options, and when to prefer one over the other in order to maximize productivity,
     flexibility, and control, based on your needs.
+canonical_url: "https://www.pulumi.com/docs/iac/clouds/aws/guides/eks/"
 ---
 
 {{% notes %}}

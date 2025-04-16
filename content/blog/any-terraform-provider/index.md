@@ -11,6 +11,7 @@ authors:
 tags:
   - terraform
   - features
+canonical_url: "https://www.pulumi.com/registry/packages/terraform-provider/"
 
 social:
   twitter: "You can now use ANY Terraform Provider from Pulumi! The entire ecosystem of Terraform/OpenTofu providers is now available to Pulumi users. And all the benefits of Pulumi are available to partners and developers building their own Terraform Providers, with no extra work!"

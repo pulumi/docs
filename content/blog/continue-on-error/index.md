@@ -34,6 +34,7 @@ authors:
 tags:
     - error-handling
     - announcement
+canonical_url: "https://www.pulumi.com/docs/cli/commands/pulumi_up/#continue-on-error"
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
