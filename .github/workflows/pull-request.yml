@@ -19,12 +19,35 @@ jobs:
     environment: testing
     steps:
 
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@v4
+        with:
+          # Only fetch PR branch
+          fetch-depth: 1
+          ref: ${{ github.event.pull_request.head.sha }}
+      
+      - name: Fetch base branch
+        run: |
+          # Fetch and create local master branch
+          git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin master:master
+          # Verify branches
+          echo "Local branches:"
+          git branch -v
+          echo "\nRemote branches:"
+          git branch -r
+      
+      - name: Set base branch env
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "BASE_BRANCH=${{ github.event.pull_request.base.ref }}" >> $GITHUB_ENV
+          else
+            # This covers push scenario to master
+            # or any other scenario with no PR info
+            echo "BASE_BRANCH=" >> $GITHUB_ENV
+          fi
+          echo "Branch:${{ github.event.pull_request.base.ref }}"
       - uses: actions/setup-node@v1
         with:
           node-version: '18.x'
-
       - uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.135.0'
@@ -55,6 +78,7 @@ jobs:
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}
           NODE_OPTIONS: "--max_old_space_size=8192"
+          BASE_BRANCH: ${{ env.BASE_BRANCH }}
 
       - name: Archive test results
         uses: actions/upload-artifact@v4
