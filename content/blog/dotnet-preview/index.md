@@ -1,6 +1,7 @@
 ---
 title: "Infrastructure as Code with .NET and Pulumi"
 date: 2019-11-13T11:23:04-06:00
+updated: 2025-04-16
 draft: false
 meta_desc: "Pulumi launches supports .NET Core languages for Infrastructure as Code"
 meta_image: "meta.png"
@@ -8,6 +9,7 @@ authors:
     - sophia-parafina
 tags:
     - ".NET"
+canonical_url: "https://www.pulumi.com/docs/languages-sdks/dotnet/"
 ---
 With the release of [Pulumi for .NET preview](/blog/pulumi-dotnet-core/), we've open the doors to [infrastructure as code](/what-is/what-is-infrastructure-as-code/) to even more developers and operators. Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use.
 
