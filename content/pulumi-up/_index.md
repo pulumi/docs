@@ -197,15 +197,11 @@ customer_logos:
       - logo: microsoft.png
         link: http://azure.microsoft.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: 1password.png
-        link: https://1password.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: gitlab.png
         link: https://about.gitlab.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: temporal.png
         link: https://temporal.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: new-relic.png
-        link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: tailscale.svg
         link: https://tailscale.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: docker.png
