@@ -199,13 +199,15 @@ customer_logos:
     - logos:
       - logo: gitlab.png
         link: https://about.gitlab.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: docker.png
+        link: https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: temporal.png
         link: https://temporal.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
       - logo: tailscale.svg
         link: https://tailscale.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: docker.png
-        link: https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: honeycomb-logo.svg
         link: https://www.honeycomb.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: sokkel.svg
+        link: https://sokkel.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
 ---
