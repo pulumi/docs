@@ -27,9 +27,8 @@ values:
           identityId: aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
     secrets:
       fn::open::infisical-secrets:
-        login:
-          accessToken: ${infisical.login.accessToken}
-        retrieve:
+        login: ${infisical.login}
+        get:
           api-key:
             projectId: xxxxxxx-bbbb-cccc-dddd-eeeeeeeeeeee
             environment: production
@@ -68,27 +67,27 @@ environment identifier respectively. You should see output similar to the follow
 
 ## Inputs
 
-| Property   | Type                                                             | Description                                                                                                                |
-|------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| `siteUrl`  | string                                                           | [Optional] - The base URL of the Infisical instance you authenticated to. May be omitted if default US instance was used.  |
-| `login`    | [InfisicalSecretsLogin](#infisicalsecretslogin)                  | Credentials used to log in to Infisical.                                                                                   |
-| `retrieve` | map[string][InfisicalSecretsRetrieve](#infisicalsecretsretrieve) | A map from names to secrets to read from Infisical Secrets. The outputs will map each name to the secret's sensitive data. |
+| Property | Type                                                   | Description                                                                                                                |
+|----------|--------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `login`  | [InfisicalSecretsLogin](#infisicalsecretslogin)        | Credentials to use to log in to Infisical.                                                                                 |
+| `get`    | map[string][InfisicalSecretsGet](#infisicalsecretsget) | A map from names to secrets to read from Infisical Secrets. The outputs will map each name to the secret's sensitive data. |
 
 ### InfisicalSecretsLogin
 
-| Property      | Type   | Description                                 |
-|---------------|--------|---------------------------------------------|
-| `accessToken` | string | The access token to use for authentication. |
+| Property      | Type   | Description                                                                                                               |
+|---------------|--------|---------------------------------------------------------------------------------------------------------------------------|
+| `siteUrl`     | string | [Optional] - The base URL of the Infisical instance you authenticated to. May be omitted if default US instance was used. |
+| `accessToken` | string | The access token to use for authentication.                                                                               |
 
-### InfisicalSecretsRetrieve
+### InfisicalSecretsGet
 
-| Property      | Type   | Description                                                       |
-|---------------|--------|-------------------------------------------------------------------|
-| `projectId`   | string | The projectId of the project the secret lives in.                 |
-| `environment` | string | The environment name of the environment the secret lives in.      |
-| `secretKey`   | string | The name of the secret to import.                                 |
-| `secretPath`  | string | [Optional] - The path inside the environment the secret lives in. |
-| `type`        | string | [Optional] - The secret type, either 'shared' or 'personal'.      |
+| Property      | Type   | Description                                                                                                                                                                                         |
+|---------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `projectId`   | string | The projectId of the project the secret lives in. In the Infisical web app, navigate to your Secrets project, click on *Project Settings*, and click the *Copy Project ID* button.                  |
+| `environment` | string | The environment slug of the environment the secret lives in. In the Infisical web app, navigate to your Secrets project, click on *Project Settings*, and find the slug in the *Environments* list. |
+| `secretKey`   | string | The name of the secret to import.                                                                                                                                                                   |
+| `secretPath`  | string | [Optional] - The path inside the environment the secret lives in.                                                                                                                                   |
+| `type`        | string | [Optional] - The secret type, either 'shared' or 'personal'.                                                                                                                                        |
 
 ### Outputs
 

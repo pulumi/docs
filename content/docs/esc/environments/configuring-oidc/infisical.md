@@ -146,6 +146,14 @@ Note how the keys and values are appended along with the prefix.
 
 {{< notes type="warning" >}}
 
+If not customized, the subject claim has the following format by default:
+
+`pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
+
+{{< /notes >}}
+
+{{< notes type="warning" >}}
+
 For environments within the legacy `default` project, the project will **not** be present in the subject to preserve
 backwards compatibility. The format of the subject claim when `subjectAttributes` are not set is
 `pulumi:environments:org:<organization name>:env:<environment name>`. If `currentEnvironment.name` is used as a custom
@@ -157,12 +165,10 @@ Due to this it is recommended to move your environments out of the `default` pro
 
 ## Subject claim example
 
-Here is an example of a valid subject claim for the `project/development` environment of the `contoso` organization:
+Here is an example of a valid, not customized subject claim for the `project/development` environment of the `contoso`
+organization:
 
 * `pulumi:environments:org:contoso:env:project/development`
-
-The default format of the subject claim when `subjectAttributes` are not used is
-`pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
 
 {{< notes type="warning" >}}
 
