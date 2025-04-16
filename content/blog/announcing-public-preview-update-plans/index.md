@@ -1,6 +1,7 @@
 ---
 title: "Announcing the public preview of Update Plans"
 date: 2022-02-09
+updated: 2025-04-16
 meta_desc: Update Plans enable you to see and confirm the updates that will be made to your infrastructure and then apply those updates at a later time.
 meta_image: update_plans_preview.png
 authors:
@@ -8,6 +9,9 @@ authors:
 tags:
     - features
 ---
+
+> [!INFO]
+> Update Plans are now generally available and no longer require the `PULUMI_EXPERIMENTAL` environment variable. For the most up-to-date information about using Update Plans, please see the [Update Plans documentation](/docs/cli/commands/pulumi-preview#save-a-plan-file).
 
 Pulumi’s previews are an important part of any workflow where you want to see the changes that will be made to your infrastructure before actually making the changes (with `pulumi up`). However, today there is no guarantee that the `pulumi up` operation will do only what was previewed; if the program, or your infrastructure, changes between the preview and the update, the update might make additional changes to bring your infrastructure back in line with what’s defined in your program. We’ve [heard from many of you](https://github.com/pulumi/pulumi/issues/2318) that you need a strong guarantee about exactly which changes an update will make to your infrastructure, especially in critical and production environments.
 

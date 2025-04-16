@@ -1,6 +1,7 @@
 ---
 title: "Inside Crosswalk for Kubernetes"
 date: 2019-11-21
+updated: 2025-04-16
 draft: false
 meta_desc: "Crosswalk for Kubernetes is a collection of common patterns of usage for provisioning Kubernetes infrastructure and running containerized applications."
 meta_image: "meta.png"
@@ -12,6 +13,9 @@ tags:
  - aws
  - google-cloud
 ---
+
+> [!INFO]
+> This post describes an early version of Crosswalk for Kubernetes. Some of the links, examples, and implementation details may have changed. For the most up-to-date information, see the [Pulumi Kubernetes documentation](/docs/clouds/kubernetes/).
 
 Running Kubernetes in production can be challenging. This past year, Pulumi has collected common patterns of usage informed by best practices for provisioning Kubernetes infrastructure and running containerized applications. We call this Pulumi Crosswalk for Kubernetes: a collection of playbooks and libraries to help you to successfully configure, deploy, and manage Kubernetes in a way that works for teams in production.
 
