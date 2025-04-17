@@ -25,7 +25,7 @@ social:
 
 Today we're excited to announce the release of Pulumi Azure Native V3 - a major leap forward for the most comprehensive infrastructure as code solution for Microsoft Azure. This release delivers a remarkable 75% reduction in SDK size while maintaining our complete coverage of the Azure ecosystem.
 
-Pulumi Azure Native provides direct access to the [Azure Resource Manager API](https://learn.microsoft.com/en-us/rest/api/resources/), making it hands-down the best infrastructure as code solution for Microsoft Azure. Unlike traditional providers that abstract away cloud APIs, Azure Native gives you more than resource and property coverage compared to Terraform by directly mapping to Azure's native REST API. This means:
+Pulumi Azure Native provides direct access to the [Azure Resource Manager API](https://learn.microsoft.com/en-us/rest/api/resources/), making it hands-down the best infrastructure as code solution for Microsoft Azure. Unlike traditional providers that abstract away cloud APIs, Azure Native gives you more resource and property coverage compared to Terraform by directly mapping to Azure's native REST API. This means:
 
 - **Complete API coverage**: 100% of Azure resources available in Azure Resource Manager
 - **Same-day access to new Azure features**: No waiting for provider updates
