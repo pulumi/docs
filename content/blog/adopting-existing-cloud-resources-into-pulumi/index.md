@@ -5,7 +5,7 @@ meta_desc: "Migrating from Terraform or another IaC tool? Learn how to adopt exi
 meta_image: "meta.png"
 authors: ["luke-hoban"]
 tags: ["migration"]
-canonical_url: "https://www.pulumi.com/docs/iac/concepts/options/import/"
+canonical_url: "https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/"
 ---
 
 {{% notes %}}
