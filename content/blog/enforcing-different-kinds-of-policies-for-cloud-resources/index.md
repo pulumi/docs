@@ -1,12 +1,14 @@
 ---
 title: "Enforcing Different Kinds of Policies for Cloud Resources"
 date: 2019-12-19
+updated: 2025-04-16
 meta_desc: "A look at the different types of policies that can be written for Pulumi CrossGuard."
 meta_image: crossguard.png
 authors:
     - justin-vanpatten
 tags:
     - policy-as-code
+canonical_url: "https://www.pulumi.com/docs/iac/using-pulumi/crossguard/"
 ---
 
 We recently announced [a new policy as code solution, CrossGuard](/blog/announcing-crossguard-preview/) that validates policies at deployment time. Policies are expressed as code and are used to prevent the creation of out-of-compliance resources. This allows an organization to prevent entire classes of security and reliability defects to ensure infrastructure is following best practices. Because policies are written using full-blown programming languages, it's possible to do interesting things such as [combining IAM Access Analyzer and Pulumi CrossGuard](/blog/aws-iam-access-analyzer-and-crossguard/). In this post, we'll take a closer look at the different types of policies that can be written.
