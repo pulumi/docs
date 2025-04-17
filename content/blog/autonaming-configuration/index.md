@@ -9,7 +9,7 @@ authors:
 tags:
     - features
     - releases
-canonical_url: "https://www.pulumi.com/docs/iac/concepts/resources/names/"
+canonical_url: "https://www.pulumi.com/docs/iac/concepts/resources/names/#autonaming-configuration"
 social:
     twitter: |
         🎉 New in Pulumi: Flexible Resource Auto-naming!
