@@ -85,15 +85,6 @@ With Pulumi, you can:
 - **Define AI/ML environments as code**, making deployments repeatable and version-controlled.
 - **Integrate infrastructure with machine learning pipelines**, reducing operational overhead.
 
-{{% notes "info" %}}
-Want to geek out and get the inside scoop on AI/ML using Kubernetes? Meet us at:
-
-- **KubeCon Europe Booth S450** - [Request a 1:1 Demo](https://www.pulumi.com/kubecon-europe/)
-- **Google Next'25 booth 1589** - [Join us for a Happy House and/or Request your 1:1 Demo](https://www.pulumi.com/google-next/)
-
-Don’t miss the chance to see Pulumi in action, ask questions, and explore AI/ML innovations on Kubernetes.🚀
-{{% /notes %}}
-
 ## Deploying AI/ML Workloads on Kubernetes
 
 Below, we explore two use cases for running AI/ML workloads on [Google Kubernetes Engine (GKE)](https://www.pulumi.com/templates/kubernetes/gcp/) using Pulumi.
