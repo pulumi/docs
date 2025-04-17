@@ -150,15 +150,12 @@ Currently, there are issues with autoscaling based on the metrics, which makes p
 
 ## AWS Pricing
 
-{{% notes type="info" %}}
-The most up-to-date pricing can be found on the [AWS Pricing page](https://aws.amazon.com/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all).
-{{% /notes %}}
+> [!INFO]
+> The pricing information in this section is outdated. For the most current AWS Lambda pricing, including Provisioned Concurrency costs, please refer to the [official AWS Lambda pricing page](https://aws.amazon.com/lambda/pricing/).
 
-While hand-crafted Lambda warmers are virtually free, provisioned concurrency can be costly. The new pricing is an integral part of the change: Instead of purely per-call model, AWS charges per hour for provisioned capacity.
+While hand-crafted Lambda warmers are virtually free, provisioned concurrency can be costly. The pricing model for Provisioned Concurrency differs from the standard on-demand Lambda model: Instead of purely per-call billing, AWS charges per hour for provisioned capacity.
 
-You would pay $0.015 per hour per GB of provisioned worker memory, even if a worker handled zero requests.
-
-The per-invocation price gets a discount: $0.035 per GB-hour instead of the regular $0.06 per GB-hour. This change means that fully-utilized workers would be cheaper if provisioned compared to on-demand workers.
+You pay for the Provisioned Concurrency you configure, even if a worker handled zero requests, plus a reduced rate for actual usage of those pre-provisioned instances.
 
 {{< figure src="./pricing.png" caption="Comparison of the cost of a 1GB worker for two billing models" alt="Bar chart comparing the cost of a 1GB AWS Lambda worker under on-demand and provisioned concurrency pricing models" >}}
 

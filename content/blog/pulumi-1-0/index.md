@@ -4,9 +4,12 @@ authors: ["joe-duffy"]
 tags: ["pulumi-news"]
 meta_desc: "We are excited to announce Pulumi 1.0, a modern infrastructure as code platform that works for any cloud, AWS, Azure, GCP, or Kubernetes included."
 date: "2019-09-05"
-
+updated: "2025-04-16"
 meta_image: "pulumi-1-0.png"
 ---
+
+> [!INFO]
+> This blog post announces Pulumi 1.0, which has been superseded by newer versions. For information about the latest Pulumi release, please refer to the [current documentation](/docs/) and [recent release notes](https://github.com/pulumi/pulumi/releases).
 
 Today we are excited to announce the general availability of Pulumi 1.0. Pulumi is a modern infrastructure as code tool that lets you declare infrastructure using familiar, general-purpose languages, with a SaaS management console for configuring identities, organizations, and related policies. By using familiar languages, developers and operators are able to work better together, sharing and reusing best practices, accomplishing new levels of automation, and unlocking access to ecosystems of existing tools. The 1.0 release is a siginificant milestone for us, our community, and our customers, and signals completeness, stability, and compatibility.
 
