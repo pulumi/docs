@@ -12,7 +12,7 @@ tags:
     - best-practices
     - cloud-engineering
 aliases:
-    - /blog/iac-recommended-practices-code-structuring-pulumi-projects/
+    - /blog/iac-recommended-practices-structuring-pulumi-projects/
 ---
 
 This is the third post in a series of blog posts focused on Zephyr Archaeotech Emporium---our fictional company---and their use of Pulumi to manage their online retail store. In the first post, you saw how Zephyr initially decided to go with a single [Pulumi project](/docs/iac/concepts/projects/) for managing deployments of their online retail store application. In this post, you'll see how Zephyr's use of Pulumi changes as their company grows and evolves.<!--more-->

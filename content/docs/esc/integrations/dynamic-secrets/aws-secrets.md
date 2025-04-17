@@ -15,7 +15,9 @@ aliases:
 
 The `aws-secrets` provider enables you to dynamically import Secrets from AWS Secrets Manager into your Environment. The provider will return a map of names to Secrets.
 
-## Example
+## Example: Plain-Text Secrets
+
+The following example demonstrates how to retrieve plain-text (i.e., scalar value) secrets from AWS Secrets Manager:
 
 ```yaml
 values:
@@ -35,6 +37,33 @@ values:
             secretId: api-key
           app-secret:
             secretId: app-secret
+```
+
+## Example: Key/Value Pair Secrets
+
+The following example demonstrates how to retrieve key/value pair (i.e. JSON) secrets from AWS Secrets Manager and map them to Pulumi IaC configuration values:
+
+```yaml
+values:
+  aws:
+    login:
+      fn::open::aws-login:
+        oidc:
+          roleArn: arn:aws:iam::123456789:role/esc-oidc
+          sessionName: pulumi-environments-session
+    secrets:
+      fn::open::aws-secrets:
+        region: us-west-1
+        login: ${aws.login}
+        get:
+          db-creds:
+            secretId: prod-db
+    secrets-unpacked:
+      db-creds:
+        fn::fromJSON: ${aws.secrets.my-secret}
+  pulumiConfig:
+    dbUserName: ${aws.secrets-unpacked.db-creds.userName}
+    dbPassword: ${aws.secrets-unpacked.db-creds.password}
 ```
 
 ## Configuring OIDC

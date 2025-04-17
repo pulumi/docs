@@ -11,50 +11,39 @@ event_date: 2024-09-18T08:00:00-07:00
 aliases:
     - /pulumiup
 
-# panels:
-#   - title: Cloud and IaC Panel
-#     subtitle: Infrastructure as Code - Can we do better?
-#     schedule_link: /resources/panel-infrastructure-as-code-can-we-do-better/
-#     panelists:
-#       - name: Joe Duffy
-#         image: /images/team/joe-duffy.jpg
-#         position: Co-Founder / CEO
-#         company: Pulumi
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/joejduffy/
-#           - site: twitter
-#             link: https://x.com/funcofjoe/
-#       - name: Brian Grant
-#         image: /images/pulumiup-2023/2024-speakers/brian-grant.jpeg
-#         position: CTO
-#         company: Stealth
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/bgrant0607/
-#       - name: Elad Ben-Israel
-#         image: /images/team/elad-ben-isreal.jpg
-#         position: Co-Founder / CEO
-#         company: Winglang
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/hackingonstuff/
-#       - name: Adam Jacob
-#         image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
-#         position: Co-Founder / CEO
-#         company: System Initiative
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/adamjacob/
-#       - name: Luke Hoban
-#         image: /images/team/luke-hoban.jpg
-#         position: CTO
-#         company: Pulumi
-#         socials:
-#           - site: linkedin
-#             link: https://www.linkedin.com/in/lukejhoban/
-#           - site: twitter
-#             link: https://x.com/lukehoban/
+panels:
+  - title: From Infrastructure Engineering to Platform Engineering
+    subtitle:
+    schedule_link: "#register"
+    panelists:
+      - name: Josh Kodroff
+        image: /images/team/josh-kodroff.jpg
+        position: Principal Customer Success Architect
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/joshkodroff/
+      - name: Zachary Cook
+        image: /images/people/zachary-cook.jpg
+        position: Sr. Manager DevOps
+        company: Modivcare
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/zacc/
+      - name: James Forcier
+        image: /images/people/james-forcier.jpg
+        position: Staff Software Engineer
+        company: Clear
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/james-forcier-8b115941/
+      - name: Simen A. W. Olsen
+        image: /images/team/simen-a-w-olsen.jpg
+        position: CEO
+        company: Sokkel
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/simenandre/
 
 personas:
   groups:
@@ -88,6 +77,26 @@ speakers:
     title: Staff Software Engineer
     logo: /images/pulumiup-2023/speaker-logos/clear.png
     company: Clear
+  - name: Miki Manor
+    image: /images/team/miki-manor.jpg
+    title: Director of Infrastructure Engineering
+    logo: /logos/customers/skai-logo.svg
+    company: Skai
+  - name: Simen A. W. Olsen
+    image: /images/team/simen-a-w-olsen.jpg
+    title: CEO
+    logo: /images/pulumiup-2023/speaker-logos/sokkel.svg
+    company: Sokkel
+  - name: Daniel Kisselman
+    image: /images/people/daniel-kisselman.jpg
+    title: Senior DevOps Engineer
+    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
+    company: XMCyber
+  - name: Ido Ozeri
+    image: /images/people/ido-ozeri.jpg
+    title: DevOps Tech Lead
+    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
+    company: XMCyber
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: General Manager, IaC
@@ -98,14 +107,14 @@ speakers:
     title: Co-Founder and CEO
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Cleve Littlefield
-    image: /images/team/cleve-littlefield.jpg
-    title: General Manager, ESC
+  - name: Josh Kodroff
+    image: /images/team/josh-kodroff.jpg
+    title: Principal Customer Success Architect
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Craig Symonds
-    image: /images/team/craig-symonds.jpg
-    title: SVP, GM of Insights
+  - name: Mark Huber
+    image: /images/team/mark-huber.jpg
+    title: Sr Product Manager
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
  
@@ -144,26 +153,30 @@ schedule:
       time2: "5:30 PM PT"
 
 workshops:
-  - title: Managing team secrets with 1Password & Pulumi ESC
-    meta_desc: Learn Pulumi ESC + 1Password for secure, automated secret management in multi-cloud setups. Store & fetch secrets easily in our workshop
-    datetime: 2024-09-25T09:00:00.000-07:00
-    link: /resources/managing-team-secrets-with-1password-pulumi-esc/
-  - title: Securing IaC Pipelines in Regulated Industries
-    meta_desc: Learn best practices for securing and ensuring compliance of AWS infrastructure using Pulumi ESC and Policy as Code in your IaC pipelines.
-    datetime: 2024-09-26T09:00:00-07:00
-    link: /resources/securing-iac-pipelines-in-regulated-industries/
-  - title: Observability as Code for AI Apps with New Relic and Pulumi
-    meta_desc: Learn how to use AWS to generate secure infrastructure code for deploying an AI Chatbot app with Pulumi, leveraging New Relic's LLM dashboards.  
-    datetime: 2024-10-30T09:00:00-07:00
-    link: /resources/observability-as-code-for-ai-apps-new-relic/
-  - title: Deploy Tailscale infrastructure in AWS with Pulumi
-    meta_desc: Join this webinar to explore how to quickly create AWS infrastructure using Pulumi and Tailscale, showcasing advanced features in Kubernetes and AWS environments  
-    datetime: 2024-10-15T09:00:00-07:00
-    link: /resources/deploy-tailscale-infrastructure-with-pulumi/
-  - title: Deploy and Manage LLMs on Google Cloud Run GPUs with Pulumi
-    meta_desc: Deploy and manage LLMs on Google Cloud Run GPUs with Pulumi. Join our workshop to explore scalable, cost-effective infrastructure for fast LLM inference  
-    datetime: 2024-10-17T09:00:00-07:00
-    link: /resources/deploying-llms-google-cloud-run-pulumi/
+  - title: Designing Reusable Infrastructure as Code
+    meta_desc: "Master Pulumi Components: Learn to create reusable infrastructure code across languages, enabling DRY principles and powerful cross-team infrastructure sharing."
+    datetime: 2025-05-14T12:00:00-04:00
+    link: /events/designing-reusable-infrastructure-as-code/
+  - title: Enabling Platform Workflows with Pulumi and Docker
+    meta_desc: Learn how Pulumi and Docker Build Cloud can enable teams to deliver containerized workloads faster than ever.
+    datetime: 2025-05-21T12:00:00-04:00
+    link: /events/enabling-platform-workflows-with-pulumi-and-docker/
+  - title: Discover and Fix Misconfigured Cloud Resources with Pulumi
+    meta_desc: "Solve cloud compliance with Pulumi Insights: Learn to discover, manage, and optimize legacy resources across multi-cloud environments using policy as code."
+    datetime: 2025-05-28T12:00:00-04:00
+    link: /events/discover-and-fix-misconfigured-cloud-resources/
+  - title: Modern Infrastructure Automation with Pulumi and GitLab
+    meta_desc: Learn how to automate and manage cloud infrastructure using Pulumi's enhanced GitLab integration features for streamlined DevOps workflows.
+    datetime: 2025-06-11T12:00:00-04:00
+    link: /events/modern-infrastructure-automation-with-pulumi-and-gitlab/
+  - title: Enabling Platform Workflows with Temporal
+    meta_desc: Unlock Temporal Cloud's full potential with Pulumi. Learn to automate resource management, enhance developer workflows, and build platform engineering solutions.
+    datetime: 2025-06-24T12:00:00-04:00
+    link: /events/enabling-platform-workflows-with-temporal/
+  - title: Workload Observability with Pulumi and Honeycomb
+    meta_desc: Deliver "observability as code" with Pulumi and Honeycomb. Automate SLOs, detect critical issues, and transform your platform engineering approach.
+    datetime: 2025-07-17T09:00:00-04:00
+    link: /events/workload-observability-with-pulumi-and-honeycomb/
   
 
 registration:
@@ -184,15 +197,11 @@ customer_logos:
       - logo: microsoft.png
         link: http://azure.microsoft.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: 1password.png
-        link: https://1password.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: dagger.png
-        link: https://dagger.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
-      - logo: pinecone.png
-        link: https://www.pinecone.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: gitlab.png
+        link: https://about.gitlab.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: temporal.png
+        link: https://temporal.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: new-relic.png
-        link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: tailscale.svg
         link: https://tailscale.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: docker.png
