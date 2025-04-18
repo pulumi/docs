@@ -1,0 +1,44 @@
+{{ $page_type := .Params.page_type }}
+{{ $title := .Title }}
+{{ $permalink := .Permalink }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Pulumi",
+      "item": "https://www.pulumi.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Compliance",
+      "item": "https://www.pulumi.com/compliance/"
+    }{{ if eq $page_type "cloud" }},
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+    {{ else if eq $page_type "service" }},
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ .Params.framework }} Compliance for {{ .Params.cloud }}",
+      "item": "https://www.pulumi.com/compliance/{{ lower .Params.framework | urlize }}-{{ lower .Params.cloud | urlize }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+    {{ end }}
+  ]
+}
+</script>
