@@ -20,7 +20,8 @@
                 of your organization's cloud assets and automatically remediate issues.
                 {{ end }}
             </p>
-            <img src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" alt="Pulumi Insights dashboard identifying {{ .Params.cloud }} resources against {{ .Params.framework }} controls" />
+            <img src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" 
+    alt="{{ if and .Params.cloud .Params.framework }}Pulumi Insights dashboard scanning {{ .Params.cloud }} resources for {{ .Params.framework }} compliance violations and security issues{{ else }}Pulumi Insights dashboard scanning cloud resources for compliance violations and security vulnerabilities{{ end }}" />
             <h3>Pulumi Copilot</h3>
             <p class="py-4">
                 Use Pulumi <a href="/product/copilot/">Copilot</a> to assist configuring your infrastructure
@@ -43,7 +44,8 @@
                 their compliance.
                 {{ end }}
             </p>
-            <img src="/images/compliance/co-pilot-3.png" alt="Pulumi Copilot helping configure {{ .Params.framework }}-compliant {{ .Params.cloud }} infrastructure" />
+            <img src="/images/compliance/co-pilot-3.png" 
+    alt="{{ if and .Params.cloud .Params.framework }}Pulumi Copilot AI assistant suggesting {{ .Params.framework }}-compliant code for {{ .Params.cloud }} infrastructure with security best practices{{ else }}Pulumi Copilot AI assistant suggesting compliance-focused infrastructure code with security best practices{{ end }}" />
         </div>
     </section>
     
