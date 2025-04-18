@@ -5,11 +5,28 @@
             {{ partial "templates/breadcrumb.html" . }}
             <h2>{{ .Title }}</h2>
             <p>
+                {{ if eq .Params.cloud "AWS" }}
+                AWS environments require specific security configurations to meet CIS Benchmarks requirements. Pulumi helps implement 
+                CIS security controls across your AWS infrastructure by enforcing best practices for EC2 instances, IAM configurations, 
+                CloudTrail logging, and network security. Our policy-as-code approach ensures your AWS resources adhere to CIS Benchmarks 
+                automatically, helping identify misconfigurations and maintaining continuous compliance with these critical security standards.
+                {{ else if eq .Params.cloud "Azure" }}
+                Azure environments require specific security configurations to meet CIS Benchmarks requirements. Pulumi helps implement 
+                CIS security controls across your Azure infrastructure by enforcing best practices for Virtual Machines, Azure Active Directory, 
+                Azure Monitor, and Network Security Groups. Our policy-as-code approach ensures your Azure resources adhere to CIS Benchmarks 
+                automatically, helping identify misconfigurations and maintaining continuous compliance with these critical security standards.
+                {{ else if eq .Params.cloud "Google Cloud" }}
+                Google Cloud environments require specific security configurations to meet CIS Benchmarks requirements. Pulumi helps implement 
+                CIS security controls across your GCP infrastructure by enforcing best practices for Compute Engine, IAM configurations, 
+                Cloud Logging, and network security. Our policy-as-code approach ensures your Google Cloud resources adhere to CIS Benchmarks 
+                automatically, helping identify misconfigurations and maintaining continuous compliance with these critical security standards.
+                {{ else }}
                 CIS compliance is crucial for establishing strong security controls and safeguarding your cloud
                 infrastructure against cyber threats. Pulumi can help you identify
                 existing cloud resources that are not in compliance, and it can also enforce compliance policies proactively
                 before infrastructure is deployed. Get started with Pulumi to use these compliance tools or speak with a 
                 Solutions Architect to get an expert consultation.
+                {{ end }}
             </p>
             <div class="flex flex-row flex-wrap justify-center mt-10">
                 <a href="#sa-form" rel="noopener noreferrer" class="mx-2 my-2 btn-primary">Speak with a Solutions Architect</a>
@@ -20,9 +37,17 @@
     <section class="mt-4 py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
             <h3>What is CIS Compliance?</h3>
+            {{ if eq .Params.cloud "AWS" }}
             <p>
                 {{ .Params.description }}
             </p>
+            {{ else }}
+            <p>
+                CIS (Center for Internet Security) Benchmarks provide security best practices for configuring systems and cloud services. 
+                These benchmarks help organizations protect their infrastructure against cyber threats through standardized security controls.
+                <a href="/compliance/cis-aws/" class="text-blue-600">See our comprehensive CIS overview</a> for more details.
+            </p>
+            {{ end }}
         </div>
     </section>
     <section class="mt-4 py-4 px-4 md:px-0">
@@ -86,6 +111,27 @@
         {{ else if eq .Params.cloud "Google Cloud" }}
             {{ partial "compliance/cis/google-cloud.html" . }}
         {{ end }}
+    </section>
+    {{ end }}
+
+    {{ if eq .Params.page_type "cloud" }}
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Related Compliance Guides</h3>
+            <p>
+                More Cloud Compliance Guides for CIS: 
+                {{ if eq .Params.cloud "AWS" }}
+                See how to achieve <a href="/compliance/cis-azure/" class="text-blue-600">CIS compliance on Azure</a> or 
+                <a href="/compliance/cis-google-cloud/" class="text-blue-600">CIS compliance on Google Cloud</a>.
+                {{ else if eq .Params.cloud "Azure" }}
+                See how to achieve <a href="/compliance/cis-aws/" class="text-blue-600">CIS compliance on AWS</a> or 
+                <a href="/compliance/cis-google-cloud/" class="text-blue-600">CIS compliance on Google Cloud</a>.
+                {{ else if eq .Params.cloud "Google Cloud" }}
+                See how to achieve <a href="/compliance/cis-aws/" class="text-blue-600">CIS compliance on AWS</a> or 
+                <a href="/compliance/cis-azure/" class="text-blue-600">CIS compliance on Azure</a>.
+                {{ end }}
+            </p>
+        </div>
     </section>
     {{ end }}
 

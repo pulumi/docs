@@ -5,19 +5,45 @@
             <p class="py-4">
                 Use <a href="/product/pulumi-insights/">Pulumi Insights</a> to gain visibility into your cloud
                 infrastructure's
-                configuration to assess {{ .Params.framework }} compliance. Pulumi Insights is Intelligent
-                Cloud Management. It helps you gain security, compliance, and cost insights into the entirety
+                configuration to assess {{ .Params.framework }} compliance. 
+                {{ if eq .Params.cloud "AWS" }}
+                Pulumi Insights can scan your AWS account for {{ .Params.framework }} violations (e.g., unencrypted S3 buckets, misconfigured security groups, 
+                and improperly secured RDS instances) to ensure continuous compliance with cardholder data protection requirements.
+                {{ else if eq .Params.cloud "Azure" }}
+                Pulumi Insights can scan your Azure resources for {{ .Params.framework }} violations (e.g., unencrypted storage accounts, 
+                misconfigured network security groups, and improperly secured SQL databases) to ensure continuous compliance.
+                {{ else if eq .Params.cloud "Google Cloud" }}
+                Pulumi Insights can scan your Google Cloud resources for {{ .Params.framework }} violations (e.g., unencrypted Cloud Storage buckets, 
+                misconfigured firewall rules, and improperly secured Cloud SQL instances) to ensure continuous compliance.
+                {{ else }}
+                Pulumi Insights is Intelligent Cloud Management. It helps you gain security, compliance, and cost insights into the entirety
                 of your organization's cloud assets and automatically remediate issues.
+                {{ end }}
             </p>
-            <img src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" />
+            <img src="https://www.pulumi.com/uploads/pulumi-insights-search.gif" alt="Pulumi Insights dashboard identifying {{ .Params.cloud }} resources against {{ .Params.framework }} controls" />
             <h3>Pulumi Copilot</h3>
             <p class="py-4">
                 Use Pulumi <a href="/product/copilot/">Copilot</a> to assist configuring your infrastructure
-                to make it compliance ready. You can tap into the Pulumi Copilot's deep understanding of your 
+                to make it compliance ready. 
+                {{ if eq .Params.cloud "AWS" }}
+                Copilot can help you implement {{ .Params.framework }}-compliant AWS configurations by suggesting secure
+                settings for EC2 instances, S3 buckets, RDS databases, and IAM policies. Ask Copilot about implementing specific
+                {{ .Params.framework }} requirements and receive guidance tailored to your AWS environment.
+                {{ else if eq .Params.cloud "Azure" }}
+                Copilot can help you implement {{ .Params.framework }}-compliant Azure configurations by suggesting secure
+                settings for Virtual Machines, Storage Accounts, SQL Databases, and Azure Active Directory. Ask Copilot about implementing specific
+                {{ .Params.framework }} requirements and receive guidance tailored to your Azure environment.
+                {{ else if eq .Params.cloud "Google Cloud" }}
+                Copilot can help you implement {{ .Params.framework }}-compliant Google Cloud configurations by suggesting secure
+                settings for Compute Engine, Cloud Storage, Cloud SQL, and IAM policies. Ask Copilot about implementing specific
+                {{ .Params.framework }} requirements and receive guidance tailored to your GCP environment.
+                {{ else }}
+                You can tap into the Pulumi Copilot's deep understanding of your 
                 organization's context to gain visibility into the configuration of resources and assess
                 their compliance.
+                {{ end }}
             </p>
-            <img src="/images/compliance/co-pilot-3.png" />
+            <img src="/images/compliance/co-pilot-3.png" alt="Pulumi Copilot helping configure {{ .Params.framework }}-compliant {{ .Params.cloud }} infrastructure" />
         </div>
     </section>
     
@@ -26,11 +52,31 @@
         <div class="container mx-auto max-w-4xl">
             <h3>Compliance Ready Policies</h3>
             <p class="py-4">
+                {{ if eq .Params.cloud "AWS" }}
+                With comprehensive coverage of AWS services,
+                <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/">Pulumi Compliance Ready Policies</a>
+                help enforce {{ .Params.framework }} requirements for EC2, S3, RDS, and other AWS resources. These policies 
+                automatically validate that your infrastructure configurations meet encryption, access control, and security 
+                monitoring standards required by {{ .Params.framework }}, preventing non-compliant resources from being deployed.
+                {{ else if eq .Params.cloud "Azure" }}
+                With comprehensive coverage of Azure services,
+                <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/">Pulumi Compliance Ready Policies</a>
+                help enforce {{ .Params.framework }} requirements for Virtual Machines, Storage Accounts, SQL Databases, and other Azure resources. 
+                These policies automatically validate that your infrastructure configurations meet encryption, access control, and 
+                security monitoring standards required by {{ .Params.framework }}, preventing non-compliant resources from being deployed.
+                {{ else if eq .Params.cloud "Google Cloud" }}
+                With comprehensive coverage of Google Cloud services,
+                <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/">Pulumi Compliance Ready Policies</a>
+                help enforce {{ .Params.framework }} requirements for Compute Engine, Cloud Storage, Cloud SQL, and other GCP resources. 
+                These policies automatically validate that your infrastructure configurations meet encryption, access control, and 
+                security monitoring standards required by {{ .Params.framework }}, preventing non-compliant resources from being deployed.
+                {{ else }}
                 With comprehensive coverage of {{ .Params.cloud }},
                 <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/">Pulumi Compliance Ready Policies</a>
                 provide an enhanced level of control and governance over your cloud resources. Pulumi Compliance Ready
                 Policies empower you to enforce best practices, security standards, cost controls, and compliance requirements
                 seamlessly within your infrastructure-as-code workflows.
+                {{ end }}
             </p>
         </div>
     </section>

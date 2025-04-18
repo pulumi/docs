@@ -6,11 +6,22 @@
             {{ partial "templates/breadcrumb.html" . }}
             <h2>{{ .Title }}</h2>
             <p>
-                PCI DSS compliance is critical to protecting cardholder data that is processed, stored, and transmitted.
-                Pulumi can assist you with making your {{ .Params.cloud }} infrastructure PCI DSS compliant. Pulumi can help you identify
-                existing cloud resources that are not in compliance, and it can also enforce compliance policies proactively
-                before infrastructure is deployed. Get started with Pulumi to use these compliance tools or speak with a 
-                Solutions Architect to get an expert consultation.
+                {{ if eq .Params.cloud "AWS" }}
+                AWS provides a secure foundation, but PCI DSS compliance on AWS still requires proper configuration of services and continuous monitoring. 
+                Pulumi's infrastructure as code platform helps enforce PCI controls in AWS environments – identifying non-compliant EC2, S3, RDS configurations 
+                and preventing deployment of resources that violate PCI requirements. Our policy-as-code tools ensure your payment processing infrastructure 
+                meets all cardholder data security standards while providing audit-ready compliance documentation.
+                {{ else if eq .Params.cloud "Azure" }}
+                Azure offers strong security capabilities, but achieving PCI DSS compliance requires careful configuration of Azure services to protect cardholder data. 
+                Pulumi's infrastructure as code tools help implement proper security controls for Azure resources like Virtual Machines, App Services, SQL Databases, 
+                and Storage accounts. By enforcing PCI DSS requirements through automated policies, Pulumi helps prevent misconfigurations and simplifies compliance 
+                validation across your Azure payment card environments.
+                {{ else if eq .Params.cloud "Google Cloud" }}
+                Google Cloud Platform provides robust security features, but PCI DSS compliance requires specific configurations to properly secure cardholder data. 
+                Pulumi helps implement and enforce PCI DSS requirements across GCP services like Compute Engine, Cloud Storage, Cloud SQL, and VPC networks. 
+                By automating compliance checks and remediation, Pulumi ensures your Google Cloud payment processing environment maintains continuous PCI DSS 
+                compliance with proper encryption, access controls, and logging.
+                {{ end }}
             </p>
             <div class="flex flex-row flex-wrap justify-center mt-10">
                 <a href="#sa-form" rel="noopener noreferrer" class="mx-2 my-2 btn-primary">Speak with a Solutions Architect</a>
@@ -21,9 +32,17 @@
     <section class="mt-4 py-4 px-4 md:px-0">
         <div class="container mx-auto max-w-4xl">
             <h3>What is PCI DSS Compliance?</h3>
+            {{ if eq .Params.cloud "AWS" }}
             <p>
                 {{ .Params.description }}
             </p>
+            {{ else }}
+            <p>
+                PCI DSS is a security standard for protecting cardholder data in cloud environments. It provides guidelines for implementing 
+                strong security controls to safeguard payment card information during processing, storage, and transmission.
+                <a href="/compliance/pci-dss-aws/" class="text-blue-600">See our comprehensive PCI DSS overview</a> for more details.
+            </p>
+            {{ end }}
         </div>
     </section>
     <section class="mt-4 py-4 px-4 md:px-0">
@@ -77,6 +96,27 @@
         {{ else if eq .Params.cloud "Google Cloud" }}
             {{ partial "compliance/pci-dss/google-cloud.html" . }}
         {{ end }}
+    </section>
+    {{ end }}
+
+    {{ if eq .Params.page_type "cloud" }}
+    <section class="mt-4 py-4 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <h3>Related Compliance Guides</h3>
+            <p>
+                More Cloud Compliance Guides for PCI DSS: 
+                {{ if eq .Params.cloud "AWS" }}
+                See how to achieve <a href="/compliance/pci-dss-azure/" class="text-blue-600">PCI DSS compliance on Azure</a> or 
+                <a href="/compliance/pci-dss-google-cloud/" class="text-blue-600">PCI DSS compliance on Google Cloud</a>.
+                {{ else if eq .Params.cloud "Azure" }}
+                See how to achieve <a href="/compliance/pci-dss-aws/" class="text-blue-600">PCI DSS compliance on AWS</a> or 
+                <a href="/compliance/pci-dss-google-cloud/" class="text-blue-600">PCI DSS compliance on Google Cloud</a>.
+                {{ else if eq .Params.cloud "Google Cloud" }}
+                See how to achieve <a href="/compliance/pci-dss-aws/" class="text-blue-600">PCI DSS compliance on AWS</a> or 
+                <a href="/compliance/pci-dss-azure/" class="text-blue-600">PCI DSS compliance on Azure</a>.
+                {{ end }}
+            </p>
+        </div>
     </section>
     {{ end }}
 

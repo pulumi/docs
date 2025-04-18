@@ -5,12 +5,31 @@
         {{ partial "templates/breadcrumb.html" . }}
         <h2>{{ .Title }}</h2>
         <p>
+            {{ if eq .Params.cloud "AWS" }}
+            AWS offers strong security foundations, but achieving ISO 27001 compliance requires proper configuration of services 
+            to support your information security management system (ISMS). Pulumi helps implement ISO 27001 controls across your 
+            AWS infrastructure, enforcing essential security practices for EC2, S3, RDS, and IAM resources. Our policy-as-code 
+            approach ensures your AWS environment maintains the confidentiality, integrity, and availability pillars required by 
+            ISO 27001, while providing the audit evidence needed for certification.
+            {{ else if eq .Params.cloud "Azure" }}
+            Azure provides robust security capabilities, but ISO 27001 compliance requires careful configuration of services to support 
+            your information security management system (ISMS). Pulumi helps implement ISO 27001 controls across your Azure resources, 
+            enforcing essential security practices for Virtual Machines, Storage Accounts, SQL Databases, and Azure Active Directory. 
+            Our automated policies ensure your Azure environment maintains the confidentiality, integrity, and availability required 
+            by ISO 27001, while simplifying audit preparation.
+            {{ else if eq .Params.cloud "Google Cloud" }}
+            Google Cloud offers advanced security features, but ISO 27001 compliance requires specific configuration of services to support 
+            your information security management system (ISMS). Pulumi helps implement ISO 27001 controls across your GCP infrastructure, 
+            enforcing essential security practices for Compute Engine, Cloud Storage, Cloud SQL, and IAM. Our automated approach ensures 
+            your Google Cloud environment consistently meets ISO 27001 requirements while providing the evidence needed for certification audits.
+            {{ else }}
             ISO 27001 compliance is essential for ensuring the security and management of sensitive
             information across your organization. Pulumi can assist you in making your {{ .Params.cloud }}
             infrastructure ISO 27001 compliant. Pulumi can help you identify
             existing cloud resources that are not in compliance, and it can also enforce compliance policies proactively
             before infrastructure is deployed. Get started with Pulumi to use these compliance tools or speak with a 
             Solutions Architect to get an expert consultation.
+            {{ end }}
         </p>
         <div class="flex flex-row flex-wrap justify-center mt-10">
             <a href="#sa-form" rel="noopener noreferrer" class="mx-2 my-2 btn-primary">Speak with a Solutions Architect</a>
@@ -21,9 +40,18 @@
 <section class="mt-4 py-4 px-4 md:px-0">
     <div class="container mx-auto max-w-4xl">
         <h3>What is ISO 27001 Compliance?</h3>
+        {{ if eq .Params.cloud "AWS" }}
         <p>
             {{ .Params.description }}
         </p>
+        {{ else }}
+        <p>
+            ISO 27001 is an internationally recognized standard for establishing, implementing, and maintaining an information 
+            security management system (ISMS). It provides a systematic approach to managing sensitive information and ensuring 
+            data security across your organization.
+            <a href="/compliance/iso-27001-aws/" class="text-blue-600">See our comprehensive ISO 27001 overview</a> for more details.
+        </p>
+        {{ end }}
     </div>
 </section>
 <section class="mt-4 py-4 px-4 md:px-0">
@@ -82,6 +110,27 @@
     {{ end }}
 </section>
 {{end}}
+
+{{ if eq .Params.page_type "cloud" }}
+<section class="mt-4 py-4 px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl">
+        <h3>Related Compliance Guides</h3>
+        <p>
+            More Cloud Compliance Guides for ISO 27001: 
+            {{ if eq .Params.cloud "AWS" }}
+            See how to achieve <a href="/compliance/iso-27001-azure/" class="text-blue-600">ISO 27001 compliance on Azure</a> or 
+            <a href="/compliance/iso-27001-google-cloud/" class="text-blue-600">ISO 27001 compliance on Google Cloud</a>.
+            {{ else if eq .Params.cloud "Azure" }}
+            See how to achieve <a href="/compliance/iso-27001-aws/" class="text-blue-600">ISO 27001 compliance on AWS</a> or 
+            <a href="/compliance/iso-27001-google-cloud/" class="text-blue-600">ISO 27001 compliance on Google Cloud</a>.
+            {{ else if eq .Params.cloud "Google Cloud" }}
+            See how to achieve <a href="/compliance/iso-27001-aws/" class="text-blue-600">ISO 27001 compliance on AWS</a> or 
+            <a href="/compliance/iso-27001-azure/" class="text-blue-600">ISO 27001 compliance on Azure</a>.
+            {{ end }}
+        </p>
+    </div>
+</section>
+{{ end }}
 
 {{ partial "compliance/insights.html" . }}
 
