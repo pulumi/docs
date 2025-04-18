@@ -1,0 +1,13 @@
+{{ $framework := .Params.framework }}
+{{ $cloud := .Params.cloud }}
+
+<section class="mt-4 mb-4 px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl">
+        <div class="p-4 bg-gray-100 rounded-lg border border-gray-200">
+            <p class="flex items-center">
+                <i class="fas fa-arrow-up text-blue-600 mr-2"></i>
+                <span>Looking for more {{ $framework }} resources? See our <a href="/compliance/{{ lower $framework | urlize }}-{{ lower $cloud | urlize }}/" class="text-blue-600 font-medium hover:underline">{{ $framework }} compliance guide for {{ $cloud }}</a> or <a href="/compliance/" class="text-blue-600 font-medium hover:underline">browse all compliance frameworks</a>.</span>
+            </p>
+        </div>
+    </div>
+</section>

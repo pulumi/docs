@@ -3,6 +3,8 @@
 {{ $cloud := .Params.cloud }}
 {{ $full := .Params.full }}
 
+{{ partial "compliance/service-uplink.html" . }}
+
 <section class="mt-4 py-4 px-4 md:px-0">
     <div class="container mx-auto max-w-4xl">
         <h3>{{ $framework }} Compliance for {{ $cloud }} {{ $service }}</h3>
