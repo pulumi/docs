@@ -1,0 +1,229 @@
+{{ $service := .Params.service }}
+{{ $framework := .Params.framework }}
+{{ $cloud := .Params.cloud }}
+{{ $full := .Params.full }}
+
+<section class="mt-4 py-4 px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl">
+        <h3>{{ $framework }} Compliance for {{ $cloud }} {{ $service }}</h3>
+        {{ if eq $framework "PCI DSS" }}
+            {{ if eq $service "EC2" }}
+                <p>
+                    AWS EC2 instances must be properly configured to meet PCI DSS requirements when processing, storing, or transmitting cardholder data. 
+                    This guide covers specific EC2 security controls—from network isolation to encryption of attached volumes—and shows how Pulumi can enforce 
+                    these configurations via infrastructure as code. Implementing these controls ensures your virtual machines maintain PCI DSS compliance 
+                    while handling sensitive payment information.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-aws/" class="text-blue-600">See our AWS PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "RDS" }}
+                <p>
+                    AWS RDS databases must be configured properly to meet PCI DSS standards when storing payment card data. This guide covers 
+                    specific RDS controls—from encryption at rest to restricted public access—and shows how Pulumi can enforce these settings 
+                    via code, ensuring your databases meet PCI requirements. Proper database configuration is essential for protecting cardholder 
+                    data and maintaining compliance with PCI DSS.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-aws/" class="text-blue-600">See our AWS PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "ECS" }}
+                <p>
+                    AWS ECS containers must meet PCI DSS requirements when handling cardholder data in containerized applications. This guide outlines 
+                    specific ECS security controls—from container isolation to secrets management—and demonstrates how Pulumi can enforce these settings 
+                    programmatically. Properly configured containers help maintain PCI DSS compliance within your containerized payment processing environment.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-aws/" class="text-blue-600">See our AWS PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "EKS" }}
+                <p>
+                    AWS EKS clusters require specific security configurations to meet PCI DSS compliance when processing payment data in Kubernetes environments. 
+                    This guide covers essential EKS controls—from cluster encryption to pod security policies—and shows how Pulumi can enforce these settings 
+                    as code. Implementing these controls helps secure your containerized payment applications while maintaining regulatory compliance.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-aws/" class="text-blue-600">See our AWS PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "API Gateway" }}
+                <p>
+                    AWS API Gateway must be properly secured to meet PCI DSS requirements when handling payment card data in API transactions. This guide 
+                    covers specific API Gateway controls—from authentication to encryption in transit—and shows how Pulumi can enforce these configurations 
+                    via code. Implementing these security measures ensures your APIs maintain compliance while processing sensitive payment information.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-aws/" class="text-blue-600">See our AWS PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "IAM" }}
+                <p>
+                    AWS IAM configuration is critical for PCI DSS compliance, as it controls access to cardholder data environments in the cloud. This guide 
+                    covers essential IAM security controls—from enforcing MFA to implementing least privilege policies—and shows how Pulumi can automate these 
+                    settings via code. Properly configured IAM helps prevent unauthorized access to payment systems and meets PCI DSS access control requirements.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-aws/" class="text-blue-600">See our AWS PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "Virtual Machines" }}
+                <p>
+                    Azure Virtual Machines must be properly configured to meet PCI DSS requirements when processing, storing, or transmitting cardholder data. 
+                    This guide covers specific VM security controls—from network security groups to disk encryption—and shows how Pulumi can enforce these 
+                    configurations via infrastructure as code. Implementing these controls ensures your Azure VMs maintain PCI DSS compliance while handling 
+                    sensitive payment information.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-azure/" class="text-blue-600">See our Azure PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "SQL Database" }}
+                <p>
+                    Azure SQL Database must be configured properly to meet PCI DSS standards when storing payment card data. This guide covers specific 
+                    database security controls—from transparent data encryption to firewall rules—and shows how Pulumi can enforce these settings via code. 
+                    Properly configured Azure SQL helps protect cardholder data and maintains compliance with PCI requirements throughout your payment ecosystem.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-azure/" class="text-blue-600">See our Azure PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "ACI" }}
+                <p>
+                    Azure Container Instances must meet PCI DSS requirements when handling cardholder data in containerized applications. This guide outlines 
+                    specific ACI security controls—from container isolation to secrets management—and demonstrates how Pulumi can enforce these settings 
+                    programmatically. Properly configured containers help maintain PCI DSS compliance within your Azure containerized payment processing environment.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-azure/" class="text-blue-600">See our Azure PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "AKS" }}
+                <p>
+                    Azure Kubernetes Service clusters require specific security configurations to meet PCI DSS compliance when processing payment data in Kubernetes 
+                    environments. This guide covers essential AKS controls—from cluster encryption to network policies—and shows how Pulumi can enforce these 
+                    settings as code. Implementing these controls helps secure your containerized payment applications while maintaining regulatory compliance.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-azure/" class="text-blue-600">See our Azure PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "API Management" }}
+                <p>
+                    Azure API Management must be properly secured to meet PCI DSS requirements when handling payment card data in API transactions. This guide 
+                    covers specific API Management controls—from OAuth implementation to TLS configuration—and shows how Pulumi can enforce these security 
+                    settings via code. Implementing these measures ensures your APIs maintain compliance while processing sensitive payment information.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-azure/" class="text-blue-600">See our Azure PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "Azure AD" }}
+                <p>
+                    Azure Active Directory configuration is critical for PCI DSS compliance, as it controls access to cardholder data environments in Azure. 
+                    This guide covers essential Azure AD security controls—from enforcing MFA to implementing conditional access policies—and shows how Pulumi 
+                    can automate these settings via code. Properly configured Azure AD helps prevent unauthorized access to payment systems and meets PCI DSS 
+                    access control requirements.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-azure/" class="text-blue-600">See our Azure PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "Compute Engine" }}
+                <p>
+                    Google Cloud Compute Engine instances must be properly configured to meet PCI DSS requirements when processing, storing, or transmitting 
+                    cardholder data. This guide covers specific VM security controls—from firewall rules to disk encryption—and shows how Pulumi can enforce 
+                    these configurations via infrastructure as code. Implementing these controls ensures your GCP VMs maintain PCI DSS compliance while handling 
+                    sensitive payment information.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-google-cloud/" class="text-blue-600">See our Google Cloud PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "Cloud SQL" }}
+                <p>
+                    Google Cloud SQL must be configured properly to meet PCI DSS standards when storing payment card data. This guide covers specific database 
+                    security controls—from encryption at rest to network security—and shows how Pulumi can enforce these settings via code. Properly configured 
+                    Cloud SQL helps protect cardholder data and maintains compliance with PCI requirements throughout your payment ecosystem.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-google-cloud/" class="text-blue-600">See our Google Cloud PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "Cloud Run" }}
+                <p>
+                    Google Cloud Run services must meet PCI DSS requirements when handling cardholder data in serverless applications. This guide outlines 
+                    specific Cloud Run security controls—from service isolation to secrets management—and demonstrates how Pulumi can enforce these settings 
+                    programmatically. Properly configured Cloud Run services help maintain PCI DSS compliance while processing payment information.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-google-cloud/" class="text-blue-600">See our Google Cloud PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "GKE" }}
+                <p>
+                    Google Kubernetes Engine clusters require specific security configurations to meet PCI DSS compliance when processing payment data in 
+                    Kubernetes environments. This guide covers essential GKE controls—from cluster encryption to pod security policies—and shows how Pulumi 
+                    can enforce these settings as code. Implementing these controls helps secure your containerized payment applications while maintaining 
+                    regulatory compliance.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-google-cloud/" class="text-blue-600">See our Google Cloud PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else if eq $service "Cloud Identity" }}
+                <p>
+                    Google Cloud Identity configuration is critical for PCI DSS compliance, as it controls access to cardholder data environments in GCP. 
+                    This guide covers essential identity security controls—from enforcing MFA to implementing least privilege access—and shows how Pulumi 
+                    can automate these settings via code. Properly configured Cloud Identity helps prevent unauthorized access to payment systems and meets 
+                    PCI DSS access control requirements.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-google-cloud/" class="text-blue-600">See our Google Cloud PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ else }}
+                <p>
+                    {{ $cloud }} {{ $service }} must be properly configured to meet PCI DSS requirements when handling payment card data. This guide covers 
+                    specific security controls and shows how Pulumi can enforce these settings via infrastructure as code. Implementing these controls ensures 
+                    your {{ $service }} resources maintain PCI DSS compliance while processing sensitive payment information.
+                </p>
+                <p>
+                    <em>PCI DSS is a set of security standards for protecting payment card data. <a href="/compliance/pci-dss-{{ lower $cloud | urlize }}/" class="text-blue-600">See our {{ $cloud }} PCI DSS compliance overview</a> for a full breakdown of all requirements.</em>
+                </p>
+            {{ end }}
+        {{ else if eq $framework "CIS" }}
+            {{ if eq $service "EC2" }}
+                <p>
+                    AWS EC2 security must align with CIS Benchmarks to protect your virtual server infrastructure. This guide covers specific EC2 security 
+                    controls recommended by the Center for Internet Security—from instance configuration to network security—and shows how Pulumi can 
+                    implement these best practices as code. Following these guidelines helps secure your EC2 instances against common threats while meeting 
+                    recognized security standards.
+                </p>
+                <p>
+                    <em>CIS Benchmarks provide security best practices for configuring systems and cloud services. <a href="/compliance/cis-aws/" class="text-blue-600">See our AWS CIS compliance overview</a> for more information.</em>
+                </p>
+            {{ else }}
+                <p>
+                    {{ $cloud }} {{ $service }} security must align with CIS Benchmarks to protect your cloud infrastructure. This guide covers specific 
+                    security controls recommended by the Center for Internet Security and shows how Pulumi can implement these best practices as code. 
+                    Following these guidelines helps secure your {{ $service }} resources against common threats while meeting recognized security standards.
+                </p>
+                <p>
+                    <em>CIS Benchmarks provide security best practices for configuring systems and cloud services. <a href="/compliance/cis-{{ lower $cloud | urlize }}/" class="text-blue-600">See our {{ $cloud }} CIS compliance overview</a> for more information.</em>
+                </p>
+            {{ end }}
+        {{ else if eq $framework "ISO 27001" }}
+            {{ if eq $service "EC2" }}
+                <p>
+                    AWS EC2 instances must meet ISO 27001 security requirements as part of your information security management system (ISMS). This guide 
+                    covers specific EC2 controls—from instance security to encryption practices—and shows how Pulumi can enforce these configurations via 
+                    code. Implementing these controls helps protect information assets running on your EC2 instances while satisfying ISO 27001 audit requirements.
+                </p>
+                <p>
+                    <em>ISO 27001 is an international standard for information security management systems. <a href="/compliance/iso-27001-aws/" class="text-blue-600">See our AWS ISO 27001 compliance overview</a> for more details.</em>
+                </p>
+            {{ else }}
+                <p>
+                    {{ $cloud }} {{ $service }} must meet ISO 27001 security requirements as part of your information security management system (ISMS). 
+                    This guide covers specific security controls and shows how Pulumi can enforce these configurations via code. Implementing these controls 
+                    helps protect information assets while satisfying ISO 27001 audit requirements.
+                </p>
+                <p>
+                    <em>ISO 27001 is an international standard for information security management systems. <a href="/compliance/iso-27001-{{ lower $cloud | urlize }}/" class="text-blue-600">See our {{ $cloud }} ISO 27001 compliance overview</a> for more details.</em>
+                </p>
+            {{ end }}
+        {{ else }}
+            <p>
+                {{ $cloud }} {{ $service }} must be properly configured to meet {{ $framework }} requirements. This guide covers specific security 
+                controls and shows how Pulumi can enforce these settings via infrastructure as code. Implementing these controls ensures your {{ $service }} 
+                resources maintain compliance with {{ $framework }} standards.
+            </p>
+        {{ end }}
+    </div>
+</section>

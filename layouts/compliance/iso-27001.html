@@ -37,6 +37,9 @@
         </div>
     </div>
 </section>
+{{ if eq .Params.page_type "service" }}
+{{ partial "compliance/service-intro.html" . }}
+{{ else }}
 <section class="mt-4 py-4 px-4 md:px-0">
     <div class="container mx-auto max-w-4xl">
         <h3>What is ISO 27001 Compliance?</h3>
@@ -54,6 +57,7 @@
         {{ end }}
     </div>
 </section>
+{{ end }}
 <section class="mt-4 py-4 px-4 md:px-0">
     <div class="container mx-auto max-w-4xl">
         <h3>Key Aspects of ISO 27001 Compliance</h3>

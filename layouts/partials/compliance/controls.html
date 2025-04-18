@@ -1,6 +1,6 @@
 <section class="mt-8 py-4 px-4 md:px-0">
     <div class="container mx-auto max-w-4xl">
-        <h3>What is {{ .Params.full }}?</h3>
+        <h3>What is {{ if eq .Params.service "EC2" }}Amazon EC2{{ else if eq .Params.service "RDS" }}Amazon RDS{{ else if eq .Params.service "ECS" }}Amazon ECS{{ else if eq .Params.service "EKS" }}Amazon EKS{{ else if eq .Params.service "Virtual Machines" }}Azure Virtual Machines{{ else if eq .Params.service "SQL Database" }}Azure SQL Database{{ else if eq .Params.service "ACI" }}Azure Container Instances{{ else if eq .Params.service "AKS" }}Azure Kubernetes Service{{ else if eq .Params.service "Compute Engine" }}Google Compute Engine{{ else if eq .Params.service "Cloud SQL" }}Google Cloud SQL{{ else if eq .Params.service "Cloud Run" }}Google Cloud Run{{ else if eq .Params.service "GKE" }}Google Kubernetes Engine{{ else }}{{ .Params.full }}{{ end }}?</h3>
         <p>
             {{ .Params.whatis }}
         </p>
@@ -8,19 +8,23 @@
 </section>
 <section class="mt-4 py-4 px-4 md:px-0">
     <div class="container mx-auto max-w-4xl">
-        <h3>What controls can I put in place to evaluate {{ .Params.full }} resources?</h3>
+        <h3>{{ .Params.framework }} Compliance Controls for {{ .Params.cloud }} {{ .Params.service }}</h3>
+        <p class="mb-3">
+            To ensure {{ .Params.framework }} compliance for your {{ .Params.cloud }} {{ .Params.service }} resources, implement the following security controls:
+        </p>
         <div class="py-4">
             {{ $cloud := .Params.cloud }}
             {{ $svc := .Params.service }}
             {{ $controls := index .Site.Data.compliance "controls" }}
             {{ $cloudSvcs := index $controls $cloud }}
             {{ $controls = index $cloudSvcs $svc }}
-            <ul>
+            <ul class="list-disc pl-5">
                 {{ range $controls }}
-                <li class="text-lg">{{ . }}</li>
+                <li class="text-lg my-2">{{ . }}</li>
                 {{ end }}
             </ul>
         </div>
+        {{ partial "compliance/service-pulumi-solutions.html" . }}
         <div class="my-5 text-center">
             <p>Speak to a Solutions Architect to implement policy as code to manage {{ .Params.service }} resources for {{ .Params.framework }} compliance.</p>
             <div class="mt-8">
