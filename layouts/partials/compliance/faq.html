@@ -1,0 +1,298 @@
+{{ $page_type := .Params.page_type }}
+{{ $cloud := .Params.cloud }}
+{{ $framework := .Params.framework }}
+{{ $service := .Params.service }}
+
+<section class="mt-8 mb-8 px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl">
+        <h2>Frequently Asked Questions</h2>
+        
+        {{ if not $page_type }}
+        <!-- Main Compliance Page FAQs -->
+        <div class="mt-6">
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">What is Pulumi's approach to cloud compliance?</h3>
+                <p>Pulumi takes a policy-as-code approach to cloud compliance, enabling organizations to define, enforce, and audit compliance requirements programmatically. Through Pulumi CrossGuard policies, Insights for continuous monitoring, and pre-built compliance packs for PCI DSS, CIS, and ISO 27001, Pulumi helps ensure cloud infrastructure stays compliant across AWS, Azure, and Google Cloud.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">Which compliance standards does Pulumi support?</h3>
+                <p>Pulumi supports major compliance frameworks including PCI DSS for payment card security, CIS Benchmarks for system security configuration, and ISO 27001 for information security management. Pulumi's pre-built policy packs cover hundreds of controls across AWS, Azure, and Google Cloud services, with continuous updates to match evolving compliance requirements.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">How does policy as code help with compliance?</h3>
+                <p>Policy as code transforms compliance from manual checklists to automated, enforceable rules. Pulumi's policy-as-code approach prevents non-compliant resources from being deployed, provides continuous monitoring of existing infrastructure, and generates audit-ready reports. This automation reduces human error, ensures consistent application of compliance controls, and simplifies audit preparation.</p>
+            </div>
+        </div>
+        
+        {{ else if eq $page_type "cloud" }}
+        <!-- Framework (Cloud) Page FAQs -->
+        
+            {{ if and (eq $framework "PCI DSS") (eq $cloud "AWS") }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Is AWS PCI DSS compliant out of the box?</h3>
+                    <p>AWS infrastructure has PCI DSS certification for its underlying platform, but customers must ensure their own AWS configurations meet PCI requirements. Each AWS service used in a cardholder data environment must be properly configured with encryption, access controls, and monitoring. Pulumi helps enforce these configurations through policy as code and pre-built compliance rules.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What AWS services are covered by PCI DSS?</h3>
+                    <p>Any AWS service storing, processing, or transmitting cardholder data must be configured to PCI DSS standards. This includes Amazon EC2, RDS, S3, Lambda, DynamoDB, and network services like VPC and security groups. Pulumi offers compliance policies for each of these services to help maintain PCI DSS requirements across your AWS environment.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How does Pulumi help with AWS PCI compliance?</h3>
+                    <p>Pulumi helps with AWS PCI compliance through CrossGuard policies that enforce PCI requirements before deployment, Insights for continuous compliance monitoring, and policy packs covering all 12 PCI DSS requirements. Pulumi automates compliance checks for encryption, access controls, network segmentation, and logging across your AWS infrastructure.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What are the 12 PCI DSS requirements for AWS?</h3>
+                    <p>The 12 PCI DSS requirements apply fully to AWS environments, covering network security, cardholder data protection, access control, vulnerability management, and policy maintenance. AWS-specific implementations include security groups as firewalls, encrypted S3 buckets for data storage, IAM for access control, CloudTrail for logging, and Inspector for vulnerability scanning. Pulumi enforces these controls through policy as code.</p>
+                </div>
+            </div>
+            
+            {{ else if and (eq $framework "PCI DSS") (eq $cloud "Azure") }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Is Azure PCI DSS compliant out of the box?</h3>
+                    <p>Azure has PCI DSS attestation for its cloud platform, but customers remain responsible for ensuring their Azure resource configurations meet PCI requirements. Services handling cardholder data need proper encryption, access controls, and monitoring. Pulumi helps enforce these Azure-specific configurations through automated policy checks and compliance rules.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What Azure services are covered by PCI DSS?</h3>
+                    <p>Any Azure service involved in cardholder data environments must meet PCI DSS requirements, including Virtual Machines, SQL Database, Storage Accounts, App Services, and networking components. Pulumi's compliance tools provide policy enforcement for each of these Azure services to maintain PCI DSS compliance.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How does Pulumi help with Azure PCI compliance?</h3>
+                    <p>Pulumi helps with Azure PCI compliance by providing CrossGuard policies that validate PCI requirements before deployment, continuous monitoring through Pulumi Insights, and pre-built policy packs for Azure services. These tools ensure proper encryption, network security, access controls, and logging across your Azure infrastructure.</p>
+                </div>
+            </div>
+            
+            {{ else if and (eq $framework "PCI DSS") (eq $cloud "Google Cloud") }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Is Google Cloud PCI DSS compliant out of the box?</h3>
+                    <p>Google Cloud Platform has PCI DSS certification for its infrastructure, but customers must ensure their GCP resource configurations meet PCI requirements. Services handling payment card data require proper encryption, access controls, and monitoring. Pulumi helps enforce these Google Cloud-specific configurations through automated policy enforcement.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What Google Cloud services are covered by PCI DSS?</h3>
+                    <p>Any Google Cloud service that stores, processes, or transmits cardholder data must be configured to PCI DSS standards. This includes Compute Engine, Cloud SQL, Cloud Storage, GKE, and networking components. Pulumi offers compliance policies for each of these services to maintain PCI DSS requirements across GCP.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How does Pulumi help with Google Cloud PCI compliance?</h3>
+                    <p>Pulumi helps with Google Cloud PCI compliance through CrossGuard policies that validate PCI requirements before deployment, continuous monitoring via Pulumi Insights, and pre-built policy packs. These tools automate compliance checks for encryption, access controls, network segmentation, and logging across your GCP environment.</p>
+                </div>
+            </div>
+            
+            {{ else if and (eq $framework "CIS") (eq $cloud "AWS") }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What are CIS Benchmarks for AWS?</h3>
+                    <p>CIS Benchmarks for AWS are security best practices developed by the Center for Internet Security specifically for Amazon Web Services. They provide guidance for configuring AWS services securely, covering identity management, network configuration, monitoring, and storage settings. Pulumi's policy as code tools help implement and maintain these AWS-specific security benchmarks.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How can I implement CIS Benchmarks in my AWS environment?</h3>
+                    <p>Implementing CIS Benchmarks in AWS requires configuring multiple services according to security best practices. This includes enabling CloudTrail, securing IAM with MFA and proper policies, configuring VPC security, and encrypting sensitive data. Pulumi automates this implementation through infrastructure as code and policy enforcement, ensuring your AWS resources maintain CIS compliance.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How does Pulumi help with AWS CIS compliance?</h3>
+                    <p>Pulumi helps with AWS CIS compliance by providing pre-built policies that enforce CIS Benchmark requirements, continuous monitoring of infrastructure for compliance drift, and automated remediation capabilities. Pulumi's infrastructure as code approach ensures that AWS resources are deployed with CIS-compliant configurations from the start.</p>
+                </div>
+            </div>
+            
+            {{ else if and (eq $framework "CIS") (eq $cloud "Azure") }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What are CIS Benchmarks for Azure?</h3>
+                    <p>CIS Benchmarks for Azure are security configuration guidelines developed by the Center for Internet Security specifically for Microsoft Azure. They provide detailed recommendations for securing Azure services, including identity management, networking, virtual machines, and storage. Pulumi helps implement these Azure-specific security benchmarks through policy as code.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How can I implement CIS Benchmarks in my Azure environment?</h3>
+                    <p>Implementing CIS Benchmarks in Azure requires configuring security settings across multiple services. This includes enabling Azure Security Center, implementing proper Azure AD controls, securing VNets and NSGs, and encrypting data. Pulumi automates this implementation through infrastructure as code and policy enforcement for Azure resources.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How does Pulumi help with Azure CIS compliance?</h3>
+                    <p>Pulumi helps with Azure CIS compliance through pre-built policy packs that validate resources against CIS Benchmarks, continuous monitoring with Pulumi Insights, and automated enforcement before deployment. These tools ensure your Azure environment maintains security best practices aligned with CIS recommendations.</p>
+                </div>
+            </div>
+            
+            {{ else if and (eq $framework "CIS") (eq $cloud "Google Cloud") }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What are CIS Benchmarks for Google Cloud?</h3>
+                    <p>CIS Benchmarks for Google Cloud are security configuration guidelines developed by the Center for Internet Security specifically for GCP. They provide detailed recommendations for securing Google Cloud services, covering IAM, networking, compute resources, storage, and logging. Pulumi helps implement these GCP-specific security benchmarks through policy as code.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How can I implement CIS Benchmarks in my Google Cloud environment?</h3>
+                    <p>Implementing CIS Benchmarks in Google Cloud requires configuring services according to security best practices. This includes setting up proper IAM controls, securing VPC networks, enabling Cloud Audit Logging, and encrypting data at rest. Pulumi automates this implementation through infrastructure as code and policy enforcement for GCP resources.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How does Pulumi help with Google Cloud CIS compliance?</h3>
+                    <p>Pulumi helps with Google Cloud CIS compliance by providing pre-built policies that enforce CIS Benchmark requirements, continuous monitoring for compliance drift, and automated validation before deployment. Pulumi's infrastructure as code approach ensures that GCP resources are deployed with CIS-compliant configurations from the start.</p>
+                </div>
+            </div>
+            
+            {{ else if and (eq $framework "ISO 27001") (eq $cloud "AWS") }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Does AWS have ISO 27001 certification?</h3>
+                    <p>Yes, AWS has ISO 27001 certification for its infrastructure and services. However, customers must still ensure their AWS resource configurations comply with ISO 27001 controls as part of their own ISMS (Information Security Management System). Pulumi helps enforce these controls through policy as code and compliance automation for AWS environments.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What AWS services are covered under ISO 27001?</h3>
+                    <p>Most AWS services are covered under AWS's ISO 27001 certification, but organizations must properly configure these services to meet their own ISO 27001 compliance requirements. This includes EC2, S3, RDS, IAM, and networking components. Pulumi provides compliance policies for these services to maintain ISO 27001 controls.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How does Pulumi help with AWS ISO 27001 compliance?</h3>
+                    <p>Pulumi helps with AWS ISO 27001 compliance by providing policy as code that enforces security controls, continuous monitoring of infrastructure configurations, and automated validation against ISO 27001 requirements. These tools help maintain the confidentiality, integrity, and availability of information assets in your AWS environment.</p>
+                </div>
+            </div>
+            
+            {{ else if and (eq $framework "ISO 27001") (eq $cloud "Azure") }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Does Azure have ISO 27001 certification?</h3>
+                    <p>Yes, Microsoft Azure has ISO 27001 certification for its cloud platform and services. However, customers are still responsible for configuring their Azure resources to comply with ISO 27001 controls as part of their ISMS. Pulumi helps enforce these controls through policy as code and compliance automation for Azure environments.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What Azure services are covered under ISO 27001?</h3>
+                    <p>Most Azure services are covered under Microsoft's ISO 27001 certification, but organizations must properly configure these services for their own ISO 27001 compliance. This includes Virtual Machines, Storage Accounts, SQL Database, Azure AD, and networking components. Pulumi provides compliance policies for these services to maintain ISO 27001 controls.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How does Pulumi help with Azure ISO 27001 compliance?</h3>
+                    <p>Pulumi helps with Azure ISO 27001 compliance through policy as code that validates Azure resources against ISO 27001 controls, continuous monitoring of configurations, and automated enforcement of security requirements. These tools support the implementation of your ISMS in the Azure cloud environment.</p>
+                </div>
+            </div>
+            
+            {{ else if and (eq $framework "ISO 27001") (eq $cloud "Google Cloud") }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Does Google Cloud have ISO 27001 certification?</h3>
+                    <p>Yes, Google Cloud Platform has ISO 27001 certification for its infrastructure and services. However, customers must still ensure their GCP resource configurations comply with ISO 27001 controls as part of their ISMS. Pulumi helps enforce these controls through policy as code and compliance automation for Google Cloud environments.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">What Google Cloud services are covered under ISO 27001?</h3>
+                    <p>Most Google Cloud services are covered under Google's ISO 27001 certification, but organizations must properly configure these services for their own compliance. This includes Compute Engine, Cloud Storage, Cloud SQL, IAM, and networking components. Pulumi provides compliance policies for these services to maintain ISO 27001 controls.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How does Pulumi help with Google Cloud ISO 27001 compliance?</h3>
+                    <p>Pulumi helps with Google Cloud ISO 27001 compliance by providing policy as code that enforces security controls, continuous monitoring of infrastructure configurations, and automated validation against ISO requirements. These tools help maintain information security management system controls in your GCP environment.</p>
+                </div>
+            </div>
+            
+            {{ end }}
+        
+        {{ else if eq $page_type "service" }}
+        <!-- Service-specific FAQs -->
+            
+            {{ if eq $service "EC2" }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Is Amazon EC2 {{ $framework }} compliant?</h3>
+                    <p>Amazon EC2 can be used in a {{ $framework }} compliant environment, but requires proper configuration to meet compliance requirements. This includes enabling encryption for EBS volumes, implementing security groups with least privilege access, using secure AMIs, and configuring proper logging. Pulumi helps enforce these configurations through policy as code to maintain EC2 compliance.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How do I enforce {{ $framework }} settings on EC2 with Pulumi?</h3>
+                    <p>Pulumi enforces {{ $framework }} settings on EC2 through CrossGuard policies that validate instance configurations before deployment. These policies check for encryption, IMDSv2 usage, security group rules, and other required controls. Pulumi's pre-built compliance packs for EC2 automate these checks, preventing non-compliant instances from being created.</p>
+                </div>
+            </div>
+            
+            {{ else if eq $service "RDS" }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Is Amazon RDS {{ $framework }} compliant?</h3>
+                    <p>Amazon RDS can be used in a {{ $framework }} compliant environment, but requires proper configuration including encryption at rest, private subnet deployment, secure access controls, and audit logging. These settings are not enabled by default. Pulumi helps enforce these RDS configurations through policy as code to ensure database compliance.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How do I enforce {{ $framework }} settings on RDS with Pulumi?</h3>
+                    <p>Pulumi enforces {{ $framework }} settings on RDS through CrossGuard policies that validate database configurations before deployment. These policies check for encryption, network isolation, backup settings, and authentication requirements. Pulumi's pre-built compliance packs for RDS automate these checks, preventing non-compliant databases from being created.</p>
+                </div>
+            </div>
+            
+            {{ else if eq $service "Virtual Machines" }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Are Azure Virtual Machines {{ $framework }} compliant?</h3>
+                    <p>Azure Virtual Machines can be used in a {{ $framework }} compliant environment, but require proper configuration to meet compliance requirements. This includes enabling disk encryption, implementing Network Security Groups with least privilege access, using secure images, and configuring proper monitoring. Pulumi helps enforce these configurations through policy as code.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How do I enforce {{ $framework }} settings on Azure VMs with Pulumi?</h3>
+                    <p>Pulumi enforces {{ $framework }} settings on Azure VMs through CrossGuard policies that validate configurations before deployment. These policies check for encryption, network isolation, identity management, and other required controls. Pulumi's pre-built compliance packs for Azure VMs automate these checks, preventing non-compliant instances from being deployed.</p>
+                </div>
+            </div>
+            
+            {{ else if eq $service "SQL Database" }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Is Azure SQL Database {{ $framework }} compliant?</h3>
+                    <p>Azure SQL Database can be used in a {{ $framework }} compliant environment, but requires proper configuration including Transparent Data Encryption, Azure AD authentication, firewall rules, and auditing. These security features need to be explicitly enabled. Pulumi helps enforce these database configurations through policy as code to ensure compliance.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How do I enforce {{ $framework }} settings on Azure SQL with Pulumi?</h3>
+                    <p>Pulumi enforces {{ $framework }} settings on Azure SQL through CrossGuard policies that validate database configurations before deployment. These policies check for encryption, authentication methods, network access controls, and audit logging. Pulumi's pre-built compliance packs for Azure SQL automate these checks, preventing non-compliant databases from being created.</p>
+                </div>
+            </div>
+            
+            {{ else if eq $service "Compute Engine" }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Is Google Compute Engine {{ $framework }} compliant?</h3>
+                    <p>Google Compute Engine can be used in a {{ $framework }} compliant environment, but requires proper configuration to meet compliance requirements. This includes enabling disk encryption, implementing firewall rules with least privilege access, using secure OS images, and configuring adequate logging. Pulumi helps enforce these configurations through policy as code.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How do I enforce {{ $framework }} settings on Compute Engine with Pulumi?</h3>
+                    <p>Pulumi enforces {{ $framework }} settings on Compute Engine through CrossGuard policies that validate instance configurations before deployment. These policies check for encryption, network isolation, service account usage, and other required controls. Pulumi's pre-built compliance packs for GCP compute automate these checks, preventing non-compliant instances from being created.</p>
+                </div>
+            </div>
+            
+            {{ else if eq $service "Cloud SQL" }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Is Google Cloud SQL {{ $framework }} compliant?</h3>
+                    <p>Google Cloud SQL can be used in a {{ $framework }} compliant environment, but requires proper configuration including encryption at rest, private connectivity, IAM authentication, and audit logging. These security settings are not enabled by default. Pulumi helps enforce these Cloud SQL configurations through policy as code to ensure database compliance.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How do I enforce {{ $framework }} settings on Cloud SQL with Pulumi?</h3>
+                    <p>Pulumi enforces {{ $framework }} settings on Cloud SQL through CrossGuard policies that validate database configurations before deployment. These policies check for encryption, network isolation, authentication methods, and backup settings. Pulumi's pre-built compliance packs for Cloud SQL automate these checks, preventing non-compliant databases from being created.</p>
+                </div>
+            </div>
+            
+            {{ else }}
+            <div class="mt-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Is {{ $cloud }} {{ $service }} {{ $framework }} compliant?</h3>
+                    <p>{{ $cloud }} {{ $service }} can be used in a {{ $framework }} compliant environment, but requires proper configuration to meet compliance requirements. This includes implementing appropriate security controls, access restrictions, and monitoring. Pulumi helps enforce these configurations through policy as code to maintain compliance for your {{ $service }} resources.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">How do I enforce {{ $framework }} settings on {{ $service }} with Pulumi?</h3>
+                    <p>Pulumi enforces {{ $framework }} settings on {{ $cloud }} {{ $service }} through CrossGuard policies that validate configurations before deployment. These policies check for required security controls specific to {{ $service }}. Pulumi's pre-built compliance packs automate these checks, preventing non-compliant resources from being created.</p>
+                </div>
+            </div>
+            {{ end }}
+        
+        {{ end }}
+    </div>
+</section>

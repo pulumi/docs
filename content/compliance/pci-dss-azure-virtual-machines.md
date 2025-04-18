@@ -1,5 +1,5 @@
 ---
-title: PCI DSS Compliance for Azure Virtual Machines | VM Security Guide
+title: PCI DSS for Azure VMs | Security Guide
 cloud: Azure
 layout: "pci-dss"
 slug: pci-dss-azure-virtual-machines

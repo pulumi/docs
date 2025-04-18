@@ -1,5 +1,7 @@
 {{ define "main" }}
 {{ partial "hero.html" (dict "title" .Title) }}
+{{ partial "compliance/breadcrumb-schema.html" . }}
+{{ partial "compliance/howto-schema.html" . }}
 <section class="px-4 md:px-0">
     <div class="container mx-auto max-w-4xl text-center my-16 px-6">
         {{ partial "templates/breadcrumb.html" . }}
@@ -135,6 +137,9 @@
     </div>
 </section>
 {{ end }}
+
+{{ partial "compliance/faq.html" . }}
+{{ partial "compliance/webpage-faq-schema.html" . }}
 
 {{ partial "compliance/insights.html" . }}
 

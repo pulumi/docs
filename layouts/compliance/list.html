@@ -1,6 +1,8 @@
 {{ define "main" }}
 {{ $pagelist := .Pages }}
 {{ partial "hero.html" (dict "title" .Title) }}
+{{ partial "compliance/breadcrumb-schema.html" . }}
+{{ partial "compliance/howto-schema.html" . }}
 
 <div class="container mx-auto">
   <section class="px-4 md:px-0">
@@ -83,5 +85,9 @@
           </div>
         </section>
       {{ end }}
+
+{{ partial "compliance/faq.html" . }}
+{{ partial "compliance/webpage-faq-schema.html" . }}
+
 </div>
 {{ end }}

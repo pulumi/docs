@@ -1,0 +1,55 @@
+{{ $page_type := .Params.page_type }}
+{{ $cloud := .Params.cloud }}
+{{ $framework := .Params.framework }}
+{{ $service := .Params.service }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ if not $page_type }}Implementing Cloud Compliance with Pulumi{{ else if eq $page_type "cloud" }}{{ $framework }} Compliance for {{ $cloud }} with Pulumi{{ else if eq $page_type "service" }}{{ $framework }} Compliance for {{ $cloud }} {{ $service }} with Pulumi{{ end }}",
+  "description": "{{ if not $page_type }}Learn how to automate cloud compliance for PCI DSS, CIS, and ISO 27001 across AWS, Azure, and Google Cloud using Pulumi's policy as code approach.{{ else if eq $page_type "cloud" }}Learn how to implement {{ $framework }} compliance for {{ $cloud }} using Pulumi CrossGuard policies and compliance automation.{{ else if eq $page_type "service" }}Learn how to implement {{ $framework }} compliance for {{ $cloud }} {{ $service }} using Pulumi's infrastructure as code and policy enforcement.{{ end }}",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "Varies based on cloud resources"
+  },
+  "tool": {
+    "@type": "HowToTool",
+    "name": "Pulumi",
+    "description": "Infrastructure as Code platform for cloud compliance automation"
+  },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Define Compliance Requirements",
+      "text": "{{ if not $page_type }}Identify which compliance standards (PCI DSS, CIS, ISO 27001) apply to your organization and cloud environments.{{ else if eq $page_type "cloud" }}Define specific {{ $framework }} requirements for your {{ $cloud }} infrastructure based on your organization's compliance needs.{{ else if eq $page_type "service" }}Define specific {{ $framework }} requirements for {{ $cloud }} {{ $service }} based on your compliance needs and usage patterns.{{ end }}"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Implement Infrastructure as Code",
+      "text": "Use Pulumi to define your cloud infrastructure as code, enabling consistent deployment and configuration management."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Apply Compliance Policies",
+      "text": "{{ if not $page_type }}Implement Pulumi CrossGuard policies to enforce compliance requirements across your cloud environments.{{ else if eq $page_type "cloud" }}Apply Pulumi's pre-built {{ $framework }} policy pack for {{ $cloud }} to enforce compliance requirements.{{ else if eq $page_type "service" }}Apply Pulumi's {{ $framework }} policy rules for {{ $cloud }} {{ $service }} to enforce proper security configurations.{{ end }}"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Monitor Compliance Status",
+      "text": "{{ if not $page_type }}Use Pulumi Insights to continuously monitor your infrastructure for compliance drift and security issues.{{ else if eq $page_type "cloud" }}Monitor {{ $framework }} compliance status for your {{ $cloud }} resources using Pulumi Insights dashboards.{{ else if eq $page_type "service" }}Monitor {{ $framework }} compliance status for your {{ $cloud }} {{ $service }} resources using Pulumi's continuous compliance features.{{ end }}"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Remediate Compliance Issues",
+      "text": "{{ if not $page_type }}Automatically remediate compliance violations using Pulumi's policy enforcement capabilities.{{ else if eq $page_type "cloud" }}Address {{ $framework }} compliance issues in {{ $cloud }} through automated remediation policies.{{ else if eq $page_type "service" }}Correct {{ $framework }} compliance violations in {{ $cloud }} {{ $service }} through policy-driven remediation.{{ end }}"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Generate Compliance Reports",
+      "text": "{{ if not $page_type }}Create audit-ready reports documenting your infrastructure's compliance status across standards.{{ else if eq $page_type "cloud" }}Generate {{ $framework }}-specific compliance reports for {{ $cloud }} to support audit processes.{{ else if eq $page_type "service" }}Export compliance reports for {{ $cloud }} {{ $service }} showing adherence to {{ $framework }} requirements.{{ end }}"
+    }
+  ]
+}
+</script>
