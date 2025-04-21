@@ -1946,7 +1946,7 @@ In the response data `githubLogin` is synonymous with `username` and does not ne
 {{% /notes %}}
 
 ```
-GET /api/orgs/{organization}/members?type=backend
+GET /api/orgs/{organization}/members
 ```
 
 #### Parameters
@@ -1954,7 +1954,6 @@ GET /api/orgs/{organization}/members?type=backend
 | Parameter           | Type   | In    | Description                                                                                                  |
 |---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
 | `organization`      | string | path  | organization name                                                                                            |
-| `type`              | string | query | must be set to `backend`                                                                                     |
 | `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
@@ -1964,7 +1963,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/orgs/{organization}/members?type=backend
+  https://api.pulumi.com/api/orgs/{organization}/members
 ```
 
 #### Default response
