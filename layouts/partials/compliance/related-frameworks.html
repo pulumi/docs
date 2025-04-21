@@ -3,57 +3,107 @@
 {{ $service := .Params.service }}
 {{ $page_type := .Params.page_type }}
 
-<section class="mt-6 px-4 md:px-0">
-    <div class="container mx-auto max-w-4xl">
-        <h3>Explore Other Compliance Frameworks</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-            {{ if ne $framework "PCI DSS" }}
-            <div class="p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 class="font-semibold text-lg mb-2">PCI DSS</h4>
-                <p class="text-sm mb-3">Payment Card Industry Data Security Standard for securing cardholder data.</p>
-                {{ if eq $page_type "service" }}
-                <a href="/compliance/pci-dss-{{ lower $cloud | urlize }}-{{ lower $service | urlize }}/" class="text-blue-600 hover:underline">PCI DSS for {{ $cloud }} {{ $service }}</a>
-                {{ else if eq $page_type "cloud" }}
-                <a href="/compliance/pci-dss-{{ lower $cloud | urlize }}/" class="text-blue-600 hover:underline">PCI DSS for {{ $cloud }}</a>
-                {{ else }}
-                <a href="/compliance/pci-dss-aws/" class="text-blue-600 hover:underline">PCI DSS Compliance</a>
-                {{ end }}
-            </div>
-            {{ end }}
-            
-            {{ if ne $framework "CIS" }}
-            <div class="p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 class="font-semibold text-lg mb-2">CIS Benchmarks</h4>
-                <p class="text-sm mb-3">Center for Internet Security guidelines for secure system configuration.</p>
-                {{ if eq $page_type "service" }}
-                <a href="/compliance/cis-{{ lower $cloud | urlize }}-{{ lower $service | urlize }}/" class="text-blue-600 hover:underline">CIS for {{ $cloud }} {{ $service }}</a>
-                {{ else if eq $page_type "cloud" }}
-                <a href="/compliance/cis-{{ lower $cloud | urlize }}/" class="text-blue-600 hover:underline">CIS for {{ $cloud }}</a>
-                {{ else }}
-                <a href="/compliance/cis-aws/" class="text-blue-600 hover:underline">CIS Compliance</a>
-                {{ end }}
-            </div>
-            {{ end }}
-            
-            {{ if ne $framework "ISO 27001" }}
-            <div class="p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 class="font-semibold text-lg mb-2">ISO 27001</h4>
-                <p class="text-sm mb-3">International standard for information security management systems.</p>
-                {{ if eq $page_type "service" }}
-                <a href="/compliance/iso-27001-{{ lower $cloud | urlize }}-{{ lower $service | urlize }}/" class="text-blue-600 hover:underline">ISO 27001 for {{ $cloud }} {{ $service }}</a>
-                {{ else if eq $page_type "cloud" }}
-                <a href="/compliance/iso-27001-{{ lower $cloud | urlize }}/" class="text-blue-600 hover:underline">ISO 27001 for {{ $cloud }}</a>
-                {{ else }}
-                <a href="/compliance/iso-27001-aws/" class="text-blue-600 hover:underline">ISO 27001 Compliance</a>
-                {{ end }}
-            </div>
-            {{ end }}
-            
-            <div class="p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 class="font-semibold text-lg mb-2">All Compliance Solutions</h4>
-                <p class="text-sm mb-3">Explore Pulumi's complete compliance automation solutions.</p>
-                <a href="/compliance/" class="text-blue-600 hover:underline">View All Compliance Resources</a>
-            </div>
+<section class="mb-12">
+  <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+    <h3 class="text-xl font-bold mb-6">Explore Other Compliance Frameworks</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {{ if ne $framework "PCI DSS" }}
+      <div class="p-6 bg-purple-50 rounded-lg border border-purple-100 hover:shadow-md transition-all">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-credit-card text-purple-500 text-2xl mr-3"></i>
+          <h4 class="font-semibold text-lg">PCI DSS</h4>
         </div>
+        <p class="text-gray-700 mb-4">Payment Card Industry Data Security Standard for securing cardholder data.</p>
+        <div class="mt-auto">
+          {{ if eq $page_type "service" }}
+          <a href="/compliance/pci-dss-{{ lower $cloud | urlize }}-{{ lower $service | urlize }}/" class="inline-flex items-center text-purple-600 font-medium hover:underline">
+            PCI DSS for {{ $cloud }} {{ $service }}
+            <i class="fas fa-chevron-right ml-1 text-xs"></i>
+          </a>
+          {{ else if eq $page_type "cloud" }}
+          <a href="/compliance/pci-dss-{{ lower $cloud | urlize }}/" class="inline-flex items-center text-purple-600 font-medium hover:underline">
+            PCI DSS for {{ $cloud }}
+            <i class="fas fa-chevron-right ml-1 text-xs"></i>
+          </a>
+          {{ else }}
+          <a href="/compliance/pci-dss-aws/" class="inline-flex items-center text-purple-600 font-medium hover:underline">
+            PCI DSS Compliance
+            <i class="fas fa-chevron-right ml-1 text-xs"></i>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+      
+      {{ if ne $framework "CIS" }}
+      <div class="p-6 bg-green-50 rounded-lg border border-green-100 hover:shadow-md transition-all">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-shield-alt text-green-500 text-2xl mr-3"></i>
+          <h4 class="font-semibold text-lg">CIS Benchmarks</h4>
+        </div>
+        <p class="text-gray-700 mb-4">Center for Internet Security guidelines for secure system configuration.</p>
+        <div class="mt-auto">
+          {{ if eq $page_type "service" }}
+          <a href="/compliance/cis-{{ lower $cloud | urlize }}-{{ lower $service | urlize }}/" class="inline-flex items-center text-green-600 font-medium hover:underline">
+            CIS for {{ $cloud }} {{ $service }}
+            <i class="fas fa-chevron-right ml-1 text-xs"></i>
+          </a>
+          {{ else if eq $page_type "cloud" }}
+          <a href="/compliance/cis-{{ lower $cloud | urlize }}/" class="inline-flex items-center text-green-600 font-medium hover:underline">
+            CIS for {{ $cloud }}
+            <i class="fas fa-chevron-right ml-1 text-xs"></i>
+          </a>
+          {{ else }}
+          <a href="/compliance/cis-aws/" class="inline-flex items-center text-green-600 font-medium hover:underline">
+            CIS Compliance
+            <i class="fas fa-chevron-right ml-1 text-xs"></i>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+      
+      {{ if ne $framework "ISO 27001" }}
+      <div class="p-6 bg-blue-50 rounded-lg border border-blue-100 hover:shadow-md transition-all">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-certificate text-blue-500 text-2xl mr-3"></i>
+          <h4 class="font-semibold text-lg">ISO 27001</h4>
+        </div>
+        <p class="text-gray-700 mb-4">International standard for information security management systems.</p>
+        <div class="mt-auto">
+          {{ if eq $page_type "service" }}
+          <a href="/compliance/iso-27001-{{ lower $cloud | urlize }}-{{ lower $service | urlize }}/" class="inline-flex items-center text-blue-600 font-medium hover:underline">
+            ISO 27001 for {{ $cloud }} {{ $service }}
+            <i class="fas fa-chevron-right ml-1 text-xs"></i>
+          </a>
+          {{ else if eq $page_type "cloud" }}
+          <a href="/compliance/iso-27001-{{ lower $cloud | urlize }}/" class="inline-flex items-center text-blue-600 font-medium hover:underline">
+            ISO 27001 for {{ $cloud }}
+            <i class="fas fa-chevron-right ml-1 text-xs"></i>
+          </a>
+          {{ else }}
+          <a href="/compliance/iso-27001-aws/" class="inline-flex items-center text-blue-600 font-medium hover:underline">
+            ISO 27001 Compliance
+            <i class="fas fa-chevron-right ml-1 text-xs"></i>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+      
+      {{ if eq $framework "PCI DSS" "CIS" "ISO 27001" }}
+      <div class="p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-all">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-shield-check text-gray-700 text-2xl mr-3"></i>
+          <h4 class="font-semibold text-lg">All Compliance Solutions</h4>
+        </div>
+        <p class="text-gray-700 mb-4">Explore Pulumi's complete compliance automation solutions.</p>
+        <a href="/compliance/" class="inline-flex items-center text-blue-600 font-medium hover:underline">
+          View All Compliance Resources
+          <i class="fas fa-chevron-right ml-1 text-xs"></i>
+        </a>
+      </div>
+      {{ end }}
     </div>
+  </div>
 </section>

@@ -2,154 +2,287 @@
 {{ partial "hero.html" (dict "title" .Title) }}
 {{ partial "compliance/breadcrumb-schema.html" . }}
 {{ partial "compliance/howto-schema.html" . }}
-    <section class="px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl text-center my-16 px-6">
-            {{ partial "templates/breadcrumb.html" . }}
-            <h2>{{ .Title }}</h2>
-            <p>
+
+<div class="container mx-auto">
+  <section class="px-4 md:px-0">
+    <div class="container mx-auto max-w-5xl my-16 px-6">
+      <!-- Framework Introduction -->
+      <section class="mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+          {{ partial "templates/breadcrumb.html" . }}
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-3/4 mb-6 md:mb-0 md:pr-8">
+              <h2 class="text-2xl font-bold mb-4">{{ .Title }}</h2>
+              <div class="mb-4">
                 {{ if eq .Params.cloud "AWS" }}
-                AWS environments require specific security configurations to meet CIS Benchmarks requirements. Pulumi helps implement 
-                CIS security controls across your AWS infrastructure by enforcing best practices for EC2 instances, IAM configurations, 
-                CloudTrail logging, and network security. Our policy-as-code approach ensures your AWS resources adhere to CIS Benchmarks 
-                automatically, helping identify misconfigurations and maintaining continuous compliance with these critical security standards.
+                <p>
+                  AWS environments require specific security configurations to meet CIS Benchmarks requirements. Pulumi helps implement 
+                  CIS security controls across your AWS infrastructure by enforcing best practices for EC2 instances, IAM configurations, 
+                  CloudTrail logging, and network security.
+                </p>
+                <p class="mt-3">
+                  Our policy-as-code approach ensures your AWS resources adhere to CIS Benchmarks 
+                  automatically, helping identify misconfigurations and maintaining continuous compliance with these critical security standards.
+                </p>
                 {{ else if eq .Params.cloud "Azure" }}
-                Azure environments require specific security configurations to meet CIS Benchmarks requirements. Pulumi helps implement 
-                CIS security controls across your Azure infrastructure by enforcing best practices for Virtual Machines, Azure Active Directory, 
-                Azure Monitor, and Network Security Groups. Our policy-as-code approach ensures your Azure resources adhere to CIS Benchmarks 
-                automatically, helping identify misconfigurations and maintaining continuous compliance with these critical security standards.
+                <p>
+                  Azure environments require specific security configurations to meet CIS Benchmarks requirements. Pulumi helps implement 
+                  CIS security controls across your Azure infrastructure by enforcing best practices for Virtual Machines, Azure Active Directory, 
+                  Azure Monitor, and Network Security Groups.
+                </p>
+                <p class="mt-3">
+                  Our policy-as-code approach ensures your Azure resources adhere to CIS Benchmarks 
+                  automatically, helping identify misconfigurations and maintaining continuous compliance with these critical security standards.
+                </p>
                 {{ else if eq .Params.cloud "Google Cloud" }}
-                Google Cloud environments require specific security configurations to meet CIS Benchmarks requirements. Pulumi helps implement 
-                CIS security controls across your GCP infrastructure by enforcing best practices for Compute Engine, IAM configurations, 
-                Cloud Logging, and network security. Our policy-as-code approach ensures your Google Cloud resources adhere to CIS Benchmarks 
-                automatically, helping identify misconfigurations and maintaining continuous compliance with these critical security standards.
+                <p>
+                  Google Cloud environments require specific security configurations to meet CIS Benchmarks requirements. Pulumi helps implement 
+                  CIS security controls across your GCP infrastructure by enforcing best practices for Compute Engine, IAM configurations, 
+                  Cloud Logging, and network security.
+                </p>
+                <p class="mt-3">
+                  Our policy-as-code approach ensures your Google Cloud resources adhere to CIS Benchmarks 
+                  automatically, helping identify misconfigurations and maintaining continuous compliance with these critical security standards.
+                </p>
                 {{ else }}
-                CIS compliance is crucial for establishing strong security controls and safeguarding your cloud
-                infrastructure against cyber threats. Pulumi can help you identify
-                existing cloud resources that are not in compliance, and it can also enforce compliance policies proactively
-                before infrastructure is deployed. Get started with Pulumi to use these compliance tools or speak with a 
-                Solutions Architect to get an expert consultation.
+                <p>
+                  CIS compliance is crucial for establishing strong security controls and safeguarding your cloud
+                  infrastructure against cyber threats. Pulumi can help you identify
+                  existing cloud resources that are not in compliance, and it can also enforce compliance policies proactively
+                  before infrastructure is deployed.
+                </p>
                 {{ end }}
-            </p>
-            <div class="flex flex-row flex-wrap justify-center mt-10">
-                <a href="#sa-form" rel="noopener noreferrer" class="mx-2 my-2 btn-primary">Speak with a Solutions Architect</a>
-                <a href="/get-started/" rel="noopener noreferrer" class="mx-2 my-2 btn-secondary">Get Started with Pulumi</a>
+              </div>
             </div>
+            <div class="md:w-1/4 flex justify-center">
+              <div class="bg-green-50 rounded-full p-8 border border-green-100">
+                <i class="fas fa-shield-alt text-green-600 text-5xl"></i>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row flex-wrap justify-center mt-8">
+            <a href="#sa-form" rel="noopener noreferrer" class="mx-2 my-2 btn-primary">Speak with a Solutions Architect</a>
+            <a href="/get-started/" rel="noopener noreferrer" class="mx-2 my-2 btn-secondary">Get Started with Pulumi</a>
+          </div>
         </div>
-    </section>
-    {{ if eq .Params.page_type "service" }}
-    {{ partial "compliance/service-intro.html" . }}
-    {{ else }}
-    <section class="mt-4 py-4 px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl">
-            <h3>What is CIS Compliance?</h3>
-            {{ if eq .Params.cloud "AWS" }}
-            <p>
+      </section>
+
+      <!-- Framework Information -->
+      <section class="mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+          {{ if eq .Params.page_type "service" }}
+            {{ partial "compliance/service-intro.html" . }}
+          {{ else }}
+            <h3 class="text-xl font-bold mb-4">What is CIS Compliance?</h3>
+            <div class="mb-6">
+              {{ if eq .Params.cloud "AWS" }}
+              <p>
                 {{ .Params.description }}
-            </p>
-            {{ else }}
-            <p>
+              </p>
+              {{ else }}
+              <p>
                 CIS (Center for Internet Security) Benchmarks provide security best practices for configuring systems and cloud services. 
                 These benchmarks help organizations protect their infrastructure against cyber threats through standardized security controls.
-                <a href="/compliance/cis-aws/" class="text-blue-600">See our comprehensive CIS overview</a> for more details.
-            </p>
-            {{ end }}
+                <a href="/compliance/cis-aws/" class="text-blue-600 hover:underline">See our comprehensive CIS overview</a> for more details.
+              </p>
+              {{ end }}
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <h4 class="text-lg font-semibold mb-3">Key Aspects of CIS Compliance</h4>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                    <div>
+                      <strong class="block text-gray-800">Implementation of Controls</strong>
+                      <span class="text-gray-600">Start by implementing the CIS Controls relevant to your organization's size and risk profile.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                    <div>
+                      <strong class="block text-gray-800">Use CIS Benchmarks</strong>
+                      <span class="text-gray-600">Configure your systems and applications according to CIS Benchmarks.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                    <div>
+                      <strong class="block text-gray-800">Regular Audits</strong>
+                      <span class="text-gray-600">Continuously monitor and audit your systems to ensure ongoing compliance with CIS recommendations.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                    <div>
+                      <strong class="block text-gray-800">Automation Tools</strong>
+                      <span class="text-gray-600">Consider using CIS-CAT or other automation tools to assess and enforce compliance across your infrastructure.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <h4 class="text-lg font-semibold mb-3">Benefits of CIS Compliance</h4>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <i class="fas fa-star text-yellow-500 mr-3 mt-1"></i>
+                    <div>
+                      <strong class="block text-gray-800">Standardized Security</strong>
+                      <span class="text-gray-600">Ensures that your organization follows industry-recognized security best practices.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-star text-yellow-500 mr-3 mt-1"></i>
+                    <div>
+                      <strong class="block text-gray-800">Risk Reduction</strong>
+                      <span class="text-gray-600">Helps in reducing the attack surface by implementing critical security controls.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-star text-yellow-500 mr-3 mt-1"></i>
+                    <div>
+                      <strong class="block text-gray-800">Compliance with Other Standards</strong>
+                      <span class="text-gray-600">CIS Controls and Benchmarks often overlap with other frameworks like PCI-DSS, NIST, and ISO.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-star text-yellow-500 mr-3 mt-1"></i>
+                    <div>
+                      <strong class="block text-gray-800">Improved Incident Response</strong>
+                      <span class="text-gray-600">By implementing CIS Controls, organizations are better equipped to detect and respond to security incidents.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          {{ end }}
         </div>
-    </section>
-    {{ end }}
-    <section class="mt-4 py-4 px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl">
-            <h3>Key Aspects of CIS Compliance</h3>
-            <ul>
-                <li>
-                    <strong>Implementation of Controls:</strong> Start by implementing the
-                    CIS Controls relevant to your organization's size and risk profile.
-                </li>
+      </section>
 
-                <li>
-                    <strong>Use CIS Benchmarks:</strong> Configure your systems and
-                    applications according to CIS Benchmarks.
-                </li>
-
-                <li>
-                    <strong>Regular Audits:</strong> Continuously monitor and audit your
-                    systems to ensure ongoing compliance with CIS recommendations.
-                </li>
-
-                <li>
-                    <strong>Automation Tools:</strong> Consider using CIS-CAT (CIS
-                    Configuration Assessment Tool) or other automation tools to assess and
-                    enforce compliance across your infrastructure.
-                </li>
-            </ul>
-            <h3>Benefits of CIS Compliance</h3>
-            <ul>
-                <li>
-                    <strong>Standardized Security:</strong> Ensures that your organization
-                    follows industry-recognized security best practices.
-                </li>
-
-                <li>
-                    <strong>Risk Reduction:</strong> Helps in reducing the attack surface by
-                    implementing critical security controls.
-                </li>
-
-                <li>
-                    <strong>Compliance with Other Standards:</strong> CIS Controls and
-                    Benchmarks often overlap with other compliance frameworks like PCI-DSS,
-                    NIST, and ISO, making it easier to achieve multiple compliance goals
-                    simultaneously.
-                </li>
-
-                <li>
-                    <strong>Improved Incident Response:</strong> By implementing CIS
-                    Controls, organizations are better equipped to detect, respond to, and
-                    recover from security incidents.
-                </li>
-            </ul>
-        </div>
-    </section>
-    {{ if eq .Params.cloud .Params.service }}
-    <section class="mt-4 py-4 px-4 md:px-0">
-        {{ if eq .Params.cloud "AWS" }}
+      <!-- Cloud-Specific Content -->
+      {{ if eq .Params.cloud .Params.service }}
+      <section class="mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+          <h3 class="text-xl font-bold mb-6">Cloud-Specific CIS Controls</h3>
+          {{ if eq .Params.cloud "AWS" }}
             {{ partial "compliance/cis/aws.html" . }}
-        {{ else if eq .Params.cloud "Azure" }}
+          {{ else if eq .Params.cloud "Azure" }}
             {{ partial "compliance/cis/azure.html" . }}
-        {{ else if eq .Params.cloud "Google Cloud" }}
+          {{ else if eq .Params.cloud "Google Cloud" }}
             {{ partial "compliance/cis/google-cloud.html" . }}
-        {{ end }}
-    </section>
-    {{ end }}
-
-    {{ if eq .Params.page_type "cloud" }}
-    <section class="mt-4 py-4 px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl">
-            <h3>Related Compliance Guides</h3>
-            <p>
-                More Cloud Compliance Guides for CIS: 
-                {{ if eq .Params.cloud "AWS" }}
-                See how to achieve <a href="/compliance/cis-azure/" class="text-blue-600">CIS compliance on Azure</a> or 
-                <a href="/compliance/cis-google-cloud/" class="text-blue-600">CIS compliance on Google Cloud</a>.
-                {{ else if eq .Params.cloud "Azure" }}
-                See how to achieve <a href="/compliance/cis-aws/" class="text-blue-600">CIS compliance on AWS</a> or 
-                <a href="/compliance/cis-google-cloud/" class="text-blue-600">CIS compliance on Google Cloud</a>.
-                {{ else if eq .Params.cloud "Google Cloud" }}
-                See how to achieve <a href="/compliance/cis-aws/" class="text-blue-600">CIS compliance on AWS</a> or 
-                <a href="/compliance/cis-azure/" class="text-blue-600">CIS compliance on Azure</a>.
-                {{ end }}
-            </p>
+          {{ end }}
         </div>
-    </section>
-    {{ end }}
-    
-    {{ partial "compliance/faq.html" . }}
-{{ partial "compliance/webpage-faq-schema.html" . }}
+      </section>
+      {{ end }}
 
-    {{ partial "compliance/related-frameworks.html" . }}
+      <!-- Related Guides -->
+      {{ if eq .Params.page_type "cloud" }}
+      <section class="mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+          <h3 class="text-xl font-bold mb-4">Related Compliance Guides</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {{ if eq .Params.cloud "AWS" }}
+            <a href="/compliance/cis-azure/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div class="flex items-center mb-3">
+                <i class="fab fa-microsoft text-blue-600 text-2xl mr-3"></i>
+                <h4 class="text-lg font-semibold">CIS Compliance on Azure</h4>
+              </div>
+              <p class="text-gray-600">
+                Learn how to implement CIS Benchmarks for Microsoft Azure resources using Pulumi's policy-as-code approach.
+              </p>
+              <span class="inline-flex items-center mt-3 text-blue-600 font-medium">
+                Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+              </span>
+            </a>
+            <a href="/compliance/cis-google-cloud/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div class="flex items-center mb-3">
+                <i class="fab fa-google text-red-500 text-2xl mr-3"></i>
+                <h4 class="text-lg font-semibold">CIS Compliance on Google Cloud</h4>
+              </div>
+              <p class="text-gray-600">
+                Learn how to implement CIS Benchmarks for Google Cloud Platform resources using Pulumi's policy-as-code approach.
+              </p>
+              <span class="inline-flex items-center mt-3 text-blue-600 font-medium">
+                Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+              </span>
+            </a>
+            {{ else if eq .Params.cloud "Azure" }}
+            <a href="/compliance/cis-aws/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div class="flex items-center mb-3">
+                <i class="fab fa-aws text-orange-500 text-2xl mr-3"></i>
+                <h4 class="text-lg font-semibold">CIS Compliance on AWS</h4>
+              </div>
+              <p class="text-gray-600">
+                Learn how to implement CIS Benchmarks for Amazon Web Services resources using Pulumi's policy-as-code approach.
+              </p>
+              <span class="inline-flex items-center mt-3 text-blue-600 font-medium">
+                Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+              </span>
+            </a>
+            <a href="/compliance/cis-google-cloud/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div class="flex items-center mb-3">
+                <i class="fab fa-google text-red-500 text-2xl mr-3"></i>
+                <h4 class="text-lg font-semibold">CIS Compliance on Google Cloud</h4>
+              </div>
+              <p class="text-gray-600">
+                Learn how to implement CIS Benchmarks for Google Cloud Platform resources using Pulumi's policy-as-code approach.
+              </p>
+              <span class="inline-flex items-center mt-3 text-blue-600 font-medium">
+                Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+              </span>
+            </a>
+            {{ else if eq .Params.cloud "Google Cloud" }}
+            <a href="/compliance/cis-aws/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div class="flex items-center mb-3">
+                <i class="fab fa-aws text-orange-500 text-2xl mr-3"></i>
+                <h4 class="text-lg font-semibold">CIS Compliance on AWS</h4>
+              </div>
+              <p class="text-gray-600">
+                Learn how to implement CIS Benchmarks for Amazon Web Services resources using Pulumi's policy-as-code approach.
+              </p>
+              <span class="inline-flex items-center mt-3 text-blue-600 font-medium">
+                Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+              </span>
+            </a>
+            <a href="/compliance/cis-azure/" class="block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+              <div class="flex items-center mb-3">
+                <i class="fab fa-microsoft text-blue-600 text-2xl mr-3"></i>
+                <h4 class="text-lg font-semibold">CIS Compliance on Azure</h4>
+              </div>
+              <p class="text-gray-600">
+                Learn how to implement CIS Benchmarks for Microsoft Azure resources using Pulumi's policy-as-code approach.
+              </p>
+              <span class="inline-flex items-center mt-3 text-blue-600 font-medium">
+                Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+              </span>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+      {{ end }}
+      
+      <!-- FAQ Section -->
+      {{ partial "compliance/faq.html" . }}
+      {{ partial "compliance/webpage-faq-schema.html" . }}
 
-    {{ partial "compliance/insights.html" . }}
+      <!-- Related Frameworks -->
+      {{ partial "compliance/related-frameworks.html" . }}
 
+      <!-- Pulumi Insights -->
+      <section class="mb-12">
+        {{ partial "compliance/insights.html" . }}
+      </section>
 
-    <div class="p-4">
-        {{ partial "learnmore-contactus.html" . }}
+      <!-- Contact Form -->
+      <section class="mb-12">
+        <div class="p-4">
+          {{ partial "learnmore-contactus.html" . }}
+        </div>
+      </section>
     </div>
+  </section>
+</div>
 {{ end }}

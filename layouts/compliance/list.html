@@ -6,90 +6,311 @@
 
 <div class="container mx-auto">
   <section class="px-4 md:px-0">
-    <div class="container mx-auto max-w-4xl my-16 px-6">
-      <section class="mt-4 py-4 px-4 md:px-0">
-        <div class="container mx-auto text-center max-w-4xl">
-          <p>
-            Ensuring that your cloud infrastructure is compliant with frameworks like PCI DSS, ISO 27001, and CIS
-            is critical for safeguarding sensitive data, maintaining customer trust, and adhering to legal and
-            regulatory requirements. Compliance with these frameworks demonstrates a commitment to implementing
-            best practices in security and risk management, which helps protect against data breaches,
-            cyber threats, and operational disruptions.
-          </p>
-          <p class="mt-4">
-            Pulumi's platform provides policy-as-code tools to ensure your AWS, Azure, and GCP infrastructure meets 
-            compliance standards like PCI DSS, CIS Benchmarks, and ISO 27001. Using Pulumi CrossGuard and Insights, 
-            you can detect and prevent non-compliant configurations automatically, simplifying audits and avoiding cloud 
-            misconfigurations. Our cloud compliance automation solutions enable continuous monitoring and remediation 
-            across multi-cloud environments, reducing the risk of security breaches and helping organizations maintain 
-            regulatory compliance.
-          </p>
-        </div>
-      </section>
-      {{ $frameworks := index .Site.Data.compliance "pages" }}
-      {{ $frameworksfiltered := slice }}
-      {{ $cloudsfiltered := slice }}
-      {{ range $framework := $frameworks.frameworks }}
-      {{ if not (in (apply $frameworksfiltered "index" "." "framework") $framework.framework) }}
-        {{ $frameworksfiltered = $frameworksfiltered | append (dict "framework" $framework.framework "description" $framework.description) }}
-      {{ end }}
-      {{ if not (in $cloudsfiltered $framework.cloud) }}
-        {{ $cloudsfiltered = $cloudsfiltered | append $framework.cloud }}
-      {{ end }}
-      {{ end }}
-
-      {{ range $framework := $frameworksfiltered }}
-      {{ $pages := where $pagelist "Params.framework" $framework.framework }}
-        
-        <section class="mt-4 py-4 px-4 md:px-0">
-          <div class="container mx-auto max-w-4xl">
-            <h3>{{ $framework.framework }} Compliance</h3>
-            <p>
-              {{ .description }}
-            </p>
-            {{ if eq $framework.framework "PCI DSS" }}
-            <p class="font-semibold">PCI DSS Compliance: Requirements for securing cardholder data in cloud environments.</p>
-            {{ else if eq $framework.framework "CIS" }}
-            <p class="font-semibold">CIS Compliance: Security benchmarks and best practices for protecting cloud infrastructure.</p>
-            {{ else if eq $framework.framework "ISO 27001" }}
-            <p class="font-semibold">ISO 27001 Compliance: Information security management system standards for comprehensive data protection.</p>
-            {{ end }}
-            <p>Learn more about how Pulumi can help your cloud infrastructure meet {{ $framework.framework }} compliance:</p>
-            {{ $cloudPages := where $pages "Params.page_type" "cloud" }}
-            {{ range $cloud := $cloudPages }}
-            {{ $currCloud := $cloud.Params.cloud }}
-            <h4><a class="hover:text-blue-600" href="{{ $cloud.Permalink }}">{{ $cloud.Params.cloud }}</a></h4>
-            <div class="flex felx-col md:flex-row flex-wrap">
-            {{ $resourcePages := where $pages "Params.page_type" "service" }}
-              {{ range $resourcePages }}
-              {{ if eq .Params.cloud $currCloud }}
-                  <div class="w-2/3 md:w-1/3 mx-2 my-2 p-0">
-                    <div class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
-                      <i class="far fa-arrow-alt-circle-right w-4 text-gray-700"></i>
-                      <a href="{{ .Permalink }}" class="text-gray-800 font-display text-lg hover:text-blue-600">{{ .Params.service }}</a>
-                    </div>
-                  </div>
-                  {{ end}}
-              {{ end }}
+    <div class="container mx-auto max-w-5xl my-16 px-6">
+      <!-- Introduction Section -->
+      <section class="mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3 mb-6 md:mb-0 md:pr-8">
+              <h2 class="text-2xl font-bold mb-4">Cloud Compliance Automation</h2>
+              <p class="mb-4">
+                Ensuring that your cloud infrastructure is compliant with frameworks like PCI DSS, ISO 27001, and CIS
+                is critical for safeguarding sensitive data, maintaining customer trust, and adhering to legal and
+                regulatory requirements.
+              </p>
+              <p>
+                Pulumi's platform provides policy-as-code tools to ensure your AWS, Azure, and GCP infrastructure meets 
+                compliance standards. Using Pulumi CrossGuard and Insights, you can detect and prevent non-compliant 
+                configurations automatically, simplifying audits and avoiding cloud misconfigurations.
+              </p>
             </div>
-            {{ end }}
-            <div class="mt-6 text-right">
-              {{ if eq $framework.framework "PCI DSS" }}
-              <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/" class="text-blue-600 font-semibold hover:underline">Learn more about Pulumi's compliance as code solutions for PCI DSS →</a>
-              {{ else if eq $framework.framework "CIS" }}
-              <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/" class="text-blue-600 font-semibold hover:underline">Learn more about Pulumi's compliance as code solutions for CIS →</a>
-              {{ else if eq $framework.framework "ISO 27001" }}
-              <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/" class="text-blue-600 font-semibold hover:underline">Learn more about Pulumi's compliance as code solutions for ISO 27001 →</a>
-              {{ end }}
+            <div class="md:w-1/3">
+              <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                <h4 class="text-lg font-semibold mb-2">Why Use Pulumi for Compliance?</h4>
+                <ul class="list-disc pl-4 text-sm">
+                  <li class="mb-1">Proactive compliance checks</li>
+                  <li class="mb-1">Multi-cloud policy enforcement</li>
+                  <li class="mb-1">Automated remediation</li>
+                  <li class="mb-1">Comprehensive audit trails</li>
+                  <li>Continuous compliance monitoring</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </section>
-      {{ end }}
+        </div>
+      </section>
 
-{{ partial "compliance/faq.html" . }}
-{{ partial "compliance/webpage-faq-schema.html" . }}
+      <!-- Compliance Framework Tabs -->
+      <section class="mb-12">
+        <div class="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden">
+          <!-- Tab Navigation -->
+          <div class="flex border-b border-gray-200" id="compliance-tabs">
+            {{ $frameworks := index .Site.Data.compliance "pages" }}
+            {{ $frameworksfiltered := slice }}
+            {{ range $framework := $frameworks.frameworks }}
+            {{ if not (in (apply $frameworksfiltered "index" "." "framework") $framework.framework) }}
+              {{ $frameworksfiltered = $frameworksfiltered | append (dict "framework" $framework.framework "description" $framework.description) }}
+            {{ end }}
+            {{ end }}
 
-{{ partial "compliance/related-frameworks.html" . }}
+            {{ range $index, $framework := $frameworksfiltered }}
+              <button 
+                class="px-6 py-4 font-semibold {{ if eq $index 0 }}bg-blue-500 text-white{{ else }}bg-gray-100 text-gray-700 hover:bg-gray-200{{ end }} transition-all"
+                data-tab="tab-{{ $framework.framework | urlize }}"
+                onclick="switchTab(event, 'tab-{{ $framework.framework | urlize }}')">
+                {{ $framework.framework }}
+              </button>
+            {{ end }}
+          </div>
 
+          <!-- Tab Content -->
+          {{ range $index, $framework := $frameworksfiltered }}
+          {{ $pages := where $pagelist "Params.framework" $framework.framework }}
+          <div id="tab-{{ $framework.framework | urlize }}" class="compliance-tab-content p-6" {{ if ne $index 0 }}style="display: none;"{{ end }}>
+            <div class="mb-6">
+              <h3 class="text-xl font-bold mb-2">{{ $framework.framework }} Compliance</h3>
+              <p class="mb-4">{{ .description }}</p>
+              
+              {{ if eq $framework.framework "PCI DSS" }}
+              <div class="flex items-center mb-4 p-4 bg-purple-50 rounded-lg border border-purple-100">
+                <i class="fas fa-shield-alt text-purple-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-semibold">PCI DSS Compliance</h4>
+                  <p>Requirements for securing cardholder data in cloud environments</p>
+                </div>
+              </div>
+              {{ else if eq $framework.framework "CIS" }}
+              <div class="flex items-center mb-4 p-4 bg-green-50 rounded-lg border border-green-100">
+                <i class="fas fa-check-circle text-green-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-semibold">CIS Compliance</h4>
+                  <p>Security benchmarks and best practices for protecting cloud infrastructure</p>
+                </div>
+              </div>
+              {{ else if eq $framework.framework "ISO 27001" }}
+              <div class="flex items-center mb-4 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                <i class="fas fa-certificate text-blue-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-semibold">ISO 27001 Compliance</h4>
+                  <p>Information security management system standards for comprehensive data protection</p>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+
+            <!-- Cloud Provider Tabs -->
+            <div class="mb-6">
+              {{ $cloudPages := where $pages "Params.page_type" "cloud" }}
+              {{ if $cloudPages }}
+              <div class="bg-gray-50 p-1 rounded-lg mb-4 inline-flex">
+                {{ range $cloudIndex, $cloud := $cloudPages }}
+                <button 
+                  class="px-4 py-2 text-sm font-medium rounded-md {{ if eq $cloudIndex 0 }}bg-white shadow-sm text-blue-600{{ else }}text-gray-700 hover:bg-gray-200{{ end }} transition-all"
+                  data-cloud-tab="cloud-{{ $framework.framework | urlize }}-{{ $cloud.Params.cloud | urlize }}"
+                  onclick="switchCloudTab(event, 'cloud-{{ $framework.framework | urlize }}-{{ $cloud.Params.cloud | urlize }}', 'framework-{{ $framework.framework | urlize }}-clouds')">
+                  {{ $cloud.Params.cloud }}
+                </button>
+                {{ end }}
+              </div>
+
+              <!-- Cloud Provider Content -->
+              {{ range $cloudIndex, $cloud := $cloudPages }}
+              {{ $currCloud := $cloud.Params.cloud }}
+              <div id="cloud-{{ $framework.framework | urlize }}-{{ $cloud.Params.cloud | urlize }}" 
+                   class="framework-{{ $framework.framework | urlize }}-clouds cloud-tab-content p-4 bg-white rounded-lg shadow-sm" 
+                   {{ if ne $cloudIndex 0 }}style="display: none;"{{ end }}>
+                <div class="flex items-center mb-4">
+                  {{ if eq $currCloud "AWS" }}
+                  <i class="fab fa-aws text-orange-500 text-2xl mr-3"></i>
+                  {{ else if eq $currCloud "Azure" }}
+                  <i class="fab fa-microsoft text-blue-600 text-2xl mr-3"></i>
+                  {{ else if eq $currCloud "Google Cloud" }}
+                  <i class="fab fa-google text-red-500 text-2xl mr-3"></i>
+                  {{ end }}
+                  <h4 class="text-lg font-semibold">{{ $framework.framework }} for {{ $currCloud }}</h4>
+                </div>
+                
+                <p class="mb-4">Learn how Pulumi helps achieve {{ $framework.framework }} compliance on {{ $currCloud }}:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                {{ $resourcePages := where $pages "Params.page_type" "service" }}
+                {{ range $resourcePages }}
+                {{ if eq .Params.cloud $currCloud }}
+                <a href="{{ .Permalink }}" class="block">
+                  <div class="h-full rounded-lg border border-gray-200 p-4 hover:border-blue-300 hover:shadow-md transition-all flex items-center gap-3 bg-white">
+                    <i class="fas fa-arrow-circle-right text-blue-500"></i>
+                    <span class="text-gray-800 font-medium">{{ .Params.service }}</span>
+                  </div>
+                </a>
+                {{ end }}
+                {{ end }}
+                </div>
+                
+                <div class="text-right">
+                  <a href="{{ $cloud.Permalink }}" class="inline-flex items-center text-blue-600 font-semibold hover:underline">
+                    View full {{ $framework.framework }} guide for {{ $currCloud }}
+                    <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                  </a>
+                </div>
+              </div>
+              {{ end }}
+              {{ end }}
+            </div>
+
+            <div class="text-center mt-8">
+              <a href="/docs/using-pulumi/crossguard/compliance-ready-policies/" class="btn-primary inline-flex items-center">
+                Learn more about Pulumi's {{ $framework.framework }} solutions
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </section>
+
+      <!-- Compliance Workflow Diagram -->
+      <section class="mb-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+          <h3 class="text-xl font-bold mb-4">How Pulumi Enables Compliance Automation</h3>
+          <div class="flex flex-col md:flex-row items-center justify-between mb-6 p-4 bg-gray-50 rounded-lg">
+            <div class="flex flex-col items-center p-4 text-center">
+              <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-2">
+                <i class="fas fa-code text-blue-600 text-2xl"></i>
+              </div>
+              <h4 class="font-medium mb-1">Define</h4>
+              <p class="text-sm text-gray-600">Define infrastructure as code</p>
+            </div>
+            <i class="fas fa-arrow-right my-2 md:my-0 transform md:rotate-0 rotate-90 text-gray-400"></i>
+            <div class="flex flex-col items-center p-4 text-center">
+              <div class="w-16 h-16 flex items-center justify-center bg-green-100 rounded-full mb-2">
+                <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+              </div>
+              <h4 class="font-medium mb-1">Validate</h4>
+              <p class="text-sm text-gray-600">Apply compliance policies</p>
+            </div>
+            <i class="fas fa-arrow-right my-2 md:my-0 transform md:rotate-0 rotate-90 text-gray-400"></i>
+            <div class="flex flex-col items-center p-4 text-center">
+              <div class="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full mb-2">
+                <i class="fas fa-cloud-upload-alt text-purple-600 text-2xl"></i>
+              </div>
+              <h4 class="font-medium mb-1">Deploy</h4>
+              <p class="text-sm text-gray-600">Deploy compliant infrastructure</p>
+            </div>
+            <i class="fas fa-arrow-right my-2 md:my-0 transform md:rotate-0 rotate-90 text-gray-400"></i>
+            <div class="flex flex-col items-center p-4 text-center">
+              <div class="w-16 h-16 flex items-center justify-center bg-orange-100 rounded-full mb-2">
+                <i class="fas fa-chart-line text-orange-600 text-2xl"></i>
+              </div>
+              <h4 class="font-medium mb-1">Monitor</h4>
+              <p class="text-sm text-gray-600">Continuous compliance monitoring</p>
+            </div>
+          </div>
+          <p class="text-center">Pulumi's end-to-end workflow ensures your infrastructure remains compliant from development through deployment and beyond.</p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      {{ partial "compliance/faq.html" . }}
+      {{ partial "compliance/webpage-faq-schema.html" . }}
+
+      <!-- Related Frameworks -->
+      {{ partial "compliance/related-frameworks.html" . }}
+
+      <!-- CTA Section -->
+      <section class="mb-12">
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg shadow-lg">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-2/3 mb-6 md:mb-0">
+              <h3 class="text-2xl font-bold mb-2">Ready to automate your compliance?</h3>
+              <p class="mb-4">Get started with Pulumi to automate compliance checks and enforce security standards across your cloud infrastructure.</p>
+            </div>
+            <div>
+              <a href="/get-started/" class="btn bg-white text-blue-600 hover:bg-gray-100 transition-colors">Get Started</a>
+              <a href="#" class="btn bg-transparent border border-white text-white hover:bg-white hover:text-blue-600 ml-2 transition-colors">Talk to an Expert</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
 </div>
+
+<!-- Tab Switching JavaScript -->
+<script>
+  function switchTab(event, tabId) {
+    // Hide all tab content
+    const tabContents = document.getElementsByClassName('compliance-tab-content');
+    for (let i = 0; i < tabContents.length; i++) {
+      tabContents[i].style.display = 'none';
+    }
+    
+    // Remove active class from all tab buttons
+    const tabButtons = document.querySelectorAll('#compliance-tabs button');
+    for (let i = 0; i < tabButtons.length; i++) {
+      tabButtons[i].classList.remove('bg-blue-500', 'text-white');
+      tabButtons[i].classList.add('bg-gray-100', 'text-gray-700');
+    }
+    
+    // Show the selected tab content
+    document.getElementById(tabId).style.display = 'block';
+    
+    // Add active class to the clicked button
+    event.currentTarget.classList.remove('bg-gray-100', 'text-gray-700');
+    event.currentTarget.classList.add('bg-blue-500', 'text-white');
+    
+    // Show the first cloud tab for this framework
+    const firstCloudTab = document.querySelector(`[id^="cloud-${tabId.substring(4)}-"]`);
+    if (firstCloudTab) {
+      const cloudTabGroup = firstCloudTab.className.split(' ').find(cls => cls.startsWith('framework-'));
+      switchCloudTabGroup(cloudTabGroup);
+    }
+  }
+  
+  function switchCloudTabGroup(groupClass) {
+    const cloudTabs = document.getElementsByClassName(groupClass);
+    if (cloudTabs.length > 0) {
+      // Hide all cloud tabs in this group
+      for (let i = 0; i < cloudTabs.length; i++) {
+        cloudTabs[i].style.display = 'none';
+      }
+      
+      // Show the first cloud tab
+      cloudTabs[0].style.display = 'block';
+      
+      // Update button states
+      const cloudTabButtons = document.querySelectorAll(`[data-cloud-tab^="cloud-${groupClass.substring(10)}"]`);
+      for (let i = 0; i < cloudTabButtons.length; i++) {
+        cloudTabButtons[i].classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
+        cloudTabButtons[i].classList.add('text-gray-700');
+      }
+      
+      if (cloudTabButtons.length > 0) {
+        cloudTabButtons[0].classList.remove('text-gray-700');
+        cloudTabButtons[0].classList.add('bg-white', 'shadow-sm', 'text-blue-600');
+      }
+    }
+  }
+  
+  function switchCloudTab(event, tabId, groupClass) {
+    // Hide all cloud tabs in this group
+    const cloudTabs = document.getElementsByClassName(groupClass);
+    for (let i = 0; i < cloudTabs.length; i++) {
+      cloudTabs[i].style.display = 'none';
+    }
+    
+    // Remove active class from all cloud tab buttons in this group
+    const cloudTabButtons = document.querySelectorAll(`[data-cloud-tab^="cloud-${groupClass.substring(10)}"]`);
+    for (let i = 0; i < cloudTabButtons.length; i++) {
+      cloudTabButtons[i].classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
+      cloudTabButtons[i].classList.add('text-gray-700');
+    }
+    
+    // Show the selected cloud tab
+    document.getElementById(tabId).style.display = 'block';
+    
+    // Add active class to the clicked button
+    event.currentTarget.classList.remove('text-gray-700');
+    event.currentTarget.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
+  }
+</script>
 {{ end }}
