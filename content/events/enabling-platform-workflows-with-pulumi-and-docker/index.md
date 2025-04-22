@@ -61,7 +61,7 @@ main:
     # The webinar presenters
     presenters:
         - name: Josh Kodroff
-          role: Principal Solutions Architect, Pulumi
+          role: Principal Customer Success Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
         - name: Nelson Espinal
           role: Global Solutions Engineer - Strategic Alliances, Docker
