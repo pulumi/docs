@@ -63,7 +63,7 @@ main:
     # The webinar presenters
     presenters:
         - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
+          role: Principal Customer Success Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
 
     # case-sensitive
