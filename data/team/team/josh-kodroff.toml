@@ -1,6 +1,6 @@
 id = "josh-kodroff"
 name = "Josh Kodroff"
-title = "Senior Solutions Architect"
+title = "Principal Customer Success Architect"
 company = "Pulumi"
 weight = 1
 
@@ -9,4 +9,3 @@ status = "active"
 [social]
 github = "jkodroff"
 linkedin = "joshkodroff"
-twitter = "joshkodroff"
