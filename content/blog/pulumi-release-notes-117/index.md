@@ -18,6 +18,18 @@ tags:
 <!--more-->
 
 - [Pulumi IaC Cloud](#pulumi-iac-cloud)
+  - [Azure Native V3](#azure-native-v3)
+  - [Pulumi Model Context Protocol (MCP) Server](#pulumi-model-context-protocol-mcp-server)
+  - [Next-Generation Pulumi Components](#next-generation-pulumi-components)
+  - [Registry Wave 2: 27 New Providers](#registry-wave-2-27-new-providers)
+  - [Enhanced Terraform Conversion](#enhanced-terraform-conversion)
+  - [Improved Refresh and Destroy Experience](#improved-refresh-and-destroy-experience)
+  - [GitLab Integration Improvements](#gitlab-integration-improvements)
+  - [Faster Secrets Management](#faster-secrets-management)
+  - [Pulumi Kubernetes Operator 2.0](#pulumi-kubernetes-operator-20)
+  - [Java SDK 1.0](#java-sdk-10)
+  - [Pulumi Copilot in VSCode](#pulumi-copilot-in-vscode)
+  - [Autonaming Configuration](#autonaming-configuration)
 - [Pulumi ESC](#pulumi-esc)
   - [Rotated Secrets](#rotated-secrets)
   - [Pulumi ESC GitHub Action](#pulumi-esc-github-action)
@@ -27,6 +39,53 @@ tags:
 
 ## Pulumi IaC Cloud
 
+### Azure Native V3
+
+We're excited to announce the release of Pulumi Azure Native V3, delivering a remarkable 75% reduction in SDK size while maintaining complete coverage of the Azure ecosystem. The new SDK provides faster downloads, more manageable package sizes, and more reliable performance while maintaining access to all Azure resource properties. With a modern API surface, consistent input/output schemas, and simplified version management, it's now easier than ever to build and deploy Azure resources with Pulumi. [Read the blog post](/blog/azure-native-v3/) or check out the [Azure Native Provider documentation](/registry/packages/azure-native/).
+
+### Pulumi Model Context Protocol (MCP) Server
+
+The new Pulumi Model Context Protocol (MCP) Server integration brings AI-assisted infrastructure development directly into your coding workflow. By connecting AI-powered code assistants with Pulumi's CLI and registry, MCP enables real-time resource information and infrastructure management without leaving your editor. This integration drastically reduces context switching, accelerates resource discovery, and enables faster coding with intelligent assistance. Use it with tools like GitHub Copilot, Anthropic's Claude Code, Cursor, and others to streamline your infrastructure development experience. [Learn more about AI-assisted IaC](/blog/mcp-server-ai-assistants/).
+
+### Next-Generation Pulumi Components
+
+Introducing the next generation of Pulumi Components with enhanced cross-language capabilities, enabling you to create reusable infrastructure abstractions once and deploy them using any supported Pulumi language. These improved components allow platform teams to codify organizational standards into shareable libraries while giving developers simpler, more approachable interfaces that enforce best practices automatically. With built-in input validation, detailed documentation, improved error messages, and cross-language support, your components can now reach a wider audience of developers regardless of their preferred programming language. [Read the blog post](/blog/pulumi-components/) or explore the [Components documentation](/docs/iac/concepts/resources/components/).
+
+### Registry Wave 2: 27 New Providers
+
+We've expanded the Pulumi Registry with 27 new native providers, bringing the total to over 150 providers and 7,500 resource types. This wave adds support for popular services like Jira, Gitlab, Railway, Neon, PlanetScale, and many more, giving you more options for managing your entire cloud infrastructure with Pulumi. Each provider is published as a standalone package, making it easier to adopt new providers without updating your entire Pulumi installation. Start using these providers today to expand your infrastructure management capabilities. [Read the blog post](/blog/registry-wave-2/) or browse the [Pulumi Registry](/registry/).
+
+### Enhanced Terraform Conversion
+
+With [Pulumi CLI version 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0) and above, we've supercharged our Terraform conversion capabilities. Now you can automatically convert **ANY** Terraform project to Pulumi and import its resources - even if it uses providers that don't have native Pulumi equivalents. This breakthrough eliminates a significant migration barrier, allowing teams to convert their entire Terraform codebase without provider limitations. The enhanced converter handles mixed provider scenarios effortlessly, maintaining access to specialized Terraform providers you already leverage while modernizing your infrastructure deployment. This builds on our existing capability to use [any Terraform/OpenTofu provider](/blog/any-terraform-provider/) in your Pulumi projects, making it easier than ever to migrate your infrastructure as code to Pulumi. [Read the blog post](/blog/pulumi-convert-terraform-improvements/) to see examples and learn how to try it for yourself.
+
+### Improved Refresh and Destroy Experience
+
+As of Pulumi CLI version 3.160.0, we've introduced a significant enhancement to the `pulumi refresh` and `pulumi destroy` commands. These commands now support the `--run-program` flag, which enables them to run your program code before refreshing or destroying your stack. This is especially valuable for teams working with short-lived credentials, dynamic resources, or any workflow where your code needs to run to establish the right context. Previously, while these commands took into account updated configuration from your `Pulumi.<stack>.yaml` files, they didn't consider changes in your actual code, which could break workflows that depend on code to update credentials or determine resources to manage. This improvement ensures your infrastructure operations have the full context they need to succeed, particularly important when using OIDC-based authentication, dynamically fetching credentials from a secrets manager, or working with dynamic providers. We plan to make this the default behavior eventually, but are introducing it as an opt-in flag first to ensure a smooth transition. [Read more in our RFC](https://github.com/pulumi/pulumi/discussions/19102) on making program execution the default behavior.
+
+### GitLab Integration Improvements
+
+We've significantly enhanced our GitLab integration with support for multiple pipeline jobs and simplified authentication. The improved integration works with both GitLab CI/CD server and SaaS offerings, supporting parallel execution of multiple Pulumi steps within a single GitLab pipeline. Authentication has been streamlined with a new method that eliminates the need for personal access tokens, instead leveraging GitLab's CI/CD variables for secure, seamless authentication. These enhancements make it easier than ever to implement GitOps workflows with Pulumi and GitLab. [Read the blog post](/blog/gitlab-better-than-ever/) or check out the [documentation](/docs/using-pulumi/continuous-delivery/gitlab-app/).
+
+### Faster Secrets Management
+
+We've optimized secrets performance in Pulumi, resulting in significantly faster operations when working with large numbers of secrets. Through focused engineering efforts, we've achieved up to 75% reduction in secrets processing time for large stacks, with the most dramatic improvements seen in stacks with many outputs. This enhancement particularly benefits workflows involving many secrets, resource outputs, or stack references. The improvements are available starting with Pulumi 3.123.0 and require no changes to your existing code. [Read the blog post](/blog/faster-secrets-management/) to learn more about these performance improvements.
+
+### Pulumi Kubernetes Operator 2.0
+
+The Pulumi Kubernetes Operator 2.0 is now generally available, bringing advanced automation capabilities for managing Pulumi stacks within Kubernetes clusters. The new version includes a completely rewritten, faster codebase with enhanced reconciliation logic, better error handling, and improved CRD management. Version 2.0 also adds critical features like automatic retry for temporary failures, fine-grained refresh control, idempotent updates, and advanced stack management capabilities. These improvements make the operator more reliable and powerful for managing infrastructure directly from your Kubernetes clusters. [Read the blog post](/blog/pko-2-0-ga/) or check out the [operator documentation](/docs/using-pulumi/pulumi-kubernetes-operator/).
+
+### Java SDK 1.0
+
+The Pulumi Java SDK is now generally available with its 1.0 release, providing first-class support for Java in Pulumi's multi-language ecosystem. The GA release includes feature parity with other Pulumi languages, improved documentation, enhanced type safety, and support for the complete Pulumi programming model. We've also expanded the Java SDK to support all current LTS versions and ensure smooth interoperability with the broader Java ecosystem. This milestone makes Pulumi an excellent choice for Java teams looking to manage their infrastructure using their preferred language. [Read the blog post](/blog/java-1-0/) or check out the [Java getting started guide](/docs/install/languages/java/).
+
+### Pulumi Copilot in VSCode
+
+Pulumi Copilot is now available in Visual Studio Code, bringing AI-powered assistance directly to your infrastructure development environment. The VSCode extension helps you write, understand, and debug Pulumi code with inline explanations, transformation suggestions, and code generation capabilities. Copilot can also assist with converting between Pulumi languages and translating from other IaC tools like Terraform and CloudFormation. This integration makes it easier to learn Pulumi, accelerate your infrastructure development, and solve complex configuration challenges. [Read the blog post](/blog/copilot-in-vscode/) or [install the extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode) today.
+
+### Autonaming Configuration
+
+We've enhanced Pulumi's autonaming feature with new configuration options that give you more control over resource naming. You can now globally disable autonaming or configure it on a per-component basis, allowing you to precisely control when Pulumi generates names for your resources. This is particularly valuable for organizations that want to ensure consistent, predictable resource naming across their infrastructure. The new configuration is available in Pulumi CLI version 3.91.1 and later, and requires no code changes to implement. [Read the blog post](/blog/autonaming-configuration/) or check out the [documentation](/docs/iac/concepts/resources/names/) for implementation details.
 
 ## Pulumi ESC
 
