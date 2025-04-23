@@ -10,6 +10,8 @@
         </div>
     </div>
 
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
+
     {{ range .Params.panels }}
     <section id="panel" class="py-8">
         <div class="container mx-auto text-center">
@@ -39,8 +41,6 @@
         </div>
     </section>
     {{ end }}
-
-    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
 
     {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
 
