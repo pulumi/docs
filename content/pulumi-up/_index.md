@@ -122,7 +122,7 @@ schedule:
       time: "Europe & Americas"
       time2: "Asia Pacific"
 
-    - title: A Lap Around Pulumi
+    - title: Product News and Announcements
       description:
       time: "9:00 AM ET"
       time2: "4:00 PM PT"
