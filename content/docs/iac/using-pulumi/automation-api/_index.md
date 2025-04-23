@@ -8,7 +8,7 @@ menu:
     iac:
         name: Automation API
         parent: iac-using-pulumi
-        weight: 2
+        weight: 3
         identifier: iac-using-pulumi-automation-api
 aliases:
 - /docs/guides/automation-api/

@@ -13,7 +13,7 @@ menu:
 ---
 
 {{% notes "info" %}}
-Pulumi Copilot's API is currently in preview and subject to change. It is not currently suitable for production use.
+Pulumi Copilot's API is currently in preview and subject to change.
 {{% /notes %}}
 
 The Pulumi Copilot REST API (currently in Preview) is part of the [Pulumi Cloud REST API](https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api) that is used to integrate Pulumi Copilot capabilities with other applications or tools.
@@ -93,7 +93,7 @@ POST /api/ai/chat/preview
         {
             "role": string,
             "kind": string,
-            "content": string
+            "content": string | object
         }
     ]
 }
@@ -112,9 +112,29 @@ Each message in the messages array contains:
     - `response`: User queries or assistant responses.
     - `status`: Status updates about operations being performed.
     - `program`: Generated code when requested by the user.
-- `content`: The actual message content.
+- `content`: The actual message content. Can be either a string or an object, depending on the message kind:
+  - For messages of kind `trace`, `response`, and `status`, content is a string.
+  - For messages of kind `program`, content is an object containing program details (see below).
 
-Messages returned by the "assistant" of type "response" represent the responses from the Copilot to the user query.
+#### Program Content Object
+
+When the message `kind` is `program`, the `content` field is an object with the following structure:
+
+```JSON
+{
+    "code": string,
+    "plan": {
+        "instructions": string
+    },
+    "language": string,
+    "programId": string
+}
+```
+
+- `code`: The generated program code.
+- `plan.instructions`: A description of the steps to implement the code.
+- `language`: The programming language of the generated code (e.g., "typescript").
+- `programId`: A unique identifier for the generated program.
 
 ### Example request
 
@@ -160,6 +180,51 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
       "role": "assistant",
       "kind": "response",
       "content": "The update for the stack 'project1/dev' has failed. The failure is due to an error in creating a Virtual Network resource in Azure. The specific error is related to the incorrect handling of an Output<T> type in Pulumi. The error message indicates that calling 'ToString' on an Output<T> is not supported, which leads to a bad request error (HTTP 400) when trying to create the resource.\n\n**How to resolve the issue:**\n- Review the code where the resourceGroupName is being set. Ensure that you are not directly converting an Output<T> to a string using 'ToString'.\n- Use the 'Apply' method or 'Output.Format' to correctly handle the Output<T> type. For example, use `o.Apply(v => $\"prefix{v}suffix\")` or `Output.Format($\"prefix{hostname}suffix\")`.\n- Refer to the Pulumi documentation on [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs) for more guidance on handling Output<T> types properly."
+    }
+  ]
+}
+```
+
+### Example request to generate a program
+
+```bash
+curl -L https://api.pulumi.com/api/ai/chat/preview \
+-H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+-H "Content-Type: application/json" \
+-d '{
+    "query": "Write code to create an S3 bucket",
+    "state": {
+        "client": {
+            "cloudContext": {
+                "orgId": "myorg",
+                "url": "https://app.pulumi.com"
+            }
+        }
+    }
+}'
+```
+
+### Example program generation response
+
+Note that the `content` field is now an object containing program code an other elements:
+
+```JSON
+{
+  "conversationId": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+  "messages": [
+    // omitted for brevity
+    // ...
+    {
+      "role": "assistant",
+      "kind": "program",
+      "content": {
+        "code": "import * as pulumi from \"@pulumi/pulumi\";\nimport * as aws from \"@pulumi/aws\";\n\n// Create an S3 bucket\nconst bucket = new aws.s3.Bucket(\"my-bucket\", {\n    bucket: \"my-unique-bucket-name\",\n    acl: \"private\",\n});\n\n// Export the name of the bucket\nexport const bucketName = bucket.bucket;",
+        "plan": {
+          "instructions": "1. Install Pulumi CLI and AWS SDK.\n2. Create a new Pulumi project.\n3. Write the Pulumi program to define an S3 bucket resource.\n4. Deploy the stack using `pulumi up`.\n\nHere is the code to create an S3 bucket using Pulumi in TypeScript:"
+        },
+        "language": "typescript",
+        "programId": "pn7Gfod"
+      }
     }
   ]
 }

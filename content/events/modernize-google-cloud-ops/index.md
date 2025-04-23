@@ -39,7 +39,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-04-16T09:00:00.000-07:00
+    sortable_date: 2025-04-30T09:00:00.000-07:00
 
     # Duration of the webinar.
     duration: 60 minutes
@@ -63,7 +63,7 @@ main:
     # The webinar presenters
     presenters:
         - name: Josh Kodroff
-          role: Senior Solutions Architect, Pulumi
+          role: Principal Customer Success Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
 
     # case-sensitive
@@ -81,8 +81,8 @@ form:
 
 event_data:
   name: "Introduction to Pulumi IaC with AWS in Python"
-  start_date: 2025-04-16T09:00:00-07:00
-  end_date: 2025-04-16T10:00:00-07:00
+  start_date: 2025-04-30T09:00:00-07:00
+  end_date: 2025-04-30T10:00:00-07:00
   url: "https://www.pulumi.com/events/modernizing-cloud-operations-google-cloud/"
   description: |
     In today's cloud-native landscape, organizations struggle with managing infrastructure, securing secrets, and maintaining visibility across their Google Cloud environments. This hands-on workshop demonstrates how modern platform teams can leverage Pulumi's comprehensive suite to address these challenges using familiar programming languages and tools.

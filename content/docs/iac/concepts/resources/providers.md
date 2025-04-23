@@ -40,7 +40,7 @@ The most common method of installing a provider is to use your language's packag
 
 After installing the provider using your package manager, you reference the provider in your Pulumi program to define the desired state of the resources for that provider. When you install the SDK for a provider (e.g., via `npm install <package_name>` in Node.js), the package manager (npm in this example) automatically downloads and installs the provider executable along with the SDK if the executable is not already cached on your system.
 
-## Installing a Parameterized Provider via `pulumi package add`
+### Installing a Parameterized Provider via `pulumi package add`
 
 Parameterized providers allow you to generate a local provider SDK in the language of your Pulumi program. This method of consuming a provider is most commonly applicable when a pre-built provider SDK does not exist for a given cloud provider, SaaS service, or on-prem device, but a provider does exist in [the OpenTofu registry](https://search.opentofu.org). The [Any Terraform Provider](/registry/packages/terraform-provider) is a parameterized provider that provides this capability.
 
@@ -50,7 +50,46 @@ For example, to generate a local SDK for the [`hashicorp/random` provider](https
 $ pulumi package add terraform-provider hashicorp/random
 ```
 
+{{% notes type="tip" %}}
 In order to make sure Pulumi users are aware of the Any Terraform Provider's capabilities, Pulumi has included select, popular providers that can be consumed in Pulumi via the Any Terraform Provider in the Pulumi Registry, such as [The Honeycomb provider](/registry/packages/honeycombio/).
+{{% /notes %}}
+
+The generated SDK will include a `.gitignore` so it can be safely committed to version control without including all of the SDK's dependencies. The SDK installation process also downloads the provider binary to a shared location on your local system outside of the working directory. The binary is cached, so it will not need to be downloaded more than once, and is not committed to version control.
+
+#### Adding Provider Packages to the Project Configuration File
+
+{{% notes type="info" %}}
+Adding provider packages to your project configuration file requires Pulumi version 3.157.0 or later.
+{{% /notes %}}
+
+You can avoid the need to commit any generated SDK files to version control by adding your parameterized packages to your Pulumi project configuration file (`Pulumi.yaml`).
+
+You can add a list of your named provider packages under the [`packages`](/docs/iac/concepts/projects/project-file/#packages-options) key. For the example in the previous section, the syntax would be:
+
+```yaml
+packages:
+  random:
+    source: terraform-provider
+    version: 0.10.0 # The version of terraform-provider in the Pulumi registry
+    parameters:
+      - hashicorp/random
+      - 3.7.1 # The version of hashicorp/random in the OpenTofu Registry
+```
+
+The versions specified above are optional, but recommended in order to ensure consistent behavior on all systems.
+
+You can install any packages tracked in the project configuration file with the [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) command:
+
+```bash
+$ pulumi install
+Installing packages defined in Pulumi.yaml...
+Installing package 'random'...
+# ...
+```
+
+{{% notes type="warning" %}}
+If you are tracking a package in the project file and installing via `pulumi install`, be sure to remove any generated SDK files from version control and `.gitignore` the SDK directory or the generated files will still be under version control!
+{{% /notes %}}
 
 ## Default Provider Configuration
 

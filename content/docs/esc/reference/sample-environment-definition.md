@@ -1,15 +1,13 @@
 ---
-title: Syntax Reference
-title_tag: Syntax Reference
-h1: Pulumi ESC Syntax Reference
+title: Sample Environment Definition
+title_tag: Sample Environment Definition
+h1: Sample Environment Definition
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   esc:
-    parent: esc-home
-    identifier: esc-syntax-reference
-    weight: 5
-aliases:
-  - /docs/pulumi-cloud/esc/reference
+    parent: esc-reference
+    identifier: esc-ref-sample-environment-definition
+    weight: 8
 ---
 
 ```yaml
@@ -237,7 +235,7 @@ values:
     fn::toJSON: ${app.k8-cluster.kconfig}
 
   # ---------------------------------------------------------------------------------------
-  # Exports -- expose configuration values to particular consumers
+  # Reserved properties -- expose configuration values to particular consumers
   # ---------------------------------------------------------------------------------------
 
   # Configuration nested under the "environmentVariables" key is used to export environment
@@ -247,13 +245,13 @@ values:
     AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 
-  # Configuration nested under the "pulumiConfig" key will be available to Pulumi stacks that
-  # reference this environment during `pulumi up/preview/refresh/destroy`
-  pulumiConfig:
-    aws:region: us-west-2
-
   # Configuration nested under the 'files' key is used to export as files to the environment
   # when using 'esc open --format=shell', 'esc run', or `pulumi up/preview/refresh/destroy`
   files:
     KUBECONFIG: ${kubeconfig}
+
+  # Configuration nested under the "pulumiConfig" key will be available to Pulumi stacks that
+  # reference this environment during `pulumi up/preview/refresh/destroy`
+  pulumiConfig:
+    aws:region: us-west-2
 ```

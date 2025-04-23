@@ -54,7 +54,7 @@ Make sure the resource provider is configured in a way that allows it to locate 
 
 ## Importing resources with the CLI
 
-The `pulumi import` command looks up the resource using the specified type token and resource identifier, adds the resource to the stack's current state, and emits the code required to manage the resource with Pulumi from that point forward. This option requires the least manual effort, so is generally recommended, and is best suited to projects consisting consisting of only one stack.
+The `pulumi import` command looks up the resource using the specified type token and resource identifier, adds the resource to the stack's current state, and emits the code required to manage the resource with Pulumi from that point forward. This option requires the least manual effort, so is generally recommended, and is best suited to projects consisting of only one stack.
 
 To import an existing cloud resource with the Pulumi CLI, use the following syntax:
 

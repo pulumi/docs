@@ -9,124 +9,39 @@ meta_desc: |
 event_date: 2025-05-06T08:00:00-07:00
 
 speakers:
-  - name: Dax Raad
-    image: /images/pulumiup-2023/2024-speakers/dax-raad.png
-    title: Founding Engineer
-    logo: /images/pulumiup-2023/speaker-logos/sst.png
-    company: SST
-  - name: Jeremy Adams
-    image: /images/pulumiup-2023/2024-speakers/jeremy-adams.png
-    title: Head of Ecosystems
-    logo: /images/pulumiup-2023/sponsors/dagger.png
-    company: Dagger
-  - name: Patty O'Callaghan
-    image: /images/pulumiup-2023/2024-speakers/patty-ocallaghan.png
-    title: Technical Director
-    logo: /images/pulumiup-2023/speaker-logos/charles-river-laboratories.png
-    company: Charles River Laboratories
-  - name: Elad Ben-Israel
-    image: /images/pulumiup-2023/2024-speakers/elad-ben-israel.jpeg
-    title: Co-Founder and CEO
-    logo: /images/pulumiup-2023/speaker-logos/winglang.png
-    company: Winglang
-  - name: Maya Kaczorowski
-    image: /images/pulumiup-2023/2024-speakers/maya-kaczorowski.jpeg
-    title: Chief Product Officer
-    logo: /images/pulumiup-2023/speaker-logos/tailscale.svg
-    company: Tailscale
-  - name: Jan-Peter Alten
-    image: /images/pulumiup-2023/2024-speakers/jan-peter-alten.jpeg
-    title: DevOps Engineer
-    logo: /images/pulumiup-2023/speaker-logos/bmw-group.svg
-    company: BMW Group    
-  - name: Abhay Bothra
-    image: /images/pulumiup-2023/2024-speakers/abhay-bothra.jpeg
-    title: Co-Founder and CTO
-    logo: /images/pulumiup-2023/speaker-logos/fennel-ai.png
-    company: Fennel
-  - name: Alex Radu
-    image: /images/pulumiup-2023/2024-speakers/alex-radu.jpeg
-    title: VP Product & Marketing Manager, Public Cloud
-    logo: /images/pulumiup-2023/speaker-logos/j-p-morgan.png
-    company: J.P. Morgan
-  - name: Adam Jacob
-    image: /images/pulumiup-2023/2024-speakers/adam-jacob.jpeg
-    title: CEO and Co-Founder
-    logo: /images/pulumiup-2023/speaker-logos/system-initiative.png
-    company: System Initiative
-  - name: Brian Grant
-    image: /images/pulumiup-2023/2024-speakers/brian-grant.jpeg
-    title: Technical Visionary
-    logo: /images/pulumiup-2023/speaker-logos/warmstealth.jpeg
-    company: Warmstealth
-  - name: Marina Novikova
-    image: /images/pulumiup-2023/2024-speakers/marina-novikova.jpeg
-    title: Sr. Partner Solution Architect
-    logo: /images/pulumiup-2023/speaker-logos/aws.svg
-    company: AWS
-  - name: Jason Smith
-    image: /images/people/jay-smith.png
-    title: App Modernization Specialist
-    logo: /images/pulumiup-2023/sponsors/google-cloud.svg
-    company: Google
-  - name: Jim Clark
-    image: /images/pulumiup-2023/2024-speakers/james-clark.png
-    title: Principal Software Engineer
-    logo: /images/pulumiup-2023/speaker-logos/docker.png
-    company: Docker
-  - name: Aditi Godbole
-    image: /images/pulumiup-2023/2024-speakers/aditi-godbole.jpeg
-    title: Data Science, AI & ML Leader
-    logo: /images/pulumiup-2023/speaker-logos/sap.svg
-    company: SAP
-  - name: Sam Cogan
-    image: /images/pulumiup-2023/2024-speakers/sam-cogan.jpeg
-    title: Solutions Architect & Azure MVP
-    logo: /images/pulumiup-2023/speaker-logos/wtw.svg
-    company: WTW
-  - name: Rees Pozzi
-    image: /images/pulumiup-2023/2024-speakers/rees-pozzi.jpeg
-    title: Sr. Platform Engineer
-    logo: /images/pulumiup-2023/speaker-logos/kainos.jpeg
-    company: Kainos
-  - name: Ash Martian
-    image: /images/pulumiup-2023/2024-speakers/ash-martian.png
-    title: Data Engineer
-    logo: /images/pulumiup-2023/speaker-logos/characterstrong.png
-    company: CharacterStrong
-  - name: Shaun Verch
-    image: /images/pulumiup-2023/2024-speakers/shaun-verch.jpeg
-    title: Infrastructure Engineer
-    logo: /images/pulumiup-2023/speaker-logos/oso.jpeg
-    company: OSO
-  - name: Jk Jensen
-    image: /images/pulumiup-2023/2024-speakers/jk-jensen.png
-    title: Team Lead, Staff Software Engineer
-    logo: /images/pulumiup-2023/speaker-logos/mysten-labs.png
-    company: MystenLabs
-  - name: Blake Romano
-    image: /images/pulumiup-2023/2024-speakers/blake-romano.jpeg
-    title: Sr. Software Engineer
-    logo: /images/pulumiup-2023/speaker-logos/imagine-learning.png
-    company: Imagine Learning
-  - name: Denis Willett
-    image: /images/pulumiup-2023/2024-speakers/denis-willett.jpeg
-    title: Software Engineer
-    logo: /images/pulumiup-2023/speaker-logos/ncics.png
-    company: NCICS
-  - name: Alexandre Nédélec
-    image: /images/pulumiup-2023/2024-speakers/alexandre-nédélec.jpeg
-    title: Developer at Avanade
-    logo: /images/pulumiup-2023/speaker-logos/avanade.png
-    company: Avanade
+  - name: Zachary Cook
+    image: /images/people/zachary-cook.jpg
+    title: Sr. Manager DevOps
+    logo: /images/pulumiup-2023/speaker-logos/modivcare.png
+    company: Modivcare
+  - name: James Forcier
+    image: /images/people/james-forcier.jpg
+    title: Staff Software Engineer
+    logo: /images/pulumiup-2023/speaker-logos/clear.png
+    company: Clear
+  - name: Miki Manor
+    image: /images/team/miki-manor.jpg
+    title: Director of Infrastructure Engineering
+    logo: /logos/customers/skai-logo.svg
+    company: Skai
+  - name: Simen A. W. Olsen
+    image: /images/team/simen-a-w-olsen.jpg
+    title: CEO
+    logo: /images/pulumiup-2023/speaker-logos/sokkel.svg
+    company: Sokkel
+  - name: Daniel Kisselman
+    image: /images/people/daniel-kisselman.jpg
+    title: Senior DevOps Engineer
+    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
+    company: XMCyber
+  - name: Ido Ozeri
+    image: /images/people/ido-ozeri.jpg
+    title: DevOps Tech Lead
+    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
+    company: XMCyber
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
-    title: Principal Product Manager
-    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
-    company: Pulumi
-  - name: Arun Loganathan
-    image: /images/team/arun-loganathan.jpg
-    title: Sr. Product Manager
+    title: General Manager, IaC
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
   - name: Joe Duffy
@@ -134,11 +49,84 @@ speakers:
     title: Co-Founder and CEO
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Luke Hoban
-    image: /images/team/luke-hoban.jpg
-    title: CTO
+  - name: Josh Kodroff
+    image: /images/team/josh-kodroff.jpg
+    title: Principal Customer Success Architect
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
+  - name: Mark Huber
+    image: /images/team/mark-huber.jpg
+    title: Sr Product Manager
+    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
+    company: Pulumi
+
+schedule:
+  heading: Schedule At A Glance
+  subheading: Get inspired! Dive into the stories and experiences of innovators and experts, from Startup Founders to Industry Leaders.
+  items:
+    - title: 
+      description:
+      time: "Europe & Americas"
+      time2: "Asia Pacific"
+
+    - title: A Lap Around Pulumi
+      description:
+      time: "9:00 AM ET"
+      time2: "4:00 PM PT"
+    
+    - title: Real-world Enterprise Platform Engineering Success Stories
+      description:
+      time: "9:40 AM ET"
+      time2: "4:40 PM PT"
+
+    - title: "Panel: From Infrastructure Engineering to Platform Engineering"
+      description:
+      time: "9:55 AM ET"
+      time2: "4:55 PM PT"
+
+    - title: Interactive Wrap Up
+      description:
+      time: "10:20 AM ET"
+      time2: "5:20 PM PT"
+
+    - title: End
+      description:
+      time: "10:30 AM ET"
+      time2: "5:30 PM PT"
+
+panels:
+  - title: From Infrastructure Engineering to Platform Engineering
+    subtitle:
+    schedule_link: "#register"
+    panelists:
+      - name: Josh Kodroff
+        image: /images/team/josh-kodroff.jpg
+        position: Principal Customer Success Architect
+        company: Pulumi
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/joshkodroff/
+      - name: Zachary Cook
+        image: /images/people/zachary-cook.jpg
+        position: Sr. Manager DevOps
+        company: Modivcare
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/zacc/
+      - name: James Forcier
+        image: /images/people/james-forcier.jpg
+        position: Staff Software Engineer
+        company: Clear
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/james-forcier-8b115941/
+      - name: Simen A. W. Olsen
+        image: /images/team/simen-a-w-olsen.jpg
+        position: CEO
+        company: Sokkel
+        socials:
+          - site: linkedin
+            link: https://www.linkedin.com/in/simenandre/
 
 templates:
     items:
@@ -159,42 +147,30 @@ templates:
           link: /templates/container-service
 
 workshops:
-  - title: Introduction to Redis and Pulumi
-    url: /resources/introduction-to-redis-and-pulumi/
-    description: |
-      Join the Redis and Pulumi team to learn how to deploy Redis Cloud resources on any cloud using any programming language with Pulumi.
-    date: July 13, 2023
-
-  - title: From Zero to Production in Kubernetes
-    url: /resources/from-zero-to-production-in-kubernetes/
-    description: |
-      Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
-    date:  July 20, 2023
-
-  - title: Getting Started with Azure Infrastructure as Code and Review Stacks
-    url: /resources/azure-github-workshop/
-    description: |
-      In this workshop, we’ll explore the new Azure Native v2 provider and Pulumi Review Stacks on GitHub
-    date: July 27, 2023
-
-  - title: Getting Started with Infrastructure as Code on AWS
-    url: /resources/getting-started-with-iac-pulumi-aws/
-    description: |
-      This workshop is designed to help new users become familiar with the
-      core concepts needed to effectively deploy resources on AWS using Pulumi.
-    date: August 2, 2023
-  
-  - title: Advanced Kubernetes Platforms on Google Cloud with Pulumi
-    url: /resources/kubernetes-platforms-on-google-cloud/
-    description: |
-      In this workshop, we’ll explore how to deliver and scale a Kubernetes platform on Google Cloud.
-    date: August 10, 2023
-
-  - title: Deploying a Kubernetes Cluster on Equinix Metal
-    url: /resources/deploying-a-kubernetes-cluster-on-equinix-metal/
-    description: |
-      In this code-centric session, you will learn how to manage Equinix Metal resources using Pulumi and the new Equinix Pulumi provider.
-    date: September 13, 2023
+  - title: Designing Reusable Infrastructure as Code
+    meta_desc: "Master Pulumi Components: Learn to create reusable infrastructure code across languages, enabling DRY principles and powerful cross-team infrastructure sharing."
+    datetime: 2025-05-14T12:00:00-04:00
+    link: /events/designing-reusable-infrastructure-as-code/
+  - title: Enabling Platform Workflows with Pulumi and Docker
+    meta_desc: Learn how Pulumi and Docker Build Cloud can enable teams to deliver containerized workloads faster than ever.
+    datetime: 2025-05-21T12:00:00-04:00
+    link: /events/enabling-platform-workflows-with-pulumi-and-docker/
+  - title: Discover and Fix Misconfigured Cloud Resources with Pulumi
+    meta_desc: "Solve cloud compliance with Pulumi Insights: Learn to discover, manage, and optimize legacy resources across multi-cloud environments using policy as code."
+    datetime: 2025-05-28T12:00:00-04:00
+    link: /events/discover-and-fix-misconfigured-cloud-resources/
+  - title: Modern Infrastructure Automation with Pulumi and GitLab
+    meta_desc: Learn how to automate and manage cloud infrastructure using Pulumi's enhanced GitLab integration features for streamlined DevOps workflows.
+    datetime: 2025-06-11T12:00:00-04:00
+    link: /events/modern-infrastructure-automation-with-pulumi-and-gitlab/
+  - title: Enabling Platform Workflows with Temporal
+    meta_desc: Unlock Temporal Cloud's full potential with Pulumi. Learn to automate resource management, enhance developer workflows, and build platform engineering solutions.
+    datetime: 2025-06-24T12:00:00-04:00
+    link: /events/enabling-platform-workflows-with-temporal/
+  - title: Workload Observability with Pulumi and Honeycomb
+    meta_desc: Deliver "observability as code" with Pulumi and Honeycomb. Automate SLOs, detect critical issues, and transform your platform engineering approach.
+    datetime: 2025-07-17T09:00:00-04:00
+    link: /events/workload-observability-with-pulumi-and-honeycomb/
   
 
 block_external_search_index: true

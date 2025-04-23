@@ -1946,7 +1946,7 @@ In the response data `githubLogin` is synonymous with `username` and does not ne
 {{% /notes %}}
 
 ```
-GET /api/orgs/{organization}/members?type=backend
+GET /api/orgs/{organization}/members
 ```
 
 #### Parameters
@@ -1954,7 +1954,6 @@ GET /api/orgs/{organization}/members?type=backend
 | Parameter           | Type   | In    | Description                                                                                                  |
 |---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
 | `organization`      | string | path  | organization name                                                                                            |
-| `type`              | string | query | must be set to `backend`                                                                                     |
 | `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
@@ -1964,7 +1963,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/orgs/{organization}/members?type=backend
+  https://api.pulumi.com/api/orgs/{organization}/members
 ```
 
 #### Default response
@@ -5829,9 +5828,21 @@ Status: 200 OK
 
 ### Get Resource Count Summary
 
-```http
-GET /orgs/{organization}/resources/summary?granularity=<granularity>&lookbackDays=<days>
 ```
+GET /orgs/{organization}/resources/summary
+```
+
+#### Parameters
+
+| Parameter       | Type           | In    | Description                                                                                |
+|-----------------|----------------|-------|--------------------------------------------------------------------------------------------|
+| `granularity`   | string         | query | How usage should be aggregated. Accepted values are: `hourly`, `daily`, `weekly`, `monthly`, or `yearly`.                                                                          |
+| `lookbackDays`  | string         | query | **One of `lookbackDays` or `lookbackStart` is required, not both.** Returns usage for a period of `lookbackDays` x 24 hours, starting from now.    |
+| `lookbackStart` | unix timestamp | query | **One of `lookbackDays` or `lookbackStart` is required, not both.**  Returns usage starting from the given timestamp.                          |
+
+{{% notes "info" %}}
+`lookbackDays` returns usage in 24-hour increments starting from the current time. This will truncate usage for the first day. To get complete usage for the first day, use `lookbackStart` to specify the start time.
+{{% /notes %}}
 
 #### Example (hourly)
 
