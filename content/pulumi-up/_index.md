@@ -92,11 +92,6 @@ speakers:
     title: Senior DevOps Engineer
     logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
     company: XMCyber
-  - name: Ido Ozeri
-    image: /images/people/ido-ozeri.jpg
-    title: DevOps Tech Lead
-    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
-    company: XMCyber
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: General Manager, IaC
@@ -112,9 +107,9 @@ speakers:
     title: Principal Customer Success Architect
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Mark Huber
-    image: /images/team/mark-huber.jpg
-    title: Sr Product Manager
+  - name: Komal Ali
+    image: /images/team/komal-ali.jpg
+    title: Engineering Manager
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
  
