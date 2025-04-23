@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Release Notes: Pulumi ESC Rotated Secrets, Policy Enhancements"
 allow_long_title: true
-date: 2025-03-28T11:06:04-08:00
+date: 2025-04-22T11:06:04-08:00
 draft: false
 meta_desc: to-be-aded
 meta_image: meta.png
@@ -17,7 +17,7 @@ tags:
 
 <!--more-->
 
-- [Pulumi IaC Cloud](#pulumi-iac-cloud)
+- [Pulumi IaC](#pulumi-iac)
   - [Azure Native V3](#azure-native-v3)
   - [Pulumi Model Context Protocol (MCP) Server](#pulumi-model-context-protocol-mcp-server)
   - [Next-Generation Pulumi Components](#next-generation-pulumi-components)
@@ -37,7 +37,7 @@ tags:
   - [Enforce Policy as Code on Discovered Resources](#enforce-policy-as-code-on-discovered-resources)
 - [Wrap up](#wrap-up)
 
-## Pulumi IaC Cloud
+## Pulumi IaC
 
 ### Azure Native V3
 
@@ -57,7 +57,7 @@ We've expanded the Pulumi Registry with 27 new native providers, bringing the to
 
 ### Enhanced Terraform Conversion
 
-With [Pulumi CLI version 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0) and above, we've supercharged our Terraform conversion capabilities. Now you can automatically convert **ANY** Terraform project to Pulumi and import its resources - even if it uses providers that don't have native Pulumi equivalents. This breakthrough eliminates a significant migration barrier, allowing teams to convert their entire Terraform codebase without provider limitations. The enhanced converter handles mixed provider scenarios effortlessly, maintaining access to specialized Terraform providers you already leverage while modernizing your infrastructure deployment. This builds on our existing capability to use [any Terraform/OpenTofu provider](/blog/any-terraform-provider/) in your Pulumi projects, making it easier than ever to migrate your infrastructure as code to Pulumi. [Read the blog post](/blog/pulumi-convert-terraform-improvements/) to see examples and learn how to try it for yourself.
+With Pulumi CLI version 3.153.0 and above, we've supercharged our Terraform conversion capabilities. Now you can automatically convert **ANY** Terraform project to Pulumi and import its resources - even if it uses providers that don't have native Pulumi equivalents. This breakthrough eliminates a significant migration barrier, allowing teams to convert their entire Terraform codebase without provider limitations. The enhanced converter handles mixed provider scenarios effortlessly, maintaining access to specialized Terraform providers you already leverage while modernizing your infrastructure deployment. This builds on our existing capability to use [any Terraform/OpenTofu provider](/blog/any-terraform-provider/) in your Pulumi projects, making it easier than ever to migrate your infrastructure as code to Pulumi. [Read the blog post](/blog/pulumi-convert-terraform-improvements/) to see examples and learn how to try it for yourself.
 
 ### Improved Refresh and Destroy Experience
 
@@ -73,15 +73,15 @@ We've optimized secrets performance in Pulumi, resulting in significantly faster
 
 ### Pulumi Kubernetes Operator 2.0
 
-The Pulumi Kubernetes Operator 2.0 is now generally available, bringing advanced automation capabilities for managing Pulumi stacks within Kubernetes clusters. The new version includes a completely rewritten, faster codebase with enhanced reconciliation logic, better error handling, and improved CRD management. Version 2.0 also adds critical features like automatic retry for temporary failures, fine-grained refresh control, idempotent updates, and advanced stack management capabilities. These improvements make the operator more reliable and powerful for managing infrastructure directly from your Kubernetes clusters. [Read the blog post](/blog/pko-2-0-ga/) or check out the [operator documentation](/docs/using-pulumi/pulumi-kubernetes-operator/).
+The Pulumi Kubernetes Operator 2.0 is now generally available, bringing advanced automation capabilities for managing Pulumi stacks within Kubernetes clusters. The new version includes a completely rewritten, faster codebase with enhanced reconciliation logic, better error handling, and improved CRD management. Version 2.0 also adds critical features like automatic retry for temporary failures, fine-grained refresh control, idempotent updates, and advanced stack management capabilities. These improvements make the operator more reliable and powerful for managing infrastructure directly from your Kubernetes clusters. [Read the blog post](/blog/pko-2-0-ga/) or check out the [operator documentation](/docs/kubernetes/pulumi-kubernetes-operator/).
 
 ### Java SDK 1.0
 
-The Pulumi Java SDK is now generally available with its 1.0 release, providing first-class support for Java in Pulumi's multi-language ecosystem. The GA release includes feature parity with other Pulumi languages, improved documentation, enhanced type safety, and support for the complete Pulumi programming model. We've also expanded the Java SDK to support all current LTS versions and ensure smooth interoperability with the broader Java ecosystem. This milestone makes Pulumi an excellent choice for Java teams looking to manage their infrastructure using their preferred language. [Read the blog post](/blog/java-1-0/) or check out the [Java getting started guide](/docs/install/languages/java/).
+The Pulumi Java SDK is now generally available with its 1.0 release, providing first-class support for Java in Pulumi's multi-language ecosystem. The GA release includes feature parity with other Pulumi languages, improved documentation, enhanced type safety, and support for the complete Pulumi programming model. We've also expanded the Java SDK to support all current LTS versions and ensure smooth interoperability with the broader Java ecosystem. This milestone makes Pulumi an excellent choice for Java teams looking to manage their infrastructure using their preferred language. [Read the blog post](/blog/java-1-0/) or check out the [Java getting started guide](/docs/languages/java/).
 
 ### Pulumi Copilot in VSCode
 
-Pulumi Copilot is now available in Visual Studio Code, bringing AI-powered assistance directly to your infrastructure development environment. The VSCode extension helps you write, understand, and debug Pulumi code with inline explanations, transformation suggestions, and code generation capabilities. Copilot can also assist with converting between Pulumi languages and translating from other IaC tools like Terraform and CloudFormation. This integration makes it easier to learn Pulumi, accelerate your infrastructure development, and solve complex configuration challenges. [Read the blog post](/blog/copilot-in-vscode/) or [install the extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode) today.
+Pulumi Copilot is now available in Visual Studio Code, bringing AI-powered assistance directly to your infrastructure development environment. The VSCode extension helps you write, understand, and debug Pulumi code with inline explanations, transformation suggestions, and code generation capabilities. Copilot can also assist with converting between Pulumi languages and translating from other IaC tools like Terraform and CloudFormation. This integration makes it easier to learn Pulumi, accelerate your infrastructure development, and solve complex configuration challenges. [Read the blog post](/blog/copilot-in-vscode/) or [install the extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-ai) today.
 
 ### Autonaming Configuration
 
