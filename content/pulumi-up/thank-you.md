@@ -19,11 +19,6 @@ speakers:
     title: Staff Software Engineer
     logo: /images/pulumiup-2023/speaker-logos/clear.png
     company: Clear
-  - name: Miki Manor
-    image: /images/team/miki-manor.jpg
-    title: Director of Infrastructure Engineering
-    logo: /logos/customers/skai-logo.svg
-    company: Skai
   - name: Simen A. W. Olsen
     image: /images/team/simen-a-w-olsen.jpg
     title: CEO
