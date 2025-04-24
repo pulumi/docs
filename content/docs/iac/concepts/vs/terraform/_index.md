@@ -127,7 +127,7 @@ The freedom and benefits gained when using true programming languages are large 
 - Reusable & modular infrastructure components for governance in your Internal Developer Portal
 - Compliance via Audit logs to track things like user activity
 - Encrypted secrets in transit and rest (by default)
-- Policy as Code enforce best practices in your desired programming language
+- Policy as Code enforces best practices in your desired programming language
 
 ### Migration and Integration
 
