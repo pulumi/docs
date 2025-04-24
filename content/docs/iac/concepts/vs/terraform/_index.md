@@ -140,7 +140,7 @@ Pulumi IaC’s extensibility also enables cross functionality with Terraform
 
 ## Feature by Feature Comparison
 
-The high level consideration of product design and real world use cases is illustrative for big picture context. A closer examination of individual features can also draw out key fundamental differences and similarities.
+The high level consideration of product design and real world use cases are illustrative for big picture context. A closer examination of individual features can also draw out key fundamental differences and similarities.
 
 Here is a summary of more granular comparisons between Pulumi and Terraform:
 
