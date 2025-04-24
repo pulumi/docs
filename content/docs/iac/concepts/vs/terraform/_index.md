@@ -261,7 +261,7 @@ For more information on how Pulumi IaC manages state or how to use different bac
 
 Pulumi IaC is able to adapt [any Terraform Provider](https://github.com/terraform-providers) for use, enabling management of any infrastructure supported by the Terraform Providers ecosystem using Pulumi IaC programs.
 
-Indeed, some of Pulumi IaC’s most interesting providers have been created this way, delivering access to robust, tried-and-true infrastructure management. The Terraform Providers ecosystem is mature and healthy, and enjoys contributions from many cloud and infrastructure leaders across the industry, ourselves included.
+Some of Pulumi IaC’s most interesting providers have been created this way, delivering access to robust, tried-and-true infrastructure management. The Terraform Providers ecosystem is mature and healthy, and enjoys contributions from many cloud and infrastructure leaders across the industry, ourselves included.
 
 Most Pulumi IaC users don’t need to know about this detail, however we are proud to be building on the work of others, and contributing our own open source back to this vibrant ecosystem, and thought you should know.
 
