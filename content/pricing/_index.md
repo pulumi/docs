@@ -329,7 +329,7 @@ comparison_table:
                 - title: Per query limits in UI
                   items:
                     - content: _blank
-                    - content: 2K results
+                    - content: 10K results
                     - content: 10K results
                     - content: 10K results
                 - title: Data export

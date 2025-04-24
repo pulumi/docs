@@ -271,7 +271,7 @@ Ranges can also be one-sided. For example, to query everything modified after Ja
 ### Property Queries
 
 {{% notes "info" %}}
-Property search is only available to organizations using the Enterprise and Business Critical editions.
+Property search is only available to organizations using Team, Enterprise and Business Critical editions.
 
 If you would like to use it, [contact us](/contact?form=sales) to upgrade.
 {{% /notes %}}
