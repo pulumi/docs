@@ -105,7 +105,7 @@ Alternately, consider just a few of the choices that can be made in Pulumi IaC w
 - **.NET**: Integrate with existing enterprise .NET ecosystems
 - **YAML**: Available for teams preferring simpler configurations
 
-The freedom and benefits gained when using true programming languages is a large fundamental difference with a wealth of additional impacts. For now, let's consider a condensed list of other real world scenarios where differences present themselves.
+The freedom and benefits gained when using true programming languages are large fundamental differences with a wealth of additional impacts. For now, let's consider a condensed list of other real world scenarios where differences present themselves.
 
 ### Workflow and Developer Experience
 
