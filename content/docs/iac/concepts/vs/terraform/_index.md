@@ -46,23 +46,19 @@ With Pulumi IaC, you can:
 
 ## At a Glance
 
-🔧 **Terraform**
+**Terraform**
 
-- ❌ Proprietary domain specific language (HCL)
-- ❌ Secrets not encrypted (requires Vault)
-- ❌ Wait for community supported providers to integrate new features
-- ❌ Not open source (BSL)
+- Uses proprietary domain specific language (HCL)
+- Secrets are not encrypted by default (requires Vault)
+- When cloud providers release new features, you must wait for community supported providers to integrate them
+- Is not considered open source (Business Source License)
 
-<br>
+**Pulumi IaC**
 
-💻 **Pulumi IaC**
-
-- ✅ Mainstream programming languages
-- ✅ Encrypted secrets by default (no additional tools)
-- ✅ Integrated with native cloud providers (no waiting)
-- ✅ Open source (Apache 2.0)
-
-<br>
+- Uses mainstream programming languages
+- Secrets are encrypted by default (no additional tools)
+- Use of native cloud providers means that you don't have to wait for new features to be integrated
+- Is fully open source (Apache 2.0)
 
 **Key Differences**
 
@@ -71,8 +67,6 @@ With Pulumi IaC, you can:
 - Advanced automation capabilities
 - Enhanced security with built-in secret encryption
 - Full IDE support with code completion and type checking
-
-<br>
 
 ## What is Pulumi?
 
@@ -167,13 +161,13 @@ Here is a summary of more granular comparisons between Pulumi and Terraform:
 | [Audit Capabilities](#auditing) | Yes | Limited |
 | [Open Source](#license) | Yes<br>Apache License 2.0 | No<br>Business Source License 1.1 |
 
-Getting started with Pulumi IaC is easy, especially if you have prior experience with Terraform. If you already have Terraform HCL code, you can convert it to Pulumi IaC. Follow the comprehensive guides in our [Migration Hub](/blog/migration-hub/) to use our [self-service migration tools](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. As part of Pulumi Enterprise and Business Critical Editions, [Terraform workspace migrations](/blog/tf-migration-offer) are bundled as part of the onboarding process.
+Getting started with Pulumi IaC is easy, especially if you have prior experience with Terraform. If you already have Terraform HCL code, you can convert it to Pulumi IaC. Follow the comprehensive guides in the [Migration Hub](/blog/migration-hub/) to use our [self-service migration tools](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. As part of Pulumi Enterprise and Business Critical Editions, [Terraform workspace migrations](/blog/tf-migration-offer) are bundled as part of the onboarding process.
 
-If you’re new to infrastructure as code, or don’t have existing HCL code, just follow our getting started guide below.
+If you’re new to infrastructure as code, or don’t have existing HCL code, just follow the getting started guide below.
 
 ## Get Started with Pulumi IaC
 
-If you would like to see how other Pulumi customers have migrated from Terraform to Pulumi IaC, see the [Atlassian case study](/case-studies/atlassian/) and the [Green Park Sports case study](/case-studies/greenpark-sports/). If you would like to deploy a simple program, follow our Get Started guide:
+If you would like to see how other Pulumi customers have migrated from Terraform to Pulumi IaC, see the [Atlassian case study](/case-studies/atlassian/) and the [Green Park Sports case study](/case-studies/greenpark-sports/). If you would like to deploy a simple program, follow the Get Started guide:
 
 {{< get-started >}}
 
@@ -235,11 +229,11 @@ Pulumi IaC has the ability to embed Pulumi programs directly into your applicati
 
 ### Import Code from Other IaC Tools {#converting}
 
-Pulumi IaC allows you to convert templates by Terraform HCL, Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves the existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see  [Conversion](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) in our Adopting Pulumi IaC user guide.
+Pulumi IaC allows you to convert templates by Terraform HCL, Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves the existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see  [Conversion](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) in the Adopting Pulumi IaC user guide.
 
 ### Adopt Existing Resources {#adopting}
 
-Both Pulumi IaC and Terraform support importing existing resources so that they can be managed by each. Pulumi IaC also allows you to generate code in your language of choice from the existing state. Terraform only supports importing state but requires you to hand-author the HCL. To learn more, see [Importing Infrastructure](/docs/using-pulumi/adopting-pulumi/import/) in our Adopting Pulumi IaC user guide.
+Both Pulumi IaC and Terraform support importing existing resources so that they can be managed by each. Pulumi IaC also allows you to generate code in your language of choice from the existing state. Terraform only supports importing state but requires you to hand-author the HCL. To learn more, see [Importing Infrastructure](/docs/using-pulumi/adopting-pulumi/import/) in the Adopting Pulumi IaC user guide.
 
 ### Aliases
 
@@ -270,9 +264,9 @@ In the event you’d like to add new providers, or understand how this integrati
 
 #### Converting From Terraform to Pulumi IaC {#providers-converting}
 
-The Pulumi CLI can be used to convert Terraform HCL to Pulumi IaC via `pulumi convert --from terraform`. To learn more, see [Converting Terraform HCL to Pulumi IaC](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) in our Adopting Pulumi IaC user guide.
+The Pulumi CLI can be used to convert Terraform HCL to Pulumi IaC via `pulumi convert --from terraform`. To learn more, see [Converting Terraform HCL to Pulumi IaC](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) in the Adopting Pulumi IaC user guide.
 
-For an example of how to do a Terraform-to-Pulumi conversion, see our article, [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/).
+For an example of how to do a Terraform-to-Pulumi conversion, see [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/).
 
 #### Using Pulumi IaC and Terraform Side-by-Side {#providers-side-by-side}
 
@@ -280,7 +274,7 @@ Pulumi IaC supports [consuming local or remote Terraform state](/blog/using-terr
 
 For example, maybe you would like to keep your VPC and low-level network definitions written in Terraform so as to avoid any disruption, or maybe some of the team would like to stay on Terraform for now and make a shift in the future. Using the state reference support described previously, you can author higher-level infrastructure in Pulumi IaC that consumes the Terraform-provisioned VPC information (such as the VPC ID, Subnet IDs, etc.), making the co-existence of Pulumi IaC and Terraform easy to automate.
 
-To learn more, see [Referencing Terraform State](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#referencing-terraform-state) in our Adopting Pulumi IaC user guide.
+To learn more, see [Referencing Terraform State](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#referencing-terraform-state) in the Adopting Pulumi IaC user guide.
 
 ### Encrypted Secrets by Default {#secrets}
 
