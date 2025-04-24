@@ -81,13 +81,13 @@ environment identifier respectively. You should see output similar to the follow
 
 ### InfisicalSecretsGet
 
-| Property      | Type   | Description                                                                                                                                                                                         |
-|---------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `projectId`   | string | The projectId of the project the secret lives in. In the Infisical web app, navigate to your Secrets project, click on *Project Settings*, and click the *Copy Project ID* button.                  |
-| `environment` | string | The environment slug of the environment the secret lives in. In the Infisical web app, navigate to your Secrets project, click on *Project Settings*, and find the slug in the *Environments* list. Default values are `dev`, `staging`, and `prod` |
-| `secretKey`   | string | The name of the secret to import.                                                                                                                                                                   |
-| `secretPath`  | string | [Optional] - The path inside the environment where the secret lives. For example, if your secret `dbPassword' lives within `DatabaseDetails` folder. The path would be `/DatabaseDetails`. If secretPath is not specified, the default path is `/` - the root environment folder.                                                                                                                                 |
-| `type`        | string | [Optional] - The secret type, either 'shared' or 'personal'.                                                                                                                                        |
+| Property      | Type   | Description                                                                                                                                                                                                                                                                       |
+|---------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `projectId`   | string | The projectId of the project the secret lives in. In the Infisical web app, navigate to your Secrets project, click on *Project Settings*, and click the *Copy Project ID* button.                                                                                                |
+| `environment` | string | The environment slug of the environment the secret lives in. In the Infisical web app, navigate to your Secrets project, click on *Project Settings*, and find the slug in the *Environments* list. Default values are `dev`, `staging`, and `prod`                               |
+| `secretKey`   | string | The name of the secret to import.                                                                                                                                                                                                                                                 |
+| `secretPath`  | string | [Optional] - The path inside the environment where the secret lives. For example, if your secret `dbPassword` lives within `DatabaseDetails` folder. The path would be `/DatabaseDetails`. If secretPath is not specified, the default path is `/` - the root environment folder. |
+| `type`        | string | [Optional] - The secret type, either `shared` or `personal`.                                                                                                                                                                                                                      |
 
 ### Outputs
 

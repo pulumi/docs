@@ -15,7 +15,8 @@ aliases:
 ---
 
 The `infisical-login` provider enables you to log in to Infisical using OpenID Connect or by providing static
-credentials. The provider will return a set of credentials that can be used to run Infisical CLI commands using the [esc run](/docs/esc/cli/commands/esc_run/) command and also pull in secrets from Infisical using the
+credentials. The provider will return a set of credentials that can be used to run Infisical CLI commands using
+the [esc run](/docs/esc/cli/commands/esc_run/) command and also pull in secrets from Infisical using the
 `infisical-secrets` provider.
 
 ## Example
@@ -50,10 +51,12 @@ the [OpenID Connect integration](/docs/esc/environments/configuring-oidc/infisic
 | `subjectAttributes` | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/environments/configuring-oidc/#custom-token-claim) documentation |
 
 ### InfisicalLoginStatic
-On your Infisical Identity, add a new Auth method and select `Universal Auth`. Create a new Client secret and copy both the clientID and clientSecret from Universal Auth. 
-| Property       | Type   | Description                       |
+
+On your Infisical Identity, add a new Auth method and select `Universal Auth`. Create a new Client secret and copy both
+the clientID and clientSecret from Universal Auth.
+| Property | Type | Description |
 |----------------|--------|-----------------------------------|
-| `clientId`     | string | The Universal Auth client id.     |
+| `clientId`     | string | The Universal Auth client id. |
 | `clientSecret` | string | The Universal Auth client secret. |
 
 ## Outputs
