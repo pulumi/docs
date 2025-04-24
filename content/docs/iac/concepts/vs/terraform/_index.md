@@ -193,7 +193,7 @@ Terraform has plugins for some IDEs. However, the features are varied and limite
 
 ### Testing and Validation {#testing}
 
-Terraform supports integration testing. With Pulumi IaC, you can take advantage of  native testing frameworks and perform automated tests of your infrastructure because Pulumi IaC uses general purpose programming languages to provision cloud resources. Pulumi provides unit tests (fast in-memory tests that mock all external calls), property tests (run resource-level assertions while infrastructure is being deployed), and integration tests (deploy ephemeral infrastructure and run external tests against it). For more information on how to run tests with Pulumi IaC, see [Testing](/docs/using-pulumi/testing/).
+Terraform supports integration testing. With Pulumi IaC, you can take advantage of native testing frameworks and perform automated tests of your infrastructure because Pulumi IaC uses general purpose programming languages to provision cloud resources. Pulumi provides unit tests (fast in-memory tests that mock all external calls), property tests (run resource-level assertions while infrastructure is being deployed), and integration tests (deploy ephemeral infrastructure and run external tests against it). For more information on how to run tests with Pulumi IaC, see [Testing](/docs/using-pulumi/testing/).
 
 ### CI/CD Pipeline Support {#cicd}
 
