@@ -130,6 +130,7 @@ This bit of info is serious. If you missed it, bad things could happen.
 * Use headings and lists to make content scannable and consumable.
 * Use visuals: code, graphs, videos, architecture diagrams, etc.
 * Highlight important points.
+* Avoid emojis unless for notes or absolutely necessary.
 
 ## Additional Resources
 
