@@ -1,6 +1,6 @@
 ---
 title_tag: "Terraform vs. Pulumi IaC"
-meta_desc: Pulumi IaC and Terraform have a few similarities, but they differ in many key ways. This page helps provide a rundown of these major differences.
+meta_desc: Pulumi IaC and Terraform have many similarities, and yet they differ in many key ways. This page helps provide a rundown of Pulumi's advantages.
 title: Terraform
 h1: Terraform vs. Pulumi IaC
 meta_image: /images/docs/meta-images/docs-meta.png
