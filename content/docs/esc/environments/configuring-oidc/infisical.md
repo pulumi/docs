@@ -52,7 +52,7 @@ Authentication section:
 4. Fill in the remaining form fields as follows:
     * **OIDC Discovery URL:** `https://api.pulumi.com/oidc`
     * **Issuer:** `https://api.pulumi.com/oidc`
-    * **Subject:** must be a valid subject claim (see examples at the end of this section).
+    * **Subject:** This can be left empty. If it's empty, all ESC Environments of your organization would be able to assume this identity. We recommend configuring the subject claim for finer permission. (see examples at the end of this section).
     * **Audiences:** This is different between Pulumi deployments and ESC. For Deployments this is only the name of your Pulumi organization. For ESC this is the name of your Pulumi organization prefixed with `infisical:` (e.g. `infisical:{org}`).
 {{< notes type="info" >}}
 For environments in the `default` project the audience will use just the Pulumi organization name. This is to
@@ -80,7 +80,7 @@ that you have the correct organization selected in the left-hand navigation menu
             oidc:
               identityId: <your-identity-id>
       environmentVariables:
-        ARM_ACCESS_TOKEN: ${infisical.login.accessToken}
+        INFISICAL_TOKEN: ${infisical.login.accessToken}
     ```
 
 6. Replace `<your-identity-id>` with the value from the previous steps.
@@ -102,7 +102,7 @@ organization, project, and environment file respectively. You should see output 
     }
   },
   "environmentVariables": {
-    "ARM_ACCESS_TOKEN": "eyJh...."
+    "INFISICAL_TOKEN": "eyJh...."
   }
 }
 ```
