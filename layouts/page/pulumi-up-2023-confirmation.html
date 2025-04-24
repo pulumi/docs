@@ -10,6 +10,8 @@
         </div>
     </div>
 
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
+
     {{ range .Params.panels }}
     <section id="panel" class="py-8">
         <div class="container mx-auto text-center">
@@ -35,15 +37,10 @@
                 {{ end }}
             </div>
             <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
-            <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
-                <a class="m-4 sm:m-2 btn-primary" href="{{ .schedule_link }}">Register Now</a>
-                </a>
             </div>
         </div>
     </section>
     {{ end }}
-
-    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
 
     {{ partial "pulumi-up/speakers.html" (dict "speakers" .Params.speakers ) }}
 
@@ -86,7 +83,6 @@
             {{ range .Params.workshops }}
             <li class="flex event-card w-full m-0 p-2 lg:w-1/2">
                 <article class="card bg-white h-80 md:h-72 flex flex-col mx-2 md:mx-0 border border-gray-200 hover:border-gray-500">
-                    <a href="" rel="" target="_blank" class="w-full h-full">
                         <span class="block w-full h-full p-4 flex flex-col justify-between">
                             <span>
                                 <span class="flex flex-row justify-between">
@@ -118,7 +114,6 @@
                             </div>
                                 
                         </span>
-                    </a>
                 </article>
             </li>
             {{ end }}

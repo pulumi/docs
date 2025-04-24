@@ -92,11 +92,6 @@ speakers:
     title: Senior DevOps Engineer
     logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
     company: XMCyber
-  - name: Ido Ozeri
-    image: /images/people/ido-ozeri.jpg
-    title: DevOps Tech Lead
-    logo: /images/pulumiup-2023/speaker-logos/xm-cyber.png
-    company: XMCyber
   - name: Meagan Cojocar
     image: /images/team/meagan-cojocar.jpg
     title: General Manager, IaC
@@ -112,9 +107,9 @@ speakers:
     title: Principal Customer Success Architect
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
-  - name: Mark Huber
-    image: /images/team/mark-huber.jpg
-    title: Sr Product Manager
+  - name: Komal Ali
+    image: /images/team/komal-ali.jpg
+    title: Engineering Manager
     logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
     company: Pulumi
  
@@ -127,7 +122,7 @@ schedule:
       time: "Europe & Americas"
       time2: "Asia Pacific"
 
-    - title: A Lap Around Pulumi
+    - title: Product News and Announcements
       description:
       time: "9:00 AM ET"
       time2: "4:00 PM PT"
@@ -197,17 +192,13 @@ customer_logos:
       - logo: microsoft.png
         link: http://azure.microsoft.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: 1password.png
-        link: https://1password.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: gitlab.png
         link: https://about.gitlab.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: temporal.png
         link: https://temporal.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: new-relic.png
-        link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: tailscale.svg
-        link: https://tailscale.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+        link: https://login.tailscale.com/start?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: docker.png
         link: https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: honeycomb-logo.svg

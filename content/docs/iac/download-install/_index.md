@@ -506,7 +506,7 @@ Most installation methods choose the latest version by default. To install a spe
 <h3 class="no-anchor pt-4">macOS Installation Script</h3>
 
 <div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version></code></pre>
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version &lt;version&gt;</code></pre>
 </div>
 
 {{% /choosable %}}
@@ -518,7 +518,7 @@ Most installation methods choose the latest version by default. To install a spe
 To install, run our installation script:
 
 <div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version></code></pre>
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-install-script">$ curl -fsSL https://get.pulumi.com | sh -s -- --version &lt;version&gt;</code></pre>
 </div>
 
 {{% /choosable %}}
