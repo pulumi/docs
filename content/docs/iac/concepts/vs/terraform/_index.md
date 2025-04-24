@@ -33,7 +33,7 @@ aliases:
 
 {{< youtube "v2XMEZ_LeCY?rel=0" >}}
 
-## Infrastructure Mangement as Powerful as Your Applications
+## Infrastructure Management as Powerful as Your Applications
 
 Pulumi IaC lets you write infrastructure as code in any programming language and deploy to any cloud. Terraform requires learning HCL, a DSL that optimizes for simplicity at the expense of flexibility and scale. Instead, Pulumi IaC integrates into the existing coding tools and workflows you already know while also providing performance, scalability, ease of use and more.
 
