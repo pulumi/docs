@@ -152,11 +152,11 @@ The `login` object must contain:
 
 And exactly one of:
 
-| Property     | Type   | Description                                                   |
-|--------------|--------|---------------------------------------------------------------|
-| `password`   | string | Legacy password authentication. (Deprecated)                  |
-| `privateKey` | string | Private key in PEM format.                                    |
-| `token`      | string | OAuth token (output of snowflake-login provider).             |
+| Property     | Type   | Description                                                                                                             |
+|--------------|--------|-------------------------------------------------------------------------------------------------------------------------|
+| `password`   | string | Legacy password authentication. (Deprecated)                                                                            |
+| `privateKey` | string | Private key in PEM format.                                                                                              |
+| `token`      | string | OAuth token (output of [snowflake-login](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/) provider).  |
 
 ## State (Optional)
 
