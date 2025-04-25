@@ -233,12 +233,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.get_organization"><code class="docutils literal notranslate"><span class="pre">get_organization()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.get_project"><code class="docutils literal notranslate"><span class="pre">get_project()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.get_stack"><code class="docutils literal notranslate"><span class="pre">get_stack()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi.get_type_token"><code class="docutils literal notranslate"><span class="pre">get_type_token()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.getter"><code class="docutils literal notranslate"><span class="pre">getter()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.input_type"><code class="docutils literal notranslate"><span class="pre">input_type()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.output_type"><code class="docutils literal notranslate"><span class="pre">output_type()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.property"><code class="docutils literal notranslate"><span class="pre">property()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.set"><code class="docutils literal notranslate"><span class="pre">set()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pulumi.type_token"><code class="docutils literal notranslate"><span class="pre">type_token()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.warn"><code class="docutils literal notranslate"><span class="pre">warn()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-pulumi.automation">pulumi.automation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.automation.CancelEvent"><code class="docutils literal notranslate"><span class="pre">CancelEvent</span></code></a></li>
@@ -2372,6 +2374,12 @@ with a resource and stream_id if provided.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pulumi.get_type_token">
+<span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">get_type_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">klass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.get_type_token" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve the type token from a Pulumi type.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pulumi.getter">
 <span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">getter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.getter" title="Permalink to this definition"></a></dt>
 <dd><p>Decorator to indicate a function is a Pulumi property getter.</p>
@@ -2422,6 +2430,18 @@ representing the outputs.</p>
 <dt class="sig sig-object py" id="pulumi.set">
 <span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.set" title="Permalink to this definition"></a></dt>
 <dd><p>Used to set values in types decorated with &#64;input_type or &#64;output_type.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pulumi.type_token">
+<span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">type_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pulumi.type_token" title="Permalink to this definition"></a></dt>
+<dd><p>Decorate a class representing a Pulumi type like a resource, but also enums,
+with its type token.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><p>&#64;pulumi.type_token(“aws:s3/bucket:Bucket”)
+class Bucket(Resource): …</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
