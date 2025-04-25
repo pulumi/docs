@@ -15,25 +15,7 @@ aliases:
 - /docs/intro/deployments/api/
 ---
 
-
-The Pulumi Deployments REST API provides a fully-managed remote execution interface for your Pulumi programs.
-
-{{% notes "info" %}}
-Pulumi Deployments is now generally available!
-
-We have created new routes for the Pulumi Deployments REST API, which are documented below. The `preview` routes will continue to work for now, but should be considered deprecated and will be removed on October 10th, 2024.
-{{% /notes %}}
-
-## Migrating from the Preview API
-
-For the majority of cases, the new API is a drop-in replacement for the preview API and the only change is that the route itself has changed (i.e. replace with `/api/preview` with `/api/stacks`).
-
-However, there are a few cases where the new API has changed the behavior of the preview API. These changes are as follows:
-
-* The [Create Deployment](#create-deployment) endpoint now defaults to using the stack's deployment settings (i.e. `inheritSettings: true`). To use only the deployment settings present in the request, set `inheritSettings` to `false`.
-* The [List Stack Deployments](#list-stack-deployments) endpoint now returns an object with a `deployments` property instead of a list of deployments.
-* The [List Stack Deployments](#list-stack-deployments) endpoint now returns deployments in descending order (most recent first). To return deployments in ascending order (oldest first), set `asc` to `true`.
-* The Deployment Settings routes have changed. In addition to replacing `api/preview` with `api/stacks`, also replace `deployment/settings` with `deployments/settings` in the URL.
+The Pulumi Deployments REST API allows you to configure Deployments settings for your Pulumi stacks and trigger deployments runs.
 
 ## Authentication
 
@@ -41,7 +23,7 @@ All requests must be authenticated using a token via the `Authorization` HTTP he
 
 The `Authorization` header must be in the form below with the literal string `token`, then a space, then your access token value.
 
-```
+```plain
 Authorization: token {token}
 ```
 
