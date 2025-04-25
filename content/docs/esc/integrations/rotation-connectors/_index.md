@@ -11,7 +11,7 @@ menu:
     weight: 2
 ---
 
-Many organizations keep their databases in private networks, making it impossible for external credential managers (like ESC!) to rotate the credentials.
+Many organizations keep their databases in private networks, making it impossible for external credential managers (like ESC) to rotate the credentials.
 
 Pulumi ESC's solution to that problem are Rotation Connectors - open-source, easy-to-deploy pieces of insfrastructure that will securely rotate your credentials and store them in your ESC Environment for easy use.
 
@@ -21,4 +21,4 @@ Once you determined that you need one, follow the links below to learn how to se
 
 | Rotation Connector                                                             | Description                                                                                                                     |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| [AWS Lambda](/docs/esc/integrations/rotation-connectors/aws-lambda/)             | The `AWS Lambda` rotation connector enables you rotate credentials inside private AWS VPCs.                                     |
+| [AWS Lambda](/docs/esc/integrations/rotation-connectors/aws-lambda/)             | The `AWS Lambda` rotation connector enables you to rotate credentials inside private AWS VPCs.                                     |

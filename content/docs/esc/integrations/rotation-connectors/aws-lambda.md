@@ -12,11 +12,11 @@ menu:
 
 The `aws-lambda` rotation connector enables you to rotate credentials inside of a private AWS VPC. Check out the [Rotated Secrets page](/docs/esc/integrations/rotated-secrets/) to learn which kinds of credentials can be rotated using Pulumi ESC. See [rotation connectors](/docs/esc/integrations/rotation-connectors/) page for more info on why rotation connectors are needed in the first place.
 
-AWS Lambda Connector supports rotation of database credentials MySQL and PostgreSQL databases. Before you start, connect to your existing database or provision a new one.
+The AWS Lambda Connector supports rotation of MySQL and PostgreSQL database credentials. Before you start, connect to your existing database or provision a new one.
 
 ## User setup
 
-First, you need to provision users that will be rotated. If you already have 2 existing users you can use those, otherwise run commands below to setup simple users. Make sure to replace `yourDatabase` with your database name and adjust priviledges as needed! You can also adjust the initial password to anything you'd like.
+First, you need to provision users that will be rotated. If you already have 2 existing users you can use those, otherwise run commands below to setup simple users. Make sure to replace `yourDatabase` with your database name and adjust privileges as needed! You can also adjust the initial password to anything you'd like.
 
 ### MySQL
 
@@ -42,7 +42,7 @@ GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user2;
 
 ## Managing user
 
-Next, you need to setup a managing user, who will be in charge of actually rotating passwords for the 2 users we created above. Pulumi ESC will have access to this user, so we will scope down this user's priviledges to a minimum. Same as above, replace `yourDatabase` with your database name and `manager_password` with anything you'd like, just make sure to memorize or note it down somewhere.
+Next, you need to setup a managing user, who will be in charge of actually rotating passwords for the 2 users we created above. Pulumi ESC will have access to this user, so we will scope down this user's privileges to a minimum. Same as above, replace `yourDatabase` with your database name and `manager_password` with anything you'd like, just make sure to memorize or note it down somewhere.
 
 ### MySQL
 
@@ -75,7 +75,7 @@ The code that runs inside the lambda is open-source for full transparency, feel 
 
 If you used the template above, it has already created 2 environments for you to hit the ground running with database credential rotations. Navigate to your Environments page in Pulumi Console and locate the 2 new environments.
 
-The first one is the managing credentials environment, containing managing user credentials for your database and the [OIDC AWS login](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/aws-login/). Make sure to fill in your manager user credentials, using `fn::secret` for the password. Make sure to [restrict access](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/) to this environment to only admin-level users, to ensure managing user credentials are safe.
+The first one is the managing credentials environment, containing managing user credentials for your database and the [OIDC AWS login](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/aws-login/). Make sure to fill in your managing user credentials, using `fn::secret` for the password. Make sure to [restrict access](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/) to this environment to only admin-level users, to ensure managing user credentials are safe.
 
 The second new environment contains the rotator itself, referencing the first environment for the senstitive values. Adjust the `rotateUsers` and `database` fields to your values. If you're using a non-default port, you might need to change the actual rotator name after `fn::rotate::` - `mysql` or `postgres`.
 
@@ -83,6 +83,6 @@ That's all there is to it! You can now [import your rotator environment](https:/
 
 ## Rotate the environment
 
-Now that you have a rotator environment setup, you can start rotating the actual secrets. To test, you can manually rotate the environment by clicking on the `Rotate secrets` button inside the three-dot menu in your rotator environment or by running `pulumi env rotate org/project/environment` with your rotator environment name. Assuming rotation is successful, you will see a new `current` set of credentials in the `state` object of the rotator that you can use. If the rotation is not successful, you can find out what the issue was by navigating to the `Secret Rotation` tab and checking the `Last secret rotations` section.
+Now that you have a rotator environment setup, you can start rotating the actual secrets. To test it, you can manually rotate the environment by clicking on the `Rotate secrets` button inside the three-dot menu in your rotator environment or by running `pulumi env rotate org/project/environment` with your rotator environment name. Assuming rotation is successful, you will see a new `current` set of credentials in the `state` object of the rotator that you can use. If the rotation is not successful, you can find out what the issue was by navigating to the `Secret Rotation` tab and checking the `Last secret rotations` section.
 
 On the same tab, you can also create [rotation schedules](https://www.pulumi.com/docs/esc/environments/rotation/#schedule) to automatically rotate the credentials after a period of time.

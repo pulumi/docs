@@ -21,8 +21,8 @@ Best practice is to have 2 separate environments, one with managing credentials 
 ```yaml
 values:
   managingUser:
-    username: managing_user # Replace with your user value
-    password: manager_password # Replace with your user value behind fn::secret
+    username: managing_user # Replace with your username value
+    password: manager_password # Replace with your password value and use fn::secret to encrypt it
   awsLogin:
     fn::open::aws-login:
       oidc:
@@ -42,19 +42,23 @@ values:
           connector:
             awsLambda:
               login: ${environments.rotatorExample.managingCredentials.awsLogin} # An implicit import from the above environment (assuming it's called rotatorExample/managingCredentials)
-              lambdaArn: arn:aws:lambda:us-west-2:616138583583:function:PulumiEscSecretRotatorLambda-Function-e1c630a
-          database: rotator_db
-          host: iaro-rotator-mysql.cluster-chuqccm8uxqx.us-west-2.rds.amazonaws.com
+              lambdaArn: arn:aws:lambda:aws-region:111111111111:function:PulumiEscSecretRotatorLambda-Function-xxxxxxx
+          database: rotator_example_db
+          host: rotator-example-mysql.cluster-xxxxxxxxxxxx.aws-region.rds.amazonaws.com
           port: 5432
-          managingUser: ${environments.rotatorTest.iaroManagingCreds.managingUser} # An implicit import from the above environment (assuming it's called rotatorExample/managingCredentials)
+          managingUser: ${environments.rotatorExample.managingCredentials.managingUser} # An implicit import from the above environment (assuming it's called rotatorExample/managingCredentials)
         rotateUsers:
           username1: user1
           username2: user2
 ```
 
+Note the 2 usernames inside the `rotateUsers` field - these are the users whose passwords will be rotated by the managing user. Once rotated, the usernames and their corresponding password will be stored in the `state` object. We need 2 users to ensure no apps using these credentials ever go down - while one of the users is being rotated, the other will be used and vice versa.
+
 ### State
 
-If you have existing users that you want to use right away, you can provide `state` object directly under the `fn::rotate::postgres` rotator.
+If you have existing users that you want to use right away, you can provide the `state` object directly under the `fn::rotate::postgres` rotator.
+
+The users are cycled in the following manner: when `username1` is the `current` user, `username2` is `previous` and vice versa. During a rotation, `previous` user's password is changed and its credentials are put into `current` user, with the other user moved to `previous`. Your apps should always use the `current` credentials, this way after a rotation, these credentials are still valid, just stored in the `previous` user, and your app can switch on the next configuration retrieval. One thing you have to be mindful of is to not rotate your secrets more frequently than your apps update their configuration - this will lead to them attempting to use credentials that are already rotated out.
 
 ```yaml
 state:
@@ -99,7 +103,7 @@ state:
 | `database`     | string                                              | Name of the database to use                                     |
 | `host`         | string                                              | Endpoint of the database                                        |
 | `port`         | int                                                 | Port of the database server                                     |
-| `managingUser` | [UserCredential](#usercredential)                   | Credentials for a user that has priviledges to change passwords |
+| `managingUser` | [UserCredential](#usercredential)                   | Credentials for a user that has privileges to change passwords  |
 
 ### Connector
 
