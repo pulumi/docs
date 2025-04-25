@@ -31,6 +31,7 @@ To use OIDC authentication with Snowflake, you need to set up a security integra
 ### Step 1: Create a Security Integration in Snowflake
 
 Execute the following SQL in your Snowflake account to create a security integration:
+Refer to the Snowflake's [Configure custom authorization servers for External OAuth](https://docs.snowflake.com/en/user-guide/oauth-ext-custom) documentation for more information.
 
 ```sql
 CREATE SECURITY INTEGRATION pulumi_oidc
