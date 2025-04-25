@@ -1,9 +1,9 @@
 ---
-title: "Pulumi Release Notes: Pulumi ESC Rotated Secrets, Policy Enhancements"
+title: "Pulumi Release Notes: Pulumi MCP Server, Pulumi ESC Rotated Secrets, and Policy Enhancements"
 allow_long_title: true
-date: 2025-04-22T11:06:04-08:00
+date: 2025-04-25
 draft: false
-meta_desc: to-be-aded
+meta_desc: "Explore Pulumi's latest features including AI-assisted development with MCP Server, cross-language Components, ESC Rotated Secrets, and much more!"
 meta_image: meta.png
 authors:
     - arun-loganathan
@@ -11,9 +11,12 @@ authors:
 tags:
     - features
     - release-notes
+social:
+    twitter: "Pulumi Releases Notes: AI-assisted IaC with our MCP Server, new cross-language components, registry expansion, ESC Rotated Secrets, and more! Check out all the new features we've shipped in the last two months!."
+    linkedin: "Pulumi Release Notes are out! Take a look at the improvements we have shipped in the last two months across the Pulumi ecosystem! From AI-assisted IaC with our MCP Server to new cross-language components to powerful new capabilities in Pulumi ESC and Insights, these updates deliver on our commitment to making cloud management more powerful, accessible, and secure. Check out our latest release notes to see what's new!"
 ---
 
-<b>Intro to be added</b>
+We've been busy over the past two months, shipping significant enhancements across the Pulumi ecosystem. From major improvements to our core IaC platform with Azure Native V3 and cross-language Components to powerful new capabilities in Pulumi ESC and Insights, these updates deliver on our commitment to making cloud management more powerful, accessible, and secure. We're particularly excited about our AI integration through the MCP Server, enabling developers to work with infrastructure in a more intuitive, contextual way. Let's dive into the details of what's new.
 
 <!--more-->
 
@@ -104,10 +107,8 @@ Securely inject secrets and configuration directly into your GitHub Actions work
 
 Extend the governance reach of Pulumi [Policy as Code](/docs/iac/using-pulumi/crossguard/) beyond IaC-managed resources to encompass your entire cloud environment with a powerful new capability in [Pulumi Insights](/docs/insights/). You can now automatically apply your existing policies to resources discovered by Pulumi Insights, regardless of how they were created. Simply link your [Insights Accounts](/docs/insights/accounts/) (representing cloud provider integrations) to your Policy Groups alongside your stacks. Pulumi will then evaluate all resources within those accounts against your defined policies, surfacing violations centrally. This allows you to write policies once and apply them universally across both IaC and discovered resources, dramatically simplifying how you maintain consistent security and compliance standards at scale across AWS, Azure, OCI, and Kubernetes. [Read the blog post](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/). 
 
-
-
 ## Wrap up
 
-<b>Add a conclusion</b>
+These new features and enhancements represent our ongoing commitment to improving the cloud management experience for developers and platform teams. Whether you're managing cloud resources with our streamlined Azure Native V3 provider, creating reusable abstractions with cross-language Components, leveraging AI assistance with the MCP Server, or strengthening your security posture with ESC Rotated Secrets and policy enforcement, we're focused on making your infrastructure management more efficient, secure, and enjoyable. As we continue to innovate, your feedback helps shape our roadmap and prioritize improvements that matter most to you.
 
 Explore all the new capabilities and share your feedback – we're always listening! Open an issue in the [Pulumi Cloud requests repository](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose) or the [pulumi/pulumi repository](https://github.com/pulumi/pulumi) for anything CLI-related. Stay tuned for more exciting updates!
