@@ -92,6 +92,8 @@ CREATE USER ESC_ROTATION_SERVICE_USER
 GRANT ROLE ESC_ROTATOR TO USER ESC_ROTATION_SERVICE_USER;
 ```
 
+The rotation service user should have minimal permissions, only enough to alter the target user.
+
 ### Step 4: Set Up OIDC for the Rotation Service User
 
 Follow the OIDC setup steps in the [snowflake-login documentation](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/) to allow Pulumi ESC to authenticate as the rotation service user.
@@ -184,9 +186,3 @@ When the `snowflake-user` rotator is executed:
 5. The new private key is stored securely in the environment state.
 
 This two-key approach ensures that applications have time to update to the new key before the old one is completely removed, providing a smooth transition during rotation.
-
-## Security Considerations
-
-- The rotation service user should have minimal permissions, only enough to alter the target user.
-- Store the rotator in a separate environment from your application credentials to maintain separation of concerns.
-- Consider setting up a regular rotation schedule. See [Rotating secrets](/docs/esc/environments/rotation/) for more details.
