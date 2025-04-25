@@ -27,7 +27,7 @@ For an overview of how Pulumi Insights works, check out the following 5-min vide
 
 <div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
     <iframe
-        src="//www.youtube.com/embed/hXXRVbURKsQ?rel=0"
+        src="//www.youtube.com/embed/fa7s5_oYnaM?rel=0"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
         allowfullscreen=""
         title="Pulumi Insights: Scanning and managing cloud accounts">
