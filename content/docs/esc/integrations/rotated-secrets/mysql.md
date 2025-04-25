@@ -7,10 +7,15 @@ menu:
   esc:
     identifier: mysql-rotator
     parent: esc-rotated-secrets
-    weight: 2
+    weight: 3
 ---
 
-The `mysql` rotator enables you to rotate user credentials for a MySQL database in your Environment. This rotator requires that you setup an [`aws-lambda` rotation connector](/docs/esc/integrations/rotation-connectors/aws-lambda) first. Setting up the connector will also provide you with a ready-to-go rotation environment, making this page easier to understand.
+The `mysql` rotator enables you to rotate user credentials for a MySQL database in your Environment.
+
+## Prerequisites
+
+- [Database credentials prepared for rotation](/docs/esc/integrations/rotated-secrets/db-preparation)
+- [AWS Lambda Rotation Connector setup](/docs/esc/environments/rotation/aws-lambda)
 
 ## Example
 
@@ -109,7 +114,7 @@ state:
 
 | Property    | Type                                                | Description                      |
 |-------------|-----------------------------------------------------|----------------------------------|
-| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig)                 | AWS Lambda configuration         |
+| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig) | An [AWS Lambda connector](/docs/esc/environment/rotation/aws-lambda) needs to be setup |
 
 ### AWSLambdaConfig
 

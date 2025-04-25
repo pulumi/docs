@@ -1,69 +1,24 @@
 ---
-title: aws-lambda
-title_tag: aws-lambda Pulumi ESC Rotation Connectors
+title: AWS Lambda Rotation Connector
+title_tag: AWS Lambda Rotation Connector
 meta_desc: The `aws-lambda` connector enables you to rotate credentials inside of a private AWS VPC.
-h1: aws-lambda
+h1: AWS Lambda Rotation Connector
 menu:
   esc:
     identifier: aws-lambda
-    parent: esc-rotation-connectors
+    parent: esc-rotating-secrets
     weight: 1
 ---
 
-The `aws-lambda` rotation connector enables you to rotate credentials inside of a private AWS VPC. Check out the [Rotated Secrets page](/docs/esc/integrations/rotated-secrets/) to learn which kinds of credentials can be rotated using Pulumi ESC. See [rotation connectors](/docs/esc/integrations/rotation-connectors/) page for more info on why rotation connectors are needed in the first place.
+The `aws-lambda` rotation connector enables you to rotate credentials inside of a private AWS VPC. Check out the [Rotated Secrets page](/docs/esc/integrations/rotated-secrets/) to learn which kinds of credentials can be rotated using Pulumi ESC. See [rotation connectors](/docs/esc/environments/rotation#rotation-connectors) section for more info on why rotation connectors are needed in the first place.
 
-The AWS Lambda Connector supports rotation of MySQL and PostgreSQL database credentials. Before you start, connect to your existing database or provision a new one.
+## Prerequisites
 
-## User setup
-
-First, you need to provision users that will be rotated. If you already have 2 existing users you can use those, otherwise run commands below to setup simple users. Make sure to replace `yourDatabase` with your database name and adjust privileges as needed! You can also adjust the initial password to anything you'd like.
-
-### MySQL
-
-```
-CREATE USER IF NOT EXISTS 'user1'@'%' IDENTIFIED BY 'initial_password';
-GRANT SELECT, INSERT, UPDATE
-    ON yourDatabase.*
-    TO 'user1'@'%';
-CREATE USER IF NOT EXISTS 'user2'@'%' IDENTIFIED BY 'initial_password';
-GRANT SELECT, INSERT, UPDATE
-    ON yourDatabase.*
-    TO 'user2'@'%';
-```
-
-### PostgreSQL
-
-```
-CREATE USER user1 WITH PASSWORD 'initial_password';
-GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user1;
-CREATE USER user2 WITH PASSWORD 'initial_password';
-GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user2;
-```
-
-## Managing user
-
-Next, you need to setup a managing user, who will be in charge of actually rotating passwords for the 2 users we created above. Pulumi ESC will have access to this user, so we will scope down this user's privileges to a minimum. Same as above, replace `yourDatabase` with your database name and `manager_password` with anything you'd like, just make sure to memorize or note it down somewhere.
-
-### MySQL
-
-```
-CREATE USER IF NOT EXISTS 'managing_user'@'%' IDENTIFIED BY 'manager_password';
-GRANT ALTER ON yourDatabase.* TO 'managing_user'@'%';
-GRANT CREATE USER ON *.* TO 'managing_user'@'%';
-```
-
-### PostgreSQL
-
-```
-CREATE USER managing_user WITH PASSWORD 'manager_password';
-ALTER USER managing_user WITH CREATEROLE;
-GRANT user1 TO managing_user WITH ADMIN OPTION;
-GRANT user2 TO managing_user WITH ADMIN OPTION;
-```
+- [Database credentials prepared for rotation](/docs/esc/integrations/rotated-secrets/db-preparation)
 
 ## Setup Lambda Infrastructure
 
-Now, we need to setup infrastructure that will actually call your database and rotate the user credentials.
+First, we need to setup infrastructure that will actually call your database and rotate the user credentials.
 
 The easiest way to do this is to use a template called `esc-connector-lambda-typescript`. You can instantiate a new project from it using either [New Project Wizard](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/new-project-wizard/) or using [Pulumi CLI](https://www.pulumi.com/docs/iac/cli/) by running `pulumi new esc-connector-lambda-typescript`.
 
