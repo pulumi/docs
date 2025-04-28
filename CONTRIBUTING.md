@@ -1,4 +1,22 @@
-# Contributing Pulumi Documentation
+# Contributing to Pulumi Documentation
+
+This guide will help you contribute to Pulumi's documentation. Use the navigation below to find what you need quickly.
+
+**Quick navigation:**
+- [Documentation Overview](#documentation-structure)
+- [Creating Links](#links-to-other-files)
+- [Hugo Tips](#hugo-tips)
+- [Style Guidelines](#style-guide)
+- [Writing Blog Posts](BLOGGING.md)
+- [Writing Code Examples](CODE-EXAMPLES.md)
+- [Style Guide (Comprehensive)](STYLE-GUIDE.md)
+
+## What would you like to do?
+
+- **Edit existing content:** Follow our [style guide](#style-guide) and use [Hugo's relref shortcode](#links-to-other-files) for internal links
+- **Add new content:** Understand our [documentation structure](#documentation-structure) and use our [Hugo tips](#hugo-tips)
+- **Test your changes:** Run `make serve` to preview changes locally at http://localhost:1313
+- **Write a blog post:** See the [blogging guide](BLOGGING.md)
 
 ## Pulumi terminology
 
@@ -51,6 +69,40 @@ Which, on a page inside the `./content/reference` directory, will generate:
 
   - **no_on_this_page** Specify this variable to prevent displaying an "On This Page" TOC on the right nav for the page.
   - **block_external_search_index** Specify this variable to prevent crawlers from indexing the page.
+
+## Testing your changes
+
+To see how your changes look locally before submitting a pull request:
+
+```bash
+# Install dependencies and build assets
+make ensure
+
+# Run the development server
+make serve
+```
+
+Then visit http://localhost:1313 to preview your changes.
+
+## Common commands
+
+```bash
+# Build the entire website
+make build
+
+# Run linting on Markdown and other files
+make lint
+
+# Format all applicable files
+make format
+
+# Run all tests
+make test
+
+# Test specific programs
+ONLY_TEST="example-name" make test-programs
+```
+
 ## Style guide
 
 ### Language and terminology styles
@@ -84,3 +136,11 @@ If a tutorial has more following tutorials, use a **Next steps** section at the 
 ## Blog Post Authoring
 
 For instructions on contributing to the [Pulumi blog](https://www.pulumi.com/blog/), [see BLOGGING.md](BLOGGING.md).
+
+## Additional Resources
+
+For more detailed guidance, please refer to:
+
+- [Style Guide](STYLE-GUIDE.md) - Comprehensive style and UX standards
+- [Code Examples](CODE-EXAMPLES.md) - Guidelines for writing code examples
+- [SEO Guidelines](SEO.md) - Search engine optimization guidance
