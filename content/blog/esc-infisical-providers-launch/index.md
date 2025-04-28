@@ -39,7 +39,7 @@ Configure Infisical for OpenID Connect(OIDC) before you try out the providers. F
 
 ### How to Use the infisical-login Provider (Dynamic Authentication)
 
-1. Create a Pulumi ESC Environment (e.g., `pulumi-org/infisical-auth/oidc-login`) with the following Environment definition and update the `identityId`.
+1. Create a Pulumi ESC environment (e.g., `pulumi-org/infisical-auth/oidc-login`) with the following environment definition and update the `identityId`.
 
 ```yaml
 # Environment: pulumi-org/infisical-auth/oidc-login
@@ -56,7 +56,7 @@ values:
     INFISICAL_TOKEN: ${infisical.login.accessToken}
 ```
 
-2. Save the Environment.
+2. Save the environment.
 3. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/infisical-auth/oidc-login` in your CLI. The output will include the infisical.login.accessToken.
 4. Usage Example: Run Infisical CLI commands dynamically:
 ```bash
@@ -68,7 +68,7 @@ esc run pulumi-org/infisical-auth/oidc-login -- infisical secrets get API_KEY --
 
 Use this provider to pull secrets *from* Infisical *into* your ESC environment for consumption by your applications, CI/CD systems, Pulumi IaC, Terraform and more!
 
-1.  Create an ESC Environment where you need the secrets (e.g., `pulumi-org/my-app/dev`).
+1.  Create an ESC environment where you need the secrets (e.g., `pulumi-org/my-app/dev`).
 2.  **Import** the dynamic login environment (if using OIDC for authentication, which is recommended). This makes the temporary Infisical token available.
 3.  Configure the `infisical-secrets` provider, referencing the imported login details. See example below. 
 4.  Specify the secrets to fetch using the `get` block. Replace placeholders.
