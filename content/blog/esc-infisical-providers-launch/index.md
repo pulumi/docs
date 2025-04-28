@@ -1,6 +1,6 @@
 ---
 title: "Announcing Infisical Providers for Pulumi ESC: Dynamic Login and Dynamic Secrets" 
-date: 2025-04-28T10:00:00-07:00 
+date: 2025-04-28T00:00:00-07:00 
 allow_long_title: true
 meta_desc: "Pulumi ESC adds Infisical providers for dynamic OIDC login and centralized secret fetching, enhancing security and simplifying management."
 meta_image: meta.png 
