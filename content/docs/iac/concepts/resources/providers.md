@@ -95,7 +95,7 @@ If you are tracking a package in the project file and installing via `pulumi ins
 
 Within a Pulumi program, there are two types of providers you can use to declare resources:
 
-- **Default providers** are not declared in your Pulumi program, and use global configuration settings. Resources created with a default provider do not need the [`provider` option](/docs/iac/concepts/options/provider/) set in the [resource's options parameter](/docs/iac/concepts/options/). This is the most common way to declare Pulumi resources.
+- **Default providers** are not declared in your Pulumi program, and use global configuration settings. Resources created with a default provider do not need the [`provider` option](/docs/iac/concepts/options/provider/) set in the [resource's options parameter](/docs/iac/concepts/options/). This is the simplest way to declare Pulumi resources.
 - **Explicit providers** are explicitly declared in your Pulumi program, and use the configuration values you specify when you declare the provider. Resources created with explicit providers must have the `provider` option set in their resource options. The most common use case for explicit providers are multi-environment deployments of cloud infrastructure in a single stack. Explicit providers are themselves Pulumi resources, and their configuration values are [Pulumi inputs](/docs/iac/concepts/inputs-outputs/).
 
 The following table summarizes the differences between default and explicit providers:
