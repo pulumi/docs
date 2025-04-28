@@ -37,7 +37,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 - [AWS IAM user](/docs/esc/integrations/rotated-secrets/aws-iam)
 - [MySQL](/docs/esc/integrations/rotated-secrets/mysql)
 - [Postgres](/docs/esc/integrations/rotated-secrets/postgres)
-- [AWS Lambda Connector](/docs/esc/integrations/rotation-connectors/aws-lambda)
+- [AWS Lambda Connector](docs/esc/environments/rotation/#rotation-connectors)
 
 ## Kubernetes
 

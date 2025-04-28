@@ -14,6 +14,7 @@ The `aws-lambda` rotation connector enables you to rotate credentials inside of 
 
 ## Prerequisites
 
+- A running database instance in AWS
 - [Database credentials prepared for rotation](/docs/esc/integrations/rotated-secrets/db-preparation)
 
 ## Setup Lambda Infrastructure

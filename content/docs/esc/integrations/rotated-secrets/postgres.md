@@ -14,6 +14,7 @@ The `postgres` rotator enables you to rotate user credentials for a PostgreSQL d
 
 ## Prerequisites
 
+- A running database instance in AWS
 - [Database credentials prepared for rotation](/docs/esc/integrations/rotated-secrets/db-preparation)
 - [AWS Lambda Rotation Connector setup](/docs/esc/environments/rotation/aws-lambda)
 
