@@ -59,7 +59,18 @@ build:
 check_links:
 	$(MAKE) banner
 	$(MAKE) ensure
-	./scripts/link-checker/check-links.sh "https://www.pulumi.com"
+	./scripts/link-checker/check-links.sh "https://www.pulumi.com" "$(SECTION)"
+
+# Usage: make check_section SECTION=/docs/
+.PHONY: check_section
+check_section:
+	@if [ -z "$(SECTION)" ]; then \
+		echo "Error: SECTION variable is required. Example: make check_section SECTION=/docs/"; \
+		exit 1; \
+	fi
+	$(MAKE) banner
+	$(MAKE) ensure
+	./scripts/link-checker/check-links.sh "https://www.pulumi.com" "$(SECTION)"
 
 .PHONY: check_search_urls
 check_search_urls:
