@@ -2,6 +2,11 @@
 
 Our documentation site at [pulumi.com/docs](http://pulumi.com/docs) provides a variety of code examples embedded within our doc pages to help users understand and apply Pulumi concepts. Ensuring the accuracy and reliability of these examples is essential, which is why we have automated testing available.
 
+> **Related documentation:**
+> - [CONTRIBUTING.md](CONTRIBUTING.md) - General contribution guidelines
+> - [STYLE-GUIDE.md](STYLE-GUIDE.md) - Comprehensive style and UX standards
+> - [BLOGGING.md](BLOGGING.md) - Guidelines for blog posts that might include code examples
+
 In order to get automated testing of your code example, the code must be added to a specific directory, and integrated into the document with a [Hugo shortcode](https://gohugo.io/content-management/shortcodes/). Once added, code examples are tested through an [automated pipeline](https://github.com/pulumi/docs/blob/master/.github/workflows/pull-request.yml) on a [regular cadence](https://github.com/pulumi/docs/blob/master/.github/workflows/scheduled-test.yml) to maintain ongoing accuracy.
 
 ## How it works

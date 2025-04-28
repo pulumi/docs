@@ -1,3 +1,13 @@
+# SEO Guidelines
+
+This document provides a checklist for search engine optimization (SEO) of Pulumi documentation, blog posts, and other web content.
+
+> **Related documentation:**
+> - [CONTRIBUTING.md](CONTRIBUTING.md) - General contribution guidelines
+> - [STYLE-GUIDE.md](STYLE-GUIDE.md) - Comprehensive style and UX standards
+> - [BLOGGING.md](BLOGGING.md) - Guidelines for blog posts
+> - [CODE-EXAMPLES.md](CODE-EXAMPLES.md) - Guidelines for code examples
+
 ## SEO Checklist
 
 - [ ] Identify whether the intent of the piece is informational, preferential, navigational, or transactional
