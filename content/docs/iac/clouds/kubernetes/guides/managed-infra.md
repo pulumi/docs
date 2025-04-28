@@ -26,7 +26,7 @@ At a minimum, networking must be configured for deployment of an EKS cluster.
 
 AWS exposes a [Virtual Private Cloud][aws-vpc] API which can be used to create
 resources into a virtual network. With the VPC you can define the region's [Availability
-Zones][aws-azs] to use, alongwith [Route Tables][aws-rts], [Subnets][aws-subnets], [Internet Gateways][aws-igw],
+Zones][aws-azs] to use, along with [Route Tables][aws-rts], [Subnets][aws-subnets], [Internet Gateways][aws-igw],
 [NAT Gateways][aws-ngw] and [Security Groups][aws-sgs].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
@@ -53,9 +53,9 @@ support and complement Kubernetes clusters and their workloads.
 
 At a minimum, networking must be configured for deployment of an AKS cluster.
 
-AWS exposes a [Virtual Network][azure-vpc] API which can be used to create
+Azure exposes a [Virtual Network][azure-vpc] API which can be used to create
 resources into a virtual network. With the VPC you can define
-use, alongwith [Route Tables][azure-rts], [Subnets][azure-subnets],
+use, along with [Route Tables][azure-rts], [Subnets][azure-subnets],
 [Security Groups][azure-sgs] and [VPN Gateways][azure-vpn-gw].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
@@ -75,11 +75,11 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 Google Cloud has a catalog of [managed infrastructure][gcp-managed-svcs] services that
 support and complement Kubernetes clusters and their workloads.
 
-At a minimum, networking must be configured for deployment of an EKS cluster.
+At a minimum, networking must be configured for deployment of a GKE cluster.
 
 Google Cloud exposes a [Virtual Private Cloud][gcp-vpc] API which can be used to create
 resources into a virtual network. With the VPC you can define the region to use,
-alongwith [Routes][gcp-rts], [Subnets][gcp-subnets], [Forwarding Rules][gcp-fwd-rules],
+along with [Routes][gcp-rts], [Subnets][gcp-subnets], [Forwarding Rules][gcp-fwd-rules],
 and [Firewall Rules][gcp-fw-rules].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
