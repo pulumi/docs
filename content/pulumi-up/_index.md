@@ -33,7 +33,7 @@ panels:
       - name: James Forcier
         image: /images/people/james-forcier.jpg
         position: Staff Software Engineer
-        company: Clear
+        company: CLEAR
         socials:
           - site: linkedin
             link: https://www.linkedin.com/in/james-forcier-8b115941/
@@ -117,12 +117,12 @@ schedule:
       time: "Europe & Americas"
       time2: "Asia Pacific"
 
-    - title: Product News and Announcements
+    - title: New Product Launches, Announcements and Demos
       description:
       time: "9:00 AM ET"
       time2: "4:00 PM PT"
     
-    - title: Real-world Enterprise Platform Engineering Success Stories
+    - title: Real-world Platform Engineering Success Stories
       description:
       time: "9:40 AM ET"
       time2: "4:40 PM PT"
@@ -132,7 +132,7 @@ schedule:
       time: "9:55 AM ET"
       time2: "4:55 PM PT"
 
-    - title: Interactive Wrap Up
+    - title: Live Q&A with CEO Joe Duffy and Pulumi engineering leaders
       description:
       time: "10:20 AM ET"
       time2: "5:20 PM PT"
