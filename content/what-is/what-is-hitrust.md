@@ -6,7 +6,7 @@ type: what-is
 page_title: "What is HITRUST?"
 ---
 
-HITRUST, or the Health Information Trust Alliance, is a private company that provides a certification and framework called the [HITRUST CSF (Common Security Framework)](https://hitrustalliance.net/hitrust-framework) to help organizations manage data, information risk, and compliance, particularly in the healthcare sector. **HITRUST aims to provide a standardized approach for managing risk and demonstrating compliance with various regulations, including HIPAA and the HITECH Act.**
+HITRUST, or the Health Information Trust Alliance, is a private company that provides a certification and framework called the [HITRUST CSF (Common Security Framework)](https://hitrustalliance.net/hitrust-framework) to help organizations manage data, information risk, and compliance, particularly in the healthcare sector. HITRUST aims to provide a standardized approach for managing risk and demonstrating compliance with various regulations, including HIPAA and the HITECH Act.
 
 Before HITRUST, healthcare organizations often struggled with multiple overlapping [compliance frameworks and requirements](/compliance). Each regulatory body and business partner might require different security assessments, creating inefficiencies and redundancies. HITRUST was established to provide a unified, comprehensive framework that incorporates and harmonizes requirements from multiple regulations and standards.
 
