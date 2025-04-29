@@ -50,7 +50,7 @@ Here’s how ESC Rotated Secrets for Databases tackles the challenges:
 
 ## How to set up and use PostGres and MySQL Rotations
 
-**1. Bootstrap Rotation Infrastructure (for AWS MySQL/PostgreSQL):**
+**1. Bootstrap Rotation Infrastructure (for AWS PostgreSQL / MySQL):**
 
 Rotating credentials for databases within AWS VPCs requires a secure mechanism. Pulumi ESC uses a dedicated AWS Lambda function deployed within your VPC for this. Use our [Pulumi New Project Wizard Template](https://app.pulumi.com/new?template=https://github.com/pulumi/esc-rotator-lambdas/blob/main/deploy/README.md#gh-dark-mode-only), or follow the steps in your terminal: 
 
