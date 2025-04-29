@@ -23,7 +23,8 @@ In this comprehensive guide to cloud security, we'll explore:
 
 Cloud security refers to the collection of technologies, policies, controls, and services that protect cloud-based systems and data from threats. It encompasses multiple dimensions including network security, identity management, access control, data protection, and compliance management in cloud computing environments.
 
-> **Key concept:** Cloud security requires a different approach than traditional infrastructure security because of cloud computing's unique characteristics: shared resources, broad network access, rapid elasticity, measured service, and on-demand self-service.
+> [!INFO]
+> Cloud security requires a different approach than traditional infrastructure security because of cloud computing's unique characteristics: shared resources, broad network access, rapid elasticity, measured service, and on-demand self-service.
 
 Cloud security is critical for modern organizations for several reasons:
 
