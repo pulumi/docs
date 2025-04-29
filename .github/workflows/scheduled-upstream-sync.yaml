@@ -1,10 +1,11 @@
+permissions:
+  id-token: write
 name: "Scheduled Jobs: Upstream Sync"
 
 on:
   schedule:
     - cron: 0/15 * * * *
-  workflow_dispatch:
-
+  workflow_dispatch: null
 jobs:
   sync_latest_from_upstream:
     # Only run this job for events that originate on downstream repos.
@@ -13,11 +14,14 @@ jobs:
     name: Sync latest commits from upstream repo
 
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - name: Checkout target repo
         uses: actions/checkout@v2
         with:
           ref: master
-          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
 
       - name: Sync upstream changes
         id: sync
@@ -45,6 +49,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [sync_latest_from_upstream]
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
@@ -52,5 +59,11 @@ jobs:
           SLACK_COLOR: "#F54242"
           SLACK_MESSAGE: "upstream sync failure in docs private repo :meow_sad:"
           SLACK_USERNAME: docs-private-bot
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
           SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: imports/github-secrets
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
