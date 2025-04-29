@@ -6,7 +6,7 @@ type: what-is
 page_title: "What is SOC 2?"
 ---
 
-SOC 2 (System and Organization Controls 2) is a framework and auditing standard designed to help service organizations demonstrate the security, availability, and integrity of their systems and data. **Developed by the American Institute of CPAs (AICPA), SOC 2 has become the gold standard for verifying that service providers securely manage customer data and systems, particularly for cloud-based services and SaaS companies.**
+SOC 2 (System and Organization Controls 2) is a framework and auditing standard designed to help service organizations demonstrate the security, availability, and integrity of their systems and data. Developed by the American Institute of CPAs (AICPA), SOC 2 has become the gold standard for verifying that service providers securely manage customer data and systems, particularly for cloud-based services and SaaS companies.
 
 Before SOC 2, organizations struggled to consistently evaluate and communicate their security practices to customers and partners. This created challenges when assessing the risk of working with third-party service providers. SOC 2 emerged as a standardized framework that provides valuable assurance about an organization's controls relevant to security, availability, processing integrity, confidentiality, and privacy.
 
@@ -23,7 +23,8 @@ In this comprehensive guide to SOC 2, we'll explore:
 
 SOC 2 is an auditing framework developed by the AICPA that verifies service providers have established robust controls to ensure the security, availability, processing integrity, confidentiality, and privacy of customer data. It is specifically designed for service providers that store customer data in the cloud.
 
-> **Key concept:** Unlike compliance frameworks like PCI DSS that have prescriptive requirements, SOC 2 is based on Trust Services Criteria and allows organizations flexibility in how they implement controls to meet these principles.
+> [!INFO]
+> Unlike compliance frameworks like PCI DSS that have prescriptive requirements, SOC 2 is based on Trust Services Criteria and allows organizations flexibility in how they implement controls to meet these principles.
 
 SOC 2 compliance has become increasingly important for several compelling reasons:
 
@@ -281,9 +282,7 @@ The journey to SOC 2 compliance often leads to improved security practices, bett
 
 For more information about related security and compliance topics:
 
-* [What is Cloud Security?](/what-is/what-is-cloud-security)
 * [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code)
 * [What is Configuration Management?](/what-is/what-is-configuration-management)
-* [What is Secrets Management?](/what-is/what-is-secrets-management)
 * [What is HITRUST?](/what-is/what-is-hitrust)
 * [What is HIPAA?](/what-is/what-is-hipaa)
