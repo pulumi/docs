@@ -6,7 +6,7 @@ type: what-is
 page_title: "What is HIPAA?"
 ---
 
-HIPAA, or the Health Insurance Portability and Accountability Act, is a federal law passed in 1996 that established national standards for protecting sensitive patient health information from being disclosed without the patient's consent or knowledge. **HIPAA created regulations that mandate how healthcare providers, health plans, healthcare clearinghouses, and business associates handle Protected Health Information (PHI).**
+HIPAA, or the Health Insurance Portability and Accountability Act, is a federal law passed in 1996 that established national standards for protecting sensitive patient health information from being disclosed without the patient's consent or knowledge. HIPAA created regulations that mandate how healthcare providers, health plans, healthcare clearinghouses, and business associates handle Protected Health Information (PHI).
 
 Before HIPAA, there was no standardized method to protect patient data across the healthcare industry. As healthcare records began transitioning from paper to electronic systems, the need for consistent security standards became critical. HIPAA was enacted to improve healthcare efficiency, ensure health insurance coverage after job changes, and establish standards for electronic healthcare transactions.
 
