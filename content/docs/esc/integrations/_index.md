@@ -22,6 +22,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 - [AWS login provider](/docs/esc/integrations/dynamic-login-credentials/aws-login)
 - [Azure login provider](/docs/esc/integrations/dynamic-login-credentials/azure-login)
 - [GCP login provider](/docs/esc/integrations/dynamic-login-credentials/gcp-login)
+- [Infisical login provider](/docs/esc/integrations/dynamic-login-credentials/infisical-login)
 - [Vault login provider](/docs/esc/integrations/dynamic-login-credentials/vault-login)
 
 ## Dynamic secrets providers
@@ -29,6 +30,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 - [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets)
 - [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets)
 - [GCP Secrets Manager](/docs/esc/integrations/dynamic-secrets/gcp-secrets)
+- [Infisical Secrets](/docs/esc/integrations/dynamic-secrets/infisical-secrets)
 - [Vault Secrets Management](/docs/esc/integrations/dynamic-secrets/vault-secrets)
 - [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/)
 
