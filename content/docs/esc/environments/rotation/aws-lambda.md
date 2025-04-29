@@ -15,15 +15,15 @@ The `aws-lambda` rotation connector enables you to rotate credentials inside of 
 ## Prerequisites
 
 - A running database instance in AWS
-- [Database credentials prepared for rotation](/docs/esc/integrations/rotated-secrets/db-preparation)
+- [Database credentials prepared for rotation](/docs/esc/environments/rotation/db-preparation)
 
 ## Setup Lambda Infrastructure
 
 First, we need to setup infrastructure that will actually call your database and rotate the user credentials.
 
-The easiest way to do this is to use a template called `esc-connector-lambda-typescript`. You can instantiate a new project from it using either [New Project Wizard](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/new-project-wizard/) or using [Pulumi CLI](https://www.pulumi.com/docs/iac/cli/) by running `pulumi new esc-connector-lambda-typescript`.
+If you are using AWS RDS, we recommend using a template called `esc-connector-lambda-typescript`. You can instantiate a new project from it using either [New Project Wizard](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/new-project-wizard/) or using [Pulumi CLI](https://www.pulumi.com/docs/iac/cli/) by running `pulumi new esc-connector-lambda-typescript`. Fill out the template configuration and run `pulumi up` to deploy the infrastructure.
 
-Fill out the template configuration and run `pulumi up` to deploy the infrastructure. For more detailed information on how to deploy this template and on how to deploy connector infrastructure manually, take a look at the [template readme](https://github.com/pulumi/templates/blob/master/esc-connector-lambda-typescript/README.md).
+If you are not using AWS RDS, or if you want to deploy connector infrastructure manually, take a look at the [template readme](https://github.com/pulumi/templates/blob/master/esc-connector-lambda-typescript/README.md).
 
 The code that runs inside the lambda is open-source for full transparency, feel free to take a look [here](https://github.com/pulumi/esc-rotator-lambdas/tree/main/rotators/aws-lambda).
 
@@ -33,7 +33,7 @@ If you used the template above, it has already created 2 environments for you to
 
 The first one is the managing credentials environment, containing managing user credentials for your database and the [OIDC AWS login](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/aws-login/). Make sure to fill in your managing user credentials, using `fn::secret` for the password. Make sure to [restrict access](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/) to this environment to only admin-level users, to ensure managing user credentials are safe.
 
-The second new environment contains the rotator itself, referencing the first environment for the senstitive values. Adjust the `rotateUsers` and `database` fields to your values. If you're using a non-default port, you might need to change the actual rotator name after `fn::rotate::` - `mysql` or `postgres`.
+The second new environment contains the rotator itself, referencing the first environment for the sensitive values. Adjust the `rotateUsers` and `database` fields to your values. If you're using a non-default port, you might need to change the actual rotator name after `fn::rotate::` - `mysql` or `postgres`, as the template guesses the database type by its default port.
 
 That's all there is to it! You can now [import your rotator environment](https://www.pulumi.com/docs/esc/environments/imports/) into any other environment that needs database credentials to use right away.
 

@@ -6,7 +6,7 @@ h1: Database Preparation
 menu:
   esc:
     identifier: db-preparation
-    parent: esc-rotated-secrets
+    parent: esc-rotating-secrets
     weight: 1
 ---
 

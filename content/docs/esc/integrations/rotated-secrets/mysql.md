@@ -15,7 +15,7 @@ The `mysql` rotator enables you to rotate user credentials for a MySQL database 
 ## Prerequisites
 
 - A running database instance in AWS
-- [Database credentials prepared for rotation](/docs/esc/integrations/rotated-secrets/db-preparation)
+- [Database credentials prepared for rotation](/docs/esc/environments/rotation/db-preparation)
 - [AWS Lambda Rotation Connector setup](/docs/esc/environments/rotation/aws-lambda)
 
 ## Example
@@ -28,7 +28,10 @@ Best practice is to have 2 separate environments, one with managing credentials 
 values:
   managingUser:
     username: managing_user # Replace with your username value
-    password: manager_password # Replace with your password value and use fn::secret to encrypt it
+    # Replace ciphertext below with your password, keeping fn::secret to encrypt it, like so "fn::secret: <password>"
+    password:
+      fn::secret:
+        ciphertext: ZXNjeAAAAAEAAAEAFatkojHgMRjHuWIwKbPqplpSUoKCrtLUCwtU0rhJuhtOa6eUBM/kxRgB/rp9
   awsLogin:
     fn::open::aws-login:
       oidc:
