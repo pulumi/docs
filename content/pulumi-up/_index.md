@@ -122,7 +122,7 @@ schedule:
       time: "9:00 AM ET"
       time2: "4:00 PM PT"
     
-    - title: "Customer Panel: From Infrastructure Engineering to Platform Engineering"
+    - title: "Panel: From Infrastructure Engineering to Platform Engineering"
       description:
       time: "9:50 AM ET"
       time2: "4:50 PM PT"
