@@ -613,7 +613,7 @@ For other languages, you'd use the appropriate runtime value. This file is the k
 
 The entrypoint analyzes components to automatically build a schema, and interact with the Pulumi engine to mange the component lifecycle.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
