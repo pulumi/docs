@@ -18,8 +18,7 @@ Pulumi Services are logical groupings of Pulumi entities such as stacks and ESC 
 
 ## Automatic service creation
 
-
 ## Service Properties
+
 Service properties are metadata that can be added to a service to add additional context. Properties can be a URL, free-form text, Slack channels, or Teams channels.
 Adding a property
-
