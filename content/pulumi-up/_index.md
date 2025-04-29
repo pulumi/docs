@@ -117,7 +117,7 @@ schedule:
       time: "Europe & Americas"
       time2: "Asia Pacific"
 
-    - title: New Product Launches, Demos, Platform Engieering Success Stories
+    - title: New Product Launches, Demos, Platform Engineering Success Stories
       description:
       time: "9:00 AM ET"
       time2: "4:00 PM PT"
@@ -125,7 +125,7 @@ schedule:
     - title: "Customer Panel: From Infrastructure Engineering to Platform Engineering"
       description:
       time: "9:50 AM ET"
-      time2: "4:55 PM PT"
+      time2: "4:50 PM PT"
 
     - title: Live Q&A with CEO Joe Duffy and Pulumi Engineering Leaders
       description:
