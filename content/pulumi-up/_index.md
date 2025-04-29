@@ -33,7 +33,7 @@ panels:
       - name: James Forcier
         image: /images/people/james-forcier.jpg
         position: Staff Software Engineer
-        company: Clear
+        company: CLEAR
         socials:
           - site: linkedin
             link: https://www.linkedin.com/in/james-forcier-8b115941/
@@ -117,22 +117,17 @@ schedule:
       time: "Europe & Americas"
       time2: "Asia Pacific"
 
-    - title: Product News and Announcements
+    - title: New Product Launches, Demos, Platform Engineering Success Stories
       description:
       time: "9:00 AM ET"
       time2: "4:00 PM PT"
     
-    - title: Real-world Enterprise Platform Engineering Success Stories
-      description:
-      time: "9:40 AM ET"
-      time2: "4:40 PM PT"
-
     - title: "Panel: From Infrastructure Engineering to Platform Engineering"
       description:
-      time: "9:55 AM ET"
-      time2: "4:55 PM PT"
+      time: "9:50 AM ET"
+      time2: "4:50 PM PT"
 
-    - title: Interactive Wrap Up
+    - title: Live Q&A with CEO Joe Duffy and Pulumi Engineering Leaders
       description:
       time: "10:20 AM ET"
       time2: "5:20 PM PT"
@@ -192,8 +187,6 @@ customer_logos:
       - logo: temporal.png
         link: https://temporal.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: tailscale.svg
-        link: https://login.tailscale.com/start?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: docker.png
         link: https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: honeycomb-logo.svg
