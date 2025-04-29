@@ -6,7 +6,7 @@ type: what-is
 page_title: "What is Cloud Security?"
 ---
 
-Cloud security encompasses the technologies, policies, controls, and services designed to protect cloud computing environments, data, applications, and infrastructure against threats and vulnerabilities. **As organizations accelerate their digital transformation and migrate critical workloads to the cloud, implementing robust cloud infrastructure security measures becomes essential for preventing data breaches, ensuring regulatory compliance, and maintaining business continuity.**
+Cloud security encompasses the technologies, policies, controls, and services designed to protect cloud computing environments, data, applications, and infrastructure against threats and vulnerabilities. As organizations accelerate their digital transformation and migrate critical workloads to the cloud, implementing robust cloud infrastructure security measures becomes essential for preventing data breaches, ensuring regulatory compliance, and maintaining business continuity.
 
 The shift from traditional on-premises infrastructure to cloud computing environments has fundamentally transformed security approaches. Organizations must now adapt their security strategies to address the unique characteristics of cloud infrastructure while navigating shared responsibility models with their cloud service providers.
 
