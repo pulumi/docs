@@ -1,22 +1,23 @@
 ---
-title: "Introducing Automated Database Credential Rotation in Pulumi ESC"
-date: 2025-04-29T10:00:00-07:00 
+title: "Introducing Automated Database Credential Rotation for PostgreSQL, MySQL, and Snowflake in Pulumi ESC"
+date: 2025-04-30 # Adjust T00:00:00-00:00 as needed for timezone/exact time
 allow_long_title: true
 meta_desc: "Pulumi ESC now automates the rotation of database credentials for PostgreSQL, MySQL (on AWS), and Snowflake, enhancing security and reducing operational burden."
 meta_image: meta.png
 authors:
-  - sean-yeh
-  - arun-loganathan
+- sean-yeh
+- claire-gaestel
+- arun-loganathan
 tags:
-  - esc
-  - secrets
-  - rotation
-  - database
-  - security
-
+- esc
+- secrets
+- features
+- rotation
+- database
+- security
 ---
 
-Securing access to critical data stores is paramount in today's cloud-native world. Yet, managing database credentials often involves static, long-lived passwords – a significant security blind spot. These static secrets, frequently embedded in application configurations or accessible to multiple team members, represent a prime target for attackers. Manually rotating these credentials is a cumbersome, error-prone task that’s often neglected, leaving databases vulnerable for extended periods. Building on our commitment to robust secrets management, we are excited to launch **Automated Database Credential Rotation** in [Pulumi ESC!](/product/esc)
+Securing access to critical data stores is paramount in today's cloud-native world. Yet, managing database credentials often involves static, long-lived passwords – a significant security blind spot. These static secrets, frequently embedded in application configurations or accessible to multiple team members, represent a prime target for attackers. Manually rotating these credentials is a cumbersome, error-prone task that’s often neglected, leaving databases vulnerable for extended periods. Building on our commitment to robust secrets management, we are excited to launch **Automated Database Credential Rotation** for **PostgreSQL, MySQL, and Snowflake** in [Pulumi ESC!](/product/esc)
 
 <!--more-->
 
@@ -26,17 +27,18 @@ Relying on static database credentials introduces substantial risks, which autom
 
 *   **Security Vulnerabilities & Exposure:** Static credentials, if compromised through leaks, phishing, or unauthorized access, provide long-term access to attackers. Automated rotation significantly shrinks this window of opportunity.
 *   **Operational & Compliance Burdens:** Manually rotating database credentials is complex, error-prone, and requires careful coordination to avoid downtime. It also makes demonstrating compliance with regulations like SOC 2, GDPR, or HIPAA (which often mandate rotation) difficult and hard to audit consistently.
-*   **Network Complexity:** Many databases reside within private networks (like AWS VPCs) for security. Rotating credentials for these databases typically requires bridging this network gap securely, often involving proxies, bastion hosts, or specific agents, adding significant setup and maintenance overhead for manual or homegrown solutions.
+*   **Network Complexity:** Many databases reside within private networks (like AWS VPCs) for security. Rotating credentials for these databases typically requires bridging this network gap securely, often involving mechanisms like proxies, bastion hosts, or specific agents. This adds significant setup and maintenance overhead for manual or homegrown solutions.
+*   **Tooling and Ecosystem Compatibility:** Many standard database administration GUIs, Business Intelligence platforms, ETL tools, and custom scripts were built primarily for username/password authentication. While support for cloud provider-specific methods like AWS IAM database authentication is growing, it's not universal. Older versions, generic ODBC/JDBC connectors, or specific tools may lack native support or require complex configuration, making username/password the more straightforward or only viable connection method for these essential parts of the data ecosystem, reinforcing the need for automated password rotation.
 
-Pulumi ESC addresses these challenges by automating the rotation process, even for databases in private networks.
+Pulumi ESC addresses these challenges by automating the rotation process, including databases in private networks.
 
 ## Introducing ESC Rotated Secrets for Databases
 
-Pulumi ESC’s Rotated Secrets capability now extends to your critical databases within your private VPCs, bringing automation and enhanced security to credential lifecycle management. We're launching support for:
+Pulumi ESC’s [Rotated Secrets](/docs/esc/integrations/rotated-secrets/) capability now extends to your critical databases, bringing automation and enhanced security to credential lifecycle management. We're launching support for:
 
-*   **PostgreSQL** (Hosted on AWS, including RDS and Aurora instances)
-*   **MySQL** (Hosted on AWS, including RDS and Aurora instances)
-*   **Snowflake**
+*   [**PostgreSQL**](/docs/esc/integrations/rotated-secrets/postgres/) (Including instances hosted on AWS RDS/Aurora or in your Private VPCs)
+*   [**MySQL**](/docs/esc/integrations/rotated-secrets/mysql/) (Including instances hosted on AWS RDS/Aurora or in your Private VPCs)
+*   [**Snowflake**](/docs/esc/integrations/rotated-secrets/snowflake-user/)
 
 Here’s how ESC Rotated Secrets for Databases tackles the challenges:
 
@@ -48,108 +50,144 @@ Here’s how ESC Rotated Secrets for Databases tackles the challenges:
 *   **Admin and Creator Control:** Securely configure rotation using privileged database "managing user" credentials stored within ESC, keeping them separate from the rotated credentials consumed by applications.
 *   **Configure Webhooks for Automation:** Trigger notifications, CI/CD pipelines (e.g., Pulumi Deployments to update application stacks), or custom workflows upon successful rotation, keeping dependent systems synchronized.
 
-## How to set up and use PostgreSQL and MySQL Rotations
+{{% notes type="info" %}}
+The following setup guide provides a detailed walkthrough for [**PostgreSQL**](/docs/esc/integrations/rotated-secrets/postgres/) hosted within an AWS private VPC, which requires a Lambda-based connector. Please refer to the [**MySQL**](/docs/esc/integrations/rotated-secrets/mysql/) or [**Snowflake**](/docs/esc/integrations/rotated-secrets/snowflake-user/) documentation page for instructions on these two databases.
+{{% /notes %}}
 
-**1. Bootstrap Rotation Infrastructure (for AWS PostgreSQL / MySQL):**
+## How to Set Up and Use PostgreSQL Rotation (AWS VPC Example)
 
-Rotating credentials for databases within AWS VPCs requires a secure mechanism. Pulumi ESC uses a dedicated AWS Lambda function deployed within your VPC for this. Use our [Pulumi New Project Wizard Template](https://app.pulumi.com/new?template=https://github.com/pulumi/esc-rotator-lambdas/blob/main/deploy/README.md), or follow the steps in your terminal: 
+Setting up rotation for PostgreSQL databases running inside an AWS VPC involves [creating the required users](/docs/esc/environments/rotation/db-preparation/) within your database, deploying the rotator Lambda infrastructure via a Pulumi template, configuring ESC environments, and scheduling the rotation.
 
-*   Run `pulumi new esc-rotator-lambda` in your terminal.
-*   This command initializes a new Pulumi project designed to provision the necessary AWS resources: the Lambda function, an execution IAM Role for the Lambda, an invocation IAM Role for ESC, and the required Security Group rules to allow the Lambda to communicate with your RDS instance.
-*   Follow the prompts, providing configuration values like:
+**Step 1: Prepare Your PostgreSQL Database Users**
+
+You'll need two *types* of users configured, resulting in *three* specific database user accounts:
+
+1.  **Managing User:** A privileged user that ESC will use to perform the password rotations. This user needs permissions to change the passwords of the application users.
+2.  **Application User 1 and Application User 2:** The two application users whose passwords ESC will manage. ESC rotates between these two users, ensuring two users are always active as applications gradually phase out the `previous` user credentials.
+
+Connect to the database as a superuser and run the following SQL commands:
+
+  *   Create the application users whose passwords you want ESC to rotate automatically:
+      ```sql
+      CREATE USER user1 WITH PASSWORD 'initial_password'; -- Replace with a secure initial password
+      GRANT CONNECT ON DATABASE your_database_name TO user1;
+      -- Grant necessary privileges on tables/schemas for user1 (adjust as needed)
+      GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO user1; -- Example grant
+
+      CREATE USER user2 WITH PASSWORD 'initial_password'; -- Replace with a secure initial password
+      GRANT CONNECT ON DATABASE your_database_name TO user2;
+      -- Grant necessary privileges on tables/schemas for user2 (adjust as needed)
+      GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO user2; -- Example grant
+      ```
+
+  *   Create the designated "managing user" account with privileges to modify passwords for the application users:
+      ```sql
+      CREATE USER managing_user WITH PASSWORD 'manager_password'; -- Replace with a strong password
+
+      -- Grant privileges to ALTER the application users (required to change passwords).
+      -- Granting the application roles to the managing user with ADMIN OPTION allows management.
+      GRANT user1 TO managing_user WITH ADMIN OPTION;
+      GRANT user2 TO managing_user WITH ADMIN OPTION;
+
+      -- Ensure the managing user can connect to the database
+      GRANT CONNECT ON DATABASE your_database_name TO managing_user;
+      ```
+
+**Step 2: Bootstrap Rotation Infrastructure and Create ESC Environments**
+
+To rotate credentials for PostgreSQL databases within AWS VPCs securely, you need to configure an [AWS Lambda function](/docs/esc/environments/rotation/aws-lambda/) within your VPC and create the corresponding ESC environments.
+
+If your PostgreSQL instance is running on AWS RDS, we recommend using our [Pulumi New Project Wizard Template](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/esc-connector-lambda-typescript) to simplify the process of creating the Lambda function, associated AWS IAM Roles, Security Groups, and the basic ESC environment structure. You can start it from the [Pulumi console](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/esc-connector-lambda-typescript) or by running the following command in your terminal:
+
+*   Run `pulumi new esc-connector-lambda-typescript` in your terminal.
+*   This command initializes a new Pulumi project designed to provision the necessary AWS resources and create the ESC environments.
+*   Follow the prompts. You will first provide a **Pulumi project name** (e.g., `my-db-rotation-infra`). Then, you will be prompted for configuration values like:
     *   Your target AWS Region (`aws:region`)
-    *   The RDS Database Identifier (`esc-rotator-lambda:rdsDbIdentifier`)
-    *   The name for the new ESC environment that will contain your rotation configuration (e.g., (`orders/prod-db-secrets-rotation`)
-    *   *(Optional)* The name for a *separate* ESC environment to hold the privileged managing database credentials (e.g., `orders/prod-db-managingUser-creds`). 
-*   Run `pulumi up` to deploy the resources
-  
-This template *also* creates ESC environment definition with most of the configuration population based on the resources created by the Pulumi Program. Note down the rotated secret environment Name and the managing credentials Environment name. 
+    *   The RDS Database Identifier (`rdsDbIdentifier`)
+    *   The specific **name for the ESC rotation environment** (e.g., `postgresrotation/Rotator`). This environment will contain the two application users' credentials and configuration for rotation.
+    *   The specific **name for the ESC managing credentials environment** (e.g., `postgresrotation/ManagingCreds`).
+*   Run `pulumi up` to deploy the AWS resources and create the ESC environments with the names you provided.
 
-**2. Prepare Your Database:**
+**Step 3: Configure ESC Environments and Test**
 
-*   Ensure you have a designated "managing user" account in your database with privileges to modify passwords for other users (e.g., the `admin` user, or a custom user with specific grants, especially recommended for MySQL as shown in our docs).
-*   Create the user account(s) (e.g., `user1`, `user2`) within your database whose passwords you want ESC to rotate automatically.
+The Pulumi template created two ESC environments with most configuration pre-filled. You need to update them with your specific PostgreSQL user credentials and database name.
 
-**3. Configure Your ESC Environment(s):**
+*   **Managing Credentials Environment (e.g., `postgresrotation/ManagingCreds`):** Navigate to this environment in the Pulumi Cloud console. Update the managing user's username and password. The `awsLogin` section should be pre-filled by the template.
+  ```yaml
+  # postgresrotation/ManagingCreds
+  values:
+    managingUser:
+      username: managing_user # Replace with your managing user's name
+      password:
+        # Securely replace placeholder with your managing user's password using fn::secret
+        fn::secret:
+          ciphertext: ZXNjeA... # Replace with your encrypted password
+    awsLogin:
+      fn::open::aws-login:
+        oidc:
+          duration: 1h
+          roleArn: arn:aws:iam::616138583583:role/PulumiEscSecretRotatorLambda-InvocationRole-7e4646f # Example Role ARN populated by template
+          sessionName: pulumi-esc-secret-rotator-${esc.context.environment} # Example Session Name populated by template
+  ```
+*   **Rotation Environment (e.g., `<project-name>/Rotator`):** Navigate to this environment. Most fields are pre-filled by the template outputs (Lambda ARN, host, port, references). You *must* update the database name and the application usernames mapping.
+  ```yaml
+  # postgresrotation/Rotator
+  values:
+    dbRotator:
+      fn::rotate::postgres:
+        inputs:
+          database:
+            connector:
+              awsLambda:
+                login: ${environments.postgresrotation.ManagingCreds.awsLogin}
+                lambdaArn: arn:aws:lambda:us-west-2:616138583583:function:PulumiEscSecretRotatorLambda-Function-d9932fe # Example Lambda ARN populated by template
+            # Database connection details
+            database: mydb # Replace with your DB name
+            host: tf-20250428212643894700000001.cluster-chuqccm8uxqx.us-west-2.rds.amazonaws.com # Example Host populated by template
+            port: 5432 # Example Port populated by template
+            managingUser: ${environments.postgresrotation.ManagingCreds.managingUser}
+          # List of application users whose passwords will be rotated
+          rotateUsers:
+            username1: user1 # Replace DB username if different from logical name
+            username2: user2 # Replace DB username if different from logical name
 
-*   **Managing Credentials Environment:** Navigate to this environment using the Pulumi Cloud console in step 1 and update the managing user's username and password.
-    ```yaml
-    # orders/prod-db-managingUser-creds
-    values:
-      dbAdmin:
-        username: db_admin_user
-        password:
-          fn::secret: <your-secure-admin-password>
-    ```
-*   **Rotation Environment:** Navigate to the rotated secret environment.
-    *   If you used the Pulumi Template to create this environment, you will notice that most of the required fields are filled out including: `connector.awsLambda`, `database`, `host`, `port`, `managingUser` credentials reference
-    *   Replace the the user1 and user2 placeholder with actual database usernames.
-    *   *(Optional)* If migrating existing credentials, populate the `state` block with the `current` and `previous` username/password pairs. Otherwise, ESC generates the first password on the initial rotation.
+        # state section is automatically managed by ESC after first rotation
+        # Do not provide state unless migrating existing, known credentials.
+        state: # Example state *after* rotations have occurred
+          current:
+            password:
+              fn::secret:
+                ciphertext: ZXNjeAAAA...
+            username: user1
+          previous:
+            password:
+              fn::secret:
+                ciphertext: ZXNje21AA...
+            username: user2
+  ```
+*   **Test with Manual Rotation:**
+      *   Use the triple-dot menu -> "Rotate Secrets" in the Pulumi Cloud UI for the Rotator environment.
+      *   Alternatively, use the ESC CLI: `esc env rotate <your-project/Rotator>` (e.g., `esc env rotate postgresrotation/Rotator`).
+      *   Perform a rotation. If you *didn't* provide the `state` block, this first rotation generates a new password for the user designated as `current` (e.g., `user1` associated with `username1`) and updates it in the database. The `dbRotator` value in ESC will now show this user/password under `current`, and the `state` block will be populated.
+      *   Perform a *second* rotation. Observe how the previous `current` user (`user1`/`username1`) and its password become the `previous` entry in the ESC value. The system now rotates the password for the *other* user (`user2`/`username2`), makes it the new `current`, and updates the database accordingly. Subsequent rotations cycle between `user1` and `user2`.
+      *   Check the Environment Revision History in the Pulumi Cloud console to track the changes to the `current` and `previous` state fields after each rotation.
 
-    *Example for AWS MySQL (using Lambda Connector and separate managing credentials environment):*
-    ```yaml
-    # orders/prod-db-secrets-rotation
-    values:
-      db-creds:
-        fn::rotate::mysql:
-          inputs:
-            database:
-              # Connector configured with outputs from the Pulumi template
-              connector:
-                awsLambda:
-                  roleArn: <paste-role-arn-from-pulumi-output>
-                  lambdaArn: <paste-lambda-arn-from-pulumi-output>
-              # Database connection details
-              database: my_database_name
-              host: <my-database-endpoint.rds.amazonaws.com>
-              port: 3306
-              # Reference the imported managing user credentials
-              managingUser:
-                username: ${dbAdmin.username}
-                password: ${dbAdmin.password}
-            # List of users whose passwords will be rotated
-            rotateUsers:
-              appUser1: user1 # Logical name 'appUser1' maps to DB user 'user1'
-              appUser2: user2 # Logical name 'appUser2' maps to DB user 'user2'
-          # state section is optional - provide if migrating existing keys
-          # state:
-          #   current:
-          #     username: user1
-          #     password:
-          #       fn::secret: existing_current_password
-          #   previous:
-          #     username: user2 # Note: The user being rotated changes here
-          #     password:
-          #       fn::secret: existing_previous_password
-    ```
+**Step 4: Schedule Automated Rotations**
 
-**4. Test with Manual Rotation:**
-
-*   Use the triple-dot menu -> "Rotate Secrets" or go to the "Secret Rotation" tab.
-*   Alternatively, use the ESC CLI: `esc env rotate <your/rotation/environment/name>`
-*   Perform a rotation. If you didn't provide `state`, this will generate the first password for the `current` user (e.g., `user1`). The database password for `user1` will be updated.
-
-**5. Monitor Rotations:**
-
-*   Perform another rotation. Observe how the previous `current` user/password (`user1`) becomes the `previous` entry in the ESC value, and the system rotates the *next* user specified in `rotateUsers` (`user2`), making it the new `current`. The database password for `user2` is updated. Subsequent rotations cycle through the users listed in `rotateUsers`.
-*   Check the Environment Revision History in the Pulumi Cloud console to track the changes to the `current` and `previous` state fields after each rotation.
-
-**6. Schedule Automated Rotations:**
-
-*   Once satisfied with the setup, navigate to the "Secret Rotation" tab for your environment in the Pulumi Cloud console.
-*   Define your desired automated rotation schedule (e.g., every 30 days). ESC will automatically trigger rotations according to this schedule.
+*   Once you are satisfied that manual rotations are working correctly, navigate to the "Secret Rotation" tab for your Rotator environment (e.g., `postgresrotation/Rotator`) in the Pulumi Cloud console.
+*   Define your desired automated rotation schedule (e.g., every 30 days). ESC will automatically trigger rotations according to this schedule, ensuring your credentials stay fresh without manual intervention.
 
 ## What’s Next?
 
 This launch significantly enhances database security posture through automation, but we're just getting started. We are actively working on expanding our rotated secrets capabilities:
 
 *   **More Databases:** Support for MongoDB, Microsoft SQL Server, Oracle, and others.
-*   **Broader Network Scenarios:** Rotation solutions for databases running in Azure and GCP private networks
-  
+*   **Databases in Private Networks on Other Clouds:** Rotation solutions for databases hosted in private networks within Azure and GCP.
+
 Have a specific database or integration in mind? Upvote existing issues or open a new request in our [GitHub repository](https://github.com/pulumi/esc/issues)!
 
 ## Conclusion
 
-Pulumi ESC's Automated Database Credential Rotation drastically simplifies a critical security task. By automating the rotation of PostgreSQL, MySQL (on AWS), and Snowflake credentials, ESC reduces operational overhead, minimizes the risk associated with static secrets, and helps you meet compliance requirements more easily.
+Pulumi ESC's Automated Database Credential Rotation drastically simplifies a critical security task. By automating the rotation of **PostgreSQL**, **MySQL** (on AWS), and **Snowflake** credentials, ESC reduces operational overhead, minimizes the risk associated with static secrets, and helps you meet compliance requirements more easily. Whether your databases are in private networks or publicly accessible, ESC provides a unified way to manage their lifecycle.
 
-We encourage you to explore the [Pulumi ESC documentation](placeholder-link-to-esc-docs) and try out rotated database secrets today. Your feedback is invaluable – please share your experiences and suggestions on our [GitHub repository](https://github.com/pulumi/esc). Secure your databases with automated rotation and build with confidence!
+We encourage you to explore the [Pulumi ESC documentation](placeholder-link-to-esc-docs) and try out rotated database secrets for [PostgreSQL](/docs/esc/integrations/rotated-secrets/postgres/), [MySQL](/docs/esc/integrations/rotated-secrets/mysql/), and [Snowflake](/docs/esc/integrations/rotated-secrets/snowflake-user/). Your feedback is invaluable – please share your experiences and suggestions on our [GitHub repository](https://github.com/pulumi/esc). Secure your databases with automated rotation and build with confidence!
