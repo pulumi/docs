@@ -3,11 +3,11 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string.
     # Run every day at 3:00PM UTC.
-    - cron:  '0 15 * * *'
-  workflow_dispatch:
+    - cron: '0 15 * * *'
+  workflow_dispatch: null
 permissions:
-      id-token: write   # This is required for requesting the JWT
-      contents: read    # This is required for actions/checkout
+      id-token: write # This is required for requesting the JWT
+      contents: read # This is required for actions/checkout
 jobs:
   all:
     env:
@@ -16,6 +16,9 @@ jobs:
     environment: testing
     runs-on: ubuntu-latest
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - uses: actions/checkout@v2
 
       - uses: actions/setup-node@v1
@@ -33,9 +36,15 @@ jobs:
       - name: Run make ci_bucket_cleanup
         run: make ci_bucket_cleanup
         env:
-            PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+            PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
             PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
-            SLACK_ACCESS_TOKEN: ${{ secrets.SLACK_ACCESS_TOKEN }}
+            SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
             WEBSITE_URL: ${{ vars.WEBSITE_URL }}
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: imports/github-secrets
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

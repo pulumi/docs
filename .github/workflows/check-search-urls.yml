@@ -1,10 +1,12 @@
+permissions:
+  id-token: write
 name: "Scheduled jobs: Check search URLs"
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string.
     # Run every day at 3:00PM UTC.
-    - cron:  '0 15 * * *'
-  workflow_dispatch:
+    - cron: '0 15 * * *'
+  workflow_dispatch: null
 jobs:
   all:
     env:
@@ -12,6 +14,9 @@ jobs:
     name: Check search URLs
     runs-on: ubuntu-latest
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - uses: actions/checkout@v2
 
       - name: Install Node
@@ -29,7 +34,13 @@ jobs:
       - name: Run make check_search_urls
         run: make check_search_urls
         env:
-            SLACK_ACCESS_TOKEN: ${{ secrets.SLACK_ACCESS_TOKEN }}
+            SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
             ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
             ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
-            ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}
+            ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: imports/github-secrets
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
