@@ -1,10 +1,12 @@
+permissions:
+  id-token: write
 name: "Scheduled jobs: Lighthouse CI"
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string.
     # Run every day at 3:00PM UTC.
-    - cron:  '0 15 * * *'
-  workflow_dispatch:
+    - cron: '0 15 * * *'
+  workflow_dispatch: null
 jobs:
   all:
     name: Lighthouse
@@ -28,6 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [all]
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
@@ -35,5 +40,11 @@ jobs:
           SLACK_COLOR: "#F54242"
           SLACK_MESSAGE: "lighthouse job failure in pulumi/docs repo :meow_sad:"
           SLACK_USERNAME: docsbot
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
           SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: imports/github-secrets
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
