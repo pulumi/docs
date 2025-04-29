@@ -132,7 +132,7 @@ schedule:
       time: "9:55 AM ET"
       time2: "4:55 PM PT"
 
-    - title: Live Q&A with CEO Joe Duffy and Pulumi engineering leaders
+    - title: Live Q&A with CEO Joe Duffy and Pulumi Engineering Leaders
       description:
       time: "10:20 AM ET"
       time2: "5:20 PM PT"
