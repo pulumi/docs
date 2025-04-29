@@ -1,8 +1,10 @@
 ---
 title: "Announcing the Next-Generation of Pulumi Components: Enabling Infrastructure Abstractions"
 date: 2025-03-27
+updated: 2025-04-29
 draft: false
 allow_long_title: true
+
 meta_desc: Pulumi Components enable you to create, share, and consume reusable infrastructure building blocks across your organization and the broader community.
 meta_image: meta.png
 authors:
@@ -611,7 +613,7 @@ For other languages, you'd use the appropriate runtime value. This file is the k
 
 The entrypoint analyzes components to automatically build a schema, and interact with the Pulumi engine to mange the component lifecycle.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -694,6 +696,12 @@ public class App {
     }
 }
 ```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+No separate entry point is required for YAML. 
 
 {{% /choosable %}}
 
