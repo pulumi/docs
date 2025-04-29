@@ -48,11 +48,11 @@ Here’s how ESC Rotated Secrets for Databases tackles the challenges:
 *   **Admin and Creator Control:** Securely configure rotation using privileged database "managing user" credentials stored within ESC, keeping them separate from the rotated credentials consumed by applications.
 *   **Configure Webhooks for Automation:** Trigger notifications, CI/CD pipelines (e.g., Pulumi Deployments to update application stacks), or custom workflows upon successful rotation, keeping dependent systems synchronized.
 
-## How to set up and use PostGres and MySQL Rotations
+## How to set up and use PostgreSQL and MySQL Rotations
 
 **1. Bootstrap Rotation Infrastructure (for AWS PostgreSQL / MySQL):**
 
-Rotating credentials for databases within AWS VPCs requires a secure mechanism. Pulumi ESC uses a dedicated AWS Lambda function deployed within your VPC for this. Use our [Pulumi New Project Wizard Template](https://app.pulumi.com/new?template=https://github.com/pulumi/esc-rotator-lambdas/blob/main/deploy/README.md#gh-dark-mode-only), or follow the steps in your terminal: 
+Rotating credentials for databases within AWS VPCs requires a secure mechanism. Pulumi ESC uses a dedicated AWS Lambda function deployed within your VPC for this. Use our [Pulumi New Project Wizard Template](https://app.pulumi.com/new?template=https://github.com/pulumi/esc-rotator-lambdas/blob/main/deploy/README.md), or follow the steps in your terminal: 
 
 *   Run `pulumi new esc-rotator-lambda` in your terminal.
 *   This command initializes a new Pulumi project designed to provision the necessary AWS resources: the Lambda function, an execution IAM Role for the Lambda, an invocation IAM Role for ESC, and the required Security Group rules to allow the Lambda to communicate with your RDS instance.
@@ -63,7 +63,7 @@ Rotating credentials for databases within AWS VPCs requires a secure mechanism. 
     *   *(Optional)* The name for a *separate* ESC environment to hold the privileged managing database credentials (e.g., `orders/prod-db-managingUser-creds`). 
 *   Run `pulumi up` to deploy the resources
   
-This template *also* creates ESC environment definition with most of the configuration population based on the resources created by the Pulumi Program. Note down the rotated secret environment Name and the managing creds Environment name. 
+This template *also* creates ESC environment definition with most of the configuration population based on the resources created by the Pulumi Program. Note down the rotated secret environment Name and the managing credentials Environment name. 
 
 **2. Prepare Your Database:**
 
@@ -86,7 +86,7 @@ This template *also* creates ESC environment definition with most of the configu
     *   Replace the the user1 and user2 placeholder with actual database usernames.
     *   *(Optional)* If migrating existing credentials, populate the `state` block with the `current` and `previous` username/password pairs. Otherwise, ESC generates the first password on the initial rotation.
 
-    *Example for AWS MySQL (using Lambda Connector & separate managing creds env):*
+    *Example for AWS MySQL (using Lambda Connector and separate managing credentials environment):*
     ```yaml
     # orders/prod-db-secrets-rotation
     values:
