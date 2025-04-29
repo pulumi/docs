@@ -117,19 +117,14 @@ schedule:
       time: "Europe & Americas"
       time2: "Asia Pacific"
 
-    - title: New Product Launches, Announcements and Demos
+    - title: New Product Launches, Demos, Platform Engieering Success Stories
       description:
       time: "9:00 AM ET"
       time2: "4:00 PM PT"
     
-    - title: Real-world Platform Engineering Success Stories
+    - title: "Customer Panel: From Infrastructure Engineering to Platform Engineering"
       description:
-      time: "9:40 AM ET"
-      time2: "4:40 PM PT"
-
-    - title: "Panel: From Infrastructure Engineering to Platform Engineering"
-      description:
-      time: "9:55 AM ET"
+      time: "9:50 AM ET"
       time2: "4:55 PM PT"
 
     - title: Live Q&A with CEO Joe Duffy and Pulumi Engineering Leaders
@@ -192,8 +187,6 @@ customer_logos:
       - logo: temporal.png
         link: https://temporal.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - logo: tailscale.svg
-        link: https://login.tailscale.com/start?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: docker.png
         link: https://docker.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: honeycomb-logo.svg
