@@ -15,7 +15,7 @@ The `mysql` rotator enables you to rotate user credentials for a MySQL database 
 ## Prerequisites
 
 - A running database instance in AWS
-- [Database credentials prepared for rotation](/docs/esc/environments/rotation/db-preparation)
+- [Database users setup for rotation](/docs/esc/environments/rotation/db-user-setup)
 - [AWS Lambda Rotation Connector setup](/docs/esc/environments/rotation/aws-lambda)
 
 ## Example
