@@ -2,7 +2,7 @@
 title: "Introducing Automated Database Credential Rotation for PostgreSQL, MySQL, and Snowflake in Pulumi ESC"
 date: 2025-04-30 # Adjust T00:00:00-00:00 as needed for timezone/exact time
 allow_long_title: true
-meta_desc: "Pulumi ESC now automates the rotation of database credentials for PostgreSQL, MySQL (on AWS), and Snowflake, enhancing security and reducing operational burden."
+meta_desc: "Pulumi ESC now automates the rotation of database credentials for PostgreSQL and MySQL (on AWS), and Snowflake, enhancing security and reducing operational burden."
 meta_image: meta.png
 authors:
 - sean-yeh
@@ -26,7 +26,7 @@ Securing access to critical data stores is paramount in today's cloud-native wor
 Relying on static database credentials introduces substantial risks, which automated rotation helps mitigate:
 
 *   **Security Vulnerabilities & Exposure:** Static credentials, if compromised through leaks, phishing, or unauthorized access, provide long-term access to attackers. Automated rotation significantly shrinks this window of opportunity.
-*   **Operational & Compliance Burdens:** Manually rotating database credentials is complex, error-prone, and requires careful coordination to avoid downtime. It also makes demonstrating compliance with regulations like SOC 2, GDPR, or HIPAA (which often mandate rotation) difficult and hard to audit consistently.
+*   **Operational & Compliance Burdens:** Manually rotating database credentials is complex, error-prone, and requires careful coordination to avoid downtime. These manual rotations are hard to audit and demonstrate compliance with regulations like SOC 2, GDPR, or HIPAA (which often mandate rotation).
 *   **Network Complexity:** Many databases reside within private networks (like AWS VPCs) for security. Rotating credentials for these databases typically requires bridging this network gap securely, often involving mechanisms like proxies, bastion hosts, or specific agents. This adds significant setup and maintenance overhead for manual or homegrown solutions.
 *   **Tooling and Ecosystem Compatibility:** Many standard database administration GUIs, Business Intelligence platforms, ETL tools, and custom scripts were built primarily for username/password authentication. While support for cloud provider-specific methods like AWS IAM database authentication is growing, it's not universal. Older versions, generic ODBC/JDBC connectors, or specific tools may lack native support or require complex configuration, making username/password the more straightforward or only viable connection method for these essential parts of the data ecosystem, reinforcing the need for automated password rotation.
 
@@ -100,7 +100,7 @@ If your PostgreSQL instance is running on AWS RDS, we recommend using our [Pulum
 
 **Step 3: Configure ESC Environments and Test**
 
-The Pulumi template created two ESC environments with most configuration pre-filled. You need to update them with your specific PostgreSQL user credentials and database name.
+The Pulumi template creates two ESC environments with most of the configuration pre-filled. You need to update them with your specific PostgreSQL user credentials and database name.
 
 *   **Managing Credentials Environment (e.g., `postgresrotation/ManagingCreds`):** Navigate to this environment in the Pulumi Cloud console. Update the managing user's username and password. The `awsLogin` section should be pre-filled by the template.
   ```yaml
