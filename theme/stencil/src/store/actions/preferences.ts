@@ -1,5 +1,5 @@
 import { TypeKeys } from "./index";
-import { LanguageKey, K8sLanguageKey, OSKey, CloudKey, PersonaKey, BackEndKey } from "../../components/chooser/chooser";
+import { LanguageKey, K8sLanguageKey, OSKey, CloudKey, PersonaKey, BackEndKey, DatabaseKey } from "../../components/chooser/chooser";
 
 export interface SetLanguage {
     type: TypeKeys.SET_LANGUAGE;
@@ -29,6 +29,11 @@ export interface SetPersona {
 export interface SetBackEnd {
     type: TypeKeys.SET_BACKEND;
     key: BackEndKey;
+}
+
+export interface SetDatabase {
+    type: TypeKeys.SET_DATABASE;
+    key: DatabaseKey;
 }
 
 const dispatchAction = <T>(action: T) => (dispatch, _getState) => dispatch(action);
@@ -67,4 +72,10 @@ export const setPersona = (key: PersonaKey) => dispatchAction<SetPersona>({
 export const setBackEnd = (key: BackEndKey) => dispatchAction<SetBackEnd>({
     key,
     type: TypeKeys.SET_BACKEND,
+});
+
+// Set the currently selected database type.
+export const setDatabase = (key: DatabaseKey) => dispatchAction<SetDatabase>({
+    key,
+    type: TypeKeys.SET_DATABASE,
 });
