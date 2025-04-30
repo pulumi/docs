@@ -11,54 +11,17 @@ menu:
 
 The `snowflake-user` rotator enables you to rotate RSA keypairs for a Snowflake database user in your Environment. It automatically manages the key rotation process, ensuring that two keys remain valid at any point in time, which allows for seamless credential rotation without disrupting service availability. (See [rotation concepts](/docs/esc/environments/rotation/)).
 
-## Example
+## How Key Rotation Works
 
-First, set up an environment with Snowflake login credentials:
+When the `snowflake-user` rotator is executed:
 
-```yaml
-# my-org/logins/snowflake
-values:
-  snowflake:
-    account: myorganization-account
-    login:
-      fn::open::snowflake-login:
-        oidc:
-          account: myorganization-account
-          user: ESC_ROTATION_SERVICE_USER
-          role: ESC_ROTATOR
-```
+1. It connects to Snowflake using the provided login credentials.
+2. It generates a new 2048-bit RSA keypair.
+3. If a previous keypair exists in the state, it sets the user's `RSA_PUBLIC_KEY_2` to the previous public key.
+4. It sets the user's `RSA_PUBLIC_KEY` to the new public key.
+5. The new private key is stored securely in the environment state.
 
-Then, create a separate environment for your rotated credentials:
-
-```yaml
-# my-org/rotators/snowflake-keyrotator
-values:
-  user:
-    fn::rotate::snowflake-user:
-      inputs:
-        login: ${environments.logins.snowflake.snowflake.login}
-        targetUser: ESC_ROTATION_DEMO_USER
-```
-
-If you have existing keys you want ESC to keep track of, you can optionally provide an initial `state`:
-
-```yaml
-# my-org/rotators/snowflake-keyrotator
-values:
-  user:
-    fn::rotate::snowflake-user:
-      inputs:
-        login: ${environments.logins.snowflake.snowflake.login}
-        targetUser: ESC_ROTATION_DEMO_USER
-      state:
-        account: myorganization-account
-        privateKey:
-          fn::secret: |
-            -----BEGIN PRIVATE KEY-----
-            MIIEvQIBADANBgkqhkiG9w0BAQE...
-            -----END PRIVATE KEY-----
-        createdAt: "2025-01-01T12:00:00Z"
-```
+This two-key approach ensures that applications have time to update to the new key before the old one is completely removed, providing a smooth transition during rotation.
 
 ## Configuring Snowflake for Key Rotation
 
@@ -114,14 +77,60 @@ CREATE SECURITY INTEGRATION pulumi_oidc
 
 Replace `<pulumi-org>` with your Pulumi organization name.
 
+## Step 5: Managing credentials
+
+Set up an environment with [Snowflake login credentials](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/) for the rotation service user:
+
+```yaml
+# my-org/logins/snowflake
+values:
+  snowflake:
+    account: myorganization-account
+    login:
+      fn::open::snowflake-login:
+        oidc:
+          account: myorganization-account
+          user: ESC_ROTATION_SERVICE_USER
+          role: ESC_ROTATOR
+```
+
+## Step 6: Rotated environment
+
+Then, create a separate environment for your rotated credentials:
+
+```yaml
+# my-org/rotators/snowflake-keyrotator
+values:
+  user:
+    fn::rotate::snowflake-user:
+      inputs:
+        login: ${environments.logins.snowflake.snowflake.login}
+        targetUser: ESC_ROTATION_DEMO_USER
+```
+
+If you have existing keys you want ESC to keep track of, you can optionally provide an initial `state`:
+
+```yaml
+# my-org/rotators/snowflake-keyrotator
+values:
+  user:
+    fn::rotate::snowflake-user:
+      inputs:
+        login: ${environments.logins.snowflake.snowflake.login}
+        targetUser: ESC_ROTATION_DEMO_USER
+      state:
+        account: myorganization-account
+        privateKey:
+          fn::secret: |
+            -----BEGIN PRIVATE KEY-----
+            MIIEvQIBADANBgkqhkiG9w0BAQE...
+            -----END PRIVATE KEY-----
+        createdAt: "2025-01-01T12:00:00Z"
+```
+
 ## Validation
 
-You can validate that your configuration is working by running either of the following:
-
-* `esc open <org>/<project>/<environment>` command of the [ESC CLI](/docs/esc-cli/)
-* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
-
-You should see output similar to the following:
+Perform a manual rotation on the environment to provision a new private key. If successful, should see output similar to the following when opening the environment:
 
 ```json
 {
@@ -173,15 +182,3 @@ And exactly one of:
 | `user`      | string | The rotated user.                                                     |
 | `privateKey`| string | Private key in PEM format (stored as a secret).                       |
 | `rotatedAt` | string | When the keypair was generated, in RFC3339 format.                    |
-
-## How Key Rotation Works
-
-When the `snowflake-user` rotator is executed:
-
-1. It connects to Snowflake using the provided login credentials.
-2. It generates a new 2048-bit RSA keypair.
-3. If a previous keypair exists in the state, it sets the user's `RSA_PUBLIC_KEY_2` to the previous public key.
-4. It sets the user's `RSA_PUBLIC_KEY` to the new public key.
-5. The new private key is stored securely in the environment state.
-
-This two-key approach ensures that applications have time to update to the new key before the old one is completely removed, providing a smooth transition during rotation.

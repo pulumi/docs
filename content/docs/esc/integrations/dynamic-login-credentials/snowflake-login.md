@@ -11,19 +11,6 @@ menu:
 
 The `snowflake-login` provider enables authentication to Snowflake using OpenID Connect (OIDC) for Pulumi ESC. This allows you to securely access Snowflake without storing long-lived credentials in your environment configurations.
 
-## Example
-
-```yaml
-values:
-  snowflake:
-    login:
-      fn::open::snowflake-login:
-        oidc:
-          account: myorganization-account
-          user: ESC_LOGIN_USER
-          role: ESC_ROLE  # Optional
-```
-
 ## Configuring OIDC for Snowflake
 
 To use OIDC authentication with Snowflake, you need to set up a security integration in Snowflake that trusts the Pulumi OIDC provider.
@@ -68,16 +55,22 @@ Replace `<role>` with the role that has the necessary permissions for your use c
 
 ## Using with Pulumi ESC
 
-Once you've configured OIDC in Snowflake, you can use the `snowflake-login` provider in your Pulumi ESC environment.
+Once you've configured OIDC in Snowflake, you can use the `snowflake-login` provider in your Pulumi ESC environment:
+
+```yaml
+values:
+  snowflake:
+    login:
+      fn::open::snowflake-login:
+        oidc:
+          account: myorganization-account
+          user: ESC_LOGIN_USER
+          role: ESC_ROLE  # Optional
+```
 
 ### Validation
 
-You can validate that your configuration is working by running either of the following:
-
-* `esc open <org>/<project>/<environment>` command of the [ESC CLI](/docs/esc-cli/)
-* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
-
-You should see output similar to the following:
+When opening the environment, you should see output similar to the following:
 
 ```json
 {
@@ -89,6 +82,16 @@ You should see output similar to the following:
     }
   }
 }
+```
+
+You can validate your configuration is working by connecting to snowflake with using the minted oidc token:
+
+```shell
+> snowsql \
+  --accountname <snowflake.login.account> \
+  --username <snowflake.login.user> \
+  --authenticator=oauth \
+  --token=<snowflake.login.token>
 ```
 
 ## Inputs
