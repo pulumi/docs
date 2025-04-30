@@ -1,6 +1,6 @@
 ---
 title: "Introducing Automated Database Credential Rotation for PostgreSQL, MySQL, and Snowflake in Pulumi ESC"
-date: 2025-04-30 # Adjust T00:00:00-00:00 as needed for timezone/exact time
+date: 2025-04-30 
 allow_long_title: true
 meta_desc: "Pulumi ESC now automates the rotation of database credentials for PostgreSQL and MySQL (on AWS), and Snowflake, enhancing security and reducing operational burden."
 meta_image: meta.png
@@ -27,10 +27,10 @@ Relying on static database credentials introduces substantial risks, which autom
 
 *   **Security Vulnerabilities & Exposure:** Static credentials, if compromised through leaks, phishing, or unauthorized access, provide long-term access to attackers. Automated rotation significantly shrinks this window of opportunity.
 *   **Operational & Compliance Burdens:** Manually rotating database credentials is complex, error-prone, and requires careful coordination to avoid downtime. These manual rotations are hard to audit and demonstrate compliance with regulations like SOC 2, GDPR, or HIPAA (which often mandate rotation).
-*   **Network Complexity:** Many databases reside within private networks (like AWS VPCs) for security. Rotating credentials for these databases typically requires bridging this network gap securely, often involving mechanisms like proxies, bastion hosts, or specific agents. This adds significant setup and maintenance overhead for manual or homegrown solutions.
-*   **Tooling and Ecosystem Compatibility:** Many standard database administration GUIs, Business Intelligence platforms, ETL tools, and custom scripts were built primarily for username/password authentication. While support for cloud provider-specific methods like AWS IAM database authentication is growing, it's not universal. Older versions, generic ODBC/JDBC connectors, or specific tools may lack native support or require complex configuration, making username/password the more straightforward or only viable connection method for these essential parts of the data ecosystem, reinforcing the need for automated password rotation.
+*   **Network Complexity & The DIY Burden:** Databases in private networks (like AWS VPCs) require secure access for rotation. While homegrown solutions can bridge the network gap, building and maintaining the *actual rotation logic* (state, error handling, two-secret strategy) is complex. Crucially, DIY approaches typically lack integrated revision history, centralized auditing, and unified management provided by platforms like Pulumi ESC, increasing operational overhead.
+*   **Tooling, Ecosystem, and Cloud-Native Connectivity:** Despite cloud IAM authentication options, many standard tools (GUIs, BI, ETL), legacy apps, and even certain cloud-native configurations (multi-cloud, specific Kubernetes setups) still rely on username/password. Direct IAM integration isn't always feasible or practical, making automated rotation of traditional credentials essential for broad compatibility and security.
 
-Pulumi ESC addresses these challenges by automating the rotation process, including databases in private networks.
+Pulumi ESC addresses these challenges by automating the secrets rotation process, including databases in private networks, and allow you to consume them in your applications through ESC's various developer friendly methods including [ESC SDK](/docs/esc/development/languages-sdks/), [ESC CLI](/docs/esc/cli/), [Kubernetes External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/), [CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/), etc. 
 
 ## Introducing ESC Rotated Secrets for Databases
 
@@ -68,12 +68,27 @@ You'll need two *types* of users configured, resulting in *three* specific datab
 Connect to the database as a superuser and run the following SQL commands:
 
   *   Create the application users whose passwords you want ESC to rotate automatically:
-      ```sql
-      CREATE USER user1 WITH PASSWORD 'initial_password';
-      GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user1;
-      CREATE USER user2 WITH PASSWORD 'initial_password';
-      GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user2;
-      ```
+      
+{{< chooser language "mysql,postgres" />}}
+
+{{% choosable language mysql %}}
+```sql
+CREATE USER IF NOT EXISTS 'user1'@'%' IDENTIFIED BY 'initial_password';
+GRANT SELECT, INSERT, UPDATE ON yourDatabase.* TO 'user1'@'%';
+CREATE USER IF NOT EXISTS 'user2'@'%' IDENTIFIED BY 'initial_password';
+GRANT SELECT, INSERT, UPDATE ON yourDatabase.* TO 'user2'@'%';
+FLUSH PRIVILEGES;
+```
+{{% /choosable %}}
+
+{{% choosable language postgres %}}
+``sql
+CREATE USER user1 WITH PASSWORD 'initial_password';
+GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user1;
+CREATE USER user2 WITH PASSWORD 'initial_password';
+GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user2;
+```
+{{% /choosable %}}
 
   *   Create the designated "managing user" account with privileges to modify passwords for the application users:
       ```sql
