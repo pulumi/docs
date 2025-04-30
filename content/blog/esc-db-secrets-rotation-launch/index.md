@@ -56,7 +56,7 @@ The following setup guide provides a detailed walkthrough for [**PostgreSQL**](/
 
 ## How to Set Up and Use PostgreSQL Rotation (AWS VPC Example)
 
-Setting up rotation for PostgreSQL databases running inside an AWS VPC involves [creating the required users](/docs/esc/environments/rotation/db-preparation/) within your database, deploying the rotator Lambda infrastructure via a Pulumi template, configuring ESC environments, and scheduling the rotation.
+Setting up rotation for PostgreSQL databases running inside an AWS VPC involves [creating the required users](/docs/esc/environments/rotation/db-user-setup/) within your database, deploying the connector Lambda infrastructure via a Pulumi template, configuring ESC environments, and scheduling the rotation.
 
 **Step 1: Prepare Your PostgreSQL Database Users**
 
@@ -69,28 +69,18 @@ Connect to the database as a superuser and run the following SQL commands:
 
   *   Create the application users whose passwords you want ESC to rotate automatically:
       ```sql
-      CREATE USER user1 WITH PASSWORD 'initial_password'; -- Replace with a secure initial password
-      GRANT CONNECT ON DATABASE your_database_name TO user1;
-      -- Grant necessary privileges on tables/schemas for user1 (adjust as needed)
-      GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO user1; -- Example grant
-
-      CREATE USER user2 WITH PASSWORD 'initial_password'; -- Replace with a secure initial password
-      GRANT CONNECT ON DATABASE your_database_name TO user2;
-      -- Grant necessary privileges on tables/schemas for user2 (adjust as needed)
-      GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO user2; -- Example grant
+      CREATE USER user1 WITH PASSWORD 'initial_password';
+      GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user1;
+      CREATE USER user2 WITH PASSWORD 'initial_password';
+      GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user2;
       ```
 
   *   Create the designated "managing user" account with privileges to modify passwords for the application users:
       ```sql
-      CREATE USER managing_user WITH PASSWORD 'manager_password'; -- Replace with a strong password
-
-      -- Grant privileges to ALTER the application users (required to change passwords).
-      -- Granting the application roles to the managing user with ADMIN OPTION allows management.
+      CREATE USER managing_user WITH PASSWORD 'manager_password';
+      ALTER USER managing_user WITH CREATEROLE;
       GRANT user1 TO managing_user WITH ADMIN OPTION;
       GRANT user2 TO managing_user WITH ADMIN OPTION;
-
-      -- Ensure the managing user can connect to the database
-      GRANT CONNECT ON DATABASE your_database_name TO managing_user;
       ```
 
 **Step 2: Bootstrap Rotation Infrastructure and Create ESC Environments**
@@ -153,17 +143,17 @@ The Pulumi template created two ESC environments with most configuration pre-fil
 
         # state section is automatically managed by ESC after first rotation
         # Do not provide state unless migrating existing, known credentials.
-        state: # Example state *after* rotations have occurred
-          current:
-            password:
-              fn::secret:
-                ciphertext: ZXNjeAAAA...
-            username: user1
-          previous:
-            password:
-              fn::secret:
-                ciphertext: ZXNje21AA...
-            username: user2
+        # state:
+        #  current:
+        #    password:
+        #      fn::secret:
+        #        ciphertext: ZXNjeAAAA...
+        #    username: user1
+        #  previous:
+        #    password:
+        #      fn::secret:
+        #        ciphertext: ZXNje21AA...
+        #    username: user2
   ```
 *   **Test with Manual Rotation:**
       *   Use the triple-dot menu -> "Rotate Secrets" in the Pulumi Cloud UI for the Rotator environment.
