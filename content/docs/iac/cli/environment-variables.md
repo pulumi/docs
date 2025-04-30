@@ -140,6 +140,17 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_COPILOT
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables Copilot help and links in the CLI output, regardless of the Copilot settings for the given Pulumi organization.
+        </p>
+        <pre><code class="text-xs">PULUMI_COPILOT=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_DEBUG_COMMANDS
         </span>
     </dt>
@@ -194,6 +205,17 @@ aliases:
             Disables the automatic installation of missing plugins.
         </p>
         <pre><code class="text-xs">PULUMI_DISABLE_AUTOMATIC_PLUGIN_ACQUISITION=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DISABLE_SECRET_CACHE
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Disables the caching encryption operations for unchanged stack secrets.
+        </p>
+        <pre><code class="text-xs">PULUMI_DISABLE_SECRET_CACHE=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -260,6 +282,17 @@ aliases:
             Disables the warning about legacy stack files mixed with project-scoped stack files.
         </p>
         <pre><code class="text-xs">PULUMI_DIY_BACKEND_NO_LEGACY_WARNING=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DIY_BACKEND_PARALLEL
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Number of parallel operations when fetching stacks and resources from the DIY backend.
+        </p>
+        <pre><code class="text-xs">PULUMI_DIY_BACKEND_PARALLEL=NUMBER_OF_PARALLEL_OPERATIONS</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -360,6 +393,28 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_FALLBACK_TO_STATE_SECRETS_MANAGER
+        </span>
+    </dt>
+    <dd>
+        <p>
+            When set to "true", the secrets manager stored in the stack's state is used as a fallback when the stack configuration is missing or incomplete.
+        </p>
+        <pre><code class="text-xs">PULUMI_FALLBACK_TO_STATE_SECRETS_MANAGER=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_GITSSH_PASSPHRASE
+        </span>
+    </dt>
+    <dd>
+        <p>
+            The passphrase to use with Git operations that use SSH.
+        </p>
+        <pre><code class="text-xs">PULUMI_GITSSH_PASSPHRASE="your passphrase"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_HOME
         </span>
     </dt>
@@ -380,6 +435,28 @@ aliases:
             Disables discovering additional plugins by examining $PATH.
         </p>
         <pre><code class="text-xs">PULUMI_IGNORE_AMBIENT_PLUGINS=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_PARALLEL
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Allow P resource operations to run in parallel at once (1 for no parallelism)
+        </p>
+        <pre><code class="text-xs">PULUMI_PARALLEL=NUMBER_OF_PARALLEL_OPERATIONS</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_PARALLEL_DIFF
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables running diff calculations in parallel.
+        </p>
+        <pre><code class="text-xs">PULUMI_PARALLEL_DIFF=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -418,6 +495,17 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_RUN_PROGRAM
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Runs the Pulumi program for refresh and destroy operations. This is the same as passing --run-program=true.
+        </p>
+        <pre><code class="text-xs">PULUMI_RUN_PROGRAM=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_SKIP_CHECKPOINTS
         </span>
     </dt>
@@ -451,6 +539,17 @@ aliases:
             you may skip the Pulumi version update check by setting this environment variable.
         </p>
         <pre><code class="text-xs">PULUMI_SKIP_UPDATE_CHECK=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_SUPPRESS_COPILOT_LINK
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Suppresses showing the 'explainFailure' link to Copilot in the CLI output, regardless of the Copilot settings for the given Pulumi organization.
+        </p>
+        <pre><code class="text-xs">PULUMI_SUPPRESS_COPILOT_LINK=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
