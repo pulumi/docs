@@ -72,7 +72,7 @@ export class Choosable {
             // @ts-ignore-next-line
             this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
                 const {
-                    preferences: { language, k8sLanguage, os, cloud, persona, backend },
+                    preferences: { language, k8sLanguage, os, cloud, persona, backend, database },
                 } = state;
 
                 switch (this.type) {
@@ -88,6 +88,8 @@ export class Choosable {
                         return { selection: persona };
                     case "backend":
                         return { selection: backend };
+                    case "database":
+                        return { selection: database };
                 }
             });
         }

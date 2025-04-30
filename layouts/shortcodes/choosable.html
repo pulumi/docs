@@ -15,5 +15,5 @@
 
 
 <div>
-    <pulumi-choosable type="{{ $type }}" values="{{ $values }}" mode="{{ $mode }}">{{ .Inner }}</pulumi-choosable>
+    <pulumi-choosable type="{{ $type }}" values="{{ $values }}" mode="{{ $mode }}">{{ .Inner | markdownify }}</pulumi-choosable>
 </div>
