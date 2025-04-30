@@ -90,6 +90,8 @@ for _, file := range files {
 
 {{% /choosable %}}
 
+{{% /chooser %}}
+
 This works well, but what if we have a list of draft articles that we don’t want to include in the deployment? We can optimistically assume we’ve finished more articles than we’ve started, so using `--target` to specify every article, as well as supporting resources (CSS, JavaScript, ownership controls, et cetera), would quickly become unmanageable.
 
 ```shell
@@ -196,6 +198,8 @@ for _, file := range files {
 ```
 
 {{% /choosable %}}
+
+{{% /chooser %}}
 
 In this setup, we now have a parent resource for all drafts. Using `--exclude-dependents`, we can now exclude everything under this parent resource without having to enumerate all of them individually:
 
