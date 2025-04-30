@@ -9,7 +9,7 @@ menu:
     parent: esc-rotated-secrets
 ---
 
-The `snowflake-user` rotator enables you to rotate RSA keypairs for a Snowflake database user in your Environment. It automatically manages the key rotation process, ensuring that two keys remain valid at any point in time, which allows for seamless credential rotation without disrupting service availability.
+The `snowflake-user` rotator enables you to rotate RSA keypairs for a Snowflake database user in your Environment. It automatically manages the key rotation process, ensuring that two keys remain valid at any point in time, which allows for seamless credential rotation without disrupting service availability. (See [rotation concepts](/docs/esc/environments/rotation/)).
 
 ## Example
 
