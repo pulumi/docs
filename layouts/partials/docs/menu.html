@@ -28,42 +28,6 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
     {{ end }}
 {{ end }}
 
-{{ $isAWSGetStartedBVersion := false }}
-{{ $url := $page.RelPermalink }}
-{{ if in $url "/docs/iac/get-started/aws/b" }}
-    {{ $isAWSGetStartedBVersion = true }}
-{{ end }}
-
-<!-- Add CSS to hide duplicate AWS links -->
-<style>
-    {{ if $isAWSGetStartedBVersion }}
-    /* On B version, hide the regular AWS link */
-    .docs-main-nav [href="/docs/iac/get-started/aws/"] {
-        display: none !important;
-    }
-    .docs-main-nav [href="/docs/iac/get-started/aws/"] + button {
-        display: none !important;
-    }
-    .docs-main-nav [href="/docs/iac/get-started/aws/"] ~ span {
-        display: none !important;
-    }
-    {{ else }}
-    /* On regular version, hide the B version AWS link */
-    .docs-main-nav [href="/docs/iac/get-started/aws/b/"] {
-        display: none !important;
-    }
-    .docs-main-nav [href="/docs/iac/get-started/aws/b/"] + button {
-        display: none !important;
-    }
-    .docs-main-nav [href="/docs/iac/get-started/aws/b/"] ~ span {
-        display: none !important;
-    }
-    .docs-main-nav [data-menu-id="aws-b-get-started"] {
-        display: none !important;
-    }
-    {{ end }}
-</style>
-
 {{- with index site.Menus $menuID }}
     <nav class="text-sm mt-7 mr-2">
         <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
@@ -79,8 +43,7 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
     {{- $rootMenuID := (printf "%s-home" .rootMenuID) }}
 
     {{- range .menuEntries }}
-        {{- $finalURL := .URL }}
-        {{- $attrs := dict "href" $finalURL }}
+        {{- $attrs := dict "href" .URL }}
         {{- if $page.IsMenuCurrent .Menu . }}
             {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
         {{- else if $page.HasMenuCurrent .Menu .}}
@@ -110,7 +73,7 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
             </a>
             {{- with .Children }}
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
                 </ul>
             {{- end }}
         </li>
