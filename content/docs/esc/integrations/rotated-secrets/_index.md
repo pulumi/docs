@@ -15,6 +15,7 @@ Pulumi ESC Rotators enable you to rotate credentials both automatically and manu
 
 To learn how to set up and use each rotator, follow the links below. To learn how to configure OpenID Connect (OIDC) for the rotators that support it, see [OpenID Connect integration](/docs/pulumi-cloud/oidc/) in the Pulumi Cloud documentation.
 
-| Rotator                                                                        | Description                                                                                                                     |
-|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| [aws-iam](/docs/esc/integrations/rotated-secrets/aws-iam/)                     | The `aws-iam` rotator enables you rotate access credentials for an AWS IAM User.                                                |
+| Rotator                                                                  | Description                                                                                                          |
+|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| [aws-iam](/docs/esc/integrations/rotated-secrets/aws-iam/)               | The `aws-iam` rotator enables you rotate access credentials for an AWS IAM User.                                     |
+| [snowflake-user](/docs/esc/integrations/rotated-secrets/snowflake-user/) | The `snowflake-user` rotator enables you to rotate RSA keypairs for a Snowflake database user in your Environment.   |
