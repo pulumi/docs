@@ -19,6 +19,7 @@ Let’s imagine we want to deploy our static blog website. As part of this proce
 {{% chooser language "javascript,typescript,python,go" %}}
 
 {{% choosable language javascript%}}
+
 ```javascript
 ...
 
@@ -31,9 +32,11 @@ for (const file in await glob('posts/**/*.html')) {
 
 ...
 ```
+
 {{% /choosable %}}
 
 {{% choosable language typescript%}}
+
 ```typescript
 ...
 
@@ -46,9 +49,11 @@ for (const file in await glob('posts/**/*.html')) {
 
 ...
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 ...
 
@@ -60,9 +65,11 @@ for file in glob("posts/**/*.html"):
 
 ...
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 ...
 
@@ -80,6 +87,7 @@ for _, file := range files {
 
 ...
 ```
+
 {{% /choosable %}}
 
 This works well, but what if we have a list of draft articles that we don’t want to include in the deployment? We can optimistically assume we’ve finished more articles than we’ve started, so using `--target` to specify every article, as well as supporting resources (CSS, JavaScript, ownership controls, et cetera), would quickly become unmanageable.
@@ -87,7 +95,7 @@ This works well, but what if we have a list of draft articles that we don’t wa
 ```shell
 pulumi up --target <URN>::style.css --target <URN>::post-hello.html ...
 ```
-   
+
 With the `--exclude` flag, this becomes much more manageable:
 
 ```shell
@@ -103,6 +111,7 @@ This is fine for a personal blog site, but can still become unmanageable when we
 {{% chooser language "javascript,typescript,python,go" %}}
 
 {{% choosable language javascript%}}
+
 ```javascript
 ...
 
@@ -118,9 +127,11 @@ for (const file in await glob('drafts/**/*.html')) {
 
 ...
 ```
+
 {{% /choosable %}}
 
 {{% choosable language typescript%}}
+
 ```typescript
 ...
 
@@ -137,9 +148,11 @@ for (const file in await glob('drafts/**/*.html')) {
 
 ...
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```py
 ...
 
@@ -155,9 +168,11 @@ for file_path in glob("posts/**/*.html"):
 
 ...
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 drafts := &DraftGroupComponent{}
 err = ctx.RegisterComponentResource("ComponentResource", "drafts", drafts)
@@ -179,6 +194,7 @@ for _, file := range files {
 
 ...
 ```
+
 {{% /choosable %}}
 
 In this setup, we now have a parent resource for all drafts. Using `--exclude-dependents`, we can now exclude everything under this parent resource without having to enumerate all of them individually:
@@ -192,4 +208,3 @@ This command will exclude all drafts from the `up` operation, regardless of how 
 ## Next steps
 
 With these flags now available in the command line, expect to see them introduced in the automation APIs and GitHub action soon. Thanks for reading, and feel free to share any feedback on [GitHub](https://github.com/pulumi/pulumi), [X](https://twitter.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
-
