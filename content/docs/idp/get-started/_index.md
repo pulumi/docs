@@ -1,8 +1,8 @@
 ---
-title: Get started
+title: Get Started
 title_tag: Get Started with Pulumi IDP
-h1: Get Started with Pulumi IDP
-meta_desc: Learn how to build an internal developer platform with Pulumi.
+h1: The Pulumi IDP Difference
+meta_desc: Learn how to build an internal developer platform with Pulumi IDP.
 menu:
   idp:
     parent: idp-home
@@ -10,6 +10,26 @@ menu:
     weight: 2
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porttitor mauris ac sapien vestibulum tempor. Suspendisse eget vulputate felis. Curabitur scelerisque quam lacinia, hendrerit dui nec, euismod massa. Ut pellentesque diam ac neque laoreet, feugiat tincidunt nisi pellentesque. Nunc tempor, risus at pellentesque iaculis, ipsum ante mollis tortor, in semper purus massa in risus. Donec at erat et leo aliquam pulvinar quis eu est. Duis vulputate tincidunt pretium.
+Pulumi IDP is a bottom-up approach for platform teams to provide self-service workflows to their users, from Day 0 to Day 2. Unlike an Internal Developer Portal, Pulumi IDP facilitates concrete outcomes, not merely information consumption.
+
+Pulumi IDP can facilitate workflows across the Day 0-2 spectrum thanks to powerful features like Private Registry, Components, Templates, Services, and more. By using a bottom-up approach, platform engineers can codify security, compliance, and operational requirements in their golden paths without additional effort.
+
+## Day 0 - Establish a central source of truth for golden paths
+
+Platform engineers and other centralized teams curate an infrastructure source of truth by authoring and publishing components and templates to the private registry. Templates and components are codified with security, compliance, and operational standards to ensure golden paths are hardened from the beginning.
+
+Learn more about [Pulumi Private Registry](/docs/idp/get-started/private-registry/), [Pulumi Components](/docs/iac/concepts/resources/components/), and [Pulumi Templates](docs/pulumi-cloud/developer-portals/templates/). You can also learn about securing artifacts with [Pulumi ESC](/docs/esc/) and ensuring compliance and standards with [Pulumi Policies](/docs/insights/get-started/add-policies/).
+
+## Day 1 - Provision infrastructure through flexible workflows
+
+Users discover golden paths through the private registry or the new project wizard. Depending on their use case, they may choose to scaffold several components in their preferred programming language or YAML. Alternatively, they can point and click to deploy a workload directly from the new project wizard using Pulumi Deployments. Regardless, thanks to the bottom-up approach of the Pulumi IDP, workloads are deployed via golden paths, leveraging artifacts that have been authored and approved by platform teams.
+
+Learn more about the [Pulumi Private Registry](/docs/idp/get-started/private-registry/) and [Pulumi Deployments](/docs/pulumi-cloud/deployments/).
+
+## Day 2 - Confidently maintain and extend infrastructure
+
+Users can easily model their infrastructure using Pulumi services, logical groupings of Pulumi entities, such as stacks and ESC environments. Users can also adjust configuration and redeploy stacks directly from the Pulumi UI when using No-code Stacks.
+
+Learn more about No-code Stacks and [Pulumi Services](/docs/idp/get-started/services/).
 
 {{< get-started-stepper >}}
