@@ -16,7 +16,7 @@ Today, we’re going to talk about an update to address the complementary featur
 
 Let’s imagine we want to deploy our static blog website. As part of this process, we have a bunch of HTML pages we’d like to deploy:
 
-{{% chooser language "javascript,typescript,python,go" %}}
+{{% chooser language "javascript,typescript,python,go,csharp" %}}
 
 {{% choosable language javascript%}}
 
@@ -78,11 +78,32 @@ if err != nil { return err }
 
 for _, file := range files {
   _, err := s3.NewBucketObject(ctx, file, &s3.BucketObjectArgs{
-    Key: pulumi.String(file),
+    Source: pulumi.FileAsset(file),
     ...
   })
 
   if err != nil { return err }
+}
+
+...
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+...
+
+var files = Directory.GetFiles("posts", "*.html");
+
+foreach (var file in files)
+{
+    var bucketObject = new BucketObjectv2(file, new BucketObjectv2Args
+    {
+        Source = new FileAsset(file),
+        ...
+    });
 }
 
 ...
@@ -110,7 +131,7 @@ With this command, everything *not* specified using an `--exclude` tag will be i
 
 This is fine for a personal blog site, but can still become unmanageable when we’re dealing with multiple authors, each with multiple drafts. In this case, we might want to group our drafts under a common parent:
 
-{{% chooser language "javascript,typescript,python,go" %}}
+{{% chooser language "javascript,typescript,python,go,csharp" %}}
 
 {{% choosable language javascript%}}
 
@@ -192,6 +213,33 @@ for _, file := range files {
 }, pulumi.Parent(drafts))
 
   if err != nil { return err }
+}
+
+...
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+public class MyComponentResource : ComponentResource { ... }
+
+...
+
+var files = Directory.GetFiles("posts", "*.html");
+var drafts = new MyComponentResource("drafts");
+
+foreach (var file in files)
+{
+    var bucketObject = new BucketObjectv2(file, new BucketObjectv2Args
+    {
+        Source = new FileAsset(file),
+        ...
+    }, new CustomResourceOptions
+    {
+        Parent = drafts
+    });
 }
 
 ...
