@@ -16,7 +16,7 @@ Today, we’re going to talk about an update to address the complementary featur
 
 Let’s imagine we want to deploy our static blog website. As part of this process, we have a bunch of HTML pages we’d like to deploy:
 
-{{% chooser language "javascript, python" %}}
+{{% chooser language "javascript,typescript,python,go" %}}
 
 {{% choosable language javascript%}}
 ```javascript
@@ -52,11 +52,31 @@ for (const file in await glob('posts/**/*.html')) {
 ```python
 ...
 
-for file_path in glob("posts/**/*.html"):
-    aws.s3.BucketObject(file_path,
-        source = pulumi.FileAsset(file_path),
+for file in glob("posts/**/*.html"):
+    aws.s3.BucketObject(file,
+        source = pulumi.FileAsset(file),
         ....
     )
+
+...
+```
+{{% /choosable %}}
+
+{{% choosable language go %}}
+```go
+...
+
+files, err := filepath.Glob("posts/**/*.html")
+if err != nil { return err }
+
+for _, file := range files {
+  _, err := s3.NewBucketObject(ctx, file, &s3.BucketObjectArgs{
+    Key: pulumi.String(file),
+    ...
+  })
+
+  if err != nil { return err }
+}
 
 ...
 ```
@@ -80,20 +100,20 @@ With this command, everything *not* specified using an `--exclude` tag will be i
 
 This is fine for a personal blog site, but can still become unmanageable when we’re dealing with multiple authors, each with multiple drafts. In this case, we might want to group our drafts under a common parent:
 
-{{% chooser language "javascript, python" %}}
+{{% chooser language "javascript,typescript,python,go" %}}
 
 {{% choosable language javascript%}}
 ```javascript
 ...
 
 // A stub resource to group all our drafts
-const draftGroup = new pulumi.ComponentResource('ComponentResource', 'drafts')
+const drafts = new pulumi.ComponentResource('ComponentResource', 'drafts')
 
 for (const file in await glob('drafts/**/*.html')) {
   new aws.s3.BucketObject(`draft-${file}`, {
     source: new pulumi.asset.FileAsset(`drafts/${file}`),
     ...
-  }, { parent: draftGroup })
+  }, { parent: drafts })
 }
 
 ...
@@ -105,14 +125,14 @@ for (const file in await glob('drafts/**/*.html')) {
 ...
 
 // A stub resource to group all our drafts
-const draftGroup: pulumi.ComponentResource =
+const drafts: pulumi.ComponentResource =
   new pulumi.ComponentResource('ComponentResource', 'drafts')
 
 for (const file in await glob('drafts/**/*.html')) {
   new aws.s3.BucketObject(`draft-${file}`, {
     source: new pulumi.asset.FileAsset(`drafts/${file}`),
     ...
-  }, { parent: draftGroup })
+  }, { parent: drafts })
 }
 
 ...
@@ -124,14 +144,38 @@ for (const file in await glob('drafts/**/*.html')) {
 ...
 
 # A stub resource to group all our drafts
-draft_group = pulumi.ComponentResource(t="ComponentResource", name="drafts")
+drafts = pulumi.ComponentResource(t="ComponentResource", name="drafts")
 
 for file_path in glob("posts/**/*.html"):
     aws.s3.BucketObject(file_path,
         source = pulumi.FileAsset(file_path),
-	 opts = pulumi.ResourceOptions(parent = draft_group),
+	 opts = pulumi.ResourceOptions(parent = drafts),
         ....
     )
+
+...
+```
+{{% /choosable %}}
+
+{{% choosable language go %}}
+```go
+drafts := &DraftGroupComponent{}
+err = ctx.RegisterComponentResource("ComponentResource", "drafts", drafts)
+if err != nil { return err }
+
+...
+
+files, err := filepath.Glob("posts/*.html")
+if err != nil { return err }
+
+for _, file := range files {
+  _, err := s3.NewBucketObject(ctx, file, &s3.BucketObjectArgs{
+    Key: pulumi.String(file),
+    ...
+}, pulumi.Parent(drafts))
+
+  if err != nil { return err }
+}
 
 ...
 ```
