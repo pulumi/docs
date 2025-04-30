@@ -500,7 +500,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Runs the Pulumi program for refresh and destroy operations. This is the same as passing --run-program=true.
+            Runs the Pulumi program for refresh and destroy operations. This is the same as passing '--run-program=true' to the CLI.
         </p>
         <pre><code class="text-xs">PULUMI_RUN_PROGRAM=true</code></pre>
     </dd>
