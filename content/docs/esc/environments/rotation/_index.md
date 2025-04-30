@@ -71,6 +71,20 @@ The rotation schedule can be defined as a [cron expression](https://crontab.cron
 
 ![schedule.png](../schedule.png)
 
+### Rotation Connectors
+
+Many organizations keep their databases in private networks, making it impossible for external credential managers (like ESC) to rotate the credentials.
+
+Pulumi ESC's solution to that problem are Rotation Connectors - open-source, easy-to-deploy pieces of insfrastructure that will securely rotate your credentials and store them in your ESC Environment for easy use.
+
+See [Rotated Secrets](/docs/esc/integrations/rotated-secrets) page for details on which rotators require you to deploy a rotation connector.
+
+Once you determined that you need one, follow the links below to learn how to set up and use each Rotation Connector.
+
+| Rotation Connector                                                             | Description                                                                                                                     |
+|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| [AWS Lambda](/docs/esc/environments/rotation/aws-lambda)                       | The `AWS Lambda` rotation connector enables you to rotate credentials inside private AWS VPCs.                                  |
+
 ## Permissions
 
 - To `rotate` an environment, a user must have `WRITE` permissions on the environment, and `OPEN` permissions on any imported environment.
