@@ -2,7 +2,7 @@
 title_tag: "Least Privilege Security for Pulumi IaC and ESC"
 meta_desc: An overview of best practices to use Pulumi IaC and ESC in a least privilege environment
 title: Least Privilege Security for Pulumi IaC and ESC
-h1: Lest privileged security for Pulumi IaC and ESC
+h1: Least privilege security for Pulumi IaC and ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
