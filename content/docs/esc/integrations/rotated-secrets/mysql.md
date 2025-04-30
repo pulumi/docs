@@ -12,17 +12,24 @@ menu:
 
 The `mysql` rotator enables you to rotate user credentials for a MySQL database in your Environment.
 
+There are 2 methods to use this rotator:
+
+- **Direct Connect rotation** - when your database is publicly accessible
+- **Connector rotation** - when your database is in a private network. This method requires you setup a [rotation connector](/docs/esc/environments/rotation#rotation-connectors) in your network.
+
 ## Prerequisites
 
 - A running database instance in AWS
 - [Database users setup for rotation](/docs/esc/environments/rotation/db-user-setup)
-- [AWS Lambda Rotation Connector setup](/docs/esc/environments/rotation/aws-lambda)
+- (If you are using Connector rotation) [AWS Lambda Rotation Connector setup](/docs/esc/environments/rotation/aws-lambda)
 
 ## Example
 
 Best practice is to have 2 separate environments, one with managing credentials that is restricted to admins only, and one with the rotator itself.
 
 ### Credentials Environment
+
+Omit `awsLogin` property and everything under it if using **Direct Connect rotation** - you don't need it. For **Connector rotation**, ensure you have working `aws-login` [credentials](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/aws-login/) setup with the connector.
 
 ```yaml
 values:
@@ -41,6 +48,8 @@ values:
 ```
 
 ### Rotator Environment
+
+Omit `connector` property if using **Direct Connect rotation** - you don't need it. For **Connector rotation**, ensure you fill in the correct `lambdaArn` created when setting up the connector.
 
 ```yaml
 values:
@@ -106,13 +115,13 @@ state:
 
 ### DatabaseConfig
 
-| Property       | Type                                                | Description                                                     |
-|----------------|-----------------------------------------------------|-----------------------------------------------------------------|
-| `connector`    | [Connector](#connector)                             | Database connector configuration                                |
-| `database`     | string                                              | Name of the database to use                                     |
-| `host`         | string                                              | Endpoint of the database                                        |
-| `port`         | int                                                 | Port of the database server                                     |
-| `managingUser` | [UserCredential](#usercredential)                   | Credentials for a user that has privileges to change passwords  |
+| Property       | Type                                                | Description                                                                                         |
+|----------------|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| `connector`    | [Connector](#connector)                             | (Optional) Database connector configuration. Leave `connector` out if using Direct Connect rotation |
+| `database`     | string                                              | Name of the database to use                                                                         |
+| `host`         | string                                              | Endpoint of the database                                                                            |
+| `port`         | int                                                 | Port of the database server                                                                         |
+| `managingUser` | [UserCredential](#usercredential)                   | Credentials for a user that has privileges to change passwords                                      |
 
 ### Connector
 

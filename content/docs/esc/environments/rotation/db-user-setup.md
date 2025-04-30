@@ -65,4 +65,4 @@ GRANT user2 TO managing_user WITH ADMIN OPTION;
 
 ## Next steps
 
-That is all, your database users are ready for rotation. Check out the [Rotation Connectors](/docs/esc/environments/rotation#rotation-connectors) section for next steps.
+That is all, your database users are ready for rotation. If your database is in a private network, check out the [Rotation Connectors](/docs/esc/environments/rotation#rotation-connectors) section for next steps, otherwise go straight to [MySQL rotator](/docs/esc/integrations/rotated-secrets/mysql) or [PostgreSQL rotator](/docs/esc/integrations/rotated-secrets/postgres).
