@@ -33,6 +33,21 @@ for (const file in await glob('posts/**/*.html')) {
 ```
 {{% /choosable %}}
 
+{{% choosable language typescript%}}
+```typescript
+...
+
+for (const file in await glob('posts/**/*.html')) {
+  new aws.s3.BucketObject(`post-${file}`, {
+    source: new pulumi.asset.FileAsset(file),
+    ...
+  })
+}
+
+...
+```
+{{% /choosable %}}
+
 {{% choosable language python %}}
 ```python
 ...
@@ -73,6 +88,25 @@ This is fine for a personal blog site, but can still become unmanageable when we
 
 // A stub resource to group all our drafts
 const draftGroup = new pulumi.ComponentResource('ComponentResource', 'drafts')
+
+for (const file in await glob('drafts/**/*.html')) {
+  new aws.s3.BucketObject(`draft-${file}`, {
+    source: new pulumi.asset.FileAsset(`drafts/${file}`),
+    ...
+  }, { parent: draftGroup })
+}
+
+...
+```
+{{% /choosable %}}
+
+{{% choosable language typescript%}}
+```typescript
+...
+
+// A stub resource to group all our drafts
+const draftGroup: pulumi.ComponentResource =
+  new pulumi.ComponentResource('ComponentResource', 'drafts')
 
 for (const file in await glob('drafts/**/*.html')) {
   new aws.s3.BucketObject(`draft-${file}`, {
