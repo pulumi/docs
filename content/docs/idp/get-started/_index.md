@@ -1,7 +1,7 @@
 ---
 title: Get Started
 title_tag: Get Started with Pulumi IDP
-h1: The Pulumi IDP Difference
+h1: Pulumi IDP Approach
 meta_desc: Learn how to build an internal developer platform with Pulumi IDP.
 menu:
   idp:

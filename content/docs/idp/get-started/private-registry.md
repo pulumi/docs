@@ -28,7 +28,7 @@ Pulumi checks for a git version tag when the `publish` command is executed and s
 
 #### Specifying an Organization
 
-If you're part of multiple organizations and do not have a [default organization](/docs/iac/cli/commands/pulumi_org_set-default/) set, you need to specify the org by using the --publisher flag.
+If you're part of multiple organizations and do not have a [default organization](/docs/iac/cli/commands/pulumi_org_set-default/) set, you must specify the org by using the --publisher flag.
 
 ```bash
 pulumi package publish /path/to/your/component --publisher ORG_NAME
@@ -42,10 +42,10 @@ The `publish` CLI command is used to publish components in the private registry.
 pulumi package publish COMPONENT_LOCATION
 ```
 
-For example, if you were publishing the [Pulumi AWSx component](https://github.com/pulumi/pulumi-awsx), you'd run:
+For example, if your github organization is ACME and you are publishing the component `k8s-cluster`, you'd run:
 
 ```bash
-pulumi package publish https://github.com/pulumi/pulumi-awsx
+pulumi package publish https://github.com/acme/k8s-cluster
 ```
 
 #### Authenticating with Private Repositories
@@ -69,9 +69,13 @@ pulumi package publish /path/to/your/component --readme README_LOCATION
 
 ## Pulumi Templates
 
-[Pulumi Templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#defining-an-organization-template) are an efficient way to scaffold new Pulumi Programs. Templates are sourced from GitHub repositories and are available to users in the private registry and [New Project Wizard](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/new-project-wizard/).
+[Pulumi Templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#defining-an-organization-template) are an efficient way to scaffold new Pulumi Programs. Organization Templates are sourced from GitHub repositories and are available to users in the private registry and [New Project Wizard](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/new-project-wizard/).
 
 ### Template Publishing
+
+{{% notes type="info" %}}
+Organization templates require the Enterprise or Business Critical plan
+{{% /notes %}}
 
 To publish templates in the private registry, follow [this integration guide](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#prerequisites). Once the integration is complete, discovered templates will appear in the private registry.
 
