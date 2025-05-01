@@ -343,7 +343,7 @@ comparison_table:
                   link: /docs/insights/search/#property-queries
                   items:
                     - content: _blank
-                    - content: _blank
+                    - content: _check
                     - content: _check
                     - content: _check
                 - title: Policy enforcement
