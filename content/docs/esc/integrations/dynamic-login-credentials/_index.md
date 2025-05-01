@@ -21,5 +21,5 @@ To learn how to set up and use each provider, follow the links below. To learn h
 | [azure-login](/docs/esc/integrations/dynamic-login-credentials/azure-login/)         | The `azure-login` provider enables you to log in to Azure using OpenID Connect or static credentials.         |
 | [gcp-login](/docs/esc/integrations/dynamic-login-credentials/gcp-login/)             | The `gcp-login` provider enables you to log in to Google Cloud using OpenID Connect or static credentials.    |
 | [gh-login](/docs/esc/integrations/dynamic-login-credentials/gh-login/)               | The `gh-login` provider enables you to log in to GitHub using app credentials.                                |
-| [vault-login](/docs/esc/integrations/dynamic-login-credentials/vault-login/)         | The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or static credentials. |
 | [snowflake-login](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/) | The `snowflake-login` provider enables authentication to Snowflake using OpenID Connect.                      |
+| [vault-login](/docs/esc/integrations/dynamic-login-credentials/vault-login/)         | The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or static credentials. |
