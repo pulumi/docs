@@ -12,7 +12,7 @@ menu:
     identifier: pulumi-cloud-deployments-ttl
 ---
 
-Every platform Team is familiar with the challenge of managing infrastructure that's easy to spin up but often forgotten, leading to inflated costs and operational burden to manage. Time-to-live (TTL) Stacks in Pulumi Cloud enable the automated management of stack lifecycles by specifying a predefined duration after which the stacks are automatically terminated. This feature is essential for managing ephemeral environments, such as development and testing setups, which do not require permanent infrastructure and can benefit from automatic decommissioning to avoid unnecessary costs and resource usage.
+Time-to-live (TTL) Stacks in enable the automated management of a stack's lifecycle by specifying a date and time after which the stack is automatically torn down. TTL stacks allow platform teams to control costs, improve security posture, and reduce operational overhead by ensuring temporary or ephemeral cloud resources (like development environments) are automatically de-provisioned.
 
 ## Setting a Time-to-Live on a Stack
 

@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: aws-iam
     parent: esc-rotated-secrets
-    weight: 1
+    weight: 2
 ---
 
 The `aws-iam` rotator enables you to rotate access credentials for an AWS IAM user in your Environment. Check out the [aws-login documentation](/docs/esc/integrations/dynamic-login-credentials/aws-login/) to learn more about authenticating with AWS.
