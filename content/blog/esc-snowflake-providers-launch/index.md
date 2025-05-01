@@ -60,7 +60,8 @@ For applications or services using Snowflake's key-pair authentication, maintain
 
 *  **Prepare Snowflake:**
     *   Create the [target user](/docs/esc/integrations/rotated-secrets/snowflake-user/#step-1-create-the-target-user) (e.g., `MY_APP_SNOWFLAKE_USER`) whose keys need rotation.
-    *   Set up a dedicated [rotation role](/docs/esc/integrations/rotated-secrets/snowflake-user/#step-2-create-a-rotator-role), [service user](http://www-testing-pulumi-docs-origin-pr-14838-32257ac4.s3-website.us-west-2.amazonaws.com/docs/esc/integrations/rotated-secrets/snowflake-user/#step-3-create-a-rotation-service-user) with permissions (`OWNERSHIP`) and [setup OIDC](/docs/esc/integrations/rotated-secrets/snowflake-user/#step-4-set-up-oidc-for-the-rotation-service-user) to modify the target user's keys. 
+    *   Set up a dedicated [rotation role](/docs/esc/integrations/rotated-secrets/snowflake-user/#step-2-create-a-rotator-role) with `OWNERSHIP` permission over the users you wish to rotate, so it can modify their keys.
+    *   Create a [service user](/docs/esc/integrations/rotated-secrets/snowflake-user/#step-3-create-a-rotation-service-user) using the rotation role, and [setup OIDC](/docs/esc/integrations/rotated-secrets/snowflake-user/#step-4-set-up-oidc-for-the-rotation-service-user) to allow ESC to assume the role for rotation. 
 *   **Rotation Environment:** Define the rotation, importing the managing credentials and specifying the target user.
 
 ```yaml
