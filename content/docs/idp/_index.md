@@ -29,9 +29,9 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Pulumi IDP gives platform teams the ability to build secure, compliant, and customizable golden paths for provisioning infrastructure. It uses a bottom-up approach, allowing teams to codify best practices from the start. 
+    Pulumi IDP gives platform teams the ability to build secure, compliant, and customizable golden paths for provisioning infrastructure. It uses a bottom-up approach, ensuring best practices are codified from the start. 
     
-    Built on Pulumi Components and Templates, platform teams can define building blocks once and enable developers to consume them the way that’s best for them. Developers can leverage components when writing Pulumi programs in their preferred programming language, scaffold components using low-code YAML templates, or deploy templates point-and-click from the Pulumi console.
+    Platform teams can define building blocks using components and templates, enabling developers to consume them in the way that best suits them. Developers can leverage components when writing Pulumi programs in their preferred programming language, scaffold components using low-code YAML templates, or deploy templates point-and-click from the Pulumi console.
 
 - type: button-cards
   heading: Getting Started
