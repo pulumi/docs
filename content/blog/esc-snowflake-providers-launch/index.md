@@ -19,7 +19,7 @@ tags:
 - configuration-management
 ---
 
-Snowflake is the data cloud powerhouse for countless businesses, critical for everything from customer dashboards to billing pipelines. The stakes are immense: this data must be strictly secured and always available. Yet, relying on static credentials or manual key rotation forces a dangerous trade-off between security risks from stale secrets and operational disruption from clumsy updates. [Pulumi ESC](/product/esc) eliminates this dilemma with two purpose-built Snowflake integrations:
+Snowflake is the data cloud powerhouse for countless businesses, critical for everything from customer dashboards to billing pipelines. The stakes are immense: this data must be strictly secured and always available. But managing this with static credentials or manual key rotation creates persistent security vulnerabilities and introduces operational instability, risking disruptions during clumsy updates. [Pulumi ESC](/product/esc) eliminates this dilemma with two purpose-built Snowflake integrations:
 
 1.  **[`snowflake-login`](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/):** Provides dynamic, short-lived OIDC tokens for temporary authentication *to* Snowflake.
 2.  **[`snowflake-user`](/docs/esc/integrations/rotated-secrets/snowflake-user/):** Automates the rotation of RSA keypair secrets *for* Snowflake users, essential for secure key-pair authentication.
