@@ -6,8 +6,8 @@ Disallow: *
 # Disallow certain pages that are preceived as soft-404s.
 Disallow: /docs/search/$
 
-# Disallow azure-native-v1. See https://github.com/pulumi/registry/issues/2879 for details.
-Disallow: /registry/packages/azure-native-v1
+# Disallow azure-native-v2. See https://github.com/pulumi/pulumi-azure-native/issues/3420 for details.
+Disallow: /registry/packages/azure-native-v2
 
 Sitemap: https://www.pulumi.com/sitemap-index.xml
 Sitemap: https://www.pulumi.com/ai/sitemap-index.xml
