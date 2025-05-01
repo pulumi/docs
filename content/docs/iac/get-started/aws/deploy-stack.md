@@ -1,22 +1,42 @@
 ---
 title_tag: Deploy the Stack | AWS
-title: Deploy stack
-h1: "Pulumi & AWS: Deploy stack"
+title: Deploy to AWS
+h1: "Get started with Pulumi and AWS"
 meta_desc: Learn how to deploy your stack to an AWS project in this guide.
 weight: 5
+menu:
+    iac:
+        name: Deploy
+        parent: aws-b-get-started
+        weight: 5
+
 aliases:
+- /docs/iac/get-started/aws/b/deploy-stack/
 - /docs/quickstart/aws/deploy-stack/
 - /docs/get-started/aws/deploy-stack/
 - /docs/clouds/aws/get-started/deploy-stack/
 ---
 
-Let's go ahead and deploy your stack:
+## Deploy to AWS
+
+Now run `pulumi up` to start deploying your new S3 bucket:
+
+{{% choosable "os" "macos,linux" %}}
 
 ```bash
 $ pulumi up
 ```
 
-This command evaluates your program and determines the resource updates to make. First, a preview is shown that outlines the changes that will be made when you run the update:
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi up
+```
+
+{{% /choosable %}}
+
+This command first shows you a **preview** of the changes that will be made:
 
 ```
 Previewing update (dev):
@@ -34,7 +54,12 @@ Do you want to perform this update?
   details
 ```
 
-Once the preview has finished, you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new S3 bucket in AWS. Choosing `no` will return you to the user prompt without performing the update operation.
+No changes have been made yet. You may decline to proceed by selecting `no` or choose `details` to
+see more information about the proposed update like your bucket's properties.
+
+### Performing the update
+
+To proceed and deploy your new S3 bucket, select `yes`. This begins an **update**:
 
 ```
 Do you want to perform this update? yes
@@ -53,22 +78,22 @@ Resources:
 Duration: 5s
 ```
 
-Remember the output you defined in the previous step? That [stack output](/docs/concepts/stack#outputs) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the name of your bucket with the following command:
+Updates can take some time since they wait for the cloud resources to finish being created. S3 buckets are quick,
+however, so the update will finish in just a few seconds.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< auto-naming-note resource="bucket" suffix="58ce361" >}}
 
-{{% choosable language javascript %}}
+### Using stack outputs
+
+The bucket ID can be accessed with the `pulumi stack output` command. You can use this to easily list
+the contents of your new bucket -- which of course will be empty:
+
+{{% choosable os "linux,macos" %}}
+
+{{% choosable language "javascript,typescript,go,csharp,java,yaml" %}}
 
 ```bash
-$ pulumi stack output bucketName
-```
-
-{{% /choosable %}}
-
-{{% choosable language typescript %}}
-
-```bash
-$ pulumi stack output bucketName
+$ aws s3 ls s3://$(pulumi stack output bucketName)
 ```
 
 {{% /choosable %}}
@@ -76,49 +101,43 @@ $ pulumi stack output bucketName
 {{% choosable language python %}}
 
 ```bash
-$ pulumi stack output bucket_name
+$ aws s3 ls s3://$(pulumi stack output bucket_name)
 ```
 
 {{% /choosable %}}
 
-{{% choosable language go %}}
+{{% /choosable %}}
 
-```bash
-$ pulumi stack output bucketName
+{{% choosable os "windows" %}}
+
+{{% choosable language "javascript,typescript,go,csharp,java,yaml" %}}
+
+```powershell
+$ aws s3 ls ("s3://" + (pulumi stack output bucketName))
 ```
 
 {{% /choosable %}}
 
-{{% choosable language csharp %}}
+{{% choosable language python %}}
 
-```bash
-$ pulumi stack output bucketName
+```powershell
+$ aws s3 ls ("s3://" + (pulumi stack output bucket_name))
 ```
 
 {{% /choosable %}}
 
-{{% choosable language java %}}
-
-```bash
-$ pulumi stack output bucketName
-```
-
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
+### View your update on Pulumi Cloud
 
-```bash
-$ pulumi stack output bucketName
-```
+If you are logged into [Pulumi Cloud](/docs/pulumi-cloud), you'll see "View Live" hyperlinks in the CLI output during your
+update. These go to [a page](https://app.pulumi.com) with detailed information about your stack including resources,
+configuration, a full history of updates, and more. Click on it to check it out:
 
-{{% /choosable %}}
+<a href="/images/getting-started/console-update.png" target="_blank">
+    <img src="/images/getting-started/console-update.png" alt="A stack update with console output, as shown in the Pulumi Service" />
+</a>
 
-Running that command will print out the name of your bucket.
-
-{{< auto-naming-note resource="bucket" suffix="58ce361" >}}
-
-{{< console-note >}}
-
-Now that the bucket has been provisioned, let's modify the program to host a static website.
+Now that the S3 bucket has been provisioned, you'll update it to host a static website.
 
 {{< get-started-stepper >}}
