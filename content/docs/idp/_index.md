@@ -31,7 +31,7 @@ sections:
   description_md: |
     Pulumi IDP gives platform teams the ability to build secure, compliant, and customizable golden paths for provisioning infrastructure. It uses a bottom-up approach, ensuring best practices are codified from the start. 
     
-    Platform teams can define building blocks using components and templates, enabling developers to consume them in the way that best suits them. Developers can leverage components when writing Pulumi programs in their preferred programming language, scaffold components using low-code YAML templates, or deploy templates point-and-click from the Pulumi console.
+    Platform teams define building blocks using components and templates, enabling developers to provision infrastructure in the way that best suits them. Developers can leverage components when writing Pulumi programs in their preferred programming language, scaffold components using low-code YAML templates, or deploy no-code programs from the Pulumi console.
 
 - type: button-cards
   heading: Getting Started
@@ -44,13 +44,15 @@ sections:
     link: /docs/idp/get-started/private-registry/
     description: Pulumi Private Registry is the source of truth for an organization’s infrastructure building blocks that power provisioning workflows in Pulumi.
   
+  - heading: Workflows
+    link: /docs/idp/get-started/workflows/
+    description: Discover how developers can utilize templates and components in any workflow.
+    
   - heading: Services
     link: /docs/idp/get-started/services/
     description: Bring organizational context to Pulumi through Services, the logical grouping of Pulumi entities.
 
-  - heading: Workflows
-    link: /docs/idp/get-started/workflows/
-    description: Discover how developers can utilize templates and components in any workflow.
+
 
 
 - type: flat

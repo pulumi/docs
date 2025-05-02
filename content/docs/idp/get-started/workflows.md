@@ -3,13 +3,13 @@ title_tag: Workflows | Pulumi IDP
 title: Workflows
 h1: "Workflows"
 meta_desc: This page provides an overview on Pulumi IDP Workflows.
-weight: 4
+weight: 3
 menu:
   idp:
     parent: idp-get-started
     identifier: idp-get-started-workflows
 ---
-The primary goal of internal developer platforms is to provide self-service workflows that enable developers to provision infrastructure. Where pain is often felt is in attempting to offer multiple workflow types that maintain the consistency that platform teams desire. Thanks to Pulumi IDP’s bottom-up approach, workflows can be driven from the same components and templates, ensuring flexibility, consistency, and scalability.
+The main goal of internal developer platforms is to provide self-service workflows that enable developers to provision infrastructure. Where pain is often felt is in attempting to offer multiple workflow types that maintain the consistency that platform teams desire. Thanks to Pulumi IDP’s bottom-up approach, workflows can be driven from the same components and templates, ensuring flexibility, consistency, and scalability.
 
 ## No-Code
 
@@ -19,9 +19,9 @@ In a no-code workflow, users can instantly create and deploy Pulumi programs wit
 No-code workflows require [Pulumi Deployments](/docs/pulumi-cloud/deployments/)
 {{% /notes %}}
 
-To create a no-code stack, navigate to the new project wizard by selecting New Project in the left navigation. Choose a template from the catalog, and select next. Provide any required configuration, and select “Deployments - no-code” for the deployment method. Select create project, which will deploy the stack and store the config in ESC – no VCS commits required.
+To create a no-code stack, start by selecting New Project in the left navigation. Choose a template from the catalog, and select next. Provide any required configuration, and select “Deployments - no-code” as the deployment method. Select the Create Project button, which will deploy the stack and store the config in ESC – no VCS commits required.
 
-To create additional stacks in the project, navigate to a project, and in the top right corner, select Add Stack. From there, select the Pulumi Deployments No-code option and deploy the stack.
+To create additional stacks in the project, navigate to a project and select Add Stack in the top right corner. From there, select the Pulumi Deployments No-code option and deploy the stack.
 
 ## Low-Code
 

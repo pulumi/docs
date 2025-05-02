@@ -3,7 +3,7 @@ title_tag: Services | Pulumi IDP
 title: Services
 h1: "Services"
 meta_desc: This page provides an overview on how to get started with Pulumi IDP Service.
-weight: 3
+weight: 4
 menu:
   idp:
     parent: idp-get-started
@@ -14,7 +14,7 @@ Pulumi Services are logical groupings of Pulumi entities such as [stacks](/docs/
 
 ## Creating a service
 
-A service can be created through the [new project wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) or new stack wizard workflows. They can also be created manually from the services list page by selecting the Create Service button, where the name, description, entities, and properties can be set.
+A service can be created during the project and stack creation flows. They can also be created manually from the services list page by selecting the Create Service button, where the name, description, entities, and properties can be set.
 
 ## Adding entities to a service
 

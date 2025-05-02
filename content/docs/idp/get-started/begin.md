@@ -13,7 +13,7 @@ menu:
 Before you get started using Pulumi IDP, let's run through a few quick steps to ensure your environment is set up correctly.
 
 {{% notes type="info" %}}
-Pulumi IDP is in public preview and is free for Pulumi customers and community members to use. General availability and enterprise pricing will follow later this year.
+Pulumi IDP is in public preview and is free for Pulumi customers and community members to use. General availability and enterprise pricing will follow later this year. Some IDP aspects depend on paid features, like organization templates.
 {{% /notes %}}
 
 ### Create a Pulumi account
