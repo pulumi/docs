@@ -170,16 +170,6 @@ get_started:
         Give Pulumi a shot and you will never look back @PulumiCorp
     -
       source: twitter
-      username: "@matticala"
-      avatar: https://pbs.twimg.com/profile_images/1289826906024693766/LOdbjWdW_400x400.jpg
-      link: https://twitter.com/matticala/status/1369038327341531140
-      text: |
-        With @PulumiCorp I said goodbye to #YAML and JSON supersets.
-        I went back to what I love: #code.
-        Code. End to end. Functional, even.
-        #Kubernetes is pleasant again.
-    -
-      source: twitter
       username: "@ddoomen"
       avatar: https://pbs.twimg.com/profile_images/1591057460940480517/d0xy4n3b_400x400.jpg
       link: https://twitter.com/ddoomen/status/1644343201459740673
