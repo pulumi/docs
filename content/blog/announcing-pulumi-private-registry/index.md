@@ -1,8 +1,9 @@
 ---
-title: "Pulumi Private Registry: Platform Engineering Accelerated"
+title: "Pulumi Private Registry: The Source of Truth for Golden Paths"
+allow_long_title: true
 date: 2025-05-06
 draft: false
-meta_desc: "Pulumi IDP enables platform teams to build flexible self-service golden paths, accelerating developer productivity while maintaining consistency and security."
+meta_desc: "Introducing Pulumi Private Registry: The source of truth for secure and compliant golden path building blocks."
 # TODO
 meta_image: meta.png
 
@@ -30,19 +31,24 @@ As part of the Pulumi IDP announcement at Pulumi Up, we introduced Pulumi Privat
 
 ## Codified Security and Compliance
 
-Platform teams use components and templates to standardize how resources and programs are shaped and provisioned. Platform teams also use components and templates to ensure security, compliance, observability, and other operational requirements are included by default. Platform teams use tools like [Pulumi ESC](/docs/esc/) and [Pulumi Policies](/docs/insights/get-started/add-policies/) directly in IaC code to ensure that any component or template available in the registry is secure from Day 1.
+Platform teams use components and templates to standardize how resources and programs are shaped and provisioned. They use [Pulumi ESC](/docs/esc/) to automatically import secret dependencies and lease short-term credentials. Platform teams incorporate [IaC Policies](/docs/insights/get-started/add-policies/) to ensure that provisioned infrastructure remains compliant even when customized by developers. Publishing and consuming packages through the private registry guarantees platform teams can achieve the consistency, security, and compliance they want, without sacrificing the flexibility their developers need.
 
 ## Streamlined Publishing
 
-Once a component or template is authored, publishing it to the private registry is as simple as running a single CLI command.
-
+The CLI publishing workflow was built with ergonomics in mind. Publishing a package is as simple as running a single CLI command. The workflow supports publishing packages from public or private git repositories, package versioning, multiple organizations, and custom README paths.
 
 ## Simplified Discovery
 
-Publishing packages to the private registry is as simple as running a single CLI command. Once published, developers can discover standardi zed infrastructure building blocks compliant from Day 1. Developers get immediate context thanks to automatically generated API docs and consume READMEs.
+Developers can discover standardized infrastructure building blocks that are compliant from the beginning. Through the private registry, developers get immediate context thanks to READMEs and automatically generated API docs.
+
+![Pulumi Private Registry](registry-api-browser.jpg)
 
 ## Free Day 2 Context
 
 Day 2 operations comprise most of the effort when managing the infrastructure lifecycle. However, though common, maintaining, extending, and decommissioning infrastructure can feel like flying blind. With the Pulumi IDP’s bottom-up approach, driving building block publishing, discovery, and consumption through the private registry affords usage insights for free. Platform engineers can understand where components are used and at what version, simplifying the process of upgrading and decommissioning packages.
 
 ![Pulumi Private Registry Insights](registry-insights.jpg)
+
+## Get Started Today
+
+Pulumi IDP, including Pulumi Private Registry, is available as a Public Preview to all users. To get started, [sign up](https://app.pulumi.com/signup?utm_source=idp-private-registry) for a free acount, learn more about [Pulumi IDP](/docs/idp/get-started/), or [publish a package](/docs/idp/get-started/private-registry/) to the private registry.
