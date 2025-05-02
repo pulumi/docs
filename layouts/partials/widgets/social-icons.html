@@ -4,19 +4,18 @@
 -->
 {{ if .social }}
     {{ $socialIdentities := .social }}
-    {{ $platforms := slice "github" "linkedin" "twitter" }}
-    {{ $platformUrlPrefixes := slice "https://github.com" "https://www.linkedin.com/in" "https://twitter.com" }}
-
+    {{ $platforms := slice "github" "linkedin" "twitter" "x" "bluesky" }}
+    {{ $platformUrlPrefixes := slice "https://github.com" "https://www.linkedin.com/in" "https://twitter.com" "https://x.com" "https://bsky.app/profile" }}
 
     <ul class="list-none p-0 inline-flex items-center">
         {{ range $idx, $platform := $platforms }}
-            {{ if (index $socialIdentities $platform) }}
-                <li class="{{ if lt $idx (sub (len $platforms) 1) }}mr-3{{ end }}">
-                    <a data-track="{{ $platform | urlize }}" href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}">
-                        <i class="fab fa-{{ $platform }}"></i>
-                    </a>
-                </li>
-            {{ end }}
+        {{ if (index $socialIdentities $platform) }}
+        <li class="{{ if lt $idx (sub (len $platforms) 1) }}mr-3{{ end }}">
+            <a data-track="{{ $platform | urlize }}" href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}">
+                <i class="fab fa-{{ if eq $platform "x" }}x-twitter{{ else }}{{ $platform }}{{ end }}"></i>
+            </a>
+        </li>
+        {{ end }}
         {{ end }}
     </ul>
 {{ end }}
