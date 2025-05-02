@@ -2,7 +2,7 @@
 title: "Announcing Pulumi IDP: Platform Engineering Accelerated"
 date: 2025-05-06
 draft: false
-meta_desc: "Introducing Pulumi IDP: Build and manage self-service infrastructure workflows with customizable golden paths. Accelerate developer productivity, unify your infrastructure components, and scale platform engineering without compromising security or compliance."
+meta_desc: "Introducing Pulumi IDP: Build self-service infrastructure workflows with golden paths to boost dev productivity, unify components, and scale securely."
 meta_image: meta.png
 
 authors:
