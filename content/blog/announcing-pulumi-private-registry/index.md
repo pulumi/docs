@@ -31,7 +31,7 @@ As part of the Pulumi IDP announcement at Pulumi Up, we introduced Pulumi Privat
 
 ## Codified Security and Compliance
 
-Platform teams use components and templates to standardize how resources and programs are shaped and provisioned. They use [Pulumi ESC](/docs/esc/) to automatically import secret dependencies and lease short-term credentials. Platform teams incorporate [IaC Policies](/docs/insights/get-started/add-policies/) to ensure that provisioned infrastructure remains compliant even when customized by developers. Publishing and consuming packages through the private registry guarantees platform teams can achieve the consistency, security, and compliance they want, without sacrificing the flexibility their developers need.
+Platform teams use components and templates to standardize how resources and programs are shaped and provisioned. They use [Pulumi ESC](/docs/esc/) to automatically import secret dependencies and lease short-term credentials. They incorporate [IaC Policies](/docs/insights/get-started/add-policies/) to ensure that provisioned infrastructure remains compliant even when customized by developers. Publishing and consuming packages through the private registry guarantees platform teams can achieve the consistency, security, and compliance they want, without sacrificing the flexibility their developers need.
 
 ## Streamlined Publishing
 
@@ -39,7 +39,7 @@ The CLI publishing workflow was built with ergonomics in mind. Publishing a pack
 
 ## Simplified Discovery
 
-Developers can discover standardized infrastructure building blocks that are compliant from the beginning. Through the private registry, developers get immediate context thanks to READMEs and automatically generated API docs.
+Once published, developers can discover standardized and compliant building blocks from a developer-friendly, centralized location. Easily discoverable components and templates ensure developers can quickly reach for the necessary tools and eliminate the tendency to provision infrastructure in shadow workflows. Developers also get immediate context thanks to automatically generated API docs and consume READMEs.
 
 ![Pulumi Private Registry](registry-api-browser.jpg)
 
