@@ -59,7 +59,7 @@ main:
     # The webinar presenters
     presenters:
         - name: Piers Karsenbarg
-          role: Senior Solutions Engineer, Pulumi
+          role: Senior Solutions Architect, Pulumi
           photo: /images/team/piers-karsenbarg.jpg
 
     # case-sensitive
