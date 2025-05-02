@@ -13,7 +13,7 @@ Remove a stack and its configuration
 Remove a stack and its configuration
 
 This command removes a stack and its configuration state.  Please refer to the
-`destroy` command for removing a resources, as this is a distinct operation.
+`destroy` command for removing resources, as this is a distinct operation.
 
 After this command completes, the stack will no longer be available for updates.
 
