@@ -4,6 +4,7 @@ date: 2025-05-06T16:16:02-04:00
 draft: false
 simple_layout: true
 meta_desc: Is platform engineering a genuine evolution of DevOps or just a rebrand? We explore both perspectives on this industry trend.
+summary: Platform engineering has emerged as a hot area, but is it truly an evolutionary step toward a greater way of developing and operating software? Or is it merely a fad and a rebranding of existing ideas?
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -21,6 +22,8 @@ social:
         • Why platforms might actually solve fundamental DevOps limitations
         • How specialization naturally emerges as organizations scale
 ---
+<br/>
+
 <img src="crossroads.png" alt="crossroads photo" style="width:100%;" />
 
 2 Months ago, user `deacon91`, after years of working in the industry has declared DevOps to be a dead end on Reddit's `r/devops`. And I've been thinking about his thoughts on the industry since then.
@@ -36,8 +39,6 @@ And platform engineering has certainly emerged as a new hot area. But is it trul
 That's what I want to explore: is platform engineering a rebrand or a genuine evolution?
 
 Let's start by summarizing the cynical case - that it's merely a rebrand.
-
-<!--more-->
 
 ## The Rebrand Case
 
