@@ -100,4 +100,4 @@ In fact, it's just a way to scale the principles inherent in the original ideas 
 
 Or at least that is my take after thinking long and hard about [deacon91's comment on r/devops](https://old.reddit.com/r/devops/comments/1izpca1/platform_engineering_fad/)
 
-If you'd like to here more about Platform Engineering from me check out [this platform engineering series](/blog/tag/platform-engineering-pillars/) I'm working on. And also Pulumi has produced this great ebook on using Pulumi to build [IaC platform components](https://info.pulumi.com/ebook/platform-engineering-iac-recommended-practices).
+If you'd like to here more about Platform Engineering, check out [this platform engineering series](/blog/tag/platform-engineering-pillars/). And also this great ebook on using Pulumi to build [IaC platform components](https://info.pulumi.com/ebook/platform-engineering-iac-recommended-practices).
