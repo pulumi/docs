@@ -4,6 +4,9 @@ date: 2025-04-30
 meta_desc: "You can now exclude targets from up, preview, refresh, and destroy operations"
 authors:
     - tom-harding
+tags:
+    - exclude
+    - targets
 ---
 
 Pulumi provides a set of top level commands for managing stack deployments. We can use commands like `up` and `destroy` to spin up and tear down production environments, or `refresh` to update our understanding of the stack’s resources.
