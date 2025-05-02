@@ -2,6 +2,7 @@
 title: "Platform Engineering: Evolution or Rebranding?"
 date: 2025-05-06T16:16:02-04:00
 draft: false
+simple_layout: true
 meta_desc: Is platform engineering a genuine evolution of DevOps or just a rebrand? We explore both perspectives on this industry trend.
 meta_image: meta.png
 authors:
@@ -20,6 +21,8 @@ social:
         • Why platforms might actually solve fundamental DevOps limitations
         • How specialization naturally emerges as organizations scale
 ---
+<img src="crossroads.png" alt="crossroads photo" style="width:100%;" />
+
 2 Months ago, user `deacon91`, after years of working in the industry has declared DevOps to be a dead end on Reddit's `r/devops`. And I've been thinking about his thoughts on the industry since then.
 
 > My personal hot take is that DevOps (in the truest sense of the word) is a dead end.
@@ -37,6 +40,8 @@ Let's start by summarizing the cynical case - that it's merely a rebrand.
 <!--more-->
 
 ## The Rebrand Case
+
+<img src="stickers.png" alt="laptop stickers" style="width:100%;" />
 
 ### Title Drift
 
@@ -58,6 +63,8 @@ This is one aspect of what people mean why they say "platform engineering is jus
 
 ### Hype Cycle Reboot
 
+<img src="bingo.png" alt="buzzword bingo" style="width:100%;" />
+
 > There were fad chasers yesterday, there are fad chasers today, and there will be fad chasers tomorrow until the sun burns out
 >
 > u/deacon91
@@ -77,6 +84,8 @@ In this view, platform engineering isn't revolutionary—it's just the next squa
 There's some truth to this cynicism, but it blinds us to what platform engineering actually offers. More importantly, this view misses something crucial: where a platform approach succeeds, it reveals fundamental flaws in the original DevOps vision.
 
 ## The Case for Evolution
+
+<img src="baton.png" alt="baton hand off" style="width:100%;" />
 
 The original DevOps movement introduced valuable ideas about breaking down silos and encouraging collaboration. However, its purest vision—where "everybody does everything"—faces practical limitations at scale.
 
