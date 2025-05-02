@@ -88,7 +88,7 @@ including all the required frontmatter parameters.
    [social]
    github = "cnunciato"
    linkedin = "cnunciato"
-   twitter = "cnunciato"
+   x = "cnunciato"
    ```
 
    For community contributors, it's mostly the same, but with a `status` of `guest`, and a more informative `title`:
