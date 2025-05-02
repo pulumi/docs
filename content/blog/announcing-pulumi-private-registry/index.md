@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2025-05-06
 draft: false
 meta_desc: "Introducing Pulumi Private Registry: The source of truth for secure and compliant golden path building blocks."
-# TODO
 meta_image: meta.png
 
 authors:
@@ -35,7 +34,7 @@ Platform teams use components and templates to standardize how resources and pro
 
 ## Streamlined Publishing
 
-The CLI publishing workflow was built with ergonomics in mind. Publishing a package is as simple as running a single CLI command. The workflow supports publishing packages from public or private git repositories, package versioning, multiple organizations, and custom README paths.
+The CLI publishing workflow is built with ergonomics in mind. Publishing a package is as simple as running a single CLI command, ensuring seamless integration in local or automated workflows. The publishing workflow supports publishing packages from public or private git repositories, package versioning, multiple organizations, and custom README paths.
 
 ## Simplified Discovery
 
