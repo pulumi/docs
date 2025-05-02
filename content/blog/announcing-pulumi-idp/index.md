@@ -6,15 +6,8 @@ meta_desc: "Pulumi IDP enables platform teams to use reusable building blocks to
 meta_image: meta.png
 
 authors:
-    - daniel-bradley
-    - derek-schaller
-    - florian-stadler
-    - ian-wahbe
-    - kimberley-mackenzie
-    - vic-fernandez
-    - komal-ali
-    - mark-huber
-
+    - idp-team
+    
 tags:
     - idp
     - platform teams
