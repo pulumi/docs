@@ -1,5 +1,4 @@
-permissions:
-  id-token: write
+permissions: write-all # Equivalent to default permissions + id-token: write
 env:
   PROVIDER_CATEGORY: ${{ github.event.client_payload.category }}
   PROVIDER_DISPLAY_NAME: ${{ github.event.client_payload.display-name }}
