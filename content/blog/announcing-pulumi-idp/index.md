@@ -1,8 +1,8 @@
 ---
-title: "Announcing Pulumi IDP: Accelerating Delivery Through Self-Serve Platforms"
+title: "Announcing Pulumi IDP: Platform Engineering Accelerated"
 date: 2025-05-06
 draft: false
-meta_desc: "Pulumi IDP enables platform teams to use reusable building blocks to define self-service golden paths that accelerate developer productivity while maintaining consistency, security, and compliance."
+meta_desc: "Pulumi IDP enables platform teams to build flexible self-service golden paths, accelerating developer productivity while maintaining consistency and security."
 meta_image: meta.png
 
 authors:
