@@ -39,6 +39,6 @@ resources:
     nodes: 5
 ```
 
-## Full-Code
+## Code
 
 In many cases, developers need to author IaC programs – but that doesn’t mean they need to start from scratch. Pulumi Organization Templates are an efficient way for developers to scaffold programs based on platform engineering-authored templates that are built using registry-published components. Templates can be instantiated locally from the CLI or in the Pulumi console using the new project wizard.

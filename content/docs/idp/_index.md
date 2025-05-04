@@ -12,10 +12,10 @@ menu:
 expanded_menu_ids:
     - idp-get-started
 
-meta_desc: Pulumi IDP enables you to build secure, scalable, and flexible internal developer platforms.
+meta_desc: Pulumi IDP enables you to build secure, scalable, and flexible developer workflows.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Pulumi IDP Docs
-description: <p>Pulumi IDP enables you to build secure, scalable, and flexible internal developer platforms.</p>
+description: <p>Pulumi IDP enables you to build secure, scalable, and flexible developer workflows.</p>
 
 link_buttons:
   primary:
