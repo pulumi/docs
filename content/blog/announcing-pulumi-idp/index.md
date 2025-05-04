@@ -2,7 +2,7 @@
 title: "Announcing Pulumi IDP: Platform Engineering Accelerated"
 date: 2025-05-06
 draft: false
-meta_desc: "Pulumi IDP enables platform teams to build flexible self-service golden paths, accelerating developer productivity while maintaining consistency and security."
+meta_desc: "Introducing Pulumi IDP: Build self-service infrastructure workflows with golden paths to boost dev productivity, unify components, and scale securely."
 meta_image: meta.png
 
 authors:
@@ -20,7 +20,7 @@ social:
     linkedin: "TODO"
 ---
 
-Today, we’re excited to introduce Pulumi IDP, the latest evolution in the Pulumi Cloud Platform, to help organizations define, deploy, and manage infrastructure at scale.
+Today, we’re excited to introduce Pulumi IDP, the latest evolution of the Pulumi Cloud Platform, designed to help organizations define, deploy, and manage infrastructure at scale.
 
 <!--more-->
 
@@ -32,7 +32,7 @@ At the same time that Pulumi was evolving, so too was the industry. DevOps usher
 
 ## Platform Teams
 
-The goal and promise of platform teams is to understand the needs of their users, creating scalable workflows to provision and maintain secure, compliant, and reliable infrastructure without being blocked by other teams or having to maintain it themselves.
+The goal and promise of platform teams are to understand the needs of their users, creating scalable workflows to provision and maintain secure, compliant, and reliable infrastructure through [Internal Developer Platforms](/what-is/what-is-an-internal-developer-platform) without being blocked by other teams or having to maintain it themselves.
 
 Platform teams, however, have faced a harsh reality – it is inherently hard to offer flexible golden paths that also account for security, compliance, and maintainability. Most platform teams – especially in enterprises – must also build for multiple personas with varying consumption methods, ranging from writing their own IaC code to point-and-click deployments.
 
@@ -56,7 +56,7 @@ Pulumi has long focused on enabling organizations to author reusable infrastruct
 
 * Lifecycle Management: For organizations that are able to drive discovery and adoption, they encounter Day 2 issues, such as a lack of usage insights, performing updates, and more.
 
-The Pulumi Private Registry was built to solve these issues and more. With a single pulumi publish command, platform engineers can ensure that their standardized building blocks are discoverable from a central location. Their end-users can discover the packages available to them, explore README files, consume automatically generated API documentation, and learn about installing and using the package.
+The Pulumi Private Registry was built to solve these issues and more. With a single pulumi publish command, platform engineers can ensure that their standardized building blocks are discoverable from a central location. “End-users can easily discover available packages, explore README files, access automatically generated API documentation, and learn how to install and use each package.
 
 ![Pulumi IDP Templates](registry-main.jpg)
 
@@ -74,7 +74,7 @@ With Pulumi IDP’s bottom-up approach, this isn’t an issue. The same standard
 
 ### No-Code
 
-In a no-code workflows users can instantly create and deploy Pulumi programs without worrying about the underlying IaC code or stack config. The no-code workflow is built on Pulumi organization templates and stores stack config in Pulumi ESC, eliminating the need to write to a VCS like GitHub or GitLab. By storing config in Pulumi ESC, developers can also edit config on-demand and instantly redeploy.
+In no-code workflows, users can instantly create and deploy Pulumi programs without dealing directly with underlying IaC code or stack configuration. The no-code workflow is built on Pulumi organization templates and stores stack config in Pulumi ESC, eliminating the need to write to a VCS like GitHub or GitLab. By storing config in Pulumi ESC, developers can also edit config on-demand and instantly redeploy.
 
 ### Low-Code
 
@@ -92,7 +92,7 @@ For instances where a Pulumi program is written from scratch, the suite of Pulum
 
 Once infrastructure is shaped and shipped, it must be managed. We know that contextually familiar infrastructure is easier to manage and extend. To help bring organizational context into Pulumi, we’re introducing Pulumi Services.
 
-Services enable teams to logically group stacks, environments, and resources, creating representations that are familiar within their organization. The service’s entities can live anywhere in Pulumi – across IaC and ESC projects or different Insights Accounts.
+Services enable teams to logically group stacks, environments, and resources, creating representations that are familiar within their organization. The service entities can exist anywhere in Pulumi—across IaC projects, ESC projects, or different Insights Accounts.
 
 ![Pulumi Services](services-home.jpg)
 
@@ -102,4 +102,4 @@ Services also support properties to bring additional context through service pro
 
 ## A New Era for Platform Teams
 
-The Public Preview of Pulumi IDP is just a small portion of our vision to empower platform engineering teams. In the months ahead, we’ll be rapidly shipping features covering observability, documentation, testing, and more. We hope you’ll join us provide feedback along the way, as we aim to usher in a new era of organizations shipping infrastructure and software at scale.
+The Public Preview of Pulumi IDP is just a small portion of our vision to empower platform engineering teams. In the months ahead, we’ll be rapidly shipping features covering observability, documentation, testing, and more. We hope you’ll join us and provide feedback along the way as we usher in a new era of organizations shipping infrastructure and software at scale.
