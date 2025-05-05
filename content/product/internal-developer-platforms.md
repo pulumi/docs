@@ -4,7 +4,7 @@ layout: internal-developer-platforms
 
 meta_title: "Pulumi IDP"
 meta_desc: The Fastest, Most Secure Way to Deliver Cloud Infrastructure
-meta_image: /images/product/platform-teams-meta.png
+meta_image: /images/product/idp-meta.png
 
 aliases:
     - /solutions/platforms/
@@ -61,7 +61,7 @@ building_blocks:
         - "**Visual Importer**: Discover unmanaged resources, generate IaC code, and bring them under Pulumi management with a few clicks."
         - "**Usage and Change Controls**: Understand package and version usage to drive update and deprecation workflows with built-in approvals and audit trails."
         - "**Enterprise-Grade IAM**: Define fine-grained access with custom roles, team permissions, and SAML/SSO integration."
-      graphic: /images/product/insights-policy.png
+      graphic: /images/product/idp-day-two.png
 
 learn:
     title: Get Started
