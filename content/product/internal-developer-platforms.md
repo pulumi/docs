@@ -39,7 +39,7 @@ why_idp:
 building_blocks:
   title: "Pulumi IDP: Building Blocks for Your Internal Developer Platform"
   items:
-    - header: "Codify and Enforce Organizational Best Practices: Components, Templates, Policies"
+    - header: "Codify and Enforce Organizational Best Practices Using Components, Templates, Policies"
       subheader: "Platform engineers define infrastructure standards as building blocks:"
       body:
         - "**Components**: Encapsulate infrastructure best practices into reusable building blocks written in any language."
