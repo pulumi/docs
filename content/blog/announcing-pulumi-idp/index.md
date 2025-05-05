@@ -48,7 +48,7 @@ Pulumi IDP is a bottom-up framework that integrates with the entire Pulumi produ
 
 ## Private Registry as the Source of Truth
 
-Pulumi IDP is built on the Pulumi Private Registry, the source of truth for private components, templates, providers, and policies.
+The foundation of Pulumi IDP is the Pulumi Private Registry, the source of truth for private components, templates, providers, and policies.
 
 Pulumi has long focused on enabling organizations to author reusable infrastructure building blocks. Just recently, we introduced the [latest generation](/blog/pulumi-components/) of Pulumi components for encapsulating and reusing resources across programming languages. Reusable packages offer tremendous benefits, but major pain points have also emerged:
 
