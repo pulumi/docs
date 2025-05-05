@@ -36,7 +36,7 @@ The goal and promise of platform teams are to understand the needs of their user
 
 However, Platform teams have faced a harsh reality – offering flexible golden paths that account for security, compliance, and maintainability is inherently difficult. Most platform teams – especially in enterprises – must also build for multiple personas with varying consumption methods, from writing their own IaC code to point-and-click deployments.
 
-Without establishing a foundation based on standardized primitives that can be consumed in multiple ways, platform teams will be forever stuck in a loop of trying to build everything for everyone.
+Without establishing a foundation of standardized, reusable primitives that can be consumed in multiple ways, platform teams will stay trapped in a cycle of trying to build everything for everyone.
 
 ## Pulumi IDP
 
