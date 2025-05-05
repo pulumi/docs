@@ -84,7 +84,7 @@ Platform engineers can author and publish components in any language. Users can 
 
 ### Full-Code
 
-In some organizations, platform engineers want to offer application teams a starting point without dictating how the infrastructure is deployed. To facilitate a local workflow, organizational templates are now available from the Pulumi CLI as well. Application developers can scaffold infrastructure using the same templates available from the private registry, directly from the convenience of their terminal.
+In some organizations, platform engineers want to offer application teams a starting point without dictating how they deploy infrastructure. Templates are now available from the Pulumi CLI to facilitate a local workflow. Application developers can scaffold infrastructure using the same templates available from the private registry directly from the convenience of their terminal.
 
 For instances where a Pulumi program is written from scratch, the suite of Pulumi IaC languages is always nearby, with the ability to easily incorporate components to accelerate development.
 
