@@ -74,7 +74,7 @@ With Pulumi IDP’s bottom-up approach, this isn’t an issue. The same standard
 
 ### No-Code
 
-In no-code workflows, users can instantly create and deploy Pulumi programs without dealing directly with underlying IaC code or stack configuration. The no-code workflow is built on Pulumi organization templates and stores stack config in Pulumi ESC, eliminating the need to write to a VCS like GitHub or GitLab. By storing config in Pulumi ESC, developers can also edit config on-demand and instantly redeploy.
+In no-code workflows, users can instantly create and deploy Pulumi programs without worrying about the underlying IaC code or stack configuration. The no-code workflow is built on Pulumi organization templates and stores stack config in Pulumi ESC, eliminating the need to write to a VCS like GitHub or GitLab. By storing config in Pulumi ESC, developers can also edit config on-demand and instantly redeploy.
 
 ### Low-Code
 
