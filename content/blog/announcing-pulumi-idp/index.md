@@ -68,7 +68,7 @@ Driving standardized component and template utilization through the registry als
 
 To ensure that users can consume packages and templates ergonomically, we’re introducing new flexible workflow tools to meet the needs of any persona.
 
-Platform teams can exhaust themselves designing, codifying, and publishing standardized patterns, but if they are not easily consumable, they won’t be used. Platform teams are often tasked with accommodating a spectrum of personas, ranging from users who want to scaffold infrastructure through components to non-technical users who want to point and click to deploy from a template. Each of their needs is valid, but the adage of “designing for everyone means designing for no one” can quickly take effect.
+Platform teams can exhaust themselves with designing, codifying, and publishing standardized patterns, but if they are not easily consumable, they won’t be used. Platform teams are often tasked with accommodating a spectrum of personas, ranging from users who want to scaffold infrastructure through components to non-technical users who want to point and click to deploy from a template. Each of their needs is valid, but the adage “designing for everyone means designing for no one” can quickly take effect.
 
 With Pulumi IDP’s bottom-up approach, this isn’t an issue. The same standardized, secure, and compliant packages and templates published in a private registry are the same ones that power self-service workflows.
 
