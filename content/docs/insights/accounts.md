@@ -70,27 +70,6 @@ Key benefits of child accounts include:
 * **Granular control**: Actions can also target specific child accounts, affecting only them and their children.  
 * **Configuration inheritance**: Child accounts can inherit ESC credentials and other configurations from their parent account.
 
-## Resources
-
-All scanned resources are displayed on the **Resources** page in Pulumi Cloud.  
-
-### Viewing resources in the grid
-
-* **Grid structure**:  
-  * **Project column**: Displays the ultimate parent account name.  
-  * **Stack/Account column**: Displays the full child account path. For example:  
-    * **Project**: `my-aws-account`  
-    * **Stack/Account**: `us-east-1/my-cluster`
-
-![Resources page](/docs/insights/assets/insights-resource-explorer.png)
-
-* **Resource navigation**: Click on a resource's name to view its **Resource Details** page. This page includes:  
-  * **Resource history**: Pulumi tracks and displays all versions of a resource, with changes based on property updates.  
-  * **Properties**: View detailed properties for each resource version.  
-  * **References**: See edges (relationships) to other resources in the same account.
-
-![Resource details page](/docs/insights/assets/insights-resources.png)
-
 ## Configure ESC credentials
 
 ### AWS
