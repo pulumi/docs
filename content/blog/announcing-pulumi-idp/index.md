@@ -34,7 +34,7 @@ At the same time that Pulumi was evolving, so too was the industry. DevOps usher
 
 The goal and promise of platform teams are to understand the needs of their users, creating scalable workflows to provision and maintain secure, compliant, and reliable infrastructure through [Internal Developer Platforms](/what-is/what-is-an-internal-developer-platform) without being blocked by other teams or having to maintain it themselves.
 
-Platform teams, however, have faced a harsh reality – it is inherently hard to offer flexible golden paths that also account for security, compliance, and maintainability. Most platform teams – especially in enterprises – must also build for multiple personas with varying consumption methods, ranging from writing their own IaC code to point-and-click deployments.
+However, Platform teams have faced a harsh reality – offering flexible golden paths that account for security, compliance, and maintainability is inherently difficult. Most platform teams – especially in enterprises – must also build for multiple personas with varying consumption methods, from writing their own IaC code to point-and-click deployments.
 
 Without establishing a foundation based on standardized primitives that can be consumed in multiple ways, platform teams will be forever stuck in a loop of trying to build everything for everyone.
 
