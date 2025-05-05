@@ -60,7 +60,7 @@ The Pulumi Private Registry was built to solve these issues and more. With a sin
 
 ![Pulumi IDP Templates](registry-main.jpg)
 
-Driving standardized component and template utilization through the registry also affords usage insights for lifecycle management. For any package or template, platform engineers can understand where it is used and at which version. This is invaluable when trying to identify the impact of proposed package changes or when understanding version drift.
+Driving standardized component and template utilization through the registry also provides valuable usage insights for lifecycle management. Platform engineers can see where each package or template is used and at which version – critical for assessing the impact of changes and tracking version drift.
 
 ![Pulumi IDP Insights](registry-insights.jpg)
 
