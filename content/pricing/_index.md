@@ -326,12 +326,6 @@ comparison_table:
                     - content: 1
                     - content: 10
                     - content: 20
-                - title: Per query limits in UI
-                  items:
-                    - content: _blank
-                    - content: 10K results
-                    - content: 10K results
-                    - content: 10K results
                 - title: Data export
                   link: /docs/insights/#data-export
                   items:
