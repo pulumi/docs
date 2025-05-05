@@ -57,7 +57,7 @@ building_blocks:
     - header: Secure and Scale Your Day Two Operations and Beyond
       subheader: Pulumi IDP goes beyond provisioning with built-in tools to help teams secure, govern, and evolve infrastructure as their environments grow.
       body:
-        - "**Manage Drift and Compliance**: Detect configuration drift and enforce policies across existing infrastructure."
+        - "**Drift and Compliance Management**: Detect configuration drift and enforce policies across existing infrastructure."
         - "**Visual Importer**: Discover unmanaged resources, generate IaC code, and bring them under Pulumi management with a few clicks."
         - "**Versioning and Change Controls**: Roll out template updates and manage change with built-in approvals and audit trails."
         - "**Enterprise-Grade IAM**: Define fine-grained access with custom roles, team permissions, and SAML/SSO integration."
