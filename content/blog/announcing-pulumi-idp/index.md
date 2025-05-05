@@ -20,7 +20,7 @@ social:
     linkedin: "TODO"
 ---
 
-Today, we’re excited to introduce Pulumi IDP, the latest evolution of the Pulumi Cloud Platform, designed to help organizations define, deploy, and manage infrastructure at scale.
+Today, we’re excited to introduce Pulumi IDP, the latest evolution of the Pulumi Cloud Platform, designed to help organizations automate, secure, and manage everything they run in the cloud.
 
 <!--more-->
 
