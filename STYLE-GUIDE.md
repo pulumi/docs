@@ -1,10 +1,16 @@
 # Style Guide
 
-This document defines some general styles we adhere to in the docs.
+This document defines general styles and user experience (UX) standards we adhere to in the Pulumi documentation, marketing website, and registry.
+
+> **Related documentation:**
+> - [CONTRIBUTING.md](CONTRIBUTING.md) - Guide for contributing to Pulumi documentation
+> - [BLOGGING.md](BLOGGING.md) - Instructions for writing blog posts
+> - [CODE-EXAMPLES.md](CODE-EXAMPLES.md) - Guidelines for creating code examples
+> - [SEO.md](SEO.md) - Search engine optimization checklist
 
 ## Language
 
-Words are important. Pulumi strives to use language that is clear, harmonious, and friendly to all readers.  With these goals in mind, we use the following guidelines:
+Words are important. Pulumi strives to use language that is clear, harmonious, and friendly to all readers. With these goals in mind, we use the following guidelines:
 
 * Avoid ableist language:
   * Instead of _crazy_ try _wild_.
@@ -21,13 +27,18 @@ Words are important. Pulumi strives to use language that is clear, harmonious, a
 
 * Ensure that readers are able to scan the headings of a page and get an effective overview of the page's content.
 * Every page should have exactly one `h1`.
-* Headings levels should only increment one level at a time.  E.g., if your previous heading level was an `h2`, the next heading must be an `h2` or an `h3`, but not, e.g., an `h4` or `h5`.
+* Headings levels should only increment one level at a time. E.g., if your previous heading level was an `h2`, the next heading must be an `h2` or an `h3`, but not, e.g., an `h4` or `h5`.
 * Docs and registry headings should use sentence case (i.e., first letter of the first word is capitalized).
 
-## Links
+## Links and Buttons
 
 * Link text should be descriptive and have meaning outside of the surrounding context: Avoid link text like _here_, _click here_, _see here_ and instead link to the title of the linked page, e.g. "see [Pulumi Pricing](https://www.pulumi.com/pricing/)". (While this practice benefits all readers, it is of particular importance for visually impaired users who use screen readers and often jump through the links of a document.)
 * When changing the URL for an already existing page, add a redirect by using a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
+* Use descriptive text for button labels and links, and avoid generic labels such as "Learn more."
+* Use unique labels for distinct actions - having two buttons with the same label that take different actions is confusing to users.
+* Links should take you to another page, and buttons should take an action on the page.
+* When possible, links should look like links, and buttons should look like buttons.
+* When not a special case (e.g., navigation), links should exist within the context of text.
 
 ## Notes and Warnings
 
@@ -58,6 +69,7 @@ This bit of info is serious. If you missed it, bad things could happen.
 ## Paragraphs and Line Breaks
 
 * Keep paragraphs short, rarely use 4 or more sentences in a single paragraph.
+* Use line lengths between 45 – 75 characters (this is in reference to the rendered page, not the markdown).
 
 * When writing paragraphs and long sentences, use one of the following:
 
@@ -126,11 +138,16 @@ This bit of info is serious. If you missed it, bad things could happen.
 ## Content Design
 
 * Lead with content that excites and engages, end with exactly one call-to-action.
+* Every page should have no more than one primary action.
 * Try and save links for the last 75% of the content.
 * Use headings and lists to make content scannable and consumable.
 * Use visuals: code, graphs, videos, architecture diagrams, etc.
 * Highlight important points.
 * Avoid emojis unless for notes or absolutely necessary.
+
+## Component Usage
+
+* Use existing components, or improve existing components over creating new components unless you identify a need that is not solveable with the current components.
 
 ## Additional Resources
 
