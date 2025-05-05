@@ -24,7 +24,7 @@ Today, we’re excited to introduce Pulumi IDP, the latest evolution of the Pulu
 
 <!--more-->
 
-For the past eight years, we’ve helped organizations simplify the deployment and management of their infrastructure. Pulumi launched at the height of DevOps, bringing general-purpose programming languages to IaC at a time when application teams were often deploying their own infrastructure. Users were instantly hooked on the ability to leverage familiar programming paradigms to manage their infrastructure.
+For the past eight years, we’ve helped organizations simplify the deployment and management of their infrastructure. Pulumi launched at the height of DevOps, bringing general-purpose programming languages to infrastructure as code (IaC) at a time when application teams were often manually deploying their own infrastructure. Users were instantly hooked on the ability to leverage familiar programming paradigms to manage their infrastructure.
 
 As we evolved, we introduced additional products to meet the needs of an expanding user base. We launched Pulumi Components to increase standardization and re-use across any programming language. We launched Pulumi Insights Policies to codify policies and ensure compliance at scale. And last fall, we made Pulumi ESC generally available to tame secret sprawl and to facilitate authentication.
 
