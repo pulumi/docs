@@ -50,7 +50,7 @@ Pulumi IDP is a bottom-up framework that integrates with the entire Pulumi produ
 
 The foundation of Pulumi IDP is the Pulumi Private Registry, the source of truth for private components, templates, providers, and policies.
 
-Pulumi has long focused on enabling organizations to author reusable infrastructure building blocks. Just recently, we introduced the [latest generation](/blog/pulumi-components/) of Pulumi components for encapsulating and reusing resources across programming languages. Reusable packages offer tremendous benefits, but major pain points have also emerged:
+Pulumi has long focused on enabling organizations to author reusable infrastructure building blocks. We recently introduced the [latest generation](/blog/pulumi-components/) of Pulumi components for encapsulating and reusing resources across programming languages. Reusable packages offer tremendous benefits, but significant pain points have also emerged:
 
 * Discoverability: Once authored, teams often store packages in Git, but in most organizations, especially enterprises, they quickly become invisible. If no one can find packages, they won’t reuse them, and teams will write one-off solutions instead.
 
