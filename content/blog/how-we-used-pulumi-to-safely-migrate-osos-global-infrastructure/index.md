@@ -143,3 +143,8 @@ But no one outside Oso noticed. We had a clear migration plan, factored out comm
 
 In the early days of Oso, people were often surprised by how much we were able to accomplish with such a small core team of engineers. Part of the secret to this is using the tools we have available to gain maximum leverage, but this isn't the entire story. Knowing how to use them safely allows us to actually benefit from that leverage in practice.
 
+If you're interested in exploring Pulumi further, here are several ways to get involved:
+
+- Discover how Pulumi Crosswalk for AWS simplifies “day one” tasks in our [AWS guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/)
+- Register for one of our upcoming [workshops](https://www.pulumi.com/resources/#upcoming)
+- But most importantly, [try Pulumi](https://app.pulumi.com/signup) today!
