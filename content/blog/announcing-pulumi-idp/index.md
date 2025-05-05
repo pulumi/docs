@@ -52,7 +52,7 @@ The foundation of Pulumi IDP is the Pulumi Private Registry, the source of truth
 
 Pulumi has long focused on enabling organizations to author reusable infrastructure building blocks. Just recently, we introduced the [latest generation](/blog/pulumi-components/) of Pulumi components for encapsulating and reusing resources across programming languages. Reusable packages offer tremendous benefits, but major pain points have also emerged:
 
-* Discoverability: Once a package is authored, it is often stored in git. For most organizations, especially enterprises, it becomes effectively undiscoverable; if a package isn’t discoverable, it won’t be used, and instead, something one-off will be written.
+* Discoverability: Once authored, teams often store packages in Git, but in most organizations, especially enterprises, they quickly become invisible. If no one can find packages, they won’t reuse them, and teams will write one-off solutions instead.
 
 * Lifecycle Management: For organizations that are able to drive discovery and adoption, they encounter Day 2 issues, such as a lack of usage insights, performing updates, and more.
 
