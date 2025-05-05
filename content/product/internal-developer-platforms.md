@@ -51,7 +51,7 @@ building_blocks:
       body:
         - "**Code**: Directly write infrastructure as code in preferred programming languages."
         - "**Low-Code**: Use simple YAML templates with CI/CD pipelines created by platform teams for fast provisioning."
-        - "**No-Code**: Graphically deploy infrastructure with Pulumi’s new project wizard or a custom developer portal."
+        - "**No-Code**: Deploy infrastructure with Pulumi’s new project wizard or a custom developer portal."
         - "**REST API**: Programmatically manage infrastructure via standard HTTP requests."
       graphic: /images/product/idp-flexible-interfaces.png
     - header: Secure and Scale Your Day Two Operations and Beyond
