@@ -31,7 +31,7 @@ At Oso, we recently had to do a large infrastructure migration and learned three
 
 ![img.png](img.png)
 
-[Oso](https://www.osohq.com/) provides Authorization as a Service, so every application decision must first query Oso. This means that if Oso goes down, our customers will also go down. We can't afford a moment of downtime.
+[Oso](https://www.osohq.com/) provides [Authorization as a Service](https://www.osohq.com/cloud/authorization-service), so every application decision must first query Oso. This means that if Oso goes down, our customers will also go down. We can't afford a moment of downtime.
 
 However, we're also growing quickly, and one of the side effects of growth is that architectural decisions that worked for us in the past quickly reach their expiration date. One example of this is when we hit a scaling limit and needed to quickly migrate from Amazon ECS Fargate to ECS on our own self-managed EC2 instances.
 
