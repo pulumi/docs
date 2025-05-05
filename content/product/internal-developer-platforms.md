@@ -59,7 +59,7 @@ building_blocks:
       body:
         - "**Drift and Compliance Management**: Detect configuration drift and enforce policies across existing infrastructure."
         - "**Visual Importer**: Discover unmanaged resources, generate IaC code, and bring them under Pulumi management with a few clicks."
-        - "**Versioning and Change Controls**: Roll out template updates and manage change with built-in approvals and audit trails."
+        - "**Usage and Change Controls**: Understand package and version usage to drive update and deprecation workflows with built-in approvals and audit trails."
         - "**Enterprise-Grade IAM**: Define fine-grained access with custom roles, team permissions, and SAML/SSO integration."
       graphic: /images/product/insights-policy.png
 
