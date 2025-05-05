@@ -90,16 +90,16 @@ For instances where a Pulumi program is written from scratch, the suite of Pulum
 
 ## Organizational Context through Services
 
-Once infrastructure is shaped and shipped, it must be managed. We know that contextually familiar infrastructure is easier to manage and extend. To help bring organizational context into Pulumi, we’re introducing Pulumi Services.
+After you define and deploy infrastructure, you need to manage it, and that’s easier when it reflects your organization’s context. To make this possible, we’re introducing Pulumi Services.
 
-Services enable teams to logically group stacks, environments, and resources, creating representations that are familiar within their organization. The service entities can exist anywhere in Pulumi—across IaC projects, ESC projects, or different Insights Accounts.
+Services enable teams to logically group stacks, environments, and resources, creating representations that are familiar within their organization. The service’s entities can live anywhere in Pulumi – across IaC and ESC projects or in different Insights Accounts.
 
 ![Pulumi Services](services-home.jpg)
 
-Services also support properties to bring additional context through service properties. Service properties are metadata, including links to observability dashboards, Slack channels, and more.
+Services also support properties – metadata that adds important context to a service, such as links to observability dashboards, Slack channels, and more.
 
 ![Pulumi Services - Details Page](services-details.jpg)
 
 ## A New Era for Platform Teams
 
-The Public Preview of Pulumi IDP is just a small portion of our vision to empower platform engineering teams. In the months ahead, we’ll be rapidly shipping features covering observability, documentation, testing, and more. We hope you’ll join us and provide feedback along the way as we usher in a new era of organizations shipping infrastructure and software at scale.
+The Public Preview of Pulumi IDP is just a small portion of our vision to empower platform engineering teams. In the months ahead, we’ll rapidly ship features covering observability, documentation, testing, and more. We hope you’ll join us and provide feedback along the way as we aim to usher in a new era of organizations shipping infrastructure and software at scale.
