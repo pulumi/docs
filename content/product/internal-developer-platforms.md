@@ -42,7 +42,7 @@ building_blocks:
     - header: "Codify and Enforce Organizational Best Practices Using Components, Templates, Policies"
       subheader: "Platform engineers define infrastructure standards as building blocks:"
       body:
-        - "**Components**: Encapsulate infrastructure best practices into reusable building blocks written in any language."
+        - "**Components**: Encapsulate infrastructure best practices in reusable building blocks written in any language."
         - "**Templates**: Scaffold new projects (applications, microservices, clusters) using standardized blueprints."
         - "**Policies**: Automatically enforce security, compliance, cost, and operational rules across all infrastructure."
       graphic: /images/product/idp-components.png
