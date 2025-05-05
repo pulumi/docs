@@ -54,7 +54,7 @@ Pulumi has long focused on enabling organizations to author reusable infrastruct
 
 * Discoverability: Once authored, teams often store packages in Git, but in most organizations, especially enterprises, they quickly become invisible. If no one can find packages, they won’t reuse them, and teams will write one-off solutions instead.
 
-* Lifecycle Management: For organizations that are able to drive discovery and adoption, they encounter Day 2 issues, such as a lack of usage insights, performing updates, and more.
+* Lifecycle Management: Organizations that are able to drive discovery and adoption encounter Day 2 issues, such as a lack of usage insights, performing updates, and more.
 
 The Pulumi Private Registry was built to solve these issues and more. With a single pulumi publish command, platform engineers can ensure that their standardized building blocks are discoverable from a central location. “End-users can easily discover available packages, explore README files, access automatically generated API documentation, and learn how to install and use each package.
 
