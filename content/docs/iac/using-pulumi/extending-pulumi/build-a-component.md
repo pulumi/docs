@@ -84,7 +84,11 @@ $ mkdir static-page-component
 $ cd static-page-component
 ```
 
-{{< chooser language "typescript,python,csharp,java" >}}
+#### PulumiPlugin.yaml
+
+The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
+
+{{< chooser language "typescript,python,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -96,14 +100,27 @@ Authoring sharable components in JavaScript is not currently supported. Consider
 
 {{% choosable language go %}}
 {{% /choosable %}}
+
 {{% choosable language yaml %}}
+
+***Example:** `PulumiPlugin.yaml` for YAML*
+
+```yaml
+runtime: yaml
+```
+
+Because we're also authoring the component in YAML, the `PulumiPlugin.yaml` file will be used to define all aspects of the the component. In most other languages, a package/project configuration file would name the component module. In YAML, all you need to do is set the `name` property:
+
+```yaml {hl_lines=[2]}
+runtime: yaml
+name: static-page-component
+```
+
+This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
+
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
-
-#### PulumiPlugin.yaml
-
-The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
 ***Example:** `PulumiPlugin.yaml` for TypeScript*
 
@@ -170,10 +187,6 @@ $ npm install
 
 {{% choosable language python %}}
 
-#### PulumiPlugin.yaml
-
-The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
-
 ***Example:** `PulumiPlugin.yaml` for Python*
 
 ```yaml
@@ -195,10 +208,6 @@ The `pulumi` SDK contains everything we need for making a component. It should b
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-
-#### PulumiPlugin.yaml
-
-The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
 ***Example:** `PulumiPlugin.yaml` for C#*
 
@@ -237,10 +246,6 @@ Note that the `AssemblyName` specifies the name of the component package. This n
 {{% /choosable %}}
 
 {{% choosable language java %}}
-
-#### PulumiPlugin.yaml
-
-The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
 ***Example:** `PulumiPlugin.yaml` for Java*
 
@@ -322,7 +327,7 @@ The `com.pulumi.pulumi` SDK contains everything we need for making a component. 
 
 ### Implement the entrypoint
 
-{{< chooser language "typescript,python,csharp,java" >}}
+{{< chooser language "typescript,python,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -422,7 +427,7 @@ Components typically require two parts: a subclass of `pulumi.ComponentResource`
 
 #### Add the required imports
 
-{{< chooser language "typescript,python,csharp,java" >}}
+{{< chooser language "typescript,python,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 {{% /choosable %}}
@@ -518,6 +523,9 @@ import com.pulumi.resources.ResourceArgs;
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
+YAML components do not need to explicitly manage dependencies or import external libraries. The necessary packages will be resolved and automatically installed by the Pulumi engine, based on the unique resource type identifiers in the component's sub-resources.
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -526,7 +534,7 @@ import com.pulumi.resources.ResourceArgs;
 
 Next, we will implement the arguments class. In our example here, we will pass the contents of the webpage we want to host to the component.
 
-{{< chooser language "typescript,python,csharp,java" >}}
+{{< chooser language "typescript,python,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 {{% /choosable %}}
@@ -609,13 +617,30 @@ The `@Import` decorator marks this as a *required* input and allows use to give 
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
+In YAML, rather than defining a separate args class, the inputs are declared under the [`inputs` key](/docs/iac/languages-sdks/yaml/yaml-component-reference/#inputs):
+
+***Example:** `PulumiPlugin.yaml` the Component arguments implmentation*
+
+```yaml {hl_lines=["5-7"]}
+runtime: yaml
+name: static-page-component
+components:
+  StaticPage:
+    inputs:
+      indexContent:
+        type: string
+```
+
+Inputs can be any basic type (e.g. `boolean`, `integer`, `string`) or an `array` of any of those types. You can provide a default value via the `default` property.
+
 {{% /choosable %}}
 
 {{< /chooser >}}
 
 ### Define the Component resource
 
-{{< chooser language "typescript,python,csharp,java" >}}
+{{< chooser language "typescript,python,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -961,6 +986,85 @@ class StaticPage extends ComponentResource {
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
+Now we can implement the component itself. Under the [`components` key](/docs/iac/languages-sdks/yaml/yaml-component-reference/), create one or more component definitions. A component in YAML follows the following structure:
+
+```yaml
+components:
+  MyComponent:      # the component class name
+    inputs:         # one or more input values
+    resources:      # one or more sub-resource definitions
+    variables:      # intermediate variable definitions
+    outputs:        # one or more output values
+```
+
+Here's the full code for our `StaticPage` component:
+
+***Example:** `PulumiPlugin.yaml` the Component implmentation*
+
+```yaml {hl_lines=["3-60"]}
+runtime: yaml
+name: static-page-component
+components:
+  StaticPage:
+    inputs:
+      indexContent:
+        type: string
+    resources:
+      bucket:
+        type: aws:s3/bucketV2:BucketV2
+        properties: {}
+
+      bucketWebsite:
+        type: aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfigurationV2
+        properties:
+          bucket: ${bucket.bucket}
+          indexDocument:
+            suffix: index.html
+        options:
+          parent: ${bucket}
+
+      bucketObject:
+        type: aws:s3/bucketObject:BucketObject
+        properties:
+          bucket: ${bucket.bucket}
+          key: index.html
+          content: ${indexContent}
+          contentType: text/html
+        options:
+          parent: ${bucket}
+
+      publicAccessBlock:
+        type: aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock
+        properties:
+          bucket: ${bucket.id}
+          blockPublicAcls: false
+        options:
+          parent: ${bucket}
+
+      bucketPolicy:
+        type: aws:s3/bucketPolicy:BucketPolicy
+        properties:
+          bucket: ${bucket.id}
+          policy:
+            fn::toJSON:
+              Version: "2012-10-17"
+              Statement:
+                - Effect: Allow
+                  Principal: "*"
+                  Action:
+                    - s3:GetObject
+                  Resource:
+                    - arn:aws:s3:::${bucket.bucket}/*
+        options:
+          parent: ${bucket}
+          dependsOn:
+            - ${publicAccessBlock}
+
+    outputs:
+      endpoint: ${bucketWebsite.websiteEndpoint}
+```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -969,7 +1073,7 @@ class StaticPage extends ComponentResource {
 
 Let's dissect this component implementation piece-by-piece:
 
-{{< chooser language "typescript,python,csharp,java" >}}
+{{< chooser language "typescript,python,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 {{% /choosable %}}
@@ -1643,6 +1747,160 @@ This function is used to create a S3 policy document, allowing public access to 
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
+#### Naming the component
+
+```yaml {hl_lines=[4]}
+runtime: yaml
+name: static-page-component
+components:
+  StaticPage:
+# ...
+```
+
+YAML components rely on built-in behind-the-scenes behavior that allows the component state to be tracked and run within a host provider. The Pulumi SDK will scan the definitions and infer the schema of the component. All we need to provide is a unique name for the resource type. Later consumers of the component can reference it by the package name and component type like this:
+
+```yaml
+resources:
+  my-static-page:
+    type: static-page-component:StaticPage
+#...
+```
+
+It follows the schema of `<package_name>:<component_resource_name>`.
+
+#### Output properties
+
+```yaml
+runtime: yaml
+name: static-page-component
+components:
+  StaticPage:
+    # ...
+    outputs:
+      endpoint: ${bucketWebsite.websiteEndpoint}
+```
+
+The `outputs` section defines the outputs that will be shared to the consumer of the component. These will appear in consumer languages as `pulumi.Output<T>` equivalents, instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program.
+
+#### Creating and managing sub-resources, dependencies, and execution order
+
+Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources. Defining sub-resources in a YAML component works exactly the same as defining them in a YAML Pulumi program.
+
+```yaml
+# ...
+    resources:
+      bucket:
+        type: aws:s3/bucketV2:BucketV2
+        properties: {}
+
+      bucketWebsite:
+        type: aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfigurationV2
+        properties:
+          bucket: ${bucket.bucket}
+          indexDocument:
+            suffix: index.html
+        options:
+          parent: ${bucket}
+
+      bucketObject:
+        type: aws:s3/bucketObject:BucketObject
+        properties:
+          bucket: ${bucket.bucket}
+          key: index.html
+          content: ${indexContent}
+          contentType: text/html
+        options:
+          parent: ${bucket}
+
+      publicAccessBlock:
+        type: aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock
+        properties:
+          bucket: ${bucket.id}
+          blockPublicAcls: false
+        options:
+          parent: ${bucket}
+
+      bucketPolicy:
+        type: aws:s3/bucketPolicy:BucketPolicy
+        properties:
+          bucket: ${bucket.id}
+          policy:
+            fn::toJSON:
+              Version: "2012-10-17"
+              Statement:
+                - Effect: Allow
+                  Principal: "*"
+                  Action:
+                    - s3:GetObject
+                  Resource:
+                    - arn:aws:s3:::${bucket.bucket}/*
+        options:
+          parent: ${bucket}
+          dependsOn:
+            - ${publicAccessBlock}
+# ...
+```
+
+##### The Bucket sub-resource
+
+The `BucketV2` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
+
+<!-- Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources. -->
+
+Another important implementation detail here is the `options` section. By default the component instance will be set as the `parent` of the `BucketV2` resource, so there's no need to define that on this object.
+
+##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
+
+The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
+
+Notice that this time we pass the `BucketV2` instance in as the `parent` in the `options` for these sub-resources. This is an essential step to tie the sub-resources into the dependency graph. That creates a resource relationship graph like: `StaticPage` -> `BucketV2` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
+
+Managing the dependency graph of your sub-resources is very important in a component!
+
+Another point of interest here is the use of the component input values. In the `BucketObject` definition, we pass the contents of the `index.html` page we want to host via `${indexDocument}` string interpolation. All input values are available for string interpolation.
+
+##### The BucketPublicAccessBlock and BucketPolicy sub-resources
+
+By default the `BucketObject` we created is not accessible to the public, so we need to unlock that access with the `BucketPublicAccessBlock` and `BucketPolicy` resources.
+
+The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use the `${bucket.bucket}` interpolation to generate an S3 policy document using the `fn::toJSON:` helper function. This respects the asynchronous workflow, waiting to create the `BucketPolicy` resource until after the bucket has been created. If the provider attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 policy document needs to use the bucket's name within its definition, and we won't know what that value is until the Bucket creation operation has completed. Pulumi's YAML implmentation handles that workflow automatically.
+
+The `BucketPolicy` resource also shows another technique: resource dependencies. We use the `dependsOn` resource option to indicate that the `BucketPolicy` depends on the `BucketPublicAccessBlock`. This relationship is important to encode so that resource creation, modification, and deletion happens as expected.
+
+#### Handling outputs
+
+The last part of the component definition handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. This uses standard string interopolation and automatically handles asynchronous value resolution, waiting to assign the `endpoint` output until `bucketWebsite.websiteEndpoint` has completed completion and the value is available.
+
+```yaml
+# ...
+    outputs:
+      endpoint: ${bucketWebsite.websiteEndpoint}
+```
+
+#### Helper functions
+
+In addition to the component definitions, we are also using a helper function `fn::toJSON:`:
+
+***Example:** `StaticPage.java` a helper function*
+
+```yaml
+# ...
+          policy:
+            fn::toJSON:
+              Version: "2012-10-17"
+              Statement:
+                - Effect: Allow
+                  Principal: "*"
+                  Action:
+                    - s3:GetObject
+                  Resource:
+                    - arn:aws:s3:::${bucket.bucket}/*
+# ...
+```
+
+This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked only when the interpolated value `${bucket.bucket}` theis available as a standard string. We construct a YAML object which is then serialized to a JSON formatted string and assigned to the `policy` property.
+
 {{% /choosable %}}
 
 {{< /chooser >}}
