@@ -78,7 +78,7 @@ In no-code workflows, users can instantly create and deploy Pulumi programs with
 
 ### Low-Code
 
-Users often need to compose their own Pulumi programs, but platform engineering teams want to ensure they are using approved components. With the new Pulumi Private registry and the latest generation of Pulumi components, that’s never been easier.
+Users often need to compose their own Pulumi programs, but platform engineering teams want to ensure they use approved components. With the new Pulumi Private registry and the latest generation of Pulumi components, that’s never been easier.
 
 Platform engineers can author and publish components in any language. Users can then discover the available components through the private registry, add them as dependencies in a Pulumi YAML program, and deploy the infrastructure.
 
