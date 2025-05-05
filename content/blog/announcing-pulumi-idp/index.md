@@ -56,7 +56,7 @@ Pulumi has long focused on enabling organizations to author reusable infrastruct
 
 * Lifecycle Management: Organizations that are able to drive discovery and adoption encounter Day 2 issues, such as a lack of usage insights, performing updates, and more.
 
-The Pulumi Private Registry was built to solve these issues and more. With a single pulumi publish command, platform engineers can ensure that their standardized building blocks are discoverable from a central location. “End-users can easily discover available packages, explore README files, access automatically generated API documentation, and learn how to install and use each package.
+The Pulumi Private Registry was built to solve these issues and more. With a single `pulumi publish` command, platform engineers can ensure their standardized building blocks are discoverable from a central location. Their end-users can discover the packages available, explore README files, consume automatically generated API documentation, and learn about installing and using the package.
 
 ![Pulumi IDP Templates](registry-main.jpg)
 
