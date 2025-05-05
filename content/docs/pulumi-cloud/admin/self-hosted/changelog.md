@@ -18,7 +18,61 @@ aliases:
 Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
+## 2025
+
+### March
+
+* [Enhanced GitLab integration support](https://www.pulumi.com/blog/gitlab-better-than-ever/)
+* Updated pulumi-self-hosted-installers with latest improvements
+* Security: Run containers with read-only filesystems
+* Added support for de-privileged user for migrations
+
+### February
+
+* [Added AWS IAM credentials rotator functionality for Pulumi ESC](https://www.pulumi.com/blog/esc-rotated-secrets-launch/)
+* Security improvements for webhook delivery and validation
+* Fixed environment reference handling in stack operations
+
+### January
+
+* Fixed ESC YAML editor validation and preview issues
+* Improved OAuth token refresh handling
+
 ## 2024
+
+### December
+
+* [Added environment imports discovery with "Imported By" tab](https://www.pulumi.com/blog/esc-imports-discoverability/)
+* [Added AWS Systems Manager Parameter Store support for Pulumi ESC](https://www.pulumi.com/blog/pulumi-esc-aws-parameter-store-support/)
+* Added HTTPS enforcement for GitHub app in self-hosted environments
+
+### November
+
+* Added support for self-hosted Insights scans
+* Fixed policy evaluator for more reliable policy enforcement
+* Upgraded pulumi-self-hosted-installers
+
+### October
+
+* [Released redesigned Stacks page with improved performance](https://www.pulumi.com/blog/new-stacks-page-launch/)
+* [Added enhanced Resources page with advanced search and filtering](https://www.pulumi.com/blog/insights-resources-v2/)
+* Fixed deployment settings migration errors
+* Upgraded AWS packages for infrastructure security
+* Fixed OIDC and SAML authentication issues
+
+### September
+
+* [General Availability of Pulumi ESC with webhooks, projects, and environment tags](https://www.pulumi.com/blog/pulumi-esc-ga/)
+* Added required scopes for Okta integration
+
+### August
+
+* [Added centralized Policy Violations page](https://www.pulumi.com/blog/centralized-policy-violations/)
+* Added Kubernetes-native option for Customer-Managed Agents
+* Improved performance for Resource Search API queries
+* Enhanced logging for OIDC authentication workflows
+* Fixed database migration issues for new installations
+* Security improvements for token validation and verification
 
 ### July
 
