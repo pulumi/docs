@@ -66,7 +66,7 @@ Driving standardized component and template utilization through the registry als
 
 ## Flexible Self-Service Workflows  
 
-To ensure that users can consume private packages and templates ergonomically, we’re introducing new flexible workflow tools to meet the needs of any persona.
+To ensure that users can consume packages and templates ergonomically, we’re introducing new flexible workflow tools to meet the needs of any persona.
 
 Platform teams can exhaust themselves designing, codifying, and publishing standardized patterns, but if they are not easily consumable, they won’t be used. Platform teams are often tasked with accommodating a spectrum of personas, ranging from users who want to scaffold infrastructure through components to non-technical users who want to point and click to deploy from a template. Each of their needs is valid, but the adage of “designing for everyone means designing for no one” can quickly take effect.
 
