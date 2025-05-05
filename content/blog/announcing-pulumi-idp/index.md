@@ -43,7 +43,7 @@ Without establishing a foundation of standardized, reusable primitives that can 
 Pulumi IDP is a bottom-up framework that integrates with the entire Pulumi product suite, enabling platform teams to build and manage self-service workflows based on codified golden paths. We have launched a suite of new features and invested in existing ones to make the Day 0 through Day 2 experience of operating infrastructure seamless.
 
 * Day 0: Establish a source of truth for standardized infrastructure building blocks that can be consumed in any workflow.
-* Day 1: Provision infrastructure through flexible workflows that are based on standardized building blocks.
+* Day 1: Provision infrastructure through flexible workflows based on standardized building blocks.
 * Day 2: Establish context, gain insights, and perform operational tasks.
 
 ## Private Registry as the Source of Truth
