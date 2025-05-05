@@ -28,7 +28,7 @@ why_idp:
       icon: security
       color: blue
     - title: Flexible Self-Service
-      description: Let teams work how they want – via code, YAML, UI, or APIs — governed by consistent standards and policies.
+      description: Let teams work how they want – via code, YAML, UI, or APIs – governed by consistent standards and policies.
       icon: nodes-and-rays
       color: yellow
     - title: Full Lifecycle Management
