@@ -258,7 +258,7 @@ In this setup, we now have a parent resource for all drafts. Using `--exclude-de
 pulumi up --exclude <URN>::ComponentResource::drafts --exclude-dependents
 ```
 
-This command will exclude all drafts from the `up` operation, regardless of how many we have or how they’re named. We now have a nice, scalable way to manage our drafts across production and development environments\!
+This command will exclude all drafts from the `up` operation, regardless of how many we have or how they’re named. We now have a nice, scalable way to manage our drafts across production and development environments!
 
 ## Next steps
 
