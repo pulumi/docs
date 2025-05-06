@@ -12,12 +12,12 @@ links:
           description: See how Pulumi can help you ship infrastructure faster and manage your AWS resources at scale. Ready for a change?
           action: Talk with an Engineer
           link: https://calendly.com/pulumi-meetings/aws-summit-telaviv-booth-demo
-        - heading: Join the Tel Aviv Pulumi User Group Meetup!
+        - heading: Pulumi TLV Meetup – Kickoff Event
           description: |
             May 29th, 2025 | 17:30 PM - 20:00 PM | [Lemonade Ltd. Offices](https://g.co/kgs/wyirVjT)
 
-            Continue the cloud conversation after AWS Summit! Meet Pulumi founder Joe Duffy and our engineering team for an evening of networking, knowledge sharing, and refreshments.
-          action: Register Now
+            Meet Pulumi founder Joe Duffy and engineers from Pulumi and Lemonade for networking, tech talks, and refreshments.
+          action: RSVP Now
           link: https://www.meetup.com/tel-aviv-pulumi-user-group/events/307550216/?eventOrigin=group_events_list
 
 workshops:

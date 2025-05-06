@@ -1,8 +1,5 @@
 {{ define "hero" }}
-<header class="page-hero">
-    <div class="flex justify-center h-72" style='background-image: url("/images/aws-summit/tel-aviv-2025-hero.png"); background-position:center; background-repeat: no-repeat;' alt="AWS Summit Tel Aviv - Pulumi Booth #B1">
-    </div>
-</header>
+    {{ partial "hero" (dict "title" .Params.title) }}
 {{ end }}
 
 {{ define "main" }}
@@ -28,7 +25,7 @@
                     <div class="w-full lg:w-1/2 p-4 my-2">
                         <div class="card h-full relative flex flex-col bg-white p-8">
                             <h5>{{ $item.heading }}</h5>
-                            <p class="flex-1">{{ $item.description | markdownify }}</p>
+                            <div class="mb-8 mt-1">{{ $item.description | markdownify }}</div>
                             <div class="mt-4">
                                 <a href="{{ $item.link }}" target="_blank" class="btn-secondary" style="white-space: nowrap;">{{ $item.action }}</a>
                             </div>
@@ -41,7 +38,7 @@
 
     <section id="workshops" style="background-color: #805AC3;">
         <div class="container mx-auto py-12">
-            <h3 class="px-4 text-white">Attend the Webinar</h3>
+            <h3 class="px-4 text-white">Attend the Workshop</h3>
             <div class="flex flex-wrap items-stretch justify-center">
                 {{ range $item := .Params.workshops.items }}
                     <div class="w-full lg:w-1/2 p-4 my-2">
