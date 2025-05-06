@@ -1,4 +1,10 @@
 [[releases]]
+date = "6th May 2025"
+title = "Introducing Pulumi IDP: The Fastest, Most Secure Way to Deliver Cloud Infrastructure at Scale"
+summary = "Introducing Pulumi IDP: The Fastest, Most Secure Way to Deliver Cloud Infrastructure at Scale."
+url = "https://info.pulumi.com/press-release/announcing-pulumi-idp"
+
+[[releases]]
 date = "26th March 2025"
 title = "Pulumi Strengthens Cloud Security and Automation"
 summary = "Pulumi Strengthens Cloud Security and Automation."
