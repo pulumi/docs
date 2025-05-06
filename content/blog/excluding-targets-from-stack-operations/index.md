@@ -9,7 +9,7 @@ tags:
     - targets
 ---
 
-Pulumi provides a set of top level commands for managing stack deployments. We can use commands like `up` and `destroy` to spin up and tear down production environments, or `refresh` to update our understanding of the stack’s resources.
+Pulumi provides a set of top-level commands for managing stack deployments. We can use commands like `up` and `destroy` to spin up and tear down production environments, or `refresh` to update our understanding of the stack’s resources.
 
 These work great, but sometimes you want to perform these operations on a subset of your infrastructure. In these cases, the `--target` flag allows you to specify the precise resources on which you want to perform your updates. On top of this, the `--target-dependents` flag can be used to select all the children of these `--target` resources automatically. This makes it easy to say, for example, “deploy this particular AWS bucket” without affecting the rest of your infrastructure.
 
