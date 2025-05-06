@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
-                <a class="m-4 sm:m-2 btn-primary" href="https://www.youtube.com/live/AMvNG9IkWuI">Watch</a>
+                <a class="m-4 sm:m-2 btn-primary" href="#keynote">Watch</a>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
         </p>
     </div>
 
-    <section class="container mx-auto my-20 lg:mt-16 lg:mb-8 p-4">
+    <section id="keynote" class="container mx-auto my-20 lg:mt-16 lg:mb-8 p-4">
         <div class="lg:flex">
             <div class="lg:w-1/2 lg:order-last mb-8 lg:mb-0 relative h-full">
                 <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
@@ -63,26 +63,6 @@
         </div>
     </section>
 
-    <section id="personas" class="my-8 bg-gray-100">
-        <div class="container mx-auto px-4 py-8 text-center">
-            <h2>A MUST attend for...</h2>
-            <div class="mx-auto py-4 flex flex-col lg:flex-row">
-                {{ range .Params.personas.groups }}
-                    <div class="w-full lg:w-1/4 flex flex-row lg:flex-col">
-                        {{ range .items }}
-                            <div class="flex flex-col lg:flex-row px-12 my-4">
-                                <div class="w-14 flex justify-center"><img src="{{ .image }}" /></div>
-                                <div class="flex-col lg:px-8 text-left">
-                                    <p class="text-sm text-black text-left">{{ .name }}</p>
-                                </div>
-                            </div>
-                        {{ end }}
-                    </div>
-                {{ end }}
-            </div>
-        </div>
-    </section>
-
     {{ range .Params.panels }}
     <section id="panel" class="py-8 mb-12">
         <div class="container mx-auto text-center">
@@ -109,7 +89,7 @@
             </div>
             <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
             <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
-                <a class="m-4 sm:m-2 btn-primary" href="https://www.youtube.com/live/AMvNG9IkWuI">Watch the Panel</a>
+                <a class="m-4 sm:m-2 btn-primary" href="/events/from-infrastructure-engineering-to-platform-engineering/">Watch the Panel</a>
                 </a>
             </div>
         </div>

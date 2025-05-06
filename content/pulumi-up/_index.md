@@ -12,7 +12,7 @@ aliases:
     - /pulumiup
 
 panels:
-  - title: From Infrastructure Engineering to Platform Engineering
+  - title: "Panel: From Infrastructure Engineering to Platform Engineering"
     subtitle:
     schedule_link: "#register"
     panelists:

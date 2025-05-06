@@ -60,6 +60,12 @@ main:
         - name: Joe Duffy
           role: CEO, Pulumi
           photo: /images/team/joe-duffy.jpg
+        - name: Komal Ali
+          role: Engineering Manager, Pulumi
+          photo: /images/team/komal-ali.jpg
+        - name: Meagan Cojocar
+          role: General Manager, IaC, Pulumi
+          photo: /images/team/meagan-cojocar.jpg
 
     # case-sensitive
     tags:
