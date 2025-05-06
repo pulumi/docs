@@ -7,8 +7,6 @@
             <img src="/images/pulumiup-2023/logo.svg" alt="Pulumi UP, virtual, free" class="mx-auto mt-16 h-40" />
             <h3 class="yellow-header-text">2025</h3>
             <div class="banner-description mx-auto mb-12 w-2/3 2xl:w-1/3">
-                <h4>May 6 - 9 am ET / 2 pm GMT</h4>
-                <h4 class="mt-0">May 6 - 4 pm PT / May 7 - 9 am AEST</h4>
                 <p class="px-32">
                     Join our virtual event for exciting product announcements, demos, and stories about how
                     real-world enterprise platform engineering experts are building infrastructure platforms with Pulumi.
@@ -21,22 +19,18 @@
     </div>
 
     <div class="below-banner-description mx-auto px-8 my-10 w-full flex-col">
-        <h4>Session 1 |  May 6, 9 am ET / 2 pm GMT</h4>
-        <h4 class="mt-0">Session 2 | May 6, 4 pm PT / May 7, 9 am AEST</h4>
         <p>
             Join our virtual event for exciting product announcements, demos, and stories about how
             real-world enterprise platform engineering experts are building infrastructure platforms with Pulumi.
         </p>
     </div>
 
-    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "bg_color" "gray-100" ) }}
-
     <section class="container mx-auto my-20 lg:mt-16 lg:mb-8 p-4">
         <div class="lg:flex">
             <div class="lg:w-1/2 lg:order-last mb-8 lg:mb-0 relative h-full">
                 <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
                     <iframe
-                        src="https://www.youtube.com/embed/AepHQaXeNX0"
+                        src="https://www.youtube.com/embed/q9fDyASy-VA?rel=0"
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
                         allowfullscreen=""
                         title="Pulumi in 3 minutes"
@@ -44,26 +38,26 @@
                 </div>
             </div>
             <div class="lg:w-1/2 lg:pr-16">
-                <h3>PulumiUP 2025: Why You Can't Miss It!</h3>
+                <h3>PulumiUP 2025 Keynote</h3>
                 <p>
-                    Join us for demos, new product releases, panel discussions, and more. Learn trends, best practices, and lessons learned in:
+                    We launched <b>Pulumi IDP</b>—a bottom-up Internal Developer Platform framework that stitches together everything you already know in Pulumi Cloud with a bunch of new features for Day 0 → Day 2.<br>Key Features:
                     <ul>
                         <li>
-                            Platform Engineering & DevOps
+                            Pulumi Private Registry as your single source of truth for components
                         </li>
                         <li>
-                            Cloud and IaC
+                            Self-Service Workflows from no-code to low-code to full-code, whatever fits your team
                         </li>
                         <li>
-                            Security
+                            Integrated Security & Compliance — policies-as-code and centralized config managementPulumi Services - organizational context to streamline Day 2 ops
+                        </li>
+                        <li>
+                            Visual Import - a brand new workflow for turning legacy resources into IaC for easier management and modernization.
                         </li>
                     </ul>
-                    <p>
-                        Hear insights from industry leaders about the current state and future of cloud and IaC, platform engineering, and security.
-                    </p>
                 </p>
                 <div class="my-8">
-                    <a class="btn-primary" href="https://www.youtube.com/live/AMvNG9IkWuI">Watch</a>
+                    <a class="btn-primary" href="/blog/announcing-pulumi-idp/">Discover Pulumi IDP</a>
                 </div>
             </div>
         </div>
@@ -115,7 +109,7 @@
             </div>
             <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
             <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
-                <a class="m-4 sm:m-2 btn-primary" href="https://www.youtube.com/live/AMvNG9IkWuI">Watch</a>
+                <a class="m-4 sm:m-2 btn-primary" href="https://www.youtube.com/live/AMvNG9IkWuI">Watch the Panel</a>
                 </a>
             </div>
         </div>
@@ -188,21 +182,6 @@
                     {{ end }}
                 </div>
             {{ end }}
-        </div>
-    </section>
-
-    <section id="register" class="bg-gray-100">
-        <div class="container mx-auto pb-12">
-            <div class="flex flex-col md:flex-row">
-                <div class="w-full lg:w-1/2 mx-auto p-6">
-                    <div class="mt-10 md:mt-0 bg-gray-200 rounded p-6 shadow">
-                        <h4>
-                            Register to attend PulumiUP
-                        </h4>
-                        <pulumi-hubspot-form form-id="b4031855-a9db-48e3-849e-42a59d4add83"></pulumi-hubspot-form>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
