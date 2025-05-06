@@ -3,7 +3,7 @@ title_tag: Workflows | Pulumi IDP
 title: Workflows
 h1: "Workflows"
 meta_desc: This page provides an overview on Pulumi IDP Workflows.
-weight: 3
+weight: 4
 menu:
   idp:
     parent: idp-get-started
@@ -42,3 +42,5 @@ resources:
 ## Code
 
 In many cases, developers need to author IaC programs – but that doesn’t mean they need to start from scratch. Pulumi Organization Templates are an efficient way for developers to scaffold programs based on platform engineering-authored templates that are built using registry-published components. Templates can be instantiated locally from the CLI or in the Pulumi console using the new project wizard.
+
+{{< get-started-stepper >}}
