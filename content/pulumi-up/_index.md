@@ -14,7 +14,7 @@ aliases:
 panels:
   - title: From Infrastructure Engineering to Platform Engineering
     subtitle:
-    schedule_link: " https://www.bigmarker.com/pulumi/PulumiUP-2025"
+    schedule_link: "https://www.bigmarker.com/pulumi/PulumiUP-2025"
     panelists:
       - name: Josh Kodroff
         image: /images/team/josh-kodroff.jpg

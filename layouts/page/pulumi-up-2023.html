@@ -15,7 +15,7 @@
                 </p>
             </div>
             <div class="my-8 flex flex-col flex-wrap sm:flex-row justify-center">
-                <a class="m-4 sm:m-2 btn-primary" href="#register">Join Now</a>
+                <a class="m-4 sm:m-2 btn-primary" href="{{ (index $.Params.panels 0).schedule_link }}">Join Now</a>
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
                     </p>
                 </p>
                 <div class="my-8">
-                    <a class="btn-primary" href="#register">Join Now</a>
+                    <a class="btn-primary" href="{{ (index $.Params.panels 0).schedule_link }}">Join Now</a>
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@
             <p class="text-lg text-center px-2">Platform engineering bridges development, infrastructure, and operations. This workshop series builds advanced skills for managing cloud infrastructure at scale—register for individual sessions or the full series.</p>
             <div class="flex justify-center my-8">
                 <a href="https://info.pulumi.com/platform-engineering-workshop-series-intermediate#register-to-all" class="btn-primary" target="_blank">Register to All</a>
-                <a href="#register" class="btn-primary ml-2">Register for PulumiUP</a>
+                <a href="{{ (index $.Params.panels 0).schedule_link }}" class="btn-primary ml-2">Register for PulumiUP</a>
             </div>
             <ul class="event-list flex flex-wrap list-none p-0 mb-8 sm:p-2 resource-list">
             {{ range .Params.workshops }}
