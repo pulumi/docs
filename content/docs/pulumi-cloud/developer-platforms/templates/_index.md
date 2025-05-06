@@ -6,9 +6,11 @@ meta_desc: Lean how to build template projects and configure them to work with y
 menu:
   cloud:
     name: Organization templates
-    parent: pulumi-cloud-developer-portals
+    parent: pulumi-cloud-developer-platforms
     weight: 1
-    identifier: pulumi-cloud-developer-portals-organizational-templates
+    identifier: pulumi-cloud-developer-platforms-organizational-templates
+aliases:
+  - /docs/pulumi-cloud/developer-portals/templates/
 ---
 
 {{% notes "info" %}}
@@ -53,10 +55,12 @@ Any occurrences of `${PROJECT}` or `${DESCRIPTION}` -- in `Pulumi.yaml` or any o
 
 ## Using Organization Templates within your Pulumi organization
 
-A Pulumi organization admin can configure their organization to use Organization Templates with the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard). By doing so, your organization's members will be able to:
+Organization templates are available to users in the [private registry](idp-get-started-private-registry). They also power the New Project Wizard workflow.
 
-* Template and configure new Pulumi projects from their browser.
-* Automatically push code for new projects into new or existing GitHub repositories.
+By doing publishing organization templates, your organization's members will be able to:
+
+* Discover template in the [private registry](idp-get-started-private-registry).
+* Configure and launch new Pulumi projects from their browser.
 * Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments) to automatically work with new projects.
 
 ### Prerequisites
@@ -90,4 +94,4 @@ Enter sources as `github.com/<owner>/<repo>/<optional subdirectory>`. A source c
 
 Private repositories work similarly as long as your GitHub user has access to the repository.
 
-After you have configured template sources, the New Project Wizard will allow users to use those sources when creating new projects with Deployments.
+After you have configured template sources, the private registry and New Project Wizard will allow users to use those sources when creating new projects with Deployments.

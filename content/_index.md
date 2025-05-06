@@ -28,6 +28,12 @@ pillars:
           title: Manage
           description: Gain security, compliance, and cost insights into the entirety of an organization’s cloud assets and automatically remediate issues.
 
+idp:
+  title: The Fastest, Most Secure Way to Deliver Cloud Infrastructure
+  image: /images/product/homepage-idp.png
+  description: |
+    Deliver production-ready cloud infrastructure to developers through flexible self-service – with guardrails, governance, and best practices built in.
+
 code_faster:
   title: Ship faster with <br/> infrastructure as code in any programming language
   description: |
@@ -116,6 +122,11 @@ customer_logos:
       link: /case-studies/
 
 customer_quotes:
+  clear:
+    text: |
+      “We’ve spent a lot of time building our internal developer platform. We moved from a lower-level Terraform and HCL-based interface to Pulumi, letting us use a custom, higher-level, and much simpler-to-use YAML schema we’ve defined. <b>We've made cloud infrastructure really easy to use for our developers.</b>”
+    author: James Forcier, Staff Software Engineer.
+    logo: clear
   panther:
     text: |
       “Our developers needed a fast, modular, and testable platform for managing cloud infrastructure. <b>Nothing is better than having standard programming languages for building and managing infrastructure</b>”
