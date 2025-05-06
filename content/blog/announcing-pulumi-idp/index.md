@@ -23,6 +23,7 @@ social:
 Today, we’re excited to introduce Pulumi IDP, the latest evolution of the Pulumi Cloud Platform, designed to help organizations automate, secure, and manage everything they run in the cloud.
 
 <!--more-->
+{{< blog/cta-button "Get Started with Pulumi IDP" "/docs/idp/get-started/" >}}
 
 For the past eight years, we’ve helped organizations simplify the deployment and management of their infrastructure. Pulumi launched at the height of DevOps, bringing general-purpose programming languages to infrastructure as code (IaC) at a time when application teams were often manually deploying their own infrastructure. Users were instantly hooked on the ability to leverage familiar programming paradigms to manage their infrastructure.
 
@@ -102,4 +103,4 @@ Services also support properties – metadata that adds important context to a s
 
 ## A New Era for Platform Teams
 
-The Public Preview of Pulumi IDP is just a small portion of our vision to empower platform engineering teams. In the months ahead, we’ll rapidly ship features covering observability, documentation, testing, and more. We hope you’ll join us and provide feedback along the way as we aim to usher in a new era of organizations shipping infrastructure and software at scale.
+Ready to accelerate your platform engineering journey? [Get started with Pulumi IDP today](/product/internal-developer-platforms/) and explore our comprehensive [documentation](/docs/idp/get-started/) to learn how to build self-service infrastructure workflows, establish golden paths, and boost developer productivity. Join the growing community of platform engineers who are transforming how their organizations deliver and manage cloud infrastructure at scale.
