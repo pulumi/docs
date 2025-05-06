@@ -96,13 +96,11 @@ $ mkdir file-provider
 $ cd file-provider
 ```
 
-{{< chooser language "go" >}}
-
-{{% choosable language go %}}
-
 #### Create `go.mod` file
 
-The `go.mod` file defined the Go project. It sets up the name of the Go module, the runtime requirements, and the module dependencies. We need the Pulumi Provider SDK (aka `github.com/pulumi/pulumi-go-provider`) as well as the standard Pulumi SDK (aka `github.com/pulumi/pulumi/sdk/v3`).
+The `go.mod` file defines the Go project. It sets up the name of the Go module, the runtime requirements, and the module dependencies. We need the Pulumi Provider SDK (aka `github.com/pulumi/pulumi-go-provider`) as well as the standard Pulumi SDK (aka `github.com/pulumi/pulumi/sdk/v3`).
+
+***Example**: `go.mod`*
 
 ```go
 module example.com/file-provider
@@ -117,39 +115,27 @@ require (
 )
 ```
 
-Once that file is created, go ahead and download the dependencies using `go get`:
+Once that file is created, download the dependencies using `go get`:
 
 ```sh
 $ go get example.com/file-provider
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 #### Create `PulumiPlugin.yaml` file
 
 The only other file you'll need is the `PulumiPlugin.yaml` file. This tells Pulumi two things: that this code can be loaded as a provider plugin, and what runtime environment to use for that.
 
-{{< chooser language "go" >}}
-
-{{% choosable language go %}}
+***Example:** `PulumiPlugin.yaml`*
 
 ```yaml
 runtime: go
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 ### Implement the interface
 
-{{< chooser language "go" >}}
+To implement the provider, first create a file called `main.go` with the following contents:
 
-{{% choosable language go %}}
-
-To implment the provider, first create a file called `main.go` with the following contents:
+***Example:** `main.go`*
 
 ```go
 package main
@@ -350,15 +336,11 @@ func (*File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *File
 }
 ```
 
-We'll go through this code in detail in a bit, but for now, let's give it a try in a Pulumi program.
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+We'll go through this code in detail in a moment, but for now, let's give it a try in a Pulumi program.
 
 ### Use the provider in a Pulumi program
 
-Let's create a minimal Pulumi program that uses our new provider:
+First, create a Pulumi program that uses our new provider:
 
 ```sh
 $ cd ..
@@ -367,9 +349,9 @@ $ cd use-file-provider
 $ pulumi new yaml
 ```
 
-This will initiatize a minimal YAML program.
+This will initiatize a minimal YAML program. Let's modify the default YAML file:
 
-Edit the `Pulumi.yaml` file to have the following contents:
+***Example:** The `Pulumi.yaml` file*
 
 ```yaml
 name: use-file-provider
@@ -413,10 +395,6 @@ An important piece of information
 ```
 
 ### Detailed breakdown of provider implementation
-
-{{< chooser language "go" >}}
-
-{{% choosable language go %}}
 
 #### Preample and dependencies
 
@@ -673,7 +651,7 @@ func (*File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState
 }
 ```
 
-#### The `Read` function
+#### The `Read` operation
 
 The `Read` operation fetches the resource. The `ReadRequest` has a `ID` property that can be used, in this case, to determine the path to the file, and the base library functions can be used to read the file from disk, populating the `Content` field.
 
@@ -713,10 +691,6 @@ func (*File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *File
 }
 ```
 
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 <!-- TODO: write this section
 
 ### Testing with the SDK
@@ -743,7 +717,7 @@ Historically, Pulumi providers required a `schema.json` file. This is now genera
 
 <!-- TODO: Add example of using the file provider in all target languages in a chooser. -->
 
-## Packaging and Publishing
+## Packaging and publishing
 
 Using a provider from another directory on your local filesystem is the easiest way to develop a new custom provider. However, once you're ready to share with others at your company, or with the world, you'll need to explore how to publish and package your provider for consumption. There are many ways to accomplish this, from hosting either publicly or privately in GitHub and GitLab, using a private registry within Pulumi Cloud, or publishing to the public Pulumi registry.
 
