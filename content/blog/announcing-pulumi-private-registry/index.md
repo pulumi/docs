@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Private Registry: The Source of Truth for Golden Paths"
 allow_long_title: true
-date: 2025-05-06
+date: 2025-05-07
 draft: false
 meta_desc: "Introducing Pulumi Private Registry: The source of truth for secure and compliant golden path building blocks."
 meta_image: meta.png
