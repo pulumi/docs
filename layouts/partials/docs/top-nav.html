@@ -4,6 +4,8 @@
     {{ $selection = "iac" }}
 {{ else if hasPrefix .Path "/docs/esc" }}
     {{ $selection = "esc" }}
+{{ else if hasPrefix .Path "/docs/idp" }}
+    {{ $selection = "idp" }}
 {{ else if hasPrefix .Path "/docs/pulumi-cloud" }}
     {{ $selection = "cloud" }}
 {{ else if hasPrefix .Path "/docs/insights" }}
@@ -26,6 +28,9 @@
     </a>
     <a class="whitespace-nowrap tab {{ if eq $selection "esc" }}tab-selected{{ end }}" href="/docs/esc/">
         <span>Pulumi ESC</span>
+    </a>
+    <a class="whitespace-nowrap tab {{ if eq $selection "idp" }}tab-selected{{ end }}" href="/docs/idp/">
+        <span>Pulumi IDP</span>
     </a>
     <a class="whitespace-nowrap tab {{ if eq $selection "insights" }}tab-selected{{ end }}" href="/docs/insights/">
         <span>Pulumi Insights</span>

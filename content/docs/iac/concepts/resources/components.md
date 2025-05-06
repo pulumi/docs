@@ -488,9 +488,13 @@ public class App {
 
 ### Publishing the Component
 
-Once a component is authored, it can be pushed to a git repo and consumed remotely; or, in situations like monorepos, the component can be referenced locally.
+Once a component is authored, it can be published to the [IDP Private Registry](/docs/idp/get-started/private-registry/) or consumed directly from a git repo.
 
-#### Git Consumption
+#### Private Registry Publishing
+
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/pulumi-cloud/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/idp/get-started/private-registry/).
+
+#### Consumption
 
 In the consuming Pulumi application, add the component as a dependency.
 
