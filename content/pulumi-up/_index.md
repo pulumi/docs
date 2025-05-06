@@ -2,7 +2,7 @@
 title: "PulumiUP: Infrastructure as Code Conference | May 6, 2025"
 type: page
 layout: pulumi-up-2023
-meta_image: /images/pulumiup-2023/2025-meta.png
+meta_image: /images/pulumiup/post-2025-meta.png
 meta_desc: |
     PulumiUP is a virtual conference with industry-recognized leaders, demos, and panel discussions about the future of IaC, Platform Engineering & DevOps and Cloud
 
