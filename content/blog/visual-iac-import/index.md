@@ -45,7 +45,7 @@ Visual IaC Import is a guided three-step workflow accessible via the Pulumi Clou
 
 ![Visual IaC Code Generation](visual-iac-import.png)
 
-Throughout the workflow, you maintain full control. Select just what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual IaC Import docs](https://www.pulumi.com/docs/pulumi-cloud/import/).
+Throughout the workflow, you maintain full control. Select what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual IaC Import docs](/docs/pulumi-cloud/import/).
 
 ## Key Benefits
 
