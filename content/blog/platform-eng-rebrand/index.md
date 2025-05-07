@@ -22,15 +22,9 @@ social:
         • Why platforms might actually solve fundamental DevOps limitations
         • How specialization naturally emerges as organizations scale
 ---
-<br/>
-
-<img src="crossroads.png" alt="crossroads photo" style="width:100%;" />
-
 2 Months ago, user [`deacon91`](https://old.reddit.com/r/devops/comments/1izpca1/platform_engineering_fad/), after years of working in the industry has declared DevOps to be a dead end on Reddit's `r/devops`. And I've been thinking about his thoughts on the industry since then.
 
-> My personal hot take is that **DevOps is a dead end**.
->
-> `u/deacon91` on Reddit `/r/devops`
+<img src="Picyard_1746641886795.png" alt="crossroads photo" style="width:100%;" />
 
 His point was that DevOps, the breaking down of silos between development and operations, had been tried. We learned the lessons of this approach and need to do something better: Platform Engineering.
 
@@ -42,13 +36,9 @@ Let's start by summarizing the cynical case - that it's merely a rebrand.
 
 ## The Rebrand Case
 
-<img src="stickers.png" alt="laptop stickers" style="width:100%;" />
+<img src="Picyard_1746642618981.png" alt="There were fad chasers yesterday, there are fad chasers today, and there will be fad chasers tomorrow until the sun burns out" style="width:100%;" />
 
 ### Title Drift
-
-> I've been a SysAdmin, DevOps Engineer, Platform Engineer, and Cloud Engineer. The only difference to me has been the tech stack.
->
-> u/hajimenogio92
 
 This title drift happens in many fields. Just as the garbage man becomes the sanitation worker so does the sysadmin becomes the DevOps engineer.
 
@@ -64,11 +54,7 @@ This is one aspect of what people mean why they say "platform engineering is jus
 
 ### Hype Cycle Reboot
 
-<img src="bingo.png" alt="buzzword bingo" style="width:100%;" />
-
-> There were fad chasers yesterday, there are fad chasers today, and there will be fad chasers tomorrow until the sun burns out
->
-> u/deacon91
+<img src="Picyard_1746642250343.png" alt="There were fad chasers yesterday, there are fad chasers today, and there will be fad chasers tomorrow until the sun burns out" style="width:100%;" />
 
 Tech movements decay in predictable ways. Remember Extreme Programming? It began as a revolution to empower developers. Then it morphed into Agile, and in some places, into the 12 steps, 7 competencies, and many processes of SAFe.
 
@@ -86,7 +72,7 @@ There's some truth to this cynicism, but it blinds us to what platform engineeri
 
 ## The Case for Evolution
 
-<img src="baton.png" alt="baton hand off" style="width:100%;" />
+<img src="stickers.png" alt="laptop stickers" style="width:100%;" />
 
 The original DevOps movement introduced valuable ideas about breaking down silos and encouraging collaboration. However, its purest vision—where "everybody does everything"—faces practical limitations at scale.
 
@@ -103,6 +89,8 @@ Instead of focusing on eliminating silos, it focuses on creating productive abst
 This approach contradicts the original DevOps vision but represents a necessary evolution. Platform Engineering acknowledges inevitable organizational divisions while still enabling collaboration. It leverages skills and organizational workflows from application development and product management to build a way to operate software effectively.
 
 ## Why not both?
+
+<img src="bingo.png" alt="buzzword bingo" style="width:100%;" />
 
 So yeah, title drift is a thing. And the hype cycle is real. But the idea of a dedicated team removing frictions by building tools and resuable abstractions is an idea that's here to stay.
 
