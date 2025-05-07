@@ -1,0 +1,122 @@
+---
+title: "Go from Cloud to Code in Minutes with Visual IaC Import"
+
+# The date represents the post's publish date, and by default corresponds with
+# the date and time this file was generated. Dates are used for display and
+# ordering purposes only; they have no effect on whether or when a post is
+# published. To influence the ordering of posts published on the same date, use
+# the time portion of the date value; posts are sorted in descending order by
+# date/time.
+date: 2025-05-08T14:41:53-05:00
+
+# The draft setting determines whether a post is published. Set it to true if
+# you want to be able to merge the post without publishing it.
+draft: false
+
+# Use the meta_desc property to provide a brief summary (one or two sentences)
+# of the content of the post, which is useful for targeting search results or
+# social-media previews. This field is required or the build will fail the
+# linter test. Max length is 160 characters.
+meta_desc: Introducing Pulumi Visual IaC, allowing users to discover and codify their existing cloud infrastructure.
+
+# The meta_image appears in social-media previews and on the blog home page. A
+# placeholder image representing the recommended format, dimensions and aspect
+# ratio has been provided for you.
+meta_image: visual-iac-import.png
+
+# At least one author is required. The values in this list correspond with the
+# `id` properties of the team member files at /data/team/team. Create a file for
+# yourself if you don't already have one.
+authors:
+    - dan-biwer
+
+# At least one tag is required. Lowercase, hyphen-delimited is recommended.
+tags:
+    - iac
+    - import
+    - insights
+
+
+# The social copy used to promote this post on Twitter and Linkedin. These
+# properties do not actually create the post and have no effect on the
+# generated blog page. They are here strictly for reference.
+
+# Here are some examples of posts we have made in the past for inspiration:
+# https://www.linkedin.com/feed/update/urn:li:activity:7171191945841561601
+# https://www.linkedin.com/feed/update/urn:li:activity:7169021002394296320
+# https://www.linkedin.com/feed/update/urn:li:activity:7155606616455737345
+# https://twitter.com/PulumiCorp/status/1763265391042654623
+# https://twitter.com/PulumiCorp/status/1762900472489185492
+# https://twitter.com/PulumiCorp/status/1755637618631405655
+
+social:
+    twitter:
+    linkedin:
+
+# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
+# for details, and please remove these comments before submitting for review.
+---
+
+Pulumi is excited to announce the release of **Visual IaC Import**, a new feature that transforms the way platform teams onboard existing cloud infrastructure into Pulumi. With Visual IaC Import, you can discover unmanaged cloud resources across your organization, organize them into logical units, and instantly generate high-quality Pulumi code—with AI enhancements built in.
+
+Visual IaC Import is now available for all Team and Enterprise customers with Pulumi Insights enabled.
+
+## Modern Infrastructure, Codified Faster
+
+One of the biggest challenges platform teams face when adopting infrastructure as code is migrating existing cloud deployments. Legacy scripts, manual configurations, and scattered resource ownership all slow down progress. Visual IaC Import solves this by making the journey from cloud to code seamless and intuitive.
+
+Instead of manually digging through consoles and writing boilerplate code by hand, Visual IaC Import enables teams to:
+
+* **Discover** all cloud resources—across any number of accounts—via Pulumi Insights.
+* **Select** and group resources into meaningful stacks, services, or projects.
+* **Generate** production-ready Pulumi code in your language of choice.
+* **Enhance** that code using Pulumi Copilot, which refines formatting, naming, references, and documentation.
+* **Integrate** with your development workflows by downloading, editing, and importing Pulumi code into your existing repositories.
+
+Whether you’re modernizing infrastructure, unifying multi-account environments, or enabling developers to adopt infrastructure as code more easily, Visual IaC Import gives you a fast, repeatable onramp to scalable, consistent cloud management.
+
+## How It Works
+
+Visual IaC Import is a guided three-step workflow accessible via the Pulumi Cloud Console:
+
+1. Select Resources: Use powerful filters and grouping tools to find the resources you want to codify. Whether you're capturing a full service or just a few related components, Visual IaC Import gives you visibility and precision.
+2. Review References: Automatically discover and select dependent resources—ensuring your code captures the right context and connectivity between infrastructure elements.
+3. Generate Code: Choose your preferred language and preview or download fully-formed Pulumi code. You can refine it manually or invoke Pulumi Copilot to improve naming, structure, and comments.
+
+![Visual IaC Code Generation](visual-iac-import.png)
+
+Throughout the workflow, you maintain full control. Select just what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual IaC Import docs](https://www.pulumi.com/docs/pulumi-cloud/import/).
+
+## Key Benefits
+
+### Accelerated Migration
+
+Visual IaC Import dramatically shortens the time it takes to transition existing cloud infrastructure into a managed, version-controlled state. What previously required weeks of manual discovery, scripting, and trial-and-error can now be accomplished in a matter of hours.
+
+Whether you're consolidating legacy environments, auditing infrastructure before a cloud cost review, or preparing for a compliance milestone, Visual IaC Import automates much of the busywork—so your team can focus on what matters.
+
+### Increased Developer Productivity
+
+Manually transitioning existing infrastructure to code often pulls developers away from their primary focus—building and improving services. By automating code generation and applying intelligent AI enhancements, Visual IaC Import lets teams spend less time writing boilerplate code and fighting resource drift, and more time shipping meaningful changes.
+  
+Pulumi Copilot adds a layer of polish that typically requires hands-on review and iteration, saving your team valuable time while helping new contributors write clear, consistent infrastructure code from the start.
+
+### Consistent, Reliable Infrastructure
+
+Unifying your cloud environments under a single IaC framework brings consistency, accountability, and repeatability to operations. Pulumi’s typed IaC model makes configurations explicit and auditable, while policies and CI/CD integrations enforce best practices from the start.  
+
+Once resources are in code, you can take full advantage of Pulumi Cloud’s full suite of features: define and enforce policies with CrossGuard, gain visibility into your entire infrastructure through Pulumi Insights, manage state with ESC’s secrets management, and automate workflows through Pulumi Deployments.
+
+By codifying your infrastructure, you reduce the risk of configuration drift, simplify onboarding, and ensure reproducibility across staging and production.
+
+## From Insights to IaC—Seamlessly
+
+Visual IaC Import builds on Pulumi Insights, providing a natural path from discovery to codification. If you're already using Insights to monitor and visualize your infrastructure, you can now convert those resources into managed, versioned code in just a few clicks.
+
+And with built-in support for dependency analysis and cross-account visibility, you can finally treat your entire infrastructure portfolio as a single, coherent system—even if it wasn't built that way.
+
+## Try It Today
+
+Visual IaC Import is now available in the Pulumi Cloud Console for Team and Enterprise users. If you’re ready to modernize your infrastructure and empower your teams with a fast path to Infrastructure as Code, there’s no better place to start.
+
+[Log in to Pulumi Cloud](https://app.pulumi.com/) and select **IaC / Import** to get started.
