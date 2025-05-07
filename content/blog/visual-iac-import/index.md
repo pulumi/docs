@@ -3,7 +3,7 @@ title: "Go from Cloud to Code in Minutes with Visual IaC Import"
 date: 2025-05-08T14:41:53-05:00
 draft: false
 meta_desc: Introducing Pulumi Visual IaC Import—discover, codify, and generate clean infrastructure code with AI assistance.
-meta_image: visual-iac-import.png
+meta_image: meta.png
 authors:
     - insights-team
 tags:
