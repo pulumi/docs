@@ -1,6 +1,6 @@
 ---
 title: "Platform Engineering: Evolution or Rebranding?"
-date: 2025-05-06T16:16:02-04:00
+date: 2025-05-12
 draft: false
 simple_layout: true
 meta_desc: Is platform engineering a genuine evolution of DevOps or just a rebrand? We explore both perspectives on this industry trend.
@@ -26,9 +26,9 @@ social:
 
 <img src="crossroads.png" alt="crossroads photo" style="width:100%;" />
 
-2 Months ago, user `deacon91`, after years of working in the industry has declared DevOps to be a dead end on Reddit's `r/devops`. And I've been thinking about his thoughts on the industry since then.
+2 Months ago, user [`deacon91`](https://old.reddit.com/r/devops/comments/1izpca1/platform_engineering_fad/), after years of working in the industry has declared DevOps to be a dead end on Reddit's `r/devops`. And I've been thinking about his thoughts on the industry since then.
 
-> My personal hot take is that DevOps (in the truest sense of the word) is a dead end.
+> My personal hot take is that **DevOps is a dead end**.
 >
 > `u/deacon91` on Reddit `/r/devops`
 
@@ -106,8 +106,10 @@ This approach contradicts the original DevOps vision but represents a necessary 
 
 So yeah, title drift is a thing. And the hype cycle is real. But the idea of a dedicated team removing frictions by building tools and resuable abstractions is an idea that's here to stay.
 
-In fact, it's just a way to scale the principles inherent in the original ideas of DevOps. In other words, it may technically diverge from the literal principles of DevOps, but it is most definitely true to the spirit.
+In fact, it's just a way to scale the principles inherent in the original ideas of DevOps. It may technically diverge from the literal principles of DevOps, but it is most definitely true to the spirit.
 
-Or at least that is my take after thinking long and hard about [deacon91's comment on r/devops](https://old.reddit.com/r/devops/comments/1izpca1/platform_engineering_fad/)
+At Pulumi, we see this evolution firsthand. Our most forward-looking users aren’t chasing titles—they’re building internal platforms that empower teams, reduce friction, and let developers focus on what matters most. That’s why we’re investing in [platform team features](https://www.pulumi.com/blog/announcing-pulumi-idp/#platform-teams).
 
-If you'd like to here more about Platform Engineering, check out [this platform engineering series](/blog/tag/platform-engineering-pillars/). And also this great ebook on using Pulumi to build [IaC platform components](https://info.pulumi.com/ebook/platform-engineering-iac-recommended-practices).
+Not because it’s trendy—but because, done well, it works. And I think that’s the insight `deacon91` was getting at.
+
+[**Get a Free Platform Engineering Guide →**](https://info.pulumi.com/ebook/platform-engineering-iac-recommended-practices)
