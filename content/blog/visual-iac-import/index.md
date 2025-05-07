@@ -5,7 +5,7 @@ draft: false
 meta_desc: Introducing Pulumi Visual IaC Import—discover, codify, and generate clean infrastructure code with AI assistance.
 meta_image: visual-iac-import.png
 authors:
-    - dan-biwer
+    - insights-team
 tags:
     - iac
     - import
