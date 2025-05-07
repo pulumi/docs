@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Introducing Pulumi Visual IaC, allowing users to discover and codify their existing cloud infrastructure.
+meta_desc: Introducing Pulumi Visual IaC Import—discover, codify, and generate clean infrastructure code with AI assistance.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
