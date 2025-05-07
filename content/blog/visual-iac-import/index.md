@@ -37,7 +37,7 @@ Whether you’re modernizing infrastructure, unifying multi-account environments
 
 ## How It Works
 
-Visual IaC Import is a guided three-step workflow accessible via the Pulumi Cloud Console:
+Visual IaC Import is a guided three-step workflow within the Pulumi Cloud Console:
 
 1. Select Resources: Use powerful filters and grouping tools to find the resources you want to codify. Whether you're capturing a full service or just a few related components, Visual IaC Import gives you visibility and precision.
 2. Review References: Automatically discover and select dependent resources—ensuring your code captures the right context and connectivity between infrastructure elements.
