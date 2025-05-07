@@ -27,6 +27,11 @@ workshops:
         description: Discover how to revolutionize cloud infrastructure management with Pulumi's enhanced GitLab integration at our June 11th workshop, where you'll learn to create automated pipelines and standardize organizational patterns.
         link: /events/modern-infrastructure-automation-with-pulumi-and-gitlab/
         action: Register Now
+      - title: Workload Observability with Pulumi and Honeycomb
+        date: July 17, 2025
+        description:  Deliver "observability as code" with Pulumi and Honeycomb. Automate SLOs, detect critical issues, and transform your platform engineering approach.
+        link: /events/workload-observability-with-pulumi-and-honeycomb/
+        action: Register Now
 
 templates:
     items:
