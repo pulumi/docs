@@ -10,7 +10,7 @@ tags:
     - iac
     - import
     - insights
-    - feature
+    - features
 
 social:
     twitter:
