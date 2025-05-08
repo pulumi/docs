@@ -32,9 +32,6 @@ Consider the following scenario where a program fails at runtime. While the stan
 
 <div style="text-align: center; width: 100%; margin: 0 auto;">
     <img src="summarize2.png" alt="" style="width: 100%;">
-    <figcaption>
-        <i>Auto-summarization of pulumi preview</i>
-    </figcaption>
 </div>
 
 ## Update explanation
@@ -49,9 +46,6 @@ The image below shows an example of the tool's output. The explanation provides 
 
 <div style="text-align: center; width: 100%; margin: 0 auto;">
     <img src="explain.png" alt="" style="width: 100%;">
-    <figcaption>
-        <i>Auto-summarization of pulumi preview</i>
-    </figcaption>
 </div>
 
 ## What's next
