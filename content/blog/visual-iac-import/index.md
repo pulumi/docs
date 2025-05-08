@@ -76,7 +76,7 @@ And with built-in support for dependency analysis and cross-account visibility, 
 
 ## Leverage the Full Power of Pulumi Cloud
 
-Once resources are in code, you can take full advantage of Pulumi Cloud’s full suite of features: define and enforce policies with CrossGuard, gain visibility into your entire infrastructure through [Pulumi Insights](/docs/insights/), manage state with [ESC’s secrets management](/docs/esc/get-started/), and automate workflows through [Pulumi Deployments](/docs/pulumi-cloud/deployments). Together, these features turn your infrastructure into a governed, observable, and continuously deployable system—built for modern cloud operations.
+Once resources are in code, you can take full advantage of Pulumi Cloud’s full suite of features: define and enforce policies with CrossGuard, gain visibility into your entire infrastructure through [Pulumi Insights](/docs/insights/), manage state with [ESC’s secrets management](/docs/esc/get-started/), and automate workflows through [Pulumi Deployments](/docs/pulumi-cloud/deployments). Together, these features turn your infrastructure into a governed, observable, and continuously deployable system built for modern cloud operations.
 
 ## Try It Today
 
