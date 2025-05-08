@@ -27,10 +27,21 @@ Update explanation: want to validate that what you expect to happen is what is a
 
 ## Examples
 
+(test 1:)
+
 Here the original error is precise and detailed, but the Copilot Diagnostics points directly to the problem, with the exact location of the issue in the source code.
 
 <div style="text-align: center; width: 100%; margin: 0 auto;">
     <img src="summarize1.png" alt="" style="width: 100%;">
+    <figcaption>
+        <i>Auto-summarization of pulumi preview</i>
+    </figcaption>
+</div>
+
+(test 2:)
+
+<div style="text-align: center; width: 100%; margin: 0 auto;">
+    <img src="summarize2.png" alt="" style="width: 100%;">
     <figcaption>
         <i>Auto-summarization of pulumi preview</i>
     </figcaption>
