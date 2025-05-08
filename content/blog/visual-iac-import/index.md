@@ -19,7 +19,7 @@ social:
 
 Pulumi is excited to announce the release of **Visual IaC Import**, a new feature that transforms the way platform teams onboard existing cloud infrastructure into Pulumi. With Visual IaC Import, you can discover unmanaged cloud resources across your organization, organize them into logical units, and instantly generate high-quality Pulumi code—with AI enhancements built in.
 
-Visual IaC Import is now available for all Team and Enterprise customers with Pulumi Insights enabled.
+Visual IaC Import is now available for all Team, Enterprise and Business Critical customers with Pulumi Insights enabled.
 
 ## Modern Infrastructure, Codified Faster
 
@@ -77,6 +77,6 @@ And with built-in support for dependency analysis and cross-account visibility, 
 
 ## Try It Today
 
-Visual IaC Import is now available in the Pulumi Cloud Console for Team and Enterprise users. If you’re ready to modernize your infrastructure and empower your teams with a fast path to Infrastructure as Code, there’s no better place to start.
+Visual IaC Import is now available in the Pulumi Cloud Console for Team, Enterprise and Business Critical users. If you’re ready to modernize your infrastructure and empower your teams with a fast path to Infrastructure as Code, there’s no better place to start.
 
 [Log in to Pulumi Cloud](https://app.pulumi.com/) and select **IaC / Import** to get started.
