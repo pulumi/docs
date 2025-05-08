@@ -10,6 +10,7 @@ tags:
     - iac
     - import
     - insights
+    - feature
 
 social:
     twitter:
@@ -19,7 +20,7 @@ social:
 
 Pulumi is excited to announce the release of **Visual IaC Import**, a new feature that transforms the way platform teams onboard existing cloud infrastructure into Pulumi. With Visual IaC Import, you can discover unmanaged cloud resources across your organization, organize them into logical units, and instantly generate high-quality Pulumi code—with AI enhancements built in.
 
-Visual IaC Import is now available for all Team, Enterprise and Business Critical customers with Pulumi Insights enabled.
+Visual IaC Import is now available for all Team, Enterprise and Business Critical customers with [Pulumi Insights](/docs/insights/) enabled.
 
 ## Modern Infrastructure, Codified Faster
 
@@ -27,7 +28,7 @@ One of the biggest challenges platform teams face when adopting infrastructure a
 
 Instead of manually digging through consoles and writing boilerplate code by hand, Visual IaC Import enables teams to:
 
-* **Discover** all cloud resources—across any number of accounts—via Pulumi Insights.
+* **Discover** all cloud resources—across any number of accounts—via [Pulumi Insights](/docs/insights/).
 * **Select** and group resources into meaningful stacks, services, or projects.
 * **Generate** production-ready Pulumi code in your language of choice.
 * **Enhance** that code using Pulumi Copilot, which refines formatting, naming, references, and documentation.
@@ -65,8 +66,6 @@ Pulumi Copilot adds a layer of polish that typically requires hands-on review an
 
 Unifying your cloud environments under a single IaC framework brings consistency, accountability, and repeatability to operations. Pulumi’s typed IaC model makes configurations explicit and auditable, while policies and CI/CD integrations enforce best practices from the start.  
 
-Once resources are in code, you can take full advantage of Pulumi Cloud’s full suite of features: define and enforce policies with CrossGuard, gain visibility into your entire infrastructure through Pulumi Insights, manage state with ESC’s secrets management, and automate workflows through Pulumi Deployments.
-
 By codifying your infrastructure, you reduce the risk of configuration drift, simplify onboarding, and ensure reproducibility across staging and production.
 
 ## From Insights to IaC—Seamlessly
@@ -74,6 +73,10 @@ By codifying your infrastructure, you reduce the risk of configuration drift, si
 Visual IaC Import builds on Pulumi Insights, providing a natural path from discovery to codification. If you're already using Insights to monitor and visualize your infrastructure, you can now convert those resources into managed, versioned code in just a few clicks.
 
 And with built-in support for dependency analysis and cross-account visibility, you can finally treat your entire infrastructure portfolio as a single, coherent system—even if it wasn't built that way.
+
+## Leverage the Full Power of Pulumi Cloud
+
+Once resources are in code, you can take full advantage of Pulumi Cloud’s full suite of features: define and enforce policies with CrossGuard, gain visibility into your entire infrastructure through [Pulumi Insights](/docs/insights/), manage state with [ESC’s secrets management](/docs/esc/get-started/), and automate workflows through [Pulumi Deployments](/docs/pulumi-cloud/deployments). Together, these features turn your infrastructure into a governed, observable, and continuously deployable system—built for modern cloud operations.
 
 ## Try It Today
 
