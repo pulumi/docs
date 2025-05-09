@@ -19,7 +19,7 @@ A Pulumi Provider allows you to define new resource types, enabling integration 
 
 ### The provider interface
 
-The Pulumi [Provider](https://pkg.go.dev/github.com/pulumi/pulumi-go-provider#Provider) interface implments the following core methods which form the foundation of Pulumi's resource lifecycle management:
+The Pulumi [Provider](https://pkg.go.dev/github.com/pulumi/pulumi-go-provider#Provider) interface implements the following core methods which form the foundation of Pulumi's resource lifecycle management:
 
 - **Create** – provisions a new resource
 - **Read** – fetches the resource
