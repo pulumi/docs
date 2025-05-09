@@ -110,4 +110,4 @@ After a successful stack update, these resources become Pulumi-managed. Changes 
 
 ## Feedback and Support
 
-We welcome your feedback on Visual IaC Import. If you encounter issues or have suggestions, please reach out via [Pulumi support](https://www.pulumi.com/support/) or your customer success representative.
+We welcome your feedback on Visual IaC Import. If you encounter issues or have suggestions, please reach out via the [Pulumi feedback](https://github.com/pulumi/pulumi-cloud-requests)  site or your customer success representative.
