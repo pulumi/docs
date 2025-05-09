@@ -63,7 +63,7 @@ Some advantages of using the Pulumi Provider SDK:
 
 - **Minimal Code Required**: You define your resource types and implementation using Go structs and methods, and the SDK handles the rest (RPC, auto-generated schema for multi-language support, etc).
 - **Includes a Testing Framework**: Testing custom providers is made much easier with the SDK's built-in testing framework.
-- **Middleware Support**: Enhances providers with layers like token dispatch, schema generation, and cancellation propagation.
+- **Middleware Support**: Enhances providers with layers like dispatch logic, schema generation, and cancellation propagation.
 
 ## Example: Build a custom `file` provider
 
