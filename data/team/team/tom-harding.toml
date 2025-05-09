@@ -1,0 +1,10 @@
+id = "tom-harding"
+name = "Tom Harding"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "i-am-tom"
+linkedin = "i-am-tom"
