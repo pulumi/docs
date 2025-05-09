@@ -147,38 +147,26 @@ import (
 
 	p "github.com/pulumi/pulumi-go-provider"
 	"github.com/pulumi/pulumi-go-provider/infer"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
 	"github.com/pulumi/pulumi/sdk/v3/go/property"
 )
 
 func main() {
-	err := p.RunProvider("file", "0.1.0", provider())
+	provider, err := infer.NewProviderBuilder().
+		WithResources(
+			infer.Resource[File](),
+		).
+		WithNamespace("example").
+		Build()
+
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %s", err.Error())
 		os.Exit(1)
 	}
-}
 
-func provider() p.Provider {
-	return infer.Provider(infer.Options{
-		Resources: []infer.InferredResource{infer.Resource[*File]()},
-		ModuleMap: map[tokens.ModuleName]tokens.ModuleName{
-			"file": "index",
-		},
-	})
+	provider.Run(context.Background(), "file", "0.1.0")
 }
 
 type File struct{}
-
-var _ = (infer.CustomDelete[FileState])((*File)(nil))
-var _ = (infer.CustomCheck[FileArgs])((*File)(nil))
-var _ = (infer.CustomUpdate[FileArgs, FileState])((*File)(nil))
-var _ = (infer.CustomDiff[FileArgs, FileState])((*File)(nil))
-var _ = (infer.CustomRead[FileArgs, FileState])((*File)(nil))
-var _ = (infer.ExplicitDependencies[FileArgs, FileState])((*File)(nil))
-var _ = (infer.Annotated)((*File)(nil))
-var _ = (infer.Annotated)((*FileArgs)(nil))
-var _ = (infer.Annotated)((*FileState)(nil))
 
 func (f *File) Annotate(a infer.Annotator) {
 	a.Describe(&f, "A file projected into a pulumi resource")
@@ -208,7 +196,7 @@ func (f *FileState) Annotate(a infer.Annotator) {
 	a.Describe(&f.Path, "The path of the file.")
 }
 
-func (*File) Create(ctx context.Context, req infer.CreateRequest[FileArgs]) (resp infer.CreateResponse[FileState], err error) {
+func (File) Create(ctx context.Context, req infer.CreateRequest[FileArgs]) (resp infer.CreateResponse[FileState], err error) {
 	if !req.Inputs.Force {
 		_, err := os.Stat(req.Inputs.Path)
 		if !os.IsNotExist(err) {
@@ -216,7 +204,7 @@ func (*File) Create(ctx context.Context, req infer.CreateRequest[FileArgs]) (res
 		}
 	}
 
-	if req.Preview { // Don't do the actual creating if in preview
+	if req.DryRun { // Don't do the actual creating if in preview
 		return infer.CreateResponse[FileState]{ID: req.Inputs.Path}, nil
 	}
 
@@ -242,7 +230,7 @@ func (*File) Create(ctx context.Context, req infer.CreateRequest[FileArgs]) (res
 	}, nil
 }
 
-func (*File) Delete(ctx context.Context, req infer.DeleteRequest[FileState]) (infer.DeleteResponse, error) {
+func (File) Delete(ctx context.Context, req infer.DeleteRequest[FileState]) (infer.DeleteResponse, error) {
 	err := os.Remove(req.State.Path)
 	if os.IsNotExist(err) {
 		p.GetLogger(ctx).Warningf("file %q already deleted", req.State.Path)
@@ -251,7 +239,7 @@ func (*File) Delete(ctx context.Context, req infer.DeleteRequest[FileState]) (in
 	return infer.DeleteResponse{}, err
 }
 
-func (*File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckResponse[FileArgs], error) {
+func (File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckResponse[FileArgs], error) {
 	if _, ok := req.NewInputs.GetOk("path"); !ok {
 		req.NewInputs = req.NewInputs.Set("path", property.New(req.Name))
 	}
@@ -263,8 +251,13 @@ func (*File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckResp
 	}, err
 }
 
-func (*File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {
-	if !req.Preview && req.State.Content != req.Inputs.Content {
+func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {
+	if req.DryRun { // Don't do the update if in preview
+		return infer.UpdateResponse[FileState]{}, nil
+	}
+
+	_, err := os.Stat(req.Inputs.Path)
+	if req.State.Content != req.Inputs.Content || os.IsNotExist(err) {
 		f, err := os.Create(req.State.Path)
 		if err != nil {
 			return infer.UpdateResponse[FileState]{}, err
@@ -286,10 +279,9 @@ func (*File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileS
 			Content: req.Inputs.Content,
 		},
 	}, nil
-
 }
 
-func (*File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState]) (infer.DiffResponse, error) {
+func (File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState]) (infer.DiffResponse, error) {
 	diff := map[string]p.PropertyDiff{}
 	if req.Inputs.Content != req.State.Content {
 		diff["content"] = p.PropertyDiff{Kind: p.Update}
@@ -299,6 +291,11 @@ func (*File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState
 	}
 	if req.Inputs.Path != req.State.Path {
 		diff["path"] = p.PropertyDiff{Kind: p.UpdateReplace}
+	} else {
+		_, err := os.Stat(req.Inputs.Path)
+		if os.IsNotExist(err) {
+			diff["path"] = p.PropertyDiff{Kind: p.Add}
+		}
 	}
 	return infer.DiffResponse{
 		DeleteBeforeReplace: true,
@@ -307,7 +304,7 @@ func (*File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState
 	}, nil
 }
 
-func (*File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState]) (infer.ReadResponse[FileArgs, FileState], error) {
+func (File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState]) (infer.ReadResponse[FileArgs, FileState], error) {
 	path := req.ID
 	byteContent, err := os.ReadFile(path)
 	if err != nil {
@@ -329,7 +326,7 @@ func (*File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState
 	}, nil
 }
 
-func (*File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileState) {
+func (File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileState) {
 	f.OutputField(&state.Content).DependsOn(f.InputField(&args.Content))
 	f.OutputField(&state.Force).DependsOn(f.InputField(&args.Force))
 	f.OutputField(&state.Path).DependsOn(f.InputField(&args.Path))
@@ -396,7 +393,7 @@ An important piece of information
 
 ### Detailed breakdown of provider implementation
 
-#### Preample and dependencies
+#### Preamble and dependencies
 
 Like any other Go langauge module, you start with a `package` declaration and and `import` block. Here we are adding a few important packages from the base library (`context`, `fmt`, and `os`) which will help us with file operations, and a selection of imports from the Pulumi Provider SDK.
 
@@ -410,56 +407,42 @@ import (
 
 	p "github.com/pulumi/pulumi-go-provider"
 	"github.com/pulumi/pulumi-go-provider/infer"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
 	"github.com/pulumi/pulumi/sdk/v3/go/property"
 )
 ```
 
 #### Provider entrypoint and indentity definitions
 
-The next section involves defining the `main()` entrypoint function and the `provider()` constructor.
+The next section involves defining the `main()` entrypoint function and using `infer.NewProviderBuilder()` to construct the provider instance.
 
-The entry point uses `p.RunProvider(...)` to launch the provider process. It takes as arguments the name of the provider, version, and the provider instance itself. The provider instance is returned from the `provider()` constructor. Note that the name and version here will be what your end-user sees in the Pulumi program and should be unique to avoid confusion.
+The entry point uses `provider.Run(...)` to launch the provider process. It takes as arguments the name and version of the provider. Note that the name and version here will be what your end-user sees in the Pulumi program and should be unique to avoid confusion.
 
-The constructor uses `infer.Provider(...)` with an options struct that lists the types of the new Pulumi resources that this provider will export. The `ModuleMap` defines the namespace for these resource types. Note that the `index` portion of this definition isn't used when the user declares a resources. In this example, we're exporting only one resource type: `file:File`.
+Building the provider instance with `infer.NewProviderBuilder(...)` uses a fluent-programming style, setting various configuration options via a chain of methods starting with the word `.With...`. In this example, we use `.WithResource` to export the `File` resource, and `.WithNamespace` to set the namespace that the generated language-specific SDKs will use. Finally, calling `.Build()` will return the provider instance.
 
 ```go
 func main() {
-	err := p.RunProvider("file", "0.1.0", provider())
+	provider, err := infer.NewProviderBuilder().
+		WithResources(
+			infer.Resource[File](),
+		).
+		WithNamespace("example").
+		Build()
+
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %s", err.Error())
 		os.Exit(1)
 	}
-}
 
-func provider() p.Provider {
-	return infer.Provider(infer.Options{
-		Resources: []infer.InferredResource{infer.Resource[*File]()},
-		ModuleMap: map[tokens.ModuleName]tokens.ModuleName{
-			"file": "index",
-		},
-	})
+	provider.Run(context.Background(), "file", "0.1.0")
 }
 ```
 
 #### Define the `File` resource and implement the provider interface
 
-Next, lets define the `File` resource. Start with a simple empty struct to define the type. Then add the `infer` declarations that will allow the provider SDK to work with the resource.
-
-Here we are letting the SDK know that we have implemented `Check`, `Read`, `Update`, `Delete`, and `Diff`. The `ExplicitDependencies` call lets the SDK know we have defined our own `WireDependencies`. Finally, we add a description to the resource using `Annotate`.  
+Next, lets define the `File` resource. Start with a simple empty struct to define the type. Then add a description to the resource using `Annotate`.
 
 ```go
 type File struct{}
-
-var _ = (infer.CustomDelete[FileState])((*File)(nil))
-var _ = (infer.CustomCheck[FileArgs])((*File)(nil))
-var _ = (infer.CustomUpdate[FileArgs, FileState])((*File)(nil))
-var _ = (infer.CustomDiff[FileArgs, FileState])((*File)(nil))
-var _ = (infer.CustomRead[FileArgs, FileState])((*File)(nil))
-var _ = (infer.ExplicitDependencies[FileArgs, FileState])((*File)(nil))
-var _ = (infer.Annotated)((*File)(nil))
-var _ = (infer.Annotated)((*FileArgs)(nil))
-var _ = (infer.Annotated)((*FileState)(nil))
 
 func (f *File) Annotate(a infer.Annotator) {
 	a.Describe(&f, "A file projected into a pulumi resource")
@@ -518,14 +501,14 @@ The `Create` operation handles the logic of determining if the resource exists o
 
 First, we check to see if the user configured the `force` option. We can access that through the `req.Inputs` collection, which is will be an instance of `FileArgs`. If `force` is true, we don't need to check to see if the file exists, otherwise, use `os.Stat` and `os.IsNotExist` to see if the specified directory and filename already exist. If it does, we exist early with an error. This will let Pulumi know that the create operation failed, and it will be propogated up to the end user via the console/log output.
 
-To return an error, we return a null `CreateResponse` instance with an error string. The Provider SDK functions use a request and response pattern for each operation, parameterized by the argument and state types. The next piece of logic checks `req.Preview` to see if we are in a *preview* mode or an *update* mode. If we are in preview mode, don't take any actions that would mutate the state and just return early.
+To return an error, we return a null `CreateResponse` instance with an error string. The Provider SDK functions use a request and response pattern for each operation, parameterized by the argument and state types. The next piece of logic checks `req.DryRun` to see if we are in a *preview* mode or an *update* mode. If we are in preview mode, don't take any actions that would mutate the state and just return early.
 
 Now we can implement the core logic of writing to the filesystem using the base library functions.
 
 Finally, the last thing to do is construct the response object for the Create operation, setting the unique ID for the resource, and the new resource state values as outputs. Returning that response object without errors lets the Pulumi engine know that this operation was successful. Recording the state will be handled by the Pulumi engine.
 
 ```go
-func (*File) Create(ctx context.Context, req infer.CreateRequest[FileArgs]) (resp infer.CreateResponse[FileState], err error) {
+func (File) Create(ctx context.Context, req infer.CreateRequest[FileArgs]) (resp infer.CreateResponse[FileState], err error) {
 	if !req.Inputs.Force {
 		_, err := os.Stat(req.Inputs.Path)
 		if !os.IsNotExist(err) {
@@ -533,7 +516,7 @@ func (*File) Create(ctx context.Context, req infer.CreateRequest[FileArgs]) (res
 		}
 	}
 
-	if req.Preview { // Don't do the actual creating if in preview
+	if req.DryRun { // Don't do the actual creating if in preview
 		return infer.CreateResponse[FileState]{ID: req.Inputs.Path}, nil
 	}
 
@@ -567,7 +550,7 @@ The `Delete` operation removes a resource safely. This operation follows a simil
 One new concept inroduced in this example function is the use of the Pulumi logger. Calling `p.GetLogger(ctx)` gets you a logger with a familiar interface. This is how you might pass informational messages and warnings to the user without throwing an error.
 
 ```go
-func (*File) Delete(ctx context.Context, req infer.DeleteRequest[FileState]) (infer.DeleteResponse, error) {
+func (File) Delete(ctx context.Context, req infer.DeleteRequest[FileState]) (infer.DeleteResponse, error) {
 	err := os.Remove(req.State.Path)
 	if os.IsNotExist(err) {
 		p.GetLogger(ctx).Warningf("file %q already deleted", req.State.Path)
@@ -582,7 +565,7 @@ func (*File) Delete(ctx context.Context, req infer.DeleteRequest[FileState]) (in
 The `Check` operation is used to validate the inputs to a resource, including logic for setting sensible defaults or otherwise mutating the inputs before they are passed to the other functions.
 
 ```go
-func (*File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckResponse[FileArgs], error) {
+func (File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckResponse[FileArgs], error) {
 	if _, ok := req.NewInputs.GetOk("path"); !ok {
 		req.NewInputs = req.NewInputs.Set("path", property.New(req.Name))
 	}
@@ -600,8 +583,13 @@ func (*File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckResp
 The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode of not, and that the input contents are different than the recorded state of the content, we overwrite the file with the new contents.
 
 ```go
-func (*File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {
-	if !req.Preview && req.State.Content != req.Inputs.Content {
+func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {
+	if req.DryRun { // Don't do the update if in preview
+		return infer.UpdateResponse[FileState]{}, nil
+	}
+
+	_, err := os.Stat(req.Inputs.Path)
+	if req.State.Content != req.Inputs.Content || os.IsNotExist(err) {
 		f, err := os.Create(req.State.Path)
 		if err != nil {
 			return infer.UpdateResponse[FileState]{}, err
@@ -623,7 +611,6 @@ func (*File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileS
 			Content: req.Inputs.Content,
 		},
 	}, nil
-
 }
 ```
 
@@ -632,7 +619,7 @@ func (*File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileS
 The `Diff` operation compares a resource's recorded state (if any) to the current input values for the resource, to determine what kind of changes need to be made. The `diff` object is a map of property names to the kind of diff operation (if any) that a property needs to have made. The logic of this function is straightforward: compare `req.Inputs.<propertyName>` to `req.State.<propertyName>` and if they aren't equal, add to the diff that this property needs to be updated using `p.PropertyDiff{Kind: p.Update}`. Only include the properties that need to change in the `diff` map. Finally return a `DiffResponse` containing the `diff` map, and set a few other options to configure the update behavior.
 
 ```go
-func (*File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState]) (infer.DiffResponse, error) {
+func (File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState]) (infer.DiffResponse, error) {
 	diff := map[string]p.PropertyDiff{}
 	if req.Inputs.Content != req.State.Content {
 		diff["content"] = p.PropertyDiff{Kind: p.Update}
@@ -642,6 +629,11 @@ func (*File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState
 	}
 	if req.Inputs.Path != req.State.Path {
 		diff["path"] = p.PropertyDiff{Kind: p.UpdateReplace}
+	} else {
+		_, err := os.Stat(req.Inputs.Path)
+		if os.IsNotExist(err) {
+			diff["path"] = p.PropertyDiff{Kind: p.Add}
+		}
 	}
 	return infer.DiffResponse{
 		DeleteBeforeReplace: true,
@@ -656,7 +648,7 @@ func (*File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState
 The `Read` operation fetches the resource. The `ReadRequest` has a `ID` property that can be used, in this case, to determine the path to the file, and the base library functions can be used to read the file from disk, populating the `Content` field.
 
 ```go
-func (*File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState]) (infer.ReadResponse[FileArgs, FileState], error) {
+func (File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState]) (infer.ReadResponse[FileArgs, FileState], error) {
 	path := req.ID
 	byteContent, err := os.ReadFile(path)
 	if err != nil {
@@ -684,7 +676,7 @@ func (*File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState
 Finally, `WireDependencies` defines the outputs that are made available on the resource, logically connecting the inputs and stored state values.
 
 ```go
-func (*File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileState) {
+func (File) WireDependencies(f infer.FieldSelector, args *FileArgs, state *FileState) {
 	f.OutputField(&state.Content).DependsOn(f.InputField(&args.Content))
 	f.OutputField(&state.Force).DependsOn(f.InputField(&args.Force))
 	f.OutputField(&state.Path).DependsOn(f.InputField(&args.Path))
