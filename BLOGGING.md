@@ -3,6 +3,12 @@
 So you're interested in contributing to the Pulumi blog? Great! Follow these
 steps to make it happen.
 
+> **Related documentation:**
+> - [CONTRIBUTING.md](CONTRIBUTING.md) - General contribution guidelines
+> - [STYLE-GUIDE.md](STYLE-GUIDE.md) - Comprehensive style and UX standards
+> - [CODE-EXAMPLES.md](CODE-EXAMPLES.md) - Guidelines for code examples
+> - [SEO.md](SEO.md) - SEO optimization checklist
+
 ## Set Up Your Development Environment
 
 If you haven't already, clone this repository and
