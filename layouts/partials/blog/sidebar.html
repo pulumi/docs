@@ -30,6 +30,7 @@
 
         <hr class="my-8" />
 
+        {{ if not .Page.Params.simple_layout }}
         <div class="my-4">
             <h5 class="no-anchor">Recent Posts</h5>
             <ul class="list-none p-0">
@@ -71,6 +72,7 @@
             {{ end }}
         </ul>
         <a class="text-blue-600 text-sm block m-1 mb-4" href="{{ relref . "/blog/tag" }}">All blog tags &rarr;</a>
+        {{ end }}
     </div>
 
     <div class="lg:hidden pb-4">
