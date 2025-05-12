@@ -5,7 +5,7 @@ meta_desc: Pulumi is an infrastructure management platform to automate through i
 include_organization_schema: true
 
 hero:
-  title: [ "Automate, Secure, and Manage", "Everything You Run in the Cloud" ]
+  title: [ "The Cloud Infrastructure Platform", "Engineers Love and Enterprises Trust" ]
   description: |
     Powered by the #1 open source infrastructure as code tool.
   cta_text: Try Pulumi Cloud for Free
