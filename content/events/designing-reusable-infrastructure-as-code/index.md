@@ -60,12 +60,9 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Rob Smith
-          role: Solutions Architect, Pulumi
-          photo: /images/team/Rob-Smith.png
-        - name: Mark Huber
-          role: Senior Product Manager, Pulumi
-          photo: /images/team/mark-huber.jpg
+        - name: Engin Diri
+          role: Senior Solutions Architect, Pulumi
+          photo: /images/team/engin-diri.jpg
 
     # case-sensitive
     tags:
