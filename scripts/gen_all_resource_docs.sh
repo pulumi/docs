@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # A script to generate the schema-based resource docs for all of the providers for which we can generate
 # a Pulumi schema.

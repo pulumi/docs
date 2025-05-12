@@ -43,3 +43,7 @@ origin-bucket-metadata.json
 
 # Ignore js scripts added to the static folder
 static/js
+
+# Ignore files installed with devbox
+devbox.json
+.devbox
