@@ -73,18 +73,18 @@ When you run `pulumi package add`, the package is automatically added to your Pu
 packages:
   random:
     source: terraform-provider
-    # The version of terraform-provider in the Pulumi registry. 
+    # The version of terraform-provider in the Pulumi registry.
     # This is automatically added by the `pulumi package add` command:
-    version: 0.10.0 
+    version: 0.10.0
     parameters:
       - hashicorp/random
       # The version of hashicorp/random in the OpenTofu Registry.
       # This is not a required parameter, but you may wish to include
-      # it at the command line or add it after the fact in Pulumi.yaml 
-      # in order to ensure consistent builds. If this value is not 
-      # specified, the provider will take the latest version of 
+      # it at the command line or add it after the fact in Pulumi.yaml
+      # in order to ensure consistent builds. If this value is not
+      # specified, the provider will take the latest version of
       # the OpenTofu provider.
-      - 3.7.1 
+      - 3.7.1
 ```
 
 You can install any packages tracked in the project configuration file with the [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) command:
