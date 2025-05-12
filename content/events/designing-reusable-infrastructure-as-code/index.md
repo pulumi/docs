@@ -61,7 +61,7 @@ main:
     # The webinar presenters
     presenters:
         - name: Engin Diri
-          role: Snr Solutions Architect, Pulumi
+          role: Senior Solutions Architect, Pulumi
           photo: /images/team/engin-diri.jpg
 
     # case-sensitive
