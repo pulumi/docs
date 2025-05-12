@@ -6952,7 +6952,29 @@ curl \
 #### Default response
 
 ```
-Status: 204 No Content
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "new-service-name",
+  "description": "New description",
+  "itemCountSummary": {},
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
 ```
 
 ### Delete Service
@@ -6963,12 +6985,13 @@ DELETE /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}
 
 #### Parameters
 
-| Parameter           | Type   | In    | Description                             |
-|---------------------|--------|-------|-----------------------------------------|
-| `organization`      | string | path  | organization name                       |
-| `ownerType`         | string | path  | type of the owner (e.g. "user", "team") |
-| `ownerName`         | string | path  | name of the owner                       |
-| `serviceName`       | string | path  | name of the service                     |
+| Parameter           | Type    | In    | Description                                                   |
+|---------------------|---------|-------|---------------------------------------------------------------|
+| `organization`      | string  | path  | organization name                                             |
+| `ownerType`         | string  | path  | type of the owner (e.g. "user", "team")                       |
+| `ownerName`         | string  | path  | name of the owner                                             |
+| `serviceName`       | string  | path  | name of the service                                           |
+| `force`             | boolean | query | **Optional.** ignore protections and force delete the service |
 
 #### Example
 
@@ -6978,7 +7001,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
-  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service?force=true
 ```
 
 #### Default response
@@ -7014,11 +7037,11 @@ curl \
   --data '{ "items": [
     {
       "type": "stack",
-      "name": "my-project/my-stack",
+      "name": "my-project/my-stack"
     },
     {
       "type": "environment",
-      "name": "my-project/my-environment",
+      "name": "my-project/my-environment
     }
   ] }' \
   https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service/items
@@ -7027,7 +7050,32 @@ curl \
 #### Default response
 
 ```
-Status: 204 No Content
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "my-service",
+  "description": "My service",
+  "itemCountSummary": {
+    "stack": 1,
+    "environment": 1
+  },
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
 ```
 
 ### Remove Service Item
@@ -7061,5 +7109,29 @@ curl \
 #### Default response
 
 ```
-Status: 204 No Content
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "my-service",
+  "description": "My service",
+  "itemCountSummary": {
+    "environment": 1
+  },
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
 ```
