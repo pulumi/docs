@@ -50,33 +50,42 @@ For example, to generate a local SDK for the [`hashicorp/random` provider](https
 pulumi package add terraform-provider hashicorp/random
 ```
 
+This command does two things:
+
+1. Generates a local SDK in the language of your Pulumi program
+1. Automatically adds the package to your `Pulumi.yaml` file under the `packages` key
+
 {{% notes type="tip" %}}
 In order to make sure Pulumi users are aware of the Any Terraform Provider's capabilities, Pulumi has included select, popular providers that can be consumed in Pulumi via the Any Terraform Provider in the Pulumi Registry, such as [The Honeycomb provider](/registry/packages/honeycombio/).
 {{% /notes %}}
 
 The generated SDK will include a `.gitignore` so it can be safely committed to version control without including all of the SDK's dependencies. The SDK installation process also downloads the provider binary to a shared location on your local system outside of the working directory. The binary is cached, so it will not need to be downloaded more than once, and is not committed to version control.
 
-#### Adding Provider Packages to the Project Configuration File
+#### About Provider Packages in the Project Configuration File
 
 {{% notes type="info" %}}
-Adding provider packages to your project configuration file requires Pulumi version 3.157.0 or later.
+When using `pulumi package add` with Pulumi version 3.157.0 or later, packages are automatically added to your project configuration file (`Pulumi.yaml`).
 {{% /notes %}}
 
-You can avoid the need to commit any generated SDK files to version control by adding your parameterized packages to your Pulumi project configuration file (`Pulumi.yaml`).
-
-You can add a list of your named provider packages under the [`packages`](/docs/iac/concepts/projects/project-file/#packages-options) key. For the example in the previous section, the syntax would be:
+When you run `pulumi package add`, the package is automatically added to your Pulumi project configuration file under the [`packages`](/docs/iac/concepts/projects/project-file/#packages-options) key. For the example in the previous section, the following entry would be added to your `Pulumi.yaml`:
 
 ```yaml
 packages:
   random:
     source: terraform-provider
-    version: 0.10.0 # The version of terraform-provider in the Pulumi registry
+    # The version of terraform-provider in the Pulumi registry.
+    # This is automatically added by the `pulumi package add` command:
+    version: 0.10.0
     parameters:
       - hashicorp/random
-      - 3.7.1 # The version of hashicorp/random in the OpenTofu Registry
+      # The version of hashicorp/random in the OpenTofu Registry.
+      # This is not a required parameter, but you may wish to include
+      # it at the command line or add it after the fact in Pulumi.yaml
+      # in order to ensure consistent builds. If this value is not
+      # specified, the provider will take the latest version of
+      # the OpenTofu provider.
+      - 3.7.1
 ```
-
-The versions specified above are optional, but recommended in order to ensure consistent behavior on all systems.
 
 You can install any packages tracked in the project configuration file with the [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) command:
 
@@ -88,7 +97,7 @@ Installing package 'random'...
 ```
 
 {{% notes type="warning" %}}
-If you are tracking a package in the project file and installing via `pulumi install`, be sure to remove any generated SDK files from version control and `.gitignore` the SDK directory or the generated files will still be under version control!
+If you are using `pulumi install` to install packages defined in your project file, be sure to remove any generated SDK files from version control and `.gitignore` the SDK directory or the generated files will still be under version control!
 {{% /notes %}}
 
 ## Default and Explicit Providers
