@@ -333,6 +333,6 @@ To restore a stack:
 3. Choose **Restore deleted stacks** from the dropdown.
 4. Use the three dot menu on the stack you want to restore and select **Restore stack**.
 
-## Related Blogs
+## Related Docs
 
-* [Building New Pulumi Projects and Stacks From Templates](/blog/building-new-pulumi-projects-and-stacks-from-templates/)
+* [New Project Wizard](/docs/pulumi-cloud/developer-platforms/new-project-wizard/)
