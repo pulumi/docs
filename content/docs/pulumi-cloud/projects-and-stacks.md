@@ -40,31 +40,9 @@ To create a project:
 1. Select **Create project**.
 1. Follow the provided CLI command instructions.
 
-## Stack Permissions
+## Stack Access Control
 
-The Pulumi Cloud provides fine-grained access controls for stacks. Stack permissions are
-based on the member's role within the organization and their team membership.
-Additionally, any member who creates a stack is granted admin permissions on that stack.
-
-Organization admins can control the stack default permissions at the organization level from **Settings** > **Access Management**.
-There are four types of stack permissions: `None`, `Read`, `Write`, and `Admin`.
-[Team permissions](/docs/pulumi-cloud/access-management/teams#team-permissions) will expand these default permissions.
-
-Stack permissions allow users to perform the following actions:
-
-| Action | None | Read | Write | Admin |
-|--------|------|------|-------|-------|
-| View update history | | ✅ | ✅ | ✅ |
-| Decrypt secret configuration | | ✅ | ✅ | ✅ |
-| Read stack resources | | ✅ | ✅ | ✅ |
-| Preview stack changes | | ✅ | ✅ | ✅ |
-| Update stack | | | ✅ | ✅ |
-| Destroy stack (`pulumi destroy`) | |   | ✅ | ✅ |
-| Export stack checkpoint | | ✅ | ✅ | ✅ |
-| Import stack checkpoint |  | | ✅ | ✅ |
-| Delete stack (`pulumi stack rm`) |   |   |   | ✅ |
-| Transfer to another organization |   |   |   | ✅ |
-| Search stack resources           |   |  ✅ |  ✅ | ✅ |
+Stacks support fine-grained access controls through permissions. For detailed information about stack permissions, including permission levels and how to manage them, see [Stack permissions](/docs/pulumi-cloud/access-management/stack-permissions).
 
 ## Viewing Stacks
 
