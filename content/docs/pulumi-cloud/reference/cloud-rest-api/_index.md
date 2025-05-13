@@ -2304,7 +2304,7 @@ For GitHub-backed organizations the `teamType` path parameter must be `github`. 
 {{% /notes %}}
 
     {{% notes type="warning" %}}
- **Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your group name is longer than this limit, you’ll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
+ **Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your group name is longer than this limit, you'll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
      {{% /notes %}}
 
 ```
@@ -7036,3 +7036,411 @@ If null, the request is invalid or does not permit pagination.
 | continue | string\|null | When non-null, this is a URI to fetch the next page of results. <br><br>Unlike the `next` property, repeatedly following `continue` allows paginating through an unbounded number of results.<br><br>When paginating with `continue`, `next` and `previous` will always be `null`.<br><br>`continue` is only available to Pulumi Enterprise customers. |
 
 [types]: /docs/concepts/resources/names/#types
+
+<!-- ###################################################################### -->
+
+## Services
+
+### Create Service
+
+```
+POST /api/orgs/{organization}/services
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                |
+|---------------------|--------|-------|------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                          |
+| `ownerType`         | string | body  | type of the owner (e.g. "user", "team")                    |
+| `ownerName`         | string | body  | name of the owner                                          |
+| `name`              | string | body  | name of the service                                        |
+| `description`       | string | body  | **Optional.** description of the service                   |
+| `properties`        | array  | body  | **Optional.** list of properties to set on the service     |
+| `items`             | array  | body  | **Optional.** list of items to add during service creation |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --X POST \
+  --data '{ "ownerType": "team", "ownerName": "team1", "name": "my-cool-service", "description": "My service" }' \
+  https://api.pulumi.com/api/orgs/my-org/services
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "service1",
+  "description": "My service",
+  "itemCountSummary": {},
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
+```
+
+### List Services
+
+```
+GET /api/orgs/{organization}/services
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/my-org/services
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+[
+  {
+    "organizationName": "org1",
+    "name": "service1",
+    "description": "My service",
+    "itemCountSummary": {},
+    "members": [
+      {
+        "name": "team1",
+        "avatarURL": "https://example.com/avatar.png",
+        "type": "team"
+      }
+    ],
+    "properties": [],
+    "owner": {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  }
+]
+```
+
+### Head Service
+
+```
+HEAD /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                               |
+|---------------------|--------|-------|-------------------------------------------|
+| `organization`      | string | path  | organization name                         |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team")   |
+| `ownerName`         | string | path  | name of the owner                         |
+| `serviceName`       | string | path  | name of the service                       |
+
+#### Default response
+
+```
+Status: 204 No Content
+```
+
+### Get Service
+
+```
+GET /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                               |
+|---------------------|--------|-------|-------------------------------------------|
+| `organization`      | string | path  | organization name                         |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team")   |
+| `ownerName`         | string | path  | name of the owner                         |
+| `serviceName`       | string | path  | name of the service                       |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "service": {
+    "organizationName": "org1",
+    "name": "service1",
+    "description": "My service",
+    "itemCountSummary": {},
+    "members": [
+      {
+        "name": "team1",
+        "avatarURL": "https://example.com/avatar.png",
+        "type": "team"
+      }
+    ],
+    "properties": [],
+    "owner": {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  },
+  "items": []
+}
+```
+
+### Update Service
+
+```
+PATCH /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                            |
+|---------------------|--------|-------|--------------------------------------------------------|
+| `organization`      | string | path  | organization name                                      |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team")                |
+| `ownerName`         | string | path  | name of the owner                                      |
+| `serviceName`       | string | path  | name of the service                                    |
+| `name`              | string | body  | **Optional.** new name for the service                 |
+| `description`       | string | body  | **Optional.** new description for the service          |
+| `properties`        | array  | body  | **Optional.** list of properties to set on the service |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{ "name": "new-service-name", "description": "New description" }' \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "new-service-name",
+  "description": "New description",
+  "itemCountSummary": {},
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
+```
+
+### Delete Service
+
+```
+DELETE /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}
+```
+
+#### Parameters
+
+| Parameter           | Type    | In    | Description                                                   |
+|---------------------|---------|-------|---------------------------------------------------------------|
+| `organization`      | string  | path  | organization name                                             |
+| `ownerType`         | string  | path  | type of the owner (e.g. "user", "team")                       |
+| `ownerName`         | string  | path  | name of the owner                                             |
+| `serviceName`       | string  | path  | name of the service                                           |
+| `force`             | boolean | query | **Optional.** ignore protections and force delete the service |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service?force=true
+```
+
+#### Default response
+
+```
+Status: 204 No Content
+```
+
+### Add Service Items
+
+```
+POST /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}/items
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                             |
+|---------------------|--------|-------|-----------------------------------------|
+| `organization`      | string | path  | organization name                       |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team") |
+| `ownerName`         | string | path  | name of the owner                       |
+| `serviceName`       | string | path  | name of the service                     |
+| `items`             | array  | body  | array of items to add to the service    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{ "items": [
+    {
+      "type": "stack",
+      "name": "my-project/my-stack"
+    },
+    {
+      "type": "environment",
+      "name": "my-project/my-environment
+    }
+  ] }' \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service/items
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "my-service",
+  "description": "My service",
+  "itemCountSummary": {
+    "stack": 1,
+    "environment": 1
+  },
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
+```
+
+### Remove Service Item
+
+```
+DELETE /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}/items/{itemType}/{itemName}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                             |
+|---------------------|--------|-------|-----------------------------------------|
+| `organization`      | string | path  | organization name                       |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team") |
+| `ownerName`         | string | path  | name of the owner                       |
+| `serviceName`       | string | path  | name of the service                     |
+| `itemType`          | string | path  | type of the item to remove              |
+| `itemName`          | string | path  | name of the item to remove              |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service/items/stack/my-project/my-stack
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "my-service",
+  "description": "My service",
+  "itemCountSummary": {
+    "environment": 1
+  },
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
+```
