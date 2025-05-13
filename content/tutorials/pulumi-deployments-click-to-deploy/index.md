@@ -34,7 +34,7 @@ First sign in to Pulumi Cloud via the [Pulumi sign in page](https://app.pulumi.c
 
 ## Install and configure the GitHub App
 
-Next, the [Pulumi GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) is required to enable Pulumi Deployment's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/pulumi-cloud/deployments/reference/#github-app-installation) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
+Next, the [Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/) is required to enable Pulumi Deployment's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/iac/using-pulumi/continuous-delivery/github-app/#installation-and-configuration) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
 
 ## Create a New Project with the New Project Wizard
 
