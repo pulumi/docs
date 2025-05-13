@@ -1,12 +1,12 @@
 ---
 title_tag: "Using Visual Import"
-meta_desc: Learn about Pulumi Visual Import, a visual UI for importing resources into Pulumi IaC.
-title: Visual Import
-h1: Visual Import
+meta_desc: Easily import existing cloud infrastructure into Pulumi using Visual Import—auto-discover resources and generate IaC code with guided workflows.
+title: Using Visual Import
+h1: Using Visual Import
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac: 
-        name: Visual Import        
+        name: Using Visual Import        
         parent: iac-adopting
         weight: 2 
     usingpulumi: 
