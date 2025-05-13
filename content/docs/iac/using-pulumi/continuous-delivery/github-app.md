@@ -69,7 +69,7 @@ If you installed the GitHub app in the past and the steps above aren't showing i
 ### Limitations
 
 - The GitHub app may only be installed by a user who is both a GitHub admin and a Pulumi admin.
-- By default, there is a 1:1 mapping between GitHub organizations and Pulumi organizations. If you need to map a single GitHub organization to multiple Pulumi organizations, please contact [Pulumi support](https://www.pulumi.com/support/) to request this configuration.
+- By default, there is a 1:1 mapping between GitHub organizations and Pulumi organizations. If you need to map a single GitHub organization to multiple Pulumi organizations, please contact [Pulumi support](https://www.pulumi.com/support/) to request this configuration. This option is only available for Enterprise and Business Critical customers.
 - Multiple GitHub organizations mapping to a single Pulumi organization is not currently supported.
 
 ### Configure Git Push-to-Deploy with Pulumi Deployments
