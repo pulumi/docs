@@ -1,5 +1,4 @@
-permissions:
-  id-token: write
+permissions: write-all # Equivalent to default permissions + id-token: write
 env:
   ESC_ACTION_OIDC_AUTH: true
   ESC_ACTION_OIDC_ORGANIZATION: pulumi

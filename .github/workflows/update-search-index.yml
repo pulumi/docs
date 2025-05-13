@@ -1,5 +1,4 @@
-permissions:
-  id-token: write
+permissions: write-all # Equivalent to default permissions + id-token: write
 name: "Scheduled jobs: Update Search Index"
 on:
   schedule:

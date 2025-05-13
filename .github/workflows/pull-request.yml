@@ -3,8 +3,6 @@ on:
   pull_request:
     branches:
       - master
-      - 9/18-blogs
-      - 9/18-content
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout

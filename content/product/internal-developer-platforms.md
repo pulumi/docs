@@ -1,69 +1,81 @@
 ---
-title: "Pulumi for Platform Teams"
+title: "Pulumi IDP"
 layout: internal-developer-platforms
 
-meta_title: "Self-Service Developer Platforms with Pulumi"
-meta_desc: Pulumi for Platform Teams! Accelerate productivity, enforce compliance, and maintain visibility with our internal developer platform-in-a-box.
-meta_image: /images/product/platform-teams-meta.png
+meta_title: "Pulumi IDP"
+meta_desc: The Fastest, Most Secure Way to Deliver Cloud Infrastructure
+meta_image: /images/product/idp-meta.png
 
 aliases:
     - /solutions/platforms/
 
-challenges:
+overview:
+  title: Accelerate Cloud Delivery with Secure Developer Self-Service
+  description: Pulumi IDP is a modern internal developer platform built on Pulumi’s flagship infrastructure as code technology. It delivers flexible self-service infrastructure access to developers, data scientists, and more while enabling platform teams to embed security, compliance, and operational controls by design. Organizations can go from idea to cloud in minutes, not months.
+  cta: Get Started with Pulumi IDP
+  link: /docs/idp/get-started/
+
+why_idp:
+  title: Why Pulumi IDP?
+  description: Pulumi IDP eliminates the trade-off between building a custom internal developer platform and adopting a rigid off-the-shelf solution. Platform engineering teams define reusable best practices and guardrails, while developers gain flexible, self-service access to production-ready cloud infrastructure that meets enterprise standards out of the box.
+  benefits:
+    - title: Faster Delivery
+      description: Go from idea to cloud in minutes, not months, with golden paths and reusable building blocks.
+      icon: rocketship
+      color: salmon
+    - title: Built-in Governance
+      description: Enforce security, compliance, cost, and operational best practices automatically.
+      icon: security
+      color: blue
+    - title: Flexible Self-Service
+      description: Let teams work how they want – via code, YAML, UI, or APIs – governed by consistent standards and policies.
+      icon: nodes-and-rays
+      color: yellow
+    - title: Full Lifecycle Management
+      description: Manage Day 0 setup, Day 1 provisioning, and Day 2+ operations with confidence.
+      icon: cycle
+      color: fuchsia
+
+building_blocks:
+  title: "Pulumi IDP: Building Blocks for Your Internal Developer Platform"
+  items:
+    - header: "Codify and Enforce Organizational Best Practices Using Components, Templates, Policies"
+      subheader: "Platform engineers define infrastructure standards as building blocks:"
+      body:
+        - "**Components**: Encapsulate infrastructure best practices in reusable building blocks written in any language."
+        - "**Templates**: Scaffold new projects (applications, microservices, clusters) using standardized blueprints."
+        - "**Policies**: Automatically enforce security, compliance, cost, and operational rules across all infrastructure."
+      graphic: /images/product/idp-components.png
+    - header: Enable Flexible Developer Self-Service with Guardrails
+      subheader: "Developers can provision and manage cloud resources using their preferred interface:"
+      body:
+        - "**Code**: Directly write infrastructure as code in preferred programming languages."
+        - "**Low-Code**: Use simple YAML templates with CI/CD pipelines created by platform teams for fast provisioning."
+        - "**No-Code**: Deploy infrastructure with Pulumi’s new project wizard or a custom developer portal."
+        - "**REST API**: Programmatically manage infrastructure via standard HTTP requests."
+      graphic: /images/product/idp-flexible-interfaces.png
+    - header: Secure and Scale Your Day Two Operations and Beyond
+      subheader: Pulumi IDP goes beyond provisioning with built-in tools to help teams secure, govern, and evolve infrastructure as their environments grow.
+      body:
+        - "**Drift and Compliance Management**: Detect configuration drift and enforce policies across existing infrastructure."
+        - "**Visual Importer**: Discover unmanaged resources, generate IaC code, and bring them under Pulumi management with a few clicks."
+        - "**Usage and Change Controls**: Understand package and version usage to drive update and deprecation workflows with built-in approvals and audit trails."
+        - "**Enterprise-Grade IAM**: Define fine-grained access with custom roles, team permissions, and SAML/SSO integration."
+      graphic: /images/product/idp-day-two.png
+
+learn:
+    title: Get Started
     items:
-        - number: 1
-          title: Developer speed
-          description: Remove productivity obstacles like configuring cloud architectures, provisioning bottlenecks, and testing and deployment.
-        - number: 2
-          title: Security and compliance
-          description: Set up guardrails that enforce compliance and standards while maintaining visibility over what’s being deployed and how.
-        - number: 3
-          title: Balancing agility and guardrails
-          description: Accomplishing both speed and compliance with limited resources and without stifling developers’ autonomy and flow.
-
-case_studies:
-    title: Case Studies
-    items:
-        - company: Atlassian
-          image: atlassian
-          link: /case-studies/atlassian
-          quote: |
-            Atlassian Bitbucket reduced developers’ time spent on maintenance by 50% with a self-service platform built with Pulumi.
-
-        - company: Washington Trust Bank
-          image: washington-trust
-          link: /blog/how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation/
-          quote: |
-            Washington Trust Bank maintains compliant and secure infrastructure deployments with policy packs and policy enforcement.
-
-        - company: Mercedes-Benz
-          image: mercedes-benz
-          link: /case-studies/mercedes-benz/
-          quote: |
-            Mercedes-Benz enabled developers to provision Azure Kubernetes environments with a self-service platform built with Pulumi.
-
-control:
-    items:
-        - title: Pulumi IaC
-          description: Utilize open-source IaC in TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Build and distribute reusable infrastructure components for 150+ cloud & SaaS providers, supporting modern and cloud-native architectures.
-        - title: Pulumi Developer Portal
-          description: Distribute standard private templates through an out-of-the-box Service Catalog experience, which developers can browse and deploy from using the Pulumi Cloud console. API integration with your VCS, Pulumi Deployments, CI/CD, and more.
-        - title: Backstage Plugin
-          description: Enable developers to browse, deploy, and monitor Pulumi infrastructure deployments from an existing Backstage portal. Use the plugin to integrate Backstage with Pulumi Developer Portal, where your private infrastructure templates are hosted.
-
-integration:
-    items:
-        - title: Pulumi Deployments
-          description: Centrally orchestrate automated deployment workflows with `git push to deploy`, UI triggers, and API. Advanced capabilities like ephemeral environments and extensibility for drift detection, TTL, blue/green, and more. Integrate with CI/CD, VCS, and more using the API. SaaS or self-hosted runners available.
-        - title: Pulumi Automation API
-          description: Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal and custom portals or CLIs. Automation API is a programmatic interface for Pulumi CLI, allowing you to embed infrastructure automation into application code that runs on your servers.
-
-security:
-    items:
-        - title: Pulumi CrossGuard
-          description: Enforce policies across your organization. Utilize compliance-ready policies for any cloud to enhance compliance and use remediation policies to automatically correct configuration violations like auto-tagging, removing Internet access, and enabling storage encryption.
-        - title: Pulumi Cloud
-          description: Maintain control and tracking over deployed infrastructure, with complete history of updates and audit logs easily viewable from a console. Enhance security with RBAC, identity provider integrations, SSO, and more.
-        - title: Pulumi ESC
-          description: Centrally store and manage secrets and configuration from different providers. It provides a unified, secure location for all your configuration while managing developer access centrally.
+        - title: Unlock Secure, Standardized Self-Service Infrastructure
+          description: Pulumi IDP is the fastest, most secure way to deliver cloud infrastructure at scale. Empower your platform and development teams to collaborate, innovate, and ship faster with built-in security, governance, and full lifecycle control.
+          buttons:
+            - link: https://app.pulumi.com/
+              type: primary
+              action: Try Pulumi IDP
+        - title: Documentation
+          description: Review our documentation to learn more about Pulumi IDP.
+          buttons:
+            - link: /docs/idp/get-started/
+              type: secondary
+              action: Pulumi IDP Docs
 ---

@@ -16,6 +16,8 @@ The value of this key must be a mapping from string literals (property names) to
 
 ESC values include standard YAML values, [interpolations and references](/docs/esc/reference/interpolations-and-references), and [function calls](/docs/esc/reference/builtin-functions).
 
+Certain properties inside of the `values` section are conventionally assigned particular semantics by the [`esc` CLI](/docs/install/esc/) and other ESC consumers (e.g. the [`pulumi` CLI](/docs/install/)). These properties are covered by the [Reserved Properties reference](/docs/esc/reference/reserved-properties).
+
 Here is an example definition that uses the `values` section:
 
 ```yaml

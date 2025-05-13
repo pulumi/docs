@@ -1,5 +1,4 @@
-permissions:
-  id-token: write
+permissions: write-all # Equivalent to default permissions + id-token: write
 jobs:
   automerge:
     if: (github.event.pull_request.user.login == 'pulumi-bot') && (github.event.pull_request.head.repo.full_name == github.repository)
