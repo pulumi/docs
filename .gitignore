@@ -67,3 +67,5 @@ _vendor/
 
 # VScode solution files.
 *.sln
+
+.claude
