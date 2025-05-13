@@ -67,3 +67,4 @@ _vendor/
 
 # VScode solution files.
 *.sln
+**/.claude/settings.local.json

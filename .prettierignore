@@ -43,3 +43,5 @@ origin-bucket-metadata.json
 
 # Ignore js scripts added to the static folder
 static/js
+
+**/.claude/settings.local.json
