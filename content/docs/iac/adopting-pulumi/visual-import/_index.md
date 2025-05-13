@@ -1,5 +1,5 @@
 ---
-title_tag: "Visual Import"
+title_tag: "Using Visual Import"
 meta_desc: Learn about Pulumi Visual Import, a visual UI for importing resources into Pulumi IaC.
 title: Visual Import
 h1: Visual Import
