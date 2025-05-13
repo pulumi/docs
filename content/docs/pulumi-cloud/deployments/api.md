@@ -89,19 +89,25 @@ Using a custom image may result in slower execution due to time spent pulling th
 
 ### SourceContext
 
-The source context contains information about where the source code for your project is located. Currently, only git repos are supported as a source.
+The source context contains information about where the source code for your project is located. Currently, git repos and templates are supported as sources.
 
-* **repoURL** (Optional[string]): The URL of the git repository where the source code is located. Must not be specified if a [GitHub block](#github) is present.
-* **branch** (Optional[string]): The repository branch to use.
-* **repoDir** (Optional[string]): The directory where Pulumi.yaml is located, if not in the project source root.
-* **commit** (Optional[string]): The hash of the commit to deploy. If used, HEAD will be in detached mode. This is mutually exclusive with the branch setting. Either value must be specified.
-* **gitAuth** (Optional[object]): The authentication information for the git repo. If not specified, the repo is assumed to be public. Only one type is supported at a time.
-    * **sshAuth** (Optional[object]): SSHAuth is the authentication information for the git repo
-        * **sshPrivateKey** (Secret): The private key to use
-        * **password** (Optional[Secret]): The password to use
-    * **basicAuth** (Optional[object]): Basic auth information
-        * **userName** (string): The username to use for authentication
-        * **password** (Secret): The password to use for authentication
+* **git** (Optional[object]): Git repository information. Must not be specified if a [GitHub block](#github) is present or if a template is specified.
+    * **repoURL** (Optional[string]): The URL of the git repository where the source code is located.
+    * **branch** (Optional[string]): The repository branch to use.
+    * **repoDir** (Optional[string]): The directory where Pulumi.yaml is located, if not in the project source root.
+    * **commit** (Optional[string]): The hash of the commit to deploy. If used, HEAD will be in detached mode. This is mutually exclusive with the branch setting. Either value must be specified.
+    * **gitAuth** (Optional[object]): The authentication information for the git repo. If not specified, the repo is assumed to be public. Only one type is supported at a time.
+        * **sshAuth** (Optional[object]): SSHAuth is the authentication information for the git repo
+            * **sshPrivateKey** (Secret): The private key to use
+            * **password** (Optional[Secret]): The password to use
+        * **basicAuth** (Optional[object]): Basic auth information
+            * **userName** (string): The username to use for authentication
+            * **password** (Secret): The password to use for authentication
+
+* **template** (Optional[object]): Template information. Must not be specified if git information is present or if a [GitHub block](#github) is present.
+    * **name** (string): The name of the template to use.
+    * **description** (Optional[string]): A description of the template.
+    * **config** (Optional[map[string]string]): Configuration values for the template.
 
 Secret types should have the following structure:
 
@@ -180,6 +186,20 @@ Secret types should have the following structure:
           "secret": "myAccessToken"
         }
       }
+    }
+  }
+}
+```
+
+##### Using a template
+
+```json
+{
+  "template": {
+    "name": "aws-typescript",
+    "description": "AWS TypeScript template",
+    "config": {
+      "aws:region": "us-west-2"
     }
   }
 }
