@@ -45,63 +45,166 @@ parts of the codebase that have the highest migration risk and/or source complex
 To get started, run the following command in an existing Pulumi directory, linking a module as a package and giving it
 a friendly name "vpcmod":
 
+```
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.18.1 vpcmod
+Successfully generated a Nodejs SDK for the vpcmod package at /Users/anton/tmp/2025-05-14/blog/sdks/vpcmod
+```
+
+Notice that Pulumi generated a local SDK for the module:
 
 ```
-pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.18.1 vpcmod
+$ ls sdks/vpcmod
+README.md       index.ts        node_modules    provider.ts     tsconfig.json   utilities.ts
+bin             module.ts       package.json    scripts         types
 ```
 
-While the example uses a well-known module from the registry, but a local path will also work to point to an in-house
-or locally maintained module.
+And linked it into your project in `package.json`:
 
-// What will this do.
 
-// Make a simpler example.
+```
+    "dependencies": {
+        ...,
+        "@pulumi/vpcmod": "file:sdks/vpcmod"
+    }
+```
 
-// Cool if we could configure AWS Provider?
+You can now reference the module from your code with full code completion support. For example:
 
 ```typescript
-
+import * as pulumi from "@pulumi/pulumi";
 import * as vpcmod from '@pulumi/vpcmod';
-import * as std from '@pulumi/std';
-
-const prefix = cfg.get("prefix") ?? pulumi.getStack();
 
 const vpc = new vpcmod.Module("test-vpc", {
-  azs: azs,
-  name: `test-vpc-${prefix}`,
-  cidr,
-  private_subnets: azs.apply(azs => azs.map((_, i) =>
-    std.cidrsubnetOutput({input: cidr, newbits: 8, netnum: i+1}).result
-    return getCidrSubnet(cidr, 8, i+1);
-  })),
-  public_subnets: azs.apply(azs => azs.map((_, i) => {
-    return getCidrSubnet(cidr, 8, i+1+4);
-  })),
-  intra_subnets: azs.apply(azs => azs.map((_, i) => {
-    return getCidrSubnet(cidr, 8, i+1 + 8);
-  })),
-
-
-  enable_nat_gateway: true,
-  single_nat_gateway: true,
-
-  public_subnet_tags: {
-    'kubernetes.io/role/elb': '1',
-  },
-  private_subnet_tags: {
-    'kubernetes.io/role/internal-elb': '1',
-  },
+    azs: ["us-west-2a", "us-west-2b"],
+    name: `test-vpc-${pulumi.getStack()}`,
+    cidr: "10.0.0.0/16",
+    public_subnets: [
+        "10.0.1.0/24",
+        "10.0.2.0/24",
+    ],
+    private_subnets: [
+        "10.0.3.0/24",
+        "10.0.4.0/24",
+    ],
+    enable_nat_gateway: true,
+    single_nat_gateway: true,
 });
 
-// export private subnets vpc.private_subnets.apply(subnets => subnets![0]),
+export const publicSubnets = vpc.public_subnets;
+export const privateSubnets = vpc.private_subnets;
 ```
 
-// Show pulumi preview and pulumi up here.
+If you have AWS credentials set up, you can now do `pulumi up` and it will show all the resources being created:
 
-// Note that pulumi preview and up explain what is changing inside the module.
+```
 
+Previewing update (dev)
+
+View in Browser (Ctrl+O): https://app.pulumi.com/anton-pulumi-corp/anton-blog/dev/previews/5851682a-a3e3-4f47-a50e-3d7b4f4e6c34
+
+     Type                                         Name                                                    Plan
+ +   pulumi:pulumi:Stack                          anton-blog-dev                                          create
+ +   └─ vpcmod:index:Module                       test-vpc                                                create
+ +      ├─ vpcmod:index:ModuleState               test-vpc-state                                          create
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[0]  create
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[1]                   create
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[1]   create
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[0]                   create
+ +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.private[0]              create
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[1]                    create
+ +      ├─ vpcmod:tf:aws_nat_gateway              module.test-vpc.aws_nat_gateway.this[0]                 create
+ +      ├─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.public_internet_gateway[0]    create
+ +      ├─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.private_nat_gateway[0]        create
+ +      ├─ vpcmod:tf:aws_default_network_acl      module.test-vpc.aws_default_network_acl.this[0]         create
+ +      ├─ vpcmod:tf:aws_default_route_table      module.test-vpc.aws_default_route_table.default[0]      create
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[0]                    create
+ +      ├─ vpcmod:tf:aws_internet_gateway         module.test-vpc.aws_internet_gateway.this[0]            create
+ +      ├─ vpcmod:tf:aws_vpc                      module.test-vpc.aws_vpc.this[0]                         create
+ +      ├─ vpcmod:tf:aws_default_security_group   module.test-vpc.aws_default_security_group.this[0]      create
+ +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.public[0]               create
+ +      ├─ vpcmod:tf:aws_eip                      module.test-vpc.aws_eip.nat[0]                          create
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[0]   create
+ +      └─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[1]  create
+
+Resources:
+ + 22 to create
+
+Previewing update (dev)
+
+View in Browser (Ctrl+O): https://app.pulumi.com/anton-pulumi-corp/anton-blog/dev/previews/faab8c4d-3a86-42f6-9685-ef36ece68652
+
+     Type                                         Name                                                    Plan
+ +   pulumi:pulumi:Stack                          anton-blog-dev                                          create
+ +   └─ vpcmod:index:Module                       test-vpc                                                create
+ +      ├─ vpcmod:index:ModuleState               test-vpc-state                                          create
+ +      ├─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.private_nat_gateway[0]        create
+ +      ├─ vpcmod:tf:aws_default_route_table      module.test-vpc.aws_default_route_table.default[0]      create
+ +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.public[0]               create
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[1]                   create
+ +      ├─ vpcmod:tf:aws_default_network_acl      module.test-vpc.aws_default_network_acl.this[0]         create
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[0]                   create
+ +      ├─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.public_internet_gateway[0]    create
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[0]   create
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[0]  create
+ +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.private[0]              create
+ +      ├─ vpcmod:tf:aws_eip                      module.test-vpc.aws_eip.nat[0]                          create
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[1]                    create
+ +      ├─ vpcmod:tf:aws_internet_gateway         module.test-vpc.aws_internet_gateway.this[0]            create
+ +      ├─ vpcmod:tf:aws_default_security_group   module.test-vpc.aws_default_security_group.this[0]      create
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[1]   create
+ +      ├─ vpcmod:tf:aws_vpc                      module.test-vpc.aws_vpc.this[0]                         create
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[0]                    create
+ +      ├─ vpcmod:tf:aws_nat_gateway              module.test-vpc.aws_nat_gateway.this[0]                 create
+ +      └─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[1]  create
+
+Resources:
+    + 22 to create
+
+Updating (dev)
+
+View in Browser (Ctrl+O): https://app.pulumi.com/anton-pulumi-corp/anton-blog/dev/updates/1
+
+     Type                                         Name                                                    Status
+ +   pulumi:pulumi:Stack                          anton-blog-dev                                          created (145s)
+ +   └─ vpcmod:index:Module                       test-vpc                                                created (143s)
+ +      ├─ vpcmod:index:ModuleState               test-vpc-state                                          created (133s)
+ +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.private[0]              created (1s)
+ +      ├─ vpcmod:tf:aws_internet_gateway         module.test-vpc.aws_internet_gateway.this[0]            created (0.58s)
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[1]   created (0.76s)
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[1]                    created (1.00s)
+ +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.public[0]               created (1s)
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[1]                   created (2s)
+ +      ├─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.public_internet_gateway[0]    created (1s)
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[0]                    created (3s)
+ +      ├─ vpcmod:tf:aws_default_security_group   module.test-vpc.aws_default_security_group.this[0]      created (4s)
+ +      ├─ vpcmod:tf:aws_default_route_table      module.test-vpc.aws_default_route_table.default[0]      created (4s)
+ +      ├─ vpcmod:tf:aws_default_network_acl      module.test-vpc.aws_default_network_acl.this[0]         created (2s)
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[0]   created (2s)
+ +      ├─ vpcmod:tf:aws_eip                      module.test-vpc.aws_eip.nat[0]                          created (3s)
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[1]  created (3s)
+ +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[0]                   created (1s)
+ +      ├─ vpcmod:tf:aws_nat_gateway              module.test-vpc.aws_nat_gateway.this[0]                 created (1s)
+ +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[0]  created (2s)
+ +      ├─ vpcmod:tf:aws_vpc                      module.test-vpc.aws_vpc.this[0]                         created (2s)
+ +      └─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.private_nat_gateway[0]        created (3s)
+
+Resources:
+    + 22 created
+
+Duration: 2m26s
+```
+
+The infrastructure has now provisioned and the corresponding Terraform state is stored securely inside the Pulumi
+state, which can be verified with `pulumi stack export`.
+
+The above program is very simple. To take it further, check out
+[examples](https://github.com/pulumi/pulumi-terraform-module/tree/main/examples) for more realistic programs showcasing
+features such as computing subnets dynamically with Pulumi `aws.getAvailabilityZonesOutput` function or passing the
+results of the VPC module to an EKS module.
 
 ## Supported Features
+
+The power of Pulumi is that all components can be composed seamlessly with modules, including chaining and wrapping.
 
 All the regular operations are supported:
 
@@ -121,7 +224,7 @@ module:
 - using targeted operations such as `pulumi up --target`
 - the [protect](https://www.pulumi.com/docs/iac/concepts/options/protect/) resource option
 
-Pulumi's capability to infer accurate types for module inptus and outputs is also currently limited and will sometimes
+Pulumi's capability to infer accurate types for module inputs and outputs is also currently limited and will sometimes
 infer sub-optimal or even unusable types. See [README](https://github.com/pulumi/pulumi-terraform-module) for
 configuration options.
 
