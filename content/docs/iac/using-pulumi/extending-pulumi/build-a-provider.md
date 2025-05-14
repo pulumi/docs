@@ -51,7 +51,7 @@ A provider schema defines the resources, their input and output properties, data
 
 {{% notes type="info" %}}
 
-Historically it was necessary to hand-author and maintain the `schema.json` file that accompanied your provider implementation, however, now most of this is handled on-the-fly by the [Pulumi Provider SDK](/docs/iac/using-pulumi/extending-pulumi/pulumi-provider-sdk/) and the file is no longer necessary.
+Historically it was necessary to hand-author and maintain the `schema.json` file that accompanied your provider implementation, however, now most of this is generated automatically by the [Pulumi Provider SDK](/docs/iac/using-pulumi/extending-pulumi/pulumi-provider-sdk/) and the file is no longer necessary.
 
 {{% /notes %}}
 
