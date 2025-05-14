@@ -1,7 +1,7 @@
 ---
 title: "New in Pulumi IaC: Support for skipping a resource"
 date: 2025-05-14
-meta_desc: "Pulumi now supports excluding specific resources from up, preview, refresh, and destroy operations, giving you more control and efficiency in managing your infrastructure"
+meta_desc: "Pulumi now supports excluding specific resources from stack operations, giving you more control and efficiency in managing your infrastructure"
 authors:
     - tom-harding
 tags:
@@ -145,7 +145,7 @@ foreach (var file in files)
 
 {{% /chooser %}}
 
-This works well, but what if we have a list of draft articles that we don’t want to include in the deployment? We can optimistically assume we’ve finished more articles than we’ve started, so using `--target` to specify every article, as well as supporting resources (CSS, JavaScript, ownership controls, et cetera), would quickly become unmanageable.
+This works well, but what if we have a list of draft articles that we don't want to include in the deployment? We can optimistically assume we've finished more articles than we've started, so using `--target` to specify every article, as well as supporting resources (CSS, JavaScript, ownership controls, et cetera), would quickly become unmanageable.
 
 ```shell
 pulumi up --target <URN>::style.css --target <URN>::post-hello.html ...
