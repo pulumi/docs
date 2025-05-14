@@ -202,6 +202,8 @@ The above program is very simple. To take it further, check out
 features such as computing subnets dynamically with Pulumi `aws.getAvailabilityZonesOutput` function or passing the
 results of the VPC module to an EKS module.
 
+// TODO show-case cross-configuring the provider with a given AWS region
+
 ## Supported Features
 
 The power of Pulumi is that all components can be composed seamlessly with modules, including chaining and wrapping.
