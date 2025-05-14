@@ -77,7 +77,8 @@ build_identifier() {
     # - For pull_request actions, return "pr-<number>-<git-sha>"
     # - For others, return "<event-name>-<git-sha>".
     if [[ ! -z "$GITHUB_EVENT_NAME" && ! -z "$GITHUB_EVENT_PATH" ]]; then
-        identifier="$GITHUB_EVENT_NAME"
+        event_name_sanitized="${GITHUB_EVENT_NAME//_/-}"
+        identifier="$event_name_sanitized"
 
         if [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
             identifier="pr-$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")"

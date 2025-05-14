@@ -1,7 +1,7 @@
 ---
-title: Pulumi + AWS Summit London
-meta_desc: Join Pulumi at AWS Summit London 2025 to discover how leading organizations automate AWS infrastructure as code.
-meta_image: /images/aws-summit-london-meta.png
+title: Pulumi + AWS Summit Tel Aviv
+meta_desc: Join Pulumi at AWS Summit Tel Aviv 2025 to discover how leading organizations automate AWS infrastructure as code.
+meta_image: /images/tel-aviv-2025-meta.png
 type: page
 layout: aws-summit
 
@@ -11,19 +11,26 @@ links:
         - heading: Request a Demo
           description: See how Pulumi can help you ship infrastructure faster and manage your AWS resources at scale. Ready for a change?
           action: Talk with an Engineer
-          link: https://info.pulumi.com/aws-summit-london
+          link: https://calendly.com/pulumi-meetings/aws-summit-telaviv-booth-demo
+        - heading: Pulumi TLV Meetup – Kickoff Event
+          description: |
+            May 29th, 2025 | 17:30 PM - 20:00 PM | [Lemonade Ltd. Offices](https://g.co/kgs/wyirVjT)
+
+            Meet Pulumi founder Joe Duffy and engineers from Pulumi and Lemonade for networking, tech talks, and refreshments.
+          action: RSVP Now
+          link: https://www.meetup.com/tel-aviv-pulumi-user-group/events/307550216/?eventOrigin=group_events_list
 
 workshops:
     items:
-      - title: Advanced Secrets Management on Kubernetes
-        date: April 9, 2025
-        description: Discover how to securely manage and inject secrets in Kubernetes applications with this hands-on Platform Engineering workshop.
-        link: /events/advanced-secrets-management-kubernetes/
+      - title: Modern Infrastructure Automation with Pulumi and GitLab
+        date: June 11, 2025
+        description: Discover how to revolutionize cloud infrastructure management with Pulumi's enhanced GitLab integration at our June 11th workshop, where you'll learn to create automated pipelines and standardize organizational patterns.
+        link: /events/modern-infrastructure-automation-with-pulumi-and-gitlab/
         action: Register Now
-      - title: "AWS Immersion Day: AWS Infrastructure & Platform Engineering"
-        date: May 7, 2025
-        description: Learn best practices for platform engineering on AWS and how Pulumi simplifies infrastructure management, enhances security, and automates cloud operations.
-        link: /events/aws-immersion-day-platform-engineering/
+      - title: Workload Observability with Pulumi and Honeycomb
+        date: July 17, 2025
+        description:  Deliver "observability as code" with Pulumi and Honeycomb. Automate SLOs, detect critical issues, and transform your platform engineering approach.
+        link: /events/workload-observability-with-pulumi-and-honeycomb/
         action: Register Now
 
 templates:
