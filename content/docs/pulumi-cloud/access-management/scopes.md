@@ -23,41 +23,45 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 
 #### AI Conversations Create
 
-```
-ai_conversations:create
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `ai_conversations:create` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole` |
+| Granted by permissions | N/A |
 
 Create a new AI conversation session for interacting with Pulumi's AI assistant. This allows users to start new conversations and get help with their infrastructure code.
 
 #### AI Conversations List All
 
-```
-ai_conversations:list_all
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `ai_conversations:list_all` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View all AI conversations across the organization. This provides administrators with visibility into all AI assistant interactions.
 
 #### AI Conversations Read
 
-```
-ai_conversations:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `ai_conversations:read` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole` |
+| Granted by permissions | N/A |
 
 Access and view the content of AI conversations. This allows users to read their own conversations and continue previous interactions.
 
 #### AI Conversations Update
 
-```
-ai_conversations:update
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `ai_conversations:update` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole` |
+| Granted by permissions | N/A |
 
 Modify and continue existing AI conversations. This enables users to update their conversations with new questions or context.
 
@@ -65,41 +69,45 @@ Modify and continue existing AI conversations. This enables users to update thei
 
 #### Agent Pool Create
 
-```
-agent_pool:create
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `agent_pool:create` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Create a new agent pool for running Pulumi operations. Agent pools provide isolated environments for executing infrastructure deployments.
 
 #### Agent Pool Delete
 
-```
-agent_pool:delete
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `agent_pool:delete` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Remove an existing agent pool and its associated resources. This permanently deletes the pool and its configuration.
 
 #### Agent Pool Read
 
-```
-agent_pool:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `agent_pool:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View agent pool configurations and status. This includes access to pool settings, agent status, and operational metrics.
 
 #### Agent Pool Update
 
-```
-agent_pool:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `agent_pool:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Modify agent pool settings and configurations. This allows updating pool parameters, scaling settings, and agent configurations.
 
@@ -107,21 +115,23 @@ Modify agent pool settings and configurations. This allows updating pool paramet
 
 #### Audit Logs Export
 
-```
-audit_logs:export
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `audit_logs:export` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Export audit log data for compliance and analysis purposes. This enables downloading audit records in various formats.
 
 #### Audit Logs Read
 
-```
-audit_logs:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `audit_logs:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Access and view audit logs of organization activities. This provides visibility into system events and user actions.
 
@@ -129,21 +139,23 @@ Access and view audit logs of organization activities. This provides visibility 
 
 #### Auth Policies Read
 
-```
-auth_policies:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `auth_policies:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View authentication policy configurations. This includes access to OIDC, SAML, and other identity provider settings.
 
 #### Auth Policies Update
 
-```
-auth_policies:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `auth_policies:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Modify authentication policies and identity provider settings. This allows updating security configurations and access rules.
 
@@ -151,41 +163,45 @@ Modify authentication policies and identity provider settings. This allows updat
 
 #### Deployments Pause
 
-```
-deployments:pause
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `deployments:pause` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Temporarily halt all deployment operations across the organization. This is useful for maintenance or emergency situations.
 
 #### Deployments Read
 
-```
-deployments:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `deployments:read` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole` |
+| Granted by permissions | N/A |
 
 View deployment configurations and status across the organization. This provides visibility into all deployment activities.
 
 #### Deployments Read Usage
 
-```
-deployments:read_usage
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`, BillingManagerRole
+| Property | Value |
+|----------|-------|
+| Value | `deployments:read_usage` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole`, BillingManagerRole |
+| Granted by permissions | N/A |
 
 Access deployment usage metrics and statistics. This includes information about resource consumption and operational costs.
 
 #### Deployments Resume
 
-```
-deployments:resume
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `deployments:resume` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Resume deployment operations after a pause. This restores normal deployment functionality across the organization.
 
@@ -193,11 +209,12 @@ Resume deployment operations after a pause. This restores normal deployment func
 
 #### Github Team Create
 
-```
-github_team:create
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `github_team:create` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Create a new team that syncs with GitHub. This enables integration between Pulumi and GitHub team structures.
 
@@ -205,91 +222,100 @@ Create a new team that syncs with GitHub. This enables integration between Pulum
 
 #### IaC Policy Groups Create
 
-```
-iac_policy_groups:create
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `iac_policy_groups:create` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Create a new group of Infrastructure as Code policies. This allows organizing related policies for better management and enforcement.
 
 #### IaC Policy Groups Delete
 
-```
-iac_policy_groups:delete
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `iac_policy_groups:delete` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Remove an existing group of Infrastructure as Code policies. This permanently deletes the policy group and its configurations.
 
 #### IaC Policy Groups Read
 
-```
-iac_policy_groups:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `iac_policy_groups:read` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole` |
+| Granted by permissions | N/A |
 
 View Infrastructure as Code policy group configurations. This includes access to policy definitions and enforcement rules.
 
 #### IaC Policy Groups Update
 
-```
-iac_policy_groups:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `iac_policy_groups:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Modify Infrastructure as Code policy group settings. This allows updating policy definitions and enforcement parameters.
 
 #### IaC Policy Pack Create
 
-```
-iac_policy_pack:create
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `iac_policy_pack:create` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Create a new Infrastructure as Code policy pack. This allows bundling related policies for deployment and enforcement.
 
 #### IaC Policy Pack Delete
 
-```
-iac_policy_pack:delete
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `iac_policy_pack:delete` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Remove an existing Infrastructure as Code policy pack. This permanently deletes the policy pack and its configurations.
 
 #### IaC Policy Pack Read
 
-```
-iac_policy_pack:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `iac_policy_pack:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View Infrastructure as Code policy pack contents. This includes access to policy definitions and enforcement rules.
 
 #### IaC Policy Pack Update
 
-```
-iac_policy_pack:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `iac_policy_pack:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Modify an existing Infrastructure as Code policy pack. This allows updating policy definitions and enforcement parameters.
 
 #### IaC Policy Results Read
 
-```
-iac_policy_results:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `iac_policy_results:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View results of Infrastructure as Code policy evaluations. This provides insights into policy compliance and violations.
 
@@ -297,21 +323,23 @@ View results of Infrastructure as Code policy evaluations. This provides insight
 
 #### Integrations Read
 
-```
-integrations:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `integrations:read` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole` |
+| Granted by permissions | N/A |
 
 View integration configurations for the organization. This includes access to settings for third-party services and tools.
 
 #### Integrations Update
 
-```
-integrations:update
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `integrations:update` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole` |
+| Granted by permissions | N/A |
 
 Modify integration settings for the organization. This allows updating or reconfiguring third-party service connections.
 
@@ -319,21 +347,23 @@ Modify integration settings for the organization. This allows updating or reconf
 
 #### Invites Create
 
-```
-invites:create
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `invites:create` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Send invitations to new users to join the organization. This enables onboarding of new team members.
 
 #### Invites Read
 
-```
-invites:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `invites:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View pending and sent invitations for organization membership. This provides visibility into user onboarding status.
 
@@ -341,51 +371,56 @@ View pending and sent invitations for organization membership. This provides vis
 
 #### OIDC Issuers Create
 
-```
-oidc_issuers:create
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `oidc_issuers:create` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Register a new OIDC issuer for authentication. This allows adding new identity providers for user login.
 
 #### OIDC Issuers Delete
 
-```
-oidc_issuers:delete
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `oidc_issuers:delete` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Remove an existing OIDC issuer. This permanently deletes the identity provider configuration.
 
 #### OIDC Issuers Read
 
-```
-oidc_issuers:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `oidc_issuers:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View OIDC issuer configurations. This includes access to identity provider details and settings.
 
 #### OIDC Issuers Regenerate Thumbprints
 
-```
-oidc_issuers:regenerate_thumbprints
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `oidc_issuers:regenerate_thumbprints` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Regenerate security thumbprints for an OIDC issuer. This is used to maintain secure authentication.
 
 #### OIDC Issuers Update
 
-```
-oidc_issuers:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `oidc_issuers:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Modify OIDC issuer settings. This allows updating identity provider details and authentication parameters.
 
@@ -393,21 +428,23 @@ Modify OIDC issuer settings. This allows updating identity provider details and 
 
 #### Org Integrations Read
 
-```
-org_integrations:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_integrations:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View organization-level integration settings. This includes access to all configured integrations.
 
 #### Org Integrations Update
 
-```
-org_integrations:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_integrations:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Update organization-level integration settings. This allows modifying or removing integrations.
 
@@ -415,97 +452,111 @@ Update organization-level integration settings. This allows modifying or removin
 
 #### Org Member Access
 
-```
-org_member:access
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_member:access` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Access organization member details and permissions. This is used for managing user roles and access.
 
 #### Org Member Add
 
-```
-org_member:add
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_member:add` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Add a new member to the organization. This enables expanding the team with new users.
 
 #### Org Member Delete
 
-```
-org_member:delete
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_member:delete` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Remove a member from the organization. This revokes their access and permissions.
 
 #### Org Member Read
 
-```
-org_member:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`, BillingManagerRole
+| Property | Value |
+|----------|-------|
+| Value | `org_member:read` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole`, BillingManagerRole |
+| Granted by permissions | N/A |
 
 View details about organization members. This includes access to user profiles and roles.
 
 #### Org Member Set Admin
 
-```
-org_member:set_admin
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_member:set_admin` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Grant or revoke admin privileges for an organization member. This controls elevated access.
 
 #### Org Member Update
 
-```
-org_member:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_member:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Update organization member information and roles. This allows changing user details and permissions.
 
 #### Org Requests Create
 
-```
-org_requests:create
-```
+| Property | Value |
+|----------|-------|
+| Value | `org_requests:create` |
+| Type | Organization settings |
+| Granted by roles | N/A |
+| Granted by permissions | N/A |
 
 Submit a new request to join or interact with the organization. This is used for onboarding or special access.
 
 #### Org Requests Read
 
-```
-org_requests:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_requests:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View all organization requests. This provides visibility into pending and processed requests.
 
 #### Org Requests Status
 
-```
-org_requests:status
-```
+| Property | Value |
+|----------|-------|
+| Value | `org_requests:status` |
+| Type | Organization settings |
+| Granted by roles | N/A |
+| Granted by permissions | N/A |
 
 Check the status of an organization request. This helps track onboarding or access progress.
 
 #### Org Requests Update
 
-```
-org_requests:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_requests:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Update or process organization requests. This allows approving or denying requests.
 
@@ -513,31 +564,34 @@ Update or process organization requests. This allows approving or denying reques
 
 #### Org Token Create
 
-```
-org_token:create
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_token:create` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Create a new organization API token. This enables programmatic access to organization resources.
 
 #### Org Token Delete
 
-```
-org_token:delete
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_token:delete` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Delete an existing organization API token. This revokes programmatic access.
 
 #### Org Token Read
 
-```
-org_token:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `org_token:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View organization API tokens. This includes access to token details and usage.
 
@@ -545,21 +599,23 @@ View organization API tokens. This includes access to token details and usage.
 
 #### Organization Annotations Read
 
-```
-organization_annotations:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization_annotations:read` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole` |
+| Granted by permissions | N/A |
 
 View annotations attached to the organization. This provides context and metadata for organizational resources.
 
 #### Organization Annotations Update
 
-```
-organization_annotations:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization_annotations:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Modify or add annotations to the organization. This allows updating organizational metadata.
 
@@ -567,91 +623,100 @@ Modify or add annotations to the organization. This allows updating organization
 
 #### Organization Billing
 
-```
-organization:billing
-```
-
-**Granted by default roles**: `AdminRole`, BillingManagerRole
+| Property | Value |
+|----------|-------|
+| Value | `organization:billing` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole`, BillingManagerRole |
+| Granted by permissions | N/A |
 
 Manage billing settings and payment methods for the organization. This includes access to invoices and payment history.
 
 #### Organization Change Backend
 
-```
-organization:change_backend
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization:change_backend` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Change the backend infrastructure for the organization. This is used for advanced configuration and migration.
 
 #### Organization Delete
 
-```
-organization:delete
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization:delete` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Delete the organization and all its resources. This is a permanent and irreversible action.
 
 #### Organization Read
 
-```
-organization:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`, BillingManagerRole
+| Property | Value |
+|----------|-------|
+| Value | `organization:read` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole`, BillingManagerRole |
+| Granted by permissions | N/A |
 
 View organization details and settings. This includes access to organizational metadata and configuration.
 
 #### Organization Read Activity
 
-```
-organization:read_activity
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`, BillingManagerRole
+| Property | Value |
+|----------|-------|
+| Value | `organization:read_activity` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole`, BillingManagerRole |
+| Granted by permissions | N/A |
 
 View recent activity and audit logs for the organization. This provides insight into changes and events.
 
 #### Organization Read Usage
 
-```
-organization:read_usage
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`, BillingManagerRole
+| Property | Value |
+|----------|-------|
+| Value | `organization:read_usage` |
+| Type | Organization settings |
+| Granted by roles | `MemberRole`, `AdminRole`, BillingManagerRole |
+| Granted by permissions | N/A |
 
 View usage statistics and metrics for the organization. This includes resource consumption and cost data.
 
 #### Organization Rename
 
-```
-organization:rename
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization:rename` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Change the name of the organization. This updates the organization's display name across the platform.
 
 #### Organization Transfer Stacks
 
-```
-organization:transfer_stacks
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization:transfer_stacks` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Transfer ownership of stacks between organizations. This is used for organizational restructuring or migration.
 
 #### Organization Update
 
-```
-organization:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Update organization settings and configurations. This allows changing metadata, policies, and preferences.
 
@@ -659,393 +724,47 @@ Update organization settings and configurations. This allows changing metadata, 
 
 #### Organization Webhook Create
 
-```
-organization_webhook:create
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization_webhook:create` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Create a new webhook for organization events. This enables integration with external systems for event notifications.
 
 #### Organization Webhook Delete
 
-```
-organization_webhook:delete
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization_webhook:delete` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Delete an existing organization webhook. This removes the integration and stops event delivery.
 
 #### Organization Webhook Read
 
-```
-organization_webhook:read
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization_webhook:read` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 View organization webhook configurations. This includes access to webhook endpoints and event triggers.
 
 #### Organization Webhook Update
 
-```
-organization_webhook:update
-```
-
-**Granted by default roles**: `AdminRole`
+| Property | Value |
+|----------|-------|
+| Value | `organization_webhook:update` |
+| Type | Organization settings |
+| Granted by roles | `AdminRole` |
+| Granted by permissions | N/A |
 
 Modify an existing organization webhook. This allows updating endpoint URLs and event subscriptions.
-
-### Stacks
-
-#### Project Annotation Read
-
-```
-project_annotations:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
-
-View annotations attached to a project. This provides context and metadata for project resources.
-
-#### Project Annotation Update
-
-```
-project_annotations:update
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
-
-Modify or add annotations to a project. This allows updating project metadata and documentation.
-
-#### Project Decrypt
-
-```
-project:decrypt
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
-
-Decrypt sensitive project data. This allows viewing encrypted configuration values and secrets.
-
-#### Project Encrypt
-
-```
-project:encrypt
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
-
-Encrypt project data. This secures sensitive information within the project.
-
-### Search
-
-#### Resources Dashboard
-
-```
-resources:dashboard
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`, BillingManagerRole
-
-View a dashboard of all resources managed by the organization. This provides a centralized overview of infrastructure.
-
-#### Resources Index
-
-```
-resources:index
-```
-
-**Granted by default roles**: `AdminRole`
-
-Index resources for search and discovery. This enables efficient querying and organization of resources.
-
-#### Resources Search
-
-```
-resources:search
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
-
-Search for resources within the organization. This allows users to find and access infrastructure components.
-
-### Roles
-
-#### Role Create
-
-```
-role:create
-```
-
-**Granted by default roles**: `AdminRole`
-
-Create a new custom role for the organization. This allows defining specific sets of permissions.
-
-#### Role Delete
-
-```
-role:delete
-```
-
-**Granted by default roles**: `AdminRole`
-
-Delete a custom role from the organization. This removes the role and its associated permissions.
-
-#### Role Read
-
-```
-role:read
-```
-
-**Granted by default roles**: `AdminRole`
-
-View details of custom roles in the organization. This includes access to role definitions and assigned permissions.
-
-#### Role Update
-
-```
-role:update
-```
-
-**Granted by default roles**: `AdminRole`
-
-Modify an existing custom role. This allows updating the set of permissions assigned to the role.
-
-### SSO
-
-#### SAML Read
-
-```
-saml:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`, BillingManagerRole
-
-View SAML configuration and settings. This includes access to single sign-on provider details.
-
-#### SAML Update
-
-```
-saml:update
-```
-
-**Granted by default roles**: `AdminRole`
-
-Modify SAML configuration and settings. This allows updating single sign-on provider details.
-
-#### SCIM Delete
-
-```
-scim:delete
-```
-
-**Granted by default roles**: `AdminRole`
-
-Delete a SCIM integration. This removes automated user provisioning and management.
-
-#### SCIM Read
-
-```
-scim:read
-```
-
-**Granted by default roles**: `AdminRole`
-
-View SCIM integration settings. This includes access to automated user provisioning configurations.
-
-#### SCIM Update
-
-```
-scim:update
-```
-
-**Granted by default roles**: `AdminRole`
-
-Modify SCIM integration settings. This allows updating automated user provisioning configurations.
-
-### Stacks
-
-#### Stack List
-
-```
-stack:list
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
-
-View a list of all stacks in the organization. This provides an overview of available stacks.
-
-#### Stack List Deleted
-
-```
-stack:list_deleted
-```
-
-**Granted by default roles**: `AdminRole`
-
-View a list of deleted stacks that are still recoverable. This helps in managing and potentially restoring stacks.
-
-#### Tags Read
-
-```
-tags:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
-
-View tags associated with projects. This provides access to project categorization and metadata.
-
-### Teams
-
-#### Team Create
-
-```
-team:create
-```
-
-**Granted by default roles**: `AdminRole`
-
-**Granted by default permission**: TeamRoleAdmin
-
-Create a new team within the organization. This enables grouping users for access control and collaboration.
-
-#### Team Create Token
-
-```
-team:create_token
-```
-
-**Granted by default roles**: `AdminRole`
-
-**Granted by default permission**: TeamRoleAdmin
-
-Create a new token for team operations. This enables programmatic access for team-related actions.
-
-#### Team Delete
-
-```
-team:delete
-```
-
-**Granted by default roles**: `AdminRole`
-
-**Granted by default permission**: TeamRoleAdmin
-
-Delete a team from the organization. This removes the team and its associated permissions.
-
-#### Team Delete Token
-
-```
-team:delete_token
-```
-
-**Granted by default roles**: `AdminRole`
-
-**Granted by default permission**: TeamRoleAdmin
-
-Delete a team token. This revokes programmatic access for team-related actions.
-
-#### Team List
-
-```
-team:list
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`, BillingManagerRole
-
-**Granted by default permission**: TeamRoleMember
-
-View a list of all teams in the organization. This provides an overview of available teams.
-
-#### Team List Tokens
-
-```
-team:list_tokens
-```
-
-**Granted by default roles**: `AdminRole`
-
-**Granted by default permission**: TeamRoleAdmin
-
-View all tokens associated with a team. This includes access to token details and usage.
-
-#### Team Read
-
-```
-team:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
-
-**Granted by default permission**: TeamRoleMember
-
-View team details and settings. This includes access to team membership and configuration.
-
-#### Team Update
-
-```
-team:update
-```
-
-**Granted by default roles**: `AdminRole`
-
-**Granted by default permission**: TeamRoleAdmin
-
-Modify team settings and membership. This allows updating team details and user assignments.
-
-### Templates
-
-#### Templates Read
-
-```
-templates:read
-```
-
-**Granted by default roles**: `MemberRole`, `AdminRole`
-
-View available templates for infrastructure deployments. This includes access to template definitions and usage instructions.
-
-#### Templates Source Create
-
-```
-templates:source:create
-```
-
-**Granted by default roles**: `AdminRole`
-
-Create a new template source for infrastructure deployments. This allows adding new sources for reusable templates.
-
-#### Templates Source Delete
-
-```
-templates:source:delete
-```
-
-**Granted by default roles**: `AdminRole`
-
-Delete an existing template source. This removes the source and its associated templates.
-
-#### Templates Source Read
-
-```
-templates:source:read
-```
-
-**Granted by default roles**: `AdminRole`
-
-View template source configurations. This includes access to source details and available templates.
-
-#### Templates Source Update
-
-```
-templates:source:update
-```
-
-**Granted by default roles**: `AdminRole`
-
-Modify an existing template source. This allows updating source details and available templates.
 
 ## Type: Environment
 
