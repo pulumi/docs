@@ -29,6 +29,8 @@ sections:
 
 Imagine Learning is a leading K-12 education technology company serving millions of students nationwide. Their applications support diverse learning activities across multiple subjects and grade levels, requiring numerous environments for development, testing, staging, and production. As the company has grown, so has the need for a scalable, reliable infrastructure to support their educational technology solutions.
 
+{{< youtube "1Q3XPmenthg" >}}
+
 ## Scaling Education Infrastructure for the Next Generation
 
 As a technology company focused on K-12 education, Imagine Learning's infrastructure needs are both complex and critical. Their existing Internal Developer Platform was struggling to keep pace with evolving demands, creating several challenges:
