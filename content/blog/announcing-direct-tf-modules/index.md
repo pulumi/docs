@@ -203,6 +203,7 @@ features such as computing subnets dynamically with Pulumi `aws.getAvailabilityZ
 results of the VPC module to an EKS module.
 
 // TODO show-case cross-configuring the provider with a given AWS region
+// TODO show-case converting TF programs with @sandbox annotation
 
 ## Supported Features
 
