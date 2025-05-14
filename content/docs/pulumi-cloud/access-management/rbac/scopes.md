@@ -1,15 +1,15 @@
 ---
-title_tag: "Pulumi Cloud: Authorization Scopes"
-meta_desc: All available authorization scopes for Pulumi Cloud
-title: "Authorization scopes"
-h1: "Authorization scopes"
+title_tag: "Pulumi Cloud: Scopes"
+meta_desc: Learn about scopes in Pulumi Cloud and how they control access to resources
+title: "Scopes"
+h1: "Scopes"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: Authorization scopes
-    parent: pulumi-cloud-access-management
-    weight: 5
-    identifier: pulumi-cloud-access-management-authorization-scopes
+    name: Scopes
+    parent: pulumi-cloud-access-management-rbac
+    weight: 4
+    identifier: pulumi-cloud-access-management-rbac-scopes
 aliases:
 - /docs/intro/pulumi-service/scopes/
 - /docs/intro/pulumi-cloud/scopes/
@@ -1703,3 +1703,9 @@ stack_webhook:update
 **Granted by default permission**: StackPermissionWrite
 
 Modify an existing stack webhook. This allows updating endpoint URLs and event subscriptions.
+
+## Related Resources
+
+- [Teams](/docs/pulumi-cloud/access-management/rbac/teams)
+- [Roles](/docs/pulumi-cloud/access-management/rbac/roles)
+- [Permissions](/docs/pulumi-cloud/access-management/rbac/permissions)

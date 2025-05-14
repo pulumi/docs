@@ -7,9 +7,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
     name: Roles
-    parent: pulumi-cloud-access-management
-    weight: 4
-    identifier: pulumi-cloud-access-management-roles
+    parent: pulumi-cloud-access-management-rbac
+    weight: 2
+    identifier: pulumi-cloud-access-management-rbac-roles
 ---
 
 A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or service account) can access and what they can do with them. Roles combine sets of scopes that can be assigned to principals to control their access to resources.
@@ -22,11 +22,16 @@ Pulumi Cloud provides several default roles that you can use to quickly get star
 
 | Role | Description |
 |------|-------------|
-| `AdminRole` | Full access to all organization resources and settings. Can manage members, roles, and organization-wide configurations. |
-| `MemberRole` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. |
-| `BillingManagerRole` | Access to view and manage billing information. Cannot modify other organization settings. |
+| `Admin` | Full access to all organization resources and settings. Can manage members, roles, and organization-wide configurations. |
+| `Member` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. |
+| `Billing Manager` | Access to view and manage billing information. Cannot modify other organization settings or resources. |
 
 ## Custom Roles
+
+{{% notes "info" %}}
+Custom roles are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.
+To learn more about editions visit the [pricing page](/pricing/).
+{{% /notes %}}
 
 You can create custom roles to define more granular access controls for your organization. Custom roles allow you to:
 
@@ -96,6 +101,6 @@ When working with roles in Pulumi Cloud, consider these best practices:
 
 ## Related Resources
 
-- [Permissions](/docs/pulumi-cloud/access-management/permissions)
-- [Scopes](/docs/pulumi-cloud/access-management/scopes)
-- [Teams](/docs/pulumi-cloud/access-management/teams)
+- [Teams](/docs/pulumi-cloud/access-management/rbac/teams)
+- [Permissions](/docs/pulumi-cloud/access-management/rbac/permissions)
+- [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes)

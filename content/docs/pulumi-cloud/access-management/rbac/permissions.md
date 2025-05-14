@@ -7,9 +7,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
     name: Permissions
-    parent: pulumi-cloud-access-management
+    parent: pulumi-cloud-access-management-rbac
     weight: 3
-    identifier: pulumi-cloud-access-management-permissions
+    identifier: pulumi-cloud-access-management-rbac-permissions
 ---
 
 Permissions in Pulumi Cloud are predefined bundles of scopes that are commonly used together. They provide a convenient way to grant related access rights to principals through roles.
@@ -104,6 +104,6 @@ When working with permissions in Pulumi Cloud, consider these best practices:
 
 ## Related Resources
 
-- [Roles](/docs/pulumi-cloud/access-management/roles)
-- [Scopes](/docs/pulumi-cloud/access-management/scopes)
-- [Teams](/docs/pulumi-cloud/access-management/teams)
+- [Teams](/docs/pulumi-cloud/access-management/rbac/teams)
+- [Roles](/docs/pulumi-cloud/access-management/rbac/roles)
+- [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes)
