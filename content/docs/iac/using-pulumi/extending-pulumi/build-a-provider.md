@@ -47,7 +47,7 @@ Providers should report meaningful error messages. It’s important to handle tr
 
 ### The provider schema
 
-A provider schema defines the resources, their input and output properties, data sources, and configuration options. This schema enables Pulumi to generate SDKs for multiple languages and ensures consistency across them, as well as providing documentation.
+A provider's [package schema](/docs/iac/using-pulumi/extending-pulumi/schema/) defines the resources, their input and output properties, descriptions, and configuration options. This schema enables Pulumi to generate SDKs for multiple languages and ensures consistency across them, as well as providing documentation.
 
 {{% notes type="info" %}}
 
