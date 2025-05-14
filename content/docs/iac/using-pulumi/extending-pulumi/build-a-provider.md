@@ -256,20 +256,17 @@ func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileSt
 		return infer.UpdateResponse[FileState]{}, nil
 	}
 
-	_, err := os.Stat(req.Inputs.Path)
-	if req.State.Content != req.Inputs.Content || os.IsNotExist(err) {
-		f, err := os.Create(req.State.Path)
-		if err != nil {
-			return infer.UpdateResponse[FileState]{}, err
-		}
-		defer f.Close()
-		n, err := f.WriteString(req.Inputs.Content)
-		if err != nil {
-			return infer.UpdateResponse[FileState]{}, err
-		}
-		if n != len(req.Inputs.Content) {
-			return infer.UpdateResponse[FileState]{}, fmt.Errorf("only wrote %d/%d bytes", n, len(req.Inputs.Content))
-		}
+	f, err := os.Create(req.State.Path)
+	if err != nil {
+		return infer.UpdateResponse[FileState]{}, err
+	}
+	defer f.Close()
+	n, err := f.WriteString(req.Inputs.Content)
+	if err != nil {
+		return infer.UpdateResponse[FileState]{}, err
+	}
+	if n != len(req.Inputs.Content) {
+		return infer.UpdateResponse[FileState]{}, fmt.Errorf("only wrote %d/%d bytes", n, len(req.Inputs.Content))
 	}
 
 	return infer.UpdateResponse[FileState]{
@@ -315,12 +312,12 @@ func (File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState]
 		ID: path,
 		Inputs: FileArgs{
 			Path:    path,
-			Force:   req.Inputs.Force && req.State.Force,
+			Force:   req.State.Force,
 			Content: content,
 		},
 		State: FileState{
 			Path:    path,
-			Force:   req.Inputs.Force && req.State.Force,
+			Force:   req.State.Force,
 			Content: content,
 		},
 	}, nil
@@ -580,7 +577,7 @@ func (File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckRespo
 
 ##### The `Update` operation
 
-The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode of not, and that the input contents are different than the recorded state of the content, we overwrite the file with the new contents.
+The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode of not, we overwrite the file with the new contents. Note that it's not necessary to check if the input contents are different than current state of the content, as this logic is handled by the `Diff` operation.
 
 ```go
 func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {
@@ -659,12 +656,12 @@ func (File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState]
 		ID: path,
 		Inputs: FileArgs{
 			Path:    path,
-			Force:   req.Inputs.Force && req.State.Force,
+			Force:   req.State.Force,
 			Content: content,
 		},
 		State: FileState{
 			Path:    path,
-			Force:   req.Inputs.Force && req.State.Force,
+			Force:   req.State.Force,
 			Content: content,
 		},
 	}, nil
