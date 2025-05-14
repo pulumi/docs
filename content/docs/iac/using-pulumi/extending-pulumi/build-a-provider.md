@@ -411,7 +411,7 @@ import (
 )
 ```
 
-#### Provider entrypoint and indentity definitions
+#### Provider entrypoint and identity definitions
 
 The next section involves defining the `main()` entrypoint function and using `infer.NewProviderBuilder()` to construct the provider instance.
 
