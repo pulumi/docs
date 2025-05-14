@@ -1,23 +1,52 @@
 ---
-title: "Excluding targets from stack operations"
-date: 2025-04-30
-meta_desc: "You can now exclude targets from up, preview, refresh, and destroy operations"
+title: "New in Pulumi IaC: Support for skipping a resource"
+date: 2025-05-14
+meta_desc: "Pulumi now supports excluding specific resources from up, preview, refresh, and destroy operations, giving you more control and efficiency in managing your infrastructure"
 authors:
     - tom-harding
 tags:
-    - exclude
-    - targets
+    - features
+    - iac
+    - releases
 ---
 
-Pulumi provides a set of top-level commands for managing stack deployments. We can use commands like `up` and `destroy` to spin up and tear down production environments, or `refresh` to update our understanding of the stack’s resources.
+Managing large-scale infrastructure can be challenging, especially when you need to perform operations on specific subsets of your resources. Pulumi's stack operations like `pulumi up` and `pulumi destroy` are powerful for deploying and tearing down environments, but sometimes you need more fine-grained control over which resources are affected.
 
-These work great, but sometimes you want to perform these operations on a subset of your infrastructure. In these cases, the `--target` flag allows you to specify the precise resources on which you want to perform your updates. On top of this, the `--target-dependents` flag can be used to select all the children of these `--target` resources automatically. This makes it easy to say, for example, “deploy this particular AWS bucket” without affecting the rest of your infrastructure.
+Today, we're excited to announce a [highly requested feature](https://github.com/pulumi/pulumi/issues/9346) that will save you time and reduce complexity in your workflows: the ability to exclude specific resources from stack operations using the new `--exclude` and `--exclude-dependents` flags.
 
-Today, we’re going to talk about an update to address the complementary feature request. While `--target` allows us to specify a subset of our infrastructure, it can be cumbersome if we want to include almost all of our resources. For this use case, we’ve introduced two new flags: `--exclude` and `--exclude-dependents`.
+These new flags complement the existing `--target` functionality, giving you powerful options whether you want to focus on a small subset of resources or exclude just a few from larger operations. No more workarounds or custom scripts to achieve selective deployments!
 
-## An example: blog post drafts
+<!--more-->
 
-Let’s imagine we want to deploy our static blog website. As part of this process, we have a bunch of HTML pages we’d like to deploy:
+## The challenge: partial operations on large stacks
+
+When managing infrastructure at scale, you often want to operate on most—but not all—resources in your stack. For example:
+
+- Deploying all resources except a database that requires a maintenance window
+- Refreshing most resources while skipping those with known differences
+- Updating production infrastructure while leaving critical services untouched
+- Testing changes to most components while preserving test data in development
+
+Pulumi already has the `--target` flag to specify which resources to include in an operation. This works well when you want to target a small number of resources, but becomes unwieldy when you want to operate on most of your stack while excluding only a few resources.
+
+## The solution: introducing `--exclude` and `--exclude-dependents`
+
+Our new `--exclude` flag solves this problem by letting you specify which resources to omit from stack operations. When paired with `--exclude-dependents`, you can also exclude all child resources of the specified resources, making it easy to exclude entire branches of your resource tree.
+
+These flags are now available for all major stack operations:
+
+```shell
+pulumi up --exclude <URN>::resource-to-skip
+pulumi preview --exclude <URN>::resource-to-skip
+pulumi refresh --exclude <URN>::resource-to-skip
+pulumi destroy --exclude <URN>::resource-to-skip
+```
+
+Each of these commands can also use the `--exclude-dependents` flag to exclude child resources.
+
+## An example: selective deployment of blog content
+
+Let's imagine you're managing a static blog website with Pulumi. As part of your deployment, you have multiple HTML pages you'd like to deploy:
 
 {{% chooser language "javascript,typescript,python,go,csharp" %}}
 
@@ -141,7 +170,7 @@ This is fine for a personal blog site, but can still become unmanageable when we
 ```javascript
 ...
 
-// A stub resource to group all our drafts
+// A parent component for all drafts
 const drafts = new pulumi.ComponentResource('ComponentResource', 'drafts')
 
 for (const file in await glob('drafts/**/*.html')) {
@@ -161,7 +190,7 @@ for (const file in await glob('drafts/**/*.html')) {
 ```typescript
 ...
 
-// A stub resource to group all our drafts
+// A parent component for all drafts
 const drafts: pulumi.ComponentResource =
   new pulumi.ComponentResource('ComponentResource', 'drafts')
 
@@ -179,16 +208,16 @@ for (const file in await glob('drafts/**/*.html')) {
 
 {{% choosable language python %}}
 
-```py
+```python
 ...
 
-# A stub resource to group all our drafts
+# A parent component for all drafts
 drafts = pulumi.ComponentResource(t="ComponentResource", name="drafts")
 
 for file_path in glob("posts/**/*.html"):
     aws.s3.BucketObject(file_path,
         source = pulumi.FileAsset(file_path),
-	 opts = pulumi.ResourceOptions(parent = drafts),
+        opts = pulumi.ResourceOptions(parent = drafts),
         ....
     )
 
@@ -200,6 +229,7 @@ for file_path in glob("posts/**/*.html"):
 {{% choosable language go %}}
 
 ```go
+
 drafts := &DraftGroupComponent{}
 err = ctx.RegisterComponentResource("ComponentResource", "drafts", drafts)
 if err != nil { return err }
@@ -226,6 +256,7 @@ for _, file := range files {
 {{% choosable language csharp %}}
 
 ```csharp
+
 public class MyComponentResource : ComponentResource { ... }
 
 ...
@@ -262,4 +293,4 @@ This command will exclude all drafts from the `up` operation, regardless of how 
 
 ## Next steps
 
-With these flags now available in the Pulumi CLI, expect to see them introduced in the automation APIs and GitHub action soon. Thanks for reading, and feel free to share any feedback on [GitHub](https://github.com/pulumi/pulumi), [X](https://twitter.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
+With these flags now available in Pulumi CLI v3.158.0., expect to see them introduced in the automation APIs and GitHub action soon. Thanks for reading, and feel free to share any feedback on [GitHub](https://github.com/pulumi/pulumi), [X](https://twitter.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).
