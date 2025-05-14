@@ -645,7 +645,7 @@ func (File) Diff(ctx context.Context, req infer.DiffRequest[FileArgs, FileState]
 
 #### The `Read` operation
 
-The `Read` operation fetches the resource. The `ReadRequest` has a `ID` property that can be used, in this case, to determine the path to the file, and the base library functions can be used to read the file from disk, populating the `Content` field.
+The `Read` operation fetches the resource, e.g. to refresh the live state. The `ReadRequest` has a `ID` property that can be used, in this case, to determine the path to the file, and the base library functions can be used to read the file from disk, populating the `Content` field.
 
 ```go
 func (File) Read(ctx context.Context, req infer.ReadRequest[FileArgs, FileState]) (infer.ReadResponse[FileArgs, FileState], error) {
