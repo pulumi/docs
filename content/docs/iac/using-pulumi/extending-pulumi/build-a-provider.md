@@ -163,7 +163,12 @@ func main() {
 		os.Exit(1)
 	}
 
-	provider.Run(context.Background(), "file", "0.1.0")
+	err := provider.Run(context.Background(), "file", "0.1.0")
+
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %s", err.Error())
+		os.Exit(1)
+	}
 }
 
 type File struct{}
@@ -414,7 +419,9 @@ The next section involves defining the `main()` entrypoint function and using `i
 
 The entry point uses `provider.Run(...)` to launch the provider process. It takes as arguments the name and version of the provider. Note that the name and version here will be what your end-user sees in the Pulumi program and should be unique to avoid confusion.
 
-Building the provider instance with `infer.NewProviderBuilder(...)` uses a fluent-programming style, setting various configuration options via a chain of methods starting with the word `.With...`. In this example, we use `.WithResource` to export the `File` resource, and `.WithNamespace` to set the namespace that the generated language-specific SDKs will use. Finally, calling `.Build()` will return the provider instance.
+Building the provider instance with `infer.NewProviderBuilder(...)` uses a fluent-programming style, setting various configuration options via a chain of methods starting with the word `.With...`. In this example, we use `.WithResource` to export the `File` resource, and `.WithNamespace` to set the namespace that the generated language-specific SDKs will use. The namespace is used as a grouping of your organization's packages. We suggest using something like your GitHub organization name. If not provided, default value will be `pulumi`, which is intended for our first-party packages.
+
+Finally, calling `.Build()` will return the provider instance.
 
 ```go
 func main() {
@@ -430,7 +437,12 @@ func main() {
 		os.Exit(1)
 	}
 
-	provider.Run(context.Background(), "file", "0.1.0")
+	err := provider.Run(context.Background(), "file", "0.1.0")
+
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %s", err.Error())
+		os.Exit(1)
+	}
 }
 ```
 
