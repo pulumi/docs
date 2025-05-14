@@ -153,7 +153,7 @@ import (
 func main() {
 	provider, err := infer.NewProviderBuilder().
 		WithResources(
-			infer.Resource[File](),
+			infer.Resource(File{}),
 		).
 		WithNamespace("example").
 		Build()
@@ -427,7 +427,7 @@ Finally, calling `.Build()` will return the provider instance.
 func main() {
 	provider, err := infer.NewProviderBuilder().
 		WithResources(
-			infer.Resource[File](),
+			infer.Resource(File{}),
 		).
 		WithNamespace("example").
 		Build()
