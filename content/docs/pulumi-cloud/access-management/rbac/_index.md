@@ -12,34 +12,23 @@ menu:
     identifier: pulumi-cloud-access-management-rbac
 ---
 
-Role-Based Access Control (RBAC) in Pulumi Cloud provides a flexible and secure way to manage access to your organization's resources. RBAC allows you to control who can access what resources and what actions they can perform.
+Role-Based Access Control (RBAC) in Pulumi Cloud provides a flexible and secure way to manage access to your organization's resources. This allows you to exercise fine-grained control over who can access what resources in your organization and what actions they can perform.
 
-## Key Concepts
+Leveraging Pulumi's RBAC features empower Enterprise organizations to follow best practices:
+
+- **Granular Access Control**: Define precise access levels for different resources.
+- **Simplified Management**: Easily manage access as they grow by building out reusable RBAC elements.
+- **Security**: Enforce least privilege access to resources.
+
+## RBAC Constructs
 
 Pulumi Cloud's RBAC system is built on these core concepts:
 
-- **Teams**: Groups of users that can be assigned roles
-- **Roles**: Collections of permissions that define what actions can be performed
-- **Permissions**: Predefined bundles of scopes that are commonly used together
-- **Scopes**: Granular access rights that define specific actions on resources
+- [**Scopes**](/docs/pulumi-cloud/access-management/rbac/scopes): Granular access rights that define specific actions on resources
+- [**Permissions**](/docs/pulumi-cloud/access-management/rbac/permissions): Predefined bundles of scopes that are commonly used together
+- [**Roles**](/docs/pulumi-cloud/access-management/rbac/roles): Collections of permissions applied to resources and assigned to principals.
+- [**Teams**](/docs/pulumi-cloud/access-management/rbac/teams): Groups of users that can be assigned roles.
 
-## How RBAC Works
+### Customization
 
-1. **Create Teams**: Organize users into teams based on their responsibilities
-2. **Define Roles**: Create roles with specific permissions
-3. **Assign Roles**: Assign roles to teams or individual users
-4. **Manage Access**: Control access to resources through role assignments
-
-## Benefits
-
-- **Granular Access Control**: Define precise access levels for different resources
-- **Simplified Management**: Manage access through teams and roles
-- **Security**: Enforce least privilege access
-- **Scalability**: Easily manage access as your organization grows
-
-## Related Resources
-
-- [Teams](/docs/pulumi-cloud/access-management/rbac/teams)
-- [Roles](/docs/pulumi-cloud/access-management/rbac/roles)
-- [Permissions](/docs/pulumi-cloud/access-management/rbac/permissions)
-- [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes)
+Enterprise organizations have access to manage and create their own Teams. They also can manage and create their own custom Permissions and Roles, on top of the defaults available to every organization in Pulumi.
