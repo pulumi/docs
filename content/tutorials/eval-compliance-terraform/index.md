@@ -1,6 +1,6 @@
 ---
 title: "Evaluate Compliance of Terraform Resources"
-title_tag: "Evaluate Compliance of Terraform Resources"
+title_tag: "Evaluate Compliance of Terraform Resources using Pulumi Insights"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
