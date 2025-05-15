@@ -24,7 +24,7 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    In this tutorial, you will learn how to use Pulumi Insights to discover and evaluate cloud resources for compliance, regardless of how they were deployed. While Pulumi is often used for infrastructure as code (IaC), [Pulumi Insights](/docs/insights/) can scan resources provisioned by any IaC tool, or even resources that were deployed manually. This tutorial will focus on scanning and evaluating AWS resources that are deployed using Terraform in particular, but the same approach applies to other major cloud providers and deployment methods.
+    In this tutorial, you will learn how to use Pulumi Insights to discover and evaluate cloud resources for compliance, regardless of how they were deployed. [Pulumi Insights](/docs/insights/) can scan resources provisioned by any IaC tool, or even resources that were deployed manually. This tutorial will focus on scanning and evaluating AWS resources that are deployed using Terraform in particular, but the same approach applies to other major cloud providers and deployment methods.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
