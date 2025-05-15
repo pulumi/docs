@@ -1,68 +1,40 @@
 ---
-title_tag: "Pulumi Copilot API"
-meta_desc: Learn about Pulumi Copilot REST APIs for integrating Pulumi Copilot capabilities into your applications and workplace platforms.
-title: Pulumi Copilot API
-h1: Pulumi Copilot API Overview
-meta_image: /images/docs/meta-images/docs-meta.png
+title: Copilot
+title_tag: "Pulumi Cloud REST API: Copilot"
+meta_desc: Learn about the Pulumi Copilot REST API endpoints for integrating AI-powered infrastructure assistance with your applications.
 menu:
     cloud:
-        name: Pulumi Copilot API
-        parent: pulumi-cloud-copilot
-        weight: 1
-        identifier: pulumi-cloud-copilot-api
+        parent: pulumi-cloud-reference
+        weight: 2
+aliases:
+    - /docs/pulumi-cloud/copilot/api/
 ---
+
+The Pulumi Copilot API provides endpoints for integrating Pulumi's AI-powered infrastructure assistance capabilities with your applications and platforms. It allows you to programmatically access Pulumi Copilot's natural language understanding to analyze infrastructure, answer questions about Pulumi, and even generate infrastructure as code.
 
 {{% notes "info" %}}
 Pulumi Copilot's API is currently in preview and subject to change.
 {{% /notes %}}
 
-The Pulumi Copilot REST API (currently in Preview) is part of the [Pulumi Cloud REST API](https://www.pulumi.com/docs/pulumi-cloud/reference/cloud-rest-api) that is used to integrate Pulumi Copilot capabilities with other applications or tools.
-
-## Endpoint URL
-
-For the Managed Pulumi Cloud (i.e. [app.pulumi.com](https://app.pulumi.com/)), API endpoints are prefixed with the following url:
-
-```
-https://api.pulumi.com
-```
-
-Currently, [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) is not supported by the Pulumi Copilot REST API.
-
-## Authentication
-
-All requests must be authenticated using a token via the `Authorization` HTTP header.
-
-The `Authorization` header must be in the form below with the literal string `token`, then a space, then your access token value.
-
-```
-Authorization: token {token}
-```
-
-To view your access tokens, or create a new one, view the [Access Tokens](https://app.pulumi.com/user/settings/tokens) page. You will see a list of past tokens, when they were last used, and have the ability to revoke them.
-
-The Pulumi Copilot REST API will return a 401 status code if the token is missing or invalid.
-
-## Required request headers
-
-The following header is required:
-
-```
-Content-Type: application/json
-```
-
-## Start conversation
+## Start Conversation
 
 Starts a new conversation with Pulumi Copilot with a query.
 
-```
+```plain
 POST /api/ai/chat/preview
 ```
 
-### Request format
+### Parameters
 
-#### Request body schema
+| Parameter             | Type   | In   | Description                                                                      |
+|-------------------- |------- |------|----------------------------------------------------------------------------------|
+| `query`             | string | body | The natural language query to process (e.g., "Who are the users in my org?").    |
+| `state.client.cloudContext.orgId` | string | body | The identifier for your Pulumi organization (e.g., "acme").         |
+| `state.client.cloudContext.url`   | string | body | The URL of the resource in Pulumi Cloud. Must start with "https://app.pulumi.com". |
 
-```JSON
+### Request Body Schema
+
+```json
 {
     "query": string,
     "state": {
@@ -76,17 +48,11 @@ POST /api/ai/chat/preview
 }
 ```
 
-#### Fields description
+### Response Format
 
-- `query`: The natural language query to process (e.g., "Who are the users in my org?").
-- `orgId`: The identifier for your Pulumi organization (e.g., "acme").
-- `url`: The URL of the resource in the Pulumi Cloud that provides context to the Pulumi Copilot (e.g., "https://app.pulumi.com/myorg/project1/dev/updates/4"). This parameter must start with "https://app.pulumi.com".
+#### Response Body Schema
 
-### Response format
-
-#### Response body schema
-
-```JSON
+```json
 {
     "conversationId": string,
     "messages": [
@@ -99,7 +65,7 @@ POST /api/ai/chat/preview
 }
 ```
 
-#### Response fields description
+#### Response Fields
 
 - `conversationId`: Unique identifier for the conversation started by the call.
 - `messages`: Array of message objects containing the conversation history and system events.
@@ -108,7 +74,7 @@ Each message in the messages array contains:
 
 - `role`: The sender of the message ("assistant" or "user").
 - `kind`: The type of message:
-    - `trace`: Debug or system information (this data is not sent to the LLM and it only used to debugging).
+    - `trace`: Debug or system information (this data is not sent to the LLM and is only used for debugging).
     - `response`: User queries or assistant responses.
     - `status`: Status updates about operations being performed.
     - `program`: Generated code when requested by the user.
@@ -120,7 +86,7 @@ Each message in the messages array contains:
 
 When the message `kind` is `program`, the `content` field is an object with the following structure:
 
-```JSON
+```json
 {
     "code": string,
     "plan": {
@@ -136,7 +102,9 @@ When the message `kind` is `program`, the `content` field is an object with the 
 - `language`: The programming language of the generated code (e.g., "typescript").
 - `programId`: A unique identifier for the generated program.
 
-### Example request
+### Example
+
+#### Request
 
 ```bash
 curl -L https://api.pulumi.com/api/ai/chat/preview \
@@ -155,9 +123,9 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
 }'
 ```
 
-### Example response
+#### Response
 
-```JSON
+```json
 {
   "conversationId": "522e0fdb-e992-4be4-9937-37249ed93289",
   "messages": [
@@ -185,7 +153,7 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
 }
 ```
 
-### Example request to generate a program
+### Example Request to Generate a Program
 
 ```bash
 curl -L https://api.pulumi.com/api/ai/chat/preview \
@@ -204,16 +172,14 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
 }'
 ```
 
-### Example program generation response
+### Example Program Generation Response
 
-Note that the `content` field is now an object containing program code an other elements:
+Note that the `content` field is now an object containing program code and other elements:
 
-```JSON
+```json
 {
   "conversationId": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
   "messages": [
-    // omitted for brevity
-    // ...
     {
       "role": "assistant",
       "kind": "program",
@@ -230,19 +196,26 @@ Note that the `content` field is now an object containing program code an other 
 }
 ```
 
-## Post message to conversation
+## Post Message to Conversation
 
 Posts a new message to an existing conversation. The request format is identical to the "Start Conversation", with the addition of the `conversationId` field returned from that call.
 
-```
+```plain
 POST /api/ai/chat/preview
 ```
 
-### Request format
+### Parameters
 
-#### Request body schema
+| Parameter             | Type   | In   | Description                                                                                                         |
+|-------------------- |------- |------|--------------------------------------------------------------------------------------------------------------------|
+| `query`             | string | body | The natural language query to process (e.g., "Who are the users in my org?").                                       |
+| `state.client.cloudContext.orgId` | string | body | The identifier for your Pulumi organization (e.g., "acme").                                            |
+| `state.client.cloudContext.url`   | string | body | The URL of the resource in the Pulumi Cloud that provides context to the Pulumi Copilot. |
+| `conversationId`    | string | body | The conversation ID to post the message to. |
 
-```JSON
+### Request Body Schema
+
+```json
 {
     "query": string,
     "state": {
@@ -257,16 +230,13 @@ POST /api/ai/chat/preview
 }
 ```
 
-#### Fields description
+### Response Format
 
-- `query`, `orgId`, `url`: Same as in the "Start conversation" request, see above.
-- `conversationId`: conversation to post the message to.
+Same as in the "Start conversation" request.
 
-### Response format
+### Example
 
-Same as in the "Start conversation" request, see above.
-
-### Example request
+#### Request
 
 ```bash
 curl -L https://api.pulumi.com/api/ai/chat/preview \
@@ -286,14 +256,12 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
 }'
 ```
 
-### Example response
+#### Response
 
-````JSON
+```json
 {
   "conversationId": "522e0fdb-e992-4be4-9937-37249ed93289",
   "messages": [
-    // omitted for brevity
-    // ...
     {
       "role": "assistant",
       "kind": "status",
@@ -306,4 +274,4 @@ curl -L https://api.pulumi.com/api/ai/chat/preview \
     }
   ]
 }
-````
+```
