@@ -22,9 +22,9 @@ summary: |
   - Using the `Release` resource
   - Using the `Chart` resource
 
-  The Helm [Chart](/registry/packages/kubernetes/api-docs/helm/v4/chart) resource renders the templates from your chart and then manages the objects directly with the Pulumi Kubernetes provider. There was recently a new version of the `Chart` resource released, and in this [blog post](/blog/kubernetes-chart-v4/) you will learn more about the improvements.
+  The Helm [Chart](/registry/packages/kubernetes/api-docs/helm/v3/chart) resource renders the templates from your chart and then manages the objects directly with the Pulumi Kubernetes provider. There was recently a new version of the `Chart` resource released, and in this [blog post](/blog/kubernetes-chart-v4/) you will learn more about the improvements.
 
-  The Helm [Release](/registry/packages/kubernetes/api-docs/helm/v4/release) resource uses the Helm SDK to install the Helm chart on your Kubernetes cluster.
+  The Helm [Release](/registry/packages/kubernetes/api-docs/helm/v3/release) resource uses the Helm SDK to install the Helm chart on your Kubernetes cluster.
   
 youll_learn:
 - How to install Helm on Kubernetes using Pulumi

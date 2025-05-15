@@ -81,7 +81,7 @@ jobs:
           organization: org-name
           requested-token-type: urn:pulumi:token-type:access_token:organization
 
-      - uses: pulumi/actions@v5
+      - uses: pulumi/actions@v6
         with:
           command: preview
           stack-name: org-name/stack-name

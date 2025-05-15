@@ -1,9 +1,10 @@
 ---
-title: "Using Pulumi with AWS SQS and Lambdas"
+title: "AWS SQS to Lambda with Pulumi: Serverless Queue Example"
 authors: ["cyrus-najmabadi"]
 tags: ["JavaScript","Serverless","AWS"]
 date: "2018-07-10"
-meta_desc: "Learn how to use Amazon's SQS with Pulumi in order to post a Slack notification upon receipt of a message via SQS."
+updated: 2025-03-26
+meta_desc: "Trigger AWS Lambda from SQS using Pulumi. Learn how to build a serverless queue with JavaScript, event source mappings, and real-world deployment examples."
 
 ---
 

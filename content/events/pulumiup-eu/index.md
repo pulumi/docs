@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "PulumiUP Europe 2024"
-meta_desc: Attend to hear from industry leaders and learn best practices, real-world solutions, and lessons learned in DevOps, Platform Engineering, and Security.
+title: PulumiUP 2025 - Europe & Americas Edition
+meta_desc: Join our flagship virtual event to explore enterprise platform engineering stories, demos, and expert insights on automating infrastructure with Pulumi.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -21,17 +21,18 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: true
+external: false
+internal_landing_page: true
 block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://info.pulumi.com/pulumiup-2024-europe
+url_slug: /pulumi-up
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "PulumiUP Europe 2024"
+    title: PulumiUP 2025 - Europe & Americas Edition
 
     event_type: event # workshop | event
 
@@ -39,7 +40,7 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-11-20T09:00:00+00:00
+    sortable_date: 2025-05-06T14:00:00+00:00
 
     # Duration of the webinar.
     duration: 1 hour
@@ -65,4 +66,12 @@ form:
     # HubSpot form id.
     hubspot_form_id:
     salesforce_campaign_id:
+
+event_data:
+  name: PulumiUP 2025 - Europe & Americas Edition
+  start_date: 2025-05-06T14:00:00+00:00
+  end_date: 2025-05-06T15:30:00+00:00
+  url: "https://www.pulumi.com/pulumi-up/"
+  description: |
+    Join our flagship virtual event to explore enterprise platform engineering stories, demos, and expert insights on automating infrastructure with Pulumi.
 ---

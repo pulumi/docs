@@ -40,7 +40,7 @@ The stack name is specified in one of the following formats:
 1. `orgName/projectName/stackName`: Identifies the stack `stackName` in the organization `orgName` and the project `projectName`.  `projectName` must match the project specified by the nearest `Pulumi.yaml` project file.
 
 {{% notes type="info" %}}
-For [self-managed backends](/docs/concepts/state#using-a-self-managed-backend), the `orgName` portion of the stack name must always be the constant value `organization`.
+For [DIY backend](/docs/concepts/state#using-a-diy-backend), the `orgName` portion of the stack name must always be the constant value `organization`.
 
 Additionally, backends initialized with a Pulumi CLI older than v3.61.0 support only the first format (`stackName`). You can upgrade these to support the other formats with the `pulumi state upgrade` command. See [*State > Scoping*](/docs/concepts/state/#scoping) for more details.
 {{% /notes %}}

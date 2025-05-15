@@ -1,47 +1,18 @@
 ---
-title: "Building Developer Portals with Pulumi"
-
-# The date represents the post's publish date, and by default corresponds with
-# the date and time this file was generated. Dates are used for display and
-# ordering purposes only; they have no effect on whether or when a post is
-# published. To influence the ordering of posts published on the same date, use
-# the time portion of the date value; posts are sorted in descending order by
-# date/time.
+title: "Build The Best Developer Portal with Pulumi Templates"
 date: 2023-10-12
-
-# The draft setting determines whether a post is published. Set it to true if
-# you want to be able to merge the post without publishing it.
+updated: 2025-03-26
 draft: false
-
-# Use the meta_desc property to provide a brief summary (one or two sentences)
-# of the content of the post, which is useful for targeting search results or
-# social-media previews. This field is required or the build will fail the
-# linter test. Max length is 160 characters.
-meta_desc: Pulumi introduces a golden path for platform teams to enable their developers to provision new services from a set of best practice templates.
-
-
-# The meta_image appears in social-media previews and on the blog home page. A
-# placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
+meta_desc: Empower platform teams with Pulumi’s internal developer portal tools—custom templates, Backstage integration, and point-and-click infrastructure setup.
 meta_image: meta.png
-
-# At least one author is required. The values in this list correspond with the
-# `id` properties of the team member files at /data/team/team. Create a file for
-# yourself if you don't already have one.
 authors:
     - meagan-cojocar
-
-# At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
 - developer-portals
 - templates
 - policy-as-code
 - backstage
 - platform-engineering
-
-
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
 ---
 
 At Pulumi, we work with organizations that range from a few platform team members to entire departments for managing infrastructure. Many organizations, like [Mercedes-Benz](https://www.pulumi.com/case-studies/mercedes-benz/), have built internal developer platforms on top of Pulumi to enable developers to self-serve infrastructure templates, and partners like [AWS Proton](https://www.pulumi.com/blog/aws-proton-pulumi/) and [Port](https://www.getport.io/blog/using-pulumi-with-an-internal-developer-portal) have built integrations with Pulumi to enable self-service scenarios. We are thrilled to have [announced yesterday](/blog/developer-portal-platform-teams) the launch of our new suite of tools to build internal developer portals with Pulumi, a result of working directly with our customers to understand their problems and how Pulumi can solve it.
@@ -69,7 +40,7 @@ Many of our customers are building their own developer portals on top of [Pulumi
 
 **Combination with Other Features**: The new template experience seamlessly integrates with your existing Pulumi workflows, providing a unified experience across your infrastructure management. Increase your developer productivity by using this suite of features in combination with [Pulumi ESC](/docs/pulumi-cloud/esc). Attach an Environment to your template to have it come with configuration and secret values. Once the templates are deployed they will show in the Pulumi Cloud console use [Policies](/docs/using-pulumi/crossguard) over it, set up [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) on the new stack to get ephemeral environments tied to PRs, find the resources that were deployed with [Resource Search](/docs/pulumi-cloud/insights/search), and all the other Pulumi Cloud features.
 
-**Extensibility**: You can leverage the out of the box New Project Wizard Experience or build developer portals with Pulumi yourself using any combination of: the Pulumi Backstage Plugin, `pulumi new` public and private templates, the Pulumi Backstage Plugin, Automation API, Pulumi Deployments, or the Pulumi Cloud REST API.
+**Extensibility**: You can leverage the out of the box New Project Wizard Experience or build developer portals with Pulumi yourself using any combination of: the Pulumi Backstage Plugin, `pulumi new` public and private templates, Automation API, Pulumi Deployments, or the Pulumi Cloud REST API.
 
 ## Getting Started
 

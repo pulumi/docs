@@ -165,39 +165,13 @@ The `pulumi preview` on Pull Request capability requires that the Github user cr
 
 ### GitHub App Installation
 
-You'll need to install and configure the [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/#installation-and-configuration) to use push-to-deploy functionality. The app requires read access to your repos so it can clone your Pulumi programs and listen to merge commits to automatically trigger deployments on `git push`.
+To use push-to-deploy functionality, you'll need to install and configure the [Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/#installation-and-configuration). The app requires read access to your repos so it can clone your Pulumi programs and listen to merge commits to automatically trigger deployments on `git push`.
 
-{{% notes type="warning" %}}
-
-While the app can be installed via GitHub, it **must be installed through the Pulumi Cloud** using the steps below to ensure correct setup. Installing through the Pulumi Cloud ensures we have a connection from Pulumi to your GitHub user or organization.
-
-{{% /notes %}}
-
-Follow these steps:
-
-1. Ensure you have selected the Pulumi organization you wish to use with Pulumi Deployments in the Organization drop-down.
-2. Navigate to Settings > Integrations.
-3. Select the "Install the Pulumi GitHub App" button.
-
-   If this page says you already have the app installed, you can stop here. If the page asks you to accept additional permissions for the app, please accept the permissions and stop here.
-
-4. After clicking "Install" you will be directed to GitHub. Select the GitHub organization you wish to use with Pulumi Deployments.
-5. Select which repos (or all repos) Pulumi Deployments can have access to, and then Install.
-6. You will be redirected to the Pulumi Cloud (app.pulumi.com). Return to **Settings** > **Integrations** to confirm the GitHub App is installed.
-
-If you installed the GitHub app in the past and the steps above aren't showing it as installed for your desired organization, please try the following:
-
-- Ensure you're a GitHub admin of the GitHub organization where you're installing the app.
-- Uninstall the app (via GitHub) and re-install it following the steps above. **Note:** Uninstalling the app will delete any push-to-deploy configurations you may have already setup.
+The complete installation instructions are available in the [GitHub App documentation](/docs/iac/using-pulumi/continuous-delivery/github-app/#installation-and-configuration).
 
 ### Configuring settings
 
 Once the GitHub app has been installed, the deployment settings for a stack can be defined using the methods defined in the `Deployment Settings` section.
-
-### Limitations
-
-- The GitHub app may only be installed by a GitHub *and* Pulumi admin.
-- Currently, there is a 1 to 1 mapping between GitHub organizations and Pulumi organizations.
 
 ## Common Scenarios
 

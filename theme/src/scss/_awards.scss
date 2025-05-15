@@ -1,0 +1,11 @@
+@media (min-width: 0px) {
+    .medium-auto-height {
+        height: 13rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .medium-auto-height {
+        height: auto;
+    }
+}

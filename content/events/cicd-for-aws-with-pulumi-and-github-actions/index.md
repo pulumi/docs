@@ -52,7 +52,7 @@ main:
     description: |
         This workshop introduces new users to DevOps best practices. You will become familiar with the core concepts needed to deploy cloud resources continuously. Walk through configuring Pulumi GitHub Actions to deploy AWS resources programmatically and accelerate your cloud projects with the skeleton [code provided](https://github.com/pulumi/workshops/tree/main/github-aws-cicd-getting-started).
 
-        This is Part 1 of our DevOps workshop series! Ready to take it further? [Continue to Part 2, Advanced CI/CD for AWS using Pulumi and GitHub Actions.](/resources/advanced-cicd-aws-pulumi-github-actions)
+        This is Part 1 of our DevOps workshop series! Ready to take it further? [Continue to Part 2, Advanced CI/CD for AWS using Pulumi and GitHub Actions.](/events/advanced-cicd-aws-pulumi-github-actions)
 
     learn:
         - The basics of the Pulumi programming model

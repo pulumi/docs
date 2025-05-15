@@ -43,7 +43,7 @@ Leave the default environment definition for now, and you will return to finish 
 
 {{% choosable cloud aws %}}
 
-To configure Pulumi Insights with AWS, you will use [OpenID Connect (OIDC)](docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
+To configure Pulumi Insights with AWS, you will use [OpenID Connect (OIDC)](/docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
 
 1. Log in to the [AWS Management Console](https://console.aws.amazon.com/iam/).
 2. Go to the **Roles** section and create a new role.
@@ -74,7 +74,7 @@ This will set up a trust relationship to allow Pulumi Cloud to assume the role u
 }
 ```
 
-For a more detailed step-by-step guide, including screenshots see the [Configuring OpenID Connect for AWS](/docs/pulumi-cloud/access-management/oidc/provider/aws/) Pulumi documentation.
+For a more detailed step-by-step guide, including screenshots see the [Configuring OpenID Connect for AWS](/docs/esc/environments/configuring-oidc/aws/) Pulumi documentation.
 
 Next, go back to Pulumi ESC and configure your cloud credentials using the role ARN and trust relationship you just created:
 
@@ -98,7 +98,7 @@ values:
 
 {{% choosable cloud azure %}}
 
-To configure Pulumi Insights with Azure, you will use [OpenID Connect (OIDC)(docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
+To configure Pulumi Insights with Azure, you will use [OpenID Connect (OIDC)](/docs/pulumi-cloud/access-management/oidc/) for authentication. Follow these steps:
 
 1. Create a Service Principal in Azure, then generate the following values:
    - **clientId** (also called **appId** in the Azure UI)
@@ -128,14 +128,14 @@ values:
 ```
 
 {{< notes type="info" >}}
-  For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/pulumi-cloud/access-management/oidc/provider/azure/).
+  For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/esc/environments/configuring-oidc/azure/).
 {{< /notes >}}
 
 {{% /choosable %}}
 
 {{% choosable cloud oci %}}
 
-To configure Pulumi Insights with OCI, you will use [OpenID Connect (OIDC)](docs/pulumi-cloud/access-management/oidc/) for authentication.
+To configure Pulumi Insights with OCI, you will use [OpenID Connect (OIDC)](/docs/pulumi-cloud/access-management/oidc/) for authentication.
 
 1. Set up API Key authentication by providing the following credentials:
 
@@ -178,7 +178,7 @@ This configuration projects the kubeconfig file contents to a temporary file tha
   The scanner agent does not have access to external binaries (e.g., `aws`, `gcloud`), so kubeconfig files relying on [client-go credential plugins](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins) are not supported. We recommend creating a service account with the necessary cluster-scoped permissions (**`get`** and **`list`**) and using its token for authentication.
 {{< /notes >}}
 
-For a detailed guide on configuring ESC credentials for Insights with Kubernetes see the [following documentation](/docs/pulumi-cloud/insights/accounts/#kubernetes-k8s).
+For a detailed guide on configuring ESC credentials for Insights with Kubernetes see the [following documentation](/docs/insights/accounts/#kubernetes-k8s).
 
 {{% /choosable %}}
 

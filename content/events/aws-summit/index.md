@@ -1,8 +1,8 @@
 ---
 # Name of the event, <= 60 characters
-title: Pulumi + AWS Summit NYC
-meta_desc: Join Pulumi at AWS Summit NYC to learn about the latest developments in infrastructure as code. Meet us at booth 563.
-meta_image: /images/aws-summit-meta.png
+title: Pulumi + AWS Summit London
+meta_desc: Join Pulumi at AWS Summit London 2025 to discover how leading organizations automate AWS infrastructure as code.
+meta_image: /images/aws-summit-london-meta.png
 
 # A featured webinar will display first in the list.
 featured: false
@@ -31,7 +31,7 @@ url_slug: https://pulumi.com/aws-summit/
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: AWS Summit NYC
+    title: Pulumi + AWS Summit London
 
     event_type: event # workshop | event
 
@@ -39,13 +39,13 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2024-07-10T09:00:00-00:00
+    sortable_date: 2025-04-30T09:00:00-00:00
 
     # Duration of the webinar.
     duration: 1 hour
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: New York, NY
+    location: London, England
 
     # Description of the webinar.
     description:

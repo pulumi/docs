@@ -19,6 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="pulumi_esc_sdk" href="../pulumi_esc_sdk/" />
     <link rel="prev" title="pulumi" href="../pulumi/" /> 
 </head>
 
@@ -89,6 +90,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_policy.PolicyResourceOptions.custom_timeouts"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.custom_timeouts</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_policy.PolicyResourceOptions.delete_before_replace"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.delete_before_replace</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_policy.PolicyResourceOptions.ignore_changes"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.ignore_changes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi_policy.PolicyResourceOptions.parent"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.parent</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi_policy.PolicyResourceOptions.protect"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.protect</span></code></a></li>
 </ul>
 </li>
@@ -112,6 +114,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#pulumi_policy.StackValidationPolicy"><code class="docutils literal notranslate"><span class="pre">StackValidationPolicy</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../pulumi_esc_sdk/">pulumi_esc_sdk</a></li>
 </ul>
 
         </div>
@@ -142,7 +145,7 @@
 <p>The Pulumi Policy SDK for Python.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pulumi_policy.EnforcementLevel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi_policy.</span></span><span class="sig-name descname"><span class="pre">EnforcementLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.EnforcementLevel" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi_policy.</span></span><span class="sig-name descname"><span class="pre">EnforcementLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.EnforcementLevel" title="Permalink to this definition"></a></dt>
 <dd><p>Indicates the impact of a policy violation.</p>
 </dd></dl>
 
@@ -355,7 +358,7 @@ policy libraries.</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pulumi_policy.PolicyResourceOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi_policy.</span></span><span class="sig-name descname"><span class="pre">PolicyResourceOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">protect</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_changes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_before_replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aliases</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_timeouts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi_policy.PolicyCustomTimeouts" title="pulumi_policy.policy.PolicyCustomTimeouts"><span class="pre">PolicyCustomTimeouts</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_secret_outputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.PolicyResourceOptions" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi_policy.</span></span><span class="sig-name descname"><span class="pre">PolicyResourceOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">protect</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_changes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_before_replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aliases</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_timeouts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi_policy.PolicyCustomTimeouts" title="pulumi_policy.policy.PolicyCustomTimeouts"><span class="pre">PolicyCustomTimeouts</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_secret_outputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.PolicyResourceOptions" title="Permalink to this definition"></a></dt>
 <dd><p>PolicyResourceOptions is the bag of settings that control a resource’s behavior.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pulumi_policy.PolicyResourceOptions.additional_secret_outputs">
@@ -386,6 +389,12 @@ its replacement is created when replacement is necessary.</p>
 <dt class="sig sig-object py" id="pulumi_policy.PolicyResourceOptions.ignore_changes">
 <span class="sig-name descname"><span class="pre">ignore_changes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pulumi_policy.PolicyResourceOptions.ignore_changes" title="Permalink to this definition"></a></dt>
 <dd><p>Ignore changes to any of the specified properties.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi_policy.PolicyResourceOptions.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pulumi_policy.PolicyResourceOptions.parent" title="Permalink to this definition"></a></dt>
+<dd><p>An optional parent that this resource belongs to.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -525,6 +534,7 @@ e.g., block deployment but allow override with proper permissions.</p></li>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../pulumi/" class="btn btn-neutral float-left" title="pulumi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../pulumi_esc_sdk/" class="btn btn-neutral float-right" title="pulumi_esc_sdk" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

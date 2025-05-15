@@ -62,6 +62,10 @@ To prevent a range of security attacks, Pulumi stores the provider's TLS certifi
 
 ### Configure the authorization policies
 
+{{< notes type="info" >}}
+The max amount of policies is limited to 20 policies per OIDC Issuer.
+{{< /notes >}}
+
 When a new OIDC issuer is registered, a default authorization policy is provisioned denying any token exchange. Explicitly configuring **allow** policies is required.
 
 When configuring a policy, it is required to explicitly state what kind of token can be requested and what team or user the token should be scoped to.
@@ -90,7 +94,7 @@ You can target the pod name by defining the path as `"kubernetes.io".pod.name`.
 
 Note the use of quotes to escape dots in the object keys.
 
-For the claim values, it is possible to use the following wildcard notation for flexible matching:
+It is possible to use the following wildcard notation for flexible matching for the claim values and team name:
 
 - `*`: match zero or more characters
 - `?`: match zero or one character
@@ -116,6 +120,11 @@ Parameters:
     - Team token (scope is required): `urn:pulumi:token-type:access_token:team`
     - Personal token (scope is required): `urn:pulumi:token-type:access_token:personal`
 - `scope`: a single scope will be supported initially and used to define when asking for a team or personal token, what team/user it should be assigned to. Format: `team:{TEAM_NAME}` (for example: `team:OPS_AUTOMATIONS`) or `user:{USER_LOGIN}` (for example: `user:djohn`). It is also supported, only for organization tokens, the `admin` scope to request organization tokens with admin privileges (the authorization policy has to explicitly allow admin privileges for it to be accepted).
+
+{{< notes type="info" >}}
+Organization-level access tokens generated via OIDC do not default to admin privileges unless the `scope: admin` field is explicitly set.
+{{< /notes >}}
+
 - `expiration`: (int, time in seconds) used to customize the token expiration required by the operation. The default token expiration (2 hours) will be used.
 - `subject_token`: token issued by the IdP
 

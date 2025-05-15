@@ -1,9 +1,9 @@
 id = "anthony-king"
 name = "Anthony King"
 status = "guest"
-role = "puluminary"
-title = "Infrastructure Engineer"
-company = "Dataplane"
+role = "alumni-puluminary"
+title = "Senior DevOps Engineer"
+company = "Elsewhen"
 
 [social]
 github = "antdking"

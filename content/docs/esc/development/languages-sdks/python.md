@@ -6,7 +6,7 @@ meta_desc: This page provides an overview on how to use Pulumi ESC Python SDK.
 menu:
   esc:
     parent: esc-languages-sdks
-    identifier: python-sdk
+    identifier: esc-python-sdk
     weight: 2
 aliases:
   - /docs/esc/sdk/python/
@@ -17,7 +17,7 @@ The [Python SDK](https://pypi.org/project/pulumi-esc-sdk/) for [Pulumi ESC (Envi
 Here are some of the scenarios the SDK can automate:
 
 * List environments and read environment definitions
-* Open enviroments to access config and resolve secrets
+* Open environments to access config and resolve secrets
 * Create, update, decrypt, and delete environment definitions
     * Supports both structured types and yaml text
 * List environment revisions and create new revision tags
@@ -27,11 +27,30 @@ Here are some of the scenarios the SDK can automate:
 
 Run `pip install pulumi-esc-sdk` to install the SDK package.
 
+### Initializing ESC SDK client
+
+The easiest way to initialize an ESC SDK client is to run:
+
+```python
+import pulumi_esc_sdk as esc
+
+client = esc.esc_client.default_client()
+```
+
+This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using Pulumi CLI or ESC CLI.
+
+If the default behavior does not work for you, you can always manually initialize the client configuration and pass it into the client constructor:
+
+```python
+import pulumi_esc_sdk as esc
+
+configuration = esc.Configuration(access_token=myAccessToken)
+client = esc.EscClient(configuration)
+```
+
 ## Examples
 
-These samples show how to create an `EscClient` with an access token and use it to perform various ESC tasks.
-
-All of these example expects a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
+All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
 
 ### Manage environment example
 
@@ -45,12 +64,9 @@ This example creates a new environment, opens that environment to access a secre
 import pulumi_esc_sdk as esc
 import os
 
-accessToken = os.getenv("PULUMI_ACCESS_TOKEN")
-
 orgName = os.getenv("PULUMI_ORG")
 
-configuration = esc.Configuration(access_token=accessToken)
-client = esc.EscClient(configuration)
+client = esc.esc_client.default_client()
 
 projName = "examples"
 envName = "sdk-python-example"
@@ -104,12 +120,9 @@ This example lists revisions for an environment, tags a revision, and lists revi
 import pulumi_esc_sdk as esc
 import os
 
-accessToken = os.getenv("PULUMI_ACCESS_TOKEN")
-
 orgName = os.getenv("PULUMI_ORG")
 
-configuration = esc.Configuration(access_token=accessToken)
-client = esc.EscClient(configuration)
+client = esc.esc_client.default_client()
 
 projName = "examples"
 envName = "sdk-python-example"
@@ -136,3 +149,7 @@ for tag in tags.tags:
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Documentation
+
+* [API Reference Documentation](/docs/reference/pkg/python/pulumi_esc_sdk/)

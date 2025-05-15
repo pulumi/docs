@@ -1,8 +1,9 @@
 ---
-title: "The Cloud Container Iceberg"
+title: "105 Ways to Run Containers: The Cloud Container Iceberg"
 date: 2024-12-03T10:29:54-05:00
+updated: 2025-03-24
 draft: false
-meta_desc: Discover unique and unconventional ways to run OCI containers. Explore beyond the traditional platforms.
+meta_desc: Explore 105+ ways to run containers—from AWS to toasters to quantum computers. Discover unique OCI deployment options beyond Kubernetes and Docker.
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -31,7 +32,7 @@ But first, we need ground rules for our container adventures. All listed items s
 - **Runs real containers:** OCI containers only. No JavaScript "containers" pretending to be the real thing.
 - **Actually doable:** You can set this up right now with a laptop and a credit card. No theoretical schemes allowed.
 
-![The Cursed Container Iceberg](iceberg.jpg)
+![Visual iceberg diagram titled "The Cloud Container Iceberg," categorizing over 100 container platforms from mainstream options like EKS and GKE at the top to obscure and experimental environments like AWS Device Farm and Azure Quantum at the bottom.](iceberg.jpg)
 
 ## Above the iceberg – The usual suspects
 
@@ -94,15 +95,7 @@ Let's plunge deeper. Because one Kubernetes cluster is never enough, why not spr
 - **Nutanix Karbon** - Because regular Kubernetes wasn't converged enough
 - **Metal Stack Cloud Kubernetes** - For when virtual machines are too virtual
 
-{{% notes type="tip" %}}
-
-**You might also like:**
-
-- [Unified and Programmatic Approach to Infrastructure Management at BMW Using Pulumi](/blog/unified-programmatic-approach-infrastructure-management-bmw-using-pulumi/)
-- [Introducing the new Docker Build provider](/blog/docker-build/)
-- [Getting Started with ECS Anywhere](/blog/ecs-anywhere-launch/)
-
-{{% /notes %}}
+{{< related-posts >}}
 
 ## Middle of the iceberg – Serverless and function containers – Now you see me, now you don't
 

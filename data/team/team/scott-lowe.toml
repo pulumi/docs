@@ -1,12 +1,12 @@
 id = "scott-lowe"
 name = "Scott Lowe"
 status = "guest"
-role = "puluminary"
+role = "alumni-puluminary"
 title = "Sr. Principal Solutions Architect"
 company = "Isovalent"
 
 
 [social]
-twitter = "scott_lowe"
+x = "scott_lowe"
 linkedin = "scottslowe"
 github = "scottslowe"

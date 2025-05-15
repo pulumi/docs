@@ -5,7 +5,7 @@ menu:
     cloud:
         name: Onboarding guide
         parent: pulumi-cloud-get-started
-        weight: 1
+        weight: 2
         identifier: pulumi-onboarding-guide
 ---
 
@@ -61,7 +61,7 @@ Start by creating [your organization here](https://app.pulumi.com/?create-organi
 
 ### Configuring Single Sign-On (SSO)
 
-Many organizations prefer to use Single Sign-On (SSO) to leverage an identity provider such as Azure Active Directory, Google Workspace, Okta, or any other SAML 2.0 compliant provider. To learn about configuring SSO for your organization, [read Pulumi Cloud SAML(SSO)](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/). If you’d like to continue using email, GitHub, GitLab, or Atlassian identity, you can skip this step.
+Many organizations prefer to use Single Sign-On (SSO) to leverage an identity provider such as Microsoft Entra ID, Google Workspace, Okta, or any other SAML 2.0 compliant provider. To learn about configuring SSO for your organization, [read Pulumi Cloud SAML(SSO)](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/). If you’d like to continue using email, GitHub, GitLab, or Atlassian identity, you can skip this step.
 
 ### Inviting your teammates
 
@@ -166,8 +166,6 @@ Pulumi offers two additional facilities for ensuring consistency and best practi
 First, **components** are IaC resources that you define to abstract and encapsulate the usage of one or more other resources. For instance, an AWS Virtual Private Cloud (VPC) might consist of dozens of resources: public and private subnets, Internet and NAT Gateways, the VPC itself, and more. Rather than open coding the VPC definition in every project that needs one – something that can be hundreds or even thousands of lines of code – you can use a component. It turns out the Pulumi component package [AWSX](https://www.pulumi.com/registry/packages/awsx/) offers such a VPC component out of the box, but your organization can create your own components. This just requires subclassing the component resource base class.
 
 Components enjoy all of the benefits of native language packages, such as the ability to store them in package managers, version them, ensure secure dependencies, and so on. [Read more about component resources here](https://www.pulumi.com/docs/iac/concepts/resources/components).
-
-By default, component resources are single-language, which is often fine. For organizations that require multi-language usage, however, components can be made multi-language as noted earlier. The [Pulumi Packages](https://www.pulumi.com/docs/iac/packages-and-automation/pulumi-packages/) guide describes how.
 
 Next, **templates** are blueprints that help scaffold entirely new projects. Although a component often encapsulates a cloud resource usage pattern, templates are standard “starting points” for entire projects that typically consist of many resources. [Pulumi Templates](https://pulumi.com/templates), for instance, are available for many common architectures and patterns, but you can create your own. You can also register your own organization’s templates so they’re easily available in the Pulumi Cloud New Project Wizard. Learn more about [building your own templates here](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/).
 
@@ -313,7 +311,7 @@ For Pulumi Enterprise and Business Critical customers, we offer custom tailored 
 
 ### Using premium support plans
 
-Pulumi Enterprise and Business Critical customers have the option of purchasing 12x5 or 24x7 support. This support comes with ticketing, guaranteed SLAs, product roadmap reviews, prioritized bugs and feature requests, private Slack channels, and more. Organizations with support plans also have dedicated account managers and architects who are ready to roll up their sleeves and help with any problem you may encounter. If you are on a support plan, you can [file a ticket or view the current system status on the support page here](https://pulumi.com/support).
+Pulumi Enterprise and Business Critical customers have the option of purchasing 12x5 or 24x7 support. This support comes with ticketing, guaranteed SLAs, product roadmap reviews, prioritized bugs and feature requests, private Slack channels, and more. Organizations with support plans also have dedicated account managers and architects who are ready to roll up their sleeves and help with any problem you may encounter. If you are on a support plan, you can [file a ticket or view the current system status on the support page here](https://support.pulumi.com/hc/en-us).
 
 ### Understanding your usage and billing
 

@@ -62,7 +62,7 @@ As we wrap up 2024, let's look back at the significant features and improvements
   Enhanced IaC debugging in the IDE, Pulumi YAML support, and ESC management within VS Code.
 - **[Pulumi Docker Image Improvements](/blog/docker-containers/)**  
   Versioned images with pre-installed tools for Python, Node.js, and .NET. Pulumi Deployments now supports setting the version of the Node.js and Python runtimes used in the Deployment environment.
-- **[Python UV Support](blog/python-uv-toolchain/)**  
+- **[Python UV Support](/blog/python-uv-toolchain/)**  
   Built-in support for uv, an extremely fast Python package manager that speeds up dependency installation by up to 100x compared to traditional tools.
 - **DependsOn for Provider Functions**  
   Manage explicit dependencies between provider functions for more accurate execution in complex deployments.

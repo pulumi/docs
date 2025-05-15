@@ -1,7 +1,8 @@
 ---
-title: "Intro to AWS Serverless Step Functions"
+title: "The Beginner's Guide to AWS Serverless Step Functions"
 date: 2020-02-13
-meta_desc: "An Introduction to building serverless apps with AWS Step Functions."
+updated: 2025-03-19
+meta_desc: "Learn how to build AWS Step Functions to automate workflows & connect AWS services. Follow this step-by-step guide to deploy serverless apps."
 meta_image: meta-step-function.png
 authors:
     - sophia-parafina
@@ -13,7 +14,7 @@ tags:
 
 <!--more-->
 
-## Just the basics
+## Getting Started with AWS Step Functions
 
 Let’s start with a hello world function in an AWS Lambda. You can start the [example from Github](https://github.com/pulumi/examples/tree/master/aws-py-stepfunctions) by selecting the `Deploy with Pulumi` button. A new project page is created automatically in the Pulumi Service, select `Create Project` to get started. Follow the steps to copy the project locally. As with any Python project, we recommend creating a virtual environment to store project-specific dependencies.
 
@@ -96,15 +97,15 @@ aws stepfunctions start-execution --state-machine-arn $(pulumi stack output stat
 
 Then check the AWS console to see if the lambda was executed.
 
-![AWS Severless Console](sf-console-1.png)
+![AWS Severless Console Step Functions screenshot](sf-console-1.png)
 
 Clicking on the `Name` displays the step details, which include the input and out, i.e., ‘Hello world!’
 
-![AWS Severless Console  with 1 step function](sf-console-2.png)
+![AWS Severless Console with 1 step function visual workflow](sf-console-2.png)
 
 The AWS console provides a graph of your workflow and the details of each step. Clicking on `Output` shows “Hello world” meaning that the call to the lambda function was successful.
 
-## Add another step
+## Expand AWS Step Functions Workflow
 
 Now that we have a basic flow, let’s add another step. To keep it simple we’ll create another simple function that returns “Nice to meet you.” To do this, make a file called `nice.py` and add the function.
 
@@ -170,7 +171,7 @@ aws stepfunctions start-execution --state-machine-arn $(pulumi stack output stat
 
 You can see the results in the AWS Console. The workflow graph shows the new step, and the output from `nice_fn` is “Nice to meet you.”
 
-![AWS Serverless Console with 2 step functions](sf-console-3.png)
+![AWS Serverless Console with 2 step functions visual workflow](sf-console-3.png)
 
 ## What’s next
 

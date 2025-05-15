@@ -65,6 +65,9 @@ main:
         - name: Piers Karsenbarg
           role: Senior Solutions Engineer, Pulumi
           photo: /images/team/piers-karsenbarg.jpg
+        - name: Torian Crane
+          role: Senior Technical Content Engineer, Pulumi
+          photo: /images/team/torian-crane.jpg
 
     # case-sensitive
     tags:

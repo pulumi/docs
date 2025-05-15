@@ -2,8 +2,9 @@
 title: "Pulumi AI: The Fastest Way to Discover, Learn, and Build Infrastructure as Code"
 allow_long_title: true
 authors: ["luke-hoban"]
-meta_desc: "Explore Pulumi AI, a powerful AI Assistant that simplifies cloud infrastructure creation using Large Language Models and GPT, saving developers time and effort"
+meta_desc: "Discover Pulumi AI—your AI-powered assistant for building cloud infrastructure faster and smarter. Reduce complexity and deploy in minutes."
 date: "2023-04-27T10:00:00-08:00"
+updated: 2025-03-20
 meta_image: "meta.png"
 tags:
     - features
@@ -12,7 +13,7 @@ tags:
 ---
 
 {{% notes type="info" %}}
-There are new intelligent cloud management capabilities available in **Pulumi Copilot**. [Learn More](/blog/pulumi-copilot)
+There are new intelligent cloud management capabilities available in [**Pulumi Copilot**](/blog/pulumi-copilot).
 {{% /notes %}}
 
 We recently released [Pulumi AI](/ai/), a purpose-built AI Assistant that can create cloud infrastructure using Pulumi. It builds on the power of Large Language Models (LLMs) and GPT to dramatically reduce the time it takes to discover, learn and use new cloud infrastructure APIs.
@@ -29,7 +30,7 @@ We’ve seen amazing engagement and stories from Pulumi users about the impact t
 We've got a few upcoming opportunities to learn more about Pulumi Insights and Pulumi AI. Come join us!
 
 * May 3rd: [Reddit AMA: Pulumi Insights](https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/)
-* May 11th: [Workshop: Getting Started with Pulumi Insights](/resources/getting-started-with-pulumi-insights/)
+* May 11th: [Workshop: Getting Started with Pulumi Insights](/events/getting-started-with-pulumi-insights/)
 * Anytime: [Pulumi Challenge: GPT Your IaC](/challenge/ai-architecture/)
 {{% /notes %}}
 
@@ -97,6 +98,6 @@ Pulumi AI is already offering practical value for thousands of users. We have an
 
 We’re just getting started and hope you join us on our journey!  Experience [Pulumi AI](/ai) today and join us for one of these upcoming events to learn more:
 
-* [Workshop: Getting Started with Pulumi Insights](/resources/getting-started-with-pulumi-insights/)
+* [Workshop: Getting Started with Pulumi Insights](/events/getting-started-with-pulumi-insights/)
 * [Reddit AMA: Pulumi Insights](https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/)
 * [Pulumi Challenge: GPT Your IaC](/challenge/ai-architecture/)

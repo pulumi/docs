@@ -1,7 +1,8 @@
 ---
-title: "Using Amazon Elastic File System (EFS) with AWS Lambda"
+title: "Deploy AWS Lambda with Elastic File System using Pulumi"
 date: 2020-06-16
-meta_desc: "Pulumi supports Amazon EFS with Lambda and Fargate services."
+updated: 2025-03-24
+meta_desc: "Learn how to connect AWS Lambda to Amazon EFS using Pulumi. Build serverless apps with persistent storage. Includes Fargate integration and full examples."
 meta_image: aws-lambda-efs.png
 authors:
     - luke-hoban
@@ -40,7 +41,7 @@ To use an EFS file system from Lambda, we need a few things:
 1. An EFS Access Point specifying how Lambda should mount the EFS volume
 1. An AWS Lambda Function running in the same VPC and private subnets and referencing the EFS Access Point
 
-![Lambda with EFS Architecture](lambdaefs.png)
+![Flowchart depicting Lambda with EFS Architecture including API Gateway, EFS Mount and Lambda private subnet availability zones, access point, and file system](lambdaefs.png)
 
 Let's walk through how to build the required infrastructure.  We'll use Pulumi to provision the necessary resources.  You can check out the [full source code](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-efs) in the Pulumi Examples.
 
@@ -216,7 +217,7 @@ const nginx = new awsx.ecs.FargateService("nginx", {
 
 Navigating to our Task’s public IP - we see the contents of the file we stored in our file system.
 
-![Hello World application](helloworld.png)
+![Chrome browser depicting a Hello World application](helloworld.png)
 
 ## Conclusion
 

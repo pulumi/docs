@@ -32,7 +32,7 @@ Install the required language runtime, if you have not already.
 
 #### Choose your language
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language "javascript,typescript" %}}
 {{< install-node >}}
@@ -49,6 +49,10 @@ Install the required language runtime, if you have not already.
 {{% choosable language "csharp,fsharp,visualbasic" %}}
 {{< install-dotnet >}}
 {{% /choosable %}}
+
+{{% choosable language "java,fsharp,visualbasic" %}}
+{{< install-java >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 ### Obtain a Pulumi access token
@@ -57,7 +61,7 @@ You'll need a [Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens) s
 
 ## Define your Pulumi program
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 First, define the Pulumi program you want to run as a function within your overall program. Note how it looks like a standard Pulumi program.
 
@@ -249,7 +253,6 @@ deployFunc := func(ctx *pulumi.Context) error {
 ```
 
 {{% /choosable %}}
-{{< /chooser >}}
 
 {{% choosable language "csharp,fsharp,visualbasic" %}}
 
@@ -324,13 +327,76 @@ var program = PulumiFn.Create(() =>
 
 {{% /choosable %}}
 
+{{% choosable language "java" %}}
+
+{{% notes type="info" %}}
+This tutorial is based on the [`InlineProgram` example](https://github.com/pulumi/automation-api-examples/tree/main/java/InlineProgram), which is a complete example of how to construct a simple Automation API program.
+{{% /notes %}}
+
+```java
+private static void pulumiProgram(Context ctx) {
+
+    // Create an AWS resource (S3 Bucket)
+    var siteBucket = new BucketV2("s3-website-bucket");
+
+    var website = new BucketWebsiteConfigurationV2("website", BucketWebsiteConfigurationV2Args.builder()
+            .bucket(siteBucket.id())
+            .indexDocument(BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
+                    .suffix("index.html")
+                    .build())
+            .build());
+
+    var ownershipControls = new BucketOwnershipControls("ownershipControls", BucketOwnershipControlsArgs.builder()
+            .bucket(siteBucket.id())
+            .rule(BucketOwnershipControlsRuleArgs.builder()
+                    .objectOwnership("ObjectWriter")
+                    .build())
+            .build());
+
+    var publicAccessBlock = new BucketPublicAccessBlock("publicAccessBlock", BucketPublicAccessBlockArgs.builder()
+            .bucket(siteBucket.id())
+            .blockPublicAcls(false)
+            .build());
+
+    String indexContent = """
+            <html>
+                <head><title>Hello S3</title><meta charset="UTF-8"></head>
+                <body>
+                    <p>Hello, world!</p>
+                    <p>Made with ❤️ with <a href="https://pulumi.com">Pulumi</a></p>
+                </body>
+            </html>
+            """;
+
+    var indexHtml = new BucketObject("index.html", BucketObjectArgs.builder()
+            .bucket(siteBucket.id())
+            .content(indexContent)
+            .contentType("text/html")
+            .acl("public-read")
+            .build(),
+            CustomResourceOptions.builder()
+                    .dependsOn(
+                            publicAccessBlock,
+                            ownershipControls,
+                            website)
+                    .build());
+
+    // Export the name of the bucket
+    ctx.export("website_url",
+            website.websiteEndpoint().applyValue(websiteEndpoint -> String.format("http://%s", websiteEndpoint)));
+}
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
 ## Associate with a stack
 
 As with executing Pulumi programs through the CLI, you need to associate your Pulumi program with a `Stack`. Automation API provides methods to create or select stacks.
 
 Here's a convenient method to select an existing `Stack` or create one if none exists:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language "javascript,typescript" %}}
 
@@ -380,6 +446,16 @@ var stack = await LocalWorkspace.CreateOrSelectStackAsync(stackArgs);
 ```
 
 {{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+```java
+var projectName = "inline_s3_project_java";
+var stackName = "dev";
+var stack = LocalWorkspace.createOrSelectStack(projectName, stackName, App::pulumiProgram);
+```
+
+{{% /choosable %}}
 {{< /chooser >}}
 
 A `Stack` object operates within the context of a `Workspace`. A `Workspace` is the execution context containing a single Pulumi project, a program, and multiple stacks. Workspaces are used to manage the execution environment, providing various utilities such as plugin installation, environment configuration (`$PULUMI_HOME`), and creation, deletion, and listing of stacks. Because you are deploying AWS resources in this tutorial, you must install the AWS provider plugin within your `Workspace` so that your Pulumi program will have it available during execution.
@@ -388,7 +464,7 @@ A `Stack` object operates within the context of a `Workspace`. A `Workspace` is 
 
 The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration](/docs/concepts/config/) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 {{% choosable language "javascript,typescript" %}}
 
 ```typescript
@@ -429,6 +505,16 @@ await stack.SetConfigAsync("aws:region", new ConfigValue("us-west-2"));
 ```
 
 {{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+```java
+stack.getWorkspace().installPlugin("aws", "v5.41.0");
+stack.setConfig("aws:region", new ConfigValue("us-west-2"));
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ## Invoke Pulumi commands against the stack
@@ -436,7 +522,7 @@ await stack.SetConfigAsync("aws:region", new ConfigValue("us-west-2"));
 You're now ready to execute commands against the `Stack`, including update, preview, refresh, destroy, import, and export.
 If you want to update the stack, invoke the update method (`up`) against the `Stack` object:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 {{% choosable language "javascript,typescript" %}}
 
 ```typescript
@@ -472,6 +558,15 @@ var result = await stack.UpAsync(new UpOptions { OnStandardOutput = Console.Writ
 ```
 
 {{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+```java
+var result = stack.up(UpOptions.builder().onStandardOutput(System.out::println).build());
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 Notice how you can choose to have a callback function for standard output. In addition, the command returns a result of the update, which you can programmatically use to drive decisions within your program. For example, the result includes the stack outputs as well as a summary of the changes. This means you could choose to take different actions if there were no resources updated. Conversely, you could use the stack outputs to drive another Pulumi program within the same Automation program.

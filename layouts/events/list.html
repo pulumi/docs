@@ -187,7 +187,7 @@
                     {{ if eq $data.Type "webinars" }}
 
                         <!-- Set the url to link to. -->
-                        {{ if $data.Params.external }}
+                        {{ if or $data.Params.external $data.Params.internal_landing_page }}
                             {{ $link = $data.Params.url_slug }}
                             {{ $external = true }}
                         {{ else }}
@@ -243,7 +243,7 @@
                     <!-- Set the values based on the type of the page. -->
                     {{ if eq $data.Type "webinars" }}
                         <!-- Set the url to link to. -->
-                        {{ if $data.Params.external }}
+                        {{ if or $data.Params.external $data.Params.internal_landing_page }}
                             {{ $link = $data.Params.url_slug }}
                             {{ $external = true }}
                         {{ else }}

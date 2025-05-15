@@ -54,7 +54,7 @@ main:
     duration: "17 minutes"
     # Description of the webinar.
     description: |
-        Continuous Integration and Continous Deployments have been part of our application lifecycle for some time now but what about Continuous Previews? The ability to easily share new features and changes to a wide audience within your organization is a game changer for accelerating the delivery of features your users need. In this talk we will walk you through everything you need to know to deploy a Continuous Previews pipeline. Starting with containerizing your application, deploying to a cluster and connecting the results back to a GitHub Pull Request. Attendees will leave this session ready to take control of their development process in ways they may not have known were possible.
+        Continuous Integration and Continuous Deployments have been part of our application lifecycle for some time now but what about Continuous Previews? The ability to easily share new features and changes to a wide audience within your organization is a game changer for accelerating the delivery of features your users need. In this talk we will walk you through everything you need to know to deploy a Continuous Previews pipeline. Starting with containerizing your application, deploying to a cluster and connecting the results back to a GitHub Pull Request. Attendees will leave this session ready to take control of their development process in ways they may not have known were possible.
 
     # The webinar presenters
     presenters:

@@ -1,12 +1,15 @@
 {{ define "main" }}
     <h1 class="text-5xl text-center mt-4 text-gray-800">Plans for all team sizes</h1>
     <section class="container mx-auto text-center mb-16 mt-4">
-        <div class="flex flex-row justify-center space-x-4 my-4 border-b-1 border-gray-200">
-            <div id="iac-pricing-select" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-blue-600 bg-violet-100">
-                <div id="iac-pricing-select-text" class="rainbow-text">Infrastructure as Code</div>
+        <div class="flex flex-row justify-center space-x-0 sm:space-x-4 my-4 border-b-1 border-gray-200">
+            <div id="iac-pricing-select" class="text-md sm:text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-blue-600 bg-violet-100">
+                <div id="iac-pricing-select-text" class="rainbow-text">Pulumi IaC</div>
             </div>
-            <div id="esc-pricing-select" class="text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-gray-300">
-                <div id="esc-pricing-select-text">Secrets Management</div>
+            <div id="esc-pricing-select" class="text-md sm:text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-gray-300">
+                <div id="esc-pricing-select-text">Pulumi ESC</div>
+            </div>
+            <div id="insights-pricing-select" class="text-md sm:text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-gray-300">
+                <div id="insights-pricing-select-text">Pulumi Insights</div>
             </div>
         </div>
         <p class="max-w-4xl mx-auto mt-6 iac-price">
@@ -14,6 +17,9 @@
         </p>
         <p class="max-w-4xl mx-auto mt-6 esc-price hidden">
             Modern secrets and configuration management that scales with your team
+        </p>
+        <p class="max-w-4xl mx-auto mt-6 insights-price hidden">
+            Asset management, compliance remediation, and AI insights over the cloud
         </p>
     </section>
 
@@ -71,6 +77,11 @@
                                     <div class="text-center text-2xl font-semibold">{{ $tier.esc_price }}</div>
                                     <div class="text-center text-sm">{{ $tier.esc_unit }}</div>
                                     <div class="text-center text-xs">{{ $tier.esc_note }}</div>
+                                </div>
+                                <div class="insights-price lg:h-20 hidden">
+                                    <div class="text-center text-2xl font-semibold">{{ $tier.insights_price }}</div>
+                                    <div class="text-center text-sm">{{ $tier.insights_unit }}</div>
+                                    <div class="text-center text-xs">{{ $tier.insights_note }}</div>
                                 </div>
                                 {{ if eq $index 0 }}
                                     <div class="flex flex-wrap flex-col justify-center align-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">

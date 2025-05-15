@@ -1,9 +1,10 @@
 ---
 title: "Enabling Rapid Pulumi Prototyping with Rust"
 date: 2022-09-21
+updated: 2025-03-07
 
 meta_desc: >
-    Enabling Pulumi watch mode on Apple Silicon and solving Go cross-compilation by building on Rust
+    Speed up Pulumi deployments with watch mode. Learn how Pulumi Watch enables real-time infrastructure updates and faster iterations.
 meta_image: meta.png
 authors:
     - aaron-friel
@@ -13,7 +14,7 @@ tags:
     - rust
 ---
 
-Pulumi enables engineers to employ the best practices of their field to infrastructure as code. The
+Pulumi enables engineers to employ the best practices of their field to [infrastructure as code](/what-is/what-is-infrastructure-as-code/). The
 `pulumi watch` command is an example of this, enabling rapid prototyping and a "hot reload" style
 developer experience for prototyping Pulumi programs. In this post you'll see what watch mode
 enables, the challenges encountered in maintaining the feature, and how we were able to use Rust to
@@ -27,7 +28,7 @@ development a breeze. In languages with an interactive shell, it's natural to us
 with new APIs. In each of these cases, engineers find value in being able to focus on writing code,
 not typing console commands.
 
-That's why [pulumi watch mode](/blog/pulumi-watch-mode-fast-inner-loop-development-for-cloud-infrastructure/)
+That's why [Pulumi Watch Mode](/blog/pulumi-watch-mode-fast-inner-loop-development-for-cloud-infrastructure/)
 exists and is one of my favorite features, and it's why I was disappointed to learn this feature was
 not available to users on Apple Silicon Macs. As a Windows and Linux user, I discovered this while
 root causing a Pulumi provider's failing build to the library used to implement watch mode. Thus
@@ -75,7 +76,7 @@ quickly iterating on changes to a stack.
 Watch mode has changed how I write infrastructure as code, and it brings that benefit to everyone
 without needing to install and learn third-party tools for file-watching.
 
-## The sad state of Go file-watching
+## The Challenges of File-Watching in Go
 
 Returning to the cross-compilation issue, the team found builds failed after updating
 the Pulumi library dependency. Root causing this, I found that through a chain of Go package

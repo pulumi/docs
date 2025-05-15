@@ -28,7 +28,7 @@ The AKS-hosted installation of Pulumi deploys the following services:
 
 ### Pulumi deploying Pulumi
 
-This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses the Pulumi CLI with a self-managed backend (e.g., S3) to deploy all services listed above to stand up the self-hosted Pulumi Cloud. The installation package includes Pulumi project code so you can deploy the Pulumi Cloud by running `pulumi up`.
+This installer uses Pulumi to deploy the Pulumi Cloud. In this case, use the Pulumi CLI with a DIY backend (e.g., S3) to deploy all services listed above to stand up the self-hosted Pulumi Cloud. The installation package includes Pulumi project code so you can deploy the Pulumi Cloud by running `pulumi up`.
 
 To this end, you need to set up the following:
 
@@ -47,7 +47,7 @@ When deploying the Service, it is recommended to pin the Pulumi Cloud image tag 
 
 When ready to update the Pulumi Sevice containers to use a different version, do the following:
 
-* `pulumi login` to the self-managed (not self-hosted) backend as chosen above when installing the self-hosted service.
+* `pulumi login` to the DIY backend as chosen above when installing the self-hosted service.
 * `pulumi config set imageTag {image tag}` to set the version you want to use.
 * `pulumi up` to deploy the updates.
 

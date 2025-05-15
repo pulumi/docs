@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: vault-login
     parent: esc-dynamic-login-credentials
-    weight: 4
+    weight: 5
 aliases:
     - /docs/pulumi-cloud/esc/providers/vault-login/
     - /docs/esc/providers/vault-login/
@@ -44,7 +44,7 @@ values:
 
 ## Configuring OIDC
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/vault/) documentation.
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, see the [OpenID Connect integration](/docs/esc/environments/configuring-oidc/vault/) documentation.
 
 ## Inputs
 
@@ -61,7 +61,7 @@ To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, 
 |----------|--------|-----------------------------------------------------------|
 | `role`   | string | The name of the role to use for login.                    |
 | `mount`  | string | [Optional] - The name of the authentication engine mount. Defaults to `jwt`. |
-| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the see the [OpenID subject customization](/docs/pulumi-cloud/oidc/provider/vault#subject-customization) documentation |
+| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/environments/configuring-oidc/#custom-token-claim) documentation |
 
 ### VaultLoginToken
 

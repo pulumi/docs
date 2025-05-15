@@ -207,6 +207,28 @@ esc:
     weight: 2
     parent: esc-cli-commands
 
+
+# -------------------------------------
+# ESC SDKs Menu
+# -------------------------------------
+
+esc:
+  - name: SDK docs
+    parent: esc-typescript-sdk
+    url: /docs/reference/pkg/nodejs/pulumi/esc-sdk/
+    weight: 1
+    identifier: esc-typescript-sdk-docs
+  - name: SDK docs
+    parent: esc-python-sdk
+    url: /docs/reference/pkg/python/pulumi_esc_sdk/
+    weight: 1
+    identifier: esc-python-sdk-docs
+  - name: SDK docs
+    parent: esc-go-sdk
+    url: https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go
+    weight: 1
+    identifier: esc-go-sdk-docs
+
 # -------------------------------------
 # IaC Languages & SDKs Menus
 # -------------------------------------
@@ -234,6 +256,6 @@ iac:
     identifier: iac-languages-dotnet-sdk
   - name: SDK docs
     parent: iac-languages-java
-    url: https://github.com/pulumi/pulumi-java/tree/main/sdk/java
+    url: https://www.pulumi.com/docs/reference/pkg/java/
     weight: 1
     identifier: iac-languages-java-sdk

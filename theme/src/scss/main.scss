@@ -11,6 +11,7 @@
 @import "api-nodejs";
 @import "api-python";
 @import "api-symbol";
+@import "awards";
 @import "marketing/automation-api";
 @import "badges";
 @import "benefits";
@@ -286,6 +287,8 @@ $sitenav-offset: calc($sitenav-height + 16px);
             display: block;
             height: $sitenav-offset;
             margin-top: -$sitenav-offset;
+            position: absolute;
+            z-index: -1;
         }
     }
 }

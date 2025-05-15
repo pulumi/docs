@@ -1,6 +1,7 @@
 ---
 title: "Fargate vs EC2"
 date: 2024-11-18T08:42:34-05:00
+updated: 2025-03-26
 draft: false
 meta_desc: Explore the differences between AWS EKS Fargate and EC2-backed clusters for your Kubernetes EKS workloads.
 meta_image: meta.png
@@ -16,9 +17,16 @@ social:
     linkedin: Discover the key differences between AWS EKS Fargate and EC2-backed clusters! Fargate offers easy scaling and resource isolation, while EC2 provides cost efficiency and faster pod startup. Learn how to choose the right approach for your Kubernetes workloads.
 
 ---
-Building an EKS cluster requires choosing how your containers will actually run - either on EC2 instances you manage or through AWS Fargate's pod-by-pod approach. The differences can be pretty dramatic in practice. I'm setting up a demo cluster right now using Pulumi, so let me show you what I mean:
+Building an EKS cluster requires choosing how your containers will actually run - either on EC2 instances you manage or through AWS Fargate's pod-by-pod approach. The differences can be pretty dramatic in practice. I'm setting up a demo cluster right now using Pulumi, so let me show you what I mean.
 
-<!--more-->
+1. [Bin Packing](/blog/fargate-vs-ec2/#bin-packing)
+2. [Pros and Cons](/blog/fargate-vs-ec2/#pros-and-cons)
+3. [Workload Example: Static Analysis](/blog/fargate-vs-ec2/#workload-example-static-analysis)
+4. [Example: Go Services for E-commerce](/blog/fargate-vs-ec2/#example-go-services-for-e-commerce)
+5. [Fargate vs EC2 Pricing](/blog/fargate-vs-ec2/#fargate-vs-ec2-pricing)
+6. [Misconceptions About Fargate](/blog/fargate-vs-ec2/#misconceptions-about-fargate)
+7. [Managing Container Orchestration with Pulumi](/blog/fargate-vs-ec2/#managing-container-orchestration-with-pulumi)
+8. [Why Not Both](/blog/fargate-vs-ec2/#why-not-both)
 
 Here is my Fargate cluster:
 
@@ -76,13 +84,13 @@ Normally, the Kubernetes scheduler has to solve a bin-packing problem—fitting 
 
 This can be surprisingly complex in practice. Teams must balance selecting the right instance types for different workload needs while managing multiple node groups. Adding to this complexity are scheduling rules and resource quotas that need careful configuration. Perhaps most challenging is striking the right balance between high resource utilization and maintaining enough headroom for spikes in demand.
 
-![ec2 pods](ec2-pods.png)
+![Diagram showing multiple Kubernetes pods running on shared EC2 nodes labeled Node1 and Node2.](ec2-pods.png)
 
 With Fargate, AWS sidesteps this challenge by providing a correctly sized bin for each pod. Each Fargate pod runs on its own dynamically provisioned, right-sized mini-environment, where the "bin" (the Fargate instance) is sized to match the pod's requested resources. This means there's no need for Kubernetes to optimize resource usage across a pool of shared nodes, as each pod effectively has its own "container" provided by Fargate that fits it's needs precisely.
 
 In other words, AWS effectively pushes this bin-packing responsibility to itself, so you don't have to worry ( as much ) about it.
 
-![Fargate pods](faregate-pods.png)
+![Diagram showing AWS Fargate with one Kubernetes pod per isolated node, illustrating 1:1 pod-to-node mapping.](faregate-pods.png)
 
 {{% notes type="info" %}}
 While Fargate abstracts away node management, it's important to understand that Fargate pods [still run on EC2 instances](https://justingarrison.com/blog/2024-02-08-fargate-is-not-firecracker/) behind the scenes. And each Fargate pod gets its own ENI (Elastic Network Interface) that can sometimes limit your scaling because pods aren't sharing a network namespace.
@@ -145,15 +153,7 @@ Fargate on EKS could be a great solution for this type of chunky, resource-heavy
 
 But there are lots of situations where Fargate is less of a fit.
 
-{{% notes type="tip" %}}
-
-**You might also like:**
-
-- [Pulumi for AWS: Automate, Secure, and Manage Your Cloud](/blog/pulumi-for-aws-automate-secure-manage/)
-- [Easy LangServe Apps with Pulumi on AWS](/blog/easy-ai-apps-with-langserve-and-pulumi/)
-- [Advanced AWS Networking, Part 2](/blog/advanced-aws-networking-part-2/)
-
-{{% /notes %}}
+{{< related-posts >}}
 
 ## Example: Go Services for E-commerce
 

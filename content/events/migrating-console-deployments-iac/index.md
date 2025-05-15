@@ -63,6 +63,9 @@ main:
         - name: Josh Kodroff 
           role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
+        - name: Torian Crane
+          role: Senior Technical Content Engineer, Pulumi
+          photo: /images/team/torian-crane.jpg
 
     # case-sensitive
     tags:

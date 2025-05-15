@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     parent: esc-environments
-    weight: 5
+    weight: 7
 aliases:
 - /docs/esc-cli/commands/
 - /docs/esc/webhooks/
@@ -40,6 +40,10 @@ Organization webhooks can be managed on the Organization Settings page. Environm
 ![Organization webhooks](/images/docs/reference/service/webhooks/org-webhooks.png)
 
 Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/pulumi-cloud/webhooks).
+
+{{% notes "info" %}}
+Webhooks do not guarantee event order. You should not assume events will be received in the order they occurred.
+{{% /notes %}}
 
 ### Create a Webhook
 

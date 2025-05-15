@@ -1,0 +1,1273 @@
+# Default related posts shown as last resort when no specific entry or tag matches are found
+
+default:
+  - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+  - docker-build
+  - ecs-anywhere-launch
+
+
+# Tag-based related posts - Run make generate-related-tags to add entries for new tags
+# These entries can be manually edited after generation
+
+tags:
+  kubernetes:
+    - master-kubernetes-secrets-with-pulumi-esc-secrets-store-csi-driver
+    - aws-eks-auto-mode
+    - why-every-platform-engineer-should-care-about-kubernetes-operators
+    - cursed-container-iceberg
+
+  azure:
+    - when-to-use-azure-cosmos-db
+    - azure-v6-release
+    - azure-deployment-environments
+    - mlops-the-ai-challenge-is-cloud-not-code
+
+  python:
+    - python-for-devops
+    - python-uv-toolchain
+    - pulumi-loves-python
+    - next-level-iac-briding-the-declarative-gap
+
+  devops:
+    - python-for-devops
+    - integrating-devops-and-security-for-scalable-platform-engineering
+    - why-every-platform-engineer-should-care-about-kubernetes-operators
+    - devsecops-strategy-security-automation-tivity-health
+
+  iac:
+    - codegen-learnings
+    - python-for-devops
+    - copilot-lessons
+    - pulumi-up-2024
+
+  error-handling:
+    - continue-on-error
+
+  announcement:
+    - move-resources-between-stacks
+    - azure-deployment-environments
+    - continue-on-error
+
+  features:
+    - pulumi-year-in-review
+    - pulumi-esc-aws-parameter-store-support
+    - esc-imports-discoverability
+    - pulumi-copilot-rest
+
+  pricing:
+    - pricing-calculator-blog
+
+  pulumi-news:
+    - pulumi-up-2024
+    - celebrating-20k-stars
+    - october-23-roundup
+    - series-c
+
+  esc:
+    - master-kubernetes-secrets-with-pulumi-esc-secrets-store-csi-driver
+    - pulumi-esc-aws-parameter-store-support
+    - esc-imports-discoverability
+    - esc-secret-rotation-with-iac
+
+  secrets:
+    - master-kubernetes-secrets-with-pulumi-esc-secrets-store-csi-driver
+    - pulumi-esc-aws-parameter-sore-support
+    - esc-imports-discoverability
+    - esc-secret-rotation-with-iac
+
+  aws:
+    - aws-eks-auto-mode
+    - pulumi-esc-aws-parameter-store-support
+    - pulumi-for-aws-automate-secure-manage
+    - aws-eks-hybrid-nodes
+
+  continuous-delivery:
+    - pulumi-kubernetes-operator-2-0
+    - pulumi-kubernetes-new-2022
+    - patterns-drift-detection
+    - upgrade-strategies-part-1
+
+  serverless:
+    - pinecone-serverless
+    - serverless-arch-templates
+    - safe-lambda-secrets
+    - applying-attribute-based-access-controls-to-aws-lambda-functions
+
+  logging:
+    - pulumi-watch-mode-fast-inner-loop-development-for-cloud-infrastructure
+    - aws-cloudwatch-made-easy-with-pulumi-infrastructure-as-code
+    - unified-logs-with-pulumi-logs
+
+  infrastructure-lifecycle-management:
+    - devsecops-strategy-security-automation-tivity-health
+    - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+    - infrastructure-lifecycle-management
+    - drift-detection
+
+  dotnet:
+    - pulumi-targets-dotnet-6
+
+  csharp:
+    - pulumi-targets-dotnet-6
+    - csharp-static-analyzer
+
+  fsharp:
+    - pulumi-targets-dotnet-6
+
+  vb.net:
+    - pulumi-targets-dotnet-6
+
+  platform-engineering:
+    - integrating-devops-and-security-for-scalable-platform-engineering
+    - why-every-platform-engineer-should-care-about-kubernetes-operators
+    - devsecops-strategy-security-automation-tivity-health
+    - yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes
+
+  cloud-native:
+    - cursed-container-iceberg
+    - future-cloud-infrastructure-10-trends-shaping-2024-and-beyond
+    - cloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator
+    - pulumi-in-a-cloud-native-world
+
+  external-secrets-operator:
+    - cloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator
+    - pulumi-in-a-cloud-native-world
+
+  backstage:
+    - pulumi-in-a-cloud-native-world
+    - building-developer-portals
+    - developer-portal-platform-teams
+    - pulumi-backstage-plugin
+
+  argo-cd:
+    - pulumi-in-a-cloud-native-world
+
+  pulumi:
+    - master-kubernetes-secrets-with-pulumi-esc-secrets-store-csi-driver
+    - how-secrets-sprawl-is-slowing-you-down
+    - cloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator
+    - pulumi-in-a-cloud-native-world
+
+  kyverno:
+    - pulumi-in-a-cloud-native-world
+
+  gitops:
+    - pulumi-in-a-cloud-native-world
+    - improving-gitops-with-pulumi-operator
+
+  pulumi-interns:
+    - hiteshs-experience-as-a-pulumi-intern
+    - zephyrs-summer-intern-experience-with-pulumi
+    - reflections-of-a-pulumi-intern
+    - the-pulumi-intern-experience
+
+  guest-post:
+    - how-skai-migrated-to-aws-keyspaces-with-pulumi
+    - managing-multi-cloud-open-data-noaa
+    - kenshoo-migrates-to-aws-with-pulumi
+    - automation-api-dotnet
+
+  pulumi-releases:
+    - enhanced-search-intuitive-navigation-new-docs-experience
+    - pulumi-release-notes-87
+    - pulumi-insights
+    - project-scoped-stacks-in-self-managed-backend
+
+  google-cloud:
+    - google-cloud-7-0
+    - google-cloud-pulumi-import-account-scraper
+    - managing-multi-cloud-open-data-noaa
+    - kubernetes-fundamentals-part-two
+
+  containers:
+    - cursed-container-iceberg
+    - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+    - docker-build
+    - build-images-50x-faster-docker-v4
+
+  pipelines:
+    - top-5-things-for-azure-devs-devops
+
+  aws-cdk:
+    - aws-cdk-on-pulumi-1.0
+    - from-cdk-pulumi-evolution-of-sst
+    - aws-cdk-on-pulumi
+
+  javascript:
+    - observable-infrastructure-as-code
+    - mapbox-iot-as-code-with-pulumi-crosswalk-for-aws
+    - get-started-with-docker-on-aws-fargate-using-pulumi
+    - testing-your-infrastructure-as-code-with-pulumi
+
+  typescript:
+    - next-level-iac-briding-the-declarative-gap
+    - next-level-iac-breakpoint-debugging
+    - next-level-iac-package-ecosystems
+    - typescript-versions
+
+  pulumi-culture:
+    - international-women-day-celebrating-women-in-tech
+    - get-to-know-pulumis-ux-team
+    - 2021-dec-hackathon
+
+  community:
+    - pulumi-year-in-review
+    - pulumiup-global-cloud-iac-platform-engineering-ai-conference
+    - platform-engineering-cncf-maturity-model
+    - platform-engineering-devops-event-meetup-community
+
+  providers:
+    - command-provider-ga
+    - pinecone-serverless
+    - announcing-6-0-of-the-pulumi-aws-classic-provider
+    - kubernetes-4-0-even-more-kubernetes-native
+
+  bicep:
+    - converting-bicep-to-pulumi
+
+  convert:
+    - converting-bicep-to-pulumi
+
+  testing:
+    - testing-pulumi-programs-with-jest
+    - testing-in-practice
+    - unit-testing-assets
+    - infrastructure-testing-got-better
+
+  ecs:
+    - ecs-anywhere-launch
+    - deploying-the-infrastructure-of-oauth-server-for-cms-app
+    - creating-a-python-aws-application-using-flask-and-redis
+    - managing-containers-on-aws-with-pulumi
+
+  eks:
+    - aws-eks-auto-mode
+    - fargate-vs-ec2
+    - eks-v3-release
+    - low-code-llm-apps-with-local-ai-flowise-and-pulumi
+
+  fargate:
+    - deploying-the-infrastructure-of-oauth-server-for-cms-app
+    - running-containers-in-aws-the-lowdown-ecs-fargate-and-eks
+
+  watch:
+    - pulumi-watch-mode-with-rust
+
+  rust:
+    - pulumi-watch-mode-with-rust
+
+  kubecon:
+    - yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes
+    - kubecon-na-2024-roundup
+    - kubecon-na-2021-roundup
+
+  conferences:
+    - kubecon-na-2024-roundup
+    - kubecon-na-2021-roundup
+
+  lambda:
+    - aws-lambda-response-streaming
+    - aws-lambda-snapstart
+    - applying-attribute-based-access-controls-to-aws-lambda-functions
+    - testing-pulumi-programs-with-jest
+
+  state:
+    - understanding-state
+
+  releases:
+    - pulumi-release-notes-114
+    - esc-imports-discoverability
+    - copilot-in-docs
+    - new-stacks-page-launch
+
+  pulumi-cloud:
+    - update-page-improvements
+    - ms-teams-integration
+    - property-search
+    - slack-integration
+
+  security:
+    - integrating-devops-and-security-for-scalable-platform-engineering
+    - devsecops-strategy-security-automation-tivity-health
+    - future-cloud-infrastructure-10-trends-shaping-2024-and-beyond
+    - cloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator
+
+  packages:
+    - leveling-up-pulumi-ai-with-the-pulumi-registry
+    - pulumi-go-boilerplate-v2
+    - dotnet-custom-providers
+    - multicloud-with-kubernetes-and-pulumi
+
+  ec2:
+    - fargate-vs-ec2
+    - reduce-cloud-costs-with-ARM
+
+  k8s:
+    - cursed-container-iceberg
+    - fargate-vs-ec2
+
+  digitalocean:
+    - fullstack-pulumi-mern-stack-digitalocean
+    - manage-digitalocean-kubernetes-clusters-and-workloads
+    - getting-started-on-digitalocean-with-pulumi
+
+  pulumi-enterprise:
+    - using-pulumi-securely
+    - how-elkjop-nordic-enables-developers-to-self-serve-infrastructure
+    - organization-access-tokens
+    - six-things-about-pulumi-service
+
+  audit-logs:
+    - auditing-your-organizations-infrastructure-as-code-activity
+
+  arm64:
+    - aws-lambda-functions-powered-by-graviton2
+
+  infrastructure-as-code:
+    - hidden-costs-of-infrastructure-management
+    - pulumi-for-aws-automate-secure-manage
+    - python-uv-toolchain
+    - devsecops-strategy-security-automation-tivity-health
+
+  patterns-and-practices-platform:
+    - p3-some-assembly-required
+    - pulumi-patterns-and-practices
+
+  developer-experience-devex:
+    - your-perfect-infrastructure
+    - devsecops-strategy-security-automation-tivity-health
+    - p3-some-assembly-required
+    - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+
+  devsecops:
+    - integrating-devops-and-security-for-scalable-platform-engineering
+    - p3-some-assembly-required
+    - future-cloud-infrastructure-10-trends-shaping-2024-and-beyond
+    - pulumiup-global-cloud-iac-platform-engineering-ai-conference
+
+  architecture:
+    - your-perfect-infrastructure
+    - p3-some-assembly-required
+    - pulumi-patterns-and-practices
+    - next-level-iac-briding-the-declarative-gap
+
+  enterprise:
+    - p3-some-assembly-required
+    - pulumi-partner-program
+    - pulumi-patterns-and-practices
+    - how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation
+
+  virtual-machines:
+    - top-5-things-for-azure-devs-vm
+    - top-5-things-for-azure-devs-intro
+    - reduce-cloud-costs-with-ARM
+    - deploying-minecraft-on-azure
+
+  config:
+    - project-config-mvp
+    - 2022-03-10-hierarchical-config
+
+  ai:
+    - codegen-learnings
+    - pulumi-copilot-rest
+    - copilot-lessons
+    - future-cloud-infrastructure-10-trends-shaping-2024-and-beyond
+
+  ml:
+    - devops-ai-developer-future--pulumi-user-group-tech-talks
+    - generative-ai-apps-devops-talks-pulumi-user-group
+    - deploy-ai-ml-vercel-app
+    - mlops-huggingface-llm-aws-sagemaker-python
+
+  llm:
+    - pulumi-copilot-rest
+    - the-present-and-future-of-ai-and-iac
+    - pulumi-ai-new
+    - mlops-huggingface-llm-aws-sagemaker-python
+
+  vllm:
+    - mlops-huggingface-llm-aws-sagemaker-python
+    - mlops-the-ai-challenge-is-cloud-not-code
+
+  aiops:
+    - mlops-huggingface-llm-aws-sagemaker-python
+
+  mlops:
+    - mlops-huggingface-llm-aws-sagemaker-python
+    - mlops-the-ai-challenge-is-cloud-not-code
+
+  llama:
+    - mlops-huggingface-llm-aws-sagemaker-python
+    - mlops-the-ai-challenge-is-cloud-not-code
+
+  llama2:
+    - mlops-huggingface-llm-aws-sagemaker-python
+    - mlops-the-ai-challenge-is-cloud-not-code
+
+  sagemaker:
+    - mlops-huggingface-llm-aws-sagemaker-python
+
+  huggingface:
+    - mlops-huggingface-llm-aws-sagemaker-python
+
+  arch-templates:
+    - kubernetes-architecture-templates
+    - serverless-arch-templates
+
+  templates:
+    - building-developer-portals
+    - developer-portal-platform-teams
+    - how-to-create-and-share-a-pulumi-template
+    - kubernetes-architecture-templates
+
+  codefresh:
+    - cicd-pipelines-with-codefresh-and-pulumi
+
+  cloudflare:
+    - url-shortener-cloudflare-worker
+
+  docker:
+    - cursed-container-iceberg
+    - docker-containers
+    - docker-build
+    - local-testing-with-pulumi
+
+  migration:
+    - converting-full-terraform-states-to-pulumi
+    - migration-hub
+    - converting-full-terraform-programs-to-pulumi
+    - how-skai-migrated-to-aws-keyspaces-with-pulumi
+
+  mysql:
+    - deploying-a-django-application-to-aws
+    - deploying-mysql-schemas-using-dynamic-providers
+    - managing-your-mysql-databases-with-pulumi
+
+  launches:
+    - lambda-urls-launch
+
+  operators:
+    - why-every-platform-engineer-should-care-about-kubernetes-operators
+    - pulumi-kubernetes-operator-2-0
+    - pulumi-kubernetes-new-2022
+    - pulumi-kubernetes-operator-1-0
+
+  app-runner:
+    - deploy-applications-with-aws-app-runner
+
+  pulumi-up:
+    - pulumiup-workshop-series
+
+  workshop:
+    - pulumiup-workshop-series
+
+  confluent:
+    - create-manage-confluent-kafka-cluster-with-pulumi
+
+  kafka:
+    - create-manage-confluent-kafka-cluster-with-pulumi
+
+  provider:
+    - pulumi-aws-cloudcontrol-provider
+
+  cloudcontrol:
+    - pulumi-aws-cloudcontrol-provider
+
+  ux:
+    - enhanced-search-intuitive-navigation-new-docs-experience
+
+  policy-as-code:
+    - the-guide-platform-engineering-idp-steps-best-practices
+    - remediation-policies
+    - building-developer-portals
+    - developer-portal-platform-teams
+
+  opa:
+    - opa-support-for-crossguard
+
+  multi-region-scaling:
+    - scaling-apps-across-multiple-regions
+
+  cloud-deployment:
+    - your-perfect-infrastructure
+    - replicating-data-to-support-multi-region-applications
+    - scaling-apps-across-multiple-regions
+
+  application-scalability:
+    - your-perfect-infrastructure
+    - scaling-apps-across-multiple-regions
+
+  distributed-systems:
+    - replicating-data-to-support-multi-region-applications
+    - scaling-apps-across-multiple-regions
+
+  geographic-distribution:
+    - replicating-data-to-support-multi-region-applications
+    - scaling-apps-across-multiple-regions
+
+  high-availability:
+    - replicating-data-to-support-multi-region-applications
+    - scaling-apps-across-multiple-regions
+
+  best-practices:
+    - your-perfect-infrastructure
+    - iac-recommended-practices-wrapping-up
+    - iac-recommended-practices-using-automation-api
+    - iac-recommended-practices-rbac-and-security
+
+  cloud-engineering:
+    - your-perfect-infrastructure
+    - dependent-stack-updates
+    - review-stacks
+    - iac-recommended-practices-using-stack-references
+
+  zephyr:
+    - iac-recommended-practices-wrapping-up
+    - iac-recommended-practices-using-automation-api
+    - iac-recommended-practices-rbac-and-security
+    - local-testing-with-pulumi
+
+  development-environment:
+    - nx-monorepo
+    - organizational-patterns-developer-portal
+    - organizational-patterns-automation-team
+    - organizational-patterns-infra-repo
+
+  automation-api:
+    - next-level-iac-pulumi-automation-api
+    - how-starburst-data-creates-infrastructure-automation-magic-with-code
+    - iac-recommended-practices-using-automation-api
+    - dependent-stack-updates
+
+  native-providers:
+    - dotnet-custom-providers
+    - pulumi-3-0
+    - pulumiup-native-providers
+    - pulumiup-google-native-provider
+
+  yaml:
+    - kubernetes-chart-v4
+    - kubernetes-yaml-v2
+    - how-to-create-and-share-a-pulumi-template
+    - nov-2022-launches
+
+  java:
+    - kubernetes-chart-v4
+    - kubernetes-yaml-v2
+    - pulumi-universal-iac
+    - announcing-infrastructure-as-code-with-java-and-pulumi
+
+  helm:
+    - kubernetes-chart-v4
+    - helm-release-resource-for-kubernetes-generally-available
+    - full-access-to-helm-features-through-new-helm-release-resource-for-kubernetes
+    - top-5-things-for-azure-devs-kubernetes-apps
+
+  unit-testing:
+    - infrastructure-testing-concepts
+
+  integration-testing:
+    - infrastructure-testing-concepts
+
+  devecops:
+    - devsecops-strategy-security-automation-tivity-health
+
+  configuration:
+    - pulumi-developer-workflow
+    - deploy-azure-static-website
+    - deploy-aws-static-website-with-angular-components
+    - deploy-aws-static-website-with-yaml
+
+  components:
+    - organizing-aws-accounts-with-pulumi
+    - deploy-azure-static-website
+    - deploy-aws-static-website-with-angular-components
+    - deploy-aws-static-website-with-yaml
+
+  static-websites:
+    - deploy-azure-static-website
+    - deploy-aws-static-website-with-angular-components
+    - deploy-aws-static-website-with-yaml
+    - top-5-things-for-azure-devs-static-websites
+
+  angular:
+    - deploy-aws-static-website-with-angular-components
+
+  networking:
+    - advanced-aws-networking-part-2
+    - advanced-aws-networking-part-1
+
+  hub-and-spoke:
+    - advanced-aws-networking-part-2
+    - advanced-aws-networking-part-1
+
+  observability:
+    - observable-infrastructure-as-code
+    - observability-with-infrastructure-as-code
+
+  github-actions:
+    - how-elkjop-nordic-enables-developers-to-self-serve-infrastructure
+    - managing-github-with-pulumi
+    - supercharging-our-github-action-with-the-pulumi-automation-api
+    - infrastructure-ci-cd-with-github-actions-and-pulumi
+
+  netlify:
+    - deploying-the-infrastructure-of-oauth-server-for-cms-app
+    - deploying-netlify-cms-on-aws
+
+  s3:
+    - ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents
+    - amazon-s3-express-one-zone
+    - deploying-netlify-cms-on-aws
+    - getting-started-with-pac
+
+  cloudfront:
+    - deploying-netlify-cms-on-aws
+
+  certificate-manager:
+    - deploying-netlify-cms-on-aws
+
+  route53:
+    - deploying-netlify-cms-on-aws
+
+  .net:
+    - dotnet-custom-providers
+    - automation-api-dotnet
+    - create-eks-clusters-in-your-favorite-language
+    - rabbitMQ-azure
+
+  c#:
+    - dotnet-custom-providers
+    - announcing-enum-support
+
+  redshift:
+    - redshift-etl-with-pulumi-and-aws-glue
+    - building-a-data-warehouse-on-aws-with-redshift-and-pulumi
+    - aws-quickstart-registry
+
+  glue:
+    - redshift-etl-with-pulumi-and-aws-glue
+
+  etl:
+    - redshift-etl-with-pulumi-and-aws-glue
+
+  data-warehouse:
+    - import-your-pulumi-cloud-data-with-tap-pulumi-cloud
+    - how-skai-migrated-to-aws-keyspaces-with-pulumi
+    - redshift-etl-with-pulumi-and-aws-glue
+    - building-a-data-warehouse-on-aws-with-redshift-and-pulumi
+
+  pulumi-events:
+    - pulumiup-global-cloud-iac-platform-engineering-ai-conference
+    - platform-engineering-cncf-maturity-model
+    - platform-engineering-devops-event-meetup-community
+    - announcing-pulumiup-conference-2024
+
+  go:
+    - go-generics-preview
+    - iac-recommended-practices-using-automation-api
+    - pulumi-go-boilerplate-v2
+    - managing-github-with-pulumi
+
+  aks:
+    - how-elkjop-nordic-enables-developers-to-self-serve-infrastructure
+    - top-5-things-for-azure-devs-kubernetes-infrastructure
+    - top-5-things-for-azure-devs-intro
+    - multicloud-app
+
+  release-notes:
+    - pulumi-release-notes-106
+    - pulumi-release-notes-103
+    - pulumi-release-notes-99
+
+  next-level-iac:
+    - next-level-iac-briding-the-declarative-gap
+    - next-level-iac-breakpoint-debugging
+    - next-level-iac-pulumi-automation-api
+    - next-level-iac-package-ecosystems
+
+  vpc:
+    - aws-quickstart-registry
+
+  postgres:
+    - aws-quickstart-registry
+
+  postgresql:
+    - aws-quickstart-registry
+
+  aurora:
+    - aws-quickstart-registry
+
+  registry:
+    - leveling-up-pulumi-ai-with-the-pulumi-registry
+    - aws-quickstart-registry
+
+  announcements:
+    - pulumiup-global-cloud-iac-platform-engineering-ai-conference
+    - announcing-speaker-lineup-pulumiup-2023
+    - join-pulumi-user-group-community
+    - pulumi-challenge-september
+
+  cloud-computing:
+    - future-cloud-infrastructure-10-trends-shaping-2024-and-beyond
+    - pulumiup-global-cloud-iac-platform-engineering-ai-conference
+    - redmonk-pulumi-developer-first-infrastructure
+
+  finops:
+    - future-cloud-infrastructure-10-trends-shaping-2024-and-beyond
+    - the-guide-platform-engineering-idp-steps-best-practices
+    - finops-with-pulumi
+
+  metabase:
+    - unlocking-your-data-with-metabase-and-aws
+
+  developer-portals:
+    - the-guide-platform-engineering-idp-steps-best-practices
+    - new-project-wizard-apr2024-updates
+    - software-developer-experience-devex-devx-devops-culture
+    - developer-portal-gallery
+
+  cost-efficiency:
+    - the-guide-platform-engineering-idp-steps-best-practices
+
+  langserve:
+    - easy-ai-apps-with-langserve-and-pulumi
+
+  pulumi-challenge:
+    - pulumi-challenge-september
+    - pulumi-challenge-launch
+
+  oidc:
+    - oidc-trust-github-action
+    - oidc-trust-relationships
+
+  openid-connect:
+    - oidc-trust-github-action
+    - oidc-trust-relationships
+
+  pulumi-deployments:
+    - announcing-dependency-caching-deployments
+    - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+    - dependent-stack-updates
+    - review-stacks
+
+  deployments:
+    - dependent-stack-updates
+    - review-stacks
+    - pulumi-deployments-platform-automation
+    - pulumi-deployments
+
+  review-stacks:
+    - review-stacks
+
+  postmortem:
+    - post-mortem-2023-10-06
+
+  plans:
+    - experimental-update-plan-prompt
+
+  rbac:
+    - iac-recommended-practices-rbac-and-security
+    - eks-oidc
+
+  config-management:
+    - esc-imports-discoverability
+    - esc-table-editor-provider-config-support
+    - esc-automation-api-pulumi-service-provider-launch
+    - esc-key-value-table-editor-launch
+
+  caching:
+    - announcing-dependency-caching-deployments
+
+  policy:
+    - centralized-policy-violations
+
+  multi-cloud:
+    - future-cloud-infrastructure-10-trends-shaping-2024-and-beyond
+    - deploy-to-multiple-regions
+    - multicloud-with-kubernetes-and-pulumi
+
+  monorepo:
+    - nx-monorepo
+
+  nx:
+    - nx-monorepo
+
+  secret-management:
+    - cloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator
+
+  fundamentals:
+    - going-beyond-with-advanced-infrastructure-as-code-use-cases
+    - walkthrough-of-adopting-infrastructure-as-code
+    - infrastructure-as-code-in-any-programming-language
+
+  gke:
+    - multicloud-app
+    - create-secure-jupyter-notebooks-on-kubernetes-using-pulumi
+
+  data-and-analytics:
+    - ai-assist-improvements
+    - pulumi-insights
+    - data-science-in-the-cloud
+    - aws-serverless-analytics
+
+  jupyter:
+    - data-science-in-the-cloud
+    - create-secure-jupyter-notebooks-on-kubernetes-using-pulumi
+
+  terraform:
+    - yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes
+    - any-terraform-provider
+    - hcl-vs-pulumi
+    - next-level-iac-pulumi-automation-api
+
+  cli:
+    - move-resources-between-stacks
+    - introducing-dev-releases
+    - stack-init-teams-flag
+
+  stack-init:
+    - stack-init-teams-flag
+
+  cli-flags:
+    - stack-init-teams-flag
+
+  fullstack:
+    - testing-pulumi-programs-with-jest
+    - fullstack-pulumi-mern-stack-digitalocean
+
+  insights:
+    - insights-cloud-account-discovery
+    - insights-resources-v2
+    - pulumi-up-2024
+    - pulumi-insights-2
+
+  pulumi-service:
+    - stack-transfers
+    - new-improved-pulumi-service-console
+    - team-access-tokens
+    - billing-managers
+
+  csi:
+    - master-kubernetes-secrets-with-pulumi-esc-secrets-store-csi-driver
+
+  multi-language-component:
+    - multi-lang-hackathon
+
+  hackathon:
+    - exploring-circular-dependencies
+    - 2021-dec-hackathon
+    - multi-lang-hackathon
+
+  k8s,-containers,-cloud-native,-docker:
+    - cursed-container-iceberg
+
+  embedchain:
+    - ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents
+    - ai-slack-bot-adding-data-to-pinecone-using-s3-embedchain-and-pulumi-on-aws
+    - ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws
+
+  slack:
+    - ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents
+    - ai-slack-bot-adding-data-to-pinecone-using-s3-embedchain-and-pulumi-on-aws
+    - ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws
+
+  chatbot:
+    - ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents
+    - ai-slack-bot-adding-data-to-pinecone-using-s3-embedchain-and-pulumi-on-aws
+    - ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws
+    - deploy-ai-ml-vercel-app
+
+  resources:
+    - insights-cloud-account-discovery
+    - insights-resources-v2
+
+  stack-reference:
+    - stack-reference-output-details
+    - architect-aws-application-infra-with-pulumi-stack-references
+
+  aws-systems-manager:
+    - shared-config-with-aws-systems-manager-parameter-store
+
+  api-gateway:
+    - api-gateway-to-eventbridge
+    - introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws
+    - protecting-your-apis-with-lambda-authorizers-and-pulumi
+
+  eventbridge:
+    - api-gateway-to-eventbridge
+
+  refactoring:
+    - refactoring-iac
+    - cumundi-guest-post
+
+  crossguard:
+    - remediation-policies
+    - how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation
+
+  import:
+    - migration-hub
+    - google-cloud-pulumi-import-account-scraper
+    - automating-pulumi-import-to-bring-manually-created-resources-into-iac
+    - changes-to-import
+
+  credentials-management:
+    - esc-env-run-aws
+
+  hcl:
+    - hcl-vs-pulumi
+    - next-level-iac-pulumi-automation-api
+    - next-level-iac-package-ecosystems
+    - next-level-iac-pulumi-runtime-logic
+
+  nodejs:
+    - next-level-iac-breakpoint-debugging
+    - next-level-iac-package-ecosystems
+    - next-level-iac-pulumi-runtime-logic
+    - typescript-versions
+
+  copilot:
+    - codegen-learnings
+    - pulumi-copilot-rest
+    - copilot-lessons
+    - pulumi-copilot
+
+  honeycomb:
+    - observability-with-infrastructure-as-code
+
+  opensource:
+    - celebrating-20k-stars
+    - migration-hub
+    - pulumi-hearts-opensource
+
+  architecture-as-code:
+    - architecture-as-code-microservices
+    - architecture-as-code-vm
+    - architecture-as-code-intro
+    - aws-serverless-analytics
+
+  pinecone:
+    - low-code-llm-apps-with-local-ai-flowise-and-pulumi
+    - pinecone-serverless
+
+  cloud-engineering-summit:
+    - the-industry-comes-together-for-the-cloud-engineering-summit-2021
+
+  gcp:
+    - gcp-v8-release
+
+  release:
+    - eks-v3-release
+    - azure-v6-release
+    - gcp-v8-release
+
+  snowflake:
+    - snowflake-provider-launch
+
+  rabbitmq:
+    - rabbitMQ-azure
+
+  cloudformation:
+    - from-cdk-pulumi-evolution-of-sst
+    - next-level-iac-pulumi-automation-api
+    - next-level-iac-pulumi-runtime-logic
+
+  open-source:
+    - how-webiny-built-a-serverless-application-framework
+
+  frameworks:
+    - how-webiny-built-a-serverless-application-framework
+
+  user-experience:
+    - typescript-versions
+    - new-improved-pulumi-service-console
+
+  aiven:
+    - pulumi-with-aiven-for-influxdb
+
+  langchain:
+    - low-code-llm-apps-with-local-ai-flowise-and-pulumi
+    - generative-ai-apps-devops-talks-pulumi-user-group
+
+  developer-first-infrastructure:
+    - your-perfect-infrastructure
+    - redmonk-pulumi-developer-first-infrastructure
+
+  people-ops:
+    - your-perfect-infrastructure
+    - managing-github-with-pulumi
+
+  equinix:
+    - tour-pulumi-equinix-provider
+
+  1password:
+    - pulumi-esc-public-preview-for-1password-support
+
+  iam:
+    - community-aws-iam-package
+    - applying-attribute-based-access-controls-to-aws-lambda-functions
+    - testable-iam-policy-documents
+
+  octopus:
+    - deploying-with-octopus-and-pulumi
+
+  elasticsearch:
+    - bigdata-boutique-guest-post
+    - getting-started-with-pac
+
+  rest-api:
+    - pulumi-rest-api
+
+  ansible:
+    - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+    - deploy-wordpress-aws-pulumi-ansible
+
+  wordpress:
+    - deploy-wordpress-aws-pulumi-ansible
+
+  pulumi-community:
+    - pulumi-partner-program
+
+  performance:
+    - benchmarking-python-performance
+    - amazing-performance
+
+  platform:
+    - benchmarking-python-performance
+    - amazing-performance
+
+  engineering:
+    - benchmarking-python-performance
+    - amazing-performance
+    - nodejs-binaries-with-pkg
+
+  spinnaker:
+    - unlocking-spinnaker-with-pulumi
+
+  microservices:
+    - architecture-as-code-microservices
+    - architecture-as-code-intro
+
+  cassandra:
+    - how-skai-migrated-to-aws-keyspaces-with-pulumi
+
+  kubecrash:
+    - announcing-kubecrash-fall-2022
+
+  events:
+    - announcing-kubecrash-fall-2022
+
+  jest:
+    - testing-pulumi-programs-with-jest
+
+  aliases:
+    - cumundi-guest-post
+
+  github:
+    - pulumi-developer-workflow
+    - github-token-scanning-service
+
+  gitlab:
+    - gitlab-project-integration
+
+  efs:
+    - aws-lambda-efs
+
+  case-studies:
+    - from-cdk-pulumi-evolution-of-sst
+    - how-starburst-data-creates-infrastructure-automation-magic-with-code
+    - how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation
+    - cloud-engineering-fuels-startup-innovation
+
+  publishing:
+    - nodejs-binaries-with-pkg
+
+  sqs:
+    - ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents
+
+  cloud-systems:
+    - cloud-systems-part-three
+    - cloud-systems-part-two
+
+  tutorials:
+    - cloud-systems-part-three
+    - cloud-systems-part-two
+    - cloud-systems-part-one
+
+  regions:
+    - deploy-to-multiple-regions
+
+  rds:
+    - deploy-to-multiple-regions
+
+  multi-region:
+    - deploy-to-multiple-regions
+
+  domains:
+    - 2022-03-22-my-pulumi-managing-my-dns
+
+  dns:
+    - 2022-03-22-my-pulumi-managing-my-dns
+
+  stack-references:
+    - dependent-stack-updates
+
+  webhooks:
+    - dependent-stack-updates
+
+  meltano:
+    - import-your-pulumi-cloud-data-with-tap-pulumi-cloud
+
+  api:
+    - import-your-pulumi-cloud-data-with-tap-pulumi-cloud
+
+  data:
+    - import-your-pulumi-cloud-data-with-tap-pulumi-cloud
+
+  secrets-management:
+    - how-secrets-sprawl-is-slowing-you-down
+
+  secrets-sprawl:
+    - how-secrets-sprawl-is-slowing-you-down
+
+  localai:
+    - low-code-llm-apps-with-local-ai-flowise-and-pulumi
+
+  flowise:
+    - low-code-llm-apps-with-local-ai-flowise-and-pulumi
+
+  llamaindex:
+    - low-code-llm-apps-with-local-ai-flowise-and-pulumi
+
+  buildx:
+    - docker-build
+
+  buildkit:
+    - docker-build
+
+  cloud-management:
+    - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+    - hcl-vs-pulumi
+
+  oauth:
+    - deploying-the-infrastructure-of-oauth-server-for-cms-app
+
+  ecr:
+    - amazon-ecr-public
+
+  sdk:
+    - introducing-dev-releases
+
+  pre-release:
+    - introducing-dev-releases
+
+  debugging:
+    - next-level-iac-breakpoint-debugging
+
+  vscode:
+    - next-level-iac-breakpoint-debugging
+
+  ide:
+    - next-level-iac-breakpoint-debugging
+
+  environments:
+    - pulumi-developer-workflow
+
+  developer:
+    - pulumi-developer-workflow
+
+  workflow:
+    - pulumi-developer-workflow
+
+  devcontainer:
+    - pulumi-developer-workflow
+
+  codespaces:
+    - pulumi-developer-workflow
+
+  software-development:
+    - software-developer-experience-devex-devx-devops-culture
+
+  jamstack:
+    - jamstack-with-pulumi
+
+  crosswalk:
+    - pulumi-universal-iac
+
+  data-science:
+    - data-science-in-the-cloud
+    - data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi
+
+  '101':
+    - cloud-systems-part-one
+
+  enums:
+    - announcing-enum-support
+
+  fintech:
+    - how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation
+
+  static-website:
+    - ill-just-update-my-bucket-object-what-could-go-wrong
+
+  license:
+    - pulumi-hearts-opensource
+
+  apache:
+    - pulumi-hearts-opensource
+
+  bsl:
+    - pulumi-hearts-opensource
+
+  ci-cd:
+    - managing-github-with-pulumi
+
+  auth0:
+    - pulumi-auth0
+
+  multi-region-databases:
+    - replicating-data-to-support-multi-region-applications
+
+  data-replication:
+    - replicating-data-to-support-multi-region-applications
+
+  redis-cloud:
+    - redis-cloud-provider
+
+  api-economy:
+    - next-level-iac-pulumi-automation-api
+
+  new-project-wizard:
+    - new-project-wizard-apr2024-updates
+
+  vercel:
+    - deploy-ai-ml-vercel-app
+
+  vuejs:
+    - deploy-ai-ml-vercel-app
+
+  devex:
+    - integrating-devops-and-security-for-scalable-platform-engineering
+
+  languages:
+    - extending-pulumi-languages-with-yaml-cue-jsonnet-rust
+
+
+# Specific related posts for individual blog posts - manually curated
+# These take precedence over tag-based entries
+
+cursed-container-iceberg:
+  - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
+  - docker-build
+  - ecs-anywhere-launch
+
+fargate-vs-ec2:
+  - pulumi-for-aws-automate-secure-manage
+  - easy-ai-apps-with-langserve-and-pulumi
+  - advanced-aws-networking-part-2
+
+when-to-use-azure-cosmos-db:
+  - azure-deployment-environments
+  - sam-cogan-testing-best-practices
+  - introducing-azure-native-v2
+

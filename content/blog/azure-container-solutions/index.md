@@ -1,8 +1,9 @@
 ---
-title: "Which Azure Container Solution is right for you?"
+title: "Azure Container Services Compared: ACI vs App Service vs AKS"
 date: 2021-10-12T08:00:00-07:00
+updated: 2025-03-24
 draft: false
-meta_desc: "A look at the container solutions available in Azure"
+meta_desc: "Compare Azure container services like ACI, AKS, and App Service. Learn the pros, cons, pricing, and use cases to pick the best option for your workload."
 meta_image: "azure-top-5.png"
 authors:
     - lee-briggs
@@ -13,7 +14,7 @@ tags:
 
 Containers have emerged as one of the de facto standards for running software. When adopted with the right mindset, they can drastically improve the development lifecycle and help to close the loop between local development and running your applications in the cloud.
 
-If you're at the stage of trying to run your application in Microsoft Azure, the choices can be overwhelming. The Azure Container [product page](https://azure.microsoft.com/en-gb/product-categories/containers/) lists 7 different products on their landing page, and for new users it can often be difficult to decide which of the myriad products is right for their use case. What can make it even more confusing is that often these container services can be interoperable, meaning you can use one container product from another!
+If you're at the stage of trying to run your application in Microsoft Azure, the choices can be overwhelming. The [Azure Container product page](https://azure.microsoft.com/en-gb/product-categories/containers/) lists 7 different products on their landing page, and for new users it can often be difficult to decide which of the myriad products is right for their use case. What can make it even more confusing is that often these container services can be interoperable, meaning you can use one container product from another!
 
 In this post, we're going to examine each of the main container services offered in Azure and then examine what they're good for and what they might not be so good for. Let's take a look!
 
@@ -177,8 +178,10 @@ Azure Functions is Azure’s Function-as-a-Service implementation. It supports l
 
 Function-as-a-Service products are often designed for short-lived, event-driven workloads. If you need to run a script to react to a worker queue or other event, Azure Functions are a great option. It's important to remember that Functions are often billed based on how long they run, so short-lived workloads are often better suited.
 
+{{< related-posts >}}
+
 ## Wrap-Up
 
 There are a number of options for running containers in Azure, and choosing the right one for your workload might be difficult. We've tried to give an overview of the current state of the world, but Microsoft continues to add options and capabilities to all these products.
 
-If you’ve settled on a container solution, and are ready to get started, Pulumi’s [Azure Native provider](/registry/packages/azure-native/) supports all of the methods of running containers and can quickly get you started. Check out our [Azure  getting started guide](/docs/iac/get-started/azure/), or join one of our upcoming [Azure Workshops](/resources/)!
+If you’ve settled on a container solution, and are ready to get started, Pulumi’s [Azure Native provider](/registry/packages/azure-native/) supports all of the methods of running containers and can quickly get you started. Check out our [Azure getting started guide](/docs/iac/get-started/azure/), or join one of our upcoming [Azure Workshops](/events/)!

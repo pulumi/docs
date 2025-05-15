@@ -66,7 +66,7 @@ For those looking to expand their cloud engineering skillset after the summit, M
 
 We’ve spent a lot of time with the NGINX team over the past year in their quest to make it easier than ever to get to production with Kubernetes. Join first-time summit speakers Damian Curry and Elijah Zupancic for a lightning talk followed by NGINX office hours to learn about _Building a modern app reference architecture for Kubernetes_.
 
-Then, if you’re ready for some hands-on Kubernetes help, join our post-event workshop [From Zero to Production in Kubernetes](/resources/from-zero-to-production-in-kubernetes/).
+Then, if you’re ready for some hands-on Kubernetes help, join our post-event workshop [From Zero to Production in Kubernetes](/events/from-zero-to-production-in-kubernetes/).
 
 ## Bridgecrew
 

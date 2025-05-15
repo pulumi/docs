@@ -111,6 +111,8 @@ The eval suite keeps getting more robust, which means that when new AI models dr
 
 So, while hallucinations are now much rarer, what about that one with the `--force` flag? Yes, it's "just another bug," but it taught us something fascinating about these AI errors.
 
+{{< related-posts >}}
+
 ## LLMs think like humans (sort of)
 
 The `--force` hallucination wasn't totally wrong - it was revealing what users intuitively expect from the CLI, and the LLM accidentally showed us what was missing. Force deletion is a common pattern across developer tools, and the LLM, trained on vast amounts of documentation and code, simply reflects these established conventions.

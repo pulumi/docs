@@ -4,38 +4,34 @@ import pulumi_kubernetes.meta.v1 as meta
 
 ns = k8s.core.v1.Namespace(
     "cnpg-system",
-    meta.ObjectMetaArgs(
+    metadata=meta.ObjectMetaArgs(
         name="cnpg-system",
     ),
 )
 
 release = k8shelm.Release(
     "cloudnativepg",
-    chart="cloudnative-pg/cloudnative-pg",
+    chart="oci://ghcr.io/cloudnative-pg/charts/cloudnative-pg",
     namespace=ns.metadata["name"],
     create_namespace=True,
 )
 
-namespace = k8s.core.v1.Namespace(
+flux_namespace = k8s.core.v1.Namespace(
     "flux-system",
-    meta.ObjectMetaArgs(
+    metadata=meta.ObjectMetaArgs(
         name="flux-system",
     ),
 )
 flux_operator = k8shelm.Release(
     "flux-operator",
-    chart="flux-operator",
-    version="latest",
-    namespace=namespace.metadata["name"],
-    repository_opts={
-        "repo": "oci://ghcr.io/controlplaneio-fluxcd/charts",
-    },
+    chart="oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator",
+    namespace=flux_namespace.metadata["name"],
     create_namespace=True,
 )
 
-namespace_kafka = k8s.core.v1.v1.Namespace(
+kafka_namespace = k8s.core.v1.Namespace(
     "kafka",
-    meta.ObjectMetaArgs(
+    metadata=meta.ObjectMetaArgs(
         name="kafka",
     ),
 )
@@ -43,8 +39,7 @@ namespace_kafka = k8s.core.v1.v1.Namespace(
 strimzi_kafka_operator = k8shelm.Release(
     "strimzi-kafka-operator",
     chart="strimzi-kafka-operator",
-    version="latest",
-    namespace=namespace_kafka.metadata["name"],
+    namespace=kafka_namespace.metadata["name"],
     repository_opts={
         "repo": "https://strimzi.io/charts/",
     },

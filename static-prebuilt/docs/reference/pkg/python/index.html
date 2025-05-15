@@ -44,6 +44,7 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="pulumi/">pulumi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pulumi_policy/">pulumi_policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pulumi_esc_sdk/">pulumi_esc_sdk</a></li>
 </ul>
 
         </div>
@@ -179,6 +180,8 @@
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.RemoteAsset"><code class="docutils literal notranslate"><span class="pre">RemoteAsset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.Resource"><code class="docutils literal notranslate"><span class="pre">Resource</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Resource.get_provider"><code class="docutils literal notranslate"><span class="pre">Resource.get_provider()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Resource.pulumi_resource_name"><code class="docutils literal notranslate"><span class="pre">Resource.pulumi_resource_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Resource.pulumi_resource_type"><code class="docutils literal notranslate"><span class="pre">Resource.pulumi_resource_type</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Resource.translate_input_property"><code class="docutils literal notranslate"><span class="pre">Resource.translate_input_property()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Resource.translate_output_property"><code class="docutils literal notranslate"><span class="pre">Resource.translate_output_property()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.Resource.urn"><code class="docutils literal notranslate"><span class="pre">Resource.urn</span></code></a></li>
@@ -261,12 +264,14 @@
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.get_organization"><code class="docutils literal notranslate"><span class="pre">get_organization()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.get_project"><code class="docutils literal notranslate"><span class="pre">get_project()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.get_stack"><code class="docutils literal notranslate"><span class="pre">get_stack()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.get_type_token"><code class="docutils literal notranslate"><span class="pre">get_type_token()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.getter"><code class="docutils literal notranslate"><span class="pre">getter()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.input_type"><code class="docutils literal notranslate"><span class="pre">input_type()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.output_type"><code class="docutils literal notranslate"><span class="pre">output_type()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.property"><code class="docutils literal notranslate"><span class="pre">property()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.set"><code class="docutils literal notranslate"><span class="pre">set()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.type_token"><code class="docutils literal notranslate"><span class="pre">type_token()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#pulumi.warn"><code class="docutils literal notranslate"><span class="pre">warn()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi/#module-pulumi.automation">pulumi.automation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.automation.CancelEvent"><code class="docutils literal notranslate"><span class="pre">CancelEvent</span></code></a></li>
@@ -538,6 +543,7 @@
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.get_config_env"><code class="docutils literal notranslate"><span class="pre">get_config_env()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.get_config_env_key"><code class="docutils literal notranslate"><span class="pre">get_config_env_key()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.get_config_secret_keys_env"><code class="docutils literal notranslate"><span class="pre">get_config_secret_keys_env()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.get_root_directory"><code class="docutils literal notranslate"><span class="pre">get_root_directory()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.get_root_resource"><code class="docutils literal notranslate"><span class="pre">get_root_resource()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.invoke"><code class="docutils literal notranslate"><span class="pre">invoke()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi/#pulumi.runtime.invoke_async"><code class="docutils literal notranslate"><span class="pre">invoke_async()</span></code></a></li>
@@ -605,6 +611,7 @@
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyResourceOptions.custom_timeouts"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.custom_timeouts</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyResourceOptions.delete_before_replace"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.delete_before_replace</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyResourceOptions.ignore_changes"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.ignore_changes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyResourceOptions.parent"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.parent</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pulumi_policy/#pulumi_policy.PolicyResourceOptions.protect"><code class="docutils literal notranslate"><span class="pre">PolicyResourceOptions.protect</span></code></a></li>
 </ul>
 </li>
@@ -626,6 +633,501 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pulumi_policy/#pulumi_policy.StackValidationPolicy"><code class="docutils literal notranslate"><span class="pre">StackValidationPolicy</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pulumi_esc_sdk/">pulumi_esc_sdk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Access"><code class="docutils literal notranslate"><span class="pre">Access</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Access.from_dict"><code class="docutils literal notranslate"><span class="pre">Access.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Access.from_json"><code class="docutils literal notranslate"><span class="pre">Access.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Access.model_config"><code class="docutils literal notranslate"><span class="pre">Access.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Access.to_dict"><code class="docutils literal notranslate"><span class="pre">Access.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Access.to_json"><code class="docutils literal notranslate"><span class="pre">Access.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Access.to_str"><code class="docutils literal notranslate"><span class="pre">Access.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Accessor"><code class="docutils literal notranslate"><span class="pre">Accessor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Accessor.from_dict"><code class="docutils literal notranslate"><span class="pre">Accessor.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Accessor.from_json"><code class="docutils literal notranslate"><span class="pre">Accessor.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Accessor.model_config"><code class="docutils literal notranslate"><span class="pre">Accessor.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Accessor.to_dict"><code class="docutils literal notranslate"><span class="pre">Accessor.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Accessor.to_json"><code class="docutils literal notranslate"><span class="pre">Accessor.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Accessor.to_str"><code class="docutils literal notranslate"><span class="pre">Accessor.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiAttributeError"><code class="docutils literal notranslate"><span class="pre">ApiAttributeError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient"><code class="docutils literal notranslate"><span class="pre">ApiClient</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.call_api"><code class="docutils literal notranslate"><span class="pre">ApiClient.call_api()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.deserialize"><code class="docutils literal notranslate"><span class="pre">ApiClient.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.files_parameters"><code class="docutils literal notranslate"><span class="pre">ApiClient.files_parameters()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.get_default"><code class="docutils literal notranslate"><span class="pre">ApiClient.get_default()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.param_serialize"><code class="docutils literal notranslate"><span class="pre">ApiClient.param_serialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.parameters_to_tuples"><code class="docutils literal notranslate"><span class="pre">ApiClient.parameters_to_tuples()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.parameters_to_url_query"><code class="docutils literal notranslate"><span class="pre">ApiClient.parameters_to_url_query()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.response_deserialize"><code class="docutils literal notranslate"><span class="pre">ApiClient.response_deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.sanitize_for_serialization"><code class="docutils literal notranslate"><span class="pre">ApiClient.sanitize_for_serialization()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.select_header_accept"><code class="docutils literal notranslate"><span class="pre">ApiClient.select_header_accept()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.select_header_content_type"><code class="docutils literal notranslate"><span class="pre">ApiClient.select_header_content_type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.set_default"><code class="docutils literal notranslate"><span class="pre">ApiClient.set_default()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.update_params_for_auth"><code class="docutils literal notranslate"><span class="pre">ApiClient.update_params_for_auth()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.user_agent"><code class="docutils literal notranslate"><span class="pre">ApiClient.user_agent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiException"><code class="docutils literal notranslate"><span class="pre">ApiException</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiKeyError"><code class="docutils literal notranslate"><span class="pre">ApiKeyError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiResponse"><code class="docutils literal notranslate"><span class="pre">ApiResponse</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiResponse.model_config"><code class="docutils literal notranslate"><span class="pre">ApiResponse.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiTypeError"><code class="docutils literal notranslate"><span class="pre">ApiTypeError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ApiValueError"><code class="docutils literal notranslate"><span class="pre">ApiValueError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CheckEnvironment"><code class="docutils literal notranslate"><span class="pre">CheckEnvironment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CheckEnvironment.from_dict"><code class="docutils literal notranslate"><span class="pre">CheckEnvironment.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CheckEnvironment.from_json"><code class="docutils literal notranslate"><span class="pre">CheckEnvironment.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CheckEnvironment.model_config"><code class="docutils literal notranslate"><span class="pre">CheckEnvironment.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CheckEnvironment.to_dict"><code class="docutils literal notranslate"><span class="pre">CheckEnvironment.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CheckEnvironment.to_json"><code class="docutils literal notranslate"><span class="pre">CheckEnvironment.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CheckEnvironment.to_str"><code class="docutils literal notranslate"><span class="pre">CheckEnvironment.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CloneEnvironment"><code class="docutils literal notranslate"><span class="pre">CloneEnvironment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CloneEnvironment.from_dict"><code class="docutils literal notranslate"><span class="pre">CloneEnvironment.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CloneEnvironment.from_json"><code class="docutils literal notranslate"><span class="pre">CloneEnvironment.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CloneEnvironment.model_config"><code class="docutils literal notranslate"><span class="pre">CloneEnvironment.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CloneEnvironment.name_validate_regular_expression"><code class="docutils literal notranslate"><span class="pre">CloneEnvironment.name_validate_regular_expression()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CloneEnvironment.project_validate_regular_expression"><code class="docutils literal notranslate"><span class="pre">CloneEnvironment.project_validate_regular_expression()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CloneEnvironment.to_dict"><code class="docutils literal notranslate"><span class="pre">CloneEnvironment.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CloneEnvironment.to_json"><code class="docutils literal notranslate"><span class="pre">CloneEnvironment.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CloneEnvironment.to_str"><code class="docutils literal notranslate"><span class="pre">CloneEnvironment.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration"><code class="docutils literal notranslate"><span class="pre">Configuration</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.assert_hostname"><code class="docutils literal notranslate"><span class="pre">Configuration.assert_hostname</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.auth_settings"><code class="docutils literal notranslate"><span class="pre">Configuration.auth_settings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.cert_file"><code class="docutils literal notranslate"><span class="pre">Configuration.cert_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.connection_pool_maxsize"><code class="docutils literal notranslate"><span class="pre">Configuration.connection_pool_maxsize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.date_format"><code class="docutils literal notranslate"><span class="pre">Configuration.date_format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.datetime_format"><code class="docutils literal notranslate"><span class="pre">Configuration.datetime_format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.debug"><code class="docutils literal notranslate"><span class="pre">Configuration.debug</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.get_api_key_with_prefix"><code class="docutils literal notranslate"><span class="pre">Configuration.get_api_key_with_prefix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.get_basic_auth_token"><code class="docutils literal notranslate"><span class="pre">Configuration.get_basic_auth_token()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.get_default"><code class="docutils literal notranslate"><span class="pre">Configuration.get_default()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.get_default_copy"><code class="docutils literal notranslate"><span class="pre">Configuration.get_default_copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.get_host_from_settings"><code class="docutils literal notranslate"><span class="pre">Configuration.get_host_from_settings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.get_host_settings"><code class="docutils literal notranslate"><span class="pre">Configuration.get_host_settings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.host"><code class="docutils literal notranslate"><span class="pre">Configuration.host</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.key_file"><code class="docutils literal notranslate"><span class="pre">Configuration.key_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.logger"><code class="docutils literal notranslate"><span class="pre">Configuration.logger</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.logger_file"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.logger_file_handler"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_file_handler</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.logger_format"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.logger_stream_handler"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_stream_handler</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.proxy"><code class="docutils literal notranslate"><span class="pre">Configuration.proxy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.proxy_headers"><code class="docutils literal notranslate"><span class="pre">Configuration.proxy_headers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.refresh_api_key_hook"><code class="docutils literal notranslate"><span class="pre">Configuration.refresh_api_key_hook</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.retries"><code class="docutils literal notranslate"><span class="pre">Configuration.retries</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.safe_chars_for_path_param"><code class="docutils literal notranslate"><span class="pre">Configuration.safe_chars_for_path_param</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.server_operation_index"><code class="docutils literal notranslate"><span class="pre">Configuration.server_operation_index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.server_operation_variables"><code class="docutils literal notranslate"><span class="pre">Configuration.server_operation_variables</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.set_default"><code class="docutils literal notranslate"><span class="pre">Configuration.set_default()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.socket_options"><code class="docutils literal notranslate"><span class="pre">Configuration.socket_options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.ssl_ca_cert"><code class="docutils literal notranslate"><span class="pre">Configuration.ssl_ca_cert</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.temp_folder_path"><code class="docutils literal notranslate"><span class="pre">Configuration.temp_folder_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.tls_server_name"><code class="docutils literal notranslate"><span class="pre">Configuration.tls_server_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.to_debug_report"><code class="docutils literal notranslate"><span class="pre">Configuration.to_debug_report()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.verify_ssl"><code class="docutils literal notranslate"><span class="pre">Configuration.verify_ssl</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment"><code class="docutils literal notranslate"><span class="pre">CreateEnvironment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment.from_dict"><code class="docutils literal notranslate"><span class="pre">CreateEnvironment.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment.from_json"><code class="docutils literal notranslate"><span class="pre">CreateEnvironment.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment.model_config"><code class="docutils literal notranslate"><span class="pre">CreateEnvironment.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment.name_validate_regular_expression"><code class="docutils literal notranslate"><span class="pre">CreateEnvironment.name_validate_regular_expression()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment.project_validate_regular_expression"><code class="docutils literal notranslate"><span class="pre">CreateEnvironment.project_validate_regular_expression()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment.to_dict"><code class="docutils literal notranslate"><span class="pre">CreateEnvironment.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment.to_json"><code class="docutils literal notranslate"><span class="pre">CreateEnvironment.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment.to_str"><code class="docutils literal notranslate"><span class="pre">CreateEnvironment.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentRevisionTag"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentRevisionTag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentRevisionTag.from_dict"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentRevisionTag.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentRevisionTag.from_json"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentRevisionTag.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentRevisionTag.model_config"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentRevisionTag.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentRevisionTag.to_dict"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentRevisionTag.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentRevisionTag.to_json"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentRevisionTag.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentRevisionTag.to_str"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentRevisionTag.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentTag"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentTag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentTag.from_dict"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentTag.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentTag.from_json"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentTag.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentTag.model_config"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentTag.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentTag.to_dict"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentTag.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentTag.to_json"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentTag.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironmentTag.to_str"><code class="docutils literal notranslate"><span class="pre">CreateEnvironmentTag.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Environment"><code class="docutils literal notranslate"><span class="pre">Environment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Environment.from_dict"><code class="docutils literal notranslate"><span class="pre">Environment.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Environment.from_json"><code class="docutils literal notranslate"><span class="pre">Environment.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Environment.model_config"><code class="docutils literal notranslate"><span class="pre">Environment.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Environment.to_dict"><code class="docutils literal notranslate"><span class="pre">Environment.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Environment.to_json"><code class="docutils literal notranslate"><span class="pre">Environment.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Environment.to_str"><code class="docutils literal notranslate"><span class="pre">Environment.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinition"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinition</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinition.from_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinition.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinition.from_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinition.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinition.model_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinition.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinition.to_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinition.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinition.to_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinition.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinition.to_str"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinition.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinitionValues"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinitionValues</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinitionValues.from_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinitionValues.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinitionValues.from_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinitionValues.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinitionValues.model_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinitionValues.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinitionValues.to_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinitionValues.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinitionValues.to_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinitionValues.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDefinitionValues.to_str"><code class="docutils literal notranslate"><span class="pre">EnvironmentDefinitionValues.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostic"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostic</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostic.from_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostic.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostic.from_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostic.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostic.model_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostic.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostic.to_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostic.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostic.to_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostic.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostic.to_str"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostic.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostics"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostics</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostics.from_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostics.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostics.from_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostics.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostics.model_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostics.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostics.to_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostics.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostics.to_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostics.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentDiagnostics.to_str"><code class="docutils literal notranslate"><span class="pre">EnvironmentDiagnostics.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevision"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevision</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevision.from_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevision.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevision.from_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevision.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevision.model_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevision.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevision.to_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevision.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevision.to_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevision.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevision.to_str"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevision.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTag"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTag.from_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTag.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTag.from_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTag.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTag.model_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTag.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTag.to_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTag.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTag.to_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTag.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTag.to_str"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTag.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTags"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTags.from_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTags.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTags.from_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTags.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTags.model_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTags.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTags.to_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTags.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTags.to_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTags.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTags.to_str"><code class="docutils literal notranslate"><span class="pre">EnvironmentRevisionTags.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentTag"><code class="docutils literal notranslate"><span class="pre">EnvironmentTag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentTag.from_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentTag.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentTag.from_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentTag.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentTag.model_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentTag.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentTag.to_dict"><code class="docutils literal notranslate"><span class="pre">EnvironmentTag.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentTag.to_json"><code class="docutils literal notranslate"><span class="pre">EnvironmentTag.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentTag.to_str"><code class="docutils literal notranslate"><span class="pre">EnvironmentTag.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Error.from_dict"><code class="docutils literal notranslate"><span class="pre">Error.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Error.from_json"><code class="docutils literal notranslate"><span class="pre">Error.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Error.model_config"><code class="docutils literal notranslate"><span class="pre">Error.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Error.to_dict"><code class="docutils literal notranslate"><span class="pre">Error.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Error.to_json"><code class="docutils literal notranslate"><span class="pre">Error.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Error.to_str"><code class="docutils literal notranslate"><span class="pre">Error.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi"><code class="docutils literal notranslate"><span class="pre">EscApi</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.check_environment_yaml"><code class="docutils literal notranslate"><span class="pre">EscApi.check_environment_yaml()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.check_environment_yaml_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.check_environment_yaml_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.check_environment_yaml_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.check_environment_yaml_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.clone_environment"><code class="docutils literal notranslate"><span class="pre">EscApi.clone_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.clone_environment_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.clone_environment_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.clone_environment_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.clone_environment_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment"><code class="docutils literal notranslate"><span class="pre">EscApi.create_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_revision_tag"><code class="docutils literal notranslate"><span class="pre">EscApi.create_environment_revision_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_revision_tag_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.create_environment_revision_tag_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_revision_tag_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.create_environment_revision_tag_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_tag"><code class="docutils literal notranslate"><span class="pre">EscApi.create_environment_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_tag_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.create_environment_tag_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_tag_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.create_environment_tag_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.create_environment_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.create_environment_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.decrypt_environment"><code class="docutils literal notranslate"><span class="pre">EscApi.decrypt_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.decrypt_environment_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.decrypt_environment_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.decrypt_environment_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.decrypt_environment_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment"><code class="docutils literal notranslate"><span class="pre">EscApi.delete_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_revision_tag"><code class="docutils literal notranslate"><span class="pre">EscApi.delete_environment_revision_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_revision_tag_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.delete_environment_revision_tag_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_revision_tag_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.delete_environment_revision_tag_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_tag"><code class="docutils literal notranslate"><span class="pre">EscApi.delete_environment_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_tag_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.delete_environment_tag_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_tag_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.delete_environment_tag_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.delete_environment_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.delete_environment_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_at_version"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_at_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_at_version_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_at_version_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_at_version_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_at_version_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_e_tag"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_e_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_e_tag_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_e_tag_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_e_tag_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_e_tag_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_revision_tag"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_revision_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_revision_tag_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_revision_tag_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_revision_tag_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_revision_tag_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_tag"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_tag_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_tag_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_tag_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_tag_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.get_environment_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.get_environment_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environment_revision_tags"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environment_revision_tags()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environment_revision_tags_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environment_revision_tags_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environment_revision_tags_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environment_revision_tags_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environment_revisions"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environment_revisions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environment_revisions_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environment_revisions_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environment_revisions_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environment_revisions_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environment_tags"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environment_tags()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environment_tags_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environment_tags_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environment_tags_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environment_tags_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environments"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environments()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environments_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environments_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environments_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.list_environments_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.open_environment"><code class="docutils literal notranslate"><span class="pre">EscApi.open_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.open_environment_at_version"><code class="docutils literal notranslate"><span class="pre">EscApi.open_environment_at_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.open_environment_at_version_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.open_environment_at_version_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.open_environment_at_version_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.open_environment_at_version_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.open_environment_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.open_environment_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.open_environment_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.open_environment_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.read_open_environment"><code class="docutils literal notranslate"><span class="pre">EscApi.read_open_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.read_open_environment_property"><code class="docutils literal notranslate"><span class="pre">EscApi.read_open_environment_property()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.read_open_environment_property_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.read_open_environment_property_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.read_open_environment_property_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.read_open_environment_property_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.read_open_environment_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.read_open_environment_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.read_open_environment_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.read_open_environment_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.update_environment_revision_tag"><code class="docutils literal notranslate"><span class="pre">EscApi.update_environment_revision_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.update_environment_revision_tag_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.update_environment_revision_tag_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.update_environment_revision_tag_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.update_environment_revision_tag_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.update_environment_tag"><code class="docutils literal notranslate"><span class="pre">EscApi.update_environment_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.update_environment_tag_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.update_environment_tag_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.update_environment_tag_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.update_environment_tag_without_preload_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.update_environment_yaml"><code class="docutils literal notranslate"><span class="pre">EscApi.update_environment_yaml()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.update_environment_yaml_with_http_info"><code class="docutils literal notranslate"><span class="pre">EscApi.update_environment_yaml_with_http_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.update_environment_yaml_without_preload_content"><code class="docutils literal notranslate"><span class="pre">EscApi.update_environment_yaml_without_preload_content()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient"><code class="docutils literal notranslate"><span class="pre">EscClient</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.check_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.check_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.check_environment_yaml"><code class="docutils literal notranslate"><span class="pre">EscClient.check_environment_yaml()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.clone_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.clone_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.create_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.create_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.create_environment_revision_tag"><code class="docutils literal notranslate"><span class="pre">EscClient.create_environment_revision_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.create_environment_tag"><code class="docutils literal notranslate"><span class="pre">EscClient.create_environment_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.decrypt_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.decrypt_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.delete_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.delete_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.delete_environment_revision_tag"><code class="docutils literal notranslate"><span class="pre">EscClient.delete_environment_revision_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.delete_environment_tag"><code class="docutils literal notranslate"><span class="pre">EscClient.delete_environment_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.get_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.get_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.get_environment_at_version"><code class="docutils literal notranslate"><span class="pre">EscClient.get_environment_at_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.get_environment_revision_tag"><code class="docutils literal notranslate"><span class="pre">EscClient.get_environment_revision_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.get_environment_tag"><code class="docutils literal notranslate"><span class="pre">EscClient.get_environment_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.list_environment_revision_tags"><code class="docutils literal notranslate"><span class="pre">EscClient.list_environment_revision_tags()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.list_environment_revisions"><code class="docutils literal notranslate"><span class="pre">EscClient.list_environment_revisions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.list_environment_tags"><code class="docutils literal notranslate"><span class="pre">EscClient.list_environment_tags()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.list_environments"><code class="docutils literal notranslate"><span class="pre">EscClient.list_environments()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.open_and_read_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.open_and_read_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.open_and_read_environment_at_version"><code class="docutils literal notranslate"><span class="pre">EscClient.open_and_read_environment_at_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.open_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.open_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.open_environment_at_version"><code class="docutils literal notranslate"><span class="pre">EscClient.open_environment_at_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.read_open_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.read_open_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.read_open_environment_property"><code class="docutils literal notranslate"><span class="pre">EscClient.read_open_environment_property()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.update_environment"><code class="docutils literal notranslate"><span class="pre">EscClient.update_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.update_environment_revision_tag"><code class="docutils literal notranslate"><span class="pre">EscClient.update_environment_revision_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.update_environment_tag"><code class="docutils literal notranslate"><span class="pre">EscClient.update_environment_tag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.update_environment_yaml"><code class="docutils literal notranslate"><span class="pre">EscClient.update_environment_yaml()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EvaluatedExecutionContext"><code class="docutils literal notranslate"><span class="pre">EvaluatedExecutionContext</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EvaluatedExecutionContext.from_dict"><code class="docutils literal notranslate"><span class="pre">EvaluatedExecutionContext.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EvaluatedExecutionContext.from_json"><code class="docutils literal notranslate"><span class="pre">EvaluatedExecutionContext.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EvaluatedExecutionContext.model_config"><code class="docutils literal notranslate"><span class="pre">EvaluatedExecutionContext.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EvaluatedExecutionContext.to_dict"><code class="docutils literal notranslate"><span class="pre">EvaluatedExecutionContext.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EvaluatedExecutionContext.to_json"><code class="docutils literal notranslate"><span class="pre">EvaluatedExecutionContext.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.EvaluatedExecutionContext.to_str"><code class="docutils literal notranslate"><span class="pre">EvaluatedExecutionContext.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Expr"><code class="docutils literal notranslate"><span class="pre">Expr</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Expr.from_dict"><code class="docutils literal notranslate"><span class="pre">Expr.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Expr.from_json"><code class="docutils literal notranslate"><span class="pre">Expr.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Expr.model_config"><code class="docutils literal notranslate"><span class="pre">Expr.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Expr.to_dict"><code class="docutils literal notranslate"><span class="pre">Expr.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Expr.to_json"><code class="docutils literal notranslate"><span class="pre">Expr.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Expr.to_str"><code class="docutils literal notranslate"><span class="pre">Expr.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ExprBuiltin"><code class="docutils literal notranslate"><span class="pre">ExprBuiltin</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ExprBuiltin.from_dict"><code class="docutils literal notranslate"><span class="pre">ExprBuiltin.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ExprBuiltin.from_json"><code class="docutils literal notranslate"><span class="pre">ExprBuiltin.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ExprBuiltin.model_config"><code class="docutils literal notranslate"><span class="pre">ExprBuiltin.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ExprBuiltin.to_dict"><code class="docutils literal notranslate"><span class="pre">ExprBuiltin.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ExprBuiltin.to_json"><code class="docutils literal notranslate"><span class="pre">ExprBuiltin.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ExprBuiltin.to_str"><code class="docutils literal notranslate"><span class="pre">ExprBuiltin.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Interpolation"><code class="docutils literal notranslate"><span class="pre">Interpolation</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Interpolation.from_dict"><code class="docutils literal notranslate"><span class="pre">Interpolation.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Interpolation.from_json"><code class="docutils literal notranslate"><span class="pre">Interpolation.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Interpolation.model_config"><code class="docutils literal notranslate"><span class="pre">Interpolation.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Interpolation.to_dict"><code class="docutils literal notranslate"><span class="pre">Interpolation.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Interpolation.to_json"><code class="docutils literal notranslate"><span class="pre">Interpolation.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Interpolation.to_str"><code class="docutils literal notranslate"><span class="pre">Interpolation.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ListEnvironmentTags"><code class="docutils literal notranslate"><span class="pre">ListEnvironmentTags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ListEnvironmentTags.from_dict"><code class="docutils literal notranslate"><span class="pre">ListEnvironmentTags.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ListEnvironmentTags.from_json"><code class="docutils literal notranslate"><span class="pre">ListEnvironmentTags.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ListEnvironmentTags.model_config"><code class="docutils literal notranslate"><span class="pre">ListEnvironmentTags.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ListEnvironmentTags.to_dict"><code class="docutils literal notranslate"><span class="pre">ListEnvironmentTags.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ListEnvironmentTags.to_json"><code class="docutils literal notranslate"><span class="pre">ListEnvironmentTags.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.ListEnvironmentTags.to_str"><code class="docutils literal notranslate"><span class="pre">ListEnvironmentTags.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OpenApiException"><code class="docutils literal notranslate"><span class="pre">OpenApiException</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OpenEnvironment"><code class="docutils literal notranslate"><span class="pre">OpenEnvironment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OpenEnvironment.from_dict"><code class="docutils literal notranslate"><span class="pre">OpenEnvironment.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OpenEnvironment.from_json"><code class="docutils literal notranslate"><span class="pre">OpenEnvironment.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OpenEnvironment.model_config"><code class="docutils literal notranslate"><span class="pre">OpenEnvironment.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OpenEnvironment.to_dict"><code class="docutils literal notranslate"><span class="pre">OpenEnvironment.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OpenEnvironment.to_json"><code class="docutils literal notranslate"><span class="pre">OpenEnvironment.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OpenEnvironment.to_str"><code class="docutils literal notranslate"><span class="pre">OpenEnvironment.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironment"><code class="docutils literal notranslate"><span class="pre">OrgEnvironment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironment.from_dict"><code class="docutils literal notranslate"><span class="pre">OrgEnvironment.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironment.from_json"><code class="docutils literal notranslate"><span class="pre">OrgEnvironment.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironment.model_config"><code class="docutils literal notranslate"><span class="pre">OrgEnvironment.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironment.to_dict"><code class="docutils literal notranslate"><span class="pre">OrgEnvironment.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironment.to_json"><code class="docutils literal notranslate"><span class="pre">OrgEnvironment.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironment.to_str"><code class="docutils literal notranslate"><span class="pre">OrgEnvironment.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironments"><code class="docutils literal notranslate"><span class="pre">OrgEnvironments</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironments.from_dict"><code class="docutils literal notranslate"><span class="pre">OrgEnvironments.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironments.from_json"><code class="docutils literal notranslate"><span class="pre">OrgEnvironments.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironments.model_config"><code class="docutils literal notranslate"><span class="pre">OrgEnvironments.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironments.to_dict"><code class="docutils literal notranslate"><span class="pre">OrgEnvironments.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironments.to_json"><code class="docutils literal notranslate"><span class="pre">OrgEnvironments.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.OrgEnvironments.to_str"><code class="docutils literal notranslate"><span class="pre">OrgEnvironments.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Pos"><code class="docutils literal notranslate"><span class="pre">Pos</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Pos.from_dict"><code class="docutils literal notranslate"><span class="pre">Pos.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Pos.from_json"><code class="docutils literal notranslate"><span class="pre">Pos.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Pos.model_config"><code class="docutils literal notranslate"><span class="pre">Pos.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Pos.to_dict"><code class="docutils literal notranslate"><span class="pre">Pos.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Pos.to_json"><code class="docutils literal notranslate"><span class="pre">Pos.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Pos.to_str"><code class="docutils literal notranslate"><span class="pre">Pos.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.PropertyAccessor"><code class="docutils literal notranslate"><span class="pre">PropertyAccessor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.PropertyAccessor.from_dict"><code class="docutils literal notranslate"><span class="pre">PropertyAccessor.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.PropertyAccessor.from_json"><code class="docutils literal notranslate"><span class="pre">PropertyAccessor.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.PropertyAccessor.model_config"><code class="docutils literal notranslate"><span class="pre">PropertyAccessor.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.PropertyAccessor.to_dict"><code class="docutils literal notranslate"><span class="pre">PropertyAccessor.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.PropertyAccessor.to_json"><code class="docutils literal notranslate"><span class="pre">PropertyAccessor.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.PropertyAccessor.to_str"><code class="docutils literal notranslate"><span class="pre">PropertyAccessor.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Range"><code class="docutils literal notranslate"><span class="pre">Range</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Range.from_dict"><code class="docutils literal notranslate"><span class="pre">Range.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Range.from_json"><code class="docutils literal notranslate"><span class="pre">Range.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Range.model_config"><code class="docutils literal notranslate"><span class="pre">Range.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Range.to_dict"><code class="docutils literal notranslate"><span class="pre">Range.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Range.to_json"><code class="docutils literal notranslate"><span class="pre">Range.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Range.to_str"><code class="docutils literal notranslate"><span class="pre">Range.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Reference"><code class="docutils literal notranslate"><span class="pre">Reference</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Reference.from_dict"><code class="docutils literal notranslate"><span class="pre">Reference.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Reference.from_json"><code class="docutils literal notranslate"><span class="pre">Reference.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Reference.model_config"><code class="docutils literal notranslate"><span class="pre">Reference.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Reference.to_dict"><code class="docutils literal notranslate"><span class="pre">Reference.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Reference.to_json"><code class="docutils literal notranslate"><span class="pre">Reference.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Reference.to_str"><code class="docutils literal notranslate"><span class="pre">Reference.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Trace"><code class="docutils literal notranslate"><span class="pre">Trace</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Trace.from_dict"><code class="docutils literal notranslate"><span class="pre">Trace.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Trace.from_json"><code class="docutils literal notranslate"><span class="pre">Trace.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Trace.model_config"><code class="docutils literal notranslate"><span class="pre">Trace.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Trace.to_dict"><code class="docutils literal notranslate"><span class="pre">Trace.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Trace.to_json"><code class="docutils literal notranslate"><span class="pre">Trace.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Trace.to_str"><code class="docutils literal notranslate"><span class="pre">Trace.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentRevisionTag"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentRevisionTag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentRevisionTag.from_dict"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentRevisionTag.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentRevisionTag.from_json"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentRevisionTag.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentRevisionTag.model_config"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentRevisionTag.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentRevisionTag.to_dict"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentRevisionTag.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentRevisionTag.to_json"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentRevisionTag.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentRevisionTag.to_str"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentRevisionTag.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTag"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTag.from_dict"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTag.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTag.from_json"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTag.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTag.model_config"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTag.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTag.to_dict"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTag.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTag.to_json"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTag.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTag.to_str"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTag.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagCurrentTag"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagCurrentTag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagCurrentTag.from_dict"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagCurrentTag.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagCurrentTag.from_json"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagCurrentTag.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagCurrentTag.model_config"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagCurrentTag.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagCurrentTag.to_dict"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagCurrentTag.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagCurrentTag.to_json"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagCurrentTag.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagCurrentTag.to_str"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagCurrentTag.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagNewTag"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagNewTag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagNewTag.from_dict"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagNewTag.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagNewTag.from_json"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagNewTag.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagNewTag.model_config"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagNewTag.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagNewTag.to_dict"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagNewTag.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagNewTag.to_json"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagNewTag.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.UpdateEnvironmentTagNewTag.to_str"><code class="docutils literal notranslate"><span class="pre">UpdateEnvironmentTagNewTag.to_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Value"><code class="docutils literal notranslate"><span class="pre">Value</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Value.from_dict"><code class="docutils literal notranslate"><span class="pre">Value.from_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Value.from_json"><code class="docutils literal notranslate"><span class="pre">Value.from_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Value.model_config"><code class="docutils literal notranslate"><span class="pre">Value.model_config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Value.to_dict"><code class="docutils literal notranslate"><span class="pre">Value.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Value.to_json"><code class="docutils literal notranslate"><span class="pre">Value.to_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_esc_sdk/#pulumi_esc_sdk.Value.to_str"><code class="docutils literal notranslate"><span class="pre">Value.to_str()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

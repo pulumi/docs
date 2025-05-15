@@ -12,6 +12,7 @@ TOOLS_REPOS=(
     "pulumi-kubernetesx"
     "pulumi-policy"
     "pulumi-terraform"
+    "esc-sdk"
 )
 
 update_repo() {

@@ -23,6 +23,29 @@ The current stable version of Pulumi is **{{< latest-version >}}**.
         </tr>
     </thead>
     <tbody>
+        {{< changelog-table-row version="3.169.0" date="2025-05-08" showChecksum="true" >}}
+        {{< changelog-table-row version="3.167.0" date="2025-05-02" showChecksum="true" >}}
+        {{< changelog-table-row version="3.166.0" date="2025-05-02" showChecksum="true" >}}
+        {{< changelog-table-row version="3.165.0" date="2025-04-25" showChecksum="true" >}}
+        {{< changelog-table-row version="3.163.0" date="2025-04-17" showChecksum="true" >}}
+        {{< changelog-table-row version="3.162.0" date="2025-04-09" showChecksum="true" >}}
+        {{< changelog-table-row version="3.161.0" date="2025-04-09" showChecksum="true" >}}
+        {{< changelog-table-row version="3.160.0" date="2025-04-01" showChecksum="true" >}}
+        {{< changelog-table-row version="3.159.0" date="2025-03-27" showChecksum="true" >}}
+        {{< changelog-table-row version="3.158.0" date="2025-03-24" showChecksum="true" >}}
+        {{< changelog-table-row version="3.157.0" date="2025-03-18" showChecksum="true" >}}
+        {{< changelog-table-row version="3.156.0" date="2025-03-13" showChecksum="true" >}}
+        {{< changelog-table-row version="3.155.0" date="2025-03-12" showChecksum="true" >}}
+        {{< changelog-table-row version="3.154.0" date="2025-03-07" showChecksum="true" >}}
+        {{< changelog-table-row version="3.153.1" date="2025-03-01" showChecksum="true" >}}
+        {{< changelog-table-row version="3.153.0" date="2025-02-27" showChecksum="true" >}}
+        {{< changelog-table-row version="3.152.0" date="2025-02-24" showChecksum="true" >}}
+        {{< changelog-table-row version="3.150.0" date="2025-02-11" showChecksum="true" >}}
+        {{< changelog-table-row version="3.149.0" date="2025-02-08" showChecksum="true" >}}
+        {{< changelog-table-row version="3.148.0" date="2025-01-31" showChecksum="true" >}}
+        {{< changelog-table-row version="3.147.0" date="2025-01-21" showChecksum="true" >}}
+        {{< changelog-table-row version="3.146.0" date="2025-01-16" showChecksum="true" >}}
+        {{< changelog-table-row version="3.145.0" date="2025-01-07" showChecksum="true" >}}
         {{< changelog-table-row version="3.144.1" date="2024-12-21" showChecksum="true" >}}
         {{< changelog-table-row version="3.143.0" date="2024-12-12" showChecksum="true" >}}
         {{< changelog-table-row version="3.142.0" date="2024-11-26" showChecksum="true" >}}

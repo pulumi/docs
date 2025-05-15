@@ -23,7 +23,7 @@ The "Deploy with Pulumi" button lets you easily create new Pulumi projects from 
 
 For example, select the `Deploy` button to configure and create a new empty JavaScript project:
 
-[![Deploy](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
+[![Deploy](/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
 
 To create a _Deploy with Pulumi_ button:
 
@@ -65,23 +65,30 @@ After you've verified your project template works as expected, you can add a but
 Here's an example in Markdown:
 
 ```markdown
-[![Deploy](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder)
+[![Deploy](/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder)
 ```
 
 Or, the equivalent HTML:
 
 ```html
 <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder">
-  <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
+  <img src="/images/deploy-with-pulumi/dark.svg" alt="Deploy">
 </a>
 ```
 
 ### Button Image
 
-Pulumi provides both SVG and PNG versions of the button image at the following URLs:
+Pulumi provides both SVG and PNG versions of the button image at the following URLs in both light and dark themes:
 
-- `https://get.pulumi.com/new/button.svg`
-- `https://get.pulumi.com/new/button.png`
+**Dark Theme**
+
+- `https://pulumi.com/images/deploy-with-pulumi/dark.svg`
+- `https://pulumi.com/images/deploy-with-pulumi/dark.png`
+
+**Light Theme**
+
+- `https://pulumi.com/images/deploy-with-pulumi/light.svg`
+- `https://pulumi.com/images/deploy-with-pulumi/light.png`
 
 ## Custom Git Branches
 

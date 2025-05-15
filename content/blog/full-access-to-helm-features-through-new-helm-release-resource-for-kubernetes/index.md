@@ -1,17 +1,18 @@
 ---
-title: Full Access to Helm Features with new Helm Release Resource
+title: Full Access to Helm Features for Kubernetes
 h1: "Full Access to Helm Features with new Helm Release Resource for Kubernetes"
 date: "2021-09-14"
-meta_desc: "The Helm Release resource adds native support for Helm, enabling full access to Helm features for Kubernetes users."
+updated: 2025-03-26
+meta_desc: "Get native Helm 3 support in Pulumi with the new Helm Release resource. Use lifecycle hooks, subcharts, and manage releases directly from your IaC code."
 meta_image: "k8s-helm-release.png"
 authors: ["vivek-lakshmanan"]
 tags: ["Kubernetes", "helm"]
 ---
 
-Kubernetes has been a significant focus of Pulumi since its very beginnings. Pulumi added support for installing [Helm charts](https://helm.sh/) way back in [2018](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/) and it has seen significant adoption by users since. However, Pulumi's current Chart integration lacks support for some increasingly common advanced features in Helm charts, e.g.:
+Kubernetes has been a significant focus of Pulumi since its very beginnings. Pulumi added support for installing [Helm charts](https://helm.sh/) way back in 2018 and it has seen significant adoption by users since. However, Pulumi's current Chart integration lacks support for some increasingly common advanced features in Helm charts, e.g.:
 
 1. Support for [Helm lifecycle hooks](https://helm.sh/docs/topics/charts_hooks/)
-2. Handling sub-charts and [dependencies](https://helm.sh/docs/topics/charts/#chart-dependencies)
+2. Handling sub-charts and [Helm chart dependencies](https://helm.sh/docs/topics/charts/#chart-dependencies)
 
 As Helm and its usage evolved over the years, Pulumi users using the `Chart` resource have often had to get very creative in order to get the desired functionality in their deployments.
 
@@ -384,7 +385,7 @@ class MyStack : Stack
 Users of the existing Helm Chart resource will notice that we retained the hierarchical `values` specification experience and a similar means to configure the repository. The above example also highlights the await and resource lookup experience.
 
 Rollout of the above program is shown in the slightly sped up gif below:
-![helm-release](helm-release.gif)
+![Animated demo showing Helm Release resource installing Redis using Pulumi.](helm-release.gif)
 
 ## Which Helm resource to use and when?
 

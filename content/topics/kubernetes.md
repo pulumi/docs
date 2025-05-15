@@ -227,7 +227,7 @@ superpowers:
 
     - title: Intelligent Cloud Management
       cta: Learn more
-      cta_url: "/docs/pulumi-cloud/insights/"
+      cta_url: "/docs/insights/"
       icon_type: cloud-with-nodes
       icon_color: purple
       description: |

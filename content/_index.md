@@ -5,13 +5,13 @@ meta_desc: Pulumi is an infrastructure management platform to automate through i
 include_organization_schema: true
 
 hero:
-  title: [ "Automate, Secure, and Manage", "Everything You Run in the Cloud" ]
+  title: [ "The Cloud Infrastructure Platform", "Engineers Love and Enterprises Trust" ]
   description: |
     Powered by the #1 open source infrastructure as code tool.
-  cta_text: Get Started for Free
-  cta_link: /docs/get-started/
-  secondary_cta_text: Contact Sales
-  secondary_cta_link: /contact/?form=sales
+  cta_text: Try Pulumi Cloud for Free
+  cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
+  secondary_cta_text: Download Open Source
+  secondary_cta_link: /docs/iac/download-install
 
 pillars:
     items:
@@ -27,6 +27,12 @@ pillars:
           icon_color: salmon
           title: Manage
           description: Gain security, compliance, and cost insights into the entirety of an organization’s cloud assets and automatically remediate issues.
+
+idp:
+  title: The Fastest, Most Secure Way to Deliver Cloud Infrastructure
+  image: /images/product/homepage-idp.png
+  description: |
+    Deliver production-ready cloud infrastructure to developers through flexible self-service – with guardrails, governance, and best practices built in.
 
 code_faster:
   title: Ship faster with <br/> infrastructure as code in any programming language
@@ -116,6 +122,11 @@ customer_logos:
       link: /case-studies/
 
 customer_quotes:
+  clear:
+    text: |
+      “We’ve spent a lot of time building our internal developer platform. We moved from a lower-level Terraform and HCL-based interface to Pulumi, letting us use a custom, higher-level, and much simpler-to-use YAML schema we’ve defined. <b>We've made cloud infrastructure really easy to use for our developers.</b>”
+    author: James Forcier, Staff Software Engineer.
+    logo: clear
   panther:
     text: |
       “Our developers needed a fast, modular, and testable platform for managing cloud infrastructure. <b>Nothing is better than having standard programming languages for building and managing infrastructure</b>”
@@ -168,16 +179,6 @@ get_started:
       link: https://twitter.com/hossambarakat_/status/1357640859018162176
       text: |
         Give Pulumi a shot and you will never look back @PulumiCorp
-    -
-      source: twitter
-      username: "@matticala"
-      avatar: https://pbs.twimg.com/profile_images/1289826906024693766/LOdbjWdW_400x400.jpg
-      link: https://twitter.com/matticala/status/1369038327341531140
-      text: |
-        With @PulumiCorp I said goodbye to #YAML and JSON supersets.
-        I went back to what I love: #code.
-        Code. End to end. Functional, even.
-        #Kubernetes is pleasant again.
     -
       source: twitter
       username: "@ddoomen"

@@ -8,7 +8,7 @@ menu:
     iac:
         name: Jenkins
         parent: iac-using-pulumi-cicd
-        weight: 10
+        weight: 11
     usingpulumi:
         parent: cont_delivery
         weight: 1

@@ -20,7 +20,7 @@ aliases:
 - External Secrets Operator supports multiple different sources, so you can use the same operator to manage secrets and configuration from different sources.
 - Take advantage of the advanced features of the secret provider, such as encryption of data at rest and scenarios like secret rotation.
 
-Since version `0.10.0` External Secrets Operator supports Pulumi ESC as a secret provider.
+Since version `0.10.0` External Secrets Operator supports [Pulumi ESC as a secret provider](https://external-secrets.io/latest/provider/pulumi/).
 
 ## Authentication
 

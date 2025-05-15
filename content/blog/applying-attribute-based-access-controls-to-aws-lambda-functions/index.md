@@ -1,7 +1,8 @@
 ---
-title: "Attribute-Based Access Controls for AWS Lambda Functions"
+title: "Secure AWS Lambda with IAM ABAC Policies"
 date: 2022-07-19
-meta_desc: "Applying Attribute-Based Access Controls to AWS Lambda Functions"
+updated: 2025-03-26
+meta_desc: "Learn how to implement Attribute-Based Access Control (ABAC) for AWS Lambda using Pulumi. Secure deployments with IAM role tags and policy conditions."
 meta_image: meta.png
 authors:
 - paul-stack
@@ -20,8 +21,8 @@ capabilities such as [AWS Lambda URLs](https://www.pulumi.com/blog/lambda-urls-l
 Functions are a platform that teams can use to deliver increasingly sophisticated services without worrying about
 managing underlying compute resources.
 
-Today, AWS announced another advancement for their Lambda Functions platform: [Attribute-Based Access Control](https://aws.amazon.com/blogs/compute/scaling-aws-lambda-permissions-with-attribute-based-access-control-abac/)
-(ABAC). At its core, ABAC support brings more granular permissions that are automatically applied based on IAM role tags,
+Today, AWS announced another advancement for their Lambda Functions platform: [Attribute-Based Access Control
+(ABAC)](https://aws.amazon.com/blogs/compute/scaling-aws-lambda-permissions-with-attribute-based-access-control-abac/). At its core, ABAC support brings more granular permissions that are automatically applied based on IAM role tags,
 Lambda tags, or both. This update builds on well-established Role-Based Access Control (RBAC) principles while making it
 possible to implement granular controls without permissions updates for every new user and resource.
 
@@ -38,7 +39,7 @@ you may wish to restrict access across teams such that Developer Team members ca
 For this example, we’ll define a new role 'abac-test' as well as a team attribute that must have the value of either
 'developers' or 'ops' to enable creating a Lambda function.
 
-![Controlling access to creating an AWS Lambda function via IAM Roles and Attributes](./figure1.png)
+![Diagram showing AWS IAM Role permissions controlled by attributes. An AWS Lambda function tries to create a Lambda Role, which is allowed or denied based on IAM policy conditions tied to role tags. Access is granted to roles tagged as “developers” or “ops,” and denied to “sith_lords.”](./figure1.png)
 
 To get started, let's first install the Pulumi AWS provider:
 

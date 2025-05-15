@@ -1,12 +1,4 @@
-// Host iframe
-// Should not be shown, when loaded it will portal the content to the sidebar target
-#ai-sidebar-host {
-    display: none
-}
-
-// Element that will be the target of the portal
-// If empty it will have a width of 0 and will not be visible.
-#ai-sidebar-target {
+pulumi-copilot {
     // Relative to the viewport so copilot moves w/ the scrolling
     position: fixed;
 
@@ -26,6 +18,6 @@
 // ---
 
 /* FIXME: no section suffix? */
-.section- #ai-sidebar-target {
+.section- pulumi-copilot {
     top: 200px;
 }

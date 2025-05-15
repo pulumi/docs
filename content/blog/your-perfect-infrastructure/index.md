@@ -77,6 +77,8 @@ Many teams fall into a common trap: they try to design systems that anticipate e
 
 In 2008, Netflix faced a choice: build the perfect data center that could handle all their anticipated future needs, or move to the cloud with a simpler architecture that could evolve. They chose the latter, focusing on making their system easy to change rather than trying to make it perfect. Smart move — unlike those my past self made who probably would’ve insisted on building a data center capable of streaming to Mars, just in case Elon asked nicely.
 
+{{< related-posts >}}
+
 ## The Core Principles of Change-Ready Architecture
 
 Through both failures and successes, I’ve identified three principles that define truly adaptable architecture:
@@ -96,3 +98,5 @@ The biggest pushback I hear is, “But what if we need to scale?” or “What a
 That over-engineered system I was so proud of in 2018? Its most significant flaw wasn’t in what it got wrong about the future — it was that it tried too hard to be right about the future in the first place. It’s like bringing a fully packed suitcase to a first date. Today, I know that the best architecture isn’t one that anticipates every need, but one that makes it easy to respond to needs as they emerge.
 
 The next time you’re tempted to design for every possible future scenario, remember: the goal isn’t to build a perfect system, but to build one that’s perfectly easy to change. And if someone tells you they’ve designed the perfect future-proof architecture, they’re either lying, or they’ve discovered time travel — and in that case, they should be sharing lottery numbers, not system designs.
+
+{{< related-posts >}}

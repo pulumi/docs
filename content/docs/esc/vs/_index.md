@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     parent: esc-home
-    weight: 10
+    weight: 11
     identifier: esc-vs
 aliases:
 ---

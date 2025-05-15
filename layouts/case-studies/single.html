@@ -57,7 +57,7 @@
         <div class="container mx-auto max-w-4xl mb-4 description">
             {{ if .Params.customer_logo }}
                 {{ $image_classes := "inline-block md:float-right max-w-xs md:pl-8 pb-2"}}
-                {{ if eq .Params.customer_name "Starburst Data" }}
+                {{ if or (eq .Params.customer_name "Starburst Data") (eq .Params.customer_name "Panther Labs") }}
                     {{ $image_classes = "inline-block md:float-right max-w-xs w-48 pb-2 md:pb-0 " }}
                 {{ end }}
                 {{ $image_title := print (or .Params.customer_name "Customer") " logo" }}

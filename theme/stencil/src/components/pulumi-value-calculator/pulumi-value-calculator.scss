@@ -1,0 +1,291 @@
+@import "../../../../src/scss/colors";
+.value-calculator {
+    margin-right: 36px;
+    margin-left: 36px;
+
+    h3 {
+        text-align: center;
+        color: #000;
+        font-family: "Gilroy";
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    h5 {
+        text-align: center;
+        font-family: "Gilroy";
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .main-content {
+        margin-top: 24px;
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .field {
+        .details {
+            margin: 24px 0 24px 0;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+        }
+
+        .title {
+            color: #131314;
+            font-family: "Gilroy";
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .info-side {
+            width: 40%;
+        }
+
+        .slider-side {
+            width: 60%
+        }
+
+        .input {
+            width: 140px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #bebfc9;
+            height: 48px;
+
+            input {
+                all: unset;
+                width: 80%;
+            }
+        }
+
+        .rainbow-text {
+            font-family: "Gilroy";
+            font-size: 48px;
+            font-weight: 500;
+            background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+        
+            text-shadow: none;
+        }
+    }
+
+    // Remove number incrementer from input
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    .assumptions {
+        border-radius: 4px;
+        border: 1px solid #805ac3;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 24px;
+
+        &.collapsed {
+            &:hover {
+                background: rgba(242, 239, 249, 0.5);
+            }
+        }
+
+        i {
+            color: #805ac3;
+            height: 24px;
+            width: 24px;
+            font-size: 24px;
+        }
+
+        .default {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            .subtitle {
+                font-family: "Inter";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        .field {
+            display: none;
+            flex-direction: column;
+            &.visible {
+                display: flex;
+            }
+
+            .percent {
+                color: lightgray;
+            }
+
+            .details {
+                display: flex;
+                flex-grow: 1;
+                color: #2f3032;
+    
+                .title {
+                    font-family: "Gilroy";
+                    font-size: 24px;
+                    font-weight: 400;
+                    margin: 12px 0 12px 0;
+                }
+    
+                .description {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+
+    .range {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        display: block;
+        margin-top: 32px;
+    }
+    
+    // Custom slider appearance
+    input[type="range"]::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        border-radius: 10px;
+        background: #4776e6; /* fallback for old browsers */
+        background: linear-gradient(
+            90deg,
+            #f7bf2a 0%,
+            #f26e7e 18.23%,
+            #be5188 38.02%,
+            #8a3391 53.65%,
+            #805ac3 74.48%,
+            #7682f4 100%
+        );
+        height: 7.5px;
+    }
+    
+    .ticks {
+        height: 16px;
+        margin-top: 4px;
+        padding-left: 3px;
+        padding-right: 3px;
+        background: linear-gradient(to right, 
+        #aaa,
+        #aaa 0.1%,
+        #fff 0.1%,
+        #fff 19.9%,
+        #aaa 19.9%,
+        #aaa 20.1%,
+        #fff 20.1%,
+        #fff 39.9%,
+        #aaa 39.9%,
+        #aaa 40.1%,
+        #fff 40.1%,
+        #fff 59.9%,
+        #aaa 59.9%,
+        #aaa 60.1%,
+        #fff 60.1%,
+        #fff 79.9%,
+        #aaa 79.9%,
+        #aaa 80.1%,
+        #fff 80.1%,
+        #fff 99.9%,
+        #aaa 99.9%,
+        #aaa 100%);
+    }
+    
+    input[type="range"]:focus {
+        outline: none;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: 2px solid;
+        border-radius: 25%;
+        height: 24px;
+        width: 12px;
+        bottom: 8px;
+        position: relative;
+        background-color: rgba(242, 239, 249, 0.8);
+        cursor: -webkit-grab;
+        -webkit-transition: border 1000ms ease;
+        transition: border 1000ms ease;
+    }
+    
+    .range.purple::-webkit-slider-thumb {
+        border-color: #805ac3;
+    }
+    
+}
+
+@media(max-width: 1280px) {
+    .value-calculator {
+        .field {
+            .info-side {
+                width: 40%;
+            }
+    
+            .slider-side {
+                width: 60%
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .value-calculator {
+        .field {
+            .details {
+                flex-direction: column;
+                margin-top: 24px;
+            }
+            .info-side {
+                width: 100%;
+            }
+    
+            .slider-side {
+                width: 100%;
+            }
+        }
+        .details {
+            flex-direction: column;
+        }
+        .ticks {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 640px) {
+    .value-calculator {
+        .field {
+            .details {
+                flex-direction: column;
+                margin-top: 24px;
+            }
+            .info-side {
+                width: 100%;
+            }
+    
+            .slider-side {
+                width: 100%;
+            }
+        }
+    }
+}

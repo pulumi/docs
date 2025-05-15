@@ -10,7 +10,6 @@ import {
 } from "aws-lambda";
 import * as URLPattern from "url-pattern";
 import { LambdaEdge } from "./lambdaEdge";
-import axios from "axios";
 import { getResources } from "@pulumi/aws/resourcegroupstaggingapi/getResources";
 
 // Edge functions must be defined in us-east-1.
@@ -29,24 +28,6 @@ export function getEdgeRedirectAssociation(): aws.types.input.cloudfront.Distrib
         lambdaArn: edgeRedirectsLambda.getLambdaEdgeArn(),
         eventType: "origin-request",
     };
-}
-
-export async function getAnswersEdgeRedirectAssociation(websiteDomain: string): Promise<aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation> {
-    const response = await axios.get(`https://${websiteDomain}/answers/redirects.json`);
-    if (response.status !== 200) {
-        throw new pulumi.RunError(`Failed to fetch answers redirects: HTTP ${response.status}`);
-    }
-    const redirects = response.data;
-    const edgeRedirectsLambda = new LambdaEdge("redirects-answers", {
-        func: getAnswersRedirectsLambdaCallback(redirects),
-        funcDescription: "Lambda function that conditionally redirects based on a path-matching expression.",
-    }, { provider: usEast1Provider });
-    return {
-        includeBody: false,
-        lambdaArn: edgeRedirectsLambda.getLambdaEdgeArn(),
-        eventType: "origin-request",
-    };
-
 }
 
 export function getAIAnswersRewriteAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
@@ -121,42 +102,6 @@ function getAIAnswersRewritesLambdaCallback(): aws.lambda.Callback<CloudFrontReq
     };
 }
 
-function getAnswersRedirectsLambdaCallback(redirects: Record<string, string>): aws.lambda.Callback<CloudFrontRequestEvent, CloudFrontRequest | CloudFrontResponse> {
-
-    return (event: CloudFrontRequestEvent, context, callback) => {
-        const request = event.Records[0].cf.request;
-        // Check for a redirect that matches the request URL.
-        const redirect = redirects[request.uri];
-
-        // If there isn't one, just return with the original request.
-        if (!redirect) {
-            callback(null, request);
-            return;
-        }
-
-        // Return with a redirect.
-        const modifiedResponse = {
-            status: "301",
-            statusDescription: "Moved Permanently",
-            headers: {
-                "location": [
-                    {
-                        key: "Location",
-                        value: redirect,
-                    },
-                ],
-                "cache-control": [
-                    {
-                        key: "Cache-Control",
-                        value: "max-age=1800", /* half hour in seconds */
-                    },
-                ],
-            },
-        };
-        callback(null, modifiedResponse);
-    };
-}
-
 function getRedirect(uri: string): string | undefined {
     return getRegistryRedirect(uri) || getSDKRedirect(uri) || getResourcesRedirect(uri);
 }
@@ -187,10 +132,6 @@ function getCloudProvidersRedirect(uri: string): string | undefined {
         return uri.replace("docs/reference/clouds", "registry/packages")
             .replace("packet", "equinix-metal")
             .replace("setup", "installation-configuration");
-    }
-
-    if (uri.includes("/registry/packages/azure-native-v2")) {
-        return uri.replace("azure-native-v2", "azure-native")
     }
 
     return undefined;
@@ -281,6 +222,7 @@ function nodeSDKRedirect(uri: string): string | undefined {
         "awsx",
         "kubernetesx",
         "terraform",
+        "esc-sdk",
     ];
 
     if (match && match.provider && !exceptions.includes(match.provider)) {
@@ -300,6 +242,7 @@ function pythonSDKRedirect(uri: string): string | undefined {
         "pulumi",
         "policy",
         "terraform",
+        "esc_sdk",
     ];
 
     if (match && match.provider && !exceptions.includes(match.provider)) {

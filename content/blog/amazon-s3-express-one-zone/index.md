@@ -1,14 +1,15 @@
 ---
-title: "10x Your Storage Performance with Amazon S3 Express One Zone and Infrastructure as Code"
+title: "10x Your Storage Performance with Amazon S3 Express One Zone and Pulumi"
 allow_long_title: True
 authors: ["joe-duffy"]
 tags: ["aws", "s3"]
-meta_desc: "Amazon S3 Express One Zone is a new storage class with up to 10x better performance. See how to use it with infrastructure as code."
+meta_desc: "Amazon S3 Express One Zone is a new storage class with up to 10x better performance. See how to use it with infrastructure as code and Pulumi."
 date: "2023-12-04"
+updated: 2025-03-19
 meta_image: "aws-s3-express-one-zone.png"
 ---
 
-At AWS re:Invent 2023, AWS announced the new [Amazon S3 Express One Zone](https://aws.amazon.com/s3/storage-classes/express-one-zone/) storage class. This new service provides incredible performance by collocating your S3 buckets closer to the workloads that use the data. Compared to the S3 Standard storage class, the Express One Zone storage class is up to 10x faster, handles 100,000s of requests per second, offers single-digit millisecond latency, and can reduce request costs by 50%. This can be extremely beneficial for data-intensive workloads such as AI/ML, media, finance, realtime, and high-performance computing scenarios. This blog post shows how to get started with Amazon S3 Express One Zone using Pulumi infrastructure as code.
+At AWS re:Invent 2023, AWS announced the new [Amazon S3 Express One Zone](https://aws.amazon.com/s3/storage-classes/express-one-zone/) storage class. This new service provides incredible performance by collocating your S3 buckets closer to the workloads that use the data. Compared to the S3 Standard storage class, the Express One Zone storage class is up to 10x faster, handles 100,000s of requests per second, offers single-digit millisecond latency, and can reduce request costs by 50%. This can be extremely beneficial for data-intensive workloads such as AI/ML, media, finance, realtime, and high-performance computing scenarios. This blog post shows how to get started with Amazon S3 Express One Zone using Pulumi [infrastructure as code](/what-is/what-is-infrastructure-as-code/).
 
 <!--more-->
 
@@ -268,7 +269,7 @@ From 3x to more than 5x the performance! With more fine tuning of our `sync` par
 
 In summary, here are the results:
 
-![Amazon S3 Express One Zone performance comparison](s3-express-perf.png)
+![Amazon S3 Express One Zone performance comparison by sync time in seconds](s3-express-perf.png)
 
 
 ## Conclusion

@@ -8,7 +8,7 @@ menu:
     iac:
         name: Continuous delivery
         parent: iac-using-pulumi
-        weight: 5
+        weight: 6
         identifier: iac-using-pulumi-cicd
 aliases:
 - /docs/reference/cd/
@@ -16,7 +16,6 @@ aliases:
 - /docs/guides/continuous-delivery/
 - /docs/using-pulumi/continuous-delivery/
 - /docs/iac/packages-and-automation/continuous-delivery/
-- /docs/iac/packages-and-automation/continuous-delivery
 ---
 
 Pulumi's approach to infrastructure as code is great for continuous delivery, because it uses source code to model
@@ -25,44 +24,48 @@ process that you have today. For example, doing code reviews via Pull Requests, 
 analysis tools, and running unit and integration tests as appropriate. It all "just works" for your cloud
 infrastructure the same way it would for your application code.
 
-Pulumi can easily integrate into any continuous integration/continuous delivery (CI/CD) system. If your CI/CD system isn't listed below or you are testing something new, see [adding support for CI/CD systems](/docs/using-pulumi/continuous-delivery/add-support-for-cicd-systems).
+Pulumi can easily integrate into any continuous integration/continuous delivery (CI/CD) system. If your CI/CD system isn't listed below or you are testing something new, see [adding support for CI/CD systems](/docs/iac/using-pulumi/continuous-delivery/add-support-for-cicd-systems).
 
-> Looking to troubleshoot failures related to running Pulumi in CI/CD? Check out our [CI/CD troubleshooting guide](/docs/using-pulumi/continuous-delivery/troubleshooting-guide).
+> Looking to troubleshoot failures related to running Pulumi in CI/CD? Check out our [CI/CD troubleshooting guide](/docs/iac/using-pulumi/continuous-delivery/troubleshooting-guide).
 
 <div class="supported-cicd-platforms">
-    <a href="/docs/using-pulumi/continuous-delivery/aws-code-services">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/aws-code-services">
         <img src="/logos/tech/ci-cd/aws-codedeploy.svg" alt="AWS Code Services">
         <h4 class="no-anchor">AWS Code Services</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/azure-devops">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/azure-devops">
         <img src="/logos/tech/ci-cd/azure-devops.svg" alt="Azure DevOps">
         <h4 class="no-anchor">Azure DevOps</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/circleci">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/bitbucket">
+        <img src="/logos/tech/ci-cd/bitbucket.svg" alt="Bitbucket">
+        <h4 class="no-anchor">Bitbucket</h4>
+    </a>
+    <a href="/docs/iac/using-pulumi/continuous-delivery/circleci">
         <img src="/logos/tech/ci-cd/circleci.svg" alt="CircleCI">
         <h4 class="no-anchor">CircleCI</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/codefresh">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/codefresh">
         <img src="/logos/tech/ci-cd/codefresh.svg" alt="Codefresh">
         <h4 class="no-anchor">Codefresh</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/github-actions">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/github-actions">
         <img src="/logos/tech/ci-cd/github-actions.svg" alt="GitHub Actions">
         <h4 class="no-anchor">GitHub Actions</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/gitlab-ci">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/gitlab-ci">
         <img src="/logos/tech/ci-cd/gitlab-ci.svg" alt="GitLab CI">
         <h4 class="no-anchor">GitLab CI</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/google-cloud-build">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/google-cloud-build">
         <img src="/logos/tech/ci-cd/google-cloud-build.png" alt="Google Cloud Build">
         <h4 class="no-anchor">Google Cloud Build</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/jenkins">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/jenkins">
         <img src="/logos/tech/ci-cd/jenkins.svg" alt="Jenkins">
         <h4 class="no-anchor">Jenkins</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/octopus-deploy">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/octopus-deploy">
         <img src="/logos/tech/ci-cd/octopus-deploy.svg" alt="Octopus Deploy">
         <h4 class="no-anchor">Octopus Deploy</h4>
     </a>
@@ -70,26 +73,26 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
         <img src="/logos/brand/avatar-on-white.png" alt="Pulumi Deployments">
         <h4 class="no-anchor">Pulumi Deployments</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator">
         <img src="/logos/tech/ci-cd/kubernetes.png" alt="Pulumi Kubernetes Operator">
         <h4 class="no-anchor">Pulumi Kubernetes Operator</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/teamcity">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/teamcity">
         <img src="/logos/tech/ci-cd/teamcity.svg" alt="JetBrains TeamCity">
         <h4 class="no-anchor">JetBrains TeamCity</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/spinnaker">}}">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/spinnaker">}}">
         <img src="/logos/tech/ci-cd/spinnaker.svg" alt="Spinnaker">
         <h4 class="no-anchor">Spinnaker</h4>
     </a>
-    <a href="/docs/using-pulumi/continuous-delivery/travis">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/travis">
         <img src="/logos/tech/ci-cd/travis-ci.svg" alt="TravisCI">
         <h4 class="no-anchor">TravisCI</h4>
     </a>
 </div>
 
 > Pulumi can also bridge results from your CI/CD system with GitHub, surfacing the results of stack updates
-> on GitHub pull requests. See the [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) for more information.
+> on GitHub pull requests. See the [Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/) for more information.
 
 ### Configuration and Secrets
 
@@ -114,5 +117,5 @@ to use one branch-per-[stack](/docs/concepts/stack/). This allows you to control
 using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 If you are using GitHub pull requests to trigger updates, you will likely want to use the
-[Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/). This gives you interactive infrastructure change previews
+[Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/). This gives you interactive infrastructure change previews
 inside of your Pull Request, making it easier to see, review, and comment on any changes before a deployment occurs.

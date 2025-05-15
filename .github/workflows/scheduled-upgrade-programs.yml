@@ -1,3 +1,4 @@
+permissions: write-all # Equivalent to default permissions + id-token: write
 name: "Scheduled Jobs: Upgrade Examples"
 on:
   schedule:
@@ -6,8 +7,12 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   AWS_REGION: "us-west-2"
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: PULUMI_ACCESS_TOKEN=PULUMI_ACCESS_TOKEN
 
 jobs:
   upgrade:
@@ -28,6 +33,9 @@ jobs:
           - 11
 
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -57,7 +65,7 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.126.0"
+          hugo-version: "0.135.0"
           extended: true
 
       - name: Install Pulumi
@@ -66,7 +74,7 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -76,7 +84,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           role-duration-seconds: 14400 # 4 hours
           role-session-name: pulumi-docs-examples@githubActions
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
+          role-to-assume: ${{ steps.esc-secrets.outputs.AWS_CI_ROLE_ARN }}
 
       - name: Upgrade and test example programs
         run: make upgrade-programs test-programs
@@ -90,6 +98,6 @@ jobs:
           title: Upgrade Go module dependencies in example programs
           # labels: "automation/merge"
           commit-message: Upgrade Go module dependencies in example programs
-          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           body: |
             Upgrades Go module dependencies in example programs to their latest versions.

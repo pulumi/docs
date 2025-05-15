@@ -8,8 +8,7 @@ security:
       - ASSET_BUNDLE_ID
       - PULUMI_CONVERT_URL
       - PULUMI_AI_WS_URL
-      - PULUMI_COPILOT_URL
-      - DEV_PULUMI_COPILOT_BASE_PATH
+      - PULUMI_ATLAS_URL
       - GITHUB_TOKEN
       - ALGOLIA_APP_ID
       - ALGOLIA_APP_SEARCH_KEY
@@ -47,12 +46,9 @@ outputs:
   section:
     - HTML
 
-disableKinds:
-  - taxonomy
-
 taxonomies:
-  author: authors
   tag: tags
+  author: authors
   collection: collections
 
 permalinks:
@@ -74,7 +70,7 @@ markup:
       autoHeadingID: true
       autoHeadingIDType: "github"
       attribute:
-        block: false
+        block: true
         title: true
     renderer:
       hardWraps: false

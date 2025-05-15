@@ -9,7 +9,7 @@ menu:
     iac:
         name: Policy as code
         parent: iac-using-pulumi
-        weight: 3
+        weight: 4
         identifier: iac-using-pulumi-policy
 aliases:
 - /docs/guides/crossguard/
@@ -20,7 +20,7 @@ aliases:
 
 CrossGuard is Pulumi's Policy as Code offering. CrossGuard empowers you to set guardrails to enforce compliance for resources so developers within an organization can provision their own infrastructure while sticking to best practices and security compliance. Using Policy as Code, you can write flexible business or security policies.
 
-Using CrossGuard, organization administrators can apply these rules to particular stacks within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding. Policy remediations also allow you to automatically fix violations.
+Using CrossGuard, organization administrators can apply these rules to particular stacks and accounts within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding. Policy remediations also allow you to automatically fix violations.
 
 Learn more about [Policy as Code core concepts](/docs/using-pulumi/crossguard/core-concepts/).
 
@@ -48,7 +48,7 @@ With Pulumi Compliance Ready Policies, you get a comprehensive set of predefined
 
 ## Pulumi CrossGuard policies for AWS (AWSGuard)
 
-In addition to being able to implement your own CrossGuard policies, or use the Compliance Ready policies, we've also created a set of policies that codifies best practices for AWS that you can adopt and use in a Policy Pack. AWSGuard is a configurable library that you can use to enforce best practices for your own Pulumi stacks or organization. [Learn more and get started with AWSGuard](/docs/using-pulumi/crossguard/awsguard/).
+In addition to being able to implement your own CrossGuard policies, or use the Compliance Ready policies, we've also created a set of policies that codifies best practices for AWS that you can adopt and use in a Policy Pack. AWSGuard is a configurable library that you can use to enforce best practices for your own Pulumi resources. [Learn more and get started with AWSGuard](/docs/using-pulumi/crossguard/awsguard/).
 
 ## Configuring Policy Packs
 

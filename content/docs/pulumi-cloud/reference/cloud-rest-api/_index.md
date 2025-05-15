@@ -200,6 +200,96 @@ Status: 200 OK
 
 <!-- ###################################################################### -->
 
+### Get Stack Downstream References
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/downstreamreferences
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/downstreamreferences
+```
+
+#### Default Response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "referencedStacks": [
+    {
+      "organization": "demo",
+      "routingProject": "demo-aws-ts-webserver",
+      "name": "dev-user1",
+      "version": 3
+    }
+  ]
+}
+```
+
+<!-- ###################################################################### -->
+
+### Get Stack Metadata
+
+```
+GET /api/stacks/{organization}/{project}/{stack}/metadata
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description       |
+|----------------|--------|------|-------------------|
+| `organization` | string | path | organization name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/metadata
+```
+
+#### Default Response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "orgName": "demo",
+  "projectName": "demo-aws-ts-webserver",
+  "stackName": "dev-user1",
+  "userPermission": 103,
+  "notificationSettings": {
+    "notifyUpdateFailure": false,
+    "notifyUpdateSuccess": false
+  }
+}
+```
+
+<!-- ###################################################################### -->
+
 ### Get Stack State
 
 ```
@@ -928,7 +1018,48 @@ curl \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/updates?output-type=service
 ```
 
-#### Default response
+#### Default response (output type = cli)
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "updates": [
+    {
+      "kind": "update",
+      "startTime": 1733780162,
+      "message": "",
+      "environment": {},
+      "config": {
+        "aws:region": {
+          "string": "us-east-1",
+          "secret": false,
+          "object": false
+        },
+        "pulumi:template": {
+          "string": "aws-typescript",
+          "secret": false,
+          "object": false
+        }
+      },
+      "result": "succeeded",
+      "endTime": 1733780162,
+      "version": 1,
+      "resourceChanges": {
+        "create": 1,
+        "delete": 0,
+        "same": 0,
+        "update": 0
+      },
+      "resourceCount": 1
+    }
+  ]
+}
+```
+
+#### Example response (output type = service)
 
 ```
 Status: 200 OK
@@ -1815,7 +1946,7 @@ In the response data `githubLogin` is synonymous with `username` and does not ne
 {{% /notes %}}
 
 ```
-GET /api/orgs/{organization}/members?type=backend
+GET /api/orgs/{organization}/members
 ```
 
 #### Parameters
@@ -1823,7 +1954,6 @@ GET /api/orgs/{organization}/members?type=backend
 | Parameter           | Type   | In    | Description                                                                                                  |
 |---------------------|--------|-------|--------------------------------------------------------------------------------------------------------------|
 | `organization`      | string | path  | organization name                                                                                            |
-| `type`              | string | query | must be set to `backend`                                                                                     |
 | `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
@@ -1833,7 +1963,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/orgs/{organization}/members?type=backend
+  https://api.pulumi.com/api/orgs/{organization}/members
 ```
 
 #### Default response
@@ -2173,6 +2303,10 @@ Status: 200 OK
 For GitHub-backed organizations the `teamType` path parameter must be `github`. For all other organization types the `teamType` path parameter must be `pulumi`.
 {{% /notes %}}
 
+    {{% notes type="warning" %}}
+ **Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your group name is longer than this limit, you'll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
+     {{% /notes %}}
+
 ```
 POST /api/orgs/{org}/teams/{teamType}
 ```
@@ -2218,6 +2352,62 @@ Status: 200 OK
       "avatarUrl": "https://en.gravatar.com/userimage/17756222/cabc55626abae89ebe2d8ae946521e15.png?size=300"
     }
   ]
+}
+```
+
+<!-- ###################################################################### -->
+
+### Get Team
+
+```
+Get /api/orgs/{org}/teams/{teamName}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description                                                         |
+|----------------|--------|------|---------------------------------------------------------------------|
+| `organization` | string | path | organization name                                                   |
+| `teamName`     | string | body | team name                                                           |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request GET \
+  https://api.pulumi.com/api/orgs/{org}/teams/{teamName}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "kind": "github",
+  "name": "example-team",
+  "displayName": "My Example Team",
+  "description": "An example team of exemplary people",
+  "members": [
+    {
+      "name": "First Last",
+      "githubLogin": "user1",
+      "avatarUrl": "https://en.gravatar.com/userimage/17756222/cabc55626abae89ebe2d8ae946521e15.png?size=300",
+      "role": "member"
+    },
+    {
+      "name": "First Last",
+      "githubLogin": "user2",
+      "avatarUrl": "https://en.gravatar.com/userimage/17756222/cabc55626abae89ebe2d8ae946521e15.png?size=300",
+      "role": "admin"
+    }
+  ],
+  "userRole": "admin"
 }
 ```
 
@@ -2962,6 +3152,186 @@ curl \
   }
 ]
 ```
+
+<!-- ###################################################################### -->
+## Insight Accounts
+
+### Create Account
+
+Creates a new account for use with Pulumi Insights.
+
+```
+POST /api/preview/insights/pulumi/accounts/{accountName}
+```
+
+#### Parameters
+
+| Parameter        | Type   | In    | Description                                                                                           |
+|------------------|--------|-------|-------------------------------------------------------------------------------------------------------|
+| `provider`       | string | body  | The cloud provider for the account (e.g., `aws`, `azure`, `oci`)                               |
+| `environment`    | string | body  | The environment reference for the account, such as `insights/pulumi-staging@2`                         |
+| `cron`           | string | body  | The cron expression defining when the account scan is scheduled (e.g., `0 0 * * *`)                    |
+| `providerConfig` | object | body  | The configuration specific to the provider, such as regions for `aws` (e.g., `["us-east-1", "us-east-2"]`) |
+
+#### Example
+
+```bash
+curl \
+  -X POST \
+  -H "Accept: application/vnd.pulumi+6" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -d '{
+    "provider": "aws",
+    "environment": "insights/pulumi-staging@2",
+    "cron": "0 0 * * *",
+    "providerConfig": {
+      "regions": ["us-east-1", "us-east-2", "us-west-2"]
+    }
+  }' \
+  https://api.pulumi.com/api/preview/insights/pulumi/accounts/FizzBuzz%20AWS%20Staging
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "message": "Account FizzBuzz AWS Staging created successfully."
+}
+```
+
+<!-- ###################################################################### -->
+### List Accounts
+
+Lists Insight Accounts available to the authenticated user.
+
+```
+GET /api/preview/insights/pulumi/accounts
+```
+
+#### Parameters
+
+| Parameter             | Type   | In    | Description                                                                                          |
+|-----------------------|--------|-------|------------------------------------------------------------------------------------------------------|
+| `count`               | integer| query | **Optional.** the number of results to return (default is 100)                                        |
+| `continuationToken`   | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/preview/insights/pulumi/accounts?count=1000
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "accounts": [
+    {
+      "name": "FizzBuzz Aws Prod",
+      "provider": "aws",
+      "providerEnvRef": "fizzbuzz/insights-pulumi-prod@4",
+      "scheduledScanEnabled": false,
+      "scanStatus": {
+        "id": "",
+        "orgId": "",
+        "userId": "",
+        "status": "",
+        "startedAt": "2025-01-01T00:00:00Z",
+        "finishedAt": null,
+        "lastUpdatedAt": "2025-01-01T00:00:00Z",
+        "jobTimeout": "2025-01-01T00:00:00Z"
+      }
+    },
+    {
+      "name": "FizzBuzz Aws Staging",
+      "provider": "aws",
+      "providerEnvRef": "fizzbuzz/insights-pulumi-staging@2",
+      "scheduledScanEnabled": true,
+      "scanStatus": {
+        "id": "",
+        "orgId": "",
+        "userId": "",
+        "status": "succeeded",
+        "startedAt": "2025-02-03T12:01:00.000Z",
+        "finishedAt": "2025-02-03T12:05:00.000Z",
+        "lastUpdatedAt": "2025-02-03T12:05:00.000Z",
+        "resourceCount": 250
+      }
+    }
+  ]
+}
+```
+
+<!-- ###################################################################### -->
+### Get Account
+
+Gets Insight Account details for the specific account.
+
+```
+GET /api/preview/insights/pulumi/accounts/{accountName}
+```
+
+#### Parameters
+
+| Parameter    | Type   | In    | Description                                            |
+|--------------|--------|-------|--------------------------------------------------------|
+| `accountName`| string | path  | The name of the account to retrieve details for.       |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+6" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/preview/insights/pulumi/accounts/FizzBuzz%20AWS%20Staging
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "name": "FizzBuzz AWS Staging",
+  "provider": "aws",
+  "providerEnvRef": "insights/pulumi-staging@2",
+  "scheduledScanEnabled": true,
+  "providerConfig": {
+    "regions": [
+      "us-east-1",
+      "us-east-2",
+      "us-west-2"
+    ]
+  },
+  "scanStatus": {
+    "id": "",
+    "orgId": "",
+    "userId": "",
+    "status": "",
+    "startedAt": "0001-01-01T00:00:00Z",
+    "finishedAt": "0001-01-01T00:00:00Z",
+    "lastUpdatedAt": "0001-01-01T00:00:00Z",
+    "jobTimeout": "0001-01-01T00:00:00Z"
+  }
+}
+```
+
 <!-- ###################################################################### -->
 
 ## Policy Groups
@@ -3743,7 +4113,7 @@ Status: 200 OK
 ### List Policy Violations
 
 ```
-GET /api/orgs/{organization}/policyresults/violations
+GET /api/orgs/{organization}/policyresults/violationsv2
 ```
 
 #### Parameters
@@ -3759,7 +4129,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/orgs/{organization}/policyresults/violations
+  https://api.pulumi.com/api/orgs/{organization}/policyresults/violationsv2
 ```
 
 #### Default response
@@ -3770,25 +4140,37 @@ Status: 200 OK
 
 ```
 {
-	"continuationToken": "",
-	"policyViolations": [
-		{
-			"level": "advisory",
-			"message": "Checks that Kubernetes Pods are not being used directly.
-Kubernetes Pods should not be used directly. Instead, you may want to use a Deployment, ReplicaSet or Job.
-",
-			"observedAt": "2024-08-20T20:59:41Z",
-			"policyName": "pods-are-prohibited",
-			"policyPack": "kubernetes",
-			"policyPackTag": "0.0.2",
-			"projectName": "pulumi-k8s-test",
-			"resourceName": "pod-test",
-			"resourceType": "kubernetes:core/v1:Pod",
-			"resourceURN": "urn:pulumi:dev::pulumi-k8s-test::kubernetes:core/v1:Pod::pod-test",
-			"stackName": "dev",
-			"updateVersion": 7
-		}
-	]
+    "policyViolations": [
+        {
+            "projectName": "pulumi-k8s-test",
+            "stackName": "test",
+            "stackVersion": 11,
+            "policyPack": "kubernetes",
+            "policyPackTag": "0.0.2",
+            "policyName": "minimum-replica-count",
+            "resourceURN": "urn:pulumi:test::pulumi-k8s-test::kubernetes:apps/v1:Deployment::nginx",
+            "resourceType": "kubernetes:apps/v1:Deployment",
+            "resourceName": "nginx",
+            "message": "Checks that Kubernetes Deployments and ReplicaSets have at least three replicas.\nKubernetes Deployments should have at least three replicas.\n",
+            "observedAt": "2025-01-16T23:44:13Z",
+            "level": "advisory"
+        },
+        {
+            "projectName": "test",
+            "accountName": "us-west-1",
+            "resourceVersion": 1,
+            "policyPack": "aws-typescript",
+            "policyPackTag": "0.0.1",
+            "policyName": "s3-no-public-read",
+            "resourceURN": "urn:insights:test/us-west-1::aws::aws:s3/bucket:Bucket::my-super-bucket-1234567890",
+            "resourceType": "aws:s3/bucket:Bucket",
+            "resourceName": "my-super-bucket-1234567890",
+            "message": "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.\nTest violation",
+            "observedAt": "2025-01-16T23:08:28Z",
+            "level": "advisory"
+        },
+    ],
+    "continuationToken": ""
 }
 ```
 
@@ -3842,15 +4224,15 @@ Status: 200 OK
 
 ```
 {
-	"environments": [
-		{
-			"organization": "{organization}",
-      "project": "my-first-project",
-			"name": "my-first-environment",
-			"created": "2023-10-10 11:28:01",
-			"modified" :"2023-10-10 12:24:03",
-		}
-	]
+    "environments": [
+        {
+            "organization": "{organization}",
+            "project": "my-first-project",
+            "name": "my-first-environment",
+            "created": "2023-10-10 11:28:01",
+            "modified" :"2023-10-10 12:24:03"
+        }
+    ]
 }
 
 ```
@@ -3861,7 +4243,7 @@ Status: 200 OK
 POST /api/esc/environments/{organization}
 ```
 
-### Body
+#### Body
 
 | Key                 | Type   | In    | Description       |
 |---------------------|--------|-------|-------------------|
@@ -4075,6 +4457,48 @@ Status: 200 OK
     "AWS_ACCESS_KEY_ID": "<redacted>",
     "AWS_SECRET_ACCESS_KEY": "<redacted>",
     "AWS_SESSION_TOKEN": "<redacted>""
+```
+
+### Clone Environment
+
+```
+POST /api/esc/environments/{organization}/{project}/{environment}/clone
+```
+
+#### Body
+
+| Key                       | Type   | In   | Description                            |
+|---------------------------|--------|------|----------------------------------------|
+| `project`                 | string | body | new project name                       |
+| `name`                    | string | body | new environment name                   |
+| `preserveAccess`          | bool   | body | whether to preserve access permissions |
+| `preserveHistory`         | bool   | body | whether to preserve history            |
+| `preserveEnvironmentTags` | bool   | body | whether to preserve environment tags   |
+| `preserveRevisionTags`    | bool   | body | whether to preserve version tags       |
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+| `project`           | string | path  | project name      |
+| `environment`       | string | path  | environment name  |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  https://api.pulumi.com/api/esc/environments/{organization}/{project}/{environment}/clone
+```
+
+#### Default response
+
+```
+Status: 200 OK
 ```
 
 ## Schedules
@@ -5194,7 +5618,7 @@ Status: 200 OK
 ### List issuers
 
 ```
-GET /api/org/{organization}/oidc/issuers
+GET /api/orgs/{organization}/oidc/issuers
 ```
 
 #### Parameters
@@ -5404,9 +5828,21 @@ Status: 200 OK
 
 ### Get Resource Count Summary
 
-```http
-GET /orgs/{organization}/resources/summary?granularity=<granularity>&lookbackDays=<days>
 ```
+GET /orgs/{organization}/resources/summary
+```
+
+#### Parameters
+
+| Parameter       | Type           | In    | Description                                                                                |
+|-----------------|----------------|-------|--------------------------------------------------------------------------------------------|
+| `granularity`   | string         | query | How usage should be aggregated. Accepted values are: `hourly`, `daily`, `weekly`, `monthly`, or `yearly`.                                                                          |
+| `lookbackDays`  | string         | query | **One of `lookbackDays` or `lookbackStart` is required, not both.** Returns usage for a period of `lookbackDays` x 24 hours, starting from now.    |
+| `lookbackStart` | unix timestamp | query | **One of `lookbackDays` or `lookbackStart` is required, not both.**  Returns usage starting from the given timestamp.                          |
+
+{{% notes "info" %}}
+`lookbackDays` returns usage in 24-hour increments starting from the current time. This will truncate usage for the first day. To get complete usage for the first day, use `lookbackStart` to specify the start time.
+{{% /notes %}}
 
 #### Example (hourly)
 
@@ -5730,25 +6166,34 @@ System.out.println(response.toString());
 
 {{< /chooser >}}
 
-`GET /api/orgs/{org}/search/resources`
+`GET /api/orgs/{org}/search/resourcesv2`
 
 Search for resources belonging to the given organization.
 
 ### Parameters
 
-| Name       | In    | Type          | Required | Description                                                                                                                              |
-|------------|-------|---------------|----------|------------------------------------------------------------------------------------------------------------------------------------------|
-| org        | path  | string        | true     | Name of the organization to search.                                                                                                      |
-| query      | query | string        | false    | The search query to execute. If omitted all resources are returned (subject to any pagination limits).                                   |
-| sort       | query | array[string] | false    | The field(s) by which to sort.                                                                                                           |
-| asc        | query | boolean       | false    | Whether to return results in ascending or descending sort order.                                                                         |
-| size       | query | integer       | false    | How many results to return at a time.                                                                                                    |
-| page       | query | number        | false    | The page of results to return.                                                                                                           |
-| cursor     | query | string        | false    | A continuation token for pagination that allows fetching more than 10,000 resources.                                                     |
-| facet      | query | array[string] | false    | If provided, an aggregation will be returned with the top-5 values for the given facet, along with how many resources have those values. |
-| properties | query | boolean       | false    | Whether to include resource properties in results. Not supported for all subscriptions.                                                  |
+| Parameter     | Type   | In    | Description                                                       |
+|---------------|--------|-------|-------------------------------------------------------------------|
+| `organization`| string | query | **Required.** The organization name to search resources for.      |
+| `page`        | integer| query | **Optional.** Page number to retrieve results from. Default is 1.|
+| `size`        | integer| query | **Optional.** Number of results to retrieve per page. Default is 50. |
+| `sort`        | string | query | **Optional.** Sort by a property, such as `modified`. Default is `modified`. |
+| `asc`         | boolean| query | **Optional.** Sort results in ascending order. Default is `false`. |
+| `query`       | string | query | **Optional.** A search query to filter the results. |
+| `properties`  | boolean| query | **Optional.** If `true`, includes the resource properties. Default is `false`. |
+| `source`      | string | query | **Optional.** The source for resource search. |
 
-#### Detailed descriptions
+### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+6" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/fizzbuzz/search/resourcesv2?page=1&size=50&sort=modified&asc=false&query=&properties=true&source=resource-search
+```
+
+### Detailed descriptions
 
 **org**: Name of the organization to search.
 The organization can belong to a team, enterprise, or an individual user.
@@ -5762,7 +6207,7 @@ If omitted, results are sorted according to their search relevance. If there is 
 
 If specified more than once, the first parameter is the primary sort order and subsequent parameters control additional sorting criteria.
 
-Allowed values: created, custom, delete, id, modified, module, name, package, parent.urn, pending, project, protected, provider.urn, stack, type, urn.
+Allowed values: created, custom, delete, dependencies, id, modified, module, name, package, parentUrn, project, protected, providerUrn, stack, type, urn, managed, category
 
 **asc**: Whether to return results in ascending or descending sort order.
 Results are returned in descending order by default.
@@ -5777,58 +6222,111 @@ Paginating with the `page` parameter is not transactional. The order of results 
 Only available on Enterprise plans.
 Paginating with the `cursor` parameter is not transactional. The order of results can be impacted if a stack update completes while paginating.
 
-**facet**: If provided, an aggregation will be returned with the top-5 values for the given facet, along with how many resources have those values.
-
-This parameter can be provided multiple times to return aggregations for up to 5 dimensions.
-
-Allowed values: created, custom, delete, id, modified, module, name, package, parent.urn, pending, project, protected, provider.urn, stack, type, urn.
-
 **properties**: Whether to include resource properties in results. Not supported for all subscriptions.
 
 Attempting to set this on an unsupported subscription results in a 402 status code. [Contact us](/contact?form=sales) to upgrade your subscription.
 
-#### Example responses
+### Example responses
 
 > 200 Response
 
 ```json
 {
-  "total": 10000,
+  "total": 3,
   "resources": [
     {
-      "created": "string",
-      "custom": true,
-      "delete": true,
-      "dependencies": ["string"],
-      "id": "string",
-      "modified": "string",
-      "module": "string",
-      "name": "string",
-      "package": "string",
-      "parent.urn": "string",
-      "pending": "creating",
-      "project": "string",
-      "properties": {},
-      "protected": true,
-      "provider.urn": "string",
-      "stack": "string",
-      "type": "string",
-      "urn": "string"
+      "created": "2025-02-10T19:33:09.6611691Z",
+      "custom": false,
+      "delete": false,
+      "dependencies": [],
+      "id": "i-12345abcde67890fg",
+      "modified": "2025-02-10T19:33:09.6611691Z",
+      "module": "aws",
+      "name": "fizzbuzz-ec2-instance",
+      "package": "aws",
+      "parent.urn": "urn:fizzbuzz::example-stack::pulumi:pulumi:Stack::example-stack-fizzbuzz",
+      "project": "example-stack",
+      "protected": false,
+      "provider.urn": "urn:fizzbuzz::example-stack::pulumi:providers:aws::default_4_16_7::ec2-1234abcde-5f6g-7h8i-9jklmno9876",
+      "stack": "fizzbuzz",
+      "type": "aws:ec2/instance:Instance",
+      "urn": "urn:fizzbuzz::example-stack::aws:ec2/instance:Instance::fizzbuzz-ec2-instance",
+      "properties": {
+        "ami": "ami-0123456789abcdef0",
+        "instanceType": "t2.micro",
+        "keyName": "fizzbuzz-keypair",
+        "securityGroups": ["fizzbuzz-sg"],
+        "tags": {
+          "Name": "fizzbuzz-ec2-instance"
+        }
+      },
+      "metadata": {},
+      "category": "compute",
+      "managed": "Pulumi (discovered)"
+    },
+    {
+      "created": "2025-02-10T19:33:09.406814916Z",
+      "custom": false,
+      "delete": false,
+      "dependencies": [],
+      "id": "db-12345xyz67890pq",
+      "modified": "2025-02-10T19:33:09.406814916Z",
+      "module": "aws",
+      "name": "fizzbuzz-rds-instance",
+      "package": "aws",
+      "parent.urn": "urn:fizzbuzz::example-stack::pulumi:pulumi:Stack::example-stack-fizzbuzz",
+      "project": "example-stack",
+      "protected": false,
+      "provider.urn": "urn:fizzbuzz::example-stack::pulumi:providers:aws::default_4_16_7::rds-xyzabc-1d2e-3f4g-5h6i7jklm8n9",
+      "stack": "fizzbuzz",
+      "type": "aws:rds/instance:Instance",
+      "urn": "urn:fizzbuzz::example-stack::aws:rds/instance:Instance::fizzbuzz-rds-instance",
+      "properties": {
+        "allocatedStorage": 20,
+        "engine": "mysql",
+        "engineVersion": "8.0",
+        "instanceClass": "db.t2.micro",
+        "name": "fizzbuzz-db",
+        "username": "[secret]",
+        "password": "[secret]",
+        "skipFinalSnapshot": true
+      },
+      "metadata": {},
+      "category": "data",
+      "managed": "Pulumi"
+    },
+    {
+      "created": "2025-02-10T19:34:09.406814916Z",
+      "custom": false,
+      "delete": false,
+      "dependencies": [],
+      "id": "s3-12345xyz67890pq",
+      "modified": "2025-02-10T19:34:09.406814916Z",
+      "module": "aws",
+      "name": "fizzbuzz-s3-bucket",
+      "package": "aws",
+      "parent.urn": "urn:fizzbuzz::example-stack::pulumi:pulumi:Stack::example-stack-fizzbuzz",
+      "project": "example-stack",
+      "protected": false,
+      "provider.urn": "urn:fizzbuzz::example-stack::pulumi:providers:aws::default_4_16_7::s3-xyzabc-1d2e-3f4g-5h6i7jklm8n9",
+      "stack": "fizzbuzz",
+      "type": "aws:s3/bucket:Bucket",
+      "urn": "urn:fizzbuzz::example-stack::aws:s3/bucket:Bucket::fizzbuzz-s3-bucket",
+      "properties": {
+        "bucket": "fizzbuzz-s3-bucket",
+        "acl": "private",
+        "tags": {
+          "Name": "fizzbuzz-s3-bucket"
+        }
+      },
+      "metadata": {},
+      "category": "storage",
+      "managed": "None"
     }
   ],
-  "aggregations": {
-    "others": 0,
-    "results": [
-      {
-        "name": "string",
-        "count": 0
-      }
-    ]
-  },
   "pagination": {
-    "previous": "string",
-    "next": "string",
-    "cursor": "string"
+    "next": "https://api.pulumi.com/api/orgs/fizzbuzz/search/resources?page=2\u0026size=50\u0026sort=modified",
+    "cursor": "https://api.pulumi.com/api/orgs/fizzbuzz/search/resources?cursor=H4sIAAAAAAAA_wTAwQ2AMAgF0Ltj9CwJX_gIsxgPpLX7j-B7cFtdoDtU9RzJqC9okhtTfLKkkZTIpbGb1svGe_wBAAD__3DHC1U3AAAA\u0026size=50\u0026sort=modified"
   }
 }
 ```
@@ -6058,6 +6556,315 @@ created,custom,delete,id,modified,module,name,package,parent_urn,pending,project
 | 422    | [Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)   | Unprocessable query. Not safe to retry.                                                         | None                                       |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error. Safe to retry.                                                                    | None                                       |
 
+## Registry
+
+<!-- ###################################################################### -->
+
+Resources in the Registry are identified by a three-part identifier: `{source}/{publisher}/{name}`.
+
+- **Source**: Indicates the package's origin. For example:
+  - `pulumi`: Packages published directly to the public Pulumi registry
+  - `opentofu`: OpenTofu packages bridged to Pulumi
+  - `private`: Organization-specific private registry packages
+- **Publisher**: The organization that owns the package
+  - For private packages: Matches the organization's canonical name
+  - For public packages: Managed by Registry Administrators
+- **Name**: The unique identifier for the package within its source and publisher
+
+### List Registry Packages
+
+```
+GET /api/preview/registry/packages
+```
+
+List all registry packages visible to the user.
+
+#### Parameters
+
+| Parameter           | Type    | In    | Description                                                                                                  |
+|---------------------|---------|-------|--------------------------------------------------------------------------------------------------------------|
+| `name`              | string  | query | **Optional.** Filter results to packages with this specific name                                             |
+| `orgLogin`          | string  | query | **Optional.** Filter results to packages owned by this organization                                          |
+| `limit`             | integer | query | **Optional.** Number of results to retrieve per page. Default is 100                                         |
+| `continuationToken` | string  | query | **Optional.** The continuation token to use for retrieving the next set of results if results were truncated |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/preview/registry/packages
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```json
+{
+  "packages": [
+    {
+      "name": "aws",
+      "publisher": "pulumi",
+      "source": "pulumi",
+      "version": "6.80.0",
+      "title": "AWS",
+      "description": "A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resources.",
+      "repoUrl": "https://github.com/pulumi/pulumi-aws",
+      "category": "cloud",
+      "isFeatured": false,
+      "packageTypes": [
+        "bridged"
+      ],
+      "packageStatus": "ga",
+      "readmeURL": "https://artifacts.pulumi.com/providers/f5de3f9d-cde1-4be0-a6c4-12fb7aa20cb8/docs/index.md",
+      "schemaURL": "https://artifacts.pulumi.com/providers/f5de3f9d-cde1-4be0-a6c4-12fb7aa20cb8/schema.json",
+      "createdAt": "2025-05-07T04:25:34.582Z",
+      "visibility": "public"
+    }
+  ]
+}
+```
+
+---
+
+### Get Registry Package Version
+
+```
+GET /api/preview/registry/packages/{source}/{publisher}/{name}/versions/{version}
+```
+
+Retrieve metadata for a specific package version.
+
+#### Parameters
+
+| Parameter   | Type   | In   | Description                |
+|-------------|--------|------|----------------------------|
+| `source`    | string | path | Registry source            |
+| `publisher` | string | path | Publisher name             |
+| `name`      | string | path | Package name               |
+| `version`   | string | path | Package version number (SemVer) or 'latest'  |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/preview/registry/packages/{source}/{publisher}/{name}/versions/{version}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```json
+{
+  "name": "aws",
+  "publisher": "pulumi",
+  "source": "pulumi",
+  "version": "6.80.0",
+  "title": "AWS",
+  "description": "A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resources.",
+  "repoUrl": "https://github.com/pulumi/pulumi-aws",
+  "category": "cloud",
+  "isFeatured": false,
+  "packageTypes": [
+    "bridged"
+  ],
+  "packageStatus": "ga",
+  "readmeURL": "https://artifacts.pulumi.com/providers/f5de3f9d-cde1-4be0-a6c4-12fb7aa20cb8/docs/index.md",
+  "schemaURL": "https://artifacts.pulumi.com/providers/f5de3f9d-cde1-4be0-a6c4-12fb7aa20cb8/schema.json",
+  "createdAt": "2025-05-07T04:25:34.582Z",
+  "visibility": "public"
+}
+```
+
+---
+
+### Publish Registry Package Version
+
+```
+POST /api/preview/registry/packages/{source}/{publisher}/{name}/versions
+```
+
+Initiates the process of publishing a new version of a package to the registry. This API is the first step in the package publishing workflow; it initiates the package publishing process. After uploading the required package files to the provided URLs, you must call the [Complete Registry Package Publish](#complete-registry-package-publish) API to finalize the publishing process.
+
+#### Parameters
+
+| Parameter   | Type   | In   | Description      |
+|-------------|--------|------|------------------|
+| `source`    | string | path | Registry source  |
+| `publisher` | string | path | Publisher name   |
+| `name`      | string | path | Package name     |
+
+#### Body
+
+| Key                       | Type   | In   | Description                            |
+|---------------------------|--------|------|----------------------------------------|
+| `version`                 | string | body | Version number (SemVer) of the package to publish |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  --request POST \
+  --data '{"version":"6.0.0"}' \
+  https://api.pulumi.com/api/preview/registry/packages/{source}/{publisher}/{name}/versions
+```
+
+#### Default response
+
+```
+Status: 202 Accepted
+```
+
+```json
+{
+  "operationID": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+  "uploadURLs": {
+    "schema": "https://s3.aws.amazon.com/...",
+    "index": "https://s3.aws.amazon.com/...",
+    "installationConfiguration": "https://s3.aws.amazon.com/..."
+  }
+}
+```
+
+---
+
+### Complete Registry Package Publish
+
+```
+POST /api/preview/registry/packages/{source}/{publisher}/{name}/versions/{version}/complete
+```
+
+Complete the package publishing process after uploading all required files.
+
+This endpoint should be called after successfully uploading all files to the URLs provided by the [Publish Registry Package Version](#publish-registry-package-version). It finalizes the publishing process and makes the package version available in the registry.
+
+#### Parameters
+
+| Parameter   | Type   | In   | Description                |
+|-------------|--------|------|----------------------------|
+| `source`    | string | path | Registry source            |
+| `publisher` | string | path | Publisher name             |
+| `name`      | string | path | Package name               |
+| `version`   | string | path | Package version identifier |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"operationID":"f47ac10b-58cc-4372-a567-0e02b2c3d479"}' \
+  https://api.pulumi.com/api/preview/registry/packages/{source}/{publisher}/{name}/versions/{version}/complete
+```
+
+#### Default response
+
+```
+Status: 201 Created
+```
+
+```json
+{}
+```
+
+---
+
+### Delete Registry Package Version
+
+```
+DELETE /api/preview/registry/packages/{source}/{publisher}/{name}/versions/{version}
+```
+
+Delete a specific version of a package from the registry.
+
+#### Parameters
+
+| Parameter   | Type   | In   | Description                |
+|-------------|--------|------|----------------------------|
+| `source`    | string | path | Registry source            |
+| `publisher` | string | path | Publisher name             |
+| `name`      | string | path | Package name               |
+| `version`   | string | path | Package version identifier |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/preview/registry/packages/{source}/{publisher}/{name}/versions/{version}
+```
+
+#### Default response
+
+```
+Status: 204 No Content
+```
+
+---
+
+### Get Registry Template
+
+```
+GET /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}
+```
+
+#### Parameters
+
+| Parameter   | Type   | In   | Description      |
+|-------------|--------|------|------------------|
+| `source`    | string | path | Registry source  |
+| `publisher` | string | path | Publisher name   |
+| `name`      | string | path | Template name    |
+| `version`   | string | path | Template version (SemVer) or 'latest' |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```json
+{
+    "name": "pulumi/templates/static-website-aws-yaml",
+    "publisher": "pulumi",
+    "source": "github",
+    "displayName": "static-website-aws-yaml",
+    "description": "A Pulumi YAML program to deploy a static website on AWS",
+    "language": "yaml",
+    "templateURL": "https://github.com/pulumi/templates/static-website-aws-yaml",
+    "readmeURL": "https://api.pulumi.com/api/orgs/pulumi/template/readme?url=https%3A%2F%2Fgithub.com%2Fpulumi%2Ftemplates%2Fstatic-website-aws-yaml",
+    "repoSlug": "pulumi/templates",
+    "visibility": "public",
+    "updatedAt": "2025-05-12T20:53:05.016991943Z"
+}
+```
+
+---
+
 ## Schemas
 
 ### ResourceSearchResult
@@ -6229,3 +7036,411 @@ If null, the request is invalid or does not permit pagination.
 | continue | string\|null | When non-null, this is a URI to fetch the next page of results. <br><br>Unlike the `next` property, repeatedly following `continue` allows paginating through an unbounded number of results.<br><br>When paginating with `continue`, `next` and `previous` will always be `null`.<br><br>`continue` is only available to Pulumi Enterprise customers. |
 
 [types]: /docs/concepts/resources/names/#types
+
+<!-- ###################################################################### -->
+
+## Services
+
+### Create Service
+
+```
+POST /api/orgs/{organization}/services
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                                |
+|---------------------|--------|-------|------------------------------------------------------------|
+| `organization`      | string | path  | organization name                                          |
+| `ownerType`         | string | body  | type of the owner (e.g. "user", "team")                    |
+| `ownerName`         | string | body  | name of the owner                                          |
+| `name`              | string | body  | name of the service                                        |
+| `description`       | string | body  | **Optional.** description of the service                   |
+| `properties`        | array  | body  | **Optional.** list of properties to set on the service     |
+| `items`             | array  | body  | **Optional.** list of items to add during service creation |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --X POST \
+  --data '{ "ownerType": "team", "ownerName": "team1", "name": "my-cool-service", "description": "My service" }' \
+  https://api.pulumi.com/api/orgs/my-org/services
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "service1",
+  "description": "My service",
+  "itemCountSummary": {},
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
+```
+
+### List Services
+
+```
+GET /api/orgs/{organization}/services
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description       |
+|---------------------|--------|-------|-------------------|
+| `organization`      | string | path  | organization name |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/my-org/services
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+[
+  {
+    "organizationName": "org1",
+    "name": "service1",
+    "description": "My service",
+    "itemCountSummary": {},
+    "members": [
+      {
+        "name": "team1",
+        "avatarURL": "https://example.com/avatar.png",
+        "type": "team"
+      }
+    ],
+    "properties": [],
+    "owner": {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  }
+]
+```
+
+### Head Service
+
+```
+HEAD /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                               |
+|---------------------|--------|-------|-------------------------------------------|
+| `organization`      | string | path  | organization name                         |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team")   |
+| `ownerName`         | string | path  | name of the owner                         |
+| `serviceName`       | string | path  | name of the service                       |
+
+#### Default response
+
+```
+Status: 204 No Content
+```
+
+### Get Service
+
+```
+GET /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                               |
+|---------------------|--------|-------|-------------------------------------------|
+| `organization`      | string | path  | organization name                         |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team")   |
+| `ownerName`         | string | path  | name of the owner                         |
+| `serviceName`       | string | path  | name of the service                       |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "service": {
+    "organizationName": "org1",
+    "name": "service1",
+    "description": "My service",
+    "itemCountSummary": {},
+    "members": [
+      {
+        "name": "team1",
+        "avatarURL": "https://example.com/avatar.png",
+        "type": "team"
+      }
+    ],
+    "properties": [],
+    "owner": {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  },
+  "items": []
+}
+```
+
+### Update Service
+
+```
+PATCH /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                                            |
+|---------------------|--------|-------|--------------------------------------------------------|
+| `organization`      | string | path  | organization name                                      |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team")                |
+| `ownerName`         | string | path  | name of the owner                                      |
+| `serviceName`       | string | path  | name of the service                                    |
+| `name`              | string | body  | **Optional.** new name for the service                 |
+| `description`       | string | body  | **Optional.** new description for the service          |
+| `properties`        | array  | body  | **Optional.** list of properties to set on the service |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{ "name": "new-service-name", "description": "New description" }' \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "new-service-name",
+  "description": "New description",
+  "itemCountSummary": {},
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
+```
+
+### Delete Service
+
+```
+DELETE /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}
+```
+
+#### Parameters
+
+| Parameter           | Type    | In    | Description                                                   |
+|---------------------|---------|-------|---------------------------------------------------------------|
+| `organization`      | string  | path  | organization name                                             |
+| `ownerType`         | string  | path  | type of the owner (e.g. "user", "team")                       |
+| `ownerName`         | string  | path  | name of the owner                                             |
+| `serviceName`       | string  | path  | name of the service                                           |
+| `force`             | boolean | query | **Optional.** ignore protections and force delete the service |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service?force=true
+```
+
+#### Default response
+
+```
+Status: 204 No Content
+```
+
+### Add Service Items
+
+```
+POST /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}/items
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                             |
+|---------------------|--------|-------|-----------------------------------------|
+| `organization`      | string | path  | organization name                       |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team") |
+| `ownerName`         | string | path  | name of the owner                       |
+| `serviceName`       | string | path  | name of the service                     |
+| `items`             | array  | body  | array of items to add to the service    |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{ "items": [
+    {
+      "type": "stack",
+      "name": "my-project/my-stack"
+    },
+    {
+      "type": "environment",
+      "name": "my-project/my-environment
+    }
+  ] }' \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service/items
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "my-service",
+  "description": "My service",
+  "itemCountSummary": {
+    "stack": 1,
+    "environment": 1
+  },
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
+```
+
+### Remove Service Item
+
+```
+DELETE /api/orgs/{organization}/services/{ownerType}/{ownerName}/{serviceName}/items/{itemType}/{itemName}
+```
+
+#### Parameters
+
+| Parameter           | Type   | In    | Description                             |
+|---------------------|--------|-------|-----------------------------------------|
+| `organization`      | string | path  | organization name                       |
+| `ownerType`         | string | path  | type of the owner (e.g. "user", "team") |
+| `ownerName`         | string | path  | name of the owner                       |
+| `serviceName`       | string | path  | name of the service                     |
+| `itemType`          | string | path  | type of the item to remove              |
+| `itemName`          | string | path  | name of the item to remove              |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request DELETE \
+  https://api.pulumi.com/api/orgs/my-org/services/team/my-team/my-service/items/stack/my-project/my-stack
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "organizationName": "org1",
+  "name": "my-service",
+  "description": "My service",
+  "itemCountSummary": {
+    "environment": 1
+  },
+  "members": [
+    {
+      "name": "team1",
+      "avatarURL": "https://example.com/avatar.png",
+      "type": "team"
+    }
+  ],
+  "properties": [],
+  "owner": {
+    "name": "team1",
+    "avatarURL": "https://example.com/avatar.png",
+    "type": "team"
+  }
+}
+```

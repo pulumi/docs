@@ -1,8 +1,8 @@
 ---
 title: Accounts
-title_tag: Create and manage insights accounts | Pulumi Insights
-h1: Create and manage insights accounts
-meta_desc: This page describes how to create insights accounts for scanning provider account resources to use within Pulumi Cloud.
+title_tag: Create and manage Insights accounts | Pulumi Insights
+h1: Create and manage Insights accounts
+meta_desc: This page describes how to create accounts used by Pulumi Insights to scan provider resources for use within Pulumi Cloud.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
@@ -13,7 +13,7 @@ aliases:
   - /docs/pulumi-cloud/insights/import/
 ---
 
-This document outlines the steps required to create and manage a Pulumi insights account used for scanning provider resources.
+This document outlines the steps required to create and manage a Pulumi Insights account used to scan provider resources.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ This document outlines the steps required to create and manage a Pulumi insights
 2. On this page, click the **Create Account** button to access the account creation screen.  
 3. Select your provider.
 {{< notes type="info" >}}  
-  Currently, Pulumi supports AWS, Azure, Oracle Cloud, and Kubernetes as providers for insights accounts.  
+  Currently, Pulumi supports AWS, Azure, Oracle Cloud, and Kubernetes as providers for Insights accounts.  
 {{< /notes >}}
 4. Select or create an ESC environment that has the correct credentials to scan the selected provider.  
 {{< notes type="info" >}}  
@@ -44,12 +44,12 @@ When scheduled scans are enabled, Pulumi automatically scans the account every 2
 8. Click `create`. You should see a success notification and arrive on the details page of the account you have created.
 
 {{< notes type="info" >}}  
-  A scan should be kicked off immediately, if you are creating a new insights account for AWS, see the **child accounts** (one for each region) for scan status.
+  A scan should be kicked off immediately, if you are creating a new Insights account for AWS, see the **child accounts** (one for each region) for scan status.
 {{< /notes >}}
 
 ## Account hierarchies
 
-Account hierarchies allow you to organize and manage insights accounts in a structured way. Currently, child accounts can only be created automatically by Pulumi and is only done so in the case of AWS regions. In the future, this feature will be expanded to support creating custom hierarchies, providing more flexibility for structuring accounts, such as for organizing Kubernetes clusters within an Azure subscription.
+Account hierarchies allow you to organize and manage Insights accounts in a structured way. Currently, child accounts can only be created automatically by Pulumi and is only done so in the case of AWS regions. In the future, this feature will be expanded to support creating custom hierarchies, providing more flexibility for structuring accounts, such as for organizing Kubernetes clusters within an Azure subscription.
 
 ### How child accounts work
 
@@ -61,7 +61,7 @@ For example:
 * Child account (region): `my-aws-account/us-east-1`  
 * Sub-child account (K8s cluster): `my-aws-account/us-east-1/my-cluster`
 
-If you scan or delete the `my-aws-account` insights account, Pulumi applies this action to all child accounts. However, you can still scan or delete `my-aws-account/us-east-1` without affecting other children of `my-aws-account` and future scans of `my-aws-account` will no longer include `us-east-1` unless it is updated.
+If you scan or delete the `my-aws-account` Insights account, Pulumi applies this action to all child accounts. However, you can still scan or delete `my-aws-account/us-east-1` without affecting other children of `my-aws-account` and future scans of `my-aws-account` will no longer include `us-east-1` unless it is updated.
 
 Key benefits of child accounts include:
 
@@ -124,9 +124,9 @@ The AWS scanner for Pulumi Cloud requires access to the AWS account you want to 
   Learn more about the [AWS ReadOnlyAccess policy](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/ReadOnlyAccess.html).  
 {{< /notes >}}
 
-3. **Create an ESC environment**: Configure it to assume the role via OIDC. See [ESC AWS provider documentation](/docs/pulumi-cloud/access-management/oidc/provider/aws/).
+3. **Create an ESC environment**: Configure it to assume the role via OIDC. See [ESC AWS provider documentation](/docs/esc/environments/configuring-oidc/aws/).
 
-4. **Assign the ESC environment**: Link the ESC environment to your insights account during account creation.
+4. **Assign the ESC environment**: Link the ESC environment to your Insights account during account creation.
 
 ### Azure
 
@@ -159,9 +159,9 @@ values:
 ```
 
 {{< notes type="info" >}}
-  For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/pulumi-cloud/access-management/oidc/provider/azure/).
+  For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/esc/environments/configuring-oidc/azure/).
 {{< /notes >}}
-3. Once the ESC environment is set up with the proper credentials, assign it to your insights account during the account creation phase.
+3. Once the ESC environment is set up with the proper credentials, assign it to your Insights account during the account creation phase.
 
 ### OCI
 
@@ -189,7 +189,7 @@ values:
     OCI_PRIVATE_KEY_PATH: "<PRIVATE_KEY_CONTENT>"
 ```
 
-Once the ESC environment is set up with the proper credentials, assign it to your insights account during the account creation phase.
+Once the ESC environment is set up with the proper credentials, assign it to your Insights account during the account creation phase.
 
 ### Kubernetes (K8s)
 

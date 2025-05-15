@@ -26,7 +26,7 @@ If desired, in addition to the SCIM-managed teams, one can also configure and ma
 
 To set up synchronization between Pulumi and your SAML 2.0 identity provider, refer to one of our example guides:
 
-- [Azure Active Directory](/docs/pulumi-cloud/access-management/scim/azuread/)
+- [Microsoft Entra ID (formerly Azure Active Directory)](/docs/pulumi-cloud/access-management/scim/entra/)
 - [Okta](/docs/pulumi-cloud/access-management/scim/okta/)
 - [OneLogin](/docs/pulumi-cloud/access-management/scim/onelogin/)
 - [FAQ](/docs/pulumi-cloud/access-management/scim/faq/)

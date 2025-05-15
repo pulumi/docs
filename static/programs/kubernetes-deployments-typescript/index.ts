@@ -34,10 +34,10 @@ export const _ = nginxDeployment.metadata.name;
 
 let config = new pulumi.Config();
 
-const namespace = config.require("namespace");
-const nginxImage = config.require("nginxImage");
-const replicas = config.requireNumber("replicas");
-const numberOfDeployments = config.requireNumber("numberOfDeployments");
+const namespace = config.get("namespace") || "namespace";
+const nginxImage = config.get("nginxImage") || "nginx:latest";
+const replicas = config.getNumber("replicas") || 1;
+const numberOfDeployments = config.getNumber("numberOfDeployments") || 1;
 
 for (let i = 0; i < numberOfDeployments; i++) {
     new k8s.apps.v1.Deployment(`nginxDeployment-${i}`, {

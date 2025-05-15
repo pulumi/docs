@@ -108,6 +108,72 @@
               }
         </script>
     {{ end }}
+    
+    <!-- BlogPosting schema for blog posts -->
+    {{ if and (eq .Type "blog") .IsPage }}
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "{{ .Title }}",
+                "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+                {{ if .Lastmod }}
+                "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+                {{ else }}
+                "dateModified": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+                {{ end }}
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "{{ .Permalink }}"
+                },
+                "description": "{{ with .Params.meta_desc }}{{ . }}{{ else }}{{ .Summary }}{{ end }}",
+                {{ if .Params.meta_image }}
+                    {{ if in "blog templates" .Section }}
+                        "image": "{{ (.Resources.GetMatch .Params.meta_image).Permalink }}",
+                    {{ else }}
+                        "image": "{{ .Params.meta_image | absURL }}",
+                    {{ end }}
+                {{ else }}
+                    "image": "{{ "/logos/brand/og-default.png" | absURL }}",
+                {{ end }}
+                "url": "{{ .Permalink }}",
+                "wordCount": "{{ .WordCount }}",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Pulumi",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "{{ "/logos/logo.svg" | absURL }}"
+                    }
+                },
+                {{ if .Params.authors }}
+                    "author": [
+                        {{ $authorLen := len .Params.authors }}
+                        {{ range $index, $authorID := .Params.authors }}
+                            {{ with $authorData := index $.Site.Data.team.team $authorID }}
+                            {
+                                "@type": "Person",
+                                "name": "{{ $authorData.name }}"
+                                {{ if $authorData.title }}, "jobTitle": "{{ $authorData.title }}"{{ end }}
+                                {{ if $authorData.social }}
+                                    {{ if $authorData.social.twitter }}, "sameAs": "https://twitter.com/{{ $authorData.social.twitter }}"{{ end }}
+                                {{ end }}
+                            }{{ if ne (add $index 1) $authorLen }},{{ end }}
+                            {{ end }}
+                        {{ end }}
+                    ],
+                {{ else }}
+                    "author": {
+                        "@type": "Organization",
+                        "name": "Pulumi"
+                    },
+                {{ end }}
+                {{ if .Params.tags }}
+                    "keywords": "{{ delimit .Params.tags ", " }}"
+                {{ end }}
+            }
+        </script>
+    {{ end }}
 
     <!-- Event info for Google events (in-person exhibitions)-->
     {{ if .Params.exhibition_data }}
@@ -291,11 +357,6 @@
     </script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-    {{- if eq hugo.Environment "production" }}
-        <!-- 6sense -->
-        <script async defer id="6senseWebTag" src="https://j.6sc.co/j/a4dca4b3-351c-4764-bda9-03c5caf5fedf.js"></script>
-    {{- end }}
 
     <!--Segment tracking-->
     <script>
@@ -485,6 +546,23 @@
             });
         </script>
     {{ end }}
+
+    {{ if .Params.math }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},  // Block
+                    {left: "$", right: "$", display: false}    // Inline
+                ]
+            });
+        });
+    </script>
+    {{ end }}
+
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}
     {{ if and (eq .Type "blog") (eq .BundleType "leaf") .IsPage }}

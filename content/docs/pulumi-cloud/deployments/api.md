@@ -15,25 +15,7 @@ aliases:
 - /docs/intro/deployments/api/
 ---
 
-
-The Pulumi Deployments REST API provides a fully-managed remote execution interface for your Pulumi programs.
-
-{{% notes "info" %}}
-Pulumi Deployments is now generally available!
-
-We have created new routes for the Pulumi Deployments REST API, which are documented below. The `preview` routes will continue to work for now, but should be considered deprecated and will be removed on October 10th, 2024.
-{{% /notes %}}
-
-## Migrating from the Preview API
-
-For the majority of cases, the new API is a drop-in replacement for the preview API and the only change is that the route itself has changed (i.e. replace with `/api/preview` with `/api/stacks`).
-
-However, there are a few cases where the new API has changed the behavior of the preview API. These changes are as follows:
-
-* The [Create Deployment](#create-deployment) endpoint now defaults to using the stack's deployment settings (i.e. `inheritSettings: true`). To use only the deployment settings present in the request, set `inheritSettings` to `false`.
-* The [List Stack Deployments](#list-stack-deployments) endpoint now returns an object with a `deployments` property instead of a list of deployments.
-* The [List Stack Deployments](#list-stack-deployments) endpoint now returns deployments in descending order (most recent first). To return deployments in ascending order (oldest first), set `asc` to `true`.
-* The Deployment Settings routes have changed. In addition to replacing `api/preview` with `api/stacks`, also replace `deployment/settings` with `deployments/settings` in the URL.
+The Pulumi Deployments REST API allows you to configure Deployments settings for your Pulumi stacks and trigger deployments runs.
 
 ## Authentication
 
@@ -41,7 +23,7 @@ All requests must be authenticated using a token via the `Authorization` HTTP he
 
 The `Authorization` header must be in the form below with the literal string `token`, then a space, then your access token value.
 
-```
+```plain
 Authorization: token {token}
 ```
 
@@ -63,7 +45,11 @@ Several endpoints accept or return deployment settings. Deployment settings are 
 
 The executor context defines information about the executor where the Pulumi operation is executed. If unspecified, the default [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image is used.
 
-* **executorImage** (Optional[string]): Allows overriding the default executor image with a custom image.
+* **executorImage** (Optional[string | object]): Allows overriding the default executor image with a custom image, with optional credentials.
+  * **reference** (string): The reference to the image to use. This may be a public or private image.
+  * **credentials** (Optional[object]): The credentials to use for the image.
+    * **username** (string): The username to use for authentication
+    * **password** (Secret): The password to use for authentication
 
 Image requirements:
 
@@ -77,11 +63,27 @@ Using a custom image may result in slower execution due to time spent pulling th
 
 {{% /notes %}}
 
-#### Example
+#### Example without credentials
 
 ```json
 {
     "executorImage": "pulumi/pulumi-nodejs:latest"
+}
+```
+
+#### Example with credentials
+
+```json
+{
+    "executorImage": {
+        "reference": "myregistry.azurecr.io/myimage:latest",
+        "credentials": {
+            "username": "my-username",
+            "password": {
+              "secret": "my-secret-password"
+            }
+        }
+    }
 }
 ```
 

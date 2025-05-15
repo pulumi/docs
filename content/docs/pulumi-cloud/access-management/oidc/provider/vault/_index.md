@@ -22,7 +22,6 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 ## Prerequisites
 
-* You must be an admin of your Pulumi organization.
 * You must have admin access to Vault.
 * Pulumi Cloud must be able to access Vault.
 

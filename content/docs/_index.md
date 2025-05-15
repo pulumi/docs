@@ -35,6 +35,20 @@ sections:
     primary_button_link: /docs/esc/get-started/
     secondary_button_label: Install
     secondary_button_link: /docs/esc/download-install/
+  - heading: Pulumi IDP
+    description: "Secure, compliant, and customizable developer workflows at scale"
+    link: /docs/idp/
+    primary_button_label: Get Started
+    primary_button_link: /docs/idp/get-started/
+    secondary_button_label: Create an account
+    secondary_button_link: https://app.pulumi.com/signup
+  - heading: Pulumi Insights
+    description: "Asset management, compliance remediation and AI insights over the cloud"
+    link: /docs/insights/
+    primary_button_label: Get Started
+    primary_button_link: /docs/insights/get-started/
+    secondary_button_label: Create an account
+    secondary_button_link: https://app.pulumi.com/signup
   - heading: Pulumi Cloud
     description: "Managed service for using Pulumi open source at scale. Use SaaS or self-host"
     link: /docs/pulumi-cloud/

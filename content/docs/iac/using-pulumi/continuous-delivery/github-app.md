@@ -9,7 +9,7 @@ menu:
     iac:
         name: GitHub App
         parent: iac-using-pulumi-cicd
-        weight: 6
+        weight: 7
 aliases:
 - /docs/reference/cd-github/
 - /docs/console/continuous-delivery/github-app/
@@ -38,6 +38,14 @@ This provides even more detail about any resource changes, including the full up
 
 ## Installation and Configuration
 
+{{% notes type="warning" %}}
+While the app can be installed via GitHub, it **must be installed through the Pulumi Cloud** using the steps below to ensure correct setup. Installing through the Pulumi Cloud ensures we have a connection from Pulumi to your GitHub user or organization.
+{{% /notes %}}
+
+{{% notes type="info" %}}
+To install the GitHub App, you must have admin permissions in **both** the target GitHub organization and the Pulumi organization. This is required to establish the correct connection between the two platforms.
+{{% /notes %}}
+
 1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
 2. Ensure you have selected the Pulumi organization you wish to use with the GitHub app by choosing it in the Organization drop-down.
 3. Navigate to Settings > Integrations.
@@ -56,7 +64,13 @@ This provides even more detail about any resource changes, including the full up
 If you installed the GitHub app in the past and the steps above aren't showing it as installed for your desired organization, please try the following:
 
 1. Ensure you're a GitHub admin of the GitHub organization where you're installing the app.
-2. Uninstall the app (via github.com) and re-install it following the steps above.
+2. Uninstall the app (via github.com) and re-install it following the steps above. **Note:** Uninstalling the app will delete any push-to-deploy configurations you may have already set up.
+
+### Limitations
+
+- The GitHub app may only be installed by a user who is both a GitHub admin and a Pulumi admin.
+- By default, there is a 1:1 mapping between GitHub organizations and Pulumi organizations. If you need to map a single GitHub organization to multiple Pulumi organizations, please contact [Pulumi support](https://www.pulumi.com/support/) to request this configuration. This option is only available for Enterprise and Business Critical customers.
+- Multiple GitHub organizations mapping to a single Pulumi organization is not currently supported.
 
 ### Configure Git Push-to-Deploy with Pulumi Deployments
 

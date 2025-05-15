@@ -22,7 +22,6 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 
 ## Prerequisites
 
-* You must be an admin of your Pulumi organization.
 * You must create a [Google Cloud project with the required APIs enabled](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers#configure)
 
 {{< notes type="warning" >}}
@@ -146,7 +145,7 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 2. Open the stack's "Settings" tab.
 3. Choose the "Deploy" panel.
 4. Under the "OpenID Connect" header, toggle "Enable Google Cloud Integration".
-5. Enter the numerical ID of your Google Cloud project in the "Project ID" field.
+5. Enter the numerical ID of your Google Cloud project in the "Project Number" field.
 6. Enter the workload pool ID, identity provider ID, and service account email address in the "Workload Pool ID", "Identity Provider ID", and "Service Account Email Address" fields.
 7. If desired, enter the stack's Google Cloud region in the "Region" field. This is typically unnecessary.
 8. If you would like to constrain the duration of the temporary Google Cloud credentials, enter a duration in the form "XhYmZs" in the "Session Duration" field.

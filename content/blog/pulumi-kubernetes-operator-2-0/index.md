@@ -7,8 +7,10 @@ meta_desc: "Pulumi Kubernetes Operator 2.0: Horizontal Scaling, Multi-Tenancy"
 meta_image: operator.png
 ---
 
+_Update: ["Pulumi Kubernetes Operator 2.0 is Now Generally Available!"](/blog/pko-2-0-ga/)_
+
 A few years ago we released the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-1-0/), a cloud-native way to manage and deploy cloud infrastructure using Pulumi from within your Kubernetes environment. We've heard your feedback about limitations related to scalability and isolation.
-Today, we're excited to announce version [v2.0 (beta 2)](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v2.0.0-beta.2) of the Pulumi Kubernetes Operator.
+Today, we're excited to announce a preview release of version [v2.0](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v2.0.0) of the Pulumi Kubernetes Operator.
 We've put a new, horizontally scalable architecture in place along with a variety of new security features and customization options. Let's dig in!
 
 <!--more-->
@@ -59,7 +61,7 @@ We provide three ways to install the Operator:
 
 1. a Pulumi program (see: `deploy/pulumi-operator-yaml/`)
 2. a Helm chart (see: `deploy/helm/pulumi-operator/`)
-3. a simple manifest file (see: `deploy/yaml/install.yaml`)
+3. a simple manifest file for dev environments (see: `deploy/quickstart/install.yaml`)
 
 Please uninstall any earlier version of the Pulumi Kubernetes Operator, then install the new version using one of the above options.
 Note that this will remove any existing `Stack` objects in your cluster, so be sure to export their manifests or have
@@ -89,9 +91,10 @@ fit the needs of your stack by using the `workspaceTemplate` field. If your Kube
 we recommend increasing the resource requests and limits.
 See ["Pod Quality of Service Classes"](https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/) for more information.
 
-The pod is not discarded at the end of a stack operation, instead it remains in-place unless the stack is deleted.
-We're considering introducing the option to clean up the workspace pod after each operation to enable you to make a trade-off
-decision between performance and efficiency. Please [let us know](https://slack.pulumi.com) if this is something you'd like to see!
+Once a stack reaches its desired state, the workspace
+pod may be retained or deleted based on the `workspaceReclaimPolicy` field. The default behavior
+is to retain the workspace for subsequent updates. This feature enables you to make a trade-off
+decision between performance and efficiency.
 
 ### Stability
 
@@ -186,6 +189,8 @@ See ["Pod and container logs"](https://kubernetes.io/docs/concepts/cluster-admin
 If you need to run an interactive Pulumi command for your stack, e.g. `pulumi import`, exec into the workspace pod. Navigate to the
 `/share/workspace` directory and you should find your program there.
 
+Use the `spec.pulumiLogLevel` field to increase the log verbosity level of the Pulumi CLI.
+
 ## Walkthrough
 
 Here's a quick demonstration of the new system. Let's deploy the [random-yaml](https://github.com/pulumi/examples/tree/master/random-yaml) program from the [pulumi/examples](https://github.com/pulumi/examples) repository.
@@ -213,7 +218,7 @@ spec:
 ### Install a Pulumi Access Token
 
 Create a `Secret` containing a Pulumi access token to be used by the stack to authenticate to Pulumi Cloud.
-Follow [these instructions](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/) to create a
+Follow [these instructions](/docs/pulumi-cloud/access-management/access-tokens/) to create a
 personal, organization, or team access token.
 
 Store the access token into a Kubernetes Secret. Here's an easy way to create a Secret named `pulumi-api-secret`.

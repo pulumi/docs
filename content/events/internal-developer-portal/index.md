@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "Building an Internal Developer Portal"
+title: "Building an Internal Developer Platform"
 meta_desc: Learn how to automate cloud compliance and security guardrails using policy as code to ensure consistent infrastructure governance at scale.
 
 meta_image:
@@ -32,7 +32,7 @@ url_slug: internal-developer-portal
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Building an Internal Developer Portal"
+    title: "Building an Internal Developer Platform"
 
     event_type: workshop # workshop | event
 
@@ -50,12 +50,12 @@ main:
 
     # Description of the webinar.
     description: |
-       In today's cloud-native landscape, organizations struggle to balance developer autonomy with operational control. This workshop explores how to build an Internal Developer Portal (IDP) that transforms infrastructure provisioning from a bottleneck into a competitive advantage. You'll learn how to create a self-service platform that enables developers to safely deploy infrastructure while maintaining governance and cost control.
+       In today's cloud-native landscape, organizations struggle to balance developer autonomy with operational control. This workshop explores how to build an Internal Developer Platform (IDP) that transforms infrastructure provisioning from a bottleneck into a competitive advantage. You'll learn how to create a self-service platform that enables developers to safely deploy infrastructure while maintaining governance and cost control.
        
        Through practical demonstrations and architectural discussions, we'll explore how to implement golden paths, automate approvals, and manage templates that accelerate development while enforcing organizational standards. You'll see how to leverage modern infrastructure-as-code practices to create a developer experience that reduces time-to-market from days to hours, without sacrificing security or compliance.
 
     learn:
-        - Design and implement an Internal Developer Portal that balances developer self-service with organizational control, including template management, access controls, and automated workflows
+        - Design and implement an Internal Developer Platform that balances developer self-service with organizational control, including template management, access controls, and automated workflows
         - Create and manage reusable infrastructure patterns that enforce best practices while enabling developers to safely provision resources on demand
         - Establish effective governance mechanisms including automated approvals, audit trails, and cost management strategies that scale with your organization's growth
 

@@ -25,7 +25,7 @@ examples:
           myLogGroup:
             Type: AWS::Logs::LogGroup
             Properties:
-              KmsKeyId: Fn::Sub: ${KmsKeyId}
+              KmsKeyId: !Sub ${KmsKeyId}
               LogGroupName: myLogGroup
               RetentionInDays: 7
 

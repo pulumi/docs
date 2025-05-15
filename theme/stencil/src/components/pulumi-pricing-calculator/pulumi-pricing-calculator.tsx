@@ -88,7 +88,7 @@ export class PulumiPricingCalculator {
   }
 
   showFormattedTotal() {
-    return `$${this.formatNumber(this.getTotal())} / ${this.duration === "day" ? "day" : "mo"}`
+    return `$${this.formatNumber(this.getTotal())} USD / ${this.duration === "day" ? "day" : "mon"}`
   }
 
   updateResourceCount(event: CustomEvent) {

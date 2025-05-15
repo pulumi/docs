@@ -35,7 +35,7 @@ The default experience is to use the hosted Pulumi Cloud, which takes care of th
 Pulumi supports two classes of state backends for storing your infrastructure state:
 
 - **Pulumi Cloud**: a managed cloud experience using the online or self-hosted Pulumi Cloud application
-- **Self-Managed**: a manually managed object store, including AWS S3, Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or your local filesystem
+- **DIY backend**: "Do it Yourself"- a manually managed object store, including AWS S3, Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or your local filesystem
 
 Pulumi's SDK works great with all backends, although some details differ between them.
 
@@ -53,7 +53,7 @@ The Pulumi Cloud backend requires no additional configuration after [installing 
 
 > To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#pulumi-cloud-architecture). If you are interested in the hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
 
-Pulumi also lets you manage state yourself using a self-managed backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, or on your local filesystem. These self-managed backends are all open source and free to use in any setting. Using a self-managed backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a self-managed backend, use the `pulumi login` command [as documented below](#using-a-self-managed-backend).
+Pulumi also lets you manage state yourself using a DIY backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, or on your local filesystem. These DIY backends are all open source and free to use in any setting. Using a DIY backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-DIY-backend).
 
 ## Logging into and out of State Backends
 
@@ -91,7 +91,7 @@ backend:
 ....
 ```
 
-For details on the various backend URL formats and options, please see the sections on using the Pulumi Cloud and self-managed backends.
+For details on the various backend URL formats and options, please see the sections on using the Pulumi Cloud and DIY backends.
 
 If you forget to log in, you will be automatically prompted to do so before you do anything that requires stacks or state.
 
@@ -152,13 +152,13 @@ It is possible to host your own version of the Pulumi Cloud in your private clou
 
 To learn more about self-host options, see [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) or [Contact Us](/pricing#contact).
 
-## Using a Self-Managed Backend
+## Using a DIY Backend
 
-The filesystem and cloud storage backends allow you to store state locally on your machine or remotely within a cloud object store. For self-managed backends, state management including backup, sharing, and team access synchronization is custom and implemented manually. A basic file-based locking system is enabled by default for all self-managed backends.
+The filesystem and cloud storage backends allow you to store state locally on your machine or remotely within a cloud object store. For DIY backends, state management including backup, sharing, and team access synchronization is custom and implemented manually. A basic file-based locking system is enabled by default for all DIY backends.
 
-> **Note**: The Pulumi Cloud backend was designed to be robust and easy to use. If you decide to use a self-managed backend, you will need to be more aware of how state works (see [Advanced State](#advanced-state)). If you lose the checkpoint for your stack, or it drifts from reality, Pulumi will not behave as you might expect &mdash; for instance, if your state file is empty, Pulumi will think your stack is empty, and will attempt to recreate all of the resources. Some commands may also behave slightly differently between backends. For example, the Pulumi Cloud ensures there are no other updates in flight for a given stack, and in general, reliability, security, and collaboration is automatic with the Pulumi Cloud.
+> **Note**: Both the Pulumi Cloud backend and a DIY backend provide reliable ways to manage your infrastructure state. While a DIY backend give you full control over your state storage and management, most users will find the Pulumi Cloud backend to be the easiest way to get started and scale. With DIY backends, you'll want to familiarize yourself with state management concepts (see [Advanced State](#advanced-state)) and implement your own backup and maintenance procedures. The Pulumi Cloud backend streamlines your experience by automatically handling these operational aspects, providing built-in security, collaboration features, and automated state management out of the box.
 
-To use a self-managed backend, specify a storage endpoint URL as `pulumi login`'s `<backend-url>` argument: `s3://<bucket-path>`, `azblob://<container-path>`, `gs://<bucket-path>`, or `file://<fs-path>`. This will tell Pulumi to store state in AWS S3, Azure Blob Storage, Google Cloud Storage, or the local filesystem, respectively. Checkpoint files are stored in a relative`.pulumi` directory. For example, if you were using the Amazon S3 self-managed backend, your checkpoint files would be stored at `s3://my-pulumi-state-bucket/.pulumi` where `my-pulumi-state-bucket` represents the name of your S3 bucket.
+To use a DIY backend, specify a storage endpoint URL as `pulumi login`'s `<backend-url>` argument: `s3://<bucket-path>`, `azblob://<container-path>`, `gs://<bucket-path>`, or `file://<fs-path>`. This will tell Pulumi to store state in AWS S3, Azure Blob Storage, Google Cloud Storage, or the local filesystem, respectively. Checkpoint files are stored in a relative`.pulumi` directory. For example, if you were using the Amazon S3 DIY backend, your checkpoint files would be stored at `s3://my-pulumi-state-bucket/.pulumi` where `my-pulumi-state-bucket` represents the name of your S3 bucket.
 
 Inside the `.pulumi` folder, we access the following subdirectories:
 
@@ -253,9 +253,9 @@ To configure credentials for this backend, see [Application Default Credentials]
 
 ### Scoping
 
-Versions of Pulumi prior to v3.61.0 placed stacks in a global namespace in self-managed backends. This meant that you couldn't share stack names (e.g. `dev`, `prod`, `staging`) across multiple projects in the same self-managed backend. With Pulumi v3.61.0 and later, stacks created in new or empty self-managed backends are scoped by project by default&mdash;same as the Pulumi Cloud backend.
+Versions of Pulumi prior to v3.61.0 placed stacks in a global namespace in DIY backends. This meant that you couldn't share stack names (e.g. `dev`, `prod`, `staging`) across multiple projects in the same DIY backend. With Pulumi v3.61.0 and later, stacks created in new or empty DIY backends are scoped by project by default&mdash;same as the Pulumi Cloud backend.
 
-Existing self-managed backends will continue to use the global namespace for stacks. You can upgrade an existing self-managed backend to use project-scoped stacks using the `pulumi state upgrade` command. This command will upgrade all stacks in the backend to be scoped by project.
+Existing DIY backends will continue to use the global namespace for stacks. You can upgrade an existing DIY backend to use project-scoped stacks using the `pulumi state upgrade` command. This command will upgrade all stacks in the backend to be scoped by project.
 
 {{% notes type="info"%}}
 `pulumi state upgrade` will make upgraded stacks inaccessible to older versions of Pulumi. This is a one-way operation. Once you have upgraded your backend, you cannot downgrade to the previous version.
@@ -263,11 +263,11 @@ Existing self-managed backends will continue to use the global namespace for sta
 
 ## Migrating Between State Backends
 
-It is possible to start with one backend and then later migrate to another. This is common if you have began your project with Pulumi using a self-managed backend but later decided to adopt the Pulumi Cloud for easier use within your team. This section describes how to perform this operation, however, if you would like our assistance with a migration, [please get in touch](/contact/).
+It is possible to start with one backend and then later migrate to another. This is common if you have began your project with Pulumi using a DIY backend but later decided to adopt the Pulumi Cloud for easier use within your team. This section describes how to perform this operation, however, if you would like our assistance with a migration, [please get in touch](/contact/).
 
 The state for a stack includes information about its backend as well as other unique information such as its encryption provider. As such, moving a stack between backends isn't as simple as merely copying its state file. The [`pulumi stack rename` command](/docs/cli/commands/pulumi_stack_rename) can be used for simple renames within the same backend; however, Pulumi also supports migrating stacks between backends using the `pulumi stack export` and `pulumi stack import` commands, which understand how to perform the necessary translations.
 
-As an example, imagine you'd like to migrate a stack named `my-app-production` from a self-managed backend to the Pulumi Cloud backend. To perform the migration, run the following sequence commands:
+As an example, imagine you'd like to migrate a stack named `my-app-production` from a DIY backend to the Pulumi Cloud backend. To perform the migration, run the following sequence commands:
 
 ```sh
 # switch to the backend/stack we want to export
@@ -294,7 +294,7 @@ After performing these steps, your stack will now be under the management of the
 
 ## Advanced State
 
-Pulumi is designed to abstract state management away from you so that you can operate in terms of declarative infrastructure as code. In certain advanced cases, you may want or need to interact with state more directly, especially when using self-managed backends. In those cases, the following sections may be helpful.
+Pulumi is designed to abstract state management away from you so that you can operate in terms of declarative infrastructure as code. In certain advanced cases, you may want or need to interact with state more directly, especially when using DIY backends. In those cases, the following sections may be helpful.
 
 ### Importing Existing Resources
 
@@ -306,7 +306,7 @@ To learn more about importing existing resources, see [Importing Infrastructure]
 
 Pulumi state is usually stored in a transactional snapshot called a _checkpoint_. Pulumi records checkpoints early and often as it executes so that Pulumi can operate reliably, similar to how database transactions work. The basic functions of state allow Pulumi to diff your program's goal state against the last known update, recover from failure, and destroy resources accurately to clean up afterwards. The checkpoint format augments this with additional failure recovery capabilities in the face of partial failure.
 
-The Pulumi Cloud backends records every checkpoint so that it is possible to recover from exotic failure scenarios. Self-managed backends may have more trouble recovering from these situations as they typically store a singular Pulumi state file.
+The Pulumi Cloud backends records every checkpoint so that it is possible to recover from exotic failure scenarios. DIY backends may have more trouble recovering from these situations as they typically store a singular Pulumi state file.
 
 ### State Encryption
 
