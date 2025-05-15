@@ -1,7 +1,7 @@
 import { Component, Element, Host, h, Listen, Prop, State } from "@stencil/core";
 import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
-import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd } from "../../store/actions/preferences";
+import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd, setDatabase } from "../../store/actions/preferences";
 
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
@@ -12,9 +12,10 @@ export type BackEndKey = "service" | "self-managed";
 
 export type ChooserMode = "local" | "global";
 export type ChooserOptionStyle = "tabbed" | "none";
-export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona" | "backend";
-export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey | BackEndKey;
-export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona | SupportedBackEnd;
+export type DatabaseKey = "mysql" | "postgresql" | "snowflake";
+export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona" | "backend" | "database";
+export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey | BackEndKey | DatabaseKey;
+export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona | SupportedBackEnd | SupportedDatabase;
 
 export interface SupportedLanguage {
     key: LanguageKey;
@@ -49,6 +50,12 @@ interface SupportedPersona {
 
 interface SupportedBackEnd {
     key: BackEndKey;
+    name: string;
+    preview: boolean;
+}
+
+interface SupportedDatabase {
+    key: DatabaseKey;
     name: string;
     preview: boolean;
 }
@@ -123,6 +130,7 @@ export class Chooser {
     setCloud: typeof setCloud;
     setPersona: typeof setPersona;
     setBackEnd: typeof setBackEnd;
+    setDatabase: typeof setDatabase;
 
     componentWillLoad() {
         // Translate the set of options provided into choices.
@@ -158,12 +166,13 @@ export class Chooser {
             setCloud,
             setPersona,
             setBackEnd,
+            setDatabase,
         });
 
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
             const {
-                preferences: { language, k8sLanguage, os, cloud, persona, backend },
+                preferences: { language, k8sLanguage, os, cloud, persona, backend, database },
             } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice
@@ -208,6 +217,8 @@ export class Chooser {
                     return preferredOrDefault(persona);
                 case "backend":
                     return preferredOrDefault(backend);
+                case "database":
+                    return preferredOrDefault(database);
                 default:
                     return {};
             }
@@ -284,6 +295,9 @@ export class Chooser {
             case "backend":
                 options = this.supportedBackEnds;
                 break;
+            case "database":
+                options = this.supportedDatabases;
+                break;
         }
 
         this.currentOptions = options.filter(opt => keys.includes(opt.key));
@@ -322,6 +336,7 @@ export class Chooser {
     private setChoice(type: ChooserType, choice: ChooserOption) {
         const key = choice.key;
         this.selection = key;
+        console.log(`Setting choice: type=${type}, key=${key}`);
 
         if (this.mode !== "local") {
             switch (type) {
@@ -342,6 +357,9 @@ export class Chooser {
                     break;
                 case "backend":
                     this.setBackEnd(key as BackEndKey);
+                    break;
+                case "database":
+                    this.setDatabase(key as DatabaseKey);
                     break;
             }
         }
@@ -526,6 +544,25 @@ export class Chooser {
         {
             key: "docker",
             name: "Docker",
+            preview: false,
+        },
+    ];
+    
+    // The list of supported databases.
+    private supportedDatabases: SupportedDatabase[] = [
+        {
+            key: "mysql",
+            name: "MySQL",
+            preview: false,
+        },
+        {
+            key: "postgresql",
+            name: "PostgreSQL",
+            preview: false,
+        },
+        {
+            key: "snowflake",
+            name: "Snowflake",
             preview: false,
         },
     ];
