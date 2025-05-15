@@ -124,16 +124,6 @@ Change takes time, and there's no one-size-fits-all solution. The most successfu
 
 Focus first on applications where developers are overwhelmed by infrastructure complexities or where operations teams face constant friction. Start with smaller, less-demanding services rather than your most critical systems to build confidence in the platform.
 
-## Case Studies
-
-### Mercedes-Benz
-
-Mercedes-Benz built an Internal Developer Platform that standardized their cloud infrastructure across multiple teams. By implementing a self-service platform with infrastructure as code, they reduced the time to provision new environments from weeks to minutes while ensuring compliance with security standards.
-
-### Spotify
-
-Spotify's Backstage platform is perhaps the most well-known example of an IDP. Initially built for internal use, Backstage has been open-sourced and adopted by many other organizations. It provides a service catalog, standardized tooling, and documentation to streamline the developer experience.
-
 ## Conclusion
 
 Internal Developer Platforms represent a significant evolution in how organizations approach infrastructure and developer experience. By abstracting complexity and providing standardized, self-service capabilities, IDPs enable developers to be more productive while ensuring that organizational standards for security, reliability, and compliance are maintained.
