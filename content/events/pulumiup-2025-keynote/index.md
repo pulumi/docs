@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: PulumiUP 2025 Keynote - New Features & Demos
-meta_desc: Explore Pulumi’s Visual IaC Import, Private Registry, and Pulumi IDP—powerful new features that simplify migration, reuse, and internal platform delivery.
+meta_desc: Explore Pulumi’s Visual Import, Private Registry, and Pulumi IDP—powerful new features that simplify migration, reuse, and internal platform delivery.
 meta_image: /images/pulumiup/2025-keynote-meta.png
 
 # A featured webinar will display first in the list.
@@ -49,7 +49,7 @@ main:
 
     # Description of the webinar.
     description: |
-        Experience Pulumi's evolution with three game-changing additions to their infrastructure as code ecosystem. This keynote showcases Visual IaC Import for seamless migration, Private Registry for organizing cloud components, and Pulumi IDP—a complete internal developer platform.
+        Experience Pulumi's evolution with three game-changing additions to their infrastructure as code ecosystem. This keynote showcases Visual Import for seamless migration, Private Registry for organizing cloud components, and Pulumi IDP—a complete internal developer platform.
         
         Watch demos that illustrate how these tools unite platform teams, security teams, and developers to deliver compliant cloud infrastructure at scale. With 350K+ community members and trusted by companies like NVIDIA and Docker, see why Pulumi is becoming the platform of choice for modern cloud engineering.
 
