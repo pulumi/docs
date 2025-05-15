@@ -201,7 +201,7 @@ This template sets up an example resource policy that prevents Security Groups f
 pulumi policy publish
 ```
 
-### Add policy pack to Account
+### Add policy pack to an Insights Account
 
 With your policy pack published, you’ll need to create a Policy Group that associates your Insights account with a policy pack. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.
 
