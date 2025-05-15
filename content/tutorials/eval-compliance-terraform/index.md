@@ -144,7 +144,7 @@ Now you can view a list of your account resources by navigating to the **Resourc
 
 !["List of account resources in Insights"](/tutorials/eval-compliance-terraform/assets/insights-resources-list.png)
 
-> If you have multiple Insights accounts, you can filter by your account name using the **Project** column filter. You can learn more about querying and filtering your resources by reviewing the [Pulumi Insights: Using Resources Explorer](/docs/insights/get-started/using-resource-explorer/) documentation
+> If you have multiple Insights accounts, you can filter by your account name using the **Project** column filter. You can learn more about querying and filtering your resources by reviewing the [Pulumi Insights: Using Resources Explorer](/docs/insights/get-started/using-resource-explorer/) documentation.
 
 ## Configure compliance policies
 
