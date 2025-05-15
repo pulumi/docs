@@ -20,7 +20,7 @@ social:
     linkedin: "TODO"
 ---
 
-Today, we’re excited to introduce Pulumi Internal Developer Platform (Pulumi IDP), the latest evolution of the Pulumi Cloud Platform, designed to help organizations automate, secure, and manage everything they run in the cloud.
+Today, we’re excited to introduce Pulumi IDP (Internal Developer Platform), the latest evolution of the Pulumi Cloud Platform, designed to help organizations automate, secure, and manage everything they run in the cloud.
 
 <!--more-->
 {{< blog/cta-button "Get Started with Pulumi IDP" "/docs/idp/get-started/" >}}
