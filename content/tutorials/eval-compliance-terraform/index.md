@@ -128,7 +128,7 @@ Now that you have deployed your resources, you will run a Pulumi Insights scan t
 
 {{< video title="Navigating to Pulumi Insights accounts page" src="/tutorials/eval-compliance-terraform/assets/insights-nav-to-accounts.mp4" autoplay="true" loop="true" >}}
 
-Once there, click on the **Actions** dropdown and select the `Scan` radio button, then click **Scan**. You will see a status message that says ""Scan started a few seconds ago" once the scan has started.
+Once there, click on the **Actions** dropdown and select the `Scan` radio button, then click **Scan**. You will see a status message that says "Scan started a few seconds ago" once the scan has started.
 
 {{< video title="Initializing account scan" src="/tutorials/eval-compliance-terraform/assets/insights-start-account-scan.mp4" autoplay="true" loop="true" >}}
 
