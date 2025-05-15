@@ -203,22 +203,18 @@ The above program is a very basic use case. To take it further, check out
 features such as computing subnets dynamically with Pulumi `aws.getAvailabilityZonesOutput` function or passing the
 results of the VPC module to an EKS module.
 
-### Passing through existing configuration
 
-As an example how the new Pulumi Terraform Module can interact with existing Pulumi programs, we've made it possible
-to re-use existing provider configuration across modules using explicit providers.
-For example, with an existing AWS provider, you can access its terraform-specific configuration using the provider's 
-`terraformConfig()` method, and then pass the configured provider to your module.
+### Configuring An Explicit Module Provider
 
+Pulumi Terraform Modules support explicit Provider types.
+In our VPC provider example, you'd configure it with AWS credentials as follows:
 ```typescript
-const awsProvider = new aws.Provider("awsprovider", {
-    region: "us-east-1",
-    // more configuration
-})
 
-// Pass the AWS configuration to your VPC module provider
+// Configure your VPC module provider with an AWS Region, for instance
 const vpcmodProvider = new vpcmod.Provider("vpcprovider", {
-    "aws": awsProvider.terraformConfig().result
+    "aws": { 
+        region: "us-east-1"
+    }
 })
 
 // Use the VPC module provider in your Module
@@ -226,6 +222,35 @@ const vpc = new vpcmod.Module("test-vpc", {...},
     {provider: vpcmodProvider}
 );
 ```
+
+### Passing through existing configuration
+
+Let's say you already have configured an AWS provider in your program, you'd like to use a module that relies on the AWS 
+provider, and you don't want to have to configure all of your AWS settings twice.
+This is why we've introduced a little helper method that allows you to re-use existing provider 
+configuration.
+For example, with an existing AWS provider, you can access its terraform-specific configuration using the provider's 
+`terraformConfig()` method, and then pass the configured provider settings to your explicit module provider.
+
+```typescript
+const awsProvider = new aws.Provider("awsprovider", {
+    region: "us-east-1",
+    // more configuration
+})
+
+// Pass the AWS configuration to your VPC module provider instead of re-entering config settings
+const vpcmodProvider = new vpcmod.Provider("vpcprovider", {
+    "aws": awsProvider.terraformConfig().result
+})
+
+// Use the VPC module provider in your Module as before
+const vpc = new vpcmod.Module("test-vpc", {...},
+    {provider: vpcmodProvider}
+);
+```
+
+This is also a great example of how the Pulumi Terraform Module fits into existing Pulumi programs - you can pass inputs 
+and outputs from one resource into the other.
 
 // TODO show-case converting TF programs with @sandbox annotation
 
