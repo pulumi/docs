@@ -99,12 +99,12 @@ POST https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployme
 
 The final settings for the stack are calculated by merging the settings present in the request with the stack's current settings according to the following rules:
 
-* For object properties:
-    * Start with a copy of the current property value
-    * Remove all properties that are explicitly set to `null` in the patch value
-    * Merge all non-`null` properties from the patch value that exist in the current property value
-    * Add all non-`null` properties from the patch value that do not exist in the current property value
-* For other properties, replace the current value with the patch value
+- For object properties:
+  - Start with a copy of the current property value
+  - Remove all properties that are explicitly set to `null` in the patch value
+  - Merge all non-`null` properties from the patch value that exist in the current property value
+  - Add all non-`null` properties from the patch value that do not exist in the current property value
+- For other properties, replace the current value with the patch value
 
 ### Example
 
