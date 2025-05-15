@@ -35,7 +35,7 @@ The token contains the standard audience, issuer, and subject claims:
 
 ### Pulumi ESC
 
-For details on how Pulumi ESC environments interact with OIDC token claims, see [Configuring OIDC for Pulumi ESC](/docs/esc/access-management/oidc/).
+For details on how Pulumi ESC environments interact with OIDC token claims, see [Configuring OIDC for Pulumi ESC](/docs/esc/environments/configuring-oidc/).
 
 ## Custom claims
 
