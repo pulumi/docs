@@ -12,8 +12,9 @@ tags:
   - features
 ---
 
-We are excited to announce that Pulumi can now execute [Terraform modules
-directly](https://github.com/pulumi/pulumi-terraform-module). This new capability unlocks a great option for users
+We are excited to announce that Pulumi now has support for [Terraform modules](https://github.com/pulumi/pulumi-terraform-module).
+
+This new capability unlocks a great option for users
 contemplating migrating a large Terraform installation to Pulumi: when dealing with a complicated Terraform module, you
 can now bypass translating its sources while still quickly moving its state over to Pulumi and cross-linking its inputs
 and outputs with Pulumi code. Additionally, all Pulumi users can now more easily benefit from the existing awesome
@@ -197,12 +198,35 @@ Duration: 2m26s
 The infrastructure has now provisioned and the corresponding Terraform state is stored securely inside the Pulumi
 state, which can be verified with `pulumi stack export`.
 
-The above program is very simple. To take it further, check out
+The above program is a very basic use case. To take it further, check out
 [examples](https://github.com/pulumi/pulumi-terraform-module/tree/main/examples) for more realistic programs showcasing
 features such as computing subnets dynamically with Pulumi `aws.getAvailabilityZonesOutput` function or passing the
 results of the VPC module to an EKS module.
 
-// TODO show-case cross-configuring the provider with a given AWS region
+### Passing through existing configuration
+
+As an example how the new Pulumi Terraform Module can interact with existing Pulumi programs, we've made it possible
+to re-use existing provider configuration across modules using explicit providers.
+For example, with an existing AWS provider, you can access its terraform-specific configuration using the provider's 
+`terraformConfig()` method, and then pass the configured provider to your module.
+
+```typescript
+const awsProvider = new aws.Provider("awsprovider", {
+    region: "us-east-1",
+    // more configuration
+})
+
+// Pass the AWS configuration to your VPC module provider
+const vpcmodProvider = new vpcmod.Provider("vpcprovider", {
+    "aws": awsProvider.terraformConfig().result
+})
+
+// Use the VPC module provider in your Module
+const vpc = new vpcmod.Module("test-vpc", {...},
+    {provider: vpcmodProvider}
+);
+```
+
 // TODO show-case converting TF programs with @sandbox annotation
 
 ## Supported Features
