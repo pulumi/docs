@@ -2,6 +2,7 @@
 title: "New in Pulumi IaC: Support for skipping a resource"
 date: 2025-05-14
 meta_desc: "Pulumi now supports excluding specific resources from stack operations, giving you more control and efficiency in managing your infrastructure"
+meta_image: meta.png
 authors:
     - tom-harding
 tags:
