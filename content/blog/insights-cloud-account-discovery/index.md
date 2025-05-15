@@ -60,7 +60,7 @@ Enterprise cloud infrastructures are complex environments that are evolved over 
 
 <!--more-->
 
-{{< youtube "hXXRVbURKsQ?rel=0" >}}
+{{< youtube "fa7s5_oYnaM?rel=0" >}}
 
 We are excited to announce the public preview of Insights Account Discovery that makes it easy for you to gain visibility of your entire infrastructure regardless of how it is managed. Insights provides the tools to find, group and drill into your resources as needed to make sense of all aspects of your cloud infrastructure. In addition Copilot AI gives you the ability to get answers about your infrastructure that can be challenging to get in other ways, dramatically simplifying the work needed to move your infrastructure forward.
 

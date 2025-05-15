@@ -30,14 +30,17 @@
     {{ end }}
 {{ end }}
 
-
 <div class="mt-6">
     {{ if ne $step $first }}
         {{ $prev := index $pages (sub $step 1) }}
-        <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; Previous Step</a>
+        <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; Previous step</a>
     {{ end }}
     {{ if ne $step $last }}
         {{ $next := index $pages (add $step 1) }}
-        <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">{{ $next.LinkTitle }} &rarr;</a>
+        {{ $linkTitle := printf "Next: %s" $next.LinkTitle }}
+        {{ if isset $next.Params "stepper_link" }}
+            {{ $linkTitle = $next.Params.stepper_link }}
+        {{ end }}
+        <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">{{ $linkTitle }} &rarr;</a>
     {{ end }}
 </div>

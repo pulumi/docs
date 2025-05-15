@@ -1,6 +1,4 @@
-{{ $copilotApiUrl := getenv "PULUMI_COPILOT_URL" }}
 {{ $atlasUrl := getenv "PULUMI_ATLAS_URL" }}
-{{ if or $copilotApiUrl $atlasUrl }}
-{{ $copilotBasePath := or (getenv "DEV_PULUMI_COPILOT_BASE_PATH") "/pulumi-ai/copilot" }}
-<copilot-sidebar copilot-src="{{ $copilotBasePath }}/sidebar?hostApp=docs&apiHost={{ $copilotApiUrl | urlquery }}" atlas-url="{{ $atlasUrl }}"></copilot-sidebar>
+{{ if $atlasUrl }}
+<copilot-sidebar atlas-url="{{ $atlasUrl }}"></copilot-sidebar>
 {{ end }}

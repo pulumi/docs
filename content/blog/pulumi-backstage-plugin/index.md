@@ -1,8 +1,9 @@
 ---
-title: "Backstage Plugin Now Available for Pulumi"
+title: "Pulumi Backstage Plugin: Developer Portal Integration"
 date: 2023-10-06T15:00:48-04:00
+updated: 2025-03-26
 draft: false
-meta_desc: "Seamlessly integrate and manage your infrastructure with the official Pulumi Backstage plugin."
+meta_desc: "Integrate Pulumi into Backstage to manage infrastructure-as-code, automate scaffolding, and enable self-service cloud provisioning via developer portals."
 meta_image: meta.png
 authors:
     - engin-diri
@@ -10,7 +11,6 @@ tags:
 - backstage
 - developer-portals
 - features
-
 ---
 
 [Backstage](https://backstage.io/) is an open source framework for building developer portals, created at Spotify and donated to the CNCF. It allows engineers to create their own development portal internally. Backstage makes it easy for teams to create a unified portal for their infrastructure tooling, software templates, services, documentation and [plugins](https://backstage.spotify.com/plugins/) for external tools.
@@ -21,17 +21,17 @@ tags:
 
 Backstage plugins typically include functions from another application or platform and place them in context in Backstage. This adds functionality within the development environment and helps centralize critical developer functions. Backstage provides a marketplace where developers can review plugins and implement them into their own applications.
 
-![Pulumi Backstage Plugin](./pulumi_backstage_plugin.png)
+![Screenshot showing Pulumi Backstage plugin integration interface](./pulumi_backstage_plugin.png)
 
 ## Pulumi Joins the Stage
 
 Today we are announcing a new [Pulumi Plugin](https://github.com/pulumi/pulumi-backstage-plugin) for [Backstage](https://backstage.io/). Using the Pulumi Backstage Plugin, you can create a new Pulumi project from an organization template stored in Pulumi, you can run previews and updates, and you can run and view Deployment.
 
-![Pulumi Backstage Plugin Activity](./pulumi_backstage_plugin_activity.png)
+![Pulumi plugin activity view in Backstage displaying stack data](./pulumi_backstage_plugin_activity.png)
 
 ## How to get started with the Pulumi Backstage Integration
 
-![Pulumi Backstage Plugin Icon](./pulumi_backstage_plugin_icon.png)
+![Pulumi plugin icon used within the Backstage developer portal](./pulumi_backstage_plugin_icon.png)
 
 The Pulumi Backstage integration has two independent components:
 
@@ -56,8 +56,8 @@ The Pulumi plugin extends Backstage by displaying essential details like the Pul
 
 The Pulumi plugin extends Backstage by displaying essential details like the Pulumi stack, organization, project name, and description, as well as providing an activity view for the entity with aggregating information from the Pulumi Cloud.
 
-![Pulumi Backstage Plugin System](./pulumi_backstage_plugin_system.png)
-![Pulumi Backstage Plugin Component](./pulumi_backstage_plugin_component.png)
+![System diagram showing how Pulumi integrates with Backstage via plugin](./pulumi_backstage_plugin_system.png)
+![Component view of Pulumi plugin inside Backstage entity page](./pulumi_backstage_plugin_component.png)
 
 Utilizing the **Pulumi Backstage** integration, including its plugin and scaffolder, brings forth many benefits that streamline infrastructure management, enhance developer experience, and foster a well-orchestrated DevOps culture. See the key benefits below.
 
@@ -91,6 +91,8 @@ There are two ways to get the **Pulumi Backstage Plugin**:
 First, if you are hosting Backstage yourself, you can find the plugin in our [GitHub repo](https://github.com/pulumi/pulumi-backstage-plugin).
 
 Secondly, if you are using the [Roadie managed Backstage](https://roadie.io/) service, you can follow [these instructions](https://roadie.io/backstage/plugins/pulumi/) to use the Pulumi plugin with Roadie.
+
+{{< related-posts >}}
 
 ## Conclusion
 

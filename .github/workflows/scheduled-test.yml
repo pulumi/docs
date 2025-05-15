@@ -1,3 +1,4 @@
+permissions: write-all # Equivalent to default permissions + id-token: write
 name: "Run Example Code Tests"
 on:
   schedule:
@@ -9,17 +10,17 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   AWS_REGION: "us-west-2"
-  ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-  ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-  ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
   GOOGLE_CI_SERVICE_ACCOUNT_EMAIL: pulumi-ci@pulumi-ci-gcp-provider.iam.gserviceaccount.com
   GOOGLE_CI_WORKLOAD_IDENTITY_POOL: pulumi-ci
   GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER: pulumi-ci
   GOOGLE_PROJECT: pulumi-ci-gcp-provider
   GOOGLE_PROJECT_NUMBER: 895284651812
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: ARM_CLIENT_ID=ARM_CLIENT_ID,ARM_CLIENT_SECRET=ARM_CLIENT_SECRET,ARM_TENANT_ID=ARM_TENANT_ID,ARM_SUBSCRIPTION_ID=ARM_SUBSCRIPTION_ID,PULUMI_ACCESS_TOKEN=PULUMI_ACCESS_TOKEN
 
 jobs:
   test:
@@ -43,6 +44,9 @@ jobs:
           - 11
 
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -93,14 +97,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           role-duration-seconds: 14400 # 4 hours
           role-session-name: pulumi-docs-examples@githubActions
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
+          role-to-assume: ${{ steps.esc-secrets.outputs.AWS_CI_ROLE_ARN }}
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: projects/${{ env.GOOGLE_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ env.GOOGLE_CI_SERVICE_ACCOUNT_EMAIL }}
-      
+
       - name: Kubernetes KinD Cluster
         id: kind
         uses: helm/kind-action@v1
@@ -116,6 +120,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test]
     steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
@@ -123,5 +130,5 @@ jobs:
           SLACK_COLOR: "#F54242"
           SLACK_MESSAGE: "Failing code example tests in `pulumi/docs` :meow_sad:"
           SLACK_USERNAME: docsbot
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
           SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png

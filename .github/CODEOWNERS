@@ -1,12 +1,13 @@
-content/docs/ @pulumi/docs
-
-# Allow CLI docs PRs to be merged automatically.
-content/docs/iac/cli/commands/
-content/docs/esc/cli/commands/
-content/docs/iac/download-install/versions.md
-
-content/tutorials/ @pulumi/docs
-content/templates/ @pulumi/docs
-
+# content/docs/ @pulumi/docs
+# 
+# # Allow CLI docs PRs to be merged automatically.
+# content/docs/iac/cli/commands/
+# content/docs/esc/cli/commands/
+# content/docs/iac/download-install/versions.md
+# 
+# content/tutorials/ @pulumi/docs
+# content/templates/ @pulumi/docs
+# 
 # Require approval from docs team for edits to robots.txt (see issue #9885)
-layouts/robots.txt @pulumi/docs
+# layouts/robots.txt @pulumi/docs
+# 

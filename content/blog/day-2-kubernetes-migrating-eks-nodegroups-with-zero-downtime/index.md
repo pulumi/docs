@@ -1,11 +1,11 @@
 ---
-title: "Day 2 Kubernetes: Migrate EKS Node Groups with Zero Downtime"
-h1: "Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime"
+title: "Migrate EKS Node Groups with Zero Downtime Using Pulumi"
 authors: ["mike-metral"]
 tags: ["Kubernetes", "eks"]
-meta_desc: "Use Pulumi's for Day 2 Kubernetes. Spin up a new EKS cluster, add one more node groups, and migrate the workloads with zero downtime using code and kubectl."
+meta_desc: "Learn how to migrate EKS node groups with zero downtime using Pulumi. Create, shift, and decommission worker nodes safely with code and kubectl."
 date: "2019-07-23"
-
+updated: 2025-03-26
+canonical_url: https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/eks-migrate-nodegroups/
 meta_image: "eks-migrate-nodegroups.png"
 ---
 
@@ -25,9 +25,9 @@ over to it with zero downtime using code and `kubectl`.
 
 <!--more-->
 
-[View the full tutorial and code.][eks-nodegroup-tutorial]
+[View the full how-to and code.][eks-nodegroup-tutorial]
 
-![EKS Migrate Node Groups](eks-migrate-nodegroups.png)
+![Diagram showing NGINX Ingress Controller migrating from a 2xlarge to 4xlarge EKS node group in a Kubernetes cluster using node selectors.](eks-migrate-nodegroups.png)
 
 ## Create an EKS cluster and Deploy the Workload
 

@@ -11,7 +11,7 @@ menu:
         weight: 9
 ---
 
-The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a high-level library that simplifies the process of writing a Pulumi provider in Go. It abstracts much of the complexity involved in defining custom infrastructure resources, allowing developers to focus on business logic rather than boilerplate code.
+The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a high-level library that simplifies the process of writing a Pulumi [provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/) in Go. It abstracts much of the complexity involved in defining custom infrastructure resources, allowing developers to focus on business logic rather than boilerplate code.
 
 Some key advantages of the SDK are:
 
@@ -24,7 +24,6 @@ Some key advantages of the SDK are:
 
 > - **Repository**: [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) on GitHub
 > - **Examples**: The repository includes a number of [example providers](https://github.com/pulumi/pulumi-go-provider/tree/main/examples).
-> - **Guide**: Follow the [Build a Packaged Provider](/docs/iac/using-pulumi/extending-pulumi/build-a-packaged-provider) guide for step-by-step instructions.
 > - **Reference Documentation**: [pulumi-go-provider](https://pkg.go.dev/github.com/pulumi/pulumi-go-provider) package on go.dev
 
 Here's a quick example of the minimal code necessary to make a provider that can be used in any language. This example creates a provider called `greetings` that has two parameters (`name` and `loud`), which stores the product of its work (the constructed greeting message) as resource state.
@@ -67,7 +66,7 @@ type HelloWorldState struct {
 	Message string `pulumi:"message"`
 }
 
-// All resources must implement Create at a minumum.
+// All resources must implement Create at a minimum.
 func (HelloWorld) Create(
 	ctx context.Context, name string, input HelloWorldArgs, preview bool,
 ) (string, HelloWorldState, error) {

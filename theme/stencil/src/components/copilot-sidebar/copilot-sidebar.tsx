@@ -1,8 +1,4 @@
 import { Component, h, Host, Prop, State } from "@stencil/core";
-import { gb } from "../../util/util";
-
-const ATLAS_LOCAL_STORAGE_KEY = "pulumi-ai-use-atlas";
-
 
 @Component({
     tag: "copilot-sidebar",
@@ -10,14 +6,9 @@ const ATLAS_LOCAL_STORAGE_KEY = "pulumi-ai-use-atlas";
     shadow: false,
 })
 export class CopilotSidebar {
-
     //
     // Props
     //
-
-    // The copilotSrc is URL where the copilot sidebar is hosted
-    @Prop()
-    copilotSrc: string;
 
     // The atlasUrl is the URL where the Atlas web component is hosted
     @Prop()
@@ -27,26 +18,12 @@ export class CopilotSidebar {
     // Internal state
     //
 
-    // Whether to show the sidebar (growthbook flag)
-    @State()
-    showSidebar = false;
-
-    // Whether to show the Atlas web component (local storage flag)
-    @State()
-    showAtlas = false;
-
     // Whether the Atlas scripts have been loaded
     @State()
     atlasScriptsLoaded = false;
 
     async componentWillLoad() {
-        this.showSidebar = gb.isOn("copilot-on-docs");
-        gb.setRenderer(() => (this.showSidebar = gb.isOn("copilot-on-docs")));
-
-        this.showAtlas = this.atlasUrl && window.localStorage.getItem(ATLAS_LOCAL_STORAGE_KEY) !== "false";
-        if (this.showAtlas) {
-            await this.loadAtlasScripts();
-        }
+        await this.loadAtlasScripts();
     }
 
     private async loadAtlasScripts() {
@@ -80,26 +57,13 @@ export class CopilotSidebar {
     }
 
     render() {
-        if (this.showAtlas) {
-            if (!this.atlasScriptsLoaded) {
-                return <Host></Host>;
-            }
-
-            return (
-                <Host>
-                    <pulumi-copilot hostApp="docs" apiUrl={this.atlasUrl} />
-                </Host>
-            );
-        }
-
-        if (!this.showSidebar) {
+        if (!this.atlasScriptsLoaded) {
             return <Host></Host>;
         }
 
         return (
             <Host>
-                <aside id="ai-sidebar-target"></aside>
-                <iframe id="ai-sidebar-host" src={this.copilotSrc}></iframe>
+                <pulumi-copilot hostApp="docs" apiUrl={this.atlasUrl} />
             </Host>
         );
     }

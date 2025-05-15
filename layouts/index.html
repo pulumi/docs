@@ -8,7 +8,7 @@
                         <span class="inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
                     </h1>
 
-                    <p class="mt-6 text-center leading-7">{{ .Params.hero.description | markdownify }}</p>
+                    <p class="mt-6 text-center leading-7 text-xl">{{ .Params.hero.description | markdownify }}</p>
 
                     <div class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
                         <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ .Params.hero.cta_link }}">{{ .Params.hero.cta_text }}</a>
@@ -60,9 +60,33 @@
         </div>
     </section>
 
+    <!--  IDP  -->
+    <section class="py-12 my-12 px-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+        <div class="container mx-auto z-10">
+            <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
+                <div class="w-full lg:w-1/2 z-10 px-8">
+                    <h3>{{ .Params.idp.title }}</h3>
+                    <p class="text-lg">{{ .Params.idp.description | markdownify }}</p>
+                    <div class="mt-8">
+                        <span class="text-lg">Learn more: </span>
+                        <a href="/product/internal-developer-platforms" class="underline text-lg">Pulumi IDP<i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center w-full lg:w-1/2">
+                    <img class="h-96" src="{{ .Params.idp.image }}" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLEAR quote -->
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.clear) }}
+    </section>
 
     <!-- Code and ship faster -->
-    <section class="mb-8 p-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+    <section class="my-12 p-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
         <div class="container mx-auto z-10">
             <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
                 <div class="w-full lg:w-4/12">

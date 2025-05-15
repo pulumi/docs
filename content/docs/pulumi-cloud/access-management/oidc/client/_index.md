@@ -120,6 +120,11 @@ Parameters:
     - Team token (scope is required): `urn:pulumi:token-type:access_token:team`
     - Personal token (scope is required): `urn:pulumi:token-type:access_token:personal`
 - `scope`: a single scope will be supported initially and used to define when asking for a team or personal token, what team/user it should be assigned to. Format: `team:{TEAM_NAME}` (for example: `team:OPS_AUTOMATIONS`) or `user:{USER_LOGIN}` (for example: `user:djohn`). It is also supported, only for organization tokens, the `admin` scope to request organization tokens with admin privileges (the authorization policy has to explicitly allow admin privileges for it to be accepted).
+
+{{< notes type="info" >}}
+Organization-level access tokens generated via OIDC do not default to admin privileges unless the `scope: admin` field is explicitly set.
+{{< /notes >}}
+
 - `expiration`: (int, time in seconds) used to customize the token expiration required by the operation. The default token expiration (2 hours) will be used.
 - `subject_token`: token issued by the IdP
 

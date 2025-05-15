@@ -8,6 +8,22 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Mastering GitOps 2025"
+  title: "GitOps Evolution: Moderne Infrastruktur-Pipelines mit Pulumi und Argo CD"
+  url: "https://www.mastering-gitops.de/veranstaltung-83394-se-0-gitops-evolution-moderne-infrastruktur-pipelines-mit-pulumi-und-argo-cd.html"
+  date: 2025-04-30T15:00:00.000-07:00  
+- event: "stackconf 2025"
+  title: "Abstract It: The Higher, The Faster!"  
+  url: "https://stackconf.eu/talks/abstract-it-the-higher-the-faster/?occurrence=2025-04-29"
+  date: 2025-04-29T15:00:00.000-07:00
+- event: "Cloud Native Rejekts - Europe 2025"
+  title: "MCPs In A DevOps World"
+  url: "https://cfp.cloud-native.rejekts.io/cloud-native-rejekts-europe-london-2025/talk/8XVTKJ/"
+  date: 2025-03-31T15:00:00.000-07:00
+- event: "Oslo PUG 2025 Workshop"
+  title: "Discover Pulumi Through Hands-On Practice"
+  url: "https://www.meetup.com/oslo-pulumi-user-group/events/306321063"
+  date: 2025-03-05T15:00:00.000-07:00
 - event: Kargo Community Meeting
   title: Pulumi + Kargo
   url: https://x.com/akuityio/status/1894765745499689426
@@ -105,7 +121,7 @@ talks:
   slides: null
 - event: "Mastering GitOps 2024"
   title: "Wie man mit Backstage, IaC und GitOps eine interne Entwicklerplattform auf Kubernetes aufbaut"
-  url: https://www.mastering-gitops.de/veranstaltung-21908-se-0-wie-man-mit-backstage-iac-und-gitops-eine-interne-entwicklerplattform-auf-kubernetes-aufbaut.html
+  url: https://www.mastering-gitops.de/2024/veranstaltung-21908-se-0-wie-man-mit-backstage-iac-und-gitops-eine-interne-entwicklerplattform-auf-kubernetes-aufbaut.html
   date: 2024-04-18T10:00:00.000-07:00
   slides: null
 - event: "GitOpsCon NA 2024"

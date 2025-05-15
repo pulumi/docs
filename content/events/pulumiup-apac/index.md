@@ -21,7 +21,8 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: true
+external: false
+internal_landing_page: true
 block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
@@ -65,4 +66,12 @@ form:
     # HubSpot form id.
     hubspot_form_id:
     salesforce_campaign_id:
+
+event_data:
+  name: PulumiUP 2025 - Asia Pacific Edition
+  start_date: 2025-05-07T09:00:00+11:00
+  end_date: 2025-05-07T10:30:00+11:00
+  url: "https://www.pulumi.com/pulumi-up/"
+  description: |
+    Join our flagship virtual event to explore enterprise platform engineering stories, demos, and expert insights on automating infrastructure with Pulumi.
 ---

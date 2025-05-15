@@ -75,6 +75,8 @@ including all the required frontmatter parameters.
    **Canonical link**
    If you are posting a blog that originated somewhere else (for example, a syndicated community post) you will want to add the setting `canonical_url` for the URL where the blog post originated.
 
+   Additionally, if you're writing a blog post to announce a new product or feature that is also documented in our docs, you should set the `canonical_url` to point from the blog post to the relevant docs page. This helps consolidate optimization signals and ensures the docs page remains the primary source of truth in search engines.
+
 1. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/docs/tree/master/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this (your `id` can be any string, but we recommend `firstname-lastname`):
 
    ```toml
@@ -86,7 +88,7 @@ including all the required frontmatter parameters.
    [social]
    github = "cnunciato"
    linkedin = "cnunciato"
-   twitter = "cnunciato"
+   x = "cnunciato"
    ```
 
    For community contributors, it's mostly the same, but with a `status` of `guest`, and a more informative `title`:

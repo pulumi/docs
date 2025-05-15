@@ -8,6 +8,7 @@ Schedule data should be structured like:
         - title:
           description:
           time:
+          time2: #optional - used for 2 column times (should be present on all items or else will look bad)
 
 background color adjustable through "bg_color" (limited to tailwind) or "background_color" (hex or css colors)
 schedule tile color adjustable through "tile-color"
@@ -20,7 +21,10 @@ schedule tile color adjustable through "tile-color"
         <div class="schedule mx-auto w-full lg:w-2/3">
             {{ range $index, $item := .schedule.items }}
                 <div class="flex flex-row mt-4">
-                    <div class="bg-white rounded-md flex justify-center p-4 mr-4 w-44 text-sm md:text-base" style="max-height: 56px;">{{ $item.time }}</div>
+                    <div class="bg-white rounded-md flex justify-center items-center py-4 px-1 sm:px-4 mr-4 w-44 text-sm md:text-base" style="max-height:72px;">{{ $item.time }}</div>
+                    {{ if $item.time2 }}
+                        <div class="bg-white rounded-md flex justify-center items-center py-4 px-1 sm:px-4 mr-4 w-44 text-sm md:text-base" style="max-height:72px;">{{ $item.time2 }}</div>
+                    {{ end }}
                     {{ if $item.description }}
                         <div class="schedule-item rounded-md h-min">
                             <input type="checkbox" id="chck{{ $index }}" />
@@ -32,8 +36,10 @@ schedule tile color adjustable through "tile-color"
                                 {{ $item.description | markdownify }}
                             </div>
                         </div>
-                    {{ else }}
+                    {{ else if $item.title  }}
                         <div class="rounded-md h-min bg-white w-full p-4">{{ $item.title }}</div>
+                    {{ else }}
+                        <div class="w-full"></div>
                     {{ end }}
                 </div>
             {{ end }}
