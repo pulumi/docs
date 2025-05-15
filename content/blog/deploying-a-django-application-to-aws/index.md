@@ -1,15 +1,14 @@
 ---
-title: "Creating and Deploying a Django application to AWS"
+title: "How to Deploy a Django Application to AWS"
 date: 2020-08-28
-meta_desc: Using Pulumi to create and deploy a simple Django MySQL application to AWS
+updated: 2025-03-21
+meta_desc: Learn how to deploy a secure Django app to AWS using Pulumi and Docker. This tutorial covers MySQL setup, Fargate deployment, and secret management.
 meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "python", "containers", "docker", "mysql"]
 ---
 
 In this blog post, we will finish swapping out the frontend and backend of our [Python AWS application](/blog/creating-a-python-aws-application-using-flask-and-redis/). Although Flask and Redis are different from Django and MySQL in many ways, the underlying infrastructure behind their deployment is nonetheless very similar, and can be effortlessly updated as we transition from one to the other.
-
-<!--more-->
 
 We will be paying additional attention to security, and will be making use of Pulumi's secret management tools to protect our passwords and private keys.
 
@@ -389,16 +388,16 @@ pulumi.export("app-url", django_balancer.dns_name)
 To add questions to the database, add "/admin/" to the end of the URL,
 and log in using your Django admin credentials.
 
-![Login screen](step1.png)
+![Django admin login screen after AWS deployment using Pulumi](step1.png)
 
 The Administration panel allows you to manage the state of your application. Groups, users,
 choices, and questions can all be added easily.
 
-![Administration panel](step2.png)
+![Django admin panel interface showing user and question models](step2.png)
 
 Comparison between Flask and Django:
 
-![Comparison](step3.png)
+![Comparison between Flask and Django cloud deployment architectures](step3.png)
 
 In this example, I described how to set up a basic Django voting application and deploy it to AWS. Although our Django and Flask applications use very different AWS services, we seamlessly replaced the previous infrastructure with what was needed.
 

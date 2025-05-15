@@ -71,7 +71,7 @@ tiers:
                   Everything in **Team**, plus:
                   - Unlimited members & teams
                   - Role-based access control (RBAC)
-                  - Organization Access Tokens
+                  - Organization access tokens
                   - SAML/SSO
                   - Secrets versioning
                   - Audit logs
@@ -326,12 +326,6 @@ comparison_table:
                     - content: 1
                     - content: 10
                     - content: 20
-                - title: Per query limits in UI
-                  items:
-                    - content: _blank
-                    - content: 2K results
-                    - content: 10K results
-                    - content: 10K results
                 - title: Data export
                   link: /docs/insights/#data-export
                   items:
@@ -343,7 +337,7 @@ comparison_table:
                   link: /docs/insights/search/#property-queries
                   items:
                     - content: _blank
-                    - content: _blank
+                    - content: _check
                     - content: _check
                     - content: _check
                 - title: Policy enforcement

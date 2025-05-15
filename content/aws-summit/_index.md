@@ -1,7 +1,7 @@
 ---
-title: Pulumi + AWS Summit NYC
-meta_desc: Join Pulumi at AWS Summit NYC to learn about the latest developments in infrastructure as code. Meet us at booth 563.
-meta_image: /images/aws-summit-meta.png
+title: Pulumi + AWS Summit Tel Aviv
+meta_desc: Join Pulumi at AWS Summit Tel Aviv 2025 to discover how leading organizations automate AWS infrastructure as code.
+meta_image: /images/tel-aviv-2025-meta.png
 type: page
 layout: aws-summit
 
@@ -11,24 +11,26 @@ links:
         - heading: Request a Demo
           description: See how Pulumi can help you ship infrastructure faster and manage your AWS resources at scale. Ready for a change?
           action: Talk with an Engineer
-          link: https://info.pulumi.com/aws-summit/
+          link: https://calendly.com/pulumi-meetings/aws-summit-telaviv-booth-demo
+        - heading: Pulumi TLV Meetup – Kickoff Event
+          description: |
+            May 29th, 2025 | 17:30 PM - 20:00 PM | [Lemonade Ltd. Offices](https://g.co/kgs/wyirVjT)
+
+            Meet Pulumi founder Joe Duffy and engineers from Pulumi and Lemonade for networking, tech talks, and refreshments.
+          action: RSVP Now
+          link: https://www.meetup.com/tel-aviv-pulumi-user-group/events/307550216/?eventOrigin=group_events_list
 
 workshops:
     items:
-      - title: Getting started with CI/CD for AWS using GitHub Actions
-        date: July 17, 2024
-        description: In this workshop, you will learn the fundamentals of an infrastructure CI/CD pipeline through guided exercises. You will use GitHub Actions and Pulumi.
-        link: /resources/getting-started-with-ci-cd-aws-pulumi-github-actions/
+      - title: Modern Infrastructure Automation with Pulumi and GitLab
+        date: June 11, 2025
+        description: Discover how to revolutionize cloud infrastructure management with Pulumi's enhanced GitLab integration at our June 11th workshop, where you'll learn to create automated pipelines and standardize organizational patterns.
+        link: /events/modern-infrastructure-automation-with-pulumi-and-gitlab/
         action: Register Now
-      - title: From Zero to Production in Kubernetes
-        date: July 25, 2024
-        description: We’ll explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
-        link: /resources/from-zero-to-production-in-kubernetes/
-        action: Register Now
-      - title: Advanced CI/CD for AWS using Pulumi and GitHub Actions
-        date: August 14, 2024
-        description: Learn advanced topics that make up a robust infrastructure CI/CD pipeline through guided exercises.
-        link: /resources/advanced-cicd-aws-pulumi-github-actions/
+      - title: Workload Observability with Pulumi and Honeycomb
+        date: July 17, 2025
+        description:  Deliver "observability as code" with Pulumi and Honeycomb. Automate SLOs, detect critical issues, and transform your platform engineering approach.
+        link: /events/workload-observability-with-pulumi-and-honeycomb/
         action: Register Now
 
 templates:
@@ -57,24 +59,137 @@ knowledge:
           image: /images/video-thumbnails/gitops-with-pulumi-codefresh-thumbnail.png
 
 
-customer_logos:
-  title: Trusted by your peers
-  logos:
-    - name: snowflake
-      link: /case-studies/snowflake
-    - name: lemonade
-      link: /case-studies/lemonade
-    - name: cockroach-labs
-    - name: meta
-    - name: webflow
-    - name: bluenile
-    - name: dutchie
-      link: https://youtu.be/X1qetq7PjjY
-    - name: panther-labs
-      link: /case-studies/panther-labs
-    - name: univision
-    - name: washington-trust
-      link: https://youtu.be/Q63ZaX340M4
-    - name: nubank
-    - name: docker
+awsx:
+    yaml: |
+        name: aws-eks
+        runtime: yaml
+        description: An EKS cluster
+        resources:
+            cluster:
+                type: eks:Cluster
+                properties:
+                    instanceType: "t2.medium"
+                    desiredCapacity: 2
+                    minSize: 1
+                    maxSize: 2
+        outputs:
+            kubeconfig: ${cluster.kubeconfig}
+    java: |
+        package com.pulumi.example.eks;
+
+        import com.pulumi.Context;
+        import com.pulumi.Exports;
+        import com.pulumi.Pulumi;
+        import com.pulumi.core.Output;
+        import com.pulumi.eks.Cluster;
+        import com.pulumi.eks.ClusterArgs;
+
+        import java.util.stream.Collectors;
+
+        public class App {
+            public static void main(String[] args) {
+                Pulumi.run(App::stack);
+            }
+
+            private static Exports stack(Context ctx) {
+                var cluster = new Cluster("my-cluster", ClusterArgs.builder()
+                        .instanceType("t2.micro")
+                        .desiredCapacity(2)
+                        .minSize(1)
+                        .maxSize(2)
+                        .build());
+
+                ctx.export("kubeconfig", cluster.kubeconfig());
+                return ctx.exports();
+            }
+        }
+    csharp: |
+        using System;
+        using System.Threading.Tasks;
+        using Pulumi;
+        using Pulumi.Eks.Cluster;
+
+        class EksStack : Stack
+        {
+            public EksStack()
+            {
+                // Create an EKS cluster.
+                var cluster = new Cluster("cluster", new ClusterArgs
+                {
+                    InstanceType = "t2.medium",
+                    DesiredCapacity = 2,
+                    MinSize = 1,
+                    MaxSize = 2,
+                });
+
+                // Export the cluster's kubeconfig.
+                this.Kubeconfig = cluster.Kubeconfig;
+            }
+
+            [Output("kubeconfig")]
+            public Output<string> Kubeconfig { get; set; }
+        }
+
+        class Program
+        {
+            static Task<int> Main(string[] args) => Deployment.RunAsync<EksStack>();
+        }
+    go: |
+        package main
+
+        import (
+            "github.com/pulumi/pulumi-eks/sdk/go/eks/cluster"
+            "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+        )
+
+        func main() {
+            pulumi.Run(func(ctx *pulumi.Context) error {
+            // Create an EKS cluster.
+            cluster, err := cluster.NewCluster(ctx, "cluster",
+                cluster.ClusterArgs{
+                    InstanceType:    pulumi.String("t2.medium"),
+                    DesiredCapacity: pulumi.Int(2),
+                    MinSize:         pulumi.Int(1),
+                    MaxSize:         pulumi.Int(2),
+                },
+            )
+            if err != nil {
+                return err
+            }
+
+            // Export the cluster's kubeconfig.
+            ctx.Export("kubeconfig", cluster.Kubeconfig)
+
+            return nil
+            })
+        }
+    py: |
+        import pulumi
+        import pulumi_eks as eks
+
+        # Create an EKS cluster.
+        cluster = eks.Cluster(
+            "cluster",
+            instance_type="t2.medium",
+            desired_capacity=2,
+            min_size=1,
+            max_size=2,
+        )
+
+        # Export the cluster's kubeconfig.
+        pulumi.export("kubeconfig", cluster.kubeconfig)
+    ts: |
+       import * as eks from "@pulumi/eks";
+
+        // Create an EKS cluster.
+        const cluster = new eks.Cluster("cluster", {
+            instanceType: "t2.medium",
+            desiredCapacity: 2,
+            minSize: 1,
+            maxSize: 2,
+        });
+
+        // Export the cluster's kubeconfig.
+        export const kubeconfig = cluster.kubeconfig;
+
 ---

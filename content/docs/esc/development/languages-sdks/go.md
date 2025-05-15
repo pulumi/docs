@@ -27,11 +27,35 @@ Here are some of the scenarios the SDK can automate:
 
 Run `go get github.com/pulumi/esc-sdk/sdk` to install the SDK package.
 
+### Initializing ESC SDK client
+
+The easiest way to initialize an ESC SDK client and authorization context is to run:
+
+```go
+import (
+	esc "github.com/pulumi/esc-sdk/sdk/go"
+)
+
+authCtx, escClient, err := esc.DefaultLogin()
+```
+
+This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using Pulumi CLI or ESC CLI.
+
+If the default behavior does not work for you, you can always manually initialize the client configuration and pass it into the client constructor:
+
+```go
+import (
+	esc "github.com/pulumi/esc-sdk/sdk/go"
+)
+
+configuration := esc.NewConfiguration()
+escClient := esc.NewClient(configuration)
+authCtx := esc.NewAuthContext(myAccessToken)
+```
+
 ## Examples
 
-These samples show how to create an `EscClient` with an access token and use it to perform various ESC tasks.
-
-All of these example expects a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
+All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
 
 ### Manage environment example
 
@@ -52,16 +76,13 @@ import (
 )
 
 func main() {
-	accessToken := os.Getenv("PULUMI_ACCESS_TOKEN")
 	orgName := os.Getenv("PULUMI_ORG")
-	configuration := esc.NewConfiguration()
-	escClient := esc.NewClient(configuration)
-	authCtx := esc.NewAuthContext(accessToken)
+	authCtx, escClient, err := esc.DefaultLogin()
 
 	projName := "examples"
 	envName := "sdk-go-example"
 	// Create Environment
-	err := escClient.CreateEnvironment(authCtx, orgName, projName, envName)
+	err = escClient.CreateEnvironment(authCtx, orgName, projName, envName)
 	if err != nil {
 		log.Fatalf("Failed to create environment: %v", err)
 	}
@@ -130,11 +151,8 @@ import (
 )
 
 func main() {
-	accessToken := os.Getenv("PULUMI_ACCESS_TOKEN")
 	orgName := os.Getenv("PULUMI_ORG")
-	configuration := esc.NewConfiguration()
-	escClient := esc.NewClient(configuration)
-	authCtx := esc.NewAuthContext(accessToken)
+	authCtx, escClient, err := esc.DefaultLogin()
 
 	projName := "examples"
 	envName := "sdk-go-example"

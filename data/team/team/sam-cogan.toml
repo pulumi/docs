@@ -1,10 +1,10 @@
 id = "sam-cogan"
 name = "Sam Cogan"
 title = "Solutions Architect"
-company = "WTW"
+company = "Microsoft"
 status = "guest"
 role = "puluminary"
 [social]
 github = "sam-cogan"
-twitter = "samcogan"
+x = "samcogan"
 linkedin = "sam-cogan-7bbbbb3"

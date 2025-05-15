@@ -16,11 +16,11 @@ aliases:
 
 Resource Search allows you to explore your resources, stacks and projects in detail.
 
-## Query Syntax
+## Query syntax
 
 Resource Search supports a rich query language, described below.
 
-### Simple Queries
+### Simple queries
 
 The default search behavior is to return resources that match all terms in your query based on their name, URN, stack, or project.
 
@@ -44,7 +44,7 @@ If you search for
 
 a resource named "foo" in the "bar" stack will be returned, but a resource only named "bar" will not be returned.
 
-### Field Queries
+### Field queries
 
 The default search behavior is helpful for preliminary exploration but is often too broad for finer analysis.
 To more precisely control _how_ your queries match resources, you can explicitly limit part or all of your query to match specific fields.
@@ -244,7 +244,7 @@ Negation can be applied to exact matches and fields. All of `-name:foo`, `name:-
 
 Fields can be repeated for multiple exclusions: `-name:foo -name:bar` excludes all resources with names matching `foo` and `bar`.
 
-### Logical Combinations
+### Logical combinations
 
 All terms are implicitly combined with a logical `AND`, but terms can also be combined with `OR`.
 For example, `foo OR bar` returns resources that would normally match `foo` as well as resources that would normally match `bar`.
@@ -255,7 +255,7 @@ Parentheses and `OR` can be combined with negation, exact matches, and field que
 
 > "S3-bucket" -(stack:prod OR stack:dev) -project:sandbox
 
-### Range Queries
+### Range queries
 
 The `created` and `modified` fields can be queried for a range of values with `>`, `>=`, `<`, `<=`, and `[a to b]`.
 The `[a to b]` form is inclusive on both sides.
@@ -268,10 +268,10 @@ Ranges can also be one-sided. For example, to query everything modified after Ja
 
 > modified:>=2023-01-01
 
-### Property Queries
+### Property queries
 
 {{% notes "info" %}}
-Property search is only available to organizations using the Enterprise and Business Critical editions.
+Property search is only available to organizations using Team, Enterprise and Business Critical editions.
 
 If you would like to use it, [contact us](/contact?form=sales) to upgrade.
 {{% /notes %}}
@@ -313,7 +313,7 @@ For example:
 
 In some cases a resource might have outputs that differ from its inputs, or inputs that are not also outputs. Precedence is given to outputs first when querying.
 
-### Existence Queries
+### Existence queries
 
 Omitting a value from a field name results in an existence query that returns all resources with a value set for that field.
 
@@ -332,6 +332,50 @@ If we want to refine this to resources with _some_ tags but no `"stack"` tag spe
 > .tags: -.tags.stack:
 
 Existence queries do not return resources where the property is an empty object (`{}`), array (`[]`), or `null`. A resource with an output of `{"tags": {}}` would not be captured by an existence query for `.tags:`.
+
+## Resource search grouping
+
+The Row Groups Header allows you to drag columns from the table into the grouping area to organize resources by that column. You can group by multiple columns simultaneously to create a structured view of your resources.
+
+## Using the row groups header
+
+### Example: Grouping by stack and modified Date
+
+For example, if you want to see resources categorized by **stack** and **last modified date**, you can:
+
+1. Drag the **Stack** column into the Row Groups Header.
+2. Drag the **Modified** column next to it.
+
+![Resource Search Grouping](/docs/insights/assets/resource-search-grouping.png)
+
+This will create a hierarchical breakdown where:
+
+- Resources are first grouped by stack.
+- Within each stack, resources are further grouped by the last modified date.
+
+This allows you to quickly identify which stacks have been recently modified and which resources belong to each stack.
+
+## Grouping multiple attributes
+
+You can group by any combination of attributes to match your workflow. Some useful groupings include:
+
+- **By Managed By and Stack**: To see which resources are managed by Pulumi, discovered, or untracked within each stack.
+- **By Resource Type and Provider**: To analyze resource distribution across cloud providers.
+- **By Account and Region**: To organize resources by cloud accounts and deployment regions.
+
+Selecting the **"X"** in the filter bar will remove all previously selected filters.
+
+## Managed by attribute
+
+The **Resources** page in Pulumi Cloud now includes a **Managed By** column, which helps categorize resources based on how they are managed. This column provides insight into whether a resource is defined by Infrastructure as Code (IaC) using Pulumi, discovered by Pulumi’s resource discovery engine, or both.
+
+### Viewing managed by categories
+
+The managed by column classifies resources into three categories:
+
+- **Pulumi** – Resources provisioned and tracked through Pulumi stacks.
+- **Pulumi Discovered** – Resources that exist in both a Pulumi stack and have also been discovered by Pulumi’s scanning engine.
+- **None** – Resources that were detected by Pulumi’s scanning engine but are not managed by any Pulumi stack.
 
 ## Column filtering
 

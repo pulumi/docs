@@ -5,6 +5,7 @@ meta_desc: "Migrating from Terraform or another IaC tool? Learn how to adopt exi
 meta_image: "meta.png"
 authors: ["luke-hoban"]
 tags: ["migration"]
+canonical_url: "https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/"
 ---
 
 {{% notes %}}
@@ -81,7 +82,7 @@ For our "existing" infrastructure, we'll use a small Azure deployment of a Virtu
 
 #### 2. Create a Pulumi program
 
-Next, we'll create a Pulumi program to describe the same infrastructure that exists in Azure.  We could write this by hand, but since we used Terraform to define the original infrastructure, we also have the option to use [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) to automatically convert our `.tf` files to Pulumi.
+Next, we'll create a Pulumi program to describe the same infrastructure that exists in Azure.  We could write this by hand, but since we used Terraform to define the original infrastructure, we also have the option to use [`tf2pulumi`](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/) to automatically convert our `.tf` files to Pulumi.
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.

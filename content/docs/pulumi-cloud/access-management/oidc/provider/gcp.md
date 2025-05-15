@@ -22,7 +22,6 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 
 ## Prerequisites
 
-* You must be an admin of your Pulumi organization.
 * You must create a [Google Cloud project with the required APIs enabled](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers#configure)
 
 {{< notes type="warning" >}}

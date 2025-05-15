@@ -20,14 +20,6 @@ aliases:
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with AWS. OIDC in AWS uses a web identity provider to assume an IAM role. Access to the IAM role is authorized using a trust policy that validates the contents of the OIDC token issued by the Pulumi Cloud.
 
-## Prerequisites
-
-* You must be an admin of your Pulumi organization.
-
-{{< notes type="warning" >}}
-Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
-{{< /notes >}}
-
 ## Create the identity provider
 
 1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
@@ -49,7 +41,7 @@ Once you have created the identity provider, you will see a notification at the 
 3. On the IAM **Create role** page, ensure the **Web identity** radio button is selected.
 4. In the **Web identity** section:
     * Select `api.pulumi.com/oidc` under **Identity provider**.
-    * Select the name of your Pulumi organization under **Audience**. Then click **Next**.
+    * Select the name of your Pulumi organization (if using ESC, prefixed with `aws:`) under **Audience**. Then click **Next**.
   {{< video title="Create IAM role wizard" src="https://www.pulumi.com/uploads/create-role-wizard.mp4" autoplay="true" loop="true" >}}
 5. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi service. Then click **Next**.
   {{< notes type="info" >}}

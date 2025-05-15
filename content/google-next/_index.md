@@ -1,7 +1,7 @@
 ---
 title: Google Cloud Next 2025
 meta_desc: Join Pulumi at Google Next 2025 to learn about the latest developments in Infrastructure as Code, Google Cloud integrations, platform engineering, and more.
-meta_image: /images/google-next/google-next-2-meta.png
+meta_image: /images/google-next/google-next-25-meta.png
 type: page
 layout: google-next
 
@@ -9,10 +9,14 @@ layout: google-next
 links:
     items:
         - heading: Join Us for Happy Hour
+          icon: team
+          icon_color: salmon
           description: RSVP to DevOps & Drinks at Diablo's Happy Hour with Honeycomb, Oso and Buildkite for an evening of networking and nightlife, where cloud pioneers and digital innovators unite over signature margaritas.<br/><br/>Wednesday, April 9, 6:30-9:30 pm PT at Diablo’s Cantina in the Luxor Hotel
           action: Reserve your spot
           link: https://lu.ma/76j63lpm?utm_source=Event&utm_medium=Happy+Hour+at+Google+Cloud+Next+2025
         - heading: Request a Demo
+          icon: pen
+          icon_color: purple
           description: See how Pulumi can help you ship infrastructure faster, and manage Google Cloud resources. Ready for a change?
           action: "Book a 1:1 Demo in Booth #1589"
           link: https://info.pulumi.com/google-next
@@ -31,24 +35,6 @@ links:
 #         description: Join this workshop for direct Google advice on serverless architecture, delivered with the power and convenience of Pulumi’s cloud orchestration platform.
 #         link: /resources/serverless-java-production-resilience-and-optimization-gcp/
 #         action: Register Now
-
-templates:
-    items:
-        - heading: Google Cloud Serverless Application
-          description: Deploy a serverless application on Google Cloud with Pulumi, Google Cloud Functions, and Google Cloud Storage.
-          image: /images/google-next/templates-serverless.png
-          action: Try it
-          link: /templates/serverless-application/gcp/
-        - heading: Kubernetes Application Templates
-          description: Deploy a container service on Google Cloud with Pulumi and Google Cloud Run.
-          image: /images/google-next/templates-container-service.png
-          action: Try it
-          link: /templates/container-service/gcp/
-        - heading: Kubernetes Cluster on Google Cloud
-          description: Deploy a Kubernetes cluster on Google Cloud with Pulumi and Google Kubernetes Engine (GKE).
-          image: /images/google-next/templates-kubernetes-cluster.png
-          action: Try it
-          link: /templates/kubernetes/gcp/
 
 customer_logos:
   title: Trusted by your peers

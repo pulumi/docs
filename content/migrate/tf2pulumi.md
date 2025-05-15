@@ -20,7 +20,7 @@ examples:
 
             filter {
                 name   = "name"
-                values = ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"]
+                values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
             }
 
             filter {
@@ -112,7 +112,7 @@ examples:
             # node pool and immediately delete it.
             remove_default_node_pool = true
             initial_node_count = 1
-
+            deletion_protection = false
             master_auth {
                 client_certificate_config {
                     issue_client_certificate = false

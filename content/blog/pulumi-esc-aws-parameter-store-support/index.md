@@ -52,7 +52,7 @@ values:
 
 Now that we know how to use the Pulumi ESC Parameter Store provider, let's use it to pull some parameters!
 
-* Setup [OpenID Connect for AWS](/docs/pulumi-cloud/access-management/oidc/provider/aws/). We will use OIDC to authenticate with AWS.
+* Setup [OpenID Connect for AWS](/docs/esc/environments/configuring-oidc/aws/). We will use OIDC to authenticate with AWS.
 * Store some parameters in Parameter Store. In the demo, we will store a String `/test/api-endpoint` and a SecureString `/test/api-key`
 * Create a new Pulumi ESC Environment with the following definition. Make sure to replace the OIDC `roleArn` with your own.
 
