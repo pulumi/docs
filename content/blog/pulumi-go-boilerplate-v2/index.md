@@ -56,25 +56,36 @@ You can leave the heavy lifting to us and focus on the implementation details th
 
 ### Provider Entrypoint
 
+{{% notes type="info" %}}
+The code below uses the new pulumi-go-provider v1 APIs. Make sure you are using the latest version of `github.com/pulumi/pulumi-go-provider`.
+{{% /notes %}}
+
 The pulumi provider boilerplate program is currently quite short and the main entrypoint is as follows.
 
 ```go
 package main
 
 import (
-    p "github.com/pulumi/pulumi-go-provider"
+    "context"
+    "log"
+
     "github.com/pulumi/pulumi-go-provider/infer"
 )
 
 func main() {
-    p.RunProvider("xyz", Version,
-        // We tell the provider what resources it needs to support.
-        // In this case, a single custom resource.
-        infer.Provider(infer.Options{
-            Resources: []infer.InferredResource{
-                infer.Resource[Random, RandomArgs, RandomState](),
-            },
-        }))
+    prov, err := infer.NewProviderBuilder().
+        WithNamespace("my-team-name").
+        WithResources(
+            // We tell the provider what resources it needs to support.
+            // In this case, a single custom resource.
+            infer.Resource(Random{}),
+        ).
+        Build()
+    if err != nil {
+        log.Fatal(err.Error())
+    }
+
+    _ = prov.Run(context.Background(), "xyz", "v0.0.1")
 }
 ```
 
@@ -145,10 +156,9 @@ The complete boilerplate provider looks as follows:
 package main
 
 import (
-    "math/rand"
-    "time"
+    "context"
+    "log"
 
-    p "github.com/pulumi/pulumi-go-provider"
     "github.com/pulumi/pulumi-go-provider/infer"
 )
 
@@ -156,14 +166,19 @@ import (
 var Version string
 
 func main() {
-    p.RunProvider("xyz", Version,
-        // We tell the provider what resources it needs to support.
-        // In this case, a single custom resource.
-        infer.Provider(infer.Options{
-            Resources: []infer.InferredResource{
-                infer.Resource[Random, RandomArgs, RandomState](),
-            },
-        }))
+    prov, err := infer.NewProviderBuilder().
+        WithNamespace("my-team-name").
+        WithResources(
+            // We tell the provider what resources it needs to support.
+            // In this case, a single custom resource.
+            infer.Resource(Random{}),
+        ).
+        Build()
+    if err != nil {
+        log.Fatal(err.Error())
+    }
+
+    _ = prov.Run(context.Background(), "xyz", Version)
 }
 
 // Each resource has a controlling struct.

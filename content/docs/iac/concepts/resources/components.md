@@ -424,25 +424,32 @@ if __name__ == "__main__":
 1. Define a `main.go` file
 2. Declare an instance of `NewProviderBuilder`,  passing in a name, namespace and the components being built
 
+{{% notes type="info" %}}
+The code below uses the new pulumi-go-provider v1 APIs. Make sure you are using the latest version of `github.com/pulumi/pulumi-go-provider`.
+{{% /notes %}}
+
 ```go
 package main
 
 import (
+    "context"
+    "log"
+
     "github.com/pulumi/pulumi-go-provider/infer"
 )
 
 func main() {
-    err := infer.NewProviderBuilder().
-            WithName("go-components").
+    prov, err := infer.NewProviderBuilder().
             WithNamespace("your-org-name").
             WithComponents(
-                infer.Component(MyComponent),
+                infer.ComponentF(MyComponent),
             ).
-            BuildAndRun()
-
+            Build()
     if err != nil {
-        panic(err)
+        log.Fatal(err.Error())
     }
+
+    _ = prov.Run(context.Background(), "go-components", "v0.0.1")
 }
 ```
 
