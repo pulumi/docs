@@ -3,9 +3,13 @@ title: "Simplified Outputs in Pulumi 0.17"
 authors: ["cyrus-najmabadi"]
 tags: ["features"]
 date: "2019-03-19"
+updated: "2025-04-16"
 meta_desc: "Based on feedback from cloud developers, Pulumi Outputs have been simplified for JavaScript and TypeScript simplifying the user experience."
 meta_image: "comp-list.png"
 ---
+
+> [!INFO]
+> This blog post refers to an outdated version of Pulumi (0.17). For current information about Outputs and the latest features, please refer to the [Inputs and Outputs documentation](/docs/concepts/inputs-outputs/).
 
 Pulumi allows cloud developers to use programming languages like
 JavaScript, TypeScript and Python to define and deploy cloud
