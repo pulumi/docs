@@ -33,6 +33,7 @@ The Pulumi Cloud REST API is organized into the following resource categories:
 
 - [API Basics](/docs/pulumi-cloud/reference/api-basics/) - Endpoint URL, authentication, and required headers
 - [Audit Logs](/docs/pulumi-cloud/reference/audit-logs/) - Access audit log data
+- [Copilot](/docs/pulumi-cloud/reference/copilot/) - Access AI-powered infrastructure assistance
 - [Data Export](/docs/pulumi-cloud/reference/data-export/) - Export data from Pulumi Cloud
 - [Deployment Runners](/docs/pulumi-cloud/reference/deployment-runners/) - Manage deployment runners
 - [Environments](/docs/pulumi-cloud/reference/environments/) - Manage deployment environments
