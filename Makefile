@@ -99,11 +99,6 @@ ci_update_search_index:
 	echo "Updating search index: ${DEPLOYMENT_ENVIRONMENT}..."
 	./scripts/ci-update-search-index.sh "${DEPLOYMENT_ENVIRONMENT}"
 
-.PHONY: ci_submit_indexnow
-ci_submit_indexnow:
-	echo "Submitting URLs to IndexNow..."
-	./scripts/search/submit-indexnow.sh "${DEPLOYMENT_ENVIRONMENT}"
-
 .PHONY: serve-all
 serve-all:
 	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "yarn --cwd ./theme run start"

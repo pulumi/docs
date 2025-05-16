@@ -8,7 +8,6 @@ source ./scripts/ci-login.sh
 ./scripts/sync-and-test-bucket.sh update
 
 ./scripts/generate-search-index.sh
-./scripts/search/submit-indexnow.sh
 
 node ./scripts/await-in-progress.js
 
