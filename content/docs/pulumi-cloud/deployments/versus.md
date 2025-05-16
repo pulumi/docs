@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Deployments vs Traditional CI/CD Systems"
-meta_desc: How does Pulumi deployments compare to traditional CI/CD systems?
+meta_desc: Learn how Pulumi Deployments differs from traditional CI/CD systems and why it's uniquely suited for infrastructure as code.
 title: "Vs. Traditional CI/CD"
 h1: "Pulumi Deployments vs. Traditional CI/CD"
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -14,16 +14,55 @@ aliases:
   - /docs/intro/deployments/versus/
 ---
 
-Pulumi Deployments is a cloud automation platform. It can serve as a CI/CD system, but it has the flexibility to do much more. How does it compare to something like GitHub Actions, GitLab CI, or Terraform Enterprise?
+Pulumi Deployments is purpose-built for infrastructure automation, complementing and enhancing traditional CI/CD systems like GitHub Actions or GitLab CI rather than replacing them. While simply calling the Pulumi CLI directly in these traditional systems is an option, Pulumi Deployments provides specialized infrastructure-focused functionality that works alongside your existing CI/CD pipelines, addressing the unique needs of infrastructure management that general-purpose CI/CD tools weren't designed to handle.
 
-Pulumi Deployments is purpose-built for infrastructure. It provides both a "platform in a box" that lets your team get up and running quickly with features like [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks), in addition to a powerful API that you can build on top of to power custom infrastructure workflows. Pulumi Deployments has the flexibility to handle more than just source control events - something that CI/CD systems typically focus on exclusively. Other systems assume that the primary mechanism for a workflow run is a git commit. That assumption may be true in the domain of application development, but it falls apart when working in the domain of cloud infrastructure automation.
+## Key Differences
 
-Pulumi Deployments provides a fully featured, git commit-driven deployment workflow for the simple case. But when deploying infrastructure, a single program often maps to dozens, hundreds, or even thousands of environments. SaaS companies often spin up dedicated infrastructure in response to a customer signing up for a particular SKU. Platform teams often enable self-service of Kubernetes clusters through internal tools and portals. High-scale, globally distributed systems often deploy the same component dozens of times into multiple regions. In all of these systems, you are not pushing a single commit through your three traditional dev/staging/production environments. You are writing complex orchestration at scale.
+### Stack-centric vs. Repository-centric
 
-The Deployments Platform offers a combination of Deployment Settings that describe all necessary dependencies, and Deployment Triggers that run deployments via Automation API, the REST API, and more. Stacks can be programmatically created and configured via the Settings REST API, and updated via Triggers. This unlocks platform scenarios that aren’t possible with tools that only offer `git push` workflows.
+**Traditional CI/CD:** Typically organized around repositories and branches. Workflows and configuration are usually tied to a specific repo structure or branch strategy.
 
-## Using Deployments with your Existing CI/CD System
+**Pulumi Deployments:** Organized around Pulumi stacks, which represent environments or deployment targets. Deployment Settings are configured per-stack, not per-repo or per-branch, giving you more flexibility in how you structure your infrastructure deployments.
 
-Many teams are at the stage where CI/CD is more than enough. They are happy with GitHub Actions, and wonder why they might consider migrating from GitHub Actions to Deployments. You don’t have to make that choice, as the two are better together. Teams often configure Pulumi Deployments on their stacks, and then trigger deployments via the REST API from within a GitHub Actions workflow. This gives you access to Deployments Platform tools such as Click to Deploy from the Pulumi Cloud UI, while keeping the familiarity of your existing CI/CD workflow. As Pulumi adds more built-in capabilities to the Deployments Platform like [Drift Detection](https://github.com/pulumi/pulumi-cloud-requests/issues/173), [TTL stacks](https://github.com/pulumi/pulumi-cloud-requests/issues/149), and [Ephemeral Environments](https://github.com/pulumi/pulumi-cloud-requests/issues/206), you’ll automatically accrue the productivity benefits.
+### Multi-stack Orchestration
 
-![Pulumi Deployments Platform Architecture](../deployments.png)
+**Traditional CI/CD:** Designed primarily for linear application deployments, where a single build artifact moves through environments sequentially.
+
+**Pulumi Deployments:** Built to handle complex multi-stack orchestration patterns common in infrastructure deployments:
+
+- Create complex dependencies between stacks
+- Handle parallel deployments across multiple environments
+- Deploy a shared infrastructure stack followed by multiple application-specific stacks
+
+### Infrastructure State Management
+
+**Traditional CI/CD:** Generally stateless, focused on building and deploying application code with state defined elsewhere (e.g., a database).
+
+**Pulumi Deployments:** Deeply integrated with Pulumi's state management system, understanding the nuances of infrastructure state:
+
+- Preview changes before applying them, which is critical to understanding the full impact of changes in Pulumi code
+- Provides built-in drift detection and remediation, scheduled deployments, time to live duration on stacks, review stacks (ephemeral environments)
+
+### Event-driven Architecture
+
+**Traditional CI/CD:** Primarily responds to source control events like pushes or pull requests.
+
+**Pulumi Deployments:** Has the flexibility to handle more than just source control events:
+
+- Deploy via a REST API
+- Trigger deployments based on time schedules
+- Coordinate deployments between dependent stacks
+- Enable user-initiated deployments through the UI
+
+## Using Deployments with Your Existing CI/CD System
+
+You don't have to choose between Pulumi Deployments and your existing CI/CD system - they work well together. Many teams configure Pulumi Deployments on their stacks and then trigger deployments via their existing CI/CD workflows.
+
+This approach gives you:
+
+- Access to specialized infrastructure operations and the Pulumi Cloud UI
+- Consistent infrastructure state management
+- The familiarity of your existing CI/CD workflow
+- Advanced capabilities like drift detection and management of dependent stacks
+
+As Pulumi adds more capabilities to the Deployments Platform like enhanced drift detection, TTL stacks, and ephemeral environments, you'll automatically benefit from these features while maintaining your existing workflows.
