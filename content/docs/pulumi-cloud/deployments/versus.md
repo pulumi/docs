@@ -30,7 +30,6 @@ Pulumi Deployments is purpose-built for infrastructure automation, complementing
 
 **Pulumi Deployments:** Built to handle complex multi-stack orchestration patterns common in infrastructure deployments:
 
-- Deploy multiple stacks to different regions in a coordinated fashion
 - Create complex dependencies between stacks
 - Handle parallel deployments across multiple environments
 - Deploy a shared infrastructure stack followed by multiple application-specific stacks
@@ -42,7 +41,7 @@ Pulumi Deployments is purpose-built for infrastructure automation, complementing
 **Pulumi Deployments:** Deeply integrated with Pulumi's state management system, understanding the nuances of infrastructure state:
 
 - Automatically manages state files with proper locking
-- Provides built-in drift detection and remediation
+- Provides built-in drift detection and remediation, scheduled deployments, time to live duration on stacks, review stacks (ephemeral environments)
 - Offers operations like refresh, import, and destroy that are infrastructure-specific
 
 ### Specialized Operations
@@ -53,7 +52,6 @@ Pulumi Deployments is purpose-built for infrastructure automation, complementing
 
 - Preview changes before applying them
 - Detect and remediate configuration drift
-- Perform targeted updates on specific resources
 - Generate comprehensive change reports
 
 ### Event-driven Architecture
