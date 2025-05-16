@@ -47,7 +47,7 @@ Visual Import is a guided three-step workflow within the Pulumi Cloud Console:
 2. Review References: Automatically discover and select dependent resources—ensuring your code captures the right context and connectivity between infrastructure elements.
 3. Generate Code: Choose your preferred language and preview or download fully-formed Pulumi code. You can refine it manually or invoke Pulumi Copilot to improve naming, structure, and comments.
 
-![Visual Import Code Generation](visual-iac-import.png)
+![Visual Import Code Generation](visual-import.png)
 
 Throughout the workflow, you maintain full control. Select what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual Import docs](/docs/pulumi-cloud/import/).
 
