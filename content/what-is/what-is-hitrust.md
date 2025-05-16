@@ -93,6 +93,14 @@ HITRUST provides a comprehensive framework for managing information security ris
 
 Pulumi's infrastructure as code solutions can help with implementing some of the technical controls required by HITRUST, especially around infrastructure security, configuration management, and automated compliance verification. [Learn how Pulumi supports security and compliance](/docs/iac/using-pulumi/crossguard/).
 
+Pulumi offers off-the-shelf support for HITRUST compliance through Pulumi CrossGuard's `frameworks` option. For AWS environments, you can quickly get started with a comprehensive HITRUST policy pack by running:
+
+```bash
+pulumi policy new aws-hitrust-compliance-policies-typescript
+```
+
+This creates a policy pack with pre-built rules that help enforce HITRUST compliance requirements across your AWS infrastructure. You can learn more about this policy pack in the [AWS HITRUST compliance policies template repository](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript).
+
 For more information about compliance-related topics:
 
 * [What is Configuration Management?](/what-is/what-is-configuration-management)
