@@ -132,6 +132,50 @@ This bit of info is serious. If you missed it, bad things could happen.
 * Highlight important points.
 * Avoid emojis unless for notes or absolutely necessary.
 
+## Product Names and Acronyms
+
+Pulumi's product names are:
+* Pulumi IaC
+* Pulumi ESC
+* Pulumi IDP
+* Pulumi Insights
+* Pulumi Cloud
+
+These product names include acronyms, but have a different formatting style than acronyms, because we view the product name as an opaque identifier, not descriptive text. When referring to Pulumi products, always use the company name with the acronym, as a single term.
+
+At first mention of a product, in any document, expand the acronym only, with the full form in parentheses after the product name:
+
+* **Correct at first usage**: Pulumi IaC (Infrastructure as Code)
+* **Correct at first usage**: Pulumi ESC (Environments, Secrets, and Configuration)
+* **Correct at first usage**: Pulumi IDP (Internal Developer Platform)
+
+After the first reference, use just the product name:
+
+* **Correct for subsequent usage**: Pulumi IaC
+* **Correct for subsequent usage**: Pulumi ESC
+* **Correct for subsequent usage**: Pulumi IDP
+
+Always capitalize product names correctly. Do not use variations like "Pulumi IAC", "Pulumi iac", "pulumi IaC", etc.
+
+### Acronym Usage
+
+For acronyms that are not part of Pulumi product names, follow standard grammatical practices:
+
+At first mention of an acronym in a document, use the spelled-out term followed by the acronym in parentheses:
+
+* **Correct**: Custom Resource Definition (CRD)
+* **Correct**: Virtual Private Cloud (VPC)
+* **Correct**: Platform as a Service (PaaS)
+
+For subsequent mentions, use just the acronym:
+
+* **Correct**: The CRD defines how the custom resource should be structured.
+* **Correct**: Deploy your application in a VPC for better security.
+
+If an acronym is widely known and more commonly used than its spelled-out form (like API, HTTP, REST), you can use the acronym without spelling it out.
+
+This approach follows standard documentation practices like those in the [Google Developer Documentation Style Guide](https://developers.google.com/style/abbreviations). Feel free to reference the Google style guide for a longer, more nuanced explanation of correct usage for acronyms that are *not* part of product names.
+
 ## Additional Resources
 
 * Markdownlint will help enforce syntactically valid Markdown and is available as a [CLI tool](https://github.com/igorshubovych/markdownlint-cli#installation) or as a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
