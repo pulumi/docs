@@ -36,23 +36,12 @@ Pulumi Deployments is purpose-built for infrastructure automation, complementing
 
 ### Infrastructure State Management
 
-**Traditional CI/CD:** Generally stateless, focused on building and deploying code that manages its own state elsewhere.
+**Traditional CI/CD:** Generally stateless, focused on building and deploying application code with state defined elsewhere (e.g., a database).
 
 **Pulumi Deployments:** Deeply integrated with Pulumi's state management system, understanding the nuances of infrastructure state:
 
-- Automatically manages state files with proper locking
+- Preview changes before applying them, which is critical to understanding the full impact of changes in Pulumi code
 - Provides built-in drift detection and remediation, scheduled deployments, time to live duration on stacks, review stacks (ephemeral environments)
-- Offers operations like refresh, import, and destroy that are infrastructure-specific
-
-### Specialized Operations
-
-**Traditional CI/CD:** Focuses on general-purpose build, test, and deploy operations.
-
-**Pulumi Deployments:** Provides specialized infrastructure operations:
-
-- Preview changes before applying them
-- Detect and remediate configuration drift
-- Generate comprehensive change reports
 
 ### Event-driven Architecture
 
