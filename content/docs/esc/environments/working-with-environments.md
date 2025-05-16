@@ -640,7 +640,7 @@ You can tag your revisions with meaningful names like `prod`, `stable`, `v1.1.2`
 $ esc env version tag myorg/myproject/test@prod @3
 ```
 
-You can also manage tags in the Pulumi Cloud UI by selecting the environment's `Versions` tab and then selecting the `Actions` menu for the given version of the environment you want to tag:
+You can also manage tags in the Pulumi Cloud Console by selecting the environment's `Versions` tab and then selecting the `Actions` menu for the given version of the environment you want to tag:
 
 ![envtagui.png](../envtagui.png)
 
