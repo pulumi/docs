@@ -8,7 +8,7 @@ menu:
   cloud:
     name: Using Deployments
     parent: pulumi-cloud-deployments
-    weight: 2
+    weight: 20
     identifier: pulumi-cloud-deployments-using
 aliases:
   - /docs/intro/deployments/reference/
