@@ -16,10 +16,14 @@ The main goal of internal developer platforms is to provide self-service workflo
 In a no-code workflow, users can instantly create and deploy Pulumi programs without worrying about the underlying IaC code or stack config. The no-code workflow is built on Pulumi organization templates and stores stack config in Pulumi ESC, eliminating the need to write to a VCS.
 
 {{% notes type="info" %}}
-No-code workflows require [Pulumi Deployments](/docs/pulumi-cloud/deployments/)
+No-code workflows are currently available for projects created through the [New Project Wizard](/docs/pulumi-cloud/developer-platforms/new-project-wizard/) May 6th, 2025 or later. We're actively working to eliminate this requirement.
 {{% /notes %}}
 
 To create a no-code stack, start by selecting New Project in the left navigation. Choose a template from the catalog, and select next. Provide any required configuration, and select “Deployments - no-code” as the deployment method. Select the Create Project button, which will deploy the stack and store the config in ESC – no VCS commits required.
+
+{{% notes type="info" %}}
+No-code workflows require [Pulumi Deployments](/docs/pulumi-cloud/deployments/)
+{{% /notes %}}
 
 To create additional stacks in the project, navigate to a project and select Add Stack in the top right corner. From there, select the Pulumi Deployments No-code option and deploy the stack.
 
