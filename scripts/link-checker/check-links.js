@@ -1,11 +1,10 @@
 const { HtmlUrlChecker } = require("broken-link-checker");
 const { WebClient, LogLevel } = require('@slack/web-api');
-const httpServer = require("http-server");
 const Sitemapper = require("sitemapper");
 const sitemap = new Sitemapper();
 const path = require("path");
 const fs = require("fs");
-
+const axios = require("axios");
 
 // Additional routes to check that are not included in the sitemap.
 const additionalRoutes = [
@@ -15,18 +14,25 @@ const additionalRoutes = [
     "https://www.pulumi.com/registry/sitemap.xml",
 ]
 
-
 /**
  *  This script uses the programmatic API of https://github.com/stevenvachon/broken-link-checker
-    to check the links (including images, iframes, and client-side redirects) for either an individual page
-    or for a whole site. Usage:
-
-    # Log successes as well as failures.
-    $ DEBUG=1 node scripts/check-links.js "https://www.pulumi.com"
+ *  to check the links (including images, iframes, and client-side redirects) for either an individual page
+ *  or for a whole site. Usage:
+ *
+ *  # Standard check (default: no section filter)
+ *  $ node scripts/link-checker/check-links.js "https://www.pulumi.com" 2
+ *  
+ *  # Check specific section (e.g., only check /docs/ URLs)
+ *  $ node scripts/link-checker/check-links.js "https://www.pulumi.com" 2 "/docs/"
+ *
+ *  # Log successes as well as failures
+ *  $ DEBUG=1 node scripts/link-checker/check-links.js "https://www.pulumi.com" 2
  */
 
-let [ baseURL, maxRetries ] = process.argv.slice(2);
+let [ baseURL, maxRetries, sectionFilter ] = process.argv.slice(2);
 let retryCount = 0;
+let totalCheckedLinks = 0;
+let startTime = Date.now();
 
 if (!baseURL) {
     throw new Error("A baseURL (e.g., 'https://pulumi.com') is required.");
@@ -61,14 +67,30 @@ checkLinks();
 
 // Runs the checker.
 async function checkLinks() {
-    const checker = getChecker([]);
+    const brokenLinks = [];
+    const checker = getChecker(brokenLinks);
 
-    // Load all URLs.
-    const urls = await getURLsToCheck(baseURL);
-
-    // Start the checker.
-    checker.enqueue(baseURL);
-    urls.forEach(url => checker.enqueue(url));
+    console.log("=== Link Checker Started ===");
+    console.log(`Base URL: ${baseURL}`);
+    if (sectionFilter) {
+        console.log(`Section filter: ${sectionFilter}`);
+    }
+    console.log(`Max retries: ${maxRetries}`);
+    
+    try {
+        // Get all URLs from the main sitemap AND section sitemaps
+        console.log("Fetching URLs from sitemaps...");
+        const urls = await getAllUrlsToCheck(baseURL);
+        
+        console.log(`Found ${urls.length} URLs to check`);
+        
+        // Start the checker with the base URL and all URLs
+        checker.enqueue(baseURL);
+        urls.forEach(url => checker.enqueue(url));
+    } catch (error) {
+        console.error(`Error fetching URLs: ${error.message}`);
+        process.exit(1);
+    }
 }
 
 // Returns an instance of either HtmlUrlChecker.
@@ -101,21 +123,29 @@ function getDefaultHandlers(brokenLinks) {
     return {
         link: (result) => {
             try {
+                totalCheckedLinks++;
+                
+                // Show progress periodically
+                if (totalCheckedLinks % 500 === 0) {
+                    const elapsedMinutes = ((Date.now() - startTime) / 1000 / 60).toFixed(1);
+                    console.log(`Progress: Checked ${totalCheckedLinks} links in ${elapsedMinutes} minutes, found ${brokenLinks.length} broken links`);
+                }
+                
                 onLink(result, brokenLinks);
             }
             catch (error) {
-                fail(error);
+                console.error(`Error in link handler: ${error.message}`);
             }
         },
         error: (error) => {
-            fail(error);
+            console.error(`Checker error: ${error.message}`);
         },
         page: (error, pageURL) => {
             try {
                 onPage(error, pageURL, brokenLinks);
             }
             catch(error) {
-                fail(error);
+                console.error(`Error in page handler: ${error.message}`);
             }
         },
         end: async () => {
@@ -123,7 +153,8 @@ function getDefaultHandlers(brokenLinks) {
                 await onComplete(brokenLinks);
             }
             catch (error) {
-                fail(error);
+                console.error(`Error in end handler: ${error.message}`);
+                process.exit(1);
             }
         },
     };
@@ -143,9 +174,8 @@ function onLink(result, brokenLinks) {
         logLink(source, destination, reason);
 
     } else if (process.env.DEBUG) {
-
         // Log successes when DEBUG is truthy.
-        logLink(source, destination, result.http.response.statusCode);
+        logLink(source, destination, result.http?.response?.statusCode || "SUCCESS");
     }
 }
 
@@ -163,26 +193,63 @@ function onPage(error, pageURL, brokenLinks) {
 // Handles the BLC 'complete' event, which is raised at the end of a run.
 async function onComplete(brokenLinks) {
     const filtered = excludeAcceptable(brokenLinks);
+    const elapsedTime = ((Date.now() - startTime) / 1000).toFixed(1);
+
+    console.log("=== Link Check Completed ===");
+    console.log(`Total time: ${elapsedTime} seconds`);
+    console.log(`Total links checked: ${totalCheckedLinks}`);
+    console.log(`Total broken links found: ${filtered.length}`);
 
     if (filtered.length > 0) {
-
         // If we failed and a retry count was provided, retry. Note that retry count !==
         // run count, so a retry count of 1 means run once, then retry once, which means a
         // total run count of two.
         if (maxRetries > 0 && retryCount < maxRetries) {
             retryCount += 1;
             console.log(`Retrying (${retryCount} of ${maxRetries})...`);
+            
+            // Reset counters
+            totalCheckedLinks = 0;
+            startTime = Date.now();
+            
             checkLinks();
             return;
         }
 
+        // Group broken links by reason
+        const groupedByReason = {};
+        filtered.forEach(link => {
+            if (!groupedByReason[link.reason]) {
+                groupedByReason[link.reason] = [];
+            }
+            groupedByReason[link.reason].push(link);
+        });
+
+        // Display summary by reason
+        console.log(`Broken links by reason:`);
+        Object.keys(groupedByReason).forEach(reason => {
+            console.log(`${reason}: ${groupedByReason[reason].length} links`);
+        });
+
+        // List all broken links
+        console.log("\nList of all broken links:");
+        filtered.forEach(link => {
+            console.log(`${link.source} -> ${link.destination} (${link.reason})`);
+        });
+
+        // Format for Slack
         const list = filtered
             .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
             .join("\n");
 
         // Post the results to Slack.
-        console.warn("Posting to slack: " + list);
-        await postToSlack("docs-ops", list);
+        console.log(`Posting ${filtered.length} broken links to Slack...`);
+        await postToSlack("docs-ops", `Found ${filtered.length} broken links:\n${list}`);
+        
+        // Exit with error code
+        process.exit(1);
+    } else {
+        console.log(`All links are valid!`);
     }
 }
 
@@ -339,14 +406,18 @@ async function postToSlack(channel, text) {
         return;
     }
 
-    const client = new WebClient(token, { logLevel: LogLevel.ERROR });
-    return await client.chat.postMessage({
-        text,
-        channel: `#${channel}`,
-        as_user: true,
-        mrkdwn: true,
-        unfurl_links: false,
-    });
+    try {
+        const client = new WebClient(token, { logLevel: LogLevel.ERROR });
+        return await client.chat.postMessage({
+            text,
+            channel: `#${channel}`,
+            as_user: true,
+            mrkdwn: true,
+            unfurl_links: false,
+        });
+    } catch (error) {
+        console.error(`Error posting to Slack: ${error.message}`);
+    }
 }
 
 // Adds a broken link to the running list.
@@ -360,46 +431,104 @@ function addLink(source, destination, reason, links) {
 
 // Logs a link result to the console.
 function logLink(source, destination, reason) {
-    console.log(source);
-    console.log(`  -> ${destination}`);
-    console.log(`  -> ${reason}`);
-    console.log();
+    if (reason && (reason.toString().startsWith('4') || reason.toString().startsWith('5') || 
+              typeof reason === 'string' && !reason.match(/^2\d\d$/))) {
+        console.log(`BROKEN: ${source} -> ${destination} (${reason})`);
+    } else if (process.env.DEBUG) {
+        console.log(`OK: ${source} -> ${destination} (${reason})`);
+    }
 }
 
-// Logs and exits immediately.
-function fail(error) {
-    console.error(error.message);
-    process.exit(1);
+// Get all URLs to check from multiple sitemaps
+async function getAllUrlsToCheck(base) {
+    try {
+        // Set of URLs to check to avoid duplicates
+        const allUrls = new Set();
+        
+        // Add the known section sitemaps for Pulumi docs site
+        const sitemaps = [
+            // Main sitemap
+            `${base}/sitemap.xml`,
+            
+            // Section sitemaps (based on examining the repo)
+            `${base}/static/sitemaps/sitemap-blog.xml`,
+            `${base}/static/sitemaps/sitemap-docs.xml`,
+            `${base}/static/sitemaps/sitemap-tutorials.xml`,
+            `${base}/static/sitemaps/sitemap-templates.xml`,
+            `${base}/static/sitemaps/sitemap-registry.xml`,
+            `${base}/static/sitemaps/sitemap-case-studies.xml`,
+            `${base}/static/sitemaps/sitemap-product.xml`,
+            `${base}/static/sitemaps/sitemap-compliance.xml`,
+            `${base}/static/sitemaps/sitemap-what-is.xml`,
+            `${base}/static/sitemaps/sitemap-other.xml`,
+        ];
+        
+        // Try each sitemap
+        for (const sitemapUrl of sitemaps) {
+            try {
+                console.log(`Processing sitemap: ${sitemapUrl}`);
+                const urls = await processSitemap(sitemapUrl, base);
+                
+                // Add to our set
+                urls.forEach(url => allUrls.add(url));
+                
+                console.log(`Found ${urls.length} URLs in ${sitemapUrl}`);
+            } catch (error) {
+                console.log(`Could not process ${sitemapUrl}: ${error.message}`);
+            }
+        }
+        
+        // Convert to array
+        let urls = [...allUrls];
+        
+        // Apply section filter if provided
+        if (sectionFilter) {
+            urls = urls.filter(url => url.includes(sectionFilter));
+            console.log(`Applied section filter "${sectionFilter}": ${urls.length} URLs remaining`);
+        }
+        
+        // Add the additional routes
+        urls = urls.concat(additionalRoutes);
+        
+        return urls;
+    } catch (error) {
+        console.error(`Error processing sitemaps: ${error.message}`);
+        throw error;
+    }
 }
 
-// Start by fetching the sitemap from `baseURL`.
-async function getURLsToCheck(base) {
-    return await sitemap
-        .fetch(`${base}/sitemap.xml`)
-        .then(map => {
-            const urls = map.sites
-
-                // Exclude resource docs, SDK docs, and CLI download pages.
-                .filter(page => !page.match(/\/registry\/packages\/.+\/api-docs\//))
-                .filter(page => !page.match(/\/docs\/reference\/pkg\/nodejs|python\//))
-                .filter(page => !page.match(/\/docs\/install\/versions\//))
-
-                // Always check using the supplied baseURL.
-                .map(url => {
-                    const newURL = new URL(url);
-                    const baseURLObj = new URL(base);
-                    newURL.hostname = baseURLObj.hostname;
-                    newURL.protocol = baseURLObj.protocol;
-                    return newURL.toString();
-                })
-
-                // Tack on any additional pages we'd like to check.
-                .concat(additionalRoutes)
-
-                // Sort everything alphabetically.
-                .sort();
-
-            // Return the list of URLs to be crawled.
-            return urls;
-        });
+// Process a single sitemap
+async function processSitemap(sitemapUrl, base) {
+    try {
+        const result = await sitemap.fetch(sitemapUrl);
+        
+        if (!result || !result.sites || !Array.isArray(result.sites)) {
+            return [];
+        }
+        
+        const urls = result.sites;
+        
+        // Exclude resource docs, SDK docs, and CLI download pages.
+        const filtered = urls
+            .filter(page => !page.match(/\/registry\/packages\/.+\/api-docs\//)) 
+            .filter(page => !page.match(/\/docs\/reference\/pkg\/nodejs|python\//)) 
+            .filter(page => !page.match(/\/docs\/install\/versions\//)); 
+        
+        // Always check using the supplied baseURL.
+        return filtered.map(url => {
+            try {
+                const newURL = new URL(url);
+                const baseURLObj = new URL(base);
+                newURL.hostname = baseURLObj.hostname;
+                newURL.protocol = baseURLObj.protocol;
+                return newURL.toString();
+            } catch (e) {
+                console.warn(`Skipping invalid URL: ${url}`);
+                return null;
+            }
+        }).filter(url => url !== null);
+    } catch (error) {
+        console.error(`Error fetching sitemap ${sitemapUrl}: ${error.message}`);
+        return [];
+    }
 }
