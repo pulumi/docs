@@ -9,6 +9,11 @@ menu:
     name: Vault
     parent: esc-configuring-oidc
     weight: 4
+aliases:
+  - /docs/pulumi-cloud/oidc/provider/vault
+  - /docs/pulumi-cloud/oidc/provider/vault/
+  - /docs/pulumi-cloud/access-management/oidc/provider/vault
+  - /docs/pulumi-cloud/access-management/oidc/provider/vault/
 ---
 
 This document outlines the steps required to use Pulumi with OpenID Connect to authenticate with Vault. This is accomplished using [Vault's JWT authentication method](https://developer.hashicorp.com/vault/docs/auth/jwt#jwt-authentication) to assume a role. Access to the role is authorized using a [Vault policy](https://developer.hashicorp.com/vault/docs/concepts/policies) that validates the contents of the OIDC token issued by Pulumi Cloud.
