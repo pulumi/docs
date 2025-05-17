@@ -39,7 +39,7 @@ func main() {
 func provider() p.Provider {
     return infer.Provider(infer.Options{
 			Resources: []infer.InferredResource{
-				infer.Resource[HelloWorld, HelloWorldArgs, HelloWorldState](),
+				infer.Resource(&HelloWorld{}),
 			},
 		}))
 }
