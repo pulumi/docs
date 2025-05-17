@@ -5,7 +5,7 @@ updated: 2025-05-16
 draft: false
 allow_long_title: true
 
-meta_desc: Pulumi Components enable you to create, share, and consume reusable infrastructure building blocks across your organization and the broader community.
+meta_desc: "Pulumi Go Provider SDK v1.0: Develop and test Pulumi providers with ease"
 meta_image: meta.png
 authors:
     - eron-wright
@@ -16,9 +16,6 @@ tags:
     - features
     - iac
     - components
-social:
-    twitter: "(todo)"
-    linkedin: "(todo)"
 ---
 
 At Pulumi, we are constantly striving to enhance the developer experience and boost productivity for engineers managing cloud infrastructure. A key part of this is enabling integrations with the vast ecosystem of cloud services and tools. Pulumi Providers are the mechanism that allow you to define and manage resources from virtually any service or tool. Today, we are thrilled to announce a significant milestone: the **v1.0.0 release of the Pulumi Provider SDK** for Go!
