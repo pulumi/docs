@@ -11,6 +11,7 @@ const getInitialState = (): PreferencesState => {
         os: guessOS(),
         cloud: "aws",
         backend: "service",
+        database: "mysql",
     };
 };
 
@@ -45,6 +46,8 @@ export const preferences = (currentState = getInitialState(), action: Preference
             return { ...currentState, persona: action.key };
         case TypeKeys.SET_BACKEND:
             return { ...currentState, backend: action.key };
+        case TypeKeys.SET_DATABASE:
+            return { ...currentState, database: action.key };
         default:
             return currentState;
     }
