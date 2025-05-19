@@ -87,7 +87,6 @@ var insightsAccountPermissionSetAdmin = append(insightsAccountPermissionSetWrite
 | `Environment Write` | Ability to modify environment settings | Environment Open, + `environment:write`, `environment:rotate`, `environment_version:create`, `environment_version:update`, `environment_version:delete`, `environment_version:retract`, `environment_tag:create`, `environment_tag:update`, `environment_tag:delete`, `environment_schedule:create`, `environment_schedule:update`, `environment_schedule:pause`, `environment_schedule:resume`, `environment_schedule:delete`, `environment_webhook:read`, `environment_webhook:create`, `environment_webhook:update`, `environment_webhook:delete` |
 | `Environment Admin` | Full control over environment operations | Environment Write, + `environment:delete` |
 
-
 ### Insights Account Permissions
 
 | Permission | Description | Included Scopes |
@@ -102,6 +101,6 @@ var insightsAccountPermissionSetAdmin = append(insightsAccountPermissionSetWrite
 
 ## Related Resources
 
-- [Teams](/docs/pulumi-cloud/access-management/rbac/teams)
-- [Roles](/docs/pulumi-cloud/access-management/rbac/roles)
-- [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes)
+* [Teams](/docs/pulumi-cloud/access-management/rbac/teams)
+* [Roles](/docs/pulumi-cloud/access-management/rbac/roles)
+* [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes)

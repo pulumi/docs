@@ -158,7 +158,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 | `organization_webhook:read` | View organization webhook configurations. This includes access to webhook endpoints and event triggers.<br><br>**Granted by default roles**: `AdminRole` |
 | `organization_webhook:update` | Modify an existing organization webhook. This allows updating endpoint URLs and event subscriptions.<br><br>**Granted by default roles**: `AdminRole` |
 
-
 ### Project Annotations
 
 | Value | Description |
@@ -248,8 +247,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 | `templates:source:delete` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
 | `templates:source:read` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
 | `templates:source:update` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
-
-
 
 ## Type: Environment
 
