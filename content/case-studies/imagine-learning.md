@@ -94,12 +94,6 @@ The team chose Pulumi for several compelling reasons:
 
 By implementing the GitOps bridge pattern with Pulumi and ArgoCD, Imagine Learning achieved transformative improvements in their infrastructure management capabilities:
 
-### Dramatically Accelerated Deployments
-
-The most immediate and striking benefit was the dramatic reduction in deployment times. "We have super fast deployments now to all of our environments at once," says Romano. "If I need to make a change, for example to an IAM role that needs to be used in Kubernetes, I can get that deployed out within probably 5-10 minutes."
-
-This represents a dramatic improvement over their previous workflow, where similar changes could take days or weeks to propagate across all environments. Creating entirely new environments has also been transformed. "Building new environments takes hours now; it doesn't take weeks or even months," explains Romano.
-
 ### Enhanced Visibility and Confidence
 
 The combination of Pulumi and GitOps methodologies has provided unprecedented visibility into their infrastructure:
@@ -107,6 +101,12 @@ The combination of Pulumi and GitOps methodologies has provided unprecedented vi
 - **Clear change previews:** "When I do a Pulumi preview, I get a nice diff of what is going to change and what specifically is going to change. Using GitHub Actions, I can automate that so every stack shows me that preview before I actually merge it into my main branch."
 - **Built-in auditing:** "I get built-in auditing in the Pulumi UI of changes going on. I now have an easy way to check what were the changes that went out and what actually changed according to Pulumi."
 - **State management:** "Pulumi manages state; it has all the information about what is currently deployed and what is the state of that resource."
+
+### Dramatically Accelerated Deployments
+
+The most immediate and striking benefit was the dramatic reduction in deployment times. "We have super fast deployments now to all of our environments at once," says Romano. "If I need to make a change, for example to an IAM role that needs to be used in Kubernetes, I can get that deployed out within probably 5-10 minutes."
+
+This represents a dramatic improvement over their previous workflow, where similar changes could take days or weeks to propagate across all environments. Creating entirely new environments has also been transformed. "Building new environments takes hours now; it doesn't take weeks or even months," explains Romano.
 
 ### Reduced Cognitive Load and Context Switching
 
