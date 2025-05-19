@@ -60,12 +60,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 | `deployments:read_usage` | Access deployment usage metrics and statistics. This includes information about resource consumption and operational costs.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole`, `BillingManagerRole` |
 | `deployments:resume` | Resume deployment operations after a pause. This restores normal deployment functionality across the organization.<br><br>**Granted by default roles**: `AdminRole` |
 
-### Teams
-
-| Value | Description |
-|-------|-------------|
-| `github_team:create` | Create a new team that syncs with GitHub. This enables integration between Pulumi and GitHub team structures.<br><br>**Granted by default roles**: `AdminRole` |
-
 ### IaC Policy
 
 | Value | Description |
@@ -80,19 +74,19 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 | `iac_policy_pack:update` | Modify an existing Infrastructure as Code policy pack. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `AdminRole` |
 | `iac_policy_results:read` | View results of Infrastructure as Code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `AdminRole` |
 
-### Organization
-
-| Value | Description |
-|-------|-------------|
-| `integrations:read` | View integration configurations for the organization. This includes access to settings for third-party services and tools.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
-| `integrations:update` | Modify integration settings for the organization. This allows updating or reconfiguring third-party service connections.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
-
 ### Membership
 
 | Value | Description |
 |-------|-------------|
 | `invites:create` | Send invitations to new users to join the organization. This enables onboarding of new team members.<br><br>**Granted by default roles**: `AdminRole` |
 | `invites:read` | View pending and sent invitations for organization membership. This provides visibility into user onboarding status.<br><br>**Granted by default roles**: `AdminRole` |
+
+### Organization
+
+| Value | Description |
+|-------|-------------|
+| `integrations:read` | View integration configurations for the organization. This includes access to settings for third-party services and tools.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `integrations:update` | Modify integration settings for the organization. This allows updating or reconfiguring third-party service connections.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
 
 ### OIDC
 
@@ -164,6 +158,99 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 | `organization_webhook:read` | View organization webhook configurations. This includes access to webhook endpoints and event triggers.<br><br>**Granted by default roles**: `AdminRole` |
 | `organization_webhook:update` | Modify an existing organization webhook. This allows updating endpoint URLs and event subscriptions.<br><br>**Granted by default roles**: `AdminRole` |
 
+
+### Project Annotations
+
+| Value | Description |
+|-------|-------------|
+| `project_annotations:read` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `project_annotations:update` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+
+### Project
+
+| Value | Description |
+|-------|-------------|
+| `project:decrypt` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `project:encrypt` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+
+### Resources
+
+| Value | Description |
+|-------|-------------|
+| `resources:dashboard` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole`, `BillingManagerRole` |
+| `resources:index` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `resources:search` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+
+### Roles
+
+| Value | Description |
+|-------|-------------|
+| `role:create` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `role:delete` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `role:read` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `role:update` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+
+### SAML
+
+| Value | Description |
+|-------|-------------|
+| `saml:read` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole`, `BillingManagerRole` |
+| `saml:update` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+
+### SCIM
+
+| Value | Description |
+|-------|-------------|
+| `scim:delete` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `scim:read` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `scim:update` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+
+### Services
+
+| Value | Description |
+|-------|-------------|
+| `services:admin` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `services:create` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `services:read` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `services:write` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+
+### Tags
+
+| Value | Description |
+|-------|-------------|
+| `tags:read` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+
+### Teams
+
+| Value | Description |
+|-------|-------------|
+| `team:create` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `team:create_token` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `team:delete` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `team:delete_token` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `team:list` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole`, `BillingManagerRole` |
+| `team:list_tokens` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `team:read` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `team:update` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `github_team:create` | Create a new team that syncs with GitHub. This enables integration between Pulumi and GitHub team structures.<br><br>**Granted by default roles**: `AdminRole` |
+
+### Templates
+
+| Value | Description |
+|-------|-------------|
+| `templates:read` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+
+### Template Sources
+
+| Value | Description |
+|-------|-------------|
+| `templates:source:create` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `templates:source:delete` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `templates:source:read` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+| `templates:source:update` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
+
+
+
 ## Type: Environment
 
 ### Environments
@@ -172,7 +259,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 |-------|-------------|
 | `environment:clone` | Create a copy of an existing environment with all its configurations. This is useful for creating staging or testing environments.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
 | `environment:create` | Create a new environment for managing infrastructure configurations. Environments provide isolated spaces for different deployment stages.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
-| `environment:decrypt` | Access and decrypt sensitive environment data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
+| `environment:read_decrypt` | Access and decrypt sensitive environment data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
 | `environment:delete` | Remove an environment and its associated resources. This permanently deletes the environment and its configurations.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
 | `environment:list` | View all environments in the organization. This provides a list of available environments and their basic information.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
 | `environment:list_deleted` | View a list of environments that have been deleted but are still recoverable. This helps in managing and potentially restoring deleted environments.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
@@ -215,7 +302,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 | Value | Description |
 |-------|-------------|
 | `environment_version:create` | Create a new version of an environment. This allows tracking changes and maintaining environment history.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
-| `environment_version:decrypt` | Access and decrypt sensitive data in an environment version. This allows viewing encrypted configuration values.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
+| `environment_version:read_decrypt` | Access and decrypt sensitive data in an environment version. This allows viewing encrypted configuration values.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
 | `environment_version:delete` | Remove a specific version of an environment. This permanently deletes the version and its configurations.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
 | `environment_version:open` | Access and interact with a specific environment version. This includes viewing and using version-specific configurations.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
 | `environment_version:read` | View details of a specific environment version. This provides access to version-specific configurations and metadata.<br><br>**Granted by default permission**: `EnvironmentPermissionBackendOpen` |
@@ -237,7 +324,8 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 
 | Value | Description |
 |-------|-------------|
-| `insights_account:access` | Access and interact with an insights account. This includes basic operations and data viewing capabilities.<br><br>**Granted by default permission**: `InsightsAccountPermissionRead` |
+| `insights_account_access:read` | View what users and roles can access an insights account.<br><br>**Granted by default permission**: `InsightsAccountPermissionRead` |
+| `insights_account_access:update` | Manage what users and roles can access an insights account.<br><br>**Granted by default permission**: `InsightsAccountPermissionRead` |
 | `insights_account:create` | Create a new insights account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `AdminRole` |
 | `insights_account:delete` | Remove an existing insights account. This permanently deletes the account and its associated data.<br><br>**Granted by default permission**: `InsightsAccountPermissionWrite` |
 | `insights_account:list` | View all insights accounts in the organization. This provides a list of available accounts and their basic information.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
@@ -285,8 +373,11 @@ This document defines all the available scopes in Pulumi Cloud, organized by res
 | `stack:encrypt` | Encrypt stack data. This secures sensitive information within the stack.<br><br>**Granted by default permission**: `StackPermissionRead` |
 | `stack:export` | Export stack data and configurations. This allows creating backups or migrating stacks.<br><br>**Granted by default permission**: `StackPermissionRead` |
 | `stack:import` | Import resources into a stack. This allows bringing external resources under management.<br><br>**Granted by default permission**: `StackPermissionWrite` |
+| `stack:list` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `stack:list_deleted` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
 | `stack:read` | View stack configurations and settings. This provides read-only access to stack details and parameters.<br><br>**Granted by default permission**: `StackPermissionRead` |
 | `stack:rename` | Change the name of a stack. This updates the stack's display name across the platform.<br><br>**Granted by default permission**: `StackPermissionWrite` |
+| `stack:restore_deleted` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
 | `stack:transfer` | Transfer ownership of a stack to another organization or user. This is used for organizational restructuring or migration.<br><br>**Granted by default permission**: `StackPermissionWrite` |
 | `stack:write` | Modify stack configurations and settings. This allows updating stack parameters and resource definitions.<br><br>**Granted by default permission**: `StackPermissionWrite` |
 
