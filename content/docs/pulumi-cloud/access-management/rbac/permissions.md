@@ -16,12 +16,13 @@ Permissions in Pulumi Cloud are predefined bundles of [scopes](../scopes) that a
 
 ## Entities
 
-An entity is a Pulumi object that can be granted permissions on it. Presently this includes stacks, environments, insights accounts, and your organization itself.
+An entity is a Pulumi object that can have permissions granted on it.
 
 In Pulumi Cloud's authorization model, we use the term "entity" instead of "resource" to refer to such objects. This is because "resource" already has a specific meaning within Pulumi (referring to cloud infrastructure resources). We use the term "entity" to avoid confusion when discussing authorization.
 
 ### Entity types
-An entity type is a [TODO]
+
+An entity type is a category of resources that can be protected by the RBAC system. In Pulumi Cloud, entity types include stacks, environments, insights accounts, teams, and organization settings. Each entity type has its own set of associated permissions and can be managed independently through the RBAC system.
 
 When creating a permission, it must be of a specific entity type, and only include scopes that are also of that entity type.
 
