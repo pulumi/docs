@@ -11,8 +11,11 @@ menu:
     weight: 2
     identifier: pulumi-cloud-access-management-rbac-roles
 ---
+{{% notes "info" %}}
+Custom roles and permissions are currently an Early Access feature. To be granted access to this feature, please reach out to our sales team.
+{{% /notes %}}
 
-A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or service account) can access and what they can do with them. Roles combine sets of scopes that can be assigned to principals to control their access to resources.
+A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or machine token) can access and what they can do with them. Roles allow you to apply [permissions](/permissions) to a set of [RBAC entities](/resources) and assign this access to a principal.
 
 ## Default Roles
 
@@ -20,11 +23,11 @@ Pulumi Cloud provides several default roles that you can use to quickly get star
 
 ### Organization Roles
 
-| Role | Description |
+| <div style="width: 200px;">Role</div>| Description |
 |------|-------------|
-| `Admin` | Full access to all organization resources and settings. Can manage members, roles, and organization-wide configurations. |
-| `Member` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. |
-| `Billing Manager` | Access to view and manage billing information. Cannot modify other organization settings or resources. |
+| `Admin` | Full access to all organization resources and settings. Can manage members, roles, and organization-wide configurations.</div> |
+| `Member` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. Default access for members to organization entities can be controlled via the **Access management** page under **Settings**.</div> |
+| `Billing Manager` | Access to view and manage billing information. Cannot modify other organization settings or resources.</div> |
 
 ## Custom Roles
 
@@ -33,71 +36,45 @@ Custom roles are only available to organizations using Pulumi Enterprise Edition
 To learn more about editions visit the [pricing page](/pricing/).
 {{% /notes %}}
 
-You can create custom roles to define more granular access controls for your organization. Custom roles allow you to:
+You can create and manage custom roles to define more granular access controls for your organization. Custom roles allow you to:
 
-- Bundle specific scopes for different resource types
-- Control access to specific resources or groups of resources
-- Create reusable permissions that can be assigned to multiple principals
+- Bundle specific permissions for different resource types
+- Control access to like resources or groups of resources
 
 ### Creating Custom Roles
 
-When creating a custom role, you can:
+To create a custom role, you must be an organization admin.
 
-1. Define which resources the role applies to (e.g., all stacks, specific environments)
-2. Specify what actions are allowed on those resources
-3. Combine multiple permissions to create comprehensive access patterns
+Visit the **Roles** page under **Settings** to see your organization roles
 
-### Role Assignment
+![View all organization roles](/docs/pulumi-cloud/access-management/rbac/1-create-role.png).
 
-Roles can be assigned to:
+To create a new role, click **Create custom role**
 
-- Individual users
-- Teams
-- Service accounts (organization tokens)
+[TODO SCREENSHOT]
 
-When a role is assigned to a team, all members of that team inherit the role's permissions.
+You will need to provide a unique name for the role. Optionally, but recommended, you can provide a description to contextualize the role and its purpose.
 
-## Role Types
+You will have the ability to assign permissions to the role to be applied globally across all RBAC entities of a specific type, or to individual entities (e.g. specificc stacks, environments, or insights accounts).
 
-Roles in Pulumi Cloud can be categorized into different types based on their purpose:
+[TODO SCREENSHOT]
 
-### Organization Management Roles
+## Role Assignment
 
-These roles control access to organization-wide settings and resources:
+Currently, roles can be assigned to organizations tokens. When this feature is no longer in beta, you will be able to assign roles to teams or individual users in your organization.
 
-- Member management
-- Organization settings
-- Billing and usage
-- Audit logs
-- Integration configurations
+### Assigning a role to an organization token
 
-### Resource-Specific Roles
-
-These roles control access to specific types of resources:
-
-- Stack management
-- Environment access
-- Insights account administration
-- IaC policy management
-
-### Service Roles
-
-These roles are designed for automated systems and service accounts:
-
-- Deployment automation
-- CI/CD integration
-- Monitoring and scanning
-- API access
+[Organization tokens](TODO) can be assigned both default and custom roles to narrow their scope within your organization.
 
 ## Best Practices
 
 When working with roles in Pulumi Cloud, consider these best practices:
 
-1. **Principle of Least Privilege**: Assign only the scopes necessary for users to perform their tasks
-2. **Role Reusability**: Create roles that can be reused across multiple principals
-3. **Regular Review**: Periodically review role assignments and scopes
-4. **Documentation**: Document the purpose and scopes of custom roles
-5. **Testing**: Test role assignments to ensure they provide the intended access
+1. **Principle of Least Privilege**: Assign only the scopes necessary for users to perform their tasks.
+2. **Role Reusability**: Design custom roles and permissions in a way that maps to real-world concepts within your org, allowing for easy reuse.
+3. **Regular Review**: Periodically schedule reviews of role assignments and scopes.
+4. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
 
 ## Related Resources
 
