@@ -61,11 +61,21 @@ You will have the ability to assign permissions to the role to be applied global
 
 ## Role Assignment
 
-Currently, roles can be assigned to organizations tokens. When this feature is no longer in beta, you will be able to assign roles to teams or individual users in your organization.
+Currently, roles can be assigned to organization tokens. When early access has ended for this feature, you will be able to assign roles to teams or individual users in your organization.
 
 ### Assigning a role to an organization token
 
-[Organization tokens](TODO) can be assigned both default and custom roles to narrow their scope within your organization.
+[Organization tokens](/docs/pulumi-cloud/access-management/access-tokens/#organization-access-tokens) can be assigned both default and custom roles to narrow their scope within your organization.
+
+Follow the process to [create an organization token](/docs/pulumi-cloud/access-management/access-tokens/#creating-an-organization-access-token).
+
+![Create an organization access token, a role field is available](/docs/pulumi-cloud/access-management/rbac/1-create-token-role.png).
+
+Note that you will have the ability to provide a role. Choose a default or custom role to assign to it.
+
+![Assign a role to your organization token](/docs/pulumi-cloud/access-management/rbac/2-create-token-role.png).
+
+Proceed with creating the token. The access token you have created will be narrowed in scope according to the permissions of the role within your organization.
 
 ## Best Practices
 
