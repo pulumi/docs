@@ -45,7 +45,7 @@ main:
     duration: 2 hours
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: Sydney
+    location: Sydney, Australia
 
     # Description of the webinar.
     description:
