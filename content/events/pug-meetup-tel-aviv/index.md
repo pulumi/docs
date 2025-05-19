@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: PUG Tel Aviv
+title: PUG Tel Aviv Meetup
 meta_desc: We're excited to host the first-ever in-person TLV Pulumi User Group (PUG) Meetup featuring Joe Duffy at the Lemonade Tel Aviv HQ.
 meta_image:
 
