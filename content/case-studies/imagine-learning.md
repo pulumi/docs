@@ -4,6 +4,7 @@ title: "Imagine Learning: Modernizing IDP with Pulumi"
 description: |
     Imagine Learning used Pulumi to modernize their Internal Developer Platform, dramatically reducing deployment times and enabling management of hundreds of environments across multiple AWS regions.
 meta_desc: Imagine Learning used Pulumi with GitOps to modernize their IDP, reducing deployment times and improving infrastructure visibility.
+meta_image: /images/case-studies/imagine-learning-meta.png
 
 customer_name: Imagine Learning
 customer_logo: /images/case-studies/imagine-learning.png
@@ -28,8 +29,6 @@ sections:
 ## About Imagine Learning
 
 Imagine Learning is a leading K-12 education technology company serving millions of students nationwide. Their applications support diverse learning activities across multiple subjects and grade levels, requiring numerous environments for development, testing, staging, and production. As the company has grown, so has the need for a scalable, reliable infrastructure to support their educational technology solutions.
-
-{{< youtube "1Q3XPmenthg" >}}
 
 ## Scaling Education Infrastructure for the Next Generation
 
