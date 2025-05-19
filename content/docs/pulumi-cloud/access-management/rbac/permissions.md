@@ -57,31 +57,44 @@ There are four qualified entity types in Pulumi, these are:
 
 Pulumi Cloud provides several default permissions that you can use to quickly get started:
 
+var insightsAccountPermissionSetRead = []Permission{
+	InsightsAccountRead, InsightsAccountScanRead, InsightsAccountAccessRead,
+}
+
+var insightsAccountPermissionSetWrite = append(insightsAccountPermissionSetRead,
+	InsightsAccountUpdatePolicyResults, InsightsAccountUpdate, InsightsAccountScan, InsightsAccountScanUpdate,
+	InsightsAccountScanCancel, InsightsAccountScanPause, InsightsAccountScanResume,
+)
+
+var insightsAccountPermissionSetAdmin = append(insightsAccountPermissionSetWrite,
+	InsightsAccountDelete, InsightsAccountAccessUpdate,
+)
+
 ### Stack Permissions
 
 | Permission | Description | Included Scopes |
 |------------|-------------|----------------|
-| `read` | Basic read-only access to stacks. Allows for running previews. | `stack:read` |
-| `write` | Ability to update stack configurations and run stack updates. | `stack:read`, `stack:write` |
-| `admin` | Grants full control over stack operations. | `stack:read`, `stack:write`, `stack:delete` |
+| `Stack Read` | Basic read-only access to stacks. Allows for running previews. | `stack:read`, `stack:export`, `stack:encrypt`, `stack:decrypt`, `stack_deployment:read`, `stack_deployment_settings:read`, `stack_access:read`, `stack_annotations:read`, `stack_schedule:read` |
+| `Stack Write` | Ability to update stack configurations and run stack updates. | Stack Read, + `stack:import`, `stack:cancel_update`, `stack:write`, `stack_deployment_settings:write`, `stack_deployment_settings:encrypt`, `stack_deployment_cache:read`, `stack_tags:update`, `stack_annotations:update`, `stack_schedule:update`, `stack_schedule:create`, `stack_schedule:pause`, `stack_schedule:resume`, `stack_schedule:delete`, `stack_deployment:create`, `stack_webhook:create`, `stack_webhook:update`, `stack_webhook:delete`, `stack_webhook:read` |
+| `Stack Admin` | Grants full control over stack operations. | Stack Write, + `stack:delete`, `stack_access:update`, `stack:transfer`, `stack:rename` |
 
 ### Environment Permissions
 
 | Permission | Description | Included Scopes |
 |------------|-------------|----------------|
-| `read` | Basic read-only access to environments | `environment:read` |
-| `open` | Ability to access environment resources | `environment:read`, `environment:open` |
-| `write` | Ability to modify environment settings | `environment:read`, `environment:open`, `environment:write` |
-| `admin` | Full control over environment operations | All environment scopes |
+| `Environment Read` | Basic read-only access to environments | `environment:read`, `environment:rotate_history`, `environment_version:read`, `environment_schedule:read`, `environment_tag:read` |
+| `Environment Open` | Ability to access environment resources | Environment Read, + `environment:open`, `environment:clone`, `environment:read_decrypt`, `environment_version:read_decrypt`, `environment_version:open` |
+| `Environment Write` | Ability to modify environment settings | Environment Open, + `environment:write`, `environment:rotate`, `environment_version:create`, `environment_version:update`, `environment_version:delete`, `environment_version:retract`, `environment_tag:create`, `environment_tag:update`, `environment_tag:delete`, `environment_schedule:create`, `environment_schedule:update`, `environment_schedule:pause`, `environment_schedule:resume`, `environment_schedule:delete`, `environment_webhook:read`, `environment_webhook:create`, `environment_webhook:update`, `environment_webhook:delete` |
+| `Environment Admin` | Full control over environment operations | Environment Write, + `environment:delete` |
 
 
 ### Insights Account Permissions
 
 | Permission | Description | Included Scopes |
 |------------|-------------|----------------|
-| `read` | Basic read-only access to insights accounts | `environment:read` |
-| `write` | Ability to modify insights accounts | `environment:read`, `environment:open`, `environment:write` |
-| `admin` | Full control over insights accounts | All environment scopes |
+| `Account Read` | Basic read-only access to insights accounts | `insights_account:read`, `insights_account_scan:read`, `insights_account_access:read` |
+| `Account Write` | Ability to modify insights accounts | Account Read, + `insights_account:update_policy_results`, `insights_account:update`, `insights_account:scan`, `insights_account_scan:update`, `insights_account_scan:cancel`, `insights_account_scan:pause`, `insights_account_scan:resume` |
+| `Account Admin` | Full control over insights accounts | Account Write, + `insights_account:delete`, `insights_account_access:update` |
 
 ## Custom Permissions
 
