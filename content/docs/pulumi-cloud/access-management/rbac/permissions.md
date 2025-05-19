@@ -12,21 +12,45 @@ menu:
     identifier: pulumi-cloud-access-management-rbac-permissions
 ---
 
-Permissions in Pulumi Cloud are predefined bundles of scopes that are commonly used together. They provide a convenient way to grant related access rights to principals through roles.
+Permissions in Pulumi Cloud are predefined bundles of [scopes](../scopes) that are commonly used together. They provide a convenient way to grant related access rights to an [entity](./#entities) (resource) or set of entities (resources).
 
-## Permission Structure
+## Entities
 
-Permissions in Pulumi Cloud follow a consistent format:
+An entity is a Pulumi object that can be granted permissions on it. Presently this includes stacks, environments, insights accounts, and your organization itself.
 
-```
-resource:action
-```
+In Pulumi Cloud's authorization model, we use the term "entity" instead of "resource" to refer to such objects. This is because "resource" already has a specific meaning within Pulumi (referring to cloud infrastructure resources). We use the term "entity" to avoid confusion when discussing authorization.
 
-For example:
+### Entity types
+An entity type is a [TODO]
 
-- `stack:read` - Permission to read stack information
-- `environment:write` - Permission to modify environment settings
-- `organization:admin` - Permission to manage organization settings
+When creating a permission, it must be of a specific entity type, and only include scopes that are also of that entity type.
+
+There are four qualified entity types in Pulumi, these are:
+
+* **Stacks**: For all operations that affect stacks. Includes:
+  * Stack updates
+  * Stack configurations
+  * Deployment settings
+  * Stack tags and annotations
+  * Stack webhooks
+  * Stack schedules
+* **Environments**: For all operations that affect environments. Includes:
+  * Environment configurations
+  * Environment secrets
+  * Environment schedules
+  * Environment webhooks
+  * Environment versions
+* **Insights accounts**: For all operations that affect insights accounts. Includes:
+  * Insights accounts
+  * Policy evaluations
+  * Scan configurations
+  * Results and reports
+* **Organization settings**: For scopes and permissions that operate at the org level, like billing settings or managing third-party integrations. Includes:
+  * Organization settings
+  * Member management
+  * Billing and usage
+  * Audit logs
+  * Integration configurations
 
 ## Default Permissions
 
@@ -36,9 +60,9 @@ Pulumi Cloud provides several default permissions that you can use to quickly ge
 
 | Permission | Description | Included Scopes |
 |------------|-------------|----------------|
-| `read` | Basic read-only access to stacks | `stack:read` |
-| `write` | Ability to update stack configurations | `stack:read`, `stack:write` |
-| `admin` | Full control over stack operations | `stack:read`, `stack:write`, `stack:delete` |
+| `read` | Basic read-only access to stacks. Allows for running previews. | `stack:read` |
+| `write` | Ability to update stack configurations and run stack updates. | `stack:read`, `stack:write` |
+| `admin` | Grants full control over stack operations. | `stack:read`, `stack:write`, `stack:delete` |
 
 ### Environment Permissions
 
@@ -49,58 +73,18 @@ Pulumi Cloud provides several default permissions that you can use to quickly ge
 | `write` | Ability to modify environment settings | `environment:read`, `environment:open`, `environment:write` |
 | `admin` | Full control over environment operations | All environment scopes |
 
-## Resource Types
 
-Permissions can be applied to different types of resources in Pulumi Cloud:
+### Insights Account Permissions
 
-### Organization Resources
+| Permission | Description | Included Scopes |
+|------------|-------------|----------------|
+| `read` | Basic read-only access to insights accounts | `environment:read` |
+| `write` | Ability to modify insights accounts | `environment:read`, `environment:open`, `environment:write` |
+| `admin` | Full control over insights accounts | All environment scopes |
 
-- Organization settings
-- Member management
-- Billing and usage
-- Audit logs
-- Integration configurations
+## Custom Permissions
 
-### Stack Resources
-
-- Stack configurations
-- Deployment settings
-- Stack tags and annotations
-- Stack webhooks
-- Stack schedules
-
-### Environment Resources
-
-- Environment configurations
-- Environment secrets
-- Environment schedules
-- Environment webhooks
-- Environment versions
-
-### Insights Resources
-
-- Insights accounts
-- Policy evaluations
-- Scan configurations
-- Results and reports
-
-## Permission Inheritance
-
-Permissions in Pulumi Cloud follow these inheritance rules:
-
-1. **Role-Based Inheritance**: When a role is assigned to a team, all team members inherit the role's permissions
-2. **Permission Inheritance**: Higher-level permissions include all scopes from lower-level permissions
-3. **Resource Inheritance**: Some permissions automatically grant access to related resources
-
-## Best Practices
-
-When working with permissions in Pulumi Cloud, consider these best practices:
-
-1. **Start with Default Permissions**: Use the default permissions when possible
-2. **Create Custom Permissions**: Create custom permissions for specific use cases
-3. **Regular Audits**: Periodically review permission assignments
-4. **Documentation**: Document custom permissions and their purposes
-5. **Testing**: Test permission assignments to ensure they work as expected
+### Creating Custom Permissions
 
 ## Related Resources
 

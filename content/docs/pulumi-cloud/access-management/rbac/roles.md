@@ -15,7 +15,7 @@ menu:
 Custom roles and permissions are currently an Early Access feature. To be granted access to this feature, please reach out to our sales team.
 {{% /notes %}}
 
-A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or machine token) can access and what they can do with them. Roles allow you to apply [permissions](/permissions) to a set of [RBAC entities](/resources) and assign this access to a principal.
+A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or machine token) can access and what they can do with them. Roles allow you to apply [permissions](../permissions) to a set of [entities](../permissions#entities) and assign this access to a principal.
 
 ## Default Roles
 
