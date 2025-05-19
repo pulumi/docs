@@ -51,13 +51,27 @@ Visit the **Roles** page under **Settings** to see your organization roles
 
 To create a new role, click **Create custom role**
 
-[TODO SCREENSHOT]
+![Create a role page](/docs/pulumi-cloud/access-management/rbac/2-create-role.png).
 
 You will need to provide a unique name for the role. Optionally, but recommended, you can provide a description to contextualize the role and its purpose.
 
-You will have the ability to assign permissions to the role to be applied globally across all RBAC entities of a specific type, or to individual entities (e.g. specificc stacks, environments, or insights accounts).
+![Providing a name and description for the role](/docs/pulumi-cloud/access-management/rbac/3-create-role.png).
 
-[TODO SCREENSHOT]
+You can assign permissions to the role to be applied globally across all RBAC entities of a specific type, or to individual entities (specific stacks, environments, or insights accounts).
+
+You'll first see the option to assign permissions to entities globally within the org:
+
+![Assigning a global permission to the role](/docs/pulumi-cloud/access-management/rbac/4-create-role.png).
+
+You can also select **Add Pulumi entities** to assign permissions to specific entities. You'll be able to search for stacks, environments, or insights accounts within your org and assign existing permissions of their entity type to the entity.
+
+![Assigning permissions to two stacks](/docs/pulumi-cloud/access-management/rbac/5-create-role.png).
+
+When done, click **Create role**. You should be taken back to the Roles page, where you will see your new role:
+
+[TODO screenshot]
+
+You can now assign this role to principals in your organization.
 
 ## Role Assignment
 
