@@ -147,7 +147,7 @@ Need help debugging your provider during development? Our [Debugging Providers g
 
 Beyond simple resources, providers can also define **Component Resources**. Components are higher-level abstractions that encapsulate multiple child resources working together to implement a specific capability. They are perfect for codifying organizational standards and best practices into reusable (cross-language!) building blocks.
 
-The Pulumi Provider SDK v1.0.0 introduces support for defining components using a **functional style**, similar to how you might define a local component within a single program. This provides a streamlined way to build components. Here's an example using the functional style:
+The Pulumi Go Provider SDK introduces support for defining components using a **functional style**, similar to how you might define a local component within a single program. This provides a streamlined way to build components. Here's an example using the functional style:
 
 ```go
 func provider() p.Provider {
