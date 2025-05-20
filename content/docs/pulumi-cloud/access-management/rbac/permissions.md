@@ -61,19 +61,6 @@ There are four qualified entity types in Pulumi, these are:
 
 Pulumi Cloud provides several default permissions that you can use to quickly get started:
 
-var insightsAccountPermissionSetRead = []Permission{
-	InsightsAccountRead, InsightsAccountScanRead, InsightsAccountAccessRead,
-}
-
-var insightsAccountPermissionSetWrite = append(insightsAccountPermissionSetRead,
-	InsightsAccountUpdatePolicyResults, InsightsAccountUpdate, InsightsAccountScan, InsightsAccountScanUpdate,
-	InsightsAccountScanCancel, InsightsAccountScanPause, InsightsAccountScanResume,
-)
-
-var insightsAccountPermissionSetAdmin = append(insightsAccountPermissionSetWrite,
-	InsightsAccountDelete, InsightsAccountAccessUpdate,
-)
-
 ### Stack Permissions
 
 | Permission | Description | Included Scopes |
