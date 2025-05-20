@@ -27,7 +27,7 @@ At Pulumi, we are committed to accelerating your cloud infrastructure journey by
 
 The Pulumi Go Provider SDK v1.0 is a transformative framework that enables you to integrate **any** service, tool, or API into your infrastructure as code workflows. After extensive development since 2022 and battle-testing with enterprise customers, this framework is now **stable and production-ready** for your most critical infrastructure needs.
 
-Pulumi has worked diligently to bring this SDK to maturity, incorporating feedback from enterprise users and leveraging it internally to build production providers like the [Docker Build Provider](/registry/packages/docker-build). With v1.0.0, building robust, multi-language Pulumi providers is more accessible than ever.
+Pulumi has worked diligently to bring this SDK to maturity, incorporating feedback from enterprise users and leveraging it internally to build production providers like the [Docker Build Provider](/registry/packages/docker-build/). With v1.0.0, building robust, multi-language Pulumi providers is more accessible than ever.
 
 ## Key Enhancements for Your Team
 
@@ -84,7 +84,7 @@ func (l *HelloWorldState) Annotate(a infer.Annotator) {
 }
 ```
 
-You then implement the necessary methods for the resource's lifecycle with surprising simplicity: 
+You then implement the necessary methods for the resource's lifecycle with surprising simplicity:
 
 ```go
 // All resources must implement Create at a minimum.
@@ -141,7 +141,7 @@ func TestHelloWorldLifecycle(t *testing.T) {
 }
 ```
 
-For more information, see ["Pulumi Go Provider SDK"](/docs/iac/using-pulumi/extending-pulumi/pulumi-provider-sdk/).
+For more information, see [Pulumi Go Provider SDK](/docs/iac/using-pulumi/extending-pulumi/pulumi-provider-sdk/).
 
 ## Standardize Infrastructure with Powerful Component Resources
 
@@ -251,7 +251,7 @@ func TestRandomLogin(t *testing.T) {
 }
 ```
 
-For more information about component resources, see the blog post ["Announcing the Next-Generation of Pulumi Components: Enabling Infrastructure Abstractions"](../pulumi-components/index.md).
+For more information about component resources, see the blog post [Announcing the Next-Generation of Pulumi Components: Enabling Infrastructure Abstractions](../pulumi-components/index.md).
 
 ## Seamless Multi-Language Support and Sharing
 
