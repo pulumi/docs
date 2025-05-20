@@ -22,7 +22,7 @@ At Pulumi, we are committed to accelerating your cloud infrastructure journey by
 
 ## Unlock the Full Potential of Your Cloud Ecosystem
 
-The Pulumi Go Provider SDK v1.0 is a transformative framework that enables you to integrate **any** service, tool, or API into your infrastructure as code workflows. After extensive development since 2022 and battle-testing with enterprise customers, this framework is now **stable and production-ready** for your most critical infrastructure needs.
+The Pulumi Go Provider SDK is a transformative framework that enables you to integrate **any** service, tool, or API into your infrastructure as code workflows. After extensive development and testing with customers, this framework is now **stable and production-ready** for your most critical infrastructure needs.
 
 Pulumi has worked diligently to bring this SDK to maturity, incorporating feedback from enterprise users and leveraging it internally to build production providers like the [Docker Build Provider](/registry/packages/docker-build). With v1.0.0, building robust, multi-language Pulumi providers is more accessible than ever.
 
