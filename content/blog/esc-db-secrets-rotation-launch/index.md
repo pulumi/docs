@@ -60,7 +60,7 @@ The following setup guide provides a detailed walkthrough for rotating [**Postgr
 
 Setting up rotation for AWS RDS or Aurora PostgreSQL databases running inside an AWS VPC involves [creating the required users](/docs/esc/environments/rotation/db-user-setup/) within your database, deploying the AWS Lambda connector infrastructure via a Pulumi template, configuring ESC environments, and scheduling the rotation.
 
-**Understanding the AWS Lambda Connector:** The open-source [ESC Lambda connector](https://github.com/pulumi/templates/tree/master/esc-connector-lambda-typescript) acts as a secure proxy for database credential rotation within your VPC. It enables Pulumi ESC to safely rotate database credentials without needing direct network access from ESC to your database and without exposing your database to external networks. This connector is currently required to rotate credentials for PostgreSQL or MySQL databases hosted within an AWS VPC.
+**Understanding the AWS Lambda Connector:** The open-source [ESC Lambda connector](https://github.com/pulumi/templates/tree/master/esc-connector-lambda-typescript) acts as a secure proxy for database credential rotation within your VPC. It enables Pulumi ESC to safely rotate database credentials without needing direct network access from ESC to your database and without exposing your database to external networks. This connector is currently required to rotate credentials for PostgreSQL or MySQL databases hosted within an AWS VPC. Note: The AWS Lambda Connector is only available to Enterprise and Business Critical customers.
 
 **Step 1: Prepare Your PostgreSQL Database Users**
 
