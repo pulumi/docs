@@ -36,6 +36,7 @@ The Pulumi Cloud REST API is organized into the following resource categories:
 - [Copilot](/docs/pulumi-cloud/reference/copilot/) - Access AI-powered infrastructure assistance
 - [Data Export](/docs/pulumi-cloud/reference/data-export/) - Export data from Pulumi Cloud
 - [Deployment Runners](/docs/pulumi-cloud/reference/deployment-runners/) - Manage deployment runners
+- [Deployments](/docs/pulumi-cloud/reference/deployments/) - Configure and manage Pulumi Deployments
 - [Environments](/docs/pulumi-cloud/reference/environments/) - Manage deployment environments
 - [Insights Accounts](/docs/pulumi-cloud/reference/insight-accounts/) - Work with Insights accounts
 - [OAuth Token Exchange](/docs/pulumi-cloud/reference/oauth-token-exchange/) - Exchange OAuth tokens
