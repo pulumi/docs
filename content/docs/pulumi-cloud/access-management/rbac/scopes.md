@@ -36,12 +36,20 @@ You can use scopes to build [custom permissions](../permissions#creating-a-custo
 
 ## Default Role Assignments
 
-Many scopes are automatically granted through default roles in Pulumi Cloud. For example:
+Many scopes are automatically granted through [default roles](../roles#default-roles) in Pulumi Cloud. For example:
+
 - Organization admins have access to all scopes.
 - Regular members have access to basic read and write scopes for common operations.
 - Billing managers have access to billing-related scopes only.
 
-You can review the [list of available scopes](list) for more details.
+## Available scopes
+
+You can view the list of available scopes, organized by entity type:
+
+- [Stacks](stacks)
+- [Environments](environments)
+- [Insights accounts](insights-accounts)
+- [Organization settings](org-settings)
 
 ## Related Resources
 
