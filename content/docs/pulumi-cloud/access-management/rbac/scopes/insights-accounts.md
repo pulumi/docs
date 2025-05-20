@@ -1,0 +1,57 @@
+---
+title_tag: "Pulumi Cloud: RBAC Scopes - Insights accounts"
+meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
+title: "RBAC Scopes: Insights accounts"
+h1: "RBAC Scopes: Insights accounts"
+meta_image: /images/docs/meta-images/docs-meta.png
+menu:
+  cloud:
+    name: "Insights accounts"
+    parent: pulumi-cloud-access-management-rbac-scopes
+    weight: 4
+    identifier: pulumi-cloud-access-management-rbac-scopes-insights-accounts
+aliases:
+- /docs/intro/pulumi-service/scopes/insights-accounts
+- /docs/intro/pulumi-cloud/scopes/insights-accounts
+---
+
+This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../../permissions#entity-types) and group.
+
+## Insights Accounts
+
+| Value | Description |
+|-------|-------------|
+| `insights_account_access:read` | View what users and roles can access an insights account.<br><br>**Granted by default permission**: `InsightsAccountPermissionRead` |
+| `insights_account_access:update` | Manage what users and roles can access an insights account.<br><br>**Granted by default permission**: `InsightsAccountPermissionRead` |
+| `insights_account:create` | Create a new insights account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `AdminRole` |
+| `insights_account:delete` | Remove an existing insights account. This permanently deletes the account and its associated data.<br><br>**Granted by default permission**: `InsightsAccountPermissionWrite` |
+| `insights_account:list` | View all insights accounts in the organization. This provides a list of available accounts and their basic information.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `insights_account:read` | View insights account configurations and data. This includes access to monitoring settings and analysis results.<br><br>**Granted by default permission**: `InsightsAccountPermissionRead` |
+| `insights_account:update` | Modify insights account settings and configurations. This allows updating monitoring parameters and analysis rules.<br><br>**Granted by default permission**: `InsightsAccountPermissionWrite` |
+| `insights_account:update_policy_results` | Update policy evaluation results for an insights account. This allows refreshing compliance data and analysis.<br><br>**Granted by default permission**: `InsightsAccountPermissionWrite` |
+
+## Insights Scan
+
+| Value | Description |
+|-------|-------------|
+| `insights_account:scan` | Initiate a new scan of an insights account. This triggers analysis of infrastructure configurations and compliance.<br><br>**Granted by default permission**: `InsightsAccountPermissionWrite` |
+| `insights_account_scan:cancel` | Stop an ongoing insights account scan. This halts the current analysis process.<br><br>**Granted by default permission**: `InsightsAccountPermissionWrite` |
+| `insights_account_scan:pause` | Temporarily suspend an insights account scan. This pauses the analysis process without losing progress.<br><br>**Granted by default permission**: `InsightsAccountPermissionWrite` |
+| `insights_account_scan:read` | View insights account scan results and status. This includes access to analysis findings and progress.<br><br>**Granted by default permission**: `InsightsAccountPermissionRead` |
+| `insights_account_scan:resume` | Resume a paused insights account scan. This continues the analysis process from where it was paused.<br><br>**Granted by default permission**: `InsightsAccountPermissionWrite` |
+| `insights_account_scan:update` | Modify insights account scan settings. This allows updating scan parameters and analysis configurations.<br><br>**Granted by default permission**: `InsightsAccountPermissionWrite` |
+
+## Insights Policy Evaluator
+
+| Value | Description |
+|-------|-------------|
+| `insights_policy_evaluator:delete` | Remove an existing policy evaluator. This permanently deletes the evaluator and its configurations.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `insights_policy_evaluator:ensure` | Create or update a policy evaluator. This ensures the evaluator exists with the correct configuration.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `insights_policy_evaluator:read` | View policy evaluator configurations and status. This includes access to evaluation rules and results.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+| `insights_policy_evaluator:update` | Modify an existing policy evaluator. This allows updating evaluation rules and parameters.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
+
+## Insights Policy Queue
+
+| Value | Description |
+|-------|-------------|
+| `insights_policy_queue:read` | View the policy evaluation queue status. This provides visibility into pending and completed evaluations.<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |

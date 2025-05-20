@@ -22,7 +22,7 @@ In Pulumi Cloud's authorization model, we use the term "entity" instead of "reso
 
 ### Entity types
 
-An entity type is a category of resources that can be protected by the RBAC system. In Pulumi Cloud, entity types include stacks, environments, insights accounts, teams, and organization settings. Each entity type has its own set of associated permissions and can be managed independently through the RBAC system.
+An entity type is a category of resources that can be protected by the RBAC system. In Pulumi Cloud, entity types include stacks, environments, insights accounts, and organization settings. Each entity type has its own set of associated permissions and can be managed independently through the RBAC system.
 
 When creating a permission, it must be of a specific entity type, and only include scopes that are also of that entity type.
 
