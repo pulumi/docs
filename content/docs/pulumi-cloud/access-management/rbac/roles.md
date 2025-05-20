@@ -69,7 +69,7 @@ You can also select **Add Pulumi entities** to assign permissions to specific en
 
 When done, click **Create role**. You should be taken back to the Roles page, where you will see your new role:
 
-[TODO screenshot]
+![Your role has been created, visible here on the Roles page](/docs/pulumi-cloud/access-management/rbac/6-create-role.png).
 
 You can now assign this role to principals in your organization.
 
