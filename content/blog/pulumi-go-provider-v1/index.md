@@ -265,7 +265,7 @@ The SDK automatically generates a schema for your provider based on the Go types
 
 ## Get Started Today!
 
-The GA of the Pulumi Go Provider SDK represents a significant step forward in simplifying and accelerating the development of Pulumi providers. By focusing on a code-first approach, automatic schema generation, and providing a robust testing framework, we are empowering engineers to integrate Pulumi with virtually any service or tool.
+The release of the Pulumi Go Provider SDK represents a significant step forward in simplifying and accelerating the development of Pulumi providers. By focusing on a code-first approach, automatic schema generation, and providing a robust testing framework, we are empowering engineers to integrate Pulumi with virtually any service or tool.
 
 We encourage you to explore the Pulumi Go Provider SDK, build your own integrations, and contribute to the growing ecosystem of Pulumi providers.
 Start with our [Extending Pulumi overview documentation](/docs/iac/using-pulumi/extending-pulumi/) to get a complete picture of the possibilities.
