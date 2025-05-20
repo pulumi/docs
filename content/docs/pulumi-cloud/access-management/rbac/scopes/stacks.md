@@ -21,73 +21,73 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `stack:access` | Access stack resources and perform write operations. This includes updating stack configurations and deployments.<br><br>**Granted by default roles**: `AdminRole`<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack:cancel_update` | Cancel an ongoing stack update operation. This halts the current deployment or update process.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack:create` | Create a new stack for managing infrastructure resources. Stacks represent isolated units of deployment.<br><br>**Granted by default roles**: `AdminRole` |
-| `stack:decrypt` | Decrypt sensitive stack data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission**: `StackPermissionRead` |
-| `stack:delete` | Delete a stack and its associated resources. This permanently removes the stack from the organization.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack:encrypt` | Encrypt stack data. This secures sensitive information within the stack.<br><br>**Granted by default permission**: `StackPermissionRead` |
-| `stack:export` | Export stack data and configurations. This allows creating backups or migrating stacks.<br><br>**Granted by default permission**: `StackPermissionRead` |
-| `stack:import` | Import resources into a stack. This allows bringing external resources under management.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack:list` | [placeholder]<br><br>**Granted by default roles**: `MemberRole`, `AdminRole` |
-| `stack:list_deleted` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
-| `stack:read` | View stack configurations and settings. This provides read-only access to stack details and parameters.<br><br>**Granted by default permission**: `StackPermissionRead` |
-| `stack:rename` | Change the name of a stack. This updates the stack's display name across the platform.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack:restore_deleted` | [placeholder]<br><br>**Granted by default roles**: `AdminRole` |
-| `stack:transfer` | Transfer ownership of a stack to another organization or user. This is used for organizational restructuring or migration.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack:write` | Modify stack configurations and settings. This allows updating stack parameters and resource definitions.<br><br>**Granted by default permission**: `StackPermissionWrite` |
+| `stack:access` | Access stack resources and perform write operations. This includes updating stack configurations and deployments.<br><br>**Granted by default roles**: `Admin`<br><br>**Granted by default permission**: `Stack Write` |
+| `stack:cancel_update` | Cancel an ongoing stack update operation. This halts the current deployment or update process.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack:create` | Create a new stack for managing infrastructure resources. Stacks represent isolated units of deployment.<br><br>**Granted by default roles**: `Admin` |
+| `stack:decrypt` | Decrypt sensitive stack data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission**: `Stack Read` |
+| `stack:delete` | Delete a stack and its associated resources. This permanently removes the stack from the organization.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack:encrypt` | Encrypt stack data. This secures sensitive information within the stack.<br><br>**Granted by default permission**: `Stack Read` |
+| `stack:export` | Export stack data and configurations. This allows creating backups or migrating stacks.<br><br>**Granted by default permission**: `Stack Read` |
+| `stack:import` | Import resources into a stack. This allows bringing external resources under management.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack:list` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `stack:list_deleted` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
+| `stack:read` | View stack configurations and settings. This provides read-only access to stack details and parameters.<br><br>**Granted by default permission**: `Stack Read` |
+| `stack:rename` | Change the name of a stack. This updates the stack's display name across the platform.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack:restore_deleted` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
+| `stack:transfer` | Transfer ownership of a stack to another organization or user. This is used for organizational restructuring or migration.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack:write` | Modify stack configurations and settings. This allows updating stack parameters and resource definitions.<br><br>**Granted by default permission**: `Stack Write` |
 
 ## Annotations
 
 | Value | Description |
 |-------|-------------|
-| `stack_annotations:read` | View annotations attached to a stack. This provides context and metadata for stack resources.<br><br>**Granted by default permission**: `StackPermissionRead` |
-| `stack_annotations:update` | Modify or add annotations to a stack. This allows updating stack metadata and documentation.<br><br>**Granted by default permission**: `StackPermissionWrite` |
+| `stack_annotations:read` | View annotations attached to a stack. This provides context and metadata for stack resources.<br><br>**Granted by default permission**: `Stack Read` |
+| `stack_annotations:update` | Modify or add annotations to a stack. This allows updating stack metadata and documentation.<br><br>**Granted by default permission**: `Stack Write` |
 
 ## Stack Deployments
 
 | Value | Description |
 |-------|-------------|
-| `stack_deployment_cache:clean` | Clear the deployment cache for a stack. This removes cached deployment artifacts and data.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_deployment_cache:read` | View the deployment cache for a stack. This includes access to cached deployment artifacts and data.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_deployment:cancel` | Cancel an ongoing stack deployment. This halts the current deployment process.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_deployment:create` | Create a new deployment for a stack. This initiates the deployment process for infrastructure resources.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_deployment:pause` | Pause an ongoing stack deployment. This temporarily halts the deployment process.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_deployment:read` | View details of stack deployments. This includes access to deployment status and history.<br><br>**Granted by default permission**: `StackPermissionRead` |
-| `stack_deployment:resume` | Resume a paused stack deployment. This continues the deployment process from where it was paused.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_deployment_settings:encrypt` | Encrypt deployment settings for a stack. This secures sensitive configuration data.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_deployment_settings:read` | View deployment settings for a stack. This includes access to configuration parameters and metadata.<br><br>**Granted by default permission**: `StackPermissionRead` |
-| `stack_deployment_settings:write` | Modify deployment settings for a stack. This allows updating configuration parameters and metadata.<br><br>**Granted by default permission**: `StackPermissionWrite` |
+| `stack_deployment_cache:clean` | Clear the deployment cache for a stack. This removes cached deployment artifacts and data.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_deployment_cache:read` | View the deployment cache for a stack. This includes access to cached deployment artifacts and data.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_deployment:cancel` | Cancel an ongoing stack deployment. This halts the current deployment process.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_deployment:create` | Create a new deployment for a stack. This initiates the deployment process for infrastructure resources.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_deployment:pause` | Pause an ongoing stack deployment. This temporarily halts the deployment process.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_deployment:read` | View details of stack deployments. This includes access to deployment status and history.<br><br>**Granted by default permission**: `Stack Read` |
+| `stack_deployment:resume` | Resume a paused stack deployment. This continues the deployment process from where it was paused.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_deployment_settings:encrypt` | Encrypt deployment settings for a stack. This secures sensitive configuration data.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_deployment_settings:read` | View deployment settings for a stack. This includes access to configuration parameters and metadata.<br><br>**Granted by default permission**: `Stack Read` |
+| `stack_deployment_settings:write` | Modify deployment settings for a stack. This allows updating configuration parameters and metadata.<br><br>**Granted by default permission**: `Stack Write` |
 
 ## Stack Deploy Schedules
 
 | Value | Description |
 |-------|-------------|
-| `stack_schedule:create` | Create a new schedule for automated stack deployments. This allows setting up recurring deployment tasks.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_schedule:delete` | Delete an existing stack deployment schedule. This permanently removes the scheduled task.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_schedule:pause` | Pause a scheduled stack deployment. This temporarily halts the scheduled deployment process.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_schedule:read` | View stack deployment schedule configurations. This includes access to schedule details and execution history.<br><br>**Granted by default permission**: `StackPermissionRead` |
-| `stack_schedule:resume` | Resume a paused stack deployment schedule. This restores automated deployment operations.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_schedule:update` | Modify an existing stack deployment schedule. This allows updating timing, frequency, and other schedule parameters.<br><br>**Granted by default permission**: `StackPermissionWrite` |
+| `stack_schedule:create` | Create a new schedule for automated stack deployments. This allows setting up recurring deployment tasks.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_schedule:delete` | Delete an existing stack deployment schedule. This permanently removes the scheduled task.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_schedule:pause` | Pause a scheduled stack deployment. This temporarily halts the scheduled deployment process.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_schedule:read` | View stack deployment schedule configurations. This includes access to schedule details and execution history.<br><br>**Granted by default permission**: `Stack Read` |
+| `stack_schedule:resume` | Resume a paused stack deployment schedule. This restores automated deployment operations.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_schedule:update` | Modify an existing stack deployment schedule. This allows updating timing, frequency, and other schedule parameters.<br><br>**Granted by default permission**: `Stack Write` |
 
 ## Stack Tags
 
 | Value | Description |
 |-------|-------------|
-| `stack_tags:update` | Update tags associated with a stack. This helps in organizing and categorizing stack resources.<br><br>**Granted by default permission**: `StackPermissionWrite` |
+| `stack_tags:update` | Update tags associated with a stack. This helps in organizing and categorizing stack resources.<br><br>**Granted by default permission**: `Stack Write` |
 
 ## Stacks
 
 | Value | Description |
 |-------|-------------|
-| `stack_teams:read` | View teams associated with a stack. This provides visibility into team access and collaboration.<br><br>**Granted by default permission**: `StackPermissionRead` |
-| `stack_teams:update` | Modify teams associated with a stack. This allows updating team access and collaboration settings.<br><br>**Granted by default permission**: `StackPermissionWrite` |
+| `stack_teams:read` | View teams associated with a stack. This provides visibility into team access and collaboration.<br><br>**Granted by default permission**: `Stack Read` |
+| `stack_teams:update` | Modify teams associated with a stack. This allows updating team access and collaboration settings.<br><br>**Granted by default permission**: `Stack Write` |
 
 ## Stack Webhooks
 
 | Value | Description |
 |-------|-------------|
-| `stack_webhook:create` | Create a new webhook for stack events. This enables integration with external systems for event notifications.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_webhook:delete` | Delete an existing stack webhook. This removes the integration and stops event delivery.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_webhook:read` | View stack webhook configurations. This includes access to webhook endpoints and event triggers.<br><br>**Granted by default permission**: `StackPermissionWrite` |
-| `stack_webhook:update` | Modify an existing stack webhook. This allows updating endpoint URLs and event subscriptions.<br><br>**Granted by default permission**: `StackPermissionWrite` |
+| `stack_webhook:create` | Create a new webhook for stack events. This enables integration with external systems for event notifications.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_webhook:delete` | Delete an existing stack webhook. This removes the integration and stops event delivery.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_webhook:read` | View stack webhook configurations. This includes access to webhook endpoints and event triggers.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack_webhook:update` | Modify an existing stack webhook. This allows updating endpoint URLs and event subscriptions.<br><br>**Granted by default permission**: `Stack Write` |
