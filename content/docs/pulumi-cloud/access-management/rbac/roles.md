@@ -73,6 +73,10 @@ When done, click **Create role**. You should be taken back to the Roles page, wh
 
 You can now assign this role to principals in your organization.
 
+### Managing Custom Roles
+
+To update or delete a custom role, simply click on the ellipsis icon next to the role on the Roles page.
+
 ## Role Assignment
 
 Currently, roles can be assigned to organization tokens. When early access has ended for this feature, you will be able to assign roles to teams or individual users in your organization.
