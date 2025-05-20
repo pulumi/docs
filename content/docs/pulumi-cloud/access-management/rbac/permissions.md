@@ -90,6 +90,28 @@ Pulumi Cloud provides several default permissions that you can use to quickly ge
 
 ### Creating Custom Permissions
 
+To create a custom permission, you must be an organization admin.
+
+Visit **Settings** > **Roles** and click **Permissions**.
+
+![View all organization permissions](/docs/pulumi-cloud/access-management/rbac/1-create-permission.png).
+
+To create a new permission, click **Create custom permission** within the associated entity group.
+
+You will need to provide a unique name for the permission. Optionally, but recommended, you can provide a description to contextualize the permission and its purpose.
+
+![Create a permission side panel](/docs/pulumi-cloud/access-management/rbac/2-create-permission.png).
+
+You can then select the scopes you would like to bundle within this permission.
+
+![Providing a name and description for the permission](/docs/pulumi-cloud/access-management/rbac/3-create-permission.png).
+
+Once you've selected the preferred scopes, click **Create permission**. The panel will close and you should see your new permission on the permissions page.
+
+![Your new permission is visible on the permissions page](/docs/pulumi-cloud/access-management/rbac/4-create-permission.png).
+
+You can now assign this custom permission to roles within your organization.
+
 ## Related Resources
 
 * [Teams](/docs/pulumi-cloud/access-management/rbac/teams)
