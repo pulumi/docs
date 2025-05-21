@@ -13,6 +13,15 @@ customer_url: https://www.imaginelearning.com/
 exec_summary: |
    Imagine Learning, a leading K-12 education technology company serving millions of students nationwide, needed to modernize their Internal Developer Platform (IDP) to meet growing enterprise demands. By implementing Pulumi with GitOps methodologies and ArgoCD, they created a scalable, automated solution that dramatically reduced deployment times, improved infrastructure visibility, and enabled them to manage hundreds of environments consistently across multiple AWS regions. Their "GitOps bridge pattern" using Pulumi removed barriers between infrastructure and Kubernetes deployments, allowing developers to use familiar programming languages while ensuring consistent, reliable infrastructure across their entire organization.
 
+quote_block:
+    quote: |
+        "Building new environments takes hours now; it doesn't take weeks or even months."
+    quote_attrib: Blake Romano, Senior Software Engineer, Imagine Learning
+    headline_stat: 1.5 Months
+    headline: Time to recoup investmnet in Pulumi
+
+hide_pulumi_footer: true
+
 sections:
     - label: Exec Summary
       anchor: executive-summary
@@ -32,8 +41,6 @@ Imagine Learning is a leading K-12 education technology company serving millions
 
 ## Scaling Education Infrastructure for the Next Generation
 
-{{< youtube "1Q3XPmenthg" >}}
-
 As a technology company focused on K-12 education, Imagine Learning's infrastructure needs are both complex and critical. Their existing Internal Developer Platform was struggling to keep pace with evolving demands, creating several challenges:
 
 1. **Limited infrastructure visibility:** "It was really hard to determine the current state of every environment we managed," notes Blake Romano, Senior Software Engineer at Imagine Learning. Platform engineers lacked a unified view of their infrastructure, making it difficult to maintain consistency and troubleshoot issues.
@@ -51,6 +58,8 @@ These challenges were particularly acute because of Imagine Learning's commitmen
 ## Building a GitOps Bridge with Pulumi
 
 After evaluating various options, Imagine Learning implemented what Romano calls the "GitOps bridge pattern" using Pulumi, ArgoCD, and GitHub to create a modern, scalable platform.
+
+{{< youtube "1Q3XPmenthg" >}}
 
 ### Implementation Details
 
@@ -111,7 +120,7 @@ The solution has positioned Imagine Learning for continued growth and success, a
 
 ### Measurable Return on Investment
 
-The productivity improvements achieved through Pulumi have delivered significant ROI for Imagine Learning. With a 10% productivity improvement across their engineering team of approximately 30 people, the company effectively gained the equivalent of 1.5 additional full-time developers without increasing headcount. This translates to an annual value of $300,000-$500,000 in engineering capacity, depending on location.
+The productivity improvements achieved through Pulumi have delivered significant ROI for Imagine Learning. With a 10% productivity improvement across their engineering team of approximately 30 people, the company effectively gained the equivalent of 1.5 additional full-time developers without increasing headcount.
 
 The payback period for their Pulumi investment was just 1.5 months, making this a highly cost-effective solution. More importantly, this additional capacity allows Imagine Learning to focus on innovation and educational excellence rather than infrastructure maintenance.
 
