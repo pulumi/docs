@@ -23,6 +23,7 @@ If your infrastructure was provisioned with Terraform, there are a number of opt
 * **Coexist** with resources provisioned by Terraform by referencing a `.tfstate` file.
 * **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with some `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
+* **Use Terraform Modules** directly within your Pulumi programs through the [Terraform Module](docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) feature.
 
 This range of techniques helps to either temporarily or permanently use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
 
@@ -498,3 +499,178 @@ Before running the deployment the import file generated will be written out to t
 ### Example Conversion
 
 For an example of a full conversion, see the [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/) blog post.
+
+## Using Terraform Modules Directly
+
+Pulumi allows you to use existing Terraform modules directly in your Pulumi programs without converting or rewriting them. This feature is particularly useful for:
+
+* Organizations with significant investment in custom Terraform modules
+* Teams that want to leverage the vast ecosystem of modules in the Terraform Registry
+* Gradual migration scenarios where some teams continue using Terraform while others adopt Pulumi
+* Maintaining consistency across infrastructure while transitioning between tools
+
+### Adding a Terraform Module to Your Pulumi Project
+
+To use a Terraform module in Pulumi, you can add it to your project using the `pulumi package add` command:
+
+```bash
+pulumi package add terraform-module <module-source> [<version>] <pulumi-package-name>
+```
+
+For example, to add the AWS VPC module from the Terraform Registry:
+
+```bash
+pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+```
+
+This will generate a local SDK in your programming language that you can import into your Pulumi program. You can then use this module like any other Pulumi package:
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const vpc = require("@pulumi/vpc");
+
+// Create a VPC using the terraform-aws-modules/vpc module
+const myVpc = new vpc.Module("my-vpc", {
+    name: "pulumi-vpc",
+    cidr: "10.0.0.0/16",
+    azs: ["us-west-2a", "us-west-2b", "us-west-2c"],
+    private_subnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
+    public_subnets: ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
+    enable_nat_gateway: true
+});
+
+// Access outputs from the module
+exports.vpcId = myVpc.vpc_id;
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+import * as vpc from "@pulumi/vpc";
+
+// Create a VPC using the terraform-aws-modules/vpc module
+const myVpc = new vpc.Module("my-vpc", {
+    name: "pulumi-vpc",
+    cidr: "10.0.0.0/16",
+    azs: ["us-west-2a", "us-west-2b", "us-west-2c"],
+    private_subnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
+    public_subnets: ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
+    enable_nat_gateway: true
+});
+
+// Access outputs from the module
+export const vpcId = myVpc.vpc_id;
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_vpc as vpc
+
+# Create a VPC using the terraform-aws-modules/vpc module
+my_vpc = vpc.Module("my-vpc",
+    name="pulumi-vpc",
+    cidr="10.0.0.0/16",
+    azs=["us-west-2a", "us-west-2b", "us-west-2c"],
+    private_subnets=["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
+    public_subnets=["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
+    enable_nat_gateway=True
+)
+
+# Access outputs from the module
+pulumi.export("vpc_id", my_vpc.vpc_id)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    vpc "github.com/pulumi/pulumi-vpc/sdk/go/vpc"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Create a VPC using the terraform-aws-modules/vpc module
+        myVpc, err := vpc.NewModule(ctx, "my-vpc", &vpc.ModuleArgs{
+            Name: pulumi.String("pulumi-vpc"),
+            Cidr: pulumi.String("10.0.0.0/16"),
+            Azs: pulumi.StringArray{
+                pulumi.String("us-west-2a"),
+                pulumi.String("us-west-2b"),
+                pulumi.String("us-west-2c"),
+            },
+            PrivateSubnets: pulumi.StringArray{
+                pulumi.String("10.0.1.0/24"),
+                pulumi.String("10.0.2.0/24"),
+                pulumi.String("10.0.3.0/24"),
+            },
+            PublicSubnets: pulumi.StringArray{
+                pulumi.String("10.0.101.0/24"),
+                pulumi.String("10.0.102.0/24"),
+                pulumi.String("10.0.103.0/24"),
+            },
+            EnableNatGateway: pulumi.Bool(true),
+        })
+        if err != nil {
+            return err
+        }
+
+        // Access outputs from the module
+        ctx.Export("vpc_id", myVpc.VpcId)
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Vpc = Pulumi.Vpc;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a VPC using the terraform-aws-modules/vpc module
+        var myVpc = new Vpc.Module("my-vpc", new Vpc.ModuleArgs
+        {
+            Name = "pulumi-vpc",
+            Cidr = "10.0.0.0/16",
+            Azs = new[] { "us-west-2a", "us-west-2b", "us-west-2c" },
+            PrivateSubnets = new[] { "10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24" },
+            PublicSubnets = new[] { "10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24" },
+            EnableNatGateway = true
+        });
+
+        // Access outputs from the module
+        this.VpcId = myVpc.VpcId;
+    }
+
+    [Output]
+    public Output<string> VpcId { get; set; }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+This feature also works seamlessly with local Terraform modules:
+
+```bash
+pulumi package add terraform-module ./path/to/module mylocalmod
+```
+
+For more information about using Terraform modules directly in Pulumi, see the [Use a Terraform Module in Pulumi](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) guide.
