@@ -8,7 +8,7 @@ menu:
     iac:
         name: Use a Terraform Module
         parent: iac-extending-pulumi
-        weight: 3
+        weight: 6
 ---
 
 This guide will walk you through the process of using existing Terraform modules directly in your Pulumi programs, allowing you to leverage the vast Terraform module ecosystem.
@@ -62,7 +62,7 @@ Where:
 For example, to add the AWS VPC module from the Terraform Registry:
 
 ```bash
-pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.18.1 vpc
+pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
 ```
 
 This will generate a local SDK in your programming language that you can import into your Pulumi program.
@@ -202,7 +202,7 @@ function getCidrSubnet(cidr: string, netnum: number): pulumi.Output<string> {
 }
 ```
 
-In the above code the imported Terraform module works the same as any other Pulumi code. Outputs are returned, and resource state is stored in your Pulumi state storage, alongside all your other Pulumi-native resources. This also means that resource dependencies work as expected between Pulumi-native resources and resources created by Terraform modules.
+In the above code, the imported Terraform module works the same as any other Pulumi code. Outputs are returned, and resource state is stored in your Pulumi state storage, alongside all your other Pulumi-native resources. This also means that resource dependencies work as expected between Pulumi-native resources and resources created by Terraform modules.
 
 ## Configuring Terraform Providers
 

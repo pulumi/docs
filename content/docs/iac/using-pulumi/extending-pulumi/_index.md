@@ -28,6 +28,7 @@ This comparison chart will help guide you on how to invest your time and energy 
 | **Packaged Provider**  | A plugin that performs CRUD operations against cloud service APIs, providing resources used in Pulumi programs. | Write in Go, use in all Pulumi languages | Local, Git repo, or Pulumi package | Add support for a new cloud service to Pulumi, for all languages, and publish it for reuse | Requires the most development investment |
 | **Dynamic Provider** | A simplified type of provider that doesn't require packaging | Write in TypeScript, JavaScript, and Python, use *only* in the same language | Local only | Quickly mock-up a provider to manage resources in a cloud service not already supported by Pulumi | Can't be packaged or published to the Pulumi Registry, code must be serializable, can't generate multi-language SDKs |
 | **Bridged Provider** | A wrapper for a Terraform provider | Write in Go, use in all Pulumi languages | Local, Git repo, or Pulumi package | Use an existing Terraform provider within Pulumi | Must have an existing Terraform provider |
+| **Terraform Module** | Adapts existing Terraform modules to use in Pulumi | Use in all Pulumi languages | Local, Git repo, or Pulumi package | Leverage existing Terraform modules directly within Pulumi programs | Some limitations for targeted updates and transforms |
 
 ## Resources, Providers, and Components
 
@@ -91,6 +92,7 @@ Another great thing about Pulumi is that it exists within a vast ecosystem of to
 
 - **The [Pulumi Registry](/registry)** - our hosted repository of providers and components contains hundreds of existing packages that can be used directly within Pulumi. These are all open-source code, with their code repository linked directly on every page.
 - **The [Terraform Provider Registry](https://registry.terraform.io/)** - any Terraform-compatible provider can be [*bridged*](/blog/any-terraform-provider/) to work within Pulumi. That gives you access to thousands of existing providers! If the provider you need isn't in our registry, but does exist in Terraform's registry, you can use it immediately via the [terraform-provider](https://www.pulumi.com/registry/packages/terraform-provider/).
+- **The [Terraform Module Registry](https://registry.terraform.io/browse/modules)** - you can [use Terraform modules directly](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) within Pulumi programs. This gives you access to thousands of pre-built, reusable infrastructure modules without needing to rewrite them.
 - **The [OpenTofu Registry](https://search.opentofu.org/providers)** - a fork of Terraform that maintains its own registry of thousands of Terraform-compatible providers, which can also be [bridged into Pulumi](/blog/any-terraform-provider/).
 - **The [Pulumi Command Provider](https://www.pulumi.com/registry/packages/command/)** - a Pulumi provider that allows you to run arbitrary shell commands. Many use cases can be covered by using this provider, shelling out to use the third-party CLI tool for a new cloud product, instead of writing a provider from scratch. This is often the lightest-weight way to extend Pulumi.
 
