@@ -12,34 +12,45 @@
 {{ define "main" }}
     {{ $pageContext := . }}
 
-
-    <section id="overview" class="my-16">
-        <div class="flex flex-wrap container mx-auto">
-            <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
+    <section id="description" class="container mx-auto my-16 flex flex-col">
+        <div class="flex flex-col lg:flex-row px-8">
+            <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first">
                 <h2>{{ .Params.hero.title }}</h2>
-                <p class="mr-4">{{ .Params.hero.body | markdownify }}</p>
-                <div>
-                    <div class="flex justify-start items-start mt-8">
-                        <div class="flex flex-col lg:flex-row items-start">
-                            <a class="btn-primary mr-4" href="{{ relref . "/docs/iac/get-started/kubernetes/" }}">Get Started</a>
-                            <a class="btn-secondary" href="#contact">Request A Demo</a>
-                        </div>
+                <p>{{ .Params.hero.body | markdownify }}</p>
+                <div class="mt-8 flex justify-start items-start">
+                    <div class="flex flex-col lg:flex-row items-start">
+                        <a class="btn-primary mr-4" href="{{ relref . "/docs/iac/get-started/kubernetes/" }}">Get Started</a>
+                        <a class="btn-secondary" href="#contact">Request A Demo</a>
                     </div>
                 </div>
             </div>
-            <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
-                <div>
-                    <div>
-                        <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
-                            <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                                {{ range $lang := .Params.kubernetes_overview.ide.tabs }}
-                                    <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
-                                        {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
-                                    </pulumi-choosable>
-                                {{ end }}
-                            </pulumi-chooser>
-                        </div>
-                    </div>
+            {{ with .Params.video_section }}
+            <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
+                    <iframe
+                        src="https://www.youtube.com/embed/{{ .youtube_video_id }}?rel=0"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen=""
+                        title="{{ .video_title }}"
+                    ></iframe>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="code-example" class="container mx-auto my-16">
+        <div class="flex flex-col lg:flex-row px-8">
+            <div class="w-full lg:w-1/2 lg:pr-8">
+                <div class="card bg-white p-6 mx-auto h-full">
+                    <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                        {{ range $lang := .Params.kubernetes_overview.ide.tabs }}
+                            <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
+                                {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
+                            </pulumi-choosable>
+                        {{ end }}
+                    </pulumi-chooser>
+                    
                     <div class="flex justify-center items-center mt-8 h-8">
                         <span title="TypeScript">
                             <svg class="mx-4 h-8 rounded" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,8 +158,23 @@
                     </div>
                 </div>
             </div>
+            <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                <h4 class="text-2xl">Deploy Kubernetes Workloads with Ease</h4>
+                <p class="mt-4">Pulumi's Infrastructure as Code approach allows you to define, deploy, and manage Kubernetes resources using familiar programming languages. Create namespaces, deploy Helm charts, and manage your entire Kubernetes infrastructure with the full power of programming languages rather than just YAML.</p>
+                <p class="mt-4">With Pulumi and Kubernetes, you can:</p>
+                <ul class="list-disc pl-5 mt-2">
+                    <li><a href="/docs/iac/get-started/kubernetes/" class="text-blue-600 hover:underline">Run on any cloud</a> including EKS, AKS, GKE, and more</li>
+                    <li><a href="/docs/insights/" class="text-blue-600 hover:underline">Get intelligent cloud management</a> with security and cost insights</li>
+                    <li><a href="/docs/iac/using-pulumi/continuous-delivery/" class="text-blue-600 hover:underline">Automate delivery</a> with CI/CD integrations</li>
+                    <li><a href="/docs/iac/concepts/" class="text-blue-600 hover:underline">Build smart architectures</a> using reusable patterns and components</li>
+                    <li><a href="/docs/iac/using-pulumi/crossguard/" class="text-blue-600 hover:underline">Be proactive with policy as code</a> to enforce security and compliance</li>
+                    <li><a href="/docs/esc/integrations/kubernetes/" class="text-blue-600 hover:underline">Centralize secrets management</a> across your Kubernetes workloads</li>
+                </ul>
+            </div>
         </div>
     </section>
+
+    <!-- Hero section moved to top of page to be alongside the video -->
 
     <!-- Customer logos -->
     <section id="customers" class="my-20 px-4">
@@ -275,26 +301,7 @@
         </section>
     {{ end }}
 
-    {{ with .Params.video_section }}
-        <div class="max-w-4xl my-24 mx-auto px-4">
-            <div class="text-center mb-8">
-                <h2>{{ .title }}</h2>
-                <p class="text-lg">
-                    {{ .subtitle }}
-                </p>
-            </div>
-
-            <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
-            <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; overflow: hidden;">
-                <iframe
-                    src="//www.youtube.com/embed/{{ .youtube_video_id }}?rel=0"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-                    allowfullscreen=""
-                    title="{{ .video_title }}"
-                ></iframe>
-            </div>
-        </div>
-    {{ end }}
+    <!-- Video section moved to the top of the page -->
 
     {{ partial "get-started.html" . }}
 

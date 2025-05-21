@@ -17,7 +17,7 @@ hero:
 video_section:
   title: Pulumi In Action
   subtitle: Watch how easy it is to set up Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
-  youtube_video_id: yA40w1ryMu8
+  youtube_video_id: 2P8JLgAc5QI
   video_title: Watch how easy it is to setup Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
 
 kubernetes_overview:
