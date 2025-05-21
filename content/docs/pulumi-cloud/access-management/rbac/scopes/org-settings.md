@@ -55,7 +55,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 |-------|-------------|
 | `deployments:pause` | Temporarily halt all deployment operations across the organization. This is useful for maintenance or emergency situations.<br><br>**Granted by default roles**: `Admin` |
 | `deployments:read` | View deployment configurations and status across the organization. This provides visibility into all deployment activities.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `deployments:read_usage` | Access deployment usage metrics and statistics. This includes information about resource consumption and operational costs.<br><br>**Granted by default roles**: `Member`, `Admin`, `BillingManagerRole` |
+| `deployments:read_usage` | Access deployment usage metrics and statistics. This includes information about resource consumption and operational costs.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
 | `deployments:resume` | Resume deployment operations after a pause. This restores normal deployment functionality across the organization.<br><br>**Granted by default roles**: `Admin` |
 
 ## IaC Policy
@@ -110,7 +110,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `org_member:access` | Access organization member details and permissions. This is used for managing user roles and access.<br><br>**Granted by default roles**: `Admin` |
 | `org_member:add` | Add a new member to the organization. This enables expanding the team with new users.<br><br>**Granted by default roles**: `Admin` |
 | `org_member:delete` | Remove a member from the organization. This revokes their access and permissions.<br><br>**Granted by default roles**: `Admin` |
-| `org_member:read` | View details about organization members. This includes access to user profiles and roles.<br><br>**Granted by default roles**: `Member`, `Admin`, `BillingManagerRole` |
+| `org_member:read` | View details about organization members. This includes access to user profiles and roles.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
 | `org_member:set_admin` | Grant or revoke admin privileges for an organization member. This controls elevated access.<br><br>**Granted by default roles**: `Admin` |
 | `org_member:update` | Update organization member information and roles. This allows changing user details and permissions.<br><br>**Granted by default roles**: `Admin` |
 | `org_requests:create` | Submit a new request to join or interact with the organization. This is used for onboarding or special access. |
@@ -137,12 +137,12 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `organization:billing` | Manage billing settings and payment methods for the organization. This includes access to invoices and payment history.<br><br>**Granted by default roles**: `Admin`, `BillingManagerRole` |
+| `organization:billing` | Manage billing settings and payment methods for the organization. This includes access to invoices and payment history.<br><br>**Granted by default roles**: `Admin`, `Billing Manager` |
 | `organization:change_backend` | Change the backend infrastructure for the organization. This is used for advanced configuration and migration.<br><br>**Granted by default roles**: `Admin` |
 | `organization:delete` | Delete the organization and all its resources. This is a permanent and irreversible action.<br><br>**Granted by default roles**: `Admin` |
-| `organization:read` | View organization details and settings. This includes access to organizational metadata and configuration.<br><br>**Granted by default roles**: `Member`, `Admin`, `BillingManagerRole` |
-| `organization:read_activity` | View recent activity and audit logs for the organization. This provides insight into changes and events.<br><br>**Granted by default roles**: `Member`, `Admin`, `BillingManagerRole` |
-| `organization:read_usage` | View usage statistics and metrics for the organization. This includes resource consumption and cost data.<br><br>**Granted by default roles**: `Member`, `Admin`, `BillingManagerRole` |
+| `organization:read` | View organization details and settings. This includes access to organizational metadata and configuration.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `organization:read_activity` | View recent activity and audit logs for the organization. This provides insight into changes and events.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `organization:read_usage` | View usage statistics and metrics for the organization. This includes resource consumption and cost data.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
 | `organization:rename` | Change the name of the organization. This updates the organization's display name across the platform.<br><br>**Granted by default roles**: `Admin` |
 | `organization:transfer_stacks` | Transfer ownership of stacks between organizations. This is used for organizational restructuring or migration.<br><br>**Granted by default roles**: `Admin` |
 | `organization:update` | Update organization settings and configurations. This allows changing metadata, policies, and preferences.<br><br>**Granted by default roles**: `Admin` |
@@ -174,7 +174,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `resources:dashboard` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin`, `BillingManagerRole` |
+| `resources:dashboard` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
 | `resources:index` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
 | `resources:search` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
 
@@ -191,7 +191,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `saml:read` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin`, `BillingManagerRole` |
+| `saml:read` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
 | `saml:update` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
 
 ## SCIM
@@ -225,7 +225,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `team:create_token` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
 | `team:delete` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
 | `team:delete_token` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `team:list` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin`, `BillingManagerRole` |
+| `team:list` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
 | `team:list_tokens` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
 | `team:read` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `team:update` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
