@@ -25,16 +25,16 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `stack:cancel_update` | Cancel an ongoing stack update operation. This halts the current deployment or update process.<br><br>**Granted by default permission**: `Stack Write` |
 | `stack:create` | Create a new stack for managing infrastructure resources. Stacks represent isolated units of deployment.<br><br>**Granted by default roles**: `Admin` |
 | `stack:decrypt` | Decrypt sensitive stack data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission**: `Stack Read` |
-| `stack:delete` | Delete a stack and its associated resources. This permanently removes the stack from the organization.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack:delete` | Delete a stack and its associated resources. This permanently removes the stack from the organization.<br><br>**Granted by default permission**: `Stack Admin` |
 | `stack:encrypt` | Encrypt stack data. This secures sensitive information within the stack.<br><br>**Granted by default permission**: `Stack Read` |
 | `stack:export` | Export stack data and configurations. This allows creating backups or migrating stacks.<br><br>**Granted by default permission**: `Stack Read` |
 | `stack:import` | Import resources into a stack. This allows bringing external resources under management.<br><br>**Granted by default permission**: `Stack Write` |
 | `stack:list` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `stack:list_deleted` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
 | `stack:read` | View stack configurations and settings. This provides read-only access to stack details and parameters.<br><br>**Granted by default permission**: `Stack Read` |
-| `stack:rename` | Change the name of a stack. This updates the stack's display name across the platform.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack:rename` | Change the name of a stack. This updates the stack's display name across the platform.<br><br>**Granted by default permission**: `Stack Admin` |
 | `stack:restore_deleted` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `stack:transfer` | Transfer ownership of a stack to another organization or user. This is used for organizational restructuring or migration.<br><br>**Granted by default permission**: `Stack Write` |
+| `stack:transfer` | Transfer ownership of a stack to another organization or user. This is used for organizational restructuring or migration.<br><br>**Granted by default permission**: `Stack Admin` |
 | `stack:write` | Modify stack configurations and settings. This allows updating stack parameters and resource definitions.<br><br>**Granted by default permission**: `Stack Write` |
 
 ## Annotations

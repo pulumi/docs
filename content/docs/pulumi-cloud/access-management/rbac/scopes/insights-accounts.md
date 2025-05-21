@@ -22,9 +22,9 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | Value | Description |
 |-------|-------------|
 | `insights_account_access:read` | View what users and roles can access an insights account.<br><br>**Granted by default permission**: `Account Read` |
-| `insights_account_access:update` | Manage what users and roles can access an insights account.<br><br>**Granted by default permission**: `Account Read` |
+| `insights_account_access:update` | Manage what users and roles can access an insights account.<br><br>**Granted by default permission**: `Account Admin` |
 | `insights_account:create` | Create a new insights account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Admin` |
-| `insights_account:delete` | Remove an existing insights account. This permanently deletes the account and its associated data.<br><br>**Granted by default permission**: `Account Write` |
+| `insights_account:delete` | Remove an existing insights account. This permanently deletes the account and its associated data.<br><br>**Granted by default permission**: `Account Admin` |
 | `insights_account:list` | View all insights accounts in the organization. This provides a list of available accounts and their basic information.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `insights_account:read` | View insights account configurations and data. This includes access to monitoring settings and analysis results.<br><br>**Granted by default permission**: `Account Read` |
 | `insights_account:update` | Modify insights account settings and configurations. This allows updating monitoring parameters and analysis rules.<br><br>**Granted by default permission**: `Account Write` |
