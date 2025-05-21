@@ -74,7 +74,7 @@ Pulumi Cloud provides several default permissions that you can use to quickly ge
 | Permission | Description | Included Scopes |
 |------------|-------------|----------------|
 | `Environment Read` | Basic read-only access to environments | `environment:read`, `environment:rotate_history`, `environment_version:read`, `environment_schedule:read`, `environment_tag:read` |
-| `Environment Open` | Ability to access environment resources | Environment Read, + `environment:open`, `environment:clone`, `environment:read_decrypt`, `environment_version:read_decrypt`, `environment_version:open` |
+| `Environment Open` | Ability to read the environment and access environment secrets | Environment Read, + `environment:open`, `environment:clone`, `environment:read_decrypt`, `environment_version:read_decrypt`, `environment_version:open` |
 | `Environment Write` | Ability to modify environment settings | Environment Open, + `environment:write`, `environment:rotate`, `environment_version:create`, `environment_version:update`, `environment_version:delete`, `environment_version:retract`, `environment_tag:create`, `environment_tag:update`, `environment_tag:delete`, `environment_schedule:create`, `environment_schedule:update`, `environment_schedule:pause`, `environment_schedule:resume`, `environment_schedule:delete`, `environment_webhook:read`, `environment_webhook:create`, `environment_webhook:update`, `environment_webhook:delete` |
 | `Environment Admin` | Full control over environment operations | Environment Write, + `environment:delete` |
 
