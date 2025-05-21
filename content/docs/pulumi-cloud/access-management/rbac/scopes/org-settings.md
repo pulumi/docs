@@ -160,88 +160,88 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `project_annotations:read` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `project_annotations:update` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `project_annotations:read` | Allows reading project-level annotations and metadata associated with a project.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `project_annotations:update` | Allows creating, updating, and deleting project-level annotations and metadata.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Project
 
 | Value | Description |
 |-------|-------------|
-| `project:decrypt` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `project:encrypt` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `project:decrypt` | Allows decrypting sensitive project-level data and secrets.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `project:encrypt` | Allows encrypting sensitive project-level data and secrets.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Resources
 
 | Value | Description |
 |-------|-------------|
-| `resources:dashboard` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
-| `resources:index` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `resources:search` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `resources:dashboard` | Allows viewing the resources dashboard that provides an overview of all resources across the organization.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `resources:index` | Allows accessing the main resources index page and managing resource listings.<br><br>**Granted by default roles**: `Admin` |
+| `resources:search` | Allows searching and filtering through organization resources.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Roles
 
 | Value | Description |
 |-------|-------------|
-| `role:create` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `role:delete` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `role:read` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `role:update` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
+| `role:create` | Allows creating new custom roles with specific permission sets.<br><br>**Granted by default roles**: `Admin` |
+| `role:delete` | Allows deleting existing custom roles.<br><br>**Granted by default roles**: `Admin` |
+| `role:read` | Allows viewing role definitions and their associated permissions.<br><br>**Granted by default roles**: `Admin` |
+| `role:update` | Allows modifying existing custom roles and their permission sets.<br><br>**Granted by default roles**: `Admin` |
 
 ## SAML
 
 | Value | Description |
 |-------|-------------|
-| `saml:read` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
-| `saml:update` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
+| `saml:read` | Allows viewing SAML configuration and settings for the organization.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `saml:update` | Allows configuring and updating SAML settings for the organization.<br><br>**Granted by default roles**: `Admin` |
 
 ## SCIM
 
 | Value | Description |
 |-------|-------------|
-| `scim:delete` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `scim:read` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `scim:update` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
+| `scim:delete` | Allows removing SCIM configurations and terminating SCIM integration.<br><br>**Granted by default roles**: `Admin` |
+| `scim:read` | Allows viewing SCIM configuration and integration settings.<br><br>**Granted by default roles**: `Admin` |
+| `scim:update` | Allows modifying SCIM configuration and integration settings.<br><br>**Granted by default roles**: `Admin` |
 
 ## Services
 
 | Value | Description |
 |-------|-------------|
-| `services:admin` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `services:create` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `services:read` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `services:write` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `services:admin` | Allows full administrative control over service configurations and settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `services:create` | Allows creating new service instances and configurations.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `services:read` | Allows viewing service configurations and their current state.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `services:write` | Allows modifying existing service configurations and settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Tags
 
 | Value | Description |
 |-------|-------------|
-| `tags:read` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `tags:read` | Allows viewing tags and their associated resources across the organization.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Teams
 
 | Value | Description |
 |-------|-------------|
-| `team:create` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `team:create_token` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `team:delete` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `team:delete_token` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `team:list` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
-| `team:list_tokens` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `team:read` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `team:update` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
+| `team:create` | Allows creating new teams within the organization.<br><br>**Granted by default roles**: `Admin` |
+| `team:create_token` | Allows generating new access tokens for team authentication.<br><br>**Granted by default roles**: `Admin` |
+| `team:delete` | Allows removing teams from the organization.<br><br>**Granted by default roles**: `Admin` |
+| `team:delete_token` | Allows revoking team access tokens.<br><br>**Granted by default roles**: `Admin` |
+| `team:list` | Allows viewing all teams in the organization.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `team:list_tokens` | Allows viewing all active access tokens for teams.<br><br>**Granted by default roles**: `Admin` |
+| `team:read` | Allows viewing team details and membership information.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `team:update` | Allows modifying team settings and membership.<br><br>**Granted by default roles**: `Admin` |
 | `github_team:create` | Create a new team that syncs with GitHub. This enables integration between Pulumi and GitHub team structures.<br><br>**Granted by default roles**: `Admin` |
 
 ## Templates
 
 | Value | Description |
 |-------|-------------|
-| `templates:read` | [placeholder]<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `templates:read` | Allows viewing and using available templates for creating new projects and stacks.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Template Sources
 
 | Value | Description |
 |-------|-------------|
-| `templates:source:create` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `templates:source:delete` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `templates:source:read` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
-| `templates:source:update` | [placeholder]<br><br>**Granted by default roles**: `Admin` |
+| `templates:source:create` | Allows adding new template sources to the organization.<br><br>**Granted by default roles**: `Admin` |
+| `templates:source:delete` | Allows removing template sources from the organization.<br><br>**Granted by default roles**: `Admin` |
+| `templates:source:read` | Allows viewing template source configurations and available templates.<br><br>**Granted by default roles**: `Admin` |
+| `templates:source:update` | Allows modifying template source configurations and settings.<br><br>**Granted by default roles**: `Admin` |
