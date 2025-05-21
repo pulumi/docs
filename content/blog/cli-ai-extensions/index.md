@@ -18,7 +18,7 @@ social:
     linkedin: "Excited to announce AI-powered features in the Pulumi CLI! ✨ Our new 'explain' feature translates complex infrastructure changes into clear, human-readable summaries, while our AI error analysis transforms cryptic cloud provider error messages into actionable guidance. Enable with --copilot flag and let us know what you think!"
 ---
 
-Pulumi CLI now features AI capabilities powered by Pulumi Copilot that translate complex infrastructure changes into clear, human-readable explanations and help resolve deployment errors with actionable guidance. Enable these preview features with the `--copilot` flag.
+We're excited to announce the new AI capabilities for Pulumi CLI powered by Pulumi Copilot that translate complex infrastructure changes into clear, human-readable explanations and help resolve deployment errors with actionable guidance. Enable these preview features with the `--copilot` flag.
 
 <!--more-->
 
