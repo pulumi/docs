@@ -18,19 +18,23 @@ social:
     linkedin: "Excited to announce AI-powered features in the Pulumi CLI! ✨ Our new 'explain' feature translates complex infrastructure changes into clear, human-readable summaries, while our AI error analysis transforms cryptic cloud provider error messages into actionable guidance. Enable with --copilot flag and let us know what you think!"
 ---
 
-Pulumi CLI now features AI capabilities that translate complex infrastructure changes into clear, human-readable explanations and help resolve deployment errors with actionable guidance. Enable these preview features with the `--copilot` flag.
+Pulumi CLI now features AI capabilities powered by Pulumi Copilot that translate complex infrastructure changes into clear, human-readable explanations and help resolve deployment errors with actionable guidance. Enable these preview features with the `--copilot` flag.
 
 <!--more-->
 
 At Pulumi, we're committed to helping you deploy infrastructure efficiently and with minimal friction. Anyone who has worked with cloud infrastructure knows the frustration of sifting through large previews with numerous changes and the difficulty of interpreting cryptic error messages from cloud provider APIs when deployments fail.
 
-Error messages from cloud providers, while comprehensive, often bury the core issue within extensive diagnostics, requiring specialized expertise to interpret and address. Similarly, understanding the full scope of pending infrastructure changes can be difficult when reviewing raw update previews, especially for complex deployments with many resources.
+There are two key challenges we've identified:
+
+1. **Understanding Preview Changes**: Reviewing raw update previews can be overwhelming, especially for complex deployments with many resources. It's difficult to quickly grasp the full scope and impact of pending infrastructure changes.
+
+2. **Interpreting Error Messages**: When deployments fail, cloud providers often return error messages that, while comprehensive, bury the core issue within extensive diagnostics, requiring specialized expertise to interpret and address.
 
 Our latest CLI update introduces AI capabilities that tackle both issues. Let's explore how these new features improve your infrastructure management workflow.
 
 ## Update Explanation
 
-We've introduced a new "explain" menu item in the CLI. When running pulumi preview or `pulumi up` with the `--copilot` flag, you'll see this option in the interactive menu:
+To address the first challenge above, we've introduced a new "explain" menu item in the CLI. When running pulumi preview or `pulumi up` with the `--copilot` flag, you'll see this option in the interactive menu:
 
 ![Preview menu with the explain option](preview.png)
 
@@ -45,7 +49,7 @@ This explanation serves as a valuable sanity check before deployment. It present
 
 ## Diagnostics Summarization
 
-When infrastructure deployments fail, cloud providers often return error messages that are technically accurate but difficult to decipher without specialized knowledge. Consider the following scenario where a Go-based Docker image build fails with vendoring issues:
+For the second challenge, when infrastructure deployments fail, cloud providers often return error messages that are technically accurate but difficult to decipher without specialized knowledge. Consider the following scenario where a Go-based Docker image build fails with vendoring issues:
 
 ![Error from the Docker Build provider](summary.png)
 
@@ -76,5 +80,8 @@ We're excited to see how these AI-powered insights enhance your infrastructure d
 
 - Connect with us in the [Pulumi Community Slack](https://slack.pulumi.com)
 - Open an issue on [GitHub](https://github.com/pulumi/pulumi)
+- Learn more about [Pulumi Copilot](http://pulumi.com/copilot)
+
+Try this today, [Get Started with Pulumi for free](https://pulumi.com/start)
 
 Your input will directly influence how we evolve these features from preview to general availability.
