@@ -57,7 +57,7 @@ In this example, the standard Go build process failed with a cryptic error about
 
 This clear explanation identifies root causes and provides actionable guidance, transforming dense technical output into concise explanations. It reduces time to resolution by pinpointing both the problem and the exact command needed to fix it, eliminating the need to search through documentation or guess.
 
-## What's next
+## Getting Started
 
 The AI-powered features are currently in preview. You can enable them by adding the `--copilot` flag to your Pulumi CLI commands:
 
@@ -76,7 +76,7 @@ During this preview period, we're focused on:
 
 We will continue to monitor usage patterns and incorporate your feedback before enabling these features by default.
 
-## Share your feedback
+## Share Your Feedback
 
 We're excited to see how these AI-powered insights enhance your infrastructure deployment workflow! Please share your experiences with us:
 
