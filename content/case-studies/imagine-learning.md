@@ -65,7 +65,7 @@ After evaluating various options, Imagine Learning implemented what Romano calls
 
 Imagine Learning's solution comprises several integrated components that work together to create a seamless workflow from infrastructure provisioning to application deployment:
 
-Imagine Learning chose Pulumi to manage their multi-region infrastructure, leveraging TypeScript instead of specialized domain-specific languages. "Pulumi allows you to write infrastructure as code in a language you already know," explains Romano. "There's no more typing of this very weird syntax that I'm not super familiar with. If I'm writing my application code and I'm moving into writing some infrastructure code, it's the same coding language and the same coding semantics that I'm used to."
+Imagine Learning chose Pulumi to manage their multi-region infrastructure on AWS, leveraging TypeScript instead of specialized domain-specific languages. "Pulumi allows you to write infrastructure as code in a language you already know," explains Romano. "There's no more typing of this very weird syntax that I'm not super familiar with. If I'm writing my application code and I'm moving into writing some infrastructure code, it's the same coding language and the same coding semantics that I'm used to."
 
 The team implemented Pulumi's Crosswalk for AWS library to apply best practices across their infrastructure, creating reusable components for consistency across environments. They managed multiple stacks with different configurations for development, staging, and production, while successfully deploying resources across multiple AWS regions including US-East-1, US-East-2, and US-West-2.
 
