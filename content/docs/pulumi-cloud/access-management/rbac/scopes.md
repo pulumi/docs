@@ -27,7 +27,7 @@ Scopes follow a consistent naming pattern: `object:action`. For example:
 
 Scopes are always associated with a specific [entity type](../permissions#entity-types) (like stacks, environments, insights accounts, etc.) and can only be used within permissions that match that entity type. This ensures that permissions remain logically grouped and can't mix actions across different types of resources.
 
-You can use scopes to build [custom permissions](../permissions#creating-a-custom-permission), which allow you to combine commonly related scopes to create meaningful access patterns. For example, a "Stack Manager" permission might include scopes like:
+You can use scopes to build [custom permissions](../permissions#creating-custom-permissions), which allow you to combine commonly related scopes to create meaningful access patterns. For example, a "Stack Manager" permission might include scopes like:
 
 - `stack:read`
 - `stack:write`
