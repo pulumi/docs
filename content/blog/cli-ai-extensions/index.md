@@ -66,6 +66,8 @@ pulumi preview --copilot
 pulumi up --copilot
 ```
 
+These features require Pulumi CLI version v3.171.0 or greater and the Pulumi Cloud backend. Organization administrators must enable Pulumi Copilot by navigating to **Settings > Access Management > Pulumi Copilot** in the Pulumi Cloud console.
+
 During this preview period, we're focused on:
 
 - Refining explanations based on user feedback
