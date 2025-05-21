@@ -11,7 +11,6 @@ menu:
     parent: iac-clouds
     weight: 1
 cloud_overview: true
-
 description: Streamline Kubernetes cluster configuration, management, and application workload deployments using TypeScript, Python, Go, C#, Java or YAML. Use the Pulumi Kubernetes Operator to manage both Kubernetes and cloud resources.
 get_started_guide:
   link: /docs/iac/get-started/kubernetes/
@@ -67,6 +66,9 @@ guides-description: Learn how to use Pulumi & Kubernetes together.
 guides:
   description: Learn how to use Kubernetes & Pulumi together.
   guides_list:
+  - display_name: Introductory Video
+    url: https://www.youtube.com/watch?v=2P8JLgAc5QI
+    external_link: true
   - display_name: Crosswalk playbooks for Kubernetes
     url: guides/playbooks/
   - display_name: Control plane
@@ -133,5 +135,3 @@ kubernetes_operator:
 aliases:
   - /docs/clouds/kubernetes/
 ---
-
-
