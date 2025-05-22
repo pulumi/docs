@@ -32,6 +32,7 @@ This approach brings the same benefits that have revolutionized software develop
 Infrastructure as Code tools are platforms and frameworks that enable you to define, provision, and manage infrastructure resources through code rather than manual processes. These tools translate your infrastructure definitions into API calls that create, modify, or destroy cloud resources across various providers.
 
 The most effective IaC tools share several key characteristics:
+
 - **Declarative syntax**: Describe what you want, not how to achieve it
 - **Multi-cloud support**: Work across different cloud providers and services
 - **State management**: Track the current state of your infrastructure
@@ -59,6 +60,7 @@ Modern organizations rely on IaC tools for several critical reasons:
 This guide covers the following infrastructure as code tools and platforms:
 
 ### Core Infrastructure Provisioning Tools
+
 1. **Pulumi** - Modern IaC with real programming languages
 2. **Terraform** - The established standard with HCL syntax
 3. **OpenTofu** - Open-source Terraform alternative
@@ -77,11 +79,13 @@ This guide covers the following infrastructure as code tools and platforms:
 16. **Spacelift** - Multi-IaC management platform
 
 ### Additional Infrastructure Tools
-17. **Azure Bicep** - Azure-native DSL
-18. **Brainboard** - Visual infrastructure design
-19. **Kubernetes** - Container orchestration platform
+
+- **Azure Bicep** - Azure-native DSL
+- **Brainboard** - Visual infrastructure design
+- **Kubernetes** - Container orchestration platform
 
 ### Security and Compliance Tools
+
 - **Checkov** - Static analysis for IaC security
 - **KICS** - Infrastructure security scanning
 - **Terrascan** - Compliance violation detection
@@ -109,6 +113,7 @@ Pulumi represents the next generation of infrastructure as code, enabling teams 
 - **Component ecosystem**: Rich library of reusable infrastructure components
 
 **Code Example:**
+
 ```python
 import pulumi
 import pulumi_aws as aws
