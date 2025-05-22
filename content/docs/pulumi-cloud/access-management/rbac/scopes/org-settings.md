@@ -132,8 +132,8 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `organization:update` | Update organization settings and configurations. This allows changing metadata, policies, and preferences.<br><br>**Granted by default roles**: `Admin` |
 | `org_integrations:read` | View organization-level integration settings. This includes access to all configured integrations.<br><br>**Granted by default roles**: `Admin` |
 | `org_integrations:update` | Update organization-level integration settings. This allows modifying or removing integrations.<br><br>**Granted by default roles**: `Admin` |
-| `integrations:read` | View integration configurations for the organization. This includes access to settings for third-party services and tools.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `integrations:update` | Modify integration settings for the organization. This allows updating or reconfiguring third-party service connections.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `integrations:read` | View configuration settings on a per-resource level. This includes access to settings for third-party services and tools.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `integrations:update` | Manage integration settings on a per-resource level. This allows updating or reconfiguring third-party service connections.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Organization Tokens
 
