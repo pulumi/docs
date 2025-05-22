@@ -120,7 +120,7 @@
             <p class="max-w-3xl mx-auto">Define your Kubernetes resources using the programming languages you know and love. With Pulumi's SDK, you can manage both your cloud infrastructure and Kubernetes workloads with the same tools.</p>
         </div>
         <div class="px-8">
-            <div class="w-full">
+            <div class="max-w-4xl container mx-auto">
                 <div class="card bg-white p-6 mx-auto h-full">
                     <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
                         {{ range $lang := .Params.kubernetes_overview.ide.tabs }}
