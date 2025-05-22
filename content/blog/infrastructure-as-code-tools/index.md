@@ -200,6 +200,7 @@ resource "aws_subnet" "public" {
 OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides full compatibility with Terraform while ensuring long-term open-source availability.
 
 **Key Features:**
+
 - **Terraform compatibility**: Drop-in replacement with existing workflows
 - **Community governance**: Managed by the Linux Foundation
 - **Open source commitment**: Guaranteed to remain open source
@@ -207,6 +208,7 @@ OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license cha
 - **Provider ecosystem**: Compatible with existing Terraform providers
 
 **Code Example:**
+
 ```hcl
 resource "aws_instance" "web" {
   ami           = "ami-0c55b159cbfafe1d0"
@@ -230,6 +232,7 @@ output "instance_ip" {
 AWS CDK allows you to define AWS infrastructure using familiar programming languages, synthesizing CloudFormation templates for deployment while providing higher-level abstractions.
 
 **Key Features:**
+
 - **Multiple languages**: TypeScript, Python, Java, C#, Go
 - **Constructs library**: High-level components for common AWS patterns
 - **CloudFormation backend**: Leverages proven CloudFormation deployment engine
@@ -237,6 +240,7 @@ AWS CDK allows you to define AWS infrastructure using familiar programming langu
 - **AWS service integration**: Deep integration with AWS services and best practices
 
 **Code Example:**
+
 ```typescript
 import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
