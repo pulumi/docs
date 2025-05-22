@@ -22,16 +22,11 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | Value | Description |
 |-------|-------------|
 | `environment:clone` | Create a copy of an existing environment with all its configurations. This is useful for creating staging or testing environments.<br><br>**Granted by default permission**: `Environment Open` |
-| `environment:create` | Create a new environment for managing infrastructure configurations. Environments provide isolated spaces for different deployment stages.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `environment:read_decrypt` | Access and decrypt sensitive environment data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission**: `Environment Open` |
 | `environment:delete` | Remove an environment and its associated resources. This permanently deletes the environment and its configurations.<br><br>**Granted by default permission**: `Environment Admin` |
-| `environment:list` | View all environments in the organization. This provides a list of available environments and their basic information.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `environment:list_deleted` | View a list of environments that have been deleted but are still recoverable. This helps in managing and potentially restoring deleted environments.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `environment:open` | Access and interact with an environment's resources. This includes the ability to view and modify environment configurations.<br><br>**Granted by default permission**: `Environment Open` |
 | `environment:read` | View environment configurations and settings. This provides read-only access to environment details and parameters.<br><br>**Granted by default permission**: `Environment Read` |
-| `environment:restore_deleted` | Recover a previously deleted environment. This restores the environment and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
 | `environment:write` | Modify environment configurations and settings. This allows updating environment parameters and resource definitions.<br><br>**Granted by default permission**: `Environment Write` |
-| `environment_yaml:open` | Access and view environment configuration in YAML format. This provides a structured view of environment settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Environment Secrets Rotation
 
@@ -59,7 +54,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `environment_tag:delete` | Remove a tag from an environment. This allows cleaning up or reorganizing environment categorization.<br><br>**Granted by default permission**: `Environment Write` |
 | `environment_tag:read` | View tags associated with environments. This provides access to environment categorization and metadata.<br><br>**Granted by default permission**: `Environment Read` |
 | `environment_tag:update` | Modify existing environment tags. This allows updating tag values and metadata.<br><br>**Granted by default permission**: `Environment Write` |
-| `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission**: `Environment Read` |
 
 ## Environment Versions
 

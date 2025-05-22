@@ -42,6 +42,15 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `audit_logs:export` | Export audit log data for compliance and analysis purposes. This enables downloading audit records in various formats.<br><br>**Granted by default roles**: `Admin` |
 | `audit_logs:read` | Access and view audit logs of organization activities. This provides visibility into system events and user actions.<br><br>**Granted by default roles**: `Admin` |
 
+## Environments
+
+| `environment:create` | Create a new environment for managing infrastructure configurations. Environments provide isolated spaces for different deployment stages.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `environment:list` | View all environments in the organization. This provides a list of available environments and their basic information.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `environment:list_deleted` | View a list of environments that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `environment:restore_deleted` | Recover a previously deleted environment. This restores the environment and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
+| `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission**: `Environment Read` |
+| `environment_yaml:open` | Access and view environment configuration in YAML format. This provides a structured view of environment settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
+
 ## OIDC
 
 | Value | Description |
@@ -71,6 +80,12 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `iac_policy_pack:read` | View Infrastructure as Code policy pack contents. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Admin` |
 | `iac_policy_pack:update` | Modify an existing Infrastructure as Code policy pack. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
 | `iac_policy_results:read` | View results of Infrastructure as Code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `Admin` |
+
+## Insights Accounts
+
+| Value | Description |
+|-------|-------------|
+| `insights_account:list` | View all insights accounts in the organization, subject to having `account:read` permissions on specific accounts.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Membership
 
@@ -209,6 +224,15 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `services:create` | Allows creating new service instances and configurations.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `services:read` | Allows viewing service configurations and their current state.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `services:write` | Allows modifying existing service configurations and settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
+
+## Stacks
+
+| Value | Description |
+|-------|-------------|
+| `stack:list` | View all stacks in the organization, subject to having `stack:read` permissions on specific stacks.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `stack:list_deleted` | View a list of stacks that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Admin` |
+| `stack:restore_deleted` | Recover a previously deleted stack. This restores the stack and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
+| `stack_access:read` | View information about the users and teams that have access to a stack.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Tags
 
