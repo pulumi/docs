@@ -66,6 +66,9 @@ guides-description: Learn how to use Pulumi & Kubernetes together.
 guides:
   description: Learn how to use Kubernetes & Pulumi together.
   guides_list:
+  - display_name: Introductory Video
+    url: https://www.youtube.com/watch?v=2P8JLgAc5QI
+    external_link: true
   - display_name: Crosswalk playbooks for Kubernetes
     url: guides/playbooks/
   - display_name: Control plane

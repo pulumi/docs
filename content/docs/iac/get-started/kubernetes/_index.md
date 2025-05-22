@@ -36,4 +36,15 @@ For a quick example of how Pulumi deploys infrastructure on Kubernetes, this tut
 1. Creating a service to access the NGINX deployment.
 1. Cleaning up your deployment by destroying the resources you've provisioned.
 
+Before you begin, watch this overview of how to deploy Kubernetes infrastructure with Pulumi:
+
+<div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+    <iframe
+        src="//www.youtube.com/embed/2P8JLgAc5QI?rel=0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+        allowfullscreen=""
+        title="Getting Started with Kubernetes and Pulumi: Deploy Amazon EKS in 5 minutes">
+    </iframe>
+</div>
+
 {{< get-started-stepper >}}

@@ -12,34 +12,124 @@
 {{ define "main" }}
     {{ $pageContext := . }}
 
-
-    <section id="overview" class="my-16">
-        <div class="flex flex-wrap container mx-auto">
-            <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
+    <section id="description" class="container mx-auto my-16 flex flex-col">
+        <div class="flex flex-col lg:flex-row px-8">
+            <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first">
                 <h2>{{ .Params.hero.title }}</h2>
-                <p class="mr-4">{{ .Params.hero.body | markdownify }}</p>
-                <div>
-                    <div class="flex justify-start items-start mt-8">
-                        <div class="flex flex-col lg:flex-row items-start">
-                            <a class="btn-primary mr-4" href="{{ relref . "/docs/iac/get-started/kubernetes/" }}">Get Started</a>
-                            <a class="btn-secondary" href="#contact">Request A Demo</a>
-                        </div>
+                <p>{{ .Params.hero.body | markdownify }}</p>
+                <div class="mt-8 flex justify-start items-start">
+                    <div class="flex flex-col lg:flex-row items-start">
+                        <a class="btn-primary mr-4" href="{{ relref . "/docs/iac/get-started/kubernetes/" }}">Get Started</a>
+                        <a class="btn-secondary" href="#contact">Request A Demo</a>
                     </div>
                 </div>
             </div>
-            <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
-                <div>
-                    <div>
-                        <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
-                            <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                                {{ range $lang := .Params.kubernetes_overview.ide.tabs }}
-                                    <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
-                                        {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
-                                    </pulumi-choosable>
-                                {{ end }}
-                            </pulumi-chooser>
+            {{ with .Params.video_section }}
+            <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 50.25%;">
+                    <iframe
+                        src="https://www.youtube.com/embed/{{ .youtube_video_id }}?rel=0"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen=""
+                        title="{{ .video_title }}"
+                    ></iframe>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- Code example section hidden as requested -->
+
+    <!-- Hero section moved to top of page to be alongside the video -->
+
+    <!-- Customer logos -->
+    <section id="customers" class="my-20 px-4">
+        <h3 class="mt-12 mb-8 text-center">Powering top engineering teams</h3>
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-center my-4">
+                <a data-track="customer-logo" href="/case-studies/snowflake" target="_blank">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake" />
+                </a>
+                <a data-track="customer-logo" href="/case-studies/mercedes-benz" target="_blank">
+                    <img
+                        class="mx-auto my-4 lg:my-2 lg:mx-8 h-12"
+                        src="/logos/customers/mercedes-benz-RDNA_logo.png"
+                        title="Mercedes-Benz Research and Development"
+                        alt="Mercedes-Benz Research and Development"
+                    />
+                </a>
+                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-10" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody" />
+                </a>
+                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-10" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health" />
+                </a>
+            </div>
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="/case-studies/sourcegraph" target="_blank">
+                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph" />
+                </a>
+                <a data-track="customer-logo" href="/case-studies/lemonade" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade" />
+                </a>
+                <a data-track="customer-logo" href="/case-studies/bmw" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/bmw.svg" alt="BMW Group" title="BMW Group" />
+                </a>
+                <a data-track="customer-logo" href="/case-studies/unity" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/unity.png" alt="Unity" title="Unity" />
+                </a>
+                <a data-track="customer-logo" href="/case-studies/starburst" target="_blank">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/starburst.png" alt="Starburst" title="Starburst" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="kubernetes-overview" class="py-16 px-4 lg:px-0">
+        <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
+            {{ with .Params.kubernetes_overview }}
+                <div class="lg:w-1/2">
+                    <div class="mx-auto">
+                        <img src="/images/topics/kubernetes/k8s-diagram.png"/>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="md:px-24 lg:px-4">
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description }}</p>
+                        <ul>
+                            {{ range $i, $item := .list }}
+                                <li>{{ $item | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                        <div class="my-8">
+                            <a class="btn-secondary lg:inline-block" href="{{ relref $pageContext .cta_url }}">
+                                {{ .cta }}
+                            </a>
                         </div>
                     </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    
+    <section id="code-example" class="container mx-auto my-16">
+        <div class="text-center mb-8">
+            <h3>Infrastructure as Code for Kubernetes</h3>
+            <p class="max-w-3xl mx-auto">Define your Kubernetes resources using the programming languages you know and love. With Pulumi's SDK, you can manage both your cloud infrastructure and Kubernetes workloads with the same tools.</p>
+        </div>
+        <div class="px-8">
+            <div class="w-full">
+                <div class="card bg-white p-6 mx-auto h-full">
+                    <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                        {{ range $lang := .Params.kubernetes_overview.ide.tabs }}
+                            <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
+                                {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
+                            </pulumi-choosable>
+                        {{ end }}
+                    </pulumi-chooser>
+                    
                     <div class="flex justify-center items-center mt-8 h-8">
                         <span title="TypeScript">
                             <svg class="mx-4 h-8 rounded" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,77 +238,7 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Customer logos -->
-    <section id="customers" class="my-20 px-4">
-        <h3 class="mt-12 mb-8 text-center">Powering top engineering teams</h3>
-        <div class="container mx-auto">
-            <div class="flex flex-col lg:flex-row items-center justify-center my-4">
-                <a data-track="customer-logo" href="/case-studies/snowflake" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake" />
-                </a>
-                <a data-track="customer-logo" href="/case-studies/mercedes-benz" target="_blank">
-                    <img
-                        class="mx-auto my-4 lg:my-2 lg:mx-8 h-12"
-                        src="/logos/customers/mercedes-benz-RDNA_logo.png"
-                        title="Mercedes-Benz Research and Development"
-                        alt="Mercedes-Benz Research and Development"
-                    />
-                </a>
-                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-10" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody" />
-                </a>
-                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-10" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health" />
-                </a>
-            </div>
-            <div class="lg:flex items-center justify-center my-4">
-                <a data-track="customer-logo" href="/case-studies/sourcegraph" target="_blank">
-                    <img class="mx-auto my-4 lg:my-2 lg:mx-8 h-12" src="/logos/customers/sourcegraph-logo.svg" alt="Sourcegraph" title="Sourcegraph" />
-                </a>
-                <a data-track="customer-logo" href="/case-studies/lemonade" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade" />
-                </a>
-                <a data-track="customer-logo" href="/case-studies/bmw" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/bmw.svg" alt="BMW Group" title="BMW Group" />
-                </a>
-                <a data-track="customer-logo" href="/case-studies/unity" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/unity.png" alt="Unity" title="Unity" />
-                </a>
-                <a data-track="customer-logo" href="/case-studies/starburst" target="_blank">
-                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-8" src="/logos/customers/starburst.png" alt="Starburst" title="Starburst" />
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="kubernetes-overview" class="py-16 px-4 lg:px-0">
-        <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
-            {{ with .Params.kubernetes_overview }}
-                <div class="lg:w-1/2">
-                    <div class="mx-auto">
-                        <img src="/images/topics/kubernetes/k8s-diagram.png"/>
-                    </div>
-                </div>
-                <div class="lg:w-1/2">
-                    <div class="md:px-24 lg:px-4">
-                        <h3>{{ .title }}</h3>
-                        <p>{{ .description }}</p>
-                        <ul>
-                            {{ range $i, $item := .list }}
-                                <li>{{ $item | markdownify }}</li>
-                            {{ end }}
-                        </ul>
-                        <div class="my-8">
-                            <a class="btn-secondary lg:inline-block" href="{{ relref $pageContext .cta_url }}">
-                                {{ .cta }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            {{ end }}
-        </div>
     </section>
 
     <section id="superpowers" class="container mx-auto text-center mt-16">
@@ -275,26 +295,7 @@
         </section>
     {{ end }}
 
-    {{ with .Params.video_section }}
-        <div class="max-w-4xl my-24 mx-auto px-4">
-            <div class="text-center mb-8">
-                <h2>{{ .title }}</h2>
-                <p class="text-lg">
-                    {{ .subtitle }}
-                </p>
-            </div>
-
-            <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
-            <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; overflow: hidden;">
-                <iframe
-                    src="//www.youtube.com/embed/{{ .youtube_video_id }}?rel=0"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-                    allowfullscreen=""
-                    title="{{ .video_title }}"
-                ></iframe>
-            </div>
-        </div>
-    {{ end }}
+    <!-- Video section moved to the top of the page -->
 
     {{ partial "get-started.html" . }}
 
