@@ -35,12 +35,28 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `agent_pool:read` | View agent pool configurations and status. This includes access to pool settings, agent status, and operational metrics.<br><br>**Granted by default roles**: `Admin` |
 | `agent_pool:update` | Modify agent pool settings and configurations. This allows updating pool parameters, scaling settings, and agent configurations.<br><br>**Granted by default roles**: `Admin` |
 
+## Annotations
+
+| Value | Description |
+|-------|-------------|
+| `organization_annotations:read` | View annotations attached to the organization. This provides context and metadata for organizational resources.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `organization_annotations:update` | Modify or add annotations to the organization. This allows updating organizational metadata.<br><br>**Granted by default roles**: `Admin` |
+
 ## Audit Logs
 
 | Value | Description |
 |-------|-------------|
 | `audit_logs:export` | Export audit log data for compliance and analysis purposes. This enables downloading audit records in various formats.<br><br>**Granted by default roles**: `Admin` |
 | `audit_logs:read` | Access and view audit logs of organization activities. This provides visibility into system events and user actions.<br><br>**Granted by default roles**: `Admin` |
+
+## Deployments
+
+| Value | Description |
+|-------|-------------|
+| `deployments:pause` | Temporarily halt all deployment operations across the organization. This is useful for maintenance or emergency situations.<br><br>**Granted by default roles**: `Admin` |
+| `deployments:read` | View deployment configurations and status across the organization. This provides visibility into all deployment activities.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `deployments:read_usage` | Access deployment usage metrics and statistics. This includes information about resource consumption and operational costs.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `deployments:resume` | Resume deployment operations after a pause. This restores normal deployment functionality across the organization.<br><br>**Granted by default roles**: `Admin` |
 
 ## Environments
 
@@ -52,15 +68,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `environment:restore_deleted` | Recover a previously deleted environment. This restores the environment and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
 | `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission**: `Environment Read` |
 | `environment_yaml:open` | Access and view environment configuration in YAML format. This provides a structured view of environment settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
-
-## Deployments
-
-| Value | Description |
-|-------|-------------|
-| `deployments:pause` | Temporarily halt all deployment operations across the organization. This is useful for maintenance or emergency situations.<br><br>**Granted by default roles**: `Admin` |
-| `deployments:read` | View deployment configurations and status across the organization. This provides visibility into all deployment activities.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `deployments:read_usage` | Access deployment usage metrics and statistics. This includes information about resource consumption and operational costs.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
-| `deployments:resume` | Resume deployment operations after a pause. This restores normal deployment functionality across the organization.<br><br>**Granted by default roles**: `Admin` |
 
 ## IaC Policy
 
@@ -86,15 +93,17 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
+| `org_member:add` | Add a new member to the organization. This enables expanding the team with new users.<br><br>**Granted by default roles**: `Admin` |
+| `org_member:delete` | Remove a member from the organization. This revokes their access and permissions.<br><br>**Granted by default roles**: `Admin` |
+| `org_member:read` | View details about organization members. This includes access to user profiles and roles.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
+| `org_member:set_admin` | Grant or revoke admin privileges for an organization member. This controls elevated access.<br><br>**Granted by default roles**: `Admin` |
+| `org_member:update` | Update organization member information and roles. This allows changing user details and permissions.<br><br>**Granted by default roles**: `Admin` |
+| `org_requests:create` | Submit a new request to join or interact with the organization. This is used for onboarding or special access. |
+| `org_requests:read` | View all organization requests. This provides visibility into pending and processed requests.<br><br>**Granted by default roles**: `Admin` |
+| `org_requests:status` | Check the status of an organization request. This helps track onboarding or access progress. |
+| `org_requests:update` | Update or process organization requests. This allows approving or denying requests.<br><br>**Granted by default roles**: `Admin` |
 | `invites:create` | Send invitations to new users to join the organization. This enables onboarding of new team members.<br><br>**Granted by default roles**: `Admin` |
 | `invites:read` | View pending and sent invitations for organization membership. This provides visibility into user onboarding status.<br><br>**Granted by default roles**: `Admin` |
-
-## Organization
-
-| Value | Description |
-|-------|-------------|
-| `integrations:read` | View integration configurations for the organization. This includes access to settings for third-party services and tools.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `integrations:update` | Modify integration settings for the organization. This allows updating or reconfiguring third-party service connections.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## OIDC
 
@@ -106,43 +115,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `oidc_issuers:regenerate_thumbprints` | Regenerate security thumbprints for an OIDC issuer. This is used to maintain secure authentication.<br><br>**Granted by default roles**: `Admin` |
 | `oidc_issuers:update` | Modify OIDC issuer settings. This allows updating identity provider details and authentication parameters.<br><br>**Granted by default roles**: `Admin` |
 | `auth_policies:read` | View authentication policy configurations. This includes access to OIDC, SAML, and other identity provider settings.<br><br>**Granted by default roles**: `Admin` |
-| `auth_policies:update` | Modify authentication policies and identity provider settings. This allows updating security configurations and access rules.<br><br>**Granted by default roles**: `Admin` |
-
-## Organization
-
-| Value | Description |
-|-------|-------------|
-| `org_integrations:read` | View organization-level integration settings. This includes access to all configured integrations.<br><br>**Granted by default roles**: `Admin` |
-| `org_integrations:update` | Update organization-level integration settings. This allows modifying or removing integrations.<br><br>**Granted by default roles**: `Admin` |
-
-## Membership
-
-| Value | Description |
-|-------|-------------|
-| `org_member:add` | Add a new member to the organization. This enables expanding the team with new users.<br><br>**Granted by default roles**: `Admin` |
-| `org_member:delete` | Remove a member from the organization. This revokes their access and permissions.<br><br>**Granted by default roles**: `Admin` |
-| `org_member:read` | View details about organization members. This includes access to user profiles and roles.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
-| `org_member:set_admin` | Grant or revoke admin privileges for an organization member. This controls elevated access.<br><br>**Granted by default roles**: `Admin` |
-| `org_member:update` | Update organization member information and roles. This allows changing user details and permissions.<br><br>**Granted by default roles**: `Admin` |
-| `org_requests:create` | Submit a new request to join or interact with the organization. This is used for onboarding or special access. |
-| `org_requests:read` | View all organization requests. This provides visibility into pending and processed requests.<br><br>**Granted by default roles**: `Admin` |
-| `org_requests:status` | Check the status of an organization request. This helps track onboarding or access progress. |
-| `org_requests:update` | Update or process organization requests. This allows approving or denying requests.<br><br>**Granted by default roles**: `Admin` |
-
-## Organization Tokens
-
-| Value | Description |
-|-------|-------------|
-| `org_token:create` | Create a new organization API token. This enables programmatic access to organization resources.<br><br>**Granted by default roles**: `Admin` |
-| `org_token:delete` | Delete an existing organization API token. This revokes programmatic access.<br><br>**Granted by default roles**: `Admin` |
-| `org_token:read` | View organization API tokens. This includes access to token details and usage.<br><br>**Granted by default roles**: `Admin` |
-
-## Annotations
-
-| Value | Description |
-|-------|-------------|
-| `organization_annotations:read` | View annotations attached to the organization. This provides context and metadata for organizational resources.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `organization_annotations:update` | Modify or add annotations to the organization. This allows updating organizational metadata.<br><br>**Granted by default roles**: `Admin` |
+| `auth_policies:update` | Modify authentication policies and identity provider settings. This allows updating security configurations
 
 ## Organization
 
@@ -157,8 +130,20 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `organization:rename` | Change the name of the organization. This updates the organization's display name across the platform.<br><br>**Granted by default roles**: `Admin` |
 | `organization:transfer_stacks` | Transfer ownership of stacks between organizations. This is used for organizational restructuring or migration.<br><br>**Granted by default roles**: `Admin` |
 | `organization:update` | Update organization settings and configurations. This allows changing metadata, policies, and preferences.<br><br>**Granted by default roles**: `Admin` |
+| `org_integrations:read` | View organization-level integration settings. This includes access to all configured integrations.<br><br>**Granted by default roles**: `Admin` |
+| `org_integrations:update` | Update organization-level integration settings. This allows modifying or removing integrations.<br><br>**Granted by default roles**: `Admin` |
+| `integrations:read` | View integration configurations for the organization. This includes access to settings for third-party services and tools.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `integrations:update` | Modify integration settings for the organization. This allows updating or reconfiguring third-party service connections.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
-## Org Webhooks
+## Organization Tokens
+
+| Value | Description |
+|-------|-------------|
+| `org_token:create` | Create a new organization API token. This enables programmatic access to organization resources.<br><br>**Granted by default roles**: `Admin` |
+| `org_token:delete` | Delete an existing organization API token. This revokes programmatic access.<br><br>**Granted by default roles**: `Admin` |
+| `org_token:read` | View organization API tokens. This includes access to token details and usage.<br><br>**Granted by default roles**: `Admin` |
+
+## Organization Webhooks
 
 | Value | Description |
 |-------|-------------|
