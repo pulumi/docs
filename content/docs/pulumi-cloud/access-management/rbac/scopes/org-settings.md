@@ -53,13 +53,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission**: `Environment Read` |
 | `environment_yaml:open` | Access and view environment configuration in YAML format. This provides a structured view of environment settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
-## OIDC
-
-| Value | Description |
-|-------|-------------|
-| `auth_policies:read` | View authentication policy configurations. This includes access to OIDC, SAML, and other identity provider settings.<br><br>**Granted by default roles**: `Admin` |
-| `auth_policies:update` | Modify authentication policies and identity provider settings. This allows updating security configurations and access rules.<br><br>**Granted by default roles**: `Admin` |
-
 ## Org Deployments
 
 | Value | Description |
@@ -112,6 +105,8 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `oidc_issuers:read` | View OIDC issuer configurations. This includes access to identity provider details and settings.<br><br>**Granted by default roles**: `Admin` |
 | `oidc_issuers:regenerate_thumbprints` | Regenerate security thumbprints for an OIDC issuer. This is used to maintain secure authentication.<br><br>**Granted by default roles**: `Admin` |
 | `oidc_issuers:update` | Modify OIDC issuer settings. This allows updating identity provider details and authentication parameters.<br><br>**Granted by default roles**: `Admin` |
+| `auth_policies:read` | View authentication policy configurations. This includes access to OIDC, SAML, and other identity provider settings.<br><br>**Granted by default roles**: `Admin` |
+| `auth_policies:update` | Modify authentication policies and identity provider settings. This allows updating security configurations and access rules.<br><br>**Granted by default roles**: `Admin` |
 
 ## Organization
 
