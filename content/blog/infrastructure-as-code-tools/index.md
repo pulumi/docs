@@ -1,7 +1,7 @@
 ---
 title: "Most Effective Infrastructure as Code (IaC) Tools for 2025"
 date: 2025-01-22T09:00:00-08:00
-draft: true
+draft: false
 meta_desc: "Complete guide to the most effective IaC tools for 2025. Compare Pulumi, Terraform, OpenTofu, AWS CDK, and more to find the perfect solution."
 authors:
     - asaf-ashirov
@@ -274,6 +274,7 @@ export class MyStack extends cdk.Stack {
 AWS CloudFormation provides the foundation for infrastructure as code on AWS, offering native integration with all AWS services and deep platform-specific features.
 
 **Key Features:**
+
 - **AWS-native**: First-party support for all AWS services
 - **JSON/YAML templates**: Declarative resource definitions
 - **Stack management**: Organized resource grouping and lifecycle management
@@ -281,6 +282,7 @@ AWS CloudFormation provides the foundation for infrastructure as code on AWS, of
 - **Service integration**: Deep integration with other AWS services
 
 **Code Example:**
+
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
 Resources:
