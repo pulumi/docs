@@ -21,7 +21,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `stack:access` | Access stack resources and perform write operations. This includes updating stack configurations and deployments.<br><br>**Granted by default roles**: `Admin`<br><br>**Granted by default permission**: `Stack Write` |
 | `stack:cancel_update` | Cancel an ongoing stack update operation. This halts the current deployment or update process.<br><br>**Granted by default permission**: `Stack Write` |
 | `stack:create` | Create a new stack for managing infrastructure resources. Stacks represent isolated units of deployment.<br><br>**Granted by default roles**: `Admin` |
 | `stack:decrypt` | Decrypt sensitive stack data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission**: `Stack Read` |
@@ -48,13 +47,9 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `stack_deployment_cache:clean` | Clear the deployment cache for a stack. This removes cached deployment artifacts and data.<br><br>**Granted by default permission**: `Stack Write` |
 | `stack_deployment_cache:read` | View the deployment cache for a stack. This includes access to cached deployment artifacts and data.<br><br>**Granted by default permission**: `Stack Write` |
-| `stack_deployment:cancel` | Cancel an ongoing stack deployment. This halts the current deployment process.<br><br>**Granted by default permission**: `Stack Write` |
 | `stack_deployment:create` | Create a new deployment for a stack. This initiates the deployment process for infrastructure resources.<br><br>**Granted by default permission**: `Stack Write` |
-| `stack_deployment:pause` | Pause an ongoing stack deployment. This temporarily halts the deployment process.<br><br>**Granted by default permission**: `Stack Write` |
 | `stack_deployment:read` | View details of stack deployments. This includes access to deployment status and history.<br><br>**Granted by default permission**: `Stack Read` |
-| `stack_deployment:resume` | Resume a paused stack deployment. This continues the deployment process from where it was paused.<br><br>**Granted by default permission**: `Stack Write` |
 | `stack_deployment_settings:encrypt` | Encrypt deployment settings for a stack. This secures sensitive configuration data.<br><br>**Granted by default permission**: `Stack Write` |
 | `stack_deployment_settings:read` | View deployment settings for a stack. This includes access to configuration parameters and metadata.<br><br>**Granted by default permission**: `Stack Read` |
 | `stack_deployment_settings:write` | Modify deployment settings for a stack. This allows updating configuration parameters and metadata.<br><br>**Granted by default permission**: `Stack Write` |
@@ -75,13 +70,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | Value | Description |
 |-------|-------------|
 | `stack_tags:update` | Update tags associated with a stack. This helps in organizing and categorizing stack resources.<br><br>**Granted by default permission**: `Stack Write` |
-
-## Stacks
-
-| Value | Description |
-|-------|-------------|
-| `stack_teams:read` | View teams associated with a stack. This provides visibility into team access and collaboration.<br><br>**Granted by default permission**: `Stack Read` |
-| `stack_teams:update` | Modify teams associated with a stack. This allows updating team access and collaboration settings.<br><br>**Granted by default permission**: `Stack Write` |
 
 ## Stack Webhooks
 

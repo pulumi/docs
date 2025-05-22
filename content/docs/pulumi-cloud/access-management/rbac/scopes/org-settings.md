@@ -107,7 +107,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `org_member:access` | Access organization member details and permissions. This is used for managing user roles and access.<br><br>**Granted by default roles**: `Admin` |
 | `org_member:add` | Add a new member to the organization. This enables expanding the team with new users.<br><br>**Granted by default roles**: `Admin` |
 | `org_member:delete` | Remove a member from the organization. This revokes their access and permissions.<br><br>**Granted by default roles**: `Admin` |
 | `org_member:read` | View details about organization members. This includes access to user profiles and roles.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
