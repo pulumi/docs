@@ -311,12 +311,14 @@ Resources:
 Terragrunt acts as a wrapper around Terraform, providing additional functionality for managing complex, multi-environment Terraform deployments with reduced code duplication.
 
 **Key Features:**
+
 - **DRY configurations**: Eliminate repetitive Terraform code
 - **Dependency management**: Handle complex module dependencies
 - **Remote state management**: Automated backend configuration
 - **Environment management**: Consistent configurations across environments
 
 **Code Example:**
+
 ```hcl
 # terragrunt.hcl
 terraform {
@@ -341,12 +343,14 @@ inputs = {
 Azure Resource Manager provides the native infrastructure as code solution for Microsoft Azure, offering comprehensive support for Azure services through ARM templates.
 
 **Key Features:**
+
 - **Azure-native**: Complete Azure service coverage
 - **JSON template format**: Declarative infrastructure definitions
 - **Resource groups**: Logical organization of related resources
 - **Deployment modes**: Complete or incremental deployment options
 
 **Code Example:**
+
 ```json
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
@@ -374,12 +378,14 @@ Azure Resource Manager provides the native infrastructure as code solution for M
 Google Cloud Deployment Manager enables infrastructure as code specifically for Google Cloud Platform resources using YAML, Python, or Jinja2 templates.
 
 **Key Features:**
+
 - **GCP-native**: Full Google Cloud Platform service support
 - **Multiple template formats**: YAML, Python, or Jinja2
 - **Deployment previews**: Preview changes before applying
 - **Integration**: Works with other Google Cloud tools and services
 
 **Code Example:**
+
 ```yaml
 resources:
 - name: my-vm
@@ -409,6 +415,7 @@ resources:
 Crossplane transforms Kubernetes into a universal control plane for infrastructure, allowing teams to provision and manage cloud resources using Kubernetes APIs and patterns.
 
 **Key Features:**
+
 - **Kubernetes-native**: Uses CRDs and standard Kubernetes patterns
 - **Composite resources**: Create higher-level infrastructure abstractions
 - **GitOps compatibility**: Seamless integration with GitOps workflows
@@ -416,6 +423,7 @@ Crossplane transforms Kubernetes into a universal control plane for infrastructu
 - **Policy integration**: Leverage Kubernetes RBAC and admission controllers
 
 **Code Example:**
+
 ```yaml
 apiVersion: ec2.aws.crossplane.io/v1alpha1
 kind: VPC
@@ -438,12 +446,14 @@ spec:
 Kubernetes Operators extend the Kubernetes API to manage complex applications and infrastructure using custom resources and controllers that encode operational knowledge.
 
 **Key Features:**
+
 - **Custom resources**: Application-specific APIs and abstractions
 - **Controller patterns**: Automated reconciliation and self-healing
 - **Operator Hub**: Community marketplace for operators
 - **Lifecycle management**: Automated installation, updates, and maintenance
 
 **Code Example:**
+
 ```yaml
 apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
@@ -469,6 +479,7 @@ spec:
 Ansible provides both configuration management and infrastructure provisioning through its agentless architecture and simple YAML-based playbooks.
 
 **Key Features:**
+
 - **Agentless architecture**: No software installation required on target systems
 - **YAML playbooks**: Human-readable automation definitions
 - **Idempotent operations**: Safe to run multiple times
@@ -476,6 +487,7 @@ Ansible provides both configuration management and infrastructure provisioning t
 - **Push-based execution**: Centralized control and execution
 
 **Code Example:**
+
 ```yaml
 ---
 - name: Provision AWS infrastructure
@@ -507,6 +519,7 @@ Ansible provides both configuration management and infrastructure provisioning t
 Chef provides configuration management and infrastructure automation using Ruby-based recipes and cookbooks, offering powerful programmability for complex scenarios.
 
 **Key Features:**
+
 - **Ruby DSL**: Full programming language for configuration logic
 - **Agent-based architecture**: Continuous compliance and drift detection
 - **Cookbook ecosystem**: Reusable configuration patterns and community recipes
@@ -514,6 +527,7 @@ Chef provides configuration management and infrastructure automation using Ruby-
 - **Enterprise features**: Advanced reporting and compliance capabilities
 
 **Code Example:**
+
 ```ruby
 # cookbook/recipes/default.rb
 package 'nginx' do
@@ -541,6 +555,7 @@ end
 Puppet offers enterprise-grade configuration management with a focus on compliance, governance, and declarative system state management.
 
 **Key Features:**
+
 - **Declarative language**: Puppet DSL for describing desired system state
 - **Compliance reporting**: Built-in governance and audit capabilities
 - **Forge marketplace**: Community modules and enterprise content
@@ -548,6 +563,7 @@ Puppet offers enterprise-grade configuration management with a focus on complian
 - **Continuous enforcement**: Ongoing configuration compliance monitoring
 
 **Code Example:**
+
 ```puppet
 # manifests/webserver.pp
 class webserver {
@@ -579,6 +595,7 @@ class webserver {
 Salt provides fast, scalable configuration management and remote execution using Python, designed for high-performance automation at scale.
 
 **Key Features:**
+
 - **Python-based**: Leverage the Python ecosystem and libraries
 - **High performance**: Fast execution across large infrastructures
 - **Event-driven automation**: Reactive automation and orchestration
@@ -586,6 +603,7 @@ Salt provides fast, scalable configuration management and remote execution using
 - **Flexible communication**: Support for various communication patterns
 
 **Code Example:**
+
 ```yaml
 # /srv/salt/webserver.sls
 nginx:
@@ -611,6 +629,7 @@ nginx:
 Vagrant simplifies the creation and management of reproducible development environments across different virtualization platforms.
 
 **Key Features:**
+
 - **Multi-provider support**: VirtualBox, VMware, AWS, Docker, and more
 - **Simple configuration**: Vagrantfile for environment definitions
 - **Provisioning integration**: Works with Chef, Puppet, Ansible, and shell scripts
@@ -618,6 +637,7 @@ Vagrant simplifies the creation and management of reproducible development envir
 - **Box ecosystem**: Pre-built virtual machine images and templates
 
 **Code Example:**
+
 ```ruby
 # Vagrantfile
 Vagrant.configure("2") do |config|
@@ -641,6 +661,7 @@ end
 **Important Note**: Spacelift is not an infrastructure as code tool itself, but rather a comprehensive management platform that works with multiple IaC tools including OpenTofu, Terraform, Pulumi, CloudFormation, Ansible, and Kubernetes. Similarly, other tools like **Helm** (Kubernetes package management), **Jsonnet** (data templating), and **Azure Bicep** (Azure-specific DSL) work alongside or complement traditional IaC tools rather than replacing them entirely.
 
 **Key Features:**
+
 - **Multi-IaC support**: Centralized management for various IaC tools
 - **Policy engine**: Governance and compliance across different tools
 - **Workflow automation**: Advanced CI/CD for infrastructure deployments
@@ -657,6 +678,7 @@ end
 Azure Bicep provides a cleaner, more readable syntax for Azure Resource Manager deployments while maintaining full ARM template compatibility and compilation.
 
 **Key Features:**
+
 - **Azure-native**: Designed specifically for Azure resources
 - **Simplified syntax**: More readable than ARM JSON templates
 - **ARM compatibility**: Compiles to ARM templates for deployment
@@ -664,6 +686,7 @@ Azure Bicep provides a cleaner, more readable syntax for Azure Resource Manager 
 - **Visual Studio Code integration**: Rich editing experience with IntelliSense
 
 **Code Example:**
+
 ```bicep
 param storageAccountName string = 'mystorageaccount'
 param location string = resourceGroup().location
@@ -691,6 +714,7 @@ output storageAccountId string = storageAccount.id
 Brainboard enables visual design of cloud infrastructure with automatic code generation, bridging the gap between visual architecture and infrastructure as code.
 
 **Key Features:**
+
 - **Visual designer**: Drag-and-drop infrastructure design interface
 - **Multi-cloud support**: Support for AWS, Azure, and Google Cloud
 - **Code generation**: Automatic Terraform code creation from visual designs
@@ -705,6 +729,7 @@ Brainboard enables visual design of cloud infrastructure with automatic code gen
 While primarily a container orchestration platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
 
 **Key Features:**
+
 - **Declarative configuration**: YAML-based resource definitions
 - **API-driven**: RESTful API for all resource operations
 - **Self-healing**: Automatic recovery and reconciliation
@@ -712,6 +737,7 @@ While primarily a container orchestration platform, Kubernetes itself serves as 
 - **GitOps compatible**: Works seamlessly with Git-based workflows
 
 **Code Example:**
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -905,6 +931,7 @@ While Terraform remains widely used, its **licensing change to BSL** limits comm
 ### Can I use multiple IaC tools together?
 
 Yes! Common patterns include:
+
 - **Pulumi + Kubernetes** for infrastructure provisioning and application deployment
 - **Terraform + Ansible** for infrastructure creation and configuration management  
 - **CloudFormation + CDK** for AWS-native infrastructure with programming languages
@@ -920,6 +947,7 @@ Yes! Common patterns include:
 ### How important is open-source licensing for IaC tools?
 
 **Very important** for long-term strategy:
+
 - **Apache 2.0** (Pulumi, CDK) offers maximum flexibility
 - **MPL 2.0** (OpenTofu) ensures open-source availability
 - **BSL** (Terraform) restricts commercial competitors
@@ -930,6 +958,7 @@ Choose open-source tools like **Pulumi** or **OpenTofu** to avoid vendor lock-in
 ### What about security and compliance?
 
 All major IaC tools support security best practices:
+
 - **Built-in policy engines**: Pulumi CrossGuard, AWS Config, Azure Policy
 - **Third-party scanners**: Checkov, KICS, Terrascan work with all tools
 - **Compliance frameworks**: Most tools support SOC 2, PCI DSS, CIS benchmarks
@@ -940,6 +969,7 @@ All major IaC tools support security best practices:
 ### Can I migrate from one IaC tool to another?
 
 Yes, migration tools exist:
+
 - **Pulumi** offers `pulumi convert` for importing from Terraform, ARM, and CloudFormation
 - **Terraformer** can import existing cloud resources into Terraform/OpenTofu
 - **CDK Migrate** helps move from CloudFormation to CDK
