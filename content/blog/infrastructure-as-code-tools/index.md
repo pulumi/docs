@@ -147,6 +147,7 @@ pulumi.export("service_url", alb.load_balancer.dns_name)
 ```
 
 **Why Pulumi Leads in 2025:**
+
 - No vendor lock-in with proprietary DSLs—use languages your team already knows
 - Largest and most rapidly growing provider ecosystem
 - Strong community and enterprise support with comprehensive training resources
@@ -161,6 +162,7 @@ pulumi.export("service_url", alb.load_balancer.dns_name)
 Terraform remains one of the most widely adopted IaC tools, using HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. While its licensing changed in 2023, it continues to be a popular choice for many organizations.
 
 **Key Features:**
+
 - **Multi-cloud support**: Extensive provider ecosystem covering major cloud platforms
 - **Declarative HCL syntax**: Domain-specific language designed for infrastructure
 - **State management**: Centralized state tracking and locking
@@ -168,6 +170,7 @@ Terraform remains one of the most widely adopted IaC tools, using HashiCorp Conf
 - **Module system**: Reusable infrastructure components
 
 **Code Example:**
+
 ```hcl
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
@@ -813,24 +816,29 @@ These security tools integrate into CI/CD pipelines alongside your chosen IaC to
 ## Choosing the Right Infrastructure as Code Tool
 
 ### For Modern Development Teams
+
 **Pulumi** is the clear choice for teams that want to leverage familiar programming languages, advanced IDE support, and the flexibility of real code rather than domain-specific languages. Its universal cloud support and growing ecosystem make it ideal for forward-thinking organizations.
 
 ### For Multi-Cloud Deployments
+
 - **Pulumi**: Best overall choice with comprehensive multi-cloud support and familiar languages
 - **OpenTofu**: Excellent open-source option with broad provider ecosystem
 - **Terraform**: Established choice with mature provider support
 
 ### For Single-Cloud Focused Teams
+
 - **AWS**: Pulumi (universal approach) or AWS CDK (AWS-specific with programming languages)
 - **Azure**: Pulumi (comprehensive) or Azure Resource Manager (Azure-native templates)
 - **Google Cloud**: Pulumi (full-featured) or Google Cloud Deployment Manager (GCP-native)
 
 ### For Kubernetes-Native Organizations
+
 - **Crossplane**: Transform Kubernetes into infrastructure control plane
 - **Pulumi**: Strong Kubernetes support with familiar programming languages
 - **Kubernetes Operators**: Application-specific infrastructure management
 
 ### For Configuration Management Focus
+
 - **Ansible**: Agentless with broad capabilities and simple YAML syntax
 - **Chef**: Ruby-based with powerful programming constructs
 - **Puppet**: Enterprise-focused with strong compliance features
