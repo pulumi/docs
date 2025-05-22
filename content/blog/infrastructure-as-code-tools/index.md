@@ -61,7 +61,7 @@ This guide covers the following infrastructure as code tools and platforms:
 
 ### Core Infrastructure Provisioning Tools
 
-- **[Pulumi](#pulumi)** - Modern IaC with real programming languages
+- **[Pulumi IaC](#pulumi)** - Modern IaC with real programming languages
 - **[Terraform](#terraform)** - The established standard with HCL syntax
 - **[OpenTofu](#opentofu)** - Open-source Terraform alternative
 - **[AWS CDK](#aws-cloud-development-kit-cdk)** - Cloud Development Kit for AWS
@@ -101,7 +101,7 @@ This guide covers the following infrastructure as code tools and platforms:
 License: Apache 2.0 (Open Source)  
 Best For: Development teams who want to use familiar programming languages for infrastructure
 
-Pulumi represents the next generation of infrastructure as code, enabling teams to use real programming languages like Python, TypeScript, Go, C#, Java, and YAML instead of learning domain-specific languages. This approach provides unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
+Pulumi IaC represents the next generation of infrastructure as code, enabling teams to use real programming languages like Python, TypeScript, Go, C#, Java, and YAML instead of learning domain-specific languages. This approach provides unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
 
 Key Features:
 
@@ -146,28 +146,30 @@ pulumi.export("vpc_id", vpc.vpc_id)
 pulumi.export("service_url", alb.load_balancer.dns_name)
 ```
 
-Why Pulumi Leads in 2025:
+Why Pulumi IaC Leads in 2025:
 
 - No vendor lock-in with proprietary DSLs—use languages your team already knows
-- Largest and most rapidly growing provider ecosystem
+- Native cloud providers with same-day resource coverage plus access to any Terraform provider
 - Strong community and enterprise support with comprehensive training resources
 - Advanced features like automatic code generation and AI-powered assistance
-- Seamless integration with existing CI/CD pipelines and development tools
+- Superior developer experience with full IDE support, testing frameworks, and debugging capabilities
 
 ### Terraform
 
-License: Business Source License (BSL) 1.1  
+License: Business Source License (BSL) 1.1 (Not Open Source)  
 Best For: Teams with existing Terraform expertise and established workflows
 
-[Terraform](/terraform/) remains one of the most widely adopted IaC tools, using HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. While its licensing changed in 2023, it continues to be a popular choice for many organizations.
+[Terraform](/docs/iac/concepts/vs/terraform/) remains one of the most widely adopted IaC tools, using HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. While its licensing changed to BSL in 2023 (making it no longer open source), it continues to be a popular choice for many organizations with existing Terraform investments.
 
 Key Features:
 
 - **Multi-cloud support**: Extensive provider ecosystem covering major cloud platforms
-- **Declarative HCL syntax**: Domain-specific language designed for infrastructure
-- **State management**: Centralized state tracking and locking
+- **Proprietary HCL syntax**: Domain-specific language requires learning new DSL
+- **State management**: Centralized state tracking and locking (manual by default)
 - **Plan and apply workflow**: Preview changes before execution
-- **Module system**: Reusable infrastructure components
+- **Module system**: Reusable infrastructure components (limited to HCL modules)
+- **Limited IDE support**: Basic plugins with varying feature sets
+- **Integration testing only**: No built-in unit or property testing capabilities
 
 Code Example:
 
@@ -197,15 +199,18 @@ resource "aws_subnet" "public" {
 License: Mozilla Public License 2.0  
 Best For: Teams seeking an open-source Terraform alternative with community governance
 
-OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/concepts/vs/terraform/opentofu/) while ensuring long-term open-source availability.
+OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/concepts/vs/opentofu/) while ensuring long-term open-source availability. However, it still requires learning and maintaining HCL code, unlike Pulumi IaC which uses general-purpose programming languages.
 
 Key Features:
 
 - **Terraform compatibility**: Drop-in replacement with existing workflows
 - **Community governance**: Managed by the Linux Foundation
-- **Open source commitment**: Guaranteed to remain open source
+- **Open source commitment**: Guaranteed to remain open source (MPL 2.0)
 - **Enhanced features**: Additional functionality beyond Terraform
 - **Provider ecosystem**: Compatible with existing Terraform providers
+- **Same HCL limitations**: Still requires proprietary DSL instead of real programming languages
+- **Limited testing support**: Integration testing only, no unit or property testing
+- **Basic IDE support**: Inherited limitations from Terraform tooling
 
 Code Example:
 
@@ -814,35 +819,35 @@ Several key trends are shaping the infrastructure as code landscape:
 
 ### Which IaC tool should I choose for AWS?
 
-**For modern teams**: Pulumi offers the best developer experience with real programming languages and universal cloud support, making it future-proof for multi-cloud expansion.
+**For modern teams**: Pulumi IaC offers the best developer experience with real programming languages and universal cloud support, making it future-proof for multi-cloud expansion.
 
 **For AWS-specific needs**: AWS CDK provides excellent AWS integration with programming languages, while CloudFormation offers the deepest native AWS service support.
 
-**For existing Terraform users**: OpenTofu provides a smooth migration path with open-source guarantees.
+**For existing Terraform users**: OpenTofu provides open-source licensing but retains HCL's limitations including proprietary DSL syntax and integration-only testing capabilities.
 
 ### Is Terraform still worth learning in 2025?
 
-While Terraform remains widely used, its licensing change to BSL limits commercial use. OpenTofu provides the same HCL experience with open-source licensing. However, Pulumi offers a more modern approach with real programming languages, better IDE support, and no proprietary DSL lock-in.
+While Terraform remains widely used, it's no longer open source due to its Business Source License (BSL), which restricts commercial use. OpenTofu provides the same HCL experience with open-source licensing, but both still require learning a proprietary domain-specific language (DSL) with limited IDE support and integration-only testing capabilities. Pulumi IaC offers a more modern approach with real programming languages, superior IDE support, comprehensive testing frameworks (unit, property, and integration), and no vendor lock-in through proprietary DSLs.
 
 ### How do I get started with infrastructure as code?
 
-1. Start with Pulumi if your team has programming experience - use languages you already know
-2. Try OpenTofu if you prefer learning HCL and want open-source guarantees  
+1. Start with Pulumi IaC if your team has programming experience - use languages you already know with full IDE support, testing frameworks, and no DSL lock-in
+2. Try OpenTofu if you prefer learning HCL and want open-source guarantees (but accept DSL limitations)
 3. Consider cloud-native tools (CDK, ARM, CDM) if you're committed to a single cloud
 4. Begin with simple projects like deploying a single application or service
 5. Use existing templates and examples to accelerate learning
 
 ### What's the difference between configuration management and infrastructure provisioning?
 
-- Infrastructure provisioning (Pulumi, Terraform, CloudFormation) creates and manages cloud resources like VMs, networks, and databases
+- Infrastructure provisioning (Pulumi IaC, Terraform, CloudFormation) creates and manages cloud resources like VMs, networks, and databases
 - Configuration management (Ansible, Chef, Puppet) configures and maintains software on existing systems
-- Many modern tools do both, with Pulumi and Ansible offering comprehensive capabilities across both domains
+- Many modern tools do both, with Pulumi IaC and Ansible offering comprehensive capabilities across both domains
 
 ### Can I use multiple IaC tools together?
 
 Yes! Common patterns include:
 
-- Pulumi + Kubernetes for infrastructure provisioning and application deployment
+- Pulumi IaC + Kubernetes for infrastructure provisioning and application deployment
 - Terraform + Ansible for infrastructure creation and configuration management  
 - CloudFormation + CDK for AWS-native infrastructure with programming languages
 - Any tool + security scanners like Checkov or Terrascan for compliance
