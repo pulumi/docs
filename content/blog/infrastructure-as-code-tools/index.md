@@ -104,6 +104,7 @@ This guide covers the following infrastructure as code tools and platforms:
 Pulumi represents the next generation of infrastructure as code, enabling teams to use real programming languages like Python, TypeScript, Go, C#, Java, and YAML instead of learning domain-specific languages. This approach provides unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
 
 **Key Features:**
+
 - **Universal language support**: Use Python, TypeScript, Go, C#, Java, or YAML—no new DSL to learn
 - **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 100+ other providers
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
