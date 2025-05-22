@@ -15,7 +15,9 @@ aliases:
 - /docs/intro/pulumi-cloud/scopes/environments
 ---
 
-This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../../permissions#entity-types) and group.
+This document defines all the available [scopes](../) in Pulumi Cloud assignable to specific environments or sets of environments.
+
+Note that creating, listing, or restoring environments are organization-level operations, and these scopes can be found in the [organization settings scopes](../org-settings).
 
 ## Environments
 
