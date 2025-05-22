@@ -44,6 +44,8 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 ## Environments
 
+| Value | Description |
+|-------|-------------|
 | `environment:create` | Create a new environment for managing infrastructure configurations. Environments provide isolated spaces for different deployment stages.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `environment:list` | View all environments in the organization. This provides a list of available environments and their basic information.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `environment:list_deleted` | View a list of environments that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Member`, `Admin` |
