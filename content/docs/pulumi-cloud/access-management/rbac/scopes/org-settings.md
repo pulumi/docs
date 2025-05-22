@@ -53,7 +53,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission**: `Environment Read` |
 | `environment_yaml:open` | Access and view environment configuration in YAML format. This provides a structured view of environment settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
-## Org Deployments
+## Deployments
 
 | Value | Description |
 |-------|-------------|
