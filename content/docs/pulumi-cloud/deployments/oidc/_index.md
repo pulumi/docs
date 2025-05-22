@@ -1,29 +1,34 @@
 ---
-title_tag: OpenID Connect provider integration for Pulumi
-meta_desc: This page provides an overview of how to configure OpenID Connect integration between
-           Pulumi and supported cloud providers.
-title: OpenID provider
-h1: OpenID Connect provider integration
+title_tag: OIDC Setup for Pulumi Deployments
+meta_desc: This page provides an overview of how to configure OpenID Connect (OIDC) integration between
+           Pulumi Deployments and supported cloud providers.
+title: OIDC Setup
+h1: OIDC Setup for Deployments
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: OpenID provider
-    parent: pulumi-cloud-access-management-oidc
+    name: OIDC Setup
+    parent: pulumi-cloud-deployments
     weight: 3
-    identifier: pulumi-cloud-access-management-oidc-provider
+    identifier: pulumi-cloud-deployments-oidc
 aliases:
 - /docs/pulumi-cloud/oidc/provider/
+- /docs/pulumi-cloud/access-management/oidc/provider/
 ---
 
-Pulumi supports OpenID Connect (OIDC) integration across various services. OIDC enables secure interactions between Pulumi services and cloud providers by leveraging signed, short-lived tokens issued by the Pulumi Cloud. This mechanism enhances security by eliminating the necessity for hardcoded cloud provider credentials and facilitates the exchange of these tokens for short-term credentials from your cloud provider.
+{{< notes type="info" >}}
+Pulumi ESC should be the preferred approach over the Deployments OIDC integrations since it's more portable and easier to set up. For ESC OIDC setup instructions, see [Configuring OIDC for Pulumi ESC](/docs/esc/environments/configuring-oidc/).
+{{< /notes >}}
+
+This page describes how to use OpenID Connect (OIDC) so that your Pulumi Deployments can obtain the necessary cloud credentials to manage resources. If you're looking for information about what permissions a deployment has within the Pulumi Cloud itself, see [Deployment Permissions](/docs/pulumi-cloud/deployments/reference/#deployment-permissions) instead.
+
+OIDC enables secure interactions between Pulumi Deployments and cloud providers by leveraging signed, short-lived tokens issued by the Pulumi Cloud. This mechanism enhances security by eliminating the necessity for hardcoded cloud provider credentials and facilitates the exchange of these tokens for short-term credentials from your cloud provider.
 
 ## Overview
 
-For Pulumi services that make use of OIDC, every time that service runs, the Pulumi Cloud issues a new OIDC token specific to that run. The OIDC token is a short-lived, signed [JSON Web Token](https://jwt.io) that contains information about the service, and that can be exchanged for credentials from a cloud provider. For AWS, Azure, and Google Cloud, this credential exchange can be done automatically as part of the service setup.
+Every time a Deployment runs, the Pulumi Cloud issues a new OIDC token specific to that run. The OIDC token is a short-lived, signed [JSON Web Token](https://jwt.io) that contains information about the deployment, and that can be exchanged for credentials from a cloud provider. For AWS, Azure, and Google Cloud, this credential exchange can be done automatically as part of the service setup.
 
 ## Token Claims
-
-### Pulumi Deployments
 
 The token contains the standard audience, issuer, and subject claims:
 
@@ -33,21 +38,15 @@ The token contains the standard audience, issuer, and subject claims:
 | `iss` | _(Issuer)_ The issuer of the OIDC token: `https://api.pulumi.com/oidc`.                                                                                                                                                                                                                                                                                                                                                       |
 | `sub` | _(Subject)_ The subject of the OIDC token. Because this value is often used for configuring trust relationships, the subject claim contains information about the associated service. Each component of the subject claim is also available as a custom claim. |
 
-### Pulumi ESC
-
-For details on how Pulumi ESC environments interact with OIDC token claims, see [Configuring OIDC for Pulumi ESC](/docs/esc/environments/configuring-oidc/).
-
 ## Custom claims
 
-For some services, the token also contains custom claims that provide additional, service-specific information. You can find more details about the available custom claims below.
+The token contains custom claims that provide additional, deployment-specific information.
 
-### Pulumi Deployments
-
-The format of the subject claim for this service is:
+The format of the subject claim for deployments is:
 
 `pulumi:deploy:org:<organization name>:project:<project name>:stack:<stack name>:operation:<operation kind>:scope:write`
 
-Valid custom claims for this service are listed in the table below:
+Valid custom claims are listed in the table below:
 
 | Claim        | Description                                                                     |
 |--------------|---------------------------------------------------------------------------------|
@@ -59,17 +58,13 @@ Valid custom claims for this service are listed in the table below:
 | `deployment` | The deployment version.                                                         |
 | `scope`      | The scope of the OIDC token. Always `write`.                                    |
 
-### Pulumi ESC
-
-For details on how Pulumi ESC environments interact with OIDC custom claims, see [Configuring OIDC for Pulumi ESC](/docs/esc/access-management/oidc/).
-
 ## Configuring trust relationships
 
-As part of the process that exchanges your service's OIDC token for cloud provider credentials, the cloud provider must check the OIDC token's claims against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the Audience, Subject, and Issuer claims. These claims can be used to restrict trust to specific organizations, projects, stacks, environments etc:
+As part of the process that exchanges your deployment's OIDC token for cloud provider credentials, the cloud provider must check the OIDC token's claims against the conditions configured in the provider's trust relationship. The configuration of a trust relationship varies depending on the cloud provider, but typically uses at least the Audience, Subject, and Issuer claims. These claims can be used to restrict trust to specific organizations, projects, stacks:
 
 * The Issuer claim is typically used to validate that the token is properly signed. The issuer's public signing key is fetched and used to validate the token's signature.
-* The Audience claim can vary between Deployment and ESC. For deployments this claim contains the name of the organization associated with the deployment. For ESC this claim contains the name of the organization, prefixed with the provider's platform (`aws`, `azure`, `gcp`). You can use this claim to restrict credentials to a specific organization or organizations.
-* The Subject claim contains a variety of information about the service. You can use this claim to restrict credentials to a specific organization/scope.
+* The Audience claim for deployments contains the name of the organization associated with the deployment.
+* The Subject claim contains information about the deployment. You can use this claim to restrict credentials to a specific organization/project/stack.
 * The various custom claims contain the same information as the Subject claim. If your cloud provider supports configuring trust relationships based on custom claims, you can use these claims for the same purposes as the Subject claim.
 
 The Subject and custom claims are particularly useful for configuring trust relationships, as they allow you to set very fine-grained conditions for credentials.
@@ -78,7 +73,6 @@ The Subject and custom claims are particularly useful for configuring trust rela
 
 To configure OIDC for your cloud provider, refer to one of our guides:
 
-* [Configuring OIDC for AWS](/docs/pulumi-cloud/oidc/provider/aws/)
-* [Configuring OIDC for Azure](/docs/pulumi-cloud/oidc/provider/azure/)
-* [Configuring OIDC for Google Cloud](/docs/pulumi-cloud/oidc/provider/gcp/)
-* [Configuring OIDC for Vault](/docs/pulumi-cloud/oidc/provider/vault/)
+* [Configuring OIDC for AWS](/docs/pulumi-cloud/deployments/oidc/aws/)
+* [Configuring OIDC for Azure](/docs/pulumi-cloud/deployments/oidc/azure/)
+* [Configuring OIDC for Google Cloud](/docs/pulumi-cloud/deployments/oidc/gcp/)
