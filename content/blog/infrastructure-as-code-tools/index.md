@@ -70,7 +70,7 @@ This guide covers the following infrastructure as code tools and platforms:
 - **[AWS CloudFormation](#aws-cloudformation)** - Native AWS integration
 - **[Terragrunt](#terragrunt)** - Terraform orchestration wrapper
 - **[Azure Resource Manager](#azure-resource-manager)** - Azure-native templates
-- **[Google Cloud Deployment Manager](#google-cloud-deployment-manager)** - GCP-native IaC
+- **[Google Cloud Infrastructure Manager](#google-cloud-infrastructure-manager)** - Modern GCP IaC with Terraform
 - **[Crossplane](#crossplane)** - Kubernetes as universal control plane
 - **[Kubernetes Operators](#kubernetes-operators)** - Application-specific controllers
 - **[Ansible](#ansible)** - Agentless automation platform
@@ -430,41 +430,53 @@ Code Example:
 }
 ```
 
-### Google Cloud Deployment Manager
+### Google Cloud Infrastructure Manager
 
 License: Proprietary (Google Service)  
-Best For: Google Cloud Platform deployments requiring native integration
+Best For: Google Cloud Platform deployments using Terraform
 
-Google Cloud Deployment Manager enables infrastructure as code specifically for Google Cloud Platform resources using YAML, Python, or Jinja2 templates.
+Google Cloud Infrastructure Manager automates the deployment and management of Google Cloud infrastructure resources using Terraform configurations, representing Google's modern approach to infrastructure as code. Infrastructure Manager replaces the deprecated Google Cloud Deployment Manager (which reaches end of support on December 31, 2025).
 
 Key Features:
 
-- **GCP-native**: Full Google Cloud Platform service support
-- **Multiple template formats**: YAML, Python, or Jinja2
-- **Deployment previews**: Preview changes before applying
-- **Integration**: Works with other Google Cloud tools and services
+- **Terraform-based**: Uses standard Terraform configurations declaratively
+- **Automated workflows**: Handles Terraform init, validate, and apply operations
+- **Version control integration**: Supports Git repositories and Cloud Storage
+- **Deployment tracking**: Comprehensive metadata storage and logging
+- **Multiple Terraform versions**: Flexibility in Terraform version selection
+- **Cloud Build integration**: Leverages Google Cloud Build for execution environment
+- **Migration path**: Provides upgrade path from legacy Cloud Deployment Manager
 
 Code Example:
 
-```yaml
-resources:
-- name: my-vm
-  type: compute.v1.instance
-  properties:
-    zone: us-central1-a
-    machineType: zones/us-central1-a/machineTypes/n1-standard-1
-    disks:
-    - deviceName: boot
-      type: PERSISTENT
-      boot: true
-      autoDelete: true
-      initializeParams:
-        sourceImage: projects/debian-cloud/global/images/family/debian-11
-    networkInterfaces:
-    - network: global/networks/default
-      accessConfigs:
-      - name: External NAT
-        type: ONE_TO_ONE_NAT
+```hcl
+# main.tf - Terraform configuration for Infrastructure Manager
+resource "google_compute_instance" "vm_instance" {
+  name         = "my-vm"
+  machine_type = "e2-medium"
+  zone         = "us-central1-a"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-11"
+    }
+  }
+
+  network_interface {
+    network = "default"
+    access_config {
+      // Ephemeral public IP
+    }
+  }
+
+  metadata = {
+    startup-script = "echo Hello from Infrastructure Manager!"
+  }
+}
+
+output "instance_ip" {
+  value = google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip
+}
 ```
 
 ### Crossplane
@@ -472,7 +484,7 @@ resources:
 License: Apache 2.0  
 Best For: Kubernetes-first organizations managing multi-cloud infrastructure
 
-Crossplane transforms Kubernetes into a universal control plane for infrastructure, allowing teams to provision and manage cloud resources using Kubernetes APIs and patterns.
+Crossplane is a Cloud-Native Framework for Platform Engineering that extends Kubernetes to help organizations build custom infrastructure management platforms, allowing teams to provision and manage cloud resources using Kubernetes APIs and patterns.
 
 Key Features:
 
@@ -871,7 +883,7 @@ While the tools above focus on provisioning and managing infrastructure, a compl
 Static analysis tool for infrastructure as code that scans cloud infrastructure configurations for security and compliance issues. Supports Terraform, CloudFormation, Kubernetes, Helm, ARM templates, and more. Integrates with CI/CD pipelines and provides over 1000+ built-in policies covering CIS benchmarks, PCI DSS, and GDPR compliance.
 
 **KICS (Keeping Infrastructure as Code Secure)** - License: Apache 2.0  
-Open-source static analysis tool that finds security vulnerabilities and compliance issues in infrastructure code. Supports 25+ platforms including Terraform, CloudFormation, Kubernetes, Docker, and Ansible. Features over 2000+ queries for detecting misconfigurations and security vulnerabilities.
+Open-source static analysis tool that finds security vulnerabilities and compliance issues in infrastructure code. Supports 15+ platforms including Terraform, CloudFormation, Kubernetes, Docker, and Ansible. Features over 2400 queries for detecting misconfigurations and security vulnerabilities.
 
 **Terrascan** - License: Apache 2.0  
 Static code analyzer for Infrastructure as Code that detects compliance and security violations across cloud native technologies. Supports 500+ policies for security best practices and compliance standards including SOC 2, PCI DSS, GDPR, and HIPAA. Integrates with admission controllers for Kubernetes.
