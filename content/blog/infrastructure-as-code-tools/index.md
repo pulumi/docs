@@ -105,11 +105,11 @@ This guide covers the following infrastructure as code tools and platforms:
 License: Apache 2.0 (Open Source)  
 Best For: Development teams who want to use familiar programming languages for infrastructure
 
-Pulumi IaC represents the next generation of infrastructure as code, enabling teams to use real programming languages like Python, TypeScript, Go, C#, Java, and YAML instead of learning domain-specific languages. This approach provides unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
+Pulumi IaC represents the next generation of infrastructure as code, enabling teams to use real programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations, instead of learning domain-specific languages. This approach provides unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
 
 Key Features:
 
-- **Universal language support**: Use Python, TypeScript, Go, C#, Java, or YAML—no new DSL to learn
+- **Universal language support**: Use Python, TypeScript, Go, C#, Java, or YAML configurations—no new DSL to learn
 - **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 100+ other providers
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
@@ -183,6 +183,8 @@ Key Features:
 Code Example:
 
 ```hcl
+data "aws_availability_zones" "available" {}
+
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
 
