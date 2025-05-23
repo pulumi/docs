@@ -1,7 +1,7 @@
 ---
 title: Pulumi + AWS Summit Tel Aviv
 meta_desc: Join Pulumi at AWS Summit Tel Aviv 2025 to discover how leading organizations automate AWS infrastructure as code.
-meta_image: /images/tel-aviv-2025-meta.png
+meta_image: /images/aws-summit/tel-aviv-2025-meta.png
 type: page
 layout: aws-summit
 
