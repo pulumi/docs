@@ -326,6 +326,8 @@ Best For: AWS-only deployments requiring deep service integration
 
 AWS CloudFormation provides the foundation for infrastructure as code on AWS, offering native integration with all AWS services and deep platform-specific features.
 
+**Pulumi Integration**: Pulumi provides native AWS providers that offer the same comprehensive AWS service coverage as CloudFormation, with the added benefit of using general-purpose programming languages. You can also import existing CloudFormation stacks into Pulumi for gradual migration or hybrid management approaches.
+
 Key Features:
 
 - **AWS-native**: First-party support for all AWS services
@@ -394,6 +396,8 @@ License: Proprietary (Microsoft Service)
 Best For: Azure-focused deployments requiring native platform integration
 
 Azure Resource Manager provides the native infrastructure as code solution for Microsoft Azure, offering comprehensive support for Azure services through ARM templates.
+
+**Pulumi Integration**: Pulumi's native Azure providers offer equivalent comprehensive Azure service coverage with general-purpose programming languages. Existing ARM templates can be imported into Pulumi, and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
 
 Key Features:
 
@@ -479,6 +483,8 @@ Best For: Kubernetes-first organizations managing multi-cloud infrastructure
 
 Crossplane is a Cloud-Native Framework for Platform Engineering that extends Kubernetes to help organizations build custom infrastructure management platforms, allowing teams to provision and manage cloud resources using Kubernetes APIs and patterns.
 
+**Pulumi Integration**: Pulumi offers the Pulumi Kubernetes Operator (PKO) that provides similar Kubernetes-native infrastructure management capabilities, plus support for YAML-based definitions. Teams can also use Pulumi programs to provision the underlying infrastructure that Crossplane manages, creating layered infrastructure management approaches.
+
 Key Features:
 
 - **Kubernetes-native**: Uses CRDs and standard Kubernetes patterns
@@ -542,6 +548,8 @@ License: GPL v3
 Best For: Configuration management with infrastructure provisioning capabilities
 
 Ansible provides both configuration management and infrastructure provisioning through its agentless architecture and simple YAML-based playbooks.
+
+**Pulumi Integration**: Rather than competing with Ansible, Pulumi complements it perfectly. Use Pulumi for infrastructure provisioning and Ansible for configuration management. Pulumi's Command provider can execute Ansible playbooks as part of your infrastructure deployment, and many Pulumi customers use both tools together for comprehensive infrastructure automation. [See example: Deploy WordPress to AWS using Pulumi and Ansible](/blog/deploy-wordpress-aws-pulumi-ansible/).
 
 Key Features:
 
@@ -694,6 +702,8 @@ License: MIT
 Best For: Azure-focused teams wanting a simpler alternative to ARM templates
 
 Azure Bicep provides a cleaner, more readable syntax for Azure Resource Manager deployments while maintaining full ARM template compatibility and compilation.
+
+**Pulumi Integration**: Like ARM templates, Bicep deployments can be imported into Pulumi or referenced from Pulumi programs. Pulumi offers similar improvements over raw ARM templates but with full programming languages instead of a domain-specific language.
 
 Key Features:
 
@@ -915,12 +925,24 @@ For teams starting fresh, investing in programming language-based IaC tools offe
 
 ### Can I use multiple IaC tools together?
 
-Yes! Common patterns include:
+Absolutely! Many organizations use complementary tools for different aspects of infrastructure management:
 
-- Pulumi IaC + Kubernetes for infrastructure provisioning and application deployment
-- Terraform + Ansible for infrastructure creation and configuration management  
-- CloudFormation + CDK for AWS-native infrastructure with programming languages
-- Any tool + security scanners like Checkov or Terrascan for compliance
+**Pulumi + Configuration Management:**
+
+- Pulumi + Ansible: Infrastructure provisioning + server configuration ([example](/blog/deploy-wordpress-aws-pulumi-ansible/))
+- Pulumi + Chef/Puppet: Cloud resources + complex configuration management
+
+**Pulumi + Native Cloud Tools:**
+
+- Reference existing CloudFormation/ARM deployments from Pulumi programs
+- Import CloudFormation/ARM resources into Pulumi for gradual migration
+- Use Pulumi alongside CDK for different parts of AWS infrastructure
+
+**Pulumi + Kubernetes:**
+
+- Pulumi Kubernetes Operator (PKO) for GitOps workflows
+- Pulumi + Crossplane for layered infrastructure management
+- Pulumi + security scanners like Checkov or Terrascan for compliance
 
 ### Which tool has the best learning resources?
 
