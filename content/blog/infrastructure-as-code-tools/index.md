@@ -63,7 +63,7 @@ This guide covers the following infrastructure as code tools and platforms:
 
 ### Core Infrastructure Provisioning Tools
 
-- **[Pulumi IaC](#pulumi)** - Modern IaC with real programming languages
+- **[Pulumi IaC](#pulumi)** - Modern IaC with general-purpose programming languages
 - **[Terraform](#terraform)** - The established standard with HCL syntax
 - **[OpenTofu](#opentofu)** - Open-source Terraform alternative
 - **[AWS CDK](#aws-cloud-development-kit-cdk)** - Cloud Development Kit for AWS
@@ -107,7 +107,7 @@ This guide covers the following infrastructure as code tools and platforms:
 License: Apache 2.0 (Open Source)  
 Best For: Development teams who want to use familiar programming languages for infrastructure
 
-Pulumi IaC represents the next generation of infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of real programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
+Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
 
 Pulumi's approach combines the best of both imperative and declarative paradigms: you use imperative programming languages to define your desired infrastructure state, but the Pulumi engine processes this declaratively to determine what changes are needed to achieve your intended outcome.
 
@@ -161,7 +161,7 @@ pulumi.export("service_url", alb.load_balancer.dns_name)
 
 Why Pulumi IaC Leads in 2025:
 
-**Real Languages, Not DSLs**: Use familiar programming languages your team already knows rather than learning proprietary domain-specific languages. This unlocks powerful programming constructs, package management, and leverages existing skills.
+**General-Purpose Languages, Not DSLs**: Use familiar general-purpose programming languages your team already knows rather than learning proprietary domain-specific languages. This unlocks powerful programming constructs, package management, and leverages existing skills.
 
 **Proven Performance Improvements**: Organizations report dramatic productivity gains:
 
@@ -172,7 +172,7 @@ Why Pulumi IaC Leads in 2025:
 
 **Software Engineering for Infrastructure**: Apply true software engineering practices with full IDE support, comprehensive testing frameworks (unit, integration, and property testing), debugging capabilities, and code refactoring tools.
 
-**True Open Source with No Restrictions**: Apache 2.0 license ensures long-term stability and freedom, unlike tools with Business Source License restrictions that limit commercial use.
+**True Open Source with No Restrictions**: Apache 2.0 license ensures long-term stability and freedom without commercial restrictions.
 
 **Same-Day Cloud Feature Access**: Native cloud provider SDKs deliver immediate access to new cloud features on release day, compared to weeks or months of delays with community-maintained providers.
 
@@ -272,11 +272,11 @@ output "instance_ip" {
 License: Apache 2.0  
 Best For: AWS-focused teams who prefer programming languages over templates
 
-AWS CDK allows you to define AWS infrastructure using familiar programming languages, synthesizing CloudFormation templates for deployment while providing higher-level abstractions. CDK addresses many limitations of traditional template-based approaches by enabling real programming languages.
+AWS CDK allows you to define AWS infrastructure using familiar programming languages, synthesizing CloudFormation templates for deployment while providing higher-level abstractions. CDK addresses many limitations of traditional template-based approaches by enabling general-purpose programming languages.
 
 **Key Strengths:**
 
-- **Real programming languages**: TypeScript, Python, Java, C#, Go support with full IDE integration
+- **General-purpose programming languages**: TypeScript, Python, Java, C#, Go support with full IDE integration
 - **AWS-optimized constructs**: High-level components encapsulating AWS best practices
 - **Type safety**: Compile-time checking and IntelliSense support
 - **CloudFormation reliability**: Built on AWS's proven deployment engine
@@ -964,7 +964,7 @@ The key insight: migration to modern IaC approaches is a technical upgrade, not 
 
 ### Which IaC tool should I choose for AWS?
 
-**For modern teams**: Pulumi IaC offers the best developer experience with real programming languages and universal cloud support, making it future-proof for multi-cloud expansion.
+**For modern teams**: Pulumi IaC offers the best developer experience with general-purpose programming languages and universal cloud support, making it future-proof for multi-cloud expansion.
 
 **For AWS-specific needs**: AWS CDK provides excellent AWS integration with programming languages, while CloudFormation offers the deepest native AWS service support.
 
@@ -974,7 +974,7 @@ The key insight: migration to modern IaC approaches is a technical upgrade, not 
 
 While Terraform remains widely used, teams increasingly encounter productivity barriers and scalability challenges that have led to significant migrations to modern alternatives. Key considerations:
 
-**Licensing and Business Model Risks**: Terraform's BSL 1.1 license restricts commercial use and was changed retroactively in 2023, creating uncertainty for enterprise deployments.
+**Licensing Considerations**: Terraform's Business Source License creates restrictions for commercial use in competitive scenarios.
 
 **Productivity Limitations**: Organizations report significant productivity improvements when moving to programming language-based approaches. For example, Unity achieved 80% faster deployments, Snowflake reduced deployment times by 90%, and Starburst experienced 112x performance improvements after migrating from Terraform.
 
@@ -1063,7 +1063,7 @@ The key is choosing tools that provide comprehensive migration support and incre
 
 ## Conclusion: Real Languages, Real Tools, Real Results
 
-The infrastructure as code landscape in 2025 is defined by a clear choice: embrace software engineering practices with real programming languages, or continue struggling with the limitations of domain-specific languages and basic templating systems.
+The infrastructure as code landscape in 2025 is defined by a clear choice: embrace software engineering practices with general-purpose programming languages, or continue struggling with the limitations of domain-specific languages and basic templating systems.
 
 The evidence is compelling. Organizations like Unity, Snowflake, Starburst, and Atlassian have demonstrated dramatic productivity improvements—often 80-90% deployment time reductions and orders-of-magnitude performance gains—by adopting programming language-based infrastructure as code approaches.
 
@@ -1081,4 +1081,4 @@ For teams starting fresh, choose tools that embrace software engineering from th
 
 The future of infrastructure belongs to teams that treat infrastructure as software, complete with the testing, tooling, and practices that have proven successful in application development.
 
-Ready to bring software engineering to your infrastructure? [Get started with Pulumi](/docs/get-started/) and discover how real programming languages can transform your infrastructure management with proven results and seamless migration paths.
+Ready to bring software engineering to your infrastructure? [Get started with Pulumi](/docs/get-started/) and discover how general-purpose programming languages can transform your infrastructure management with proven results and seamless migration paths.
