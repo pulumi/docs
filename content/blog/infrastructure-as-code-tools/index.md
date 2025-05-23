@@ -69,7 +69,7 @@ This guide covers the following infrastructure as code tools and platforms:
 - **[AWS CDK](#aws-cloud-development-kit-cdk)** - Cloud Development Kit for AWS
 - **[AWS CloudFormation](#aws-cloudformation)** - Native AWS integration
 - **[Terragrunt](#terragrunt)** - Terraform orchestration wrapper
-- **[Azure Resource Manager](#azure-resource-manager)** - Azure-native templates
+- **[Azure Resource Manager (ARM) and Bicep](#azure-resource-manager-arm-and-bicep)** - Azure-native templates and DSL
 - **[Google Cloud Infrastructure Manager](#google-cloud-infrastructure-manager)** - Modern GCP IaC with Terraform
 - **[Crossplane](#crossplane)** - Kubernetes as universal control plane
 - **[Kubernetes Operators](#kubernetes-operators)** - Application-specific controllers
@@ -80,7 +80,7 @@ This guide covers the following infrastructure as code tools and platforms:
 
 ### Additional Infrastructure Tools
 
-- **[Azure Bicep](#azure-bicep---azure-native-dsl)** - Azure-native DSL
+- **[System Initiative](#system-initiative)** - Next-generation collaborative infrastructure automation
 - **[Brainboard](#brainboard---visual-infrastructure-design)** - Visual infrastructure design
 - **[Kubernetes](#kubernetes---container-orchestration-platform)** - Container orchestration platform
 
@@ -390,21 +390,22 @@ inputs = {
 }
 ```
 
-### Azure Resource Manager
+### Azure Resource Manager (ARM) and Bicep
 
-License: Proprietary (Microsoft Service)  
+License: Proprietary (Microsoft Service) / MIT (Bicep)  
 Best For: Azure-focused deployments requiring native platform integration
 
-Azure Resource Manager provides the native infrastructure as code solution for Microsoft Azure, offering comprehensive support for Azure services through ARM templates.
+Azure Resource Manager provides the native infrastructure as code solution for Microsoft Azure, offering comprehensive support for Azure services through ARM templates. Azure Bicep serves as a more readable domain-specific language (DSL) that compiles to ARM templates, providing a cleaner syntax while maintaining full ARM compatibility.
 
-**Pulumi Integration**: Pulumi's native Azure providers offer equivalent comprehensive Azure service coverage with general-purpose programming languages. Existing ARM templates can be imported into Pulumi, and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
+**Pulumi Integration**: Pulumi's native Azure providers offer equivalent comprehensive Azure service coverage with general-purpose programming languages. Both ARM templates and Bicep deployments can be imported into Pulumi, and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
 
 Key Features:
 
 - **Azure-native**: Complete Azure service coverage
-- **JSON template format**: Declarative infrastructure definitions
+- **Multiple syntaxes**: JSON templates (ARM) or Bicep DSL for improved readability
 - **Resource groups**: Logical organization of related resources
 - **Deployment modes**: Complete or incremental deployment options
+- **ARM compilation**: Bicep compiles to ARM templates for deployment
 
 Code Example:
 
@@ -696,42 +697,40 @@ nginx:
 
 ## Additional Infrastructure as Code Tools
 
-### Azure Bicep - Azure-Native DSL
+### System Initiative
 
-License: MIT  
-Best For: Azure-focused teams wanting a simpler alternative to ARM templates
+License: Apache 2.0  
+Best For: Teams seeking next-generation collaborative infrastructure automation with real-time visualization
 
-Azure Bicep provides a cleaner, more readable syntax for Azure Resource Manager deployments while maintaining full ARM template compatibility and compilation.
-
-**Pulumi Integration**: Like ARM templates, Bicep deployments can be imported into Pulumi or referenced from Pulumi programs. Pulumi offers similar improvements over raw ARM templates but with full programming languages instead of a domain-specific language.
+System Initiative represents an emerging approach to infrastructure automation that goes beyond traditional Infrastructure as Code by providing a data-centric, collaborative platform with real-time visualization and multiplayer capabilities. It allows teams to import existing infrastructure regardless of how it was created and manage it through rich visual models and TypeScript-based functions.
 
 Key Features:
 
-- **Azure-native**: Designed specifically for Azure resources
-- **Simplified syntax**: More readable than ARM JSON templates
-- **ARM compatibility**: Compiles to ARM templates for deployment
-- **Resource validation**: Built-in linting and validation
-- **Visual Studio Code integration**: Rich editing experience with IntelliSense
+- **Real-time collaboration**: Multiplayer infrastructure management with live updates
+- **Visual infrastructure models**: Rich 1:1 digital twins of cloud resources
+- **Import existing infrastructure**: Bring in infrastructure created with any tool
+- **TypeScript programmability**: Full programmability via TypeScript functions
+- **Reactive architecture**: Function-driven infrastructure automation
+- **Tool integration**: API-driven integration with existing workflows
+- **Policy enforcement**: Built-in governance and compliance capabilities
 
 Code Example:
 
-```bicep
-param storageAccountName string = 'mystorageaccount'
-param location string = resourceGroup().location
-
-resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
-  name: storageAccountName
-  location: location
-  sku: {
-    name: 'Standard_LRS'
-  }
-  kind: 'StorageV2'
-  properties: {
-    accessTier: 'Hot'
-  }
+```typescript
+// TypeScript-based infrastructure function
+export async function createWebServer(input: CreateWebServerInput): Promise<CreateWebServerOutput> {
+  const instance = await ec2.createInstance({
+    imageId: input.amiId,
+    instanceType: input.instanceType,
+    securityGroups: [input.securityGroupId],
+    userData: input.startupScript
+  });
+  
+  return {
+    instanceId: instance.id,
+    publicIp: instance.publicIpAddress
+  };
 }
-
-output storageAccountId string = storageAccount.id
 ```
 
 ### Brainboard - Visual Infrastructure Design
@@ -843,7 +842,7 @@ The infrastructure as code landscape is rapidly evolving toward software enginee
 
 **Internal Developer Platform Evolution**: Organizations are building sophisticated Internal Developer Platforms that provide self-service infrastructure capabilities while maintaining governance and compliance. These platforms leverage infrastructure as code tools to create standardized, reusable components that accelerate development velocity.
 
-**AI-Enhanced Development**: Integration of AI tools to help generate, optimize, and troubleshoot infrastructure code, with particular strength in environments that use familiar programming languages where AI assistance is most mature.
+**AI-Enhanced Development**: Integration of AI tools to help generate, optimize, and troubleshoot infrastructure code, with particular strength in environments that use familiar programming languages where AI assistance is most mature. Emerging technologies like Model Context Protocol (MCP) and AI prompt templates are beginning to enable more sophisticated AI-infrastructure interactions.
 
 These trends favor tools that embrace software engineering principles from the ground up, rather than attempting to retrofit programming capabilities onto template-based or DSL-limited approaches.
 
@@ -943,6 +942,14 @@ Absolutely! Many organizations use complementary tools for different aspects of 
 - Pulumi Kubernetes Operator (PKO) for GitOps workflows
 - Pulumi + Crossplane for layered infrastructure management
 - Pulumi + security scanners like Checkov or Terrascan for compliance
+
+**Terraform + Pulumi Coexistence:**
+
+- Use Terraform for base infrastructure and Pulumi for Internal Developer Platforms (IDPs)
+- Reference existing Terraform state from Pulumi programs during gradual migration
+- Manage different infrastructure layers with different tools based on team expertise
+
+Pulumi IaC is designed for heterogeneous environments where multiple tools may be in use. For example, you can manage existing Terraform or CloudFormation resources with Pulumi, either using both tools in tandem or for temporary management while migrating to native Pulumi IaC code. Other Pulumi tools, like Pulumi IDP, also enable you to manage IaC self-service workflows like other tools on this list. See what's possible when [migrating to Pulumi](/docs/iac/adopting-pulumi/migrating-to-pulumi/).
 
 ### Which tool has the best learning resources?
 
