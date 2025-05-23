@@ -77,18 +77,12 @@ This guide covers the following infrastructure as code tools and platforms:
 - **[Chef](#chef)** - Ruby-based configuration management
 - **[Puppet](#puppet)** - Enterprise configuration management
 - **[Salt](#salt)** - Python-based automation
-- **[Vagrant](#vagrant)** - Development environment management
 
 ### Additional Infrastructure Tools
 
 - **[Azure Bicep](#azure-bicep---azure-native-dsl)** - Azure-native DSL
 - **[Brainboard](#brainboard---visual-infrastructure-design)** - Visual infrastructure design
 - **[Kubernetes](#kubernetes---container-orchestration-platform)** - Container orchestration platform
-
-#### IaC Management Platforms
-
-- **[Spacelift](#spacelift)** - Multi-IaC management platform
-- **[Env0](#env0)** - Automated IaC workflows and governance
 
 ### Security and Compliance Tools
 
@@ -105,7 +99,7 @@ This guide covers the following infrastructure as code tools and platforms:
 ### Pulumi
 
 License: Apache 2.0 (Open Source)  
-Best For: Development teams who want to use familiar programming languages for infrastructure
+Best For: Teams who solve operations problems with a development approach
 
 Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
 
@@ -159,24 +153,21 @@ pulumi.export("vpc_id", vpc.vpc_id)
 pulumi.export("service_url", alb.load_balancer.dns_name)
 ```
 
-Why Pulumi IaC Leads in 2025:
+**Key Strengths:**
 
-**General-Purpose Languages, Not DSLs**: Use familiar general-purpose programming languages your team already knows rather than learning proprietary domain-specific languages. This unlocks powerful programming constructs, package management, and leverages existing skills.
+- **General-purpose language support**: Use Python, TypeScript, Go, C#, Java, or YAML without learning new DSLs
+- **Software engineering practices**: Full IDE support, comprehensive testing frameworks, debugging capabilities
+- **Multi-cloud flexibility**: Native cloud provider SDKs with same-day feature access
+- **Incremental adoption**: Migration tools and state integration for gradual transitions
+- **Open source licensing**: Apache 2.0 ensures long-term freedom and flexibility
 
-**Proven Performance Improvements**: Organizations report dramatic productivity gains:
+**Considerations:**
 
-- Unity achieved 80% reduction in deployment time (from weeks to hours)
-- Snowflake reduced infrastructure deployment time by 90% (from 1.5 weeks to under a day)
-- Starburst experienced 112x faster deployments after switching from Terraform
-- Developers typically experience 3-5x faster infrastructure development cycles
+- **Learning curve**: Teams new to programming may prefer template-based approaches initially
+- **Ecosystem maturity**: Smaller community compared to more established tools like Terraform
+- **Tool complexity**: Advanced features may require more setup than simpler template systems
 
-**Software Engineering for Infrastructure**: Apply true software engineering practices with full IDE support, comprehensive testing frameworks (unit, integration, and property testing), debugging capabilities, and code refactoring tools.
-
-**True Open Source with No Restrictions**: Apache 2.0 license ensures long-term stability and freedom without commercial restrictions.
-
-**Same-Day Cloud Feature Access**: Native cloud provider SDKs deliver immediate access to new cloud features on release day, compared to weeks or months of delays with community-maintained providers.
-
-**Incremental Adoption Path**: Migrate gradually without disruption using tools like tf2pulumi and state integration—no "rip and replace" required.
+Organizations like Unity, Snowflake, and Starburst have reported significant productivity improvements (80-90% deployment time reductions) when adopting programming language-based approaches, though results vary based on team expertise and use cases.
 
 ### Terraform
 
@@ -695,38 +686,6 @@ nginx:
     - mode: 644
 ```
 
-### Vagrant
-
-License: MIT  
-Best For: Local development environment provisioning and management
-
-Vagrant simplifies the creation and management of reproducible development environments across different virtualization platforms.
-
-Key Features:
-
-- **Multi-provider support**: VirtualBox, VMware, AWS, Docker, and more
-- **Simple configuration**: Vagrantfile for environment definitions
-- **Provisioning integration**: Works with Chef, Puppet, Ansible, and shell scripts
-- **Networking**: Automated network configuration and port forwarding
-- **Box ecosystem**: Pre-built virtual machine images and templates
-
-Code Example:
-
-```ruby
-# Vagrantfile
-Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/focal64"
-  config.vm.network "private_network", ip: "192.168.33.10"
-  
-  config.vm.provision "shell", inline: <<-SHELL
-    apt-get update
-    apt-get install -y nginx
-    systemctl start nginx
-    systemctl enable nginx
-  SHELL
-end
-```
-
 ## Additional Infrastructure as Code Tools
 
 ### Azure Bicep - Azure-Native DSL
@@ -830,50 +789,6 @@ spec:
     targetPort: 80
   type: LoadBalancer
 ```
-
-### IaC Management Platforms
-
-#### Spacelift
-
-License: Proprietary  
-Best For: Organizations using multiple IaC tools requiring centralized management
-
-Spacelift is a comprehensive management platform that works with multiple IaC tools including OpenTofu, Terraform, Pulumi, CloudFormation, Ansible, and Kubernetes. As an external platform, it provides CI/CD orchestration and governance across different IaC tools.
-
-**Key Strengths:**
-
-- **Multi-IaC support**: Centralized management for various IaC tools
-- **Policy engine**: Governance and compliance across different tools
-- **Workflow automation**: Advanced CI/CD for infrastructure deployments
-- **Team collaboration**: Role-based access control and approval workflows
-
-**Considerations vs. Custom Internal Developer Platforms:**
-
-- **External dependency**: Requires adopting third-party platform vs. building custom IDP
-- **Limited customization**: Pre-built workflows vs. flexible, organization-specific solutions
-- **Vendor lock-in**: Platform-specific features vs. portable internal tooling
-
-#### Env0
-
-License: Proprietary  
-Best For: Teams seeking automated IaC management with strong governance controls
-
-Env0 is a cloud-native platform that automates Infrastructure as Code workflows, providing centralized management, governance, and cost control for multiple IaC tools. Like Spacelift, it serves as an "external" developer platform for infrastructure management.
-
-**Key Strengths:**
-
-- **Multi-IaC orchestration**: Support for Terraform, Terragrunt, Pulumi, CloudFormation, and Kubernetes
-- **Cost management**: Real-time cost estimation and budget controls
-- **Governance controls**: RBAC, compliance policies, and audit trails
-- **Environment management**: Automated environment provisioning and lifecycle management
-
-**Considerations vs. Internal Developer Platforms:**
-
-- **External platform dependency**: Relies on vendor-hosted solution vs. internal control
-- **Standardized workflows**: Pre-defined processes vs. custom organizational requirements
-- **Integration constraints**: Platform limitations vs. flexible internal development
-
-Both Spacelift and Env0 provide valuable orchestration capabilities, but organizations increasingly prefer building custom Internal Developer Platforms using tools like Pulumi IDP for greater flexibility and control.
 
 ## Infrastructure as Code Security and Compliance Tools
 
