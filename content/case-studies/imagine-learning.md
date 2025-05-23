@@ -18,7 +18,7 @@ quote_block:
         "Building new environments takes hours now; it doesn't take weeks or even months."
     quote_attrib: Blake Romano, Senior Software Engineer, Imagine Learning
     headline_stat: 1.5 Months
-    headline: Time to recoup investmnet in Pulumi
+    headline: Time to recoup investment in Pulumi
 
 hide_pulumi_footer: true
 
@@ -41,7 +41,7 @@ Imagine Learning is a leading K-12 education technology company serving millions
 
 ## Scaling Education Infrastructure for the Next Generation
 
-As a technology company focused on K-12 education, Imagine Learning's infrastructure needs are both complex and critical. Their existing Internal Developer Platform was struggling to keep pace with evolving demands, creating several challenges:
+As a technology company focused on K-12 education, Imagine Learning's infrastructure needs are both complex and critical. Their existing Internal Developer Platform struggled to keep pace with evolving demands, creating several challenges:
 
 1. **Limited infrastructure visibility:** "It was really hard to determine the current state of every environment we managed," notes Blake Romano, Senior Software Engineer at Imagine Learning. Platform engineers lacked a unified view of their infrastructure, making it difficult to maintain consistency and troubleshoot issues.
 
