@@ -35,7 +35,7 @@ Infrastructure as Code tools are platforms and frameworks that enable you to def
 
 The most effective IaC tools share several key characteristics:
 
-- **Declarative syntax**: Describe what you want, not how to achieve it
+- **End-state focus**: Define your desired infrastructure outcome, whether through declarative syntax (like YAML/JSON templates) or imperative languages that express declarative intent
 - **Multi-cloud support**: Work across different cloud providers and services
 - **State management**: Track the current state of your infrastructure
 - **Preview capabilities**: Show what changes will be made before applying them
@@ -108,6 +108,8 @@ License: Apache 2.0 (Open Source)
 Best For: Development teams who want to use familiar programming languages for infrastructure
 
 Pulumi IaC represents the next generation of infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of real programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
+
+Pulumi's approach combines the best of both imperative and declarative paradigms: you use imperative programming languages to define your desired infrastructure state, but the Pulumi engine processes this declaratively to determine what changes are needed to achieve your intended outcome.
 
 Key Features:
 
