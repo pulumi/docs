@@ -41,6 +41,15 @@ Here’s a simple component example:
 class MyComponent extends pulumi.ComponentResource {
     constructor(name, myComponentArgs, opts) {
         super("pkg:index:MyComponent", name, {}, opts);
+
+        // Create Child Resource
+        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
+            {}, { parent: this });
+
+        // Registering Component Outputs
+        this.registerOutputs({
+            bucketDnsName: this.bucket.bucketDomainName
+        });
     }
 }
 ```
@@ -50,8 +59,19 @@ class MyComponent extends pulumi.ComponentResource {
 
 ```typescript
 class MyComponent extends pulumi.ComponentResource {
+    bucket: aws.s3.BucketV2;
+
     constructor(name: string, myComponentArgs: MyComponentArgs, opts: pulumi.ComponentResourceOptions) {
         super("pkg:index:MyComponent", name, {}, opts);
+
+        // Create Child Resource
+        this.bucket = new aws.s3.BucketV2(`${name}-bucket`,
+            {}, { parent: this });
+
+        // Registering Component Outputs
+        this.registerOutputs({
+            bucketDnsName: this.bucket.bucketDomainName
+        });
     }
 }
 ```
@@ -71,6 +91,7 @@ class MyComponent(pulumi.ComponentResource):
 ```go
 type MyComponent struct {
     pulumi.ResourceState
+    Bucket *s3.BucketV2
 }
 
 func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponentArgs, opts ...pulumi.ResourceOption) (*MyComponent, error) {
@@ -79,6 +100,19 @@ func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponen
     if err != nil {
         return nil, err
     }
+
+    // Create Child Resource
+    bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name),
+        &s3.BucketV2Args{}, pulumi.Parent(myComponent))
+    if err != nil {
+        return nil, err
+    }
+    myComponent.Bucket = bucket
+
+    // Registering Component Outputs
+    ctx.RegisterResourceOutputs(myComponent, pulumi.Map{
+        "bucketDnsName": bucket.BucketDomainName,
+    })
 
     return myComponent, nil
 }
@@ -90,13 +124,20 @@ func NewMyComponent(ctx *pulumi.Context, name string, myComponentArgs MyComponen
 ```csharp
 class MyComponent : Pulumi.ComponentResource
 {
+    public Aws.S3.BucketV2 Bucket { get; private set; }
+
     public MyComponent(string name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts)
         : base("pkg:index:MyComponent", name, opts)
     {
-        // initialization logic.
+        // Create Child Resource
+        this.Bucket = new Aws.S3.BucketV2($"{name}-bucket",
+            new Aws.S3.BucketV2Args(), new CustomResourceOptions { Parent = this });
 
-        // Signal to the UI that this resource has completed construction.
-        this.RegisterOutputs();
+        // Registering Component Outputs
+        this.RegisterOutputs(new Dictionary<string, object>
+        {
+            { "bucketDnsName", Bucket.BucketDomainName }
+        });
     }
 }
 ```
@@ -107,14 +148,31 @@ class MyComponent : Pulumi.ComponentResource
 ```java
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.BucketV2Args;
+import com.pulumi.resources.CustomResourceOptions;
 
 class MyComponent extends ComponentResource {
+    private final BucketV2 bucket;
+
     public MyComponent(String name, MyComponentArgs myComponentArgs, ComponentResourceOptions opts) {
         super("pkg:index:MyComponent", name, null, opts);
-        // initialization logic.
 
-        // Signal to the UI that this resource has completed construction.
-        this.registerOutputs();
+        // Create Child Resource
+        this.bucket = new BucketV2(String.format("%s-bucket", name),
+            BucketV2Args.builder().build(),
+            CustomResourceOptions.builder()
+                .parent(this)
+                .build());
+
+        // Registering Component Outputs
+        this.registerOutputs(Map.of(
+            "bucketDnsName", bucket.bucketDomainName()
+        ));
+    }
+
+    public BucketV2 bucket() {
+        return this.bucket;
     }
 }
 ```
@@ -158,8 +216,13 @@ let bucket = new aws.s3.BucketV2(`${name}-bucket`,
 {{% choosable language python %}}
 
 ```python
-bucket = s3.BucketV2(f"{name}-bucket",
-    opts=pulumi.ResourceOptions(parent=self))
+class MyComponent(pulumi.ComponentResource):
+    def __init__(self, name, my_component_args, opts = None):
+        super().__init__('pkg:index:MyComponent', name, None, opts)
+
+        # Create Child Resource
+        self.bucket = s3.BucketV2(f"{name}-bucket",
+            opts=pulumi.ResourceOptions(parent=self))
 ```
 
 {{% /choosable %}}
@@ -224,8 +287,17 @@ this.registerOutputs({
 {{% choosable language python %}}
 
 ```python
-self.register_outputs({
-    "bucketDnsName": bucket.bucketDomainName
+class MyComponent(pulumi.ComponentResource):
+    def __init__(self, name, my_component_args, opts = None):
+        super().__init__('pkg:index:MyComponent', name, None, opts)
+
+        # Create Child Resource
+        self.bucket = s3.BucketV2(f"{name}-bucket",
+            opts=pulumi.ResourceOptions(parent=self))
+
+        # Registering Component Outputs
+        self.register_outputs({
+            "bucketDnsName": bucket.bucketDomainName
 })
 ```
 
