@@ -23,7 +23,7 @@ If your infrastructure was provisioned with Terraform, there are a number of opt
 * **Coexist** with resources provisioned by Terraform by referencing a `.tfstate` file.
 * **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with some `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
-* **Use Terraform Modules** directly within your Pulumi programs through the [Terraform Module](docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) feature.
+* **Use Terraform Modules** directly within your Pulumi programs through the [Terraform Module](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) feature.
 
 This range of techniques helps to either temporarily or permanently use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
 
