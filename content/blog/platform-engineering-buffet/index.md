@@ -1,6 +1,6 @@
 ---
 title: "Platform Engineering Buffet at SEITENBAU"
-date: 2025-05-23T11:42:43-04:00
+date: 2025-05-27
 draft: false
 meta_desc: How SEITENBAU built a flexible platform serving 20+ independent projects with Pulumi's buffet approach, offering reusable components teams can mix and match.
 summary: SEITENBAU GmbH faced a unique challenge - building a platform for 20+ independent projects, each with different tech stacks, deployment targets, and operational models. Instead of forcing standardization, they built an infrastructure buffet using Pulumi.
