@@ -60,6 +60,12 @@ Here's how they compare across key aspects:
 | **Secret Management** | Built-in | Kubernetes secrets |
 | **Target Users** | Software developers, Platform engineers and DevOps teams |  K8s experts |
 
+### Video Overview of Kubernetes Provider
+
+Watch how Pulumi lets you define Kubernetes resources—like Deployments and Services—in code, offering a more maintainable alternative to raw YAML.
+
+{{< youtube id="2P8JLgAc5QI" start=269 >}}
+
 ### Platform Flexibility {#platform-flexibility}
 
 Crossplane is a Kubernetes-based control plane for infrastructure management. It extends Kubernetes' API model to handle cloud resources by:

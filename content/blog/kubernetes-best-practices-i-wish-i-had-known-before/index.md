@@ -240,6 +240,10 @@ While native YAML manifests can work for smaller Kubernetes deployments, they of
 - **Reusable Modules**: Abstract common patterns into [reusable components](/docs/iac/using-pulumi/pulumi-packages/), reducing boilerplate and preventing drift.
 - **Strong Tooling & Ecosystem**: Benefit from package managers, [IDE integration](/docs/iac/concepts/testing/), and a rich library of shared Pulumi components.
 
+{{< youtube "2P8JLgAc5QI" >}}
+
+{{% figcaption %}}See how Pulumi helps you manage Kubernetes Services and Deployments with code instead of YAML—bringing structure, reuse, and type safety to your configs.{{% /figcaption %}}
+
 By adopting Pulumi, you can avoid the complexity of juggling endless YAML files and gain a more streamlined, maintainable workflow for your Kubernetes infrastructure.
 
 ## Final Thoughts
