@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "PlatforMA 2025"
+  title: "Augmenting Platform Engineering: Leveraging AI to Enhance DevEx & Operational Efficiency"
+  url: "https://www.platfor-ma.com"
+  date: 2025-05-20T15:00:00.000-07:00 
 - event: "KCD Texas"
   title: "Platform Engineering’s Missing Piece: A Deep Dive into Kubernetes Abstraction"
   url: "https://kcdtexas2025.sessionize.com/session/861657"
