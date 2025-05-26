@@ -242,7 +242,7 @@ While native YAML manifests can work for smaller Kubernetes deployments, they of
 
 {{< youtube "2P8JLgAc5QI" >}}
 
-{{% figcaption %}}Watch how Pulumi simplifies Kubernetes cluster setup - this 5-minute demo shows you can provision an Amazon EKS cluster using real code instead of wrestling with complex YAML configurations.{{% /figcaption %}}
+{{% figcaption %}}See how Pulumi helps you manage Kubernetes Services and Deployments with code instead of YAML—bringing structure, reuse, and type safety to your configs.{{% /figcaption %}}
 
 By adopting Pulumi, you can avoid the complexity of juggling endless YAML files and gain a more streamlined, maintainable workflow for your Kubernetes infrastructure.
 

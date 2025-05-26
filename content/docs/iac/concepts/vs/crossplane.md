@@ -62,7 +62,7 @@ Here's how they compare across key aspects:
 
 ### Video Overview of Kubernetes Provider
 
-Watch how easy it is to manage Kubernetes resources using the Pulumi Kubernetes provider in this video.
+Watch how Pulumi lets you define Kubernetes resources—like Deployments and Services—in code, offering a more maintainable alternative to raw YAML.
 
 {{< youtube id="2P8JLgAc5QI" start=269 >}}
 
