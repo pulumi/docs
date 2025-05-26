@@ -240,6 +240,10 @@ While native YAML manifests can work for smaller Kubernetes deployments, they of
 - **Reusable Modules**: Abstract common patterns into [reusable components](/docs/iac/using-pulumi/pulumi-packages/), reducing boilerplate and preventing drift.
 - **Strong Tooling & Ecosystem**: Benefit from package managers, [IDE integration](/docs/iac/concepts/testing/), and a rich library of shared Pulumi components.
 
+{{< youtube "2P8JLgAc5QI" >}}
+
+{{% figcaption %}}Watch how Pulumi simplifies Kubernetes cluster setup - this 5-minute demo shows you can provision an Amazon EKS cluster using real code instead of wrestling with complex YAML configurations.{{% /figcaption %}}
+
 By adopting Pulumi, you can avoid the complexity of juggling endless YAML files and gain a more streamlined, maintainable workflow for your Kubernetes infrastructure.
 
 ## Final Thoughts
