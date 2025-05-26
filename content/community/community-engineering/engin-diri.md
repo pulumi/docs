@@ -2,12 +2,16 @@
 title: Engin Diri
 id: engin-diri
 first_name: Engin
-meta_desc: Engin Diri is a solutions architect on the community engineering team.
+meta_desc: Engin Diri is a senior solutions architect on the community engineering team.
 meta_image: community/community-engineering/engin-social-card.png
 layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "KCD Texas"
+  title: "Platform Engineering’s Missing Piece: A Deep Dive into Kubernetes Abstraction"
+  url: "https://kcdtexas2025.sessionize.com/session/861657"
+  date: 2025-05-15T15:00:00.000-07:00 
 - event: "Mastering GitOps 2025"
   title: "GitOps Evolution: Moderne Infrastruktur-Pipelines mit Pulumi und Argo CD"
   url: "https://www.mastering-gitops.de/veranstaltung-83394-se-0-gitops-evolution-moderne-infrastruktur-pipelines-mit-pulumi-und-argo-cd.html"
