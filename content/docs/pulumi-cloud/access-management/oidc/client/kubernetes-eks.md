@@ -33,64 +33,64 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 1. Create an IAM Role for Service Accounts
 
-Define a trust relationship between the IAM role and the OIDC provider for your EKS cluster. Here's an example trust policy:
+    Define a trust relationship between the IAM role and the OIDC provider for your EKS cluster. Here's an example trust policy:
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
+    ```json
     {
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "arn:aws:iam::<AWS_ACCOUNT_ID>:oidc-provider/<OIDC_PROVIDER_URL>"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "<OIDC_PROVIDER_URL>:sub": "system:serviceaccount:<namespace>:<service-account-name>"
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Federated": "arn:aws:iam::<AWS_ACCOUNT_ID>:oidc-provider/<OIDC_PROVIDER_URL>"
+          },
+          "Action": "sts:AssumeRoleWithWebIdentity",
+          "Condition": {
+            "StringEquals": {
+              "<OIDC_PROVIDER_URL>:sub": "system:serviceaccount:<namespace>:<service-account-name>"
+            }
+          }
         }
-      }
+      ]
     }
-  ]
-}
-```
+    ```
 
-Replace `<AWS_ACCOUNT_ID>`, `<OIDC_PROVIDER_URL>`, `<namespace>`, and `<service-account-name>` with your values.
+    Replace `<AWS_ACCOUNT_ID>`, `<OIDC_PROVIDER_URL>`, `<namespace>`, and `<service-account-name>` with your values.
 
-Create the IAM role using this trust policy and attach necessary permissions for your workload.
+    Create the IAM role using this trust policy and attach necessary permissions for your workload.
 
 1. Associate the IAM Role with a Kubernetes Service Account.
 
-Create a Kubernetes service account annotated with the IAM role ARN:
+    Create a Kubernetes service account annotated with the IAM role ARN:
 
-```yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: pulumi-service-account
-  namespace: default
-  annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::<AWS_ACCOUNT_ID>:role/<IAM_ROLE_NAME>"
-```
+    ```yaml
+    apiVersion: v1
+    kind: ServiceAccount
+    metadata:
+      name: pulumi-service-account
+      namespace: default
+      annotations:
+        eks.amazonaws.com/role-arn: "arn:aws:iam::<AWS_ACCOUNT_ID>:role/<IAM_ROLE_NAME>"
+    ```
 
-Replace `<AWS_ACCOUNT_ID>` and `<IAM_ROLE_NAME>` with the appropriate values.
+    Replace `<AWS_ACCOUNT_ID>` and `<IAM_ROLE_NAME>` with the appropriate values.
 
 1. Apply the service account to your Kubernetes cluster:
 
-```bash
-kubectl apply -f pulumi-service-account.yaml
-```
+    ```bash
+    kubectl apply -f pulumi-service-account.yaml
+    ```
 
 ## Register the OIDC issuer
 
 1. Navigate to **OIDC Issuers** under your Organization's **Settings** and click on **Register a new issuer**.
 1. Lookup your clusters OIDC Issuer url:
 
-```bash
-aws eks describe-cluster --name <cluster-name> --query "cluster.identity.oidc.issuer" --output text
-```
+    ```bash
+    aws eks describe-cluster --name <cluster-name> --query "cluster.identity.oidc.issuer" --output text
+    ```
 
-This command returns the issuer URL, such as `https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLEDOCID`.
+    This command returns the issuer URL, such as `https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLEDOCID`.
 
 1. Name the issuer, set a max expiration (in seconds), and add the issuer url:
 ![Register EKS](../register-eks.png)
