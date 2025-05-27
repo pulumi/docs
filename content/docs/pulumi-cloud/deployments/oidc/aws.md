@@ -46,9 +46,6 @@ Once you have created the identity provider, you will see a notification at the 
     * Select the name of your Pulumi organization under **Audience**. Then click **Next**.
   {{< video title="Create IAM role wizard" src="https://www.pulumi.com/uploads/create-role-wizard.mp4" autoplay="true" loop="true" >}}
 5. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi deployments. Then click **Next**.
-  {{< notes type="info" >}}
-  For setting up an AWS Pulumi insights account, you can use the role `ReadOnlyAccess` managed by [aws](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/ReadOnlyAccess.html).
-  {{< /notes >}}
   {{< video title="Adding S3 permissions to IAM role" src="https://www.pulumi.com/uploads/create-role-add-perms.mp4" autoplay="true" loop="true" >}}
 6. Provide a name and optional description for the IAM role. Then click **Create role**.
   {{< video title="Adding name and description to role then creating it" src="https://www.pulumi.com/uploads/create-role.mp4" autoplay="true" loop="true" >}}
