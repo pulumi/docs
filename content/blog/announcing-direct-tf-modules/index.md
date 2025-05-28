@@ -12,33 +12,38 @@ tags:
   - features
 ---
 
-We are excited to announce that Pulumi can now execute [Terraform modules
-directly](https://github.com/pulumi/pulumi-terraform-module). This new capability unlocks a great option for users
-contemplating migrating a large Terraform installation to Pulumi: when dealing with a complicated Terraform module, you
-can now bypass translating its sources while still quickly moving its state over to Pulumi and cross-linking its inputs
-and outputs with Pulumi code. Additionally, all Pulumi users can now more easily benefit from the existing awesome
-modules in the Terraform registry.
+Today Pulumi is introducing the capability to execute
+[Terraform modules directly](https://www.pulumi.com/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/).
+This makes migrating complex infrastructure from Terraform to Pulumi us now simpler than ever.
 
 <!--more-->
 
-As organizations optimize their infrastructure management, many teams are exploring transitioning from Terraform to
-Pulumi. However, migrating existing, complex Terraform configurations to Pulumi has often been cited as challenging,
-especially when intricate Terraform modules are involved. Our customers tell us that Pulumi's [pulumi convert --from
-terraform](https://www.pulumi.com/blog/converting-full-terraform-programs-to-pulumi/) is very useful for small to
-medium programs, but runs into challenges on more complex projects, especially involving modules. Even when sources
-convert successfully, full migration still requires meticulous validation to ensure production infrastructure
-continuity is not affected by small differences in Pulumi and Terraform behavior.
+We are releasing this feature in response to user feedback: our users tell us that while Pulumi's [pulumi convert
+--from terraform](https://www.pulumi.com/blog/converting-full-terraform-programs-to-pulumi/) is very useful for small
+programs, it runs into challenges on more complex projects, especially ones involving modules. With the new feature you
+no longer need to convert module sources, and can immediately manage everything with Pulumi.
 
-To address this feedback, Pulumi is excited to announce new support for executing Terraform modules directly within
-Pulumi. This new feature enables teams to continue utilizing their existing Terraform modules without source
-modifications. Modules execute under their exact Terraform semantics powered by [OpenTofu](https://opentofu.org). Their
-inputs and outputs are exposed in a type-safe manner to your favorite Pulumi programming language, to be freely
-composed with other Pulumi components. Finally, Terraform state is automatically [stored in
-Pulumi](https://www.pulumi.com/docs/iac/concepts/state-and-backends/) and takes full advantage of proper [secret
-encryption](https://www.pulumi.com/docs/iac/concepts/secrets/).
+What is included in the launch:
 
-Our hope is that this approach becomes an important part of the migration toolbox to be applied to selectively to those
-parts of the codebase that have the highest migration risk and/or source complexity.
+- `pulumi package add terraform-module <module-source> [<version>] <pulumi-package-name>` command can now run modules
+  from Terraform and OpenTofu registries as well as locally managed modules under Pulumi. This is enabled by the new
+  [terraform-module](https://github.com/pulumi/pulumi-terraform-module) provider.
+
+- `pulumi convert --from terraform` now supports a `// @pulumi-terraform-module <pulumi-package-name>` annotation to
+  avoid translating a module recursively and instead execute it directly.
+
+- Pulumi providers expose helper methods to assist with keeping config consistent across Pulumi and Terraform providers
+  required to run modules. For example, [AWS provider](https://github.com/pulumi/pulumi-aws) allows to query
+  `awsProvider.terraformConfig()`.
+
+## How it works
+
+Under the hood Pulumi orchestrates an configurable executor such as `tofu` or `terraform` CLI to run updates against
+your infrastructure. Module code executes under exact Terraform semantics, but participates in Pulumi lifecycle with
+`pulumi {preview,up,refresh,destroy}`. Module inputs and outputs are exposed in a type-safe manner to your favorite
+Pulumi programming language, to be freely composed with other Pulumi components. Finally, Terraform state is
+automatically [stored in Pulumi](https://www.pulumi.com/docs/iac/concepts/state-and-backends/) and takes full advantage
+of proper [secret encryption](https://www.pulumi.com/docs/iac/concepts/secrets/).
 
 ## Walkthrough
 
@@ -95,6 +100,8 @@ export const privateSubnets = vpc.private_subnets;
 ```
 
 If you have AWS credentials set up, you can now do `pulumi up` and it will show all the resources being created:
+
+TODO: the preview update section looks different with views.
 
 ```
 
@@ -202,8 +209,30 @@ The above program is very simple. To take it further, check out
 features such as computing subnets dynamically with Pulumi `aws.getAvailabilityZonesOutput` function or passing the
 results of the VPC module to an EKS module.
 
-// TODO show-case cross-configuring the provider with a given AWS region
-// TODO show-case converting TF programs with @sandbox annotation
+If you are instead starting from a Terraform program, you can use `pulumi convert` instead. Just make sure to annotate
+the modules with a special comment marker `// @pulumi-terraform-module`. For example, given this `infra.tf`:
+
+```terraform
+// @pulumi-terraform-module vpcmod
+module "my-vpc" {
+  source             = "terraform-aws-modules/vpc/aws"
+  version            = "5.18.1"
+  azs                = ["us-west-2a", "us-west-2b"]
+  name               = "test-vpc-123"
+  public_subnets     = ["10.0.1.0/24", "10.0.2.0/24"]
+  private_subnets    = ["10.0.3.0/24", "10.0.4.0/24"]
+  enable_nat_gateway = true
+  single_nat_gateway = true
+}
+```
+
+Run `pulumi convert` as follows:
+
+``` shell
+pulumi convert --from terraform --language typescript --out my-pulumi-project
+```
+
+The resulting `my-pulumi-project` folder will have the project setup correctly for executing the `my-vpc` module.
 
 ## Supported Features
 
@@ -233,17 +262,12 @@ configuration options.
 
 ## What's next
 
-As part of hardening this feature Pulumi will be looking at removing the limitations and improving error handling and
-usability of the directly executed modules. Our team is currently excited about these possibilities:
-
-- extending `pulumi convert --from terraform` to put the users in control of which modules are converted recursively to
-  Pulumi source code, and which are instead converted into directly executed modules
-
-- enhancing state import from Terraform into Pulumi to seamlessly work with directly executed modules
+We are working on enhancing state import from Terraform into Pulumi to work in tandem with source conversion and
+provide a seamless migration experience.
 
 ## Get Started
 
 Support for modules is available as of today. Download the latest Pulumi CLI and it a try. If you run into any issues
-or have suggestions and feedback, please [let us
-know](https://github.com/pulumi/pulumi-terraform-module/issues/new/choose) or reach out in the [Pulumi Community
-Slack](https://slack.pulumi.com/).
+or have suggestions and feedback, please
+[let us know](https://github.com/pulumi/pulumi-terraform-module/issues/new/choose) or reach out in the
+[Pulumi Community Slack](https://slack.pulumi.com/).
