@@ -209,6 +209,8 @@ The above program is very simple. To take it further, check out
 features such as computing subnets dynamically with Pulumi `aws.getAvailabilityZonesOutput` function or passing the
 results of the VPC module to an EKS module.
 
+### convert
+
 If you are instead starting from a Terraform program, you can use `pulumi convert` instead. Just make sure to annotate
 the modules with a special comment marker `// @pulumi-terraform-module`. For example, given this `infra.tf`:
 
@@ -233,6 +235,34 @@ pulumi convert --from terraform --language typescript --out my-pulumi-project
 ```
 
 The resulting `my-pulumi-project` folder will have the project setup correctly for executing the `my-vpc` module.
+
+### terraformConfig
+
+A quick note on configuration. It can be confusing that modules need Terraform providers to execute and those are
+distinct from Pulumi providers that may also be needed in your program. Fortunately there is a simple way to keep your
+configuration in sync. For example, if you already have configured an AWS provider in your program, you can reuse its
+`terraformConfig` to configure the matching Terraform AWS provider:
+
+```typescript
+const awsProvider = new aws.Provider("awsprovider", {
+    region: "us-east-1",
+    // more configuration
+})
+
+// Pass the AWS configuration to your VPC module provider instead of re-entering config settings in TF notation
+const vpcmodProvider = new vpcmod.Provider("vpcprovider", {
+    "aws": awsProvider.terraformConfig().result
+})
+
+// Use the VPC module provider in your Module as before
+const vpc = new vpcmod.Module("test-vpc", {...},
+    {provider: vpcmodProvider}
+);
+```
+
+This is also a great example of how the Pulumi Terraform Module fits into existing Pulumi programs - you can pass inputs
+and outputs from one resource into the other.
+
 
 ## Supported Features
 
