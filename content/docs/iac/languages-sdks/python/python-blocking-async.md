@@ -8,7 +8,7 @@ menu:
     iac:
         name: Blocking & async
         parent: iac-languages-python
-        weight: 2
+        weight: 3
     languages:
         parent: python
         weight: 5

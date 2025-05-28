@@ -239,11 +239,21 @@ iac:
     url: https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/
     weight: 1
     identifier: iac-languages-javascript-sdk
+  - name: Policy SDK docs
+    parent: iac-languages-javascript
+    url: https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/policy
+    weight: 2
+    identifier: iac-languages-javascript-policy-sdk
   - name: SDK docs
     parent: iac-languages-python
     url: https://www.pulumi.com/docs/reference/pkg/python/pulumi/
     weight: 1
     identifier: iac-languages-python-sdk
+  - name: Policy SDK docs
+    parent: iac-languages-python
+    url: https://www.pulumi.com/docs/reference/pkg/python/pulumi_policy/
+    weight: 2
+    identifier: iac-languages-python-policy-sdk
   - name: SDK docs
     parent: iac-languages-go
     url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi

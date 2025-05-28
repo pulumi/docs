@@ -360,15 +360,8 @@ Pulumi SDKs also publish pre-release versions, that include all the latest chang
 
 ## Package Documentation
 
-In addition to the standard and cloud-agnostic packages the [Pulumi Registry](/registry/) houses 100+ Node.js packages.
+The following reference documentation resources are available:
 
-### Standard Packages
-
-<dl class="tabular">
-    <dt>Pulumi SDK</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/pulumi">@pulumi/pulumi</a></dd>
-    <dt>Pulumi Policy</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/policy">@pulumi/policy</a></dd>
-    <dt>Pulumi Terraform</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/terraform">@pulumi/terraform</a></dd>
-</dl>
+* The [Pulumi SDK `@pulumi/pulumi`](/docs/reference/pkg/nodejs/pulumi/pulumi) allows you to work with with basic Pulumi constructs. You will need to reference it in most Pulumi IaC programs.
+* The [Pulumi Policy SDK `@pulumi/policy`](/docs/reference/pkg/nodejs/pulumi/policy) allows you to author Pulumi Policy as Code policies. You will need to reference it when authoring Pulumi Policy as code.
+* For managing resources in a Pulumi IaC program, you can find the relevant SDK reference docs for a given provider in [the Pulumi Registry](/registry/).
