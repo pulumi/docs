@@ -38,7 +38,7 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 ## Configure a Service Account
 
-Once you have created your workload identity pool and provider, you will be directed to the pool details page. If you already have an appropriate service account created, skip ahead to the steps found in the [Grant access to the service account](/docs/pulumi-cloud/oidc/provider/gcp/#grant-access-to-the-service-account) section. Otherwise, continue through the steps below to create a new one.
+Once you have created your workload identity pool and provider, you will be directed to the pool details page. If you already have an appropriate service account created, skip ahead to the steps found in the [Grant access to the service account](#grant-access-to-the-service-account) section. Otherwise, continue through the steps below to create a new one.
 
 ### Create a new service account
 

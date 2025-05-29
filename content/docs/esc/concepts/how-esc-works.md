@@ -37,7 +37,7 @@ Pulumi ESC integrates with many popular cloud login providers and secrets manage
 * [HashiCorp Vault OIDC](/docs/esc/integrations/dynamic-login-credentials/vault-login/) and [Vault Secrets](/docs/esc/integrations/dynamic-secrets/vault-secrets/)
 * [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/), [Kubernetes](/docs/esc/integrations/kubernetes/), among others.
 
-Teams can setup [OpenID Connect integration](/docs/pulumi-cloud/oidc/) in their cloud providers to allow ESC environments to pull short-lived credentials via **OIDC** for secure, time-limited access to secrets. These credentials can then be used in both [Pulumi IaC](/docs/pulumi-cloud/esc/environments/#using-with-pulumi-iac) workflows and [external CLIs](/docs/pulumi-cloud/esc/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, etc.
+Teams can setup [OpenID Connect integration](/docs/esc/environments/configuring-oidc/) in their cloud providers to allow ESC environments to pull short-lived credentials via **OIDC** for secure, time-limited access to secrets. These credentials can then be used in both [Pulumi IaC](/docs/pulumi-cloud/esc/environments/#using-with-pulumi-iac) workflows and [external CLIs](/docs/pulumi-cloud/esc/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, etc.
 
 ## The ESC data model
 

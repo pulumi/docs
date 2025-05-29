@@ -8,11 +8,14 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
     name: OpenID client
-    parent: pulumi-cloud-access-management-oidc
-    weight: 1
+    parent: pulumi-cloud-access-management
+    weight: 4
     identifier: pulumi-cloud-access-management-oidc-client
 aliases:
 - /docs/pulumi-cloud/oidc/client/
+- /docs/pulumi-cloud/oidc/
+- /docs/pulumi-cloud/access-management/oidc/client/
+- /docs/pulumi-cloud/access-management/oidc/
 ---
 
 Pulumi supports establishing trust relationships with third party OIDC providers by leveraging id_tokens and allowing it to be exchanged for a short-lived Pulumi access token. This mechanism enhances security by eliminating the necessity for hardcoded credentials.
