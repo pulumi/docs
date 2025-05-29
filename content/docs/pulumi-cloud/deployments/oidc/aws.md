@@ -77,7 +77,7 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 2. Open the stack's "Settings" tab.
 3. Choose the "Deploy" panel.
 4. Under the "OpenID Connect" header, toggle "Enable AWS Integration".
-5. Enter the ARN of the IAM role to created above in the "Role ARN" field.
+5. Enter the ARN of the IAM role created above in the "Role ARN" field.
 6. Enter a name for the assumed role session in the "Session Name" field.
 7. If you would like to use additional policies to further constrain the session's capabilities, enter the policies' ARNs separated by commas in the "Policy ARNs" field.
 8. If you would like to constrain the duration of the assumed role session, enter a duration in the form "XhYmZs" in the "Session Duration" field.
