@@ -13,7 +13,7 @@ menu:
 
 Pulumi ESC providers enable you to dynamically import secrets and configuration from the provider into your environment.
 
-To learn how to set up and use each provider, follow the links below. To learn how to configure OpenID Connect (OIDC) for the providers that support it, see [OpenID Connect integration](/docs/pulumi-cloud/oidc/) in the Pulumi Cloud documentation.
+To learn how to set up and use each provider, follow the links below. To learn how to configure OpenID Connect (OIDC) for the providers that support it, see [OpenID Connect integration](/docs/esc/environments/configuring-oidc) in the Pulumi ESC documentation.
 
 | Provider                                                                           | Description                                                                                                                     |
 |------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
