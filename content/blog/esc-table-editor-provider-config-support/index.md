@@ -31,7 +31,7 @@ In our initial launch, the Table Editor allowed you to perform CRUD operations o
 
 ## Enhancing the Table Editor: Provider Configuration Support
 
-With the addition of provider configuration support in the Table view, incorporating Pulumi ESC provider capabilities into your workflow is now more straightforward. A clean, user-friendly form provides step-by-step guidance, promoting best practices like [OIDC](/docs/pulumi-cloud/oidc/) adoption and the secure handling of sensitive data. This streamlined approach reduces the need for external documentation, making the entire process more intuitive and efficient.
+With the addition of provider configuration support in the Table view, incorporating Pulumi ESC provider capabilities into your workflow is now more straightforward. A clean, user-friendly form provides step-by-step guidance, promoting best practices like [OIDC](/docs/esc/environments/configuring-oidc) adoption and the secure handling of sensitive data. This streamlined approach reduces the need for external documentation, making the entire process more intuitive and efficient.
 
 ![Table view](esc-table-editor-provider-config.png)
 

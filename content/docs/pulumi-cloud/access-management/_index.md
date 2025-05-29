@@ -27,7 +27,7 @@ Pulumi Cloud offers a number of identity and access management controls.
 - [Stack permissions](stack-permissions/)
 - [Access tokens](access-tokens/)
 - [Environment permissions](environment-permissions/)
-- [OpenID](oidc/)
+- [OpenID Client](oidc-client/)
 - [Billing managers](billing-managers/)
 - [SAML single sign-on (SSO)](saml/)
 - [SCIM](scim/)
