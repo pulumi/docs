@@ -61,7 +61,7 @@ Once you have created your new application registration, you will be redirected 
 5. Fill in the remaining form fields as follows:
     * **Issuer:** `https://api.pulumi.com/oidc`
     * **Subject Identifier:** must be a valid subject claim (see examples at the end of this section).
-    * **Name:** An arbitrary name for the credential, e.g. "pulumi-oidc-credentials"
+    * **Name:** An arbitrary name for the credential, e.g. "pulumi-oidc-credentials".
     * **Audience:** Enter the name of your Pulumi organization.
 
 ### Subject claim examples
