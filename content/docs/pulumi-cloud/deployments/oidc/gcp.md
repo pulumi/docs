@@ -38,7 +38,7 @@ Please note that this guide provides step-by-step instructions based on the offi
 1. Navigate to the [Workload Identity Pools page](https://console.cloud.google.com/projectselector2/iam-admin/workload-identity-pools) in the Google Cloud console.
 2. Select your Google Cloud project.
 3. Click the **Create Pool** button.
-4. Provide a name and an optional description. then click **Continue**
+4. Provide a name and an optional description, then click **Continue**
 5. In the **Add a provider to pool** dropdown, select **OpenID Connect (OIDC)**.
 6. Provide a name for the provider.
 7. In the **Issuer** field, enter `https://api.pulumi.com/oidc`.
