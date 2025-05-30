@@ -25,7 +25,6 @@ Note that creating, listing, or restoring insights accounts are organization-lev
 |-------|-------------|
 | `insights_account_access:read` | View what users and roles can access an insights account.<br><br>**Granted by default permission**: `Account Read` |
 | `insights_account_access:update` | Manage what users and roles can access an insights account.<br><br>**Granted by default permission**: `Account Admin` |
-| `insights_account:create` | Create a new insights account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Admin` |
 | `insights_account:delete` | Remove an existing insights account. This permanently deletes the account and its associated data.<br><br>**Granted by default permission**: `Account Admin` |
 | `insights_account:read` | View insights account configurations and data. This includes access to monitoring settings and analysis results.<br><br>**Granted by default permission**: `Account Read` |
 | `insights_account:update` | Modify insights account settings and configurations. This allows updating monitoring parameters and analysis rules.<br><br>**Granted by default permission**: `Account Write` |
