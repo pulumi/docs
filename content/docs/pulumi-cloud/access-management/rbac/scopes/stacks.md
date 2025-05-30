@@ -24,7 +24,6 @@ Note that creating, listing, or restoring stacks are organization-level operatio
 | Value | Description |
 |-------|-------------|
 | `stack:cancel_update` | Cancel an ongoing stack update operation. This halts the current deployment or update process.<br><br>**Granted by default permission**: `Stack Write` |
-| `stack:create` | Create a new stack for managing infrastructure resources. Stacks represent isolated units of deployment.<br><br>**Granted by default roles**: `Admin` |
 | `stack:decrypt` | Decrypt sensitive stack data. This allows viewing encrypted configuration values and secrets.<br><br>**Granted by default permission**: `Stack Read` |
 | `stack:delete` | Delete a stack and its associated resources. This permanently removes the stack from the organization.<br><br>**Granted by default permission**: `Stack Admin` |
 | `stack:encrypt` | Encrypt stack data. This secures sensitive information within the stack.<br><br>**Granted by default permission**: `Stack Read` |
