@@ -8,7 +8,7 @@ menu:
   cloud:
     name: Time-to-live stacks
     parent: pulumi-cloud-deployments
-    weight: 6
+    weight: 80
     identifier: pulumi-cloud-deployments-ttl
 ---
 

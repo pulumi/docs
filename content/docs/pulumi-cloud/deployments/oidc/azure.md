@@ -20,7 +20,7 @@ aliases:
 ---
 
 {{% notes type="info" %}}
-Pulumi ESC provides a more portable and easier-to-set-up alternative to the Deployments OIDC integration described here. For most use cases, we recommend using [Pulumi ESC for Azure OIDC configuration](/docs/esc/environments/configuring-oidc/azure/).
+There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/pulumi-cloud/deployments/cloud-credentials/).
 {{% /notes %}}
 
 This document outlines the steps required to configure Pulumi Deployments to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via a Microsoft Entra App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by Pulumi Cloud.
