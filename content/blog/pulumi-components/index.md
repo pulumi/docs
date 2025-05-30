@@ -656,7 +656,7 @@ func main() {
     prov, err := infer.NewProviderBuilder().
             WithNamespace("your-org-name").
             WithComponents(
-                infer.ComponentF(MyComponent),
+                infer.ComponentF(NewSecureBucket),
             ).
             Build()
     if err != nil {
