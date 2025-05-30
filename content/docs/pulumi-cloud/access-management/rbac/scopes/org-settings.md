@@ -87,6 +87,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
+| `insights_account:create` | Create a new insights account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Admin` |
 | `insights_account:list` | View all insights accounts in the organization, subject to having `account:read` permissions on specific accounts.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Membership
@@ -211,6 +212,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
+| `stack:create` | Create a new stack for managing infrastructure resources. Stacks represent isolated units of deployment.<br><br>**Granted by default roles**: `Admin` |
 | `stack:list` | View all stacks in the organization, subject to having `stack:read` permissions on specific stacks.<br><br>**Granted by default roles**: `Member`, `Admin` |
 | `stack:list_deleted` | View a list of stacks that have been recently deleted but are still recoverable.<br><br>**Granted by default roles**: `Admin` |
 | `stack:restore_deleted` | Recover a previously deleted stack. This restores the stack and its configurations to their previous state.<br><br>**Granted by default roles**: `Admin` |
@@ -246,7 +248,7 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 
 | Value | Description |
 |-------|-------------|
-| `templates:source:create` | Allows adding new template sources to the organization.<br><br>**Granted by default roles**: `Admin` |
-| `templates:source:delete` | Allows removing template sources from the organization.<br><br>**Granted by default roles**: `Admin` |
-| `templates:source:read` | Allows viewing template source configurations and available templates.<br><br>**Granted by default roles**: `Admin` |
-| `templates:source:update` | Allows modifying template source configurations and settings.<br><br>**Granted by default roles**: `Admin` |
+| `templates_source:create` | Allows adding new template sources to the organization.<br><br>**Granted by default roles**: `Admin` |
+| `templates_source:delete` | Allows removing template sources from the organization.<br><br>**Granted by default roles**: `Admin` |
+| `templates_source:read` | Allows viewing template source configurations and available templates.<br><br>**Granted by default roles**: `Admin` |
+| `templates_source:update` | Allows modifying template source configurations and settings.<br><br>**Granted by default roles**: `Admin` |
