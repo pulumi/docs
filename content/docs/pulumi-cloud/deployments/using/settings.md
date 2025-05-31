@@ -24,77 +24,15 @@ From the Pulumi Console, a stack's deployment settings can be accessed via the `
 
 ### From the API
 
-Alternatively, a stack's deployment settings may be defined and subsequently modified using the REST API.
-
-```POST https://api.pulumi.com/{org}/{project}/{stack}/deployment/settings```
-
-```json
-{
-    "sourceContext": {
-        "git": {
-            "repoURL": "https://github.com/pulumi/deploy-demos.git",
-            "branch": "main",
-            "repoDir": "pulumi-programs/simple-resource"
-        }
-    },
-    "operationContext": {
-        "environmentVariables": {
-            "TEST_VAR": "foo",
-            "SECRET_VAR": {
-                "secret": "my-secret"
-            }
-        }
-    }
-}
-```
-
-To modify an environment variable in the deployment settings, you only need to specify the changed settings:
-
-```POST https://api.pulumi.com/api/stacks/{org}/{project}/{stack}/deployments/settings```
-
-```json
-{
-    "operationContext": {
-        "environmentVariables": {
-            "TEST_VAR": "new_value"
-        }
-    }
-}
-```
-
-The [REST API documentation](../api) contains much more thorough information about individual API properties.
+Alternatively, a stack's deployment settings may be defined and subsequently modified using the REST API. For more information, see [Patch Settings](/docs/pulumi-cloud/reference/deployments/#patch-settings) in the [Pulumi Deployments REST API docs](/docs/pulumi-cloud/reference/deployments).
 
 ### Defined as Code with the Pulumi Cloud provider
 
-Finally, a stack's deployment settings may be defined as a resource within the stack itself using the Pulumi Cloud provider. This lets you securely store your settings in source control alongside your code.
+Finally, a stack's deployment settings may be defined as a resource within the stack itself using the Pulumi Cloud provider. This lets you securely store your settings in source control alongside your code. For more information, see the [`pulumiservice.DeploymentSettings`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource docs in the [Pulumi Registry](/registry).
 
-We recommend that a stack does not configure its own Deployment Settings, as this would require two deployments for settings changes to take effect. Typically, users create a stack per cloud environment that defines Deployment Settings for all other stacks that deploy into that account or environment. This enables centralizing and sharing common configuration such as OIDC providers. Commonly, these stacks that manage Deployment Settings are themselves managed by Pulumi Deployments and benefit from the pull request and code review workflow.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as service from "@pulumi/pulumiservice";
-
-const config = new pulumi.Config();
-
-const settings = new service.DeploymentSettings("deployment_settings", {
-    organization: "service-provider-test-org",
-    project: "test-deployment-settings-project",
-    stack: "dev",
-    operationContext: {
-        environmentVariables: {
-            TEST_VAR: "foo",
-            SECRET_VAR: config.requireSecret("my_secret"),
-        }
-    },
-    sourceContext: {
-        git: {
-            repoUrl: "https://github.com/pulumi/deploy-demos.git",
-            branch: "refs/heads/main",
-            repoDir: "pulumi-programs/simple-resource"
-        }
-    }
-});
-```
+{{% notes type="info" %}}
+Pulumi recommends against a stack defining its own Deployment Settings (that is, containing a `pulumiService.DeploymentSettings` resource that for itself), as this would require two deployments for the settings changes to take effect. Instead, consider creating a separate Pulumi program that defines Deployment Settings for multiple stacks that share similar configuration.
+{{% /notes %}}
 
 ## Path Filtering
 
@@ -180,15 +118,7 @@ Additionally, we only support static credentials in custom executor images.
 
 Pulumi Deployments supports OIDC for authenticating with cloud providers. This enables your deployments to access your cloud resources without storing static credentials in Pulumi Cloud.
 
-You can configure OIDC with the following cloud providers:
-
-- [AWS](/docs/pulumi-cloud/access-management/oidc/provider/aws/)
-- [Azure](/docs/pulumi-cloud/access-management/oidc/provider/azure/)
-- [Google Cloud](/docs/pulumi-cloud/access-management/oidc/provider/gcp/)
-
-{{% notes type="info" %}}
-A better, recommended approach is to configure your stack to use [Pulumi ESC](/docs/esc/) for cloud credentials and ensure the Deployment has an appropriately scoped Pulumi token. For more information on deploying with ESC environments, see the [Deployment Permissions](/docs/pulumi-cloud/deployments/permissions) page.
-{{% /notes %}}
+For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/).
 
 ## Dependency Caching
 
