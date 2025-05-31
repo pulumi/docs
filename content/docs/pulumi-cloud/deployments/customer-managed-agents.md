@@ -6,7 +6,7 @@ menu:
   cloud:
     name: Customer-managed agents
     parent: pulumi-cloud-deployments
-    weight: 3
+    weight: 40
     identifier: pulumi-cloud-deployments-customer-managed-agents
 ---
 

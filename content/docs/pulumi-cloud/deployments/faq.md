@@ -8,7 +8,7 @@ menu:
   cloud:
     name: FAQ
     parent: pulumi-cloud-deployments
-    weight: 9
+    weight: 100
     identifier: pulumi-cloud-deployments-faq
 aliases:
   - /docs/intro/deployments/faq/

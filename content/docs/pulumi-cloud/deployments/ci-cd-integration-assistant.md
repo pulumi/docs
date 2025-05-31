@@ -8,7 +8,7 @@ menu:
   cloud:
     name: CI/CD assistant
     parent: pulumi-cloud-deployments
-    weight: 11
+    weight: 120
     identifier: pulumi-cloud-deployments-ci-cd-integration-assistant
 aliases:
 - /docs/intro/console/extensions/

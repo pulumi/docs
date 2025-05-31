@@ -8,7 +8,7 @@ menu:
   cloud:
     name: Vs. Traditional CI/CD
     parent: pulumi-cloud-deployments
-    weight: 10
+    weight: 110
     identifier: pulumi-cloud-deployments-versus
 aliases:
   - /docs/intro/deployments/versus/

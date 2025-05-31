@@ -8,7 +8,7 @@ menu:
   cloud:
     name: Drift detection
     parent: pulumi-cloud-deployments
-    weight: 4
+    weight: 50
     identifier: pulumi-cloud-deployments-drift
 ---
 
