@@ -10,7 +10,23 @@ menu:
     weight: 2
 ---
 
-A deployment trigger refers to a method of initializing a deployment. Currently, a deployment may be triggered using the REST API, by clicking a button in the Pulumi Console, via a Review Stack, or via a `git push` if the GitHub application is installed.
+A deployment trigger refers to a method of initializing a deployment. Deployments may be triggered in the following ways:
+
+- **Click to Deploy:** Run any Deployments operation on demand by clicking a button in the Pulumi Cloud console UI
+- **GitHub Push to Deploy:** Automatically run a `pulumi preview` when a Pull Request is created and/or run `pulumi up` when a Pull Request is merged
+- **Review Stacks:** Create and deploy (i.e., run `pulumi up` on) an ephemeral stack on the current branch whenever a new Pull Request is created, and tear it down automatically once the Pull Request is merged
+- **REST API:** Run any Deployments operation on demand by issuing an HTTP request against the Pulumi Deployments REST API
+- **Scheduled Deployments:** Run any Deployments operation on a recurring basis
+- **TTL Stacks:** Run `pulumi destroy` on a stack (and optionally delete the stack entirely) after a specific amount of time has passed
+
+Pulumi Deployments supports the following operations:
+
+- **Update:** Run the `pulumi up` command to create or update stack resources
+- **Preview:** Review changes by running the `pulumi preview` command
+- **Refresh:** Update your stack's state file with the current state of your resources from your cloud provider by running the `pulumi refresh` command
+- **Destroy:** Delete all resources in your stack by running the `pulumi destroy` command
+- **Detect drift:** Refresh your stack's state file with the `pulumi refresh` command and fail if any changes are detected
+- **Remediate drift:** Refresh your stack's state file and run `pulumi update` to ensure that the state of your resources matches the declared state in your Pulumi program
 
 ## Click to Deploy
 
