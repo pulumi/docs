@@ -163,7 +163,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	err := provider.Run(context.Background(), "file", "0.1.0")
+	err = provider.Run(context.Background(), "file", "0.1.0")
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %s", err.Error())
