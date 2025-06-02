@@ -8,7 +8,7 @@ menu:
   cloud:
     name: Schedules
     parent: pulumi-cloud-deployments
-    weight: 8
+    weight: 90
     identifier: pulumi-cloud-deployments-schedules
 ---
 

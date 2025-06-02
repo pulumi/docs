@@ -8,7 +8,7 @@ menu:
   cloud:
     name: Review stacks
     parent: pulumi-cloud-deployments
-    weight: 5
+    weight: 70
     identifier: pulumi-cloud-deployments-review-stacks
 ---
 

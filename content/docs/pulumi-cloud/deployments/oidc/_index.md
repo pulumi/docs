@@ -8,7 +8,7 @@ menu:
   cloud:
     name: OIDC Setup
     parent: pulumi-cloud-deployments
-    weight: 4
+    weight: 60
     identifier: pulumi-cloud-deployments-oidc
 aliases:
 - /docs/pulumi-cloud/oidc/
@@ -17,10 +17,10 @@ aliases:
 - /docs/pulumi-cloud/access-management/oidc/provider/
 ---
 
-Pulumi Deployments supports OpenID Connect (OIDC) integration with cloud providers, enabling your deployments to obtain short-lived cloud credentials without storing long-term secrets. This page explains how to set up OIDC for Pulumi Deployments to access resources in your cloud provider accounts.
+Pulumi Deployments supports OpenID Connect (OIDC) integration with popular cloud providers. In order for a Pulumi IaC operation like `update` or `preview` to work, the Pulumi CLI must be able to access credentials that will allow it to perform the necessary CRUD operations on the resources in your stack. Pulumi Deployments' OIDC integrations allow your your deployments to use dynamic, short-lived cloud credentials for supported clouds instead of static credentials which are less secure and difficult to rotate. This page explains how to set up OIDC for Pulumi Deployments to access resources in your cloud provider accounts.
 
 {{% notes type="info" %}}
-Pulumi ESC provides a more portable and easier-to-set-up alternative to the Deployments OIDC integration described here. For most use cases, we recommend using [Pulumi ESC for OIDC configuration](/docs/esc/environments/configuring-oidc/).
+There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/pulumi-cloud/deployments/cloud-credentials/).
 {{% /notes %}}
 
 ## Overview
@@ -80,6 +80,6 @@ The Subject and custom claims are particularly useful for configuring trust rela
 
 To configure OIDC for your cloud provider with Pulumi Deployments, refer to one of these guides:
 
-* [Configuring OIDC for AWS](/docs/pulumi-cloud/deployments/oidc/provider/aws/)
-* [Configuring OIDC for Azure](/docs/pulumi-cloud/deployments/oidc/provider/azure/)
-* [Configuring OIDC for Google Cloud](/docs/pulumi-cloud/deployments/oidc/provider/gcp/)
+* [Configure OpenID Connect for AWS with Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/provider/aws/)
+* [Configure OpenID Connect for Azure with Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/provider/azure/)
+* [Configure OpenID Connect for Google Cloud with Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/provider/gcp/)
