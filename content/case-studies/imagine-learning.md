@@ -118,12 +118,6 @@ The solution has positioned Imagine Learning for continued growth and success, a
 - **Consistent patterns across regions:** The solution works seamlessly across multiple AWS regions, supporting geographic distribution of services.
 - **Reduced platform team burden:** The new approach reduces the burden on the platform team by streamlining infrastructure management and Kubernetes integration.
 
-### Measurable Return on Investment
-
-The productivity improvements achieved through Pulumi have delivered significant ROI for Imagine Learning. With a 10% productivity improvement across their engineering team of approximately 30 people, the company effectively gained the equivalent of 1.5 additional full-time developers without increasing headcount.
-
-The payback period for their Pulumi investment was just 1.5 months, making this a highly cost-effective solution. More importantly, this additional capacity allows Imagine Learning to focus on innovation and educational excellence rather than infrastructure maintenance.
-
 ## Looking Forward: A Foundation for Educational Innovation
 
 With their new platform in place, Imagine Learning's technology team can now focus on innovation rather than maintenance. The GitOps bridge pattern with Pulumi has given them a scalable, reliable foundation that can grow with their business needs while maintaining security and consistency.
