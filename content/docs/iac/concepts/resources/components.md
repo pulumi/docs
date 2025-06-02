@@ -256,7 +256,7 @@ class MyComponent extends ComponentResource {
 
 ## Registering Component Outputs
 
-Component resources can define their own output properties by using register_outputs . The Pulumi engine uses this information to display the logical outputs of the component resource and any changes to those outputs will be shown during an update.
+Component resources can define their own output properties. Outputs in a component must be registered with the Pulumi IaC engine by calling `registerOutputs`. The Pulumi engine uses this information to display the logical outputs of the component resource and any changes to those outputs will be shown during an update.
 
 For example, this code registers an S3 bucket's computed domain name, which won't be known until the bucket is created:
 
@@ -415,7 +415,20 @@ class MyComponent extends ComponentResource {
 
 The call to `registerOutputs` typically happens at the very end of the component resource's constructor.
 
-The call to `registerOutputs` also tells Pulumi that the resource is done registering children and should be considered fully constructed, so—although it's not enforced—the best practice is to call it in all components even if no outputs need to be registered.
+### What RegisterOutputs Does
+
+The `registerOutputs` call serves two critical functions:
+
+1. **Marks the component as fully constructed**: It signals to the Pulumi engine that the component resource has finished registering all its child resources and should be considered complete.
+1. **Saves outputs to state**: It registers the component's outputs with the Pulumi engine so they are properly saved to the state file and can be referenced by other resources or exported from the stack.
+
+{{% notes type="warning" %}}
+Failing to call `registerOutputs` could cause serious issues with your component resource:
+
+- The component will appear as "creating..." indefinitely in the Pulumi Console
+- Outputs will not be saved to the state file, potentially causing data loss
+- The component lifecycle will not complete properly, which may affect dependency tracking and updates
+{{% /notes %}}
 
 ## Inheriting Resource Providers
 
