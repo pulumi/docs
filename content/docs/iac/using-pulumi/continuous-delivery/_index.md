@@ -29,6 +29,10 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
 > Looking to troubleshoot failures related to running Pulumi in CI/CD? Check out our [CI/CD troubleshooting guide](/docs/iac/using-pulumi/continuous-delivery/troubleshooting-guide).
 
 <div class="supported-cicd-platforms">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/argocd">
+        <img src="/logos/tech/ci-cd/argo.svg" alt="ArgoCD">
+        <h4 class="no-anchor">ArgoCD</h4>
+    </a>
     <a href="/docs/iac/using-pulumi/continuous-delivery/aws-code-services">
         <img src="/logos/tech/ci-cd/aws-codedeploy.svg" alt="AWS Code Services">
         <h4 class="no-anchor">AWS Code Services</h4>
