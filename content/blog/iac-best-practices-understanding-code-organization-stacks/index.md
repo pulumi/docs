@@ -27,7 +27,7 @@ Here are links to all the blog posts in the series:
 * [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
 * [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
 * [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-rbac-and-security/)
+* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
 * [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
 * [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
 
