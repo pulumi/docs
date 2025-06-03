@@ -1,8 +1,8 @@
 ---
 title_tag: "Deployment Settings | Pulumi Deployments"
 meta_desc: Learn how to configure Deployment Settings for Pulumi Deployments
-title: "Deployment Settings"
-h1: "Deployment Settings"
+title: "Deployments Settings"
+h1: "Pulumi Deployment Settings"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
