@@ -77,7 +77,7 @@ GitHub Push to Deploy can also be configured to run a `pulumi update` for a stac
 
 The Pulumi Deployments REST API allows you to trigger a deployment programmatically. Your stack does not need to have any Deployments Settings pre-defined - you can pass them in as part of the request. Alternatively, if your stack does have defined Deployments Settings, you can override any values by passing them in as part of the request.
 
-For more information, see [Create Deployment](docs/pulumi-cloud/reference/deployments/#create-deployment) in the Pulumi Deployments REST API docs.
+For more information, see [Create Deployment](/docs/pulumi-cloud/reference/deployments/#create-deployment) in the Pulumi Deployments REST API docs.
 
 ## Deployment Webhooks
 
