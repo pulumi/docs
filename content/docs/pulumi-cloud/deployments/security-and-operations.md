@@ -1,17 +1,18 @@
 ---
-title_tag: "Pulumi Deployments: FAQ & Pricing"
-meta_desc: Frequently asked questions including pricing, general availability, and roadmap.
-title: FAQ
-h1: Pulumi Deployments FAQ
+title_tag: "Pulumi Deployments: Security and Operations"
+meta_desc: Security and operational considerations for Pulumi Deployments including isolation, deployment queues, dependency caching, and operational details.
+title: Security and operations
+h1: Pulumi Deployments Security and Operations
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
-    name: FAQ
+    name: Security and operations
     parent: pulumi-cloud-deployments
     weight: 100
-    identifier: pulumi-cloud-deployments-faq
+    identifier: pulumi-cloud-deployments-security-operations
 aliases:
   - /docs/intro/deployments/faq/
+  - /docs/pulumi-cloud/deployments/faq/
 ---
 
 ## Security and Isolation
