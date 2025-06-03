@@ -82,7 +82,7 @@ curl -XGET -H "Content-Type: application/json" \
 
 ## Patch Settings
 
-Patches the deployment settings associated with a stack.
+Patches the deployment settings associated with a stack. If no Deployment Settings exist for a stack, this operation will create new Deployment Settings with the supplied values.
 
 ```plain
 POST https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/settings
