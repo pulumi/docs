@@ -29,16 +29,3 @@ Deployments will remain in the queue for a maximum of 7 days. If a deployment is
 ## Paused deployments
 
 It is possible to pause deployments at the stack or organization level. Deployments that are already running are allowed to complete and are not paused. New deployments are queued, and will run when the stack or organization’s deployments are resumed.
-
-## Common recipes
-
-See [Using Deployments](/docs/pulumi-cloud/deployments/reference/) for common recipes and best practices.
-
-## More FAQ
-
-- [Pulumi IaC FAQ](/docs/iac/support/faq/)
-- [Pulumi ESC FAQ](/docs/esc/faq/)
-- [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
-- [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
-- [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
-- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
