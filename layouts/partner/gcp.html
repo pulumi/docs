@@ -21,9 +21,6 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
-                {{ partial "code-tabbed" (dict "tabs" .Params.hero.ide.tabs "chrome" "true" "mode" "dark") }}
-            </div>
         </div>
     </section>
 
@@ -33,33 +30,6 @@
 
     <section id="packages" class="container mx-auto my-12">
         <div class="flex flex-wrap">
-            <div class="w-full lg:w-1/2 p-6">
-                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                    <pulumi-choosable type="language" class="highlight" value="typescript">
-                        {{ partial "code" (dict "code" .Params.package.ts "lang" "ts") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="python">
-                        {{ partial "code" (dict "code" .Params.package.py "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="go">
-                        {{ partial "code" (dict "code" .Params.package.go "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="csharp">
-                        {{ partial "code" (dict "code" .Params.package.csharp "lang" "csharp") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="java">
-                        {{ partial "code" (dict "code" .Params.package.java "lang" "java") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="yaml">
-                        {{ partial "code" (dict "code" .Params.package.yaml "lang" "yaml") }}
-                    </pulumi-choosable>
-                </pulumi-chooser>
-            </div>
 
             <div class="w-full lg:w-1/2 p-6">
                 <h3>Reduce your complexity with shared packages</h3>
@@ -83,65 +53,11 @@
                 </p>
             </div>
 
-            <div class="w-full lg:w-1/2 p-6 order-first lg:order-last">
-                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                    <pulumi-choosable type="language" class="highlight" value="typescript">
-                        {{ partial "code" (dict "code" .Params.native.ts "lang" "ts") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="python">
-                        {{ partial "code" (dict "code" .Params.native.py "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="go">
-                        {{ partial "code" (dict "code" .Params.native.go "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="csharp">
-                        {{ partial "code" (dict "code" .Params.native.csharp "lang" "csharp") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="java">
-                        {{ partial "code" (dict "code" .Params.native.java "lang" "java") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="yaml">
-                        {{ partial "code" (dict "code" .Params.native.yaml "lang" "yaml") }}
-                    </pulumi-choosable>
-                </pulumi-chooser>
-            </div>
         </div>
     </section>
 
     <section id="gke" class="container mx-auto my-12">
         <div class="flex flex-wrap">
-            <div class="w-full lg:w-1/2 p-6">
-                <pulumi-chooser type="language" options="typescript,python,go,csharp,java">
-                    <pulumi-choosable type="language" class="highlight" value="typescript">
-                        {{ partial "code" (dict "code" .Params.gke.ts "lang" "ts") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="python">
-                        {{ partial "code" (dict "code" .Params.gke.py "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="go">
-                        {{ partial "code" (dict "code" .Params.gke.go "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="csharp">
-                        {{ partial "code" (dict "code" .Params.gke.csharp "lang" "csharp") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="java">
-                        {{ partial "code" (dict "code" .Params.gke.java "lang" "java") }}
-                    </pulumi-choosable>
-
-                    <!-- <pulumi-choosable type="language" class="highlight" value="yaml">
-                        {{ partial "code" (dict "code" .Params.gke.yaml "lang" "yaml") }}
-                    </pulumi-choosable> -->
-                </pulumi-chooser>
-            </div>
 
             <div class="w-full lg:w-1/2 p-6">
                 <h2>Create your own GKE cluster</h2>

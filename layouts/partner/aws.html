@@ -20,33 +20,6 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2">
-                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                    <pulumi-choosable type="language" class="highlight" value="typescript">
-                        {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="python">
-                        {{ partial "code" (dict "code" .Params.awsx.py "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="go">
-                        {{ partial "code" (dict "code" .Params.awsx.go "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="csharp">
-                        {{ partial "code" (dict "code" .Params.awsx.csharp "lang" "csharp") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="java">
-                        {{ partial "code" (dict "code" .Params.awsx.java "lang" "java") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="yaml">
-                        {{ partial "code" (dict "code" .Params.awsx.yaml "lang" "yaml") }}
-                    </pulumi-choosable>
-                </pulumi-chooser>
-            </div>
         </div>
     </section>
 
@@ -138,33 +111,6 @@
         <h3>{{ .Params.crosswalk.header }}</h3>
         <p class="mt-0 mb-0 xl:mb-12">{{ .Params.crosswalk.body | markdownify }}</p>
         <div class="flex flex-col xl:flex-row">
-            <div class="w-full mt-8 xl:mt-0 xl:w-1/2">
-                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                    <pulumi-choosable type="language" class="highlight" value="typescript">
-                        {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="python">
-                        {{ partial "code" (dict "code" .Params.awsx.py "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="go">
-                        {{ partial "code" (dict "code" .Params.awsx.go "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="csharp">
-                        {{ partial "code" (dict "code" .Params.awsx.csharp "lang" "csharp") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="java">
-                        {{ partial "code" (dict "code" .Params.awsx.java "lang" "java") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="yaml">
-                        {{ partial "code" (dict "code" .Params.awsx.yaml "lang" "yaml") }}
-                    </pulumi-choosable>
-                </pulumi-chooser>
-            </div>
             {{ with .Params.crosswalk }}
                 <div class="w-full pt-3 text-left xl:order-last xl:w-1/2 px-8">
                     {{ range .points }}
