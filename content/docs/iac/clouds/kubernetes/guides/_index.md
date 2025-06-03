@@ -102,12 +102,8 @@ See the [FAQ][crosswalk-faq] for more details.
 [aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
 [gke]: https://cloud.google.com/kubernetes-engine/
 [pulumi-k8s]: https://github.com/pulumi/pulumi-kubernetes
-[pulumi-kx]: https://github.com/pulumi/pulumi-kubernetesx
-[pulumi-kq]: https://github.com/pulumi/pulumi-query
-[k8s-clientgo]: https://github.com/kubernetes/client-go
 [gh-pulumi]: https://github.com/pulumi
 [pulumi-cloud-k8s]: /registry/packages/kubernetes
-[pulumi-cloud-k8s]: /registry/packages/kubernetes/
 [pulumi-cd]: /docs/using-pulumi/continuous-delivery/
 [pulumi-slack]: https://slack.pulumi.com/
 [pulumi-twitter]: https://twitter.com/pulumicorp
