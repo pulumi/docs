@@ -10,23 +10,19 @@ menu:
     weight: 2
 ---
 
-A deployment trigger is a method of initializing a deployment.
-
-## Available Deployments Triggers
-
-Deployments may be triggered in the following ways:
+A deployment trigger is a method of initializing a deployment. Deployments may be triggered in the following ways:
 
 - **[Click to Deploy](#click-to-deploy):** Run any Deployments operation on demand by clicking a button in the Pulumi Cloud console UI
 - **[GitHub Push to Deploy](#github-push-to-deploy):** Automatically run a `pulumi preview` when a Pull Request is created and/or run `pulumi up` when a Pull Request is merged
 - **[Review Stacks](#review-stacks):** Create and deploy an ephemeral stack on the current branch whenever a new Pull Request is created, and tear it down automatically once the Pull Request is merged
 - **[Scheduled Deployments](#scheduled-deployments):** Run any Deployments operation on a recurring basis
 - **[TTL Stacks](#ttl-stacks):** Run `pulumi destroy` on a stack (and optionally delete the stack entirely) after a specific amount of time has passed
-- **[REST API](#rest-api):** Run any Deployments operation on demand programmatically by issuing an HTTP request against the Pulumi Deployments REST API
-- **[Deployment Webhooks](#deployment-webhooks):** Trigger a Deployments operation in response to an event on another stack
+- **[REST API](#rest-api):** Run any Deployments operation on demand, optionally with custom configuration, programmatically by issuing an HTTP request against the Pulumi Deployments REST API
+- **[Deployment Webhooks](#deployment-webhooks):** Trigger a Deployment in response to an event on another stack
 
-## Available Deployments Operations
+## Deployment Operations
 
-Pulumi Deployments supports the following operations:
+Each Pulumi Deployment is centered around a given operation, that is, a `pulumi` CLI command. Pulumi Deployment supports the following operations:
 
 - **Update:** Run the `pulumi up` command to create or update stack resources
 - **Preview:** Review changes by running the `pulumi preview` command
