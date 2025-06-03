@@ -118,6 +118,10 @@ Additionally, we only support static credentials in custom executor images.
 
 Pulumi Deployments supports OIDC for authenticating with cloud providers. This enables your deployments to access your cloud resources without storing static credentials in Pulumi Cloud.
 
+{{% notes type="info" %}}
+There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/pulumi-cloud/deployments/cloud-credentials/).
+{{% /notes %}}
+
 For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/).
 
 ## Dependency Caching
