@@ -105,7 +105,6 @@ crosswalk:
     cta: Learn More About Crosswalk
     link: /docs/iac/clouds/aws/guides/
 
-
 get_started:
     title: Getting started
 

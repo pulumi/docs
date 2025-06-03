@@ -4,7 +4,11 @@ layout: gcp
 url: /gcp
 
 hero:
-
+    title: Cloud Infrastructure as Code for Google Cloud
+    description: |
+        Pulumi's [infrastructure as code](/what-is/what-is-infrastructure-as-code/) SDK
+        helps create, deploy, and manage 100% of your Google Cloud infrastructure, including
+        containers, serverless functions, and infrastructure using modern programming languages.
 
 benefits:
   title: The benefits of using Pulumi
