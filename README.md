@@ -107,10 +107,7 @@ We generate two kinds of reference documentation with this repository: language-
 We build and host language-specific SDK documentation for the following Pulumi packages:
 
 * [pulumi](https://github.com/pulumi/pulumi)
-* [pulumi-awsx](https://github.com/pulumi/pulumi-awsx)
-* [pulumi-kubernetesx](https://github.com/pulumi/pulumi-kubernetesx)
 * [pulumi-policy](https://github.com/pulumi/pulumi-policy)
-* [pulumi-terraform](https://github.com/pulumi/pulumi-terraform)
 
 The Node.js, Python, and .NET versions of these docs are built using language-specific tooling and checked into the repository as stand-alone docsets. (Go versions are sourced directly from GitHub and hosted at [pkg.go.dev](/github.com/pulumi/pulumi/sdk/v3/go/pulumi).)
 
