@@ -74,7 +74,7 @@ The GitHub owner is not configurable, as that must match the Pulumi GitHub app's
 
 After you've configured your project settings, you will be able to configure the behavior of Deployments, including when to trigger new Deployments and environment variables to include with your updates.
 
-A full description of each setting is available in [Using Pulumi Deployments](/docs/pulumi-cloud/deployments/reference/#deployment-settings).
+A full description of each setting is available in [Pulumi Deployment Settings](/docs/pulumi-cloud/deployments/using/settings).
 
 After you've configured everything, you should see a new Deployment of your project.
 
