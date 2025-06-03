@@ -133,6 +133,6 @@ Whether you're introducing infrastructure as code or any significant technical c
 
 By understanding the human elements of change—the 10% rule, nemawashi, and viral adoption—you can transform resistance into enthusiasm. And by choosing tools like Pulumi that bridge the gap between developers and operations, you can create infrastructure that's both powerful and maintainable.
 
-I'm currently writing a blog series on Pulumi at [daninacan.com](https://daninacan.com). I'm not selling anything there—it's just a mostly .NET technical blog. I also speak at conferences occasionally, so check out my speaking page if you're interested.
+I'm currently writing a blog series on Pulumi at [daninacan.com](https://daninacan.com). I also speak at conferences occasionally, so check out my speaking page if you're interested.
 
 *Ready to escape configuration chaos? Start small, focus on solving real problems, and [get started with Pulumi](https://www.pulumi.com/docs/get-started/) to leverage the full power of programming languages for infrastructure. Join [our community Slack](https://slack.pulumi.com/) to connect with engineers making the same transformation.*
