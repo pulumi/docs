@@ -217,7 +217,11 @@ resources:
 
 ### Pulumi Auto Deploy
 
-[`Pulumi Auto Deploy`](/registry/packages/auto-deploy) lets you simply express dependencies between stacks, and takes care of creating and updating the necessary Deployment Webhooks under the hood.
+The [`Pulumi Auto Deploy`](/registry/packages/auto-deploy) package lets you declaratively express dependencies between stacks in a Pulumi IaC program and automatically manages the necessary Deployment Webhooks under the hood.
+
+{{% notes type="info" %}}
+The Pulumi Auto Deploy package is currently in preview.
+{{% /notes %}}
 
 {{< chooser language "typescript,python,go,csharp,yaml" >}}
 
