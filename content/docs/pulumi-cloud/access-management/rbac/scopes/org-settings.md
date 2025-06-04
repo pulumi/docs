@@ -17,15 +17,6 @@ aliases:
 
 This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../../permissions#entity-types) and group.
 
-## AI
-
-| Value | Description |
-|-------|-------------|
-| `ai_conversations:create` | Create a new AI conversation session for interacting with Pulumi's AI assistant. This allows users to start new conversations and get help with their infrastructure code.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `ai_conversations:list_all` | View all AI conversations across the organization. This provides administrators with visibility into all AI assistant interactions.<br><br>**Granted by default roles**: `Admin` |
-| `ai_conversations:read` | Access and view the content of AI conversations. This allows users to read their own conversations and continue previous interactions.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `ai_conversations:update` | Modify and continue existing AI conversations. This enables users to update their conversations with new questions or context.<br><br>**Granted by default roles**: `Member`, `Admin` |
-
 ## Agent Pools
 
 | Value | Description |
@@ -48,6 +39,15 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 |-------|-------------|
 | `audit_logs:export` | Export audit log data for compliance and analysis purposes. This enables downloading audit records in various formats.<br><br>**Granted by default roles**: `Admin` |
 | `audit_logs:read` | Access and view audit logs of organization activities. This provides visibility into system events and user actions.<br><br>**Granted by default roles**: `Admin` |
+
+## Copilot
+
+| Value | Description |
+|-------|-------------|
+| `ai_conversations:create` | Create a new Copilot conversation session for interacting with Copilot, Pulumi's AI assistant. This allows users to start new conversations and get help with their infrastructure code.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `ai_conversations:list_all` | View all Copilot conversations across the organization. This provides administrators with visibility into all AI assistant interactions.<br><br>**Granted by default roles**: `Admin` |
+| `ai_conversations:read` | Access and view the content of Copilot conversations. This allows users to read their own conversations and continue previous interactions.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `ai_conversations:update` | Modify and continue existing Copilot conversations. This enables users to update their conversations with new questions or context.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Deployments
 
