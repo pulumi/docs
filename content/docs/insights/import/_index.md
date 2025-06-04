@@ -5,16 +5,15 @@ title: Visual Import
 h1: Visual Import
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
-    name: Visual Import
-    parent: cloud-home
-    weight: 5
-    identifier: pulumi-visual-import
-  pulumicloud:
-    weight: 2
+  insights:
+    parent: insights-home
+    weight: 50
+aliases:
+- /docs/pulumi-cloud/import/
+- /docs/pulumi-cloud/import
 ---
 
-Pulumi Visual Import allows platform and development teams to leverage [Pulumi Insights](/docs/insights/) to generate [Pulumi Infrastructure as Code (IaC)](https://www.pulumi.com/docs/iac/) from [discovered resources](/docs/insights/concepts/how-insights-works/#resource-discovery-process) in your cloud accounts. Visual Import provides an intuitive 5-step process to start managing your infrastructure resources using Pulumi IaC.
+Pulumi Visual Import allows platform and development teams to leverage [Pulumi Insights](/docs/insights/) to generate [Pulumi Infrastructure as Code (IaC)](/docs/iac/) from [discovered resources](/docs/insights/concepts/how-insights-works/#resource-discovery-process) in your cloud accounts. Visual Import provides an intuitive 5-step process to start managing your infrastructure resources using Pulumi IaC.
 
 1. Discover and select existing cloud resources across accounts
 2. Identify and review resources with a reference/dependent relationship to the previously selected resources
