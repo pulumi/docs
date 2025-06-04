@@ -28,14 +28,14 @@ Cloud development is accelerating at an unprecedented pace, fueled by AI and the
 Pulumi IAM is a foundational investment, delivering enterprise-grade access management through a phased approach. Today's release marks the beginning, with much more planned:
 
 *   **Phase 1: Granular Access Tokens & Custom Roles (Available Today)**
-    *   Define custom, reusable **Permission Sets** with fine-grained actions (e.g., `stack:webhook:update` only).
-    *   Create **Custom Roles** by combining Permission Sets with specific Pulumi Entities (Stacks, Environments, etc.).
+    *   Define custom, reusable **Permissions** with fine-grained actions (e.g., `stack:delete` only).
+    *   Create **Custom Roles** by combining Permissions with specific Pulumi Entities (Stacks, Environments, etc.).
     *   Generate **Organization Access Tokens** scoped precisely to these Custom Roles, perfect for secure automation.
-    *   Leverage **OIDC configuration** to dynamically assume Custom Roles for secure, tokenless authentication from CI/CD systems like GitHub Actions, GitLab, and more.
 
 *   **Phase 2: User & Team Role Assignment (Coming Soon)**
+    *   Leverage **OIDC configuration** to dynamically assume Custom Roles for secure, tokenless authentication from CI/CD systems like GitHub Actions, GitLab, and more.
     *   Assign these powerful Custom Roles directly to **individual users and teams** within your Pulumi organization.
-    *   Implement a complete overhaul of user and team access management, moving beyond the basic `Admin`/`Member` distinctions, and enabling reusability of building blocks such as permission sets and roles that work for your organization
+    *   Implement a complete overhaul of user and team access management, moving beyond the basic `Admin`/`Member` distinctions, and enabling reusability of custom building blocks permissions and roles that work for your organization
  
 *   **Phase 3: Advanced Authorization & Scalability (Future Release)**
     *   Introduce **Attribute-Based Access Control (ABAC)**, allowing policies based on tags or other attributes of Pulumi Entities (e.g., "grant 'dev-role' access to all stacks tagged 'env:dev'").
@@ -58,7 +58,7 @@ Pulumi IAM addresses these challenges by providing:
 
 ## Launching Today: Granular Access Tokens via Custom Roles
 
-This vision begins today with the initial phase of Pulumi IAM, enabling you to define **Custom Roles** built from **fine-grained Permission Sets** and apply them specifically to **Organization Access Tokens** and **OIDC configurations**. This initial step provides immediate, significant security benefits, particularly for automation:
+This vision begins today with the initial phase of Pulumi IAM, enabling you to define **Custom Roles** built from **fine-grained Permissions** and apply them specifically to **Organization Access Tokens** and **OIDC configurations**. This initial step provides immediate, significant security benefits, particularly for automation:
 
 *   **True Least Privilege for CI/CD:** Scope pipeline tokens to *only* the actions (e.g., `pulumi up`) and Entities (e.g., `stack: myapp-prod`) they absolutely need.
 *   **Reduced Blast Radius:** If a scoped token is compromised, the potential damage is limited strictly to the permissions defined in its associated role.
@@ -71,13 +71,13 @@ Configuring and using Custom Roles for scoped tokens is done via the Pulumi Clou
 
 #### 1. Define a Custom Permission Set (Optional)
 
-* Create reusable sets of fine-grained permissions. mNavigate to Organization Settings -> Roles & Permissions -> Permission Sets.*
+* Create reusable sets of fine-grained permissions. Navigate to Organization Settings -> Roles & Permissions -> Permissions.*
 
 *Click "Create", name it (e.g., "Stack Update Only"), select Resource Type (e.g., Stack), check specific permissions (`stack:read`, `stack:update`), and save.
 
 #### 2. Create a Custom Role
 
-* Combine permission sets with specific resources. Navigate to Organization Settings -> Roles & Permissions -> Roles.*
+* Combine permissions with specific resources. Navigate to Organization Settings -> Roles & Permissions -> Roles.*
 
 * Click "Create", name it (e.g., "CICD-ProdApp-Deployer"). Add policies: select Resource Type (e.g., Stacks), choose a Permission Set (standard or custom), specify target Stacks, and save. Add more policies for different resource types (Environments, etc.) as needed.
 
@@ -101,7 +101,7 @@ This release immediately enables more secure and compliant workflows:
 *   **Safer ChatOps & Tooling:** Integrations like ChatOps bots can operate with tokens scoped down to only necessary actions (e.g., triggering a `pulumi preview` on specific stacks).
 
 {{% notes type="info" %}}
-**Available Today:** Custom Permission Sets, Custom Roles, and the ability to scope Organization Access Tokens and OIDC configurations using these roles, is **available now** for customers on the **Pulumi Enterprise** and **Pulumi Business Critical** tiers. Explore these features in your Pulumi Cloud organization settings!
+**Available Today:** Custom Permissions, Custom Roles, and the ability to scope Organization Access Tokens and OIDC configurations using these roles, is **available now** for customers on the **Pulumi Enterprise** and **Pulumi Business Critical** tiers. Explore these features in your Pulumi Cloud organization settings!
 {{% /notes %}}
 
 ## Conclusion: Building a More Secure Future
