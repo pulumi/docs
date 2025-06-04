@@ -103,7 +103,7 @@ Pulumi Identity and Access Management (IAM) represents a fundamental advancement
 
 This empowers platform and security teams with the fine-grained control needed to implement least privilege, enhance compliance, and scale Pulumi usage securely without sacrificing velocity.
 
-We encourage our Enterprise and Business Critical customers to explore Custom Roles and Granular Access Tokens today. Dive into the [documentation]() (link placeholder) and start building roles tailored to your security requirements. We welcome your feedback and feature requests in our [GitHub repository](https://github.com/pulumi/pulumi-service/issues) (link placeholder). Join us as we build a more secure foundation for cloud engineering!
+We encourage our Enterprise and Business Critical customers to explore Custom Roles and Granular Access Tokens today. Dive into the [documentation](/docs/pulumi-cloud/access-management/rbac) and start building roles tailored to your security requirements. We welcome your feedback and feature requests in our [GitHub repository](https://github.com/pulumi/pulumi-service/issues). Join us as we build a more secure foundation for cloud engineering!
 
 ## Learn More
 
