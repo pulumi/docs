@@ -36,7 +36,7 @@ pulumi package publish github.com/acme/k8s-cluster
 
 #### Component Versioning
 
-Pulumi uses git tags for versioning components. By default, the latest version tag will be used. The tag must adhere to [to the semantic versioning standard](https://semver.org/) plus a "v" prefix (e.g. `v1.2.3`).
+Pulumi uses git tags for versioning components. By default, the latest version tag will be used. The tag must adhere to [the semantic versioning standard](https://semver.org/) plus a "v" prefix (e.g. `v1.2.3`).
 
 To publish a specific version, append an `@` followed by the semver version (excluding the "v") after the git source.
 
