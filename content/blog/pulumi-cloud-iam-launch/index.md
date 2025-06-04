@@ -58,12 +58,11 @@ Pulumi IAM addresses these challenges by providing:
 
 ## Launching Today: Granular Access Tokens via Custom Roles
 
-This vision begins today with the initial phase of Pulumi IAM, enabling you to define **Custom Roles** built from **fine-grained Permissions** and apply them specifically to **Organization Access Tokens** and **OIDC configurations**. This initial step provides immediate, significant security benefits, particularly for automation:
+This vision begins today with the initial phase of Pulumi IAM, enabling you to define **Custom Roles** built from **fine-grained Permissions** and apply them specifically to **Organization Access Tokens**. This initial step provides immediate, significant security benefits, particularly for automation:
 
 *   **True Least Privilege for CI/CD:** Scope pipeline tokens to *only* the actions (e.g., `pulumi up`) and Entities (e.g., `stack: myapp-prod`) they absolutely need.
 *   **Reduced Blast Radius:** If a scoped token is compromised, the potential damage is limited strictly to the permissions defined in its associated role.
 *   **Enhanced Compliance:** Demonstrate precise control over programmatic access to auditors.
-*   **Secure OIDC Integration:** Implement tokenless workflows where CI/CD runners or other services dynamically assume specific Pulumi Roles with narrowly defined permissions.
 
 ## How to Get Started with Granular Access Tokens
 
@@ -86,22 +85,16 @@ Configuring and using Custom Roles for scoped tokens is done via the Pulumi Clou
 * Navigate to User Settings -> Access Tokens -> Organization Access Tokens.*
 * Click "Create token". Provide a description. **Select your Custom Role** from the "Role" dropdown. Generate the token.
 
-#### 4. Configure OIDC Role Assumption (Optional)
-
-*Navigate to Organization Settings -> Integrations -> OIDC.*
-When configuring your OIDC provider, map claims to **assume a specific Custom Role**.
-
-
 ## New Scenarios Unlocked Today
 
 This release immediately enables more secure and compliant workflows:
 
-*   **Secure Multi-Environment CI/CD:** A single pipeline can use different OIDC configurations or tokens based on the target environment (dev, staging, prod), each assuming a role with appropriately restricted permissions (e.g., read-only for prod dependencies, write for the target stack).
+*   **Secure Multi-Environment CI/CD:** A single pipeline can use different tokens based on the target environment (dev, staging, prod), each assuming a role with appropriately restricted permissions (e.g., read-only for prod dependencies, write for the target stack).
 *   **Restricted Operational Scripts:** An automation script designed only to read audit logs can use a token tied to a role granting *only* `audit_log:read` permission, preventing accidental or malicious modifications.
 *   **Safer ChatOps & Tooling:** Integrations like ChatOps bots can operate with tokens scoped down to only necessary actions (e.g., triggering a `pulumi preview` on specific stacks).
 
 {{% notes type="info" %}}
-**Available Today:** Custom Permissions, Custom Roles, and the ability to scope Organization Access Tokens and OIDC configurations using these roles, is **available now** for customers on the **Pulumi Enterprise** and **Pulumi Business Critical** tiers. Explore these features in your Pulumi Cloud organization settings!
+**Available Today:** Custom Permissions, Custom Roles, and the ability to scope Organization Access Tokens using these roles, is **available now** for customers on the **Pulumi Enterprise** and **Pulumi Business Critical** tiers. Explore these features in your Pulumi Cloud organization settings!
 {{% /notes %}}
 
 ## Conclusion: Building a More Secure Future
