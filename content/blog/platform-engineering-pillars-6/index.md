@@ -1,6 +1,6 @@
 ---
 title: "Observability as a Developer Superpower"
-date: 2025-04-18
+date: 2025-06-10
 draft: false
 meta_desc: Transform observability into a developer superpower with unified visibility, AI-powered insights, and actionable alerts embedded in your platform.
 meta_image: meta.png
