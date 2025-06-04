@@ -36,7 +36,17 @@ pulumi package publish git://github.com/acme/k8s-cluster
 
 #### Component Versioning
 
-Pulumi checks for a git version tag when the `publish` command is executed and stores it as the component version. The tag must adhere to [to the semantic versioning standard](https://semver.org/).
+Pulumi uses git tags to infer the version of the component being published. The tag must adhere to [to the semantic versioning standard](https://semver.org/) plus a "v" prefix.
+
+To specify a custom version when publishing, append an `@` followed by the semver version (excluding the "v") after the git source. If no version is specified, the latest version tag will be used.
+
+To create a version, push it to your "origin" git remote and publish to Pulumi's private registry, you'd run:
+
+```bash
+git tag v1.2.3
+git push origin v1.2.3
+pulumi package publish git://github.com/acme/k8s-cluster@1.2.3
+```
 
 #### Component README
 
