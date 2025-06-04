@@ -68,21 +68,19 @@ This vision begins today with the initial phase of Pulumi IAM, enabling you to d
 
 Configuring and using Custom Roles for scoped tokens is done via the Pulumi Cloud console:
 
-#### 1. Define a Custom Permission Set (Optional)
+#### 1. Define a Custom Permission (Optional)
 
-* Create reusable sets of fine-grained permissions. Navigate to Organization Settings -> Roles & Permissions -> Permissions.*
-
-* Select "Create", name it (e.g., "Stack Update Only"), select Resource Type (e.g., Stack), check specific permissions (`stack:read`, `stack:update`), and save.
+* Create reusable sets of fine-grained scopes. As an admin, navigate to Organization Settings -> Roles -> Permissions
+* Follow instructions for [creating a custom permission](/docs/pulumi-cloud/access-management/rbac/permissions#create-a-custom-permission).
 
 #### 2. Create a Custom Role
 
-* Combine permissions with specific resources. Navigate to Organization Settings -> Roles & Permissions -> Roles.*
-
-* Select "Create", name it (e.g., "CICD-ProdApp-Deployer"). Add policies: select Resource Type (e.g., Stacks), choose a Permission Set (standard or custom), specify target Stacks, and save. Add more policies for different resource types (Environments, etc.) as needed.
+* Combine permissions with specific resources. As an admin, navigate to Organization Settings -> Roles
+* Follow instructions for [creating a custom role](/docs/pulumi-cloud/access-management/rbac/permissions#create-a-custom-role).
 
 #### 3. Generate a Scoped Organization Access Token
 
-* Navigate to User Settings -> Access Tokens -> Organization Access Tokens.*
+* As an admin, navigate to Organization Settings -> Access Tokens -> Organization Access Tokens.*
 * Click "Create token". Provide a description. **Select your Custom Role** from the "Role" dropdown. Generate the token.
 
 ## New Scenarios Unlocked Today
