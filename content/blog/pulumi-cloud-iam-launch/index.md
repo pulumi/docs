@@ -28,7 +28,7 @@ Cloud development is accelerating at an unprecedented pace, fueled by AI and the
 Pulumi IAM is a foundational investment, delivering enterprise-grade access management through a phased approach. Today's release marks the beginning, with much more planned:
 
 *   **Phase 1: Granular Access Tokens & Custom Roles (Available Today)**
-    *   Define custom, reusable **Permissions** with fine-grained actions (e.g., `stack:delete` only).
+    *   Define custom, reusable **Permissions** with [fine-grained scopes](/docs/pulumi-cloud/access-management/rbac/scopes) (e.g., `stack:delete` only).
     *   Create **Custom Roles** by combining Permissions with specific Pulumi Entities (Stacks, Environments, etc.).
     *   Generate **Organization Access Tokens** scoped precisely to these Custom Roles, perfect for secure automation.
 
@@ -111,3 +111,12 @@ Pulumi Identity and Access Management (IAM) represents a fundamental advancement
 This empowers platform and security teams with the fine-grained control needed to implement least privilege, enhance compliance, and scale Pulumi usage securely without sacrificing velocity.
 
 We encourage our Enterprise and Business Critical customers to explore Custom Roles and Granular Access Tokens today. Dive into the [documentation]() (link placeholder) and start building roles tailored to your security requirements. We welcome your feedback and feature requests in our [GitHub repository](https://github.com/pulumi/pulumi-service/issues) (link placeholder). Join us as we build a more secure foundation for cloud engineering!
+
+## Learn More
+
+Learn more about Pulumi Cloud's new IAM & RBAC features:
+
+- [Overview](/docs/pulumi-cloud/access-management/rbac)
+- [Roles](/docs/pulumi-cloud/access-management/rbac/roles)
+- [Permissions](/docs/pulumi-cloud/access-management/rbac/permissions)
+- [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes)
