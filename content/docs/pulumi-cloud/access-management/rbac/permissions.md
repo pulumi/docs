@@ -12,10 +12,6 @@ menu:
     identifier: pulumi-cloud-access-management-rbac-permissions
 ---
 
-{{% notes "info" %}}
-Custom roles and permissions are currently an Early Access feature. To be granted access to this feature, please reach out to our sales team.
-{{% /notes %}}
-
 Permissions in Pulumi Cloud are predefined bundles of [scopes](../scopes) that are commonly used together. They provide a convenient way to grant related access rights to an [entity](./#entities) (resource) or set of entities (resources).
 
 ## Entities
