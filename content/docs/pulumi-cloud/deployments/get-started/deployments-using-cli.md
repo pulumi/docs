@@ -142,19 +142,18 @@ Alternatively, you can navigate to `https://app.pulumi.com`, select `Stacks` in 
 
 * Fill out the `Source control settings`
 
-    * Select `GitHub` as Source Control
-    * Select your `test_deployment` repository we created earlier.
-    * Select the `main` branch
-    * Leave the `Pulumi.yaml folder` blank, we put our project in the root folder.
+  * Select `GitHub` as Source Control
+  * Select your `test_deployment` repository we created earlier.
+  * Select the `main` branch
+  * Leave the `Pulumi.yaml folder` blank, we put our project in the root folder.
 
 ![Github Repo](../../ui-github-repo.gif)
 
 * Now configure settings specific to your Deployment, such as:
+  * [OIDC Connect](/docs/pulumi-cloud/oidc/)
+  * [Environment Variables](/docs/pulumi-cloud/deployments/reference/#environment-variables)
 
-    * [OIDC Connect](/docs/pulumi-cloud/oidc/)
-    * [Environment Variables](/docs/pulumi-cloud/deployments/reference/#environment-variables)
-
-(See [Using Deployments](/docs/pulumi-cloud/deployments/reference/) for more information about all of the available settings.)
+See [Pulumi Deployment Settings](/docs/pulumi-cloud/deployments/using/settings) for more information about all of the available settings.
 
 Finally, click the `Save deployment configuration` button to save our settings, and click the "Deploy" button in the top right to trigger a deployment.
 
