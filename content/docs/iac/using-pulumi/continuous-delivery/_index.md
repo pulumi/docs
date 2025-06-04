@@ -57,6 +57,10 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
         <img src="/logos/tech/ci-cd/gitlab-ci.svg" alt="GitLab CI">
         <h4 class="no-anchor">GitLab CI</h4>
     </a>
+    <a href="/docs/iac/using-pulumi/continuous-delivery/harness">
+        <img src="/logos/tech/ci-cd/harness.svg" alt="Harness">
+        <h4 class="no-anchor">Harness</h4>
+    </a>
     <a href="/docs/iac/using-pulumi/continuous-delivery/google-cloud-build">
         <img src="/logos/tech/ci-cd/google-cloud-build.png" alt="Google Cloud Build">
         <h4 class="no-anchor">Google Cloud Build</h4>

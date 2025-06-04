@@ -161,7 +161,7 @@ detail_sections:
         - title: Use familiar tools and services
           icon: code
           icon_color: yellow
-          description: Pulumi supports IDEs like Visual Studio and VS Code, package managers like NuGet Gallery, common test frameworks, and developer tools like GitHub and Azure DevOps.
+          description: Pulumi supports IDEs like Visual Studio and VS Code, package managers like NuGet Gallery, common test frameworks, and developer tools like GitHub, Azure DevOps, and Harness.
 
 resources:
     azure:
