@@ -78,7 +78,7 @@ Create reusable sets of fine-grained scopes.
 Combine permissions with specific resources.
 
 * As an admin, navigate to Organization Settings -> Roles
-* Follow instructions for [creating a custom role](/docs/pulumi-cloud/access-management/rbac/permissions#creating-custom-roles).
+* Follow instructions for [creating a custom role](/docs/pulumi-cloud/access-management/rbac/roles#creating-custom-roles).
 
 #### 3. Generate a Scoped Organization Access Token
 Generate an organization access token with narrowed scope.
