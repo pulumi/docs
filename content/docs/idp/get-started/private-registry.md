@@ -53,7 +53,7 @@ pulumi package publish git://github.com/acme/k8s-cluster@1.2.3
 A README is required when publishing a component. Pulumi renders markdown README files in the private registry. They're a great way to provide context for a component. By default, the Pulumi CLI looks for a README in the component's root directory. The `--readme` flag can be used to specify a custom source.
 
 ```bash
-pulumi package publish /path/to/your/component --readme README_LOCATION
+pulumi package publish git://github.com/acme/k8s-cluster --readme README_LOCATION
 ```
 
 #### Specifying an Organization
@@ -61,7 +61,7 @@ pulumi package publish /path/to/your/component --readme README_LOCATION
 If you're part of multiple organizations and do not have a [default organization](/docs/iac/cli/commands/pulumi_org_set-default/) set, you must specify the org by using the `--publisher` flag.
 
 ```bash
-pulumi package publish /path/to/your/component --publisher ORG_NAME
+pulumi package publish git://github.com/acme/k8s-cluster --publisher ORG_NAME
 ```
 
 #### Authenticating with Private Repositories
