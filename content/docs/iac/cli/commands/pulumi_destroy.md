@@ -1,7 +1,8 @@
 ---
-title: "pulumi destroy"
+title: "pulumi destroy | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_destroy/
+meta_desc: "Learn how to use the pulumi destroy command in Pulumi CLI for infrastructure as code management."
 ---
 
 

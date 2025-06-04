@@ -1,7 +1,8 @@
 ---
-title: "pulumi state unprotect"
+title: "pulumi state unprotect | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_unprotect/
+meta_desc: "Learn how to use the pulumi state unprotect command in Pulumi CLI for infrastructure as code management."
 ---
 
 

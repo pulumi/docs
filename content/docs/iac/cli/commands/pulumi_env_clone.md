@@ -1,7 +1,8 @@
 ---
-title: "pulumi env clone"
+title: "pulumi env clone | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_clone/
+meta_desc: "Learn how to use the pulumi env clone command in Pulumi CLI for infrastructure as code management."
 ---
 
 

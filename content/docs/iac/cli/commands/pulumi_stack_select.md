@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack select"
+title: "pulumi stack select | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_select/
+meta_desc: "Learn how to use the pulumi stack select command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi state move"
+title: "pulumi state move | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_move/
+meta_desc: "Learn how to use the pulumi state move command in Pulumi CLI for infrastructure as code management."
 ---
 
 

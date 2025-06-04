@@ -1,7 +1,8 @@
 ---
-title: "pulumi policy publish"
+title: "pulumi policy publish | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_publish/
+meta_desc: "Learn how to use the pulumi policy publish command in Pulumi CLI for infrastructure as code management."
 ---
 
 

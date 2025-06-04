@@ -1,5 +1,6 @@
 ---
-title: "esc login"
+title: "esc login | CLI commands"
+meta_desc: "Learn how to use the esc login command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

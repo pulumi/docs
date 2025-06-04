@@ -1,7 +1,8 @@
 ---
-title: "pulumi state"
+title: "pulumi state | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state/
+meta_desc: "Learn how to use the pulumi state command in Pulumi CLI for infrastructure as code management."
 ---
 
 

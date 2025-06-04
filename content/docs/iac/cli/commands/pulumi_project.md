@@ -1,7 +1,8 @@
 ---
-title: "pulumi project"
+title: "pulumi project | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_project/
+meta_desc: "Learn how to use the pulumi project command in Pulumi CLI for infrastructure as code management."
 ---
 
 

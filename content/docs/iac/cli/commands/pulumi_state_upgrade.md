@@ -1,7 +1,8 @@
 ---
-title: "pulumi state upgrade"
+title: "pulumi state upgrade | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_upgrade/
+meta_desc: "Learn how to use the pulumi state upgrade command in Pulumi CLI for infrastructure as code management."
 ---
 
 

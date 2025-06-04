@@ -1,7 +1,8 @@
 ---
-title: "pulumi logout"
+title: "pulumi logout | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_logout/
+meta_desc: "Learn how to use the pulumi logout command in Pulumi CLI for infrastructure as code management."
 ---
 
 

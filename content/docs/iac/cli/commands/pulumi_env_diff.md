@@ -1,7 +1,8 @@
 ---
-title: "pulumi env diff"
+title: "pulumi env diff | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_diff/
+meta_desc: "Learn how to use the pulumi env diff command in Pulumi CLI for infrastructure as code management."
 ---
 
 

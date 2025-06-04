@@ -1,7 +1,8 @@
 ---
-title: "pulumi policy disable"
+title: "pulumi policy disable | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_disable/
+meta_desc: "Learn how to use the pulumi policy disable command in Pulumi CLI for infrastructure as code management."
 ---
 
 

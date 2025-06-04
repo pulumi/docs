@@ -1,7 +1,8 @@
 ---
-title: "pulumi whoami"
+title: "pulumi whoami | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_whoami/
+meta_desc: "Learn how to use the pulumi whoami command in Pulumi CLI for infrastructure as code management."
 ---
 
 

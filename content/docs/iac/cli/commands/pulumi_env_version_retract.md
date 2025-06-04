@@ -1,7 +1,8 @@
 ---
-title: "pulumi env version retract"
+title: "pulumi env version retract | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_version_retract/
+meta_desc: "Learn how to use the pulumi env version retract command in Pulumi CLI for infrastructure as code management."
 ---
 
 

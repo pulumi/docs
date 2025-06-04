@@ -1,7 +1,8 @@
 ---
-title: "pulumi watch"
+title: "pulumi watch | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_watch/
+meta_desc: "Learn how to use the pulumi watch command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,5 +1,6 @@
 ---
-title: "esc logout"
+title: "esc logout | CLI commands"
+meta_desc: "Learn how to use the esc logout command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

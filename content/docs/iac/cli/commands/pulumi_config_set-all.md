@@ -1,7 +1,8 @@
 ---
-title: "pulumi config set-all"
+title: "pulumi config set-all | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_set-all/
+meta_desc: "Learn how to use the pulumi config set-all command in Pulumi CLI for infrastructure as code management."
 ---
 
 

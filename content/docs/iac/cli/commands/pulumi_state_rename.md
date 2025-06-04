@@ -1,7 +1,8 @@
 ---
-title: "pulumi state rename"
+title: "pulumi state rename | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_state_rename/
+meta_desc: "Learn how to use the pulumi state rename command in Pulumi CLI for infrastructure as code management."
 ---
 
 

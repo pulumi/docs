@@ -1,7 +1,8 @@
 ---
-title: "pulumi policy group"
+title: "pulumi policy group | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_group/
+meta_desc: "Learn how to use the pulumi policy group command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi env version history"
+title: "pulumi env version history | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_version_history/
+meta_desc: "Learn how to use the pulumi env version history command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi env version"
+title: "pulumi env version | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_version/
+meta_desc: "Learn how to use the pulumi env version command in Pulumi CLI for infrastructure as code management."
 ---
 
 

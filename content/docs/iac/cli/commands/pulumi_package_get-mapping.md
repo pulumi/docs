@@ -1,7 +1,8 @@
 ---
-title: "pulumi package get-mapping"
+title: "pulumi package get-mapping | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_get-mapping/
+meta_desc: "Learn how to use the pulumi package get-mapping command in Pulumi CLI for infrastructure as code management."
 ---
 
 

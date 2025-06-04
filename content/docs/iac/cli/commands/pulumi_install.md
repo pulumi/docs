@@ -1,7 +1,8 @@
 ---
-title: "pulumi install"
+title: "pulumi install | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_install/
+meta_desc: "Learn how to use the pulumi install command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,5 +1,6 @@
 ---
-title: "esc env version retract"
+title: "esc env version retract | CLI commands"
+meta_desc: "Learn how to use the esc env version retract command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

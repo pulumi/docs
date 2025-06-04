@@ -1,7 +1,8 @@
 ---
-title: "pulumi env ls"
+title: "pulumi env ls | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_ls/
+meta_desc: "Learn how to use the pulumi env ls command in Pulumi CLI for infrastructure as code management."
 ---
 
 

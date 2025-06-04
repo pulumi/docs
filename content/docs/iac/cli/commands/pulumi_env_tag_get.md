@@ -1,7 +1,8 @@
 ---
-title: "pulumi env tag get"
+title: "pulumi env tag get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_get/
+meta_desc: "Learn how to use the pulumi env tag get command in Pulumi CLI for infrastructure as code management."
 ---
 
 

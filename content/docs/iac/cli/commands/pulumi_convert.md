@@ -1,7 +1,8 @@
 ---
-title: "pulumi convert"
+title: "pulumi convert | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_convert/
+meta_desc: "Learn how to use the pulumi convert command in Pulumi CLI for infrastructure as code management."
 ---
 
 

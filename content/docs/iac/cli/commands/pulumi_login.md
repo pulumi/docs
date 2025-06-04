@@ -1,7 +1,8 @@
 ---
-title: "pulumi login"
+title: "pulumi login | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_login/
+meta_desc: "Learn how to use the pulumi login command in Pulumi CLI for infrastructure as code management."
 ---
 
 

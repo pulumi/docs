@@ -1,7 +1,8 @@
 ---
-title: "pulumi package add"
+title: "pulumi package add | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_add/
+meta_desc: "Learn how to use the pulumi package add command in Pulumi CLI for infrastructure as code management."
 ---
 
 

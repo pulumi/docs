@@ -1,7 +1,8 @@
 ---
-title: "pulumi preview"
+title: "pulumi preview | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_preview/
+meta_desc: "Learn how to use the pulumi preview command in Pulumi CLI for infrastructure as code management."
 ---
 
 

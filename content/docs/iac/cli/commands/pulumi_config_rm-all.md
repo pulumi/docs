@@ -1,7 +1,8 @@
 ---
-title: "pulumi config rm-all"
+title: "pulumi config rm-all | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_rm-all/
+meta_desc: "Learn how to use the pulumi config rm-all command in Pulumi CLI for infrastructure as code management."
 ---
 
 

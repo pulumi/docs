@@ -1,7 +1,8 @@
 ---
-title: "pulumi config env add"
+title: "pulumi config env add | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_env_add/
+meta_desc: "Learn how to use the pulumi config env add command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack tag ls"
+title: "pulumi stack tag ls | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_ls/
+meta_desc: "Learn how to use the pulumi stack tag ls command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi org set-default"
+title: "pulumi org set-default | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_set-default/
+meta_desc: "Learn how to use the pulumi org set-default command in Pulumi CLI for infrastructure as code management."
 ---
 
 

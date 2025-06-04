@@ -1,7 +1,8 @@
 ---
-title: "pulumi env version tag"
+title: "pulumi env version tag | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_version_tag/
+meta_desc: "Learn how to use the pulumi env version tag command in Pulumi CLI for infrastructure as code management."
 ---
 
 

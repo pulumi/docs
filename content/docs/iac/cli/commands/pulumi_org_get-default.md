@@ -1,7 +1,8 @@
 ---
-title: "pulumi org get-default"
+title: "pulumi org get-default | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org_get-default/
+meta_desc: "Learn how to use the pulumi org get-default command in Pulumi CLI for infrastructure as code management."
 ---
 
 

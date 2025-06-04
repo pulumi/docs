@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack graph"
+title: "pulumi stack graph | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_graph/
+meta_desc: "Learn how to use the pulumi stack graph command in Pulumi CLI for infrastructure as code management."
 ---
 
 

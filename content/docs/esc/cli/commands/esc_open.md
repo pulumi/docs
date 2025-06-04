@@ -1,5 +1,6 @@
 ---
-title: "esc open"
+title: "esc open | CLI commands"
+meta_desc: "Learn how to use the esc open command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

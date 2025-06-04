@@ -1,7 +1,8 @@
 ---
-title: "pulumi policy validate-config"
+title: "pulumi policy validate-config | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_validate-config/
+meta_desc: "Learn how to use the pulumi policy validate-config command in Pulumi CLI for infrastructure as code management."
 ---
 
 

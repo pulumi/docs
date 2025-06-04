@@ -1,7 +1,8 @@
 ---
-title: "pulumi config get"
+title: "pulumi config get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_get/
+meta_desc: "Learn how to use the pulumi config get command in Pulumi CLI for infrastructure as code management."
 ---
 
 

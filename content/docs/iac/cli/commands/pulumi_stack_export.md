@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack export"
+title: "pulumi stack export | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_export/
+meta_desc: "Learn how to use the pulumi stack export command in Pulumi CLI for infrastructure as code management."
 ---
 
 

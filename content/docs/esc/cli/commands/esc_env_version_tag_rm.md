@@ -1,5 +1,6 @@
 ---
-title: "esc env version tag rm"
+title: "esc env version tag rm | CLI commands"
+meta_desc: "Learn how to use the esc env version tag rm command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

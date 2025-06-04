@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack history"
+title: "pulumi stack history | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_history/
+meta_desc: "Learn how to use the pulumi stack history command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi import"
+title: "pulumi import | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_import/
+meta_desc: "Learn how to use the pulumi import command in Pulumi CLI for infrastructure as code management."
 ---
 
 

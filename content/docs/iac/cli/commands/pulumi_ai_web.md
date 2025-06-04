@@ -1,7 +1,8 @@
 ---
-title: "pulumi ai web"
+title: "pulumi ai web | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_ai_web/
+meta_desc: "Learn how to use the pulumi ai web command in Pulumi CLI for infrastructure as code management."
 ---
 
 

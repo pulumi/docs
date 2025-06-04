@@ -1,7 +1,8 @@
 ---
-title: "pulumi cancel"
+title: "pulumi cancel | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_cancel/
+meta_desc: "Learn how to use the pulumi cancel command in Pulumi CLI for infrastructure as code management."
 ---
 
 

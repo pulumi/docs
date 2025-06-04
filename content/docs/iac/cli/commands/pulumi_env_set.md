@@ -1,7 +1,8 @@
 ---
-title: "pulumi env set"
+title: "pulumi env set | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_set/
+meta_desc: "Learn how to use the pulumi env set command in Pulumi CLI for infrastructure as code management."
 ---
 
 

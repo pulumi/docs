@@ -1,7 +1,8 @@
 ---
-title: "pulumi config"
+title: "pulumi config | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config/
+meta_desc: "Learn how to use the pulumi config command in Pulumi CLI for infrastructure as code management."
 ---
 
 

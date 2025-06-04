@@ -1,5 +1,6 @@
 ---
-title: "esc completion fish"
+title: "esc completion fish | CLI commands"
+meta_desc: "Learn how to use the esc completion fish command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

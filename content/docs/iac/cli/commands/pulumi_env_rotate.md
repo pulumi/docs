@@ -1,7 +1,8 @@
 ---
-title: "pulumi env rotate"
+title: "pulumi env rotate | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_rotate/
+meta_desc: "Learn how to use the pulumi env rotate command in Pulumi CLI for infrastructure as code management."
 ---
 
 

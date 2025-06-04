@@ -1,5 +1,6 @@
 ---
-title: "esc env edit"
+title: "esc env edit | CLI commands"
+meta_desc: "Learn how to use the esc env edit command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

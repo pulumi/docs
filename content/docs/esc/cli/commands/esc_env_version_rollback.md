@@ -1,5 +1,6 @@
 ---
-title: "esc env version rollback"
+title: "esc env version rollback | CLI commands"
+meta_desc: "Learn how to use the esc env version rollback command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

@@ -1,5 +1,6 @@
 ---
-title: "esc env tag get"
+title: "esc env tag get | CLI commands"
+meta_desc: "Learn how to use the esc env tag get command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

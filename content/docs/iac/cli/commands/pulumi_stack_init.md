@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack init"
+title: "pulumi stack init | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_init/
+meta_desc: "Learn how to use the pulumi stack init command in Pulumi CLI for infrastructure as code management."
 ---
 
 

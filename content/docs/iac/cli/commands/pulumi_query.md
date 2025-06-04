@@ -1,7 +1,8 @@
 ---
-title: "pulumi query"
+title: "pulumi query | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_query/
+meta_desc: "Learn how to use the pulumi query command in Pulumi CLI for infrastructure as code management."
 ---
 
 

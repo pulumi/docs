@@ -1,7 +1,8 @@
 ---
-title: "pulumi plugin rm"
+title: "pulumi plugin rm | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_plugin_rm/
+meta_desc: "Learn how to use the pulumi plugin rm command in Pulumi CLI for infrastructure as code management."
 ---
 
 

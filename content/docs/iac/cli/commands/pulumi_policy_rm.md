@@ -1,7 +1,8 @@
 ---
-title: "pulumi policy rm"
+title: "pulumi policy rm | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_rm/
+meta_desc: "Learn how to use the pulumi policy rm command in Pulumi CLI for infrastructure as code management."
 ---
 
 

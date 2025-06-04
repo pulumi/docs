@@ -1,5 +1,6 @@
 ---
-title: "esc run"
+title: "esc run | CLI commands"
+meta_desc: "Learn how to use the esc run command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

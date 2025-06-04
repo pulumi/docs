@@ -1,7 +1,8 @@
 ---
-title: "pulumi policy ls"
+title: "pulumi policy ls | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_ls/
+meta_desc: "Learn how to use the pulumi policy ls command in Pulumi CLI for infrastructure as code management."
 ---
 
 

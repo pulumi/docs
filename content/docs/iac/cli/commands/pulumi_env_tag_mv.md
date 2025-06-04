@@ -1,7 +1,8 @@
 ---
-title: "pulumi env tag mv"
+title: "pulumi env tag mv | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_mv/
+meta_desc: "Learn how to use the pulumi env tag mv command in Pulumi CLI for infrastructure as code management."
 ---
 
 

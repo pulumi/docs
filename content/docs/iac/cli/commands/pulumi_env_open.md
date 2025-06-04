@@ -1,7 +1,8 @@
 ---
-title: "pulumi env open"
+title: "pulumi env open | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_open/
+meta_desc: "Learn how to use the pulumi env open command in Pulumi CLI for infrastructure as code management."
 ---
 
 

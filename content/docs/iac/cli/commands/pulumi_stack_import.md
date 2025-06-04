@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack import"
+title: "pulumi stack import | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_import/
+meta_desc: "Learn how to use the pulumi stack import command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,5 +1,6 @@
 ---
-title: "esc env diff"
+title: "esc env diff | CLI commands"
+meta_desc: "Learn how to use the esc env diff command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

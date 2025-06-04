@@ -1,5 +1,6 @@
 ---
-title: "esc completion powershell"
+title: "esc completion powershell | CLI commands"
+meta_desc: "Learn how to use the esc completion powershell command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

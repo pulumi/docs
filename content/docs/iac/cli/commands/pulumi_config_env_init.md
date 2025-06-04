@@ -1,7 +1,8 @@
 ---
-title: "pulumi config env init"
+title: "pulumi config env init | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_env_init/
+meta_desc: "Learn how to use the pulumi config env init command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi config refresh"
+title: "pulumi config refresh | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_refresh/
+meta_desc: "Learn how to use the pulumi config refresh command in Pulumi CLI for infrastructure as code management."
 ---
 
 

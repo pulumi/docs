@@ -1,7 +1,8 @@
 ---
-title: "pulumi schema check"
+title: "pulumi schema check | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_schema_check/
+meta_desc: "Learn how to use the pulumi schema check command in Pulumi CLI for infrastructure as code management."
 ---
 
 

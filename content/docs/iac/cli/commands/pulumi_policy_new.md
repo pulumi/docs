@@ -1,7 +1,8 @@
 ---
-title: "pulumi policy new"
+title: "pulumi policy new | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_policy_new/
+meta_desc: "Learn how to use the pulumi policy new command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi plugin install"
+title: "pulumi plugin install | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_plugin_install/
+meta_desc: "Learn how to use the pulumi plugin install command in Pulumi CLI for infrastructure as code management."
 ---
 
 

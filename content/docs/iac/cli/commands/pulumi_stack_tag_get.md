@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack tag get"
+title: "pulumi stack tag get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_tag_get/
+meta_desc: "Learn how to use the pulumi stack tag get command in Pulumi CLI for infrastructure as code management."
 ---
 
 

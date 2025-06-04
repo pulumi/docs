@@ -1,7 +1,8 @@
 ---
-title: "pulumi gen-completion"
+title: "pulumi gen-completion | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_gen-completion/
+meta_desc: "Learn how to use the pulumi gen-completion command in Pulumi CLI for infrastructure as code management."
 ---
 
 

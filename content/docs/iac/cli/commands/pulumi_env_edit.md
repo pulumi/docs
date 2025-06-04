@@ -1,7 +1,8 @@
 ---
-title: "pulumi env edit"
+title: "pulumi env edit | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_edit/
+meta_desc: "Learn how to use the pulumi env edit command in Pulumi CLI for infrastructure as code management."
 ---
 
 

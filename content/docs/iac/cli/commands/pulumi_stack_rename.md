@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack rename"
+title: "pulumi stack rename | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_rename/
+meta_desc: "Learn how to use the pulumi stack rename command in Pulumi CLI for infrastructure as code management."
 ---
 
 

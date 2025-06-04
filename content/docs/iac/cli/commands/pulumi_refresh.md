@@ -1,7 +1,8 @@
 ---
-title: "pulumi refresh"
+title: "pulumi refresh | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_refresh/
+meta_desc: "Learn how to use the pulumi refresh command in Pulumi CLI for infrastructure as code management."
 ---
 
 

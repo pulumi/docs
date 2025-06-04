@@ -1,5 +1,6 @@
 ---
-title: "esc env init"
+title: "esc env init | CLI commands"
+meta_desc: "Learn how to use the esc env init command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

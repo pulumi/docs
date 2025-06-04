@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack output"
+title: "pulumi stack output | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_output/
+meta_desc: "Learn how to use the pulumi stack output command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi env get"
+title: "pulumi env get | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_get/
+meta_desc: "Learn how to use the pulumi env get command in Pulumi CLI for infrastructure as code management."
 ---
 
 

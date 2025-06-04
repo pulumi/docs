@@ -1,7 +1,8 @@
 ---
-title: "pulumi org"
+title: "pulumi org | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_org/
+meta_desc: "Learn how to use the pulumi org command in Pulumi CLI for infrastructure as code management."
 ---
 
 

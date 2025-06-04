@@ -1,5 +1,6 @@
 ---
-title: "esc env rotate"
+title: "esc env rotate | CLI commands"
+meta_desc: "Learn how to use the esc env rotate command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

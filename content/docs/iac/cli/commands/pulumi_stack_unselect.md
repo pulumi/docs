@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack unselect"
+title: "pulumi stack unselect | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_unselect/
+meta_desc: "Learn how to use the pulumi stack unselect command in Pulumi CLI for infrastructure as code management."
 ---
 
 

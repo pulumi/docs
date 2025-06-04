@@ -1,7 +1,8 @@
 ---
-title: "pulumi package get-schema"
+title: "pulumi package get-schema | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_get-schema/
+meta_desc: "Learn how to use the pulumi package get-schema command in Pulumi CLI for infrastructure as code management."
 ---
 
 

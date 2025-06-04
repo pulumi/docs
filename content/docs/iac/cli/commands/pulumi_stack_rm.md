@@ -1,7 +1,8 @@
 ---
-title: "pulumi stack rm"
+title: "pulumi stack rm | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_stack_rm/
+meta_desc: "Learn how to use the pulumi stack rm command in Pulumi CLI for infrastructure as code management."
 ---
 
 

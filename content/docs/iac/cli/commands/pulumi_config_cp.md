@@ -1,7 +1,8 @@
 ---
-title: "pulumi config cp"
+title: "pulumi config cp | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_config_cp/
+meta_desc: "Learn how to use the pulumi config cp command in Pulumi CLI for infrastructure as code management."
 ---
 
 

@@ -1,7 +1,8 @@
 ---
-title: "pulumi env run"
+title: "pulumi env run | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_run/
+meta_desc: "Learn how to use the pulumi env run command in Pulumi CLI for infrastructure as code management."
 ---
 
 

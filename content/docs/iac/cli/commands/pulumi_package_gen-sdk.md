@@ -1,7 +1,8 @@
 ---
-title: "pulumi package gen-sdk"
+title: "pulumi package gen-sdk | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_package_gen-sdk/
+meta_desc: "Learn how to use the pulumi package gen-sdk command in Pulumi CLI for infrastructure as code management."
 ---
 
 

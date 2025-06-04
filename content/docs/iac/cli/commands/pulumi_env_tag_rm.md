@@ -1,7 +1,8 @@
 ---
-title: "pulumi env tag rm"
+title: "pulumi env tag rm | CLI commands"
 aliases:
   - /docs/reference/cli/pulumi_env_tag_rm/
+meta_desc: "Learn how to use the pulumi env tag rm command in Pulumi CLI for infrastructure as code management."
 ---
 
 

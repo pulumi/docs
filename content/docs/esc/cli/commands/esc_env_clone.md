@@ -1,5 +1,6 @@
 ---
-title: "esc env clone"
+title: "esc env clone | CLI commands"
+meta_desc: "Learn how to use the esc env clone command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 

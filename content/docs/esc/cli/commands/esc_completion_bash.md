@@ -1,5 +1,6 @@
 ---
-title: "esc completion bash"
+title: "esc completion bash | CLI commands"
+meta_desc: "Learn how to use the esc completion bash command in Pulumi ESC CLI for managing environments, secrets, and configuration."
 ---
 
 
