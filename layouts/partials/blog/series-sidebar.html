@@ -35,8 +35,8 @@
                                 <div class="bg-blue-50 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
                                     {{ if strings.Contains $post.Title ":" }}
                                         {{ $titleParts := split $post.Title ":" }}
-                                        <div class="text-sm font-semibold text-blue-900">{{ add $index 1 }}. {{ index $titleParts 0 | strings.TrimSpace }}</div>
-                                        <div class="text-xs text-blue-700 mt-1">{{ index $titleParts 1 | strings.TrimSpace }}</div>
+                                        <div class="text-sm font-semibold text-blue-900">{{ add $index 1 }}. {{ trim (index $titleParts 0) " " }}</div>
+                                        <div class="text-xs text-blue-700 mt-1">{{ trim (index $titleParts 1) " " }}</div>
                                     {{ else }}
                                         <span class="text-sm font-semibold text-blue-900">{{ add $index 1 }}. {{ $post.Title }}</span>
                                     {{ end }}
@@ -48,8 +48,8 @@
                                     <a data-track="series-post" class="text-sm hover:text-blue-600" href="{{ $post.RelPermalink }}">
                                         {{ if strings.Contains $post.Title ":" }}
                                             {{ $titleParts := split $post.Title ":" }}
-                                            <div class="font-medium">{{ add $index 1 }}. {{ index $titleParts 0 | strings.TrimSpace }}</div>
-                                            <div class="text-xs text-gray-600 mt-1">{{ index $titleParts 1 | strings.TrimSpace }}</div>
+                                            <div class="font-medium">{{ add $index 1 }}. {{ trim (index $titleParts 0) " " }}</div>
+                                            <div class="text-xs text-gray-600 mt-1">{{ trim (index $titleParts 1) " " }}</div>
                                         {{ else }}
                                             {{ add $index 1 }}. {{ $post.Title }}
                                         {{ end }}
