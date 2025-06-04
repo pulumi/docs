@@ -89,7 +89,7 @@ curl -sSL https://get.pulumi.com | sh
 
 Again, we can `Save` the step and add the next build step by clicking on `Add Build Step`.
 
-### Restoring NPM Dependencies Build Steo
+### Restoring NPM Dependencies Build Step
 
 We are going to create a Build Step with the following parameters:
 
@@ -109,7 +109,7 @@ npm install
 
 Again, we can `Save` the step and add the next build step by clicking on `Add Build Step`.
 
-### Pulumi Stack Creation Build Steo
+### Pulumi Stack Creation Build Step
 
 We are going to create a Build Step with the following parameters:
 
