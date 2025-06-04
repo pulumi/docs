@@ -73,7 +73,7 @@ Configuring and using Custom Roles for scoped tokens is done via the Pulumi Clou
 
 * Create reusable sets of fine-grained permissions. Navigate to Organization Settings -> Roles & Permissions -> Permissions.*
 
-*Click "Create", name it (e.g., "Stack Update Only"), select Resource Type (e.g., Stack), check specific permissions (`stack:read`, `stack:update`), and save.
+* Click "Create", name it (e.g., "Stack Update Only"), select Resource Type (e.g., Stack), check specific permissions (`stack:read`, `stack:update`), and save.
 
 #### 2. Create a Custom Role
 
