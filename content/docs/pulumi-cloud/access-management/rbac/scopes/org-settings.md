@@ -26,13 +26,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `agent_pool:read` | View agent pool configurations and status. This includes access to pool settings, agent status, and operational metrics.<br><br>**Granted by default roles**: `Admin` |
 | `agent_pool:update` | Modify agent pool settings and configurations. This allows updating pool parameters, scaling settings, and agent configurations.<br><br>**Granted by default roles**: `Admin` |
 
-## Annotations
-
-| Value | Description |
-|-------|-------------|
-| `organization_annotations:read` | View annotations attached to the organization. This provides context and metadata for organizational resources.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `organization_annotations:update` | Modify or add annotations to the organization. This allows updating organizational metadata.<br><br>**Granted by default roles**: `Admin` |
-
 ## Audit Logs
 
 | Value | Description |
@@ -152,13 +145,6 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `organization_webhook:delete` | Delete an existing organization webhook. This removes the integration and stops event delivery.<br><br>**Granted by default roles**: `Admin` |
 | `organization_webhook:read` | View organization webhook configurations. This includes access to webhook endpoints and event triggers.<br><br>**Granted by default roles**: `Admin` |
 | `organization_webhook:update` | Modify an existing organization webhook. This allows updating endpoint URLs and event subscriptions.<br><br>**Granted by default roles**: `Admin` |
-
-## Project Annotations
-
-| Value | Description |
-|-------|-------------|
-| `project_annotations:read` | Allows reading project-level annotations and metadata associated with a project.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `project_annotations:update` | Allows creating, updating, and deleting project-level annotations and metadata.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
 ## Project
 
