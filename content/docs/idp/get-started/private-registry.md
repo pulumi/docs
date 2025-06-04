@@ -22,16 +22,38 @@ Developers leverage templates and components in their preferred workflows, wheth
 
 If you're new to Pulumi components, the [Build a Component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) guide is a great resource for getting started. Once you've authored your component, push it to a GitHub or GitLab repository that Pulumi can access. Private repositories are supported, but the repository must be open to inbound requests.
 
+The `publish` CLI command is used to publish components to the private registry.
+
+```bash
+pulumi package publish <provider|schema>
+```
+
+For example, if your github organization is ACME and you are publishing the `k8s-cluster` component, you'd run:
+
+```bash
+pulumi package publish github.com/acme/k8s-cluster
+```
+
 #### Component Versioning
 
-Pulumi checks for a git version tag when the `publish` command is executed and stores it as the component version. The tag must adhere to [to the semantic versioning standard](https://semver.org/).
+Pulumi uses git tags for versioning components. By default, the latest version tag will be used. The tag must adhere to [the semantic versioning standard](https://semver.org/) plus a "v" prefix (e.g. `v1.2.3`).
+
+To publish a specific version, append an `@` followed by the semver version (excluding the "v") after the git source.
+
+To create a version, push it to your "origin" git remote and publish to Pulumi's private registry, you'd run:
+
+```bash
+git tag v1.2.3
+git push origin v1.2.3
+pulumi package publish github.com/acme/k8s-cluster@1.2.3
+```
 
 #### Component README
 
 A README is required when publishing a component. Pulumi renders markdown README files in the private registry. They're a great way to provide context for a component. By default, the Pulumi CLI looks for a README in the component's root directory. The `--readme` flag can be used to specify a custom source.
 
 ```bash
-pulumi package publish /path/to/your/component --readme README_LOCATION
+pulumi package publish github.com/acme/k8s-cluster --readme README_LOCATION
 ```
 
 #### Specifying an Organization
@@ -39,21 +61,7 @@ pulumi package publish /path/to/your/component --readme README_LOCATION
 If you're part of multiple organizations and do not have a [default organization](/docs/iac/cli/commands/pulumi_org_set-default/) set, you must specify the org by using the `--publisher` flag.
 
 ```bash
-pulumi package publish /path/to/your/component --publisher ORG_NAME
-```
-
-#### CLI Publishing
-
-The `publish` CLI command is used to publish components to the private registry.
-
-```bash
-pulumi package publish COMPONENT_LOCATION
-```
-
-For example, if your github organization is ACME and you are publishing the `k8s-cluster` component, you'd run:
-
-```bash
-pulumi package publish https://github.com/acme/k8s-cluster
+pulumi package publish github.com/acme/k8s-cluster --publisher ORG_NAME
 ```
 
 #### Authenticating with Private Repositories
