@@ -84,6 +84,11 @@ Pulumi Cloud provides several default permissions that you can use to quickly ge
 
 ## Custom Permissions
 
+{{% notes "info" %}}
+Custom permissions are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.
+To learn more about editions visit the [pricing page](/pricing/).
+{{% /notes %}}
+
 ### Creating Custom Permissions
 
 To create a custom permission, you must be an organization admin.
