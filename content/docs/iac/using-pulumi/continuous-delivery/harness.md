@@ -19,8 +19,7 @@ Pulumi doesn't require any particular arrangement of stacks or workflow to work 
 ## Prerequisites
 
 - An account on [https://app.pulumi.com](https://app.pulumi.com)
-- The latest Pulumi CLI
-    - [Installation instructions](/docs/install/)
+- The latest [Pulumi CLI](/docs/install/)
 - A Harness account and access to Harness CI/CD
 - A git repository connected to your Harness project
 - [Pulumi Harness provider](/registry/packages/harness/) (optional, for managing Harness resources)
@@ -56,7 +55,7 @@ values:
     AWS_REGION: ${aws.AWS_REGION}
 ```
 
-2. **Configure your Harness pipeline** to use ESC:
+1. **Configure your Harness pipeline** to use ESC:
 
 ```yaml
 - step:
@@ -69,10 +68,9 @@ values:
         # Install and use ESC CLI to inject environment variables
         curl -fsSL https://get.pulumi.com/esc/install.sh | sh
         export PATH=$PATH:$HOME/.pulumi/bin
-        
         # Open ESC environment and export variables
         eval "$(esc open your-org/your-environment --format shell)"
-        
+
         # These variables are now available for subsequent steps
         echo "Environment loaded successfully"
     envVariables:
@@ -126,7 +124,6 @@ pipeline:
                       # Install Pulumi CLI
                       curl -fsSL https://get.pulumi.com | sh
                       export PATH=$PATH:$HOME/.pulumi/bin
-                      
                       # Install language-specific dependencies
                       case "<+pipeline.variables.language>" in
                         "typescript"|"javascript")
@@ -151,13 +148,12 @@ pipeline:
                     command: |
                       export PATH=$PATH:$HOME/.pulumi/bin
                       cd <+pipeline.variables.workingDirectory>
-                      
+
                       # Login to Pulumi
                       pulumi login
-                      
+
                       # Select the stack
                       pulumi stack select <+pipeline.variables.stackName>
-                      
                       # Run preview
                       pulumi preview
                     envVariables:
@@ -193,7 +189,6 @@ pipeline:
                       # Install Pulumi CLI
                       curl -fsSL https://get.pulumi.com | sh
                       export PATH=$PATH:$HOME/.pulumi/bin
-                      
                       # Install language-specific dependencies
                       case "<+pipeline.variables.language>" in
                         "typescript"|"javascript")
@@ -232,13 +227,12 @@ pipeline:
                     command: |
                       export PATH=$PATH:$HOME/.pulumi/bin
                       cd <+pipeline.variables.workingDirectory>
-                      
                       # Login to Pulumi
                       pulumi login
-                      
+
                       # Select the stack
                       pulumi stack select <+pipeline.variables.stackName>
-                      
+
                       # Deploy infrastructure
                       pulumi up --yes
                     envVariables:
@@ -279,6 +273,7 @@ You can use Harness to deploy applications while leveraging Pulumi to manage the
 3. **Integration through stack outputs**: Pulumi stack outputs provide connection details to Harness deployments
 
 Example workflow:
+
 ```bash
 # Infrastructure pipeline (Pulumi)
 pulumi up --stack production-infra
@@ -541,12 +536,12 @@ pipeline:
                     command: |
                       # Use Pulumi template with dynamic configuration
                       pulumi new aws-typescript --name <+pipeline.variables.applicationName>
-                      
+
                       # Configure based on template inputs
                       pulumi config set aws:region us-east-1
                       pulumi config set instanceSize <+pipeline.variables.instanceSize>
                       pulumi config set environment <+pipeline.variables.environment>
-                      
+
                       # Deploy infrastructure
                       pulumi up --yes
 ```
@@ -558,6 +553,7 @@ pipeline:
 Pulumi excels at managing different environments with varying infrastructure needs. You can structure your infrastructure to handle the unique requirements of development, staging, and production environments:
 
 #### Development Environment
+
 - **Smaller resource allocations**: Use smaller instance sizes and fewer replicas
 - **Relaxed security**: Allow broader access for debugging and testing
 - **Cost optimization**: Use spot instances or scaled-down services
@@ -567,7 +563,7 @@ Pulumi excels at managing different environments with varying infrastructure nee
 const config = new pulumi.Config();
 const environment = config.require("environment");
 
-const instanceType = environment === "dev" ? "t3.micro" : 
+const instanceType = environment === "dev" ? "t3.micro" :
                     environment === "staging" ? "t3.small" : "t3.large";
 
 const cluster = new aws.ecs.Cluster("app-cluster", {
@@ -576,12 +572,14 @@ const cluster = new aws.ecs.Cluster("app-cluster", {
 ```
 
 #### Staging Environment
+
 - **Production-like configuration**: Mirror production settings for accurate testing
 - **Data isolation**: Use production-sized databases with test data
 - **Security testing**: Enable security scanning and compliance checks
 - **Performance testing**: Scale to handle load testing scenarios
 
 #### Production Environment
+
 - **High availability**: Multi-zone deployments with redundancy
 - **Enhanced security**: Strict network policies and encryption
 - **Monitoring and alerting**: Comprehensive observability stack
@@ -592,6 +590,7 @@ const cluster = new aws.ecs.Cluster("app-cluster", {
 Harness approval gates work particularly well with Pulumi workflows. You can implement different approval strategies:
 
 #### Infrastructure Change Approvals
+
 Use approval gates specifically for infrastructure changes that require review:
 
 ```yaml
@@ -619,6 +618,7 @@ Use approval gates specifically for infrastructure changes that require review:
 ```
 
 #### Environment-Specific Approvals
+
 Different environments can have different approval requirements:
 
 ```yaml
@@ -638,6 +638,7 @@ Different environments can have different approval requirements:
 ```
 
 #### Application Deployment Gates
+
 Coordinate infrastructure and application deployments with sequential approval gates:
 
 ```yaml
@@ -689,38 +690,40 @@ For complex environments with multiple stacks, you can configure your Harness pi
 
 ## Best Practices
 
-1. **Use Secrets Management**: Prefer Pulumi ESC for centralized secrets management, with Harness secrets as a secondary option for platform-specific needs.
+Following these best practices will help ensure reliable, secure, and maintainable infrastructure deployments with Harness and Pulumi:
 
-2. **Environment Configuration**: Use different Pulumi stacks and ESC environments for each deployment target (dev/staging/production).
+- **Use Secrets Management**: Prefer Pulumi ESC for centralized secrets management, with Harness secrets as a secondary option for platform-specific needs.
 
-3. **Resource Tagging**: Tag your infrastructure resources with environment and ownership information for better cost management and organization.
+- **Environment Configuration**: Use different Pulumi stacks and ESC environments for each deployment target (dev/staging/production).
 
-4. **Pipeline Validation**: Always run `pulumi preview` before `pulumi up` to review changes.
+- **Resource Tagging**: Tag your infrastructure resources with environment and ownership information for better cost management and organization.
 
-5. **Approval Gates**: Implement appropriate approval gates based on environment criticality and change scope.
+- **Pipeline Validation**: Always run `pulumi preview` before `pulumi up` to review changes.
 
-6. **Rollback Strategy**: Implement proper rollback mechanisms using Pulumi's stack history:
+- **Approval Gates**: Implement appropriate approval gates based on environment criticality and change scope.
 
-```bash
-# Rollback to previous deployment
-pulumi stack history
-pulumi stack export --version <previous-version> > previous-state.json
-pulumi stack import previous-state.json
-```
+- **Rollback Strategy**: Implement proper rollback mechanisms using Pulumi's stack history:
 
-7. **IDP Integration**: When using Harness as an IDP, provide templates and self-service capabilities that abstract infrastructure complexity from developers.
+   ```bash
+   # Rollback to previous deployment
+   pulumi stack history
+   pulumi stack export --version <previous-version> > previous-state.json
+   pulumi stack import previous-state.json
+   ```
+
+- **IDP Integration**: When using Harness as an IDP, provide templates and self-service capabilities that abstract infrastructure complexity from developers.
 
 ## Troubleshooting
 
-Common issues and solutions:
+When integrating Harness with Pulumi, you may encounter some common issues. Here are solutions to the most frequently encountered problems:
 
-1. **Authentication Failures**: Ensure all required secrets are properly configured in Harness or Pulumi ESC.
+- **Authentication Failures**: Ensure all required secrets are properly configured in Harness or Pulumi ESC.
 
-2. **Stack Not Found**: Verify stack names and ensure stacks exist in the Pulumi Cloud.
+- **Stack Not Found**: Verify stack names and ensure stacks exist in the Pulumi Cloud.
 
-3. **Resource Conflicts**: Use `pulumi refresh` to sync state with actual cloud resources.
+- **Resource Conflicts**: Use `pulumi refresh` to sync state with actual cloud resources.
 
-4. **Pipeline Timeouts**: Increase timeout values for long-running infrastructure deployments.
+- **Pipeline Timeouts**: Increase timeout values for long-running infrastructure deployments.
 
 For additional troubleshooting, see our [CI/CD troubleshooting guide](/docs/iac/using-pulumi/continuous-delivery/troubleshooting-guide).
 
