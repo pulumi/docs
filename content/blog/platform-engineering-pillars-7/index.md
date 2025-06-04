@@ -9,6 +9,7 @@ authors:
 tags:
     - platform-engineering
     - platform-engineering-pillars
+series: platform-engineering-pillars
 social:
     twitter: >
       Governance doesn't have to be bureaucratic red tape! Transform it into an automated ENABLER by embedding policy-as-code, RBAC & automated controls directly into your platform. Scale safely & confidently while preserving developer autonomy and speed! 🚀

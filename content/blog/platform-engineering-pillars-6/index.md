@@ -9,6 +9,7 @@ authors:
 tags:
     - platform-engineering
     - platform-engineering-pillars
+series: platform-engineering-pillars
 social:
     twitter: >
       Turn observability into a developer SUPERPOWER! 🚀 By embedding unified visibility, AI-powered insights & actionable alerts directly into your platform, you transform reactive debugging into proactive innovation. Developers gain the clarity they need to move fast with confidence!
