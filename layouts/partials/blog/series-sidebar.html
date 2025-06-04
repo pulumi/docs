@@ -33,16 +33,27 @@
                             {{ if eq $post.RelPermalink $.Page.RelPermalink }}
                                 <!-- Current post - highlighted -->
                                 <div class="bg-blue-50 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
-                                    <span class="text-sm font-semibold text-blue-900">{{ add $index 1 }}. {{ $post.Title }}</span>
+                                    {{ if strings.Contains $post.Title ":" }}
+                                        {{ $titleParts := split $post.Title ":" }}
+                                        <div class="text-sm font-semibold text-blue-900">{{ add $index 1 }}. {{ index $titleParts 0 | strings.TrimSpace }}</div>
+                                        <div class="text-xs text-blue-700 mt-1">{{ index $titleParts 1 | strings.TrimSpace }}</div>
+                                    {{ else }}
+                                        <span class="text-sm font-semibold text-blue-900">{{ add $index 1 }}. {{ $post.Title }}</span>
+                                    {{ end }}
                                     <div class="text-xs text-blue-600 mt-1">Current post</div>
                                 </div>
                             {{ else }}
                                 <!-- Other posts in series -->
                                 <div class="pl-3 py-1">
                                     <a data-track="series-post" class="text-sm hover:text-blue-600" href="{{ $post.RelPermalink }}">
-                                        {{ add $index 1 }}. {{ $post.Title }}
+                                        {{ if strings.Contains $post.Title ":" }}
+                                            {{ $titleParts := split $post.Title ":" }}
+                                            <div class="font-medium">{{ add $index 1 }}. {{ index $titleParts 0 | strings.TrimSpace }}</div>
+                                            <div class="text-xs text-gray-600 mt-1">{{ index $titleParts 1 | strings.TrimSpace }}</div>
+                                        {{ else }}
+                                            {{ add $index 1 }}. {{ $post.Title }}
+                                        {{ end }}
                                     </a>
-                                    <div class="text-xs text-gray-500 mt-1">{{ $post.Date.Format "Jan 2, 2006" }}</div>
                                 </div>
                             {{ end }}
                         </li>
@@ -51,7 +62,7 @@
                 
                 <!-- Link to view all series posts -->
                 <div class="mt-4 pt-3 border-t border-gray-200">
-                    <a class="text-blue-600 text-sm" href="/blog/tag/{{ $currentSeries | urlize }}/">View all {{ $currentSeries }} posts &rarr;</a>
+                    <a class="text-blue-600 text-sm" href="/blog/tag/{{ $currentSeries | urlize }}/">View whole series &rarr;</a>
                 </div>
             </div>
         {{ end }}
