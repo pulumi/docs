@@ -22,6 +22,18 @@ Developers leverage templates and components in their preferred workflows, wheth
 
 If you're new to Pulumi components, the [Build a Component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) guide is a great resource for getting started. Once you've authored your component, push it to a GitHub or GitLab repository that Pulumi can access. Private repositories are supported, but the repository must be open to inbound requests.
 
+The `publish` CLI command is used to publish components to the private registry.
+
+```bash
+pulumi package publish <provider|schema>
+```
+
+For example, if your github organization is ACME and you are publishing the `k8s-cluster` component, you'd run:
+
+```bash
+pulumi package publish git://github.com/acme/k8s-cluster
+```
+
 #### Component Versioning
 
 Pulumi checks for a git version tag when the `publish` command is executed and stores it as the component version. The tag must adhere to [to the semantic versioning standard](https://semver.org/).
@@ -40,20 +52,6 @@ If you're part of multiple organizations and do not have a [default organization
 
 ```bash
 pulumi package publish /path/to/your/component --publisher ORG_NAME
-```
-
-#### CLI Publishing
-
-The `publish` CLI command is used to publish components to the private registry.
-
-```bash
-pulumi package publish COMPONENT_LOCATION
-```
-
-For example, if your github organization is ACME and you are publishing the `k8s-cluster` component, you'd run:
-
-```bash
-pulumi package publish https://github.com/acme/k8s-cluster
 ```
 
 #### Authenticating with Private Repositories
