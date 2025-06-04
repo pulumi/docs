@@ -31,7 +31,6 @@ We've got a few upcoming opportunities to learn more about Pulumi Insights and P
 
 * May 3rd: [Reddit AMA: Pulumi Insights](https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/)
 * May 11th: [Workshop: Getting Started with Pulumi Insights](/events/getting-started-with-pulumi-insights/)
-* Anytime: [Pulumi Challenge: GPT Your IaC](/challenge/ai-architecture/)
 {{% /notes %}}
 
 ## Why Pulumi AI?
@@ -100,4 +99,3 @@ We’re just getting started and hope you join us on our journey!  Experience [P
 
 * [Workshop: Getting Started with Pulumi Insights](/events/getting-started-with-pulumi-insights/)
 * [Reddit AMA: Pulumi Insights](https://www.reddit.com/r/pulumi/comments/130b4rn/ama_with_luke_hoban_cto_on_pulumi_insightsai_at/)
-* [Pulumi Challenge: GPT Your IaC](/challenge/ai-architecture/)

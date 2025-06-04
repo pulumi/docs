@@ -28,13 +28,13 @@ messages:
       link: https://www.reddit.com/r/devops/comments/y8418w/amazed_with_pulumi/
       source: reddit
     -
-      message: "From PoC in a week, to reaching production with confidence the week after, we’re super impressed by Pulumi’s focus on the developer experience and general ease of use. We have since expanded our usage of Pulumi to manage our infrastructure and have a GitHub Actions-powered workflow with automatic PR previews that is a breeze to use. (click to read blog post)"
+      message: "From PoC in a week, to reaching production with confidence the week after, we're super impressed by Pulumi's focus on the developer experience and general ease of use. We have since expanded our usage of Pulumi to manage our infrastructure and have a GitHub Actions-powered workflow with automatic PR previews that is a breeze to use. (click to read blog post)"
       author: Tiago Sousa
       link: https://blog.amplemarket.com/using-pulumi-to-deal-with-growing-pains/
       source: blog
       featured: true
     -
-      message: "Ok, Pulumi just got even more real. With “pulumi convert” and CrossCode support in YAML, it just overtook HCL and Terraform in position #1 for me. Sorry HashiCorp Pulumi is now in the lead."
+      message: "Ok, Pulumi just got even more real. With \"pulumi convert\" and CrossCode support in YAML, it just overtook HCL and Terraform in position #1 for me. Sorry HashiCorp Pulumi is now in the lead."
       author: Eric Hendrickson, CTO Provisions Group
       link: https://www.linkedin.com/feed/update/urn:li:activity:6993614249331765250?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6993614249331765250%2C6993718113632411648%29
       source: linkedin
