@@ -78,7 +78,7 @@ Configuring and using Custom Roles for scoped tokens is done via the Pulumi Clou
 
 * Combine permissions with specific resources. Navigate to Organization Settings -> Roles & Permissions -> Roles.*
 
-* Click "Create", name it (e.g., "CICD-ProdApp-Deployer"). Add policies: select Resource Type (e.g., Stacks), choose a Permission Set (standard or custom), specify target Stacks, and save. Add more policies for different resource types (Environments, etc.) as needed.
+* Select "Create", name it (e.g., "CICD-ProdApp-Deployer"). Add policies: select Resource Type (e.g., Stacks), choose a Permission Set (standard or custom), specify target Stacks, and save. Add more policies for different resource types (Environments, etc.) as needed.
 
 #### 3. Generate a Scoped Organization Access Token
 
