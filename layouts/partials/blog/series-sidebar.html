@@ -23,8 +23,9 @@
             <div class="my-4">
                 <h5 class="no-anchor text-lg font-semibold mb-4">In This Series</h5>
                 
-                <!-- Get all posts with the same series tag, sorted chronologically -->
-                {{ $seriesPosts := where .Site.Pages "Params.series" $currentSeries }}
+                <!-- Get all posts with the same series tag, including future posts, sorted chronologically -->
+                {{ $allPages := .Site.AllPages }}
+                {{ $seriesPosts := where $allPages "Params.series" $currentSeries }}
                 {{ $seriesPosts := $seriesPosts.ByDate }}
                 
                 <ul class="list-none p-0 space-y-3">
@@ -44,17 +45,34 @@
                                 </div>
                             {{ else }}
                                 <!-- Other posts in series -->
-                                <div class="pl-3 py-1">
-                                    <a data-track="series-post" class="text-sm hover:text-blue-600" href="{{ $post.RelPermalink }}">
-                                        {{ if strings.Contains $post.Title ":" }}
-                                            {{ $titleParts := split $post.Title ":" }}
-                                            <div class="font-medium">{{ add $index 1 }}. {{ trim (index $titleParts 0) " " }}</div>
-                                            <div class="text-xs text-gray-600 mt-1">{{ trim (index $titleParts 1) " " }}</div>
-                                        {{ else }}
-                                            {{ add $index 1 }}. {{ $post.Title }}
-                                        {{ end }}
-                                    </a>
-                                </div>
+                                {{ if $post.Date.After now }}
+                                    <!-- Future post - show as coming soon -->
+                                    <div class="pl-3 py-1 opacity-60">
+                                        <div class="text-sm text-gray-500">
+                                            {{ if strings.Contains $post.Title ":" }}
+                                                {{ $titleParts := split $post.Title ":" }}
+                                                <div class="font-medium">{{ add $index 1 }}. {{ trim (index $titleParts 0) " " }}</div>
+                                                <div class="text-xs text-gray-400 mt-1">{{ trim (index $titleParts 1) " " }}</div>
+                                            {{ else }}
+                                                {{ add $index 1 }}. {{ $post.Title }}
+                                            {{ end }}
+                                        </div>
+                                        <div class="text-xs text-blue-400 mt-1">Coming {{ $post.Date.Format "Jan 2" }}</div>
+                                    </div>
+                                {{ else }}
+                                    <!-- Published post -->
+                                    <div class="pl-3 py-1">
+                                        <a data-track="series-post" class="text-sm hover:text-blue-600" href="{{ $post.RelPermalink }}">
+                                            {{ if strings.Contains $post.Title ":" }}
+                                                {{ $titleParts := split $post.Title ":" }}
+                                                <div class="font-medium">{{ add $index 1 }}. {{ trim (index $titleParts 0) " " }}</div>
+                                                <div class="text-xs text-gray-600 mt-1">{{ trim (index $titleParts 1) " " }}</div>
+                                            {{ else }}
+                                                {{ add $index 1 }}. {{ $post.Title }}
+                                            {{ end }}
+                                        </a>
+                                    </div>
+                                {{ end }}
                             {{ end }}
                         </li>
                     {{ end }}
