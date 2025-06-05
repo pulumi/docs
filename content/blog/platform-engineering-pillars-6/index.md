@@ -32,6 +32,14 @@ social:
 
       Ready to make observability your competitive advantage? Discover the platform engineering approach!
 ---
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="frustrated.png" width="200px" alt="frustrated expression">
+    <figcaption>
+    <i>Frustratedly trying to figure out what's actually happening</i>
+    </figcaption>
+</span>
+</span>
 In previous articles in this series, we’ve shown how  [platform engineering](/blog/tag/platform-engineering-pillars/) turns infrastructure chaos into consistency, gives teams self-service tools, smooths developer workflows, and bakes security into the platform. Each pillar builds on the last. Together, they create an internal developer platform that cuts friction and speeds innovation.
 
 Even so, teams still face a big challenge: seeing what’s really happening. Whether things go wrong or run smoothly, engineering teams need clear, actionable insights into their systems. Without observability, you end up guessing, reacting slowly, and hunting through scattered data.
@@ -53,6 +61,15 @@ When observability is limited to post-mortems and fragmented dashboards, your te
 
 ## The Solution: Observability as an Engineering Superpower
 
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="tired.png" width="200px" alt="tired expression">
+    <figcaption>
+    <i>Exhausted from hours of reactive debugging when the problem could have been caught earlier</i>
+    </figcaption>
+</span>
+</span>
+
 The solution isn’t just about bolting on more monitoring tools. it’s about baking visibility, context, and guidance into your platform. To do this, embrace three key principles:
 
 - **Centralized Service Dashboards & Service List**
@@ -68,6 +85,15 @@ When observability becomes a superpower, engineering teams gain the visibility a
 
 ### A. Centralized Service Dashboards & Service List
 
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="learning.png" width="200px" alt="learning expression">
+    <figcaption>
+    <i>Reading the Service Catalog</i>
+    </figcaption>
+</span>
+</span>
+
 Imagine you’re paged at 2 AM because “OrderService” is failing, but you don’t know where to look. Metrics live in Grafana, logs are in Elasticsearch, traces in Jaeger, and you still have to hunt down who’s on call. You spend precious minutes clicking through multiple UIs and Slack channels just to figure out who owns the service and where its telemetry lives.
 
 A centralized service list solves this by surfacing every running microservice (or database, or function) in one place. In your platform’s web portal, you land on a “Services” page that shows OrderService alongside CPU and error‐rate badges, an on-call owner, and links to its real-time dashboard, filtered logs, and trace waterfall. No matter which team spun it up, you know exactly where to click: metrics, logs, traces, deployment history, and contact info all live behind a single service card.
@@ -75,6 +101,15 @@ A centralized service list solves this by surfacing every running microservice (
 By embedding a service list into your platform, you eliminate context switching and reduce onboarding friction. If a service isn’t listed, it isn’t properly instrumented, so gaps stand out immediately. In practice, this “one‐pane‐of‐glass” approach means engineers spend seconds finding the right dashboard and the right person, instead of minutes piecing together fragments across disconnected tools.
 
 ### B. Actionable Alerts and Insights: Reducing Noise and Accelerating Response
+
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="angry.png" width="200px" alt="locked-in expression">
+    <figcaption>
+    <i>Digging through alert noise</i>
+    </figcaption>
+</span>
+</span>
 
 It’s 4 AM and your phone buzzes with three simultaneous alerts, each with vague descriptions like "High CPU usage detected" or "Error rate increased." Without clear context or recommended actions, you must manually investigate each alert, digging through logs and metrics to determine severity and root cause. This manual triage process is slow, frustrating, and error-prone, increasing the risk of missing critical issues or delaying resolution.
 
@@ -86,6 +121,15 @@ By holistically approaching alerts and insights, you significantly reduce alert 
 
 ### C. Embedding Observability into Engineering Workflows: Visibility from Day One
 
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="sleepy.png" width="200px" alt="sleepy expression">
+    <figcaption>
+    <i>At 2 AM, where are the logs for this service.</i>
+    </figcaption>
+</span>
+</span>
+
 You’ve just deployed a brand-new microservice to production, only to discover performance issues or unexpected behavior. Sure, you should remember to add tracing, logging, and metrics by hand, but in practice, things slip through the cracks. It isn’t until real-world traffic hits that you realize you forgot to instrument X or Y, and now you’re scrambling to retroactively add code, redeploy, and wait for data to appear, delaying resolution and frustrating your team.
 
 If your platform’s service templates already include all the necessary logging, metrics gathering, and tracing out of the box, it makes life a lot easier. Embedding observability into those templates and engineering workflows ensures every new microservice ships with built-in instrumentation.
@@ -94,14 +138,23 @@ This proactive approach reduces “oops, I forgot” moments, accelerates troubl
 
 ## Real-World Example: Observability Superpower in Action
 
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="excited.png" width="200px" alt="excited expression">
+    <figcaption>
+    <i>Applying an Actional Metric</i>
+    </figcaption>
+</span>
+</span>
+
 At 3:15 AM, your pagerduty alert goes off: “CheckoutService latency spiked 150%.” You log into your platform’s Services portal and immediately see CheckoutService highlighted with a red latency badge and Todd Rivera listed as the on-call owner. Rather than scouring multiple dashboards, you click its service card to jump straight to the metrics, logs, and trace views.
 
 The alert itself is remarkably precise: “CheckoutService latency rose 150% at 3:10 AM following the v2.3.1 deployment. PaymentGatewayService upstream error rate jumped from 0.2% to 2.3%. Recommendation: rollback v2.3.1 or scale PaymentGateway pods. Contact Todd Rivera.” Instantly, you know where the problem lies, which upstream service is impacted, and what the next step should be.
-
 In the trace waterfall, you spot a 200 ms delay on CheckoutService calls to PaymentGateway. The logs, automatically instrumented by your service template, filter to TimeoutException entries all timestamped at 3:10 AM. Opening the “Ask Platform” AI widget, you type, “Why did CheckoutService latency spike at 3:10 AM?” The AI responds: “Likely cause: v2.3.1 added index idx_created_at to PaymentGateway’s transactions table, causing an 80 ms delay per request. Rollback v2.3.1 or patch queries to remove the new index.”
 
-Armed with this precise diagnosis, you open a rollback pull request and, after Todd's ok, deploy it within minutes. CheckoutService latency and PaymentGateway errors immediately return to baseline. By moving from alert to resolution entirely within the platform (thanks to built-in instrumentation, actionable alerts, and AI-driven analysis, you’ve squashed a major incident before most users ever noticed.
+Armed with this precise diagnosis, you open a rollback pull request and, after Todd's ok, deploy it within minutes.
 
+CheckoutService latency and PaymentGateway errors immediately return to baseline. By moving from alert to resolution entirely within the platform (thanks to built-in instrumentation, actionable alerts, and AI-driven analysis, you’ve squashed a major incident before most users ever noticed.
 {{% notes %}}
 
 ## Metrics: Measuring Observability Enablement
@@ -131,6 +184,15 @@ Tracking these metrics helps you continuously improve your observability practic
 
 ## Pulumi and Observability Enablement
 
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="new-idea.png" width="200px" alt="new-idea expression">
+    <figcaption>
+    <i>Platform insights</i>
+    </figcaption>
+</span>
+</span>
+
 Pulumi’s platform features let you explore observability without bolting on extra tools. Key Pulumi features that enable observability include:
 
 - **Pulumi Insights**:  
@@ -145,6 +207,15 @@ Pulumi’s platform features let you explore observability without bolting on ex
 With Pulumi, observability can become an integrated part of your platform, accelerating innovation, improving reliability, and empowering engineering teams to confidently build, deploy, and operate software.
 
 ## Conclusion: Observability as a Platform Feature
+
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="happy.png" width="200px" alt="happy expression">
+    <figcaption>
+    <i>Happy resolving an incident in minutes.</i>
+    </figcaption>
+</span>
+</span>
 
 Observability isn’t just about plugging in more tools. It’s about baking-in consistent instrumentation, measurement, and context so every engineer (platform, DevOps/SRE, or application) knows exactly where to look and how to act.
 
