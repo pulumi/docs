@@ -11,7 +11,7 @@ tags:
     - pulumi-releases
 ---
 
-It's been an incredibly busy few weeks at Pulumi. We've met thousands of you at our second annual Cloud Engineering Summit, shipped major new releases like Pulumi Registry and Pulumi Kubernetes Operator 1.0 and continued to innovate on and improve the entire Pulumi Cloud Engineering Platform. [Get caught up on Cloud Engineering Summit](/cloud-engineering-summit/replay/) to learn what's coming in cloud engineering, or read on for this month's news.
+It's been an incredibly busy few weeks at Pulumi. We've met thousands of you at our second annual Cloud Engineering Summit, shipped major new releases like Pulumi Registry and Pulumi Kubernetes Operator 1.0 and continued to innovate on and improve the entire Pulumi Cloud Engineering Platform. Get caught up on Cloud Engineering Summit to learn what's coming in cloud engineering, or read on for this month's news.
 
 - [Cloud Engineering Summit](/blog/pulumi-release-notes-m63#cloud-engineering-summit)
 - Pulumi Registry, Pulumi Packages, & integrations
@@ -30,7 +30,7 @@ It's been an incredibly busy few weeks at Pulumi. We've met thousands of you at 
 
 On October 20th, thousands of you joined us for our second annual Cloud Engineering Summit. We heard from industry leaders like Pulumi CEO Joe Duffy, Google's Kelsey Hightower, AWS' Emily Freeman, Microsoft's Adora Nwodo, and many more on topics from modern reference architectures for Kubernetes to migrating a monolith to cloud-native. You can watch these and all Cloud Engineering Summit sessions on our website–make sure to catch any sessions you missed!
 
-[Watch Cloud Engineering Summit sessions on-demand](/cloud-engineering-summit/replay/)
+Watch Cloud Engineering Summit sessions on-demand
 
 {{<youtube "42rWrRycw_o">}}
 

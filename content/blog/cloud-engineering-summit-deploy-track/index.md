@@ -12,7 +12,7 @@ tags:
     - pulumi-events
 ---
 
-[Cloud Engineering Summit 2021](https://www.pulumi.com/cloud-engineering-summit/) is almost here! We’ve got a great line up this year.
+Cloud Engineering Summit 2021 is almost here! We’ve got a great line up this year.
 
 Our tracks are built around the three pillars of cloud engineering: Build, Deploy, and Manage. I’m your track chair for the Deploy track, the track focused on automating and managing infrastructure. Deploy is all about unifying systems so everything in a cloud-based system is shipped together from the same automated, auditable process, reducing human error and improving quality across the board. That could mean focusing on automated testing and linting of infrastructure as code, providing shared services platforms for others to use in their pipelines, or exploring how unified and automated infrastructure changes engineering culture in an organization.
 
@@ -34,4 +34,4 @@ How about some focus on doing all of this at scale? Jenna Pederson, Developer Ad
 
 Finally, how does all of this stuff work in a real life team? Evan Bradley, Software Engineer, and Tom Carrio, Senior Software Engineer, from Dynatrace are going to take us through bringing it all together with a real-life team, discussing the experiences they’ve had over time as they’ve implemented everything. I’m really excited to have folks bring their stories of what it’s all like so we can share pitfalls and solutions to move forward together. I think you’ll enjoy Evan and Tom’s talk, too!
 
-Explore [all the sessions](https://www.pulumi.com/cloud-engineering-summit/sessions/), and don't forget to [register for Cloud Engineering Summit](https://www.pulumi.com/cloud-engineering-summit/). I can't wait to chat with you virtually at Cloud Engineering Summit 2021!
+Explore all the sessions, and don't forget to register for Cloud Engineering Summit. I can't wait to chat with you virtually at Cloud Engineering Summit 2021!
