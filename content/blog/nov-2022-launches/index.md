@@ -16,7 +16,7 @@ Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clo
 
 Our mission at Pulumi is to enable teams to scale up what they can build in the cloud.  Scale up the sophistication and value of their cloud infrastructure investments through software engineering practices.  Scale up the automation around delivering cloud infrastructure with software instead of just humans.  And scale up the number of developers who can directly benefit from the rich cloud platform capabilities being built by central platform teams in every organization today.
 
-As part of [Pulumi Cloud Engineering Days 2022](https://www.pulumi.com/cloud-engineering-days/) today we are announcing a set of important new advancements in the Pulumi platform which are all designed to help organizations scale with their infrastructure as code needs.
+As part of Pulumi Cloud Engineering Days 2022 today we are announcing a set of important new advancements in the Pulumi platform which are all designed to help organizations scale with their infrastructure as code needs.
 
 <!--more-->
 
@@ -28,7 +28,7 @@ As part of [Pulumi Cloud Engineering Days 2022](https://www.pulumi.com/cloud-eng
 
 * __Project Level Configuration__: As cloud infrastructure projects grow in complexity, Pulumi provides many tools to manage the complexity of the software that defines these projects. But the configuration of that software also grows in complexity.  New support for Project-Level Configuration across all Pulumi languages makes it easier to manage complex configuration as cloud projects scale up.
 
-You can check out the [Cloud Engineering Days 2022 Keynote](https://www.pulumi.com/cloud-engineering-days/) to learn more about all of these features, or [get started with Pulumi](https://www.pulumi.com/docs/get-started/) today!
+You can check out the Cloud Engineering Days 2022 Keynote to learn more about all of these features, or [get started with Pulumi](https://www.pulumi.com/docs/get-started/) today!
 
 ## Pulumi Deployments
 

@@ -12,7 +12,7 @@ tags:
     - pulumi-events
 ---
 
-The [Cloud Engineering Summit 2021](https://www.pulumi.com/cloud-engineering-summit/) is coming up fast, and the speakers are out! To get you ready to attend, let’s take a look at the sessions for the Manage track.
+The Cloud Engineering Summit 2021 is coming up fast, and the speakers are out! To get you ready to attend, let’s take a look at the sessions for the Manage track.
 
 The Cloud Engineering Summit’s three tracks are built around three concepts: Build, Manage, and Deploy. I’m Matt Stratton, and I’m your charismatic track chair for Manage. For us, that means managing cloud applications and infrastructure with Policy as Code, visibility, and access controls. For example, managing infrastructure with policies that detect configuration drift, enforce best practices, and even prevent compliance violations before deployment. It means building visibility across your cloud infrastructure so that you always understand its current and past states, including detailed audit history. Finally, you ensure the right guardrails and controls are set in place so that distributed teams can securely develop.
 
@@ -20,7 +20,7 @@ Without further ado, let’s take a look at each of the talks I’ve selected fo
 
 <!--more-->
 
-Overwhelmed by permissions and authorization? Me, too. Fortunately, we have Joy Ebertz presenting *Authorization: Ensuring Only Ada Can Access Her Files*. Joy is going to cover the various authorization models available to us, with use-cases for each. Authorization can be overwhelming if you don’t have a good grasp of the options available to your organization and an understanding of what works when, so I’m excited for this one.
+Overwhelmed by permissions and authorization? Me, too. Fortunately, we have Joy Ebertz presenting *Authorization: Ensuring Only Ada Can Access Her Files*. Joy is going to cover the various authorization models available to us, with use-cases for each. Authorization can be overwhelming if you don't have a good grasp of the options available to your organization and an understanding of what works when, so I’m excited for this one.
 
 Taking a higher-level view, Quintessence Anx will be presenting *DevSecOps and Secure Incident Response*. The introduction of security to the DevOps equation means some shifts in the way we think about the software development lifecycle, and Quintessence is uniquely qualified to talk about why that’s true. A look inside PagerDuty’s 14 Step Secure Incident Response process promises to be interesting for anyone involved in either development or operations.
 
@@ -34,4 +34,4 @@ Gremlin's Jason Yee comes to us with *Trailblazers: exploration, discovery, & na
 
 Rounding things out is the always incredible Tim Banks, with *Toxic Velocity: Speed Kills*. In this talk, Tim is going to cover the various stressors that put pressure on both organizations and individuals, how they affect us, and what it looks like when things start to spiral out of control. I’m excited for this one because while crashes do happen, we’d all like them to happen less often (or not at all!), and being able to identify some of these things before they become a real problem is better for our businesses and our people.
 
-[Explore all of the rest of the great sessions](https://www.pulumi.com/cloud-engineering-summit/sessions/), and don't forget to [register for the cloud engineering summit](https://www.pulumi.com/cloud-engineering-summit/)!
+Explore all of the rest of the great sessions, and don't forget to register for the cloud engineering summit!
