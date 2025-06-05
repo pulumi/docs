@@ -190,3 +190,84 @@ Governance doesn't have to slow you down. By embedding governance directly into 
 Each pillar we've explored—Provisioning, Self-Service, Developer Experience, Security, Observability, and now Governance—builds on the previous one, creating a platform that removes friction and accelerates innovation. Together, these pillars form a cohesive internal developer platform that empowers developers, reduces risk, and enables your organization to scale confidently and securely.
 
 With governance embedded directly into your platform, you transform compliance and control from manual overhead into automated, built-in capabilities. Your developers gain autonomy and speed, your operations teams gain visibility and control, and your organization gains the confidence to innovate at scale.
+
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="frustrated.png" width="200px" alt="frustrated expression">
+    <figcaption>
+    <i>Dealing with manual compliance checks and red tape</i>
+    </figcaption>
+</span>
+</span>
+
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="blocked.png" width="200px" alt="blocked expression">
+    <figcaption>
+    <i>Stopped by lengthy approval processes</i>
+    </figcaption>
+</span>
+</span>
+
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="stressed.png" width="200px" alt="stressed expression">
+    <figcaption>
+    <i>Anxious about audit failures and compliance risks</i>
+    </figcaption>
+</span>
+</span>
+
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="overwhelmed.png" width="200px" alt="overwhelmed expression">
+    <figcaption>
+    <i>Drowning in resource sprawl and unexpected costs</i>
+    </figcaption>
+</span>
+</span>
+
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="confused.png" width="200px" alt="confused expression">
+    <figcaption>
+    <i>Lost in unclear policies and inconsistent processes</i>
+    </figcaption>
+</span>
+</span>
+
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="relieved.png" width="200px" alt="relieved expression">
+    <figcaption>
+    <i>Discovering policy-as-code automation</i>
+    </figcaption>
+</span>
+</span>
+
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="confident.png" width="200px" alt="confident expression">
+    <figcaption>
+    <i>Working within clear, automated guardrails</i>
+    </figcaption>
+</span>
+</span>
+
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="empowered.png" width="200px" alt="empowered expression">
+    <figcaption>
+    <i>Having autonomy with built-in controls</i>
+    </figcaption>
+</span>
+</span>
+
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="satisfied.png" width="200px" alt="satisfied expression">
+    <figcaption>
+    <i>Successfully scaling safely with embedded governance</i>
+    </figcaption>
+</span>
+</span>
