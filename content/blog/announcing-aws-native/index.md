@@ -25,7 +25,7 @@ The AWS Native provider offers same-day support for all new AWS features and rel
 This release also includes a new tool for migrating existing CloudFormation templates into Pulumi programs in your favorite language, powered by the new AWS Native provider and AWS Cloud Control API, as well as the ability to deploy any 3rd party resources in the CloudFormation Registry, including resources from Atlassian, Datadog, Densify, Dynatrace, Fortinet, New Relic, and Spot by NetApp.
 
 {{% notes type="info" %}}
-To learn how AWS built the Cloud Control API, and many other great topics, [watch the replay of Cloud Engineering Summit 2021](/cloud-engineering-summit/replay/) with speakers from each of the major cloud providers as well as 40+ leaders and practitioners from across the industry.
+To learn how AWS built the Cloud Control API, and many other great topics, watch the replay of Cloud Engineering Summit 2021 with speakers from each of the major cloud providers as well as 40+ leaders and practitioners from across the industry.
 {{% /notes %}}
 
 {{< youtube "oKxaZCyu2OQ" >}}

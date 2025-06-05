@@ -36,9 +36,7 @@ tags:
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-When we launched the [first-ever Cloud Engineering Summit](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpE6LxGPnfLfBQLbC7zX8FT) last year, we were humbled by the generosity and support from partners and sponsors across the industry who helped to make the summit a success. For [this year’s event](/cloud-engineering-summit), we’re equally thrilled to have an amazing group of sponsors participating in the summit and it’s worth a quick ‘guided tour’ of the teams that are helping us to pull off this amazing event.
-
-<a href="/cloud-engineering-summit/?iaid=sponsor-blog" class="btn">Watch the replay &#x2192;</a>
+When we launched the [first-ever Cloud Engineering Summit](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpE6LxGPnfLfBQLbC7zX8FT) last year, we were humbled by the generosity and support from partners and sponsors across the industry who helped to make the summit a success. For this year's event, we’re equally thrilled to have an amazing group of sponsors participating in the summit and it’s worth a quick ‘guided tour’ of the teams that are helping us to pull off this amazing event.
 
 ## Amazon Web Services
 
@@ -90,4 +88,4 @@ Last year, Johnathan Sullivan joined the Culture, Process, and Tools panel, and 
 
 ## ...and many more
 
-Beyond the teams and sessions mentioned above, the Cloud Engineering Summit wouldn’t be possible without help and support from a long list of sponsors and collaborators including Codefresh, Split, and Uffizzi. [Watch the replay today](/cloud-engineering-summit/replay/) to see what all the fuss is about.
+Beyond the teams and sessions mentioned above, the Cloud Engineering Summit wouldn’t be possible without help and support from a long list of sponsors and collaborators including Codefresh, Split, and Uffizzi. Watch the replay to see what all the fuss is about.

@@ -19,7 +19,7 @@ tags:
 
 ---
 
-The [Cloud Engineering Summit 2021](https://www.pulumi.com/cloud-engineering-summit/) is coming up fast, and the speakers are out! To get you ready to attend, let’s take a look at the sessions for the Build track.
+The Cloud Engineering Summit 2021 is coming up fast, and the speakers are out! To get you ready to attend, let’s take a look at the sessions for the Build track.
 
 The Cloud Engineering Summit’s three tracks are built around three concepts: Build, Manage, and Deploy. I’m Kat Cosgrove, and I was responsible for selecting your speakers for the Build track! For us, that means building cloud applications and infrastructure with Modern Infrastructure as Code using general purpose programming languages. We embrace the fact that modern cloud applications have blurred the lines between the application and the infrastructure, and that success requires at least some level of proficiency in both. Whether you’re full stack or lean more towards one area, all cloud engineers apply a software engineering mindset and practices to building and testing applications and the underlying cloud infrastructure. This includes using standard programming languages, applying software principles such as reusability and abstractions and testing, and leveraging the rich ecosystem of software development tools.
 
@@ -41,4 +41,4 @@ Curious about how a big product gets built? Rahul Sharma is with us to talk abou
 
 Last but certainly not least is Heidi Waterhouse presenting *The Future Should Be Uneven*, a talk about personalization and accessibility in web design. Accessibile design benefits us all, whether we actually *need* the accomodation or not. The sooner we all understand and embrace that, the better, so Heidi will walk us through some common accessibility settings that are really just good design for everyone.
 
-[Explore all of the rest of the great sessions](https://www.pulumi.com/cloud-engineering-summit/sessions/), and don’t forget to [register for the cloud engineering summit](https://www.pulumi.com/cloud-engineering-summit/)!
+Explore all of the rest of the great sessions, and don't forget to register for the cloud engineering summit!
