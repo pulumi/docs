@@ -114,7 +114,7 @@ benefits:
             deployment, and access controls prevent unauthorized changes.
 
         - title: Foster closer collaboration
-          icon: collab
+          icon: collab 
           icon_color: blue
           description: |
             Cloud engineering breaks down silos between infrastructure, application development, and compliance teams through shared languages, tools, and processes. This
