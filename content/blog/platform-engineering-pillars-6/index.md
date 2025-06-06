@@ -41,7 +41,8 @@ social:
     </figcaption>
 </span>
 </span>
-In previous articles in this series, we’ve shown how  [platform engineering](/blog/tag/platform-engineering-pillars/) turns infrastructure chaos into consistency, gives teams self-service tools, smooths developer workflows, and bakes security into the platform. Each pillar builds on the last. Together, they create an internal developer platform that cuts friction and speeds innovation.
+
+In previous articles in this series, we’ve shown how [platform engineering](/blog/tag/platform-engineering-pillars/) turns infrastructure chaos into consistency, gives teams self-service tools, smooths developer workflows, and bakes security into the platform. Each pillar builds on the last. Together, they create an internal developer platform that cuts friction and speeds innovation.
 
 Even so, teams still face a big challenge: seeing what’s really happening. Whether things go wrong or run smoothly, engineering teams need clear, actionable insights into their systems. Without observability, you end up guessing, reacting slowly, and hunting through scattered data.
 
