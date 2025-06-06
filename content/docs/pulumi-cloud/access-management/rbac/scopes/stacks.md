@@ -34,13 +34,6 @@ Note that creating, listing, or restoring stacks are organization-level operatio
 | `stack:transfer` | Transfer ownership of a stack to another organization or user. This is used for organizational restructuring or migration.<br><br>**Granted by default permission**: `Stack Admin` |
 | `stack:write` | Modify stack configurations and settings. This allows updating stack parameters and resource definitions.<br><br>**Granted by default permission**: `Stack Write` |
 
-## Annotations
-
-| Value | Description |
-|-------|-------------|
-| `stack_annotations:read` | View annotations attached to a stack. This provides context and metadata for stack resources.<br><br>**Granted by default permission**: `Stack Read` |
-| `stack_annotations:update` | Modify or add annotations to a stack. This allows updating stack metadata and documentation.<br><br>**Granted by default permission**: `Stack Write` |
-
 ## Stack Deployments
 
 | Value | Description |
