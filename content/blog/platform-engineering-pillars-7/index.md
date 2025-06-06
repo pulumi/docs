@@ -63,6 +63,15 @@ The consequences of manual, bureaucratic governance are clear:
 
 ## The Solution: Embedding Governance into Your Platform
 
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="satisfied.png" width="200px" alt="satisfied expression">
+    <figcaption>
+    <i>Successfully scaling safely with embedded governance</i>
+    </figcaption>
+</span>
+</span>
+
 Governance should live inside your platform, not off to the side as a separate process. To make that happen, build these four capabilities into your IDP:
 
 - **Policy-as-Code for Automated Compliance:** Declare rules (like approved regions or required tags) as code. The platform enforces them whenever infrastructure is created or updated, so compliance happens automatically.
@@ -91,7 +100,7 @@ Think of it as a safety net. A menu of componentes handle the defaults. Policies
 
 ### B. Role-Based Access Control (RBAC): Balancing Autonomy and Control
 
-<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="width: 225px; float: right; margin-left: 20px;">
 <span style="text-align:center">
     <img src="blocked.png" width="200px" alt="blocked expression">
     <figcaption>
@@ -110,7 +119,7 @@ A Platform with RBAC makes permissions clear, reduces mistakes, and keeps everyt
 
 ### C. Auditability, Traceability, and Drift Detection: Ensuring Visibility and Trust
 
-<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="width: 225px; float: left; margin-right: 20px;">
 <span style="text-align:center">
     <img src="stressed.png" width="200px" alt="stressed expression">
     <figcaption>
@@ -139,7 +148,7 @@ Production, by contrast, is gated. High-impact changes, like modifying a databas
 
 This setup keeps development fast and flexible, while making production changes deliberate and auditable. Your platform stays clean, cost-effective, and safe without getting in the way.
 
-<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="width: 225px; float: right; margin-left: 20px;">
 <span style="text-align:center">
     <img src="overwhelmed.png" width="200px" alt="overwhelmed expression">
     <figcaption>
@@ -156,7 +165,7 @@ Idle QA environments shut down after 48 hours, so forgotten clusters don’t rac
 
 Result: Governance becomes an invisible safety net. Engineers move fast, knowing policy-as-code, RBAC, TTL cleanup, approval gates, and change tracking catch mistakes. Ops stays in control without firefighting or chasing orphan resources. The platform scales safely, balancing freedom with built-in guardrails.
 
-<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="width: 225px; float: left; margin-right: 20px;">
 <span style="text-align:center">
     <img src="relieved.png" width="200px" alt="relieved expression">
     <figcaption>
@@ -183,7 +192,7 @@ To ensure your governance practices truly empower your organization, it's essent
 
 Tracking these metrics helps you continuously improve your platform's governance practices, ensuring they remain effective and frictionless.
 
-<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="width: 225px; float: right; margin-left: 20px;">
 <span style="text-align:center">
     <img src="confident.png" width="200px" alt="confident expression">
     <figcaption>
@@ -212,7 +221,7 @@ By leveraging Pulumi’s governance features, including CrossGuard, RBAC, audit 
 
 ## Conclusion: Governance as a Platform Feature
 
-<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="width: 225px; float: left; margin-right: 20px;">
 <span style="text-align:center">
     <img src="empowered.png" width="200px" alt="empowered expression">
     <figcaption>
@@ -226,12 +235,3 @@ Governance doesn't have to slow you down. By embedding governance directly into 
 Your engineering teams gain autonomy and speed, your operations teams gain visibility and control, and your organization gains the confidence to innovate at scale.
 
 You’ve now seen all six pillars of a modern internal developer platform—[provisioning](/blog/platform-engineering-pillars-2/), [self-service](/blog/platform-engineering-pillars-3/), [developer experience](/blog/platform-engineering-pillars-4/), [security](/blog/platform-engineering-pillars-5/), [observability](/blog/platform-engineering-pillars-6/), and governance. If you’d like to see how Pulumi makes building and running a platform like this simpler, check out [Pulumi IDP](/product/internal-developer-platforms/).
-
-<span style="width: 225px; float: left; margin-right: 20px;">
-<span style="text-align:center">
-    <img src="satisfied.png" width="200px" alt="satisfied expression">
-    <figcaption>
-    <i>Successfully scaling safely with embedded governance</i>
-    </figcaption>
-</span>
-</span>
