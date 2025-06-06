@@ -42,6 +42,15 @@ In this article, we'll explore how Platform Engineering transforms governance fr
 
 ## The Problem: Governance as a Manual Bottleneck
 
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="frustrated.png" width="200px" alt="frustrated expression">
+    <figcaption>
+    <i>Dealing with manual compliance checks and red tape</i>
+    </figcaption>
+</span>
+</span>
+
 With increased team autonomy and self-service capabilities, how do you ensure consistency, compliance, and cost control across your entire organization?
 
 Governance often feels like a necessary evil: manual, bureaucratic, and slow. Application teams see it as red tape, while operations teams struggle to maintain control. Manual compliance checks, lengthy audits, and unclear or inconsistent policies create friction and frustration. Teams may bypass governance processes entirely, leading to shadow IT, inconsistent resource configurations, and hidden risks.
@@ -82,6 +91,15 @@ Think of it as a safety net. A menu of componentes handle the defaults. Policies
 
 ### B. Role-Based Access Control (RBAC): Balancing Autonomy and Control
 
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="blocked.png" width="200px" alt="blocked expression">
+    <figcaption>
+    <i>Stopped by lengthy approval processes</i>
+    </figcaption>
+</span>
+</span>
+
 As your platform grows, managing permissions manually gets messy. If an engineer needs to fix a production issue but doesn’t have access, they file a ticket and wait, sometimes for days. Give developers too many rights, and they might change production by accident. Both options slow teams down and increase risk.
 
 The fix is an RBAC model built into your platform. First, the platform decides who can deploy, who can publish components, and who can manage templates. This check runs before any cloud credentials are used, so invalid requests get blocked early. Second, the cloud IAM layer controls which API calls are allowed, like creating an EC2 instance or updating a database.
@@ -91,6 +109,15 @@ This pairs well with a two-level intent-based approach. Teams describe what they
 A Platform with RBAC makes permissions clear, reduces mistakes, and keeps everything auditable. Devs move fast, spinning up resources as needed, while strong guardrails stay in place. The result is a scalable, least-privilege model that balances autonomy and control, so your organization can grow safely.
 
 ### C. Auditability, Traceability, and Drift Detection: Ensuring Visibility and Trust
+
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="stressed.png" width="200px" alt="stressed expression">
+    <figcaption>
+    <i>Anxious about audit failures and compliance risks</i>
+    </figcaption>
+</span>
+</span>
 
 An ops engineer spots a production database misbehaving. A quick check shows someone changed its configuration outside the approved workflow. Without an audit trail or drift detection, the team scrambles to figure out who made the change and when. Meanwhile, the incorrect setting stays active, posing a security and compliance risk. No one can fix it without guessing.
 
@@ -112,6 +139,15 @@ Production, by contrast, is gated. High-impact changes, like modifying a databas
 
 This setup keeps development fast and flexible, while making production changes deliberate and auditable. Your platform stays clean, cost-effective, and safe without getting in the way.
 
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="overwhelmed.png" width="200px" alt="overwhelmed expression">
+    <figcaption>
+    <i>Drowning in resource sprawl and unexpected costs</i>
+    </figcaption>
+</span>
+</span>
+
 ## Real-World Example: Governance Enablement in Action
 
 An engineering team opens a pull request for a new customer-facing service. The platform spins up a preview environment using a template with secure defaults, pre-approved modules, and policy checks. CI runs tests and policy checks in preview (names, regions, encryption, compliance) so the team catches issues early. If a rule fails (say, an unencrypted database), the PR fails before it reaches main. After the PR merges to main, it deploys to production, confident all policy validations have passed.
@@ -119,6 +155,15 @@ An engineering team opens a pull request for a new customer-facing service. The 
 Idle QA environments shut down after 48 hours, so forgotten clusters don’t rack up bills. Sensitive production changes, like updating a load balancer or altering a critical schema, are carefully reviewed via pull request. Once approved, the platform deploys automatically and logs every action. Drift detection flags console edits, letting the team revert or update code in minutes.
 
 Result: Governance becomes an invisible safety net. Engineers move fast, knowing policy-as-code, RBAC, TTL cleanup, approval gates, and change tracking catch mistakes. Ops stays in control without firefighting or chasing orphan resources. The platform scales safely, balancing freedom with built-in guardrails.
+
+<span style="width: 225px; float: right; margin-left: 20px;">
+<span style="text-align:center">
+    <img src="relieved.png" width="200px" alt="relieved expression">
+    <figcaption>
+    <i>Discovering policy-as-code automation</i>
+    </figcaption>
+</span>
+</span>
 
 ## Metrics: Measuring Governance Enablement
 
@@ -137,6 +182,15 @@ To ensure your governance practices truly empower your organization, it's essent
   Regularly survey engineering teams to gauge their satisfaction with governance processes. High satisfaction indicates that governance is enabling rather than hindering their workflows.
 
 Tracking these metrics helps you continuously improve your platform's governance practices, ensuring they remain effective and frictionless.
+
+<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="text-align:center">
+    <img src="confident.png" width="200px" alt="confident expression">
+    <figcaption>
+    <i>Working within clear, automated guardrails</i>
+    </figcaption>
+</span>
+</span>
 
 ## Pulumi and Governance Enablement
 
@@ -158,76 +212,7 @@ By leveraging Pulumi’s governance features, including CrossGuard, RBAC, audit 
 
 ## Conclusion: Governance as a Platform Feature
 
-Governance doesn't have to slow you down. By embedding governance directly into your platform, you empower engineering teams to innovate quickly while ensuring compliance, consistency, and control. Instead of manual checks, governance becomes automatic, transparent, and frictionless, enabling your organization to scale safely and confidently.
-
-Your engineering teams gain autonomy and speed, your operations teams gain visibility and control, and your organization gains the confidence to innovate at scale.
-
-You’ve now seen all six pillars of a modern internal developer platform—provisioning, self-service, developer experience, security, observability, and governance. If you’d like to see how Pulumi makes building and running a platform like this simpler, check out [Pulumi IDP](/product/internal-developer-platforms/).
-
 <span style="width: 225px; float: right; margin-left: 20px;">
-<span style="text-align:center">
-    <img src="frustrated.png" width="200px" alt="frustrated expression">
-    <figcaption>
-    <i>Dealing with manual compliance checks and red tape</i>
-    </figcaption>
-</span>
-</span>
-
-<span style="width: 225px; float: left; margin-right: 20px;">
-<span style="text-align:center">
-    <img src="blocked.png" width="200px" alt="blocked expression">
-    <figcaption>
-    <i>Stopped by lengthy approval processes</i>
-    </figcaption>
-</span>
-</span>
-
-<span style="width: 225px; float: right; margin-left: 20px;">
-<span style="text-align:center">
-    <img src="stressed.png" width="200px" alt="stressed expression">
-    <figcaption>
-    <i>Anxious about audit failures and compliance risks</i>
-    </figcaption>
-</span>
-</span>
-
-<span style="width: 225px; float: left; margin-right: 20px;">
-<span style="text-align:center">
-    <img src="overwhelmed.png" width="200px" alt="overwhelmed expression">
-    <figcaption>
-    <i>Drowning in resource sprawl and unexpected costs</i>
-    </figcaption>
-</span>
-</span>
-
-<span style="width: 225px; float: right; margin-left: 20px;">
-<span style="text-align:center">
-    <img src="confused.png" width="200px" alt="confused expression">
-    <figcaption>
-    <i>Lost in unclear policies and inconsistent processes</i>
-    </figcaption>
-</span>
-</span>
-
-<span style="width: 225px; float: left; margin-right: 20px;">
-<span style="text-align:center">
-    <img src="relieved.png" width="200px" alt="relieved expression">
-    <figcaption>
-    <i>Discovering policy-as-code automation</i>
-    </figcaption>
-</span>
-</span>
-
-<span style="width: 225px; float: right; margin-left: 20px;">
-<span style="text-align:center">
-    <img src="confident.png" width="200px" alt="confident expression">
-    <figcaption>
-    <i>Working within clear, automated guardrails</i>
-    </figcaption>
-</span>
-</span>
-
-<span style="width: 225px; float: left; margin-right: 20px;">
 <span style="text-align:center">
     <img src="empowered.png" width="200px" alt="empowered expression">
     <figcaption>
@@ -236,7 +221,13 @@ You’ve now seen all six pillars of a modern internal developer platform—prov
 </span>
 </span>
 
-<span style="width: 225px; float: right; margin-left: 20px;">
+Governance doesn't have to slow you down. By embedding governance directly into your platform, you empower engineering teams to innovate quickly while ensuring compliance, consistency, and control. Instead of manual checks, governance becomes automatic, transparent, and frictionless, enabling your organization to scale safely and confidently.
+
+Your engineering teams gain autonomy and speed, your operations teams gain visibility and control, and your organization gains the confidence to innovate at scale.
+
+You’ve now seen all six pillars of a modern internal developer platform—[provisioning](/blog/platform-engineering-pillars-2/), [self-service](/blog/platform-engineering-pillars-3/), [developer experience](/blog/platform-engineering-pillars-4/), [security](/blog/platform-engineering-pillars-5/), [observability](/blog/platform-engineering-pillars-6/), and governance. If you’d like to see how Pulumi makes building and running a platform like this simpler, check out [Pulumi IDP](/product/internal-developer-platforms/).
+
+<span style="width: 225px; float: left; margin-right: 20px;">
 <span style="text-align:center">
     <img src="satisfied.png" width="200px" alt="satisfied expression">
     <figcaption>
