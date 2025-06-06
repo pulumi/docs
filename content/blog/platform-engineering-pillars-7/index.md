@@ -165,14 +165,7 @@ Idle QA environments shut down after 48 hours, so forgotten clusters don’t rac
 
 Result: Governance becomes an invisible safety net. Engineers move fast, knowing policy-as-code, RBAC, TTL cleanup, approval gates, and change tracking catch mistakes. Ops stays in control without firefighting or chasing orphan resources. The platform scales safely, balancing freedom with built-in guardrails.
 
-<span style="width: 225px; float: left; margin-right: 20px;">
-<span style="text-align:center">
-    <img src="relieved.png" width="200px" alt="relieved expression">
-    <figcaption>
-    <i>Discovering policy-as-code automation</i>
-    </figcaption>
-</span>
-</span>
+{{% notes %}}
 
 ## Metrics: Measuring Governance Enablement
 
@@ -192,7 +185,9 @@ To ensure your governance practices truly empower your organization, it's essent
 
 Tracking these metrics helps you continuously improve your platform's governance practices, ensuring they remain effective and frictionless.
 
-<span style="width: 225px; float: right; margin-left: 20px;">
+{{% /notes %}}
+
+<span style="width: 225px; float: left; margin-right: 20px;">
 <span style="text-align:center">
     <img src="confident.png" width="200px" alt="confident expression">
     <figcaption>
@@ -221,7 +216,7 @@ By leveraging Pulumi’s governance features, including CrossGuard, RBAC, audit 
 
 ## Conclusion: Governance as a Platform Feature
 
-<span style="width: 225px; float: left; margin-right: 20px;">
+<span style="width: 225px; float: right; margin-left: 20px;">
 <span style="text-align:center">
     <img src="empowered.png" width="200px" alt="empowered expression">
     <figcaption>
