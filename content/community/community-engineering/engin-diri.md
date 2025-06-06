@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "KCD New York 2025"
+  title: "Is There AI in the Future of Infrastructure as Code?"
+  url: "https://kcdnewyork2025.sessionize.com/session/865201"
+  date: 2025-06-04T15:00:00.000-07:00 
 - event: "PlatforMA 2025"
   title: "Augmenting Platform Engineering: Leveraging AI to Enhance DevEx & Operational Efficiency"
   url: "https://www.platfor-ma.com"
