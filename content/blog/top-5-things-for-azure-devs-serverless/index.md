@@ -1,8 +1,10 @@
 ---
-title: "Top 5 Things an Azure Developer Needs to Know: Serverless"
+title: "Top Azure Services Every Developer Should Know: Serverless"
+h1: How to Build and Deploy Azure Serverless Functions
+allow_long_title: true
 date: 2021-08-06
-allow_long_title: True
-meta_desc: "Building and deploying serverless functions with Azure."
+updated: 2025-03-25
+meta_desc: "Learn how to create and deploy Azure serverless functions using Visual Studio Code and Pulumi. Build event-driven apps with scalable architecture."
 meta_image: azure-top-5.png
 authors:
     - sophia-parafina
@@ -10,14 +12,12 @@ tags:
     - azure
     - serverless
     - cloud engineering
-
+    - azure-devs-series
 ---
 
-The [previous article](/blog/top-5-things-for-azure-devs-vm/) was a deep dive into virtual machines. First, we used the Azure Portal to create and deploy a virtual machine; then, we repeated the process using infrastructure as code. We further demonstrated how to automate provisioning as part of cloud engineering's build and deploy processes.
+The previous article was a [deep dive into virtual machines](/blog/top-5-things-for-azure-devs-vm/). First, we used the Azure Portal to create and deploy a virtual machine; then, we repeated the process using infrastructure as code. We further demonstrated how to automate provisioning as part of cloud engineering's build and deploy processes.
 
 This article will explore the other end of the cloud infrastructure with serverless, which is an on-demand, fully-managed cloud architecture.
-
-<!--more-->
 
 ## What is serverless, and when to use it?
 
@@ -210,4 +210,4 @@ Isn't infrastructure as code supposed to simplify infrastructure deployments? Th
 
 Try out the complete example in either [Typescript](https://github.com/pulumi/examples/tree/master/azure-ts-functions) or [C#](https://github.com/pulumi/examples/tree/master/azure-ts-functions) to get familiar with Azure Functions. You can also learn how Functions are written in all supported languages by checking out the [Azure Functions in All Supported Languages](https://github.com/pulumi/examples/tree/master/azure-ts-functions-many) example.
 
-In the following article, we'll do a deep dive into Azure static websites, which is a popular option for [Jamstacks](https://jamstack.org/).
+In the following article, we'll do a [deep dive into Azure static websites](/blog/top-5-things-for-azure-devs-static-websites/).
