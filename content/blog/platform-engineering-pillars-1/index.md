@@ -9,6 +9,7 @@ authors:
 tags:
     - platform-engineering
     - platform-engineering-pillars
+series: platform-engineering-pillars
 social:
     twitter: >
         Introducing our new series on Platform Engineering Pillars! Learn how to transform infrastructure chaos and developer friction into a streamlined development experience. Dive into the 6 essential capabilities every successful platform needs.

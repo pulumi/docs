@@ -9,6 +9,7 @@ authors:
 tags:
     - platform-engineering
     - platform-engineering-pillars
+series: platform-engineering-pillars
 social:
     twitter: >
             Developer Experience: the key to platform engineering success! Learn how to eliminate friction points, implement standardized templates, and build fast CI/CD pipelines that help developers achieve flow state and ship features faster.

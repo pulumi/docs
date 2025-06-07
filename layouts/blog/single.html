@@ -3,7 +3,11 @@
         <div class="xxl:flex">
             <div class="flex flex-col lg:flex-row xxl:w-9/12">
                 <div class="lg:w-1/4 xxl:w-4/12 pr-8">
-                    {{ partial "blog/sidebar.html" . }}
+                    {{ if .Params.series }}
+                        {{ partial "blog/series-sidebar.html" . }}
+                    {{ else }}
+                        {{ partial "blog/sidebar.html" . }}
+                    {{ end }}
                 </div>
 
                 <div class="lg:w-3/4 xxl:w-9/12">
