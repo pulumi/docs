@@ -1,6 +1,6 @@
 ---
 title: Cloud Engineering
-meta_desc: Apply software engineering practices and tools across infrastructure, development, and compliance teams to tame the complexity of modern cloud applications.
+meta_desc: Apply software engineering practices to achieve 50% faster deployment cycles, $3-4.5M annual productivity value, and 85% reduction in security incidents.
 
 type: page
 layout: cloud-engineering
@@ -8,8 +8,24 @@ layout: cloud-engineering
 overview:
     title: Software engineering practices made for the cloud
     description: |
-        Apply standard software engineering practices and tools uniformly across infrastructure, development, and compliance teams to tame the
-        complexity of delivering and managing modern cloud applications.
+        Apply standard software engineering practices and tools uniformly across infrastructure, development, and compliance teams to achieve 50% faster deployment cycles, $3-4.5M annual productivity value for 100-developer organizations, and 85% reduction in security incidents.
+
+maturity_stages:
+    title: Where are you in your platform engineering journey?
+    description: |
+        Organizations progress through distinct stages of platform engineering maturity, each with unique challenges and opportunities.
+    items:
+        - title: Automate Stage
+          description: |
+            Eliminate manual processes and build foundational cloud competency through automated provisioning and deployment workflows.
+
+        - title: Secure Stage
+          description: |
+            Implement policy-driven infrastructure with built-in governance, compliance controls, and security best practices across all environments.
+
+        - title: Manage Stage
+          description: |
+            Achieve full visibility and self-service capabilities at scale with comprehensive observability, cost optimization, and developer productivity tools.
 
 best_practices:
     title: Best practices
@@ -18,6 +34,27 @@ best_practices:
         and [infrastructure as software](/what-is/what-is-infrastructure-as-software/)
         written in general purpose languages, including the application logic, cloud infrastructure,
         and cloud policies.
+
+discover:
+    title: Discover
+    description: |
+        Gain real-time visibility into your cloud infrastructure to make data-driven decisions that reduce risk and optimize costs.
+    items:
+        - title: Real-time Compliance Monitoring
+          description: |
+            Prevent regulatory violations that cost organizations $4.88 million per incident on average through continuous policy enforcement and automated compliance checks.
+
+        - title: Cost Visibility
+          description: |
+            Eliminate 30-40% of cloud waste through visibility-driven rightsizing across the $675.4 billion global cloud market with comprehensive resource tracking and optimization recommendations.
+
+        - title: Deployment Observability
+          description: |
+            Reduce unplanned downtime by 85% through proactive infrastructure management with real-time monitoring, change tracking, and predictive alerting capabilities.
+
+        - title: Infrastructure State Management
+          description: |
+            Maintain complete visibility into resource dependencies, configuration drift detection, and infrastructure health across multi-cloud environments for informed decision-making.
 
 build:
     title: Build
@@ -70,9 +107,9 @@ deploy:
             to easily roll back changes, if needed.
 
 manage:
-    title: Manage
+    title: Scale
     description: |
-        Cloud engineers manage their cloud infrastructure and applications with Policy-as-Code, access controls, and auditing histories.
+        Cloud engineers scale consistent infrastructure practices that support growth from startup to enterprise while achieving developer-to-platform engineer ratios of 10:1 to 15:1, compared to an industry standard of 5:1.
     items:
         - title: Policy-as-Code
           description: |
@@ -99,26 +136,47 @@ benefits:
             Modern cloud architectures, such as Kubernetes, have high innovation potential but are complicated to adopt. Cloud engineering empowers teams to tame this complexity
             with software engineering practices and tools.
 
-        - title: Increase innovation velocity and agility
+        - title: Accelerate delivery by 50% with streamlined infrastructure workflows
           icon: lightning
           icon_color: yellow
           description: |
             Cloud engineering democratizes the cloud for developers. By using reusable infrastructure components written in programming languages, developers can more easily
             use the infrastructure they need to build applications faster.
 
-        - title: Decrease infrastructure risks
+        - title: Reduce security incidents by 85% through automated compliance and continuous monitoring
           icon: alert
           icon_color: salmon
           description: |
             Cloud engineering “shifts risk left” through frequent testing. Every change is reviewed and tested before deployment. Policy-as-Code enforces compliance across every
             deployment, and access controls prevent unauthorized changes.
 
-        - title: Foster closer collaboration
+        - title: Improve developer productivity by 20-30% while reducing infrastructure bottlenecks
           icon: collab
           icon_color: blue
           description: |
             Cloud engineering breaks down silos between infrastructure, application development, and compliance teams through shared languages, tools, and processes. This
             increases collaboration and efficiency by removing process friction.
+
+implementation_pathway:
+    title: Getting Started
+    description: |
+        Begin your cloud engineering journey with a structured approach aligned to your organization's maturity stage.
+    items:
+        - title: Assessment
+          description: |
+            Do you have real-time visibility into infrastructure state and policy compliance? Evaluate your current observability gaps and governance challenges.
+
+        - title: Infrastructure Observability
+          description: |
+            Implement comprehensive monitoring and visibility tools to understand your current infrastructure state, dependencies, and compliance posture.
+
+        - title: Self-Service Workflows
+          description: |
+            Deploy developer-friendly infrastructure automation that reduces bottlenecks while maintaining security and compliance standards.
+
+        - title: Centralized Management
+          description: |
+            Enable organization-wide infrastructure governance with policy enforcement, cost optimization, and standardized practices across teams.
 
 use_cases:
     title: Use cases
@@ -138,6 +196,7 @@ case_studies:
           link: /case-studies/snowflake
           name: Jonas-Taha El Sesiy
           title: Senior Software Engineer
+          stage: Build Stage Success
           quote: |
             Ultimately, I think what really excited us about Pulumi was that we could use
             languages that we already know for cloud infrastructure and we knew we could
@@ -148,6 +207,7 @@ case_studies:
           link: /case-studies/mercedes-benz
           name: Dinesh Ramamurthy
           title: Engineering Manager, Mercedes-Benz Research and Development North America
+          stage: Scale Stage Achievement
           quote: |
             I needed a solution that cut across silos and gave our developers a tool they
             could use themselves to provision infrastructure to suit their own immediate needs.
@@ -157,6 +217,7 @@ case_studies:
           link: case-studies/credijusto/
           name: Fernando Carlietti
           title: Lead DevOps Engineer, Credijusto
+          stage: Discover to Build Progression
           quote: |
             Once you use a familiar programming language to tackle a problem, you see that
             you can do way more in less time. Pulumi was a natural choice based on the background
