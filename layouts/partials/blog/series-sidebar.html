@@ -21,8 +21,6 @@
         {{ if $currentSeries }}
             <!-- Series Navigation -->
             <div class="my-4">
-                <h5 class="no-anchor text-lg font-semibold mb-4">In This Series</h5>
-                
                 <!-- Get series data for prefix -->
                 {{ $seriesData := false }}
                 {{ with .Site.Data.blog_series }}
@@ -31,6 +29,13 @@
                             {{ $seriesData = . }}
                         {{ end }}
                     {{ end }}
+                {{ end }}
+                
+                {{ if $seriesData }}
+                    <h5 class="no-anchor text-lg font-semibold mb-2">{{ $seriesData.title }}</h5>
+                    <p class="text-sm text-gray-600 mb-4">{{ $seriesData.description }}</p>
+                {{ else }}
+                    <h5 class="no-anchor text-lg font-semibold mb-4">In This Series</h5>
                 {{ end }}
                 
                 <!-- Get all posts with the same series tag, including future posts, sorted chronologically -->
