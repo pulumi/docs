@@ -7,6 +7,7 @@ authors:
     - lee-briggs
 tags:
     - kubernetes
+    - embrace-kubernetes
 series: embrace-kubernetes
 ---
 

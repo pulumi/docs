@@ -13,6 +13,7 @@ tags:
     - cloud-engineering
     - aws
     - eks
+    - iac-best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-developer-stacks-git-branches/

@@ -14,6 +14,7 @@ authors:
 tags:
     - development-environment
     - automation-api
+    - organizational-patterns
 series: organizational-patterns
 ---
 

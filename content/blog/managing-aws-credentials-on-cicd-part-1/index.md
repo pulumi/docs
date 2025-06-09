@@ -8,6 +8,7 @@ authors:
     - sophia-parafina
 tags:
     - continuous-delivery
+    - aws-credentials-cicd
 series: aws-credentials-cicd
 ---
 

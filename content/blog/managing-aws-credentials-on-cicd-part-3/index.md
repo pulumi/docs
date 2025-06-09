@@ -10,6 +10,7 @@ tags:
     - continuous-delivery
     - security
     - secrets
+    - aws-credentials-cicd
 series: aws-credentials-cicd
 ---
 

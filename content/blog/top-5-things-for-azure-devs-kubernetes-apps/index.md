@@ -10,6 +10,7 @@ tags:
     - kubernetes
     - Azure
     - helm
+    - azure-top-5
 series: azure-top-5
 ---
 

@@ -8,6 +8,7 @@ authors:
 tags:
     - azure
     - virtual machines
+    - azure-top-5
 series: azure-top-5
 ---
 

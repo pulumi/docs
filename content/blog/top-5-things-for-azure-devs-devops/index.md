@@ -10,6 +10,7 @@ tags:
     - azure
     - pipelines
     - devops
+    - azure-top-5
 series: azure-top-5
 ---
 

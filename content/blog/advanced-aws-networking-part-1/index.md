@@ -31,6 +31,7 @@ tags:
     - networking
     - hub-and-spoke
     - python
+    - aws-networking-advanced
 series: aws-networking-advanced
 ---
 

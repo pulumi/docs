@@ -9,6 +9,7 @@ authors:
 tags:
     - azure
     - static websites
+    - azure-top-5
 series: azure-top-5
 ---
 

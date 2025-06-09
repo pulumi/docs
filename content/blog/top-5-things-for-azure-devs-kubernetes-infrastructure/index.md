@@ -10,6 +10,7 @@ tags:
     - Kubernetes
     - AKS
     - Azure
+    - azure-top-5
 series: azure-top-5
 ---
 

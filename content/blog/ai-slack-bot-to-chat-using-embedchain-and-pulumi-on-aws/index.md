@@ -9,6 +9,7 @@ tags:
 - slack
 - chatbot
 - ai
+- ai-slack-bot
 series: ai-slack-bot
 meta_desc: "Learn how to build an AI-powered Slack bot with Embedchain & Pulumi on AWS."
 date: 2024-03-18T17:21:02+01:00

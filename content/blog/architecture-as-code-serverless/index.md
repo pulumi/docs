@@ -7,6 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - serverless
+    - architecture-as-code
 series: architecture-as-code
 ---
 

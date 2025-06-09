@@ -7,6 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - kubernetes
+    - architecture-as-code
 series: architecture-as-code
 ---
 

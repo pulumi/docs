@@ -7,6 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - kubernetes
+    - kubernetes-getting-started
 series: kubernetes-getting-started
 ---
 

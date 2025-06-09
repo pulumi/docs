@@ -24,6 +24,7 @@ authors:
 
 tags:
     - development-environment
+    - organizational-patterns
 series: organizational-patterns
 ---
 
