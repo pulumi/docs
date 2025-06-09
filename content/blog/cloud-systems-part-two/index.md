@@ -1,5 +1,5 @@
 ---
-title: "Cloud Systems Part Two: Containerizing a Website"
+title: "Cloud Systems: Containerizing a Website"
 
 date: 2021-12-27T12:26:10-08:00
 

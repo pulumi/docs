@@ -1,5 +1,5 @@
 ---
-title: "Organizational Patterns - A Developer Portal"
+title: "Organizational Patterns: A Developer Portal"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
