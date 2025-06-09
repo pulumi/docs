@@ -46,6 +46,8 @@ By 2023, Modivcare's acquisition strategy had created a perfect storm of infrast
 
 The newly formed platform engineering team had to onboard legacy AWS accounts, invisible resources, and teams with vastly different cloud maturity levels. Traditional consolidation would require disruptive migrations that could impact healthcare services—unacceptable for a company serving vulnerable populations.
 
+{{< youtube "1um_8QTVqXg" >}}
+
 ## Gaining Visibility Into the Unknown
 
 Rather than forcing immediate migrations, Modivcare's platform team started with visibility. They deployed Pulumi Insights across their fragmented AWS environment to understand what infrastructure they actually had.
