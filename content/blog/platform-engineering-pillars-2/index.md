@@ -9,6 +9,7 @@ authors:
 tags:
     - platform-engineering
     - platform-engineering-pillars
+series: platform-engineering-pillars
 social:
     twitter: >
             ️ Mastering Infrastructure Provisioning: the foundation of successful platform engineering! Learn how to eliminate bottlenecks, standardize with IaC, and create golden paths that empower developers while maintaining security and consistency. Stop fighting infrastructure chaos and start building platforms that scale.
