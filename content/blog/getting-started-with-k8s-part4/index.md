@@ -7,6 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - Kubernetes
+series: kubernetes-getting-started
 ---
 
 This article is the fourth in a series using infrastructure as code to deploy applications with Kubernetes. This series walks you through:

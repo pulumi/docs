@@ -10,6 +10,7 @@ tags:
     - continuous-delivery
     - security
     - secrets
+series: aws-credentials-cicd
 ---
 
 This article is the third part of a series on best practices for securely managing AWS credentials on CI/CD. In this article, we cover the

@@ -8,6 +8,7 @@ authors:
     - sophia-parafina
 tags:
     - continuous-delivery
+series: aws-credentials-cicd
 ---
 
 Continuous delivery requires providing highly sensitive credentials to your

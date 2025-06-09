@@ -31,6 +31,7 @@ tags:
     - networking
     - hub-and-spoke
     - python
+series: aws-networking-advanced
 ---
 
 In this blog series you will learn how to create a hub-and-spoke network architecture in AWS with centralized egress and traffic inspection. In this first installment, we'll talk about the benefits of this architecture and begin to lay out some of its parts in Python with Pulumi, the infrastructure as code tool that enables you to manage infrastructure with real programming languages!

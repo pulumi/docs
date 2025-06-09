@@ -11,6 +11,7 @@ tags:
     - best-practices
     - rbac
     - security
+series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-rbac-and-security/
 ---

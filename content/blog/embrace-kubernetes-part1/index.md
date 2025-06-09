@@ -7,7 +7,7 @@ authors:
     - lee-briggs
 tags:
     - kubernetes
-
+series: embrace-kubernetes
 ---
 
 When you’re considering whether or not to implement Kubernetes, perhaps the first question to ask yourself is do you need it at all?

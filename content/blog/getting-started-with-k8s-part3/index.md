@@ -7,7 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - Kubernetes
-
+series: kubernetes-getting-started
 ---
 
 Welcome to the third article in a series using infrastructure as code to deploy applications with Kubernetes. In the previous post, we reviewed basic Kubernetes objects and abstractions used when deploying an application. We examined code examples across the cloud providers to show how to use infrastructure as code to deploy an application using Kubernetes objects. In this installment, we’ll progress from a simple deployment with just a single application container to a complex application with multiple containers and Pods.

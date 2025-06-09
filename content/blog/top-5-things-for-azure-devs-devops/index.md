@@ -10,6 +10,7 @@ tags:
     - azure
     - pipelines
     - devops
+series: azure-top-5
 ---
 
 What comes to mind when you hear DevOps? Frequently, DevOps is described as a cultural practice that enables an organization to deliver high-quality applications quickly. The DevOps model emphasizes the "breaking down of silos" and combining development and operations into a single team. Developing, deploying, and maintaining an application is the responsibility of both developers and operators across the application lifecycle.

@@ -7,7 +7,7 @@ authors:
     - lee-briggs
 tags:
     - kubernetes
-
+series: embrace-kubernetes
 ---
 
 In the [first article](/blog/embrace-kubernetes-part1/) in this series,  we gave you some questions to help you and others at your company decide if Kubernetes is right for you. In this post, we’ll give you an example of where Kubernetes can be a good fit.

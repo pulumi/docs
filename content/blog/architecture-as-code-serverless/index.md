@@ -7,6 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - serverless
+series: architecture-as-code
 ---
 
 In this fourth installment of Architecture as Code series, we’ll take a look at serverless, an architectural pattern that has quickly gained popularity among cloud practitioners. There are two reasons why serverless usage has proliferated: a cost-saving pay as you go model and elasticity that goes from zero to as many as needed to complete the task without managing servers.

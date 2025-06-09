@@ -7,6 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - kubernetes
+series: kubernetes-getting-started
 ---
 
 Your application made it out of the dev stage, passed the testing stage, and arrived in production. As a developer, you might think that it's an ops problem now. However, DevOps is a collaborative effort between developers and operators to build and maintain applications using shared techniques and processes, often called "Day 2" activities.

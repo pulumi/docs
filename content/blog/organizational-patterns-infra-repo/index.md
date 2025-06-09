@@ -24,7 +24,7 @@ authors:
 
 tags:
     - development-environment
-
+series: organizational-patterns
 ---
 
 Using Pulumi is more than just writing code and components. In addition to common software development practices, there are also a number of success patterns related to how your company or team builds and deploys Pulumi programs to successfully build, deploy, and manage your infrastructure and applications. In this first post of a series, I will explore one of these patterns - the centralized platform infrastructure repository.

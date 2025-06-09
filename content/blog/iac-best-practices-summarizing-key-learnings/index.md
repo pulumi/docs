@@ -10,6 +10,7 @@ authors:
     - scott-lowe
 tags:
     - best-practices
+series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-wrapping-up/
 ---

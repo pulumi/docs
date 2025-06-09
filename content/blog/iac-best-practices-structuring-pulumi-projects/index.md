@@ -11,6 +11,7 @@ authors:
 tags:
     - best-practices
     - cloud-engineering
+series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-structuring-pulumi-projects/
 ---
