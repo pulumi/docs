@@ -8,6 +8,8 @@ authors:
     - kat-cosgrove
 tags:
     - kubernetes
+    - kubernetes-fundamentals
+series: kubernetes-fundamentals
 ---
 Kubernetes is everywhere now, but it’s primarily been the domain of people working on the Ops side of infrastructure. What about devs, though? You benefit from knowing what Kubernetes is and how to use it, too -- otherwise, we’re still putting teams in silos. In this tutorial, we’re going to define Kubernetes at a high level, talk about the anatomy of a cluster, and learn not just why you should care but how to try it for yourself. We’ll start with local deployments using YAML before getting a little help from infrastructure as code with Pulumi to stand up everything right inside our sample application in a programming language you’re already writing!
 

@@ -7,6 +7,8 @@ authors:
     - sophia-parafina
 tags:
     - Kubernetes
+    - kubernetes-getting-started
+series: kubernetes-getting-started
 ---
 
 In previous installments, we examined how to deploy applications. However, we only touched on how applications talk to each other inside and outside the cluster. Whether you are building a modern application or modernizing a legacy application, understanding how resources and components talk to each other is essential. In this installment, we’ll examine networking in Kubernetes.
