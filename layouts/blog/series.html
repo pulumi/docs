@@ -8,20 +8,38 @@
             <div class="lg:w-7/12">
                 <header>
                     <h1 class="no-anchor">{{ .Title }}</h1>
-
                     {{ .Content }}
-
-
-                    <ul class="tags list-none p-0 my-8 inline-flex flex-wrap text-xs">
-                        {{ with .Site.Data.blog_series }}
-                            {{ range .series }}
-                                <li>
-                                    <a class="tag tag-blog text-xs m-1" href="/blog/tag/{{ .slug }}/">{{ .title }}</a>
-                                </li>
-                            {{ end }}
-                        {{ end }}
-                    </ul>
                 </header>
+
+                {{ with .Site.Data.blog_series }}
+                    {{ range .series }}
+                        <article class="mb-8 pb-8 border-b border-gray-200">
+                            <h2 class="no-anchor">
+                                <a data-track="series-{{ .slug }}" href="/blog/tag/{{ .slug }}/">{{ .title }}</a>
+                            </h2>
+                            
+                            <section class="blog-list-description">
+                                {{/* Display meta image if available */}}
+                                {{ if .meta_image }}
+                                    <a href="/blog/tag/{{ .slug }}/"
+                                        ><img
+                                            class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100"
+                                            src="{{ .meta_image }}"
+                                            alt="{{ .title }}"
+                                    /></a>
+                                {{ end }}
+                                
+                                {{/* Display description */}}
+                                <p>{{ .description }}</p>
+                                
+                                {{/* Read more link */}}
+                                <p>
+                                    <a data-track="read-more-series" href="/blog/tag/{{ .slug }}/">View series &rarr;</a>
+                                </p>
+                            </section>
+                        </article>
+                    {{ end }}
+                {{ end }}
             </div>
             <div class="lg:w-2/12 pl-8"></div>
         </div>
