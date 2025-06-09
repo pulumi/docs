@@ -4,6 +4,7 @@ series:
   - slug: "iac-best-practices"
     title: "IaC Best Practices Series"
     description: "A comprehensive series on Infrastructure as Code best practices using Pulumi"
+    prefix: "IaC Best Practices: "
   - slug: "architecture-as-code"
     title: "Architecture as Code Series"
     description: "Exploring different architectural patterns with Pulumi"
