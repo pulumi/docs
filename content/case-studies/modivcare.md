@@ -2,8 +2,8 @@
 title_tag: Modivcare | Case Studies
 title: "Modivcare: Unified Platform in One Year"
 description: |
-    Modivcare used Pulumi to transform fragmented acquisition-built infrastructure into a unified platform without service disruption, achieving 15-25% cost reductions and enabling developer self-service.
-meta_desc: See how Modivcare used Pulumi to unify fragmented AWS infrastructure across acquisitions, reducing costs by 15-25%.
+    Modivcare used Pulumi to transform fragmented acquisition-built infrastructure into a unified platform without service disruption, achieving up to 25% cost reductions and enabling developer self-service.
+meta_desc: See how Modivcare used Pulumi to unify fragmented AWS infrastructure across acquisitions, reducing costs by up to 25%.
 
 customer_name: Modivcare
 customer_logo: /images/case-studies/modivcare.png
@@ -13,7 +13,7 @@ quote_block:
   quote: |
       "Pulumi ESC has been fundamentally game-changing in how we want to bring that apart, not just in solving that disconnected set of Terragrunt files, but also in normalizing a lot of those Terragrunt files."
   quote_attrib: Zachary Cook, Senior Manager, DevOps at ModivCare
-  headline_stat: 15-25% Cost Savings
+  headline_stat: 25% Cost Savings
   headline: by eliminating redundant resources
 
 exec_summary: |
@@ -94,7 +94,7 @@ Modivcare's journey delivered concrete business results:
 
 **Strategic Capability**: Established repeatable patterns for integrating acquisitions. Rather than creating complexity, new acquisitions now follow proven integration approaches.
 
-**Cost and Governance**: Visibility and standardization achieved 15-25% infrastructure cost reductions through elimination of redundant resources and improved governance.
+**Cost and Governance**: Visibility and standardization achieved up to 25% infrastructure cost reductions through elimination of redundant resources and improved governance.
 
 **Cross-Account Simplification**: Managing their complex, acquisition-built AWS organization became dramatically simpler through Pulumi ESC's normalized configuration.
 
