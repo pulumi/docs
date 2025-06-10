@@ -1,0 +1,81 @@
+<!--
+    Series list sidebar, showing all blog series with the current series highlighted.
+    Only shows on series tag pages.
+-->
+{{ $currentTag := "" }}
+{{ $isSeriesTag := false }}
+
+<!-- Check if current tag is a series tag -->
+{{ $currentTag = .Data.Term }}
+{{ with .Site.Data.blog_series }}
+    {{ range .series }}
+        {{ if eq .slug $currentTag }}
+            {{ $isSeriesTag = true }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ if $isSeriesTag }}
+<aside class="lg:pr-8 sticky-sidebar">
+    <!-- Sidebar menu toggle for mobile. -->
+    <div class="lg:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">Toggle Series Navigation</button>
+    </div>
+
+    <h2 class="no-anchor hidden lg:flex mt-2 mb-6">
+        <a data-track="sidebar" class="text-2xl" href="{{ relref . "/blog" }}">Pulumi Blog</a>
+    </h2>
+
+    <!-- Sidebar content. Hidden on smaller displays unless toggled. -->
+    <div class="blog-sidebar-content hidden lg:block">
+        {{ partial "blog/search" . }}
+
+        <hr class="my-8" />
+
+        <!-- Series List Navigation -->
+        <div class="my-4">
+            <h5 class="no-anchor text-lg font-semibold mb-4">All Blog Series</h5>
+            
+            <ul class="list-none p-0 space-y-2">
+                {{ with .Site.Data.blog_series }}
+                    {{ range .series }}
+                        <li class="leading-snug">
+                            {{ if eq .slug $currentTag }}
+                                <!-- Current series - highlighted -->
+                                <div class="bg-blue-50 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
+                                    <div class="text-sm font-semibold text-blue-900">{{ .title }}</div>
+                                    <div class="text-xs text-blue-700 mt-1">{{ substr .description 0 50 }}{{ if gt (len .description) 50 }}...{{ end }}</div>
+                                    <div class="text-xs text-blue-600 mt-1">Current series</div>
+                                </div>
+                            {{ else }}
+                                <!-- Other series -->
+                                <div class="pl-3 py-1">
+                                    <a data-track="series-list" class="text-sm hover:text-blue-600" href="/blog/tag/{{ .slug }}/">
+                                        <div class="font-medium">{{ .title }}</div>
+                                        <div class="text-xs text-gray-600 mt-1">{{ substr .description 0 50 }}{{ if gt (len .description) 50 }}...{{ end }}</div>
+                                    </a>
+                                </div>
+                            {{ end }}
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+            
+            <!-- Link to view all series -->
+            <div class="mt-4 pt-3">
+                <a class="text-blue-600 text-sm" href="/blog/series/">View all series &rarr;</a>
+            </div>
+        </div>
+
+        <hr class="my-8" />
+
+        {{ partial "sidebar-cta" . }}
+    </div>
+
+    <div class="lg:hidden pb-4">
+        <!-- Vertical spacer, for mobile layouts. -->
+    </div>
+</aside>
+{{ else }}
+    {{ partial "blog/sidebar.html" . }}
+{{ end }}

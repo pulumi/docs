@@ -21,7 +21,22 @@
         {{ if $currentSeries }}
             <!-- Series Navigation -->
             <div class="my-4">
-                <h5 class="no-anchor text-lg font-semibold mb-4">In This Series</h5>
+                <!-- Get series data for prefix -->
+                {{ $seriesData := false }}
+                {{ with .Site.Data.blog_series }}
+                    {{ range .series }}
+                        {{ if eq .slug $currentSeries }}
+                            {{ $seriesData = . }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+                
+                {{ if $seriesData }}
+                    <h5 class="no-anchor text-lg font-semibold mb-2">{{ $seriesData.title }}</h5>
+                    <p class="text-sm text-gray-600 mb-4">{{ $seriesData.description }}</p>
+                {{ else }}
+                    <h5 class="no-anchor text-lg font-semibold mb-4">In This Series</h5>
+                {{ end }}
                 
                 <!-- Get all posts with the same series tag, including future posts, sorted chronologically -->
                 {{ $allPages := .Site.AllPages }}
@@ -30,16 +45,35 @@
                 
                 <ul class="list-none p-0 space-y-3">
                     {{ range $index, $post := $seriesPosts }}
+                        <!-- Strip series prefix from title once for this post -->
+                        {{ $displayTitle := $post.Title }}
+                        {{ if and $seriesData $seriesData.prefix }}
+                            {{ if strings.HasPrefix $post.Title $seriesData.prefix }}
+                                {{ $displayTitle = substr $post.Title (len $seriesData.prefix) }}
+                            {{ end }}
+                        {{ end }}
+                        
+                        <!-- Generate title content (without colors) for reuse -->
+                        {{ $titleMainText := "" }}
+                        {{ $titleSubText := "" }}
+                        {{ if strings.Contains $displayTitle ":" }}
+                            {{ $titleParts := split $displayTitle ":" }}
+                            {{ $titleMainText = printf "%d. %s" (add $index 1) (trim (index $titleParts 0) " ") }}
+                            {{ $titleSubText = trim (index $titleParts 1) " " }}
+                        {{ else }}
+                            {{ $titleMainText = printf "%d. %s" (add $index 1) $displayTitle }}
+                            {{ if $seriesData }}
+                                {{ $titleSubText = $seriesData.title }}
+                            {{ end }}
+                        {{ end }}
+                        
                         <li class="leading-snug">
                             {{ if eq $post.RelPermalink $.Page.RelPermalink }}
                                 <!-- Current post - highlighted -->
                                 <div class="bg-blue-50 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
-                                    {{ if strings.Contains $post.Title ":" }}
-                                        {{ $titleParts := split $post.Title ":" }}
-                                        <div class="text-sm font-semibold text-blue-900">{{ add $index 1 }}. {{ trim (index $titleParts 0) " " }}</div>
-                                        <div class="text-xs text-blue-700 mt-1">{{ trim (index $titleParts 1) " " }}</div>
-                                    {{ else }}
-                                        <span class="text-sm font-semibold text-blue-900">{{ add $index 1 }}. {{ $post.Title }}</span>
+                                    <div class="text-sm font-semibold text-blue-900">{{ $titleMainText }}</div>
+                                    {{ if $titleSubText }}
+                                        <div class="text-xs text-blue-700 mt-1">{{ $titleSubText }}</div>
                                     {{ end }}
                                     <div class="text-xs text-blue-600 mt-1">Current post</div>
                                 </div>
@@ -49,12 +83,9 @@
                                     <!-- Future post - show as coming soon -->
                                     <div class="pl-3 py-1 opacity-60">
                                         <div class="text-sm text-gray-500">
-                                            {{ if strings.Contains $post.Title ":" }}
-                                                {{ $titleParts := split $post.Title ":" }}
-                                                <div class="font-medium">{{ add $index 1 }}. {{ trim (index $titleParts 0) " " }}</div>
-                                                <div class="text-xs text-gray-400 mt-1">{{ trim (index $titleParts 1) " " }}</div>
-                                            {{ else }}
-                                                {{ add $index 1 }}. {{ $post.Title }}
+                                            <div class="font-medium">{{ $titleMainText }}</div>
+                                            {{ if $titleSubText }}
+                                                <div class="text-xs text-gray-400 mt-1">{{ $titleSubText }}</div>
                                             {{ end }}
                                         </div>
                                         <div class="text-xs text-blue-400 mt-1">Coming {{ $post.Date.Format "Jan 2" }}</div>
@@ -63,12 +94,9 @@
                                     <!-- Published post -->
                                     <div class="pl-3 py-1">
                                         <a data-track="series-post" class="text-sm hover:text-blue-600" href="{{ $post.RelPermalink }}">
-                                            {{ if strings.Contains $post.Title ":" }}
-                                                {{ $titleParts := split $post.Title ":" }}
-                                                <div class="font-medium">{{ add $index 1 }}. {{ trim (index $titleParts 0) " " }}</div>
-                                                <div class="text-xs text-gray-600 mt-1">{{ trim (index $titleParts 1) " " }}</div>
-                                            {{ else }}
-                                                {{ add $index 1 }}. {{ $post.Title }}
+                                            <div class="font-medium">{{ $titleMainText }}</div>
+                                            {{ if $titleSubText }}
+                                                <div class="text-xs text-gray-600 mt-1">{{ $titleSubText }}</div>
                                             {{ end }}
                                         </a>
                                     </div>

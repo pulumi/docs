@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Fundamentals Part Two"
+title: "Kubernetes Fundamentals: Part Two"
 date: 2021-09-02T12:54:53-05:00
 draft: false
 meta_image: k8s-fundamentals.png

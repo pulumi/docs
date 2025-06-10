@@ -1,5 +1,5 @@
 ---
-title: "Cloud Systems Part One: Static Sites and AWS S3"
+title: "Cloud Systems: Static Sites and AWS S3"
 
 date: 2021-12-15
 
