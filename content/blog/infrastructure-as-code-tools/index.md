@@ -83,12 +83,12 @@ This guide covers the following infrastructure as code tools and platforms:
 ### Application and Platform Management Tools
 
 - **[Kubernetes Operators](#kubernetes-operators)** - Application lifecycle management on Kubernetes (not infrastructure provisioning)
-- **[Kubernetes](#kubernetes---container-orchestration-platform)** - Container orchestration platform
+- **[Kubernetes](#kubernetes-container-orchestration-platform)** - Container orchestration platform
 
 ### Infrastructure Automation and Design Tools
 
 - **[System Initiative](#system-initiative)** - Collaborative infrastructure automation platform
-- **[Brainboard](#brainboard---visual-infrastructure-design)** - Visual design tool that generates IaC code
+- **[Brainboard](#brainboard-visual-infrastructure-design)** - Visual design tool that generates IaC code
 
 ### Security and Compliance Tools
 
@@ -102,11 +102,11 @@ This guide covers the following infrastructure as code tools and platforms:
 
 ### Infrastructure Automation and Management Platforms
 
-- **[Spacelift](#infrastructure-automation-and-management-platforms)** - Automation platform for IaC workflows (not an IaC tool itself)
-- **[Env0](#infrastructure-automation-and-management-platforms)** - Governance and automation platform for existing IaC tools
-- **[Atlantis](#infrastructure-automation-and-management-platforms)** - GitOps workflows for Terraform and OpenTofu
-- **[Vagrant](#infrastructure-automation-and-management-platforms)** - Development environment management (not cloud IaC)
-- **[Docker Compose](#infrastructure-automation-and-management-platforms)** - Multi-container application definitions
+- **[Spacelift](#iac-automation-platforms)** - Automation platform for IaC workflows (not an IaC tool itself)
+- **[Env0](#iac-automation-platforms)** - Governance and automation platform for existing IaC tools
+- **[Atlantis](#iac-automation-platforms)** - GitOps workflows for Terraform and OpenTofu
+- **[Vagrant](#development-environment-tools)** - Development environment management (not cloud IaC)
+- **[Docker Compose](#development-environment-tools)** - Multi-container application definitions
 
 ## Core Infrastructure as Code Tools
 
