@@ -730,7 +730,7 @@ nginx:
     - mode: 644
 ```
 
-## Additional Infrastructure as Code Tools
+## Infrastructure Automation and Design Tools
 
 ### System Initiative
 
