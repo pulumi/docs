@@ -100,6 +100,14 @@ This guide covers the following infrastructure as code tools and platforms:
 - **[TFLint](#linting-and-validation-tools)** - Terraform linting and validation
 - **[Aikido Security](#linting-and-validation-tools)** - Application security platform
 
+### Infrastructure Automation and Management Platforms
+
+- **[Spacelift](#infrastructure-automation-and-management-platforms)** - Automation platform for IaC workflows (not an IaC tool itself)
+- **[Env0](#infrastructure-automation-and-management-platforms)** - Governance and automation platform for existing IaC tools
+- **[Atlantis](#infrastructure-automation-and-management-platforms)** - GitOps workflows for Terraform and OpenTofu
+- **[Vagrant](#infrastructure-automation-and-management-platforms)** - Development environment management (not cloud IaC)
+- **[Docker Compose](#infrastructure-automation-and-management-platforms)** - Multi-container application definitions
+
 ## Core Infrastructure as Code Tools
 
 ### Pulumi
