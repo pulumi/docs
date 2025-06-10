@@ -42,7 +42,7 @@
                         <li class="leading-snug">
                             {{ if eq .slug $currentTag }}
                                 <!-- Current series - highlighted -->
-                                <div class="bg-blue-50 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
+                                <div class="bg-blue-100 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
                                     <div class="text-sm font-semibold text-blue-900">{{ .title }}</div>
                                     <div class="text-xs text-blue-700 mt-1">{{ substr .description 0 50 }}{{ if gt (len .description) 50 }}...{{ end }}</div>
                                     <div class="text-xs text-blue-600 mt-1">Current series</div>
