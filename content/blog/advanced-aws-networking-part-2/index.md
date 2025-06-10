@@ -1,5 +1,5 @@
 ---
-title: "Advanced AWS Networking, Part 2"
+title: "Advanced AWS Networking: Part 2"
 
 # The date represents the post's publish date,
 # and by default corresponds with the date this file was generated.
