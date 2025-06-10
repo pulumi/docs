@@ -125,8 +125,8 @@ Key Features:
 - **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 100+ other providers
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
-- **Built-in testing**: Unit and integration testing for infrastructure code
-- **Policy as Code**: Enforce compliance and security policies with CrossGuard
+- **Built-in testing**: [Unit and integration testing](/docs/using-pulumi/testing/) for infrastructure code
+- **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/using-pulumi/crossguard/)
 - **Component ecosystem**: Rich library of reusable infrastructure components
 
 Code Example:
@@ -171,7 +171,7 @@ pulumi.export("service_url", alb.load_balancer.dns_name)
 
 - **General-purpose language support**: Use Python, TypeScript, Go, C#, Java, or YAML without learning new DSLs
 - **Software engineering practices**: Full IDE support, comprehensive testing frameworks, debugging capabilities
-- **Multi-cloud flexibility**: Native cloud provider SDKs with same-day feature access
+- **Multi-cloud flexibility**: Native cloud provider SDKs with same-day feature access across [150+ providers](/registry/)
 - **Incremental adoption**: Migration tools and state integration for gradual transitions
 - **Open source licensing**: Apache 2.0 ensures long-term freedom and flexibility
 
@@ -346,7 +346,7 @@ Best For: AWS-only deployments requiring deep service integration
 
 AWS CloudFormation provides the foundation for infrastructure as code on AWS, offering native integration with all AWS services and deep platform-specific features.
 
-**Pulumi Integration**: Pulumi provides native AWS providers that offer the same comprehensive AWS service coverage as CloudFormation, with the added benefit of using general-purpose programming languages. You can also import existing CloudFormation stacks into Pulumi for gradual migration or hybrid management approaches.
+**Pulumi Integration**: Pulumi provides [native AWS providers](/docs/clouds/aws/) that offer the same comprehensive AWS service coverage as CloudFormation, with the added benefit of using general-purpose programming languages. You can also [import existing CloudFormation stacks](/docs/using-pulumi/adopting-pulumi/import/) into Pulumi for gradual migration or hybrid management approaches.
 
 Key Features:
 
@@ -417,7 +417,7 @@ Best For: Azure-focused deployments requiring native platform integration
 
 Azure Resource Manager provides the native infrastructure as code solution for Microsoft Azure, offering comprehensive support for Azure services through ARM templates. Azure Bicep serves as a more readable domain-specific language (DSL) that compiles to ARM templates, providing a cleaner syntax while maintaining full ARM compatibility.
 
-**Pulumi Integration**: Pulumi's native Azure providers offer equivalent comprehensive Azure service coverage with general-purpose programming languages. Both ARM templates and Bicep deployments can be imported into Pulumi, and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
+**Pulumi Integration**: Pulumi's [native Azure providers](/docs/clouds/azure/) offer equivalent comprehensive Azure service coverage with general-purpose programming languages. Both ARM templates and Bicep deployments can be [imported into Pulumi](/docs/using-pulumi/adopting-pulumi/import/), and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
 
 Key Features:
 
@@ -504,7 +504,7 @@ Best For: Kubernetes-first organizations managing multi-cloud infrastructure
 
 Crossplane is a Cloud-Native Framework for Platform Engineering that extends Kubernetes to help organizations build custom infrastructure management platforms, allowing teams to provision and manage cloud resources using Kubernetes APIs and patterns.
 
-**Pulumi Integration**: Pulumi offers the Pulumi Kubernetes Operator (PKO) that provides similar Kubernetes-native infrastructure management capabilities, plus support for YAML-based definitions. Teams can also use Pulumi programs to provision the underlying infrastructure that Crossplane manages, creating layered infrastructure management approaches.
+**Pulumi Integration**: Pulumi offers the [Pulumi Kubernetes Operator (PKO)](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) that provides similar Kubernetes-native infrastructure management capabilities, plus support for YAML-based definitions. Teams can also use Pulumi programs to provision the underlying infrastructure that Crossplane manages, creating layered infrastructure management approaches.
 
 Key Features:
 
@@ -791,7 +791,7 @@ Key Features:
 License: Apache 2.0  
 Best For: Container-native infrastructure and application management
 
-While primarily a container orchestration platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
+While primarily a [container orchestration](/topics/containers/) platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
 
 Key Features:
 
@@ -1008,7 +1008,7 @@ Absolutely! Many organizations use complementary tools for different aspects of 
 **Pulumi + Configuration Management:**
 
 - Pulumi + Ansible: Infrastructure provisioning + server configuration ([example](/blog/deploy-wordpress-aws-pulumi-ansible/))
-- Pulumi + Chef/Puppet: Cloud resources + complex configuration management
+- Pulumi + Chef/Puppet: [Cloud resources](/docs/get-started/) + complex configuration management
 
 **Pulumi + Native Cloud Tools:**
 
@@ -1018,7 +1018,7 @@ Absolutely! Many organizations use complementary tools for different aspects of 
 
 **Pulumi + Kubernetes:**
 
-- Pulumi Kubernetes Operator (PKO) for GitOps workflows
+- [Pulumi Kubernetes Operator (PKO)](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) for GitOps workflows
 - Pulumi + Crossplane for layered infrastructure management
 - Pulumi + security scanners like Checkov or Terrascan for compliance
 
@@ -1071,7 +1071,7 @@ Yes, and many organizations are successfully migrating to overcome limitations i
 
 **Available Migration Tools:**
 
-- **Pulumi**: Offers `pulumi convert` and tf2pulumi for importing from Terraform, ARM, and CloudFormation with state integration
+- **Pulumi**: Offers [`pulumi convert`](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) for importing from Terraform, ARM, and CloudFormation with state integration
 - **Terraformer**: Can import existing cloud resources into Terraform/OpenTofu
 - **CDK Migrate**: Helps move from CloudFormation to CDK
 - **Manual migration**: Always possible by recreating resources in the new tool
@@ -1094,7 +1094,7 @@ Template-based tools like Terraform and OpenTofu continue to serve teams effecti
 
 **Evidence of Success Across Approaches:**
 
-Organizations achieve significant improvements regardless of their chosen path—the key is selecting tools that align with team expertise and infrastructure requirements. Success stories span the entire ecosystem, from Terraform's widespread enterprise adoption to programming language approaches enabling dramatic productivity gains at companies like Unity, Snowflake, and Starburst.
+Organizations achieve significant improvements regardless of their chosen path—the key is selecting tools that align with team expertise and infrastructure requirements. Understanding [what DevOps is](/what-is/what-is-devops/) and [platform engineering concepts](/what-is/what-is-platform-engineering/) helps inform these decisions. Success stories span the entire ecosystem, from Terraform's widespread enterprise adoption to programming language approaches enabling dramatic productivity gains at companies like Unity, Snowflake, and Starburst.
 
 **Choosing Your Path:**
 
@@ -1108,6 +1108,6 @@ The most successful organizations focus on key decision criteria:
 
 **The Future of Infrastructure:**
 
-The industry continues evolving toward treating infrastructure as software, but this transformation takes many forms. Whether through enhanced DSLs, visual design tools, programming languages, or hybrid approaches, the goal remains consistent: enabling teams to manage infrastructure with the same reliability, collaboration, and velocity they expect from modern software development.
+The industry continues evolving toward treating infrastructure as software, but this transformation takes many forms. Organizations exploring [serverless architectures](/topics/serverless/) and [container strategies](/topics/containers/) particularly benefit from programmable infrastructure approaches. Whether through enhanced DSLs, visual design tools, programming languages, or hybrid approaches, the goal remains consistent: enabling teams to manage infrastructure with the same reliability, collaboration, and velocity they expect from modern software development.
 
 For teams ready to embrace programming language-based infrastructure as code, [get started with Pulumi](/docs/get-started/) to experience how familiar languages and software engineering practices can transform infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
