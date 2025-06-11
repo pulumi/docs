@@ -1,8 +1,8 @@
 ---
-title_tag: "AWS KMS Configuration for Pulumi Cloud Customer Managed Keys"
+title_tag: "AWS KMS"
 meta_desc: "Learn how to configure AWS KMS for Pulumi Cloud Customer Managed Keys to enhance security and compliance."
 title: "AWS KMS"
-h1: "AWS KMS Configuration for Pulumi Cloud Customer Managed Keys"
+h1: "AWS KMS"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
@@ -14,8 +14,8 @@ aliases:
   - /docs/pulumi-cloud/customer-managed-keys/aws-kms/
 ---
 
-This guide provides step-by-step instructions for configuring AWS Key Management Service (KMS) to use Customer Managed
-Keys (CMKs) with Pulumi Cloud. It covers setting up the necessary AWS IAM roles, trust policies, and KMS key permissions
+This guide provides step-by-step instructions for configuring AWS Key Management Service (KMS) to use [Customer Managed
+Keys (CMKs) with Pulumi Cloud](/docs/pulumi-cloud/admin/customer-managed-keys/). It covers setting up the necessary AWS IAM roles, trust policies, and KMS key permissions
 to enhance the security and compliance of your Pulumi Cloud environment.
 
 ## Prerequisites
