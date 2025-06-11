@@ -1,5 +1,5 @@
 ---
-title: "Cloud Systems Part Three: Deploying to Amazon ECS"
+title: "Cloud Systems: Deploying to Amazon ECS"
 
 date: 2021-12-28T14:52:42Z
 

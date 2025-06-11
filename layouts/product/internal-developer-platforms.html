@@ -8,8 +8,7 @@
     {{ if .Params.demo_video }}
     <section id="demo-video" class="container mx-auto my-16 flex flex-col">
         <div class="flex flex-col lg:flex-row px-8">
-            <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first">
-                <h2 class="text-2xl mb-4">Accelerate Cloud Delivery</h2>
+            <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first flex flex-col justify-center">
                 <h5 class="text-gray-600 text-xl">{{ .Params.overview.description | markdownify }}</h5>
                 <div class="mt-8 text-center">
                     <a href="{{ .Params.overview.link }}" class="btn-primary">{{ .Params.overview.cta}}</a>
