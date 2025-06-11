@@ -131,55 +131,6 @@ func skipIfDockerNotAvailable(t *testing.T) {
 }
 ```
 
-## Implementation Deep Dive
-
-### URL Scheme and Connection
-
-The PostgreSQL backend uses a familiar URL scheme that PostgreSQL users will recognize:
-
-```bash
-pulumi login postgres://username:password@localhost:5432/database?sslmode=require
-```
-
-This URL format supports all standard PostgreSQL connection parameters, making it easy for teams already familiar with PostgreSQL to adopt.
-
-### Automatic Schema Management
-
-One of the user-friendly features is automatic table creation. When connecting to a PostgreSQL database for the first time, the backend automatically creates the necessary table structure if it doesn't exist. This reduces the setup overhead for new users.
-
-### Security Considerations
-
-The implementation includes comprehensive security guidance:
-
-- **SSL/TLS Support**: Full support for encrypted connections
-- **Authentication**: Compatible with all PostgreSQL authentication methods
-- **Access Control**: Recommendations for creating dedicated database users with minimal permissions
-- **Network Security**: Guidance on proper firewall and network access controls
-
-## Testing and Quality Assurance
-
-The PR went through extensive testing across multiple dimensions:
-
-### Integration Tests
-
-Comprehensive integration tests were added to verify:
-- Basic CRUD operations on state data
-- Connection handling and error scenarios
-- Schema creation and migration
-- Cross-platform compatibility
-
-### CI/CD Pipeline Integration
-
-The feature was tested across Pulumi's existing CI/CD pipeline, including:
-- Multiple Go versions
-- Different operating systems
-- Various PostgreSQL versions
-- Performance benchmarking
-
-### Community Testing
-
-The PR remained open for several weeks, allowing community members to test the implementation and provide feedback. This collaborative approach helped identify edge cases and improve the overall quality.
-
 ## Performance and Limitations
 
 While PostgreSQL provides excellent reliability and consistency guarantees, there are some trade-offs to consider:
