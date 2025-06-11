@@ -102,6 +102,8 @@ This guide covers the following infrastructure as code tools and platforms:
 
 ### Infrastructure Automation and Management Platforms
 
+- **[Pulumi Cloud](#iac-automation-platforms)** - Managed service for Pulumi IaC with enterprise features
+- **[HashiCorp Cloud Platform](#iac-automation-platforms)** - Enterprise SaaS platform for Terraform management and automation
 - **[Spacelift](#iac-automation-platforms)** - Automation platform for IaC workflows (not an IaC tool itself)
 - **[Env0](#iac-automation-platforms)** - Governance and automation platform for existing IaC tools
 - **[Atlantis](#iac-automation-platforms)** - GitOps workflows for Terraform and OpenTofu
@@ -113,7 +115,7 @@ This guide covers the following infrastructure as code tools and platforms:
 ### Pulumi
 
 License: Apache 2.0 (Open Source)  
-Best For: Teams who solve operations problems with a development approach
+Best For: Teams who want flexible, language-agnostic IaC for infrastructure and operations
 
 Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
 
@@ -873,6 +875,42 @@ These security tools integrate into CI/CD pipelines alongside your chosen IaC to
 While the above tools focus on defining and provisioning infrastructure, several platforms provide automation, orchestration, and management capabilities that work with Infrastructure as Code tools. **Important: These are not IaC tools themselves, but rather automation platforms that rely on underlying IaC tools.**
 
 ### IaC Automation Platforms
+
+**Pulumi Cloud** - License: Proprietary (SaaS)  
+Best For: Teams using Pulumi IaC who need enterprise-grade collaboration, security, and governance
+
+Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud. It serves as the managed service companion to Pulumi's open-source infrastructure as code tool, providing enterprise capabilities that extend beyond basic IaC functionality.
+
+The relationship between Pulumi IaC and Pulumi Cloud follows a Git/GitHub model: Pulumi IaC is like Git (fully open source and functional on its own), while Pulumi Cloud is like GitHub (a managed service that makes the open-source tool much easier to use securely at scale with teams).
+
+Key Features:
+
+- **Managed state backend**: Secure, scalable state management with transactional protocols
+- **Team collaboration**: Full audit logs, RBAC, and identity provider integration
+- **Centralized secrets management**: Pulumi ESC for configuration and secrets across environments
+- **Cloud inventory and insights**: Pulumi Insights for search, compliance, and drift detection
+- **Remote deployments**: CI/CD integrations and automated workflows
+- **Policy enforcement**: Built-in security and compliance policy as code
+- **Multi-product platform**: Integrated IaC, secrets management, and cloud insights
+
+Pulumi IaC works with or without Pulumi Cloud - you can use DIY backends (S3, Azure Blob, etc.) or the managed service. However, Pulumi Cloud becomes the default experience when you install the Pulumi CLI, providing instant collaboration capabilities without the overhead of building and maintaining your own infrastructure management platform.
+
+**HashiCorp Cloud Platform (HCP)** - License: Proprietary (SaaS)  
+Best For: Organizations standardizing on HashiCorp tools across infrastructure and security lifecycle management
+
+HashiCorp Cloud Platform (HCP) is an enterprise-grade SaaS platform that provides unified lifecycle management for infrastructure and security operations. HCP Terraform (formerly Terraform Cloud) serves as the managed service for Terraform/OpenTofu workflows, while the broader platform integrates multiple HashiCorp tools.
+
+Key Features:
+
+- **HCP Terraform management**: Workspace organization, remote execution, and state management for Terraform
+- **Infrastructure lifecycle automation**: Continuous validation, drift detection, and module lifecycle management
+- **Private VCS access**: Secure integration with private version control repositories
+- **Policy enforcement**: Sentinel policy-as-code framework for compliance and governance
+- **Integrated security services**: HCP Vault for secrets management, HCP Consul for service networking
+- **Enterprise access controls**: RBAC, SAML SSO integration, and fine-grained permissions
+- **Module and image management**: HCP Packer for automated machine/container image creation
+
+HCP focuses specifically on HashiCorp tool integration and provides a comprehensive platform for organizations that have standardized on the HashiCorp ecosystem for infrastructure and security operations.
 
 **Spacelift** - Spacelift is not an Infrastructure as Code tool—it's an automation and workflow platform that relies on other IaC tools like Terraform, OpenTofu, Pulumi, CloudFormation, and Kubernetes. Spacelift provides CI/CD pipelines, policy enforcement, and collaboration features for teams using these underlying IaC tools.
 
