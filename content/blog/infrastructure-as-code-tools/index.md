@@ -5,6 +5,7 @@ draft: false
 meta_desc: "Complete guide to the most effective IaC tools. Compare Pulumi, Terraform, OpenTofu, AWS CDK, and more to find the perfect solution."
 authors:
     - asaf-ashirov
+    - isaac-harris
 tags:
     - infrastructure-as-code
     - terraform
@@ -133,6 +134,53 @@ Key Features:
 
 Code Example:
 
+{{< chooser language "typescript,python,go,csharp,yaml" />}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx";
+
+// Create a VPC with automatic subnets
+const vpc = new awsx.ec2.Vpc("main-vpc", {
+    cidrBlock: "10.0.0.0/16",
+    numberOfAvailabilityZones: 2,
+});
+
+// Create an ECS cluster
+const cluster = new aws.ecs.Cluster("app-cluster");
+
+// Create an Application Load Balancer
+const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("app-alb", {
+    vpcId: vpc.vpcId,
+    subnetIds: vpc.publicSubnetIds,
+});
+
+// Deploy a containerized application
+const service = new awsx.ecs.FargateService("app-service", {
+    cluster: cluster.arn,
+    taskDefinitionArgs: {
+        container: {
+            image: "nginx:latest",
+            memory: 128,
+            ports: [{
+                containerPort: 80,
+                targetGroup: alb.defaultTargetGroup,
+            }],
+        },
+    },
+});
+
+export const vpcId = vpc.vpcId;
+export const serviceUrl = alb.loadBalancer.dnsName;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -168,6 +216,181 @@ service = awsx.ecs.FargateService("app-service",
 pulumi.export("vpc_id", vpc.vpc_id)
 pulumi.export("service_url", alb.load_balancer.dns_name)
 ```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ecs"
+	"github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/ec2"
+	"github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/elasticloadbalancingv2"
+	awsxecs "github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/ecs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create a VPC with automatic subnets
+		vpc, err := ec2.NewVpc(ctx, "main-vpc", &ec2.VpcArgs{
+			CidrBlock:                pulumi.String("10.0.0.0/16"),
+			NumberOfAvailabilityZones: pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+
+		// Create an ECS cluster
+		cluster, err := ecs.NewCluster(ctx, "app-cluster", nil)
+		if err != nil {
+			return err
+		}
+
+		// Create an Application Load Balancer
+		alb, err := elasticloadbalancingv2.NewApplicationLoadBalancer(ctx, "app-alb", &elasticloadbalancingv2.ApplicationLoadBalancerArgs{
+			VpcId:     vpc.VpcId,
+			SubnetIds: vpc.PublicSubnetIds,
+		})
+		if err != nil {
+			return err
+		}
+
+		// Deploy a containerized application
+		_, err = awsxecs.NewFargateService(ctx, "app-service", &awsxecs.FargateServiceArgs{
+			Cluster: cluster.Arn,
+			TaskDefinitionArgs: &awsxecs.FargateServiceTaskDefinitionArgs{
+				Container: &awsxecs.TaskDefinitionContainerDefinitionArgs{
+					Image:  pulumi.String("nginx:latest"),
+					Memory: pulumi.Int(128),
+					Ports: awsxecs.TaskDefinitionPortMappingArray{
+						&awsxecs.TaskDefinitionPortMappingArgs{
+							ContainerPort: pulumi.Int(80),
+							TargetGroup:   alb.DefaultTargetGroup,
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("serviceUrl", alb.LoadBalancer.DnsName())
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Awsx = Pulumi.Awsx;
+
+return await Deployment.RunAsync(() =>
+{
+    // Create a VPC with automatic subnets
+    var vpc = new Awsx.Ec2.Vpc("main-vpc", new()
+    {
+        CidrBlock = "10.0.0.0/16",
+        NumberOfAvailabilityZones = 2,
+    });
+
+    // Create an ECS cluster
+    var cluster = new Aws.Ecs.Cluster("app-cluster");
+
+    // Create an Application Load Balancer
+    var alb = new Awsx.ElasticLoadBalancingV2.ApplicationLoadBalancer("app-alb", new()
+    {
+        VpcId = vpc.VpcId,
+        SubnetIds = vpc.PublicSubnetIds,
+    });
+
+    // Deploy a containerized application
+    var service = new Awsx.Ecs.FargateService("app-service", new()
+    {
+        Cluster = cluster.Arn,
+        TaskDefinitionArgs = new Awsx.Ecs.Inputs.FargateServiceTaskDefinitionArgs
+        {
+            Container = new Awsx.Ecs.Inputs.TaskDefinitionContainerDefinitionArgs
+            {
+                Image = "nginx:latest",
+                Memory = 128,
+                Ports = new[]
+                {
+                    new Awsx.Ecs.Inputs.TaskDefinitionPortMappingArgs
+                    {
+                        ContainerPort = 80,
+                        TargetGroup = alb.DefaultTargetGroup,
+                    },
+                },
+            },
+        },
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["vpcId"] = vpc.VpcId,
+        ["serviceUrl"] = alb.LoadBalancer.Apply(lb => lb.DnsName),
+    };
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: aws-ecs-example
+runtime: yaml
+description: An example that deploys an ECS Fargate service with load balancer
+
+resources:
+  # Create a VPC with automatic subnets
+  main-vpc:
+    type: awsx:ec2:Vpc
+    properties:
+      cidrBlock: "10.0.0.0/16"
+      numberOfAvailabilityZones: 2
+
+  # Create an ECS cluster
+  app-cluster:
+    type: aws:ecs:Cluster
+
+  # Create an Application Load Balancer
+  app-alb:
+    type: awsx:elasticloadbalancingv2:ApplicationLoadBalancer
+    properties:
+      vpcId: ${main-vpc.vpcId}
+      subnetIds: ${main-vpc.publicSubnetIds}
+
+  # Deploy a containerized application
+  app-service:
+    type: awsx:ecs:FargateService
+    properties:
+      cluster: ${app-cluster.arn}
+      taskDefinitionArgs:
+        container:
+          image: "nginx:latest"
+          memory: 128
+          ports:
+            - containerPort: 80
+              targetGroup: ${app-alb.defaultTargetGroup}
+
+outputs:
+  vpcId: ${main-vpc.vpcId}
+  serviceUrl: ${app-alb.loadBalancer.dnsName}
+```
+
+{{% /choosable %}}
 
 **Key Strengths:**
 
