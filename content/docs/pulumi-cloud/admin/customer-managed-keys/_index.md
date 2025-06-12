@@ -2,7 +2,7 @@
 title_tag: "Pulumi Cloud: Customer Managed Keys"
 meta_desc: Bring your own encryption keys to protect data within Pulumi Cloud for enhanced security and compliance.
 title: "Customer Managed Keys"
-h1: Pulumi Cloud Customer Managed Keys
+h1: Customer Managed Keys
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cloud:
@@ -22,8 +22,8 @@ Learn more about editions on the [pricing page](/pricing/).
 ## Overview
 
 Pulumi Cloud supports Customer Managed Keys (CMKs) to improve the security and compliance of your data. CMKs allow you
-to use your own encryption keys to protect sensitive data in Pulumi Cloud through an external Key Management System (
-KMS).
+to use your own encryption keys to protect sensitive data in Pulumi Cloud through an external
+Key Management System (KMS).
 
 Customer Managed Keys encrypt data keys, which are used to secure secrets in Pulumi Cloud. When you add your first CMK,
 all existing data keys encrypted with the Pulumi-managed key will be re-encrypted with the new CMK automatically.
