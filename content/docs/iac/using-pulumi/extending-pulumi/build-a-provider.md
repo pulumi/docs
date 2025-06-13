@@ -13,7 +13,7 @@ menu:
 
 ## When to use a provider
 
-A Pulumi Provider allows you to define new resource types, enabling integration with virtually any service or tool. Pulumi providers are ideal when you need to manage resources that are not yet supported by existing Pulumi providers or when you require custom behavior for managing external systems or APIs. Providers are a powerful extension point, but before building a full provider consider if your use case can be covered by [building a component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) or using [dynamic provider functions](/docs/iac/using-pulumi/extending-pulumi/build-a-dynamic-provider/).
+A Pulumi Provider allows you to define new resource types, enabling integration with virtually any service or tool. Pulumi providers are ideal when you need to manage resources that are not yet supported by existing Pulumi providers or when you require custom behavior for managing external systems or APIs. Providers are a powerful extension point, but before building a full provider consider if your use case can be covered by [building a component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) or using [dynamic provider functions](/docs/iac/concepts/resources/dynamic-providers/).
 
 ## What’s needed to implement a provider?
 
