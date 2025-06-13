@@ -26,7 +26,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://pulumi.com/aws-summit/
+url_slug: https://calendly.com/pulumi-meetings/aws-summit-newyork-booth-demo
 
 # Content for the left hand side section of the page.
 main:
