@@ -1,6 +1,6 @@
 ---
 title: Cloud Engineering
-meta_desc: Transform infrastructure into business acceleration with modern tooling, AI-powered operations, and 224% ROI.
+meta_desc: Transform infrastructure into business acceleration with modern tooling, AI-powered operations, and 2-3x ROI.
 
 type: page
 layout: cloud-engineering
@@ -8,7 +8,7 @@ layout: cloud-engineering
 overview:
     title: Modern Infrastructure Platform for the AI Era
     description: |
-        Pulumi transforms how organizations build, deploy, and manage cloud infrastructure using real programming languages, comprehensive governance, and AI-powered operations. Join industry leaders achieving 224% ROI through modern infrastructure practices.
+        Pulumi transforms how organizations build, deploy, and manage cloud infrastructure using real programming languages, comprehensive governance, and AI-powered operations. Join industry leaders achieving 2-3x ROI through modern infrastructure practices.
 
 maturity_stages:
     title: Where are you in your platform engineering journey?
@@ -32,7 +32,7 @@ strategic_business_value:
     description: |
         Organizations using Pulumi's modern infrastructure platform achieve measurable business outcomes that drive competitive advantage and operational excellence.
     items:
-        - title: 224% ROI over three years with 6-month payback period
+        - title: 2-3x ROI over three years with 6-month payback period
           icon: guage
           icon_color: green
           description: |
@@ -50,13 +50,13 @@ strategic_business_value:
           description: |
             Unified tooling and familiar programming languages reduce context switching and learning curves, allowing engineering teams to focus on business logic rather than infrastructure complexity.
 
-        - title: 30% reduction in cloud spending through intelligent optimization
+        - title: 3x cost optimization through intelligent optimization
           icon: exchange
           icon_color: purple
           description: |
             AI-powered insights and automated governance identify cost optimization opportunities, prevent resource waste, and optimize infrastructure spend across multi-cloud environments.
 
-        - title: 58% fewer security incidents through comprehensive governance
+        - title: 2x reduction in security incidents through comprehensive governance
           icon: shield
           icon_color: salmon
           description: |
@@ -157,6 +157,11 @@ manage:
           description: |
             Real-time visibility across all infrastructure with automated compliance monitoring, policy enforcement, and complete audit trails. Track all changes with fine-grained diffs and automated remediation capabilities.
 
+platform_outcomes:
+    title: Why Organizations Choose Modern Infrastructure
+    description: |
+        The combination of Discover, Build, Deploy, and Scale capabilities delivers transformational business results that traditional approaches cannot match.
+
 competitive_differentiation:
     title: Modern vs. Legacy Infrastructure
     description: |
@@ -179,35 +184,49 @@ competitive_differentiation:
 
         - title: Proven Business Impact vs. Operational Metrics
           description: |
-            **Modern (Pulumi):** Measurable ROI (224%) with comprehensive business outcome tracking
+            **Modern (Pulumi):** Measurable ROI (2-3x) with comprehensive business outcome tracking
             **Legacy:** Limited visibility into business impact and value creation
 
 benefits:
     title: Strategic Advantages of Modern Infrastructure
+    description: |
+        Transform your infrastructure approach to achieve measurable business outcomes through modern platform capabilities.
     items:
-        - title: Innovation Velocity - 25% faster time-to-market
+        - title: Innovation Velocity
+          subtitle: 25% faster time-to-market
           icon: lightning
           icon_color: yellow
           description: |
-            Modern infrastructure practices eliminate deployment bottlenecks through standardized infrastructure patterns, developer self-service capabilities, and AI-powered assistance that accelerates development cycles and competitive responsiveness.
+            **Eliminate deployment bottlenecks** through standardized infrastructure patterns and developer self-service capabilities
+            
+            **AI-powered assistance** accelerates development cycles and competitive responsiveness
 
-        - title: Risk Reduction - 58% fewer security incidents
+        - title: Risk Reduction  
+          subtitle: 2x reduction in security incidents
           icon: shield
           icon_color: salmon
           description: |
-            Comprehensive governance through policy enforcement, automated compliance checks, and operational resilience reduces security vulnerabilities and regulatory compliance risks while maintaining audit-ready infrastructure.
+            **Comprehensive governance** through policy enforcement and automated compliance checks
+            
+            **Operational resilience** reduces vulnerabilities while maintaining audit-ready infrastructure
 
-        - title: Cost Optimization - 30% cloud spending reduction
+        - title: Cost Optimization
+          subtitle: 3x cost optimization
           icon: exchange
           icon_color: purple
           description: |
-            Intelligent visibility through AI-powered optimization recommendations, automated cost anomaly detection, and comprehensive resource tracking eliminates waste and optimizes infrastructure spend across multi-cloud environments.
+            **Intelligent visibility** through AI-powered optimization recommendations and cost anomaly detection
+            
+            **Comprehensive resource tracking** eliminates waste across multi-cloud environments
 
-        - title: Operational Excellence - 74% reduction in management overhead
+        - title: Operational Excellence
+          subtitle: 4x operational efficiency  
           icon: team
           icon_color: blue
           description: |
-            Predictable ROI with 6-month payback period through unified tooling, automated operations, and comprehensive platform capabilities that scale infrastructure management without proportional team growth.
+            **Predictable 2-3x ROI** with 6-month payback period through unified tooling and automation
+            
+            **Scalable platform capabilities** that grow without proportional team growth
 
 implementation_pathway:
     title: Getting Started
@@ -247,14 +266,14 @@ modernization_pathways:
             **Best for:** Organizations with compliance requirements and multi-tool environments
             **Approach:** Implement comprehensive policies and governance across all infrastructure regardless of tooling
             **Timeline:** 30-60 days to comprehensive governance implementation
-            **Outcome:** 58% reduction in security incidents and unified compliance reporting
+            **Outcome:** 2x reduction in security incidents and unified compliance reporting
 
         - title: Platform Transformation
           description: |
             **Best for:** Organizations ready for comprehensive modernization and maximum benefits
             **Approach:** Complete migration to unified modern infrastructure platform with AI-powered operations
             **Timeline:** 6-12 months for full transformation with 6-month ROI payback
-            **Outcome:** 224% ROI with complete platform engineering transformation
+            **Outcome:** 2-3x ROI with complete platform engineering transformation
 
 use_cases:
     title: Use cases
