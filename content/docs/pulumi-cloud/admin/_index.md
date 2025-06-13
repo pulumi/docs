@@ -14,5 +14,5 @@ Pulumi Cloud helps you manage infrastructure and operations at scale. Learn how 
 - [Pulumi Cloud organizations](/docs/pulumi-cloud/admin/organizations/): Set up and manage organizations for team collaboration and resource management.
 - [Self-hosting Pulumi Cloud](/docs/pulumi-cloud/admin/self-hosted/): Explore how to self-host Pulumi Cloud to meet your organization’s specific needs.
 - [Audit logs](/docs/pulumi-cloud/admin/audit-logs/): Access and configure audit logs to track activities and ensure compliance.
-- [Customer Managed Keys](/docs/pulumi-cloud/admin/customer-managed-keys/): Bring your own encryption keys to protect data within Pulumi Cloud for enhanced security and compliance.
+- [Customer Managed Keys](/docs/pulumi-cloud/admin/customer-managed-keys/): Bring your own encryption keys for enhanced security and compliance.
 - [Identity and access management](/docs/pulumi-cloud/access-management/): Control access to resources with identity and access management.

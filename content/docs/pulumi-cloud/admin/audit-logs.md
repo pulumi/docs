@@ -240,4 +240,4 @@ Custom defined keys:
 | Customer Managed Key Added               | indicates the adding of a new customer managed key                                                               |
 | Customer Managed Key Set Default         | indicates the setting of a new default customer managed key                                                      |
 | Customer Managed Key Disabled            | indicates the disabling of a customer managed key                                                                |
-| Customer Managed Key Disabled All        | indicates the disabling of all customer managed key                                                              |
+| Customer Managed Key Disabled All        | indicates the disabling of all customer managed keys                                                             |

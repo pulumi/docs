@@ -25,13 +25,19 @@ Pulumi Cloud supports Customer Managed Keys (CMKs) to improve the security and c
 to use your own encryption keys to protect sensitive data in Pulumi Cloud through an external
 Key Management System (KMS).
 
-Customer Managed Keys encrypt data keys, which are used to secure secrets in Pulumi Cloud. When you add your first CMK,
-all existing data keys encrypted with the Pulumi-managed key will be re-encrypted with the new CMK automatically.
+CMKs encrypt data keys, which are used to encrypt data in Pulumi Cloud. When you add your first CMK, all
+existing data keys encrypted with the Pulumi-managed key will be automatically re-encrypted with the new CMK.
+
+Only organization admins can manage CMKs.
+
+{{% notes "info" %}}
+Currently, Customer Managed Keys are only used to encrypt data in Pulumi ESC, and only AWS KMS is
+supported.
+We are working on adding support for more KMS providers and expanding encryption to additional Pulumi products. If you
+have specific requirements, please [contact us](/contact/).
+{{% /notes %}}
 
 ## Viewing Customer Managed Keys
-
-Customer Managed Keys are available in the Enterprise and Business Critical editions. Only organization admins can view
-them.
 
 To view Customer Managed Keys:
 
@@ -41,9 +47,9 @@ To view Customer Managed Keys:
 The Customer Managed Keys page displays the following details for each key:
 
 - **Name**: The unique name of the key provided by an admin.
-- **Type**: The encryption key type, such as AWS KMS or Azure Key Vault.
-- **Default**: Indicates if the key is the default encryption key for the organization. Means it is used to encrypt new
-  data keys.
+- **Type**: The encryption key type, such as AWS KMS.
+- **Default**: Indicates if the key is the default encryption key for the organization. All new data keys responsible
+  for encrypting data created by your organization will be encrypted with this key.
 - **Set as default**: A button to set the key as the default encryption key. This option is unavailable for keys already
   set as default or undergoing re-encryption.
 - **Disable**: A button to disable the key. This option is unavailable for default keys or keys undergoing
@@ -51,12 +57,11 @@ The Customer Managed Keys page displays the following details for each key:
 
 ## Adding a Customer Managed Key
 
-To add a Customer Managed Key, you must be an organization admin. Ensure the key is created in the external KMS and
-access is configured using OIDC.
+Adding a Customer Managed Key enables you to use your own encryption key to protect sensitive data in Pulumi Cloud.
 
 {{% notes "info" %}}
-When the first CMK is added, all data keys encrypted with the Pulumi-managed key will be re-encrypted with the new CMK
-automatically.
+When the first Customer Managed Key is added, all data keys encrypted with the Pulumi-managed key will be automatically
+re-encrypted with the new Customer Managed Key.
 {{% /notes %}}
 
 ### AWS KMS
@@ -71,9 +76,8 @@ automatically.
 
 ## Disabling a Customer Managed Key
 
-To disable a Customer Managed Key, you must be an organization admin. Disabling a key prevents it from being used to
-create new data keys, but existing data keys remain encrypted with the key. You must specify a re-encryption key to
-re-encrypt existing data keys.
+Disabling a key prevents it from being used to create new data keys, but existing data keys remain encrypted with the
+key until they are re-encrypted. You must specify a re-encryption key to re-encrypt existing data keys.
 
 Disabling a key is not available for default keys or keys undergoing re-encryption.
 
@@ -87,9 +91,8 @@ To disable a Customer Managed Key:
 
 ## Disabling All Customer Managed Keys
 
-To disable all Customer Managed Keys, you must be an organization admin. Disabling all keys prevents them from being
-used to create new data keys, but existing data keys remain encrypted with the keys. All data keys will be re-encrypted
-with the Pulumi-managed key.
+Disabling all keys prevents them from being used to create new data keys, but existing data keys remain encrypted with
+the keys until they are re-encrypted. All data keys will be re-encrypted with the Pulumi-managed key.
 
 To disable all Customer Managed Keys:
 
@@ -97,13 +100,3 @@ To disable all Customer Managed Keys:
 2. Confirm the re-encryption process in the dialog that appears.
 3. Click **Disable all** to confirm.
 4. A banner will appear, showing the re-encryption process status. It disappears once the process is complete.
-
-## Restrictions
-
-Currently, Customer Managed Keys have the following limitations:
-
-1. They are only used to encrypt data keys for secrets in Pulumi ESC.
-2. Only AWS KMS is supported.
-
-We are working on adding support for more KMS providers and expanding encryption to additional Pulumi products. If you
-have specific requirements, please [contact us](/contact/).
