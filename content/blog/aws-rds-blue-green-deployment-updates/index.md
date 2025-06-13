@@ -1,7 +1,7 @@
 ---
 title: "AWS RDS - Using Blue/Green Deployments for Low-Downtime Updates"
 h1: "How to Achieve Low Downtime Updates on RDS with Blue/Green Deployments"
-authors: ["lichtie"]
+authors: ["elisabeth-lichtie"]
 tags: ["aws", "rds", "postgres"]
 meta_desc: "Pulumi can enable low downtime updates on your RDS instance using Blue/Green Deployments."
 date: "2025-06-12"
@@ -29,7 +29,61 @@ Though this strategy typically increases the amount of time that updates need to
 
 ## How to use
 
+To use [blue/green deployments for your database updates](https://github.com/pulumi-demos/examples/tree/main/typescript/aws-rds-blue-green-updates), start by creating a database and corresponding parameter group.
+
+```typescript
+const parameterGroup = new aws.rds.ParameterGroup(
+  `${baseName}logicalreplicationgroup`,
+  {
+    family: `postgres${dbVersion.split(".")[0]}`,
+    parameters: [
+      {
+        name: "rds.logical_replication",
+        value: "1",
+        applyMethod: "pending-reboot",
+      },
+    ],
+  },
+  { deleteBeforeReplace: false }
+);
+
+const database = new aws.rds.Instance(
+  baseName,
+  {
+    allocatedStorage: storageAllocation,
+    engine: "postgres",
+    engineVersion: dbVersion,
+    instanceClass: aws.rds.InstanceType.T3_Micro,
+    username: dbUsername,
+    password: dbPW,
+    storageEncrypted: true,
+    backupRetentionPeriod: 7,
+    blueGreenUpdate: { enabled: true },
+    skipFinalSnapshot: true,
+    parameterGroupName: parameterGroup.name,
+  },
+  { dependsOn: [parameterGroup] }
+);
+```
+
+After running `pulumi up` with the above code, you'll have a database deployed and attached to your custom parameter group. It's important to create and attach a custom parameter group so that you can keep it up to date with any engine version upgrades. If you use the default parameter group, updates to the database version may fail when the green deployment is created since it's parameter group family won't match the new version. You can avoid a failure by ensuring that the parameter group's `family` and `engineVersion` are always changed in the same update.
+
+You won't see the effects of having `blueGreenUpdate` enabled until you run your first update. Change any part of the database configuration and run `pulumi up` again to start the update. 
+
+Once the update kicks off, you can watch on AWS as the blue/green deployment is created and the original settings are copied to the green instance.
+![Blue Green Deployment Creating](./deployment-creating.jpeg)
+
+Then, the green instance will be updated with the new settings
+![Blue Green Deployment Modifying](./deployment-modifying.jpeg)
+
+and the program will switch over to the green instance and clean up.
+![Blue Green Deployment Switching](./deployment-switching.jpeg)
+![Blue Green Deployment Clean](./deployment-clean.jpeg)
+
+After that, your update has been completed with minimal disruption!
+
 ## Additional Considerations
+
 General [limitations and considerations for Amazon RDS blue/green deployments](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-considerations.html#blue-green-deployments-limitations) are listed in the AWS documentation, but there are a few other considerations that should be taken into account when using them for updates with infrastructure as code (IaC).
 * **No Custom Checks**: Because IaC will automatically perform the switchover when the update is complete, you will not have the opportunity to perform custom checks on the green instance before promoting it. RDS will run some basic [guardrails](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-switching.html#blue-green-deployments-switching-guardrails) checks before performing the switchover, but you will not be able to perform any additional checks.
 * **Long Update Times**: Because the IaC program will deploy temporary resources before performing the update and destroy them after, blue/green updates will take considerably longer than their in-place counterparts. 
