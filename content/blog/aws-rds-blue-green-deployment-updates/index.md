@@ -6,6 +6,7 @@ authors:
 tags: ["aws", "rds", "postgres"]
 meta_desc: "Pulumi can enable low downtime updates on your RDS instance using Blue/Green Deployments."
 date: "2025-06-12"
+meta_image: "BlueGreenRDS.png"
 
 summary: |
     AWS RDS supports blue/green deployments to support database maintainence. In a blue/green deployment, you have one production (blue) and one staging (green) database. You can safely make changes to the green instance without affecting production and promote it to be the main instance. When you enable blue/green updates, Pulumi will temporarily set up a blue/green deployment for the duration of the update to minimize downtime. 
