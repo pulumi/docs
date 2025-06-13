@@ -1,0 +1,10 @@
+id = "elisabeth-lichtie"
+name = "Elisabeth Lichtie"
+title = "Customer Success Architect"
+weight = 1
+
+status = "active"
+
+[social]
+github = "lichtie"
+linkedin = "elisabethlichtie"
