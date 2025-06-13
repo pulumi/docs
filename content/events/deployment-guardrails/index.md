@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "AWS Immersion Day: Building an IDP with Pulumi"
-meta_desc: Learn best practices for platform engineering on AWS and how Pulumi makes it easier than ever to build an Internal Developer Platform (IDP) for your team.
+title: "Deployment Guardrails with Policy as Code"
+meta_desc: Implement automated governance through policy as code that enables self-service while maintaining security and compliance.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,19 +26,19 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: aws-immersion-day-building-an-idp
+url_slug: deployment-guardrails
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "AWS Immersion Day: Building an IDP with Pulumi"
+    title: "Deployment Guardrails with Policy as Code"
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-07-24T12:00:00-04:00
+    sortable_date: 2025-08-13T12:00:00-04:00
 
     # Duration of the webinar.
     duration: 60 minutes
@@ -48,18 +48,17 @@ main:
 
     # Description of the webinar.
     description: |
-        Learn how to streamline platform engineering on AWS with an Internal Developer Platform (IDP). This AWS Immersion Day workshop covers best practices for platform engineering on AWS, using Infrastructure as Code (IaC) components to automate infrastructure and codify best practices, strengthen security with short-lived credentials, and gain visibility into AWS environments with Pulumi Insights.
+        Effective Internal Developer Platforms provide guardrails, not gates—enabling developer autonomy while automatically enforcing security, compliance, and operational standards. This workshop demonstrates how to implement comprehensive policy as code using Pulumi CrossGuard. You'll learn to create policies that prevent misconfigurations, enforce tagging standards, and ensure compliance requirements are met automatically, turning your IDP into a secure-by-default platform.
     learn:
-        - How Pulumi supports platform engineering and improves AWS infrastructure management.
-        - Best practices for using Pulumi and Infrastructure as Code (IaC) across AWS and multi-cloud environments.
-        - Strategies to empower developers, reduce operational overhead, and improve your organization's security posture using Pulumi's ecosystem.
-
+        - How to implement security and compliance policies that run automatically in CI/CD
+        - Strategies for creating policies that guide rather than block developer productivity
+        - Real-world policy examples for common governance requirements (tagging, security groups, encryption)
 
     # The webinar presenters
     presenters:
-        - name: Rob Smith
-          role: Solutions Architect, Pulumi
-          photo: /images/team/Rob-Smith.png
+        - name: Adam Bell
+          role: Community Engineer, Pulumi
+          photo: /images/team/adam-gordon-bell.jpg
         - name: Josh Kodroff
           role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
@@ -67,21 +66,21 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["Platform Engineering", "IaC", "Pulumi IDP"]
+        topics:  ["Security", "Policy as Code", "Governance"]
         languages: ["TypeScript"]
         clouds: ["AWS"]
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: dd71b8fd-4896-445c-b5ae-50a6ed95f4b7
-    salesforce_campaign_id: 701PQ00000Z0DKUYA3
+    hubspot_form_id: 541113c9-3795-4537-ab07-5485e85362a3
+    salesforce_campaign_id: 701PQ00000ZYMhuYAH
 
 event_data:
-  name: "AWS Immersion Day: Building an IDP with Pulumi"
-  start_date: 2025-07-24T12:00:00-04:00
-  end_date: 2025-07-24T13:00:00-04:00
-  url: "https://www.pulumi.com/resources/aws-immersion-day-building-an-idp/"
+  name: "Deployment Guardrails with Policy as Code"
+  start_date: 2025-08-13T12:00:00-04:00
+  end_date: 2025-08-13T13:00:00-04:00
+  url: "https://www.pulumi.com/resources/deployment-guardrails/"
   description: |
-    Learn how to streamline platform engineering on AWS with an Internal Developer Platform (IDP). This AWS Immersion Day workshop covers best practices for platform engineering on AWS, using Infrastructure as Code (IaC) components to automate infrastructure and codify best practices, strengthen security with short-lived credentials, and gain visibility into AWS environments with Pulumi Insights.
+    Effective Internal Developer Platforms provide guardrails, not gates—enabling developer autonomy while automatically enforcing security, compliance, and operational standards. This workshop demonstrates how to implement comprehensive policy as code using Pulumi CrossGuard. You'll learn to create policies that prevent misconfigurations, enforce tagging standards, and ensure compliance requirements are met automatically, turning your IDP into a secure-by-default platform.
 --- 

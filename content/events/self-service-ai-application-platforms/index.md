@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "Golden Paths: Infrastructure Components and Templates"
-meta_desc: Create reusable infrastructure components and templates that enable developer self-service while enforcing standards.
+title: "Self-Service AI Application Platforms"
+meta_desc: Build self-service platforms for delivering AI-powered applications and agents.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,19 +26,19 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: golden-paths
+url_slug: self-service-ai-application-platforms
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Golden Paths: Infrastructure Components and Templates"
+    title: "Self-Service AI Application Platforms"
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-08-06T12:00:00-04:00
+    sortable_date: 2025-09-09T12:00:00-04:00
 
     # Duration of the webinar.
     duration: 60 minutes
@@ -48,38 +48,34 @@ main:
 
     # Description of the webinar.
     description: |
-        Golden paths are the foundation of successful Internal Developer Platforms—providing developers with pre-approved, production-ready infrastructure patterns they can self-serve. This hands-on workshop teaches you to build reusable Pulumi components and templates that encapsulate your organization's best practices. You'll learn to create composable building blocks that make the right thing the easy thing, reducing cognitive load for developers while maintaining operational excellence.
+        The rise of LLM applications creates new infrastructure challenges related to GPU resources, model serving, and cost management. This cutting-edge workshop demonstrates how to extend your IDP to support AI application teams with self-service infrastructure for AI-powered applications and agents. You'll learn to create templates for model serving, implement cost controls for GPU resources, and provide integration patterns for common use cases.
     learn:
-        - How to design and build reusable Pulumi components for common infrastructure patterns
-        - Template creation strategies that balance flexibility with opinionated defaults
-        - Component composition techniques for building complex infrastructure applications from simple building blocks.
+        - How to create self-service templates for LLM application infrastructure and GPU resources
+        - Security patterns for handling sensitive data in AI-powered applications and API key management.
 
     # The webinar presenters
     presenters:
-        - name: Rob Smith
-          role: Solutions Architect, Pulumi
-          photo: /images/team/Rob-Smith.png
         - name: Engin Diri
           role: Senior Solutions Architect, Pulumi
           photo: /images/team/engin-diri.jpg
 
     # case-sensitive
     tags:
-        level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["Platform Engineering", "IaC", "Components"]
+        level: Advanced # Beginner, Intermediate, Advanced
+        topics:  ["AI", "LLM", "GPU Infrastructure"]
         clouds: ["AWS"]
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: 8bca877b-1398-442f-88ea-16ae11b77182
-    salesforce_campaign_id: 701PQ00000ZYBbEYAX
+    hubspot_form_id: 80baf260-52f7-481b-a085-5b8575eac389
+    salesforce_campaign_id: 701PQ00000ZY23IYAT
 
 event_data:
-  name: "Golden Paths: Infrastructure Components and Templates"
-  start_date: 2025-08-06T12:00:00-04:00
-  end_date: 2025-00-06T13:00:00-04:00
-  url: "https://www.pulumi.com/resources/golden-paths/"
+  name: "Self-Service AI Application Platforms"
+  start_date: 2025-09-09T12:00:00-04:00
+  end_date: 2025-09-09T13:00:00-04:00
+  url: "https://www.pulumi.com/resources/self-service-ai-application-platforms/"
   description: |
-        Golden paths are the foundation of successful Internal Developer Platforms—providing developers with pre-approved, production-ready infrastructure patterns they can self-serve. This hands-on workshop teaches you to build reusable Pulumi components and templates that encapsulate your organization's best practices. You'll learn to create composable building blocks that make the right thing the easy thing, reducing cognitive load for developers while maintaining operational excellence.
+        The rise of LLM applications creates new infrastructure challenges related to GPU resources, model serving, and cost management. This cutting-edge workshop demonstrates how to extend your IDP to support AI application teams with self-service infrastructure for AI-powered applications and agents. You'll learn to create templates for model serving, implement cost controls for GPU resources, and provide integration patterns for common use cases.
 --- 
