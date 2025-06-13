@@ -45,7 +45,7 @@ strategic_business_value:
             Modern infrastructure practices eliminate deployment bottlenecks and enable self-service capabilities that accelerate innovation cycles and competitive responsiveness.
 
         - title: 20% improvement in engineering productivity
-          icon: users
+          icon: team
           icon_color: blue
           description: |
             Unified tooling and familiar programming languages reduce context switching and learning curves, allowing engineering teams to focus on business logic rather than infrastructure complexity.
@@ -204,7 +204,7 @@ benefits:
             Intelligent visibility through AI-powered optimization recommendations, automated cost anomaly detection, and comprehensive resource tracking eliminates waste and optimizes infrastructure spend across multi-cloud environments.
 
         - title: Operational Excellence - 74% reduction in management overhead
-          icon: users
+          icon: team
           icon_color: blue
           description: |
             Predictable ROI with 6-month payback period through unified tooling, automated operations, and comprehensive platform capabilities that scale infrastructure management without proportional team growth.
