@@ -46,17 +46,17 @@ The most effective IaC tools share several key characteristics:
 
 The shift to IaC tools addresses fundamental challenges that manual infrastructure management cannot solve at scale:
 
-**Eliminates Configuration Drift**: Manual changes lead to inconsistencies between environments. IaC ensures your production, staging, and development environments remain identical, eliminating the notorious "works on my machine" syndrome for infrastructure.
+Eliminates Configuration Drift: Manual changes lead to inconsistencies between environments. IaC ensures your production, staging, and development environments remain identical, eliminating the notorious "works on my machine" syndrome for infrastructure.
 
-**Accelerates Deployment Velocity**: Teams can provision complex multi-cloud architectures in minutes instead of weeks. This speed enables faster time-to-market and more frequent, reliable deployments.
+Accelerates Deployment Velocity: Teams can provision complex multi-cloud architectures in minutes instead of weeks. This speed enables faster time-to-market and more frequent, reliable deployments.
 
-**Enables True Collaboration**: Infrastructure becomes code that teams can review, test, and approve together. This collaborative approach reduces errors and ensures knowledge sharing across the organization.
+Enables True Collaboration: Infrastructure becomes code that teams can review, test, and approve together. This collaborative approach reduces errors and ensures knowledge sharing across the organization.
 
-**Provides Cost Control**: Automated provisioning and deprovisioning prevents resource sprawl. Teams can easily track infrastructure costs, set budget alerts, and optimize resource usage across environments.
+Provides Cost Control: Automated provisioning and deprovisioning prevents resource sprawl. Teams can easily track infrastructure costs, set budget alerts, and optimize resource usage across environments.
 
-**Ensures Compliance and Security**: Codified security policies and compliance requirements are automatically enforced across all deployments. Audit trails become automatic, and policy violations are caught before deployment.
+Ensures Compliance and Security: Codified security policies and compliance requirements are automatically enforced across all deployments. Audit trails become automatic, and policy violations are caught before deployment.
 
-**Guarantees Business Continuity**: Complete infrastructure definitions stored in version control enable rapid disaster recovery. Organizations can reconstruct entire environments from code, minimizing downtime and data loss.
+Guarantees Business Continuity: Complete infrastructure definitions stored in version control enable rapid disaster recovery. Organizations can reconstruct entire environments from code, minimizing downtime and data loss.
 
 ## Infrastructure as Code Tools Overview
 
@@ -132,7 +132,7 @@ Key Features:
 - **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/using-pulumi/crossguard/)
 - **Component ecosystem**: Rich library of reusable infrastructure components
 
-Code Example:
+Universal Language Code Examples:
 
 {{< chooser language "typescript,python,go,csharp,yaml" />}}
 
@@ -392,7 +392,7 @@ outputs:
 
 {{% /choosable %}}
 
-**Key Strengths:**
+Key Strengths:
 
 - **General-purpose language support**: Use Python, TypeScript, Go, C#, Java, or YAML without learning new DSLs
 - **Software engineering practices**: Full IDE support, comprehensive testing frameworks, debugging capabilities
@@ -400,7 +400,7 @@ outputs:
 - **Incremental adoption**: Migration tools and state integration for gradual transitions
 - **Open source licensing**: Apache 2.0 ensures long-term freedom and flexibility
 
-**Considerations:**
+Considerations:
 
 - **Learning curve**: Teams new to programming may prefer template-based approaches initially
 - **Ecosystem maturity**: Smaller community compared to more established tools like Terraform
@@ -415,7 +415,7 @@ Best For: Teams with existing Terraform expertise and established workflows
 
 [Terraform](/docs/iac/concepts/vs/terraform/) remains one of the most widely adopted IaC tools, using HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. Despite its licensing change to BSL in 2023, it continues to be a strong choice for many organizations.
 
-**Key Strengths:**
+Key Strengths:
 
 - **Extensive provider ecosystem**: Largest collection of community-maintained providers covering virtually every cloud service
 - **Established workflows**: Mature plan-and-apply process with extensive tooling and CI/CD integrations
@@ -423,14 +423,14 @@ Best For: Teams with existing Terraform expertise and established workflows
 - **Enterprise adoption**: Widely adopted in enterprises with established processes and expertise
 - **Module ecosystem**: Rich collection of reusable Terraform modules for common patterns
 
-**When Terraform Works Well:**
+When Terraform Works Well:
 
 - Teams with existing HCL expertise and Terraform investments
 - Organizations using predominantly community-supported cloud services
 - Infrastructure patterns that fit well within HCL's declarative model
 - Teams comfortable with template-based approaches
 
-**Considerations for Complex Scenarios:**
+Considerations for Complex Scenarios:
 
 - **Language constraints**: HCL's domain-specific nature can require workarounds for complex logic compared to general-purpose programming languages
 - **Testing approach**: Primarily supports integration testing; teams needing comprehensive unit testing may require additional tooling
@@ -469,21 +469,21 @@ Best For: Teams seeking an open-source Terraform alternative with community gove
 
 OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/concepts/vs/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
 
-**Key Strengths:**
+Key Strengths:
 
 - **True open source**: MPL 2.0 license with community governance via Linux Foundation ensuring long-term accessibility
 - **Terraform compatibility**: Drop-in replacement maintaining existing workflows, modules, and provider ecosystem
 - **Community-driven development**: Transparent roadmap, open contribution process, and vendor-neutral governance
 - **License certainty**: Removes concerns about future licensing restrictions for commercial use
 
-**When OpenTofu Makes Sense:**
+When OpenTofu Makes Sense:
 
 - Organizations requiring guaranteed open-source licensing for compliance or philosophical reasons
 - Teams with significant Terraform investments wanting to avoid vendor lock-in
 - Environments where community governance and transparency are priorities
 - Projects needing long-term license stability
 
-**Architectural Considerations:**
+Architectural Considerations:
 As a Terraform fork, OpenTofu inherits the same architectural approach, which means teams evaluating it should consider whether HCL-based infrastructure definition meets their long-term needs for testing, IDE integration, and developer productivity, or whether a programming language-based approach might better serve complex scenarios.
 
 Code Example:
@@ -510,14 +510,14 @@ Best For: AWS-focused teams who prefer programming languages over templates
 
 AWS CDK allows you to define AWS infrastructure using familiar programming languages, synthesizing CloudFormation templates for deployment while providing higher-level abstractions. CDK addresses many limitations of traditional template-based approaches by enabling general-purpose programming languages.
 
-**Key Strengths:**
+Key Strengths:
 
 - **General-purpose programming languages**: TypeScript, Python, Java, C#, JavaScript support with full IDE integration (Go available in Developer Preview)
 - **AWS-optimized constructs**: High-level components encapsulating AWS best practices
 - **Type safety**: Compile-time checking and IntelliSense support
 - **CloudFormation reliability**: Built on AWS's proven deployment engine
 
-**Notable Limitations:**
+Notable Limitations:
 
 - **AWS-only ecosystem**: Locked into single cloud provider, limiting multi-cloud strategies
 - **CloudFormation constraints**: Inherits template size limits and deployment restrictions
@@ -571,7 +571,7 @@ Best For: AWS-only deployments requiring deep service integration
 
 AWS CloudFormation provides the foundation for infrastructure as code on AWS, offering native integration with all AWS services and deep platform-specific features.
 
-**Pulumi Integration**: Pulumi provides [native AWS providers](/docs/clouds/aws/) that offer the same comprehensive AWS service coverage as CloudFormation, with the added benefit of using general-purpose programming languages. You can also [import existing CloudFormation stacks](/docs/using-pulumi/adopting-pulumi/import/) into Pulumi for gradual migration or hybrid management approaches.
+Pulumi Integration: Pulumi provides [native AWS providers](/docs/clouds/aws/) that offer the same comprehensive AWS service coverage as CloudFormation, with the added benefit of using general-purpose programming languages. You can also [import existing CloudFormation stacks](/docs/using-pulumi/adopting-pulumi/import/) into Pulumi for gradual migration or hybrid management approaches.
 
 Key Features:
 
@@ -642,7 +642,7 @@ Best For: Azure-focused deployments requiring native platform integration
 
 Azure Resource Manager provides the native infrastructure as code solution for Microsoft Azure, offering comprehensive support for Azure services through ARM templates. Azure Bicep serves as a more readable domain-specific language (DSL) that compiles to ARM templates, providing a cleaner syntax while maintaining full ARM compatibility.
 
-**Pulumi Integration**: Pulumi's [native Azure providers](/docs/clouds/azure/) offer equivalent comprehensive Azure service coverage with general-purpose programming languages. Both ARM templates and Bicep deployments can be [imported into Pulumi](/docs/using-pulumi/adopting-pulumi/import/), and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
+Pulumi Integration: Pulumi's [native Azure providers](/docs/clouds/azure/) offer equivalent comprehensive Azure service coverage with general-purpose programming languages. Both ARM templates and Bicep deployments can be [imported into Pulumi](/docs/using-pulumi/adopting-pulumi/import/), and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
 
 Key Features:
 
@@ -729,7 +729,7 @@ Best For: Kubernetes-first organizations managing multi-cloud infrastructure
 
 Crossplane is a Cloud-Native Framework for Platform Engineering that extends Kubernetes to help organizations build custom infrastructure management platforms, allowing teams to provision and manage cloud resources using Kubernetes APIs and patterns.
 
-**Pulumi Integration**: Pulumi offers the [Pulumi Kubernetes Operator (PKO)](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) that provides similar Kubernetes-native infrastructure management capabilities, plus support for YAML-based definitions. Teams can also use Pulumi programs to provision the underlying infrastructure that Crossplane manages, creating layered infrastructure management approaches.
+Pulumi Integration: Pulumi offers the [Pulumi Kubernetes Operator (PKO)](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) that provides similar Kubernetes-native infrastructure management capabilities, plus support for YAML-based definitions. Teams can also use Pulumi programs to provision the underlying infrastructure that Crossplane manages, creating layered infrastructure management approaches.
 
 Key Features:
 
@@ -801,7 +801,7 @@ Best For: Configuration management with some infrastructure provisioning capabil
 
 Ansible provides configuration management and limited infrastructure provisioning through its agentless architecture and simple YAML-based playbooks.
 
-**Pulumi Integration**: Rather than competing with Ansible, Pulumi complements it perfectly. Use Pulumi for infrastructure provisioning and Ansible for configuration management. Pulumi's Command provider can execute Ansible playbooks as part of your infrastructure deployment, and many Pulumi customers use both tools together for comprehensive infrastructure automation. [See example: Deploy WordPress to AWS using Pulumi and Ansible](/blog/deploy-wordpress-aws-pulumi-ansible/).
+Pulumi Integration: Rather than competing with Ansible, Pulumi complements it perfectly. Use Pulumi for infrastructure provisioning and Ansible for configuration management. Pulumi's Command provider can execute Ansible playbooks as part of your infrastructure deployment, and many Pulumi customers use both tools together for comprehensive infrastructure automation. [See example: Deploy WordPress to AWS using Pulumi and Ansible](/blog/deploy-wordpress-aws-pulumi-ansible/).
 
 Key Features:
 
@@ -1068,38 +1068,38 @@ While the tools above focus on provisioning and managing infrastructure, a compl
 
 ### Security Scanning Tools
 
-**Checkov** - License: Apache 2.0  
+Checkov - License: Apache 2.0  
 Static analysis tool for infrastructure as code that scans cloud infrastructure configurations for security and compliance issues. Supports Terraform, CloudFormation, Kubernetes, Helm, ARM templates, and more. Integrates with CI/CD pipelines and provides over 1000+ built-in policies covering CIS benchmarks, PCI DSS, and GDPR compliance.
 
-**KICS (Keeping Infrastructure as Code Secure)** - License: Apache 2.0  
+KICS (Keeping Infrastructure as Code Secure) - License: Apache 2.0  
 Open-source static analysis tool that finds security vulnerabilities and compliance issues in infrastructure code. Supports 15+ platforms including Terraform, CloudFormation, Kubernetes, Docker, and Ansible. Features over 2400 queries for detecting misconfigurations and security vulnerabilities.
 
-**Terrascan** - License: Apache 2.0  
+Terrascan - License: Apache 2.0  
 Static code analyzer for Infrastructure as Code that detects compliance and security violations across cloud native technologies. Supports 500+ policies for security best practices and compliance standards including SOC 2, PCI DSS, GDPR, and HIPAA. Integrates with admission controllers for Kubernetes.
 
-**Trivy** - License: Apache 2.0  
+Trivy - License: Apache 2.0  
 Comprehensive security scanner that includes IaC scanning capabilities alongside container and filesystem scanning. Detects vulnerabilities, misconfigurations, secrets, and compliance issues. Supports Terraform, CloudFormation, Kubernetes, Helm, and ARM templates with extensive CI/CD integration.
 
-**Spectral** - License: Proprietary  
+Spectral - License: Proprietary  
 Security and compliance platform that provides policy-as-code capabilities for infrastructure scanning. Offers real-time scanning, custom policy creation, and integration with development workflows. Supports multiple IaC formats and provides detailed remediation guidance.
 
 ### Linting and Validation Tools
 
-**TFLint** - License: MPL 2.0  
+TFLint - License: MPL 2.0  
 Terraform linter focused on possible errors, best practices, and security issues in Terraform configurations. Provides pluggable rule sets for cloud providers (AWS, Azure, GCP) and helps enforce coding standards, detect deprecated syntax, and prevent common configuration errors.
 
-**Aikido Security** - License: Proprietary  
+Aikido Security - License: Proprietary  
 Application security platform that includes infrastructure security scanning capabilities. Provides continuous security monitoring, vulnerability management, and compliance tracking across the entire application lifecycle including infrastructure code.
 
 These security tools integrate into CI/CD pipelines alongside your chosen IaC tool to provide comprehensive security coverage throughout the infrastructure lifecycle.
 
 ## Infrastructure Automation and Management Platforms
 
-While the above tools focus on defining and provisioning infrastructure, several platforms provide automation, orchestration, and management capabilities that work with Infrastructure as Code tools. **Important: These are not IaC tools themselves, but rather automation platforms that rely on underlying IaC tools.**
+While the above tools focus on defining and provisioning infrastructure, several platforms provide automation, orchestration, and management capabilities that work with Infrastructure as Code tools. Important: These are not IaC tools themselves, but rather automation platforms that rely on underlying IaC tools.
 
 ### IaC Automation Platforms
 
-**Pulumi Cloud** - License: Proprietary (SaaS)  
+Pulumi Cloud - License: Proprietary (SaaS)  
 Best For: Teams using Pulumi IaC who need enterprise-grade collaboration, security, and governance
 
 Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud. It serves as the managed service companion to Pulumi's open-source infrastructure as code tool, providing enterprise capabilities that extend beyond basic IaC functionality.
@@ -1118,7 +1118,7 @@ Key Features:
 
 Pulumi IaC works with or without Pulumi Cloud - you can use DIY backends (S3, Azure Blob, etc.) or the managed service. However, Pulumi Cloud becomes the default experience when you install the Pulumi CLI, providing instant collaboration capabilities without the overhead of building and maintaining your own infrastructure management platform.
 
-**HashiCorp Cloud Platform (HCP)** - License: Proprietary (SaaS)  
+HashiCorp Cloud Platform (HCP) - License: Proprietary (SaaS)  
 Best For: Organizations standardizing on HashiCorp tools across infrastructure and security lifecycle management
 
 HashiCorp Cloud Platform (HCP) is an enterprise-grade SaaS platform that provides unified lifecycle management for infrastructure and security operations. HCP Terraform (formerly Terraform Cloud) serves as the managed service for Terraform/OpenTofu workflows, while the broader platform integrates multiple HashiCorp tools.
@@ -1135,17 +1135,17 @@ Key Features:
 
 HCP focuses specifically on HashiCorp tool integration and provides a comprehensive platform for organizations that have standardized on the HashiCorp ecosystem for infrastructure and security operations.
 
-**Spacelift** - Spacelift is not an Infrastructure as Code tool—it's an automation and workflow platform that relies on other IaC tools like Terraform, OpenTofu, Pulumi, CloudFormation, and Kubernetes. Spacelift provides CI/CD pipelines, policy enforcement, and collaboration features for teams using these underlying IaC tools.
+Spacelift - Spacelift is not an Infrastructure as Code tool—it's an automation and workflow platform that relies on other IaC tools like Terraform, OpenTofu, Pulumi, CloudFormation, and Kubernetes. Spacelift provides CI/CD pipelines, policy enforcement, and collaboration features for teams using these underlying IaC tools.
 
-**Env0** - Env0 is not an Infrastructure as Code tool—it's an automation platform that provides workflow management, governance, and collaboration features for existing IaC tools like Terraform, OpenTofu, and Terragrunt. It adds CI/CD pipelines, cost management, and policy enforcement on top of these tools.
+Env0 - Env0 is not an Infrastructure as Code tool—it's an automation platform that provides workflow management, governance, and collaboration features for existing IaC tools like Terraform, OpenTofu, and Terragrunt. It adds CI/CD pipelines, cost management, and policy enforcement on top of these tools.
 
-**Atlantis** - An open-source tool that provides GitOps-style workflows for Terraform and OpenTofu by automatically running terraform plan and apply operations via pull request automation.
+Atlantis - An open-source tool that provides GitOps-style workflows for Terraform and OpenTofu by automatically running terraform plan and apply operations via pull request automation.
 
 ### Development Environment Tools
 
-**Vagrant** - Vagrant is not an Infrastructure as Code tool—it's a development environment management tool that creates and configures lightweight, reproducible virtual development environments. While it can provision VMs, its focus is on local development environments rather than cloud infrastructure provisioning.
+Vagrant - Vagrant is not an Infrastructure as Code tool—it's a development environment management tool that creates and configures lightweight, reproducible virtual development environments. While it can provision VMs, its focus is on local development environments rather than cloud infrastructure provisioning.
 
-**Docker Compose** - While not an IaC tool, Docker Compose defines multi-container applications and can be used alongside IaC tools for application deployment after infrastructure provisioning.
+Docker Compose - While not an IaC tool, Docker Compose defines multi-container applications and can be used alongside IaC tools for application deployment after infrastructure provisioning.
 
 These platforms and tools serve important roles in the infrastructure automation ecosystem but should not be confused with Infrastructure as Code tools themselves. They enhance and orchestrate the work of actual IaC tools rather than replacing them.
 
@@ -1153,15 +1153,15 @@ These platforms and tools serve important roles in the infrastructure automation
 
 The infrastructure as code landscape is rapidly evolving toward software engineering maturity, with several transformative trends reshaping how organizations approach infrastructure:
 
-**Software Engineering Convergence**: The most significant trend is the convergence of infrastructure and software engineering practices. Organizations are moving away from limited DSLs toward full programming languages that enable testing, debugging, refactoring, and other software engineering best practices. This shift enables infrastructure teams to leverage the same tools, skills, and methodologies that have proven successful in application development.
+Software Engineering Convergence: The most significant trend is the convergence of infrastructure and software engineering practices. Organizations are moving away from limited DSLs toward full programming languages that enable testing, debugging, refactoring, and other software engineering best practices. This shift enables infrastructure teams to leverage the same tools, skills, and methodologies that have proven successful in application development.
 
-**Real-Time Cloud Integration**: Native cloud provider SDK integration is becoming the standard, replacing community-maintained providers that lag behind new cloud features. Organizations expect same-day access to new cloud services without waiting weeks or months for provider updates.
+Real-Time Cloud Integration: Native cloud provider SDK integration is becoming the standard, replacing community-maintained providers that lag behind new cloud features. Organizations expect same-day access to new cloud services without waiting weeks or months for provider updates.
 
-**Comprehensive Testing Paradigms**: Infrastructure testing is evolving beyond basic integration tests to include unit testing, property-based testing, and continuous validation. Teams are applying test-driven development principles to infrastructure, catching issues before deployment rather than discovering them in production.
+Comprehensive Testing Paradigms: Infrastructure testing is evolving beyond basic integration tests to include unit testing, property-based testing, and continuous validation. Teams are applying test-driven development principles to infrastructure, catching issues before deployment rather than discovering them in production.
 
-**Internal Developer Platform Evolution**: Organizations are building sophisticated Internal Developer Platforms that provide self-service infrastructure capabilities while maintaining governance and compliance. These platforms leverage infrastructure as code tools to create standardized, reusable components that accelerate development velocity.
+Internal Developer Platform Evolution: Organizations are building sophisticated Internal Developer Platforms that provide self-service infrastructure capabilities while maintaining governance and compliance. These platforms leverage infrastructure as code tools to create standardized, reusable components that accelerate development velocity.
 
-**AI-Enhanced Development**: Integration of AI tools to help generate, optimize, and troubleshoot infrastructure code, with particular strength in environments that use familiar programming languages where AI assistance is most mature. Emerging technologies like Model Context Protocol (MCP) and AI prompt templates are beginning to enable more sophisticated AI-infrastructure interactions.
+AI-Enhanced Development: Integration of AI tools to help generate, optimize, and troubleshoot infrastructure code, with particular strength in environments that use familiar programming languages where AI assistance is most mature. Emerging technologies like Model Context Protocol (MCP) and AI prompt templates are beginning to enable more sophisticated AI-infrastructure interactions.
 
 These trends favor tools that embrace software engineering principles from the ground up, rather than attempting to retrofit programming capabilities onto template-based or DSL-limited approaches.
 
@@ -1171,11 +1171,11 @@ Organizations don't need to choose between maintaining existing infrastructure a
 
 ### Incremental Adoption Approaches
 
-**Team-by-Team Migration**: Start with new projects or specific teams, allowing gradual skill development and process refinement. Teams can maintain existing infrastructure while building new capabilities with modern tools.
+Team-by-Team Migration: Start with new projects or specific teams, allowing gradual skill development and process refinement. Teams can maintain existing infrastructure while building new capabilities with modern tools.
 
-**Project-by-Project Transition**: Migrate individual applications or services incrementally, enabling teams to learn and optimize approaches before expanding scope.
+Project-by-Project Transition: Migrate individual applications or services incrementally, enabling teams to learn and optimize approaches before expanding scope.
 
-**Hybrid Operations**: Use state integration and import tools to reference existing infrastructure while building new components with modern IaC tools.
+Hybrid Operations: Use state integration and import tools to reference existing infrastructure while building new components with modern IaC tools.
 
 ### Proven Migration Timelines
 
@@ -1187,11 +1187,11 @@ Real-world migrations demonstrate that adoption can be remarkably fast with prop
 
 ### Migration Tools and Resources
 
-**Automated Conversion**: Tools like tf2pulumi and pulumi convert automatically translate existing infrastructure definitions, preserving logic and structure while upgrading to modern approaches.
+Automated Conversion: Tools like tf2pulumi and pulumi convert automatically translate existing infrastructure definitions, preserving logic and structure while upgrading to modern approaches.
 
-**State Integration**: Import existing cloud resources and reference Terraform state during transition periods, enabling zero-downtime migrations.
+State Integration: Import existing cloud resources and reference Terraform state during transition periods, enabling zero-downtime migrations.
 
-**Training and Support**: Comprehensive documentation, tutorials, and community resources accelerate team onboarding and reduce migration risks.
+Training and Support: Comprehensive documentation, tutorials, and community resources accelerate team onboarding and reduce migration risks.
 
 ### Best Practices for Successful Adoption
 
@@ -1207,31 +1207,31 @@ The key insight: migration to modern IaC approaches is a technical upgrade, not 
 
 ### Which IaC tool should I choose for AWS?
 
-**For teams wanting programming languages**: Pulumi IaC and AWS CDK both offer excellent developer experiences with general-purpose programming languages. Pulumi provides multi-cloud flexibility, while CDK offers deep AWS-native integration.
+For teams wanting programming languages: Pulumi IaC and AWS CDK both offer excellent developer experiences with general-purpose programming languages. Pulumi provides multi-cloud flexibility, while CDK offers deep AWS-native integration.
 
-**For AWS-only deployments**: CloudFormation provides the deepest native AWS service support and direct integration with AWS services.
+For AWS-only deployments: CloudFormation provides the deepest native AWS service support and direct integration with AWS services.
 
-**For Terraform ecosystem users**: OpenTofu provides open-source licensing with Terraform compatibility, while Terraform offers extensive community resources and established workflows.
+For Terraform ecosystem users: OpenTofu provides open-source licensing with Terraform compatibility, while Terraform offers extensive community resources and established workflows.
 
 ### Is Terraform still worth learning in 2025?
 
 Terraform remains a valuable skill and viable choice for many scenarios, though teams should consider their specific needs and long-term goals:
 
-**When Terraform Makes Sense:**
+When Terraform Makes Sense:
 
 - Teams building on existing Terraform infrastructure and expertise
 - Organizations with successful Terraform workflows and established processes
 - Projects that benefit from Terraform's extensive module ecosystem
 - Teams comfortable with HCL and template-based approaches
 
-**When to Consider Alternatives:**
+When to Consider Alternatives:
 
 - Teams wanting comprehensive testing capabilities (unit, property, integration testing)
 - Organizations requiring full IDE support with debugging and refactoring
 - Projects needing complex programmatic logic or extensive code reuse
 - Teams with strong programming backgrounds who prefer familiar languages
 
-**Key Considerations:**
+Key Considerations:
 
 - **Licensing**: Terraform's Business Source License may create restrictions for some commercial scenarios
 - **Ecosystem**: Terraform has the largest provider ecosystem and community resources
@@ -1242,14 +1242,14 @@ The choice often depends on team background, infrastructure complexity, and deve
 
 ### How do I get started with infrastructure as code?
 
-**Choose Based on Your Team Profile:**
+Choose Based on Your Team Profile:
 
 1. **Programming-oriented teams**: Consider Pulumi IaC for familiar languages with full IDE support, testing frameworks, and multi-cloud flexibility
 2. **Template-oriented teams**: OpenTofu or Terraform offer extensive community resources, established workflows, and broad ecosystem support
 3. **Cloud-specific teams**: Native tools (AWS CDK/CloudFormation, Azure ARM/Bicep, Google Cloud Infrastructure Manager) provide deep platform integration
 4. **Kubernetes-focused teams**: Consider Crossplane or Pulumi Kubernetes Operator for container-native approaches
 
-**Getting Started Steps:**
+Getting Started Steps:
 
 1. **Start small**: Begin with simple projects like deploying a single application or basic infrastructure
 2. **Use examples**: Leverage existing templates, tutorials, and community examples to accelerate learning
@@ -1266,24 +1266,24 @@ The choice often depends on team background, infrastructure complexity, and deve
 
 Absolutely! Many organizations use complementary tools for different aspects of infrastructure management:
 
-**Pulumi + Configuration Management:**
+Pulumi + Configuration Management:
 
 - Pulumi + Ansible: Infrastructure provisioning + server configuration ([example](/blog/deploy-wordpress-aws-pulumi-ansible/))
 - Pulumi + Chef/Puppet: [Cloud resources](/docs/get-started/) + complex configuration management
 
-**Pulumi + Native Cloud Tools:**
+Pulumi + Native Cloud Tools:
 
 - Reference existing CloudFormation/ARM deployments from Pulumi programs
 - Import CloudFormation/ARM resources into Pulumi for gradual migration
 - Use Pulumi alongside CDK for different parts of AWS infrastructure
 
-**Pulumi + Kubernetes:**
+Pulumi + Kubernetes:
 
 - [Pulumi Kubernetes Operator (PKO)](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) for GitOps workflows
 - Pulumi + Crossplane for layered infrastructure management
 - Pulumi + security scanners like Checkov or Terrascan for compliance
 
-**Terraform + Pulumi Coexistence:**
+Terraform + Pulumi Coexistence:
 
 - Use Terraform for base infrastructure and Pulumi for Internal Developer Platforms (IDPs)
 - Reference existing Terraform state from Pulumi programs during gradual migration
@@ -1324,20 +1324,20 @@ Pulumi offers the most comprehensive built-in security features with CrossGuard 
 
 Yes, and many organizations are successfully migrating to overcome limitations in their current tools. Migration tools and proven approaches exist:
 
-**Proven Migration Success Stories:**
+Proven Migration Success Stories:
 
 - **Atlassian Bitbucket**: Completed migration from Terraform to Pulumi's Python-based IaC in just 2 days using migration tools
 - **Starburst**: Achieved 112x faster deployments after incrementally migrating from Terraform
 - **Multiple organizations**: Report 80-90% deployment time reductions after moving to programming language-based approaches
 
-**Available Migration Tools:**
+Available Migration Tools:
 
 - **Pulumi**: Offers [`pulumi convert`](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) for importing from Terraform, ARM, and CloudFormation with state integration
 - **Terraformer**: Can import existing cloud resources into Terraform/OpenTofu
 - **CDK Migrate**: Helps move from CloudFormation to CDK
 - **Manual migration**: Always possible by recreating resources in the new tool
 
-**Migration Strategies:**
+Migration Strategies:
 
 - **Incremental adoption**: Migrate team-by-team or project-by-project without disruption
 - **State integration**: Reference existing infrastructure during transition periods
@@ -1349,15 +1349,15 @@ The key is choosing tools that provide comprehensive migration support and incre
 
 The infrastructure as code landscape in 2025 reflects a maturing field where different approaches serve different organizational needs and team preferences. The evolution from manual processes to automated infrastructure has branched into multiple viable paths, each with distinct advantages.
 
-**The Spectrum of Approaches:**
+The Spectrum of Approaches:
 
 Template-based tools like Terraform and OpenTofu continue to serve teams effectively, particularly those comfortable with declarative configuration and established HCL workflows. Cloud-native solutions provide deep platform integration for single-cloud strategies. Programming language-based approaches offer familiar development experiences for teams seeking comprehensive testing, IDE integration, and code reusability.
 
-**Evidence of Success Across Approaches:**
+Evidence of Success Across Approaches:
 
 Organizations achieve significant improvements regardless of their chosen path—the key is selecting tools that align with team expertise and infrastructure requirements. Understanding [what DevOps is](/what-is/what-is-devops/) and [platform engineering concepts](/what-is/what-is-platform-engineering/) helps inform these decisions. Success stories span the entire ecosystem, from Terraform's widespread enterprise adoption to programming language approaches enabling dramatic productivity gains at companies like Unity, Snowflake, and Starburst.
 
-**Choosing Your Path:**
+Choosing Your Path:
 
 The most successful organizations focus on key decision criteria:
 
@@ -1367,7 +1367,7 @@ The most successful organizations focus on key decision criteria:
 - **Growth trajectory**: Plan for how needs may evolve with scale and team expansion
 - **Integration requirements**: Ensure compatibility with existing workflows and toolchains
 
-**The Future of Infrastructure:**
+The Future of Infrastructure:
 
 The industry continues evolving toward treating infrastructure as software, but this transformation takes many forms. Organizations exploring [serverless architectures](/topics/serverless/) and [container strategies](/topics/containers/) particularly benefit from programmable infrastructure approaches. Whether through enhanced DSLs, visual design tools, programming languages, or hybrid approaches, the goal remains consistent: enabling teams to manage infrastructure with the same reliability, collaboration, and velocity they expect from modern software development.
 
