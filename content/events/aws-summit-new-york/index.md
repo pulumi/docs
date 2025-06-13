@@ -58,7 +58,7 @@ main:
         level: # Beginner, Intermediate, Advanced
         topics: []
         languages: []
-        clouds: []
+        clouds: ["AWS"]
 
 # The right hand side form section.
 form:
