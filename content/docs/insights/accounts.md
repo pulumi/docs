@@ -130,38 +130,70 @@ The AWS scanner for Pulumi Cloud requires access to the AWS account you want to 
 
 ### Azure
 
-The Azure scanner for Pulumi Cloud requires access to your Azure account. This access can be granted by creating an ESC environment that, when opened, produces valid credentials to use the Pulumi Azure provider. Below are the steps to configure Azure credentials.
+The Azure scanner for Pulumi Cloud requires access to your Azure subscription. This access can be granted by creating an ESC environment that, when opened, produces valid credentials for the Pulumi Azure Native provider to consume.
+
+{{< notes type="info" >}}
+  We recommend using OpenID Connect (OIDC) for passwordless authentication with Azure. This method is more secure than using client secrets as it eliminates the need to store and manage long-lived credentials.
+{{< /notes >}}
+
+#### Option 1: OIDC authentication (recommended)
+
+1. Create a Microsoft Entra application and configure federated credentials:
+   * Follow the steps in [Configuring OpenID Connect for Azure](/docs/esc/environments/configuring-oidc/azure/)
+   * When configuring the federated credential:
+     * **Audience**: `azure:<your-pulumi-org-name>`
+     * **Subject identifier**: `pulumi:environments:org:<your-pulumi-org-name>:env:<esc-project-name>/<esc-environment-name>`
+   * Note the Application (client) ID, Directory (tenant) ID, and Subscription ID
+
+1. Use the following ESC configuration:
+
+    ```yaml
+    values:
+      azure:
+        login:
+          fn::open::azure-login:
+            clientId: <YOUR_CLIENT_ID>
+            tenantId: <YOUR_TENANT_ID>
+            subscriptionId: <YOUR_SUBSCRIPTION_ID>
+            oidc: true
+      environmentVariables:
+        ARM_USE_OIDC: 'true'
+        ARM_CLIENT_ID: ${azure.login.clientId}
+        ARM_TENANT_ID: ${azure.login.tenantId}
+        ARM_OIDC_TOKEN: ${azure.login.oidc.token}
+        ARM_SUBSCRIPTION_ID: ${azure.login.subscriptionId}
+    ```
+
+#### Option 2: Client secret authentication
 
 1. Create a Service Principal in Azure, then generate the following values:
    * **clientId** (also called **appId** in the Azure UI)
    * **tenantId**
    * **subscriptionId**
    * **clientSecret** (also called **password** in the Azure UI)
-2. Use the following ESC configuration to provide the required credentials:
 
-```yaml
-values:
-  azure:
-    fn::open::azure-login:
-      clientId: <YOUR_CLIENT_ID>
-      tenantId: <YOUR_TENANT_ID>
-      subscriptionId: <YOUR_SUBSCRIPTION_ID>
-      clientSecret:
-        'fn::secret': <INSERT_CLIENT_SECRET_HERE>
-  environmentVariables:
-    ARM_CLIENT_ID: ${azure.clientId}
-    AZURE_CLIENT_ID: ${azure.clientId}
-    ARM_TENANT_ID: ${azure.tenantId}
-    AZURE_TENANT_ID: ${azure.tenantId}
-    ARM_SUBSCRIPTION_ID: ${azure.subscriptionId}
-    ARM_CLIENT_SECRET: ${azure.clientSecret}
-    AZURE_CLIENT_SECRET: ${azure.clientSecret}
-```
+1. Use the following ESC configuration:
 
-{{< notes type="info" >}}
-  For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/esc/environments/configuring-oidc/azure/).
-{{< /notes >}}
-3. Once the ESC environment is set up with the proper credentials, assign it to your Insights account during the account creation phase.
+    ```yaml
+    values:
+      azure:
+        fn::open::azure-login:
+          clientId: <YOUR_CLIENT_ID>
+          tenantId: <YOUR_TENANT_ID>
+          subscriptionId: <YOUR_SUBSCRIPTION_ID>
+          clientSecret:
+            'fn::secret': <INSERT_CLIENT_SECRET_HERE>
+      environmentVariables:
+        ARM_CLIENT_ID: ${azure.clientId}
+        AZURE_CLIENT_ID: ${azure.clientId}
+        ARM_TENANT_ID: ${azure.tenantId}
+        AZURE_TENANT_ID: ${azure.tenantId}
+        ARM_SUBSCRIPTION_ID: ${azure.subscriptionId}
+        ARM_CLIENT_SECRET: ${azure.clientSecret}
+        AZURE_CLIENT_SECRET: ${azure.clientSecret}
+    ```
+
+Once the ESC environment is set up with the proper credentials (either OIDC or client secret), assign it to your Insights account during the account creation phase.
 
 ### OCI
 
