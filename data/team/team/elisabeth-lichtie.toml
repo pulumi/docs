@@ -1,0 +1,11 @@
+id = "elisabeth-lichtie"
+name = "Elisabeth Lichtie"
+title = "Customer Success Architect"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "lichtie"
+linkedin = "elisabethlichtie"
