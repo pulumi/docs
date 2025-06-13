@@ -77,7 +77,7 @@ form:
     salesforce_campaign_id: 701PQ00000Z0DKUYA3
 
 event_data:
-  name: "AWS Immersion Day: Building an IDP with Pulumi"
+  name: "IDP Strategy: Planning Self-Service Infrastructure"
   start_date: 2025-07-30T12:00:00-04:00
   end_date: 2025-07-30T13:00:00-04:00
   url: "https://www.pulumi.com/resources/idp-strategy/"
