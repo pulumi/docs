@@ -1,6 +1,6 @@
 ---
 title_tag: Modivcare | Case Studies
-title: "Modivcare: Unified Platform in One Year"
+title: "Modivcare: Self-Service and Governance Create a Competitive Advantage"
 description: |
     Modivcare used Pulumi to transform fragmented acquisition-built infrastructure into a unified platform without service disruption, achieving up to 25% cost reductions and enabling developer self-service.
 meta_desc: See how Modivcare used Pulumi to unify fragmented AWS infrastructure across acquisitions, reducing costs by up to 25%.
@@ -12,12 +12,12 @@ customer_url: https://www.modivcare.com/
 quote_block:
   quote: |
       "Pulumi ESC has been fundamentally game-changing in how we want to bring that apart, not just in solving that disconnected set of Terragrunt files, but also in normalizing a lot of those Terragrunt files."
-  quote_attrib: Zachary Cook, Senior Manager, DevOps at ModivCare
+  quote_attrib: Zachary Cook, Senior Manager, DevOps at Modivcare
   headline_stat: 25% Cost Savings
   headline: By eliminating redundant resources
 
 exec_summary: |
-    [Modivcare](https://www.modivcare.com/) is a technology-enabled healthcare services company focused on bringing positive health outcomes to as many people as possible. Built through strategic acquisitions, Modivcare consolidated multiple healthcare service organizations, each bringing different operational practices and infrastructure approaches. Using Pulumi Insights, Pulumi ESC, and a developer portal integration, Modivcare transformed from disconnected infrastructure implementations into a unified platform supporting their healthcare mission—all without disrupting critical healthcare services.
+    [Modivcare](https://www.modivcare.com/) is a technology-enabled healthcare services company that provides a suite of integrated supportive care solutions for public and private payors and their members. Built through strategic acquisitions, Modivcare consolidated multiple healthcare service organizations, each bringing different operational practices and infrastructure approaches. Using Pulumi Insights, Pulumi ESC, and a developer portal integration, Modivcare transformed from disconnected infrastructure implementations into a unified platform supporting their healthcare mission—all without disrupting critical healthcare services.
 
 sections:
     - label: Exec Summary
@@ -34,7 +34,7 @@ sections:
 
 ## About Modivcare
 
-Modivcare is a technology-enabled healthcare services company focused on bringing positive health outcomes to as many people as possible. Beyond non-emergency medical transportation, they provide meal delivery services, daily care coordination, and various supportive care solutions—including the ubiquitous Higi health screening kiosks available at many retail locations.
+Modivcare's value-based solutions address the social determinants of health by connecting members to essential care services. By doing so, Modivcare helps health plans manage risks, reduce costs, and improve health outcomes. Beyond non-emergency medical transportation, they provide meal delivery services, daily care coordination, and various supportive care solutions—including the ubiquitous Higi health screening kiosks available at many retail locations.
 
 Built through strategic acquisitions, Modivcare consolidated multiple healthcare service organizations, each bringing different operational practices and infrastructure approaches. This growth model enabled rapid expansion but created significant technical challenges that needed resolution to achieve operational efficiency at scale.
 
