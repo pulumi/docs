@@ -1,14 +1,14 @@
 ---
 title: Cloud Engineering
-meta_desc: Apply software engineering practices to achieve 50% faster deployment cycles, $3-4.5M annual productivity value, and 85% reduction in security incidents.
+meta_desc: Transform infrastructure into business acceleration with modern tooling, AI-powered operations, and 224% ROI.
 
 type: page
 layout: cloud-engineering
 
 overview:
-    title: Software engineering practices made for the cloud
+    title: Modern Infrastructure Platform for the AI Era
     description: |
-        Apply standard software engineering practices and tools uniformly across infrastructure, development, and compliance teams to achieve 50% faster deployment cycles, $3-4.5M annual productivity value for 100-developer organizations, and 85% reduction in security incidents.
+        Pulumi transforms how organizations build, deploy, and manage cloud infrastructure using real programming languages, comprehensive governance, and AI-powered operations. Join industry leaders achieving 224% ROI through modern infrastructure practices.
 
 maturity_stages:
     title: Where are you in your platform engineering journey?
@@ -26,6 +26,41 @@ maturity_stages:
         - title: Manage Stage
           description: |
             Achieve full visibility and self-service capabilities at scale with comprehensive observability, cost optimization, and developer productivity tools.
+
+strategic_business_value:
+    title: Transform Infrastructure into Business Acceleration
+    description: |
+        Organizations using Pulumi's modern infrastructure platform achieve measurable business outcomes that drive competitive advantage and operational excellence.
+    items:
+        - title: 224% ROI over three years with 6-month payback period
+          icon: trending-up
+          icon_color: green
+          description: |
+            Comprehensive TEI study demonstrates substantial financial returns through reduced operational overhead, accelerated deployment cycles, and improved developer productivity across enterprise organizations.
+
+        - title: 25% faster time-to-market for revenue-impacting projects
+          icon: lightning
+          icon_color: yellow
+          description: |
+            Modern infrastructure practices eliminate deployment bottlenecks and enable self-service capabilities that accelerate innovation cycles and competitive responsiveness.
+
+        - title: 20% improvement in engineering productivity
+          icon: users
+          icon_color: blue
+          description: |
+            Unified tooling and familiar programming languages reduce context switching and learning curves, allowing engineering teams to focus on business logic rather than infrastructure complexity.
+
+        - title: 30% reduction in cloud spending through intelligent optimization
+          icon: savings
+          icon_color: purple
+          description: |
+            AI-powered insights and automated governance identify cost optimization opportunities, prevent resource waste, and optimize infrastructure spend across multi-cloud environments.
+
+        - title: 58% fewer security incidents through comprehensive governance
+          icon: shield
+          icon_color: salmon
+          description: |
+            Policy-as-code enforcement, automated compliance checks, and comprehensive audit trails reduce security vulnerabilities and regulatory compliance risks.
 
 best_practices:
     title: Best practices
@@ -59,103 +94,120 @@ discover:
 build:
     title: Build
     description: |
-        Cloud engineers use cloud resources to build shared services platforms and reusable infrastructure components.
+        Create self-service infrastructure that doesn't compromise on security using real programming languages, comprehensive governance, and AI-powered assistance.
     items:
-        - title: General-Purpose Programming Languages
+        - title: Real Programming Languages with 1.8M+ Package Ecosystem
           description: |
-            Define infrastructure with general-purpose programming languages like TypeScript/JavaScript, Python, Go, .NET, and Java and use standard constructs like loops
-            and conditionals. This gives you more flexibility and reduces complexity compared to domain-specific languages. You could also use markup languages like YAML as a simple way for consuming complex infrastructure modeled in general-purpose languages. 
+            Define infrastructure with TypeScript/JavaScript, Python, Go, .NET, Java, or YAML—use what your team knows. Access the entire package ecosystem including cloud provider libraries, testing frameworks, and community modules, providing unlimited extensibility compared to domain-specific languages.
 
-        - title: Broad Development Ecosystem
+        - title: AI-Powered Infrastructure with Pulumi Copilot
           description: |
-            Use programming languages and modern software development tools to increase speed and quality. For example, developers can use IDEs, test frameworks,
-            and package managers to build infrastructure.
+            Natural language infrastructure definition and modification through AI assistance. Get intelligent optimization recommendations, context-aware suggestions based on existing infrastructure, and seamless integration with development workflows and tools.
 
-        - title: Modern Application Development Experience
+        - title: Unified Platform Integration
           description: |
-            Build modern architectures (such as Kubernetes or serverless) on multiple clouds using a streamlined, more productive workflow and toolset instead of
-            stitching together multiple deployment tools and Bash scripts.
+            **Pulumi IaC:** Foundation using real programming languages
+            **Pulumi ESC:** Centralized secrets and configuration management with dynamic credentials
+            **Pulumi CrossGuard:** Policy-as-code with automatic security and compliance enforcement
+            **Pulumi Insights:** Real-time infrastructure visibility and cost optimization
 
-        - title: Share and Reuse Best Practices
+        - title: Enterprise-Grade Component Libraries
           description: |
-            Build higher-level frameworks and custom platforms for cloud infrastructure that codify your best practices. Share these best practices within your company
-            or with the community.
+            Build higher-level frameworks and custom platforms that codify your best practices. Create reusable components that work consistently across clouds and teams, reducing infrastructure code by up to 50% through standardized patterns.
 
 deploy:
     title: Deploy
     description: |
-        Cloud engineers deliver both infrastructure and application code through a unified process that increases efficiency and quality.
+        Achieve 2x faster deployments with 4x higher success rates through AI-powered optimization, comprehensive GitOps integration, and unified infrastructure and application delivery.
     items:
+        - title: AI-Enhanced Deployment Intelligence
+          description: |
+            Get intelligent optimization recommendations during deployment, automated rollback suggestions for failed changes, and predictive analysis for deployment risks. Pulumi Copilot provides context-aware guidance throughout the deployment process.
+
         - title: Unified Infrastructure & Application CI/CD Pipeline
           description: |
-            Deliver infrastructure and application code through a single CI/CD pipeline rather than separate pipelines for each. This streamlines versioning, building,
-            testing, and deploying cloud applications.
+            Deliver infrastructure and application code through a single CI/CD pipeline with comprehensive GitOps integration. This streamlines versioning, building, testing, and deploying cloud applications while maintaining complete audit trails.
 
-        - title: Test Frameworks for Infrastructure
+        - title: Advanced Testing & Validation Frameworks
           description: |
-            Run unit and integration tests to validate infrastructure changes before deploying them to production. This encourages a test-driven development approach that
-            reduces errors and increases deployment confidence.
+            Run unit, integration, and policy tests to validate infrastructure changes before production deployment. Test-driven development approach reduces errors by 85% and increases deployment confidence through automated validation.
 
-        - title: Advanced Deployment Automation
+        - title: Enterprise Governance & Compliance
           description: |
-            Orchestrate automated deployments by programming them within application code. This enables programmatically deploying infrastructure with APIs instead of
-            using a CLI-driven workflow.
-
-        - title: End-to-End Change History
-          description: |
-            All application and infrastructure changes are tracked with a complete history of who changed what and when. Maintain fine-grained diffs and set up the ability
-            to easily roll back changes, if needed.
+            Comprehensive RBAC, audit capabilities, and policy enforcement ensure all deployments meet security and compliance requirements. Track all changes with complete history, fine-grained diffs, and automated rollback capabilities.
 
 manage:
     title: Scale
     description: |
-        Cloud engineers scale consistent infrastructure practices that support growth from startup to enterprise while achieving developer-to-platform engineer ratios of 10:1 to 15:1, compared to an industry standard of 5:1.
+        Handle growth without hiring proportionally more platform engineers. Achieve developer-to-platform engineer ratios of 15:1 through intelligent automation, comprehensive governance, and 74% reduction in management overhead.
     items:
-        - title: Policy-as-Code
+        - title: AI-Powered Multi-Cloud Intelligence
           description: |
-            Define Policy-as-Code to proactively enforce compliance across your infrastructure and correct configuration drift. You can write rules that check for security,
-            cost, reliability, best practices, and more.
+            Pulumi Insights provides automated optimization recommendations, cost anomaly detection, and intelligent resource rightsizing across all cloud providers. Identify 20-40% cost optimization opportunities automatically while maintaining performance standards.
 
-        - title: Auditing and Access Controls
+        - title: Self-Service Developer Portals with Governance
           description: |
-            Create visibility across your infrastructure using audit logs and viewing diffs for cloud resource changes, just like in Git. Set fine-grained controls on who can
-            access and change infrastructure within your organization.
+            Enable unlimited developers without platform team involvement through automated policy enforcement, standardized component libraries, and comprehensive audit trails. Golden paths implementation ensures consistency while maintaining developer velocity.
 
-        - title: Team-wide Visibility
+        - title: Enterprise-Scale Configuration Management
           description: |
-            Ensure that your entire team (both infrastructure and developer roles) has visibility across cloud applications, including what resources exist and which changes
-            have been made. This builds better collaboration for all.
+            Pulumi ESC handles unlimited environments and secrets with hierarchical configuration, dynamic credentials, and centralized policy management. Scale configuration complexity without proportional management overhead.
+
+        - title: Comprehensive Observability & Compliance
+          description: |
+            Real-time visibility across all infrastructure with automated compliance monitoring, policy enforcement, and complete audit trails. Track all changes with fine-grained diffs and automated remediation capabilities.
+
+competitive_differentiation:
+    title: Modern vs. Legacy Infrastructure
+    description: |
+        Organizations are moving from legacy infrastructure-as-code tools to modern platforms that provide comprehensive capabilities, better developer experience, and measurable business outcomes.
+    items:
+        - title: Programming vs. Configuration
+          description: |
+            **Modern (Pulumi):** Real programming languages with 1.8M+ packages, familiar tools, and unlimited extensibility
+            **Legacy:** Limited domain-specific languages with restricted syntax and functionality
+
+        - title: Unified Platform vs. Fragmented Tools
+          description: |
+            **Modern (Pulumi):** Single integrated platform with comprehensive governance, visibility, and AI-powered operations
+            **Legacy:** Multiple disconnected tools requiring complex integration and management overhead
+
+        - title: AI-Powered Operations vs. Manual Configuration
+          description: |
+            **Modern (Pulumi):** Natural language infrastructure definition, intelligent optimization, and context-aware assistance
+            **Legacy:** Manual configuration, limited automation, and reactive problem-solving
+
+        - title: Proven Business Impact vs. Operational Metrics
+          description: |
+            **Modern (Pulumi):** Measurable ROI (224%) with comprehensive business outcome tracking
+            **Legacy:** Limited visibility into business impact and value creation
 
 benefits:
-    title: Benefits of<br />Cloud Engineering
+    title: Strategic Advantages of Modern Infrastructure
     items:
-        - title: Unlock the potential of the modern cloud
-          icon: lock
-          icon_color: purple
-          description: |
-            Modern cloud architectures, such as Kubernetes, have high innovation potential but are complicated to adopt. Cloud engineering empowers teams to tame this complexity
-            with software engineering practices and tools.
-
-        - title: Accelerate delivery by 50% with streamlined infrastructure workflows
+        - title: Innovation Velocity - 25% faster time-to-market
           icon: lightning
           icon_color: yellow
           description: |
-            Cloud engineering democratizes the cloud for developers. By using reusable infrastructure components written in programming languages, developers can more easily
-            use the infrastructure they need to build applications faster.
+            Modern infrastructure practices eliminate deployment bottlenecks through standardized infrastructure patterns, developer self-service capabilities, and AI-powered assistance that accelerates development cycles and competitive responsiveness.
 
-        - title: Reduce security incidents by 85% through automated compliance and continuous monitoring
-          icon: alert
+        - title: Risk Reduction - 58% fewer security incidents
+          icon: shield
           icon_color: salmon
           description: |
-            Cloud engineering “shifts risk left” through frequent testing. Every change is reviewed and tested before deployment. Policy-as-Code enforces compliance across every
-            deployment, and access controls prevent unauthorized changes.
+            Comprehensive governance through policy enforcement, automated compliance checks, and operational resilience reduces security vulnerabilities and regulatory compliance risks while maintaining audit-ready infrastructure.
 
-        - title: Improve developer productivity by 20-30% while reducing infrastructure bottlenecks
-          icon: collab
+        - title: Cost Optimization - 30% cloud spending reduction
+          icon: savings
+          icon_color: purple
+          description: |
+            Intelligent visibility through AI-powered optimization recommendations, automated cost anomaly detection, and comprehensive resource tracking eliminates waste and optimizes infrastructure spend across multi-cloud environments.
+
+        - title: Operational Excellence - 74% reduction in management overhead
+          icon: users
           icon_color: blue
           description: |
-            Cloud engineering breaks down silos between infrastructure, application development, and compliance teams through shared languages, tools, and processes. This
-            increases collaboration and efficiency by removing process friction.
+            Predictable ROI with 6-month payback period through unified tooling, automated operations, and comprehensive platform capabilities that scale infrastructure management without proportional team growth.
 
 implementation_pathway:
     title: Getting Started
@@ -178,6 +230,32 @@ implementation_pathway:
           description: |
             Enable organization-wide infrastructure governance with policy enforcement, cost optimization, and standardized practices across teams.
 
+modernization_pathways:
+    title: Gradual Modernization Without Disruption
+    description: |
+        Organizations can adopt Pulumi's modern infrastructure platform through flexible pathways that minimize risk while maximizing value, regardless of current infrastructure maturity.
+    items:
+        - title: Greenfield + Coexistence
+          description: |
+            **Best for:** Organizations with stable existing infrastructure and new project requirements
+            **Approach:** Deploy new projects with Pulumi while maintaining existing stable workloads
+            **Timeline:** Immediate value with 25% faster time-to-market for new initiatives
+            **Outcome:** Risk-free modernization with proven results before broader adoption
+
+        - title: Enhanced Governance
+          description: |
+            **Best for:** Organizations with compliance requirements and multi-tool environments
+            **Approach:** Implement comprehensive policies and governance across all infrastructure regardless of tooling
+            **Timeline:** 30-60 days to comprehensive governance implementation
+            **Outcome:** 58% reduction in security incidents and unified compliance reporting
+
+        - title: Platform Transformation
+          description: |
+            **Best for:** Organizations ready for comprehensive modernization and maximum benefits
+            **Approach:** Complete migration to unified modern infrastructure platform with AI-powered operations
+            **Timeline:** 6-12 months for full transformation with 6-month ROI payback
+            **Outcome:** 224% ROI with complete platform engineering transformation
+
 use_cases:
     title: Use cases
     description: Learn more about the solutions that are enabled by cloud engineering.
@@ -196,7 +274,7 @@ case_studies:
           link: /case-studies/snowflake
           name: Jonas-Taha El Sesiy
           title: Senior Software Engineer
-          stage: Build Stage Success
+          stage: Language Flexibility Value - Build Stage Success
           quote: |
             Ultimately, I think what really excited us about Pulumi was that we could use
             languages that we already know for cloud infrastructure and we knew we could
@@ -207,7 +285,7 @@ case_studies:
           link: /case-studies/mercedes-benz
           name: Dinesh Ramamurthy
           title: Engineering Manager, Mercedes-Benz Research and Development North America
-          stage: Scale Stage Achievement
+          stage: Multi-Cloud Platform Success - Scale Stage Achievement
           quote: |
             I needed a solution that cut across silos and gave our developers a tool they
             could use themselves to provision infrastructure to suit their own immediate needs.
@@ -217,7 +295,7 @@ case_studies:
           link: case-studies/credijusto/
           name: Fernando Carlietti
           title: Lead DevOps Engineer, Credijusto
-          stage: Discover to Build Progression
+          stage: Developer Self-Service Achievement - Discover to Build Progression
           quote: |
             Once you use a familiar programming language to tackle a problem, you see that
             you can do way more in less time. Pulumi was a natural choice based on the background
