@@ -1,6 +1,7 @@
 ---
 title_tag: Modivcare | Case Studies
 title: "Modivcare: Self-Service and Governance Create a Competitive Advantage"
+allow_long_title: true
 description: |
     Modivcare used Pulumi to transform fragmented acquisition-built infrastructure into a unified platform without service disruption, achieving up to 25% cost reductions and enabling developer self-service.
 meta_desc: See how Modivcare used Pulumi to unify fragmented AWS infrastructure across acquisitions, reducing costs by up to 25%.
