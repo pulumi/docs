@@ -71,7 +71,7 @@ After running `pulumi up` with the above code, you'll have a database deployed a
 You won't see the effects of having `blueGreenUpdate` enabled until you run your first update. Change any part of the database configuration and run `pulumi up` again to start the update. 
 
 Once the update kicks off, you can watch on AWS as the blue/green deployment is created and the original settings are copied to the green instance.
-![Blue Green Deployment Creating](./deployment-creating.jpeg)
+![Blue Green Deployment Creating](./blue-green-creating.jpeg)
 
 Then, the green instance will be updated with the new settings
 ![Blue Green Deployment Modifying](./deployment-modifying.jpeg)
