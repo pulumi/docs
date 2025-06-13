@@ -33,7 +33,7 @@ strategic_business_value:
         Organizations using Pulumi's modern infrastructure platform achieve measurable business outcomes that drive competitive advantage and operational excellence.
     items:
         - title: 224% ROI over three years with 6-month payback period
-          icon: trending-up
+          icon: guage
           icon_color: green
           description: |
             Comprehensive TEI study demonstrates substantial financial returns through reduced operational overhead, accelerated deployment cycles, and improved developer productivity across enterprise organizations.
@@ -51,7 +51,7 @@ strategic_business_value:
             Unified tooling and familiar programming languages reduce context switching and learning curves, allowing engineering teams to focus on business logic rather than infrastructure complexity.
 
         - title: 30% reduction in cloud spending through intelligent optimization
-          icon: savings
+          icon: exchange
           icon_color: purple
           description: |
             AI-powered insights and automated governance identify cost optimization opportunities, prevent resource waste, and optimize infrastructure spend across multi-cloud environments.
@@ -198,7 +198,7 @@ benefits:
             Comprehensive governance through policy enforcement, automated compliance checks, and operational resilience reduces security vulnerabilities and regulatory compliance risks while maintaining audit-ready infrastructure.
 
         - title: Cost Optimization - 30% cloud spending reduction
-          icon: savings
+          icon: exchange
           icon_color: purple
           description: |
             Intelligent visibility through AI-powered optimization recommendations, automated cost anomaly detection, and comprehensive resource tracking eliminates waste and optimizes infrastructure spend across multi-cloud environments.
