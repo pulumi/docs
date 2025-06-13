@@ -73,12 +73,8 @@ You won't see the effects of having `blueGreenUpdate` enabled until you run your
 Once the update kicks off, you can watch on AWS as the blue/green deployment is created and the original settings are copied to the green instance.
 ![Blue Green Deployment Creating](./blue-green-creating.jpeg)
 
-Then, the green instance will be updated with the new settings
+Then, the green instance will be updated with the new settings and the program will switch over to the green instance and clean up.
 ![Blue Green Deployment Modifying](./deployment-modifying.jpeg)
-
-and the program will switch over to the green instance and clean up.
-![Blue Green Deployment Switching](./deployment-switching.jpeg)
-![Blue Green Deployment Clean](./deployment-clean.jpeg)
 
 After that, your update has been completed with minimal disruption!
 
