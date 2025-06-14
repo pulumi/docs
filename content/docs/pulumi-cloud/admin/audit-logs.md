@@ -237,3 +237,7 @@ Custom defined keys:
 | Environment Schedule Deleted             | indicates the deletion of an environment schedule                                                                |
 | Environment Rotated                      | indicates the rotation of secrets in an environment                                                              |
 | Stack Provider Open                      | indicates the opening of a stack provider within an environment                                                  |
+| Customer Managed Key Added               | indicates the adding of a new customer managed key                                                               |
+| Customer Managed Key Set Default         | indicates the setting of a new default customer managed key                                                      |
+| Customer Managed Key Disabled            | indicates the disabling of a customer managed key                                                                |
+| Customer Managed Key Disabled All        | indicates the disabling of all customer managed keys                                                             |
