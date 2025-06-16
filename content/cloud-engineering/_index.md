@@ -106,10 +106,10 @@ build:
 
         - title: Unified Platform Integration
           description: |
-            **Pulumi IaC:** Foundation using real programming languages
-            **Pulumi ESC:** Centralized secrets and configuration management with dynamic credentials
-            **Pulumi CrossGuard:** Policy-as-code with automatic security and compliance enforcement
-            **Pulumi Insights:** Real-time infrastructure visibility and cost optimization
+            Pulumi IaC: Foundation using real programming languages
+            Pulumi ESC: Centralized secrets and configuration management with dynamic credentials
+            Pulumi CrossGuard: Policy-as-code with automatic security and compliance enforcement
+            Pulumi Insights: Real-time infrastructure visibility and cost optimization
 
         - title: Enterprise-Grade Component Libraries
           description: |
@@ -169,23 +169,23 @@ competitive_differentiation:
     items:
         - title: Programming vs. Configuration
           description: |
-            **Modern (Pulumi):** Real programming languages with 1.8M+ packages, familiar tools, and unlimited extensibility
-            **Legacy:** Limited domain-specific languages with restricted syntax and functionality
+            Modern (Pulumi): Real programming languages with 1.8M+ packages, familiar tools, and unlimited extensibility
+            Legacy: Limited domain-specific languages with restricted syntax and functionality
 
         - title: Unified Platform vs. Fragmented Tools
           description: |
-            **Modern (Pulumi):** Single integrated platform with comprehensive governance, visibility, and AI-powered operations
-            **Legacy:** Multiple disconnected tools requiring complex integration and management overhead
+            Modern (Pulumi): Single integrated platform with comprehensive governance, visibility, and AI-powered operations
+            Legacy: Multiple disconnected tools requiring complex integration and management overhead
 
         - title: AI-Powered Operations vs. Manual Configuration
           description: |
-            **Modern (Pulumi):** Natural language infrastructure definition, intelligent optimization, and context-aware assistance
-            **Legacy:** Manual configuration, limited automation, and reactive problem-solving
+            Modern (Pulumi): Natural language infrastructure definition, intelligent optimization, and context-aware assistance
+            Legacy: Manual configuration, limited automation, and reactive problem-solving
 
         - title: Proven Business Impact vs. Operational Metrics
           description: |
-            **Modern (Pulumi):** Measurable ROI (2-3x) with comprehensive business outcome tracking
-            **Legacy:** Limited visibility into business impact and value creation
+            Modern (Pulumi): Measurable ROI (2-3x) with comprehensive business outcome tracking
+            Legacy: Limited visibility into business impact and value creation
 
 benefits:
     title: Strategic Advantages of Modern Infrastructure
@@ -197,36 +197,36 @@ benefits:
           icon: lightning
           icon_color: yellow
           description: |
-            **Eliminate deployment bottlenecks** through standardized infrastructure patterns and developer self-service capabilities
+            Eliminate deployment bottlenecks through standardized infrastructure patterns and developer self-service capabilities
             
-            **AI-powered assistance** accelerates development cycles and competitive responsiveness
+            AI-powered assistance accelerates development cycles and competitive responsiveness
 
         - title: Risk Reduction  
           subtitle: 2x reduction in security incidents
           icon: shield
           icon_color: salmon
           description: |
-            **Comprehensive governance** through policy enforcement and automated compliance checks
+            Comprehensive governance through policy enforcement and automated compliance checks
             
-            **Operational resilience** reduces vulnerabilities while maintaining audit-ready infrastructure
+            Operational resilience reduces vulnerabilities while maintaining audit-ready infrastructure
 
         - title: Cost Optimization
           subtitle: 3x cost optimization
           icon: exchange
           icon_color: purple
           description: |
-            **Intelligent visibility** through AI-powered optimization recommendations and cost anomaly detection
+            Intelligent visibility through AI-powered optimization recommendations and cost anomaly detection
             
-            **Comprehensive resource tracking** eliminates waste across multi-cloud environments
+            Comprehensive resource tracking eliminates waste across multi-cloud environments
 
         - title: Operational Excellence
           subtitle: 4x operational efficiency  
           icon: team
           icon_color: blue
           description: |
-            **Predictable 2-3x ROI** with 6-month payback period through unified tooling and automation
+            Predictable 2-3x ROI with 6-month payback period through unified tooling and automation
             
-            **Scalable platform capabilities** that grow without proportional team growth
+            Scalable platform capabilities that grow without proportional team growth
 
 implementation_pathway:
     title: Getting Started
@@ -256,24 +256,24 @@ modernization_pathways:
     items:
         - title: Greenfield + Coexistence
           description: |
-            **Best for:** Organizations with stable existing infrastructure and new project requirements
-            **Approach:** Deploy new projects with Pulumi while maintaining existing stable workloads
-            **Timeline:** Immediate value with 25% faster time-to-market for new initiatives
-            **Outcome:** Risk-free modernization with proven results before broader adoption
+            Best for: Organizations with stable existing infrastructure and new project requirements
+            Approach: Deploy new projects with Pulumi while maintaining existing stable workloads
+            Timeline: Immediate value with 25% faster time-to-market for new initiatives
+            Outcome: Risk-free modernization with proven results before broader adoption
 
         - title: Enhanced Governance
           description: |
-            **Best for:** Organizations with compliance requirements and multi-tool environments
-            **Approach:** Implement comprehensive policies and governance across all infrastructure regardless of tooling
-            **Timeline:** 30-60 days to comprehensive governance implementation
-            **Outcome:** 2x reduction in security incidents and unified compliance reporting
+            Best for: Organizations with compliance requirements and multi-tool environments
+            Approach: Implement comprehensive policies and governance across all infrastructure regardless of tooling
+            Timeline: 30-60 days to comprehensive governance implementation
+            Outcome: 2x reduction in security incidents and unified compliance reporting
 
         - title: Platform Transformation
           description: |
-            **Best for:** Organizations ready for comprehensive modernization and maximum benefits
-            **Approach:** Complete migration to unified modern infrastructure platform with AI-powered operations
-            **Timeline:** 6-12 months for full transformation with 6-month ROI payback
-            **Outcome:** 2-3x ROI with complete platform engineering transformation
+            Best for: Organizations ready for comprehensive modernization and maximum benefits
+            Approach: Complete migration to unified modern infrastructure platform with AI-powered operations
+            Timeline: 6-12 months for full transformation with 6-month ROI payback
+            Outcome: 2-3x ROI with complete platform engineering transformation
 
 use_cases:
     title: Use cases

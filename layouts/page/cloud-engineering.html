@@ -9,6 +9,37 @@
             <p class="text-lg">{{ .Params.overview.description }}</p>
         </section>
 
+        <section id="maturity-stages" class="container mx-auto px-6 lg:px-56 text-center mb-32">
+            <h2 class="max-w-2xl mx-auto">{{ .Params.maturity_stages.title }}</h2>
+            <p class="text-lg mb-16">{{ .Params.maturity_stages.description }}</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {{ range $item := .Params.maturity_stages.items }}
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="mb-4">{{ $item.title }}</h4>
+                        <p class="text-gray-600">{{ $item.description }}</p>
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <section id="strategic-business-value" class="container mx-auto px-6 lg:px-56 mb-32">
+            <div class="text-center mb-16">
+                <h2 class="max-w-2xl mx-auto">{{ .Params.strategic_business_value.title }}</h2>
+                <p class="text-lg">{{ .Params.strategic_business_value.description }}</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {{ range $item := .Params.strategic_business_value.items }}
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            <h5 class="ml-3 mb-0">{{ $item.title }}</h5>
+                        </div>
+                        <p class="text-gray-600">{{ $item.description }}</p>
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+
         <section id="best-practices" class="container mx-auto flex my-16">
             <div class="hidden lg:block lg:w-1/3"></div>
             <div class="w-full lg:w-2/3 bg-gray-200 text-center p-6 lg:p-16 lg:rounded-2xl">
@@ -16,6 +47,21 @@
                     <h2>{{ .Params.best_practices.title }}</h2>
                     <p class="text-gray-600">{{ .Params.best_practices.description | markdownify }}</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="discover" class="container mx-auto px-6 lg:px-56 mb-32">
+            <div class="text-center mb-16">
+                <h2 class="max-w-2xl mx-auto">{{ .Params.discover.title }}</h2>
+                <p class="text-lg">{{ .Params.discover.description }}</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {{ range $item := .Params.discover.items }}
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h5 class="mb-4">{{ $item.title }}</h5>
+                        <p class="text-gray-600">{{ $item.description }}</p>
+                    </div>
+                {{ end }}
             </div>
         </section>
 
@@ -121,6 +167,26 @@
             </div>
         </section>
 
+        <section id="platform-outcomes" class="container mx-auto px-6 lg:px-56 text-center mb-32">
+            <h2 class="max-w-2xl mx-auto">{{ .Params.platform_outcomes.title }}</h2>
+            <p class="text-lg">{{ .Params.platform_outcomes.description }}</p>
+        </section>
+
+        <section id="competitive-differentiation" class="container mx-auto px-6 lg:px-56 mb-32">
+            <div class="text-center mb-16">
+                <h2 class="max-w-2xl mx-auto">{{ .Params.competitive_differentiation.title }}</h2>
+                <p class="text-lg">{{ .Params.competitive_differentiation.description }}</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {{ range $item := .Params.competitive_differentiation.items }}
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h5 class="mb-4">{{ $item.title }}</h5>
+                        <div class="text-gray-600">{{ $item.description | markdownify }}</div>
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+
         <section id="benefits" class="lg:my-32 relative">
             <div class="shape-background cloud-engineering-benefits-section">
                 <div class="shape-container">
@@ -146,6 +212,36 @@
                         </div>
                     {{ end }}
                 </div>
+            </div>
+        </section>
+
+        <section id="implementation-pathway" class="container mx-auto px-6 lg:px-56 mb-32">
+            <div class="text-center mb-16">
+                <h2 class="max-w-2xl mx-auto">{{ .Params.implementation_pathway.title }}</h2>
+                <p class="text-lg">{{ .Params.implementation_pathway.description }}</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {{ range $item := .Params.implementation_pathway.items }}
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <h5 class="mb-4">{{ $item.title }}</h5>
+                        <p class="text-gray-600">{{ $item.description }}</p>
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <section id="modernization-pathways" class="container mx-auto px-6 lg:px-56 mb-32">
+            <div class="text-center mb-16">
+                <h2 class="max-w-2xl mx-auto">{{ .Params.modernization_pathways.title }}</h2>
+                <p class="text-lg">{{ .Params.modernization_pathways.description }}</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {{ range $item := .Params.modernization_pathways.items }}
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h5 class="mb-4">{{ $item.title }}</h5>
+                        <div class="text-gray-600">{{ $item.description | markdownify }}</div>
+                    </div>
+                {{ end }}
             </div>
         </section>
 
