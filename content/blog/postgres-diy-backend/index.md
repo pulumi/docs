@@ -68,11 +68,11 @@ Traditional DIY backends in Pulumi have relied on object storage systems like AW
 
 PostgreSQL stood out as an excellent candidate for state storage due to its:
 
-* **Large object support**: Ability to handle substantial state files without size constraints
-* **ACID compliance**: Robust transactional guarantees for state consistency
-* **Mature ecosystem**: Well-established tooling and operational practices
-* **Scalability options**: From single instances to complex replication setups
-* **Security features**: Comprehensive authentication and authorization capabilities
+- **Large object support**: Ability to handle substantial state files without size constraints
+- **ACID compliance**: Robust transactional guarantees for state consistency
+- **Mature ecosystem**: Well-established tooling and operational practices
+- **Scalability options**: From single instances to complex replication setups
+- **Security features**: Comprehensive authentication and authorization capabilities
 
 ## The Community Contribution Process
 
@@ -133,29 +133,29 @@ func skipIfDockerNotAvailable(t *testing.T) {
 
 ### **PostgreSQL wins over a plain S3 bucket**
 
-* ## **ACID transactions with row-level locking –** A postgres backend means strong consistency guarantees.
+- ## **ACID transactions with row-level locking –** A postgres backend means strong consistency guarantees.
 
-* ## **Faster for smaller state files –** Community benchmarks show improvements on S3 backend speed for smaller state files.
+- ## **Faster for smaller state files –** Community benchmarks show improvements on S3 backend speed for smaller state files.
 
-* ## **Point-in-time restore –** WAL-based backups allow for easier rollback.
+- ## **Point-in-time restore –** WAL-based backups allow for easier rollback.
 
-* ## **Deep observability –** plug pg-metrics into Grafana/APM for real-time insight.
+- ## **Deep observability –** plug pg-metrics into Grafana/APM for real-time insight.
 
 ### **Gaps you'll still close only with Pulumi Cloud**
 
-* ## **Server-side policy guardrails (CrossGuard) –** automatically enforced policies on every preview or deploy.
+- ## **Server-side policy guardrails (CrossGuard) –** automatically enforced policies on every preview or deploy.
 
-* ## **Always-on drift detection –** automatic scans catch out-of-band changes.
+- ## **Always-on drift detection –** automatic scans catch out-of-band changes.
 
-* ## **Managed Deployments –** fully managed runners, PR previews, and dependent stack updates.
+- ## **Managed Deployments –** fully managed runners, PR previews, and dependent stack updates.
 
-* ## **Org-wide RBAC, SSO/SAML, immutable audit logs** – turnkey for teams and auditors.
+- ## **Org-wide RBAC, SSO/SAML, immutable audit logs** – turnkey for teams and auditors.
 
-* ## **Search & analytics across *all* cloud resources (Insights)** – not just those managed by Pulumi.
+- ## **Search & analytics across *all* cloud resources (Insights)** – not just those managed by Pulumi.
 
-* **Enterprise Secrets & Configuration (ESC)** \- encrypted secrets and config with RBAC, versioning and audit trail.
+- **Enterprise Secrets & Configuration (ESC)** \- encrypted secrets and config with RBAC, versioning and audit trail.
 
-* ## **SOC 2, high availability, and painless upgrades** – Pulumi operates the control plane so you don't have to.
+- ## **SOC 2, high availability, and painless upgrades** – Pulumi operates the control plane so you don't have to.
 
 ## Getting Started
 
@@ -182,10 +182,10 @@ The implementation follows Pulumi's architectural patterns and coding standards,
 
 The PostgreSQL backend opens up several possibilities for future enhancements:
 
-* **High Availability**: Support for PostgreSQL clustering and replication
-* **Performance Optimizations**: Caching strategies and connection pooling
-* **Advanced Features**: Custom backup strategies and state analytics
-* **Multi-tenant Support**: Isolation patterns for multiple teams or environments
+- **High Availability**: Support for PostgreSQL clustering and replication
+- **Performance Optimizations**: Caching strategies and connection pooling
+- **Advanced Features**: Custom backup strategies and state analytics
+- **Multi-tenant Support**: Isolation patterns for multiple teams or environments
 
 ## **Conclusion**
 
