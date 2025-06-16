@@ -33,7 +33,7 @@ strategic_business_value:
         Organizations using Pulumi's modern infrastructure platform achieve measurable business outcomes that drive competitive advantage and operational excellence.
     items:
         - title: 2-3x ROI over three years with 6-month payback period
-          icon: gauge
+          icon: guage
           icon_color: green
           description: |
             Comprehensive TEI study demonstrates substantial financial returns through reduced operational overhead, accelerated deployment cycles, and improved developer productivity across enterprise organizations.
