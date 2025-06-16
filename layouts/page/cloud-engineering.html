@@ -27,7 +27,7 @@
                 <h2 class="max-w-2xl mx-auto">{{ .Params.strategic_business_value.title }}</h2>
                 <p class="text-lg">{{ .Params.strategic_business_value.description }}</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {{ range $item := .Params.strategic_business_value.items }}
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex items-center mb-4">
@@ -40,9 +40,8 @@
             </div>
         </section>
 
-        <section id="best-practices" class="container mx-auto flex my-16">
-            <div class="hidden lg:block lg:w-1/3"></div>
-            <div class="w-full lg:w-2/3 bg-gray-200 text-center p-6 lg:p-16 lg:rounded-2xl">
+        <section id="best-practices" class="container mx-auto my-16">
+            <div class="bg-gray-200 text-center p-6 lg:p-16 rounded-2xl mx-auto max-w-4xl">
                 <div class="max-w-xl mx-auto">
                     <h2>{{ .Params.best_practices.title }}</h2>
                     <p class="text-gray-600">{{ .Params.best_practices.description | markdownify }}</p>
@@ -167,13 +166,10 @@
             </div>
         </section>
 
-        <section id="platform-outcomes" class="container mx-auto px-6 lg:px-56 text-center mb-32">
-            <h2 class="max-w-2xl mx-auto">{{ .Params.platform_outcomes.title }}</h2>
-            <p class="text-lg">{{ .Params.platform_outcomes.description }}</p>
-        </section>
-
         <section id="competitive-differentiation" class="container mx-auto px-6 lg:px-56 mb-32">
             <div class="text-center mb-16">
+                <h3 class="max-w-2xl mx-auto mb-4">{{ .Params.platform_outcomes.title }}</h3>
+                <p class="text-base mb-8">{{ .Params.platform_outcomes.description }}</p>
                 <h2 class="max-w-2xl mx-auto">{{ .Params.competitive_differentiation.title }}</h2>
                 <p class="text-lg">{{ .Params.competitive_differentiation.description }}</p>
             </div>
@@ -220,7 +216,7 @@
                 <h2 class="max-w-2xl mx-auto">{{ .Params.implementation_pathway.title }}</h2>
                 <p class="text-lg">{{ .Params.implementation_pathway.description }}</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
                 {{ range $item := .Params.implementation_pathway.items }}
                     <div class="bg-white p-6 rounded-lg shadow-md text-center">
                         <h5 class="mb-4">{{ $item.title }}</h5>
