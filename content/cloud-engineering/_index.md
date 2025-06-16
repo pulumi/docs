@@ -130,7 +130,7 @@ deploy:
 
         - title: Advanced Testing & Validation Frameworks
           description: |
-            Run unit, integration, and policy tests to validate infrastructure changes before production deployment. Test-driven development approach reduces errors by 85% and increases deployment confidence through automated validation.
+            Run unit, integration, and policy tests to validate infrastructure changes before production deployment. Test-driven development approach provides 6x error reduction and increases deployment confidence through automated validation.
 
         - title: Enterprise Governance & Compliance
           description: |
@@ -139,11 +139,11 @@ deploy:
 manage:
     title: Scale
     description: |
-        Handle growth without hiring proportionally more platform engineers. Achieve developer-to-platform engineer ratios of 15:1 through intelligent automation, comprehensive governance, and 74% reduction in management overhead.
+        Handle growth without hiring proportionally more platform engineers. Achieve developer-to-platform engineer ratios of 15:1 through intelligent automation, comprehensive governance, and 4x reduction in management overhead.
     items:
         - title: AI-Powered Multi-Cloud Intelligence
           description: |
-            Pulumi Insights provides automated optimization recommendations, cost anomaly detection, and intelligent resource rightsizing across all cloud providers. Identify 20-40% cost optimization opportunities automatically while maintaining performance standards.
+            Pulumi Insights provides automated optimization recommendations, cost anomaly detection, and intelligent resource rightsizing across all cloud providers. Identify 2-4x cost optimization opportunities automatically while maintaining performance standards.
 
         - title: Self-Service Developer Portals with Governance
           description: |
