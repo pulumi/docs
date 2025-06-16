@@ -79,13 +79,12 @@ and subject are configured as shown below:
 ```
 
 Before you log out of the AWS console, make sure to make a note of your role’s ARN value as you will need it to set up
-the Customer Managed Key in Pulumi Cloud.
+the AWS KMS key as well as the Customer Managed Key in Pulumi Cloud.
 
 ## Create the AWS KMS key
 
 1. In the navigation pane of the [KMS console](https://console.aws.amazon.com/kms/), choose **Customer managed keys**,
-   and
-   then choose **Create key**.
+   and then choose **Create key**.
 2. Select the **Symmetric** key type, the **Encrypt and decrypt** key usage and click **Next**.
 3. Add labels as needed, then click **Next**.
 4. Define key administrative permissions as needed, then click **Next**.
@@ -114,30 +113,6 @@ the Customer Managed Key in Pulumi Cloud.
 
 Before you log out of the AWS console, make sure to make a note of your key’s ARN value and or alias ARN value as you
 will need it to set up the Customer Managed Key in Pulumi Cloud.
-
-## Add permissions to the IAM role
-
-1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Roles**, and
-   select the previously created role.
-2. Click the **Add permissions** button.
-3. Select or create a policy which should look like this:
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "kms:Encrypt",
-        "kms:Decrypt",
-        "kms:GenerateDataKey"
-      ],
-      "Resource": "<key-arn>"
-    }
-  ]
-}
-```
 
 ## Add the Customer Managed Key in Pulumi Cloud
 
