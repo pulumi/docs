@@ -60,7 +60,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-When managing infrastructure as code at scale, reliable state storage becomes critical. While Pulumi Cloud delivers a hassle free, fully managed experience, some teams still prefer a do-it-yourself approach. That's where PostgreSQL comes in as a compelling option for DIY backend state storage.
+When managing infrastructure as code at scale, reliable state storage is essential. Pulumi Cloud provides a fully managed, secure, and scalable solution out of the box. For teams that choose to build and maintain their own backend, Pulumi now offers support for PostgreSQL as a DIY state storage option—though this requires additional operational overhead and careful consideration around performance, security, and maintenance.
 
 ## **The Need for Database-Backed State Storage**
 
