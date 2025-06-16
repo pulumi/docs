@@ -60,21 +60,21 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-When managing infrastructure as code at scale, reliable state storage becomes critical. While Pulumi offers excellent cloud-based state management through Pulumi Cloud, many organizations need self-hosted solutions with the robustness and scalability of a proven database system. That's where PostgreSQL comes in as a compelling option for DIY backend state storage.
+When managing infrastructure as code at scale, reliable state storage becomes critical. While Pulumi Cloud delivers a hassle free, fully managed experience, some teams still prefer a do-it-yourself approach. That's where PostgreSQL comes in as a new compelling option for DIY backend state storage.
 
 <!--more-->
 
-## The Need for Database-Backed State Storage
+## **The Need for Database-Backed State Storage**
 
 Traditional DIY backends in Pulumi have relied on object storage systems like AWS S3, Google Cloud Storage, or Azure Blob Storage. While these work well for many use cases, they have limitations when it comes to handling very large state files, complex locking mechanisms, and transactional guarantees that some enterprise environments require.
 
 PostgreSQL stood out as an excellent candidate for state storage due to its:
 
-- **Large object support**: Ability to handle substantial state files without size constraints
-- **ACID compliance**: Robust transactional guarantees for state consistency
-- **Mature ecosystem**: Well-established tooling and operational practices
-- **Scalability options**: From single instances to complex replication setups
-- **Security features**: Comprehensive authentication and authorization capabilities
+* **Large object support**: Ability to handle substantial state files without size constraints
+* **ACID compliance**: Robust transactional guarantees for state consistency
+* **Mature ecosystem**: Well-established tooling and operational practices
+* **Scalability options**: From single instances to complex replication setups
+* **Security features**: Comprehensive authentication and authorization capabilities
 
 ## The Community Contribution Process
 
@@ -131,69 +131,33 @@ func skipIfDockerNotAvailable(t *testing.T) {
 }
 ```
 
-## Implementation Deep Dive
+## **Performance and Limitations**
 
-### URL Scheme and Connection
+### **PostgreSQL wins over a plain S3 bucket**
 
-The PostgreSQL backend uses a familiar URL scheme that PostgreSQL users will recognize:
+* ## **ACID transactions with row-level locking –** A postgres backend means strong consistency guarantees.
 
-```bash
-pulumi login postgres://username:password@localhost:5432/database?sslmode=require
-```
+* ## **Faster for smaller state files –** Community benchmarks show improvements on S3 backend speed for smaller state files.
 
-This URL format supports all standard PostgreSQL connection parameters, making it easy for teams already familiar with PostgreSQL to adopt.
+* ## **Point-in-time restore –** WAL-based backups allow for easier rollback.
 
-### Automatic Schema Management
+* ## **Deep observability –** plug pg-metrics into Grafana/APM for real-time insight.
 
-One of the user-friendly features is automatic table creation. When connecting to a PostgreSQL database for the first time, the backend automatically creates the necessary table structure if it doesn't exist. This reduces the setup overhead for new users.
+### **Gaps you'll still close only with Pulumi Cloud**
 
-### Security Considerations
+* ## **Server-side policy guardrails (CrossGuard) –** automatically enforced policies on every preview or deploy.
 
-The implementation includes comprehensive security guidance:
+* ## **Always-on drift detection –** automatic scans catch out-of-band changes.
 
-- **SSL/TLS Support**: Full support for encrypted connections
-- **Authentication**: Compatible with all PostgreSQL authentication methods
-- **Access Control**: Recommendations for creating dedicated database users with minimal permissions
-- **Network Security**: Guidance on proper firewall and network access controls
+* ## **Managed Deployments –** fully managed runners, PR previews, and dependent stack updates.
 
-## Testing and Quality Assurance
+* ## **Org-wide RBAC, SSO/SAML, immutable audit logs** – turnkey for teams and auditors.
 
-The PR went through extensive testing across multiple dimensions:
+* ## **Search & analytics across *all* cloud resources (Insights)** – not just those managed by Pulumi.
 
-### Integration Tests
+* **Enterprise Secrets & Configuration (ESC)** \- encrypted secrets and config with RBAC, versioning and audit trail.
 
-Comprehensive integration tests were added to verify:
-- Basic CRUD operations on state data
-- Connection handling and error scenarios
-- Schema creation and migration
-- Cross-platform compatibility
-
-### CI/CD Pipeline Integration
-
-The feature was tested across Pulumi's existing CI/CD pipeline, including:
-- Multiple Go versions
-- Different operating systems
-- Various PostgreSQL versions
-- Performance benchmarking
-
-### Community Testing
-
-The PR remained open for several weeks, allowing community members to test the implementation and provide feedback. This collaborative approach helped identify edge cases and improve the overall quality.
-
-## Performance and Limitations
-
-While PostgreSQL provides excellent reliability and consistency guarantees, there are some trade-offs to consider:
-
-**Advantages:**
-- Excellent performance for small to medium-sized state files
-- Strong consistency guarantees
-- Mature backup and recovery options
-- Comprehensive monitoring capabilities
-
-**Limitations:**
-- May be slower than object storage for very large state files
-- Requires database infrastructure management
-- Signed URLs (used for state permalinks) are not supported
+* ## **SOC 2, high availability, and painless upgrades** – Pulumi operates the control plane so you don't have to.
 
 ## Getting Started
 
@@ -216,21 +180,19 @@ This contribution demonstrates the power of community-driven development in open
 
 The implementation follows Pulumi's architectural patterns and coding standards, making it a seamless addition to the existing codebase. The comprehensive documentation and testing ensure that future maintainers can easily understand and modify the code.
 
-## What's Next?
+## **What's Next?**
 
 The PostgreSQL backend opens up several possibilities for future enhancements:
 
-- **High Availability**: Support for PostgreSQL clustering and replication
-- **Performance Optimizations**: Caching strategies and connection pooling
-- **Advanced Features**: Custom backup strategies and state analytics
-- **Multi-tenant Support**: Isolation patterns for multiple teams or environments
+* **High Availability**: Support for PostgreSQL clustering and replication
+* **Performance Optimizations**: Caching strategies and connection pooling
+* **Advanced Features**: Custom backup strategies and state analytics
+* **Multi-tenant Support**: Isolation patterns for multiple teams or environments
 
-## Conclusion
+## **Conclusion**
 
 The addition of PostgreSQL state backend support to Pulumi represents more than just a new feature—it's a testament to the collaborative nature of open source development and the power of community contributions. By providing enterprise-grade state storage options while maintaining the simplicity that makes Pulumi great, this feature enables organizations to adopt infrastructure as code with confidence.
 
-Whether you're running a small startup or managing infrastructure for a large enterprise, having robust, reliable state storage options is crucial. The PostgreSQL backend provides exactly that: a battle-tested, scalable solution that integrates seamlessly with Pulumi's existing architecture.
+Whether you're running a small startup or managing infrastructure for a large enterprise, having robust, reliable state storage options is crucial. The PostgreSQL backend provides an improved approach to Do-It-Yourself state management.
 
 If you're interested in contributing to Pulumi or have ideas for new features, the community welcomes your contributions. This PR serves as an excellent example of how community members can make meaningful improvements to the project while learning from experienced maintainers and following established best practices.
-
-Try out the PostgreSQL backend today and experience the benefits of database-backed state storage for your infrastructure as code workflows!
