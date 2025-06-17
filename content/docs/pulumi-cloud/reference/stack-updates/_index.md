@@ -5,7 +5,7 @@ meta_desc: Learn about the Pulumi Cloud REST API endpoints for managing and moni
 menu:
     cloud:
         parent: pulumi-cloud-reference
-        weight: 22
+        weight: 23
 ---
 
 Stack updates are operations that create, update, or delete resources in a Pulumi stack. The Stack Updates API allows you to list updates, check status, and view detailed events for each operation.

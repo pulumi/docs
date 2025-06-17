@@ -5,7 +5,7 @@ meta_desc: Learn about the Pulumi Cloud REST API endpoints for managing stack ta
 menu:
     cloud:
         parent: pulumi-cloud-reference
-        weight: 21
+        weight: 22
 ---
 
 Stack tags are key-value metadata attached to Pulumi stacks. They can be used for organization, filtering, and to store additional information about your stacks.
