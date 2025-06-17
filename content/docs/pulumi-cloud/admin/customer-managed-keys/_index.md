@@ -26,7 +26,8 @@ to use your own encryption keys to protect sensitive data in Pulumi Cloud throug
 Key Management System (KMS).
 
 CMKs encrypt data keys, which are used to encrypt data in Pulumi Cloud. When you add your first CMK, all
-existing data keys encrypted with the Pulumi-managed key will be automatically re-encrypted with the new CMK.
+existing data keys encrypted with the Pulumi-managed key will be automatically re-encrypted with the new CMK. The
+encrypted data itself does not change.
 
 Only organization admins can manage CMKs.
 
@@ -61,7 +62,7 @@ Adding a Customer Managed Key enables you to use your own encryption key to prot
 
 {{% notes "info" %}}
 When the first Customer Managed Key is added, all data keys encrypted with the Pulumi-managed key will be automatically
-re-encrypted with the new Customer Managed Key.
+re-encrypted with the new Customer Managed Key. The encrypted data itself does not change.
 {{% /notes %}}
 
 ### AWS KMS
