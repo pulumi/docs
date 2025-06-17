@@ -5,7 +5,7 @@ meta_desc: Learn about the Pulumi Cloud REST API endpoints for creating, reading
 menu:
     cloud:
         parent: pulumi-cloud-reference
-        weight: 23
+        weight: 24
 ---
 
 The Stacks API allows you to create and manage Pulumi stacks, which are isolated, independently configurable instances of your Pulumi program.
@@ -36,6 +36,11 @@ POST /api/stacks/{organization}/{project}
 | `organization` | string | path | Organization name                                                                                |
 | `project`      | string | path | Name of the project to create the stack under. If the project doesn't exist, it will be created. |
 | `stackName`    | string | body | Name of the stack being created.                                                                 |
+| `config`       | object | body | Configuration of the stack being created - see following parameters                              |
+| `config.environment` | string | body | **Optional.** The reference to the ESC environment to create for storing stack configuration. Must not exist yet. |
+| `config.secretsProvider` | string | body | **Optional.** The stack's secrets provider.                                            |
+| `config.encryptedKey` | string | body | **Optional.** The KMS-encrypted ciphertext for the data key used for secrets encryption. Only used for cloud-based secrets providers. |
+| `config.encryptionSalt` | string | body | **Optional.** The stack's base64 encoded encryption salt. Only used for passphrase-based secrets providers. |
 
 ### Example
 
