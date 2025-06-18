@@ -26,12 +26,13 @@
             </div>
             {{ with .Params.video_section }}
             <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-                <div class="responsive-video-container rounded-xl shadow-2xl relative h-0 overflow-hidden">
+                <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden responsive-video-container">
                     <iframe
                         src="https://www.youtube.com/embed/{{ .youtube_video_id }}?rel=0"
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
                         allowfullscreen=""
                         title="{{ .video_title }}"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}.play-button{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120px;height:120px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.3s;box-shadow:0 8px 25px rgba(0,0,0,0.3)}.play-button:hover{background:rgba(255,255,255,1);transform:translate(-50%,-50%) scale(1.1);box-shadow:0 12px 35px rgba(0,0,0,0.4)}.play-button::after{content:'';border-left:36px solid #ff6b35;border-top:22px solid transparent;border-bottom:22px solid transparent;margin-left:8px}</style><a href=https://www.youtube.com/embed/{{ .youtube_video_id }}?autoplay=1><img src='/images/Kubernetes-meta.png' alt='{{ .video_title }}'><div class='play-button'></div></a>"
                     ></iframe>
                 </div>
             </div>
