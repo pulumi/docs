@@ -31,6 +31,11 @@
                         {{ if $currentSeries }}
                             <h1 class="no-anchor">{{ $currentSeries.title }}</h1>
                             <p class="text-gray-600 mb-4">{{ $currentSeries.description }}</p>
+                            {{ if $currentSeries.video_id }}
+                                <div class="mb-8">
+                                    {{ partial "youtube" (dict "id" $currentSeries.video_id "title" $currentSeries.title) }}
+                                </div>
+                            {{ end }}
                         {{ else }}
                             <h1 class="no-anchor">
                                 Posts Tagged
@@ -64,6 +69,11 @@
                         {{ if $currentSeries }}
                             <h1 class="no-anchor">{{ $currentSeries.title }}</h1>
                             <p class="text-gray-600 mb-4">{{ $currentSeries.description }}</p>
+                            {{ if $currentSeries.video_id }}
+                                <div class="mb-8">
+                                    {{ partial "youtube" (dict "id" $currentSeries.video_id "title" $currentSeries.title) }}
+                                </div>
+                            {{ end }}
                         {{ else }}
                             <h1 class="no-anchor">
                                 Posts Tagged
