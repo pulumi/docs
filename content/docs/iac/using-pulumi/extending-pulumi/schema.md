@@ -283,38 +283,43 @@ Language-specific information for a package.
 
 For `javascript, typescript`:
 
-| Property                  | Type          | Required | Description                                                                          |
-|---------------------------|---------------|----------|--------------------------------------------------------------------------------------|
-| `packageName`             | `string`      | No       | Custom name for the NPM package.                                                     |
-| `packageDescription`      | `string`      | No       | Description for the NPM package.                                                     |
-| `readme`                  | `string`      | No       | Readme contains the text for the package's README.md files.                          |
-| `dependencies`            | `map[string]` | No       | NPM dependencies to add to package.json.                                             |
-| `devDependencies`         | `map[string]` | No       | NPM dev-dependencies to add to package.json.                                         |
-| `peerDependencies`        | `map[string]` | No       | NPM peer-dependencies to add to package.json.                                        |
-| `resolutions`             | `map[string]` | No       | NPM resolutions to add to package.json                                               |
-| `typescriptVersion`       | `string`      | No       | A specific version of TypeScript to include in package.json.                         |
-| `moduleToPackage`         | `map[string]` | No       | A map containing overrides for module names to package names.                        |
-| `compatibility`           | `string`      | No       | Toggle compatibility mode for a specified target.                                    |
-| `disableUnionOutputTypes` | `boolean`     | No       | Disable support for unions in output types.                                          |
-| `containsEnums`           | `boolean`     | No       | An indicator for whether the package contains enums.                                 |
-| `respectSchemaVersion`    | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK                     |
-| `pluginName`              | `string`      | No       | The name of the plugin, which might be different from the package name.              |
-| `pluginVersion`           | `string`      | No       | The version of the plugin, which might be different from the version of the package. |
+| Property                       | Type          | Required | Description                                                                                            |
+|--------------------------------|---------------|----------|--------------------------------------------------------------------------------------------------------|
+| `packageName`                  | `string`      | No       | Custom name for the NPM package.                                                                       |
+| `packageDescription`           | `string`      | No       | Description for the NPM package.                                                                       |
+| `readme`                       | `string`      | No       | Readme contains the text for the package's README.md files.                                            |
+| `dependencies`                 | `map[string]` | No       | NPM dependencies to add to package.json.                                                               |
+| `devDependencies`              | `map[string]` | No       | NPM dev-dependencies to add to package.json.                                                           |
+| `peerDependencies`             | `map[string]` | No       | NPM peer-dependencies to add to package.json.                                                          |
+| `resolutions`                  | `map[string]` | No       | NPM resolutions to add to package.json                                                                 |
+| `typescriptVersion`            | `string`      | No       | A specific version of TypeScript to include in package.json.                                           |
+| `moduleToPackage`              | `map[string]` | No       | A map containing overrides for module names to package names.                                          |
+| `compatibility`                | `string`      | No       | Toggle compatibility mode for a specified target.                                                      |
+| `disableUnionOutputTypes`      | `boolean`     | No       | Disable support for unions in output types.                                                            |
+| `containsEnums`                | `boolean`     | No       | An indicator for whether the package contains enums.                                                   |
+| `providerNameToModuleName`     | `boolean`     | No       | A map allowing you to map the name of a provider to the name of the module encapsulating the provider. |
+| `liftSingleValueMethodReturns` | `boolean`     | No       | Determines whether to make single-return-value methods return an output object or the single value.    |
+| `respectSchemaVersion`         | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK                                       |
+| `pluginName`                   | `string`      | No       | The name of the plugin, which might be different from the package name.                                |
+| `pluginVersion`                | `string`      | No       | The version of the plugin, which might be different from the version of the package.                   |
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 For `python`:
 
-| Property               | Type          | Required | Description                                                                                                                                            |
-|------------------------|---------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `packageName`          | `string`      | No       | PackageName is an override for the name of the generated python package.                                                                               |
-| `requires`             | `map[string]` | No       | Description for the PyPi package.                                                                                                                      |
-| `readme`               | `string`      | No       | Readme contains the text for the package's README.md files.                                                                                            |
-| `moduleNameOverrides`  | `map[string]` | No       | Optional overrides for Pulumi module names.                                                                                                            |
-| `compatibility`        | `string`      | No       | Toggle compatibility mode for a specified target.                                                                                                      |
-| `respectSchemaVersion` | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.                                                                                      |
-| `inputTypes`           | `string`      | No       | Controls the types of resource inputs. Either `classes` for args-classes or `classes-and-dicts` for args-classes side by side with typed dictionaries. |
+| Property                       | Type          | Required | Description                                                                                                                                            |
+|--------------------------------|---------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `packageName`                  | `string`      | No       | PackageName is an override for the name of the generated python package.                                                                               |
+| `pythonRequires`               | `string`      | No       | PythonRequires determines the Python versions that the generated provider supports.                                                                    |
+| `requires`                     | `map[string]` | No       | Description for the PyPi package.                                                                                                                      |
+| `readme`                       | `string`      | No       | Readme contains the text for the package's README.md files.                                                                                            |
+| `moduleNameOverrides`          | `map[string]` | No       | Optional overrides for Pulumi module names.                                                                                                            |
+| `compatibility`                | `string`      | No       | Toggle compatibility mode for a specified target.                                                                                                      |
+| `liftSingleValueMethodReturns` | `boolean`     | No       | Determines whether to make single-return-value methods return an output object or the single value.                                                    |
+| `respectSchemaVersion`         | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.                                                                                      |
+| `pyproject`                    | `object`      | No       | If enabled, a pyproject.toml file will be generated.                                                                                                   |
+| `inputTypes`                   | `string`      | No       | Controls the types of resource inputs. Either `classes` for args-classes or `classes-and-dicts` for args-classes side by side with typed dictionaries. |
 
 {{% /choosable %}}
 {{% choosable language go %}}
@@ -324,37 +329,50 @@ For `go`:
 | Property                         | Type          | Description                                                                                                                                    |
 |----------------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | `importBasePath`                 | `string`      | Base path for package imports.                                                                                                                 |
+| `modulePath`                     | `string`      | Module path for go.mod.                                                                                                                        |
 | `rootPackageName`                | `string`      | Explicit package name, which may be different to the import path.                                                                              |
 | `moduleToPackage`                | `map[string]` | Map from module -> package name.                                                                                                               |
 | `packageImportAliases`           | `map[string]` | Map from package name -> package alias.                                                                                                        |
+| `importPathPattern`              | `string`      | Defines the pattern for how import paths should be constructed from the base import path and used module.                                      |
 | `generateResourceContainerTypes` | `boolean`     | Generate container types (arrays, maps, pointer output types etc.) for each resource. These are typically used to support external references. |
+| `pulumiSDKVersion`               | `string`      | The version of the Pulumi SDK used with this provider, e.g. 3.                                                                                 |
+| `liftSingleValueMethodReturns`   | `boolean`     | Determines whether to make single-return-value methods return an output object or the single value.                                            |
+| `internalModuleName`             | `string`      | When set, the code generator will use this name for the generated internal module instead of "internal"                                        |
+| `generateExtraInputTypes`        | `boolean`     | GenerateExtraInputTypes determines whether or not the code generator generates input (and output) types for all plain types.                   |
+| `omitExtraInputTypes`            | `boolean`     | omitExtraInputTypes determines whether the code generator generates input (and output) types for all plain types.                              |
 | `respectSchemaVersion`           | `boolean`     | Use the [`package.version`](#package) field in the generated SDK.                                                                              |
+| `internalDependencies`           | `[]string`    | InternalDependencies are blank imports emitted in the SDK so `go mod tidy` doesn't remove the associated module dependencies from the go.mod.  |
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 For `csharp`:
 
-| Property                 | Type          | Required | Description                                                                                         |
-|--------------------------|---------------|----------|-----------------------------------------------------------------------------------------------------|
-| `packageReferences`      | `map[string]` | No       |                                                                                                     |
-| `namespaces`             | `map[string]` | No       |                                                                                                     |
-| `compatibility`          | `string`      | No       |                                                                                                     |
-| `dictionaryConstructors` | `boolean`     | No       |                                                                                                     |
-| `rootNamespace`          | `string`      | No       | The root namespace that the generated package should live under. This setting defaults to "Pulumi". |
-| `respectSchemaVersion`   | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.                                   |
+| Property                       | Type          | Required | Description                                                                                         |
+|--------------------------------|---------------|----------|-----------------------------------------------------------------------------------------------------|
+| `packageReferences`            | `map[string]` | No       |                                                                                                     |
+| `namespaces`                   | `map[string]` | No       |                                                                                                     |
+| `compatibility`                | `string`      | No       |                                                                                                     |
+| `dictionaryConstructors`       | `boolean`     | No       |                                                                                                     |
+| `projectReferences`            | `[]string`    | No       |                                                                                                     |
+| `liftSingleValueMethodReturns` | `boolean`     | No       | Determines whether to make single-return-value methods return an output object or the single value. |
+| `rootNamespace`                | `string`      | No       | The root namespace that the generated package should live under. This setting defaults to "Pulumi". |
+| `respectSchemaVersion`         | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.                                   |
 
 {{% /choosable %}}
 {{% choosable language java %}}
 
 For `java`:
 
-| Property       | Type          | Required | Description                                                                                      |
-|----------------|---------------|----------|--------------------------------------------------------------------------------------------------|
-| `packages`     | `map[string]` | No       | Overrides for module names to Java package names. Example: "autoscaling/v1" -> "autoscaling.v1". |
-| `basePackage`  | `string`      | No       | Prefixes the generated Java package. This setting defaults to "com.pulumi".                      |
-| `buildFiles`   | `string`      | No       | Generates build files for the chosen build tool. Supported values: "gradle".                     |
-| `dependencies` | `map[string]` | No       | Java dependencies to use with the `buildFiles`. Example: "com.pulumi.gcp" -> "6.23.0".           |
+| Property                          | Type          | Required | Description                                                                                                                 |
+|-----------------------------------|---------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
+| `packages`                        | `map[string]` | No       | Overrides for module names to Java package names. Example: "autoscaling/v1" -> "autoscaling.v1".                            |
+| `basePackage`                     | `string`      | No       | Prefixes the generated Java package. This setting defaults to "com.pulumi".                                                 |
+| `buildFiles`                      | `string`      | No       | Generates build files for the chosen build tool. Supported values: "gradle".                                                |
+| `repositories`                    | `map[string]` | No       | If non-empty, specifies a list of Maven repositories that should be referenced by the generated package.                    |
+| `dependencies`                    | `map[string]` | No       | Java dependencies to use with the `buildFiles`. Example: "com.pulumi.gcp" -> "6.23.0".                                      |
+| `gradleNexusPublishPluginVersion` | `string`      | No       | If BuildFiles="gradle", use the given version of io.github.gradle-nexus.publish-plugin in the generated Gradle build files. |
+| `gradleTest`                      | `string`      | No       | If BuildFiles="gradle", generates a section to enable `gradle test` to run unit tests. Supported values: "JUnitPlatform".   |
 
 {{% /choosable %}}
 
