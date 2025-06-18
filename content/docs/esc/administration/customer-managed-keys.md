@@ -28,8 +28,7 @@ encrypted secrets do not change.
 Only organization admins can manage CMKs.
 
 {{% notes "info" %}}
-Currently, Customer Managed Keys are only used to encrypt data in Pulumi ESC, and only AWS KMS is
-supported.
+Currently, Customer Managed Keys support keys from AWS KMS and are only used to encrypt data stored in Pulumi ESC.
 We are working on adding support for more KMS providers and expanding encryption to additional Pulumi products. If you
 have specific requirements, please [contact us](/contact/).
 {{% /notes %}}
