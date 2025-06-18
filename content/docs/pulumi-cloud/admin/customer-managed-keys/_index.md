@@ -97,7 +97,8 @@ the keys until they are re-encrypted. All data keys will be re-encrypted with th
 
 To disable all Customer Managed Keys:
 
-1. Click **Disable all Customer Managed Keys**.
-2. Confirm the re-encryption process in the dialog that appears.
-3. Click **Disable all** to confirm.
-4. A banner will appear, showing the re-encryption process status. It disappears once the process is complete.
+1. Click on the wheel button in the top right corner.
+2. Click **Disable all Customer Managed Keys**.
+3. Confirm the re-encryption process in the dialog that appears.
+4. Click **Disable all** to confirm.
+5. A banner will appear, showing the re-encryption process status. It disappears once the process is complete.
