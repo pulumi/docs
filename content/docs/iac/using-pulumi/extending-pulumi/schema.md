@@ -355,7 +355,7 @@ For `csharp`:
 | `compatibility`                | `string`      | No       |                                                                                                     |
 | `dictionaryConstructors`       | `boolean`     | No       |                                                                                                     |
 | `projectReferences`            | `[]string`    | No       |                                                                                                     |
-| `liftSingleValueMethodReturns` | `boolean`     | Determines whether to make single-return-value methods return an output object or the single value.            |
+| `liftSingleValueMethodReturns` | `boolean`     | No       | Determines whether to make single-return-value methods return an output object or the single value. |
 | `rootNamespace`                | `string`      | No       | The root namespace that the generated package should live under. This setting defaults to "Pulumi". |
 | `respectSchemaVersion`         | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.                                   |
 
