@@ -36,7 +36,7 @@ Infrastructure as Code tools are platforms and frameworks that enable you to def
 
 The most effective IaC tools share several key characteristics:
 
-- **End-state focus**: Define your desired infrastructure outcome, whether through declarative syntax (like YAML/JSON templates) or imperative languages that express declarative intent
+- **Goal-state focus**: Define your desired infrastructure outcome, whether through declarative syntax (like YAML/JSON templates) or imperative languages that express declarative intent
 - **Multi-cloud support**: Work across different cloud providers and services
 - **State management**: Track the current state of your infrastructure
 - **Preview capabilities**: Show what changes will be made before applying them
@@ -46,11 +46,11 @@ The most effective IaC tools share several key characteristics:
 
 The shift to IaC tools addresses fundamental challenges that manual infrastructure management cannot solve at scale:
 
-Eliminates Configuration Drift: Manual changes lead to inconsistencies between environments. IaC ensures your production, staging, and development environments remain identical, eliminating the notorious "works on my machine" syndrome for infrastructure.
-
 Accelerates Deployment Velocity: Teams can provision complex multi-cloud architectures in minutes instead of weeks. This speed enables faster time-to-market and more frequent, reliable deployments.
 
 Enables True Collaboration: Infrastructure becomes code that teams can review, test, and approve together. This collaborative approach reduces errors and ensures knowledge sharing across the organization.
+
+Eliminates Configuration Drift: Manual changes lead to inconsistencies between environments. IaC ensures your production, staging, and development environments remain identical, eliminating the notorious "works on my machine" syndrome for infrastructure.
 
 Provides Cost Control: Automated provisioning and deprovisioning prevents resource sprawl. Teams can easily track infrastructure costs, set budget alerts, and optimize resource usage across environments.
 
@@ -62,44 +62,38 @@ Guarantees Business Continuity: Complete infrastructure definitions stored in ve
 
 This guide covers the following infrastructure as code tools and platforms:
 
-### Core Infrastructure Provisioning Tools
+### 10 Most Used IaC Tools in 2025
 
-- **[Pulumi IaC](#pulumi)** - Modern IaC with general-purpose programming languages
-- **[Terraform](#terraform)** - The established standard with HCL syntax
-- **[OpenTofu](#opentofu)** - Open-source Terraform alternative
-- **[AWS CDK](#aws-cloud-development-kit-cdk)** - Cloud Development Kit for AWS
-- **[AWS CloudFormation](#aws-cloudformation)** - Native AWS integration
-- **[Terragrunt](#terragrunt)** - Terraform orchestration wrapper
-- **[Azure Resource Manager (ARM) and Bicep](#azure-resource-manager-arm-and-bicep)** - Azure-native templates and DSL
-- **[Google Cloud Infrastructure Manager](#google-cloud-infrastructure-manager)** - Terraform-based solution for Google Cloud.
-- **[Crossplane](#crossplane)** - Kubernetes as universal control plane
+1. **[Pulumi IaC](#pulumi)** - Modern IaC with general-purpose programming languages
+2. **[Terraform](#terraform)** - BSL-licensed IaC from HashiCorp that uses the HCL domain-specific language
+3. **[AWS CDK](#aws-cloud-development-kit-cdk)** - Cloud Development Kit for AWS
+4. **[AWS CloudFormation](#aws-cloudformation)** - Native AWS integration
+5. **[Azure Resource Manager (ARM)](#azure-resource-manager-arm)** - Native Azure JSON templates
+6. **[Azure Bicep](#azure-bicep)** - Azure-native domain-specific language that compiles to ARM
+7. **[Google Cloud Infrastructure Manager](#google-cloud-infrastructure-manager)** - Terraform-based solution for Google Cloud
+8. **[Kubernetes YAML](#kubernetes-yaml)** - Native Kubernetes resource definitions
+9. **[Crossplane](#crossplane)** - Kubernetes as universal control plane
+10. **[OpenTofu](#opentofu)** - Open-source Terraform alternative
 
 ### Configuration Management Tools  
 
-- **[Ansible](#ansible)** - Configuration management with some infrastructure provisioning capabilities
 - **[Chef](#chef)** - Configuration management and compliance automation
 - **[Puppet](#puppet)** - Configuration management and compliance automation  
 - **[Salt](#salt)** - Configuration management and remote execution
 
 ### Application and Platform Management Tools
 
-- **[Kubernetes Operators](#kubernetes-operators)** - Application lifecycle management on Kubernetes (not infrastructure provisioning)
 - **[Kubernetes](#kubernetes-container-orchestration-platform)** - Container orchestration platform
-
-### Infrastructure Automation and Design Tools
-
-- **[System Initiative](#system-initiative)** - Collaborative infrastructure automation platform
-- **[Brainboard](#brainboard-visual-infrastructure-design)** - Visual design tool that generates IaC code
 
 ### Security and Compliance Tools
 
+- **[Pulumi ESC](#pulumi-esc)** - Configuration and secrets management platform
+- **[Pulumi Insights](#pulumi-insights)** - Cloud resource search, analytics, and compliance platform
+- **[Snyk](#security-scanning-tools)** - Developer security platform with IaC scanning
+- **[Wiz](#security-scanning-tools)** - Comprehensive cloud security platform
+- **[HashiCorp Sentinel](#security-scanning-tools)** - Policy-as-code framework for Terraform
 - **[Checkov](#security-scanning-tools)** - Static analysis for IaC security
-- **[KICS](#security-scanning-tools)** - Infrastructure security scanning
-- **[Terrascan](#security-scanning-tools)** - Compliance violation detection
-- **[Trivy](#security-scanning-tools)** - Comprehensive security scanner
-- **[Spectral](#security-scanning-tools)** - Policy-as-code platform
 - **[TFLint](#linting-and-validation-tools)** - Terraform linting and validation
-- **[Aikido Security](#linting-and-validation-tools)** - Application security platform
 
 ### Infrastructure Automation and Management Platforms
 
@@ -107,15 +101,12 @@ This guide covers the following infrastructure as code tools and platforms:
 - **[HashiCorp Cloud Platform](#iac-automation-platforms)** - Enterprise SaaS platform for Terraform management and automation
 - **[Spacelift](#iac-automation-platforms)** - Automation platform for IaC workflows (not an IaC tool itself)
 - **[Env0](#iac-automation-platforms)** - Governance and automation platform for existing IaC tools
-- **[Atlantis](#iac-automation-platforms)** - GitOps workflows for Terraform and OpenTofu
-- **[Vagrant](#development-environment-tools)** - Development environment management (not cloud IaC)
-- **[Docker Compose](#development-environment-tools)** - Multi-container application definitions
 
 ## Core Infrastructure as Code Tools
 
-### Pulumi
+### 1. Pulumi
 
-License: Apache 2.0 
+License: Apache 2.0
 Best For: Teams who want flexible, language-agnostic IaC for infrastructure and operations
 
 Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
@@ -392,7 +383,7 @@ outputs:
 
 {{% /choosable %}}
 
-Key Strengths:
+Key Features:
 
 - **General-purpose language support**: Use Python, TypeScript, Go, C#, Java, or YAML without learning new DSLs
 - **Software engineering practices**: Full IDE support, comprehensive testing frameworks, debugging capabilities
@@ -408,14 +399,16 @@ Considerations:
 
 Organizations like Unity, Snowflake, and Starburst have reported significant productivity improvements (80-90% deployment time reductions) when adopting programming language-based approaches. These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
 
-### Terraform
+> **Ready to get started?** [Experience Pulumi's programming language approach](/docs/get-started/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
+
+### 2. Terraform
 
 License: Business Source License (BSL) 1.1 (Not Open Source)  
 Best For: Teams with existing Terraform expertise and established workflows
 
-[Terraform](/docs/iac/concepts/vs/terraform/) remains one of the most widely adopted IaC tools, using HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. Despite its licensing change to BSL in 2023, it continues to be a strong choice for many organizations.
+[Terraform](/docs/iac/concepts/vs/terraform/) uses HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. However, its 2023 licensing change to BSL (no longer open source) and inherent limitations with domain-specific languages create challenges for teams requiring advanced software engineering practices.
 
-Key Strengths:
+Key Features:
 
 - **Extensive provider ecosystem**: Largest collection of community-maintained providers covering virtually every cloud service
 - **Established workflows**: Mature plan-and-apply process with extensive tooling and CI/CD integrations
@@ -426,7 +419,6 @@ Key Strengths:
 When Terraform Works Well:
 
 - Teams with existing HCL expertise and Terraform investments
-- Organizations using predominantly community-supported cloud services
 - Infrastructure patterns that fit well within HCL's declarative model
 - Teams comfortable with template-based approaches
 
@@ -462,55 +454,14 @@ resource "aws_subnet" "public" {
 }
 ```
 
-### OpenTofu
-
-License: Mozilla Public License 2.0  
-Best For: Teams seeking an open-source Terraform alternative with community governance
-
-OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/concepts/vs/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
-
-Key Strengths:
-
-- **True open source**: MPL 2.0 license with community governance via Linux Foundation ensuring long-term accessibility
-- **Terraform compatibility**: Drop-in replacement maintaining existing workflows, modules, and provider ecosystem
-- **Community-driven development**: Transparent roadmap, open contribution process, and vendor-neutral governance
-- **License certainty**: Removes concerns about future licensing restrictions for commercial use
-
-When OpenTofu Makes Sense:
-
-- Organizations requiring guaranteed open-source licensing for compliance or philosophical reasons
-- Teams with significant Terraform investments wanting to avoid vendor lock-in
-- Environments where community governance and transparency are priorities
-- Projects needing long-term license stability
-
-Architectural Considerations:
-As a Terraform fork, OpenTofu inherits the same architectural approach, which means teams evaluating it should consider whether HCL-based infrastructure definition meets their long-term needs for testing, IDE integration, and developer productivity, or whether a programming language-based approach might better serve complex scenarios.
-
-Code Example:
-
-```hcl
-resource "aws_instance" "web" {
-  ami           = "ami-0c55b159cbfafe1d0"
-  instance_type = "t3.micro"
-
-  tags = {
-    Name = "HelloWorld"
-  }
-}
-
-output "instance_ip" {
-  value = aws_instance.web.public_ip
-}
-```
-
-### AWS Cloud Development Kit (CDK)
+### 3. AWS Cloud Development Kit (CDK)
 
 License: Apache 2.0  
 Best For: AWS-focused teams who prefer programming languages over templates
 
 AWS CDK allows you to define AWS infrastructure using familiar programming languages, synthesizing CloudFormation templates for deployment while providing higher-level abstractions. CDK addresses many limitations of traditional template-based approaches by enabling general-purpose programming languages.
 
-Key Strengths:
+Key Features:
 
 - **General-purpose programming languages**: TypeScript, Python, Java, C#, JavaScript support with full IDE integration (Go available in Developer Preview)
 - **AWS-optimized constructs**: High-level components encapsulating AWS best practices
@@ -564,7 +515,7 @@ export class MyStack extends cdk.Stack {
 }
 ```
 
-### AWS CloudFormation
+### 4. AWS CloudFormation
 
 License: Proprietary (AWS Service)  
 Best For: AWS-only deployments requiring deep service integration
@@ -603,54 +554,22 @@ Resources:
       AvailabilityZone: !Select [0, !GetAZs '']
 ```
 
-### Terragrunt
+### 5. Azure Resource Manager (ARM)
 
-License: MIT  
-Best For: Complex Terraform deployments requiring advanced orchestration
+License: Proprietary (Microsoft Service)  
+Best For: Azure-native deployments requiring comprehensive platform integration
 
-Terragrunt acts as a wrapper around Terraform, providing additional functionality for managing complex, multi-environment Terraform deployments with reduced code duplication.
+Azure Resource Manager provides the foundational infrastructure as code solution for Microsoft Azure, offering complete support for Azure services through JSON-based ARM templates. As Azure's native IaC solution, ARM templates provide the most comprehensive coverage of Azure services and features.
 
-Key Features:
-
-- **DRY configurations**: Eliminate repetitive Terraform code
-- **Dependency management**: Handle complex module dependencies
-- **Remote state management**: Automated backend configuration
-- **Environment management**: Consistent configurations across environments
-
-Code Example:
-
-```hcl
-# terragrunt.hcl
-terraform {
-  source = "git::git@github.com:foo/modules.git//app?ref=v0.0.3"
-}
-
-include {
-  path = find_in_parent_folders()
-}
-
-inputs = {
-  instance_count = 3
-  instance_type  = "t3.micro"
-}
-```
-
-### Azure Resource Manager (ARM) and Bicep
-
-License: Proprietary (Microsoft Service) / MIT (Bicep)  
-Best For: Azure-focused deployments requiring native platform integration
-
-Azure Resource Manager provides the native infrastructure as code solution for Microsoft Azure, offering comprehensive support for Azure services through ARM templates. Azure Bicep serves as a more readable domain-specific language (DSL) that compiles to ARM templates, providing a cleaner syntax while maintaining full ARM compatibility.
-
-Pulumi Integration: Pulumi's [native Azure providers](/docs/clouds/azure/) offer equivalent comprehensive Azure service coverage with general-purpose programming languages. Both ARM templates and Bicep deployments can be [imported into Pulumi](/docs/using-pulumi/adopting-pulumi/import/), and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
+Pulumi Integration: Pulumi's [native Azure providers](/docs/clouds/azure/) offer equivalent comprehensive Azure service coverage with general-purpose programming languages. ARM templates can be [imported into Pulumi](/docs/using-pulumi/adopting-pulumi/import/), and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
 
 Key Features:
 
-- **Azure-native**: Complete Azure service coverage
-- **Multiple syntaxes**: JSON templates (ARM) or Bicep DSL for improved readability
+- **Azure-native**: Complete Azure service coverage with first-party support
+- **JSON templates**: Declarative resource definitions in JSON format
 - **Resource groups**: Logical organization of related resources
 - **Deployment modes**: Complete or incremental deployment options
-- **ARM compilation**: Bicep compiles to ARM templates for deployment
+- **Comprehensive integration**: Deep integration with Azure services and features
 
 Code Example:
 
@@ -673,7 +592,48 @@ Code Example:
 }
 ```
 
-### Google Cloud Infrastructure Manager
+### 6. Azure Bicep
+
+License: MIT  
+Best For: Azure deployments requiring improved readability and developer experience
+
+Azure Bicep is a domain-specific language (DSL) that simplifies Azure Resource Manager template authoring. Bicep files compile transparently to ARM templates, providing all the capabilities of ARM with significantly improved syntax and developer experience.
+
+Key Features:
+
+- **Simplified syntax**: Clean, readable syntax compared to JSON ARM templates
+- **ARM compilation**: Compiles to ARM templates for deployment, ensuring full compatibility
+- **Type safety**: Strong typing and IntelliSense support in development environments
+- **Modular design**: Support for modules and code reuse across projects
+- **Azure-native**: Complete Azure service coverage through ARM template compilation
+
+Code Example:
+
+```bicep
+@description('Storage Account type')
+@allowed([
+  'Standard_LRS'
+  'Standard_GRS'
+  'Standard_ZRS'
+  'Premium_LRS'
+])
+param storageAccountType string = 'Standard_LRS'
+
+@description('Location for the storage account.')
+param location string = resourceGroup().location
+
+resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
+  name: 'mystorageaccount'
+  location: location
+  sku: {
+    name: storageAccountType
+  }
+  kind: 'StorageV2'
+  properties: {}
+}
+```
+
+### 7. Google Cloud Infrastructure Manager
 
 License: Proprietary (Google Service)  
 Best For: Google Cloud Platform deployments using Terraform
@@ -722,7 +682,67 @@ output "instance_ip" {
 }
 ```
 
-### Crossplane
+### 8. Kubernetes YAML
+
+License: Apache 2.0  
+Best For: Teams managing container-native applications and cloud-native infrastructure
+
+Kubernetes YAML manifests represent one of the most widely adopted forms of infrastructure as code, enabling teams to define, version, and manage containerized applications and their supporting infrastructure through declarative configuration files.
+
+Key Features:
+
+- **Declarative configuration**: Define desired state through human-readable YAML files
+- **Native Kubernetes integration**: Direct integration with Kubernetes API without additional tools
+- **GitOps compatibility**: Version control YAML files for automated deployment workflows
+- **Resource relationships**: Define dependencies and relationships between Kubernetes resources
+- **Extensive ecosystem**: Rich ecosystem of operators and custom resources extending functionality
+
+Code Example:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app
+  labels:
+    app: web-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-app
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+      - name: web-app
+        image: nginx:1.21
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-app-service
+spec:
+  selector:
+    app: web-app
+  ports:
+  - port: 80
+    targetPort: 80
+  type: LoadBalancer
+```
+
+### 9. Crossplane
 
 License: Apache 2.0  
 Best For: Kubernetes-first organizations managing multi-cloud infrastructure
@@ -755,40 +775,45 @@ spec:
     name: aws-provider-config
 ```
 
-### Kubernetes Operators
+### 10. OpenTofu
 
-License: Various (typically Apache 2.0)  
-Best For: Kubernetes-native application lifecycle management
+License: Mozilla Public License 2.0  
+Best For: Teams seeking an open-source Terraform alternative with community governance
 
-> [!INFO]
-> Kubernetes Operators are application management tools, not Infrastructure as Code tools. Operators manage application lifecycles, database deployments, and service configurations within existing Kubernetes clusters, rather than provisioning the underlying cloud infrastructure.
-
-Kubernetes Operators extend the Kubernetes API to manage complex applications and services using custom resources and controllers that encode operational knowledge.
+OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/concepts/vs/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
 
 Key Features:
 
-- **Custom resources**: Application-specific APIs and abstractions
-- **Controller patterns**: Automated reconciliation and self-healing
-- **Operator Hub**: Community marketplace for operators
-- **Lifecycle management**: Automated installation, updates, and maintenance
+- **True open source**: MPL 2.0 license with community governance via Linux Foundation ensuring long-term accessibility
+- **Terraform compatibility**: Drop-in replacement maintaining existing workflows, modules, and provider ecosystem
+- **Community-driven development**: Transparent roadmap, open contribution process, and vendor-neutral governance
+- **License certainty**: Removes concerns about future licensing restrictions for commercial use
+
+When OpenTofu Makes Sense:
+
+- Organizations requiring guaranteed open-source licensing for compliance or philosophical reasons
+- Teams with significant Terraform investments wanting to avoid vendor lock-in
+- Environments where community governance and transparency are priorities
+- Projects needing long-term license stability
+
+Architectural Considerations:
+As a Terraform fork, OpenTofu inherits the same architectural approach, which means teams evaluating it should consider whether HCL-based infrastructure definition meets their long-term needs for testing, IDE integration, and developer productivity, or whether a programming language-based approach might better serve complex scenarios.
 
 Code Example:
 
-```yaml
-apiVersion: postgresql.cnpg.io/v1
-kind: Cluster
-metadata:
-  name: postgres-cluster
-spec:
-  instances: 3
-  postgresql:
-    parameters:
-      max_connections: "200"
-      shared_buffers: "256MB"
-  bootstrap:
-    initdb:
-      database: app
-      owner: app
+```hcl
+resource "aws_instance" "web" {
+  ami           = "ami-0c55b159cbfafe1d0"
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+
+output "instance_ip" {
+  value = aws_instance.web.public_ip
+}
 ```
 
 ### Ansible
@@ -955,61 +980,7 @@ nginx:
     - mode: 644
 ```
 
-## Infrastructure Automation and Design Tools
-
-### System Initiative
-
-License: Apache 2.0  
-Best For: Teams seeking next-generation collaborative infrastructure automation with real-time visualization
-
-System Initiative represents an emerging approach to infrastructure automation that goes beyond traditional Infrastructure as Code by providing a data-centric, collaborative platform with real-time visualization and multiplayer capabilities. It allows teams to import existing infrastructure regardless of how it was created and manage it through rich visual models and TypeScript-based functions.
-
-Key Features:
-
-- **Real-time collaboration**: Multiplayer infrastructure management with live updates
-- **Visual infrastructure models**: Rich 1:1 digital twins of cloud resources
-- **Import existing infrastructure**: Bring in infrastructure created with any tool
-- **TypeScript programmability**: Full programmability via TypeScript functions
-- **Reactive architecture**: Function-driven infrastructure automation
-- **Tool integration**: API-driven integration with existing workflows
-- **Policy enforcement**: Built-in governance and compliance capabilities
-
-Code Example:
-
-```typescript
-// TypeScript-based infrastructure function
-export async function createWebServer(input: CreateWebServerInput): Promise<CreateWebServerOutput> {
-  const instance = await ec2.createInstance({
-    imageId: input.amiId,
-    instanceType: input.instanceType,
-    securityGroups: [input.securityGroupId],
-    userData: input.startupScript
-  });
-  
-  return {
-    instanceId: instance.id,
-    publicIp: instance.publicIpAddress
-  };
-}
-```
-
-### Brainboard - Visual Infrastructure Design
-
-License: Proprietary  
-Best For: Teams preferring visual infrastructure design with code generation
-
-> [!INFO]
-> Brainboard is a visual design tool that generates Infrastructure as Code, not an IaC tool itself. It provides a graphical interface for designing infrastructure that then exports to actual IaC tools like Terraform.
-
-Brainboard enables visual design of cloud infrastructure with automatic code generation, bridging the gap between visual architecture and infrastructure as code tools.
-
-Key Features:
-
-- **Visual designer**: Drag-and-drop infrastructure design interface
-- **Multi-cloud support**: Support for AWS, Azure, and Google Cloud
-- **Code generation**: Automatic Terraform code creation from visual designs
-- **Team collaboration**: Real-time collaborative design workflows
-- **Version control integration**: Git repository integration for designs and code
+## Infrastructure as Code Tools
 
 ### Kubernetes - Container Orchestration Platform
 
@@ -1068,30 +1039,75 @@ While the tools above focus on provisioning and managing infrastructure, a compl
 
 ### Security Scanning Tools
 
+Snyk - License: Proprietary  
+Leading developer security platform that includes comprehensive infrastructure as code scanning alongside container and application security. Provides real-time vulnerability detection, compliance checking, and automated remediation guidance. Integrates with popular development tools and CI/CD pipelines with extensive enterprise adoption.
+
+Wiz - License: Proprietary  
+Comprehensive cloud security platform that includes infrastructure as code scanning capabilities. Provides vulnerability management, compliance monitoring, and security posture assessment across cloud environments. Offers integration with development workflows and supports multiple IaC formats with strong enterprise presence.
+
 Checkov - License: Apache 2.0  
-Static analysis tool for infrastructure as code that scans cloud infrastructure configurations for security and compliance issues. Supports Terraform, CloudFormation, Kubernetes, Helm, ARM templates, and more. Integrates with CI/CD pipelines and provides over 1000+ built-in policies covering CIS benchmarks, PCI DSS, and GDPR compliance.
-
-KICS (Keeping Infrastructure as Code Secure) - License: Apache 2.0  
-Open-source static analysis tool that finds security vulnerabilities and compliance issues in infrastructure code. Supports 15+ platforms including Terraform, CloudFormation, Kubernetes, Docker, and Ansible. Features over 2400 queries for detecting misconfigurations and security vulnerabilities.
-
-Terrascan - License: Apache 2.0  
-Static code analyzer for Infrastructure as Code that detects compliance and security violations across cloud native technologies. Supports 500+ policies for security best practices and compliance standards including SOC 2, PCI DSS, GDPR, and HIPAA. Integrates with admission controllers for Kubernetes.
-
-Trivy - License: Apache 2.0  
-Comprehensive security scanner that includes IaC scanning capabilities alongside container and filesystem scanning. Detects vulnerabilities, misconfigurations, secrets, and compliance issues. Supports Terraform, CloudFormation, Kubernetes, Helm, and ARM templates with extensive CI/CD integration.
-
-Spectral - License: Proprietary  
-Security and compliance platform that provides policy-as-code capabilities for infrastructure scanning. Offers real-time scanning, custom policy creation, and integration with development workflows. Supports multiple IaC formats and provides detailed remediation guidance.
+Popular open-source static analysis tool for infrastructure as code that scans cloud infrastructure configurations for security and compliance issues. Supports Terraform, CloudFormation, Kubernetes, Helm, ARM templates, and more. Integrates with CI/CD pipelines and provides over 1000+ built-in policies covering CIS benchmarks, PCI DSS, and GDPR compliance.
 
 ### Linting and Validation Tools
 
 TFLint - License: MPL 2.0  
 Terraform linter focused on possible errors, best practices, and security issues in Terraform configurations. Provides pluggable rule sets for cloud providers (AWS, Azure, GCP) and helps enforce coding standards, detect deprecated syntax, and prevent common configuration errors.
 
-Aikido Security - License: Proprietary  
-Application security platform that includes infrastructure security scanning capabilities. Provides continuous security monitoring, vulnerability management, and compliance tracking across the entire application lifecycle including infrastructure code.
-
 These security tools integrate into CI/CD pipelines alongside your chosen IaC tool to provide comprehensive security coverage throughout the infrastructure lifecycle.
+
+### Pulumi ESC
+
+License: Apache 2.0 (Open Source) / Proprietary (SaaS)  
+Best For: Teams needing centralized configuration and secrets management across environments and tools
+
+Pulumi ESC (Environments, Secrets, and Configuration) is a comprehensive platform for managing configuration data, secrets, and environment variables across your entire infrastructure and application stack. ESC provides a single source of truth for configuration that works with any infrastructure tool, not just Pulumi.
+
+Key Features:
+
+- **Universal configuration management**: Works with any infrastructure tool, CI/CD system, or application
+- **Hierarchical environments**: Compose configuration from multiple sources with inheritance and overrides
+- **Dynamic secrets**: Integration with cloud providers for short-lived credentials and just-in-time access
+- **Policy-based access control**: Fine-grained permissions and audit logging for configuration access
+- **Multiple consumption methods**: CLI, REST API, SDK integration, and direct cloud provider integration
+- **GitOps workflows**: Version control integration with pull request-based configuration management
+
+Code Example:
+
+```yaml
+# Production environment configuration
+values:
+  app:
+    name: myapp
+    version: ${fn.fromJSON(aws.ecr.getAuthorizationToken).password}
+  database:
+    connectionString: ${pulumi.database.connectionString}
+imports:
+  - shared/common
+  - aws/production
+```
+
+### Pulumi Insights
+
+License: Proprietary (SaaS)  
+Best For: Organizations needing comprehensive cloud resource visibility, search, and compliance monitoring
+
+Pulumi Insights provides cloud resource search, analytics, and compliance capabilities across your entire multi-cloud infrastructure, regardless of how resources were provisioned. It offers a unified view of your cloud resources with powerful search, cost analysis, and policy enforcement.
+
+Key Features:
+
+- **Universal cloud inventory**: Discover and catalog resources across AWS, Azure, Google Cloud, and Kubernetes
+- **Advanced search and analytics**: Query resources by tags, properties, relationships, and compliance status
+- **Cost optimization insights**: Resource cost analysis, trends, and optimization recommendations
+- **Compliance monitoring**: Continuous policy evaluation and drift detection across all cloud resources
+- **Resource relationships**: Understand dependencies and relationships between cloud resources
+- **Integration with any IaC tool**: Works with resources created by Pulumi, Terraform, CloudFormation, or manually
+
+Use Cases:
+
+- **Cloud governance**: Ensure compliance with organizational policies and industry standards
+- **Cost management**: Identify unused resources and optimization opportunities
+- **Security auditing**: Track resource configurations and detect security misconfigurations
+- **Multi-cloud visibility**: Single pane of glass for resources across different cloud providers
 
 ## Infrastructure Automation and Management Platforms
 
@@ -1099,7 +1115,7 @@ While the above tools focus on defining and provisioning infrastructure, several
 
 ### IaC Automation Platforms
 
-Pulumi Cloud 
+Pulumi Cloud
 Best For: Teams using Pulumi IaC who need enterprise-grade collaboration, security, and governance
 
 Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud. It serves as the managed service companion to Pulumi's open-source infrastructure as code tool, providing enterprise capabilities that extend beyond basic IaC functionality.
