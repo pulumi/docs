@@ -17,7 +17,7 @@ Today we’re excited to launch support for Customer-Managed Keys (CMKs) in Pulu
 
 ## Why Customer-Managed Keys?
 
-Pulumi encrypts secrets and other sensitive information stored in ESC using data keys, which are encrypted with Pulumi Managed keys using strong security standards. However, customers might need to use their own keys to gain full control over their lifecycle and revocation, maintain a centralized audit trail, and enforce custom rotation policies. This is especially important to meet compliance requirements or specific regulations (e.g., HIPAA, GDPR, FedRAMP, etc).  Customer-Managed Keys give customers that control while keeping these aspects transparent for the consumers of those secrets.
+Pulumi encrypts secrets and other sensitive information stored in ESC using data keys, which are encrypted with Pulumi-Managed Keys using strong security standards. However, customers might need to use their own keys to gain full control over their lifecycle and revocation, maintain a centralized audit trail, and enforce custom rotation policies. This is especially important to meet compliance requirements or specific regulations (e.g., HIPAA, GDPR, FedRAMP, etc).  Customer-Managed Keys give customers that control while keeping these aspects transparent for the consumers of those secrets.
 
 ## How It Works
 
