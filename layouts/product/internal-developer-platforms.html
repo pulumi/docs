@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-                <div class="rounded-xl shadow-2xl relative h-0 overflow-hidden" style="padding-bottom: 56.25%;">
+                <div class="responsive-video-container video-16-9 rounded-xl shadow-2xl relative h-0 overflow-hidden">
                     {{ $videoID := index (split .Params.demo_video.image "?v=") 1 }}
                     <iframe
                         src="https://www.youtube.com/embed/{{ $videoID }}?rel=0"

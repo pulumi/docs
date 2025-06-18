@@ -1,0 +1,17 @@
+// Responsive video containers for better mobile viewing
+.responsive-video-container {
+    padding-bottom: 65%; // Mobile: taller aspect ratio for better viewing
+    
+    @screen lg {
+        padding-bottom: 50.25%; // Desktop: maintain original flatter aspect ratio
+    }
+    
+    // For pages that originally used 16:9 aspect ratio (56.25%)
+    &.video-16-9 {
+        padding-bottom: 65%; // Mobile: taller aspect ratio
+        
+        @screen lg {
+            padding-bottom: 56.25%; // Desktop: standard 16:9 aspect ratio
+        }
+    }
+}
