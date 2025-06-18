@@ -31,7 +31,7 @@ Setting it up takes just a few minutes:
 
 ## Available Today
 
-Customer-managed keys with support for AWS KMS are available today for all organizations on the **Pulumi Enterprise** or **Business Critical** plans. You can set it up by following the instructions [in the Pulumi Cloud documentation.](https://www.pulumi.com/docs/pulumi-cloud/admin/customer-managed-keys)
+Customer-Managed Keys with support for AWS KMS are available today for all organizations on the **Pulumi Enterprise** or **Business Critical** plans. You can set it up by following the instructions [in the Pulumi Cloud documentation](https://www.pulumi.com/docs/pulumi-cloud/admin/customer-managed-keys).
 
 We expect to add support for more cloud providers in the future. Please vote on the following GitHub issues for your favorite to support prioritization:
 
