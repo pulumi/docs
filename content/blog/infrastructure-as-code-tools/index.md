@@ -16,7 +16,7 @@ tags:
     - devops
 ---
 
-Infrastructure as Code (IaC) has evolved beyond simple automation into a fundamental shift toward applying software engineering practices to infrastructure management. In 2025, leading organizations aren't just automating infrastructure—they're treating it as software, complete with testing, version control, code reviews, and continuous integration.
+Infrastructure as Code (IaC) has evolved beyond simple automation into a fundamental shift toward applying software engineering practices to infrastructure management. In 2025, leading organizations aren't just provisioning infrastructure—they're treating it as software, complete with testing, version control, code reviews, and continuous integration.
 
 As infrastructure complexity grows, teams increasingly seek approaches that provide the same developer productivity tools they use for application development. While template-based and domain-specific language approaches serve many use cases effectively, teams with complex requirements or programming backgrounds often find that general-purpose programming languages offer advantages in testing, abstraction, and collaboration.
 
@@ -71,10 +71,10 @@ This guide covers the following infrastructure as code tools and platforms:
 - **[AWS CloudFormation](#aws-cloudformation)** - Native AWS integration
 - **[Terragrunt](#terragrunt)** - Terraform orchestration wrapper
 - **[Azure Resource Manager (ARM) and Bicep](#azure-resource-manager-arm-and-bicep)** - Azure-native templates and DSL
-- **[Google Cloud Infrastructure Manager](#google-cloud-infrastructure-manager)** - Modern GCP IaC with Terraform
+- **[Google Cloud Infrastructure Manager](#google-cloud-infrastructure-manager)** - Terraform-based solution for Google Cloud.
 - **[Crossplane](#crossplane)** - Kubernetes as universal control plane
 
-### Configuration Management Tools (Not Pure IaC)
+### Configuration Management Tools  
 
 - **[Ansible](#ansible)** - Configuration management with some infrastructure provisioning capabilities
 - **[Chef](#chef)** - Configuration management and compliance automation
@@ -115,7 +115,7 @@ This guide covers the following infrastructure as code tools and platforms:
 
 ### Pulumi
 
-License: Apache 2.0 (Open Source)  
+License: Apache 2.0 
 Best For: Teams who want flexible, language-agnostic IaC for infrastructure and operations
 
 Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
@@ -1099,7 +1099,7 @@ While the above tools focus on defining and provisioning infrastructure, several
 
 ### IaC Automation Platforms
 
-Pulumi Cloud - License: Proprietary (SaaS)  
+Pulumi Cloud 
 Best For: Teams using Pulumi IaC who need enterprise-grade collaboration, security, and governance
 
 Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud. It serves as the managed service companion to Pulumi's open-source infrastructure as code tool, providing enterprise capabilities that extend beyond basic IaC functionality.
