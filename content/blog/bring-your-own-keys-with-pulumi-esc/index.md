@@ -17,7 +17,7 @@ Today we’re excited to launch support for Customer-Managed Keys (CMKs) in Pulu
 
 ## Why Customer-Managed Keys?
 
-Pulumi encrypts secrets and other sensitive information stored in ESC using data keys, which are encrypted with Pulumi-Managed Keys using strong security standards. However, customers might need to use their own keys to gain full control over their lifecycle and revocation, maintain a centralized audit trail, and enforce custom rotation policies. This is especially important to meet compliance requirements or specific regulations (e.g., HIPAA, GDPR, FedRAMP, etc). Customer-Managed Keys give customers that control while keeping these aspects transparent for the consumers of those secrets.
+Pulumi encrypts secrets and other sensitive information stored in ESC using data keys, which are encrypted with Pulumi-Managed Keys using strong security standards. However, customers might need to use their own keys to gain full control over their lifecycle and revocation, maintain a centralized audit trail, and enforce custom rotation policies. This is especially important to meet compliance requirements or specific regulations (e.g., HIPAA, GDPR, FedRAMP, etc.). Customer-Managed Keys give customers that control while keeping these aspects transparent for the consumers of those secrets.
 
 ## How It Works
 
@@ -26,7 +26,7 @@ Customer-Managed Keys integrate seamlessly with your Pulumi Cloud Organization. 
 Setting it up takes just a few minutes:
 
 1. **Create** a KMS key in your AWS account.  
-2. **Grant Access** to the KMS key using OIDC in your AWS account.  
+2. **Grant access** to the KMS key using OIDC in your AWS account.  
 3. **Configure** your Pulumi Cloud organization to use your new KMS key.
 
 ## Available Today
@@ -43,7 +43,7 @@ We expect to add support for more cloud providers in the future. Please vote on 
 We’re excited to see how Customer-Managed Keys help you and your organization meet your compliance goals with Pulumi Cloud. Your feedback is essential as we continue to evolve this feature:
 
 * Connect with us in the [Pulumi Community Slack](https://slack.pulumi.com)  
-* Open an issue on [GitHu](https://github.com/pulumi/pulumi)
+* Open an issue on [GitHub](https://github.com/pulumi/pulumi)
 * Read the full documentation on [Customer-Managed Keys](https://www.pulumi.com/docs/pulumi-cloud/admin/customer-managed-keys)
 
 Try this today, [Get Started with Pulumi for free](https://pulumi.com/start)
