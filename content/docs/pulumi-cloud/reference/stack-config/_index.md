@@ -8,7 +8,7 @@ menu:
         weight: 20
 ---
 
-Stack config endpoints allow you to manage configuration settings for your Pulumi stacks, including environment settings and secrets management configuration. If stack configuration is returned by the API, it used in place of the local stack config file (e.g. `Pulumi.[stack].yaml`).
+Stack config endpoints allow you to manage configuration settings for your Pulumi stacks, including environment settings and secrets management configuration. If stack configuration is returned by the API, it is used in place of the local stack config file (e.g. `Pulumi.[stack].yaml`).
 
 ## Stack Config Operations
 
