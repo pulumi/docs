@@ -96,3 +96,13 @@ resources:
 {{% notes type="warning" %}}
 The `customTimeouts` resource option does not apply to component resources, and will not have the intended effect.
 {{% /notes %}}
+
+{{% notes type="warning" %}}
+Not all Pulumi resources support `customTimeouts` as support is dependent upon the particular resource's implementation in a given provider. Most resources will print a warning when `customTimeouts` is not supported, e.g.:
+
+```plain
+provider:package:ResourceName (pulumi-project):
+    warning: Resource does not support customTimeouts, ignoring: create=30m0s
+```
+
+{{% /notes %}}
