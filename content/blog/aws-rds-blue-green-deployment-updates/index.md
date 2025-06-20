@@ -30,7 +30,7 @@ Though this strategy typically increases the amount of time that updates need to
 
 ## How to use
 
-To use [blue/green deployments for your database updates](https://github.com/pulumi-demos/examples/tree/main/typescript/aws-rds-blue-green-updates), start by creating a database and corresponding parameter group.
+Please see the full example code here: [Blue/Green Deployment Updates on RDS](https://github.com/pulumi-demos/examples/tree/main/typescript/aws-rds-blue-green-updates). To use blue/green deployments for your database updates, start by creating a database and corresponding parameter group.
 
 ```typescript
 const parameterGroup = new aws.rds.ParameterGroup(
@@ -84,6 +84,8 @@ After that, your update has been completed with minimal disruption!
 General [limitations and considerations for Amazon RDS blue/green deployments](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-considerations.html#blue-green-deployments-limitations) are listed in the AWS documentation, but there are a few other considerations that should be taken into account when using them for updates with infrastructure as code (IaC).
 
 * **No Custom Checks**: Because IaC will automatically perform the switchover when the update is complete, you will not have the opportunity to perform custom checks on the green instance before promoting it. RDS will run some basic [guardrails](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-switching.html#blue-green-deployments-switching-guardrails) checks before performing the switchover, but you will not be able to perform any additional checks.
+* **No Cluster Support**: This feature only works with database instances, not with clusters or instances that are in a cluster.
 * **Long Update Times**: Because the IaC program will deploy temporary resources before performing the update and destroy them after, blue/green updates will take considerably longer than their in-place counterparts.
 * **Manual Cleanup**: Because the green instance and blue/green deployment are temporary resources designed to decrease downtime during the update, they are not tracked in the IaC state. If the update fails partway through, these temporary resources may have to be cleaned up manually. If the update is interrupted, you can delete the blue/green deployment and green database to get back into a manageable state.
-* **Resource ID Change**: On an update, the resource ID of the database might change since a new instance has been created. The endpoint and other details about the database will be maintained by AWS during switchover, but the resource ID should be dynamically retreived from the stack outputs whenever it is used to ensure it stays up to date.
+* **Resource ID Change**: On an update, the resource ID of the database might change since a new instance has been created. The endpoint and other details about the database will be maintained by AWS during switchover, but the resource ID should be dynamically retreived from the stack outputs whenever it is used to ensure it stays up to date. Usually, no application or connection details will need to be updated since they don't rely on the resource ID itself.
+* **Types Of Updates**: The blue/green update strategy will be used for changes that require a maintainence window including updates to the engine version, parameter group, storage and performance settings, and optimized writes.
