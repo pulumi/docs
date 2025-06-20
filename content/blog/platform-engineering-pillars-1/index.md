@@ -27,11 +27,12 @@ Software drives innovation. Development teams face pressure to ship features fas
 
 This is where [Platform Engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) comes in. It helps developers move faster by creating tools that actually work. A good internal platform lets teams self-serve infrastructure, find documentation, follow best practices, and focus on what they do best: writing useful software.
 
+<!--more-->
+{{< youtube "AUCt28gVR6Y?rel=0" >}}
+
 Building a platform isn't about finding one perfect tool. It's about assembling the right pieces, or pillars. These pillars define what every successful internal developer platform needs.
 
 [This series](/blog/tag/platform-engineering-pillars/) explores these key pillars of Platform Engineering, offering a practical guide to building platforms that remove barriers to developer speed. Each pillar addresses a specific challenge organizations face when scaling developer productivity. The first challenge is overcoming infrastructure chaos.
-
-<!--more-->
 
 <img align="right" style="margin: 15px;" width="300px" src="provisioning.png">
 

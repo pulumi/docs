@@ -4,6 +4,7 @@ layout: kubernetes
 url: /kubernetes
 
 meta_desc: Pulumi provides a single infrastructure as code workflow for Kubernetes and underlying infrastructure, using general-purpose languages and YAML.
+meta_image: /images/Kubernetes-meta.png
 
 aliases:
   - /cloudnative

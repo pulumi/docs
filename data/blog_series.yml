@@ -5,6 +5,7 @@ series:
   - slug: "platform-engineering-pillars"
     title: "Platform Engineering Pillars Series"
     description: "Six essential pillars for transforming infrastructure chaos into streamlined developer platforms: provisioning, self-service, workflows, security, observability, and governance."
+    video_id: "AUCt28gVR6Y?rel=0"
     meta_image: "/blog/platform-engineering-pillars-1/meta.png"
   - slug: "ai-slack-bot"
     title: "AI Slack Bot Series"
