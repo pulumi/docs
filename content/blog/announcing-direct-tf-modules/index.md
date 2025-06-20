@@ -1,79 +1,121 @@
 ---
-title: "Introducing Pulumi Support for Executing Terraform Modules"
+title: "New: Run Terraform Modules in Pulumi Without Conversion"
 allow_long_title: true
-date: 2024-06-05T00:00:00-04:00
+date: 2024-06-20
 draft: false
-meta_desc: "Pulumi can now execute Terraform modules directly"
+meta_desc: "Pulumi can now execute Terraform modules within Pulumi directly, making migration from Terraform to Pulumi simpler than ever for complex infrastructure projects."
 meta_image: "meta.png"
 authors:
   - anton-tayanovskyy
 tags:
   - terraform
   - features
+  - migration
+  - infrastructure-as-code
+social:
+  twitter: |
+    Pulumi now supports executing Terraform modules directly! No more complex conversions for module-heavy projects. Migrate from Terraform to Pulumi with ease.
+  linkedin: |
+    We're excited to announce that Pulumi can now execute Terraform modules directly, addressing one of the biggest challenges in migrating complex infrastructure from Terraform to Pulumi.
+    
+    This new capability eliminates the need to convert module sources, allowing teams to immediately manage everything with Pulumi while maintaining the exact Terraform semantics they're familiar with.
+    
+    Key benefits:
+    • Seamless migration for module-heavy projects
+    • Type-safe integration with Pulumi programming languages
+    • Automatic state management in Pulumi Cloud
+    • Full support for Terraform and OpenTofu registries
+    
+    This represents a significant step forward in making infrastructure migration accessible to teams of all sizes.
 ---
 
-Today Pulumi is introducing the capability to execute
-[Terraform modules directly](https://www.pulumi.com/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/).
-This makes migrating complex infrastructure from Terraform to Pulumi us now simpler than ever.
+Today, we're excited to announce a major advancement in Pulumi's mission to make modern infrastructure as code accessible to every developer: **direct support for executing Terraform modules**. This new capability addresses one of the most significant challenges our users face when migrating from Terraform to Pulumi—complex projects with extensive module dependencies.
 
 <!--more-->
 
-We are releasing this feature in response to user feedback: our users tell us that while Pulumi's [pulumi convert
---from terraform](https://www.pulumi.com/blog/converting-full-terraform-programs-to-pulumi/) is very useful for small
-programs, it runs into challenges on more complex projects, especially ones involving modules. With the new feature you
-no longer need to convert module sources, and can immediately manage everything with Pulumi.
+## The Path to Modern Infrastructure as Code
 
-What is included in the launch:
+At Pulumi, we believe the ideal infrastructure as code experience leverages the full power of modern programming languages, AI-assisted development, and cloud-native tooling. Our vision is that every team should be able to write infrastructure code in their preferred language—TypeScript, Python, Go, C#, or Java—with full IntelliSense, testing capabilities, and AI-powered assistance.
 
-- `pulumi package add terraform-module <module-source> [<version>] <pulumi-package-name>` command can now run modules
-  from Terraform and OpenTofu registries as well as locally managed modules under Pulumi. This is enabled by the new
-  [terraform-module](https://github.com/pulumi/pulumi-terraform-module) provider.
+However, we also understand the reality that many organizations have invested years building extensive Terraform module estates. These modules often contain critical business logic, compliance configurations, and battle-tested patterns that teams can't always rewrite overnight.
 
-- `pulumi convert --from terraform` now supports a `// @pulumi-terraform-module <pulumi-package-name>` annotation to
-  avoid translating a module recursively and instead execute it directly.
+This new capability bridges that gap, giving you the best of both worlds: **the ability to start new projects in Pulumi immediately while preserving your existing Terraform modules until you're ready to migrate them**.
 
-- Pulumi providers expose helper methods to assist with keeping config consistent across Pulumi and Terraform providers
-  required to run modules. For example, [AWS provider](https://github.com/pulumi/pulumi-aws) allows to query
-  `awsProvider.terraformConfig()`.
+## Strategic Migration Approach
 
-## How it works
+Here's how we recommend teams approach this transition:
 
-Under the hood Pulumi orchestrates an configurable executor such as `tofu` or `terraform` CLI to run updates against
-your infrastructure. Module code executes under exact Terraform semantics, but participates in Pulumi lifecycle with
-`pulumi {preview,up,refresh,destroy}`. Module inputs and outputs are exposed in a type-safe manner to your favorite
-Pulumi programming language, to be freely composed with other Pulumi components. Finally, Terraform state is
-automatically [stored in Pulumi](https://www.pulumi.com/docs/iac/concepts/state-and-backends/) and takes full advantage
-of proper [secret encryption](https://www.pulumi.com/docs/iac/concepts/secrets/).
+**Phase 1: New Projects in Pulumi**
+Start all new infrastructure projects in Pulumi to immediately gain the benefits of modern IaC—better developer experience, AI assistance, and cloud-native tooling.
 
-## Walkthrough
+**Phase 2: Incremental Module Migration**
+Use the new Terraform module support to bring existing modules into Pulumi projects without rewriting them. This gives you immediate access to Pulumi Cloud's state management, deployment workflows, and team collaboration features across all your IaC.
 
-To get started, run the following command in an existing Pulumi directory, linking a module as a package and giving it
-a friendly name "vpcmod":
+**Phase 3: Full Migration (When Ready)**
+Gradually migrate your Terraform modules to native Pulumi components as time and resources permit. With AI-assisted development tools making this easier than ever, you can modernize at your own pace.
 
-```
+This approach eliminates the "big bang" migration risk while ensuring you're not stuck with legacy tooling for new projects.
+
+## What This Means for Your Team
+
+This isn't just a technical feature—it's a strategic enabler for teams looking to modernize their infrastructure practices. Here's what this announcement means:
+
+**For Terraform Users**: You can now migrate to Pulumi incrementally, keeping your existing modules intact while gaining access to Pulumi's powerful programming language features, better state management, and enhanced developer experience.
+
+**For Platform Teams**: You can standardize on Pulumi for new infrastructure while seamlessly incorporating existing Terraform modules, reducing migration risk and accelerating adoption.
+
+**For DevOps Engineers**: You get the best of both worlds—the reliability of proven Terraform modules with Pulumi's superior tooling, testing capabilities, and deployment workflows.
+
+## How It Works
+
+The new feature consists of three key components:
+
+### 1. Direct Module Execution
+
+The `pulumi package add terraform-module` command now supports modules from Terraform and OpenTofu registries, as well as locally managed modules. This is powered by our new [terraform-module provider](https://github.com/pulumi/pulumi-terraform-module), which orchestrates Terraform execution while maintaining the full Pulumi lifecycle.
+
+### 2. Enhanced Conversion Support
+
+Our `pulumi convert --from terraform` tool now supports a special annotation `// @pulumi-terraform-module <pulumi-package-name>` that tells the converter to execute modules directly rather than attempting to translate them. This preserves your existing module logic while enabling Pulumi's benefits.
+
+### 3. Configuration Synchronization
+
+Pulumi providers now expose helper methods like `awsProvider.terraformConfig()` to keep configuration consistent between Pulumi and Terraform providers, eliminating the need to maintain duplicate configuration.
+
+## Real-World Impact
+
+Let me walk you through a practical example that demonstrates the power of this integration.
+
+### Setting Up a VPC Module
+
+Start by adding a Terraform module to your Pulumi project:
+
+```bash
 $ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.18.1 vpcmod
 Successfully generated a Nodejs SDK for the vpcmod package at /Users/anton/tmp/2025-05-14/blog/sdks/vpcmod
 ```
 
-Notice that Pulumi generated a local SDK for the module:
+Pulumi automatically generates a local SDK with full TypeScript support:
 
-```
+```bash
 $ ls sdks/vpcmod
 README.md       index.ts        node_modules    provider.ts     tsconfig.json   utilities.ts
 bin             module.ts       package.json    scripts         types
 ```
 
-And linked it into your project in `package.json`:
+And links it into your project in `package.json`:
 
-
-```
+```json
+{
     "dependencies": {
-        ...,
         "@pulumi/vpcmod": "file:sdks/vpcmod"
     }
+}
 ```
 
-You can now reference the module from your code with full code completion support. For example:
+### Using the Module in Your Code
+
+Now you can use the module with full IntelliSense support:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -99,12 +141,11 @@ export const publicSubnets = vpc.public_subnets;
 export const privateSubnets = vpc.private_subnets;
 ```
 
-If you have AWS credentials set up, you can now do `pulumi up` and it will show all the resources being created:
+### Seamless Deployment
 
-TODO: the preview update section looks different with views.
+When you run `pulumi up`, Pulumi orchestrates the Terraform module execution while providing its signature preview and deployment experience:
 
-```
-
+```bash
 Previewing update (dev)
 
 View in Browser (Ctrl+O): https://app.pulumi.com/anton-pulumi-corp/anton-blog/dev/previews/5851682a-a3e3-4f47-a50e-3d7b4f4e6c34
@@ -135,84 +176,13 @@ View in Browser (Ctrl+O): https://app.pulumi.com/anton-pulumi-corp/anton-blog/de
 
 Resources:
  + 22 to create
-
-Previewing update (dev)
-
-View in Browser (Ctrl+O): https://app.pulumi.com/anton-pulumi-corp/anton-blog/dev/previews/faab8c4d-3a86-42f6-9685-ef36ece68652
-
-     Type                                         Name                                                    Plan
- +   pulumi:pulumi:Stack                          anton-blog-dev                                          create
- +   └─ vpcmod:index:Module                       test-vpc                                                create
- +      ├─ vpcmod:index:ModuleState               test-vpc-state                                          create
- +      ├─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.private_nat_gateway[0]        create
- +      ├─ vpcmod:tf:aws_default_route_table      module.test-vpc.aws_default_route_table.default[0]      create
- +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.public[0]               create
- +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[1]                   create
- +      ├─ vpcmod:tf:aws_default_network_acl      module.test-vpc.aws_default_network_acl.this[0]         create
- +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[0]                   create
- +      ├─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.public_internet_gateway[0]    create
- +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[0]   create
- +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[0]  create
- +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.private[0]              create
- +      ├─ vpcmod:tf:aws_eip                      module.test-vpc.aws_eip.nat[0]                          create
- +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[1]                    create
- +      ├─ vpcmod:tf:aws_internet_gateway         module.test-vpc.aws_internet_gateway.this[0]            create
- +      ├─ vpcmod:tf:aws_default_security_group   module.test-vpc.aws_default_security_group.this[0]      create
- +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[1]   create
- +      ├─ vpcmod:tf:aws_vpc                      module.test-vpc.aws_vpc.this[0]                         create
- +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[0]                    create
- +      ├─ vpcmod:tf:aws_nat_gateway              module.test-vpc.aws_nat_gateway.this[0]                 create
- +      └─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[1]  create
-
-Resources:
-    + 22 to create
-
-Updating (dev)
-
-View in Browser (Ctrl+O): https://app.pulumi.com/anton-pulumi-corp/anton-blog/dev/updates/1
-
-     Type                                         Name                                                    Status
- +   pulumi:pulumi:Stack                          anton-blog-dev                                          created (145s)
- +   └─ vpcmod:index:Module                       test-vpc                                                created (143s)
- +      ├─ vpcmod:index:ModuleState               test-vpc-state                                          created (133s)
- +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.private[0]              created (1s)
- +      ├─ vpcmod:tf:aws_internet_gateway         module.test-vpc.aws_internet_gateway.this[0]            created (0.58s)
- +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[1]   created (0.76s)
- +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[1]                    created (1.00s)
- +      ├─ vpcmod:tf:aws_route_table              module.test-vpc.aws_route_table.public[0]               created (1s)
- +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[1]                   created (2s)
- +      ├─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.public_internet_gateway[0]    created (1s)
- +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.public[0]                    created (3s)
- +      ├─ vpcmod:tf:aws_default_security_group   module.test-vpc.aws_default_security_group.this[0]      created (4s)
- +      ├─ vpcmod:tf:aws_default_route_table      module.test-vpc.aws_default_route_table.default[0]      created (4s)
- +      ├─ vpcmod:tf:aws_default_network_acl      module.test-vpc.aws_default_network_acl.this[0]         created (2s)
- +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[0]   created (2s)
- +      ├─ vpcmod:tf:aws_eip                      module.test-vpc.aws_eip.nat[0]                          created (3s)
- +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[1]  created (3s)
- +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[0]                   created (1s)
- +      ├─ vpcmod:tf:aws_nat_gateway              module.test-vpc.aws_nat_gateway.this[0]                 created (1s)
- +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[0]  created (2s)
- +      ├─ vpcmod:tf:aws_vpc                      module.test-vpc.aws_vpc.this[0]                         created (2s)
- +      └─ vpcmod:tf:aws_route                    module.test-vpc.aws_route.private_nat_gateway[0]        created (3s)
-
-Resources:
-    + 22 created
-
-Duration: 2m26s
 ```
 
-The infrastructure has now provisioned and the corresponding Terraform state is stored securely inside the Pulumi
-state, which can be verified with `pulumi stack export`.
+The infrastructure deploys successfully, and the Terraform state is automatically stored securely in Pulumi Cloud with full [secret encryption](/docs/iac/concepts/secrets/) support.
 
-The above program is very simple. To take it further, check out
-[examples](https://github.com/pulumi/pulumi-terraform-module/tree/main/examples) for more realistic programs showcasing
-features such as computing subnets dynamically with Pulumi `aws.getAvailabilityZonesOutput` function or passing the
-results of the VPC module to an EKS module.
+## Migration Made Simple
 
-### convert
-
-If you are instead starting from a Terraform program, you can use `pulumi convert` instead. Just make sure to annotate
-the modules with a special comment marker `// @pulumi-terraform-module`. For example, given this `infra.tf`:
+For teams starting with existing Terraform code, the migration process is straightforward. Simply annotate your modules with a special comment:
 
 ```terraform
 // @pulumi-terraform-module vpcmod
@@ -228,76 +198,74 @@ module "my-vpc" {
 }
 ```
 
-Run `pulumi convert` as follows:
+Then run the conversion:
 
-``` shell
+```bash
 pulumi convert --from terraform --language typescript --out my-pulumi-project
 ```
 
-The resulting `my-pulumi-project` folder will have the project setup correctly for executing the `my-vpc` module.
+The resulting project is ready to deploy with full Pulumi functionality.
 
-### terraformConfig
+## Configuration Management
 
-A quick note on configuration. It can be confusing that modules need Terraform providers to execute and those are
-distinct from Pulumi providers that may also be needed in your program. Fortunately there is a simple way to keep your
-configuration in sync. For example, if you already have configured an AWS provider in your program, you can reuse its
-`terraformConfig` to configure the matching Terraform AWS provider:
+One of the key benefits is seamless configuration management. Instead of maintaining separate configurations for Pulumi and Terraform providers, you can reuse your existing Pulumi provider configuration:
 
 ```typescript
 const awsProvider = new aws.Provider("awsprovider", {
     region: "us-east-1",
     // more configuration
-})
+});
 
-// Pass the AWS configuration to your VPC module provider instead of re-entering config settings in TF notation
+// Pass the AWS configuration to your VPC module provider
 const vpcmodProvider = new vpcmod.Provider("vpcprovider", {
     "aws": awsProvider.terraformConfig().result
-})
+});
 
-// Use the VPC module provider in your Module as before
+// Use the VPC module provider in your Module
 const vpc = new vpcmod.Module("test-vpc", {...},
     {provider: vpcmodProvider}
 );
 ```
 
-This is also a great example of how the Pulumi Terraform Module fits into existing Pulumi programs - you can pass inputs
-and outputs from one resource into the other.
+This demonstrates how Terraform modules integrate seamlessly with existing Pulumi programs, allowing you to compose infrastructure components naturally.
 
+## What's Supported
 
-## Supported Features
+The integration provides comprehensive support for Pulumi's core features:
 
-The power of Pulumi is that all components can be composed seamlessly with modules, including chaining and wrapping.
+- **Full Lifecycle Management**: Preview, update, refresh, and destroy operations work exactly as expected
+- **Resource Visibility**: The entire resource tree is visible in Pulumi's UI and CLI
+- **Type Safety**: Generated TypeScript interfaces provide IntelliSense and compile-time checking
+- **Secret Management**: First-class support for Pulumi's secret encryption
+- **Provider Configuration**: Full control over Terraform provider settings
 
-All the regular operations are supported:
+## Current Limitations
 
-- Pulumi executes preview/update/refresh as expected
-- The entire resource tree being constructed is made visible
-- Updates detail which concrete module-managed resources are changing
-- Pulumi generates typed input and output accessors to interop with the module
-- Pulumi handles first-class secrets and unknown values seamlessly
-- Pulumi supports configuring the Terraform providers powering the module execution
+As with any new technology integration, there are some current limitations to be aware of:
 
-## Limitations
+- [Transformations](/docs/iac/concepts/options/transformations/) resource options are not supported
+- Targeted operations like `pulumi up --target` are not available
+- The [protect](/docs/iac/concepts/options/protect/) resource option is not supported
+- Dependent resources may have limited support in some scenarios
 
-As of today some Pulumi features will not work as expected with resources managed by a directly executed Terraform
-module:
+## Looking Ahead
 
-- using the [transformations](https://www.pulumi.com/docs/iac/concepts/options/transformations/) resource option
-- using targeted operations such as `pulumi up --target`
-- the [protect](https://www.pulumi.com/docs/iac/concepts/options/protect/) resource option
+This release represents a significant milestone in our journey to make infrastructure as code accessible to every developer. We're already working on the next phase, which includes:
 
-Pulumi's capability to infer accurate types for module inputs and outputs is also currently limited and will sometimes
-infer sub-optimal or even unusable types. See [README](https://github.com/pulumi/pulumi-terraform-module) for
-configuration options.
+- Enhanced state import capabilities for seamless Terraform-to-Pulumi migrations
+- Improved type inference for complex module schemas
+- Expanded support for additional Terraform features
 
-## What's next
+## The Path Forward
 
-We are working on enhancing state import from Terraform into Pulumi to work in tandem with source conversion and
-provide a seamless migration experience.
+While this capability enables you to preserve your existing Terraform modules, we encourage teams to view this as a stepping stone rather than a final destination. The full benefits of modern infrastructure as code—including AI-assisted development, advanced testing capabilities, and seamless integration with modern development workflows—are best realized with native Pulumi components.
 
-## Get Started
+With AI developer tools making code conversion easier than ever, we're committed to helping teams migrate their Terraform modules to native Pulumi when they're ready. This capability ensures you can start your modernization journey today without being blocked by existing technical debt.
 
-Support for modules is available as of today. Download the latest Pulumi CLI and it a try. If you run into any issues
-or have suggestions and feedback, please
-[let us know](https://github.com/pulumi/pulumi-terraform-module/issues/new/choose) or reach out in the
-[Pulumi Community Slack](https://slack.pulumi.com/).
+## Get Started Today
+
+The Terraform module support is available immediately. Download the latest Pulumi CLI and try it out with your existing Terraform modules. We've prepared comprehensive [examples](https://github.com/pulumi/pulumi-terraform-module/tree/main/examples) showcasing real-world scenarios, from simple VPC deployments to complex multi-module architectures.
+
+If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/pulumi/pulumi-terraform-module/issues/new/choose) or reach out in our [Community Slack](https://slack.pulumi.com/). Your feedback is invaluable as we continue to evolve this capability.
+
+This release embodies our commitment to meeting developers where they are while providing a clear path forward to modern infrastructure practices. We're excited to see how teams use this capability to accelerate their infrastructure modernization journey.
