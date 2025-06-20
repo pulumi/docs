@@ -1,7 +1,7 @@
 ---
 title: "New: Run Terraform Modules in Pulumi Without Conversion"
 allow_long_title: true
-date: 2024-06-20
+date: 2025-06-20
 draft: false
 meta_desc: "Pulumi can now execute Terraform modules within Pulumi directly, making migration from Terraform to Pulumi simpler than ever for complex infrastructure projects."
 meta_image: "meta.png"
