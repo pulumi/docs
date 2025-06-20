@@ -64,16 +64,16 @@ This guide covers the following infrastructure as code tools and platforms:
 
 ### 10 Most Used IaC Tools in 2025
 
-1. **[Pulumi IaC](#pulumi)** - Modern IaC with general-purpose programming languages
-2. **[Terraform](#terraform)** - BSL-licensed IaC from HashiCorp that uses the HCL domain-specific language
-3. **[AWS CDK](#aws-cloud-development-kit-cdk)** - Cloud Development Kit for AWS
-4. **[AWS CloudFormation](#aws-cloudformation)** - Native AWS integration
-5. **[Azure Resource Manager (ARM)](#azure-resource-manager-arm)** - Native Azure JSON templates
-6. **[Azure Bicep](#azure-bicep)** - Azure-native domain-specific language that compiles to ARM
-7. **[Google Cloud Infrastructure Manager](#google-cloud-infrastructure-manager)** - Terraform-based solution for Google Cloud
-8. **[Kubernetes YAML](#kubernetes-yaml)** - Native Kubernetes resource definitions
-9. **[Crossplane](#crossplane)** - Kubernetes as universal control plane
-10. **[OpenTofu](#opentofu)** - Open-source Terraform alternative
+1. **[Pulumi IaC](#1-pulumi)** - Modern IaC with general-purpose programming languages
+2. **[Terraform](#2-terraform)** - BSL-licensed IaC from HashiCorp that uses the HCL domain-specific language
+3. **[AWS CDK](#3-aws-cloud-development-kit-cdk)** - Cloud Development Kit for AWS
+4. **[AWS CloudFormation](#4-aws-cloudformation)** - Native AWS integration
+5. **[Azure Resource Manager (ARM)](#5-azure-resource-manager-arm)** - Native Azure JSON templates
+6. **[Azure Bicep](#6-azure-bicep)** - Azure-native domain-specific language that compiles to ARM
+7. **[Google Cloud Infrastructure Manager](#7-google-cloud-infrastructure-manager)** - Terraform-based solution for Google Cloud
+8. **[Kubernetes YAML](#8-kubernetes-yaml)** - Native Kubernetes resource definitions
+9. **[Crossplane](#9-crossplane)** - Kubernetes as universal control plane
+10. **[OpenTofu](#10-opentofu)** - Open-source Terraform alternative
 
 ### Configuration Management Tools  
 
