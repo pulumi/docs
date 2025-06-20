@@ -125,13 +125,9 @@ For users transitioning from traditional Pulumi provider authoring:
 
 ## Gotchas and FAQs
 
-### Handling Default Values
-
-*TODO: need SME to write this up*
-
 ### When will I get this in my favorite language?
 
-The Pulumi Go Provider SDK primarily targets Go-based providers, but its schema generation allows multi-language support.
+The Pulumi Go Provider SDK allows you write Pulumi providers in Go. These providers can be consumed in any language.
 
 ### Why did we build it and how does Pulumi use it?
 
