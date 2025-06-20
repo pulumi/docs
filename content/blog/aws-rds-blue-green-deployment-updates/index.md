@@ -5,7 +5,7 @@ authors:
   - "elisabeth-lichtie"
 tags: ["aws", "rds", "postgres"]
 meta_desc: "Pulumi can enable low downtime updates on your RDS instance using Blue/Green Deployments."
-date: "2025-06-12"
+date: "2025-06-23"
 meta_image: "BlueGreenRDS.png"
 
 summary: |
