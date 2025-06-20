@@ -52,9 +52,11 @@ Once you have created the identity provider, you will see a notification at the 
 
 Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your deployment.
 
-For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/pulumi-cloud/deployments/oidc/#custom-claims). The `sub` claim can be customized as shown below.
+### Restricting role assumption to Pulumi Cloud scopes
 
-In the following example, the role may only be assumed by stacks within the `Core` project of the `contoso` organization:
+For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/pulumi-cloud/deployments/oidc/#custom-claims). The subject (`sub`) claim can be customized to allow a role to be assumed via OIDC only for specific projects or stacks.
+
+The following IAM policy snippet for role assumption restricts role assumption to any stack within the `Core` project of the `contoso` organization:
 
 ```json
 "Condition": {
