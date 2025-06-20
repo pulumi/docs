@@ -98,4 +98,8 @@ public static void stack(Context ctx) {
 
 {{< /chooser >}}
 
+{{% notes type="tip" %}}
+Debug log messages are hidden by default. To see them use the `-d` or `--debug` flag when running the `pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi import`, `pulumi refresh`, or `pulumi watch` commands.
+{{% /notes %}}
+
 For information on how to use diagnostic information for troubleshooting, see [Diagnosing Issues](/docs/support/troubleshooting#diagnosing-issues).
