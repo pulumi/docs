@@ -1,14 +1,14 @@
 ---
-title_tag: "Compliance Ready Policies (Azurenative) | CrossGuard"
-meta_desc: This page contains the list of Compliance Policies for Azurenative.
-title:  Compliance Ready Azurenative Policies
-h1: List of Compliance Ready Policies for Azurenative
+title_tag: "Compliance Ready Policies (Azure Native) | CrossGuard"
+meta_desc: This page contains the list of Compliance Policies for Azure Native.
+title:  Compliance Ready Azure Native Policies
+h1: List of Compliance Ready Policies for Azure Native
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Azure Native Policies
-        parent: iac-using-pulumi-policy-compliance
+        parent: iac-policy-compliance
         weight: 5
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies-azurenative/

@@ -8,9 +8,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: FAQ
-        parent: iac-using-pulumi-policy
+        parent: iac-policy
         weight: 8
-        identifier: iac-using-pulumi-policy-faq
+        identifier: iac-policy-faq
 aliases:
 - /docs/guides/crossguard/faq/
 - /docs/using-pulumi/crossguard/faq/

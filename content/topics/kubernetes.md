@@ -255,7 +255,7 @@ superpowers:
 
     - title: Be Proactive, Not Reactive
       cta: Learn more
-      cta_url: "/docs/iac/using-pulumi/crossguard/"
+      cta_url: "/docs/iac/crossguard/"
       icon_type: shield
       icon_color: yellow
       description: |

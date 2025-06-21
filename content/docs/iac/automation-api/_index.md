@@ -7,9 +7,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Automation API
-        parent: iac-using-pulumi
-        weight: 3
-        identifier: iac-using-pulumi-automation-api
+        parent: iac-home
+        weight: 55
+        identifier: iac-automation-api
 aliases:
 - /docs/guides/automation-api/
 - /docs/using-pulumi/automation-api/

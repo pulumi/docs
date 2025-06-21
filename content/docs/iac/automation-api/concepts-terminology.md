@@ -8,7 +8,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Concepts
-        parent: iac-using-pulumi-automation-api
+        parent: iac-automation-api
         weight: 2
 aliases:
 - /docs/guides/automation-api/concepts-terminology/

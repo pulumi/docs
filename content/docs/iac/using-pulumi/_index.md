@@ -8,7 +8,7 @@ menu:
     iac:
         name: Using Pulumi
         parent: iac-home
-        weight: 50
+        weight: 65
         identifier: iac-using-pulumi
 aliases:
 - /docs/guides/
@@ -16,15 +16,11 @@ aliases:
 - /docs/iac/packages-and-automation/
 ---
 
-Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, continuous delivery, policy as code, pulumi packages, and test Pulumi code.
+Learn best practices to use Pulumi.
 
-## General Guides
+## Guides
 
-- [Adopting Pulumi](/docs/iac/adopting-pulumi/)
-- [Organizing projects & stacks](/docs/iac/packages-and-automation/organizing-projects-stacks/)
-- [Automation API](/docs/iac/packages-and-automation/automation-api/)
-- [Continuous delivery](/docs/iac/packages-and-automation/continuous-delivery/)
-- [Policy as code](/docs/iac/packages-and-automation/crossguard/)
-- [Pulumi packages](/docs/iac/packages-and-automation/pulumi-packages/)
-- [Testing](/docs/iac/concepts/testing/)
-- [Debugging](/docs/iac/concepts/debugging/)
+- [Organizing projects & stacks](/docs/iac/using-pulumi/organizing-projects-stacks/)
+- [Least privilege security](/docs/iac/using-pulumi/iac-least-privileges/)
+- [Build a Component](/docs/iac/using-pulumi/build-a-component/)
+- [Pulumi and Continuous delivery](/docs/iac/using-pulumi/continuous-delivery/)

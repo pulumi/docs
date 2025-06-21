@@ -7,8 +7,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Build a Component
-        parent: iac-extending-pulumi
-        weight: 1
+        parent: iac-using-pulumi
+        weight: 6
 ---
 
 This guide will walk you through the steps of making a Pulumi Component suitable for reuse in all languages and cloud environments.
