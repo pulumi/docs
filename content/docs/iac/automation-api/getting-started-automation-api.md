@@ -8,7 +8,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Getting Started
-        parent: iac-using-pulumi-automation-api
+        parent: iac-automation-api
         weight: 1
 aliases:
 - /docs/guides/automation-api/getting-started-automation-api/

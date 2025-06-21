@@ -8,7 +8,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Policy configuration
-        parent: iac-using-pulumi-policy
+        parent: iac-policy
         weight: 4
 aliases:
 - /docs/guides/crossguard/configuration/

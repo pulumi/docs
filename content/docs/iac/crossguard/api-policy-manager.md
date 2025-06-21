@@ -8,7 +8,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Policy manager
-        parent: iac-using-pulumi-policy-compliance
+        parent: iac-policy-compliance
         weight: 1
 aliases:
     - /docs/using-pulumi/crossguard/api-policy-manager/

@@ -9,7 +9,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: AWSGuard
-        parent: iac-using-pulumi-policy
+        parent: iac-policy
         weight: 6
 aliases:
 - /docs/guides/crossguard/awsguard/

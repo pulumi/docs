@@ -8,9 +8,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Policy as code
-        parent: iac-using-pulumi
-        weight: 4
-        identifier: iac-using-pulumi-policy
+        parent: iac-home
+        weight: 60
+        identifier: iac-policy
 aliases:
 - /docs/guides/crossguard/
 - /policy-as-code/

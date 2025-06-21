@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: AWS Policies
-        parent: iac-using-pulumi-policy-compliance
+        parent: iac-policy-compliance
         weight: 2
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies-aws/
