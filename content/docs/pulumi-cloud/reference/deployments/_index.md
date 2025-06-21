@@ -937,7 +937,9 @@ or with credentials:
 
 ### SourceContext
 
-The source context contains information about where the source code for your project is located. Currently, only git repos are supported as a source.
+The source context contains information about where the source code for your project is located. Currently, git repos or templates are supported as a source.
+
+#### Git
 
 ```json
 {
@@ -949,8 +951,6 @@ The source context contains information about where the source code for your pro
 }
 ```
 
-#### Properties
-
 | Name          | Type           | Description                                      |
 |---------------|----------------|--------------------------------------------------|
 | `git.repoURL` | string | **Optional.** URL of the git repository. |
@@ -958,6 +958,24 @@ The source context contains information about where the source code for your pro
 | `git.repoDir` | string | **Optional.** Directory where Pulumi.yaml is located. |
 | `git.commit` | string | **Optional.** Hash of the commit to deploy. Mutually exclusive with branch. |
 | `git.gitAuth` | object | **Optional.** Authentication information for the git repo. |
+
+#### Template
+
+Using templates as the source for the deployment enables deploying Pulumi programs without having to manage the underlying IaC code.
+Leverage [Stack Config](/docs/pulumi-cloud/reference/stack-config/) to manage configuration settings for these template based stacks, including environment settings and secrets management configuration.
+
+```json
+{
+  "template": {
+    "sourceUrl": "https://github.com/pulumi/templates/kubernetes-aws-yaml"
+  }
+}
+```
+
+| Name                    | Type   | Description                                                                 |
+|-------------------------|--------|-----------------------------------------------------------------------------|
+| `template.sourceURL`    | string | URL of the template.                                                        |
+| `template.gitAuth`      | object | **Optional.** Authentication information for templates hosted in git repos. |
 
 ### OperationContext
 

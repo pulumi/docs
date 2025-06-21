@@ -51,6 +51,7 @@ The Pulumi Cloud REST API is organized into the following resource categories:
 - [Resources Under Management](/docs/pulumi-cloud/reference/resources-under-management/) - Query managed resources
 - [Schedules](/docs/pulumi-cloud/reference/schedules/) - Configure scheduled tasks
 - [Services](/docs/pulumi-cloud/reference/services/) - Interact with service information
+- [Stack Config](/docs/pulumi-cloud/reference/stack-config/) - Manage configuration settings for stacks
 - [Stack Policy](/docs/pulumi-cloud/reference/stack-policy/) - Apply and manage policy on stacks
 - [Stack Tags](/docs/pulumi-cloud/reference/stack-tags/) - Manage metadata tags on stacks
 - [Stack Updates](/docs/pulumi-cloud/reference/stack-updates/) - Manage the update lifecycle for stacks
