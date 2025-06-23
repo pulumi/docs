@@ -8,9 +8,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Compliance-ready policies
-        parent: iac-using-pulumi-policy
+        parent: iac-policy
         weight: 7
-        identifier: iac-using-pulumi-policy-compliance
+        identifier: iac-policy-compliance
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies/
     - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies/

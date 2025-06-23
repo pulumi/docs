@@ -9,7 +9,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Get started
-        parent: iac-using-pulumi-policy
+        parent: iac-policy
         weight: 1
 aliases:
 - /docs/get-started/policy-as-code
