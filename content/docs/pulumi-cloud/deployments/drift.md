@@ -20,66 +20,42 @@ You can also run a remediate drift operation, which will run a `pulumi up --refr
 
 ## Understanding Drift Remediation
 
-Drift remediation is the process of automatically correcting detected infrastructure drift by restoring your cloud resources to match the desired state defined in your Pulumi program. When remediation runs, it treats your Infrastructure as Code (IaC) as the authoritative source of truth and overwrites any out-of-band changes that have been made directly in your cloud provider.
+Drift remediation automatically corrects infrastructure drift by restoring cloud resources to match your Pulumi program. Remediation treats Infrastructure as Code as the authoritative source of truth and overwrites out-of-band changes.
 
-### What Happens During Remediation
+When remediation runs, Pulumi executes `pulumi up --refresh` to:
 
-When you trigger drift remediation, Pulumi performs the following operations:
+1. Refresh the state to get current cloud resources
+2. Compare actual state with desired state in your program
+3. Generate and apply changes to align infrastructure with your code
 
-1. **Refresh the state**: Pulumi first refreshes its view of the current cloud resources to get an accurate picture of what exists in your cloud provider
-2. **Compare with desired state**: Pulumi compares the actual cloud state with the desired state defined in your Pulumi program
-3. **Generate an execution plan**: Pulumi creates a plan of the changes needed to restore resources to their desired configuration
-4. **Apply changes**: Pulumi executes the plan, making the necessary updates, deletions, or recreations to align your infrastructure with your code
+**Use remediation when:**
 
-Technically, remediation runs `pulumi up --refresh`, which combines a refresh operation with an update operation in a single command.
+- You want to maintain IaC as the source of truth
+- Changes were made accidentally or without authorization
+- Security or compliance requires automatic correction
 
-### When to Use Remediation
+**Consider alternatives when:**
 
-Use drift remediation when:
+- Changes were intentional and reflect new requirements
+- Working with critical production systems requiring manual review
+- Large-scale drift needs careful analysis before correction
 
-- **You want to maintain IaC as the source of truth**: Out-of-band changes should be reverted to maintain consistency with your code
-- **Changes were made accidentally**: Manual modifications that shouldn't persist need to be corrected
-- **Security or compliance requirements**: Unauthorized changes need to be automatically corrected to maintain security posture
-- **Operational efficiency**: You want to automate the correction of drift rather than manually investigating and fixing each instance
+**Remediation vs. Refresh:**
 
-### When NOT to Use Remediation
-
-Consider alternatives to automatic remediation when:
-
-- **Changes were intentional**: If the out-of-band changes reflect new requirements, you may want to update your Pulumi program instead using the [Refresh option](/docs/pulumi-cloud/deployments/drift/#when-drift-is-detected)
-- **Critical production systems**: In sensitive environments, you may prefer manual review before applying changes
-- **Complex changes**: Large-scale drift may require careful analysis before automatic correction
-
-### Safety Considerations
-
-Before enabling automatic remediation, consider these important factors:
-
-- **Backup and recovery**: Ensure you have proper backup procedures for critical resources
-- **Testing**: Test remediation behavior in non-production environments first
-- **Monitoring**: Set up appropriate alerts and monitoring to track remediation activities
-- **Access controls**: Ensure only authorized personnel can configure remediation settings
-- **Impact assessment**: Consider the potential impact of resource recreation or modification on running applications
-
-### Remediation vs. Refresh
-
-It's important to understand the difference between remediation and refresh:
-
-- **Remediation** (`pulumi up --refresh`): Updates cloud resources to match your Pulumi program, treating the code as authoritative
-- **Refresh** (`pulumi refresh`): Updates Pulumi's state to match the current cloud resources, accepting the cloud changes as the new desired state
-
-Choose remediation when your code should be the source of truth, and choose refresh when you want to accept and incorporate the cloud changes into your Pulumi state.
+- **Remediation** (`pulumi up --refresh`): Updates cloud resources to match your program
+- **Refresh** (`pulumi refresh`): Updates Pulumi state to match current cloud resources
 
 ## When Drift is Detected
 
-When Pulumi detects drift in your infrastructure, you have several options for how to respond:
+When Pulumi detects drift, you have three response options:
 
-1. **Remediate drift**: Use this option when you want to restore your infrastructure to match your Pulumi program exactly. This treats your Infrastructure as Code as the authoritative source of truth and will overwrite any out-of-band changes in your cloud provider. See [Understanding Drift Remediation](#understanding-drift-remediation) above for details on what happens during remediation.
+1. **Remediate drift**: Restore infrastructure to match your Pulumi program. Treats Infrastructure as Code as authoritative and overwrites cloud changes. See [Understanding Drift Remediation](#understanding-drift-remediation) for details.
 
-2. **Refresh**: Use this option when you want to accept the changes that were made in your cloud provider and update Pulumi's state to reflect the current reality. After refreshing, you may also want to update your Pulumi program to align with the accepted changes.
+2. **Refresh**: Accept cloud changes and update Pulumi state to reflect current reality. You may also want to update your Pulumi program to align with the accepted changes.
 
-3. **Manual review**: In some cases, you may want to manually review the detected drift before taking action, especially in production environments or when the changes are complex.
+3. **Manual review**: Manually review detected drift before taking action, especially for production environments or complex changes.
 
-You can perform these actions using the Actions menu in Pulumi Cloud or by running the appropriate CLI commands.
+Use the Actions menu in Pulumi Cloud or appropriate CLI commands to perform these actions.
 
 ## Running Drift Detection from the CLI
 
