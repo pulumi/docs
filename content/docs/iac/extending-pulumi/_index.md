@@ -7,8 +7,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Extending Pulumi
-        parent: iac-using-pulumi
-        weight: 4
+        parent: iac-home
+        weight: 76
         identifier: iac-extending-pulumi
 ---
 

@@ -8,7 +8,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Best practices
-        parent: iac-using-pulumi-policy
+        parent: iac-policy
         weight: 5
 aliases:
 - /docs/guides/crossguard/best-practices/
