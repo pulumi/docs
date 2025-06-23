@@ -21,6 +21,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 
 - [AWS login provider](/docs/esc/integrations/dynamic-login-credentials/aws-login)
 - [Azure login provider](/docs/esc/integrations/dynamic-login-credentials/azure-login)
+- [Doppler login provider](/docs/esc/integrations/dynamic-login-credentials/doppler-login)
 - [GCP login provider](/docs/esc/integrations/dynamic-login-credentials/gcp-login)
 - [Infisical login provider](/docs/esc/integrations/dynamic-login-credentials/infisical-login)
 - [Vault login provider](/docs/esc/integrations/dynamic-login-credentials/vault-login)
