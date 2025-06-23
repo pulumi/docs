@@ -17,67 +17,152 @@ aliases:
 - /docs/concepts/resources/functions/
 ---
 
-A provider may make **functions** available in its SDK as well as resource types. These "provider functions" are often for calling a platform API to get a value that is not part of a resource. For example, the AWS provider includes the function [`aws.apigateway.getDomainName`](/registry/packages/aws/api-docs/apigateway/getdomainname/):
+A provider may make **functions** available in its SDK as well as resource types. These "provider functions" are often for calling a platform API to get a value that is not part of a resource. For example, the AWS provider includes the function [`aws.ecs.getAmi`](/registry/packages/aws/api-docs/ec2/getami/):
 
-<div><pulumi-examples>
-<div><pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml"></pulumi-chooser></div>
-<div>
-<pulumi-choosable type="language" values="csharp">
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
+{{% choosable language typescript %}}
 
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = Output.Create(Aws.ApiGateway.GetDomainName.InvokeAsync(new Aws.ApiGateway.GetDomainNameArgs
-        {
-            DomainName = "api.example.com",
-        }));
-    }
-}
+```typescript
+import * as aws from "@pulumi/aws";
+
+// Wrapping our program in an immediately invoked async function allows us to
+// use the "async" keyword.
+(async () => {
+  const latestAmi = await aws.ec2.getAmi({
+    owners: ["amazon"],
+    mostRecent: true,
+    filters: [
+      { name: "name", values: ["amzn2-ami-hvm-*"] },
+      { name: "architecture", values: ["x86_64"] }
+    ]
+  });
+
+  new aws.ec2.Instance("web-server", {
+    ami: latestAmi.imageId,
+    instanceType: "t3.micro",
+  });
+})();
 ```
 
-</pulumi-choosable>
-</div>
-<div>
-<pulumi-choosable type="language" values="go">
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi_aws as aws
+
+latest_ami = aws.ec2.get_ami(
+    owners=["amazon"],
+    most_recent=True,
+    filters=[
+        {"name": "name", "values": ["amzn2-ami-hvm-*"]},
+        {"name": "architecture", "values": ["x86_64"]}
+    ]
+)
+
+instance = aws.ec2.Instance(
+    "web-server",
+    ami=latest_ami.image_id,
+    instance_type="t3.micro"
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
 
 ```go
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apigateway.LookupDomainName(ctx, &apigateway.LookupDomainNameArgs{
-			DomainName: "api.example.com",
+		latestAmi, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+			Owners:     []string{"amazon"},
+			MostRecent: pulumi.BoolRef(true),
+			Filters: []ec2.GetAmiFilter{
+				{
+					Name:   "name",
+					Values: []string{"amzn2-ami-hvm-*"},
+				},
+				{
+					Name:   "architecture",
+					Values: []string{"x86_64"},
+				},
+			},
 		}, nil)
 		if err != nil {
 			return err
 		}
+
+		_, err = ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
+			Ami:          pulumi.String(latestAmi.ImageId),
+			InstanceType: pulumi.String("t3.micro"),
+		})
+		if err != nil {
+			return err
+		}
+
 		return nil
 	})
 }
 ```
 
-</pulumi-choosable>
-</div>
-<div>
-<pulumi-choosable type="language" values="java">
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+return await Deployment.RunAsync(() =>
+{
+    var latestAmi = Aws.Ec2.GetAmi.Invoke(new Aws.Ec2.GetAmiInvokeArgs
+    {
+        Owners = { "amazon" },
+        MostRecent = true,
+        Filters =
+              {
+                  new Aws.Ec2.Inputs.GetAmiFilterInputArgs
+                  {
+                      Name = "name",
+                      Values = { "amzn2-ami-hvm-*" }
+                  },
+                  new Aws.Ec2.Inputs.GetAmiFilterInputArgs
+                  {
+                      Name = "architecture",
+                      Values = { "x86_64" }
+                  }
+              }
+    });
+
+    var instance = new Aws.Ec2.Instance("web-server", new Aws.Ec2.InstanceArgs
+    {
+        Ami = latestAmi.Apply(ami => ami.ImageId),
+        InstanceType = "t3.micro"
+    });
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
 
 ```java
-package generated_program;
+package myproject;
 
-import java.util.*;
-import java.io.*;
-import java.nio.*;
 import com.pulumi.*;
+import com.pulumi.aws.ec2.Ec2Functions;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.inputs.GetAmiArgs;
+import com.pulumi.aws.ec2.inputs.GetAmiFilterArgs;
 
 public class App {
     public static void main(String[] args) {
@@ -85,54 +170,60 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        final var example = Output.of(ApigatewayFunctions.getDomainName(GetDomainNameArgs.builder()
-            .domainName("api.example.com")
-            .build()));
+        var latestAmi = Ec2Functions.getAmi(GetAmiArgs.builder()
+                .owners("amazon")
+                .mostRecent(true)
+                .filters(
+                        GetAmiFilterArgs.builder()
+                                .name("name")
+                                .values("amzn2-ami-hvm-*")
+                                .build(),
+                        GetAmiFilterArgs.builder()
+                                .name("architecture")
+                                .values("x86_64")
+                                .build())
+                .build());
+
+        new Instance("web-server", InstanceArgs.builder()
+                .ami(latestAmi.applyValue(ami -> ami.imageId()))
+                .instanceType("t3.micro")
+                .build());
     }
 }
 ```
 
-</pulumi-choosable>
-</div>
-<div>
-<pulumi-choosable type="language" values="python">
+{{% /choosable %}}
 
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.apigateway.get_domain_name(domain_name="api.example.com")
-```
-
-</pulumi-choosable>
-</div>
-<div>
-<pulumi-choosable type="language" values="typescript">
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = pulumi.output(aws.apigateway.getDomainName({
-    domainName: "api.example.com",
-}));
-```
-
-</pulumi-choosable>
-</div>
-<div>
-<pulumi-choosable type="language" values="yaml">
+{{% choosable language yaml %}}
 
 ```yaml
+name: provider-functions
+runtime: yaml
+
 variables:
-  example:
-    fn::aws:apigateway:getDomainName:
-      domainName: api.example.com
+  lastestAmi:
+    fn::invoke:
+      function: aws:ec2/getAmi:getAmi
+      arguments:
+        filters:
+          - name: name
+            values: ["amzn2-ami-hvm-*"]
+          - name: architecture
+            values: ["x86_64"]
+        owners: ["amazon"]
+        mostRecent: true
+
+resources:
+  myInstance:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${lastestAmi.imageId}
+      instanceType: "t3.micro"
 ```
 
-</pulumi-choosable>
-</div>
-</pulumi-examples></div>
+{{% /choosable %}}
+
+{{% /chooser %}}
 
 Provider functions are exposed in each language as regular functions, in two variations:
 
