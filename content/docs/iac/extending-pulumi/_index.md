@@ -10,6 +10,8 @@ menu:
         parent: iac-home
         weight: 76
         identifier: iac-extending-pulumi
+aliases:
+- /docs/iac/using-pulumi/extending-pulumi/
 ---
 
 Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), [packages](/docs/iac/concepts/resources/packages/), and more.

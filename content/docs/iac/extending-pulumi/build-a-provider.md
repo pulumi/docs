@@ -9,6 +9,8 @@ menu:
         name: Build a Provider
         parent: iac-extending-pulumi
         weight: 4
+aliases:
+- /docs/iac/using-pulumi/extending-pulumi/build-a-provider/
 ---
 
 ## When to use a provider
