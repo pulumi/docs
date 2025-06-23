@@ -1,5 +1,5 @@
 ---
-title: "New: Run Terraform Modules in Pulumi Without Conversion"
+title: "New: Use Terraform Modules in Pulumi Without Conversion"
 allow_long_title: true
 date: 2025-06-23
 draft: false
