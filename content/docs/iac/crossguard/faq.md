@@ -20,7 +20,7 @@ aliases:
 
 ## Is CrossGuard open source?
 
-The [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) that allows you to express policies and using the local `--policy-pack` flag (as part of the Pulumi CLI) to enforce Policy Packs is also open source.
+The [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) that allows you to express policies and the local `--policy-pack` flag (that can enforce Policy Packs as part of the Pulumi CLI) are both open source.
 
 Pulumi CrossGuard is available to [Pulumi Business Critical](/pricing/) organizations and allows for enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Cloud.
 
@@ -32,7 +32,7 @@ Therefore, if a Policy Pack is specified locally using `--policy-pack`, the Pulu
 
 ## What happens if a stack or account belongs to multiple Policy Groups?
 
-If a stack or account belongs to multiple Policy Groups, the Pulumi Cloud will aggregate all required Policy Packs from those Policy Groups. Only one of version of each Policy Pack will be run per update.
+If a stack or account belongs to multiple Policy Groups, the Pulumi Cloud will aggregate all required Policy Packs from those Policy Groups. Only one version of each Policy Pack will be run per update.
 
 This means that if a stack belongs to multiple Policy Groups that specify different versions of a Policy Pack, only the newest version of that pack will be run. For example, if a stack `my-stack` belongs to Policy Group `production-stacks` that requires Policy Pack `aws-policies` version 2 and Policy Group `platform-stacks` that requires Policy Pack `aws-policies` version 4, only version 4 of `aws-policies` would be run. In the case that a stack has the same version of a Policy Pack with different configuration enabled, the most recently modified Policy Pack and configuration will be enforced.
 
