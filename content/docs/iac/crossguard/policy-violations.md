@@ -8,7 +8,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Policy violations
-        parent: iac-using-pulumi-policy
+        parent: iac-policy
         weight: 3
 aliases:
     - /docs/using-pulumi/crossguard/policy-violations/

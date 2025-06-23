@@ -9,9 +9,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Concepts
-        parent: iac-using-pulumi-policy
+        parent: iac-policy
         weight: 2
-        identifier: iac-using-pulumi-policy-concepts
+        identifier: iac-policy-concepts
 aliases:
 - /docs/guides/crossguard/core-concepts/
 - /docs/using-pulumi/crossguard/core-concepts/

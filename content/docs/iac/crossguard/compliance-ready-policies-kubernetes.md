@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Kubernetes Policies
-        parent: iac-using-pulumi-policy-compliance
+        parent: iac-policy-compliance
         weight: 8
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies-kubernetes/
