@@ -8,7 +8,7 @@ menu:
   esc:
     name: Infisical
     parent: esc-configuring-oidc
-    weight: 1
+    weight: 6
 ---
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Infisical. OIDC

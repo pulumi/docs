@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: aws-parameter-store
     parent: esc-dynamic-secrets
-    weight: 1
+    weight: 2
 aliases:
     - /docs/pulumi-cloud/esc/providers/aws-parameter-store/
     - /docs/esc/providers/aws-parameter-store/

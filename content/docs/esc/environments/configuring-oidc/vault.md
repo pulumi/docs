@@ -8,7 +8,7 @@ menu:
   esc:
     name: Vault
     parent: esc-configuring-oidc
-    weight: 4
+    weight: 7
 aliases:
   - /docs/pulumi-cloud/oidc/provider/vault
   - /docs/pulumi-cloud/oidc/provider/vault/
