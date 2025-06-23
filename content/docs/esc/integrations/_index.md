@@ -30,6 +30,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 
 - [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets)
 - [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets)
+- [Doppler Secrets](/docs/esc/integrations/dynamic-secrets/doppler-secrets)
 - [GCP Secrets Manager](/docs/esc/integrations/dynamic-secrets/gcp-secrets)
 - [Infisical Secrets](/docs/esc/integrations/dynamic-secrets/infisical-secrets)
 - [Vault Secrets Management](/docs/esc/integrations/dynamic-secrets/vault-secrets)
