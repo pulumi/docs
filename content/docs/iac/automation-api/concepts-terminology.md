@@ -14,6 +14,7 @@ aliases:
 - /docs/guides/automation-api/concepts-terminology/
 - /docs/using-pulumi/automation-api/concepts-terminology/
 - /docs/iac/packages-and-automation/automation-api/concepts-terminology/
+- /docs/iac/using-pulumi/automation-api/concepts-terminology/
 ---
 
 Automation API lets you use functionality available in the Pulumi CLI via an SDK, as opposed to a Pulumi program which contains resource declarations and is invoked externally by the `pulumi` CLI. Automation API enables you to define a Pulumi program, its resources, stacks, and configuration for those stacks entirely in code, and then distribute that code as an executable invoked like any other executable in your supported language of choice (e.g., `python3 main.py` as opposed to `pulumi up`). Automation API is distributed as a namespace within the Pulumi SDK, and is part of Pulumi IaC's open source offering.
