@@ -14,6 +14,7 @@ aliases:
 - /docs/guides/automation-api/getting-started-automation-api/
 - /docs/using-pulumi/automation-api/getting-started-automation-api/
 - /docs/iac/packages-and-automation/automation-api/getting-started-automation-api/
+- /docs/iac/using-pulumi/automation-api/getting-started-automation-api/
 ---
 
 Pulumi’s Automation API enables you to provision your infrastructure programmatically using the Pulumi engine by exposing Pulumi programs and stacks as strongly-typed and composable building blocks.
