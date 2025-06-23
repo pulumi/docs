@@ -22,5 +22,6 @@ To learn how to set up and use each provider, follow the links below. To learn h
 | [doppler-login](/docs/esc/integrations/dynamic-login-credentials/doppler-login/)     | The `doppler-login` provider enables you to log in to Doppler using OpenID Connect.         |
 | [gcp-login](/docs/esc/integrations/dynamic-login-credentials/gcp-login/)             | The `gcp-login` provider enables you to log in to Google Cloud using OpenID Connect or static credentials.    |
 | [gh-login](/docs/esc/integrations/dynamic-login-credentials/gh-login/)               | The `gh-login` provider enables you to log in to GitHub using app credentials.                                |
+| [infisical-login](/docs/esc/integrations/dynamic-login-credentials/infisical-login/) | The `infisical-login` provider enables you to log in to Infisical using OpenID Connect or by providing static credentials.         |
 | [snowflake-login](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/) | The `snowflake-login` provider enables authentication to Snowflake using OpenID Connect.                      |
 | [vault-login](/docs/esc/integrations/dynamic-login-credentials/vault-login/)         | The `vault-login` provider enables you to log in to HashiCorp Vault using OpenID Connect or static credentials. |
