@@ -1,7 +1,7 @@
 ---
 title: "New: Run Terraform Modules in Pulumi Without Conversion"
 allow_long_title: true
-date: 2025-06-20
+date: 2025-06-23
 draft: false
 meta_desc: "Pulumi can now execute Terraform modules within Pulumi directly, making migration from Terraform to Pulumi simpler than ever for complex infrastructure projects."
 meta_image: "meta.png"
@@ -86,13 +86,15 @@ Pulumi providers now expose helper methods like `awsProvider.terraformConfig()` 
 
 Let me walk you through a practical example that demonstrates the power of this integration.
 
+First, [install the latest version of the Pulumi CLI](/docs/install/) (v3.178.0 or later is required) and create a new Pulumi TypeScript project using `pulumi new typescript`.
+
 ### Setting Up a VPC Module
 
-Start by adding a Terraform module to your Pulumi project:
+Next, add a Terraform module to your Pulumi project:
 
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.18.1 vpcmod
-Successfully generated a Nodejs SDK for the vpcmod package at /Users/anton/tmp/2025-05-14/blog/sdks/vpcmod
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.1 vpcmod
+Successfully generated a Nodejs SDK for the vpcmod package at /Users/anton/tmp/2025-06-23/blog/sdks/vpcmod
 ```
 
 Pulumi automatically generates a local SDK with full TypeScript support:
@@ -153,7 +155,6 @@ View in Browser (Ctrl+O): https://app.pulumi.com/anton-pulumi-corp/anton-blog/de
      Type                                         Name                                                    Plan
  +   pulumi:pulumi:Stack                          anton-blog-dev                                          create
  +   └─ vpcmod:index:Module                       test-vpc                                                create
- +      ├─ vpcmod:index:ModuleState               test-vpc-state                                          create
  +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[0]  create
  +      ├─ vpcmod:tf:aws_subnet                   module.test-vpc.aws_subnet.private[1]                   create
  +      ├─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.public[1]   create
@@ -175,7 +176,7 @@ View in Browser (Ctrl+O): https://app.pulumi.com/anton-pulumi-corp/anton-blog/de
  +      └─ vpcmod:tf:aws_route_table_association  module.test-vpc.aws_route_table_association.private[1]  create
 
 Resources:
- + 22 to create
+ + 21 to create
 ```
 
 The infrastructure deploys successfully, and the Terraform state is automatically stored securely in Pulumi Cloud with full [secret encryption](/docs/iac/concepts/secrets/) support.
@@ -188,7 +189,7 @@ For teams starting with existing Terraform code, the migration process is straig
 // @pulumi-terraform-module vpcmod
 module "my-vpc" {
   source             = "terraform-aws-modules/vpc/aws"
-  version            = "5.18.1"
+  version            = "6.0.1"
   azs                = ["us-west-2a", "us-west-2b"]
   name               = "test-vpc-123"
   public_subnets     = ["10.0.1.0/24", "10.0.2.0/24"]
@@ -243,7 +244,7 @@ The integration provides comprehensive support for Pulumi's core features:
 
 As with any new technology integration, there are some current limitations to be aware of:
 
-- [Transformations](/docs/iac/concepts/options/transformations/) resource options are not supported
+- [Transforms](/docs/iac/concepts/options/transforms/) resource options are not supported
 - Targeted operations like `pulumi up --target` are not available
 - The [protect](/docs/iac/concepts/options/protect/) resource option is not supported
 - Dependent resources may have limited support in some scenarios
@@ -264,7 +265,7 @@ With AI developer tools making code conversion easier than ever, we're committed
 
 ## Get Started Today
 
-The Terraform module support is available immediately. Download the latest Pulumi CLI and try it out with your existing Terraform modules. We've prepared comprehensive [examples](https://github.com/pulumi/pulumi-terraform-module/tree/main/examples) showcasing real-world scenarios, from simple VPC deployments to complex multi-module architectures.
+The Terraform module support is available immediately. [Install the latest Pulumi CLI](/docs/install/) and try it out with your existing Terraform modules. We've prepared comprehensive [examples](https://github.com/pulumi/pulumi-terraform-module/tree/main/examples) showcasing real-world scenarios, from simple VPC deployments to complex multi-module architectures.
 
 If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/pulumi/pulumi-terraform-module/issues/new/choose) or reach out in our [Community Slack](https://slack.pulumi.com/). Your feedback is invaluable as we continue to evolve this capability.
 
