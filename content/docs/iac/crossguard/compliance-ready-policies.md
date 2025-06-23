@@ -12,6 +12,7 @@ menu:
         weight: 7
         identifier: iac-policy-compliance
 aliases:
+    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies/
     - /docs/using-pulumi/crossguard/compliance-ready-policies/
     - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies/
 ---
