@@ -45,7 +45,7 @@ const parameterGroup = new aws.rds.ParameterGroup(
       },
     ],
   },
-  { deleteBeforeReplace: false }
+  { deleteBeforeReplace: false } // This explicitly calls out that the new group should be created before the old is deleted so that database availability can be maintained
 );
 
 const database = new aws.rds.Instance(
@@ -63,7 +63,7 @@ const database = new aws.rds.Instance(
     skipFinalSnapshot: true,
     parameterGroupName: parameterGroup.name,
   },
-  { dependsOn: [parameterGroup] }
+  { dependsOn: [parameterGroup] } //This line can be omitted since the dependency is also inferred by the reference to parameterGroup.name
 );
 ```
 
