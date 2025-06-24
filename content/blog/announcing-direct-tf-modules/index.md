@@ -92,7 +92,7 @@ First, [install the latest version of the Pulumi CLI](/docs/install/) (v3.178.0 
 
 Next, add a Terraform module to your Pulumi project:
 
-{{% chooser language "typescript,python,go" %}}
+{{% chooser language "typescript,python,go,yaml" %}}
 
 {{% choosable language typescript %}}
 
@@ -134,14 +134,17 @@ To use this package, import github.com/pulumi/pulumi-terraform-module/sdks/go/vp
 Added package "vpcmod" to Pulumi.yaml
 {{% /choosable %}}
 
+{{% choosable language yaml %}}
+Added package "vpcmod" to Pulumi.yaml
+{{% /choosable %}}
+
 {{% /chooser %}}
 
 Pulumi automatically generates a local SDK with full support for your language:
 
-{{% chooser language "typescript,python,go" %}}
+{{% chooser language "typescript,python,go,yaml" %}}
 
 {{% choosable language typescript %}}
-
 ```bash
 $ ls sdks/vpcmod
 README.md       index.ts        node_modules    provider.ts     tsconfig.json   utilities.ts
@@ -150,13 +153,24 @@ bin             module.ts       package.json    scripts         types
 {{% /choosable %}}
 
 {{% choosable language python %}}
+```bash
 $ ls sdks/vpcmod
 build                   pulumi_vpcmod           pulumi_vpcmod.egg-info  setup.py
+```
 {{% /choosable %}}
 
 {{% choosable language go %}}
+```bash
 $ ls sdks/vpcmod
 go.mod  vpcmod
+```
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+```bash
+$ ls sdks/vpcmod
+vpcmod-6.0.0.yaml
+```
 {{% /choosable %}}
 
 {{% /chooser %}}
@@ -175,7 +189,7 @@ And links it into your project such as `package.json` when using TypeScript:
 
 Now you can use the module with full IntelliSense support:
 
-{{% chooser language "typescript,python,go" %}}
+{{% chooser language "typescript,python,go,yaml" %}}
 
 {{% choosable language typescript %}}
 ```typescript
@@ -275,6 +289,47 @@ func run(ctx *pulumi.Context) error {
 func main() {
 	pulumi.Run(run)
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+``` yaml
+name: my-program
+
+runtime: yaml
+
+resources:
+  vpc:
+    type: vpcmod:index:Module
+    properties:
+      azs:
+        - us-west-2a
+        - us-west-2b
+      name: f"test-vpc-${pulumi.stack}"
+      cidr: 10.0.0.0/16
+      public_subnets:
+        - 10.0.1.0/24
+        - 10.0.2.0/24
+      private_subnets:
+        - 10.0.3.0/24
+        - 10.0.4.0/24
+      enable_nat_gateway: true
+      single_nat_gateway: true
+
+outputs:
+  publicSubnets: ${vpc.public_subnets}
+  privateSubnets: ${vpc.private_subnets}
+
+packages:
+  vpcmod:
+    source: terraform-module
+    version: 0.1.7
+    parameters:
+      - terraform-aws-modules/vpc/aws
+      - 6.0.0
+      - vpcmod
 ```
 
 {{% /choosable %}}
@@ -431,6 +486,7 @@ func run(ctx *pulumi.Context) error {
 ```
 
 {{% /choosable %}}
+
 
 {{% /chooser %}}
 
