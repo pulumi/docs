@@ -17,15 +17,15 @@ social:
     Pulumi now supports executing Terraform modules directly! No more complex conversions for module-heavy projects. Migrate from Terraform to Pulumi with ease.
   linkedin: |
     We're excited to announce that Pulumi can now execute Terraform modules directly, addressing one of the biggest challenges in migrating complex infrastructure from Terraform to Pulumi.
-    
+
     This new capability eliminates the need to convert module sources, allowing teams to immediately manage everything with Pulumi while maintaining the exact Terraform semantics they're familiar with.
-    
+
     Key benefits:
     • Seamless migration for module-heavy projects
     • Type-safe integration with Pulumi programming languages
     • Automatic state management in Pulumi Cloud
     • Full support for Terraform and OpenTofu registries
-    
+
     This represents a significant step forward in making infrastructure migration accessible to teams of all sizes.
 ---
 
@@ -86,26 +86,69 @@ Pulumi providers now expose helper methods like `awsProvider.terraformConfig()` 
 
 Let me walk you through a practical example that demonstrates the power of this integration.
 
-First, [install the latest version of the Pulumi CLI](/docs/install/) (v3.178.0 or later is required) and create a new Pulumi TypeScript project using `pulumi new typescript`.
+First, [install the latest version of the Pulumi CLI](/docs/install/) (v3.178.0 or later is required) and create a new Pulumi project using `pulumi new $language` such as `pulumi new typescript`.
 
 ### Setting Up a VPC Module
 
 Next, add a Terraform module to your Pulumi project:
 
+{{% chooser language "typescript,python" %}}
+
+{{% choosable language typescript %}}
+
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.1 vpcmod
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
 Successfully generated a Nodejs SDK for the vpcmod package at /Users/anton/tmp/2025-06-23/blog/sdks/vpcmod
 ```
 
-Pulumi automatically generates a local SDK with full TypeScript support:
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
+
+Successfully generated a Python SDK for the vpcmod package at /workdir/vpcmod
+
+Resolved 13 packages in 111ms
+      Built pulumi-vpcmod @ file:///workdir/sdks/vpcmod
+Prepared 4 packages in 297ms
+Installed 4 packages in 1ms
+ + arpeggio==2.0.2
+ + attrs==25.3.0
+ + parver==0.5
+ + pulumi-vpcmod==6.0.0 (from file:///workdir/sdks/vpcmod)
+
+You can then import the SDK in your Python code with:
+
+  import pulumi_vpcmod as vpcmod
+```
+
+{{% /choosable %}}
+
+{{% /chooser %}}
+
+Pulumi automatically generates a local SDK with full support for your language:
+
+{{% chooser language "typescript,python" %}}
+
+{{% choosable language typescript %}}
 
 ```bash
 $ ls sdks/vpcmod
 README.md       index.ts        node_modules    provider.ts     tsconfig.json   utilities.ts
 bin             module.ts       package.json    scripts         types
 ```
+{{% /choosable %}}
 
-And links it into your project in `package.json`:
+{{% choosable language python %}}
+$ ls sdks/vpcmod
+build                   pulumi_vpcmod           pulumi_vpcmod.egg-info  setup.py
+{{% /choosable %}}
+
+{{% /chooser %}}
+
+And links it into your project such as `package.json` when using TypeScript:
 
 ```json
 {
@@ -119,6 +162,9 @@ And links it into your project in `package.json`:
 
 Now you can use the module with full IntelliSense support:
 
+{{% chooser language "typescript,python" %}}
+
+{{% choosable language typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vpcmod from '@pulumi/vpcmod';
@@ -142,6 +188,36 @@ const vpc = new vpcmod.Module("test-vpc", {
 export const publicSubnets = vpc.public_subnets;
 export const privateSubnets = vpc.private_subnets;
 ```
+{{% /choosable %}}
+
+{{% choosable language python %}}
+```python
+import * as pulumi from "@pulumi/pulumi";
+import * as vpcmod from '@pulumi/vpcmod';
+
+const vpc = new vpcmod.Module("test-vpc", {
+    azs: ["us-west-2a", "us-west-2b"],
+    name: `test-vpc-${pulumi.getStack()}`,
+    cidr: "10.0.0.0/16",
+    public_subnets: [
+        "10.0.1.0/24",
+        "10.0.2.0/24",
+    ],
+    private_subnets: [
+        "10.0.3.0/24",
+        "10.0.4.0/24",
+    ],
+    enable_nat_gateway: true,
+    single_nat_gateway: true,
+});
+
+export const publicSubnets = vpc.public_subnets;
+export const privateSubnets = vpc.private_subnets;
+```
+{{% /choosable %}}
+
+{{% /chooser %}}
+
 
 ### Seamless Deployment
 
@@ -189,7 +265,7 @@ For teams starting with existing Terraform code, the migration process is straig
 // @pulumi-terraform-module vpcmod
 module "my-vpc" {
   source             = "terraform-aws-modules/vpc/aws"
-  version            = "6.0.1"
+  version            = "6.0.0"
   azs                = ["us-west-2a", "us-west-2b"]
   name               = "test-vpc-123"
   public_subnets     = ["10.0.1.0/24", "10.0.2.0/24"]
@@ -199,7 +275,7 @@ module "my-vpc" {
 }
 ```
 
-Then run the conversion:
+Then run the conversion (replace `typescript` with your language of choice):
 
 ```bash
 pulumi convert --from terraform --language typescript --out my-pulumi-project
@@ -210,6 +286,10 @@ The resulting project is ready to deploy with full Pulumi functionality.
 ## Configuration Management
 
 One of the key benefits is seamless configuration management. Instead of maintaining separate configurations for Pulumi and Terraform providers, you can reuse your existing Pulumi provider configuration:
+
+{{% chooser %}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 const awsProvider = new aws.Provider("awsprovider", {
@@ -227,6 +307,28 @@ const vpc = new vpcmod.Module("test-vpc", {...},
     {provider: vpcmodProvider}
 );
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_vpcmod as vpcmod
+
+aws_provider = aws.Provider("awsprovider", region="us-east-1")
+
+# Pass the AWS configuration to your VPC module provider
+vpcmod_provider = vpcmod.Provider("vpcprovider", aws=aws_provider.terraform_config().result)
+
+# Use the VPC module provider in your Module
+vpc = vpcmod.Module("test-vpc", ..., opts=pulumi.ResourceOptions(provider=vpcmod_provider))
+```
+
+{{% /choosable %}}
+
+{{% /chooser %}}
 
 This demonstrates how Terraform modules integrate seamlessly with existing Pulumi programs, allowing you to compose infrastructure components naturally.
 
