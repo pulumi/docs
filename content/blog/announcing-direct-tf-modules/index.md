@@ -92,7 +92,7 @@ First, [install the latest version of the Pulumi CLI](/docs/install/) (v3.178.0 
 
 Next, add a Terraform module to your Pulumi project:
 
-{{% chooser language "typescript,python,go,yaml" %}}
+{{% chooser language "typescript,python,go,csharp,yaml" %}}
 
 {{% choosable language typescript %}}
 
@@ -127,15 +127,43 @@ You can then import the SDK in your Python code with:
 {{% /choosable %}}
 
 {{% choosable language go %}}
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
+
 Using Terraform CLI for schema inference
 Successfully generated a Go SDK for the vpcmod package at /workdir/sdks/vpcmod
 Go mod file updated to use local sdk for vpcmod
 To use this package, import github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v6/vpcmod
 Added package "vpcmod" to Pulumi.yaml
+```
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
+
+Using Terraform CLI for schema inference
+Successfully generated a .NET SDK for the vpcmod package at /workdir/sdks/vpcmod
+
+Reference `sdks\vpcmod\Pulumi.Vpcmod.csproj` added to the project.
+You also need to add the following to your .csproj file of the program:
+
+  <DefaultItemExcludes>$(DefaultItemExcludes);sdks/**/*.cs</DefaultItemExcludes>
+
+You can then use the SDK in your .NET code with:
+
+  using Pulumi.Vpcmod;
+
+Added package "vpcmod" to Pulumi.yaml
+```
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
+
 Added package "vpcmod" to Pulumi.yaml
+```
 {{% /choosable %}}
 
 {{% /chooser %}}
@@ -163,6 +191,15 @@ build                   pulumi_vpcmod           pulumi_vpcmod.egg-info  setup.py
 ```bash
 $ ls sdks/vpcmod
 go.mod  vpcmod
+```
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+```bash
+$ ls sdks/vpcmod
+Inputs                  Provider.cs             README.md
+logo.png                pulumi-plugin.json      Utilities.cs
+Module.cs               Pulumi.Vpcmod.csproj    version.txt
 ```
 {{% /choosable %}}
 
@@ -291,6 +328,43 @@ func main() {
 }
 ```
 
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Vpc = Pulumi.Vpcmod;
+
+return await Deployment.RunAsync(() =>
+{
+    var vpc = new Vpc.Module("test-vpc", new Vpc.ModuleArgs
+    {
+        Azs = new string [] {
+            "us-west-2a",
+            "us-west-2b",
+        },
+        Cidr = "10.0.0.0/16",
+        Public_subnets = new string[] {
+            "10.0.1.0/24",
+            "10.0.2.0/24"
+        },
+        Private_subnets = new string[] {
+            "10.0.1.0/24",
+            "10.0.2.0/24"
+        },
+        Enable_nat_gateway=true,
+        Single_nat_gateway=true
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["publicSubnets"] = vpc.Public_subnets,
+        ["privateSubnets"] = vpc.Private_subnets
+    };
+});
+```
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
