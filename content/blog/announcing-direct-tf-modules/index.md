@@ -92,7 +92,7 @@ First, [install the latest version of the Pulumi CLI](/docs/install/) (v3.178.0 
 
 Next, add a Terraform module to your Pulumi project:
 
-{{% chooser language "typescript,python" %}}
+{{% chooser language "typescript,python,go" %}}
 
 {{% choosable language typescript %}}
 
@@ -126,11 +126,19 @@ You can then import the SDK in your Python code with:
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+Using Terraform CLI for schema inference
+Successfully generated a Go SDK for the vpcmod package at /workdir/sdks/vpcmod
+Go mod file updated to use local sdk for vpcmod
+To use this package, import github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v6/vpcmod
+Added package "vpcmod" to Pulumi.yaml
+{{% /choosable %}}
+
 {{% /chooser %}}
 
 Pulumi automatically generates a local SDK with full support for your language:
 
-{{% chooser language "typescript,python" %}}
+{{% chooser language "typescript,python,go" %}}
 
 {{% choosable language typescript %}}
 
@@ -144,6 +152,11 @@ bin             module.ts       package.json    scripts         types
 {{% choosable language python %}}
 $ ls sdks/vpcmod
 build                   pulumi_vpcmod           pulumi_vpcmod.egg-info  setup.py
+{{% /choosable %}}
+
+{{% choosable language go %}}
+$ ls sdks/vpcmod
+go.mod  vpcmod
 {{% /choosable %}}
 
 {{% /chooser %}}
@@ -162,7 +175,7 @@ And links it into your project such as `package.json` when using TypeScript:
 
 Now you can use the module with full IntelliSense support:
 
-{{% chooser language "typescript,python" %}}
+{{% chooser language "typescript,python,go" %}}
 
 {{% choosable language typescript %}}
 ```typescript
@@ -214,6 +227,56 @@ const vpc = new vpcmod.Module("test-vpc", {
 export const publicSubnets = vpc.public_subnets;
 export const privateSubnets = vpc.private_subnets;
 ```
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+``` go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v6/vpcmod"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func run(ctx *pulumi.Context) error {
+	stack := ctx.Stack()
+
+	vpc, err := vpcmod.NewModule(ctx, "test-vpc", &vpcmod.ModuleArgs{
+		Azs: pulumi.StringArray{
+			pulumi.String("us-west-2a"),
+			pulumi.String("us-west-2b"),
+		},
+		Name: pulumi.String(fmt.Sprintf("test-vpc-%s", stack)),
+		Cidr: pulumi.String("10.0.0.0/16"),
+		Public_subnets: pulumi.StringArray{
+			pulumi.String("10.0.1.0/24"),
+			pulumi.String("10.0.2.0/24"),
+		},
+		Private_subnets: pulumi.StringArray{
+			pulumi.String("10.0.3.0/24"),
+			pulumi.String("10.0.4.0/24"),
+		},
+		Enable_nat_gateway: pulumi.Bool(true),
+		Single_nat_gateway: pulumi.Bool(true),
+	})
+	if err != nil {
+		return err
+	}
+
+	ctx.Export("publicSubnets", vpc.Public_subnets)
+	ctx.Export("privateSubnets", vpc.Private_subnets)
+
+	return nil
+}
+
+func main() {
+	pulumi.Run(run)
+}
+```
+
 {{% /choosable %}}
 
 {{% /chooser %}}
@@ -287,13 +350,13 @@ The resulting project is ready to deploy with full Pulumi functionality.
 
 One of the key benefits is seamless configuration management. Instead of maintaining separate configurations for Pulumi and Terraform providers, you can reuse your existing Pulumi provider configuration:
 
-{{% chooser %}}
+{{% chooser language "typescript,python,go" %}}
 
 {{% choosable language typescript %}}
 
 ```typescript
 const awsProvider = new aws.Provider("awsprovider", {
-    region: "us-east-1",
+    region: "us-west-2",
     // more configuration
 });
 
@@ -317,13 +380,54 @@ import pulumi
 import pulumi_aws as aws
 import pulumi_vpcmod as vpcmod
 
-aws_provider = aws.Provider("awsprovider", region="us-east-1")
+aws_provider = aws.Provider("awsprovider", region="us-west-2")
 
 # Pass the AWS configuration to your VPC module provider
 vpcmod_provider = vpcmod.Provider("vpcprovider", aws=aws_provider.terraform_config().result)
 
 # Use the VPC module provider in your Module
 vpc = vpcmod.Module("test-vpc", ..., opts=pulumi.ResourceOptions(provider=vpcmod_provider))
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+func run(ctx *pulumi.Context) error {
+	stack := ctx.Stack()
+
+	awsProvider, err := aws.NewProvider(ctx, "awsprovider", &aws.ProviderArgs{
+		Region: pulumi.String("us-west-2"),
+	})
+	if err != nil {
+		return err
+	}
+
+	awsProviderTfConfig, err := awsProvider.TerraformConfig(ctx)
+	if err != nil {
+		return err
+	}
+
+	// Pass the AWS configuration to your VPC module provider
+	vpcProvider, err := vpcmod.NewProvider(ctx, "vpcprovider", &vpcmod.ProviderArgs{
+		Aws: awsProviderTfConfig.Result(),
+	})
+	if err != nil {
+		return err
+	}
+
+	// Use the VPC module provider in your Module
+	vpc, err := vpcmod.NewModule(ctx, "test-vpc", &vpcmod.ModuleArgs{...}, pulumi.Provider(vpcProvider))
+	if err != nil {
+		return err
+	}
+
+	ctx.Export("publicSubnets", vpc.Public_subnets)
+	ctx.Export("privateSubnets", vpc.Private_subnets)
+
+	return nil
+}
 ```
 
 {{% /choosable %}}
