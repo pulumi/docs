@@ -95,7 +95,12 @@ POST https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployme
 | `organization`| string | path  | **Required.** The organization name.         |
 | `project`     | string | path  | **Required.** The project name.              |
 | `stack`       | string | path  | **Required.** The stack name.                |
-| `settings`    | object | body  | **Required.** The deployment settings to apply. |
+| `settings`    | [Settings](#settings) | body  | **Required.** The deployment settings to apply. |
+| `settings.sourceContext` | [SourceContext](#sourcecontext) | body | **Optional.** Configuration for where source code is located. |
+| `settings.operationContext` | [OperationContext](#operationcontext) | body | **Optional.** Configuration for Pulumi operation execution. |
+| `settings.executorContext` | [ExecutorContext](#executorcontext) | body | **Optional.** Configuration for the deployment executor. |
+| `settings.gitHub` | [GitHub](#github) | body | **Optional.** GitHub integration settings. |
+| `settings.cacheOptions` | [CacheOptions](#cacheoptions) | body | **Optional.** Dependency caching configuration. |
 
 The final settings for the stack are calculated by merging the settings present in the request with the stack's current settings according to the following rules:
 
@@ -242,11 +247,11 @@ The stack **must** exist before a deployment can be created for it. If you attem
 | `stack`       | string | path  | **Required.** The stack name.                |
 | `operation`   | string | body  | **Required.** The Pulumi operation to perform (update, preview, refresh, destroy). |
 | `inheritSettings` | boolean | body | **Optional.** Whether to inherit stack deployment settings. Default is `true`. |
-| `sourceContext` | object | body | **Optional.** Source context for the deployment. |
-| `operationContext` | object | body | **Optional.** Operation context for the deployment. |
-| `executorContext` | object | body | **Optional.** Executor context for the deployment. |
-| `gitHub` | object | body | **Optional.** GitHub integration settings. |
-| `cacheOptions` | object | body | **Optional.** Cache options for the deployment. |
+| `sourceContext` | [SourceContext](#sourcecontext) | body | **Optional.** Source context for the deployment. |
+| `operationContext` | [OperationContext](#operationcontext) | body | **Optional.** Operation context for the deployment. |
+| `executorContext` | [ExecutorContext](#executorcontext) | body | **Optional.** Executor context for the deployment. |
+| `gitHub` | [GitHub](#github) | body | **Optional.** GitHub integration settings. |
+| `cacheOptions` | [CacheOptions](#cacheoptions) | body | **Optional.** Cache options for the deployment. |
 
 ### Examples
 
@@ -899,41 +904,39 @@ curl -i -XPOST -H "Content-Type: application/json" \
 
 This section documents the data schemas used by the Deployments API. Understanding these schemas helps you interpret API responses and structure API requests correctly.
 
-### ExecutorContext
+### Settings
 
-The executor context defines information about the executor where the Pulumi operation is executed. If unspecified, the default [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image is used.
-
-```json
-{
-  "executorImage": "pulumi/pulumi-nodejs:latest"
-}
-```
-
-or with credentials:
+The Settings object is the top-level configuration for deployment settings that can be set via the PATCH endpoint or used when creating deployments. All properties are optional and can be set independently using dot notation (e.g., `settings.operationContext`, `settings.sourceContext.git`).
 
 ```json
 {
-  "executorImage": {
-    "reference": "myregistry.azurecr.io/myimage:latest",
-    "credentials": {
-      "username": "my-username",
-      "password": {
-        "secret": "my-secret-password"
-      }
-    }
+  "sourceContext": {
+    // See SourceContext schema below
+  },
+  "operationContext": {
+    // See OperationContext schema below  
+  },
+  "executorContext": {
+    // See ExecutorContext schema below
+  },
+  "gitHub": {
+    // See GitHub schema below
+  },
+  "cacheOptions": {
+    // See CacheOptions schema below
   }
 }
 ```
 
 #### Properties
 
-| Name          | Type           | Description                                      |
-|---------------|----------------|--------------------------------------------------|
-| `executorImage` | string\|object | **Optional.** The image to use for execution.   |
-| `executorImage.reference` | string | **Required when executorImage is an object.** The reference to the image. |
-| `executorImage.credentials` | object | **Optional.** Credentials for private registry. |
-| `executorImage.credentials.username` | string | **Required when credentials are provided.** Username for authentication. |
-| `executorImage.credentials.password` | Secret | **Required when credentials are provided.** Password for authentication. |
+| Name               | Type           | Description                                      |
+|--------------------|----------------|--------------------------------------------------|
+| `sourceContext`    | [SourceContext](#sourcecontext) | **Optional.** Configuration for where source code is located. |
+| `operationContext` | [OperationContext](#operationcontext) | **Optional.** Configuration for Pulumi operation execution. |
+| `executorContext`  | [ExecutorContext](#executorcontext) | **Optional.** Configuration for the deployment executor. |
+| `gitHub`          | [GitHub](#github) | **Optional.** GitHub integration settings. |
+| `cacheOptions`    | [CacheOptions](#cacheoptions) | **Optional.** Dependency caching configuration. |
 
 ### SourceContext
 
@@ -999,6 +1002,42 @@ The operation context describes any context required for Pulumi operations to ex
 | `options.skipIntermediateDeployments` | boolean | **Optional.** Skip intermediate deployments. |
 | `options.deleteAfterDestroy` | boolean | **Optional.** Delete stack after destroy operation. |
 | `oidc` | object | **Optional.** OIDC configuration for cloud provider authentication. |
+
+### ExecutorContext
+
+The executor context defines information about the executor where the Pulumi operation is executed. If unspecified, the default [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image is used.
+
+```json
+{
+  "executorImage": "pulumi/pulumi-nodejs:latest"
+}
+```
+
+or with credentials:
+
+```json
+{
+  "executorImage": {
+    "reference": "myregistry.azurecr.io/myimage:latest",
+    "credentials": {
+      "username": "my-username",
+      "password": {
+        "secret": "my-secret-password"
+      }
+    }
+  }
+}
+```
+
+#### Properties
+
+| Name          | Type           | Description                                      |
+|---------------|----------------|--------------------------------------------------|
+| `executorImage` | string\|object | **Optional.** The image to use for execution.   |
+| `executorImage.reference` | string | **Required when executorImage is an object.** The reference to the image. |
+| `executorImage.credentials` | object | **Optional.** Credentials for private registry. |
+| `executorImage.credentials.username` | string | **Required when credentials are provided.** Username for authentication. |
+| `executorImage.credentials.password` | Secret | **Required when credentials are provided.** Password for authentication. |
 
 ### GitHub
 
