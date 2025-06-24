@@ -29,6 +29,8 @@ Though this strategy typically increases the amount of time that updates need to
 Please see the full example code here: [Blue/Green Deployment Updates on RDS](https://github.com/pulumi-demos/examples/tree/main/typescript/aws-rds-blue-green-updates). To use blue/green deployments for your database updates, start by creating a database and corresponding parameter group.
 
 ```typescript
+const dbVersion = "14.18";
+
 const parameterGroup = new aws.rds.ParameterGroup(
   "parameter-group",
   {
@@ -65,7 +67,7 @@ const database = new aws.rds.Instance(
 
 After running `pulumi up` with the above code, you'll have a database deployed and attached to your custom parameter group. It's important to create and attach a custom parameter group so that you can keep it up to date with any engine version upgrades. If you use the default parameter group, updates to the database version may fail when the green deployment is created since its parameter group family won't match the new version. You can avoid a failure by ensuring that the parameter group's `family` and `engineVersion` are always changed in the same update.
 
-You won't see the effects of having `blueGreenUpdate` enabled until you run your first update. Change any part of the database configuration and run `pulumi up` again to start the update.
+You won't see the effects of having `blueGreenUpdate` enabled until you run your first update. Change any part of the database configuration and run `pulumi up` again to start the update. In the example above, you can change dbVersion to 15.13 to trigger an update to both the parameter group and the instance.
 
 Once the update kicks off, you can watch on AWS as the blue/green deployment is created and the original settings are copied to the green instance.
 ![Blue Green Deployment Creating](./blue-green-creating.jpeg)
