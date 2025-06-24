@@ -67,7 +67,7 @@ const database = new aws.rds.Instance(
 );
 ```
 
-After running `pulumi up` with the above code, you'll have a database deployed and attached to your custom parameter group. It's important to create and attach a custom parameter group so that you can keep it up to date with any engine version upgrades. If you use the default parameter group, updates to the database version may fail when the green deployment is created since it's parameter group family won't match the new version. You can avoid a failure by ensuring that the parameter group's `family` and `engineVersion` are always changed in the same update.
+After running `pulumi up` with the above code, you'll have a database deployed and attached to your custom parameter group. It's important to create and attach a custom parameter group so that you can keep it up to date with any engine version upgrades. If you use the default parameter group, updates to the database version may fail when the green deployment is created since its parameter group family won't match the new version. You can avoid a failure by ensuring that the parameter group's `family` and `engineVersion` are always changed in the same update.
 
 You won't see the effects of having `blueGreenUpdate` enabled until you run your first update. Change any part of the database configuration and run `pulumi up` again to start the update.
 
