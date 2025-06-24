@@ -92,7 +92,7 @@ First, [install the latest version of the Pulumi CLI](/docs/install/) (v3.178.0 
 
 Next, add a Terraform module to your Pulumi project:
 
-{{% chooser language "typescript,python,go,csharp,yaml" %}}
+{{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 
@@ -158,6 +158,40 @@ Added package "vpcmod" to Pulumi.yaml
 ```
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
+
+Using Terraform CLI for schema inference
+Successfully generated a Java SDK for the vpcmod package at /workdir/sdks/vpcmod
+
+To use this SDK in your Java project, complete the following steps:
+
+1. Copy the contents of the generated SDK to your Java project:
+     cp -r /workdir/sdks/vpcmod/src/* /workdir/src
+
+2. Add the SDK's dependencies to your Java project's build configuration.
+   If you are using Maven, add the following dependencies to your pom.xml:
+
+     <dependencies>
+         <dependency>
+             <groupId>com.google.code.findbugs</groupId>
+             <artifactId>jsr305</artifactId>
+             <version>3.0.2</version>
+         </dependency>
+         <dependency>
+             <groupId>com.google.code.gson</groupId>
+             <artifactId>gson</artifactId>
+             <version>2.8.9</version>
+         </dependency>
+     </dependencies>
+
+Added package "vpcmod" to Pulumi.yaml
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 ```bash
 $ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
@@ -170,7 +204,7 @@ Added package "vpcmod" to Pulumi.yaml
 
 Pulumi automatically generates a local SDK with full support for your language:
 
-{{% chooser language "typescript,python,go,yaml" %}}
+{{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 ```bash
@@ -203,6 +237,13 @@ Module.cs               Pulumi.Vpcmod.csproj    version.txt
 ```
 {{% /choosable %}}
 
+{{% choosable language java %}}
+```bash
+$ ls sdks/vpcmod
+README.md       src
+```
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 ```bash
 $ ls sdks/vpcmod
@@ -218,7 +259,7 @@ Pulumi automatically links the generated SDK into your project.
 
 Now you can use the module with full IntelliSense support:
 
-{{% chooser language "typescript,python,go,yaml" %}}
+{{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 ```typescript
@@ -363,6 +404,39 @@ return await Deployment.RunAsync(() =>
     };
 });
 ```
+{{% /choosable %}}
+
+{{% choosable language java %}}
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.vpcmod.Module;
+import com.pulumi.vpcmod.ModuleArgs;
+
+public class App {
+
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            final var stackName = Deployment.getInstance().getStackName();
+
+            final var vpc = new Module("test-vpc", ModuleArgs.builder()
+                                       .name("test-vpc-"+stackName)
+                                       .azs("us-west-2a", "us-west-2b")
+                                       .cidr("10.0.0.0/16")
+                                       .public_subnets("10.0.1.0/24", "10.0.2.0/24")
+                                       .private_subnets("10.0.3.0/24", "10.0.4.0/24")
+                                       .enable_nat_gateway(true)
+                                       .single_nat_gateway(true)
+                                       .build());
+
+            ctx.export("publicSubnets", vpc.public_subnets());
+            ctx.export("privateSubnets", vpc.private_subnets());
+        });
+    }
+}
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
