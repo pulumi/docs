@@ -212,15 +212,7 @@ vpcmod-6.0.0.yaml
 
 {{% /chooser %}}
 
-And links it into your project such as `package.json` when using TypeScript:
-
-```json
-{
-    "dependencies": {
-        "@pulumi/vpcmod": "file:sdks/vpcmod"
-    }
-}
-```
+Pulumi automatically links the generated SDK into your project.
 
 ### Using the Module in Your Code
 
