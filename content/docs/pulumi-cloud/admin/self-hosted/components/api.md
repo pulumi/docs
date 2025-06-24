@@ -459,3 +459,24 @@ In order to enable [Pulumi ESC](/docs/esc), the following must be configured:
 * `PULUMI_SERVICE_METADATA_BLOB_STORAGE_ENDPOINT` or `PULUMI_LOCAL_OBJECTS` [object storage](#object-storage)
 
 * One of the [encryption services](#encryption-services)
+
+## Pulumi IDP Registry
+
+In order to enable the [Pulumi IDP Registry](/docs/idp/get-started/private-registry/), the following must be configured:
+
+* Environment variables for where to store public and private artifacts in a remote object store (see below).
+* [Cloud provider authentication](#cloud-provider-authentication) where the remote object store lives.
+
+### AWS S3
+
+| Variable Name                                 | Description                                                                                                                                                                                                                                                                                             |
+|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PULUMI_REGISTRY_PUBLIC_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting public registry artifacts. The value takes the format: `s3://<bucket-name>`. Similar to `PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT`, this also supports query-params.         |
+| PULUMI_REGISTRY_PRIVATE_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting private registry artifacts. The value takes the format: `s3://<bucket-name>`. Similar to `PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT`, this also supports query-params.         |
+
+### Azure Storage
+
+| Variable Name                                 | Description                                                                                                                                                                                                             |
+|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PULUMI_REGISTRY_PUBLIC_BLOB_STORAGE_ENDPOINT  | The storage endpoint for persisting public registry artifacts. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
+| PULUMI_REGISTRY_PRIVATE_BLOB_STORAGE_ENDPOINT  | The storage endpoint for persisting private registry artifacts. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
