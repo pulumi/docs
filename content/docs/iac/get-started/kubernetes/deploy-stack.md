@@ -66,6 +66,10 @@ The `name` of the deployment that we exported is shown as a [stack output](/docs
 
 {{< console-note >}}
 
+{{% notes type="info" %}}
+If you get the error `configured Kubernetes cluster is unreachable: unable to load schema information from the API server: the server has asked for the client to provide credentials`, you may need to configure valid AWS credentials.
+{{% /notes %}}
+
 Next, we'll make some modifications to the program.
 
 {{< get-started-stepper >}}
