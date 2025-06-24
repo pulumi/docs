@@ -307,7 +307,7 @@ resources:
       azs:
         - us-west-2a
         - us-west-2b
-      name: f"test-vpc-${pulumi.stack}"
+      name: test-vpc-${pulumi.stack}
       cidr: 10.0.0.0/16
       public_subnets:
         - 10.0.1.0/24
