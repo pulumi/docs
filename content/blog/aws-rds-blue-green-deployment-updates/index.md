@@ -49,7 +49,7 @@ const parameterGroup = new aws.rds.ParameterGroup(
 );
 
 const database = new aws.rds.Instance(
-  baseName,
+  "rds-instance",
   {
     allocatedStorage: storageAllocation,
     engine: "postgres",
