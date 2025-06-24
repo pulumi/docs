@@ -20,7 +20,7 @@ aliases:
 
 ## Is CrossGuard open source?
 
-The [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) that allows you to express policies and the local `--policy-pack` flag (that can enforce Policy Packs as part of the Pulumi CLI) are both open source.
+The [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) and Pulumi-authored policy packs like [Compliance Ready Policies](https://www.pulumi.com/docs/iac/crossguard/compliance-ready-policies/) are open-source under the Apache 2.0 license. The Pulumi CLI (also under the Apache 2.0 license) allows you to run policies during `pulumi preview` or `pulumi up` by specifying the `--policy-pack` flag free of charge, with the caveat that the policy must be present on disk.
 
 Pulumi CrossGuard is available to [Pulumi Business Critical](/pricing/) organizations and allows for enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Cloud.
 
