@@ -34,7 +34,7 @@ Please see the full example code here: [Blue/Green Deployment Updates on RDS](ht
 
 ```typescript
 const parameterGroup = new aws.rds.ParameterGroup(
-  `${baseName}logicalreplicationgroup`,
+  "parameter-group",
   {
     family: `postgres${dbVersion.split(".")[0]}`,
     parameters: [
