@@ -256,27 +256,33 @@ export const privateSubnets = vpc.private_subnets;
 
 {{% choosable language python %}}
 ```python
-import * as pulumi from "@pulumi/pulumi";
-import * as vpcmod from '@pulumi/vpcmod';
+import pulumi
+import pulumi_aws as aws
+import pulumi_vpcmod as vpcmod
 
-const vpc = new vpcmod.Module("test-vpc", {
-    azs: ["us-west-2a", "us-west-2b"],
-    name: `test-vpc-${pulumi.getStack()}`,
-    cidr: "10.0.0.0/16",
-    public_subnets: [
+aws_provider = aws.Provider("awsprovider", region="us-east-1")
+
+vpcmod_provider = vpcmod.Provider("vpcprovider", aws=aws_provider.terraform_config().result)
+
+vpc = vpcmod.Module(
+    "test-vpc",
+    azs=["us-west-2a", "us-west-2b"],
+    name=f"test-vpc{pulumi.get_stack()}",
+    cidr="10.0.0.0/16",
+    public_subnets=[
         "10.0.1.0/24",
         "10.0.2.0/24",
     ],
-    private_subnets: [
+    private_subnets=[
         "10.0.3.0/24",
         "10.0.4.0/24",
     ],
-    enable_nat_gateway: true,
-    single_nat_gateway: true,
-});
+    enable_nat_gateway=True,
+    single_nat_gateway=True,
+)
 
-export const publicSubnets = vpc.public_subnets;
-export const privateSubnets = vpc.private_subnets;
+pulumi.export("publicSubnets", vpc.public_subnets)
+pulumi.export("privateSubnets", vpc.private_subnets)
 ```
 {{% /choosable %}}
 
