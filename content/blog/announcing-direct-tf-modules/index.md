@@ -407,6 +407,7 @@ return await Deployment.RunAsync(() =>
 {{% /choosable %}}
 
 {{% choosable language java %}}
+```java
 package myproject;
 
 import com.pulumi.Context;
@@ -437,6 +438,7 @@ public class App {
         });
     }
 }
+```
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
