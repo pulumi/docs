@@ -92,7 +92,7 @@ First, [install the latest version of the Pulumi CLI](/docs/install/) (v3.178.0 
 
 Next, add a Terraform module to your Pulumi project:
 
-{{% chooser language "typescript,python,go" %}}
+{{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 
@@ -127,21 +127,86 @@ You can then import the SDK in your Python code with:
 {{% /choosable %}}
 
 {{% choosable language go %}}
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
+
 Using Terraform CLI for schema inference
 Successfully generated a Go SDK for the vpcmod package at /workdir/sdks/vpcmod
 Go mod file updated to use local sdk for vpcmod
 To use this package, import github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v6/vpcmod
 Added package "vpcmod" to Pulumi.yaml
+```
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
+
+Using Terraform CLI for schema inference
+Successfully generated a .NET SDK for the vpcmod package at /workdir/sdks/vpcmod
+
+Reference `sdks\vpcmod\Pulumi.Vpcmod.csproj` added to the project.
+You also need to add the following to your .csproj file of the program:
+
+  <DefaultItemExcludes>$(DefaultItemExcludes);sdks/**/*.cs</DefaultItemExcludes>
+
+You can then use the SDK in your .NET code with:
+
+  using Pulumi.Vpcmod;
+
+Added package "vpcmod" to Pulumi.yaml
+```
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
+
+Using Terraform CLI for schema inference
+Successfully generated a Java SDK for the vpcmod package at /workdir/sdks/vpcmod
+
+To use this SDK in your Java project, complete the following steps:
+
+1. Copy the contents of the generated SDK to your Java project:
+     cp -r /workdir/sdks/vpcmod/src/* /workdir/src
+
+2. Add the SDK's dependencies to your Java project's build configuration.
+   If you are using Maven, add the following dependencies to your pom.xml:
+
+     <dependencies>
+         <dependency>
+             <groupId>com.google.code.findbugs</groupId>
+             <artifactId>jsr305</artifactId>
+             <version>3.0.2</version>
+         </dependency>
+         <dependency>
+             <groupId>com.google.code.gson</groupId>
+             <artifactId>gson</artifactId>
+             <version>2.8.9</version>
+         </dependency>
+     </dependencies>
+
+Added package "vpcmod" to Pulumi.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
+
+Added package "vpcmod" to Pulumi.yaml
+```
 {{% /choosable %}}
 
 {{% /chooser %}}
 
 Pulumi automatically generates a local SDK with full support for your language:
 
-{{% chooser language "typescript,python,go" %}}
+{{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
-
 ```bash
 $ ls sdks/vpcmod
 README.md       index.ts        node_modules    provider.ts     tsconfig.json   utilities.ts
@@ -150,32 +215,51 @@ bin             module.ts       package.json    scripts         types
 {{% /choosable %}}
 
 {{% choosable language python %}}
+```bash
 $ ls sdks/vpcmod
 build                   pulumi_vpcmod           pulumi_vpcmod.egg-info  setup.py
+```
 {{% /choosable %}}
 
 {{% choosable language go %}}
+```bash
 $ ls sdks/vpcmod
 go.mod  vpcmod
+```
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+```bash
+$ ls sdks/vpcmod
+Inputs                  Provider.cs             README.md
+logo.png                pulumi-plugin.json      Utilities.cs
+Module.cs               Pulumi.Vpcmod.csproj    version.txt
+```
+{{% /choosable %}}
+
+{{% choosable language java %}}
+```bash
+$ ls sdks/vpcmod
+README.md       src
+```
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+```bash
+$ ls sdks/vpcmod
+vpcmod-6.0.0.yaml
+```
 {{% /choosable %}}
 
 {{% /chooser %}}
 
-And links it into your project such as `package.json` when using TypeScript:
-
-```json
-{
-    "dependencies": {
-        "@pulumi/vpcmod": "file:sdks/vpcmod"
-    }
-}
-```
+Pulumi automatically links the generated SDK into your project.
 
 ### Using the Module in Your Code
 
 Now you can use the module with full IntelliSense support:
 
-{{% chooser language "typescript,python,go" %}}
+{{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 ```typescript
@@ -205,27 +289,33 @@ export const privateSubnets = vpc.private_subnets;
 
 {{% choosable language python %}}
 ```python
-import * as pulumi from "@pulumi/pulumi";
-import * as vpcmod from '@pulumi/vpcmod';
+import pulumi
+import pulumi_aws as aws
+import pulumi_vpcmod as vpcmod
 
-const vpc = new vpcmod.Module("test-vpc", {
-    azs: ["us-west-2a", "us-west-2b"],
-    name: `test-vpc-${pulumi.getStack()}`,
-    cidr: "10.0.0.0/16",
-    public_subnets: [
+aws_provider = aws.Provider("awsprovider", region="us-east-1")
+
+vpcmod_provider = vpcmod.Provider("vpcprovider", aws=aws_provider.terraform_config().result)
+
+vpc = vpcmod.Module(
+    "test-vpc",
+    azs=["us-west-2a", "us-west-2b"],
+    name=f"test-vpc{pulumi.get_stack()}",
+    cidr="10.0.0.0/16",
+    public_subnets=[
         "10.0.1.0/24",
         "10.0.2.0/24",
     ],
-    private_subnets: [
+    private_subnets=[
         "10.0.3.0/24",
         "10.0.4.0/24",
     ],
-    enable_nat_gateway: true,
-    single_nat_gateway: true,
-});
+    enable_nat_gateway=True,
+    single_nat_gateway=True,
+)
 
-export const publicSubnets = vpc.public_subnets;
-export const privateSubnets = vpc.private_subnets;
+pulumi.export("publicSubnets", vpc.public_subnets)
+pulumi.export("privateSubnets", vpc.private_subnets)
 ```
 {{% /choosable %}}
 
@@ -275,6 +365,119 @@ func run(ctx *pulumi.Context) error {
 func main() {
 	pulumi.Run(run)
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Vpc = Pulumi.Vpcmod;
+
+return await Deployment.RunAsync(() =>
+{
+    var vpc = new Vpc.Module("test-vpc", new Vpc.ModuleArgs
+    {
+        Azs = new string [] {
+            "us-west-2a",
+            "us-west-2b",
+        },
+        Cidr = "10.0.0.0/16",
+        Public_subnets = new string[] {
+            "10.0.1.0/24",
+            "10.0.2.0/24"
+        },
+        Private_subnets = new string[] {
+            "10.0.1.0/24",
+            "10.0.2.0/24"
+        },
+        Enable_nat_gateway=true,
+        Single_nat_gateway=true
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["publicSubnets"] = vpc.Public_subnets,
+        ["privateSubnets"] = vpc.Private_subnets
+    };
+});
+```
+{{% /choosable %}}
+
+{{% choosable language java %}}
+```java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.vpcmod.Module;
+import com.pulumi.vpcmod.ModuleArgs;
+
+public class App {
+
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            final var stackName = Deployment.getInstance().getStackName();
+
+            final var vpc = new Module("test-vpc", ModuleArgs.builder()
+                                       .name("test-vpc-"+stackName)
+                                       .azs("us-west-2a", "us-west-2b")
+                                       .cidr("10.0.0.0/16")
+                                       .public_subnets("10.0.1.0/24", "10.0.2.0/24")
+                                       .private_subnets("10.0.3.0/24", "10.0.4.0/24")
+                                       .enable_nat_gateway(true)
+                                       .single_nat_gateway(true)
+                                       .build());
+
+            ctx.export("publicSubnets", vpc.public_subnets());
+            ctx.export("privateSubnets", vpc.private_subnets());
+        });
+    }
+}
+```
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+``` yaml
+name: my-program
+
+runtime: yaml
+
+resources:
+  vpc:
+    type: vpcmod:index:Module
+    properties:
+      azs:
+        - us-west-2a
+        - us-west-2b
+      name: test-vpc-${pulumi.stack}
+      cidr: 10.0.0.0/16
+      public_subnets:
+        - 10.0.1.0/24
+        - 10.0.2.0/24
+      private_subnets:
+        - 10.0.3.0/24
+        - 10.0.4.0/24
+      enable_nat_gateway: true
+      single_nat_gateway: true
+
+outputs:
+  publicSubnets: ${vpc.public_subnets}
+  privateSubnets: ${vpc.private_subnets}
+
+packages:
+  vpcmod:
+    source: terraform-module
+    version: 0.1.7
+    parameters:
+      - terraform-aws-modules/vpc/aws
+      - 6.0.0
+      - vpcmod
 ```
 
 {{% /choosable %}}
@@ -431,6 +634,7 @@ func run(ctx *pulumi.Context) error {
 ```
 
 {{% /choosable %}}
+
 
 {{% /chooser %}}
 
