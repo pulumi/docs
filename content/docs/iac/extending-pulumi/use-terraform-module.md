@@ -420,6 +420,7 @@ func main() {
 	pulumi.Run(run)
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -527,6 +528,7 @@ internal class Utils {
     }
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
