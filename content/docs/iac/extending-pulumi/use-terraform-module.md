@@ -529,6 +529,113 @@ internal class Utils {
 ```
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+Since this was a Java project, Pulumi generated a Java SDK for the modules, making those available to use as `com.pulumi.rdsmod` and `com.pulumi.vpcmod`. We can now use the Terraform modules directly in our code:
+
+```java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.AwsFunctions;
+import com.pulumi.aws.inputs.GetAvailabilityZonesArgs;
+import com.pulumi.aws.inputs.GetAvailabilityZonesFilterArgs;
+import com.pulumi.std.StdFunctions;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.vpc.SecurityGroupIngressRule;
+import com.pulumi.aws.vpc.SecurityGroupIngressRuleArgs;
+import com.pulumi.Config;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.List;
+import java.util.Collections;
+
+public class App {
+    public static void stack(Context ctx) {
+
+        // Get available availability zones
+        final var azNames = AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
+            .filters(GetAvailabilityZonesFilterArgs.builder()
+                     .name("opt-in-status")
+                     .values("opt-in-not-required")
+                     .build())
+            .build())
+            .applyValue(result -> result.names().subList(0, 3));
+
+        final var cidr = "10.0.0.0/16";
+        final var prefix = ctx.config().get("prefix").orElse(ctx.stackName());
+
+        // Create a VPC using the terraform-aws-modules/vpc module
+        final var vpc = new com.pulumi.vpcmod.Module("test-vpc", com.pulumi.vpcmod.ModuleArgs.builder()
+            .azs(azNames)
+            .name("test-vpc-" + prefix)
+            .cidr(cidr)
+            .public_subnets(subnets(cidr, azNames, 1))
+            .private_subnets(subnets(cidr, azNames, 5))
+            .database_subnets(subnets(cidr, azNames, 9))
+            .create_database_subnet_group(true)
+            .build());
+
+        final var rdsSecurityGroup = new SecurityGroup("test-rds-sg", SecurityGroupArgs.builder()
+            .vpcId(vpc.vpc_id().applyValue(x -> x.get()))
+            .build());
+
+        new SecurityGroupIngressRule("test-rds-sg-ingress", SecurityGroupIngressRuleArgs.builder()
+            .ipProtocol("tcp")
+            .securityGroupId(rdsSecurityGroup.id())
+            .cidrIpv4(vpc.vpc_cidr_block().applyValue(x -> x.get()))
+            .fromPort(3306)
+            .toPort(3306)
+            .build());
+
+        new com.pulumi.rdsmod.Module("test-rds", com.pulumi.rdsmod.ModuleArgs.builder()
+            .engine("mysql")
+            .identifier("test-rds-" + prefix)
+            .manage_master_user_password(true)
+            .publicly_accessible(false)
+            .allocated_storage(20.0)
+            .max_allocated_storage(100.0)
+            .instance_class("db.t4g.large")
+            .engine_version("8.0")
+            .family("mysql8.0")
+            .db_name("completeMysql")
+            .username("complete_mysql")
+            .port("3306")
+            .multi_az(true)
+            .db_subnet_group_name(vpc.database_subnet_group_name().applyValue(x -> x.get()))
+            .vpc_security_group_ids(rdsSecurityGroup.id().applyValue(x -> Collections.singletonList(x)))
+            .skip_final_snapshot(true)
+            .deletion_protection(false)
+            .create_db_option_group(false)
+            .create_db_parameter_group(false)
+            .build());
+    }
+
+    private static Output<List<String>> subnets(String cidr, Output<List<String>> azNames, int offset) {
+        return azNames.apply(names -> Output.all(IntStream.range(0, names.size())
+                                                 .mapToObj(i -> getCidrSubnet(cidr, i+offset))
+                                                 .collect(Collectors.toList())));
+    }
+
+    private static Output<String> getCidrSubnet(String cidr, int netnum) {
+        return StdFunctions.cidrsubnet(com.pulumi.std.inputs.CidrsubnetArgs.builder()
+            .input(cidr)
+            .newbits(8)
+            .netnum(netnum)
+            .build()).applyValue(x -> x.result());
+    }
+
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 When authoring in YAML, there's no need for Pulumi to generate a SDK. In the YAML you can reference the Terraform module by its schema token, which takes the format `<module-name>:index:Module`:
