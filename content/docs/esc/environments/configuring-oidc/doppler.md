@@ -52,11 +52,7 @@ For environments in the `default` project the audience will use just the Pulumi 
 prevent regressions for legacy environments.
 {{< /notes >}}
 
-After the Identity has been created, take note of the following details:
-
-* Identity ID
-
-This value will be necessary when enabling OIDC for your service.
+After the Identity has been created, take note of the Identity ID. This value will be necessary when enabling OIDC for your service.
 
 ## Configure ESC for OIDC
 

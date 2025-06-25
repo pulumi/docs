@@ -35,11 +35,7 @@ In the navigation pane of the [Infisical app](https://app.infisical.com):
 3. Select a **Role** for the identity.
 4. Click **Create**.
 
-After the Identity has been created, take note of the following details:
-
-* Identity ID
-
-This value will be necessary when enabling OIDC for your service.
+After the Identity has been created, take note of the Identity ID. This value will be necessary when enabling OIDC for your service.
 
 ## Add OIDC Authentication
 
