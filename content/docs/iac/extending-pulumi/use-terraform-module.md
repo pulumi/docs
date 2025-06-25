@@ -117,7 +117,7 @@ packages:
       - rdsmod
 ```
 
-{{% chooser language "typescript,python,yaml" %}}
+{{% chooser language "typescript,python,csharp,yaml" %}}
 
 {{% choosable language typescript %}}
 
@@ -418,6 +418,113 @@ func applyAznamesForSubnet(
 
 func main() {
 	pulumi.Run(run)
+}
+```
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+Since this was a C# project, Pulumi generated a C# SDK for the modules, making those available to use as `Pulumi.Rdsmod` and `Pulumi.Vpcmod`. We can now use the Terraform modules directly in our code:
+
+```csharp
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Rdsmod = Pulumi.Rdsmod;
+using Std = Pulumi.Std;
+using Vpcmod = Pulumi.Vpcmod;
+
+return await Deployment.RunAsync(() =>
+{
+// Get available availability zones
+    var azs = Aws.GetAvailabilityZones.Invoke(new Aws.GetAvailabilityZonesInvokeArgs
+    {
+        Filters =
+            {
+                new Aws.Inputs.GetAvailabilityZonesFilterInputArgs
+                {
+                    Name = "opt-in-status",
+                    Values = { "opt-in-not-required" }
+                }
+            }
+    }).Apply(result => result.Names.Take(3).ToArray());
+
+    var cidr = "10.0.0.0/16";
+
+    var config = new Pulumi.Config();
+    var prefix = config.Get("prefix") ?? Deployment.Instance.StackName;
+
+    // Create a VPC using the terraform-aws-modules/vpc module
+    var vpc = new Vpcmod.Module("test-vpc", new Vpcmod.ModuleArgs
+    {
+        Azs = azs,
+        Name = Output.Format($"test-vpc-{prefix}"),
+        Cidr = cidr,
+        Public_subnets = Utils.Subnets(cidr, azs, 1),
+        Private_subnets = Utils.Subnets(cidr, azs, 5),
+        Database_subnets = Utils.Subnets(cidr, azs, 9),
+        Create_database_subnet_group = true,
+    });
+
+    // Create a security group for the RDS instance
+    var rdsSecurityGroup = new Aws.Ec2.SecurityGroup("test-rds-sg", new Aws.Ec2.SecurityGroupArgs
+    {
+        VpcId = vpc.Vpc_id.Apply(id => id ?? string.Empty),
+    });
+
+    _ = new Aws.Vpc.SecurityGroupIngressRule("test-rds-sg-ingress", new Aws.Vpc.SecurityGroupIngressRuleArgs
+    {
+        IpProtocol = "tcp",
+        SecurityGroupId = rdsSecurityGroup.Id,
+        CidrIpv4 = vpc.Vpc_cidr_block.Apply(x => x!),
+        FromPort = 3306,
+        ToPort = 3306,
+    });
+
+    // Create an RDS instance using the terraform-aws-modules/rds module
+    _ = new Rdsmod.Module("test-rds", new Rdsmod.ModuleArgs
+    {
+        Engine = "mysql",
+        Identifier = Output.Format($"test-rds-{prefix}"),
+        Manage_master_user_password = true,
+        Publicly_accessible = false,
+        Allocated_storage = 20,
+        Max_allocated_storage = 100,
+        Instance_class = "db.t4g.large",
+        Engine_version = "8.0",
+        Family = "mysql8.0",
+        Db_name = "completeMysql",
+        Username = "complete_mysql",
+        Port = "3306",
+        Multi_az = true,
+        Db_subnet_group_name = vpc.Database_subnet_group_name,
+        Vpc_security_group_ids = { rdsSecurityGroup.Id },
+        Skip_final_snapshot = true,
+        Deletion_protection = false,
+        Create_db_option_group = false,
+        Create_db_parameter_group = false,
+    });
+});
+
+// Utilities to calculate subnet CIDRs
+internal class Utils {
+    public static Output<ImmutableArray<string>> Subnets(string cidr, Output<string[]> azs, int offset) {
+        return azs.Apply(names => Pulumi.Output.All(names.Select((_, i) => Utils.GetCidrSubnet(cidr, i + 1))));
+    }
+
+    public static Output<string> GetCidrSubnet(string cidr, int netnum)
+    {
+        return Std.Cidrsubnet.Invoke(new Std.CidrsubnetInvokeArgs
+        {
+            Input = cidr,
+            Newbits = 8,
+            Netnum = netnum
+        }).Apply(result => result.Result);
+    }
 }
 ```
 {{% /choosable %}}
