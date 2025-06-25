@@ -121,7 +121,7 @@ packages:
 
 {{% choosable language typescript %}}
 
-Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the modules, making those available to use as `@pulumi/vpcmod` and `@pulumi/rdsmod` respectively. We can now use the Terraform modules directly in our TypeScript code:
+Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the modules, making those available to use as `@pulumi/vpcmod` and `@pulumi/rdsmod` respectively. We can now use the Terraform modules directly in our TypeScript code.
 
 ***Example:** index.ts - Using the Terraform VPC and RDS module in a Pulumi program*
 
@@ -290,6 +290,136 @@ rdsmod.Module("test-rds",
 )
 ```
 
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+Since this was a Go project, Pulumi generated a Go SDK for the modules, making those available to use as `github.com/pulumi/pulumi-terraform-module/sdks/go/rdsmod/v6/rdsmod` and `github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v5/vpcmod`. We can now use the Terraform modules directly in our code:
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/vpc"
+	"github.com/pulumi/pulumi-std/sdk/go/std"
+	rdsmod "github.com/pulumi/pulumi-terraform-module/sdks/go/rdsmod/v6/rdsmod"
+	vpcmod "github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v5/vpcmod"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+)
+
+func run(ctx *pulumi.Context) error {
+	// Get available availability zones
+	azs := aws.GetAvailabilityZonesOutput(ctx, aws.GetAvailabilityZonesOutputArgs{
+		Filters: aws.GetAvailabilityZonesFilterArray{
+			aws.GetAvailabilityZonesFilterArgs{
+				Name:   pulumi.String("opt-in-status"),
+				Values: pulumi.StringArray{pulumi.String("opt-in-not-required")},
+			},
+		},
+	})
+
+	azNames := azs.Names().ApplyT(func(names []string) []string {
+		if len(names) > 3 {
+			return names[:3]
+		}
+		return names
+	}).(pulumi.StringArrayOutput)
+
+	cidr := "10.0.0.0/16"
+	cfg := config.New(ctx, "")
+	prefix := cfg.Get("prefix")
+	if prefix == "" {
+		prefix = ctx.Stack()
+	}
+
+	// Create a VPC using the terraform-aws-modules/vpc module
+	vpcInstance, err := vpcmod.NewModule(ctx, "test-vpc", &vpcmod.ModuleArgs{
+		Azs:                          azNames,
+		Name:                         pulumi.Sprintf("test-vpc-%s", prefix),
+		Cidr:                         pulumi.String(cidr),
+		Public_subnets:               applyAznamesForSubnet(ctx, azNames, cidr, 1),
+		Private_subnets:              applyAznamesForSubnet(ctx, azNames, cidr, 5),
+		Database_subnets:             applyAznamesForSubnet(ctx, azNames, cidr, 9),
+		Create_database_subnet_group: pulumi.Bool(true),
+	})
+	if err != nil {
+		return err
+	}
+
+	// Create a security group for the RDS instance
+	rdsSecurityGroup, err := ec2.NewSecurityGroup(ctx, "test-rds-sg", &ec2.SecurityGroupArgs{
+		VpcId: vpcInstance.Vpc_id,
+	})
+	if err != nil {
+		return err
+	}
+	_, err = vpc.NewSecurityGroupIngressRule(ctx, "test-rds-sg-ingress", &vpc.SecurityGroupIngressRuleArgs{
+		IpProtocol:      pulumi.String("tcp"),
+		SecurityGroupId: rdsSecurityGroup.ID(),
+		CidrIpv4:        vpcInstance.Vpc_cidr_block,
+		FromPort:        pulumi.Int(3306),
+		ToPort:          pulumi.Int(3306),
+	})
+	if err != nil {
+		return err
+	}
+
+	// Create an RDS instance using the terraform-aws-modules/rds module
+	_, err = rdsmod.NewModule(ctx, "test-rds", &rdsmod.ModuleArgs{
+		Engine:                      pulumi.String("mysql"),
+		Identifier:                  pulumi.Sprintf("test-rds-%s", prefix),
+		Manage_master_user_password: pulumi.Bool(true),
+		Publicly_accessible:         pulumi.Bool(false),
+		Allocated_storage:           pulumi.Float64(20),
+		Max_allocated_storage:       pulumi.Float64(100),
+		Instance_class:              pulumi.String("db.t4g.large"),
+		Engine_version:              pulumi.String("8.0"),
+		Family:                      pulumi.String("mysql8.0"),
+		Db_name:                     pulumi.String("completeMysql"),
+		Username:                    pulumi.String("complete_mysql"),
+		Port:                        pulumi.String("3306"),
+		Multi_az:                    pulumi.Bool(true),
+		Db_subnet_group_name:        vpcInstance.Database_subnet_group_name,
+		Vpc_security_group_ids:      pulumi.StringArray{rdsSecurityGroup.ID()},
+		Skip_final_snapshot:         pulumi.Bool(true),
+		Deletion_protection:         pulumi.Bool(false),
+		Create_db_option_group:      pulumi.Bool(false),
+		Create_db_parameter_group:   pulumi.Bool(false),
+	})
+	return err
+}
+
+func applyAznamesForSubnet(
+	ctx *pulumi.Context,
+	azNames pulumi.StringArrayOutput,
+	cidr string,
+	offset int,
+) pulumi.StringArrayOutput {
+	return azNames.ApplyT(func(azs []string) ([]string, error) {
+		subnets := make([]string, len(azs))
+		for i := range azs {
+			netnum := offset + i
+			r, err := std.Cidrsubnet(ctx, &std.CidrsubnetArgs{
+				Input:   cidr,
+				Newbits: 8,
+				Netnum:  netnum,
+			})
+			if err != nil {
+				return nil, err
+			}
+			subnets[i] = r.Result
+		}
+		return subnets, nil
+	}).(pulumi.StringArrayOutput)
+}
+
+func main() {
+	pulumi.Run(run)
+}
+```
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
