@@ -9,8 +9,6 @@ page_title: What is an Internal Developer Platform (IDP)?
 
 An Internal Developer Platform (IDP) is a layer that sits on top of your organization's infrastructure and tools, providing a standardized, self-service experience for developers. It abstracts away the complexity of underlying infrastructure, allowing developers to provision and manage the resources they need without having to understand all the underlying details.
 
-{{< youtube "is83TV8nrTg?rel=0" >}}
-
 ## What is an Internal Developer Platform?
 
 An Internal Developer Platform is a set of tools, services, and processes that platform engineering teams build to enable application developers to self-serve infrastructure and deploy applications. Organizations can build IDPs internally or adopt flexible solutions like [Pulumi IDP](/product/internal-developer-platforms/) to enable self-service infrastructure efficiently.
