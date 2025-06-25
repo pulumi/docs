@@ -741,11 +741,11 @@ In the above code, the imported Terraform module works the same as any other Pul
 
 Some modules require Terraform providers to be configured with specific settings. You can configure these providers from within Pulumi:
 
-{{% chooser language "typescript" %}}
+{{% chooser language "typescript,python,go,csharp,java" %}}
 
 {{% choosable language typescript %}}
 
-**Example:** index.ts - Configuring the imported Terraform bucket module*
+**Example:** `index.ts` - Configuring the imported Terraform bucket module
 
 ```typescript
 import * as bucket from "@pulumi/bucket";
@@ -761,6 +761,130 @@ const provider = new bucket.Provider("test-provider", {
 const testBucket = new bucket.Module("test-bucket", {
     bucket: `${prefix}-test-bucket`
 }, { provider: provider });
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+**Example:** `__main__.py` - Configuring the imported Terraform bucket module
+
+```python
+import pulumi
+import pulumi_bucket as bucket
+
+# Configure the AWS provider for the module
+provider = bucket.Provider("bucket-provider", aws={
+    "region": "us-west-2"
+})
+
+# Use the provider with the module
+test_bucket = bucket.Module("test-bucket",
+    bucket=f"${prefix}-test-bucket"
+    opts=pulumi.ResourceOptions(provider=provider)
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+**Example:** `main.go` - Configuring the imported Terraform bucket module
+
+```go
+package main
+
+import (
+	bucket "github.com/pulumi/pulumi-terraform-module/sdks/go/bucket/v3/bucket"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+
+func run(ctx *pulumi.Context) error {
+    // Configure the AWS provider for the module
+	prov, err := bucket.NewProvider(ctx, "provider", &bucket.ProviderArgs{
+		Aws: pulumi.ToMap(map[string]any{
+			"region": "us-west-2",
+		}),
+	})
+	if err != nil {
+		return err
+	}
+
+    // Use the provider with the module
+	bucketInstance, err := bucket.NewModule(ctx, "test-bucket", &bucket.ModuleArgs{
+		Bucket: pulumi.Sprintf("test-vpc-%s", prefix),
+	}, pulumi.Provider(prov))
+	if err != nil {
+		return err
+	}
+}
+
+func main() {
+	pulumi.Run(run)
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+**Example:** `Program.cs` - Configuring the imported Terraform bucket module
+
+```csharp
+using Pulumi;
+using Bucket = Pulumi.Bucket;
+
+return await Deployment.RunAsync(() =>
+{
+    // Configure the AWS provider for the module
+    var provider = new Bucket.Provider("test-provider", new Bucket.ProviderArgs
+    {
+        Aws = {{"region", "us-west-2"}}
+    });
+
+    // Use the provider with the module
+    var bucket = new Bucket.Module("test-bucket", new Bucket.Args
+    {
+        Bucket = $"{prefix}-test-bucket"
+    }, new CustomResourceOptions
+    {
+        Provider = provider
+    });
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+**Example:** `App.java` - Configuring the imported Terraform bucket module
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.resources.CustomResourceOptions;
+
+public class App {
+    public static void stack(Context ctx) {
+
+        // Configure the AWS provider for the module
+        final var provider = new com.pulumi.bucket.Provider("test-provider",
+            com.pulumi.bucket.ProviderArgs.builder()
+            .aws(Collections.singletonMap("region", "us-west-2"))
+            .build());
+
+        // Use the provider with the module
+        final var bucket = new com.pulumi.bucket.Module("test-bucket",
+            com.pulumi.bucket.ModuleArgs.builder()
+                .bucket(prefix+"-test-bucket")
+                .build(),
+            CustomResourceOptions.builder().provider(provider).build());
+    }
+
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+}
 ```
 
 {{% /choosable %}}
