@@ -447,7 +447,7 @@ using Vpcmod = Pulumi.Vpcmod;
 
 return await Deployment.RunAsync(() =>
 {
-// Get available availability zones
+    // Get available availability zones
     var azs = Aws.GetAvailabilityZones.Invoke(new Aws.GetAvailabilityZonesInvokeArgs
     {
         Filters =
