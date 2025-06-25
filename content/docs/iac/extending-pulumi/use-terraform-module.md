@@ -92,7 +92,7 @@ $ pulumi package add terraform-module terraform-aws-modules/rds/aws 6.10.0 rdsmo
 
 After adding the packages, your `Pulumi.yaml` will be updated, and any necessary dependencies will be added to your project.
 
-***Example:** Pulumi.yaml*
+**Example:** Pulumi.yaml*
 
 ```yaml
 name: rds-example
@@ -117,13 +117,13 @@ packages:
       - rdsmod
 ```
 
-{{% chooser language "typescript,python,csharp,yaml" %}}
+{{% chooser language "typescript,python,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 
 Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the modules, making those available to use as `@pulumi/vpcmod` and `@pulumi/rdsmod` respectively. We can now use the Terraform modules directly in our TypeScript code.
 
-***Example:** index.ts - Using the Terraform VPC and RDS module in a Pulumi program*
+**Example:** index.ts - Using the Terraform VPC and RDS module in a Pulumi program*
 
 ```typescript
 import * as vpcmod from '@pulumi/vpcmod';
@@ -214,6 +214,8 @@ function getCidrSubnet(cidr: string, netnum: number): pulumi.Output<string> {
 
 Since this was a Python project, Pulumi generated a Python SDK for the modules, making those available to use as `pulumi_vpcmod` and `pulumi_rdsmod` respectively. We can now use the Terraform modules directly in our code:
 
+**Example:** `__main__.py` - Using the Terraform VPC and RDS module in a Pulumi program
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -293,6 +295,8 @@ rdsmod.Module("test-rds",
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
+**Example:** `main.go` - Using the Terraform VPC and RDS module in a Pulumi program
 
 Since this was a Go project, Pulumi generated a Go SDK for the modules, making those available to use as `github.com/pulumi/pulumi-terraform-module/sdks/go/rdsmod/v6/rdsmod` and `github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v5/vpcmod`. We can now use the Terraform modules directly in our code:
 
@@ -427,6 +431,8 @@ func main() {
 
 Since this was a C# project, Pulumi generated a C# SDK for the modules, making those available to use as `Pulumi.Rdsmod` and `Pulumi.Vpcmod`. We can now use the Terraform modules directly in our code:
 
+**Example:** `Program.cs` - Using the Terraform VPC and RDS module in a Pulumi program
+
 ```csharp
 using System;
 using System.Linq;
@@ -535,6 +541,8 @@ internal class Utils {
 
 Since this was a Java project, Pulumi generated a Java SDK for the modules, making those available to use as `com.pulumi.rdsmod` and `com.pulumi.vpcmod`. We can now use the Terraform modules directly in our code:
 
+**Example:** `App.java` - Using the Terraform VPC and RDS module in a Pulumi program
+
 ```java
 package myproject;
 
@@ -642,19 +650,85 @@ public class App {
 
 When authoring in YAML, there's no need for Pulumi to generate a SDK. In the YAML you can reference the Terraform module by its schema token, which takes the format `<module-name>:index:Module`:
 
-**Example:** Pulumi.yaml - Using an imported Terraform module in a Pulumi YAML program*
-
-TODO expand this example to match TypeScript above.
+**Example:** `Pulumi.yaml` - Using the Terraform VPC and RDS module in a Pulumi program
 
 ```yaml
+name: testproj-yaml
+description: testproj-yaml
+runtime: yaml
 resources:
-  my-rds:
+  testVpc:
+    type: vpcmod:index:Module
+    properties:
+      name: test-vpc-${pulumi.stack}
+      azs:
+        - us-west-2a
+        - us-west-2b
+        - us-west-2c
+      cidr: 10.0.0.0/16
+      public_subnets:
+        - 10.0.1.0/24
+        - 10.0.2.0/24
+        - 10.0.3.0/24
+      private_subnets:
+        - 10.0.5.0/24
+        - 10.0.6.0/24
+        - 10.0.7.0/24
+      database_subnets:
+        - 10.0.9.0/24
+        - 10.0.10.0/24
+        - 10.0.11.0/24
+      create_database_subnet_group: true
+  testRdsSg:
+    type: aws:ec2:SecurityGroup
+    properties:
+      vpcId: ${testVpc.vpc_id}
+  testRdsSgIngress:
+    type: aws:vpc:SecurityGroupIngressRule
+    properties:
+      ipProtocol: tcp
+      securityGroupId: ${testRdsSg.id}
+      cidrIpv4: ${testVpc.vpc_cidr_block}
+      fromPort: 3306
+      toPort: 3306
+  testRds:
     type: rdsmod:index:Module
     properties:
       engine: mysql
-      identifier: my-rds-instance
+      identifier: test-rds-${pulumi.stack}
       manage_master_user_password: true
-      # other properties...
+      publicly_accessible: false
+      allocated_storage: 20
+      max_allocated_storage: 100
+      instance_class: db.t4g.large
+      engine_version: 8
+      family: mysql8.0
+      db_name: completeMysql
+      username: complete_mysql
+      port: '3306'
+      multi_az: true
+      db_subnet_group_name: ${testVpc.database_subnet_group_name}
+      vpc_security_group_ids:
+        - ${testRdsSg.id}
+      skip_final_snapshot: true
+      deletion_protection: false
+      create_db_option_group: false
+      create_db_parameter_group: false
+packages:
+  rdsmod:
+    source: terraform-module
+    version: 0.1.7
+    parameters:
+      - terraform-aws-modules/rds/aws
+      - 6.10.0
+      - rdsmod
+  vpcmod:
+    source: terraform-module
+    version: 0.1.7
+    parameters:
+      - terraform-aws-modules/vpc/aws
+      - 5.19.0
+      - vpcmod
 ```
 
 {{% /choosable %}}
