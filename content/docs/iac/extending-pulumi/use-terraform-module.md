@@ -117,6 +117,10 @@ packages:
       - rdsmod
 ```
 
+{{% chooser language "typescript,yaml" %}}
+
+{{% choosable language typescript %}}
+
 Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the modules, making those available to use as `@pulumi/vpcmod` and `@pulumi/rdsmod` respectively. We can now use the Terraform modules directly in our TypeScript code:
 
 ***Example:** index.ts - Using the Terraform VPC and RDS module in a Pulumi program*
@@ -204,11 +208,40 @@ function getCidrSubnet(cidr: string, netnum: number): pulumi.Output<string> {
 }
 ```
 
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+When authoring in YAML, there's no need for Pulumi to generate a SDK. In the YAML you can reference the Terraform module by its schema token, which takes the format `<module-name>:index:Module`:
+
+**Example:** Pulumi.yaml - Using an imported Terraform module in a Pulumi YAML program*
+
+TODO expand this example to match TypeScript above.
+
+```yaml
+resources:
+  my-rds:
+    type: rdsmod:index:Module
+    properties:
+      engine: mysql
+      identifier: my-rds-instance
+      manage_master_user_password: true
+      # other properties...
+```
+
+{{% /choosable %}}
+
+{{% /chooser %}}
+
 In the above code, the imported Terraform module works the same as any other Pulumi code. Outputs are returned, and resource state is stored in your Pulumi state storage, alongside all your other Pulumi-native resources. This also means that resource dependencies work as expected between Pulumi-native resources and resources created by Terraform modules.
 
 ## Configuring Terraform Providers
 
 Some modules require Terraform providers to be configured with specific settings. You can configure these providers from within Pulumi:
+
+{{% chooser language "typescript" %}}
+
+{{% choosable language typescript %}}
 
 **Example:** index.ts - Configuring the imported Terraform bucket module*
 
@@ -228,24 +261,11 @@ const testBucket = new bucket.Module("test-bucket", {
 }, { provider: provider });
 ```
 
+{{% /choosable %}}
+
+{{% /chooser %}}
+
 Provider configuration is module-specific, so refer to the module's documentation for available configuration options.
-
-## Using Modules with Pulumi YAML
-
-When authoring in YAML, there's no need for Pulumi to generate a SDK. In the YAML you can reference the Terraform module by its schema token, which takes the format `<module-name>:index:Module`:
-
-**Example:** Pulumi.yaml - Using an imported Terraform module in a Pulumi YAML program*
-
-```yaml
-resources:
-  my-rds:
-    type: rdsmod:index:Module
-    properties:
-      engine: mysql
-      identifier: my-rds-instance
-      manage_master_user_password: true
-      # other properties...
-```
 
 ## Troubleshooting
 
