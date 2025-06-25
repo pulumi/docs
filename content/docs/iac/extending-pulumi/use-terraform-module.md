@@ -117,7 +117,7 @@ packages:
       - rdsmod
 ```
 
-{{% chooser language "typescript,yaml" %}}
+{{% chooser language "typescript,python,yaml" %}}
 
 {{% choosable language typescript %}}
 
@@ -206,6 +206,88 @@ function getCidrSubnet(cidr: string, netnum: number): pulumi.Output<string> {
     netnum,
   }).result;
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+Since this was a Python project, Pulumi generated a Python SDK for the modules, making those available to use as `pulumi_vpcmod` and `pulumi_rdsmod` respectively. We can now use the Terraform modules directly in our code:
+
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_vpcmod as vpcmod
+import pulumi_rdsmod as rdsmod
+import pulumi_std as std
+
+# Get available availability zones
+azs = aws.get_availability_zones_output(
+    filters=[{
+        "name": "opt-in-status",
+        "values": ["opt-in-not-required"],
+    }]
+).names.apply(lambda names: names[:3])
+
+cidr = "10.0.0.0/16"
+
+cfg = pulumi.Config()
+prefix = cfg.get("prefix") or pulumi.get_stack()
+
+# Utility function to calculate subnet CIDRs
+def get_cidr_subnet(cidr, netnum):
+    return std.cidrsubnet_output(
+        input=cidr,
+        newbits=8,
+        netnum=netnum
+    ).result
+
+# Create a VPC using the terraform-aws-modules/vpc module
+vpc = vpcmod.Module("test-vpc",
+    azs=azs,
+    name=f"test-vpc-{prefix}",
+    cidr=cidr,
+    public_subnets=azs.apply(lambda azs: [get_cidr_subnet(cidr, i+1) for i in range(len(azs))]),
+    private_subnets=azs.apply(lambda azs: [get_cidr_subnet(cidr, i+1+4) for i in range(len(azs))]),
+    database_subnets=azs.apply(lambda azs: [get_cidr_subnet(cidr, i+1+8) for i in range(len(azs))]),
+    create_database_subnet_group=True
+)
+
+# Create a security group for the RDS instance
+rds_security_group = aws.ec2.SecurityGroup('test-rds-sg',
+    vpc_id=vpc.vpc_id
+)
+
+aws.vpc.SecurityGroupIngressRule('test-rds-sg-ingress',
+    ip_protocol='tcp',
+    security_group_id=rds_security_group.id,
+    cidr_ipv4=vpc.vpc_cidr_block,
+    from_port=3306,
+    to_port=3306
+)
+
+# Create an RDS instance using the terraform-aws-modules/rds module
+rdsmod.Module("test-rds",
+    engine="mysql",
+    identifier=f"test-rds-{prefix}",
+    manage_master_user_password=True,
+    publicly_accessible=False,
+    allocated_storage=20,
+    max_allocated_storage=100,
+    instance_class="db.t4g.large",
+    engine_version="8.0",
+    family="mysql8.0",
+    db_name="completeMysql",
+    username="complete_mysql",
+    port='3306',
+    multi_az=True,
+    db_subnet_group_name=vpc.database_subnet_group_name,
+    vpc_security_group_ids=[rds_security_group.id],
+    skip_final_snapshot=True,
+    deletion_protection=False,
+    create_db_option_group=False,
+    create_db_parameter_group=False
+)
 ```
 
 {{% /choosable %}}
