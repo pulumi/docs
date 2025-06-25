@@ -98,7 +98,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
     ```
 
 6. Replace `<your-client-id>`, `<your-tenant-id>`, and `<your-subscription-id>` with the values from the previous steps.
-7. Scroll to the bottom of the page and click **Save**.
+7. Click **Save**.
 
 You can validate that your configuration is working by running either of the following:
 

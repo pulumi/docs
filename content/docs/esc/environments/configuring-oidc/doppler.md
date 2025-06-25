@@ -83,7 +83,7 @@ that you have the correct organization selected in the left-hand navigation menu
     ```
 
 6. Replace `<your-identity-id>` with the value from the previous steps.
-7. Scroll to the bottom of the page and click **Save**.
+7. Click **Save**.
 
 You can validate that your configuration is working by running either of the following:
 
