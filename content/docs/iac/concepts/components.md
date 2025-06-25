@@ -7,14 +7,12 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Components
-        parent: iac-concepts-resources
-        weight: 3
-    concepts:
-        parent: resources
-        weight: 3
+        parent: iac-concepts
+        weight: 7
 aliases:
 - /docs/intro/concepts/resources/components/
 - /docs/concepts/resources/components/
+- /docs/iac/concepts/resources/components/
 ---
 
 Pulumi Components enable you to create, share, and consume reusable infrastructure building blocks across your organization and the broader community. Components instantiate a set of related resources, acting as an abstraction to encapsulate the resources' implementation details.
