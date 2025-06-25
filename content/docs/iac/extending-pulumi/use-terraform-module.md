@@ -117,7 +117,7 @@ packages:
       - rdsmod
 ```
 
-{{% chooser language "typescript,python,csharp,java,yaml" %}}
+{{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 
