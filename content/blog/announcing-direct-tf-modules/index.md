@@ -677,6 +677,8 @@ With AI developer tools making code conversion easier than ever, we're committed
 
 The Terraform module support is available immediately. [Install the latest Pulumi CLI](/docs/install/) and try it out with your existing Terraform modules. We've prepared comprehensive [examples](https://github.com/pulumi/pulumi-terraform-module/tree/main/examples) showcasing real-world scenarios, from simple VPC deployments to complex multi-module architectures.
 
+For detailed documentation on using Terraform modules in Pulumi, including advanced configuration options, troubleshooting guides, and best practices, see our [comprehensive guide](/docs/iac/extending-pulumi/use-terraform-module/).
+
 If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/pulumi/pulumi-terraform-module/issues/new/choose) or reach out in our [Community Slack](https://slack.pulumi.com/). Your feedback is invaluable as we continue to evolve this capability.
 
 This release embodies our commitment to meeting developers where they are while providing a clear path forward to modern infrastructure practices. We're excited to see how teams use this capability to accelerate their infrastructure modernization journey.
