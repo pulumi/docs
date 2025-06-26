@@ -235,8 +235,8 @@ Bridged providers, which take a Terraform provider as an underlying dependency, 
 
 Provider functions are exposed in each language as regular functions, in two variations:
 
- 1. The **direct form** accepts plain arguments (e.g. `string`, as opposed to `pulumi.Input<string>`) and returns an asynchronous value or blocks until the result is available.
- 1. The **output form** accepts Pulumi Inputs as arguments and returns a Pulumi Output as a result. For more information on these types, see [Inputs and Outputs](/docs/concepts/inputs-outputs/).
+ 1. The **direct form** accepts plain arguments (e.g. `string`, as opposed to `pulumi.Input<string>`) and returns an asynchronous value or blocks until the result is available.These functions are typically named, e.g., `getX()`.
+ 1. The **output form** accepts Pulumi Inputs (or plain values) as arguments and returns a Pulumi Output as a result. For more information on these types, see [Inputs and Outputs](/docs/concepts/inputs-outputs/). These functions are typically named, e.g., `getXOutput()`.
 
 The [Pulumi Registry](/registry) contains authoritative documentation for all provider functions.
 
