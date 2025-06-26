@@ -13,6 +13,7 @@ menu:
 aliases:
     - /docs/using-pulumi/crossguard/policy-violations/
     - /docs/iac/packages-and-automation/crossguard/policy-violations/
+    - /docs/iac/using-pulumi/crossguard/policy-violations/
 ---
 
 ## Overview

@@ -19,6 +19,8 @@ aliases:
 - /docs/guides/crossguard/get-started/
 - /docs/using-pulumi/crossguard/get-started/
 - /docs/iac/packages-and-automation/crossguard/get-started/
+- /docs/iac/using-pulumi/crossguard/get-started/
+- /docs/iac/packages-and-automation/crossguard/get-started/
 ---
 
 Pulumi CrossGuard is a product that provides gated deployments via Policy as Code.

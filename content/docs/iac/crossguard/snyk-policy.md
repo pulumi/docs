@@ -15,6 +15,7 @@ aliases:
 - /docs/using-pulumi/crossguard/snyk-container-scanning/
 - /docs/using-pulumi/crossguard/snyk-policy/
 - /docs/iac/packages-and-automation/crossguard/snyk-policy/
+- /docs/iac/using-pulumi/crossguard/snyk-policy/
 ---
 <!-- markdownlint-disable ul code -->
 
