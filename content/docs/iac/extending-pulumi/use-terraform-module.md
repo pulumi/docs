@@ -801,7 +801,7 @@ import (
 
 
 func run(ctx *pulumi.Context) error {
-    // Configure the AWS provider for the module
+	// Configure the AWS provider for the module
 	prov, err := bucket.NewProvider(ctx, "provider", &bucket.ProviderArgs{
 		Aws: pulumi.ToMap(map[string]any{
 			"region": "us-west-2",
@@ -811,7 +811,7 @@ func run(ctx *pulumi.Context) error {
 		return err
 	}
 
-    // Use the provider with the module
+	// Use the provider with the module
 	bucketInstance, err := bucket.NewModule(ctx, "test-bucket", &bucket.ModuleArgs{
 		Bucket: pulumi.Sprintf("test-vpc-%s", prefix),
 	}, pulumi.Provider(prov))
