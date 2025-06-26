@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: gh-login
     parent: esc-dynamic-login-credentials
-    weight: 4
+    weight: 6
 aliases:
     - /docs/pulumi-cloud/esc/providers/gh-login/
     - /docs/esc/providers/gh-login/

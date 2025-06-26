@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: gcp-secrets
     parent: esc-dynamic-secrets
-    weight: 4
+    weight: 6
 aliases:
     - /docs/pulumi-cloud/esc/providers/gcp-secrets/
     - /docs/esc/providers/gcp-secrets/

@@ -8,7 +8,7 @@ menu:
   esc:
     name: Google Cloud
     parent: esc-configuring-oidc
-    weight: 1
+    weight: 5
 ---
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Google Cloud. OIDC in Google Cloud uses [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation) to allow access to resources. Access to the resources is authorized using attribute conditions that validate the contents of the OIDC token issued by the Pulumi Cloud.
@@ -89,7 +89,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
     ```
 
 6. Replace `<your-project-id>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
-7. Scroll to the bottom of the page and click **Save**.
+7. Click **Save**.
 
 You can validate that your configuration is working by running either of the following:
 
