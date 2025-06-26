@@ -16,6 +16,7 @@ aliases:
 - /docs/using-pulumi/crossguard/faq/
 - /docs/iac/packages-and-automation/crossguard/
 - /docs/iac/packages-and-automation/crossguard/faq/
+- /docs/iac/using-pulumi/crossguard/faq/
 ---
 
 ## Is CrossGuard open source?

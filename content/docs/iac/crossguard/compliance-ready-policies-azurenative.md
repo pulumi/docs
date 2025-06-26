@@ -13,6 +13,7 @@ menu:
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies-azurenative/
     - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azurenative/
+    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-azurenative/
 ---
 There's a total of 1914 Compliance Ready Policies for the Azurenative provider.
 

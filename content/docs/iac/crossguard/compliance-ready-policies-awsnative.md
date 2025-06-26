@@ -12,6 +12,7 @@ menu:
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies-awsnative
     - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-awsnative/
+    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-awsnative/
 ---
 There's a total of 54 Compliance Ready Policies for the AWS Cloud Control provider.
 

@@ -12,6 +12,7 @@ menu:
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies-googlenative/
     - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-googlenative/
+    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-googlenative/
 ---
 There's a total of 926 Compliance Ready Policies for the Googlenative provider.
 
