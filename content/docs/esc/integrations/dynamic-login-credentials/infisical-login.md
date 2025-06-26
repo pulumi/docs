@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: infisical-login
     parent: esc-dynamic-login-credentials
-    weight: 2
+    weight: 7
 aliases:
   - /docs/pulumi-cloud/esc/providers/infisical-login/
   - /docs/esc/providers/infisical-login/

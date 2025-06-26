@@ -8,7 +8,7 @@ menu:
   esc:
     name: Vault
     parent: esc-configuring-oidc
-    weight: 4
+    weight: 7
 aliases:
   - /docs/pulumi-cloud/oidc/provider/vault
   - /docs/pulumi-cloud/oidc/provider/vault/
@@ -156,7 +156,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
       ```
 
   6. Replace `<your-vault-url>`, `<your-role-name>`, `<your-namespace>`, and `<path-to-secret>` with the values from the previous steps.
-  7. Scroll to the bottom of the page and click **Save**.
+  7. Click **Save**.
 
       ![Vault environment config](./vault-environment-config.png)
 

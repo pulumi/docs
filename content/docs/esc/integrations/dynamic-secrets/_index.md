@@ -21,5 +21,7 @@ To learn how to set up and use each provider, follow the links below. To learn h
 | [aws-parameter-store](/docs/pulumi-cloud/esc/providers/aws-parameter-store/)       | The `aws-parameter-store` provider enables you to dynamically import parameters from AWS Parameter Store into your Environment. |
 | [aws-secrets](/docs/esc/integrations/dynamic-secrets/aws-secrets/)                 | The `aws-secrets` provider enables you to dynamically import Secrets from AWS Secrets Manager into your Environment.            |
 | [azure-secrets](/docs/esc/integrations/dynamic-secrets/azure-secrets/)             | The `azure-secrets` provider enables you to dynamically import Secrets from Azure Key Vault into your Environment.              |
+| [doppler-secrets](/docs/esc/integrations/dynamic-secrets/doppler-secrets/)      | The `doppler-secrets` provider enables you to dynamically import Secrets from Doppler into your Environment.
 | [gcp-secrets](/docs/esc/integrations/dynamic-secrets/gcp-secrets/)                 | The `gcp-secrets` provider enables you to dynamically import Secrets from Google Cloud Secrets Manager into your Environment.   |
+| [infisical-secrets](/docs/esc/integrations/dynamic-secrets/infisical-secrets/)      | The `infisical-secrets` provider enables you to dynamically import Secrets from Infisical Secrets into your Environment.
 | [vault-secrets](/docs/esc/integrations/dynamic-secrets/vault-secrets/)             | The `vault-secrets` provider enables you to dynamically import Secrets from HashiCorp Vault into your Environment.              |

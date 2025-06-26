@@ -1,59 +1,58 @@
 ---
-title_tag: Configure OpenID Connect for Infisical | Pulumi ESC
-meta_desc: This page describes how to configure OIDC token exchange in Infisical for use with Pulumi
-title: Infisical
-h1: Configuring OpenID Connect for Infisical
+title_tag: Configure OpenID Connect for Doppler | Pulumi ESC
+meta_desc: This page describes how to configure OIDC token exchange in Doppler for use with Pulumi
+title: Doppler
+h1: Configuring OpenID Connect for Doppler
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
-    name: Infisical
+    name: Doppler
     parent: esc-configuring-oidc
-    weight: 6
+    weight: 4
 ---
 
-This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Infisical. OIDC
-in Infisical uses [identities](https://infisical.com/docs/documentation/platform/identities/oidc-auth/general) to access
-Infisical resources. Access to the temporary credentials is authorized using identities that validate the contents of
+This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Doppler. OIDC
+in Doppler uses [service account identities](https://docs.doppler.com/docs/service-account-identities) to access
+Doppler resources. Access to the temporary credentials is authorized using identities that validate the contents of
 the OIDC token issued by the Pulumi Cloud.
 
 ## Prerequisites
 
-* You must be an admin of your Infisical organization to create and configure identities.
+* Your Doppler workplace must be on the Team or Enterprise plan in order to use service account identities.
+* You must be an admin of your Doppler workplace to create and configure service account identities.
 
 {{< notes type="warning" >}}
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is
 subject to change. For the most current and precise information, always refer to
-the [official Infisical documentation](https://infisical.com/docs/documentation/platform/identities/oidc-auth/general).
+the [official Doppler documentation](https://docs.doppler.com/docs/service-account-identities).
 {{< /notes >}}
 
-## Creating an Identity
+## Creating a Service Account
 
-In the navigation pane of the [Infisical app](https://app.infisical.com):
+To create a new service account, in the navigation pane of the [Doppler dashboard](https://dashboard.doppler.com):
 
-1. Select **Admin**, **Access Control**, **Identities** and then click **Create Identity**.
-2. Provide a name for your application (ex: `pulumi-esc-oidc-app`).
-3. Select a **Role** for the identity.
-4. Click **Create**.
+1. Select **Team**, **Service Accounts** and then click **New Service Account**.
+2. Provide a name for your service account (ex: `pulumi-esc-oidc-app`).
+3. Click **Create**.
+4. Select a **Role** for the service account or manually grant project access.
 
-After the Identity has been created, take note of the Identity ID. This value will be necessary when enabling OIDC for your service.
+## Add an Identity (OIDC Authentication)
 
-## Add OIDC Authentication
+To add an identity to a service account:
 
-Once you have created your new identity, you will be redirected to the identity's **Overview** page. In the
-Authentication section:
-
-1. Remove the existing Universal Auth configuration.
-2. Click on the **Add Auth Method** button. This will start an "Add Auth Method" wizard.
-3. In the wizard, select **OIDC Auth** as the **Auth Method**.
-4. Fill in the remaining form fields as follows:
-    * **OIDC Discovery URL:** `https://api.pulumi.com/oidc`
-    * **Issuer:** `https://api.pulumi.com/oidc`
-    * **Subject:** This can be left empty. If it's empty, all ESC Environments of your organization would be able to assume this identity. We recommend configuring the subject claim for finer permission. (see examples at the end of this section).
-    * **Audiences:** This is different between Pulumi deployments and ESC. For Deployments this is only the name of your Pulumi organization. For ESC this is the name of your Pulumi organization prefixed with `infisical:` (e.g. `infisical:{org}`).
+1. Navigate to the service account from **Team**, **Service Accounts**
+2. Click **New Identity**.
+3. Fill in the form fields as follows:
+    * **Discovery URL:** `https://api.pulumi.com/oidc`.
+    * **Audience:** This is different between Pulumi deployments and ESC. For Deployments this is only the name of your Pulumi organization. For ESC this is the name of your Pulumi organization prefixed with `doppler:` (e.g. `doppler:{org}`).
+    * **Subject:** `pulumi:environments:org:<your-pulumi-org>:env:<your-project>/<your-environment>` (see more examples at the end of this section).
+4. Click **Create Identity**.
 {{< notes type="info" >}}
 For environments in the `default` project the audience will use just the Pulumi organization name. This is to
 prevent regressions for legacy environments.
 {{< /notes >}}
+
+After the Identity has been created, take note of the Identity ID. This value will be necessary when enabling OIDC for your service.
 
 ## Configure ESC for OIDC
 
@@ -70,13 +69,13 @@ that you have the correct organization selected in the left-hand navigation menu
 
     ```yaml
     values:
-      infisical:
+      doppler:
         login:
-          fn::open::infisical-login:
+          fn::open::doppler-login:
             oidc:
               identityId: <your-identity-id>
       environmentVariables:
-        INFISICAL_TOKEN: ${infisical.login.accessToken}
+        DOPPLER_TOKEN: ${doppler.login.accessToken}
     ```
 
 6. Replace `<your-identity-id>` with the value from the previous steps.
@@ -92,13 +91,13 @@ organization, project, and environment file respectively. You should see output 
 
 ```json
 {
-  "infisical": {
+  "doppler": {
     "login": {
-      "accessToken": "eyJh...."
+      "accessToken": "dp.said.XXX..."
     }
   },
   "environmentVariables": {
-    "INFISICAL_TOKEN": "eyJh...."
+    "DOPPLER_TOKEN": "dp.said.XXX..."
   }
 }
 ```
@@ -126,9 +125,9 @@ every key configured will be appended to this prefix. For example, consider the 
 
 ```yaml
 values:
-  infisical:
+  doppler:
     login:
-      fn::open::infisical-login:
+      fn::open::doppler-login:
         oidc:
           identityId: <your-identity-id>
           subjectAttributes:
@@ -170,7 +169,7 @@ organization:
 
 If you are integrating Pulumi ESC with Pulumi IaC, the default subject identifier of the ESC environment will not work
 at this time. There is a [known issue](https://github.com/pulumi/pulumi/issues/14509) with the subject identifier's
-value sent to Infisical from Pulumi.
+value sent to Doppler from Pulumi.
 
 Use 'subjectAttributes' to customize the subject identifier to work with Pulumi IaC. Alternatively, you can use this
 syntax: `pulumi:environments:org:contoso:env:<yaml>` when configuring the subject claim in your cloud provider account.
