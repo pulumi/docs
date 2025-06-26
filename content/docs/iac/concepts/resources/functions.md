@@ -17,7 +17,9 @@ aliases:
 - /docs/concepts/resources/functions/
 ---
 
-A provider may make **functions** available in its SDK as well as resource types. These "provider functions" are often for calling a platform API to get a value that is not part of a resource. For example, the AWS provider includes the function [`aws.ecs.getAmi`](/registry/packages/aws/api-docs/ec2/getami/):
+A provider may make **functions** available in its SDK as well as resource types. These "provider functions" are often for calling a platform API to get a value that is not part of a resource.
+
+For example, the AWS provider includes the function [`aws.ecs.getAmi`](/registry/packages/aws/api-docs/ec2/getami/):
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -76,40 +78,40 @@ instance = aws.ec2.Instance(
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+ "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		latestAmi, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
-			Owners:     []string{"amazon"},
-			MostRecent: pulumi.BoolRef(true),
-			Filters: []ec2.GetAmiFilter{
-				{
-					Name:   "name",
-					Values: []string{"amzn2-ami-hvm-*"},
-				},
-				{
-					Name:   "architecture",
-					Values: []string{"x86_64"},
-				},
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
+ pulumi.Run(func(ctx *pulumi.Context) error {
+  latestAmi, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+   Owners:     []string{"amazon"},
+   MostRecent: pulumi.BoolRef(true),
+   Filters: []ec2.GetAmiFilter{
+    {
+     Name:   "name",
+     Values: []string{"amzn2-ami-hvm-*"},
+    },
+    {
+     Name:   "architecture",
+     Values: []string{"x86_64"},
+    },
+   },
+  }, nil)
+  if err != nil {
+   return err
+  }
 
-		_, err = ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
-			Ami:          pulumi.String(latestAmi.ImageId),
-			InstanceType: pulumi.String("t3.micro"),
-		})
-		if err != nil {
-			return err
-		}
+  _, err = ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
+   Ami:          pulumi.String(latestAmi.ImageId),
+   InstanceType: pulumi.String("t3.micro"),
+  })
+  if err != nil {
+   return err
+  }
 
-		return nil
-	})
+  return nil
+ })
 }
 ```
 
@@ -225,40 +227,57 @@ resources:
 
 {{% /chooser %}}
 
+{{% notes type="info" %}}
+Bridged providers, which take a Terraform provider as an underlying dependency, expose Terraform data sources in the upstream Terraform provider as provider functions in the corresponding Pulumi provider.
+{{% / notes %}}
+
+## Direct form and output form
+
 Provider functions are exposed in each language as regular functions, in two variations:
 
- 1. The **direct form** accepts plain arguments (e.g. `string`, as opposed to `pulumi.Input<string>`) and returns an asynchronous value (e.g. a `Promise` in NodeJS, or a `Task` in Python), or blocks until the result is available. These functions are typically named, e.g., `getFoo()`.
- 2. The **output form** accepts `Input` values (or plain values) and returns an [Output](/docs/concepts/inputs-outputs/). These functions are typically named, e.g., `getFooOutput()`.
+ 1. The **direct form** accepts plain arguments (e.g., `string`, as opposed to `pulumi.Input<string>`) and returns an asynchronous value (e.g., a `Promise` in Node.js, a `Task` in Python, etc.) or blocks until the result is available. These functions are typically named, e.g., `getX()`.
+ 1. The **output form** accepts Pulumi Inputs (or plain values) as arguments and returns a Pulumi Output as a result. For more information on these types, see [Inputs and Outputs](/docs/concepts/inputs-outputs/). These functions are typically named, e.g., `getXOutput()`.
 
 The [Pulumi Registry](/registry) contains authoritative documentation for all provider functions.
 
-#### Invoke options
+## Invoke options
 
-Functions also accept "invoke options", similar to the way Pulumi resources accept [resource options](/docs/concepts/options/). Invoke options may be specified either as an object or as a list of arguments depending on the language you're writing your Pulumi program in. The options are as follows:
+In addition to function arguments, provider functions also accept "invoke options", similar to the way Pulumi resources accept [resource options](/docs/concepts/options/). Invoke options may be specified either as an object or as a list of arguments depending on the language you're writing your Pulumi program in. The available options are:
 
-- `dependsOn`: An array of resources that this function depends on, see [Dependencies and ordering](#dependencies-and-ordering). This option is only available on Output form invocations.
+* `dependsOn`: An array of resources that this function depends on. This option is only available in the Output form of a provider function. See [Choosing between direct form and output form](#choosing-between-direct-form-and-output-form) for a full explanation.
+* `parent`: Supply a parent resource for this function call. Much like the [parent resource option](/docs/concepts/options/parent/), the parent will be consulted when determining the provider to use.
+* `provider`: Pass an [explicitly configured provider](/docs/concepts/resources/providers/#explicit-provider-configuration) to use for this function call, instead of using the default provider. This is useful, for example, if you want to invoke a function in each of a set of AWS regions.
 
-- `parent`: Supply a parent resource for this function call. Much like the [parent resource option](/docs/concepts/options/parent/), the parent will be consulted when determining the provider to use.
+The following options are also available, but are deprecated and should not be used in modern Pulumi programs as the functionality they control are commonly handled when you install a provider package:
 
-- `pluginDownloadURL`: Pass a URL from which the provider plugin should be fetched. This may be necessary for third-party packages such as those not hosted at [https://get.pulumi.com](https://get.pulumi.com).
+* `pluginDownloadURL`: Pass a URL from which the provider plugin should be fetched. This may be necessary for third-party packages such as those not hosted at [https://get.pulumi.com](https://get.pulumi.com).
+* `version`: Pass a provider plugin version that should be used when invoking the function.
+* `async`: _This option is deprecated and will be removed in a future release_.
 
-- `provider`: Pass an [explicitly configured provider](/docs/concepts/resources/providers/#explicit-provider-configuration) to use for this function call, instead of using the default provider. This is useful, for example, if you want to invoke a function in each of a set of AWS regions.
+## When your function will execute
 
-- `version`: Pass a provider plugin version that should be used when invoking the function.
+While the direct and output forms of a provider function will both return the same data when they are invoked, the two forms differ in when they are executed when running your Pulumi program:
 
-- `async`: _This option is deprecated and will be removed in a future release_.
+* Direct form functions execute just like any other function call in your Pulumi program's language. Since direct form functions do not accept Pulumi Inputs and Outputs, they are not tracked by the Pulumi engine the way resources are, and do not participate in the dependency graph.
+* Output form functions are tracked by the Pulumi engine because they take Inputs as arguments and return Outputs as return values and therefore participate in the dependency graph. This means that Pulumi will ensure that all input values to the function are resolved before the function is invoked. (This is why `dependsOn` is only an option for the output form of a function.)
 
-### Dependencies and ordering
+## Choosing between direct form and output form
 
-While the direct and output forms of a provider function are equivalent in terms of the results they produce when invoked, they differ in how they interact with the rest of the Pulumi program and the order in which they may be executed. Specifically:
+There are several common scenarios where one form or the other _must_ be used:
 
-- Direct form invocations execute just like any other function call in the language. Since they do not accept Pulumi `Input`s nor return Pulumi `Output`s, they are not tracked by the Pulumi engine and do not participate in the dependency graph.
+* **If you need a provider function's result to determine whether a resource should be created at all**, you must use the provider function's the direct form. The direct form of a function executes _while_ the Pulumi engine is formulating the dependency graph (that is, determining what resources need to be created, updated, or deleted), so in order to figure out whether a resource belongs in the graph at all, that decision has to always be calculated up front.
+* **If you need resources to be created or updated before the function is invoked**, you should use the provider function's output form. (It is _possible_ to use the direct form in this case, but it requires wrapping the call in an `apply`, which can be awkward from a readability standpoint.) Dependencies in the output form of a function are tracked identically to resources: all inputs to the function must be resolved before the function executes. If you need to specify a dependency that isn't already implied by an input to the function's arguments, you can use the `dependsOn` function option to specify additional dependencies (just like you can with resources).
 
-- Output form invocations, on the other hand, are tracked by the Pulumi engine and participate in the dependency graph. This means, for example, that Pulumi will ensure that input resources are created or updated before an invocation and that the invocation is executed before its dependent resources are created or updated.
+{{% notes type="info" %}}
+Pulumi recommends you choose the output form of a function unless you have a specific need for the direct form. We make this recommendation because:
 
-If you require that dependent resources are created or updated before an invocation, you must use a provider function's output form. If you need to specify a dependency that can't be captured by passing an appropriate input, you can use the `dependsOn` option to specify additional dependencies.
+1. The output form reduces mental overhead in that it allows your program to stick with a single asynchronous programming mental model (Pulumi inputs and outputs) as opposed to also having to worry about Promises (TypeScript), TaskResults (.NET), etc.
+1. Syntactically, it's slightly more terse.
 
-### Resource methods
+Assuming there is no specific reason to choose one or the other, the choice between the two forms is ultimately a preference: there is no significant difference in either performance or code maintainability between the two forms.
+{{% / notes %}}
+
+## Resource methods
 
 Provider SDKs may also include _methods_ attached to a resource type. For example, in the [EKS](/registry/packages/eks/api-docs/) SDK, the `Cluster` resource has a [.GetKubeconfig](/registry/packages/eks/api-docs/cluster/#method_GetKubeconfig) method:
 
@@ -319,4 +338,4 @@ No example available for YAML
 
 </pulumi-examples></div>
 
-Unlike provider functions, methods always appear in the _output form_: they take `Input` arguments, and return an `Output`. Moreover, methods do not accept invoke options.
+Unlike provider functions, methods always appear in the _output form_: they take `Input` arguments, and return an `Output` (because they cannot execute until after the resources has been created). Moreover, methods do not accept invoke options.
