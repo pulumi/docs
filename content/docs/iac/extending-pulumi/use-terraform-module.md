@@ -648,7 +648,14 @@ public class App {
 
 {{% choosable language yaml %}}
 
-When authoring in YAML, there's no need for Pulumi to generate a SDK. In the YAML you can reference the Terraform module by its schema token, which takes the format `<module-name>:index:Module`:
+When authoring in YAML, there is no need for Pulumi to generate a SDK. Pulumi generates some metadata instead:
+
+```bash
+$ ls sdks/vpcmod/
+sdks/vpcmod/vpcmod-5.19.0.yaml
+```
+
+In the YAML you can reference the Terraform module by its schema token, which takes the format `<module-name>:index:Module`:
 
 **Example:** `Pulumi.yaml` - Using the Terraform VPC and RDS module in a Pulumi program
 
