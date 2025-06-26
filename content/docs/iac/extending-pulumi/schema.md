@@ -15,6 +15,7 @@ aliases:
 - /docs/using-pulumi/pulumi-packages/schema/
 - /docs/iac/packages-and-automation/pulumi-packages/schema/
 - /docs/iac/using-pulumi/pulumi-packages/schema/
+- /docs/iac/using-pulumi/extending-pulumi/schema/
 ---
 
 Pulumi Packages are described by a package schema, which is used to drive code generation for SDKs in each supported Pulumi language, as well as generation of language-agnostic package documentation.  This schema can be manually authored (for component packages) or generated from some other source (such as a cloud provider's API specifications for a native Pulumi resource provider).  Packages can expose resources and functions, define types used by these resources and functions, and provide packaging metadata for language-specific SDKs.

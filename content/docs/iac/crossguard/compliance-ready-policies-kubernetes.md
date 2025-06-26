@@ -11,7 +11,8 @@ menu:
         weight: 8
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies-kubernetes/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-kubernetes/    
+    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-kubernetes/
+    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-kubernetes/    
 ---
 There's a total of 237 Compliance Ready Policies for the Kubernetes provider.
 
