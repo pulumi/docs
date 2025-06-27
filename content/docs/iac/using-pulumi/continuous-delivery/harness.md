@@ -718,11 +718,8 @@ Following these best practices will help ensure reliable, secure, and maintainab
 When integrating Harness with Pulumi, you may encounter some common issues. Here are solutions to the most frequently encountered problems:
 
 - **Authentication Failures**: Ensure all required secrets are properly configured in Harness or Pulumi ESC.
-
-- **Stack Not Found**: Verify stack names and ensure stacks exist in the Pulumi Cloud.
-
+- **Stack Not Found**: Verify stack names and ensure stacks exist in Pulumi Cloud.
 - **Resource Conflicts**: Use `pulumi refresh` to sync state with actual cloud resources.
-
 - **Pipeline Timeouts**: Increase timeout values for long-running infrastructure deployments.
 
 For additional troubleshooting, see our [CI/CD troubleshooting guide](/docs/iac/using-pulumi/continuous-delivery/troubleshooting-guide).

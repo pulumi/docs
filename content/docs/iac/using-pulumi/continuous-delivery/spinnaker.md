@@ -94,7 +94,7 @@ If you are using either the Pulumi-managed or the self-hosted [service backend](
 [Pulumi Access Token](https://app.pulumi.com/account/tokens) for the Pulumi account that you will use in your pipeline.
 Save the value of the token with the key `PULUMI_ACCESS_TOKEN` in your Kubernetes `Secret` resource.
 
-If you do not use the Pulumi Cloud backend, the `PULUMI_ACCESS_TOKEN` is optional. Instead, you should make sure that Pulumi has the credentials to access whichever backend URL you do choose to use.
+If you do not use Pulumi Cloud as you backend, the `PULUMI_ACCESS_TOKEN` is optional. Instead, you should make sure that Pulumi has the credentials to access whichever backend URL you do choose to use.
 
 Here's an **example** `Secret` resource applied in a Spinnaker installation.
 

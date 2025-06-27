@@ -15,7 +15,7 @@ Now that you've seen how to deploy changes to our program, let's clean up and te
 To destroy resources, run the following:
 
 ```bash
-$ pulumi destroy
+pulumi destroy
 ```
 
 You'll be prompted to make sure you really want to delete these resources. This can take a minute or two; Pulumi waits until all resources are shut down and deleted before it considers the destroy operation to be complete.
@@ -58,7 +58,7 @@ Duration: 53s
 ```
 
 To delete the stack itself, run [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm). Note that this removes the stack
-entirely from the Pulumi Cloud, along with all of its update history.
+entirely from Pulumi Cloud, along with all of its update history.
 
 Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
 
