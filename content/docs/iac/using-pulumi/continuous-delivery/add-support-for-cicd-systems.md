@@ -1,7 +1,7 @@
 ---
 title_tag: "Add Support for CI/CD Systems"
 meta_desc: This guide walks you through how you can configure your CI/CD environment manually
-           to surface data in the Pulumi Cloud.
+           to surface data in Pulumi Cloud.
 title: Adding CI/CD support
 h1: Adding Pulumi support for CI/CD systems
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -21,7 +21,7 @@ aliases:
 
 If the Pulumi CLI doesn't automatically detect your CI/CD system, this guide
 walks you through how you can configure your CI/CD environment manually
-to surface data in the Pulumi Cloud.
+to surface data in Pulumi Cloud.
 
 ## Overview
 
@@ -69,7 +69,7 @@ The `EnvVarsToDetect` is used by the `IsCI()` in [`systems.go`](https://github.c
 
 ### Detecting Additional Metadata About A CI Build
 
-A CI build could have been triggered by a PR or a push build. In this case, the linked PR number is useful so that the Pulumi Cloud can link to it. Note that the detection is done on a best-effort basis. We support linking to the following Git-based version control systems:
+A CI build could have been triggered by a PR or a push build. In this case, the linked PR number is useful so that Pulumi Cloud can link to it. Note that the detection is done on a best-effort basis. We support linking to the following Git-based version control systems:
 
 - Atlassian Bitbucket
 - Azure DevOps

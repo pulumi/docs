@@ -56,7 +56,7 @@ beforehand using the `pulumi stack init` command and in the **appropriate organi
 
 * Ensure that the account represented by the token you are using has access to the stack.
 
-  This can lead to 404s being returned from the Pulumi Cloud because the token is invalid for any number of reasons.
+  This can lead to 404s being returned from Pulumi Cloud because the token is invalid for any number of reasons.
   One way to check this is, that you are able to navigate to the stack in the [Pulumi Cloud](https://app.pulumi.com) using the same account you are using in CI.
 
 * Ensure that you use the fully-qualified stack name when passing the stack name to `pulumi` commands.
