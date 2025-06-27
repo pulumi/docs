@@ -15,7 +15,7 @@ menu:
 
 Drift detection is the process of identifying changes in the actual state of your cloud environment that deviate from the expected state stored in Pulumi Cloud. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider's console, unintended consequences of scripts, or unauthorized changes.
 
-To use drift detection and remediation with Pulumi Deployments, you must first configure the deployment settings for your stack. You can run a remediate drift operation, which executes `pulumi up --refresh` to treat the Pulumi program as the source of truth and restore cloud resources to match your Infrastructure as Code. When drift is detected, you can choose to remediate (restore to IaC state), refresh (accept cloud changes), or manually review before taking action.
+To use drift detection and remediation with Pulumi Deployments, you must first configure the deployment settings for your stack. You can run a remediate drift operation, which executes `pulumi up --refresh` to treat the Pulumi program as the source of truth and restore cloud resources to match your Infrastructure as Code. Remediation automatically corrects infrastructure drift by: (1) refreshing the state to get current cloud resources, (2) comparing actual state with desired state in your program, and (3) generating and applying changes to align infrastructure with your code. When drift is detected, you can choose to remediate (restore to IaC state), refresh (accept cloud changes), or manually review before taking action.
 
 ## Running Drift Detection from the CLI
 
