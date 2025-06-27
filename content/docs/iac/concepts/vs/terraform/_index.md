@@ -247,7 +247,7 @@ Transformations, which are unique to Pulumi IaC, allow you to programmatically s
 
 The Terraform engine takes care of provisioning and updating resources. With Pulumi IaC, you use general purpose languages to express desired state, and Pulumi IaC’s engine similarly gives you diffs and a way to robustly update your infrastructure.
 
-By default, Terraform requires that you manage concurrency and state manually, by way of its “state files.” Pulumi IaC, in contrast, uses the free [Pulumi Cloud](https://app.pulumi.com/) to eliminate these concerns. This makes getting started with Pulumi IaC, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi IaC without the Pulumi Cloud](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-/pulumi-cloud/), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi IaC errs on the side of ease-of-use.
+By default, Terraform requires that you manage concurrency and state manually, by way of its “state files.” Pulumi IaC, in contrast, uses the free [Pulumi Cloud](https://app.pulumi.com/) to eliminate these concerns. This makes getting started with Pulumi IaC, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi IaC without Pulumi Cloud](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-/pulumi-cloud/), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi IaC errs on the side of ease-of-use.
 
 For more information on how Pulumi IaC manages state or how to use different backends, see [State and Backends](/docs/concepts/state/).
 
