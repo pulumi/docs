@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "WAX CONFÉRENCE 2025"
+  title: "Internal Developer Platforms : choisir la bonne voie pour votre organisation"
+  url: "https://www.waxconf.fr/schedule/wax-conference-2025"
+  date: 2025-06-24T15:00:00.000-07:00 
 - event: "KCD New York 2025"
   title: "Is There AI in the Future of Infrastructure as Code?"
   url: "https://kcdnewyork2025.sessionize.com/session/865201"
