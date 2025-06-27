@@ -22,7 +22,7 @@ Policy Violations occur when a resource in a stack or account does not comply wi
 
 ## How to See Policy Violations
 
-Policy Violations can be viewed in the Pulumi Cloud via the Policy Violations page. This page provides a centralized view of all violations across your organization, allowing you to filter and group them by various criteria such as Policy Pack, Project, Stack/Account, and Enforcement Level.
+Policy Violations can be viewed in Pulumi Cloud via the Policy Violations page. This page provides a centralized view of all violations across your organization, allowing you to filter and group them by various criteria such as Policy Pack, Project, Stack/Account, and Enforcement Level.
 
 ### Accessing the Policy Violations Page
 

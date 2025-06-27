@@ -89,7 +89,7 @@ Many high-quality plugins are available to assist you with authoring CloudFormat
 
 ### State Management {#state}
 
-Both Pulumi and CloudFormation provide built-in support for keeping track of the state of your infrastructure. By default, Pulumi uses the free Pulumi Cloud, which handles state management automatically, but you can also choose to manage your infrastructure state on your own, either by bringing your own storage mechanism (e.g., an S3 bucket, S3-compatible service, third-party blob storage, or just a flat file) or even self-hosting the Pulumi Cloud within your enterprise network. CloudFormation state is managed entirely within the CloudFormation service.
+Both Pulumi and CloudFormation provide built-in support for keeping track of the state of your infrastructure. By default, Pulumi uses the free Pulumi Cloud, which handles state management automatically, but you can also choose to manage your infrastructure state on your own, either by bringing your own storage mechanism (e.g., an S3 bucket, S3-compatible service, third-party blob storage, or just a flat file) or even self-hosting Pulumi Cloud within your enterprise network. CloudFormation state is managed entirely within the CloudFormation service.
 
 For more information on how Pulumi manages state, or using alternative backends, see [State and Backends](/docs/concepts/state/).
 
@@ -191,7 +191,7 @@ To learn more about configuring projects and stacks with Pulumi, see [Configurat
 
 ### Audit Capabilities {#auditing}
 
-Administrators of organizations backed by the Pulumi Cloud are able to view and export audit logs that keep track of all user-related activity across the organization. Audit logs capture many kinds of events (stack update requests, failed login attempts, decrypted secrets, removed policies, etc.) along with the timestamp of the event, the user who triggered it, and the source IP address of the call that was made. Audit logs are available to Pulumi Enterprise and Business Critical subscribers. CloudFormation offers similar capability through its integration with AWS CloudTrail.
+Administrators of organizations backed by Pulumi Cloud are able to view and export audit logs that keep track of all user-related activity across the organization. Audit logs capture many kinds of events (stack update requests, failed login attempts, decrypted secrets, removed policies, etc.) along with the timestamp of the event, the user who triggered it, and the source IP address of the call that was made. Audit logs are available to Pulumi Enterprise and Business Critical subscribers. CloudFormation offers similar capability through its integration with AWS CloudTrail.
 
 To learn more about Audit Logs and the kinds of events they capture, see [Audit Logs](/docs/pulumi-cloud/audit-logs/).
 

@@ -43,7 +43,7 @@ Policies may also define *remediations* to automatically fix violations rather t
 
 ### Insights Policies
 
-When used with Pulumi Insights account discovery, policies provide visibility into compliance issues across your entire cloud footprint regardless of how they were created such as with Terraform, CloudFormation, or click-ops. Policies are executed whenever a scanned resource changes or the policy configuration is updated. Policy violations can be viewed in the Pulumi Cloud via the Policy Violations page.
+When used with Pulumi Insights account discovery, policies provide visibility into compliance issues across your entire cloud footprint regardless of how they were created such as with Terraform, CloudFormation, or click-ops. Policies are executed whenever a scanned resource changes or the policy configuration is updated. Policy violations can be viewed in Pulumi Cloud via the Policy Violations page.
 
 ### Policy Packs
 
@@ -85,7 +85,7 @@ PolicyPack(
 
 {{< /chooser >}}
 
-There are no restrictions on which policies you combine within a pack, and you should pack them however makes sense for your organization. As part of CrossGuard, organization administrators can author, publish to, and enforce Policy Packs using the Pulumi Cloud.
+There are no restrictions on which policies you combine within a pack, and you should pack them however makes sense for your organization. As part of CrossGuard, organization administrators can author, publish to, and enforce Policy Packs using Pulumi Cloud.
 
 ### Types of Policies
 
@@ -473,7 +473,7 @@ The [Pulumi Policy Packs examples repository](https://github.com/pulumi/examples
 
 ## Policy Groups
 
-A *Policy Group* is a group of stacks and accounts with the same set of Policy Packs enforced. Policy Groups are only available from within the Pulumi Cloud when CrossGuard is enabled. A stack or account may belong to multiple Policy Groups. An example use of Policy Groups is to have a different group per environment. For example, you can have one for your stacks in production and a more permissive Policy Group for your other environments such as `staging` and `dev`.
+A *Policy Group* is a group of stacks and accounts with the same set of Policy Packs enforced. Policy Groups are only available from within Pulumi Cloud when CrossGuard is enabled. A stack or account may belong to multiple Policy Groups. An example use of Policy Groups is to have a different group per environment. For example, you can have one for your stacks in production and a more permissive Policy Group for your other environments such as `staging` and `dev`.
 
 Organization admins can create new Policy Groups, add stacks and accounts to a Policy Group, or remove stacks and accounts from a group.
 

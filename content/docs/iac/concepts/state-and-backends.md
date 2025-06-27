@@ -24,9 +24,9 @@ aliases:
 
 Pulumi stores metadata about your infrastructure so that it can manage your cloud resources. This metadata is called _state_. Each [stack](/docs/concepts/stack/) has its own state, and state is how Pulumi knows when and how to create, read, delete, or update cloud resources.
 
-Pulumi stores state in a _backend_ of your choosing. A backend is an API and storage endpoint used by the CLI to coordinate updates, and read and write stack state whenever appropriate. Backend options include the Pulumi Cloud, an easy-to-use, secure, and reliable hosted application with policies and safeguards to facilitate team collaboration, in addition to simple object storage in AWS S3, Microsoft Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or a local filesystem.
+Pulumi stores state in a _backend_ of your choosing. A backend is an API and storage endpoint used by the CLI to coordinate updates, and read and write stack state whenever appropriate. Backend options include Pulumi Cloud, an easy-to-use, secure, and reliable hosted application with policies and safeguards to facilitate team collaboration, in addition to simple object storage in AWS S3, Microsoft Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or a local filesystem.
 
-The default experience is to use the hosted Pulumi Cloud, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, and other concerns the Pulumi Cloud would otherwise handle for you.
+The default experience is to use the hosted Pulumi Cloud, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, and other concerns Pulumi Cloud would otherwise handle for you.
 
 > Pulumi state does not include your cloud credentials. Credentials are kept local to your client &mdash; wherever the CLI runs &mdash; even when using the managed Pulumi Cloud backend. Pulumi _does_ store configuration and secrets, but encrypts those secrets using your chosen encryption provider. To learn more, see [Configuration and Secrets](/docs/concepts/secrets/).
 
@@ -73,7 +73,7 @@ This will remove all credentials information from `~/.pulumi/credentials.json` a
 
 To change backends, run `pulumi logout` followed by `pulumi login`.
 
-The basic form of `login` will use the Pulumi Cloud by default. If you wish to log in to a specific backend, pass the backend-specific URL as the sole argument:
+The basic form of `login` will use Pulumi Cloud by default. If you wish to log in to a specific backend, pass the backend-specific URL as the sole argument:
 
 ```sh
 $ pulumi login <backend-url>
@@ -91,7 +91,7 @@ backend:
 ....
 ```
 
-For details on the various backend URL formats and options, please see the sections on using the Pulumi Cloud and DIY backends.
+For details on the various backend URL formats and options, please see the sections on using Pulumi Cloud and DIY backends.
 
 If you forget to log in, you will be automatically prompted to do so before you do anything that requires stacks or state.
 
@@ -128,7 +128,7 @@ To view your access tokens, or create a new one manually, view the <a href="http
 
 <img src="/images/docs/reference/state_tokens.png" alt="Pulumi.com Tokens Page" class="img-bordered">
 
-To log into a self-hosted instance of the Pulumi Cloud, pass its API URL to the `login` command:
+To log into a self-hosted instance of Pulumi Cloud, pass its API URL to the `login` command:
 
 ```sh
 $ pulumi login https://pulumi.acmecorp.com
@@ -138,15 +138,15 @@ Everything works the same as with the standard Pulumi Cloud, except that Pulumi 
 
 ### Pulumi Cloud Architecture
 
-The Pulumi Cloud is comprised of two Internet-accessible endpoints&mdash;a web application at `app.pulumi.com` and a REST API at `api.pulumi.com`&mdash;with an assortment of cloud infrastructure to support its features. A simplified diagram of its architecture looks like this:
+Pulumi Cloud is comprised of two Internet-accessible endpoints&mdash;a web application at `app.pulumi.com` and a REST API at `api.pulumi.com`&mdash;with an assortment of cloud infrastructure to support its features. A simplified diagram of its architecture looks like this:
 
 <img src="/images/docs/reference/state_saas.png" alt="Pulumi Cloud Architecture" class="img-bordered">
 
-The Pulumi Cloud doesn't ever acquire your cloud credentials, and does not communicate with your cloud provider directly. Instead, the CLI itself coordinates with both the Pulumi Cloud's API and your cloud provider's API directly. This ensures your IAM and key management does not need to change while adopting Pulumi. In particular, if you are running Pulumi deployments from [within a CI/CD environment](/docs/using-pulumi/continuous-delivery/), you can rely on existing mechanisms and security practices that your organization has already put in place.
+Pulumi Cloud doesn't ever acquire your cloud credentials, and does not communicate with your cloud provider directly. Instead, the CLI itself coordinates with both Pulumi Cloud's API and your cloud provider's API directly. This ensures your IAM and key management does not need to change while adopting Pulumi. In particular, if you are running Pulumi deployments from [within a CI/CD environment](/docs/using-pulumi/continuous-delivery/), you can rely on existing mechanisms and security practices that your organization has already put in place.
 
-The Pulumi Cloud is reliable, secure, and has undergone multiple audits, including SOC2 and professional pen-testing. Because of the client/server division of responsibilities &mdash; notably that the server doesn't have direct access to your cloud credentials, runtime data, or PII &mdash; the Pulumi Cloud has been used in organizations with advanced compliance needs, including PCI, ISO 27001, HIPAA, and more. If you'd like to discuss any of these topics, please [contact us](/contact/).
+Pulumi Cloud is reliable, secure, and has undergone multiple audits, including SOC2 and professional pen-testing. Because of the client/server division of responsibilities &mdash; notably that the server doesn't have direct access to your cloud credentials, runtime data, or PII &mdash; Pulumi Cloud has been used in organizations with advanced compliance needs, including PCI, ISO 27001, HIPAA, and more. If you'd like to discuss any of these topics, please [contact us](/contact/).
 
-It is possible to host your own version of the Pulumi Cloud in your private cloud environment. Pulumi offers versions that run natively on AWS, Azure, Google Cloud, Kubernetes, or simple virtual machine-based private and hybrid cloud environments. The architecture is very similar to the online version, but is privately hosted and does not depend on public access over the Internet:
+It is possible to host your own version of Pulumi Cloud in your private cloud environment. Pulumi offers versions that run natively on AWS, Azure, Google Cloud, Kubernetes, or simple virtual machine-based private and hybrid cloud environments. The architecture is very similar to the online version, but is privately hosted and does not depend on public access over the Internet:
 
 <img src="/images/docs/reference/state_enterprise.png" alt="Pulumi Enterprise Architecture" class="img-bordered">
 
@@ -263,7 +263,7 @@ Existing DIY backends will continue to use the global namespace for stacks. You 
 
 ## Migrating Between State Backends
 
-It is possible to start with one backend and then later migrate to another. This is common if you have began your project with Pulumi using a DIY backend but later decided to adopt the Pulumi Cloud for easier use within your team. This section describes how to perform this operation, however, if you would like our assistance with a migration, [please get in touch](/contact/).
+It is possible to start with one backend and then later migrate to another. This is common if you have began your project with Pulumi using a DIY backend but later decided to adopt Pulumi Cloud for easier use within your team. This section describes how to perform this operation, however, if you would like our assistance with a migration, [please get in touch](/contact/).
 
 The state for a stack includes information about its backend as well as other unique information such as its encryption provider. As such, moving a stack between backends isn't as simple as merely copying its state file. The [`pulumi stack rename` command](/docs/cli/commands/pulumi_stack_rename) can be used for simple renames within the same backend; however, Pulumi also supports migrating stacks between backends using the `pulumi stack export` and `pulumi stack import` commands, which understand how to perform the necessary translations.
 
@@ -288,7 +288,7 @@ $ pulumi stack init my-app-production
 $ pulumi stack import --file my-app-production.stack.json
 ```
 
-After performing these steps, your stack will now be under the management of the Pulumi Cloud. All subsequent operations should be performed using this new backend.
+After performing these steps, your stack will now be under the management of Pulumi Cloud. All subsequent operations should be performed using this new backend.
 
 > **Note:**: After migration, your stack's state will be managed by the Pulumi Cloud backend, but the stack will continue using the same secrets provider. You can separately [change the secrets provider](/docs/concepts/secrets#changing-the-secrets-provider-for-a-stack) for your stack if needed.
 
@@ -306,7 +306,7 @@ To learn more about importing existing resources, see [Importing Infrastructure]
 
 Pulumi state is usually stored in a transactional snapshot called a _checkpoint_. Pulumi records checkpoints early and often as it executes so that Pulumi can operate reliably, similar to how database transactions work. The basic functions of state allow Pulumi to diff your program's goal state against the last known update, recover from failure, and destroy resources accurately to clean up afterwards. The checkpoint format augments this with additional failure recovery capabilities in the face of partial failure.
 
-The Pulumi Cloud backends records every checkpoint so that it is possible to recover from exotic failure scenarios. DIY backends may have more trouble recovering from these situations as they typically store a singular Pulumi state file.
+The Pulumi Cloud backend records every checkpoint so that it is possible to recover from exotic failure scenarios. DIY backends may have more trouble recovering from these situations as they typically store a singular Pulumi state file.
 
 ### State Encryption
 
@@ -316,7 +316,7 @@ State is stored in your target backend in the form of checkpoints. In the case o
 
 A Pulumi "secret" can be used to store sensitive configuration values like database passwords and cloud tokens, and will always be handled safely. Pulumi understands the transitive usage of that secret in your state and will ensure everything it touches is encrypted, no matter which backend you've chosen.
 
-A secret can be created one of two ways: passing `--secret` to the `pulumi config set` command, or by [creating one programmatically](/docs/concepts/secrets#secrets). In both cases, the value is encrypted using your stack's chosen encryption provider. By default with the Pulumi Cloud, a server-side HSM key is used, but you may customize the encryption provider if you'd like more control over keys, rotation, and so on.
+A secret can be created one of two ways: passing `--secret` to the `pulumi config set` command, or by [creating one programmatically](/docs/concepts/secrets#secrets). In both cases, the value is encrypted using your stack's chosen encryption provider. By default with Pulumi Cloud, a server-side HSM key is used, but you may customize the encryption provider if you'd like more control over keys, rotation, and so on.
 
 To learn more about available encryption providers and how to customize your stack's, see [Configuring Secrets Encryption](/docs/concepts/secrets#configuring-secrets-encryption).
 
