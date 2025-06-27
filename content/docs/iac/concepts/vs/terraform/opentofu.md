@@ -84,7 +84,7 @@ Pulumi lets you take advantage of decades of innovation in modern IDEs. These to
 
 ### State Management {#state}
 
-With Pulumi, you use general purpose languages to express desired state, and Pulumi’s engine similarly gives you diffs and a way to robustly update your infrastructure. It uses the free [Pulumi Cloud](https://app.pulumi.com/) to eliminate concerns around concurrency management requirements and state manually by way of "state files". This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without the Pulumi Cloud](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-/pulumi-cloud/), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
+With Pulumi, you use general purpose languages to express desired state, and Pulumi’s engine similarly gives you diffs and a way to robustly update your infrastructure. It uses the free [Pulumi Cloud](https://app.pulumi.com/) to eliminate concerns around concurrency management requirements and state manually by way of "state files". This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without Pulumi Cloud](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-/pulumi-cloud/), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
 
 For more information on how Pulumi manages state or how to use different backends, see [State and Backends](/docs/concepts/state/).
 
