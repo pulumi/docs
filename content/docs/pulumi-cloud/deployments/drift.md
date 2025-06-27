@@ -12,50 +12,10 @@ menu:
     identifier: pulumi-cloud-deployments-drift
 ---
 
-Drift detection is the process of identifying changes in the actual state of your cloud environment that deviate from the expected state stored in Pulumi Cloud. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider’s console, unintended consequences of scripts, or unauthorized changes.
 
-To use drift detection and remediation with Pulumi Deployments, you must first configure the deployment settings for your stack.
+Drift detection is the process of identifying changes in the actual state of your cloud environment that deviate from the expected state stored in Pulumi Cloud. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider's console, unintended consequences of scripts, or unauthorized changes.
 
-You can also run a remediate drift operation, which will run a `pulumi up --refresh` to treat the Pulumi program as the source of truth and override what is in the cloud. See [Understanding Drift Remediation](#understanding-drift-remediation) for detailed information about what happens during remediation.
-
-## Understanding Drift Remediation
-
-Drift remediation automatically corrects infrastructure drift by restoring cloud resources to match your Pulumi program. Remediation treats Infrastructure as Code as the authoritative source of truth and overwrites out-of-band changes.
-
-When remediation runs, Pulumi executes `pulumi up --refresh` to:
-
-1. Refresh the state to get current cloud resources
-2. Compare actual state with desired state in your program
-3. Generate and apply changes to align infrastructure with your code
-
-**Use remediation when:**
-
-- You want to maintain IaC as the source of truth
-- Changes were made accidentally or without authorization
-- Security or compliance requires automatic correction
-
-**Consider alternatives when:**
-
-- Changes were intentional and reflect new requirements
-- Working with critical production systems requiring manual review
-- Large-scale drift needs careful analysis before correction
-
-**Remediation vs. Refresh:**
-
-- **Remediation** (`pulumi up --refresh`): Updates cloud resources to match your program
-- **Refresh** (`pulumi refresh`): Updates Pulumi state to match current cloud resources
-
-## When Drift is Detected
-
-When Pulumi detects drift, you have three response options:
-
-1. **Remediate drift**: Restore infrastructure to match your Pulumi program. Treats Infrastructure as Code as authoritative and overwrites cloud changes. See [Understanding Drift Remediation](#understanding-drift-remediation) for details.
-
-2. **Refresh**: Accept cloud changes and update Pulumi state to reflect current reality. You may also want to update your Pulumi program to align with the accepted changes.
-
-3. **Manual review**: Manually review detected drift before taking action, especially for production environments or complex changes.
-
-Use the Actions menu in Pulumi Cloud or appropriate CLI commands to perform these actions.
+To use drift detection and remediation with Pulumi Deployments, you must first configure the deployment settings for your stack. You can run a remediate drift operation, which executes `pulumi up --refresh` to treat the Pulumi program as the source of truth and restore cloud resources to match your Infrastructure as Code. When drift is detected, you can choose to remediate (restore to IaC state), refresh (accept cloud changes), or manually review before taking action.
 
 ## Running Drift Detection from the CLI
 
@@ -90,7 +50,7 @@ In order to set up Drift Detection and Remediation in the Pulumi Cloud console, 
 ![Schedule](../schedule.png)
 
 3. Select "Drift"
-4. (Optional) Turn on auto-remediation if applicable. See [Understanding Drift Remediation](#understanding-drift-remediation) for details about what happens when remediation runs.
+4. (Optional) Turn on auto-remediation if applicable
 5. Set the schedule using a cron expression
 6. Save the Schedule
 <!-- markdownlint-enable ol-prefix -->
