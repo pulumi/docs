@@ -209,7 +209,7 @@ kubernetes_overview:
         - Manage Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
         - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/iac/using-pulumi/continuous-delivery/).
-        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/).
+        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/), including [ArgoCD integration](/docs/iac/using-pulumi/continuous-delivery/argocd/).
         - Use Kubernetes [Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) to safely manage shared Kubernetes resources with Pulumi and your existing controllers.
     cta: Learn More
     cta_url: "/blog/new-kubernetes-superpowers"
@@ -297,7 +297,7 @@ detail_sections:
           - title: Pulumi Kubernetes Operator
             icon: pen
             icon_color: fuchsia
-            description: Deploy both Kubernetes resources and cloud infrastructure from within the Kubernetes resource model using a GitOps workflow. Use Pulumi's Flux integration and many other CI/CD integrations.
+            description: Deploy both Kubernetes resources and cloud infrastructure from within the Kubernetes resource model using a GitOps workflow. Use Pulumi's Flux and ArgoCD integrations along with many other CI/CD integrations.
 
     - title: AI-powered Kubernetes Management
       description: |

@@ -628,6 +628,10 @@ The value of the annotation is arbitrary, and we recommend using a timestamp.
 
 We can use ArgoCD in combination with PKO to manage the lifetime of the Stack via the GitOps paradigm. This gives you the ability to use the ArgoCD UI or CLI to interact with the Stack, and to allow ArgoCD to reconcile changes to the Stack specification. The Pulumi Kubernetes Operator handles the details.
 
+{{% notes type="info" %}}
+For comprehensive ArgoCD integration guidance, including multi-cluster deployments, best practices, and advanced patterns, see our dedicated [ArgoCD with Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/argocd/) documentation.
+{{% /notes %}}
+
 First, we need to define a Pulumi stack as a Kubernetes manifest that ArgoCD can deploy. We assume here that this manifest lives in the same repository as the Pulumi program, in the subfolder `deploy/`.  However, this manifest could live in a separate repository, such as an "app-of-apps" repo. In this example, the manifest declares a service account and cluster role bindings to allow the stack to create resources in the cluster. Additionally, we expect a Secret to exist on the cluster containing a Pulumi access token.
 
 Note that the Stack's `projectRepo` and `branch` point to the location of the Pulumi program to be executed by the Pulumi Kubernetes Operator.
