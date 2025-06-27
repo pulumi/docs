@@ -39,7 +39,7 @@ This provides even more detail about any resource changes, including the full up
 ## Installation and Configuration
 
 {{% notes type="warning" %}}
-While the app can be installed via GitHub, it **must be installed through the Pulumi Cloud** using the steps below to ensure correct setup. Installing through the Pulumi Cloud ensures we have a connection from Pulumi to your GitHub user or organization.
+While the app can be installed via GitHub, it **must be installed through Pulumi Cloud** using the steps below to ensure correct setup. Installing through Pulumi Cloud ensures we have a connection from Pulumi to your GitHub user or organization.
 {{% /notes %}}
 
 {{% notes type="info" %}}

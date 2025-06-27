@@ -52,7 +52,7 @@ Alternatively, you can also run `pulumi new [template]` to create a [template pr
 
 ## PULUMI_ACCESS_TOKEN
 
-To login non-interactively in to the CLI, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a build parameter when setting up the Jenkins build. To [create a new access token](/docs/pulumi-cloud/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in the Pulumi Cloud.
+To login non-interactively in to the CLI, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a build parameter when setting up the Jenkins build. To [create a new access token](/docs/pulumi-cloud/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in Pulumi Cloud.
 
 ## Creating a New Jenkins Build
 
