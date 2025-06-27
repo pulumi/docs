@@ -12,7 +12,7 @@ menu:
     iac:
         name: State & backends
         parent: iac-concepts
-        weight: 9
+        weight: 100
     concepts:
         weight: 9
 
@@ -53,20 +53,20 @@ The Pulumi Cloud backend requires no additional configuration after [installing 
 
 > To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#pulumi-cloud-architecture). If you are interested in the hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
 
-Pulumi also lets you manage state yourself using a DIY backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, or on your local filesystem. These DIY backends are all open source and free to use in any setting. Using a DIY backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-DIY-backend).
+Pulumi also lets you manage state yourself using a DIY backend. Your state is stored as simple JSON files in AWS S3, Azure Blob Store, Google Cloud Storage, an alternative AWS S3 API compatible server such as Minio or Ceph, or on your local filesystem. These DIY backends are all open source and free to use in any setting. Using a DIY backend trades off some amount of reliability for additional control over where metadata is stored. For instance, you will need to manually configure secure access, encryption, and history, and devise your own concurrency control and recovery capabilities. To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-diy-backend).
 
 ## Logging into and out of State Backends
 
 The [`login` command](/docs/cli/commands/pulumi_login) logs you into a backend:
 
 ```sh
-$ pulumi login
+pulumi login
 ```
 
 The [`logout` command](/docs/cli/commands/pulumi_logout) logs you out of the current backend.
 
 ```sh
-$ pulumi logout
+pulumi logout
 ```
 
 This will remove all credentials information from `~/.pulumi/credentials.json` and you will need to log in again before performing any subsequent stack or state operations.
@@ -76,7 +76,7 @@ To change backends, run `pulumi logout` followed by `pulumi login`.
 The basic form of `login` will use Pulumi Cloud by default. If you wish to log in to a specific backend, pass the backend-specific URL as the sole argument:
 
 ```sh
-$ pulumi login <backend-url>
+pulumi login <backend-url>
 ```
 
 Alternatively, there are 2 other options that help to avoid the need to type it every time:
@@ -110,7 +110,7 @@ Backend URL: https://app.pulumi.com/<your-username>
 Running `pulumi login` without any argument will log into the default Pulumi Cloud backend:
 
 ```sh
-$ pulumi login
+pulumi login
 ```
 
 This will display a prompt that asks for an [access token](/docs/pulumi-cloud/accounts#access-tokens):
@@ -131,7 +131,7 @@ To view your access tokens, or create a new one manually, view the <a href="http
 To log into a self-hosted instance of Pulumi Cloud, pass its API URL to the `login` command:
 
 ```sh
-$ pulumi login https://pulumi.acmecorp.com
+pulumi login https://pulumi.acmecorp.com
 ```
 
 Everything works the same as with the standard Pulumi Cloud, except that Pulumi will target your private instance instead of the shared one hosted at `app.pulumi.com`.
@@ -174,7 +174,7 @@ The detailed format of the `<backend-url>` differs by backend and each has diffe
 To use the filesystem backend to store your state files locally on your machine, pass the `--local` flag when logging in:
 
 ```sh
-$ pulumi login --local
+pulumi login --local
 ```
 
 You will see `Logged into <my-machine> as <my-user> (file://~)` as a result where `<my-machine>` and `<my-user>` are your configured machine and user names, respectively. All subsequent stack state will be stored as JSON files locally on your machine.
@@ -182,7 +182,7 @@ You will see `Logged into <my-machine> as <my-user> (file://~)` as a result wher
 The default directory for these JSON files is `~/.pulumi`. To store state files in an alternative location, specify a `file://<path>` URL instead, where `<path>` is the full path to the target directory where state files will be stored. For instance, to store state underneath `/app/data/.pulumi/` instead, run:
 
 ```sh
-$ pulumi login file:///app/data
+pulumi login file:///app/data
 ```
 
 > **Note:** If you use a relative path (e.g. `file://./einstein`), it will be relative to _the current working directory_.
@@ -194,7 +194,7 @@ Notice that `pulumi login --local` is syntactic sugar for `pulumi login file://~
 To use the [AWS S3](https://aws.amazon.com/s3/) backend, pass the `s3://<bucket-name>` as your `<backend-url>`:
 
 ```sh
-$ pulumi login s3://<bucket-name>
+pulumi login s3://<bucket-name>
 ```
 
 {{% notes type="info"%}}
@@ -215,7 +215,7 @@ To configure credentials and authorize access, please see the [AWS Session docum
 This backend also supports [alternative object storage servers with AWS S3 compatible REST APIs](https://en.wikipedia.org/wiki/Amazon_S3#S3_API_and_competing_services), including [Minio](https://www.minio.io/), [Ceph](https://ceph.io/), or [SeaweedFS](https://github.com/chrislusf/seaweedfs). To use such a server, you may pass `endpoint`, `disableSSL`, and `s3ForcePathStyle` querystring parameters to your `<backend-url>`, as follows:
 
 ```sh
-$ pulumi login 's3://<bucket-name>?endpoint=my.minio.local:8080&disableSSL=true&s3ForcePathStyle=true'
+pulumi login 's3://<bucket-name>?endpoint=my.minio.local:8080&disableSSL=true&s3ForcePathStyle=true'
 ```
 
 ### Azure Blob Storage
@@ -223,7 +223,7 @@ $ pulumi login 's3://<bucket-name>?endpoint=my.minio.local:8080&disableSSL=true&
 To use the [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) backend, pass the `azblob://<container-path>` as your `<backend-url>`:
 
 ```sh
-$ pulumi login azblob://<container-path>
+pulumi login azblob://<container-path>
 ```
 
 To tell Pulumi what Azure storage account to use, set the `AZURE_STORAGE_ACCOUNT` environment variable. Also, set either `AZURE_STORAGE_KEY` or `AZURE_STORAGE_SAS_TOKEN` to authorize access. For additional configuration options, see [Azure Setup](/registry/packages/azure/installation-configuration/). If you're new to Azure Blob Storage, see [the Azure documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli).
@@ -232,7 +232,7 @@ To tell Pulumi what Azure storage account to use, set the `AZURE_STORAGE_ACCOUNT
 As of Pulumi CLI v3.41.1, instead of the environment variables above, Azure CLI authentication may be used by specifying the storage account in the URL like so after using `az login`:
 
 ```sh
-$ pulumi login azblob://<container-path>?storage_account=account_name
+pulumi login azblob://<container-path>?storage_account=account_name
 ```
 
 {{% /notes %}}
@@ -246,7 +246,7 @@ The Azure account must have the [Storage Blob Data Contributor role](https://lea
 To use the [Google Cloud Storage](https://cloud.google.com/storage/) backend pass the `gs://<bucket-path>` as your `<backend-url>`:
 
 ```sh
-$ pulumi login gs://<my-pulumi-state-bucket>
+pulumi login gs://<my-pulumi-state-bucket>
 ```
 
 To configure credentials for this backend, see [Application Default Credentials](https://cloud.google.com/docs/authentication/production). For additional configuration options, see [Google Cloud Setup](/registry/packages/gcp/installation-configuration/). If you're new to Google Cloud Storage, see [the Google Cloud documentation](https://cloud.google.com/storage/docs/quickstarts).

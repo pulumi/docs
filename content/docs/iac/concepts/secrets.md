@@ -8,7 +8,7 @@ menu:
     iac:
         name: Secrets
         parent: iac-concepts
-        weight: 7
+        weight: 90
     concepts:
         weight: 7
 aliases:
@@ -220,7 +220,7 @@ By default, the Pulumi CLI uses a per-stack encryption key managed by Pulumi Clo
 For example, this command sets a configuration variable named `dbPassword` to the plain-text value `S3cr37`:
 
 ```bash
-$ pulumi config set --secret dbPassword S3cr37
+pulumi config set --secret dbPassword S3cr37
 ```
 
 If we list the configuration for our stack, the plain-text value for `dbPassword` will not be printed:
@@ -316,7 +316,7 @@ By default, configuration values are saved in plain text. Given this, there may 
 To avoid this, you can pass the `--plaintext` flag when creating your configuration value. This flag can be used to indicate that you did not want an encrypted secret.
 
 ```bash
-$ pulumi config set --plaintext aws:region us-west-2
+pulumi config set --plaintext aws:region us-west-2
 ```
 
 ## Using configuration and secrets in code
@@ -326,8 +326,8 @@ To access configuration or secret values for your package, project, or component
 For example, assume the following configuration values have been set:
 
 ```bash
-$ pulumi config set name BroomeLLC             # set a plain-text value
-$ pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
+pulumi config set name BroomeLLC             # set a plain-text value
+pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
 ```
 
 To begin, allocate an instance of the `pulumi.Config` object as shown in the code below. Its constructor takes an optional namespace for all configuration keys being read back. Similar rules to the CLI usage apply here, in that if you omit the namespace argument, the current project is used. This is the common case for project configuration but is not what you want for packages and components which need their own isolated configuration.
@@ -461,8 +461,8 @@ Notice the keys used above have no namespaces, both in the CLI gestures and in t
 Secrets within structured config are also supported. Consider a list of endpoints, each having a `url` and `token` property. The `token` value could be stored as a secret:
 
 ```bash
-$ pulumi config set --path endpoints[0].url https://example.com
-$ pulumi config set --path --secret endpoints[0].token accesstokenvalue
+pulumi config set --path endpoints[0].url https://example.com
+pulumi config set --path --secret endpoints[0].token accesstokenvalue
 ```
 
 The above configuration would look like the following in your `Pulumi.<project-name>.yaml` file:
@@ -497,7 +497,7 @@ In both cases, you can continue using secrets management as described above, but
 To specify an alternative encryption provider, specify it at stack initialization time:
 
 ```
-$ pulumi stack init <name> --secrets-provider="<provider>://<provider-settings>"
+pulumi stack init <name> --secrets-provider="<provider>://<provider-settings>"
 ```
 
 After doing so, all encryption operations for your stack will use the custom provider settings. The `<provider>` and `<provider-settings>` are specific to your chosen encryption provider. See below for the available providers and their options.
@@ -592,7 +592,7 @@ $ pulumi stack init my-stack \
 To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`](/docs/cli/commands/pulumi_stack_change-secrets-provider) command.
 
 ```bash
-$ pulumi stack change-secrets-provider "<secrets-provider>"
+pulumi stack change-secrets-provider "<secrets-provider>"
 ```
 
 This will change the encrypted secrets in the provider configuration and the stack's state file to use the new secrets provider.
@@ -677,7 +677,7 @@ values:
 We can use the command line to open this environment and access this secret, if access controls allow:
 
 ```bash
-$ pulumi env open myorg/subscription_management_prod
+pulumi env open myorg/subscription_management_prod
 ```
 
 Which should look like this:
@@ -744,7 +744,7 @@ values:
 Now stacks or other environments that import this environment will have access to the Azure and GCP secrets from one easy access point.
 
 ```bash
-$ pulumi env open myorg/cross_cloud
+pulumi env open myorg/cross_cloud
 ```
 
 Which should look like this:

@@ -8,7 +8,7 @@ menu:
     iac:
         Name: Debugging
         parent: iac-concepts
-        weight: 16
+        weight: 160
     usingpulumi:
         identifier: debugging
         weight: 9

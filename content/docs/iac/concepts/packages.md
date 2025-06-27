@@ -8,7 +8,7 @@ menu:
     iac:
         name: Packages
         parent: iac-concepts
-        weight: 10
+        weight: 110
     concepts:
         weight: 10
 aliases:

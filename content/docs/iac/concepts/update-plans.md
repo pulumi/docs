@@ -8,7 +8,7 @@ menu:
     iac:
         name: Update plans
         parent: iac-concepts
-        weight: 11
+        weight: 130
     concepts:
         weight: 11
 aliases:
