@@ -91,19 +91,28 @@ There are no restrictions on which policies you combine within a pack, and you s
 
 There are two broad types of policies:
 
-1. *Resource Policies*: These validate a particular resource in a stack or account before the resource is created or updated, looking at the resource's _input_ properties.
-2. *Stack Policies*: These validate all resources in the stack after they've been created/updated, but before the Pulumi preview/update has completed, looking at each resource's _output_ properties.
+1. **Resource Policies:** These validate a particular resource in a stack or account before the resource is created or updated, looking at the resource's *input* properties.
+1. **Stack Policies:** These validate all resources in the stack after the Pulumi operation has processed all resources, looking at each resource's *output* properties. Stack policies are most useful during preview operations.
 
 This table summarizes the primary differences between the two types:
 
 |                                | Resource Policies                     | Stack Policies                                                                        |
 |--------------------------------|---------------------------------------|---------------------------------------------------------------------------------------|
 | What does it check?            | Individual resources                  | All resources in the stack                                                            |
-| When is the check performed?   | Before resources are created/modified | After all stack resources have been created/modified                                  |
+| When is the check performed?   | Before resources are created/modified | After all stack resources have been created/modified (see note below)               |
 | Can it remediate?              | Yes                                   | No                                                                                    |
-| What information is available? | Resource _input_ properties           | Resource _output_ properties (Note: inputs are propagated to outputs during preview)  |
+| What information is available? | Resource *input* properties           | Resource *output* properties (Note: inputs are propagated to outputs during preview)  |
 | What is the type name?         | `ResourceValidationPolicy`            | `StackValidationPolicy`                                                               |
 | Supported for Insights?        | Yes                                   | No - IaC-specific feature                                                             |
+
+{{% notes type="info" %}}
+**Stack Policy Timing**: The timing of stack policy execution differs between `pulumi preview` and `pulumi update`:
+
+- During `pulumi preview`: Stack policies run after the preview completes, using whatever output values are already known from previously provisioned resources. Since no new resources are actually created during preview, stack policies are typically most useful when run during `preview` for catching violations before any resource provisioning occurs.
+- During `pulumi update`: Stack policies run after all resources have been provisioned, but before the update operation completes. This means non-compliant resources may already be created by the time the policy violation is detected.
+
+For this reason, stack policies are most often used with `pulumi preview` to identify issues before resources are actually provisioned.
+{{% /notes %}}
 
 ### Enforcement Levels
 
@@ -407,7 +416,7 @@ In this example, the `password` property will be encrypted using the stack's sec
 
 ### Stack Policies with IaC
 
-Policies of `StackValidationPolicy` are run against all the resources in a stack. These policies are run after all stack resources are registered and thus *do not* block an out-of-compliance resource from being created, but do fail the preview or update. To avoid creating out-of-compliance resources, we recommend always running a preview command before an update. This allows you to write policies where one resource depends on the state or existence of another resource.
+Policies of `StackValidationPolicy` are run against all the resources in a stack. These policies are run after all stack resources are processed and thus *do not* block an out-of-compliance resource from being created during an update, but do fail the preview or update operation. Stack policies are most useful during preview operations, as they can catch violations before any actual resource provisioning occurs. To avoid creating out-of-compliance resources, we recommend always running a preview command before an update. This allows you to write policies where one resource depends on the state or existence of another resource.
 
 The below example requires that all dynamoDB tables have an App Autoscaling Policy associated with it.
 
