@@ -84,6 +84,10 @@ More specifically, this ensures that only repositories your GitHub user would no
 
 Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized you will see an "Authorize GitHub" button. Click the button and accept the required permissions.
 
+If you have OAuth App access restrictions enabled in your Github organization, you will also need to
+[authorize the Pulumi Github App](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)
+in the "OAuth App Policy" settings.
+
 ### Organization settings
 
 Navigate to the "Integrations" tab to configure the Pulumi New Project Wizard to define your Organization Templates Source.
