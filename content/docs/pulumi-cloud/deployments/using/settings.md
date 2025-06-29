@@ -128,6 +128,10 @@ For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/pu
 
 When using Pulumi-managed deployment agents, you have the option to speed up deployments using dependency caching.
 
+{{% notes type="info" %}}
+If you have configured the stack to use a [Customer-managed agent](/docs/pulumi-cloud/deployments/customer-managed-agents/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
+{{% /notes %}}
+
 The caching method is simple: during the first deployment, the deployment agent will automatically detect downloaded dependencies using lock files, zip them up and store the archive in blob storage. During all subsequent deployments, agents will pull such an archive down and unpack it, saving time it would normally take to download those dependencies. When your dependencies change, deployment agents will automatically invalidate the old cache and create a new one.
 
 Caches are shared on the project level, so all stacks within a project can share the same cache. However, caches are fully isolated and never shared between customers.
