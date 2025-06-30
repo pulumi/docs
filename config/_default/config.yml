@@ -33,6 +33,14 @@ timeout: 300000
 outputFormats:
   rss:
     baseName: rss
+  llmmd:
+    mediaType: "text/markdown"
+    isPlainText: true
+    notAlternative: false
+    permalinkable: false
+    path: ""
+    rel: "llmmd"
+    suffix: ".md"
 
 # We set the outputs explicitly to just "HTML" as otherwise they default to both
 # "HTML" and "RSS", and we only want to generate RSS for the blog section -- not
@@ -45,6 +53,10 @@ outputs:
     - JSON
   section:
     - HTML
+    - llmmd
+  page:
+    - HTML
+    - llmmd
 
 taxonomies:
   tag: tags
