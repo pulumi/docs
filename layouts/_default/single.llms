@@ -1,0 +1,57 @@
+# Pulumi
+
+> Modern Infrastructure as Code platform that lets you use real programming languages to build and deploy cloud infrastructure across any cloud provider.
+
+Pulumi is the universal infrastructure as code platform that enables developers, platform teams, and enterprises to build, deploy, and manage cloud infrastructure using familiar programming languages. Unlike traditional Infrastructure as Code tools that use domain-specific languages, Pulumi supports TypeScript, Python, Go, .NET, Java, and YAML.
+
+## Key Products
+
+- [Infrastructure as Code (IaC)]({{ .Site.BaseURL }}docs/iac/index.md): Build cloud infrastructure using real programming languages
+- [Pulumi ESC (Environments, Secrets, and Configuration)]({{ .Site.BaseURL }}docs/esc/index.md): Centralized secrets and configuration management
+- [Pulumi Cloud]({{ .Site.BaseURL }}docs/pulumi-cloud/index.md): Managed service for teams with collaboration, security, and deployment features
+- [Pulumi Insights]({{ .Site.BaseURL }}docs/insights/index.md): AI-powered cloud resource discovery and compliance
+- [CrossGuard]({{ .Site.BaseURL }}docs/iac/crossguard/index.md): Policy as code for infrastructure compliance and governance
+
+## Getting Started
+
+- [Install Pulumi]({{ .Site.BaseURL }}docs/iac/download-install/index.md): Installation instructions for all platforms
+- [Get Started with AWS]({{ .Site.BaseURL }}docs/iac/get-started/aws/index.md): Build your first AWS infrastructure
+- [Get Started with Azure]({{ .Site.BaseURL }}docs/iac/get-started/azure/index.md): Build your first Azure infrastructure  
+- [Get Started with Google Cloud]({{ .Site.BaseURL }}docs/iac/get-started/gcp/index.md): Build your first GCP infrastructure
+- [Get Started with Kubernetes]({{ .Site.BaseURL }}docs/iac/get-started/kubernetes/index.md): Deploy Kubernetes resources
+
+## Language Support
+
+- [TypeScript/JavaScript]({{ .Site.BaseURL }}docs/iac/languages-sdks/javascript/index.md): Most popular language for Pulumi
+- [Python]({{ .Site.BaseURL }}docs/iac/languages-sdks/python/index.md): Full Python SDK with async support
+- [Go]({{ .Site.BaseURL }}docs/iac/languages-sdks/go/index.md): Native Go SDK for infrastructure
+- [.NET]({{ .Site.BaseURL }}docs/iac/languages-sdks/dotnet/index.md): C#, F#, and VB.NET support
+- [Java]({{ .Site.BaseURL }}docs/iac/languages-sdks/java/index.md): Full Java SDK support
+- [YAML]({{ .Site.BaseURL }}docs/iac/languages-sdks/yaml/index.md): Declarative YAML-based infrastructure
+
+## Core Resources
+
+- [Programming Model]({{ .Site.BaseURL }}docs/reference/programming-model/index.md): Understanding resources, inputs, outputs, and state
+- [Stacks and Projects]({{ .Site.BaseURL }}docs/iac/concepts/organizing-stacks-projects/index.md): Organizing infrastructure code
+- [Secrets Management]({{ .Site.BaseURL }}docs/iac/concepts/secrets/index.md): Handling sensitive configuration data
+- [Testing Infrastructure]({{ .Site.BaseURL }}docs/iac/concepts/testing/index.md): Unit and integration testing approaches
+- [Continuous Delivery]({{ .Site.BaseURL }}docs/iac/using-pulumi/continuous-delivery/index.md): CI/CD integration patterns
+
+## Migration and Adoption
+
+- [Import Existing Infrastructure]({{ .Site.BaseURL }}docs/iac/adopting-pulumi/import/index.md): Import cloud resources into Pulumi
+- [Convert from Terraform]({{ .Site.BaseURL }}docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/index.md): Migration guide from Terraform
+- [Convert from CloudFormation]({{ .Site.BaseURL }}docs/iac/adopting-pulumi/migrating-to-pulumi/from-cloudformation/index.md): Migration from AWS CloudFormation
+- [Conversion Tools]({{ .Site.BaseURL }}docs/iac/adopting-pulumi/converters/index.md): Automated conversion utilities
+
+## CLI Reference
+
+- [Pulumi CLI Commands]({{ .Site.BaseURL }}docs/iac/cli/commands/index.md): Complete command reference
+- [Environment Variables]({{ .Site.BaseURL }}docs/iac/cli/environment-variables/index.md): Configuration options
+- [ESC CLI Commands]({{ .Site.BaseURL }}docs/esc/cli/commands/index.md): Pulumi ESC command reference
+
+## API and SDKs
+
+- [Automation API]({{ .Site.BaseURL }}docs/iac/automation-api/index.md): Programmatic infrastructure management
+- [Provider SDK]({{ .Site.BaseURL }}docs/iac/extending-pulumi/pulumi-provider-sdk/index.md): Building custom providers
+- [Package Publishing]({{ .Site.BaseURL }}docs/iac/extending-pulumi/publishing-packages/index.md): Sharing reusable components

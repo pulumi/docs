@@ -13,7 +13,9 @@
 
 {{- if .cards }}
 {{ range .cards }}
-### {{ .heading }}
+{{- if or .heading .label }}
+### {{ or .heading .label }}
+{{- end }}
 
 {{ with .description }}
 {{ . }}
