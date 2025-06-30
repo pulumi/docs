@@ -17,7 +17,7 @@ aliases:
 - /secrets/
 ---
 
-All resource input and output values are recorded as stack [_state_](/docs/concepts/state) and stored in Pulumi Cloud, in a state file, or in your DIY backend of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, hsowever, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.
+All resource input and output values are recorded as stack [_state_](/docs/concepts/state) and stored in Pulumi Cloud, in a state file, or in your DIY backend of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, however, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.
 
 Pulumi Cloud transmits and stores entire state files securely, but Pulumi also supports encrypting individual values as _secrets_ for additional protection. Encryption ensures that these values never appear as plain text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
