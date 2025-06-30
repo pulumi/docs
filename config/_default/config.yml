@@ -41,13 +41,13 @@ outputFormats:
     path: ""
     rel: "llmmd"
     suffix: ".md"
-  llms:
+  txt:
     mediaType: "text/plain"
     isPlainText: true
     notAlternative: false
     permalinkable: false
     path: ""
-    rel: "llms"
+    rel: "txt"
     suffix: ".txt"
 
 # We set the outputs explicitly to just "HTML" as otherwise they default to both
