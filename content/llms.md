@@ -4,5 +4,6 @@ meta_desc: "LLM-friendly overview of Pulumi documentation structure and key reso
 url: "/llms.txt"
 outputs:
   - "txt"
-block_external_search_index: true
+_build:
+  list: never
 ---
