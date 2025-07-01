@@ -8,7 +8,9 @@
 ## {{ .heading }}
 
 {{ with or .description .description_md }}
-{{ . | markdownify }}
+{{ $find := `href="(/[^"h][^"t][^"t][^"p][^"s][^:#]*/)"` }}
+{{ $replace := `href="${1}index.md"` }}
+{{ . | replaceRE $find $replace | markdownify }}
 {{ end }}
 
 {{- if .cards }}
