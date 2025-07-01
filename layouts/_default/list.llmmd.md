@@ -22,7 +22,11 @@
 {{ end }}
 
 {{ with .link }}
+{{ if hasPrefix . "http" }}
+[Read more]({{ . }})
+{{ else }}
 [Read more]({{ . | relURL }}index.md)
+{{ end }}
 {{ end }}
 
 {{ end }}
