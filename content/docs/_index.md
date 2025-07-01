@@ -12,7 +12,7 @@ noleftnav: true
 norightnav: true
 nobreadcrumb: true
 h1: Pulumi Docs
-description: <p>Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> platform for <a href="/docs/iac">automating</a>, <a href="/docs/esc">securing</a>, and <a href="/docs/pulumi-cloud">managing</a> cloud resources, configuration, and secrets, using your favorite <a href="/docs/iac/languages-sdks/">programming languages.</a></p>
+description: Pulumi is an [open source](https://github.com/pulumi/pulumi) platform for [automating](/docs/iac), [securing](/docs/esc), and [managing](/docs/pulumi-cloud) cloud resources, configuration, and secrets, using your favorite [programming languages](/docs/iac/languages-sdks/).
 link_buttons:
   primary:
     label: Get Started
@@ -58,7 +58,7 @@ sections:
     secondary_button_link: https://app.pulumi.com/signup
 - type: cards-logo-label-link
   heading: Clouds
-  description: <p>Pulumi IaC supports AWS, Azure, Google Cloud, Kubernetes, and <a href="/registry/">120+ packages</a>.</p>
+  description: Pulumi IaC supports AWS, Azure, Google Cloud, Kubernetes, and [120+ packages](/registry/).
   cards:
   - label: AWS & Pulumi
     icon: aws-40
@@ -88,8 +88,7 @@ sections:
     </div>
 - type: button-cards
   heading: PulumiTV Featured Playlists
-  description:  |
-    <p>If a picture is worth 1000 words, these videos deliver information at 30fps. So, that's like reading 30000 words a second.</p>
+  description: If a picture is worth 1000 words, these videos deliver information at 30fps. So, that's like reading 30000 words a second.
   cards:
   - heading: Modern Infrastructure
     description: <img src="/images/docs/pulumitv/Modern_Infrastructure_YT_Playlist.jpg" />
@@ -102,7 +101,7 @@ sections:
     link: https://www.youtube.com/watch?v=NUPK5CCm6XA&list=PLyy8Vx2ZoWlrf74lghqGc171NCtLgZyVd
 - type: flat
   heading: Support
-  description: <p>We’re here to help! Try reviewing our <a href="https://www.pulumi.com/docs/iac/support/faq/">FAQ</a> or reach out at <a href="mailto:support@pulumi.com">support@pulumi</a>.com.</p>
+  description: We’re here to help! Try reviewing our [FAQ](https://www.pulumi.com/docs/iac/support/faq/) or reach out at [support@pulumi.com](mailto:support@pulumi.com).
 - type: button-cards
   heading: Community and Free Tier support
   cards:
@@ -125,6 +124,6 @@ sections:
 - type: flat
   heading: Enterprise and Business Critical support
   description: |
-    <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="https://www.pulumi.com/pricing/">pricing page</a> for the support options available. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.</p>
+    Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our [pricing page](https://www.pulumi.com/pricing/) for the support options available. To open a support ticket or view service status, please visit our [enterprise support portal](https://support.pulumi.com/hc/en-us).
 
 ---

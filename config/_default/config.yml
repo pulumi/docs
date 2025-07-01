@@ -35,7 +35,7 @@ outputFormats:
     baseName: rss
   llmmd:
     mediaType: "text/markdown"
-    isPlainText: true
+    isPlainText: false
     notAlternative: false
     permalinkable: false
     path: ""
@@ -43,7 +43,7 @@ outputFormats:
     suffix: ".md"
   txt:
     mediaType: "text/plain"
-    isPlainText: true
+    isPlainText: false
     notAlternative: false
     permalinkable: false
     path: ""
