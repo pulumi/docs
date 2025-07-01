@@ -34,7 +34,7 @@ This method works best when:
 - You have access to consumer projects
 - You can link the component locally
 
-Running `pulumi preview` works great for existing projects to detect any unexepected behavior after an update. The best part is that it tests your new code in exactly the environments where it will be used, meaning they are very accurate and will show any issues, even ones you may not have considered ahead of time. Unfortunately, it may not scale well if you have a lot of projects or don't have direct access to the Pulumi project's code.
+Running `pulumi preview` works great for existing projects to detect any unexpected behavior after an update. The best part is that it tests your new code in exactly the environments where it will be used, meaning they are very accurate and will show any issues, even ones you may not have considered ahead of time. Unfortunately, it may not scale well if you have a lot of projects or don't have direct access to the Pulumi project's code.
 
 ### Testing Strategy: Integration and Unit Testing Tools
 
@@ -42,7 +42,7 @@ Set up **integration tests** using tools like:
 
 - Language-specific [unit testing](/docs/iac/concepts/testing/unit/) tools
 - Local test benches ([see below](#yaml-test-benches))
-- CI/CD workflows (like GitHub Actions) that validate downstream usage
+- CI/CD workflows (like [GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/)) that validate downstream usage
 
 These tests can assert that the updated component produces expected outputs and maintains compatibility. This works well when you don't have access to the end-user programs. However, there are limits to what tests can detect. It's often very difficult to write enough tests to have 100% test coverage of all inputs. Often there are environment-specific problems related to configuration, secrets, or other factors that are not able to be recreated in the testing environment. So, while these approaches give you *some* security, they are not as comprehensive as simply running `pulumi preview` and seeing what breaks.
 
