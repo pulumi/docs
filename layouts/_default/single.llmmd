@@ -1,0 +1,28 @@
+<div>
+This is the layouts/_default/single.llmmd template 
+</div>
+{{ .Content }}
+
+{{ range .Params.sections }}
+{{ if eq .type "flat" }}
+## {{ .heading }}
+{{ .description | markdownify }}
+{{ else if eq .type "button-cards" }}
+## {{ .heading }}
+{{ .description | markdownify }}
+{{ range .cards }}
+### {{ .heading }}
+{{ .description | markdownify }}
+Link: {{ .link }}
+Primary Button: {{ .primary_button_label }} ({{ .primary_button_link }})
+Secondary Button: {{ .secondary_button_label }} ({{ .secondary_button_link }})
+{{ end }}
+{{ else if eq .type "cards-logo-label-link" }}
+## {{ .heading }}
+{{ .description | markdownify }}
+{{ range .cards }}
+### {{ .label }}
+Link: {{ .link }}
+{{ end }}
+{{ end }}
+{{ end }}

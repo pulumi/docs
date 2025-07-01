@@ -1,0 +1,47 @@
+<!-- DEBUG: This is layouts/_default/list.llmmd -->
+<h1>DEBUG: This is the fallback list template for LLMMD</h1>
+
+<h2>DEBUG: Page Kind: {{ .Kind }}</h2>
+<h2>DEBUG: Page Type: {{ .Type }}</h2>
+<h2>DEBUG: Page Layout: {{ .Layout }}</h2>
+
+<h2>DEBUG: Top-level description:</h2>
+<pre>{{ printf "%#v" .Params.description }}</pre>
+
+<h2>DEBUG: Sections:</h2>
+<pre>{{ printf "%#v" .Params.sections }}</pre>
+
+{{ .Content }}
+
+{{ range .Params.sections }}
+{{ if eq .type "button-cards" }}
+## {{ .heading }}
+{{ if .description }}{{ .description }}{{ else if .description_md }}{{ .description_md | markdownify }}{{ end }}
+{{ range .cards }}
+### {{ .heading }}
+{{ if .description }}{{ .description }}{{ end }}
+{{ if .primary_button_link }}
+Primary Button: {{ .primary_button_label }} ({{ .primary_button_link }})
+{{ end }}
+{{ if .secondary_button_link }}
+Secondary Button: {{ .secondary_button_label }} ({{ .secondary_button_link }})
+{{ end }}
+{{ end }}
+{{ else if eq .type "cards-logo-label-link" }}
+## {{ .heading }}
+{{ if .description }}{{ .description }}{{ end }}
+{{ range .cards }}
+### {{ .label }}
+Link: {{ .link }}
+{{ end }}
+{{ else if eq .type "blue-sparkle" }}
+## {{ .heading }}
+{{ .description }}
+{{ if .raw_html }}{{ .raw_html | markdownify }}{{ end }}
+{{ else if eq .type "flat" }}
+## {{ .heading }}
+<!-- DEBUG: FLAT SECTION DESCRIPTION RAW: {{ printf "%#v" .description }} -->
+<!-- DEBUG: FLAT SECTION DESCRIPTION MARKDOWNIFIED: {{ printf "%#v" (.description | markdownify) }} -->
+{{ if .description }}{{ .description }}{{ else if .description_md }}{{ .description_md | markdownify }}{{ end }}
+{{ end }}
+{{ end }}
