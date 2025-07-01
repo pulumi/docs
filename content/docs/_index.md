@@ -62,16 +62,16 @@ sections:
   cards:
   - label: AWS & Pulumi
     icon: aws-40
-    link: /docs/clouds/aws/
+    link: /docs/iac/clouds/aws/
   - label: Azure & Pulumi
     icon: azure-40
-    link: /docs/clouds/azure/
+    link: /docs/iac/clouds/azure/
   - label: Google Cloud & Pulumi
     icon: google-cloud-40
-    link: /docs/clouds/gcp/
+    link: /docs/iac/clouds/gcp/
   - label: Kubernetes & Pulumi
     icon: kubernetes-40
-    link: /docs/clouds/kubernetes/
+    link: /docs/iac/clouds/kubernetes/
 - type: blue-sparkle
   heading: Why Pulumi?
   description: | 
