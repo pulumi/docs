@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: How Pulumi works
-        weight: 1
+        weight: 10
         parent: iac-concepts
     concepts:
         weight: 1

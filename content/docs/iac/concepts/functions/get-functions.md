@@ -7,12 +7,13 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Get functions
-        parent: iac-concepts-resources
-        weight: 7
+        parent: iac-concepts-functions
+        weight: 2
     concepts:
-        parent: resources
-        weight: 7
+        parent: functions
+        weight: 2
 aliases:
+- /docs/iac/concepts/resources/get/
 - /docs/intro/concepts/resources/get/
 - /docs/concepts/resources/get/
 ---
@@ -26,23 +27,8 @@ Two values are passed to the `get` function:
 
 You can use the `get` function to consume properties from a resource that was provisioned elsewhere. For example, this program reads an existing EC2 Security Group whose ID is `sg-0dfd33cdac25b1ec9` and uses the result as input to create an EC2 Instance that Pulumi will manage:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-let aws = require("@pulumi/aws");
-
-let group = aws.ec2.SecurityGroup.get("group", "sg-0dfd33cdac25b1ec9");
-
-let server = new aws.ec2.Instance("web-server", {
-    ami: "ami-6869aa05",
-    instanceType: "t2.micro",
-    securityGroups: [ group.name ], // reference the security group resource above
-});
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
