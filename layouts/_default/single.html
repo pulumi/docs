@@ -9,11 +9,7 @@
         {{ end }}
     </header>
     <section class="container mx-auto max-w-3xl py-8 px-4">
-        {{ if eq .OutputFormats.Get "llms" }}
-            {{ .Content | replaceRE `\((?!https?://)` (printf `(https://www.pulumi.com%s` (.Site.BaseURL | relURL)) | safeHTML }}
-        {{ else }}
-            {{ .Content }}
-        {{ end }}
+        {{ .Content }}
     </section>
 
     {{ partial "learnmore-contactus.html" . }}

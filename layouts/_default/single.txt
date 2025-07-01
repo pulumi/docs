@@ -12,6 +12,10 @@ Pulumi is the universal infrastructure as code platform that enables developers,
 - [Pulumi Insights]({{ .Site.BaseURL }}docs/insights/index.md): AI-powered cloud resource discovery and compliance
 - [CrossGuard]({{ .Site.BaseURL }}docs/iac/crossguard/index.md): Policy as code for infrastructure compliance and governance
 
+## Pricing
+
+- [View Pricing]({{ .Site.BaseURL }}pricing/index.md): Plans and pricing for Pulumi products
+
 ## Getting Started
 
 - [Install Pulumi]({{ .Site.BaseURL }}docs/iac/download-install/index.md): Installation instructions for all platforms
