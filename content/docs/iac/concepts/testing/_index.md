@@ -8,7 +8,7 @@ menu:
     iac:
         name: Testing
         parent: iac-concepts
-        weight: 15
+        weight: 150
         identifier: iac-concepts-testing
     usingpulumi:
         identifier: testing

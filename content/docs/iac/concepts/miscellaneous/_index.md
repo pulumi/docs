@@ -8,7 +8,7 @@ menu:
     iac:
         parent: iac-concepts
         identifier: miscellaneous-concepts
-        weight: 20
+        weight: 190
 ---
 
 Learn more about miscellaneous Pulumi concepts.
