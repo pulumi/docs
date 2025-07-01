@@ -8,7 +8,7 @@ menu:
     iac:
         name: Resources
         parent: iac-concepts
-        weight: 3
+        weight: 40
         identifier: iac-concepts-resources
     concepts:
         identifier: resources

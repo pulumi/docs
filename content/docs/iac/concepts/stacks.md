@@ -8,7 +8,7 @@ menu:
     iac:
         name: Stacks
         parent: iac-concepts
-        weight: 2
+        weight: 30
     concepts:
         weight: 2
 aliases:
