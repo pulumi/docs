@@ -8,7 +8,7 @@ menu:
     iac:
         name: Compare to...
         parent: iac-concepts
-        weight: 18
+        weight: 180
         identifier: iac-concepts-compare
     concepts:
         identifier: vs

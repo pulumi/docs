@@ -8,7 +8,7 @@ menu:
     iac:
         name: Logging
         parent: iac-concepts
-        weight: 17
+        weight: 170
     concepts:
         weight: 10
 aliases:

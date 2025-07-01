@@ -8,7 +8,7 @@ menu:
     iac:
         name: Secrets
         parent: iac-concepts
-        weight: 7
+        weight: 90
     concepts:
         weight: 7
 aliases:
