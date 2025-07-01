@@ -7,7 +7,7 @@
 {{ range .Params.sections }}
 ## {{ .heading }}
 
-{{ with .description_md }}
+{{ with or .description .description_md }}
 {{ . | markdownify }}
 {{ end }}
 
