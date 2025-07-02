@@ -7,7 +7,7 @@ title: "{{ replace .Name "-" " " | title }}"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: {{ .Date }}
+date: {{ now.Format "2006-01-02" }}
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
