@@ -223,25 +223,28 @@ If you wish to instead use [ESM](https://nodejs.org/api/esm.html) natively, you 
 }
 ```
 
-Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM, by setting the [`module`](https://www.typescriptlang.org/tsconfig/#module) field to `ESNext`, or one of `ES2015/ES6/ES2020/ES2022`.
+Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM, by setting the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`.
 
 ```json
 {
     "compilerOptions": {
         ...
-        "module": "ESNext",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
         ...
     }
 }
 ```
 
-Install a recent version of `ts-node` to use its [ESM loader](https://typestrong.org/ts-node/docs/imports#native-ecmascript-modules).
+Install a recent version of `typescript` and `ts-node`.
 
 ```bash
+npm isntall typescript@^5
 npm install ts-node@^10
 ```
 
-Lastly, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`.
+{{< notes >}}
+When using a version of `@pulumi/pulumi` older than 3.182.0, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`. More recent versions automatically configure this.
 
 ```yaml
 name: project-using-native-esm
@@ -250,6 +253,8 @@ runtime:
   options:
     nodeargs: "--loader ts-node/esm --no-warnings"
 ```
+
+{{< /notes >}}
 
 ## Using ESM only modules with CommonJS Pulumi templates
 
