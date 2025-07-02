@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: transformations
     parent: options-concepts
-    weight: 15
+    weight: 16
 aliases:
 - /docs/intro/concepts/resources/options/transformations/
 - /docs/concepts/options/transformations/

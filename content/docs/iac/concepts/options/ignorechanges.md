@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: ignoreChanges
     parent: options-concepts
-    weight: 7
+    weight: 8
 aliases:
 - /docs/intro/concepts/resources/options/ignorechanges/
 - /docs/concepts/options/ignorechanges/

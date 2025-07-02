@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: retainOnDelete
     parent: options-concepts
-    weight: 14
+    weight: 15
 aliases:
 - /docs/intro/concepts/resources/options/retainondelete/
 - /docs/concepts/options/retainondelete/
