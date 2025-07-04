@@ -154,19 +154,27 @@ The Pulumi MCP server provides several tools that AI assistants can use to inter
 
 ### Registry tools
 
-- **`pulumi_registry_listResources`** - Search and list resources from the Pulumi Registry
-- **`pulumi_registry_getResource`** - Get detailed information about a specific resource type
-- **`pulumi_registry_searchResources`** - Search for resources by name or description
+- **`pulumi-registry-get-type`** - Get the JSON schema for a specific JSON schema type reference. Requires provider and name parameters, with optional module and version parameters.
+- **`pulumi-registry-get-resource`** - Returns information about a Pulumi Registry resource. Requires provider and resource parameters, with optional module and version parameters.
+- **`pulumi-registry-list-resources`** - List all resource types for a given provider and module. Requires provider parameter, with optional module and version parameters.
 
 ### CLI tools
 
-- **`pulumi_cli_preview`** - Run `pulumi preview` to see planned changes
-- **`pulumi_cli_up`** - Deploy infrastructure with `pulumi up`
-- **`pulumi_cli_destroy`** - Remove infrastructure with `pulumi destroy`
-- **`pulumi_cli_refresh`** - Refresh the stack state
-- **`pulumi_cli_stack_output`** - Get stack output values
-- **`pulumi_cli_config_get`** - Retrieve configuration values
-- **`pulumi_cli_config_set`** - Set configuration values
+- **`pulumi-cli-preview`** - Run `pulumi preview` for a given project and stack. Requires workDir parameter, with optional stackName parameter (defaults to 'dev').
+- **`pulumi-cli-up`** - Run `pulumi up` for a given project and stack. Requires workDir parameter, with optional stackName parameter (defaults to 'dev').
+- **`pulumi-cli-refresh`** - Run `pulumi refresh` for a given project and stack. Requires workDir parameter, with optional stackName parameter (defaults to 'dev').
+- **`pulumi-cli-stack-output`** - Get the output value(s) of a given stack. Requires workDir parameter, with optional stackName and outputName parameters.
+
+### Deployment tools
+
+- **`deploy-to-aws`** - Deploy application code to AWS by generating Pulumi infrastructure. This tool automatically analyzes your application files and provisions the appropriate AWS resources (S3, Lambda, EC2, etc.) based on what it finds. No prior analysis needed - just invoke directly.
+
+## Available prompts
+
+The Pulumi MCP server also provides prompts that AI assistants can use for common workflows:
+
+- **`deploy-to-aws`** - Deploy application code to AWS by generating Pulumi infrastructure
+- **`convert-terraform-to-typescript`** - Converts a Terraform file to TypeScript. Takes an optional outputDir parameter for specifying where to output the TypeScript code.
 
 ## Getting started
 
@@ -187,8 +195,8 @@ Use natural language to describe what you want to build:
 > "I need an AWS S3 bucket with public read access for hosting a static website. Please look up the resource properties and create the code."
 
 The AI assistant will:
-- Use `pulumi_registry_searchResources` to find the S3 bucket resource
-- Use `pulumi_registry_getResource` to get detailed property information
+- Use `pulumi-registry-list-resources` to find available AWS resources
+- Use `pulumi-registry-get-resource` to get detailed S3 bucket property information
 - Generate the appropriate TypeScript code
 
 ### 3. Validate and deploy
@@ -198,8 +206,8 @@ Ask the assistant to validate and deploy your infrastructure:
 > "Please run a preview to check the changes, then deploy if everything looks good."
 
 The assistant will:
-- Use `pulumi_cli_preview` to show planned changes
-- Use `pulumi_cli_up` to deploy the infrastructure
+- Use `pulumi-cli-preview` to show planned changes
+- Use `pulumi-cli-up` to deploy the infrastructure
 - Provide feedback on the deployment status
 
 ### 4. Manage and iterate
@@ -222,9 +230,9 @@ Here's an example interaction for creating an Azure Kubernetes Service cluster:
 1. Searches the Pulumi Registry for Azure container service resources
 2. Retrieves detailed information about the `ManagedCluster` resource
 3. Generates TypeScript code with appropriate configuration
-4. Runs `pulumi preview` to validate the changes
-5. Deploys with `pulumi up`
-6. Retrieves the kubeconfig using `pulumi_cli_stack_output`
+4. Runs `pulumi-cli-preview` to validate the changes
+5. Deploys with `pulumi-cli-up`
+6. Retrieves the kubeconfig using `pulumi-cli-stack-output`
 
 ### Adding monitoring to existing infrastructure
 
