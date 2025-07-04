@@ -154,20 +154,20 @@ The Pulumi MCP server provides several tools that AI assistants can use to inter
 
 ### Registry tools
 
-- **`pulumi-registry-get-type`** - Get the JSON schema for a specific JSON schema type reference. Requires provider and name parameters, with optional module and version parameters.
-- **`pulumi-registry-get-resource`** - Returns information about a Pulumi Registry resource. Requires provider and resource parameters, with optional module and version parameters.
-- **`pulumi-registry-list-resources`** - List all resource types for a given provider and module. Requires provider parameter, with optional module and version parameters.
+- **`pulumi-registry-get-type`** - Get the JSON schema for a specific JSON schema type reference.
+- **`pulumi-registry-get-resource`** - Returns information about a Pulumi Registry resource.
+- **`pulumi-registry-list-resources`** - List all resource types for a given provider and module.
 
 ### CLI tools
 
-- **`pulumi-cli-preview`** - Run `pulumi preview` for a given project and stack. Requires workDir parameter, with optional stackName parameter (defaults to 'dev').
-- **`pulumi-cli-up`** - Run `pulumi up` for a given project and stack. Requires workDir parameter, with optional stackName parameter (defaults to 'dev').
-- **`pulumi-cli-refresh`** - Run `pulumi refresh` for a given project and stack. Requires workDir parameter, with optional stackName parameter (defaults to 'dev').
-- **`pulumi-cli-stack-output`** - Get the output value(s) of a given stack. Requires workDir parameter, with optional stackName and outputName parameters.
+- **`pulumi-cli-preview`** - Run `pulumi preview` for a given project and stack.
+- **`pulumi-cli-up`** - Run `pulumi up` for a given project and stack.
+- **`pulumi-cli-refresh`** - Run `pulumi refresh` for a given project and stack.
+- **`pulumi-cli-stack-output`** - Get the output value(s) of a given stack.
 
 ### Deployment tools
 
-- **`deploy-to-aws`** - Deploy application code to AWS by generating Pulumi infrastructure. This tool automatically analyzes your application files and provisions the appropriate AWS resources (S3, Lambda, EC2, etc.) based on what it finds. No prior analysis needed - just invoke directly.
+- **`deploy-to-aws`** - Automatically analyzes your application files and provisions the appropriate AWS resources (S3, Lambda, EC2, etc.) based on what it finds.
 
 ## Available prompts
 
