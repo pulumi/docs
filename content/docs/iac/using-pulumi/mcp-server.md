@@ -12,7 +12,7 @@ menu:
         weight: 6
 ---
 
-The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to seamlessly interact with Pulumi's CLI and registry, bringing real-time infrastructure knowledge and management directly into your development environment. This integration dramatically reduces context switching and accelerates Infrastructure as Code (IaC) development workflows.
+The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to help you codify cloud architectures and get diffs for infrastructure changes right in your development environment, much in the same way you already do for code changes thanks to Git. This integration ensures that as you build cloud applications, your infrastructure is repeatable and follows best practices and policies, while dramatically reducing context switching and accelerating Infrastructure as Code (IaC) development workflows.
 
 ## What is the Pulumi MCP server?
 
@@ -76,11 +76,77 @@ After creating the configuration file:
 
 ### Claude Code setup
 
-For Claude Code, the MCP server configuration varies depending on your setup. Refer to the [Claude Code documentation](https://claude.ai/code) for specific instructions on configuring MCP servers.
+For Claude Code, add the MCP server configuration to your Claude configuration file:
+
+**On macOS/Linux:**
+Add to `~/.config/claude/mcp_servers.json`:
+
+```json
+{
+  "pulumi": {
+    "command": "npx",
+    "args": ["@pulumi/mcp-server"],
+    "env": {}
+  }
+}
+```
+
+**On Windows:**
+Add to `%APPDATA%\Claude\mcp_servers.json`:
+
+```json
+{
+  "pulumi": {
+    "command": "npx",
+    "args": ["@pulumi/mcp-server"],
+    "env": {}
+  }
+}
+```
+
+After adding the configuration:
+1. Restart Claude Code
+2. Verify the connection in the MCP section of Claude's settings
+3. The Pulumi MCP server should appear as an available tool
 
 ### GitHub Copilot setup
 
-GitHub Copilot support for MCP is evolving. Check the latest [GitHub Copilot documentation](https://github.com/features/copilot) for current MCP integration capabilities.
+GitHub Copilot's MCP support is available through compatible editors. Configure in your editor's MCP settings:
+
+**VS Code with Copilot:**
+Add to your VS Code settings.json:
+
+```json
+{
+  "mcp.servers": {
+    "pulumi": {
+      "command": "npx",
+      "args": ["@pulumi/mcp-server"],
+      "type": "stdio"
+    }
+  }
+}
+```
+
+**Other editors:**
+Refer to your editor's specific MCP integration documentation for configuration details.
+
+### Windsurf setup
+
+In Windsurf, configure the MCP server through the IDE settings:
+
+1. Open Windsurf settings
+2. Navigate to MCP Servers section
+3. Add a new server with the following configuration:
+
+```json
+{
+  "name": "pulumi",
+  "command": "npx",
+  "args": ["@pulumi/mcp-server"],
+  "type": "stdio"
+}
+```
 
 ## Available tools
 
