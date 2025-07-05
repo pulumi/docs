@@ -164,6 +164,7 @@ function searchForMarkdown(paths) {
                 error: e.message,
             };
             result.files.push(fullPath);
+
         }
     }
     return result;
