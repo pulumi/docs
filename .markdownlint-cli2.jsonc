@@ -1,0 +1,61 @@
+{
+  // If it's gitignored, there's no reason to lint it, e.g. node_modules:
+  "gitignore": true,
+  // We want to include the content that we generate ourselves (not e.g. Hugo
+  // themes):
+  "globs": [
+    "content/**/*.md",
+    "./*.md"
+  ],
+  "ignores": [
+    // These are mostly (entirely?) redirects, and have nothing to lint. They
+    // seem to have held auto-generated docs at some point because those SDK
+    // docs were moved either to the registry or the language-native package
+    // providers (e.g. npm, NuGet, etc.):
+    "content/docs/reference/pkg/**",
+    // Registry docs are fundamentally owned by the pulumi/registry repo. They
+    // are hosted at pulumi.com/registry, and are joined to this repo's content
+    // via a CI/CD process. However, because pulumi/registry is the source of
+    // these docs, their content should be linted in pulumi/registry:
+    "content/registry/**"
+  ],
+  "config": {
+    // Allow inline HTML.
+    "MD033": false,
+    // Do not enforce line length: We prefer paragraphs to be on a single line
+    // to make it simple for the author and to minimize unnecessary churn in
+    // pull requests. Turn on line wrapping in your editor if readability is an
+    // issue:
+    "MD013": false,
+    // Don't force language specification on code blocks.
+    "MD040": false,
+    // Allow hard tabs because Go formatting requires it.
+    "MD010": false,
+    // Allow punctuation in headers for headings like "What is X"?
+    "MD026": false,
+    // Allow dollars signs in bash code blocks because our custom JavaScript
+    // automatically omits the prompt when copy/pasting:
+    "MD014": false,
+    "MD046": {
+      "style": "fenced"
+    },
+    // Configure indents on unordered lists to be 4 spaces instead of 2.
+    // TODO: Confirm that this actually should be 4 - it's not clear that 4
+    // spaces are necessary to render correctly.
+    "MD007": {
+      "indent": 4
+    },
+    // Allow duplicate headings.
+    // TODO: Remove this and instead require pages that have duplicate headings
+    // (like REST API docs) to specify an exception:
+    "MD024": false,
+    // Allow blank lines in blockquotes.
+    // TODO: Remove this once we fix any pre-existing violations.
+    "MD028": false,
+    // Allow bare URLs.
+    "MD034": false,
+    // Allow bold/italicized paragraphs
+    // TODO: Remove this once we fix any pre-existing violations.
+    "MD036": false
+  }
+}
