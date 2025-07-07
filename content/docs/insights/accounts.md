@@ -400,7 +400,7 @@ The GCP scanner for Pulumi Cloud requires access to your Google Cloud project. C
           oidc:
             workloadPoolId: <workload pool id>
             providerId: <provider id>
-            serviceAccount: <serivce account>
+            serviceAccount: <service account>
     environmentVariables:
       GOOGLE_PROJECT: ${gcp.login.project}
       GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
