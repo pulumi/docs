@@ -170,4 +170,4 @@ To change the location where stack configuration files are stored for a given pr
 
 For stacks that are actively developed by multiple members of a team, the recommended practice is to check them into source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings. When using ephemeral stacks, the stack settings are typically not checked into source control.
 
-For more information about configuration and how to manage these files on the command line and programmatically, refer to the [Configuration](/docs/concepts/config/) and [Secrets](/docs/concepts/secrets/) documentation.
+For detailed information about the structure and format of stack settings files, see the [Stack settings file reference](/docs/iac/concepts/projects/stack-settings-file/). For more information about configuration and how to manage these files on the command line and programmatically, refer to the [Configuration](/docs/concepts/config/) and [Secrets](/docs/concepts/secrets/) documentation.
