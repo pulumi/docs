@@ -10,6 +10,7 @@ menu:
 
 expanded_menu_ids:
     - idp-get-started
+    - idp-best-practices
 
 meta_desc: Pulumi IDP enables you to build secure, scalable, and flexible developer workflows.
 meta_image: /images/docs/meta-images/docs-meta.png
