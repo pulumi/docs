@@ -229,7 +229,7 @@ toolchain go1.24.1
 
 require (
 	github.com/pulumi/pulumi-aws/sdk/v6 v6.74.0
-	github.com/pulumi/pulumi-go-provider v0.25.0
+	github.com/pulumi/pulumi-go-provider v1.0.0
 	github.com/pulumi/pulumi/sdk/v3 v3.159.0
 )
 ```
@@ -406,25 +406,42 @@ First, create the `main.go` file, where we will define an entry point for the co
 package main
 
 import (
+	"context"
+	"fmt"
+	"os"
+
+	p "github.com/pulumi/pulumi-go-provider"
 	"github.com/pulumi/pulumi-go-provider/infer"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
 )
 
 func main() {
-	err := infer.NewProviderBuilder().
-		WithName("static-page-component").
-		WithNamespace("example.com").
-		WithComponents(
-			infer.Component(NewStaticPage),
-		).
-		BuildAndRun()
+	provider, err := provider()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %s", err.Error())
+		os.Exit(1)
+	}
+	err = provider.Run(context.Background(), "static-page-component", "0.1.0")
 
 	if err != nil {
 		panic(err)
 	}
 }
+
+func provider() (p.Provider, error) {
+	return infer.NewProviderBuilder().
+		WithNamespace("example.com").
+		WithComponents(
+			infer.ComponentF(NewStaticPage),
+		).
+		WithModuleMap(map[tokens.ModuleName]tokens.ModuleName{
+			"static-page-component": "index",
+		}).
+		Build()
+}
 ```
 
-Here, the `infer.NewProviderBuilder()..BuildAndRun()` call builds and runs a Pulumi provider implmentation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
+Here, the `infer.NewProviderBuilder()..Build()` call builds a Pulumi provider implmentation which acts as a shim for the component. Then, in the `main` function we call `provider.Run(...)` to execute the provider. The name we pass to this function and to the module map (`static-page-component`) will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
 {{% /choosable %}}
 
