@@ -71,10 +71,23 @@ Instead of relying solely on tests:
 
 ### Prevention Strategy: Use Enums to Control Inputs
 
-You can model allowed values directly in your component’s schema using enum types:
+You can model allowed values directly in your component's implementation using enum types (Python only):
 
-```ts
-instanceSize: pulumi.Input<"t3.micro" | "t3.small" | "t3.medium">
+***Example:** A custom enum type in Python that controls the range of inputs to your component*
+
+```python
+from enum import Enum
+
+# Custom enum for allowed instance sizes
+class InstanceSize(str, Enum):
+    T3_MICRO = "t3.micro"
+    T3_SMALL = "t3.small"
+
+# In your component args:
+class MyComponentArgs(TypedDict):
+    instanceSize: pulumi.Input[InstanceSize]
+    """The instance size to create, limited to only the options from our custom enum."""
+
 ```
 
 This makes invalid configurations impossible to compile or deploy, removing the need for some kinds of tests.
@@ -82,6 +95,8 @@ This makes invalid configurations impossible to compile or deploy, removing the 
 ### Prevention Strategy: Use Policies as Guardrails
 
 [Pulumi CrossGuard](/docs/iac/crossguard/) policies can enforce input constraints dynamically at deployment time. For example:
+
+***Example:** A custom policy in TypeScript that enforces the allowed instance sizes*
 
 ```ts
 policy.resourceOfType("aws:ec2/instance:Instance", (args, reportViolation) => {
