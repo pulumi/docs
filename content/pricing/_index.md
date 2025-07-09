@@ -51,6 +51,7 @@ tiers:
                 - Automatic CI/CD
                 - Unlimited ESC configuration
                 - Full deployment history
+                - Secrets versioning
                 - Community support
             - title: Enterprise
               subtitle: Advanced cloud engineering capabilities for large teams in production.
@@ -73,7 +74,6 @@ tiers:
                   - Role-based access control (RBAC)
                   - Organization access tokens
                   - SAML/SSO
-                  - Secrets versioning
                   - Audit logs
                   - 12x5 Enterprise Support available
                   - Priority feature requests
@@ -259,14 +259,14 @@ comparison_table:
                   link: /docs/esc/environments/#versioning-environments
                   items:
                     - content: _blank
-                    - content: Up to 5
+                    - content: _check
                     - content: _check
                     - content: _check
                 - title: Version tags and import by tags
                   link:  /docs/esc/environments/#tagging-versions
                   items:
                     - content: _blank
-                    - content: _blank
+                    - content: _check
                     - content: _check
                     - content: _check
                 - title: Dynamic credentials
