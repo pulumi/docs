@@ -90,7 +90,7 @@ $ cd static-page-component
 
 The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, rather than a Pulumi program. In it, we define the language runtime needed to load the plugin.
 
-{{< chooser language "typescript,python,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -98,9 +98,6 @@ The `PulumiPlugin.yaml` file tells Pulumi that this directory is a component, ra
 Authoring sharable components in JavaScript is not currently supported. Considering writing in TypeScript instead!
 {{% /notes %}}
 
-{{% /choosable %}}
-
-{{% choosable language go %}}
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
@@ -207,6 +204,38 @@ pulumi_aws>=6.0.0
 ```
 
 The `pulumi` SDK contains everything we need for making a component. It should be version `3.159.0` or newer. The `pulumi_aws` package is the AWS provider that we are building on top of.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+***Example:** `PulumiPlugin.yaml` for Go*
+
+```yaml
+runtime: go
+```
+
+#### Manage dependencies
+
+Next, we need to define our dependencies in `go.mod`.
+
+***Example:** `go.mod` for a Pulumi Component*
+
+```go
+module github.com/static-page-component
+
+go 1.24
+
+toolchain go1.24.1
+
+require (
+	github.com/pulumi/pulumi-aws/sdk/v6 v6.74.0
+	github.com/pulumi/pulumi-go-provider v1.0.0
+	github.com/pulumi/pulumi/sdk/v3 v3.159.0
+)
+```
+
+The `pulumi` SDK contains everything we need for making a component. It should be version `3.159.0` or newer. The `pulumi-aws` package is the AWS provider that we are building on top of.
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -329,7 +358,7 @@ The `com.pulumi.pulumi` SDK contains everything we need for making a component. 
 
 ### Implement the entrypoint
 
-{{< chooser language "typescript,python,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -364,6 +393,55 @@ if __name__ == "__main__":
 ```
 
 Here, the `component_provider_host` call invokes a Pulumi provider implmentation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+First, create the `main.go` file, where we will define an entry point for the component.
+
+***Example:** `main.go` component entry point*
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+
+	p "github.com/pulumi/pulumi-go-provider"
+	"github.com/pulumi/pulumi-go-provider/infer"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
+)
+
+func main() {
+	provider, err := provider()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %s", err.Error())
+		os.Exit(1)
+	}
+	err = provider.Run(context.Background(), "static-page-component", "0.1.0")
+
+	if err != nil {
+		panic(err)
+	}
+}
+
+func provider() (p.Provider, error) {
+	return infer.NewProviderBuilder().
+		WithNamespace("example.com").
+		WithComponents(
+			infer.ComponentF(NewStaticPage),
+		).
+		WithModuleMap(map[tokens.ModuleName]tokens.ModuleName{
+			"static-page-component": "index",
+		}).
+		Build()
+}
+```
+
+Here, the `infer.NewProviderBuilder()..Build()` call builds a Pulumi provider implmentation which acts as a shim for the component. Then, in the `main` function we call `provider.Run(...)` to execute the provider. The name we pass to this function and to the module map (`static-page-component`) will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
 {{% /choosable %}}
 
@@ -429,7 +507,7 @@ Components typically require two parts: a subclass of `pulumi.ComponentResource`
 
 #### Add the required imports
 
-{{< chooser language "typescript,python,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 {{% /choosable %}}
@@ -465,6 +543,23 @@ from pulumi_aws import s3
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
+First create a file called `staticpage.go`, and add the imports we will need:
+
+***Example:** `staticpage.go` required dependencies*
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -536,7 +631,7 @@ YAML components do not need to explicitly manage dependencies or import external
 
 Next, we will implement the arguments class. In our example here, we will pass the contents of the webpage we want to host to the component.
 
-{{< chooser language "typescript,python,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 {{% /choosable %}}
@@ -573,6 +668,18 @@ Python class properties are typically written in lowercase with words separated 
 {{% /choosable %}}
 
 {{% choosable language go %}}
+***Example:** `staticpage.go` the Component arguments implmentation*
+
+```python
+type StaticPageArgs struct {
+	IndexContent pulumi.StringInput `pulumi:"indexContent"`
+}
+```
+
+Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types.
+
+Go struct fields are typically written in title case, with the first letter capitalized and capital letters used to separate words, however properties in the [Pulumi package schema](https://www.pulumi.com/docs/iac/using-pulumi/extending-pulumi/schema/) are usually written in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case), with the first letter in lowercase and capital letters used to separate words. To follow these conventions, the inferred schema for a component will have translated property names. In our example `IndexContent` will become `indexContent` in the schema. When using a component, the property names will follow the conventions of that language, for example if we use our component from TypeScript, we would refer to `indexContent`, but if we use it from Go, we would use `IndexContent`.
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -642,7 +749,7 @@ Inputs can be any basic type (e.g. `boolean`, `integer`, `string`) or an `array`
 
 ### Define the Component resource
 
-{{< chooser language "typescript,python,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -806,6 +913,101 @@ def _allow_getobject_policy(bucket_name: str) -> str:
 {{% /choosable %}}
 
 {{% choosable language go %}}
+Now we can implement the component itself. Component structs should include `pulumi.ResourceState` and define the consumable outputs, which follow the same general rules as inputs. All the work for building our component happens in the `NewStaticPage` constructor.
+
+***Example:** `staticpage.go` the Component implmentation*
+
+```go
+type StaticPage struct {
+	pulumi.ResourceState
+	Endpoint pulumi.StringOutput `pulumi:"endpoint"`
+}
+
+func NewStaticPage(ctx *pulumi.Context, name string, args *StaticPageArgs, opts ...pulumi.ResourceOption) (*StaticPage, error) {
+	comp := &StaticPage{}
+	err := ctx.RegisterComponentResource("static-page-component:index:StaticPage", name, comp, opts...)
+	if err != nil {
+		return nil, err
+	}
+
+	// Create a bucket
+	bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketV2Args{},
+		pulumi.Parent(comp))
+	if err != nil {
+		return nil, err
+	}
+
+	// Configure bucket website
+	bucketWebsite, err := s3.NewBucketWebsiteConfigurationV2(ctx, fmt.Sprintf("%s-website", name),
+		&s3.BucketWebsiteConfigurationV2Args{
+			Bucket: bucket.Bucket,
+			IndexDocument: s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+				Suffix: pulumi.String("index.html"),
+			},
+		},
+		pulumi.Parent(bucket))
+	if err != nil {
+		return nil, err
+	}
+
+	// Create bucket object for index document
+	_, err = s3.NewBucketObject(ctx, fmt.Sprintf("%s-index-object", name), &s3.BucketObjectArgs{
+		Bucket:      bucket.Bucket,
+		Key:         pulumi.String("index.html"),
+		Content:     args.IndexContent,
+		ContentType: pulumi.String("text/html"),
+	}, pulumi.Parent(bucket))
+	if err != nil {
+		return nil, err
+	}
+
+	// Create public access block
+	publicAccessBlock, err := s3.NewBucketPublicAccessBlock(ctx, fmt.Sprintf("%s-public-access-block", name),
+		&s3.BucketPublicAccessBlockArgs{
+			Bucket:          bucket.ID(),
+			BlockPublicAcls: pulumi.Bool(false),
+		}, pulumi.Parent(bucket))
+	if err != nil {
+		return nil, err
+	}
+
+	// Create bucket policy
+	allowGetObjectPolicy := func(bucketName string) (string, error) {
+		policy := map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				{
+					"Effect":    "Allow",
+					"Principal": "*",
+					"Action":    []string{"s3:GetObject"},
+					"Resource":  []string{fmt.Sprintf("arn:aws:s3:::%s/*", bucketName)},
+				},
+			},
+		}
+		policyJSON, err := json.Marshal(policy)
+		if err != nil {
+			return "", err
+		}
+		return string(policyJSON), nil
+	}
+
+	_, err = s3.NewBucketPolicy(ctx, fmt.Sprintf("%s-bucket-policy", name), &s3.BucketPolicyArgs{
+		Bucket: bucket.ID(),
+		Policy: bucket.Bucket.ApplyT(func(bucketName string) (string, error) {
+			return allowGetObjectPolicy(bucketName)
+		}).(pulumi.StringOutput),
+	}, pulumi.Parent(bucket), pulumi.DependsOn([]pulumi.Resource{publicAccessBlock}))
+	if err != nil {
+		return nil, err
+	}
+
+	// Set outputs
+	comp.Endpoint = bucketWebsite.WebsiteEndpoint
+
+	return comp, nil
+}
+```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1075,7 +1277,7 @@ components:
 
 Let's dissect this component implementation piece-by-piece:
 
-{{< chooser language "typescript,python,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 {{% /choosable %}}
@@ -1398,6 +1600,203 @@ This function is used to create a S3 policy document, allowing public access to 
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
+#### Defining the struct
+
+```go
+type StaticPage struct {
+	pulumi.ResourceState
+    // ...
+}
+```
+
+The struct must embed the `pulumi.ResourceState` struct. This gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
+
+#### Outputs as struct fields
+
+```go {hl_lines=[3]}
+type StaticPage struct {
+	pulumi.ResourceState
+	Endpoint pulumi.StringOutput `pulumi:"endpoint"`
+}
+```
+
+We use a struct field to store the output value. Note that it's using `pulumi.StringOutput` instead of just a regular string. This allows the end-user to access this in an asynchronous manner when writing their Pulumi program. The `pulumi:"endpoint"` tag defines the name of the property and allows for reflection to generate schema.
+
+#### The Component constructor
+
+```go
+// ...
+func NewStaticPage(ctx *pulumi.Context, name string, args *StaticPageArgs, opts ...pulumi.ResourceOption) (*StaticPage, error) {
+	comp := &StaticPage{}
+	err := ctx.RegisterComponentResource("static-page-component:index:StaticPage", name, comp, opts...)
+	if err != nil {
+		return nil, err
+	}
+// ...
+```
+
+The constructor has a few standard arguments:
+
+- `ctx`: The Pulumi context, which allows for interaction w/ the Pulumi engine
+- `name`: The name given to an instance of this component. When writing a Pulumi program, resources are named by the end-user. Later on in the implementation we will use this base component name to uniquely name the resources it contains.
+- `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
+- `opts`: This is an *optional* set of common resource configuration values. The [`ResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
+
+The next step is to register our new component instance with Pulumi via the `ctx` instance. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implmentation detail. Otherwise, we pass the `name` value, our component instance, as well as the `opts` values.
+
+#### Creating and managing sub-resources, dependencies, and execution order
+
+Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+
+```go
+// ...
+	// Create a bucket
+	bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketV2Args{},
+		pulumi.Parent(comp))
+	if err != nil {
+		return nil, err
+	}
+
+	// Configure bucket website
+	bucketWebsite, err := s3.NewBucketWebsiteConfigurationV2(ctx, fmt.Sprintf("%s-website", name),
+		&s3.BucketWebsiteConfigurationV2Args{
+			Bucket: bucket.Bucket,
+			IndexDocument: s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+				Suffix: pulumi.String("index.html"),
+			},
+		},
+		pulumi.Parent(bucket))
+	if err != nil {
+		return nil, err
+	}
+
+	// Create bucket object for index document
+	_, err = s3.NewBucketObject(ctx, fmt.Sprintf("%s-index-object", name), &s3.BucketObjectArgs{
+		Bucket:      bucket.Bucket,
+		Key:         pulumi.String("index.html"),
+		Content:     args.IndexContent,
+		ContentType: pulumi.String("text/html"),
+	}, pulumi.Parent(bucket))
+	if err != nil {
+		return nil, err
+	}
+
+	// Create public access block
+	publicAccessBlock, err := s3.NewBucketPublicAccessBlock(ctx, fmt.Sprintf("%s-public-access-block", name),
+		&s3.BucketPublicAccessBlockArgs{
+			Bucket:          bucket.ID(),
+			BlockPublicAcls: pulumi.Bool(false),
+		}, pulumi.Parent(bucket))
+	if err != nil {
+		return nil, err
+	}
+
+	// Create bucket policy
+	allowGetObjectPolicy := func(bucketName string) (string, error) {
+		policy := map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				{
+					"Effect":    "Allow",
+					"Principal": "*",
+					"Action":    []string{"s3:GetObject"},
+					"Resource":  []string{fmt.Sprintf("arn:aws:s3:::%s/*", bucketName)},
+				},
+			},
+		}
+		policyJSON, err := json.Marshal(policy)
+		if err != nil {
+			return "", err
+		}
+		return string(policyJSON), nil
+	}
+
+	_, err = s3.NewBucketPolicy(ctx, fmt.Sprintf("%s-bucket-policy", name), &s3.BucketPolicyArgs{
+		Bucket: bucket.ID(),
+		Policy: bucket.Bucket.ApplyT(func(bucketName string) (string, error) {
+			return allowGetObjectPolicy(bucketName)
+		}).(pulumi.StringOutput),
+	}, pulumi.Parent(bucket), pulumi.DependsOn([]pulumi.Resource{publicAccessBlock}))
+	if err != nil {
+		return nil, err
+	}
+// ...
+```
+
+##### The Bucket sub-resource
+
+The `BucketV2` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
+
+Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources.
+
+Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We use `pulumi.Parent(comp)` to pass the component instance as the `parent` of the `BucketV2` resource. This is an essential step to tie the sub-resources into the dependency graph.
+
+##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
+
+The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
+
+Notice that this time we pass the `BucketV2` instance as the parent of these sub-resources, via `pulumi.Parent(bucket)`, as opposed to `comp` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `BucketV2` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
+
+Managing the dependency graph of your sub-resources is very important in a component!
+
+Another point of interest here is the use of `args`. In the `BucketObject` constructor, we pass the contents of the `index.html` page we want to host via the `args.IndexContent` field.
+
+##### The BucketPublicAccessBlock and BucketPolicy sub-resources
+
+By default the `BucketObject` we created is not accessible to the public, so we need to unlock that access with the `BucketPublicAccessBlock` and `BucketPolicy` resources.
+
+The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use `bucket.Bucket.[ApplyT](/docs/iac/concepts/inputs-outputs/apply/)(...)` to generate an S3 policy document using the `allowGetObjectPolicy` helper function. This respects the asynchronous workflow, materializing that value only after the bucket has been created. If we attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 Policy document needs to use the bucket's name within S3, and we won't know what that value is until the Bucket creation operation has completed. Using `ApplyT` here will ensure that execution of the `allowGetObjectPolicy` function doesn't happen until the Bucket has been created successfully.
+
+Just like in a Pulumi program, it's important to understand and respect the asynchronous flow of resource creation within our code. The `ApplyT` function encodes the dependency and required order-of-operations.
+
+The `BucketPolicy` resource also shows another technique: resource dependencies. We use `pulumi.DependsOn([]pulumi.Resource{publicAccessBlock})` to set the `[dependsOn](/docs/iac/concepts/options/dependson/)` [resource option](/docs/iac/concepts/options/) to indicate that the `BucketPolicy` depends on the `BucketPublicAccessBlock`. This relationship is important to encode so that resource creation, modification, and deletion happens as expected.
+
+#### Handling outputs
+
+The last part of the constructor handles output values. First we set the `Endpoint` struct field to the end-point URL from the `BucketWebsiteConfigurationV2` resource. Note that this is a `pulumi.StringOutput`, not a regular Go string. Outputs must use `pulumi.Output` types.
+
+Finally, return the component instance.
+
+```go
+// ...
+	comp.Endpoint = bucketWebsite.WebsiteEndpoint
+
+	return comp, nil
+// ...
+```
+
+#### Helper functions
+
+In addition to the resource constructor logic, we also had this inline helper function `allowGetObjectPolicy`:
+
+***Example:** `staticpage.go` a helper function*
+
+```go
+// ...
+	allowGetObjectPolicy := func(bucketName string) (string, error) {
+		policy := map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				{
+					"Effect":    "Allow",
+					"Principal": "*",
+					"Action":    []string{"s3:GetObject"},
+					"Resource":  []string{fmt.Sprintf("arn:aws:s3:::%s/*", bucketName)},
+				},
+			},
+		}
+		policyJSON, err := json.Marshal(policy)
+		if err != nil {
+			return "", err
+		}
+		return string(policyJSON), nil
+	}
+// ...
+```
+
+This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `ApplyT(...)`. That means that the `bucketName`, which is normally an asychronous `pulumi.StringOutput` value, can be materialized as a normal Go string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `json.Marshal(...)` function takes the map as input and returns it as a JSON formatted string.
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
