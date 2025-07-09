@@ -11,11 +11,11 @@ menu:
         weight: 1
 ---
 
-When authoring Pulumi components, it's critical to ensure changes won't break Pulumi programs that use them, or violate organizational policies. This page outlines different testing strategies and tools you can use to confidently update and maintain components.
+When authoring Pulumi components, it's critical to ensure that changes won't unintentionally break Pulumi programs that consume your components, nor violate organizational policies. This page outlines different testing strategies and tools you can use to confidently update and maintain components.
 
 ## Why Testing Matters: Blast Radius and Change Safety
 
-When a component is updated, it's important to understand what other projects or teams might be affected. For example, if a platform engineering team maintains a shared component that encodes sensitive company security details, which then need to be updated in response to a security incident or policy change, before rolling that out, they will need to verify that the update won’t break downstream applications.
+When a component is updated, it's important to understand what other projects or teams might be affected. For example, if a platform engineering team updates a shared component that encapsulates sensitive company security details in response to a security incident or a new regulatory requirement, the platform team will need to verify that the update won’t unintentionally break downstream Pulumi programs.
 
 ## Testing Strategies
 
@@ -25,9 +25,9 @@ In this scenario, a platform team owns a reusable IAM component used by many ser
 
 To assess the impact of this change, two primary methods can be used:
 
-### Testing Strategy: Use `pulumi preview`
+### Testing Strategy: Link to a local copy and use `pulumi preview`
 
-`pulumi preview` shows what changes will occur if a project consumes the updated version of the component. This helps identify if the changes are additive, destructive, or trigger replacements.
+[The `pulumi preview` command](/docs/iac/cli/commands/pulumi_preview/) shows what changes will occur if a project consumes the updated version of the component. This helps identify if the changes are additive, destructive, or trigger replacements.
 
 This method works best when:
 
@@ -44,7 +44,7 @@ Set up **integration tests** using tools like:
 - Local test benches ([see below](#yaml-test-benches))
 - CI/CD workflows (like [GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/)) that validate downstream usage
 
-These tests can assert that the updated component produces expected outputs and maintains compatibility. This works well when you don't have access to the end-user programs. However, there are limits to what tests can detect. It's often very difficult to write enough tests to have 100% test coverage of all inputs. Often there are environment-specific problems related to configuration, secrets, or other factors that are not able to be recreated in the testing environment. So, while these approaches give you *some* security, they are not as comprehensive as simply running `pulumi preview` and seeing what breaks.
+These tests can assert that the updated component produces expected outputs and maintains compatibility. This approach works well when you don't have access to the end-user programs. However, there are limits to what these types of tests can detect: It's often difficult to write enough tests to have 100% test coverage for all possible inputs. Often there are environment-specific problems related to configuration, secrets, or other factors that are not able to be recreated in the testing environment. So, while these approaches give you *some* security, they are not as comprehensive as simply running `pulumi preview` in a consuming program and seeing what breaks.
 
 #### Integration Testing via the Pulumi Go Provider SDK
 
@@ -81,7 +81,7 @@ This makes invalid configurations impossible to compile or deploy, removing the 
 
 ### Prevention Strategy: Use Policies as Guardrails
 
-Pulumi CrossGuard policies can enforce input constraints dynamically at deployment time. For example:
+[Pulumi CrossGuard](/docs/iac/crossguard/) policies can enforce input constraints dynamically at deployment time. For example:
 
 ```ts
 policy.resourceOfType("aws:ec2/instance:Instance", (args, reportViolation) => {
