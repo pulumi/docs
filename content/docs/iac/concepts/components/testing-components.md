@@ -34,7 +34,7 @@ This method works best when:
 - You have access to consumer projects
 - You can link the component locally
 
-Running `pulumi preview` works great for existing projects to detect any unexpected behavior after an update. The best part is that it tests your new code in exactly the environments where it will be used, meaning they are very accurate and will show any issues, even ones you may not have considered ahead of time. Unfortunately, it may not scale well if you have a lot of projects or don't have direct access to the Pulumi project's code.
+Running `pulumi preview` works great for existing projects to detect any unexepected behavior after an update. The upside of this approach is that it tests your new code in exactly the environments where it will be used, giving real-world feedback that will reveal many unintended consequences of the component update. The downside of this approach is that it may not scale well if your component has many downstream consumers or your team does not have direct access to the Pulumi programs that consume your component.
 
 ### Testing Strategy: Integration and Unit Testing Tools
 
