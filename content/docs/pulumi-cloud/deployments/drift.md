@@ -12,11 +12,10 @@ menu:
     identifier: pulumi-cloud-deployments-drift
 ---
 
-Drift detection is the process of identifying changes in the actual state of your cloud environment that deviate from the expected state stored in Pulumi Cloud. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider’s console, unintended consequences of scripts, or unauthorized changes.
 
-To use drift detection and remediation with Pulumi Deployments, you must first configure the deployment settings for your stack.
+Drift detection is the process of identifying changes in the actual state of your cloud environment that deviate from the expected state stored in Pulumi Cloud. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider's console, unintended consequences of scripts, or unauthorized changes.
 
-You can also run a remediate drift operation, which will run a `pulumi up --refresh` to treat the Pulumi program as the source of truth and override what is in the cloud.
+To use drift detection and remediation with Pulumi Deployments, you must first configure the deployment settings for your stack. You can run a remediate drift operation, which executes `pulumi up --refresh` to treat the Pulumi program as the source of truth and restore cloud resources to match your Infrastructure as Code. Remediation automatically corrects infrastructure drift by: (1) refreshing the state to get current cloud resources, (2) comparing actual state with desired state in your program, and (3) generating and applying changes to align infrastructure with your code. When drift is detected, you can choose to remediate (restore to IaC state), refresh (accept cloud changes), or manually review before taking action.
 
 ## Running Drift Detection from the CLI
 
@@ -70,21 +69,21 @@ You can integrate Drift notifications to Slack, MS Teams, and more using Pulumi 
 
 ### Summary of Drift Detection and Remediation events
 
-* Drift detected - A drift run detected drift.
-* Drift detection succeeded - A drift run succeeded, regardless of whether it detected drift or not.
-* Drift detection failed - A drift run failed to finish.
-* Drift remediation succeeded - A drift remediation run succeeded.
-* Drift remediation failed - A drift remediation run failed to finish.
+- Drift detected - A drift run detected drift.
+- Drift detection succeeded - A drift run succeeded, regardless of whether it detected drift or not.
+- Drift detection failed - A drift run failed to finish.
+- Drift remediation succeeded - A drift remediation run succeeded.
+- Drift remediation failed - A drift remediation run failed to finish.
 
 ### Setting it up via the REST API
 
 For those who prefer to automate and script their infrastructure tasks, Drift Detection and Remediation can be configured programmatically using simple HTTP requests. Here are the new endpoints we have added:
 
-* Create a drift schedule
-* Get a drift schedule
-* Update or delete a drift schedule
-* Pause or resume a drift schedule
-* List all schedules (includes raw Pulumi operations and Time-to-Live schedules)
+- Create a drift schedule
+- Get a drift schedule
+- Update or delete a drift schedule
+- Pause or resume a drift schedule
+- List all schedules (includes raw Pulumi operations and Time-to-Live schedules)
 
 Below is an example of setting up Drift Detection and Remediation on a stack, see the [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api) for more details on how to set Drift Detection and Remediation up programmatically.
 
