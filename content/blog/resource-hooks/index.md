@@ -12,7 +12,7 @@ tags:
     - iac
 ---
 
-Pulumi programs are _declarative_, allowing you to specify the desired state of your infrastructure while Pulumi figures out the rest. But what about the times where you want to be more involved in what Pulumi is doing? **Resource hooks** are [one of our most requested features](https://github.com/pulumi/pulumi/issues/1691), and from Pulumi 3.179.0 we're excited to announce that you'll be able to use them to run arbitrary code at any point in Pulumi's resource lifecycle!
+Pulumi programs are _declarative_, allowing you to specify the desired state of your infrastructure while Pulumi figures out the rest. But what about the times where you want to be more involved in what Pulumi is doing? **Resource hooks** are [one of our most requested features](https://github.com/pulumi/pulumi/issues/1691), and from Pulumi 3.182.0 we're excited to announce that you'll be able to use them to run arbitrary code at any point in Pulumi's resource lifecycle!
 
 <!--more-->
 
