@@ -678,6 +678,96 @@ nohup python -m SimpleHTTPServer 80 &`
 
 {{% choosable language python %}}
 
+```python
+import json
+import time
+
+import pulumi
+import requests
+from pulumi_aws import ec2
+
+# Define the instance's user data script to set up a simple HTTP server that
+# serves some static content. We'll try to fetch the health.json in a
+# lifecycle hook later on to check whether or not the server is up and running.
+user_data = """#!/bin/bash
+echo "Hello, World!" > index.html
+echo '{"ok": true}' > health.json
+nohup python -m SimpleHTTPServer 80 &"""
+
+
+# Define a resource hook that will run after create and update and not return
+# until the health check passes.
+def health_check(args: pulumi.ResourceHookArgs):
+    # Since this is an after hook, we'll have access to the new outputs of the
+    # resource.
+    outputs = args.new_outputs
+
+    # Attempt to fetch health.json from the instance's public endpoint, backing
+    # off linearly if it is not yet available.
+    max_retries = 30
+    for i in range(max_retries):
+        try:
+            response = requests.get(
+                f"http://{outputs['publicDns']}/health.json", timeout=10
+            )
+            if response.status_code == 200:
+                data = response.json()
+                print(f"Health check passed: {json.dumps(data)}")
+                return
+        except Exception as error:
+            print(f"Health check attempt {i + 1} failed: {error}")
+
+        # Linear backoff - wait (i + 1) seconds before next attempt
+        time.sleep(i + 1)
+
+
+instance_type = "t2.micro"
+
+ami = ec2.get_ami_output(
+    filters=[
+        {
+            "name": "name",
+            "values": ["amzn2-ami-hvm-*"],
+        }
+    ],
+    # Amazon owns this AMI so we'll use their owner ID.
+    owners=["137112412989"],
+    most_recent=True,
+)
+
+group = ec2.SecurityGroup(
+    "webserver-secgrp",
+    ingress=[
+        {
+            "protocol": "tcp",
+            "from_port": 22,
+            "to_port": 22,
+            "cidr_blocks": ["0.0.0.0/0"],
+        },
+        {
+            "protocol": "tcp",
+            "from_port": 80,
+            "to_port": 80,
+            "cidr_blocks": ["0.0.0.0/0"],
+        },
+    ],
+)
+
+server = ec2.Instance(
+    "webserver-www",
+    instance_type=instance_type,
+    vpc_security_group_ids=[group.id],
+    ami=ami.id,
+    user_data=user_data,
+    opts=pulumi.ResourceOptions(
+        hooks=pulumi.ResourceHookBinding(
+            after_create=[health_check],
+            after_update=[health_check],
+        ),
+    ),
+)
+```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
