@@ -73,6 +73,7 @@ export = async () => {
 
 ```python
 import datetime
+import pulumi
 import pulumi_command
 
 curl = "curl -H'Host: example.com' localhost:1234"
@@ -83,6 +84,8 @@ cmd = pulumi_command.local.Command("curl",
     delete=curl,
     triggers=[str(datetime.datetime.now())],
 )
+
+pulumi.export("stdout", cmd.stdout)
 ```
 
 {{% /choosable %}}
@@ -307,16 +310,54 @@ export = async () => {
 
 ```python
 import datetime
+import subprocess
+import pulumi
 import pulumi_command
+
+tunnel = None
+
+def before(args: pulumi.ResourceHookArgs):
+    global tunnel
+    pulumi.log.info("Opening tunnel")
+    tunnel = subprocess.Popen(
+        ["socat", "TCP-LISTEN:1234,fork", "TCP:example.com:80"],
+    )
+    pulumi.log.info(f"Tunnel opened: {tunnel.pid}")
+
+
+before_hook = pulumi.ResourceHook("before", before)
+
+def after(args: pulumi.ResourceHookArgs):
+    global tunnel
+    if tunnel:
+        pulumi.log.info(f"Closing tunnel: {tunnel.pid}")
+        tunnel.terminate()
+        tunnel.wait()
+        tunnel = None
+
+after_hook = pulumi.ResourceHook("after", after)
 
 curl = "curl -H'Host: example.com' localhost:1234"
 
-cmd = pulumi_command.local.Command("curl",
+cmd = pulumi_command.local.Command(
+    "curl",
     create=curl,
     update=curl,
     delete=curl,
     triggers=[str(datetime.datetime.now())],
+    opts=pulumi.ResourceOptions(
+        hooks=pulumi.ResourceHookBinding(
+            before_create=[before_hook],
+            after_create=[after_hook],
+            before_update=[before_hook],
+            after_update=[after_hook],
+            before_delete=[before_hook],
+            after_delete=[after_hook],
+        )
+    ),
 )
+
+pulumi.export("stdout", cmd.stdout)
 ```
 
 {{% /choosable %}}
