@@ -476,6 +476,7 @@ When we run `pulumi up` now, the hooks will be invoked before and after the rele
 ```shell
 pulumi up
 ```
+
 ```
 Updating (...)
 
@@ -822,6 +823,7 @@ Thanks to our hooks, `pulumi up` will now wait until the web server is up and ru
 ```shell
 pulumi up
 ```
+
 ```shell
 Updating (...)
 
