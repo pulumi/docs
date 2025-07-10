@@ -816,6 +816,135 @@ server = ec2.Instance(
 
 {{% choosable language go %}}
 
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"time"
+
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+// Define a resource hook that will run after create and update and not return
+// until the health check passes.
+func healthCheck(args *pulumi.ResourceHookArgs) error {
+	// Since this is an after hook, we'll have access to the new outputs of the
+	// resource.
+	publicDns := args.NewOutputs["publicDns"].StringValue()
+
+	// Attempt to fetch health.json from the instance's public endpoint, backing
+	// off linearly if it is not yet available.
+	maxRetries := 30
+	for i := 0; i < maxRetries; i++ {
+		url := fmt.Sprintf("http://%s/health.json", publicDns)
+
+		client := &http.Client{
+			Timeout: 10 * time.Second,
+		}
+
+		resp, err := client.Get(url)
+		if err == nil && resp.StatusCode == 200 {
+			var data map[string]interface{}
+			if err := json.NewDecoder(resp.Body).Decode(&data); err == nil {
+				resp.Body.Close()
+				dataJSON, _ := json.Marshal(data)
+				fmt.Printf("Health check passed: %s\n", string(dataJSON))
+				return nil
+			}
+			resp.Body.Close()
+		}
+
+		if resp != nil {
+			resp.Body.Close()
+		}
+
+		fmt.Printf("Health check attempt %d failed: %v\n", i+1, err)
+
+		// Linear backoff - wait (i + 1) seconds before next attempt
+		time.Sleep(time.Duration(i+1) * time.Second)
+	}
+
+	return fmt.Errorf("health check failed after %d attempts", maxRetries)
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Define the instance's user data script to set up a simple HTTP server
+		// that serves some static content. We'll try to fetch the health.json
+		// in a lifecycle hook later on to check whether or not the server is up
+		// and running.
+		userData := `#!/bin/bash
+echo "Hello, World!" > index.html
+echo '{"ok": true}' > health.json
+nohup python -m SimpleHTTPServer 80 &`
+
+		instanceType := "t2.micro"
+
+		ami, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+			Filters: []ec2.GetAmiFilter{
+				{
+					Name:   "name",
+					Values: []string{"amzn2-ami-hvm-*"},
+				},
+			},
+			// Amazon owns this AMI so we'll use their owner ID.
+			Owners:     []string{"137112412989"},
+			MostRecent: pulumi.BoolRef(true),
+		})
+		if err != nil {
+			return err
+		}
+
+		group, err := ec2.NewSecurityGroup(ctx, "webserver-secgrp", &ec2.SecurityGroupArgs{
+			Ingress: ec2.SecurityGroupIngressArray{
+				&ec2.SecurityGroupIngressArgs{
+					Protocol:   pulumi.String("tcp"),
+					FromPort:   pulumi.Int(22),
+					ToPort:     pulumi.Int(22),
+					CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+				},
+				&ec2.SecurityGroupIngressArgs{
+					Protocol:   pulumi.String("tcp"),
+					FromPort:   pulumi.Int(80),
+					ToPort:     pulumi.Int(80),
+					CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		hook, err := ctx.RegisterResourceHook("health-check", healthCheck, nil)
+		if err != nil {
+			return err
+		}
+
+		server, err := ec2.NewInstance(ctx, "webserver-www", &ec2.InstanceArgs{
+			InstanceType:        pulumi.String(instanceType),
+			VpcSecurityGroupIds: pulumi.StringArray{group.ID()},
+			Ami:                 pulumi.String(ami.Id),
+			UserData:            pulumi.String(userData),
+		}, pulumi.ResourceHooks(&pulumi.ResourceHookBinding{
+			AfterCreate: []*pulumi.ResourceHook{hook},
+			AfterUpdate: []*pulumi.ResourceHook{hook},
+		}))
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("publicDns", server.PublicDns)
+		ctx.Export("publicIp", server.PublicIp)
+
+		return nil
+	})
+}
+```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
