@@ -4,6 +4,7 @@ date: 2025-06-30
 meta_desc: "Pulumi now allows you to run custom code at any point in the resource lifecycle"
 meta_image: meta.png
 authors:
+    - will-jones
     - julien-poissonnier
 tags:
     - features
