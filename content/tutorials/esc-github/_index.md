@@ -97,7 +97,7 @@ values:
 {{< figure src="esc-add-env.png" caption="Figure: Pulumi ESC add environment">}}
 
 {{% notes type="warning" %}}
-Replace the roleArn value with the ARN of your AWS IAM role configured for Pulumi Cloud OIDC access. See the [configuring OIDC guide](/docs/pulumi-cloud/access-management/oidc/provider/aws/ for details.)
+Replace the roleArn value with the ARN of your AWS IAM role configured for Pulumi Cloud OIDC access. See the [configuring OIDC guide](/docs/pulumi-cloud/access-management/oidc/provider/aws/) for details.
 {{% /notes %}}
 
 ## Step 4: Add a GitHub Actions workflow to deploy your stack
