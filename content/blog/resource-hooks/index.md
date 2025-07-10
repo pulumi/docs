@@ -369,22 +369,66 @@ pulumi.export("stdout", cmd.stdout)
 package main
 
 import (
+	"fmt"
+	"os/exec"
 	"time"
 
 	"github.com/pulumi/pulumi-command/sdk/go/command/local"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
+var tunnel *exec.Cmd
+
+func before(args *pulumi.ResourceHookArgs) error {
+	fmt.Println("Opening tunnel")
+	tunnel = exec.Command("socat", "TCP-LISTEN:1234,fork", "TCP:example.com:80")
+	err := tunnel.Start()
+	if err != nil {
+		return fmt.Errorf("failed to start tunnel: %w", err)
+	}
+	fmt.Printf("Tunnel opened: %d\n", tunnel.Process.Pid)
+	return nil
+}
+
+func after(args *pulumi.ResourceHookArgs) error {
+	if tunnel != nil && tunnel.Process != nil {
+		fmt.Printf("Closing tunnel: %d", tunnel.Process.Pid)
+		if err := tunnel.Process.Kill(); err != nil {
+			return err
+		}
+		tunnel.Wait()
+		tunnel = nil
+	}
+	return nil
+}
+
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		curl := "curl -H'Host: example.com' localhost:1234"
+		beforeHook, err := ctx.RegisterResourceHook("before", before, nil)
+		if err != nil {
+			return err
+		}
+		afterHook, err := ctx.RegisterResourceHook("after", after, nil)
+		if err != nil {
+			return err
+		}
+
+		curlCmd := "curl -H'Host: example.com' localhost:1234"
 
 		cmd, err := local.NewCommand(ctx, "curl", &local.CommandArgs{
-			Create:   pulumi.String(curl),
-			Update:   pulumi.String(curl),
-			Delete:   pulumi.String(curl),
-			Triggers: pulumi.StringArray{pulumi.String(time.Now().String())},
-		})
+			Create:   pulumi.String(curlCmd),
+			Update:   pulumi.String(curlCmd),
+			Delete:   pulumi.String(curlCmd),
+			Triggers: pulumi.Array{pulumi.String(fmt.Sprintf("%d", time.Now().Unix()))},
+		}, pulumi.ResourceHooks(&pulumi.ResourceHookBinding{
+			BeforeCreate: []*pulumi.ResourceHook{beforeHook},
+			AfterCreate:  []*pulumi.ResourceHook{afterHook},
+			BeforeUpdate: []*pulumi.ResourceHook{beforeHook},
+			AfterUpdate:  []*pulumi.ResourceHook{afterHook},
+			BeforeDelete: []*pulumi.ResourceHook{beforeHook},
+			AfterDelete:  []*pulumi.ResourceHook{afterHook},
+		}),
+		)
 		if err != nil {
 			return err
 		}
