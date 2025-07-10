@@ -73,8 +73,7 @@ Configuration values can be:
 The `environment` section enables Pulumi ESC (Environments, Secrets, and Configuration) integration. This can be:
 
 - A **string**: Single environment name to import
-- **Array of strings**: Multiple environment names to import  
-- **Inline definition**: Complete environment definition with imports and values
+- **Array of strings**: Multiple environment names to import
 
 ## Configuration file location
 
