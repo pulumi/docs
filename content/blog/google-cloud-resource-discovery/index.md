@@ -63,13 +63,13 @@ We're excited to introduce Google Cloud support to [Insights Account Discovery](
 
 ## Scan an Entire Google Cloud Project in Minutes
 
-With Pulumi Insights, gaining visibility into your Google Cloud environment is fast and frictionless. Once configured, Pulumi  scans your selected project and ingests resource data across services like Compute Engine, Cloud Storage, IAM, networking, and more.  There’s no need to install agents or write custom scripts—just link your account and let Pulumi do the rest.
+With [Pulumi Insights](https://www.pulumi.com/docs/insights/get-started/), gaining visibility into your Google Cloud environment is fast and frictionless. Once configured, Pulumi  scans your selected project and ingests resource data across services like Compute Engine, Cloud Storage, IAM, networking, and more.  There’s no need to install agents or write custom scripts—just link your account and let Pulumi do the rest.
 
 Within minutes, you’ll have a comprehensive view of your cloud infrastructure, including resources not managed by infrastructure-as-code. From there, you can explore your project, search for specific configurations, and start identifying security gaps, cost inefficiencies, and compliance risks.
 
 ## Visibility Beyond Infrastructure as Code
 
-While infrastructure as code provides control and repeatability, the reality of most cloud environments includes resources created manually or by third-party automation. Pulumi Insights bridges that gap by discovering all of your resources—regardless of how they were created.
+While infrastructure as code provides control and repeatability, the reality of most cloud environments includes resources created manually or by third-party automation. [Pulumi Insights](https://www.pulumi.com/docs/insights/get-started/) bridges that gap by discovering all of your resources—regardless of how they were created.
 
 With this unified view, you can:
 
@@ -77,7 +77,7 @@ With this unified view, you can:
 * Spot resources that may introduce security or cost risks
 * Plan migrations to bring unmanaged resources under Pulumi IaC
 
-This makes Pulumi Insights an essential tool not just for monitoring, but also for cloud governance, compliance, and modernization.
+This makes [Pulumi Insights](https://www.pulumi.com/docs/insights/get-started/) an essential tool not just for monitoring, but also for cloud governance, compliance, and modernization.
 
 ## Getting Started
 
