@@ -79,7 +79,6 @@ ul.api {
                 }
             }
 
-            &.datasource, // TODO: Remove `datasource` when it's no longer referenced anywhere.
             &.function {
                 &:before {
                     content: "F";

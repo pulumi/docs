@@ -4,7 +4,9 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-# TODO: Explain what this does.
+# This script detects new 404 errors by comparing the staging site against the production site.
+# It checks for broken links that might be introduced in pull requests by analyzing 
+# the differences between the production site (pulumi.com) and the staging deployment.
 
 destination_bucket="$(cat "$(origin_bucket_metadata_filepath)" | jq -r ".bucket")"
 s3_website_url="http://${destination_bucket}.s3-website.$(aws_region).amazonaws.com"

@@ -38,13 +38,6 @@
         }
     }
 
-    $cloud-color: #bfcbad;
-    $database-color: #cdd96c;
-    $infrastructure-color: #e2f4ac;
-    $monitoring-color: #c4fee5;
-    $network-color: #aae8df;
-    $utility-color: #ffc482;
-
     [data-filter-group="type"] {
         &[data-filter-value="provider"] {
             @apply border-blue-300;
@@ -73,7 +66,7 @@
 
     [data-filter-group="category"] {
         &[data-filter-value="cloud"] {
-            border-color: $cloud-color; // TODO: Add to palette.
+            border-color: $cloud-color;
 
             [data-selected-categories*="cloud"] & {
                 background-color: $cloud-color;
@@ -81,7 +74,7 @@
         }
 
         &[data-filter-value="database"] {
-            border-color: $database-color; // TODO: Add to palette.
+            border-color: $database-color;
 
             [data-selected-categories*="database"] & {
                 background-color: $database-color;
