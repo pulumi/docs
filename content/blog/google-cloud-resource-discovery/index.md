@@ -59,6 +59,8 @@ We're excited to introduce Google Cloud support to [Insights Account Discovery](
 
 <!--more-->
 
+![Provider Selection](./provider-selection.png)
+
 ## Scan an Entire Google Cloud Project in Minutes
 
 With Pulumi Insights, gaining visibility into your Google Cloud environment is fast and frictionless. Once configured, Pulumi  scans your selected project and ingests resource data across services like Compute Engine, Cloud Storage, IAM, networking, and more.  There’s no need to install agents or write custom scripts—just link your account and let Pulumi do the rest.
