@@ -36,12 +36,10 @@
                     @apply rounded inline-block;
                 }
 
-                // TODO: update color
-                background-color: #edeffa; //rgba(77, 91, 217, 0.15);
+                background-color: rgba($brand-blue, 0.15);
 
                 .top-nav-banner-text {
-                    // TODO: update color
-                    color:  #505bd1; //#4d5bd9;
+                    color: $brand-blue;
                 }
             }
         }
