@@ -70,9 +70,10 @@ Within minutes, you’ll have a comprehensive view of your cloud infrastructure,
 While infrastructure as code provides control and repeatability, the reality of most cloud environments includes resources created manually or by third-party automation. Pulumi Insights bridges that gap by discovering all of your resources—regardless of how they were created.
 
 With this unified view, you can:
-    * Identify drift from your intended infrastructure state
-    * Spot resources that may introduce security or cost risks
-    * Plan migrations to bring unmanaged resources under Pulumi IaC
+
+* Identify drift from your intended infrastructure state
+* Spot resources that may introduce security or cost risks
+* Plan migrations to bring unmanaged resources under Pulumi IaC
 
 This makes Pulumi Insights an essential tool not just for monitoring, but also for cloud governance, compliance, and modernization.
 
