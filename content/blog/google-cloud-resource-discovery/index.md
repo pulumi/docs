@@ -32,7 +32,10 @@ authors:
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - change-me
+    - insights
+    - infrastructure-as-code
+    - google cloud
+    - resources
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
