@@ -46,7 +46,7 @@ sections:
     secondary_button_link: /docs/pulumi-cloud/copilot/#frequently-asked-questions
   - heading: Pulumi CrossGuard
     description: Enforce guardrails for security and compliance using policies in standard languages
-    link: /docs/iac/packages-and-automation/crossguard/
+    link: /docs/iac/crossguard/faq/
     primary_button_label: Get Started
     primary_button_link: /docs/iac/packages-and-automation/crossguard/get-started/
     secondary_button_label: Learn More
