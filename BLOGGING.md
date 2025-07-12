@@ -111,7 +111,7 @@ including all the required frontmatter parameters.
 
 Posts are written in [Markdown](https://daringfireball.net/projects/markdown/) and rendered with [BlackFriday](https://github.com/russross/blackfriday), Hugo's default Markdown processor. GitHub's [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) guide is a helpful syntax reference if you need it. You can also include HTML in your posts, if you need greater control over the output than Markdown can provide.
 
-For formatting guidelines, see the Style Guide in [CONTRIBUTING.md](CONTRIBUTING.md#style-guide).
+For formatting guidelines, see [the Style Guide](./STYLE-GUIDE.md).
 
 ### Code Blocks
 
@@ -125,22 +125,6 @@ let bucket = new aws.s3.BucketV2("stuff");
 </pre>
 
 [Additional languages are available](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages) as well.
-
-### Notes
-
-Shortcode for a warning note:
-
-```
-> [!WARNING]
-> **DANGER** Will Robinson!
-```
-
-Shortcode for an info note:
-
-```
-> [!INFO]
-> Using Bastion hosts is a best practice.
-```
 
 ### Media
 
@@ -173,16 +157,16 @@ To use Pulumi's primary brand font Gilroy in your `meta_image`, first [download 
 
 A few things to keep in mind when designing a `meta image`:
 
-   - Avoid placing important text or graphic elements too close to the edges of the frame — elements at the edges may get cropped at some display ratios
-   - Try to include at least one Pulumi identifier (word mark, Pulumipus) so viewers can tell at a glance that the image belongs to the Pulumi blog
-   - Use dark text on light backgrounds, and light text on dark backgrounds to ensure readability
-   - Remember to zoom out from your image and confirm it looks as you intend at a thumbnail size
+- Avoid placing important text or graphic elements too close to the edges of the frame — elements at the edges may get cropped at some display ratios
+- Try to include at least one Pulumi identifier (word mark, Pulumipus) so viewers can tell at a glance that the image belongs to the Pulumi blog
+- Use dark text on light backgrounds, and light text on dark backgrounds to ensure readability
+- Remember to zoom out from your image and confirm it looks as you intend at a thumbnail size
 
 #### Video
 
 To embed a YouTube video, you can use Hugo's built-in [`youtube` shortcode](https://gohugo.io/content-management/shortcodes/#youtube), which takes the video's YouTube ID, obtainable from its public URL on youtube.com:
 
-```
+```plain
 {{< youtube "kDB-YRKFfYE?rel=0" >}}
 ```
 
@@ -209,10 +193,9 @@ After your Pull Request is approved, but before merge/publication date, reach ou
 
 Because the website is deployed in response to a commit to pulumi/docs `master`, it isn't possible to schedule a post to be released automatically at a precise date and time. (The `date` frontmatter property is used only for sorting and display purposes; it has no effect on whether or when a post gets published.) You can, however, influence the timing of the publishing process manually. See the [Merging and Releasing section of the README](README.md#merging-and-releasing) for details.
 
-## Publishing Check List
+## Publishing Checklist
 
 - [ ] As mentioned, use the Hugo blog-post generator instead of copying another post: `make new-blog-post` (or alternatively, the more verbose but equivalent `hugo new --kind blog-post "content/blog/[your-slug]"`)
-- [ ] Spell and grammar check. Consider using a service such as [Grammarly](http://grammarly.com).
 - [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page.
 - [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images.
 - [ ] Check that your meta_image is using the current logos for Pulumi and others.
