@@ -15,6 +15,7 @@
                 </div>
             </div>
             <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                <div id="video" style="position: relative; top: -100px;"></div>
                 <div class="responsive-video-container video-16-9 rounded-xl shadow-2xl relative h-0 overflow-hidden">
                     {{ $videoID := index (split .Params.demo_video.image "?v=") 1 }}
                     <iframe
