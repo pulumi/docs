@@ -85,7 +85,7 @@ aliases:
             Sets <a href="/docs/concepts/config">configuration</a> for <a href="/docs/using-pulumi/testing/unit">unit testing</a>. Must be in JSON format.
         </p>
         <p>
-            <strong>This environment variable is ignored during normal Pulumi operations -- e.g., <code>up</code>, <code>preview</code>, etc. -- but must be valid JSON format if present.</strong>
+            <strong>This environment variable is ignored during normal Pulumi operations -- e.g., <code>up</code>, <code>preview</code>, etc. -- but must be valid JSON if present.</strong>
         </p>
         <pre><code class="text-xs">PULUMI_CONFIG='{"project:myTag":"val1","project:mySecret":"val2"}'</code></pre>
     </dd>
