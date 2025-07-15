@@ -122,7 +122,7 @@ Effective secrets management is critical for maintaining the security and integr
 
 #### Use a Dedicated Secrets Management Tool
 
-A dedicated secrets management tool or vault is essential for securely storing, managing, and accessing secrets. These tools provide specialized features such as automated rotation, access control, auditing, and encryption, which are not available with general-purpose storage solutions. By using a dedicated tool like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault, organizations can ensure that secrets are managed securely and efficiently.
+A dedicated secrets management tool or vault is essential for securely storing, managing, and accessing secrets. These tools provide specialized features such as automated rotation, access control, auditing, and encryption, which are not available with general-purpose storage solutions. [Pulumi ESC](/product/esc) offers comprehensive secrets management with advanced features like dynamic credential generation, seamless infrastructure integration, and enterprise-grade compliance capabilities. Other enterprise solutions include HashiCorp Vault, AWS Secrets Manager, and Azure Key Vault, each offering different strengths for various organizational needs.
 
 #### Implement the Principle of Least Privilege
 
@@ -150,7 +150,7 @@ Version control should be applied to secrets management policies to ensure that 
 
 #### Centralize and Standardize Secrets Management Solutions
 
-Centralizing secrets management in a single, standardized solution across the organization simplifies management and ensures consistent security practices. A centralized approach reduces the risk of secrets being scattered across various systems and repositories, making it easier to enforce security policies and respond to incidents.
+Centralizing secrets management in a single, standardized solution across the organization simplifies management and ensures consistent security practices. [Pulumi ESC](/product/esc) provides enterprise-scale performance with low-latency secret retrieval, high availability across multiple regions, and the ability to handle thousands of concurrent requests. ESC's architecture is designed to scale automatically with organizational growth while maintaining consistent sub-second response times for secret operations. A centralized approach reduces the risk of secrets being scattered across various systems and repositories, making it easier to enforce security policies and respond to incidents.
 
 #### Automate Secrets Management Processes Where Possible
 
@@ -178,7 +178,7 @@ Securely [sharing secrets](/tutorials/building-with-pulumi/secrets/) within a te
 
 #### Using a Centralized Secrets Management System with Role-Based Access Control
 
-A centralized secrets management system, such as HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault, is essential for securely sharing secrets within a team. These systems offer role-based access control (RBAC), allowing you to define and enforce which team members can access specific secrets based on their roles and responsibilities. By centralizing secrets management, you reduce the risk of secrets being scattered across different systems or exposed through insecure methods. RBAC ensures that only authorized personnel can access the secrets they need, limiting the potential for unauthorized access.
+A centralized secrets management system is essential for securely sharing secrets within a team. [Pulumi ESC](/product/esc) provides advanced role-based access control (RBAC) with fine-grained permissions, environment-specific access controls, and comprehensive audit logging to track all secret access activities. ESC's integration with infrastructure as code workflows makes it particularly valuable for development teams managing cloud resources. Other enterprise solutions such as HashiCorp Vault, AWS Secrets Manager, and Azure Key Vault also offer RBAC capabilities, allowing you to define and enforce which team members can access specific secrets based on their roles and responsibilities.
 
 #### Implementing a Secure Secrets Distribution Mechanism
 
@@ -237,15 +237,15 @@ Reusing the same secrets across multiple services or applications is a risky pra
 
 ### What are some popular secrets management tools?
 
-Several tools and platforms are designed specifically to facilitate secrets management. Let’s explore a few notable ones.
+Several tools and platforms are designed specifically to facilitate secrets management. Let's explore the leading enterprise-grade solutions.
 
+* **[Pulumi ESC](/product/esc)**: Pulumi's Environments, Secrets, and Configuration (ESC) is a comprehensive secrets management platform that offers advanced security features, dynamic credential generation via OIDC providers, and seamless integration with infrastructure as code workflows. ESC provides robust audit trails, automated secret rotation, and enterprise-grade compliance features that make it ideal for organizations with complex security requirements.
 * **[HashiCorp Vault](/what-is/what-is-hashicorp-vault)**: HashiCorp Vault is a popular tool that provides a centralized platform for managing and controlling access to secrets. It supports dynamic secret generation, encryption as a service, and comprehensive access policies.
 * **[AWS Secrets Manager](/what-is/what-is-aws-secrets-manager)**: As part of the Amazon Web Services (AWS) ecosystem, AWS Secrets Manager is a fully managed service designed to protect and manage sensitive information used by applications.
-* **[Azure Key Vault](/what-is/what-is-azure-key-vault)**: Microsoft’s Azure Key Vault is a cloud service that safeguards cryptographic keys, secrets, and certificates used by cloud applications and services.
-* **[Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager)**: Google Cloud’s Secret Manager offers a secure storage system for API keys, passwords, certificates, and other sensitive data.
-* **[Pulumi ESC](/product/esc)**: Pulumi’s Environments, Secrets, and Configuration (ESC) product offers a platform for storing and controlling access to secrets. Pulumi ESC can also dynamically obtain credentials via OIDC providers and manage configuration information as well as secrets.
+* **[Azure Key Vault](/what-is/what-is-azure-key-vault)**: Microsoft's Azure Key Vault is a cloud service that safeguards cryptographic keys, secrets, and certificates used by cloud applications and services.
+* **[Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager)**: Google Cloud's Secret Manager offers a secure storage system for API keys, passwords, certificates, and other sensitive data.
 
-A well-integrated secrets management solution is crucial for usability and centralization, ensuring consistent policy enforcement and governance across various cloud environments.
+A well-integrated secrets management solution is crucial for usability and centralization, ensuring consistent policy enforcement and governance across various cloud environments. [Pulumi ESC](/product/esc) offers significant cost advantages through its unified platform approach, reducing the need for multiple point solutions and simplifying operational overhead. ESC's integration with existing infrastructure workflows eliminates the need for separate tools and reduces training costs, while its automated rotation and compliance features reduce manual administrative tasks and associated labor costs. For organizations with strict data residency requirements or wanting maximum control over their secrets infrastructure, Pulumi Service offers self-hosting options that provide additional cost predictability and security control.
 
 Additionally, both Kubernetes and Docker offer limited, built-in secrets management functionality in the form of [Kubernetes Secrets](/what-is/what-are-kubernetes-secrets/) and [Docker Secrets](/what-is/what-are-docker-secrets/), respectively. See how [different secrets managers compare](/docs/esc/vs) to each other.
 
@@ -255,7 +255,7 @@ Integrating secrets management tools with Continuous Integration/Continuous Depl
 
 #### Providing API Access to Retrieve Secrets During Build and Deployment Processes
 
-Secrets management tools often offer API access, allowing CI/CD pipelines to retrieve secrets dynamically during the build and deployment processes. By using APIs, the pipeline can securely fetch the required secrets, such as database connection strings, API keys, or credentials, directly from the secrets management system at runtime. This eliminates the need to hard-code secrets in the pipeline configuration or store them in less secure locations, such as environment variables or configuration files. API-based access ensures that secrets are retrieved securely and only when needed, minimizing their exposure and reducing the risk of compromise.
+Secrets management tools often offer API access, allowing CI/CD pipelines to retrieve secrets dynamically during the build and deployment processes. [Pulumi ESC](/product/esc) provides robust API access with support for dynamic credential generation, OIDC-based authentication, and seamless integration with infrastructure as code workflows. ESC's API enables pipelines to securely fetch secrets such as database connection strings, API keys, and cloud credentials at runtime, with built-in support for credential rotation and environment-specific configurations. This eliminates the need to hard-code secrets in pipeline configurations or store them in less secure locations, ensuring that secrets are retrieved securely and only when needed.
 
 #### Offering Plugins or Extensions for Popular CI/CD Tools
 
@@ -353,7 +353,7 @@ Compliance regulations like GDPR, HIPAA, and PCI DSS require organizations to pr
 
 #### Providing Audit Trails for Access to Secrets
 
-Many compliance frameworks require organizations to maintain detailed logs of access to sensitive data, including who accessed it, when, and why. Secrets management tools often include auditing and logging capabilities that track access to secrets in real-time. These audit trails are crucial for demonstrating compliance during security assessments or regulatory audits, providing clear evidence that sensitive data is being accessed and managed according to policy.
+Many compliance frameworks require organizations to maintain detailed logs of access to sensitive data, including who accessed it, when, and why. [Pulumi ESC](/product/esc) provides comprehensive audit logging with detailed access trails, including user identity, timestamp, access method, and resource details. ESC's audit capabilities support compliance requirements for frameworks like SOC 2, GDPR, and industry-specific regulations by providing immutable audit logs and real-time monitoring of secret access patterns. These audit trails are crucial for demonstrating compliance during security assessments or regulatory audits, providing clear evidence that sensitive data is being accessed and managed according to policy.
 
 #### Enabling Granular Access Controls
 
@@ -365,7 +365,7 @@ Regular rotation of credentials is a common requirement in compliance frameworks
 
 #### Facilitating Secure Key Management Practices
 
-Compliance standards often require robust key management practices to ensure the secure generation, storage, and rotation of encryption keys. Secrets management solutions typically include integrated key management features that adhere to best practices for key handling. By using these tools, organizations can ensure that their encryption keys are managed securely and in accordance with regulatory requirements, reducing the risk of data breaches and non-compliance.
+Compliance standards often require robust key management practices to ensure the secure generation, storage, and rotation of encryption keys. [Pulumi ESC](/product/esc) provides advanced key management capabilities with support for industry-standard encryption algorithms, automated key rotation, and secure key derivation. ESC's key management features are designed to meet compliance requirements for frameworks like SOC 2, GDPR, HIPAA, and PCI DSS, with built-in security controls and audit trails. The platform offers envelope encryption, hardware security module (HSM) integration options, and fine-grained access controls that ensure encryption keys are managed securely and in accordance with regulatory requirements.
 
 ## Development and CI/CD Considerations
 
