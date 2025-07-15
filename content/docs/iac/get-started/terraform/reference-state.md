@@ -912,7 +912,7 @@ public class App {
             var containerDefinitions = Output.tuple(repositoryUrl, logGroup.name()).apply(t -> {
                 var repoUrl = t.t1;
                 var logGroupName = t.t2;
-                
+
                 var containerDef = List.of(Map.of(
                     "name", "my-app",
                     "image", repoUrl + ":latest",
@@ -930,7 +930,7 @@ public class App {
                         )
                     )
                 ));
-                
+
                 return new Gson().toJson(containerDef);
             });
 

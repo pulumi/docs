@@ -46,36 +46,36 @@ jobs:
       ecr-repository-url: ${{ steps.tf-output.outputs.ecr_repository_url }}
       vpc-id: ${{ steps.tf-output.outputs.vpc_id }}
       private-subnet-ids: ${{ steps.tf-output.outputs.private_subnet_ids }}
-    
+
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
-    
+
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
       with:
         terraform_version: 1.5.0
         terraform_wrapper: false
-    
+
     - name: Terraform Init
       run: terraform init
       working-directory: ./terraform
-    
+
     - name: Terraform Plan
       run: terraform plan
       working-directory: ./terraform
-    
+
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
       run: terraform apply -auto-approve
       working-directory: ./terraform
-    
+
     - name: Get Terraform outputs
       id: tf-output
       run: |
@@ -88,29 +88,29 @@ jobs:
   deploy-pulumi:
     runs-on: ubuntu-latest
     needs: deploy-terraform
-    
+
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
-    
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-    
+
     - name: Install dependencies
       run: npm install
       working-directory: ./pulumi
-    
+
     - name: Install Pulumi CLI
       uses: pulumi/actions@v4
-    
+
     - name: Deploy Pulumi stack
       uses: pulumi/actions@v4
       with:
@@ -119,7 +119,7 @@ jobs:
         work-dir: ./pulumi
       env:
         PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-        
+
     - name: Get Pulumi outputs
       id: pulumi-output
       run: |
@@ -132,7 +132,7 @@ jobs:
   test-deployment:
     runs-on: ubuntu-latest
     needs: [deploy-terraform, deploy-pulumi]
-    
+
     steps:
     - name: Test application
       run: |
@@ -226,41 +226,41 @@ on:
 jobs:
   deploy-green:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Deploy green environment
       run: |
         # Deploy Terraform infrastructure for green
         cd terraform
         terraform workspace select green || terraform workspace new green
         terraform apply -auto-approve
-        
+
         # Deploy Pulumi application to green
         cd ../pulumi
         pulumi stack select green || pulumi stack init green
         pulumi up --yes
-    
+
     - name: Test green environment
       run: |
         # Health check green environment
         GREEN_URL=$(cd pulumi && pulumi stack output appUrl)
         curl -f $GREEN_URL/health || exit 1
-    
+
     - name: Switch traffic to green
       run: |
         # Update load balancer to point to green
         cd terraform/traffic
         terraform apply -auto-approve -var="active_environment=green"
-    
+
     - name: Cleanup blue environment
       run: |
         # Destroy blue environment after successful switch
         cd pulumi
         pulumi stack select blue
         pulumi destroy --yes
-        
+
         cd ../terraform
         terraform workspace select blue
         terraform destroy -auto-approve

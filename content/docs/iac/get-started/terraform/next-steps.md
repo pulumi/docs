@@ -38,7 +38,7 @@ Our goal is to empower you to use the right tool for the job while maintaining a
 
 ## Advanced integration patterns
 
-Beyond the examples shown, there are some more advanced integration patterns you can employ. These will be very dependent on your particular needs, so take these recommendations as a general guide to some strategies you can use to manage more complex environments. 
+Beyond the examples shown, there are some more advanced integration patterns you can employ. These will be very dependent on your particular needs, so take these recommendations as a general guide to some strategies you can use to manage more complex environments.
 
 ### Multi-stack architectures
 
@@ -77,18 +77,18 @@ class TerraformWorkspaceProvider implements dynamic.ResourceProvider {
             `workspace new ${inputs.name}`,
             inputs.workingDirectory
         );
-        
+
         return {
             id: inputs.name,
             outs: { name: inputs.name, ...result }
         };
     }
-    
+
     async update(id: string, olds: any, news: any): Promise<dynamic.UpdateResult> {
         // Handle workspace updates
         return { outs: news };
     }
-    
+
     async delete(id: string, props: any): Promise<void> {
         // Delete terraform workspace
         await runTerraformCommand(
@@ -117,7 +117,7 @@ const networkState = new terraform.state.S3Reference("network", {
 });
 
 const securityState = new terraform.state.S3Reference("security", {
-    bucket: "terraform-state", 
+    bucket: "terraform-state",
     key: "security/terraform.tfstate",
 });
 
@@ -165,18 +165,18 @@ Create utilities to help with migration:
 // Migration helper utility
 export class TerraformMigrationHelper {
     constructor(private terraformStateRef: terraform.state.S3Reference) {}
-    
+
     // Import all resources of a given type
     async importResourceType(resourceType: string, pulumiType: string) {
         const resources = await this.terraformStateRef.getOutput("resources");
         const filtered = resources.filter(r => r.type === resourceType);
-        
+
         for (const resource of filtered) {
             console.log(`Importing ${resourceType} ${resource.name}`);
             // Use Pulumi import API to import resources
         }
     }
-    
+
     // Validate that imported resources match Terraform state
     async validateImports() {
         // Compare Terraform state with Pulumi state
@@ -205,7 +205,7 @@ new PolicyPack("terraform-integration-policies", {
             validateResource: validateResourceOfType(aws.ec2.Instance, (instance, args, reportViolation) => {
                 const requiredTags = ["Environment", "Owner", "Project"];
                 const tags = instance.tags || {};
-                
+
                 for (const tag of requiredTags) {
                     if (!tags[tag]) {
                         reportViolation(`Missing required tag: ${tag}`);
@@ -238,7 +238,7 @@ import * as aws from "@pulumi/aws";
 
 async function createEnvironmentStack(environmentName: string) {
     const stackName = `${environmentName}-app`;
-    
+
     // Create or select stack
     const stack = await pulumi.LocalWorkspace.createOrSelectStack({
         stackName,
@@ -249,27 +249,27 @@ async function createEnvironmentStack(environmentName: string) {
                 bucket: "terraform-state",
                 key: "shared/terraform.tfstate",
             });
-            
+
             // Create environment-specific resources
             const app = new aws.ecs.Service(`${environmentName}-app`, {
                 cluster: tfState.getOutput("cluster_name"),
                 taskDefinition: tfState.getOutput("task_definition_arn"),
                 desiredCount: environmentName === "production" ? 3 : 1,
             });
-            
+
             return {
                 appArn: app.arn,
                 appName: app.name,
             };
         },
     });
-    
+
     // Configure stack
     await stack.setConfig("aws:region", { value: "us-west-2" });
-    
+
     // Deploy stack
     const upResult = await stack.up({ onOutput: console.log });
-    
+
     return upResult.outputs;
 }
 
@@ -300,17 +300,17 @@ export class WebApplication extends pulumi.ComponentResource {
     public readonly service: aws.ecs.Service;
     public readonly loadBalancer: aws.lb.LoadBalancer;
     public readonly url: pulumi.Output<string>;
-    
+
     constructor(name: string, args: WebApplicationArgs, opts?: pulumi.ComponentResourceOptions) {
         super("custom:WebApplication", name, {}, opts);
-        
+
         const defaultParent = { parent: this };
-        
+
         // Get infrastructure from Terraform
         const clusterName = args.terraformInfrastructure.getOutput("cluster_name");
         const vpcId = args.terraformInfrastructure.getOutput("vpc_id");
         const subnetIds = args.terraformInfrastructure.getOutput("subnet_ids");
-        
+
         // Create load balancer
         this.loadBalancer = new aws.lb.LoadBalancer(`${name}-alb`, {
             name: `${name}-alb`,
@@ -318,7 +318,7 @@ export class WebApplication extends pulumi.ComponentResource {
             subnets: subnetIds,
             internal: false,
         }, defaultParent);
-        
+
         // Create ECS service
         const taskDefinition = new aws.ecs.TaskDefinition(`${name}-task`, {
             family: name,
@@ -333,7 +333,7 @@ export class WebApplication extends pulumi.ComponentResource {
                 "environment": [{"name": "ENV", "value": "${args.environment}"}]
             }]`,
         }, defaultParent);
-        
+
         this.service = new aws.ecs.Service(`${name}-service`, {
             cluster: clusterName,
             taskDefinition: taskDefinition.arn,
@@ -344,9 +344,9 @@ export class WebApplication extends pulumi.ComponentResource {
                 assignPublicIp: true,
             },
         }, defaultParent);
-        
+
         this.url = pulumi.interpolate`http://${this.loadBalancer.dnsName}`;
-        
+
         this.registerOutputs({
             service: this.service,
             loadBalancer: this.loadBalancer,

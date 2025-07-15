@@ -59,14 +59,14 @@ import * as vpc from "@pulumi/terraform-module-vpc-aws";
 const myVpc = new vpc.Vpc("my-vpc", {
     name: "my-vpc",
     cidr: "10.0.0.0/16",
-    
+
     azs: ["us-west-2a", "us-west-2b", "us-west-2c"],
     privateSubnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
     publicSubnets: ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
-    
+
     enableNatGateway: true,
     enableVpnGateway: true,
-    
+
     tags: {
         Terraform: "true",
         Environment: "dev",
@@ -123,7 +123,7 @@ const webServer = new aws.ec2.Instance("web-server", {
     subnetId: myVpc.publicSubnets.apply(subnets => subnets[0]),
     vpcSecurityGroupIds: [webSg.id],
     associatePublicIpAddress: true,
-    
+
     userData: `#!/bin/bash
 yum update -y
 yum install -y httpd
@@ -131,7 +131,7 @@ systemctl start httpd
 systemctl enable httpd
 echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.html
 `,
-    
+
     tags: {
         Name: "web-server",
         Environment: "dev",
@@ -168,14 +168,14 @@ import pulumi_terraform_module_vpc_aws as vpc
 my_vpc = vpc.Vpc("my-vpc",
     name="my-vpc",
     cidr="10.0.0.0/16",
-    
+
     azs=["us-west-2a", "us-west-2b", "us-west-2c"],
     private_subnets=["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
     public_subnets=["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
-    
+
     enable_nat_gateway=True,
     enable_vpn_gateway=True,
-    
+
     tags={
         "Terraform": "true",
         "Environment": "dev",
@@ -232,7 +232,7 @@ web_server = aws.ec2.Instance("web-server",
     subnet_id=my_vpc.public_subnets.apply(lambda subnets: subnets[0]),
     vpc_security_group_ids=[web_sg.id],
     associate_public_ip_address=True,
-    
+
     user_data="""#!/bin/bash
 yum update -y
 yum install -y httpd
@@ -240,7 +240,7 @@ systemctl start httpd
 systemctl enable httpd
 echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.html
 """,
-    
+
     tags={
         "Name": "web-server",
         "Environment": "dev",
@@ -283,14 +283,14 @@ func main() {
 		myVpc, err := vpc.NewVpc(ctx, "my-vpc", &vpc.VpcArgs{
 			Name: pulumi.String("my-vpc"),
 			Cidr: pulumi.String("10.0.0.0/16"),
-			
+
 			Azs:            pulumi.StringArray{pulumi.String("us-west-2a"), pulumi.String("us-west-2b"), pulumi.String("us-west-2c")},
 			PrivateSubnets: pulumi.StringArray{pulumi.String("10.0.1.0/24"), pulumi.String("10.0.2.0/24"), pulumi.String("10.0.3.0/24")},
 			PublicSubnets:  pulumi.StringArray{pulumi.String("10.0.101.0/24"), pulumi.String("10.0.102.0/24"), pulumi.String("10.0.103.0/24")},
-			
+
 			EnableNatGateway: pulumi.Bool(true),
 			EnableVpnGateway: pulumi.Bool(true),
-			
+
 			Tags: pulumi.StringMap{
 				"Terraform":   pulumi.String("true"),
 				"Environment": pulumi.String("dev"),
@@ -358,7 +358,7 @@ func main() {
 			}).(pulumi.StringOutput),
 			VpcSecurityGroupIds:       pulumi.StringArray{webSg.ID()},
 			AssociatePublicIpAddress:  pulumi.Bool(true),
-			
+
 			UserData: pulumi.String(`#!/bin/bash
 yum update -y
 yum install -y httpd
@@ -366,7 +366,7 @@ systemctl start httpd
 systemctl enable httpd
 echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.html
 `),
-			
+
 			Tags: pulumi.StringMap{
 				"Name":        pulumi.String("web-server"),
 				"Environment": pulumi.String("dev"),
@@ -413,14 +413,14 @@ return await Deployment.RunAsync(() =>
     {
         Name = "my-vpc",
         Cidr = "10.0.0.0/16",
-        
+
         Azs = new[] { "us-west-2a", "us-west-2b", "us-west-2c" },
         PrivateSubnets = new[] { "10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24" },
         PublicSubnets = new[] { "10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24" },
-        
+
         EnableNatGateway = true,
         EnableVpnGateway = true,
-        
+
         Tags = new Dictionary<string, string>
         {
             ["Terraform"] = "true",
@@ -488,7 +488,7 @@ return await Deployment.RunAsync(() =>
         SubnetId = myVpc.PublicSubnets.Apply(subnets => subnets[0]),
         VpcSecurityGroupIds = new[] { webSg.Id },
         AssociatePublicIpAddress = true,
-        
+
         UserData = @"#!/bin/bash
 yum update -y
 yum install -y httpd
@@ -496,7 +496,7 @@ systemctl start httpd
 systemctl enable httpd
 echo ""<h1>Hello from Pulumi and Terraform modules!</h1>"" > /var/www/html/index.html
 ",
-        
+
         Tags = new Dictionary<string, string>
         {
             ["Name"] = "web-server",
