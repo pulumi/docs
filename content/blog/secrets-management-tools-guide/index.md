@@ -82,27 +82,27 @@ This represents the newest evolution in secrets management—platforms that conn
 
 The platform's strength lies in its [configuration-as-code approach](https://www.pulumi.com/docs/esc/concepts/). You define hierarchical YAML environments that cascade from base configurations through development, staging, and production. This eliminates the manual configuration copying that leads to secrets sprawl—define common settings once, inherit them everywhere they're needed, while maintaining appropriate security boundaries between environments.
 
+**Enterprise-Grade Security and Compliance**: ESC provides comprehensive [audit logging](https://www.pulumi.com/docs/esc/administration/audit-logs/) with detailed access trails, including user identity, timestamp, access method, and resource details. The platform's audit capabilities support compliance requirements for frameworks like SOC 2, GDPR, and industry-specific regulations by providing immutable audit logs and real-time monitoring of secret access patterns.
+
+**Performance and Scalability**: ESC delivers enterprise-scale performance with low-latency secret retrieval, high availability across multiple regions, and the ability to handle thousands of concurrent requests. The architecture is designed to scale automatically with organizational growth while maintaining consistent sub-second response times for secret operations.
+
 Dynamic credential generation sets Pulumi ESC apart from traditional storage-focused tools. Instead of storing long-lived AWS access keys or Azure service principal secrets, it automatically provisions short-lived OIDC tokens on-demand. This [dynamic approach](https://www.pulumi.com/docs/esc/providers/) eliminates entire categories of security risk by ensuring credentials expire automatically and can't be misused over extended periods.
 
+**Advanced Key Management**: ESC provides advanced key management capabilities with support for industry-standard encryption algorithms, automated key rotation, and secure key derivation. The platform offers envelope encryption and fine-grained access controls that ensure encryption keys are managed securely and in accordance with regulatory requirements.
+
 The platform maintains a zero vendor lock-in philosophy through its [open-source engine](https://github.com/pulumi/esc) and comprehensive [multi-language SDK support](https://www.pulumi.com/docs/esc/sdk/) for TypeScript, Python, Go, and .NET. Teams can integrate ESC into existing workflows through familiar CLI tooling while maintaining full visibility into orchestration logic through transparent, auditable code.
+
+**Cost-Effective Enterprise Solution**: Pulumi ESC offers significant cost advantages through its unified platform approach, reducing the need for multiple point solutions and simplifying operational overhead. ESC's integration with existing infrastructure workflows eliminates the need for separate tools and reduces training costs, while its automated rotation and compliance features reduce manual administrative tasks and associated labor costs. For organizations with strict data residency requirements, [Pulumi Service offers self-hosting options](https://www.pulumi.com/product/self-hosted/) that provide additional cost predictability and security control.
 
 Pulumi ESC offers a [generous free tier](https://www.pulumi.com/pricing/) with unlimited environments, making it accessible for teams to experiment with configuration-as-code principles. Usage-based pricing for advanced features scales naturally with organizational growth, making it particularly attractive for multi-cloud environments and teams prioritizing systematic approaches to eliminating secrets sprawl.
 
 #### Doppler
 
-Doppler focuses on developer experience with an intuitive interface and extensive integrations for modern development workflows, positioning itself as a centralized configuration platform. The platform provides an intuitive dashboard with branch-based environment management that aligns naturally with Git workflows, making it easy for developers to understand and adopt.
-
-With over 100 integrations spanning development tools and CI/CD platforms, Doppler offers real-time secret synchronization across connected services. The platform includes personal and team access controls with comprehensive audit logging, ensuring organizations can maintain security while providing developers with the access they need. CLI and SDK support for major programming languages enables seamless integration into existing development processes.
-
-Doppler offers a free tier suitable for small teams, with paid plans starting at $3 per user per month. This pricing structure makes it particularly attractive for startups and scale-ups where developer experience takes priority over advanced orchestration capabilities.
+Doppler focuses on developer experience with an intuitive interface and extensive integrations for modern development workflows. The platform provides branch-based environment management and real-time secret synchronization across connected services, with plans starting at $3 per user per month.
 
 #### Infisical
 
-Infisical combines open-source transparency with modern secrets management, offering both self-hosted and cloud options with strong developer tooling. The platform's open-source core provides organizations with full visibility into the underlying technology while offering an optional managed cloud service for teams preferring hands-off operations.
-
-The platform includes built-in secrets scanning capabilities for repositories and CI/CD pipelines, helping prevent credential leakage before it occurs. Comprehensive SDK support covers all major programming languages, while point-in-time recovery and detailed audit logs provide the operational capabilities enterprises require. Native integrations with Kubernetes operators and GitHub Actions make Infisical particularly suitable for cloud-native development workflows.
-
-Infisical's dual approach of open-source self-hosting and cloud service starting at $8 per user per month appeals to open-source enthusiasts and budget-conscious teams requiring source transparency and deployment flexibility.
+Infisical combines open-source transparency with modern secrets management, offering both self-hosted and cloud options. The platform includes built-in secrets scanning capabilities and comprehensive SDK support, with cloud service starting at $8 per user per month.
 
 ### Enterprise Secrets Vaults
 
