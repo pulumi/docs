@@ -9,7 +9,7 @@ menu:
         weight: 3
         identifier: migrating-to-pulumi
 ---
-Successfully migrating to Pulumi requires strategic decisions about project structure, language choices, and migration approach. Focus on building momentum with early wins while establishing practices that will scale with your organization.
+Successfully migrating to Pulumi requires strategic decisions about your migration approach. Focus on building momentum with early wins while establishing practices that will scale with your organization.
 
 ## Migrating existing infrastructure
 
