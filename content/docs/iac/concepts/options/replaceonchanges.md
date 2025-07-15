@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: replaceOnChanges
     parent: options-concepts
-    weight: 13
+    weight: 14
 aliases:
 - /docs/intro/concepts/resources/options/replaceonchanges/
 - /docs/concepts/options/replaceonchanges/
