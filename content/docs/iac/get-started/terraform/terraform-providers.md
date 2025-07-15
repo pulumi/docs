@@ -3,12 +3,12 @@ title_tag: Use Terraform Providers | Pulumi for Terraform Users
 title: Use Terraform Providers
 h1: "Use Terraform Providers"
 meta_desc: Learn how to use any Terraform provider in Pulumi programs for accessing the full ecosystem of 3000+ providers.
-weight: 4
+weight: 6
 menu:
     iac:
         name: Use Terraform Providers
         parent: terraform-get-started
-        weight: 4
+        weight: 6
 
 aliases:
 - /docs/iac/get-started/terraform/terraform-providers/
@@ -28,6 +28,7 @@ pulumi package add terraform-provider-random
 ```
 
 This command automatically:
+
 * Downloads the Terraform provider binary
 * Generates Pulumi bindings for the provider
 * Adds the provider to your project dependencies

@@ -3,12 +3,12 @@ title_tag: Next Steps | Pulumi for Terraform Users
 title: Next Steps
 h1: "Next Steps"
 meta_desc: Explore advanced Pulumi features and resources for Terraform users ready to deepen their integration or consider migration.
-weight: 8
+weight: 9
 menu:
     iac:
         name: Next Steps
         parent: terraform-get-started
-        weight: 8
+        weight: 9
 
 aliases:
 - /docs/iac/get-started/terraform/next-steps/
@@ -24,7 +24,21 @@ You've completed the Pulumi for Terraform Users guide and learned how to:
 * Convert HCL code to Pulumi when beneficial
 * Orchestrate both Terraform and Pulumi deployments together
 
+## What's next?
+
+Based on your journey through this guide, consider these next steps:
+
+1. **Start small**: Begin with a simple coexistence pattern in your current environment
+2. **Experiment**: Try different integration approaches to find what works for your team
+3. **Build expertise**: Invest in learning both Terraform and Pulumi deeply
+4. **Share knowledge**: Document your integration patterns for your team
+5. **Consider migration**: When ready, plan a gradual migration to Pulumi for new projects
+
+Our goal is to empower you to use the right tool for the job while maintaining a cohesive infrastructure management strategy.
+
 ## Advanced integration patterns
+
+Beyond the examples shown, there are some more advanced integration patterns you can employ. These will be very dependent on your particular needs, so take these recommendations as a general guide to some strategies you can use to manage more complex environments. 
 
 ### Multi-stack architectures
 
@@ -131,7 +145,7 @@ When ready to migrate from Terraform to Pulumi:
 
 1. **Import existing resources**: Use `pulumi import` to bring Terraform-managed resources under Pulumi management
 2. **Parallel management**: Run both tools temporarily while migrating
-3. **State migration**: Transfer state ownership gradually
+3. **State migration**: Transfer state ownership gradually, resource-by-resource
 4. **Validation**: Ensure identical infrastructure before switching
 
 ### Import existing resources
@@ -267,7 +281,7 @@ createEnvironmentStack("staging").then(outputs => {
 
 ### Component resources for reusability
 
-Create reusable components that integrate with Terraform:
+Create reusable components that integrate with Terraform, behind the scenes, leaving the complexity of multi-tool management to your platform team, not your development teams:
 
 ```typescript
 // components/WebApplication.ts
@@ -341,7 +355,7 @@ export class WebApplication extends pulumi.ComponentResource {
     }
 }
 
-// Usage
+// Usage: developers create WebApplications in Pulumi, without knowing they depend on Terraform-managed resources
 const app = new WebApplication("my-app", {
     terraformInfrastructure: infrastructureState,
     containerImage: "nginx:latest",
@@ -365,49 +379,28 @@ const app = new WebApplication("my-app", {
 * **[Pulumi Community](https://pulumi.com/community/)**: Join the community slack and forum
 * **[Examples Repository](https://github.com/pulumi/examples)**: Browse hundreds of real-world examples
 * **[Pulumi Blog](https://pulumi.com/blog/)**: Latest updates and case studies
-* **[Pulumi YouTube Channel](https://www.youtube.com/channel/UC2Dhyn4Ev52YhHYoAdEuLUg)**: Video tutorials and demos
+* **[Pulumi YouTube Channel](https://www.youtube.com/pulumitv)**: Video tutorials and demos
 
-### Training and certification
-
-* **[Pulumi Workshops](https://www.pulumi.com/workshops/)**: Hands-on training sessions
-* **[Pulumi Certification](https://www.pulumi.com/certification/)**: Validate your Pulumi expertise
-* **[Pulumi Academy](https://www.pulumi.com/academy/)**: Self-paced learning modules
-
-## Case studies and examples
-
-### Real-world implementations
+### Case studies and real-world implementations
 
 * **[Snowflake's Multi-Cloud Strategy](https://www.pulumi.com/case-studies/snowflake/)**: How Snowflake uses Pulumi with existing tools
 * **[Mercedes-Benz's Platform Engineering](https://www.pulumi.com/case-studies/mercedes-benz/)**: Large-scale infrastructure modernization
 * **[Lemonade's Insurance Platform](https://www.pulumi.com/case-studies/lemonade/)**: Rapid development with Pulumi and Terraform
 
-### Example repositories
+## Getting help and Contributing to Pulumi
 
-* **[Pulumi Examples](https://github.com/pulumi/examples)**: Official examples repository
-* **[Terraform to Pulumi Examples](https://github.com/pulumi/examples/tree/master/terraform-to-pulumi)**: Migration examples
-* **[Multi-Cloud Examples](https://github.com/pulumi/examples/tree/master/multicloud)**: Cross-cloud infrastructure patterns
-
-## Getting help
-
-### Support channels
+Reach out to us via these support channels:
 
 * **[Pulumi Community Slack](https://slack.pulumi.com/)**: Real-time community support
 * **[GitHub Issues](https://github.com/pulumi/pulumi/issues)**: Bug reports and feature requests
-* **[Stack Overflow](https://stackoverflow.com/questions/tagged/pulumi)**: Community Q&A
 * **[Pulumi Support](https://support.pulumi.com/)**: Professional support for Pulumi Cloud customers
-
-### Professional services
-
-* **[Pulumi Professional Services](https://www.pulumi.com/professional-services/)**: Expert assistance with migration and implementation
-* **[Pulumi Training](https://www.pulumi.com/training/)**: Custom training for your team
-* **[Architecture Reviews](https://www.pulumi.com/professional-services/architecture-review/)**: Best practices assessment
-
-## Contributing back
 
 ### Open source contributions
 
+We always welcome contributions, especially from our more advanced users who have practical experience building with both Terraform and Pulumi. Here are some ways you can contribute to the Pulumi ecosystem:
+
 * **[Contribute to Pulumi](https://github.com/pulumi/pulumi/blob/master/CONTRIBUTING.md)**: Help improve Pulumi
-* **[Provider Development](https://www.pulumi.com/docs/using-pulumi/providers/)**: Create new providers
+* **[Provider Development](/docs/iac/extending-pulumi/)**: Create new providers
 * **[Examples and Templates](https://github.com/pulumi/examples/blob/master/CONTRIBUTING.md)**: Share your patterns
 
 ### Community engagement
@@ -415,20 +408,6 @@ const app = new WebApplication("my-app", {
 * **[Pulumi Blog](https://www.pulumi.com/blog/)**: Write about your experience
 * **[Community Events](https://www.pulumi.com/events/)**: Speak at meetups and conferences
 * **[User Groups](https://www.pulumi.com/community/user-groups/)**: Join or start a local user group
-
-## What's next?
-
-Based on your journey through this guide, consider these next steps:
-
-1. **Start small**: Begin with a simple coexistence pattern in your current environment
-2. **Experiment**: Try different integration approaches to find what works for your team
-3. **Build expertise**: Invest in learning both Terraform and Pulumi deeply
-4. **Share knowledge**: Document your integration patterns for your team
-5. **Consider migration**: When ready, plan a gradual migration to Pulumi for new projects
-
-Remember, the goal is not to replace Terraform entirely but to use the right tool for each job while maintaining a cohesive infrastructure management strategy.
-
-Happy infrastructure coding! 🚀
 
 ---
 

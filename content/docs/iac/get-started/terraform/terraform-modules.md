@@ -849,27 +849,7 @@ output "website_url" {
 }
 ```
 
-## Local and private modules
-
-### Local modules
-
-Use local modules from your file system:
-
-```bash
-# Add a local module
-pulumi package add terraform-module-custom --local-path ./modules/custom
-```
-
-### Private Git repositories
-
-Use modules from private repositories:
-
-```bash
-# Add from private Git repository
-pulumi package add terraform-module-private --git-url https://github.com/myorg/terraform-modules.git//modules/custom
-```
-
-### Module versioning
+## Module versioning
 
 Specify module versions for consistency:
 

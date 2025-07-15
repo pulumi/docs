@@ -3,12 +3,12 @@ title_tag: Reference Terraform State | Pulumi for Terraform Users
 title: Reference Terraform State
 h1: "Reference Terraform State"
 meta_desc: Learn how to read from existing Terraform state files in Pulumi for seamless coexistence.
-weight: 3
+weight: 4
 menu:
     iac:
         name: Reference Terraform State
         parent: terraform-get-started
-        weight: 3
+        weight: 4
 
 aliases:
 - /docs/iac/get-started/terraform/reference-state/
@@ -20,15 +20,16 @@ Rather than migrating your entire Terraform infrastructure to Pulumi, you can re
 This enables coexistence where different teams can use their preferred tools while sharing infrastructure.
 
 Common scenarios include:
+
 * Operations teams manage core infrastructure with Terraform
 * Development teams deploy applications with Pulumi
-* Gradual adoption of Pulumi alongside existing Terraform workflows
+* Gradual adoption of Pulumi happens alongside existing Terraform workflows
 
 ## Reference local state files
 
 For Terraform workspaces using local state files, you can reference them directly:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -188,6 +189,8 @@ outputs:
 For production environments, you'll likely reference remote state stored in S3, Terraform Cloud, or other backends:
 
 ### S3 remote state
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -378,6 +381,8 @@ outputs:
 
 ### Terraform Cloud remote state
 
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
 {{% choosable language "typescript" %}}
 
 ```typescript
@@ -478,7 +483,7 @@ resources:
 
 {{% /choosable %}}
 
-## Example: containerized application on ECS
+## Example: Containerized application on ECS
 
 Let's create a practical example where Terraform manages the ECS cluster and ECR repository, while Pulumi manages the containerized application deployment:
 
@@ -526,6 +531,8 @@ output "private_subnet_ids" {
 ```
 
 ### Pulumi application deployment
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -592,6 +599,439 @@ const service = new aws.ecs.Service("app-service", {
 
 export const serviceName = service.name;
 export const taskDefinitionArn = taskDefinition.arn;
+```
+
+{{% /choosable %}}
+
+{{% choosable language "python" %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_terraform as terraform
+
+# Reference Terraform state
+tf_state = terraform.state.S3Reference("infrastructure",
+    bucket="my-terraform-state-bucket",
+    key="infrastructure/terraform.tfstate",
+    region="us-west-2"
+)
+
+# Get infrastructure details from Terraform
+cluster_name = tf_state.get_output("ecs_cluster_name")
+repository_url = tf_state.get_output("ecr_repository_url")
+vpc_id = tf_state.get_output("vpc_id")
+subnet_ids = tf_state.get_output("private_subnet_ids")
+
+# Create ECS task definition
+task_definition = aws.ecs.TaskDefinition("app-task",
+    family="my-app",
+    network_mode="awsvpc",
+    requires_compatibilities=["FARGATE"],
+    cpu="256",
+    memory="512",
+    execution_role_arn=task_role.arn,
+    container_definitions=pulumi.Output.all(repository_url, log_group.name).apply(
+        lambda args: f"""[
+            {{
+                "name": "my-app",
+                "image": "{args[0]}:latest",
+                "essential": true,
+                "portMappings": [
+                    {{
+                        "containerPort": 80,
+                        "protocol": "tcp"
+                    }}
+                ],
+                "logConfiguration": {{
+                    "logDriver": "awslogs",
+                    "options": {{
+                        "awslogs-group": "{args[1]}",
+                        "awslogs-region": "us-west-2",
+                        "awslogs-stream-prefix": "ecs"
+                    }}
+                }}
+            }}
+        ]"""
+    )
+)
+
+# Create ECS service
+service = aws.ecs.Service("app-service",
+    cluster=cluster_name,
+    task_definition=task_definition.arn,
+    desired_count=2,
+    launch_type="FARGATE",
+    network_configuration=aws.ecs.ServiceNetworkConfigurationArgs(
+        subnets=subnet_ids,
+        security_groups=[security_group.id],
+    )
+)
+
+pulumi.export("serviceName", service.name)
+pulumi.export("taskDefinitionArn", task_definition.arn)
+```
+
+{{% /choosable %}}
+
+{{% choosable language "go" %}}
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ecs"
+	"github.com/pulumi/pulumi-terraform/sdk/v5/go/terraform/state"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Reference Terraform state
+		tfState, err := state.NewS3Reference(ctx, "infrastructure", &state.S3ReferenceArgs{
+			Bucket: pulumi.String("my-terraform-state-bucket"),
+			Key:    pulumi.String("infrastructure/terraform.tfstate"),
+			Region: pulumi.String("us-west-2"),
+		})
+		if err != nil {
+			return err
+		}
+
+		// Get infrastructure details from Terraform
+		clusterName := tfState.GetOutput(pulumi.String("ecs_cluster_name"))
+		repositoryUrl := tfState.GetOutput(pulumi.String("ecr_repository_url"))
+		vpcId := tfState.GetOutput(pulumi.String("vpc_id"))
+		subnetIds := tfState.GetOutput(pulumi.String("private_subnet_ids"))
+
+		// Create container definitions
+		containerDefs := pulumi.All(repositoryUrl, logGroup.Name).ApplyT(func(args []interface{}) (string, error) {
+			repoUrl := args[0].(string)
+			logGroupName := args[1].(string)
+
+			containerDef := []map[string]interface{}{
+				{
+					"name":      "my-app",
+					"image":     fmt.Sprintf("%s:latest", repoUrl),
+					"essential": true,
+					"portMappings": []map[string]interface{}{
+						{
+							"containerPort": 80,
+							"protocol":      "tcp",
+						},
+					},
+					"logConfiguration": map[string]interface{}{
+						"logDriver": "awslogs",
+						"options": map[string]interface{}{
+							"awslogs-group":         logGroupName,
+							"awslogs-region":        "us-west-2",
+							"awslogs-stream-prefix": "ecs",
+						},
+					},
+				},
+			}
+
+			jsonBytes, err := json.Marshal(containerDef)
+			if err != nil {
+				return "", err
+			}
+			return string(jsonBytes), nil
+		}).(pulumi.StringOutput)
+
+		// Create ECS task definition
+		taskDefinition, err := ecs.NewTaskDefinition(ctx, "app-task", &ecs.TaskDefinitionArgs{
+			Family:                  pulumi.String("my-app"),
+			NetworkMode:             pulumi.String("awsvpc"),
+			RequiresCompatibilities: pulumi.StringArray{pulumi.String("FARGATE")},
+			Cpu:                     pulumi.String("256"),
+			Memory:                  pulumi.String("512"),
+			ExecutionRoleArn:        taskRole.Arn,
+			ContainerDefinitions:    containerDefs,
+		})
+		if err != nil {
+			return err
+		}
+
+		// Create ECS service
+		service, err := ecs.NewService(ctx, "app-service", &ecs.ServiceArgs{
+			Cluster:        clusterName,
+			TaskDefinition: taskDefinition.Arn,
+			DesiredCount:   pulumi.Int(2),
+			LaunchType:     pulumi.String("FARGATE"),
+			NetworkConfiguration: &ecs.ServiceNetworkConfigurationArgs{
+				Subnets:        subnetIds,
+				SecurityGroups: pulumi.StringArray{securityGroup.ID()},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("serviceName", service.Name)
+		ctx.Export("taskDefinitionArn", taskDefinition.Arn)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Pulumi.Aws.Ecs;
+using Pulumi.Terraform.State;
+
+return await Deployment.RunAsync(() =>
+{
+    // Reference Terraform state
+    var tfState = new S3Reference("infrastructure", new S3ReferenceArgs
+    {
+        Bucket = "my-terraform-state-bucket",
+        Key = "infrastructure/terraform.tfstate",
+        Region = "us-west-2",
+    });
+
+    // Get infrastructure details from Terraform
+    var clusterName = tfState.GetOutput("ecs_cluster_name");
+    var repositoryUrl = tfState.GetOutput("ecr_repository_url");
+    var vpcId = tfState.GetOutput("vpc_id");
+    var subnetIds = tfState.GetOutput("private_subnet_ids");
+
+    // Create container definitions
+    var containerDefinitions = Output.Tuple(repositoryUrl, logGroup.Name).Apply(t =>
+    {
+        var (repoUrl, logGroupName) = t;
+        var containerDef = new[]
+        {
+            new Dictionary<string, object>
+            {
+                ["name"] = "my-app",
+                ["image"] = $"{repoUrl}:latest",
+                ["essential"] = true,
+                ["portMappings"] = new[]
+                {
+                    new Dictionary<string, object>
+                    {
+                        ["containerPort"] = 80,
+                        ["protocol"] = "tcp"
+                    }
+                },
+                ["logConfiguration"] = new Dictionary<string, object>
+                {
+                    ["logDriver"] = "awslogs",
+                    ["options"] = new Dictionary<string, object>
+                    {
+                        ["awslogs-group"] = logGroupName,
+                        ["awslogs-region"] = "us-west-2",
+                        ["awslogs-stream-prefix"] = "ecs"
+                    }
+                }
+            }
+        };
+        return JsonSerializer.Serialize(containerDef);
+    });
+
+    // Create ECS task definition
+    var taskDefinition = new TaskDefinition("app-task", new TaskDefinitionArgs
+    {
+        Family = "my-app",
+        NetworkMode = "awsvpc",
+        RequiresCompatibilities = new[] { "FARGATE" },
+        Cpu = "256",
+        Memory = "512",
+        ExecutionRoleArn = taskRole.Arn,
+        ContainerDefinitions = containerDefinitions,
+    });
+
+    // Create ECS service
+    var service = new Service("app-service", new ServiceArgs
+    {
+        Cluster = clusterName,
+        TaskDefinition = taskDefinition.Arn,
+        DesiredCount = 2,
+        LaunchType = "FARGATE",
+        NetworkConfiguration = new ServiceNetworkConfigurationArgs
+        {
+            Subnets = subnetIds,
+            SecurityGroups = new[] { securityGroup.Id },
+        },
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["serviceName"] = service.Name,
+        ["taskDefinitionArn"] = taskDefinition.Arn,
+    };
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ecs.Service;
+import com.pulumi.aws.ecs.ServiceArgs;
+import com.pulumi.aws.ecs.ServiceNetworkConfigurationArgs;
+import com.pulumi.aws.ecs.TaskDefinition;
+import com.pulumi.aws.ecs.TaskDefinitionArgs;
+import com.pulumi.core.Output;
+import com.pulumi.terraform.state.S3Reference;
+import com.pulumi.terraform.state.S3ReferenceArgs;
+import com.google.gson.Gson;
+
+import java.util.List;
+import java.util.Map;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // Reference Terraform state
+            var tfState = new S3Reference("infrastructure", S3ReferenceArgs.builder()
+                .bucket("my-terraform-state-bucket")
+                .key("infrastructure/terraform.tfstate")
+                .region("us-west-2")
+                .build());
+
+            // Get infrastructure details from Terraform
+            var clusterName = tfState.getOutput("ecs_cluster_name");
+            var repositoryUrl = tfState.getOutput("ecr_repository_url");
+            var vpcId = tfState.getOutput("vpc_id");
+            var subnetIds = tfState.getOutput("private_subnet_ids");
+
+            // Create container definitions
+            var containerDefinitions = Output.tuple(repositoryUrl, logGroup.name()).apply(t -> {
+                var repoUrl = t.t1;
+                var logGroupName = t.t2;
+                
+                var containerDef = List.of(Map.of(
+                    "name", "my-app",
+                    "image", repoUrl + ":latest",
+                    "essential", true,
+                    "portMappings", List.of(Map.of(
+                        "containerPort", 80,
+                        "protocol", "tcp"
+                    )),
+                    "logConfiguration", Map.of(
+                        "logDriver", "awslogs",
+                        "options", Map.of(
+                            "awslogs-group", logGroupName,
+                            "awslogs-region", "us-west-2",
+                            "awslogs-stream-prefix", "ecs"
+                        )
+                    )
+                ));
+                
+                return new Gson().toJson(containerDef);
+            });
+
+            // Create ECS task definition
+            var taskDefinition = new TaskDefinition("app-task", TaskDefinitionArgs.builder()
+                .family("my-app")
+                .networkMode("awsvpc")
+                .requiresCompatibilities("FARGATE")
+                .cpu("256")
+                .memory("512")
+                .executionRoleArn(taskRole.arn())
+                .containerDefinitions(containerDefinitions)
+                .build());
+
+            // Create ECS service
+            var service = new Service("app-service", ServiceArgs.builder()
+                .cluster(clusterName)
+                .taskDefinition(taskDefinition.arn())
+                .desiredCount(2)
+                .launchType("FARGATE")
+                .networkConfiguration(ServiceNetworkConfigurationArgs.builder()
+                    .subnets(subnetIds)
+                    .securityGroups(securityGroup.id())
+                    .build())
+                .build());
+
+            ctx.export("serviceName", service.name());
+            ctx.export("taskDefinitionArn", taskDefinition.arn());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "yaml" %}}
+
+```yaml
+name: ecs-app-deployment
+runtime: yaml
+description: Deploy containerized app to ECS using Terraform state
+
+resources:
+  # Reference Terraform state
+  infrastructure:
+    type: terraform:state:S3Reference
+    properties:
+      bucket: my-terraform-state-bucket
+      key: infrastructure/terraform.tfstate
+      region: us-west-2
+
+  # Create ECS task definition
+  app-task:
+    type: aws:ecs:TaskDefinition
+    properties:
+      family: my-app
+      networkMode: awsvpc
+      requiresCompatibilities:
+        - FARGATE
+      cpu: "256"
+      memory: "512"
+      executionRoleArn: ${task-role.arn}
+      containerDefinitions: |
+        [
+          {
+            "name": "my-app",
+            "image": "${infrastructure.outputs.ecr_repository_url}:latest",
+            "essential": true,
+            "portMappings": [
+              {
+                "containerPort": 80,
+                "protocol": "tcp"
+              }
+            ],
+            "logConfiguration": {
+              "logDriver": "awslogs",
+              "options": {
+                "awslogs-group": "${log-group.name}",
+                "awslogs-region": "us-west-2",
+                "awslogs-stream-prefix": "ecs"
+              }
+            }
+          }
+        ]
+
+  # Create ECS service
+  app-service:
+    type: aws:ecs:Service
+    properties:
+      cluster: ${infrastructure.outputs.ecs_cluster_name}
+      taskDefinition: ${app-task.arn}
+      desiredCount: 2
+      launchType: FARGATE
+      networkConfiguration:
+        subnets: ${infrastructure.outputs.private_subnet_ids}
+        securityGroups:
+          - ${security-group.id}
+
+outputs:
+  serviceName: ${app-service.name}
+  taskDefinitionArn: ${app-task.arn}
 ```
 
 {{% /choosable %}}
