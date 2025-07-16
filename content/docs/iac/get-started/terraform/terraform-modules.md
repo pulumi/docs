@@ -25,23 +25,20 @@ Use the `pulumi package add` command to add Terraform modules to your project:
 
 ```bash
 # Add a module from the Terraform Registry
-$ pulumi package add terraform-module-vpc-aws
-
-# Add a module from a Git repository
-$ pulumi package add terraform-module-vpc-aws --git-url https://github.com/terraform-aws-modules/terraform-aws-vpc
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
 
 # Add a local module
-$ pulumi package add terraform-module-custom --local-path ./modules/custom
+$ pulumi package add terraform-module ./path/to/module localmod
 ```
 
 ## Example: AWS VPC module
 
-Let's use the popular `terraform-aws-vpc` module to create a VPC with subnets, and then deploy an EC2 instance in that VPC:
+Let's use the popular AWS `vpc` module to create a VPC with subnets, and then deploy an EC2 instance in that VPC:
 
 First, add the VPC module:
 
 ```bash
-$ pulumi package add terraform-module-vpc-aws
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
 ```
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
@@ -53,7 +50,7 @@ Then use it in your Pulumi program:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as vpc from "@pulumi/terraform-module-vpc-aws";
+import * as vpc from "@pulumi/vpc";
 
 // Use the Terraform VPC module
 const myVpc = new vpc.Vpc("my-vpc", {
@@ -156,7 +153,7 @@ Then use it in your Pulumi program:
 ```python
 import pulumi
 import pulumi_aws as aws
-import pulumi_terraform_module_vpc_aws as vpc
+import pulumi_vpc as vpc
 
 # Use the Terraform VPC module
 my_vpc = vpc.Vpc("my-vpc",
@@ -261,7 +258,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-	"github.com/pulumi/pulumi-terraform-module-vpc-aws/sdk/go/vpc"
+	vpc "github.com/pulumi/pulumi-terraform-module/sdks/go/vpc/v5/vpc"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -386,7 +383,7 @@ Then use it in your Pulumi program:
 using System.Collections.Generic;
 using Pulumi;
 using Pulumi.Aws.Ec2;
-using Pulumi.TerraformModuleVpcAws;
+using Pulumi.Vpc;
 
 return await Deployment.RunAsync(() =>
 {
@@ -518,8 +515,8 @@ import com.pulumi.aws.ec2.inputs.GetAmiFilterArgs;
 import com.pulumi.aws.ec2.inputs.SecurityGroupEgressArgs;
 import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 import com.pulumi.core.Output;
-import com.pulumi.terraformmodulevpcaws.Vpc;
-import com.pulumi.terraformmodulevpcaws.VpcArgs;
+import com.pulumi.Vpc;
+import com.pulumi.VpcArgs;
 
 import java.util.List;
 import java.util.Map;
@@ -640,7 +637,7 @@ variables:
 resources:
   # Use the Terraform VPC module
   my-vpc:
-    type: terraform-module-vpc-aws:index:Vpc
+    type: vpc:index:Vpc
     properties:
       name: my-vpc
       cidr: 10.0.0.0/16
