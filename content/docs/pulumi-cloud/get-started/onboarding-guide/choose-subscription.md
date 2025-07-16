@@ -81,7 +81,7 @@ Both billing options include detailed usage insights through the Billing & usage
 {{% notes type="info" %}}
 Before getting started with self-hosted, you'll need to set up your [state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#logging-into-the-aws-s3-backend) and [self-hosting infrastructure](https://www.pulumi.com/docs/pulumi-cloud/admin/self-hosted/)
 
-As part of this process, you'll choose a custom URL that you'll use instead of app.pulumi.com
+As part of this process, you'll choose a custom URL that you'll use instead of [app.pulumi.com](https://app.pulumi.com)
 {{% /notes %}}
 
 ### Create your account
