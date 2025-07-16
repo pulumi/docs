@@ -33,7 +33,7 @@ The following are a few examples of new capabilities available for Pulumi users 
 ### Install the Software
 
 1. Install Pulumi 3.132.0 (or greater) using [these instructions](/docs/install/).
-2. Install the [Pulumi VS Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools) from the Visual Studio Marketplace.
+2. Install the [Pulumi VS Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot) from the Visual Studio Marketplace.
 
 ## Debugging Pulumi IaC Programs
 
