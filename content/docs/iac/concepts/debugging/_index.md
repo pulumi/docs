@@ -26,7 +26,7 @@ Pulumi provides an extension that allows you to launch and debug Pulumi programs
 
 ### Install the extension
 
-Install the [Pulumi extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools) using Visual Studio Marketplace.
+Install the [Pulumi extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot) using Visual Studio Marketplace.
 
 ### Open a project
 
