@@ -77,7 +77,7 @@ The [Pulumi Tools Visual Studio Code extension](https://marketplace.visualstudio
 
 Using Pulumi Copilot in Visual Studio Code (VS Code) is as simple as 1-2-3:
 
-1. Install the [Pulumi VS Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools)
+1. Install the [Pulumi VS Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot)
 2. Open VS Code and navigate to Copilot Chat (icon to the right of the search bar)
 3. Type `@pulumi` to activate Pulumi Copilot
 
