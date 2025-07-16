@@ -239,7 +239,7 @@ The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open
 
 <a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
 
-[s3-bucket-example]: https://www.pulumi.com/ai/
+[s3-bucket-example]: https://www.pulumi.com/answers/uploading-files-to-aws-s3-bucket/
 [npm-mimetypes]: https://www.npmjs.com/package/mime-types
 [npm-text-to-image]: https://www.npmjs.com/package/text-to-image
 [cnunciato-image-badge-example]: https://gist.github.com/cnunciato/2461f87e59b3b50c14cbefc33b91738e
