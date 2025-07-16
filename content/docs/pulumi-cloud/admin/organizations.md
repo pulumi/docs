@@ -135,7 +135,7 @@ Pulumi will not have access to any of the organization's source code, issues, or
 
 ### GitLab identity provider
 
-[GitLab Groups](https://docs.gitlab.com/ce/user/group/)
+[GitLab Groups](https://docs.gitlab.com/user/group/)
 
 To add a GitLab-backed organization to Pulumi, an admin of the GitLab group
 must add the group to Pulumi, and invite its members to join Pulumi.

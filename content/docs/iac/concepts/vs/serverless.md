@@ -33,4 +33,4 @@ AWS CloudFormation -- and that you as a user are left orchestrating changes in m
 This often leads to the very "pile of bash scripts" problems that you had sought to solve in the first place.
 
 For a good specific comparison of Pulumi and the Serverless Framework, refer to this example: [the before code using the Serverless Framework](https://serverless.com/blog/serverless-application-for-long-running-process-fargate-lambda/) takes about 38 pages
-of explanation, including manual steps and AWS CloudFormation; [the after code using Pulumi](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is only about 38 lines of code.
+of explanation, including manual steps and AWS CloudFormation; [the after code using Pulumi](https://github.com/pulumi/examples/tree/5f3eae87bb132595e4c60d2d5f8e8ee1473f6a7b/cloud-js-thumbnailer) is only about 38 lines of code.

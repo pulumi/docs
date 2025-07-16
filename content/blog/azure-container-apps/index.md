@@ -10,7 +10,7 @@ tags:
     - azure
 ---
 
-Today, Microsoft announced a new general-purpose serverless container platform: [Azure Container Apps]([https://aka.ms/containerapps/](https://aka.ms/containerapps/ignite-blog)). Container Apps is a fully managed platform for microservice applications that runs on top of Kubernetes and open-source technologies like KEDA, Envoy, and Dapr.
+Today, [Microsoft announced](https://aka.ms/containerapps/ignite-blog) a new general-purpose serverless container platform: [Azure Container Apps](https://aka.ms/containerapps/). Container Apps is a fully managed platform for microservice applications that runs on top of Kubernetes and open-source technologies like KEDA, Envoy, and Dapr.
 
 Container Apps are designed to abstract infrastructure management with flexible serverless containers. Developers can run containers at scale without the burden of standing up and managing a Kubernetes cluster manually.
 

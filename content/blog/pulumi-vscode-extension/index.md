@@ -15,7 +15,7 @@ tags:
 
 At the heart of Pulumi's approach to cloud infrastructure and secrets management is a belief in empowering engineers to use the best software engineering tools to manage complexity at scale and to be maximally productive building cloud infrastructure and applications for their businesses.  
 
-Today, we're excited to announce a next big step in delivering great software engineering tools for Pulumi users, with the launch of a new **Pulumi Visual Studio Code (VS Code) Extension**.  The [Pulumi VS Code Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools) brings Pulumi key features for Pulumi IaC and Pulumi ESC directly into the IDE environment that many Pulumi users work in every day.  Pulumi IaC users can now debug their applications and get Pulumi YAML language support directly in VS Code. And Pulumi ESC users can now create and manage environments, secrets and configuration directly within the IDE with rich IDE features.
+Today, we're excited to announce a next big step in delivering great software engineering tools for Pulumi users, with the launch of a new **Pulumi Visual Studio Code (VS Code) Extension**.  The [Pulumi VS Code Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot) brings Pulumi key features for Pulumi IaC and Pulumi ESC directly into the IDE environment that many Pulumi users work in every day.  Pulumi IaC users can now debug their applications and get Pulumi YAML language support directly in VS Code. And Pulumi ESC users can now create and manage environments, secrets and configuration directly within the IDE with rich IDE features.
 
 <!--more-->
 
@@ -33,7 +33,7 @@ The following are a few examples of new capabilities available for Pulumi users 
 ### Install the Software
 
 1. Install Pulumi 3.132.0 (or greater) using [these instructions](/docs/install/).
-2. Install the [Pulumi VS Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools) from the Visual Studio Marketplace.
+2. Install the [Pulumi VS Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot) from the Visual Studio Marketplace.
 
 ## Debugging Pulumi IaC Programs
 
