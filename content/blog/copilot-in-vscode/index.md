@@ -129,6 +129,6 @@ Settings > Access Management > Pulumi Copilot in the Pulumi Cloud console.
 Try it now in VS Code and experience AI-driven cloud infrastructure management right in your IDE.
 
 [👉 Start Using Pulumi Copilot](https://app.pulumi.com)
-[👉 Start Using Pulumi Copilot in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools)
+[👉 Start Using Pulumi Copilot in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot)
 
 We can't wait to see what you build with Pulumi Copilot! 🚀
