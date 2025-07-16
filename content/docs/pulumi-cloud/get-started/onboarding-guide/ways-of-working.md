@@ -88,10 +88,10 @@ It's common to give developers their own stacks for development and testing. Pul
 
 - **Individual developer stacks**: Each developer gets their own complete environment
 - **Shared infrastructure**: Developers share costly resources like databases while having their own application instances
-- **[Review stacks](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/review-stacks/)**: Short-lived stacks for each pull request that are automatically torn down
+- **[Review stacks](https://www.pulumi.com/docs/pulumi-cloud/deployments/review-stacks/)**: Short-lived stacks for each pull request that are automatically torn down
 - **[TTL stacks](https://www.pulumi.com/docs/pulumi-cloud/deployments/ttl/)**: Automatically destroyed after a specified timeframe to prevent cloud waste
 
-Use [stack references](https://www.pulumi.com/docs/using-pulumi/stack-references/) to factor out shared infrastructure and create flexible project architectures.
+Use [stack references](https://www.pulumi.com/blog/iac-recommended-practices-using-stack-references/) to factor out shared infrastructure and create flexible project architectures.
 
 ### Enabling developer self-service
 
