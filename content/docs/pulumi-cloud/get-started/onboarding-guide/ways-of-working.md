@@ -107,10 +107,10 @@ Developers check in YAML files to a Git repository and let CI/CD handle the rest
 Developers log into a portal and click buttons to provision infrastructure. Options include:
 
 - Pulumi's organization templates and New Project Wizard
-- [Pulumi's Backstage plugin](https://www.pulumi.com/docs/using-pulumi/crosswalk/kubernetes/backstage/)
+- [Pulumi's Backstage plugin](https://www.pulumi.com/blog/pulumi-backstage-plugin/)
 - Custom portals powered by [Pulumi's Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/)
 
-[Learn more about building developer portals](https://www.pulumi.com/docs/using-pulumi/crosswalk/kubernetes/backstage/).
+[Learn more about building developer portals](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/).
 
 ## Working together on deployments
 
@@ -135,11 +135,9 @@ While most teams start by running the Pulumi CLI manually, you'll eventually wan
 3. Configure your pipelines and testing strategies
 4. Set up [Pulumi Cloud access tokens](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/) for automation
 
-[Learn more about Infrastructure CI/CD](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/).
-
 ### Guarding against drift
 
-Drift occurs when changes happen outside your IaC pipeline, causing conflicts between your last known deployment and your cloud resources' current state. This can cause security issues or outages during your next deployment. Pulumi supports [detecting and remediating drift](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/drift-detection/).
+Drift occurs when changes happen outside your IaC pipeline, causing conflicts between your last known deployment and your cloud resources' current state. This can cause security issues or outages during your next deployment. Pulumi supports [detecting and remediating drift](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift).
 
 ## Integrating with and extending Pulumi
 
@@ -160,13 +158,13 @@ React to lifecycle events in Pulumi Cloud by invoking custom REST API endpoints.
 
 Pulumi supports hundreds of providers out of the box, but you can extend it further:
 
-**[Custom providers](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/how-to-author/)**
+**[Custom providers](https://www.pulumi.com/docs/iac/packages-and-automation/pulumi-packages/authoring/)**
 Create providers for new or internal systems where neither Terraform nor Pulumi providers exist. This involves creating resource schemas and CRUD operations.
 
-**[Terraform provider bridging](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/how-to-author/)**
+**[Terraform provider bridging](https://www.pulumi.com/blog/any-terraform-provider/)**
 Bridge any Terraform provider at development time to use it from Pulumi IaC programs.
 
-**[Dynamic providers](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/how-to-author/)**
+**[Dynamic providers](https://www.pulumi.com/docs/iac/concepts/resources/dynamic-providers/)**
 Write CRUD logic inline in your Pulumi IaC program without building a separate provider.
 
 ### Contributing to open source
