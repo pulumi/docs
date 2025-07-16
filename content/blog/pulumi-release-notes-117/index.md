@@ -84,7 +84,7 @@ The Pulumi Java SDK is now generally available with its 1.0 release, providing f
 
 ### Pulumi Copilot in VSCode
 
-Pulumi Copilot is now available in Visual Studio Code, bringing AI-powered assistance directly to your infrastructure development environment. The VSCode extension helps you write, understand, and debug Pulumi code with inline explanations, transformation suggestions, and code generation capabilities. Copilot can also assist with converting between Pulumi languages and translating from other IaC tools like Terraform and CloudFormation. This integration makes it easier to learn Pulumi, accelerate your infrastructure development, and solve complex configuration challenges. [Read the blog post](/blog/copilot-in-vscode/) or [install the extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-ai) today.
+Pulumi Copilot is now available in Visual Studio Code, bringing AI-powered assistance directly to your infrastructure development environment. The VSCode extension helps you write, understand, and debug Pulumi code with inline explanations, transformation suggestions, and code generation capabilities. Copilot can also assist with converting between Pulumi languages and translating from other IaC tools like Terraform and CloudFormation. This integration makes it easier to learn Pulumi, accelerate your infrastructure development, and solve complex configuration challenges. [Read the blog post](/blog/copilot-in-vscode/) or [install the extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot) today.
 
 ### Autonaming Configuration
 

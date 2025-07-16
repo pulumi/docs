@@ -21,7 +21,7 @@ aliases:
 
 ## Overview
 
-[Snyk container scanning](https://github.com/pulumi/templates-policy/tree/master/snyk-typescript) is a Pulumi policy as code template that allows you to uses the [Snyk CLI](https://docs.snyk.io/scan-using-snyk/snyk-container/scan-container-images) to scan [`docker.Image`](/registry/packages/docker/api-docs/image/) resources for vulnerabilities.
+[Snyk container scanning](https://github.com/pulumi/templates-policy/tree/master/snyk-typescript) is a Pulumi policy as code template that allows you to uses the [Snyk CLI](https://docs.snyk.io/cli-ide-and-ci-cd-integrations/snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-container) to scan [`docker.Image`](/registry/packages/docker/api-docs/image/) resources for vulnerabilities.
 
 For more information on Pulumi's Policy as Code solution, see [Get started with Pulumi policy as code](/docs/using-pulumi/crossguard/get-started/).
 
