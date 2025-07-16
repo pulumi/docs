@@ -49,7 +49,7 @@ social:
 ---
 Programming languages offer dozens of advantages for writing Infrastructure as Code (IaC). One of them is that Large Language Models are  effective at using general-purpose programming languages, thanks to the vast amount of high-quality training data available. Building on this advantage, we introduced Pulumi AI and Pulumi Copilot last year to enhance Infrastructure-as-Code development with generative AI capabilities. These tools have significantly streamlined infrastructure deployment for tens of thousands of developers.
 
-Today, we are thrilled to announce that Pulumi Copilot is now available directly within [Visual Studio Code Copilot](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools). By simply typing @pulumi in Copilot Chat, developers can now access the power of Pulumi Copilot right within their IDE, saving them time on writing IaC and getting infrastructure deployed.
+Today, we are thrilled to announce that Pulumi Copilot is now available directly within [Visual Studio Code Copilot](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot). By simply typing @pulumi in Copilot Chat, developers can now access the power of Pulumi Copilot right within their IDE, saving them time on writing IaC and getting infrastructure deployed.
 
 <!--more-->
 ## Video Walk Through
