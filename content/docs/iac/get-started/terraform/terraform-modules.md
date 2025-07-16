@@ -38,15 +38,15 @@ pulumi package add terraform-module-custom --local-path ./modules/custom
 
 Let's use the popular `terraform-aws-vpc` module to create a VPC with subnets, and then deploy an EC2 instance in that VPC:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language "typescript" %}}
-
 First, add the VPC module:
 
 ```bash
 pulumi package add terraform-module-vpc-aws
 ```
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
+{{% choosable language "typescript" %}}
 
 Then use it in your Pulumi program:
 
@@ -151,12 +151,6 @@ export const websiteUrl = pulumi.interpolate`http://${webServer.publicIp}`;
 
 {{% choosable language "python" %}}
 
-First, add the VPC module:
-
-```bash
-pulumi package add terraform-module-vpc-aws
-```
-
 Then use it in your Pulumi program:
 
 ```python
@@ -259,12 +253,6 @@ pulumi.export("websiteUrl", pulumi.Output.format("http://{0}", web_server.public
 {{% /choosable %}}
 
 {{% choosable language "go" %}}
-
-First, add the VPC module:
-
-```bash
-pulumi package add terraform-module-vpc-aws
-```
 
 Then use it in your Pulumi program:
 
@@ -392,12 +380,6 @@ echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.h
 
 {{% choosable language "csharp" %}}
 
-First, add the VPC module:
-
-```bash
-pulumi package add terraform-module-vpc-aws
-```
-
 Then use it in your Pulumi program:
 
 ```csharp
@@ -520,12 +502,6 @@ echo ""<h1>Hello from Pulumi and Terraform modules!</h1>"" > /var/www/html/index
 
 {{% choosable language "java" %}}
 
-First, add the VPC module:
-
-```bash
-pulumi package add terraform-module-vpc-aws
-```
-
 Then use it in your Pulumi program:
 
 ```java
@@ -641,12 +617,6 @@ public class App {
 {{% /choosable %}}
 
 {{% choosable language "yaml" %}}
-
-First, add the VPC module:
-
-```bash
-pulumi package add terraform-module-vpc-aws
-```
 
 Then use it in your Pulumi program:
 
