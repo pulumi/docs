@@ -16,7 +16,7 @@ Security is a team effort that's best established from the outset. Pulumi Cloud 
 
 ### Choose your compliance approach
 
-Modern enterprises face rigorous compliance requirements. Pulumi Cloud is SOC 2 Type II certified and AWS-reviewed for compliance best practices. The infrastructure hosting Pulumi Cloud aligns with IT security standards including SOC 1/SSAE 16/ISAE 3402, SOC 2, SOC 3, FISMA, FedRAMP, DOD SRG Levels 2 and 4, PCI DSS Level 1, EU Model Clauses, ISO 9001/27001/27017/27018, ITAR, IRAP, FIPS 140-2, MLPS Level 3, and MTCS. Learn more at Pulumi Security.
+Modern enterprises face rigorous compliance requirements. Pulumi Cloud is SOC 2 Type II certified and AWS-reviewed for compliance best practices. The infrastructure hosting Pulumi Cloud aligns with IT security standards including SOC 1/SSAE 16/ISAE 3402, SOC 2, SOC 3, FISMA, FedRAMP, DOD SRG Levels 2 and 4, PCI DSS Level 1, EU Model Clauses, ISO 9001/27001/27017/27018, ITAR, IRAP, FIPS 140-2, MLPS Level 3, and MTCS. Learn more at [Pulumi Security](https://www.pulumi.com/security/).
 
 Use Pulumi's Policy as Code engine, [CrossGuard](https://www.pulumi.com/docs/iac/crossguard/), to enforce compliant infrastructure practices. CrossGuard includes hundreds of out-of-the-box policies for AWS, Azure, Google Cloud, and Kubernetes, spanning PCI DSS, ISO 27001, SOC 2, HITRUST, and CIS Benchmarks. You can also write custom policies for your specific industry or enterprise requirements.
 
@@ -26,11 +26,11 @@ Pulumi Cloud maintains an audit log of every activity and who performed it for c
 
 ### Select your cloud authentication method
 
-Pulumi supports hundreds of cloud providers, though most organizations use AWS, Azure, Google Cloud, and Kubernetes. Other supported providers include SaaS infrastructure products like Cloudflare, DataDog, MongoDB, and Snowflake, plus on-premises technologies like VMware vSphere. Find the complete list in the Pulumi Registry, your one-stop shop for provider documentation and configuration guidance.
+Pulumi supports hundreds of cloud providers, though most organizations use AWS, Azure, Google Cloud, and Kubernetes. Other supported providers include SaaS infrastructure products like Cloudflare, DataDog, MongoDB, and Snowflake, plus on-premises technologies like VMware vSphere. Find the complete list in the [Pulumi Registry](https://pulumi.com/registry), your one-stop shop for provider documentation and configuration guidance.
 
 **Recommended approach:** Use Pulumi ESC's OpenID Connect (OIDC) support for [dynamic, short-lived credentials](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/). This is the most secure method and should be preferred for supported providers.
 
-**Alternative approach:** If your chosen cloud lacks Pulumi ESC OIDC support, consult the registry documentation. Each provider has an "Install & config" section with authentication guidance. Pulumi uses native tools and techniques for authentication, keeping it consistent with your existing usage patterns.
+**Alternative approach:** If your chosen cloud lacks Pulumi ESC OIDC support, consult the registry documentation. Each provider has an "Install & config" section with authentication guidance. See [AWS Installation & Configuration](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/) as an example. Pulumi uses native tools and techniques for authentication, keeping it consistent with your existing usage patterns.
 
 ## Test your infrastructure code
 
