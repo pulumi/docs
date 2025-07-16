@@ -24,7 +24,11 @@ If you have existing cloud infrastructure to bring into Pulumi IaC, you have sev
 
 **Get professional help:** Pulumi offers professional services to help with migration.
 
+{{% notes type="info" %}}
+
 Learn more at the [Pulumi Migration Hub](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/) or [detailed migration tooling documentation](https://www.pulumi.com/docs/iac/adopting-pulumi/).
+
+{{%/notes%}}
 
 ## Drive and measure migration success
 
