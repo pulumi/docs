@@ -21,7 +21,9 @@ Learn foundational approaches and methodologies for building with Pulumi IDP:
 
 ## Patterns
 
-Coming soon: Common architectural patterns and design approaches for organizing your infrastructure code and workflows.
+Common architectural patterns and design approaches for organizing your infrastructure code and workflows. Examples include [one ESC environment per service](/docs/idp/well-architected/patterns/one-esc-environment-per-service), [composable environments](/docs/idp/well-architected/patterns/composable-environments), and [policies as tests](/docs/idp/well-architected/patterns/policies-as-tests).
+
+[View all patterns →](/docs/idp/well-architected/patterns)
 
 ## Blueprints
 
