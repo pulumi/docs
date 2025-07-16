@@ -251,7 +251,7 @@ func TestRandomLogin(t *testing.T) {
 }
 ```
 
-For more information about component resources, see the blog post [Announcing the Next-Generation of Pulumi Components: Enabling Infrastructure Abstractions](../pulumi-components/index.md).
+For more information about component resources, see the blog post [Announcing the Next-Generation of Pulumi Components: Enabling Infrastructure Abstractions](/blog/pulumi-components/).
 
 ## Seamless Multi-Language Support and Sharing
 

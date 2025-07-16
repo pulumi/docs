@@ -49,7 +49,7 @@ social:
 ---
 Programming languages offer dozens of advantages for writing Infrastructure as Code (IaC). One of them is that Large Language Models are  effective at using general-purpose programming languages, thanks to the vast amount of high-quality training data available. Building on this advantage, we introduced Pulumi AI and Pulumi Copilot last year to enhance Infrastructure-as-Code development with generative AI capabilities. These tools have significantly streamlined infrastructure deployment for tens of thousands of developers.
 
-Today, we are thrilled to announce that Pulumi Copilot is now available directly within [Visual Studio Code Copilot](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools). By simply typing @pulumi in Copilot Chat, developers can now access the power of Pulumi Copilot right within their IDE, saving them time on writing IaC and getting infrastructure deployed.
+Today, we are thrilled to announce that Pulumi Copilot is now available directly within [Visual Studio Code Copilot](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools). By simply typing @pulumi in Copilot Chat, developers can now access the power of Pulumi Copilot right within their IDE, saving them time on writing IaC and getting infrastructure deployed.
 
 <!--more-->
 ## Video Walk Through
@@ -71,13 +71,13 @@ Pulumi Copilot combines industry-leading AI models with Pulumi specific knowledg
 
 ### The Pulumi Copilot REST API
 
-The [Pulumi Tools Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools) is powered by the recently announced [Pulumi Copilot REST API](/blog/pulumi-copilot-rest), which enables developers to integrate Pulumi Copilot's capabilities into their own tools and platforms. Just as we've built this extension to bring Pulumi Copilot directly into your development environment, you can use the same REST API to create your own innovative integrations, whether that's a custom CLI tool, a chat bot, or another IDE extension. The API's support for multi-turn conversations and contextual understanding makes it possible to build rich, interactive experiences like the one we're delivering today.
+The [Pulumi Tools Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools) is powered by the recently announced [Pulumi Copilot REST API](/blog/pulumi-copilot-rest), which enables developers to integrate Pulumi Copilot's capabilities into their own tools and platforms. Just as we've built this extension to bring Pulumi Copilot directly into your development environment, you can use the same REST API to create your own innovative integrations, whether that's a custom CLI tool, a chat bot, or another IDE extension. The API's support for multi-turn conversations and contextual understanding makes it possible to build rich, interactive experiences like the one we're delivering today.
 
 ## How to Use Pulumi Copilot in Visual Studio Code
 
 Using Pulumi Copilot in Visual Studio Code (VS Code) is as simple as 1-2-3:
 
-1. Install the [Pulumi VS Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools)
+1. Install the [Pulumi VS Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools)
 2. Open VS Code and navigate to Copilot Chat (icon to the right of the search bar)
 3. Type `@pulumi` to activate Pulumi Copilot
 
@@ -129,6 +129,6 @@ Settings > Access Management > Pulumi Copilot in the Pulumi Cloud console.
 Try it now in VS Code and experience AI-driven cloud infrastructure management right in your IDE.
 
 [👉 Start Using Pulumi Copilot](https://app.pulumi.com)
-[👉 Start Using Pulumi Copilot in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools)
+[👉 Start Using Pulumi Copilot in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools)
 
 We can't wait to see what you build with Pulumi Copilot! 🚀
