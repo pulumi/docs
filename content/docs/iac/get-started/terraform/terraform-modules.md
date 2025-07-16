@@ -816,18 +816,6 @@ output "website_url" {
 }
 ```
 
-## Module versioning
-
-Specify module versions for consistency:
-
-```bash
-# Add a specific version
-$ pulumi package add terraform-module-vpc-aws --version 5.0.0
-
-# Add from Git with a specific tag
-$ pulumi package add terraform-module-vpc-aws --git-url https://github.com/terraform-aws-modules/terraform-aws-vpc.git --git-tag v5.0.0
-```
-
 ## Best practices
 
 1. **Pin module versions**: Always specify module versions in production
