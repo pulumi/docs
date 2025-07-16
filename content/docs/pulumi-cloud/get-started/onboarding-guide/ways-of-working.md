@@ -44,7 +44,7 @@ Each IaC project has its own set of stacks, so you may want ESC environments rep
 
 {{% notes type="info" %}}
 
-[Learn more about organizing projects and stacks](https://www.pulumi.com/docs/using-pulumi/organizing-projects-stacks/).
+Learn more about [organizing projects and stacks](https://www.pulumi.com/docs/using-pulumi/organizing-projects-stacks/) here.
 
 {{%/notes%}}
 
@@ -76,9 +76,9 @@ Teams are groups of individual users that typically reflect your company's struc
 
 ### Configuring Single Sign-On (SSO)
 
-Many organizations prefer to use Single Sign-On (SSO) with identity providers like Microsoft Entra ID, Google Workspace, Okta, or any SAML 2.0 compliant provider. If you have SSO with System for Cross-domain Identity Management (SCIM) enabled, onboarding and offboarding happen automatically. Otherwise, you can continue using email, GitHub, GitLab, or Atlassian identity. [Learn about configuring SSO](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml-sso/).
+Many organizations prefer to use Single Sign-On (SSO) with identity providers like Microsoft Entra ID, Google Workspace, Okta, or any SAML 2.0 compliant provider. If you have SSO with System for Cross-domain Identity Management (SCIM) enabled, onboarding and offboarding happen automatically. Otherwise, you can continue using email, GitHub, GitLab, or Atlassian identity. [Learn about configuring SSO](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/).
 
-Once you've completed the setup steps, you're ready to invite your team. Refer to [Inviting members to an organization](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/#inviting-members-to-an-organization) for detailed instructions.
+Once you've completed the setup steps, you're ready to invite your team. Refer to [Inviting members to an organization](https://www.pulumi.com/docs/pulumi-cloud/admin/organizations/#inviting-members-to-an-organization) for detailed instructions.
 
 ### Creating productive developer experiences
 
