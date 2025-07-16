@@ -6,7 +6,6 @@ menu:
     cloud:
         name: Select the right model 
         parent: pulumi-onboarding-guide
-        weight: 3
         identifier: select-a-model
 ---
 

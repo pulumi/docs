@@ -6,7 +6,6 @@ menu:
     cloud:
         name: Ways of working
         parent: pulumi-onboarding-guide
-        weight: 3
         identifier: ways-of-working
 ---
 Your approach to organizing teams and projects will shape how your organization collaborates on cloud infrastructure. This section covers the key decisions around team structure, project organization, and collaboration workflows that will set your teams up for success.

@@ -6,7 +6,6 @@ menu:
     cloud:
         name: Setting up for success
         parent: pulumi-onboarding-guide
-        weight: 3
         identifier: setting-up-for-success
 ---
 Before creating projects and shipping to the cloud, make key decisions that will set your team up for success. Focus on security, testing strategies, and code reusability: all the essential considerations for scaling infrastructure as code effectively.
