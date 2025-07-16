@@ -38,7 +38,7 @@ pulumi package add terraform-module-custom --local-path ./modules/custom
 
 Let's use the popular `terraform-aws-vpc` module to create a VPC with subnets, and then deploy an EC2 instance in that VPC:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "typescript" %}}
 
