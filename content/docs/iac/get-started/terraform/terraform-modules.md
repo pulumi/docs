@@ -25,13 +25,13 @@ Use the `pulumi package add` command to add Terraform modules to your project:
 
 ```bash
 # Add a module from the Terraform Registry
-pulumi package add terraform-module-vpc-aws
+$ pulumi package add terraform-module-vpc-aws
 
 # Add a module from a Git repository
-pulumi package add terraform-module-vpc-aws --git-url https://github.com/terraform-aws-modules/terraform-aws-vpc
+$ pulumi package add terraform-module-vpc-aws --git-url https://github.com/terraform-aws-modules/terraform-aws-vpc
 
 # Add a local module
-pulumi package add terraform-module-custom --local-path ./modules/custom
+$ pulumi package add terraform-module-custom --local-path ./modules/custom
 ```
 
 ## Example: AWS VPC module
@@ -41,7 +41,7 @@ Let's use the popular `terraform-aws-vpc` module to create a VPC with subnets, a
 First, add the VPC module:
 
 ```bash
-pulumi package add terraform-module-vpc-aws
+$ pulumi package add terraform-module-vpc-aws
 ```
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
@@ -825,10 +825,10 @@ Specify module versions for consistency:
 
 ```bash
 # Add a specific version
-pulumi package add terraform-module-vpc-aws --version 5.0.0
+$ pulumi package add terraform-module-vpc-aws --version 5.0.0
 
 # Add from Git with a specific tag
-pulumi package add terraform-module-vpc-aws --git-url https://github.com/terraform-aws-modules/terraform-aws-vpc.git --git-tag v5.0.0
+$ pulumi package add terraform-module-vpc-aws --git-url https://github.com/terraform-aws-modules/terraform-aws-vpc.git --git-tag v5.0.0
 ```
 
 ## Best practices
@@ -846,11 +846,11 @@ Test your deployment and clean up resources:
 
 ```bash
 # Deploy the stack
-pulumi up
+$ pulumi up
 
 # Visit the website URL from the output
 # When done, destroy the resources
-pulumi destroy
+$ pulumi destroy
 ```
 
 {{< get-started-stepper >}}
