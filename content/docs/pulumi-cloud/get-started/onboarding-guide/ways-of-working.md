@@ -42,7 +42,11 @@ For stacks, you might have:
 
 Each IaC project has its own set of stacks, so you may want ESC environments representing each logical grouping.
 
+{{% notes type="info" %}}
+
 [Learn more about organizing projects and stacks](https://www.pulumi.com/docs/using-pulumi/organizing-projects-stacks/).
+
+{{%/notes%}}
 
 ### Deciding on a language strategy
 
