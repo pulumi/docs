@@ -157,7 +157,7 @@ using System.Linq;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     var provider = new Aws.Provider("provider", new()
     {
