@@ -71,7 +71,7 @@ Pulumi Copilot combines industry-leading AI models with Pulumi specific knowledg
 
 ### The Pulumi Copilot REST API
 
-The [Pulumi Tools Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot-tools) is powered by the recently announced [Pulumi Copilot REST API](/blog/pulumi-copilot-rest), which enables developers to integrate Pulumi Copilot's capabilities into their own tools and platforms. Just as we've built this extension to bring Pulumi Copilot directly into your development environment, you can use the same REST API to create your own innovative integrations, whether that's a custom CLI tool, a chat bot, or another IDE extension. The API's support for multi-turn conversations and contextual understanding makes it possible to build rich, interactive experiences like the one we're delivering today.
+The [Pulumi Tools Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot) is powered by the recently announced [Pulumi Copilot REST API](/blog/pulumi-copilot-rest), which enables developers to integrate Pulumi Copilot's capabilities into their own tools and platforms. Just as we've built this extension to bring Pulumi Copilot directly into your development environment, you can use the same REST API to create your own innovative integrations, whether that's a custom CLI tool, a chat bot, or another IDE extension. The API's support for multi-turn conversations and contextual understanding makes it possible to build rich, interactive experiences like the one we're delivering today.
 
 ## How to Use Pulumi Copilot in Visual Studio Code
 
