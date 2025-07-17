@@ -39,7 +39,7 @@ Components enable platform teams to create opinionated infrastructure building b
 
 ## Environments
 
-Environments provide credentials and configuration for your needs through composable, secure configuration management. They ensure that the right secrets and settings are available to the right workloads at the right time.
+[Environments](/docs/esc/environments/) provide credentials and configuration for your needs through composable, secure configuration management. They ensure that the right secrets and settings are available to the right workloads at the right time.
 
 Key characteristics:
 
@@ -52,7 +52,7 @@ Environments eliminate the need for developers to manage complex credential and 
 
 ## Policies
 
-Policies ensure continued compliance with company requirements through automated validation. They provide guardrails that prevent misconfigurations and enforce organizational standards across all infrastructure deployments.
+[Policies](/docs/iac/crossguard/) ensure continued compliance with company requirements through automated validation. They provide guardrails that prevent misconfigurations and enforce organizational standards across all infrastructure deployments.
 
 Key characteristics:
 
