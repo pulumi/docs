@@ -86,7 +86,7 @@ Both billing options include detailed usage insights through the Billing & usage
 
 {{% notes type="info" %}}
 
-If you are using a self-hosted installation of the Pulumi platform, the URLs used in the following document will need to be replaced with your instance's customer URLs.
+If you are using a self-hosted installation of the Pulumi platform, the URLs used in the following documentation will need to be replaced with your instance's customer URLs.
 
 {{% /notes %}}
 
