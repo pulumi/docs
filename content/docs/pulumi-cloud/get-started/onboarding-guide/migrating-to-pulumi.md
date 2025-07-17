@@ -18,7 +18,7 @@ If you have existing cloud infrastructure to bring into Pulumi IaC, you have sev
 
 **Start fresh:** Simply throw away existing infrastructure and begin anew. This ensures you can adopt all best practices from the outset without technical debt. This option isn't always practical for business-critical services.
 
-**Import existing infrastructure:** Pulumi has tools to import any cloud infrastructure regardless of how it was created — even manually through cloud consoles. Pulumi offers tailored migration tools for Terraform, AWS CloudFormation/CDK, Azure ARM, and Kubernetes YAML. These tools generate Pulumi IaC code in your chosen language and actively place existing resource management under Pulumi IaC, swapping out management without disrupting resources for zero downtime.
+**Import existing infrastructure:** Pulumi has tools to import any cloud infrastructure regardless of how it was created — even manually through cloud consoles. The [Visual Import](https://www.pulumi.com/docs/insights/import/) feature is the recommended approach for importing resources. However, Pulumi also offers tailored migration tools for Terraform, AWS CloudFormation/CDK, Azure ARM, and Kubernetes YAML. These tools generate Pulumi IaC code in your chosen language and actively place existing resource management under Pulumi IaC, swapping out management without disrupting resources for zero downtime.
 
 **Coexist and migrate incrementally:** Pulumi supports coexisting with existing ecosystems. You can deploy Helm charts as-is or consume Terraform workspace outputs. This enables incremental migration over time when the value is right.
 
@@ -57,7 +57,7 @@ These workloads should be automated with CI/CD pipelines and use as many best pr
 An internal cloud platform is a product requiring superb developer experiences. While self-service is the primary goal, it's a journey. Start by:
 
 - Getting your platform well-architected
-- Documenting components and templates
+- Documenting components and templates. You can use [Pulumi Cloud IDP](https://www.pulumi.com/product/internal-developer-platforms/) to provide user visibility and access to your templates and components.
 - Instituting an internal open source strategy for collaboration
 - Building comprehensive platform capabilities over time
 
