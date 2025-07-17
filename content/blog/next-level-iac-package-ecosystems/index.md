@@ -247,7 +247,7 @@ The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open
 [wiki-motd]: https://en.wikipedia.org/wiki/Message_of_the_day
 [npm-octokit]: https://www.npmjs.com/package/octokit
 [nodejs-crypto-module]: https://nodejs.org/api/crypto.html#crypto
-[terraform-mime-example]: https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/
+[terraform-mime-example]: https://web.archive.org/web/20240301073955/https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/
 [python-mimetypes]: https://docs.python.org/3/library/mimetypes.html
 [pulumi-install]: https://www.pulumi.com/docs/install/
 [pulumi-start]: https://www.pulumi.com/start

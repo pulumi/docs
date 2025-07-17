@@ -34,7 +34,7 @@ Three years after starting on this journey, [hundreds of customers](/case-studie
 
 ## Cloud Engineering is here &mdash; and growing fast
 
-Cloud Engineering is bigger than just Pulumi. Last month, thousands of us tuned in to learn from industry leaders and expert practitioners at [our first annual Cloud Engineering Summit](https://cloudengineeringsummit.com). It is clear that Cloud Engineering is already here in a big way and becoming a standard for the most forward-thinking software teams.
+Cloud Engineering is bigger than just Pulumi. Last month, thousands of us tuned in to learn from industry leaders and expert practitioners at [our first annual Cloud Engineering Summit](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpE6LxGPnfLfBQLbC7zX8FT). It is clear that Cloud Engineering is already here in a big way and becoming a standard for the most forward-thinking software teams.
 
 A lot has changed in only three years. At the time we conceived of Pulumi, there was significant fragmentation, uncertainty, and difficulty in adopting Kubernetes, Serverless, Docker, and continuous delivery for production workloads. Developers seldom touched infrastructure. Fast forward to today, and we now have managed container orchestrators, including Kubernetes, across all the major cloud providers, most organizations are shipping daily, and it's evident that mixed workloads of containers, serverless, VMs, and data services are here to stay. And [6.5 million developers have gone cloud native](https://www.cncf.io/blog/2020/08/14/state-of-cloud-native-development/). Teams are now looking for solutions that help them go from idea to production faster than ever before, and Cloud Engineering is emerging as the best way to do just that.
 
