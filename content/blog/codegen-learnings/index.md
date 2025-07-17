@@ -112,7 +112,7 @@ Semantic search is based on the conceptual similarity of the term you're looking
 
 A common way to determine the similarity between the two strings is to first turn these strings into _vector embeddings_ - arrays of floating point values representing the semantic meaning of each string - and then calculate the _cosine similarity_ between the two vectors, which is the cosine of the angle between the vectors. [Various methods](https://huggingface.co/blog/matryoshka) of producing vector embeddings are fascinating but we will not cover them here in depth.
 
-For Pulumi code generation we are using the OpenAI's [Ada-002 embedding model](https://medium.com/@siladityaghosh/a-deep-dive-into-openais-text-embedding-ada-002-the-power-of-semantic-understanding-7072c0386f83) which at this moment represents a good balance between performance and cost.
+For Pulumi code generation we are using the OpenAI's [Ada-002 embedding model](https://www.downelink.com/a-deep-dive-into-openais-text-embedding-ada-002-unlocking-the-power-of-semantic-understanding/) which at this moment represents a good balance between performance and cost.
 
 Producing vector embeddings from the user query is the standard approach in this situation. However, for Pulumi code generator we added a little twist - to increase the odds of getting more relevant information from the Registry (i.e. to increase the recall) we first make an LLM call to generate a small set of relevant search terms that will produce an array of vector embeddings.
 
