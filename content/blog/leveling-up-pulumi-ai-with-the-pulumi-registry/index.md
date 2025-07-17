@@ -21,7 +21,7 @@ In this blog post, we'll explore our recent enhancements to Pulumi AI, focusing 
 
 As powerful as Pulumi AI may seem, it was initially limited by the training cutoff of the model. Pulumi AI wasn't aware of new providers or changes to resources after late 2021. Additionally, the limitations in generative AI made it difficult for the model to reproduce all the input properties and relevant details of the resources it was trained on from "memory."
 
-These factors led to a phenomenon researchers call "hallucination." Pulumi AI would sometimes generate an API for a non-existent provider when asked to produce a Pulumi program. To overcome these challenges, we turned to the rich [Pulumi Package schema](/docs/guides/pulumi-packages/schema/) data and [CrossCode](/crosscode/) technology that powers the [Pulumi Registry](/registry/) docs, our code conversion tools, and other Pulumi enhancements.
+These factors led to a phenomenon researchers call "hallucination." Pulumi AI would sometimes generate an API for a non-existent provider when asked to produce a Pulumi program. To overcome these challenges, we turned to the rich [Pulumi Package schema](/docs/guides/pulumi-packages/schema/) data and CrossCode technology that powers the [Pulumi Registry](/registry/) docs, our code conversion tools, and other Pulumi enhancements.
 
 ### Integrating Pulumi Package Schema Data
 

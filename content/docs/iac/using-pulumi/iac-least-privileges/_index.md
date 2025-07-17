@@ -143,7 +143,7 @@ jobs:
 - `pulumi/actions` executes `pulumi up` adhering to the assigned team permissions.
 
 **Detailed documentation:**
-[GitHub OIDC Setup](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/github/)
+[GitHub OIDC Setup](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc-client/github/)
 [Pulumi GitHub Actions](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/github-actions/)
 
 ---

@@ -331,7 +331,7 @@ var program = PulumiFn.Create(() =>
 {{% choosable language "java" %}}
 
 {{% notes type="info" %}}
-This tutorial is based on the [`InlineProgram` example](https://github.com/pulumi/automation-api-examples/tree/main/java/InlineProgram), which is a complete example of how to construct a simple Automation API program.
+This tutorial is based on the [`InlineProgram` example](https://github.com/pulumi/automation-api-examples/tree/main/java/inlineProgram), which is a complete example of how to construct a simple Automation API program.
 {{% /notes %}}
 
 ```java

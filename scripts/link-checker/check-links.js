@@ -306,7 +306,10 @@ function getDefaultExcludedKeywords() {
         "https://stackoverflow.com/a/69270933",
         "https://old.reddit.com/r/devops/comments/1izpca1/platform_engineering_fad/",
         "https://www.deepseek.com/",
-        "https://marketplace.visualstudio.com/"
+        "https://marketplace.visualstudio.com/",
+        "/authors/",
+        "/tags/",
+        "/collections/"
     ];
 }
 

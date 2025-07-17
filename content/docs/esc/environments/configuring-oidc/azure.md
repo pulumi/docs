@@ -133,7 +133,7 @@ To learn more about how to set up and use the various providers in Pulumi ESC, p
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/customizing-oidc-claims/) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions
+You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions
 
 This is done by configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 
