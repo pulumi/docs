@@ -326,13 +326,202 @@ resources:
 
 See the [Enhanced Region Support](https://www.pulumi.com/registry/packages/aws/how-to-guides/aws-enhanced-region-support/) guide for more details.
 
+### Provider Role Chaining
+
+Pulumi AWS 7.0 also adds support for IAM Role chaining, our [most requested feature request](https://github.com/pulumi/pulumi-aws/issues/4459). IAM Role chaining allows you to provide a list of IAM Roles which should be assumed by the provider in order to obtain AWS credentials.
+
+To assume a role with role chaining, you can now do the following:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const provider = new aws.Provider("provider", {assumeRoles: [
+    {
+        roleArn: "arn:aws:iam::123456789012:role/INITIAL_ROLE_NAME",
+    },
+    {
+        roleArn: "arn:aws:iam::123456789012:role/FINAL_ROLE_NAME",
+    },
+]});
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+provider = aws.Provider("provider", assume_roles=[
+    {
+        "role_arn": "arn:aws:iam::123456789012:role/INITIAL_ROLE_NAME",
+    },
+    {
+        "role_arn": "arn:aws:iam::123456789012:role/FINAL_ROLE_NAME",
+    },
+])
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aws.NewProvider(ctx, "provider", &aws.ProviderArgs{
+			AssumeRoles: aws.ProviderAssumeRoleArray{
+				&aws.ProviderAssumeRoleArgs{
+					RoleArn: pulumi.String("arn:aws:iam::123456789012:role/INITIAL_ROLE_NAME"),
+				},
+				&aws.ProviderAssumeRoleArgs{
+					RoleArn: pulumi.String("arn:aws:iam::123456789012:role/FINAL_ROLE_NAME"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+return await Deployment.RunAsync(() =>
+{
+    var provider = new Aws.Provider("provider", new()
+    {
+        AssumeRoles = new[]
+        {
+            new Aws.Inputs.ProviderAssumeRoleArgs
+            {
+                RoleArn = "arn:aws:iam::123456789012:role/INITIAL_ROLE_NAME",
+            },
+            new Aws.Inputs.ProviderAssumeRoleArgs
+            {
+                RoleArn = "arn:aws:iam::123456789012:role/FINAL_ROLE_NAME",
+            },
+        },
+    });
+
+});
+
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.Provider;
+import com.pulumi.aws.ProviderArgs;
+import com.pulumi.aws.inputs.ProviderAssumeRoleArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var provider = new Provider("provider", ProviderArgs.builder()
+            .assumeRoles(
+                ProviderAssumeRoleArgs.builder()
+                    .roleArn("arn:aws:iam::123456789012:role/INITIAL_ROLE")
+                    .build(),
+                ProviderAssumeRoleArgs.builder()
+                    .roleArn("arn:aws:iam::123456789012:role/FINAL_ROLE")
+                    .build())
+            .build());
+
+    }
+}
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: example
+runtime: yaml
+resources:
+  provider:
+    type: pulumi:providers:aws
+    properties:
+      assumeRoles:
+        - roleArn: arn:aws:iam::123456789012:role/INITIAL_ROLE_NAME
+        - roleArn: arn:aws:iam::123456789012:role/FINAL_ROLE_NAME
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+With this configuration the provider will use the `INITIAL_ROLE` to assume the `FINAL_ROLE` which will then be used as the credentials for the provider.
+
+### Bucket Resource Name Changes
+
+In `v6` of the Pulumi AWS Provider the S3 `Bucket` and `BucketV2` resources represented different resource implementations. `BucketV2` represented the latest version of the upstream Terraform resource, while `Bucket` was a separate resource maintained by Pulumi to keep backwards compatibility with the `v4` release of the upstream Terraform Provider.
+
+In `v7` we are taking the first step in unifying these two resources by moving the S3 `Bucket` resource to the latest upstream implementation. As a result, in `v7` both `Bucket` and `BucketV2` will represent the latest version of the upstream Terraform S3 Bucket resource. As part of this work `BucketV2` has been deprecated and will be removed in `v8` of the Pulumi AWS Provider.
+
+We have also introduced new S3 Bucket configuration resources that are alternatives to their `V2` counterparts. The `V2` versions will be removed in `v8` of the Pulumi AWS Provider.
+
+- `BucketAccelerateConfigurationV2` => `BucketAccelerateConfiguration`
+- `BucketRequestPaymentConfigurationV2` => `BucketRequestPaymentConfiguration`
+- `BucketAclV2` => `BucketAcl`
+- `BucketCorsConfigurationV2` => `BucketCorsConfiguration`
+- `BucketLifecycleConfigurationV2` => `BucketLifecycleConfiguration`
+- `BucketLoggingV2` => `BucketLogging`
+- `BucketObjectLockConfigurationV2` => `BucketObjectLockConfiguration`
+- `BucketServerSideEncryptionConfigurationV2` => `BucketServerSideEncryptionConfiguration`
+- `BucketVersioningV2` => `BucketVersioning`
+- `BucketWebsiteConfigurationV2` => `BucketWebsiteConfiguration`
+
+See the [Migration Guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/7-0-migration) for more details on this change.
+
 ### Upstream Breaking Changes
 
-Pulumi AWS 7.0 ships all improvements and bug fixes of upstream versions from 6.0.0 to 6.3.0. It also contains a number of upstream breaking changes. Please refer to the [changelog](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md) to navigate the entire list.
-
-### MaxItemsOne and Deprecations
-
-We shipped a few, small breaking changes to properties that may allow one or many items. We aligned those with the capabilities of the upstream provider and the AWS services ensure Pulumi users can access the full capabilities of the AWS platform.
+Pulumi AWS 7.0 includes all improvements and bug fixes from the upstream (terraform-provider-aws) versions from 6.0.0 to 6.3.0. It also contains a number of upstream breaking changes. Please refer to the [changelog](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md) to navigate the entire list.
 
 ### Migration Guide
 
