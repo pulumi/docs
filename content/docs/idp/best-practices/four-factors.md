@@ -39,7 +39,7 @@ Components enable platform teams to create opinionated infrastructure building b
 
 ## Environments
 
-Environments provide just enough credentials and configuration for your needs through composable, secure configuration management. They ensure that the right secrets and settings are available to the right workloads at the right time.
+Environments provide credentials and configuration for your needs through composable, secure configuration management. They ensure that the right secrets and settings are available to the right workloads at the right time.
 
 Key characteristics:
 
