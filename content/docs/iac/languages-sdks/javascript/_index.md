@@ -244,7 +244,7 @@ npm install ts-node@^10
 ```
 
 {{< notes >}}
-When using a version of `@pulumi/pulumi` older than 3.182.0, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`. More recent versions automatically configure this.
+When using a version of `@pulumi/pulumi` older than 3.183.0, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`. More recent versions automatically configure this.
 
 ```yaml
 name: project-using-native-esm
