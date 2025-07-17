@@ -117,7 +117,7 @@ We also offer a tool called [cf2pulumi](/cf2pulumi/) that converts CloudFormatio
 
 Pulumi supports the full cloud native ecosystem: you can use Pulumi to manage any cloud or SaaS provider, including Kubernetes, with a single, unified programming model. Additionally, Pulumi's native Kubernetes provider offers 100% API coverage in all Pulumi-supported languages, as well as support for Helm charts, strongly typed CustomResourceDefinitions (CRDs), and Kubernetes YAML and Kustomize templates. Pulumi also offers a [Kubernetes operator](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) that enables continuous delivery through GitOps. CloudFormation has no support for these capabilities.
 
-To learn more about Pulumi's support for the cloud native ecosystem, see our documentation on [cloud architectures](/docs/iac/concepts/stack-outputs/).
+To learn more about Pulumi's support for the cloud native ecosystem, see our whitepaper, [Delivering Cloud Native Infrastructure as Code](./Pulumi-Delivering-CNI-as-Code.pdf).
 
 ### Dynamic Provider Support {#dynamic-providers}
 
