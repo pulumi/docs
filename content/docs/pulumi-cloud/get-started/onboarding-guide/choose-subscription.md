@@ -29,7 +29,7 @@ You can also make use of the [Pulumi AI](https://www.pulumi.com/ai), detailed do
 
 Designed for larger organizations with mission-critical workloads. These tiers include:
 
-- **Premium support**: Choose between 12x5 or 24x7 support with ticketing, guaranteed SLAs, and private Slack channels
+- **Premium support**: 12x5 or 24x7 support is available with ticketing, guaranteed SLAs, and private Slack channels
 - **Dedicated resources**: Personal account managers and architects to help solve complex problems
 - **Priority access**: Prioritized bugs and feature requests, plus product roadmap reviews
 - **Custom training**: Tailored onboarding and ongoing training for your team
@@ -58,7 +58,13 @@ Choose Pulumi Cloud SaaS if you want the simplest setup with enterprise-grade re
 Self-hosted Pulumi Cloud is only available for Business Critical customers.
 {{% /notes %}}
 
-Choose [self-hosted Pulumi Cloud](https://www.pulumi.com/product/self-hosted/) if you need complete control over your hosting environment. This is ideal for air-gapped environments or highly regulated industries like FedRAMP. You can deploy anywhere: on-premises, in your cloud account, or any infrastructure you control.
+Choose [self-hosted Pulumi Cloud](https://www.pulumi.com/product/self-hosted/) if you need complete control over your hosting environment. This is ideal for air-gapped environments or customers who require an isolated version of the Pulumi platform. You can deploy anywhere: on-premises, in your cloud account, or any infrastructure you control.
+
+{{% notes type="info" %}}
+
+To get started with self-hosted Pulumi Cloud, follow the guides to set up your [state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#logging-into-the-aws-s3-backend) and [self-hosting infrastructure](https://www.pulumi.com/docs/pulumi-cloud/admin/self-hosted/)
+
+{{% /notes %}}
 
 ## Choose your billing approach
 
@@ -79,9 +85,9 @@ Both billing options include detailed usage insights through the Billing & usage
 ## Getting started with your chosen model
 
 {{% notes type="info" %}}
-Before getting started with self-hosted, you'll need to set up your [state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#logging-into-the-aws-s3-backend) and [self-hosting infrastructure](https://www.pulumi.com/docs/pulumi-cloud/admin/self-hosted/)
 
-As part of this process, you'll choose a custom URL that you'll use instead of [app.pulumi.com](https://app.pulumi.com)
+If you are using a self-hosted installation of the Pulumi platform, the URLs used in the following document will need to be replaced with your instance's customer URLs.
+
 {{% /notes %}}
 
 ### Create your account
