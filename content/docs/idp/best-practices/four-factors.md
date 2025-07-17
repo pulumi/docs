@@ -13,7 +13,7 @@ This guide introduces a framework for building with Pulumi IDP that leverages fo
 
 ## Templates
 
-Templates are user-configurable scaffolding that creates new instances of infrastructure resources. They serve as the entry point for developers to quickly bootstrap new projects or components with pre-configured settings and best practices baked in.
+[Templates](/docs/pulumi-cloud/developer-platforms/templates/) are user-configurable scaffolding that creates new instances of infrastructure resources. They serve as the entry point for developers to quickly bootstrap new projects or components with pre-configured settings and best practices baked in.
 
 Key characteristics:
 
@@ -26,7 +26,7 @@ Templates abstract away the complexity of initial setup while providing flexibil
 
 ## Components
 
-Components are reusable building blocks that abstract and encapsulate business logic, set sensible defaults, limit inputs, and encode company standards. They represent the core infrastructure primitives that your organization uses repeatedly.
+[Components](/docs/iac/concepts/components/) are reusable building blocks that abstract and encapsulate business logic, set sensible defaults, limit inputs, and encode company standards. They represent the core infrastructure primitives that your organization uses repeatedly.
 
 Key characteristics:
 
