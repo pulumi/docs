@@ -18,7 +18,7 @@ Templates are user-configurable scaffolding that creates new instances of infras
 Key characteristics:
 
 - **User-configurable**: Developers can customize templates through simple parameters
-- **Instance creation**: Each template use creates a new, independent [Pulumi stack](/docs/iac/concepts/stacks/)
+- **Stack creation**: Each time a template is used it creates one or more new, independent [Pulumi stacks](/docs/iac/concepts/stacks/)
 - **Standardized starting point**: Ensures consistent project structure and configuration
 - **Low barrier to entry**: Enables developers to get started quickly without deep infrastructure knowledge
 
