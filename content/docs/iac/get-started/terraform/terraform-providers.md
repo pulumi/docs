@@ -16,15 +16,14 @@ aliases:
 
 ## Access the provider ecosystem
 
-Pulumi provides access to over 3000 Terraform providers through the Terraform bridge.
-This means you can use any Terraform provider in your Pulumi programs, including community providers and custom providers that aren't available as native Pulumi providers.
+Pulumi provides access to thousands of Terraform providers through the Terraform bridge. This means you can use any Terraform provider in your Pulumi programs, including community providers and custom providers that aren't available as native Pulumi providers.
 
 ## Add a Terraform provider
 
 Use the `pulumi package add` command to add Terraform providers to your project:
 
 ```bash
-pulumi package add terraform-provider-random
+$ pulumi package add terraform-provider-random
 ```
 
 This command automatically:
@@ -33,11 +32,11 @@ This command automatically:
 * Generates Pulumi bindings for the provider
 * Adds the provider to your project dependencies
 
-## Example: random naming for containers
+## Example: Random naming for containers
 
 Let's enhance our containerized application example by adding random suffixes to container images using the `random` Terraform provider:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "typescript" %}}
 
