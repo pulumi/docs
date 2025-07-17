@@ -58,7 +58,7 @@ You have two main options:
 This approach makes it easier to standardize on tools, patterns, and practices, and to train your team. Choose the language your team already uses to leverage existing standards.
 
 **Multi-language (common in large organizations)**
-While offering flexibility, this approach risks fragmentation between teams using different languages. Pulumi addresses this through consistent experiences across languages in Pulumi Cloud and CrossGuard policies, plus [Pulumi Packages](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/) that let you author packages in one language and consume them in another.
+While offering flexibility, this approach risks fragmentation between teams using different languages. Pulumi addresses this through consistent experiences across languages in Pulumi Cloud and CrossGuard policies, plus [Pulumi Packages](https://www.pulumi.com/docs/iac/concepts/packages/) that let you author packages in one language and consume them in another.
 
 ## Organizing people for collaboration
 
@@ -68,7 +68,7 @@ Your Pulumi Cloud hierarchy consists of **users**, **organizations**, and **team
 
 Start by creating an organization—a container for your IaC projects and stacks, ESC projects and environments, and Insights accounts and discovered resources. Most companies need only a single organization, though you can create multiple if you require extra separation or multiple identity providers. The infrastructure platform group typically owns this configuration and handles onboarding developers and security experts.
 
-Organizations and their capabilities are a paid feature of Pulumi Cloud. Creating an organization starts a free trial, with a generous free tier available when the trial expires. [Create your organization here](https://app.pulumi.com/site/organizations/add).
+Organizations and their capabilities are a paid feature of Pulumi Cloud. Creating an organization starts a free trial. [Create your organization here](https://app.pulumi.com/site/organizations/add).
 
 ### Creating teams
 
@@ -106,7 +106,7 @@ Developers check in YAML files to a Git repository and let CI/CD handle the rest
 **3. UI-based experience**
 Developers log into a portal and click buttons to provision infrastructure. Options include:
 
-- Pulumi's organization templates and New Project Wizard
+- [Pulumi IDP](https://www.pulumi.com/docs/idp/)
 - [Pulumi's Backstage plugin](https://www.pulumi.com/blog/pulumi-backstage-plugin/)
 - Custom portals powered by [Pulumi's Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/)
 
@@ -127,6 +127,8 @@ While most teams start by running the Pulumi CLI manually, you'll eventually wan
 - **Existing CI/CD solutions**: GitHub Actions, GitLab CI, Octopus Deploy, and [many others](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/)
 
 **GitHub users**: Install the [Pulumi GitHub App](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/github-app/) for instant GitOps workflow support, including deployment previews in pull requests.
+
+**GitLab users**: Use the [Pulumi GitLab Integration](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/gitlab-app/) to set up Pipelines and Webhooks for GitLab CI/CD.
 
 **Setting up CI/CD:**
 
