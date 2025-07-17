@@ -191,7 +191,7 @@ Diagnostics:
     curl: (7) Failed to connect to localhost port 1234 after 0 ms: Could not connect to server
 ```
 
-As expected, nothing is listening on port `1234`, so `curl` fails with an error. Previously, we might have fixed this by using a wrapped around our Pulumi program, such as the [Automation API](https://www.pulumi.com/automation/). With resource hooks, however, the solution is at our fingertips! We'll hook into the `Command` resource's lifecycle to open a tunnel before any operation is run, and to close it afterwards:
+As expected, nothing is listening on port `1234`, so `curl` fails with an error. Previously, we might have fixed this by using a wrapper around our Pulumi program, such as the [Automation API](https://www.pulumi.com/automation/). With resource hooks, however, the solution is at our fingertips! We'll hook into the `Command` resource's lifecycle to open a tunnel before any operation is run, and to close it afterwards:
 
 {{% chooser language "javascript,typescript,python,go,csharp" %}}
 
