@@ -87,7 +87,7 @@ Fauna provides a flexible, developer-friendly, transactional database delivered 
 - Increased the reliability and quality of infrastructure using existing code review processes and running unit tests.
 - Controlled access to its infrastructure using Pulumi’s SSO integration with its identity provider service.
 
-[Read Fauna's blog post→](https://fauna.com/blog/building-faunas-gdpr-compliant-distributed-and-scalable-database)
+[Read Fauna's blog post→](https://web.archive.org/web/20250516064352/https://fauna.com/blog/building-faunas-gdpr-compliant-distributed-and-scalable-database)
 
 ## Summary
 

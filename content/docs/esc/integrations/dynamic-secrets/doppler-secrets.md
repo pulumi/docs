@@ -40,7 +40,7 @@ values:
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Doppler, see
-the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/doppler/) documentation. Once you have completed
+the [OpenID Connect integration](/docs/esc/environments/configuring-oidc/doppler/) documentation. Once you have completed
 these steps, you can validate that your configuration is working by running either of the following:
 
 * `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)

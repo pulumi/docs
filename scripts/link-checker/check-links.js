@@ -296,7 +296,7 @@ function getDefaultExcludedKeywords() {
         "https://www.gartner.com/en/newsroom/press-releases/2024-04-11-gartner-says-75-percent-of-enterprise-software-engineers-will-use-ai-code-assistants-by-2028",
         "https://www.gartner.com/en/webinar/445864/1051166",
         "https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md*",
-	"https://x.com*",
+	    "https://x.com*",
         "https://stackoverflow.com/questions/tagged/pulumi",
         "https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix",
         "https://blog.postman.com/postman-now-supports-grpc/",
@@ -306,7 +306,14 @@ function getDefaultExcludedKeywords() {
         "https://stackoverflow.com/a/69270933",
         "https://old.reddit.com/r/devops/comments/1izpca1/platform_engineering_fad/",
         "https://www.deepseek.com/",
-        "https://marketplace.visualstudio.com/"
+        "https://marketplace.visualstudio.com/",
+        "/authors/",
+        "/tags/",
+        "/collections/",
+        "https://securityboulevard.com/2024/09/pulumi-adds-cloud-security-intelligence-tool-to-portfolio/",
+        "https://awsinsider.net/articles/2019/06/12/pulumi.aspx",
+        "https://www.tivityhealth.com/",
+        "https://blog.ekik.org*"
     ];
 }
 
