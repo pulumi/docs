@@ -53,7 +53,7 @@ Some languages also support using `main` to point to a specific file to change w
 
 - For .NET projects, `main` can point to a .NET project file (e.g., `example.csproj`) and the file will be passed to `dotnet run`.
 
-- For YAML projects, `main` can point to another YAML file (it must be named `main.yaml` but it can be in a sub-folder of the project folder) containing the `variables`, `resources`, and `output` properties. The `config` property can exist in either the `Pulumi.yaml` or the referenced file.
+- For YAML projects, `main` can point to another YAML file (it must be named `Main.yaml` but it can be in a sub-folder of the project folder) containing the `variables`, `resources`, and `output` properties. The `config` property can exist in either the `Pulumi.yaml` or the referenced file.
 
 For all other languages, the actual filename is ignored, and the system behaves as though `main` referred to the file's containing directory.
 
