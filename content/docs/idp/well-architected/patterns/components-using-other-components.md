@@ -1,0 +1,118 @@
+---
+title: "IDP Pattern: Components using other Components"
+linktitle: "Components using other Components"
+menu:
+  idp:
+    parent: idp-patterns
+    weight: 70
+meta_desc: Build complex infrastructure patterns by composing Pulumi components that use other components
+h1: "IDP Pattern: Components using other Components"
+description: <p>Build complex infrastructure patterns by composing Pulumi components that use other components.</p>
+---
+
+## Description
+
+This pattern involves creating Pulumi components that internally use other components, creating a hierarchy of reusable infrastructure patterns. Higher-level components encapsulate complex architectures while lower-level components handle specific infrastructure concerns.
+
+## When to use this pattern
+
+- **Complex architectures**: When you need to combine multiple infrastructure patterns
+- **Layered abstraction**: When you want different levels of abstraction for different users
+- **Reusable patterns**: When you have common architectural patterns across applications
+- **Progressive complexity**: When you want to build from simple to complex components
+
+## When NOT to use this pattern
+
+- **Simple use cases**: When a single component would suffice
+- **Tight coupling**: When components become too interdependent
+- **Over-abstraction**: When abstraction layers obscure important details
+
+## How to use this pattern
+
+Components can compose other components to build higher-level abstractions while maintaining clear interfaces and responsibilities.
+
+### Example
+
+Building a web application component that uses database and networking components:
+
+```typescript
+// Lower-level components
+export class Database extends ComponentResource {
+  public readonly connectionString: Output<string>;
+
+  constructor(name: string, args: DatabaseArgs, opts?: ComponentResourceOptions) {
+    super("acme:components:Database", name, {}, opts);
+
+    const db = new aws.rds.Instance(name, {
+      engine: "postgres",
+      instanceClass: args.instanceClass,
+      allocatedStorage: args.storage,
+      // ... other configuration
+    });
+
+    this.connectionString = db.endpoint.apply(endpoint =>
+      `postgresql://${args.username}:${args.password}@${endpoint}/${args.dbName}`
+    );
+  }
+}
+
+export class Network extends ComponentResource {
+  public readonly vpcId: Output<string>;
+  public readonly subnetIds: Output<string[]>;
+
+  constructor(name: string, args: NetworkArgs, opts?: ComponentResourceOptions) {
+    super("acme:components:Network", name, {}, opts);
+
+    const vpc = new aws.ec2.Vpc(name, {
+      cidrBlock: args.cidrBlock,
+    });
+
+    // Create subnets, security groups, etc.
+    this.vpcId = vpc.id;
+    this.subnetIds = subnets.map(s => s.id);
+  }
+}
+
+// Higher-level component using other components
+export class WebApplication extends ComponentResource {
+  constructor(name: string, args: WebApplicationArgs, opts?: ComponentResourceOptions) {
+    super("acme:patterns:WebApplication", name, {}, opts);
+
+    // Use network component
+    const network = new Network(`${name}-network`, {
+      cidrBlock: "10.0.0.0/16",
+    }, { parent: this });
+
+    // Use database component
+    const database = new Database(`${name}-db`, {
+      instanceClass: "db.t3.micro",
+      storage: 20,
+      username: args.dbUsername,
+      password: args.dbPassword,
+      dbName: args.dbName,
+    }, { parent: this });
+
+    // Application infrastructure using the components
+    const app = new aws.ecs.Service(`${name}-app`, {
+      // Use network.vpcId and database.connectionString
+      // ... application configuration
+    }, { parent: this });
+  }
+}
+```
+
+Teams can use the high-level component without managing individual infrastructure pieces:
+
+```typescript
+const myApp = new WebApplication("my-web-app", {
+  dbUsername: "admin",
+  dbPassword: dbPassword,
+  dbName: "myapp",
+});
+```
+
+## Related patterns
+
+- [IDP Pattern: Container-based apps, centrally managed container infra](/docs/idp/well-architected/patterns/container-based-apps-centrally-managed-infra) - Example of component composition
+- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/well-architected/patterns/validating-component-inputs-using-policy-functions) - For validating composed components
+- [IDP Pattern: Security Updates using Components](/docs/idp/well-architected/patterns/security-updates-using-components) - For updating component hierarchies
