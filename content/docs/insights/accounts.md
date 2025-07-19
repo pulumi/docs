@@ -380,3 +380,28 @@ EOF
 
 echo "Kubeconfig written to $KUBECONFIG_PATH"
 ```
+
+### Google Cloud
+
+The Google Cloud scanner for Pulumi Cloud requires read access to your project. Configure ESC to generate Service Account credentials dynamically through OpenID Connect (OIDC).
+
+1. Configure OpenID Connect for Google Cloud:
+   * Follow the steps in [Configuring OpenID Connect For Google Cloud](/docs/esc/environments/configuring-oidc/gcp/)
+   * The service account must be granted the **Viewer** role
+
+2. Use the following ESC configuration:
+
+```yaml
+  values:
+    gcp:
+      login:
+        fn::open::gcp-login:
+          project: <numeric project id>
+          oidc:
+            workloadPoolId: <workload pool id>
+            providerId: <provider id>
+            serviceAccount: <service account>
+    environmentVariables:
+      GOOGLE_PROJECT: ${gcp.login.project}
+      GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
+```
