@@ -346,50 +346,6 @@ const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBeha
 const answersOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const answersBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
-if (config.answersStack) {
-    const answersStack = new pulumi.StackReference(config.answersStack);
-    const answersCDN = answersStack.getOutput("cloudFrontDomain");
-
-    answersOrigins.push(
-        {
-            originId: answersCDN,
-            domainName: answersCDN,
-            customOriginConfig: {
-                originProtocolPolicy: "https-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-            }
-        }
-    );
-    answersBehaviors.push(
-        {
-            ...baseCacheBehavior,
-            targetOriginId: answersCDN,
-            pathPattern: "/answers",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-        },
-    );
-    answersBehaviors.push(
-        {
-            ...baseCacheBehavior,
-            targetOriginId: answersCDN,
-            pathPattern: "/answers/*",
-            defaultTtl: 0,
-            minTtl: 0,
-            maxTtl: 0,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
-            cachePolicyId: cachingDisabledId,
-            forwardedValues: undefined, // forwardedValues conflicts with cachePolicyId, so we unset it.
-        },
-    );
-}
-
 if (config.registryStack) {
     const registryStack = new pulumi.StackReference(config.registryStack);
     const registryCDN = registryStack.getOutput("cloudFrontDomain");
