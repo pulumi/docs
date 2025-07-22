@@ -1228,11 +1228,11 @@ The [Pulumi MCP server](https://github.com/pulumi/mcp-server) is an open-source 
 
 The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt that ensures:
 
-- **Type safety**: Proper use of `pulumi.Input<T>` and `pulumi.Output<T>` types
-- **Best practices**: Idiomatic TypeScript patterns and Pulumi conventions
-- **Configuration handling**: Safe access to config values with null checking
-- **Resource naming**: Consistent and descriptive resource naming
-- **Multi-provider support**: Proper handling of multiple provider configurations
+* **Type safety**: Proper use of `pulumi.Input<T>` and `pulumi.Output<T>` types
+* **Best practices**: Idiomatic TypeScript patterns and Pulumi conventions
+* **Configuration handling**: Safe access to config values with null checking
+* **Resource naming**: Consistent and descriptive resource naming
+* **Multi-provider support**: Proper handling of multiple provider configurations
 
 **Installation and setup:**
 
@@ -1241,7 +1241,7 @@ The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt
    ```bash
    claude mcp add -s user pulumi -- npx @pulumi/mcp-server@latest stdio
    ```
-   
+  
    Follow the complete setup instructions in the [MCP server README](https://github.com/pulumi/mcp-server#readme).
 
 2. **Prepare your Terraform code**: Gather your complete Terraform configuration files (`.tf`, `terraform.tfvars`, etc.)
@@ -1258,10 +1258,10 @@ The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt
 
 The MCP server provides additional capabilities beyond conversion, including:
 
-- Infrastructure previews with `pulumi preview`
-- Automated deployments with `pulumi up`
-- Stack output retrieval
-- Resource querying and management
+* Infrastructure previews with `pulumi preview`
+* Automated deployments with `pulumi up`
+* Stack output retrieval
+* Resource querying and management
 
 ### Alternative: Manual prompt usage
 
@@ -1285,10 +1285,10 @@ If you prefer not to use the MCP server, you can access the conversion prompt di
 
 Any time you use an automated conversion tool, you will want to review and validate the output. Some things to check for:
 
-   - Proper error handling and validation
-   - Type-safe configuration access
-   - Idiomatic resource definitions
-   - Comprehensive resource labeling
+* Proper error handling and validation
+* Type-safe configuration access
+* Idiomatic resource definitions
+* Comprehensive resource labeling
 
 ## Best practices for conversion
 
