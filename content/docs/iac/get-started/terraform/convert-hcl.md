@@ -211,7 +211,7 @@ pulumi convert --from terraform --language yaml --out ./pulumi-converted
 
 The `pulumi convert` command would generate something like this:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "typescript" %}}
 
