@@ -63,6 +63,7 @@ jobs:
           ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
+          INDEXNOW_API_KEY: ${{  steps.esc-secrets.outputs.INDEXNOW_API_KEY }}
           NODE_OPTIONS: "--max_old_space_size=8192"
 
       - name: Archive test results
