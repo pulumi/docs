@@ -1,25 +1,8 @@
 {{ define "main" }}
-    <h1 class="text-5xl text-center mt-4 text-gray-800">Plans for all team sizes</h1>
+    <h1 class="text-5xl text-center mt-4 text-gray-800">Plans for teams of all sizes</h1>
     <section class="container mx-auto text-center mb-16 mt-4">
-        <div class="flex flex-row justify-center space-x-0 sm:space-x-4 my-4 border-b-1 border-gray-200">
-            <div id="iac-pricing-select" class="text-md sm:text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-blue-600 bg-violet-100">
-                <div id="iac-pricing-select-text" class="rainbow-text">Pulumi IaC</div>
-            </div>
-            <div id="esc-pricing-select" class="text-md sm:text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-gray-300">
-                <div id="esc-pricing-select-text">Pulumi ESC</div>
-            </div>
-            <div id="insights-pricing-select" class="text-md sm:text-2xl cursor-pointer p-2 px-4 rounded-t-lg border-b-4 border-gray-300">
-                <div id="insights-pricing-select-text">Pulumi Insights</div>
-            </div>
-        </div>
-        <p class="max-w-4xl mx-auto mt-6 iac-price">
-            The easiest way to adopt Pulumi's open source infrastructure as code
-        </p>
-        <p class="max-w-4xl mx-auto mt-6 esc-price hidden">
-            Modern secrets and configuration management that scales with your team
-        </p>
-        <p class="max-w-4xl mx-auto mt-6 insights-price hidden">
-            Asset management, compliance remediation, and AI insights over the cloud
+        <p class="max-w-4xl mx-auto mt-6 price">
+            Start for free. Stay free forever for open source and individuals, or scale with advanced editions for your team.
         </p>
     </section>
 
@@ -37,9 +20,11 @@
         <div class="container mx-auto lg:flex">
             <div class="w-full p-8 lg:p-0">
                 <div class="hidden lg:block w-full h-10">
-                    <div class="h-full justify-end flex">
-                        <div class="w-1/4 flex justify-center items-center rounded-t-full bg-purple-200">Most Popular</div>
-                        <div class="w-1/4 flex justify-center items-center rounded-t-full bg-gray-200 text-blue-600 underline"><a class="cursor-pointer" href="/product/self-hosted/">Self-Hosting Available</a></div>
+                    <div class="h-full flex">
+                        <div class="w-1/4 flex"></div>
+                        <div class="w-1/4 flex"></div>
+                        <div class="w-1/4 flex justify-center items-center rounded-t-full bg-purple-200">Popular</div>
+                        <div class="w-1/4 flex"></div>
                     </div>
                 </div>
                 <div class="card bg-white py-8 lg:pt-8 lg:rounded-tr-none">
@@ -48,14 +33,9 @@
                             {{ $mobileBookmarkClass := "" }}
                             {{ if eq $index 2 }}
                                 <div class="lg:hidden absolute w-28 mx-auto left-0 right-0 text-center bg-white">
-                                    <p class="my-0 -mt-3">Most popular</p>
+                                    <p class="my-0 -mt-3">Popular</p>
                                 </div>
                                 {{ $mobileBookmarkClass = "border-t-2 border-purple-300 rounded-2xl lg:rounded-none lg:border-0"}}
-                            {{ else if eq $index 3 }}
-                                <div class="lg:hidden absolute w-44 mx-auto left-0 right-0 text-center bg-white">
-                                    <p class="my-0 -mt-3"><a class="cursor-pointer underline" href="/product/self-hosted/">Self-Hosting Available</a></p>
-                                </div>
-                                {{ $mobileBookmarkClass = "border-t-2 border-gray-300 rounded-2xl lg:border-0"}}
                             {{ end }}
                             {{ $rightBorderClass := "" }}
                             {{ if not (eq $index 3) }}
@@ -63,47 +43,34 @@
                             {{ end }}
                             <div class="w-full pb-16 pt-6 lg:py-0 lg:w-1/4 px-8 {{ $mobileBookmarkClass }} {{ $rightBorderClass }}">
                                 <div class="lg:h-24 xl:h-11">
-                                    <h4 class="text-center">{{ $tier.title }}</h4>
+                                    <h4 class="text-center font-bold">{{ $tier.title }}</h4>
                                 </div>
-                                <div class="lg:h-16 mb-4">
+                                <div class="lg:h-16 mb-4 text-center">
                                     <p class="text-sm">{{ $tier.subtitle }}</p>
                                 </div>
-                                <div class="iac-price lg:h-20">
-                                    <div class="text-center text-2xl font-semibold">{{ $tier.iac_price }}</div>
-                                    <div class="text-center text-sm">{{ $tier.iac_unit }}</div>
-                                    <div class="text-center text-xs">{{ $tier.iac_note }}</div>
-                                </div>
-                                <div class="esc-price lg:h-20 hidden">
-                                    <div class="text-center text-2xl font-semibold">{{ $tier.esc_price }}</div>
-                                    <div class="text-center text-sm">{{ $tier.esc_unit }}</div>
-                                    <div class="text-center text-xs">{{ $tier.esc_note }}</div>
-                                </div>
-                                <div class="insights-price lg:h-20 hidden">
-                                    <div class="text-center text-2xl font-semibold">{{ $tier.insights_price }}</div>
-                                    <div class="text-center text-sm">{{ $tier.insights_unit }}</div>
-                                    <div class="text-center text-xs">{{ $tier.insights_note }}</div>
+                                <div class="price lg:h-20">
+                                    <div class="text-center text-3xl font-semibold">
+                                        {{ $tier.price }}<span class="text-gray-700 text-lg font-semibold">{{ $tier.price_label }}</span>
+                                    </div>
+                                    <div class="text-center text-sm">{{ $tier.unit | markdownify }}</div>
+                                    <div class="text-center text-xs text-gray-700">{{ $tier.note | markdownify }}</div>
                                 </div>
                                 {{ if eq $index 0 }}
                                     <div class="flex flex-wrap flex-col justify-center align-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" signed-in-text="Create an Organization" signed-out-text="Sign Up"></pricing-cta>
+                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/signup">Signup</a>
                                     </div>
                                 {{ else if eq $index 1 }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" signed-in-text="{{ $tier.primary_cta }}" signed-out-text="{{ $tier.primary_cta }}"></pricing-cta>
+                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/?create-organization=1">Start a free trial</a>
                                     </div>
                                 {{ else if eq $index 2 }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <pricing-cta button-class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" signed-in-text="{{ $tier.primary_cta }}" signed-out-text="{{ $tier.primary_cta }}"></pricing-cta>
-                                        {{ if $tier.secondary_cta }}
-                                            <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
-                                        {{ end }}
+                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="https://app.pulumi.com/?create-organization=1">Start a free trial</a>
+                                        <a href="/contact/?form=sales" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">Contact sales</a>
                                     </div>
                                 {{ else }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a href="{{ $tier.primary_cta_link}}" class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 mr-1 mb-0 lg:mb-1 xl:mb-0">{{ $tier.primary_cta }}</a>
-                                        {{ if $tier.secondary_cta }}
-                                            <a href="{{ $tier.secondary_cta_link }}" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">{{ $tier.secondary_cta }}</a>
-                                        {{ end }}
+                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="/contact/?form=sales">Contact sales</a>
                                     </div>
                                 {{ end }}
                                 <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
@@ -125,15 +92,15 @@
                         <div class="card p-8 text-center h-full flex flex-col justify-between">
                             <h6>{{ $customer.stat | markdownify }}</h6>
                             {{ if eq $customer.logo "snowflake"}}
-                                <div class="h-10 mt-4 -mb-2">
+                                <div class="h-12 mt-4 -mb-2">
                                     {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
                                 </div>
                             {{ else if eq $customer.logo "unity" }}
-                                <div class="h-8 mt-6">
+                                <div class="h-10 mt-6">
                                     {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
                                 </div>
                             {{ else }}
-                                <div class="h-6 mt-8">
+                                <div class="h-10 mt-8">
                                     {{ partial "customer-logo.html" (dict "logo" $customer.logo) }}
                                 </div>
                             {{ end }}
@@ -141,6 +108,23 @@
                     </a>
                 </div>
             {{ end }}
+        </div>
+    </section>
+
+    <section id="startups" class="container mx-auto">
+        <div class="justify-center mx-auto mt-16">
+            <div class="card p-8 text-center h-full flex flex-wrap justify-between">
+                <div class="flex flex-col w-1/2 justify-center">
+                    <h3>Pulumi for startups</h3>
+                </div>
+                <div class="flex flex-col w-1/2 justify-center">
+                    <p class="max-w-4xl mx-auto mt-6">
+                        Are you a scaling startup?
+                        <a href="/pulumi-for-startups">Apply now</a> to receive <b>$10,000</b>
+                        in free credits.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -152,6 +136,9 @@
                 {{ range .tables }}
                     <li class="accordion-item card md:px-8 text-2xl py-3">
                         {{ partial "accordian-header" (dict "text" .header "subheader" .subheader "large_header" true "arrow_open" true) }}
+                        {{ if .subheader }}
+                            <span class="text-base text-gray-600">{{ .subheader }}</span>
+                        {{ end }}
                         <div class="accordion-item-body-no-animation text-base">
                             <div id="fundamentals" class="pricing-compare-plans-table">
                                 <div class="compare-plans-table-header-container">
@@ -159,7 +146,7 @@
                                         <span></span>
                                     </div>
                                     <div class="compare-plans-table-header-item">
-                                        <span>Free</span>
+                                        <span>Individual</span>
                                     </div>
                                     <div class="compare-plans-table-header-item">
                                         <span>Team</span>
