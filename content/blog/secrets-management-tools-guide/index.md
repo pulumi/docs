@@ -3,8 +3,10 @@ title: "Secrets Management Tools: The Complete 2025 Guide"
 date: 2025-07-01T00:00:00-00:00
 draft: false
 meta_desc: "Compare secrets management tools and find the best solution for your infrastructure with expert analysis and recommendations."
+meta_image: meta.png
 authors:
     - asaf-ashirov
+    - boris-schlosser
 tags:
     - secrets-management
     - security
