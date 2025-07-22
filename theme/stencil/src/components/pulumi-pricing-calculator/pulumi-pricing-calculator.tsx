@@ -33,54 +33,51 @@ export class PulumiPricingCalculator {
   }
 
   getFreeDeploymentMinutes() {
-    if (this.duration === "month") {
-        return 3000;
-    } else {
-        return (3000 / 30);
-    }
-  }
-
-  getEstimatedCredits() {
-    if (this.duration === "month") {
-        return this.resourceCount * (24 * (this.utilization / 100)) * 30
-    } else {
-        return this.resourceCount * (24 * (this.utilization / 100))
-    }
+    return 3000;
   }
 
   getEstimatedDeploymentMinutes() {
-    if (this.duration === "month") {
-        return this.deploymentMinutes * 30;
-    } else {
-        return this.deploymentMinutes;
-    }
+    return this.deploymentMinutes * 30;
   }
 
   updateDeploymentsExpanded() {
     this.deploymentsExpanded = !this.deploymentsExpanded
   }
 
+  getEstimatedCredits() {
+    // Calculate credits based on resource count and utilization
+    // This represents the actual resource hours used
+      return this.resourceCount * (24 * (this.utilization / 100)) * 30;
+  }
+
   getFreeCredits() {
-    if (this.duration === "month") {
-        return 150000;
-    } else {
-        return (150000 / 30);
-    }
+    // Free credits represent the base rate coverage
+    // For 500 resources at 100% utilization = 500 * 24 * 30 = 360,000 credits
+    return 500 * 24 * 30;
   }
 
   getCostPerCredit() {
-    return 0.0005;
+    // $0.1825 per additional resource per month
+    // For 1 additional resource at 100% utilization = 1 * 24 * 30 = 720 credits
+    // So cost per credit = $0.1825 / 720 = $0.000253472...
+    return 0.000253472;
   }
 
   getTotal() {
+    // IaC cost
+    const additionalCredits = Math.max(0, this.getEstimatedCredits() - this.getFreeCredits());
+    const additionalCost = additionalCredits * this.getCostPerCredit();
+    let totalCost = 40 + additionalCost;
+
+    // Add on Pulumi Deployments cost
     if (this.deploymentsExpanded) {
         const deploymentCost = ((this.getEstimatedDeploymentMinutes() - this.getFreeDeploymentMinutes()) * this.getCostPerDeploymentMinute());
-        const cost = ((this.getEstimatedCredits() - this.getFreeCredits()) * this.getCostPerCredit()) + (deploymentCost > 0 ? deploymentCost : 0);
-        return cost > 0 ? cost : 0;
-    } else {
-        const cost = (this.getEstimatedCredits() - this.getFreeCredits()) * this.getCostPerCredit();
-        return cost > 0 ? cost : 0;
-    }
+        totalCost = totalCost + (deploymentCost > 0 ? deploymentCost : 0);
+    } 
+
+    totalCost = totalCost > 40 ? totalCost : 40;
+
+    return this.duration == "month" ? totalCost : totalCost / 30.0;
   }
 
   isTotalOverMax() {
@@ -88,7 +85,8 @@ export class PulumiPricingCalculator {
   }
 
   showFormattedTotal() {
-    return `$${this.formatNumber(this.getTotal())} USD / ${this.duration === "day" ? "day" : "mon"}`
+    const total = this.getTotal();
+    return `$${total.toFixed(2)} USD / ${this.duration === "day" ? "day" : "mon"}`
   }
 
   updateResourceCount(event: CustomEvent) {
@@ -194,7 +192,7 @@ export class PulumiPricingCalculator {
                             this.formatNumber(this.getEstimatedCredits())}</span></div>
                     <div class="item"><span>Free credits
                             included</span><span>{this.formatNumber(this.getFreeCredits())}</span></div>
-                    <div class="item"><span>Cost per credit</span><span>${this.getCostPerCredit()}</span></div>
+                    <div class="item"><span>Cost per credit</span><span>${this.getCostPerCredit().toFixed(5)}</span></div>
 
                     <div class={ this.deploymentsExpanded ? "deployment-total visible" : "deployment-total" }>
                         <div class="subtitle">Deployments</div>
