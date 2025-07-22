@@ -61,7 +61,7 @@ tiers:
               price: Custom
               price_label:
               unit:
-              note: Volume discounts and invoicing.
+              note: Volume discounts and invoicing
               items: |
                   Everything in **Enterprise**, plus:
                   - [Self-hosting available](/product/self-hosted)
