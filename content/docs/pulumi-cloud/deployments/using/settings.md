@@ -31,7 +31,7 @@ Alternatively, a stack's deployment settings may be defined and subsequently mod
 Finally, a stack's deployment settings may be defined as a resource within the stack itself using the Pulumi Cloud provider. This lets you securely store your settings in source control alongside your code. For more information, see the [`pulumiservice.DeploymentSettings`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource docs in the [Pulumi Registry](/registry).
 
 {{% notes type="info" %}}
-Pulumi recommends against a stack defining its own Deployment Settings (that is, containing a `pulumiService.DeploymentSettings` resource that for itself), as this would require two deployments for the settings changes to take effect. Instead, consider creating a separate Pulumi program that defines Deployment Settings for multiple stacks that share similar configuration.
+Pulumi recommends against a stack defining its own Deployment Settings (that is, including a `pulumiService.DeploymentSettings` resource that defines settings for the current stack), as this would require two deployments for the settings changes to take effect. Instead, create a separate Pulumi program that defines Deployment Settings for multiple stacks that share similar configuration.
 {{% /notes %}}
 
 ## Path Filtering
