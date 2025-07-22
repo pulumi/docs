@@ -76,8 +76,7 @@ export class PulumiPricingCalculator {
     } 
 
     totalCost = totalCost > 40 ? totalCost : 40;
-
-    return this.duration == "month" ? totalCost : totalCost / 30.0;
+    return this.duration == "month" ? totalCost : totalCost / 30;
   }
 
   isTotalOverMax() {
