@@ -7,7 +7,7 @@ menu:
     weight: 40
 meta_desc: Use composable Pulumi ESC environments to share configuration across services, teams, and lifecycle stages
 h1: "IDP Pattern: Composable environments"
-description: <p>Use composable Pulumi ESC environments to share configuration across services, teams, and lifecycle stages.</p>
+description: Use composable Pulumi ESC environments to share configuration across services, teams, and lifecycle stages.
 ---
 
 ## Description
@@ -33,46 +33,58 @@ Pulumi ESC's composition feature allows you to create a hierarchy of environment
 
 ### Example
 
-Consider AWS credentials and region configuration composed for different deployment stages:
+Consider monitoring configuration composed for different deployment stages:
 
 ```yaml
-# aws-creds ESC environment
+# monitoring-base ESC environment
 values:
-  creds:
-    fn::open::aws-login:
-      oidc:
-        roleArn: arn:aws:iam::123456789012:role/pulumi-environments-oidc
-        sessionName: pulumi-environments-session
-        duration: 1h
+  monitoring:
+    datadog:
+      apiKey:
+        fn::secret: dd-api-key
+      appKey:
+        fn::secret: dd-app-key
+    alerting:
+      slackChannel: "#alerts"
+      pagerDutyService: "platform-team"
   environmentVariables:
-    AWS_ACCESS_KEY_ID: ${aws.creds.accessKeyId}
-    AWS_SECRET_ACCESS_KEY: ${aws.creds.secretAccessKey}
-    AWS_SESSION_TOKEN: ${aws.creds.sessionToken}
+    DD_API_KEY: ${monitoring.datadog.apiKey}
+    DD_APP_KEY: ${monitoring.datadog.appKey}
 ```
 
 ```yaml
-# aws-production ESC environment
+# monitoring-production ESC environment
 imports:
-  - aws-creds
+  - monitoring-base
 values:
-  aws:
-    region: us-east-1
+  monitoring:
+    environment: "production"
+    alerting:
+      errorThreshold: 0.01  # 1% error rate triggers alert
+      responseTimeThreshold: 500  # 500ms response time threshold
+      slackChannel: "#production-alerts"
   pulumiConfig:
-    aws:region: ${aws.region}
+    monitoring:environment: ${monitoring.environment}
+    monitoring:errorThreshold: ${monitoring.alerting.errorThreshold}
 ```
 
 ```yaml
-# aws-staging ESC environment
+# monitoring-staging ESC environment
 imports:
-  - aws-creds
+  - monitoring-base
 values:
-  aws:
-    region: us-west-2
+  monitoring:
+    environment: "staging"
+    alerting:
+      errorThreshold: 0.05  # 5% error rate triggers alert
+      responseTimeThreshold: 1000  # 1s response time threshold
+      slackChannel: "#staging-alerts"
   pulumiConfig:
-    aws:region: ${aws.region}
+    monitoring:environment: ${monitoring.environment}
+    monitoring:errorThreshold: ${monitoring.alerting.errorThreshold}
 ```
 
-This allows developers to use either `aws-production` or `aws-staging` environments and automatically inherit the proper authentication while getting stage-specific regional configuration.
+This allows developers to use either `monitoring-production` or `monitoring-staging` environments and automatically inherit the base monitoring configuration while getting stage-specific alert thresholds and notification channels.
 
 ## Related patterns
 

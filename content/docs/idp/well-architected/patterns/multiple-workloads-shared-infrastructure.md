@@ -1,40 +1,42 @@
 ---
-title: "IDP Pattern: Container-based apps, centrally managed container infra"
-linktitle: "Container-based apps, centrally managed container infra"
+title: "IDP Pattern: Multiple workloads on shared infrastructure"
+linktitle: "Multiple workloads on shared infrastructure"
 menu:
   idp:
     parent: idp-patterns
     weight: 50
-meta_desc: Separate application deployment from infrastructure management using components for centrally managed container infrastructure
+meta_desc: Separate application deployment from infrastructure management using components for centrally managed shared infrastructure
 allow_long_title: true
-h1: "IDP Pattern: Container-based apps, centrally managed container infra"
-description: <p>Separate application deployment from infrastructure management using components for centrally managed container infrastructure.</p>
+h1: "IDP Pattern: Multiple workloads on shared infrastructure"
+description: <p>Separate application deployment from infrastructure management using components for centrally managed shared infrastructure.</p>
 ---
 
 ## Description
 
-This pattern involves creating Pulumi components that abstract container infrastructure (like EKS clusters, ECS clusters, or container registries) which are managed centrally by platform teams, while application teams focus on deploying their containerized applications using these shared infrastructure components.
+This pattern involves creating Pulumi components that abstract shared infrastructure which is managed centrally by platform teams, while application teams focus on deploying their workloads using these shared infrastructure components. Container infrastructure (like EKS clusters, ECS clusters, or container registries) is a common example, but this pattern applies to any shared infrastructure like databases, message queues, or compute clusters.
 
 ## When to use this pattern
 
-- **Container-first architecture**: When your applications are designed to run in containers
+- **Shared infrastructure benefits**: When multiple workloads can benefit from shared infrastructure (containers, databases, message queues, etc.)
 - **Platform team separation**: When you have dedicated platform teams managing infrastructure
-- **Shared infrastructure**: When multiple applications can share the same container runtime
+- **Resource efficiency**: When multiple applications can share the same underlying infrastructure
 - **Standardized deployment**: When you want consistent deployment patterns across teams
 
 ## When NOT to use this pattern
 
 - **Legacy applications**: When applications aren't containerized or container-ready
-- **Special infrastructure needs**: When applications require unique infrastructure configurations
-- **Small organizations**: When you don't have dedicated platform teams
+- **Special infrastructure needs**: When applications require unique configurations like specific GPU types, specialized networking, or custom security requirements
+- **Single workload scenarios**: When you only have one application or service, regardless of organization size
 
 ## How to use this pattern
 
-Platform teams create reusable components that encapsulate container deployment to centrally managed infrastructure, while application teams simply specify their application requirements.
+Platform teams create reusable components that encapsulate workload deployment to centrally managed shared infrastructure, while application teams simply specify their application requirements.
 
-### Example
+The platform team first provisions shared infrastructure (often using their own templates or components for standardization), then creates application-facing components that deploy workloads to this shared infrastructure.
 
-Platform team creates a container application component:
+### Example: Container workloads
+
+This example shows the common case of container workloads. The platform team creates a container application component that deploys to their shared ECS cluster:
 
 ```typescript
 // Platform-managed container application component

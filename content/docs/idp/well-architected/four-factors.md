@@ -5,8 +5,8 @@ meta_desc: A framework for building with Pulumi IDP using Templates, Components,
 allow_long_title: true
 menu:
   idp:
-    parent: idp-best-practices
-    weight: 10
+    parent: idp-well-architected
+    weight: 5
 ---
 
 This guide introduces a framework for building with Pulumi IDP that leverages four key factors to create secure, scalable, and flexible developer workflows. By understanding and effectively combining these factors, platform teams can build robust internal developer platforms that enable developers to provision infrastructure efficiently while maintaining compliance and security.
@@ -72,20 +72,14 @@ The power of Pulumi IDP comes from combining these four factors into cohesive de
 Consider a developer who needs to deploy a new web site hosted in a S3 bucket. Here's how the four factors collaborate:
 
 - **Template**: The developer starts with a `web-site` template that scaffolds a new project with the necessary structure and dependencies.
-
 - **Component**: The template uses a custom `TaggedBucket` component that automatically:
-
    - Creates an S3 bucket with secure defaults and user provided content
    - Applies required organizational tags (like `user:Stack`)
    - Configures appropriate access policies
-
 - **Environment**: Based on the stack name, different ESC environments are automatically applied:
-
    - `staging` stack uses AWS credentials for `us-west-2` region
    - `production` stack uses AWS credentials for `us-east-1` region
-
 - **Policy**: Pulumi Crossguard policies automatically validate the deployment:
-
    - Ensures the `user:Stack` tag is present on all resources
    - Ensures access policies meet organizational security standards
    - Blocks deployment if compliance requirements aren't met
@@ -113,7 +107,7 @@ By leveraging these four factors together, organizations can create internal dev
 
 ## Learn More
 
-To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/best-practices#patterns) and [blueprints](/docs/idp/best-practices#blueprints) library. 
+To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/well-architected/patterns) library. 
 
 ### Additional Resources
 

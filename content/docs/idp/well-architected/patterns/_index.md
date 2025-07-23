@@ -22,7 +22,7 @@ This section provides proven patterns that help you implement well-architected s
 
 ## Application Patterns
 
-- [IDP Pattern: Container-based apps, centrally managed container infra](/docs/idp/well-architected/patterns/container-based-apps-centrally-managed-infra)
+- [IDP Pattern: Multiple workloads on shared infrastructure](/docs/idp/well-architected/patterns/multiple-workloads-shared-infrastructure)
 
 ## Governance Patterns
 
@@ -37,6 +37,5 @@ This section provides proven patterns that help you implement well-architected s
 
 ## Additional Resources
 
-- [Well Architected Patterns and Blueprints](/docs/idp/well-architected)
-- [Best Practices](/docs/idp/best-practices)
+- [Well Architected Patterns](/docs/idp/well-architected)
 - [Get Started with Pulumi IDP](/docs/idp/get-started)

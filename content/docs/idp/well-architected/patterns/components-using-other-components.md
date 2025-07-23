@@ -16,16 +16,15 @@ This pattern involves creating Pulumi components that internally use other compo
 
 ## When to use this pattern
 
-- **Complex architectures**: When you need to combine multiple infrastructure patterns
-- **Layered abstraction**: When you want different levels of abstraction for different users
+- **Integrated architectures**: When you need to combine multiple types of infrastructure
+- **Shared components**: When you have components that need to be used both internally by higher-level components and directly by end users
 - **Reusable patterns**: When you have common architectural patterns across applications
 - **Progressive complexity**: When you want to build from simple to complex components
 
 ## When NOT to use this pattern
 
 - **Simple use cases**: When a single component would suffice
-- **Tight coupling**: When components become too interdependent
-- **Over-abstraction**: When abstraction layers obscure important details
+- **Over-abstraction**: When the complexity doesn't align with your organization's developer experience or policy needs
 
 ## How to use this pattern
 
@@ -39,20 +38,42 @@ Building a web application component that uses database and networking component
 // Lower-level components
 export class Database extends ComponentResource {
   public readonly connectionString: Output<string>;
+  public readonly securityGroupId: Output<string>;
 
   constructor(name: string, args: DatabaseArgs, opts?: ComponentResourceOptions) {
     super("acme:components:Database", name, {}, opts);
 
+    // Create security group for database access
+    const dbSecurityGroup = new aws.ec2.SecurityGroup(`${name}-sg`, {
+      vpcId: args.vpcId,
+      ingress: [{
+        protocol: "tcp",
+        fromPort: 5432,
+        toPort: 5432,
+        cidrBlocks: [args.allowedCidr],
+      }],
+    });
+
+    // Create DB subnet group
+    const subnetGroup = new aws.rds.SubnetGroup(`${name}-subnet-group`, {
+      subnetIds: args.subnetIds,
+    });
+
+    // Create RDS instance
     const db = new aws.rds.Instance(name, {
       engine: "postgres",
       instanceClass: args.instanceClass,
       allocatedStorage: args.storage,
+      dbSubnetGroupName: subnetGroup.name,
+      vpcSecurityGroupIds: [dbSecurityGroup.id],
+      backupRetentionPeriod: args.backupDays || 7,
       // ... other configuration
     });
 
     this.connectionString = db.endpoint.apply(endpoint =>
       `postgresql://${args.username}:${args.password}@${endpoint}/${args.dbName}`
     );
+    this.securityGroupId = dbSecurityGroup.id;
   }
 }
 
