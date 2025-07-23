@@ -55,14 +55,14 @@ For more information on customer-managed agents, see the [Customer Managed Agent
 
 ## Pre-Run Commands
 
-Pre-run commands allow you to execute arbitrary shell commands before the deployment process starts. This is useful for environment setup, authentication with private package repositories, or other preparatory work.
+Pre-run commands allow you to execute arbitrary shell commands before the deployment process starts. This is useful for environment setup, authentication with private package repositories, or other preparatory work. Note that each line of your pre-run command runs in a separate shell.
 
 For example, you might use pre-run commands to:
 
 - Install additional dependencies
 - Configure authentication for private repositories
 - Generate configuration files
-- Set up environment variables
+- Set up environment variables - see [here](#pulumi_env) if you need to persist these to your Pulumi program.
 
 Pre-run commands can be configured through the UI, REST API, or as code with the Pulumi Cloud provider.
 
