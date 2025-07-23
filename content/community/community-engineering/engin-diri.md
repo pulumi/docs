@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Cloud Native Summit Munich 2025"
+  title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
+  url: "https://www.kcdmunich.de/"
+  date: 2025-07-22T15:00:00.000-07:00 
 - event: "WAX CONFÉRENCE 2025"
   title: "Internal Developer Platforms : choisir la bonne voie pour votre organisation"
   url: "https://www.waxconf.fr/schedule/wax-conference-2025"
