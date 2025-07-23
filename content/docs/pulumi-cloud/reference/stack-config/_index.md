@@ -8,19 +8,23 @@ menu:
         weight: 20
 ---
 
-Stack config endpoints allow you to manage configuration settings for your Pulumi stacks, including environment settings and secrets management configuration. If stack configuration is returned by the API, it is used in place of the local stack config file (e.g. `Pulumi.[stack].yaml`).
+{{% notes type="info" %}}
+Stack Config APIs return service-managed configuration only. If you are looking for stack config variables, please refer to the [Stack Updates APIs](../stack-updates/_index.md).
+{{% /notes %}}
+
+Stack config endpoints allow you to manage service-managed configuration settings for your Pulumi stacks, including environment settings and secrets management configuration. If stack configuration is returned by the API, it is used in place of the local stack config file (e.g. `Pulumi.[stack].yaml`).
 
 ## Stack Config Operations
 
 The API provides endpoints for the following operations:
 
-- Getting a stack's configuration
-- Updating a stack's configuration
-- Deleting a stack's configuration
+- Getting a stack's service-managed configuration
+- Updating a stack's service-managed configuration
+- Deleting a stack's service-managed configuration
 
 ## Get Stack Config
 
-Retrieves the configuration settings for a specific stack.
+Retrieves the service-manated configuration settings for a specific stack.
 
 ```plain
 GET /api/stacks/{organization}/{project}/{stack}/config
@@ -61,7 +65,7 @@ Status: 200 OK
 
 ## Update Stack Config
 
-Updates the configuration settings for a specific stack.
+Updates the service-managed configuration settings for a specific stack.
 
 ```plain
 PUT /api/stacks/{organization}/{project}/{stack}/config
@@ -120,7 +124,7 @@ Status: 200 OK
 
 ## Delete Stack Config
 
-Deletes the configuration settings for a specific stack.
+Deletes the service-managed configuration settings for a specific stack.
 
 ```plain
 DELETE /api/stacks/{organization}/{project}/{stack}/config
