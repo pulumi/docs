@@ -34,7 +34,6 @@ Common architectural patterns and design approaches for organizing your infrastr
 - [IDP Pattern: Cost control using Components, Policies, and constrained inputs](/docs/idp/well-architected/patterns/cost-control-using-components-policies-constrained-inputs)
 - [IDP Pattern: Security Updates using Components](/docs/idp/well-architected/patterns/security-updates-using-components)
 
-
 ## Additional Resources
 
 - [Get Started with Pulumi IDP](/docs/idp/get-started)
