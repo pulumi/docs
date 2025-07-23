@@ -9,7 +9,7 @@ menu:
 ---
 
 {{% notes type="info" %}}
-Stack Config APIs return service-managed configuration only. If you are looking for stack config variables, please refer to the [Stack Updates APIs](../stack-updates/_index.md).
+Stack Config APIs return service-managed configuration only. If you are looking for stack config variables, please refer to the [Stack Updates APIs](../stack-updates).
 {{% /notes %}}
 
 Stack config endpoints allow you to manage service-managed configuration settings for your Pulumi stacks, including environment settings and secrets management configuration. If stack configuration is returned by the API, it is used in place of the local stack config file (e.g. `Pulumi.[stack].yaml`).
