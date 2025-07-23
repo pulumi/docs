@@ -33,7 +33,6 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - insights
-    - infrastructure-as-code
     - google cloud
     - resources
 
