@@ -7,7 +7,7 @@ title: "Introducing Google Cloud to Insights Account Discovery"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2025-07-11T12:38:18-05:00
+date: 2025-07-24T12:38:18-05:00
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
