@@ -1,6 +1,6 @@
 ---
 title: Customers
-description: Trusted by 2,700+ cloud innovators
+description: Trusted by 3,000+ cloud innovators
 meta_desc: |
     See how our customers are using Pulumi to simplify cloud management, improve operations,
     reduce costs and scale their services.
