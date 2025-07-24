@@ -46,12 +46,10 @@ customer_logos:
     - name: dutchie
     - name: panther-labs
     - name: materialize
-    - name: altana
     - name: mercedes-benz
     - name: bt
     - name: portx
     - name: tivityhealth
-    - name: starburst
     - name: linktree
 
 ---
