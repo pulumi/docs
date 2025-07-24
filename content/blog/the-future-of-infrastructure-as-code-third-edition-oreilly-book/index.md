@@ -1,5 +1,6 @@
 ---
-title: "The Evolution of Infrastructure as Code: Insights from the Third Edition of "Infrastructure as Code""
+title: "Insights from the Third Edition of Infrastructure as Code "
+allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
