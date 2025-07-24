@@ -62,7 +62,7 @@ For example, you might use pre-run commands to:
 - Install additional dependencies
 - Configure authentication for private repositories
 - Generate configuration files
-- Set up environment variables - see [here](#pulumi_env) if you need to persist these to your Pulumi program.
+- Set up environment variables - see [PULUMI_ENV](#pulumi_env) if you need to persist these to your Pulumi program.
 
 Pre-run commands can be configured through the UI, REST API, or as code with the Pulumi Cloud provider.
 
