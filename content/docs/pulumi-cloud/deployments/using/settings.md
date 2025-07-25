@@ -31,7 +31,7 @@ Alternatively, a stack's deployment settings may be defined and subsequently mod
 Finally, a stack's deployment settings may be defined as a resource within the stack itself using the Pulumi Cloud provider. This lets you securely store your settings in source control alongside your code. For more information, see the [`pulumiservice.DeploymentSettings`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource docs in the [Pulumi Registry](/registry).
 
 {{% notes type="info" %}}
-Pulumi recommends against a stack defining its own Deployment Settings (that is, containing a `pulumiService.DeploymentSettings` resource that for itself), as this would require two deployments for the settings changes to take effect. Instead, consider creating a separate Pulumi program that defines Deployment Settings for multiple stacks that share similar configuration.
+Pulumi recommends against a stack defining its own Deployment Settings (that is, including a `pulumiService.DeploymentSettings` resource that defines settings for the current stack), as this would require two deployments for the settings changes to take effect. Instead, create a separate Pulumi program that defines Deployment Settings for multiple stacks that share similar configuration.
 {{% /notes %}}
 
 ## Path Filtering
@@ -55,14 +55,14 @@ For more information on customer-managed agents, see the [Customer Managed Agent
 
 ## Pre-Run Commands
 
-Pre-run commands allow you to execute arbitrary shell commands before the deployment process starts. This is useful for environment setup, authentication with private package repositories, or other preparatory work.
+Pre-run commands allow you to execute arbitrary shell commands before the deployment process starts. This is useful for environment setup, authentication with private package repositories, or other preparatory work. Note that each line of your pre-run command runs in a separate shell.
 
 For example, you might use pre-run commands to:
 
 - Install additional dependencies
 - Configure authentication for private repositories
 - Generate configuration files
-- Set up environment variables
+- Set up environment variables - see [PULUMI_ENV](#pulumi_env) if you need to persist these to your Pulumi program.
 
 Pre-run commands can be configured through the UI, REST API, or as code with the Pulumi Cloud provider.
 
