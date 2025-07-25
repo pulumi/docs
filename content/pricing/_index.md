@@ -33,9 +33,13 @@ tiers:
                 - 500 free deployments minutes
             - title: Team
               subtitle: Collaboration for growing teams and cloud projects.
-              iac_price: $0.37
-              iac_unit: per resource/month
-              iac_note:
+              base_rate_note1: Starting at 
+              base_rate: $40
+              base_rate_note2: /mo
+              included_credits: 500 resource credits included
+              iac_add: Additional credits starting at
+              iac_price: Additional credits starting at $0.1825/mo
+              iac_note: (with Graduated discounts based on usage)
               esc_price: $0.50
               esc_unit: per secret/month
               esc_note:
@@ -54,9 +58,12 @@ tiers:
                 - Community support
             - title: Enterprise
               subtitle: Advanced cloud engineering capabilities for large teams in production.
-              iac_price: $1.10
-              iac_unit: per resource/month
-              iac_note: (Volume pricing available)
+              base_rate_note1: Starting at 
+              base_rate: $200
+              base_rate_note2: /mo
+              included_credits: 2000 resource credits included
+              iac_price: Additional credits starting at $0.365/mo
+              iac_note: (with Graduated discounts based on usage)
               esc_price: $0.75
               esc_unit: per secret/month
               esc_note: (Volume pricing available)
@@ -122,11 +129,23 @@ comparison_table:
             - header: Pulumi IaC
               subheader: Fully-managed IaC Platform
               rows:
+                - title: Base Rate
+                  items:
+                    - content:
+                    - content: $40/mo
+                    - content: $200/mo
+                    - content: Custom 
+                - title: Included Credits
+                  items:
+                    - content: 200 resources
+                    - content: 500 resources
+                    - content: 2000 resources
+                    - content: Custom
                 - title: Price per resource/month
                   items:
-                    - content: 200 free
-                    - content: $0.37, after 200 free
-                    - content: $1.10 / Custom
+                    - content: $0.37
+                    - content: $0.1825/mo (plus discounts)
+                    - content: $0.365/mo (plus discounts)
                     - content: Custom
                 - title: Commitment pricing
                   items:
