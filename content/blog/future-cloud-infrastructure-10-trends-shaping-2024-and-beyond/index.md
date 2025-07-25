@@ -81,8 +81,7 @@ The massive growth in AI infrastructure is pushing power and water systems to th
 Cloud providers like AWS, Microsoft, and Google are investing heavily in renewable energy, modular data centers, and efficient cooling systems. Sustainability is no longer optional, it’s a capacity constraint.
 
 - **AWS** announced they will [expand water recycling at data center to over 120 locations by 2030](https://www.aboutamazon.com/news/sustainability/amazon-water-conservation-replenishment-sustainability?p=amazon-to-expand-water-recycling-at-data-centers-to-over-120-locations-across-the-us). “AWS’ new initiative will support communities by easing pressure on local water systems while meeting the needs of the rapidly growing AI economy," said Howard Carter, president of Water Environment Federation (WEF).
-- **Google** continues its [goal set in 2021 to replenish 120% of the water](https://blog.google/outreach-initiatives/sustainability/4-new-partnerships-to-help-water-stewardship-and-sustainable-farming/) used in its offices and to cool data centers by 2030. "Google's water stewardship strategy goes beyond managing our own water use — we're actively working to improve watershed health in the communities where we operate," said 
-Ben Townsend, Head of Infrastructure & Sustainability.
+- **Google** continues its [goal set in 2021 to replenish 120% of the water](https://blog.google/outreach-initiatives/sustainability/4-new-partnerships-to-help-water-stewardship-and-sustainable-farming/) used in its offices and to cool data centers by 2030. "Google's water stewardship strategy goes beyond managing our own water use — we're actively working to improve watershed health in the communities where we operate," said Ben Townsend, Head of Infrastructure & Sustainability.
 - **Microsoft Azure** had ambitious goals for 2025, aiming to power all its data centres with renewable energy sources such as wind, solar, hydroelectric, or geothermal. They continue to work towards being carbon negative by 2030. "We are also on track to replenish more water than we consume across global operations and improve datacenter water use efficiency, including through a new innovative datacenter design that optimizes AI workloads and consumes zero water for cooling to avoid the use of an estimated 125,000 cubic meters annually per facility," said Melanie Nakagawa, Chief Sustainability Officer.
 
 ## 4. Hybrid, Multi-Cloud, and Edge as the New Normal
@@ -149,8 +148,7 @@ Kubernetes, the open-source container orchestration platform, will continue its 
 
 The "growing pains" will also increase with rising concerns in security, networking, deployment, scalability, cost, and impact on developer productivity. Read the previous LinkedIn Newsletter article [From Complexity to Simplicity: Streamlining Kubernetes with Infrastructure as Code](https://www.linkedin.com/pulse/from-complexity-simplicity-streamlining-kubernetes-infrastructure?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BHF6x7jyoRWSmk9POeHy0TA%3D%3D).
 
-Kubernetes is also evolving in response to AI demands. Inference workloads, powered by LLMs and GPUs, now require low-latency execution closer to the user. This shift is pushing organizations to build intelligent orchestration layers that schedule AI pipelines across edge and core clusters—often leveraging Kubernetes as the common control plane. 
-
+Kubernetes is also evolving in response to AI demands. Inference workloads, powered by LLMs and GPUs, now require low-latency execution closer to the user. This shift is pushing organizations to build intelligent orchestration layers that schedule AI pipelines across edge and core clusters—often leveraging Kubernetes as the common control plane.
 Additionally, FinOps and security are becoming deeply integrated into Kubernetes workflows. Policy-as-code extensions are gaining traction to ensure cost transparency, policy enforcement, and secure defaults.
 
 ## 10. AI Code Assistants in the Enterprise
