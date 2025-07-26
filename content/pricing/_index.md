@@ -252,14 +252,14 @@ comparison_table:
                     - content: Unlimited
                     - content: Unlimited
                 - title: Version history
-                  link: /docs/esc/environments/#versioning-environments
+                  link: /docs/esc/environments/versioning/
                   items:
                     - content: _blank
                     - content: Up to 5
                     - content: _check
                     - content: _check
                 - title: Version tags and import by tags
-                  link:  /docs/esc/environments/#tagging-versions
+                  link:  /docs/esc/environments/versioning/#tagging-versions
                   items:
                     - content: _blank
                     - content: _blank
@@ -345,7 +345,7 @@ comparison_table:
                     - content: 10
                     - content: 20
                 - title: Data export
-                  link: /docs/insights/#data-export
+                  link: /docs/insights/export/
                   items:
                     - content: _blank
                     - content: _blank
@@ -458,7 +458,7 @@ comparison_table:
                     - content: Available
                     - content: _check
                 - title: Remediation policies
-                  link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
+                  link: /docs/iac/crossguard/core-concepts/#resource-remediation-with-iac
                   items:
                     - content: _blank
                     - content: _blank
@@ -648,7 +648,7 @@ faq:
 
             Enterprise editions receive volume discounts, so that the more resources you consume, the lower the incremental rate. This is true of self-serve pay-as-you-go plans, although prepaid plans offer more considerable discounts.
 
-            For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources#custom-resources) (e.g., an Amazon S3 bucket), [component resources](/docs/concepts/resources#components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/concepts/stack) which contain resources (e.g., dev, test, prod stacks).
+            For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources) (e.g., an Amazon S3 bucket), [component resources](/docs/iac/concepts/components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/iac/concepts/stacks) which contain resources (e.g., dev, test, prod stacks).
         - question: What can I do with 500 IaC resources per month?
           answer: |
             The Team edition includes 500 IaC resources to get started with.
@@ -687,9 +687,9 @@ faq:
             Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.
         - question: How are ESC secrets API calls metered?
           answer: |
-            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/cloud-rest-api/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05.
+            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/reference/environments/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will billed $0.05.
 
-            API usage include any calls from the [CLI](/docs/esc-cli/), [SDK](/docs/esc/sdk/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/cloud-rest-api/) call that hits the ReadOpen API endpoint
+            API usage include any calls from the [CLI](/docs/esc/cli/), [SDK](/docs/esc/development/languages-sdks/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/reference/environments/) call that hits the ReadOpen API endpoint
         - question: What are workflow minutes?
           answer: |
             Workflow Minutes represent the total time used across both Pulumi Insights and Deployments. All usage draws from a single, shared pool of minutes. For Insights, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
