@@ -38,7 +38,7 @@ output "latest_ubuntu_ami_name" {
 }
 ```
 
-If you run this, you should see output showing the latest Ubuntu AMI information. However, it's important to note that HCL is *not* a programming language. It is a simple configuration language, similar to YAML or JSON, with a bit more expressiveness and modularization capabilities. In Pulumi, you use general purpose programming languages, in the form of a Pulumi program.
+If you run this Terraform config, you should see output showing the latest Ubuntu AMI information. However, it's important to note that HCL is *not* a programming language. It is a configuration language, similar to YAML or JSON, with a bit more expressiveness and modularization capabilities. In Pulumi, you use general purpose programming languages to express your desired state of your cloud resources, in the context of a Pulumi program.
 
 ## Pulumi programs
 
