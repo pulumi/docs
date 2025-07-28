@@ -85,6 +85,6 @@ This allows each service team to manage their own configuration independently wh
 
 ## Related patterns
 
-- [IDP Pattern: One ESC environment per team](/docs/idp/well-architected/patterns/one-esc-environment-per-team) - Alternative organizational approach
-- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/well-architected/patterns/one-esc-environment-per-lifecycle-stage) - Complementary staging approach
-- [IDP Pattern: Composable environments](/docs/idp/well-architected/patterns/composable-environments) - For sharing common configuration across services
+- [IDP Pattern: One ESC environment per team](/docs/idp/best-practices/patterns/one-esc-environment-per-team) - Alternative organizational approach
+- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/best-practices/patterns/one-esc-environment-per-lifecycle-stage) - Complementary staging approach
+- [IDP Pattern: Composable environments](/docs/idp/best-practices/patterns/composable-environments) - For sharing common configuration across services

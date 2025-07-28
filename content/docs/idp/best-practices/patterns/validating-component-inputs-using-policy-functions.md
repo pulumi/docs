@@ -134,6 +134,6 @@ This ensures consistent validation whether the database is created directly or t
 
 ## Related patterns
 
-- [IDP Pattern: Policies as tests](/docs/idp/well-architected/patterns/policies-as-tests) - For organization-wide policy enforcement
-- [IDP Pattern: Cost control using Components, Policies, and constrained inputs](/docs/idp/well-architected/patterns/cost-control-using-components-policies-constrained-inputs) - For cost-related validation
-- [IDP Pattern: Components using other Components](/docs/idp/well-architected/patterns/components-using-other-components) - For validating complex component hierarchies
+- [IDP Pattern: Policies as tests](/docs/idp/best-practices/patterns/policies-as-tests) - For organization-wide policy enforcement
+- [IDP Pattern: Cost control using Components, Policies, and constrained inputs](/docs/idp/best-practices/patterns/cost-control-using-components-policies-constrained-inputs) - For cost-related validation
+- [IDP Pattern: Components using other Components](/docs/idp/best-practices/patterns/components-using-other-components) - For validating complex component hierarchies

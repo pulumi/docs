@@ -88,6 +88,6 @@ This allows developers to use either `monitoring-production` or `monitoring-stag
 
 ## Related patterns
 
-- [IDP Pattern: One ESC environment per service](/docs/idp/well-architected/patterns/one-esc-environment-per-service) - Benefits from shared base configuration
-- [IDP Pattern: One ESC environment per team](/docs/idp/well-architected/patterns/one-esc-environment-per-team) - Can import from organizational environments
-- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/well-architected/patterns/one-esc-environment-per-lifecycle-stage) - Can share base configuration across stages
+- [IDP Pattern: One ESC environment per service](/docs/idp/best-practices/patterns/one-esc-environment-per-service) - Benefits from shared base configuration
+- [IDP Pattern: One ESC environment per team](/docs/idp/best-practices/patterns/one-esc-environment-per-team) - Can import from organizational environments
+- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/best-practices/patterns/one-esc-environment-per-lifecycle-stage) - Can share base configuration across stages

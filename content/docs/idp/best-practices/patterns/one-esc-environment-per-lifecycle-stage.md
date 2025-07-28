@@ -93,6 +93,6 @@ This allows consistent base configuration while enabling stage-specific customiz
 
 ## Related patterns
 
-- [IDP Pattern: One ESC environment per service](/docs/idp/well-architected/patterns/one-esc-environment-per-service) - Can be combined for service-stage matrices
-- [IDP Pattern: One ESC environment per team](/docs/idp/well-architected/patterns/one-esc-environment-per-team) - Can be combined for team-stage matrices
-- [IDP Pattern: Composable environments](/docs/idp/well-architected/patterns/composable-environments) - For sharing base configuration across stages
+- [IDP Pattern: One ESC environment per service](/docs/idp/best-practices/patterns/one-esc-environment-per-service) - Can be combined for service-stage matrices
+- [IDP Pattern: One ESC environment per team](/docs/idp/best-practices/patterns/one-esc-environment-per-team) - Can be combined for team-stage matrices
+- [IDP Pattern: Composable environments](/docs/idp/best-practices/patterns/composable-environments) - For sharing base configuration across stages

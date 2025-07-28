@@ -86,6 +86,6 @@ This allows teams to maintain autonomy while accessing shared organizational res
 
 ## Related patterns
 
-- [IDP Pattern: One ESC environment per service](/docs/idp/well-architected/patterns/one-esc-environment-per-service) - Alternative service-focused approach
-- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/well-architected/patterns/one-esc-environment-per-lifecycle-stage) - Complementary staging approach
-- [IDP Pattern: Composable environments](/docs/idp/well-architected/patterns/composable-environments) - For sharing configuration across teams
+- [IDP Pattern: One ESC environment per service](/docs/idp/best-practices/patterns/one-esc-environment-per-service) - Alternative service-focused approach
+- [IDP Pattern: One ESC environment per lifecycle stage](/docs/idp/best-practices/patterns/one-esc-environment-per-lifecycle-stage) - Complementary staging approach
+- [IDP Pattern: Composable environments](/docs/idp/best-practices/patterns/composable-environments) - For sharing configuration across teams

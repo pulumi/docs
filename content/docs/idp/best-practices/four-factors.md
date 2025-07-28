@@ -5,7 +5,7 @@ meta_desc: A framework for building with Pulumi IDP using Templates, Components,
 allow_long_title: true
 menu:
   idp:
-    parent: idp-well-architected
+    parent: idp-best-practices
     weight: 5
 ---
 
@@ -107,7 +107,7 @@ By leveraging these four factors together, organizations can create internal dev
 
 ## Learn More
 
-To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/well-architected/patterns) library. 
+To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/best-practices/patterns) library. 
 
 ### Additional Resources
 

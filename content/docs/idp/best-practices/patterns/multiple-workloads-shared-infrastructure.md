@@ -93,6 +93,6 @@ This allows application teams to deploy containers without managing ECR reposito
 
 ## Related patterns
 
-- [IDP Pattern: Components using other Components](/docs/idp/well-architected/patterns/components-using-other-components) - For building infrastructure component hierarchies
-- [IDP Pattern: One ESC environment per service](/docs/idp/well-architected/patterns/one-esc-environment-per-service) - For service-specific configuration
-- [IDP Pattern: Security Updates using Components](/docs/idp/well-architected/patterns/security-updates-using-components) - For maintaining secure infrastructure
+- [IDP Pattern: Components using other Components](/docs/idp/best-practices/patterns/components-using-other-components) - For building infrastructure component hierarchies
+- [IDP Pattern: One ESC environment per service](/docs/idp/best-practices/patterns/one-esc-environment-per-service) - For service-specific configuration
+- [IDP Pattern: Security Updates using Components](/docs/idp/best-practices/patterns/security-updates-using-components) - For maintaining secure infrastructure

@@ -134,6 +134,6 @@ const myApp = new WebApplication("my-web-app", {
 
 ## Related patterns
 
-- [IDP Pattern: Container-based apps, centrally managed container infra](/docs/idp/well-architected/patterns/container-based-apps-centrally-managed-infra) - Example of component composition
-- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/well-architected/patterns/validating-component-inputs-using-policy-functions) - For validating composed components
-- [IDP Pattern: Security Updates using Components](/docs/idp/well-architected/patterns/security-updates-using-components) - For updating component hierarchies
+- [IDP Pattern: Container-based apps, centrally managed container infra](/docs/idp/best-practices/patterns/container-based-apps-centrally-managed-infra) - Example of component composition
+- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/best-practices/patterns/validating-component-inputs-using-policy-functions) - For validating composed components
+- [IDP Pattern: Security Updates using Components](/docs/idp/best-practices/patterns/security-updates-using-components) - For updating component hierarchies

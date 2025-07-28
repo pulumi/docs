@@ -199,6 +199,6 @@ The policy ensures that outdated component versions cannot be deployed, forcing 
 
 ## Related patterns
 
-- [IDP Pattern: Components using other Components](/docs/idp/well-architected/patterns/components-using-other-components) - For building secure component hierarchies
-- [IDP Pattern: Policies as tests](/docs/idp/well-architected/patterns/policies-as-tests) - For enforcing security policies
-- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/well-architected/patterns/validating-component-inputs-using-policy-functions) - For validating security configurations
+- [IDP Pattern: Components using other Components](/docs/idp/best-practices/patterns/components-using-other-components) - For building secure component hierarchies
+- [IDP Pattern: Policies as tests](/docs/idp/best-practices/patterns/policies-as-tests) - For enforcing security policies
+- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/best-practices/patterns/validating-component-inputs-using-policy-functions) - For validating security configurations

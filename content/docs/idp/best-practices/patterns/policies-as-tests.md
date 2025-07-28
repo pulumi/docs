@@ -78,6 +78,6 @@ This ensures that all infrastructure deployments automatically comply with organ
 
 ## Related patterns
 
-- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/well-architected/patterns/validating-component-inputs-using-policy-functions) - For input validation at the component level
-- [IDP Pattern: Cost control using Components, Policies, and constrained inputs](/docs/idp/well-architected/patterns/cost-control-using-components-policies-constrained-inputs) - For cost governance
-- [IDP Pattern: Security Updates using Components](/docs/idp/well-architected/patterns/security-updates-using-components) - For maintaining secure infrastructure
+- [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/best-practices/patterns/validating-component-inputs-using-policy-functions) - For input validation at the component level
+- [IDP Pattern: Cost control using Components, Policies, and constrained inputs](/docs/idp/best-practices/patterns/cost-control-using-components-policies-constrained-inputs) - For cost governance
+- [IDP Pattern: Security Updates using Components](/docs/idp/best-practices/patterns/security-updates-using-components) - For maintaining secure infrastructure
