@@ -61,50 +61,6 @@ const dbState = new terraform.state.S3Reference("database", {
 });
 ```
 
-### Custom resource providers
-
-Create custom providers that bridge Terraform and Pulumi:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as dynamic from "@pulumi/pulumi/dynamic";
-
-// Custom provider that manages Terraform workspaces
-class TerraformWorkspaceProvider implements dynamic.ResourceProvider {
-    async create(inputs: any): Promise<dynamic.CreateResult> {
-        // Execute terraform workspace operations
-        const result = await runTerraformCommand(
-            `workspace new ${inputs.name}`,
-            inputs.workingDirectory
-        );
-
-        return {
-            id: inputs.name,
-            outs: { name: inputs.name, ...result }
-        };
-    }
-
-    async update(id: string, olds: any, news: any): Promise<dynamic.UpdateResult> {
-        // Handle workspace updates
-        return { outs: news };
-    }
-
-    async delete(id: string, props: any): Promise<void> {
-        // Delete terraform workspace
-        await runTerraformCommand(
-            `workspace delete ${id}`,
-            props.workingDirectory
-        );
-    }
-}
-
-// Use the custom provider
-export const workspace = new dynamic.Resource("terraform-workspace", {
-    name: "my-workspace",
-    workingDirectory: "./terraform",
-}, { provider: new TerraformWorkspaceProvider() });
-```
-
 ### Complex state referencing
 
 Handle complex state structures and transformations:

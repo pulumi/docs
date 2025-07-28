@@ -2,7 +2,7 @@
 title: Pulumi for Terraform Users
 title_tag: Pulumi for Terraform Users
 h1: Pulumi for Terraform Users
-meta_desc: This page provides a comprehensive guide for Terraform users to learn Pulumi through coexistence patterns and integration strategies.
+meta_desc: A comprehensive guide for Terraform users to learn Pulumi through coexistence patterns and integration strategies.
 menu:
     iac:
         name: Terraform Users

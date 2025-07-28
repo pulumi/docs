@@ -1091,6 +1091,24 @@ pulumi stack output --json > pulumi-outputs.json
 pulumi destroy
 ```
 
+## Verifying conversion accuracy
+
+After converting existing infrastructure, verify that your Pulumi program produces identical results by importing the Terraform state and running a preview:
+
+```bash
+# Import the existing Terraform state
+pulumi import aws:ec2/vpc:Vpc main vpc-12345
+pulumi import aws:ec2/subnet:Subnet public subnet-67890
+pulumi import aws:ec2/instance:Instance web i-abcdef123
+
+# Run preview to ensure no changes
+pulumi preview
+
+# Expected result: "no changes required"
+```
+
+This verification step is crucial when converting production infrastructure, as it confirms your Pulumi program exactly matches the existing Terraform-managed resources.
+
 ## Manual conversion techniques
 
 For complex scenarios, you may need to manually convert or enhance the code:
@@ -1184,12 +1202,12 @@ describe("Infrastructure", () => {
 
 {{% /choosable %}}
 
-### Adding error handling
+### Adding custom timeouts
 
 {{% choosable language "typescript" %}}
 
 ```typescript
-// Enhanced error handling
+// Enhanced resource configuration with custom timeouts
 const webInstance = new aws.ec2.Instance("web", {
     ami: amazonLinux.id,
     instanceType: instanceType,
@@ -1207,7 +1225,7 @@ echo "<h1>Hello from Pulumi converted infrastructure!</h1>" > /var/www/html/inde
         Name: "web-server",
     },
 }, {
-    // Custom timeouts
+    // Custom timeouts for resource operations
     customTimeouts: {
         create: "5m",
         update: "5m",

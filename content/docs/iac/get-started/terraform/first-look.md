@@ -12,7 +12,7 @@ menu:
         weight: 3
 ---
 
-Let's have a look at the differences between Terraform HCL and a Pulumi program. This basic program will also serve to verify your cloud connectivity.
+Let's try creating the same resources using both Terraform HCL and a Pulumi program. This basic example will also serve to verify your cloud connectivity.
 
 ## The Terraform way of doing things
 
