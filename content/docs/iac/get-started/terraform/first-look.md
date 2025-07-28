@@ -42,7 +42,7 @@ If you run this Terraform config, you should see output showing the latest Ubunt
 
 ## Pulumi programs
 
-Let's try that in a Pulumi program. The key difference is that Pulumi uses your chosen programming language instead of HCL. Both approaches query the same AWS API and return identical results:
+Let's try creating the same resources in a Pulumi program. The key difference between Terraform and Pulumi is that Pulumi allows you to use your preferred programming language instead of HCL. Both approaches query the same AWS API and return identical results:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
