@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/oMdNuso6jdM?si=rHV6kLSA0XPT6YKa
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-07-24T12:00:00-04:00
@@ -67,7 +67,7 @@ main:
     # case-sensitive
     tags:
         level: Intermediate # Beginner, Intermediate, Advanced
-        topics:  ["Platform Engineering", "IaC", "Pulumi IDP"]
+        topics:  ["Pulumi Features", "Platform Engineering", "DevOps", "Security", "IaC", "Pulumi IDP"]
         languages: ["TypeScript"]
         clouds: ["AWS"]
 
