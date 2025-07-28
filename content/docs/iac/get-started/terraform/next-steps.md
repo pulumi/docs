@@ -108,9 +108,9 @@ When ready to migrate from Terraform to Pulumi:
 
 ```bash
 # Import existing Terraform resources into Pulumi
-pulumi import aws:ec2/vpc:Vpc main-vpc vpc-12345
-pulumi import aws:ec2/subnet:Subnet private-subnet-1 subnet-67890
-pulumi import aws:ecs/cluster:Cluster app-cluster my-cluster
+$ pulumi import aws:ec2/vpc:Vpc main-vpc vpc-12345
+$ pulumi import aws:ec2/subnet:Subnet private-subnet-1 subnet-67890
+$ pulumi import aws:ecs/cluster:Cluster app-cluster my-cluster
 ```
 
 ### State migration utilities

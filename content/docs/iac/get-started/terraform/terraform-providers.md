@@ -43,7 +43,7 @@ Let's enhance our containerized application example by adding random suffixes to
 First, add the random provider:
 
 ```bash
-pulumi package add terraform-provider-random
+$ pulumi package add terraform-provider-random
 ```
 
 Then use it in your Pulumi program:
@@ -129,7 +129,7 @@ export const fullImageUrl = pulumi.interpolate`${repositoryUrl}:v${imageSuffix.h
 First, add the random provider:
 
 ```bash
-pulumi package add terraform-provider-random
+$ pulumi package add terraform-provider-random
 ```
 
 Then use it in your Pulumi program:
@@ -193,7 +193,7 @@ pulumi.export("fullImageUrl", pulumi.Output.format("{0}:v{1}", repository_url, i
 First, add the random provider:
 
 ```bash
-pulumi package add terraform-provider-random
+$ pulumi package add terraform-provider-random
 ```
 
 Then use it in your Pulumi program:
@@ -282,7 +282,7 @@ func main() {
 First, add the random provider:
 
 ```bash
-pulumi package add terraform-provider-random
+$ pulumi package add terraform-provider-random
 ```
 
 Then use it in your Pulumi program:
@@ -359,7 +359,7 @@ return await Deployment.RunAsync(() =>
 First, add the random provider:
 
 ```bash
-pulumi package add terraform-provider-random
+$ pulumi package add terraform-provider-random
 ```
 
 Then use it in your Pulumi program:
@@ -442,7 +442,7 @@ public class App {
 First, add the random provider:
 
 ```bash
-pulumi package add terraform-provider-random
+$ pulumi package add terraform-provider-random
 ```
 
 Then use it in your Pulumi program:
@@ -583,9 +583,9 @@ You can add multiple Terraform providers to leverage specialized functionality:
 
 ```bash
 # Add providers for different services
-pulumi package add terraform-provider-datadog
-pulumi package add terraform-provider-pagerduty
-pulumi package add terraform-provider-github
+$ pulumi package add terraform-provider-datadog
+$ pulumi package add terraform-provider-pagerduty
+$ pulumi package add terraform-provider-github
 ```
 
 ### Custom provider configuration
@@ -633,10 +633,10 @@ Specify provider versions for consistency:
 
 ```bash
 # Add a specific version
-pulumi package add terraform-provider-random@3.4.3
+$ pulumi package add terraform-provider-random@3.4.3
 
 # Add with version constraint
-pulumi package add terraform-provider-datadog@">=3.0.0,<4.0.0"
+$ pulumi package add terraform-provider-datadog@">=3.0.0,<4.0.0"
 ```
 
 ## Best practices

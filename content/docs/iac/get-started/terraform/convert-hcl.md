@@ -189,22 +189,22 @@ Now convert it to Pulumi:
 
 ```bash
 # Convert to TypeScript
-pulumi convert --from terraform --language typescript --out ./pulumi-converted
+$ pulumi convert --from terraform --language typescript --out ./pulumi-converted
 
 # Convert to Python
-pulumi convert --from terraform --language python --out ./pulumi-converted
+$ pulumi convert --from terraform --language python --out ./pulumi-converted
 
 # Convert to Go
-pulumi convert --from terraform --language go --out ./pulumi-converted
+$ pulumi convert --from terraform --language go --out ./pulumi-converted
 
 # Convert to C#
-pulumi convert --from terraform --language csharp --out ./pulumi-converted
+$ pulumi convert --from terraform --language csharp --out ./pulumi-converted
 
 # Convert to Java
-pulumi convert --from terraform --language java --out ./pulumi-converted
+$ pulumi convert --from terraform --language java --out ./pulumi-converted
 
 # Convert to YAML
-pulumi convert --from terraform --language yaml --out ./pulumi-converted
+$ pulumi convert --from terraform --language yaml --out ./pulumi-converted
 ```
 
 ### Converted TypeScript example
@@ -1077,18 +1077,18 @@ Deploy and verify that the converted code produces the same infrastructure:
 
 ```bash
 # Initialize the new Pulumi project
-cd pulumi-converted
-pulumi up
+$ cd pulumi-converted
+$ pulumi up
 
 # Test the deployment
-curl $(pulumi stack output websiteUrl)
+$ curl $(pulumi stack output websiteUrl)
 
 # Compare with original Terraform outputs
-terraform output -json > tf-outputs.json
-pulumi stack output --json > pulumi-outputs.json
+$ terraform output -json > tf-outputs.json
+$ pulumi stack output --json > pulumi-outputs.json
 
 # Clean up
-pulumi destroy
+$ pulumi destroy
 ```
 
 ## Verifying conversion accuracy
@@ -1097,12 +1097,12 @@ After converting existing infrastructure, verify that your Pulumi program produc
 
 ```bash
 # Import the existing Terraform state
-pulumi import aws:ec2/vpc:Vpc main vpc-12345
-pulumi import aws:ec2/subnet:Subnet public subnet-67890
-pulumi import aws:ec2/instance:Instance web i-abcdef123
+$ pulumi import aws:ec2/vpc:Vpc main vpc-12345
+$ pulumi import aws:ec2/subnet:Subnet public subnet-67890
+$ pulumi import aws:ec2/instance:Instance web i-abcdef123
 
 # Run preview to ensure no changes
-pulumi preview
+$ pulumi preview
 
 # Expected result: "no changes required"
 ```
@@ -1112,33 +1112,6 @@ This verification step is crucial when converting production infrastructure, as 
 ## Manual conversion techniques
 
 For complex scenarios, you may need to manually convert or enhance the code:
-
-### Adding type safety
-
-{{% choosable language "typescript" %}}
-
-```typescript
-// Add interfaces for better type safety
-interface WebServerConfig {
-    instanceType: string;
-    allowedCidrBlocks: string[];
-    userData?: string;
-}
-
-const webServerConfig: WebServerConfig = {
-    instanceType: "t3.micro",
-    allowedCidrBlocks: ["0.0.0.0/0"],
-    userData: `#!/bin/bash
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo "<h1>Hello from Pulumi converted infrastructure!</h1>" > /var/www/html/index.html
-`,
-};
-```
-
-{{% /choosable %}}
 
 ### Adding unit tests
 
@@ -1257,7 +1230,7 @@ The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt
 1. **Install via Claude Code** (if using Claude):
 
    ```bash
-   claude mcp add -s user pulumi -- npx @pulumi/mcp-server@latest stdio
+   $ claude mcp add -s user pulumi -- npx @pulumi/mcp-server@latest stdio
    ```
   
    Follow the complete setup instructions in the [MCP server README](https://github.com/pulumi/mcp-server#readme).
@@ -1314,8 +1287,7 @@ Any time you use an automated conversion tool, you will want to review and valid
 2. **Verify outputs**: Ensure converted code produces identical infrastructure
 3. **Test thoroughly**: Write tests for critical infrastructure components
 4. **Preserve structure**: Keep similar resource organization when possible
-5. **Use type safety**: Leverage language features for better error detection
-6. **Document changes**: Note any differences between original and converted code
-7. **Version control**: Use Git to track conversion changes
+5. **Document changes**: Note any differences between original and converted code
+6. **Version control**: Use Git to track conversion changes
 
 {{< get-started-stepper >}}

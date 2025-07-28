@@ -236,8 +236,8 @@ public class App {
 {{% choosable language "yaml" %}}
 
 ```bash
-mkdir pulumi-terraform-test && cd pulumi-terraform-test
-pulumi new yaml --yes
+$ mkdir pulumi-terraform-test && cd pulumi-terraform-test
+$ pulumi new yaml --yes
 ```
 
 Replace the contents of `Pulumi.yaml` with:
