@@ -316,4 +316,4 @@ We've baked Bun into the `pulumi/pulumi` container, allowing you to make use of 
 
 ## Final thoughts
 
-Bun is in the process of establishing itself as the new player in the JavaScript ecosystem. Its focus on speed makes it a great alternative to NPM, Yarn, and pnpm when managing Pulumi project dependencies. Give it a try on your next project, and you may wonder how you ever lived without it.
+Bun is in the process of establishing itself as the new player in the JavaScript ecosystem. Its focus on speed makes it a great alternative to npm, Yarn, and pnpm when managing Pulumi project dependencies. Give it a try on your next project, and you may wonder how you ever lived without it.
