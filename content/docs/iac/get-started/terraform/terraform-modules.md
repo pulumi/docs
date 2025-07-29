@@ -17,7 +17,7 @@ aliases:
 ## Leverage the module ecosystem
 
 Pulumi can directly use existing Terraform modules from the Terraform Registry, private registries, or local sources.
-This allows you to leverage the thousands of existing modules without rewriting them in Pulumi.
+This allows you to access thousands of existing modules without rewriting them in Pulumi.
 
 ## Add Terraform modules
 
@@ -35,15 +35,22 @@ $ pulumi package add terraform-module ./path/to/module localmod
 
 Let's use the popular AWS `vpc` module to create a VPC with subnets, and then deploy an EC2 instance in that VPC:
 
-First, add the VPC module:
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
+{{% choosable language "typescript" %}}
+
+First, create a new Pulumi program:
+
+```bash
+$ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
+$ pulumi new aws-typescript --yes
+```
+
+Next, add the VPC module:
 
 ```bash
 $ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
 ```
-
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language "typescript" %}}
 
 Then use it in your Pulumi program:
 
@@ -53,16 +60,16 @@ import * as aws from "@pulumi/aws";
 import * as vpc from "@pulumi/vpc";
 
 // Use the Terraform VPC module
-const myVpc = new vpc.Vpc("my-vpc", {
+const myVpc = new vpc.Module("my-vpc", {
     name: "my-vpc",
     cidr: "10.0.0.0/16",
 
     azs: ["us-west-2a", "us-west-2b", "us-west-2c"],
-    privateSubnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
-    publicSubnets: ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
+    public_subnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
+    private_subnets: ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"],
 
-    enableNatGateway: true,
-    enableVpnGateway: true,
+    enable_nat_gateway: true,
+    single_nat_gateway: true,
 
     tags: {
         Terraform: "true",
@@ -70,23 +77,12 @@ const myVpc = new vpc.Vpc("my-vpc", {
     },
 });
 
-// Get the latest Amazon Linux 2 AMI
-const amazonLinux = aws.ec2.getAmiOutput({
-    mostRecent: true,
-    owners: ["amazon"],
-    filters: [
-        {
-            name: "name",
-            values: ["amzn2-ami-hvm-*-x86_64-gp2"],
-        },
-    ],
-});
-
 // Create a security group
+
 const webSg = new aws.ec2.SecurityGroup("web-sg", {
     name: "web-sg",
     description: "Security group for web servers",
-    vpcId: myVpc.vpcId,
+    vpcId: myVpc.vpc_id.apply(id => id!),
     ingress: [
         {
             description: "HTTP",
@@ -113,11 +109,23 @@ const webSg = new aws.ec2.SecurityGroup("web-sg", {
     ],
 });
 
+// Get the latest Amazon Linux 2 AMI
+const amazonLinux = aws.ec2.getAmiOutput({
+    mostRecent: true,
+    owners: ["amazon"],
+    filters: [
+        {
+            name: "name",
+            values: ["amzn2-ami-hvm-*-x86_64-gp2"],
+        },
+    ],
+});
+
 // Create an EC2 instance in the VPC
 const webServer = new aws.ec2.Instance("web-server", {
     ami: amazonLinux.id,
     instanceType: "t3.micro",
-    subnetId: myVpc.publicSubnets.apply(subnets => subnets[0]),
+    subnetId: myVpc.public_subnets.apply(subnets => subnets![0]),
     vpcSecurityGroupIds: [webSg.id],
     associatePublicIpAddress: true,
 
@@ -135,10 +143,9 @@ echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.h
     },
 });
 
+
 // Output important information
-export const vpcId = myVpc.vpcId;
-export const publicSubnets = myVpc.publicSubnets;
-export const privateSubnets = myVpc.privateSubnets;
+export const vpcId = myVpc.vpc_id;
 export const instanceId = webServer.id;
 export const publicIp = webServer.publicIp;
 export const websiteUrl = pulumi.interpolate`http://${webServer.publicIp}`;
@@ -148,6 +155,19 @@ export const websiteUrl = pulumi.interpolate`http://${webServer.publicIp}`;
 
 {{% choosable language "python" %}}
 
+First, create a new Pulumi program:
+
+```bash
+$ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
+$ pulumi new aws-python --yes
+```
+
+Next, add the VPC module:
+
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+```
+
 Then use it in your Pulumi program:
 
 ```python
@@ -156,13 +176,13 @@ import pulumi_aws as aws
 import pulumi_vpc as vpc
 
 # Use the Terraform VPC module
-my_vpc = vpc.Vpc("my-vpc",
+my_vpc = vpc.Module("my-vpc",
     name="my-vpc",
     cidr="10.0.0.0/16",
 
     azs=["us-west-2a", "us-west-2b", "us-west-2c"],
-    private_subnets=["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
-    public_subnets=["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"],
+    public_subnets=["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
+    private_subnets=["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"],
 
     enable_nat_gateway=True,
     enable_vpn_gateway=True,
@@ -173,23 +193,11 @@ my_vpc = vpc.Vpc("my-vpc",
     }
 )
 
-# Get the latest Amazon Linux 2 AMI
-amazon_linux = aws.ec2.get_ami(
-    most_recent=True,
-    owners=["amazon"],
-    filters=[
-        {
-            "name": "name",
-            "values": ["amzn2-ami-hvm-*-x86_64-gp2"],
-        }
-    ]
-)
-
 # Create a security group
 web_sg = aws.ec2.SecurityGroup("web-sg",
     name="web-sg",
     description="Security group for web servers",
-    vpc_id=my_vpc.vpc_id,
+    vpc_id=my_vpc.vpc_id.apply(lambda id: id),
     ingress=[
         {
             "description": "HTTP",
@@ -212,6 +220,18 @@ web_sg = aws.ec2.SecurityGroup("web-sg",
             "to_port": 0,
             "protocol": "-1",
             "cidr_blocks": ["0.0.0.0/0"],
+        }
+    ]
+)
+
+# Get the latest Amazon Linux 2 AMI
+amazon_linux = aws.ec2.get_ami(
+    most_recent=True,
+    owners=["amazon"],
+    filters=[
+        {
+            "name": "name",
+            "values": ["amzn2-ami-hvm-*-x86_64-gp2"],
         }
     ]
 )
@@ -240,8 +260,6 @@ echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.h
 
 # Output important information
 pulumi.export("vpcId", my_vpc.vpc_id)
-pulumi.export("publicSubnets", my_vpc.public_subnets)
-pulumi.export("privateSubnets", my_vpc.private_subnets)
 pulumi.export("instanceId", web_server.id)
 pulumi.export("publicIp", web_server.public_ip)
 pulumi.export("websiteUrl", pulumi.Output.format("http://{0}", web_server.public_ip))
@@ -250,6 +268,19 @@ pulumi.export("websiteUrl", pulumi.Output.format("http://{0}", web_server.public
 {{% /choosable %}}
 
 {{% choosable language "go" %}}
+
+First, create a new Pulumi program:
+
+```bash
+$ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
+$ pulumi new aws-go --yes
+```
+
+Next, add the VPC module:
+
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+```
 
 Then use it in your Pulumi program:
 
@@ -377,6 +408,19 @@ echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.h
 
 {{% choosable language "csharp" %}}
 
+First, create a new Pulumi program:
+
+```bash
+$ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
+$ pulumi new aws-csharp --yes
+```
+
+Next, add the VPC module:
+
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+```
+
 Then use it in your Pulumi program:
 
 ```csharp
@@ -499,6 +543,19 @@ echo ""<h1>Hello from Pulumi and Terraform modules!</h1>"" > /var/www/html/index
 
 {{% choosable language "java" %}}
 
+First, create a new Pulumi program:
+
+```bash
+$ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
+$ pulumi new aws-java --yes
+```
+
+Next, add the VPC module:
+
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+```
+
 Then use it in your Pulumi program:
 
 ```java
@@ -614,6 +671,19 @@ public class App {
 {{% /choosable %}}
 
 {{% choosable language "yaml" %}}
+
+First, create a new Pulumi program:
+
+```bash
+$ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
+$ pulumi new aws-yaml --yes
+```
+
+Next, add the VPC module:
+
+```bash
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+```
 
 Then use it in your Pulumi program:
 

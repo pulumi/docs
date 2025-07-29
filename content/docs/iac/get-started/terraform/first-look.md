@@ -49,6 +49,8 @@ Let's try creating the same resources in a Pulumi program. The key difference be
 
 {{% choosable language "typescript" %}}
 
+First, create a new Pulumi program:
+
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
 $ pulumi new aws-typescript --yes
@@ -79,6 +81,8 @@ export const latestUbuntuAmiName = ubuntu.name;
 {{% /choosable %}}
 
 {{% choosable language "python" %}}
+
+First, create a new Pulumi program:
 
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
@@ -111,6 +115,8 @@ pulumi.export("latestUbuntuAmiName", ubuntu.name)
 {{% /choosable %}}
 
 {{% choosable language "go" %}}
+
+First, create a new Pulumi program:
 
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
@@ -156,6 +162,8 @@ func main() {
 
 {{% choosable language "csharp" %}}
 
+First, create a new Pulumi program:
+
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
 $ pulumi new aws-csharp --yes
@@ -199,6 +207,8 @@ return await Deployment.RunAsync(() =>
 
 {{% choosable language "java" %}}
 
+First, create a new Pulumi program:
+
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
 $ pulumi new aws-java --yes
@@ -241,6 +251,8 @@ public class App {
 {{% /choosable %}}
 
 {{% choosable language "yaml" %}}
+
+First, create a new Pulumi program:
 
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
