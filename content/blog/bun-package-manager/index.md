@@ -1,5 +1,5 @@
 ---
-title: "Bun + Pulumi: Supercharge Your Infrastructure Dependencies"
+title: "Pulumi + Bun: Supercharge Your Infrastructure Dependencies"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -11,7 +11,7 @@ date: 2025-07-28T09:50:26+01:00
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
-draft: true
+draft: false
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or
@@ -35,30 +35,11 @@ tags:
     - typescript
     - package-manager
 
-
-# The social copy used to promote this post on Twitter and Linkedin. These
-# properties do not actually create the post and have no effect on the
-# generated blog page. They are here strictly for reference.
-
-# Here are some examples of posts we have made in the past for inspiration:
-# https://www.linkedin.com/feed/update/urn:li:activity:7171191945841561601
-# https://www.linkedin.com/feed/update/urn:li:activity:7169021002394296320
-# https://www.linkedin.com/feed/update/urn:li:activity:7155606616455737345
-# https://twitter.com/PulumiCorp/status/1763265391042654623
-# https://twitter.com/PulumiCorp/status/1762900472489185492
-# https://twitter.com/PulumiCorp/status/1755637618631405655
-
-social:
-    twitter: 
-    linkedin:
-
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
-# for details, and please remove these comments before submitting for review.
 ---
 
 Today, we are announcing a new addition that allows Pulumi users to use [Bun](https://bun.sh/) as their package manager, offering an alternative to npm, Yarn, or pnpm. Bun, a recently released JavaScript runtime, bundler, transpiler, and package manager, provides a faster way to manage Pulumi project dependencies.
 
-<!-- more -->
+<!--more-->
 
 ## What is this Bun thing you're talking about?
 
