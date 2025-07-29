@@ -39,6 +39,7 @@ tiers:
                 - OIDC and team access tokens
                 - Webhooks
                 - Automatic secrets rotation
+                - 3000 free deployment minutes per month
                 - Community support
             - title: Enterprise
               subtitle: Security and collaboration for large teams.
