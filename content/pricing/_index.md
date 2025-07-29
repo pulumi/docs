@@ -23,7 +23,7 @@ tiers:
                 - IaC state management
                 - Unlimited projects, stacks, and environments
                 - Unlimited updates and history
-                - 500 free deployments minutes
+                - 500 free deployment minutes per month
             - title: Team
               subtitle: Everything you need to get started.
               price: $40
