@@ -23,6 +23,7 @@ import "./docs-main";
 import "./redirects";
 import "./algolia/autocomplete";
 import "./terraform-compare";
+import "./external-links";
 
 // Register all Stencil components.
 defineCustomElements();
