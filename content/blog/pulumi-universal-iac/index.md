@@ -411,7 +411,7 @@ const webhook = new pulumiservice.Webhook("webhook", {
 
 ## Pulumi CrossCode
 
-[Pulumi CrossCode](/crosscode/) is the underlying set of technologies that Pulumi uses to support a wide range of programming languages, to enable sharing components and packages between languages, to support converting infrastructure from existing formats into Pulumi, to import infrastructure directly from cloud providers into Pulumi code, and to support converting Pulumi YAML into other Pulumi languages.
+Pulumi CrossCode is the underlying set of technologies that Pulumi uses to support a wide range of programming languages, to enable sharing components and packages between languages, to support converting infrastructure from existing formats into Pulumi, to import infrastructure directly from cloud providers into Pulumi code, and to support converting Pulumi YAML into other Pulumi languages.
 
 Support for Java and YAML was built on (and into) CrossCode to enable these languages to leverage everything that exists in the Pulumi ecosystem and to easily plug into existing features like conversion tools, example generation and so much more value that exists in the Pulumi platform.
 

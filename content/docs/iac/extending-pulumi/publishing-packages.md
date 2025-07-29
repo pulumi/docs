@@ -77,7 +77,7 @@ We recommend keeping the contents of `README.md` and `_index.md` similar or the 
 
 ### Package metadata
 
-Metadata for your package is generated from the [`schema.json`](/docs/using-pulumi/extending-pulumi/schema) in your repository. To make sure your package looks great in the Pulumi Registry, don't forget to add metadata like:
+Metadata for your package is generated from the [`schema.json`](/docs/iac/using-pulumi/extending-pulumi/schema) in your repository. To make sure your package looks great in the Pulumi Registry, don't forget to add metadata like:
 
 - `displayName`: the friendly name for your package displayed on the Registry's browse page; this name should match the title of the `_index.md` file.
 - `description`: a short description of your package; it should include the package name

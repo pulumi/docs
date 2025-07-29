@@ -26,7 +26,7 @@ technology generation, and even by cloud vendor, and so deny the full
 potential of cloud native application delivery.
 
 In our latest white paper,
-[Delivering Cloud Native Infrastructure as Code](/whitepapers/delivering-cloud-native-infrastructure-as-code/),
+[Delivering Cloud Native Infrastructure as Code](./Pulumi-Delivering-CNI-as-Code.pdf),
 we make the case for a consistent programming model for the cloud and examine:
 
 - How the cloud has already evolved three times as it increasingly
@@ -40,7 +40,6 @@ we make the case for a consistent programming model for the cloud and examine:
   development and operations functions, and does not satisfy the need
   for increasing delivery speed in the cloud.
 
-You can read the paper in full [here](/whitepapers/delivering-cloud-native-infrastructure-as-code/),
-or download a copy [here](./Pulumi-Delivering-CNI-as-Code.pdf).
+You can read the paper in full [here](./Pulumi-Delivering-CNI-as-Code.pdf).
 
 Let us know what you think!

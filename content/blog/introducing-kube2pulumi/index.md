@@ -421,5 +421,5 @@ any questions, need support, or just want to say hello.
 [Kubernetes to Pulumi Converter]: /kube2pulumi/
 [Pulumi Kubernetes Operator]: /blog/pulumi-kubernetes-operator/
 [YAML]: /registry/packages/kubernetes/api-docs/yaml/configgroup/
-[130 lines of YAML]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/deploy/yaml
+[130 lines of YAML]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/6a4943af8b888adcf3f7fc2b0400f57768a0dcf7/deploy/yaml
 <!-- markdownlint-enable url -->

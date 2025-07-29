@@ -38,7 +38,7 @@ case_studies:
     title: Case Studies
     items:
         - name: SST
-          link: /case-studies/sst/
+          link: https://sst.dev/blog/moving-away-from-cdk
           logo: sst
           description: |
             SST builds a new version of SST (Ion) on Pulumi instead of CDK because of its limitations around speed, error handling, leaky abstractions, non-AWS provider support, and more.

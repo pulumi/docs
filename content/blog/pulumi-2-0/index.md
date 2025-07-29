@@ -19,7 +19,7 @@ Today we are excited to announce Pulumi 2.0, the next major stage in our journey
     <a class="btn btn-lg mr-2" href="/docs/quickstart">
         Get Started
     </a>
-    <a class="btn btn-lg btn-orange ml-2" href="/superpowers">
+    <a class="btn btn-lg btn-orange ml-2" href="/docs/">
         Learn More
     </a>
 </div>
@@ -72,7 +72,7 @@ To learn more, join us for our launch event next Wednesday, or just [download Pu
     <a class="btn btn-lg mr-2" href="/docs/quickstart">
         Get Started
     </a>
-    <a class="btn btn-lg btn-orange ml-2" href="/superpowers">
+    <a class="btn btn-lg btn-orange ml-2" href="/docs/">
         Learn More
     </a>
 </div>

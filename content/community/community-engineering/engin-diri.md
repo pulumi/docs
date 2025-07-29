@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Cloud Native Summit Munich 2025"
+  title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
+  url: "https://www.kcdmunich.de/"
+  date: 2025-07-22T15:00:00.000-07:00 
 - event: "WAX CONFÉRENCE 2025"
   title: "Internal Developer Platforms : choisir la bonne voie pour votre organisation"
   url: "https://www.waxconf.fr/schedule/wax-conference-2025"
@@ -102,7 +106,7 @@ talks:
   slides: null
 - event: "Equinix Demo Day"
   title: "Deploy Bare Metal Kubernetes with Pulumi on Equinix Metal"
-  url: "https://deploy.equinix.com/events/demo-day-the-infrastructure-as-code-edition/"
+  url: "https://www.youtube.com/watch?v=ftjOsrDE5uA"
   date: 2024-09-10T18:00:00.000-07:00
   slides: null
 - event: "The Platformers"
@@ -127,7 +131,7 @@ talks:
   slides: null
 - event: "KCD Istanbul 2024"
   title: "Gain Platform Superpowers with the KEBAP Stack!"
-  url: https://kcd.istanbul/KCD_Istanbul_2024_Schedule.pdf
+  url: https://www.youtube.com/watch?v=wN-DvPUIm4E
   date: 2024-05-16T12:00:00.000-07:00
   slides: null
 - event: "LA DevOps"

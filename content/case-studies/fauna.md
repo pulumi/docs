@@ -7,7 +7,7 @@ meta_desc: Learn how Fauna worked with Pulumi to develop Region Groups by giving
 
 customer_name: Fauna
 customer_logo: /logos/customers/fauna-wordmark.svg
-customer_url: https://fauna.com/
+customer_url: https://faunadb.org/
 
 exec_summary: |
     Fauna, the data API for modern applications, was preparing to launch a major new feature that would allow its customers to meet local data residency requirements with all the benefits of distributed, serverless databases. With a short timeline and small team, Fauna’s developers needed a universal infrastructure-as-code solution that would support the project’s complex requirements, including multi-cloud and multi-region support. They also wanted to increase their velocity by using software engineering practices with infrastructure. By using the Pulumi Cloud Engineering Platform, Fauna shortened its time-to-market from weeks to days because its developers could build, deploy, and manage multi-cloud applications faster than before using their language of choice, Python. Pulumi also allowed them to apply software engineering practices to infrastructure, which increased developer productivity and infrastructure reliability.
@@ -88,4 +88,4 @@ Pulumi enabled Fauna to develop a crucial new feature, Region Groups, by giving 
 - Maintained the security of infrastructure that handled customer data using Pulumi’s security, encryption, and access control features.
 - Improved the quality of the Fauna service because developers can rapidly deploy and test pre-production environments that are similar to production, using the same infrastructure tooling.
 
-To learn more about how Fauna used Pulumi to develop its serverless database, read the technical deep-dive blog, <a href="https://fauna.com/blog/building-faunas-gdpr-compliant-distributed-and-scalable-database/" target="_blank" rel="noopener noreferrer">Building Fauna’s GDPR-compliant distributed and scalable database infrastructure with Pulumi</a>.
+To learn more about how Fauna used Pulumi to develop its serverless database, read the technical deep-dive blog, <a href="https://web.archive.org/web/20250516064352/https://fauna.com/blog/building-faunas-gdpr-compliant-distributed-and-scalable-database" target="_blank" rel="noopener noreferrer">Building Fauna’s GDPR-compliant distributed and scalable database infrastructure with Pulumi</a>.
