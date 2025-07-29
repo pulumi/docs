@@ -27,7 +27,7 @@ Output form that accepts `Input`-typed arguments and returns an
 `Output`-wrapped result.
 
 For a quick example, here is how you can call
-[aws.ecr.getCredentials](https://www.pulumi.com/registry/packages/aws/api-docs/ecr/getcredentials/)
+`aws.ecr.getCredentials`
 with a `registryId` of type `Output<string>`:
 
 {{< chooser language "typescript,python,go,csharp" / >}}

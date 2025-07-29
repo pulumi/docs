@@ -19,7 +19,7 @@ Pulumi Deployments can be used to automatically deploy dependent stacks via Depl
 1. [Deployment Webhook Destinations](/docs/pulumi-cloud/webhooks/#deployment-webhooks)
 2. [The Pulumi Auto Deploy Package](/registry/packages/auto-deploy)
 
-Either method requires that your stacks are configured with [Deployment Settings](./settings).
+Either method requires that your stacks are configured with [Deployment Settings](/docs/pulumi-cloud/deployments/using/settings/).
 
 ### Deployment Webhook Destinations
 
