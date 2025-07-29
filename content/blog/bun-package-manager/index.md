@@ -274,7 +274,7 @@ config:
 We can use the `bun` CLI to migrate the `package-lock.json` file to the `bun.lock` file, running the following command:
 
 ```
-bun om migrate
+bun pm migrate
 ```
 
 which gives us the file structure:
