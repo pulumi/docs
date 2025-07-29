@@ -14,7 +14,7 @@ aliases:
 - /docs/iac/using-pulumi/extending-pulumi/
 ---
 
-Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), [packages](/docs/iac/concepts/resources/packages/), and more.
+Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), [packages](/docs/iac/concepts/packages/), and more.
 
 ## What are my options?
 
@@ -68,11 +68,11 @@ This matters when we talk about components and providers because Pulumi Deployme
 
 ## Packaging and Publishing
 
-Pulumi [*packages*](/docs/iac/concepts/resources/packages/) are a standardized way to share providers and components. After building a provider or component, the next steps involve generating docs and end-user SDK code in various target languages, both of which are based on the [`schema.json` file](schema/). Those user-facing assets are packaged up in a tarball. Once you have a package, this can either be used locally or shared via the Pulumi Registry.
+Pulumi [*packages*](/docs/iac/concepts/packages/) are a standardized way to share providers and components. After building a provider or component, the next steps involve generating docs and end-user SDK code in various target languages, both of which are based on the [`schema.json` file](schema/). Those user-facing assets are packaged up in a tarball. Once you have a package, this can either be used locally or shared via the Pulumi Registry.
 
 Learn more in the [package documentation](/docs/iac/concepts/packages).
 
-![A diagram showing how Pulumi Package code can be authored in one language and made available in all other languages supported by Pulumi](../../concepts/img/pulumi-package-concepts.png)
+![A diagram showing how Pulumi Package code can be authored in one language and made available in all other languages supported by Pulumi](/docs/iac/concepts/img/pulumi-package-concepts.png)
 
 ### Language Limitations
 
@@ -86,7 +86,7 @@ When extending Pulumi, you get the same great flexibility, with some caveats:
 
 This flexibility is made possible through code generation. When you author a component or provider, the `schema.json` is used to generate docs and SDKs in all target languages. Those SDKs are included in the Pulumi package, and the docs generated and published in the Pulumi Registry, making it very easy for end users to consume your code.
 
-![A graphic representation of the steps listed above](../../concepts/img/pulumi-package-overview.png)
+![A graphic representation of the steps listed above](/docs/iac/concepts/img/pulumi-package-overview.png)
 
 ## Leveraging the Ecosystem
 

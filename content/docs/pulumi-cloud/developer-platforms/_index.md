@@ -19,7 +19,7 @@ An Internal Developer Platform (IDP) is a tool platform teams use to provide sel
 
 Pulumi IDP is a bottom-up approach for platform teams to provide self-service workflows to their users, from Day 0 to Day 2. Unlike an Internal Developer Portal, Pulumi IDP facilitates concrete outcomes, not just information consumption.
 
-Pulumi IDP can facilitate workflows across the Day 0-2 spectrum thanks to powerful features like [Private Registry](/docs/idp/get-started/private-registry/), [Components](/docs/iac/concepts/resources/components/), [Templates](docs/pulumi-cloud/developer-portals/templates/), [Services](/docs/idp/get-started/services/), and more. By using a bottom-up approach, platform engineers can codify security, compliance, and operational requirements in their golden paths without additional effort.
+Pulumi IDP can facilitate workflows across the Day 0-2 spectrum thanks to powerful features like [Private Registry](/docs/idp/get-started/private-registry/), [Components](/docs/iac/concepts/resources/components/), [Templates](/docs/pulumi-cloud/developer-portals/templates/), [Services](/docs/idp/get-started/services/), and more. By using a bottom-up approach, platform engineers can codify security, compliance, and operational requirements in their golden paths without additional effort.
 
 Learn more in the [Pulumi IDP get started guide](/docs/idp/get-started/).
 
