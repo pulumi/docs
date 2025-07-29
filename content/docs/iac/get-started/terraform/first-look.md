@@ -20,6 +20,7 @@ In Terraform, if you wanted to query an AMI ID you might write something like th
 
 ```hcl
 data "aws_ami" "ubuntu" {
+  region      = "us-west-2"
   most_recent = true
   owners      = ["099720109477"] # Canonical
 
@@ -50,7 +51,7 @@ Let's try creating the same resources in a Pulumi program. The key difference be
 
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
-$ pulumi new typescript --yes
+$ pulumi new aws-typescript --yes
 ```
 
 Replace the contents of `index.ts` with:
@@ -60,6 +61,7 @@ import * as aws from "@pulumi/aws";
 
 // Query existing Ubuntu AMIs (read-only operation)
 const ubuntu = aws.ec2.getAmiOutput({
+    region: "us-west-2",
     mostRecent: true,
     owners: ["099720109477"], // Canonical
     filters: [
@@ -80,7 +82,7 @@ export const latestUbuntuAmiName = ubuntu.name;
 
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
-$ pulumi new python --yes
+$ pulumi new aws-python --yes
 ```
 
 Replace the contents of `__main__.py` with:
@@ -91,6 +93,7 @@ import pulumi_aws as aws
 
 # Query existing Ubuntu AMIs (read-only operation)
 ubuntu = aws.ec2.get_ami(
+    region="us-west-2",
     most_recent=True,
     owners=["099720109477"],  # Canonical
     filters=[
@@ -111,7 +114,7 @@ pulumi.export("latestUbuntuAmiName", ubuntu.name)
 
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
-$ pulumi new go --yes
+$ pulumi new aws-go --yes
 ```
 
 Replace the contents of `main.go` with:
@@ -120,7 +123,7 @@ Replace the contents of `main.go` with:
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -128,6 +131,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Query existing Ubuntu AMIs (read-only operation)
 		ubuntu, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+            Region: pulumi.StringRef("us-west-2"),
 			MostRecent: pulumi.BoolRef(true),
 			Owners:     []string{"099720109477"}, // Canonical
 			Filters: []ec2.GetAmiFilter{
@@ -154,7 +158,7 @@ func main() {
 
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
-$ pulumi new csharp --yes
+$ pulumi new aws-csharp --yes
 ```
 
 Replace the contents of `Program.cs` with:
@@ -163,12 +167,14 @@ Replace the contents of `Program.cs` with:
 using System.Collections.Generic;
 using Pulumi;
 using Pulumi.Aws.Ec2;
+using Pulumi.Aws.Ec2.Inputs;
 
 return await Deployment.RunAsync(() =>
 {
     // Query existing Ubuntu AMIs (read-only operation)
     var ubuntu = GetAmi.Invoke(new()
     {
+        Region = "us-west-2",
         MostRecent = true,
         Owners = new[] { "099720109477" }, // Canonical
         Filters = new[]
@@ -195,7 +201,7 @@ return await Deployment.RunAsync(() =>
 
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
-$ pulumi new java --yes
+$ pulumi new aws-java --yes
 ```
 
 Replace the contents of `src/main/java/myproject/App.java` with:
@@ -216,6 +222,7 @@ public class App {
         Pulumi.run(ctx -> {
             // Query existing Ubuntu AMIs (read-only operation)
             var ubuntu = Ec2Functions.getAmi(GetAmiArgs.builder()
+                .region("us-west-2")
                 .mostRecent(true)
                 .owners("099720109477") // Canonical
                 .filters(GetAmiFilterArgs.builder()
@@ -237,7 +244,7 @@ public class App {
 
 ```bash
 $ mkdir pulumi-terraform-test && cd pulumi-terraform-test
-$ pulumi new yaml --yes
+$ pulumi new aws-yaml --yes
 ```
 
 Replace the contents of `Pulumi.yaml` with:
@@ -252,6 +259,7 @@ variables:
     fn::invoke:
       function: aws:ec2:getAmi
       arguments:
+        region: us-west-2
         mostRecent: true
         owners: ["099720109477"] # Canonical
         filters:
@@ -279,6 +287,7 @@ Remove the test resources:
 
 ```bash
 $ pulumi destroy --yes
+$ pulumi stack rm --yes
 $ cd .. && rm -rf pulumi-terraform-test
 ```
 
