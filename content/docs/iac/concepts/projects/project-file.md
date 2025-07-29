@@ -65,7 +65,7 @@ The runtime attribute has an additional property called `options` where you can 
 | - | - | - |
 | `typescript` | Only applies to the `nodejs` runtime | Boolean indicating whether to use `ts-node` or not. |
 | `nodeargs` | Only applies to the `nodejs` runtime | Arguments to pass to `node`. |
-| `packagemanager` | Only applies to the `nodejs` runtime | Packagemanager to use for installing dependencies, `npm` (default), `pnpm` or `yarn`. |
+| `packagemanager` | Only applies to the `nodejs` runtime | Packagemanager to use for installing dependencies, `npm` (default), `pnpm`, `yarn` or `bun`. |
 | `buildTarget` | Only applies to the `go` runtime | Path to save the compiled go binary to. |
 | `binary` | applies to the `go`, `dotnet`, and `java` runtimes | Path to a pre-built executable. |
 | `toolchain` | Only applies to the `python` runtime | Toolchain to use for managing virtual environments, `pip` (default), `poetry` or `uv` |
