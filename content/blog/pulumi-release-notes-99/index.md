@@ -53,7 +53,7 @@ Pulumi AI can now write Pulumi programs for all 150 cloud providers in the [Pulu
 
 ### Pulumi AI Answers
 
-[Pulumi AI Answers](https://www.pulumi.com/answers), launched late last year, has become a go-to repository, hosting an extensive collection of over 50,000 anonymized, infrastructure-as-code commonly asked queries, all carefully selected and presented by Pulumi. As this repository continues to expand, we're seeing an exponential increase in user traffic, underscoring the immense value it offers. It's inspiring to see the Pulumi community actively leveraging it as they build and scale their cloud infrastructure
+Pulumi AI Answers, launched late last year, has become a go-to repository, hosting an extensive collection of over 50,000 anonymized, infrastructure-as-code commonly asked queries, all carefully selected and presented by Pulumi. As this repository continues to expand, we're seeing an exponential increase in user traffic, underscoring the immense value it offers. It's inspiring to see the Pulumi community actively leveraging it as they build and scale their cloud infrastructure
 
 
 ## Pulumi Cloud

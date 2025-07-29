@@ -30,7 +30,7 @@ Let’s have a look at a concrete example where this package ecosystem can get y
 
 A popular example of cloud infrastructure automation is creating an S3 bucket and pushing some files to it. This is a common task that many of us have had to do, and most infrastructure automation tools have a way to accomplish this. 
 
-Here’s our public answer for [how to do that in Pulumi][s3-bucket-example]: 
+Here’s one way to do that in Pulumi: 
 
 {{< chooser language "typescript,python" />}}
 
@@ -239,7 +239,6 @@ The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open
 
 <a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
 
-[s3-bucket-example]: https://www.pulumi.com/answers/uploading-files-to-aws-s3-bucket/
 [npm-mimetypes]: https://www.npmjs.com/package/mime-types
 [npm-text-to-image]: https://www.npmjs.com/package/text-to-image
 [cnunciato-image-badge-example]: https://gist.github.com/cnunciato/2461f87e59b3b50c14cbefc33b91738e

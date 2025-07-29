@@ -73,7 +73,7 @@ You can use Pulumi ESC with pre-run commands by prefixing each command with `pul
 pulumi env run my-aws-env -- aws s3 ls
 ```
 
-This executes the `aws s3 ls` command with credentials from your `my-aws-env` ESC environment. See the [Pulumi ESC CLI documentation](/docs/esc/usage/cli-commands/#env) for more details.
+This executes the `aws s3 ls` command with credentials from your `my-aws-env` ESC environment. See the [Pulumi ESC CLI documentation](/docs/esc/cli/commands/esc_env/) for more details.
 {{% /notes %}}
 
 ## Skipping Automatic Dependency Installation

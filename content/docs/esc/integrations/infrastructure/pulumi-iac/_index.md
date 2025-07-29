@@ -102,7 +102,7 @@ See [here](/docs/iac/cli/commands/pulumi_config_env_init/) for more information.
 
 ### Automation API integration
 
-You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported today:
+You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported today:
 
 * `addEnvironments(...)`: Append environments to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
 * `listEnvironments()`: Retrieve a list of environments currently imported into your stack.

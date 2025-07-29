@@ -55,11 +55,11 @@ Any occurrences of `${PROJECT}` or `${DESCRIPTION}` -- in `Pulumi.yaml` or any o
 
 ## Using Organization Templates within your Pulumi organization
 
-Organization templates are available to users in the [private registry](idp-get-started-private-registry). They also power the New Project Wizard workflow.
+Organization templates are available to users in the [private registry](/docs/idp/get-started/private-registry/). They also power the New Project Wizard workflow.
 
 By doing publishing organization templates, your organization's members will be able to:
 
-* Discover template in the [private registry](idp-get-started-private-registry).
+* Discover template in the [private registry](/docs/idp/get-started/private-registry/).
 * Configure and launch new Pulumi projects from their browser.
 * Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments) to automatically work with new projects.
 

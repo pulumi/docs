@@ -52,10 +52,10 @@ A Pulumi Component consists of three main parts:
 
 In this example, we'll create a static website component in AWS Simple Storage Service (S3). The component will manage the following five sub-resources necessary to implement a basic S3 hosted static website:
 
-- a [`BucketV2`](/registry/packages/aws/api-docs/s3/bucketV2/) resource
-- a [`BucketWebsiteConfigurationV2`](/registry/packages/aws/api-docs/s3/bucketWebsiteConfigurationV2/) resource to set up the website configuration
+- a [`BucketV2`](/registry/packages/aws/api-docs/s3/bucketv2/) resource
+- a [`BucketWebsiteConfigurationV2`](/registry/packages/aws/api-docs/s3/bucketwebsiteconfigurationv2/) resource to set up the website configuration
 - a [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) resource to hold the raw site content
-- a [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketPublicAccessBlock/) resource to manage public access
+- a [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/) resource to manage public access
 - a [`BucketPolicy`](/registry/packages/aws/api-docs/s3/bucketpolicy/) resource to set the Bucket policy
 
 The component will take as input the contents of the file you wish to host, and will output the S3 endpoint used to access it.

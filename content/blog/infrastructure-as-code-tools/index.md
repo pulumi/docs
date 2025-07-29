@@ -1386,6 +1386,6 @@ The most successful organizations focus on key decision criteria:
 
 The Future of Infrastructure:
 
-The industry continues evolving toward treating infrastructure as software, but this transformation takes many forms. Organizations exploring [serverless architectures](/topics/serverless/) and [container strategies](/topics/containers/) particularly benefit from programmable infrastructure approaches. Whether through enhanced DSLs, visual design tools, programming languages, or hybrid approaches, the goal remains consistent: enabling teams to manage infrastructure with the same reliability, collaboration, and velocity they expect from modern software development.
+The industry continues evolving toward treating infrastructure as software, but this transformation takes many forms. Organizations exploring [serverless architectures](/serverless/) and container strategies particularly benefit from programmable infrastructure approaches. Whether through enhanced DSLs, visual design tools, programming languages, or hybrid approaches, the goal remains consistent: enabling teams to manage infrastructure with the same reliability, collaboration, and velocity they expect from modern software development.
 
 For teams ready to embrace programming language-based infrastructure as code, [Get started with Pulumi](/docs/get-started/) to experience how familiar languages and software engineering practices can transform infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.

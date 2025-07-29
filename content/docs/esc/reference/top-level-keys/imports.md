@@ -31,4 +31,4 @@ imports:
   - auth-core: { merge: false } # Import "default/auth-core", but don't add it to the merge stack
 ```
 
-There is currently a single option, `merge`, which controls whether or not an imported environment is added to the merge stack. Unmerged imports are still available via the [`imports` built-in key](/docs/esc/reference/builtin-values/imports).
+There is currently a single option, `merge`, which controls whether or not an imported environment is added to the merge stack. Unmerged imports are still available via the [`imports` built-in property](/docs/esc/reference/builtin-properties/imports).
