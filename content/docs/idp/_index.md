@@ -50,6 +50,10 @@ sections:
   - heading: Services
     link: /docs/idp/get-started/services/
     description: Bring organizational context to Pulumi through Services, the logical grouping of Pulumi entities.
+  
+  - heading: Publishing from GitHub Actions
+    link: /docs/idp/get-started/publishing-from-github-actions/
+    description: Automate component testing and publishing to your private registry using GitHub Actions workflows.
 
 - type: flat
   heading: Have questions?
