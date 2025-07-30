@@ -57,9 +57,9 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Gavin Johnson
-          role: Director of Technical Marketing, Pulumi
-          photo: /images/team/gavin-johnson.jpg
+        - name: Mitch Gerdisch
+          role: Principal Solutions Architect, Pulumi
+          photo: /images/team/mitch-gerdisch.jpg
         - name: Engin Diri
           role: Senior Solutions Architect, Pulumi
           photo: /images/team/engin-diri.jpg
