@@ -1,0 +1,5 @@
+name: awsx-root-directory-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
