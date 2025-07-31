@@ -59,7 +59,9 @@ social:
 
 Did you know that 80% of unplanned outages aren’t caused by hardware failures or cyberattacks, but by the very changes we make to improve our systems?
 
-We’re excited to announce the release of [**Approvals** in Pulumi ESC](/docs/esc/administration/approvals/)—a new feature that enables organizations to bring governance and oversight directly into their environment configuration workflows.
+Pulumi ESC already enables safer change management with [our innovative versioning capability](https://www.youtube.com/watch?v=HQN5KOY4asE) which allows users to track and roll back environment revisions.
+
+Building on this foundation, we’re excited to announce the release of [**Approvals** in Pulumi ESC](/docs/esc/administration/approvals/)—a new feature that enables organizations to bring governance and oversight directly into their environment configuration workflows.
 
 With Approvals, teams can require explicit review and sign-off before applying changes to ESC-managed environments, bringing the same rigor to configuration as they already have with infrastructure-as-code and application development.
 
@@ -67,7 +69,7 @@ With Approvals, teams can require explicit review and sign-off before applying c
 
 ## Enforce Change Management Without Slowing Teams Down
 
-Pulumi ESC helps teams manage environment configurations—such as secrets, feature flags, and application settings—across services and environments, from development through production.
+Pulumi ESC helps teams manage environment configurations—such as secrets and application settings—across services and environments, from development through production.
 
 In fast-moving teams, managing these settings safely and consistently is critical. But as the number of contributors grows, so does the risk of accidental or unreviewed changes making it into critical environments.
 
@@ -87,6 +89,8 @@ To get started, navigate to your environment’s **Settings → Approval Ruleset
 - Specific teams or individuals allowed to approve  
 - Whether self-approval is permitted  
 - Whether changes require reapproval if modified
+
+![Pulumi Ruleset configuration](approvals-ruleset.png)
 
 Once a ruleset is enabled, any environment update must go through a **change request** workflow. Instead of directly saving changes, contributors create a draft, which then must be reviewed and approved before being applied.
 
