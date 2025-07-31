@@ -7,7 +7,7 @@ title: "Introducing Approvals in Pulumi ESC"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2025-07-29T17:05:16-03:00
+date: 2025-08-04T09:00:00-03:00
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -34,7 +34,7 @@ authors:
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - change-me
+    - esc
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -57,7 +57,9 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-We’re excited to announce the release of [**Approvals** in Pulumi ESC](https://www.pulumi.com/docs/esc/approvals)—a new feature that enables organizations to bring governance and oversight directly into their environment configuration workflows.
+Did you know that 80% of unplanned outages aren’t caused by hardware failures or cyberattacks, but by the very changes we make to improve our systems?
+
+We’re excited to announce the release of [**Approvals** in Pulumi ESC](/docs/esc/administration/approvals/)—a new feature that enables organizations to bring governance and oversight directly into their environment configuration workflows.
 
 With Approvals, teams can require explicit review and sign-off before applying changes to ESC-managed environments, bringing the same rigor to configuration as they already have with infrastructure-as-code and application development.
 
@@ -88,7 +90,7 @@ To get started, navigate to your environment’s **Settings → Approval Ruleset
 
 Once a ruleset is enabled, any environment update must go through a **change request** workflow. Instead of directly saving changes, contributors create a draft, which then must be reviewed and approved before being applied.
 
-![Create change request](/images/blog/approvals-create-request.png)
+![Pulumi ESC Approvals Workflows](approvals-workflow.png)
 
 Changes pending approval are clearly visible to your team, and reviewers can inspect the diff, leave feedback, or revise the request before approving.
 
