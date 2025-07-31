@@ -17,7 +17,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Approvals is a new feature that enables organizations to bring governance and oversight directly into their environment configuration workflows.
+meta_desc: Approvals enables effective change management by bringing governance and oversight directly into their environment configuration workflows.
 
 
 # The meta_image appears in social-media previews and on the blog home page. A
