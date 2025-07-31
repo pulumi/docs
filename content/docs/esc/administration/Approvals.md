@@ -1,7 +1,7 @@
 ---
 title_tag: "Pulumi ESC: Approvals"
 meta_desc:  Require explicit review and sign-off before applying changes to ESC-managed environments.
-title: Approvals  
+title: "Pulumi ESC: Approvals"  
 h1: Approvals in Pulumi ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
