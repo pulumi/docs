@@ -1,0 +1,41 @@
+# {{ .Title }}
+
+{{ with .Params.meta_desc }}
+> {{ . }}
+{{ end }}
+
+{{ range .Params.sections }}
+## {{ .heading }}
+
+{{ with or .description .description_md }}
+{{ $find := `href="(/[^"h][^"t][^"t][^"p][^"s][^:#]*/)"` }}
+{{ $replace := `href="${1}index.md"` }}
+{{ . | replaceRE $find $replace | markdownify }}
+{{ end }}
+
+{{- if .cards }}
+{{ range .cards }}
+{{- if or .heading .label }}
+### {{ or .heading .label }}
+{{- end }}
+
+{{ with .description }}
+{{ . }}
+{{ end }}
+
+{{ with .link }}
+{{ if hasPrefix . "http" }}
+[Read more]({{ . }})
+{{ else }}
+[Read more]({{ . | relURL }}index.md)
+{{ end }}
+{{ end }}
+
+{{ end }}
+{{ end }}
+
+{{- end }}
+
+{{- if .Content }}
+{{ .Content }}
+{{- end }}
