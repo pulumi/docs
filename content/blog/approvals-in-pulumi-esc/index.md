@@ -102,7 +102,7 @@ $ esc env set --draft org/project/env FEATURE_X_ENABLED true
 
 ## Built for Collaboration and Compliance
 
-Whether you’re enforcing separation of duties, complying with industry standards, or simply want better visibility into changes, Approvals helps bring structure to how configuration flows through your systems.
+Whether you’re enforcing separation of duties, complying with industry standards or regulations, or simply want better visibility into changes, Approvals helps bring process to how configuration flows through your systems.
 
 It also integrates seamlessly into existing workflows—no need to reinvent how teams work. Just add governance where it matters most.
 
