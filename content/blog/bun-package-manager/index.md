@@ -54,7 +54,7 @@ If you've spent time around the JavaScript ecosystem, then you've probably heard
 
 ## Getting started with Bun and Pulumi
 
-Since you're probably already using NodeJS with Pulumi to want to use this, the easiest way to install Bun is to run the following:
+If you're already using NodeJS with Pulumi, the easiest way to install Bun is to run the following:
 
 ```shell
 npm install -g bun
