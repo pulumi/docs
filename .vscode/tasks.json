@@ -47,7 +47,10 @@
           "beginsPattern": "Watching for changes",
           "endsPattern": "Web Server is available at"
         }
-      }
+      },
+      "options": {
+          "terminateSignal": "SIGINT"
+        }
     },
     {
       "label": "make serve-all",

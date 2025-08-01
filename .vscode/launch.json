@@ -2,12 +2,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run Pulumi site in browser",
-      "type": "chrome",
+      "name": "Preview Pulumi Site",
+      "type": "node-terminal",
       "request": "launch",
-      "url": "http://localhost:1313",
-      "webRoot": "${workspaceFolder}",
-      "preLaunchTask": "make serve"
+      "command": "make serve",
+      "serverReadyAction": {
+        "pattern": "Web Server is available at (https?://localhost:(\\d+))",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
     }
   ]
 }
