@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     esc:
         parent: pulumi-esc-admin
-        weight: 3
+        weight: 4
 ---
 
 {{% notes type="info" %}}
