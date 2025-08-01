@@ -1,8 +1,9 @@
 ---
 title_tag: "Pulumi ESC: Approvals"
 meta_desc:  Require explicit review and sign-off before applying changes to ESC-managed environments.
-title: "Pulumi ESC: Approvals"  
+title: "Approvals"  
 h1: Approvals in Pulumi ESC
+meta_title: Approvals in Pulumi ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
@@ -17,11 +18,13 @@ Learn more about editions on the [pricing page](/pricing/).
 
 ## Overview
 
-Approvals in Pulumi ESC provide a built-in mechanism for enforcing review and sign-off before applying changes to environment configurations. With Approvals, organizations can ensure that updates to critical configuration values, secrets, and policies are intentional, auditable, and compliant with internal governance requirements.
+Approvals in Pulumi ESC provide a built-in mechanism for enforcing review and sign-off before applying changes to environment configurations. With Approvals, organizations can ensure that updates to critical configuration values and secrets are intentional, auditable, and compliant with internal governance requirements.
 
 When Approvals are enabled on an environment, all configuration changes must go through a **change request workflow**. Users propose changes, designated reviewers approve or reject them, and only after the required approvals are granted can changes be applied.
 
 Approvals are configured through rulesets, which define the policies and conditions for reviewing and approving changes in an environment. A ruleset controls who can act as reviewers, how many approvals are needed, and under what circumstances approvals must be re-evaluated. This provides teams with flexible governance tailored to their workflows.
+
+![Approvals workflow](/images/docs/esc/approvals/approvals-workflow.png)
 
 ## Why use Approvals?
 
@@ -38,6 +41,8 @@ Approvals in Pulumi ESC are configured at the environment level using **approval
 1. Navigate to your environment in the Pulumi Cloud console.
 2. Go to **Settings → Approval Rulesets**.
 3. Click **Create Ruleset** to add a new approval policy, or select an existing ruleset to edit.
+
+![Approvals ruleset configuration](/images/docs/esc/approvals/approvals-ruleset.png)
 
 ### Configuring a Ruleset
 
