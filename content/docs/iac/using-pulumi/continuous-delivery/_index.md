@@ -45,6 +45,10 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
         <img src="/logos/tech/ci-cd/bitbucket.svg" alt="Bitbucket">
         <h4 class="no-anchor">Bitbucket</h4>
     </a>
+    <a href="/docs/iac/using-pulumi/continuous-delivery/buildkite">
+        <img src="/logos/tech/ci-cd/buildkite.svg" alt="Buildkite">
+        <h4 class="no-anchor">Buildkite</h4>
+    </a>
     <a href="/docs/iac/using-pulumi/continuous-delivery/circleci">
         <img src="/logos/tech/ci-cd/circleci.svg" alt="CircleCI">
         <h4 class="no-anchor">CircleCI</h4>

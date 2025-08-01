@@ -37,7 +37,7 @@ Let's see how to get started -- it's easy!
 Users in organizations can use the [CI/CD Integration Assistant](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) with GitHub Actions.
 {{% /notes %}}
 
-## Pre-Requisites
+## Prerequisites
 
 Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/) (if you
 haven't already). This guide also assumes you've reviewed the [GitHub Actions
