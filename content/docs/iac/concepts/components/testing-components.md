@@ -8,7 +8,7 @@ menu:
     iac:
         name: Testing Components
         parent: iac-concepts-components
-        weight: 1
+        weight: 20
 ---
 
 When authoring Pulumi components, it's critical to ensure that changes won't unintentionally break Pulumi programs that consume your components, nor violate organizational policies. This page outlines different testing strategies and tools you can use to confidently update and maintain components.
