@@ -1,0 +1,11 @@
+name: strimzi-kafka-python
+description: Example on how to deploy Strimzi Kafka
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-python
