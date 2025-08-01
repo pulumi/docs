@@ -62,6 +62,48 @@ Approvals are also fully supported in the [Pulumi ESC CLI](https://github.com/pu
 $ esc env set --draft org/project/env FEATURE_X_ENABLED true
 ```
 
+In addition to the CLI, Approvals can be used directly from the [ESC SDK](https://github.com/pulumi/esc-sdk)—making it easy to integrate change‑management workflows into your own applications or automation scripts.
+
+They are also available through the [Pulumi Visual Studio Code Extension]https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools), allowing developers to review, approve, and apply configuration changes without leaving their editor.
+
+Finally, the Pulumi Service Provider supports managing approval rules as code. For example:
+
+```typescript
+import * as service from "@pulumi/pulumiservice";
+import * as pulumi from "@pulumi/pulumi";
+
+// ...
+
+var approvalRule = new service.ApprovalRule("rule-test", {
+  name: "My rule!",
+  enabled: true,
+  targetActionTypes: ["update"],
+  environmentIdentifier: {
+    organization: environment.organization,
+    project: environment.project,
+    name: environment.name,
+  },
+  approvalRuleConfig: {
+    numApprovalsRequired: 3,
+    allowSelfApproval: true,
+    requireReapprovalOnChange: true,
+    eligibleApprovers: [
+      {
+        rbacPermission: "environment:write",
+      },
+      {
+        user: "pulumi-bot",
+      },
+      {
+        user: "IaroslavTitov",
+      },
+    ]
+  }
+})
+```
+
+You can find more examples for different languages at the [Pulumi Service Provider Github repository](https://github.com/pulumi/pulumi-pulumiservice/tree/main/examples).
+
 ## Built for Collaboration and Compliance
 
 Whether you’re enforcing separation of duties, complying with industry standards or regulations, or simply want better visibility into changes, Approvals helps bring process to how configuration flows through your systems.
