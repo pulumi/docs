@@ -1,0 +1,166 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "make ensure",
+      "type": "shell",
+      "command": "make",
+      "args": ["ensure"],
+      "detail": "Install/resolve all dependencies.",
+      "group": "build"
+    },
+    {
+      "label": "make lint",
+      "type": "shell",
+      "command": "make",
+      "args": ["lint"],
+      "detail": "Check Markdown files for correctness.",
+      "group": "test"
+    },
+    {
+      "label": "make format",
+      "type": "shell",
+      "command": "make",
+      "args": ["format"],
+      "detail": "Format files to match style guidelines.",
+      "group": "build"
+    },
+    {
+      "label": "make serve",
+      "type": "shell",
+      "command": "make",
+      "args": ["serve"],
+      "detail": "Run Hugo server locally at http://localhost:1313.",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": [
+          {
+            "regexp": ".*",
+            "file": 1,
+            "message": 1,
+            "line": 1
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Watching for changes",
+          "endsPattern": "Web Server is available at"
+        }
+      }
+    },
+    {
+      "label": "make serve-all",
+      "type": "shell",
+      "command": "make",
+      "args": ["serve-all"],
+      "detail": "Run Hugo server + watch CSS/JS changes.",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": [
+          {
+            "regexp": ".*",
+            "file": 1,
+            "message": 1,
+            "line": 1
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Watching for changes",
+          "endsPattern": "Web Server is available at"
+        }
+      }
+    },
+    {
+      "label": "make build",
+      "type": "shell",
+      "command": "make",
+      "args": ["build"],
+      "detail": "Build the full site into ./public.",
+      "group": "build"
+    },
+    {
+      "label": "make build-assets",
+      "type": "shell",
+      "command": "make",
+      "args": ["build-assets"],
+      "detail": "Build just the CSS and JS bundles.",
+      "group": "build"
+    },
+    {
+      "label": "make serve-static",
+      "type": "shell",
+      "command": "make",
+      "args": ["serve-static"],
+      "detail": "Serve the contents of ./public via local HTTP.",
+      "group": "build"
+    },
+    {
+      "label": "make test",
+      "type": "shell",
+      "command": "make",
+      "args": ["test"],
+      "detail": "Run tests for programs in ./static/programs.",
+      "group": "test"
+    },
+    {
+      "label": "make generate",
+      "type": "shell",
+      "command": "make",
+      "args": ["generate"],
+      "detail": "Build the docs for TS, Python, and Pulumi CLI.",
+      "group": "build"
+    },
+    {
+      "label": "[scaffold] make new-blog-post",
+      "type": "shell",
+      "command": "make",
+      "args": ["new-blog-post"],
+      "detail": "Scaffold a new blog post with placeholders."
+    },
+    {
+      "label": "[scaffold] make new-tutorial",
+      "type": "shell",
+      "command": "make",
+      "args": ["new-tutorial"],
+      "detail": "Scaffold a new single-page tutorial."
+    },
+    {
+      "label": "[scaffold] make new-tutorial-module",
+      "type": "shell",
+      "command": "make",
+      "args": ["new-tutorial-module"],
+      "detail": "Scaffold a new multi-page tutorial module."
+    },
+    {
+      "label": "[scaffold] make new-tutorial-topic",
+      "type": "shell",
+      "command": "make",
+      "args": ["new-tutorial-topic"],
+      "detail": "Add a topic to an existing tutorial module."
+    },
+    {
+      "label": "[scaffold] make new-example-program",
+      "type": "shell",
+      "command": "make",
+      "args": ["new-example-program"],
+      "detail": "Generate a new multi-language example in ./static/programs."
+    },
+    {
+      "label": "[deploy] make new-dev-stack",
+      "type": "shell",
+      "command": "make",
+      "args": ["new-dev-stack"],
+      "detail": "Create a new dev stack (requires pulumi org access)."
+    },
+    {
+      "label": "[deploy] make deploy-dev-stack",
+      "type": "shell",
+      "command": "make",
+      "args": ["deploy-dev-stack"],
+      "detail": "Build, test, and deploy to the selected dev stack."
+    }
+  ]
+}

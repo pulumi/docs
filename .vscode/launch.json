@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Pulumi site in browser",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:1313",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "make serve"
+    }
+  ]
+}
