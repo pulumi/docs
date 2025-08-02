@@ -25,7 +25,7 @@ Use the `pulumi package add` command to add Terraform modules to your project:
 
 ```bash
 # Add a module from the Terraform Registry
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpc
 
 # Add a local module
 $ pulumi package add terraform-module ./path/to/module localmod
@@ -416,7 +416,7 @@ $ pulumi new aws-csharp --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpc
 ```
 
 {{% notes type="tip" %}}
