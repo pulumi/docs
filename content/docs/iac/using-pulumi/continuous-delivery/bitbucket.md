@@ -11,7 +11,7 @@ menu:
         weight: 3
 ---
 
-[Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/) is an CI/CD service built into Bitbucket Cloud. It allows you to build, test, and deploy your code automatically to your Pulumi staging and production stacks based on commits to specific Git branches.
+[Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/) is a CI/CD service built into Bitbucket Cloud. It allows you to build, test, and deploy your code automatically to your Pulumi staging and production stacks based on commits to specific Git branches.
 
 This guide provides examples for integrating Bitbucket Pipelines with a [Pulumi AWS TypeScript project](/docs/iac/get-started/), but the outlined steps can be adapted for other projects in your favorite language.
 
