@@ -1,6 +1,6 @@
 module awsx-root-directory-go
 
-go 1.21.12
+go 1.23.11
 
 require (
 	github.com/pulumi/pulumi-awsx/sdk/v2 v2.13.0

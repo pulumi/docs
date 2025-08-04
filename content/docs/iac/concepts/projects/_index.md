@@ -8,7 +8,7 @@ menu:
     iac:
         name: Projects
         parent: iac-concepts
-        weight: 1
+        weight: 20
         identifier: iac-concepts-projects
     concepts:
         identifier: projects
@@ -108,7 +108,7 @@ When your Pulumi program refers to resources in the local filesystem, paths are 
 
 You can get the directory containing the `Pulumi.yaml` file, which may differ from your working directory if it specified a `main` option (see [main attribute](/docs/reference/pulumi-yaml/#attributes)), with the `ProjectDirectory` function.
 
-The path returned will be an absolute path, but if using this in resource properties you'll want to make sure it's made relative to the working directory to prevent diffs from running the project on multiple machines with different roots.
+The path returned is an absolute path. When using this in resource properties, ensure it's relative to the working directory. This prevents diffs from running the project on multiple machines with different roots.
 
 {{< example-program path="awsx-root-directory" >}}
 
