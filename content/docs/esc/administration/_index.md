@@ -14,6 +14,7 @@ Learn how to configure organizations, monitor audit logs, bring your own encrypt
 
 - [Pulumi Cloud organizations](/docs/pulumi-cloud/admin/organizations/): Set up and manage organizations for team collaboration and secrets and configuration management.
 - [Audit logs](/docs/esc/administration/audit-logs/): Access and configure audit logs to track activities and ensure compliance.
+- [Approvals](/docs/esc/administration/approvals/): Require explicit review and sign-off before applying changes to ESC-managed environments.
 - [Customer Managed Keys](/docs/esc/administration/customer-managed-keys/): Bring your own encryption keys for enhanced security and compliance.
 - [Identity and access management](/docs/pulumi-cloud/access-management/): Control access to resources with identity and access management.
 - [Self-hosting Pulumi ESC](/docs/esc/administration/self-hosting/): Explore how to self-host ESC and Pulumi Cloud to meet your organization’s specific needs.

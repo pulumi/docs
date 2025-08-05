@@ -239,7 +239,7 @@ Your `tsconfig.json` file should also be updated to ensure that TypeScript outpu
 Install a recent version of `typescript` and `ts-node`.
 
 ```bash
-npm isntall typescript@^5
+npm install typescript@^5
 npm install ts-node@^10
 ```
 

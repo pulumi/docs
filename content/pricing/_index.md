@@ -255,14 +255,14 @@ comparison_table:
                   link: /docs/esc/environments/versioning/
                   items:
                     - content: _blank
-                    - content: Up to 5
+                    - content: _check
                     - content: _check
                     - content: _check
                 - title: Version tags and import by tags
                   link:  /docs/esc/environments/versioning/#tagging-versions
                   items:
                     - content: _blank
-                    - content: _blank
+                    - content: _check
                     - content: _check
                     - content: _check
                 - title: Dynamic credentials
