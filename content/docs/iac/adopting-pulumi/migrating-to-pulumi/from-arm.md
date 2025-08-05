@@ -1,8 +1,8 @@
 ---
 title_tag: "Migrating from Azure Resource Manager"
-meta_desc: Migrate your existing Azure Resource Manager (ARM) templates and/or coexist with existing deployments.
+meta_desc: Modernize Azure infrastructure by replacing or coexisting with ARM templates using Pulumi in C#, Python, Go, or TypeScript.
 title: Azure Resource Manager
-h1: Migrating from Azure Resource Manager to Pulumi
+h1: From Azure Resource Manager (ARM) to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -25,7 +25,32 @@ If your team has already provisioned infrastructure using Azure Resource Manager
 * [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing resources into Pulumi in the usual way.
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
 
-## Referencing Stack Outputs
+## Why Move Beyond ARM
+
+ARM templates were Azure’s original infrastructure as code solution. But they fall short for today’s engineering teams:
+
+| Feature           | ARM Templates        | Pulumi                        |
+|-------------------|----------------------|-------------------------------|
+| Language          | JSON / YAML          | C# (or Python, TS, Go)        |
+| Reuse             | Limited (copy/paste) | Functions, classes, modules   |
+| Logic & Loops     | Complex expressions  | if / for / switch             |
+| Type Safety       | None                 | Compile-time type checking    |
+| Tooling           | Basic validation     | Full IDE & IntelliSense       |
+| Testing           | Manual or none       | xUnit, NUnit, etc.            |
+| Code Sharing      | Hard                 | NuGet packages & projects     |
+| Debugging         | Deploy & troubleshoot| Step-through in IDE           |
+| Refactoring       | Tedious manual edits | IDE-assisted refactors        |
+| Modularity        | Nested templates     | Real modules & components     |
+
+Pulumi lets you manage Azure infrastructure using your favorite language, with built-in support for CI/CD, reusable components, and testability. For .NET teams especially, Pulumi’s support for C# provides a superior experience over static JSON.
+
+Continue reading guide below to learn how to:
+
+- [Reference ARM outputs in Pulumi programs](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#reference-arm-outputs-in-pulumi-programs)
+- [Convert ARM templates to Pulumi code with arm2pulumi](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#convert-arm-templates-to-pulumi-code-with-arm2pulumi)
+- [Import existing Azure resources into Pulumi](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#import-existing-azure-resources-into-pulumi)
+
+## Reference ARM Outputs in Pulumi Programs
 
 It is possible to reference existing Azure Resource Manager (ARM) template deployments from your program. It doesn't matter how these templates and deployments were created. This lets you read properties of a deployment for use within your Pulumi program. This includes output values computed from resources provisioned that stack.
 
@@ -193,13 +218,13 @@ Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/reso
 
 ## Converting Stacks and Resources
 
-Let's say you want to migrate from ARM to Pulumi and that simply co-existing side-by-side as shown above isn't sufficient.
+Let's say you want to migrate from ARM to Pulumi, and that simply co-existing side-by-side as shown above isn't sufficient.
 
 Let's see how to actually migrate your ARM-managed resources fully to Pulumi. This requires rewriting the ARM template JSON as your favorite programming language code, either entirely, or one resource at a time. Because you can query deployment outputs and provide parameters in code, you can more easily intermingle ARM-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the entire ARM deployment is seen as one opaque resource to Pulumi.
 
 Our example below will result in a Pulumi program that creates a Storage Account equivalent to the above ARM template example. The example will also use [import](/docs/using-pulumi/adopting-pulumi/import/) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
 
-### Generate Code with Arm2Pulumi
+### Convert ARM templates to Pulumi code with arm2pulumi
 
 With the Next Generation Pulumi Azure Provider, it's possible to convert ARM templates into Pulumi program code using [arm2pulumi](/arm2pulumi/). Simply provide your ARM template
 and get back a Pulumi program in C#, TypeScript, Python, Go, Java, or YAML.
@@ -334,7 +359,7 @@ class MyStack : Stack
 
 Next, we will adjust the code to adopt the existing resource instead of creating a new one.
 
-### Import The Resource
+### Import Existing Azure Resources into Pulumi
 
 To adopt the ARM resources under Pulumi's control, we will rewrite the code generated by the tool, and use the `import` ID. For this example, recall that our Storage Account name was `"storagecreatedbyarm"`.
 
@@ -465,3 +490,7 @@ Diagnostics:
 This is because the import operation requires explicit definitions for all properties that may have been auto-populated by Azure during the resource creation. You can suppress the warning by setting the [`ignoreChanges`](/docs/concepts/resources/#ignorechanges) option to `["accessTier","enableHttpsTrafficOnly","encryption","networkRuleSet"]`.
 
 After running `pulumi up` again, your storage account will become under the control of Pulumi without any disruption. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of ARM template deployments.
+
+Ready to leave ARM behind? Start building Azure infrastructure the modern way with Pulumi.
+
+[Start Free with Pulumi](https://app.pulumi.com/signup) or [Explore Azure + Pulumi](https://www.pulumi.com/docs/iac/clouds/azure/)
