@@ -46,9 +46,9 @@ Pulumi lets you manage Azure infrastructure using your favorite language, with b
 
 Continue reading to learn how to:
 
-- [Reference ARM outputs in Pulumi programs](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#reference-arm-outputs-in-pulumi-programs)
-- [Convert ARM templates to Pulumi code with arm2pulumi](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#convert-arm-templates-to-pulumi-code-with-arm2pulumi)
-- [Import existing Azure resources into Pulumi](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#import-existing-azure-resources-into-pulumi)
+* [Reference ARM outputs in Pulumi programs](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#reference-arm-outputs-in-pulumi-programs)
+* [Convert ARM templates to Pulumi code with arm2pulumi](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#convert-arm-templates-to-pulumi-code-with-arm2pulumi)
+* [Import existing Azure resources into Pulumi](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#import-existing-azure-resources-into-pulumi)
 
 ## Reference ARM Outputs in Pulumi Programs
 
