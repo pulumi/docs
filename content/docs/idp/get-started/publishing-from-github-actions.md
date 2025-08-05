@@ -52,7 +52,7 @@ my-component/
         └── release.yml         # Release workflow
 ```
 
-We recommend *one component per repository*, rather than a single repository for all your components. That allows you to version and release each component separately. In some cases, it may make sense to package a few highly correlated components together in the same repository, but this be done with caution using integration tests between the components.
+We recommend *one component per repository*, rather than a single repository for all your components. That allows you to version and release each component separately. In some cases, it may make sense to package a few highly correlated components together in the same repository, but this should be done with caution using integration tests between the components.
 
 ## Example Component Repository
 
@@ -290,16 +290,16 @@ jobs:
         run: go test
 ```
 
-In this workflow, we use some Pulumi-specific GitHub Actions, as well as some off-the-shelf standard actions.
+In this workflow, we use some [Pulumi-specific GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/), as well as some off-the-shelf standard actions.
 
 For the integration tests:
 
 - [`actions/checkout`](https://github.com/actions/checkout) - check out the code into the Github runner
-- [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) - authenticate with Pulumi Cloud
+- [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) - authenticate with Pulumi Cloud (make sure to [setup GitHub OIDC](/docs/pulumi-cloud/access-management/oidc-client/github/))
 - [`aws-actions/configure-aws-credentials`](https://github.com/aws-actions/configure-aws-credentials) - set up AWS credentials
 - [`pulumi/actions`](https://github.com/pulumi/actions) - Run a Pulumi command, in this case, `pulumi preview`
 
-In the `pulumi/actions` step, we configure it to run the `preview` command, change the root directory with `work-dir`, set the correct stack name by passing in the Pulumi organization name via the `env.PULUMI_ORG` variable we set earlier in the file, and configure `upsert` to make sure that the stack gets created if it doesn't exist yet, or updated if it does.
+In the `pulumi/actions` step, we use one of [Pulumi's GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/) and configure it to run the `preview` command, change the root directory with `work-dir`, set the correct stack name by passing in the Pulumi organization name via the `env.PULUMI_ORG` variable we set earlier in the file, and configure `upsert` to make sure that the stack gets created if it doesn't exist yet, or updated if it does.
 
 For the unit tests we also use [`actions/setup-go`](https://github.com/actions/setup-go) to install the Golang tooling. That sets us up to run `go mod download` to install our dependencies and `go test` to run the unit tests.
 
