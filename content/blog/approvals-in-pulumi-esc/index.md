@@ -64,7 +64,7 @@ $ esc env set --draft org/project/env FEATURE_X_ENABLED true
 
 In addition to the CLI, Approvals can be used directly from the [ESC SDK](https://github.com/pulumi/esc-sdk)—making it easy to integrate change‑management workflows into your own applications or automation scripts.
 
-They are also available through the [Pulumi Visual Studio Code Extension]https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools), allowing developers to review, approve, and apply configuration changes without leaving their editor.
+They are also available through the [Pulumi Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools), allowing developers to review, approve, and apply configuration changes without leaving their editor.
 
 Finally, the Pulumi Service Provider supports managing approval rules as code. For example:
 
