@@ -15,6 +15,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Format code: `make format`
 - Run tests: `make test`
 - Test specific programs: `ONLY_TEST="program-name" ./scripts/programs/test.sh`
+- Fix trailing spaces: `sed -i '' 's/[[:space:]]*$//' file1.md file2.md ...` (processes multiple files efficiently)
 
 ## Code Style Guidelines
 - **Markdown**: Use one line per paragraph or semantic line breaks (see STYLE-GUIDE.md)
