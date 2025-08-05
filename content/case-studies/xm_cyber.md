@@ -1,9 +1,9 @@
 ---
 title_tag: XM Cyber | Case Studies
-title: "XM Cyber: Multi-Cloud Infrastructure Management with AWS and Pulumi"
+title: "XM Cyber: Multi-Cloud Infrastructure Management with Pulumi"
 description: |
     XM Cyber used Pulumi to transform their multi-cloud infrastructure management, focusing on AWS EKS clusters, Python reusability, and an internal developer platform to enable faster, more consistent deployments.
-meta_desc: Learn how XM Cyber partnered with Pulumi to create a modern multi-cloud infrastructure management strategy centered on AWS EKS, Python reusability, and an internal developer platform.
+meta_desc: XM Cyber partnered with Pulumi on a modern multi-cloud infrastructure management strategy featuring AWS EKS, Python, and an internal developer platform.
 
 customer_name: XM Cyber
 customer_logo: /logos/customers/xm-cyber-logo.svg
@@ -13,6 +13,9 @@ quote_block:
   quote: |
       "When implementing Pulumi, we noticed also by using the Pulumi Cloud that we can easily see what's going on, we can easily find what resources are up and what are down. We can easily manage our stacks and everything is very, very comfortable."
   quote_attrib: Tech Lead, DevOps Team, XM Cyber
+  headline_stat: 100%
+  headline: |
+        Use the entire ecosystem of TypeScript and Python
   # Note: The transcript doesn't mention specific deployment time metrics
 
 exec_summary: |
@@ -75,6 +78,7 @@ One of the most innovative aspects of XM Cyber's implementation was their approa
 "We actually took it, I think, to the next level by leveraging the Python packaging modules. And we are creating a Python library of every Pulumi resources we create for internal use. So others can also take them and use them and write code from them."
 
 This approach enabled them to:
+
 - Create standardized infrastructure components
 - Package them as Python libraries in a PYPI server
 - Allow developers across the organization to reuse these components
