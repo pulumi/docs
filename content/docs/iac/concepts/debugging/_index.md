@@ -8,7 +8,7 @@ menu:
     iac:
         Name: Debugging
         parent: iac-concepts
-        weight: 16
+        weight: 160
     usingpulumi:
         identifier: debugging
         weight: 9
@@ -26,7 +26,7 @@ Pulumi provides an extension that allows you to launch and debug Pulumi programs
 
 ### Install the extension
 
-Install the [Pulumi extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-tools) using Visual Studio Marketplace.
+Install the [Pulumi extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot) using Visual Studio Marketplace.
 
 ### Open a project
 

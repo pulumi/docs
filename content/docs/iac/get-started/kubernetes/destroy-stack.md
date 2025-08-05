@@ -67,7 +67,7 @@ If you want to remove the stack completely, run `pulumi stack rm dev`.
 ```
 
 To delete the stack itself, run [`pulumi stack rm`](/docs/cli/commands/pulumi_stack_rm). Note that this removes the stack
-entirely from the Pulumi Cloud, along with all of its update history.
+entirely from Pulumi Cloud, along with all of its update history.
 
 ```bash
 $ pulumi stack rm

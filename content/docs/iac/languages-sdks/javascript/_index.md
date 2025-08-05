@@ -223,25 +223,28 @@ If you wish to instead use [ESM](https://nodejs.org/api/esm.html) natively, you 
 }
 ```
 
-Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM, by setting the [`module`](https://www.typescriptlang.org/tsconfig/#module) field to `ESNext`, or one of `ES2015/ES6/ES2020/ES2022`.
+Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM, by setting the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`.
 
 ```json
 {
     "compilerOptions": {
         ...
-        "module": "ESNext",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
         ...
     }
 }
 ```
 
-Install a recent version of `ts-node` to use its [ESM loader](https://typestrong.org/ts-node/docs/imports#native-ecmascript-modules).
+Install a recent version of `typescript` and `ts-node`.
 
 ```bash
+npm install typescript@^5
 npm install ts-node@^10
 ```
 
-Lastly, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`.
+{{< notes >}}
+When using a version of `@pulumi/pulumi` older than 3.183.0, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`. More recent versions automatically configure this.
 
 ```yaml
 name: project-using-native-esm
@@ -250,6 +253,18 @@ runtime:
   options:
     nodeargs: "--loader ts-node/esm --no-warnings"
 ```
+
+Note that if you provide any of the `--loader`, `--import` or `--require` arguments in `nodeargs`, Pulumi will not automatically configure an ESM loader, and you have to specify one yourself, for example `--loader ts-node/esm` as above, or `--import tsx` when using [tsx](https://tsx.is).
+
+{{< /notes >}}
+
+## Using ESM only modules with CommonJS Pulumi templates
+
+Older versions of Node.js do not support loading ESM modules using the `require` function (`require` is part of CommonJS, the default runtime targetted by TypeScript in the Pulumi templates). You may encounter an error like the following:
+
+`Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/alice/pulumi/projects/esm-test-project/node_modules/@kubernetes/client-node/dist/index.js from /Users/alice/pulumi/projects/esm-test-project/index.ts not supported.`
+
+To resolve this issue, you can either follow the instructions above to convert your project to ESM, or upgrade to a recent version of Node.js that supports `require`ing ESM modules. At time of writing this is at least [v20.19.0](https://github.com/nodejs/node/releases/tag/v20.19.0) (2025-03) or [v22.12.0](https://github.com/nodejs/node/releases/tag/v22.12.0) (2024-12).
 
 ## Package Management
 
@@ -352,15 +367,8 @@ Pulumi SDKs also publish pre-release versions, that include all the latest chang
 
 ## Package Documentation
 
-In addition to the standard and cloud-agnostic packages the [Pulumi Registry](/registry/) houses 100+ Node.js packages.
+The following reference documentation resources are available:
 
-### Standard Packages
-
-<dl class="tabular">
-    <dt>Pulumi SDK</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/pulumi">@pulumi/pulumi</a></dd>
-    <dt>Pulumi Policy</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/policy">@pulumi/policy</a></dd>
-    <dt>Pulumi Terraform</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/terraform">@pulumi/terraform</a></dd>
-</dl>
+* The [Pulumi SDK `@pulumi/pulumi`](/docs/reference/pkg/nodejs/pulumi/pulumi) allows you to work with with basic Pulumi constructs. You will need to reference it in most Pulumi IaC programs.
+* The [Pulumi Policy SDK `@pulumi/policy`](/docs/reference/pkg/nodejs/pulumi/policy) allows you to author Pulumi Policy as Code policies. You will need to reference it when authoring Pulumi Policy as code.
+* For managing resources in a Pulumi IaC program, you can find the relevant SDK reference docs for a given provider in [the Pulumi Registry](/registry/).

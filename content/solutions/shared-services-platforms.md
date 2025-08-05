@@ -78,7 +78,7 @@ diagrams:
         - title: 3. Define how developers consume the platform
           image: /images/solutions/shared-services-platform/diagram-three.svg
           content: |
-            Define how developers will interact with the platform. You may want to give them a self-service portal where they can pick and choose their infrastructure, a GitOps workflow, or developers just interact with a CI/CD pipeline directly.
+            Define how developers will interact with the platform. You may want to give them a self-service portal where they can pick and choose their infrastructure, a GitOps workflow (such as [ArgoCD with the Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/argocd/)), or developers just interact with a CI/CD pipeline directly.
 
         - title: 4. Build the components, blueprints, & pipelines
           image: /images/solutions/shared-services-platform/diagram-four.svg

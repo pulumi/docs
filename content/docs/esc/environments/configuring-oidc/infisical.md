@@ -8,7 +8,7 @@ menu:
   esc:
     name: Infisical
     parent: esc-configuring-oidc
-    weight: 1
+    weight: 6
 ---
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Infisical. OIDC
@@ -35,11 +35,7 @@ In the navigation pane of the [Infisical app](https://app.infisical.com):
 3. Select a **Role** for the identity.
 4. Click **Create**.
 
-After the Identity has been created, take note of the following details:
-
-* Identity ID
-
-This value will be necessary when enabling OIDC for your service.
+After the Identity has been created, take note of the Identity ID. This value will be necessary when enabling OIDC for your service.
 
 ## Add OIDC Authentication
 
@@ -84,7 +80,7 @@ that you have the correct organization selected in the left-hand navigation menu
     ```
 
 6. Replace `<your-identity-id>` with the value from the previous steps.
-7. Scroll to the bottom of the page and click **Save**.
+7. Click **Save**.
 
 You can validate that your configuration is working by running either of the following:
 
@@ -112,7 +108,7 @@ the [relevant Pulumi documentation](/docs/esc/integrations/)
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/customizing-oidc-claims/) the subject claim in the OIDC token to control
+You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control
 which Pulumi environments or users are allowed to assume a given identity. This allows for more granular access control
 than the default organization-level permissions.
 

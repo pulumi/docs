@@ -8,7 +8,7 @@ menu:
   cloud:
     name: Time-to-live stacks
     parent: pulumi-cloud-deployments
-    weight: 6
+    weight: 80
     identifier: pulumi-cloud-deployments-ttl
 ---
 
@@ -50,7 +50,7 @@ Below is an example of setting up Time-To-Live on a stack programmatically:
        https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/ttl/schedules
 ```
 
-Refer to the [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api) for more details on how to use the REST API to manage Time-to-Live Stacks.
+Refer to the [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/reference/deployments/) for more details on how to use the REST API to manage Time-to-Live Stacks.
 
 ### Pulumi Cloud Service provider
 

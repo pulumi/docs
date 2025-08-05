@@ -579,4 +579,9 @@
             {{ errorf "Blog posts require tags: %s" .File.Path }}
         {{ end }}
     {{ end }}
+
+    <!-- Last-modified meta tag for blog posts with updated date -->
+    {{ if and (eq .Type "blog") .IsPage .Params.updated }}
+        <meta http-equiv="last-modified" content="{{ (time .Params.updated).Format "2006-01-02T15:04:05Z0700" }}" />
+    {{ end }}
 </head>

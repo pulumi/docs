@@ -8,7 +8,12 @@ menu:
   esc:
     name: Vault
     parent: esc-configuring-oidc
-    weight: 4
+    weight: 7
+aliases:
+  - /docs/pulumi-cloud/oidc/provider/vault
+  - /docs/pulumi-cloud/oidc/provider/vault/
+  - /docs/pulumi-cloud/access-management/oidc/provider/vault
+  - /docs/pulumi-cloud/access-management/oidc/provider/vault/
 ---
 
 This document outlines the steps required to use Pulumi with OpenID Connect to authenticate with Vault. This is accomplished using [Vault's JWT authentication method](https://developer.hashicorp.com/vault/docs/auth/jwt#jwt-authentication) to assume a role. Access to the role is authorized using a [Vault policy](https://developer.hashicorp.com/vault/docs/concepts/policies) that validates the contents of the OIDC token issued by Pulumi Cloud.
@@ -151,9 +156,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
       ```
 
   6. Replace `<your-vault-url>`, `<your-role-name>`, `<your-namespace>`, and `<path-to-secret>` with the values from the previous steps.
-  7. Scroll to the bottom of the page and click **Save**.
-
-      ![Vault environment config](./vault-environment-config.png)
+  7. Click **Save**.
 
 {{% notes "info" %}}
 If you configured the Vault JWT auth method to use a different [mount path](https://developer.hashicorp.com/vault/docs/auth#enabling-disabling-auth-methods) than `jwt`, you will need to specify that path using the `mount` option of the [vault-login](/docs/pulumi-cloud/esc/providers/vault-login/) provider.
@@ -198,7 +201,7 @@ To learn more about how to set up and use the various providers in Pulumi ESC, p
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/customizing-oidc-claims/) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
+You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
 
 You do so by configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
 

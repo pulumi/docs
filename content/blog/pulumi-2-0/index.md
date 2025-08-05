@@ -1,11 +1,15 @@
 ---
 date: "2020-04-21"
+updated: "2025-04-16"
 title: "Announcing Pulumi 2.0, Now with Superpowers"
 authors: ["joe-duffy"]
 tags: ["pulumi-news"]
 meta_desc: "Today we are announcing Pulumi 2.0, a modern infrastructure as code platform with advanced capabilities including new languages, testing, and policy as code."
 meta_image: "pulumi-2-0.png"
 ---
+
+> [!INFO]
+> This blog post announces Pulumi 2.0, which has been superseded by newer versions. For information about the latest Pulumi release, please refer to the [current documentation](/docs/) and [recent release notes](https://github.com/pulumi/pulumi/releases).
 
 Today we are excited to announce Pulumi 2.0, the next major stage in our journey as an open source project, company, and community. This release expands on our original vision of using your favorite languages and tools to do all things infrastructure as code, now with new cloud engineering superpowers that will help you and your team adopt modern cloud architectures.
 
@@ -15,7 +19,7 @@ Today we are excited to announce Pulumi 2.0, the next major stage in our journey
     <a class="btn btn-lg mr-2" href="/docs/quickstart">
         Get Started
     </a>
-    <a class="btn btn-lg btn-orange ml-2" href="/superpowers">
+    <a class="btn btn-lg btn-orange ml-2" href="/docs/">
         Learn More
     </a>
 </div>
@@ -62,13 +66,13 @@ Expect The Pulumipus to pop up from time to time to help you out with your infra
 
 Today is an exciting day for us, our customers, and our community &mdash; your passionate support and feedback shaped this release, and we thank you.
 
-To learn more, join us for our launch event next Wednesday, [check out the new superpowers page](/superpowers/) with more details and videos, or just [download Pulumi and give it a try](/docs/get-started/). If you're upgrading from Pulumi 1.0, [please see our migration guide](/docs/install/migrating-2.0).
+To learn more, join us for our launch event next Wednesday, or just [download Pulumi and give it a try](/docs/get-started/). If you're upgrading from Pulumi 1.0, [please see our migration guide](/docs/install/migrating-2.0).
 
 <div class="header-hero-actions mt-8 mb-8 text-center">
     <a class="btn btn-lg mr-2" href="/docs/quickstart">
         Get Started
     </a>
-    <a class="btn btn-lg btn-orange ml-2" href="/superpowers">
+    <a class="btn btn-lg btn-orange ml-2" href="/docs/">
         Learn More
     </a>
 </div>

@@ -49,7 +49,7 @@ Pulumi provides primitives so you can enforce your [secrets](/docs/concepts/secr
 
 ### How does Pulumi manage secrets?
 
-When you set a [configuration](/docs/concepts/config/) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack the Pulumi Cloud manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
+When you set a [configuration](/docs/concepts/config/) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack Pulumi Cloud manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
 
 When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object.
 
@@ -83,7 +83,6 @@ Pulumi uses strongly typed languages with programming languages that support [I
 
 - [Pulumi ESC FAQ](/docs/esc/faq/)
 - [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
-- [Pulumi Cloud Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
 - [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
 - [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
 - [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)

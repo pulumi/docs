@@ -20,7 +20,7 @@ social:
     linkedin: "TODO"
 ---
 
-Today, we’re excited to introduce Pulumi IDP, the latest evolution of the Pulumi Cloud Platform, designed to help organizations automate, secure, and manage everything they run in the cloud.
+Today, we’re excited to introduce Pulumi IDP (Internal Developer Platform), the latest evolution of the Pulumi Cloud Platform, designed to help organizations automate, secure, and manage everything they run in the cloud.
 
 <!--more-->
 {{< blog/cta-button "Get Started with Pulumi IDP" "/docs/idp/get-started/" >}}
@@ -29,7 +29,7 @@ For the past eight years, we’ve helped organizations simplify the deployment a
 
 As we evolved, we introduced additional products to meet the needs of an expanding user base. We launched Pulumi Components to increase standardization and reuse across any programming language. We launched [Pulumi CrossGuard](https://www.pulumi.com/crossguard/) to codify policy as code and ensure compliance at scale. And last fall, we made [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) and [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/) generally available to help tame secret sprawl and better manage all your cloud infrastructure.
 
-At the same time that Pulumi was evolving, so too was the industry. DevOps ushered in a new way of shipping and maintaining software, but for many organizations, it brought about tool sprawl and Day 2 pain. These learnings, along with others, have led to the emergence of platform engineering and platform teams, which build tools and workflows that enable their internal users to provision infrastructure and deploy software.
+At the same time that Pulumi was evolving, so too was the industry. DevOps ushered in a new way of shipping and maintaining software, but for many organizations, it brought about tool sprawl and Day 2 pain. These lessons learned, along with others, have led to the emergence of platform engineering and platform teams, which build tools and workflows that enable their internal users to provision infrastructure and deploy software.
 
 ## Platform Teams
 

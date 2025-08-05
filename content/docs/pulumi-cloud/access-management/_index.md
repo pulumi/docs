@@ -14,11 +14,19 @@ menu:
 
 Pulumi Cloud offers a number of identity and access management controls.
 
+## Access Control
+
+- [Roles](/docs/pulumi-cloud/access-management/rbac/roles) - Define what resources users can access and what actions they can perform.
+- [Permissions](/docs/pulumi-cloud/access-management/rbac/permissions) - Bundles of scopes that control what actions can be performed on specific resources.
+- [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes) - Available operations assignable to permissions.
+
+## Identity Management
+
 - [Accounts](accounts/)
 - [Teams and Role-based access control](teams/)
+- [Stack permissions](stack-permissions/)
 - [Access tokens](access-tokens/)
-- [Environment permissions](environment-permissions/)
-- [OpenID](oidc/)
+- [OpenID Client](oidc-client/)
 - [Billing managers](billing-managers/)
 - [SAML single sign-on (SSO)](saml/)
 - [SCIM](scim/)

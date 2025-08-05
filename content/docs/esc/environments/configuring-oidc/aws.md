@@ -68,7 +68,7 @@ Next, select the **trust relationships** tab, which is where the trust policy of
 }
 ```
 
-This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. For more detailed configuration for how you can set fine grained access control, see the following [customizing claims documenation](/docs/esc/environments/customizing-oidc-claims/).
+This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. For more detailed configuration for how you can set fine grained access control, see the following [customizing claims documenation](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims).
 
 Before you log out of the AWS console, make sure to make a note of your role’s ARN value as you will need it in the next step.
 
@@ -98,7 +98,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
     ```
 
 6. Replace `<your-oidc-iam-role-arn>` with the value from the previous steps.
-7. Scroll to the bottom of the page and click **Save**.
+7. Click **Save**.
 
 You can validate that your configuration is working by running either of the following:
 
@@ -126,7 +126,7 @@ Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` wi
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/customizing-oidc-claims/) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
+You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
 
 By default, the subject claim has the following format:
 

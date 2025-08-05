@@ -36,6 +36,11 @@ why_idp:
       icon: cycle
       color: fuchsia
 
+demo_video:
+    title: See Pulumi IDP in Action
+    subtitle: Watch how platform teams build secure, standardized infrastructure
+    image: https://www.youtube.com/watch?v=3gZmKaAeppc
+
 building_blocks:
   title: "Pulumi IDP: Building Blocks for Your Internal Developer Platform"
   items:

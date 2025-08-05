@@ -7,11 +7,7 @@ REPO_OVERRIDE=${1:-}
 
 TOOLS_REPOS=(
     "pulumi"
-    "pulumi-awsx"
-    "pulumi-cloud"
-    "pulumi-kubernetesx"
     "pulumi-policy"
-    "pulumi-terraform"
     "esc-sdk"
 )
 

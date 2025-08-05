@@ -7,7 +7,75 @@ layout: enterprise
 
 overview:
     description: |
-        Snowflake, Mercedes-Benz, and Atlassian are among a rapidly growing number of enterprises around the world who depend on Pulumi’s Cloud Engineering Platform to enable modern cloud transformation, accelerate innovation, and adopt the most rigorous security and compliance requirements.
+        Snowflake, Mercedes-Benz, NVIDIA, and Lemonade are among a rapidly growing number of enterprises worldwide that leverage Pulumi's Platform to enable modern cloud transformation, accelerate innovation, build their IDP while meeting the most rigorous security and compliance requirements.
+
+customer_logos:
+  title: Trusted by over 3,000 innovative companies
+  logos:
+    - name: bmw
+      link: /case-studies/
+    - name: snowflake
+      link: /case-studies/
+    - name: nvidia
+      link: /case-studies/
+    - name: moderna
+      link: /case-studies/
+    - name: docker
+      link: /case-studies/
+    - name: unity
+      link: /case-studies/
+    - name: ae-networks
+      link: /case-studies/
+    - name: deloitte
+      link: /case-studies/
+    - name: stokespace
+      link: /case-studies/
+    - name: univision
+      link: /case-studies/
+    - name: washington-trust
+      link: /case-studies/
+    - name: kyruus
+      link: /case-studies/
+    - name: modular-ai
+      link: /case-studies/
+    - name: korber
+      link: /case-studies/
+    - name: lemonade
+      link: /case-studies/
+    - name: pinecone
+      link: /case-studies/
+    - name: ware2go
+      link: /case-studies/
+    - name: nubank
+      link: /case-studies/
+    - name: mindbody
+      link: /case-studies/
+    - name: fenergo
+      link: /case-studies/
+    - name: webflow
+      link: /case-studies/
+    - name: bluenile
+      link: /case-studies/
+    - name: dutchie
+      link: /case-studies/
+    - name: panther-labs
+      link: /case-studies/
+    - name: materialize
+      link: /case-studies/
+    - name: altana
+      link: /case-studies/
+    - name: mercedes-benz
+      link: /case-studies/
+    - name: bt
+      link: /case-studies/
+    - name: portx
+      link: /case-studies/
+    - name: tivityhealth
+      link: /case-studies/
+    - name: starburst
+      link: /case-studies/
+    - name: linktree
+      link: /case-studies/
 
 case_studies:
     title: Customer Stories
@@ -22,10 +90,10 @@ case_studies:
           quote: |
             Mercedes-Benz enabled developers to provision Azure Kubernetes environments with a self-service platform built with Pulumi.
 
-        - company: atlassian
-          link: /case-studies/atlassian/
+        - company: lemonade
+          link: /case-studies/lemonade/
           quote: |
-            Atlassian Bitbucket reduced developers' time spent on maintenance by 50% with a self-service platform built with Pulumi.
+            Lemonade boosted developer speed and cut costs with secure, reusable infrastructure.
 
         - company: sans
           link: /case-studies/sans-institute/
@@ -120,7 +188,7 @@ get_started:
 
 contact:
     form_id: 71507f4e-e34e-4dc9-9da6-b44953cac811
-    title: Talk to a human
+    title: Contact Us
     description: |
-        Please contact us for any questions about Enterprise, discuss which product experience best suits your needs, or receive assistance with migrating existing Infrastructure as Code solutions to Pulumi.
+        Please contact us for any questions about Enterprise, discuss which product best suits your organization's needs, or how Pulumi's professional services can ensure successful delivery from planning to execution.
 ---

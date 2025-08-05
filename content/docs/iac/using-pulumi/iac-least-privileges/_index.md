@@ -90,9 +90,9 @@ Choose one of these secure deployment approaches in your sensitive environments:
    - Navigate to your stack in Pulumi Cloud Console → `Stack Settings > Deploy`.
    - Set deployment triggers (e.g., PR merges to `main` branch).
 
-**Learn more:** [Pulumi Deployments GitHub Integration](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/github-app/)
+**Learn more:** [Pulumi Deployments GitHub Integration](/docs/iac/using-pulumi/continuous-delivery/github-app/)
 
-**REST API documentation:** [Pulumi Deployments REST API](https://www.pulumi.com/docs/pulumi-cloud/deployments/rest-api/)
+**REST API documentation:** [Pulumi Deployments REST API](/docs/pulumi-cloud/reference/deployments/)
 
 ---
 
@@ -143,8 +143,8 @@ jobs:
 - `pulumi/actions` executes `pulumi up` adhering to the assigned team permissions.
 
 **Detailed documentation:**
-[GitHub OIDC Setup](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/github/)
-[Pulumi GitHub Actions](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/github-actions/)
+[GitHub OIDC Setup](/docs/pulumi-cloud/access-management/oidc-client/github/)
+[Pulumi GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/)
 
 ---
 
@@ -159,9 +159,9 @@ Pulumi integrates seamlessly with many other popular CI/CD platforms beyond GitH
 
 These platforms can also leverage secure OIDC authentication or token-based workflows tailored to your security needs.
 
-You can [lock down access to specific pipelines](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/#configure-the-authorization-policies) using the `sub`, `aud`, and custom claims coming from your CI/CD provider.
+You can [lock down access to specific pipelines](/docs/pulumi-cloud/access-management/oidc/client/#configure-the-authorization-policies) using the `sub`, `aud`, and custom claims coming from your CI/CD provider.
 
-Explore integrations and detailed setup guides here in our [Continuous Delivery documentation.](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/)
+Explore integrations and detailed setup guides here in our [Continuous Delivery documentation.](/docs/iac/using-pulumi/continuous-delivery/)
 
 ---
 

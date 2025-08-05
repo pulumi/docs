@@ -463,7 +463,7 @@ With the release of [Pulumi 3.153.0](https://github.com/pulumi/pulumi/releases/t
 ## What's Really New Here? 🚀
 
 1. **Automatic Provider Bridging**: The converter now automatically handles any Terraform provider, even ones without Pulumi equivalents
-1. **Increased Terraform Compatibility**: As part of this effort, we've bumped up our coverage of built in Terraform functions to over 90% using code generation and our [`pulumi-std` Provider](github.com/pulumi/pulumi-std)
+1. **Increased Terraform Compatibility**: As part of this effort, we've bumped up our coverage of built in Terraform functions to over 90% using code generation and our [`pulumi-std` Provider](https://github.com/pulumi/pulumi-std)
 1. **Improved Import Support**: With [Pulumi 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0), you can now import resources from any Terraform provider
 1. **Seamless Integration**: Generated code works right out of the box with minimal to no tweaking needed
 

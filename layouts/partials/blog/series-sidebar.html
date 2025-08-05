@@ -1,0 +1,124 @@
+<!--
+    Series sidebar, showing all posts in the current series with the current post highlighted.
+-->
+<aside class="lg:pr-8 sticky-sidebar">
+    <!-- Sidebar menu toggle for mobile. -->
+    <div class="lg:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">Toggle Series Navigation</button>
+    </div>
+
+    <h2 class="no-anchor hidden lg:flex mt-2 mb-6">
+        <a data-track="sidebar" class="text-2xl" href="{{ relref . "/blog" }}">Pulumi Blog</a>
+    </h2>
+
+    <!-- Sidebar content. Hidden on smaller displays unless toggled. -->
+    <div class="blog-sidebar-content hidden lg:block">
+        {{ partial "blog/search" . }}
+
+        <hr class="my-8" />
+
+        {{ $currentSeries := .Page.Params.series }}
+        {{ if $currentSeries }}
+            <!-- Series Navigation -->
+            <div class="my-4">
+                <!-- Get series data for prefix -->
+                {{ $seriesData := false }}
+                {{ with .Site.Data.blog_series }}
+                    {{ range .series }}
+                        {{ if eq .slug $currentSeries }}
+                            {{ $seriesData = . }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+                
+                {{ if $seriesData }}
+                    <h5 class="no-anchor text-lg font-semibold mb-2">{{ $seriesData.title }}</h5>
+                    <p class="text-sm text-gray-600 mb-4">{{ $seriesData.description }}</p>
+                {{ else }}
+                    <h5 class="no-anchor text-lg font-semibold mb-4">In This Series</h5>
+                {{ end }}
+                
+                <!-- Get all posts with the same series tag, including future posts, sorted chronologically -->
+                {{ $allPages := .Site.AllPages }}
+                {{ $seriesPosts := where $allPages "Params.series" $currentSeries }}
+                {{ $seriesPosts := $seriesPosts.ByDate }}
+                
+                <ul class="list-none p-0 space-y-3">
+                    {{ range $index, $post := $seriesPosts }}
+                        <!-- Strip series prefix from title once for this post -->
+                        {{ $displayTitle := $post.Title }}
+                        {{ if and $seriesData $seriesData.prefix }}
+                            {{ if strings.HasPrefix $post.Title $seriesData.prefix }}
+                                {{ $displayTitle = substr $post.Title (len $seriesData.prefix) }}
+                            {{ end }}
+                        {{ end }}
+                        
+                        <!-- Generate title content (without colors) for reuse -->
+                        {{ $titleMainText := "" }}
+                        {{ $titleSubText := "" }}
+                        {{ if strings.Contains $displayTitle ":" }}
+                            {{ $titleParts := split $displayTitle ":" }}
+                            {{ $titleMainText = printf "%d. %s" (add $index 1) (trim (index $titleParts 0) " ") }}
+                            {{ $titleSubText = trim (index $titleParts 1) " " }}
+                        {{ else }}
+                            {{ $titleMainText = printf "%d. %s" (add $index 1) $displayTitle }}
+                            {{ if $seriesData }}
+                                {{ $titleSubText = $seriesData.title }}
+                            {{ end }}
+                        {{ end }}
+                        
+                        <li class="leading-snug">
+                            {{ if eq $post.RelPermalink $.Page.RelPermalink }}
+                                <!-- Current post - highlighted -->
+                                <div class="bg-blue-100 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
+                                    <div class="text-sm font-semibold text-blue-900">{{ $titleMainText }}</div>
+                                    {{ if $titleSubText }}
+                                        <div class="text-xs text-blue-700 mt-1">{{ $titleSubText }}</div>
+                                    {{ end }}
+                                    <div class="text-xs text-blue-600 mt-1">Current post</div>
+                                </div>
+                            {{ else }}
+                                <!-- Other posts in series -->
+                                {{ if $post.Date.After now }}
+                                    <!-- Future post - show as coming soon -->
+                                    <div class="pl-3 py-1 opacity-60">
+                                        <div class="text-sm text-gray-500">
+                                            <div class="font-medium">{{ $titleMainText }}</div>
+                                            {{ if $titleSubText }}
+                                                <div class="text-xs text-gray-400 mt-1">{{ $titleSubText }}</div>
+                                            {{ end }}
+                                        </div>
+                                        <div class="text-xs text-blue-400 mt-1">Coming {{ $post.Date.Format "Jan 2" }}</div>
+                                    </div>
+                                {{ else }}
+                                    <!-- Published post -->
+                                    <div class="pl-3 py-1">
+                                        <a data-track="series-post" class="text-sm hover:text-blue-600" href="{{ $post.RelPermalink }}">
+                                            <div class="font-medium">{{ $titleMainText }}</div>
+                                            {{ if $titleSubText }}
+                                                <div class="text-xs text-gray-600 mt-1">{{ $titleSubText }}</div>
+                                            {{ end }}
+                                        </a>
+                                    </div>
+                                {{ end }}
+                            {{ end }}
+                        </li>
+                    {{ end }}
+                </ul>
+                
+                <!-- Link to view all series posts -->
+                <div class="mt-4 pt-3">
+                    <a class="text-blue-600 text-sm" href="/blog/tag/{{ $currentSeries | urlize }}/">View whole series &rarr;</a>
+                </div>
+            </div>
+        {{ end }}
+
+        <hr class="my-8" />
+
+        {{ partial "sidebar-cta" . }}
+    </div>
+
+    <div class="lg:hidden pb-4">
+        <!-- Vertical spacer, for mobile layouts. -->
+    </div>
+</aside>

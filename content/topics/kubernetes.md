@@ -4,6 +4,7 @@ layout: kubernetes
 url: /kubernetes
 
 meta_desc: Pulumi provides a single infrastructure as code workflow for Kubernetes and underlying infrastructure, using general-purpose languages and YAML.
+meta_image: /images/Kubernetes-meta.png
 
 aliases:
   - /cloudnative
@@ -17,7 +18,7 @@ hero:
 video_section:
   title: Pulumi In Action
   subtitle: Watch how easy it is to set up Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
-  youtube_video_id: yA40w1ryMu8
+  youtube_video_id: 2P8JLgAc5QI
   video_title: Watch how easy it is to setup Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
 
 kubernetes_overview:
@@ -208,7 +209,7 @@ kubernetes_overview:
         - Manage Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
         - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/iac/using-pulumi/continuous-delivery/).
-        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/).
+        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/), including [ArgoCD integration](/docs/iac/using-pulumi/continuous-delivery/argocd/).
         - Use Kubernetes [Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) to safely manage shared Kubernetes resources with Pulumi and your existing controllers.
     cta: Learn More
     cta_url: "/blog/new-kubernetes-superpowers"
@@ -254,7 +255,7 @@ superpowers:
 
     - title: Be Proactive, Not Reactive
       cta: Learn more
-      cta_url: "/docs/iac/using-pulumi/crossguard/"
+      cta_url: "/docs/iac/crossguard/"
       icon_type: shield
       icon_color: yellow
       description: |
@@ -296,7 +297,7 @@ detail_sections:
           - title: Pulumi Kubernetes Operator
             icon: pen
             icon_color: fuchsia
-            description: Deploy both Kubernetes resources and cloud infrastructure from within the Kubernetes resource model using a GitOps workflow. Use Pulumi's Flux integration and many other CI/CD integrations.
+            description: Deploy both Kubernetes resources and cloud infrastructure from within the Kubernetes resource model using a GitOps workflow. Use Pulumi's Flux and ArgoCD integrations along with many other CI/CD integrations.
 
     - title: AI-powered Kubernetes Management
       description: |

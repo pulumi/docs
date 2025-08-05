@@ -2,12 +2,32 @@
 title: Engin Diri
 id: engin-diri
 first_name: Engin
-meta_desc: Engin Diri is a solutions architect on the community engineering team.
+meta_desc: Engin Diri is a senior solutions architect on the community engineering team.
 meta_image: community/community-engineering/engin-social-card.png
 layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Cloud Native Summit Munich 2025"
+  title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
+  url: "https://www.kcdmunich.de/"
+  date: 2025-07-22T15:00:00.000-07:00 
+- event: "WAX CONFÉRENCE 2025"
+  title: "Internal Developer Platforms : choisir la bonne voie pour votre organisation"
+  url: "https://www.waxconf.fr/schedule/wax-conference-2025"
+  date: 2025-06-24T15:00:00.000-07:00 
+- event: "KCD New York 2025"
+  title: "Is There AI in the Future of Infrastructure as Code?"
+  url: "https://kcdnewyork2025.sessionize.com/session/865201"
+  date: 2025-06-04T15:00:00.000-07:00 
+- event: "PlatforMA 2025"
+  title: "Augmenting Platform Engineering: Leveraging AI to Enhance DevEx & Operational Efficiency"
+  url: "https://www.platfor-ma.com"
+  date: 2025-05-20T15:00:00.000-07:00 
+- event: "KCD Texas"
+  title: "Platform Engineering’s Missing Piece: A Deep Dive into Kubernetes Abstraction"
+  url: "https://kcdtexas2025.sessionize.com/session/861657"
+  date: 2025-05-15T15:00:00.000-07:00 
 - event: "Mastering GitOps 2025"
   title: "GitOps Evolution: Moderne Infrastruktur-Pipelines mit Pulumi und Argo CD"
   url: "https://www.mastering-gitops.de/veranstaltung-83394-se-0-gitops-evolution-moderne-infrastruktur-pipelines-mit-pulumi-und-argo-cd.html"
@@ -86,7 +106,7 @@ talks:
   slides: null
 - event: "Equinix Demo Day"
   title: "Deploy Bare Metal Kubernetes with Pulumi on Equinix Metal"
-  url: "https://deploy.equinix.com/events/demo-day-the-infrastructure-as-code-edition/"
+  url: "https://www.youtube.com/watch?v=ftjOsrDE5uA"
   date: 2024-09-10T18:00:00.000-07:00
   slides: null
 - event: "The Platformers"
@@ -111,7 +131,7 @@ talks:
   slides: null
 - event: "KCD Istanbul 2024"
   title: "Gain Platform Superpowers with the KEBAP Stack!"
-  url: https://kcd.istanbul/KCD_Istanbul_2024_Schedule.pdf
+  url: https://www.youtube.com/watch?v=wN-DvPUIm4E
   date: 2024-05-16T12:00:00.000-07:00
   slides: null
 - event: "LA DevOps"

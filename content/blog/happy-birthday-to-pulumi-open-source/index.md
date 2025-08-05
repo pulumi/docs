@@ -24,7 +24,7 @@ since launching:
     [AWS](/docs/iac/get-started/aws/),
     [Azure](/docs/iac/get-started/azure/), and
     [Google Cloud](/docs/iac/get-started/gcp/) providers.
-- [Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.](/crosswalk/aws/)
+- Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.
 - Over 20 additional providers, including
     [CloudFlare](https://github.com/pulumi/pulumi-cloudflare),
     [Digital Ocean](https://github.com/pulumi/pulumi-digitalocean), and
@@ -71,7 +71,7 @@ A few notable success stories include:
 - **Learning Machine** went from 25KLOC YAML to 500 lines of
     JavaScript, got containers running in AWS and Kubernetes, and halved
     their cloud bill along the way.
-    [Read more.](/whitepapers/delivering-cloud-native-infrastructure-as-code#delivering-cloud-native-infrastructure-for-learning-machine)
+    [Read more](/blog/delivering-cloud-native-infrastructure-as-code-a-pulumi-white-paper/Pulumi-Delivering-CNI-as-Code.pdf).
 - **Mapbox** built a scalable IoT tracking solution with serverless
     Lambdas. [Read more.](/blog/mapbox-iot-as-code-with-pulumi-crosswalk-for-aws/)
 - Multiple early stage startups, including **Jargon**, a TechStars

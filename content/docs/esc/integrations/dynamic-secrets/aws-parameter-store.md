@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: aws-parameter-store
     parent: esc-dynamic-secrets
-    weight: 1
+    weight: 2
 aliases:
     - /docs/pulumi-cloud/esc/providers/aws-parameter-store/
     - /docs/esc/providers/aws-parameter-store/
@@ -45,7 +45,7 @@ values:
 
 ## Configuring OIDC
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/aws/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/esc/environments/configuring-oidc/aws/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
 * `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
 * `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)

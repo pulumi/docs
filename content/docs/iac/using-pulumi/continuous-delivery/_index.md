@@ -29,6 +29,10 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
 > Looking to troubleshoot failures related to running Pulumi in CI/CD? Check out our [CI/CD troubleshooting guide](/docs/iac/using-pulumi/continuous-delivery/troubleshooting-guide).
 
 <div class="supported-cicd-platforms">
+    <a href="/docs/iac/using-pulumi/continuous-delivery/argocd">
+        <img src="/logos/tech/ci-cd/argo.svg" alt="ArgoCD">
+        <h4 class="no-anchor">ArgoCD</h4>
+    </a>
     <a href="/docs/iac/using-pulumi/continuous-delivery/aws-code-services">
         <img src="/logos/tech/ci-cd/aws-codedeploy.svg" alt="AWS Code Services">
         <h4 class="no-anchor">AWS Code Services</h4>
@@ -40,6 +44,10 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
     <a href="/docs/iac/using-pulumi/continuous-delivery/bitbucket">
         <img src="/logos/tech/ci-cd/bitbucket.svg" alt="Bitbucket">
         <h4 class="no-anchor">Bitbucket</h4>
+    </a>
+    <a href="/docs/iac/using-pulumi/continuous-delivery/buildkite">
+        <img src="/logos/tech/ci-cd/buildkite.svg" alt="Buildkite">
+        <h4 class="no-anchor">Buildkite</h4>
     </a>
     <a href="/docs/iac/using-pulumi/continuous-delivery/circleci">
         <img src="/logos/tech/ci-cd/circleci.svg" alt="CircleCI">
@@ -56,6 +64,10 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
     <a href="/docs/iac/using-pulumi/continuous-delivery/gitlab-ci">
         <img src="/logos/tech/ci-cd/gitlab-ci.svg" alt="GitLab CI">
         <h4 class="no-anchor">GitLab CI</h4>
+    </a>
+    <a href="/docs/iac/using-pulumi/continuous-delivery/harness">
+        <img src="/logos/tech/ci-cd/harness.svg" alt="Harness">
+        <h4 class="no-anchor">Harness</h4>
     </a>
     <a href="/docs/iac/using-pulumi/continuous-delivery/google-cloud-build">
         <img src="/logos/tech/ci-cd/google-cloud-build.png" alt="Google Cloud Build">

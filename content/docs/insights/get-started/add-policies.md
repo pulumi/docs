@@ -67,19 +67,19 @@ With your policy pack published, you'll need to create a Policy Group that assoc
 
 1. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.
 
-![Insights Policies - New Policy Pack](/docs/insights/assets/create-policy-group.png)
+    ![Insights Policies - New Policy Pack](/docs/insights/assets/create-policy-group.png)
 
 1. Click **Create policy group** and provide a descriptive name, such as "s3-security-policy-group". Then click **Add policy group**
 
 1. Click **Add Policy Pack** to configure enforcement:
 
-Select your newly published policy pack from the dropdown and choose the version you want to enforce.
+    Select your newly published policy pack from the dropdown and choose the version you want to enforce.
 
-Here you can configure the enforcement level at either a global level for all, or a granular level for each individual policy check.
+    Here you can configure the enforcement level at either a global level for all, or a granular level for each individual policy check.
 
-We'll start with an enforcement level of **advisory** then click **Enable** to confirm your settings.
+    We'll start with an enforcement level of **advisory** then click **Enable** to confirm your settings.
 
-![Insights Policies - New Policy Pack](/docs/insights/assets/enable-policy-pack.png)
+    ![Insights Policies - New Policy Pack](/docs/insights/assets/enable-policy-pack.png)
 
 1. Now add your insights account to the policy group. Click **Add accounts** and type the name of the account you want to include for Insights policies. (e.g. insights-aws-account/us-west-2) Finally, click **Add account to policy group**
 

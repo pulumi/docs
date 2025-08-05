@@ -4,6 +4,15 @@ meta_desc: Learn about the major differences between Pulumi and cloud template t
 title: Cloud Template Transpilers
 h1: Cloud Template Transpilers
 meta_image: /images/docs/meta-images/docs-meta.png
+menu:
+    iac:
+        name: Cloud Template Transpilers
+        parent: iac-concepts-compare
+        identifier: cloud-template-transpilers
+        weight: 2
+    concepts:
+        parent: vs
+        weight: 2
 aliases:
 - /docs/intro/vs/cloud_template_transpilers/
 - /docs/concepts/vs/cloud-template-transpilers/

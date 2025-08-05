@@ -1,5 +1,5 @@
 ---
-title: "Organizational Patterns - An Automation Team"
+title: "Organizational Patterns: An Automation Team"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
@@ -30,6 +30,8 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - development-environment
+    - organizational-patterns
+series: organizational-patterns
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.

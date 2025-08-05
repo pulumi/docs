@@ -8,7 +8,7 @@ menu:
   cloud:
     name: CI/CD assistant
     parent: pulumi-cloud-deployments
-    weight: 11
+    weight: 120
     identifier: pulumi-cloud-deployments-ci-cd-integration-assistant
 aliases:
 - /docs/intro/console/extensions/
@@ -53,7 +53,7 @@ VCS configuration applies to the Pulumi project in which your stack is created. 
 
 * Bitbucket offers [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
 * GitHub has [GitHub Actions](https://github.com/features/actions)
-* GitLab has [GitLab CI/CD](https://docs.gitlab.com/ce/ci/)
+* GitLab has [GitLab CI/CD](https://docs.gitlab.com/ci/)
 
 This might be a convenient option if your team wishes to keep everything related to your Pulumi project on a single service.
 

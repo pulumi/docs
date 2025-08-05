@@ -225,7 +225,7 @@ most immediately apparent, using familiar if statements instead of the
 the awkward conditionals that use count variables.
 
 We could just go ahead and convert the program by hand, however
-[the `tf2pulumi` tool](https://github.com/pulumi/tf2pulumi) was designed
+the `tf2pulumi` tool was designed
 to take a Terraform HCL program as input and perform the entire
 translation automatically for you. This is a great place to get started
 -- and from there we can then refactor the resulting program gradually
@@ -247,7 +247,7 @@ Run this from wherever your Terraform program resides. This will
 initialize and scaffold a minimal Pulumi TypeScript program targeting
 AWS in the pulumi subdirectory.
 
-We'll then [install `tf2pulumi`](https://github.com/pulumi/tf2pulumi#building-and-installation),
+We'll then install `tf2pulumi`,
 and run it, to generate the Pulumi TypeScript program in `index.ts`:
 
 ```

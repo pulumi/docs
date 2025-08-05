@@ -15,7 +15,7 @@ The `mysql` rotator enables you to rotate user credentials for a MySQL database 
 There are 2 methods to use this rotator:
 
 - **Direct Connect rotation** - when your database is publicly accessible
-- **Connector rotation** - when your database is in a private network. This method requires you setup a [rotation connector](/docs/esc/environments/rotation#rotation-connectors) in your network.
+- **Connector rotation** - when your database is in a private network. This method requires you setup a [rotation connector](/docs/esc/environments/rotation#rotation-connectors) in your network. Note: Connector-based rotation is only available for Enterprise and Business Critical customers.
 
 ## Prerequisites
 
@@ -127,7 +127,7 @@ state:
 
 | Property    | Type                                                | Description                      |
 |-------------|-----------------------------------------------------|----------------------------------|
-| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig) | An [AWS Lambda connector](/docs/esc/environment/rotation/aws-lambda) needs to be setup |
+| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig) | An [AWS Lambda connector](/docs/esc/environments/rotation/aws-lambda) needs to be setup |
 
 ### AWSLambdaConfig
 

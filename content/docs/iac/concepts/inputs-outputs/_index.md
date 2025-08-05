@@ -8,7 +8,7 @@ menu:
     iac:
         name: Inputs & outputs
         parent: iac-concepts
-        weight: 5
+        weight: 60
         identifier: iac-concepts-inputs-outputs
     concepts:
         identifier: inputs-outputs

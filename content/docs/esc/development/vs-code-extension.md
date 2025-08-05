@@ -9,13 +9,13 @@ menu:
     weight: 2
 ---
 
-The [Pulumi Tools extension for VS Code](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode) allows you to manage your Pulumi ESC environments directly from your editor. This enables you to create and manage environments, secrets and configuration directly within the IDE with rich IDE features.
+The [Pulumi Tools extension for VS Code](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot) allows you to manage your Pulumi ESC environments directly from your editor. This enables you to create and manage environments, secrets and configuration directly within the IDE with rich IDE features.
 
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
-- [Pulumi Tools extension for VS Code](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode)
+- [Pulumi Tools extension for VS Code](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot)
 - A [Pulumi Cloud account](https://app.pulumi.com)
 
 ## Getting Started with Pulumi ESC in VS Code

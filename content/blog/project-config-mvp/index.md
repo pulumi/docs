@@ -1,7 +1,7 @@
 ---
 title: "Simplify Configuration Management with Project-level Config"
 date: 2022-11-02T06:00:00-07:00
-updated: 2025-03-07
+updated: 2025-06-20
 meta_desc: Pulumi’s project-level config simplifies infrastructure setup, enabling seamless configuration across all stacks. Learn how to use it effectively.
 meta_image: meta.png
 authors:
@@ -11,6 +11,9 @@ tags:
     - features
     - config
 ---
+
+> [!INFO]
+> This blog post discusses project-level config before Pulumi ESC was released. ESC makes this and hierarchical config [easy](/blog/environments-secrets-configurations-management/).
 
 One of our most up-voted feature requests (with 78 thumbs ups) is to [support hierarchical config](https://github.com/pulumi/pulumi/issues/2307). We're happy to announce that we've now released the first part of plans to support this feature.
 
@@ -97,11 +100,11 @@ This is just the start of our support for better config. We posted [a long comme
 
 #### What is project-level config in Pulumi?
 
-Project-level config allows you to set default configuration values for all stacks in a Pulumi.yaml file.
+Project-level config allows you to set default configuration values for all stacks in a `Pulumi.yaml` file.
 
 #### Can I override project-level config for specific stacks?
 
-Yes! You can override default values in Pulumi.<stack>.yaml or via the CLI.
+Yes! You can override default values in `Pulumi.<stack>.yaml` or via the CLI.
 
 #### How does Pulumi handle object values in config?
 
@@ -113,4 +116,4 @@ No, it is now deprecated in favor of project-level configuration.
 
 #### Where can I give feedback or ask questions?
 
-Join the [Pulumi Community Slack](https://slack.pulumi.com/) or joine the [GitHub Discussions](https://github.com/pulumi/pulumi/discussions).
+Join the [Pulumi Community Slack](https://slack.pulumi.com/) or join the [GitHub Discussions](https://github.com/pulumi/pulumi/discussions).

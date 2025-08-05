@@ -8,7 +8,7 @@ menu:
   iac:
     identifier: provider
     parent: options-concepts
-    weight: 11
+    weight: 12
 aliases:
 - /docs/concepts/resources/options/provider/
 - /docs/concepts/options/provider/

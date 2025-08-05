@@ -10,7 +10,7 @@ weight: 1
 
 ### What are containers?
 
-[Containers](/containers/) are lightweight virtualized operating system environments in which developers can package and run an application and its dependencies as isolated runtime environments. The benefits of containers include better scalability, portability, and fault isolation. Docker is most commonly used to create container images. Containers are great for scenarios such as microservices, batch jobs, and migrating a legacy application. In the cloud, containers are typically run using container services that manage the container orchestration, cluster management, and compute for you.
+Containers are lightweight virtualized operating system environments in which developers can package and run an application and its dependencies as isolated runtime environments. The benefits of containers include better scalability, portability, and fault isolation. Docker is most commonly used to create container images. Containers are great for scenarios such as microservices, batch jobs, and migrating a legacy application. In the cloud, containers are typically run using container services that manage the container orchestration, cluster management, and compute for you.
 
 **On AWS,** these are the main ways to run containers:
 |                                         |                                                                                                                                                       |

@@ -138,10 +138,10 @@ ESC dynamic credentials and the `esc run` command can be used for various scenar
 
 See the following guides to set up OIDC between Pulumi ESC and your specific cloud provider:
 
-- [Configuring OIDC for AWS](/docs/pulumi-cloud/oidc/provider/aws/)
-- [Configuring OIDC for Azure](/docs/pulumi-cloud/oidc/provider/azure/)
-- [Configuring OIDC for Google Cloud](/docs/pulumi-cloud/oidc/provider/gcp/)
-- [Configuring OIDC for Vault](/docs/pulumi-cloud/oidc/provider/vault/)
+- [Configuring OIDC for AWS](/docs/esc/environments/configuring-oidc/aws/)
+- [Configuring OIDC for Azure](/docs/esc/environments/configuring-oidc/azure/)
+- [Configuring OIDC for Google Cloud](/docs/esc/environments/configuring-oidc/gcp/)
+- [Configuring OIDC for Vault](/docs/esc/environments/configuring-oidc/vault/)
 
 In the next section, you will learn how to retrieve secret values from external sources.
 

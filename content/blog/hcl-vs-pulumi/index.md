@@ -944,7 +944,7 @@ data "google_compute_network" "vpc_restricted_net_hub" {
 ```
 
 In this HCL
-[example](https://github.com/terraform-google-modules/terraform-example-foundation/blob/master/3-networks-hub-and-spoke/modules/restricted_shared_vpc/main.tf),
+[example](https://github.com/terraform-google-modules/terraform-example-foundation/blob/master/3-networks-hub-and-spoke/modules/shared_vpc/main.tf),
 we see the `count` parameter being used in a way that stretches its original intent—essentially using it to
 conditionally create or skip resources based on the value of `var.mode`. This method, while functional, can make the
 code more difficult to understand and maintain, as it repurposes Terraform constructs in unintended ways.

@@ -2,8 +2,12 @@
     <div class="container mx-auto px-4 py-8">
         <div class="xxl:flex">
             <div class="flex flex-col lg:flex-row xxl:w-9/12">
-                <div class="lg:w-1/4 xxl:w-4/12  pr-8">
-                    {{ partial "blog/sidebar.html" . }}
+                <div class="lg:w-1/4 xxl:w-4/12 pr-8">
+                    {{ if .Params.series }}
+                        {{ partial "blog/series-sidebar.html" . }}
+                    {{ else }}
+                        {{ partial "blog/sidebar.html" . }}
+                    {{ end }}
                 </div>
 
                 <div class="lg:w-3/4 xxl:w-9/12">
@@ -15,7 +19,11 @@
                         {{ end }}
 
 
-                        <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
+                        {{ if .Params.updated }}
+                            <p>Updated on <time>{{ (time .Params.updated).Format "Monday, January 2, 2006" }}</time></p>
+                        {{ else }}
+                            <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
+                        {{ end }}
 
                         <div class="flex items-center">
                             <span class="text-sm text-gray-700">
@@ -27,7 +35,7 @@
                         </section>
 
                         <div>
-                            {{ if .Params.tags }}
+                            {{ if and .Params.tags (not .Params.simple_layout) }}
                                 <ul class="tags m-0 mt-8 p-0 text-sm">
                                     {{ range $tag := .Params.tags }}
                                         <li class="mt-0 inline-flex">
@@ -57,7 +65,9 @@
             <div class="xxl:w-3/12 lg:pl-8">
                 <div class="sticky-sidebar">
                     {{ partial "blog/right-nav.html" . }}
-                    {{ partial "docs/right-nav-ad.html" }}
+                    {{ if not .Params.simple_layout }}
+                        {{ partial "docs/right-nav-ad.html" }}
+                    {{ end }}
                 </div>
             </div>
         </div>

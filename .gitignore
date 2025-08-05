@@ -16,8 +16,6 @@ node_modules
 .idea/
 *.iml
 
-.vscode
-
 # We use yarn instead of npm. If someone happens to use npm, a
 # package-lock.json file will be created, which is redundant with
 # yarn's yarn.lock file. We ignore package-lock.json to prevent
@@ -67,3 +65,6 @@ _vendor/
 
 # VScode solution files.
 *.sln
+**/.claude/settings.local.json
+
+.claude

@@ -16,7 +16,7 @@ Today, we are excited to bring Pulumi Insights into the `pulumi` CLI with the ne
 
 {{< youtube "oxpT4Lh64xs?rel=0" >}}
 
-This release is the latest of a long list of improvements and enhancement to Pulumi Insights over the last few months, including [AI Assist for resource search](/blog/ai-assist-improvements/), [fine-grained resource property search](/blog/property-search/), [registry support in Pulumi AI](/blog/leveling-up-pulumi-ai-with-the-pulumi-registry/) and [Pulumi AI Answers](/ai/answers). We've seen incredible adoption and usage of all of these features over the last few months, and they are now easier than ever to access via the `pulumi` CLI.
+This release is the latest of a long list of improvements and enhancement to Pulumi Insights over the last few months, including [AI Assist for resource search](/blog/ai-assist-improvements/), [fine-grained resource property search](/blog/property-search/), and [registry support in Pulumi AI](/blog/leveling-up-pulumi-ai-with-the-pulumi-registry/). We've seen incredible adoption and usage of all of these features over the last few months, and they are now easier than ever to access via the `pulumi` CLI.
 
 ## Pulumi Resource Search in the CLI
 

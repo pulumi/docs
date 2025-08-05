@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Preview Pulumi Site",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "make serve",
+      "serverReadyAction": {
+        "pattern": "Web Server is available at (https?://localhost:(\\d+))",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    }
+  ]
+}

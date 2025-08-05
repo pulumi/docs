@@ -10,7 +10,8 @@ tags:
     - kubernetes
     - Azure
     - helm
-
+    - azure-top-5
+series: azure-top-5
 ---
 
 All modern software is cloud software, and it's more than likely that it runs on Kubernetes. Developers are faced with the challenge of deploy applications composed of many microservices. And each microservice adds to the complexity of the deployment.

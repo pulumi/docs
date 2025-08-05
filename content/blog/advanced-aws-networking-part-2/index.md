@@ -1,5 +1,5 @@
 ---
-title: "Advanced AWS Networking, Part 2"
+title: "Advanced AWS Networking: Part 2"
 
 # The date represents the post's publish date,
 # and by default corresponds with the date this file was generated.
@@ -37,6 +37,8 @@ tags:
     - networking
     - hub-and-spoke
     - python
+    - aws-networking-advanced
+series: aws-networking-advanced
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,

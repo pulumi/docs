@@ -257,15 +257,8 @@ poetry add --allow-prereleases ${PACKAGE_NAME}
 
 ## Package Documentation
 
-In addition to the standard packages the [Pulumi Registry](/registry/) houses 100+ Python packages.
+The following reference documentation resources are available:
 
-### Standard Packages
-
-<dl class="tabular">
-    <dt>Pulumi SDK</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi">pulumi</a></dd>
-    <dt>Pulumi Policy</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_policy">pulumi_policy</a></dd>
-    <dt>Pulumi Terraform</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_terraform">pulumi_terraform</a></dd>
-</dl>
+* The [Pulumi SDK `pulumi`](/docs/reference/pkg/python/pulumi) allows you to work with with basic Pulumi constructs. You will need to reference it in most Pulumi IaC programs.
+* The [Pulumi Policy SDK `pulumi_policy`](/docs/reference/pkg/python/pulumi_policy) allows you to author Pulumi Policy as Code policies. You will need to reference it when authoring Pulumi Policy as code.
+* For managing resources in a Pulumi IaC program, you can find the relevant SDK reference docs for a given provider in [the Pulumi Registry](/registry/).

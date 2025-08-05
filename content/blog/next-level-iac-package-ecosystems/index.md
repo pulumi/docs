@@ -30,7 +30,7 @@ Let’s have a look at a concrete example where this package ecosystem can get y
 
 A popular example of cloud infrastructure automation is creating an S3 bucket and pushing some files to it. This is a common task that many of us have had to do, and most infrastructure automation tools have a way to accomplish this. 
 
-Here’s our public answer for [how to do that in Pulumi][s3-bucket-example]: 
+Here’s one way to do that in Pulumi: 
 
 {{< chooser language "typescript,python" />}}
 
@@ -239,7 +239,6 @@ The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open
 
 <a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
 
-[s3-bucket-example]: https://www.pulumi.com/ai/answers/fZ6JumwyAXHcXys5tFFkqq/uploading-files-to-amazon-s3-using-typescript
 [npm-mimetypes]: https://www.npmjs.com/package/mime-types
 [npm-text-to-image]: https://www.npmjs.com/package/text-to-image
 [cnunciato-image-badge-example]: https://gist.github.com/cnunciato/2461f87e59b3b50c14cbefc33b91738e
@@ -247,7 +246,7 @@ The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open
 [wiki-motd]: https://en.wikipedia.org/wiki/Message_of_the_day
 [npm-octokit]: https://www.npmjs.com/package/octokit
 [nodejs-crypto-module]: https://nodejs.org/api/crypto.html#crypto
-[terraform-mime-example]: https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/
+[terraform-mime-example]: https://web.archive.org/web/20240301073955/https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/
 [python-mimetypes]: https://docs.python.org/3/library/mimetypes.html
 [pulumi-install]: https://www.pulumi.com/docs/install/
 [pulumi-start]: https://www.pulumi.com/start

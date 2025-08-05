@@ -7,6 +7,7 @@ menu:
   esc:
     identifier: snowflake-login
     parent: esc-dynamic-login-credentials
+    weight: 8
 ---
 
 The `snowflake-login` provider enables authentication to Snowflake using OpenID Connect (OIDC) for Pulumi ESC. This allows you to securely access Snowflake without storing long-lived credentials in your environment configurations.

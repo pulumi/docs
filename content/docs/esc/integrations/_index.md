@@ -21,6 +21,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 
 - [AWS login provider](/docs/esc/integrations/dynamic-login-credentials/aws-login)
 - [Azure login provider](/docs/esc/integrations/dynamic-login-credentials/azure-login)
+- [Doppler login provider](/docs/esc/integrations/dynamic-login-credentials/doppler-login)
 - [GCP login provider](/docs/esc/integrations/dynamic-login-credentials/gcp-login)
 - [Infisical login provider](/docs/esc/integrations/dynamic-login-credentials/infisical-login)
 - [Vault login provider](/docs/esc/integrations/dynamic-login-credentials/vault-login)
@@ -29,6 +30,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 
 - [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets)
 - [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets)
+- [Doppler Secrets](/docs/esc/integrations/dynamic-secrets/doppler-secrets)
 - [GCP Secrets Manager](/docs/esc/integrations/dynamic-secrets/gcp-secrets)
 - [Infisical Secrets](/docs/esc/integrations/dynamic-secrets/infisical-secrets)
 - [Vault Secrets Management](/docs/esc/integrations/dynamic-secrets/vault-secrets)
@@ -39,7 +41,7 @@ ESC also integrates with tools like Direnv, Terraform, and Docker to help manage
 - [AWS IAM user](/docs/esc/integrations/rotated-secrets/aws-iam)
 - [MySQL](/docs/esc/integrations/rotated-secrets/mysql)
 - [Postgres](/docs/esc/integrations/rotated-secrets/postgres)
-- [AWS Lambda Connector](docs/esc/environments/rotation/#rotation-connectors)
+- [AWS Lambda Connector](/docs/esc/environments/rotation/#rotation-connectors)
 
 ## Kubernetes
 

@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: gh-login
     parent: esc-dynamic-login-credentials
-    weight: 4
+    weight: 6
 aliases:
     - /docs/pulumi-cloud/esc/providers/gh-login/
     - /docs/esc/providers/gh-login/
@@ -27,6 +27,10 @@ the [GitHub CLI](https://cli.github.com/), etc. The token will expire after 1 ho
 To use the provider, you must register a new GitHub App into your personal GitHub account or an organization account.
 Other GitHub accounts then install the application into their account to grant you access with the permissions
 defined by your GitHub App.
+
+{{% notes type="info" %}}
+This is different from installing the Pulumi GitHub App for Deployments and CI/CD integration, which should be installed according to the instructions in the [GitHub App documentation](/docs/iac/using-pulumi/continuous-delivery/github-app/#installation-and-configuration).
+{{% /notes %}}
 
 - To register an app on a personal account, visit: [https://github.com/settings/apps/new](https://github.com/settings/apps/new?contents=read&metadata=read&webhook_active=false&description=Enables%20access%20for%20a%20Pulumi%20ESC%20environment.&url=https://www.pulumi.com/product/esc/).
 

@@ -72,7 +72,7 @@ Variables can be scoped right down to the environment that can access them. For 
 
 #### PULUMI_ACCESS_TOKEN
 
-To run Pulumi commands non-interactively, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a [project variable](https://octopus.com/docs/deployment-process/variables). To [create a new access token](/docs/pulumi-cloud/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in the Pulumi Cloud.
+To run Pulumi commands non-interactively, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a [project variable](https://octopus.com/docs/deployment-process/variables). To [create a new access token](/docs/pulumi-cloud/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in Pulumi Cloud.
 
 ### Create the Process
 

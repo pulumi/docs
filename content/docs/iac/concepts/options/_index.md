@@ -8,7 +8,7 @@ menu:
   iac:
     parent: iac-concepts
     identifier: options-concepts
-    weight: 4
+    weight: 50
 aliases:
 - /docs/intro/concepts/resources/options/
 - /docs/concepts/options/
@@ -24,6 +24,7 @@ Resource constructors accept the following resource options:
 - [deleteBeforeReplace](/docs/concepts/options/deletebeforereplace/): override the default create-before-delete behavior when replacing a resource.
 - [deletedWith](/docs/concepts/options/deletedwith/): If set, the provider's Delete method will not be called for this resource if the specified resource is being deleted as well.
 - [dependsOn](/docs/concepts/options/dependson/): specify additional explicit dependencies in addition to the ones in the dependency graph.
+- [hooks](/docs/concepts/options/hooks/): specify a set of resource hooks that will be executed at specific points in the resource lifecycle.
 - [ignoreChanges](/docs/concepts/options/ignorechanges/): declare that changes to certain properties should be ignored during a diff.
 - [import](/docs/concepts/options/import/): bring an existing cloud resource into Pulumi.
 - [parent](/docs/concepts/options/parent/): establish a parent/child relationship between resources.
