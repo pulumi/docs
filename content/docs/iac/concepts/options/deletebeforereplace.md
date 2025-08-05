@@ -16,7 +16,7 @@ aliases:
 
 A resource may need to be replaced if an immutable property changes. In these cases, cloud providers do not support updating an existing resource so a new instance will be created and the old one deleted. By default, to minimize downtime, Pulumi creates new instances of resources before deleting old ones.
 
-While Setting the `deleteBeforeReplace` option may be necessary for some resources that manage scarce resources behind the scenes, and/or resources that cannot exist side-by-side, be aware that it introduces some risks. Since this behavior has a cascading impact on dependents so more resources may be replaced, it can lead to downtime. Separately, consider the consistency guarantees offered by your Cloud Providers. For example, AWS's APIs are all eventually consistent. In some scenarios, it is possible to create corrupted dependent resources because the dependency deletion has not propagated before the dependent's creation is executed.
+Setting the `deleteBeforeReplace` option to true means that Pulumi will delete the existing resource before creating its replacement. This option may be necessary for resources that manage scarce resources or resources that cannot exist side-by-side. However, it's important to note that it can cascade to dependent resources, potentially causing more replacements and downtime. Additionally, eventual consistency in cloud APIs (like AWS) may lead to corrupted dependent resources if deletion hasn't fully propagated before creation begins.
 
 This example deletes a database entirely before its replacement is created:
 
