@@ -23,177 +23,132 @@ Pulumi provides access to thousands of Terraform providers through the Terraform
 Use the `pulumi package add` command to add Terraform providers to your project:
 
 ```bash
-$ pulumi package add terraform-provider-random
+$ pulumi package add terraform-provider hashicorp/random
 ```
 
 This command automatically:
 
 * Downloads the Terraform provider binary
 * Generates Pulumi bindings for the provider
+* Creates an SDK in your preferred language
 * Adds the provider to your project dependencies
 
-## Example: Random naming for containers
+## Example: Random Pet Names
 
-Let's enhance our containerized application example by adding random suffixes to container images using the `random` Terraform provider:
+Let's see how this works first-hand, using the `random` Terraform provider. We'll import the Terraform provider then use it to put a load balander in a random availability zone.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "typescript" %}}
 
-First, add the random provider:
+First, create a new Pulumi program:
 
 ```bash
-$ pulumi package add terraform-provider-random
+$ mkdir pulumi-terraform-provider-test && cd pulumi-terraform-provider-test
+$ pulumi new aws-typescript --yes
+```
+
+Next, add the `hashicorp/random` Terraform provider:
+
+```bash
+$ pulumi package add terraform-provider hashicorp/random
 ```
 
 Then use it in your Pulumi program:
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as random from "@pulumi/random";
-import * as terraform from "@pulumi/terraform";
 
-// Reference Terraform state for infrastructure
-const tfState = new terraform.state.S3Reference("infrastructure", {
-    bucket: "my-terraform-state-bucket",
-    key: "infrastructure/terraform.tfstate",
-    region: "us-west-2",
+const az = new random.Shuffle("availability-zones-randomizer", {
+    inputs: [
+        "us-west-2a",
+        "us-west-2b",
+        "us-west-2c",
+        "us-west-2d",
+    ],
+    resultCount: 2,
 });
 
-const clusterName = tfState.getOutput("ecs_cluster_name");
-const repositoryUrl = tfState.getOutput("ecr_repository_url");
-
-// Create random suffix for image tagging
-const imageSuffix = new random.RandomId("image-suffix", {
-    byteLength: 4,
-});
-
-// Build and tag container image
-const image = new aws.ecr.LifecyclePolicy("app-image", {
-    repository: repositoryUrl,
-    policy: JSON.stringify({
-        rules: [{
-            rulePriority: 1,
-            description: "Keep last 10 images",
-            selection: {
-                tagStatus: "tagged",
-                tagPrefixList: ["v"],
-                countType: "imageCountMoreThan",
-                countNumber: 10,
-            },
-            action: {
-                type: "expire"
-            }
-        }]
-    }),
-});
-
-// Create task definition with random-tagged image
-const taskDefinition = new aws.ecs.TaskDefinition("app-task", {
-    family: "my-app",
-    networkMode: "awsvpc",
-    requiresCompatibilities: ["FARGATE"],
-    cpu: "256",
-    memory: "512",
-    executionRoleArn: taskRole.arn,
-    containerDefinitions: pulumi.interpolate`[
+// Place the ELB in any two of the given availability zones, selected at random.
+const example = new aws.elb.LoadBalancer("random-load-balancer", {
+    availabilityZones: az.results,
+     listeners: [
         {
-            "name": "my-app",
-            "image": "${repositoryUrl}:v${imageSuffix.hex}",
-            "essential": true,
-            "portMappings": [
-                {
-                    "containerPort": 80,
-                    "protocol": "tcp"
-                }
-            ],
-            "environment": [
-                {
-                    "name": "APP_VERSION",
-                    "value": "${imageSuffix.hex}"
-                }
-            ]
-        }
-    ]`,
+            instancePort: 8000,
+            instanceProtocol: "http",
+            lbPort: 80,
+            lbProtocol: "http",
+        },
+    ],
 });
 
-export const imageTag = imageSuffix.hex;
-export const fullImageUrl = pulumi.interpolate`${repositoryUrl}:v${imageSuffix.hex}`;
+// Export the zones we picked for reference.
+export const availabilityZones = az.results;
 ```
 
 {{% /choosable %}}
 
 {{% choosable language "python" %}}
 
-First, add the random provider:
+First, create a new Pulumi program:
 
 ```bash
-$ pulumi package add terraform-provider-random
+$ mkdir pulumi-terraform-provider-test && cd pulumi-terraform-provider-test
+$ pulumi new aws-python --yes
+```
+
+Next, add the `hashicorp/random` Terraform provider:
+
+```bash
+$ pulumi package add terraform-provider hashicorp/random
 ```
 
 Then use it in your Pulumi program:
 
 ```python
-import pulumi
+import pulumi as pulumi
 import pulumi_aws as aws
 import pulumi_random as random
-import pulumi_terraform as terraform
 
-# Reference Terraform state for infrastructure
-tf_state = terraform.state.S3Reference("infrastructure",
-    bucket="my-terraform-state-bucket",
-    key="infrastructure/terraform.tfstate",
-    region="us-west-2"
-)
+az = random.Shuffle("availability-zones-randomizer",
+    inputs=[
+        "us-west-2a",
+        "us-west-2b",
+        "us-west-2c",
+        "us-west-2d",
+    ],
+    result_count=2)
 
-cluster_name = tf_state.get_output("ecs_cluster_name")
-repository_url = tf_state.get_output("ecr_repository_url")
 
-# Create random suffix for image tagging
-image_suffix = random.RandomId("image-suffix", byte_length=4)
+aws.elb.LoadBalancer("random-load-balancer",
+    availability_zones=az.results,
+    listeners=[
+        {
+            "instance_port": 8000,
+            "instance_protocol": "http",
+            "lb_port": 80,
+            "lb_protocol": "http",
+        }])
 
-# Create task definition with random-tagged image
-task_definition = aws.ecs.TaskDefinition("app-task",
-    family="my-app",
-    network_mode="awsvpc",
-    requires_compatibilities=["FARGATE"],
-    cpu="256",
-    memory="512",
-    execution_role_arn=task_role.arn,
-    container_definitions=pulumi.Output.format("""[
-        {{
-            "name": "my-app",
-            "image": "{0}:v{1}",
-            "essential": true,
-            "portMappings": [
-                {{
-                    "containerPort": 80,
-                    "protocol": "tcp"
-                }}
-            ],
-            "environment": [
-                {{
-                    "name": "APP_VERSION",
-                    "value": "{1}"
-                }}
-            ]
-        }}
-    ]""", repository_url, image_suffix.hex)
-)
-
-pulumi.export("imageTag", image_suffix.hex)
-pulumi.export("fullImageUrl", pulumi.Output.format("{0}:v{1}", repository_url, image_suffix.hex))
+pulumi.export('availability_zones', az.results)
 ```
 
 {{% /choosable %}}
 
 {{% choosable language "go" %}}
 
-First, add the random provider:
+First, create a new Pulumi program:
 
 ```bash
-$ pulumi package add terraform-provider-random
+$ mkdir pulumi-terraform-provider-test && cd pulumi-terraform-provider-test
+$ pulumi new aws-go --yes
+```
+
+Next, add the `hashicorp/random` Terraform provider:
+
+```bash
+$ pulumi package add terraform-provider hashicorp/random
 ```
 
 Then use it in your Pulumi program:
@@ -202,74 +157,40 @@ Then use it in your Pulumi program:
 package main
 
 import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ecs"
-	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
-	"github.com/pulumi/pulumi-terraform/sdk/v5/go/terraform/state"
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/elb"
+	"github.com/pulumi/pulumi-terraform-provider/sdks/go/random/v3/random"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Reference Terraform state for infrastructure
-		tfState, err := state.NewS3Reference(ctx, "infrastructure", &state.S3ReferenceArgs{
-			Bucket: pulumi.String("my-terraform-state-bucket"),
-			Key:    pulumi.String("infrastructure/terraform.tfstate"),
-			Region: pulumi.String("us-west-2"),
+		az, err := random.NewShuffle(ctx, "availability-zones-randomizer", &random.ShuffleArgs{
+			Inputs: pulumi.StringArray{
+				pulumi.String("us-west-2a"),
+				pulumi.String("us-west-2b"),
+				pulumi.String("us-west-2c"),
+				pulumi.String("us-west-2d"),
+			},
+			ResultCount: pulumi.Float64(2),
 		})
 		if err != nil {
 			return err
 		}
-
-		clusterName := tfState.GetOutput(pulumi.String("ecs_cluster_name"))
-		repositoryUrl := tfState.GetOutput(pulumi.String("ecr_repository_url"))
-
-		// Create random suffix for image tagging
-		imageSuffix, err := random.NewRandomId(ctx, "image-suffix", &random.RandomIdArgs{
-			ByteLength: pulumi.Int(4),
+		_, err = elb.NewLoadBalancer(ctx, "random-load-balancer", &elb.LoadBalancerArgs{
+			AvailabilityZones: az.Results,
+			Listeners: elb.LoadBalancerListenerArray{
+				&elb.LoadBalancerListenerArgs{
+					InstancePort:     pulumi.Int(8000),
+					InstanceProtocol: pulumi.String("http"),
+					LbPort:           pulumi.Int(80),
+					LbProtocol:       pulumi.String("http"),
+				},
+			},
 		})
 		if err != nil {
 			return err
 		}
-
-		// Create task definition with random-tagged image
-		containerDefinitions := pulumi.Sprintf(`[
-			{
-				"name": "my-app",
-				"image": "%s:v%s",
-				"essential": true,
-				"portMappings": [
-					{
-						"containerPort": 80,
-						"protocol": "tcp"
-					}
-				],
-				"environment": [
-					{
-						"name": "APP_VERSION",
-						"value": "%s"
-					}
-				]
-			}
-		]`, repositoryUrl, imageSuffix.Hex, imageSuffix.Hex)
-
-		taskDefinition, err := ecs.NewTaskDefinition(ctx, "app-task", &ecs.TaskDefinitionArgs{
-			Family:                  pulumi.String("my-app"),
-			NetworkMode:             pulumi.String("awsvpc"),
-			RequiresCompatibilities: pulumi.StringArray{pulumi.String("FARGATE")},
-			Cpu:                     pulumi.String("256"),
-			Memory:                  pulumi.String("512"),
-			ExecutionRoleArn:        taskRole.Arn,
-			ContainerDefinitions:    containerDefinitions,
-		})
-		if err != nil {
-			return err
-		}
-
-		ctx.Export("imageTag", imageSuffix.Hex)
-		ctx.Export("fullImageUrl", pulumi.Sprintf("%s:v%s", repositoryUrl, imageSuffix.Hex))
-		ctx.Export("taskDefinitionArn", taskDefinition.Arn)
+		ctx.Export("availability_zones", az.Results)
 		return nil
 	})
 }
@@ -279,10 +200,17 @@ func main() {
 
 {{% choosable language "csharp" %}}
 
-First, add the random provider:
+First, create a new Pulumi program:
 
 ```bash
-$ pulumi package add terraform-provider-random
+$ mkdir pulumi-terraform-provider-test && cd pulumi-terraform-provider-test
+$ pulumi new aws-csharp --yes
+```
+
+Next, add the `hashicorp/random` Terraform provider:
+
+```bash
+$ pulumi package add terraform-provider hashicorp/random
 ```
 
 Then use it in your Pulumi program:
@@ -290,64 +218,42 @@ Then use it in your Pulumi program:
 ```csharp
 using System.Collections.Generic;
 using Pulumi;
-using Pulumi.Aws.Ecs;
 using Pulumi.Random;
-using Pulumi.Terraform.State;
+using Aws = Pulumi.Aws;
 
 return await Deployment.RunAsync(() =>
 {
-    // Reference Terraform state for infrastructure
-    var tfState = new S3Reference("infrastructure", new S3ReferenceArgs
+    var az = new Shuffle("availability-zones-randomizer", new()
     {
-        Bucket = "my-terraform-state-bucket",
-        Key = "infrastructure/terraform.tfstate",
-        Region = "us-west-2",
+        Inputs = new[]
+        {
+            "us-west-2a",
+            "us-west-2b",
+            "us-west-2c",
+            "us-west-2d",
+        },
+        ResultCount = 2,
     });
 
-    var clusterName = tfState.GetOutput("ecs_cluster_name");
-    var repositoryUrl = tfState.GetOutput("ecr_repository_url");
-
-    // Create random suffix for image tagging
-    var imageSuffix = new RandomId("image-suffix", new RandomIdArgs
+    // Create a new load balancer
+    var bar = new Aws.Elb.LoadBalancer("random-load-balancer", new()
     {
-        ByteLength = 4,
-    });
-
-    // Create task definition with random-tagged image
-    var taskDefinition = new TaskDefinition("app-task", new TaskDefinitionArgs
-    {
-        Family = "my-app",
-        NetworkMode = "awsvpc",
-        RequiresCompatibilities = new[] { "FARGATE" },
-        Cpu = "256",
-        Memory = "512",
-        ExecutionRoleArn = taskRole.Arn,
-        ContainerDefinitions = Output.Format($@"[
-            {{
-                ""name"": ""my-app"",
-                ""image"": ""{repositoryUrl}:v{imageSuffix.Hex}"",
-                ""essential"": true,
-                ""portMappings"": [
-                    {{
-                        ""containerPort"": 80,
-                        ""protocol"": ""tcp""
-                    }}
-                ],
-                ""environment"": [
-                    {{
-                        ""name"": ""APP_VERSION"",
-                        ""value"": ""{imageSuffix.Hex}""
-                    }}
-                ]
-            }}
-        ]"),
+        AvailabilityZones = az.Results,
+        Listeners = new[]
+        {
+            new Aws.Elb.Inputs.LoadBalancerListenerArgs
+            {
+                InstancePort = 8000,
+                InstanceProtocol = "http",
+                LbPort = 80,
+                LbProtocol = "http",
+            },
+        },
     });
 
     return new Dictionary<string, object?>
     {
-        ["imageTag"] = imageSuffix.Hex,
-        ["fullImageUrl"] = Output.Format($"{repositoryUrl}:v{imageSuffix.Hex}"),
-        ["taskDefinitionArn"] = taskDefinition.Arn,
+        ["availability_zones"] = az.Results
     };
 });
 ```
@@ -356,10 +262,17 @@ return await Deployment.RunAsync(() =>
 
 {{% choosable language "java" %}}
 
-First, add the random provider:
+First, create a new Pulumi program:
 
 ```bash
-$ pulumi package add terraform-provider-random
+$ mkdir pulumi-terraform-provider-test && cd pulumi-terraform-provider-test
+$ pulumi new aws-java --yes
+```
+
+Next, add the `hashicorp/random` Terraform provider:
+
+```bash
+$ pulumi package add terraform-provider hashicorp/random
 ```
 
 Then use it in your Pulumi program:
@@ -367,70 +280,41 @@ Then use it in your Pulumi program:
 ```java
 package myproject;
 
+import com.pulumi.Context;
 import com.pulumi.Pulumi;
-import com.pulumi.aws.ecs.TaskDefinition;
-import com.pulumi.aws.ecs.TaskDefinitionArgs;
-import com.pulumi.core.Output;
-import com.pulumi.random.RandomId;
-import com.pulumi.random.RandomIdArgs;
-import com.pulumi.terraform.state.S3Reference;
-import com.pulumi.terraform.state.S3ReferenceArgs;
+import com.pulumi.random.Shuffle;
+import com.pulumi.random.ShuffleArgs;
+import com.pulumi.aws.elb.LoadBalancer;
+import com.pulumi.aws.elb.LoadBalancerArgs;
+import com.pulumi.aws.elb.inputs.LoadBalancerListenerArgs;
 
 public class App {
     public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            // Reference Terraform state for infrastructure
-            var tfState = new S3Reference("infrastructure", S3ReferenceArgs.builder()
-                .bucket("my-terraform-state-bucket")
-                .key("infrastructure/terraform.tfstate")
-                .region("us-west-2")
-                .build());
+        Pulumi.run(App::stack);
+    }
 
-            var clusterName = tfState.getOutput("ecs_cluster_name");
-            var repositoryUrl = tfState.getOutput("ecr_repository_url");
+    public static void stack(Context ctx) {
+        var az = new Shuffle("availability-zones-randomizer", ShuffleArgs.builder()
+            .inputs(
+                "us-west-2a",
+                "us-west-2b",
+                "us-west-2c",
+                "us-west-2d")
+            .resultCount(2d)
+            .build());
 
-            // Create random suffix for image tagging
-            var imageSuffix = new RandomId("image-suffix", RandomIdArgs.builder()
-                .byteLength(4)
-                .build());
+        var bar = new LoadBalancer("random-load-balancer", LoadBalancerArgs.builder()
+            .availabilityZones(az.results())
+            .listeners(
+                LoadBalancerListenerArgs.builder()
+                    .instancePort(8000)
+                    .instanceProtocol("http")
+                    .lbPort(80)
+                    .lbProtocol("http")
+                    .build())
+            .build());
 
-            // Create task definition with random-tagged image
-            var containerDefinitions = Output.format("""
-                [
-                    {
-                        "name": "my-app",
-                        "image": "%s:v%s",
-                        "essential": true,
-                        "portMappings": [
-                            {
-                                "containerPort": 80,
-                                "protocol": "tcp"
-                            }
-                        ],
-                        "environment": [
-                            {
-                                "name": "APP_VERSION",
-                                "value": "%s"
-                            }
-                        ]
-                    }
-                ]
-                """, repositoryUrl, imageSuffix.hex(), imageSuffix.hex());
-
-            var taskDefinition = new TaskDefinition("app-task", TaskDefinitionArgs.builder()
-                .family("my-app")
-                .networkMode("awsvpc")
-                .requiresCompatibilities("FARGATE")
-                .cpu("256")
-                .memory("512")
-                .executionRoleArn(taskRole.arn())
-                .containerDefinitions(containerDefinitions)
-                .build());
-
-            ctx.export("imageTag", imageSuffix.hex());
-            ctx.export("fullImageUrl", Output.format("%s:v%s", repositoryUrl, imageSuffix.hex()));
-            ctx.export("taskDefinitionArn", taskDefinition.arn());
-        });
+        ctx.export("availability_zones", az.results());
     }
 }
 ```
@@ -439,10 +323,17 @@ public class App {
 
 {{% choosable language "yaml" %}}
 
-First, add the random provider:
+First, create a new Pulumi program:
 
 ```bash
-$ pulumi package add terraform-provider-random
+$ mkdir pulumi-terraform-provider-test && cd pulumi-terraform-provider-test
+$ pulumi new aws-yaml --yes
+```
+
+Next, add the `hashicorp/random` Terraform provider:
+
+```bash
+$ pulumi package add terraform-provider hashicorp/random
 ```
 
 Then use it in your Pulumi program:
@@ -451,57 +342,33 @@ Then use it in your Pulumi program:
 name: terraform-provider-example
 runtime: yaml
 description: Use Terraform providers in Pulumi
-
 resources:
-  # Reference Terraform state for infrastructure
-  infrastructure:
-    type: terraform:state:S3Reference
+  az:
+    type: random:Shuffle
     properties:
-      bucket: my-terraform-state-bucket
-      key: infrastructure/terraform.tfstate
-      region: us-west-2
-
-  # Create random suffix for image tagging
-  image-suffix:
-    type: random:RandomId
+      inputs:
+        - us-west-2a
+        - us-west-2b
+        - us-west-2c
+        - us-west-2d
+      resultCount: 2
+  random-load-balancer:
+    type: aws:elb:LoadBalancer
     properties:
-      byteLength: 4
-
-  # Create task definition with random-tagged image
-  app-task:
-    type: aws:ecs:TaskDefinition
-    properties:
-      family: my-app
-      networkMode: awsvpc
-      requiresCompatibilities: [FARGATE]
-      cpu: "256"
-      memory: "512"
-      executionRoleArn: ${taskRole.arn}
-      containerDefinitions: |
-        [
-          {
-            "name": "my-app",
-            "image": "${infrastructure.outputs.ecr_repository_url}:v${image-suffix.hex}",
-            "essential": true,
-            "portMappings": [
-              {
-                "containerPort": 80,
-                "protocol": "tcp"
-              }
-            ],
-            "environment": [
-              {
-                "name": "APP_VERSION",
-                "value": "${image-suffix.hex}"
-              }
-            ]
-          }
-        ]
-
+      availabilityZones: ${az.results}
+      listeners:
+        - instancePort: 8000
+          instanceProtocol: http
+          lbPort: 80
+          lbProtocol: http
 outputs:
-  imageTag: ${image-suffix.hex}
-  fullImageUrl: ${infrastructure.outputs.ecr_repository_url}:v${image-suffix.hex}
-  taskDefinitionArn: ${app-task.arn}
+  availability_zones: ${az.results}
+packages:
+  random:
+    source: terraform-provider
+    version: 0.12.0
+    parameters:
+      - hashicorp/random
 ```
 
 {{% /choosable %}}
@@ -512,139 +379,31 @@ The same functionality in Terraform would look like:
 
 ```hcl
 # Terraform equivalent
-terraform {
-  required_providers {
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.1"
-    }
+resource "random_shuffle" "az" {
+  input        = ["us-west-2a", "us-west-2b", "us-west-2c", "us-west-2d"]
+  result_count = 2
+}
+
+resource "aws_elb" "random-load-balancer" {
+  # Place the ELB in any two of the given availability zones, selected at random.
+  availability_zones = random_shuffle.az.result
+
+  listener {
+    instance_port     = 8000
+    instance_protocol = "http"
+    lb_port           = 80
+    lb_protocol       = "http"
   }
 }
-
-# Reference remote state
-data "terraform_remote_state" "infrastructure" {
-  backend = "s3"
-  config = {
-    bucket = "my-terraform-state-bucket"
-    key    = "infrastructure/terraform.tfstate"
-    region = "us-west-2"
-  }
+output "availability_zones" {
+  value = random_shuffle.az.results
 }
-
-# Create random suffix for image tagging
-resource "random_id" "image_suffix" {
-  byte_length = 4
-}
-
-# Create task definition with random-tagged image
-resource "aws_ecs_task_definition" "app_task" {
-  family                   = "my-app"
-  network_mode             = "awsvpc"
-  requires_compatibilities = ["FARGATE"]
-  cpu                      = "256"
-  memory                   = "512"
-  execution_role_arn       = aws_iam_role.task_role.arn
-
-  container_definitions = jsonencode([
-    {
-      name      = "my-app"
-      image     = "${data.terraform_remote_state.infrastructure.outputs.ecr_repository_url}:v${random_id.image_suffix.hex}"
-      essential = true
-      portMappings = [
-        {
-          containerPort = 80
-          protocol      = "tcp"
-        }
-      ]
-      environment = [
-        {
-          name  = "APP_VERSION"
-          value = random_id.image_suffix.hex
-        }
-      ]
-    }
-  ])
-}
-
-output "image_tag" {
-  value = random_id.image_suffix.hex
-}
-
-output "full_image_url" {
-  value = "${data.terraform_remote_state.infrastructure.outputs.ecr_repository_url}:v${random_id.image_suffix.hex}"
-}
-```
-
-## Advanced provider usage
-
-### Using multiple providers
-
-You can add multiple Terraform providers to leverage specialized functionality:
-
-```bash
-# Add providers for different services
-$ pulumi package add terraform-provider-datadog
-$ pulumi package add terraform-provider-pagerduty
-$ pulumi package add terraform-provider-github
-```
-
-### Custom provider configuration
-
-Configure Terraform providers with custom settings:
-
-{{% choosable language "typescript" %}}
-
-```typescript
-import * as random from "@pulumi/random";
-
-// Configure the random provider
-const provider = new random.Provider("custom-random", {
-    // Provider-specific configuration
-});
-
-// Use the configured provider
-const customRandom = new random.RandomId("custom-suffix", {
-    byteLength: 8,
-}, { provider });
-```
-
-{{% /choosable %}}
-
-{{% choosable language "python" %}}
-
-```python
-import pulumi_random as random
-
-# Configure the random provider
-provider = random.Provider("custom-random")
-
-# Use the configured provider
-custom_random = random.RandomId("custom-suffix",
-    byte_length=8,
-    opts=pulumi.ResourceOptions(provider=provider)
-)
-```
-
-{{% /choosable %}}
-
-### Version constraints
-
-Specify provider versions for consistency:
-
-```bash
-# Add a specific version
-$ pulumi package add terraform-provider-random@3.4.3
-
-# Add with version constraint
-$ pulumi package add terraform-provider-datadog@">=3.0.0,<4.0.0"
 ```
 
 ## Best practices
 
-1. **Pin provider versions**: Use specific versions in production environments
-2. **Test provider compatibility**: Verify that Terraform providers work correctly with Pulumi
+1. **Use native providers when available**: Prefer native Pulumi providers over Terraform providers for better performance and type safety
+2. **Document provider usage**: Document which Terraform providers your team uses and why
 3. **Monitor provider updates**: Keep track of provider updates and breaking changes
-4. **Use native providers when available**: Prefer native Pulumi providers over Terraform providers for better performance and type safety
-5. **Document provider usage**: Document which Terraform providers your team uses and why
 
 {{< get-started-stepper >}}
