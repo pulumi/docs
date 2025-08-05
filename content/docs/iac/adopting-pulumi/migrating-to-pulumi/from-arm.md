@@ -44,7 +44,7 @@ ARM templates were Azure’s original infrastructure as code solution. But they 
 
 Pulumi lets you manage Azure infrastructure using your favorite language, with built-in support for CI/CD, reusable components, and testability. For .NET teams especially, Pulumi’s support for C# provides a superior experience over static JSON.
 
-Continue reading guide below to learn how to:
+Continue reading to learn how to:
 
 - [Reference ARM outputs in Pulumi programs](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#reference-arm-outputs-in-pulumi-programs)
 - [Convert ARM templates to Pulumi code with arm2pulumi](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/#convert-arm-templates-to-pulumi-code-with-arm2pulumi)
