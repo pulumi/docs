@@ -6,7 +6,7 @@ block_external_search_index: true
 aliases:
     - /gads/gads-template
 
-heading: Looking for an Alternative?
+heading: "Competitor Alternative"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
@@ -14,7 +14,7 @@ subheading: |
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud. Store infrastructure state, centralize secrets management, and get clear visibility into all your clouds.
+        Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
 
 key_features_above:
     items:

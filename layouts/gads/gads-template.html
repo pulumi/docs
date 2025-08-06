@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="container mx-auto">
-            <p class="mx-auto text-center text-gray-600 w-6/12">
+            <p id="dynamic-description" class="mx-auto text-center text-gray-600 w-6/12">
                 {{ .Params.overview.description | markdownify }}
             </p>
         </div>
@@ -241,17 +241,20 @@
     <!-- This script will be enhanced/replaced by GTM Custom HTML tag -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // This is a fallback/template for GTM implementation
-            // GTM will override this with proper UTM parameter capture
+            // This is a template for GTM implementation
             console.log('DKI template loaded - ready for GTM integration');
             
             // Debug: Log current page elements for GTM testing
-            var heroElement = document.getElementById("dynamic-line");
-            if (heroElement) {
-                console.log('Hero element found:', heroElement.textContent);
+            var descElement = document.getElementById("dynamic-description");
+            if (descElement) {
+                console.log('Description element found:', descElement.textContent);
+                console.log('Default description:', descElement.textContent.trim());
             }
             
-            // GTM will implement the actual keyword replacement logic here
+            // GTM will replace this with:
+            // Target: document.getElementById("dynamic-description")
+            // Format: "Looking for {Keyword}? Pulumi Cloud is the smartest and easiest way..."
+            // Fallback: Current description text
         });
     </script>
 {{ end }}
