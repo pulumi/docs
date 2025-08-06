@@ -1,12 +1,12 @@
 ---
-title: "Pulumi IaC: Infrastructure as Code"
+title: "Alternative | Pulumi"
 meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
 layout: gads-template
 block_external_search_index: true
 aliases:
     - /gads/gads-template
 
-heading: Pulumi IaC
+heading: Looking for an Alternative?
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.

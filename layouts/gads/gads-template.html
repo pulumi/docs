@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.heading) }}
+    {{ partial "gads-hero" (dict "title" .Params.heading) }}
 {{ end }}
 
 {{ define "main" }}
@@ -236,4 +236,22 @@
             </div>
         </div>
     </section>
+
+    <!-- Google Ads Dynamic Keyword Insertion Script -->
+    <!-- This script will be enhanced/replaced by GTM Custom HTML tag -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // This is a fallback/template for GTM implementation
+            // GTM will override this with proper UTM parameter capture
+            console.log('DKI template loaded - ready for GTM integration');
+            
+            // Debug: Log current page elements for GTM testing
+            var heroElement = document.getElementById("dynamic-line");
+            if (heroElement) {
+                console.log('Hero element found:', heroElement.textContent);
+            }
+            
+            // GTM will implement the actual keyword replacement logic here
+        });
+    </script>
 {{ end }}
