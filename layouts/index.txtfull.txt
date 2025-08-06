@@ -1,0 +1,170 @@
+{{- if ne hugo.Environment "preview" -}}
+# Pulumi - Complete Infrastructure as Code Platform
+
+> Pulumi's comprehensive platform includes Infrastructure as Code (IaC), Secrets Management (ESC), Cloud Services (Pulumi Cloud), Internal Developer Platforms (IDP), and Cloud Intelligence (Insights). Build, deploy, and manage cloud infrastructure using familiar programming languages with enterprise-grade security and collaboration features.
+
+## Complete Documentation
+
+### Infrastructure as Code (IaC)
+The core Pulumi infrastructure as code engine and tools.
+
+{{- $iacPages := where $.Site.Pages "Section" "docs" }}
+{{- range $iacPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/iac/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+### Secrets and Configuration Management (ESC)
+Environment, secrets, and configuration orchestration service.
+
+{{- range $iacPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/esc/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+### Pulumi Cloud Services
+Secure cloud service for teams with state management, deployments, and collaboration.
+
+{{- range $iacPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/pulumi-cloud/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+### Internal Developer Platform (IDP)
+Platform engineering tools for building self-service infrastructure platforms.
+
+{{- range $iacPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/idp/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+### Cloud Intelligence (Insights)
+Intelligent platform for discovering, understanding, and managing cloud infrastructure.
+
+{{- range $iacPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/insights/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+### API Reference Documentation
+
+{{- range $iacPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/reference/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+## Getting Started Guides
+
+{{- $getStartedPages := where $.Site.Pages "Section" "docs" }}
+{{- range $getStartedPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/get-started/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+{{- range $getStartedPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/iac/get-started/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+{{- range $getStartedPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/esc/get-started/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+{{- range $getStartedPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/pulumi-cloud/get-started/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+{{- range $getStartedPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/idp/get-started/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+{{- range $getStartedPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/insights/get-started/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+## Tutorials
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "tutorials" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Blog Posts
+
+{{- $blogPages := where $.Site.Pages "Section" "blog" }}
+{{- $recentBlogs := first 50 $blogPages }}
+{{- range $recentBlogs }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+## What Is Guides
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "what-is" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Templates and Examples
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "templates" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Case Studies
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "case-studies" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Enterprise Solutions
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "enterprise" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end -}}

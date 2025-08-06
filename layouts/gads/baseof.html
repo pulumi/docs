@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    {{ partial "head.html" . }}
+    <body class="section-{{ .Section }}">
+        <pulumi-root></pulumi-root>
+        {{ partial "gads-header.html" . }}
+        {{ block "hero" . }}
+        {{ end }}
+        <main>
+            {{ block "main" . }}
+            {{ end }}
+
+            {{ partial "copilot/sidebar.html" . }}
+        </main>
+
+        {{ block "footer" . }}
+            {{ partial "footer.html" . }}
+        {{ end }}
+
+        <div id="segment-consent-manager"></div>
+    </body>
+</html>
