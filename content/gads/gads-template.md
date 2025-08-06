@@ -14,7 +14,7 @@ subheading: |
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Build and ship infrastructure faster using languages you know and love. Use Pulumi's open source SDK to provision infrastructure on any cloud.
+        Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud. Store infrastructure state, centralize secrets management, and get clear visibility into all your clouds.
 
 key_features_above:
     items:
@@ -24,8 +24,8 @@ key_features_above:
             Author [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           image: "/images/product/pulumi-iac-code.png"
           button:
-            text: "Learn more about Pulumi SDK"
-            link: "/docs/languages-sdks/"
+            text: "Try Pulumi Cloud for FREE"
+            link: "https://app.pulumi.com/signup"
           features:
               - title: Code faster
                 description: |
@@ -141,8 +141,8 @@ key_features:
                 outputs:
                   kubeconfig: ${cluster.kubeconfig}
           button:
-            text: "Learn more about Pulumi Packages"
-            link: "/product/packages/"
+            text: "Try Pulumi Cloud for FREE"
+            link: "https://app.pulumi.com/signup"
           features:
               - title: Native cloud providers
                 description: |
@@ -160,8 +160,8 @@ key_features:
             Version, review, test, and deploy infrastructure code through the same tools and processes used for your application code.
           image: "/images/product/pulumi-cicd.png"
           button:
-            text: "Learn more about CI/CD Integrations"
-            link: "/docs/iac/packages-and-automation/continuous-delivery/"
+            text: "Try Pulumi Cloud for FREE"
+            link: "https://app.pulumi.com/signup"
           features:
               - title: Version and review
                 description: |
@@ -196,8 +196,8 @@ key_features_below:
              A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           button:
-            text: "Learn more about Pulumi Cloud"
-            link: "/product/pulumi-cloud/"
+            text: "Try Pulumi Cloud for FREE"
+            link: "https://app.pulumi.com/signup"
           features:
               - title: Pulumi IaC
                 description: |
@@ -227,18 +227,42 @@ key_features_below:
                 description: |
                     Track and store user actions and change history with option to export logs.
 
-get_started:
-    title: Getting started
+case_studies:
+    title: Customers innovating with Pulumi Cloud
+    items:
+        - name: Atlassian
+          link: /case-studies/atlassian/
+          logo: atlassian
+          description: |
+            Developers reduced their time spent on maintenance by 50%.
 
-    get_started:
-        title: Get started now
-        description: |
-            Deploy your first app in just five minutes. Follow our tutorials for AWS, Azure, Google Cloud, Kubernetes, and more.
-        cta_text: Get Started
+        - name: Elkjop
+          link: /case-studies/elkjop-nordic/
+          logo: elkjop-nordic
+          description: |
+            Increased developers' agility and speed through platform engineering.
 
-    migrate:
-        title: Migrating from other tools
-        description: |
-            Transition from existing infrastructure tools or continue using both. Pulumi has converter tools for Terraform, AWS CloudFormation, Azure Resource Manager, and Kubernetes.
-        cta_text: Explore Converter Tools
+        - name: Starburst
+          link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
+          logo: starburst
+          description: |
+            Increased velocity and speed, with deployments that are up to 3x faster.
+
+        - name: BMW
+          link: /case-studies/bmw/
+          logo: bmw
+          description: |
+            Enabled developers to deploy across hybrid cloud environments.
+
+        - name: Lemonade
+          link: /case-studies/lemonade/
+          logo: lemonade
+          description: |
+            Standardized infrastructure architectures with reusable components.
+
+        - name: Snowflake
+          link: /case-studies/snowflake/
+          logo: snowflake
+          description: |
+            Built a multi-cloud, Kubernetes-based platform to standardize all deployments
 ---
