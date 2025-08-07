@@ -176,7 +176,7 @@ You exist to solve these challenges by building tools and workflows that enable 
 But here's the thing I've learned from working with hundreds of platform teams: success isn't just about the tools you choose.
 It's about the strategy behind how you implement them.
 
-## The five essential IDP components
+## 5 Core Components of a Successful Internal Developer Platform
 
 Through years of working with platform teams and analyzing what separates successful IDPs from those that struggle to gain adoption, we've identified five essential components that every platform strategy needs.
 These aren't theoretical concepts. They're battle-tested patterns that work across organizations of all sizes and industries.
