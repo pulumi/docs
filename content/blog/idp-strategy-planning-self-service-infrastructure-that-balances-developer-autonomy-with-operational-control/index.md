@@ -231,7 +231,7 @@ When we walked through the demo in our workshop, what you saw was the culminatio
 Developers can discover available services, deploy infrastructure through whatever interface makes sense for them, and manage their resources over time, all without requiring tickets or manual intervention from platform teams.
 That's the promise of a well-designed IDP: developer autonomy without operational chaos.
 
-## Strategic implementation considerations
+## How to Implement Your Internal Developer Platform Strategy
 
 ### Multi-persona support
 
