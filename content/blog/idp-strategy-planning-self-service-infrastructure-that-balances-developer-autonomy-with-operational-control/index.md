@@ -78,9 +78,7 @@ This series shares proven best practices for designing, building, and scaling ID
 
 <!--more-->
 
-The ultimate goal of this series is to discuss best practices for building Internal Developer Platforms using Pulumi's modern infrastructure-as-code approach.
-These practices have evolved from working with hundreds of platform teams across different industries and company sizes.
-The aim is to demonstrate that successful IDPs are not built overnight, but rather emerge through strategic planning and incremental implementation that adapts as your organization grows.
+These lessons come from real-world implementations across industries and company sizes—and are built to grow with you.
 
 This post is part of our IDP Best Practices series. You can explore the full series below:
 
