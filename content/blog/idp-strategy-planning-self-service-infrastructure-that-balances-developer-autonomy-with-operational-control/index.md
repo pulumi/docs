@@ -258,7 +258,7 @@ Second, lifecycle management: you can see where each package is being used, trac
 
 The workflow is beautifully simple: you publish standardized building blocks with a single `pulumi publish` command, and developers discover and consume these assets through familiar package management workflows they already know.
 
-### Organizational context through services
+### Aligning Your IDP to Organizational Context and Services
 
 One pattern we see in every successful IDP implementation is that the platform reflects how the organization actually works.
 Your developers don't think in terms of individual stacks or resources. They think in terms of services, applications, and business functionality.
