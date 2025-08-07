@@ -84,7 +84,7 @@ For ease of navigation, here are links to all the posts in the series:
 
 * **IDP Strategy: Planning Self-Service Infrastructure That Balances Developer Autonomy With Operational Control** (you are here)
 
-## The platform engineering layer cake
+## Understanding the Platform Engineering Layers in Your IDP
 
 ![img.png](img.png)
 
