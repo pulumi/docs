@@ -13,6 +13,9 @@ date: 2025-08-07T15:13:02+02:00
 # you want to be able to merge the post without publishing it.
 draft: false
 
+
+series: idp-best-practices
+
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
@@ -61,6 +64,9 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
+Welcome to the first post in our series of blog posts focused on Internal Developer Platform (IDP) best practices. 
+In this series, we'll explore how modern platform teams can build self-service infrastructure that truly empowers developers while maintaining the governance, security, and operational control that enterprises require.
+
 At Pulumi, we've spent countless hours working with platform teams who are grappling with a fundamental challenge: how do you give developers the infrastructure access they need while maintaining the governance and security your organization requires?
 
 This tension is at the heart of every Internal Developer Platform (IDP) conversation I have with customers.
@@ -68,6 +74,14 @@ They want to accelerate cloud innovation, but they also need to ensure complianc
 The good news? It's absolutely possible to achieve both, but it requires a thoughtful, strategic approach to IDP planning.
 
 <!--more-->
+
+The ultimate goal of this series is to discuss best practices for building Internal Developer Platforms using Pulumi's modern infrastructure-as-code approach.
+These practices have evolved from working with hundreds of platform teams across different industries and company sizes.
+The aim is to demonstrate that successful IDPs are not built overnight, but rather emerge through strategic planning and incremental implementation that adapts as your organization grows.
+
+For ease of navigation, here are links to all the posts in the series:
+
+* **IDP Strategy: Planning Self-Service Infrastructure That Balances Developer Autonomy With Operational Control** (you are here)
 
 ## The platform engineering layer cake
 

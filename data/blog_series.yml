@@ -2,6 +2,10 @@
 # These tags will be displayed on the /blog/series/ page
 # Ordered by most recent post date (newest first)
 series:
+  - slug: "idp-best-practices"
+    title: "IDP Best Practices Series"
+    description: "Explore best practices for building Internal Developer Platforms (IDPs) with Pulumi, focusing on developer self-service, platform engineering, and infrastructure automation."
+    meta_image: "/blog/idp-best-practices/meta.png"
   - slug: "platform-engineering-pillars"
     title: "Platform Engineering Pillars Series"
     description: "Six essential pillars for transforming infrastructure chaos into streamlined developer platforms: provisioning, self-service, workflows, security, observability, and governance."
