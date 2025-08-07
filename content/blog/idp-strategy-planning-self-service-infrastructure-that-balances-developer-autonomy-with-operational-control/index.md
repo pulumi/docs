@@ -267,7 +267,7 @@ That's why we built [Pulumi Services](https://www.pulumi.com/docs/pulumi-cloud/i
 This isn't just about better organization. It's about enabling effective Day 2 operations.
 When something breaks at 2 AM, your on-call engineer needs to understand dependencies, track usage, and manage infrastructure in the context of the business services that are actually impacted.
 
-## Measuring success
+## How to Measure the Success of Your Internal Developer Platform
 
 Here's something that might surprise you: the most successful platform teams we work with don't measure their success by how many cool features they've built.
 They measure success by the business outcomes they're driving:
