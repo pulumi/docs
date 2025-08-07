@@ -67,11 +67,14 @@ social:
 
 Welcome to the first post in our **IDP Best Practices** series. In this guide, we’ll walk through the strategic foundations for designing an Internal Developer Platform that empowers developers without sacrificing governance, security, or operational control.
 
-At Pulumi, we've spent countless hours working with platform teams who are grappling with a fundamental challenge: how do you give developers the infrastructure access they need while maintaining the governance and security your organization requires?
+At Pulumi, we’ve worked with hundreds of teams facing the same core challenge:  **How do you give developers the infrastructure access they need, while maintaining the governance and security your organization requires?**
 
-This tension is at the heart of every Internal Developer Platform (IDP) conversation I have with customers.
-They want to accelerate cloud innovation, but they also need to ensure compliance, control costs, and maintain operational stability.
-The good news? It's absolutely possible to achieve both, but it requires a thoughtful, strategic approach to IDP planning.
+That tension is at the heart of every IDP conversation.  
+Teams want to **move faster and innovate**, but also need to stay compliant, control costs, and maintain operational stability.
+
+The good news? You can do both, with a clear strategy and the right approach.
+
+This series shares proven best practices for designing, building, and scaling IDPs using Pulumi.  
 
 <!--more-->
 
