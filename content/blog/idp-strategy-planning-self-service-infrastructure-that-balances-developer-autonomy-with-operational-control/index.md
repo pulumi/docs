@@ -83,7 +83,7 @@ These lessons come from real-world implementations across industries and company
 This post is part of our IDP Best Practices series. You can explore the full series below:
 
 * **How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure** (you are here)
-* **Build Golden Paths with Infrastructure Templates and Components **
+* **Build Golden Paths with Infrastructure Templates and Components**
 * **Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails**
 * **Day 2 Platform Operations: Automating Drift Detection and Remediation**
 * **Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls**
