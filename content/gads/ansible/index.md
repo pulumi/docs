@@ -25,7 +25,7 @@ key_features_above:
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup"
+            link: "https://app.pulumi.com/signup?utm_source=gads-ansible"
           features:
               - title: Code faster
                 description: |
@@ -142,7 +142,7 @@ key_features:
                   kubeconfig: ${cluster.kubeconfig}
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup"
+            link: "https://app.pulumi.com/signup?utm_source=gads-ansible"
           features:
               - title: Native cloud providers
                 description: |
@@ -161,7 +161,7 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup"
+            link: "https://app.pulumi.com/signup?utm_source=gads-ansible"
           features:
               - title: Version and review
                 description: |
@@ -197,7 +197,7 @@ key_features_below:
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup"
+            link: "https://app.pulumi.com/signup?utm_source=gads-ansible"
           features:
               - title: Pulumi IaC
                 description: |
