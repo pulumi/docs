@@ -86,6 +86,8 @@ For ease of navigation, here are links to all the posts in the series:
 
 ## The platform engineering layer cake
 
+![img.png](img.png)
+
 When we work with customers on their platform strategy, we often start by referring to the "platform engineering layer cake."
 Here is a quick walkthrough of each layer and how Pulumi IDP constructs fit this layer cake approach:
 
