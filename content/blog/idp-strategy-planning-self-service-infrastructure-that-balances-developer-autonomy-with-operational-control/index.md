@@ -88,6 +88,9 @@ This post is part of our IDP Best Practices series. You can explore the full ser
 * **Day 2 Platform Operations: Automating Drift Detection and Remediation**
 * **Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls**
 * **Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi**
+{{% notes type="tip" %}}
+**Want hands-on experience building an Internal Developer Platform?**  Enroll in the free [IDP Builder Workshop Series](https://info.pulumi.com/idp/internal-developer-platform-workshops-course)** to access recordings, demo code, slides, and hands-on guidance.
+{{% /notes %}}
 
 ## Understanding the Platform Engineering Layers in Your IDP
 
