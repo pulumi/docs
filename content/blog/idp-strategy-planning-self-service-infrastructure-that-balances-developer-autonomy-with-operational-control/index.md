@@ -301,7 +301,7 @@ If you're just starting your IDP journey, here's the roadmap we give to every pl
 5. **Measure and iterate:** Track adoption and gather feedback religiously.
    Your platform is only as good as its adoption rate, and adoption only happens when you're solving real problems for real people.
 
-## The future of platform engineering
+## The Future of IDPs and Platform Engineering
 
 Trends come and go, but platform engineering feels different.
 It's not just another tool or methodology. It's a recognition that the way we've been doing infrastructure doesn't scale with the ambitions of modern businesses.
