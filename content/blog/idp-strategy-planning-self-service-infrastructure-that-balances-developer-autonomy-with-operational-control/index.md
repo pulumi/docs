@@ -132,7 +132,7 @@ The Private Registry is your distribution mechanism.
 It's where components and templates become discoverable, versioned, and manageable.
 Developers don't need to hunt through Git repositories or Slack channels to find the right building blocks. Everything is catalogued, documented, and accessible through familiar package management workflows.
 
-## A concrete example: building a web application platform
+## IDP Example: Building a Web Application Platform Step-by-Step
 
 Let's make this concrete with an example from our workshops.
 Say you want to enable teams to deploy secure web applications:
