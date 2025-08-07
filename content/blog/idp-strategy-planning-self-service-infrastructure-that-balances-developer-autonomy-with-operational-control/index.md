@@ -247,7 +247,7 @@ In most organizations, you're serving:
 The breakthrough insight that separates successful platform teams from struggling ones is this: all these personas can be served by the same underlying components and templates, just consumed through different interfaces.
 You don't need to build three different platforms—you need to build one platform with three different consumption models.
 
-### Registry as foundation
+### Why a Private Registry Is Key to IDP Adoption
 
 Here's something we always tell platform teams: if you don't solve the discoverability problem, your beautiful components and templates will sit unused in Git repositories where no one can find them.
 That's why the private registry isn't just a nice-to-have. It's the foundation that makes everything else work.
