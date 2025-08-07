@@ -82,7 +82,7 @@ The ultimate goal of this series is to discuss best practices for building Inter
 These practices have evolved from working with hundreds of platform teams across different industries and company sizes.
 The aim is to demonstrate that successful IDPs are not built overnight, but rather emerge through strategic planning and incremental implementation that adapts as your organization grows.
 
-For ease of navigation, here are links to all the posts in the series:
+This post is part of our IDP Best Practices series. You can explore the full series below:
 
 * **IDP Strategy: Planning Self-Service Infrastructure That Balances Developer Autonomy With Operational Control** (you are here)
 
