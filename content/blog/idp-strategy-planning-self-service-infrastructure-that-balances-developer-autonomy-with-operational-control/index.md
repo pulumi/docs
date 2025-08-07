@@ -297,7 +297,7 @@ These aren't vanity metrics. They're business transformations.
 If you're just starting your IDP journey, here's the roadmap we give to every platform team we work with:
 
 1. **Start with user research:** Before you write a single line of code, go talk to your developers.
-   Understand your different personas and their actual needs, not what you think they need.
+   Understand your different personas and their actual needs, not what you think they need. Do your users like to work from the command line? Do they prefer interacting with a UI? 
 
 2. **Identify common patterns:** Look for infrastructure patterns that get repeated across teams.
    These are your goldmine—the patterns that, once abstracted and templatized, will provide immediate value.
