@@ -167,7 +167,7 @@ The template uses your component, which handles all the underlying infrastructur
 
 This layered approach solves the core challenge we see every platform team struggling with: how do you provide developers with the infrastructure they need without creating operational bottlenecks or compromising security standards.
 
-## Why IDPs matter now
+## Why Internal Developer Platforms Matter in 2025 and Beyond
 
 While DevOps brought us incredible advances in how we ship and maintain software, we've watched many organizations struggle with the unintended consequences: tool sprawl, Day 2 operational pain, and developers who are drowning in infrastructure complexity.
 
