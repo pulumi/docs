@@ -20,7 +20,7 @@ series: idp-best-practices
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Learn how to build Internal Developer Platforms that accelerate innovation while maintaining governance, security, and operational control through strategic IDP planning.
+meta_desc: Learn how to design and implement an effective Internal Developer Platform (IDP) strategy with reusable components, blueprints, and self-service infrastructure.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
