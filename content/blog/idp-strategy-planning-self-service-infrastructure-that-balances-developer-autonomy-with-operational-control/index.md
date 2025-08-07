@@ -227,6 +227,7 @@ This is probably the most important distinction we can share with you: you want 
 Too many platform teams create approval processes and manual checkpoints that completely undermine the self-service promise they're trying to deliver.
 
 Guardrails are different.
+They start with best practices and security built into the reusable abstractions from the start. But even the most secure solutions needs a safety net.
 They're policy-as-code that runs automatically, preventing violations before deployment happens.
 When we work with customers on implementing [Pulumi CrossGuard](https://www.pulumi.com/crossguard/), we're not creating new friction. We're embedding security, compliance, and cost controls directly into the deployment process.
 The developer gets immediate feedback, and you get the assurance that nothing goes to production without meeting your standards.
