@@ -65,8 +65,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-Welcome to the first post in our series of blog posts focused on Internal Developer Platform (IDP) best practices. 
-In this series, we'll explore how modern platform teams can build self-service infrastructure that truly empowers developers while maintaining the governance, security, and operational control that enterprises require.
+Welcome to the first post in our **IDP Best Practices** series. In this guide, we’ll walk through the strategic foundations for designing an Internal Developer Platform that empowers developers without sacrificing governance, security, or operational control.
 
 At Pulumi, we've spent countless hours working with platform teams who are grappling with a fundamental challenge: how do you give developers the infrastructure access they need while maintaining the governance and security your organization requires?
 
