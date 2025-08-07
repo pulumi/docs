@@ -4,7 +4,7 @@
 series:
   - slug: "idp-best-practices"
     title: "IDP Best Practices Series"
-    description: "Explore best practices for building Internal Developer Platforms (IDPs) with Pulumi, focusing on developer self-service, platform engineering, and infrastructure automation."
+    description: "A 6-part blog series on how to design, build, and scale an Internal Developer Platform (IDP). Learn best practices for developer self-service, platform engineering, security, and infrastructure automation using Pulumi."
     meta_image: "/blog/idp-best-practices/meta.png"
   - slug: "platform-engineering-pillars"
     title: "Platform Engineering Pillars Series"
