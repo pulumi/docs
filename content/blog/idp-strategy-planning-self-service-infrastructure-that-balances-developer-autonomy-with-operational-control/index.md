@@ -233,7 +233,7 @@ That's the promise of a well-designed IDP: developer autonomy without operationa
 
 ## How to Implement Your Internal Developer Platform Strategy
 
-### Multi-persona support
+### Supporting Different Personas in Your IDP Design
 
 One of the biggest mistakes we see platform teams make: they try to build for their most sophisticated users first.
 But here's what I've learned from working with hundreds of organizations: you need to think about all your personas from day one.
