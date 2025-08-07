@@ -63,6 +63,7 @@ For the purposes of this documentation, please refer to the [example component r
 We recommend that you create a `Makefile` to standardize your build and test commands. This example `Makefile` shows how to set up some basic commands like `make build` and `make test`, which can run the various tasks for you. Since the component in our example is written using Go, we use `go build` and `go test` to build and run unit tests. For integration tests, we use a local workbench that runs `pulumi preview` to validate the component end-to-end.
 
 ```makefile
+# ./Makefile
 .PHONY: test unit-test integration-test build clean
 
 # Run all tests
@@ -107,74 +108,74 @@ clean:
 Write unit tests that validate your component's logic without creating cloud resources by using the `integration` library from the [Pulumi Provider SDK](/docs/iac/extending-pulumi/pulumi-provider-sdk/). Here we can set up a mock provider server to catch calls for resource creation and return mock resources back.
 
 ```go
-// main_test.go
+// ./main_test.go
 package main
 
 import (
-	"testing"
+    "testing"
 
-	"github.com/blang/semver"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+    "github.com/blang/semver"
+    "github.com/stretchr/testify/assert"
+    "github.com/stretchr/testify/require"
 
-	p "github.com/pulumi/pulumi-go-provider"
-	"github.com/pulumi/pulumi-go-provider/infer"
-	"github.com/pulumi/pulumi-go-provider/integration"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
-	"github.com/pulumi/pulumi/sdk/v3/go/property"
+    p "github.com/pulumi/pulumi-go-provider"
+    "github.com/pulumi/pulumi-go-provider/infer"
+    "github.com/pulumi/pulumi-go-provider/integration"
+    "github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
+    "github.com/pulumi/pulumi/sdk/v3/go/property"
 )
 
-func TestConstruct(t *testing.T) {
+func TestConstruct(t * testing.T) {
 
-  // Configure Mocks: The provider is roughly the same as in our main.go
-	myProvider, err := infer.NewProviderBuilder().
-		WithNamespace("example").
-		WithComponents(
-			infer.ComponentF(NewStaticPage),
-		).
-		WithModuleMap(map[tokens.ModuleName]tokens.ModuleName{
-			"static-page-component": "index",
-		}).
-		Build()
-	require.NoError(t, err)
+    // Configure Mocks: The provider is roughly the same as in our main.go
+    myProvider, err: = infer.NewProviderBuilder().
+    WithNamespace("example").
+    WithComponents(
+        infer.ComponentF(NewStaticPage),
+    ).
+    WithModuleMap(map[tokens.ModuleName] tokens.ModuleName {
+        "static-page-component": "index",
+    }).
+    Build()
+    require.NoError(t, err)
 
-  // Configure Mocks: The Server catches calls to create resources, and returns mock resources instead.
-	server, err := integration.NewServer(
-		t.Context(),
-		"example",
-		semver.MustParse("0.1.0"),
-		integration.WithProvider(myProvider),
-		integration.WithMocks(&integration.MockResourceMonitor{
-			NewResourceF: func(args integration.MockResourceArgs) (string, property.Map, error) {
-				// NewResourceF is called as the each resource is registered
-				switch {
-				case args.TypeToken == "aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfigurationV2":
-					assert.Equal(t, args.Name, "test-static-page-website")
-					return args.Name, property.NewMap(map[string]property.Value{
-						"websiteEndpoint": property.New("http://pulumi.com"),
-					}), nil
-				}
-				return "", property.Map{}, nil
-			},
-		}),
-	)
-	require.NoError(t, err)
+    // Configure Mocks: The Server catches calls to create resources, and returns mock resources instead.
+    server, err: = integration.NewServer(
+        t.Context(),
+        "example",
+        semver.MustParse("0.1.0"),
+        integration.WithProvider(myProvider),
+        integration.WithMocks( & integration.MockResourceMonitor {
+            NewResourceF: func(args integration.MockResourceArgs)(string, property.Map, error) {
+                // NewResourceF is called as the each resource is registered
+                switch {
+                    case args.TypeToken == "aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfigurationV2":
+                        assert.Equal(t, args.Name, "test-static-page-website")
+                        return args.Name, property.NewMap(map[string] property.Value {
+                            "websiteEndpoint": property.New("http://pulumi.com"),
+                        }), nil
+                }
+                return "", property.Map {}, nil
+            },
+        }),
+    )
+    require.NoError(t, err)
 
-	// test the "static-page-component:index:StaticPage" component
-  // We try to construct a StaticPage component named "test-static-page"
-  // The mock will set the endpoint value
-	resp, err := server.Construct(p.ConstructRequest{
-		Urn: "urn:pulumi:stack::project::static-page-component:index:StaticPage::test-static-page",
-		Inputs: property.NewMap(map[string]property.Value{
-			"indexContent": property.New("test content"),
-		}),
-	})
-	require.NoError(t, err)
-  // check that we got the correct output. If something was broken then we'd never get the call
-  // to create the BucketWebsiteConfigurationV2 object, and thus, never get this mock value back
-	require.Equal(t, property.NewMap(map[string]property.Value{
-		"endpoint": property.New("http://pulumi.com"),
-	}), resp.State)
+    // test the "static-page-component:index:StaticPage" component
+    // We try to construct a StaticPage component named "test-static-page"
+    // The mock will set the endpoint value
+    resp, err: = server.Construct(p.ConstructRequest {
+        Urn: "urn:pulumi:stack::project::static-page-component:index:StaticPage::test-static-page",
+        Inputs: property.NewMap(map[string] property.Value {
+            "indexContent": property.New("test content"),
+        }),
+    })
+    require.NoError(t, err)
+        // check that we got the correct output. If something was broken then we'd never get the call
+        // to create the BucketWebsiteConfigurationV2 object, and thus, never get this mock value back
+    require.Equal(t, property.NewMap(map[string] property.Value {
+        "endpoint": property.New("http://pulumi.com"),
+    }), resp.State)
 }
 ```
 
@@ -195,7 +196,7 @@ $ make unit-test
 For integration tests, set up a small local test workbench using a YAML Pulumi program. Then you can use `pulumi preview` to validate resource creation:
 
 ```yaml
-# tests/integration/Pulumi.yaml
+# ./tests/integration/Pulumi.yaml
 name: static-page-integration-test
 description: A minimal Pulumi YAML program
 runtime: yaml
@@ -232,6 +233,7 @@ Before we publish, we need to be able to validate our code in an automated fashi
 Create `.github/workflows/test.yml` for continuous testing:
 
 ```yaml
+# ./.github/workflows/test.yml
 name: Test Workflow
 
 on:
@@ -308,6 +310,7 @@ For the unit tests we also use [`actions/setup-go`](https://github.com/actions/s
 Finally, we need some automation to cut a release and have it publish directly to your Pulumi private repository. Create `.github/workflows/release.yml` for automated publishing:
 
 ```yaml
+# ./.github/workflows/release.yml
 name: Release Workflow
 
 on:
