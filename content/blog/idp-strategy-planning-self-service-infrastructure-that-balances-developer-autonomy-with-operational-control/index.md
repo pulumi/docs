@@ -282,7 +282,7 @@ We've worked with customers like Snowflake who reduced deployment times from one
 Starburst Data cut their infrastructure deployments from two weeks to just three hours.
 These aren't vanity metrics. They're business transformations.
 
-## Getting started with IDP strategy
+## IDP Strategy: 5 Key Steps to Build a Strong Foundation
 
 If you're just starting your IDP journey, here's the roadmap we give to every platform team we work with:
 
