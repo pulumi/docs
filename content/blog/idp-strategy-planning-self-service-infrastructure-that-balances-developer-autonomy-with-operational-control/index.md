@@ -92,7 +92,7 @@ Enroll in the free **[IDP Builder Workshop Series]**(https://info.pulumi.com/idp
 
 ## Understanding the Platform Engineering Layers in Your Internal Developer Platform
 
-![img.png](img.png)
+![internal-developer-platform-key-layers.png](internal-developer-platform-key-layers.png)
 
 When we work with customers on their platform strategy, we often start by referring to the "platform engineering layer cake."
 Here is a quick walkthrough of each layer and how Pulumi IDP constructs fit this layer cake approach:
