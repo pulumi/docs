@@ -248,25 +248,25 @@ Now any team in your organization can discover and use your component, regardles
 
 While components are powerful building blocks, templates are complete, opinionated starting points that embody your organization's best practices. They're the "golden paths" that guide developers to production.
 
-## The Maturity Journey: From No Paths to Product-Grade Platforms
+### The Maturity Journey: From No Paths to Product-Grade Platforms
 
 ![img_8.png](img_8.png)
 
 Organizations typically progress through three stages of golden path maturity:
 
-### Stage 1: No Golden Paths
+#### Stage 1: No Golden Paths
 - Every team reinvents the wheel
 - Inconsistent practices across projects
 - High cognitive load on developers
 - Security and compliance gaps
 
-### Stage 2: Dawn of Templates
+#### Stage 2: Dawn of Templates
 - Basic cookie-cutter templates emerge
 - Some standardization begins
 - Manual processes still dominate
 - Limited support and evolution
 
-### Stage 3: Templates as Products
+#### Stage 3: Templates as Products
 - Golden paths have dedicated owners
 - Regular release cycles and versioning
 - Migration guides for updates
