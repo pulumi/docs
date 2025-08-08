@@ -20,6 +20,7 @@ aliases:
 <img src="/logos/tech/azure_arm.png" align="right" class="h-32 px-8 pb-4">
 
 Tired of slow, rigid ARM templates holding back your Azure infrastructure? Pulumi offers a flexible, code-first approach using C#, Python, Go, or TypeScript.
+
 If your team has already provisioned Azure infrastructure using ARM (Azure Resource Manager) templates and is looking for a more productive approach, Pulumi provides three primary paths to move forward:
 
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by ARM by referencing deployment outputs.
