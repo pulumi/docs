@@ -1,0 +1,10 @@
+id = "robert-smith"
+name = "Robert Smith"
+title = "Solutions Architect"
+weight = 1
+
+status = "active"
+
+[social]
+github = "smithrobs"
+linkedin = "smithrobs"
