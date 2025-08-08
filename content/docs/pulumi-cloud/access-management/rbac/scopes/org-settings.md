@@ -62,26 +62,26 @@ This document defines all the available scopes in Pulumi Cloud, organized by [en
 | `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission**: `Environment Read` |
 | `environment_yaml:open` | Access and view environment configuration in YAML format. This provides a structured view of environment settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
-## IaC Policy
-
-| Value | Description |
-|-------|-------------|
-| `iac_policy_groups:create` | Create a new group of Infrastructure as Code policies. This allows organizing related policies for better management and enforcement.<br><br>**Granted by default roles**: `Admin` |
-| `iac_policy_groups:delete` | Remove an existing group of Infrastructure as Code policies. This permanently deletes the policy group and its configurations.<br><br>**Granted by default roles**: `Admin` |
-| `iac_policy_groups:read` | View Infrastructure as Code policy group configurations. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `iac_policy_groups:update` | Modify Infrastructure as Code policy group settings. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
-| `iac_policy_pack:create` | Create a new Infrastructure as Code policy pack. This allows bundling related policies for deployment and enforcement.<br><br>**Granted by default roles**: `Admin` |
-| `iac_policy_pack:delete` | Remove an existing Infrastructure as Code policy pack. This permanently deletes the policy pack and its configurations.<br><br>**Granted by default roles**: `Admin` |
-| `iac_policy_pack:read` | View Infrastructure as Code policy pack contents. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Admin` |
-| `iac_policy_pack:update` | Modify an existing Infrastructure as Code policy pack. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
-| `iac_policy_results:read` | View results of Infrastructure as Code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `Admin` |
-
 ## Insights Accounts
 
 | Value | Description |
 |-------|-------------|
 | `insights_account:create` | Create a new insights account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Admin` |
 | `insights_account:list` | View all insights accounts in the organization, subject to having `account:read` permissions on specific accounts.<br><br>**Granted by default roles**: `Member`, `Admin` |
+
+## Insights Policy
+
+| Value | Description |
+|-------|-------------|
+| `policy_groups:create` | Create a new group of Infrastructure as Code policies. This allows organizing related policies for better management and enforcement.<br><br>**Granted by default roles**: `Admin` |
+| `policy_groups:delete` | Remove an existing group of Infrastructure as Code policies. This permanently deletes the policy group and its configurations.<br><br>**Granted by default roles**: `Admin` |
+| `policy_groups:read` | View Infrastructure as Code policy group configurations. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `policy_groups:update` | Modify Infrastructure as Code policy group settings. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
+| `policy_pack:create` | Create a new Infrastructure as Code policy pack. This allows bundling related policies for deployment and enforcement.<br><br>**Granted by default roles**: `Admin` |
+| `policy_pack:delete` | Remove an existing Infrastructure as Code policy pack. This permanently deletes the policy pack and its configurations.<br><br>**Granted by default roles**: `Admin` |
+| `policy_pack:read` | View Infrastructure as Code policy pack contents. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Admin` |
+| `policy_pack:update` | Modify an existing Infrastructure as Code policy pack. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
+| `policy_results:read` | View results of Infrastructure as Code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `Admin` |
 
 ## Membership
 
