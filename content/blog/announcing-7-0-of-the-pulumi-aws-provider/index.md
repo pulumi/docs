@@ -1,8 +1,9 @@
 ---
-title: "Announcing 7.0 of the Pulumi AWS Provider"
-date: 2025-07-16T09:00:00-04:00
+title: "Pulumi AWS Provider 7.0: Multi-Region Support, IAM Role Chaining, and S3 Resource Simplification"
+allow_long_title: true
+date: 2025-08-05T09:00:00-04:00
 draft: false
-meta_desc: "Announcing 7.0 of the Pulumi AWS Provider, including enhanced multi-region support"
+meta_desc: "Pulumi AWS Provider 7.0 adds multi-region support, IAM role chaining, and improved S3 resource management for seamless AWS infrastructure as code."
 meta_image: meta.png
 authors:
     - cory-hall
@@ -13,11 +14,13 @@ tags:
 ---
 
 
-We are excited to announce 7.0 of the [Pulumi AWS provider](https://www.pulumi.com/registry/packages/aws/). The AWS provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages. The [7.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v7.0.0) brings fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
+[Pulumi AWS provider 7.0](https://www.pulumi.com/registry/packages/aws/) is here with powerful new capabilities that simplify and scale **infrastructure as code on AWS**. As the most widely used provider in the Pulumi ecosystem, it offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages, like TypeScript, Python, Go, C#, Java, and YAML. The [7.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v7.0.0) brings fixes and improvements to the provider, including several breaking changes as part of the major version release.
 
-This blog post walks you through the list of notable changes in the new major version.
+<!--more-->
 
-### Enhanced Region Support
+## What’s New in Pulumi AWS Provider 7.0
+
+### Multi-Region AWS Deployments with a Single Provider
 
 Previously the Pulumi AWS provider each provider configuration could target a single AWS region. This meant that users would need to create a separate provider configuration for each region they wanted to deploy resources to. As the number of providers configured in an application grew, it could sometimes lead to increased memory usage.
 
@@ -326,9 +329,9 @@ resources:
 
 See the [Enhanced Region Support](https://www.pulumi.com/registry/packages/aws/how-to-guides/aws-enhanced-region-support/) guide for more details.
 
-### Provider Role Chaining
+### IAM Role Chaining for Secure AWS IaC Workflows
 
-Pulumi AWS 7.0 also adds support for IAM Role chaining, our [most requested feature request](https://github.com/pulumi/pulumi-aws/issues/4459). IAM Role chaining allows you to provide a list of IAM Roles which should be assumed by the provider in order to obtain AWS credentials.
+One of the most [requested features](https://github.com/pulumi/pulumi-aws/issues/4459), **IAM role chaining**, is now supported. This allows the Pulumi AWS Provider to assume multiple IAM roles in sequence to obtain credentials, streamlining **secure AWS access across accounts and teams**.
 
 To assume a role with role chaining, you can now do the following:
 
@@ -498,7 +501,7 @@ resources:
 
 With this configuration the provider will use the `INITIAL_ROLE` to assume the `FINAL_ROLE` which will then be used as the credentials for the provider.
 
-### Bucket Resource Name Changes
+### Simplified S3 Bucket Resource Model
 
 In `v6` of the Pulumi AWS Provider the S3 `Bucket` and `BucketV2` resources represented different resource implementations. `BucketV2` represented the latest version of the upstream Terraform resource, while `Bucket` was a separate resource maintained by Pulumi to keep backwards compatibility with the `v4` release of the upstream Terraform Provider.
 
@@ -519,7 +522,7 @@ We have also introduced new S3 Bucket configuration resources that are alternati
 
 See the [Migration Guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/7-0-migration) for more details on this change.
 
-### Upstream Breaking Changes
+### Upstream Improvements and Breaking Changes
 
 Pulumi AWS 7.0 includes all improvements and bug fixes from the upstream (terraform-provider-aws) versions from 6.0.0 to 6.3.0. It also contains a number of upstream breaking changes. Please refer to the [changelog](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md) to navigate the entire list.
 
@@ -527,6 +530,10 @@ Pulumi AWS 7.0 includes all improvements and bug fixes from the upstream (terraf
 
 You can see a full list of changes and learn more about migrating your existing programs in our [Migration Guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/7-0-migration).
 
-### Get Started Today
+### Getting Started with Pulumi AWS 7.0
 
-You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Provider](https://github.com/pulumi/pulumi-aws) repository to get started today!
+Pulumi makes it easy to define, deploy, and manage modern AWS infrastructure with code:
+
+- Use your favorite languages: TypeScript, Python, Go, C#, Java, YAML
+- Explore the [Pulumi AWS Provider repro](https://github.com/pulumi/pulumi-aws)
+- Check out the [API reference docs](https://www.pulumi.com/registry/packages/aws/)
