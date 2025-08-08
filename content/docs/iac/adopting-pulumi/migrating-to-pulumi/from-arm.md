@@ -19,10 +19,11 @@ aliases:
 
 <img src="/logos/tech/azure_arm.png" align="right" class="h-32 px-8 pb-4">
 
-If your team has already provisioned infrastructure using Azure Resource Manager (ARM) Templates, and you'd like to adopt Pulumi, you have three primary strategies you can take:
+Tired of slow, rigid ARM templates holding back your Azure infrastructure? Pulumi offers a flexible, code-first approach using C#, Python, Go, or TypeScript.
+If your team has already provisioned Azure infrastructure using ARM (Azure Resource Manager) templates and is looking for a more productive approach, Pulumi provides three primary paths to move forward:
 
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by ARM by referencing deployment outputs.
-* [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing resources into Pulumi in the usual way.
+* [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing Azure resources into Pulumi in the usual way.
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
 
 ## Why Move Beyond ARM
@@ -31,7 +32,8 @@ ARM templates were Azure’s original infrastructure as code solution. But they 
 
 | Feature           | ARM Templates        | Pulumi                        |
 |-------------------|----------------------|-------------------------------|
-| Language          | JSON / YAML          | C# (or Python, TS, Go)        |
+| Language          | JSON / Bicep         | Code Native, e.g. C#, Python, TS |
+| Cloud             | Azure only           | Agnostic + on-prem            |
 | Reuse             | Limited (copy/paste) | Functions, classes, modules   |
 | Logic & Loops     | Complex expressions  | if / for / switch             |
 | Type Safety       | None                 | Compile-time type checking    |
@@ -41,6 +43,7 @@ ARM templates were Azure’s original infrastructure as code solution. But they 
 | Debugging         | Deploy & troubleshoot| Step-through in IDE           |
 | Refactoring       | Tedious manual edits | IDE-assisted refactors        |
 | Modularity        | Nested templates     | Real modules & components     |
+| State Files       | No state files       | Encrypted                     |
 
 Pulumi lets you manage Azure infrastructure using your favorite language, with built-in support for CI/CD, reusable components, and testability. For .NET teams especially, Pulumi’s support for C# provides a superior experience over static JSON.
 
