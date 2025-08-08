@@ -14,7 +14,9 @@ tags:
 ---
 
 
-[Pulumi AWS provider 7.0](https://www.pulumi.com/registry/packages/aws/) is here with powerful new capabilities that simplify and scale **infrastructure as code on AWS**. As the most widely used provider in the Pulumi ecosystem, it offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages, like TypeScript, Python, Go, C#, Java, and YAML. The [7.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v7.0.0) brings fixes and improvements to the provider, including several breaking changes as part of the major version release.
+[Pulumi AWS provider 7.0](https://www.pulumi.com/registry/packages/aws/) is here with powerful new capabilities that simplify and scale **infrastructure as code on AWS**. As the most widely used provider in the Pulumi ecosystem, it offers access to the full surface area of the upstream Terraform AWS Provider in Pulumi projects in all supported languages, like TypeScript, Python, Go, C#, Java, and YAML. 
+
+The [7.0 release](https://github.com/pulumi/pulumi-aws/releases/tag/v7.0.0) brings fixes and improvements to the provider, including several breaking changes as part of the major version release.
 
 <!--more-->
 
