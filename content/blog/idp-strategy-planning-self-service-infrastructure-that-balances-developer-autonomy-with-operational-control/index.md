@@ -69,12 +69,9 @@ Welcome to the first post in our **IDP Best Practices** series. In this guide, w
 
 At Pulumi, we’ve worked with hundreds of teams facing the same core challenge:  **How do you give developers the infrastructure access they need, while maintaining the governance and security your organization requires?**
 
-That tension is at the heart of every IDP conversation.  
-Teams want to **move faster and innovate**, but also need to stay compliant, control costs, and maintain operational stability.
+That tension is at the heart of every IDP conversation. Teams want to **move faster and innovate**, but also need to stay compliant, control costs, and maintain operational stability.
 
-The good news? You can do both, with a clear strategy and the right approach.
-
-This series shares proven best practices for designing, building, and scaling IDPs using Pulumi.  
+The good news? You can do both, with a clear strategy and the right approach. This series shares **proven best practices** for designing, building, and scaling IDPs using Pulumi.  
 
 <!--more-->
 
@@ -83,16 +80,17 @@ These lessons come from real-world implementations across industries and company
 This post is part of our IDP Best Practices series. You can explore the full series below:
 
 * **How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure** (you are here)
-* **Build Golden Paths with Infrastructure Templates and Components**
-* **Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails**
-* **Day 2 Platform Operations: Automating Drift Detection and Remediation**
-* **Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls**
-* **Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi**
+* Build Golden Paths with Infrastructure Templates and Components
+* Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails
+* Day 2 Platform Operations: Automating Drift Detection and Remediation
+* Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
+* Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
 {{% notes type="tip" %}}
-**Want hands-on experience building an Internal Developer Platform?**  Enroll in the free [IDP Builder Workshop Series](https://info.pulumi.com/idp/internal-developer-platform-workshops-course)** to access recordings, demo code, slides, and hands-on guidance.
+**Want hands-on experience building an Internal Developer Platform?**  
+Enroll in the free **[IDP Builder Workshop Series]**(https://info.pulumi.com/idp/internal-developer-platform-workshops-course)** to access recordings, demo code, slides, and hands-on guidance.
 {{% /notes %}}
 
-## Understanding the Platform Engineering Layers in Your IDP
+## Understanding the Platform Engineering Layers in Your Internal Developer Platform
 
 ![img.png](img.png)
 
@@ -241,9 +239,9 @@ When we walked through the demo in our workshop, what you saw was the culminatio
 Developers can discover available services, deploy infrastructure through whatever interface makes sense for them, and manage their resources over time, all without requiring tickets or manual intervention from platform teams.
 That's the promise of a well-designed IDP: developer autonomy without operational chaos.
 
-## How to Implement Your Internal Developer Platform Strategy
+## How to Implement Your IDP Strategy
 
-### Supporting Different Personas in Your IDP Design
+### Supporting Different Personas in Your Internal Developer Platform Design
 
 One of the biggest mistakes we see platform teams make: they try to build for their most sophisticated users first.
 But here's what I've learned from working with hundreds of organizations: you need to think about all your personas from day one.
@@ -328,7 +326,7 @@ The fastest way to get there? Focus on these five essential components:
 
 Together, they turn your IDP into more than just infrastructure automation, they create a platform that developers trust and your business relies on.
 
-### *Ready to build a modern IDP that scales?
+### Ready to Build a Successful IDP that Scales?
 
 Pulumi makes it easy to go from static IaC to dynamic, self-service infrastructure with real programming languages and built-in guardrails.
 
