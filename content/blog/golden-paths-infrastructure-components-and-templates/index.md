@@ -4,7 +4,7 @@ allow_long_title: true
 date: 2025-08-14T10:00:00+02:00
 draft: false
 series: idp-best-practices
-meta_desc: Learn how to create reusable infrastructure components and golden path templates for your Internal Developer Platform. Build standardized, self-service infrastructure patterns with Pulumi.
+meta_desc: Learn how to build reusable infrastructure components and templates to create Golden Paths in your Internal Developer Platform.
 meta_image: meta.png
 authors:
     - engin-diri
