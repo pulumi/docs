@@ -46,7 +46,7 @@ This post is part of our IDP Best Practices series:
 
 ## The Cloud Complexity Crisis: Why Golden Paths Matter More Than Ever
 
-![img.png](img.png)
+![img.png](periodic_table_of_amazon_web_services.png)
 
 Let's face the reality your developers live every day. Open the AWS console and you're confronted with a "Periodic Table of Amazon Web Services" containing over 200 services, each with dozens of configuration options. Azure and GCP aren't far behind. Layer on your CI/CD systems, security tools, observability platforms, and now AI frameworks, and you've created a maze of decisions that would challenge even seasoned architects.
 
@@ -63,7 +63,7 @@ This is where golden paths transform your platform from a collection of tools in
 
 ## Understanding the Platform Engineering Layer Cake
 
-![img_1.png](img_1.png)
+![img_1.png](the_platform_in_layers.png)
 
 Before we dive into building golden paths, let's revisit the platform engineering layers we introduced in our [first post](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/). Think of your IDP as a three-layer cake, where each layer provides increasing abstraction and developer value:
 
@@ -240,17 +240,17 @@ pulumi package publish https://registry.pulumi.com/myorg/microservice-component
 
 Now any team in your organization can discover and use your component, regardless of their language preference. All they need is to navigate to the `Components` section in the Pulumi IDP and search for `microservice-component`.
 
-![img_2.png](img_2.png)
+![img_2.png](pulumi_idp_components_view.png)
 
 ## Part 2: Creating Golden Path Templates
 
-![img_3.png](img_3.png)
+![img_3.png](road_to_success_golden_paths.png)
 
 While components are powerful building blocks, templates are complete, opinionated starting points that embody your organization's best practices. They're the "golden paths" that guide developers to production.
 
 ### The Maturity Journey: From No Paths to Product-Grade Platforms
 
-![img_8.png](img_8.png)
+![img_8.png](golden_paths_maturity_level.png)
 
 Organizations typically progress through three stages of golden path maturity:
 
@@ -593,11 +593,11 @@ You **do** focus on:
 
 Publishing your template to [Pulumi IDP](/docs/idp/) enables true self-service. Head to `Settings` → `Integrations` → `Organization Template Sources` and add your template repository.
 
-![img_4.png](img_4.png)
+![img_4.png](pulumi_idp_integrations_view.png)
 
 Once published, developers can discover and deploy it directly from the IDP interface.
 
-![img_5.png](img_5.png)
+![img_5.png](pulumi_idp_templates_view.png)
 
 Now developers can deploy through multiple interfaces:
 
@@ -609,12 +609,12 @@ pulumi new https://github.com/myorg/go-microservice-boilerplate
 **No-Code Deployment:**
 Navigate to [Pulumi IDP](/docs/idp/get-started/workflows/) → `Templates` → `Deploy with Pulumi` → Configure and launch
 
-![img_7.png](img_7.png)
+![img_7.png](pulumi_idp_deployment_no_code_view.png)
 
 **Pulumi Deployment:**
 Navigate to [Pulumi IDP](/docs/idp/get-started/workflows/) → `Templates` → `Deploy with Pulumi` → Configure and launch
 
-![img_6.png](img_6.png)
+![img_6.png](pulumi_idp_deployment_git_view.png)
 
 ## Best Practices for Component and Template Design
 
