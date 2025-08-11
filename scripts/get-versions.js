@@ -54,6 +54,7 @@ const createDownloadLinks = (version) => ({
   "darwin-x64": `${baseUrl}/pulumi-${version}-darwin-x64.tar.gz`,
   "darwin-arm64": `${baseUrl}/pulumi-${version}-darwin-arm64.tar.gz`,
   "windows-x64": `${baseUrl}/pulumi-${version}-windows-x64.zip`,
+  "windows-arm64": `${baseUrl}/pulumi-${version}-windows-arm64.zip`,
 });
 
 const main = async () => {
