@@ -54,14 +54,14 @@ There are two dominant approaches:
 - **Portal-First** typified by Backstage, which starts with developer experience and service catalogs.
 - **Infrastructure-First** exemplified by Pulumi IDP, which builds the platform foundation around scalable, policy-driven infrastructure.
 
-| Feature / Concern | Backstage (Portal-First) | Pulumi IDP (Infrastructure-First) |
-|-------------------|--------------------------|------------------------------------|
-| **Primary Focus** | Developer portal & catalog | Scalable, policy-driven infrastructure |
-| **Setup Time** | 12-18 months | Weeks |
-| **Maintenance** | 3-5 FTE ongoing | Minimal ongoing overhead |
-| **Infra Provisioning** | Requires separate tooling | Built-in |
-| **Cost Awareness** | Depends on infra layer | Native |
-| **Security & Governance** | Add-on | Built-in from day one |
+| Feature / Concern         | Backstage (Portal-First)   | Pulumi IDP (Infrastructure-First)      |
+|---------------------------|----------------------------|----------------------------------------|
+| **Primary Focus**         | Developer portal & catalog | Scalable, policy-driven infrastructure |
+| **Setup Time**            | 12-18 months               | Hours                                  |
+| **Maintenance**           | 3-5 FTE ongoing            | Minimal ongoing overhead               |
+| **Infra Provisioning**    | Requires separate tooling  | Built-in                               |
+| **Cost Awareness**        | Depends on infra layer     | Native                                 |
+| **Security & Governance** | Add-on                     | Built-in from day one                  |
 
 ## Backstage: The Portal-First Approach
 
