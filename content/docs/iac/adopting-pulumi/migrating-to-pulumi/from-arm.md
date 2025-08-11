@@ -33,7 +33,7 @@ ARM templates were Azure’s original infrastructure as code solution. But they 
 
 | Feature           | ARM Templates        | Pulumi                        |
 |-------------------|----------------------|-------------------------------|
-| Language          | JSON / Bicep         | Code Native, e.g. C#, Python, TS |
+| Language          | JSON                 | Code Native, e.g. C#, Python, TS |
 | Cloud             | Azure only           | Agnostic + on-prem            |
 | Reuse             | Limited (copy/paste) | Functions, classes, modules   |
 | Logic & Loops     | Complex expressions  | if / for / switch             |
@@ -46,7 +46,7 @@ ARM templates were Azure’s original infrastructure as code solution. But they 
 | Modularity        | Nested templates     | Real modules & components     |
 | State Files       | No state files       | Encrypted                     |
 
-Pulumi lets you manage Azure infrastructure using your favorite language, with built-in support for CI/CD, reusable components, and testability. For .NET teams especially, Pulumi’s support for C# provides a superior experience over static JSON.
+While Bicep addresses some of the shortcomings of ARM templates, it remains bound to the same Azure-only deployment model and limitations inherent to the ARM engine. Pulumi lets you manage Azure infrastructure using your favorite language, with built-in support for CI/CD, reusable components, and testability. For .NET teams especially, Pulumi’s support for C# provides a superior experience over static JSON.
 
 Continue reading to learn how to:
 
