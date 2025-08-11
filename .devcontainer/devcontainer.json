@@ -26,7 +26,8 @@
 				"pulumi.pulumi-lsp-client",
 				"blackmist.LinkCheckMD",
 				"DavidAnson.vscode-markdownlint",
-				"redhat.vscode-yaml"
+				"redhat.vscode-yaml",
+				"github.vscode-pull-request-github"
 			]
 		}
 	},
