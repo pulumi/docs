@@ -51,15 +51,15 @@ steps:
       - printf '```\n%b\n```\n' "$(cat preview)" | buildkite-agent annotate --style "info"
     plugins:
       - secrets:
-        variables:
-          # Map the PULUMI_ACCESS_TOKEN secret to an env var of the same name.
-          # If you are using OIDC, this won't be needed.
-          PULUMI_ACCESS_TOKEN: PULUMI_ACCESS_TOKEN
-          #
-          # NOTE: Don't forget to map cloud provider credentials as env vars
-          # also unless you are using OIDC with the cloud provider too.
-          # AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
-          # AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+          variables:
+            # Map the PULUMI_ACCESS_TOKEN secret to an env var of the same name.
+            # If you are using OIDC, this won't be needed.
+            PULUMI_ACCESS_TOKEN: PULUMI_ACCESS_TOKEN
+            #
+            # NOTE: Don't forget to map cloud provider credentials as env vars
+            # also unless you are using OIDC with the cloud provider too.
+            # AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+            # AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
 
       - pulumi#v1.0.0:
         # Optional: The specific version to install
