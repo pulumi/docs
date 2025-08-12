@@ -5,9 +5,14 @@ title: Deploy changes
 h1: "Pulumi & Google Cloud: Deploy changes"
 weight: 7
 menu:
-  clouds:
-    parent: google-cloud-get-started
-    identifier: gcp-deploy-changes
+    iac:
+        name: Deploy changes
+        identifier: gcp-get-started.deploy-changes
+        parent: gcp-get-started
+        weight: 7
+    clouds:
+        parent: google-cloud-get-started
+        identifier: gcp-deploy-changes
 
 aliases:
 - /docs/quickstart/gcp/deploy-changes/
