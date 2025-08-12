@@ -4,6 +4,12 @@ meta_desc: This page provides an overview of how to create a new Azure + Pulumi 
 title: Create project
 h1: "Pulumi & Azure: Create project"
 weight: 3
+menu:
+    iac:
+        name: Create project
+        identifier: azure-get-started.create-project
+        parent: azure-get-started
+        weight: 3
 aliases:
     - /docs/quickstart/azure/create-project/
     - /docs/get-started/azure/create-project/

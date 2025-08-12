@@ -4,6 +4,12 @@ meta_desc: This page provides an overview of how to destroy a Pulumi stack of an
 title: Destroy stack
 h1: "Pulumi & Azure: Destroy stack"
 weight: 8
+menu:
+    iac:
+        name: Destroy stack
+        identifier: azure-get-started.destroy-stack
+        parent: azure-get-started
+        weight: 8
 aliases:
 - /docs/quickstart/azure/destroy-stack/
 - /docs/get-started/azure/destroy-stack/

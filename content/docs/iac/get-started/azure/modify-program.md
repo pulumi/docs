@@ -4,6 +4,12 @@ meta_desc: This page provides an overview on how to update an Azure project from
 title: Modify program
 h1: "Pulumi & Azure: Modify program"
 weight: 6
+menu:
+    iac:
+        name: Modify program
+        identifier: azure-get-started.modify-program
+        parent: azure-get-started
+        weight: 6
 aliases:
 - /docs/quickstart/azure/modify-program/
 - /docs/get-started/azure/modify-program/
