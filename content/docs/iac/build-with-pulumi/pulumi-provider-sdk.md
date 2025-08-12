@@ -7,10 +7,11 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Pulumi Provider SDK
-        parent: iac-extending-pulumi
-        weight: 9
+        parent: iac-build-with-pulumi
+        weight: 80
 aliases:
 - /docs/iac/using-pulumi/extending-pulumi/pulumi-provider-sdk/
+- /docs/iac/extending-pulumi/pulumi-provider-sdk/
 ---
 
 The [Pulumi Provider SDK](https://github.com/pulumi/pulumi-go-provider/) is a high-level library that simplifies the process of writing a Pulumi [provider](https://www.pulumi.com/docs/iac/concepts/resources/providers/) in Go. It abstracts much of the complexity involved in defining custom infrastructure resources, allowing developers to focus on business logic rather than boilerplate code.
