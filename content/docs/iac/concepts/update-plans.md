@@ -20,10 +20,6 @@ aliases:
 - /docs/concepts/update-plans/
 ---
 
-{{% notes type="warning" %}}
-Update plans are currently in experimental preview and will only show up in `--help` if the environment variable `PULUMI_EXPERIMENTAL` is set to `true`.
-{{% /notes %}}
-
 The result of previews can be saved to an _update plan_, this can then be used during a later update to
 constrain the update only to the operations that were planned.
 
