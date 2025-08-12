@@ -58,7 +58,7 @@ Developer friction often starts with something simple: not knowing what’s alre
 
 A well-structured **service catalog** in your internal developer platform addresses this by providing a central repository for all services and applications. At its most basic, it's just a web page with each service's README, service metadata, and operational information.
 
-Benefits include:
+But, properly structured, this delivers some large benefits:
 
 1. **Context at a Glance**: Every catalog entry follows a standardized template, capturing core information such as purpose, interfaces (REST, gRPC, events, etc.), language/runtime, and environment requirements. New developers can quickly grasp a service's role and easily jump into productive work.
 
