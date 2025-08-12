@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: TechCruch Disrupt
+title: TechCrunch Disrupt
 meta_desc: Join Pulumi at TechCrunch Disrupt, where you'll find innovation for every stage of your startup journey.
 
 # A featured webinar will display first in the list.
