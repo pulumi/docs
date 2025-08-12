@@ -1111,7 +1111,7 @@ This verification step is crucial when converting production infrastructure, as 
 
 ## AI-assisted conversion with the Pulumi MCP server
 
-For complex Terraform configurations, you can use AI tools like [Claude](https://www.anthropic.com/claude-code) with the [Pulumi MCP (Model Context Protocol) server](https://github.com/pulumi/mcp-server), which provides comprehensive Pulumi integration, including a specialized Terraform conversion prompt.
+For complex Terraform configurations, you can use AI tools like [Claude](https://www.anthropic.com/claude-code) with the [Pulumi MCP (Model Context Protocol) server](/docs/iac/using-pulumi/mcp-server), which provides comprehensive Pulumi integration, including a specialized Terraform conversion prompt.
 
 ### Using the Pulumi MCP server (recommended)
 
@@ -1133,7 +1133,7 @@ The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt
    $ claude mcp add -s user pulumi -- npx @pulumi/mcp-server@latest stdio
    ```
   
-   Follow the complete setup instructions in the [MCP server README](https://github.com/pulumi/mcp-server#readme).
+   Follow the complete setup instructions in the [Pulumi MCP server docs](/docs/iac/using-pulumi/mcp-server).
 
 2. **Prepare your Terraform code**: Gather your complete Terraform configuration files (`.tf`, `terraform.tfvars`, etc.)
 
