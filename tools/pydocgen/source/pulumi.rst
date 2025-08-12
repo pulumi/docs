@@ -21,7 +21,7 @@ pulumi.dynamic
     :imported-members:
 
 pulumi.provider
-==============
+===============
 
 .. automodule:: pulumi.provider
     :members:
