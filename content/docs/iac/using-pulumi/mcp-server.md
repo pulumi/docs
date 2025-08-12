@@ -105,6 +105,7 @@ Add to `%APPDATA%\Claude\mcp_servers.json`:
 ```
 
 After adding the configuration:
+
 1. Restart Claude Code
 2. Verify the connection in the MCP section of Claude's settings
 3. The Pulumi MCP server should appear as an available tool
@@ -195,6 +196,7 @@ Use natural language to describe what you want to build:
 > "I need an AWS S3 bucket with public read access for hosting a static website. Please look up the resource properties and create the code."
 
 The AI assistant will:
+
 - Use `pulumi-registry-list-resources` to find available AWS resources
 - Use `pulumi-registry-get-resource` to get detailed S3 bucket property information
 - Generate the appropriate TypeScript code
@@ -206,6 +208,7 @@ Ask the assistant to validate and deploy your infrastructure:
 > "Please run a preview to check the changes, then deploy if everything looks good."
 
 The assistant will:
+
 - Use `pulumi-cli-preview` to show planned changes
 - Use `pulumi-cli-up` to deploy the infrastructure
 - Provide feedback on the deployment status
@@ -227,6 +230,7 @@ Here's an example interaction for creating an Azure Kubernetes Service cluster:
 **You:** "I have an empty Pulumi project with TypeScript. Please provision an AKS cluster for a temporary experiment. Export its kubeconfig when done."
 
 **AI Assistant response:**
+
 1. Searches the Pulumi Registry for Azure container service resources
 2. Retrieves detailed information about the `ManagedCluster` resource
 3. Generates TypeScript code with appropriate configuration
@@ -239,6 +243,7 @@ Here's an example interaction for creating an Azure Kubernetes Service cluster:
 **You:** "Add Application Insights monitoring to my existing Azure web app and configure alerts for high response times."
 
 **AI Assistant response:**
+
 1. Searches for Azure Application Insights resources
 2. Generates code to create Application Insights instance
 3. Links it to the existing web app
@@ -250,21 +255,25 @@ Here's an example interaction for creating an Azure Kubernetes Service cluster:
 Using the Pulumi MCP server with AI assistants provides several key advantages:
 
 ### Reduced context switching
+
 - Stay in your editor instead of switching between documentation, CLI, and code
 - Get real-time answers about resource properties and configurations
 - Instant feedback on infrastructure changes
 
 ### Accelerated development
+
 - Faster resource discovery through AI-powered search
 - Automated code generation based on best practices
 - Real-time validation and error detection
 
 ### Enhanced learning
+
 - Learn Pulumi concepts through conversational interaction
 - Understand resource relationships and dependencies
 - Get explanations of complex infrastructure patterns
 
 ### Improved reliability
+
 - Validate changes before deployment with integrated previews
 - Catch configuration errors early in the development process
 - Access to comprehensive Pulumi Registry information
