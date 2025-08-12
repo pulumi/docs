@@ -4,6 +4,12 @@ meta_desc: This page provides an overview on how to get started with Pulumi and 
 title: Before you begin
 h1: "Pulumi & Google Cloud: Before you begin"
 weight: 2
+menu:
+    iac:
+        name: Install Pulumi
+        identifier: gcp-get-started.begin
+        parent: gcp-get-started
+        weight: 2
 aliases:
 - /docs/quickstart/gcp/begin/
 - /docs/quickstart/gcp/install-pulumi/

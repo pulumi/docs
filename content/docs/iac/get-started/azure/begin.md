@@ -4,6 +4,12 @@ meta_desc: This page provides an overview on how to get started with Pulumi when
 title: Before you begin
 h1: "Pulumi & Azure: Before you begin"
 weight: 2
+menu:
+    iac:
+        name: Install Pulumi
+        identifier: azure-get-started.begin
+        parent: azure-get-started
+        weight: 2
 aliases:
     - /docs/quickstart/azure/begin/
     - /docs/quickstart/azure/install-pulumi/

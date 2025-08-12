@@ -5,9 +5,14 @@ title: Modify program
 h1: "Pulumi & Google Cloud: Modify program"
 weight: 6
 menu:
-  clouds:
-    parent: google-cloud-get-started
-    identifier: gcp-modify-program
+    iac:
+        name: Modify program
+        identifier: gcp-get-started.modify-program
+        parent: gcp-get-started
+        weight: 6
+    clouds:
+        parent: google-cloud-get-started
+        identifier: gcp-modify-program
 
 aliases:
 - /docs/quickstart/gcp/modify-program/
