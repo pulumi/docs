@@ -1,8 +1,10 @@
 ---
-title: "Developer Experience: From Friction to Flow"
+title: "Improve Developer Experience and Productivity with Internal Developer Platforms"
+allow_long_title: true
 date: 2025-03-13
+updated: 2025-08-12
 draft: false
-meta_desc: Transform your platform engineering strategy by prioritizing developer experience - reduce friction, streamline workflows, and create a flow state.
+meta_desc: Learn how to boost developer experience, productivity, and velocity with an internal developer platform using service catalogs, templates, and CI/CD.
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -30,9 +32,11 @@ In the last article in this [Platform Engineering Pillars series](/blog/tag/plat
 
 However, **infrastructure provisioning alone isn’t enough to improve developer experience**. Even with efficient provisioning, developers can still face inconsistent local setups, sluggish CI/CD pipelines, poor documentation, and fragmented tooling. These obstacles quietly reduce **developer productivity**, slow **developer velocity**, and increase operational overhead.
 
-Your platform’s ability to support daily workflows directly impacts core success metrics like **time to first commit**, **time to production**, and **developer satisfaction**.
-
 <!--more-->
+
+{{< youtube "is83TV8nrTg?rel=0" >}}
+
+Your platform’s ability to support daily workflows directly impacts core success metrics like **time to first commit**, **time to production**, and **developer satisfaction**.
 
 {{% notes "Metrics Explainer: Measuring Developer Experience" %}}
 
@@ -51,8 +55,6 @@ A great **developer experience** accelerates iteration, improves problem-solving
 ## The Service Catalog: Foundation for Developer Experience
 
 Developer friction often starts with something simple: not knowing what’s already available or who owns it. Without a single, reliable source of truth, developers reinvent the wheel, duplicate work, and waste time chasing information.
-
-{{< youtube "is83TV8nrTg?rel=0" >}}
 
 A well-structured **service catalog** in your internal developer platform addresses this by providing a central repository for all services and applications. At its most basic, it's just a web page with each service's README, service metadata, and operational information.
 
