@@ -7,10 +7,11 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Build a Provider
-        parent: iac-extending-pulumi
-        weight: 4
+        parent: iac-build-with-pulumi
+        weight: 30
 aliases:
 - /docs/iac/using-pulumi/extending-pulumi/build-a-provider/
+- /docs/iac/extending-pulumi/build-a-provider/
 ---
 
 ## When to use a provider

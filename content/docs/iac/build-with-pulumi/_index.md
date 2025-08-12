@@ -1,17 +1,18 @@
 ---
-title_tag: Extending Pulumi
+title_tag: Build with Pulumi
 meta_desc: Pulumi offers a number of ways to extend its functionality via providers, components, packages, and more, in any Pulumi language.
-title: Extending Pulumi
-h1: Extending Pulumi
+title: Build with Pulumi
+h1: Build with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Extending Pulumi
+        name: Build with Pulumi
         parent: iac-home
         weight: 76
-        identifier: iac-extending-pulumi
+        identifier: iac-build-with-pulumi
 aliases:
 - /docs/iac/using-pulumi/extending-pulumi/
+- /docs/iac/extending-pulumi/
 ---
 
 Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), [packages](/docs/iac/concepts/packages/), and more.
