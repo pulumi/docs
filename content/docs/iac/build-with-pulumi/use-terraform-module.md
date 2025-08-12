@@ -7,10 +7,11 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Use a Terraform Module
-        parent: iac-extending-pulumi
-        weight: 6
+        parent: iac-build-with-pulumi
+        weight: 50
 aliases:
 - /docs/iac/using-pulumi/extending-pulumi/use-terraform-module/
+- /docs/iac/extending-pulumi/use-terraform-module/
 ---
 
 This guide will walk you through the process of using existing Terraform modules directly in your Pulumi programs, allowing you to leverage the vast Terraform module ecosystem.

@@ -7,8 +7,10 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Testing Components
-        parent: iac-concepts-components
-        weight: 1
+        parent: iac-build-with-pulumi
+        weight: 20
+aliases:
+- /docs/iac/concepts/components/testing-components/
 ---
 
 When authoring Pulumi components, it's critical to ensure that changes won't unintentionally break Pulumi programs that consume your components, nor violate organizational policies. This page outlines different testing strategies and tools you can use to confidently update and maintain components.
@@ -159,4 +161,4 @@ This provides essential details for debugging interop issues and schema mismatch
 
 - [Build a Component](/docs/iac/using-pulumi/build-a-component/)
 - [Testing Pulumi Programs](/docs/iac/concepts/testing/)
-- [Pulumi Provider SDK](/docs/iac/extending-pulumi/pulumi-provider-sdk/)
+- [Pulumi Provider SDK](/docs/iac/build-with-pulumi/pulumi-provider-sdk/)
