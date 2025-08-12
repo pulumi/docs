@@ -8,7 +8,7 @@ weight: 6
 menu:
     iac:
         name: Version Support
-        parent: support
+        parent: iac-support
         weight: 6
 ---
 
