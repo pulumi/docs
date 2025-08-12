@@ -1,11 +1,12 @@
 ---
 title_tag: Get Started with Kubernetes
 meta_desc: This page provides an overview and guide on how to get started with Kubernetes.
-title: Get started
+title: Kubernetes
 h1: Get Started with Kubernetes
 menu:
     iac:
         name: Kubernetes
+        identifier: kubernetes-get-started
         parent: iac-get-started
         weight: 4
     clouds:
