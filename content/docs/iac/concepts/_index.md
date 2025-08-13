@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Concepts
-        weight: 30
+        weight: 15
         parent: iac-home
         identifier: iac-concepts
     concepts:

@@ -9,7 +9,7 @@ menu:
     iac:
         name: Policy as code
         parent: iac-home
-        weight: 60
+        weight: 55
         identifier: iac-policy
 aliases:
 - /docs/guides/crossguard/

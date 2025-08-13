@@ -8,7 +8,7 @@ menu:
     iac:
         name: Build with Pulumi
         parent: iac-home
-        weight: 76
+        weight: 30
         identifier: iac-build-with-pulumi
 aliases:
 - /docs/iac/using-pulumi/extending-pulumi/
