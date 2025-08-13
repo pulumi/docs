@@ -124,7 +124,7 @@ const pulumiProgram = async () => {
 };
 ```
 
-> **Note:** The program's lifecycle must be fully contained within the function, callback, or closure passed as the inline program. It is unsafe to perform actions outside the scope of the inline program function. Doing so can lead to unpredictable behavior, so always ensure that all resource operations and side effects occur within the inline program's execution context.
+> **Note:** The program's lifecycle must be fully contained within the function, callback, or closure passed as the inline program. It's unsafe to perform actions outside the scope of the inline program function. Doing so can lead to unpredictable behavior.
 
 {{% /choosable %}}
 

@@ -57,4 +57,4 @@ A local program is a traditional Pulumi CLI-driven program with its own director
 
 Unlike traditional Pulumi programs, inline programs don't require a separate package on disk, with its own file and a `Pulumi.yaml`. Inline programs are functions that can be authored in the same file as your Automation API program or be imported from another package.
 
-The program's lifecycle must be fully contained within the function, callback, or closure passed as the inline program. It is unsafe to perform actions outside the scope of the inline program function. Doing so can lead to unpredictable behavior, so always ensure that all resource operations and side effects occur within the inline program's execution context.
+The program's lifecycle must be fully contained within the function, callback, or closure passed as the inline program. It's unsafe to perform actions outside the scope of the inline program function. Doing so can lead to unpredictable behavior.
