@@ -1,6 +1,6 @@
 ---
 title: "Backstage vs Pulumi IDP: Why Infrastructure-First Wins!"
-date: 2025-08-11T11:42:47+02:00
+date: 2025-08-13T00:00:00+00:00
 draft: false
 meta_desc: "Backstage vs Pulumi IDP comparison. See why infrastructure-first platform engineering beats portal-first for cost, governance, and scale."
 meta_image: meta.png
