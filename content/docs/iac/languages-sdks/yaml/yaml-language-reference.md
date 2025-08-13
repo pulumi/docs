@@ -572,10 +572,12 @@ about your current workspace.
 ```yaml
     variables:
       cwd: ${pulumi.cwd}
+      organization: ${pulumi.organization}
       project: ${pulumi.project}
       stack: ${pulumi.stack}
 ```
 
 * `${pulumi.cwd}` retrieves the current working directory
+* `${pulumi.organization}` retrieves the current Pulumi organization
 * `${pulumi.project}` retrieves the current project
 * `${pulumi.stack}` retrieves the current stack
