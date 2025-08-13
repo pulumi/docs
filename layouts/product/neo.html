@@ -1,0 +1,133 @@
+{{ define "hero" }}
+    <header class="page-hero hidden xl:block">
+        <div class="flex justify-center h-72" style='background-image: url("/images/product/neo-hero.png"); background-position:center; background-repeat: no-repeat;'>
+            <div class="page-hero-title">
+            </div>
+        </div>
+        <div class="container mx-auto mt-8 text-center w-11/12 sm:w-9/12">
+            <h3>{{ .Params.overview.subtitle }}</h3>
+        </div>
+    </header>
+
+    <header class="page-hero bg-gradient-to-r from-white from-0% via-violet-100 via-50% to-white to-100% border-b border-gray-300 xl:hidden">
+        <div class="page-hero-title">
+            <h1>
+                <span><span class="rainbow-text" data-text="{{ .Params.overview.title }}">{{ .Params.overview.title }}</span></span>
+            </h1>
+                <p class="page-hero-subtitle">{{ .Params.overview.subtitle }}</p>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+    {{ if .Params.demo_video }}
+    <section id="demo-video" class="container mx-auto my-16 flex flex-col">
+        <div class="flex flex-col lg:flex-row px-8">
+            <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first flex flex-col justify-center">
+                <h5 class="text-gray-600 text-xl">{{ .Params.overview.description | markdownify }}</h5>
+                <div class="flex-col gap-y-6">
+
+                <div class="flex justify-center my-3">
+                    <pulumi-hubspot-form form-id="61226f00-68f3-4a68-b11f-c2ba38189a2b"class="newsletter newsletter-dark-border"></pulumi-hubspot-form>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="{{ .Params.overview.link }}" class="btn-secondary hidden sm:inline">{{ .Params.overview.cta}}</a>
+                </div>
+            </div>
+            </div>
+            <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                <div id="video" style="position: relative; top: -100px;"></div>
+                <div class="responsive-video-container video-16-9 rounded-xl shadow-2xl relative h-0 overflow-hidden">
+                    <iframe
+                        src="https://www.youtube.com/embed/{{ .Params.demo_video.videoID }}?rel=0"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen=""
+                        title="{{ .Params.demo_video.title }}"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}.play-button{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120px;height:120px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.3s;box-shadow:0 8px 25px rgba(0,0,0,0.3)}.play-button:hover{background:rgba(255,255,255,1);transform:translate(-50%,-50%) scale(1.1);box-shadow:0 12px 35px rgba(0,0,0,0.4)}.play-button::after{content:'';border-left:36px solid #ff6b35;border-top:22px solid transparent;border-bottom:22px solid transparent;margin-left:8px}</style><a href=https://www.youtube.com/embed/{{ .Params.demo_video.videoID }}?autoplay=1><img src='https://img.youtube.com/vi/{{ .Params.demo_video.videoID }}/maxresdefault.jpg' alt='{{ .Params.demo_video.title }}'><div class='play-button'></div></a>"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <section id="benefits" class="container mx-auto my-16">
+        {{ with .Params.why_idp }}
+            <h2 class="text-center">{{ .title }}</h2>
+            <p class="mx-auto max-w-5xl">
+                {{ .description }}
+            </p>
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-content items-stretch text-left my-4">
+                {{ range $item := .benefits }}
+                    <div class="w-full sm:w-1/2 lg:w-1/4 p-3">
+                        <div class="h-full card bg-white p-8">
+                            <div class="icon-section mb-8 flex">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.color) }}
+                            </div>
+                            <div>
+                                <h5>{{ $item.title }}</h5>
+                            </div>
+                            <div class="mt-6">
+                                <p>{{ $item.description | markdownify }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        {{ end }}
+    </section>
+
+    <section id="building-blocks " class="container my-20 mx-auto text-center px-6">
+        <h2 class="text-center">{{ .Params.building_blocks.title  }}</h2>
+        {{ range $index, $block := .Params.building_blocks.items }}
+            {{ $order := "lg:order-first lg:pr-4" }}
+            {{ $padding := "lg:pl-16" }}
+            {{ if eq (mod $index 2) 0 }}
+                {{ $order = "lg:order-last lg:pl-4"}}
+                {{ $padding = "lg:pr-16" }}
+            {{ end }}
+            <div class="container mx-auto flex flex-col text-center lg:flex-row my-24">
+                <div class="w-full lg:w-1/2 lg:content-center {{ $padding }}">
+                    <h3 class="m-0 p-0 text-3xl">{{ $block.header }}</h3>
+                    <h4 class="p-0 my-4 text-left text-gray-700 text-xl">{{ $block.subheader }}</h4>
+                    <ul>
+                        {{ range $item := $block.body }}
+                            <li class="text-left">{{ $item | markdownify }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div class="w-full lg:w-1/2 {{ $order }}">
+                    <img class="mx-auto" src="{{ $block.graphic }}" />
+                </div>
+            </div>
+        {{ end }}
+    </section>
+
+    <section id="learn" class="container mx-auto text-center mt-20 px-6">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h2>{{ .Params.learn.title }}</h2>
+            <div class="text-left">{{ .Params.learn.description }}</div>
+        </div>
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $item := .Params.learn.items }}
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class=" card h-full bg-white p-12">
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                        {{ range $button := $item.buttons }}
+                            <div class="my-2 py-4 z-10 relative">
+                                <a href="{{ $button.link }}" class="z-10 btn-{{ $button.type }}">{{ $button.action }}</a>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+{{ end }}
