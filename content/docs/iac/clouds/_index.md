@@ -8,7 +8,7 @@ menu:
   iac:
     parent: iac-home
     name: Clouds
-    weight: 45
+    weight: 40
     identifier: iac-clouds
 aliases:
   - /docs/clouds/

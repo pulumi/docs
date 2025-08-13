@@ -8,7 +8,7 @@ menu:
     iac:
         name: Support
         parent: iac-home
-        weight: 90
+        weight: 60
         identifier: iac-support
     support:
         name: Overview

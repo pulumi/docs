@@ -8,7 +8,7 @@ menu:
     iac:
         name: Automation API
         parent: iac-home
-        weight: 55
+        weight: 50
         identifier: iac-automation-api
 aliases:
 - /docs/guides/automation-api/

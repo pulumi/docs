@@ -8,7 +8,7 @@ menu:
     iac:
         name: Languages & SDKs
         parent: iac-home
-        weight: 40
+        weight: 35
         identifier: iac-languages
     languages:
         name: Overview

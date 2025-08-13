@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         parent: iac-home
-        weight: 10
+        weight: 5
         identifier: iac-install
     install:
         name: Overview

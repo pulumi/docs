@@ -8,7 +8,7 @@ menu:
     iac:
         name: Adopting Pulumi
         parent: iac-home
-        weight: 75
+        weight: 25
         identifier: iac-adopting
     usingpulumi:
         identifier: adopting-pulumi
