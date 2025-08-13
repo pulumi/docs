@@ -40,7 +40,9 @@ jobs:
           aws-region: us-west-2
 
       - name: Install Pulumi CLI
-        uses: pulumi/actions@v4
+        uses: pulumi/actions@v6
+        with:
+          pulumi-version: latest
 
       - name: Build and deploy
         run: make ci_pull_request
