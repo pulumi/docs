@@ -8,7 +8,7 @@ menu:
     iac:
         name: Using Pulumi
         parent: iac-home
-        weight: 65
+        weight: 20
         identifier: iac-using-pulumi
 aliases:
 - /docs/guides/
