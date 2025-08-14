@@ -1,0 +1,17 @@
+name: terraform-state-reference
+runtime: yaml
+
+variables:
+  tfState:
+    fn::invoke:
+      function: terraform:state:getLocalReference
+      arguments:
+        path: "../terraform/terraform.tfstate"
+
+resources:
+  my-cluster:
+    type: eks:Cluster
+    properties:
+      vpcId: ${tfState.outputs["vpc_id"]}
+      publicSubnetIds: ${tfState.outputs["public_subnet_ids"]}
+      privateSubnetIds: ${tfState.outputs["private_subnet_ids"]}

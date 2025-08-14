@@ -1,0 +1,3 @@
+name: terraform-state-reference-python
+runtime: python
+description: An example that reads VPC and subnet IDs from a Terraform state file and provisions an EKS cluster.
