@@ -72,7 +72,7 @@ But a Service Catalog alone isn't enough. To fully streamline and enhance your d
 
 ## Service Templates: Golden Paths for Improving Developer Productivity
 
-Earlier in this [series](/blog/platform-engineering-pillars-2/), we introduced **service templates** as a way to scaffold consistent, ready-to-go services. In an **internal developer platform**, templates aren’t just for infrastructure, they’re the **golden paths** that define how developers start and succeed.
+Earlier in this [series](/blog/platform-engineering-pillars-2/), we introduced **service templates** as a way to scaffold consistent, ready-to-go services. In an **internal developer platform**, templates aren’t just for infrastructure, they’re the **[golden paths](/blog/golden-paths-infrastructure-components-and-templates/)** that define how developers start and succeed.
 
 If 90% of new services are Go GRPC services, then a carefully crafted, opinionated go GRPC service blueprint will remove a lot of friction. It will give developers everything they need to begin delivering real business value immediately. A few select curated options of common starting points will help guide developers to generate projects complete with standardized structure, built-in quality checks, documentation, and clear guidelines for contribution.
 
@@ -97,11 +97,11 @@ Many platform teams overlook how clear, consistent documentation is crucial for 
 - **Documentation**: Service template establishes a place for service-specific documentation that will be surfaced in the Service catalog. Markdown explanations, example input/output, and real-world use-cases.
 - **Contribution guidelines and coding standards**: Clearly documenting the expectations, conventions, and standards every developer can follow with confidence.
 
-Embedding this documentation into templates ensures that even brand-new services are discoverable, understandable, and maintainable—right from their first commit.
+Embedding this documentation into templates ensures that even brand-new services are discoverable, understandable, and maintainable — right from their first commit.
 
 A great template means the service catalog becomes more than just an organizational listing. These thoughtfully designed templates can directly power it. Every new service entering your catalog aligns neatly with your organization's best practices in code quality, documentation, and process standards.
 
-When paired with your **service catalog**, templates ensure every new service aligns with best practices—boosting **developer productivity** and **developer velocity** from day one.
+When paired with your **service catalog**, templates ensure every new service aligns with best practices — boosting **developer productivity** and **developer velocity** from day one.
 
 ## Streamlining Local Development to Reduce Friction
 
@@ -150,7 +150,7 @@ And that's truly just scratching the surface. But remember: Platform engineering
 
 ## Conclusion: IDPs as a DevEx Multiplier
 
-A great **developer experience** is not optional—it’s a force multiplier for **developer productivity** and **developer velocity**. An **internal developer platform** with service catalogs, golden path templates, streamlined local dev, and integrated CI/CD removes friction at every step of the developer journey.
+A great **developer experience** is not optional — it’s a force multiplier for **developer productivity** and **developer velocity**. An **internal developer platform** with service catalogs, golden path templates, streamlined local dev, and integrated CI/CD removes friction at every step of the developer journey.
 
 The result? Faster onboarding, quicker delivery, and happier teams.
 
@@ -162,4 +162,4 @@ With Pulumi, platform teams can automate consistent environments, implement gold
 - [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks/) for creating ephemeral, on-demand testing environments
 - [Automation API](/docs/iac/packages-and-automation/automation-api/) for programmatically managing infrastructure and implementing platform workflows
 
-By prioritizing **developer experience** in your platform engineering strategy, you empower teams to move faster, build better, and maintain momentum—making your internal developer platform one of the most valuable assets in your organization.
+By prioritizing **developer experience** in your [platform engineering strategy](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/), you empower teams to move faster, build better, and maintain momentum, making your internal developer platform one of the most valuable assets in your organization.
