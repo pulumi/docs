@@ -391,6 +391,10 @@ private static void pulumiProgram(Context ctx) {
 {{% /choosable %}}
 {{< /chooser >}}
 
+{{% notes type="warning" %}}
+The program's lifecycle must be fully contained within the function, callback, or closure passed as the inline program. It's unsafe to perform actions outside the scope of the inline program function. Doing so can lead to unpredictable behavior.
+{{% /notes %}}
+
 ## Associate with a stack
 
 As with executing Pulumi programs through the CLI, you need to associate your Pulumi program with a `Stack`. Automation API provides methods to create or select stacks.
