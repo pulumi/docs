@@ -88,7 +88,7 @@ const app = new SecureWebApplication("my-app", {
 
 ## Part 1: Building Reusable Infrastructure Components
 
-Components are the atoms of your platform. They are the fundamental building blocks that encapsulate complexity while remaining composable. Let's build a real-world example: a component that deploys containerized microservices to AWS Fargate.
+Reusable infrastructure components act as the foundation of your platform. They encapsulate complexity while remaining composable and scalable. Let's build a real-world example: a component that deploys containerized microservices to AWS Fargate.
 
 ### The Power of Multi-Language Components
 
