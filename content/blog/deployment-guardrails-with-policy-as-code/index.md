@@ -6,6 +6,7 @@ meta_desc: "Implement deployment guardrails with Pulumi CrossGuard to create saf
 meta_image: meta.png
 authors:
     - adam-gordon-bell
+series: idp-best-practices
 tags:
     - idp
     - platform-engineering
