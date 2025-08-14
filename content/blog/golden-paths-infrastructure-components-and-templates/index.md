@@ -62,6 +62,7 @@ const app = new SecureWebApplication("my-app", {
     enableWAF: true,
     environment: "production"
 });
+```
 
 ## Part 1: Building Reusable Infrastructure Components
 
@@ -172,7 +173,6 @@ export class MicroserviceComponent extends pulumi.ComponentResource {
 
 To make your component easy to use, add comprehensive documentation and examples to a `README.md` file:
 
-```bash
 # MicroserviceComponent
 
 Abstraction for resources needed when using AWS container services. 
@@ -198,9 +198,6 @@ A component to abstract the details related to:
 
 Add the following to your `Pulumi.yaml` file:
 Note: If no version is specified, the latest version will be used.
-
-... omit for brevity ...
-```
 This documentation will help developers understand how to use your component effectively, including required inputs, outputs, and example usage.
 
 ### Publishing Your Component via Private Registry
@@ -271,6 +268,7 @@ Let's create a complete golden path for Go microservices that includes:
 - Security controls
 
 #### Step 1: Template Structure
+
 ```
 go-microservice-boilerplate/
 ├── Pulumi.yaml           # Infrastructure definition
