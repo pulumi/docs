@@ -4,7 +4,7 @@ allow_long_title: true
 date: 2025-08-14T10:00:00+02:00
 draft: false
 series: idp-best-practices
-meta_desc: Learn how to build reusable infrastructure components and templates to create Golden Paths in your Internal Developer Platform.
+meta_desc: Build reusable infrastructure using components and templates to create golden paths that enable scalable, self-service internal developer platforms.
 meta_image: meta.png
 authors:
     - engin-diri
