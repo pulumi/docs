@@ -191,7 +191,7 @@ export class MicroserviceComponent extends pulumi.ComponentResource {
 }
 ```
 
-### Adding Documentation and Examples
+### Documenting for Discoverability and Adoption
 
 To make your component easy to use, add comprehensive documentation and examples to a `README.md` file:
 
