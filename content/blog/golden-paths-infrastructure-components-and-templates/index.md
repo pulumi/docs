@@ -226,7 +226,7 @@ Note: If no version is specified, the latest version will be used.
 ```
 This documentation will help developers understand how to use your component effectively, including required inputs, outputs, and example usage.
 
-### Publishing Your Component
+### Publishing Your Component via Private Registry
 
 Once your component is ready, publish it to your [Pulumi Private Registry](/docs/idp/get-started/private-registry/):
 
