@@ -34,7 +34,7 @@ In this guide, you'll learn how to build golden paths for your Internal Develope
 This post is part of our IDP Best Practices series:
 
 * [How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/)
-* **Build Golden Paths with Infrastructure Components and Templates** (you are here)
+* **Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates** (you are here)
 * Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails
 * Day 2 Platform Operations: Automating Drift Detection and Remediation
 * Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
