@@ -1,5 +1,5 @@
 ---
-title: "Build Golden Paths with Infrastructure Components and Templates: A Complete Guide to Reusable Infrastructure"
+title: "Golden Paths in IDPs: A Complete Guide to Reusable Infrastructure with Pulumi Components and Templates"
 allow_long_title: true
 date: 2025-08-14T10:00:00+02:00
 draft: false
