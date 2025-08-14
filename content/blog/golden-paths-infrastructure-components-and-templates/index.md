@@ -411,7 +411,7 @@ func main() {
 
 Here's how you define the infrastructure using Pulumi YAML. You can instantly spot one of the features of Pulumi Components. We consume the `micorservice-component` in YAML without knowing that it was authored in a different language. This is the power of Pulumi Components: write once, consume anywhere.
 
-And we see antother feature of Pulumi Components: As it is a first-class citizen, we can embed the component and add additional resources like auto-scaling policies, alarms, and more directly in the YAML file. This allows us to create a complete golden path for deploying Go microservices on AWS ECS with auto-scaling capabilities.
+And we see another feature of Pulumi Components: As it is a first-class citizen, we can embed the component and add additional resources like auto-scaling policies, alarms, and more directly in the YAML file. This allows us to create a complete golden path for deploying Go microservices on AWS ECS with auto-scaling capabilities.
 
 ```yaml
 # Pulumi.yaml
@@ -673,7 +673,7 @@ Golden paths aren’t complete until they deliver measurable value. Use these KP
 ### Developer Experience Metrics
 - **Developer satisfaction**: Survey teams about their platform experience
 - **Support ticket volume**: Ticket volume related to infrastructure
-- **Contribution **: Number of PRs or issues submitted to platform templates
+- **Contribution**: Number of PRs or issues submitted to platform templates
 
 ## Real-World Results: Success Stories
 
@@ -683,7 +683,7 @@ Organizations using golden paths report significant improvements in speed and re
 - **[Mercedes-Benz](https://www.pulumi.com/case-studies/mercedes-benz/)** decreased infrastructure provisioning from weeks to minutes
 - **[Starburst Data](https://www.pulumi.com/case-studies/starburst/)** cut deployment time from 2 weeks to 3 hours
 
-These results show that golden paths are not just developer tools, they're a competitive advantage. To learn more, download the whitepaper: [The Golden Path to Cloud Success: Your IDP Roadmap](https://info.pulu.om/whitepaper-the-golden-path-to-cloud-success).
+These results show that golden paths are not just developer tools, they're a competitive advantage. To learn more, download the whitepaper: [The Golden Path to Cloud Success: Your IDP Roadmap](https://info.pulumi.com/whitepaper-the-golden-path-to-cloud-success).
 
 ## Common Pitfalls and How to Avoid Them
 
