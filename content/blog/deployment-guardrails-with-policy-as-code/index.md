@@ -18,8 +18,6 @@ tags:
     - guardrails
 ---
 
-**Building Safe Self-Service Infrastructure with Pulumi CrossGuard**
-
 Welcome to the third post in our **IDP Best Practices** series. In this workshop, we explore how to implement **policy as code** with [Pulumi CrossGuard](/docs/iac/packages-and-automation/crossguard) to create deployment guardrails that make self-service infrastructure both powerful and safe.
 
 Platform engineering is about enabling developer velocity while maintaining security and compliance. The challenge? How do you give teams the freedom to deploy infrastructure quickly without compromising on safety, security, or organizational standards? The answer lies in **automated guardrails** powered by policy as code.
