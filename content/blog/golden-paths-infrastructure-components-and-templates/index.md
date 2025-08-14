@@ -15,7 +15,7 @@ tags:
     - golden-paths
     - infrastructure-components
     - pulumi-templates
-    - developer-experience
+    - developer-experience-devex
     - reusable-infrastructure
     - idp-best-practices
 social:
