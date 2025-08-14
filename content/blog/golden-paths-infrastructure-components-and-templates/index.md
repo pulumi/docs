@@ -510,7 +510,6 @@ outputs:
 
 Add a `README.md` file to your template directory to provide clear instructions on how to use the template, including prerequisites, configuration options, and example commands:
 
-```markdown
 # Go Microservice Golden Path
 
 A **golden path** template that gets your Go microservice from code to production on AWS in minutes, not weeks.
@@ -562,10 +561,6 @@ You **do** focus on:
 - Adding your business endpoints
 - Testing your service locally
 - Deploying with confidence
-
-... omit for brevity ...
-
-```
 
 ### Making Templates Available in Pulumi IDP
 
@@ -622,6 +617,8 @@ interface ComponentArgs {
     securityPolicies?: SecurityPolicy[];
     customMetrics?: MetricDefinition[];
 }
+```
+
 ### 4. Use Semantic Versioning Everywhere
 Clear versioning for both components and templates indicate stability and reliability:
 - **Major versions** (1.0.0 → 2.0.0): Breaking changes
@@ -654,6 +651,8 @@ describe("MicroserviceComponent", () => {
         expect(resources).to.include("aws:lb/loadBalancer:LoadBalancer");
     });
 });
+```
+
 ## How to Measure Golden Path Success
 
 Golden paths aren’t complete until they deliver measurable value. Use these KPIs to assess performance and drive iteration:
