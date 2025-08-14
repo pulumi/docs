@@ -716,7 +716,7 @@ Templates that include not just infrastructure but complete GitOps pipelines, fr
 
 ## Your First Steps to Golden Paths
 
-Ready to build golden paths for your organization? Here's your roadmap:
+Ready to get started? Here's your action plan:
 
 1. **Audit Current Patterns**: Document the infrastructure patterns your teams use most frequently
 2. **Build one reusable component**: Pick your most common pattern and build a reusable component
