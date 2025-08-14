@@ -244,7 +244,6 @@ Now any team in your organization can discover and use your component, regardles
 
 ## Part 2: From Building Blocks to Golden Paths
 
-![img_3.png](road_to_success_golden_paths.png)
 
 While components are powerful building blocks, templates are complete, opinionated starting points that embody your organization's best practices. They're the "golden paths" that guide developers to production.
 
