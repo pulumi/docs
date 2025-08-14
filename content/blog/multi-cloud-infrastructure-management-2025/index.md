@@ -95,9 +95,7 @@ const gcpStorage = new gcp.storage.Bucket("my-storage", {
     versioning: {
         enabled: true,
     },
-    uniformBucketLevelAccess: {
-        enabled: true,
-    },
+    uniformBucketLevelAccess: true,
 });
 
 // Export URLs from all three clouds using the same pattern
@@ -346,18 +344,39 @@ When drift is detected, Pulumi shows you exactly what has changed and can automa
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/rds"
-    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+    "fmt"
     "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/lambda"
+    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
+        // Create Azure resource group first
+        azureRg, err := resources.NewResourceGroup(ctx, "data-rg", &resources.ResourceGroupArgs{
+            Location: pulumi.String("eastus"),
+        })
+        if err != nil {
+            return err
+        }
+
+        // Create Azure SQL Server
+        sqlServer, err := sql.NewServer(ctx, "sql-server", &sql.ServerArgs{
+            ResourceGroupName:          azureRg.Name,
+            Location:                   azureRg.Location,
+            AdministratorLogin:         pulumi.String("adminuser"),
+            AdministratorLoginPassword: pulumi.String("P@ssw0rd123!"),
+        })
+        if err != nil {
+            return err
+        }
+
         // Azure SQL Database created first
         azureDb, err := sql.NewDatabase(ctx, "main-db", &sql.DatabaseArgs{
-            ResourceGroupName: resourceGroup.Name,
+            ResourceGroupName: azureRg.Name,
             ServerName:        sqlServer.Name,
+            Location:          azureRg.Location,
             Sku: &sql.SkuArgs{
                 Name: pulumi.String("S0"),
             },
@@ -371,6 +390,8 @@ func main() {
         lambdaFunc, err := lambda.NewFunction(ctx, "processor", &lambda.FunctionArgs{
             Runtime: pulumi.String("go1.x"),
             Handler: pulumi.String("main"),
+            Code:    pulumi.NewAssetArchive(map[string]interface{}{"main.go": pulumi.NewStringAsset("package main\nfunc main() {}")}),
+            Role:    pulumi.String("arn:aws:iam::123456789012:role/lambda-role"), // Simplified for example
             Environment: &lambda.FunctionEnvironmentArgs{
                 Variables: pulumi.StringMap{
                     // This creates an explicit dependency
@@ -395,7 +416,7 @@ func main() {
 Security and compliance requirements remain constant regardless of which cloud provider you're using. Pulumi CrossGuard enables you to write policies once and enforce them across all cloud providers automatically. Policies are written in the same languages as your infrastructure code, making them accessible to your existing development teams.
 
 ```typescript
-import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
+import { PolicyPack, ResourceValidationArgs, ReportViolation } from "@pulumi/policy";
 
 new PolicyPack("multi-cloud-compliance", {
     policies: [
@@ -403,7 +424,7 @@ new PolicyPack("multi-cloud-compliance", {
             name: "required-tags",
             description: "All resources must have required tags",
             enforcementLevel: "mandatory",
-            validateResource: (args, reportViolation) => {
+            validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
                 const requiredTags = ["Environment", "Owner", "CostCenter"];
                 
                 // Check AWS resources
@@ -442,7 +463,7 @@ new PolicyPack("multi-cloud-compliance", {
             name: "encryption-required",
             description: "All storage must be encrypted",
             enforcementLevel: "mandatory",
-            validateResource: (args, reportViolation) => {
+            validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
                 // Unified encryption checks across all providers
                 if (args.type === "aws:s3/bucket:Bucket") {
                     if (!args.props.serverSideEncryptionConfiguration) {
