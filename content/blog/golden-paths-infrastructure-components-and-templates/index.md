@@ -242,7 +242,7 @@ Now any team in your organization can discover and use your component, regardles
 
 ![img_2.png](pulumi_idp_components_view.png)
 
-## Part 2: Creating Golden Path Templates
+## Part 2: From Building Blocks to Golden Paths
 
 ![img_3.png](road_to_success_golden_paths.png)
 
