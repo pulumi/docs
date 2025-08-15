@@ -7,7 +7,7 @@ aliases:
     - /azure-resource-manager
     - /azure-infrastructure
 
-heading: "Manage Azure Infrastructure The Easy Way"
+heading: "Azure Infrastructure Made Easy"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to make managing infrastructure secure, reliable, and hassle-free.
 
@@ -15,9 +15,31 @@ overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
         Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
-ide:
-        tabs:
-            - title: index.ts
+        ide:
+                        - title: C#
+              language: csharp
+              code: |
+                using Pulumi;
+                using Pulumi.AzureNative.Resources;
+                using Pulumi.AzureNative.Storage;
+                using Pulumi.AzureNative.Storage.Inputs;
+
+                class MyStack : Stack
+                {
+                    public MyStack()
+                    {
+                        var resourceGroup = new ResourceGroup("resourceGroup");
+
+                        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+                        {
+                            ResourceGroupName = resourceGroup.Name,
+                            Sku = new SkuArgs { Name = "Standard_LRS" },
+                            Kind = "StorageV2"
+                        });
+                    }
+                }
+
+            - title: typescript
               language: typescript
               code: |
                 import * as resources from "@pulumi/azure-native/resources";
@@ -32,7 +54,7 @@ ide:
                     },
                     kind: "StorageV2",
                 });
-            - title: __main__.py
+            - title: python
               language: python
               code: |
                 from pulumi_azure_native import storage
@@ -73,30 +95,8 @@ ide:
                         return err
                     })
                 }
-            - title: MyStack.cs
-              language: csharp
-              code: |
-                using Pulumi;
-                using Pulumi.AzureNative.Resources;
-                using Pulumi.AzureNative.Storage;
-                using Pulumi.AzureNative.Storage.Inputs;
 
-                class MyStack : Stack
-                {
-                    public MyStack()
-                    {
-                        var resourceGroup = new ResourceGroup("resourceGroup");
-
-                        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
-                        {
-                            ResourceGroupName = resourceGroup.Name,
-                            Sku = new SkuArgs { Name = "Standard_LRS" },
-                            Kind = "StorageV2"
-                        });
-                    }
-                }
-
-            - title: Pulumi.yaml
+            - title: yaml
               language: yaml
               code: |
                 name: azure-storage-account
@@ -112,7 +112,7 @@ ide:
                       kind: 'StorageV2'
                       sku: { name: 'Standard_LRS' }
 
-            - title: Main.java
+            - title: java
               language: java
               code: |
                 package com.pulumi.example.infra;
