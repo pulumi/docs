@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Meet Neo, Your Newest Platform Engineer
-meta_desc: "Meet Neo: AI-powered platform engineering that transforms bottlenecks into strategic advantages with full transparency, control & reliability."
+meta_desc: "You're Invited: Meet Neo, Your Newest Platform Engineer"
 meta_image: /images/product/neo-meta.png
 
 # A featured webinar will display first in the list.
