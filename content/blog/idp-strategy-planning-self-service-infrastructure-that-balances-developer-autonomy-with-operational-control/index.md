@@ -104,7 +104,7 @@ These are the fundamental building blocks that exist in AWS, Azure, GCP, and oth
 Components take those raw infrastructure resources and package them into higher-level abstractions that encapsulate best practices, security policies, and organizational standards.
 For example, instead of manually configuring 15 different AWS resources to create a secure web application, you create a component that handles all that complexity and exposes just the configuration options that matter to your developers.
 
-**Layer 3: Developer Experience Layer** - This is where [Pulumi Templates](https://www.pulumi.com/templates/) and the [Private Registry](https://www.pulumi.com/docs/pulumi-cloud/private-registry/) come into play.
+**Layer 3: Developer Experience Layer** - This is where [Pulumi Templates](https://www.pulumi.com/templates/) and the [Private Registry](https://www.pulumi.com/docs/idp/get-started/private-registry/) come into play.
 Templates provide ready-to-deploy patterns that developers can customize, while the private registry makes everything discoverable and manageable at scale.
 
 In our workshop, we focused specifically on those top two layers because that's where the transformation happens. This is where you turn raw infrastructure into something developers can actually use productively without becoming infrastructure experts themselves.
