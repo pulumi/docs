@@ -20,11 +20,10 @@ key_features_above:
     items:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
-          description:
+          description: |
             Author infrastructure as code (IaC) using programming languages you know and love – including C#, TypeScript, Python, Go, Java, and YAML. Pulumi SDK
-        helps create, deploy, and manage 100% of your Microsoft Azure infrastructure, including containers, serverless functions, and infrastructure using modern programming languages.
-           ide:
-        tabs:
+            helps create, deploy, and manage 100% of your Microsoft Azure infrastructure, including containers, serverless functions, and infrastructure using modern programming languages.
+          ide:
             - title: C#
               language: csharp
               code: |
@@ -191,94 +190,93 @@ key_features:
             - title: C#
               language: csharp
               code: |
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var config = new Config();
-        var resourceGroupNameParam = config.Require("resourceGroupNameParam");
-        var storagecreatedbyarm = new AzureNative.Storage.StorageAccount("storagecreatedbyarm", new AzureNative.Storage.StorageAccountArgs
-        {
-            AccountName = "storagecreatedbyarm",
-            Kind = "StorageV2",
-            Location = "westeurope",
-            ResourceGroupName = resourceGroupNameParam,
-            Sku = new AzureNative.Storage.Inputs.SkuArgs
-            {
-                Name = "Standard_LRS",
-            },
-        });
-    }
-}
+                using Pulumi;
+                using AzureNative = Pulumi.AzureNative;
+                
+                class MyStack : Stack
+                {
+                    public MyStack()
+                    {
+                        var config = new Config();
+                        var resourceGroupNameParam = config.Require("resourceGroupNameParam");
+                        var storagecreatedbyarm = new AzureNative.Storage.StorageAccount("storagecreatedbyarm", new AzureNative.Storage.StorageAccountArgs
+                        {
+                            AccountName = "storagecreatedbyarm",
+                            Kind = "StorageV2",
+                            Location = "westeurope",
+                            ResourceGroupName = resourceGroupNameParam,
+                            Sku = new AzureNative.Storage.Inputs.SkuArgs
+                            {
+                                Name = "Standard_LRS",
+                            },
+                        });
+                    }
+                }
             - title: typescript
               language: typescript
               code: |
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const config = new pulumi.Config();
-const resourceGroupNameParam = config.require("resourceGroupNameParam");
-const storagecreatedbyarm = new azure_native.storage.StorageAccount("storagecreatedbyarm", {
-    accountName: "storagecreatedbyarm",
-    kind: "StorageV2",
-    location: "westeurope",
-    resourceGroupName: resourceGroupNameParam,
-    sku: {
-        name: "Standard_LRS",
-    },
-});
+                import * as pulumi from "@pulumi/pulumi";
+                import * as azure_native from "@pulumi/azure-native";
+                
+                const config = new pulumi.Config();
+                const resourceGroupNameParam = config.require("resourceGroupNameParam");
+                const storagecreatedbyarm = new azure_native.storage.StorageAccount("storagecreatedbyarm", {
+                    accountName: "storagecreatedbyarm",
+                    kind: "StorageV2",
+                    location: "westeurope",
+                    resourceGroupName: resourceGroupNameParam,
+                    sku: {
+                        name: "Standard_LRS",
+                    },
+                });
             - title: go
               language: go
               code: |
-package main
-
-import (
-	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		cfg := config.New(ctx, "")
-		resourceGroupNameParam := cfg.Require("resourceGroupNameParam")
-
-		_, err := storage.NewStorageAccount(ctx, "storagecreatedbyarm", &storage.StorageAccountArgs{
-			AccountName:       pulumi.String("storagecreatedbyarm"),
-			Kind:              pulumi.String("StorageV2"),
-			Location:          pulumi.String("westeurope"),
-			ResourceGroupName: pulumi.String(resourceGroupNameParam),
-			Sku: &storage.SkuArgs{
-				Name: pulumi.String("Standard_LRS"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
+                package main
+                
+                import (
+                	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+                	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+                	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+                )
+                
+                func main() {
+                	pulumi.Run(func(ctx *pulumi.Context) error {
+                		cfg := config.New(ctx, "")
+                		resourceGroupNameParam := cfg.Require("resourceGroupNameParam")
+                		_, err := storage.NewStorageAccount(ctx, "storagecreatedbyarm", &storage.StorageAccountArgs{
+                			AccountName:       pulumi.String("storagecreatedbyarm"),
+                			Kind:              pulumi.String("StorageV2"),
+                			Location:          pulumi.String("westeurope"),
+                			ResourceGroupName: pulumi.String(resourceGroupNameParam),
+                			Sku: &storage.SkuArgs{
+                				Name: pulumi.String("Standard_LRS"),
+                			},
+                		})
+                		if err != nil {
+                			return err
+                		}
+                		return nil
+                	})
+                }
 
 
             - title: python
               language: python
               code: |
-import pulumi
-import pulumi_azure_native as azure_native
-
-config = pulumi.Config()
-resource_group_name_param = config.require("resourceGroupNameParam")
-storagecreatedbyarm = azure_native.storage.StorageAccount("storagecreatedbyarm",
-    account_name="storagecreatedbyarm",
-    kind="StorageV2",
-    location="westeurope",
-    resource_group_name=resource_group_name_param,
-    sku=azure_native.storage.SkuArgs(
-        name="Standard_LRS",
-    ))
+                import pulumi
+                import pulumi_azure_native as azure_native
+                
+                config = pulumi.Config()
+                resource_group_name_param = config.require("resourceGroupNameParam")
+                storagecreatedbyarm = azure_native.storage.StorageAccount("storagecreatedbyarm",
+                    account_name="storagecreatedbyarm",
+                    kind="StorageV2",
+                    location="westeurope",
+                    resource_group_name=resource_group_name_param,
+                    sku=azure_native.storage.SkuArgs(
+                        name="Standard_LRS",
+                    ))
           button:
             text: "Try Pulumi Cloud for FREE"
             link: "https://app.pulumi.com/signup"
