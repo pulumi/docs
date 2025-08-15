@@ -14,14 +14,14 @@ subheading: |
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Looking for {Keyword:Ansible alternative}? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        Looking for an Ansible alternative? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
 
 key_features_above:
     items:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Try Pulumi Cloud for FREE"
@@ -34,14 +34,14 @@ key_features_above:
                 color: yellow
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and [170+ providers](/registry/) through
+                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
                     a complete and consistent SDK interface.
                 icon: global
                 color: yellow
               - title: Preview and test changes
                 description: |
-                    Test and validate infrastructure with standard [unit test frameworks](/docs/guides/testing/#unit-testing) and
-                    [integration tests](/docs/guides/testing/integration/). Preview changes before deploying.
+                    Test and validate infrastructure with standard unit test frameworks and
+                    integration tests. Preview changes before deploying.
                 icon: eye
                 color: yellow
         
@@ -149,10 +149,10 @@ key_features:
                     Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
               - title: Crosswalk for AWS
                 description: |
-                    Adopt well-architected best practices for your infrastructure easily with the [Crosswalk library](/docs/iac/clouds/aws/guides/).
+                    Adopt well-architected best practices for your infrastructure easily with the Crosswalk library.
               - title: Cloud Native support
                 description: |
-                    Use a single workflow to manage both [Kubernetes](/kubernetes/) resources and infrastructure.
+                    Use a single workflow to manage both Kubernetes resources and infrastructure.
 
         - title: "Deliver infrastructure through software delivery pipelines"
           sub_title: "CI/CD Integrations"
@@ -168,16 +168,16 @@ key_features:
                     Manage infrastructure code in Git and approve changes through pull requests.
               - title: Shift left
                 description: |
-                    Get rapid feedback on your code with fast [unit tests](/docs/iac/concepts/testing/unit/), and run [integration tests](/docs/iac/concepts/testing/integration/) against ephemeral infrastructure.
+                    Get rapid feedback on your code with fast unit tests, and run integration tests against ephemeral infrastructure.
               - title: Continuous delivery
                 description: |
-                    [Integrate your CI/CD provider](/docs/iac/packages-and-automation/continuous-delivery/) with Pulumi or use GitOps to [manage Kubernetes clusters](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/).
+                    Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
     title: Open source. Enterprise ready.
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that's supported
-        by an active community. We maintain a [public roadmap](https://github.com/orgs/pulumi/projects/44) and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
+        by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "10,000s"
         description: of community members
