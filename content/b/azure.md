@@ -233,7 +233,7 @@ const storagecreatedbyarm = new azure_native.storage.StorageAccount("storagecrea
             - title: go
               language: go
               code: |
-                    package main
+package main
 
 import (
 	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
@@ -245,6 +245,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		cfg := config.New(ctx, "")
 		resourceGroupNameParam := cfg.Require("resourceGroupNameParam")
+
 		_, err := storage.NewStorageAccount(ctx, "storagecreatedbyarm", &storage.StorageAccountArgs{
 			AccountName:       pulumi.String("storagecreatedbyarm"),
 			Kind:              pulumi.String("StorageV2"),
@@ -260,6 +261,7 @@ func main() {
 		return nil
 	})
 }
+
 
             - title: python
               language: python
