@@ -28,10 +28,6 @@
             <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first flex flex-col justify-center">
                 <h5 class="text-gray-600 text-xl">{{ .Params.overview.description | markdownify }}</h5>
                 <div class="flex-col gap-y-6">
-
-                <div class="flex justify-center my-3">
-                    <pulumi-hubspot-form form-id="61226f00-68f3-4a68-b11f-c2ba38189a2b"class="newsletter newsletter-dark-border"></pulumi-hubspot-form>
-                </div>
                 <div class="mt-8 text-center">
                     <a href="{{ .Params.overview.link }}" class="btn-secondary hidden sm:inline">{{ .Params.overview.cta}}</a>
                 </div>
