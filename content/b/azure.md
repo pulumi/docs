@@ -1,12 +1,13 @@
 ---
-title: "Alternative | Pulumi"
+title: "Azure Infrastructure"
 meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
 layout: gads-template
 block_external_search_index: true
 aliases:
-    - /gads/gads-template
+    - /azure-resource-manager
+    - /azure-infrastructure
 
-heading: "Competitor Alternative"
+heading: "Manage Azure Infrastructure The Easy Way"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
@@ -21,8 +22,143 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
-          image: "/images/product/pulumi-iac-code.png"
+            Author infrastructure as code (IaC) using programming languages you know and love – including C#, TypeScript, Python, Go, Java, and YAML. Pulumi SDK
+        helps create, deploy, and manage 100% of your Microsoft Azure infrastructure, including containers, serverless functions, and infrastructure using modern programming languages.
+           ide:
+        tabs:
+            - title: C#
+              language: csharp
+              code: |
+                using Pulumi;
+                using Pulumi.AzureNative.Resources;
+                using Pulumi.AzureNative.Storage;
+                using Pulumi.AzureNative.Storage.Inputs;
+
+                class MyStack : Stack
+                {
+                    public MyStack()
+                    {
+                        var resourceGroup = new ResourceGroup("resourceGroup");
+
+                        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+                        {
+                            ResourceGroupName = resourceGroup.Name,
+                            Sku = new SkuArgs { Name = "Standard_LRS" },
+                            Kind = "StorageV2"
+                        });
+                    }
+                }
+        
+            - title: typescript
+              language: typescript
+              code: |
+                import * as resources from "@pulumi/azure-native/resources";
+                import * as storage from "@pulumi/azure-native/storage";
+
+                const resourceGroup = new resources.ResourceGroup("resourceGroup");
+
+                const storageAccount = new storage.StorageAccount("sa", {
+                    resourceGroupName: resourceGroup.name,
+                    sku: {
+                        name: "Standard_LRS",
+                    },
+                    kind: "StorageV2",
+                });
+                
+            - title: python
+              language: python
+              code: |
+                from pulumi_azure_native import storage
+                from pulumi_azure_native import resources
+
+                resource_group = resources.ResourceGroup('resource_group')
+
+                account = storage.StorageAccount('sa',
+                    resource_group_name=resource_group.name,
+                    sku=storage.SkuArgs(name='Standard_LRS'),
+                    kind='StorageV2')
+                    
+            - title: go
+              language: go
+              code: |
+                package main
+
+                import (
+                    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+                    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+                    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+                )
+
+                func main() {
+                    pulumi.Run(func(ctx *pulumi.Context) error {
+                        resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
+                        if err != nil {
+                            return err
+                        }
+
+                        account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
+                            ResourceGroupName: resourceGroup.Name,
+                            Sku: &storage.SkuArgs{
+                                Name: pulumi.String("Standard_LRS"),
+                            },
+                            Kind: pulumi.String("StorageV2"),
+                        })
+
+                        return err
+                    })
+                }
+
+            - title: yaml
+              language: yaml
+              code: |
+                name: azure-storage-account
+                runtime: yaml
+                description: A simple Pulumi program.
+                resources:
+                  resourcegroup:
+                    type: azure-native:resources:ResourceGroup
+                  sa:
+                    type: azure-native:storage:StorageAccount
+                    properties:
+                      resourceGroupName: ${resourcegroup.name}
+                      kind: 'StorageV2'
+                      sku: { name: 'Standard_LRS' }
+
+            - title: Java
+              language: java
+              code: |
+                package com.pulumi.example.infra;
+
+                import com.pulumi.Context;
+                import com.pulumi.Exports;
+                import com.pulumi.Pulumi;
+                import com.pulumi.azurenative.resources.ResourceGroup;
+                import com.pulumi.azurenative.storage.StorageAccount;
+                import com.pulumi.azurenative.storage.StorageAccountArgs;
+                import com.pulumi.azurenative.storage.enums.Kind;
+                import com.pulumi.azurenative.storage.enums.SkuName;
+                import com.pulumi.azurenative.storage.inputs.SkuArgs;
+
+                public class Main {
+
+                    public static void main(String[] args) {
+                        Pulumi.run(Main::stack);
+                    }
+
+                    private static Exports stack(Context ctx) {
+                        var resourceGroup = new ResourceGroup("linux-fn-rg");
+
+                        var storageAccount = new StorageAccount("linux-fn-sa", StorageAccountArgs.builder()
+                                .resourceGroupName(resourceGroup.name())
+                                .kind(Kind.StorageV2)
+                                .sku(SkuArgs.builder()
+                                        .name(SkuName.Standard_LRS)
+                                        .build())
+                                .build());
+
+                        return ctx.exports();
+                    }
+                }
           button:
             text: "Try Pulumi Cloud for FREE"
             link: "https://app.pulumi.com/signup"
@@ -48,111 +184,113 @@ key_features_above:
 key_features:
     title: Key features
     items:
-        - title: "Build infrastructure faster with reusable components"
-          sub_title: "Pulumi Packages"
+        - title: "Azure Resource Manager → Pulumi"
+          sub_title: "ARM Templates"
           description: |
-            Build and reuse higher-level abstractions for cloud architectures with multi-language Pulumi Packages. Distribute the packages through repositories or package managers so your team members can reuse them.
+           Pulumi lets you manage Azure infrastructure using your favorite language, with built-in support for CI/CD, reusable components, and testability. For .NET teams especially, Pulumi’s support for C# provides a superior experience over static JSON.
           ide:
-            - title: index.ts
+            - title: C#
+              language: csharp
+              code: |
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var resourceGroupNameParam = config.Require("resourceGroupNameParam");
+        var storagecreatedbyarm = new AzureNative.Storage.StorageAccount("storagecreatedbyarm", new AzureNative.Storage.StorageAccountArgs
+        {
+            AccountName = "storagecreatedbyarm",
+            Kind = "StorageV2",
+            Location = "westeurope",
+            ResourceGroupName = resourceGroupNameParam,
+            Sku = new AzureNative.Storage.Inputs.SkuArgs
+            {
+                Name = "Standard_LRS",
+            },
+        });
+    }
+}
+            - title: typescript
               language: typescript
               code: |
-                import * as eks from "@pulumi/eks";
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
 
-                // Create an EKS cluster with the default configuration.
-                const cluster = new eks.Cluster("eks-cluster");
-
-                // Export the cluster's kubeconfig.
-                export const kubeconfig = cluster.kubeconfig;
-            - title: __main__.py
-              language: python
-              code: |
-                import pulumi
-                import pulumi_eks as eks
-
-                # Create an EKS cluster with the default configuration.
-                cluster = eks.Cluster("eks-cluster")
-
-                # Export the cluster's kubeconfig.
-                pulumi.export("kubeconfig", cluster.kubeconfig)
-            - title: main.go
+const config = new pulumi.Config();
+const resourceGroupNameParam = config.require("resourceGroupNameParam");
+const storagecreatedbyarm = new azure_native.storage.StorageAccount("storagecreatedbyarm", {
+    accountName: "storagecreatedbyarm",
+    kind: "StorageV2",
+    location: "westeurope",
+    resourceGroupName: resourceGroupNameParam,
+    sku: {
+        name: "Standard_LRS",
+    },
+});
+            - title: go
               language: go
               code: |
                     package main
 
-                    import (
-                      "github.com/pulumi/pulumi-eks/sdk/go/eks"
-                      "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-                    )
+import (
+	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+)
 
-                    func main() {
-                      pulumi.Run(func(ctx *pulumi.Context) error {
-                        // Create an EKS cluster with default settings.
-                        cluster, err := eks.NewCluster(ctx, "eks-cluster", nil)
-                        if err != nil {
-                          return err
-                        }
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		resourceGroupNameParam := cfg.Require("resourceGroupNameParam")
+		_, err := storage.NewStorageAccount(ctx, "storagecreatedbyarm", &storage.StorageAccountArgs{
+			AccountName:       pulumi.String("storagecreatedbyarm"),
+			Kind:              pulumi.String("StorageV2"),
+			Location:          pulumi.String("westeurope"),
+			ResourceGroupName: pulumi.String(resourceGroupNameParam),
+			Sku: &storage.SkuArgs{
+				Name: pulumi.String("Standard_LRS"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
 
-                        // Export the cluster's kubeconfig.
-                        ctx.Export("kubeconfig", cluster.Kubeconfig)
-                        return nil
-                      })
-                    }
-            - title: MyStack.cs
-              language: csharp
+            - title: python
+              language: python
               code: |
-                using System.Collections.Generic;
-                using Pulumi;
-                using Pulumi.Eks;
+import pulumi
+import pulumi_azure_native as azure_native
 
-                await Deployment.RunAsync(() =>
-                {
-                  // Create an EKS cluster with default settings.
-                  var cluster = new Cluster("eks-cluster");
-
-                  // Export the cluster's kubeconfig.
-                  return new Dictionary<string, object?>
-                  {
-                    ["kubeconfig"] = cluster.Kubeconfig
-                  };
-                });
-            - title: Main.Java
-              language: java
-              code: |
-                import com.pulumi.Context;
-                import com.pulumi.Pulumi;
-                import com.pulumi.eks.Cluster;
-
-                public class App {
-                    public static void main(String[] args) {
-                        Pulumi.run(App::stack);
-                    }
-
-                    private static void stack(Context ctx) {
-                    final var cluster = new Cluster("eks-cluster");
-                    ctx.export("kubeconfig", cluster.kubeconfig());
-                  }
-                }
-            - title: Pulumi.yaml
-              language: yaml
-              code: |
-                resources:
-                  eks-cluster:
-                    type: eks:Cluster
-                outputs:
-                  kubeconfig: ${cluster.kubeconfig}
+config = pulumi.Config()
+resource_group_name_param = config.require("resourceGroupNameParam")
+storagecreatedbyarm = azure_native.storage.StorageAccount("storagecreatedbyarm",
+    account_name="storagecreatedbyarm",
+    kind="StorageV2",
+    location="westeurope",
+    resource_group_name=resource_group_name_param,
+    sku=azure_native.storage.SkuArgs(
+        name="Standard_LRS",
+    ))
           button:
             text: "Try Pulumi Cloud for FREE"
             link: "https://app.pulumi.com/signup"
           features:
-              - title: Native cloud providers
+              - title: 100% API Coverage
                 description: |
-                    Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
-              - title: Crosswalk for AWS
+                    Full API coverage for Azure with same-day updates. Every property of each resource is always represented in the SDKs.
+              - title: Policy as Code for Azure
                 description: |
-                    Adopt well-architected best practices for your infrastructure easily with the [Crosswalk library](/docs/iac/clouds/aws/guides/).
-              - title: Cloud Native support
+                    Set guardrails for resources to ensure best practices and security compliance are consistently followed, using [CrossGuard](/docs/iac/crossguard/).
+              - title: Everything In One Place
                 description: |
-                    Use a single workflow to manage both [Kubernetes](/kubernetes/) resources and infrastructure.
+                    Full coverage for Azure services, including Azure Static Web Apps, Azure Logic Apps, Azure DevOps, Azure Blockchain Service, Azure API Management and more.
 
         - title: "Deliver infrastructure through software delivery pipelines"
           sub_title: "CI/CD Integrations"
@@ -174,7 +312,7 @@ key_features:
                     [Integrate your CI/CD provider](/docs/iac/packages-and-automation/continuous-delivery/) with Pulumi or use GitOps to [manage Kubernetes clusters](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/).
 
 stats:
-    title: Open source. Enterprise ready.
+    title: Open source. Enterprise-ready.
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that's supported
         by an active community. We maintain a [public roadmap](https://github.com/orgs/pulumi/projects/44) and welcome feedback and contributions.
@@ -182,7 +320,7 @@ stats:
         number: "10,000s"
         description: of community members
     company:
-        number: "1,000s"
+        number: "3,000s"
         description: of companies
     integration:
         number: "170+"
@@ -201,7 +339,7 @@ key_features_below:
           features:
               - title: Pulumi IaC
                 description: |
-                    Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
+                    Utilize open-source IaC in C#, TypeScript, Python, Go, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
               - title: Pulumi ESC
                 description: |
                     Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
@@ -225,7 +363,7 @@ key_features_below:
                     Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
               - title: Audit logs
                 description: |
-                    Track and store user actions and change history with option to export logs.
+                    Track and store user actions and change history with the option to export logs.
 
 case_studies:
     title: Customers innovating with Pulumi Cloud
