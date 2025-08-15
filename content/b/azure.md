@@ -9,8 +9,7 @@ aliases:
 
 heading: "Manage Azure Infrastructure The Easy Way"
 subheading: |
-    Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
-    make managing infrastructure secure, reliable, and hassle-free.
+    Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
