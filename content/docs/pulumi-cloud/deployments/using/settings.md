@@ -53,6 +53,20 @@ When using Pulumi Deployments, you have options for where your deployments run:
 
 For more information on customer-managed agents, see the [Customer Managed Agents documentation](../../customer-managed-agents).
 
+### Role assignment
+
+When configuring deployment settings, you can assign organization roles to the stack token used for deployments. This setting appears as a dropdown menu under "Role assignment" that displays available organization roles.
+
+If no role is selected, the deployment will only have access to the specific stack being deployed. However, this limited access can cause failures when the deployment needs to:
+
+- Access stack references from other stacks
+- Access environments
+- Manage organization resources such as teams, members, or OIDC issuers
+
+By selecting an appropriate role, you provide the deployment with the necessary permissions to access these additional resources. For fine-grained access control, you can create custom roles with specific permissions tailored to what the deployment needs to accomplish.
+
+Organization roles are managed through the Roles section. For more information on creating and managing roles, see the [Roles documentation](../../../access-management/rbac/roles/).
+
 ## Pre-Run Commands
 
 Pre-run commands allow you to execute arbitrary shell commands before the deployment process starts. This is useful for environment setup, authentication with private package repositories, or other preparatory work. Note that each line of your pre-run command runs in a separate shell.
