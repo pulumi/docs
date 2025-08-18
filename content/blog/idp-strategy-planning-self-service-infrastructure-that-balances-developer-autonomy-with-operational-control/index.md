@@ -271,8 +271,8 @@ The workflow is beautifully simple: you publish standardized building blocks wit
 One pattern we see in every successful IDP implementation is that the platform reflects how the organization actually works.
 Your developers don't think in terms of individual stacks or resources. They think in terms of services, applications, and business functionality.
 
-That's why we built [Pulumi Services](https://www.pulumi.com/docs/pulumi-cloud/insights/services/) to let teams logically group stacks, environments, and resources in ways that make sense to your organization.
-This isn't just about better organization. It's about enabling effective Day 2 operations.
+That's why we built [Pulumi Services](https://www.pulumi.com/docs/idp/get-started/services/) - to let teams logically group stacks and ESC environments in ways that make sense to your organization.
+Pulumi Services improve organization by helping your team model infrastructure in a way that's familiar - simplifying Day 2 operations by providing additional context like links to relevant dashboards, Slack channels and more.
 When something breaks at 2 AM, your on-call engineer needs to understand dependencies, track usage, and manage infrastructure in the context of the business services that are actually impacted.
 
 ## How to Measure the Success of Your Internal Developer Platform
