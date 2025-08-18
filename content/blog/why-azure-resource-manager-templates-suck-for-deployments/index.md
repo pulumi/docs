@@ -29,11 +29,13 @@ meta_image: meta.png
 # `id` properties of the team member files at /data/team/team. Create a file for
 # yourself if you don't already have one.
 authors:
-    - joe-duffy
+    - sara-huddleston
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - change-me
+    - azure
+    - arm-templates
+    - azure-resource-manager
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -84,7 +86,7 @@ If the tooling can’t deploy what you need, you're forced to write scripts and 
 
 **"Configuration management is all manual and custom."**
 
-No secrets management, no config validation, no reusable environments—just fragile, homegrown scripts that break in subtle ways.
+No secrets management, no config validation, no reusable environments, just fragile, homegrown scripts that break in subtle ways.
 
 **"Our deployments are long and difficult. It all has to run sequentially."**
 
@@ -94,9 +96,7 @@ Because there's no dependency graph, no abstraction, and limited orchestration, 
 
 ## Pulumi: The Obvious Upgrade for .NET and Azure
 
-Pulumi solves these problems at their root. It lets you define your Azure infrastructure using C#—the same language you're already using to build your applications.
-
-With Pulumi, you get:
+Pulumi solves these problems at their root. It lets you define your Azure infrastructure using C#, the same language you're already using to build your applications. With Pulumi, you get:
 
 ✅ Familiar programming languages  
 ✅ Type safety and compile-time validation  
