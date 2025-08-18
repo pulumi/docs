@@ -104,6 +104,14 @@ When your Pulumi program refers to resources in the local filesystem, paths are 
 
 {{< example-program path="awsx-ecr-image" >}}
 
+## Root-relative paths
+
+You can get the directory containing the `Pulumi.yaml` file, which may differ from your working directory if it specified a `main` option (see [main attribute](/docs/reference/pulumi-yaml/#attributes)), with the `ProjectDirectory` function.
+
+The path returned is an absolute path. When using this in resource properties, ensure it's relative to the working directory. This prevents diffs from running the project on multiple machines with different roots.
+
+{{< example-program path="awsx-root-directory" >}}
+
 ## Getting the current project programmatically
 
 The {{< pulumi-getproject >}} function returns the name of the currently deploying project. This can be useful for naming or tagging resources.
@@ -166,8 +174,7 @@ variables:
 ## Stack settings files {#stack-settings-file}
 
 Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` that contains the configuration specific to this stack. This file typically resides in the root of the project directory.
-To change the location where stack configuration files are stored for a given project, set the `stackConfigDir` metadata attribute to a relative directory.
 
 For stacks that are actively developed by multiple members of a team, the recommended practice is to check them into source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings. When using ephemeral stacks, the stack settings are typically not checked into source control.
 
-For detailed information about the structure and format of stack settings files, see the [Stack settings file reference](/docs/iac/concepts/projects/stack-settings-file/). For more information about configuration and how to manage these files on the command line and programmatically, refer to the [Configuration](/docs/concepts/config/) and [Secrets](/docs/concepts/secrets/) documentation.
+For more information about configuration and how to manage these files on the command line and programmatically, refer to the [Configuration](/docs/concepts/config/) and [Secrets](/docs/concepts/secrets/) documentation.
