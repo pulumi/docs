@@ -1,5 +1,6 @@
 ---
-title: "Why Azure Resource Manager Templates Suck for Deployments"
+title: "Why ARM Sucks for Azure Deployments (and What to Do About It)"
+allow_long_title: true
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -7,7 +8,7 @@ title: "Why Azure Resource Manager Templates Suck for Deployments"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2025-08-18T21:41:10Z
+date: 2025-08-21T01:41:10Z
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -17,7 +18,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc:
+meta_desc: ARM slowing you down? Ditch the JSON pain and deploy Azure like a pro with Pulumi + C#. Faster, cleaner, and actually developer-friendly.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -55,31 +56,112 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-What you put here will appear on the index page. In most cases, you'll also want to add a Read More link after this paragraph (though technically, that's optional. To do that, just add an HTML comment like the one below.
+Azure Resource Manager (ARM) templates were supposed to make cloud infrastructure easy to automate. Instead, for many teams, they’ve become a sprawling mess of brittle JSON, manual scripts, and hours of wasted time.
+
+If you’ve ever tried to scale your Azure infrastructure with ARM, you’ve probably hit some of these pain points:
+
+- Templates that started simple… and now span thousands of lines  
+- Manual configuration stitched together with bespoke deployment logic  
+- Lack of support for key services like Databricks  
+- Slow, error-prone deployments that require multiple manual steps  
+- No reuse, no testing, and no relief
+
+ARM wasn’t built for the complexity of modern Azure workloads. If you're already familiar with general-purpose languages, there’s a better path: Pulumi.
 
 <!--more-->
 
-And then everything _after_ that comment will appear on the post page itself.
+## What Real Azure Teams Are Struggling With
 
-Either way, avoid using images or code samples [in the first 70 words](https://gohugo.io/content-management/summaries/#automatic-summary-splitting) of your post, as these may not render properly in summary contexts (e.g., on the blog home page or in social-media previews).
+From Reddit threads to customer calls, here’s what we keep hearing:
 
-## Writing the Post
+**"Our ARM templates have grown very complex and unwieldy."**
 
-For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://github.com/pulumi/docs/blob/master/STYLE-GUIDE.md).
+When everything is defined in JSON, there’s no concept of modularity. You end up with copy/pasted blocks, unreadable logic, and maintenance nightmares.
 
-## Code Samples
+**"We rely on bespoke code to deploy Databricks, which isn't supported in ARM."**
 
-```typescript
-let bucket = new aws.s3.Bucket("stuff");
-...
+If the tooling can’t deploy what you need, you're forced to write scripts and wire them in manually. That’s not DevOps—it’s duct tape.
+
+**"Configuration management is all manual and custom."**
+
+No secrets management, no config validation, no reusable environments—just fragile, homegrown scripts that break in subtle ways.
+
+**"Our deployments are long and difficult. It all has to run sequentially."**
+
+Because there's no dependency graph, no abstraction, and limited orchestration, deployments are slow and hard to parallelize.
+
+---
+
+## Pulumi: The Obvious Upgrade for .NET and Azure
+
+Pulumi solves these problems at their root. It lets you define your Azure infrastructure using C#—the same language you're already using to build your applications.
+
+With Pulumi, you get:
+
+✅ Familiar programming languages  
+✅ Type safety and compile-time validation  
+✅ Full IDE support (IntelliSense, refactoring, debugging)  
+✅ Built-in support for Databricks, Kubernetes, and more  
+✅ Automated config and secrets management  
+✅ Easy testing, reuse, and CI/CD integration
+
+Here’s a simple example: creating a Storage Account:
+
+### ⛔ ARM Template (JSON)
+
+```json
+{
+  "type": "Microsoft.Storage/storageAccounts",
+  "apiVersion": "2021-09-01",
+  "name": "[parameters('storageAccountName')]",
+  "location": "[resourceGroup().location]",
+  "sku": { "name": "Standard_LRS" },
+  "kind": "StorageV2",
+  "properties": {}
+}
 ```
 
-## Images
+### ✅ Azure with Pulumi in C#
 
-![Placeholder Image](meta.png)
+```csharp
+using Pulumi;
+using Pulumi.AzureNative.Storage;
 
-## Videos
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+        {
+            ResourceGroupName = "my-rg",
+            Sku = new SkuArgs { Name = SkuName.Standard_LRS },
+            Kind = Kind.StorageV2
+        });
+    }
+}
+```
 
-{{< youtube "kDB-YRKFfYE?rel=0" >}}
+It’s clean. It’s familiar. And it works seamlessly with your .NET tooling.
 
-Note the `?rel=0` param, which tells YouTube to suggest only videos from same channel.
+## Why It Just Works for .NET Teams
+
+If you're a Microsoft shop, Pulumi is a natural fit:
+
+- Use C# across both infrastructure and application layers
+- Share libraries and logic between services
+- Test infrastructure the same way you test code
+- Integrate with Azure DevOps and GitHub Actions
+- Manage secrets, environments, and policies as code
+
+Pulumi supports all the Azure services ARM does (and more), while giving you flexibility and control ARM never could.
+
+## Summary
+ARM templates weren’t designed to scale with the complexity of today’s cloud environments. They’re static, verbose, hard to test, and increasingly brittle.
+
+Pulumi gives you the tools to manage Azure the way you manage software—modular, testable, scalable, and secure.
+
+If you’re already building with .NET, you’re 90% of the way there.
+
+Why suffer through another slow, error-prone ARM deployment?
+
+Level up your Azure infrastructure with Pulumi.
