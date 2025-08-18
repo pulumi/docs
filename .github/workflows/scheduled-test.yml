@@ -81,6 +81,8 @@ jobs:
 
       - name: Install Pulumi
         uses: pulumi/actions@v4
+        with:
+          pulumi-version: latest
 
       - name: Check out the code
         uses: actions/checkout@v3
