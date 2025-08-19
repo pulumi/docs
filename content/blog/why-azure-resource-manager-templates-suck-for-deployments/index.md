@@ -65,13 +65,31 @@ Here’s a simple example: creating a Storage Account:
 
 ```json
 {
-  "type": "Microsoft.Storage/storageAccounts",
-  "apiVersion": "2021-09-01",
-  "name": "[parameters('storageAccountName')]",
-  "location": "[resourceGroup().location]",
-  "sku": { "name": "Standard_LRS" },
-  "kind": "StorageV2",
-  "properties": {}
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountName": {
+      "type": "string",
+      "metadata": { "description": "Globally unique, 3–24 lowercase letters and numbers." }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2021-09-01",
+      "name": "[parameters('storageAccountName')]",
+      "location": "[resourceGroup().location]",
+      "sku": { "name": "Standard_LRS" },
+      "kind": "StorageV2",
+      "properties": {}
+    }
+  ],
+  "outputs": {
+    "storageAccountId": {
+      "type": "string",
+      "value": "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]"
+    }
+  }
 }
 ```
 
@@ -85,7 +103,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+        var storageAccount = new StorageAccount("mystorage", new StorageAccountArgs
         {
             ResourceGroupName = "my-rg",
             Sku = new SkuArgs { Name = SkuName.Standard_LRS },
