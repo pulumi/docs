@@ -9,14 +9,9 @@
         </div>
     </header>
 
-    <header class="page-hero bg-gradient-to-r from-white from-0% via-violet-100 via-50% to-white to-100% border-b border-gray-300 xl:hidden">
-        <div class="page-hero-title">
-            <h1>
-                <span><span class="rainbow-text" data-text="{{ .Params.overview.title }}">{{ .Params.overview.title }}</span></span>
-            </h1>
-                <p class="page-hero-subtitle">{{ .Params.overview.subtitle }}</p>
-        </div>
-    </header>
+    <div class="xl:hidden">
+        {{ partial "hero.html" (dict "title" "Meet Neo" "subtitle" "Your Newest Platform Engineer") }}
+    </div>"
 {{ end }}
 
 {{ define "main" }}
@@ -30,9 +25,6 @@
                 <div class="flex-col gap-y-6">
                 <div class="flex justify-center my-3">
                     <pulumi-hubspot-form form-id="61226f00-68f3-4a68-b11f-c2ba38189a2b"class="newsletter newsletter-dark-border"></pulumi-hubspot-form>
-                </div>
-                <div class="mt-8 text-center">
-                    <a href="{{ .Params.overview.link }}" class="btn-secondary hidden sm:inline">{{ .Params.overview.cta}}</a>
                 </div>
             </div>
             </div>
