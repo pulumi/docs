@@ -1,244 +1,291 @@
-<p align="center">
-  <a href="https://www.pulumi.com?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=top-logo" title="Pulumi Documentation - Build and Deploy Infrastructure as Code Solutions on Any Cloud">
-    <img src="https://www.pulumi.com/images/logo/logo-on-white-box.svg?" width="350">
-   </a>
+[bep]: https://github.com/bep
+[bugs]: https://github.com/gohugoio/hugo/issues?q=is%3Aopen+is%3Aissue+label%3ABug
+[contributing]: CONTRIBUTING.md
+[create a proposal]: https://github.com/gohugoio/hugo/issues/new?labels=Proposal%2C+NeedsTriage&template=feature_request.md
+[documentation repository]: https://github.com/gohugoio/hugoDocs
+[documentation]: https://gohugo.io/documentation
+[dragonfly bsd, freebsd, netbsd, and openbsd]: https://gohugo.io/installation/bsd
+[forum]: https://discourse.gohugo.io
+[friends]: https://github.com/gohugoio/hugo/graphs/contributors
+[go]: https://go.dev/
+[hugo modules]: https://gohugo.io/hugo-modules/
+[installation]: https://gohugo.io/installation
+[issue queue]: https://github.com/gohugoio/hugo/issues
+[linux]: https://gohugo.io/installation/linux
+[macos]: https://gohugo.io/installation/macos
+[prebuilt binary]: https://github.com/gohugoio/hugo/releases/latest
+[requesting help]: https://discourse.gohugo.io/t/requesting-help/9132
+[spf13]: https://github.com/spf13
+[static site generator]: https://en.wikipedia.org/wiki/Static_site_generator
+[support]: https://discourse.gohugo.io
+[themes]: https://themes.gohugo.io/
+[twitter]: https://twitter.com/gohugoio
+[website]: https://gohugo.io
+[windows]: https://gohugo.io/installation/windows
 
-  [![Slack](http://www.pulumi.com/images/docs/badges/slack.svg)](https://slack.pulumi.com?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=slack-badge)
-  [![GitHub Discussions](https://img.shields.io/github/discussions/pulumi/pulumi)](https://github.com/pulumi/pulumi/discussions)
-  [![License](https://img.shields.io/github/license/pulumi/pulumi)](LICENSE)
-  ![Deployment Status](https://github.com/pulumi/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=master&event=push)
-  ![Examples Tests](https://github.com/pulumi/docs/actions/workflows/scheduled-test.yml/badge.svg?branch=master)
+<a href="https://gohugo.io/"><img src="https://raw.githubusercontent.com/gohugoio/gohugoioTheme/master/static/images/hugo-logo-wide.svg?sanitize=true" alt="Hugo" width="565"></a>
 
-# Pulumi Documentation Site
+A fast and flexible static site generator built with love by [bep], [spf13], and [friends] in [Go].
 
-## Table of contents
+---
 
-* :blue_book: [View Pulumi Docs](https://pulumi.com/docs/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-toc)
-* :clap: [Contributing](#Contributing)
-* :toolbox:	[Setup and Development](#setup-and-development)
-  * [Generating SDK and CLI documentation](#generating-sdk-and-cli-documentation)
-* :busts_in_silhouette: [Pulumi Community](#community)
-* :blue_book: [Pulumi Developer Resources](#pulumi-resources)
-* :compass:	[Pulumi Roadmap](#pulumi-roadmap)
+[![GoDoc](https://godoc.org/github.com/gohugoio/hugo?status.svg)](https://godoc.org/github.com/gohugoio/hugo)
+[![Tests on Linux, MacOS and Windows](https://github.com/gohugoio/hugo/workflows/Test/badge.svg)](https://github.com/gohugoio/hugo/actions?query=workflow%3ATest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gohugoio/hugo)](https://goreportcard.com/report/github.com/gohugoio/hugo)
 
-## About this repository
+[Website] | [Installation] | [Documentation] | [Support] | [Contributing] | <a rel="me" href="https://fosstodon.org/@gohugoio">Mastodon</a>
 
-This repository hosts all of the hand-crafted documentation, guides, tutorials, blogs, and landing pages that you see on [https://pulumi.com](https://pulumi.com?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=about-docs), as well as all of the assets and templates we use to render the Pulumi website. It also houses the documentation that we generate for the Pulumi CLI and language SDKs, and it's responsible for building and deploying the website (with Pulumi, of course!).
+## Overview
 
-### What's not in this repository
+Hugo is a [static site generator] written in [Go], optimized for speed and designed for flexibility. With its advanced templating system and fast asset pipelines, Hugo renders a complete site in seconds, often less.
 
-* Pulumi AI: You'll find the open-source components of the Pulumi AI project at https://github.com/pulumi/pulumi-ai.
-* Pulumi Registry: You'll find everything related to the Registry at https://github.com/pulumi/registry.
+Due to its flexible framework, multilingual support, and powerful taxonomy system, Hugo is widely used to create:
+
+- Corporate, government, nonprofit, education, news, event, and project sites
+- Documentation sites
+- Image portfolios
+- Landing pages
+- Business, professional, and personal blogs
+- Resumes and CVs
+
+Use Hugo's embedded web server during development to instantly see changes to content, structure, behavior, and presentation. Then deploy the site to your host, or push changes to your Git provider for automated builds and deployment.
+
+Hugo's fast asset pipelines include:
+
+- CSS bundling &ndash; transpilation (Sass), tree shaking, minification, source maps, SRI hashing, and PostCSS integration
+- JavaScript bundling &ndash; transpilation (TypeScript, JSX), tree shaking, minification, source maps, and SRI hashing
+- Image processing &ndash; convert, resize, crop, rotate,  adjust colors, apply filters, overlay text and images, and extract EXIF data
+
+And with [Hugo Modules], you can share content, assets, data, translations, themes, templates, and configuration with other projects via public or private Git repositories.
+
+## Sponsors
+
+<p>&nbsp;</p>
+<p float="left">
+  <a href="https://www.linode.com/?utm_campaign=hugosponsor&utm_medium=banner&utm_source=hugogithub" target="_blank"><img src="https://raw.githubusercontent.com/gohugoio/gohugoioTheme/master/assets/images/sponsors/linode-logo_standard_light_medium.png" width="200" alt="Linode"></a>
+<p>&nbsp;</p>
+
+## Installation
+
+Install Hugo from a [prebuilt binary], package manager, or package repository. Please see the installation instructions for your operating system:
+
+- [macOS]
+- [Linux]
+- [Windows]
+- [DragonFly BSD, FreeBSD, NetBSD, and OpenBSD]
+
+## Build from source
+
+Hugo is available in two editions: standard and extended. With the extended edition you can:
+
+- Encode to the WebP format when processing images. You can decode WebP images with either edition.
+- Transpile Sass to CSS using the embedded LibSass transpiler. The extended edition is not required to use the Dart Sass transpiler.
+
+Prerequisites to build Hugo from source:
+
+- Standard edition: Go 1.20 or later
+- Extended edition: Go 1.20 or later, and GCC
+
+Build the standard edition:
+
+```text
+go install github.com/gohugoio/hugo@latest
+```
+
+Build the extended edition:
+
+```text
+CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
+```
+
+## Documentation
+
+Hugo's [documentation] includes installation instructions, a quick start guide, conceptual explanations, reference information, and examples.
+
+Please submit documentation issues and pull requests to the [documentation repository].
+
+## Support
+
+Please **do not use the issue queue** for questions or troubleshooting. Unless you are certain that your issue is a software defect, use the [forum].
+
+Hugo’s [forum] is an active community of users and developers who answer questions, share knowledge, and provide examples. A quick search of over 20,000 topics will often answer your question. Please be sure to read about [requesting help] before asking your first question.
 
 ## Contributing
 
-We welcome all contributions to this repository. Be sure to read our [contributing guide](CONTRIBUTING.md) and [code of conduct](CODE-OF-CONDUCT.md) first, then [submit a pull request](https://github.com/pulumi/docs/pulls) here on GitHub. If you see something that needs fixing but don't have time to contribute, you can also [file an issue](https://github.com/pulumi/docs/issues).
+You can contribute to the Hugo project by:
 
-See also:
+- Answering questions on the [forum]
+- Improving the [documentation]
+- Monitoring the [issue queue]
+- Creating or improving [themes]
+- Squashing [bugs]
 
-* [Publishing a Pulumi blog post](./BLOGGING.md)
-* [Documentation and coding style guide](./STYLE-GUIDE.md)
+Please submit documentation issues and pull requests to the [documentation repository].
 
-# Setup and Development
+If you have an idea for an enhancement or new feature, create a new topic on the [forum] in the "Feature" category. This will help you to:
 
-### Toolchain
+- Determine if the capability already exists
+- Measure interest
+- Refine the concept
 
-We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
+If there is sufficient interest, [create a proposal]. Do not submit a pull request until the project lead accepts the proposal.
 
-* [Hugo](https://gohugo.io/installation/) (>= 0.126.0)
-  * Hugo 0.126.0 is highly recommended. This is the version we use in our deployment pipelines.
-* [Node.js](https://nodejs.org/en/download/package-manager) (>= 18)
-* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
+For a complete guide to contributing to Hugo, see the [Contribution Guide](CONTRIBUTING.md).
 
-Additionally, to build the SDK and CLI documentation, you'll also need:
+## Dependencies
 
-* [Go](https://golang.org/) (>= 1.21)
-* [Python](https://www.python.org) (>= 3.7)
-* [.NET](https://dotnet.microsoft.com/en-us/download) (>= 6)
-* [Pulumi](https://www.pulumi.com/docs/install)
-* [Pulumi ESC](https://www.pulumi.com/docs/install/esc)
+Hugo stands on the shoulders of great open source libraries. Run `hugo env --logLevel info` to display a list of dependencies.
 
-### Repository layout
+<details>
+<summary>See current dependencies</summary>
 
-* **Documentation and page content**: We generally follow Hugo's [directory-structure conventions](https://gohugo.io/getting-started/directory-structure/), with Markdown files in `./content`, layout files (including partials and shortcodes) in `./layout`, and data files in `./data`. There are also several [Hugo templates](https://gohugo.io/content-management/archetypes/) available in `./archetypes` for bootstrapping common content types like blog posts and Learn modules.
-
-* **CSS and JavaScript**: We build our CSS and JavaScript bundles separately from Hugo and check in the built artifacts at `./assets`. We use [Tailwind](https://tailwindcss.com/) for CSS, [Stencil](https://stenciljs.com/) for web components, and [jQuery](https://jquery.com/) for wiring things together in general. Source files for these are in `./theme`.
-
-* **Examples**: Many of the examples we include in our documentation are maintained as full Pulumi programs and tested daily. You'll find them all at `./static/programs`.
-
-* **Infrastructure**: We deploy the website as a statically built artifact to a unique Amazon S3 bucket on every commit to the base branch of this repo. The Pulumi program that handles this is located in `./infrastructure`. This is also where you'll find the CloudFront configuration that handles proxying [Pulumi AI](https://pulumi.com/ai) and the [Pulumi Registry](https://pulumi.com/registry).
-
-### Using the Makefile
-
-The `Makefile` exposes a number of useful helpers for authoring:
-
-* `make ensure` resolves and installs all dependencies
-* `make lint` checks all Markdown files for correctness
-* `make format` formats all applicable files to ensure they conform to style guidelines
-* `make serve` runs the Hugo server locally at <http://localhost:1313> and watches for changes. You can set `BUILD_FUTURE=false` to simulate production behavior by excluding future-dated content (e.g., `BUILD_FUTURE=false make serve`)
-* `make serve-all` does the same as `make serve`, but also watches for changes to CSS and JS source files
-* `make build` generates the website and writes it to `./public`
-* `make build-assets` builds only the CSS and JavaScript asset bundles
-* `make serve-static` runs a local HTTP server that serves the contents of `./public`
-* `make test` tests all of the programs in `./static/programs` (see `./scripts/programs/test.sh` for options)
-* `make generate` builds the TypeScript, Python, and Pulumi CLI documentation
-* `make new-blog-post` scaffolds a new, bare-bones blog post with placeholder content
-* `make new-tutorial` scaffolds a new single-page tutorial
-* `make new-tutorial-module` scaffolds a new multi-page tutorial
-* `make new-tutorial-topic` scaffolds a new tutorial topic and adds it to an existing multi-page tutorial
-* `make new-example-program` generates a new multi-language set of examples at `./static/programs`
-* `make new-dev-stack` creates a new dev stack (in the `pulumi` organization, which you must belong to)
-* `make deploy-dev-stack` runs a build, deploys to S3, runs the tests, and deploys to the selected dev stack
-
-As a content contributor, the commands you'll use most often are these:
-
-```bash
-make ensure    # Install or update dependencies.
-make serve     # Run the development server locally on http://localhost:1313.
-make lint      # Identify any Markdown or code-formatting issues so you can fix them.
+```text
+cloud.google.com/go/compute/metadata="v0.2.3"
+cloud.google.com/go/iam="v1.1.3"
+cloud.google.com/go/storage="v1.31.0"
+cloud.google.com/go="v0.110.8"
+github.com/Azure/azure-sdk-for-go/sdk/azcore="v1.7.0"
+github.com/Azure/azure-sdk-for-go/sdk/azidentity="v1.3.0"
+github.com/Azure/azure-sdk-for-go/sdk/internal="v1.3.0"
+github.com/Azure/azure-sdk-for-go/sdk/storage/azblob="v1.1.0"
+github.com/Azure/go-autorest/autorest/to="v0.4.0"
+github.com/AzureAD/microsoft-authentication-library-for-go="v1.0.0"
+github.com/BurntSushi/locker="v0.0.0-20171006230638-a6e239ea1c69"
+github.com/PuerkitoBio/purell="v1.1.1"
+github.com/PuerkitoBio/urlesc="v0.0.0-20170810143723-de5bf2ad4578"
+github.com/alecthomas/chroma/v2="v2.11.1"
+github.com/armon/go-radix="v1.0.0"
+github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream="v1.4.11"
+github.com/aws/aws-sdk-go-v2/config="v1.18.32"
+github.com/aws/aws-sdk-go-v2/credentials="v1.13.31"
+github.com/aws/aws-sdk-go-v2/feature/ec2/imds="v1.13.7"
+github.com/aws/aws-sdk-go-v2/feature/s3/manager="v1.11.76"
+github.com/aws/aws-sdk-go-v2/internal/configsources="v1.1.37"
+github.com/aws/aws-sdk-go-v2/internal/endpoints/v2="v2.4.31"
+github.com/aws/aws-sdk-go-v2/internal/ini="v1.3.38"
+github.com/aws/aws-sdk-go-v2/internal/v4a="v1.1.0"
+github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding="v1.9.12"
+github.com/aws/aws-sdk-go-v2/service/internal/checksum="v1.1.32"
+github.com/aws/aws-sdk-go-v2/service/internal/presigned-url="v1.9.31"
+github.com/aws/aws-sdk-go-v2/service/internal/s3shared="v1.15.0"
+github.com/aws/aws-sdk-go-v2/service/s3="v1.38.1"
+github.com/aws/aws-sdk-go-v2/service/sso="v1.13.1"
+github.com/aws/aws-sdk-go-v2/service/ssooidc="v1.15.1"
+github.com/aws/aws-sdk-go-v2/service/sts="v1.21.1"
+github.com/aws/aws-sdk-go-v2="v1.20.0"
+github.com/aws/aws-sdk-go="v1.48.2"
+github.com/aws/smithy-go="v1.14.0"
+github.com/bep/clocks="v0.5.0"
+github.com/bep/debounce="v1.2.0"
+github.com/bep/gitmap="v1.1.2"
+github.com/bep/goat="v0.5.0"
+github.com/bep/godartsass/v2="v2.0.0"
+github.com/bep/godartsass="v1.2.0"
+github.com/bep/golibsass="v1.1.1"
+github.com/bep/gowebp="v0.3.0"
+github.com/bep/lazycache="v0.2.0"
+github.com/bep/logg="v0.3.0"
+github.com/bep/mclib="v1.20400.20402"
+github.com/bep/overlayfs="v0.6.0"
+github.com/bep/simplecobra="v0.3.2"
+github.com/bep/tmc="v0.5.1"
+github.com/clbanning/mxj/v2="v2.7.0"
+github.com/cli/safeexec="v1.0.1"
+github.com/cpuguy83/go-md2man/v2="v2.0.2"
+github.com/disintegration/gift="v1.2.1"
+github.com/dlclark/regexp2="v1.10.0"
+github.com/dustin/go-humanize="v1.0.1"
+github.com/evanw/esbuild="v0.19.7"
+github.com/fatih/color="v1.16.0"
+github.com/frankban/quicktest="v1.14.6"
+github.com/fsnotify/fsnotify="v1.7.0"
+github.com/getkin/kin-openapi="v0.120.0"
+github.com/ghodss/yaml="v1.0.0"
+github.com/go-openapi/jsonpointer="v0.19.6"
+github.com/go-openapi/swag="v0.22.4"
+github.com/gobuffalo/flect="v1.0.2"
+github.com/gobwas/glob="v0.2.3"
+github.com/gohugoio/go-i18n/v2="v2.1.3-0.20230805085216-e63c13218d0e"
+github.com/gohugoio/locales="v0.14.0"
+github.com/gohugoio/localescompressed="v1.0.1"
+github.com/golang-jwt/jwt/v4="v4.5.0"
+github.com/golang/groupcache="v0.0.0-20210331224755-41bb18bfe9da"
+github.com/golang/protobuf="v1.5.3"
+github.com/google/go-cmp="v0.6.0"
+github.com/google/s2a-go="v0.1.7"
+github.com/google/uuid="v1.4.0"
+github.com/google/wire="v0.5.0"
+github.com/googleapis/enterprise-certificate-proxy="v0.3.2"
+github.com/googleapis/gax-go/v2="v2.12.0"
+github.com/gorilla/websocket="v1.5.1"
+github.com/hairyhenderson/go-codeowners="v0.4.0"
+github.com/hashicorp/golang-lru/v2="v2.0.1"
+github.com/invopop/yaml="v0.2.0"
+github.com/jdkato/prose="v1.2.1"
+github.com/jmespath/go-jmespath="v0.4.0"
+github.com/josharian/intern="v1.0.0"
+github.com/kr/pretty="v0.3.1"
+github.com/kr/text="v0.2.0"
+github.com/kylelemons/godebug="v1.1.0"
+github.com/kyokomi/emoji/v2="v2.2.12"
+github.com/mailru/easyjson="v0.7.7"
+github.com/marekm4/color-extractor="v1.2.1"
+github.com/mattn/go-colorable="v0.1.13"
+github.com/mattn/go-isatty="v0.0.20"
+github.com/mattn/go-runewidth="v0.0.9"
+github.com/mitchellh/hashstructure="v1.1.0"
+github.com/mitchellh/mapstructure="v1.5.0"
+github.com/mohae/deepcopy="v0.0.0-20170929034955-c48cc78d4826"
+github.com/muesli/smartcrop="v0.3.0"
+github.com/niklasfasching/go-org="v1.7.0"
+github.com/olekukonko/tablewriter="v0.0.5"
+github.com/pelletier/go-toml/v2="v2.1.0"
+github.com/perimeterx/marshmallow="v1.1.5"
+github.com/pkg/browser="v0.0.0-20210911075715-681adbf594b8"
+github.com/pkg/errors="v0.9.1"
+github.com/rogpeppe/go-internal="v1.11.0"
+github.com/russross/blackfriday/v2="v2.1.0"
+github.com/rwcarlsen/goexif="v0.0.0-20190401172101-9e8deecbddbd"
+github.com/sanity-io/litter="v1.5.5"
+github.com/sass/dart-sass/compiler="1.63.2"
+github.com/sass/dart-sass/implementation="1.63.2"
+github.com/sass/dart-sass/protocol="2.0.0"
+github.com/sass/libsass="3.6.5"
+github.com/spf13/afero="v1.10.0"
+github.com/spf13/cast="v1.5.1"
+github.com/spf13/cobra="v1.7.0"
+github.com/spf13/fsync="v0.9.0"
+github.com/spf13/pflag="v1.0.5"
+github.com/tdewolff/minify/v2="v2.20.7"
+github.com/tdewolff/parse/v2="v2.7.5"
+github.com/webmproject/libwebp="v1.3.2"
+github.com/yuin/goldmark-emoji="v1.0.2"
+github.com/yuin/goldmark="v1.6.0"
+go.opencensus.io="v0.24.0"
+go.uber.org/atomic="v1.11.0"
+go.uber.org/automaxprocs="v1.5.3"
+gocloud.dev="v0.34.0"
+golang.org/x/crypto="v0.15.0"
+golang.org/x/exp="v0.0.0-20221031165847-c99f073a8326"
+golang.org/x/image="v0.13.0"
+golang.org/x/mod="v0.14.0"
+golang.org/x/net="v0.18.0"
+golang.org/x/oauth2="v0.13.0"
+golang.org/x/sync="v0.5.0"
+golang.org/x/sys="v0.14.0"
+golang.org/x/text="v0.14.0"
+golang.org/x/time="v0.3.0"
+golang.org/x/tools="v0.15.0"
+golang.org/x/xerrors="v0.0.0-20220907171357-04be3eba64a2"
+google.golang.org/api="v0.151.0"
+google.golang.org/genproto/googleapis/api="v0.0.0-20231016165738-49dd2c1f3d0b"
+google.golang.org/genproto/googleapis/rpc="v0.0.0-20231030173426-d783a09b4405"
+google.golang.org/genproto="v0.0.0-20231016165738-49dd2c1f3d0b"
+google.golang.org/grpc="v1.59.0"
+google.golang.org/protobuf="v1.31.0"
+gopkg.in/yaml.v2="v2.4.0"
+gopkg.in/yaml.v3="v3.0.1"
+howett.net/plist="v1.0.0"
+software.sslmate.com/src/go-pkcs12="v0.2.0"
 ```
-
-## Generating SDK and CLI documentation
-
-We generate two kinds of reference documentation with this repository: language-specific SDK docs (for a subset of Pulumi packages) and CLI docs (for command-line tools like `pulumi` and `esc`). Instructions for generating both types of docs are listed below.
-
-### SDK docs
-
-We build and host language-specific SDK documentation for the following Pulumi packages:
-
-* [pulumi](https://github.com/pulumi/pulumi)
-* [pulumi-policy](https://github.com/pulumi/pulumi-policy)
-
-The Node.js, Python, and .NET versions of these docs are built using language-specific tooling and checked into the repository as stand-alone docsets. (Go versions are sourced directly from GitHub and hosted at [pkg.go.dev](/github.com/pulumi/pulumi/sdk/v3/go/pulumi).)
-
-To build the docs for these packages yourself, you'll first need to clone each package into a sibling directory. The easiest way to do this is to use the `make update-repos` helper:
-
-```bash
-# Clone and update all of the repositories above into sibling directories of this repo.
-make update-repos
-```
-
-Once you've done this, you can generate the docs for each package.
-
-### Generating the Node.js and Python SDK docs
-
-The Node and Python SDK docs are built with [TypeDoc](http://typedoc.org/) and [Pydocgen](https://pypi.org/project/pydocgen/). The easiest way to generate these docs is to use the `make generate` helper:
-
-```bash
-make ensure          # Install dependencies.
-make update-repos    # Clone and update all package repositories.
-make generate        # Generate the Node.js and Python docs for all packages.
-```
-
-Generated docs are rendered into the `./static-prebuilt/nodejs` and `./static-prebuilt/python` folders. At deploy-time, we copy the contents of these folders into `./docs/reference/pkg` to make them available on pulumi.com -- for example, [here](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi) and [here](https://www.pulumi.com/docs/reference/pkg/python/pulumi).
-
-See below to learn how to view these rendered docs locally.
-
-### Generating the .NET SDK docs
-
-The .NET SDK docs are built with [Docfx](https://github.com/dotnet/docfx). To generate these, you'll need both `dotnet` and `docfx` installed and on your PATH. For example, assuming you've already [installed the `dotnet` executable](https://dotnet.microsoft.com/en-us/download) for your platform, you can:
-
-```bash
-make ensure                     # Install dependencies.
-make update-repos               # Clone and update all package repositories.
-dotnet tool install -g docfx    # Install docfx globally, following the instructions to ensure it's on your PATH.
-docfx build docfx/docfx.json    # Generate the .NET docs.
-```
-
-### CLI docs
-
-The `make generate` helper also generates the Pulumi CLI documentation. If you'd prefer not to use that helper (e.g., to avoid having to clone all the repos and generate SDK docs), you can build them directly using the `pulumi` and `esc` CLIs:
-
-```bash
-pulumi gen-markdown ./content/docs/cli/commands    # Generate Pulumi CLI documentation.
-esc gen-docs ./content/docs/esc-cli/commands       # Generate Pulumi ESC CLI documentation.
-```
-
-Generated docs reflect the functionality of the currently installed CLI, so make sure you've installed the latest public version of each one ([`pulumi`](https://github.com/pulumi/pulumi/releases), [`esc`](https://github.com/pulumi/esc/releases)) before running these commands and submitting your PR.
-
-### Viewing rendered SDK and CLI docs locally
-
-After building the SDK and/or CLI docs, you can view them locally with `make build` and `make serve-static`.
-
-For example, from a fresh clone of this repository, you can install all dependencies and generate and browse the Node.js, Python, and Pulumi CLI docs using the following sequence:
-
-```bash
-make ensure          # Install dependencies.
-make update-repos    # Clone and update all package repositories.
-make generate        # Generate the Node.js, Python, and Pulumi CLI docs.
-make build           # Build the website, copying all generated docs into place.
-make serve-static    # Serve the built website statically to make sure everything looks right.
-```
-
-With `make serve-static` running, you can browse to the docs by navigating to http://localhost:8080/docs. Then, from the left-hand menu:
-
-* Choose Languages &amp; SDKs followed by your language of choice, then scroll to the bottom of the page to find the package you're interested in
-* Choose Pulumi CLI or Pulumi ESC CLI, then Commands
-
-### Checking in generated docs
-
-All generated docs, including all Node.js, Python, and .NET SDK docs and all Pulumi and Pulumi ESC CLI docs, get checked into this repository.
-
-## Search
-
-We use [Algolia](https://www.algolia.com/) for search, and we update the Algolia search index [on every deployment](https://github.com/pulumi/docs/blob/master/scripts/ci-push.sh#L13) of the website. Whether you're adding a new page or updating an existing one, your changes will be reflected in search results within a few seconds of release.
-
-### Creating findable content
-
-We currently index every page of the website, including the blog and the Registry. However, we do not index all of the content of every page &mdash; we only index certain properties of the page. These include:
-
-* Page titles (specifically the `title` and `h1` frontmatter params)
-* Page descriptions (specifically the `meta_desc` param)
-* Second-level headings (e.g., those prefixed with `##` in Markdown files)
-* Keywords, if any (via the `search.keywords` param)
-* Authors, if any (via the `authors` param)
-* Tags, if any (via the `tags` param)
-
-Because of this, it's important to be thoughtful about the terms you use for these fields, especially titles, keywords, descriptions, and H2 headings. If you want your content to be findable by specific terms, you must make sure those terms exist in one or more of the fields listed above.
-
-For example, if you were writing a guide to building an ETL pipeline with Redshift, and you wanted to make sure the page would be surfaced for queries like `redshift data warehouse etl`, you might construct the page's frontmatter in the following way:
-
-```yaml
-title: Build an ETL pipeline with Redshift and AWS Glue
-meta_desc: Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi.
-search:
-    keywords:
-        - data warehouse
-```
-
-In this case, the optional `search.keywords` field is included to cover the terms `data warehouse`, as those terms don't exist in the page's title or description. If it weren't, queries for `data warehouse` would fail to match this particular page.
-
-Certain fields also rank higher than others in terms of their overall relevance. (Titles and keywords, for example, are considered more relevant than descriptions.) For a full list of these rankings, along with all of the rules we apply to the search index, see the [search app in pulumi/docs](https://github.com/pulumi/docs/blob/master/scripts/search/settings.js).
-
-### Keeping pages out of search results
-
-To keep a page from showing up in search results (including on Google, etc.), use the `block_external_search_index` frontmatter parameter:
-
-```yaml
-title: My page
-...
-block_external_search_index: true
-```
-
-## Community
-
-Engage with our community to elevate your developer experience:
-
-* **Join our online [Pulumi Community on Slack](https://slack.pulumi.com/?utm_campaign=pulumi-docs-repo&utm_source=github.com&utm_medium=welcome-slack)** - Interact with thousands of Pulumi developers for collaborative problem-solving and knowledge-sharing!
-* **Join a [Local Pulumi User Groups (PUGs)](https://www.meetup.com/pro/pugs/)**-  Attend tech-packed meetups and hands-on virtual or in-person workshops.
-* **Follow [@PulumiCorp](https://twitter.com/PulumiCorp) on X (Twitter)** - Get real-time updates, technical insights, and sneak peeks into the latest features.
-* **Subscribe to our YouTube Channel, [PulumiTV](https://www.youtube.com/@PulumiTV)** - Learn about AI / ML essentials, launches, workshops, demos and more.
-* **Follow our [LinkedIn](https://www.linkedin.com/company/pulumi/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-community)** - Uncover company news, achievements, and behind-the-scenes glimpses.
-
-## Pulumi developer resources
-
-Delve deeper into Pulumi with additional resources:
-
-* [Get Started with Pulumi](https://www.pulumi.com/docs/get-started/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Deploy a simple application in AWS, Azure, Google Cloud, or Kubernetes using Pulumi.
-* [Registry](https://www.pulumi.com/registry/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources): Search for packages and learn about the supported resources you need. Install the package directly into your project, browse the API documentation, and start building.
-* [Pulumi Blog](https://www.pulumi.com/blog/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Stay in the loop with our latest tech announcements, insightful articles, and updates.
-* [Try Pulumi AI](https://www.pulumi.com/ai/?utm_campaign=pulumi-docs-github-repo&utm_source=github.com&utm_medium=docs-resources) - Use natural-language prompts to generate Pulumi infrastructure-as-code programs in any language.
-
-## Pulumi roadmap
-
-Review the planned work for the upcoming quarter and a selected backlog of issues that are on our mind but not yet scheduled on the [Pulumi Roadmap.](https://github.com/orgs/pulumi/projects/44)
+</details>
