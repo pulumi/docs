@@ -17,28 +17,28 @@ hero:
         (ARM) templates using Pulumi’s modern SDKs.
     ide:
         tabs:
-        - title: C#
-          language: csharp
-          code: |
-            using Pulumi;
-            using Pulumi.AzureNative.Resources;
-            using Pulumi.AzureNative.Storage;
-            using Pulumi.AzureNative.Storage.Inputs;
-
-            class MyStack : Stack
-            {
-                public MyStack()
+            - title: C#
+              language: csharp
+              code: |
+                using Pulumi;
+                using Pulumi.AzureNative.Resources;
+                using Pulumi.AzureNative.Storage;
+                using Pulumi.AzureNative.Storage.Inputs;
+    
+                class MyStack : Stack
                 {
-                    var resourceGroup = new ResourceGroup("resourceGroup");
-
-                    var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+                    public MyStack()
                     {
-                        ResourceGroupName = resourceGroup.Name,
-                        Sku = new SkuArgs { Name = "Standard_LRS" },
-                        Kind = "StorageV2"
-                    });
+                        var resourceGroup = new ResourceGroup("resourceGroup");
+    
+                        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+                        {
+                            ResourceGroupName = resourceGroup.Name,
+                            Sku = new SkuArgs { Name = "Standard_LRS" },
+                            Kind = "StorageV2"
+                        });
+                    }
                 }
-            }
             - title: TypeScript
               language: typescript
               code: |
@@ -148,35 +148,15 @@ hero:
                     }
                 }
 
-customer_logos:
-  title: Powering top engineering teams
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - sans
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
-
 azure_overview:
-  title: Infrastructure as Code in any Programming Language
+  title: Azure Infrastructure in any Programming Language
   list:
     - Define infrastructure in JavaScript, TypeScript, Python, Go, Java, YAML, or any .NET language, including C#, F#, and VB.
     - Increase your productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate all of your Azure resources.
     - Keep your cloud secure and in compliance by enforcing policies on every deployment.
     - Codify best practices and policies, then share them with your team or community as self-service architectures.
   cta: Try Pulumi Cloud for FREE
-  cta_url: "/signup"
+  cta_url: "https://app.pulumi.com/signup"
 
 arm2pulumi:
   title: ARM &rarr; Pulumi
