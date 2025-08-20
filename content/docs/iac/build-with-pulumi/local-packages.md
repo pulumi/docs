@@ -13,7 +13,7 @@ Pulumi Packages are the core technology that enables cloud infrastructure resour
 
 ## What are Local Packages?
 
-Local packages are Pulumi packages with schemas generated on your computer, instead of being checked into a provider repository and published to the Pulumi Registry. All Pulumi packages include a [schema](/docs/iac/using-pulumi/pulumi-packages/schema/) that defines the resources and functions exposed by the package. These packages are frequently part of the Pulumi experience in several contexts:
+Local packages are Pulumi packages with sdks generated on your computer, instead of being checked into a provider repository and published to the Pulumi Registry. All Pulumi packages include a [schema](/docs/iac/using-pulumi/pulumi-packages/schema/) that defines the resources and functions exposed by the package. These packages are frequently part of the Pulumi experience in several contexts:
 
 - When using parameterized providers like [pulumi-terraform-provider](https://www.pulumi.com/registry/packages/terraform-provider/).
 - When working with components as packages.
