@@ -64,17 +64,19 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 
 This repository includes a dev container configuration that provides a fully pre-configured environment with all the tools you need for developing and contributing to the Pulumi documentation. Using the dev container eliminates the need to install dependencies manually, as it comes with:
 
-* Hugo, Node.js, Yarn, and Markdown tooling
-* Go, Python, .NET, and the Pulumi CLI
-* VS Code extensions for Markdown linting, link checking, and Pulumi support
-* Google Cloud CLI and GitHub CLI
+* Hugo, Node.js, Yarn, and Markdown tooling.
+* Go, Python, .NET, and the Pulumi CLI.
+* VS Code extensions for Markdown linting, link checking, and Pulumi support.
+* Google Cloud CLI and GitHub CLI.
 
 To use the dev container:
 
-1. Install [VS Code](https://code.visualstudio.com/) and the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-2. Clone this repository
-3. Open the repository in VS Code
-4. When prompted, click "Reopen in Container" or run the "Dev Containers: Reopen in Container" command from the Command Palette
+1. Install [Docker](https://www.docker.com) (or another compatible container engine), [VS Code](https://code.visualstudio.com/), and the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+1. Clone this repository
+1. Open the repository in VS Code
+1. When prompted, click "Reopen in Container" or run the "Dev Containers: Reopen in Container" command from the Command Palette
+
+The `.vscode` directory is preconfigured with launch and build tasks. When using default keybindings, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the site, and <kbd>F5</kbd> to launch the server locally. All of the `make` commands can be listed in the UI pressing <kbd>F1</kbd> and selecting **Run Task...**.
 
 For more information on dev containers, see the [VS Code Dev Containers documentation](https://code.visualstudio.com/docs/devcontainers/containers).
 
