@@ -87,7 +87,7 @@ This bit of info is serious. If you missed it, bad things could happen.
 ## Lists
 
 * Present instructional steps in lists.
-* Ordered list items should begin with `1.` regardless of the number of items. They are rendered with correct numbering automatically.
+* All ordered list items should begin with `1.` regardless of their position in the list. They are rendered with correct numbering automatically.
 
   **Example**  
 
