@@ -189,11 +189,21 @@ detail_sections:
           icon: security
           icon_color: salmon
           description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
+    
+        - title: Multi Cloud
+          icon: cloud
+          icon_color: blue
+          description: Pulumi allows you to use top programming languages across all public clouds with support for over +170 popular cloud and service integrations, including private and hybrid clouds helping ensure any multi-cloud strategy is successful.
 
         - title: Convenience Functions
           icon: pen
           icon_color: fuchsia
           description: The provider also contains functions to retrieve keys, secrets, and connection strings from all resources that expose them.
+
+        - title: Automate Delivery
+          icon: delivery
+          icon_color: violet
+          description: You can integrate Pulumi directly with your favorite CI/CD and SCM systems to continuously deliver Azure infrastructure and applications. Improve the velocity and visibility into your deployments from simple to complex global environments.
 
   - title: Always Up to Date
     description: |
@@ -205,7 +215,7 @@ detail_sections:
         - title: Auto Generated
           icon: cycle
           icon_color: blue
-          description: An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.
+          description: An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto-generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.
 
         - title: Familiar Concepts
           icon: collab
@@ -222,60 +232,15 @@ detail_sections:
           icon_color: yellow
           description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, .NET, Java, and YAML. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
 
-superpowers:
-  - title: Multi Cloud
-    cta: Learn more
-    cta_url: "/docs/iac/get-started/azure/"
-    icon_type: cloud
-    description: |
-        Pulumi allows you to use top programming languages across all public clouds with support
-        for over +170 popular cloud and service integrations, including private and hybrid clouds
-        helping ensure any multi-cloud strategy is successful.
+        - title: Built-in Guardrails
+          icon: policy
+          icon_color: blue
+          description: When you enable Pulumi's Policy as Code feature, you instantly gain the power to prevent mistakes from being deployed. Enforce security, compliance, cost controls, and best practices using policies defined in modern languages.
 
-  - title: Reduce Provisioning Time
-    cta: Learn more
-    cta_url: "/docs/iac/get-started/azure/"
-    icon_type: provisioning
-    description: |
-        With Pulumi you can take advantage of the features of programming languages,
-        helping you reduce boilerplate code and ultimately ship Azure infrastructure and
-        applications faster with greater consistency.
-
-  - title: Automate Delivery
-    cta: Learn more
-    cta_url: "/docs/iac/packages-and-automation/continuous-delivery/"
-    icon_type: delivery
-    description: |
-        You can integrate Pulumi directly with your favorite CI/CD and SCM systems to
-        continuously deliver Azure infrastructure and applications. Improve the velocity
-        and visibility into your deployments from simple to complex global environments.
-
-  - title: Smart Architecture
-    cta: Learn more
-    cta_url: "/product/packages/"
-    icon_type: architecture
-    description: |
-        YAML and templated DSLs force you to write the same boilerplate code over and over.
-        Pulumi Packages allow you to codify those patterns and best practices so
-        you can stop reinventing the wheel and start inventing the platforms of the future.
-
-  - title: Be Proactive, Not Reactive
-    cta: Learn more
-    cta_url: "/docs/using-pulumi/crossguard/"
-    icon_type: policy
-    description: |
-        When you enable Pulumi's Policy as Code feature, you instantly gain the power to
-        prevent mistakes from being deployed. Enforce security, compliance, cost controls,
-        and best practices using policies defined in modern languages.
-
-  - title: Reduce Deployment Complexity
-    cta: Learn more
-    cta_url: "/docs/iac/concepts/testing/"
-    icon_type: testing
-    description: |
-        Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage
-        of common tools, frameworks, and techniques to unit, integration, and property test your
-        Azure infrastructure. Ensure your infrastructure is correct before and after deployment.
+        - title: Reduce Deployment Complexity
+          icon: testing
+          icon_color: violet
+          description: Pulumi lets you take advantage of common tools, frameworks, and techniques to unit, integration, and property test your Azure infrastructure. Ensure your infrastructure is correct before and after deployment.
 
 contact_us_form:
     section_id: contact-us
