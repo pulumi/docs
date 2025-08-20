@@ -49,7 +49,7 @@
                 {{ end }}
                 <div class="header-hero-actions mt-8">
                     <a class="btn-primary mr-4" href="/docs/iac/get-started/azure/">Get Started</a>
-                    <a class="btn-secondary" href="#azure-overview">Learn More</a>
+                    <a class="btn-secondary" href="https://app.pulumi.com/signup">Try Pulumi Cloud for Free</a>
                 </div>
             </div>
             <div class="w-full order-first px-3 lg:px-0 lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
@@ -189,8 +189,7 @@
             <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
                 {{ with .Params.azure_overview }}
                     <div class="lg:w-1/2">
-                        <div class="w-2/3 pb-16 mx-auto">
-                            {{ partial "pulumipus" (dict "type" "lightning") }}
+                            <img src="/images/partners/arm2pulumi.png" />
                         </div>
                     </div>
                     <div class="lg:w-1/2">
