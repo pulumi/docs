@@ -76,7 +76,7 @@ To use the dev container:
 1. Open the repository in VS Code
 1. When prompted, click "Reopen in Container" or run the "Dev Containers: Reopen in Container" command from the Command Palette
 
-The `.vscode` directory is preconfigured with launch and build tasks. When using default keybindings, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the site, and <kbd>F5</kbd> to launch the server locally. All of the `make` commands can be listed in the UI pressing <kbd>F1</kbd> and selecting **Run Task...**.
+The `.vscode` directory is preconfigured with launch and build tasks. When using default keybindings, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the site, and <kbd>F5</kbd> to launch the server locally. All of the `make` commands can be listed in the UI pressing <kbd>F1</kbd> and selecting **Tasks: Run Task**.
 
 For more information on dev containers, see the [VS Code Dev Containers documentation](https://code.visualstudio.com/docs/devcontainers/containers).
 
