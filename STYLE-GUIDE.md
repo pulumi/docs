@@ -98,7 +98,7 @@ This bit of info is serious. If you missed it, bad things could happen.
   1. List
   ```
 
-  renders as:
+  ...renders as:
 
   1. This
   1. Is
