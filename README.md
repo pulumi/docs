@@ -43,6 +43,8 @@ See also:
 
 ### Toolchain
 
+#### Manual Installation
+
 We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
 
 * [Hugo](https://gohugo.io/installation/) (>= 0.126.0)
@@ -54,9 +56,29 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 
 * [Go](https://golang.org/) (>= 1.21)
 * [Python](https://www.python.org) (>= 3.7)
-* [.NET](https://dotnet.microsoft.com/en-us/download) (>= 6)
+* [.NET](https://dotnet.microsoft.com/download) (>= 6)
 * [Pulumi](https://www.pulumi.com/docs/install)
 * [Pulumi ESC](https://www.pulumi.com/docs/install/esc)
+
+#### Dev Container
+
+This repository includes a dev container configuration that provides a fully pre-configured environment with all the tools you need for developing and contributing to the Pulumi documentation. Using the dev container eliminates the need to install dependencies manually, as it comes with:
+
+* Hugo, Node.js, Yarn, and Markdown tooling.
+* Go, Python, .NET, and the Pulumi CLI.
+* VS Code extensions for Markdown linting, link checking, and Pulumi support.
+* Google Cloud CLI and GitHub CLI.
+
+To use the dev container:
+
+1. Install [Docker](https://www.docker.com) (or another compatible container engine), [VS Code](https://code.visualstudio.com/), and the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+1. Clone this repository
+1. Open the repository in VS Code
+1. When prompted, click "Reopen in Container" or run the "Dev Containers: Reopen in Container" command from the Command Palette
+
+The `.vscode` directory is preconfigured with launch and build tasks. When using default keybindings, press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the site, and <kbd>F5</kbd> to launch the server locally. All of the `make` commands can be listed in the UI pressing <kbd>F1</kbd> and selecting **Tasks: Run Task**.
+
+For more information on dev containers, see the [VS Code Dev Containers documentation](https://code.visualstudio.com/docs/devcontainers/containers).
 
 ### Repository layout
 
@@ -136,7 +158,7 @@ See below to learn how to view these rendered docs locally.
 
 ### Generating the .NET SDK docs
 
-The .NET SDK docs are built with [Docfx](https://github.com/dotnet/docfx). To generate these, you'll need both `dotnet` and `docfx` installed and on your PATH. For example, assuming you've already [installed the `dotnet` executable](https://dotnet.microsoft.com/en-us/download) for your platform, you can:
+The .NET SDK docs are built with [Docfx](https://github.com/dotnet/docfx). To generate these, you'll need both `dotnet` and `docfx` installed and on your PATH. For example, assuming you've already [installed the `dotnet` executable](https://dotnet.microsoft.com/download) for your platform, you can:
 
 ```bash
 make ensure                     # Install dependencies.
