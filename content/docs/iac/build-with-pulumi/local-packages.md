@@ -27,8 +27,8 @@ Local packages allow you to generate SDKs in any Pulumi language for resources o
 The preferred way to add a local package is with the `pulumi package add` command. This command:
 
 1. Locally generates an SDK in your currently selected Pulumi language.
-2. Adds the package to your project configuration file (Pulumi.yaml).
-3. Prints instructions on how to link the package into your project.
+1. Adds the package to your project configuration file (Pulumi.yaml).
+1. Prints instructions on how to link the package into your project.
 
 ### Command Syntax
 
@@ -66,7 +66,7 @@ This executes the provider binary to extract its package schema.
 pulumi package add ./my/schema.json
 ```
 
-When the path has a `.json`, `.yml`, or `.yaml` extension, the Pulumi package schema is read directly from it. For details on the structure and syntax of Pulumi package schemas, refer to the [Schema Reference](/docs/iac/using-pulumi/pulumi-packages/schema/). Understanding the schema format is particularly important if you're creating your own custom packages or components.
+For details on the structure and syntax of Pulumi package schemas, refer to the [Schema Reference](/docs/iac/using-pulumi/pulumi-packages/schema/).
 
 #### From a Git Repository
 
@@ -114,8 +114,8 @@ When working with local packages, consider these best practices:
 To update a local package:
 
 1. Re-run the `pulumi package add` command with the updated source
-2. This will regenerate the SDK with the latest schema
-3. Update your imports and code as needed if there are breaking changes
+1. This will regenerate the SDK with the latest schema
+1. Update your imports and code as needed if there are breaking changes
 
 For packages from Git repositories, specify a version tag or commit hash to control which version is used.
 
