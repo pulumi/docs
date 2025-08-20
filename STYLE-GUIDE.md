@@ -87,23 +87,16 @@ This bit of info is serious. If you missed it, bad things could happen.
 ## Lists
 
 * Present instructional steps in lists.
-* Ordered list items should begin with `1.` regardless of the number of items. This reduces churn when items are added or removed.
+* Ordered list items should begin with `1.` regardless of the number of items. They are rendered with correct numbering automatically.
 
-  This:
+  **Example**  
 
   ```markdown
-  1. This
-  1. Is
-  1. A
-  1. List
+  1. First item
+  1. Second item
+  1. Third item
+  1. Fourth item
   ```
-
-  ...renders as:
-
-  1. This
-  1. Is
-  1. A
-  1. List
 
 ## Content design
 
