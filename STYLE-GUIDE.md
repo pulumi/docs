@@ -1,6 +1,6 @@
 # Style guide
 
-This document defines some general styles we adhere to in the docs.
+This document outlines the Pulumi-specific style guidelines for our documentation. For topics not addressed here, refer to the [Google Developer Documentation Style Guide](https://developers.google.com/style) for additional guidance.
 
 ## Using inclusive language
 
@@ -87,6 +87,23 @@ This bit of info is serious. If you missed it, bad things could happen.
 ## Lists
 
 * Present instructional steps in lists.
+* Ordered list items should begin with `1.` regardless of the number of items. This reduces churn when items are added or removed.
+
+  This:
+
+  ```markdown
+  1. This
+  1. Is
+  1. A
+  1. List
+  ```
+
+  renders as:
+
+  1. This
+  1. Is
+  1. A
+  1. List
 
 ## Content design
 
