@@ -233,7 +233,7 @@ detail_sections:
           description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, .NET, Java, and YAML. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
 
         - title: Built-in Guardrails
-          icon: policy
+          icon: code #This is supposed to be policy but I'm changing it to test something.
           icon_color: blue
           description: When you enable Pulumi's Policy as Code feature, you instantly gain the power to prevent mistakes from being deployed. Enforce security, compliance, cost controls, and best practices using policies defined in modern languages.
 
