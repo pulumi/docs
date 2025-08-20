@@ -78,7 +78,7 @@ This clones the repo and executes the source. The version can be a tag (in semve
 
 ### Example: Using a Terraform Provider
 
-One of the most common uses of local packages is with the `terraform-provider` to access any Terraform provider:
+One of the most common uses of local packages is with the `terraform-provider` to access [any Terraform provider](https://www.pulumi.com/registry/packages/terraform-provider/):
 
 ```bash
 pulumi package add terraform-provider hashicorp/random
@@ -101,7 +101,7 @@ When working with local packages, consider these best practices:
 #### Option 1: Don't check in the generated SDK (recommended)
 
 - Add the generated SDK directory to your `.gitignore` file
-- Document the process for other developers to regenerate the SDK
+- Document the process for other developers to regenerate the SDK with `pulumi install`
 - Include the `pulumi package add` command in your setup instructions
 
 #### Option 2: Check in the generated SDK
@@ -127,23 +127,38 @@ For packages from Git repositories, specify a version tag or commit hash to cont
 
 ## Using Generated SDKs
 
-After adding a local package, follow the printed instructions to link it into your project:
+After adding a local package, reference it in your project:
 
-1. For Node.js/TypeScript projects:
+{{< chooser language "typescript,python,go,csharp,yaml" >}}
+{{% choosable language typescript %}}
 
-   ```bash
-   npm add my-package@file:sdks/my-package
-   ```
+```bash
+npm add my-package@file:sdks/my-package
+```
 
-2. For Python projects:
+{{% /choosable %}}
+{{% choosable language python %}}
 
-   ```bash
-   pip install -e ./sdks/my-package
-   ```
+```bash
+pip install -e ./sdks/my-package
+```
 
-3. For Go projects, add the appropriate import path as directed by the output.
+{{% /choosable %}}
+{{% choosable language go %}}
 
-4. For .NET projects, add a reference to the generated project file.
+```bash
+go get my-package@file:sdks/my-package
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```bash
+dotnet add package my-package --source ./sdks/my-package
+```
+
+{{% /choosable %}}
+{{% /chooser %}}
 
 You can then import and use the package in your code just like any other Pulumi package.
 
