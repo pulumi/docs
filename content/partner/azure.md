@@ -18,27 +18,27 @@ hero:
     ide:
         tabs:
         - title: C#
-              language: csharp
-              code: |
-                using Pulumi;
-                using Pulumi.AzureNative.Resources;
-                using Pulumi.AzureNative.Storage;
-                using Pulumi.AzureNative.Storage.Inputs;
+          language: csharp
+          code: |
+            using Pulumi;
+            using Pulumi.AzureNative.Resources;
+            using Pulumi.AzureNative.Storage;
+            using Pulumi.AzureNative.Storage.Inputs;
 
-                class MyStack : Stack
+            class MyStack : Stack
+            {
+                public MyStack()
                 {
-                    public MyStack()
-                    {
-                        var resourceGroup = new ResourceGroup("resourceGroup");
+                    var resourceGroup = new ResourceGroup("resourceGroup");
 
-                        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
-                        {
-                            ResourceGroupName = resourceGroup.Name,
-                            Sku = new SkuArgs { Name = "Standard_LRS" },
-                            Kind = "StorageV2"
-                        });
-                    }
+                    var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+                    {
+                        ResourceGroupName = resourceGroup.Name,
+                        Sku = new SkuArgs { Name = "Standard_LRS" },
+                        Kind = "StorageV2"
+                    });
                 }
+            }
             - title: TypeScript
               language: typescript
               code: |
