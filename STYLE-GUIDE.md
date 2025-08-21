@@ -87,6 +87,12 @@ This bit of info is serious. If you missed it, bad things could happen.
 ## Lists
 
 * Present instructional steps in lists.
+* Always include a blank line before the first bullet point in any list.
+
+## Formatting
+
+* All headings must have a blank line after them before content begins.
+* All Markdown files must end with a blank line.
 
 ## Content design
 
