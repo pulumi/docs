@@ -205,6 +205,8 @@ detail_sections:
           icon: delivery
           icon_color: violet
           description: You can integrate Pulumi directly with your favorite CI/CD and SCM systems to continuously deliver Azure infrastructure and applications. Improve the velocity and visibility into your deployments from simple to complex global environments.
+    cta: Try Pulumi Cloud for FREE
+    cta_url: "https://app.pulumi.com/signup"
 
   - title: Always Up to Date
     description: |
