@@ -1,6 +1,6 @@
 # Style guide
 
-This document defines some general styles we adhere to in the docs.
+This document outlines the Pulumi-specific style guidelines for our documentation. For topics not addressed here, refer to the [Google Developer Documentation Style Guide](https://developers.google.com/style) for additional guidance.
 
 ## Using inclusive language
 
@@ -87,12 +87,22 @@ This bit of info is serious. If you missed it, bad things could happen.
 ## Lists
 
 * Present instructional steps in lists.
+* All ordered list items should begin with `1.` regardless of their position in the list. They are rendered with correct numbering automatically.
 * Always include a blank line before the first bullet point in any list.
 
 ## Formatting
 
 * All headings must have a blank line after them before content begins.
 * All Markdown files must end with a blank line.
+
+  **Example**  
+
+  ```markdown
+  1. First item
+  1. Second item
+  1. Third item
+  1. Fourth item
+  ```
 
 ## Content design
 
