@@ -107,7 +107,8 @@ class MyStack : Stack
 ```
 
 It’s clean. It’s familiar. And it works seamlessly with your .NET tooling.
-Pulumi is open source, and your Pulumi Cloud account is free for individuals and small teams, with advanced editions for large enterprises. [Try Pulumi Cloud for FREE->](https://app.pulumi.com/signup)
+Pulumi is open source, and your Pulumi Cloud account is free for individuals and small teams, with advanced editions for large enterprises. 
+[Try Pulumi Cloud for FREE->](https://app.pulumi.com/signup)
 
 ## Why It Just Works for .NET Teams
 
