@@ -19,6 +19,12 @@ Learn the foundational approach for building with Pulumi IDP:
 
 - [Four Factors: Templates, Components, Environments, and Policies](/docs/idp/best-practices/four-factors)
 
+## Blueprints
+
+Complete, production-ready solutions that demonstrate how to combine the Four Factors to solve common platform engineering challenges:
+
+- [IDP Blueprints](/docs/idp/best-practices/blueprints)
+
 ## Patterns
 
 Common architectural patterns and design approaches for organizing your infrastructure code and workflows:
