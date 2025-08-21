@@ -86,7 +86,7 @@ This bit of info is serious. If you missed it, bad things could happen.
 
 ## Diagrams
 
-Hugo supports two types of diagrams for visualizing concepts and architecture:
+We support two types of diagrams for visualizing concepts and architecture:
 
 * **GoAT (Go ASCII art Tool)**: Creates diagrams from ASCII art. Good for simple flowcharts, boxes, and connections.
 * **Mermaid**: Creates diagrams from a declarative syntax. Supports flowcharts, sequence diagrams, class diagrams, and more.
