@@ -121,7 +121,12 @@
                 {{ end }}
                 {{ if not (eq $item.ide nil) }}
                     <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
-                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                        {{ $langOptions := slice }}
+                        {{ range $index, $lang := $item.ide }}
+                            {{ $langOptions = $langOptions | append $lang.language }}
+                        {{ end }}
+                        {{ $langList := delimit $langOptions "," }}
+                        <pulumi-chooser type="language" options="{{ $langList }}">
                             {{ range $lang := $item.ide }}
                                 <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
                                     {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
@@ -191,7 +196,12 @@
                 {{ end }}
                 {{ if not (eq $item.ide nil) }}
                     <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
-                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                        {{ $langOptions := slice }}
+                        {{ range $index, $lang := $item.ide }}
+                            {{ $langOptions = $langOptions | append $lang.language }}
+                        {{ end }}
+                        {{ $langList := delimit $langOptions "," }}
+                        <pulumi-chooser type="language" options="{{ $langList }}">
                             {{ range $lang := $item.ide }}
                                 <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
                                     {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
