@@ -53,7 +53,7 @@ social:
         Publish templates directly to your private registry with semantic versioning. No more GitHub repositories just for template distribution. One CLI command and your golden paths are available to every team.
         Together, these features transform your private registry into a complete infrastructure sharing platform. From discovery to deployment, your teams get the resources they need without the friction.
         See what's possible when infrastructure sharing just works → [link]
-        #PlatformEngineering #DevOps #InfrastructureAsCode #IaC #CloudNative
+        #PlatformEngineering #DevOps #InfrastructureAsCode #IaC
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
