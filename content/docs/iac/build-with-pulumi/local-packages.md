@@ -178,6 +178,6 @@ If you encounter issues with local packages:
 
 ## Conclusion
 
-Local packages extend Pulumi's capabilities by allowing you to work with providers and components that aren't published to the Registry. Use the [`pulumi package add`]() command to generate and use these packages in your projects.
+Local packages extend Pulumi's capabilities by allowing you to work with providers and components that aren't published to the Registry. Use the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command to generate and use these packages in your projects.
 
 For more information about developing and publishing your own packages, see the [Publishing Packages](/docs/iac/build-with-pulumi/publishing-packages/) guide.
