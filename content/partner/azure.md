@@ -242,6 +242,8 @@ detail_sections:
           icon: testing
           icon_color: violet
           description: Pulumi lets you take advantage of common tools, frameworks, and techniques to unit, integration, and property test your Azure infrastructure. Ensure your infrastructure is correct before and after deployment.
+    cta: Try Pulumi Cloud for FREE
+    cta_url: "https://app.pulumi.com/signup"
 
 contact_us_form:
     section_id: contact-us

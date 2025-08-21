@@ -170,9 +170,7 @@
             <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
                 {{ with .Params.azure_overview }}
                     <div class="lg:w-1/2">
-                             <img src="/images/partners
-/azure-insights.png" />
-                        </div>
+                             <img src="/images/partners/azure-insights.png" />
                     </div>
                     <div class="lg:w-1/2">
                         <div class="md:px-24 lg:px-4">
@@ -228,18 +226,11 @@
             {{ $ctaButtonColor = "btn-orange" }}
         {{ end }}
 
-
         <section class="pt-24 pb-16 px-4">
             <div class="container mx-auto">
                 <div class="w-full max-w-2xl mx-auto text-center">
                     <h3>{{ $item.title }}</h3>
                     <p class="md:px-24 lg:px-0">{{ $item.description | markdownify }}</p>
-
-                    {{ if $item.cta }}
-                        <a class="hidden btn-primary lg:inline-block my-4" href="{{ $item.cta_url }}">
-                            {{ $item.cta }}
-                        </a>
-                    {{ end }}
                 </div>
                 <div class="my-8 lg:flex flex-wrap items-center justify-center">
                     {{ range $i, $row := $item.items }}
@@ -254,7 +245,7 @@
                 </div>
             </div>
             {{ if $item.cta }}
-                <div class="container mx-auto md:px-24 lg:hidden lg:px-0 text-center">
+                <div class="container mx-auto md:px-24 lg:px-0 text-center">
                     <a class="btn-primary my-4" href="{{ $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
