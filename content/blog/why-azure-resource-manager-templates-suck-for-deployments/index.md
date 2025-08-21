@@ -1,9 +1,10 @@
 ---
-title: "Why Azure Teams Are Moving from ARM Templates to Code"
+title: "Why Azure Teams Are Moving from ARM Templates to .NET"
 allow_long_title: true
 date: 2025-08-22T01:41:10Z
 draft: false
 meta_desc: ARM slowing you down? Ditch the JSON pain and deploy Azure like a pro with Pulumi + C#. Faster, cleaner, and actually developer-friendly.
+meta_image: azure-resources-to-iac-general-code.png
 authors:
     - sara-huddleston
 tags:
@@ -20,11 +21,11 @@ tags:
 - Slow, error-prone deployments that require multiple manual steps  
 - No reuse, no testing, and no relief
 
-ARM wasn’t built for the complexity of modern Azure workloads. If you're already familiar with general-purpose languages, there’s a better path: Pulumi.
+ARM wasn’t built for the complexity of modern Azure workloads. If you're already familiar with general-purpose languages, there’s a better path: [Pulumi](https://www.pulumi.com/docs/iac/clouds/azure/).
 
 <!--more-->
 
-## Top Pain Points of ARM Teamplates
+## Top Pain Points of ARM Templates
 
 | Pain Point      | ARM Templates               | Pulumi (C#)                            |
 |-----------------|-----------------------------|----------------------------------------|
@@ -126,7 +127,7 @@ Pulumi supports all the Azure services ARM does (and more), while giving you fle
 
 Pulumi gives you the tools to manage Azure the way you manage software: modular, testable, scalable, and secure.
 
-If you’re already building with .NET, you’re 90% of the way there. Why suffer through another slow, error-prone ARM deployment?
+If you’re already building with C# and .NET, you’re 90% of the way there. Why suffer through another slow, error-prone ARM deployment?
 
 - [Try Pulumi Open Source](https://app.pulumi.com/signup)
 - [Get Started with Azure + Pulumi Docs](https://www.pulumi.com/docs/iac/get-started/azure/)
