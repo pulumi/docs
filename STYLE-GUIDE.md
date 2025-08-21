@@ -84,6 +84,40 @@ This bit of info is serious. If you missed it, bad things could happen.
 
 > This is something a person said.
 
+## Diagrams
+
+We support two types of diagrams for visualizing concepts and architecture:
+
+* **GoAT (Go ASCII art Tool)**: Creates diagrams from ASCII art. Good for simple flowcharts, boxes, and connections.
+* **Mermaid**: Creates diagrams from a declarative syntax. Supports flowcharts, sequence diagrams, class diagrams, and more.
+
+### GoAT example
+
+```goat
+      .               .                .               .--- 1          .-- 1     / 1
+     / \              |                |           .---+            .-+         +
+    /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
+   +     +        |       |        |       |    ---+            ---+          +
+  / \   / \       |       |        |       |       |   .--- 3      |   .-- 3   \ / 3
+ /   \ /   \      '---+---'         '--+--'        '---+            '-+         +
+ 1   2 3   4          |                |               '--- 4          '-- 4     \ 4
+```
+
+For more details, see the [Hugo diagrams documentation](https://gohugo.io/content-management/diagrams/).
+
+### Mermaid example
+
+```mermaid
+graph TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+
+For more details, see the [Mermaid.js documentation](https://mermaid.js.org/).
+
 ## Lists
 
 * Present instructional steps in lists.
