@@ -64,11 +64,17 @@ Templates can abstract environment-specific complexity, allowing the same applic
 
 ## The Value
 
-### For Developers
+### For developers
 
-### For Platform Teams
+Developers gain complete flexibility in their component creation, choosing their preferred programming language and implementing whatever business logic and resources they need. This approach lessens the burden on platform teams by allowing developers to work in languages they're most comfortable with, while secure components and guardrails enable developer autonomy without sacrificing security. AI agents automate away routine tasks and accelerate developer efficiency, letting developers focus on solving business problems rather than wrestling with infrastructure complexity.
 
-### For Consumers
+### For platform teams
+
+Platform teams can maintain visibility into deployed infrastructure while keeping the design and content more confidential through abstracted views. They determine what parts of the infrastructure are customizable versus necessary for security and functionality, creating templates that balance flexibility with organizational standards. This approach enables easy ingestion of updates to recommended infrastructure when new template versions are released, and makes it possible to set up team token generation for full self-service deployments.
+
+### For consumers
+
+End users benefit from multiple levels of insight into what's being deployed—abstracted, detailed, and visual—using YAML templates, AI, and previews to understand their infrastructure without managing complexity. They stay more secure by using their own access to deploy infrastructure, while the abstracted interface simplifies what was once a complex multi-step process into a form-based experience. More resources managed through this approach means per-resource costs decrease, making infrastructure deployment both simpler and more cost-effective.
 
 ## The Design
 
