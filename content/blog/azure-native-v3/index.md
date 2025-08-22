@@ -1,8 +1,9 @@
 ---
 title: "Azure Native V3: A Leaner, Faster SDK for Microsoft Azure"
 date: 2025-04-03
+updated: 2025-08-13
 draft: false
-meta_desc: Azure Native V3 delivers 75% smaller SDK size, updated API versions, and flexible options for working with explicit API versions in Microsoft Azure.
+meta_desc: Pulumi Azure Native V3 delivers a 75% smaller SDK, updated API versions, and flexible versioning options for managing Microsoft Azure infrastructure as code
 meta_image: meta.png
 authors:
     - thomas-kappler
@@ -23,18 +24,20 @@ social:
     For teams building on Azure, V3 makes development faster and more efficient without compromising on access to the complete Azure ecosystem - truly the best of both worlds."
 ---
 
-Today we're excited to announce the release of Pulumi Azure Native V3 - a major leap forward for the most comprehensive infrastructure as code solution for Microsoft Azure. This release delivers a remarkable 75% reduction in SDK size while maintaining our complete coverage of the Azure ecosystem.
+Pulumi Azure Native V3 is the most comprehensive infrastructure as code (IaC) solution for Microsoft Azure, combining full resource coverage with dramatic improvements in performance and developer experience.
 
-Pulumi Azure Native provides direct access to the [Azure Resource Manager API](https://learn.microsoft.com/en-us/rest/api/resources/), making it hands-down the best infrastructure as code solution for Microsoft Azure. Unlike traditional providers that abstract away cloud APIs, Azure Native gives you more resource and property coverage compared to Terraform by directly mapping to Azure's native REST API. This means:
-
-- **Complete API coverage**: 100% of Azure resources available in Azure Resource Manager
-- **Same-day access to new Azure features**: No waiting for provider updates
-- **Advanced property support**: Access to all resource properties, not just a subset
-- **Latest API versions**: Always up-to-date with the newest stable Azure APIs
+With V3, the Pulumi Azure Native SDK is **75% smaller** while maintaining **100% coverage of the Azure Resource Manager (ARM) API**. This makes it the most efficient and complete way to define and manage Azure infrastructure with real programming languages.
 
 <!--more-->
 
-And now with V3's dramatic 75% SDK size reduction, we've eliminated the only potential drawback - making our Azure Native provider both the most comprehensive AND the most performant option for managing Azure infrastructure.
+Pulumi Azure Native provides direct access to the [Azure Resource Manager API](https://learn.microsoft.com/en-us/rest/api/resources/), making it hands-down the best infrastructure as code solution for Microsoft Azure. Unlike traditional providers that abstract away cloud APIs, Azure Native gives you more resource and property coverage compared to Terraform by directly mapping to Azure's native REST API. This means:
+
+- **Complete API coverage**: Access every Azure resource available in ARM
+- **Same-day updates**: New Azure services and properties are available immediately
+- **Advanced property support**: Work with every resource property, not just a subset
+- **Latest API versions**: Always up to date with the newest stable Azure APIs
+
+And with V3’s slimmer SDK footprint, developers benefit from faster IDE performance, reduced memory usage, quicker installs, and improved CI/CD pipeline efficiency.
 
 ![Resource and Property Coverage Comparison](tf-vs-an.png)
 
@@ -55,9 +58,9 @@ The most significant improvement in Azure Native V3 is the dramatic 75% reductio
 
 This transformation delivers immediate benefits that every developer will notice: faster IDE performance with reduced load times, more responsive language servers for better autocompletion, reduced memory consumption, significantly quicker package installation, and improved CI/CD pipeline performance.
 
-## Additional Improvements
+## Additional Enhancements in Azure Native V3
 
-Azure Native V3 also includes several other enhancements:
+Azure Native V3 introduces more than just SDK size optimization. Other improvements include:
 
 - **Reorganized module structure** better aligned with Azure SDK conventions
 - **Improved resource naming** for clearer distinction between similar resources
@@ -87,7 +90,7 @@ Azure Native V3 includes refreshed default API versions across nearly all resour
 - Storage (now 2024-01-01): Improved performance tiers and expanded security features
 - KeyVault (now 2024-03-01): Enhanced certificate management and expanded access policy options
 
-## Non-default API versions
+## Using Non-Default API Versions
 
 Most users (approximately 95% based on our Pulumi Cloud data) will be perfectly served by these default API versions. However, there are situations where you might need to use a specific API version.
 
@@ -287,18 +290,25 @@ In most cases, we recommend using the local packages approach when you need a sp
 
 For more details, see the [Azure Native version guide](/registry/packages/azure-native/version-guide/#using-the-generic-resource).
 
-## Getting Started
+## Getting Started with Azure Native V3
 
-Firstly you will want to update your dependencies to point to the latest v3.x version.
+### If You’re Already Using Pulumi Azure Native
 
-For a smooth upgrade experience, we recommend if you're using Azure Native v1, first upgrade to v2 using our [v1 to v2 upgrade guide](/registry/packages/azure-native/from-v1-to-v2/). Then upgrade from v2 to v3 using our [v2 to v3 migration guide](/registry/packages/azure-native/from-v2-to-v3/). If you are on v2 now, just follow the [v2 to v3 migration guide](/registry/packages/azure-native/from-v2-to-v3/). This stepwise approach will help you resolve any deprecation warnings and make the migration process more manageable.
+- **Upgrading from v2**: Follow the [v2 to v3 migration guide](/registry/packages/azure-native/from-v2-to-v3/).
+- **Upgrading from v1**: Follow first upgrade to v2 using our [v1 to v2 upgrade guide](/registry/packages/azure-native/from-v1-to-v2/). Then upgrade from v2 to v3 using our [v2 to v3 migration guide](/registry/packages/azure-native/from-v2-to-v3/). This stepwise approach will help you resolve any deprecation warnings and make the migration process more manageable.
 
 For language-specific installation instructions, see our [Azure Native setup guide](/registry/packages/azure-native/installation-configuration/).
 
+### If You’re New to Pulumi
+
+Pulumi makes it easy to define, deploy, and manage Azure infrastructure using your favorite programming languages. To get started:
+
+- [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) - free for individuals and teams.
+- Explore the [Azure Native installation guide](https://www.pulumi.com/registry/packages/azure-native/installation-configuration/)
+- Try a [quickstart project](https://www.pulumi.com/tutorials/azure/) to provision real Azure resources in minutes.
+
 ## Conclusion
 
-Azure Native V3 represents a significant step forward in our mission to provide the best possible developer experience for cloud infrastructure. By dramatically reducing SDK size while maintaining flexibility for version management, it is now easier to build and deploy Azure resources with Pulumi.
+Pulumi Azure Native V3 is the most complete and efficient solution for managing Azure infrastructure as code. With a dramatically smaller SDK, updated defaults, flexible API versioning, and enhanced developer experience, it offers the best combination of performance, coverage, and control for Microsoft Azure users.
 
-We'd like to thank our community for their valuable feedback throughout the development of V3. Your input helped shape this release, and we're excited to see what you'll build with it.
-
-Have feedback or issues? [Open an issue on GitHub](https://github.com/pulumi/pulumi-azure-native/issues), join our [Community Slack](https://slack.pulumi.com/) and post in the #azure channel, or reach out to us on [Twitter/X @PulumiCorp](https://twitter.com/PulumiCorp).
+We'd like to thank our community for their valuable feedback throughout the development of V3. Your input helped shape this release, and we're excited to see what you'll build with it. Have questions or suggestions? [Open an issue on GitHub](https://github.com/pulumi/pulumi-azure-native/issues), join our [Community Slack](https://slack.pulumi.com/).
