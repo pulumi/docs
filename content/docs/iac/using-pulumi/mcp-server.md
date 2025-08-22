@@ -35,6 +35,8 @@ The Pulumi MCP server works with various AI-powered development tools:
 - **[Anthropic's Claude Code](https://claude.ai/code)** - AI assistant for coding
 - **[GitHub Copilot](https://github.com/features/copilot)** - AI pair programmer
 - **[Windsurf](https://codeium.com/windsurf)** - AI development environment
+- **[Devin](https://app.devin.ai/)** - The AI
+software engineer
 - Any other AI assistant that supports the Model Context Protocol
 
 ## Installation
@@ -148,6 +150,14 @@ In Windsurf, configure the MCP server through the IDE settings:
   "type": "stdio"
 }
 ```
+
+### Devin setup
+
+To configure the Pulumi MCP server for Devin:
+
+1. Navigate to [Devin Marketplace](https://app.devin.ai/settings/mcp-marketplace/setup/pulumi)
+2. Provide your [Pulumi access token](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/#creating-personal-access-tokens), which can be obtained from the Access tokens section in the sidebar of the Pulumi Console
+3. Click "Enable"
 
 ## Available tools
 
