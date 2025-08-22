@@ -156,7 +156,7 @@ In Windsurf, configure the MCP server through the IDE settings:
 To configure the Pulumi MCP server for Devin:
 
 1. Navigate to https://app.devin.ai/settings/mcp-marketplace/setup/pulumi
-2. Provide your Pulumi access token, which can be obtained from the Access tokens section in the sidebar of the Pulumi Console
+2. Provide your [Pulumi access token](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/#creating-personal-access-tokens), which can be obtained from the Access tokens section in the sidebar of the Pulumi Console
 3. Click "Enable"
 
 ## Available tools
