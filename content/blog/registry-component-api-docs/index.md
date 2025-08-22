@@ -1,5 +1,5 @@
 ---
-title: "Streamline Platform Engineering with Automatic API Documentation and Registry-Backed Templates"
+title: "Introducing Automatic API Docs & Registry-Backed Templates"
 
 date: 2025-08-21T00:00:05-06:00
 
