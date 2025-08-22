@@ -294,8 +294,11 @@ For more details, see the [Azure Native version guide](/registry/packages/azure-
 
 ### If You’re Already Using Pulumi Azure Native
 
+Upgrading ensures you benefit from the smaller SDK, refreshed defaults, and the best performance when managing Azure at scale.
+
+
 - **Upgrading from v2**: Follow the [v2 to v3 migration guide](/registry/packages/azure-native/from-v2-to-v3/).
-- **Upgrading from v1**: Follow first upgrade to v2 using our [v1 to v2 upgrade guide](/registry/packages/azure-native/from-v1-to-v2/). Then upgrade from v2 to v3 using our [v2 to v3 migration guide](/registry/packages/azure-native/from-v2-to-v3/). This stepwise approach will help you resolve any deprecation warnings and make the migration process more manageable.
+- **Upgrading from v1**: First move to v2 using our [v1 to v2 upgrade guide](/registry/packages/azure-native/from-v1-to-v2/), the follow the [v2 to v3 migration guide](/registry/packages/azure-native/from-v2-to-v3/). This two-step process resolves deprecation warnings and ensures a smoother migration.
 
 For language-specific installation instructions, see our [Azure Native setup guide](/registry/packages/azure-native/installation-configuration/).
 
@@ -304,11 +307,13 @@ For language-specific installation instructions, see our [Azure Native setup gui
 Pulumi makes it easy to define, deploy, and manage Azure infrastructure using your favorite programming languages. To get started:
 
 - [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) - free for individuals and teams.
-- Explore the [Azure Native installation guide](https://www.pulumi.com/registry/packages/azure-native/installation-configuration/)
+- Explore the [Azure Native installation guide](https://www.pulumi.com/registry/packages/azure-native/installation-configuration/).
 - Try a [quickstart project](https://www.pulumi.com/tutorials/azure/) to provision real Azure resources in minutes.
 
 ## Conclusion
 
 Pulumi Azure Native V3 is the most complete and efficient solution for managing Azure infrastructure as code. With a dramatically smaller SDK, updated defaults, flexible API versioning, and enhanced developer experience, it offers the best combination of performance, coverage, and control for Microsoft Azure users.
 
-We'd like to thank our community for their valuable feedback throughout the development of V3. Your input helped shape this release, and we're excited to see what you'll build with it. Have questions or suggestions? [Open an issue on GitHub](https://github.com/pulumi/pulumi-azure-native/issues), join our [Community Slack](https://slack.pulumi.com/).
+We'd like to thank our community for their valuable feedback throughout the development of V3. Your input helped shape this release, and we're excited to see what you'll build with it. 
+
+Have questions or suggestions? [Open an issue on GitHub](https://github.com/pulumi/pulumi-azure-native/issues), join our [Community Slack](https://slack.pulumi.com/).
