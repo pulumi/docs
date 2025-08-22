@@ -87,6 +87,8 @@ One of Pulumi's core strengths is our multi-language components—write once in 
 
 When you publish a component written in Python, developers using TypeScript can view the TypeScript-specific documentation. The same component shows Go developers idiomatic Go code. This language-specific documentation removes the last barrier to cross-team component adoption.
 
+![Multi-language component support](multi-lang-apis.jpg)
+
 ### Improving Discoverability and Adoption
 
 With automatic API documentation, your private registry transforms from a simple package repository into a comprehensive infrastructure catalog. Developers can:
