@@ -16,6 +16,10 @@ This approach to using Pulumi Internal Developer Platform (IDP) gives developers
 
 ## The Approach
 
+{{% notes type="info" %}}
+See the full repositories for the [components](https://github.com) and [templates](https://github.com) for more details
+{{% /notes %}}
+
 Our example refactors Pulumi's [self-hosted EKS installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted) to provide a simple end-user template while abstracting away the complex infrastructure and logic into components. By creating componentized templates, we can enable flexible consumption patterns.
 
 This approach enables each team to work at their optimal level of abstraction for appropriate flexibility and clarity at each level:
@@ -75,8 +79,6 @@ Platform teams can maintain visibility into deployed infrastructure while keepin
 ### For consumers
 
 End users benefit from multiple levels of insight into what's being deployed—abstracted, detailed, and visual—using YAML templates, AI, and previews to understand their infrastructure without managing complexity. They stay more secure by using their own access to deploy infrastructure, while the abstracted interface simplifies what was once a complex multi-step process into a form-based experience. More resources managed through this approach means per-resource costs decrease, making infrastructure deployment both simpler and more cost-effective.
-
-## The Design
 
 ## Integrations and Considerations
 
