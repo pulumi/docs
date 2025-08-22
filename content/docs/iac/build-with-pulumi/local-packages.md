@@ -24,7 +24,7 @@ Local packages allow you to generate SDKs in any Pulumi language for resources o
 
 ## Adding local packages with `pulumi package add`
 
-The preferred way to add a local package is with the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command.
+The preferred way to add a local package is with the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command, which:
 
 1. Locally generates an SDK in your currently selected Pulumi language.
 1. Adds the package to your project configuration file (Pulumi.yaml).
@@ -57,14 +57,91 @@ This generates an SDK directly from a schema file, which is useful for component
 #### From a git repository
 
 ```bash
-pulumi package add example.org/org/repo.git/path[@version]
+pulumi package add example.com/org/repo.git/path[@version]
 ```
 
 This clones the repo and executes the source, enabling you to use packages from private or public git repositories with specific version control. You can specify a branch, tag, or commit hash to control which version is used.
 
 #### Using `terraform-provider`
 
+```bash
+pulumi package add terraform-provider hashicorp/random
+```
+
 Refer to the [Terraform Provider documentation](/docs/iac/using-pulumi/pulumi-packages/terraform-provider/) for more details.
+
+## Using generated SDKs
+
+After adding a local package, reference it in your project:
+
+{{< chooser language "typescript,python,go,csharp,yaml" >}}
+{{% choosable language typescript %}}
+
+```bash
+npm install ./sdks/my-package
+```
+
+```typescript
+import * as myPackage from "my-package";
+
+const example = new myPackage.ExampleResource("example");
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```bash
+pip install -e ./sdks/my-package
+```
+
+```python
+import my_package
+
+example = my_package.ExampleResource("example")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```bash
+go get my-package@file:sdks/my-package
+```
+
+```go
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/my-package/sdk/go/my_package"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example := my_package.NewExampleResource("example", nil)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```bash
+dotnet add package my-package --source ./sdks/my-package
+```
+
+```csharp
+using Pulumi;
+using MyPackage;
+
+await Deployment.RunAsync(ctx =>
+{
+  var example = new ExampleResource("example");
+});
+```
+
+{{% /choosable %}}
+{{% /chooser %}}
+
+You can then import and use the package in your code just like any other Pulumi package.
 
 ## Managing generated SDKs
 
@@ -132,81 +209,6 @@ When working with local packages, it's important to understand how breaking chan
   ```
 
   This pins the Terraform provider version, protecting you from unexpected breaking changes when the underlying provider is updated.
-
-## Using generated SDKs
-
-After adding a local package, reference it in your project:
-
-{{< chooser language "typescript,python,go,csharp,yaml" >}}
-{{% choosable language typescript %}}
-
-```bash
-npm install ./sdks/my-package
-```
-
-```typescript
-import * as myPackage from "my-package";
-
-// Now you can use resources or components from the local package
-const example = new myPackage.ExampleResource("example");
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```bash
-pip install -e ./sdks/my-package
-```
-
-```python
-import my_package
-
-# Now you can use resources or components from the local package
-example = my_package.ExampleResource("example")
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```bash
-go get my-package@file:sdks/my-package
-```
-
-```go
-import (
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/my-package/sdk/go/my_package"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		example := my_package.NewExampleResource("example", nil)
-		return nil
-	})
-}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```bash
-dotnet add package my-package --source ./sdks/my-package
-```
-
-```csharp
-using Pulumi;
-using MyPackage;
-
-await Deployment.RunAsync(ctx =>
-{
-  var example = new ExampleResource("example");
-});
-```
-
-{{% /choosable %}}
-{{% /chooser %}}
-
-You can then import and use the package in your code just like any other Pulumi package.
 
 ## See also
 
