@@ -726,9 +726,3 @@ Historically, Pulumi providers required a `schema.json` file. This is now genera
 Using a provider from another directory on your local filesystem is the easiest way to develop a new custom provider. However, once you're ready to share with others at your company, or with the world, you'll need to explore how to publish and package your provider for consumption. There are many ways to accomplish this, from hosting either publicly or privately in GitHub and GitLab, using a private registry within Pulumi Cloud, or publishing to the public Pulumi registry.
 
 See the [Pulumi package authoring guide](/docs/iac/using-pulumi/pulumi-packages/authoring/) for full details.
-
-<!-- TODO: write this section
-
-## Considerations, Gotchas, and FAQs
-
- -->
