@@ -15,10 +15,6 @@
                         <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer" href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
                     </div>
                 </div>
-
-                <!--<div class="hidden lg:block lg:w-1/2 p-6 flex justify-center align-center">
-                    <img src="/images/home/dancing-music.svg" />
-                </div>-->
             </div>
         </div>
     </header>
@@ -26,7 +22,8 @@
 
 {{ define "main" }}
     {{ $pageContext := . }}
-    <!-- Logos carousel -->
+    
+    <!-- Customer Logos - Social Proof First -->
     <section class="container mx-auto text-center overflow-hidden px-3 mt-12" style="margin-bottom: -35px;">
         <h3 class="text-center text-xl">
             <a href="/case-studies" class="hover:underline">{{ .Params.customer_logos.title }}</a>
@@ -36,9 +33,8 @@
         </div>
     </section>
 
-    <!-- 3 pillars -->
-    <section id="benefits" 
-        class="text-center my-6">
+    <!-- 3 Core Benefits -->
+    <section id="benefits" class="text-center my-6">
         <div class="container mx-auto flex flex-wrap justify-content items-stretch text-left p-8">
             {{ range $item := .Params.pillars.items }}
                 <div class="w-full lg:w-1/3 p-3">
@@ -60,45 +56,18 @@
         </div>
     </section>
 
-    <!--  IDP  -->
-    <section class="py-12 my-12 px-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
-        <div class="container mx-auto z-10">
-            <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
-                <div class="w-full lg:w-1/2 z-10 px-8">
-                    <h3>{{ .Params.idp.title }}</h3>
-                    <p class="text-lg">{{ .Params.idp.description | markdownify }}</p>
-                    <div class="mt-8">
-                        <span class="text-lg">Learn more: </span>
-                        <a href="/product/internal-developer-platforms" class="underline text-lg">Pulumi IDP<i class="fa fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
+    <!-- Quick Start Guide - Show How Easy It Is -->
+    {{ partial "home/quick-start.html" . }}
 
-                <div class="flex items-center justify-center w-full lg:w-1/2">
-                    <img class="h-96" src="{{ .Params.idp.image }}" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CLEAR quote -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.clear) }}
-    </section>
-
-    <!-- Code and ship faster -->
+    <!-- Main Demo Section with Code Examples -->
     <section class="my-12 p-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
         <div class="container mx-auto z-10">
             <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
                 <div class="w-full lg:w-4/12">
-                    <h3>{{ .Params.code_faster.title | markdownify }}</h3>
-                    <p class="text-lg">{{ .Params.code_faster.description | markdownify }}</p>
-                    {{ range $item := .Params.code_faster.items }}
-                        <h6>{{ $item.title }}</h6>
-                        <p>{{ $item.description | markdownify }}</p>
-                    {{ end }}
+                    <h3>See It In Action</h3>
+                    <p class="text-lg">Write infrastructure code with real programming languages. Get autocomplete, type checking, and all the IDE features you love.</p>
                     <div class="my-8">
-                        <span class="text-lg">Learn more: </span>
-                        <a href="/product/" class="underline text-lg">Pulumi IaC<i class="fa fa-arrow-right ml-2"></i></a>
+                        <a href="/docs/iac/get-started" class="btn-primary">Start Building Now</a>
                     </div>
                 </div>
                 <div class="hidden lg:block w-1/12">
@@ -141,64 +110,119 @@
         </div>
     </section>
 
-    <!-- Panther quote -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.panther) }}
-    </section>
+    <!-- Why Pulumi vs Terraform Comparison -->
+    {{ partial "home/why-pulumi.html" . }}
 
-    <!-- Tame configuration and secrets sprawl -->
-    <section class="py-12 my-12 px-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
-            <div class="container mx-auto z-10">
-                <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
-                    <div class="w-full lg:w-1/2 z-10 px-8">
-                        <h3>{{ .Params.secrets.title }}</h3>
-                        <p class="text-lg">{{ .Params.secrets.description | markdownify }}</p>
-                        <div class="mt-8">
-                            <span class="text-lg">Learn more: </span>
-                            <a href="/product/esc" class="underline text-lg">Pulumi ESC<i class="fa fa-arrow-right ml-2"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-center mt-8 w-full lg:w-1/2">
-                        <img src="{{ .Params.secrets.image }}" alt="{{ .Params.secrets.alt }}" />
-                    </div>
-                </div>
+    <!-- Platform Capabilities - ONE unified section instead of 4 -->
+    <section class="py-12 my-12 px-6 lg:px-0">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Everything You Need as You Scale</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Start with open source. Add capabilities as your team grows. No vendor lock-in.
+                </p>
             </div>
-    </section>
-
-    <!-- Starburst quote -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.starburst) }}
-    </section>
-
-    <!-- Insights -->
-    <section class="py-12 my-12 px-6 lg:px-0 relative home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
-        <div class="container mx-auto z-10 relative">
-            <div class="w-full flex flex-col lg:flex-row items-center justify-center  mx-auto">
-                <div class="w-full lg:w-5/12 z-10 px-8">
-                    <h3>{{ .Params.insights.title }}</h3>
-                    <div class="text-lg text-black">{{ .Params.insights.description | markdownify }}</div>
-                    <div class="mt-8">
-                        <span class="text-lg">Learn more: </span>
-                        <a href="/product/pulumi-insights/" class="underline text-lg">Pulumi Insights<i class="fa fa-arrow-right ml-2"></i></a>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-key"></i>
                     </div>
+                    <h4 class="text-xl font-semibold mb-2">Secrets Management</h4>
+                    <p class="text-gray-600">Automatically encrypt secrets. Integrate with any vault. Never hardcode credentials again.</p>
+                    <a href="/product/esc" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
                 </div>
-
-                <div class="flex items-center justify-center mt-8 px-8 w-full lg:w-7/12">
-                    <div class="p-6">
-                        <img src="{{ .Params.insights.image }}" alt="{{ .Params.insights.alt }}" />
+                
+                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
+                    <h4 class="text-xl font-semibold mb-2">Policy as Code</h4>
+                    <p class="text-gray-600">Define guardrails in code. Prevent mistakes before they happen. Stay compliant automatically.</p>
+                    <a href="/crossguard" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Cost Insights</h4>
+                    <p class="text-gray-600">See all cloud resources in one place. Find waste. Track spending. Know what changed.</p>
+                    <a href="/product/pulumi-insights" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Team Collaboration</h4>
+                    <p class="text-gray-600">Share state safely. Review changes together. Manage permissions. Work better as a team.</p>
+                    <a href="/product/pulumi-cloud" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Developer Portal</h4>
+                    <p class="text-gray-600">Let developers self-serve infrastructure. Create golden paths. Apply guardrails automatically.</p>
+                    <a href="/product/internal-developer-platforms" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">AI Assistant</h4>
+                    <p class="text-gray-600">Get help writing infrastructure code. Debug faster. Learn as you build.</p>
+                    <a href="/ai" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Snowflake quote -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
+    <!-- Single Testimonials Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">What Engineers Are Saying</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-700 italic mb-4">
+                        "Nothing is better than having standard programming languages for building and managing infrastructure"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="/logos/customers/panther-labs-logo.svg" class="h-8 mr-4" alt="Panther Labs">
+                        <div>
+                            <p class="font-semibold">Austin Byers</p>
+                            <p class="text-sm text-gray-600">Principal Platform Engineer, Panther Labs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-gray-700 italic mb-4">
+                        "We've made cloud infrastructure really easy to use for our developers."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="/logos/customers/clear-logo.svg" class="h-8 mr-4" alt="Clear">
+                        <div>
+                            <p class="font-semibold">James Forcier</p>
+                            <p class="text-sm text-gray-600">Staff Software Engineer, Clear</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="/case-studies" class="text-purple-600 hover:text-purple-700 font-semibold">
+                    Read more customer stories →
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Built by engineers + tweets -->
+    <!-- Open Source Community -->
     <section class="mt-16 mb-36 relative flex flex-col">
         <div class="container mx-auto px-3 overflow-hidden lg:overflow-visible">
             <div class="w-full bg-violet-600 rounded-xl shadow p-16 lg:pb-56 align-top">
@@ -206,32 +230,11 @@
                 <div class="flex flex-col lg:flex-row items-center justify-center mb-4">
                     <a class="text-white text-lg bold underline flex self-start lg:self-auto mt-4 lg:mt-0 mx-auto lg:mx-0 lg:pr-1" href="https://slack.pulumi.com/"
                         >Join the Pulumi community,</a>
-                    <p class="text-white text-lg mx-auto my-0 lg:mx-0 lg:my-auto"> and let’s build together.</p>
+                    <p class="text-white text-lg mx-auto my-0 lg:mx-0 lg:my-auto"> and let's build together.</p>
                 </div>
             </div>
 
-            <div class="w-full order-first lg:hidden">
-                <pulumi-swiper slides="1" centered-slides="true" initial-slide="3" loop="true" autoplay="true" autoplay-delay="5000" speed="1000">
-                    {{ range $tweet := .Params.get_started.tweets }}
-                        <pulumi-swipeable>
-                            <div class="w-full px-4">
-                                <div class="flex flex-col card p-6 bg-white">
-                                    <p class="text-left mt-0 overflow-hidden">{{ $tweet.text }}</p>
-                                    <div class="flex flex-grow items-end">
-                                        <div>
-                                            <img class="rounded-full w-12 h-12" src="{{ $tweet.avatar }}" />
-                                        </div>
-                                        <p class="ml-4 text-gray-600">{{ $tweet.username }}</p>
-                                        <div class="flex-grow flex justify-end my-4">
-                                            <img class="h-6" src="/logos/tech/x.svg" alt="X" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </pulumi-swipeable>
-                    {{ end }}
-                </pulumi-swiper>
-            </div>
+            <!-- Twitter testimonials carousel -->
             <div class="large-container mx-auto absolute -bottom-12 left-0 pt-12 hidden lg:block">
                 <pulumi-swiper slides="3" centered-slides="true" initial-slide="3" loop="true" autoplay="true" autoplay-delay="4000" speed="1000">
                     {{ range $tweet := .Params.get_started.tweets }}
@@ -241,7 +244,6 @@
                                     <p class="flex-grow mt-0">{{ $tweet.text }}</p>
                                     <div class="flex items-center w-full pb-1">
                                         <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
-                                            <!-- If the browser fails to load the Twitter avatar, just hide it. -->
                                             <div class="rounded-full border-none w-12 h-12 mr-4 overflow-hidden">
                                                 <img src="{{ $tweet.avatar }}" onerror="$(this).hide();" />
                                             </div>
@@ -249,22 +251,7 @@
                                         <a href="{{ $tweet.link }}" class="flex-grow text-gray-600 hover:text-gray-600 hover:underline" target="_blank" rel="noopener noreferrer">
                                             {{ $tweet.username }}
                                         </a>
-
-                                        {{ if eq $tweet.source "twitter" }}
-                                            <img class="w-8 h-8" src="/logos/tech/x.svg" alt="Twitter" />
-                                        {{ end }}
-
-                                        {{ if eq $tweet.source "reddit" }}
-                                            <img class="w-8 h-8" src="/logos/tech/reddit.svg" alt="Reddit" />
-                                        {{ end }}
-
-                                        {{ if eq $tweet.source "linkedin" }}
-                                            <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" />
-                                        {{ end }}
-
-                                        {{ if eq $tweet.source "blog" }}
-                                            <i class="fas fa-blog text-gray-500 text-2xl"></i>
-                                        {{ end }}
+                                        <img class="h-6" src="/logos/tech/x.svg" alt="X" />
                                     </div>
                                 </div>
                             </div>
@@ -274,27 +261,8 @@
             </div>
         </div>
     </section>
+{{ end }}
 
-    <!-- CTAs -->
-    <section class="container mx-auto my-24 px-6">
-        <div class="flex justify-center">
-            <div class="card ready-cta w-full rounded-xl p-0.5 gradient">
-                <div class="flex justify-center rounded-xl bg-purple-100">
-                    <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
-                        <h2 class="mb-12 text-center">Ready to try Pulumi?</h2>
-                        <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
-                            <div class="flex flex-col justify-center align-center text-center lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
-                                <a href="/docs/get-started/" class="btn-primary py-3">Get Started</a>
-                                <p class="text-xs pt-1 my-0">Follow the step-by-step guide</p>
-                            </div>
-                            <div class="flex flex-col justify-center align-center text-center lg:mr-14 lg:ml-4">
-                                <a href="docs/install/" class="btn-secondary py-3 px-6 whitespace-nowrap">Download Open Source</a>
-                                <p class="text-xs pt-1 my-0">Download our open source SDK</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{ define "foot" }}
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 {{ end }}

@@ -1,13 +1,13 @@
 ---
-title: Pulumi - Infrastructure as Code, Secrets Management, and AI
-meta_desc: Pulumi is an infrastructure management platform to automate through infrastructure as code, secure with secrets management, and manage infrastructure with AI.
+title: Pulumi - Infrastructure as Code in Any Programming Language
+meta_desc: Write infrastructure as code using TypeScript, Python, Go, C#, or Java. Deploy to any cloud. Open source and free to start.
 
 include_organization_schema: true
 
 hero:
-  title: [ "The Cloud Infrastructure Platform", "Engineers Love and Enterprises Trust" ]
+  title: [ "IaC in Any Language", "Open Source. Trusted at Scale." ]
   description: |
-    Powered by the #1 open source infrastructure as code tool.
+    Write infrastructure as code using TypeScript, Python, Go, C#, or Java. Deploy to any cloud. No DSLs, no YAML hell, just real code.
   cta_text: Try Pulumi Cloud for Free
   cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
   secondary_cta_text: Download Open Source
@@ -15,46 +15,80 @@ hero:
 
 pillars:
     items:
-        - icon: gear
+        - icon: code
           icon_color: purple
-          title: Automate
-          description: Infrastructure as code, powered by the industry’s best languages and AIs, helps teams provision, automate, and evolve cloud infrastructure.
+          title: Write Real Code
+          description: Use TypeScript, Python, Go, C#, Java, or YAML. Get autocomplete, type checking, and refactoring. No more copying and pasting YAML.
         - icon: shield
           icon_color: yellow
-          title: Secure
-          description: Config and secrets management built for engineers by engineers to tame sprawl at scale and help teams ensure automatic security.
+          title: Ship Safely
+          description: Test your infrastructure with unit tests. Preview changes before deploying. Define policies in code to prevent mistakes.
         - icon: guage
           icon_color: salmon
-          title: Manage
-          description: Gain security, compliance, and cost insights into the entirety of an organization’s cloud assets and automatically remediate issues.
+          title: Scale Confidently
+          description: From side project to production. Start with open source, add team features as you grow. Free for individuals.
 
 idp:
-  title: The Fastest, Most Secure Way to Deliver Cloud Infrastructure
+  title: Enable Your Developers to Self-Serve Infrastructure
   image: /images/product/homepage-idp.png
   description: |
-    Deliver production-ready cloud infrastructure to developers through flexible self-service – with guardrails, governance, and best practices built in.
-
-code_faster:
-  title: Ship faster with <br/> infrastructure as code in any programming language
-  description: |
-    Author infrastructure code using programming languages you know and love. Write statements to define infrastructure using your IDE with autocomplete, type checking, and documentation.
-
-insights:
-  title: Drive security and compliance through AI
-  image: /images/solutions/ai/ai_save_cost.svg
-  alt: Diagram demonstrating how Pulumi Insights drives costs, security, and compliance.
-  description: |
-    Enforce compliance and security, understand cloud usage, and discover cost savings to drive better efficiency, security, and reliability across all cloud assets.
+    Create golden paths for your team. Let developers provision the infrastructure they need without waiting for tickets. Apply guardrails automatically.
 
 secrets:
-  title: Centralize and secure your secrets management
+  title: Manage Secrets Without the Hassle
   image: /images/product/esc-diagram-octopus.svg
-  alt: a screenshot of Pulumi ESC
+  alt: Pulumi Secrets Management
   description: |
-    Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications. Pull and sync with any secrets store, and consume in any application, tool, or CI/CD platform.
+    Stop hardcoding secrets. Pulumi automatically encrypts your secrets and keeps them safe. Integrate with any vault or secret store. Works with your existing tools.
+
+insights:
+  title: Understand What You're Spending
+  image: /images/solutions/ai/ai_save_cost.svg
+  alt: Cloud cost insights
+  description: |
+    See all your cloud resources in one place. Find unused resources. Get cost breakdowns. Know what changed and who changed it.
+
+problem_solution:
+  problem:
+    title: Stop Fighting Your Infrastructure Tools
+    description: |
+      Managing cloud infrastructure with legacy IaC tools is cumbersome: DSLs are limiting, and you end up with thousands of lines of JSON/YAML. Terraform HCL lacks loops and abstractions, leading to tens of thousands of lines of boilerplate code.
+  solution:
+    title: Use Real Languages for Real Infrastructure
+    description: |
+      Pulumi IaC lets you use TypeScript, Python, Go, C#, Java, or YAML to provision any cloud infrastructure. Reuse code, use loops and conditionals, test and refactor your infrastructure code just like application code. Less boilerplate, more productivity.
+
+unified_platform:
+  title: One Unified Platform
+  description: |
+    Pulumi's cloud engineering platform has everything you need to scale infrastructure provisioning in a team or enterprise setting. Use only what you need – start with the open source IaC tool and adopt advanced capabilities as you grow.
+  features:
+    - icon: code
+      title: Code in any language
+      description: Use TypeScript, Python, Go, C#, Java, or YAML with full IDE support
+    - icon: cloud
+      title: State & Secrets Management
+      description: Managed cloud backend for state and secrets (Pulumi ESC)
+    - icon: shield
+      title: Policy as Code
+      description: Define policies to prevent mistakes (CrossGuard)
+    - icon: sparkle
+      title: AI-Assisted Infrastructure
+      description: Get help writing infrastructure code (Pulumi AI)
+    - icon: users
+      title: Self-Service Portal
+      description: Enable developers with golden paths (IDP)
+    - icon: chart
+      title: Insights & Visibility
+      description: Understand cloud usage and costs across your organization
+
+code_faster:
+  title: Write Infrastructure Code That Actually Makes Sense
+  description: |
+    Stop copying and pasting YAML. Use real programming languages with loops, functions, classes, and package management. Your IDE already knows how to help you write better infrastructure code – with autocomplete, type checking, inline documentation, and refactoring tools.
 
 customer_logos:
-  title: Trusted by over 3,000 innovative companies
+  title: Trusted by over 3,500 innovative customers
   logos:
     - name: bmw
       link: /case-studies/

@@ -7,13 +7,13 @@ aliases:
 
 heading: Pulumi IaC
 subheading: |
-    Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
-    make managing infrastructure secure, reliable, and hassle-free.
+    Write infrastructure code using real programming languages. No more YAML hell. No more copying and pasting.
+    Just use TypeScript, Python, Go, C#, Java, or even YAML if you prefer.
 
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
+    title: Infrastructure as Code<br/>That Actually Makes Sense
     description: |
-        Build and ship infrastructure faster using languages you know and love. Use Pulumi’s open source SDK to provision infrastructure on any cloud.
+        Stop fighting with HCL and JSON. Use the programming languages you already know to define, deploy, and manage infrastructure on any cloud. Your IDE already knows how to help you.
 
 key_features_above:
     items:
