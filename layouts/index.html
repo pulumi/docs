@@ -1,18 +1,80 @@
 {{ define "hero" }}
-    <header class="home-page-hero">
-        <div class="home-page-hero-background border-b border-gray-300">
-            <div class="flex">
-                <div class="w-full p-6 home-page-hero-text lg:pt-8">
-                    <h1 class="flex flex-col items-center">
-                        <span class="inline-block mb-3 text-center" data-text="{{ index (.Params.hero.title) 0 }}"><span class="rainbow-text">{{ index (.Params.hero.title) 0 }}</span></span>
-                        <span class="inline-block text-center" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
-                    </h1>
+    <header class="relative w-full">
+        <div class="border-b border-gray-300">
+            <div class="container mx-auto px-6 py-8 lg:py-12">
+                <div class="flex flex-col lg:flex-row gap-8 items-start">
+                    <!-- Left: Messaging (aligned to top) -->
+                    <div class="w-full lg:w-1/2 lg:pt-4">
+                        <h1 class="mb-4">
+                            <span class="block mb-2 text-5xl lg:text-6xl" data-text="{{ index (.Params.hero.title) 0 }}"><span class="rainbow-text">{{ index (.Params.hero.title) 0 }}</span></span>
+                            <span class="block text-xl lg:text-2xl text-gray-600" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
+                        </h1>
 
-                    <p class="mt-6 text-center leading-7 text-xl">{{ .Params.hero.description | markdownify }}</p>
+                        <p class="text-lg text-gray-700 mb-8">{{ .Params.hero.description | markdownify }}</p>
 
-                    <div class="relative z-10 overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
-                        <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ .Params.hero.cta_link }}">{{ .Params.hero.cta_text }}</a>
-                        <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer" href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a class="btn-primary py-4 px-8" href="{{ .Params.hero.cta_link }}">{{ .Params.hero.cta_text }}</a>
+                            <a class="btn-secondary py-4 px-8 rounded-full" href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Code Example (expands naturally) -->
+                    <div class="w-full lg:w-1/2 lg:max-w-xl">
+                        <div class="rounded-lg shadow-md border border-gray-200">
+                            <script>
+                                // Randomize initial language selection and auto-rotate
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    const languages = ['typescript', 'python', 'go', 'csharp', 'java'];
+                                    let currentIndex = Math.floor(Math.random() * languages.length);
+                                    const chooser = document.querySelector('pulumi-chooser[type="language"]');
+                                    
+                                    if (chooser) {
+                                        // Set initial random language
+                                        setTimeout(() => {
+                                            chooser.selection = languages[currentIndex];
+                                        }, 100);
+                                        
+                                        // Auto-rotate every 5 seconds
+                                        let rotationInterval = setInterval(() => {
+                                            currentIndex = (currentIndex + 1) % languages.length;
+                                            chooser.selection = languages[currentIndex];
+                                        }, 5000);
+                                        
+                                        // Stop auto-rotation if user manually selects a language
+                                        chooser.addEventListener('change', () => {
+                                            clearInterval(rotationInterval);
+                                        });
+                                    }
+                                });
+                            </script>
+                            <pulumi-chooser type="language" options="typescript,python,go,csharp,java">
+                                <pulumi-choosable type="language" class="highlight" value="typescript">
+                                    <img class="w-full h-auto block"
+                                        src="/images/home/typescript.svg"
+                                        alt="Pulumi code in TypeScript with IDE autocomplete" />
+                                </pulumi-choosable>
+                                <pulumi-choosable type="language" class="highlight" value="python">
+                                    <img class="w-full h-auto block"
+                                        src="/images/home/python.svg"
+                                        alt="Pulumi code in Python with IDE autocomplete" />
+                                </pulumi-choosable>
+                                <pulumi-choosable type="language" class="highlight" value="go">
+                                    <img class="w-full h-auto block"
+                                        src="/images/home/go.svg"
+                                        alt="Pulumi code in Go with IDE autocomplete" />
+                                </pulumi-choosable>
+                                <pulumi-choosable type="language" class="highlight" value="csharp">
+                                    <img class="w-full h-auto block"
+                                        src="/images/home/c-sharp.svg"
+                                        alt="Pulumi code in C# with IDE autocomplete" />
+                                </pulumi-choosable>
+                                <pulumi-choosable type="language" class="highlight" value="java">
+                                    <img class="w-full h-auto block"
+                                        src="/images/home/java.svg"
+                                        alt="Pulumi code in Java with IDE autocomplete" />
+                                </pulumi-choosable>
+                            </pulumi-chooser>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -24,11 +86,13 @@
     {{ $pageContext := . }}
     
     <!-- Customer Logos - Social Proof First -->
-    <section class="container mx-auto text-center overflow-hidden px-3 mt-12" style="margin-bottom: -35px;">
-        <h3 class="text-center text-xl">
+    <section class="container mx-auto text-center overflow-hidden px-3 mt-8">
+        {{ if .Params.customer_logos.title }}
+        <h3 class="text-center text-xl mb-4">
             <a href="/case-studies" class="hover:underline">{{ .Params.customer_logos.title }}</a>
         </h3>
-        <div class="mb-6">
+        {{ end }}
+        <div class="mb-8">
             {{ partial "stacked-carousel.html" (dict "logos" .Params.customer_logos.logos "single_row" true "gray_hover" true ) }}
         </div>
     </section>
@@ -59,205 +123,159 @@
     <!-- Quick Start Guide - Show How Easy It Is -->
     {{ partial "home/quick-start.html" . }}
 
-    <!-- Main Demo Section with Code Examples -->
-    <section class="my-12 p-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
-        <div class="container mx-auto z-10">
-            <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
-                <div class="w-full lg:w-4/12">
-                    <h3>See It In Action</h3>
-                    <p class="text-lg">Write infrastructure code with real programming languages. Get autocomplete, type checking, and all the IDE features you love.</p>
-                    <div class="my-8">
-                        <a href="/docs/iac/get-started" class="btn-primary">Start Building Now</a>
-                    </div>
-                </div>
-                <div class="hidden lg:block w-1/12">
-                    <!-- empty div to get flex to behave -->
-                </div>
-                <div class="w-full lg:w-7/12 xl:w-6/12 xxl:w-5/12 card bg-white shadow-xl p-6 block">
-                    <div>
-                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                            <pulumi-choosable type="language" class="highlight" value="typescript">
-                                <img
-                                    class="mx-auto w-full"
-                                    src="/images/home/typescript.svg"
-                                    alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket"
-                                />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="python">
-                                <img class="mx-auto w-full" src="/images/home/python.svg" alt="Pulumi code being written in Python showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="go">
-                                <img class="mx-auto w-full" src="/images/home/go.svg" alt="Pulumi code being written in GO showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="csharp">
-                                <img class="mx-auto w-full" src="/images/home/c-sharp.svg" alt="Pulumi code being written in C# showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="java">
-                                <img class="mx-auto w-full" src="/images/home/java.svg" alt="Pulumi code being written in Java showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-
-                            <pulumi-choosable type="language" class="highlight" value="yaml">
-                                <img class="mx-auto w-full" src="/images/home/yaml.svg" alt="Pulumi code being written in YAML showing autocomplete for creating a new S3 bucket" />
-                            </pulumi-choosable>
-                        </pulumi-chooser>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Why Pulumi vs Terraform Comparison -->
     {{ partial "home/why-pulumi.html" . }}
 
     <!-- Platform Capabilities - ONE unified section instead of 4 -->
-    <section class="py-12 my-12 px-6 lg:px-0">
-        <div class="container mx-auto">
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4">Everything You Need as You Scale</h2>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                    Start with open source. Add capabilities as your team grows. No vendor lock-in.
+                <h2 class="mb-4">Everything You Need as You Scale</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                    Start with open source. Add capabilities as your team grows.
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                    <div class="text-purple-600 text-3xl mb-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="p-6">
+                    <div class="text-purple-600 text-2xl mb-3">
                         <i class="fas fa-key"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-2">Secrets Management</h4>
-                    <p class="text-gray-600">Automatically encrypt secrets. Integrate with any vault. Never hardcode credentials again.</p>
-                    <a href="/product/esc" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                    <h4 class="mb-2">Secrets Management</h4>
+                    <p class="text-sm text-gray-600 mb-3">Automatically encrypt secrets. Integrate with any vault. Never hardcode credentials again.</p>
+                    <a href="/product/esc" class="text-sm text-purple-600 hover:text-purple-700">Learn more →</a>
                 </div>
                 
-                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                    <div class="text-purple-600 text-3xl mb-4">
+                <div class="p-6">
+                    <div class="text-purple-600 text-2xl mb-3">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-2">Policy as Code</h4>
-                    <p class="text-gray-600">Define guardrails in code. Prevent mistakes before they happen. Stay compliant automatically.</p>
-                    <a href="/crossguard" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                    <h4 class="mb-2">Policy as Code</h4>
+                    <p class="text-sm text-gray-600 mb-3">Define guardrails in code. Prevent mistakes before they happen. Stay compliant automatically.</p>
+                    <a href="/crossguard" class="text-sm text-purple-600 hover:text-purple-700">Learn more →</a>
                 </div>
                 
-                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                    <div class="text-purple-600 text-3xl mb-4">
+                <div class="p-6">
+                    <div class="text-purple-600 text-2xl mb-3">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-2">Cost Insights</h4>
-                    <p class="text-gray-600">See all cloud resources in one place. Find waste. Track spending. Know what changed.</p>
-                    <a href="/product/pulumi-insights" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                    <h4 class="mb-2">Cloud Intelligence</h4>
+                    <p class="text-sm text-gray-600 mb-3">Full visibility into your cloud estate. Discover unknown resources. Find waste. Ensure governance.</p>
+                    <a href="/product/pulumi-insights" class="text-sm text-purple-600 hover:text-purple-700">Learn more →</a>
                 </div>
                 
-                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                    <div class="text-purple-600 text-3xl mb-4">
+                <div class="p-6">
+                    <div class="text-purple-600 text-2xl mb-3">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-2">Team Collaboration</h4>
-                    <p class="text-gray-600">Share state safely. Review changes together. Manage permissions. Work better as a team.</p>
-                    <a href="/product/pulumi-cloud" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                    <h4 class="mb-2">Team Collaboration</h4>
+                    <p class="text-sm text-gray-600 mb-3">Share state safely. Review changes together. Manage permissions. Work better as a team.</p>
+                    <a href="/product/pulumi-cloud" class="text-sm text-purple-600 hover:text-purple-700">Learn more →</a>
                 </div>
                 
-                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                    <div class="text-purple-600 text-3xl mb-4">
+                <div class="p-6">
+                    <div class="text-purple-600 text-2xl mb-3">
                         <i class="fas fa-cubes"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-2">Developer Portal</h4>
-                    <p class="text-gray-600">Let developers self-serve infrastructure. Create golden paths. Apply guardrails automatically.</p>
-                    <a href="/product/internal-developer-platforms" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                    <h4 class="mb-2">Developer Portal</h4>
+                    <p class="text-sm text-gray-600 mb-3">Let developers self-serve infrastructure. Create golden paths. Apply guardrails automatically.</p>
+                    <a href="/product/internal-developer-platforms" class="text-sm text-purple-600 hover:text-purple-700">Learn more →</a>
                 </div>
                 
-                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                    <div class="text-purple-600 text-3xl mb-4">
+                <div class="p-6">
+                    <div class="text-purple-600 text-2xl mb-3">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-2">AI Assistant</h4>
-                    <p class="text-gray-600">Get help writing infrastructure code. Debug faster. Learn as you build.</p>
-                    <a href="/ai" class="text-purple-600 hover:text-purple-700 mt-4 inline-block">Learn more →</a>
+                    <h4 class="mb-2">AI Assistant</h4>
+                    <p class="text-sm text-gray-600 mb-3">Get help writing infrastructure code. Debug faster. Learn as you build.</p>
+                    <a href="/ai" class="text-sm text-purple-600 hover:text-purple-700">Learn more →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Single Testimonials Section -->
-    <section class="bg-gray-50 py-16">
+    <!-- Combined Testimonials & Community -->
+    <section class="py-16 bg-gradient-to-b from-white to-purple-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">What Engineers Are Saying</h2>
+            <!-- Testimonials Grid -->
+            <h2 class="text-center mb-8">Trusted by Engineering Teams Worldwide</h2>
             
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-gray-700 italic mb-4">
-                        "Nothing is better than having standard programming languages for building and managing infrastructure"
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <p class="text-gray-700 mb-4 text-sm">
+                        "Pulumi helped our team ship a new product faster with multi-cloud, multi-region Kubernetes clusters"
                     </p>
                     <div class="flex items-center">
-                        <img src="/logos/customers/panther-labs-logo.svg" class="h-8 mr-4" alt="Panther Labs">
+                        <img src="/logos/customers/snowflake-logo.svg" class="h-5 mr-3" alt="Snowflake">
                         <div>
-                            <p class="font-semibold">Austin Byers</p>
-                            <p class="text-sm text-gray-600">Principal Platform Engineer, Panther Labs</p>
+                            <p class="text-xs text-gray-600">
+                                <strong>Justin Fitzhugh</strong><br>
+                                VP of Cloud Platform Engineering
+                            </p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-gray-700 italic mb-4">
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <p class="text-gray-700 mb-4 text-sm">
+                        "Nothing is better than having standard programming languages for building infrastructure"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="/logos/customers/panther.svg" class="h-5 mr-3" alt="Panther Labs">
+                        <div>
+                            <p class="text-xs text-gray-600">
+                                <strong>Austin Byers</strong><br>
+                                Principal Platform Engineer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <p class="text-gray-700 mb-4 text-sm">
                         "We've made cloud infrastructure really easy to use for our developers."
                     </p>
                     <div class="flex items-center">
-                        <img src="/logos/customers/clear-logo.svg" class="h-8 mr-4" alt="Clear">
+                        <img src="/logos/customers/clear.png" class="h-5 mr-3" alt="Clear">
                         <div>
-                            <p class="font-semibold">James Forcier</p>
-                            <p class="text-sm text-gray-600">Staff Software Engineer, Clear</p>
+                            <p class="text-xs text-gray-600">
+                                <strong>James Forcier</strong><br>
+                                Staff Software Engineer
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="text-center mt-8">
-                <a href="/case-studies" class="text-purple-600 hover:text-purple-700 font-semibold">
-                    Read more customer stories →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Open Source Community -->
-    <section class="mt-16 mb-36 relative flex flex-col">
-        <div class="container mx-auto px-3 overflow-hidden lg:overflow-visible">
-            <div class="w-full bg-violet-600 rounded-xl shadow p-16 lg:pb-56 align-top">
-                <h2 class="text-white text-center">Open source. Built by engineers for engineers.</h2>
-                <div class="flex flex-col lg:flex-row items-center justify-center mb-4">
-                    <a class="text-white text-lg bold underline flex self-start lg:self-auto mt-4 lg:mt-0 mx-auto lg:mx-0 lg:pr-1" href="https://slack.pulumi.com/"
-                        >Join the Pulumi community,</a>
-                    <p class="text-white text-lg mx-auto my-0 lg:mx-0 lg:my-auto"> and let's build together.</p>
+            <!-- Community Stats -->
+            <div class="text-center bg-purple-600 rounded-lg p-8 max-w-4xl mx-auto">
+                <h3 class="text-white text-2xl mb-6">Join Our Open Source Community</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+                    <div>
+                        <div class="text-3xl font-bold text-white">20k+</div>
+                        <div class="text-purple-200 text-sm">GitHub Stars</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-white">10k+</div>
+                        <div class="text-purple-200 text-sm">Slack Members</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-white">2k+</div>
+                        <div class="text-purple-200 text-sm">Contributors</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-white">150+</div>
+                        <div class="text-purple-200 text-sm">Cloud Providers</div>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Twitter testimonials carousel -->
-            <div class="large-container mx-auto absolute -bottom-12 left-0 pt-12 hidden lg:block">
-                <pulumi-swiper slides="3" centered-slides="true" initial-slide="3" loop="true" autoplay="true" autoplay-delay="4000" speed="1000">
-                    {{ range $tweet := .Params.get_started.tweets }}
-                        <pulumi-swipeable>
-                            <div class="w-full px-4 text-left">
-                                <div class="flex flex-col card p-6 bg-white h-60">
-                                    <p class="flex-grow mt-0">{{ $tweet.text }}</p>
-                                    <div class="flex items-center w-full pb-1">
-                                        <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
-                                            <div class="rounded-full border-none w-12 h-12 mr-4 overflow-hidden">
-                                                <img src="{{ $tweet.avatar }}" onerror="$(this).hide();" />
-                                            </div>
-                                        </a>
-                                        <a href="{{ $tweet.link }}" class="flex-grow text-gray-600 hover:text-gray-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                                            {{ $tweet.username }}
-                                        </a>
-                                        <img class="h-6" src="/logos/tech/x.svg" alt="X" />
-                                    </div>
-                                </div>
-                            </div>
-                        </pulumi-swipeable>
-                    {{ end }}
-                </pulumi-swiper>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://github.com/pulumi/pulumi" class="btn bg-white text-purple-600 hover:bg-gray-100">
+                        <i class="fab fa-github mr-2"></i>Star on GitHub
+                    </a>
+                    <a href="https://slack.pulumi.com" class="btn bg-purple-700 text-white hover:bg-purple-800">
+                        <i class="fab fa-slack mr-2"></i>Join Slack
+                    </a>
+                </div>
             </div>
         </div>
     </section>

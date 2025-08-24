@@ -5,9 +5,9 @@ meta_desc: Write infrastructure as code using TypeScript, Python, Go, C#, or Jav
 include_organization_schema: true
 
 hero:
-  title: [ "IaC in Any Language", "Open Source. Trusted at Scale." ]
+  title: [ "Infrastructure as Code in Any Language", "Open Source. Trusted by 3,500+ Customers." ]
   description: |
-    Write infrastructure as code using TypeScript, Python, Go, C#, or Java. Deploy to any cloud. No DSLs, no YAML hell, just real code.
+    Use TypeScript, Python, Go, C#, or Java to manage any cloud. No proprietary DSLs or YAML hell. Full IDE support. 90% less code. 5x faster deployments.
   cta_text: Try Pulumi Cloud for Free
   cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
   secondary_cta_text: Download Open Source
@@ -88,7 +88,7 @@ code_faster:
     Stop copying and pasting YAML. Use real programming languages with loops, functions, classes, and package management. Your IDE already knows how to help you write better infrastructure code – with autocomplete, type checking, inline documentation, and refactoring tools.
 
 customer_logos:
-  title: Trusted by over 3,500 innovative customers
+  title: ""
   logos:
     - name: bmw
       link: /case-studies/

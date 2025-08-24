@@ -1,75 +1,50 @@
-<section class="quick-start bg-gray-100 py-16">
-    <div class="container mx-auto px-4">
+<section class="py-16">
+    <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold mb-4">Get Started in 5 Minutes</h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                No complex setup. No credit card required. Just install the CLI and deploy your first stack.
+            <h2 class="mb-4">Get Started in 5 Minutes</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                No complex setup. No credit card required. Just three simple steps.
             </p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <!-- Step 1: Install -->
-            <div class="bg-white rounded-lg p-6 shadow-md">
-                <div class="flex items-center mb-4">
-                    <div class="bg-purple-100 rounded-full p-3 mr-4">
-                        <span class="text-purple-600 font-bold text-xl">1</span>
-                    </div>
-                    <h3 class="text-xl font-semibold">Install Pulumi</h3>
-                </div>
-                <div class="mb-4">
-                    <pre class="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto"><code>$ curl -fsSL https://get.pulumi.com | sh</code></pre>
-                </div>
-                <p class="text-gray-600 text-sm">
-                    Or use brew, chocolatey, or download directly. Works on macOS, Linux, and Windows.
+            <div class="text-center">
+                <div class="text-4xl text-purple-600 mb-4">1</div>
+                <h4 class="mb-3">Install Pulumi</h4>
+                <pre class="bg-gray-900 text-gray-100 p-2 rounded text-xs mb-3 overflow-x-auto"><code>$ curl -fsSL https://get.pulumi.com | sh</code></pre>
+                <p class="text-sm text-gray-600">
+                    Or use brew, chocolatey, or download directly.
                 </p>
             </div>
             
             <!-- Step 2: Create Project -->
-            <div class="bg-white rounded-lg p-6 shadow-md">
-                <div class="flex items-center mb-4">
-                    <div class="bg-purple-100 rounded-full p-3 mr-4">
-                        <span class="text-purple-600 font-bold text-xl">2</span>
-                    </div>
-                    <h3 class="text-xl font-semibold">Create Your Project</h3>
-                </div>
-                <div class="mb-4">
-                    <pre class="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto"><code>$ pulumi new aws-typescript</code></pre>
-                </div>
-                <p class="text-gray-600 text-sm">
-                    Choose from templates for AWS, Azure, GCP, Kubernetes, and more. Use TypeScript, Python, Go, C#, or Java.
+            <div class="text-center">
+                <div class="text-4xl text-purple-600 mb-4">2</div>
+                <h4 class="mb-3">Create Your Project</h4>
+                <pre class="bg-gray-900 text-gray-100 p-2 rounded text-xs mb-3 overflow-x-auto"><code>$ pulumi new aws-typescript</code></pre>
+                <p class="text-sm text-gray-600">
+                    Choose from templates for any cloud and language.
                 </p>
             </div>
             
             <!-- Step 3: Deploy -->
-            <div class="bg-white rounded-lg p-6 shadow-md">
-                <div class="flex items-center mb-4">
-                    <div class="bg-purple-100 rounded-full p-3 mr-4">
-                        <span class="text-purple-600 font-bold text-xl">3</span>
-                    </div>
-                    <h3 class="text-xl font-semibold">Deploy to the Cloud</h3>
-                </div>
-                <div class="mb-4">
-                    <pre class="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto"><code>$ pulumi up</code></pre>
-                </div>
-                <p class="text-gray-600 text-sm">
-                    Preview your changes, then deploy. Pulumi handles the rest. Your infrastructure is now code!
+            <div class="text-center">
+                <div class="text-4xl text-purple-600 mb-4">3</div>
+                <h4 class="mb-3">Deploy to the Cloud</h4>
+                <pre class="bg-gray-900 text-gray-100 p-2 rounded text-xs mb-3 overflow-x-auto"><code>$ pulumi up</code></pre>
+                <p class="text-sm text-gray-600">
+                    Preview changes, then deploy. That's it!
                 </p>
             </div>
         </div>
         
         <div class="text-center mt-12">
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://app.pulumi.com/signup?utm-source=quick-start" 
-                   class="btn-primary px-8 py-4 text-lg rounded-lg inline-block">
-                    Try Pulumi Cloud Free
-                </a>
-                <a href="/docs/iac/get-started" 
-                   class="btn-secondary px-8 py-4 text-lg rounded-lg inline-block">
-                    View Full Tutorial
-                </a>
-            </div>
-            <p class="text-gray-600 mt-4">
-                Free for individual use. No credit card required.
+            <a href="/docs/iac/get-started" class="btn-primary">
+                Get Started Now →
+            </a>
+            <p class="text-sm text-gray-600 mt-4">
+                Free forever. No credit card required.
             </p>
         </div>
     </div>
