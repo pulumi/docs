@@ -41,6 +41,44 @@ Enhanced the workflow to:
 - Update notification messages to hint at potential registry issues
 - Framework for distinguishing infrastructure vs code failures
 
+## Testing
+
+Run the test suite to validate all improvements:
+```bash
+./scripts/test-reliability-improvements.sh
+```
+
+## Emergency Procedures
+
+For extreme registry outages:
+1. **Manual retry**: Re-run the failed workflow (most effective)
+2. **Emergency offline mode**: Use `./scripts/emergency-offline-install.sh` (requires pre-cached dependencies)
+
+## Monitoring & Metrics
+
+To monitor effectiveness:
+1. **Failure rate**: Track frequency of yarn registry failures in workflow runs
+2. **Cache hit rate**: Monitor cache performance in workflow logs
+3. **Retry patterns**: Look for retry attempts in build logs
+4. **Time to resolution**: Measure how quickly retries resolve issues
+
+## Additional Recommendations
+
+### For Development Team
+- **Re-run failed workflows** before investigating code issues
+- **Check notification messages** for hints about registry issues
+- **Report persistent patterns** if specific packages consistently fail
+
+### For Infrastructure Team
+- **Monitor registry status** during widespread failures
+- **Consider mirroring** critical dependencies for high-availability environments  
+- **Update notification routing** to distinguish infrastructure vs code issues
+
+### For Long-term Reliability
+- **Dependency auditing**: Regularly review and update dependencies
+- **Alternative registries**: Consider backup registry configuration
+- **Container-based builds**: Pre-built containers with dependencies for critical deployments
+
 ## Usage
 
 The improvements are transparent to normal workflow operation. The retry mechanism automatically activates when yarn commands encounter network errors.
