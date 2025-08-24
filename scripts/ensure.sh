@@ -31,7 +31,11 @@ check_version "Hugo"     "hugo"  "hugo version | sed 's/hugo v\([0-9\.]*\).*$/\1
 check_version "Yarn"     "yarn"  "yarn -v | sed 's/v\([0-9\.]*\).*$/\1/'"            "1.22"
 
 # Install the Node dependencies for the website and the infrastructure.
-yarn install
-yarn --cwd infrastructure install
-yarn --cwd theme install
-yarn --cwd theme/stencil install
+# Use retry logic to handle transient registry failures
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+echo "Installing Node dependencies with retry logic..."
+"$SCRIPT_DIR/retry-yarn.sh" install
+"$SCRIPT_DIR/retry-yarn.sh" --cwd infrastructure install
+"$SCRIPT_DIR/retry-yarn.sh" --cwd theme install
+"$SCRIPT_DIR/retry-yarn.sh" --cwd theme/stencil install
