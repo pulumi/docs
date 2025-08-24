@@ -15,20 +15,31 @@ overview:
     description: |
         Pulumi's infrastructure as code engine is **100% open source and free forever**. Write infrastructure using programming languages you already know. Deploy to AWS, Azure, Google Cloud, Kubernetes, and thousands of providers. Self-manage your state or use Pulumi Cloud for team collaboration.
 
-why_real_languages:
-    title: Why Real Programming Languages?
+key_features_above:
     items:
-        - title: "Your IDE Already Works"
-          description: "Autocomplete, type checking, inline docs, refactoring. No custom tooling required."
-          
-        - title: "Use Real Logic"
-          description: "Loops, conditionals, functions, classes. No more copy-paste. No more string interpolation hell."
-          
-        - title: "Test Like Software"
-          description: "Unit tests, integration tests, property tests. Catch errors at compile time, not runtime."
-          
-        - title: "Share and Reuse"
-          description: "Package infrastructure as libraries. Share via npm, PyPI, NuGet, or any package manager."
+        - title: "Write in Any Language, Deploy to Any Cloud"
+          sub_title: "Real programming languages for real infrastructure"
+          description: |
+            Use TypeScript, Python, Go, C#, Java, or YAML to define infrastructure. Get autocomplete, type checking, and all the power of your favorite programming language. Deploy to AWS, Azure, Google Cloud, Kubernetes, and [thousands of providers](/registry/).
+          button:
+            text: "Browse language docs"
+            link: "/docs/languages-sdks/"
+          features:
+              - title: Your IDE already works
+                description: |
+                    Autocomplete, type checking, inline docs, refactoring. No custom tooling required.
+                icon: code
+                color: yellow
+              - title: Use real logic
+                description: |
+                    Loops, conditionals, functions, classes. No more copy-paste. No more string interpolation hell.
+                icon: cycle
+                color: yellow
+              - title: Test like software
+                description: |
+                    Unit tests, integration tests, property tests. Catch errors at compile time, not runtime.
+                icon: testing
+                color: yellow
 
 key_features:
     title: Core Capabilities
@@ -37,6 +48,9 @@ key_features:
           sub_title: "Use the language that fits your team"
           description: |
             Write infrastructure in TypeScript, Python, Go, C#, Java, or YAML. Same infrastructure model, different syntax. Pick what works for you.
+          button:
+            text: "Learn more about languages"
+            link: "/docs/languages-sdks/"
           ide:
             - title: TypeScript
               language: typescript
@@ -118,23 +132,6 @@ key_features:
                         indexDocument: index.html
                 outputs:
                   url: ${my-bucket.websiteEndpoint}
-          
-        - title: "Any Cloud Provider"
-          sub_title: "One workflow for everything"
-          description: |
-            Deploy to AWS, Azure, Google Cloud, Kubernetes, Cloudflare, DigitalOcean, and [thousands more providers](/registry/). Same CLI, same workflow, same great experience.
-          features:
-              - title: Native providers
-                description: "Full API coverage with same-day updates for major clouds"
-              - title: Kubernetes native
-                description: "Deploy and manage Kubernetes resources alongside cloud infrastructure"
-              - title: Cloud agnostic
-                description: "Mix and match providers in a single program"
-
-        - title: "Components and Packages"
-          sub_title: "Build once, reuse everywhere"
-          description: |
-            Create higher-level abstractions that encapsulate best practices. Share them across teams via package managers.
           features:
               - title: Multi-language packages
                 description: "Write in one language, use from any language"
@@ -143,39 +140,75 @@ key_features:
               - title: Standard distribution
                 description: "Share via npm, PyPI, NuGet, or any package registry"
 
-how_it_works:
-    title: How It Works
-    description: |
-        1. **Write** - Define infrastructure in your favorite programming language
-        2. **Preview** - See exactly what will change before you deploy
-        3. **Deploy** - Update your infrastructure with a single command
-        4. **Manage** - Track state locally or with Pulumi Cloud
+        - title: "Components and Packages"
+          sub_title: "Build once, reuse everywhere"
+          description: |
+            Create higher-level abstractions that encapsulate best practices. Share them across teams via package managers. Build reusable cloud architectures.
+          button:
+            text: "Explore packages"
+            link: "/registry/"
+          image: "/images/product/pulumi-packages.png"
+          features:
+              - title: Native cloud providers
+                description: "Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates"
+              - title: Crosswalk for AWS
+                description: "Adopt well-architected best practices for your infrastructure easily"
+              - title: Cloud agnostic
+                description: "Mix and match providers in a single program"
 
-open_source:
+        - title: "CI/CD Integration"
+          sub_title: "Deploy through your existing pipelines"
+          description: |
+            Integrate with GitHub Actions, GitLab, CircleCI, Jenkins, and more. Preview infrastructure changes in pull requests. Deploy on merge.
+          button:
+            text: "View integrations"
+            link: "/docs/iac/packages-and-automation/continuous-delivery/"
+          image: "/images/product/pulumi-cicd.png"
+          features:
+              - title: Version and review
+                description: "Manage infrastructure code in Git and approve changes through pull requests"
+              - title: Shift left
+                description: "Get rapid feedback with unit tests and preview deployments"
+              - title: GitOps ready
+                description: "Deploy using GitOps patterns with the Pulumi Kubernetes Operator"
+
+stats:
     title: Proudly Open Source
     description: |
         Pulumi IaC is developed in the open on [GitHub](https://github.com/pulumi/pulumi). Join thousands of contributors making infrastructure better for everyone.
-    stats:
-        - number: "20k+"
-          label: "GitHub Stars"
-        - number: "10k+"
-          label: "Community Members"
-        - number: "1000s"
-          label: "Companies Using Pulumi"
+    community:
+        number: "20k+"
+        description: GitHub Stars
+    company:
+        number: "10k+"
+        description: Community Members
+    integration:
+        number: "1000s"
+        description: Companies Using Pulumi
 
-with_pulumi_cloud:
-    title: Better Together with Pulumi Cloud
-    description: |
-        While Pulumi IaC is powerful on its own, Pulumi Cloud makes it even better for teams:
-        
-        • **Managed State** - Never worry about corrupted state files
-        • **Secrets Management** - Built-in encryption for sensitive data
-        • **Team Collaboration** - RBAC, audit logs, and deployment history
-        • **Policy Enforcement** - Ensure compliance before deployment
-        
-        Free for individuals, with team plans starting at $1 per resource.
-    cta_text: "Try Pulumi Cloud"
-    cta_link: "https://app.pulumi.com/signup"
+key_features_below:
+    items:
+        - title: "Better Together with Pulumi Cloud"
+          sub_title: "The easiest way to use Pulumi at scale"
+          description: |
+            While Pulumi IaC is powerful on its own, Pulumi Cloud makes it even better for teams. Get managed state storage, secrets encryption, team collaboration, policy enforcement, and more. Free for individuals, with team plans starting at $1 per resource.
+          button:
+            text: "Try Pulumi Cloud"
+            link: "https://app.pulumi.com/signup"
+          image: "/images/product/pulumi-cloud-iac-stylized-01.png"
+          features:
+              - title: Managed state
+                description: "Never worry about corrupted state files or DIY backends"
+              - title: Built-in secrets
+                description: "Automatic encryption for sensitive configuration"
+              - title: Team collaboration
+                description: "RBAC, audit logs, deployment history, and concurrent updates"
+              - title: Policy as code
+                description: "Enforce security and compliance rules before deployment"
+              - title: AI assistance
+                description: "Pulumi Copilot helps you write, debug, and understand infrastructure"
+              - title: Enterprise ready
+                description: "SAML SSO, SCIM provisioning, and premium support"
 
 get_started:
     title: Getting started
