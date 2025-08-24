@@ -35,26 +35,26 @@ why_pulumi_cloud:
 
 platform_capabilities:
     title: Platform Capabilities
-    subtitle: Build on top of the core IaC engine
+    subtitle: Available with Pulumi Cloud
     items:
         - title: "Infrastructure as Code"
           icon: code
           description: "The foundation. Write infrastructure in real programming languages. Always open source and free."
           link: "/product/infrastructure-as-code/"
           
+        - title: "AI-Powered IaC"
+          icon: bot
+          description: "Generate infrastructure code with AI. Includes Pulumi AI, Copilot, and Neo agent."
+          link: "/product/pulumi-ai/"
+          
         - title: "Secrets & Configuration"
           icon: key
           description: "Stop hardcoding secrets. Centralize all configuration with Pulumi ESC. Works with any secrets store."
           link: "/product/secrets-management/"
           
-        - title: "Policy & Governance"
+        - title: "Insights & Governance"
           icon: shield
-          description: "Enforce security and compliance automatically. Write policies in code with CrossGuard."
-          link: "/crossguard/"
-          
-        - title: "Cloud Intelligence"
-          icon: bot
-          description: "AI-powered insights, recommendations, and code assistance. Understand and optimize your cloud."
+          description: "CSPM, policy as code, asset inventory, and compliance automation."
           link: "/product/pulumi-insights/"
           
         - title: "Internal Developer Platform"
