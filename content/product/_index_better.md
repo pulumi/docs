@@ -18,20 +18,31 @@ overview:
         
         Think of it like Git (open source) vs GitHub (managed service) - you can use Git alone, but GitHub makes collaboration much easier.
 
-why_pulumi_cloud:
-    title: Why Teams Choose Pulumi Cloud
-    items:
-        - title: "It Just Works"
-          description: "No DIY backend to manage. No S3 buckets. No state file corruption. Pulumi Cloud handles it all."
-          
-        - title: "Secure by Default"
-          description: "Encrypted state, encrypted secrets, RBAC, audit logs. Pass compliance audits without the hassle."
-          
-        - title: "Built for Collaboration"
-          description: "See who changed what, when. Review infrastructure changes in PRs. Work together without conflicts."
-          
-        - title: "Scale Without Limits"
-          description: "BMW uses Pulumi Cloud with 11,000+ developers. Our architecture scales with your team."
+quick_comparison:
+    title: What You Get
+    columns:
+        - title: "Open Source IaC"
+          badge: "Always Free"
+          items:
+            - "Write infrastructure in TypeScript, Python, Go, C#, Java, YAML"
+            - "Deploy to AWS, Azure, GCP, Kubernetes, 1000s of providers"
+            - "Preview changes before deploying"
+            - "Unit test your infrastructure"
+            - "Self-manage state (S3, Azure Blob, etc.)"
+            - "Community support"
+        - title: "With Pulumi Cloud"
+          badge: "Free for Individuals"
+          items:
+            - "Everything in open source, plus..."
+            - "Managed, encrypted state storage"
+            - "Automatic secrets encryption"
+            - "Team collaboration with RBAC"
+            - "Full audit logs and history"
+            - "Policy enforcement (CrossGuard)"
+            - "AI assistant (Pulumi Copilot)"
+            - "CI/CD integrations"
+            - "SAML SSO for enterprises"
+            - "Premium support available"
 
 platform_capabilities:
     title: Platform Capabilities
@@ -62,6 +73,21 @@ platform_capabilities:
           description: "Enable self-service infrastructure. Define golden paths and let developers provision safely."
           link: "/product/internal-developer-platforms/"
 
+why_pulumi_cloud:
+    title: Why Teams Choose Pulumi Cloud
+    items:
+        - title: "It Just Works"
+          description: "No DIY backend to manage. No S3 buckets. No state file corruption. Pulumi Cloud handles it all."
+          
+        - title: "Secure by Default"
+          description: "Encrypted state, encrypted secrets, RBAC, audit logs. Pass compliance audits without the hassle."
+          
+        - title: "Built for Collaboration"
+          description: "See who changed what, when. Review infrastructure changes in PRs. Work together without conflicts."
+          
+        - title: "Scale Without Limits"
+          description: "BMW uses Pulumi Cloud with 11,000+ developers. Our architecture scales with your team."
+
 customer_proof:
     title: Teams Succeeding with Pulumi
     items:
@@ -78,17 +104,17 @@ customer_proof:
           description: "Reduced infrastructure management overhead"
 
 getting_started:
-    title: Getting started
+    title: Start Building Today
+    cta_primary:
+        text: "Sign Up for Pulumi Cloud"
+        description: "Free for individuals, full platform access"
+        link: "https://app.pulumi.com/signup"
+    cta_secondary:
+        text: "Download Open Source CLI"
+        description: "Start with self-managed state"
+        link: "/docs/iac/download-install/"
+    learn_more:
+        text: "Compare open source vs Pulumi Cloud in detail →"
+        link: "/docs/pulumi-cloud/get-started/what-is-it/"
 
-    get_started:
-        title: Get started now
-        description: |
-            Deploy your first app in just five minutes. Follow our tutorials for AWS, Azure, Google Cloud, Kubernetes, and more.
-        cta_text: Get Started
-
-    migrate:
-        title: Migrating from other tools
-        description: |
-            Transition from existing infrastructure tools or continue using both. Pulumi has converter tools for Terraform, AWS CloudFormation, Azure Resource Manager, and Kubernetes.
-        cta_text: Explore Converter Tools
 ---

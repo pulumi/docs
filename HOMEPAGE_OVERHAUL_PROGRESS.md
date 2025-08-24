@@ -91,7 +91,7 @@ The original homepage suffered from:
 - **3,500+ customers**
 - **20k+ GitHub stars**
 - **10k+ Slack members**
-- **150+ cloud providers**
+- **1000s of cloud providers**
 
 ## What's Next (Not Yet Implemented)
 
