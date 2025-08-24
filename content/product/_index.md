@@ -42,11 +42,6 @@ platform_capabilities:
           description: "The foundation. Write infrastructure in real programming languages. Always open source and free."
           link: "/product/infrastructure-as-code/"
           
-        - title: "AI-Powered IaC"
-          icon: bot
-          description: "Generate infrastructure code with AI. Includes Pulumi AI, Copilot, and Neo agent."
-          link: "/product/pulumi-ai/"
-          
         - title: "Secrets & Configuration"
           icon: key
           description: "Stop hardcoding secrets. Centralize all configuration with Pulumi ESC. Works with any secrets store."
@@ -61,6 +56,11 @@ platform_capabilities:
           icon: buildings
           description: "Enable self-service infrastructure. Define golden paths and let developers provision safely."
           link: "/product/internal-developer-platforms/"
+          
+        - title: "AI-Powered IaC"
+          icon: bot
+          description: "Generate infrastructure code with AI. Includes Pulumi AI, Copilot, and Neo agent."
+          link: "/product/pulumi-ai/"
 
 customer_proof:
     title: Teams Succeeding with Pulumi
