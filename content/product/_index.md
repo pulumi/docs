@@ -53,12 +53,12 @@ platform_capabilities:
           link: "/crossguard/"
           
         - title: "Cloud Intelligence"
-          icon: brain
+          icon: bot
           description: "AI-powered insights, recommendations, and code assistance. Understand and optimize your cloud."
           link: "/product/pulumi-insights/"
           
         - title: "Internal Developer Platform"
-          icon: cubes
+          icon: buildings
           description: "Enable self-service infrastructure. Define golden paths and let developers provision safely."
           link: "/product/internal-developer-platforms/"
 

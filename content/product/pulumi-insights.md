@@ -15,19 +15,19 @@ overview:
       Pulumi Cloud Intelligence combines AI assistance, search capabilities, and analytics to help you understand and optimize your cloud. Ask questions in natural language, find resources across clouds, detect security issues, and get cost optimization recommendations - all powered by AI that understands your infrastructure.
     items:
         - title: AI Assistant
-          icon: brain
+          icon: bot
           icon_color: purple
           description: |
             Generate code, debug failures, and get answers about your infrastructure using natural language.
 
         - title: Smart Search
-          icon: search
+          icon: eye
           icon_color: yellow
           description: |
             Find any resource across all your clouds with structured queries or natural language prompts.
 
         - title: Cost Optimization
-          icon: dollar
+          icon: gear
           icon_color: blue
           description: |
             Identify waste, unused resources, and cost-saving opportunities automatically.
@@ -86,7 +86,7 @@ intelligence_features:
     items:
         - title: "Drift Detection"
           description: "Automatically detect when cloud resources have changed outside of Pulumi"
-          icon: sync
+          icon: cycle
           
         - title: "Policy Violations"
           description: "Continuous scanning for security and compliance violations with auto-remediation"
@@ -98,7 +98,7 @@ intelligence_features:
           
         - title: "Smart Recommendations"
           description: "Proactive suggestions for cost savings, security improvements, and best practices"
-          icon: lightbulb
+          icon: lightning
 
 customer_quotes:
   alkira:
