@@ -8,10 +8,12 @@ hero:
   title: [ "Infrastructure as Code in Any Language", "Open Source. Trusted by 3,500+ Customers." ]
   description: |
     Use TypeScript, Python, Go, C#, or Java to manage any cloud. No proprietary DSLs or YAML hell. Full IDE support. 90% less code. 5x faster deployments.
-  cta_text: Try Pulumi Cloud for Free
+  cta_text: Start for Free
   cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
   secondary_cta_text: Download Open Source
   secondary_cta_link: /docs/iac/download-install
+  enterprise_cta_text: Book a Demo
+  enterprise_cta_link: /demo/
 
 pillars:
     items:

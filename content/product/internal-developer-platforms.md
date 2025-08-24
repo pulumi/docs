@@ -3,15 +3,15 @@ title: "Pulumi IDP"
 layout: internal-developer-platforms
 
 meta_title: "Pulumi IDP"
-meta_desc: The Fastest, Most Secure Way to Deliver Cloud Infrastructure
+meta_desc: Let developers self-serve infrastructure while keeping control. Build your internal developer platform with Pulumi.
 meta_image: /images/product/idp-meta.png
 
 aliases:
     - /solutions/platforms/
 
 overview:
-  title: Accelerate Cloud Delivery with Secure Developer Self-Service
-  description: Pulumi IDP is a modern internal developer platform built on Pulumi’s flagship infrastructure as code technology. It delivers flexible self-service infrastructure access to developers, data scientists, and more while enabling platform teams to embed security, compliance, and operational controls by design. Organizations can go from idea to cloud in minutes, not months.
+  title: Let Developers Self-Serve Infrastructure Safely
+  description: Build an internal developer platform that lets your developers provision the infrastructure they need, when they need it. Define golden paths and guardrails in code. Your team gets what they need without waiting for tickets, and you keep control over security and costs.
   cta: Get Started with Pulumi IDP
   link: /docs/idp/get-started/
 

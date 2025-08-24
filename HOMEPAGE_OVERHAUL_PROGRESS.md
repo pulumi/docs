@@ -3,6 +3,18 @@
 ## Overview
 This document captures the progress made on implementing the website overhaul recommendations from RECOMMENDATIONS.pdf. The work was done on the `joeduffy/overhaul` branch.
 
+## Current Status
+- **Phase 1**: ✅ Complete - Major structural changes and messaging improvements
+- **Phase 2**: ✅ Complete - Quick wins implementation (CTAs, metrics, trust badges)
+- **Phase 3**: 🔄 Planning - Mobile optimization, interactive demos, A/B testing
+
+## Impact Summary
+- **Clearer messaging**: "Infrastructure as Code in Any Language" now front and center
+- **Improved CTAs**: More action-oriented with "Start for Free" and "Book a Demo"
+- **Better social proof**: Customer testimonials now include specific metrics
+- **Enterprise credibility**: Added trust badges for security/compliance
+- **Simplified navigation**: Reduced from 8 to 3 main dropdowns + direct links
+
 ## Starting Point
 The original homepage suffered from:
 - Diluted messaging trying to showcase 8+ products simultaneously
@@ -83,21 +95,48 @@ The original homepage suffered from:
 
 ## What's Next (Not Yet Implemented)
 
-From the original recommendations, these items remain:
-1. **Mobile responsiveness improvements** - Further testing and optimization needed
-2. **Enterprise vs developer paths** - Could be more distinct with separate landing pages
-3. **Additional proof points** - More specific customer success metrics
-4. **A/B testing** - Set up experiments for different messaging variants
-5. **Conversion optimization** - Track and improve CTA click-through rates
-6. **Search functionality** - Better on-site search experience
-7. **Interactive demos** - Live playground for trying Pulumi
+### High Priority Items
+1. **Mobile responsiveness improvements** 
+   - Test and optimize layout on mobile devices
+   - Ensure CTAs are properly sized for touch
+   - Verify trust badges display well on small screens
 
-## Quick Wins Still Available
-1. Add customer logos animation/carousel
-2. Create dedicated "Start Free Trial" CTA (more action-oriented)
-3. Add "Book a Demo" to hero for enterprise visitors
-4. Include specific customer metrics (e.g., "Mercedes-Benz deploys 50% faster")
-5. Add trust badges (SOC2, ISO, etc.) for enterprise credibility
+2. **Interactive demo or playground**
+   - Add "Try it Now" section with embedded code editor
+   - Consider using CodePen or similar for live examples
+   - Could show simple S3 bucket creation example
+
+3. **A/B testing setup**
+   - Test "Start for Free" vs other CTA variations
+   - Test placement of Book a Demo button
+   - Measure conversion rates for different messaging
+
+### Medium Priority Items
+4. **Enterprise vs developer paths**
+   - Consider separate landing pages for each audience
+   - More targeted messaging for each persona
+   
+5. **Search functionality improvements**
+   - Better on-site search experience
+   - Consider adding search to main navigation
+
+6. **Conversion optimization**
+   - Add analytics tracking to CTAs
+   - Monitor funnel drop-off points
+   - Optimize based on data
+
+### Lower Priority Items  
+7. **Additional proof points**
+   - Add more customer success stories with metrics
+   - Consider rotating testimonials
+   - Add video testimonials if available
+
+## Quick Wins Completed (Phase 2)
+1. ✅ Customer logos carousel - Already animated with smooth scrolling
+2. ✅ Changed CTA from "Try Pulumi Cloud for Free" to "Start for Free" (more action-oriented, less trial-focused)
+3. ✅ Added "Book a Demo" button to header navigation (next to Sign Up button for better visibility)
+4. ✅ Added specific metrics to testimonials (3x faster deployments, 50% less code, 100+ developers enabled)
+5. ✅ Added enterprise trust badges section (SOC2, ISO 27001, SAML SSO, Encryption, RBAC)
 
 ## Testing Notes
 - Site runs locally at http://localhost:1313
@@ -105,5 +144,82 @@ From the original recommendations, these items remain:
 - Pre-commit hooks enforce meta description length (<160 chars)
 - Hugo server may need restart after partial template changes
 
+## Phase 2 Implementation Details
+
+### Quick Wins Implementation
+1. **Customer Logos Carousel**
+   - Status: Already implemented with smooth scrolling animation
+   - Location: Homepage after hero section
+   - Uses `stacked-carousel.html` partial with `single_row` mode
+
+2. **CTA Text Improvement**
+   - Changed: "Try Pulumi Cloud for Free" → "Start for Free"
+   - Rationale: Less trial-focused, emphasizes free tier for individuals
+   - Location: Hero section primary CTA button
+   - UTM source kept as `try-cloud-button` for continuity
+
+3. **Book a Demo Button**
+   - Added to header navigation (not hero to avoid 3 CTAs)
+   - Location: Header, left of Sign Up button
+   - Links to `/demo/` page
+   - Styled as secondary button for visual hierarchy
+
+4. **Customer Testimonial Metrics**
+   - Added specific metrics above each testimonial:
+     - Snowflake: "3x faster deployments"
+     - Panther Labs: "50% less code"
+     - Clear: "100+ developers enabled"
+   - Makes benefits tangible and measurable
+
+5. **Enterprise Trust Badges**
+   - New section added after community stats
+   - Displays: SOC2 Type II, ISO 27001, SAML SSO, Encryption, RBAC
+   - Each badge has icon and description
+   - Links to `/enterprise/` for more details
+   - Builds enterprise credibility without cluttering main flow
+
+## Files Modified in Phase 2
+1. `/content/_index.md` - Updated CTA text, added enterprise_cta fields
+2. `/layouts/index.html` - Added trust badges section, updated testimonials with metrics
+3. `/layouts/partials/header.html` - Added Book a Demo button to navigation
+
+## Phase 3 Implementation Details
+
+### Product Navigation Cleanup
+1. **Renamed "Platform" to "Product"** - More clear and standard terminology
+2. **Removed confusing labels**:
+   - Removed "(Core)" from Infrastructure as Code
+   - Removed "(SaaS)" from Pulumi Cloud  
+   - Changed "Mgmt" to full word "Management"
+3. **Simplified product names**:
+   - "AI-Powered Features" → "AI Assistant"
+   - "Insights & Cloud Asset Mgmt" → "Cloud Intelligence"
+   - Kept "Internal Developer Platform" (industry-standard term)
+4. **Restructured dropdown**:
+   - Platform Overview as the anchor (left-most position)
+   - Organized into "Core Product" and "Platform Features"
+   - Combined AI Assistant with Cloud Intelligence (all smart/AI features in one place)
+   - Final structure: Platform Overview + IaC core + 4 platform features
+   - Cleaner navigation flow: understand the platform → explore components
+5. **Better descriptions**: Focused on outcomes rather than technology
+
+### Product Page Content Improvements
+1. **Pulumi ESC (Secrets Management)**:
+   - Simplified title from "Centralized Secrets Management & Orchestration"
+   - Removed jargon like "tame secrets sprawl" and "configuration complexity"
+   - Made messaging more direct and developer-friendly
+   - Focus on practical benefits: "Never hardcode secrets again"
+
+2. **Pulumi IDP (Developer Self-Service)**:
+   - Changed meta description to focus on outcomes
+   - Simplified overview from enterprise jargon to clear benefits
+   - "Accelerate Cloud Delivery" → "Let Developers Self-Serve Infrastructure Safely"
+   - Made benefits more concrete and less buzzword-heavy
+
+## Files Modified in Phase 3
+1. `/layouts/partials/header.html` - Cleaned up Product dropdown navigation
+2. `/content/product/secrets-management.md` - Simplified ESC messaging
+3. `/content/product/internal-developer-platforms.md` - Clarified IDP messaging
+
 ## Git Status
-All changes are on the `joeduffy/overhaul` branch, not yet committed. Ready for review and commit when appropriate.
+All Phase 1, 2, and 3 changes are on the `joeduffy/overhaul` branch, not yet committed. Ready for review and commit when appropriate.
