@@ -17,7 +17,7 @@ This approach to using Pulumi Internal Developer Platform (IDP) gives developers
 ## The Approach
 
 {{% notes type="info" %}}
-See the full repositories for the [components](https://github.com) and [templates](https://github.com) for more details
+See the full repositories for the [template and its components](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted-componentized) for more details
 {{% /notes %}}
 
 Our example refactors Pulumi's [self-hosted EKS installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted) to provide a simple end-user template while abstracting away the complex infrastructure and logic into components. By creating componentized templates, we can enable flexible consumption patterns.
