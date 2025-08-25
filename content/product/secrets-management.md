@@ -1,22 +1,22 @@
 ---
-title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
+title: "Pulumi ESC: Secrets and Configuration Management"
 layout: secrets-management
 
-meta_title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
-meta_desc: Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
+meta_title: "Pulumi ESC: Secrets and Configuration Management"
+meta_desc: Manage secrets and configuration across all your infrastructure and applications. Works with any secrets store, any cloud, any tool.
 meta_image: "/images/product/esc-octopus-diagram.png"
 aliases:
     - /esc
     - /product/esc
 
-subtitle: Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
+subtitle: Never hardcode secrets again. Manage all your secrets and configuration in one secure place.
 
 overview:
-    header: A central hub to securely manage all of your environments, secrets, and configurations
+    header: One place for all your secrets and configuration
     body: |
-      - **Stop secret sprawl.** Pull and sync secrets and configuration with any secrets store – HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.  
-      - **Trust (and prove) your secrets are secure.** Adopt dynamic, short-lived secrets on demand as a best practice. Lock down every environment with RBAC, versioning, and a full audit log of all changes.  
-      - **Ditch `.env` files.** No more copying-and-pasting secrets or storing them in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and SDKs.
+      - **Works with any secrets store.** Connect to HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more. Use secrets anywhere – in your apps, CI/CD, or infrastructure code.  
+      - **Enterprise-grade security.** Use short-lived credentials that expire automatically. Control access with RBAC. Track every change with audit logs.  
+      - **No more `.env` files.** Stop storing secrets in plaintext. Access them securely via CLI, API, Kubernetes, or SDKs for TypeScript, Python, and Go.
       - **Use with or without Pulumi IaC.** Use Pulumi ESC independently, or use with Pulumi IaC to support storing secrets in config in a more secure way than using plaintext.
 
 screenshot:
