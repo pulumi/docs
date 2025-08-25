@@ -1,6 +1,6 @@
 ---
 title: AI-Powered IaC
-layout: neo
+layout: pulumi-insights
 
 meta_desc: AI-powered infrastructure as code. Generate, understand, and automate infrastructure with natural language. Includes Pulumi AI, Copilot, and Neo.
 
@@ -9,146 +9,97 @@ aliases:
 - /copilot
 - /product/ai-assistant
 - /product/copilot
+- /product/neo
 
 overview:
     header: AI-Powered IaC
-    title: The AI platform that actually ships infrastructure code
+    title: From code generation to autonomous platform engineering
     body: |
-      Pulumi Neo is our unified AI platform for infrastructure. Generate production-ready infrastructure code from natural language. Get an AI assistant that understands your entire cloud. Deploy and manage infrastructure with an autonomous agent. All powered by AI that's trained on millions of infrastructure patterns.
+      Pulumi's AI platform reimagines infrastructure for the AI era. Generate production-ready code from natural language. Get an AI assistant that knows your entire infrastructure. Deploy Neo - the industry's first AI-powered platform engineer that executes complex infrastructure jobs autonomously with enterprise controls.
     items:
-        - title: Generate Infrastructure
+        - title: Generate Code
           icon: code
           icon_color: purple
           description: |
-            Turn ideas into deployed infrastructure. Describe what you need, Neo writes the code.
+            Pulumi AI turns natural language into production-ready infrastructure code in any language.
 
-        - title: AI Assistant
-          icon: bot
+        - title: Understand Infrastructure
+          icon: eye
           icon_color: yellow
           description: |
-            Get answers about your infrastructure. Debug failures. Find security issues. All in natural language.
+            Pulumi Copilot answers questions, debugs failures, and provides insights about your cloud.
 
-        - title: Autonomous Agent
-          icon: automation
+        - title: Execute Autonomously
+          icon: gear
           icon_color: blue
           description: |
-            Coming soon: Neo can plan, implement, and deploy complex infrastructure tasks autonomously.
+            Neo - your AI platform engineer that handles complex infrastructure jobs end-to-end.
 
-neo_agent:
-    title: Pulumi Neo - Your Autonomous Infrastructure Agent
+workflow:
+  description: |
+      The complete AI platform for infrastructure - from initial code generation to autonomous execution of complex platform engineering jobs.
+  items:
+    - header: Describe
+      body: Tell us what you need in natural language.
+    - header: Generate
+      body: AI creates production-ready infrastructure code.
+    - header: Execute
+      body: Neo handles complex multi-step infrastructure jobs.
+    - header: Govern
+      body: Full visibility and control with enterprise guardrails.
+
+features:
+  - header: Pulumi AI
+    subheader: Generate infrastructure from natural language
+    body: Used by thousands of developers to create production-ready infrastructure code instantly. Supports TypeScript, Python, Go, C#, Java, and YAML. Works with AWS, Azure, Google Cloud, Kubernetes, and 150+ providers. The fastest way to go from idea to deployed infrastructure.
+    graphic: /images/product/pulumi-ai-screenshot.png
+  
+  - header: Pulumi Copilot
+    subheader: Your AI infrastructure assistant
+    body: An interactive AI assistant that understands your entire cloud. Debug deployment failures, find security issues, discover cost savings, and get infrastructure insights through natural language. Ask "Why did my deployment fail?" or "What are my most expensive unused resources?" and get instant, actionable answers.
+    graphic: /images/product/insights-copilot.png
+  
+  - header: Pulumi Neo
+    subheader: The industry's first AI-powered platform engineer
+    body: Neo executes complex infrastructure jobs that used to take days in minutes. Upgrade Kubernetes clusters, remediate security violations, clean up unused resources, and migrate workloads - all while respecting your guardrails. Handle 10x more infrastructure requests without increasing headcount. Enable developer self-service while maintaining full governance.
+    graphic: /images/product/neo-preview.png
+
+ai:
+    title: Three Critical Jobs Neo Solves
+    subtitle: Transform platform engineering from reactive to proactive
+    image: https://www.pulumi.com/uploads/neo-demo.gif
     description: |
-        Neo is the next evolution of infrastructure automation. It's not just a code generator or assistant - it's an autonomous agent that can understand requirements, plan implementations, write code, and deploy infrastructure. All while following your team's best practices and policies.
-    capabilities:
-        - title: "Natural Language to Infrastructure"
-          example: '"Build a production-ready API with DynamoDB, Lambda, and API Gateway"'
-          description: "Neo understands context and generates complete, production-ready infrastructure"
-          
-        - title: "Multi-Step Planning"
-          example: '"Migrate our services from EC2 to EKS with zero downtime"'
-          description: "Neo breaks down complex tasks, creates a plan, and executes it step by step"
-          
-        - title: "Learns Your Patterns"
-          example: '"Set up a new microservice like our user service"'
-          description: "Neo learns from your existing infrastructure to follow your team's patterns"
-          
-        - title: "Autonomous Deployment"
-          example: '"Deploy this to staging, run tests, then promote to production"'
-          description: "Neo can handle entire deployment workflows autonomously with guardrails"
-
-ai_code_generation:
-    title: Pulumi AI - Infrastructure Code Generation
-    description: |
-        Already loved by thousands of developers, Pulumi AI generates infrastructure as code from natural language descriptions. It's the fastest way to go from idea to deployed infrastructure.
-    features:
-        - title: "Multi-Language Support"
-          description: "Generate code in TypeScript, Python, Go, C#, Java, or YAML"
-        - title: "Any Cloud Provider"
-          description: "Supports AWS, Azure, Google Cloud, Kubernetes, and 150+ providers"
-        - title: "Production Ready"
-          description: "Generates complete programs with best practices built in"
-        - title: "Iterative Refinement"
-          description: "Refine and modify generated code with follow-up prompts"
-
-copilot_assistant:
-    title: Pulumi Copilot - Your Cloud Intelligence Assistant
-    description: |
-        Pulumi Copilot is your AI assistant that understands your entire infrastructure. Ask questions, debug issues, find problems, and get recommendations - all through natural language conversation.
-    use_cases:
-        - title: "Debug Deployments"
-          description: "Why did my deployment fail? What changed? How do I fix it?"
-          icon: testing
-        - title: "Security Scanning"
-          description: "Find exposed resources, compliance violations, and security risks"
-          icon: shield
-        - title: "Cost Optimization"
-          description: "Identify waste, unused resources, and cost-saving opportunities"
-          icon: gear
-        - title: "Infrastructure Understanding"
-          description: "What's running where? Who owns what? How are things connected?"
-          icon: eye
-
-how_it_works:
-    title: How Neo Works
-    steps:
-        - title: "Describe Your Intent"
-          description: "Tell Neo what you want in natural language - from simple resources to complex architectures"
-        - title: "Neo Plans the Approach"
-          description: "Neo understands the request, breaks it down, and creates an implementation plan"
-        - title: "Review and Refine"
-          description: "See Neo's plan, provide feedback, and iterate until it's exactly what you need"
-        - title: "Deploy with Confidence"
-          description: "Neo generates production-ready code and can deploy it following your policies and practices"
-
-enterprise_ready:
-    title: Enterprise-Grade AI
-    description: |
-        Neo is built for enterprises with security, compliance, and governance at its core.
-    features:
-        - title: "Private Context"
-          description: "Your infrastructure data never trains public models. Keep your architecture confidential."
-          icon: lock
-        - title: "Policy Enforcement"
-          description: "Neo respects your CrossGuard policies and won't generate non-compliant infrastructure"
-          icon: shield
-        - title: "Audit Trail"
-          description: "Every Neo interaction is logged. Track who asked what and what was generated"
-          icon: paper
-        - title: "Team Knowledge"
-          description: "Neo learns from your team's patterns and follows your established practices"
-          icon: users
+        **Ship faster with confidence** - Complex operations that took days now finish in minutes with full visibility and controls.
+        
+        **Scale teams without chaos** - Handle 10x more infrastructure requests without increasing headcount while maintaining oversight.
+        
+        **Enable self-service without losing governance** - Developers get what they need while platform teams enforce security, compliance, and cost controls automatically.
 
 customer_quotes:
-    title: Teams Shipping Faster with AI
-    items:
-        - quote: "Pulumi AI reduced our infrastructure development time by 75%. What used to take days now takes hours."
-          author: "Platform Engineer, Fortune 500 Financial Services"
-          
-        - quote: "Copilot found $50k/month in unused resources we didn't even know existed."
-          author: "DevOps Lead, Series B Startup"
-          
-        - quote: "Neo is like having a senior infrastructure engineer on every team. Game changer."
-          author: "VP Engineering, SaaS Company"
+  nvidia:
+    text: |
+      "Pulumi allows us to innovate in the AI era at a scale previously unimaginable. With Neo, we're not just moving faster — we're gaining a competitive edge, bringing products to market more quickly and with greater confidence than ever before."
+    author: Lee Ditiangkin, Senior Director of Product and Engineering at Nvidia
+    logo: nvidia
+
+analytics:
+    title: Purpose-Built Intelligence
+    subtitle: Deep understanding of cloud environments
+    image: /images/product/neo-architecture.png
+    description: |
+        Neo's advantage comes from deep, contextual understanding of cloud environments. It leverages Pulumi's resource schemas, state management, and knowledge context across hundreds of providers. Works seamlessly with infrastructure managed by Pulumi, Terraform, CloudFormation, CDK, or even ad-hoc provisioning.
 
 pricing:
-    title: Pricing
+    title: Availability
     description: |
-        Pulumi AI is free to try. Copilot is included with Pulumi Cloud. Neo will be available on Team and Enterprise plans.
-    tiers:
-        - name: "Pulumi AI"
-          description: "Free tier available, unlimited for Teams"
-        - name: "Pulumi Copilot"
-          description: "Included with all Pulumi Cloud plans"
-        - name: "Pulumi Neo"
-          description: "Coming soon for Team and Enterprise plans"
+        **Pulumi AI** - Free tier with usage limits, unlimited for teams.
+        
+        **Pulumi Copilot** - Available now in beta for all Pulumi Cloud users.
+        
+        **Pulumi Neo** - Now available to all Pulumi Cloud users. Also available via MCP Server in AWS, Cursor, Windsurf, Cognition, and MCP marketplaces.
 
 get_started:
     title: Start Building with AI Today
     description: |
-        Experience the future of infrastructure automation. Try Pulumi AI free, explore Copilot with Pulumi Cloud, and be first to access Neo.
-    cta_primary:
-        text: "Try Pulumi AI"
-        link: "https://www.pulumi.com/ai"
-    cta_secondary:
-        text: "Get Early Access to Neo"
-        link: "/neo-waitlist/"
+        Experience the future of infrastructure automation. From code generation to autonomous platform engineering.
 ---

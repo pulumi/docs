@@ -1,94 +1,157 @@
 ---
 title: Platform Overview
 meta_desc: The complete infrastructure as code platform. Write in any language, deploy to any cloud, with enterprise-grade security and collaboration.
-type: page
-layout: product
+layout: pulumi-cloud
 
-heading: The Pulumi Platform
-subheading: |
-    The complete infrastructure as code platform for teams.<br><br>
-    Open source at the core. Pulumi Cloud for collaboration, security, and scale.
+aliases:
+    - /product/pulumi-cloud/
+    - /product/pulumi-service/
+    - /product/cloud/
+    - /cloud/
 
 overview:
-    title: Open Source IaC + Managed Platform = Success at Scale
+    title: The Complete Infrastructure Platform
     description: |
-        **Pulumi IaC** is our open source engine that lets you write infrastructure as code in any programming language. It's free forever and works with any state backend (local files, S3, Azure Blob, etc.).
-        
-        **Pulumi Cloud** is the easiest way to use Pulumi in a team. It provides managed state storage, secrets encryption, team collaboration, policy enforcement, and enterprise features. Free for individuals, with team plans starting at $1 per resource.
-        
-        Think of it like Git (open source) vs GitHub (managed service) - you can use Git alone, but GitHub makes collaboration much easier.
+        **Pulumi IaC** is our open source engine that lets you write infrastructure as code in any programming language. It's free forever and works with any state backend. **Pulumi Cloud** is the easiest way to use Pulumi in a team, providing managed state storage, secrets encryption, team collaboration, and enterprise features. Free for individuals.
 
-why_pulumi_cloud:
-    title: Why Teams Choose Pulumi Cloud
-    items:
-        - title: "It Just Works"
-          description: "No DIY backend to manage. No S3 buckets. No state file corruption. Pulumi Cloud handles it all."
-          
-        - title: "Secure by Default"
-          description: "Encrypted state, encrypted secrets, RBAC, audit logs. Pass compliance audits without the hassle."
-          
-        - title: "Built for Collaboration"
-          description: "See who changed what, when. Review infrastructure changes in PRs. Work together without conflicts."
-          
-        - title: "Scale Without Limits"
-          description: "BMW uses Pulumi Cloud with 11,000+ developers. Our architecture scales with your team."
-
-platform_capabilities:
-    title: Platform Capabilities
-    subtitle: Available with Pulumi Cloud
-    items:
-        - title: "Infrastructure as Code"
-          icon: code
-          description: "The foundation. Write infrastructure in real programming languages. Always open source and free."
-          link: "/product/infrastructure-as-code/"
-          
-        - title: "Secrets & Configuration"
-          icon: key
-          description: "Stop hardcoding secrets. Centralize all configuration with Pulumi ESC. Works with any secrets store."
-          link: "/product/secrets-management/"
-          
-        - title: "Insights & Governance"
-          icon: shield
-          description: "CSPM, policy as code, asset inventory, and compliance automation."
-          link: "/product/pulumi-insights/"
-          
-        - title: "Internal Developer Platform"
-          icon: buildings
-          description: "Enable self-service infrastructure. Define golden paths and let developers provision safely."
-          link: "/product/internal-developer-platforms/"
-          
-        - title: "AI-Powered IaC"
-          icon: bot
-          description: "Generate infrastructure code with AI. Includes Pulumi AI, Copilot, and Neo agent."
-          link: "/product/pulumi-ai/"
-
-customer_proof:
+case_studies:
     title: Teams Succeeding with Pulumi
     items:
-        - logo: bmw
-          stat: "11,000+ developers"
-          description: "Built a scalable cloud platform for hybrid environments"
-          
-        - logo: snowflake
-          stat: "3x faster deployments"
-          description: "Multi-cloud Kubernetes platform across regions"
-          
-        - logo: atlassian
-          stat: "50% less maintenance"
-          description: "Reduced infrastructure management overhead"
+        - name: BMW
+          link: /case-studies/bmw/
+          logo: bmw
+          description: |
+            11,000+ developers building cloud platforms across hybrid environments.
 
-getting_started:
-    title: Getting started
+        - name: Snowflake
+          link: /case-studies/snowflake/
+          logo: snowflake
+          description: |
+            3x faster deployments with multi-cloud Kubernetes platform.
 
-    get_started:
-        title: Get started now
-        description: |
-            Deploy your first app in just five minutes. Follow our tutorials for AWS, Azure, Google Cloud, Kubernetes, and more.
-        cta_text: Get Started
+        - name: Atlassian
+          link: /case-studies/atlassian/
+          logo: atlassian
+          description: |
+            Developers reduced their time spent on maintenance by 50%.
 
-    migrate:
-        title: Migrating from other tools
-        description: |
-            Transition from existing infrastructure tools or continue using both. Pulumi has converter tools for Terraform, AWS CloudFormation, Azure Resource Manager, and Kubernetes.
-        cta_text: Explore Converter Tools
+        - name: Lemonade
+          link: /case-studies/lemonade/
+          logo: lemonade
+          description: |
+            Standardized infrastructure architectures with reusable components.
+
+        - name: Starburst
+          link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
+          logo: starburst
+          description: |
+            Increased velocity with deployments up to 3x faster.
+
+        - name: Elkjop Nordic
+          link: /case-studies/elkjop-nordic/
+          logo: elkjop-nordic
+          description: |
+            Increased developer agility through platform engineering.
+
+products:
+    - header: Platform Capabilities
+      content:
+        - header: Infrastructure as Code
+          tabid: iac-select
+          subheader: Open source foundation
+          link: /product/infrastructure-as-code/
+          image: /images/product/console-resource-graph.svg
+          details:
+            - title: Write in real programming languages
+              description: |
+                Use TypeScript, Python, Go, C#, Java, or YAML to define infrastructure. Get full IDE support with autocomplete, type checking, and testing. Deploy to AWS, Azure, Google Cloud, Kubernetes, and thousands of providers.
+
+              more_info: |
+                The Pulumi IaC engine is 100% open source and free forever. Use loops, conditionals, functions, and classes - no more copy-paste.
+
+                Test your infrastructure with unit tests. Preview changes before deploying. Catch errors at compile time, not runtime.
+
+            - title: Use with any state backend
+              description: |
+                Self-manage state with S3, Azure Blob, Google Cloud Storage, or local files. Or use Pulumi Cloud for managed state with encryption, versioning, and locking.
+
+              more_info: |
+                Pulumi Cloud makes collaboration easy with automatic state management, concurrent deployments, and full history of all changes.
+
+        - header: Pulumi ESC
+          tabid: esc-select
+          subheader: Secrets and configuration management
+          link: /product/secrets-management/
+          image: /images/product/esc-screenshot-2.png
+          details:
+            - title: Stop hardcoding secrets
+              description: |
+                Centralize all secrets and configuration in one secure place. Pull from any secrets store including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and more.
+
+              more_info: |
+                No more .env files with plaintext secrets. Access configuration via CLI, API, SDKs, or Kubernetes operator.
+
+                Every environment supports versioning, RBAC, and full audit logs. Use short-lived credentials and dynamic secrets.
+
+            - title: Works with any tool
+              description: |
+                Use Pulumi ESC with or without Pulumi IaC. Integrate with any application, CI/CD pipeline, or infrastructure tool.
+
+              more_info: |
+                Available via TypeScript, Python, Go SDKs. Kubernetes operator for native integration. REST API for custom integrations.
+
+        - header: Pulumi Insights
+          tabid: insights-select
+          subheader: Cloud governance and intelligence
+          link: /product/pulumi-insights/
+          image: /images/product/resource-search-diagram.svg
+          details:
+            - title: Complete visibility and control
+              description: |
+                See everything running in your cloud. Search across all resources. Enforce policies. Auto-remediate violations. Track compliance.
+
+              more_info: |
+                Discovers all resources, even those not managed by Pulumi. Write policies in code with CrossGuard. 150+ pre-built policies for SOC 2, PCI DSS, HIPAA, and more.
+
+            - title: AI-powered insights
+              description: |
+                Pulumi Copilot helps you understand infrastructure, debug failures, find cost savings, and identify security issues - all through natural language.
+
+              more_info: |
+                Ask questions like "What are my most expensive unused resources?" or "Do I have any public S3 buckets?" Get instant answers with actionable recommendations.
+
+open_source:
+    title: Open Source with Enterprise-Grade Platform
+    image: /images/product/service-open-source-diagram.svg
+    description: |
+        Pulumi IaC is open source and free forever. Pulumi Cloud adds team collaboration, security, and scale. Think of it like Git (open source) vs GitHub (managed service) - you can use Git alone, but GitHub makes collaboration much easier.
+
+security:
+    title: Enterprise Security
+    image: /images/product/soc-aicpa.svg
+    description: |
+        SOC 2 Type II compliant. All data encrypted at rest and in transit. SAML SSO, SCIM provisioning, and RBAC. Complete audit logs of all actions.
+
+deployment:
+    title: Deployment Options
+    items:
+        - title: SaaS
+          icon: rocketship
+          icon_color: purple
+          description: Fully managed service with no maintenance required.
+
+        - title: Self-Hosted
+          icon: program
+          icon_color: yellow
+          description: Run Pulumi Cloud in your own environment.
+
+pricing:
+    title: Pricing
+    description: |
+        Free for individuals. Team plans start at $1 per resource per month. Volume discounts available for large teams and enterprises.
+
+get_started:
+    title: Get Started Today
+    description: |
+        Deploy infrastructure in minutes with the open source CLI or sign up for Pulumi Cloud for team collaboration.
 ---

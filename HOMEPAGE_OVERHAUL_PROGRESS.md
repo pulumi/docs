@@ -221,5 +221,71 @@ The original homepage suffered from:
 2. `/content/product/secrets-management.md` - Simplified ESC messaging
 3. `/content/product/internal-developer-platforms.md` - Clarified IDP messaging
 
+## Phase 4 Implementation Details - Product Pages Overhaul
+
+### Major Product Page Consolidation
+1. **Platform Overview Page** (`/content/product/_index.md`)
+   - Merged Pulumi Cloud content into Platform Overview to eliminate redundancy
+   - Added aliases for old URLs (/product/pulumi-cloud/, /cloud/, etc.) for proper redirects
+   - Fixed layout issues by removing `type: page` to use correct `pulumi-cloud` template
+   - Fixed deployment section formatting that was causing empty purple/white boxes
+   - Added tabbed content for IaC, ESC, and Insights capabilities
+   - Clear explanation of open source IaC vs Pulumi Cloud managed service
+
+2. **AI-Powered IaC Unified Page** (`/content/product/pulumi-ai.md`)
+   - Consolidated three separate pages (Pulumi AI, Copilot, Neo) into single unified page
+   - Positioned Neo as "the industry's first AI-powered platform engineer"
+   - Three-part story: Generate (AI) → Understand (Copilot) → Execute (Neo)
+   - Used `layout: pulumi-insights` for proper rendering
+   - Removed unapproved quotes from Lee and Deepak
+   - Added proper availability section for all three components
+
+3. **Infrastructure as Code Page** (`/content/product/infrastructure-as-code.md`)
+   - Repositioned as open source foundation of the platform
+   - Added required sections: `key_features_above`, `key_features`, `key_features_below`
+   - Fixed button fields to prevent purple outline rendering issues
+   - Clear messaging about open source nature and language support
+
+4. **Insights & Governance Page** (`/content/product/pulumi-insights.md`)
+   - Merged CrossGuard/Policy content into comprehensive CSPM platform
+   - Added required `workflow` and `features` sections for template compatibility
+   - Positioned as "CSPM that actually works"
+   - Integrated policy as code, asset inventory, and continuous compliance
+
+### Navigation Updates (Final)
+1. **Product Dropdown Structure**:
+   - Two clear sections: "Core Product" and "Platform Features"
+   - Core Product: Platform Overview, Infrastructure as Code
+   - Platform Features: AI-Powered IaC, Secrets & Config, Insights & Governance, Internal Developer Platform, Deployments
+   - Changed to "For Enterprises" (not "For Teams") for premium positioning
+   - Final nav item is "AI-Powered IaC" (not just "AI" or "Neo")
+
+### Deleted Files (Consolidation Cleanup)
+- `/content/product/pulumi-cloud.md` - Merged into Platform Overview
+- `/content/product/copilot.md` - Merged into AI-Powered IaC page
+- `/content/product/neo.md` - Merged into AI-Powered IaC page
+- `/content/product/_index_new.md` - Temporary development file
+- `/content/product/_index_better.md` - Temporary development file
+
+### Other Updates
+- Updated case studies page: "3,000+ innovators" → "3,500+ innovators"
+- Fixed icon references causing build failures (brain→bot, cubes→buildings, etc.)
+- Ensured all pages have proper layouts matching their content structure
+
+### Technical Fixes
+- Fixed template/layout mismatches causing rendering issues
+- Resolved empty box problems on Platform Overview page by fixing deployment section
+- Corrected icon references that were causing build failures
+- Ensured all content fields match their respective template requirements
+
+## Files Modified in Phase 4
+1. `/content/product/_index.md` - Platform Overview with merged Pulumi Cloud content
+2. `/content/product/pulumi-ai.md` - New unified AI page
+3. `/content/product/pulumi-insights.md` - Updated Insights page with proper structure
+4. `/content/product/infrastructure-as-code.md` - Fixed IaC page template issues
+5. `/layouts/partials/header.html` - Final navigation structure updates
+6. `/content/case-studies/_index.md` - Updated customer count to 3,500+
+7. Deleted 5 redundant files listed above
+
 ## Git Status
-All Phase 1, 2, and 3 changes are on the `joeduffy/overhaul` branch, not yet committed. Ready for review and commit when appropriate.
+All Phase 1, 2, 3, and 4 changes are on the `joeduffy/overhaul` branch. Phase 4 represents a major consolidation of product pages, eliminating redundancy and creating clearer messaging throughout. Ready for review and commit when appropriate.
