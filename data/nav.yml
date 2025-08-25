@@ -1,0 +1,64 @@
+- label: Start here
+  items:
+    - label: Install
+      to: /docs/iac/download-install/
+    - label: Quickstart
+      to: /docs/iac/get-started/
+    - label: Concepts
+      to: /docs/iac/concepts/
+    - label: Why Pulumi?
+      to: /why-pulumi/
+- label: Providers
+  items:
+    - label: AWS
+      to: /docs/iac/clouds/aws/
+    - label: Azure
+      to: /docs/iac/clouds/azure/
+    - label: Google Cloud
+      to: /docs/iac/clouds/gcp/
+    - label: Kubernetes
+      to: /docs/iac/clouds/kubernetes/
+    - label: Other providers
+      to: /registry/
+- label: Languages
+  items:
+    - label: Node.js
+      to: /docs/iac/languages/javascript/
+    - label: Python
+      to: /docs/iac/languages/python/
+    - label: Go
+      to: /docs/iac/languages/go/
+    - label: .NET
+      to: /docs/iac/languages/dotnet/
+    - label: Java
+      to: /docs/iac/languages/java/
+    - label: YAML
+      to: /docs/iac/languages/yaml/
+- label: Using Pulumi
+  items:
+    - label: Pulumi CLI
+      to: /docs/iac/cli/
+    - label: Automation API
+      to: /docs/iac/automation-api/
+    - label: Policy as Code
+      to: /docs/iac/policy-as-code/
+    - label: CI/CD & Environments
+      to: /docs/iac/ci-cd/
+    - label: Adopting Pulumi
+      to: /docs/iac/adopting-pulumi/
+- label: Migration & Ecosystem
+  items:
+    - label: Terraform Users
+      to: /docs/iac/get-started/terraform/
+    - label: Templates & Examples
+      to: /templates/
+    - label: Tutorials
+      to: /tutorials/
+- label: Support
+  items:
+    - label: Troubleshooting & FAQ
+      to: /docs/iac/support/troubleshooting/
+    - label: Community Slack
+      to: /slack/
+    - label: Contact
+      to: /contact/

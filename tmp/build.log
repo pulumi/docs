@@ -1,0 +1,564 @@
+-e [0;32mBUILD:[0m
+make build-assets
+make[1]: Entering directory '/workspace/docs'
+yarn --cwd ./theme run build
+Executing pre-build scripts
+[2m[11:25.3][22m  [36m@stencil/core[39m
+[2m[11:25.9][22m  [36mv2.7.1[39m 🐔
+[2m[11:29.4][22m  build, app, prod mode, started [2m...[22m
+[2m[11:29.4][22m  transpile started [2m...[22m
+[2m[11:34.5][22m  transpile finished [2min 5.14 s[22m
+[2m[11:34.5][22m  copy started [2m...[22m
+[2m[11:34.5][22m  generate custom elements bundle started [2m...[22m
+[2m[11:34.5][22m  generate lazy started [2m...[22m
+[2m[11:34.6][22m  copy finished (0 files) [2min 98 ms[22m
+[2m[11:41.1][22m  generate custom elements bundle finished [2min 6.53 s[22m
+[2m[11:44.7][22m  generate lazy finished [2min 10.13 s[22m
+[2m[11:44.8][22m  generate service worker started [2m...[22m
+[2m[11:44.9][22m  generate service worker finished [2min 31 ms[22m
+[2m[11:44.9][22m  [1m[32mbuild finished[39m[22m [2min 15.50 s[22m
+
+DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
+
+Recommendation: math.div(20em, 16)
+
+More info and automated migrator: https://sass-lang.com/d/slash-div
+
+   ╷
+12 │ $fa-fw-width: (20em / 16);
+   │                ^^^^^^^^^
+   ╵
+    src/scss/fontawesome/_variables.scss 12:16  @import
+    src/scss/fontawesome/fontawesome.scss 5:9   @import
+    src/scss/_icons.scss 3:9                    @import
+    src/scss/main.scss 45:9                     root stylesheet
+
+DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
+
+Recommendation: math.div(4em, 3)
+
+More info and automated migrator: https://sass-lang.com/d/slash-div
+
+  ╷
+6 │     font-size: (4em / 3);
+  │                 ^^^^^^^
+  ╵
+    src/scss/fontawesome/_larger.scss 6:17     @import
+    src/scss/fontawesome/fontawesome.scss 8:9  @import
+    src/scss/_icons.scss 3:9                   @import
+    src/scss/main.scss 45:9                    root stylesheet
+
+DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
+
+Recommendation: math.div(3em, 4)
+
+More info and automated migrator: https://sass-lang.com/d/slash-div
+
+  ╷
+7 │     line-height: (3em / 4);
+  │                   ^^^^^^^
+  ╵
+    src/scss/fontawesome/_larger.scss 7:19     @import
+    src/scss/fontawesome/fontawesome.scss 8:9  @import
+    src/scss/_icons.scss 3:9                   @import
+    src/scss/main.scss 45:9                    root stylesheet
+
+DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
+
+Recommendation: math.div($fa-li-width * 5, 4)
+
+More info and automated migrator: https://sass-lang.com/d/slash-div
+
+  ╷
+6 │     margin-left: $fa-li-width * 5/4;
+  │                  ^^^^^^^^^^^^^^^^^^
+  ╵
+    src/scss/fontawesome/_list.scss 6:18        @import
+    src/scss/fontawesome/fontawesome.scss 10:9  @import
+    src/scss/_icons.scss 3:9                    @import
+    src/scss/main.scss 45:9                     root stylesheet
+
+assets by status 4.69 MiB [big]
+  asset ../css/bundle.css 4.17 MiB [compared for emit] [big] (name: bundle)
+  asset bundle.js 526 KiB [compared for emit] [minimized] [big] (name: bundle)
+assets by chunk 19.3 KiB (name: marketing)
+  asset ../css/marketing.css 19.3 KiB [compared for emit] (name: marketing)
+  asset marketing.js 0 bytes [compared for emit] [minimized] (name: marketing)
+Entrypoint bundle [big] 4.69 MiB = ../css/bundle.css 4.17 MiB bundle.js 526 KiB
+Entrypoint marketing 19.3 KiB = ../css/marketing.css 19.3 KiB marketing.js 0 bytes
+orphan modules 1.47 MiB [orphan] 184 modules
+runtime modules 1.13 KiB 5 modules
+built modules 1.51 MiB (javascript) 4.19 MiB (css/mini-extract) [built]
+  javascript modules 1.51 MiB
+    modules by path ./src/ts/*.ts 1.48 MiB 17 modules
+    modules by path ./stencil/ 15.4 KiB
+      ./stencil/node_modules/@stencil/core/internal/client/ lazy ^\.\/.*\.entry\.js.*$ include: \.entry\.js$ exclude: \.system\.entry\.js$ namespace object 160 bytes [built] [code generated]
+      ./stencil/node_modules/@stencil/core/internal/client/shadow-css.js 15.3 KiB [built] [code generated]
+    ./node_modules/algoliasearch/dist/algoliasearch-lite.umd.js 13.6 KiB [built] [code generated]
+  css modules 4.19 MiB
+    modules by path ./src/scss/*.scss 19.4 KiB 2 modules
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/@algolia/autocomplete-theme-classic/dist/theme.min.css 26.1 KiB [built] [code generated]
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) 66 bytes [built] [code generated]
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) 4.15 MiB [built] [code generated]
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  ../css/bundle.css (4.17 MiB)
+  bundle.js (526 KiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  bundle (4.69 MiB)
+      ../css/bundle.css
+      bundle.js
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+webpack 5.76.0 compiled with 3 warnings in 42212 ms
+make[1]: Leaving directory '/workspace/docs'
+./scripts/build-site.sh
+Atlas URL: https://example.com/atlas
+Compiling theme JavaScript and CSS...
+
+Copying prebuilt docs...
+
+make[1]: Entering directory '/workspace/docs'
+mkdir -p public && cp -R static-prebuilt/* public/
+make[1]: Leaving directory '/workspace/docs'
+Running Hugo...
+
+Start building sites … 
+hugo v0.124.1-db083b05f16c945fec04f745f0ca8640560cf1ec+extended linux/amd64 BuildDate=2024-03-20T11:40:10Z VendorInfo=gohugoio
+
+WARN  found no layout file for "html" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN  "/workspace/docs/content/docs/esc/vs/doppler.md:1:1": duplicate menu entry with identifier "Doppler" in menu "esc"
+
+Template Metrics:
+
+     cumulative       average       maximum         
+       duration      duration      duration  count  template
+     ----------      --------      --------  -----  --------
+   52.04279481s    2.363433ms  184.143696ms  22020  partials/inline/menu/walk.html
+  34.793039162s  190.125897ms  1.609035295s    183  taxonomy/author.html
+  33.068638327s   25.398339ms  222.910689ms   1302  partials/blog/sidebar.html
+  32.307374585s   60.614211ms  852.979064ms    533  docs/single.html
+  27.788163335s    8.255544ms  643.621398ms   3366  partials/blog/summary.html
+  20.706051891s   30.904555ms  152.579873ms    670  blog/single.html
+  17.145610409s   25.103382ms  184.414296ms    683  partials/docs/menu.html
+  14.679432737s   33.136417ms  229.328105ms    443  taxonomy/tag.html
+  11.292911808s     25.4919ms  223.271583ms    443  partials/blog/series-list-sidebar.html
+   6.106554417s   42.703177ms  357.645912ms    143  docs/list.html
+   5.177437852s    1.988263ms  377.396624ms   2604  partials/head.html
+   4.181352656s  160.821256ms  446.633744ms     26  tutorials/single.html
+   3.087096499s   44.740528ms  124.581364ms     69  blog/list.html
+   2.962673831s    50.21481ms  187.712456ms     59  shortcodes/example-program.html
+   2.362229991s     907.154µs  374.704081ms   2604  partials/assets.html
+   1.536594839s     593.738µs   49.924181ms   2588  partials/header.html
+   1.453606197s   26.918633ms  210.064662ms     54  what-is/single.html
+   1.353543838s   79.620225ms  217.030217ms     17  templates/template.html
+   1.306397318s   25.123025ms  111.159003ms     52  partials/blog/series-sidebar.html
+   1.290893613s  1.290893613s  1.290893613s      1  page/pricing.html
+   1.171327907s   41.833139ms  108.992321ms     28  webinars/cloud-engineering-summit-replay.html
+   1.016761401s   59.809494ms  142.835084ms     17  tutorials/topic.html
+   902.213657ms      472.61µs  111.658392ms   1909  partials/footer.html
+   635.686967ms    3.806508ms   56.141234ms    167  webinars/single.html
+   623.519398ms  311.759699ms  331.102127ms      2  shortcodes/pulumi-command.html
+   574.085886ms    1.132319ms   97.783543ms    507  _internal/_default/rss.xml
+   552.993051ms  552.993051ms  552.993051ms      1  page/about.html
+   521.517156ms  521.517156ms  521.517156ms      1  page/leadership.html
+   519.064817ms  519.064817ms  519.064817ms      1  index.html
+   517.304296ms  517.304296ms  517.304296ms      1  index.json
+    463.25384ms    2.773975ms   34.991032ms    167  partials/code.html
+   444.362915ms     132.015µs   23.938381ms   3366  partials/blog/poster.html
+   442.409533ms     641.173µs   35.830584ms    690  partials/docs/breadcrumb.html
+    434.44299ms   434.44299ms   434.44299ms      1  page/product.html
+   404.634038ms   14.451215ms   64.737307ms     28  case-studies/single.html
+   397.909203ms     117.794µs    29.16934ms   3378  shortcodes/choosable.html
+   391.762029ms     693.384µs   47.584515ms    565  partials/customer-logo.html
+   377.643999ms  377.643999ms  377.643999ms      1  404.html
+   377.449603ms  377.449603ms  377.449603ms      1  page/solutions.html
+   371.873206ms     273.637µs   34.160915ms   1359  partials/docs/table-of-contents.html
+   371.739364ms     277.003µs   20.017998ms   1342  partials/blog/authors.html
+   340.307932ms      91.975µs   37.217687ms   3700  partials/icon.html
+   338.912473ms  338.912473ms  338.912473ms      1  page/newsroom.html
+   311.480118ms  311.480118ms  311.480118ms      1  partner/aws.html
+   311.168025ms  311.168025ms  311.168025ms      1  product/pulumi-deployments.html
+   294.241668ms   17.308333ms   60.602698ms     17  partials/templates/left-nav.html
+   291.214739ms       450.1µs    38.62424ms    647  shortcodes/notes.html
+   283.248692ms     407.552µs   31.318982ms    695  partials/blog/paginator.html
+   282.728135ms  282.728135ms  282.728135ms      1  security/section.html
+   265.785448ms   18.984674ms   40.703558ms     14  gads/gads-template.html
+   258.052659ms   51.610531ms  252.724641ms      5  legal/single.html
+   248.314215ms   31.039276ms   63.654221ms      8  ai-answers/single.html
+   234.637281ms  234.637281ms  234.637281ms      1  product/infrastructure-as-code.html
+   230.664168ms  230.664168ms  230.664168ms      1  partner/gcp.html
+   219.424348ms   10.448778ms   48.343122ms     21  compliance/cis.html
+   186.574091ms  186.574091ms  186.574091ms      1  _default/sitemap.xml
+   185.970143ms      71.444µs   23.520431ms   2603  partials/copilot/sidebar.html
+   171.379926ms     688.272µs   31.225209ms    249  partials/inline/pagination/default
+   167.627191ms     401.983µs   10.916059ms    417  shortcodes/changelog-table-row.html
+   156.402756ms   78.201378ms  115.633239ms      2  community/community-engineering/single.html
+   150.218545ms     711.936µs    44.27531ms    211  partials/widgets/social-icons.html
+   149.557831ms  149.557831ms  149.557831ms      1  events/list.html
+     147.6354ms      76.693µs   20.656019ms   1925  _internal/alias.html
+   140.881595ms   28.176319ms   78.199367ms      5  webinars/cloud-engineering-days-replay.html
+   137.767362ms      100.78µs   19.689881ms   1367  partials/sidebar-cta.html
+    135.08419ms     181.078µs   19.250107ms    746  partials/docs/search.html
+   133.225857ms    6.344088ms   38.809231ms     21  compliance/iso-27001.html
+   126.745674ms   63.372837ms  124.394196ms      2  partials/stacked-carousel.html
+   110.751719ms    1.075259ms   25.972782ms    103  partials/learnmore-contactus.html
+   106.180927ms  106.180927ms  106.180927ms      1  blog/rss.xml
+   105.237547ms    1.913409ms   22.514589ms     55  partials/tutorials/nav.html
+   104.406616ms   17.401102ms   62.841675ms      6  templates/overview.html
+   104.273065ms  104.273065ms  104.273065ms      1  page/pricing-oss.html
+   103.552136ms  103.552136ms  103.552136ms      1  page/reinvent.html
+   101.176325ms    9.197847ms   40.420008ms     11  shortcodes/code-filename.html
+    101.17245ms   50.586225ms   67.922306ms      2  page/home-b.html
+   100.312681ms     306.766µs   10.209022ms    327  partials/color-icon.html
+    93.456612ms     166.886µs    1.607875ms    560  shortcodes/example-program-snippet.html
+     92.58603ms    5.446237ms   54.807104ms     17  shortcodes/templates/pulumi-new.html
+    89.259247ms   89.259247ms   89.259247ms      1  page/automation.html
+    85.899762ms   85.899762ms   85.899762ms      1  product/secrets-management.html
+    84.560724ms    4.026701ms   32.503779ms     21  compliance/pci-dss.html
+    81.233341ms     118.936µs   15.816006ms    683  shortcodes/chooser.html
+    80.439066ms      58.843µs   20.453701ms   1367  partials/blog/search.html
+    78.177942ms     104.796µs   22.682958ms    746  partials/docs-top-nav.html
+    74.687252ms   12.447875ms   21.678847ms      6  taxonomy/collection.html
+    74.128941ms      99.368µs   19.145126ms    746  partials/docs/top-nav.html
+      73.0159ms     73.0159ms     73.0159ms      1  product/self-hosted.html
+    70.744478ms   35.372239ms   46.057238ms      2  partials/code-tabbed.html
+    67.554394ms   67.554394ms   67.554394ms      1  page/product-packages.html
+    67.530176ms   67.530176ms   67.530176ms      1  tutorials/glossary/list.html
+    65.617942ms   21.872647ms   52.128703ms      3  page/solutions-use-case.html
+    65.473704ms      35.544µs    4.199181ms   1842  partials/banner.html
+    64.363288ms      96.064µs   11.221978ms    670  partials/blog/right-nav.html
+    63.194745ms   63.194745ms   63.194745ms      1  crosswalk/aws.html
+     61.42322ms     974.971µs    20.17028ms     63  partials/compliance/insights.html
+    59.358544ms     927.477µs   16.821947ms     64  shortcodes/get-started-stepper.html
+    59.037403ms     251.222µs    12.48276ms    235  partials/accordian-header.html
+    58.760131ms     142.968µs   38.847731ms    411  partials/hero.html
+    56.785293ms   28.392646ms   35.121257ms      2  partials/example-program.html
+    56.761003ms    8.108714ms   40.457738ms      7  _internal/shortcodes/highlight.html
+    55.697821ms     333.519µs   31.175529ms    167  partials/events/summary.html
+    54.595877ms    6.824484ms   39.743259ms      8  _default/single.html
+    50.183922ms     6.27299ms   32.782233ms      8  partials/learnmore-ai.html
+    48.930891ms     436.882µs   17.706266ms    112  partials/templates/breadcrumb.html
+    46.270978ms      68.448µs    2.210183ms    676  partials/docs/feedback.html
+    42.556805ms   42.556805ms   42.556805ms      1  blog/series.html
+    40.903348ms   40.903348ms   40.903348ms      1  topics/kubernetes.html
+    40.598574ms     436.543µs   22.177008ms     93  partials/events/event-card.html
+     38.06506ms      28.301µs   35.656503ms   1345  partials/docs/right-nav-ad.html
+    36.474646ms   36.474646ms   36.474646ms      1  page/enterprise.html
+    35.778979ms   35.778979ms   35.778979ms      1  page/pulumi-up-2023-confirmation.html
+      34.1291ms     34.1291ms     34.1291ms      1  partner/azure.html
+    32.316294ms    1.900958ms   26.205783ms     17  partials/templates/right-nav.html
+    29.310707ms   29.310707ms   29.310707ms      1  events/rss.xml
+    29.126377ms      42.895µs    9.509937ms    679  partials/docs/footer.html
+    29.048767ms    1.001681ms   15.947415ms     29  partials/tutorials/breadcrumb.html
+    28.907971ms   28.907971ms   28.907971ms      1  migrate/cf2pulumi.html
+    27.996708ms    3.999529ms   11.825308ms      7  _default/section.html
+    27.485489ms   27.485489ms   27.485489ms      1  proserv/ai.html
+    26.422936ms   26.422936ms   26.422936ms      1  proserv/proserv.html
+    26.341093ms     548.772µs   20.024364ms     48  partials/tutorials/feedback.html
+    26.159464ms       5.905µs   12.032431ms   4430  partials/top-nav-user-toggle.html
+    25.460589ms    1.497681ms   23.623393ms     17  partials/templates/source-link.html
+    25.360722ms    1.950824ms   10.787673ms     13  tutorials/glossary/single.html
+    24.795791ms    1.458575ms   20.196027ms     17  shortcodes/tutorials/stepper.html
+    24.217813ms      403.63µs   21.042682ms     60  partials/events/tags.html
+    23.754557ms   23.754557ms   23.754557ms      1  page/ai-solutions.html
+    22.700615ms    1.891717ms   12.835717ms     12  partials/home/quote.html
+    22.693798ms   22.693798ms   22.693798ms      1  partials/event-schedule.html
+    22.076431ms     187.088µs    4.884579ms    118  _internal/shortcodes/youtube.html
+    20.929147ms   20.929147ms   20.929147ms      1  page/kubecon-europe.html
+    19.260589ms     267.508µs    2.043573ms     72  _internal/shortcodes/figure.html
+    19.124069ms   19.124069ms   19.124069ms      1  blog/tags.html
+    18.651455ms    1.554287ms   18.484958ms     12  partials/customer-logos/altana.html
+    18.161356ms   18.161356ms   18.161356ms      1  page/cloud-engineering.html
+    17.908727ms    3.581745ms    6.520479ms      5  tutorials/module.html
+    17.886999ms   17.886999ms   17.886999ms      1  shortcodes/pulumi-all.html
+     17.75515ms    17.75515ms    17.75515ms      1  migrate/cloudformation.html
+    17.486063ms   17.486063ms   17.486063ms      1  page/crossguard.html
+    16.705518ms   16.705518ms   16.705518ms      1  product/pulumi-cloud.html
+    16.458397ms     139.477µs   10.439137ms    118  partials/events/timing-info.html
+    16.222274ms   16.222274ms   16.222274ms      1  migrate/section.html
+    16.056916ms   16.056916ms   16.056916ms      1  topics/serverless.html
+    15.865674ms     293.808µs   15.152496ms     54  shortcodes/langfile.html
+    15.393729ms   15.393729ms   15.393729ms      1  shortcodes/details.html
+    15.085905ms   15.085905ms   15.085905ms      1  page/pulumi-up-2023.html
+    13.624568ms   13.624568ms   13.624568ms      1  shortcodes/pulumi-bucket.html
+    13.102695ms     135.079µs    3.251888ms     97  shortcodes/video.html
+    12.923882ms   12.923882ms   12.923882ms      1  partials/card-group-toggled.html
+      12.5601ms     12.5601ms     12.5601ms      1  product/github-actions.html
+    12.533898ms       6.804µs     9.02496ms   1842  partials/icons/hamburger-open.html
+    12.421446ms   12.421446ms   12.421446ms      1  compliance/list.html
+    12.338001ms     101.131µs    4.706415ms    122  partials/events/event-speakers.html
+    12.024544ms       6.527µs     8.42617ms   1842  partials/icons/hamburger-closed.html
+    11.842233ms   11.842233ms   11.842233ms      1  partners/partners.html
+    11.794082ms    5.897041ms   10.991693ms      2  partials/card-group.html
+     11.33936ms     209.988µs    2.224494ms     54  partials/compliance/controls.html
+    10.934893ms   10.934893ms   10.934893ms      1  what-is/list.html
+    10.763647ms   10.763647ms   10.763647ms      1  page/microsoft-for-startups.html
+    10.739914ms   10.739914ms   10.739914ms      1  case-studies/list.html
+    10.365956ms   10.365956ms   10.365956ms      1  crosswalk/kubernetes.html
+    10.305524ms     792.732µs    2.404017ms     13  partials/hand-raise-section.html
+    10.075157ms     387.506µs    1.171552ms     26  shortcodes/related-posts.html
+    10.038178ms    3.346059ms   10.034886ms      3  partials/icons/delivery.html
+      9.20329ms    4.601645ms    7.926435ms      2  whitepapers/single.html
+     8.807916ms     220.197µs    4.815833ms     40  partials/customer-logos/snowflake.html
+     7.877388ms    7.877388ms    7.877388ms      1  page/google-next.html
+     7.873492ms    3.936746ms    7.339942ms      2  partials/pulumi-up/speakers.html
+     7.839553ms    7.839553ms    7.839553ms      1  community/puluminaries/list.html
+      7.78358ms    1.556716ms    6.282606ms      5  partials/docs/special-pages/docs-home.html
+     7.736296ms     515.753µs    6.974296ms     15  shortcodes/latest-version-esc.html
+      7.43589ms     7.43589ms     7.43589ms      1  templates/section.html
+     7.410544ms     570.041µs    6.106188ms     13  shortcodes/cleanup.html
+     7.282654ms    7.282654ms    7.282654ms      1  migrate/terraform.html
+     7.263868ms     484.257µs     3.25011ms     15  partials/card.html
+     7.125972ms    2.375324ms     4.67256ms      3  partials/benefits.html
+     7.075291ms    7.075291ms    7.075291ms      1  product/copilot.html
+      7.05314ms    1.763285ms    7.049983ms      4  partials/icons/abstract-shapes.html
+     6.853051ms    6.853051ms    6.853051ms      1  shortcodes/glossary.html
+     6.498838ms     722.093µs    6.477814ms      9  partials/customer-logos/deloitte.html
+     6.470261ms     3.23513ms    6.468908ms      2  partials/customer-logos/alkira.html
+     6.461361ms    6.461361ms    6.461361ms      1  shortcodes/pulumi-new-bucket.html
+     6.123529ms    1.530882ms      4.3135ms      4  partials/docs/special-pages/cloud-overview.html
+      6.10728ms     6.10728ms     6.10728ms      1  partials/compliance/pci-dss/aws.html
+      5.78178ms     5.78178ms     5.78178ms      1  product/waitlist.html
+     5.684902ms     812.128µs    5.672335ms      7  partials/icons/cloud.html
+     5.482689ms    5.482689ms    5.482689ms      1  migrate/kube2pulumi.html
+     5.380822ms    2.690411ms    5.315251ms      2  partials/sparkle-arrow-cta.html
+     5.363687ms    5.363687ms    5.363687ms      1  page/demo.html
+     4.737361ms    4.737361ms    4.737361ms      1  page/contact.html
+     4.700683ms    4.700683ms    4.700683ms      1  product/pulumi-insights.html
+     4.574113ms    4.574113ms    4.574113ms      1  partials/compliance/cis/aws.html
+     4.551203ms    4.551203ms    4.551203ms      1  migrate/arm2pulumi.html
+     4.542427ms    2.271213ms    3.104229ms      2  shortcodes/tutorials/create-new-proj.html
+     4.448036ms     148.267µs     1.52368ms     30  _internal/shortcodes/relref.html
+     4.222667ms    4.222667ms    4.222667ms      1  partials/learning-machine.html
+      4.09376ms     4.09376ms     4.09376ms      1  product/internal-developer-platforms.html
+     4.091983ms    4.091983ms    4.091983ms      1  partials/customer-logos/sst.html
+     4.058291ms    4.058291ms    4.058291ms      1  page/confirmation.html
+      4.03736ms     269.157µs    1.868881ms     15  partials/gads-footer.html
+     3.902921ms    3.902921ms    3.902921ms      1  page/awards.html
+     3.793137ms    3.793137ms    3.793137ms      1  partials/customer-logos/mighty.html
+     3.756773ms    3.756773ms    3.756773ms      1  partials/customer-logos/oleria.html
+     3.718772ms    3.718772ms    3.718772ms      1  tutorials/section.html
+     3.714052ms    3.714052ms    3.714052ms      1  migrate/tf2pulumi.html
+     3.645617ms     607.602µs    2.328472ms      6  shortcodes/install-pulumi.html
+     3.608236ms    3.608236ms    3.608236ms      1  partials/customer-logos/whylabs.html
+      3.48843ms     3.48843ms     3.48843ms      1  page/ai-arch.html
+     3.476258ms    3.476258ms    3.476258ms      1  shortcodes/pulumi-output.html
+     3.468675ms    3.468675ms    3.468675ms      1  docs/home.html
+     3.445489ms    3.445489ms    3.445489ms      1  shortcodes/identities.html
+     3.380575ms     845.143µs    3.253037ms      4  shortcodes/install-node.html
+     3.240817ms     216.054µs    1.665583ms     15  partials/gads-header.html
+     3.134689ms     261.224µs     2.54007ms     12  shortcodes/loadcode.html
+     3.062657ms    1.531328ms    3.057685ms      2  partials/customer-logos/tableau.html
+      2.95037ms     491.728µs    1.570057ms      6  partials/customer-logos/sourcegraph.html
+     2.905553ms    1.452776ms     2.90397ms      2  partials/icons/program.html
+     2.884096ms    2.884096ms    2.884096ms      1  page/kubecon.html
+     2.872952ms      957.65µs    2.871098ms      3  shortcodes/policy-reportviolation.html
+     2.840137ms     710.034µs    2.802548ms      4  partials/icons/clock.html
+     2.839021ms    2.839021ms    2.839021ms      1  community/section.html
+     2.794809ms      279.48µs     666.053µs     10  partials/get-started.html
+     2.792517ms    2.792517ms    2.792517ms      1  partials/compliance/iso-27001/aws.html
+     2.759236ms    2.759236ms    2.759236ms      1  page/pulumi-for-startups.html
+     2.754757ms     688.689µs    1.581161ms      4  partials/convert.html
+     2.738168ms     684.542µs    2.732777ms      4  shortcodes/saml-warning.html
+     2.646662ms      882.22µs    2.642785ms      3  partials/chrome.html
+     2.644692ms    1.322346ms    2.643277ms      2  shortcodes/pulumi-config-get.html
+     2.643697ms    1.321848ms     2.63302ms      2  shortcodes/sso-scim-limits-info.html
+     2.598306ms     118.104µs    1.013309ms     22  shortcodes/latest-version.html
+     2.586362ms    2.586362ms    2.586362ms      1  partials/customer-logos/mysten-labs.html
+     2.562342ms    2.562342ms    2.562342ms      1  product/private-previews.html
+     2.526249ms    2.526249ms    2.526249ms      1  page/why-pulumi.html
+     2.497103ms    1.248551ms    2.492441ms      2  partials/virtual-communities.html
+     2.488339ms     497.667µs    2.344727ms      5  partials/card-button-download.html
+     2.444187ms    2.444187ms    2.444187ms      1  partials/customer-logos/fauna.html
+     2.363029ms    2.363029ms    2.363029ms      1  shortcodes/md.html
+     2.361713ms    2.361713ms    2.361713ms      1  shortcodes/pulumi-secret-new.html
+     2.347814ms     782.604µs     2.28961ms      3  shortcodes/get-started-note.html
+     2.341496ms    2.341496ms    2.341496ms      1  partials/compliance/cis/google-cloud.html
+     2.322708ms     774.236µs    2.274411ms      3  partials/youtube.html
+     2.316146ms    2.316146ms    2.316146ms      1  shortcodes/pulumi-getproject.html
+     2.300242ms     121.065µs    2.275966ms     19  partials/customer-logos/atlassian.html
+     2.254999ms    2.254999ms    2.254999ms      1  partials/contact-us.html
+     2.246267ms    2.246267ms    2.246267ms      1  partials/customer-logos/tetrate.html
+     2.217479ms    1.108739ms    2.216296ms      2  partials/icons/git-merged.html
+     2.159492ms    2.159492ms    2.159492ms      1  partials/compliance/cis/azure.html
+     2.128223ms    2.128223ms    2.128223ms      1  partials/compliance/iso-27001/google-cloud.html
+      2.12697ms     2.12697ms     2.12697ms      1  shortcodes/skip-version-check.html
+     2.094627ms      61.606µs    1.106179ms     34  _internal/shortcodes/gist.html
+      2.07132ms      43.152µs    2.017729ms     48  partials/tutorials/right-nav-ad.html
+     2.046813ms     227.423µs      648.75µs      9  shortcodes/get-started.html
+     2.002427ms      143.03µs    1.604364ms     14  partials/gads-hero.html
+     1.984026ms      99.201µs    1.567191ms     20  shortcodes/get-started-next-step.html
+     1.927698ms     642.566µs    1.924682ms      3  partials/icons/collab.html
+     1.916613ms     479.153µs    1.723808ms      4  shortcodes/cli-note.html
+     1.914828ms     239.353µs    1.897346ms      8  partials/customer-logos/credijusto.html
+     1.865336ms     310.889µs    1.851307ms      6  partials/icons/exchange.html
+     1.821148ms     455.287µs    1.818141ms      4  partials/customer-logos/cockroach-labs.html
+      1.80351ms        7.98µs     1.58033ms    226  partials/icons/accordion-closed.html
+     1.790822ms     895.411µs    1.789457ms      2  partials/icons/architecture.html
+     1.782744ms     594.248µs    1.780923ms      3  shortcodes/policy-validateresource.html
+     1.766836ms     176.683µs     950.256µs     10  shortcodes/asciicast.html
+     1.753282ms     584.427µs    1.489522ms      3  shortcodes/console-note.html
+     1.753048ms     876.524µs    1.314892ms      2  partials/help-links.html
+     1.746076ms    1.746076ms    1.746076ms      1  page/signup.html
+     1.710605ms     342.121µs     1.70492ms      5  shortcodes/install-java.html
+     1.649517ms    1.649517ms    1.649517ms      1  page/testimonials.html
+     1.618581ms       7.161µs    1.495451ms    226  partials/icons/accordion-open.html
+      1.61028ms     1.61028ms     1.61028ms      1  page/brand.html
+     1.605945ms    1.605945ms    1.605945ms      1  shortcodes/pulumi-log.html
+     1.603522ms    1.603522ms    1.603522ms      1  partials/compliance/pci-dss/google-cloud.html
+     1.590675ms      61.179µs    1.554408ms     26  partials/icons/eye.html
+     1.589563ms      397.39µs    1.585761ms      4  partials/icons/clouds.html
+     1.573503ms    1.573503ms    1.573503ms      1  shortcodes/policy-args-getconfig.html
+      1.57295ms     1.57295ms     1.57295ms      1  shortcodes/policy-enforcementlevel-mandatory.html
+      1.56905ms     784.525µs    1.565353ms      2  shortcodes/policy-enforcementlevel-remediate.html
+     1.565222ms     130.435µs    1.547654ms     12  partials/icons/security.html
+     1.555747ms     119.672µs    1.541864ms     13  partials/icons/lightning.html
+     1.545631ms     772.815µs     1.54464ms      2  shortcodes/policy-configschema.html
+      1.52955ms     764.775µs    1.473367ms      2  shortcodes/cloud-intro.html
+     1.514717ms     378.679µs    1.509172ms      4  partials/icons/gavel.html
+     1.503405ms     751.702µs    1.502683ms      2  shortcodes/policy-enforcementlevel-advisory.html
+     1.497407ms     374.351µs    1.439883ms      4  partials/icons/clipboard.html
+     1.494426ms    1.494426ms    1.494426ms      1  partials/compliance/iso-27001/azure.html
+     1.488125ms    1.488125ms    1.488125ms      1  shortcodes/policy-enforcementlevel-disabled.html
+     1.470303ms     735.151µs    1.467894ms      2  partials/home/ide.html
+     1.469888ms    1.469888ms    1.469888ms      1  product/neo.html
+     1.469826ms     489.942µs     1.46554ms      3  partials/icons/buildings.html
+     1.456608ms     364.152µs    1.452708ms      4  partials/customer-logos/modal.html
+      1.43696ms     478.986µs    1.435051ms      3  shortcodes/install-yaml.html
+     1.434367ms    1.434367ms    1.434367ms      1  page/virtual-backgrounds.html
+     1.432502ms     716.251µs    1.430866ms      2  partials/home/cli.html
+     1.431338ms    1.431338ms    1.431338ms      1  partials/icons/alert.html
+     1.426203ms     713.101µs    1.424705ms      2  shortcodes/pulumi-config-getsecret.html
+     1.421162ms     142.116µs    1.409661ms     10  partials/icons/cycle.html
+     1.415165ms      235.86µs    1.407594ms      6  partials/icons/lock.html
+      1.40615ms     703.075µs    1.404031ms      2  partials/icons/upload-to-cloud.html
+     1.398147ms     699.073µs    1.397544ms      2  shortcodes/pulumi-config-require.html
+     1.396477ms     349.119µs    1.386769ms      4  partials/customer-logos/fennel-ai.html
+     1.392696ms     464.232µs    1.391445ms      3  shortcodes/compfile.html
+     1.387315ms     346.828µs      988.21µs      4  partials/customer-logos/menta.html
+     1.364652ms     682.326µs    1.363332ms      2  shortcodes/pulumi-config.html
+     1.357124ms     452.374µs    1.266279ms      3  shortcodes/get-started-esc.html
+     1.338099ms     334.524µs    1.333738ms      4  partials/customer-logos/cto-ai.html
+     1.333651ms      444.55µs    1.131695ms      3  partials/how-pulumi-works.html
+     1.330088ms    1.330088ms    1.330088ms      1  partials/icons/ship.html
+     1.321153ms     440.384µs    1.313198ms      3  partials/icons/testing.html
+     1.315995ms     109.666µs     604.463µs     12  shortcodes/blog/cta-button.html
+     1.306258ms     653.129µs    1.305108ms      2  shortcodes/pulumi-config-requiresecret.html
+     1.299075ms     324.768µs    1.296046ms      4  partials/customer-logos/ai-io.html
+     1.298648ms     129.864µs    1.272397ms     10  shortcodes/crosswalk-header.html
+       1.2635ms     315.875µs    1.259714ms      4  shortcodes/install-go.html
+     1.255448ms     251.089µs    1.248108ms      5  partials/icons/nodes.html
+     1.230738ms     307.684µs    1.225817ms      4  shortcodes/install-dotnet.html
+     1.223534ms     244.706µs    1.215331ms      5  shortcodes/install-python.html
+     1.216362ms    1.216362ms    1.216362ms      1  shortcodes/language-null.html
+     1.157676ms    1.157676ms    1.157676ms      1  page/workshop-signup.html
+     1.153855ms     288.463µs    1.150506ms      4  partials/customer-logos/levitate-ai.html
+     1.144139ms     286.034µs      1.0876ms      4  partials/superpower-icon.html
+     1.136026ms    1.136026ms    1.136026ms      1  pugs/pugs.html
+       1.1173ms     372.433µs    1.115576ms      3  shortcodes/langname
+     1.061762ms      265.44µs    1.054626ms      4  partials/customer-logos/hyland.html
+     1.055541ms      527.77µs    1.053463ms      2  partials/icons/nodes-and-rays.html
+     1.055502ms     263.875µs    1.052205ms      4  partials/customer-logos/nostra-ai.html
+     1.051914ms    1.051914ms    1.051914ms      1  shortcodes/absurl.html
+     1.050363ms     350.121µs     980.237µs      3  shortcodes/auto-naming-note.html
+     1.038758ms     259.689µs    1.035643ms      4  partials/customer-logos/outmind-ai.html
+     1.024541ms    1.024541ms    1.024541ms      1  careers/list.html
+     1.018875ms     339.625µs      973.19µs      3  shortcodes/esc-get-started-note.html
+       996.49µs     249.122µs     942.235µs      4  partials/customer-logos/retain-ai.html
+      996.005µs     249.001µs     992.571µs      4  partials/customer-logos/flux-ai.html
+      969.664µs      96.966µs     941.248µs     10  partials/customer-logos/ware2go.html
+      960.361µs      240.09µs     957.022µs      4  partials/customer-logos/taranis.html
+      944.128µs     188.825µs     939.305µs      5  shortcodes/langhost.html
+      919.976µs     229.994µs      916.63µs      4  partials/customer-logos/ozette.html
+       918.85µs      183.77µs     913.565µs      5  partials/icons/guage.html
+      918.336µs     229.584µs     915.228µs      4  partials/customer-logos/synthesis-ai.html
+      916.151µs      22.903µs     808.005µs     40  partials/customer-logos/lemonade.html
+      910.574µs     101.174µs     899.461µs      9  partials/customer-logos/modular-ai.html
+      907.362µs     302.454µs     904.764µs      3  partials/icons/download-from-cloud.html
+      888.544µs      88.854µs     869.142µs     10  partials/icons/code-window.html
+       886.45µs      59.096µs     872.982µs     15  partials/customer-logos/elkjop-nordic.html
+      877.196µs     877.196µs     877.196µs      1  partials/customer-logos/ro-gray.html
+       875.22µs      46.064µs     851.252µs     19  partials/icons/global.html
+       867.69µs     433.845µs     867.165µs      2  partials/customer-logos/meta.html
+          823µs     102.875µs     815.235µs      8  partials/icons/docs.html
+      791.412µs     791.412µs     791.412µs      1  shortcodes/pulumi-getstack.html
+       772.61µs      772.61µs      772.61µs      1  partials/customer-logos/angellist.html
+      766.628µs      95.828µs     761.795µs      8  partials/icons/bot.html
+      765.803µs     765.803µs     765.803µs      1  shortcodes/pulumi-host.html
+       753.49µs     251.163µs     750.619µs      3  partials/customer-logos/skai.html
+      749.558µs     749.558µs     749.558µs      1  partials/customer-logos/supabase.html
+      742.598µs     742.598µs     742.598µs      1  partials/customer-logos/clearsale.html
+      732.213µs      73.221µs     707.948µs     10  shortcodes/pulumi-apply.html
+      731.887µs     731.887µs     731.887µs      1  partials/customer-logos/ro-color.html
+      724.314µs      60.359µs      642.31µs     12  shortcodes/figcaption.html
+        721.7µs       721.7µs       721.7µs      1  shortcodes/pulumi-language.html
+      705.541µs      352.77µs     703.949µs      2  partials/newsletter.html
+      704.453µs      78.272µs     694.842µs      9  partials/customer-logos/korber.html
+      683.417µs     683.417µs     683.417µs      1  partials/compliance/pci-dss/azure.html
+       660.84µs       14.06µs     583.277µs     47  partials/icons/code.html
+      623.521µs      103.92µs     615.759µs      6  partials/icons/cloud-with-nodes.html
+      620.119µs     103.353µs     552.796µs      6  partials/customer-logos/sans.html
+      606.503µs      26.369µs     581.362µs     23  partials/icons/pen.html
+      602.349µs      20.078µs     466.489µs     30  partials/icons/rocketship.html
+      587.292µs     587.292µs     587.292µs      1  shortcodes/audio.html
+       556.99µs      42.845µs     536.781µs     13  partials/customer-logos/pinecone.html
+      550.303µs      91.717µs     544.154µs      6  partials/icons/puzzle.html
+      528.152µs      48.013µs     509.415µs     11  partials/customer-logos/univision.html
+      516.425µs       57.38µs     494.612µs      9  partials/customer-logos/stokespace.html
+      491.395µs      20.474µs     457.096µs     24  partials/icons/team.html
+      474.743µs      52.749µs     465.395µs      9  partials/customer-logos/kyruus.html
+      461.481µs      35.498µs     449.229µs     13  partials/customer-logos/washington-trust.html
+      434.139µs     434.139µs     434.139µs      1  partials/customer-logos/clear.html
+       284.21µs      14.958µs     261.619µs     19  partials/icons/shield.html
+      274.519µs      22.876µs     259.968µs     12  partials/customer-logos/webflow.html
+      254.019µs      42.336µs     242.887µs      6  partials/icons/gear.html
+      224.487µs      24.943µs     210.889µs      9  partials/customer-logos/portx.html
+      220.769µs       8.176µs     192.373µs     27  partials/customer-logos/starburst.html
+      207.871µs      23.096µs     196.166µs      9  partials/customer-logos/bt.html
+      188.591µs       7.857µs     126.609µs     24  partials/customer-logos/bmw.html
+      188.073µs      20.897µs      179.11µs      9  partials/customer-logos/tivityhealth.html
+      187.617µs      17.056µs     114.672µs     11  partials/customer-logos/unity.html
+      181.862µs      20.206µs     170.667µs      9  partials/customer-logos/linktree.html
+       181.23µs       7.879µs     159.888µs     23  partials/customer-logos/panther.html
+      174.724µs       14.56µs     144.849µs     12  partials/customer-logos/fenergo.html
+      172.723µs      13.286µs      147.61µs     13  partials/customer-logos/nvidia.html
+      172.676µs       9.088µs     151.457µs     19  partials/customer-logos/mercedes-benz-rdna.html
+      170.997µs      18.999µs     153.226µs      9  partials/customer-logos/materialize.html
+      170.805µs      15.527µs     158.143µs     11  partials/customer-logos/nubank.html
+      167.978µs      27.996µs     159.252µs      6  partials/customer-logos/mercedes-benz-gray.html
+      156.363µs      14.214µs     144.515µs     11  partials/customer-logos/dutchie.html
+      155.909µs      14.173µs     138.205µs     11  partials/customer-logos/bluenile.html
+      139.887µs      13.988µs     129.163µs     10  partials/customer-logos/mindbody.html
+      108.299µs      12.033µs      97.229µs      9  partials/customer-logos/moderna.html
+       97.717µs       8.883µs      86.316µs     11  partials/customer-logos/docker.html
+       77.468µs      15.493µs      72.759µs      5  partials/customer-logos/ae-networks.html
+       65.356µs      65.356µs      65.356µs      1  robots.txt
+
+
+                   |  EN   
+-------------------+-------
+  Pages            | 2922  
+  Paginator pages  |  195  
+  Non-page files   | 2096  
+  Static files     | 3201  
+  Processed images |    0  
+  Aliases          | 1925  
+  Cleaned          |    0  
+
+Total in 42738 ms
+Generating docs JSON...
+✨ Done!
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+CSS bundles minified successfully!
+Done!
+

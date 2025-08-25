@@ -1,0 +1,2388 @@
+{
+  "esc": [
+    {
+      "label": "Pulumi ESC",
+      "to": "/docs/esc/"
+    },
+    {
+      "label": "Identity & access management",
+      "to": "/docs/esc/access-management/"
+    },
+    {
+      "label": "Access control",
+      "to": "/docs/esc/access-management/access-control/"
+    },
+    {
+      "label": "OIDC authentication",
+      "to": "/docs/esc/access-management/oidc-authentication/"
+    },
+    {
+      "label": "Approvals",
+      "to": "/docs/esc/administration/Approvals/"
+    },
+    {
+      "label": "Administration",
+      "to": "/docs/esc/administration/"
+    },
+    {
+      "label": "Audit Logs",
+      "to": "/docs/esc/administration/audit-logs/"
+    },
+    {
+      "label": "Customer Managed Keys",
+      "to": "/docs/esc/administration/customer-managed-keys/"
+    },
+    {
+      "label": "Self-hosting",
+      "to": "/docs/esc/administration/self-hosting/"
+    },
+    {
+      "label": "ESC CLI",
+      "to": "/docs/esc/cli/"
+    },
+    {
+      "label": "Command-line completion",
+      "to": "/docs/esc/cli/command-line-completion/"
+    },
+    {
+      "label": "Commands",
+      "to": "/docs/esc/cli/commands/"
+    },
+    {
+      "label": "Concepts",
+      "to": "/docs/esc/concepts/"
+    },
+    {
+      "label": "How Pulumi ESC works",
+      "to": "/docs/esc/concepts/how-esc-works/"
+    },
+    {
+      "label": "Development",
+      "to": "/docs/esc/development/"
+    },
+    {
+      "label": "Automation API",
+      "to": "/docs/esc/development/automation-api/"
+    },
+    {
+      "label": "Languages & SDKs",
+      "to": "/docs/esc/development/languages-sdks/"
+    },
+    {
+      "label": "Go",
+      "to": "/docs/esc/development/languages-sdks/go/"
+    },
+    {
+      "label": "TypeScript (Node.js)",
+      "to": "/docs/esc/development/languages-sdks/javascript/"
+    },
+    {
+      "label": "Python",
+      "to": "/docs/esc/development/languages-sdks/python/"
+    },
+    {
+      "label": "Pulumi Service Provider",
+      "to": "/docs/esc/development/psp/"
+    },
+    {
+      "label": "ESC VS Code Extension",
+      "to": "/docs/esc/development/vs-code-extension/"
+    },
+    {
+      "label": "Download & Install",
+      "to": "/docs/esc/download-install/"
+    },
+    {
+      "label": "Environments",
+      "to": "/docs/esc/environments/"
+    },
+    {
+      "label": "Configuring OIDC",
+      "to": "/docs/esc/environments/configuring-oidc/"
+    },
+    {
+      "label": "AWS",
+      "to": "/docs/esc/environments/configuring-oidc/aws/"
+    },
+    {
+      "label": "Azure",
+      "to": "/docs/esc/environments/configuring-oidc/azure/"
+    },
+    {
+      "label": "Doppler",
+      "to": "/docs/esc/environments/configuring-oidc/doppler/"
+    },
+    {
+      "label": "Google Cloud",
+      "to": "/docs/esc/environments/configuring-oidc/gcp/"
+    },
+    {
+      "label": "Infisical",
+      "to": "/docs/esc/environments/configuring-oidc/infisical/"
+    },
+    {
+      "label": "Vault",
+      "to": "/docs/esc/environments/configuring-oidc/vault/"
+    },
+    {
+      "label": "Dynamic environment variables",
+      "to": "/docs/esc/environments/dynamic-environment-variables/"
+    },
+    {
+      "label": "Importing environments",
+      "to": "/docs/esc/environments/imports/"
+    },
+    {
+      "label": "Rotating secrets",
+      "to": "/docs/esc/environments/rotation/"
+    },
+    {
+      "label": "AWS Lambda Rotation Connector",
+      "to": "/docs/esc/environments/rotation/aws-lambda/"
+    },
+    {
+      "label": "Database User Setup",
+      "to": "/docs/esc/environments/rotation/db-user-setup/"
+    },
+    {
+      "label": "Versioning",
+      "to": "/docs/esc/environments/versioning/"
+    },
+    {
+      "label": "Webhooks",
+      "to": "/docs/esc/environments/webhooks/"
+    },
+    {
+      "label": "Working with environments",
+      "to": "/docs/esc/environments/working-with-environments/"
+    },
+    {
+      "label": "FAQ",
+      "to": "/docs/esc/faq/"
+    },
+    {
+      "label": "Get started",
+      "to": "/docs/esc/get-started/"
+    },
+    {
+      "label": "Before you begin",
+      "to": "/docs/esc/get-started/begin/"
+    },
+    {
+      "label": "Create environment",
+      "to": "/docs/esc/get-started/create-environment/"
+    },
+    {
+      "label": "Import environments",
+      "to": "/docs/esc/get-started/import-environments/"
+    },
+    {
+      "label": "Integrate with Pulumi IaC",
+      "to": "/docs/esc/get-started/integrate-with-pulumi-iac/"
+    },
+    {
+      "label": "Retrieve secrets from external sources",
+      "to": "/docs/esc/get-started/retrieve-external-secrets/"
+    },
+    {
+      "label": "Store and retrieve secrets",
+      "to": "/docs/esc/get-started/store-and-retrieve-secrets/"
+    },
+    {
+      "label": "Use short term cloud credentials",
+      "to": "/docs/esc/get-started/use-short-term-credentials/"
+    },
+    {
+      "label": "Integrations",
+      "to": "/docs/esc/integrations/"
+    },
+    {
+      "label": "Dev tools",
+      "to": "/docs/esc/integrations/dev-tools/"
+    },
+    {
+      "label": "Direnv",
+      "to": "/docs/esc/integrations/dev-tools/direnv/"
+    },
+    {
+      "label": "Docker",
+      "to": "/docs/esc/integrations/dev-tools/docker/"
+    },
+    {
+      "label": "GitHub",
+      "to": "/docs/esc/integrations/dev-tools/github/"
+    },
+    {
+      "label": "Dynamic login credentials",
+      "to": "/docs/esc/integrations/dynamic-login-credentials/"
+    },
+    {
+      "label": "aws-login",
+      "to": "/docs/esc/integrations/dynamic-login-credentials/aws-login/"
+    },
+    {
+      "label": "azure-login",
+      "to": "/docs/esc/integrations/dynamic-login-credentials/azure-login/"
+    },
+    {
+      "label": "doppler-login",
+      "to": "/docs/esc/integrations/dynamic-login-credentials/doppler-login/"
+    },
+    {
+      "label": "gcp-login",
+      "to": "/docs/esc/integrations/dynamic-login-credentials/gcp-login/"
+    },
+    {
+      "label": "gh-login",
+      "to": "/docs/esc/integrations/dynamic-login-credentials/gh-login/"
+    },
+    {
+      "label": "infisical-login",
+      "to": "/docs/esc/integrations/dynamic-login-credentials/infisical-login/"
+    },
+    {
+      "label": "snowflake-login",
+      "to": "/docs/esc/integrations/dynamic-login-credentials/snowflake-login/"
+    },
+    {
+      "label": "vault-login",
+      "to": "/docs/esc/integrations/dynamic-login-credentials/vault-login/"
+    },
+    {
+      "label": "1password-secrets",
+      "to": "/docs/esc/integrations/dynamic-secrets/1password-secrets/"
+    },
+    {
+      "label": "Dynamic secrets",
+      "to": "/docs/esc/integrations/dynamic-secrets/"
+    },
+    {
+      "label": "aws-parameter-store",
+      "to": "/docs/esc/integrations/dynamic-secrets/aws-parameter-store/"
+    },
+    {
+      "label": "aws-secrets",
+      "to": "/docs/esc/integrations/dynamic-secrets/aws-secrets/"
+    },
+    {
+      "label": "azure-secrets",
+      "to": "/docs/esc/integrations/dynamic-secrets/azure-secrets/"
+    },
+    {
+      "label": "doppler-secrets",
+      "to": "/docs/esc/integrations/dynamic-secrets/doppler-secrets/"
+    },
+    {
+      "label": "gcp-secrets",
+      "to": "/docs/esc/integrations/dynamic-secrets/gcp-secrets/"
+    },
+    {
+      "label": "infisical-secrets",
+      "to": "/docs/esc/integrations/dynamic-secrets/infisical-secrets/"
+    },
+    {
+      "label": "vault-secrets",
+      "to": "/docs/esc/integrations/dynamic-secrets/vault-secrets/"
+    },
+    {
+      "label": "Infrastructure",
+      "to": "/docs/esc/integrations/infrastructure/"
+    },
+    {
+      "label": "Cloudflare",
+      "to": "/docs/esc/integrations/infrastructure/cloudflare/"
+    },
+    {
+      "label": "Pulumi IaC",
+      "to": "/docs/esc/integrations/infrastructure/pulumi-iac/"
+    },
+    {
+      "label": "pulumi-stacks",
+      "to": "/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/"
+    },
+    {
+      "label": "Terraform",
+      "to": "/docs/esc/integrations/infrastructure/terraform/"
+    },
+    {
+      "label": "Kubernetes",
+      "to": "/docs/esc/integrations/kubernetes/"
+    },
+    {
+      "label": "External Secrets Operator (ESO)",
+      "to": "/docs/esc/integrations/kubernetes/external-secrets-operator/"
+    },
+    {
+      "label": "Kubernetes Cluster Access",
+      "to": "/docs/esc/integrations/kubernetes/kubernetes/"
+    },
+    {
+      "label": "Secrets Store CSI Driver",
+      "to": "/docs/esc/integrations/kubernetes/secret-store-csi-driver/"
+    },
+    {
+      "label": "Rotated secrets",
+      "to": "/docs/esc/integrations/rotated-secrets/"
+    },
+    {
+      "label": "aws-iam",
+      "to": "/docs/esc/integrations/rotated-secrets/aws-iam/"
+    },
+    {
+      "label": "mysql",
+      "to": "/docs/esc/integrations/rotated-secrets/mysql/"
+    },
+    {
+      "label": "postgres",
+      "to": "/docs/esc/integrations/rotated-secrets/postgres/"
+    },
+    {
+      "label": "snowflake-user",
+      "to": "/docs/esc/integrations/rotated-secrets/snowflake-user/"
+    },
+    {
+      "label": "Environment Definition Reference",
+      "to": "/docs/esc/reference/"
+    },
+    {
+      "label": "Built-in Functions",
+      "to": "/docs/esc/reference/builtin-functions/"
+    },
+    {
+      "label": "fn::fromBase64",
+      "to": "/docs/esc/reference/builtin-functions/fn-from-base64/"
+    },
+    {
+      "label": "fn::fromJSON",
+      "to": "/docs/esc/reference/builtin-functions/fn-from-json/"
+    },
+    {
+      "label": "fn::join",
+      "to": "/docs/esc/reference/builtin-functions/fn-join/"
+    },
+    {
+      "label": "fn::open",
+      "to": "/docs/esc/reference/builtin-functions/fn-open/"
+    },
+    {
+      "label": "fn::rotate",
+      "to": "/docs/esc/reference/builtin-functions/fn-rotate/"
+    },
+    {
+      "label": "fn::secret",
+      "to": "/docs/esc/reference/builtin-functions/fn-secret/"
+    },
+    {
+      "label": "fn::toBase64",
+      "to": "/docs/esc/reference/builtin-functions/fn-to-base64/"
+    },
+    {
+      "label": "fn::toJSON",
+      "to": "/docs/esc/reference/builtin-functions/fn-to-json/"
+    },
+    {
+      "label": "fn::toString",
+      "to": "/docs/esc/reference/builtin-functions/fn-to-string/"
+    },
+    {
+      "label": "Built-in Properties",
+      "to": "/docs/esc/reference/builtin-properties/"
+    },
+    {
+      "label": "context",
+      "to": "/docs/esc/reference/builtin-properties/context/"
+    },
+    {
+      "label": "environments",
+      "to": "/docs/esc/reference/builtin-properties/environments/"
+    },
+    {
+      "label": "imports",
+      "to": "/docs/esc/reference/builtin-properties/imports/"
+    },
+    {
+      "label": "Interpolations and References",
+      "to": "/docs/esc/reference/interpolations-and-references/"
+    },
+    {
+      "label": "Providers",
+      "to": "/docs/esc/reference/providers/"
+    },
+    {
+      "label": "Reserved Properties",
+      "to": "/docs/esc/reference/reserved-properties/"
+    },
+    {
+      "label": "environmentVariables",
+      "to": "/docs/esc/reference/reserved-properties/environment-variables/"
+    },
+    {
+      "label": "files",
+      "to": "/docs/esc/reference/reserved-properties/files/"
+    },
+    {
+      "label": "pulumiConfig",
+      "to": "/docs/esc/reference/reserved-properties/pulumi-config/"
+    },
+    {
+      "label": "Rotators",
+      "to": "/docs/esc/reference/rotators/"
+    },
+    {
+      "label": "Sample Environment Definition",
+      "to": "/docs/esc/reference/sample-environment-definition/"
+    },
+    {
+      "label": "Top-Level Keys",
+      "to": "/docs/esc/reference/top-level-keys/"
+    },
+    {
+      "label": "imports",
+      "to": "/docs/esc/reference/top-level-keys/imports/"
+    },
+    {
+      "label": "values",
+      "to": "/docs/esc/reference/top-level-keys/values/"
+    },
+    {
+      "label": "Compare to...",
+      "to": "/docs/esc/vs/"
+    },
+    {
+      "label": "Pulumi ESC vs Doppler",
+      "to": "/docs/esc/vs/doppler/"
+    },
+    {
+      "label": "Pulumi ESC vs Infisical",
+      "to": "/docs/esc/vs/infisical/"
+    },
+    {
+      "label": "HashiCorp Vault",
+      "to": "/docs/esc/vs/vault/"
+    }
+  ],
+  "iac": [
+    {
+      "label": "Pulumi IaC",
+      "to": "/docs/iac/"
+    },
+    {
+      "label": "Adopting Pulumi",
+      "to": "/docs/iac/adopting-pulumi/"
+    },
+    {
+      "label": "Conversion tools",
+      "to": "/docs/iac/adopting-pulumi/converters/"
+    },
+    {
+      "label": "Importing resources",
+      "to": "/docs/iac/adopting-pulumi/import/"
+    },
+    {
+      "label": "Migrating from...",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/"
+    },
+    {
+      "label": "Azure Resource Manager",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/"
+    },
+    {
+      "label": "AWS CDK",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cdk/"
+    },
+    {
+      "label": "AWS CloudFormation",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cloudformation/"
+    },
+    {
+      "label": "Kubernetes YAML or Helm Charts",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-kubernetes/"
+    },
+    {
+      "label": "Terraform",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/"
+    },
+    {
+      "label": "Using Visual Import",
+      "to": "/docs/iac/adopting-pulumi/visual-import/"
+    },
+    {
+      "label": "Automation API",
+      "to": "/docs/iac/automation-api/"
+    },
+    {
+      "label": "Concepts",
+      "to": "/docs/iac/automation-api/concepts-terminology/"
+    },
+    {
+      "label": "Getting Started",
+      "to": "/docs/iac/automation-api/getting-started-automation-api/"
+    },
+    {
+      "label": "Build with Pulumi",
+      "to": "/docs/iac/build-with-pulumi/"
+    },
+    {
+      "label": "Build a Provider",
+      "to": "/docs/iac/build-with-pulumi/build-a-provider/"
+    },
+    {
+      "label": "Debugging providers",
+      "to": "/docs/iac/build-with-pulumi/debugging-providers/"
+    },
+    {
+      "label": "Local Packages",
+      "to": "/docs/iac/build-with-pulumi/local-packages/"
+    },
+    {
+      "label": "Publishing packages",
+      "to": "/docs/iac/build-with-pulumi/publishing-packages/"
+    },
+    {
+      "label": "Pulumi Provider SDK",
+      "to": "/docs/iac/build-with-pulumi/pulumi-provider-sdk/"
+    },
+    {
+      "label": "Schema reference",
+      "to": "/docs/iac/build-with-pulumi/schema/"
+    },
+    {
+      "label": "Testing Components",
+      "to": "/docs/iac/build-with-pulumi/testing-components/"
+    },
+    {
+      "label": "Use a Terraform Module",
+      "to": "/docs/iac/build-with-pulumi/use-terraform-module/"
+    },
+    {
+      "label": "Pulumi CLI",
+      "to": "/docs/iac/cli/"
+    },
+    {
+      "label": "Command-line completion",
+      "to": "/docs/iac/cli/command-line-completion/"
+    },
+    {
+      "label": "Commands",
+      "to": "/docs/iac/cli/commands/"
+    },
+    {
+      "label": "Environment variables",
+      "to": "/docs/iac/cli/environment-variables/"
+    },
+    {
+      "label": "Clouds",
+      "to": "/docs/iac/clouds/"
+    },
+    {
+      "label": "AWS",
+      "to": "/docs/iac/clouds/aws/"
+    },
+    {
+      "label": "Guides",
+      "to": "/docs/iac/clouds/aws/guides/"
+    },
+    {
+      "label": "API Gateway",
+      "to": "/docs/iac/clouds/aws/guides/api-gateway/"
+    },
+    {
+      "label": "Auto Scaling",
+      "to": "/docs/iac/clouds/aws/guides/autoscaling/"
+    },
+    {
+      "label": "Index of AWS Services",
+      "to": "/docs/iac/clouds/aws/guides/aws-index-of-services/"
+    },
+    {
+      "label": "AWS CDK",
+      "to": "/docs/iac/clouds/aws/guides/cdk/"
+    },
+    {
+      "label": "CloudWatch",
+      "to": "/docs/iac/clouds/aws/guides/cloudwatch/"
+    },
+    {
+      "label": "ECR",
+      "to": "/docs/iac/clouds/aws/guides/ecr/"
+    },
+    {
+      "label": "ECS",
+      "to": "/docs/iac/clouds/aws/guides/ecs/"
+    },
+    {
+      "label": "EKS",
+      "to": "/docs/iac/clouds/aws/guides/eks/"
+    },
+    {
+      "label": "ELB",
+      "to": "/docs/iac/clouds/aws/guides/elb/"
+    },
+    {
+      "label": "IAM",
+      "to": "/docs/iac/clouds/aws/guides/iam/"
+    },
+    {
+      "label": "Lambda",
+      "to": "/docs/iac/clouds/aws/guides/lambda/"
+    },
+    {
+      "label": "More",
+      "to": "/docs/iac/clouds/aws/guides/more/"
+    },
+    {
+      "label": "VPC",
+      "to": "/docs/iac/clouds/aws/guides/vpc/"
+    },
+    {
+      "label": "Azure",
+      "to": "/docs/iac/clouds/azure/"
+    },
+    {
+      "label": "Google Cloud",
+      "to": "/docs/iac/clouds/gcp/"
+    },
+    {
+      "label": "Kubernetes",
+      "to": "/docs/iac/clouds/kubernetes/"
+    },
+    {
+      "label": "Guides",
+      "to": "/docs/iac/clouds/kubernetes/guides/"
+    },
+    {
+      "label": "App services",
+      "to": "/docs/iac/clouds/kubernetes/guides/app-services/"
+    },
+    {
+      "label": "Apps",
+      "to": "/docs/iac/clouds/kubernetes/guides/apps/"
+    },
+    {
+      "label": "Cluster services",
+      "to": "/docs/iac/clouds/kubernetes/guides/cluster-services/"
+    },
+    {
+      "label": "Access control",
+      "to": "/docs/iac/clouds/kubernetes/guides/configure-access-control/"
+    },
+    {
+      "label": "Cluster defaults",
+      "to": "/docs/iac/clouds/kubernetes/guides/configure-defaults/"
+    },
+    {
+      "label": "Control Plane",
+      "to": "/docs/iac/clouds/kubernetes/guides/control-plane/"
+    },
+    {
+      "label": "FAQ",
+      "to": "/docs/iac/clouds/kubernetes/guides/faq/"
+    },
+    {
+      "label": "Identity",
+      "to": "/docs/iac/clouds/kubernetes/guides/identity/"
+    },
+    {
+      "label": "Managed infra",
+      "to": "/docs/iac/clouds/kubernetes/guides/managed-infra/"
+    },
+    {
+      "label": "Playbooks",
+      "to": "/docs/iac/clouds/kubernetes/guides/playbooks/"
+    },
+    {
+      "label": "Access clusters",
+      "to": "/docs/iac/clouds/kubernetes/guides/try-out-the-cluster/"
+    },
+    {
+      "label": "Updating worker nodes",
+      "to": "/docs/iac/clouds/kubernetes/guides/update-worker-nodes/"
+    },
+    {
+      "label": "Worker nodes",
+      "to": "/docs/iac/clouds/kubernetes/guides/worker-nodes/"
+    },
+    {
+      "label": "Concepts",
+      "to": "/docs/iac/concepts/"
+    },
+    {
+      "label": "Assets & archives",
+      "to": "/docs/iac/concepts/assets-archives/"
+    },
+    {
+      "label": "Components",
+      "to": "/docs/iac/concepts/components/"
+    },
+    {
+      "label": "Configuration",
+      "to": "/docs/iac/concepts/config/"
+    },
+    {
+      "label": "Debugging",
+      "to": "/docs/iac/concepts/debugging/"
+    },
+    {
+      "label": "Functions",
+      "to": "/docs/iac/concepts/functions/"
+    },
+    {
+      "label": "Get functions",
+      "to": "/docs/iac/concepts/functions/get-functions/"
+    },
+    {
+      "label": "Provider functions",
+      "to": "/docs/iac/concepts/functions/provider-functions/"
+    },
+    {
+      "label": "Resource methods",
+      "to": "/docs/iac/concepts/functions/resource-methods/"
+    },
+    {
+      "label": "How Pulumi works",
+      "to": "/docs/iac/concepts/how-pulumi-works/"
+    },
+    {
+      "label": "Inputs & outputs",
+      "to": "/docs/iac/concepts/inputs-outputs/"
+    },
+    {
+      "label": "All",
+      "to": "/docs/iac/concepts/inputs-outputs/all/"
+    },
+    {
+      "label": "Apply",
+      "to": "/docs/iac/concepts/inputs-outputs/apply/"
+    },
+    {
+      "label": "Logging",
+      "to": "/docs/iac/concepts/logging/"
+    },
+    {
+      "label": "Miscellaneous",
+      "to": "/docs/iac/concepts/miscellaneous/"
+    },
+    {
+      "label": "Function serialization",
+      "to": "/docs/iac/concepts/miscellaneous/function-serialization/"
+    },
+    {
+      "label": "Property Paths",
+      "to": "/docs/iac/concepts/miscellaneous/property-paths/"
+    },
+    {
+      "label": "Resource options",
+      "to": "/docs/iac/concepts/options/"
+    },
+    {
+      "label": "additionalSecretOutputs",
+      "to": "/docs/iac/concepts/options/additionalsecretoutputs/"
+    },
+    {
+      "label": "aliases",
+      "to": "/docs/iac/concepts/options/aliases/"
+    },
+    {
+      "label": "customTimeouts",
+      "to": "/docs/iac/concepts/options/customtimeouts/"
+    },
+    {
+      "label": "deleteBeforeReplace",
+      "to": "/docs/iac/concepts/options/deletebeforereplace/"
+    },
+    {
+      "label": "deletedWith",
+      "to": "/docs/iac/concepts/options/deletedwith/"
+    },
+    {
+      "label": "dependsOn",
+      "to": "/docs/iac/concepts/options/dependson/"
+    },
+    {
+      "label": "hooks",
+      "to": "/docs/iac/concepts/options/hooks/"
+    },
+    {
+      "label": "ignoreChanges",
+      "to": "/docs/iac/concepts/options/ignorechanges/"
+    },
+    {
+      "label": "import",
+      "to": "/docs/iac/concepts/options/import/"
+    },
+    {
+      "label": "parent",
+      "to": "/docs/iac/concepts/options/parent/"
+    },
+    {
+      "label": "protect",
+      "to": "/docs/iac/concepts/options/protect/"
+    },
+    {
+      "label": "provider",
+      "to": "/docs/iac/concepts/options/provider/"
+    },
+    {
+      "label": "providers",
+      "to": "/docs/iac/concepts/options/providers/"
+    },
+    {
+      "label": "replaceOnChanges",
+      "to": "/docs/iac/concepts/options/replaceonchanges/"
+    },
+    {
+      "label": "retainOnDelete",
+      "to": "/docs/iac/concepts/options/retainOnDelete/"
+    },
+    {
+      "label": "transformations",
+      "to": "/docs/iac/concepts/options/transformations/"
+    },
+    {
+      "label": "transforms",
+      "to": "/docs/iac/concepts/options/transforms/"
+    },
+    {
+      "label": "version",
+      "to": "/docs/iac/concepts/options/version/"
+    },
+    {
+      "label": "Packages",
+      "to": "/docs/iac/concepts/packages/"
+    },
+    {
+      "label": "Projects",
+      "to": "/docs/iac/concepts/projects/"
+    },
+    {
+      "label": "Project file reference",
+      "to": "/docs/iac/concepts/projects/project-file/"
+    },
+    {
+      "label": "Stack settings file reference",
+      "to": "/docs/iac/concepts/projects/stack-settings-file/"
+    },
+    {
+      "label": "Resources",
+      "to": "/docs/iac/concepts/resources/"
+    },
+    {
+      "label": "Dynamic providers",
+      "to": "/docs/iac/concepts/resources/dynamic-providers/"
+    },
+    {
+      "label": "Names",
+      "to": "/docs/iac/concepts/resources/names/"
+    },
+    {
+      "label": "Providers",
+      "to": "/docs/iac/concepts/resources/providers/"
+    },
+    {
+      "label": "Secrets",
+      "to": "/docs/iac/concepts/secrets/"
+    },
+    {
+      "label": "Stacks",
+      "to": "/docs/iac/concepts/stacks/"
+    },
+    {
+      "label": "State & backends",
+      "to": "/docs/iac/concepts/state-and-backends/"
+    },
+    {
+      "label": "Testing",
+      "to": "/docs/iac/concepts/testing/"
+    },
+    {
+      "label": "Integration testing",
+      "to": "/docs/iac/concepts/testing/integration/"
+    },
+    {
+      "label": "Property testing",
+      "to": "/docs/iac/concepts/testing/property-testing/"
+    },
+    {
+      "label": "Unit testing",
+      "to": "/docs/iac/concepts/testing/unit/"
+    },
+    {
+      "label": "Update plans",
+      "to": "/docs/iac/concepts/update-plans/"
+    },
+    {
+      "label": "Compare to...",
+      "to": "/docs/iac/concepts/vs/"
+    },
+    {
+      "label": "Chef & Puppet",
+      "to": "/docs/iac/concepts/vs/chef-puppet-etc/"
+    },
+    {
+      "label": "Cloud SDKs",
+      "to": "/docs/iac/concepts/vs/cloud-sdks/"
+    },
+    {
+      "label": "Cloud Template Transpilers",
+      "to": "/docs/iac/concepts/vs/cloud-template-transpilers/"
+    },
+    {
+      "label": "Pulumi vs AWS Cloud Development Kit (CDK)",
+      "to": "/docs/iac/concepts/vs/cloud-template-transpilers/aws-cdk/"
+    },
+    {
+      "label": "AWS CloudFormation",
+      "to": "/docs/iac/concepts/vs/cloud-templates/cloudformation/"
+    },
+    {
+      "label": "Crossplane",
+      "to": "/docs/iac/concepts/vs/crossplane/"
+    },
+    {
+      "label": "Custom solutions",
+      "to": "/docs/iac/concepts/vs/custom/"
+    },
+    {
+      "label": "Kubernetes YAML",
+      "to": "/docs/iac/concepts/vs/k8s-yaml-dsls/"
+    },
+    {
+      "label": "OpenTofu",
+      "to": "/docs/iac/concepts/vs/opentofu/"
+    },
+    {
+      "label": "Serverless Framework",
+      "to": "/docs/iac/concepts/vs/serverless/"
+    },
+    {
+      "label": "Terraform",
+      "to": "/docs/iac/concepts/vs/terraform/"
+    },
+    {
+      "label": "OpenTofu vs. Terraform",
+      "to": "/docs/iac/concepts/vs/terraform/opentofu/"
+    },
+    {
+      "label": "Pulumi terminology",
+      "to": "/docs/iac/concepts/vs/terraform/terminology/"
+    },
+    {
+      "label": "Policy as code",
+      "to": "/docs/iac/crossguard/"
+    },
+    {
+      "label": "Policy manager",
+      "to": "/docs/iac/crossguard/api-policy-manager/"
+    },
+    {
+      "label": "AWSGuard",
+      "to": "/docs/iac/crossguard/awsguard/"
+    },
+    {
+      "label": "Best practices",
+      "to": "/docs/iac/crossguard/best-practices/"
+    },
+    {
+      "label": "AWS Policies",
+      "to": "/docs/iac/crossguard/compliance-ready-policies-aws/"
+    },
+    {
+      "label": "AWS Cloud Control Policies",
+      "to": "/docs/iac/crossguard/compliance-ready-policies-awsnative/"
+    },
+    {
+      "label": "Azure Policies",
+      "to": "/docs/iac/crossguard/compliance-ready-policies-azure/"
+    },
+    {
+      "label": "Azure Native Policies",
+      "to": "/docs/iac/crossguard/compliance-ready-policies-azurenative/"
+    },
+    {
+      "label": "GCP Policies",
+      "to": "/docs/iac/crossguard/compliance-ready-policies-gcp/"
+    },
+    {
+      "label": "Google Native Policies",
+      "to": "/docs/iac/crossguard/compliance-ready-policies-googlenative/"
+    },
+    {
+      "label": "Kubernetes Policies",
+      "to": "/docs/iac/crossguard/compliance-ready-policies-kubernetes/"
+    },
+    {
+      "label": "Compliance-ready policies",
+      "to": "/docs/iac/crossguard/compliance-ready-policies/"
+    },
+    {
+      "label": "Policy configuration",
+      "to": "/docs/iac/crossguard/configuration/"
+    },
+    {
+      "label": "Concepts",
+      "to": "/docs/iac/crossguard/core-concepts/"
+    },
+    {
+      "label": "FAQ",
+      "to": "/docs/iac/crossguard/faq/"
+    },
+    {
+      "label": "Get started",
+      "to": "/docs/iac/crossguard/get-started/"
+    },
+    {
+      "label": "Policy violations",
+      "to": "/docs/iac/crossguard/policy-violations/"
+    },
+    {
+      "label": "Snyk container scanning",
+      "to": "/docs/iac/crossguard/snyk-policy/"
+    },
+    {
+      "label": "Download & install",
+      "to": "/docs/iac/download-install/"
+    },
+    {
+      "label": "Get started",
+      "to": "/docs/iac/get-started/"
+    },
+    {
+      "label": "AWS",
+      "to": "/docs/iac/get-started/aws/"
+    },
+    {
+      "label": "Install Pulumi",
+      "to": "/docs/iac/get-started/aws/begin/"
+    },
+    {
+      "label": "Configure access",
+      "to": "/docs/iac/get-started/aws/configure/"
+    },
+    {
+      "label": "Create a component",
+      "to": "/docs/iac/get-started/aws/create-component/"
+    },
+    {
+      "label": "Create project",
+      "to": "/docs/iac/get-started/aws/create-project/"
+    },
+    {
+      "label": "Deploy",
+      "to": "/docs/iac/get-started/aws/deploy-stack/"
+    },
+    {
+      "label": "Cleanup & destroy",
+      "to": "/docs/iac/get-started/aws/destroy-stack/"
+    },
+    {
+      "label": "Make an update",
+      "to": "/docs/iac/get-started/aws/modify-program/"
+    },
+    {
+      "label": "Next steps",
+      "to": "/docs/iac/get-started/aws/next-steps/"
+    },
+    {
+      "label": "Azure",
+      "to": "/docs/iac/get-started/azure/"
+    },
+    {
+      "label": "Install Pulumi",
+      "to": "/docs/iac/get-started/azure/begin/"
+    },
+    {
+      "label": "Create project",
+      "to": "/docs/iac/get-started/azure/create-project/"
+    },
+    {
+      "label": "Deploy changes",
+      "to": "/docs/iac/get-started/azure/deploy-changes/"
+    },
+    {
+      "label": "Deploy stack",
+      "to": "/docs/iac/get-started/azure/deploy-stack/"
+    },
+    {
+      "label": "Destroy stack",
+      "to": "/docs/iac/get-started/azure/destroy-stack/"
+    },
+    {
+      "label": "Modify program",
+      "to": "/docs/iac/get-started/azure/modify-program/"
+    },
+    {
+      "label": "Next steps",
+      "to": "/docs/iac/get-started/azure/next-steps/"
+    },
+    {
+      "label": "Review project",
+      "to": "/docs/iac/get-started/azure/review-project/"
+    },
+    {
+      "label": "Google Cloud",
+      "to": "/docs/iac/get-started/gcp/"
+    },
+    {
+      "label": "Install Pulumi",
+      "to": "/docs/iac/get-started/gcp/begin/"
+    },
+    {
+      "label": "Create project",
+      "to": "/docs/iac/get-started/gcp/create-project/"
+    },
+    {
+      "label": "Deploy changes",
+      "to": "/docs/iac/get-started/gcp/deploy-changes/"
+    },
+    {
+      "label": "Deploy stack",
+      "to": "/docs/iac/get-started/gcp/deploy-stack/"
+    },
+    {
+      "label": "Destroy stack",
+      "to": "/docs/iac/get-started/gcp/destroy-stack/"
+    },
+    {
+      "label": "Modify program",
+      "to": "/docs/iac/get-started/gcp/modify-program/"
+    },
+    {
+      "label": "Next steps",
+      "to": "/docs/iac/get-started/gcp/next-steps/"
+    },
+    {
+      "label": "Review project",
+      "to": "/docs/iac/get-started/gcp/review-project/"
+    },
+    {
+      "label": "Kubernetes",
+      "to": "/docs/iac/get-started/kubernetes/"
+    },
+    {
+      "label": "Install Pulumi",
+      "to": "/docs/iac/get-started/kubernetes/begin/"
+    },
+    {
+      "label": "Create project",
+      "to": "/docs/iac/get-started/kubernetes/create-project/"
+    },
+    {
+      "label": "Deploy changes",
+      "to": "/docs/iac/get-started/kubernetes/deploy-changes/"
+    },
+    {
+      "label": "Deploy stack",
+      "to": "/docs/iac/get-started/kubernetes/deploy-stack/"
+    },
+    {
+      "label": "Destroy stack",
+      "to": "/docs/iac/get-started/kubernetes/destroy-stack/"
+    },
+    {
+      "label": "Modify program",
+      "to": "/docs/iac/get-started/kubernetes/modify-program/"
+    },
+    {
+      "label": "Next steps",
+      "to": "/docs/iac/get-started/kubernetes/next-steps/"
+    },
+    {
+      "label": "Review project",
+      "to": "/docs/iac/get-started/kubernetes/review-project/"
+    },
+    {
+      "label": "Terraform Users",
+      "to": "/docs/iac/get-started/terraform/"
+    },
+    {
+      "label": "Install and Configure",
+      "to": "/docs/iac/get-started/terraform/begin/"
+    },
+    {
+      "label": "Convert HCL Code",
+      "to": "/docs/iac/get-started/terraform/convert-hcl/"
+    },
+    {
+      "label": "First Look - Terraform HCL vs Pulumi Programs",
+      "to": "/docs/iac/get-started/terraform/first-look/"
+    },
+    {
+      "label": "Next Steps",
+      "to": "/docs/iac/get-started/terraform/next-steps/"
+    },
+    {
+      "label": "Orchestrate Together",
+      "to": "/docs/iac/get-started/terraform/orchestrate/"
+    },
+    {
+      "label": "Reference Terraform State",
+      "to": "/docs/iac/get-started/terraform/reference-state/"
+    },
+    {
+      "label": "Import Terraform Modules",
+      "to": "/docs/iac/get-started/terraform/terraform-modules/"
+    },
+    {
+      "label": "Use Terraform Providers",
+      "to": "/docs/iac/get-started/terraform/terraform-providers/"
+    },
+    {
+      "label": "Languages & SDKs",
+      "to": "/docs/iac/languages-sdks/"
+    },
+    {
+      "label": "C#, F#, VB (.NET)",
+      "to": "/docs/iac/languages-sdks/dotnet/"
+    },
+    {
+      "label": "Go",
+      "to": "/docs/iac/languages-sdks/go/"
+    },
+    {
+      "label": "Java",
+      "to": "/docs/iac/languages-sdks/java/"
+    },
+    {
+      "label": "TypeScript (Node.js)",
+      "to": "/docs/iac/languages-sdks/javascript/"
+    },
+    {
+      "label": "Python",
+      "to": "/docs/iac/languages-sdks/python/"
+    },
+    {
+      "label": "Blocking & async",
+      "to": "/docs/iac/languages-sdks/python/python-blocking-async/"
+    },
+    {
+      "label": "YAML",
+      "to": "/docs/iac/languages-sdks/yaml/"
+    },
+    {
+      "label": "Component Reference",
+      "to": "/docs/iac/languages-sdks/yaml/yaml-component-reference/"
+    },
+    {
+      "label": "Reference",
+      "to": "/docs/iac/languages-sdks/yaml/yaml-language-reference/"
+    },
+    {
+      "label": "Support",
+      "to": "/docs/iac/support/"
+    },
+    {
+      "label": "FAQ",
+      "to": "/docs/iac/support/faq/"
+    },
+    {
+      "label": "Troubleshooting",
+      "to": "/docs/iac/support/troubleshooting/"
+    },
+    {
+      "label": "Version Support",
+      "to": "/docs/iac/support/version-support/"
+    },
+    {
+      "label": "Using Pulumi",
+      "to": "/docs/iac/using-pulumi/"
+    },
+    {
+      "label": "Build a Component",
+      "to": "/docs/iac/using-pulumi/build-a-component/"
+    },
+    {
+      "label": "Continuous delivery",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/"
+    },
+    {
+      "label": "Adding CI/CD support",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/add-support-for-cicd-systems/"
+    },
+    {
+      "label": "ArgoCD",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/argocd/"
+    },
+    {
+      "label": "AWS Code Services",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/aws-code-services/"
+    },
+    {
+      "label": "Azure DevOps",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/azure-devops/"
+    },
+    {
+      "label": "Bitbucket Pipelines",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/bitbucket/"
+    },
+    {
+      "label": "Buildkite",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/buildkite/"
+    },
+    {
+      "label": "CircleCI",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/circleci/"
+    },
+    {
+      "label": "Codefresh",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/codefresh/"
+    },
+    {
+      "label": "GitHub Actions",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/github-actions/"
+    },
+    {
+      "label": "GitHub App",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/github-app/"
+    },
+    {
+      "label": "GitLab Integration",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/gitlab-app/"
+    },
+    {
+      "label": "GitLab CI",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/gitlab-ci/"
+    },
+    {
+      "label": "Google Cloud Build",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/google-cloud-build/"
+    },
+    {
+      "label": "Harness",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/harness/"
+    },
+    {
+      "label": "Jenkins",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/jenkins/"
+    },
+    {
+      "label": "Octopus Deploy",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/octopus-deploy/"
+    },
+    {
+      "label": "Pulumi Kubernetes Operator",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/"
+    },
+    {
+      "label": "Spinnaker",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/spinnaker/"
+    },
+    {
+      "label": "TeamCity",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/teamcity/"
+    },
+    {
+      "label": "Travis CI",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/travis/"
+    },
+    {
+      "label": "Troubleshooting",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/troubleshooting-guide/"
+    },
+    {
+      "label": "Least privilege security",
+      "to": "/docs/iac/using-pulumi/iac-least-privileges/"
+    },
+    {
+      "label": "MCP server",
+      "to": "/docs/iac/using-pulumi/mcp-server/"
+    },
+    {
+      "label": "Organizing Projects & Stacks",
+      "to": "/docs/iac/using-pulumi/organizing-projects-stacks/"
+    }
+  ],
+  "usingpulumi": [
+    {
+      "label": "Adopting Pulumi",
+      "to": "/docs/iac/adopting-pulumi/"
+    },
+    {
+      "label": "Convert code",
+      "to": "/docs/iac/adopting-pulumi/converters/"
+    },
+    {
+      "label": "Import resources",
+      "to": "/docs/iac/adopting-pulumi/import/"
+    },
+    {
+      "label": "Migrate from...",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/"
+    },
+    {
+      "label": "Azure Resource Manager",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/"
+    },
+    {
+      "label": "AWS CDK",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cdk/"
+    },
+    {
+      "label": "AWS CloudFormation",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cloudformation/"
+    },
+    {
+      "label": "Kubernetes YAML & Helm Charts",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-kubernetes/"
+    },
+    {
+      "label": "Terraform",
+      "to": "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/"
+    },
+    {
+      "label": "Using Visual Import",
+      "to": "/docs/iac/adopting-pulumi/visual-import/"
+    },
+    {
+      "label": "Debugging",
+      "to": "/docs/iac/concepts/debugging/"
+    },
+    {
+      "label": "Testing",
+      "to": "/docs/iac/concepts/testing/"
+    },
+    {
+      "label": "Integration testing",
+      "to": "/docs/iac/concepts/testing/integration/"
+    },
+    {
+      "label": "Property testing",
+      "to": "/docs/iac/concepts/testing/property-testing/"
+    },
+    {
+      "label": "Unit testing",
+      "to": "/docs/iac/concepts/testing/unit/"
+    },
+    {
+      "label": "Jenkins",
+      "to": "/docs/iac/using-pulumi/continuous-delivery/jenkins/"
+    }
+  ],
+  "concepts": [
+    {
+      "label": "Overview",
+      "to": "/docs/iac/concepts/"
+    },
+    {
+      "label": "Assets & archives",
+      "to": "/docs/iac/concepts/assets-archives/"
+    },
+    {
+      "label": "Configuration",
+      "to": "/docs/iac/concepts/config/"
+    },
+    {
+      "label": "Functions",
+      "to": "/docs/iac/concepts/functions/"
+    },
+    {
+      "label": "Get functions",
+      "to": "/docs/iac/concepts/functions/get-functions/"
+    },
+    {
+      "label": "Provider functions",
+      "to": "/docs/iac/concepts/functions/provider-functions/"
+    },
+    {
+      "label": "Resource methods",
+      "to": "/docs/iac/concepts/functions/resource-methods/"
+    },
+    {
+      "label": "Pulumi glossary",
+      "to": "/docs/iac/concepts/glossary/"
+    },
+    {
+      "label": "How Pulumi works",
+      "to": "/docs/iac/concepts/how-pulumi-works/"
+    },
+    {
+      "label": "Inputs & outputs",
+      "to": "/docs/iac/concepts/inputs-outputs/"
+    },
+    {
+      "label": "Accessing multiple outputs with All",
+      "to": "/docs/iac/concepts/inputs-outputs/all/"
+    },
+    {
+      "label": "Accessing single outputs with Apply",
+      "to": "/docs/iac/concepts/inputs-outputs/apply/"
+    },
+    {
+      "label": "Logging",
+      "to": "/docs/iac/concepts/logging/"
+    },
+    {
+      "label": "Pulumi packages",
+      "to": "/docs/iac/concepts/packages/"
+    },
+    {
+      "label": "Projects",
+      "to": "/docs/iac/concepts/projects/"
+    },
+    {
+      "label": "Project file reference",
+      "to": "/docs/iac/concepts/projects/project-file/"
+    },
+    {
+      "label": "Stack settings file reference",
+      "to": "/docs/iac/concepts/projects/stack-settings-file/"
+    },
+    {
+      "label": "Resources",
+      "to": "/docs/iac/concepts/resources/"
+    },
+    {
+      "label": "Dynamic providers",
+      "to": "/docs/iac/concepts/resources/dynamic-providers/"
+    },
+    {
+      "label": "Names",
+      "to": "/docs/iac/concepts/resources/names/"
+    },
+    {
+      "label": "Providers",
+      "to": "/docs/iac/concepts/resources/providers/"
+    },
+    {
+      "label": "Secrets",
+      "to": "/docs/iac/concepts/secrets/"
+    },
+    {
+      "label": "Stacks",
+      "to": "/docs/iac/concepts/stacks/"
+    },
+    {
+      "label": "State & backends",
+      "to": "/docs/iac/concepts/state-and-backends/"
+    },
+    {
+      "label": "Update plans",
+      "to": "/docs/iac/concepts/update-plans/"
+    },
+    {
+      "label": "Compare to...",
+      "to": "/docs/iac/concepts/vs/"
+    },
+    {
+      "label": "Chef & Puppet",
+      "to": "/docs/iac/concepts/vs/chef-puppet-etc/"
+    },
+    {
+      "label": "Cloud SDKs",
+      "to": "/docs/iac/concepts/vs/cloud-sdks/"
+    },
+    {
+      "label": "Cloud Template Transpilers",
+      "to": "/docs/iac/concepts/vs/cloud-template-transpilers/"
+    },
+    {
+      "label": "Pulumi vs AWS Cloud Development Kit (CDK)",
+      "to": "/docs/iac/concepts/vs/cloud-template-transpilers/aws-cdk/"
+    },
+    {
+      "label": "AWS CloudFormation",
+      "to": "/docs/iac/concepts/vs/cloud-templates/cloudformation/"
+    },
+    {
+      "label": "Crossplane",
+      "to": "/docs/iac/concepts/vs/crossplane/"
+    },
+    {
+      "label": "Custom Solutions",
+      "to": "/docs/iac/concepts/vs/custom/"
+    },
+    {
+      "label": "Kubernetes YAML",
+      "to": "/docs/iac/concepts/vs/k8s-yaml-dsls/"
+    },
+    {
+      "label": "OpenTofu",
+      "to": "/docs/iac/concepts/vs/opentofu/"
+    },
+    {
+      "label": "Serverless Framework",
+      "to": "/docs/iac/concepts/vs/serverless/"
+    },
+    {
+      "label": "Terraform",
+      "to": "/docs/iac/concepts/vs/terraform/"
+    },
+    {
+      "label": "OpenTofu vs. Terraform",
+      "to": "/docs/iac/concepts/vs/terraform/opentofu/"
+    },
+    {
+      "label": "Pulumi equivalents",
+      "to": "/docs/iac/concepts/vs/terraform/terminology/"
+    }
+  ],
+  "install": [
+    {
+      "label": "Overview",
+      "to": "/docs/iac/download-install/"
+    },
+    {
+      "label": "Pulumi CLI versions",
+      "to": "/docs/iac/download-install/versions/"
+    }
+  ],
+  "getstarted": [
+    {
+      "label": "Overview",
+      "to": "/docs/iac/get-started/"
+    }
+  ],
+  "clouds": [
+    {
+      "label": "Azure",
+      "to": "/docs/iac/get-started/azure/"
+    },
+    {
+      "label": "Review project",
+      "to": "/docs/iac/get-started/azure/review-project/"
+    },
+    {
+      "label": "Google Cloud",
+      "to": "/docs/iac/get-started/gcp/"
+    },
+    {
+      "label": "Deploy changes",
+      "to": "/docs/iac/get-started/gcp/deploy-changes/"
+    },
+    {
+      "label": "Deploy stack",
+      "to": "/docs/iac/get-started/gcp/deploy-stack/"
+    },
+    {
+      "label": "Destroy stack",
+      "to": "/docs/iac/get-started/gcp/destroy-stack/"
+    },
+    {
+      "label": "Modify program",
+      "to": "/docs/iac/get-started/gcp/modify-program/"
+    },
+    {
+      "label": "Next steps",
+      "to": "/docs/iac/get-started/gcp/next-steps/"
+    },
+    {
+      "label": "Review project",
+      "to": "/docs/iac/get-started/gcp/review-project/"
+    },
+    {
+      "label": "Kubernetes",
+      "to": "/docs/iac/get-started/kubernetes/"
+    },
+    {
+      "label": "Before you begin",
+      "to": "/docs/iac/get-started/kubernetes/begin/"
+    },
+    {
+      "label": "Create project",
+      "to": "/docs/iac/get-started/kubernetes/create-project/"
+    },
+    {
+      "label": "Deploy changes",
+      "to": "/docs/iac/get-started/kubernetes/deploy-changes/"
+    },
+    {
+      "label": "Deploy stack",
+      "to": "/docs/iac/get-started/kubernetes/deploy-stack/"
+    },
+    {
+      "label": "Destroy stack",
+      "to": "/docs/iac/get-started/kubernetes/destroy-stack/"
+    },
+    {
+      "label": "Modify program",
+      "to": "/docs/iac/get-started/kubernetes/modify-program/"
+    },
+    {
+      "label": "Next steps",
+      "to": "/docs/iac/get-started/kubernetes/next-steps/"
+    },
+    {
+      "label": "Review project",
+      "to": "/docs/iac/get-started/kubernetes/review-project/"
+    }
+  ],
+  "languages": [
+    {
+      "label": "Overview",
+      "to": "/docs/iac/languages-sdks/"
+    },
+    {
+      "label": "C#, VB, F# (.NET)",
+      "to": "/docs/iac/languages-sdks/dotnet/"
+    },
+    {
+      "label": "Go",
+      "to": "/docs/iac/languages-sdks/go/"
+    },
+    {
+      "label": "Java",
+      "to": "/docs/iac/languages-sdks/java/"
+    },
+    {
+      "label": "TypeScript (Node.js)",
+      "to": "/docs/iac/languages-sdks/javascript/"
+    },
+    {
+      "label": "Python",
+      "to": "/docs/iac/languages-sdks/python/"
+    },
+    {
+      "label": "Blocking and Async",
+      "to": "/docs/iac/languages-sdks/python/python-blocking-async/"
+    },
+    {
+      "label": "YAML",
+      "to": "/docs/iac/languages-sdks/yaml/"
+    },
+    {
+      "label": "Component Reference",
+      "to": "/docs/iac/languages-sdks/yaml/yaml-component-reference/"
+    },
+    {
+      "label": "Reference",
+      "to": "/docs/iac/languages-sdks/yaml/yaml-language-reference/"
+    }
+  ],
+  "support": [
+    {
+      "label": "Overview",
+      "to": "/docs/iac/support/"
+    },
+    {
+      "label": "FAQ",
+      "to": "/docs/iac/support/faq/"
+    },
+    {
+      "label": "Troubleshooting",
+      "to": "/docs/iac/support/troubleshooting/"
+    }
+  ],
+  "idp": [
+    {
+      "label": "Pulumi IDP",
+      "to": "/docs/idp/"
+    },
+    {
+      "label": "Best Practices",
+      "to": "/docs/idp/best-practices/"
+    },
+    {
+      "label": "Four Factors: Templates, Components, Environments, and Policies",
+      "to": "/docs/idp/best-practices/four-factors/"
+    },
+    {
+      "label": "IDP Patterns",
+      "to": "/docs/idp/best-practices/patterns/"
+    },
+    {
+      "label": "IDP Pattern: Components using other Components",
+      "to": "/docs/idp/best-practices/patterns/components-using-other-components/"
+    },
+    {
+      "label": "IDP Pattern: Composable environments",
+      "to": "/docs/idp/best-practices/patterns/composable-environments/"
+    },
+    {
+      "label": "IDP Pattern: Cost control using Components, Policies, and constrained inputs",
+      "to": "/docs/idp/best-practices/patterns/cost-control-using-components-policies-constrained-inputs/"
+    },
+    {
+      "label": "IDP Pattern: Multiple workloads on shared infrastructure",
+      "to": "/docs/idp/best-practices/patterns/multiple-workloads-shared-infrastructure/"
+    },
+    {
+      "label": "IDP Pattern: One ESC environment per lifecycle stage",
+      "to": "/docs/idp/best-practices/patterns/one-esc-environment-per-lifecycle-stage/"
+    },
+    {
+      "label": "IDP Pattern: One ESC environment per service",
+      "to": "/docs/idp/best-practices/patterns/one-esc-environment-per-service/"
+    },
+    {
+      "label": "IDP Pattern: One ESC environment per team",
+      "to": "/docs/idp/best-practices/patterns/one-esc-environment-per-team/"
+    },
+    {
+      "label": "IDP Pattern: Policies as tests",
+      "to": "/docs/idp/best-practices/patterns/policies-as-tests/"
+    },
+    {
+      "label": "IDP Pattern: Security Updates using Components",
+      "to": "/docs/idp/best-practices/patterns/security-updates-using-components/"
+    },
+    {
+      "label": "IDP Pattern: Validating Component Inputs using Policy functions",
+      "to": "/docs/idp/best-practices/patterns/validating-component-inputs-using-policy-functions/"
+    },
+    {
+      "label": "Get Started",
+      "to": "/docs/idp/get-started/"
+    },
+    {
+      "label": "Before you begin",
+      "to": "/docs/idp/get-started/begin/"
+    },
+    {
+      "label": "Private Registry",
+      "to": "/docs/idp/get-started/private-registry/"
+    },
+    {
+      "label": "Publishing Components from GitHub Actions",
+      "to": "/docs/idp/get-started/publishing-from-github-actions/"
+    },
+    {
+      "label": "Services",
+      "to": "/docs/idp/get-started/services/"
+    },
+    {
+      "label": "Workflows",
+      "to": "/docs/idp/get-started/workflows/"
+    }
+  ],
+  "insights": [
+    {
+      "label": "Pulumi Insights",
+      "to": "/docs/insights/"
+    },
+    {
+      "label": "Accounts",
+      "to": "/docs/insights/accounts/"
+    },
+    {
+      "label": "Pulumi Insights Concepts",
+      "to": "/docs/insights/concepts/"
+    },
+    {
+      "label": "How Pulumi Insights Account Discovery works",
+      "to": "/docs/insights/concepts/how-insights-works/"
+    },
+    {
+      "label": "Data export",
+      "to": "/docs/insights/export/"
+    },
+    {
+      "label": "Get started",
+      "to": "/docs/insights/get-started/"
+    },
+    {
+      "label": "Manage Accounts and Scans",
+      "to": "/docs/insights/get-started/account-management/"
+    },
+    {
+      "label": "Using Insights Policies",
+      "to": "/docs/insights/get-started/add-policies/"
+    },
+    {
+      "label": "Before you begin",
+      "to": "/docs/insights/get-started/begin/"
+    },
+    {
+      "label": "Create an Insights Account",
+      "to": "/docs/insights/get-started/create-accounts/"
+    },
+    {
+      "label": "Using Insights Resource Explorer",
+      "to": "/docs/insights/get-started/using-resource-explorer/"
+    },
+    {
+      "label": "Visual Import",
+      "to": "/docs/insights/import/"
+    },
+    {
+      "label": "Policy as Code",
+      "to": "/docs/insights/policy-as-code/"
+    },
+    {
+      "label": "Resource search",
+      "to": "/docs/insights/search/"
+    }
+  ],
+  "cloud": [
+    {
+      "label": "Pulumi Cloud",
+      "to": "/docs/pulumi-cloud/"
+    },
+    {
+      "label": "Identity & access management",
+      "to": "/docs/pulumi-cloud/access-management/"
+    },
+    {
+      "label": "Access tokens",
+      "to": "/docs/pulumi-cloud/access-management/access-tokens/"
+    },
+    {
+      "label": "Accounts",
+      "to": "/docs/pulumi-cloud/access-management/accounts/"
+    },
+    {
+      "label": "Billing managers",
+      "to": "/docs/pulumi-cloud/access-management/billing-managers/"
+    },
+    {
+      "label": "OpenID client",
+      "to": "/docs/pulumi-cloud/access-management/oidc-client/"
+    },
+    {
+      "label": "Github",
+      "to": "/docs/pulumi-cloud/access-management/oidc-client/github/"
+    },
+    {
+      "label": "AWS EKS",
+      "to": "/docs/pulumi-cloud/access-management/oidc-client/kubernetes-eks/"
+    },
+    {
+      "label": "Google GKE",
+      "to": "/docs/pulumi-cloud/access-management/oidc-client/kubernetes-gke/"
+    },
+    {
+      "label": "RBAC",
+      "to": "/docs/pulumi-cloud/access-management/rbac/"
+    },
+    {
+      "label": "Permissions",
+      "to": "/docs/pulumi-cloud/access-management/rbac/permissions/"
+    },
+    {
+      "label": "Roles",
+      "to": "/docs/pulumi-cloud/access-management/rbac/roles/"
+    },
+    {
+      "label": "Environments",
+      "to": "/docs/pulumi-cloud/access-management/rbac/scopes/environments/"
+    },
+    {
+      "label": "Insights accounts",
+      "to": "/docs/pulumi-cloud/access-management/rbac/scopes/insights-accounts/"
+    },
+    {
+      "label": "Organization settings",
+      "to": "/docs/pulumi-cloud/access-management/rbac/scopes/org-settings/"
+    },
+    {
+      "label": "Stacks",
+      "to": "/docs/pulumi-cloud/access-management/rbac/scopes/stacks/"
+    },
+    {
+      "label": "Scopes",
+      "to": "/docs/pulumi-cloud/access-management/rbac/scopes/"
+    },
+    {
+      "label": "Teams",
+      "to": "/docs/pulumi-cloud/access-management/rbac/teams/"
+    },
+    {
+      "label": "SAML(SSO)",
+      "to": "/docs/pulumi-cloud/access-management/saml/"
+    },
+    {
+      "label": "Auth0",
+      "to": "/docs/pulumi-cloud/access-management/saml/auth0/"
+    },
+    {
+      "label": "Entra ID",
+      "to": "/docs/pulumi-cloud/access-management/saml/entra/"
+    },
+    {
+      "label": "Google Workspace",
+      "to": "/docs/pulumi-cloud/access-management/saml/gsuite/"
+    },
+    {
+      "label": "Okta",
+      "to": "/docs/pulumi-cloud/access-management/saml/okta/"
+    },
+    {
+      "label": "OneLogin",
+      "to": "/docs/pulumi-cloud/access-management/saml/onelogin/"
+    },
+    {
+      "label": "Using SAML",
+      "to": "/docs/pulumi-cloud/access-management/saml/sso/"
+    },
+    {
+      "label": "SCIM",
+      "to": "/docs/pulumi-cloud/access-management/scim/"
+    },
+    {
+      "label": "Entra ID",
+      "to": "/docs/pulumi-cloud/access-management/scim/entra/"
+    },
+    {
+      "label": "FAQ",
+      "to": "/docs/pulumi-cloud/access-management/scim/faq/"
+    },
+    {
+      "label": "Okta",
+      "to": "/docs/pulumi-cloud/access-management/scim/okta/"
+    },
+    {
+      "label": "OneLogin",
+      "to": "/docs/pulumi-cloud/access-management/scim/onelogin/"
+    },
+    {
+      "label": "Stack permissions",
+      "to": "/docs/pulumi-cloud/access-management/stack-permissions/"
+    },
+    {
+      "label": "Administration",
+      "to": "/docs/pulumi-cloud/admin/"
+    },
+    {
+      "label": "Audit Logs",
+      "to": "/docs/pulumi-cloud/admin/audit-logs/"
+    },
+    {
+      "label": "Customer Managed Keys",
+      "to": "/docs/pulumi-cloud/admin/customer-managed-keys/"
+    },
+    {
+      "label": "AWS KMS",
+      "to": "/docs/pulumi-cloud/admin/customer-managed-keys/aws-kms/"
+    },
+    {
+      "label": "Organizations",
+      "to": "/docs/pulumi-cloud/admin/organizations/"
+    },
+    {
+      "label": "Self-hosting",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/"
+    },
+    {
+      "label": "Air-Gapped",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/airgapped/"
+    },
+    {
+      "label": "Changelog",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/changelog/"
+    },
+    {
+      "label": "Components",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/components/"
+    },
+    {
+      "label": "Pulumi API",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/components/api/"
+    },
+    {
+      "label": "Pulumi console",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/components/console/"
+    },
+    {
+      "label": "Pulumi Deployments",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/components/deployments/"
+    },
+    {
+      "label": "OpenSearch cluster",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/components/search/"
+    },
+    {
+      "label": "Deployment options",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/deployment-options/"
+    },
+    {
+      "label": "AKS",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/deployment-options/aks-hosted/"
+    },
+    {
+      "label": "Bring-your-own infra",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/deployment-options/byo-infra-hosted/"
+    },
+    {
+      "label": "ECS",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/deployment-options/ecs-hosted/"
+    },
+    {
+      "label": "EKS",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/deployment-options/eks-hosted/"
+    },
+    {
+      "label": "GKE",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/deployment-options/gke-hosted/"
+    },
+    {
+      "label": "Local-Docker",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/deployment-options/local-docker/"
+    },
+    {
+      "label": "Docker Compose",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/deployment-options/quickstart-docker-compose/"
+    },
+    {
+      "label": "Network reqs",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/network/"
+    },
+    {
+      "label": "SAML SSO",
+      "to": "/docs/pulumi-cloud/admin/self-hosted/saml-sso/"
+    },
+    {
+      "label": "Pulumi Copilot",
+      "to": "/docs/pulumi-cloud/copilot/"
+    },
+    {
+      "label": "Deployments",
+      "to": "/docs/pulumi-cloud/deployments/"
+    },
+    {
+      "label": "CI/CD assistant",
+      "to": "/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/"
+    },
+    {
+      "label": "Cloud Credentials",
+      "to": "/docs/pulumi-cloud/deployments/cloud-credentials/"
+    },
+    {
+      "label": "Customer-managed agents",
+      "to": "/docs/pulumi-cloud/deployments/customer-managed-agents/"
+    },
+    {
+      "label": "Drift detection",
+      "to": "/docs/pulumi-cloud/deployments/drift/"
+    },
+    {
+      "label": "Get Started Guides",
+      "to": "/docs/pulumi-cloud/deployments/get-started/"
+    },
+    {
+      "label": "Pulumi and GitHub CLIs",
+      "to": "/docs/pulumi-cloud/deployments/get-started/deployments-using-cli/"
+    },
+    {
+      "label": "New Project Wizard",
+      "to": "/docs/pulumi-cloud/deployments/get-started/deployments-using-new-project-wizard/"
+    },
+    {
+      "label": "OIDC Setup",
+      "to": "/docs/pulumi-cloud/deployments/oidc/"
+    },
+    {
+      "label": "AWS",
+      "to": "/docs/pulumi-cloud/deployments/oidc/aws/"
+    },
+    {
+      "label": "Azure",
+      "to": "/docs/pulumi-cloud/deployments/oidc/azure/"
+    },
+    {
+      "label": "Google Cloud",
+      "to": "/docs/pulumi-cloud/deployments/oidc/gcp/"
+    },
+    {
+      "label": "Deployment Permissions",
+      "to": "/docs/pulumi-cloud/deployments/permissions/"
+    },
+    {
+      "label": "Review stacks",
+      "to": "/docs/pulumi-cloud/deployments/review-stacks/"
+    },
+    {
+      "label": "Schedules",
+      "to": "/docs/pulumi-cloud/deployments/schedules/"
+    },
+    {
+      "label": "Security and operations",
+      "to": "/docs/pulumi-cloud/deployments/security-and-operations/"
+    },
+    {
+      "label": "Time-to-live stacks",
+      "to": "/docs/pulumi-cloud/deployments/ttl/"
+    },
+    {
+      "label": "Using Deployments",
+      "to": "/docs/pulumi-cloud/deployments/using/"
+    },
+    {
+      "label": "Post-Deployment Automation",
+      "to": "/docs/pulumi-cloud/deployments/using/post-automation/"
+    },
+    {
+      "label": "Private Git Repositories",
+      "to": "/docs/pulumi-cloud/deployments/using/private-repositories/"
+    },
+    {
+      "label": "Deployments Settings",
+      "to": "/docs/pulumi-cloud/deployments/using/settings/"
+    },
+    {
+      "label": "Deployment Triggers",
+      "to": "/docs/pulumi-cloud/deployments/using/triggers/"
+    },
+    {
+      "label": "Vs. Traditional CI/CD",
+      "to": "/docs/pulumi-cloud/deployments/versus/"
+    },
+    {
+      "label": "Developer Platforms",
+      "to": "/docs/pulumi-cloud/developer-platforms/"
+    },
+    {
+      "label": "Pulumi Backstage plugin",
+      "to": "/docs/pulumi-cloud/developer-platforms/backstage/"
+    },
+    {
+      "label": "New Project Wizard",
+      "to": "/docs/pulumi-cloud/developer-platforms/new-project-wizard/"
+    },
+    {
+      "label": "Organization templates",
+      "to": "/docs/pulumi-cloud/developer-platforms/templates/"
+    },
+    {
+      "label": "FAQ",
+      "to": "/docs/pulumi-cloud/faq/"
+    },
+    {
+      "label": "Get started",
+      "to": "/docs/pulumi-cloud/get-started/"
+    },
+    {
+      "label": "Onboarding guide",
+      "to": "/docs/pulumi-cloud/get-started/onboarding-guide/"
+    },
+    {
+      "label": "Select the right model",
+      "to": "/docs/pulumi-cloud/get-started/onboarding-guide/choose-subscription/"
+    },
+    {
+      "label": "Migrating to Pulumi",
+      "to": "/docs/pulumi-cloud/get-started/onboarding-guide/migrating-to-pulumi/"
+    },
+    {
+      "label": "Setting up for success",
+      "to": "/docs/pulumi-cloud/get-started/onboarding-guide/setting-up-for-success/"
+    },
+    {
+      "label": "Ways of working",
+      "to": "/docs/pulumi-cloud/get-started/onboarding-guide/ways-of-working/"
+    },
+    {
+      "label": "What is it?",
+      "to": "/docs/pulumi-cloud/get-started/what-is-it/"
+    },
+    {
+      "label": "Projects & stacks",
+      "to": "/docs/pulumi-cloud/projects-and-stacks/"
+    },
+    {
+      "label": "Deploy with Pulumi button",
+      "to": "/docs/pulumi-cloud/pulumi-button/"
+    },
+    {
+      "label": "Pulumi Cloud REST API",
+      "to": "/docs/pulumi-cloud/reference/"
+    },
+    {
+      "label": "API Basics",
+      "to": "/docs/pulumi-cloud/reference/api-basics/"
+    },
+    {
+      "label": "Audit Logs",
+      "to": "/docs/pulumi-cloud/reference/audit-logs/"
+    },
+    {
+      "label": "Copilot",
+      "to": "/docs/pulumi-cloud/reference/copilot/"
+    },
+    {
+      "label": "Data Export",
+      "to": "/docs/pulumi-cloud/reference/data-export/"
+    },
+    {
+      "label": "Deployment Runners",
+      "to": "/docs/pulumi-cloud/reference/deployment-runners/"
+    },
+    {
+      "label": "Deployments",
+      "to": "/docs/pulumi-cloud/reference/deployments/"
+    },
+    {
+      "label": "Environments",
+      "to": "/docs/pulumi-cloud/reference/environments/"
+    },
+    {
+      "label": "Insights Accounts",
+      "to": "/docs/pulumi-cloud/reference/insight-accounts/"
+    },
+    {
+      "label": "OAuth Token Exchange",
+      "to": "/docs/pulumi-cloud/reference/oauth-token-exchange/"
+    },
+    {
+      "label": "OIDC Issuers",
+      "to": "/docs/pulumi-cloud/reference/oidc-issuers/"
+    },
+    {
+      "label": "Organizations",
+      "to": "/docs/pulumi-cloud/reference/organizations/"
+    },
+    {
+      "label": "Personal Access Tokens",
+      "to": "/docs/pulumi-cloud/reference/personal-access-tokens/"
+    },
+    {
+      "label": "Policy Groups",
+      "to": "/docs/pulumi-cloud/reference/policy-groups/"
+    },
+    {
+      "label": "Policy Packs",
+      "to": "/docs/pulumi-cloud/reference/policy-packs/"
+    },
+    {
+      "label": "Policy Results",
+      "to": "/docs/pulumi-cloud/reference/policy-results/"
+    },
+    {
+      "label": "Registry",
+      "to": "/docs/pulumi-cloud/reference/registry/"
+    },
+    {
+      "label": "Resource Search",
+      "to": "/docs/pulumi-cloud/reference/resource-search/"
+    },
+    {
+      "label": "Resources Under Management",
+      "to": "/docs/pulumi-cloud/reference/resources-under-management/"
+    },
+    {
+      "label": "Schedules",
+      "to": "/docs/pulumi-cloud/reference/schedules/"
+    },
+    {
+      "label": "Services",
+      "to": "/docs/pulumi-cloud/reference/services/"
+    },
+    {
+      "label": "Stack Config",
+      "to": "/docs/pulumi-cloud/reference/stack-config/"
+    },
+    {
+      "label": "Stack Policy",
+      "to": "/docs/pulumi-cloud/reference/stack-policy/"
+    },
+    {
+      "label": "Stack Tags",
+      "to": "/docs/pulumi-cloud/reference/stack-tags/"
+    },
+    {
+      "label": "Stack Updates",
+      "to": "/docs/pulumi-cloud/reference/stack-updates/"
+    },
+    {
+      "label": "Stacks",
+      "to": "/docs/pulumi-cloud/reference/stacks/"
+    },
+    {
+      "label": "Webhooks",
+      "to": "/docs/pulumi-cloud/webhooks/"
+    }
+  ],
+  "pulumicloud": [
+    {
+      "label": "Elastic Kubernetes Service (EKS) | OIDC",
+      "to": "/docs/pulumi-cloud/access-management/oidc-client/kubernetes-eks/"
+    }
+  ]
+}
