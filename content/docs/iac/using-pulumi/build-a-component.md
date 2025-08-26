@@ -52,7 +52,7 @@ A Pulumi Component consists of three main parts:
 
 In this example, we'll create a static website component in AWS Simple Storage Service (S3). The component will manage the following five sub-resources necessary to implement a basic S3 hosted static website:
 
-- a [`BucketV2`](/registry/packages/aws/api-docs/s3/bucketv2/) resource
+- a [`Bucket`](/registry/packages/aws/api-docs/s3/bucket/) resource
 - a [`BucketWebsiteConfigurationV2`](/registry/packages/aws/api-docs/s3/bucketwebsiteconfigurationv2/) resource to set up the website configuration
 - a [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) resource to hold the raw site content
 - a [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/) resource to manage public access
@@ -602,7 +602,7 @@ import com.pulumi.aws.s3.BucketPolicy;
 import com.pulumi.aws.s3.BucketPolicyArgs;
 import com.pulumi.aws.s3.BucketPublicAccessBlock;
 import com.pulumi.aws.s3.BucketPublicAccessBlockArgs;
-import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.Bucket;
 import com.pulumi.aws.s3.BucketWebsiteConfigurationV2;
 import com.pulumi.aws.s3.BucketWebsiteConfigurationV2Args;
 import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationV2IndexDocumentArgs;
@@ -773,7 +773,7 @@ export class StaticPage extends pulumi.ComponentResource {
         super("static-page-component:index:StaticPage", name, args, opts);
 
         // Create a bucket
-        const bucket = new aws.s3.BucketV2(`${name}-bucket`, {}, { parent: this });
+        const bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
 
         // Configure the bucket website
         const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2(`${name}-website`, {
@@ -850,7 +850,7 @@ class StaticPage(pulumi.ComponentResource):
         super().__init__('static-page-component:index:StaticPage', name, {}, opts)
 
         # Create a bucket
-        bucket = s3.BucketV2(
+        bucket = s3.Bucket(
             f'{name}-bucket',
             opts=ResourceOptions(parent=self))
 
@@ -931,7 +931,7 @@ func NewStaticPage(ctx *pulumi.Context, name string, args *StaticPageArgs, opts 
 	}
 
 	// Create a bucket
-	bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketV2Args{},
+	bucket, err := s3.NewBucket(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketArgs{},
 		pulumi.Parent(comp))
 	if err != nil {
 		return nil, err
@@ -1025,7 +1025,7 @@ class StaticPage : ComponentResource {
         : base("static-page-component:index:StaticPage", name, args, opts)
     {
         // Create a bucket
-        var bucket = new BucketV2($"{name}-bucket", new() { }, new() { Parent = this });
+        var bucket = new Bucket($"{name}-bucket", new() { }, new() { Parent = this });
 
         // Configure the bucket website
         var bucketWebsite = new BucketWebsiteConfigurationV2($"{name}-website", new() {
@@ -1098,7 +1098,7 @@ class StaticPage extends ComponentResource {
         super("static-page-component:index:StaticPage", name, null, opts);
 
         // Create a bucket
-        var bucket = new BucketV2(
+        var bucket = new Bucket(
                 String.format("%s-bucket", name),
                 null,
                 CustomResourceOptions.builder()
@@ -1216,7 +1216,7 @@ components:
         type: string
     resources:
       bucket:
-        type: aws:s3/bucketV2:BucketV2
+        type: aws:s3:Bucket
         properties: {}
 
       bucketWebsite:
@@ -1325,12 +1325,12 @@ Since we're inheriting, we also need to call the base class constructor `super(.
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```typescript
 // ...
         // Create a bucket
-        const bucket = new aws.s3.BucketV2(`${name}-bucket`, {}, { parent: this });
+        const bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
 
         // Configure the bucket website
         const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2(`${name}-website`, {
@@ -1362,17 +1362,17 @@ Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`
 
 ##### The Bucket sub-resource
 
-The `BucketV2` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
+The `Bucket` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
 
 Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources.
 
-Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new instance of `ResourceOptions` and pass the component instance as the `parent` of the `BucketV2` resource, via `parent: this` in the `ResourceOptions` class. This is an essential step to tie the sub-resources into the dependency graph.
+Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new instance of `ResourceOptions` and pass the component instance as the `parent` of the `Bucket` resource, via `parent: this` in the `ResourceOptions` class. This is an essential step to tie the sub-resources into the dependency graph.
 
 ##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
 
 The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
-Notice that this time we pass the `BucketV2` instance in as the `parent` to the `ResourceOptions` instances for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `BucketV2` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
+Notice that this time we pass the `Bucket` instance in as the `parent` to the `ResourceOptions` instances for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -1481,12 +1481,12 @@ Since we're inheriting, we also need to call the base class constructor `super()
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```python
 # ...
         # Create a bucket
-        bucket = s3.BucketV2(
+        bucket = s3.Bucket(
             f'{name}-bucket',
             opts=ResourceOptions(parent=self))
 
@@ -1524,17 +1524,17 @@ Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`
 
 ##### The Bucket sub-resource
 
-The `BucketV2` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
+The `Bucket` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
 
 Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources.
 
-Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new instance of `ResourceOptions` and pass the component instance as the `parent` of the `BucketV2` resource, via `parent=self` in the `ResourceOptions` class. This is an essential step to tie the sub-resources into the dependency graph.
+Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new instance of `ResourceOptions` and pass the component instance as the `parent` of the `Bucket` resource, via `parent=self` in the `ResourceOptions` class. This is an essential step to tie the sub-resources into the dependency graph.
 
 ##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
 
 The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
-Notice that this time we pass the `BucketV2` instance in as the `parent` to the `ResourceOptions` instances for these sub-resources, as opposed to `self` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `BucketV2` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
+Notice that this time we pass the `Bucket` instance in as the `parent` to the `ResourceOptions` instances for these sub-resources, as opposed to `self` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -1647,12 +1647,12 @@ The next step is to register our new component instance with Pulumi via the `ctx
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```go
 // ...
 	// Create a bucket
-	bucket, err := s3.NewBucketV2(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketV2Args{},
+	bucket, err := s3.NewBucket(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketArgs{},
 		pulumi.Parent(comp))
 	if err != nil {
 		return nil, err
@@ -1726,17 +1726,17 @@ Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`
 
 ##### The Bucket sub-resource
 
-The `BucketV2` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
+The `Bucket` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
 
 Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources.
 
-Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We use `pulumi.Parent(comp)` to pass the component instance as the `parent` of the `BucketV2` resource. This is an essential step to tie the sub-resources into the dependency graph.
+Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We use `pulumi.Parent(comp)` to pass the component instance as the `parent` of the `Bucket` resource. This is an essential step to tie the sub-resources into the dependency graph.
 
 ##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
 
 The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
-Notice that this time we pass the `BucketV2` instance as the parent of these sub-resources, via `pulumi.Parent(bucket)`, as opposed to `comp` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `BucketV2` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
+Notice that this time we pass the `Bucket` instance as the parent of these sub-resources, via `pulumi.Parent(bucket)`, as opposed to `comp` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -1844,12 +1844,12 @@ Since we're inheriting, we also need to call the base class constructor `base(..
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```csharp
 // ...
         // Create a bucket
-        var bucket = new BucketV2($"{name}-bucket", new() { }, new() { Parent = this });
+        var bucket = new Bucket($"{name}-bucket", new() { }, new() { Parent = this });
 
         // Configure the bucket website
         var bucketWebsite = new BucketWebsiteConfigurationV2($"{name}-website", new() {
@@ -1881,17 +1881,17 @@ Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`
 
 ##### The Bucket sub-resource
 
-The `BucketV2` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
+The `Bucket` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
 
 Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources.
 
-Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new object and pass the component instance as the `Parent` of the `BucketV2` resource, via `Parent = this` in the `opts` object. This is an essential step to tie the sub-resources into the dependency graph.
+Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new object and pass the component instance as the `Parent` of the `Bucket` resource, via `Parent = this` in the `opts` object. This is an essential step to tie the sub-resources into the dependency graph.
 
 ##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
 
 The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
-Notice that this time we pass the `BucketV2` instance in as the `Parent` in the `opts` for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `BucketV2` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
+Notice that this time we pass the `Bucket` instance in as the `Parent` in the `opts` for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -2002,12 +2002,12 @@ Since we're inheriting, we also need to call the base class constructor `super(.
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```java
 // ...
         // Create a bucket
-        var bucket = new BucketV2(
+        var bucket = new Bucket(
                 String.format("%s-bucket", name),
                 null,
                 CustomResourceOptions.builder()
@@ -2069,17 +2069,17 @@ Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`
 
 ##### The Bucket sub-resource
 
-The `BucketV2` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
+The `Bucket` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
 
 Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources.
 
-Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new object and pass the component instance as the `parent` of the `BucketV2` resource, via `parent(this)` in the `opts` object. This is an essential step to tie the sub-resources into the dependency graph.
+Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new object and pass the component instance as the `parent` of the `Bucket` resource, via `parent(this)` in the `opts` object. This is an essential step to tie the sub-resources into the dependency graph.
 
 ##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
 
 The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
-Notice that this time we pass the `BucketV2` instance in as the `parent` in the `opts` for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `BucketV2` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
+Notice that this time we pass the `Bucket` instance in as the `parent` in the `opts` for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -2186,13 +2186,13 @@ The `outputs` section defines the outputs that will be shared to the consumer of
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources. Defining sub-resources in a YAML component works exactly the same as defining them in a YAML Pulumi program.
+Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources. Defining sub-resources in a YAML component works exactly the same as defining them in a YAML Pulumi program.
 
 ```yaml
 # ...
     resources:
       bucket:
-        type: aws:s3/bucketV2:BucketV2
+        type: aws:s3:Bucket
         properties: {}
 
       bucketWebsite:
@@ -2245,17 +2245,17 @@ Next we implement the `BucketV2`, `BucketWebsiteConfigurationV2`, `BucketObject`
 
 ##### The Bucket sub-resource
 
-The `BucketV2` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
+The `Bucket` resource represents an S3 bucket, which is similar to a directory. This is our public-facing entry point for hosting website content on the internet.
 
 <!-- Notice the use of the `name` parameter and format string to create a unique name for the bucket resource. Every resource must have a unique name. We will use the same pattern in all the sub-resources. -->
 
-Another important implementation detail here is the `options` section. By default the component instance will be set as the `parent` of the `BucketV2` resource, so there's no need to define that on this object.
+Another important implementation detail here is the `options` section. By default the component instance will be set as the `parent` of the `Bucket` resource, so there's no need to define that on this object.
 
 ##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
 
 The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
-Notice that this time we pass the `BucketV2` instance in as the `parent` in the `options` for these sub-resources. This is an essential step to tie the sub-resources into the dependency graph. That creates a resource relationship graph like: `StaticPage` -> `BucketV2` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
+Notice that this time we pass the `Bucket` instance in as the `parent` in the `options` for these sub-resources. This is an essential step to tie the sub-resources into the dependency graph. That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
@@ -2956,7 +2956,7 @@ $ pulumi up
      Type                                          Name                                Status
  +   pulumi:pulumi:Stack                           use-static-page-component-dev       created (8s)
  +   └─ static-page-component:index:StaticPage     my-static-page                      created (5s)
- +      └─ aws:s3:BucketV2                         my-static-page-bucket               created (2s)
+ +      └─ aws:s3:Bucket                         my-static-page-bucket               created (2s)
  +         ├─ aws:s3:BucketPublicAccessBlock       my-static-page-public-access-block  created (0.84s)
  +         ├─ aws:s3:BucketWebsiteConfigurationV2  my-static-page-website              created (0.91s)
  +         ├─ aws:s3:BucketObject                  my-static-page-index-object         created (0.84s)
