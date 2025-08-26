@@ -24,7 +24,7 @@ This page details how to use [CircleCI](https://circleci.com/) to deploy Pulumi 
 You can refer to [CircleCI's documentation](https://circleci.com/docs/2.0/config-intro/#section=configuration)
 for information on how to configure your CircleCI jobs and workflows.
 
-When it comes to integrating Pulumi, just like Like other CI/CD services, it is generally a matter
+When it comes to integrating Pulumi, just like other CI/CD services, it is generally a matter
 of downloading the Pulumi command-line tool and running `pulumi up` from within the CircleCI
 environment. However, [Pulumi Orbs for CircleCI](https://circleci.com/orbs/registry/orb/pulumi/pulumi)
 enable a standard way to do this integration, without needing any custom scripting.
