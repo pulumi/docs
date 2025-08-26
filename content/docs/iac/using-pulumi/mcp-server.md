@@ -32,7 +32,7 @@ This enables a more intuitive, conversational approach to infrastructure develop
 The Pulumi MCP server works with various AI-powered development tools:
 
 - **[Cursor](https://cursor.sh/)** - AI-first code editor
-- **[Anthropic's Claude Code](https://claude.ai/code)** - AI assistant for coding
+- **[Anthropic's Claude](https://claude.ai/code)** - AI assistant for coding
 - **[GitHub Copilot](https://github.com/features/copilot)** - AI pair programmer
 - **[Windsurf](https://codeium.com/windsurf)** - AI development environment
 - **[Devin](https://app.devin.ai/)** - The AI
@@ -53,9 +53,13 @@ npx @pulumi/mcp-server
 
 ## Configuration
 
-### Cursor setup
+### Cursor
 
-To configure the Pulumi MCP server with Cursor, create a `mcp.json` file in the `.cursor` directory at your project root:
+Add the Pulumi MCP server to Cursor by clicking the following button:
+
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=pulumi&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoibnB4IEBwdWx1bWkvbWNwLXNlcnZlciJ9)
+
+Alternatively, create a `mcp.json` file in the `.cursor` directory at your project root:
 
 ```json
 {
@@ -76,9 +80,17 @@ After creating the configuration file:
 3. Navigate to the MCP section to verify the connection status
 4. The Pulumi MCP server should appear as connected
 
-### Claude Code setup
+### Claude Code
 
-For Claude Code, add the MCP server configuration to your Claude configuration file:
+Add the Pulumi MCP server to Claude Code by running the following command:
+
+```bash
+$ claude mcp add -s user pulumi -- npx @pulumi/mcp-server@latest stdio
+```
+
+### Claude Desktop
+
+For Claude Desktop, add the MCP server to your Claude configuration file:
 
 **On macOS/Linux:**
 Add to `~/.config/claude/mcp_servers.json`:
@@ -112,7 +124,7 @@ After adding the configuration:
 2. Verify the connection in the MCP section of Claude's settings
 3. The Pulumi MCP server should appear as an available tool
 
-### GitHub Copilot setup
+### GitHub Copilot
 
 GitHub Copilot's MCP support is available through compatible editors. Configure in your editor's MCP settings:
 
@@ -134,7 +146,7 @@ Add to your VS Code settings.json:
 **Other editors:**
 Refer to your editor's specific MCP integration documentation for configuration details.
 
-### Windsurf setup
+### Windsurf
 
 In Windsurf, configure the MCP server through the IDE settings:
 
@@ -151,7 +163,7 @@ In Windsurf, configure the MCP server through the IDE settings:
 }
 ```
 
-### Devin setup
+### Devin
 
 To configure the Pulumi MCP server for Devin:
 

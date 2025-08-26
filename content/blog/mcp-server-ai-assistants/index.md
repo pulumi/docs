@@ -27,25 +27,17 @@ Several AI coding assistants like GitHub Copilot, Anthropic's Claude Code, Winds
 
 ## Setting up the Pulumi MCP Integration in Cursor
 
-Before diving in, you typically need to configure your AI assistant to communicate with the Pulumi MCP server. In Cursor, you create a configuration file named `mcp.json` within the `.cursor` directory in your project's root.
+Before diving in, you typically need to configure your AI assistant to communicate with the Pulumi MCP server. For Cursor, you can do so by visiting the following link:
 
-```json
-{
-    "mcpServers": {
-        "pulumi": {
-            "type": "stdio",
-            "command": "npx",
-            "args": ["@pulumi/mcp-server"]
-        }
-    }
-}
-```
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=pulumi&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoibnB4IEBwdWx1bWkvbWNwLXNlcnZlciJ9)
 
-3. Validating the connection within the assistant's settings (e.g., Cursor has a dedicated section to check the MCP connection status).
+Once set up, validate the connection within the assistant's settings to ensure that the server is properly working. Cursor has a dedicated section to check the MCP connection status:
 
-    ![Cursor MCP Settings](cursor-mcp-settings.png)
+![Cursor MCP Settings](cursor-mcp-settings.png)
 
-Once configured, the AI assistant can leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
+The assistant can now leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
+
+For help on setting up the MCP server with other IDEs such as Claude Code and Windsurf, see the [Pulumi MCP](https://www.pulumi.com/docs/iac/using-pulumi/mcp-server/) docs.
 
 ## The Goal: Provisioning an AKS Cluster
 
