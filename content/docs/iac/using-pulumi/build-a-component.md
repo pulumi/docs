@@ -124,6 +124,8 @@ This name will be important later on in the component implementation, so make su
 ***Example:** `PulumiPlugin.yaml` for TypeScript*
 
 ```yaml
+name: static-page-component
+version: 0.1.0
 runtime: nodejs
 ```
 
@@ -138,12 +140,12 @@ Next, we need to define our dependencies in `package.json`.
     "name": "static-page-component",
     "description": "Static Page Component",
     "dependencies": {
-        "@pulumi/aws": "6.73.0",
+        "@pulumi/aws": "^7.6.0",
         "@pulumi/pulumi": "^3.159.0"
     },
     "devDependencies": {
-        "@types/node": "^18.0.0",
-        "typescript": "^4.6.0"
+        "@types/node": "^22.0.0",
+        "typescript": "^5.9.2"
     }
 }
 ```
@@ -182,6 +184,16 @@ Finally, install dependencies via NPM:
 $ npm install
 ```
 
+#### Build the component
+
+Once dependencies are installed, build the TypeScript component:
+
+```bash
+$ npx tsc
+```
+
+This compiles the TypeScript files and generates the JavaScript output in the `bin` directory.
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -189,6 +201,8 @@ $ npm install
 ***Example:** `PulumiPlugin.yaml` for Python*
 
 ```yaml
+name: static-page-component
+version: 0.1.0
 runtime: python
 ```
 
@@ -198,9 +212,9 @@ Next, we need to define our dependencies in `requirements.txt`.
 
 ***Example:** `requirements.txt` for a Pulumi Component*
 
-```toml
+```txt
 pulumi>=3.159.0,<4.0
-pulumi_aws>=6.0.0
+pulumi_aws>=7.6.0
 ```
 
 The `pulumi` SDK contains everything we need for making a component. The `pulumi_aws` package is the AWS provider that we are building on top of.
@@ -211,6 +225,8 @@ The `pulumi` SDK contains everything we need for making a component. The `pulumi
 ***Example:** `PulumiPlugin.yaml` for Go*
 
 ```yaml
+name: static-page-component
+version: 0.1.0
 runtime: go
 ```
 
@@ -223,14 +239,11 @@ Next, we need to define our dependencies in `go.mod`.
 ```go
 module github.com/static-page-component
 
-go 1.24
-
-toolchain go1.24.1
+go 1.25
 
 require (
-	github.com/pulumi/pulumi-aws/sdk/v6 v6.74.0
-	github.com/pulumi/pulumi-go-provider v1.0.0
-	github.com/pulumi/pulumi/sdk/v3 v3.159.0
+	github.com/pulumi/pulumi-aws/sdk/v7 v7.6.0
+	github.com/pulumi/pulumi/sdk/v3 v3.185.0
 )
 ```
 
@@ -243,6 +256,8 @@ The `pulumi` SDK contains everything we need for making a component. The `pulumi
 ***Example:** `PulumiPlugin.yaml` for C#*
 
 ```yaml
+name: static-page-component
+version: 0.1.0
 runtime: dotnet
 ```
 
@@ -263,8 +278,8 @@ Next, we need to define our dependencies in `StaticPageComponent.csproj`.
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pulumi" Version="3.87.0" />
-    <PackageReference Include="Pulumi.AWS" Version="7.5.0" />
+    <PackageReference Include="Pulumi" Version="3.159.0" />
+    <PackageReference Include="Pulumi.AWS" Version="7.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.*" />
   </ItemGroup>
 </Project>
@@ -281,6 +296,8 @@ Note that the `AssemblyName` specifies the name of the component package. This n
 ***Example:** `PulumiPlugin.yaml` for Java*
 
 ```yaml
+name: static-page-component
+version: 0.1.0
 runtime: java
 ```
 
@@ -315,22 +332,22 @@ Next, we need to define our dependencies and project configuration in a Maven `p
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-nop</artifactId>
-      <version>1.7.36</version>
+      <version>2.0.17</version>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
-      <version>2.8.9</version>
+      <version>2.13.1</version>
     </dependency>
     <dependency>
       <groupId>com.pulumi</groupId>
       <artifactId>pulumi</artifactId>
-      <version>[1.8,)</version>
+      <version>1.16.1</version>
     </dependency>
     <dependency>
       <groupId>com.pulumi</groupId>
       <artifactId>aws</artifactId>
-      <version>(6.0.2,6.99]</version>
+      <version>7.6.0</version>
     </dependency>
   </dependencies>
 
@@ -475,7 +492,6 @@ First, create the `src/main/java/staticpagecomponent` sub-directory and in it, c
 package staticpagecomponent;
 
 import java.io.IOException;
-import com.pulumi.provider.internal.Metadata;
 import com.pulumi.provider.internal.ComponentProviderHost;
 
 public class App {
@@ -544,18 +560,18 @@ from pulumi_aws import s3
 
 {{% choosable language go %}}
 
-First create a file called `staticpage.go`, and add the imports we will need:
+First create a directory called `staticpagecomponent` and create a file called `staticpage.go` inside it. This will be our importable Go package:
 
-***Example:** `staticpage.go` required dependencies*
+***Example:** `staticpagecomponent/staticpage.go` required dependencies*
 
 ```go
-package main
+package staticpagecomponent
 
 import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 ```
@@ -592,10 +608,6 @@ package staticpagecomponent;
 
 import java.util.Map;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-
 import com.pulumi.aws.s3.BucketObject;
 import com.pulumi.aws.s3.BucketObjectArgs;
 import com.pulumi.aws.s3.BucketPolicy;
@@ -608,6 +620,7 @@ import com.pulumi.aws.s3.BucketWebsiteConfigurationArgs;
 import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationIndexDocumentArgs;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.Either;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
 
@@ -670,7 +683,7 @@ Python class properties are typically written in lowercase with words separated 
 {{% choosable language go %}}
 ***Example:** `staticpage.go` the Component arguments implmentation*
 
-```python
+```go
 type StaticPageArgs struct {
 	IndexContent pulumi.StringInput `pulumi:"indexContent"`
 }
@@ -1138,18 +1151,35 @@ class StaticPage extends ComponentResource {
                 BucketPublicAccessBlockArgs.builder()
                         .bucket(bucket.id())
                         .blockPublicAcls(false)
+                        .blockPublicPolicy(false)
+                        .ignorePublicAcls(false)
+                        .restrictPublicBuckets(false)
                         .build(),
                 CustomResourceOptions.builder()
                         .parent(bucket)
                         .build());
 
         // Set the access policy for the bucket so all objects are readable
+        var policyJson = bucket.arn().applyValue(bucketArn -> 
+            "{\n" +
+            "  \"Version\": \"2012-10-17\",\n" +
+            "  \"Statement\": [\n" +
+            "    {\n" +
+            "      \"Sid\": \"PublicReadGetObject\",\n" +
+            "      \"Effect\": \"Allow\",\n" +
+            "      \"Principal\": \"*\",\n" +
+            "      \"Action\": \"s3:GetObject\",\n" +
+            "      \"Resource\": \"" + bucketArn + "/*\"\n" +
+            "    }\n" +
+            "  ]\n" +
+            "}"
+        );
+
         var bucketPolicy = new BucketPolicy(
                 String.format("%s-bucket-policy", name),
                 BucketPolicyArgs.builder()
                         .bucket(bucket.id())
-                        .policy(bucket.bucket().applyValue(
-                                bucketName -> this.allowGetObjectPolicy(bucketName)))
+                        .policy(policyJson.applyValue(Either::ofLeft))
                         .build(),
                 CustomResourceOptions.builder()
                         .parent(bucket)
@@ -1165,25 +1195,6 @@ class StaticPage extends ComponentResource {
                 "endpoint", bucketWebsite.websiteEndpoint()));
     }
 
-    private String allowGetObjectPolicy(String bucketName) {
-        var policyDoc = new JsonObject();
-        var statementArray = new JsonArray();
-        var statement = new JsonObject();
-        var actionArray = new JsonArray();
-        var resourceArray = new JsonArray();
-
-        policyDoc.addProperty("Version", "2012-10-17");
-        policyDoc.add("Statement", statementArray);
-        statementArray.add(statement);
-        statement.addProperty("Effect", "Allow");
-        statement.addProperty("Principal", "*");
-        statement.add("Action", actionArray);
-        actionArray.add("s3:GetObject");
-        statement.add("Resource", resourceArray);
-        resourceArray.add(String.format("arn:aws:s3:::%s/*", bucketName));
-
-        return new Gson().toJson(policyDoc);
-    }
 }
 ```
 
@@ -1220,7 +1231,7 @@ components:
         properties: {}
 
       bucketWebsite:
-        type: aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfiguration
+        type: aws:s3:BucketWebsiteConfiguration
         properties:
           bucket: ${bucket.bucket}
           indexDocument:
@@ -1243,6 +1254,9 @@ components:
         properties:
           bucket: ${bucket.id}
           blockPublicAcls: false
+          blockPublicPolicy: false
+          ignorePublicAcls: false
+          restrictPublicBuckets: false
         options:
           parent: ${bucket}
 
@@ -2047,18 +2061,35 @@ Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `B
                 BucketPublicAccessBlockArgs.builder()
                         .bucket(bucket.id())
                         .blockPublicAcls(false)
+                        .blockPublicPolicy(false)
+                        .ignorePublicAcls(false)
+                        .restrictPublicBuckets(false)
                         .build(),
                 CustomResourceOptions.builder()
                         .parent(bucket)
                         .build());
 
         // Set the access policy for the bucket so all objects are readable
+        var policyDocument = bucket.arn().applyValue(bucketArn -> 
+            IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+                .statements(GetPolicyDocumentStatementArgs.builder()
+                    .sid("PublicReadGetObject")
+                    .effect("Allow")
+                    .principals(GetPolicyDocumentStatementPrincipalArgs.builder()
+                        .type("*")
+                        .identifiers("*")
+                        .build())
+                    .actions("s3:GetObject")
+                    .resources(bucketArn + "/*")
+                    .build())
+                .build())
+        );
+
         var bucketPolicy = new BucketPolicy(
                 String.format("%s-bucket-policy", name),
                 BucketPolicyArgs.builder()
                         .bucket(bucket.id())
-                        .policy(bucket.bucket().applyValue(
-                                bucketName -> this.allowGetObjectPolicy(bucketName)))
+                        .policy(policyDocument.applyValue(doc -> doc.json()))
                         .build(),
                 CustomResourceOptions.builder()
                         .parent(bucket)
@@ -2089,7 +2120,7 @@ Another point of interest here is the use of `args`. In the `BucketObject` const
 
 By default the `BucketObject` we created is not accessible to the public, so we need to unlock that access with the `BucketPublicAccessBlock` and `BucketPolicy` resources.
 
-The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use `bucket.bucket.applyValue(...)` to generate an S3 policy document using the `allowGetObjectPolicy` helper function. This respects the asynchronous workflow, materializing that value only after the bucket has been created. If we attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 policy document needs to use the bucket's name within its definition, and we won't know what that value is until the Bucket creation operation has completed. Using `applyValue` here will ensure that execution of the `allowGetObjectPolicy` function doesn't happen until the bucket has been created successfully.
+The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use `bucket.arn().applyValue(...)` to generate an S3 policy document. This respects the asynchronous workflow, materializing that value only after the bucket has been created. If we attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 policy document needs to use the bucket's ARN within its definition, and we won't know what that value is until the Bucket creation operation has completed. Using `applyValue` here will ensure that the policy creation doesn't happen until the bucket has been created successfully.
 
 Just like in a Pulumi program, it's important to understand and respect the asynchronous flow of resource creation within our code. The `applyValue` function encodes the dependency and required order-of-operations.
 
@@ -2113,37 +2144,11 @@ Finally, calling `this.registerOutputs` signals Pulumi that the component creati
 // ...
 ```
 
-#### Helper functions
+#### Policy Creation
 
-In addition to the constructor logic, we also have a helper function `allowGetObjectPolicy`:
+The bucket policy is created using a JSON string that defines the access policy for the S3 bucket. With AWS Provider v7.x, the `policy` field expects either a JSON string or a `PolicyDocumentArgs` object, wrapped in an `Either` type.
 
-***Example:** `StaticPage.java` a helper function*
-
-```java
-// ...
-    private String allowGetObjectPolicy(String bucketName) {
-        var policyDoc = new JsonObject();
-        var statementArray = new JsonArray();
-        var statement = new JsonObject();
-        var actionArray = new JsonArray();
-        var resourceArray = new JsonArray();
-
-        policyDoc.addProperty("Version", "2012-10-17");
-        policyDoc.add("Statement", statementArray);
-        statementArray.add(statement);
-        statement.addProperty("Effect", "Allow");
-        statement.addProperty("Principal", "*");
-        statement.add("Action", actionArray);
-        actionArray.add("s3:GetObject");
-        statement.add("Resource", resourceArray);
-        resourceArray.add(String.format("arn:aws:s3:::%s/*", bucketName));
-
-        return new Gson().toJson(policyDoc);
-    }
-// ...
-```
-
-This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `applyValue(...)`. That means that the `bucketName`, which is normally a `com.pulumi.core.Output<String>` value, can be materialized as a normal Java string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. We use `JsonObject` and `JsonArray` to construct the necessary JSON object then pass those to the `Gson.toJson(...)` function which returns it as a JSON formatted string.
+The policy JSON is created within the `applyValue(...)` context, where the `bucketArn` (normally a `com.pulumi.core.Output<String>` value) can be materialized as a regular Java string. We use `Either::ofLeft` to convert the JSON string into the expected `Either<String, PolicyDocumentArgs>` type that the AWS provider expects.
 
 {{% /choosable %}}
 
@@ -2196,7 +2201,7 @@ Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `B
         properties: {}
 
       bucketWebsite:
-        type: aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfiguration
+        type: aws:s3:BucketWebsiteConfiguration
         properties:
           bucket: ${bucket.bucket}
           indexDocument:
@@ -2219,6 +2224,9 @@ Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `B
         properties:
           bucket: ${bucket.id}
           blockPublicAcls: false
+          blockPublicPolicy: false
+          ignorePublicAcls: false
+          restrictPublicBuckets: false
         options:
           parent: ${bucket}
 
@@ -2259,11 +2267,13 @@ Notice that this time we pass the `Bucket` instance in as the `parent` in the `o
 
 Managing the dependency graph of your sub-resources is very important in a component!
 
-Another point of interest here is the use of the component input values. In the `BucketObject` definition, we pass the contents of the `index.html` page we want to host via `${indexDocument}` string interpolation. All input values are available for string interpolation.
+Another point of interest here is the use of the component input values. In the `BucketObject` definition, we pass the contents of the `index.html` page we want to host via `${indexContent}` string interpolation. All input values are available for string interpolation.
 
 ##### The BucketPublicAccessBlock and BucketPolicy sub-resources
 
 By default the `BucketObject` we created is not accessible to the public, so we need to unlock that access with the `BucketPublicAccessBlock` and `BucketPolicy` resources.
+
+The `BucketPublicAccessBlock` resource requires all four public access properties to be set to `false` to properly enable public access: `blockPublicAcls`, `blockPublicPolicy`, `ignorePublicAcls`, and `restrictPublicBuckets`. Setting only one or some of these properties will not allow the bucket policy to function correctly.
 
 The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use the `${bucket.bucket}` interpolation to generate an S3 policy document using the `fn::toJSON:` helper function. This respects the asynchronous workflow, waiting to create the `BucketPolicy` resource until after the bucket has been created. If the provider attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 policy document needs to use the bucket's name within its definition, and we won't know what that value is until the Bucket creation operation has completed. Pulumi's YAML implmentation handles that workflow automatically.
 
@@ -2283,7 +2293,7 @@ The last part of the component definition handles output values. First we set th
 
 In addition to the component definitions, we are also using a helper function `fn::toJSON:`:
 
-***Example:** `StaticPage.java` a helper function*
+***Example:** YAML helper function*
 
 ```yaml
 # ...
@@ -2354,7 +2364,7 @@ Now lets create our `package.json`. We'll need the standard `pulumi` SDK and our
 {
     "name": "use-static-page-component",
     "dependencies": {
-        "@pulumi/pulumi": "3.157.0",
+        "@pulumi/pulumi": "^3.159.0",
         "@pulumi/static-page-component": "file:sdks/static-page-component"
     }
 }
@@ -2426,7 +2436,7 @@ Now lets create our `package.json` and `tsconfig.json`. We'll need the standard 
         "@types/node": "22.13.5"
     },
     "dependencies": {
-        "@pulumi/pulumi": "3.157.0",
+        "@pulumi/pulumi": "^3.159.0",
         "@pulumi/static-page-component": "file:sdks/static-page-component"
     }
 }
@@ -2518,7 +2528,7 @@ Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK and
 
 ```toml
 sdk/python
-pulumi>=3.153.0,<4.0
+pulumi>=3.159.0,<4.0
 ```
 
 Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
@@ -2549,6 +2559,30 @@ website_url = page.endpoint.apply(lambda v: f"http://{v}")
 pulumi.export('websiteURL', website_url)
 ```
 
+#### Test the component locally
+
+Before running `pulumi preview`, you need to make the component provider available to Pulumi. Create an executable script in your component directory:
+
+```bash
+# In the static-page-component directory
+cat > pulumi-resource-static-page-component << 'EOF'
+#!/bin/bash
+cd "$(dirname "$0")"
+source venv/bin/activate
+exec python __main__.py "$@"
+EOF
+
+chmod +x pulumi-resource-static-page-component
+```
+
+Then add it to your PATH when testing:
+
+```bash
+export PATH="../static-page-component:$PATH"
+pulumi config set aws:region us-west-2
+pulumi preview
+```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2562,59 +2596,33 @@ runtime:
   name: go
 ```
 
-#### Generate the SDK
-
-In order to use our Pulumi component from source, we'll need to generate a Go-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
-
-```bash
-pulumi package add ../static-page-component
-```
-
-This creates a new subdirectory called `sdks/` that contains the generated SDK.
-
 #### Add the Go project file
 
-Now lets create our `go.mod`. We'll need the standard `pulumi` SDK and our custom component. To use the generated Go SDK, we'll use a `replace` directive to map the package name to the SDK source directory.
+Now lets create our `go.mod`. We'll need the standard `pulumi` SDK and our custom component. Since our component is structured as a standard Go package, we can import it directly using a `replace` directive for local development.
 
 ***Example:** `go.mod` for our Pulumi project*
 
 ```go
 module use-static-page-component
 
-go 1.20
+go 1.25
 
-require github.com/pulumi/pulumi/sdk/v3 v3.157.0
+require (
+    github.com/pulumi/pulumi/sdk/v3 v3.185.0
+    github.com/static-page-component v0.0.0
+)
 
-replace example.com/pulumi-static-page-component/sdk/go/static-page-component => ./sdks/static-page-component/staticpagecomponent
+replace github.com/static-page-component => ../static-page-component
 ```
 
-{{% notes type="warning" %}}
-The `pulumi package add` command may have added a `replace` directive into your `go.mod` already. If so, remove it and replace with the above example. There's a known bug w/ Go SDK generation which causes this.
-
-The same bug also causes the Go SDK to be generated without its necessary `go.mod`. Let's create that file in the `sdks/static-page-component/staticpagecomponent` directory with the following contents:
-
-***Example:** `go.mod` patch for our generated SDK*
-
-```
-module example.com/pulumi-static-page-component/sdk/go/static-page-component
-
-go 1.22
-
-toolchain go1.23.5
-
-require github.com/pulumi/pulumi/sdk/v3 v3.147.0
-```
-
-{{% /notes %}}
-
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project. The `replace` directive tells Go to use our local component instead of trying to fetch it from a remote repository.
 
 #### Install dependencies
 
 Next, install the `pulumi` dependencies:
 
 ```bash
-pulumi install
+go mod tidy
 ```
 
 #### Create the Pulumi program
@@ -2625,7 +2633,7 @@ pulumi install
 package main
 
 import (
-	staticpagecomponent "example.com/pulumi-static-page-component/sdk/go/static-page-component"
+	"github.com/static-page-component/staticpagecomponent"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -2689,7 +2697,7 @@ Now lets create our `.csproj`. We'll need the standard `pulumi` SDK and our cust
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pulumi" Version="3.87.0" />
+    <PackageReference Include="Pulumi" Version="3.159.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -2788,7 +2796,7 @@ We'll need to add the sources from the generated SDK output into the build sourc
         <dependency>
             <groupId>com.pulumi</groupId>
             <artifactId>pulumi</artifactId>
-            <version>[1.3,2.0)</version>
+            <version>1.16.1</version>
         </dependency>
         <!-- Add the SDK's dependencies, based on the output from the `pulumi package add` command -->
         <dependency>
@@ -2799,13 +2807,22 @@ We'll need to add the sources from the generated SDK output into the build sourc
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.9</version>
+            <version>2.13.1</version>
         </dependency>
     </dependencies>
 
     <build>
         <!-- Change the root directory that Maven uses to look for sources -->
         <sourceDirectory>.</sourceDirectory>
+        <!-- Configure resource directories to include SDK resources -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>sdks/static-page-component/src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -2914,7 +2931,9 @@ public class App {
                 .indexContent(pageHTML).build()
             );
 
-            ctx.export("websiteURL", page.endpoint().applyValue(v->String.format("http://%s", v)));
+            ctx.export("websiteURL", page.endpoint().applyValue(endpoint -> 
+                endpoint.map(url -> "http://" + url).orElse("http://no-endpoint")
+            ));
         });
     }
 }
@@ -2940,7 +2959,10 @@ Now, in your `Pulumi.yaml` file add the following section to load the component 
 ```yaml
 packages:
   static-page-component: ../static-page-component
+  aws: "7.6.0"
 ```
+
+The `aws: "7.6.0"` entry ensures we use the latest AWS provider v7.x with all the most recent features and improvements.
 
 #### Create the Pulumi program
 
