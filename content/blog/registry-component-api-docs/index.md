@@ -49,7 +49,7 @@ Building and maintaining reusable infrastructure has always been about more than
 
 Platform teams invest significant effort in creating reusable infrastructure components. But creating the infrastructure is only half the battle. The real challenge comes in making these resources discoverable and usable by development teams across the organization.
 
-Until now, when platform teams publish components to their private registry, developers still had to figure out how to use them. Without proper API documentation, developers resort to reading source code or pinging the platform team on Slack—neither of which scales. Even when documentation exists, keeping it synchronized with the actual component implementation becomes yet another maintenance burden.
+Until now, when platform teams published components to their private registry, developers still had to figure out how to use them. Without proper API documentation, developers had to resort to reading source code or pinging the platform team on Slack—neither of which scales. Even when documentation exists, keeping it synchronized with the actual component implementation becomes yet another maintenance burden.
 
 ## Automatic API Documentation: From Code to Comprehensive Docs
 
