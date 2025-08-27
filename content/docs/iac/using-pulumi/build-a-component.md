@@ -53,7 +53,7 @@ A Pulumi Component consists of three main parts:
 In this example, we'll create a static website component in AWS Simple Storage Service (S3). The component will manage the following five sub-resources necessary to implement a basic S3 hosted static website:
 
 - a [`Bucket`](/registry/packages/aws/api-docs/s3/bucket/) resource
-- a [`BucketWebsiteConfigurationV2`](/registry/packages/aws/api-docs/s3/bucketwebsiteconfigurationv2/) resource to set up the website configuration
+- a [`BucketWebsiteConfiguration`](/registry/packages/aws/api-docs/s3/bucketwebsiteconfiguration/) resource to set up the website configuration
 - a [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) resource to hold the raw site content
 - a [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/) resource to manage public access
 - a [`BucketPolicy`](/registry/packages/aws/api-docs/s3/bucketpolicy/) resource to set the Bucket policy
@@ -148,7 +148,7 @@ Next, we need to define our dependencies in `package.json`.
 }
 ```
 
-The `@pulumi/pulumi` SDK contains everything we need for making a component. It should be version `3.159.0` or newer. The `@pulumi/aws` package is the AWS provider that we are building on top of.
+The `@pulumi/pulumi` SDK contains everything we need for making a component. The `@pulumi/aws` package is the AWS provider that we are building on top of.
 
 #### TypeScript project file
 
@@ -203,7 +203,7 @@ pulumi>=3.159.0,<4.0
 pulumi_aws>=6.0.0
 ```
 
-The `pulumi` SDK contains everything we need for making a component. It should be version `3.159.0` or newer. The `pulumi_aws` package is the AWS provider that we are building on top of.
+The `pulumi` SDK contains everything we need for making a component. The `pulumi_aws` package is the AWS provider that we are building on top of.
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -234,7 +234,7 @@ require (
 )
 ```
 
-The `pulumi` SDK contains everything we need for making a component. It should be version `3.159.0` or newer. The `pulumi-aws` package is the AWS provider that we are building on top of.
+The `pulumi` SDK contains everything we need for making a component. The `pulumi-aws` package is the AWS provider that we are building on top of.
 
 {{% /choosable %}}
 
@@ -263,14 +263,14 @@ Next, we need to define our dependencies in `StaticPageComponent.csproj`.
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pulumi" Version="3.77.0" />
-    <PackageReference Include="Pulumi.Aws" Version="6.*" />
+    <PackageReference Include="Pulumi" Version="3.87.0" />
+    <PackageReference Include="Pulumi.AWS" Version="7.5.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.*" />
   </ItemGroup>
 </Project>
 ```
 
-The `Pulumi` SDK contains everything we need for making a component. It should be version `3.77.0` or newer. The `Pulumi.Aws` package is the AWS provider that we are building on top of.
+The `Pulumi` SDK contains everything we need for making a component. The `Pulumi.Aws` package is the AWS provider that we are building on top of.
 
 Note that the `AssemblyName` specifies the name of the component package. This name will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
@@ -350,7 +350,7 @@ Next, we need to define our dependencies and project configuration in a Maven `p
 </project>
 ```
 
-The `com.pulumi.pulumi` SDK contains everything we need for making a component. It should be version `1.8` or newer. The `com.pulumi.aws` package is the AWS provider that we are building on top of. We've also included a couple helper libraries like `gson` and `slf4j-nop` which are helpful for this example.
+The `com.pulumi.pulumi` SDK contains everything we need for making a component. The `com.pulumi.aws` package is the AWS provider that we are building on top of. We've also included a couple helper libraries like `gson` and `slf4j-nop` which are helpful for this example.
 
 {{% /choosable %}}
 
@@ -603,9 +603,9 @@ import com.pulumi.aws.s3.BucketPolicyArgs;
 import com.pulumi.aws.s3.BucketPublicAccessBlock;
 import com.pulumi.aws.s3.BucketPublicAccessBlockArgs;
 import com.pulumi.aws.s3.Bucket;
-import com.pulumi.aws.s3.BucketWebsiteConfigurationV2;
-import com.pulumi.aws.s3.BucketWebsiteConfigurationV2Args;
-import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationV2IndexDocumentArgs;
+import com.pulumi.aws.s3.BucketWebsiteConfiguration;
+import com.pulumi.aws.s3.BucketWebsiteConfigurationArgs;
+import com.pulumi.aws.s3.inputs.BucketWebsiteConfigurationIndexDocumentArgs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -776,7 +776,7 @@ export class StaticPage extends pulumi.ComponentResource {
         const bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
 
         // Configure the bucket website
-        const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2(`${name}-website`, {
+        const bucketWebsite = new aws.s3.BucketWebsiteConfiguration(`${name}-website`, {
             bucket: bucket.bucket,
             indexDocument: { suffix: "index.html" },
         }, { parent: bucket });
@@ -855,7 +855,7 @@ class StaticPage(pulumi.ComponentResource):
             opts=ResourceOptions(parent=self))
 
         # Configure the bucket website
-        bucket_website = s3.BucketWebsiteConfigurationV2(
+        bucket_website = s3.BucketWebsiteConfiguration(
             f'{name}-website',
             bucket=bucket.bucket,
             index_document={"suffix": "index.html"},
@@ -938,10 +938,10 @@ func NewStaticPage(ctx *pulumi.Context, name string, args *StaticPageArgs, opts 
 	}
 
 	// Configure bucket website
-	bucketWebsite, err := s3.NewBucketWebsiteConfigurationV2(ctx, fmt.Sprintf("%s-website", name),
-		&s3.BucketWebsiteConfigurationV2Args{
+	bucketWebsite, err := s3.NewBucketWebsiteConfiguration(ctx, fmt.Sprintf("%s-website", name),
+		&s3.BucketWebsiteConfigurationArgs{
 			Bucket: bucket.Bucket,
-			IndexDocument: s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+			IndexDocument: s3.BucketWebsiteConfigurationIndexDocumentArgs{
 				Suffix: pulumi.String("index.html"),
 			},
 		},
@@ -1028,14 +1028,14 @@ class StaticPage : ComponentResource {
         var bucket = new Bucket($"{name}-bucket", new() { }, new() { Parent = this });
 
         // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfigurationV2($"{name}-website", new() {
+        var bucketWebsite = new BucketWebsiteConfiguration($"{name}-website", new() {
             Bucket = bucket.Id,
-            IndexDocument = new BucketWebsiteConfigurationV2IndexDocumentArgs { Suffix = "index.html" },
+            IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs { Suffix = "index.html" },
         }, new() { Parent = bucket });
 
         // Create a bucket object for the index document
         var bucketObject = new BucketObject($"{name}-index-object", new BucketObjectArgs {
-            Bucket = bucket.Bucket,
+            Bucket = bucket.Id,
             Key = "index.html",
             Content = args.IndexContent,
             ContentType = "text/html",
@@ -1050,7 +1050,7 @@ class StaticPage : ComponentResource {
         // Set the access policy for the bucket so all objects are readable
         var bucketPolicy = new BucketPolicy($"{name}-bucket-policy", new() {
             Bucket = bucket.Id,
-            Policy = bucket.Bucket.Apply(this.AllowGetObjectPolicy),
+            Policy = bucket.Id.Apply(this.AllowGetObjectPolicy),
         }, new() { Parent = bucket, DependsOn = publicAccessBlock });
 
         this.endpoint = bucketWebsite.WebsiteEndpoint;
@@ -1106,12 +1106,12 @@ class StaticPage extends ComponentResource {
                         .build());
 
         // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfigurationV2(
+        var bucketWebsite = new BucketWebsiteConfiguration(
                 String.format("%s-website", name),
-                BucketWebsiteConfigurationV2Args.builder()
+                BucketWebsiteConfigurationArgs.builder()
                         .bucket(bucket.id())
                         .indexDocument(
-                                BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
+                                BucketWebsiteConfigurationIndexDocumentArgs.builder()
                                         .suffix("index.html")
                                         .build())
                         .build(),
@@ -1220,7 +1220,7 @@ components:
         properties: {}
 
       bucketWebsite:
-        type: aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfigurationV2
+        type: aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfiguration
         properties:
           bucket: ${bucket.bucket}
           indexDocument:
@@ -1325,7 +1325,7 @@ Since we're inheriting, we also need to call the base class constructor `super(.
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```typescript
 // ...
@@ -1333,7 +1333,7 @@ Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, 
         const bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
 
         // Configure the bucket website
-        const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2(`${name}-website`, {
+        const bucketWebsite = new aws.s3.BucketWebsiteConfiguration(`${name}-website`, {
             bucket: bucket.bucket,
             indexDocument: { suffix: "index.html" },
         }, { parent: bucket });
@@ -1368,9 +1368,9 @@ Notice the use of the `name` parameter and format string to create a unique name
 
 Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new instance of `ResourceOptions` and pass the component instance as the `parent` of the `Bucket` resource, via `parent: this` in the `ResourceOptions` class. This is an essential step to tie the sub-resources into the dependency graph.
 
-##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
+##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
-The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
+The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
 Notice that this time we pass the `Bucket` instance in as the `parent` to the `ResourceOptions` instances for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
@@ -1390,7 +1390,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output<string>`, not a regular TypeScript string. Outputs must use `pulumi.Output` types.
+The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfiguration` class. Note that this is a `pulumi.Output<string>`, not a regular TypeScript string. Outputs must use `pulumi.Output` types.
 
 Finally, calling `this.registerOutputs` signals Pulumi that the component creation process has completed.
 
@@ -1481,7 +1481,7 @@ Since we're inheriting, we also need to call the base class constructor `super()
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```python
 # ...
@@ -1491,7 +1491,7 @@ Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, 
             opts=ResourceOptions(parent=self))
 
         # Configure the bucket website
-        bucket_website = s3.BucketWebsiteConfigurationV2(
+        bucket_website = s3.BucketWebsiteConfiguration(
             f'{name}-website',
             bucket=bucket.bucket,
             index_document={"suffix": "index.html"},
@@ -1530,9 +1530,9 @@ Notice the use of the `name` parameter and format string to create a unique name
 
 Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new instance of `ResourceOptions` and pass the component instance as the `parent` of the `Bucket` resource, via `parent=self` in the `ResourceOptions` class. This is an essential step to tie the sub-resources into the dependency graph.
 
-##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
+##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
-The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
+The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
 Notice that this time we pass the `Bucket` instance in as the `parent` to the `ResourceOptions` instances for these sub-resources, as opposed to `self` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
@@ -1552,7 +1552,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the constructor handles output values. First we set the `endpoint` class property to the end-point URL from the `BucketWebsiteConfigurationV2` class. Note that this is a `pulumi.Output[str]`, not a regular Python string. Outputs must use `pulumi.Output` types.
+The last part of the constructor handles output values. First we set the `endpoint` class property to the end-point URL from the `BucketWebsiteConfiguration` class. Note that this is a `pulumi.Output[str]`, not a regular Python string. Outputs must use `pulumi.Output` types.
 
 Finally, calling `self.register_outputs` signals Pulumi that the component creation process has completed.
 
@@ -1647,7 +1647,7 @@ The next step is to register our new component instance with Pulumi via the `ctx
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```go
 // ...
@@ -1659,10 +1659,10 @@ Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, 
 	}
 
 	// Configure bucket website
-	bucketWebsite, err := s3.NewBucketWebsiteConfigurationV2(ctx, fmt.Sprintf("%s-website", name),
-		&s3.BucketWebsiteConfigurationV2Args{
+	bucketWebsite, err := s3.NewBucketWebsiteConfiguration(ctx, fmt.Sprintf("%s-website", name),
+		&s3.BucketWebsiteConfigurationArgs{
 			Bucket: bucket.Bucket,
-			IndexDocument: s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+			IndexDocument: s3.BucketWebsiteConfigurationIndexDocumentArgs{
 				Suffix: pulumi.String("index.html"),
 			},
 		},
@@ -1732,9 +1732,9 @@ Notice the use of the `name` parameter and format string to create a unique name
 
 Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We use `pulumi.Parent(comp)` to pass the component instance as the `parent` of the `Bucket` resource. This is an essential step to tie the sub-resources into the dependency graph.
 
-##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
+##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
-The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
+The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
 Notice that this time we pass the `Bucket` instance as the parent of these sub-resources, via `pulumi.Parent(bucket)`, as opposed to `comp` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
@@ -1754,7 +1754,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the constructor handles output values. First we set the `Endpoint` struct field to the end-point URL from the `BucketWebsiteConfigurationV2` resource. Note that this is a `pulumi.StringOutput`, not a regular Go string. Outputs must use `pulumi.Output` types.
+The last part of the constructor handles output values. First we set the `Endpoint` struct field to the end-point URL from the `BucketWebsiteConfiguration` resource. Note that this is a `pulumi.StringOutput`, not a regular Go string. Outputs must use `pulumi.Output` types.
 
 Finally, return the component instance.
 
@@ -1844,7 +1844,7 @@ Since we're inheriting, we also need to call the base class constructor `base(..
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```csharp
 // ...
@@ -1852,14 +1852,14 @@ Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, 
         var bucket = new Bucket($"{name}-bucket", new() { }, new() { Parent = this });
 
         // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfigurationV2($"{name}-website", new() {
+        var bucketWebsite = new BucketWebsiteConfiguration($"{name}-website", new() {
             Bucket = bucket.Id,
-            IndexDocument = new BucketWebsiteConfigurationV2IndexDocumentArgs { Suffix = "index.html" },
+            IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs { Suffix = "index.html" },
         }, new() { Parent = bucket });
 
         // Create a bucket object for the index document
         var bucketObject = new BucketObject($"{name}-index-object", new BucketObjectArgs {
-            Bucket = bucket.Bucket,
+            Bucket = bucket.Id,
             Key = "index.html",
             Content = args.IndexContent,
             ContentType = "text/html",
@@ -1874,7 +1874,7 @@ Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, 
         // Set the access policy for the bucket so all objects are readable
         var bucketPolicy = new BucketPolicy($"{name}-bucket-policy", new() {
             Bucket = bucket.Id,
-            Policy = bucket.Bucket.Apply(this.AllowGetObjectPolicy),
+            Policy = bucket.Id.Apply(this.AllowGetObjectPolicy),
         }, new() { Parent = bucket, DependsOn = publicAccessBlock });
 // ...
 ```
@@ -1887,9 +1887,9 @@ Notice the use of the `name` parameter and format string to create a unique name
 
 Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new object and pass the component instance as the `Parent` of the `Bucket` resource, via `Parent = this` in the `opts` object. This is an essential step to tie the sub-resources into the dependency graph.
 
-##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
+##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
-The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
+The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
 Notice that this time we pass the `Bucket` instance in as the `Parent` in the `opts` for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
@@ -1909,7 +1909,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `Pulumi.Output<string>`, not a regular .NET string. Outputs must use `Pulumi.Output` types.
+The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfiguration` class. Note that this is a `Pulumi.Output<string>`, not a regular .NET string. Outputs must use `Pulumi.Output` types.
 
 Finally, calling `this.RegisterOutputs` signals Pulumi that the component creation process has completed.
 
@@ -2002,7 +2002,7 @@ Since we're inheriting, we also need to call the base class constructor `super(.
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
+Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources.
 
 ```java
 // ...
@@ -2015,12 +2015,12 @@ Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, 
                         .build());
 
         // Configure the bucket website
-        var bucketWebsite = new BucketWebsiteConfigurationV2(
+        var bucketWebsite = new BucketWebsiteConfiguration(
                 String.format("%s-website", name),
-                BucketWebsiteConfigurationV2Args.builder()
+                BucketWebsiteConfigurationArgs.builder()
                         .bucket(bucket.id())
                         .indexDocument(
-                                BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
+                                BucketWebsiteConfigurationIndexDocumentArgs.builder()
                                         .suffix("index.html")
                                         .build())
                         .build(),
@@ -2075,9 +2075,9 @@ Notice the use of the `name` parameter and format string to create a unique name
 
 Another important implementation detail here is the `opts` value being passed to the sub-resource constructor. We create a new object and pass the component instance as the `parent` of the `Bucket` resource, via `parent(this)` in the `opts` object. This is an essential step to tie the sub-resources into the dependency graph.
 
-##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
+##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
-The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
+The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
 Notice that this time we pass the `Bucket` instance in as the `parent` in the `opts` for these sub-resources, as opposed to `this` (e.g. the component). That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
@@ -2097,7 +2097,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. Note that this is a `com.pulumi.core.Output<String>`, not a regular Java string. Outputs must use `com.pulumi.core.Output<T>` types.
+The last part of the constructor handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfiguration` class. Note that this is a `com.pulumi.core.Output<String>`, not a regular Java string. Outputs must use `com.pulumi.core.Output<T>` types.
 
 Finally, calling `this.registerOutputs` signals Pulumi that the component creation process has completed.
 
@@ -2186,7 +2186,7 @@ The `outputs` section defines the outputs that will be shared to the consumer of
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
-Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources. Defining sub-resources in a YAML component works exactly the same as defining them in a YAML Pulumi program.
+Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock` and `BucketPolicy` sub-resources. Defining sub-resources in a YAML component works exactly the same as defining them in a YAML Pulumi program.
 
 ```yaml
 # ...
@@ -2196,7 +2196,7 @@ Next we implement the `Bucket`, `BucketWebsiteConfigurationV2`, `BucketObject`, 
         properties: {}
 
       bucketWebsite:
-        type: aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfigurationV2
+        type: aws:s3/bucketWebsiteConfigurationV2:BucketWebsiteConfiguration
         properties:
           bucket: ${bucket.bucket}
           indexDocument:
@@ -2251,9 +2251,9 @@ The `Bucket` resource represents an S3 bucket, which is similar to a directory. 
 
 Another important implementation detail here is the `options` section. By default the component instance will be set as the `parent` of the `Bucket` resource, so there's no need to define that on this object.
 
-##### The BucketWebsiteConfigurationV2 and BucketObject sub-resources
+##### The BucketWebsiteConfiguration and BucketObject sub-resources
 
-The `BucketWebsiteConfigurationV2` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
+The `BucketWebsiteConfiguration` represents the website configuration and the `BucketObject` represents the contents of the file we will host as `index.html`.
 
 Notice that this time we pass the `Bucket` instance in as the `parent` in the `options` for these sub-resources. This is an essential step to tie the sub-resources into the dependency graph. That creates a resource relationship graph like: `StaticPage` -> `Bucket` -> `BucketObject`. We do the same thing in the `BucketPublicAccessBlock` and `BucketPolicy` resource.
 
@@ -2271,7 +2271,7 @@ The `BucketPolicy` resource also shows another technique: resource dependencies.
 
 #### Handling outputs
 
-The last part of the component definition handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfigurationV2` class. This uses standard string interopolation and automatically handles asynchronous value resolution, waiting to assign the `endpoint` output until `bucketWebsite.websiteEndpoint` has completed completion and the value is available.
+The last part of the component definition handles output values. First we set the `endpoint` class property to the website endpoint from the `BucketWebsiteConfiguration` class. This uses standard string interopolation and automatically handles asynchronous value resolution, waiting to assign the `endpoint` output until `bucketWebsite.websiteEndpoint` has completed completion and the value is available.
 
 ```yaml
 # ...
@@ -2308,7 +2308,7 @@ This function is used to create a S3 policy document, allowing public access to 
 
 ### Use the Component in a Pulumi Program
 
-Let's try it out in Pulumi program. For fun, try using it in a different languages than you wrote it in, like YAML!
+Let's try it out in a Pulumi program.
 
 #### Setup the Pulumi Program
 
@@ -2334,117 +2334,15 @@ runtime:
     typescript: false
 ```
 
-{{% /choosable %}}
-
-{{% choosable language typescript %}}
-
-***Example:** A `Pulumi.yaml` file for a Pulumi project written in TypeScript*
-
-```yaml
-name: use-static-page-component
-description: A minimal TypeScript Pulumi program that uses the custom Static Page component
-runtime:
-  name: nodejs
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-***Example:** A `Pulumi.yaml` file for a Pulumi project written in Python*
-
-```yaml
-name: use-static-page-component
-description: A minimal Python Pulumi program that uses the custom Static Page component
-runtime:
-  name: python
-  options:
-    toolchain: pip
-    virtualenv: venv
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-***Example:** A `Pulumi.yaml` file for a Pulumi project written in Go*
-
-```yaml
-name: use-static-page-component
-description: A minimal Go Pulumi program that uses the custom Static Page component
-runtime:
-  name: go
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-***Example:** A `Pulumi.yaml` file for a Pulumi project written in C#*
-
-```yaml
-name: use-static-page-component
-description: A minimal C# Pulumi program that uses the custom Static Page component
-runtime:
-  name: dotnet
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-***Example:** A `Pulumi.yaml` file for a Pulumi project written in Java*
-
-```yaml
-name: use-static-page-component
-description: A minimal Java Pulumi program that uses the custom Static Page component
-runtime:
-  name: java
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-***Example:** A `Pulumi.yaml` file for a Pulumi project written in YAML*
-
-```yaml
-name: use-static-page-component
-description: A minimal YAML Pulumi program that uses the custom Static Page component
-runtime:
-  name: yaml
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
 #### Generate the SDK
 
-In order to use our Pulumi component from source, we will need to generate a language-specific SDK, which will allow end users to use it in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
+In order to use our Pulumi component from source, we'll need to generate a Javascript-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
 
 ```bash
 pulumi package add ../static-page-component
 ```
 
-This will create a new subdirectory called `sdks/`, and in it, there will be a directory for your language SDK. One of: `dotnet`, `go`, `java`, `nodejs`, and `python`.
-
-{{% notes type="tip" %}}
-If you're authoring your Pulumi project in YAML, it is not necessary to generate a SDK! Skip ahead to the next step.
-{{% /notes %}}
-
-#### Add the component reference in Pulumi.YAML
-
-Now, in your `Pulumi.yaml` file add the following section to load the component from source:
-
-```yaml
-packages:
-  static-page-component: ../static-page-component
-```
-
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language javascript %}}
+This creates a new subdirectory called `sdks/` that contains the generated SDK.
 
 #### Add the NodeJS project file
 
@@ -2495,6 +2393,25 @@ exports.websiteURL = pulumi.interpolate `http://${page.endpoint}`;
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in TypeScript*
+
+```yaml
+name: use-static-page-component
+description: A minimal TypeScript Pulumi program that uses the custom Static Page component
+runtime:
+  name: nodejs
+```
+
+#### Generate the SDK
+
+In order to use our Pulumi component from source, we'll need to generate a TypeScript-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
+
+```bash
+pulumi package add ../static-page-component
+```
+
+This creates a new subdirectory called `sdks/` that contains the generated SDK.
 
 #### Add the NodeJS and TypeScript project files
 
@@ -2573,6 +2490,28 @@ export const websiteURL = pulumi.interpolate`http://${page.endpoint}`;
 
 {{% choosable language python %}}
 
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in Python*
+
+```yaml
+name: use-static-page-component
+description: A minimal Python Pulumi program that uses the custom Static Page component
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+```
+
+#### Generate the SDK
+
+In order to use our Pulumi component from source, we'll need to generate a Python-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
+
+```bash
+pulumi package add ../static-page-component
+```
+
+This creates a new subdirectory called `sdks/` that contains the generated SDK.
+
 #### Add the package dependencies
 
 Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK and our custom component. To use that, just add the path to the generated Python SDK:
@@ -2613,6 +2552,25 @@ pulumi.export('websiteURL', website_url)
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in Go*
+
+```yaml
+name: use-static-page-component
+description: A minimal Go Pulumi program that uses the custom Static Page component
+runtime:
+  name: go
+```
+
+#### Generate the SDK
+
+In order to use our Pulumi component from source, we'll need to generate a Go-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
+
+```bash
+pulumi package add ../static-page-component
+```
+
+This creates a new subdirectory called `sdks/` that contains the generated SDK.
 
 #### Add the Go project file
 
@@ -2694,6 +2652,25 @@ func main() {
 
 {{% choosable language csharp %}}
 
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in C#*
+
+```yaml
+name: use-static-page-component
+description: A minimal C# Pulumi program that uses the custom Static Page component
+runtime:
+  name: dotnet
+```
+
+#### Generate the SDK
+
+In order to use our Pulumi component from source, we'll need to generate a .NET-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
+
+```bash
+pulumi package add ../static-page-component
+```
+
+This creates a new subdirectory called `sdks/` that contains the generated SDK.
+
 #### Add the .NET project file
 
 Now lets create our `.csproj`. We'll need the standard `pulumi` SDK and our custom component. To use the generated .NET SDK, just add the relative path to the project file in the `Include` attribute instead of the name of the library.
@@ -2712,7 +2689,7 @@ Now lets create our `.csproj`. We'll need the standard `pulumi` SDK and our cust
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pulumi" Version="3.*" />
+    <PackageReference Include="Pulumi" Version="3.87.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -2759,6 +2736,25 @@ return await Deployment.RunAsync(() =>
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in Java*
+
+```yaml
+name: use-static-page-component
+description: A minimal Java Pulumi program that uses the custom Static Page component
+runtime:
+  name: java
+```
+
+#### Generate the SDK
+
+In order to use our Pulumi component from source, we'll need to generate a Java-specific SDK to use in a Pulumi program. From the root directory of your `use-static-page-component` Pulumi project, run the following command:
+
+```bash
+pulumi package add ../static-page-component
+```
+
+This creates a new subdirectory called `sdks/` that contains the generated SDK.
 
 #### Add the Maven project file
 
@@ -2928,6 +2924,24 @@ public class App {
 
 {{% choosable language yaml %}}
 
+***Example:** A `Pulumi.yaml` file for a Pulumi project written in YAML*
+
+```yaml
+name: use-static-page-component
+description: A minimal YAML Pulumi program that uses the custom Static Page component
+runtime:
+  name: yaml
+```
+
+#### Add the component reference in `Pulumi.yaml`
+
+Now, in your `Pulumi.yaml` file add the following section to load the component from source:
+
+```yaml
+packages:
+  static-page-component: ../static-page-component
+```
+
 #### Create the Pulumi program
 
 Now we can define our Static Page component resource in the `Pulumi.yaml` file. Add the following section:
@@ -2958,7 +2972,7 @@ $ pulumi up
  +   └─ static-page-component:index:StaticPage     my-static-page                      created (5s)
  +      └─ aws:s3:Bucket                         my-static-page-bucket               created (2s)
  +         ├─ aws:s3:BucketPublicAccessBlock       my-static-page-public-access-block  created (0.84s)
- +         ├─ aws:s3:BucketWebsiteConfigurationV2  my-static-page-website              created (0.91s)
+ +         ├─ aws:s3:BucketWebsiteConfiguration  my-static-page-website              created (0.91s)
  +         ├─ aws:s3:BucketObject                  my-static-page-index-object         created (0.84s)
  +         └─ aws:s3:BucketPolicy                  my-static-page-bucket-policy        created (1s)
 
