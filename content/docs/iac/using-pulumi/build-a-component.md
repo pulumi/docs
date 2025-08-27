@@ -1160,7 +1160,7 @@ class StaticPage extends ComponentResource {
                         .build());
 
         // Set the access policy for the bucket so all objects are readable
-        var policyJson = bucket.arn().applyValue(bucketArn -> 
+        var policyJson = bucket.arn().applyValue(bucketArn ->
             "{\n" +
             "  \"Version\": \"2012-10-17\",\n" +
             "  \"Statement\": [\n" +
@@ -2070,7 +2070,7 @@ Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `B
                         .build());
 
         // Set the access policy for the bucket so all objects are readable
-        var policyDocument = bucket.arn().applyValue(bucketArn -> 
+        var policyDocument = bucket.arn().applyValue(bucketArn ->
             IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
                 .statements(GetPolicyDocumentStatementArgs.builder()
                     .sid("PublicReadGetObject")
@@ -2931,7 +2931,7 @@ public class App {
                 .indexContent(pageHTML).build()
             );
 
-            ctx.export("websiteURL", page.endpoint().applyValue(endpoint -> 
+            ctx.export("websiteURL", page.endpoint().applyValue(endpoint ->
                 endpoint.map(url -> "http://" + url).orElse("http://no-endpoint")
             ));
         });
