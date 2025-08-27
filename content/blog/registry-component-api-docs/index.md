@@ -79,12 +79,12 @@ This dramatically reduces the time from component discovery to successful deploy
 
 ## Getting Started
 
-Automatic API docs is available today for all Pulumi Cloud customers with access to private registriy. To start generating docs, simply [publish your component](/docs/idp/get-started/private-registry/#publishing-components). Documentation generation happens automatically—no configuration required, and docs will automatically appear for existing components.
+Automatic API docs are available today for all Pulumi Cloud customers with access to private registry. To start generating docs, simply [publish your component](/docs/idp/get-started/private-registry/#publishing-components). Documentation generation happens automatically—no configuration required, and docs will automatically appear for existing components.
 
 ## Looking Ahead
 
 Automatic API docs represent our continued investment in making Pulumi the most productive platform for infrastructure teams. By removing friction from the component lifecycle, we're enabling platform teams to focus on what matters most: building robust, secure, and scalable infrastructure patterns that accelerate their entire organization.
 
-We're excited to see how teams use them to build more effective infrastructure development platforms. As always, we'd love to hear your feedback and learn about your use cases.
+We're excited to see how teams use them to build more effective infrastructure development platforms. As always, we'd love to hear your feedback and learn about your use cases on our [Pulumi Cloud requests repository](https://github.com/pulumi/pulumi-cloud-requests).
 
 Ready to streamline your infrastructure development workflow? Get started with [Pulumi Cloud](https://app.pulumi.com/signup) or check out our [documentation](/docs/idp/get-started/private-registry/) to learn more.
