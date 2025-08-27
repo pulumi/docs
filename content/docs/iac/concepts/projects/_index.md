@@ -93,7 +93,7 @@ The following are other examples of `Pulumi.yaml` files that define project conf
     runtime: yaml
     resources:
       bucket:
-        type: aws:s3:BucketV2
+        type: aws:s3:Bucket
     ```
 
 For more information on valid Pulumi project metadata, see the [Pulumi.yaml reference](/docs/reference/pulumi-yaml/).

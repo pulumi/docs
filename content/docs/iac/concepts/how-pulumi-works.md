@@ -66,8 +66,8 @@ Let's walk through a simple example. Suppose we have the following Pulumi progra
 "use strict";
 const aws = require("@pulumi/aws");
 
-const mediaBucket = new aws.s3.BucketV2("media-bucket");
-const contentBucket = new aws.s3.BucketV2("content-bucket");
+const mediaBucket = new aws.s3.Bucket("media-bucket");
+const contentBucket = new aws.s3.Bucket("content-bucket");
 ```
 
 {{% /choosable %}}
@@ -76,8 +76,8 @@ const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```typescript
 import * as aws from "@pulumi/aws";
 
-const mediaBucket = new aws.s3.BucketV2("media-bucket");
-const contentBucket = new aws.s3.BucketV2("content-bucket");
+const mediaBucket = new aws.s3.Bucket("media-bucket");
+const contentBucket = new aws.s3.Bucket("content-bucket");
 ```
 
 {{% /choosable %}}
@@ -86,8 +86,8 @@ const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```python
 from pulumi_aws import s3
 
-media_bucket = s3.BucketV2('media-bucket')
-content_bucket = s3.BucketV2('content-bucket')
+media_bucket = s3.Bucket('media-bucket')
+content_bucket = s3.Bucket('content-bucket')
 ```
 
 {{% /choosable %}}
@@ -103,11 +103,11 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		mediaBucket, err := s3.NewBucketV2(ctx, "media-bucket", nil)
+		mediaBucket, err := s3.NewBucket(ctx, "media-bucket", nil)
 		if err != nil {
 			return err
 		}
-		contentBucket, err := s3.NewBucketV2(ctx, "content-bucket", nil)
+		contentBucket, err := s3.NewBucket(ctx, "content-bucket", nil)
 		if err != nil {
 			return err
 		}
@@ -127,8 +127,8 @@ using Aws = Pulumi.Aws;
 
 return await Deployment.RunAsync(() =>
 {
-    var mediaBucket = new Aws.S3.BucketV2("media-bucket");
-    var contentBucket = new Aws.S3.BucketV2("content-bucket");
+    var mediaBucket = new Aws.S3.Bucket("media-bucket");
+    var contentBucket = new Aws.S3.Bucket("content-bucket");
 });
 ```
 
@@ -139,13 +139,13 @@ return await Deployment.RunAsync(() =>
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.Bucket;
 
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var mediaBucket = new BucketV2("media-bucket");
-            var contentBucket = new BucketV2("content-bucket");
+            var mediaBucket = new Bucket("media-bucket");
+            var contentBucket = new Bucket("content-bucket");
         });
     }
 }
@@ -159,9 +159,9 @@ name: my-yaml-project
 runtime: yaml
 resources:
     mediaBucket:
-        type: aws:s3:BucketV2
+        type: aws:s3:Bucket
     contentBucket:
-        type: aws:s3:BucketV2
+        type: aws:s3:Bucket
 ```
 
 {{% /choosable %}}
@@ -180,8 +180,8 @@ After both operations have completed, the language host exits as the program has
 
 ```
 stack mystack
-   - aws.s3.BucketV2 "media-bucket653a4"
-   - aws.s3.BucketV2 "content-bucket125ce"
+   - aws.s3.Bucket "media-bucket653a4"
+   - aws.s3.Bucket "content-bucket125ce"
 ```
 
 Note the extra suffixes on the end of these bucket names. This is due to a process called [auto-naming](/docs/concepts/resources/names/#autonaming), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
@@ -196,10 +196,10 @@ Now, let's make a change to one of resources and run `pulumi up` again.  Since P
 "use strict";
 const aws = require("@pulumi/aws");
 
-const mediaBucket = new aws.s3.BucketV2("media-bucket", {
+const mediaBucket = new aws.s3.Bucket("media-bucket", {
     tags: {"owner": "media-team"},
 });
-const contentBucket = new aws.s3.BucketV2("content-bucket");
+const contentBucket = new aws.s3.Bucket("content-bucket");
 ```
 
 {{% /choosable %}}
@@ -208,10 +208,10 @@ const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```typescript
 import * as aws from "@pulumi/aws";
 
-const mediaBucket = new aws.s3.BucketV2("media-bucket", {
+const mediaBucket = new aws.s3.Bucket("media-bucket", {
     tags: {"owner": "media-team"},
 });
-const contentBucket = new aws.s3.BucketV2("content-bucket");
+const contentBucket = new aws.s3.Bucket("content-bucket");
 ```
 
 {{% /choosable %}}
@@ -220,8 +220,8 @@ const contentBucket = new aws.s3.BucketV2("content-bucket");
 ```python
 from pulumi_aws import s3
 
-media_bucket = s3.BucketV2('media-bucket', tags={'owner': 'media-team'})
-content_bucket = s3.BucketV2('content-bucket')
+media_bucket = s3.Bucket('media-bucket', tags={'owner': 'media-team'})
+content_bucket = s3.Bucket('content-bucket')
 ```
 
 {{% /choosable %}}
@@ -237,7 +237,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		mediaBucket, err := s3.NewBucketV2(ctx, "mediaBucket", &s3.BucketV2Args{
+		mediaBucket, err := s3.NewBucket(ctx, "mediaBucket", &s3.BucketArgs{
 			Tags: pulumi.StringMap{
 				"owner": pulumi.String("media-team"),
 			},
@@ -245,7 +245,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		contentBucket, err := s3.NewBucketV2(ctx, "contentBucket", nil)
+		contentBucket, err := s3.NewBucket(ctx, "contentBucket", nil)
 		if err != nil {
 			return err
 		}
@@ -265,14 +265,14 @@ using Aws = Pulumi.Aws;
 
 return await Deployment.RunAsync(() =>
 {
-    var mediaBucket = new Aws.S3.BucketV2("media-bucket", new()
+    var mediaBucket = new Aws.S3.Bucket("media-bucket", new()
     {
         Tags =
         {
             { "owner", "media-team" },
         },
     }););
-    var contentBucket = new Aws.S3.BucketV2("content-bucket");
+    var contentBucket = new Aws.S3.Bucket("content-bucket");
 });
 ```
 
@@ -284,16 +284,16 @@ package myproject;
 
 import java.util.Map;
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.BucketV2;
-import com.pulumi.aws.s3.BucketV2Args;
+import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketArgs;
 
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var mediaBucket = new BucketV2("mediaBucket", BucketV2Args.builder()
+            var mediaBucket = new Bucket("mediaBucket", BucketArgs.builder()
                 .tags(Map.of("owner", "media-team"))
                 .build());
-            var contentBucket = new BucketV2("content-bucket");
+            var contentBucket = new Bucket("content-bucket");
         });
     }
 }
@@ -307,19 +307,19 @@ name: my-yaml-project
 runtime: yaml
 resources:
   mediaBucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
     properties:
       tags:
         owner: media-team
   contentBucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
 ```
 
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the call to aws.s3.BucketV2 causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `tags` property has changed from empty to a map assigning the `owner` tag. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the `tags` property to set the `owner` tag. When this operation completes, the current state is updated to reflect the change that had been made.
+When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the call to aws.s3.Bucket causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `tags` property has changed from empty to a map assigning the `owner` tag. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the `tags` property to set the `owner` tag. When this operation completes, the current state is updated to reflect the change that had been made.
 
 The engine also receives a resource registration request for "content-bucket".  However, since there are no changes between the current state and the desired state, the engine does not need to make any changes to the resource.
 
@@ -332,10 +332,10 @@ Now, suppose we rename `content-bucket` to `app-bucket`.
 ```javascript
 "use strict";
 const aws = require("@pulumi/aws");
-const mediaBucket = new aws.s3.BucketV2("media-bucket", {
+const mediaBucket = new aws.s3.Bucket("media-bucket", {
     tags: {"owner": "media-team"},
 });
-const appBucket = new aws.s3.BucketV2("app-bucket");
+const appBucket = new aws.s3.Bucket("app-bucket");
 ```
 
 {{% /choosable %}}
@@ -344,10 +344,10 @@ const appBucket = new aws.s3.BucketV2("app-bucket");
 ```typescript
 import * as aws from "@pulumi/aws";
 
-const mediaBucket = new aws.s3.BucketV2("media-bucket", {
+const mediaBucket = new aws.s3.Bucket("media-bucket", {
     tags: {"owner": "media-team"},
 });
-const appBucket = new aws.s3.BucketV2("app-bucket");
+const appBucket = new aws.s3.Bucket("app-bucket");
 ```
 
 {{% /choosable %}}
@@ -356,8 +356,8 @@ const appBucket = new aws.s3.BucketV2("app-bucket");
 ```python
 from pulumi_aws import s3
 
-media_bucket = s3.BucketV2('media-bucket', tags={'owner': 'media-team'})
-app_bucket = s3.BucketV2('app-bucket')
+media_bucket = s3.Bucket('media-bucket', tags={'owner': 'media-team'})
+app_bucket = s3.Bucket('app-bucket')
 ```
 
 {{% /choosable %}}
@@ -373,7 +373,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		mediaBucket, err := s3.NewBucketV2(ctx, "mediaBucket", &s3.BucketV2Args{
+		mediaBucket, err := s3.NewBucket(ctx, "mediaBucket", &s3.BucketArgs{
 			Tags: pulumi.StringMap{
 				"owner": pulumi.String("media-team"),
 			},
@@ -381,7 +381,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		appBucket, err := s3.NewBucketV2(ctx, "appBucket", nil)
+		appBucket, err := s3.NewBucket(ctx, "appBucket", nil)
 		if err != nil {
 			return err
 		}
@@ -401,14 +401,14 @@ using Aws = Pulumi.Aws;
 
 return await Deployment.RunAsync(() =>
 {
-    var mediaBucket = new Aws.S3.BucketV2("media-bucket", new()
+    var mediaBucket = new Aws.S3.Bucket("media-bucket", new()
     {
         Tags =
         {
             { "owner", "media-team" },
         },
     }););
-    var appBucket = new Aws.S3.BucketV2("app-bucket");
+    var appBucket = new Aws.S3.Bucket("app-bucket");
 });
 ```
 
@@ -420,16 +420,16 @@ package myproject;
 
 import java.util.Map;
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.BucketV2;
-import com.pulumi.aws.s3.BucketV2Args;
+import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketArgs;
 
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var mediaBucket = new BucketV2("mediaBucket", BucketV2Args.builder()
+            var mediaBucket = new Bucket("mediaBucket", BucketArgs.builder()
                 .tags(Map.of("owner", "media-team"))
                 .build());
-            var appBucket = new BucketV2("appBucket");
+            var appBucket = new Bucket("appBucket");
         });
     }
 }
@@ -443,12 +443,12 @@ name: my-yaml-project
 runtime: yaml
 resources:
   mediaBucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
     properties:
       tags:
         owner: media-team
   appBucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
 ```
 
 {{% /choosable %}}
