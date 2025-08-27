@@ -89,28 +89,7 @@ pulumi package publish COMPONENT_LOCATION
 Organization templates require the Enterprise or Business Critical plan
 {{% /notes %}}
 
-The are two options for publishing templates in the private registry:
-
-1. **CLI-based publishing:** Use the Pulumi CLI to publish new templates or template versions without the need for a backing git repository.
-2. **The Pulumi GitHub App:** Use the Pulumi GitHub app to detect new templates or template versions stored in your GitHub repository.
-
-### Publishing Templates with the Pulumi CLI
-
-To publish a template to the private registry using the CLI, utilize the `pulumi template publish` command with the following flags:
-
-* **name** (required): A human readable name that is displayed anywhere the template is shown.
-* **version** (required): The template version (required, semver format).
-* **publisher**: The template publisher (e.g., 'pulumi'). Defaults to the default organization in your pulumi config.
-
-To publish a new template named `API Service` that's located in the working directory, the following command is used:
-
-`pulumi template publish --name "API Service" --version 1.0.0`
-
-A path can optionally be included after `publish` for templates not in the working directory.
-
-### Publishing Templates with the Pulumi GitHub App
-
-To publish templates in the private registry using the Pulumi GitHub App, follow [this integration guide](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#prerequisites). Once the integration is complete, discovered templates will appear in the private registry.
+To publish templates in the private registry, follow [this integration guide](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#prerequisites). Once the integration is complete, discovered templates will appear in the private registry.
 
 ### Components in Templates
 
