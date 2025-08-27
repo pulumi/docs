@@ -31,7 +31,7 @@ social:
 
     linkedin: |
         🚀 New in Pulumi: Automatic API Documentation for Pulumi components
-        Platform teams, we heard you. Managing infrastructure documentation houldn't slow you down.
+        Platform teams, we heard you. Managing infrastructure documentation shouldn't slow you down.
         Today's release brings two powerful capabilities to your private registry:
         ✨ Automatic API Documentation
         Every component you publish now gets comprehensive, multi-language API docs—automatically generated, always in sync. Your Python components show TypeScript developers TypeScript examples. No manual documentation needed.
