@@ -141,7 +141,7 @@ Next, we need to define our dependencies in `package.json`.
     "description": "Static Page Component",
     "dependencies": {
         "@pulumi/aws": "^7.6.0",
-        "@pulumi/pulumi": "^3.159.0"
+        "@pulumi/pulumi": "^3.191.0"
     },
     "devDependencies": {
         "@types/node": "^22.0.0",
@@ -213,7 +213,7 @@ Next, we need to define our dependencies in `requirements.txt`.
 ***Example:** `requirements.txt` for a Pulumi Component*
 
 ```txt
-pulumi>=3.159.0,<4.0
+pulumi>=3.191.0,<4.0
 pulumi_aws>=7.6.0
 ```
 
@@ -243,7 +243,7 @@ go 1.25
 
 require (
 	github.com/pulumi/pulumi-aws/sdk/v7 v7.6.0
-	github.com/pulumi/pulumi/sdk/v3 v3.185.0
+	github.com/pulumi/pulumi/sdk/v3 v3.191.0
 )
 ```
 
@@ -278,7 +278,7 @@ Next, we need to define our dependencies in `StaticPageComponent.csproj`.
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pulumi" Version="3.159.0" />
+    <PackageReference Include="Pulumi" Version="3.87.0" />
     <PackageReference Include="Pulumi.AWS" Version="7.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.*" />
   </ItemGroup>
@@ -2364,7 +2364,7 @@ Now lets create our `package.json`. We'll need the standard `pulumi` SDK and our
 {
     "name": "use-static-page-component",
     "dependencies": {
-        "@pulumi/pulumi": "^3.159.0",
+        "@pulumi/pulumi": "^3.191.0",
         "@pulumi/static-page-component": "file:sdks/static-page-component"
     }
 }
@@ -2436,7 +2436,7 @@ Now lets create our `package.json` and `tsconfig.json`. We'll need the standard 
         "@types/node": "22.13.5"
     },
     "dependencies": {
-        "@pulumi/pulumi": "^3.159.0",
+        "@pulumi/pulumi": "^3.191.0",
         "@pulumi/static-page-component": "file:sdks/static-page-component"
     }
 }
@@ -2528,7 +2528,7 @@ Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK and
 
 ```toml
 sdk/python
-pulumi>=3.159.0,<4.0
+pulumi>=3.191.0,<4.0
 ```
 
 Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
@@ -2584,7 +2584,7 @@ module use-static-page-component
 go 1.25
 
 require (
-    github.com/pulumi/pulumi/sdk/v3 v3.185.0
+    github.com/pulumi/pulumi/sdk/v3 v3.191.0
     github.com/static-page-component v0.0.0
 )
 
@@ -2673,7 +2673,7 @@ Now lets create our `.csproj`. We'll need the standard `pulumi` SDK and our cust
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pulumi" Version="3.159.0" />
+    <PackageReference Include="Pulumi" Version="3.87.0" />
   </ItemGroup>
 
   <ItemGroup>
