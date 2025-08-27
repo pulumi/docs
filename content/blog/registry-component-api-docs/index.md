@@ -51,7 +51,7 @@ Platform teams invest significant effort in creating reusable infrastructure com
 
 Until now, when platform teams published components to their private registry, developers still had to figure out how to use them. Without proper API documentation, developers had to resort to reading source code or pinging the platform team on Slack—neither of which scales. Even when documentation exists, keeping it synchronized with the actual component implementation becomes yet another maintenance burden.
 
-## Automatic API Documentation: From Code to Comprehensive Docs
+## From Code to Comprehensive Docs
 
 Starting today, whenever you publish a component to your Pulumi private registry—whether it's a brand new component or an updated version—Pulumi automatically generates comprehensive API documentation for all of the component's resources.
 
