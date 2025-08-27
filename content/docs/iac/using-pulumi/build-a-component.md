@@ -1042,13 +1042,13 @@ class StaticPage : ComponentResource {
 
         // Configure the bucket website
         var bucketWebsite = new BucketWebsiteConfiguration($"{name}-website", new() {
-            Bucket = bucket.Id,
+            Bucket = bucket.Bucket,
             IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs { Suffix = "index.html" },
         }, new() { Parent = bucket });
 
         // Create a bucket object for the index document
         var bucketObject = new BucketObject($"{name}-index-object", new BucketObjectArgs {
-            Bucket = bucket.Id,
+            Bucket = bucket.Bucket,
             Key = "index.html",
             Content = args.IndexContent,
             ContentType = "text/html",
@@ -1056,13 +1056,13 @@ class StaticPage : ComponentResource {
 
         // Create a public access block for the bucket
         var publicAccessBlock = new BucketPublicAccessBlock($"{name}-public-access-block", new() {
-            Bucket = bucket.Id,
+            Bucket = bucket.Bucket,
             BlockPublicAcls = false,
         }, new() { Parent = bucket });
 
         // Set the access policy for the bucket so all objects are readable
         var bucketPolicy = new BucketPolicy($"{name}-bucket-policy", new() {
-            Bucket = bucket.Id,
+            Bucket = bucket.Bucket,
             Policy = bucket.Id.Apply(this.AllowGetObjectPolicy),
         }, new() { Parent = bucket, DependsOn = publicAccessBlock });
 
@@ -1867,13 +1867,13 @@ Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `B
 
         // Configure the bucket website
         var bucketWebsite = new BucketWebsiteConfiguration($"{name}-website", new() {
-            Bucket = bucket.Id,
+            Bucket = bucket.Bucket,
             IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs { Suffix = "index.html" },
         }, new() { Parent = bucket });
 
         // Create a bucket object for the index document
         var bucketObject = new BucketObject($"{name}-index-object", new BucketObjectArgs {
-            Bucket = bucket.Id,
+            Bucket = bucket.Bucket,
             Key = "index.html",
             Content = args.IndexContent,
             ContentType = "text/html",
@@ -1881,13 +1881,13 @@ Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `B
 
         // Create a public access block for the bucket
         var publicAccessBlock = new BucketPublicAccessBlock($"{name}-public-access-block", new() {
-            Bucket = bucket.Id,
+            Bucket = bucket.Bucket,
             BlockPublicAcls = false,
         }, new() { Parent = bucket });
 
         // Set the access policy for the bucket so all objects are readable
         var bucketPolicy = new BucketPolicy($"{name}-bucket-policy", new() {
-            Bucket = bucket.Id,
+            Bucket = bucket.Bucket,
             Policy = bucket.Id.Apply(this.AllowGetObjectPolicy),
         }, new() { Parent = bucket, DependsOn = publicAccessBlock });
 // ...
