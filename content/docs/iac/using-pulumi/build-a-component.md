@@ -2559,29 +2559,6 @@ website_url = page.endpoint.apply(lambda v: f"http://{v}")
 pulumi.export('websiteURL', website_url)
 ```
 
-#### Test the component locally
-
-Before running `pulumi preview`, you need to make the component provider available to Pulumi. Create an executable script in your component directory:
-
-```bash
-# In the static-page-component directory
-cat > pulumi-resource-static-page-component << 'EOF'
-#!/bin/bash
-cd "$(dirname "$0")"
-source venv/bin/activate
-exec python __main__.py "$@"
-EOF
-
-chmod +x pulumi-resource-static-page-component
-```
-
-Then add it to your PATH when testing:
-
-```bash
-export PATH="../static-page-component:$PATH"
-pulumi config set aws:region us-west-2
-pulumi preview
-```
 
 {{% /choosable %}}
 
