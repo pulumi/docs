@@ -75,7 +75,7 @@ This tutorial is based on the [`inlineProgram-ts` example](https://github.com/pu
 ```typescript
 const pulumiProgram = async () => {
     // Create a bucket and expose a website index document.
-    const siteBucket = new s3.BucketV2("s3-website-bucket", {});
+    const siteBucket = new s3.Bucket("s3-website-bucket", {});
 
     const indexContent = `<html><head>
 <title>Hello S3</title><meta charset="UTF-8">
@@ -135,7 +135,7 @@ This tutorial is based on the [`inline_program` example](https://github.com/pulu
 ```python
 def pulumi_program():
     # Create a bucket and expose a website index document.
-    site_bucket = s3.BucketV2("s3-website-bucket")
+    site_bucket = s3.Bucket("s3-website-bucket")
 
     index_content = """
     <html>
@@ -192,7 +192,7 @@ This tutorial is based on the [`inline_program` example](https://github.com/pulu
 deployFunc := func(ctx *pulumi.Context) error {
     // Similar go git_repo_program, our program defines a s3 website.
     // Here we create the bucket.
-    siteBucket, err := s3.NewBucketV2(ctx, "s3-website-bucket", nil)
+    siteBucket, err := s3.NewBucket(ctx, "s3-website-bucket", nil)
     if err != nil {
         return err
     }
@@ -338,7 +338,7 @@ This tutorial is based on the [`InlineProgram` example](https://github.com/pulum
 private static void pulumiProgram(Context ctx) {
 
     // Create an AWS resource (S3 Bucket)
-    var siteBucket = new BucketV2("s3-website-bucket");
+    var siteBucket = new Bucket("s3-website-bucket");
 
     var website = new BucketWebsiteConfigurationV2("website", BucketWebsiteConfigurationV2Args.builder()
             .bucket(siteBucket.id())
