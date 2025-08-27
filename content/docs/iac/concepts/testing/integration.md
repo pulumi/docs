@@ -100,7 +100,7 @@ integration.ProgramTest(t, &integration.ProgramTestOptions{
     ExtraRuntimeValidation: func(t *testing.T, stack integration.RuntimeValidationStackInfo) {
         var foundBuckets int
         for _, res := range stack.Deployment.Resources {
-            if res.Type == "aws:s3/bucketv2:BucketV2" {
+            if res.Type == "aws:s3/bucket:Bucket" {
                 foundBuckets++
             }
         }
