@@ -17,4 +17,12 @@ demo_video:
     subtitle: Breaking news from Pulumi – platform engineering is about to change.
     videoID: 9GB9M2l1OgY
 
+event_data:
+  name: "Meet Neo Live: Your Newest Platform Engineer"
+  start_date: 2025-09-16T10:00:00-07:00
+  end_date: 2025-09-16T11:00:00-07:00
+  url: "https://www.pulumi.com/product/neo"
+  description: |
+    Join Pulumi September 16th at 10:00 AM PT (UTC-7) for the exclusive introduction to Neo.
+
 ---
