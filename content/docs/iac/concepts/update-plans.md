@@ -89,9 +89,9 @@ template](https://github.com/pulumi/templates/tree/master/aws-typescript).
         "aws:region": "us-east-1"
     },
     "resourcePlans": {
-        "urn:pulumi:dev::examplets::aws:s3/bucketv2:BucketV2::my-bucket": {
+        "urn:pulumi:dev::examplets::aws:s3/bucket:Bucket::my-bucket": {
             "goal": {
-                "type": "aws:s3/bucketv2:BucketV2",
+                "type": "aws:s3/bucket:Bucket",
                 "name": "my-bucket",
                 "custom": true,
                 "inputDiff": {
@@ -176,7 +176,7 @@ template](https://github.com/pulumi/templates/tree/master/aws-typescript).
 This is a textual representation of the goals, and operation steps that the program planned to take.
 
 For the most part this should be readable without much internal knowledge of Pulumi, for example you can see
-this plans on creating an `s3:BucketV2` object called "my-bucket-6209a55". A lot of the other options correspond
+this plans on creating an `s3:Bucket` object called "my-bucket-6209a55". A lot of the other options correspond
 directly to things you should be familiar with from Pulumi programs (such as parents, providers, custom or
  component resources).
 
