@@ -4,7 +4,7 @@ h1: "Automatic Diagram Generation for Always-Accurate Diagrams"
 authors: 
   - "elisabeth-lichtie"
 tags: ["aws", "diagram", "architecture", "CI/CD", "anthropic", "claude", "github", "actions"]
-meta_desc: "Automate tedious diagramming work in you CI/CD pipelines to maintain always-accurate architecture diagrams."
+meta_desc: "Automate tedious diagramming work in your CI/CD pipelines to maintain always-accurate architecture diagrams."
 date: "2025-08-28"
 meta_image: "Automatic_Diagramming.png"
 
@@ -25,7 +25,7 @@ Both approaches eliminate manual diagramming work while ensuring your documentat
 
 Pulumi's ongoing investment in AI capabilities will soon unlock even more powerful possibilities: organization-wide diagramming patterns and styles, project-level and organization-level views beyond individual stacks, and diagrams intelligently customized for different stakeholders with varying levels of detail and visibility. The examples in this post are just the beginning of how Pulumi's AI-enabled approach will transform infrastructure documentation.
 
-## Native Pulumi diagramming with GitHub actions
+## Native Pulumi diagramming with GitHub Actions
 
 Pulumi's built-in `pulumi stack graph` command generates architecture diagrams directly from your deployed infrastructure state. This approach provides a reliable foundation for automated diagramming since it reflects your actual deployed resources rather than just the code.
 
@@ -280,3 +280,15 @@ However, this approach also has limitations:
 **Preview limitations**: Diagrams reflect planned changes from `pulumi preview` rather than actual deployed state, which may differ if deployments fail.
 
 This approach works best for teams that value diagram aesthetics and need multiple architectural views for different stakeholders, while accepting slightly more complexity and potential accuracy trade-offs in exchange for significantly better visual presentation.
+
+## Conclusion
+
+Automating diagram generation transforms one of the most tedious aspects of infrastructure management into a seamless part of your development workflow. Both approaches eliminate the manual overhead of keeping architecture diagrams current while solving the core problem of documentation drift.
+
+**Choose native Pulumi diagramming** when accuracy is paramount and you need diagrams that perfectly reflect your deployed infrastructure. This approach offers the highest reliability with minimal setup complexity.
+
+**Choose AI-powered diagramming** when you need polished, stakeholder-friendly diagrams and can accept slightly more complexity for significantly better aesthetics and multiple architectural perspectives.
+
+Regardless of which approach you choose, you'll eliminate hours of manual work while ensuring your documentation stays synchronized with your infrastructure changes. As Pulumi continues advancing its AI capabilities, the possibilities for intelligent, context-aware diagramming will only expand, making infrastructure documentation both effortless and incredibly powerful.
+
+The future of infrastructure documentation is automated, intelligent, and always accurate. With these examples as your foundation, you're ready to transform how your team approaches architecture visualization.
