@@ -29,6 +29,10 @@ Pulumi's ongoing investment in AI capabilities will soon unlock even more powerf
 
 Pulumi's built-in `pulumi stack graph` command generates architecture diagrams directly from your deployed infrastructure state. This approach provides a reliable foundation for automated diagramming since it reflects your actual deployed resources rather than just the code.
 
+{{% notes type="info" %}}
+**Complete example**: View the full working example on GitHub <!-- TODO: Add public repository link -->
+{{% /notes %}}
+
 Here's a complete GitHub Actions workflow that deploys infrastructure and automatically generates diagrams:
 
 ```yaml
@@ -121,3 +125,158 @@ However, this approach has some limitations:
 After each workflow run, you can download the generated diagrams from the Actions tab in your repository. Click on any workflow run, scroll to the "Artifacts" section, and download the `architecture-diagrams` package.
 
 For a more sophisticated setup, you could extend this workflow to automatically commit diagrams back to your repository, post them to Slack, or integrate them with your documentation system.
+
+## AI-powered diagramming with Claude and Mermaid
+
+The second approach leverages Claude's ability to analyze Pulumi preview output and generate aesthetically pleasing, contextually relevant diagrams using Mermaid syntax. This method addresses the styling limitations of native Pulumi diagrams while maintaining accuracy through `pulumi preview` integration.
+
+{{% notes type="info" %}}
+**Complete example**: View the full working example on GitHub <!-- TODO: Add public repository link -->
+{{% /notes %}}
+
+### The automated workflow
+
+This approach uses two GitHub Actions workflows working together:
+
+**Auto-comment workflow** (`auto-pr-comment.yml`):
+
+```yaml
+name: Auto PR Comment
+
+on:
+  pull_request:
+    types: [opened]
+    paths:
+      - 'index.ts'
+      - 'Pulumi.yaml'
+      - 'Pulumi.*.yaml'
+
+jobs:
+  comment:
+    if: github.actor != 'claude-code[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '@claude update the diagrams to reflect any infrastructure changes.'
+            })
+```
+
+**Claude integration workflow** (`claude.yml`):
+
+```yaml
+name: Claude Code
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  claude:
+    if: contains(github.event.comment.body, '@claude')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Claude Code
+        uses: anthropics/claude-code-action@beta
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          allowed_tools: "Bash(npm install),Bash(pulumi stack select prod),Bash(pulumi preview --json),Bash(npx mmdc)"
+          custom_instructions: |
+            ## Pulumi Infrastructure Diagramming Assistant
+
+            ### Step 1: Analyze Infrastructure State
+            - Run `npm install` and `pulumi stack select prod`
+            - Execute `pulumi preview --json` to get detailed resource plan
+            - Parse JSON output to understand resource relationships and changes
+
+            ### Step 2: Generate/Update Diagrams
+            Update Mermaid diagram files in `/diagrams/`:
+            - aws-infrastructure.mmd: Technical AWS resource diagram
+            - c4-context.mmd: System context diagram
+            - c4-container.mmd: Container-level view
+            - c4-component.mmd: Component-level architecture
+
+            ### Step 3: Generate SVG Files
+            Convert .mmd files to .svg using mmdc CLI
+```
+
+### How the AI approach works
+
+1. **Automatic triggering**: When a pull request with infrastructure changes is opened, the auto-comment workflow adds a `@claude` mention, triggering Claude's analysis.
+
+2. **Infrastructure analysis**: Claude runs `pulumi preview --json` to get detailed information about planned infrastructure changes, including resource relationships and dependencies.
+
+3. **Intelligent diagram generation**: Claude analyzes the preview output and updates multiple Mermaid diagrams:
+   - **AWS infrastructure diagram**: Technical view showing resources, networking, and data flow
+   - **C4 diagrams**: Context, container, and component views for different stakeholder needs
+
+4. **Visual rendering**: The `mmdc` CLI converts Mermaid syntax to SVG files for immediate viewing.
+
+5. **PR integration**: Updated diagrams are committed directly to the pull request branch, making them visible in code review.
+
+### Example generated diagram
+
+Here's a sample of the AWS infrastructure diagram that Claude generates:
+
+```mermaid
+graph TB
+    subgraph VPC["myVpc - CIDR: 10.0.0.0/16"]
+        subgraph PublicSubnet["myPublicSubnet - CIDR: 10.0.1.0/24"]
+            EC2["myInstance<br/>Type: t2.micro<br/>AMI: Latest Amazon Linux 2"]
+        end
+
+        IGW["myInternetGateway<br/>Internet connectivity"]
+        SG["mySecurityGroup<br/>HTTP (80) + SSH (22) access"]
+    end
+
+    WEB_USER["Web Users"] -->|HTTP requests| IGW
+    IGW --> PublicSubnet
+    SG --> EC2
+```
+
+### Key advantages and limitations
+
+**Intelligent styling**: Claude generates aesthetically pleasing diagrams with consistent formatting, colors, and layout that's much more polished than native Pulumi output.
+
+**Multiple perspectives**: Creates different diagram types (technical infrastructure, C4 architecture views) suitable for different audiences and stakeholder needs.
+
+**Context awareness**: Claude understands the purpose and relationships of resources, creating meaningful groupings and flow representations.
+
+**Automated maintenance**: Diagrams update automatically with infrastructure changes, staying current without manual intervention.
+
+**Integration with code review**: Diagrams appear directly in pull requests, making infrastructure changes visible during review.
+
+However, this approach also has limitations:
+
+**Potential for inaccuracy**: Unlike native Pulumi diagrams that are generated directly from infrastructure state, AI-generated diagrams depend on Claude's interpretation of preview output. While generally reliable, there's inherent risk of misinterpretation or missed details that could lead to diagram inaccuracies.
+
+**AI dependency**: Diagram accuracy is only as good as Claude's understanding of complex infrastructure relationships, which may occasionally miss nuances or make incorrect assumptions.
+
+**Setup complexity**: Requires more configuration including API keys, GitHub app installation, and workflow permissions.
+
+**Cost considerations**: Each diagram update consumes Claude API credits, though costs are typically minimal for most projects.
+
+**Preview limitations**: Diagrams reflect planned changes from `pulumi preview` rather than actual deployed state, which may differ if deployments fail.
+
+This approach works best for teams that value diagram aesthetics and need multiple architectural views for different stakeholders, while accepting slightly more complexity and potential accuracy trade-offs in exchange for significantly better visual presentation.
