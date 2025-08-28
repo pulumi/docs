@@ -144,7 +144,7 @@ Next, we need to define our dependencies in `package.json`.
         "@pulumi/pulumi": "^3.191.0"
     },
     "devDependencies": {
-        "@types/node": "^22.0.0",
+        "@types/node": "^24.0.0",
         "typescript": "^5.9.2"
     }
 }
@@ -214,7 +214,7 @@ Next, we need to define our dependencies in `requirements.txt`.
 
 ```txt
 pulumi>=3.191.0,<4.0
-pulumi_aws>=7.6.0
+pulumi_aws>=7.6.0,<8.0
 ```
 
 The `pulumi` SDK contains everything we need for making a component. The `pulumi_aws` package is the AWS provider that we are building on top of.
@@ -279,7 +279,7 @@ Next, we need to define our dependencies in `StaticPageComponent.csproj`.
 
   <ItemGroup>
     <PackageReference Include="Pulumi" Version="3.87.0" />
-    <PackageReference Include="Pulumi.AWS" Version="7.6.0" />
+    <PackageReference Include="Pulumi.AWS" Version="7.*" />
     <PackageReference Include="Newtonsoft.Json" Version="13.*" />
   </ItemGroup>
 </Project>
@@ -347,7 +347,7 @@ Next, we need to define our dependencies and project configuration in a Maven `p
     <dependency>
       <groupId>com.pulumi</groupId>
       <artifactId>aws</artifactId>
-      <version>7.6.0</version>
+      <version>(7.6.0,7.99]</version>
     </dependency>
   </dependencies>
 
@@ -2433,7 +2433,7 @@ Now lets create our `package.json` and `tsconfig.json`. We'll need the standard 
 {
     "name": "use-static-page-component",
     "devDependencies": {
-        "@types/node": "22.13.5"
+        "@types/node": "^24.0.0"
     },
     "dependencies": {
         "@pulumi/pulumi": "^3.191.0",
@@ -2522,12 +2522,27 @@ pulumi package add ../static-page-component
 
 This creates a new subdirectory called `sdks/` that contains the generated SDK.
 
+#### Update Pulumi.yaml with packages reference
+
+You need to manually add the packages section to your `Pulumi.yaml`:
+
+```yaml
+name: use-static-page-component
+description: A minimal Python Pulumi program that uses the custom Static Page component
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+packages:
+  static-page-component: ../static-page-component@0.0.0
+```
+
 #### Add the package dependencies
 
-Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK and our custom component. To use that, just add the path to the generated Python SDK:
+Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK:
 
-```toml
-sdk/python
+```txt
 pulumi>=3.191.0,<4.0
 ```
 
@@ -2540,7 +2555,7 @@ Next, set up your virtual environment:
 ```bash
 $ python -m venv venv
 $ source venv/bin/activate
-$ pip install -r requirements.txt
+$ pulumi install
 ```
 
 #### Create the Pulumi program
@@ -2654,6 +2669,19 @@ pulumi package add ../static-page-component
 ```
 
 This creates a new subdirectory called `sdks/` that contains the generated SDK.
+
+#### Update Pulumi.yaml with packages reference
+
+You need to manually add the packages section to your `Pulumi.yaml`:
+
+```yaml
+name: use-static-page-component
+description: A minimal C# Pulumi program that uses the custom Static Page component
+runtime:
+  name: dotnet
+packages:
+  static-page-component: ../static-page-component@0.0.0
+```
 
 #### Add the .NET project file
 
