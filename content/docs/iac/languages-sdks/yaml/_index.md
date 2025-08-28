@@ -41,7 +41,7 @@ config:
     type: string
 resources:
   my-bucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
   my-bucket-website:
     type: aws:s3:BucketWebsiteConfigurationV2
     properties:
