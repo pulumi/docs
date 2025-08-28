@@ -36,7 +36,7 @@ tiers:
                 - Secure collaboration and CI/CD
                 - AI assistance with Pulumi Copilot
                 - Resource search
-                - OIDC and team access tokens
+                - OIDC issuer tokens
                 - Webhooks
                 - Automatic secrets rotation
                 - Community support
