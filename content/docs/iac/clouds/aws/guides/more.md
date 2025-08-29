@@ -44,7 +44,7 @@ This example provisions an S3 bucket and an Athena database, then creates a name
 ```typescript
 import * as aws from "@pulumi/aws";
 
-const databaseBucket = new aws.s3.BucketV2("mydatabasebucket", {
+const databaseBucket = new aws.s3.Bucket("mydatabasebucket", {
     forceDestroy: true,
 });
 

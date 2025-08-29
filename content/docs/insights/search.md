@@ -28,7 +28,7 @@ For example, a query like
 
 > bucket
 
-will return resources having [types][types] like `aws:s3/bucketv2:BucketV2` or `aws:s3/bucketobject:BucketObject`. It will also return resources in stacks named "bucket" or projects named "my-cool-bucket".
+will return resources having [types][types] like `aws:s3/bucket:Bucket` or `aws:s3/bucketobject:BucketObject`. It will also return resources in stacks named "bucket" or projects named "my-cool-bucket".
 
 Similarly, a query for
 
