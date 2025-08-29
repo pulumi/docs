@@ -58,7 +58,7 @@ pulumi package publish github.com/acme/k8s-cluster --readme README_LOCATION
 
 #### Component API Docs
 
-When a new component or component version is published, API documentation is automatically generated for each of the supported Pulumi languages.
+In addition to the component README, when a new component or component version is published, API documentation is automatically generated for each of the supported Pulumi languages
 
 #### Specifying an Organization
 
