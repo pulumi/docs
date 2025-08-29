@@ -246,7 +246,7 @@ public class AwsS3Website : Pulumi.ComponentResource
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.Bucket;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
 
@@ -309,14 +309,14 @@ class AwsS3Website extends pulumi.ComponentResource {
         super("quickstart:index:AwsS3Website", name, args, opts);
 
         // Create an AWS resource (S3 Bucket)
-        const bucket = new aws.s3.BucketV2("my-bucket", {}, {
+        const bucket = new aws.s3.Bucket("my-bucket", {}, {
             // Set the parent to the component (step #2) above.
             // Also, do the same for all other resources below.
             parent: this,
         });
 
         // Turn the bucket into a website:
-        const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
+        const website = new aws.s3.BucketWebsiteConfiguration("website", {
             bucket: bucket.id,
             indexDocument: {
                 suffix: "index.html",
@@ -382,14 +382,14 @@ export class AwsS3Website extends pulumi.ComponentResource {
         super("quickstart:index:AwsS3Website", name, args, opts);
 
         // Create an AWS resource (S3 Bucket)
-        const bucket = new aws.s3.BucketV2("my-bucket", {}, {
+        const bucket = new aws.s3.Bucket("my-bucket", {}, {
             // Set the parent to the component (step #2) above.
             // Also, do the same for all other resources below.
             parent: this,
         });
 
         // Turn the bucket into a website:
-        const website = new aws.s3.BucketWebsiteConfigurationV2("website", {
+        const website = new aws.s3.BucketWebsiteConfiguration("website", {
             bucket: bucket.id,
             indexDocument: {
                 suffix: "index.html",
@@ -445,14 +445,14 @@ class AwsS3Website(pulumi.ComponentResource):
         super().__init__('quickstart:index:AwsS3Website', name, { 'files': files }, opts)
 
         # Create an AWS resource (S3 Bucket)
-        bucket = s3.BucketV2('my-bucket',
+        bucket = s3.Bucket('my-bucket',
             # Set the parent to the component (step #2) above.
             # Also, do the same for all other resources below.
             opts=pulumi.ResourceOptions(parent=self),
         )
 
         # Turn the bucket into a website:
-        website = s3.BucketWebsiteConfigurationV2("website",
+        website = s3.BucketWebsiteConfiguration("website",
             bucket=bucket.id,
             index_document={
                 "suffix": "index.html",
@@ -526,7 +526,7 @@ func NewAwsS3Website(ctx *pulumi.Context, name string, args AwsS3WebsiteArgs, op
 	}
 
 	// Create an AWS resource (S3 Bucket)
-	bucket, err := s3.NewBucketV2(ctx, "my-bucket", nil,
+	bucket, err := s3.NewBucket(ctx, "my-bucket", nil,
 		// Set the parent to the component (step #2) above.
 		// Also, do the same for all other resources below.
 		pulumi.Parent(self))
@@ -535,9 +535,9 @@ func NewAwsS3Website(ctx *pulumi.Context, name string, args AwsS3WebsiteArgs, op
 	}
 
 	// Turn the bucket into a website:
-	website, err := s3.NewBucketWebsiteConfigurationV2(ctx, "website", &s3.BucketWebsiteConfigurationV2Args{
+	website, err := s3.NewBucketWebsiteConfiguration(ctx, "website", &s3.BucketWebsiteConfigurationArgs{
 		Bucket: bucket.ID(),
-		IndexDocument: &s3.BucketWebsiteConfigurationV2IndexDocumentArgs{
+		IndexDocument: &s3.BucketWebsiteConfigurationIndexDocumentArgs{
 			Suffix: pulumi.String("index.html"),
 		},
 	}, pulumi.Parent(self))
@@ -611,7 +611,7 @@ public class AwsS3Website : Pulumi.ComponentResource
         : base("quickstart:index:AwsS3Website", name, opts)
     {
         // Create an AWS resource (S3 Bucket)
-        var bucket = new BucketV2("my-bucket", new(), new CustomResourceOptions
+        var bucket = new Bucket("my-bucket", new(), new CustomResourceOptions
         {
             // Set the parent to the component (step #2) above.
             // Also, do the same for all other resources below.
@@ -619,10 +619,10 @@ public class AwsS3Website : Pulumi.ComponentResource
         });
 
         // Turn the bucket into a website:
-        var website = new BucketWebsiteConfigurationV2("website", new()
+        var website = new BucketWebsiteConfiguration("website", new()
         {
             Bucket = bucket.Id,
-            IndexDocument = new BucketWebsiteConfigurationV2IndexDocumentArgs
+            IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs
             {
                 Suffix = "index.html",
             },
@@ -717,15 +717,15 @@ class AwsS3Website extends ComponentResource {
         super("quickstart:index:AwsS3Website", name, args, opts);
 
         // Create an AWS resource (S3 Bucket)
-        var bucket = new BucketV2("my-bucket", null,
+        var bucket = new Bucket("my-bucket", null,
             // Set the parent to the component (step #2) above.
             // Also, do the same for all other resources below.
             CustomResourceOptions.builder().parent(this).build());
 
         // Turn the bucket into a website:
-        var website = new BucketWebsiteConfigurationV2("website", BucketWebsiteConfigurationV2Args.builder()
+        var website = new BucketWebsiteConfiguration("website", BucketWebsiteConfigurationArgs.builder()
             .bucket(bucket.id())
-            .indexDocument(BucketWebsiteConfigurationV2IndexDocumentArgs.builder()
+            .indexDocument(BucketWebsiteConfigurationIndexDocumentArgs.builder()
                 .suffix("index.html")
                 .build())
             .build(), CustomResourceOptions.builder().parent(this).build());
@@ -935,16 +935,16 @@ Previewing update (dev)
      Type                                       Name                 Plan
      pulumi:pulumi:Stack                        quickstart-dev
  +   ├─ quickstart:index:AwsS3Website           my-site              create
- +   │  ├─ aws:s3:BucketV2                      my-bucket            create
- +   │  ├─ aws:s3:BucketWebsiteConfigurationV2  website              create
+ +   │  ├─ aws:s3:Bucket                      my-bucket            create
+ +   │  ├─ aws:s3:BucketWebsiteConfiguration    website              create
  +   │  ├─ aws:s3:BucketOwnershipControls       ownership-controls   create
  +   │  ├─ aws:s3:BucketPublicAccessBlock       public-access-block  create
  +   │  └─ aws:s3:BucketObject                  index.html           create
  -   ├─ aws:s3:BucketObject                     index.html           delete
  -   ├─ aws:s3:BucketPublicAccessBlock          public-access-block  delete
  -   ├─ aws:s3:BucketOwnershipControls          ownership-controls   delete
- -   ├─ aws:s3:BucketWebsiteConfigurationV2     website              delete
- -   └─ aws:s3:BucketV2                         my-bucket            delete
+ -   ├─ aws:s3:BucketWebsiteConfiguration       website              delete
+ -   └─ aws:s3:Bucket                         my-bucket            delete
 
 Resources:
     + 6 to create
@@ -978,16 +978,16 @@ Updating (dev)
      Type                                       Name                 Status
      pulumi:pulumi:Stack                        pu-quickstart-dev
  +   ├─ quickstart:index:AwsS3Website           my-site              created (0.16s)
- +   │  ├─ aws:s3:BucketV2                      my-bucket            created (1s)
- +   │  ├─ aws:s3:BucketWebsiteConfigurationV2  website              created (0.24s)
+ +   │  ├─ aws:s3:Bucket                      my-bucket            created (1s)
+ +   │  ├─ aws:s3:BucketWebsiteConfiguration    website              created (0.24s)
  +   │  ├─ aws:s3:BucketPublicAccessBlock       public-access-block  created (0.49s)
  +   │  ├─ aws:s3:BucketOwnershipControls       ownership-controls   created (0.63s)
  +   │  └─ aws:s3:BucketObject                  index.html           created (0.19s)
  -   ├─ aws:s3:BucketObject                     index.html           deleted (0.18s)
  -   ├─ aws:s3:BucketOwnershipControls          ownership-controls   deleted (0.58s)
  -   ├─ aws:s3:BucketPublicAccessBlock          public-access-block  deleted (0.18s)
- -   ├─ aws:s3:BucketWebsiteConfigurationV2     website              deleted (0.27s)
- -   └─ aws:s3:BucketV2                         my-bucket            deleted (0.51s)
+ -   ├─ aws:s3:BucketWebsiteConfiguration       website              deleted (0.27s)
+ -   └─ aws:s3:Bucket                         my-bucket            deleted (0.51s)
 
 Outputs:
   ~ url: "http://my-bucket-b531107.s3-website-us-west-2.amazonaws.com" => "http://my-bucket-d05c30a.s3-website-us-west-2.amazonaws.com"
