@@ -140,14 +140,16 @@ In Windsurf, configure the MCP server through the IDE settings:
 
 1. Open Windsurf settings
 2. Navigate to MCP Servers section
-3. Add a new server with the following configuration:
+3. In `mcpServers` section, add a new server with the following configuration:
 
 ```json
-{
-  "name": "pulumi",
+"pulumi": {
   "command": "npx",
-  "args": ["@pulumi/mcp-server"],
-  "type": "stdio"
+  "args": [
+    "@pulumi/mcp-server",
+    "stdio"
+  ],
+  "env": {}
 }
 ```
 
