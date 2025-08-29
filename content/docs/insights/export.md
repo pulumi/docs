@@ -38,9 +38,9 @@ created, custom, delete, id, modified, module, name, package, parent_urn, pendin
 | delete       | Whether the resource is marked for deletion in the next update.                                                    |
 | id           | The physical name of the resource, as assigned by the resource's provider.                                         |
 | modified     | The UTC time when the resource's state was last modified during an update, refresh or import.                      |
-| module       | The module component of the resource's type. This is `s3` for a resource of type `aws:s3/bucketv2:BucketV2`.       |
+| module       | The module component of the resource's type. This is `s3` for a resource of type `aws:s3/bucket:Bucket`.       |
 | name         | The logical name of the resource. Typically the first parameter provided to the resource when it was instantiated. |
-| package      | The package component of the resource's type. This is `aws` for a resource of type `aws:s3/bucketv2:BucketV2`.     |
+| package      | The package component of the resource's type. This is `aws` for a resource of type `aws:s3/bucket:Bucket`.     |
 | parent_urn   | The URN of the resource's parent, if it has one.                                                                   |
 | pending      | The state of the resource if it is pending. Typically indicates an operation that was interrupted due to an error. |
 | project      | The project the resource belongs to.                                                                               |

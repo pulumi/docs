@@ -772,7 +772,7 @@ automatically and dynamically create the bootstrap resources as needed.
 When any file assets are added to your application, CDK will automatically
 create the following staging resources.
 
-1. [aws.s3.BucketV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketv2/)
+1. [aws.s3.Bucket](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/)
   1a. `forceDestroy`: true
 2. [aws.s3.BucketServerSideEncryptionConfigurationV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketserversideencryptionconfigurationv2/)
   2a. `AES256`
