@@ -1,7 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bucket = new aws.s3.BucketV2("bucket");
+const bucket = new aws.s3.Bucket("bucket");
 
 const file = new aws.s3.BucketObject("bucket-object", {
     bucket: bucket.id,

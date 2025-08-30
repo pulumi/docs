@@ -6,7 +6,7 @@ const aws = require("@pulumi/aws");
 const accountID = aws.getCallerIdentityOutput().accountId;
 
 // Create an S3 bucket.
-const bucket = new aws.s3.BucketV2("my-bucket");
+const bucket = new aws.s3.Bucket("my-bucket");
 
 // Create an S3 bucket policy allowing anyone in the account to list the contents of the bucket.
 const policy = new aws.s3.BucketPolicy("my-bucket-policy", {

@@ -1,7 +1,7 @@
 "use strict";
 const aws = require("@pulumi/aws");
 
-const bucket = new aws.s3.BucketV2("my-bucket");
+const bucket = new aws.s3.Bucket("my-bucket");
 
 const ownershipControls = new aws.s3.BucketOwnershipControls("ownership-controls", {
     bucket: bucket.id,

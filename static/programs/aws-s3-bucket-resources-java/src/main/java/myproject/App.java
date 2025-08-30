@@ -1,8 +1,9 @@
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.BucketV2;
-import com.pulumi.aws.s3.BucketV2Args;
+import com.pulumi.core.Either;
+import com.pulumi.aws.s3.Bucket;
+import com.pulumi.aws.s3.BucketArgs;
 import com.pulumi.aws.s3.BucketMetric;
 import com.pulumi.aws.s3.BucketMetricArgs;
 import com.pulumi.aws.s3.BucketNotification;
@@ -22,7 +23,7 @@ import static com.pulumi.codegen.internal.Serialization.*;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var bucket = new BucketV2("my-bucket", BucketV2Args.builder().build());
+            var bucket = new Bucket("my-bucket", BucketArgs.builder().build());
 
             var ownershipControls = new BucketOwnershipControls("ownership-controls", BucketOwnershipControlsArgs.builder()
                 .bucket(bucket.id())
@@ -53,7 +54,7 @@ public class App {
 
             var bucketPolicy = new BucketPolicy("my-bucket-policy", BucketPolicyArgs.builder()
                 .bucket(bucket.id())
-                .policy(bucket.id().applyValue(App::publicReadPolicyForBucket))
+                .policy(bucket.id().applyValue(App::publicReadPolicyForBucket).applyValue(Either::ofLeft))
                 .build(), CustomResourceOptions.builder()
                 .dependsOn(publicAccessBlock, ownershipControls)
                 .build());

@@ -4,7 +4,7 @@ runtime: yaml
 description: An example that creates a website S3 bucket, a CloudFront Origin Access Identity, and a bucket policy.
 resources:
   content-bucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
     properties:
       forceDestroy: true
 
@@ -16,7 +16,7 @@ resources:
         objectOwnership: BucketOwnerPreferred
 
   content-bucket-acl:
-    type: aws:s3:BucketAclV2
+    type: aws:s3:BucketAcl
     properties:
       bucket: ${content-bucket.bucket}
       acl: private
@@ -25,7 +25,7 @@ resources:
         - ${content-bucket-ownership}
 
   content-bucket-website:
-    type: aws:s3:BucketWebsiteConfigurationV2
+    type: aws:s3:BucketWebsiteConfiguration
     properties:
       bucket: ${content-bucket.bucket}
       indexDocument:

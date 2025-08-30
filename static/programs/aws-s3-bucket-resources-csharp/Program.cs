@@ -5,7 +5,7 @@ using Aws = Pulumi.Aws;
 
 return await Deployment.RunAsync(() =>
 {
-    var bucket = new Aws.S3.BucketV2("my-bucket");
+    var bucket = new Aws.S3.Bucket("my-bucket");
 
     var ownershipControls = new Aws.S3.BucketOwnershipControls(
         "ownership-controls",

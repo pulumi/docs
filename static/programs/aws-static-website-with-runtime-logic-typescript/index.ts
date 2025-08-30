@@ -14,9 +14,9 @@ const result = childProcess.execSync("hugo --destination ./public", { stdio: "pi
 console.log(result.toString());
 
 // Provision a storage bucket for the website.
-const bucket = new aws.s3.BucketV2("bucket");
+const bucket = new aws.s3.Bucket("bucket");
 
-const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2("bucket", {
+const bucketWebsite = new aws.s3.BucketWebsiteConfiguration("bucket", {
     bucket: bucket.id,
     indexDocument: { suffix: "index.html" },
 });

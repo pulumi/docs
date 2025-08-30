@@ -3,7 +3,7 @@ const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
 
 // Create an S3 bucket
-const s3Bucket = new aws.s3.BucketV2("myBucket");
+const s3Bucket = new aws.s3.Bucket("myBucket");
 
 // IAM Policy Document that allows the Lambda service to write to the S3 bucket
 const s3BucketPolicyDocument = s3Bucket.arn.apply(arn =>

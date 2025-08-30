@@ -1,7 +1,7 @@
 import pulumi
 import pulumi_aws as aws
 
-bucket = aws.s3.BucketV2("bucket")
+bucket = aws.s3.Bucket("bucket")
 
 file = aws.s3.BucketObject("bucket-object",
     bucket=bucket.id,

@@ -4,7 +4,7 @@ description: An example that deploys S3 bucket, metric, notification, object, an
 
 resources:
   my-bucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
     properties: {}
 
   ownership-controls:

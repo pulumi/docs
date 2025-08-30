@@ -2,7 +2,7 @@ package myproject;
 
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
-import com.pulumi.aws.s3.BucketV2;
+import com.pulumi.aws.s3.Bucket;
 import com.pulumi.aws.s3.BucketObject;
 import com.pulumi.aws.s3.BucketObjectArgs;
 import com.pulumi.core.Output;
@@ -13,7 +13,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var bucket = new BucketV2("bucket");
+        var bucket = new Bucket("bucket");
 
         var file = new BucketObject("bucket-object", BucketObjectArgs.builder()
             .bucket(bucket.id())

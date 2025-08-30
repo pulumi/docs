@@ -1,7 +1,7 @@
 import pulumi
 import pulumi_aws as aws
 
-bucket = aws.s3.BucketV2('my-bucket')
+bucket = aws.s3.Bucket('my-bucket')
 
 lambda_role = aws.iam.Role("s3-writer-role",
     assume_role_policy="""{

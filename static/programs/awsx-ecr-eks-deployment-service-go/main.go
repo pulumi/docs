@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/ecr"
-	"github.com/pulumi/pulumi-eks/sdk/v2/go/eks"
+	"github.com/pulumi/pulumi-awsx/sdk/v3/go/awsx/ecr"
+	"github.com/pulumi/pulumi-eks/sdk/v4/go/eks"
 	"github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes"
 	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/apps/v1"
 	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v4/go/kubernetes/core/v1"

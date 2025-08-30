@@ -1,7 +1,7 @@
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 
-const bucket = new aws.s3.BucketV2("my-bucket");
+const bucket = new aws.s3.Bucket("my-bucket");
 
 const lambdaRole = new aws.iam.Role("s3-writer-role", {
     assumeRolePolicy: JSON.stringify({

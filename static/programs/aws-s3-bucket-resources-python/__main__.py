@@ -2,7 +2,7 @@ import json
 import pulumi
 import pulumi_aws as aws
 
-bucket = aws.s3.BucketV2("my-bucket")
+bucket = aws.s3.Bucket("my-bucket")
 
 ownership_controls = aws.s3.BucketOwnershipControls(
     "ownership-controls",
