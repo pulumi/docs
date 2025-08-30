@@ -30,8 +30,8 @@
         		</dependency>
 				<dependency>
 					<groupId>com.pulumi</groupId>
-					<artifactId>awsx</artifactId>
-					<version>(3.0.0,3.99]</version>
+            <artifactId>awsx</artifactId>
+            <version>[3.0.0,3.99]</version>
 				</dependency>
 			</dependencies>
 
