@@ -8,7 +8,7 @@ export const s3ProductPrefixPolicy: ResourceValidationPolicy = {
     name: "s3-product-prefix",
     description: "Ensures S3 buckets have the correct product prefix.",
     enforcementLevel: "mandatory",
-    validateResource: validateResourceOfType(aws.s3.BucketV2, (bucket, args, reportViolation) => {
+    validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
         const prefix = bucket.bucketPrefix || "";
         if (prefix != REQUIRED_S3_PREFIX) {
             reportViolation(`Invalid prefix: '${prefix}'. S3 buckets must use '${REQUIRED_S3_PREFIX}' prefix.`);
