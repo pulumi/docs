@@ -21,7 +21,7 @@ result = subprocess.run(
 print(result.stdout.decode())
 
 # Provision a storage bucket for the website.
-bucket = aws.s3.BucketV2("bucket")
+bucket = aws.s3.Bucket("bucket")
 
 bucket_website = aws.s3.BucketWebsiteConfigurationV2(
     "bucket",

@@ -1,6 +1,8 @@
 package main
 
 import (
+	"encoding/json"
+	
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -26,15 +28,19 @@ func main() {
 		            "Resource": "arn:aws:s3:::my-bucket"
 		        }
 		    ]
-		}`).(pulumi.StringInput)
+		}`)
 
 		// Parse the string output.
-		policyWithNoStatements := pulumi.JSONUnmarshal(jsonIAMPolicy).ApplyT(
-			func(v interface{}) (interface{}, error) {
+		policyWithNoStatements := jsonIAMPolicy.ApplyT(
+			func(jsonStr string) (map[string]interface{}, error) {
+				var policy map[string]interface{}
+				if err := json.Unmarshal([]byte(jsonStr), &policy); err != nil {
+					return nil, err
+				}
 
 				// Empty the policy's Statements list.
-				v.(map[string]interface{})["Statement"] = []pulumi.ArrayOutput{}
-				return v, nil
+				policy["Statement"] = []interface{}{}
+				return policy, nil
 			},
 		)
 

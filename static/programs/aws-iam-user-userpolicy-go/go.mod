@@ -1,8 +1,8 @@
 module aws-iam-user-userpolicy-go
 
-go 1.21.12
+go 1.23.0
 
 require (
-	github.com/pulumi/pulumi-aws/sdk/v6 v6.47.0
-	github.com/pulumi/pulumi/sdk/v3 v3.127.0
+	github.com/pulumi/pulumi-aws/sdk/v7 v7.0.0
+	github.com/pulumi/pulumi/sdk/v3 v3.175.0
 )
