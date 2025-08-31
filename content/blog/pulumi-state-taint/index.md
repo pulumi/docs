@@ -1,7 +1,7 @@
 ---
 title: "Precise Resource Replacement with Pulumi State Taint"
 
-date: 2025-08-30T12:45:35-07:00
+date: 2025-08-31
 
 draft: false
 
@@ -52,9 +52,9 @@ Sometimes infrastructure needs a clean slate. A VM with a corrupted disk, an exp
 ## The New Commands
 
 - **`pulumi state taint <resource-urn>`** - Mark a resource for replacement
-- **`pulumi state untaint <resource-urn>`** - Cancel the replacement
+- **`pulumi state untaint <resource-urn>`** - Cancel the replacement (use `--all` to untaint all resources)
 
-> **Note**: This provides the same functionality as `pulumi up --replace <urn>`, but lets you mark resources upfront and preview changes before the update.
+> **Note**: This provides the same functionality as `pulumi up --replace <urn>`, but lets you mark resources upfront and preview changes before the update. This can be preferred when the `pulumi up` happens later in CI/CD, where arranging for `--replace` flags would be tedious.
 
 ## Why This Matters
 
