@@ -26,7 +26,7 @@ export class HeaderCta {
                 this.isLoggedIn = true;
             }
         } catch (e) {
-            // Swallow the error and so the component shows the "Get Started" button.
+            // Swallow the error and so the component shows the "Start Here" button.
         }
 
         this.loading = false;
@@ -44,7 +44,7 @@ export class HeaderCta {
         }
 
         return (
-            <a class={this.buttonClass} data-track="header-signup" href="https://app.pulumi.com/signup?utm_source=header-button" title="Sign up">Sign up</a>
+            <a class={this.buttonClass} data-track="header-start-here" href="/start-now" title="Start Here">Start Here</a>
         );
     }
 

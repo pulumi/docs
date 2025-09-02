@@ -8,8 +8,8 @@ hero:
   title: [ "The Cloud Infrastructure Platform", "Engineers Love and Enterprises Trust" ]
   description: |
     Powered by the #1 open source infrastructure as code tool.
-  cta_text: Try Pulumi Cloud for Free
-  cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
+  cta_text: Get Started Now
+  cta_link: /start-now
   secondary_cta_text: Download Open Source
   secondary_cta_link: /docs/iac/download-install
 
