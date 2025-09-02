@@ -4,8 +4,6 @@ meta_desc: Build cloud infrastructure using Go - leverage strong typing, concurr
 layout: language-start
 ---
 
-# Infrastructure as Code with Go
-
 Build high-performance cloud infrastructure using Go's simplicity, concurrency, and strong typing.
 
 ## Choose Your Cloud Provider
@@ -55,4 +53,3 @@ pulumi up
 - [Go Language Documentation](/docs/iac/concepts/languages/go/)
 - [Pulumi Go SDK Reference](https://www.pulumi.com/registry/)
 - [Join our Community Slack](https://slack.pulumi.com)
-

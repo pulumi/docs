@@ -4,11 +4,9 @@ meta_desc: Build cloud infrastructure using C# and .NET - leverage the full powe
 layout: language-start
 ---
 
-# Infrastructure as Code with C#
-
 Build enterprise-grade cloud infrastructure using C#, .NET, and the rich ecosystem of NuGet packages.
 
-## Choose Your Cloud Provider
+## Choose Your Cloud Provider ##
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 mb-12">
     <a href="/docs/iac/get-started/aws/" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow border border-gray-200">
@@ -37,7 +35,7 @@ Build enterprise-grade cloud infrastructure using C#, .NET, and the rich ecosyst
     </a>
 </div>
 
-## Quick Setup
+## Quick Setup ##
 
 ```bash
 # Install Pulumi
@@ -50,9 +48,8 @@ pulumi new csharp
 pulumi up
 ```
 
-## Learn More
+## Learn More ##
 
 - [C# Language Documentation](/docs/iac/concepts/languages/dotnet/)
 - [Pulumi .NET SDK Reference](https://www.pulumi.com/registry/)
 - [Join our Community Slack](https://slack.pulumi.com)
-

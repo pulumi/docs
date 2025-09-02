@@ -4,8 +4,6 @@ meta_desc: Build cloud infrastructure using Python - leverage familiar syntax, r
 layout: language-start
 ---
 
-# Infrastructure as Code with Python
-
 Build and deploy cloud infrastructure using Python's simplicity, extensive libraries, and powerful ecosystem.
 
 ## Why Python for Infrastructure?
@@ -167,4 +165,3 @@ Get started quickly with these Python templates:
 - [Pulumi Python SDK Reference](https://www.pulumi.com/registry/)
 - [Video: Getting Started with Python](https://www.youtube.com/watch?v=example)
 - [Join our Community Slack](https://slack.pulumi.com)
-

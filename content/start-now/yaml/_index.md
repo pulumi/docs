@@ -4,8 +4,6 @@ meta_desc: Define cloud infrastructure using YAML - simple, declarative configur
 layout: language-start
 ---
 
-# Infrastructure as Code with Pulumi YAML
-
 Define cloud infrastructure using simple, declarative YAML configuration - no programming required.
 
 ## Choose Your Cloud Provider
@@ -74,4 +72,3 @@ outputs:
 - [YAML Language Documentation](/docs/iac/concepts/languages/yaml/)
 - [Pulumi YAML Reference](https://www.pulumi.com/docs/iac/concepts/languages/yaml/)
 - [Join our Community Slack](https://slack.pulumi.com)
-

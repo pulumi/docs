@@ -4,8 +4,6 @@ meta_desc: Build and deploy cloud infrastructure using TypeScript - get type saf
 layout: language-start
 ---
 
-# Infrastructure as Code with TypeScript
-
 Build and deploy cloud infrastructure using TypeScript's type safety, IntelliSense, and the full Node.js ecosystem.
 
 ## Why TypeScript for Infrastructure?
@@ -155,4 +153,3 @@ Get started quickly with these TypeScript templates:
 - [Pulumi TypeScript SDK Reference](https://www.pulumi.com/registry/)
 - [Video: Getting Started with TypeScript](https://www.youtube.com/watch?v=example)
 - [Join our Community Slack](https://slack.pulumi.com)
-

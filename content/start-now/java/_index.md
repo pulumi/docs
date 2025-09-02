@@ -4,8 +4,6 @@ meta_desc: Build cloud infrastructure using Java - leverage the JVM ecosystem an
 layout: language-start
 ---
 
-# Infrastructure as Code with Java
-
 Build robust cloud infrastructure using Java's maturity, extensive libraries, and enterprise tooling.
 
 ## Choose Your Cloud Provider
@@ -55,4 +53,3 @@ pulumi up
 - [Java Language Documentation](/docs/iac/concepts/languages/java/)
 - [Pulumi Java SDK Reference](https://www.pulumi.com/registry/)
 - [Join our Community Slack](https://slack.pulumi.com)
-
