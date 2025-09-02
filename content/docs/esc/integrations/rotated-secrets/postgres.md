@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: postgres-rotator
     parent: esc-rotated-secrets
-    weight: 4
+    weight: 6
 ---
 
 The `postgres` rotator enables you to rotate user credentials for a PostgreSQL database in your Environment.
