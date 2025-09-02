@@ -10,7 +10,7 @@ overview:
         Snowflake, Mercedes-Benz, NVIDIA, and Lemonade are among a rapidly growing number of enterprises worldwide that leverage Pulumi's Platform to enable modern cloud transformation, accelerate innovation, build their IDP while meeting the most rigorous security and compliance requirements.
 
 customer_logos:
-  title: Trusted by over 3,000 innovative companies
+  title: Trusted by over 3,700 innovative companies
   logos:
     - name: bmw
       link: /case-studies/

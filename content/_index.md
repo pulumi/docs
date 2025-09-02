@@ -54,7 +54,7 @@ secrets:
     Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications. Pull and sync with any secrets store, and consume in any application, tool, or CI/CD platform.
 
 customer_logos:
-  title: Trusted by over 3,000 innovative companies
+  title: Trusted by over 3,700 innovative companies
   logos:
     - name: bmw
       link: /case-studies/
