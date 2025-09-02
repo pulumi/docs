@@ -5,7 +5,7 @@ authors:
   - "elisabeth-lichtie"
 tags: ["aws", "diagram", "architecture", "CI/CD", "anthropic", "claude", "github", "actions"]
 meta_desc: "Automate tedious diagramming work in your CI/CD pipelines to maintain always-accurate architecture diagrams."
-date: "2025-08-28"
+date: "2025-09-02"
 meta_image: "Automatic_Diagramming.png"
 
 summary: |
