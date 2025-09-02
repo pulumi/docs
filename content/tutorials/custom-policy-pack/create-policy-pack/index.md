@@ -162,7 +162,7 @@ Replace the contents of `index.ts` with the following:
 
 Here we define three different policies:
 
-- **s3-product-prefix**: Ensures S3 buckets are prefixed with the product name by checking the `bucketPrefix` property on all `aws:s3/bucket:BucketV2` resources.
+- **s3-product-prefix**: Ensures S3 buckets are prefixed with the product name by checking the `bucketPrefix` property on all `aws:s3:Bucket` resources.
 - **ec2-instance-type-restricted**: Restricts EC2 instance types to only use the affordable `t2.micro` type, by checking the `instanceType` property on all `aws:ec2/instance:Instance` resources.
 - **all-aws-resources-must-have-tags**: Ensures all AWS resources have at least one tag by checking the `tags` property on all resources who's type starts with `aws`.
 
@@ -185,7 +185,7 @@ $ pulumi stack
 Current stack resources (5):
     TYPE                                    NAME
     pulumi:pulumi:Stack                     custom-policy-pack-integration-test-dev
-    ├─ aws:s3/bucketV2:BucketV2             my-bucket
+    ├─ aws:s3:Bucket                        my-bucket
     ├─ aws:ec2/securityGroup:SecurityGroup  ssh-security-group
     ├─ aws:ec2/instance:Instance            web-server
     └─ pulumi:providers:aws                 default_6_65_0
@@ -212,7 +212,7 @@ Replace the contents of `__main__.py` with the following:
 
 Here we define three different policies:
 
-- **s3-product-prefix**: Ensures S3 buckets are prefixed with the product name by checking the `bucketPrefix` property on all `aws:s3/bucket:BucketV2` resources.
+- **s3-product-prefix**: Ensures S3 buckets are prefixed with the product name by checking the `bucketPrefix` property on all `aws:s3:Bucket` resources.
 - **ec2-instance-type-restricted**: Restricts EC2 instance types to only use the affordable `t2.micro` type, by checking the `instanceType` property on all `aws:ec2/instance:Instance` resources.
 - **all-aws-resources-must-have-tags**: Ensures all AWS resources have at least one tag by checking the `tags` property on all resources who's type starts with `aws`.
 
@@ -234,7 +234,7 @@ $ pulumi stack
 Current stack resources (5):
     TYPE                                    NAME
     pulumi:pulumi:Stack                     custom-policy-pack-integration-test-dev
-    ├─ aws:s3/bucketV2:BucketV2             my-bucket
+    ├─ aws:s3:Bucket                        my-bucket
     ├─ aws:ec2/securityGroup:SecurityGroup  ssh-security-group
     ├─ aws:ec2/instance:Instance            web-server
     └─ pulumi:providers:aws                 default_6_65_0
