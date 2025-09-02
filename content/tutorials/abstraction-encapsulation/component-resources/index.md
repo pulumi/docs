@@ -50,7 +50,7 @@ type PolicyType = "default" | "locked" | "permissive";
 // Create a class that encapsulates the functionality by subclassing
 // pulumi.ComponentResource.
 class OurBucketComponent extends pulumi.ComponentResource {
-    public bucket: aws.s3.BucketV2;
+    public bucket: aws.s3.Bucket;
     private bucketPolicy: aws.s3.BucketPolicy;
 
     private policies: { [K in PolicyType]: aws.iam.PolicyStatement } = {
@@ -90,7 +90,7 @@ class OurBucketComponent extends pulumi.ComponentResource {
         // declare all the same things all over again.
         super("pkg:index:OurBucketComponent", name, args, opts);
 
-        this.bucket = new aws.s3.BucketV2(name, {}, { parent: this });
+    this.bucket = new aws.s3.Bucket(name, {}, { parent: this });
 
         this.bucketPolicy = new aws.s3.BucketPolicy(`${name}-policy`, {
             bucket: this.bucket.id,
@@ -182,7 +182,7 @@ pulumi.export("bucket_name", bucket1.bucket.id)
 
 {{% /choosable %}}
 
-With the call to `super()`, we pass in a name for the resource, which [we recommend](/docs/concepts/resources/components#authoring-a-new-component-resource) being of the form `<package>:<module>:<type>` to avoid type conflicts since it's being registered alongside other resources like the Bucket resource we're calling (`aws:s3:BucketV2`).
+With the call to `super()`, we pass in a name for the resource, which [we recommend](/docs/concepts/resources/components#authoring-a-new-component-resource) being of the form `<package>:<module>:<type>` to avoid type conflicts since it's being registered alongside other resources like the Bucket resource we're calling (`aws:s3:Bucket`).
 
 {{% choosable language python %}}
 
