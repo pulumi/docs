@@ -122,3 +122,11 @@ openssl \
   req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem \
   -days { days_until_expiration } -nodes -subj "/CN={ common_name }"
 ```
+
+## Optional Environment Variables
+
+The following are optional environment variables not required in all usage scenarios.
+
+| Variable Name       | Description                                                                                                       |
+|---------------------|-------------------------------------------------------------------------------------------------------------------|
+| AG_GRID_LICENSE_KEY | The AG Grid license key value. If needed, this will be provided by a Pulumi representative.                       |
