@@ -30,7 +30,7 @@ Pulumi's ongoing investment in AI capabilities will soon unlock even more powerf
 Pulumi's built-in `pulumi stack graph` command generates architecture diagrams directly from your deployed infrastructure state. This approach provides a reliable foundation for automated diagramming since it reflects your actual deployed resources rather than just the code.
 
 {{% notes type="info" %}}
-**Complete example**: View the full working example on GitHub <!-- TODO: Add public repository link -->
+**Complete example**: View the full working example on [GitHub](https://github.com/pulumi-demos/examples/tree/main/diagrams/native-pulumi-diagramming-capabilities).
 {{% /notes %}}
 
 Here's a complete GitHub Actions workflow that deploys infrastructure and automatically generates diagrams:
@@ -131,7 +131,7 @@ For a more sophisticated setup, you could extend this workflow to automatically 
 The second approach leverages Claude's ability to analyze Pulumi preview output and generate aesthetically pleasing, contextually relevant diagrams using Mermaid syntax. This method addresses the styling limitations of native Pulumi diagrams while maintaining accuracy through `pulumi preview` integration.
 
 {{% notes type="info" %}}
-**Complete example**: View the full working example on GitHub <!-- TODO: Add public repository link -->
+**Complete example**: View the full working example on [GitHub](https://github.com/pulumi-demos/examples/tree/main/diagrams/claude-and-mermaid-generation).
 {{% /notes %}}
 
 ### The automated workflow
