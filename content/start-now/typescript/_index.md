@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Pulumi and TypeScript
 meta_desc: Build and deploy cloud infrastructure using TypeScript - get type safety, IntelliSense, and the full Node.js ecosystem
-layout: language-start
 ---
 
 Build and deploy cloud infrastructure using TypeScript's type safety, IntelliSense, and the full Node.js ecosystem.

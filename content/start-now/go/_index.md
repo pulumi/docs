@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Pulumi and Go
 meta_desc: Build cloud infrastructure using Go - leverage strong typing, concurrency, and performance
-layout: language-start
 ---
 
 Build high-performance cloud infrastructure using Go's simplicity, concurrency, and strong typing.

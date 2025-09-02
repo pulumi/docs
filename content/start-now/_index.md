@@ -1,13 +1,11 @@
 ---
 title: Start Building Infrastructure as Code
 meta_desc: Choose your path to get started with Pulumi - the infrastructure as code platform using familiar programming languages
-layout: start-now
 no_on_this_page: true
 ---
 
 <div class="container mx-auto px-6 py-12">
     <div class="text-center mb-12">
-        <h1 class="text-4xl font-bold mb-4">Start Building Infrastructure as Code</h1>
         <p class="text-xl text-gray-600">Choose your path to get started with Pulumi</p>
     </div>
 

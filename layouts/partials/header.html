@@ -6,6 +6,13 @@
         {{ partial "docs/search.html" . }}
     </div>
 {{ else }}
+    <style>
+        /* Fix Learn dropdown positioning when it's the first item */
+        .desktop-menu li:first-child .header-nav-drop-down-menu.learn {
+            left: 0 !important;
+            right: auto !important;
+        }
+    </style>
     <div class="header-container">
         <nav class="lg:container lg:mx-auto lg:px-4 py-3">
             <header>

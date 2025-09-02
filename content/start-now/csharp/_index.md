@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Pulumi and C#
 meta_desc: Build cloud infrastructure using C# and .NET - leverage the full power of the .NET ecosystem
-layout: language-start
 ---
 
 Build enterprise-grade cloud infrastructure using C#, .NET, and the rich ecosystem of NuGet packages.

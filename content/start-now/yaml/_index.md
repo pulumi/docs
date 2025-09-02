@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Pulumi YAML
 meta_desc: Define cloud infrastructure using YAML - simple, declarative configuration without programming
-layout: language-start
 ---
 
 Define cloud infrastructure using simple, declarative YAML configuration - no programming required.

@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Pulumi and Java
 meta_desc: Build cloud infrastructure using Java - leverage the JVM ecosystem and enterprise tooling
-layout: language-start
 ---
 
 Build robust cloud infrastructure using Java's maturity, extensive libraries, and enterprise tooling.

@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Pulumi and Python
 meta_desc: Build cloud infrastructure using Python - leverage familiar syntax, rich libraries, and powerful tooling
-layout: language-start
 ---
 
 Build and deploy cloud infrastructure using Python's simplicity, extensive libraries, and powerful ecosystem.
