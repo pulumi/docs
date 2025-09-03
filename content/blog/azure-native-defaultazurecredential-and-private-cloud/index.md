@@ -115,7 +115,7 @@ Note that `subscriptionId` is a required configuration setting in this (and most
 This release brings improved support for [Azure private clouds][docprivatecloud].
 A private cloud is a dedicated cloud computing environment used by a single organization.
 
-The provider can now automatically discover and configure itself for any Azure cloud based on
+The provider can now automatically discover, and configure itself for, any Azure cloud based on
 the `ARM_METADATA_HOSTNAME` environment variable. Note that this takes precedence over the `ARM_ENVIRONMENT` variable.
 
 [docprivatecloud]: https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-private-cloud
