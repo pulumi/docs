@@ -57,9 +57,7 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Pulumi Staff (TBD)
-          role: TBD
-          photo: /images/team/pulumi-staff.jpg
+
 
     # case-sensitive
     tags:

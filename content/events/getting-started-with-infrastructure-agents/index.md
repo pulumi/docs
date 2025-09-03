@@ -53,7 +53,7 @@ main:
         - Introduction to Pulumi MCP Server and agentic workflow concepts and considerations
         - Configuring agents within your environment
         - Understanding Pulumi's core platform engineering capabilities and architecture
-        - Your first autonomous infrastructure workflow: provisioning cloud resources with a basic pull request approval workflow
+        - "Your first autonomous infrastructure workflow: provisioning cloud resources with a basic pull request approval workflow"
 
     # The webinar presenters
     presenters:

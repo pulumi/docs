@@ -64,10 +64,7 @@ main:
     presenters:
         - name: Jay Smith
           role: Sr. Cloud Customer Engineer, GCP
-          photo: /images/team/jay-smith.jpg
-        - name: Pulumi Staff (TBD)
-          role: TBD
-          photo: /images/team/pulumi-staff.jpg
+        - name: Pulumi Staff
 
     # case-sensitive
     tags:
@@ -81,15 +78,4 @@ form:
     # HubSpot form id.
     hubspot_form_id: c53f2cce-2826-4163-9acb-53163b4951a0
     salesforce_campaign_id: 701PQ00000faNrKYAU
-
-event_data:
-  name: "Accelerating AI-Powered App Modernization with Pulumi on Google Cloud"
-  start_date: 2025-11-18T10:00:00-08:00
-  end_date: 2025-11-18T11:00:00-08:00
-  url: "https://www.pulumi.com/resources/accelerating-ai-powered-app-modernization-with-pulumi-on-google-cloud/"
-  description: |
-    As enterprises race to modernize their applications for the AI era, the complexity of managing cloud infrastructure has become a critical bottleneck. This hands-on workshop demonstrates how Google Cloud customers can accelerate their app modernization journey by leveraging Pulumi's developer-first Infrastructure as Code approach alongside Google Cloud's cutting-edge AI services.
-
-    Unlike traditional infrastructure tools like Terraform, which were built for operators, creating friction between development and DevOps teams. Pulumi revolutionizes this paradigm by empowering developers to manage Google Cloud resources using familiar programming languages, such as Python, TypeScript, Go, C#, and Java.
-    No need to learn HCL or file tickets, just build, deploy, and iterate faster with code.
 ---
