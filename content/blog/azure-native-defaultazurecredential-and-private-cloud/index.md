@@ -57,21 +57,21 @@ social:
 
 ---
 
-Today we're excited to announce Azure Native Provider v3.8, featuring powerful enhancements that simplify authentication
+Today we're excited to announce Azure Native Provider v3.8, featuring several enhancements that simplify authentication
 and extend support to private Azure environments. These updates make it easier than ever to manage Azure infrastructure across diverse deployment scenarios.
 
 <!--more-->
 
-## DefaultAzureCredential for Simplified Authentication Across Environments
+## "DefaultAzureCredential" for Simplified Authentication Across Environments
 
 The highlight of this release is a new authentication mode based on [DefaultAzureCredential][doc1],
-which unifies the configuration settings across different environments.
+a feature of the Azure SDK that unifies authentication-related settings across deployment environments.
 
 [doc1]: https://learn.microsoft.com/en-us/azure/developer/go/sdk/authentication/credential-chains#defaultazurecredential-overview
 
 ### What's New
 
-DefaultAzureCredential automatically discovers and uses the best available authentication method for your environment,
+`DefaultAzureCredential` automatically discovers and uses the best available authentication method for your environment,
 eliminating the need for an environment-specific configuration. It follows the Azure SDK's standard credential chain:
 
 | Order | Credential                | Description                                                                                                      |
@@ -108,7 +108,7 @@ pulumi config set azure-native:useDefaultAzureCredential true
 pulumi config set azure-native:subscriptionId <your-subscription-id>
 ```
 
-Note that `subscriptionId` remains a required configuration setting in most authentication modes, ensuring your resources are deployed to the correct Azure subscription.
+Note that `subscriptionId` is a required configuration setting in this (and most) authentication modes, ensuring your resources are deployed to the correct Azure subscription.
 
 ## Private Azure Cloud Support
 
