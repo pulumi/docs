@@ -58,11 +58,12 @@ social:
 ---
 
 Today we're excited to announce Azure Native Provider v3.8, featuring several enhancements that simplify authentication
-and extend support to private Azure environments. These updates make it easier than ever to manage Azure infrastructure across diverse deployment scenarios.
+and extend support to private Azure environments. These updates make it easier than ever to manage Azure infrastructure
+using credentials provided by the hosting environment, such as in Azure Kubernetes Service (AKS), Azure VM, and Azure Cloud Shell.
 
 <!--more-->
 
-## "DefaultAzureCredential" for Simplified Authentication Across Environments
+## Simplified Authentication Across Environments
 
 The highlight of this release is a new authentication mode based on [DefaultAzureCredential][doc1],
 a feature of the Azure SDK that unifies authentication-related settings across deployment environments.
@@ -77,8 +78,8 @@ eliminating the need for an environment-specific configuration. It follows the A
 | Order | Credential                | Description                                                                                                      |
 |-------|---------------------------|------------------------------------------------------------------------------------------------------------------|
 | 1     | [Environment][o1]         | Reads environment variables (e.g., `AZURE_TENANT_ID`, `AZURE_CLIENT_ID`) to authenticate as a service principal. |
-| 2     | [Workload Identity][o2]   | For workloads deployed on an Azure Kubernetes Service (AKS) cluster.                                             |
-| 3     | [Managed Identity][o3]    | For apps deployed to an Azure compute resource (e.g., Azure Virtual Machines) or App hosting platform.           |
+| 2     | [Workload Identity][o2]   | For programs deployed on an Azure Kubernetes Service (AKS) cluster.                                             |
+| 3     | [Managed Identity][o3]    | For programs deployed to an Azure compute resource (e.g., Azure Virtual Machines) or App hosting platform.       |
 | 4     | [Azure CLI][o4]           | For local development using Azure CLI's `az login` command.                                                      |
 | 5     | [Azure Developer CLI][o5] | For local development using Azure Developer CLI's `azd auth login` command.                                      |
 
@@ -157,11 +158,12 @@ The provider automatically retrieves the correct endpoints for authentication, r
 
 ## Disabling Instance Discovery
 
-Also in this release is a new setting, `disableInstanceDiscovery`, that determines whether or not instance discovery is performed when attempting to authenticate,
-for Pulumi programs authenticating in disconnected clouds or private clouds.
+Also in this release is a new setting, `disableInstanceDiscovery`, to determine whether the provider requests
+Microsoft Entra instance metadata from the login endpoint (https://login.microsoftonline.com) before authenticating.
+This setting is for Pulumi programs authenticating in disconnected clouds or private clouds.
 
-It determines whether the provider requests Microsoft Entra instance metadata from the login endpoint (https://login.microsoftonline.com) before authenticating.
-Setting `disableInstanceDiscovery` to `true` will completely disable both instance discovery and authority validation. As a result, it is crucial to ensure that the configured authority host is valid and trustworthy.
+Setting `disableInstanceDiscovery` to `true` will completely disable both instance discovery and authority validation.
+Please ensure that the configured authority host is valid and trustworthy.
 
 ### How To Use
 
