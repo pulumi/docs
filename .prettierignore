@@ -27,6 +27,9 @@ scripts
 static/programs/*/bin/*
 static/programs/*/obj/*
 
+# Ignore Python virtual environments
+**/.venv/**
+
 static/registry/
 static-prebuilt
 

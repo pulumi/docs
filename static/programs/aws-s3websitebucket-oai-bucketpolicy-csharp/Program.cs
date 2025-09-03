@@ -8,9 +8,9 @@ using System.Text.Json;
 
 return await Deployment.RunAsync(() =>
 {
-    var bucket = new BucketV2("content-bucket");
+    var bucket = new Bucket("content-bucket");
 
-    var bucketAcl = new BucketAclV2("content-bucket", new() {
+    var bucketAcl = new BucketAcl("content-bucket", new() {
         Bucket = bucket.Id,
         Acl = "private",
     });
@@ -23,13 +23,13 @@ return await Deployment.RunAsync(() =>
         },
     }, new CustomResourceOptions { DependsOn = { bucketAcl }});
 
-    var bucketWebsite = new BucketWebsiteConfigurationV2("content-bucket", new() {
+    var bucketWebsite = new BucketWebsiteConfiguration("content-bucket", new() {
         Bucket = bucket.Id,
-        IndexDocument = new BucketWebsiteConfigurationV2IndexDocumentArgs
+        IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs
         {
             Suffix = "index.html"
         },
-        ErrorDocument = new BucketWebsiteConfigurationV2ErrorDocumentArgs
+        ErrorDocument = new BucketWebsiteConfigurationErrorDocumentArgs
         {
             Key = "404.html"
         },
