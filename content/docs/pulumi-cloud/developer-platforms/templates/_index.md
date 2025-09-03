@@ -65,7 +65,30 @@ By doing publishing organization templates, your organization's members will be 
 
 ### Prerequisites
 
-#### GitHub App
+#### Template Sources
+
+Organization templates require that you're Pulumi account has an integration configured with your preferred VCS vendor.
+
+This can be set up by navigating to your organization's "Settings → Integrations" tab, under the "Organization Template Sources" section.
+If you have not already authorized you will see an "Authorize GitHub" or "Authorize GitLab" button. Click the button and accept the required permissions.
+
+
+#### Template Destinations
+
+Code-backed template destinations only support GitHub as they leverage Deployments for Pulumi operations.
+If you plan on using no-code or CLI deployment methods these prerequisites are not necessary.
+
+##### GitHub OAuth
+This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when fetching and creating private repositories.
+More specifically, this ensures that only repositories your GitHub user would normally have access can be used as template sources.
+
+Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](https://www.pulumi.com/docs/pulumi-cloud/developer-platforms/new-project-wizard/#github-oauth-application).
+
+If you have OAuth App access restrictions enabled in your Github organization, you will also need to
+[authorize the Pulumi Github App](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)
+in the "OAuth App Policy" settings.
+
+##### GitHub App
 
 You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings) on new projects.
 See the GitHub app [installation instructions](/docs/pulumi-cloud/deployments/reference/#github-app-installation) for more details.
@@ -76,17 +99,6 @@ Granting the app access to _some_ or _all_ of your GitHub repos will impact how 
 If you grant the app access to _all_ repos, the New Project Wizard will allow users to create projects in new repositories. If the app only has access to _some_ repos, users will only be able to create new projects within _existing_ repositories.
 {{% /notes %}}
 
-#### GitHub OAuth
-
-You will also need to authorize Pulumi with GitHub in order to use private repositories as template sources.
-This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when fetching and creating private repositories.
-More specifically, this ensures that only repositories your GitHub user would normally have access can be used as template sources.
-
-Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized you will see an "Authorize GitHub" button. Click the button and accept the required permissions.
-
-If you have OAuth App access restrictions enabled in your Github organization, you will also need to
-[authorize the Pulumi Github App](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)
-in the "OAuth App Policy" settings.
 
 ### Organization settings
 
