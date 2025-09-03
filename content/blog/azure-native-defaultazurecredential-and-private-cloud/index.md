@@ -157,7 +157,7 @@ The provider automatically retrieves the correct endpoints for authentication, r
 
 ## Disabling Instance Discovery
 
-Also in this release is a new setting that determines whether or not instance discovery is performed when attempting to authenticate,
+Also in this release is a new setting, `disableInstanceDiscovery`, that determines whether or not instance discovery is performed when attempting to authenticate,
 for Pulumi programs authenticating in disconnected clouds or private clouds.
 
 It determines whether the provider requests Microsoft Entra instance metadata from the login endpoint (https://login.microsoftonline.com) before authenticating.
