@@ -8,8 +8,6 @@ no_on_this_page: true
 subtitle: Step-by-step guides for provisioning your first cloud resources and mastering the basics of Pulumi
 
 languages:
-  title: Start by Selecting Your Favorite Language
-  subtitle: Build infrastructure using the language you already know
   items:
     - name: TypeScript
       logo: /logos/tech/typescript.svg
