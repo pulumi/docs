@@ -6,7 +6,11 @@
         {{ partial "docs/search.html" . }}
     </div>
 {{ else }}
-    {{ partial "banner" . }}
+    <nav class="top-nav-bar">
+        <div class="top-nav-container">
+            {{ partial "banner" . }}
+        </div>
+    </nav>
     <style>
         /* Fix Learn dropdown positioning when it's the first item */
         .desktop-menu li:first-child .header-nav-drop-down-menu.learn {
