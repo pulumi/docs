@@ -108,7 +108,7 @@ pulumi config set azure-native:useDefaultAzureCredential true
 pulumi config set azure-native:subscriptionId <your-subscription-id>
 ```
 
-Note that `subscriptionId` is a required configuration setting in this (and most) authentication modes, ensuring your resources are deployed to the correct Azure subscription.
+Note that `subscriptionId` is a required configuration setting in this (and most) authentication modes; it ensures your resources are deployed to the correct Azure subscription.
 
 ## Private Azure Cloud Support
 
