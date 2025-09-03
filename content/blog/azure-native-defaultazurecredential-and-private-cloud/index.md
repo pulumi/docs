@@ -161,7 +161,7 @@ Also in this release is a new setting, `disableInstanceDiscovery`, that determin
 for Pulumi programs authenticating in disconnected clouds or private clouds.
 
 It determines whether the provider requests Microsoft Entra instance metadata from the login endpoint (https://login.microsoftonline.com) before authenticating.
-Enabling will completely disable both instance discovery and authority validation. As a result, it is crucial to ensure that the configured authority host is valid and trustworthy.
+Setting `disableInstanceDiscovery` to `true` will completely disable both instance discovery and authority validation. As a result, it is crucial to ensure that the configured authority host is valid and trustworthy.
 
 ### How To Use
 
