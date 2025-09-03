@@ -1,0 +1,100 @@
+{{ define "main" }}
+    <section class="container mx-auto py-8 px-4 max-w-4xl">
+        <div class="mb-8">
+            <h1 class="mb-4">{{ .Title }}</h1>
+            {{ if .Params.subtitle }}
+                <p class="text-xl text-gray-600">{{ .Params.subtitle | markdownify }}</p>
+            {{ end }}
+        </div>
+
+        <!-- Cloud Providers Section -->
+        {{ if .Params.cloud_providers }}
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">{{ .Params.cloud_providers.title }}</h2>
+            <div class="flex flex-wrap -mx-3">
+                {{ range $provider := .Params.cloud_providers.items }}
+                <div class="w-full md:w-1/2 px-3 mb-6">
+                    <a href="{{ $provider.link }}" class="block">
+                        <div class="card bg-white p-6 h-full hover:shadow-lg transition-shadow flex items-center">
+                            <img src="{{ $provider.logo }}" alt="{{ $provider.name }}" class="h-12 w-12 mr-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">{{ $provider.name }}</h3>
+                                <p class="text-gray-600 text-sm">{{ $provider.description }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+
+        <!-- Quick Setup Section -->
+        {{ if .Params.quick_setup }}
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">{{ .Params.quick_setup.title }}</h2>
+            <div class="card bg-gray-50 p-6">
+                <ol class="space-y-3">
+                    {{ range $step := .Params.quick_setup.steps }}
+                    <li class="flex">
+                        <span class="font-semibold mr-2">{{ $step.number }}.</span>
+                        <div class="flex-1">
+                            <span class="font-medium">{{ $step.title }}</span>
+                            {{ if $step.code }}
+                            <div class="mt-2 bg-gray-900 text-gray-100 rounded p-3 font-mono text-sm">
+                                {{ $step.code }}
+                            </div>
+                            {{ end }}
+                        </div>
+                    </li>
+                    {{ end }}
+                </ol>
+            </div>
+        </div>
+        {{ end }}
+
+        <!-- Resources Section -->
+        {{ if .Params.resources }}
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">{{ .Params.resources.title }}</h2>
+            <ul class="space-y-2">
+                {{ range $resource := .Params.resources.items }}
+                <li>
+                    <a href="{{ $resource.link }}" class="text-blue-600 hover:text-blue-800 hover:underline">
+                        {{ $resource.text }} →
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+
+        <!-- Additional Content -->
+        {{ .Content }}
+    </section>
+
+    <style>
+    /* Custom styles for language-specific pages */
+    .card {
+        border: 1px solid #e2e8f0;
+        border-radius: 0.5rem;
+    }
+    .card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .transition-shadow { 
+        transition-property: box-shadow;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+    }
+    .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.5rem;
+    }
+    .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.75rem;
+    }
+    .bg-gray-50 { background-color: #f9fafb; }
+    .bg-gray-900 { background-color: #111827; }
+    .text-gray-100 { color: #f3f4f6; }
+    </style>
+{{ end }}
