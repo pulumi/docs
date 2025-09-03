@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: "Getting Started with Infrastructure Agents"
-meta_desc: Platform Engineering teams looking to add intelligent automation to their infrastructure workflows must first plan controls and human oversight into their process.
+meta_desc: Learn to add intelligent automation to infrastructure workflows with proper controls and human oversight.
 meta_image:
 
 # A featured webinar will display first in the list.

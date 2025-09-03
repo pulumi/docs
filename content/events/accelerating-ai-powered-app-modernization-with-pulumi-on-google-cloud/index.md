@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "Accelerating AI-Powered App Modernization with Pulumi on Google Cloud"
-meta_desc: Learn how Google Cloud customers can accelerate their app modernization journey using Pulumi's developer-first Infrastructure as Code approach with Google Cloud's AI services.
+title: "AI-Powered App Modernization with Pulumi on Google Cloud"
+meta_desc: Learn how to accelerate app modernization using Pulumi's developer-first Infrastructure as Code with Google Cloud's AI services.
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -31,7 +31,7 @@ url_slug: accelerating-ai-powered-app-modernization-with-pulumi-on-google-cloud
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Accelerating AI-Powered App Modernization with Pulumi on Google Cloud"
+    title: "AI-Powered App Modernization with Pulumi on Google Cloud"
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.

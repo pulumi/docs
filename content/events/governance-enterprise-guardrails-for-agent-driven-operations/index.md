@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "Governance - Enterprise Guardrails for Agent-driven Operations"
+title: "Enterprise Guardrails for Agent-driven Operations"
 meta_desc: Learn how to balance team velocity with security and compliance by implementing governance frameworks for AI agents and policy as code.
 meta_image:
 
@@ -31,7 +31,7 @@ url_slug: governance-enterprise-guardrails-for-agent-driven-operations
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Governance - Enterprise Guardrails for Agent-driven Operations"
+    title: "Enterprise Guardrails for Agent-driven Operations"
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
