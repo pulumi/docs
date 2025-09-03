@@ -1,31 +1,14 @@
 ---
-title: Start Building Infrastructure as Code
-meta_desc: Choose your path to get started with Pulumi - the infrastructure as code platform using familiar programming languages
+title: Getting Started with Pulumi
+meta_desc: Step-by-step guides for provisioning your first cloud resources and mastering the basics of Pulumi
 type: page
 layout: start-now
 no_on_this_page: true
 
-subtitle: Choose your path to get started with Pulumi
-
-primary_paths:
-  - title: Quick Start
-    icon: rocketship
-    subtitle: I want to start building now
-    description: Choose your cloud provider and follow our step-by-step guide
-    link: /docs/iac/get-started/
-    button_text: Get Started →
-    color: blue
-    
-  - title: Migrate from Terraform
-    icon: exchange
-    subtitle: I have existing Terraform infrastructure
-    description: Import your resources and convert HCL to real code
-    link: /docs/iac/get-started/terraform/
-    button_text: Start Migration →
-    color: green
+subtitle: Step-by-step guides for provisioning your first cloud resources and mastering the basics of Pulumi
 
 languages:
-  title: Or Start with Your Favorite Language
+  title: Start by Selecting Your Favorite Language
   subtitle: Build infrastructure using the language you already know
   items:
     - name: TypeScript
@@ -46,25 +29,4 @@ languages:
     - name: YAML
       logo: /logos/tech/yaml.svg
       link: /start-now/yaml/
-
-templates:
-  title: Popular Templates
-  items:
-    - title: Containerized App
-      icon: ship
-      description: Deploy containers with auto-scaling and load balancing
-      link: /templates/container-service/aws/
-    - title: Kubernetes Cluster
-      icon: nodes
-      description: Production-ready K8s with monitoring
-      link: /templates/kubernetes/aws/
-    - title: Serverless API
-      icon: lightning
-      description: REST API with functions and database
-      link: /templates/serverless-application/aws/
-    - title: Static Website
-      icon: global
-      description: CDN-backed site with HTTPS
-      link: /templates/static-website/aws/
-  browse_link: /templates/
 ---
