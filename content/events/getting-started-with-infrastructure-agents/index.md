@@ -26,7 +26,7 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: agentic-workflows-human-in-loop
+url_slug: getting-started-with-infrastructure-agents
 
 # Content for the left hand side section of the page.
 main:
@@ -78,7 +78,7 @@ event_data:
   name: "Getting Started with Infrastructure Agents"
   start_date: 2025-10-09T12:00:00-04:00
   end_date: 2025-10-09T13:30:00-04:00
-  url: "https://www.pulumi.com/resources/agentic-workflows-human-in-loop/"
+  url: "https://www.pulumi.com/resources/getting-started-with-infrastructure-agents/"
   description: |
     Platform Engineering teams looking to add intelligent automation to their infrastructure workflows must first plan controls and human oversight into their process. In this session, we'll introduce considerations for setting up agentic workflows with a basic 'human in the loop' approval process and walk through a basic cloud deployment.
 ---
