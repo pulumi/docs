@@ -1,7 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const contentBucket = new aws.s3.BucketV2("content-bucket", {
+const contentBucket = new aws.s3.Bucket("content-bucket", {
     forceDestroy: true,
 });
 
@@ -12,7 +12,7 @@ const contentBucketOwnershipControls = new aws.s3.BucketOwnershipControls("conte
     },
 });
 
-const contentBucketAclV2 = new aws.s3.BucketAclV2(
+const contentBucketAcl = new aws.s3.BucketAcl(
     "content-bucket",
     {
         bucket: contentBucket.id,
@@ -23,7 +23,7 @@ const contentBucketAclV2 = new aws.s3.BucketAclV2(
     },
 );
 
-const contentBucketWebsite = new aws.s3.BucketWebsiteConfigurationV2("content-bucket", {
+const contentBucketWebsite = new aws.s3.BucketWebsiteConfiguration("content-bucket", {
     bucket: contentBucket.id,
     indexDocument: { suffix: "index.html" },
     errorDocument: { key: "index.html" },

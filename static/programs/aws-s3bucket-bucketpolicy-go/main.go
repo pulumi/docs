@@ -3,14 +3,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Create an S3 bucket
-		s3Bucket, err := s3.NewBucketV2(ctx, "myBucket", nil)
+		s3Bucket, err := s3.NewBucket(ctx, "myBucket", nil)
 		if err != nil {
 			return err
 		}

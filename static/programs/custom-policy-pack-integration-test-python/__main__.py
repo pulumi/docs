@@ -2,7 +2,7 @@ import pulumi
 import pulumi_aws as aws
 
 # Create an AWS S3 Bucket
-bucket = aws.s3.BucketV2("my-bucket",
+bucket = aws.s3.Bucket("my-bucket",
     bucket_prefix="myproduct-",
     tags={
         "example": "tag value",

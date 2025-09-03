@@ -22,8 +22,9 @@ node_modules
 # it from being added mistakenly.
 /package-lock.json
 
-# Python's virtual env dir.
+# Python virtual env dirs.
 venv/
+.venv/
 
 # Pipenv
 .env
