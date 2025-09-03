@@ -26,7 +26,7 @@ export class HeaderCta {
                 this.isLoggedIn = true;
             }
         } catch (e) {
-            // Swallow the error and so the component shows the "Start Here" button.
+            // Swallow the error and so the component shows the "START HERE" button.
         }
 
         this.loading = false;
@@ -44,7 +44,7 @@ export class HeaderCta {
         }
 
         return (
-            <a class={this.buttonClass} data-track="header-start-here" href="/start-now" title="Start Here">Start Here</a>
+            <a class={this.buttonClass} data-track="header-start-here" href="/start-now" title="START HERE">START HERE</a>
         );
     }
 
