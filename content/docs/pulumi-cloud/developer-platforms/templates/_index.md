@@ -72,13 +72,13 @@ Organization templates require that you're Pulumi account has an integration con
 This can be set up by navigating to your organization's "Settings → Integrations" tab, under the "Organization Template Sources" section.
 If you have not already authorized you will see an "Authorize GitHub" or "Authorize GitLab" button. Click the button and accept the required permissions.
 
-
 #### Template Destinations
 
 Code-backed template destinations only support GitHub as they leverage Deployments for Pulumi operations.
 If you plan on using no-code or CLI deployment methods these prerequisites are not necessary.
 
 ##### GitHub OAuth
+
 This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when fetching and creating private repositories.
 More specifically, this ensures that only repositories your GitHub user would normally have access can be used as template sources.
 
@@ -98,7 +98,6 @@ Granting the app access to _some_ or _all_ of your GitHub repos will impact how 
 
 If you grant the app access to _all_ repos, the New Project Wizard will allow users to create projects in new repositories. If the app only has access to _some_ repos, users will only be able to create new projects within _existing_ repositories.
 {{% /notes %}}
-
 
 ### Organization settings
 
