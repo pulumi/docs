@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-ref-builtin-functions
     identifier: esc-ref-fn-rotate
-    weight: 5
+    weight: 6
 ---
 
 The `fn::rotate` built-in function invokes a [rotator](/docs/esc/reference/rotators) to rotate secrets.

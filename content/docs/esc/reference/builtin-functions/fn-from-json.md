@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-ref-builtin-functions
     identifier: esc-ref-fn-from-json
-    weight: 1
+    weight: 3
 ---
 
 The `fn::fromJSON` built-in function decodes a value from its JSON representation. This can be used to expand JSON values that are stored as scalar strings into complex values. If the input to `fn::fromJSON` is a secret, all of the decoded values are also secrets.

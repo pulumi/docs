@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-ref-builtin-functions
     identifier: esc-ref-fn-toString
-    weight: 9
+    weight: 10
 ---
 
 The `fn::toString` built-in function encodes a value as its string representation. This can be used to encode values for use in positions that only accept strings. If any input to `fn::toString` is a secret, the encoded values is also a secret.
