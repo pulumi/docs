@@ -78,7 +78,7 @@ eliminating the need for an environment-specific configuration. It follows the A
 | Order | Credential                | Description                                                                                                      |
 |-------|---------------------------|------------------------------------------------------------------------------------------------------------------|
 | 1     | [Environment][o1]         | Reads environment variables (e.g., `AZURE_TENANT_ID`, `AZURE_CLIENT_ID`) to authenticate as a service principal. |
-| 2     | [Workload Identity][o2]   | For programs deployed on an Azure Kubernetes Service (AKS) cluster.                                             |
+| 2     | [Workload Identity][o2]   | For programs run on an Azure Kubernetes Service (AKS) cluster.                                             |
 | 3     | [Managed Identity][o3]    | For programs deployed to an Azure compute resource (e.g., Azure Virtual Machines) or App hosting platform.       |
 | 4     | [Azure CLI][o4]           | For local development using Azure CLI's `az login` command.                                                      |
 | 5     | [Azure Developer CLI][o5] | For local development using Azure Developer CLI's `azd auth login` command.                                      |
@@ -110,6 +110,176 @@ pulumi config set azure-native:subscriptionId <your-subscription-id>
 ```
 
 Note that `subscriptionId` is a required configuration setting in this (and most) authentication modes; it ensures your resources are deployed to the correct Azure subscription.
+
+## Authentication in AKS with Workload Identity
+
+For programs run in a pod on an Azure Kubernetes Service (AKS) cluster, DefaultAzureCredential automatically uses the
+workload identity of the pod's service account. This workload identity could then be granted roles in Azure to deploy stack resources.
+
+Don't forget to apply the label `azure.workload.identity/use: "true"` to your pods when using workload identity.
+
+### Walkthough
+
+Let's use [Pulumi Kubernetes Operator (PKO)][pko1] to demonstrate a use case where you'd run Pulumi deployment operations in a pod
+and could benefit from workload identity.
+
+The operator allocates a dedicated pod for each Pulumi stack under its management, to serve as the execution environment for stack operations.
+Each stack may use the same or a different service account. With AKS, that service account has a _workload identity_ that providers
+may use to authenticate to Azure cloud and even to Pulumi cloud.
+
+[pko1]: https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
+
+#### Create an AKS Cluster
+
+Please follow the steps in ["Deploy and configure workload identity on an Azure Kubernetes Service (AKS) cluster"][aks1]
+to create an AKS cluster, managed identity, and Kubernetes service account.  Those steps are:
+
+1. [Create an AKS cluster](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#create-an-aks-cluster)
+2. [Retrieve the OIDC issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#retrieve-the-oidc-issuer-url)
+3. [Create a managed identity](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#create-a-managed-identity)
+4. [Create a Kubernetes service account](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#create-a-kubernetes-service-account)
+5. [Create the federated identity credential](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#create-the-federated-identity-credential)
+
+You now have an Azure managed identity and associated Kubernetes service account that DefaultAzureCredential can use to authenticate to Azure cloud.
+
+Take note of the `clientId` that represents the managed identity:
+
+```shell
+az identity show --name "${USER_ASSIGNED_IDENTITY_NAME}" --resource-group "${RESOURCE_GROUP}" --query clientId
+"c2bbe0f5-6349-480a-9f6f-3a5cb3e4ecf9"
+```
+
+[aks1]: https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster
+
+#### Install the Pulumi Kubernetes Operator
+
+Install the operator into the `pulumi-kubernetes-operator` namespace:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/pulumi/pulumi-kubernetes-operator/refs/tags/v2.0.0/deploy/quickstart/install.yaml
+```
+
+#### Configure a Pulumi Cloud Access Token
+
+By default, the operator uses Pulumi Cloud as the state backend for your stacks.
+Please create a `Secret` containing a Pulumi access token to be used to authenticate to Pulumi Cloud. Follow [these instructions][doctokens] to create a personal, organization, or team access token.
+
+```shell
+kubectl create secret generic -n ${SERVICE_ACCOUNT_NAMESPACE} pulumi-api-secret --from-literal=accessToken=${PULUMI_ACCESS_TOKEN}
+```
+
+[doctokens]: https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/
+
+#### Update the Kubernetes Service Account
+
+To use the service account that was created earlier, we need to grant it the `system:auth-delegator` role:
+
+```shell
+cat <<EOF | kubectl apply -f -
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: "${SERVICE_ACCOUNT_NAMESPACE}-${SERVICE_ACCOUNT_NAME}:system:auth-delegator"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: "${SERVICE_ACCOUNT_NAME}"
+  namespace: "${SERVICE_ACCOUNT_NAMESPACE}"
+EOF
+```
+
+#### Define an Example Program
+
+Let's define a simple Pulumi program that uses Azure Native 3.8 and calls the ["getClientConfig"][azdoc1] function to
+access the current identity of the provider.
+
+[azdoc1]: https://www.pulumi.com/registry/packages/azure-native/api-docs/authorization/getclientconfig/
+
+```shell
+cat <<"EOF" | kubectl apply -n ${SERVICE_ACCOUNT_NAMESPACE} -f -
+apiVersion: pulumi.com/v1
+kind: Program
+metadata:
+  name: sample-workload-identity
+program:
+  variables:
+    clientConfig:
+      fn::invoke:
+        function: azure-native:authorization:getClientConfig
+    clientToken:
+      fn::secret:
+        fn::invoke:
+          function: azure-native:authorization:getClientToken
+  outputs:
+    clientConfig: ${clientConfig}
+    clientToken: ${clientToken}
+EOF
+```
+
+#### Run the Program using Workload Identity
+
+Create a Stack object to run the Pulumi program using your service account and with `useDefaultAzureCredential` enabled.
+
+```shell
+cat <<EOF | kubectl apply -f -
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: sample-workload-identity
+  namespace: "${SERVICE_ACCOUNT_NAMESPACE}"
+spec:
+  serviceAccountName: "${SERVICE_ACCOUNT_NAME}"
+  programRef:
+    name: sample-workload-identity
+  stack: sample-workload-identity
+  envRefs:
+    PULUMI_ACCESS_TOKEN:
+      type: Secret
+      secret:
+        name: pulumi-api-secret
+        key: accessToken
+  config:
+    azure-native:useDefaultAzureCredential: "true"
+    azure-native:subscriptionId: "${SUBSCRIPTION}"
+  workspaceTemplate:
+    spec:
+      podTemplate:
+        metadata:
+          labels:
+            azure.workload.identity/use: "true"  # Required. Only pods with this label can use workload identity.
+EOF
+```
+
+Checking the stack outputs, we see a `clientId` matching that of the managed identity.
+
+```shell
+kubectl get stack/sample-workload-identity -oyaml
+```
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: sample-workload-identity
+  namespace: default
+status:
+  conditions:
+  - lastTransitionTime: "2025-09-04T23:32:11Z"
+    message: the stack has been processed and is up to date
+    reason: ProcessingCompleted
+    status: "True"
+    type: Ready
+  outputs:
+    clientConfig:
+      clientId: c2bbe0f5-6349-480a-9f6f-3a5cb3e4ecf9
+      objectId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+      subscriptionId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+      tenantId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    clientToken: '[secret]'
+```
 
 ## Private Azure Cloud Support
 
