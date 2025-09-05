@@ -7,7 +7,7 @@ title: "Azure Native 3.8: Unified Credentials and Private Clouds"
 # published. To influence the ordering of posts published on the same date, use
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
-date: 2025-09-02T15:42:22-07:00
+date: 2025-09-04T12:00:00-07:00
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -221,7 +221,7 @@ EOF
 
 #### Run the Program using Workload Identity
 
-Create a Stack object to run the Pulumi program using your service account and with `useDefaultAzureCredential` enabled.
+Create a Stack object to run the Pulumi program using your service account and with `azure-native:useDefaultAzureCredential` enabled.
 
 ```shell
 cat <<EOF | kubectl apply -f -
@@ -231,7 +231,6 @@ metadata:
   name: sample-workload-identity
   namespace: "${SERVICE_ACCOUNT_NAMESPACE}"
 spec:
-  serviceAccountName: "${SERVICE_ACCOUNT_NAME}"
   programRef:
     name: sample-workload-identity
   stack: sample-workload-identity
@@ -241,6 +240,7 @@ spec:
       secret:
         name: pulumi-api-secret
         key: accessToken
+  serviceAccountName: "${SERVICE_ACCOUNT_NAME}"
   config:
     azure-native:useDefaultAzureCredential: "true"
     azure-native:subscriptionId: "${SUBSCRIPTION}"
@@ -249,11 +249,11 @@ spec:
       podTemplate:
         metadata:
           labels:
-            azure.workload.identity/use: "true"  # Required. Only pods with this label can use workload identity.
+            azure.workload.identity/use: "true"
 EOF
 ```
 
-Checking the stack outputs, we see a `clientId` matching that of the managed identity.
+Checking the stack outputs, we see a `clientId` matching that of the managed identity!
 
 ```shell
 kubectl get stack/sample-workload-identity -oyaml
