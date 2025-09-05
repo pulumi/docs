@@ -365,17 +365,22 @@ You can group by any combination of attributes to match your workflow. Some usef
 
 Selecting the **"X"** in the filter bar will remove all previously selected filters.
 
+## Unified Resources
+
+When a resource exists in multiple sources (such as both IaC stacks and Insights scans), Pulumi Cloud consolidates these in the search results. Resources from multiple sources are indicated with a <img src="/docs/insights/assets/spoke.svg" alt="spoke icon" style="display: inline; width: 16px; height: 16px; vertical-align: sub;"> icon in the results table. This behavior helps reduce duplicate entries while ensuring all sources that match your query are considered.
+
+When using the "group by" functionality, a consolidated resource can appear in multiple groups if it has sources present in each group. For example, when grouping by project, a resource that exists in both an IaC stack and an Insights scan from different projects will appear under both project groups.
+
 ## Managed by attribute
 
-The **Resources** page in Pulumi Cloud now includes a **Managed By** column, which helps categorize resources based on how they are managed. This column provides insight into whether a resource is defined by Infrastructure as Code (IaC) using Pulumi, discovered by Pulumi’s resource discovery engine, or both.
+The **Resources** page in Pulumi Cloud now includes a **Managed By** column, which helps categorize resources based on how they are managed. This column provides insight into whether a resource is defined by Infrastructure as Code (IaC) using Pulumi or discovered by Pulumi's resource discovery engine.
 
 ### Viewing managed by categories
 
-The managed by column classifies resources into three categories:
+The managed by column classifies resources into two categories:
 
 - **Pulumi** – Resources provisioned and tracked through Pulumi stacks.
-- **Pulumi Discovered** – Resources that exist in both a Pulumi stack and have also been discovered by Pulumi’s scanning engine.
-- **None** – Resources that were detected by Pulumi’s scanning engine but are not managed by any Pulumi stack.
+- **Other** – Resources that were detected by Pulumi's scanning engine but are not managed by any Pulumi stack.
 
 ## Column filtering
 

@@ -10,6 +10,8 @@ menu:
 
 Resource Search provides powerful querying capabilities for resources managed by Pulumi. The Resource Search API allows you to find resources across your organization using various filters and criteria.
 
+When resources exist in multiple sources (such as both IaC stacks and Insights scans), the search results can consolidate these using the `collapse` parameter.
+
 {{< notes >}}
 The Resource Search API is currently in preview and subject to change.
 {{< /notes >}}
@@ -40,6 +42,7 @@ GET /api/orgs/{org}/search/resourcesv2
 | `query`       | string | query | **Optional.** A search query to filter the results. |
 | `properties`  | boolean| query | **Optional.** If `true`, includes the resource properties. Default is `false`. |
 | `source`      | string | query | **Optional.** The source for resource search. |
+| `collapse`    | boolean| query | **Optional.** If `true`, collapses resources from multiple sources. Default is `false`. |
 
 ### Detailed descriptions
 
@@ -73,6 +76,8 @@ Paginating with the `cursor` parameter is not transactional. The order of result
 **properties**: Whether to include resource properties in results. Not supported for all subscriptions.
 
 Attempting to set this on an unsupported subscription results in a 402 status code.
+
+**collapse**: Whether to collapse resources from multiple sources into a single result. When `true`, resources that exist in multiple sources (such as both IaC stacks and Insights scans) are consolidated into a single entry in the search results. When `false` (default), all source instances of a resource are returned separately.
 
 ### Example
 
