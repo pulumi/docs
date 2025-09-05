@@ -111,5 +111,7 @@ For example, a property named `nested_resource` would turn into `nestedResource`
 {{% /notes %}}
 
 {{% notes "info" %}}
-For arrays with different lengths, only changes for elements that are in both arrays are ignored. If new input array is longer, additional elements will be taken from the new array. If the array is shorter, we only take that number of elements from the original array.
+For arrays with different lengths, only changes for elements that are in both arrays are ignored. If the new input array is longer, additional elements will be taken from the new array. If the new array is shorter, we only take that number of elements from the original array.
+
+For example `ignoreChanges` on an old array `[1, 2]` and a new array `[a, b, c]` results in `[1, 2, c]`, and an old array `[1, 2, 3]` and a new array `[a, b]` results in `[1, 2]`.
 {{% /notes %}}
