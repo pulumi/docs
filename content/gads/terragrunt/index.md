@@ -12,7 +12,7 @@ subheading: |
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Looking for a Terragrunt alternative? Pulumi Cloud provides native support for managing infrastructure at scale using programming languages you know and love, without needing wrapper tools or complex configuration management.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terragrunt alternative</span>? Pulumi Cloud provides native support for managing infrastructure at scale using programming languages you know and love, without needing wrapper tools or complex configuration management.
 
 key_features_above:
     items:
