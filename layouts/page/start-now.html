@@ -1,0 +1,47 @@
+{{ define "main" }}
+    <section class="container mx-auto py-8 px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-semibold mb-4">{{ .Title }}</h2>
+            {{ if .Params.subtitle }}
+                <p class="text-xl text-gray-600">{{ .Params.subtitle }}</p>
+            {{ end }}
+        </div>
+
+        <!-- Language Selection -->
+        {{ if .Params.languages }}
+        <div class="mb-12 mt-10">
+            <div class="flex flex-wrap justify-center max-w-4xl mx-auto">
+                {{ range $lang := .Params.languages.items }}
+                <div class="w-1/2 sm:w-1/3 md:w-1/3 p-3">
+                    <a href="{{ $lang.link }}" class="block text-center">
+                        <div class="card bg-white p-6 h-full hover:shadow-lg transition-all transform hover:scale-105">
+                            <img src="{{ $lang.logo }}" alt="{{ $lang.name }}" class="h-16 mx-auto mb-3">
+                            <span class="font-semibold text-gray-800">{{ $lang.name }}</span>
+                        </div>
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </section>
+
+    <style>
+    /* Custom styles for the start-now page */
+    .card {
+        border: 1px solid #e2e8f0;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+    .card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .transform { transform: translateZ(0); }
+    .hover\:scale-105:hover { transform: scale(1.05); }
+    .transition-all { 
+        transition-property: all; 
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+    }
+    </style>
+{{ end }}
