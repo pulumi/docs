@@ -22,6 +22,37 @@ key_features_above:
           sub_title: "Pulumi Infrastructure as Code Engine"
           description: |
             Author infrastructure as code (IaC) using programming languages you know and love – including C#, TypeScript, Python, Go, Java, and YAML. Pulumi SDK helps create, deploy, and manage 100% of your Microsoft Azure infrastructure, including containers, serverless functions, and infrastructure using modern programming languages.
+          ide:
+            - title: C#
+              language: csharp
+              code: |
+                using Pulumi;
+                using Pulumi.AzureNative.Storage;
+                using Pulumi.AzureNative.Storage.Inputs;
+                
+                class MyStack : Stack
+                {
+                    public MyStack()
+                    {
+                      var config = new Config();
+                      var resourceGroupNameParam = config.Require("resourceGroupNameParam");
+                      var storagecreatedbyarm = new StorageAccount("storagecreatedbyarm", 
+                      new StorageAccountArgs
+                      {
+                          AccountName = "storagecreatedbyarm",
+                          Kind = "StorageV2",
+                          Location = "westeurope",
+                          ResourceGroupName = resourceGroupNameParam,
+                          Sku = new SkuArgs
+                          {
+                              Name = "Standard_LRS",
+                          },
+                      });
+                    }
+                }
+          button:
+            text: "Try Pulumi Cloud for FREE"
+            link: "https://app.pulumi.com/signup"
         
 key_features:
     title: Key features
