@@ -109,3 +109,7 @@ In addition to passing simple property names, nested properties can also be supp
 The property names passed to `ignoreChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
 For example, a property named `nested_resource` would turn into `nestedResource`.
 {{% /notes %}}
+
+{{% notes "info" %}}
+For arrays with different lengths, only changes for elements that are in both arrays are ignored. If new input array is longer, additional elements will be taken from the new array. If the array is shorter, we only take that number of elements from the original array.
+{{% /notes %}}
