@@ -64,6 +64,7 @@ main:
     presenters:
         - name: Jay Smith
           role: Sr. Cloud Customer Engineer, GCP
+          photo: /images/team/jason-smith.jpg
         - name: Pulumi Staff
 
     # case-sensitive
