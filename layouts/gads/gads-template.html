@@ -32,37 +32,52 @@
                             </div>
                             <div class="w-full lg:w-1/2 block lg:flex lg:justify-center lg:align-center">
                                 <div class="card bg-white shadow-xl p-6 block">
-                                    <div>
-                                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                                            <pulumi-choosable type="language" class="highlight" value="typescript">
-                                                <img
-                                                    class="mx-auto w-full"
-                                                    src="/images/home/typescript.svg"
-                                                    alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket"
-                                                />
-                                            </pulumi-choosable>
-
-                                            <pulumi-choosable type="language" class="highlight" value="python">
-                                                <img class="mx-auto w-full" src="/images/home/python.svg" alt="Pulumi code being written in Python showing autocomplete for creating a new S3 bucket" />
-                                            </pulumi-choosable>
-
-                                            <pulumi-choosable type="language" class="highlight" value="go">
-                                                <img class="mx-auto w-full" src="/images/home/go.svg" alt="Pulumi code being written in GO showing autocomplete for creating a new S3 bucket" />
-                                            </pulumi-choosable>
-
-                                            <pulumi-choosable type="language" class="highlight" value="csharp">
-                                                <img class="mx-auto w-full" src="/images/home/c-sharp.svg" alt="Pulumi code being written in C# showing autocomplete for creating a new S3 bucket" />
-                                            </pulumi-choosable>
-
-                                            <pulumi-choosable type="language" class="highlight" value="java">
-                                                <img class="mx-auto w-full" src="/images/home/java.svg" alt="Pulumi code being written in Java showing autocomplete for creating a new S3 bucket" />
-                                            </pulumi-choosable>
-
-                                            <pulumi-choosable type="language" class="highlight" value="yaml">
-                                                <img class="mx-auto w-full" src="/images/home/yaml.svg" alt="Pulumi code being written in YAML showing autocomplete for creating a new S3 bucket" />
-                                            </pulumi-choosable>
+                                    {{ if $feature.ide }}
+                                        {{ $langOptions := slice }}
+                                        {{ range $index, $lang := $feature.ide }}
+                                            {{ $langOptions = $langOptions | append $lang.language }}
+                                        {{ end }}
+                                        {{ $langList := delimit $langOptions "," }}
+                                        <pulumi-chooser type="language" options="{{ $langList }}">
+                                            {{ range $lang := $feature.ide }}
+                                                <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
+                                                    {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
+                                                </pulumi-choosable>
+                                            {{ end }}
                                         </pulumi-chooser>
-                                    </div>
+                                    {{ else }}
+                                        <div>
+                                            <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                                                <pulumi-choosable type="language" class="highlight" value="typescript">
+                                                    <img
+                                                        class="mx-auto w-full"
+                                                        src="/images/home/typescript.svg"
+                                                        alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket"
+                                                    />
+                                                </pulumi-choosable>
+
+                                                <pulumi-choosable type="language" class="highlight" value="python">
+                                                    <img class="mx-auto w-full" src="/images/home/python.svg" alt="Pulumi code being written in Python showing autocomplete for creating a new S3 bucket" />
+                                                </pulumi-choosable>
+
+                                                <pulumi-choosable type="language" class="highlight" value="go">
+                                                    <img class="mx-auto w-full" src="/images/home/go.svg" alt="Pulumi code being written in GO showing autocomplete for creating a new S3 bucket" />
+                                                </pulumi-choosable>
+
+                                                <pulumi-choosable type="language" class="highlight" value="csharp">
+                                                    <img class="mx-auto w-full" src="/images/home/c-sharp.svg" alt="Pulumi code being written in C# showing autocomplete for creating a new S3 bucket" />
+                                                </pulumi-choosable>
+
+                                                <pulumi-choosable type="language" class="highlight" value="java">
+                                                    <img class="mx-auto w-full" src="/images/home/java.svg" alt="Pulumi code being written in Java showing autocomplete for creating a new S3 bucket" />
+                                                </pulumi-choosable>
+
+                                                <pulumi-choosable type="language" class="highlight" value="yaml">
+                                                    <img class="mx-auto w-full" src="/images/home/yaml.svg" alt="Pulumi code being written in YAML showing autocomplete for creating a new S3 bucket" />
+                                                </pulumi-choosable>
+                                            </pulumi-chooser>
+                                        </div>
+                                    {{ end }}
                                 </div>
                             </div>
                         </div>
@@ -121,7 +136,12 @@
                 {{ end }}
                 {{ if not (eq $item.ide nil) }}
                     <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
-                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                        {{ $langOptions := slice }}
+                        {{ range $index, $lang := $item.ide }}
+                            {{ $langOptions = $langOptions | append $lang.language }}
+                        {{ end }}
+                        {{ $langList := delimit $langOptions "," }}
+                        <pulumi-chooser type="language" options="{{ $langList }}">
                             {{ range $lang := $item.ide }}
                                 <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
                                     {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
@@ -191,7 +211,12 @@
                 {{ end }}
                 {{ if not (eq $item.ide nil) }}
                     <div class="max-w-4xl container text-left card bg-white p-6 mx-auto">
-                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                        {{ $langOptions := slice }}
+                        {{ range $index, $lang := $item.ide }}
+                            {{ $langOptions = $langOptions | append $lang.language }}
+                        {{ end }}
+                        {{ $langList := delimit $langOptions "," }}
+                        <pulumi-chooser type="language" options="{{ $langList }}">
                             {{ range $lang := $item.ide }}
                                 <pulumi-choosable type="language" class="highlight" value="{{ $lang.language }}">
                                     {{ partial "code" (dict "lang" $lang.language "code" $lang.code "mode" "light") }}
