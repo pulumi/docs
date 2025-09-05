@@ -36,10 +36,10 @@ key_features_above:
                     {
                       var config = new Config();
                       var resourceGroupNameParam = config.Require("resourceGroupNameParam");
-                      var storagecreatedbyarm = new StorageAccount("storagecreatedbyarm", 
+                      var storagecreatedbyarm = new StorageAccount("mystorage", 
                       new StorageAccountArgs
                       {
-                          AccountName = "storagecreatedbyarm",
+                          AccountName = "mystorage",
                           Kind = "StorageV2",
                           Location = "westeurope",
                           ResourceGroupName = resourceGroupNameParam,
