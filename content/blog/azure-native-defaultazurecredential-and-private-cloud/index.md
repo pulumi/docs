@@ -111,12 +111,82 @@ pulumi config set azure-native:subscriptionId <your-subscription-id>
 
 Note that `subscriptionId` is a required configuration setting in this (and most) authentication modes; it ensures your resources are deployed to the correct Azure subscription.
 
+## Private Azure Cloud Support
+
+This release brings improved support for [Azure private clouds][docprivatecloud].
+A private cloud is a dedicated cloud computing environment used by a single organization.
+
+The provider can now automatically discover, and configure itself for, any Azure cloud based on
+the `ARM_METADATA_HOSTNAME` environment variable. Note that this takes precedence over the `ARM_ENVIRONMENT` variable.
+
+[docprivatecloud]: https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-private-cloud
+
+### How To Use
+
+The provider can query the Azure metadata service to automatically configure itself for your specific Azure environment:
+
+```bash
+# Using environment variable
+export ARM_METADATA_HOSTNAME=management.azure.example
+
+# Or via Pulumi configuration
+pulumi config set azure-native:metadataHost management.azure.example
+```
+
+The provider expects the `2022-09-01` metadata schema, which resembles:
+
+```json
+{
+  "authentication": {
+    "loginEndpoint": "https://login.microsoftonline.com",
+    "audiences": [
+      "https://management.core.windows.net/",
+      "https://management.azure.com/"
+    ]
+  },
+  "name": "AzureCloud",
+  "suffixes": {
+    "keyVaultDns": "vault.azure.net",
+    "storage": "core.windows.net"
+  },
+  "resourceManager": "https://management.azure.com/",
+  "microsoftGraphResourceId": "https://graph.microsoft.com/"
+}
+```
+
+The provider automatically retrieves the correct endpoints for authentication, resource management, and other services.
+
+## Disabling Instance Discovery
+
+Also in this release is a new setting, `disableInstanceDiscovery`, to determine whether the provider requests
+Microsoft Entra instance metadata from the login endpoint (https://login.microsoftonline.com) before authenticating.
+This setting is for Pulumi programs authenticating in disconnected clouds or private clouds.
+
+Setting `disableInstanceDiscovery` to `true` will completely disable both instance discovery and authority validation.
+Please ensure that the configured authority host is valid and trustworthy.
+
+### How To Use
+
+The provider can be configured to disable instance discovery:
+
+```bash
+# Using environment variable
+export ARM_DISABLE_INSTANCE_DISCOVERY=true
+
+# Or via Pulumi configuration
+pulumi config set azure-native:disableInstanceDiscovery true
+```
+
 ## Authentication in AKS with Workload Identity
 
 For programs run in a pod on an Azure Kubernetes Service (AKS) cluster, DefaultAzureCredential automatically uses the
 workload identity of the pod's service account. This workload identity could then be granted roles in Azure to deploy stack resources.
 
-Don't forget to apply the label `azure.workload.identity/use: "true"` to your pods when using workload identity.
+{{% notes type="info" %}}
+
+Ensure that the application pods using workload identity include the label `azure.workload.identity/use: "true"` in the pod spec.
+
+{{% /notes %}}
 
 ### Walkthough
 
@@ -279,72 +349,6 @@ status:
       subscriptionId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
       tenantId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
     clientToken: '[secret]'
-```
-
-## Private Azure Cloud Support
-
-This release brings improved support for [Azure private clouds][docprivatecloud].
-A private cloud is a dedicated cloud computing environment used by a single organization.
-
-The provider can now automatically discover, and configure itself for, any Azure cloud based on
-the `ARM_METADATA_HOSTNAME` environment variable. Note that this takes precedence over the `ARM_ENVIRONMENT` variable.
-
-[docprivatecloud]: https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-private-cloud
-
-### How To Use
-
-The provider can query the Azure metadata service to automatically configure itself for your specific Azure environment:
-
-```bash
-# Using environment variable
-export ARM_METADATA_HOSTNAME=management.azure.example
-
-# Or via Pulumi configuration
-pulumi config set azure-native:metadataHost management.azure.example
-```
-
-The provider expects the `2022-09-01` metadata schema, which resembles:
-
-```json
-{
-  "authentication": {
-    "loginEndpoint": "https://login.microsoftonline.com",
-    "audiences": [
-      "https://management.core.windows.net/",
-      "https://management.azure.com/"
-    ]
-  },
-  "name": "AzureCloud",
-  "suffixes": {
-    "keyVaultDns": "vault.azure.net",
-    "storage": "core.windows.net"
-  },
-  "resourceManager": "https://management.azure.com/",
-  "microsoftGraphResourceId": "https://graph.microsoft.com/"
-}
-```
-
-The provider automatically retrieves the correct endpoints for authentication, resource management, and other services.
-
-## Disabling Instance Discovery
-
-Also in this release is a new setting, `disableInstanceDiscovery`, to determine whether the provider requests
-Microsoft Entra instance metadata from the login endpoint (https://login.microsoftonline.com) before authenticating.
-This setting is for Pulumi programs authenticating in disconnected clouds or private clouds.
-
-Setting `disableInstanceDiscovery` to `true` will completely disable both instance discovery and authority validation.
-Please ensure that the configured authority host is valid and trustworthy.
-
-### How To Use
-
-The provider can be configured to disable instance discovery:
-
-```bash
-# Using environment variable
-export ARM_DISABLE_INSTANCE_DISCOVERY=true
-
-# Or via Pulumi configuration
-pulumi config set azure-native:disableInstanceDiscovery true
 ```
 
 ## Conclusion
