@@ -23,13 +23,7 @@ key_features_above:
           description: |
             Write IaC in the languages you know, such as C#, TypeScript, Python, Go, Java, or YAML. Pulumi manages 100% of your Azure resources, from containers to serverless.
 
-Go further with **components**: modular, reusable building blocks that cut down copy-paste and simplify your architecture.
-
-- Create repeatable patterns
-- Group resources into one deployable unit
-- Write once, deploy anywhere
-
-Build your first component in minutes.
+Go further with **components**: modular, reusable building blocks that cut down copy-paste and simplify your architecture. Write once, deploy anywhere → Build your first component in minutes.
           ide:
             - title: C#
               language: csharp
