@@ -18,10 +18,18 @@ overview:
 
 key_features_above:
     items:
-        - title: "Author in any language, deploy to any cloud"
-          sub_title: "Pulumi Infrastructure as Code Engine"
+        - title: "Azure Infrastructure you can Write, Reuse, and Test"
+          sub_title: "Turn Azure Best Practices into Reusable Code"
           description: |
-            Author infrastructure as code (IaC) using programming languages you know and love – including C#, TypeScript, Python, Go, Java, and YAML. Pulumi SDK helps create, deploy, and manage 100% of your Microsoft Azure infrastructure, including containers, serverless functions, and infrastructure using modern programming languages.
+            Write IaC in the languages you know, such as C#, TypeScript, Python, Go, Java, or YAML. Pulumi manages 100% of your Azure resources, from containers to serverless.
+
+Go further with **components**: modular, reusable building blocks that cut down copy-paste and simplify your architecture.
+
+- Create repeatable patterns
+- Group resources into one deployable unit
+- Write once, deploy anywhere
+
+Build your first component in minutes.
           ide:
             - title: C#
               language: csharp
