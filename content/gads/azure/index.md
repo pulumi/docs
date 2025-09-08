@@ -21,9 +21,7 @@ key_features_above:
         - title: "Azure Infrastructure you can Write, Reuse, and Test"
           sub_title: "Turn Azure Best Practices into Reusable Code"
           description: |
-            Write IaC in the languages you know, such as C#, TypeScript, Python, Go, Java, or YAML. Pulumi manages 100% of your Azure resources, from containers to serverless.
-
-Go further with **components**: modular, reusable building blocks that cut down copy-paste and simplify your architecture. Write once, deploy anywhere → Build your first component in minutes.
+            Write IaC in the languages you know, such as C#, TypeScript, Python, Go, Java, or YAML. Pulumi manages 100% of your Azure resources, from containers to serverless. Go further with **components**: modular, reusable building blocks that cut down copy-paste and simplify your architecture. Write once, deploy anywhere → Build your first component in minutes.
           ide:
             - title: C#
               language: csharp
