@@ -20,7 +20,7 @@ For a detailed guide on how to get started with Pulumi Insights, including step-
 
 ## Configure Policy as Code for discovered resources
 
-To apply policies to your discovered resources, you first need to set up a Policy Group. A Policy Group in Pulumi enforces policies across a group of stacks and accounts in your organization. Each Policy Group can contain multiple of each stack and accounts, and you can assign multiple Policy Packs to these groups.
+To apply policies to your discovered resources, you first need to set up a Policy Group. A Policy Group in Pulumi enforces policies across a group of stacks or accounts in your organization. Each Policy Group can contain either stacks or accounts, and you can assign multiple Policy Packs to these groups.
 
 On the **Policies** page, under Pulumi Insights, you can click the **New policy pack** button to enable a new Policy Pack for use with your Insights accounts.
 
