@@ -15,6 +15,8 @@ tags:
 
 We're excited to announce unified resources in Pulumi Cloud. This powerful new feature automatically consolidates resources from multiple sources into single, comprehensive views. When the same AWS S3 bucket, Azure VM, or Google Cloud database appears in both your IaC stacks and Pulumi Insights, you'll now see one unified entry instead of duplicates cluttering your search results.
 
+<!--more-->
+
 ## Why We Built This
 
 Cloud resources naturally exist across multiple contexts in modern organizations. The same S3 bucket might be imported into a Pulumi stack, discovered by Pulumi Insights, and referenced in multiple projects. Previously, this created fragmented views with duplicate search results that made it difficult to understand your true infrastructure footprint.
