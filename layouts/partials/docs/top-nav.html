@@ -1,19 +1,29 @@
 {{ $selection := "home" }}
 
-{{ if hasPrefix .Path "/docs/iac" }}
-    {{ $selection = "iac" }}
+{{ if .Params.capability }}
+    {{ $selection = .Params.capability }}
+{{ else if hasPrefix .Path "/docs/build" }}
+    {{ $selection = "build" }}
+{{ else if hasPrefix .Path "/docs/platform" }}
+    {{ $selection = "platform" }}
+{{ else if hasPrefix .Path "/docs/management" }}
+    {{ $selection = "management" }}
+{{ else if hasPrefix .Path "/docs/developer-tools" }}
+    {{ $selection = "developer-tools" }}
+{{ else if hasPrefix .Path "/docs/iac" }}
+    {{ $selection = "build" }}
 {{ else if hasPrefix .Path "/docs/esc" }}
-    {{ $selection = "esc" }}
-{{ else if hasPrefix .Path "/docs/idp" }}
-    {{ $selection = "idp" }}
+    {{ $selection = "build" }}
 {{ else if hasPrefix .Path "/docs/pulumi-cloud" }}
-    {{ $selection = "cloud" }}
+    {{ $selection = "build" }}
 {{ else if hasPrefix .Path "/docs/insights" }}
-    {{ $selection = "insights" }}
+    {{ $selection = "management" }}
+{{ else if hasPrefix .Path "/docs/idp" }}
+    {{ $selection = "platform" }}
 {{ else if hasPrefix .Path "/docs" }}
     {{ $selection = "home" }}
 {{ else if hasPrefix .Path "/registry" }}
-    {{ $selection = "packages" }}
+    {{ $selection = "platform" }}
 {{ else if hasPrefix .Path "/tutorials" }}
     {{ $selection = "tutorials" }}
 {{ end }}
@@ -23,23 +33,17 @@
         <img class="tab-icon" src="/icons/docs.svg" />
         <span>Docs Home</span>
     </a>
-    <a class="whitespace-nowrap tab {{ if eq $selection "iac" }}tab-selected{{ end }}" href="/docs/iac/">
-        <span>Pulumi IaC</span>
+    <a class="whitespace-nowrap tab {{ if eq $selection "build" }}tab-selected{{ end }}" href="/docs/build/">
+        <span>Build</span>
     </a>
-    <a class="whitespace-nowrap tab {{ if eq $selection "esc" }}tab-selected{{ end }}" href="/docs/esc/">
-        <span>Pulumi ESC</span>
+    <a class="whitespace-nowrap tab {{ if eq $selection "platform" }}tab-selected{{ end }}" href="/docs/platform/">
+        <span>Platform</span>
     </a>
-    <a class="whitespace-nowrap tab {{ if eq $selection "insights" }}tab-selected{{ end }}" href="/docs/insights/">
-        <span>Pulumi Insights</span>
+    <a class="whitespace-nowrap tab {{ if eq $selection "management" }}tab-selected{{ end }}" href="/docs/management/">
+        <span>Management</span>
     </a>
-    <a class="whitespace-nowrap tab {{ if eq $selection "idp" }}tab-selected{{ end }}" href="/docs/idp/">
-        <span>Pulumi IDP</span>
-    </a>
-    <a class="whitespace-nowrap tab {{ if eq $selection "cloud" }}tab-selected{{ end }}" href="/docs/pulumi-cloud/">
-        <span>Pulumi Cloud</span>
-    </a>
-    <a class="whitespace-nowrap tab {{ if eq $selection "packages" }}tab-selected{{ end }}" href="/registry/">
-        <span>Packages</span>
+    <a class="whitespace-nowrap tab {{ if eq $selection "developer-tools" }}tab-selected{{ end }}" href="/docs/developer-tools/">
+        <span>Developer Tools</span>
     </a>
     <a class="whitespace-nowrap tab {{ if eq $selection "tutorials" }}tab-selected{{ end }}" href="/tutorials/">
         <span>Tutorials</span>
