@@ -58,9 +58,9 @@ key_features:
     title: Key features
     items:
         - title: "Azure Resource Manager → Pulumi"
-          sub_title: "ARM Templates"
+          sub_title: "Move from static JSON to reusable code"
           description: |
-           Pulumi lets you manage Azure infrastructure using your favorite language, with built-in support for CI/CD, reusable components, and testability. For .NET teams especially, Pulumi’s support for C# provides a superior experience over static JSON.
+           Many Azure teams hit a wall with ARM templates. Pulumi provides a flexible, code-first alternative using your favorite language. Get full IDE support, CI/CD integration, reusable components, modern workflows, and testability. For .NET teams, Pulumi’s C# support delivers a far better experience than static JSON.
           ide:
             - title: C#
               language: csharp
