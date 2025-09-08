@@ -11,6 +11,11 @@ menu:
         identifier: iac-get-started
         parent: iac-home
         weight: 10
+    build:
+        name: Get Started
+        identifier: build-get-started
+        parent: build-home
+        weight: 10
     getstarted:
         name: Overview
         weight: 2

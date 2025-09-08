@@ -8,9 +8,13 @@ menu:
     build:
         identifier: build-home
         weight: 1
+expanded_menu_ids:
+    - build-get-started
+    - build-stacks-projects
+    - build-environments
 meta_desc: Build and deploy cloud infrastructure with Pulumi. Manage stacks, environments, resources, and services for your daily engineering work.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Build with Pulumi
+h1: Build<strong> with</strong> Pulumi
 description: <p>Everything you need for daily engineering work - creating stacks, managing environments, deploying resources, and building cloud services.</p>
 link_buttons:
   primary:
@@ -27,7 +31,7 @@ sections:
   - icon: stack-blue-21-21
     heading: Stacks
     description: Create and manage isolated deployments of your infrastructure across environments.
-    link: /docs/iac/concepts/stack/
+    link: /docs/iac/concepts/stacks/
   - icon: gear-blue-21-21
     heading: Environments
     description: Configure secrets, settings, and variables across your infrastructure and applications.
@@ -74,7 +78,7 @@ sections:
   - icon: layers-blue-21-21
     heading: Organize Stacks
     description: Structure your infrastructure across development, staging, and production.
-    link: /docs/pulumi-cloud/stacks/
+    link: /docs/pulumi-cloud/projects-and-stacks/
 - type: button-cards
   heading: Popular Build Workflows
   description: Common patterns for building and deploying cloud infrastructure.
@@ -88,12 +92,12 @@ sections:
     description: "Deploy containerized applications on Kubernetes, AWS ECS, Azure Container Apps, and Google Cloud Run."
     link: /docs/iac/clouds/kubernetes/
     primary_button_label: Get Started
-    primary_button_link: /docs/iac/clouds/kubernetes/get-started/
+    primary_button_link: /docs/iac/get-started/kubernetes/
   - heading: Static Websites
     description: "Build and deploy static sites with CDNs, SSL certificates, and custom domains."
-    link: /docs/iac/clouds/aws/guides/static-website/
-    primary_button_label: Deploy Now
-    primary_button_link: /docs/iac/clouds/aws/guides/static-website/
+    link: /tutorials/
+    primary_button_label: View Tutorials
+    primary_button_link: /tutorials/
 - type: cards-logo-label-link
   heading: Build in Your Language
   description: Use familiar programming languages for infrastructure as code.

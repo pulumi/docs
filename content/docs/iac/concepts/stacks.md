@@ -9,6 +9,11 @@ menu:
         name: Stacks
         parent: iac-concepts
         weight: 30
+    build:
+        name: Stacks
+        identifier: build-stacks
+        parent: build-stacks-projects
+        weight: 1
     concepts:
         weight: 2
 aliases:

@@ -10,6 +10,11 @@ menu:
         parent: iac-concepts
         weight: 40
         identifier: iac-concepts-resources
+    build:
+        name: Resources
+        identifier: build-resources
+        parent: build-home
+        weight: 40
     concepts:
         identifier: resources
         weight: 3
