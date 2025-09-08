@@ -15,7 +15,6 @@ menu:
         identifier: developer-tools-sdks
         parent: developer-tools-home
         weight: 20
-        identifier: iac-languages
     languages:
         name: Overview
         weight: 7
