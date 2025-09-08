@@ -57,7 +57,7 @@ npx @pulumi/mcp-server
 
 Add the Pulumi MCP server to Cursor by clicking the following button:
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=pulumi&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoibnB4IEBwdWx1bWkvbWNwLXNlcnZlciJ9)
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=pulumi&config=eyJjb21tYW5kIjoibnB4IEBwdWx1bWkvbWNwLXNlcnZlckBsYXRlc3Qgc3RkaW8ifQ%3D%3D)
 
 Alternatively, create a `mcp.json` file in the `.cursor` directory at your project root:
 
