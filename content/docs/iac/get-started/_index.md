@@ -5,6 +5,7 @@ title: Get started
 h1: Get started with Pulumi
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Get started

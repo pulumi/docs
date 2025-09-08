@@ -4,12 +4,18 @@ meta_desc: Pulumi Deployments is the fast way for individuals, teams, enterprise
 title: "Deployments"
 h1: "Pulumi Deployments"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: management
 menu:
   cloud:
     name: Deployments
     parent: cloud-home
     identifier: pulumi-cloud-deployments
     weight: 3
+  management:
+    name: Deployments
+    identifier: management-deployments
+    parent: management-home
+    weight: 10
 aliases:
 - /docs/intro/pulumi-service/deployments/
 - /docs/intro/deployments/

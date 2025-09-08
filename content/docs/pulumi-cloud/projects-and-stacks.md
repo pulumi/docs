@@ -4,6 +4,7 @@ meta_desc: Learn how to manage projects and stacks in the Pulumi Cloud, includin
 title: "Projects & stacks"
 h1: "Projects & stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   cloud:
     name: "Projects & stacks"

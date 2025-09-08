@@ -5,12 +5,18 @@ meta_desc: Pulumi's Policy as Code offering, CrossGuard, allows you to set guard
 title: Policy as code
 h1: Pulumi policy as code
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: platform
 menu:
     iac:
         name: Policy as code
         parent: iac-home
         weight: 55
         identifier: iac-policy
+    platform:
+        name: Policy as Code
+        identifier: platform-policy
+        parent: platform-home
+        weight: 30
 aliases:
 - /docs/guides/crossguard/
 - /policy-as-code/

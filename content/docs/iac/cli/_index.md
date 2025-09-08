@@ -5,12 +5,18 @@ title: Pulumi CLI
 h1: Pulumi CLI overview
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: developer-tools
 menu:
   iac:
     name: Pulumi CLI
     weight: 45
     identifier: iac-cli
     parent: iac-home
+  developer-tools:
+    name: Pulumi CLI
+    identifier: developer-tools-cli
+    parent: developer-tools-home
+    weight: 10
 aliases:
     - /docs/reference/commands/
     - /docs/tour/basics-deploying/

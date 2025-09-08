@@ -4,6 +4,7 @@ meta_desc: Every Pulumi program is deployed to a stack and a project can have as
 title: Stacks
 h1: Stacks
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Stacks

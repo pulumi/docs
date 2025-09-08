@@ -7,6 +7,11 @@ menu:
   idp:
     identifier: idp-home
     weight: 1
+  platform:
+    name: Templates & IDP
+    identifier: platform-idp
+    parent: platform-home
+    weight: 10
 
 expanded_menu_ids:
     - idp-get-started
@@ -14,6 +19,7 @@ expanded_menu_ids:
 
 meta_desc: Pulumi IDP enables you to build secure, scalable, and flexible developer workflows.
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: platform
 h1: Pulumi IDP Docs
 description: <p>Pulumi IDP enables you to build secure, scalable, and flexible developer workflows.</p>
 

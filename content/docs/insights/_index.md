@@ -7,11 +7,17 @@ menu:
   insights:
     identifier: insights-home
     weight: 1
+  management:
+    name: Insights & Analytics
+    identifier: management-insights
+    parent: management-home
+    weight: 20
 expanded_menu_ids:
     - insights-get-started
     - insights-concepts
 meta_desc: Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure.
 meta_image: /images/docs/meta-images/insights-meta.png
+capability: management
 h1: Pulumi Insights Documentation
 description: |
   Pulumi Insights offers an intelligent platform for discovering, understanding, and managing cloud infrastructure with AI-powered asset and compliance management.

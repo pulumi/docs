@@ -12,18 +12,28 @@ it be helpful to be able to set the menu somehow in the frontmatter?) */}}
 {{ end }}
 
 {{ if eq $menuID "" }}
-    {{ $segments := split $page.Path "/"}}
-
-    {{ if eq (index $segments 1) "docs" }}
-        {{ $section := index $segments 2 }}
-
-        {{/* Little hack to handle prevent colliding with the existing `pulumi-cloud` menu. */}}
-        {{ if eq $section "pulumi-cloud" }}
-            {{ $section = "cloud" }}
+    {{/* Check for capability frontmatter first */}}
+    {{ if $page.Params.capability }}
+        {{ if in $validMenus $page.Params.capability }}
+            {{ $menuID = $page.Params.capability }}
         {{ end }}
+    {{ end }}
+    
+    {{/* If no capability set, derive from path */}}
+    {{ if eq $menuID "" }}
+        {{ $segments := split $page.Path "/"}}
 
-        {{ if in $validMenus $section }}
-            {{ $menuID = $section }}
+        {{ if eq (index $segments 1) "docs" }}
+            {{ $section := index $segments 2 }}
+
+            {{/* Little hack to handle prevent colliding with the existing `pulumi-cloud` menu. */}}
+            {{ if eq $section "pulumi-cloud" }}
+                {{ $section = "cloud" }}
+            {{ end }}
+
+            {{ if in $validMenus $section }}
+                {{ $menuID = $section }}
+            {{ end }}
         {{ end }}
     {{ end }}
 {{ end }}

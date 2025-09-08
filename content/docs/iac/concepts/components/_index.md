@@ -4,12 +4,18 @@ meta_desc: A component resource is a logical grouping of resources. Learn how to
 title: Components
 h1: Component resources
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: platform
 menu:
     iac:
         name: Components
         parent: iac-concepts
         weight: 70
         identifier: iac-concepts-components
+    platform:
+        name: Components
+        identifier: platform-components
+        parent: platform-home
+        weight: 20
 aliases:
 - /docs/intro/concepts/resources/components/
 - /docs/concepts/resources/components/

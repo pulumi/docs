@@ -4,6 +4,7 @@ meta_desc: Resources represent the fundamental units that make up your cloud inf
 title: Resources
 h1: Resources
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Resources
