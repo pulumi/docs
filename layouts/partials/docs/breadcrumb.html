@@ -1,15 +1,56 @@
-<!-- Based on https://gohugo.io/content-management/sections/#example-breadcrumb-navigation -->
+<!-- Capability-aware breadcrumb implementation -->
 
 <ol class="docs-breadcrumb">
-    {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+    <!-- Always start with Docs home -->
+    <li>
+        <a data-track="breadcrumb" href="/docs/">
+            Docs
+        </a>
+    </li>
+
+    {{ $capability := .Params.capability }}
+    {{ if $capability }}
+        <!-- Capability-based breadcrumb path -->
+        {{ $capabilityTitle := "" }}
+        {{ $capabilityUrl := "" }}
+        
+        {{ if eq $capability "build" }}
+            {{ $capabilityTitle = "Build" }}
+            {{ $capabilityUrl = "/docs/build/" }}
+        {{ else if eq $capability "platform" }}
+            {{ $capabilityTitle = "Platform" }}
+            {{ $capabilityUrl = "/docs/platform/" }}
+        {{ else if eq $capability "management" }}
+            {{ $capabilityTitle = "Management" }}
+            {{ $capabilityUrl = "/docs/management/" }}
+        {{ else if eq $capability "developer-tools" }}
+            {{ $capabilityTitle = "Developer Tools" }}
+            {{ $capabilityUrl = "/docs/developer-tools/" }}
+        {{ end }}
+
+        <!-- Add capability level -->
+        <li>
+            <a data-track="breadcrumb" href="{{ $capabilityUrl }}">
+                {{ $capabilityTitle }}
+            </a>
+        </li>
+
+        <!-- Current page (active) -->
+        <li class="active">
+            <a>{{ .Title }}</a>
+        </li>
+
+    {{ else }}
+        <!-- Fallback to path-based breadcrumb for pages without capability -->
+        {{ template "pathbreadcrumb" (dict "p1" . "p2" .) }}
+    {{ end }}
 </ol>
 
-{{/*  TODO: Can we modify this to use the existing menus temporarily instead?  */}}
-
-{{ define "breadcrumbnav" }}
+<!-- Fallback path-based breadcrumb template (original logic) -->
+{{ define "pathbreadcrumb" }}
     <!-- Don't include the website home page in the breadcrumb. -->
     {{ if and .p1.Parent (ne .p1.Parent .p1.Site.Home) }}
-        {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2) }}
+        {{ template "pathbreadcrumb" (dict "p1" .p1.Parent "p2" .p2) }}
     {{ end }}
     {{ if not (isset .p1.Params "redirect_to") }}
         <li {{ if eq .p1 .p2 }}class="active"{{ end }}>
