@@ -14,7 +14,7 @@ expanded_menu_ids:
     - build-environments
 meta_desc: Build and deploy cloud infrastructure with Pulumi. Manage stacks, environments, resources, and services for your daily engineering work.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Build<strong> with</strong> Pulumi
+h1: <strong>Build</strong> with Pulumi
 description: <p>Everything you need for daily engineering work - creating stacks, managing environments, deploying resources, and building cloud services.</p>
 link_buttons:
   primary:
@@ -28,19 +28,19 @@ sections:
 - type: full-width-cards
   heading: Core Building Blocks
   cards:
-  - icon: stack-blue-21-21
+  - icon: 📚
     heading: Stacks
     description: Create and manage isolated deployments of your infrastructure across environments.
     link: /docs/iac/concepts/stacks/
-  - icon: gear-blue-21-21
+  - icon: ⚙️
     heading: Environments
     description: Configure secrets, settings, and variables across your infrastructure and applications.
     link: /docs/esc/environments/
-  - icon: cube-blue-21-21
+  - icon: 🧱
     heading: Resources
     description: Provision and manage cloud resources with infrastructure as code.
     link: /docs/iac/concepts/resources/
-  - icon: layers-blue-21-21
+  - icon: 🧩
     heading: Components
     description: Build reusable infrastructure components for consistent deployments.
     link: /docs/iac/concepts/resources/components/
@@ -63,19 +63,19 @@ sections:
 - type: full-width-cards
   heading: Essential Build Tasks
   cards:
-  - icon: terminal-blue-21-21
+  - icon: 🚀
     heading: Deploy Your First Stack
     description: Learn the fundamentals of creating and deploying infrastructure stacks.
     link: /docs/iac/get-started/
-  - icon: key-blue-21-21
+  - icon: 🔐
     heading: Manage Secrets & Config
     description: Securely handle configuration and secrets across environments.
     link: /docs/esc/get-started/
-  - icon: cloud-blue-21-21
+  - icon: ☁️
     heading: Connect to Cloud Services
     description: Build applications that integrate with cloud databases, storage, and APIs.
     link: /docs/iac/concepts/
-  - icon: layers-blue-21-21
+  - icon: 📋
     heading: Organize Stacks
     description: Structure your infrastructure across development, staging, and production.
     link: /docs/pulumi-cloud/projects-and-stacks/

@@ -139,6 +139,18 @@ section.docs-home {
 
             div.icon {
                 top: -1px;
+                
+                &.emoji-icon {
+                    font-size: 21px;
+                    line-height: 21px;
+                    width: 21px;
+                    height: 21px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: transparent;
+                    text-indent: 0 !important;
+                }
             }
         }
 

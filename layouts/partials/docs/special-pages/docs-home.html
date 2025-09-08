@@ -42,7 +42,13 @@
                 {{ range .cards }}
                     <a class="full-width-card" href="{{ .link }}">
                         <div class="icon-heading">
-                            <div class="icon icon-21-21 {{ .icon }}"></div>
+                            {{ if .icon }}
+                                {{ if not (strings.Contains .icon "-") }}
+                                    <div class="icon emoji-icon">{{ .icon }}</div>
+                                {{ else }}
+                                    <div class="icon icon-21-21 {{ .icon }}"></div>
+                                {{ end }}
+                            {{ end }}
                             <h3 id="{{ anchorize .heading }}">{{ .heading }}</h3>
                         </div>
                         <p>{{ .description }}</p>

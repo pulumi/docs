@@ -13,7 +13,7 @@ expanded_menu_ids:
     - developer-tools-sdks
 meta_desc: Technical interfaces and tools for developers. CLIs, SDKs, APIs, and AI-powered development assistance for infrastructure as code.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Developer<strong> tools</strong> and interfaces
+h1: <strong>Developer Tools</strong> and Interfaces
 description: <p>Technical tools and interfaces for developers - command-line tools, programming language SDKs, REST APIs, and AI-powered development assistance.</p>
 link_buttons:
   primary:
@@ -27,19 +27,19 @@ sections:
 - type: full-width-cards
   heading: Core Developer Tools
   cards:
-  - icon: terminal-blue-21-21
+  - icon: 💻
     heading: Command Line Interface
     description: Powerful CLI for managing infrastructure deployments, configurations, and cloud resources.
     link: /docs/iac/cli/
-  - icon: code-blue-21-21
+  - icon: 🔧
     heading: Language SDKs
     description: Native SDKs for TypeScript, Python, Go, .NET, Java, and YAML with full IDE support.
     link: /docs/iac/languages-sdks/
-  - icon: api-blue-21-21
+  - icon: 🔌
     heading: REST APIs
     description: Programmatic access to Pulumi Cloud services for custom integrations and automation.
     link: /docs/pulumi-cloud/cloud-rest-api/
-  - icon: ai-blue-21-21
+  - icon: 🤖
     heading: Pulumi AI
     description: AI-powered infrastructure generation, optimization, and intelligent assistance.
     link: /ai/

@@ -13,6 +13,7 @@
         <!-- Capability-based breadcrumb path -->
         {{ $capabilityTitle := "" }}
         {{ $capabilityUrl := "" }}
+        {{ $isCapabilityHomePage := .Params.docs_home }}
         
         {{ if eq $capability "build" }}
             {{ $capabilityTitle = "Build" }}
@@ -28,17 +29,22 @@
             {{ $capabilityUrl = "/docs/developer-tools/" }}
         {{ end }}
 
-        <!-- Add capability level -->
-        <li>
-            <a data-track="breadcrumb" href="{{ $capabilityUrl }}">
-                {{ $capabilityTitle }}
-            </a>
-        </li>
-
-        <!-- Current page (active) -->
-        <li class="active">
-            <a>{{ .Title }}</a>
-        </li>
+        {{ if $isCapabilityHomePage }}
+            <!-- For capability landing pages, show as active (no extra level) -->
+            <li class="active">
+                <a>{{ $capabilityTitle }}</a>
+            </li>
+        {{ else }}
+            <!-- For other capability pages, show capability link + current page -->
+            <li>
+                <a data-track="breadcrumb" href="{{ $capabilityUrl }}">
+                    {{ $capabilityTitle }}
+                </a>
+            </li>
+            <li class="active">
+                <a>{{ .Title }}</a>
+            </li>
+        {{ end }}
 
     {{ else }}
         <!-- Fallback to path-based breadcrumb for pages without capability -->

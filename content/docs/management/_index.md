@@ -13,7 +13,7 @@ expanded_menu_ids:
     - management-governance
 meta_desc: Operational oversight and governance for infrastructure. Manage deployments, policies, access controls, compliance, and audit across your organization.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Infrastructure<strong> management</strong> and governance
+h1: Infrastructure <strong>Management</strong> and Governance
 description: <p>Operational oversight and governance tools for managing deployments, enforcing policies, controlling access, and maintaining compliance across your cloud infrastructure.</p>
 link_buttons:
   primary:
@@ -27,19 +27,19 @@ sections:
 - type: full-width-cards
   heading: Core Management Capabilities
   cards:
-  - icon: deploy-blue-21-21
+  - icon: 🚀
     heading: Deployments
     description: Monitor and manage infrastructure deployments across environments with automated workflows.
     link: /docs/pulumi-cloud/deployments/
-  - icon: shield-blue-21-21
+  - icon: 🛡️
     heading: Policy & Governance
     description: Enforce organizational standards, compliance rules, and security policies through code.
     link: /docs/iac/crossguard/
-  - icon: users-blue-21-21
+  - icon: 👥
     heading: Access Management
     description: Control who can access and modify infrastructure with role-based permissions and teams.
     link: /docs/pulumi-cloud/access-management/
-  - icon: audit-blue-21-21
+  - icon: 📋
     heading: Compliance & Audit
     description: Track changes, monitor compliance, and generate audit reports for regulatory requirements.
     link: /docs/insights/

@@ -11,7 +11,7 @@ docs_home: true
 noleftnav: true
 norightnav: true
 nobreadcrumb: true
-h1: Pulumi Docs
+h1: Pulumi <strong>Docs</strong>
 description: <p>Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> platform for <a href="/docs/iac">automating</a>, <a href="/docs/esc">securing</a>, and <a href="/docs/pulumi-cloud">managing</a> cloud resources, configuration, and secrets, using your favorite <a href="/docs/iac/languages-sdks/">programming languages.</a></p>
 link_buttons:
   primary:
@@ -19,43 +19,36 @@ link_buttons:
     link: /docs/get-started/
 sections:
 - type: button-cards
-  heading: Featured Products
+  heading: Start with Your Workflow
   cards:
-  - heading: Pulumi IaC
-    description: "Infrastructure as code for engineers in Node.js, Python, Go, .NET, Java, and YAML"
-    link: /docs/iac/
+  - heading: Build
+    description: "Create and deploy cloud infrastructure using your favorite programming languages"
+    link: /docs/build/
     primary_button_label: Get Started
     primary_button_link: /docs/iac/get-started/
     secondary_button_label: Install
     secondary_button_link: /docs/iac/download-install/
-  - heading: Pulumi ESC
-    description: "Environments, Secrets and Configuration Management"
-    link: /docs/esc/
-    primary_button_label: Get Started
-    primary_button_link: /docs/esc/get-started/
-    secondary_button_label: Install
-    secondary_button_link: /docs/esc/download-install/
-  - heading: Pulumi IDP
-    description: "Secure, compliant, and customizable developer workflows at scale"
-    link: /docs/idp/
-    primary_button_label: Get Started
-    primary_button_link: /docs/idp/get-started/
+  - heading: Platform
+    description: "Enable teams with enterprise automation, collaboration, and internal developer platforms"
+    link: /docs/platform/
+    primary_button_label: Learn More
+    primary_button_link: /docs/platform/
     secondary_button_label: Create an account
     secondary_button_link: https://app.pulumi.com/signup
-  - heading: Pulumi Insights
-    description: "Asset management, compliance remediation and AI insights over the cloud"
-    link: /docs/insights/
+  - heading: Management
+    description: "Discover, govern, and optimize cloud infrastructure with AI-powered insights and compliance"
+    link: /docs/management/
     primary_button_label: Get Started
     primary_button_link: /docs/insights/get-started/
     secondary_button_label: Create an account
     secondary_button_link: https://app.pulumi.com/signup
-  - heading: Pulumi Cloud
-    description: "Managed service for using Pulumi open source at scale. Use SaaS or self-host"
-    link: /docs/pulumi-cloud/
-    primary_button_label: Get Started
-    primary_button_link: /docs/pulumi-cloud/get-started/
-    secondary_button_label: Create an account
-    secondary_button_link: https://app.pulumi.com/signup
+  - heading: Developer Tools
+    description: "CLIs, SDKs, APIs, and AI-powered development tools for infrastructure as code"
+    link: /docs/developer-tools/
+    primary_button_label: Explore Tools
+    primary_button_link: /docs/developer-tools/
+    secondary_button_label: Install CLI
+    secondary_button_link: /docs/iac/download-install/
 - type: cards-logo-label-link
   heading: Clouds
   description: <p>Pulumi IaC supports AWS, Azure, Google Cloud, Kubernetes, and <a href="/registry/">120+ packages</a>.</p>

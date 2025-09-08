@@ -13,7 +13,7 @@ expanded_menu_ids:
     - platform-templates
 meta_desc: Discover and create reusable infrastructure assets. Find packages, templates, components, and patterns to accelerate your cloud development.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Platform<strong> ecosystem</strong> and assets
+h1: <strong>Platform</strong> Ecosystem and Assets
 description: <p>Discover and create reusable infrastructure components, packages, templates, and patterns to accelerate development and ensure consistency across teams.</p>
 link_buttons:
   primary:
@@ -27,19 +27,19 @@ sections:
 - type: full-width-cards
   heading: Platform Assets
   cards:
-  - icon: package-blue-21-21
+  - icon: 📦
     heading: Packages & Providers
     description: Ready-to-use infrastructure components for AWS, Azure, Google Cloud, and 120+ providers.
     link: /registry/
-  - icon: template-blue-21-21
+  - icon: 📄
     heading: Templates
     description: Kickstart projects with pre-built templates and scaffolding for common architectures.
     link: /docs/idp/
-  - icon: layers-blue-21-21
+  - icon: 🧩
     heading: Components
     description: Higher-level abstractions that encapsulate best practices and simplify complex deployments.
     link: /docs/iac/concepts/resources/components/
-  - icon: blueprint-blue-21-21
+  - icon: 🏗️
     heading: Architecture Patterns
     description: Reference architectures and proven patterns for scalable cloud solutions.
     link: /docs/iac/using-pulumi/
@@ -87,19 +87,19 @@ sections:
 - type: full-width-cards
   heading: Platform Engineering
   cards:
-  - icon: users-blue-21-21
+  - icon: 👥
     heading: Team Collaboration
     description: Share packages, templates, and components across engineering teams.
     link: /docs/pulumi-cloud/
-  - icon: shield-blue-21-21
+  - icon: 🛡️
     heading: Governance & Policy
     description: Enforce organizational standards and compliance through code and templates.
     link: /docs/iac/crossguard/
-  - icon: workflow-blue-21-21
+  - icon: ⚡
     heading: Automation & CI/CD
     description: Integrate reusable assets into your deployment pipelines and workflows.
     link: /docs/iac/using-pulumi/continuous-delivery/
-  - icon: chart-blue-21-21
+  - icon: 📊
     heading: Usage & Analytics
     description: Track adoption and usage of your platform assets across the organization.
     link: /docs/insights/
