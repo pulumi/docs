@@ -83,6 +83,49 @@
         </script>
     {{ end }}
 
+    <!-- FAQ schema for Infrastructure as Code page -->
+    {{ if eq .Params.page_title "What is Infrastructure as Code?" }}
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is Infrastructure as Code?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Infrastructure as Code (IaC) is the practice of managing and provisioning cloud infrastructure through machine-readable code files rather than manual configuration, enabling consistent, repeatable, and automated infrastructure deployment."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does IaC differ from configuration management?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "While configuration management tools (Chef, Puppet) focus on configuring existing servers, Infrastructure as Code provisions and manages the infrastructure itself - creating servers, networks, databases, and other cloud resources from scratch."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What programming languages does Pulumi support for IaC?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Pulumi supports TypeScript, JavaScript, Python, Go, C#, Java, and YAML, allowing teams to use languages they already know rather than learning proprietary DSLs."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why is Infrastructure as Code important for DevOps?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "IaC enables DevOps practices by treating infrastructure the same as application code - with version control, testing, code reviews, and CI/CD pipelines, breaking down silos between development and operations teams."
+                        }
+                    }
+                ]
+            }
+        </script>
+    {{ end }}
 
     <!-- Workshop info for Google events. -->
     {{ if .Params.event_data }}
