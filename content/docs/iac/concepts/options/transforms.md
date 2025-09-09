@@ -4,10 +4,15 @@ meta_desc: The transforms resource option provides a list of transforms to apply
 title: "transforms"
 h1: "Resource option: transforms"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: transforms
     parent: options-concepts
+    weight: 16
+  build:
+    name: Transforms
+    parent: build-options
     weight: 16
 aliases:
 - /docs/intro/concepts/resources/options/transforms/

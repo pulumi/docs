@@ -4,10 +4,15 @@ meta_desc: The customTimeouts resource option specifies the default retry/timeou
 title: "customTimeouts"
 h1: "Resource option: customTimeouts"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: customTimeouts
     parent: options-concepts
+    weight: 3
+  build:
+    name: customTimeouts
+    parent: build-options
     weight: 3
 aliases:
 - /docs/intro/concepts/resources/options/customtimeouts/

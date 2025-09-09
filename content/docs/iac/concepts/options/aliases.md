@@ -4,10 +4,15 @@ meta_desc: The aliases resource option is commonly used when refactoring Pulumi 
 title: "aliases"
 h1: "Resource option: aliases"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: aliases
     parent: options-concepts
+    weight: 2
+  build:
+    name: aliases
+    parent: build-options
     weight: 2
 aliases:
   - /docs/intro/concepts/resources/#aliases

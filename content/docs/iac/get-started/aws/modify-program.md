@@ -4,7 +4,12 @@ title: Make an update
 h1: "Get started with Pulumi and AWS"
 meta_desc: This page provides an overview on how to update an AWS project from a Pulumi program.
 weight: 6
+capability: build
 menu:
+    build:
+        name: Make an update
+        parent: build-get-started-aws
+        weight: 6
     iac:
         name: Make an update
         parent: aws-b-get-started

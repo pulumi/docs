@@ -4,10 +4,15 @@ meta_desc: "Learn how to access a single output value using the apply method in 
 title: Accessing single outputs with Apply
 h1: Accessing single outputs with Apply
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Apply
         parent: iac-concepts-inputs-outputs
+        weight: 1
+    build:
+        name: Apply
+        parent: build-inputs-outputs
         weight: 1
     concepts:
         weight: 2

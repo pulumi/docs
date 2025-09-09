@@ -1,9 +1,15 @@
 ---
 title: Pulumi CLI versions
 meta_desc: This page provides an list of available versions of the Pulumi CLI.
+capability: build
 menu:
   install:
     weight: 1
+  build:
+    name: Available Versions
+    identifier: build-available-versions
+    parent: build-core-concepts
+    weight: 60
 
 aliases:
 - /docs/reference/changelog/

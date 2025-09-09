@@ -4,12 +4,18 @@ meta_desc: This page provides an overview on how to review a new Kubernetes proj
 title: Review project
 h1: "Pulumi & Kubernetes: Review project"
 weight: 4
+capability: build
 menu:
     iac:
         name: Review project
         identifier: kubernetes-get-started.review-project
         parent: kubernetes-get-started
         weight: 4
+    build:
+        name: Review project
+        identifier: build-kubernetes-review-project
+        parent: build-get-started-kubernetes
+        weight: 25
     clouds:
         parent: kubernetes-get-started
         identifier: kubernetes-review-project-get-started

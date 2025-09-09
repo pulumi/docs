@@ -4,10 +4,15 @@ meta_desc: "Learn how to access multiple output values using the All method in P
 title: Accessing multiple outputs with All
 h1: Accessing multiple outputs with All
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: All
         parent: iac-concepts-inputs-outputs
+    build:
+        name: All
+        parent: build-inputs-outputs
+        weight: 2
     concepts:
         weight: 2
         parent: inputs-outputs

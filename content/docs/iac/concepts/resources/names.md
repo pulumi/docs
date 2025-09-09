@@ -4,11 +4,17 @@ meta_desc: A resource in Pulumi has a logical name (in Pulumi) and a physical na
 title: Names
 h1: Resource names
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Names
         parent: iac-concepts-resources
         weight: 1
+    build:
+        name: Resource Names
+        identifier: build-resource-names
+        parent: build-advanced-concepts
+        weight: 30
     concepts:
         parent: resources
         weight: 1

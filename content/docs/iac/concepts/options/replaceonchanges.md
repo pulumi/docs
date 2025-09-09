@@ -4,10 +4,15 @@ meta_desc: The replaceOnChanges resource option indicates that changes to proper
 title: "replaceOnChanges"
 h1: "Resource option: replaceOnChanges"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: replaceOnChanges
     parent: options-concepts
+    weight: 14
+  build:
+    name: replaceOnChanges
+    parent: build-options
     weight: 14
 aliases:
 - /docs/intro/concepts/resources/options/replaceonchanges/

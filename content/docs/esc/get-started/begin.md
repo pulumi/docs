@@ -3,11 +3,17 @@ title_tag: Before You Begin | Pulumi ESC
 title: Before you begin
 h1: "Pulumi ESC: Before you begin"
 meta_desc: This page provides an overview on how to get started with Pulumi ESC.
+capability: build
 weight: 2
 menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-begin
+  build:
+    name: Before you begin
+    identifier: build-esc-get-started-begin
+    parent: build-esc-get-started
+    weight: 2
 ---
 
 Before you get started using Pulumi ESC, let's run through a few quick steps to ensure your environment is set up correctly.

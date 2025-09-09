@@ -4,12 +4,18 @@ meta_desc: This page provides an overview of how to deploy a Kubernetes project 
 title: Deploy stack
 h1: "Pulumi & Kubernetes: Deploy stack"
 weight: 5
+capability: build
 menu:
     iac:
         name: Deploy stack
         identifier: kubernetes-get-started.deploy-stack
         parent: kubernetes-get-started
         weight: 5
+    build:
+        name: Deploy stack
+        identifier: build-kubernetes-deploy-stack
+        parent: build-get-started-kubernetes
+        weight: 30
     clouds:
         parent: kubernetes-get-started
         identifier: kubernetes-deploy-stack

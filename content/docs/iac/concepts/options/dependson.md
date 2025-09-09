@@ -4,10 +4,15 @@ meta_desc: The dependsOn resource option specifies additional resource dependenc
 title: "dependsOn"
 h1: "Resource option: dependsOn"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: dependsOn
     parent: options-concepts
+    weight: 6
+  build:
+    name: dependsOn
+    parent: build-options
     weight: 6
 aliases:
 - /docs/intro/concepts/resources/options/dependson/

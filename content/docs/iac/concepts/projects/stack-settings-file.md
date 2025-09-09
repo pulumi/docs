@@ -4,10 +4,15 @@ meta_desc: Documentation of the settings that are valid for Pulumi stack configu
 title: Stack settings file reference
 h1: Pulumi stack settings file reference
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Stack settings file reference
         parent: iac-concepts-projects
+        weight: 2
+    build:
+        name: Stack settings file reference
+        parent: build-projects
         weight: 2
     concepts:
         parent: projects

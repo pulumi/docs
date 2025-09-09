@@ -4,7 +4,18 @@ meta_desc: An overview of how to use .NET languages like C# and F# with Pulumi f
 title: C#, VB, F# (.NET)
 h1: Pulumi & C#, VB, F# (.NET)
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
+    build:
+        parent: build-languages
+        name: C#/F#/.NET
+        weight: 50
+        identifier: build-languages-dotnet
+    developer-tools:
+        parent: dev-languages
+        name: C#/F#/.NET
+        weight: 3
+        identifier: dev-languages-dotnet
     iac:
         name: C#, F#, VB (.NET)
         parent: iac-languages

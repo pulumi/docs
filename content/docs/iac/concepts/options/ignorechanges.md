@@ -4,10 +4,15 @@ meta_desc: The ignoreChanges resource option declares that changes to certain pr
 title: "ignoreChanges"
 h1: "Resource option: ignoreChanges"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: ignoreChanges
     parent: options-concepts
+    weight: 8
+  build:
+    name: ignoreChanges
+    parent: build-options
     weight: 8
 aliases:
 - /docs/intro/concepts/resources/options/ignorechanges/

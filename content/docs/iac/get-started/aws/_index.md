@@ -3,12 +3,18 @@ title: AWS
 title_tag: Get started with Pulumi and AWS
 h1: Get started with Pulumi and AWS
 meta_desc: This page provides an overview and guide on how to get started with AWS.
+capability: build
 menu:
     iac:
         name: AWS
         parent: iac-get-started
         weight: 2
         identifier: aws-b-get-started
+    build:
+        name: AWS
+        identifier: build-get-started-aws
+        parent: build-cloud-quickstarts
+        weight: 10
 
 aliases:
     - /docs/iac/get-started/aws/b/

@@ -14,8 +14,8 @@ menu:
   build:
     name: Projects & Stacks
     identifier: build-stacks-projects
-    parent: build-home
-    weight: 20
+    parent: build-core-concepts
+    weight: 10
 aliases:
 - /docs/intro/console/project-and-stack-management/
 - /docs/reference/service/roles-and-access-controls/

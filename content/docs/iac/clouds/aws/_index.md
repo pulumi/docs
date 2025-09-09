@@ -4,12 +4,18 @@ meta_desc: Pulumi offers full support for AWS, with two providers, 10+ component
 title: "AWS"
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 h1: AWS & Pulumi
+capability: build
 menu:
   iac:
     name: AWS
     identifier: aws-clouds
     parent: iac-clouds
     weight: 1
+  build:
+    name: Amazon Web Services
+    identifier: build-aws
+    parent: build-cloud-platforms
+    weight: 20
 cloud_overview: true
 description: Build infrastructure on AWS using TypeScript, Python, Go, C#, Java or YAML. Pulumi supports all AWS services and stays up-to-date with all AWS features.
 get_started_guide:

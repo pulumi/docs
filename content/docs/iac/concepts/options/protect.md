@@ -4,10 +4,15 @@ meta_desc: The protect resource option prevents accidental deletion of a resourc
 title: "protect"
 h1: "Resource option: protect"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: protect
     parent: options-concepts
+    weight: 11
+  build:
+    name: Protect
+    parent: build-options
     weight: 11
 aliases:
 - /docs/intro/concepts/resources/options/protect/

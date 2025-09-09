@@ -4,7 +4,12 @@ title: Configure access
 h1: "Get started with Pulumi and AWS"
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an AWS project.
 weight: 3
+capability: build
 menu:
+    build:
+        name: Configure access
+        parent: build-get-started-aws
+        weight: 3
     iac:
         name: Configure access
         parent: aws-b-get-started

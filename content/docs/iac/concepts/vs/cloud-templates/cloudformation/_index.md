@@ -4,12 +4,18 @@ meta_desc: Pulumi and AWS CloudFormation share some similarities, but there are 
 title: AWS CloudFormation
 h1: Pulumi vs AWS CloudFormation
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: AWS CloudFormation
         parent: iac-concepts-compare
         weight: 2
         identifier: iac-concepts-compare-cloudformation
+    build:
+        name: vs. CloudFormation & ARM
+        identifier: build-vs-cloudformation
+        parent: build-understand-context
+        weight: 20
     concepts:
         parent: vs
         weight: 2

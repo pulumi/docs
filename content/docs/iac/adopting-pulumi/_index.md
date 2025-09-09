@@ -4,12 +4,18 @@ meta_desc: Learn how Pulumi compares to other solutions, how to migrate to Pulum
 title: Adopting Pulumi
 h1: Adopting Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Adopting Pulumi
         parent: iac-home
         weight: 25
         identifier: iac-adopting
+    build:
+        name: Migration Strategy
+        identifier: build-migration-strategy
+        parent: build-understand-context
+        weight: 40
     usingpulumi:
         identifier: adopting-pulumi
         weight: 1

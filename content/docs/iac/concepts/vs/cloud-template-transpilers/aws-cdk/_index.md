@@ -4,11 +4,17 @@ meta_desc: Pulumi and AWS Cloud Development Kit (CDK) share some similarities, b
 title: Pulumi vs AWS Cloud Development Kit (CDK)
 h1: Pulumi vs AWS Cloud Development Kit (CDK)
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Pulumi vs AWS Cloud Development Kit (CDK)
         parent: cloud-template-transpilers
         weight: 3
+    build:
+        name: vs. AWS CDK
+        identifier: build-vs-aws-cdk
+        parent: build-understand-context
+        weight: 30
     concepts:
         parent: vs
         weight: 3

@@ -4,12 +4,18 @@ meta_desc: Pulumi offers full support for Kubernetes, with a provider, an operat
 title: "Kubernetes"
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 h1: Kubernetes & Pulumi
+capability: build
 menu:
   iac:
     name: Kubernetes
     identifier: kubernetes-clouds
     parent: iac-clouds
     weight: 1
+  build:
+    name: Kubernetes
+    identifier: build-kubernetes
+    parent: build-cloud-platforms
+    weight: 50
 cloud_overview: true
 description: Streamline Kubernetes cluster configuration, management, and application workload deployments using TypeScript, Python, Go, C#, Java or YAML. Use the Pulumi Kubernetes Operator to manage both Kubernetes and cloud resources.
 get_started_guide:

@@ -4,16 +4,13 @@ meta_desc: Learn about the three types of functions available in Pulumi programs
 title: Functions
 h1: Functions
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
-    iac:
+    build:
         name: Functions
-        parent: iac-concepts
-        weight: 60
-        identifier: iac-concepts-functions
-    concepts:
-        name: Functions
-        parent: Overview
-        weight: 6
+        identifier: build-functions
+        parent: build-advanced-concepts
+        weight: 10
 ---
 
 Pulumi provides three types of functions that you can use in your programs to interact with cloud resources and retrieve data from cloud providers. Understanding these different function types and when to use them is essential for writing effective Pulumi programs.

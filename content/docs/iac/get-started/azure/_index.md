@@ -3,6 +3,7 @@ title_tag: Get Started with Azure
 meta_desc: This page provides an overview and guide on how to get started with Azure.
 title: Azure
 h1: Get started with Pulumi & Azure
+capability: build
 menu:
     iac:
         name: Azure
@@ -13,6 +14,11 @@ menu:
         parent: azure
         identifier: azure-get-started
         weight: 2
+    build:
+        name: Azure
+        identifier: build-get-started-azure
+        parent: build-cloud-quickstarts
+        weight: 30
 aliases:
     - /docs/quickstart/azure/
     - /docs/get-started/azure/

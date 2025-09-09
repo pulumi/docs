@@ -4,12 +4,18 @@ meta_desc: Pulumi offers full support for Google Cloud, with two providers, 2 co
 title: "Google Cloud"
 meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
 h1: Google Cloud & Pulumi
+capability: build
 menu:
   iac:
     name: Google Cloud
     identifier: google-clouds
     parent: iac-clouds
     weight: 1
+  build:
+    name: Google Cloud Platform
+    identifier: build-gcp
+    parent: build-cloud-platforms
+    weight: 40
 cloud_overview: true
 description: Build infrastructure on Google Cloud using TypeScript, Python, Go, C#, Java or YAML. Pulumi supports all Google Cloud APIs and stays up-to-date with all Google Cloud features.
 get_started_guide:

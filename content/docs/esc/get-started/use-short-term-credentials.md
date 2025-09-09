@@ -3,10 +3,16 @@ title_tag: Use Short Term Cloud Credentials | Pulumi ESC
 title: Use short term cloud credentials
 h1: "Use Short Term Cloud Credentials to Run Commands Without Local Secrets"
 meta_desc: This page provides an overview on how to get short term cloud credentials and run commands without using local secrets using the "esc run" command.
+capability: build
 weight: 6
 menu:
   esc:
     parent: esc-get-started
+  build:
+    name: Use short term cloud credentials
+    identifier: build-esc-get-started-use-short-term-credentials
+    parent: build-esc-get-started
+    weight: 6
 ---
 
 Managing cloud credentials presents significant challenges for organizations of all sizes. Static, long-lived credentials, especially those stored in local environments introduce security risks and operational issues. Pulumi ESC’s built-in support for [dynamic login providers](/docs/esc/integrations/dynamic-login-credentials/), allows you to generate short-term, scoped credentials via OIDC. These credentials can then be used in your CLI workflows, CI/CD, Pulumi IaC, and more!

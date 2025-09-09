@@ -4,6 +4,13 @@ meta_desc: This page provides instructions for upgrading to Pulumi 3.0
 title: Upgrading to Pulumi 3.0
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
+menu:
+    build:
+        name: Version Management & Migration
+        identifier: build-version-management
+        parent: build-core-concepts
+        weight: 50
 
 aliases:
 - /docs/get-started/install/migrating-3.0/

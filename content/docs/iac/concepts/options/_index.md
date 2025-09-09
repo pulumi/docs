@@ -4,11 +4,17 @@ meta_desc: Resource options can be used to configure how all Pulumi resources ar
 title: Resource options
 h1: Resource options
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     parent: iac-concepts
     identifier: options-concepts
     weight: 50
+  build:
+    name: Resource Options
+    identifier: build-options
+    parent: build-resources
+    weight: 10
 aliases:
 - /docs/intro/concepts/resources/options/
 - /docs/concepts/options/

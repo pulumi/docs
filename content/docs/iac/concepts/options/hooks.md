@@ -4,10 +4,15 @@ meta_desc: The hooks resource option provides a set of resource hooks linked to 
 title: "hooks"
 h1: "Resource option: hooks"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: hooks
     parent: options-concepts
+    weight: 7
+  build:
+    name: Hooks
+    parent: build-options
     weight: 7
 aliases:
 - /docs/intro/concepts/resources/options/hooks/

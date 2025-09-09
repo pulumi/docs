@@ -4,7 +4,13 @@ meta_desc: Pulumi supports AWS, Azure, Google Cloud, Kubernetes, and over 100 ot
 title: "Clouds"
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
+  build:
+    parent: build-cloud-platforms
+    name: Cloud Platform Overview
+    weight: 10
+    identifier: build-cloud-platform-overview
   iac:
     parent: iac-home
     name: Clouds

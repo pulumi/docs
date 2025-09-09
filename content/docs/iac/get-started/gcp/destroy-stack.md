@@ -4,12 +4,18 @@ meta_desc: This page provides an overview of how to destroy a Pulumi stack of a 
 title: Destroy stack
 h1: "Pulumi & Google Cloud: Destroy stack"
 weight: 8
+capability: build
 menu:
   iac:
     name: Destroy stack
     identifier: gcp-get-started.destroy-stack
     parent: gcp-get-started
     weight: 8
+  build:
+    name: Destroy stack
+    identifier: build-gcp-destroy-stack
+    parent: build-get-started-gcp
+    weight: 60
   clouds:
     parent: google-cloud-get-started
     identifier: gcp-destroy-stack

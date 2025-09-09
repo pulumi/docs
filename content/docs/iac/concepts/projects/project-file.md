@@ -4,10 +4,15 @@ meta_desc: Documentation of the settings that are valid for the Pulumi project f
 title: Project file reference
 h1: Pulumi project file reference
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Project file reference
         parent: iac-concepts-projects
+        weight: 1
+    build:
+        name: Project file reference
+        parent: build-projects
         weight: 1
     concepts:
         parent: projects

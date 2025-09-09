@@ -13,10 +13,10 @@ menu:
         parent: iac-home
         weight: 10
     build:
-        name: Get Started
-        identifier: build-get-started
-        parent: build-home
-        weight: 10
+        name: Your First Stack
+        identifier: build-your-first-stack
+        parent: build-get-started
+        weight: 20
     getstarted:
         name: Overview
         weight: 2

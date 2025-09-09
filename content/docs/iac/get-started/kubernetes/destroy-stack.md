@@ -4,12 +4,18 @@ meta_desc: This page provides an overview of how to destroy a Pulumi stack of a 
 title: Destroy stack
 h1: "Pulumi & Kubernetes: Destroy stack"
 weight: 8
+capability: build
 menu:
   iac:
     name: Destroy stack
     identifier: kubernetes-get-started.destroy-stack
     parent: kubernetes-get-started
     weight: 8
+  build:
+    name: Destroy stack
+    identifier: build-kubernetes-destroy-stack
+    parent: build-get-started-kubernetes
+    weight: 60
   clouds:
     parent: kubernetes-get-started
     identifier: kubernetes-destroy-stack

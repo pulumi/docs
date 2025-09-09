@@ -4,11 +4,17 @@ meta_desc: Dynamic resource providers are providers that can be written inside y
 title: Dynamic providers
 h1: Dynamic resource providers
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Dynamic providers
         parent: iac-concepts-resources
         weight: 6
+    build:
+        name: Dynamic providers
+        identifier: build-dynamic-providers
+        parent: build-advanced-concepts
+        weight: 20
     concepts:
         parent: resources
         weight: 6

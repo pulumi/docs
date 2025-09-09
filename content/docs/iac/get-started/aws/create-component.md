@@ -4,7 +4,12 @@ title: Create a component
 h1: "Get started with Pulumi and AWS"
 meta_desc: This page provides an overview on how to create infrastructure abstractions with Pulumi.
 weight: 7
+capability: build
 menu:
+    build:
+        name: Create a component
+        parent: build-get-started-aws
+        weight: 7
     iac:
         name: Create a component
         parent: aws-b-get-started

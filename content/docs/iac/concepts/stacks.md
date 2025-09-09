@@ -14,7 +14,7 @@ menu:
         name: Stacks
         identifier: build-stacks
         parent: build-stacks-projects
-        weight: 1
+        weight: 20
     concepts:
         weight: 2
 aliases:

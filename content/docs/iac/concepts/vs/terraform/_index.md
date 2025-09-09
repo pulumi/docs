@@ -4,12 +4,18 @@ meta_desc: Pulumi IaC and Terraform have many similarities, and yet they differ 
 title: Terraform
 h1: Terraform vs. Pulumi IaC
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Terraform
         parent: iac-concepts-compare
         weight: 1
         identifier: iac-concepts-compare-terraform
+    build:
+        name: vs. Terraform & OpenTofu
+        identifier: build-vs-terraform
+        parent: build-understand-context
+        weight: 10
     concepts:
         identifier: vs-terraform
         parent: vs

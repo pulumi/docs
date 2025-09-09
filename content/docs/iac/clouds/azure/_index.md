@@ -4,12 +4,18 @@ meta_desc: Pulumi offers full support for Azure, with two providers, 4+ componen
 title: "Azure"
 meta_image: /images/docs/meta-images/docs-clouds-azure-meta-image.png
 h1: Azure & Pulumi
+capability: build
 menu:
   iac:
     name: Azure
     identifier: azure-clouds
     parent: iac-clouds
     weight: 1
+  build:
+    name: Microsoft Azure
+    identifier: build-azure
+    parent: build-cloud-platforms
+    weight: 30
 cloud_overview: true
 description: Build infrastructure on Azure using TypeScript, Python, Go, C#, Java or YAML. The Azure Native provider is always up-to-date and covers 100% of the resources in Azure Resource Manager (ARM).
 get_started_guide:

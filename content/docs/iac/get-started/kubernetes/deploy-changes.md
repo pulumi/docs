@@ -4,12 +4,18 @@ meta_desc: This page provides an overview of how deploy changes to a Kubernetes 
 title: Deploy changes
 h1: "Pulumi & Kubernetes: Deploy changes"
 weight: 7
+capability: build
 menu:
   iac:
     name: Deploy changes
     identifier: kubernetes-get-started.deploy-changes
     parent: kubernetes-get-started
     weight: 7
+  build:
+    name: Deploy changes
+    identifier: build-kubernetes-deploy-changes
+    parent: build-get-started-kubernetes
+    weight: 50
   clouds:
     parent: kubernetes-get-started
     identifier: kubernetes-deploy-changes

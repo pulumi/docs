@@ -4,10 +4,15 @@ meta_desc: The deletedWith resource option allows you to skip running resource d
 title: "deletedWith"
 h1: "Resource option: deletedWith"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: deletedWith
     parent: options-concepts
+    weight: 5
+  build:
+    name: deletedWith
+    parent: build-options
     weight: 5
 aliases:
 - /docs/intro/concepts/resources/options/deletedwith/

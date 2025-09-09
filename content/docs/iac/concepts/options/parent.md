@@ -4,10 +4,15 @@ meta_desc: The parent resource option establishes an explicit parent/child relat
 title: "parent"
 h1: "Resource option: parent"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: parent
     parent: options-concepts
+    weight: 10
+  build:
+    name: Parent
+    parent: build-options
     weight: 10
 aliases:
 - /docs/intro/concepts/resources/options/parent/

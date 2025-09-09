@@ -4,12 +4,18 @@ meta_desc: This page provides an overview on how to update Kubernetes project fr
 title: Modify program
 h1: "Pulumi & Kubernetes: Modify program"
 weight: 6
+capability: build
 menu:
     iac:
         name: Modify program
         identifier: kubernetes-get-started.modify-program
         parent: kubernetes-get-started
         weight: 6
+    build:
+        name: Modify program
+        identifier: build-kubernetes-modify-program
+        parent: build-get-started-kubernetes
+        weight: 40
     clouds:
         parent: kubernetes-get-started
         identifier: kubernetes-modify-program

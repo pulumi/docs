@@ -4,13 +4,19 @@ meta_desc: This page provides an overview of how Pulumi manages cloud applicatio
 title: Configuration
 h1: Configuration
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Configuration
         parent: iac-concepts
         weight: 65
-    concepts:
-        weight: 6
+    build:
+        name: Configuration & Environments
+        identifier: build-config-environments
+        parent: build-configure-secure
+        weight: 30
+concepts:
+    weight: 6
 aliases:
 - /docs/reference/config/
 - /docs/tour/programs-configuration/

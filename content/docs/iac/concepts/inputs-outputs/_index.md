@@ -4,12 +4,18 @@ meta_desc: Resource properties are treated specially in Pulumi, both for purpose
 title: "Inputs & outputs"
 h1: "Inputs & outputs"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Inputs & outputs
         parent: iac-concepts
         weight: 60
         identifier: iac-concepts-inputs-outputs
+    build:
+        name: Inputs, Outputs & Dependencies
+        identifier: build-inputs-outputs
+        parent: build-core-concepts
+        weight: 40
     concepts:
         identifier: inputs-outputs
         weight: 5

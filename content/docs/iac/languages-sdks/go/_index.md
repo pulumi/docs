@@ -4,7 +4,18 @@ meta_desc: An overview of how to use the Go language with Pulumi for infrastruct
 title: Go
 h1: Pulumi & Go
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
+    build:
+        parent: build-languages
+        name: Go
+        weight: 40
+        identifier: build-languages-go
+    developer-tools:
+        parent: dev-languages
+        name: Go
+        weight: 4
+        identifier: dev-languages-go
     iac:
         name: Go
         parent: iac-languages

@@ -4,12 +4,18 @@ meta_desc: This page provides an overview on how to get started with Pulumi when
 title: Before you begin
 h1: "Pulumi & Kubernetes: Before you begin"
 weight: 2
+capability: build
 menu:
   iac:
     name: Install Pulumi
     identifier: kubernetes-get-started.begin
     parent: kubernetes-get-started
     weight: 2
+  build:
+    name: Install Pulumi
+    identifier: build-kubernetes-begin
+    parent: build-get-started-kubernetes
+    weight: 10
   clouds:
     parent: kubernetes-get-started
     identifier: kubernetes-begin

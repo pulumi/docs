@@ -4,11 +4,17 @@ meta_desc: This page contains detailed instructions for downloading and installi
 title: "Download & install"
 h1: Download & install Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         parent: iac-home
         weight: 5
         identifier: iac-install
+    build:
+        name: Install & Setup
+        identifier: build-install
+        parent: build-get-started
+        weight: 10
     install:
         name: Overview
         weight: 1

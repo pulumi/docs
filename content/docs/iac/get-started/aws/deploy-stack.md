@@ -4,7 +4,12 @@ title: Deploy to AWS
 h1: "Get started with Pulumi and AWS"
 meta_desc: Learn how to deploy your stack to an AWS project in this guide.
 weight: 5
+capability: build
 menu:
+    build:
+        name: Deploy
+        parent: build-get-started-aws
+        weight: 5
     iac:
         name: Deploy
         parent: aws-b-get-started

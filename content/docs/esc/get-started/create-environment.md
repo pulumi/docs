@@ -3,11 +3,17 @@ title_tag: Create a New Environment | Pulumi ESC
 title: Create environment
 h1: "Pulumi ESC: Create A New Environment"
 meta_desc: This page provides an overview on how to create a new Pulumi ESC environment.
+capability: build
 weight: 3
 menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-create-environment
+  build:
+    name: Create environment
+    identifier: build-esc-get-started-create-environment
+    parent: build-esc-get-started
+    weight: 3
 
 ---
 

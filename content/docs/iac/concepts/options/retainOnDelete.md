@@ -4,10 +4,15 @@ meta_desc: The `retainOnDelete` resource option marks a resource to be retained 
 title: "retainOnDelete"
 h1: "Resource option: retainOnDelete"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: retainOnDelete
     parent: options-concepts
+    weight: 15
+  build:
+    name: retainOnDelete
+    parent: build-options
     weight: 15
 aliases:
 - /docs/intro/concepts/resources/options/retainondelete/

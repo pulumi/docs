@@ -5,7 +5,13 @@ meta_desc: This page provides a list of tutorials that take a deeper dive into
 title: Next steps
 h1: "Pulumi & Azure: Next steps"
 weight: 9
+capability: build
 menu:
+    build:
+        name: Next steps
+        identifier: build-get-started-azure-next-steps
+        parent: build-get-started-azure
+        weight: 9
     iac:
         name: Next steps
         identifier: azure-get-started.next-steps

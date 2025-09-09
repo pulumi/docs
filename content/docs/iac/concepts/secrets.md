@@ -4,13 +4,13 @@ meta_desc: This page provides an overview of how Pulumi manages sensitive config
 title: Secrets
 h1: Secrets
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
-    iac:
+    build:
         name: Secrets
-        parent: iac-concepts
-        weight: 90
-    concepts:
-        weight: 7
+        identifier: build-secrets
+        parent: build-config-environments
+        weight: 10
 aliases:
 - /docs/intro/concepts/secrets/
 - /docs/concepts/secrets/

@@ -4,12 +4,18 @@ meta_desc: This page provides an overview on how to update Google Cloud (GCP) pr
 title: Modify program
 h1: "Pulumi & Google Cloud: Modify program"
 weight: 6
+capability: build
 menu:
     iac:
         name: Modify program
         identifier: gcp-get-started.modify-program
         parent: gcp-get-started
         weight: 6
+    build:
+        name: Modify program
+        identifier: build-gcp-modify-program
+        parent: build-get-started-gcp
+        weight: 40
     clouds:
         parent: google-cloud-get-started
         identifier: gcp-modify-program

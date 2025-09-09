@@ -3,11 +3,17 @@ title_tag: Integrate with Pulumi IaC | Pulumi ESC
 title: Integrate with Pulumi IaC
 h1: "Pulumi ESC: Integrate with Pulumi IaC"
 meta_desc: This page provides an overview on how to use Pulumi ESC with Pulumi IaC.
+capability: build
 weight: 8
 menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-integrate-with-pulumi-iac
+  build:
+    name: Integrate with Pulumi IaC
+    identifier: build-esc-get-started-integrate-with-pulumi-iac
+    parent: build-esc-get-started
+    weight: 8
 ---
 
 ## Overview

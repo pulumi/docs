@@ -4,11 +4,17 @@ meta_desc: Frequently asked questions about Pulumi ESC, pricing and roadmap.
 title: FAQ
 h1: Pulumi ESC FAQs
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   esc:
     parent: esc-home
     weight: 12
     identifier: faq
+  build:
+    name: ESC FAQ
+    identifier: build-esc-faq
+    parent: build-getting-help
+    weight: 10
 aliases:
   - /docs/pulumi-cloud/esc/faq
 ---

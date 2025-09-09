@@ -8,13 +8,13 @@ keywords:
  - infrastructure state
  - state backend
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
-    iac:
+    build:
         name: State & backends
-        parent: iac-concepts
-        weight: 100
-    concepts:
-        weight: 9
+        identifier: build-state-backends
+        parent: build-config-environments
+        weight: 40
 
 aliases:
 - /docs/reference/state/

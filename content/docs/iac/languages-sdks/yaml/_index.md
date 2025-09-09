@@ -4,7 +4,18 @@ meta_desc: An overview of how to use Pulumi YAML for infrastructure as code on a
 title: YAML
 h1: Pulumi & YAML
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
+    build:
+        parent: build-languages
+        name: YAML
+        weight: 70
+        identifier: build-languages-yaml
+    developer-tools:
+        parent: dev-languages
+        name: YAML
+        weight: 6
+        identifier: dev-languages-yaml
     iac:
         name: YAML
         parent: iac-languages

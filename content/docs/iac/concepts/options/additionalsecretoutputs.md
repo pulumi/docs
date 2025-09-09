@@ -4,10 +4,15 @@ meta_desc: The additionalSecretOutputs resource option specifies a list of named
 title: "additionalSecretOutputs"
 h1: "Resource option: additionalSecretOutputs"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: additionalSecretOutputs
     parent: options-concepts
+    weight: 1
+  build:
+    name: additionalSecretOutputs
+    parent: build-options
     weight: 1
 aliases:
 - /docs/intro/concepts/resources/options/additionalsecretoutputs/

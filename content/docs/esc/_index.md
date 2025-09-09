@@ -3,6 +3,7 @@ title: Pulumi ESC
 linktitle: Pulumi ESC
 docs_home: true
 notitle: true
+capability: build
 menu:
   esc:
     identifier: esc-home

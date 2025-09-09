@@ -4,7 +4,18 @@ meta_desc: An overview of how to use Python with Pulumi for infrastructure as co
 title: Python
 h1: Pulumi & Python
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
+    build:
+        parent: build-languages
+        name: Python
+        weight: 30
+        identifier: build-languages-python
+    developer-tools:
+        parent: dev-languages
+        name: Python
+        weight: 2
+        identifier: dev-languages-python
     iac:
         name: Python
         parent: iac-languages

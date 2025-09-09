@@ -4,10 +4,15 @@ meta_desc: The version resource option specifies a provider version to use when 
 title: "version"
 h1: "Resource option: version"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: version
     parent: options-concepts
+    weight: 17
+  build:
+    name: Version
+    parent: build-options
     weight: 17
 aliases:
 - /docs/intro/concepts/resources/options/version/

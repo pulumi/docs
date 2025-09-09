@@ -4,10 +4,15 @@ meta_desc: Setting the deleteBeforeReplace option to true means that Pulumi will
 title: "deleteBeforeReplace"
 h1: "Resource option: deleteBeforeReplace"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: deleteBeforeReplace
     parent: options-concepts
+    weight: 4
+  build:
+    name: deleteBeforeReplace
+    parent: build-options
     weight: 4
 aliases:
 - /docs/intro/concepts/resources/options/deletebeforereplace/

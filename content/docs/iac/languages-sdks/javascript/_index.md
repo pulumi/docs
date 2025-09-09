@@ -4,7 +4,18 @@ meta_desc: Learn to use Node.js languages like JavaScript and TypeScript with Pu
 title: TypeScript (Node.js)
 h1: Pulumi & TypeScript & JavaScript (Node.js)
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
+    build:
+        parent: build-languages
+        name: TypeScript/JavaScript
+        weight: 20
+        identifier: build-languages-javascript
+    developer-tools:
+        parent: dev-languages
+        name: TypeScript/JavaScript
+        weight: 1
+        identifier: dev-languages-javascript
     iac:
         name: TypeScript (Node.js)
         parent: iac-languages

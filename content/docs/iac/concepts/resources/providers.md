@@ -4,10 +4,15 @@ meta_desc: A resource provider handles communications with a cloud service to cr
 title: Providers
 h1: Resource providers
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Providers
         parent: iac-concepts-resources
+        weight: 4
+    build:
+        name: Providers
+        parent: build-resources
         weight: 4
     concepts:
         parent: resources

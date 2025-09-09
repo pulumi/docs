@@ -14,8 +14,8 @@ menu:
     build:
         name: Resources
         identifier: build-resources
-        parent: build-home
-        weight: 40
+        parent: build-core-concepts
+        weight: 25
     concepts:
         identifier: resources
         weight: 3

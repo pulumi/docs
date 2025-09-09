@@ -5,12 +5,18 @@ meta_desc: This page provides a list of tutorials that take a deeper dive into K
 title: Next steps
 h1: "Pulumi & Kubernetes: Next steps"
 weight: 9
+capability: build
 menu:
   iac:
     name: Next steps
     identifier: kubernetes-get-started.next-steps
     parent: kubernetes-get-started
     weight: 9
+  build:
+    name: Next steps
+    identifier: build-kubernetes-next-steps
+    parent: build-get-started-kubernetes
+    weight: 70
   clouds:
     parent: kubernetes-get-started
     identifier: kubernetes-next-steps

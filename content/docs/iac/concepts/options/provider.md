@@ -4,10 +4,15 @@ meta_desc: The provider resource option passes an explicitly configured provider
 title: "provider"
 h1: "Resource option: provider"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: provider
     parent: options-concepts
+    weight: 12
+  build:
+    name: Provider
+    parent: build-options
     weight: 12
 aliases:
 - /docs/concepts/resources/options/provider/

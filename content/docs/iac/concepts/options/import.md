@@ -4,10 +4,15 @@ meta_desc: The import resource option brings an existing cloud resource into Pul
 title: "import"
 h1: "Resource option: import"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
   iac:
     identifier: import
     parent: options-concepts
+    weight: 9
+  build:
+    name: Import
+    parent: build-options
     weight: 9
 aliases:
 - /docs/intro/concepts/resources/options/import/

@@ -3,6 +3,7 @@ title_tag: Get Started with Google Cloud
 meta_desc: This page provides an overview and guide on how to get started with Google Cloud.
 title: Google Cloud
 h1: Get started with Pulumi & Google Cloud
+capability: build
 menu:
     iac:
         name: Google Cloud
@@ -13,6 +14,11 @@ menu:
         parent: google-cloud
         identifier: google-cloud-get-started
         weight: 3
+    build:
+        name: Google Cloud
+        identifier: build-get-started-gcp
+        parent: build-cloud-quickstarts
+        weight: 40
 aliases:
     - /docs/quickstart/gcp/
     - /docs/get-started/gcp/

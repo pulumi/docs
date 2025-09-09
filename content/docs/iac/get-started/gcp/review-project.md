@@ -4,12 +4,18 @@ meta_desc: This page provides an overview on how to a review a new Google Cloud 
 title: Review project
 h1: "Pulumi & Google Cloud: Review project"
 weight: 4
+capability: build
 menu:
     iac:
         name: Review project
         identifier: gcp-get-started.review-project
         parent: gcp-get-started
         weight: 4
+    build:
+        name: Review project
+        identifier: build-gcp-review-project
+        parent: build-get-started-gcp
+        weight: 25
     clouds:
         parent: google-cloud-get-started
         identifier: gcp-review-project

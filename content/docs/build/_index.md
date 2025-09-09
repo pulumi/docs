@@ -10,8 +10,11 @@ menu:
         weight: 1
 expanded_menu_ids:
     - build-get-started
-    - build-stacks-projects
-    - build-environments
+    - build-cloud-quickstarts
+    - build-core-concepts
+    - build-configure-secure
+    - build-languages
+    - build-cloud-platforms
 meta_desc: Build and deploy cloud infrastructure with Pulumi. Manage stacks, environments, resources, and services for your daily engineering work.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: <strong>Build</strong> with Pulumi
@@ -33,9 +36,9 @@ sections:
     description: Create and manage isolated deployments of your infrastructure across environments.
     link: /docs/iac/concepts/stacks/
   - icon: ⚙️
-    heading: Environments
+    heading: Configuration & Secrets
     description: Configure secrets, settings, and variables across your infrastructure and applications.
-    link: /docs/esc/environments/
+    link: /docs/build/configure-secure/
   - icon: 🧱
     heading: Resources
     description: Provision and manage cloud resources with infrastructure as code.

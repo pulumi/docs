@@ -4,12 +4,18 @@ meta_desc: Learn about what Pulumi is, how it works, and how its components work
 title: Concepts
 h1: What is Pulumi?
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Concepts
         weight: 15
         parent: iac-home
         identifier: iac-concepts
+    build:
+        name: Core Concepts
+        identifier: build-core-concepts
+        parent: build-home
+        weight: 20
     concepts:
         name: Overview
         weight: 4
