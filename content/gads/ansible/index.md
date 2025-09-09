@@ -14,7 +14,7 @@ subheading: |
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Looking for an Ansible alternative? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">an Ansible alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
 
 key_features_above:
     items:
