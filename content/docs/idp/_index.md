@@ -8,9 +8,9 @@ menu:
     identifier: idp-home
     weight: 1
   platform:
-    name: Templates & IDP
+    name: Pulumi IDP
     identifier: platform-idp
-    parent: platform-home
+    parent: platform-services
     weight: 10
 
 expanded_menu_ids:

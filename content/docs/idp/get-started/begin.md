@@ -8,6 +8,10 @@ menu:
   idp:
     parent: idp-get-started
     identifier: idp-get-started-begin
+  platform:
+    name: Before you begin
+    parent: platform-idp-get-started
+    weight: 2
 ---
 
 Before you get started using Pulumi IDP, let's run through a few quick steps to ensure your environment is set up correctly.

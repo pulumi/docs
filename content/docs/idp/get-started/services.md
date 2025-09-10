@@ -8,6 +8,10 @@ menu:
   idp:
     parent: idp-get-started
     identifier: idp-get-started-services
+  platform:
+    name: Services
+    parent: platform-idp-get-started
+    weight: 5
 ---
 
 Pulumi Services are logical groupings of Pulumi entities such as [stacks](/docs/iac/concepts/stacks/) and [ESC environments](/docs/esc/environments/). They enable users to model infrastructure in Pulumi in a way that is familiar to them.

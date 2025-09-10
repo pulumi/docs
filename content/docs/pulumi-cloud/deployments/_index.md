@@ -16,6 +16,11 @@ menu:
     identifier: management-deployments
     parent: management-home
     weight: 10
+  platform:
+    name: Pulumi Deployments
+    identifier: platform-deployments
+    parent: platform-automation
+    weight: 20
 aliases:
 - /docs/intro/pulumi-service/deployments/
 - /docs/intro/deployments/

@@ -14,6 +14,12 @@ meta_image: /images/docs/meta-images/docs-meta.png
 
 Advanced concepts for taking your infrastructure further with Pulumi.
 
+## Tasks
+
+Use AI to generate, modify, and optimize infrastructure code:
+
+- **[Pulumi AI](/ai/)** - Natural-language tasks for scaffolding and evolving IaC
+
 ## Functions
 
 Invoke cloud provider functions and utilities:

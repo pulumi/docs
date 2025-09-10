@@ -9,6 +9,10 @@ menu:
     parent: idp-get-started
     identifier: idp-publishing-github-actions
     weight: 6
+  platform:
+    name: Publishing from GitHub Actions
+    parent: platform-idp-get-started
+    weight: 6
 ---
 
 Automating the publication of Pulumi components from GitHub Actions to your Pulumi Cloud private registry enables robust CI/CD workflows for infrastructure building blocks.

@@ -8,6 +8,11 @@ menu:
     parent: idp-home
     identifier: idp-get-started
     weight: 20
+  platform:
+    name: "IDP: Get Started"
+    identifier: platform-idp-get-started
+    parent: platform-home
+    weight: 12
 ---
 
 Pulumi IDP is a bottom-up approach for platform teams to provide self-service workflows to their users, from Day 0 to Day 2. Unlike an Internal Developer Portal, Pulumi IDP facilitates concrete outcomes, not just information consumption.

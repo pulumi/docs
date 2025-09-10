@@ -10,6 +10,11 @@ menu:
         parent: iac-using-pulumi
         weight: 6
         identifier: iac-using-pulumi-cicd
+    platform:
+        name: CI/CD Integrations
+        identifier: platform-cicd
+        parent: platform-automation
+        weight: 10
 aliases:
 - /docs/reference/cd/
 - /docs/console/continuous-delivery/

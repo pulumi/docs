@@ -8,6 +8,12 @@ menu:
   insights:
     parent: insights-home
     weight: 3
+  management:
+    name: Accounts
+    identifier: management-accounts
+    parent: management-home
+    weight: 15
+capability: management
 aliases:
   - /docs/pulumi-cloud/insights/accounts/
   - /docs/pulumi-cloud/insights/import/

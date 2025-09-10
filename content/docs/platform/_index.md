@@ -10,8 +10,7 @@ menu:
         identifier: platform-home
         weight: 1
 expanded_menu_ids:
-    - platform-packages
-    - platform-templates
+    - platform-services
 meta_desc: Discover and create reusable infrastructure assets. Find packages, templates, components, and patterns to accelerate your cloud development.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: <strong>Platform</strong> Ecosystem and Assets

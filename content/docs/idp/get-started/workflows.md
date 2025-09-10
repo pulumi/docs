@@ -8,6 +8,10 @@ menu:
   idp:
     parent: idp-get-started
     identifier: idp-get-started-workflows
+  platform:
+    name: Workflows
+    parent: platform-idp-get-started
+    weight: 4
 ---
 The main goal of internal developer platforms is to provide self-service workflows that enable developers to provision infrastructure. Where pain is often felt is in attempting to offer multiple workflow types that maintain the consistency that platform teams desire. Thanks to Pulumi IDP’s bottom-up approach, workflows can be driven from the same components and templates, ensuring flexibility, consistency, and scalability.
 

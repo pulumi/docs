@@ -8,6 +8,10 @@ menu:
   idp:
     parent: idp-get-started
     identifier: idp-get-started-private-registry
+  platform:
+    name: Private Registry
+    parent: platform-idp-get-started
+    weight: 3
 ---
 
 Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/pulumi-cloud/developer-portals/templates/) that power golden path workflows in Pulumi. Platform engineers can codify organizational standards in their building blocks using features like [Pulumi ESC](/docs/esc/) and [Pulumi IaC Policies](/docs/insights/get-started/add-policies/), ensuring that all infrastructure users provision is compliant from the beginning.

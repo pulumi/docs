@@ -6,6 +6,12 @@ menu:
     cloud:
         parent: pulumi-cloud-reference
         weight: 2
+    management:
+        name: Audit Logs
+        identifier: management-audit-logs
+        parent: management-home
+        weight: 50
+capability: management
 ---
 
 Audit Logs provide a record of user actions and system events within Pulumi Cloud. The Audit Logs API allows you to retrieve and export audit log entries for compliance, security, and monitoring purposes.

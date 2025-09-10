@@ -10,6 +10,11 @@ menu:
     parent: cloud-home
     weight: 6
     identifier: pulumi-cloud-webhooks
+  platform:
+    name: Webhooks
+    identifier: platform-webhooks
+    parent: platform-automation
+    weight: 30
 aliases:
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/
