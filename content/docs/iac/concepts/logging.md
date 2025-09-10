@@ -4,13 +4,19 @@ meta_desc: An overview of the Pulumi logging functionality used for debugging an
 title: "Logging"
 h1: "Logging"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Logging
         parent: iac-concepts
         weight: 170
-    concepts:
-        weight: 10
+    build:
+        name: Logging
+        identifier: build-logging
+        parent: build-core-concepts
+        weight: 85
+concepts:
+    weight: 10
 aliases:
 - /docs/intro/concepts/logging/
 - /docs/concepts/logging/

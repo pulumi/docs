@@ -4,6 +4,7 @@ linktitle: Build
 capability: build
 docs_home: true
 notitle: true
+no_on_this_page: true
 expanded_menu_ids:
     - build-core-concepts
     - build-languages

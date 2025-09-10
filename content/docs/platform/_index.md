@@ -4,6 +4,7 @@ linktitle: Platform
 capability: platform
 docs_home: true
 notitle: true
+no_on_this_page: true
 menu:
     platform:
         identifier: platform-home

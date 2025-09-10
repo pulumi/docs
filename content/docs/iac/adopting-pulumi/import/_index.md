@@ -4,6 +4,7 @@ meta_desc: Learn how to import existing cloud infrastructure into Pulumi no matt
 title: "Import resources"
 h1: "Importing resources"
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Importing resources
@@ -12,6 +13,11 @@ menu:
     usingpulumi:
         parent: adopting-pulumi
         weight: 3
+    build:
+        name: Importing resources
+        identifier: build-importing-resources
+        parent: build-understand-context
+        weight: 30
 aliases:
 - /docs/guides/adopting/import/
 - /docs/using-pulumi/adopting-pulumi/import/

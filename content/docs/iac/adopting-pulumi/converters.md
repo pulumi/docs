@@ -4,6 +4,7 @@ meta_desc: Pulumi convert allows you to convert ARM, CloudFormation, Kubernetes 
 title: Convert code
 h1: Convert code to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Conversion tools
@@ -13,6 +14,11 @@ menu:
         identifier: converters
         parent: adopting-pulumi
         weight: 4
+    build:
+        name: Convert code to Pulumi
+        identifier: build-converters
+        parent: build-understand-context
+        weight: 40
 aliases:
 - /docs/converters/
 - /docs/using-pulumi/adopting-pulumi/converters/

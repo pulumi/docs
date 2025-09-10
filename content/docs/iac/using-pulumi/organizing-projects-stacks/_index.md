@@ -4,11 +4,17 @@ meta_desc: An overview of best practices when organizing and structuring cloud p
 title: Organizing projects
 h1: Organizing Pulumi projects & stacks
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Organizing Projects & Stacks
         parent: iac-using-pulumi
         weight: 1
+    build:
+        name: Organizing Projects & Stacks
+        identifier: build-organizing-projects-stacks
+        parent: build-stacks-projects
+        weight: 20
 aliases:
 - /docs/reference/organizing-stacks-projects/
 - /docs/intro/concepts/organizing-stacks-projects/

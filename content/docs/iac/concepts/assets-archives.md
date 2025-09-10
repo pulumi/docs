@@ -4,13 +4,19 @@ meta_desc: "The Pulumi SDK provides two classes for working with files: Asset an
 title: Assets & archives
 h1: Assets & archives
 meta_image: /images/docs/meta-images/docs-meta.png
+capability: build
 menu:
     iac:
         name: Assets & archives
         parent: iac-concepts
         weight: 140
-    concepts:
-        weight: 13
+    build:
+        name: Assets & archives
+        identifier: build-assets-archives
+        parent: build-core-concepts
+        weight: 80
+concepts:
+    weight: 13
 search:
    keywords:
       - FileAsset

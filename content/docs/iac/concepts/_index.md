@@ -35,6 +35,16 @@ Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) 
 
 Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](https://www.pulumi.com/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
+## Core concepts overview
+
+Quick links to the most-used concepts when building with Pulumi:
+
+- Projects & stacks: [Projects](/docs/iac/concepts/projects/), [Stacks](/docs/iac/concepts/stacks/), [Project file](/docs/iac/concepts/projects/project-file/), [Stack settings](/docs/iac/concepts/projects/stack-settings-file/)
+- Resources & components: [Resources](/docs/iac/concepts/resources/), [Components](/docs/iac/concepts/components/), [Resource options](/docs/iac/concepts/options/)
+- Configuration & environments: [Configuration](/docs/iac/concepts/config/), [Secrets](/docs/iac/concepts/secrets/), [Environments (ESC)](/docs/esc/environments/), [State & backends](/docs/iac/concepts/state-and-backends/)
+- Inputs & outputs: [Overview](/docs/iac/concepts/inputs-outputs/), [apply](/docs/iac/concepts/inputs-outputs/apply/), [all](/docs/iac/concepts/inputs-outputs/all/)
+- Advanced concepts: [Functions](/docs/iac/concepts/functions/), [Dynamic providers](/docs/iac/concepts/resources/dynamic-providers/), [Resource names](/docs/iac/concepts/resources/names/)
+
 ## Supported languages and SDKs
 
 As a multi-language infrastructure as code tool, Pulumi supports many of today's most common general-purpose programming and markup languages. Every Pulumi-supported language is equally capable of provisioning and managing infrastructure across all major clouds, though some languages may provide functionality that's not yet available in others. The following languages and runtimes are currently supported:
