@@ -5,12 +5,14 @@ title: "Clouds"
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 capability: build
+expanded_menu_ids:
+  - build-cloud-platforms
 menu:
   build:
-    parent: build-cloud-platforms
-    name: Cloud Platform Overview
-    weight: 10
-    identifier: build-cloud-platform-overview
+    parent: build-home
+    name: Cloud Platforms
+    weight: 60
+    identifier: build-cloud-platforms
   iac:
     parent: iac-home
     name: Clouds
@@ -18,6 +20,7 @@ menu:
     identifier: iac-clouds
 aliases:
   - /docs/clouds/
+  - /docs/build/cloud-platforms/
 ---
 
 Pulumi supports AWS, Azure, Google Cloud, Kubernetes, and over 100 other packages.

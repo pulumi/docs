@@ -9,6 +9,11 @@ menu:
     weight: 1
     parent: iac-cli
     identifier: iac-cli-commands
+  pulumi-cli:
+    name: Commands
+    weight: 10
+    parent: pulumi-cli-home
+    identifier: pulumi-cli-commands
 ---
 
 ## Common Commands

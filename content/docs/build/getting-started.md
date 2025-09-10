@@ -2,12 +2,6 @@
 title: Getting Started
 h1: Getting Started
 capability: build
-menu:
-    build:
-        name: Getting Started
-        identifier: build-get-started
-        parent: build-home
-        weight: 10
 meta_desc: Get started building infrastructure with Pulumi - installation, first stack, cloud quickstarts, and environment setup.
 meta_image: /images/docs/meta-images/docs-meta.png
 ---

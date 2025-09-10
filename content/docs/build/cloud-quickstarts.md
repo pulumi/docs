@@ -1,12 +1,12 @@
 ---
 title: Cloud Quickstarts
 h1: Cloud Quickstarts
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Cloud Quickstarts (AWS, Azure, GCP, K8s)
-        identifier: build-cloud-quickstarts
-        parent: build-get-started
+    get-started:
+        name: Get Started with Infrastructure as Code
+        identifier: get-started-cloud-quickstarts
+        parent: get-started-home
         weight: 30
 meta_desc: Get started building infrastructure on your preferred cloud platform - AWS, Azure, Google Cloud, or Kubernetes quickstart guides.
 meta_image: /images/docs/meta-images/docs-meta.png

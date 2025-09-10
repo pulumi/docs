@@ -4,18 +4,13 @@ meta_desc: This page provides an overview of how to create a new Google Cloud + 
 title: Create project
 h1: "Pulumi & Google Cloud: Create project"
 weight: 3
-capability: build
+capability: get-started
 menu:
     iac:
         name: Create project
         identifier: gcp-get-started.create-project
         parent: gcp-get-started
         weight: 3
-    build:
-        name: Create project
-        identifier: build-gcp-create-project
-        parent: build-get-started-gcp
-        weight: 20
 aliases:
 - /docs/quickstart/gcp/create-project/
 - /docs/get-started/gcp/create-project/

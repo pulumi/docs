@@ -2,14 +2,20 @@
 
 {{ if .Params.capability }}
     {{ $selection = .Params.capability }}
+{{ else if or (hasPrefix .Path "/tutorials/") (eq .Path "/tutorials") (hasPrefix .Path "/tutorials") (hasPrefix .Path "/collections/") }}
+    {{ $selection = "get-started" }}
+{{ else if hasPrefix .Path "/docs/get-started" }}
+    {{ $selection = "get-started" }}
 {{ else if hasPrefix .Path "/docs/build" }}
     {{ $selection = "build" }}
 {{ else if hasPrefix .Path "/docs/platform" }}
     {{ $selection = "platform" }}
 {{ else if hasPrefix .Path "/docs/management" }}
     {{ $selection = "management" }}
-{{ else if hasPrefix .Path "/docs/developer-tools" }}
-    {{ $selection = "developer-tools" }}
+{{ else if hasPrefix .Path "/docs/pulumi-cli" }}
+    {{ $selection = "pulumi-cli" }}
+{{ else if hasPrefix .Path "/docs/iac/cli" }}
+    {{ $selection = "pulumi-cli" }}
 {{ else if hasPrefix .Path "/docs/iac" }}
     {{ $selection = "build" }}
 {{ else if hasPrefix .Path "/docs/esc" }}
@@ -24,14 +30,15 @@
     {{ $selection = "home" }}
 {{ else if hasPrefix .Path "/registry" }}
     {{ $selection = "platform" }}
-{{ else if hasPrefix .Path "/tutorials" }}
-    {{ $selection = "tutorials" }}
 {{ end }}
 
 <div class="inline-flex items-center">
     <a class="whitespace-nowrap tab {{ if eq $selection "home" }}tab-selected{{ end }}" href="/docs/">
         <img class="tab-icon" src="/icons/docs.svg" />
         <span>Docs Home</span>
+    </a>
+    <a class="whitespace-nowrap tab {{ if eq $selection "get-started" }}tab-selected{{ end }}" href="/docs/iac/get-started/">
+        <span>Get Started</span>
     </a>
     <a class="whitespace-nowrap tab {{ if eq $selection "build" }}tab-selected{{ end }}" href="/docs/build/">
         <span>Build</span>
@@ -42,10 +49,7 @@
     <a class="whitespace-nowrap tab {{ if eq $selection "management" }}tab-selected{{ end }}" href="/docs/management/">
         <span>Management</span>
     </a>
-    <a class="whitespace-nowrap tab {{ if eq $selection "developer-tools" }}tab-selected{{ end }}" href="/docs/developer-tools/">
-        <span>Developer Tools</span>
-    </a>
-    <a class="whitespace-nowrap tab {{ if eq $selection "tutorials" }}tab-selected{{ end }}" href="/tutorials/">
-        <span>Tutorials</span>
+    <a class="whitespace-nowrap tab {{ if eq $selection "pulumi-cli" }}tab-selected{{ end }}" href="/docs/iac/cli/">
+        <span>Pulumi CLI</span>
     </a>
 </div>

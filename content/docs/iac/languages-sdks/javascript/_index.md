@@ -11,11 +11,6 @@ menu:
         name: TypeScript/JavaScript
         weight: 20
         identifier: build-languages-javascript
-    developer-tools:
-        parent: dev-languages
-        name: TypeScript/JavaScript
-        weight: 1
-        identifier: dev-languages-javascript
     iac:
         name: TypeScript (Node.js)
         parent: iac-languages

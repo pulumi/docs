@@ -11,11 +11,6 @@ menu:
         name: Python
         weight: 30
         identifier: build-languages-python
-    developer-tools:
-        parent: dev-languages
-        name: Python
-        weight: 2
-        identifier: dev-languages-python
     iac:
         name: Python
         parent: iac-languages

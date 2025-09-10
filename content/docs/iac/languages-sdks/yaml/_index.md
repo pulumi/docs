@@ -11,11 +11,6 @@ menu:
         name: YAML
         weight: 70
         identifier: build-languages-yaml
-    developer-tools:
-        parent: dev-languages
-        name: YAML
-        weight: 6
-        identifier: dev-languages-yaml
     iac:
         name: YAML
         parent: iac-languages

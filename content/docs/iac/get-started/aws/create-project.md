@@ -4,12 +4,8 @@ title: Create project
 h1: "Get started with Pulumi and AWS"
 meta_desc: This page provides an overview of how to create a new AWS + Pulumi project.
 weight: 4
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Create project
-        parent: build-get-started-aws
-        weight: 4
     iac:
         name: Create project
         parent: aws-b-get-started

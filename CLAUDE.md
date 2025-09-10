@@ -29,3 +29,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Naming**: Use lowercase for non-proper nouns (e.g., "stack" not "Stack" in text)
 - **Ordered Lists**: All items should begin with `1.` regardless of their position in the list.
 
+## Site Architecture Notes
+- **Tutorial Collections**: The file `/data/tutorials/collections.yaml` defines tutorial collections that generate `/tutorials/{id}/` URLs (e.g., `/tutorials/aws/`). However, Hugo internally maps these to `/collections/{id}` paths, so navigation logic must check for both `/tutorials/` and `/collections/` path prefixes.
+

@@ -8,6 +8,11 @@ menu:
   iac:
     weight: 3
     parent: iac-cli
+  pulumi-cli:
+    name: Command-line Completion
+    weight: 30
+    parent: pulumi-cli-home
+    identifier: pulumi-cli-completion
 aliases:
     - /docs/cli/command-line-completion/
 ---

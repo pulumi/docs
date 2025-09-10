@@ -15,24 +15,17 @@ meta_desc: Discover and create reusable infrastructure assets. Find packages, te
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: <strong>Platform</strong> Ecosystem and Assets
 description: <p>Discover and create reusable infrastructure components, packages, templates, and patterns to accelerate development and ensure consistency across teams.</p>
-link_buttons:
-  primary:
-    label: Browse Registry
-    link: /registry/
-  secondary:
-    label: IDP Templates
-    link: /docs/idp/
 
 sections:
 - type: full-width-cards
   heading: Platform Assets
   cards:
   - icon: 📦
-    heading: Packages & Providers
-    description: Ready-to-use infrastructure components for AWS, Azure, Google Cloud, and 120+ providers.
+    heading: Registry
+    description: Discover packages and providers for AWS, Azure, Google Cloud, and 120+ other platforms.
     link: /registry/
   - icon: 📄
-    heading: Templates
+    heading: Internal Developer Platform (IDP)
     description: Kickstart projects with pre-built templates and scaffolding for common architectures.
     link: /docs/idp/
   - icon: 🧩

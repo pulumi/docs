@@ -4,13 +4,8 @@ meta_desc: This page provides an overview on how to get started with Pulumi when
 title: Before you begin
 h1: "Pulumi & Azure: Before you begin"
 weight: 2
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Install Pulumi
-        identifier: build-get-started-azure-begin
-        parent: build-get-started-azure
-        weight: 2
     iac:
         name: Install Pulumi
         identifier: azure-get-started.begin

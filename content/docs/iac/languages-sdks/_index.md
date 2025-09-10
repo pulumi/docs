@@ -15,11 +15,6 @@ menu:
         identifier: build-languages
         parent: build-home
         weight: 30
-    developer-tools:
-        name: Language SDKs
-        identifier: developer-tools-sdks
-        parent: developer-tools-home
-        weight: 20
     languages:
         name: Overview
         weight: 7

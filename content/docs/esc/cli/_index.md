@@ -4,17 +4,12 @@ title_tag: Pulumi ESC CLI Overview
 meta_desc: An overview of the Pulumi ESC (Environments, Secrets, and Configuration) CLI.
 h1: Pulumi ESC CLI overview
 no_on_this_page: true
-capability: developer-tools
+capability: pulumi-cli
 menu:
   esc:
     parent: esc-home
     identifier: esc-cli-overview
     weight: 7
-  developer-tools:
-    name: ESC CLI
-    identifier: developer-tools-esc-cli
-    parent: developer-tools-home
-    weight: 15
 aliases:
     - /docs/esc-cli/
 ---

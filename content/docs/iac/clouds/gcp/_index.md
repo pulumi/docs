@@ -5,6 +5,8 @@ title: "Google Cloud"
 meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
 h1: Google Cloud & Pulumi
 capability: build
+expanded_menu_ids:
+  - build-cloud-platforms
 menu:
   iac:
     name: Google Cloud

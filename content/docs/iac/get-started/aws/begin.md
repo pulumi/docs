@@ -5,12 +5,8 @@ h1: "Get started with Pulumi and AWS"
 stepper_link: "I'm ready to begin"
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an AWS project.
 weight: 2
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Install Pulumi
-        parent: build-get-started-aws
-        weight: 2
     iac:
         name: Install Pulumi
         parent: aws-b-get-started

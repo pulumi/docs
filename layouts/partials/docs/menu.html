@@ -5,7 +5,7 @@
 one from the current path. If that doesn't work, don't show a menu. (TODO: Would
 it be helpful to be able to set the menu somehow in the frontmatter?) */}}
 
-{{ $validMenus := slice "iac" "esc" "idp" "cloud" "insights" "build" "platform" "management" "developer-tools"}}
+{{ $validMenus := slice "iac" "esc" "idp" "cloud" "insights" "get-started" "build" "platform" "management" "pulumi-cli"}}
 
 {{ if not (in $validMenus $menuID) }}
     {{ $menuID = "" }}

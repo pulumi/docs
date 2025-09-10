@@ -10,11 +10,6 @@ menu:
     parent: esc-home
     weight: 12
     identifier: faq
-  build:
-    name: ESC FAQ
-    identifier: build-esc-faq
-    parent: build-getting-help
-    weight: 10
 aliases:
   - /docs/pulumi-cloud/esc/faq
 ---

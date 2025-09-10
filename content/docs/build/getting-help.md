@@ -2,12 +2,6 @@
 title: Getting Help
 h1: Getting Help
 capability: build
-menu:
-    build:
-        name: Getting Help
-        identifier: build-getting-help
-        parent: build-home
-        weight: 80
 meta_desc: Get help with building infrastructure using Pulumi - troubleshooting, FAQ, community support, and technical assistance.
 meta_image: /images/docs/meta-images/docs-meta.png
 ---
@@ -28,7 +22,7 @@ Get help with common build and deployment issues:
 - **[Getting Started Problems](/docs/iac/get-started/)** - Common first-time setup issues
 - **[Configuration Errors](/docs/iac/concepts/config/)** - Fix configuration-related problems
 
-For advanced troubleshooting and debugging tools, see [Developer Tools](/docs/developer-tools/).
+For advanced troubleshooting and debugging tools, see [Developer Tools](/docs/pulumi-cli/).
 
 ## Community & Support
 
@@ -82,6 +76,6 @@ When asking for help, please include:
 ## Next Steps
 
 - **Ready to build?** Start with [Getting Started](/docs/iac/get-started/)
-- **Need advanced tools?** Explore [Developer Tools](/docs/developer-tools/)
+- **Need advanced tools?** Explore [Developer Tools](/docs/pulumi-cli/)
 - **Building with a team?** Check out [Platform capabilities](/docs/platform/)
 - **Need compliance?** See [Management capabilities](/docs/management/)

@@ -5,6 +5,8 @@ title: "Azure"
 meta_image: /images/docs/meta-images/docs-clouds-azure-meta-image.png
 h1: Azure & Pulumi
 capability: build
+expanded_menu_ids:
+  - build-cloud-platforms
 menu:
   iac:
     name: Azure

@@ -15,13 +15,6 @@ meta_desc: Operational oversight and governance for infrastructure. Manage deplo
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Infrastructure <strong>Management</strong> and Governance
 description: <p>Operational oversight and governance tools for managing deployments, enforcing policies, controlling access, and maintaining compliance across your cloud infrastructure.</p>
-link_buttons:
-  primary:
-    label: Cloud Console
-    link: /docs/pulumi-cloud/
-  secondary:
-    label: View Insights
-    link: /docs/insights/
 
 sections:
 - type: full-width-cards

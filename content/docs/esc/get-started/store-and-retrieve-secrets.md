@@ -3,7 +3,7 @@ title_tag: Store and Retrieve Secrets | Pulumi ESC
 title: Store and retrieve secrets
 h1: "Pulumi ESC: Store and Retrieve Secrets"
 meta_desc: This page provides an overview on how to store and retrieve secrets in Pulumi ESC.
-capability: build
+capability: get-started
 weight: 4
 menu:
   esc:

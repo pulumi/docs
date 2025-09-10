@@ -1,22 +1,24 @@
 ---
-title_tag: "Pulumi CLI Overview"
-meta_desc: An overview of the Pulumi CLI and common commands used to deploy cloud applications.
 title: Pulumi CLI
-h1: Pulumi CLI overview
+linktitle: Pulumi CLI
+capability: pulumi-cli
+docs_home: true
+notitle: true
 no_on_this_page: true
+meta_desc: Pulumi CLI commands for deploying and managing cloud infrastructure.
 meta_image: /images/docs/meta-images/docs-meta.png
-capability: developer-tools
+h1: Pulumi <strong>CLI</strong>
+description: <p>Command line interface for deploying and managing cloud infrastructure with team collaboration and CI/CD integration.</p>
 menu:
   iac:
     name: Pulumi CLI
     weight: 45
     identifier: iac-cli
     parent: iac-home
-  developer-tools:
+  pulumi-cli:
     name: Pulumi CLI
-    identifier: developer-tools-cli
-    parent: developer-tools-home
-    weight: 10
+    identifier: pulumi-cli-home
+    weight: 1
 aliases:
     - /docs/reference/commands/
     - /docs/tour/basics-deploying/
@@ -27,6 +29,8 @@ aliases:
     - /docs/reference/cli/
     - /docs/cli
 ---
+
+## Overview
 
 Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi Cloud
 to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when.

@@ -1,22 +1,26 @@
 ---
+title: Get Started
+linktitle: Get Started
 title_tag: Get Started with Pulumi
 meta_desc: Step-by-step guides for creating, deploying, and managing infrastructure with Pulumi on the cloud using your favorite language.
-title: Get started
-h1: Get started with Pulumi
-no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
-capability: build
+h1: <strong>Get Started</strong> with Pulumi
+description: <p>Learn how to build, deploy, and manage infrastructure using your favorite programming languages with Pulumi. Choose your cloud provider and programming language to get started.</p>
+capability: get-started
+docs_home: true
+notitle: true
+no_on_this_page: true
+expanded_menu_ids: "get-started-install,get-started-cloud-quickstarts,get-started-aws,get-started-azure,get-started-gcp,get-started-kubernetes"
 menu:
     iac:
         name: Get started
         identifier: iac-get-started
         parent: iac-home
         weight: 10
-    build:
-        name: Your First Stack
-        identifier: build-your-first-stack
-        parent: build-get-started
-        weight: 20
+    get-started:
+        name: Get Started
+        identifier: get-started-home
+        weight: 1
     getstarted:
         name: Overview
         weight: 2
@@ -27,7 +31,11 @@ aliases:
     - /get-started/
     - /docs/tour/
     - /docs/get-started
+    - /docs/getting-started/
+
 ---
+
+## Overview
 
 Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) and [secrets management](/what-is/what-is-secrets-management/) platform that allows you to use familiar programming languages and tools to automate, secure and manage everything you run in the cloud.
 
@@ -335,7 +343,7 @@ Select one of the following options to get started:
 
 Alternatively, you can watch the following video which provides a high level overview of how Pulumi works:
 
-<div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+<div id="video-tutorial" class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
     <iframe
         src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"

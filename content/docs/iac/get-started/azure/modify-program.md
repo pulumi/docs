@@ -4,13 +4,8 @@ meta_desc: This page provides an overview on how to update an Azure project from
 title: Modify program
 h1: "Pulumi & Azure: Modify program"
 weight: 6
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Modify program
-        identifier: build-get-started-azure-modify-program
-        parent: build-get-started-azure
-        weight: 6
     iac:
         name: Modify program
         identifier: azure-get-started.modify-program

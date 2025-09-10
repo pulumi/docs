@@ -6,12 +6,8 @@ stepper_link: "Congratulations!"
 meta_desc: This page provides a list of tutorials that take a deeper dive into
             AWS cloud resources.
 weight: 9
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Next steps
-        parent: build-get-started-aws
-        weight: 9
     iac:
         name: Next steps
         parent: aws-b-get-started

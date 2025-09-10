@@ -5,6 +5,8 @@ title: "AWS"
 meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 h1: AWS & Pulumi
 capability: build
+expanded_menu_ids:
+  - build-cloud-platforms
 menu:
   iac:
     name: AWS

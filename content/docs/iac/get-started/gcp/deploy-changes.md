@@ -4,18 +4,13 @@ meta_desc: This page provides an overview of how deploy changes to a Google Clou
 title: Deploy changes
 h1: "Pulumi & Google Cloud: Deploy changes"
 weight: 7
-capability: build
+capability: get-started
 menu:
     iac:
         name: Deploy changes
         identifier: gcp-get-started.deploy-changes
         parent: gcp-get-started
         weight: 7
-    build:
-        name: Deploy changes
-        identifier: build-gcp-deploy-changes
-        parent: build-get-started-gcp
-        weight: 50
     clouds:
         parent: google-cloud-get-started
         identifier: gcp-deploy-changes

@@ -11,11 +11,6 @@ menu:
         name: Go
         weight: 40
         identifier: build-languages-go
-    developer-tools:
-        parent: dev-languages
-        name: Go
-        weight: 4
-        identifier: dev-languages-go
     iac:
         name: Go
         parent: iac-languages

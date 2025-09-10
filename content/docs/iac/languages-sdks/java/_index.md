@@ -11,11 +11,6 @@ menu:
         name: Java
         weight: 60
         identifier: build-languages-java
-    developer-tools:
-        parent: dev-languages
-        name: Java
-        weight: 5
-        identifier: dev-languages-java
     iac:
         name: Java
         parent: iac-languages

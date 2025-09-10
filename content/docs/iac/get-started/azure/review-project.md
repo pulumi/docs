@@ -4,13 +4,8 @@ meta_desc: This page provides an overview on how to a review a new Azure project
 title: Review project
 h1: "Pulumi & Azure: Review project"
 weight: 4
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Review project
-        identifier: build-get-started-azure-review-project
-        parent: build-get-started-azure
-        weight: 4
     iac:
         name: Review project
         identifier: azure-get-started.review-project

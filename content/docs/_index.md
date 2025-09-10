@@ -24,31 +24,15 @@ sections:
   - heading: Build
     description: "Create and deploy cloud infrastructure using your favorite programming languages"
     link: /docs/build/
-    primary_button_label: Get Started
-    primary_button_link: /docs/iac/get-started/
-    secondary_button_label: Install
-    secondary_button_link: /docs/iac/download-install/
   - heading: Platform
     description: "Enable teams with enterprise automation, collaboration, and internal developer platforms"
     link: /docs/platform/
-    primary_button_label: Learn More
-    primary_button_link: /docs/platform/
-    secondary_button_label: Create an account
-    secondary_button_link: https://app.pulumi.com/signup
   - heading: Management
     description: "Discover, govern, and optimize cloud infrastructure with AI-powered insights and compliance"
     link: /docs/management/
-    primary_button_label: Get Started
-    primary_button_link: /docs/insights/get-started/
-    secondary_button_label: Create an account
-    secondary_button_link: https://app.pulumi.com/signup
   - heading: Developer Tools
     description: "CLIs, SDKs, APIs, and AI-powered development tools for infrastructure as code"
-    link: /docs/developer-tools/
-    primary_button_label: Explore Tools
-    primary_button_link: /docs/developer-tools/
-    secondary_button_label: Install CLI
-    secondary_button_link: /docs/iac/download-install/
+    link: /docs/pulumi-cli/
 - type: cards-logo-label-link
   heading: Clouds
   description: <p>Pulumi IaC supports AWS, Azure, Google Cloud, Kubernetes, and <a href="/registry/">120+ packages</a>.</p>
@@ -102,20 +86,11 @@ sections:
   - heading: Pulumi Community Slack
     description: "Join the Pulumi Community on Slack where you can ask questions or share ideas about infrastructure as code. The community is vibrant and we are excited to have you. Welcome!"
     link: https://slack.pulumi.com
-    primary_button_label: Join Now
-    primary_button_link: https://slack.pulumi.com
-  - heading: Pulumi GitHub
-    description: "Pulumi is open-source and open-minded. Got a question, idea, or problem to report? Leave us an issue in our GitHub repo!"
+    
     link: https://github.com/pulumi
-    primary_button_label: File an issue
-    primary_button_link: https://github.com/pulumi/pulumi/issues
-  - heading: Troubleshooting Guide
-    description: "Check out this list of known issues and how to resolve them."
+    
     link: https://www.pulumi.com/docs/iac/support/troubleshooting/
-    primary_button_label: Learn More
-    primary_button_link: https://www.pulumi.com/docs/iac/support/troubleshooting/
-
-- type: flat
+    
   heading: Enterprise and Business Critical support
   description: |
     <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="https://www.pulumi.com/pricing/">pricing page</a> for the support options available. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.</p>

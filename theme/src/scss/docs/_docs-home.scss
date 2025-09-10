@@ -22,24 +22,24 @@ section.docs-home {
     div.header {
         @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-right-bottom;
 
-        background-image: url("/images/docs/docs-home-header-background-mobile.svg");
+        // background-image: url("/images/docs/docs-home-header-background-mobile.svg");
 
         p {
-            @apply max-w-md;
+            @apply max-w-50rem;
         }
 
         @screen md {
             @apply bg-auto;
-            background-image: url("/images/docs/docs-home-header-background-tablet.svg");
+            // background-image: url("/images/docs/docs-home-header-background-tablet.svg");
         }
 
         @screen lg {
-            background-image: url("/images/docs/docs-home-header-background-desktop.svg");
+            // background-image: url("/images/docs/docs-home-header-background-desktop.svg");
         }
 
         @screen xl {
             .docs-content-width-expanded & {
-                background-image: url("/images/docs/docs-home-header-background-desktop-wide.svg");
+                // background-image: url("/images/docs/docs-home-header-background-desktop-wide.svg");
                 @apply bg-right;
             }
         }
@@ -47,7 +47,7 @@ section.docs-home {
         @screen xxl {
             .docs-content-width-expanded & {
                 p {
-                    @apply max-w-lg;
+                    @apply max-w-50rem;
                 }
             }
         }

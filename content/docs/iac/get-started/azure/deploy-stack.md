@@ -4,13 +4,8 @@ meta_desc: Learn how to deploy your stack to an Azure project in this guide.
 title: Deploy stack
 h1: "Pulumi & Azure: Deploy stack"
 weight: 5
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Deploy stack
-        identifier: build-get-started-azure-deploy-stack
-        parent: build-get-started-azure
-        weight: 5
     iac:
         name: Deploy stack
         identifier: azure-get-started.deploy-stack

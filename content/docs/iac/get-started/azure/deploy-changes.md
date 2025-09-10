@@ -4,13 +4,8 @@ meta_desc: Learn how to deploy changes to an Azure project in this guide.
 title: Deploy changes
 h1: "Pulumi & Azure: Deploy changes"
 weight: 7
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Deploy changes
-        identifier: build-get-started-azure-deploy-changes
-        parent: build-get-started-azure
-        weight: 7
     iac:
         name: Deploy changes
         identifier: azure-get-started.deploy-changes

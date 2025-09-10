@@ -5,18 +5,13 @@ meta_desc: This page provides a list of tutorials that take a deeper dive into
 title: Next steps
 h1: "Pulumi & Google Cloud: Next steps"
 weight: 9
-capability: build
+capability: get-started
 menu:
   iac:
     name: Next steps
     identifier: gcp-get-started.next-steps
     parent: gcp-get-started
     weight: 9
-  build:
-    name: Next steps
-    identifier: build-gcp-next-steps
-    parent: build-get-started-gcp
-    weight: 70
   clouds:
     parent: google-cloud-get-started
     identifier: gcp-next-steps

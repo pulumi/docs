@@ -4,13 +4,8 @@ meta_desc: This page provides an overview of how to create a new Azure + Pulumi 
 title: Create project
 h1: "Pulumi & Azure: Create project"
 weight: 3
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Create project
-        identifier: build-get-started-azure-create-project
-        parent: build-get-started-azure
-        weight: 3
     iac:
         name: Create project
         identifier: azure-get-started.create-project

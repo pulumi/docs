@@ -8,6 +8,11 @@ menu:
   iac:
     weight: 2
     parent: iac-cli
+  pulumi-cli:
+    name: Environment Variables
+    weight: 20
+    parent: pulumi-cli-home
+    identifier: pulumi-cli-environment-variables
 aliases:
     - /docs/reference/cli/environment-variables/
     - /docs/cli/environment-variables/

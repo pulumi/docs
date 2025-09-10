@@ -42,7 +42,7 @@ Learn when and how to adopt Pulumi from other tools:
 
 - [Adopting Pulumi](/docs/iac/adopting-pulumi/) - Migration strategy overview
 - [Import existing resources](/docs/iac/adopting-pulumi/import/) - When and why to import existing infrastructure
-- [Migration tools](/docs/developer-tools/) - Technical migration utilities and tools
+- [Migration tools](/docs/pulumi-cli/) - Technical migration utilities and tools
 
 ## Key Pulumi Advantages
 

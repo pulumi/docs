@@ -3,7 +3,7 @@ title_tag: Before You Begin | Pulumi ESC
 title: Before you begin
 h1: "Pulumi ESC: Before you begin"
 meta_desc: This page provides an overview on how to get started with Pulumi ESC.
-capability: build
+capability: get-started
 weight: 2
 menu:
   esc:

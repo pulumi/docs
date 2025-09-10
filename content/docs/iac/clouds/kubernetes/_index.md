@@ -5,6 +5,8 @@ title: "Kubernetes"
 meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 h1: Kubernetes & Pulumi
 capability: build
+expanded_menu_ids:
+  - build-cloud-platforms
 menu:
   iac:
     name: Kubernetes

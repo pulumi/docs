@@ -3,7 +3,7 @@ title_tag: Use Short Term Cloud Credentials | Pulumi ESC
 title: Use short term cloud credentials
 h1: "Use Short Term Cloud Credentials to Run Commands Without Local Secrets"
 meta_desc: This page provides an overview on how to get short term cloud credentials and run commands without using local secrets using the "esc run" command.
-capability: build
+capability: get-started
 weight: 6
 menu:
   esc:

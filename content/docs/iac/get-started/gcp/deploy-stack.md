@@ -4,18 +4,13 @@ meta_desc: This page provides an overview of how to deploy changes to a Google C
 title: Deploy stack
 h1: "Pulumi & Google Cloud: Deploy stack"
 weight: 5
-capability: build
+capability: get-started
 menu:
     iac:
         name: Deploy stack
         identifier: gcp-get-started.deploy-stack
         parent: gcp-get-started
         weight: 5
-    build:
-        name: Deploy stack
-        identifier: build-gcp-deploy-stack
-        parent: build-get-started-gcp
-        weight: 30
     clouds:
         parent: google-cloud-get-started
         identifier: gcp-deploy-stack

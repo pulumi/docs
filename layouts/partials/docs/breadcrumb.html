@@ -18,15 +18,18 @@
         {{ if eq $capability "build" }}
             {{ $capabilityTitle = "Build" }}
             {{ $capabilityUrl = "/docs/build/" }}
+        {{ else if eq $capability "get-started" }}
+            {{ $capabilityTitle = "Get Started" }}
+            {{ $capabilityUrl = "/docs/iac/get-started/" }}
         {{ else if eq $capability "platform" }}
             {{ $capabilityTitle = "Platform" }}
             {{ $capabilityUrl = "/docs/platform/" }}
         {{ else if eq $capability "management" }}
             {{ $capabilityTitle = "Management" }}
             {{ $capabilityUrl = "/docs/management/" }}
-        {{ else if eq $capability "developer-tools" }}
-            {{ $capabilityTitle = "Developer Tools" }}
-            {{ $capabilityUrl = "/docs/developer-tools/" }}
+        {{ else if eq $capability "pulumi-cli" }}
+            {{ $capabilityTitle = "Pulumi CLI" }}
+            {{ $capabilityUrl = "/docs/iac/cli/" }}
         {{ end }}
 
         {{ if $isCapabilityHomePage }}

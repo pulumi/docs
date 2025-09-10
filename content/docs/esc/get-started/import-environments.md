@@ -3,7 +3,7 @@ title_tag: Import Environments | Pulumi ESC
 title: Import environments
 h1: "Pulumi ESC: Import Environments"
 meta_desc: This page provides an overview on how to import environments in Pulumi ESC.
-capability: build
+capability: get-started
 weight: 5
 menu:
   esc:

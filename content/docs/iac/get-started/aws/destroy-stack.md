@@ -4,12 +4,8 @@ title: Destroy stack
 h1: "Get started with Pulumi and AWS"
 meta_desc: This page provides an overview of how to destroy a Pulumi stack of an AWS project.
 weight: 8
-capability: build
+capability: get-started
 menu:
-    build:
-        name: Cleanup & destroy
-        parent: build-get-started-aws
-        weight: 8
     iac:
         name: Cleanup & destroy
         parent: aws-b-get-started

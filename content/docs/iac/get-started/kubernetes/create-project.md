@@ -4,18 +4,13 @@ meta_desc: This page provides an overview of how to create a new Kubernetes + Pu
 title: Create project
 h1: "Pulumi & Kubernetes: Create project"
 weight: 3
-capability: build
+capability: get-started
 menu:
   iac:
     name: Create project
     identifier: kubernetes-get-started.create-project
     parent: kubernetes-get-started
     weight: 3
-  build:
-    name: Create project
-    identifier: build-kubernetes-create-project
-    parent: build-get-started-kubernetes
-    weight: 20
   clouds:
     parent: kubernetes-get-started
     identifier: kubernetes-get-started-create-project

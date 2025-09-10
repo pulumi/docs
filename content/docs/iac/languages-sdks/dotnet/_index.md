@@ -11,11 +11,6 @@ menu:
         name: C#/F#/.NET
         weight: 50
         identifier: build-languages-dotnet
-    developer-tools:
-        parent: dev-languages
-        name: C#/F#/.NET
-        weight: 3
-        identifier: dev-languages-dotnet
     iac:
         name: C#, F#, VB (.NET)
         parent: iac-languages
