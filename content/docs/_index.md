@@ -86,11 +86,20 @@ sections:
   - heading: Pulumi Community Slack
     description: "Join the Pulumi Community on Slack where you can ask questions or share ideas about infrastructure as code. The community is vibrant and we are excited to have you. Welcome!"
     link: https://slack.pulumi.com
-    
+    primary_button_label: Join Now
+    primary_button_link: https://slack.pulumi.com
+  - heading: Pulumi GitHub
+    description: "Pulumi is open-source and open-minded. Got a question, idea, or problem to report? Leave us an issue in our GitHub repo!"
     link: https://github.com/pulumi
-    
+    primary_button_label: File an issue
+    primary_button_link: https://github.com/pulumi/pulumi/issues
+  - heading: Troubleshooting Guide
+    description: "Check out this list of known issues and how to resolve them."
     link: https://www.pulumi.com/docs/iac/support/troubleshooting/
-    
+    primary_button_label: Learn More
+    primary_button_link: https://www.pulumi.com/docs/iac/support/troubleshooting/
+
+- type: flat
   heading: Enterprise and Business Critical support
   description: |
     <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="https://www.pulumi.com/pricing/">pricing page</a> for the support options available. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.</p>
