@@ -1,32 +1,32 @@
 ---
 title: Pulumi - Infrastructure as Code, Secrets Management, and AI
-meta_desc: Build, secure, and scale cloud infrastructure with real programming languages, AI acceleration, and enterprise-grade governance in one unified platform
+meta_desc: Pulumi is an infrastructure management platform to automate through infrastructure as code, secure with secrets management, and manage infrastructure with AI.
 
 include_organization_schema: true
 
 hero:
-  title: [ "Beyond Infrastructure as Code", "The Platform Engineering Platform" ]
+  title: [ "The Cloud Infrastructure Platform", "Engineers Love and Enterprises Trust" ]
   description: |
-    Build, secure, and scale cloud infrastructure with real programming languages, AI acceleration, and enterprise-grade governance in one unified platform
-  cta_text: Get Started
+    Powered by the #1 open source infrastructure as code tool.
+  cta_text: Try Pulumi Cloud for Free
   cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
-  secondary_cta_text: Watch Demo
-  secondary_cta_link: /product/neo
+  secondary_cta_text: Download Open Source
+  secondary_cta_link: /docs/iac/download-install
 
 pillars:
     items:
         - icon: gear
           icon_color: purple
-          title: One Platform for All Infrastructure Needs
-          description: Replace multiple tools with a single platform. Infrastructure as Code, secrets management, policy enforcement, and AI assistance work together seamlessly.
+          title: Automate
+          description: Infrastructure as code, powered by the industry’s best languages and AIs, helps teams provision, automate, and evolve cloud infrastructure.
         - icon: shield
           icon_color: yellow
-          title: AI-Powered Infrastructure Assistant
-          description: Pulumi Neo understands your infrastructure and helps you build faster while maintaining security and compliance guardrails.
+          title: Secure
+          description: Config and secrets management built for engineers by engineers to tame sprawl at scale and help teams ensure automatic security.
         - icon: guage
           icon_color: salmon
-          title: Enterprise Security and Governance
-          description: Built-in policy enforcement, audit trails, and compliance monitoring. From startup to enterprise, governance scales with you.
+          title: Manage
+          description: Gain security, compliance, and cost insights into the entirety of an organization’s cloud assets and automatically remediate issues.
 
 idp:
   title: The Fastest, Most Secure Way to Deliver Cloud Infrastructure
