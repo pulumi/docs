@@ -1,5 +1,5 @@
 ---
-title: "Pulumi ESC: Centralized Secrets Management & Orchestration"
+title: "Secrets & Configuration"
 layout: secrets-management
 
 meta_title: "Pulumi ESC: Centralized Secrets Management & Orchestration"

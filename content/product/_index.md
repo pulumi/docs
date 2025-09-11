@@ -4,12 +4,9 @@ meta_desc: Learn how Pulumi's products enable your team to get code to any cloud
 type: page
 layout: product
 
-heading: Pulumi Overview
+heading: The Pulumi Platform
 subheading: |
-    Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
-    make managing infrastructure secure, reliable, and hassle-free.<br><br>
-    Pulumi helps developers and infrastructure teams collaborate
-    and tame cloud complexity -- something we call Cloud Engineering.
+    Everything platform engineering teams need to build, secure, and scale cloud infrastructure
 
 overview:
     title: Infrastructure as Code<br/>in any Programming Language

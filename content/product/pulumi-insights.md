@@ -1,5 +1,5 @@
 ---
-title: Pulumi Insights
+title: Insights & Governance
 layout: pulumi-insights
 
 meta_desc: Pulumi Insights is Intelligent Cloud Management. Gain security, compliance, and cost insights into your cloud, and automatically remediate issues.

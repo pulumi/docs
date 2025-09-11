@@ -1,5 +1,5 @@
 ---
-title: "Pulumi IDP"
+title: "Internal Developer Platform"
 layout: internal-developer-platforms
 
 meta_title: "Pulumi IDP"
