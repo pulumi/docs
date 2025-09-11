@@ -5,7 +5,7 @@ layout: infrastructure-as-code
 aliases:
     - /product/iac
 
-heading: Infrastructure as Code
+heading: Pulumi IaC
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
