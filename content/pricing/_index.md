@@ -89,191 +89,549 @@ comparison_table:
         ####
         # Products
         ####
-        - header: Key Capabilities
+        - header: Products
           tables:
 
             # Pulumi IaC table
-            - header: Infrastructure as Code
-              subheader: Foundation capability is included in all editions
+            - header: Pulumi IaC
+              subheader: Provision and scale any infrastructure on any cloud.
               rows:
-                - title: Resource Management
+                - title: On-demand resource price
                   items:
                     - content: Free
                     - content: $0.00025/hour<br>($0.185/month)
                     - content: Starting at $0.0005/hour<br>($0.365/month)
                     - content: Custom
-                - title: Programming Languages
+                - title: Commitment pricing
                   items:
-                    - content: All languages
-                    - content: All languages
-                    - content: All languages
-                    - content: All languages
-                - title: Cloud Providers
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Self-hosting
+                  link: /product/self-hosted/
                   items:
-                    - content: 250+ providers
-                    - content: 250+ providers
-                    - content: 250+ providers
-                    - content: 250+ providers
-                - title: State Management
+                    - content: _blank
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                - title: Updates
                   items:
-                    - content: Secure backend
-                    - content: Secure backend
-                    - content: Secure backend
-                    - content: Self-hosted option
-                - title: Concurrent Updates
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: Concurrent stack updates
                   items:
                     - content: 1
                     - content: 5
                     - content: Unlimited
                     - content: Unlimited
-                - title: RBAC & Access Control
+                - title: Developer portal
+                  items:
+                    - content: Host public templates
+                    - content: Host public templates
+                    - content: Host private templates
+                    - content: Host private templates
+
+                - title: Restore Deleted Stacks
+                  link: /blog/restore-stacks
                   items:
                     - content: _blank
-                    - content: Team-level
-                    - content: Fine-grained
-                    - content: Enterprise-grade
-                - title: SSO Integration
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Update history
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: CI/CD integrations
+                  link: /docs/iac/packages-and-automation/continuous-delivery/
+                  items:
+                    - content: Many
+                      tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
+                    - content: Many
+                      tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
+                    - content: Customized for you
+                    - content: Customized for you
+                - title: CI/CD Assistant
+                  link: /docs/pulumi-cloud/deployments/ci-cd-integration-assistant/
                   items:
                     - content: _blank
                     - content: _check
                     - content: _check
+                    - content: _check
+                - title: Drift detection
+                  link: /docs/pulumi-cloud/deployments/drift/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Time-to-live stacks
+                  link: /docs/pulumi-cloud/deployments/ttl/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Scheduled deployments
+                  link: /docs/pulumi-cloud/deployments/schedules/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: GitHub Enterprise Server support
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _blank
                     - content: _check
 
             ## Pulumi ESC table
-            - header: Secrets & Configuration
-              subheader: Secure configuration management across all environments
+            - header: Pulumi ESC
+              subheader: Manage secrets and configuration across all of your cloud applications and infrastructure.
               rows:
-                - title: Secrets Storage
+                - title: On-demand secret price
                   items:
                     - content: 25 free
                     - content: $0.000685/hour<br>($0.50/mo)
                     - content: $0.001/hour<br>($0.75/mo)
                     - content: Custom
-                - title: Dynamic Secrets
+                - title: Price per plaintext config
+                  items:
+                    - content: Free
+                    - content: Free
+                    - content: Free
+                    - content: Free
+                - title: Price per 10K API calls
+                  items:
+                    - content: 10K free
+                    - content: $0.10
+                    - content: $0.10
+                    - content: $0.10
+                - title: Commitment pricing
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Self-hosting
+                  link: /product/self-hosted/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                - title: "Max # of secrets"
+                  items:
+                    - content: 25
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: "Max # of projects"
+                  items:
+                    - content: 10
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: "Max # of environments"
+                  link: /docs/esc/environments/
+                  items:
+                    - content: 10
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: "Max # of API calls"
+                  items:
+                    - content: 10K / month
+                    - content: Unlimited
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: Version history
+                  link: /docs/esc/environments/versioning/
+                  items:
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Version tags and import by tags
+                  link:  /docs/esc/environments/versioning/#tagging-versions
+                  items:
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Dynamic credentials
+                  link: /docs/esc/integrations/dynamic-login-credentials/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Dynamic secrets
                   link: /docs/esc/integrations/dynamic-secrets/
                   items:
-                    - content: _blank
-                    - content: Auto-rotation
-                    - content: Auto-rotation
-                    - content: Auto-rotation
-                - title: Environment Inheritance
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Rotated secrets
+                  link: /docs/esc/integrations/rotated-secrets/
                   items:
-                    - content: Basic
-                    - content: Advanced
-                    - content: Advanced
-                    - content: Advanced
-                - title: RBAC & Audit
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Database Secrets Rotation
+                  link: /blog/esc-db-secrets-rotation-launch/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Database Secrets Rotation in private networks
+                  link: /blog/esc-db-secrets-rotation-launch/
                   items:
                     - content: _blank
-                    - content: Team-level
-                    - content: Fine-grained
-                    - content: Enterprise-grade
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Integrations - Sync
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Multi-language SDKs
+                  link: /docs/esc/sdk/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+
             ## Pulumi Insights Table
-            - header: Insights & Governance
-              subheader: Intelligence and governance across your infrastructure
-              rows:              
+            - header: Pulumi Insights
+              subheader: Inventory your entire cloud estate with policy, compliance violations, and AI assistance.
+              rows:
+                - title: On-demand resource price
+                  items:
+                    - content: Free
+                    - content: $0.00025/hour<br>($0.185/month)
+                    - content: Starting at $0.0005/hour<br>($0.365/month)
+                    - content: Custom
+                - title: Workflow cost per minute/ included per month
+                  link: /pricing#faq
+                  items:
+                    - content: 500 free
+                    - content: $0.01, <br>3,000 included
+                    - content: $.01 / Custom, <br>3,000 included
+                    - content: $.01 / Custom, <br>3,000 included                  
                 - title: Resource search
                   link: /docs/insights/search/
                   items:
-                    - content: Basic
-                    - content: AI-powered
-                    - content: AI-powered
-                    - content: AI-powered
-                - title: Policy Enforcement
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Primary Accounts
+                  items:
+                    - content: 1
+                    - content: 1
+                    - content: 10
+                    - content: 20
+                - title: Data export
+                  link: /docs/insights/export/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Property search
+                  link: /docs/insights/search/#property-queries
+                  items:
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Policy enforcement
                   link: /docs/insights/policy-as-code/
                   items:
                     - content: _blank
-                    - content: 1 pack / 25 policies
-                    - content: 5 packs / 125 policies
+                    - content: _blank
+                    - content: Available
+                    - content: _check
+        ####
+        # Shared Platform Capabilities
+        ####
+        - header: Shared Platform Capabilities
+          tables:
+            ## Core table
+            - header: Core
+              subheader: Common capabilities shared across the Pulumi Cloud platform.
+              rows:
+                - title: Webhooks
+                  link: /docs/pulumi-cloud/webhooks/
+                  items:
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: REST API
+                  link: /docs/pulumi-cloud/cloud-rest-api/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Automation API
+                  link: /automation/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Pulumi-service provider
+                  link: /registry/packages/pulumiservice/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Members
+                  items:
+                    - content: 1
+                    - content: Up to 10
                     - content: Unlimited
-                - title: Enforcement Modes
-                  link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
+                    - content: Unlimited
+                - title: Admins
                   items:
                     - content: _blank
-                    - content: Advisory & Mandatory
-                    - content: Advisory & Mandatory
-                    - content: Advisory, Mandatory & Remediation 
-                - title: Available Policies
+                    - content: 1
+                    - content: Unlimited
+                    - content: Unlimited
+                - title: Organizations
+                  link: /docs/pulumi-cloud/admin/organizations/
                   items:
                     - content: _blank
-                    - content: Best practices
-                    - content: Best practices
-                    - content: All Packs (incl. PCI, HITRUST). Unlimited custom packs
-                - title: Compliance Monitoring
-                  items:
-                    - content: _blank
-                    - content: Policy violations
-                    - content: Policy violations and trends
-                    - content: Policy violations, trends, and custom reports
-                - title: Cost Analysis
-                  items:
-                    - content: _blank
-                    - content: Basic insights
-                    - content: Optimization
-                    - content: Custom reporting
-                - title: Cloud Discovery
-                  items:
-                    - content: Basic
-                    - content: AI-powered
-                    - content: AI-powered
-                    - content: AI-powered
-              ## Infrastructure AI Table
-            - header: Infrastructure AI
-              subheader: Intelligent assistance across all platform capabilities
-              rows:              
-                - title: Natural Language Queries
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Code Generation
-                  items:
-                    - content: _blank
-                    - content: Basic
-                    - content: Advanced
-                    - content: Custom training
-                - title: Policy Suggestions
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Optimization Recommendations
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: Enterprise-grade
-              ## Internal Developer Platform Table
-            - header: Internal Developer Platform
-              subheader: Self-service capabilities with guardrails
-              rows:              
-                - title: Self-Service Workflows
-                  items:
-                    - content: _blank
-                    - content: Basic
-                    - content: Advanced
-                    - content: Custom
-                - title: Template Management
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Approval Workflows
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: Advanced
-                - title: Governance Integration
-                  items:
-                    - content: _blank
-                    - content: Basic
-                    - content: Full integration
-                    - content: Enterprise-grade
+                    - content: 1
+                    - content: Multiple supported
+                    - content: Multiple supported
 
+            ## Copilot Table
+            - header: Pulumi Copilot
+              subheader: Understand and interact with your infrastructure with the power of AI.
+              rows:
+                - title: Pulumi Copilot
+                  link: /docs/pulumi-cloud/copilot/
+                  items:
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                    - content: _check
+
+            ## CrossGuard table
+            - header: Pulumi Policy as Code
+              subheader: Detect, report on, remediate, and enforce governance policy violations.
+              rows:
+                - title: Gated deployments
+                  items:
+                    - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
+                    - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
+                    - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
+                    - content: "[Server-side enforcement](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
+                - title: Organization policies
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: _check
+                - title: Compliance-ready policies
+                  link: /docs/using-pulumi/crossguard/compliance-ready-policies/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: _check
+                - title: Remediation policies
+                  link: /docs/iac/crossguard/core-concepts/#resource-remediation-with-iac
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: _check
+                - title: Dashboard for policy violations
+                  link: /docs/using-pulumi/crossguard/policy-violations/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: _check
+
+            ## Pulumi Workflow table
+            - header: Pulumi Workflow
+              subheader: Automate infrastructure workflow tasks on Pulumi's cloud.
+              rows:
+                - title: Workflow cost per minute
+                  items:
+                    - content: _blank
+                    - content: $0.01
+                    - content: $0.01 / Custom
+                    - content: $0.01 / Custom
+                - title: Minutes included/month
+                  items:
+                    - content: 500
+                    - content: 3,000
+                    - content: 3,000
+                    - content: 3,000
+                - title: Concurrent workflow limit
+                  items:
+                    - content: 1
+                    - content: 5
+                    - content: 25
+                    - content: 150
+                - title: Self-hosted Workflow runners
+                  link: /docs/pulumi-cloud/deployments/customer-managed-agents/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: _check
+
+            ## Security table
+            - header: Security
+              subheader: Central security controls give you full control over your team's use of the platform.
+              rows:
+                - title: Identity providers
+                  link: /docs/pulumi-cloud/accounts
+                  items:
+                    - content: GitHub, GitLab, Atlassian
+                    - content: GitHub, GitLab, Atlassian
+                    - content: GitHub, GitLab, Atlassian, SAML/SSO
+                    - content: GitHub, GitLab, Atlassian, SAML/SSO
+                - title: SAML/SSO
+                  link: /docs/pulumi-cloud/access-management/saml/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Many
+                      tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
+                    - content: Many
+                      tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
+                - title: SCIM integration
+                  link: /docs/pulumi-cloud/access-management/scim/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                - title: OIDC Support
+                  link: /docs/pulumi-cloud/oidc/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Create and manage teams
+                  link: /docs/pulumi-cloud/access-management/teams/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Role-based access control (RBAC)
+                  link: /docs/pulumi-cloud/admin/organizations/#organization-roles
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Organization and Team Access Tokens
+                  link: /docs/pulumi-cloud/access-management/organization-access-tokens/
+                  tooltip: These are machine access tokens that are scoped to the organization or team level
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Audit Logs
+                  link: /docs/pulumi-cloud/audit-logs/
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+                    - content: _check
+                - title: Automated log export to S3
+                  link: /docs/pulumi-cloud/audit-logs#automated-export
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: _blank
+                    - content: _check
+
+            ## Support table
+            - header: Support
+              subheader: Ensure your team has everything they need on your cloud journey.
+              rows:
+                - title: Community Slack
+                  link: https://slack.pulumi.com/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Support
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available, 12x5 / 24x7 support
+                    - content: Available, 12x5 / 24x7 support
+                - title: Normal ticket SLA
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available, 1 or 5 business days
+                    - content: Available, 1 or 5 business days
+                - title: Urgent ticket SLA
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available, 4 hours to 2 business days
+                    - content: Available, 4 hours to 2 business days
+                - title: Private Slack channel
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: Available
+                - title: Professional services
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: Available
+                - title: Onboarding and training
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: Available
+                - title: Terraform Migration
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: Available
+                - title: SLA
+                  items:
+                    - content: _blank
+                    - content: _blank
+                    - content: Available
+                    - content: Available
 
 faq:
     - category: Pricing
