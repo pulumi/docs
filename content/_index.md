@@ -11,7 +11,7 @@ hero:
   cta_text: Get Started
   cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
   secondary_cta_text: Watch Demo
-  secondary_cta_link: /
+  secondary_cta_link: /product/neo
 
 pillars:
     items:
