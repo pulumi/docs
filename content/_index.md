@@ -5,13 +5,13 @@ meta_desc: Pulumi is an infrastructure management platform to automate through i
 include_organization_schema: true
 
 hero:
-  title: [ "Automate Your Cloud.",  "AI-Powered, Human-Controlled." ]
+  title: [ "The Cloud Infrastructure Platform", "Engineers Love and Enterprises Trust" ]
   description: |
-    Built on 8+ years of infrastructure intelligence — trusted by platform engineers, proven in enterprise.
-  cta_text: Meet Neo
-  cta_link: /product/neo
-  secondary_cta_text: Try Pulumi Cloud for Free
-  secondary_cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
+    Powered by the #1 open source infrastructure as code tool.
+  cta_text: Try Pulumi Cloud for Free
+  cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
+  secondary_cta_text: Download Open Source
+  secondary_cta_link: /docs/iac/download-install
 
 pillars:
     items:
