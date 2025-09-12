@@ -83,9 +83,8 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
               serviceAccount: <your-service-account>
       environmentVariables:
         GOOGLE_PROJECT: ${gcp.login.project}
+        GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
         CLOUDSDK_AUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
-      pulumiConfig:
-        gcp:accessToken: ${gcp.login.accessToken}
     ```
 
 6. Replace `<your-project-id>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
