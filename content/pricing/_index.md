@@ -93,7 +93,7 @@ comparison_table:
           tables:
             # Pulumi IaC table
             - header: Infrastructure as Code
-              subheader: Foundation capability is included in all editions
+              subheader: Foundational capability is included in all editions
               rows:
                 - title: On-demand resource price
                   items:
