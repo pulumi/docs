@@ -57,7 +57,7 @@ learn:
         - title: Learn More
           description: Discover how Neo transforms platform engineering operations
           buttons:
-            - link: /docs/idp/get-started/
+            - link: /docs/iac/neo/
               type: secondary
               action: Neo Documentation
 ---
