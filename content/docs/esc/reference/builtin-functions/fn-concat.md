@@ -1,32 +1,32 @@
 ---
-title: fn::toJSON
-title_tag: fn::toJSON
-h1: fn::toJSON
+title: fn::concat
+title_tag: fn::concat
+h1: fn::concat
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
 menu:
   esc:
     parent: esc-ref-builtin-functions
-    identifier: esc-ref-fn-toJSON
-    weight: 9
+    identifier: esc-ref-fn-concat
+    weight: 1
 ---
 
-The `fn::toJSON` built-in function encodes a value as its JSON representation. This can be used to encode values for use in positions that only accept strings. If any input to `fn::toJSON` is a secret, the encoded values is also a secret.
+The `fn::concat` built-in function concatenates two or more arrays.
 
 ## Declaration
 
 ```yaml
-fn::toJSON: value-to-encode
+fn::concat: array-of-arrays
 ```
 
 ### Parameters
 
 | Property          | Type   | Description                                                       |
 |-------------------|--------|-------------------------------------------------------------------|
-| `value-to-encode` | any    | The value to encode as JSON.
+| `array-of-arrays` | array  | The arrays to concatenate.
 
 ### Returns
 
-The decoded value.
+A new array that concatenates those passed as arguments.
 
 ## Example
 
@@ -34,15 +34,35 @@ The decoded value.
 
 ```yaml
 values:
-  json-object:
-    fn::toJSON:
-      hello: world
+  foo:
+    - 1
+    - 2
+  bar:
+    - 3
+    - 4
+  baz:
+    fn::concat:
+        - ${foo}
+        - ${bar}
 ```
 
 ### Evaluated result
 
 ```json
 {
-  "json-object": "{\"hello\": \"world\"}"
+  "bar": [
+    3,
+    4
+  ],
+  "baz": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "foo": [
+    1,
+    2
+  ]
 }
 ```
