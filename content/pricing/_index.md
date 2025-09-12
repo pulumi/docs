@@ -479,7 +479,7 @@ comparison_table:
               
           ## Pulumi Insights Table
           - header: Insights & Governance
-            subheader: Intelligence and governance across your infrastructure
+            subheader: Visibility and governance across your entire cloud estate
             rows:
               - title: On-demand resource price
                 items:
