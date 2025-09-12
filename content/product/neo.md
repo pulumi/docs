@@ -48,7 +48,7 @@ building_blocks:
         - "**Policy Remediation**: Automatically resolve compliance violations while maintaining comprehensive audit trails."
         - "**Infrastructure Onboarding**:  Transfer team knowledge through guided automation workflows."
         - "**Enterprise Governance**: 100% policy compliance with approval workflows and operational transparency."
-      graphic: /images/product/idp-components.png
+      graphic: /images/product/pulumi-neo-tasks.png
 
 learn:
     title: Get Started
