@@ -872,7 +872,7 @@ class StaticPage(pulumi.ComponentResource):
             f'{name}-website',
             bucket=bucket.bucket,
             index_document={"suffix": "index.html"},
-            opts=ResourceOptions(parent=bucket))
+            opts=ResourceOptions(parent=self))
 
         # Create a bucket object for the index document
         s3.BucketObject(
@@ -881,21 +881,21 @@ class StaticPage(pulumi.ComponentResource):
             key='index.html',
             content=args.get("index_content"),
             content_type='text/html',
-            opts=ResourceOptions(parent=bucket))
+            opts=ResourceOptions(parent=self))
 
         # Create a public access block for the bucket
         bucket_public_access_block = s3.BucketPublicAccessBlock(
             f'{name}-public-access-block',
             bucket=bucket.id,
             block_public_acls=False,
-            opts=ResourceOptions(parent=bucket))
+            opts=ResourceOptions(parent=self))
 
         # Set the access policy for the bucket so all objects are readable.
         s3.BucketPolicy(
             f'{name}-bucket-policy',
             bucket=bucket.bucket,
             policy=bucket.bucket.apply(_allow_getobject_policy),
-            opts=ResourceOptions(parent=bucket, depends_on=[bucket_public_access_block]))
+            opts=ResourceOptions(parent=self, depends_on=[bucket_public_access_block]))
 
         self.endpoint = bucket_website.website_endpoint
 
@@ -1509,7 +1509,7 @@ Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `B
             f'{name}-website',
             bucket=bucket.bucket,
             index_document={"suffix": "index.html"},
-            opts=ResourceOptions(parent=bucket))
+            opts=ResourceOptions(parent=self))
 
         # Create a bucket object for the index document
         s3.BucketObject(
@@ -1518,21 +1518,21 @@ Next we implement the `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `B
             key='index.html',
             content=args.get("index_content"),
             content_type='text/html',
-            opts=ResourceOptions(parent=bucket))
+            opts=ResourceOptions(parent=self))
 
         # Create a public access block for the bucket
         bucket_public_access_block = s3.BucketPublicAccessBlock(
             f'{name}-public-access-block',
             bucket=bucket.id,
             block_public_acls=False,
-            opts=ResourceOptions(parent=bucket))
+            opts=ResourceOptions(parent=self))
 
         # Set the access policy for the bucket so all objects are readable.
         s3.BucketPolicy(
             f'{name}-bucket-policy',
             bucket=bucket.bucket,
             policy=bucket.bucket.apply(_allow_getobject_policy),
-            opts=ResourceOptions(parent=bucket, depends_on=[bucket_public_access_block]))
+            opts=ResourceOptions(parent=self, depends_on=[bucket_public_access_block]))
 # ...
 ```
 
