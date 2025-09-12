@@ -32,6 +32,11 @@ why_neo:
       icon: team
       color: violet
 
+demo_video:
+    title: Unveiling Neo – Your Newest Platform Engineer
+    subtitle: Breaking news from Pulumi – platform engineering is about to change.
+    videoID: 9GB9M2l1OgY
+
 building_blocks:
   title: "Pulumi Neo: AI-Powered Platform Engineering"
   items:
