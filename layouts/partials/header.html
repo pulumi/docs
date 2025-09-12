@@ -67,7 +67,7 @@
         <nav class="lg:container lg:mx-auto lg:px-4 py-3">
             <header>
                 <div class="flex flex-col lg:flex-row">
-                    <div class="logo-container">
+                    <div class="logo-container min-w-32 lg:min-w-40 flex-shrink-0">
                         <a data-track="header-pulumi-logo" class="block" href="/">
                             <img class="normal-logo h-8" src="/images/logo/logo-on-white.svg" alt="Pulumi logo" />
                             <img class="dark-logo hidden h-8" src="/images/logo/logo-on-black.svg" alt="Pulumi logo" />
@@ -228,6 +228,15 @@
                                                 </a>
                                             </div>
                                         </li>
+                                        <li>
+                                            <div class="list-title">
+                                                <a href="/testimonials/">
+                                                    <i class="fas fa-quote-left fa-fw"></i>
+                                                    Engineers love Pulumi
+                                                    <div class="list-sub-title pr-2">Hear from engineers why they love Pulumi</div>
+                                                </a>
+                                            </div>
+                                        </li>
                                     </div>
                                 </ul>
                             </div>
@@ -289,13 +298,13 @@
                             </div>
                         </li>
                         <li>
-                            <a href="/docs/">Docs</a>
+                            <a class="dropdown-title" href="/docs/">Docs</a>
                         </li>
                         <li>
-                            <a href="/blog/">Blog</a>
+                            <a class="dropdown-title" href="/blog/">Blog</a>
                         </li>
                         <li>
-                            <a href="/pricing/">Pricing</a>
+                            <a  class="dropdown-title" href="/pricing/">Pricing</a>
                         </li>
                         <li class="header-nav-item-drop-down">
                             <span class="dropdown-title whitespace-nowrap">Company</span>
@@ -389,11 +398,6 @@
                                     <li>
                                         <a href="/product/internal-developer-platforms/"> <i class="fas fa-cubes fa-fw"></i> Internal Developer Platform </a>
                                     </li>
-                                    <div class="mobile-menu-sub-heading mx-5 mt-2">
-                                    </div>
-                                    <li>
-                                        <a href="/request-a-demo/"> <i class="fas fa-laptop-code fa-fw"></i> Request a demo </a>
-                                    </li>
                                 </div>
                             </div>
                             <div>
@@ -425,6 +429,9 @@
                                     </li>
                                     <li>
                                         <a href="/community/"> <i class="fas fa-comments fa-fw"></i> Community </a>
+                                    </li>
+                                    <li>
+                                        <a href="/testimonials/"> <i class="fas fa-quote-left fa-fw"></i> Engineers love Pulumi </a>
                                     </li>
                                 </div>
                             </div>
@@ -499,7 +506,7 @@
                     </ul>
 
                     <div class="cta-container my-2">
-                        <header-cta button-class="header-btn-primary"></header-cta>
+                        <header-cta button-class="header-btn-primary flex"></header-cta>
                     </div>
                 </div>
             </header>

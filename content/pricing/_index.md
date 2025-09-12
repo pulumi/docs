@@ -295,61 +295,6 @@ comparison_table:
                     - content: _blank
                     - content: _blank
                     - content: _check
-                - title: Community Slack
-                  link: https://slack.pulumi.com/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Support
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available, 12x5 / 24x7 support
-                    - content: Available, 12x5 / 24x7 support
-                - title: Normal ticket SLA
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available, 1 or 5 business days
-                    - content: Available, 1 or 5 business days
-                - title: Urgent ticket SLA
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available, 4 hours to 2 business days
-                    - content: Available, 4 hours to 2 business days
-                - title: Private Slack channel
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
-                - title: Professional services
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
-                - title: Onboarding and training
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
-                - title: Terraform Migration
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
-                - title: SLA
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Available
-                    - content: Available
 
         ## Key Capabilities section
         - header: Key Capabilities
@@ -582,6 +527,65 @@ comparison_table:
                   - content: Host public templates
                   - content: Host private templates
                   - content: Host private templates
+          - header: Support
+            subheader: 
+            rows:
+              - title: Support
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available, 12x5 / 24x7 support
+                  - content: Available, 12x5 / 24x7 support
+              - title: Normal ticket SLA
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available, 1 or 5 business days
+                  - content: Available, 1 or 5 business days
+              - title: Urgent ticket SLA
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available, 4 hours to 2 business days
+                  - content: Available, 4 hours to 2 business days
+              - title: Private Slack channel
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+              - title: Community Slack
+                link: https://slack.pulumi.com/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Professional services
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+              - title: Onboarding and training
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+              - title: Terraform Migration
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+              - title: SLA
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Available
+                  - content: Available
+
 
 
 faq:
