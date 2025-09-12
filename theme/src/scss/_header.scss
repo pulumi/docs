@@ -226,6 +226,10 @@
 
                                 li {
                                     @apply px-0;
+
+                                    .list-title {
+                                        min-width: 210px;
+                                    }
                                 }
                             }
 
