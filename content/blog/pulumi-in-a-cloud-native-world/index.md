@@ -82,11 +82,11 @@ using [Pulumi](/).
 
 The `KEBAP` stack consists of the following (most commonly used) CNCF projects:
 
-- **K**ubernetes (with Kyverno as a bonus)
-- **E**xternal Secrets Operator
-- **B**ackstage
-- **A**rgo CD
-- **P**ulumi
+* **K**ubernetes (with Kyverno as a bonus)
+* **E**xternal Secrets Operator
+* **B**ackstage
+* **A**rgo CD
+* **P**ulumi
 
 Have a look on the high-level architectural diagram of the `KEBAP` stack to get a first idea of what we are going
 to talk about in the following sections:
@@ -419,10 +419,10 @@ spec:
 As we have seen, each component of the `KEBAP` stack plays a crucial role in the overall architecture. Let's how the
 different workflows look like when we put all the pieces together. We go through the following scenarios:
 
-- Ignite the Control Plane Cluster With Pulumi
-- Ordering a New Development Kubernetes Cluster
-- Ordering a New Production Kubernetes Cluster
-- Ordering Other Infrastructure
+* Ignite the Control Plane Cluster With Pulumi
+* Ordering a New Development Kubernetes Cluster
+* Ordering a New Production Kubernetes Cluster
+* Ordering Other Infrastructure
 
 #### Ignite the Control Plane Cluster With Pulumi
 
@@ -499,6 +499,6 @@ developer portal and provides a carefree experience of managing your infrastruct
 
 Continue to upskill and learn about platform engineering:
 
-- Read [Pulumi Patterns and Practices (P3): A Pulumi-based reference architecture for large-scale organizations](https://www.pulumi.com/blog/pulumi-patterns-and-practices/)
-- [Learn how to build Developer Portals with Pulumi](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/).
-- Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).
+* Read [Pulumi Patterns and Practices (P3): A Pulumi-based reference architecture for large-scale organizations](https://www.pulumi.com/blog/pulumi-patterns-and-practices/)
+* [Learn how to build Developer Portals with Pulumi](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/).
+* Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).

@@ -79,12 +79,12 @@ These lessons come from real-world implementations across industries and company
 
 This post is part of our IDP Best Practices series. You can explore the full series below:
 
-* **How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure** (you are here)
-* [Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates](https://www.pulumi.com/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/)
-* Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails
-* Day 2 Platform Operations: Automating Drift Detection and Remediation
-* Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
-* Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
+- **How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure** (you are here)
+- [Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates](https://www.pulumi.com/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/)
+- Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails
+- Day 2 Platform Operations: Automating Drift Detection and Remediation
+- Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
+- Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
 {{% notes type="tip" %}}
 **Want hands-on experience building an Internal Developer Platform?**
 Enroll in the free **[IDP Builder Workshop Series](https://info.pulumi.com/idp/internal-developer-platform-workshops-course)** to access recordings, demo code, slides, and hands-on guidance.
@@ -318,11 +318,11 @@ Your job isn’t just to manage infrastructure and choose the right tools - it's
 
 The fastest way to get there? Focus on these five essential components:
 
-* **Abstractions**
-* **Blueprints**
-* **Workflows**
-* **Security guardrails**
-* **Self-service**
+- **Abstractions**
+- **Blueprints**
+- **Workflows**
+- **Security guardrails**
+- **Self-service**
 
 Together, they turn your IDP into more than just infrastructure automation, they create a platform that developers trust and your business relies on.
 
