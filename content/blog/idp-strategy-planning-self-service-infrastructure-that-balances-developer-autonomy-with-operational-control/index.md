@@ -71,7 +71,7 @@ At Pulumi, we’ve worked with hundreds of teams facing the same core challenge:
 
 That tension is at the heart of every IDP conversation. Teams want to **move faster and innovate**, but also need to stay compliant, control costs, and maintain operational stability.
 
-The good news? You can do both, with a clear strategy and the right approach. This series shares **proven best practices** for designing, building, and scaling IDPs using Pulumi.  
+The good news? You can do both, with a clear strategy and the right approach. This series shares **proven best practices** for designing, building, and scaling IDPs using Pulumi.
 
 <!--more-->
 
@@ -86,7 +86,7 @@ This post is part of our IDP Best Practices series. You can explore the full ser
 * Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
 * Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
 {{% notes type="tip" %}}
-**Want hands-on experience building an Internal Developer Platform?**  
+**Want hands-on experience building an Internal Developer Platform?**
 Enroll in the free **[IDP Builder Workshop Series](https://info.pulumi.com/idp/internal-developer-platform-workshops-course)** to access recordings, demo code, slides, and hands-on guidance.
 {{% /notes %}}
 
@@ -213,7 +213,7 @@ But in our experience working with organizations across every industry, you need
 You need:
 
 - **No-code workflows** for users who want point-and-click deployment (think product managers or junior developers who just need to spin up a database)
-- **Low-code workflows** using tools like [Pulumi YAML](https://www.pulumi.com/docs/iac/languages-sdks/yaml/) for configuration-driven infrastructure (perfect for developers who understand infrastructure but don't want to write Go or TypeScript)  
+- **Low-code workflows** using tools like [Pulumi YAML](https://www.pulumi.com/docs/iac/languages-sdks/yaml/) for configuration-driven infrastructure (perfect for developers who understand infrastructure but don't want to write Go or TypeScript)
 - **Full-code workflows** for developers who need maximum flexibility and want to leverage the full power of general-purpose programming languages
 
 The key insight? These aren't three different platforms.
@@ -295,7 +295,7 @@ These aren't vanity metrics. They're business transformations.
 If you're just starting your IDP journey, here's the roadmap we give to every platform team we work with:
 
 1. **Start with user research:** Before you write a single line of code, go talk to your developers.
-   Understand your different personas and their actual needs, not what you think they need. Do your users like to work from the command line? Do they prefer interacting with a UI? 
+   Understand your different personas and their actual needs, not what you think they need. Do your users like to work from the command line? Do they prefer interacting with a UI?
 
 2. **Identify common patterns:** Look for infrastructure patterns that get repeated across teams.
    These are your goldmine—the patterns that, once abstracted and templatized, will provide immediate value.
@@ -318,10 +318,10 @@ Your job isn’t just to manage infrastructure and choose the right tools - it's
 
 The fastest way to get there? Focus on these five essential components:
 
-* **Abstractions**  
-* **Blueprints**  
-* **Workflows**  
-* **Security guardrails**  
+* **Abstractions**
+* **Blueprints**
+* **Workflows**
+* **Security guardrails**
 * **Self-service**
 
 Together, they turn your IDP into more than just infrastructure automation, they create a platform that developers trust and your business relies on.

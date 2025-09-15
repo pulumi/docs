@@ -42,7 +42,7 @@ What an incredible two months at Pulumi! From the revolutionary AI-powered Pulum
 
 ## AI
 
-### Pulumi Copilot: The Future of Cloud Infrastructure 
+### Pulumi Copilot: The Future of Cloud Infrastructure
 
 Pulumi Copilot is a game-changing conversational AI assistant for [Pulumi Cloud](/docs/pulumi-cloud/), leveraging large language models (LLMs) to simplify and enhance your cloud management experience. Get instant answers about your cloud by querying the state of any resource managed by Pulumi, across all your clouds and accounts. Explore historical data on stacks, projects, deployments, and more, gaining deep insights into your infrastructure. Write and deploy IaC with ease as Pulumi Copilot brings the power of Pulumi AI directly to your fingertips. Gain insights from cloud provider metadata as Pulumi Copilot integrates with AWS, Azure, Kubernetes, and more; to provide real-time insights into usage, costs, and your infrastructure.
 

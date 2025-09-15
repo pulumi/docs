@@ -15,10 +15,10 @@ tags:
 
 [Azure Resource Manager (ARM)](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/) templates are powerful, but painful. If you’ve ever tried to provision cloud infrastructure using ARM, you know the challenges:
 
-- Templates that started simple… and now span thousands of lines  
-- Manual configuration stitched together with bespoke deployment logic  
-- Lack of support for key services like Databricks  
-- Slow, error-prone deployments that require multiple manual steps  
+- Templates that started simple… and now span thousands of lines
+- Manual configuration stitched together with bespoke deployment logic
+- Lack of support for key services like Databricks
+- Slow, error-prone deployments that require multiple manual steps
 - No reuse, no testing, and no relief
 
 ARM wasn’t built for the complexity of modern Azure workloads. If you're already familiar with general-purpose languages, there’s a better path: [Pulumi](https://www.pulumi.com/docs/iac/clouds/azure/).
@@ -43,11 +43,11 @@ ARM wasn’t built for the complexity of modern Azure workloads. If you're alrea
 
 Pulumi solves these problems at their root. It lets you define your [Azure infrastructure](https://www.pulumi.com/docs/iac/clouds/azure/) using C#, the same language you're already using to build your applications. With Pulumi, you get:
 
-✅ Familiar programming languages  
-✅ Type safety and compile-time validation  
-✅ Full IDE support (IntelliSense, refactoring, debugging)  
-✅ Built-in support for Databricks, Kubernetes, and more  
-✅ Automated config and secrets management  
+✅ Familiar programming languages
+✅ Type safety and compile-time validation
+✅ Full IDE support (IntelliSense, refactoring, debugging)
+✅ Built-in support for Databricks, Kubernetes, and more
+✅ Automated config and secrets management
 ✅ Easy testing, reuse, and CI/CD integration
 
 ## From Static Templates to Software Engineering
@@ -107,7 +107,7 @@ class MyStack : Stack
 ```
 
 It’s clean. It’s familiar. And it works seamlessly with your .NET tooling.
-Pulumi is open source, and your Pulumi Cloud account is free for individuals and small teams, with advanced editions for large enterprises. 
+Pulumi is open source, and your Pulumi Cloud account is free for individuals and small teams, with advanced editions for large enterprises.
 [Try Pulumi Cloud for FREE->](https://app.pulumi.com/signup)
 
 ## Why It Just Works for .NET Teams

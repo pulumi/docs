@@ -1,9 +1,9 @@
 ---
-title: "Announcing Infisical Providers for Pulumi ESC: Dynamic Login and Dynamic Secrets" 
+title: "Announcing Infisical Providers for Pulumi ESC: Dynamic Login and Dynamic Secrets"
 date: 2025-04-28
 allow_long_title: true
 meta_desc: "Pulumi ESC adds Infisical providers for dynamic OIDC login and centralized secret fetching, enhancing security and simplifying management."
-meta_image: meta.png 
+meta_image: meta.png
 authors:
   - boris-schlosser
   - arun-loganathan
@@ -21,7 +21,7 @@ We are thrilled to announce enhanced integration support for [Infisical](https:/
 
 <!--more-->
 
-This release introduces two distinct dynamic providers for Infisical, each designed to improve security and streamline your workflows: 
+This release introduces two distinct dynamic providers for Infisical, each designed to improve security and streamline your workflows:
 
 *   **[`infisical-login`](/docs/esc/integrations/dynamic-login-credentials/infisical-login/) (Dynamic Login):** This provider securely generates short-lived OIDC access tokens for authenticating *to* Infisical. Static, long-lived credentials are a significant security risk. The `infisical-login` provider directly addresses this by generating temporary, just-in-time credentials using OIDC. **Use this provider when you need temporary credentials to interact directly with Infisical**, for instance, using the Infisical CLI or SDKs in local development or CI/CD pipelines, without storing long-lived static tokens. ESC manages the OIDC flow, providing a fresh token when needed.
 
@@ -50,7 +50,7 @@ values:
       fn::open::infisical-login:
         oidc:
           identityId: <your-identity-id> # Replace with your Infisical Identity ID
-  
+
   # Expose the token as an environment variable for easy consumption
   environmentVariables:
     INFISICAL_TOKEN: ${infisical.login.accessToken}
@@ -70,7 +70,7 @@ Use this provider to pull secrets *from* Infisical *into* your ESC environment f
 
 1.  Create an ESC environment where you need the secrets (e.g., `pulumi-org/my-app/dev`).
 2.  **Import** the dynamic login environment (if using OIDC for authentication, which is recommended). This makes the temporary Infisical token available.
-3.  Configure the `infisical-secrets` provider, referencing the imported login details. See example below. 
+3.  Configure the `infisical-secrets` provider, referencing the imported login details. See example below.
 4.  Specify the secrets to fetch using the `get` block. Replace placeholders.
 
 ```yaml
@@ -81,7 +81,7 @@ imports:
 
 values:
   # Define a structure to hold secrets fetched from Infisical
-  infisicalSecrets: 
+  infisicalSecrets:
     fn::open::infisical-secrets:
       # Authenticate using the token from the imported Dynamic Login environment
       login: ${infisical.login} # Pass the login object from the import
@@ -89,14 +89,14 @@ values:
       get:
         # Define names for the secrets as they will appear in ESC's output under 'infisicalSecrets'
         apiKey: # This is the name within ESC
-          projectId: <your-infisical-project-id> 
+          projectId: <your-infisical-project-id>
           environment: prod # The Infisical environment slug (e.g., 'prod', 'dev')
           secretKey: api-key # The key of the secret in Infisical
         appSecret: # Pull another secret `app-secret` into ESC
           projectId: <your-infisical-project-id>
           environment: dev
-          secretKey: app-secret 
-  
+          secretKey: app-secret
+
   # Optionally, map fetched secrets to environment variables for application consumption
   environmentVariables:
     API_KEY: ${infisicalSecrets.apiKey}
@@ -106,7 +106,7 @@ values:
 6.  Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/my-app/dev` in your CLI. The output will show the imported `infisical.login`, the fetched secrets under `infisicalSecrets`, and the mapped `environmentVariables`.
 7.  **Usage Example:** Run an application that needs these secrets:
     ```bash
-    esc run pulumi-org/my-app/dev -- node app.js 
+    esc run pulumi-org/my-app/dev -- node app.js
     # The API_KEY and APP_SECRET env vars are automatically injected
     ```
 

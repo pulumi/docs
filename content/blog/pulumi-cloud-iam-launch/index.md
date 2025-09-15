@@ -4,7 +4,7 @@ allow_long_title: true
 date: 2025-06-09
 draft: false
 meta_desc: "Introducing Pulumi IAM: A new era of granular access control across Pulumi Cloud, starting with Custom Roles and scoped Access Tokens for enhanced security and automation."
-meta_image: "meta.png" 
+meta_image: "meta.png"
 authors:
   - german-lena
   - devon-grove
@@ -36,7 +36,7 @@ Pulumi IAM is a foundational investment, delivering enterprise-grade access mana
     *   Leverage **OIDC configuration** to dynamically assume Custom Roles for secure, tokenless authentication from CI/CD systems like GitHub Actions, GitLab, and more.
     *   Assign these powerful Custom Roles directly to **individual users and teams** within your Pulumi organization.
     *   Implement a complete overhaul of user and team access management, moving beyond the basic `Admin`/`Member` distinctions, and enabling reusability of custom building blocks permissions and roles that work for your organization
- 
+
 *   **Phase 3: Advanced Authorization & Scalability (Future Release)**
     *   Introduce **Attribute-Based Access Control (ABAC)**, allowing policies based on tags or other attributes of Pulumi Entities (e.g., "grant 'dev-role' access to all stacks tagged 'env:dev'").
     *   Enable the creation of **Custom RBAC Policies** with conditional logic for highly specific access scenarios and reuse them
@@ -50,7 +50,7 @@ Pulumi IAM addresses these challenges by providing:
 
 *   **Least Privilege Enforcement:** Define precisely *who* can do *what* on *which* specific resources, minimizing the potential impact if credentials or accounts are compromised. This is core to Zero Trust – grant only the minimum necessary access, verified at the point of action.
 *   **Granular Control Across Pulumi:**
-    *   **Infrastructure as Code (IaC):** Apply fine-grained controls over Pulumi Stacks 
+    *   **Infrastructure as Code (IaC):** Apply fine-grained controls over Pulumi Stacks
     *   **Secrets Management:** Define specific access levels for Pulumi ESC Environments.
     *   **Insights:** Manage permissions for Pulumi Insights account settings.
 *   **Secure Automation:** Provide secure, least-privilege tokens and OIDC integration for CI/CD pipelines and automation, drastically reducing the risk associated with over-privileged service accounts.

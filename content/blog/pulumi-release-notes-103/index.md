@@ -50,11 +50,11 @@ We've rolled out the [Pulumi ESC Table view](/blog/esc-key-value-table-editor-la
 
 ### Pulumi ESC YAML Code Editor Enhancements
 
-We've upgraded the Pulumi ESC YAML editor with features aimed at simplifying the environment authoring process and enhancing developer productivity. Key enhancements include auto-complete for faster coding, enhanced diagnostics offering deeper error insights, and hover documentation for easy access to information, reducing the need for context switching. Additionally, we have added support for accessing [contextual information](/docs/esc/environments/working-with-environments/#pulumi-contextual-information) about the current user and current environments. This support can be used to fine-tune OIDC claims and enhance audit logs. For more details, check out our [blog post](/blog/esc-editor-enhancements/). 
+We've upgraded the Pulumi ESC YAML editor with features aimed at simplifying the environment authoring process and enhancing developer productivity. Key enhancements include auto-complete for faster coding, enhanced diagnostics offering deeper error insights, and hover documentation for easy access to information, reducing the need for context switching. Additionally, we have added support for accessing [contextual information](/docs/esc/environments/working-with-environments/#pulumi-contextual-information) about the current user and current environments. This support can be used to fine-tune OIDC claims and enhance audit logs. For more details, check out our [blog post](/blog/esc-editor-enhancements/).
 
 {{< video title="Pulumi ESC editor enhancements demo" src="https://www.pulumi.com/uploads/esc-editor-enhancements-demo.mp4" autoplay="true" loop="true" >}}
 
-### Pulumi ESC OIDC customization 
+### Pulumi ESC OIDC customization
 
 Pulumi ESC now offers [subject customization](/docs/esc/environments/configuring-oidc/azure/#subject-customization) for OIDC tokens, enhancing security across AWS, GCP and Azure by aligning federated credentials with specific identifiers. By configuring the `subjectAttributes` setting, users can include specific environment, user, and organization information in the [OIDC](/docs/esc/environments/configuring-oidc) token subject claim, offering more granular control and customization for cloud resource access. This capability is especially valuable for customers using Azure, where subject claims are required to precisely match the string specified in the policy.
 
@@ -68,13 +68,13 @@ Pulumi ESC now features comprehensive Audit Logs for all Create, Read, Open, Upd
 
 We introduced [Dev Releases](/blog/introducing-dev-releases/), allowing developers to access the latest features and improvements in Pulumi's infrastructure as code tools ahead of their official release. With this initiative, we aim to engage our community and gather early feedback, enhancing the product development process. This is crucial for identifying and resolving potential issues early, contributing to a smoother transition to new releases. Dev Releases will also be at the cutting edge of Pulumi's evolving capabilities, with the latest bug fixes and features available within minutes of Pulumi developers merging. For instructions on how to use the CLI Dev releases see the [install docs](/docs/install/#installing-dev-releases), and for pre-release versions of Dev SDKs see the docs for [Node.js](/docs/languages-sdks/javascript/#dev-versions), [Python](/docs/languages-sdks/python/#dev-versions), [.NET](/docs/languages-sdks/dotnet/#dev-versions), and [Go](/docs/languages-sdks/go/#dev-versions).
 
-### Automation API support to install Pulumi CLI 
+### Automation API support to install Pulumi CLI
 
 The Pulumi Automation API now offers the functionality to install the Pulumi CLI directly through the API. This feature enables deploying programs utilizing the Automation API without the need for prior CLI installation. Explore an [example in Go](https://github.com/pulumi/automation-api-examples/tree/main/go/cli_installation) and refer to the new APIs in [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto#InstallPulumiCommand), [Node.js](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.PulumiCommand.html#install), [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.PulumiCommand.install), and [.NET](https://github.com/pulumi/pulumi-dotnet/blob/edf4a5e904110f198d579d8db0b178aa9af9cdfa/sdk/Pulumi.Automation/Commands/LocalPulumiCommand.cs#L107).
 
 ### Node.js Monorepo Support
 
-Pulumi now seamlessly integrates with Node.js monorepos using tools like Nx. We've enhanced Pulumi to support yarn/npm workspaces, widely used in Node.js monorepos. This enhancement facilitates better project management by automatically handling dependencies and building processes. The integration allows Pulumi infrastructure codes to coexist with application codes in the same repository, improving development workflow efficiency by using Nx's capabilities to manage build and deploy dependencies effectively.  Check out the [blog post](/blog/nx-monorepo/) for more details. 
+Pulumi now seamlessly integrates with Node.js monorepos using tools like Nx. We've enhanced Pulumi to support yarn/npm workspaces, widely used in Node.js monorepos. This enhancement facilitates better project management by automatically handling dependencies and building processes. The integration allows Pulumi infrastructure codes to coexist with application codes in the same repository, improving development workflow efficiency by using Nx's capabilities to manage build and deploy dependencies effectively.  Check out the [blog post](/blog/nx-monorepo/) for more details.
 
 ## Providers and Packages
 
@@ -103,7 +103,7 @@ The [Pulumi Registry](/registry) documentation has significantly improved exampl
 
 ### Pulumi AI Evolution
 
-We continue to invest in [Pulumi AI](https://www.pulumi.com/ai) and improve the quality of programs in TypeScript, Python, Go, and C#. Key enhancements include generating code that accurately imports providers, with a special focus on those authored by our community and partners, ensuring the use of correct syntax for Pulumi YAML, embracing modern C# syntax like top-level statements, and implementing comprehensive spellchecking for modules and parameters. These updates continue to push Pulumi AI as a robust, developer-friendly platform, enabling you to build with greater confidence and efficiency. Moreover, you can now cancel in-progress prompts within Pulumi AI should you need to make any changes to your prompt. 
+We continue to invest in [Pulumi AI](https://www.pulumi.com/ai) and improve the quality of programs in TypeScript, Python, Go, and C#. Key enhancements include generating code that accurately imports providers, with a special focus on those authored by our community and partners, ensuring the use of correct syntax for Pulumi YAML, embracing modern C# syntax like top-level statements, and implementing comprehensive spellchecking for modules and parameters. These updates continue to push Pulumi AI as a robust, developer-friendly platform, enabling you to build with greater confidence and efficiency. Moreover, you can now cancel in-progress prompts within Pulumi AI should you need to make any changes to your prompt.
 
 ## Wrap up
 
