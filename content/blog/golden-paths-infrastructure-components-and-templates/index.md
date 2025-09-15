@@ -33,12 +33,12 @@ In this guide, you'll learn how to build golden paths for your Internal Develope
 
 This post is part of our IDP Best Practices series:
 
-* [How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/)
-* **Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates** (you are here)
-* Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails
-* Day 2 Platform Operations: Automating Drift Detection and Remediation
-* Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
-* Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
+- [How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/)
+- **Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates** (you are here)
+- Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails
+- Day 2 Platform Operations: Automating Drift Detection and Remediation
+- Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
+- Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
 
 {{% notes type="tip" %}}
 **Want hands-on experience?** Enroll in the free [IDP Builder Workshop Series](https://info.pulumi.com/idp/internal-developer-platform-workshops-course) to access recordings, demo code, slides, and hands-on guidance. The complete code examples from this post are available on [GitHub](https://github.com/pulumi/workshops/tree/main/golden-paths-infrastructure-components-and-templates).
@@ -176,11 +176,11 @@ To make your component easy to use, add comprehensive documentation and examples
 ```bash
 # MicroserviceComponent
 
-Abstraction for resources needed when using AWS container services. 
+Abstraction for resources needed when using AWS container services.
 
 A component to abstract the details related to:
 - Creating a docker image and pushing it to AWS ECR.
-- Deploy to ECS Fargate using the docker image. 
+- Deploy to ECS Fargate using the docker image.
 
 # Inputs
 
@@ -521,11 +521,11 @@ A **golden path** template that gets your Go microservice from code to productio
 
 This golden path provides everything your development team needs to deploy production-ready Go microservices:
 
-✅ **Production-ready Go microservice** with Echo framework and OpenTelemetry tracing  
-✅ **AWS infrastructure that scales** - ECS with auto-scaling from 1-4 instances  
-✅ **Security by default** - Hardened containers, IAM roles, security groups  
-✅ **Monitoring built-in** - Health checks, load balancer monitoring, CloudWatch alarms  
-✅ **One-command deployment** - `pulumi up` handles everything  
+✅ **Production-ready Go microservice** with Echo framework and OpenTelemetry tracing
+✅ **AWS infrastructure that scales** - ECS with auto-scaling from 1-4 instances
+✅ **Security by default** - Hardened containers, IAM roles, security groups
+✅ **Monitoring built-in** - Health checks, load balancer monitoring, CloudWatch alarms
+✅ **One-command deployment** - `pulumi up` handles everything
 ✅ **No AWS expertise required** - Complex ECS setup abstracted away
 
 ## For Development Teams: What to Expect
@@ -610,11 +610,11 @@ Provide sensible defaults that work, while enabling customization for advanced u
 interface ComponentArgs {
     // Required - what users must provide
     appName: string;
-    
+
     // Common customizations with good defaults
     instanceType?: string;  // default: "t3.micro"
     replicas?: number;       // default: 2
-    
+
     // Advanced options for power users
     networkConfig?: NetworkConfig;
     securityPolicies?: SecurityPolicy[];
@@ -647,7 +647,7 @@ describe("MicroserviceComponent", () => {
             appPath: "./test-app",
             port: 3000
         });
-        
+
         const resources = await pulumi.runtime.allResources();
         expect(resources).to.include("aws:ecs/cluster:Cluster");
         expect(resources).to.include("aws:ecs/service:Service");

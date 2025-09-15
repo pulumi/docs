@@ -1,6 +1,6 @@
 ---
 title: "Introducing Automated Database Credential Rotation for PostgreSQL and MySQL in Pulumi ESC"
-date: 2025-04-30 
+date: 2025-04-30
 allow_long_title: true
 meta_desc: "Pulumi ESC now automates the rotation of database credentials for PostgreSQL and MySQL (publicly accessible or in AWS private VPCs), enhancing security and reducing operational burden."
 meta_image: meta.png
@@ -71,14 +71,14 @@ You'll need two *types* of users configured, resulting in *three* specific datab
 
 Connect to the database as a superuser and run the following SQL commands:
 
-  *   Create the application users whose passwords you want ESC to rotate automatically:    
+  *   Create the application users whose passwords you want ESC to rotate automatically:
       ```sql
       CREATE USER user1 WITH PASSWORD 'initial_password';
       GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user1;
       CREATE USER user2 WITH PASSWORD 'initial_password';
       GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user2;
       ```
-      
+
   *   Create the designated "managing user" account with privileges to modify passwords for the application users:
       ```sql
       CREATE USER managing_user WITH PASSWORD 'manager_password';

@@ -36,7 +36,7 @@ With Pulumi, developer productivity increases, scalability is a breeze, and the 
 
 Before we get into the details of using Pulumi to deploy a Vue.js frontend app to Vercel, let's start with some quick terminology/context:
 
-- [Katwalk Frontend](https://github.com/pulumiverse/katwalk/tree/main/src/app/katwalk-frontend) is a demo Vue.js application that integrates with the [Katwalk Server](https://github.com/pulumiverse/katwalk) to produce a function web interface for you to communicate with your chatbot. 
+- [Katwalk Frontend](https://github.com/pulumiverse/katwalk/tree/main/src/app/katwalk-frontend) is a demo Vue.js application that integrates with the [Katwalk Server](https://github.com/pulumiverse/katwalk) to produce a function web interface for you to communicate with your chatbot.
 - [Vercel](https://vercel.com/) is a modern web development cloud platform and hosting provider. It specialises in making web application deployment simple and efficient.
 
 ## How to Integrate Your Chatbot Frontend and Deploy to Vercel
@@ -44,12 +44,12 @@ If you are ready to integrate your chatbot and deploy it to Vercel along with us
 
 ### Requirements
 
-* [Pulumi CLI](https://www.pulumi.com/docs/install/)
-* [Pulumi account and access token](https://app.pulumi.com/signup)
-* [Python3](https://www.python.org/downloads/)
-* [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* Endpoint of Katwalk Server API. Follow the steps in [this article](https://www.pulumi.com/blog/mlops-the-ai-challenge-is-cloud-not-code/) to deploy the API and get your endpoint.
-* [Vercel account and access token](https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token#creating-an-access-token)
+- [Pulumi CLI](https://www.pulumi.com/docs/install/)
+- [Pulumi account and access token](https://app.pulumi.com/signup)
+- [Python3](https://www.python.org/downloads/)
+- [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Endpoint of Katwalk Server API. Follow the steps in [this article](https://www.pulumi.com/blog/mlops-the-ai-challenge-is-cloud-not-code/) to deploy the API and get your endpoint.
+- [Vercel account and access token](https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token#creating-an-access-token)
 
 
 Now that you have everything needed to get started, let's hook up our frontend and deploy the frontend to Vercel using Pulumi.
@@ -71,12 +71,12 @@ python -m pip install -r requirements.txt
 
 ### 2. Login to Pulumi Cloud and initialize stack
 
-Next, let's setup our state and secrets store in Pulumi Cloud. 
+Next, let's setup our state and secrets store in Pulumi Cloud.
 
 ```bash
 # You can store Pulumi state in multiple ways, here we use Pulumi Cloud
 # Other state backends include Azure storage, Amazon S3, local file, and more
-pulumi login 
+pulumi login
 
 # Initialize your stack
 # Here we name the stack "dev"
@@ -104,7 +104,7 @@ pulumi config set --secret vclToken <vcl_token>
 
 ### 4. Deploy to Vercel
 
-Now, you're set up to deploy your Vue app to Vercel. 
+Now, you're set up to deploy your Vue app to Vercel.
 
 ```bash
 # Finally, run `pulumi up` to deploy!
@@ -120,7 +120,7 @@ Once your web app is running, you can visit the website at `https://{vcl_project
 
 ### 6. Tear down resources
 
-Now that you've tested out this code and you can see the chatbot in action, remember to deprovision your deployment by running: 
+Now that you've tested out this code and you can see the chatbot in action, remember to deprovision your deployment by running:
 
 ```bash
 pulumi destroy
@@ -128,7 +128,7 @@ pulumi destroy
 
 ## Understanding the Pulumi Code for Vercel Deployment
 
-If you'd like to learn about what the Pulumi code is doing, then stick around. In this section, we'll dive into the Python Pulumi code which is responsible for deploying the Vue.js project to Vercel using Pulumi. Let's break down the code step by step to understand how it works. 
+If you'd like to learn about what the Pulumi code is doing, then stick around. In this section, we'll dive into the Python Pulumi code which is responsible for deploying the Vue.js project to Vercel using Pulumi. Let's break down the code step by step to understand how it works.
 
 ### 1. Import the necessary modules
 
@@ -161,7 +161,7 @@ This part initializes the Vercel provider with the Vercel API token. The provide
 ### 4. Creating a Vercel project
 
 ```python
-project = vercel.Project("vercel-project", 
+project = vercel.Project("vercel-project",
     name = vcl_project_name,
     framework = "vue",
     git_repository = vercel.ProjectGitRepositoryArgs(
