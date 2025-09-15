@@ -10,7 +10,7 @@ meta_desc: "Meet Pulumi Neo: AI agent for platform engineers that automates infr
 meta_image: meta.png
 
 authors:
-    - joe-duffy
+    - neo-team
 
 tags:
     - ai
