@@ -63,7 +63,7 @@ This change is all about helping you spend less time clicking around and more ti
 
 ## Faster Access to What You Use Most
 
-We’ve moved the most commonly used sections of Pulumi Cloud like **Projects, Stacks, and Resources** into the top-level navigation. That means the things you use most are always just one click away.
+We’ve moved the most commonly used sections of Pulumi Cloud like **Stacks, Environments, and Resources** into the top-level navigation. That means the things you use most are always just one click away.
 
 ![Left Navigation](left-nav.png)
 
