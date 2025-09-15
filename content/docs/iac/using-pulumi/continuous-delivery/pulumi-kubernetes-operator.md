@@ -83,7 +83,7 @@ A simple "quickstart" installation manifest is provided for non-production envir
 Install with `kubectl`:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/pulumi/pulumi-kubernetes-operator/refs/tags/v2.0.0/deploy/quickstart/install.yaml
+kubectl apply -f https://raw.githubusercontent.com/pulumi/pulumi-kubernetes-operator/refs/tags/v2.2.0/deploy/quickstart/install.yaml
 ```
 
 Note: the installation manifest creates a usable Kubernetes service account named `default/pulumi`

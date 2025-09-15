@@ -101,6 +101,14 @@ values:
     url:
       fn::join: [ ", ", "${app.items}" ]
 
+    # Concatenate array
+    # Result is [foo, bar, baz, zap]
+    # Path is "app.concatenatedArray"
+    concatenatedArray:
+      fn::concat:
+        - [foo, bar]
+        - [baz, zap]
+
     # Encode the argument as a Base64 string
     # Path is "app.passwordB64"
     passwordB64:

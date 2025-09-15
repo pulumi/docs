@@ -16,7 +16,7 @@ You may not receive Professional Services if You are Our direct competitor, exce
 This Agreement was last updated on June 27, 2018. It is effective between You and Us as of the date of Your accepting this Agreement.
 
 <h2 class="h4">1.&nbsp;&nbsp;&nbsp;&nbsp;GENERAL TERMS</h2>
-<p>1.1&nbsp;&nbsp;&nbsp;&nbsp; Your use of the Pulumi Services is governed by this Agreement (the "Agreement"). "Pulumi" means Pulumi Corporation, located at 1525 4th Avenue, Suite 800, Seattle, WA 98101 and its subsidiaries or affiliates involved in providing the Pulumi Services. The “Pulumi Services” means the services Pulumi makes available through this website, the Pulumi platform, and any other software or services offered by Pulumi in connection to any of those.</p>
+<p>1.1&nbsp;&nbsp;&nbsp;&nbsp; Your use of the Pulumi Services is governed by this Agreement (the "Agreement"). "Pulumi" means Pulumi Corporation, located at 601 Union St., Suite 1415, Seattle, WA 98101 and its subsidiaries or affiliates involved in providing the Pulumi Services. The “Pulumi Services” means the services Pulumi makes available through this website, the Pulumi platform, and any other software or services offered by Pulumi in connection to any of those.</p>
 
 #### 1.    DEFINITIONS
 
@@ -156,7 +156,7 @@ The sections titled “Contract Property,” “Confidentiality,” “Represent
 				<p>Pulumi Corporation, a Delaware corporation</p>
 			</td>
 			<td width="25%">
-				<p>Pulumi Corporation, 1525 4th Avenue, Suite 800, Seattle, WA, 98101, U.S.A., attn: Sales Operations</p>
+				<p>Pulumi Corporation, 601 Union St., Suite 1415, Seattle, WA, 98101, U.S.A., attn: Sales Operations</p>
 			</td>
 			<td width="25%">
 				<p>Washington and controlling United States federal law</p>
