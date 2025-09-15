@@ -168,7 +168,7 @@ If you prefer to use the Pulumi CLI, you can create the environment by running:
 
 ```bash
 pulumi env init <your-org>/eso-esc-demo/eso-esc-dev
-``` 
+```
 
 And set the configuration by running the `env edit` command and copy the above YAML into the editor:
 

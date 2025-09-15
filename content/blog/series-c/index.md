@@ -56,7 +56,7 @@ Pulumi is gradually shifting from a single infrastructure as code product to a c
 
 ## What’s next for Pulumi
 
-It is still day one for us and we’re only just getting started. Our ambitious mission is to democratize the cloud so that every builder, no matter their background, can make the most out of the cloud. And although infrastructure as code in any language makes a giant step in that direction, there is so much more to be done. If the cloud is the new operating system, there are entire application and security models still missing. For our customers, the cloud is a competitive advantage and they’re always wanting to do more, and to do it faster, with the cloud. 
+It is still day one for us and we’re only just getting started. Our ambitious mission is to democratize the cloud so that every builder, no matter their background, can make the most out of the cloud. And although infrastructure as code in any language makes a giant step in that direction, there is so much more to be done. If the cloud is the new operating system, there are entire application and security models still missing. For our customers, the cloud is a competitive advantage and they’re always wanting to do more, and to do it faster, with the cloud.
 
 As we look to the future, there are several key themes we are excited to tackle:
 

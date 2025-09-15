@@ -28,9 +28,9 @@ Let’s have a look at a concrete example where this package ecosystem can get y
 
 ## Use Case: Determining S3 MIME types on-the-fly
 
-A popular example of cloud infrastructure automation is creating an S3 bucket and pushing some files to it. This is a common task that many of us have had to do, and most infrastructure automation tools have a way to accomplish this. 
+A popular example of cloud infrastructure automation is creating an S3 bucket and pushing some files to it. This is a common task that many of us have had to do, and most infrastructure automation tools have a way to accomplish this.
 
-Here’s one way to do that in Pulumi: 
+Here’s one way to do that in Pulumi:
 
 {{< chooser language "typescript,python" />}}
 

@@ -176,11 +176,11 @@ To make your component easy to use, add comprehensive documentation and examples
 ```bash
 # MicroserviceComponent
 
-Abstraction for resources needed when using AWS container services. 
+Abstraction for resources needed when using AWS container services.
 
 A component to abstract the details related to:
 - Creating a docker image and pushing it to AWS ECR.
-- Deploy to ECS Fargate using the docker image. 
+- Deploy to ECS Fargate using the docker image.
 
 # Inputs
 
@@ -521,11 +521,11 @@ A **golden path** template that gets your Go microservice from code to productio
 
 This golden path provides everything your development team needs to deploy production-ready Go microservices:
 
-✅ **Production-ready Go microservice** with Echo framework and OpenTelemetry tracing  
-✅ **AWS infrastructure that scales** - ECS with auto-scaling from 1-4 instances  
-✅ **Security by default** - Hardened containers, IAM roles, security groups  
-✅ **Monitoring built-in** - Health checks, load balancer monitoring, CloudWatch alarms  
-✅ **One-command deployment** - `pulumi up` handles everything  
+✅ **Production-ready Go microservice** with Echo framework and OpenTelemetry tracing
+✅ **AWS infrastructure that scales** - ECS with auto-scaling from 1-4 instances
+✅ **Security by default** - Hardened containers, IAM roles, security groups
+✅ **Monitoring built-in** - Health checks, load balancer monitoring, CloudWatch alarms
+✅ **One-command deployment** - `pulumi up` handles everything
 ✅ **No AWS expertise required** - Complex ECS setup abstracted away
 
 ## For Development Teams: What to Expect
@@ -610,11 +610,11 @@ Provide sensible defaults that work, while enabling customization for advanced u
 interface ComponentArgs {
     // Required - what users must provide
     appName: string;
-    
+
     // Common customizations with good defaults
     instanceType?: string;  // default: "t3.micro"
     replicas?: number;       // default: 2
-    
+
     // Advanced options for power users
     networkConfig?: NetworkConfig;
     securityPolicies?: SecurityPolicy[];
@@ -647,7 +647,7 @@ describe("MicroserviceComponent", () => {
             appPath: "./test-app",
             port: 3000
         });
-        
+
         const resources = await pulumi.runtime.allResources();
         expect(resources).to.include("aws:ecs/cluster:Cluster");
         expect(resources).to.include("aws:ecs/service:Service");
