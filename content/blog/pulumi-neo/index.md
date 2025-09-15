@@ -34,7 +34,7 @@ The very success of developer AI has become a challenge for the platform team.
 
 ## Introducing Pulumi Neo
 
-Neo is a purpose-built infrastructure automation agent that can carry out platform engineering tasks on your behalf. Built on Pulumi's platform, Neo has a deep understanding of cloud context, IaC, secrets and configuration, internal developer platforms, and more. It automatically respects your security and policy guardrails and works in tandem with human-in-the-loop approvals and controls.
+Neo is a purpose-built infrastructure automation agent that amplifies your platform engineering capabilities. Built on Pulumi's platform, Neo has a deep understanding of cloud context, IaC, secrets and configuration, internal developer platforms, and more. It automatically respects your security and policy guardrails and works in tandem with human-in-the-loop approvals and controls.
 
 ![Pulumi Neo automating AWS Lambda Node.js runtime upgrades with policy validation and pull request creation](introducing-pulumi-neo.png)
 
@@ -60,7 +60,7 @@ This isn't experimental AI, it's enterprise-ready automation that amplifies your
 
 Neo becomes more capable the more you invest in infrastructure as code. Every Pulumi component you write, every policy you define, every environment configuration you establish becomes Neo's operational context that guides its decisions.
 
-This is the key shift. We're not talking about AI replacing platform engineers. We're talking about AI amplifying platform expertise. The engineers who understand the why behind infrastructure decisions become even more valuable when they have tools that can execute the how at scale.
+This is the key shift. We're talking about AI amplifying platform expertise. We're talking about AI amplifying platform expertise. The engineers who understand the why behind infrastructure decisions become even more valuable when they have tools that can execute the how at scale.
 
 The teams that lean into this cycle will find themselves accelerating while others are still struggling. They'll be writing policies while others are responding to issues. They'll be designing systems while others are updating versions.
 
