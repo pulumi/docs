@@ -90,10 +90,10 @@ We have added 121 functions and 159 resources across our most popular providers,
 
 We welcome new providers to our registry!
 
-* [Influx db](/registry/packages/influxdb/)
-* [Zscalar Private Access](/registry/packages/zpa/)
-* [Zscalar Internet Access](/registry/packages/zia/)
-* [CTFD](/registry/packages/ctfd/)
+- [Influx db](/registry/packages/influxdb/)
+- [Zscalar Private Access](/registry/packages/zpa/)
+- [Zscalar Internet Access](/registry/packages/zia/)
+- [CTFD](/registry/packages/ctfd/)
 
 ### Pulumi Registry Documentation Update
 

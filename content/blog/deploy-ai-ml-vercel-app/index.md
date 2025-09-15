@@ -44,12 +44,12 @@ If you are ready to integrate your chatbot and deploy it to Vercel along with us
 
 ### Requirements
 
-* [Pulumi CLI](https://www.pulumi.com/docs/install/)
-* [Pulumi account and access token](https://app.pulumi.com/signup)
-* [Python3](https://www.python.org/downloads/)
-* [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* Endpoint of Katwalk Server API. Follow the steps in [this article](https://www.pulumi.com/blog/mlops-the-ai-challenge-is-cloud-not-code/) to deploy the API and get your endpoint.
-* [Vercel account and access token](https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token#creating-an-access-token)
+- [Pulumi CLI](https://www.pulumi.com/docs/install/)
+- [Pulumi account and access token](https://app.pulumi.com/signup)
+- [Python3](https://www.python.org/downloads/)
+- [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Endpoint of Katwalk Server API. Follow the steps in [this article](https://www.pulumi.com/blog/mlops-the-ai-challenge-is-cloud-not-code/) to deploy the API and get your endpoint.
+- [Vercel account and access token](https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token#creating-an-access-token)
 
 
 Now that you have everything needed to get started, let's hook up our frontend and deploy the frontend to Vercel using Pulumi.
