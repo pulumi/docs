@@ -83,7 +83,7 @@ Three core capabilities unite these products:
 
 Over 3,000 customers, including Nvidia, BMW, Unity Games, and Tivity Health, leveraged these solutions to enhance velocity, save costs, and secure their infrastructure.
 
-## Highlights of Releases and Enhancements 
+## Highlights of Releases and Enhancements
 
 ![Placeholder Image](any-language-any-cloud.png)
 

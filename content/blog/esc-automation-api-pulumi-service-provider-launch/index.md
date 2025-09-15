@@ -19,7 +19,7 @@ We're excited to announce two powerful new capabilities for [Pulumi Environments
 
 - **Pulumi Service Provider Support for ESC Environments**: Manage your environments as code right alongside your infrastructure including fine-grained access control using [Pulumi Service Provider](/registry/packages/pulumiservice/).
 - **Automation API Enhancements for ESC**: Seamlessly integrate ESC Environments into your [Automation API](/automation/)-based Pulumi projects.
-  
+
 <!--more-->
 
 These updates build upon Pulumi ESC's commitment to simplify and streamline secrets and configuration management providing you with greater control, security, and automation capabilities.
@@ -140,7 +140,7 @@ import * as automation from "@pulumi/pulumi/automation";
 async function manageEnvironments() {
     const projectName = "myProject";
     const stackName = "dev";
-    
+
     // Set up your stack options. Here we're using an empty program
     // since we're only manipulating environments, not deploying resources.
     const stackArgs: automation.InlineProgramArgs = {
@@ -186,7 +186,7 @@ from pulumi.automation import LocalWorkspace, ProjectSettings, Stack
 def manage_environments():
     stack_name = "dev"
     project_name = "myProject"
-    
+
     # Define the project settings.
     project_settings = ProjectSettings(
         name=project_name,

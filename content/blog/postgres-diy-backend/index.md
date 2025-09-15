@@ -126,7 +126,7 @@ func skipIfDockerNotAvailable(t *testing.T) {
     if runtime.GOOS == "windows" || runtime.GOOS == "darwin" {
         t.Skip("Skipping test: Docker not available on this platform in CI")
     }
-    
+
     // Additional Docker availability checks...
 }
 ```
