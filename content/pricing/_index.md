@@ -473,12 +473,19 @@ comparison_table:
                   - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
                   - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
                   - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
-              - title: Preventative and Audit Evaluation
+              - title: Preventative Policies
                 link: /docs/insights/preventative-vs-audit-policies/
                 items: 
-                  - content: "Manual (Preventative only)"
+                  - content: Manual
                   - content: _check
                   - content: _check
+                  - content: _check
+              - title: Audit Policies
+                link: /docs/insights/preventative-vs-audit-policies/
+                items: 
+                  - content: _blank
+                  - content: _blank
+                  - content: _blank
                   - content: _check
               - title: Pre-built Policy Packs
                 link: /docs/insights/pre-built-packs
@@ -487,13 +494,13 @@ comparison_table:
                   - content: Pulumi Best Practices
                   - content: Pulumi Best Practices
                   - content: Pulumi Best Practices, HITRUST CSF
-              - title: Publishing custom policies to Pulumi Cloud
+              - title: Custom Policy Packs
                 link: /docs/iac/crossguard/get-started/#creating-a-policy-pack
                 items:
                   - content: _blank
-                  - content: 1 pack / 25 policies
-                  - content: 5 packs / 125 policies
-                  - content: Unlimited
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
               - title: Enforcement Modes
                 link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
                 items:
