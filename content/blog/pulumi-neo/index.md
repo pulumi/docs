@@ -76,7 +76,7 @@ This is the rise of strategic platform engineering. These are professionals who 
 
 ## The Choice Before Us
 
-Today, we're launching more than an AI agent. We're introducing your newest platform engineer, who gets smarter as your infrastructure evolves. We're launching a new era for platform engineering, one where the teams that enable everyone else finally have tools built specifically for their reality.
+What we're launching is more than an AI agent. We're introducing your newest platform engineer, who gets smarter as your infrastructure evolves. We're launching a new era for platform engineering, one where the teams that enable everyone else finally have tools built specifically for their reality.
 
 Neo represents our belief that platform engineers shouldn't have to choose between speed and safety, between automation and control, between serving developers and driving strategy. These are false choices created by tools that lack an understanding of infrastructure.
 
