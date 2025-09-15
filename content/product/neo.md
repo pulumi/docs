@@ -38,7 +38,7 @@ demo_video:
     videoID: 9GB9M2l1OgY
 
 building_blocks:
-  title: "Pulumi Neo: AI-Powered Platform Engineering"
+  title: "What is Pulumi Neo?"
   items:
     - header: Scale Infrastructure Operations Through Intelligent Automation
       subheader: "Neo amplifies your platform engineering expertise:"
