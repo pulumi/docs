@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "ContainerDays Conference 2025"
+  title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
+  url: "https://www.containerdays.io/containerdays-conference-2025/agenda/"
+  date: 2025-09-10T15:00:00.000-07:00 
 - event: "Cloud Native Summit Munich 2025"
   title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
   url: "https://www.kcdmunich.de/"
