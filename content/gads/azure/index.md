@@ -7,7 +7,7 @@ aliases:
     - /azure-resource-manager
     - /azure-infrastructure
 
-heading: "Azure Infrastructure Made Easy"
+heading: "Tame Azure with Code"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to make managing infrastructure secure, reliable, and hassle-free.
 
