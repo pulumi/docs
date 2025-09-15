@@ -7,6 +7,9 @@ meta_title: "Pulumi Neo"
 meta_desc: "You're Invited: Meet Neo, Your Newest Platform Engineer"
 meta_image: /images/product/neo-meta.png
 
+overview:
+  title: AI-Powered Platform Engineering
+
 why_neo:
   title: Why Pulumi Neo?
   description: Pulumi Neo is an AI agent that automates infrastructure tasks. Using Neo, platform engineering teams can accelerate delivery with an AI that understands the cloud and your unique context, while maintaining full governance and control with built-in guardrails and human-in-the-loop approvals.
