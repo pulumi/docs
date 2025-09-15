@@ -39,7 +39,7 @@ tags:
     - policy-as-code
     - finops
     - cost-efficiency
-    
+
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
 # generated blog page. They are here strictly for reference.
@@ -153,7 +153,7 @@ Policy as code can be applied in two key ways:
 
 By combining [IaC and policy as code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) with self-service provisioning, you maintain security and compliance while giving teams autonomy.
 
-## Step 7: Evolving Towards Self-Service 
+## Step 7: Evolving Towards Self-Service
 
 As your platform matures, the ultimate goal is to empower your application teams with self-service capabilities, allowing them to provision the infrastructure and resources they need quickly and autonomously. This self-service model can take various forms, from pre-defined infrastructure modules to fully automated deployment pipelines.
 
@@ -180,7 +180,7 @@ With the right approach and mindset, your platform engineering efforts will beco
 
 ### What is Platform Engineering?
 
-There are many definitions for platform engineering, one of which is designing, building, and maintaining internal platforms that streamline software delivery by providing reusable tools, services, and workflows for developers. It focuses on scalability, efficiency, and self-service capabilities for internal teams. 
+There are many definitions for platform engineering, one of which is designing, building, and maintaining internal platforms that streamline software delivery by providing reusable tools, services, and workflows for developers. It focuses on scalability, efficiency, and self-service capabilities for internal teams.
 
 For a more in-depth explanation of real-world use cases, see [What is platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/).
 
@@ -210,7 +210,7 @@ For a more in-depth explanation, see the [What is Infrastructure as Code? page](
 
 Policy as Code (PaC) defines security, compliance, and [operational policies](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/core-concepts/) in code to automate their enforcement across infrastructure and application deployments.
 
-### What is Developer Experience (DevEx)? 
+### What is Developer Experience (DevEx)?
 
 The overall experience developers have with using the platform, tools, and workflows provided by platform engineering. Optimizing DevEx ensures that developers can work more efficiently and effectively.
 
