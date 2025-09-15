@@ -498,8 +498,8 @@ comparison_table:
                 link: /docs/iac/crossguard/get-started/#creating-a-policy-pack
                 items:
                   - content: _blank
-                  - content: 1 pack, up to 25 policies
-                  - content: 3 packs, up to 100 policies
+                  - content: 1 pack,<br>up to 25 policies
+                  - content: 3 packs,<br>up to 100 policies
                   - content: Unlimited
               - title: Enforcement Modes
                 link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
