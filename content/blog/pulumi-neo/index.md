@@ -36,7 +36,7 @@ The very success of developer AI has become a challenge for the platform team.
 
 Neo is a purpose-built infrastructure automation agent that can carry out platform engineering tasks on your behalf. Built on Pulumi's platform, Neo has a deep understanding of cloud context, IaC, secrets and configuration, internal developer platforms, and more. It automatically respects your security and policy guardrails and works in tandem with human-in-the-loop approvals and controls.
 
-![Pulumi Neo task](introducing-pulumi-neo.png)
+![Pulumi Neo automating AWS Lambda Node.js runtime upgrades with policy validation and pull request creation](introducing-pulumi-neo.png)
 
 For years, we've worked closely with platform and infrastructure teams. We've observed how the demands on these teams have intensified as development velocity has increased. We understand the challenges they face in keeping pace with rapidly evolving infrastructure needs.
 
