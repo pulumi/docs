@@ -9,7 +9,7 @@ meta_image: /images/product/neo-meta.png
 
 why_neo:
   title: Why Pulumi Neo?
-  description: Pulumi Neo eliminates the trade-off between hiring 5-10 additional platform engineers and accepting infrastructure bottlenecks. Platform engineering teams amplify their expertise with AI that understands your environment, while maintaining full control over governance and operational standards within existing frameworks.
+  description: Pulumi Neo is an AI agent that automates infrastructure tasks. Using Neo, platform engineering teams can accelerate delivery with an AI that understands the cloud and your unique context, while maintaining full governance and control with built-in guardrails and human-in-the-loop approvals.
   benefits:
     - title: Infrastructure Velocity
       description: Handle complex operations in minutes, not hours, with natural language delegation and enterprise-grade automation.
