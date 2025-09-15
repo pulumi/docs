@@ -50,6 +50,7 @@ values:
           user: ESC_LOGIN_USER
           role: ESC_ROLE  # Optional
 ```
+
 When this environment is opened, ESC securely handles the OIDC flow and makes the temporary token available under `snowflake.login.token`.
 
 ## snowflake-user: Automated Rotation for RSA Key Secrets

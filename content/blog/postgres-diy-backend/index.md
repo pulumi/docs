@@ -164,11 +164,13 @@ func skipIfDockerNotAvailable(t *testing.T) {
 Using the PostgreSQL backend is straightforward:
 
 1. **Login to your PostgreSQL backend:**
+
 ```bash
 pulumi login postgres://pulumi_user:secure_password@localhost:5432/pulumi_state?sslmode=require
 ```
 
 2. **Use Pulumi normally:**
+
 ```bash
 pulumi up
 # Your state is now stored in PostgreSQL!

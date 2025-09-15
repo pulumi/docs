@@ -59,6 +59,7 @@ values:
 2. Save the environment.
 3. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/infisical-auth/oidc-login` in your CLI. The output will include the infisical.login.accessToken.
 4. Usage Example: Run Infisical CLI commands dynamically:
+
 ```bash
 esc run pulumi-org/infisical-auth/oidc-login -- infisical secrets get API_KEY --projectId=<your-project-id>
 # The INFISICAL_TOKEN env var is automatically injected
@@ -102,9 +103,11 @@ values:
     API_KEY: ${infisicalSecrets.apiKey}
     APP_SECRET: ${infisicalSecrets.appSecret}
 ```
-5. Save the environment.
-6. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/my-app/dev` in your CLI. The output will show the imported `infisical.login`, the fetched secrets under `infisicalSecrets`, and the mapped `environmentVariables`.
-7. **Usage Example:** Run an application that needs these secrets:
+
+5.  Save the environment.
+6.  Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/my-app/dev` in your CLI. The output will show the imported `infisical.login`, the fetched secrets under `infisicalSecrets`, and the mapped `environmentVariables`.
+7.  **Usage Example:** Run an application that needs these secrets:
+
     ```bash
     esc run pulumi-org/my-app/dev -- node app.js
     # The API_KEY and APP_SECRET env vars are automatically injected

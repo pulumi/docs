@@ -71,7 +71,8 @@ You'll need two *types* of users configured, resulting in *three* specific datab
 
 Connect to the database as a superuser and run the following SQL commands:
 
-* Create the application users whose passwords you want ESC to rotate automatically:
+  *   Create the application users whose passwords you want ESC to rotate automatically:
+
       ```sql
       CREATE USER user1 WITH PASSWORD 'initial_password';
       GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user1;
@@ -79,7 +80,8 @@ Connect to the database as a superuser and run the following SQL commands:
       GRANT SELECT, INSERT, UPDATE ON yourDatabase TO user2;
       ```
 
-* Create the designated "managing user" account with privileges to modify passwords for the application users:
+  *   Create the designated "managing user" account with privileges to modify passwords for the application users:
+
       ```sql
       CREATE USER managing_user WITH PASSWORD 'manager_password';
       ALTER USER managing_user WITH CREATEROLE;
@@ -106,7 +108,7 @@ If your PostgreSQL instance is running on AWS RDS, we recommend using our [Pulum
 
 The Pulumi template creates two ESC environments with most of the configuration pre-filled. You need to update them with your specific PostgreSQL user credentials and database name.
 
-* **Managing Credentials Environment (e.g., `postgresrotation/ManagingCreds`):** Navigate to this environment in the Pulumi Cloud console. Update the managing user's username and password. The `awsLogin` section, which provides credentials for the Lambda connector to assume, should be pre-filled by the template.
+*   **Managing Credentials Environment (e.g., `postgresrotation/ManagingCreds`):** Navigate to this environment in the Pulumi Cloud console. Update the managing user's username and password. The `awsLogin` section, which provides credentials for the Lambda connector to assume, should be pre-filled by the template.
   ```yaml
   # postgresrotation/ManagingCreds
   values:
@@ -123,43 +125,45 @@ The Pulumi template creates two ESC environments with most of the configuration 
           roleArn: arn:aws:iam::616138583583:role/PulumiEscSecretRotatorLambda-InvocationRole-7e4646f # Example Role ARN populated by template
           sessionName: pulumi-esc-secret-rotator-${esc.context.environment} # Example Session Name populated by template
   ```
-* **Rotation Environment (e.g., `<project-name>/Rotator`):** Navigate to this environment. Most fields related to the Lambda connector (Lambda ARN, host, port, references) are pre-filled by the template outputs. You *must* update the database name and the application usernames mapping. Note the `connector.awsLambda` block indicating the use of the Lambda connector.
-  ```yaml
-  # postgresrotation/Rotator
-  values:
-    dbRotator:
-      fn::rotate::postgres:
-        inputs:
-          database:
-            # Configure the AWS Lambda connector for private VPC access
-            connector:
-              awsLambda:
-                login: ${environments.postgresrotation.ManagingCreds.awsLogin}
-                lambdaArn: arn:aws:lambda:us-west-2:616138583583:function:PulumiEscSecretRotatorLambda-Function-d9932fe # Example Lambda ARN populated by template
-            # Database connection details (used by the Lambda connector)
-            database: mydb # Replace with your DB name
-            host: tf-20250428212643894700000001.cluster-chuqccm8uxqx.us-west-2.rds.amazonaws.com # Example Host populated by template
-            port: 5432 # Example Port populated by template
-            managingUser: ${environments.postgresrotation.ManagingCreds.managingUser}
-          # List of application users whose passwords will be rotated
-          rotateUsers:
-            username1: user1 # Replace DB username if different from logical name
-            username2: user2 # Replace DB username if different from logical name
 
-        # state section is automatically managed by ESC after first rotation
-        # Do not provide state unless migrating existing, known credentials.
-        # state:
-        #  current:
-        #    password:
-        #      fn::secret:
-        #        ciphertext: ZXNjeAAAA...
-        #    username: user1
-        #  previous:
-        #    password:
-        #      fn::secret:
-        #        ciphertext: ZXNje21AA...
-        #    username: user2
-  ```
+*   **Rotation Environment (e.g., `<project-name>/Rotator`):** Navigate to this environment. Most fields related to the Lambda connector (Lambda ARN, host, port, references) are pre-filled by the template outputs. You *must* update the database name and the application usernames mapping. Note the `connector.awsLambda` block indicating the use of the Lambda connector.
+
+    ```yaml
+    # postgresrotation/Rotator
+    values:
+      dbRotator:
+        fn::rotate::postgres:
+          inputs:
+            database:
+              # Configure the AWS Lambda connector for private VPC access
+              connector:
+                awsLambda:
+                  login: ${environments.postgresrotation.ManagingCreds.awsLogin}
+                  lambdaArn: arn:aws:lambda:us-west-2:616138583583:function:PulumiEscSecretRotatorLambda-Function-d9932fe # Example Lambda ARN populated by template
+              # Database connection details (used by the Lambda connector)
+              database: mydb # Replace with your DB name
+              host: tf-20250428212643894700000001.cluster-chuqccm8uxqx.us-west-2.rds.amazonaws.com # Example Host populated by template
+              port: 5432 # Example Port populated by template
+              managingUser: ${environments.postgresrotation.ManagingCreds.managingUser}
+            # List of application users whose passwords will be rotated
+            rotateUsers:
+              username1: user1 # Replace DB username if different from logical name
+              username2: user2 # Replace DB username if different from logical name
+
+          # state section is automatically managed by ESC after first rotation
+          # Do not provide state unless migrating existing, known credentials.
+          # state:
+          #  current:
+          #    password:
+          #      fn::secret:
+          #        ciphertext: ZXNjeAAAA...
+          #    username: user1
+          #  previous:
+          #    password:
+          #      fn::secret:
+          #        ciphertext: ZXNje21AA...
+          #    username: user2
+    ```
 
 * **Test with Manual Rotation:**
     * Use the triple-dot menu -> "Rotate Secrets" in the Pulumi Cloud UI for the Rotator environment.

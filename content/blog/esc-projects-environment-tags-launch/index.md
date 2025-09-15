@@ -50,6 +50,7 @@ Moving environments out of the `default` project is as easy as cloning the envir
 ```bash
   $ esc env clone default/dev your-project/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
 ```
+
 {{% /notes %}}
 
 We offer numerous ways for you to get started with Projects via the Pulumi Web Console, [SDK](/docs/esc/sdk/), [REST API](/docs/pulumi-cloud/cloud-rest-api/#environments), [CLI](/docs/esc-cli/) and [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/) - choose what best fits your workflow. Here is one example using the ESC CLI to create and list environments within a project:
