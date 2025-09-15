@@ -70,8 +70,8 @@ We’ve moved the most commonly used sections of Pulumi Cloud like **Projects, S
 The redesigned navigation groups related features into four clear categories, each designed around the way infrastructure teams work:
 
 - **Platform** includes all the IDP services that help you set up your infrastructure: defining services, configuring components and managing templates.
-- **Management** groups together all the tools you use to configure the tools you use daily like: accounts, policies and deployments. It also includes the tools used to monitor the interactions with the Pulumi platform like: approvals and audit logs..
-- **Settings**: lists the tools you use to configure how the Pulumi platform needs to work for your organization including: billing and usage, access management and integrations.
+- **Management** groups together all the tools you use to configure the tools you use daily like: accounts, policies and deployments. It also includes the tools used to monitor the interactions with the Pulumi platform like: approvals and audit logs.
+- **Settings** lists the tools you use to configure how the Pulumi platform needs to work for your organization including: billing and usage, access management and integrations.
 
 These categories help to reduce clutter and give each section a clear purpose, so you always know where to go.
 
