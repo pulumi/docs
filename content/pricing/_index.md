@@ -437,8 +437,8 @@ comparison_table:
                 items:
                   - content: 500 free
                   - content: $0.01, <br>3,000 included
-                  - content: $.01 / Custom, <br>3,000 included
-                  - content: $.01 / Custom, <br>3,000 included                  
+                  - content: $0.01 / Custom, <br>3,000 included
+                  - content: $0.01 / Custom, <br>3,000 included                  
               - title: Resource search
                 link: /docs/insights/search/
                 items:
@@ -498,9 +498,9 @@ comparison_table:
                 link: /docs/iac/crossguard/get-started/#creating-a-policy-pack
                 items:
                   - content: _blank
-                  - content: _blank
-                  - content: _blank
-                  - content: _check
+                  - content: 1 pack, up to 25 policies
+                  - content: 3 packs, up to 100 policies
+                  - content: Unlimited
               - title: Enforcement Modes
                 link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
                 items:
