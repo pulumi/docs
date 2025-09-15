@@ -39,6 +39,7 @@ content/docs/reference/pkg
 # Ignore config files
 tsconfig.json
 package.json
+package-lock.json
 typedoc.json
 
 # Ignore the files we generate during the build and deployment process.

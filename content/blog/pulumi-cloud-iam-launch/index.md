@@ -110,7 +110,7 @@ We encourage our Enterprise and Business Critical customers to explore Custom Ro
 
 Learn more about Pulumi Cloud's new IAM & RBAC features:
 
-- [Overview](/docs/pulumi-cloud/access-management/rbac)
-- [Roles](/docs/pulumi-cloud/access-management/rbac/roles)
-- [Permissions](/docs/pulumi-cloud/access-management/rbac/permissions)
-- [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes)
+* [Overview](/docs/pulumi-cloud/access-management/rbac)
+* [Roles](/docs/pulumi-cloud/access-management/rbac/roles)
+* [Permissions](/docs/pulumi-cloud/access-management/rbac/permissions)
+* [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes)

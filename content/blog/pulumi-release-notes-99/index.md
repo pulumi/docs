@@ -138,8 +138,8 @@ We have added 641 functions and 662 resources across our most popular providers,
 
 We welcome new providers to our registry!
 
-* [Pinecone](/registry/packages/pinecone/)
-* [Talos Linux](/registry/packages/talos/)
+- [Pinecone](/registry/packages/pinecone/)
+- [Talos Linux](/registry/packages/talos/)
 
 ![New Community Providers](new-community-providers.png)
 
