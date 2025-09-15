@@ -14,9 +14,9 @@ authors:
 
 tags:
     - ai
-    - agents
+    - ai-agents
     - platform-engineering
-    - neo
+    - pulumi-neo
 
 ---
 
