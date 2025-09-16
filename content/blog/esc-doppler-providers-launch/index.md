@@ -42,71 +42,71 @@ Configure Doppler for OpenID Connect(OIDC) before you try out the providers. Fol
 
 1. Create a Pulumi ESC environment (e.g., `pulumi-org/doppler-auth/oidc-login`) with the following environment definition and update the `identityId`.
 
-```yaml
-# Environment: pulumi-org/doppler-auth/oidc-login
-values:
-  doppler:
-    # Configure the Dynamic Login provider using OIDC
-    login:
-      fn::open::doppler-login:
-        oidc:
-          identityId: <your-identity-id> # Replace with your Doppler Identity ID
+    ```yaml
+    # Environment: pulumi-org/doppler-auth/oidc-login
+    values:
+      doppler:
+        # Configure the Dynamic Login provider using OIDC
+        login:
+          fn::open::doppler-login:
+            oidc:
+              identityId: <your-identity-id> # Replace with your Doppler Identity ID
 
-  # Expose the token as an environment variable for easy consumption
-  environmentVariables:
-    DOPPLER_TOKEN: ${doppler.login.accessToken}
-```
+      # Expose the token as an environment variable for easy consumption
+      environmentVariables:
+        DOPPLER_TOKEN: ${doppler.login.accessToken}
+    ```
 
-2. Save the environment.
-3. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/doppler-auth/oidc-login` in your CLI. The output will include the `doppler.login.accessToken`.
-4. Usage Example: Run Doppler CLI commands dynamically:
+1. Save the environment.
+1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/doppler-auth/oidc-login` in your CLI. The output will include the `doppler.login.accessToken`.
+1. Usage Example: Run Doppler CLI commands dynamically:
 
-```bash
-esc run pulumi-org/doppler-auth/oidc-login -- doppler secrets download --no-file --format=json --project=<your-project-id> --config=<your-config-id>
-# The DOPPLER_TOKEN env var is automatically injected
-```
+    ```bash
+    esc run pulumi-org/doppler-auth/oidc-login -- doppler secrets download --no-file --format=json --project=<your-project-id> --config=<your-config-id>
+    # The DOPPLER_TOKEN env var is automatically injected
+    ```
 
 ### How to Use the doppler-secrets Provider (Dynamically Fetching Secrets)
 
 Use this provider to pull secrets *from* Doppler *into* your ESC environment for consumption by your applications, CI/CD systems, Pulumi IaC, Terraform and more!
 
 1. Create an ESC environment where you need the secrets (e.g., `pulumi-org/my-app/dev`).
-2. **Import** the dynamic login environment (if using OIDC for authentication, which is recommended). This makes the temporary Doppler token available.
-3. Configure the `doppler-secrets` provider, referencing the imported login details. See example below.
-4. Specify the secrets to fetch using the `get` block. Replace placeholders.
+1. **Import** the dynamic login environment (if using OIDC for authentication, which is recommended). This makes the temporary Doppler token available.
+1. Configure the `doppler-secrets` provider, referencing the imported login details. See example below.
+1. Specify the secrets to fetch using the `get` block. Replace placeholders.
 
-```yaml
-# Environment: pulumi-org/my-app/dev
-imports:
-  # Import the environment performing Dynamic Login (recommended)
-  - pulumi-org/doppler-auth/oidc-login # Use the path to your login environment
+    ```yaml
+    # Environment: pulumi-org/my-app/dev
+    imports:
+      # Import the environment performing Dynamic Login (recommended)
+      - pulumi-org/doppler-auth/oidc-login # Use the path to your login environment
 
-values:
-  # Define a structure to hold secrets fetched from Doppler
-  dopplerSecrets:
-    fn::open::doppler-secrets:
-      # Authenticate using the token from the imported Dynamic Login environment
-      login: ${doppler.login} # Pass the login object from the import
-      # Specify the Doppler project and config to retrieve secrets from
-      project: example-project
-      config: dev
-      # Specify secrets to retrieve from Doppler
-      get:
-        # Define names for the secrets as they will appear in ESC's output under 'dopplerSecrets'
-        apiKey: # This is the name within ESC
-          name: API_KEY # The name of the secret in Doppler
-        appSecret: # Pull another secret into ESC
-          name: APP_SECRET
+    values:
+      # Define a structure to hold secrets fetched from Doppler
+      dopplerSecrets:
+        fn::open::doppler-secrets:
+          # Authenticate using the token from the imported Dynamic Login environment
+          login: ${doppler.login} # Pass the login object from the import
+          # Specify the Doppler project and config to retrieve secrets from
+          project: example-project
+          config: dev
+          # Specify secrets to retrieve from Doppler
+          get:
+            # Define names for the secrets as they will appear in ESC's output under 'dopplerSecrets'
+            apiKey: # This is the name within ESC
+              name: API_KEY # The name of the secret in Doppler
+            appSecret: # Pull another secret into ESC
+              name: APP_SECRET
 
-  # Optionally, map fetched secrets to environment variables for application consumption
-  environmentVariables:
-    API_KEY: ${dopplerSecrets.apiKey}
-    APP_SECRET: ${dopplerSecrets.appSecret}
-```
+      # Optionally, map fetched secrets to environment variables for application consumption
+      environmentVariables:
+        API_KEY: ${dopplerSecrets.apiKey}
+        APP_SECRET: ${dopplerSecrets.appSecret}
+    ```
 
-5.  Save the environment.
-6.  Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/my-app/dev` in your CLI. The output will show the imported `doppler.login`, the fetched secrets under `dopplerSecrets`, and the mapped `environmentVariables`.
-7.  **Usage Example:** Run an application that needs these secrets:
+1. Save the environment.
+1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/my-app/dev` in your CLI. The output will show the imported `doppler.login`, the fetched secrets under `dopplerSecrets`, and the mapped `environmentVariables`.
+1. **Usage Example:** Run an application that needs these secrets:
 
     ```bash
     esc run pulumi-org/my-app/dev -- node app.js

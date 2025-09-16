@@ -30,16 +30,19 @@ Through Pulumi Copilot, you can explore your cloud infrastructure and gain insig
 
 ### Access any data in Pulumi Cloud
 
-  * The state of every resource you are managing with Pulumi across _any_ Cloud, _any_ account, and _any_ region.  With [Pulumi Insights'](/product/pulumi-insights) Cloud Supergraph support for 160+ cloud providers, this offers an unprecedented breadth of cloud infrastructure data to explore and interrogate with Pulumi Copilot.
-  * Pulumi stacks, projects, updates, deployments, environments, policies, audit logs and more - enabling historical understanding of what happened when, by who, and why across all of your cloud engineering systems managed by Pulumi.
+
+* The state of every resource you are managing with Pulumi across _any_ Cloud, _any_ account, and _any_ region.  With [Pulumi Insights'](/product/pulumi-insights) Cloud Supergraph support for 160+ cloud providers, this offers an unprecedented breadth of cloud infrastructure data to explore and interrogate with Pulumi Copilot.
+* Pulumi stacks, projects, updates, deployments, environments, policies, audit logs and more - enabling historical understanding of what happened when, by who, and why across all of your cloud engineering systems managed by Pulumi.
 
 ### Pulumi IaC Authoring and Deployment
 
-  * The same great Pulumi AI features for authoring IaC are now available inside Pulumi Copilot as well, enabling you to quickly solve new IaC problems within Pulumi Cloud, and even deploy code directly from Pulumi Copilot.
+
+* The same great Pulumi AI features for authoring IaC are now available inside Pulumi Copilot as well, enabling you to quickly solve new IaC problems within Pulumi Cloud, and even deploy code directly from Pulumi Copilot.
 
 ### Access cloud metadata from the clouds themselves
 
-  * Through the use of new skills, Pulumi Copilot can access cloud metadata in real time in AWS, Azure, Kubernetes, and more, allowing it to join Pulumi's IaC world view with information about usage, costs, and more – as well as infrastructure not yet under the management of Pulumi.
+
+* Through the use of new skills, Pulumi Copilot can access cloud metadata in real time in AWS, Azure, Kubernetes, and more, allowing it to join Pulumi's IaC world view with information about usage, costs, and more – as well as infrastructure not yet under the management of Pulumi.
 
 Pulumi Copilot combines the best generative AI models available in the industry today with Pulumi Copilot “skills” which enable Pulumi Copilot to access the data and actions from within Pulumi Cloud needed to help you with your questions and explorations.  Pulumi Copilot also incorporates the context of where the user is in the Pulumi Cloud console to easily answer questions about “this stack”, or “the latest update”, offering an even more natural, conversational and persistent experience across Pulumi Cloud.
 
@@ -65,7 +68,7 @@ Perhaps we need to gain access to additional infrastructure within Pulumi Cloud 
 
 We get a hyperlink at the end, enabling us to jump directly to the members page, where we can see all of the details about the members and admins of the organization.  Pulumi Copilot helps to not just get information, but then navigate within the Pulumi Cloud console to continue to explore.
 
-![Pulumi Cloud screenshot with copilot window open. The dashboard depics the Admins in the Console](./admins-console.png)
+![Pulumi Cloud screenshot with copilot window open. The dashboard depicts the Admins in the Console](./admins-console.png)
 
 Pulumi Copilot has access to everything that Pulumi Cloud manages, including [Pulumi ESC](/docs/esc) environments. We can find all of the environments we have that manage access to GitHub through a natural language query, and then ask a follow up question to get a direct link to where each environment is defined.
 
@@ -135,7 +138,7 @@ Check out [pulumi/cloud-requests#416](https://github.com/pulumi/pulumi-cloud-req
 
 <p align="center"><img src="./cloudwatch.png" alt="AWS CLI Skill" width="700" /></p>
 
-# Conclusion
+## Conclusion
 
 We’re excited to introduce Pulumi Copilot, the first conversational AI for general multi-cloud infrastructure management.  Pulumi Copilot is the next big step toward reimagining cloud infrastructure management via AI-based user experiences. We’re just getting started, with many improvements and new capabilities coming soon on top of the core Pulumi Copilot foundation. Pulumi Copilot is brand new and improving quickly in response to user feedback. If you have questions or suggestions:
 

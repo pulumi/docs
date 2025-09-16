@@ -84,7 +84,7 @@ To deploy, developers open a pull request which kicks off a [CI/CD pipeline in G
 
 Pulumi also gave the bank total confidence in being able to rapidly recover its cloud infrastructure in the case of a failure in Azure. The integration of Pulumi with GitHub Actions provided the team with a precise delta of changes to be made to the environment. Coupled with mandatory reviews from InfoSec and infrastructure, this significantly reduced the likelihood of deploying unapproved changes, thereby enhancing the reliability of their deployment processes.
 
-###  Policy as Code Guardrails with Pulumi CrossGuard
+### Policy as Code Guardrails with Pulumi CrossGuard
 
 [Pulumi CrossGuard](/docs/using-pulumi/crossguard/) adds an extra layer of security and control and is used in conjunction with Azure Policies, which are used for auditing purposes. CrossGuard prevents the deployment of undesired, insecure, or expensive resources during the preview and deployment stage, thus preventing developers from even reaching Azure to provision resources. Custom error messages give developers context on why their deployment was not allowed.
 

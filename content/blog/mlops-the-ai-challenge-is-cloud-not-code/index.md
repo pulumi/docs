@@ -32,7 +32,7 @@ Most of this cloud orchestration today is done manually or with complex scripts.
 
 This blog post is the first installment of a series on *AI Infrastructure as Python*. We will start this journey with building an AI backend service for a chatbot. In this post, we will deploy a LLM model behind an API backend running on compute infrastructure in the cloud. This entire infrastructure pipeline will be deployed using IaC written in Python. The series will follow this AI backend service through its evolution into a robust and resilient cloud native service.
 
-> # *The most difficult challenge that we face with AI today is a problem of cloud orchestration*
+> ## *The most difficult challenge that we face with AI today is a problem of cloud orchestration*
 
 Before we get into the details of using Pulumi to deploy a private LlaMa 2 API chatbot service---in 30 minutes or less, of course---let's start with some quick terminology/context:
 

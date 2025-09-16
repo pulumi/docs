@@ -175,7 +175,7 @@ $ pulumi convert --from terraform --language csharp --out pulumi
 
 ### Pulumi New support for SSH-style Git URLs
 
-In the [v3.77.0]() release of the Pulumi CLI, we added support for `pulumi new` to use SSH-style Git URLs which enables accessing templates from private Git repos, authenticated via normal Git SSH support.  Many teams have been building libraries of their own private templates, and this enables those templates to be used much more naturally via `pulumi new` and the [Deploy with Pulumi](/docs/pulumi-cloud/pulumi-button/) button.
+In the [v3.77.0](https://github.com/pulumi/pulumi/releases/tag/v3.77.0) release of the Pulumi CLI, we added support for `pulumi new` to use SSH-style Git URLs which enables accessing templates from private Git repos, authenticated via normal Git SSH support.  Many teams have been building libraries of their own private templates, and this enables those templates to be used much more naturally via `pulumi new` and the [Deploy with Pulumi](/docs/pulumi-cloud/pulumi-button/) button.
 
 ```shell
 $ pulumi new git@github.com:acmecorp/templates/website
@@ -185,7 +185,7 @@ $ pulumi new git@github.com:acmecorp/templates/website
 
 The team at [Virtus Lab](https://virtuslab.com/) released support for Scala in Pulumi as part of their Besom project at [https://github.com/VirtusLab/besom](https://github.com/VirtusLab/besom).  As they highlight in their README:
 
->  __Besom Scala SDK for Pulumi__ lets you leverage the full power of Pulumi Infrastructure as Code Platform using the Scala programming language. Scala support is currently in __Public Beta__.
+> __Besom Scala SDK for Pulumi__ lets you leverage the full power of Pulumi Infrastructure as Code Platform using the Scala programming language. Scala support is currently in __Public Beta__.
 
 The Scala language support builds on Pulumi's existing Java and JVM support, but with an SDK custom designed to target idiomatic Scala API design patterns.
 
@@ -215,7 +215,7 @@ The Scala language support builds on Pulumi's existing Java and JVM support, but
 
 The 6.0 release of the [Pulumi AWS](/registry/packages/aws/) provider introduces essential enhancements and updates to one of the most extensively used providers in the Pulumi ecosystem. These improvements encompass TF Plugin Framework support, the inclusion of new resources and functions, significant SDK size optimizations for faster downloads and improved developer experiences, resolutions to top-upvoted issues, and removal of deprecated resources. To dig deeper into these changes, check out the [migration guide](/registry/packages/aws/how-to-guides/6-0-migration/) and [blog post](/blog/announcing-6-0-of-the-pulumi-aws-classic-provider/).
 
-![](aws_api.png)
+![Pulumi Classic Provider API Coverage](aws_api.png)
 
 ### Azure Native 2.0
 
