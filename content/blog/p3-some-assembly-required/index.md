@@ -78,6 +78,7 @@ In order to deploy a stack you will need secrets such as cloud credentials and o
 An example set of environments might look something like this:
 
 **Example:** AWS login/credentials
+
 ```yaml
 # aws-creds ESC environment
 values:
@@ -94,6 +95,7 @@ values:
 ```
 
 **Example:** Default production environment to use `us-east-1` region
+
 ```yaml
 # aws-production ESC environment
 imports:
@@ -106,6 +108,7 @@ values:
 ```
 
 **Example:** Default staging environment to use `us-west-2` region
+
 ```yaml
 # aws-staging ESC environment
 imports:
@@ -168,7 +171,8 @@ PolicyPack(
 )
 ```
 
-If the tag isn’t on the resource, it blocks the deployment with an error message. The error message would look something like this:
+If the tag isn't on the resource, it blocks the deployment with an error message. The error message would look something like this:
+
 ```
 Policies:
     ❌ bucket-tags@v0.0.1
