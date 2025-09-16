@@ -48,10 +48,12 @@ With today’s launch, we support AWS IAM user credential rotation with many mor
 Below are the steps to configure [AWS IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) rotated secrets using best practices. You can also configure this via Pulumi IaC. Check out the [pexample program](https://github.com/pulumi/esc-examples/tree/esc-native-example/rotate/example-native).
 
 #### 1. Provision an AWS IAM User on your AWS console
+
 [Create an AWS IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) whose access keys you want to rotate.
 
 #### 2. Create a new environment with managing user credentials
-In the example environment `credentials/aws-creds` below, we use the ESC’s [aws-login provider](/docs/esc/integrations/dynamic-login-credentials/aws-login/) using OIDC. This credential was configured with the privileged access to be able to rotate the IAM user credentials.
+
+In the example environment `credentials/aws-creds` below, we use the ESC's [aws-login provider](/docs/esc/integrations/dynamic-login-credentials/aws-login/) using OIDC. This credential was configured with the privileged access to be able to rotate the IAM user credentials.
 
 The minimal permissions the managing credential requires are IAM List, Create, and DeleteAccessKeys over the IAM user you created.
 
@@ -72,6 +74,7 @@ values:
 ```
 
 #### 3. Create a new environment with the IAM user rotation configuration
+
 Define the rotation using rotated secrets aws-iam provider. Below is an example definition. Notice how the managing user credentials created in step 2 is referenced in the rotation provider `input`. This credential will only be used during rotation and never be exposed to the consumers of the rotated IAM user credential.
 
 Providing current and previous credentials is optional. If you already have IAM user access keys that are actively used, you can specify them in the `state` field as `current` and `previous`. If not, you can leave the state empty.
@@ -97,15 +100,18 @@ values:
 ```
 
 #### 4. Test the setup with a manual rotation
+
 In the Environment Editor screen,  open the triple-dot menu and select Rotate Secrets. Alternatively, you can perform the rotation from the ‘secrets rotation’ tab or use the rotate CLI command. Every rotation creates a new [revision](/docs/esc/environments/versioning/).
 
 If you did not provide current or precious credentials in step 3, rotation will generate new credentials automatically.
 
 #### 5. Monitor rotations
+
 Perform multiple rotations to observe how access keys move from current → previous → deleted. Use the Environment Revision History to track changes.
 
 #### 6. Schedule rotations
-Now that you’ve correctly configured your rotated secrets, set up an automated rotation schedule from the Secrets Rotation tab.
+
+Now that you've correctly configured your rotated secrets, set up an automated rotation schedule from the Secrets Rotation tab.
 
 {{< video title="Pulumi ESC Rotated Secrets Demo" src="rotated-secrets-demo.mp4" autoplay="true" loop="true" >}}
 

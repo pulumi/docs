@@ -40,6 +40,7 @@ Before we get into the details of using Pulumi to deploy a Vue.js frontend app t
 - [Vercel](https://vercel.com/) is a modern web development cloud platform and hosting provider. It specialises in making web application deployment simple and efficient.
 
 ## How to Integrate Your Chatbot Frontend and Deploy to Vercel
+
 If you are ready to integrate your chatbot and deploy it to Vercel along with us, then let's double check a few requirements before we continue. While Pulumi supports many languages, we chose Python for this project, as Python is a familiar language in the AI industry and this is part of the *#PulumiMLOps* challenge.
 
 ### Requirements

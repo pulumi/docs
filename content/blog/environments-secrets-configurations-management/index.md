@@ -275,6 +275,7 @@ We are already working with many additional partners to support pulling configur
 At launch, environments are managed directly in Pulumi Cloud.  But we’ve already heard early preview users express a desire to also be able to manage these via source-controlled code.  We’re exploring adding environments to the Pulumi Cloud Pulumi Provider to enable using desired state IaC to manage the definition of environments.  We’ve also worked with customers looking to be able to pin their projects that consume environments to specific versions of the environment, to avoid risk of breaking when environments are updated, and are working on extensions to enable this as well. See [pulumi/esc#59](https://github.com/pulumi/esc/issues/59) and [pulumi/esc#63](https://github.com/pulumi/esc/issues/63).
 
 ### Easy-to-Use Key/Value Interface in Pulumi Cloud
+
 For the preview, we focused on document-based editing experience for environments, which provides direct access to the full richness of Pulumi ESC.  For many common use cases, it’s helpful to have a simple key/value-based interface for adding and configuring secrets. We will add the ability to switch between both of these UI experiences in the Pulumi Cloud console soon.  See [pulumi/esc#62](https://github.com/pulumi/esc/issues/62). Below is an early sketch of this additional table-based user interface.
 
 ![Key/Value based Environment Editor in the Pulumi Console](./table-view.png)
