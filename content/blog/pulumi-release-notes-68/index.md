@@ -58,6 +58,7 @@ The team has been busy releasing new features and improvements in the last 3 wee
 Back in September 2021 we announced public preview for the [Helm Release](https://www.pulumi.com/registry/packages/kubernetes/api-docs/helm/v3/release/) resource in Pulumi's Kubernetes provider. Over the last few months, we have had a very encouraging uptake in usage and several meaningful discussions with users in the community that have helped shape improvements to this resource. Thanks to this collaboration, we have been able to make the Helm Release resource GA (generally available) in v3.15.0 of the Pulumi Kubernetes Provider and SDK, in all Pulumi supported languages. We are excited to offer yet another tool to Pulumi users to effectively manage their Kubernetes footprint.
 
 Learn more in our [Helm release blog post](/blog/helm-release-resource-for-kubernetes-generally-available/) and these GitHub issues:
+
 - [Honor namespace specification for all resources installed by Helm Release](https://github.com/pulumi/pulumi-kubernetes/pull/1747)
 - [Make values optional](https://github.com/pulumi/pulumi-kubernetes/pull/1761)
 - [Make RepositoryOpts optional](https://github.com/pulumi/pulumi-kubernetes/pull/1806)
@@ -103,6 +104,7 @@ Learn more in the [Disable Default Providers GitHub issue](https://github.com/pu
 Users of the `--target` flag had requested the ability to use wildcards instead of manually specifying each targeted resource. As a result we now support wildcards for `pulumi up --target <urn>` and similar commands. Learn more in the [Wildcards support GitHub issue](https://github.com/pulumi/pulumi/issues/5870).
 
 ### Consider default org when running commands that accept stack names
+
 Now that we have added the ability to take [advantage of a default org](https://github.com/pulumi/pulumi/pull/8352), we have added functionality to take into account where there are abilities to pass a stack name as part of a command, such as `pulumi up -s <stackname>` or as part of a `stack select` command. [Learn more in the GitHub issue](https://github.com/pulumi/pulumi/issues/8409).
 
 ## Pulumi Service & Pulumi.com

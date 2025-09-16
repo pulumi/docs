@@ -53,15 +53,19 @@ This blog post summarizes a presentation by Matt Stephenson at [PulumiUP 2023](/
 Watch Matt Stephenson's full presentation with demos. 8:03 demo of CI/CD. 15:33 demo of infrastructure automation.
 
 ## Technical and Business Problems to Solve
+
 Starburst operates a managed Trino service that runs on Kubernetes clusters on multiple clouds. Their Kubernetes clusters needed frequent manual scaling based on workloads. Furthermore, upgrading Trino versions running on the clusters ran the risk of potential service disruptions for customers. The company had been using tools like [Terraform](/docs/concepts/vs/terraform/) for IaC, Argo CD for deploying Helm charts, Maven, Docker containers, and a Slack bot for infrastructure and deployments. Their CI/CD workflow was difficult to maintain because they needed to create wrappers for their previous IaC tooling, making it less approachable in CI/CD environments. The pipeline was tenuously bound together using GitHub Actions and a Slack bot, requiring specialized GHA runners, leading to a messy architecture.
 
 ## Why Starburst Chose Pulumi
+
 Recognizing opportunities for improvement, Matt brought in Pulumi and its [Automation API](/automation). This unified Starburst's software development and infrastructure management practices, especially when deploying and managing Trino clusters on [Kubernetes](/kubernetes). The top two reasons Matt chose Pulumi were:
-* **Support for programming languages:** Pulumi supports the main languages used by Starburst’s developers, Java and TypeScript. This enables all engineers to write infrastructure code and promotes a cohesive application and infrastructure codebase.
+
+* **Support for programming languages:** Pulumi supports the main languages used by Starburst's developers, Java and TypeScript. This enables all engineers to write infrastructure code and promotes a cohesive application and infrastructure codebase.
 * **Pulumi Automation API:** Automation API is a programmatic interface for the Pulumi CLI and Pulumi IaC engine, which enables Starburst engineers to build [infrastructure automation](https://github.com/pulumi/automation-api-examples) into their applications and CI/CD processes, and orchestrate complex provisioning workflows.
 
 ## Benefits of Using Pulumi
-Adopting Pulumi and its Automation API provided several benefits that made Starburst’s engineers more efficient and productive, ultimately leading to faster and more reliable releases for Starburst’s customers. Matt summed up the benefits of Pulumi for Starburst’s engineers: "When I think about building an airplane, I think about precision and having the right tools for the job." Pulumi, for Starburst, epitomized this precision and efficiency.
+
+Adopting Pulumi and its Automation API provided several benefits that made Starburst's engineers more efficient and productive, ultimately leading to faster and more reliable releases for Starburst's customers. Matt summed up the benefits of Pulumi for Starburst’s engineers: "When I think about building an airplane, I think about precision and having the right tools for the job." Pulumi, for Starburst, epitomized this precision and efficiency.
 
 **Increased deployment speeds by 3x for new customer releases:** Starburst engineers used the Pulumi Automation API to triple the deployment speed of multi-cloud Kubernetes clusters with blue-green deployments that complete within minutes. They did this by orchestrating blue-green updates across their data plane running on the clusters, ensuring zero customer downtime. They built intricate integrations between Pulumi and internal APIs that enabled them to seamlessly transition customers to new clusters. Now they can update their customers’ runtimes, including VPCs and Kubernetes clusters, twice a week.
 
