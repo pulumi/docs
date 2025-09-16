@@ -55,10 +55,10 @@ The team has been busy releasing new features and improvements in the last 3 wee
 
 ### Helm Release for Kubernetes GA
 
-Back in September 2021 we announced public preview for the [Helm Release](https://www.pulumi.com/registry/packages/kubernetes/api-docs/helm/v3/release/) resource in Pulumi’s Kubernetes provider. Over the last few months, we have had a very encouraging uptake in usage and several meaningful discussions with users in the community that have helped shape improvements to this resource. Thanks to this collaboration, we have been able to make the Helm Release resource GA (generally available) in v3.15.0 of the Pulumi Kubernetes Provider and SDK, in all Pulumi supported languages. We are excited to offer yet another tool to Pulumi users to effectively manage their Kubernetes footprint.
-
+Back in September 2021 we announced public preview for the [Helm Release](https://www.pulumi.com/registry/packages/kubernetes/api-docs/helm/v3/release/) resource in Pulumi's Kubernetes provider. Over the last few months, we have had a very encouraging uptake in usage and several meaningful discussions with users in the community that have helped shape improvements to this resource. Thanks to this collaboration, we have been able to make the Helm Release resource GA (generally available) in v3.15.0 of the Pulumi Kubernetes Provider and SDK, in all Pulumi supported languages. We are excited to offer yet another tool to Pulumi users to effectively manage their Kubernetes footprint.
 
 Learn more in our [Helm release blog post](/blog/helm-release-resource-for-kubernetes-generally-available/) and these GitHub issues:
+
 - [Honor namespace specification for all resources installed by Helm Release](https://github.com/pulumi/pulumi-kubernetes/pull/1747)
 - [Make values optional](https://github.com/pulumi/pulumi-kubernetes/pull/1761)
 - [Make RepositoryOpts optional](https://github.com/pulumi/pulumi-kubernetes/pull/1806)
@@ -73,7 +73,6 @@ Pulumi’s previews are an important part of any workflow where you want to see 
 As a result, we launched a public preview of Update Plans, a new Pulumi feature which guarantees that operations shown in `pulumi preview` will run on `pulumi up`. Update Plans also help catch any unexpected changes that might happen between when you preview a change and when you apply that change. Update Plans work by saving the results of a `pulumi preview` to a plan file, which enables you to restrict subsequent `pulumi up` operations to only the actions saved in the plan file. This helps you ensure that what you saw in the `pulumi preview` is what will actually happen when you run `pulumi up`.
 
 Learn more in our [blog post on Update Plans](/blog/announcing-public-preview-update-plans/) and in this [Update Plans GitHub issue](https://github.com/pulumi/pulumi/issues/2318).
-
 
 ### Disable default provider
 
@@ -97,6 +96,7 @@ This adds a new entry to the list `pulumi:disable-default-providers`. To disable
 ```sh
 $ pulumi config set --path 'pulumi:disable-default-providers[0]' '*'
 ```
+
 Learn more in the [Disable Default Providers GitHub issue](https://github.com/pulumi/pulumi/issues/3383).
 
 ### `pulumi up --target` wildcard URN support
@@ -104,6 +104,7 @@ Learn more in the [Disable Default Providers GitHub issue](https://github.com/pu
 Users of the `--target` flag had requested the ability to use wildcards instead of manually specifying each targeted resource. As a result we now support wildcards for `pulumi up --target <urn>` and similar commands. Learn more in the [Wildcards support GitHub issue](https://github.com/pulumi/pulumi/issues/5870).
 
 ### Consider default org when running commands that accept stack names
+
 Now that we have added the ability to take [advantage of a default org](https://github.com/pulumi/pulumi/pull/8352), we have added functionality to take into account where there are abilities to pass a stack name as part of a command, such as `pulumi up -s <stackname>` or as part of a `stack select` command. [Learn more in the GitHub issue](https://github.com/pulumi/pulumi/issues/8409).
 
 ## Pulumi Service & Pulumi.com

@@ -42,7 +42,7 @@ The new Stacks page provides more information at a glance, offering a streamline
 
 ### Classic View: Still Available
 
-For users who prefer the familiar grouping by repository and project, and sorting by last updated, we've got you covered! Simply click the "Classic View" shortcut in the top right-corner to switch to the classic grouping and sorting option instantaneously. 
+For users who prefer the familiar grouping by repository and project, and sorting by last updated, we've got you covered! Simply click the "Classic View" shortcut in the top right-corner to switch to the classic grouping and sorting option instantaneously.
 
 ## Your Feedback Matters
 

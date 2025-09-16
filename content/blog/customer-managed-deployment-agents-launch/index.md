@@ -72,7 +72,6 @@ Customer-Managed Agents support all the deployment triggers currently offered by
 Customer-Managed Agents is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Agents. If you are a self-hosted Pulumi Cloud customer, please [get in touch](https://share.hsforms.com/1YajiJ73sSuGn5RoTkyvKxg2mxud) to be notified when it is available.
 {{% /notes %}}
 
-
 ## How to get started
 
 Before you begin, ensure you have installed the [Pulumi Github App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) and update the [source control settings](/docs/pulumi-cloud/deployments/get-started). [Docker](https://docs.docker.com/engine/) is a requirement for the agent.
@@ -135,8 +134,8 @@ On the deployments page, you can see all the deployments including pending deplo
 
 ![Deployments page](./view-deployment-status.png)
 
-
 ## Your Journey, Our Support
+
 Customer-Managed Agents empower you to align your deployment strategies with the specific requirements of your infrastructure. Whether it's ensuring compliance, enhancing security, or customizing deployment processes, Customer-Managed Agents provide the flexibility you need.
 
 Embark on this journey to simplify your infrastructure deployments with our new feature. We are here every step of the way to assist you. Share any feedback in the [Pulumi Cloud Requests repository](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose) with us.

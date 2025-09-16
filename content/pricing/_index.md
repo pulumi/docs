@@ -436,9 +436,9 @@ comparison_table:
                 link: /pricing#faq
                 items:
                   - content: 500 free
-                  - content: $0.01, <br>3,000 included
-                  - content: $.01 / Custom, <br>3,000 included
-                  - content: $.01 / Custom, <br>3,000 included                  
+                  - content: $0.01<br>3,000 included
+                  - content: $0.01 / Custom<br>3,000 included
+                  - content: $0.01 / Custom<br>3,000 included                  
               - title: Resource search
                 link: /docs/insights/search/
                 items:
@@ -466,46 +466,48 @@ comparison_table:
                   - content: _check
                   - content: _check
                   - content: _check
-              - title: Policy enforcement
-                link: /docs/insights/policy-as-code/
-                items:
-                  - content: _blank
-                  - content: _blank
-                  - content: Available
+              - title: Policy Enforcement
+                link: /docs/insights/policy-as-code
+                items: 
+                  - content: "Manual"
+                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
+              - title: Preventative Policies
+                link: /docs/insights/preventative-vs-audit-policies/
+                items: 
+                  - content: Manual
                   - content: _check
-              - title: Gated deployments
-                items:
-                  - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
-                  - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
-                  - content: "[Local enforcement](/docs/using-pulumi/crossguard/get-started/#running-locally)"
-                  - content: "[Server-side enforcement](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
-              - title: Organization policies
-                items:
-                  - content: _blank
-                  - content: _blank
-                  - content: Available
                   - content: _check
-              - title: Compliance-ready policies
-                link: /docs/using-pulumi/crossguard/compliance-ready-policies/
+                  - content: _check
+              - title: Audit Policies
+                link: /docs/insights/preventative-vs-audit-policies/
+                items: 
+                  - content: _blank
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+              - title: Pre-built Policy Packs
+                link: /docs/insights/pre-built-packs
+                items: 
+                  - content: _blank
+                  - content: Pulumi Best Practices
+                  - content: Pulumi Best Practices
+                  - content: Pulumi Best Practices, HITRUST CSF
+              - title: Custom Policy Packs
+                link: /docs/iac/crossguard/get-started/#creating-a-policy-pack
                 items:
                   - content: _blank
-                  - content: _blank
-                  - content: Available
-                  - content: _check
-              - title: Remediation policies
-                link: /docs/iac/crossguard/core-concepts/#resource-remediation-with-iac
+                  - content: 1 pack<br>up to 25 policies
+                  - content: 3 packs<br>up to 100 policies
+                  - content: Unlimited
+              - title: Enforcement Modes
+                link: /docs/using-pulumi/crossguard/core-concepts/#enforcement-levels
                 items:
                   - content: _blank
-                  - content: _blank
-                  - content: Available
-                  - content: _check
-              - title: Dashboard for policy violations
-                link: /docs/using-pulumi/crossguard/policy-violations/
-                items:
-                  - content: _blank
-                  - content: _blank
-                  - content: Available
-                  - content: _check
+                  - content: Advisory & Mandatory
+                  - content: Advisory & Mandatory
+                  - content: Advisory, Mandatory & Remediation 
           ## Copilot Table
           - header: Infrastructure AI
             subheader: Intelligent assistance across all platform capabilities
