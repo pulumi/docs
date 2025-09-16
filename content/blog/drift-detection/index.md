@@ -66,6 +66,7 @@ And just like that, you have Drift Detection! To test what the output will look 
 You will now see on the Drift tab, a summary of what resources have been updated or deleted, the properties that have changed, when the drift run happened and a link to the Deployment with further details.
 
 When drift is detected, you have a couple of options:
+
 1. _Run remediation from Pulumi Cloud_:  If you want to overwrite the changes made in your cloud provider with the most recently specified desired state of your Pulumi program.  This can be done via the "Remediate drift" option in the Actions drop down on your stack page.
 2. _Run refresh from Pulumi Cloud_:  If you want to accept the changes made in your cloud provider back into your Pulumi desired state.  This can be done via the "Refresh" option in the Actions drop down on your stack page. You may also want to update your Pulumi program to align with the changes made in the cloud provider.
 

@@ -78,6 +78,7 @@ In your Pulumi Cloud Console,
 {{< video title="Pulumi ESC Versioning Demo" src="esc-versioning-demo.mp4" autoplay="true" loop="true" >}}
 
 ## Real-world Scenarios
+
 Here are a few examples of how you might use these features:
 
 - **Global Infrastructure Update**: You need to deploy a new configuration to a global service spanning multiple regions. Tag the updated configuration as `next` and deploy it to one region for testing. After verifying stability, you can confidently roll it out to other regions. If issues arise, quickly revert to the previous `stable` version, ensuring resilient and minimally disruptive deployments.

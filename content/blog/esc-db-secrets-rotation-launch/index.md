@@ -108,6 +108,7 @@ If your PostgreSQL instance is running on AWS RDS, we recommend using our [Pulum
 The Pulumi template creates two ESC environments with most of the configuration pre-filled. You need to update them with your specific PostgreSQL user credentials and database name.
 
 *   **Managing Credentials Environment (e.g., `postgresrotation/ManagingCreds`):** Navigate to this environment in the Pulumi Cloud console. Update the managing user's username and password. The `awsLogin` section, which provides credentials for the Lambda connector to assume, should be pre-filled by the template.
+
   ```yaml
   # postgresrotation/ManagingCreds
   values:

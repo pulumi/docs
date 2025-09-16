@@ -111,16 +111,19 @@ Pulumi now offers more control over error handling during deployments with the n
 {{< video title="Using pulumi new with the new AI option" src="/blog/continue-on-error/coe.mp4" controls="false" autoplay="true" loop="true" >}}
 
 ### Run Pulumi with Any TypeScript Version
+
 Previously, Pulumi's seamless TypeScript experience was limited to version 3.8, requiring manual build steps for newer versions. But now, with the release of the [Pulumi Node.js SDK 3.113.0](https://www.npmjs.com/package/@pulumi/pulumi), you can use any TypeScript version 3.8 or later, including the latest [TypeScript 5.4](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-4.html), by simply adding it as a dependency in your project's package.json file. Pulumi will automatically use the specified version for compilation, unlocking access to the newest TypeScript features and improved type checking. Read the [blog post](/blog/typescript-versions/) for a detailed example and instructions on upgrading your projects.
 
 ## Providers and Packages
 
 ### Next-Generation Docker Image Builds with Pulumi
+
 Pulumi introduces the new [Docker Build provider](/registry/packages/docker-build/), a dedicated package designed to modernize and streamline Docker image builds directly from your Pulumi programs. The new provider exposes Docker's next-generation buildx interface, unlocking advanced features such as multi-platform image support, advanced caching mechanisms, built-in support for build secrets, and seamless integration with Docker Build Cloud. This unlocks powerful scenarios, including building multi-architecture images and optimizing build performance with various cache backends. Read the [blog post](/blog/docker-build/) for detailed examples and migration guides.
 
 {{< video title="Docker Build Cloud" src="/blog/docker-build/dbc.mp4" autoplay="true" loop="true" >}}
 
 ### Using Pulumi with Azure Deployment Environments
+
 Pulumi now supports authoring [Azure Deployment Environments (ADE)](https://learn.microsoft.com/en-us/azure/deployment-environments/) environment definitions, empowering developers to self-serve the application infrastructure they need while maintaining centralized management and governance. This integration allows you to leverage Pulumi's familiar programming model and the full power of its Infrastructure as Code (IaC) platform to define and manage Azure resources within ADE environments.  You can define ADE environments using a simple YAML configuration file that references a Pulumi program written in any of Pulumi's supported languages, including C#, TypeScript, Python, Go, and YAML. Leveraging a dedicated Pulumi Docker image, ADE seamlessly executes the selected Pulumi program, provisioning the defined Azure resources. This streamlines the creation of new environments, enhances developer productivity, and ensures consistency and compliance with organizational standards. Read the [blog post](/blog/azure-deployment-environments/) for a detailed walkthrough and examples.
 
 #### Helm Chart v4 Resource

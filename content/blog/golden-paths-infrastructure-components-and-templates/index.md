@@ -49,9 +49,11 @@ This post is part of our IDP Best Practices series:
 To understand where golden paths fit into an Internal Developer Platform (IDP), think in layers. This three-tier model structures your platform to deliver increasing levels of abstraction, reuse, and developer value:
 
 ### Layer 1: Infrastructure Layer
+
 This is the foundation: raw cloud resources include VMs, databases, networks, and storage, which are the fundamental building blocks from AWS, Azure, GCP, and other providers. Pulumi gives you programmatic access to these resources through [native providers](/registry/), but working at this level requires deep infrastructure knowledge.
 
 ### Layer 2: Platform Layer - Components
+
 This is where the magic happens. [Pulumi Components](/docs/iac/concepts/resources/components/) take those raw resources and package them into higher-level abstractions. Instead of manually configuring 20+ AWS resources for a secure web application, you create a component that handles all that complexity and exposes just the configuration that matters:
 
 ```typescript
@@ -234,18 +236,21 @@ Teams evolve from ad hoc deployments to mature, productized templates with versi
 Organizations typically progress through three stages of golden path maturity:
 
 #### Stage 1: No Golden Paths
+
 - Every team reinvents the wheel
 - Inconsistent practices across projects
 - High cognitive load on developers
 - Security and compliance gaps
 
 #### Stage 2: Dawn of Templates
+
 - Basic cookie-cutter templates emerge
 - Some standardization begins
 - Manual processes still dominate
 - Limited support and evolution
 
 #### Stage 3: Templates as Products
+
 - Golden paths have dedicated owners
 - Regular release cycles and versioning
 - Migration guides for updates
@@ -265,6 +270,7 @@ Drawing from [Spotify's pioneering work](https://engineering.atspotify.com/2020/
 ### Building a Go Microservice Golden Path
 
 Let's create a complete golden path for Go microservices that includes:
+
 - Application scaffolding with best practices
 - Infrastructure deployment using our component
 - CI/CD pipeline configuration
@@ -532,17 +538,20 @@ This golden path provides everything your development team needs to deploy produ
 ### Your Experience
 
 **Day 1: Getting Started**
+
 - Clone this repo, run `pulumi up`
 - Your service is live on AWS in 5-10 minutes
 - Public URL provided automatically - no manual setup needed
 
 **Day 2-N: Development Workflow**
+
 - Write your Go code in `microservice/main.go`
 - Test locally with `go run main.go`
 - Deploy changes with `pulumi up`
 - AWS automatically rebuilds and redeploys your container
 
 **Production Operations**
+
 - Service automatically scales with CPU load (80% up, 10% down)
 - Health checks ensure unhealthy containers are replaced
 - Load balancer distributes traffic across healthy instances
@@ -551,6 +560,7 @@ This golden path provides everything your development team needs to deploy produ
 ### What's Handled For You
 
 You **don't** need to learn or configure:
+
 - ECS clusters, services, and task definitions
 - Application Load Balancers and target groups
 - Auto-scaling policies and CloudWatch alarms
@@ -559,6 +569,7 @@ You **don't** need to learn or configure:
 - Health check configuration
 
 You **do** focus on:
+
 - Writing your Go application logic
 - Adding your business endpoints
 - Testing your service locally
@@ -597,13 +608,16 @@ Navigate to [Pulumi IDP](/docs/idp/get-started/workflows/) → `Templates` → `
 Well-designed components and templates are the foundation of scalable, self-service infrastructure. These best practices ensure your abstractions are maintainable, discoverable, and production-ready.
 
 ### 1. Design for Day 2 Operations from Day 1
+
 Think beyond deployment. A golden path must also support ongoing operations:
+
 - How will teams safely update their infrastructure?
 - What happens during scaling events?
 - How do you handle disaster recovery?
 - What metrics and logs are needed for troubleshooting?
 
 ### 2. Expose Complexity Progressively
+
 Provide sensible defaults that work, while enabling customization for advanced use cases:
 
 ```typescript
@@ -623,7 +637,9 @@ interface ComponentArgs {
 ```
 
 ### 4. Use Semantic Versioning Everywhere
+
 Clear versioning for both components and templates indicate stability and reliability:
+
 - **Major versions** (1.0.0 → 2.0.0): Breaking changes
 - **Minor versions** (1.0.0 → 1.1.0): New features, backward compatible
 - **Patch versions** (1.0.0 → 1.0.1): Bug fixes
@@ -631,6 +647,7 @@ Clear versioning for both components and templates indicate stability and reliab
 This lets teams adopt updates with confidence and control.
 
 ### 5. Test Your Abstractions
+
 Don't ship black boxes. Create automated tests to validate key functionality and resource creation. Focus on:
 
 - Smoke tests that validate resource existence
@@ -661,16 +678,19 @@ describe("MicroserviceComponent", () => {
 Golden paths aren’t complete until they deliver measurable value. Use these KPIs to assess performance and drive iteration:
 
 ### Adoption Metrics
+
 - **Template usage rate**: Percentage of new projects using golden paths
 - **Component reuse**: Number of stacks consuming shared components
 - **Time to first deployment**: Deployment time and frequency from code to production
 
 ### Quality Metrics
+
 - **Security compliance rate**: Percentage of deployments passing security policies
 - **Stability**: Deployment incident frequency
 - **Mean time to recovery (MTTR)**: Time to recover from production issues
 
 ### Developer Experience Metrics
+
 - **Developer satisfaction**: Survey teams about their platform experience
 - **Support ticket volume**: Ticket volume related to infrastructure
 - **Contribution**: Number of PRs or issues submitted to platform templates
@@ -688,18 +708,22 @@ These results show that golden paths are not just developer tools, they're a com
 ## Common Pitfalls and How to Avoid Them
 
 ### Pitfall 1: Over-Abstraction
+
 **Problem**: Creating components so abstract they're unusable
 **Solution**: Start with concrete use cases, then generalize based on actual patterns
 
 ### Pitfall 2: Insufficient Escape Hatches
+
 **Problem**: Golden paths become golden cages
 **Solution**: Always provide ways to extend or override default behavior
 
 ### Pitfall 3: Poor Versioning Strategy
+
 **Problem**: Breaking changes without migration paths
 **Solution**: Maintain backward compatibility and provide clear upgrade guides
 
 ### Pitfall 4: Lack of Ownership
+
 **Problem**: Templates become orphaned and outdated
 **Solution**: Assign clear ownership and establish maintenance schedules
 
@@ -708,12 +732,15 @@ These results show that golden paths are not just developer tools, they're a com
 The future of golden paths is intelligent, cross-cloud, and fully integrated with modern workflows.
 
 ### AI-Enhanced Templates
+
 Imagine templates that adapt based on your application's actual behavior, automatically tuning resources and configurations for optimal performance and cost.
 
 ### Cross-Cloud Portability
+
 Components that abstract not just resources but entire cloud providers, enabling true multi-cloud golden paths.
 
 ### GitOps-Native Workflows
+
 Templates that include not just infrastructure but complete GitOps pipelines, from code commit to production deployment.
 
 ## Your First Steps to Golden Paths

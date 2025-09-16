@@ -33,6 +33,7 @@ Starting with our [previous blog post](https://www.pulumi.com/blog/pulumi-patter
 ## Pulumi P3: Bill of Materials
 
 Previously we identified the [essential qualities of an effective IDP](https://www.pulumi.com/blog/pulumi-patterns-and-practices/#an-effective-internal-developer-platform). Those were consistency, reproducibility, visibility, security and compliance, auditability, developer experience. In the [last half of the post](https://www.pulumi.com/blog/pulumi-patterns-and-practices/#a-holistic-view-of-the-patterns-and-practices-platform-reference-architecture) we discussed which parts of Pulumi could be used to meet those needs. That looks like:
+
 * **Consistency**: [component resources](https://www.pulumi.com/learn/abstraction-encapsulation/component-resources/), [organization templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/), [drift detection](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/)
 * **Reproducibility**: [stacks](https://www.pulumi.com/learn/building-with-pulumi/understanding-stacks/), [deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/), [versioned data](/registry/packages/snowflake/api-docs/dynamictable/)
 * **Visibility**: [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/), [Pulumi Copilot](https://www.pulumi.com/product/copilot/)
@@ -43,6 +44,7 @@ Previously we identified the [essential qualities of an effective IDP](https://w
 That’s all great, and much of that is already built-into Pulumi without the need for you to do anything at all. So, what parts do you actually need to set up and configure? Here’s the bill of materials (BOM) to set up your own instance of Pulumi P3:
 
 ### Bill of Materials:
+
 * **Authentication and Identity Management**:
     * A GitHub organization that matches your Pulumi Cloud organization
     * GitHub Teams users and roles that match your organizational structure and security needs
@@ -121,6 +123,7 @@ values:
 ```
 
 Here we define three environments for AWS:
+
 * `aws-creds`: sets up login via OpenID Connect (OIDC) and provides standard environment variables containing AWS credentials to the Pulumi program
 * `aws-production`: imports everything from `aws-creds` then sets the region to `us-east-1`
 * `aws-staging`: does the same, but sets the region to `us-west-2`.
@@ -198,7 +201,8 @@ In Pulumi, a *[component resource](https://www.pulumi.com/docs/concepts/resource
 
 A *multi-language component (MLC)* is even more useful. You can author your component in your language of choice and then generate a SDK that surfaces that component into all of the languages that Pulumi supports. For example, your platform team might be comfortable writing in Python, but the developers that write your microservices might use Go, and the developers who write the front-end apps might use Node.js. Both teams might need to deploy apps and infrastructure into your Kubernetes cluster. With multi-language components you can write a component in Python that abstracts away all the details of your custom Kubernetes cluster, and make that available to both teams, in both Go, Node.js, and any other language that Pulumi supports.
 
-To build a MLC, you’ll follow these basic steps to create the component, provider, provider package, and generate the multi-language SDK:
+To build a MLC, you'll follow these basic steps to create the component, provider, provider package, and generate the multi-language SDK:
+
 1. Fork one of the component provider boilerplate repos for [Python](https://github.com/pulumi/pulumi-component-provider-py-boilerplate), [TypeScript](https://github.com/pulumi/pulumi-component-provider-ts-boilerplate), or [Go](https://github.com/pulumi/pulumi-component-provider-go-boilerplate).
 2. Update the package and code-generator configuration files, which name your component and package, define the inputs and outputs, and declare the dependencies.
 3. Implement the component in your preferred language.
@@ -253,6 +257,7 @@ The final piece that ties all this together are *[organization templates](https:
 Pulumi’s [New Project Wizard](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/new-project-wizard/) reads these templates and provides an in-browser way to create a new project and deploy it. Running one of these templates will commit and push code to GitHub, and trigger an initial deployment – all in a few clicks and without leaving the browser.
 
 Each template needs the following parts:
+
 * A `Pulumi.yaml` describing the template and its configuration values
 * A GitHub repo (public or private) containing the code for the templated Pulumi program
 

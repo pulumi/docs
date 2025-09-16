@@ -128,6 +128,7 @@ Looking ahead, Giambruno is particularly enthusiastic about the potential of Pul
 Tivity Health's journey with Pulumi is a powerful example of how the right tool, DevSecOps strategy, and automation can drive tangible business results. By focusing on automation, security, and collaboration, organizations can achieve faster, cheaper, and better cloud deployments—putting them on the path to long-term success in an increasingly competitive, cloud-native world.
 
 To learn more about Pulumi and how it can transform your software development and infrastructure management:
+
 - Get started with [Pulumi Tutorials](https://www.pulumi.com/tutorials/)
 - Attend an [upcoming workshop](https://www.pulumi.com/resources/#upcoming)
 - Try out the [Pulumi AI](https://www.pulumi.com/ai) code assistant to accelerate your infrastructure as code journey

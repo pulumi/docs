@@ -103,6 +103,7 @@ At this critical juncture, BMW discovered Pulumi. This modern IaC solution offer
 ### Shared Modules: Promoting Reusability and Best Practices
 
 One of BMW's key initiatives was developing a shared modules library, which allowed the team to abstract the complexity of various infrastructure components, such as databases, and provide a consistent and user-friendly interface for their developers.
+
 - By leveraging [Pulumi's Python](https://www.pulumi.com/docs/iac/languages-sdks/python/) bindings, BMW was able to create reusable modules that encapsulated best practices and sensible defaults, making it easier for developers to provision and manage infrastructure resources.
 BMW used Pydantic, a data validation library, to define schema-based configurations for its infrastructure. These were then integrated into its IDEs, providing developers with auto-completion and validation support.
 - This approach not only accelerated the development process but also ensured that the infrastructure deployed across the organization adhered to consistent security and compliance standards.
@@ -117,6 +118,7 @@ BMW used Pydantic, a data validation library, to define schema-based configurati
 
 One key benefit of [Pulumi's IaC approach](https://www.pulumi.com/product/infrastructure-as-code/) is the ability to define and enforce policies across the organization, ensuring that infrastructure deployments adhere to security and compliance standards.
 BMW has leveraged [Pulumi's policy-as-code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
+
 - By integrating these policy checks into their deployment workflows, BMW has shifted security and compliance concerns to the left, addressing issues early in the development process and reducing the risk of costly post-deployment [remediations](https://www.pulumi.com/blog/remediation-policies/).
 
 ## The Benefits of Pulumi: Accelerating Development and Improving Maintainability
@@ -154,6 +156,7 @@ BMW's journey with Pulumi in the Software Factory showcases the power of modern 
 As the automotive industry continues to evolve, with cars becoming increasingly software-driven, the lessons learned by BMW can serve as a blueprint for other organizations looking to streamline their software development and deployment processes. By leveraging the capabilities of Pulumi and other cutting-edge technologies, the future of automotive software is poised to be more efficient, secure, and responsive to the ever-changing needs of both manufacturers and consumers.
 
 To learn more about Pulumi and how it can transform your software development and infrastructure management:
+
 - Get started with [Pulumi Tutorials](https://www.pulumi.com/tutorials/)
 - Attend an [upcoming workshop](https://www.pulumi.com/resources/#upcoming)
 - Try out the [Pulumi AI](https://www.pulumi.com/ai) code assistant to accelerate your infrastructure as code journey

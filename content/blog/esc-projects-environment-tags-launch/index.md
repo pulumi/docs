@@ -31,6 +31,7 @@ Projects offer a structured way to organize environments into logical groupings.
 For example, your organization could have a project named "payments-app" containing `dev`, `staging`, and `prod` environments within it. Your organization could also have a project called "dev-credentials" which contains different environments used to provide temporary runtime access to credentials for developers while working.
 
 We have two additional features as part of this launch:
+
 - **Grouping and Search**: You can group environments by either Project name or by Environment Tags, as well as search by them, making it simple to locate and manage your environments.
 - **Environment Clone**: Using the built-in cloning functionality, you can securely copy environments with sensitive information, preserving either the entire version history or just the latest environment state, depending on your needs.
 
@@ -72,6 +73,7 @@ With the introduction of Projects, all existing environments part of the `defaul
 - If you were using any of the [secrets providers with OIDC](/docs/esc/environments/#using-secrets-providers-and-oidc), you will need to update both the subject and audience if a trust relationship has been set up. The subject will be either `pulumi:environments:org:<organization name>:env:<project name>/<environment name>` if no `subjectAttributes` are specified or if the `currentEnvironment.name` subject attribute is specified it will now resolve to `currentEnvironment.name:<project name>/<environment name>`. The audience will be the provider's platform name (`aws`, `azure`, or `gcp`) followed by the org name of the environment (e.g. `aws:pulumi`).
 
 ## Introducing Environment Tags
+
 Using Environment Tags, teams can now assign any number of custom tags to each environment within Pulumi ESC. These tags serve as contextual identifiers that can streamline workflows by enabling you to group and search across environments based on specific criteria such as teams, project stages, deployment environments, compliance requirements, or geographic locations. This multi-dimensional approach provides unparalleled flexibility and control, ensuring your Pulumi ESC environments can scale seamlessly with your organizations evolving needs.
 
 For example, suppose your organization has multiple environments across different geographic regions. You can use Environment Tags like 'region: us-east' or 'region: eu-central-1' to quickly filter environments by region. Similarly, for security audits, you might tag environments with ‘Compliance: SOC2’ or ‘Compliance: GDPR’ to easily find relevant environments and ensure they are compliant.
@@ -91,6 +93,7 @@ Last updated at 2024-09-10 11:03:05.708 -0700 PDT by Derek <dschaller>
 ```
 
 ## Conclusion
+
 Pulumi ESC Projects and Environment Tags are powerful additions that bring order and clarity to your secrets and configuration to even the most complex infrastructure landscapes. By enabling you to organize, group, and search for your environments with ease, we're empowering you to scale your infrastructure with high confidence and flexibility.
 
 We're excited to see how you leverage these new capabilities. Check out the docs to learn more about Pulumi ESC Projects and Environment Tags and start organizing your environments today!
