@@ -2,7 +2,7 @@
 title: "Pulumi Insights: Intelligence for Cloud Infrastructure"
 allow_long_title: true
 authors: ["luke-hoban"]
-meta_desc: "Pulumi Insights provides intelligence, search, and analytics over any infrastructure in any cloud across your organization, leveraging the latest advances in generative AI and Large Language Models (LLMs)."
+meta_desc: "Pulumi Insights provides AI-powered intelligence, search, and analytics for cloud infrastructure across any provider using generative AI and LLMs."
 date: "2023-04-13T06:00:00-08:00"
 meta_image: "insights.png"
 tags:

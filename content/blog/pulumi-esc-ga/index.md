@@ -3,7 +3,7 @@ title: "Announcing the General Availability of Pulumi ESC - Welcome to a New Era
 allow_long_title: true
 date: 2024-09-18T8:59:00-00:00
 draft: false
-meta_desc: "Pulumi ESC is the centralized secrets management and orchestration service that enables taming secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications."
+meta_desc: "Pulumi ESC GA: Centralized secrets management service that tames secrets sprawl and configuration complexity across cloud infrastructure and applications."
 meta_image: "meta.png"
 authors:
   - arun-loganathan
