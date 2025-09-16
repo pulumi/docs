@@ -157,6 +157,7 @@ app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`)
 })
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -226,6 +227,7 @@ async def delete(name: str, org: str, project: str, stack: str, region: str):
     stack.destroy(on_output=print)
     return {"message": "Stack destroyed"}
 ```
+
 {{% /choosable %}}
 
 Let us run the above Python example in a FastAPI server to see how the Automation API works in practice.
@@ -236,6 +238,7 @@ Let's start by creating a new Python file called `main.py` and pasting the above
 python3 -m venv ven
 source venv/bin/activate
 ```
+
 Create a new file called `requirements.txt` and paste the following dependencies into it:
 
 ```bash

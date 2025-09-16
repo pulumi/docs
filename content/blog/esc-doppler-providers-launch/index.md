@@ -60,6 +60,7 @@ values:
 2. Save the environment.
 3. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/doppler-auth/oidc-login` in your CLI. The output will include the `doppler.login.accessToken`.
 4. Usage Example: Run Doppler CLI commands dynamically:
+
 ```bash
 esc run pulumi-org/doppler-auth/oidc-login -- doppler secrets download --no-file --format=json --project=<your-project-id> --config=<your-config-id>
 # The DOPPLER_TOKEN env var is automatically injected
@@ -102,9 +103,11 @@ values:
     API_KEY: ${dopplerSecrets.apiKey}
     APP_SECRET: ${dopplerSecrets.appSecret}
 ```
-5. Save the environment.
-6. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/my-app/dev` in your CLI. The output will show the imported `doppler.login`, the fetched secrets under `dopplerSecrets`, and the mapped `environmentVariables`.
-7. **Usage Example:** Run an application that needs these secrets:
+
+5.  Save the environment.
+6.  Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/my-app/dev` in your CLI. The output will show the imported `doppler.login`, the fetched secrets under `dopplerSecrets`, and the mapped `environmentVariables`.
+7.  **Usage Example:** Run an application that needs these secrets:
+
     ```bash
     esc run pulumi-org/my-app/dev -- node app.js
     # The API_KEY and APP_SECRET env vars are automatically injected

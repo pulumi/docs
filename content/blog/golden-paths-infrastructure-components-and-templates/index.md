@@ -578,6 +578,7 @@ Once published, developers can discover and deploy it directly from the IDP inte
 Now developers can deploy through multiple interfaces:
 
 **CLI Deployment:**
+
 ```bash
 pulumi new https://github.com/myorg/go-microservice-boilerplate
 ```

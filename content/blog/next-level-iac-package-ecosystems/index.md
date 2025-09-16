@@ -110,6 +110,7 @@ contentType: "text/plain", // MIME-type of the file. Adjust if you upload a diff
 ```python
 content_type='text/plain')  # MIME-type of the file. Adjust if you upload a different type of file.
 ```
+
 {{% /choosable %}}
 
 Yeah, hard-coding the MIME type for every file I need to upload is a not going to scale. In fact, I’m probably going to get a random directory full of files I need to iterate over, each with different file types, and it will change every time it runs, and we won’t know what type of file it is ahead of time.
@@ -127,6 +128,7 @@ import * as mime from 'mime-types'
 const mimeType = mime.lookup('path/to/your/local/file.txt');
 
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}

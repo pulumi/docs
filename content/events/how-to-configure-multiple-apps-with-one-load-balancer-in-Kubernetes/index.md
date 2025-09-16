@@ -79,16 +79,19 @@ For example, the path "/app1" is directed to the `app1-service`, and the path "/
 Once you have written the Pulumi program, it's time to deploy it and see the magic happen! First, make sure you have set up your Kubernetes cluster and have the necessary permissions to deploy resources. Then, follow these steps:
 
 1. Initialize the Pulumi project:
+
    ```shell
    pulumi new kubernetes-typescript
    ```
 
 2. Install the required dependencies (ensure you are in the project root directory):
+
    ```shell
    npm install @pulumi/kubernetes --save
    ```
 
 3. Deploy the program:
+
    ```shell
    pulumi up
    ```

@@ -72,6 +72,7 @@ const lambdaFunction = new awscc.lambda.Function("myLambdaFunction", {
 export const lambdaFunctionArn = lambdaFunction.arn;
 export const s3BucketName = bucket.bucket;
 ```
+
 {{% /choosable %}}
 {{% choosable language python %}}
 
@@ -107,6 +108,7 @@ my_lambda_function = aws_cloudcontrol.lambda_.Function("myLambdaFunction",
 pulumi.export("lambdaFunctionArn", my_lambda_function.arn)  # Directly export the value, no need for a dictionary
 pulumi.export("s3BucketName", my_bucket.bucket)
 ```
+
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
@@ -158,6 +160,7 @@ return await Deployment.RunAsync(() =>
         };
 });
 ```
+
 {{% /choosable %}}
 {{% choosable language go %}}
 
@@ -212,6 +215,7 @@ ZipFile: pulumi.String(`exports.handler = async function(event) {
 	})
 }
 ```
+
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
@@ -255,6 +259,7 @@ outputs:
   s3BucketName:
     value: ${myBucket.bucket}
 ```
+
 {{% /choosable %}}
 
 ## Leveraging AWS Cloud Control Provider for Advanced WAFv2 Configurations
