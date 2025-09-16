@@ -123,6 +123,10 @@ To encrypt a configuration value before runtime, you will need to run the `pulum
 pulumi config set myPassword demo-password-123 --secret
 ```
 
+{{% notes "warning" %}}
+When storing secret values containing special characters (such as `$`, `!`, `@`, `#`, etc.), be aware that shell interpretation may modify the value before it reaches Pulumi. Consider using quotes around the value or escaping special characters according to your shell's requirements. For complex values, you may want to use input redirection or pipe the value from a file to avoid shell interpretation entirely.
+{{% /notes %}}
+
 Now run the `pulumi config` command again, and you will see that, unlike the value for `myEnvironment`, the value for `myPassword` is hidden:
 
 ```bash
