@@ -518,6 +518,7 @@ outputs:
 
 Add a `README.md` file to your template directory to provide clear instructions on how to use the template, including prerequisites, configuration options, and example commands:
 
+```yaml
 # Go Microservice Golden Path
 
 A **golden path** template that gets your Go microservice from code to production on AWS in minutes, not weeks.
@@ -574,6 +575,7 @@ You **do** focus on:
 - Adding your business endpoints
 - Testing your service locally
 - Deploying with confidence
+```
 
 ### Making Templates Available in Pulumi IDP
 

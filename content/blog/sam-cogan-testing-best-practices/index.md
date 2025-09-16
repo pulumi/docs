@@ -18,7 +18,7 @@ draft: true
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc:
+meta_desc: Learn infrastructure testing best practices from Sam Cogan, Azure MVP and Puluminary, including shift-left methodology and testing frameworks for IaC.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
