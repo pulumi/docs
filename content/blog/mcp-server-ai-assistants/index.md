@@ -41,9 +41,9 @@ Before diving in, you typically need to configure your AI assistant to communica
 }
 ```
 
-3. Validating the connection within the assistant's settings (e.g., Cursor has a dedicated section to check the MCP connection status).
+Validate the connection within the assistant's settings (e.g., Cursor has a dedicated section to check the MCP connection status).
 
-    ![Cursor MCP Settings](cursor-mcp-settings.png)
+![Cursor MCP Settings](cursor-mcp-settings.png)
 
 Once configured, the AI assistant can leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
 

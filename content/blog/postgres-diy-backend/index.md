@@ -136,27 +136,18 @@ func skipIfDockerNotAvailable(t *testing.T) {
 ### PostgreSQL wins over a plain S3 bucket
 
 - **ACID transactions with row-level locking –** A postgres backend means strong consistency guarantees.
-
 - **Faster for smaller state files –** Community benchmarks show improvements on S3 backend speed for smaller state files.
-
 - **Point-in-time restore –** WAL-based backups allow for easier rollback.
-
 - **Deep observability –** plug pg-metrics into Grafana/APM for real-time insight.
 
 ### Gaps you'll still close only with Pulumi Cloud
 
 - **Server-side policy guardrails (CrossGuard) –** automatically enforced policies on every preview or deploy.
-
 - **Always-on drift detection –** automatic scans catch out-of-band changes.
-
 - **Managed Deployments –** fully managed runners, PR previews, and dependent stack updates.
-
 - **Org-wide RBAC, SSO/SAML, immutable audit logs** – turnkey for teams and auditors.
-
 - **Search & analytics across *all* cloud resources (Insights)** – not just those managed by Pulumi.
-
 - **Enterprise Secrets & Configuration (ESC)** \- encrypted secrets and config with RBAC, versioning and audit trail.
-
 - **SOC 2, high availability, and painless upgrades** – Pulumi operates the control plane so you don't have to.
 
 ## Getting Started
@@ -165,16 +156,16 @@ Using the PostgreSQL backend is straightforward:
 
 1. **Login to your PostgreSQL backend:**
 
-```bash
-pulumi login postgres://pulumi_user:secure_password@localhost:5432/pulumi_state?sslmode=require
-```
+    ```bash
+    pulumi login postgres://pulumi_user:secure_password@localhost:5432/pulumi_state?sslmode=require
+    ```
 
-2. **Use Pulumi normally:**
+1. **Use Pulumi normally:**
 
-```bash
-pulumi up
-# Your state is now stored in PostgreSQL!
-```
+    ```bash
+    pulumi up
+    # Your state is now stored in PostgreSQL!
+    ```
 
 ## Community Impact
 

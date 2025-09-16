@@ -50,17 +50,17 @@ Ready to start using versioning in Pulumi ESC? Here's how you can get started us
 Make sure you have the latest [ESC CLI](/docs/install/esc/) installed before you perform these steps. In your terminal,
 
 1. Run `esc env edit <environment-name>` to edit an environment
-2. Run `esc env version history <environment-name>` to view all revision history
-3. Run `esc env diff <environment-name>[@<version>] [[<environment-name>]@<version>]` to compare changes between versions
-4. Run `esc env version tag <environment-name>@<tag>` to assign a tag to the latest revision
-5.  Create a new environment using `esc env init <new-environment-name>` and import the previously edited environment using this syntax:
+1. Run `esc env version history <environment-name>` to view all revision history
+1. Run `esc env diff <environment-name>[@<version>] [[<environment-name>]@<version>]` to compare changes between versions
+1. Run `esc env version tag <environment-name>@<tag>` to assign a tag to the latest revision
+1. Create a new environment using `esc env init <new-environment-name>` and import the previously edited environment using this syntax:
 
     ```yaml
     imports:
     - <environment-name>@<tag>
     ```
 
-6. Run `esc open <new-environment-name>` to open and confirm that you have imported the right environment version
+1. Run `esc open <new-environment-name>` to open and confirm that you have imported the right environment version
 
 Check out the [ESC CLI documentation](/docs/esc-cli/) for more details on available options and commands.
 
