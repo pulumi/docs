@@ -24,6 +24,11 @@
 </section>
 {{ end }}
 
+<section id="cta" class="container mx-auto text-center mb-16">
+    <a href="https://app.pulumi.com/signup" class="btn-primary">Get Started</a>
+    <a href="/contact/?form=request-a-demo" class="btn-secondary ml-4">Book a Demo</a>
+</section>
+
 <section id="benefits" class="container mx-auto my-16">
     {{ with .Params.why_neo }}
     <h2 class="text-center">{{ .title }}</h2>
@@ -98,52 +103,76 @@
     {{ end }}
 </section>
 
-<section id="building-blocks " class="container my-20 mx-auto text-center px-6">
+<section id="building-blocks" class="container my-16 mx-auto text-center px-6">
     <h2 class="text-center">{{ .Params.building_blocks.title }}</h2>
+
+    <!-- First render items with graphics -->
     {{ range $index, $block := .Params.building_blocks.items }}
+    {{ if $block.graphic }}
     {{ $order := "lg:order-first lg:pr-4" }}
-    {{ $padding := "lg:pl-16" }}
+    {{ $padding := "lg:pl-8 lg:pr-8" }}
     {{ if eq (mod $index 2) 0 }}
     {{ $order = "lg:order-last lg:pl-4"}}
-    {{ $padding = "lg:pr-16" }}
     {{ end }}
     <div class="container mx-auto flex flex-col text-center lg:flex-row my-24">
         <div class="w-full lg:w-1/2 lg:content-center {{ $padding }}">
-            <h3 class="m-0 p-0 text-3xl">{{ $block.header }}</h3>
-            <h4 class="p-0 my-4 text-left text-gray-700 text-xl">{{ $block.subheader }}</h4>
-            <ul>
-                {{ range $item := $block.body }}
-                <li class="text-left">{{ $item | markdownify }}</li>
-                {{ end }}
-            </ul>
+            <div class="card bg-white p-8 h-full">
+                <h3 class="m-0 p-0 text-3xl mb-4">{{ $block.header }}</h3>
+                <h4 class="p-0 my-4 text-left text-gray-700 text-xl">{{ $block.subheader }}</h4>
+                <ul>
+                    {{ range $item := $block.body }}
+                    <li class="text-left">{{ $item | markdownify }}</li>
+                    {{ end }}
+                </ul>
+            </div>
         </div>
         <div class="w-full lg:w-1/2 {{ $order }}">
             <img class="mx-auto" src="{{ $block.graphic }}" />
         </div>
     </div>
     {{ end }}
+    {{ end }}
+
+    <!-- Then render items without graphics as cards side by side -->
+    <div class="flex flex-wrap justify-content items-stretch text-left my-8">
+        {{ range $block := .Params.building_blocks.items }}
+        {{ if not $block.graphic }}
+        <div class="w-full lg:w-1/2 p-4">
+            <div class="h-full card bg-white p-8">
+                <h3 class="m-0 p-0 text-2xl mb-4">{{ $block.header }}</h3>
+                <h4 class="p-0 my-4 text-gray-700 text-lg">{{ $block.subheader }}</h4>
+                <ul>
+                    {{ range $item := $block.body }}
+                    <li>{{ $item | markdownify }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
 </section>
 
-<section id="learn" class="container mx-auto text-center mt-20 px-6">
+<section id="learn" class="container mx-auto text-center mt-16 px-6">
     <div class="max-w-5xl mx-auto text-center px-6">
         <h2>{{ .Params.learn.title }}</h2>
         <div class="text-left">{{ .Params.learn.description }}</div>
     </div>
     <div class="flex flex-wrap justify-content items-stretch text-left my-4">
-        {{ range $item := .Params.learn.items }}
+        {{ range $index, $item := .Params.learn.items }}
         <div class="w-full lg:w-1/2 p-3">
-            <div class=" card h-full bg-white p-12">
+            <div class="h-full {{ if eq $index 0 }}bg-violet-100{{ else }}card bg-white{{ end }} p-12 rounded-xl">
                 <div>
                     <h5>{{ $item.title }}</h5>
                 </div>
                 <div class="mt-6">
                     <p>{{ $item.description | markdownify }}</p>
                 </div>
-                {{ range $button := $item.buttons }}
-                <div class="my-2 py-4 z-10 relative">
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    {{ range $button := $item.buttons }}
                     <a href="{{ $button.link }}" class="z-10 btn-{{ $button.type }}">{{ $button.action }}</a>
+                    {{ end }}
                 </div>
-                {{ end }}
             </div>
         </div>
         {{ end }}

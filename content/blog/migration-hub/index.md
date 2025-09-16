@@ -99,7 +99,7 @@ to scale up from there depending on your needs.
 Over time, Pulumi is becoming a more comprehensive platform, with new services like
 [Pulumi Deployments]({{< relref "/blog/pulumi-deployments" >}}) for multi-cloud deployment workflows and
 [Pulumi Insights]({{< relref "/blog/pulumi-insights" >}}) for search, analytics, and AI for your cloud infrastructure.
-Pulumi also offers [policies]({{< relref "/crossguard" >}}) and [secrets]({{< relref "/docs/iac/concepts/secrets" >}}) as
+Pulumi also offers [policies]({{< relref "/product/pulumi-insights" >}}) and [secrets]({{< relref "/docs/iac/concepts/secrets" >}}) as
 core features of the platform. [Enterprises]({{< relref "/enterprise" >}}) are increasingly betting on Pulumi for
 their entire cloud management and platform needs.
 
