@@ -4,7 +4,7 @@ const markdownlint = require("markdownlint");
 const path = require("path");
 
 // BEHAVIOR SWITCH: Set to false to use old behavior, true for new behavior
-const USE_NEW_FRONTMATTER_VALIDATION = false;
+const USE_NEW_FRONTMATTER_VALIDATION = true;
 
 /**
  * REGEX for grabbing the front matter of a Hugo markdown file. Example:
