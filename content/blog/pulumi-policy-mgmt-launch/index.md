@@ -1,11 +1,11 @@
 ---
-title: "Guardrails for Neo: New Policy Management Experience"
+title: "Announcing New Policy Packs and Policy Management Experience"
 date: 2025-09-17
 authors:
     - luke-ward
     - dan-biwer
     - insights-team
-meta_desc: "Announcing streamlined user experience for Pulumi Policy and new pre-built policy packs, providing the essential guardrails for AI automation with Pulumi Neo."
+meta_desc: "Announcing new UX for Pulumi Policy and new pre-built policy packs, providing essential guardrails for all cloud infrastructure automation"
 allow_long_title: true
 meta_image: "meta.png"
 tags:
@@ -18,17 +18,31 @@ tags:
     - ai
 ---
 
-Yesterday, we introduced [Pulumi Neo](/blog/pulumi-neo/), our new AI platform engineer. As we showed in the [launch video](https://www.youtube.com/watch?v=9GB9M2l1OgY), Neo can automate complex infrastructure tasks, dramatically increasing a platform team's velocity. But with this new power comes a critical need for safety and control. You wouldn't give an AI agent the keys to your production cloud without robust, non-bypassable guardrails.
+AI has fundamentally changed application development. Developers are shipping more code, faster than ever before. Every new feature and application generated needs to run on the cloud, creating an unprecedented amount of new infrastructure for platform teams to manage.
 
-That’s why today, we're excited to announce a fundamentally redesigned policy management experience and new pre-built policy packs. These enhancements provide the essential guardrails for AI, making it easier than ever to enforce compliance, security, and best practices across your infrastructure.
+This explosion in developer velocity has created a massive governance challenge. How do you ensure all this new infrastructure is secure, compliant, and cost-effective when it's being created at a speed that's impossible to manually review?
+
+The answer is to build automated guardrails that apply everywhere, regardless of the entry point—whether infrastructure is provisioned by a developer using an AI assistant or self-service Internal Developer Platform (IDP). Yesterday, we introduced [Pulumi Neo](/blog/pulumi-neo/), our own AI platform engineer that helps manage this complexity. Today, we're excited to announce the other side of the story: a fundamentally redesigned policy management experience that provides a consistent governance layer for your entire platform.
 
 <!--more-->
 
+## Primer on Pulumi Policy
+
+[Pulumi Policy as Code](/docs/iac/crossguard/) (PaC) applies the same principles of DevOps and Infrastructure as Code to your organization's governance. PaC allows you to version, test, and peer-review your policies through pull requests, just like any other critical software. It’s the only way to scale governance to match the speed of modern development.
+
+Unlike other PaC tools that rely on restrictive, domain-specific languages (DSLs) or YAML, Pulumi Policy uses the general-purpose programming languages you already know and love: **TypeScript and Python**. It unlocks powerful capabilities that are difficult or impossible to achieve with other approaches. With PaC you can:
+
+* **Express rich, conditional logic** to codify your organization's nuanced rules.
+* **Create reusable functions and abstractions** to build a library of policies that can be shared across your organization.
+* **Write unit tests** for your policies to ensure they work as intended before you deploy them.
+
+It allows you to codify your rules with precision and scale. And with today's announcement, we've made this powerful foundation more accessible and easier to manage than ever.
+
 ## A New, Simplified Approach
 
-While [Pulumi Policy](/docs/iac/crossguard/) has always allowed you to enforce compliance using TypeScript and Python, the existing workflow could be cumbersome—discovering policies required switching between the console and CLI, and applying them involved multiple steps.
+While Pulumi Policy has always allowed you to enforce compliance using TypeScript and Python, the existing workflow could be cumbersome—discovering policies required switching between the console and CLI, and applying them involved multiple steps.
 
-To provide the seamless guardrails needed for an AI-driven world, we've removed that friction. The new experience is built around a streamlined, in-console workflow for discovering, applying, and managing your policies.
+We've removed that friction to provide the seamless guardrails needed for this high-velocity, AI-driven world. The new experience is built around a streamlined, in-console workflow for discovering, applying, and managing your policies.
 
 ### In-Console Discoverability
 
@@ -76,14 +90,14 @@ Getting started with the new policy management experience is straightforward:
 ![Policy Group Configuration](policy-management-4.png)
 1. **Configure Enforcement:** Set enforcement levels (advisory, mandatory, or remediate) for each policy based on your requirements.
 
-### Now Available To Team and Enterprise Customers
+## Now Available To Team and Enterprise Customers
 
 To ensure every organization can build with confidence, these policy management enhancements and the `pulumi-best-practices` policy packs are **now available to Team and Enterprise customers**. Checkout our [pricing](/pricing) page for more information.
 
-### Conclusion
+## Conclusion
 
-The enhanced Pulumi Policy experience and new pre-built packs are a major step forward in making governance accessible, scalable, and easy to use. By focusing on discoverability and a simplified workflow, we've delivered the essential guardrails needed to confidently adopt AI automation.
+The enhanced Pulumi Policy experience is a major step forward in making governance accessible and scalable for the entire platform. By focusing on discoverability and a simplified workflow, we've delivered essential guardrails that apply consistently, whether a developer is using a self-service portal or an AI agent is remediating an issue.
 
-Yesterday, we introduced a powerful AI agent. Today, we've delivered the foundation to ensure it operates safely and within your organization's standards.
+This is how you escape the velocity trap: by building a governance foundation that turns safety and compliance into an accelerant for everyone. It ensures that no matter how fast your teams move, they are always moving safely and within your organization's standards
 
 We'd love for you to try out the new experience in the Pulumi Cloud\! Don't hesitate to reach out on the [Pulumi Community Slack](https://slack.pulumi.com/) to share your thoughts.
