@@ -86,7 +86,7 @@ Here’s an example of how different it is to build a storage account:
 }
 ```
 
-### ✅ Azure with Pulumi in C#
+### ✅ Azure with Pulumi in C\#
 
 ```csharp
 using Pulumi;
@@ -124,7 +124,7 @@ Pulumi supports all the Azure services ARM does (and more), while giving you fle
 
 ## Summary
 
-[ARM templates ](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/)weren’t designed to scale with the complexity of today’s cloud environments. They’re static, verbose, hard to test, and increasingly brittle.
+[ARM templates](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/)weren’t designed to scale with the complexity of today’s cloud environments. They’re static, verbose, hard to test, and increasingly brittle.
 
 Pulumi gives you the tools to manage Azure the way you manage software: modular, testable, scalable, and secure.
 

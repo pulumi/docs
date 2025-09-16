@@ -34,7 +34,7 @@ In today's cloud-native world, secrets are the keys to the cloud estate, but man
 
 Pulumi ESC is the modern secret management platform designed to streamline and secure how you manage environments, secrets, and configuration across your entire organization. Built with flexibility and security at its core, Pulumi ESC empowers you to:
 
-#### Centralize and Simplify Secrets Management:
+### Centralize and Simplify Secrets Management:
 
 - **Unify Your Secrets**: Say goodbye to secrets scattered across systems. Pulumi ESC lets you pull and synchronize secrets from any source—[HashiCorp Vault](/docs/esc/integrations/dynamic-secrets/vault-secrets/), [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/), [Azure Key Vault](/docs/esc/integrations/dynamic-secrets/azure-secrets/), [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/), and more—and consume them securely from anywhere.
 - **Streamline Access and Control**: Access secrets seamlessly via [CLI](/docs/esc/cli/), [API](/docs/pulumi-cloud/reference/cloud-rest-api/#environments), [Kubernetes operator](https://external-secrets.io/latest/provider/pulumi/), the intuitive Pulumi Cloud UI, or directly within your code using our TypeScript, Python, and Go [SDKs](/docs/esc/development/languages-sdks/). Robust [RBAC](/docs/esc/environments/access-control/) ensures the right people have the right access at all times.
@@ -42,7 +42,7 @@ Pulumi ESC is the modern secret management platform designed to streamline and s
 
 ![Pulumi ESC Integrations](esc-integrations.png)
 
-#### Boost Developer Velocity and Security:
+### Boost Developer Velocity and Security:
 
 - **Empower Developers, Not Slow Them Down**: Pulumi ESC is designed for developer convenience without compromising security. Access secrets programmatically, integrate with your existing workflows, and leverage flexible authoring options: Pulumi Cloud Editor, VS Code Plugin, SDKs, the Pulumi Service Provider, and our REST API - the choice is yours!
 - **Gain Complete Visibility and Control**: Track all secret access and changes with detailed audit logs. Understand the downstream impact of changes and ensure your secrets are used securely and consistently across your organization.
@@ -50,7 +50,7 @@ Pulumi ESC is the modern secret management platform designed to streamline and s
 
 ![Pulumi ESC document view](esc-document-editor-view.png)
 
-#### Built for the Modern Cloud, Open by Design:
+### Built for the Modern Cloud, Open by Design:
 
 - **Use It Your Way**: Pulumi ESC integrates seamlessly with other Pulumi products and features such as Pulumi IaC and Pulumi Deployments for a unified infrastructure management experience. But its flexibility extends to any platform or toolset, including HashiCorp Terraform.
 - **Embrace the Open Ecosystem**: We believe in freedom of choice. That's why Pulumi ESC is built on an open-source foundation (Apache 2.0 license) and designed to retrieve and synchronize secrets with various platforms seamlessly. We empower our customers to choose the best tools for their needs and supercharge their workflows with Pulumi ESC.

@@ -424,7 +424,7 @@ different workflows look like when we put all the pieces together. We go through
 * Ordering a New Production Kubernetes Cluster
 * Ordering Other Infrastructure
 
-#### Ignite the Control Plane Cluster With Pulumi
+### Ignite the Control Plane Cluster With Pulumi
 
 <img src="ignite.png" width="500px">
 
