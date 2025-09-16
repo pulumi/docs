@@ -4,7 +4,7 @@ allow_long_title: true
 date: 2024-08-05
 draft: false
 social_media: "TBD"
-meta_desc: "Pulumi Patterns and Practices Platform (P3) is a reference architecture of a Pulumi-based internal platform for infrastructure management and secure deployments in a large-scale environment."
+meta_desc: "Pulumi Patterns and Practices Platform (P3): A reference architecture for building Pulumi-based internal platforms at enterprise scale."
 meta_image: meta.png
 authors:
     - troy-howard

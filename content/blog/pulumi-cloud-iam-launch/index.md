@@ -3,7 +3,7 @@ title: "Announcing Pulumi Identity and Access Management (IAM)"
 allow_long_title: true
 date: 2025-06-09
 draft: false
-meta_desc: "Introducing Pulumi IAM: A new era of granular access control across Pulumi Cloud, starting with Custom Roles and scoped Access Tokens for enhanced security and automation."
+meta_desc: "Introducing Pulumi IAM with granular access control, Custom Roles, and scoped Access Tokens for enhanced security and automation."
 meta_image: "meta.png"
 authors:
   - german-lena

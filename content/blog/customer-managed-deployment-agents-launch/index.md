@@ -19,7 +19,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Customer-Managed Agents for Pulumi Deployments is now available, allowing users to self-host deployment agents and get the same power and flexibility of Pulumi Deployments.
+meta_desc: Customer-Managed Agents for Pulumi Deployments now available, letting users self-host agents with full power and flexibility.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
