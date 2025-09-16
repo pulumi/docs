@@ -3,7 +3,7 @@ title: "AWS RDS - Blue/Green Deployments for Low-Downtime Updates"
 h1: "How to Achieve Low Downtime Updates on RDS with Blue/Green Deployments"
 authors: 
   - "elisabeth-lichtie"
-tags: ["aws", "rds", "postgres"]
+tags: ["aws", "rds", "postgres", "@AWS_Partners", "@AWSmarketplace", "@AWS Partners"]
 meta_desc: "Pulumi can enable low downtime updates on your RDS instance using Blue/Green Deployments."
 date: "2025-06-23"
 meta_image: "BlueGreenRDS.png"
