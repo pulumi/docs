@@ -100,6 +100,10 @@ $ pulumi new aws-typescript --config="aws:region=us-west-2"
 
 Configuration values can be retrieved for a given stack using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. Using {{< pulumi-config-get >}} will return {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI.
 
+{{% notes type="info" %}}
+Configuration values can only be **read** during program execution, not set. To programmatically manage stack configurations (like setting config values or creating stacks dynamically), use [Automation API](/docs/iac/automation-api/). Automation API provides full programmatic control over Pulumi operations, including writing configuration values to stack files and managing stack lifecycle.
+{{% /notes %}}
+
 For potentially-secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which will return the config value as an `Output` which carries both the value and the secret-ness of the config value so that it will be encrypted whenever serialized (see [secrets](/docs/concepts/secrets/) for more on managing secret values).
 
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
