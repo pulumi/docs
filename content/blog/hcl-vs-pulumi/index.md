@@ -1562,4 +1562,3 @@ New to Pulumi? Signing up is easy and free. [Get started today!](/docs/get-start
 
 Interested in migrating? Our cloud experts can help.
 [Learn more about Pulumi's Migration Services.](/migrate/)
-

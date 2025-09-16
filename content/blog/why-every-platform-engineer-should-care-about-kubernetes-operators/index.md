@@ -231,8 +231,6 @@ Or use Pulumi to deploy the CloudNativePG Operator:
 
 {{% /choosable %}}
 
-
-
 #### Usage
 
 Here is a simple example of a PostgreSQL cluster with backup configured on S3 API-compatible storage:
@@ -692,7 +690,6 @@ Or use Pulumi:
 ```
 
 {{% /choosable %}}
-
 
 #### Summary
 

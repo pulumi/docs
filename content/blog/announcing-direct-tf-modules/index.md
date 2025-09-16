@@ -515,7 +515,6 @@ packages:
 
 {{% /chooser %}}
 
-
 ### Seamless Deployment
 
 When you run `pulumi up`, Pulumi orchestrates the Terraform module execution while providing its signature preview and deployment experience:
@@ -665,7 +664,6 @@ func run(ctx *pulumi.Context) error {
 ```
 
 {{% /choosable %}}
-
 
 {{% /chooser %}}
 

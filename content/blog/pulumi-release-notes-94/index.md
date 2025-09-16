@@ -72,7 +72,6 @@ We've made several improvements to our Pulumi Cloud Webhooks to enhance deployme
 
 ![Slack](slack.png)
 
-
 ### Microsoft Teams Webhook Integration
 
 Setting up Microsoft Teams notifications is now easier than ever with support for Microsoft Teams formatted webhooks. You can quickly enable notifications about your Pulumi stacks and organizations in your Microsoft Teams workspace by providing an incoming webhook URL. New REST API endpoints and a Service Provider are available, allowing for efficient webhook creation at scale. These improvements enhance ChatOps workflows and provide better visibility into infrastructure changes while maintaining support for generic webhooks. For more details and how to get started, check out [this blog post](/blog/ms-teams-integration/).
@@ -111,11 +110,9 @@ Resource Search for Pulumi Cloud capabilities have been enhanced by allowing use
 | all resources in us east 1                    | `region:"us-east-1"`                                                                                       |
 | resources with a private ip                   | `.privateIpAddress:`                                                                                       |
 
-
 ### Dependent Stack Updates with Pulumi Deployments
 
 Pulumi Deployments has two new features to help manage complex infrastructure projects more easily. The Deployment Webhook Destinations allow automatic triggering of updates in dependent stacks when changes occur in the parent stack. We've also added the Pulumi Auto Deploy Package to simplify the way you express stack dependencies, automating the creation and updating of Deployment Webhooks. For all the details and to get started, visit the [blog post](/blog/dependent-stack-updates/), [auto deploy package](/registry/packages/auto-deploy/) registry page, and [Pulumi Deployments](/docs/pulumi-cloud/deployments/) documentation.
-
 
 ## Core
 
@@ -144,7 +141,6 @@ o := pulumix.Apply2(a, b, func(a int, b string) string {
 ### Pulumi Convert
 
 The introduction of `pulumi convert` in the Pulumi CLI simplifies the migration process for teams transitioning from Terraform to Pulumi. This feature allows you to [convert entire Terraform projects](/blog/converting-full-terraform-programs-to-pulumi/) into Pulumi, including support for modules, core Terraform 1.4 features, and most Terraform built-in functions. Starting from Pulumi CLI version 3.71.0, you can directly access this converter, streamlining the conversion of full Terraform programs. This enhancement builds upon our CrossCode foundations, enabling universal infrastructure as code support and introducing the concept of converter plugins for future integrations. This feature supports various use cases, such as migrating existing Terraform projects and modules to Pulumi, enhancing our commitment to providing versatile solutions for infrastructure as code.
-
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}

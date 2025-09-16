@@ -119,7 +119,6 @@ pulumi.export('scheduleId', ttl_schedule.schedule_id)
 
 {{% /choosable %}}
 
-
 {{% choosable language go %}}
 
 ```go

@@ -35,9 +35,7 @@ Here are just a few of the exciting use cases we've seen for Pulumi ESC:
 
 Pulumi ESC is available today in preview via the new `esc` CLI, as part of Pulumi Cloud, via the Pulumi Cloud REST API, and has direct integration with Pulumi IaC stack configuration and new `pulumi env` commands.  It also supports dynamically pulling secrets and configuration from other sources of truth, including AWS OIDC, AWS Secrets Manager, Azure OIDC, Azure KeyVault, Google Cloud OIDC, Google Secrets Manager, HashiCorp Vault, and Pulumi IaC Stack References - with many more sources like 1Password coming soon.
 
-
 ![Diagram of Pulumi ESC architecture, showing how configuration and secrets from multiple sources (AWS, Azure, Google Cloud, Vault, 1Password) are managed within Pulumi ESC environments and securely delivered to execution environments like Pulumi CLI, GitHub Actions, AWS, Kubernetes, and Cloudflare Workers.](esc-overview.png)
-
 
 ## Pulumi ESC: How It Works & Key Features
 

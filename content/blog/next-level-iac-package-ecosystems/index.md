@@ -92,7 +92,6 @@ pulumi.export('object_url', pulumi.Output.concat('s3://', bucket.id, '/', bucket
 
 {{% /choosable %}}
 
-
 However, something that stands out as a weak link here is the line:
 
 {{< chooser language "typescript,python" />}}
