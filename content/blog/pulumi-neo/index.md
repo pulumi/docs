@@ -60,7 +60,7 @@ This isn't experimental AI, it's enterprise-ready automation that amplifies your
 
 Neo becomes more capable the more you invest in infrastructure as code. Every Pulumi component you write, every policy you define, every environment configuration you establish becomes Neo's operational context that guides its decisions.
 
-This is the key shift. We're talking about AI amplifying platform expertise. We're talking about AI amplifying platform expertise. The engineers who understand the why behind infrastructure decisions become even more valuable when they have tools that can execute the how at scale.
+This is the key shift. We're talking about AI amplifying platform expertise. The engineers who understand the why behind infrastructure decisions become even more valuable when they have tools that can execute the how at scale.
 
 The teams that lean into this cycle will find themselves accelerating while others are still struggling. They'll be writing policies while others are responding to issues. They'll be designing systems while others are updating versions.
 
