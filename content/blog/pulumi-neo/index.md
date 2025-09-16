@@ -1,7 +1,7 @@
 ---
 title: "Meet Neo, Your Newest Platform Engineer"
 
-date: 2025-09-16T07:00:00-06:00
+date: 2025-09-16
 
 draft: false
 
