@@ -423,7 +423,7 @@ comparison_table:
                   - content: _check
               
           ## Pulumi Insights Table
-          - header: Insights & Policy Governance
+          - header: Insights & Governance
             subheader: Visibility and governance across your entire cloud estate
             rows:
               - title: On-demand resource price
