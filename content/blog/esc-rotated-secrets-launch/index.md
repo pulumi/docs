@@ -116,7 +116,6 @@ Pulumi ESC offers both [Dynamic Secrets](/docs/esc/integrations/dynamic-login-cr
 - **Dynamic secrets**: These are short-lived, ephemeral credentials with a Time-To-Live (TTL) typically ranging from 1 to 8 hours. A new set of credentials is generated every time the environment is opened. This is ideal for minimizing the impact of compromised credentials, as they quickly become invalid.
 - **Rotated secrets**: These are longer-lived credentials, potentially lasting for days, weeks, or even months. The same latest credential is returned every time the environment is opened until the next scheduled rotation occurs. This provides stability and predictability for applications that need consistent credentials over a longer period.
 
-
 Here are scenarios where rotated secrets are the preferred choice:
 
 - **Legacy applications**: Many legacy applications were built before modern secret management practices existed and cannot easily be rewritten to support dynamic secrets. For these applications, Rotated Secrets offer a practical way to enhance security without requiring a full application redesign or re-architecture.

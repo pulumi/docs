@@ -100,7 +100,6 @@ Address the persistent challenge of static, long-lived credentials with the new 
 
 Securely inject secrets and configuration directly into your GitHub Actions workflows with the new [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This action lets you dynamically inject values from your Pulumi ESC environments as needed during CI/CD runs, eliminating the need to store static, long-lived credentials within GitHub and reducing secret sprawl. Leverage Pulumi ESC's automatic secret rotation capabilities and run ESC commands directly within your workflows for streamlined environment management. Combine this action with [pulumi/auth-actions](https://github.com/marketplace/actions/pulumi-auth-action) for seamless, tokenless authentication to Pulumi Cloud using OIDC, further enhancing security. [Read the blog post](/blog/announcing-pulumi-esc-github-action/).
 
-
 ## Pulumi Insights
 
 ### Enforce Policy as Code on Discovered Resources

@@ -330,5 +330,4 @@ Together, they turn your IDP into more than just infrastructure automation, they
 
 Pulumi makes it easy to go from static IaC to dynamic, self-service infrastructure with real programming languages and built-in guardrails.
 
-
 Explore [Pulumi IDP](https://www.pulumi.com/product/internal-developer-platforms/) or [sign up for free](https://app.pulumi.com/signup) to get started today.

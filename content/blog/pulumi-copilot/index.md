@@ -68,7 +68,6 @@ Pulumi Copilot has access to everything that Pulumi Cloud manages, including [Pu
 
 <p align="center"><img src="./environments.png" alt="ESC Environments in Pulumi Copilot window" width="600" /></p>
 
-
 If we do a Pulumi update, and it fails, we often get a complex error message, caused by some combination of a coding problem or a cloud provider configuration problem or a transient failure in cloud providers backing service.  We can use Pulumi Copilot to ask why an update failed, and get a plain language explanation, leveraging the AI’s existing knowledge of programming languages and cloud providers, combined with access to all of the update logs from within Pulumi Cloud. Notably, we can ask why “this” update failed, taking advantage of the context of the page we are on within Pulumi Cloud to understand which update we are referring to.
 
 ![Why did this fail? question posed in Pulumi Copilot](./cloud-update-why-fail.png)
@@ -106,7 +105,6 @@ All of the examples above are things you can do today, but we’re not stopping 
 ### Taking Action
 
 In the initial Beta, Pulumi Copilot is restricted to get data and answer questions, but cannot take action directly, beyond guiding users to a place within the Pulumi Cloud console to take the action themselves.  In the near future, we will be extending Pulumi Copilot with the ability to propose actions and then act on them with user approval.
-
 
 Check out [pulumi/cloud-requests#414](https://github.com/pulumi/pulumi-cloud-requests/issues/414) for more details.
 

@@ -223,8 +223,7 @@ Now any team in your organization can discover and use your component, regardles
 
 ## Part 2: From Building Blocks to Golden Paths
 
-
-While components are powerful, they’re just the starting point. Golden path templates layer on opinionated scaffolding, workflows, and compliance best practices that guide developers to production.
+While components are powerful, they're just the starting point. Golden path templates layer on opinionated scaffolding, workflows, and compliance best practices that guide developers to production.
 
 ### Golden Path Maturity: From Zero to Product-Grade Platforms
 

@@ -41,7 +41,6 @@ Pulumi ESC’s [Rotated Secrets](/docs/esc/integrations/rotated-secrets/) capabi
 | [**PostgreSQL**](/docs/esc/integrations/rotated-secrets/postgres/) | ✅                  | ✅ <small>(via Lambda)</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/521))</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/522))</small> |
 | [**MySQL**](/docs/esc/integrations/rotated-secrets/mysql/)       | ✅                  | ✅ <small>(via Lambda)</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/521))</small> | Planned <small>([upvote issue](https://github.com/pulumi/esc/issues/522))</small> |
 
-
 Key benefits include:
 
 * **Automated Rotation Schedules:** Effortlessly define rotation frequencies (daily, weekly, monthly) that align with your security policies, eliminating manual toil and ensuring consistency.

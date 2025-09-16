@@ -600,7 +600,6 @@ Navigate to the [Swagger Editor](https://editor.swagger.io/) and paste the above
 
 ## Conclusion
 
-
 In this blog post, we've explored how Pulumi's Automation API can be used to build and expose a Service API within your organization. By embedding Pulumi as a library in any application, you can drive your Infrastructure as Code (IaC) deployments directly through code. This sets Pulumi apart from other tools like Terraform, which relies on static configuration files and a command-line interface.
 
 Additionally, we touched on the concept of the API economy, where APIs are leveraged to connect services, accelerate product delivery, and drive business value through the possibilities of creating new touchpoints. The Pulumi Automation API is the perfect piece of technology, which makes it now possible to define, deploy, and manage infrastructure programmatically as part of your API strategy.

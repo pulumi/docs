@@ -271,7 +271,6 @@ In summary, here are the results:
 
 ![Amazon S3 Express One Zone performance comparison by sync time in seconds](s3-express-perf.png)
 
-
 ## Conclusion
 
 In this post, we learned all about Amazon S3 Express One Zone, how to manage new buckets and their contents with infrastructure as code, and saw the awesome performance gains in action. To be up and running with Amazon S3 Express One Zone and infrastructure as code in minutes, go ahead and [get started with Pulumi for free today](/docs/get-started/). Happy cloud spelunking!

@@ -96,4 +96,3 @@ Pulumi ESC Projects and Environment Tags are powerful additions that bring order
 We're excited to see how you leverage these new capabilities. Check out the docs to learn more about Pulumi ESC Projects and Environment Tags and start organizing your environments today!
 
 As always, please share your [feedback](https://github.com/pulumi/esc/issues/new/choose) on how we can further improve Pulumi ESC to suit your needs.
-

@@ -80,7 +80,6 @@ values:
 
 `esc run` passes the configuration stored under the `environmentVariables` section into a temporary environment's env variables. The secure credentials are never stored locally on your machine.
 
-
 ## Unlocking New Possibilities
 
 With 1Password integration available within Pulumi ESC, we unlock a range of opportunities for developers to enhance workflow efficiency and security:

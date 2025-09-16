@@ -114,8 +114,6 @@ This will create a new Pulumi project with the necessary files to deploy Kuberne
 
 {{% /choosable %}}
 
-
-
 ## Deploying the Helm chart
 
 Now run the `pulumi up` command to preview and deploy the resources you’ve just defined in your project.
