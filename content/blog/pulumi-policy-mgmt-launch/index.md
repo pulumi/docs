@@ -22,7 +22,7 @@ AI has fundamentally changed application development. Developers are shipping mo
 
 This explosion in developer velocity has created a massive governance challenge. How do you ensure all this new infrastructure is secure, compliant, and cost-effective when it's being created at a speed that's impossible to manually review?
 
-The answer is to build automated guardrails that apply everywhere, regardless of the entry point—whether infrastructure is provisioned by a developer using an AI assistant or self-service Internal Developer Platform (IDP). Yesterday, we introduced [Pulumi Neo](/blog/pulumi-neo/), our own AI platform engineer that helps manage this complexity. Today, we're excited to announce the other side of the story: a fundamentally redesigned policy management experience that provides a consistent governance layer for your entire platform.
+The answer is to build automated guardrails that apply everywhere, regardless of the entry point—whether infrastructure is provisioned by a developer using an AI assistant or self-service Internal Developer Platform (IDP). Yesterday, we introduced [Pulumi Neo](/blog/pulumi-neo/), our own AI platform engineer that helps manage this complexity. Today, we're excited to announce the other side of the story: a fundamentally redesigned policy management experience that provides a consistent governance layer for your entire platform. And starting today, we're bringing this new management experience and our foundational Pulumi Best Practices guardrails to our Team and Enterprise customers.
 
 <!--more-->
 
