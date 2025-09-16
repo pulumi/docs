@@ -77,7 +77,7 @@ We shipped new versions of the AWS Native provider and the [Azure Native provide
 In 3.29.1 we have made a handful of improvements to how diffs are presented in the Pulumi CLI. These changes will improve the CLI experience by making easier to see what changes are being made.
 Specifically, we have improved the following:
 
-* [Show rich diffs for JSON/YAML objects/arrays](https://github.com/pulumi/pulumi/issues/5831)
+- [Show rich diffs for JSON/YAML objects/arrays](https://github.com/pulumi/pulumi/issues/5831)
 
   We now render the diff between the decoded JSON and YAML values rather than the diff between text values. This will make it a lot easier to see what has changed when managing resources that produce JSON or YAML strings.
 
@@ -86,11 +86,11 @@ Specifically, we have improved the following:
   Now the preview shows the YAML diff:
   ![A screenshot of after diff render changes](diff-after.png)
 
-* [Render changes to text properties as diffs](https://github.com/pulumi/pulumi/issues/9136)
+- [Render changes to text properties as diffs](https://github.com/pulumi/pulumi/issues/9136)
 
   Instead of simply rendering the old and new values for textual properties, we now present the diff between the old and new values.
 
-* [Retain `Secret` values](https://github.com/pulumi/pulumi/pull/9351)
+- [Retain `Secret` values](https://github.com/pulumi/pulumi/pull/9351)
 
   Instead of replacing Secret values with the text [secret], we now retain the Secret value and replace its element with the text [secret]. This allows the CLI's diff renderer to understand that the contents of the value is secret if necessary.
 

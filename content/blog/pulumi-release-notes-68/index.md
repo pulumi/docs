@@ -97,6 +97,7 @@ This adds a new entry to the list `pulumi:disable-default-providers`. To disable
 ```sh
 $ pulumi config set --path 'pulumi:disable-default-providers[0]' '*'
 ```
+
 Learn more in the [Disable Default Providers GitHub issue](https://github.com/pulumi/pulumi/issues/3383).
 
 ### `pulumi up --target` wildcard URN support

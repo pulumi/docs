@@ -101,6 +101,7 @@ The Pulumi Service Provider allows you to set up automated Drift Detection and R
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pulumiservice from "@pulumi/pulumiservice";
@@ -145,6 +146,7 @@ drift_detection_schedule = pulumiservice.DriftSchedule("driftDetectionSchedule",
 pulumi.export('driftScheduleId', drift_detection_schedule.schedule_id)
 
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -176,6 +178,7 @@ func main() {
 }
 
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -234,6 +237,7 @@ public class App {
 }
 
 ```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
