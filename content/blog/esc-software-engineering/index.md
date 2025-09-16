@@ -129,7 +129,7 @@ rk_test_3c88Pc8ZfdBredactedrEhDU11b42wI5KZ
 
 Lots more details on the features and capabilities of the new Pulumi ESC SDKs in their [launch blog post](/blog/esc-sdk-launch).
 
-# Environments as Code with IaC
+## Environments as Code with IaC
 
 Pulumi ESC helps to manage configuration and secrets complexity at scale via composition and reuse.  But many users still want to go further and version control the definitions of their environments, secrets and configuration.
 
