@@ -1,0 +1,14 @@
+id = "luke-ward"
+name = "Luke Ward"
+title = "Software Engineer"
+company = "Pulumi"
+image = "static/images/team/luke-ward.jpg"
+weight = 1
+bio = ""
+
+status = "active"
+
+[social]
+github = "DukeBWard"
+linkedin = "lukebward"
+
