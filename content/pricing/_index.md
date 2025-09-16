@@ -34,7 +34,7 @@ tiers:
                 Everything in **Individual**, plus:
                 - Up to 10 users
                 - Secure collaboration and CI/CD
-                - AI assistance with Pulumi Copilot
+                - AI assistance with Pulumi Neo
                 - Resource search
                 - OIDC issuer tokens
                 - Webhooks
@@ -508,12 +508,12 @@ comparison_table:
                   - content: Advisory & Mandatory
                   - content: Advisory & Mandatory
                   - content: Advisory, Mandatory & Remediation 
-          ## Copilot Table
+          ## Pulumi Neo Table
           - header: Infrastructure AI
             subheader: Intelligent assistance across all platform capabilities
             rows:
-              - title: Pulumi Copilot
-                link: /docs/pulumi-cloud/copilot/
+              - title: Pulumi Neo
+                link: /docs/iac/neo/
                 items:
                   - content: _blank
                   - content: _check
