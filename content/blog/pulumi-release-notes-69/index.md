@@ -11,7 +11,7 @@ date: 2022-03-15T08:47:42-08:00
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: The latest Pulumi updates also include the new `pulumi state rename` command, changing the default `pulumi plugin install` to the latest version, adding console output in non-interactive mode, and `pulumi cancel` support for self-managed state backends.
+meta_desc: Latest Pulumi updates include import improvements, RetainOnDelete resource option, state rename command, plugin install defaults, and more CLI enhancements.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect

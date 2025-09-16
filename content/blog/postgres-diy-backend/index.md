@@ -18,7 +18,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: "Learn about the community-driven journey to add PostgreSQL as a state backend option for Pulumi's DIY backend, enabling robust, scalable state management for self-hosted infrastructure."
+meta_desc: "Community-driven journey adding PostgreSQL as Pulumi state backend, enabling robust, scalable state management for self-hosted infrastructure."
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -169,7 +169,7 @@ Using the PostgreSQL backend is straightforward:
 pulumi login postgres://pulumi_user:secure_password@localhost:5432/pulumi_state?sslmode=require
 ```
 
-2. **Use Pulumi normally:**
+1. **Use Pulumi normally:**
 
 ```bash
 pulumi up

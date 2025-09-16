@@ -3,7 +3,7 @@ title: "Pulumi Release Notes: Pulumi Copilot, Pulumi ESC Versioning, Pulumi ESC 
 allow_long_title: true
 date: 2024-06-24T11:06:04-08:00
 draft: false
-meta_desc: The latest Pulumi releases deliver a wave of powerful new features, including AI-powered cloud management, robust infrastructure lifecycle management capabilities, enhanced Pulumi ESC features (versioning, SDKs, and Pulumi Service Provider support), a new Docker Build provider, and more!
+meta_desc: Latest Pulumi releases include AI-powered Copilot, ESC versioning and SDKs, Docker Build provider, and infrastructure lifecycle management features.
 meta_image: meta.png
 authors:
     - arun-loganathan

@@ -2,7 +2,7 @@
 title: "Introducing Automated Database Credential Rotation for PostgreSQL and MySQL in Pulumi ESC"
 date: 2025-04-30
 allow_long_title: true
-meta_desc: "Pulumi ESC now automates the rotation of database credentials for PostgreSQL and MySQL (publicly accessible or in AWS private VPCs), enhancing security and reducing operational burden."
+meta_desc: "Pulumi ESC now automates database credential rotation for PostgreSQL and MySQL, enhancing security and reducing operational burden."
 meta_image: meta.png
 authors:
 - sean-yeh
