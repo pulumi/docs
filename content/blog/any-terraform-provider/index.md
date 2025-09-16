@@ -15,8 +15,8 @@ tags:
 social:
   twitter: "You can now use ANY Terraform Provider from Pulumi! The entire ecosystem of Terraform/OpenTofu providers is now available to Pulumi users. And all the benefits of Pulumi are available to partners and developers building their own Terraform Providers, with no extra work!"
   linkedin: |
-    You can now use ANY Terraform Provider from Pulumi! 
-    
+    You can now use ANY Terraform Provider from Pulumi!
+
     The entire ecosystem of Terraform/OpenTofu providers is now available to Pulumi users. And all the benefits of Pulumi are available to partners and developers building their own Terraform Providers, with no extra work!
 
     Check it out at https://www.pulumi.com/registry/packages/terraform-provider/ today.
@@ -29,7 +29,7 @@ We’re excited to take this even further by introducing support for using [_any
 
 <!--more-->
 
-Terraform providers are the closest thing the industry has today to a "defacto standard" for describing the resource model of a cloud platform. The vast majority of these providers are implemented by cloud providers, partners, or cloud ecosystem contributors - as a way to describe what resources are available in their platform that can be managed via various kinds of infrastructure tooling. These investments become even more impactful when the work done to define the resource model can be widely leveraged by other tools for a variety of purposes - from IaC to Policy to Asset Inventory and more. There is nothing innately Terraform-specific about these providers - they are simply a standard resource model and the implementation of CRUD (Create-Read-Update-Delete) operations against that model. 
+Terraform providers are the closest thing the industry has today to a "defacto standard" for describing the resource model of a cloud platform. The vast majority of these providers are implemented by cloud providers, partners, or cloud ecosystem contributors - as a way to describe what resources are available in their platform that can be managed via various kinds of infrastructure tooling. These investments become even more impactful when the work done to define the resource model can be widely leveraged by other tools for a variety of purposes - from IaC to Policy to Asset Inventory and more. There is nothing innately Terraform-specific about these providers - they are simply a standard resource model and the implementation of CRUD (Create-Read-Update-Delete) operations against that model.
 
 At Pulumi, we've supported bridging Terraform providers for use in Pulumi from the beginning.  Pulumi's provider model is even more expressive than Terraform's and we have a defined way to [map Terraform providers](https://github.com/pulumi/pulumi-terraform-bridge) (as well as other provider ecosystems) into the Pulumi provider model to be used by Pulumi's CLI and deployment orchestration engine.  Many of the most used providers in the Pulumi ecosystem are bridged Terraform providers. However, until now, bridging a new provider required a decent amount of up front and ongoing work, to maintain a separate repository, build and push separate releases, and publish resulting SDKs to every language's package manager. This meant that while the largest and most used Terraform providers were available in Pulumi, the long tail of providers were not as easily accessible. With this launch, we are now opening up easy access to *all* of these providers.
 
@@ -74,7 +74,7 @@ You can then import the SDK in your Python code with:
 
 We ask to use the `terraform-provider` package, which implements support for any Terraform or OpenTofu provider, and then ask specifically for support for the `planetscale/planetscale` provider.  By default, this is pulled from the OpenTofu registry, but you can also specify a local path to the provider, or a fully-qualified reference to any Terraform Registry API-compatible server.
 
-As we see from the output, this generates a local `./sdks/planetscale` folder with a Python SDK for using the Planetscale provider. 
+As we see from the output, this generates a local `./sdks/planetscale` folder with a Python SDK for using the Planetscale provider.
 
 After running the two commands provided in the output, we now have the local SDK incorporated into our project:
 
@@ -90,8 +90,8 @@ import pulumi
 import pulumi_planetscale as planetscale
 
 db = planetscale.Database(
-    resource_name="mydb", 
-    organization="lukehoban", 
+    resource_name="mydb",
+    organization="lukehoban",
     cluster_size="PS-10"
 )
 
@@ -108,9 +108,9 @@ Updating (luke-pulumi-corp/dev2)
 
 View in Browser (Ctrl+O): https://app.pulumi.com/luke-pulumi-corp/anytftest/dev2/updates/2
 
-     Type                           Name            Status           
-     pulumi:pulumi:Stack            anytftest-dev2                   
- +   └─ planetscale:index:Database  mydb            created (1s)     
+     Type                           Name            Status
+     pulumi:pulumi:Stack            anytftest-dev2
+ +   └─ planetscale:index:Database  mydb            created (1s)
 
 Outputs:
   + db_url: "https://api.planetscale.com/v1/organizations/lukehoban/databases/mydb-77af236"
@@ -150,7 +150,7 @@ Two new technologies in the Pulumi open source project underpin support for usin
 
 Local packages are versioned, and parameterized providers support many different formats for their parameters.  For example, the most general form of the command to use an existing Terraform provider is:
 
-```shell 
+```shell
 $ pulumi package add terraform-provider [<registry>/]<author>/<name> [version]
 ```
 
@@ -162,9 +162,9 @@ $ pulumi package add terraform-provider /path/to/my/terraform-provider-binary
 
 ## What’s Next?
 
-Today’s release is a big step in opening up access to even more providers for Pulumi users.  But there is still a lot more we have planned to build on top of these new foundations.  
+Today’s release is a big step in opening up access to even more providers for Pulumi users.  But there is still a lot more we have planned to build on top of these new foundations.
 
-First, with locally generated SDKs, the documentation is available within the language SDK you generate (and so lights up in your IDE or development environment!). Still, there is no static docs page available in the Pulumi Registry to find and link to on the web.  In the future, we plan to offer the ability to publish documentation for locally bridged providers in the Registry. (tracked in [registry#5302](https://github.com/pulumi/registry/issues/5302))  In that case, the registry entry will be only the docs - the SDKs and provider binary will not need to be published/hosted in the Registry itself.  
+First, with locally generated SDKs, the documentation is available within the language SDK you generate (and so lights up in your IDE or development environment!). Still, there is no static docs page available in the Pulumi Registry to find and link to on the web.  In the future, we plan to offer the ability to publish documentation for locally bridged providers in the Registry. (tracked in [registry#5302](https://github.com/pulumi/registry/issues/5302))  In that case, the registry entry will be only the docs - the SDKs and provider binary will not need to be published/hosted in the Registry itself.
 
 Second, the underlying Local Packages and Parameterized Providers technologies for building different flavors of a single provider are applicable to many other use cases.  In addition to having a single provider that can be “parameterized” to act as any Terraform provider, we have plans to apply this technology to additional use cases, such as generating strongly typed providers over any Kubernetes CRD, any Helm Chart, any other Pulumi program, and many more ecosystems of exciting infrastructure components which can be deployed via Pulumi.
 

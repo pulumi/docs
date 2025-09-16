@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-ref-builtin-functions
     identifier: esc-ref-fn-open
-    weight: 4
+    weight: 5
 ---
 
 The `fn::open` built-in function invokes a [provider](/docs/esc/reference/providers/) to fetch values from outside of ESC.

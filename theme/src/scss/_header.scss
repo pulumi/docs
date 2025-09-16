@@ -158,7 +158,7 @@
         @apply hidden;
 
         @screen lg {
-            @apply flex items-center flex-grow justify-evenly mx-8;
+            @apply flex items-center flex-grow justify-evenly mx-4;
 
             li {
                 a {
@@ -174,7 +174,17 @@
                 }
 
                 .dropdown-title {
-                    @apply pl-4 pr-8;
+                    @apply pl-4 pr-8 text-base;
+                    
+                    @screen lg {
+                        @apply text-sm pl-2;
+                    }
+                }
+                
+                @screen xl {
+                    .dropdown-title {
+                        @apply text-base pl-4;
+                    }
                 }
 
                 &:hover {
@@ -216,6 +226,10 @@
 
                                 li {
                                     @apply px-0;
+
+                                    .list-title {
+                                        min-width: 210px;
+                                    }
                                 }
                             }
 
@@ -308,6 +322,10 @@
                     }
                 }
             }
+        }
+        
+        @screen xl {
+            @apply mx-8;
         }
     }
 

@@ -127,6 +127,7 @@ You can then import the SDK in your Python code with:
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```bash
 $ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
 
@@ -136,9 +137,11 @@ Go mod file updated to use local sdk for vpcmod
 To use this package, import github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v6/vpcmod
 Added package "vpcmod" to Pulumi.yaml
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```bash
 $ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
 
@@ -156,6 +159,7 @@ You can then use the SDK in your .NET code with:
 
 Added package "vpcmod" to Pulumi.yaml
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
@@ -193,11 +197,13 @@ Added package "vpcmod" to Pulumi.yaml
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```bash
 $ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpcmod
 
 Added package "vpcmod" to Pulumi.yaml
 ```
+
 {{% /choosable %}}
 
 {{% /chooser %}}
@@ -207,48 +213,66 @@ Pulumi automatically generates a local SDK with full support for your language:
 {{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
+
 ```bash
 $ ls sdks/vpcmod
 README.md       index.ts        node_modules    provider.ts     tsconfig.json   utilities.ts
 bin             module.ts       package.json    scripts         types
+
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```bash
 $ ls sdks/vpcmod
 build                   pulumi_vpcmod           pulumi_vpcmod.egg-info  setup.py
+
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```bash
 $ ls sdks/vpcmod
 go.mod  vpcmod
+
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```bash
 $ ls sdks/vpcmod
 Inputs                  Provider.cs             README.md
 logo.png                pulumi-plugin.json      Utilities.cs
 Module.cs               Pulumi.Vpcmod.csproj    version.txt
+
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```bash
 $ ls sdks/vpcmod
 README.md       src
+
 ```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```bash
 $ ls sdks/vpcmod
 vpcmod-6.0.0.yaml
+
 ```
+
 {{% /choosable %}}
 
 {{% /chooser %}}
@@ -262,6 +286,7 @@ Now you can use the module with full IntelliSense support:
 {{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vpcmod from '@pulumi/vpcmod';
@@ -285,9 +310,11 @@ const vpc = new vpcmod.Module("test-vpc", {
 export const publicSubnets = vpc.public_subnets;
 export const privateSubnets = vpc.private_subnets;
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -317,6 +344,7 @@ vpc = vpcmod.Module(
 pulumi.export("publicSubnets", vpc.public_subnets)
 pulumi.export("privateSubnets", vpc.private_subnets)
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -404,9 +432,11 @@ return await Deployment.RunAsync(() =>
     };
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```java
 package myproject;
 
@@ -439,6 +469,7 @@ public class App {
     }
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}

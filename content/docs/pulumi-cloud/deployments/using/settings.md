@@ -155,7 +155,7 @@ Dependency caching is supported for the following runtimes:
 - `.NET` - no special configuration required
 - `Python` - ensure that you have `requirements.txt` in the root of your source code.
 - `Go` - ensure that you have `go.mod` and `go.sum` in the root of your source code.
-- `NodeJS` - ensure that you have `packageManager` field specified in `package.json`. For now, only `npm` and `yarn` are supported.
+- `NodeJS` - only `npm` and `yarn` are currently supported.
   - For `npm`, ensure that you have `package-lock.json` in the root of your source code.
   - For `yarn`, ensure that you have `yarn.lock` in the root of your source code.
 
