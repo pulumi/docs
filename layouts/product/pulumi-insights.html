@@ -12,7 +12,8 @@
                 <h4 class="block lg:hidden xl:block text-2xl">{{ .Params.overview.title }}</h4>
                 <p>{{ .Params.overview.body | markdownify }}</p>
                 <div class="mt-8 flex justify-center">
-                    <a href="/docs/insights/get-started/" class="btn-primary">Get Started with Pulumi Insights</a>
+                    <a href="/docs/insights/get-started/" class="btn-primary">Get Started</a>
+                    <a href="/contact/?form=request-a-demo" class="btn-secondary ml-4">Book a Demo</a>
                 </div>
             </div>
             <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
@@ -111,16 +112,28 @@
         {{ end }}
     </section>
 
-    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-20 px-6">
-        <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
-            <div class="max-w-xl mx-auto">
-                <h2 class="text-white hidden lg:block px-0 lg:px-16">{{ .Params.get_started.title }}</h2>
-                <h4 class="text-white mt-0 lg:hidden">{{ .Params.get_started.title }}</h4>
-                <p class="text-white">{{ .Params.get_started.description }}</p>
-                <div class="mt-16">
-                    <a class="btn-secondary" href="https://app.pulumi.com/">Sign In</a>
+    <section id="learn" class="container mx-auto text-center mt-16 px-6">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h2>{{ .Params.learn.title }}</h2>
+        </div>
+        <div class="flex flex-wrap justify-content items-stretch text-left my-4">
+            {{ range $index, $item := .Params.learn.items }}
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="h-full {{ if eq $index 0 }}bg-violet-100{{ else }}card bg-white{{ end }} p-12 rounded-xl">
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                            {{ range $button := $item.buttons }}
+                            <a href="{{ $button.link }}" class="btn-{{ $button.type }}">{{ $button.action }}</a>
+                            {{ end }}
+                        </div>
+                    </div>
                 </div>
-            </div>
+            {{ end }}
         </div>
     </section>
 {{ end }}
