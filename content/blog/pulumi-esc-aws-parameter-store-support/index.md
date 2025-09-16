@@ -93,4 +93,3 @@ We are excited to expand our roster of integrations with the new AWS Parameter S
 * Visit our [Pulumi ESC docs](/docs/esc/) to learn more about Pulumi ESC and its supported [integrations](/docs/esc/integrations/)
 
 As always, we deeply value your insights. Your [feedback](https://github.com/pulumi/esc/issues/new/choose) is instrumental in helping us refine and enhance our solutions to better align with your needs.
-

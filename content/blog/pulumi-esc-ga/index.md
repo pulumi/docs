@@ -104,7 +104,6 @@ Starting <b>October 1st, 2024</b>, Pulumi ESC will be billed per secret. We have
 | **Price per 10K API calls**    |  10K free          | $0.10             | $0.10             | $0.10             |
 | **Commitment discounts**       |                 |                | ✔                 | ✔                 |
 
-
 Check out our [pricing](/pricing/) page for more information about the various packages available. [Contact us](/contact/?form=sales) if you are interested in a demo, have any questions, or would like to discuss volume discounts.
 
 ## Conclusion
