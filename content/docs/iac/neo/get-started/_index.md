@@ -17,7 +17,7 @@ menu:
 
 ## Public Preview Access
 
-Neo is in public preview and currently free to use. Users will receive ample warning before any pricing changes go into effect. Using Neo to optionally run [`pulumi preview`](/docs/iac/neo/running-previews/) consumes workflow minutes. Lean more about workflow minutes on our [pricing page](https://www.pulumi.com/pricing/#faq-pricing).
+Neo is in public preview and currently free to use. Users will receive ample warning before any pricing changes go into effect. Using Neo to optionally run [`pulumi preview`](/docs/iac/neo/running-previews/) consumes workflow minutes. Learn more about workflow minutes on our [pricing page](https://www.pulumi.com/pricing/#faq-pricing).
 
 ## Enabling and Disabling Neo
 
