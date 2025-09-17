@@ -1,6 +1,6 @@
 ---
 title: KubeCon 2024
-meta_desc: Scale Kubernetes operations with Neo - the first infrastructure AI agent built for K8s environments. Purpose-built intelligence for container orchestration, multi-cloud deployments, and enterprise governance.
+meta_desc: Scale Kubernetes operations with Neo - the first infrastructure AI agent built for K8s environments.
 meta_image: /images/kubecon/kubecon-meta-26.png
 type: page
 layout: kubecon
