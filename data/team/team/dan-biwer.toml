@@ -1,0 +1,10 @@
+id = "dan-biwer"
+name = "Dan Biwer"
+status = "active"
+title = "Software Engineer"
+weight = 1
+
+[social]
+github = "danbiwer"
+x = ""
+linkedin = "dbiwer"
