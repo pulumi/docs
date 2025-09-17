@@ -14,14 +14,14 @@ def report(message: str, urn: Optional[str] = None):
 class Bucket_Prefix_Policy(unittest.TestCase):
     def test__passes_when_an_S3_bucket_has_the_correct_prefix(self):
         args = Mock(
-            resource_type="aws:s3/bucketV2:BucketV2", 
+            resource_type="aws:s3/bucket:Bucket", 
             props={ "bucketPrefix": policies.REQUIRED_S3_PREFIX }
         )
         s3_product_prefix_policy.validate(args, report)
 
     def test__fails_when_an_S3_bucket_has_no_prefix(self):
         args = Mock(
-            resource_type="aws:s3/bucketV2:BucketV2", 
+            resource_type="aws:s3/bucket:Bucket", 
             props={ "bucketPrefix": "" }
         )
         with self.assertRaises(AssertionError):
@@ -29,7 +29,7 @@ class Bucket_Prefix_Policy(unittest.TestCase):
 
     def test__fails_when_an_S3_bucket_has_the_wrong_prefix(self):
         args = Mock(
-            resource_type="aws:s3/bucketV2:BucketV2", 
+            resource_type="aws:s3/bucket:Bucket", 
             props={ "bucketPrefix": "something-unexpected" }
         )
         with self.assertRaises(AssertionError):

@@ -7,7 +7,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: insights-home
-    weight: 5
+    weight: 4
+    identifier: policy-as-code
 ---
 
 Policy as Code (PaC) for discovered resources extends [Pulumi Crossguard](/docs/iac/using-pulumi/crossguard/) policy enforcement capabilities beyond Pulumi managed infrastructure as code (IaC) to include resources discovered through Pulumi Insights. This feature enables organizations to maintain consistent compliance and governance across their entire cloud infrastructure, regardless of how resources were provisioned.
@@ -18,31 +19,41 @@ For a detailed overview of CrossGuard, including supported languages for policy 
 For a detailed guide on how to get started with Pulumi Insights, including step-by-step instructions to configure your first policy, visit our [Pulumi Insights get started](/docs/insights/get-started/).
 {{% /notes %}}
 
-## Configure Policy as Code for discovered resources
+## How to Configure Policies
 
-To apply policies to your discovered resources, you first need to set up a Policy Group. A Policy Group in Pulumi enforces policies across a group of stacks and accounts in your organization. Each Policy Group can contain multiple of each stack and accounts, and you can assign multiple Policy Packs to these groups.
+### Prerequisites
 
-On the **Policies** page, under Pulumi Insights, you can click the **New policy pack** button to enable a new Policy Pack for use with your Insights accounts.
+Before configuring policies, ensure the following requirements are met:
 
-![Insights Policies - New Policy Pack](/docs/insights/assets/create-policy-group.png)
+* Appropriate permissions to configure Policies
+* One or more policy packs ([pre-built](/docs/insights/pre-built-packs/) or custom) added to the organization.
+* One cloud account or Pulumi Stack
+  * For audit policies: Cloud accounts connected to Pulumi Cloud.
+  * For preventative policies: One or more Pulumi stacks.
 
-If the selected Policy Pack has configuration, a dialog will appear for you to enter the configuration such as enforcement level.
+### Configuration Steps
 
-![Insights Policies - Policy Pack configuration](/docs/insights/assets/enable-policy-pack.png)
+1. Navigate to the policies tab in the left navigation bar.
+2. Here is the new policy management panel. Here, policy packs can be selected to add to the organization. Let's add one of the `pulumi-best-practices` policy packs.
+3. Create a new policy group instead of using the default group.
+4. Add the stack to the newly created policy group.
+5. Add the newly added policy pack to the policy group.
+6. Adjust the policy pack's configuration settings as needed.
+7. Save the policy pack configuration.
+8. Save the policy group to apply the changes.
+9. The policy pack is now applied to the policy group with the configured settings.
 
-Once your Policy Group is set up, you can add discovered accounts to the group, which will ensure that the resources in those accounts are evaluated against the policies in the group.
+{{< video title="Policy Management Configuration Demo" src="/docs/insights/assets/doc-video-2.mp4" autoplay="false" loop="true" controls="true" >}}
 
-Click **Add accounts** and the name of the account you want to include for Insights policies. (e.g. insights-aws-account/us-west-2) Finally, click **Add account to policy group**.
-
-{{% notes type="info" %}}
-By default, all accounts and stacks are automatically added to the `default-policy-group`.
-{{% /notes %}}
+For more detailed information about policy configuration and the differences between preventative and audit policies, see [Preventative vs. Audit Policies](/docs/insights/preventative-vs-audit-policies/).
 
 ## Running Policies on discovered resources
 
 Pulumi will evaluate each resource in your cloud account against the policies defined in your Policy Pack. Violations will show up on the **Policy Violations** page, which gives you a detailed view of any non-compliant resources.
 
-Violation includes details about the resource and the reason for the violation, helping you quickly identify and address issues
+Violation includes details about the resource and the reason for the violation, helping you quickly identify and address issues.
+
+To learn more about choosing between preventative and audit enforcement approaches and when to use each one, see our guide on [Preventative vs. Audit Policies](/docs/insights/preventative-vs-audit-policies/).
 
 ## Policy violations
 

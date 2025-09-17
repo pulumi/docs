@@ -143,32 +143,6 @@ To view a trace locally navigate to the [Jaeger UI](http://localhost:16686/searc
 
 ## Common problems
 
-### 403 error fetching plugin
-
-This error commonly occurs when using an ARM64-based processor while using an older version of a provider that does not support ARM64. It is not possible to upgrade the providers as your state file requires the version of the provider used at the time the resources were created.
-
-The method for fixing this issue depends on whether you are using an Intel based processor:
-
-#### Intel based processor
-
-1. Open your Pulumi program on a non-arm64 based computer.
-1. Update your packages (pip / nuget / npm / go) and run `pulumi up`.
-1. Once the update is complete, open the new, updated Pulumi program on your arm64-based system.
-
-#### Non-Intel based processor
-
-1. Remove Pulumi - if you're using Homebrew, `brew remove pulumi` to remove Pulumi and `rm -rf ~/.pulumi` to remove plugins and templates.
-1. Download [latest version of Pulumi](/docs/install/versions/).
-1. Add Pulumi to path: `export PATH=$PATH:~/.pulumi/bin`
-1. Update packages in your Pulumi program to latest version (for example `npm install @pulumi/aws@latest)
-1. Install Pulumi provider: `arch -x86_64 pulumi plugin install resource {provider_name} v{version}` (where  {provider_name} is the name of the provider, i.e. aws and {version} is the same version number that your package has updated to). `arch` is used to run the selected architecture of a binary, in this case so that you can run the non-ARM64 version of Pulumi on your laptop.
-1. [Login to Pulumi](/docs/concepts/state#logging-into-and-out-of-state-backends).
-1. Run a Pulumi preview: `arch -x86_64 pulumi pre`.
-1. Remove Pulumi again `rm -rf ~/.pulumi`.
-1. [Re-install Pulumi](/docs/install/)
-1. [Login to Pulumi](/docs/concepts/state#logging-into-and-out-of-state-backends).
-1. Run a Pulumi preview to check everything is ok: `pulumi pre`
-
 ### 409 conflict: Another update is currently in progress. {#conflict}
 
 Run `pulumi cancel` to cancel the update.
@@ -228,29 +202,6 @@ message is **always a bug in Pulumi**. If you see this error message, please ope
 recommend joining our [Pulumi Community Slack](https://slack.pulumi.com/) and sharing your problem
 if you experience this error message.
 
-### Error: could not load plugin for provider
-
-You may encounter an error when you downgrade provider versions _after_ your stack is already updated with a newer version.
-If you must downgrade the version of a provider your `pulumi` program depends on, you will need to [manually edit your deployment](#editing-your-deployment)
-and change the version of the provider your stack depends on and then import that as the latest state of your stack.
-
-The `pulumi` program that you author for your infrastructure may contain one or more dependencies to `providers`.
-The version information for these providers is stored in the deployment for each of your stacks (since each Pulumi program belongs to a stack).
-This error can occur when the deployment state for a stack already contains a newer version of a specific provider, but you are trying
-to run a `pulumi up` (or `preview`) command after downgrading the provider dependency in your Pulumi program.
-
-This error occurs because the `pulumi` [plugin cache](/docs/cli/commands/pulumi_plugin_ls/) does not have the required version installed.
-This is more likely to occur if you are running `pulumi` in a CI/CD environment since your plugin cache is likely not saved across builds.
-
-It is okay to have multiple versions of a provider installed and have stacks depend on different provider version. It is only a problem when you
-downgrade the version of a particular stack that was already deployed using a newer version.
-
-Full error example:
-
-```
-error: could not load plugin for aws provider 'urn:pulumi:<stack_name>::pulumi-service::pulumi:providers:aws::default': no resource plugin 'aws-v0.16.2' found in the workspace or on your $PATH, install the plugin using \`pulumi plugin install resource aws v0.16.2\`
-```
-
 ### Cannot connect to Pulumi Cloud
 
 If your network blocks external traffic and you're using Pulumi Cloud to manage your state, your security team may need the following details to allow the Pulumi CLI to connect to Pulumi Cloud:
@@ -275,19 +226,6 @@ If you have a system-wide proxy server running on your machine, it may be miscon
 on IP address `127.0.0.1`. Your proxy server should be configured **NOT** to proxy
 these local network connections. Add both `127.0.0.1` and `localhost` to the exclusion list of your proxy server.
 
-### Ingress .status.loadBalancer field was not updated with a hostname/IP address {#ingress-status-loadbalancer}
-
-This error is often caused by a misconfigured ingress-controller not updating the `status.loadBalancer`
-field once the Ingress resource is ready to route traffic.
-
-In some cases, this may be fixed by running `pulumi refresh`.
-
-#### Traefik
-
-For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
-is [set properly](https://docs.traefik.io/providers/kubernetes-ingress/). This option was
-introduced in Traefik 1.7.0.
-
 ### Pulumi destroy fails {#pulumi-destroy-fails}
 
 There are scenarios when `pulumi destroy` will fail to delete resources as expected. This is anticipated due to the nature of cloud provider dependencies, permissions, resources being in a state that prevents their deletion, or when a timeout is not long enough for the cloud provider to complete its operation. Review the output to identify which resources were not deleted and consider the following steps depending on the nature of the failure.
@@ -310,133 +248,6 @@ For each resource that couldn't be deleted, use the cloud provider's console or 
 
 Once you have resolved the source of the deletion failure, you can run `pulumi refresh` to validate that all of your resources are destroyed. This command will update your Pulumi state to reflect the current state in the cloud, effectively recognizing any manual deletions or changes that occurred outside of Pulumi's management.
 
-### Synchronous call made to "X" with an unregistered provider {#synchronous-call}
-
-Asynchronous calls are the default in `@pulumi/pulumi>=2.0.0` and the below only applies to programs using the `1.x` SDK.
-
-The warning occurs when invoking a resource function synchronously while also using an
-[explicit provider object](/docs/concepts/resources#providers) that isn't yet ready to use.
-
-For example:
-
-```ts
-const provider = new aws.Provider(...);
-
-// A call to some provider's `getXXX` data source function.
-const ids = aws.ec2.getSubnetIds(..., { provider });
-
-// or
-
-const parent = new SomeResource("name", { provider });
-const ids = aws.ec2.getSubnetIds(..., { parent });
-```
-
-This warning may be benign. However, if you are experiencing crashes or hangs in Pulumi (especially in Node.js version 12.11.0 and above) and you see this warning, then it is likely that the older version of Pulumi is the issue.
-
-The root cause of this problem pertains to undefined behavior in the Node.js runtime,
-It is recommended that Pulumi apps be updated to prevent breakage.
-
-To address the issue update your app to use one of the following forms:
-
-#### Globally opt out of synchronous calls
-
-Set the following config variable for your application:
-
-```bash
-pulumi config set pulumi:noSyncCalls true
-```
-
-```ts
-const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider })); // or
-const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent }));
-```
-
-This is the preferred way to solve this issue. In this form all resource function calls will always execute asynchronously,
-returning their result through a `Promise<...>`. The result of the call is then wrapped into an `Output` so it can easily be
-passed as a resource input and to make it [simple to access properties](/docs/concepts/inputs-outputs#lifting) off of it.
-
-#### Invoke the resource function asynchronously
-
-Use this method to update only specific problematic calls to be asynchronous.
-
-```ts
-const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider, async: true })); // or
-const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent, async: true }));
-```
-
-In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always execute asynchronously.  The result
-of the call is then wrapped into an `Output` so it can easily be passed as a resource input and to make it
-[simple to access properties](/docs/concepts/inputs-outputs#lifting) off of it.
-
-#### Register the provider first
-
-If the problem exists in a layer deeper (e.g, a component not under your control), use this solution.
-
-```ts
-const provider = new aws.Provider(...);
-await ProviderResource.register(provider);
-
-// later on
-
-const ids = aws.ec2.getSubnetIds(..., { provider }); // or
-const ids = aws.ec2.getSubnetIds(..., { parent });
-```
-
-In this form, the ProviderResource is explicitly registered first, allowing it to be safely used *synchronously* in the resource
-function calls. This registration should generally be done immediately after creating the provider. With this form the resource function
-results can be used immediately, without needing to operate on them as promises (i.e. no need for `await` or `.then(...)`).
-
-This approach makes it possible to safely perform these resource function calls synchronously.  However, it may require refactoring
-some code due to the need to potentially use `async`/`await` code in areas of a program that are currently synchronous.
-
-### StackReference.getOutputSync/requireOutputSync called on a StackReference whose name is a Promise/Output {#stackreference-sync}
-
-`getOutputSync` and `requireOutputSync` are not available in `@pulumi/pulumi>=2.0.0` and the below only applies to programs using the `1.x` SDK.
-
-The warning occurs when calling `getOutputSync` or `requireOutputSync` on a `StackReference` whose name is not a simple string.
-For example:
-
-```ts
-const stackReference = new StackReference("...", { name: otherResource.outputValue });
-const val = stackReference.getOutputSync("outputName");
-```
-
-This warning may be benign. However, if you are experiencing crashes or hangs in Pulumi (especially in Node.js version 12.11.0 and above) and you see this warning, then it is likely that the older version of Pulumi is the issue.
-
-A warning is issued so as to not break existing code that is functioning properly. However, the root cause of this problem
-pertains to undefined behavior in the Node.js runtime, so code that works today may begin crashing or hanging in the future. We recommend updating your code to ensure your Pulumi program works reliably.
-
-There are only two supported ways to avoid this issue:
-
-#### Use getOutput/requireOutput instead {#use-getoutput}
-
-```ts
-const stackReference = new StackReference("...", { name: otherResource.outputValue });
-const val = stackReference.getOutput("outputName");
-```
-
-In this form the result of the call is an `Output` (which internally asynchronously retrieves the stack output value).  This can
-easily be passed as a resource input and supports [simple to access properties](/docs/concepts/inputs-outputs#lifting) off of it.
-
-However, because the value is not known synchronously, it is not possible to have the value affect the flow of your application.
-For example, if the output value is an array, there is no way to know the length of the array in order to make specific resources
-corresponding to it.  If the exact value is needed for this purpose the only way to get it is like so:
-
-#### Pass the stack reference name in as a string
-
-```ts
-const stackReference = new StackReference("...", { name: "explicitly-provided-name" });
-const values: string[] = stackReference.getOutput("outputName");
-for (const e of values) {
-   ...
-```
-
-This approach requires you to pass in the name as a string either explicitly as a literal like above, or just as some string
-value defined elsewhere in your application. If the value is known, it can be copied into your application and used directly.
-
-If the stack-reference-name truly is dynamic and cannot be known ahead of time to supply directly into the app, then this
-approach will not work, and the only way to workaround the issue is to follow the steps in [Use getOutput/requireOutput](#use-getoutput).
-
 ## Recovering from an interrupted update {#interrupted-update-recovery}
 
 If the Pulumi CLI is interrupted when performing a deployment, you may see a warning message
@@ -448,7 +259,7 @@ $ pulumi up
 Diagnostics:
   pulumi:pulumi:Stack (proj):
     warning: Attempting to deploy or update resources with 1 pending operations from previous deployment.
-      * urn:pulumi:dev::proj::aws:s3/bucketV2:BucketV2::bucket, interrupted while creating
+      * urn:pulumi:dev::proj::aws:s3/bucket:Bucket::bucket, interrupted while creating
     These resources are in an unknown state because the Pulumi CLI was interrupted while waiting for changes to these resources
     to complete. You should confirm whether or not the operations listed completed successfully by checking the state of the
     appropriate provider. For example, if you are using AWS, you can confirm using the AWS Console.

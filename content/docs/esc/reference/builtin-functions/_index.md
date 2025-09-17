@@ -19,6 +19,7 @@ All function invocations take the form of an object with a single key that names
 - [`fn::fromJSON`](/docs/esc/reference/builtin-functions/fn-from-json)
 - [`fn::fromBase64`](/docs/esc/reference/builtin-functions/fn-from-base64)
 - [`fn::join`](/docs/esc/reference/builtin-functions/fn-join)
+- [`fn::concat`](/docs/esc/reference/builtin-functions/fn-concat)
 - [`fn::open`](/docs/esc/reference/builtin-functions/fn-open)
 - [`fn::rotate`](/docs/esc/reference/builtin-functions/fn-rotate)
 - [`fn::secret`](/docs/esc/reference/builtin-functions/fn-secret)

@@ -86,6 +86,7 @@ If you have a suggestion for improving the standard Pulumi container image, plea
 Together with the Azure Deployment Environments team, Pulumi is excited to enable our shared customers to take advantage of the ADE extensibility model, Pulumi IaC platform, and empower developers with self-service of Azure App infrastructure, within enterprise guardrails. We hope that this new capability will help you streamline your development processes and make it easier for your teams to provision new environments in Azure quickly.
 
 If you want to learn more:
+
 - Attend our workshop [Platform Engineering with Microsoft Azure and Pulumi](https://www.pulumi.com/resources/platform-engineering-with-azure-pulumi/) that takes place on June 20
 - Read the [announcement on the Azure blog](https://aka.ms/build24/ade-blog)
 - Explore the code at [`pulumi/azure-deployment-environments`](https://github.com/pulumi/azure-deployment-environments)

@@ -21,7 +21,6 @@ Pulumi is excited to be at KubeCon North America this week, the premier event fo
 
 Stop by the Pulumi KubeCon booth R1 this week to chat with experts on the Pulumi team. If you can't make it to KubeCon, [join our workshop](https://www.pulumi.com/resources/pulumi-kubernetes-better-together/) on November 18, 2024, to see how easy it is to manage Kubernetes with Pulumi.
 
-
 ## Recent Pulumi Kubernetes Updates
 
 We've launched several new and improved capabilities recently to serve Kubernetes users and to make it easier than ever to automate, secure, manage, and scale clusters and workloads.
@@ -32,13 +31,11 @@ The **Pulumi Kubernetes Operator** automates the deployment and management of in
 
 [Read more about the Pulumi Kubernetes Operator 2.0](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0/)
 
-
 ### Pulumi ESC Secrets in Kubernetes with the External Secrets Operator
 
 **Pulumi ESC integrates with the External Secrets Operator (ESO)** to securely access secrets from Pulumi ESC in Kubernetes. This enables a secure, automated way to manage and use secrets from Pulumi ESC across Kubernetes clusters, reducing the need for manual secrets maintenance and potential security risks from the local storage of secrets in manifest files.
 
 [Read more about using Pulumi ESC secrets in Kubernetes with the External Secrets Operator](https://www.pulumi.com/blog/cloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator/)
-
 
 ### Pulumi EKS Provider Version 3.0.0
 
@@ -46,13 +43,11 @@ The **Pulumi EKS Provider Version 3.0.0** simplifies Amazon Elastic Kubernetes S
 
 [Read more about the Pulumi EKS Provider Version 3.0.0](https://www.pulumi.com/blog/eks-v3-release/)
 
-
 ### Kubernetes-Native Support for Customer-Managed Pulumi Deployments Agents
 
 **Kubernetes-native support for customer-managed Pulumi Deployments agents** allows organizations to host Pulumi Deployments agents within their Kubernetes environments enhancing the flexibility and control they have over their infrastructure deployments. Kubernetes-native support offers greater flexibility, scalability, and security for self-hosted Pulumi Deployments agents.
 
 [Read more about Kubernetes-native support for customer-managed Pulumi Deployments agents](https://www.pulumi.com/blog/customer-managed-agents-kubernetes/)
-
 
 ### Improved Kubernetes await Logic in the Pulumi Kubernetes Provider
 
@@ -60,13 +55,11 @@ The **Pulumi EKS Provider Version 3.0.0** simplifies Amazon Elastic Kubernetes S
 
 [Read more about improved Kubernetes await logic in the Pulumi Kubernetes provider](https://www.pulumi.com/blog/improved-kubernetes-await-logic/)
 
-
 ### Helm Chart v4 Resource in the Pulumi Kubernetes Provider
 
 The **Helm Chart v4 resource in the Pulumi Kubernetes provider** introduces several new capabilities for users managing Helm charts. It allows for more sophisticated chart management, including enhanced support for dependencies between charts, applying transformations to chart resources, and the ability to handle Kubernetes namespaces more flexibly​.
 
 [Read more about the Helm Chart v4 resource in the Pulumi Kubernetes provider](https://www.pulumi.com/blog/kubernetes-chart-v4/)
-
 
 ### Revamped crd2pulumi
 

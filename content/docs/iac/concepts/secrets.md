@@ -223,6 +223,10 @@ For example, this command sets a configuration variable named `dbPassword` to th
 $ pulumi config set --secret dbPassword S3cr37
 ```
 
+{{% notes "warning" %}}
+When storing secret values containing special characters (such as `$`, `!`, `@`, `#`, etc.), be aware that shell interpretation may modify the value before it reaches Pulumi. Consider using quotes around the value or escaping special characters according to your shell's requirements. For complex values, you may want to use input redirection or pipe the value from a file to avoid shell interpretation entirely.
+{{% /notes %}}
+
 If we list the configuration for our stack, the plain-text value for `dbPassword` will not be printed:
 
 ```bash

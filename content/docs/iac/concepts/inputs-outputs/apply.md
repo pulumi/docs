@@ -297,7 +297,7 @@ The `apply` method is great for when you need to access single values. However, 
 
 ## Accessing single output values { search.keywords="pulumi.apply" }
 
-Let's say you want to print the ID of the VPC you've created. Given that this is an individual resouce property and not the entire resource itself, you might try logging the value like normal:
+Let's say you want to print the ID of the VPC you've created. Given that this is an individual resource property and not the entire resource itself, you might try logging the value like normal:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 

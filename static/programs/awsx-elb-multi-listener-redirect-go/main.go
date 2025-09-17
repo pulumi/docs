@@ -1,8 +1,8 @@
 package main
 
 import (
-	awslb "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/lb"
-	"github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/lb"
+	awslb "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/lb"
+	"github.com/pulumi/pulumi-awsx/sdk/v3/go/awsx/lb"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 

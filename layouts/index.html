@@ -36,13 +36,18 @@
         </div>
     </section>
 
-    <!-- 3 pillars -->
-    <section id="benefits" 
-        class="text-center my-6">
-        <div class="container mx-auto flex flex-wrap justify-content items-stretch text-left p-8">
+    <!-- Platform Overview with 3 pillars -->
+    <section class="pt-12 pb-6 mt-12 px-6 lg:px-0 home-page-section" style="background: linear-gradient(to bottom, white 0%, rgb(237 233 254) 30%, rgb(237 233 254) 60%, white 100%);">
+        <div class="container mx-auto text-center">
+            <h2>{{ .Params.platform.title }}</h2>
+            <p class="mx-auto max-w-4xl text-lg text-gray-700 mb-12">{{ .Params.platform.description | markdownify }}</p>
+        </div>
+
+        <!-- 3 pillars -->
+        <div class="container mx-auto flex flex-wrap justify-content items-stretch text-left px-8 pb-8">
             {{ range $item := .Params.pillars.items }}
                 <div class="w-full lg:w-1/3 p-3">
-                    <div class="h-full card shadow-xl border-2 border-gray-200 bg-white p-12">
+                    <div class="h-full card shadow-xl border-2 border-gray-200 bg-white p-8 xl:p-12">
                         <div class="flex flex-row items-center justify-left">
                             <div class="icon-section text-center">
                                 {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
@@ -60,51 +65,27 @@
         </div>
     </section>
 
-    <!--  IDP  -->
-    <section class="py-12 my-12 px-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
-        <div class="container mx-auto z-10">
-            <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
-                <div class="w-full lg:w-1/2 z-10 px-8">
-                    <h3>{{ .Params.idp.title }}</h3>
-                    <p class="text-lg">{{ .Params.idp.description | markdownify }}</p>
-                    <div class="mt-8">
-                        <span class="text-lg">Learn more: </span>
-                        <a href="/product/internal-developer-platforms" class="underline text-lg">Pulumi IDP<i class="fa fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-center w-full lg:w-1/2">
-                    <img class="h-96" src="{{ .Params.idp.image }}" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CLEAR quote -->
+    <!-- Snowflake quote - Platform validation -->
     <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.clear) }}
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
     </section>
 
-    <!-- Code and ship faster -->
-    <section class="my-12 p-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+    <!-- Infrastructure as Code (Text Left, Image Right) -->
+    <section class="my-12 p-6 xl:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
         <div class="container mx-auto z-10">
             <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
-                <div class="w-full lg:w-4/12">
+                <div class="w-full lg:w-4/12 order-2 lg:order-1">
                     <h3>{{ .Params.code_faster.title | markdownify }}</h3>
-                    <p class="text-lg">{{ .Params.code_faster.description | markdownify }}</p>
-                    {{ range $item := .Params.code_faster.items }}
-                        <h6>{{ $item.title }}</h6>
-                        <p>{{ $item.description | markdownify }}</p>
-                    {{ end }}
-                    <div class="my-8">
-                        <span class="text-lg">Learn more: </span>
-                        <a href="/product/" class="underline text-lg">Pulumi IaC<i class="fa fa-arrow-right ml-2"></i></a>
+                    <p class="text-gray-700">{{ .Params.code_faster.description | markdownify }}</p>
+                    <div class="mt-8">
+                        <span class="text-gray-700">Learn more: </span>
+                        <a href="/product/infrastructure-as-code/" class="underline">Pulumi IaC<i class="fa fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
-                <div class="hidden lg:block w-1/12">
+                <div class="hidden lg:block w-1/12 order-2">
                     <!-- empty div to get flex to behave -->
                 </div>
-                <div class="w-full lg:w-7/12 xl:w-6/12 xxl:w-5/12 card bg-white shadow-xl p-6 block">
+                <div class="w-full lg:w-7/12 xl:w-6/12 xxl:w-5/12 card bg-white shadow-xl p-6 block order-1 lg:order-3 mb-8 lg:mb-0">
                     <div>
                         <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
                             <pulumi-choosable type="language" class="highlight" value="typescript">
@@ -141,61 +122,96 @@
         </div>
     </section>
 
-    <!-- Panther quote -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.panther) }}
-    </section>
-
-    <!-- Tame configuration and secrets sprawl -->
-    <section class="py-12 my-12 px-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
-            <div class="container mx-auto z-10">
-                <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
-                    <div class="w-full lg:w-1/2 z-10 px-8">
-                        <h3>{{ .Params.secrets.title }}</h3>
-                        <p class="text-lg">{{ .Params.secrets.description | markdownify }}</p>
-                        <div class="mt-8">
-                            <span class="text-lg">Learn more: </span>
-                            <a href="/product/esc" class="underline text-lg">Pulumi ESC<i class="fa fa-arrow-right ml-2"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-center mt-8 w-full lg:w-1/2">
-                        <img src="{{ .Params.secrets.image }}" alt="{{ .Params.secrets.alt }}" />
-                    </div>
+    <!-- Neo (Image Left, Text Right) -->
+    <section class="py-12 my-12 px-6 xl:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+        <div class="container mx-auto z-10">
+            <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
+                <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2 order-1">
+                    <img src="{{ .Params.neo.image }}" alt="{{ .Params.neo.alt }}" />
                 </div>
-            </div>
-    </section>
 
-    <!-- Starburst quote -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.starburst) }}
-    </section>
-
-    <!-- Insights -->
-    <section class="py-12 my-12 px-6 lg:px-0 relative home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
-        <div class="container mx-auto z-10 relative">
-            <div class="w-full flex flex-col lg:flex-row items-center justify-center  mx-auto">
-                <div class="w-full lg:w-5/12 z-10 px-8">
-                    <h3>{{ .Params.insights.title }}</h3>
-                    <div class="text-lg text-black">{{ .Params.insights.description | markdownify }}</div>
+                <div class="w-full lg:w-1/2 z-10 px-8 order-2">
+                    <h3>{{ .Params.neo.title }}</h3>
+                    <p class="text-gray-700">{{ .Params.neo.description | markdownify }}</p>
                     <div class="mt-8">
-                        <span class="text-lg">Learn more: </span>
-                        <a href="/product/pulumi-insights/" class="underline text-lg">Pulumi Insights<i class="fa fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-center mt-8 px-8 w-full lg:w-7/12">
-                    <div class="p-6">
-                        <img src="{{ .Params.insights.image }}" alt="{{ .Params.insights.alt }}" />
+                        <span class="text-gray-700">Learn more: </span>
+                        <a href="/product/neo" class="underline">Pulumi Neo<i class="fa fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Snowflake quote -->
+    <!-- Boost Insurance quote - Neo validation -->
     <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.boost) }}
+    </section>
+
+    <!-- Secrets & Configuration (Text Left, Image Right) -->
+    <section class="py-12 my-12 px-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+            <div class="container mx-auto z-10">
+                <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
+                    <div class="w-full lg:w-1/2 z-10 px-8 order-2 lg:order-1">
+                        <h3>{{ .Params.secrets.title }}</h3>
+                        <p class="text-gray-700">{{ .Params.secrets.description | markdownify }}</p>
+                        <div class="mt-8">
+                            <span class="text-gray-700">Learn more: </span>
+                            <a href="/product/secrets-management/" class="underline">Pulumi ESC<i class="fa fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2 order-1 lg:order-2">
+                        <img src="{{ .Params.secrets.image }}" alt="{{ .Params.secrets.alt }}" />
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Insights (Image Left, Text Right) -->
+    <section class="py-12 my-12 px-6 lg:px-0 relative home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+        <div class="container mx-auto z-10 relative">
+            <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
+                <div class="flex items-center justify-center mb-8 lg:mb-0 px-8 w-full lg:w-7/12 order-1">
+                    <div class="p-6">
+                        <img src="{{ .Params.insights.image }}" alt="{{ .Params.insights.alt }}" />
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-5/12 z-10 px-8 order-2">
+                    <h3>{{ .Params.insights.title }}</h3>
+                    <p class="text-gray-700">{{ .Params.insights.description | markdownify }}</p>
+                    <div class="mt-8">
+                        <span class="text-gray-700">Learn more: </span>
+                        <a href="/product/pulumi-insights/" class="underline">Pulumi Insights<i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internal Developer Platforms (Text Left, Image Right) -->
+    <section class="py-12 my-12 px-6 lg:px-0 home-page-section bg-gradient-to-r from-white from-0% via-violet-200 via-50% to-white to-100%">
+        <div class="container mx-auto z-10">
+            <div class="w-full flex flex-col lg:flex-row items-center justify-center mx-auto">
+                <div class="w-full lg:w-1/2 z-10 px-8 order-2 lg:order-1">
+                    <h3>{{ .Params.idp.title }}</h3>
+                    <p class="text-gray-700">{{ .Params.idp.description | markdownify }}</p>
+                    <div class="mt-8">
+                        <span class="text-gray-700">Learn more: </span>
+                        <a href="/product/internal-developer-platforms" class="underline">Pulumi IDP<i class="fa fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2 order-1 lg:order-2">
+                    <img class="h-96" src="{{ .Params.idp.image }}" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLEAR quote - IDP validation -->
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.clear) }}
     </section>
 
     <!-- Built by engineers + tweets -->
@@ -284,12 +300,12 @@
                         <h2 class="mb-12 text-center">Ready to try Pulumi?</h2>
                         <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
                             <div class="flex flex-col justify-center align-center text-center lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
-                                <a href="/docs/get-started/" class="btn-primary py-3">Get Started</a>
-                                <p class="text-xs pt-1 my-0">Follow the step-by-step guide</p>
+                                <a href="https://app.pulumi.com/signup" class="btn-primary py-3">Start Free</a>
+                                <p class="text-xs pt-1 my-0">Sign up for Pulumi Cloud</p>
                             </div>
                             <div class="flex flex-col justify-center align-center text-center lg:mr-14 lg:ml-4">
-                                <a href="docs/install/" class="btn-secondary py-3 px-6 whitespace-nowrap">Download Open Source</a>
-                                <p class="text-xs pt-1 my-0">Download our open source SDK</p>
+                                <a href="/contact/?form=request-a-demo" class="btn-secondary py-3 px-6 whitespace-nowrap">Book a Demo</a>
+                                <p class="text-xs pt-1 my-0">See Pulumi in action</p>
                             </div>
                         </div>
                     </div>

@@ -10,6 +10,8 @@ menu:
 
 Resource Search provides powerful querying capabilities for resources managed by Pulumi. The Resource Search API allows you to find resources across your organization using various filters and criteria.
 
+When resources exist in multiple sources (such as both IaC stacks and Insights scans), the search results can consolidate these using the `collapse` parameter.
+
 {{< notes >}}
 The Resource Search API is currently in preview and subject to change.
 {{< /notes >}}
@@ -40,6 +42,7 @@ GET /api/orgs/{org}/search/resourcesv2
 | `query`       | string | query | **Optional.** A search query to filter the results. |
 | `properties`  | boolean| query | **Optional.** If `true`, includes the resource properties. Default is `false`. |
 | `source`      | string | query | **Optional.** The source for resource search. |
+| `collapse`    | boolean| query | **Optional.** If `true`, collapses resources from multiple sources. Default is `false`. |
 
 ### Detailed descriptions
 
@@ -73,6 +76,8 @@ Paginating with the `cursor` parameter is not transactional. The order of result
 **properties**: Whether to include resource properties in results. Not supported for all subscriptions.
 
 Attempting to set this on an unsupported subscription results in a 402 status code.
+
+**collapse**: Whether to collapse resources from multiple sources into a single result. When `true`, resources that exist in multiple sources (such as both IaC stacks and Insights scans) are consolidated into a single entry in the search results. When `false` (default), all source instances of a resource are returned separately.
 
 ### Example
 
@@ -293,9 +298,9 @@ An individual resource.
 | dependencies | [string]      | The URN of other resources this resource explicitly or implicitly [depends on](/docs/concepts/resources#dependson).                                                                                                                                                                                                                                                              |
 | id           | string\|null  | The [physical name](/docs/concepts/resources/names/#physicalname) of the resource, as assigned by the resource's provider. May not be set if the resource is pending creation.                                                                                                                                                                                                   |
 | modified     | string\|null  | The UTC time when the resource's state was last modified during an update, refresh or import. <br><br>Stacks modified with CLI versions below 3.60 record this for all resources as the time of the stack operation, regardless of whether the resource was modified. After CLI version 3.60 the resource's modified time is only updated when the resource's state is modified. |
-| module       | string\|null  | The module component of the resource's type.<br><br>This is `s3` for a resource of type `aws:s3/bucketv2:BucketV2`.                                                                                                                                                                                                                                                              |
+| module       | string\|null  | The module component of the resource's type.<br><br>This is `s3` for a resource of type `aws:s3/bucket:Bucket`.                                                                                                                                                                                                                                                              |
 | name         | string\|null  | The logical name of the resource. <br><br>Typically the first parameter provided to the resource when it was instantiated.                                                                                                                                                                                                                                                       |
-| package      | string\|null  | The package component of the resource's [type][types].<br><br>This is `aws` for a resource of type `aws:s3/bucketv2:BucketV2`                                                                                                                                                                                                                                                    |
+| package      | string\|null  | The package component of the resource's [type][types].<br><br>This is `aws` for a resource of type `aws:s3/bucket:Bucket`                                                                                                                                                                                                                                                    |
 | parent.urn   | string\|null  | The URN of the resource's parent, if it has one.                                                                                                                                                                                                                                                                                                                                 |
 | pending      | string\|null  | The state of the resource if it is pending. <br><br>Typically indicates an operation that was interrupted due to an error, possibly needing manual intervention to resolve.<br><br>Allowed values: `creating`, `deleting`, `updating`, `reading`, `importing`.                                                                                                                   |
 | project      | string\|null  | The project the resource belongs to.                                                                                                                                                                                                                                                                                                                                             |

@@ -13,7 +13,7 @@ social:
       - Write more intuitive and maintainable infrastructure code
       - Improve collaboration between development and operations teams
       - Future-proof your infrastructure management
-   
+
       Learn why many organizations are choosing Pulumi to modernize their cloud engineering practices.
 meta_image: meta.png
 authors:
@@ -277,7 +277,7 @@ for name in filter(lambda n: n != "goofy", storage_account_names):
         location=example.location,
         account_tier="Standard",
         account_replication_type="GRS"
-    ) 
+    )
 ```
 
 {{% /choosable %}}
@@ -991,7 +991,7 @@ if mode == "spoke":
         name="vpc-c-shared-spoke",
         project=restricted_net_hub_project_id,
     )
-``` 
+```
 
 {{% /choosable %}}
 
@@ -1023,7 +1023,7 @@ func main() {
 		return nil
 	})
 }
-``` 
+```
 
 {{% /choosable %}}
 
@@ -1102,7 +1102,7 @@ public class Main {
         });
     }
 }
-``` 
+```
 
 {{% /choosable %}}
 
@@ -1324,7 +1324,7 @@ class Program
         }
     }
 }
-``` 
+```
 
 {{% /choosable %}}
 
@@ -1479,7 +1479,7 @@ using Pulumi;
 
 class Program
 {
-    static Task<int> Main() => Pulumi.Deployment.RunAsync(() => 
+    static Task<int> Main() => Pulumi.Deployment.RunAsync(() =>
     {
         var config = new Config();
         var platform = config.Get("platform") ?? "linux"; // Default to "linux" if undefined
@@ -1516,7 +1516,7 @@ public class Main {
         });
     }
 }
-``` 
+```
 
 {{% /choosable %}}
 
@@ -1562,4 +1562,3 @@ New to Pulumi? Signing up is easy and free. [Get started today!](/docs/get-start
 
 Interested in migrating? Our cloud experts can help.
 [Learn more about Pulumi's Migration Services.](/migrate/)
-

@@ -56,6 +56,10 @@ A README is required when publishing a component. Pulumi renders markdown README
 pulumi package publish github.com/acme/k8s-cluster --readme README_LOCATION
 ```
 
+#### Component API Docs
+
+In addition to the component README, when a new component or component version is published, API documentation is automatically generated for each of the supported Pulumi languages
+
 #### Specifying an Organization
 
 If you're part of multiple organizations and do not have a [default organization](/docs/iac/cli/commands/pulumi_org_set-default/) set, you must specify the org by using the `--publisher` flag.

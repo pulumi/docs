@@ -20,8 +20,8 @@ social:
   twitter: |
     Building a successful Kubernetes powered platform? Learn why you should care about Kubernetes Operators! #Kubernetes #Operators #DevOps #PlatformEngineering
   linkedin: |
-    If you are building a Kubernetes powered platform, you should care about Kubernetes Operators. They simplify the deployment, management, and scaling of applications and services on Kubernetes. 
-    This helps platform engineers to focus on strategic tasks and let the operators handle the routine operational tasks. 
+    If you are building a Kubernetes powered platform, you should care about Kubernetes Operators. They simplify the deployment, management, and scaling of applications and services on Kubernetes.
+    This helps platform engineers to focus on strategic tasks and let the operators handle the routine operational tasks.
 
     Do not miss this blog post to learn more about Kubernetes Operators and some of the advanced operators you should use in your Kubernetes powered platform.
 ---
@@ -230,8 +230,6 @@ Or use Pulumi to deploy the CloudNativePG Operator:
 ```
 
 {{% /choosable %}}
-
-
 
 #### Usage
 
@@ -693,14 +691,13 @@ Or use Pulumi:
 
 {{% /choosable %}}
 
-
 #### Summary
 
 The Strimzi Operator demonstrates the power of Kubernetes Operators by providing full lifecycle management for Apache Kafka on Kubernetes. It takes care of the heavy lifting of deploying and managing Kafka clusters, making the Strimzi Operator a valuable tool that should be part of every Kubernetes-powered platform, as it covers a wide range of use cases.
 
 ## Conclusion
 
-In this blog post, I highlighted the importance of Kubernetes Operators for platform engineers and how they can harness the advanced automation capabilities of operators to simplify deploying, managing, and scaling applications and services on Kubernetes. 
+In this blog post, I highlighted the importance of Kubernetes Operators for platform engineers and how they can harness the advanced automation capabilities of operators to simplify deploying, managing, and scaling applications and services on Kubernetes.
 
 I provided some examples of advanced Kubernetes operators that I recommend, but if you want to try using Kubernetes Operators in your Kubernetes-powered platform, here are some great guides to get you started with Pulumi and Kubernetes:
 

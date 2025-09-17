@@ -772,13 +772,13 @@ automatically and dynamically create the bootstrap resources as needed.
 When any file assets are added to your application, CDK will automatically
 create the following staging resources.
 
-1. [aws.s3.BucketV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketv2/)
+1. [aws.s3.Bucket](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/)
   1a. `forceDestroy`: true
 2. [aws.s3.BucketServerSideEncryptionConfigurationV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketserversideencryptionconfigurationv2/)
   2a. `AES256`
 3. [aws.s3.BucketVersioningV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketversioningv2/)
   3a. `Enabled`
-4. [aws.s3.BucketLifecycleConfigurationV2](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketlifecycleconfigurationv2/)
+4. [aws.s3.BucketLifecycleConfiguration](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketlifecycleconfiguration/)
   4a. Expire old versions > 365 days
   5b. Expire deploy-time assets > 30 days
 5. [aws.s3.BucketPolicy](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketpolicy/)

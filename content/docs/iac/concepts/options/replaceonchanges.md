@@ -136,3 +136,5 @@ The `replaceOnChanges` resource option can be combined with the [`deleteBeforeRe
 {{% notes type="warning" %}}
 The `replaceOnChanges` resource option does not apply to component resources, and will not have the intended effect.
 {{% /notes %}}
+
+For one-time resource replacements without code changes, see [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/) and [`pulumi state untaint`](/docs/iac/cli/commands/pulumi_state_untaint/).

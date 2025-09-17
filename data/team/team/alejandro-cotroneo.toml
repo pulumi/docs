@@ -1,0 +1,11 @@
+id = "alejandro-cotroneo"
+name = "Alejandro Cotroneo"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "aacotroneo"
+linkedin = "alejandro-cotroneo"

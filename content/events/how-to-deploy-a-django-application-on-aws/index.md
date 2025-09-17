@@ -32,7 +32,7 @@ application = elasticbeanstalk.Application('django_application',
     description="A Django application")
 
 # Create a S3 bucket for the static files
-static_bucket = s3.BucketV2('my-static-bucket')
+static_bucket = s3.Bucket('my-static-bucket')
 
 # Create a database instance
 db_instance = rds.Instance('my-database-instance',
@@ -76,7 +76,7 @@ Next, we create an S3 bucket to store our static files. Static files are assets 
 
 ```python
 # Create a S3 bucket for the static files
-static_bucket = s3.BucketV2('my-static-bucket')
+static_bucket = s3.Bucket('my-static-bucket')
 ```
 
 #### RDS Database Instance

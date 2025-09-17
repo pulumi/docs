@@ -11,7 +11,7 @@ date: 2022-03-02
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: Today we are launching a new Business Critical Edition for the Pulumi Service, a 30 day Self-Hosted Pulumi Service trial, and the option to purchase Pulumi Enterprise and Business Critical through the AWS Marketplace!
+meta_desc: Launching Business Critical Edition, 30-day Self-Hosted trial, and AWS Marketplace availability for Pulumi Enterprise and Business Critical.
 
 
 # The meta_image appears in social-media previews and on the blog home page.

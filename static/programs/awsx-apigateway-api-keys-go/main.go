@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws-apigateway/sdk/v2/go/apigateway"
-	awsapigateway "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws-apigateway/sdk/v3/go/apigateway"
+	awsapigateway "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/apigateway"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 

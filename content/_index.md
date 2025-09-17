@@ -5,9 +5,9 @@ meta_desc: Pulumi is an infrastructure management platform to automate through i
 include_organization_schema: true
 
 hero:
-  title: [ "The Cloud Infrastructure Platform", "Engineers Love and Enterprises Trust" ]
+  title: [ "Next-Level Infrastructure as Code,", "Now with Agentic AI." ]
   description: |
-    Powered by the #1 open source infrastructure as code tool.
+    The cloud infrastructure platform engineers love and enterprises trust. Any cloud, any language. Secure and governed by default.
   cta_text: Try Pulumi Cloud for Free
   cta_link: https://app.pulumi.com/signup?utm-source=try-cloud-button
   secondary_cta_text: Download Open Source
@@ -17,44 +17,69 @@ pillars:
     items:
         - icon: gear
           icon_color: purple
-          title: Automate
-          description: Infrastructure as code, powered by the industry’s best languages and AIs, helps teams provision, automate, and evolve cloud infrastructure.
+          title: Real Languages
+          description: Use TypeScript, Python, Go, C#, or Java. Full IDE support, testing frameworks, and package ecosystems. Infrastructure as software.
         - icon: shield
           icon_color: yellow
-          title: Secure
-          description: Config and secrets management built for engineers by engineers to tame sprawl at scale and help teams ensure automatic security.
+          title: Secure by Default
+          description: Encrypted secrets, dynamic credentials, audit trails. SOC 2 Type II certified. Meet compliance requirements without slowing down.
         - icon: guage
           icon_color: salmon
-          title: Manage
-          description: Gain security, compliance, and cost insights into the entirety of an organization’s cloud assets and automatically remediate issues.
+          title: AI for Infrastructure
+          description: Generate infrastructure from requirements, reviews PRs, and debugs deployments, with complete organizational context.
 
-idp:
-  title: The Fastest, Most Secure Way to Deliver Cloud Infrastructure
+platform:
+  title: The Complete Platform for Infrastructure Teams
   image: /images/product/homepage-idp.png
   description: |
-    Deliver production-ready cloud infrastructure to developers through flexible self-service – with guardrails, governance, and best practices built in.
+    From open source IaC to AI automation, Pulumi provides everything platform teams need to ship infrastructure faster. One platform that integrates infrastructure as code, secrets management, policy governance, and AI—no more stitching together disconnected tools.
 
 code_faster:
-  title: Ship faster with <br/> infrastructure as code in any programming language
+  title: Infrastructure as Code in Any Language
   description: |
-    Author infrastructure code using programming languages you know and love. Write statements to define infrastructure using your IDE with autocomplete, type checking, and documentation.
+    Write infrastructure in TypeScript, Python, Go, C#, Java, or YAML. Use real programming languages with loops, conditions, and functions. Test your code. Share reusable components. Deploy to any cloud.
+  items:
+    - title: Real Programming Languages
+      description: Full IDE support with autocomplete, type checking, and refactoring. Catch errors at compile time.
+    - title: Thousands of Providers
+      description: AWS, Azure, Google Cloud, Kubernetes, plus Cloudflare, Datadog, GitHub, and thousands more.
+    - title: Test Before You Ship
+      description: Write unit tests, run integration tests, enforce policies. Ship infrastructure with confidence.
 
-insights:
-  title: Drive security and compliance through AI
-  image: /images/solutions/ai/ai_save_cost.svg
-  alt: Diagram demonstrating how Pulumi Insights drives costs, security, and compliance.
+infrastructure_as_code:
+  title: Infrastructure as Code in Any Language
   description: |
-    Enforce compliance and security, understand cloud usage, and discover cost savings to drive better efficiency, security, and reliability across all cloud assets.
+    Stop wrestling with HCL and YAML. Use real programming languages with actual loops, conditions, and functions. Test your infrastructure. Share it as packages. Deploy anywhere.
+
+neo:
+  title: Meet Neo, Your AI Platform Engineer
+  image: /images/product/pulumi-neo-tasks.png
+  alt: Pulumi Neo AI platform engineer automating infrastructure tasks.
+  description: |
+    The industry's first AI agent built for infrastructure. Neo understands your entire infrastructure context, respects your policies, and executes complex tasks end-to-end. Werner Enterprises reduced provisioning time from 3 days to 4 hours.
 
 secrets:
-  title: Centralize and secure your secrets management
-  image: /images/product/esc-diagram-octopus.svg
-  alt: a screenshot of Pulumi ESC
+  title: Centralized Secrets & Configuration
+  image: /images/product/esc-octopus-diagram.png
+  alt: Pulumi ESC centralizing secrets from multiple providers
   description: |
-    Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications. Pull and sync with any secrets store, and consume in any application, tool, or CI/CD platform.
+    Stop juggling multiple vaults and config files. Pulumi ESC provides one interface for all your secrets—connect HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and more. Generate dynamic credentials with OIDC. Works everywhere, with or without Pulumi IaC.
+
+idp:
+  title: Internal Developer Platforms That Scale
+  image: /images/product/idp-services-home.jpg
+  description: |
+    Build self-service platforms that engineers actually use. Create templates, expose approved infrastructure through APIs and portals, and define golden paths. Let engineers ship faster while platform teams maintain control.
+
+insights:
+  title: See and Control Everything
+  image: /images/product/insights-resource-search.png
+  alt: Pulumi Insights multi-cloud visibility and governance
+  description: |
+    One pane of glass for all your clouds. Search infrastructure with natural language. Enforce policies automatically. Track compliance in real-time. Find vulnerabilities before they become incidents.
 
 customer_logos:
-  title: Trusted by over 3,000 innovative companies
+  title: Trusted by over 3,700 innovative companies
   logos:
     - name: bmw
       link: /case-studies/
@@ -122,6 +147,11 @@ customer_logos:
       link: /case-studies/
 
 customer_quotes:
+  boost:
+    text: |
+      "Pulumi Neo addresses our biggest challenge of <b>eliminating the infrastructure bottleneck</b> that slows down our entire engineering organization. To get to market faster, we require infrastructure intelligence that understands our environment, respects our guardrails, and keeps humans in the loop so we can <b>move faster, safely</b>."
+    author: Richard Genthner, Chief Information Security Officer
+    logo: boost-insurance
   clear:
     text: |
       “We’ve spent a lot of time building our internal developer platform. We moved from a lower-level Terraform and HCL-based interface to Pulumi, letting us use a custom, higher-level, and much simpler-to-use YAML schema we’ve defined. <b>We've made cloud infrastructure really easy to use for our developers.</b>”
