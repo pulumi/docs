@@ -53,8 +53,6 @@ When you set a [configuration](/docs/concepts/config/) value, you may pass `--se
 
 When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object.
 
-## Supported clouds and languages
-
 ## Understanding Pulumi
 
 ### Does Pulumi use Terraform?
