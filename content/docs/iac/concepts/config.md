@@ -23,7 +23,7 @@ In many cases, different stacks for a single project will need differing values.
 
 Pulumi offers a configuration system for managing such differences. Instead of hard-coding the differences, you can store and retrieve configuration values using a combination of the [CLI](/docs/cli/) and the programming model.
 
-The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/concepts/projects#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. You can typically ignore this file, although you may want to check it in and version it with your project source code.
+The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/concepts/projects#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. Stack configuration files should be committed to version control because their values drive the behavior of your Pulumi program.
 
 ## Configuration Options {#config-stack}
 
