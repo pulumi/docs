@@ -9,9 +9,9 @@
                 {{ .Params.overview.description | markdownify }}
             </p>
         </div>
-        <div class="container mx-auto text-center pt-8 w-9/12">
+        <div class="container mx-auto text-center pt-8 flex flex-col md:flex-row w-11/12 sm:w-9/12 md:justify-center">
             <a href="/get-started/" class="btn-primary">Get Started</a>
-            <a href="/contact/?form=request-a-demo" class="btn-secondary ml-4">Book a Demo</a>
+            <a href="/contact/?form=request-a-demo" class="btn-secondary mt-4 md:ml-4 md:mt-0">Book a Demo</a>
         </div>
     </section>
 
@@ -21,12 +21,12 @@
                 {{ if eq $index 0 }}
                     <div class="container mx-auto mt-8 text-center w-11/12 sm:w-9/12">
                         <h3>{{ $feature.title }}</h3>
-                        <div class="flex flex-col lg:flex-row">
-                            <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8 text-left">
+                        <div class="flex flex-col xl:flex-row">
+                            <div class="w-full my-auto xl:w-1/2 xl:mr-32 z-10 p-8 text-center xl:text-left">
                                 <h4>{{ $feature.sub_title}}</h4>
                                 <p class="text-lg">{{ $feature.description | markdownify }}</p>
                             </div>
-                            <div class="w-full lg:w-1/2 block lg:flex lg:justify-center lg:align-center">
+                            <div class="w-full xl:w-1/2 block xl:flex xl:justify-center xl:align-center">
                                 <div class="card bg-white shadow-xl p-6 block">
                                     <div>
                                         <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
@@ -225,15 +225,15 @@
         <h2 class="mb-8">{{ .Params.learn.title }}</h2>
         <div class="flex flex-wrap justify-content items-stretch text-left">
             {{ range $index, $item := .Params.learn.items }}
-                <div class="w-full lg:w-1/2 p-3">
-                    <div class="h-full {{ if eq $index 0 }}bg-violet-100{{ else }}card bg-white{{ end }} p-12 rounded-xl">
+                <div class="w-full xl:w-1/2 p-3">
+                    <div class="h-full {{ if eq $index 0 }}bg-violet-100{{ else }}card bg-white{{ end }} p-12 rounded-xl text-center xl:text-left">
                         <div>
                             <h5>{{ $item.title }}</h5>
                         </div>
                         <div class="mt-6">
                             <p>{{ $item.description | markdownify }}</p>
                         </div>
-                        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center xl:justify-start">
                             {{ range $button := $item.buttons }}
                             <a href="{{ $button.link }}" class="btn-{{ $button.type }}">{{ $button.action }}</a>
                             {{ end }}
