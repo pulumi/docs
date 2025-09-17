@@ -23,7 +23,7 @@ This means you can finally:
 - Maintain access to the Terraform providers you leverage
 - Modernize your infrastructure deployment while keeping your existing resources
 
-## Try It Now (Getting Started Is Straightforward)
+## Try It Now: Use 'pulumi convert'
 
 Ready to give it a spin? After installing the latest Pulumi CLI, you can start the conversion with:
 
@@ -466,7 +466,7 @@ With the release of [Pulumi 3.153.0](https://github.com/pulumi/pulumi/releases/t
 1. **Automatic Provider Bridging**: The converter now automatically handles any Terraform provider, even ones without Pulumi equivalents
 1. **Increased Terraform Compatibility**: As part of this effort, we've bumped up our coverage of built in Terraform functions to over 90% using code generation and our [`pulumi-std` Provider](https://github.com/pulumi/pulumi-std)
 1. **Improved Import Support**: With [Pulumi 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0), you can now import resources from any Terraform provider
-1. **Seamless Integration**: Generated code is designed to work out of the box for many cases, though some tweaking may still be needed—especially for complex or less common providers.
+1. **Seamless Integration**: Generated code is designed to work out of the box for many cases, though some tweaking may still be needed, especially for complex or less common providers.
 
 ## The Road Ahead
 
