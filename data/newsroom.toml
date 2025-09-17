@@ -462,7 +462,7 @@ url = "https://thenewstack.io/pulumi-ceo-on-the-challenges-with-kubernetes/"
 
 [[coverage]]
 date = "11th June 2019"
-title = "Firm Open Sources Framework for AWS Infrastructue-as-Code"
+title = "Firm Open Sources Framework for AWS Infrastructure-as-Code"
 img = "/logos/press/awsinsider.png"
 url = "https://awsinsider.net/articles/2019/06/12/pulumi.aspx"
 

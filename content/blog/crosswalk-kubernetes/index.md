@@ -62,7 +62,7 @@ Upgrading clusters. Last but not least, cluster upgrades are an essential part o
 
 This layer cake of concerns can be visualized using the following diagram:
 
-![Kubernetes Infrastructue Architecture Layers](/images/docs/quickstart/kubernetes/cake.svg)
+![Kubernetes infrastructure Architecture Layers](/images/docs/quickstart/kubernetes/cake.svg)
 
 We are confident that anybody looking to create production-ready infrastructure in any of the public clouds, or even on-premises, will benefit from this material. It is also open source so we hope to improve and evolve it in partnership with the community in the weeks to come.
 
