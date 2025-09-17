@@ -143,32 +143,6 @@ To view a trace locally navigate to the [Jaeger UI](http://localhost:16686/searc
 
 ## Common problems
 
-### 403 error fetching plugin
-
-This error commonly occurs when using an ARM64-based processor while using an older version of a provider that does not support ARM64. It is not possible to upgrade the providers as your state file requires the version of the provider used at the time the resources were created.
-
-The method for fixing this issue depends on whether you are using an Intel based processor:
-
-#### Intel based processor
-
-1. Open your Pulumi program on a non-arm64 based computer.
-1. Update your packages (pip / nuget / npm / go) and run `pulumi up`.
-1. Once the update is complete, open the new, updated Pulumi program on your arm64-based system.
-
-#### Non-Intel based processor
-
-1. Remove Pulumi - if you're using Homebrew, `brew remove pulumi` to remove Pulumi and `rm -rf ~/.pulumi` to remove plugins and templates.
-1. Download [latest version of Pulumi](/docs/install/versions/).
-1. Add Pulumi to path: `export PATH=$PATH:~/.pulumi/bin`
-1. Update packages in your Pulumi program to latest version (for example `npm install @pulumi/aws@latest)
-1. Install Pulumi provider: `arch -x86_64 pulumi plugin install resource {provider_name} v{version}` (where  {provider_name} is the name of the provider, i.e. aws and {version} is the same version number that your package has updated to). `arch` is used to run the selected architecture of a binary, in this case so that you can run the non-ARM64 version of Pulumi on your laptop.
-1. [Login to Pulumi](/docs/concepts/state#logging-into-and-out-of-state-backends).
-1. Run a Pulumi preview: `arch -x86_64 pulumi pre`.
-1. Remove Pulumi again `rm -rf ~/.pulumi`.
-1. [Re-install Pulumi](/docs/install/)
-1. [Login to Pulumi](/docs/concepts/state#logging-into-and-out-of-state-backends).
-1. Run a Pulumi preview to check everything is ok: `pulumi pre`
-
 ### 409 conflict: Another update is currently in progress. {#conflict}
 
 Run `pulumi cancel` to cancel the update.
@@ -228,29 +202,6 @@ message is **always a bug in Pulumi**. If you see this error message, please ope
 recommend joining our [Pulumi Community Slack](https://slack.pulumi.com/) and sharing your problem
 if you experience this error message.
 
-### Error: could not load plugin for provider
-
-You may encounter an error when you downgrade provider versions _after_ your stack is already updated with a newer version.
-If you must downgrade the version of a provider your `pulumi` program depends on, you will need to [manually edit your deployment](#editing-your-deployment)
-and change the version of the provider your stack depends on and then import that as the latest state of your stack.
-
-The `pulumi` program that you author for your infrastructure may contain one or more dependencies to `providers`.
-The version information for these providers is stored in the deployment for each of your stacks (since each Pulumi program belongs to a stack).
-This error can occur when the deployment state for a stack already contains a newer version of a specific provider, but you are trying
-to run a `pulumi up` (or `preview`) command after downgrading the provider dependency in your Pulumi program.
-
-This error occurs because the `pulumi` [plugin cache](/docs/cli/commands/pulumi_plugin_ls/) does not have the required version installed.
-This is more likely to occur if you are running `pulumi` in a CI/CD environment since your plugin cache is likely not saved across builds.
-
-It is okay to have multiple versions of a provider installed and have stacks depend on different provider version. It is only a problem when you
-downgrade the version of a particular stack that was already deployed using a newer version.
-
-Full error example:
-
-```
-error: could not load plugin for aws provider 'urn:pulumi:<stack_name>::pulumi-service::pulumi:providers:aws::default': no resource plugin 'aws-v0.16.2' found in the workspace or on your $PATH, install the plugin using \`pulumi plugin install resource aws v0.16.2\`
-```
-
 ### Cannot connect to Pulumi Cloud
 
 If your network blocks external traffic and you're using Pulumi Cloud to manage your state, your security team may need the following details to allow the Pulumi CLI to connect to Pulumi Cloud:
@@ -274,19 +225,6 @@ $
 If you have a system-wide proxy server running on your machine, it may be misconfigured. The [Pulumi architecture](/docs/concepts/how-pulumi-works/) has three different components, running as separate processes that talk to each other using a bidirectional gRPC protocol
 on IP address `127.0.0.1`. Your proxy server should be configured **NOT** to proxy
 these local network connections. Add both `127.0.0.1` and `localhost` to the exclusion list of your proxy server.
-
-### Ingress .status.loadBalancer field was not updated with a hostname/IP address {#ingress-status-loadbalancer}
-
-This error is often caused by a misconfigured ingress-controller not updating the `status.loadBalancer`
-field once the Ingress resource is ready to route traffic.
-
-In some cases, this may be fixed by running `pulumi refresh`.
-
-#### Traefik
-
-For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
-is [set properly](https://docs.traefik.io/providers/kubernetes-ingress/). This option was
-introduced in Traefik 1.7.0.
 
 ### Pulumi destroy fails {#pulumi-destroy-fails}
 

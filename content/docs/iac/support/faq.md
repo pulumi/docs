@@ -55,16 +55,6 @@ When you run a preview, update or destroy, pulumi decrypts this data. It is plai
 
 ## Supported clouds and languages
 
-### How can I add support for my favorite cloud?
-
-To enable a new cloud, you need to create a Pulumi Resource Provider. This provider requires a [gRPC](https://grpc.io/) interface and can be implemented directly; explore the [Pulumi Resource Provider Boilerplate](https://github.com/pulumi/pulumi-provider-boilerplate) to get started and [https://github.com/pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes) for a complete example of building out a provider.
-
-If there is an existing Terraform Resource Provider for the target, you can also use [Terraform Bridge](https://github.com/pulumi/pulumi-terraform-bridge/blob/master/README.md) and [pulumi-aws resources.go](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go) for a specific example.
-
-### How can I add support for my favorite language?
-
-Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers. Check out the [protocol definitions](https://github.com/pulumi/pulumi/tree/master/sdk/proto) along with the language providers themselves. You can explore how we added [support for Go](https://github.com/pulumi/pulumi/pull/1456), which should help with scoping. There is also a summary of the core work items needed as part of adding support for a typical new language on the [New Language wiki page](https://github.com/pulumi/pulumi/wiki/New-Language-Bring-up).
-
 ## Understanding Pulumi
 
 ### Does Pulumi use Terraform?
