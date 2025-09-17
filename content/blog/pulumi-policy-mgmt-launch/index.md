@@ -1,10 +1,10 @@
 ---
-title: "Announcing New Policy Packs and Policy Management Experience"
+title: "Policy Comes to Team and Enterprise, with New Out-of-the-box Policies and Management Experience"
 date: 2025-09-17
 authors:
     - luke-ward
     - dan-biwer
-    - insights-team
+    - alejandro-cotroneo
 meta_desc: "Announcing new UX for Pulumi Policy and new pre-built policy packs, providing essential guardrails for all cloud infrastructure automation"
 allow_long_title: true
 meta_image: "meta.png"
@@ -18,27 +18,27 @@ tags:
     - ai
 ---
 
-AI has fundamentally changed application development. Developers are shipping more code, faster than ever before. Every new feature and application generated needs to run on the cloud, creating an unprecedented amount of new infrastructure for platform teams to manage.
-
-This explosion in developer velocity has created a massive governance challenge. How do you ensure all this new infrastructure is secure, compliant, and cost-effective when it's being created at a speed that's impossible to manually review?
-
-The answer is to build automated guardrails that apply everywhere, regardless of the entry point—whether infrastructure is provisioned by a developer using an AI assistant or self-service Internal Developer Platform (IDP). Yesterday, we introduced [Pulumi Neo](/blog/pulumi-neo/), our own AI platform engineer that helps manage this complexity. Today, we're excited to announce the other side of the story: a fundamentally redesigned policy management experience that provides a consistent governance layer for your entire platform. And starting today, we're bringing this new management experience and our foundational Pulumi Best Practices guardrails to our Team and Enterprise customers.
+Pulumi’s Infrastructure as Code has included a powerful policy engine from day one. Over the past year, we’ve been enhancing it significantly to provide stronger governance for modern cloud platforms. Until now, these capabilities were limited to our Business Critical tier. Today, we’re excited to announce that [policy guardrails](/docs/insights/policy-as-code/) are now available to all Team and Enterprise customers. Alongside this, we’re launching a redesigned policy management experience and introducing out-of-the-box policy packs that make it easier than ever to secure, govern, and optimize your cloud environments—even when powered by AI agents like [Pulumi Neo](/blog/pulumi-neo/).
 
 <!--more-->
 
-## Primer on Pulumi Policy
+## Policy as Guardrails for AI Infrastructure
 
-[Pulumi Policy as Code](/docs/iac/crossguard/) (PaC) applies the same principles of DevOps and Infrastructure as Code to your organization's governance. PaC allows you to version, test, and peer-review your policies through pull requests, just like any other critical software. It’s the only way to scale governance to match the speed of modern development.
+As developer velocity accelerates, AI agents like Neo are helping teams create and manage infrastructure at unprecedented speed. That speed creates a governance challenge: how do you ensure security, compliance, and cost-effectiveness without slowing developers down?
 
-Unlike other PaC tools that rely on restrictive, domain-specific languages (DSLs) or YAML, Pulumi Policy uses the general-purpose programming languages you already know and love: **TypeScript and Python**. It unlocks powerful capabilities that are difficult or impossible to achieve with other approaches. With PaC you can:
+Policy guardrails provide the answer. Pulumi’s Policy as Code (PaC) framework applies DevOps best practices to governance, letting you codify rules, test them through pull requests, and version them alongside your infrastructure. With policies in place, you can ensure that every change stays within your organization’s standards, whether it is a human developer or Neo making a change.
 
-* **Express rich, conditional logic** to codify your organization's nuanced rules.
-* **Create reusable functions and abstractions** to build a library of policies that can be shared across your organization.
-* **Write unit tests** for your policies to ensure they work as intended before you deploy them.
+## What Makes Pulumi Policy Different
 
-It allows you to codify your rules with precision and scale. And with today's announcement, we've made this powerful foundation more accessible and easier to manage than ever.
+Unlike many other policy solutions, Pulumi Policy uses general-purpose programming languages such as TypeScript and Python rather than restrictive DSLs or YAML. This unlocks richer and more flexible capabilities, including:
 
-## A New, Simplified Approach
+- **Conditional logic** to codify your organization's nuanced rules.  
+- **Reusable functions and abstractions** to create a shared library of policies.  
+- **Unit tests** to validate policy behavior before rollout.  
+
+With today’s updates, this foundation is easier to adopt and scale across your teams than ever before.
+
+## New Simplified Experience
 
 While Pulumi Policy has always allowed you to enforce compliance using TypeScript and Python, the existing workflow could be cumbersome—discovering policies required switching between the console and CLI, and applying them involved multiple steps.
 
@@ -50,31 +50,31 @@ We are making it easier to find and understand policy packs. You can now browse 
 
 You’ll find:
 
-* **A rich browsing experience:** See all available policy packs in one place.
-* **Detailed information:** Each pack comes with a clear description of the policies included and usage instructions.
-* **Organization-approved packs:** Org admins can curate a list of approved policy packs, ensuring your teams—and AI agents like Neo—are using a vetted set of policies.
+- **A rich browsing experience:** See all available policy packs in one place.
+- **Detailed information:** Each pack comes with a clear description of the policies included.
+- **Organization-approved packs:** Org admins can curate a list of approved policy packs, ensuring your teams—and AI agents like Neo—are using a vetted set of policies.
 
 ### New Pre-Built Policy Packs
 
 To help you establish guardrails immediately, we have authored several [pre-built policy packs](/docs/insights/pre-built-packs/). We are excited to highlight two that are available today:
 
-* **Pulumi Best Practices:** A foundational set of recommended governance and security controls that serves as a strong starting point for any organization.
-* **HITRUST CSF v11.5:** Provides predefined controls that help align cloud resources with HITRUST CSF requirements.
+- **Pulumi Best Practices:** A foundational set of recommended governance and security controls that serves as a strong starting point for any organization.
+- **HITRUST CSF v11.5:** Provides predefined controls that help align cloud resources with HITRUST CSF requirements.
 
 ### Streamlined Policy Management and Application
 
 The new policy management experience dramatically simplifies policy application:
 
-* **Intuitive Interface:** Browse, select, and apply policies through a streamlined workflow using **Policy Groups** to bundle related policies and apply them to your stacks or cloud accounts.
-* **Expanded Scale:** We've eliminated the 4,000 stack UI limit on policy groups, allowing you to scale policies across your entire infrastructure.
-* **Granular Enforcement:** Configure the enforcement level (`advisory` or `mandatory`) for policies to either warn developers or block non-compliant deployments entirely.
+- **Intuitive Interface:** Browse, select, and apply policies through a streamlined workflow using **Policy Groups** to bundle related policies and apply them to your stacks or cloud accounts.
+- **Expanded Scale:** We've eliminated the 4,000 stack UI limit on policy groups, allowing you to scale policies across your entire infrastructure.
+- **Granular Enforcement:** Configure the enforcement level (`advisory` or `mandatory`) for policies to either warn developers or block non-compliant deployments entirely.
 
-### Understanding Policy Approaches
+### Preventative and Audit Approaches
 
-The new UI simplifies the two powerful enforcement approaches Pulumi supports:
+Pulumi Policy supports two complementary approaches to governance.  
 
-* **Preventative policies**: Block non-compliant deployments during `pulumi up`, providing real-time guardrails for developers and AI agents.
-* **Audit policies**: Continuously scan existing resources for ongoing compliance monitoring, giving you a complete picture of your cloud security posture.
+- **Preventative policies**: Block non-compliant deployments during `pulumi up`, providing real-time guardrails for developers and AI agents.
+- **Audit policies**: Continuously scan existing resources for ongoing compliance monitoring, giving you a complete picture of your cloud security posture.
 
 This dual approach ensures new deployments meet standards while maintaining visibility across your entire infrastructure. Learn more in our [Preventative vs. Audit Policies](/docs/insights/preventative-vs-audit-policies/) guide.
 
@@ -96,8 +96,6 @@ To ensure every organization can build with confidence, these policy management 
 
 ## Conclusion
 
-The enhanced Pulumi Policy experience is a major step forward in making governance accessible and scalable for the entire platform. By focusing on discoverability and a simplified workflow, we've delivered essential guardrails that apply consistently, whether a developer is using a self-service portal or an AI agent is remediating an issue.
+Governance doesn’t need to be a roadblock—it can be a foundation that accelerates innovation. With enhanced policy management and ready-to-use guardrails, Pulumi helps your teams and AI agents like Neo move fast while staying secure, compliant, and cost effective.  
 
-This is how you escape the velocity trap: by building a governance foundation that turns safety and compliance into an accelerant for everyone. It ensures that no matter how fast your teams move, they are always moving safely and within your organization's standards
-
-We'd love for you to try out the new experience in the Pulumi Cloud\! Don't hesitate to reach out on the [Pulumi Community Slack](https://slack.pulumi.com/) to share your thoughts.
+Try the new experience in Pulumi Cloud today, and let us know what you think in the [Pulumi Community Slack](https://slack.pulumi.com/).
