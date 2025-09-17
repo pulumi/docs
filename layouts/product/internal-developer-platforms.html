@@ -10,10 +10,10 @@
         <div class="flex flex-col lg:flex-row px-8">
             <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first flex flex-col justify-center">
                 <h5 class="text-gray-700 text-xl">{{ .Params.overview.description | markdownify }}</h5>
-                <div class="mt-8 text-center">
+                <div class="mt-8 text-center flex flex-col xl:flex-row w-11/12 sm:w-9/12 xl:justify-center">
                     <a href="{{ .Params.overview.link }}" class="btn-primary">{{ .Params.overview.cta}}</a>
                     {{ if .Params.overview.cta_secondary }}
-                    <a href="{{ .Params.overview.link_secondary }}" class="btn-secondary ml-4">{{ .Params.overview.cta_secondary}}</a>
+                    <a href="{{ .Params.overview.link_secondary }}" class="btn-secondary mt-4 xl:ml-4 xl:mt-0">{{ .Params.overview.cta_secondary}}</a>
                     {{ end }}
                 </div>
             </div>
@@ -34,7 +34,7 @@
     </section>
     {{ end }}
 
-    <section id="benefits" class="container mx-auto my-16">
+    <section id="benefits" class="container mx-auto my-16 w-11/12">
         {{ with .Params.why_idp }}
             <h2 class="text-center">{{ .title }}</h2>
             <p class="mx-auto max-w-5xl">
@@ -97,15 +97,15 @@
         </div>
         <div class="flex flex-wrap justify-content items-stretch text-left my-4">
             {{ range $index, $item := .Params.learn.items }}
-                <div class="w-full lg:w-1/2 p-3">
-                    <div class="h-full {{ if eq $index 0 }}bg-violet-100{{ else }}card bg-white{{ end }} p-12 rounded-xl">
+                <div class="w-full xl:w-1/2 p-3">
+                    <div class="h-full {{ if eq $index 0 }}bg-violet-100{{ else }}card bg-white{{ end }} p-12 rounded-xl text-center xl:text-left">
                         <div>
                             <h5>{{ $item.title }}</h5>
                         </div>
                         <div class="mt-6">
                             <p>{{ $item.description | markdownify }}</p>
                         </div>
-                        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center xl:justify-start">
                             {{ range $button := $item.buttons }}
                             <a href="{{ $button.link }}" class="btn-{{ $button.type }}">{{ $button.action }}</a>
                             {{ end }}
