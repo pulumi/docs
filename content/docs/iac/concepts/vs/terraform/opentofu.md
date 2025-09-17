@@ -49,7 +49,7 @@ Here is a summary of the key differences between OpenTofu and Terraform:
 | [Provider Support](#providers) | Support across multiple IaaS, SaaS, and PaaS providers. | Support across multiple IaaS, SaaS, and PaaS providers. |
 | [Cloud Native Support](#cloud-native) | Core API typed. Generic support for CRD. | Core API typed. Generic support for CRD. |
 | [Dynamic Provider Support](#dynamic-providers) | No | No |
-| [Infrastructure Reuse and Modularity](#reuse) | Constrained. Can only reuse Terraform modules. | Constrained. Can only reuse OpenTofu modules. |
+| [Infrastructure Reuse and Modularity](#reuse) | Constrained. Can only reuse OpenTofu modules. | Constrained. Can only reuse Terraform modules. |
 | [Testing and Validation](#testing) | Integration testing only. | Integration testing only. |
 | [Modes of Execution](#modes) | Run CLI commands only. | Run CLI commands or perform remote runs with SaaS offering. |
 | [Embed within Application Code](#embedding) | No | No |
