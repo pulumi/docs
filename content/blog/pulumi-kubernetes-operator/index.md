@@ -579,7 +579,7 @@ different selection of updated, "green" pods.
 
 Similar to the Stack CustomResources in the previous sections, we can deploy a Stack
 of a [Blue/Green Kubernetes app in Pulumi][blue-green-example], and step through a sequence of its Git commits
-similiar to how a CI/CD pipeline does. Additionally, we can use the [Pulumi config system][pulumi-config] to parameterize
+similar to how a CI/CD pipeline does. Additionally, we can use the [Pulumi config system][pulumi-config] to parameterize
 settings and secrets on how to manage the Stack CustomResource project.
 
 Deploying the active blue and passive green versions of the app can be done on

@@ -76,7 +76,7 @@ look at how they look in action:
         }
     });
 
-    function computeDimentions(objectKey: string): { height: number, width: number } {
+    function computeDimensions(objectKey: string): { height: number, width: number } {
         /* simplified */
         const metadata = await sharp(...);
         return { height: metadata.height, width: metadata.width };

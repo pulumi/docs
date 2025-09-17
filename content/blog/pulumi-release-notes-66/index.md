@@ -73,7 +73,7 @@ Learn more in the [Command package GitHub issue](https://github.com/pulumi/pulum
 
 ### Support `pulumi import` for Kubernetes CRDs
 
-We have added `pulumi import` support for Kubernetes CustomResourceDefiniton (CRD). Now the spec of a CRD will be imported during `pulumi import`. The same fix improves input generation for other Kubernetes resources as well, providing significantly better fidelity in covering inputs for existing resources.
+We have added `pulumi import` support for Kubernetes CustomResourceDefinition (CRD). Now the spec of a CRD will be imported during `pulumi import`. The same fix improves input generation for other Kubernetes resources as well, providing significantly better fidelity in covering inputs for existing resources.
 
 [Learn more in this GitHub issue](https://github.com/pulumi/pulumi-kubernetes/issues/1410).
 

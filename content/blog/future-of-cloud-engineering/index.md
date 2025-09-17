@@ -15,11 +15,11 @@ All software is cloud software. All modern applications interact with the cloud 
 
 ## Introduction
 
-The cloud is the world's biggest supercomputer. Although the cloud broke our architectures, workflows, and teams, we are now amidst a rennaisance of rebuilding new ways to create truly cloud-native applications and experiences.
+The cloud is the world's biggest supercomputer. Although the cloud broke our architectures, workflows, and teams, we are now amidst a renaissance of rebuilding new ways to create truly cloud-native applications and experiences.
 
-We conceived of the Cloud Engineering Summit to celebrate this rennaisance. The talks throughout the day explore how we build _architectures_ and applications. We also explore how to operate those cloud architectures in a team setting through _workflows_ using automation and processes to build, deploy, and manage those applications and their infrastructure. Finally, _teams_ are working together more closely and in new ways in order to collaborate to deliver applications and infrastructure across all cloud engineering disciplines.
+We conceived of the Cloud Engineering Summit to celebrate this renaissance. The talks throughout the day explore how we build _architectures_ and applications. We also explore how to operate those cloud architectures in a team setting through _workflows_ using automation and processes to build, deploy, and manage those applications and their infrastructure. Finally, _teams_ are working together more closely and in new ways in order to collaborate to deliver applications and infrastructure across all cloud engineering disciplines.
 
-This is what we are calling *Cloud Engineering*: the next quantum leap in how we build cloud software. Cloud engineering means bringing the cloud closer to application development and infusing its capabilities to create new cloud-enabled experiences. Cloud engineering also means bringing more engineering practies to infrastructure, enabling us to leverage infrastructure as not just code but software. And finally, cloud engineering enables us to unlock collaboration, enabling the entire team to move faster with confidence.
+This is what we are calling *Cloud Engineering*: the next quantum leap in how we build cloud software. Cloud engineering means bringing the cloud closer to application development and infusing its capabilities to create new cloud-enabled experiences. Cloud engineering also means bringing more engineering practices to infrastructure, enabling us to leverage infrastructure as not just code but software. And finally, cloud engineering enables us to unlock collaboration, enabling the entire team to move faster with confidence.
 
 ## Cloud Engineering in Practice
 
