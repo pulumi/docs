@@ -1,0 +1,98 @@
+{{- if ne hugo.Environment "preview" -}}
+# Pulumi - Infrastructure as Code in Any Programming Language
+
+> Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages. Build cloud applications and infrastructure by combining the safety and reliability of infrastructure as code with the power of familiar programming languages.
+
+Pulumi is a modern infrastructure as code platform that allows you to use general-purpose programming languages (Python, TypeScript, Go, C#, Java, and YAML) to define, deploy, and manage cloud infrastructure. Unlike traditional template-based tools, Pulumi enables full software engineering practices including testing, IDE support, and code reuse.
+
+## Documentation
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "docs" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Getting Started Guides
+
+{{- $getStartedPages := where $.Site.Pages "Section" "docs" }}
+{{- range $getStartedPages }}
+{{- if and (not .Params.llms_exclude) (hasPrefix .RelPermalink "/docs/get-started/") }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+## Tutorials
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "tutorials" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Blog Posts
+
+{{- $blogPages := where $.Site.Pages "Section" "blog" }}
+{{- $recentBlogs := first 20 $blogPages }}
+{{- range $recentBlogs }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+
+## What Is Guides
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "what-is" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Cloud Engineering Resources
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "cloud-engineering" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Templates and Examples
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "templates" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+## Case Studies
+
+{{- range $.Site.Sections }}
+{{- if eq .Section "case-studies" }}
+{{- range .Pages }}
+{{- if not .Params.llms_exclude }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Summary | plainify | truncate 100 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end -}}
