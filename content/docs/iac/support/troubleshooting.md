@@ -226,19 +226,6 @@ If you have a system-wide proxy server running on your machine, it may be miscon
 on IP address `127.0.0.1`. Your proxy server should be configured **NOT** to proxy
 these local network connections. Add both `127.0.0.1` and `localhost` to the exclusion list of your proxy server.
 
-### Ingress .status.loadBalancer field was not updated with a hostname/IP address {#ingress-status-loadbalancer}
-
-This error is often caused by a misconfigured ingress-controller not updating the `status.loadBalancer`
-field once the Ingress resource is ready to route traffic.
-
-In some cases, this may be fixed by running `pulumi refresh`.
-
-#### Traefik
-
-For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
-is [set properly](https://docs.traefik.io/providers/kubernetes-ingress/). This option was
-introduced in Traefik 1.7.0.
-
 ### Pulumi destroy fails {#pulumi-destroy-fails}
 
 There are scenarios when `pulumi destroy` will fail to delete resources as expected. This is anticipated due to the nature of cloud provider dependencies, permissions, resources being in a state that prevents their deletion, or when a timeout is not long enough for the cloud provider to complete its operation. Review the output to identify which resources were not deleted and consider the following steps depending on the nature of the failure.
