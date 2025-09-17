@@ -2,8 +2,10 @@ id = "alejandro-cotroneo"
 name = "Alejandro Cotroneo"
 title = "Software Engineer"
 company = "Pulumi"
-image = "static/images/team/insights-team.jpg"
 weight = 1
-bio = ""
 
 status = "active"
+
+[social]
+github = "aacotroneo"
+linkedin = "alejandro-cotroneo"
