@@ -36,7 +36,7 @@ tiers:
                 - Secure collaboration and CI/CD
                 - AI assistance with Pulumi Neo
                 - Resource search
-                - OIDC issuer tokens
+                - OIDC and Org Access Tokens
                 - Webhooks
                 - Automatic secrets rotation
                 - Community support
@@ -278,7 +278,8 @@ comparison_table:
                   tooltip: These are machine access tokens that are scoped to the organization or team level
                   items:
                     - content: _blank
-                    - content: _blank
+                    - content: _check
+                      tooltip: Organization Access Token only
                     - content: _check
                     - content: _check
                 - title: Audit Logs
