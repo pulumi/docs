@@ -6,18 +6,15 @@ h1: Pulumi IaC FAQ
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
+        parent: iac-home
         name: FAQ
-        parent: iac-support
-        weight: 1
-        identifier: iac-support-faq
-    support:
-        weight: 2
-        identifier: all-faqs
-
+        weight: 100
+        identifier: iac-faq
 aliases:
     - /docs/reference/faq/
     - /docs/troubleshooting/faq/
     - /docs/support/faq/
+    - /docs/iac/support/faq/
 ---
 
 ## Automatic Rollbacks
