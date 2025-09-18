@@ -7,47 +7,36 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Troubleshooting
-        parent: iac-support
-        weight: 2
-        identifier: iac-support-troubleshooting
-    support:
-        weight: 1
-search:
-    keywords:
-        - debugging pulumi programs
-
+        parent: iac-home
+        weight: 60
+        identifier: iac-troubleshooting
 aliases:
     - /docs/reference/troubleshooting/
     - /docs/troubleshooting/
     - /docs/support/troubleshooting/
+    - /docs/troubleshooting/overview/
+    - /docs/support/
+    - /docs/iac/support/
 ---
 
-Sometimes things go wrong. If you can't update your stack, or there's another problem that is
-preventing you from being productive, you've come to the right place.
+Sometimes things go wrong. If you can't update your stack, or there's another problem that is preventing you from being productive, you've come to the right place.
 
 ## Talk to a human
 
-[Join Community Slack](https://slack.pulumi.com), where our whole team, in addition to a passionate
-community of users, are there to help. Any and all questions are welcome!
+[Join Community Slack](https://slack.pulumi.com), where our whole team, in addition to a passionate community of users, are there to help. Any and all questions are welcome!
 
-We also encourage everyone to contribute to the [Pulumi open source
-projects](https://github.com/pulumi) by [opening new issues](https://github.com/pulumi/pulumi/issues/new) and upvoting existing issues.
+We also encourage everyone to contribute to the [Pulumi open source projects](https://github.com/pulumi) by [opening new issues](https://github.com/pulumi/pulumi/issues/new) and upvoting existing issues.
 
 Or email our support team: [support@pulumi.com](mailto:support@pulumi.com).
 
 ## Verbose logging
 
-Verbose logging of the internals of the Pulumi engine and resource providers can be enabled by
-passing the `-v` flag to any `pulumi` CLI command. Pulumi emits logs at log levels between `1` and
-`11`, with `11` being the most verbose. At log level 10 or below, Pulumi will avoid intentionally exposing any *known* credentials. At log level 11, Pulumi will intentionally expose some known credentials to aid with debugging, so these log levels should be used only when absolutely needed.
+Verbose logging of the internals of the Pulumi engine and resource providers can be enabled by passing the `-v` flag to any `pulumi` CLI command. Pulumi emits logs at log levels between `1` and `11`, with `11` being the most verbose. At log level 10 or below, Pulumi will avoid intentionally exposing any *known* credentials. At log level 11, Pulumi will intentionally expose some known credentials to aid with debugging, so these log levels should be used only when absolutely needed.
 
-By default, logs are written to the top-level temp directory (usually `/tmp` or the value of
-`$TMPDIR`). The `--logtostderr` flag can be used to write logs to stderr instead.
-Use the flag `--logflow` to apply the same log level to resource providers.
+By default, logs are written to the top-level temp directory (usually `/tmp` or the value of `$TMPDIR`). The `--logtostderr` flag can be used to write logs to stderr instead. Use the flag `--logflow` to apply the same log level to resource providers.
 
 {{% notes type="warning" %}}
-Enabling verbose logging may reveal sensitive information (tokens, credentials...) that is provided from
-your execution environment directly to your cloud provider, and which Pulumi may not be aware of. Before sharing the logs, be careful to audit and redact any sensitive information.
+Enabling verbose logging may reveal sensitive information (tokens, credentials...) that is provided from your execution environment directly to your cloud provider, and which Pulumi may not be aware of. Before sharing the logs, be careful to audit and redact any sensitive information.
 {{% /notes %}}
 
 ```bash
@@ -91,7 +80,7 @@ In your project directory, create or update `.vscode/launch.json` with the follo
 
 Open your program and set breakpoints by clicking in the gutter next to the line numbers.
 
-In a terminal run `NODE_OPTIONS=”--inspect-brk” pulumi up` to start the deployment process in debug mode. This will cause Pulumi to pause execution and wait for a debugger to attach.
+In a terminal run `NODE_OPTIONS="--inspect-brk" pulumi up` to start the deployment process in debug mode. This will cause Pulumi to pause execution and wait for a debugger to attach.
 
 Press `F5` in VS Code to start debugging. VS Code will attach to the waiting Node.js process, and execution will continue until reaching the first breakpoint you have set.
 
@@ -101,13 +90,7 @@ Guides for all languages supported by Pulumi are available in [the Debugging gui
 
 ## Performance
 
-If you are seeing unexpectedly slow performance, you can gather a trace to understand what
-operations are being performed throughout the deployment and what the long poles are for your
-deployment. In most cases, the most time-consuming operations will be the provisioning of one or more resources in your cloud
-provider, however, there may be cases where Pulumi itself is doing work that is limiting the performance
-of your deployments, and this may indicate an opportunity to further improve the Pulumi deployment
-orchestration engine to get the maximal parallelism and performance possible for your cloud
-deployment.
+If you are seeing unexpectedly slow performance, you can gather a trace to understand what operations are being performed throughout the deployment and what the long poles are for your deployment. In most cases, the most time-consuming operations will be the provisioning of one or more resources in your cloud provider, however, there may be cases where Pulumi itself is doing work that is limiting the performance of your deployments, and this may indicate an opportunity to further improve the Pulumi deployment orchestration engine to get the maximal parallelism and performance possible for your cloud deployment.
 
 ### Tracing
 
@@ -124,10 +107,7 @@ $ PULUMI_DEBUG_COMMANDS=1 pulumi view-trace ./up.trace
 Displaying trace at http://localhost:8008
 ```
 
-Pulumi also supports [Zipkin](https://zipkin.io) compatible tracing.
-To collect a trace to a local
-[Jaeger](https://www.jaegertracing.io/docs/1.22/getting-started/)
-server:
+Pulumi also supports [Zipkin](https://zipkin.io) compatible tracing. To collect a trace to a local [Jaeger](https://www.jaegertracing.io/docs/1.22/getting-started/) server:
 
 ```
 $ docker run -d --name jaeger \
@@ -151,56 +131,35 @@ Run `pulumi cancel` to cancel the update.
 Warning! If you cancel another person's update, their update will fail immediately.
 {{% /notes %}}
 
-One of the services that the [Pulumi Cloud](/docs/pulumi-cloud/) provides is *concurrency control*.
-The service will allow at most one user to update a particular stack at a time. This is accomplished by using "leases"; whenever a user
-requests an update, they request a "lease" on the stack that gives them the right to update the requested stack.
-The service makes sure that only one person has a lease active at a time.
+One of the services that the [Pulumi Cloud](/docs/pulumi-cloud/) provides is *concurrency control*. The service will allow at most one user to update a particular stack at a time. This is accomplished by using "leases"; whenever a user requests an update, they request a "lease" on the stack that gives them the right to update the requested stack. The service makes sure that only one person has a lease active at a time.
 
-If you get this error message, this means that the service believes that somebody else has requested and was granted
-a lease to the stack that you are attempting to update. There are two reasons why this could be:
+If you get this error message, this means that the service believes that somebody else has requested and was granted a lease to the stack that you are attempting to update. There are two reasons why this could be:
 
-1. Somebody else is currently updating the stack. If you are working on a stack with more than one collaborator, it could
-be that your collaborators have initiated an update without your knowledge. You can confirm this by visiting the Pulumi
-web console and seeing who initiated the most recent update.
+1. Somebody else is currently updating the stack. If you are working on a stack with more than one collaborator, it could be that your collaborators have initiated an update without your knowledge. You can confirm this by visiting the Pulumi web console and seeing who initiated the most recent update.
 1. You were updating the stack, but the Pulumi CLI crashed in the middle of the update.
 
-If you are working on a stack with no other collaborators, it is common to encounter situation number 2 if you
-run into a bug in Pulumi. If this update was not triggered by someone else, you can use the
-`pulumi cancel` command to cancel the current update. This operation revokes the "lease" that the service has given
-to the person who initiated the stack update.
+If you are working on a stack with no other collaborators, it is common to encounter situation number 2 if you run into a bug in Pulumi. If this update was not triggered by someone else, you can use the `pulumi cancel` command to cancel the current update. This operation revokes the "lease" that the service has given to the person who initiated the stack update.
 
 ### 500 Internal server error {#internal-server-error}
 
-The Pulumi CLI interacts with the Pulumi web service throughout the course of an update. If the
-service is unable to process an update, it is possible that users of the CLI may see this error message
-throughout the course of an update.
+The Pulumi CLI interacts with the Pulumi web service throughout the course of an update. If the service is unable to process an update, it is possible that users of the CLI may see this error message throughout the course of an update.
 
 We take great pride in service uptime and work rapidly to fix service interruption. The [Pulumi status page](https://status.pulumi.com) communicates information about service incidents.
 
 ### Post-step event returned an error {#post-step-event}
 
-If an I/O error occurs after "post-step event returned an error", you can safely re-start your
-update. If you see "after mutation of snapshot", you have hit a bug in Pulumi. You will possibly
-need to do some [manual intervention to repair your stack](#editing-your-deployment).
+If an I/O error occurs after "post-step event returned an error", you can safely re-start your update. If you see "after mutation of snapshot", you have hit a bug in Pulumi. You will possibly need to do some [manual intervention to repair your stack](#editing-your-deployment).
 
-The Pulumi engine runs a small amount of code after every "step" that it performs. If this code fails for any reason,
-it will fail the entire update. One of the things that the Pulumi engine does before and after every step is
-a self-check on its internal data structures to ensure that they are in a consistent state. If they are not,
-Pulumi will issue an error and fail the deployment.
+The Pulumi engine runs a small amount of code after every "step" that it performs. If this code fails for any reason, it will fail the entire update. One of the things that the Pulumi engine does before and after every step is a self-check on its internal data structures to ensure that they are in a consistent state. If they are not, Pulumi will issue an error and fail the deployment.
 
 There are two reasons why this error could occur:
 
 1. You experienced a network partition while performing an update.
 2. The Pulumi engine failed its data structure self-check.
 
-In each case, some more specific information is printed in addition to "post-step returned an error". In the first
-case, it is common for you to see an additional error indicating that some I/O operation has failed. This can be disregarded and it is safe to re-start the update. You may need to
-[recover from the interrupted update](#interrupted-update-recovery).
+In each case, some more specific information is printed in addition to "post-step returned an error". In the first case, it is common for you to see an additional error indicating that some I/O operation has failed. This can be disregarded and it is safe to re-start the update. You may need to [recover from the interrupted update](#interrupted-update-recovery).
 
-In the second case, you may see an additional error message "after mutation of snapshot". This error
-message is **always a bug in Pulumi**. If you see this error message, please open a [GitHub issue](https://github.com/pulumi/pulumi/issues). We also
-recommend joining our [Pulumi Community Slack](https://slack.pulumi.com/) and sharing your problem
-if you experience this error message.
+In the second case, you may see an additional error message "after mutation of snapshot". This error message is **always a bug in Pulumi**. If you see this error message, please open a [GitHub issue](https://github.com/pulumi/pulumi/issues). We also recommend joining our [Pulumi Community Slack](https://slack.pulumi.com/) and sharing your problem if you experience this error message.
 
 ### Cannot connect to Pulumi Cloud
 
@@ -222,9 +181,7 @@ Resources:
 $
 ```
 
-If you have a system-wide proxy server running on your machine, it may be misconfigured. The [Pulumi architecture](/docs/concepts/how-pulumi-works/) has three different components, running as separate processes that talk to each other using a bidirectional gRPC protocol
-on IP address `127.0.0.1`. Your proxy server should be configured **NOT** to proxy
-these local network connections. Add both `127.0.0.1` and `localhost` to the exclusion list of your proxy server.
+If you have a system-wide proxy server running on your machine, it may be misconfigured. The [Pulumi architecture](/docs/concepts/how-pulumi-works/) has three different components, running as separate processes that talk to each other using a bidirectional gRPC protocol on IP address `127.0.0.1`. Your proxy server should be configured **NOT** to proxy these local network connections. Add both `127.0.0.1` and `localhost` to the exclusion list of your proxy server.
 
 ### Pulumi destroy fails {#pulumi-destroy-fails}
 
@@ -250,8 +207,7 @@ Once you have resolved the source of the deletion failure, you can run `pulumi r
 
 ## Recovering from an interrupted update {#interrupted-update-recovery}
 
-If the Pulumi CLI is interrupted when performing a deployment, you may see a warning message
-that looks something like this on your next update:
+If the Pulumi CLI is interrupted when performing a deployment, you may see a warning message that looks something like this on your next update:
 
 ```bash
 $ pulumi up
@@ -270,8 +226,7 @@ Diagnostics:
 ...
 ```
 
-This occurs when the Pulumi CLI fails to complete cleanly. There are a number of ways this
-can happen:
+This occurs when the Pulumi CLI fails to complete cleanly. There are a number of ways this can happen:
 
 - The CLI experiences a network partition when attempting to save your stack's state.
 - The CLI process is killed by your operating system while performing an update.
@@ -287,34 +242,23 @@ $ pulumi cancel
 The currently running update for 'interruptedstack' has been canceled!
 ```
 
-If `pulumi cancel` fails with `error: [400] Bad Request: the update has already completed`, you can safely ignore
-that error and continue with the next step.
+If `pulumi cancel` fails with `error: [400] Bad Request: the update has already completed`, you can safely ignore that error and continue with the next step.
 
-Then run `pulumi refresh` to remove any pending operations cleanly, allowing you to
-resolve any pending operations that Pulumi could not fix unaided.
+Then run `pulumi refresh` to remove any pending operations cleanly, allowing you to resolve any pending operations that Pulumi could not fix unaided.
 
 At this point your stack should be valid, up-to-date, and ready to accept future updates.
 
 ## Manually editing your deployment {#editing-your-deployment}
 
-Sometimes the only recourse for fixing a stack that is unable to complete deployments is to edit the
-deployment directly. We would love to hear about the issues you are experiencing
-that you can't resolve, both so we can assist you in fixing your stack and also to fix the issues in Pulumi
-that made it impossible for you to recover your stack in any other way.
+Sometimes the only recourse for fixing a stack that is unable to complete deployments is to edit the deployment directly. We would love to hear about the issues you are experiencing that you can't resolve, both so we can assist you in fixing your stack and also to fix the issues in Pulumi that made it impossible for you to recover your stack in any other way.
 
-The Pulumi engine uses both your program and your stack's existing state to make decisions about what
-resources to create, read, update, or delete. The most common problem that makes it impossible to
-make changes to your stack is that the stack's state has been corrupted in some way. There
-are a variety of ways that a stack's state could be corrupted, but in almost all cases it is possible
-to manually edit the stack's state to fix the issue.
+The Pulumi engine uses both your program and your stack's existing state to make decisions about what resources to create, read, update, or delete. The most common problem that makes it impossible to make changes to your stack is that the stack's state has been corrupted in some way. There are a variety of ways that a stack's state could be corrupted, but in almost all cases it is possible to manually edit the stack's state to fix the issue.
 
 This is an advanced operation and should be an absolute last resort. We recommend you check in with the [Pulumi Community Slack](https://slack.pulumi.com) first before editing your snapshot.
 
-If you intend to unprotect or delete a resource, consider using the [`pulumi state`](/docs/cli/commands/pulumi_state) command instead of editing your state directly. `pulumi state` makes fixes to your state without
-requiring you to edit the JSON representation of your stack's current state.
+If you intend to unprotect or delete a resource, consider using the [`pulumi state`](/docs/cli/commands/pulumi_state) command instead of editing your state directly. `pulumi state` makes fixes to your state without requiring you to edit the JSON representation of your stack's current state.
 
-To get a JSON representation of your stack's current state, export your current stack
-to a file:
+To get a JSON representation of your stack's current state, export your current stack to a file:
 
 ```bash
 $ pulumi stack export --file state.json
@@ -353,9 +297,7 @@ The possible fields of a resource are:
 | `initErrors` | A list of errors that occurred that prevented the resource from initializing. Some resource providers (most notably Kubernetes) populate this field to indicate that a resource was created but failed to initialize. |
 | `provider` | Reference to the provider responsible for the resource. |
 
-The `resources` field is a list, not a set. The order of resources in the list is important and is enforced by
-the Pulumi engine. Resources in a deployment must be in *dependency order* - if resource A depends on resource B,
-resource A *must* appear after resource B in the list.
+The `resources` field is a list, not a set. The order of resources in the list is important and is enforced by the Pulumi engine. Resources in a deployment must be in *dependency order* - if resource A depends on resource B, resource A *must* appear after resource B in the list.
 
 Import your changes by running:
 
