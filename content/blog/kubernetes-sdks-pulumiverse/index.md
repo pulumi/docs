@@ -59,7 +59,7 @@ For us to make this easier, we have two issues:
 
 ### Automation
 
-GitHub Actions plays such a large role in our developer world these days, especially for open source projects. So it was an easy choice to make that any automation I build out for this will be built on top of GitHub Actions. Knowing that we want the SDKs to be up to date, we also know that this automation must run on a regular cadence. As such, the beginnnig of our GitHub Action can take some shape:
+GitHub Actions plays such a large role in our developer world these days, especially for open source projects. So it was an easy choice to make that any automation I build out for this will be built on top of GitHub Actions. Knowing that we want the SDKs to be up to date, we also know that this automation must run on a regular cadence. As such, the beginning of our GitHub Action can take some shape:
 
 ```yaml
 name: Build SDKs
@@ -174,7 +174,7 @@ I don't expect to publish packages for Go ... sadly, because Go modules use GitH
 We currently provide SDKs for:
 
 - argocd
-- cert-managaer
+- cert-manager
 - crossplane
 - knative
 - redpanda

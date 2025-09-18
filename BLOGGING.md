@@ -115,7 +115,7 @@ For formatting guidelines, see [the Style Guide](./STYLE-GUIDE.md).
 
 ### Code Blocks
 
-There are a couple of ways to do [syntax highlighing](https://gohugo.io/content-management/syntax-highlighting/) in Hugo, but we generally recommend [code fences](https://gohugo.io/content-management/syntax-highlighting/#highlight-in-code-fences), along with an optional language specifier &mdash; e.g., for TypeScript:
+There are a couple of ways to do [syntax highlighting](https://gohugo.io/content-management/syntax-highlighting/) in Hugo, but we generally recommend [code fences](https://gohugo.io/content-management/syntax-highlighting/#highlight-in-code-fences), along with an optional language specifier &mdash; e.g., for TypeScript:
 
 <pre>
 ```typescript

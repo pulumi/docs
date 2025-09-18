@@ -223,12 +223,12 @@ django_log_group = aws.cloudwatch.LogGroup("django-log-group",
 )
 ```
 
-Our project is special because it uses two independant ECS services---one that sets up the MySQL
+Our project is special because it uses two independent ECS services---one that sets up the MySQL
 database, and one that continuously runs and handles the website.
 
 While it is possible to have a single ECS service set up both the database and the server, doing
 so presents the risk of exposing important information to the internet. To set up the database,
-the ECS service would need to know our MySQL admin credendtials. However, since the service would
+the ECS service would need to know our MySQL admin credentials. However, since the service would
 also handle the website, it would mean that a successful attack on our Django website
 could allow the attacker to access the credentials for our backend.
 

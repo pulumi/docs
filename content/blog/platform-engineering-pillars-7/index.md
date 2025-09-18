@@ -95,9 +95,9 @@ Policy-as-code prevents this.
 
 When teams deploy something that breaks the rules (like using an unapproved region), the platform blocks it automatically. The error shows up right away, with a clear message. Nothing gets provisioned, and nobody has to file a ticket.
 
-If you’re already using intent-based componentes (“I need a Java service with Kafka and PostgreSQL”), most details are handled for you: tags, regions, naming. But people still override things. That’s why policy-as-code matters.
+If you’re already using intent-based components (“I need a Java service with Kafka and PostgreSQL”), most details are handled for you: tags, regions, naming. But people still override things. That’s why policy-as-code matters.
 
-Think of it as a safety net. A menu of componentes handle the defaults. Policies catch anything that slips through. Together, they keep your platform consistent without slowing anyone down.
+Think of it as a safety net. A menu of components handle the defaults. Policies catch anything that slips through. Together, they keep your platform consistent without slowing anyone down.
 
 ### B. Role-Based Access Control (RBAC): Balancing Autonomy and Control
 
@@ -172,16 +172,16 @@ Result: Governance becomes an invisible safety net. Engineers move fast, knowing
 
 To ensure your governance practices truly empower your organization, it's essential to track clear, actionable metrics. These metrics help you understand the effectiveness of your governance processes, identify areas for improvement, and ensure governance remains frictionless and enabling:
 
-- **Time Spent on Manual Compliance Checks and Audits**:  
+- **Time Spent on Manual Compliance Checks and Audits**:
   Measure how much time your teams spend manually verifying compliance or performing audits. Effective governance automation should significantly reduce this overhead, freeing teams to focus on higher-value tasks.
 
-- **Number of Compliance Violations or Audit Findings**:  
+- **Number of Compliance Violations or Audit Findings**:
   Track how frequently compliance violations or audit issues occur. Effective governance should reduce these incidents, demonstrating that automated policies and guardrails are working as intended.
 
-- **Cloud Cost Predictability and Budget Adherence**:  
+- **Cloud Cost Predictability and Budget Adherence**:
   Monitor how accurately your cloud spending aligns with forecasts and budgets. Good governance practices, such as automated tagging, resource lifecycle management, and cost controls, should improve predictability and reduce unexpected cost overruns.
 
-- **Engineering Team Satisfaction with Governance Processes**:  
+- **Engineering Team Satisfaction with Governance Processes**:
   Regularly survey engineering teams to gauge their satisfaction with governance processes. High satisfaction indicates that governance is enabling rather than hindering their workflows.
 
 Tracking these metrics helps you continuously improve your platform's governance practices, ensuring they remain effective and frictionless.

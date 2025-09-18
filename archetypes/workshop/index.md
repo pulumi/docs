@@ -28,7 +28,7 @@ event:
     time: "5:30PM - 8:30PM (PT)"
     # The event description shown on the event list page.
     description: "Event Description."
-    # The Calendly registrtion url for event specific pages.
+    # The Calendly registration url for event specific pages.
     calendly_url: "Registration URL"
     # The cost of an event.
     cost: "Free"

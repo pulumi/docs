@@ -1,7 +1,7 @@
 ---
 title: "Authoring CrossGuard Policy with Open Policy Agent (OPA)"
 date: 2020-08-14
-meta_desc: "The Pului CrossGuard policy-as-code framework now supports Open Policy Agent (OPA) Rego language in addition to TypeScript and Python."
+meta_desc: "The Pulumi CrossGuard policy-as-code framework now supports Open Policy Agent (OPA) Rego language in addition to TypeScript and Python."
 meta_image: vscode-rego.png
 authors:
     - luke-hoban

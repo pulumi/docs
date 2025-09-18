@@ -11,7 +11,7 @@ tags:
     - cloud-native
     - cloud-engineering
 ---
-Overcoming the cost and complexity of mutli-cloud environments and managing infrastructure more effectively is a perpetual challenge. For thousands of companies growing Platform Engineering skills, the solution to these challenges may be closer than you think.
+Overcoming the cost and complexity of multi-cloud environments and managing infrastructure more effectively is a perpetual challenge. For thousands of companies growing Platform Engineering skills, the solution to these challenges may be closer than you think.
 
 <!--more-->
 Hundreds of thousands of developers across the globe already rely on Pulumi to drive more scalable, repeatable deployments in large self-managed production environments. By combining the power of Infrastructure as Code (IaC) with automation, compliance, and robust security within a Pulumi-hosted environment, you can achieve new levels of performance, visibility and security while reducing risk. Here are a few examples:

@@ -47,7 +47,7 @@ While the Puluminaries themselves have been active in the community for quite so
 <img src="engin-diri.png" width="200" height="200" alt="Engin Diri"/>
 <a data-track="twitter" href="https://twitter.com/_ediri"><i class="fab fa-twitter"></i></a>&nbsp;<a data-track="github" href="https://github.com/dirien"><i class="fab fa-github"></i></a>
 
-Engin's excitement for Pulumi is not possible to be measured using current science. He will always share his thoughts on new developements in the Pulumi project, as well as join in for fun and discussion in various PulumiVision livestreams!
+Engin's excitement for Pulumi is not possible to be measured using current science. He will always share his thoughts on new developments in the Pulumi project, as well as join in for fun and discussion in various PulumiVision livestreams!
 
 ### Joshua Studt
 

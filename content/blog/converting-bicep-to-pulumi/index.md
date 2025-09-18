@@ -3,7 +3,7 @@ title: "Converting Bicep code to Pulumi"
 date: 2023-09-29
 updated: 2025-08-11
 draft: false
-meta_desc: In this article, we will look at a new language converter that takes Bicep code and converts it to any of supported Pulumi languages. 
+meta_desc: In this article, we will look at a new language converter that takes Bicep code and converts it to any of supported Pulumi languages.
 meta_image: meta.png
 authors: ["zaid-ajaj"]
 tags: ["community", "bicep", "azure", "convert"]
@@ -274,7 +274,7 @@ let convertProgram (request: ConvertProgramRequest): ConvertProgramResponse =
 
 In our case, we read the Bicep code from the source directory, convert it to PCL and write out the PCL code in the target directory. Then, Pulumi uses the built-in program generation facilities to take care of the rest of the work of generating the target language code from the PCL code so that we don't have to worry about language-specific details. The converter only needs to know how to generate PCL.
 
-To build the actual transformation from Bicep to PCL, I made use the of the [Azure.Bicep.Core](https://www.nuget.org/packages/Azure.Bicep.Core) package available for .NET which allowed me to parse the Bicep code and generate a typed Abstract Syntax Tree (AST) from it. Building an AST from the source language allows us to easily traverse the tree, analyze it and symbolically rewrite pieces of it. Working at the AST level alse makes it easy to test source code transformation using structure rather than text. Once we have obtained the Bicep AST, we transform it into a Pulumi AST that represents a PCL program. Finally, we print out the Pulumi AST to a string and write it to the target directory.
+To build the actual transformation from Bicep to PCL, I made use the of the [Azure.Bicep.Core](https://www.nuget.org/packages/Azure.Bicep.Core) package available for .NET which allowed me to parse the Bicep code and generate a typed Abstract Syntax Tree (AST) from it. Building an AST from the source language allows us to easily traverse the tree, analyze it and symbolically rewrite pieces of it. Working at the AST level also makes it easy to test source code transformation using structure rather than text. Once we have obtained the Bicep AST, we transform it into a Pulumi AST that represents a PCL program. Finally, we print out the Pulumi AST to a string and write it to the target directory.
 
 If you are curious about the specification of the AST that represents Bicep programs, head over to [this file](https://github.com/Zaid-Ajaj/pulumi-converter-bicep/blob/master/src/Converter/BicepParser.fs) from the source code. You will find types such as `BicepProgram` and `BicepSyntax` that model almost every aspect of Bicep code. As for the AST of PCL programs, you can find the type definitions [here](https://github.com/Zaid-Ajaj/pulumi-converter-bicep/blob/master/src/Converter/PulumiTypes.fs).
 
@@ -308,7 +308,7 @@ Depending on how well this ARM converter does its job, we might consider depreca
 
 Converter plugins are a great way to extend the Pulumi CLI with `pulumi convert` to support new languages. When we shipped support for [Converting full Terraform Programs To Pulumi](https://www.pulumi.com/blog/converting-full-terraform-programs-to-pulumi/), we extended the `pulumi convert` command to allow installing and using converter plugins that are shipped independently from the Pulumi CLI.
 
-In essense, those plugins are executable binaries that can be written in any language, which serves up a gRPC server that implements the `Converter` contract:
+In essence, those plugins are executable binaries that can be written in any language, which serves up a gRPC server that implements the `Converter` contract:
 
 ```protobuf
 // Converter is a service for converting between other ecosystems and Pulumi.

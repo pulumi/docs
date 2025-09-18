@@ -141,7 +141,7 @@ Let's walk through these lines to explain what's going on here:
 
 * `pulumi login` to set up credentials for the pulumi backend
 * `pulumi stack select dev` to run this against our `dev` stack
-* `pulumi up -f` to run our program udpate. The -f flag skips the preview phase and also skips the need to interactively confirm that we want to run the update.
+* `pulumi up -f` to run our program update. The -f flag skips the preview phase and also skips the need to interactively confirm that we want to run the update.
 {{% /notes %}}
 
 Open the VS Code terminal panel and first set it to be executable, then try running the script:

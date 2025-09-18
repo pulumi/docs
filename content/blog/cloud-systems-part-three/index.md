@@ -230,7 +230,7 @@ flask_image = docker.Image("flask-dockerimage",
 )
 ```
 
-A small helper function is required here. It's grabbing some of our AWS credentials, specificaly an authorization token, so that we can talk to the registry. Next, we build the Docker image for our website and push it to the repository we created in Amazon ECR earlier. Remember, the Dockerfile is in `./website`.
+A small helper function is required here. It's grabbing some of our AWS credentials, specifically an authorization token, so that we can talk to the registry. Next, we build the Docker image for our website and push it to the repository we created in Amazon ECR earlier. Remember, the Dockerfile is in `./website`.
 
 ```python
 flask_task_definition = aws.ecs.TaskDefinition("flask-task-definition",
@@ -327,4 +327,4 @@ Duration: 3m36s
 
 Pulumi has created 20 resources for you, and helpfully returned the DNS address of your load balancer. I've snipped out the `diagnostics` section of this output for the sake of keeping things brief, but you will also see the step-by-step process Docker goes through building and running your image. Go to that URL after a couple of minutes, and your website is online!
 
-We now have a functional, multi-page website with server-side routing, packaged up into a Docker container and deployed to a fully-configured AWS ECS cluster in just a couple hundred lines of Python, all without leaving the same repository our website is stored in. What if we want to be able to scale really large, though? Some resiliency would be nice. Stay tuned for the next blog for an introduction to Kubernetes, where we'll learn to deploy our website to Amazon's Elastic Kubermetes Service!
+We now have a functional, multi-page website with server-side routing, packaged up into a Docker container and deployed to a fully-configured AWS ECS cluster in just a couple hundred lines of Python, all without leaving the same repository our website is stored in. What if we want to be able to scale really large, though? Some resiliency would be nice. Stay tuned for the next blog for an introduction to Kubernetes, where we'll learn to deploy our website to Amazon's Elastic Kubernetes Service!

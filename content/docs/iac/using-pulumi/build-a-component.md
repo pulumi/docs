@@ -79,7 +79,7 @@ The core implementation of the AWS API is handled by the [Pulumi AWS Provider](/
 
 ### Setting up your Component project
 
-A Pulumi Component is a seperate project from your Pulumi program. So, let's create a new directory for it, and create some project files:
+A Pulumi Component is a separate project from your Pulumi program. So, let's create a new directory for it, and create some project files:
 
 ```bash
 $ mkdir static-page-component
