@@ -86,7 +86,7 @@ Leverage Pulumi's collection of open source [tools][gh-pulumi],
 Kubernetes [frameworks][pulumi-cloud-k8s], [continuous delivery integrations][pulumi-cd],
 and [playbooks][cw-playbooks] to help you deliver production-ready Kubernetes.
 
-Join the Pulumi team and thousands of practioners in our
+Join the Pulumi team and thousands of practitioners in our
 [Community Slack][pulumi-slack] for questions and support, follow us on [Twitter][pulumi-twitter] for our latest news, and subscribe to our [YouTube channel][pulumi-yt] to access educational content.
 
 ## Frequently Asked Questions (FAQ)

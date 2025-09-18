@@ -280,7 +280,7 @@ The properties inside your `StorageAccount` resource are:
 
 ## Deploy your storage account
 
-Now run the `pulumi up` command to preview and deploy the resouces you've just defined in your project.
+Now run the `pulumi up` command to preview and deploy the resources you've just defined in your project.
 
 ```bash
 $ pulumi up -y

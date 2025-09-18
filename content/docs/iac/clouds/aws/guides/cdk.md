@@ -36,7 +36,7 @@ $ pulumi config set aws:region us-east-2
 ## Example
 
 After following the [getting started](#getting-started) steps, the next step is
-to setup your application. For this example we are using the [AWS AppRunner serivce](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-apprunner-alpha-readme.html).
+to setup your application. For this example we are using the [AWS AppRunner service](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-apprunner-alpha-readme.html).
 We will create an AppRunner `Service` from within our Pulumi program, and export the resulting service's URL as a
 Pulumi Stack Output.
 

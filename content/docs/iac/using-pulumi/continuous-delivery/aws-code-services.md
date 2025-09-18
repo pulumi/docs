@@ -20,7 +20,7 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/aws-code-services/
 ---
 
-[Amazon Code Services](https://aws.amazon.com/products/developer-tools/) encompases a variety
+[Amazon Code Services](https://aws.amazon.com/products/developer-tools/) encompasses a variety
 of specific tools for CI/CD, including [CodePipeline](https://aws.amazon.com/codepipeline/),
 [CodeBuild](https://aws.amazon.com/codebuild/), [CodeDeploy](https://aws.amazon.com/codedeploy/),
 and others.
