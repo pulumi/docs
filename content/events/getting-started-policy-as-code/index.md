@@ -53,7 +53,7 @@ main:
 
     learn:
         - How to create policies for resource level validation.
-        - How to create Policy Packs for orgainizing organization wide policies.
+        - How to create Policy Packs for organizing organization wide policies.
 
     # The webinar presenters
     presenters:

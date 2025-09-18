@@ -68,7 +68,7 @@ Next, select the **trust relationships** tab, which is where the trust policy of
 }
 ```
 
-This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. For more detailed configuration for how you can set fine grained access control, see the following [customizing claims documenation](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims).
+This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. For more detailed configuration for how you can set fine grained access control, see the following [customizing claims documentation](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims).
 
 Before you log out of the AWS console, make sure to make a note of your role’s ARN value as you will need it in the next step.
 

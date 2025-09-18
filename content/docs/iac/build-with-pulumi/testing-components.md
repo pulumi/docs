@@ -36,7 +36,7 @@ This method works best when:
 - You have access to consumer projects
 - You can link the component locally
 
-Running `pulumi preview` works great for existing projects to detect any unexepected behavior after an update. The upside of this approach is that it tests your new code in exactly the environments where it will be used, giving real-world feedback that will reveal many unintended consequences of the component update. The downside of this approach is that it may not scale well if your component has many downstream consumers or your team does not have direct access to the Pulumi programs that consume your component.
+Running `pulumi preview` works great for existing projects to detect any unexpected behavior after an update. The upside of this approach is that it tests your new code in exactly the environments where it will be used, giving real-world feedback that will reveal many unintended consequences of the component update. The downside of this approach is that it may not scale well if your component has many downstream consumers or your team does not have direct access to the Pulumi programs that consume your component.
 
 ### Testing Strategy: Integration and Unit Testing Tools
 
@@ -140,7 +140,7 @@ This is especially useful for catching schema errors, input validation bugs, and
 
 We chose YAML for the test bench because it's the simplest language to consume a component in. This approach avoids any confusing issues with multi-language naming, syntax problems within the test bench itself, or issues with SDK generation.
 
-That said, if you're running into problems in one target language but not the other, the same approach can be used with any Pulumi language.  
+That said, if you're running into problems in one target language but not the other, the same approach can be used with any Pulumi language.
 
 ### Inspect the schema directly
 

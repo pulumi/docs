@@ -409,7 +409,7 @@ if __name__ == "__main__":
     component_provider_host(name="static-page-component", components=[StaticPage])
 ```
 
-Here, the `component_provider_host` call invokes a Pulumi provider implmentation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
+Here, the `component_provider_host` call invokes a Pulumi provider implementation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
 {{% /choosable %}}
 
@@ -458,7 +458,7 @@ func provider() (p.Provider, error) {
 }
 ```
 
-Here, the `infer.NewProviderBuilder()..Build()` call builds a Pulumi provider implmentation which acts as a shim for the component. Then, in the `main` function we call `provider.Run(...)` to execute the provider. The name we pass to this function and to the module map (`static-page-component`) will be important later on in the component implementation, so make sure it's something unique and descriptive!
+Here, the `infer.NewProviderBuilder()..Build()` call builds a Pulumi provider implementation which acts as a shim for the component. Then, in the `main` function we call `provider.Run(...)` to execute the provider. The name we pass to this function and to the module map (`static-page-component`) will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
 {{% /choosable %}}
 
@@ -478,7 +478,7 @@ class Program
 }
 ```
 
-Here, the `ComponentProviderHost.Serve` call invokes a Pulumi provider implmentation which acts as a shim for the component. Everything else about your component will be inferred by the Pulumi SDK.
+Here, the `ComponentProviderHost.Serve` call invokes a Pulumi provider implementation which acts as a shim for the component. Everything else about your component will be inferred by the Pulumi SDK.
 
 {{% /choosable %}}
 
@@ -501,7 +501,7 @@ public class App {
 }
 ```
 
-Here, the `ComponentProviderHost.start(...)` call invokes a Pulumi provider implmentation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
+Here, the `ComponentProviderHost.start(...)` call invokes a Pulumi provider implementation which acts as a shim for the component. The name we pass to it will be important later on in the component implementation, so make sure it's something unique and descriptive!
 
 We also need to pass the Java package so that your component classes can be inferred by the Pulumi SDK.
 
@@ -651,7 +651,7 @@ Next, we will implement the arguments class. In our example here, we will pass t
 
 {{% choosable language typescript %}}
 
-***Example:** `staticpage.ts` the Component arguments implmentation*
+***Example:** `staticpage.ts` the Component arguments implementation*
 
 ```typescript
 export interface StaticPageArgs {
@@ -666,7 +666,7 @@ Note that argument classes must be *serializable* and use `pulumi.Input` types, 
 
 {{% choosable language python %}}
 
-***Example:** `staticpage.py` the Component arguments implmentation*
+***Example:** `staticpage.py` the Component arguments implementation*
 
 ```python
 class StaticPageArgs(TypedDict):
@@ -681,7 +681,7 @@ Python class properties are typically written in lowercase with words separated 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-***Example:** `staticpage.go` the Component arguments implmentation*
+***Example:** `staticpage.go` the Component arguments implementation*
 
 ```go
 type StaticPageArgs struct {
@@ -697,7 +697,7 @@ Go struct fields are typically written in title case, with the first letter capi
 
 {{% choosable language csharp %}}
 
-***Example:** `StaticPage.cs` the Component arguments implmentation*
+***Example:** `StaticPage.cs` the Component arguments implementation*
 
 ```csharp
 public sealed class StaticPageArgs : ResourceArgs {
@@ -712,7 +712,7 @@ Note that argument classes must be *serializable* and use `Pulumi.Input` types, 
 
 {{% choosable language java %}}
 
-***Example:** `StaticPage.java` the Component arguments implmentation*
+***Example:** `StaticPage.java` the Component arguments implementation*
 
 ```java
 class StaticPageArgs extends ResourceArgs {
@@ -742,7 +742,7 @@ The `@Import` decorator marks this as a *required* input and allows use to give 
 
 In YAML, rather than defining a separate args class, the inputs are declared under the [`inputs` key](/docs/iac/languages-sdks/yaml/yaml-component-reference/#inputs):
 
-***Example:** `PulumiPlugin.yaml` the Component arguments implmentation*
+***Example:** `PulumiPlugin.yaml` the Component arguments implementation*
 
 ```yaml {hl_lines=["5-7"]}
 runtime: yaml
@@ -775,7 +775,7 @@ Considering writing in TypeScript instead!
 
 Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `staticpage.ts` the Component implmentation*
+***Example:** `staticpage.ts` the Component implementation*
 
 ```typescript
 export class StaticPage extends pulumi.ComponentResource {
@@ -848,7 +848,7 @@ export class StaticPage extends pulumi.ComponentResource {
 
 Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `staticpage.py` the Component implmentation*
+***Example:** `staticpage.py` the Component implementation*
 
 ```python
 class StaticPage(pulumi.ComponentResource):
@@ -928,7 +928,7 @@ def _allow_getobject_policy(bucket_name: str) -> str:
 {{% choosable language go %}}
 Now we can implement the component itself. Component structs should include `pulumi.ResourceState` and define the consumable outputs, which follow the same general rules as inputs. All the work for building our component happens in the `NewStaticPage` constructor.
 
-***Example:** `staticpage.go` the Component implmentation*
+***Example:** `staticpage.go` the Component implementation*
 
 ```go
 type StaticPage struct {
@@ -1027,7 +1027,7 @@ func NewStaticPage(ctx *pulumi.Context, name string, args *StaticPageArgs, opts 
 
 Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.RegisterOutputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `StaticPage.cs` the Component implmentation*
+***Example:** `StaticPage.cs` the Component implementation*
 
 ```csharp
 class StaticPage : ComponentResource {
@@ -1100,7 +1100,7 @@ class StaticPage : ComponentResource {
 
 Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the required arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `StaticPage.java` the Component implmentation*
+***Example:** `StaticPage.java` the Component implementation*
 
 ```java
 class StaticPage extends ComponentResource {
@@ -1215,7 +1215,7 @@ components:
 
 Here's the full code for our `StaticPage` component:
 
-***Example:** `PulumiPlugin.yaml` the Component implmentation*
+***Example:** `PulumiPlugin.yaml` the Component implementation*
 
 ```yaml {hl_lines=["3-60"]}
 runtime: yaml
@@ -1335,7 +1335,7 @@ The constructor has a few standard arguments:
 - `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
-Since we're inheriting, we also need to call the base class constructor `super(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implmentation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+Since we're inheriting, we also need to call the base class constructor `super(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implementation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -1491,7 +1491,7 @@ The constructor has a few standard arguments:
 - `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
-Since we're inheriting, we also need to call the base class constructor `super().__init__`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implmentation detail. Otherwise, we pass the `name` value into the base constructor, as well as the `opts` value, and an empty object for the `args` value.
+Since we're inheriting, we also need to call the base class constructor `super().__init__`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implementation detail. Otherwise, we pass the `name` value into the base constructor, as well as the `opts` value, and an empty object for the `args` value.
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -1657,7 +1657,7 @@ The constructor has a few standard arguments:
 - `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
-The next step is to register our new component instance with Pulumi via the `ctx` instance. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implmentation detail. Otherwise, we pass the `name` value, our component instance, as well as the `opts` values.
+The next step is to register our new component instance with Pulumi via the `ctx` instance. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:index:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The `index` portion of this type name is a required implementation detail. Otherwise, we pass the `name` value, our component instance, as well as the `opts` values.
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -1809,7 +1809,7 @@ In addition to the resource constructor logic, we also had this inline helper fu
 // ...
 ```
 
-This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `ApplyT(...)`. That means that the `bucketName`, which is normally an asychronous `pulumi.StringOutput` value, can be materialized as a normal Go string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `json.Marshal(...)` function takes the map as input and returns it as a JSON formatted string.
+This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `ApplyT(...)`. That means that the `bucketName`, which is normally an asynchronous `pulumi.StringOutput` value, can be materialized as a normal Go string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `json.Marshal(...)` function takes the map as input and returns it as a JSON formatted string.
 
 {{% /choosable %}}
 
@@ -1854,7 +1854,7 @@ The constructor has a few standard arguments:
 - `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
-Since we're inheriting, we also need to call the base class constructor `base(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:<module>:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The module portion of this type name is always `index` and is a required implmentation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+Since we're inheriting, we also need to call the base class constructor `base(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:<module>:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The module portion of this type name is always `index` and is a required implementation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -2012,7 +2012,7 @@ The constructor has a few standard arguments:
 - `args`: This is an instance of the argument class we defined earlier, containing the required inputs for our component.
 - `opts`: This is an *optional* set of common resource configuration values. The [`ComponentResourceOptions`](/docs/iac/concepts/options/) class is part of the basic API for all Pulumi resources, and will be passed to the constructors of our sub-resources later on.
 
-Since we're inheriting, we also need to call the base class constructor `super(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:<module>:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The module portion of this type name is always `index` and is a required implmentation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
+Since we're inheriting, we also need to call the base class constructor `super(...)`. The first parameter is the name of the resource type, which is very important to get right. The resource type name has the following format: `<package-name>:<module>:<component-class-name>`. It must match *exactly*. Keep this in mind if you refactor the name of your package or the component's class name. The module portion of this type name is always `index` and is a required implementation detail. Otherwise, we pass the `name`, `args`, and `opts` values from our component constructor into the base constructor.
 
 #### Creating and managing sub-resources, dependencies, and execution order
 
@@ -2275,7 +2275,7 @@ By default the `BucketObject` we created is not accessible to the public, so we 
 
 The `BucketPublicAccessBlock` resource requires all four public access properties to be set to `false` to properly enable public access: `blockPublicAcls`, `blockPublicPolicy`, `ignorePublicAcls`, and `restrictPublicBuckets`. Setting only one or some of these properties will not allow the bucket policy to function correctly.
 
-The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use the `${bucket.bucket}` interpolation to generate an S3 policy document using the `fn::toJSON:` helper function. This respects the asynchronous workflow, waiting to create the `BucketPolicy` resource until after the bucket has been created. If the provider attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 policy document needs to use the bucket's name within its definition, and we won't know what that value is until the Bucket creation operation has completed. Pulumi's YAML implmentation handles that workflow automatically.
+The `BucketPolicy` resource shows an important coding technique when implementing components: handling asynchronous output values. We use the `${bucket.bucket}` interpolation to generate an S3 policy document using the `fn::toJSON:` helper function. This respects the asynchronous workflow, waiting to create the `BucketPolicy` resource until after the bucket has been created. If the provider attempted to create a `BucketPolicy` before the `Bucket` existed, the operation would fail. That's because the S3 policy document needs to use the bucket's name within its definition, and we won't know what that value is until the Bucket creation operation has completed. Pulumi's YAML implementation handles that workflow automatically.
 
 The `BucketPolicy` resource also shows another technique: resource dependencies. We use the `dependsOn` resource option to indicate that the `BucketPolicy` depends on the `BucketPublicAccessBlock`. This relationship is important to encode so that resource creation, modification, and deletion happens as expected.
 
@@ -2310,7 +2310,7 @@ In addition to the component definitions, we are also using a helper function `f
 # ...
 ```
 
-This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked only when the interpolated value `${bucket.bucket}` theis available as a standard string. We construct a YAML object which is then serialized to a JSON formatted string and assigned to the `policy` property.
+This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked only when the interpolated value `${bucket.bucket}` is available as a standard string. We construct a YAML object which is then serialized to a JSON formatted string and assigned to the `policy` property.
 
 {{% /choosable %}}
 
@@ -2370,7 +2370,7 @@ Now lets create our `package.json`. We'll need the standard `pulumi` SDK and our
 }
 ```
 
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
 #### Install dependencies
 
@@ -2442,7 +2442,7 @@ Now lets create our `package.json` and `tsconfig.json`. We'll need the standard 
 }
 ```
 
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
 The TypeScript config is the same as any standard Pulumi program.
 
@@ -2546,7 +2546,7 @@ Now lets create our `requirements.txt`. We'll need the standard `pulumi` SDK:
 pulumi>=3.191.0,<4.0
 ```
 
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
 #### Setup the virtual environment
 
@@ -2710,7 +2710,7 @@ Now lets create our `.csproj`. We'll need the standard `pulumi` SDK and our cust
 </Project>
 ```
 
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK which provides us access to the component via RPC to its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
 #### Install dependencies
 
@@ -2903,7 +2903,7 @@ We'll need to add the sources from the generated SDK output into the build sourc
 </project>
 ```
 
-Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK, and add its dependencies, which will provide us access to the component via RPC, which is running inside of its provider host. This creates a clean separation of concerns between the component implmentation and the end users of the component.
+Note that we don't need to add the Pulumi AWS provider library here, because that dependency is handled by the component project, in whatever langauge you implemented it in. We just need to carry a reference to the component SDK, and add its dependencies, which will provide us access to the component via RPC, which is running inside of its provider host. This creates a clean separation of concerns between the component implementation and the end users of the component.
 
 #### Install dependencies
 

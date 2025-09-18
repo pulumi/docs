@@ -45,7 +45,7 @@ See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/ma
 
 When deploying the Service, it is recommended to pin the Pulumi Cloud image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/aks-hosted/README.md) file to set the `imageTag` configuration property for the installer to use.
 
-When ready to update the Pulumi Sevice containers to use a different version, do the following:
+When ready to update the Pulumi Service containers to use a different version, do the following:
 
 * `pulumi login` to the DIY backend as chosen above when installing the self-hosted service.
 * `pulumi config set imageTag {image tag}` to set the version you want to use.
