@@ -37,7 +37,7 @@ Simply put, I took on the work of a full-time engineer, only with slightly more 
 
 Earlier I mentioned that one of my main goals for any internship is to learn. Here are just three key things I've learned about myself and software engineering during this one:
 
-- Remote life is not the life for me. Due to [unforseen circumstances](https://www.pulumi.com/blog/coronavirus-plan/), I spent the last month of my internship in my apartment. I always thought I was a bit of a homebody, but it turns out that staying in one place for more than one day makes me stir crazy, and I'm nowhere near as productive in my room as I think I am. On the upside, Pulumi already had several remote engineers, so all the infrastructure was already in place to continue the actual work side of things fairly smoothly.
+- Remote life is not the life for me. Due to [unforeseen circumstances](https://www.pulumi.com/blog/coronavirus-plan/), I spent the last month of my internship in my apartment. I always thought I was a bit of a homebody, but it turns out that staying in one place for more than one day makes me stir crazy, and I'm nowhere near as productive in my room as I think I am. On the upside, Pulumi already had several remote engineers, so all the infrastructure was already in place to continue the actual work side of things fairly smoothly.
 
 - Writing tests before writing code is actually a good strategy. I remember learning this in one of my classes and thinking "Yeah that seems like a good idea, but what person would actually do that?". Apparently, that person would be me. Often times, I would find myself starting to code something without really understanding possible use cases. Making myself write tests beforehand clears that up pretty quickly.
 

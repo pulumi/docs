@@ -58,7 +58,7 @@ When starting your FinOps Journey is essential to understand cost allocation, ty
 
 ## FinOps: Reactive vs. Proactive Optimization
 
-Most FinOps processes today are reactive; once you have received your bill, you will observe (and pay) the costs and resources accounted for, review your architecture and make necessary adjustments such as reserving, reallocating or removing resources.  Next month, you will do it again, also factoring in your company’s cloud growth, application design changes, team shifts and other dynamics that occured in the meantime.  Many platforms, tools, and job descriptions are oriented toward this reactive optimization process.
+Most FinOps processes today are reactive; once you have received your bill, you will observe (and pay) the costs and resources accounted for, review your architecture and make necessary adjustments such as reserving, reallocating or removing resources.  Next month, you will do it again, also factoring in your company’s cloud growth, application design changes, team shifts and other dynamics that occurred in the meantime.  Many platforms, tools, and job descriptions are oriented toward this reactive optimization process.
 
 Proactive optimization and enforcement means providing real time feedback on how cloud engineering architectural changes may impact cost and creating preventative policies which do not allow for budget-busting cloud services to be provisioned.  This is an evolving practice in many modern cloud-centric organizations.  As more cloud operations are defined as code, this preventative, proactive optimization model is becoming more popular.
 

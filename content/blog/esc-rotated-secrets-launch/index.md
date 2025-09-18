@@ -45,7 +45,7 @@ With today’s launch, we support AWS IAM user credential rotation with many mor
 
 ## How to Use ESC Rotated Secrets
 
-Below are the steps to configure [AWS IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) rotated secrets using best practices. You can also configure this via Pulumi IaC. Check out the [pexample program](https://github.com/pulumi/esc-examples/tree/esc-native-example/rotate/example-native).
+Below are the steps to configure [AWS IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) rotated secrets using best practices. You can also configure this via Pulumi IaC. Check out the [example program](https://github.com/pulumi/esc-examples/tree/esc-native-example/rotate/example-native).
 
 ### 1. Provision an AWS IAM User on your AWS console
 

@@ -815,7 +815,7 @@ In Pulumi, using TypeScript as an example, we can easily create new objects of a
 values from our configuration. If we need to add conditions, we can include our usual if statements. This approach
 greatly simplifies the code, making it easy to read and maintain for any future changes.
 
-### Execute Code Programing Code With  `null_resource`, `local_file` and `provisioners`
+### Execute Programming Code With  `null_resource`, `local_file` and `provisioners`
 
 There are sometimes situations where there is a strong need to execute a script written in a programming language. Most
 prominent use case is packaging up the source code for an AWS lambda function. Let's have a look into an example from
