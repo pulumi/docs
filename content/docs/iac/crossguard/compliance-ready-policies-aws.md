@@ -612,7 +612,7 @@ Policy name: `aws-cloudfront-distribution-disallow-unencrypted-traffic`
 
 Code path: `aws.cloudfront.Distribution.disallowUnencryptedTraffic`
 
-Checks that CloudFront distributions only allow encypted ingress traffic.
+Checks that CloudFront distributions only allow encrypted ingress traffic.
 
 Service: Cloudfront
 

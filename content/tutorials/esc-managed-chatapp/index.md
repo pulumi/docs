@@ -38,7 +38,7 @@ youll_learn:
 prereqs:
     - Familiarity with Python
     - Familiarity with OpenAI API (optional)
-    - Python 3.7 or newer 
+    - Python 3.7 or newer
     - A [Pulumi Cloud](https://app.pulumi.com/signup) account
     - An OpenAI account w/ some credits
     - The [Pulumi ESC CLI](/docs/install/esc/)
@@ -267,7 +267,7 @@ Next, lets create an ESC environment called `chatapp`:
 $ esc env init default/chatapp
 ```
 
-You can verify that the `chatapp` environment exists by listing your avialable environments:
+You can verify that the `chatapp` environment exists by listing your available environments:
 
 ```bash
 $ esc env ls
