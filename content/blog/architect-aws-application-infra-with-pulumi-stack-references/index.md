@@ -264,7 +264,7 @@ const rds = new RdsInstance("db-instance", {
 
     username: dbUsername,
     password: dbPassword,
-    initialDbName: dbName,
+    initalDbName: dbName,
 
     allocatedStorage: 40,
     engineVersion: "11.4",
