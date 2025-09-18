@@ -31,7 +31,7 @@ Policy name: `azurenative-aadiam-v20170401preview-diagnosticsetting-disallow-pre
 
 Code path: `azurenative.aadiam.v20170401preview.DiagnosticSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (aadiam.v20170401preview.DiagnosticSetting).
+Disallow the use of non-stable (Preview) Azure resources (aadiam.v20170401preview.DiagnosticSetting).
 
 Service: Aadiam
 
@@ -55,7 +55,7 @@ Policy name: `azurenative-aadiam-v20200301preview-privatelinkforazuread-disallow
 
 Code path: `azurenative.aadiam.v20200301preview.PrivateLinkForAzureAd.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (aadiam.v20200301preview.PrivateLinkForAzureAd).
+Disallow the use of non-stable (Preview) Azure resources (aadiam.v20200301preview.PrivateLinkForAzureAd).
 
 Service: Aadiam
 
@@ -79,7 +79,7 @@ Policy name: `azurenative-aadiam-v20200701preview-azureadmetric-disallow-preview
 
 Code path: `azurenative.aadiam.v20200701preview.AzureADMetric.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (aadiam.v20200701preview.AzureADMetric).
+Disallow the use of non-stable (Preview) Azure resources (aadiam.v20200701preview.AzureADMetric).
 
 Service: Aadiam
 
@@ -105,7 +105,7 @@ Policy name: `azurenative-agfoodplatform-v20200512preview-farmbeatsmodel-disallo
 
 Code path: `azurenative.agfoodplatform.v20200512preview.FarmBeatsModel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20200512preview.FarmBeatsModel).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20200512preview.FarmBeatsModel).
 
 Service: Agfoodplatform
 
@@ -129,7 +129,7 @@ Policy name: `azurenative-agfoodplatform-v20210901preview-extension-disallow-pre
 
 Code path: `azurenative.agfoodplatform.v20210901preview.Extension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20210901preview.Extension).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20210901preview.Extension).
 
 Service: Agfoodplatform
 
@@ -151,7 +151,7 @@ Policy name: `azurenative-agfoodplatform-v20210901preview-farmbeatsmodel-disallo
 
 Code path: `azurenative.agfoodplatform.v20210901preview.FarmBeatsModel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20210901preview.FarmBeatsModel).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20210901preview.FarmBeatsModel).
 
 Service: Agfoodplatform
 
@@ -173,7 +173,7 @@ Policy name: `azurenative-agfoodplatform-v20210901preview-privateendpointconnect
 
 Code path: `azurenative.agfoodplatform.v20210901preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20210901preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20210901preview.PrivateEndpointConnection).
 
 Service: Agfoodplatform
 
@@ -195,7 +195,7 @@ Policy name: `azurenative-agfoodplatform-v20210901preview-solution-disallow-prev
 
 Code path: `azurenative.agfoodplatform.v20210901preview.Solution.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20210901preview.Solution).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20210901preview.Solution).
 
 Service: Agfoodplatform
 
@@ -219,7 +219,7 @@ Policy name: `azurenative-agfoodplatform-v20230601preview-dataconnector-disallow
 
 Code path: `azurenative.agfoodplatform.v20230601preview.DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20230601preview.DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20230601preview.DataConnector).
 
 Service: Agfoodplatform
 
@@ -241,7 +241,7 @@ Policy name: `azurenative-agfoodplatform-v20230601preview-datamanagerforagricult
 
 Code path: `azurenative.agfoodplatform.v20230601preview.DataManagerForAgricultureResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20230601preview.DataManagerForAgricultureResource).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20230601preview.DataManagerForAgricultureResource).
 
 Service: Agfoodplatform
 
@@ -263,7 +263,7 @@ Policy name: `azurenative-agfoodplatform-v20230601preview-extension-disallow-pre
 
 Code path: `azurenative.agfoodplatform.v20230601preview.Extension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20230601preview.Extension).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20230601preview.Extension).
 
 Service: Agfoodplatform
 
@@ -285,7 +285,7 @@ Policy name: `azurenative-agfoodplatform-v20230601preview-privateendpointconnect
 
 Code path: `azurenative.agfoodplatform.v20230601preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20230601preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20230601preview.PrivateEndpointConnection).
 
 Service: Agfoodplatform
 
@@ -307,7 +307,7 @@ Policy name: `azurenative-agfoodplatform-v20230601preview-solution-disallow-prev
 
 Code path: `azurenative.agfoodplatform.v20230601preview.Solution.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (agfoodplatform.v20230601preview.Solution).
+Disallow the use of non-stable (Preview) Azure resources (agfoodplatform.v20230601preview.Solution).
 
 Service: Agfoodplatform
 
@@ -333,7 +333,7 @@ Policy name: `azurenative-alertsmanagement-v20190505preview-actionrulebyname-dis
 
 Code path: `azurenative.alertsmanagement.v20190505preview.ActionRuleByName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (alertsmanagement.v20190505preview.ActionRuleByName).
+Disallow the use of non-stable (Preview) Azure resources (alertsmanagement.v20190505preview.ActionRuleByName).
 
 Service: Alertsmanagement
 
@@ -357,7 +357,7 @@ Policy name: `azurenative-alertsmanagement-v20230401preview-tenantactivitylogale
 
 Code path: `azurenative.alertsmanagement.v20230401preview.TenantActivityLogAlert.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (alertsmanagement.v20230401preview.TenantActivityLogAlert).
+Disallow the use of non-stable (Preview) Azure resources (alertsmanagement.v20230401preview.TenantActivityLogAlert).
 
 Service: Alertsmanagement
 
@@ -381,7 +381,7 @@ Policy name: `azurenative-alertsmanagement-v20230501preview-alertprocessingruleb
 
 Code path: `azurenative.alertsmanagement.v20230501preview.AlertProcessingRuleByName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (alertsmanagement.v20230501preview.AlertProcessingRuleByName).
+Disallow the use of non-stable (Preview) Azure resources (alertsmanagement.v20230501preview.AlertProcessingRuleByName).
 
 Service: Alertsmanagement
 
@@ -407,7 +407,7 @@ Policy name: `azurenative-apicenter-v20230701preview-service-disallow-preview-re
 
 Code path: `azurenative.apicenter.v20230701preview.Service.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apicenter.v20230701preview.Service).
+Disallow the use of non-stable (Preview) Azure resources (apicenter.v20230701preview.Service).
 
 Service: Apicenter
 
@@ -433,7 +433,7 @@ Policy name: `azurenative-apimanagement-v20180601preview-api-disallow-preview-re
 
 Code path: `azurenative.apimanagement.v20180601preview.Api.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20180601preview.Api).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20180601preview.Api).
 
 Service: Apimanagement
 
@@ -455,7 +455,7 @@ Policy name: `azurenative-apimanagement-v20180601preview-apioperationpolicy-disa
 
 Code path: `azurenative.apimanagement.v20180601preview.ApiOperationPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20180601preview.ApiOperationPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20180601preview.ApiOperationPolicy).
 
 Service: Apimanagement
 
@@ -477,7 +477,7 @@ Policy name: `azurenative-apimanagement-v20180601preview-apipolicy-disallow-prev
 
 Code path: `azurenative.apimanagement.v20180601preview.ApiPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20180601preview.ApiPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20180601preview.ApiPolicy).
 
 Service: Apimanagement
 
@@ -499,7 +499,7 @@ Policy name: `azurenative-apimanagement-v20180601preview-policy-disallow-preview
 
 Code path: `azurenative.apimanagement.v20180601preview.Policy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20180601preview.Policy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20180601preview.Policy).
 
 Service: Apimanagement
 
@@ -521,7 +521,7 @@ Policy name: `azurenative-apimanagement-v20180601preview-productapi-disallow-pre
 
 Code path: `azurenative.apimanagement.v20180601preview.ProductApi.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20180601preview.ProductApi).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20180601preview.ProductApi).
 
 Service: Apimanagement
 
@@ -543,7 +543,7 @@ Policy name: `azurenative-apimanagement-v20180601preview-productpolicy-disallow-
 
 Code path: `azurenative.apimanagement.v20180601preview.ProductPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20180601preview.ProductPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20180601preview.ProductPolicy).
 
 Service: Apimanagement
 
@@ -565,7 +565,7 @@ Policy name: `azurenative-apimanagement-v20180601preview-tagdescription-disallow
 
 Code path: `azurenative.apimanagement.v20180601preview.TagDescription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20180601preview.TagDescription).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20180601preview.TagDescription).
 
 Service: Apimanagement
 
@@ -589,7 +589,7 @@ Policy name: `azurenative-apimanagement-v20191201preview-cache-disallow-preview-
 
 Code path: `azurenative.apimanagement.v20191201preview.Cache.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20191201preview.Cache).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20191201preview.Cache).
 
 Service: Apimanagement
 
@@ -611,7 +611,7 @@ Policy name: `azurenative-apimanagement-v20191201preview-logger-disallow-preview
 
 Code path: `azurenative.apimanagement.v20191201preview.Logger.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20191201preview.Logger).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20191201preview.Logger).
 
 Service: Apimanagement
 
@@ -635,7 +635,7 @@ Policy name: `azurenative-apimanagement-v20210401preview-schema-disallow-preview
 
 Code path: `azurenative.apimanagement.v20210401preview.Schema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20210401preview.Schema).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20210401preview.Schema).
 
 Service: Apimanagement
 
@@ -659,7 +659,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-api-disallow-preview-re
 
 Code path: `azurenative.apimanagement.v20220901preview.Api.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Api).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Api).
 
 Service: Apimanagement
 
@@ -681,7 +681,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apidiagnostic-disallow-
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiDiagnostic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiDiagnostic).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiDiagnostic).
 
 Service: Apimanagement
 
@@ -703,7 +703,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apiissue-disallow-previ
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiIssue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiIssue).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiIssue).
 
 Service: Apimanagement
 
@@ -725,7 +725,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apiissueattachment-disa
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiIssueAttachment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiIssueAttachment).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiIssueAttachment).
 
 Service: Apimanagement
 
@@ -747,7 +747,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apiissuecomment-disallo
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiIssueComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiIssueComment).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiIssueComment).
 
 Service: Apimanagement
 
@@ -769,7 +769,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apimanagementservice-di
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiManagementService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiManagementService).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiManagementService).
 
 Service: Apimanagement
 
@@ -791,7 +791,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apioperation-disallow-p
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiOperation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiOperation).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiOperation).
 
 Service: Apimanagement
 
@@ -813,7 +813,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apioperationpolicy-disa
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiOperationPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiOperationPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiOperationPolicy).
 
 Service: Apimanagement
 
@@ -835,7 +835,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apipolicy-disallow-prev
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiPolicy).
 
 Service: Apimanagement
 
@@ -857,7 +857,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apirelease-disallow-pre
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiRelease.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiRelease).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiRelease).
 
 Service: Apimanagement
 
@@ -879,7 +879,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apischema-disallow-prev
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiSchema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiSchema).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiSchema).
 
 Service: Apimanagement
 
@@ -901,7 +901,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apitagdescription-disal
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiTagDescription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiTagDescription).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiTagDescription).
 
 Service: Apimanagement
 
@@ -923,7 +923,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apiversionset-disallow-
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiVersionSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiVersionSet).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiVersionSet).
 
 Service: Apimanagement
 
@@ -945,7 +945,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-apiwiki-disallow-previe
 
 Code path: `azurenative.apimanagement.v20220901preview.ApiWiki.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ApiWiki).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ApiWiki).
 
 Service: Apimanagement
 
@@ -967,7 +967,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-authorization-disallow-
 
 Code path: `azurenative.apimanagement.v20220901preview.Authorization.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Authorization).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Authorization).
 
 Service: Apimanagement
 
@@ -989,7 +989,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-authorizationaccesspoli
 
 Code path: `azurenative.apimanagement.v20220901preview.AuthorizationAccessPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.AuthorizationAccessPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.AuthorizationAccessPolicy).
 
 Service: Apimanagement
 
@@ -1011,7 +1011,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-authorizationprovider-d
 
 Code path: `azurenative.apimanagement.v20220901preview.AuthorizationProvider.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.AuthorizationProvider).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.AuthorizationProvider).
 
 Service: Apimanagement
 
@@ -1033,7 +1033,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-authorizationserver-dis
 
 Code path: `azurenative.apimanagement.v20220901preview.AuthorizationServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.AuthorizationServer).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.AuthorizationServer).
 
 Service: Apimanagement
 
@@ -1055,7 +1055,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-backend-disallow-previe
 
 Code path: `azurenative.apimanagement.v20220901preview.Backend.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Backend).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Backend).
 
 Service: Apimanagement
 
@@ -1077,7 +1077,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-cache-disallow-preview-
 
 Code path: `azurenative.apimanagement.v20220901preview.Cache.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Cache).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Cache).
 
 Service: Apimanagement
 
@@ -1099,7 +1099,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-certificate-disallow-pr
 
 Code path: `azurenative.apimanagement.v20220901preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Certificate).
 
 Service: Apimanagement
 
@@ -1121,7 +1121,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-contentitem-disallow-pr
 
 Code path: `azurenative.apimanagement.v20220901preview.ContentItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ContentItem).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ContentItem).
 
 Service: Apimanagement
 
@@ -1143,7 +1143,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-contenttype-disallow-pr
 
 Code path: `azurenative.apimanagement.v20220901preview.ContentType.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ContentType).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ContentType).
 
 Service: Apimanagement
 
@@ -1165,7 +1165,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-diagnostic-disallow-pre
 
 Code path: `azurenative.apimanagement.v20220901preview.Diagnostic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Diagnostic).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Diagnostic).
 
 Service: Apimanagement
 
@@ -1187,7 +1187,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-documentation-disallow-
 
 Code path: `azurenative.apimanagement.v20220901preview.Documentation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Documentation).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Documentation).
 
 Service: Apimanagement
 
@@ -1209,7 +1209,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-emailtemplate-disallow-
 
 Code path: `azurenative.apimanagement.v20220901preview.EmailTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.EmailTemplate).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.EmailTemplate).
 
 Service: Apimanagement
 
@@ -1231,7 +1231,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-gateway-disallow-previe
 
 Code path: `azurenative.apimanagement.v20220901preview.Gateway.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Gateway).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Gateway).
 
 Service: Apimanagement
 
@@ -1253,7 +1253,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-gatewayapientitytag-dis
 
 Code path: `azurenative.apimanagement.v20220901preview.GatewayApiEntityTag.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.GatewayApiEntityTag).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.GatewayApiEntityTag).
 
 Service: Apimanagement
 
@@ -1275,7 +1275,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-gatewaycertificateautho
 
 Code path: `azurenative.apimanagement.v20220901preview.GatewayCertificateAuthority.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.GatewayCertificateAuthority).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.GatewayCertificateAuthority).
 
 Service: Apimanagement
 
@@ -1297,7 +1297,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-gatewayhostnameconfigur
 
 Code path: `azurenative.apimanagement.v20220901preview.GatewayHostnameConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.GatewayHostnameConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.GatewayHostnameConfiguration).
 
 Service: Apimanagement
 
@@ -1319,7 +1319,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-globalschema-disallow-p
 
 Code path: `azurenative.apimanagement.v20220901preview.GlobalSchema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.GlobalSchema).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.GlobalSchema).
 
 Service: Apimanagement
 
@@ -1341,7 +1341,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-graphqlapiresolver-disa
 
 Code path: `azurenative.apimanagement.v20220901preview.GraphQLApiResolver.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.GraphQLApiResolver).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.GraphQLApiResolver).
 
 Service: Apimanagement
 
@@ -1363,7 +1363,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-graphqlapiresolverpolic
 
 Code path: `azurenative.apimanagement.v20220901preview.GraphQLApiResolverPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.GraphQLApiResolverPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.GraphQLApiResolverPolicy).
 
 Service: Apimanagement
 
@@ -1385,7 +1385,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-group-disallow-preview-
 
 Code path: `azurenative.apimanagement.v20220901preview.Group.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Group).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Group).
 
 Service: Apimanagement
 
@@ -1407,7 +1407,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-groupuser-disallow-prev
 
 Code path: `azurenative.apimanagement.v20220901preview.GroupUser.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.GroupUser).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.GroupUser).
 
 Service: Apimanagement
 
@@ -1429,7 +1429,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-identityprovider-disall
 
 Code path: `azurenative.apimanagement.v20220901preview.IdentityProvider.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.IdentityProvider).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.IdentityProvider).
 
 Service: Apimanagement
 
@@ -1451,7 +1451,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-logger-disallow-preview
 
 Code path: `azurenative.apimanagement.v20220901preview.Logger.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Logger).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Logger).
 
 Service: Apimanagement
 
@@ -1473,7 +1473,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-namedvalue-disallow-pre
 
 Code path: `azurenative.apimanagement.v20220901preview.NamedValue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.NamedValue).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.NamedValue).
 
 Service: Apimanagement
 
@@ -1495,7 +1495,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-notificationrecipientem
 
 Code path: `azurenative.apimanagement.v20220901preview.NotificationRecipientEmail.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.NotificationRecipientEmail).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.NotificationRecipientEmail).
 
 Service: Apimanagement
 
@@ -1517,7 +1517,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-notificationrecipientus
 
 Code path: `azurenative.apimanagement.v20220901preview.NotificationRecipientUser.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.NotificationRecipientUser).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.NotificationRecipientUser).
 
 Service: Apimanagement
 
@@ -1539,7 +1539,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-openidconnectprovider-d
 
 Code path: `azurenative.apimanagement.v20220901preview.OpenIdConnectProvider.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.OpenIdConnectProvider).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.OpenIdConnectProvider).
 
 Service: Apimanagement
 
@@ -1561,7 +1561,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-policy-disallow-preview
 
 Code path: `azurenative.apimanagement.v20220901preview.Policy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Policy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Policy).
 
 Service: Apimanagement
 
@@ -1583,7 +1583,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-policyfragment-disallow
 
 Code path: `azurenative.apimanagement.v20220901preview.PolicyFragment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.PolicyFragment).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.PolicyFragment).
 
 Service: Apimanagement
 
@@ -1605,7 +1605,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-privateendpointconnecti
 
 Code path: `azurenative.apimanagement.v20220901preview.PrivateEndpointConnectionByName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.PrivateEndpointConnectionByName).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.PrivateEndpointConnectionByName).
 
 Service: Apimanagement
 
@@ -1627,7 +1627,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-product-disallow-previe
 
 Code path: `azurenative.apimanagement.v20220901preview.Product.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Product).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Product).
 
 Service: Apimanagement
 
@@ -1649,7 +1649,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-productapi-disallow-pre
 
 Code path: `azurenative.apimanagement.v20220901preview.ProductApi.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ProductApi).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ProductApi).
 
 Service: Apimanagement
 
@@ -1671,7 +1671,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-productapilink-disallow
 
 Code path: `azurenative.apimanagement.v20220901preview.ProductApiLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ProductApiLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ProductApiLink).
 
 Service: Apimanagement
 
@@ -1693,7 +1693,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-productgroup-disallow-p
 
 Code path: `azurenative.apimanagement.v20220901preview.ProductGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ProductGroup).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ProductGroup).
 
 Service: Apimanagement
 
@@ -1715,7 +1715,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-productgrouplink-disall
 
 Code path: `azurenative.apimanagement.v20220901preview.ProductGroupLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ProductGroupLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ProductGroupLink).
 
 Service: Apimanagement
 
@@ -1737,7 +1737,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-productpolicy-disallow-
 
 Code path: `azurenative.apimanagement.v20220901preview.ProductPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ProductPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ProductPolicy).
 
 Service: Apimanagement
 
@@ -1759,7 +1759,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-productwiki-disallow-pr
 
 Code path: `azurenative.apimanagement.v20220901preview.ProductWiki.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.ProductWiki).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.ProductWiki).
 
 Service: Apimanagement
 
@@ -1781,7 +1781,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-subscription-disallow-p
 
 Code path: `azurenative.apimanagement.v20220901preview.Subscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Subscription).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Subscription).
 
 Service: Apimanagement
 
@@ -1803,7 +1803,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-tag-disallow-preview-re
 
 Code path: `azurenative.apimanagement.v20220901preview.Tag.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Tag).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Tag).
 
 Service: Apimanagement
 
@@ -1825,7 +1825,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-tagapilink-disallow-pre
 
 Code path: `azurenative.apimanagement.v20220901preview.TagApiLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.TagApiLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.TagApiLink).
 
 Service: Apimanagement
 
@@ -1847,7 +1847,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-tagbyapi-disallow-previ
 
 Code path: `azurenative.apimanagement.v20220901preview.TagByApi.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.TagByApi).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.TagByApi).
 
 Service: Apimanagement
 
@@ -1869,7 +1869,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-tagbyoperation-disallow
 
 Code path: `azurenative.apimanagement.v20220901preview.TagByOperation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.TagByOperation).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.TagByOperation).
 
 Service: Apimanagement
 
@@ -1891,7 +1891,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-tagbyproduct-disallow-p
 
 Code path: `azurenative.apimanagement.v20220901preview.TagByProduct.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.TagByProduct).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.TagByProduct).
 
 Service: Apimanagement
 
@@ -1913,7 +1913,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-tagoperationlink-disall
 
 Code path: `azurenative.apimanagement.v20220901preview.TagOperationLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.TagOperationLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.TagOperationLink).
 
 Service: Apimanagement
 
@@ -1935,7 +1935,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-tagproductlink-disallow
 
 Code path: `azurenative.apimanagement.v20220901preview.TagProductLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.TagProductLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.TagProductLink).
 
 Service: Apimanagement
 
@@ -1957,7 +1957,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-user-disallow-preview-r
 
 Code path: `azurenative.apimanagement.v20220901preview.User.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.User).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.User).
 
 Service: Apimanagement
 
@@ -1979,7 +1979,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspace-disallow-prev
 
 Code path: `azurenative.apimanagement.v20220901preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.Workspace).
 
 Service: Apimanagement
 
@@ -2001,7 +2001,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceapi-disallow-p
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceApi.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceApi).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceApi).
 
 Service: Apimanagement
 
@@ -2023,7 +2023,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceapioperation-d
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceApiOperation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceApiOperation).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceApiOperation).
 
 Service: Apimanagement
 
@@ -2045,7 +2045,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceapioperationpo
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceApiOperationPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceApiOperationPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceApiOperationPolicy).
 
 Service: Apimanagement
 
@@ -2067,7 +2067,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceapipolicy-disa
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceApiPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceApiPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceApiPolicy).
 
 Service: Apimanagement
 
@@ -2089,7 +2089,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceapirelease-dis
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceApiRelease.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceApiRelease).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceApiRelease).
 
 Service: Apimanagement
 
@@ -2111,7 +2111,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceapischema-disa
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceApiSchema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceApiSchema).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceApiSchema).
 
 Service: Apimanagement
 
@@ -2133,7 +2133,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceapiversionset-
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceApiVersionSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceApiVersionSet).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceApiVersionSet).
 
 Service: Apimanagement
 
@@ -2155,7 +2155,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceglobalschema-d
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceGlobalSchema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceGlobalSchema).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceGlobalSchema).
 
 Service: Apimanagement
 
@@ -2177,7 +2177,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacegroup-disallow
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceGroup).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceGroup).
 
 Service: Apimanagement
 
@@ -2199,7 +2199,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacegroupuser-disa
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceGroupUser.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceGroupUser).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceGroupUser).
 
 Service: Apimanagement
 
@@ -2221,7 +2221,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacenamedvalue-dis
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceNamedValue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceNamedValue).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceNamedValue).
 
 Service: Apimanagement
 
@@ -2243,7 +2243,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacenotificationre
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceNotificationRecipientEmail.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceNotificationRecipientEmail).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceNotificationRecipientEmail).
 
 Service: Apimanagement
 
@@ -2265,7 +2265,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacenotificationre
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceNotificationRecipientUser.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceNotificationRecipientUser).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceNotificationRecipientUser).
 
 Service: Apimanagement
 
@@ -2287,7 +2287,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacepolicy-disallo
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspacePolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspacePolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspacePolicy).
 
 Service: Apimanagement
 
@@ -2309,7 +2309,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacepolicyfragment
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspacePolicyFragment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspacePolicyFragment).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspacePolicyFragment).
 
 Service: Apimanagement
 
@@ -2331,7 +2331,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceproduct-disall
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceProduct.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceProduct).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceProduct).
 
 Service: Apimanagement
 
@@ -2353,7 +2353,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceproductapilink
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceProductApiLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceProductApiLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceProductApiLink).
 
 Service: Apimanagement
 
@@ -2375,7 +2375,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceproductgroupli
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceProductGroupLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceProductGroupLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceProductGroupLink).
 
 Service: Apimanagement
 
@@ -2397,7 +2397,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspaceproductpolicy-
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceProductPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceProductPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceProductPolicy).
 
 Service: Apimanagement
 
@@ -2419,7 +2419,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacesubscription-d
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceSubscription).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceSubscription).
 
 Service: Apimanagement
 
@@ -2441,7 +2441,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacetag-disallow-p
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceTag.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceTag).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceTag).
 
 Service: Apimanagement
 
@@ -2463,7 +2463,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacetagapilink-dis
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceTagApiLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceTagApiLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceTagApiLink).
 
 Service: Apimanagement
 
@@ -2485,7 +2485,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacetagoperationli
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceTagOperationLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceTagOperationLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceTagOperationLink).
 
 Service: Apimanagement
 
@@ -2507,7 +2507,7 @@ Policy name: `azurenative-apimanagement-v20220901preview-workspacetagproductlink
 
 Code path: `azurenative.apimanagement.v20220901preview.WorkspaceTagProductLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20220901preview.WorkspaceTagProductLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20220901preview.WorkspaceTagProductLink).
 
 Service: Apimanagement
 
@@ -2531,7 +2531,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-api-disallow-preview-re
 
 Code path: `azurenative.apimanagement.v20230301preview.Api.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Api).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Api).
 
 Service: Apimanagement
 
@@ -2553,7 +2553,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apidiagnostic-disallow-
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiDiagnostic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiDiagnostic).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiDiagnostic).
 
 Service: Apimanagement
 
@@ -2575,7 +2575,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apiissue-disallow-previ
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiIssue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiIssue).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiIssue).
 
 Service: Apimanagement
 
@@ -2597,7 +2597,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apiissueattachment-disa
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiIssueAttachment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiIssueAttachment).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiIssueAttachment).
 
 Service: Apimanagement
 
@@ -2619,7 +2619,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apiissuecomment-disallo
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiIssueComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiIssueComment).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiIssueComment).
 
 Service: Apimanagement
 
@@ -2641,7 +2641,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apimanagementservice-di
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiManagementService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiManagementService).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiManagementService).
 
 Service: Apimanagement
 
@@ -2663,7 +2663,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apioperation-disallow-p
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiOperation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiOperation).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiOperation).
 
 Service: Apimanagement
 
@@ -2685,7 +2685,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apioperationpolicy-disa
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiOperationPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiOperationPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiOperationPolicy).
 
 Service: Apimanagement
 
@@ -2707,7 +2707,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apipolicy-disallow-prev
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiPolicy).
 
 Service: Apimanagement
 
@@ -2729,7 +2729,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apirelease-disallow-pre
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiRelease.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiRelease).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiRelease).
 
 Service: Apimanagement
 
@@ -2751,7 +2751,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apischema-disallow-prev
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiSchema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiSchema).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiSchema).
 
 Service: Apimanagement
 
@@ -2773,7 +2773,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apitagdescription-disal
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiTagDescription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiTagDescription).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiTagDescription).
 
 Service: Apimanagement
 
@@ -2795,7 +2795,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apiversionset-disallow-
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiVersionSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiVersionSet).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiVersionSet).
 
 Service: Apimanagement
 
@@ -2817,7 +2817,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-apiwiki-disallow-previe
 
 Code path: `azurenative.apimanagement.v20230301preview.ApiWiki.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ApiWiki).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ApiWiki).
 
 Service: Apimanagement
 
@@ -2839,7 +2839,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-authorization-disallow-
 
 Code path: `azurenative.apimanagement.v20230301preview.Authorization.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Authorization).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Authorization).
 
 Service: Apimanagement
 
@@ -2861,7 +2861,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-authorizationaccesspoli
 
 Code path: `azurenative.apimanagement.v20230301preview.AuthorizationAccessPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.AuthorizationAccessPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.AuthorizationAccessPolicy).
 
 Service: Apimanagement
 
@@ -2883,7 +2883,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-authorizationprovider-d
 
 Code path: `azurenative.apimanagement.v20230301preview.AuthorizationProvider.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.AuthorizationProvider).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.AuthorizationProvider).
 
 Service: Apimanagement
 
@@ -2905,7 +2905,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-authorizationserver-dis
 
 Code path: `azurenative.apimanagement.v20230301preview.AuthorizationServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.AuthorizationServer).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.AuthorizationServer).
 
 Service: Apimanagement
 
@@ -2927,7 +2927,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-backend-disallow-previe
 
 Code path: `azurenative.apimanagement.v20230301preview.Backend.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Backend).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Backend).
 
 Service: Apimanagement
 
@@ -2949,7 +2949,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-cache-disallow-preview-
 
 Code path: `azurenative.apimanagement.v20230301preview.Cache.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Cache).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Cache).
 
 Service: Apimanagement
 
@@ -2971,7 +2971,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-certificate-disallow-pr
 
 Code path: `azurenative.apimanagement.v20230301preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Certificate).
 
 Service: Apimanagement
 
@@ -2993,7 +2993,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-contentitem-disallow-pr
 
 Code path: `azurenative.apimanagement.v20230301preview.ContentItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ContentItem).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ContentItem).
 
 Service: Apimanagement
 
@@ -3015,7 +3015,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-contenttype-disallow-pr
 
 Code path: `azurenative.apimanagement.v20230301preview.ContentType.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ContentType).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ContentType).
 
 Service: Apimanagement
 
@@ -3037,7 +3037,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-diagnostic-disallow-pre
 
 Code path: `azurenative.apimanagement.v20230301preview.Diagnostic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Diagnostic).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Diagnostic).
 
 Service: Apimanagement
 
@@ -3059,7 +3059,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-documentation-disallow-
 
 Code path: `azurenative.apimanagement.v20230301preview.Documentation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Documentation).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Documentation).
 
 Service: Apimanagement
 
@@ -3081,7 +3081,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-emailtemplate-disallow-
 
 Code path: `azurenative.apimanagement.v20230301preview.EmailTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.EmailTemplate).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.EmailTemplate).
 
 Service: Apimanagement
 
@@ -3103,7 +3103,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-gateway-disallow-previe
 
 Code path: `azurenative.apimanagement.v20230301preview.Gateway.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Gateway).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Gateway).
 
 Service: Apimanagement
 
@@ -3125,7 +3125,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-gatewayapientitytag-dis
 
 Code path: `azurenative.apimanagement.v20230301preview.GatewayApiEntityTag.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.GatewayApiEntityTag).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.GatewayApiEntityTag).
 
 Service: Apimanagement
 
@@ -3147,7 +3147,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-gatewaycertificateautho
 
 Code path: `azurenative.apimanagement.v20230301preview.GatewayCertificateAuthority.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.GatewayCertificateAuthority).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.GatewayCertificateAuthority).
 
 Service: Apimanagement
 
@@ -3169,7 +3169,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-gatewayhostnameconfigur
 
 Code path: `azurenative.apimanagement.v20230301preview.GatewayHostnameConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.GatewayHostnameConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.GatewayHostnameConfiguration).
 
 Service: Apimanagement
 
@@ -3191,7 +3191,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-globalschema-disallow-p
 
 Code path: `azurenative.apimanagement.v20230301preview.GlobalSchema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.GlobalSchema).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.GlobalSchema).
 
 Service: Apimanagement
 
@@ -3213,7 +3213,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-graphqlapiresolver-disa
 
 Code path: `azurenative.apimanagement.v20230301preview.GraphQLApiResolver.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.GraphQLApiResolver).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.GraphQLApiResolver).
 
 Service: Apimanagement
 
@@ -3235,7 +3235,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-graphqlapiresolverpolic
 
 Code path: `azurenative.apimanagement.v20230301preview.GraphQLApiResolverPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.GraphQLApiResolverPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.GraphQLApiResolverPolicy).
 
 Service: Apimanagement
 
@@ -3257,7 +3257,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-group-disallow-preview-
 
 Code path: `azurenative.apimanagement.v20230301preview.Group.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Group).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Group).
 
 Service: Apimanagement
 
@@ -3279,7 +3279,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-groupuser-disallow-prev
 
 Code path: `azurenative.apimanagement.v20230301preview.GroupUser.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.GroupUser).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.GroupUser).
 
 Service: Apimanagement
 
@@ -3301,7 +3301,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-identityprovider-disall
 
 Code path: `azurenative.apimanagement.v20230301preview.IdentityProvider.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.IdentityProvider).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.IdentityProvider).
 
 Service: Apimanagement
 
@@ -3323,7 +3323,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-logger-disallow-preview
 
 Code path: `azurenative.apimanagement.v20230301preview.Logger.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Logger).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Logger).
 
 Service: Apimanagement
 
@@ -3345,7 +3345,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-namedvalue-disallow-pre
 
 Code path: `azurenative.apimanagement.v20230301preview.NamedValue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.NamedValue).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.NamedValue).
 
 Service: Apimanagement
 
@@ -3367,7 +3367,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-notificationrecipientem
 
 Code path: `azurenative.apimanagement.v20230301preview.NotificationRecipientEmail.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.NotificationRecipientEmail).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.NotificationRecipientEmail).
 
 Service: Apimanagement
 
@@ -3389,7 +3389,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-notificationrecipientus
 
 Code path: `azurenative.apimanagement.v20230301preview.NotificationRecipientUser.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.NotificationRecipientUser).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.NotificationRecipientUser).
 
 Service: Apimanagement
 
@@ -3411,7 +3411,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-openidconnectprovider-d
 
 Code path: `azurenative.apimanagement.v20230301preview.OpenIdConnectProvider.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.OpenIdConnectProvider).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.OpenIdConnectProvider).
 
 Service: Apimanagement
 
@@ -3433,7 +3433,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-policy-disallow-preview
 
 Code path: `azurenative.apimanagement.v20230301preview.Policy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Policy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Policy).
 
 Service: Apimanagement
 
@@ -3455,7 +3455,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-policyfragment-disallow
 
 Code path: `azurenative.apimanagement.v20230301preview.PolicyFragment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.PolicyFragment).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.PolicyFragment).
 
 Service: Apimanagement
 
@@ -3477,7 +3477,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-privateendpointconnecti
 
 Code path: `azurenative.apimanagement.v20230301preview.PrivateEndpointConnectionByName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.PrivateEndpointConnectionByName).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.PrivateEndpointConnectionByName).
 
 Service: Apimanagement
 
@@ -3499,7 +3499,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-product-disallow-previe
 
 Code path: `azurenative.apimanagement.v20230301preview.Product.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Product).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Product).
 
 Service: Apimanagement
 
@@ -3521,7 +3521,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-productapi-disallow-pre
 
 Code path: `azurenative.apimanagement.v20230301preview.ProductApi.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ProductApi).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ProductApi).
 
 Service: Apimanagement
 
@@ -3543,7 +3543,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-productapilink-disallow
 
 Code path: `azurenative.apimanagement.v20230301preview.ProductApiLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ProductApiLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ProductApiLink).
 
 Service: Apimanagement
 
@@ -3565,7 +3565,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-productgroup-disallow-p
 
 Code path: `azurenative.apimanagement.v20230301preview.ProductGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ProductGroup).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ProductGroup).
 
 Service: Apimanagement
 
@@ -3587,7 +3587,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-productgrouplink-disall
 
 Code path: `azurenative.apimanagement.v20230301preview.ProductGroupLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ProductGroupLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ProductGroupLink).
 
 Service: Apimanagement
 
@@ -3609,7 +3609,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-productpolicy-disallow-
 
 Code path: `azurenative.apimanagement.v20230301preview.ProductPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ProductPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ProductPolicy).
 
 Service: Apimanagement
 
@@ -3631,7 +3631,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-productwiki-disallow-pr
 
 Code path: `azurenative.apimanagement.v20230301preview.ProductWiki.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.ProductWiki).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.ProductWiki).
 
 Service: Apimanagement
 
@@ -3653,7 +3653,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-subscription-disallow-p
 
 Code path: `azurenative.apimanagement.v20230301preview.Subscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Subscription).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Subscription).
 
 Service: Apimanagement
 
@@ -3675,7 +3675,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-tag-disallow-preview-re
 
 Code path: `azurenative.apimanagement.v20230301preview.Tag.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Tag).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Tag).
 
 Service: Apimanagement
 
@@ -3697,7 +3697,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-tagapilink-disallow-pre
 
 Code path: `azurenative.apimanagement.v20230301preview.TagApiLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.TagApiLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.TagApiLink).
 
 Service: Apimanagement
 
@@ -3719,7 +3719,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-tagbyapi-disallow-previ
 
 Code path: `azurenative.apimanagement.v20230301preview.TagByApi.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.TagByApi).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.TagByApi).
 
 Service: Apimanagement
 
@@ -3741,7 +3741,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-tagbyoperation-disallow
 
 Code path: `azurenative.apimanagement.v20230301preview.TagByOperation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.TagByOperation).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.TagByOperation).
 
 Service: Apimanagement
 
@@ -3763,7 +3763,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-tagbyproduct-disallow-p
 
 Code path: `azurenative.apimanagement.v20230301preview.TagByProduct.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.TagByProduct).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.TagByProduct).
 
 Service: Apimanagement
 
@@ -3785,7 +3785,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-tagoperationlink-disall
 
 Code path: `azurenative.apimanagement.v20230301preview.TagOperationLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.TagOperationLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.TagOperationLink).
 
 Service: Apimanagement
 
@@ -3807,7 +3807,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-tagproductlink-disallow
 
 Code path: `azurenative.apimanagement.v20230301preview.TagProductLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.TagProductLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.TagProductLink).
 
 Service: Apimanagement
 
@@ -3829,7 +3829,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-user-disallow-preview-r
 
 Code path: `azurenative.apimanagement.v20230301preview.User.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.User).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.User).
 
 Service: Apimanagement
 
@@ -3851,7 +3851,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspace-disallow-prev
 
 Code path: `azurenative.apimanagement.v20230301preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.Workspace).
 
 Service: Apimanagement
 
@@ -3873,7 +3873,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceapi-disallow-p
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceApi.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceApi).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceApi).
 
 Service: Apimanagement
 
@@ -3895,7 +3895,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceapioperation-d
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceApiOperation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceApiOperation).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceApiOperation).
 
 Service: Apimanagement
 
@@ -3917,7 +3917,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceapioperationpo
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceApiOperationPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceApiOperationPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceApiOperationPolicy).
 
 Service: Apimanagement
 
@@ -3939,7 +3939,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceapipolicy-disa
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceApiPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceApiPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceApiPolicy).
 
 Service: Apimanagement
 
@@ -3961,7 +3961,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceapirelease-dis
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceApiRelease.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceApiRelease).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceApiRelease).
 
 Service: Apimanagement
 
@@ -3983,7 +3983,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceapischema-disa
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceApiSchema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceApiSchema).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceApiSchema).
 
 Service: Apimanagement
 
@@ -4005,7 +4005,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceapiversionset-
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceApiVersionSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceApiVersionSet).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceApiVersionSet).
 
 Service: Apimanagement
 
@@ -4027,7 +4027,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceglobalschema-d
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceGlobalSchema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceGlobalSchema).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceGlobalSchema).
 
 Service: Apimanagement
 
@@ -4049,7 +4049,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacegroup-disallow
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceGroup).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceGroup).
 
 Service: Apimanagement
 
@@ -4071,7 +4071,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacegroupuser-disa
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceGroupUser.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceGroupUser).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceGroupUser).
 
 Service: Apimanagement
 
@@ -4093,7 +4093,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacenamedvalue-dis
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceNamedValue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceNamedValue).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceNamedValue).
 
 Service: Apimanagement
 
@@ -4115,7 +4115,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacenotificationre
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceNotificationRecipientEmail.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceNotificationRecipientEmail).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceNotificationRecipientEmail).
 
 Service: Apimanagement
 
@@ -4137,7 +4137,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacenotificationre
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceNotificationRecipientUser.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceNotificationRecipientUser).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceNotificationRecipientUser).
 
 Service: Apimanagement
 
@@ -4159,7 +4159,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacepolicy-disallo
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspacePolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspacePolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspacePolicy).
 
 Service: Apimanagement
 
@@ -4181,7 +4181,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacepolicyfragment
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspacePolicyFragment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspacePolicyFragment).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspacePolicyFragment).
 
 Service: Apimanagement
 
@@ -4203,7 +4203,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceproduct-disall
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceProduct.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceProduct).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceProduct).
 
 Service: Apimanagement
 
@@ -4225,7 +4225,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceproductapilink
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceProductApiLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceProductApiLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceProductApiLink).
 
 Service: Apimanagement
 
@@ -4247,7 +4247,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceproductgroupli
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceProductGroupLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceProductGroupLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceProductGroupLink).
 
 Service: Apimanagement
 
@@ -4269,7 +4269,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspaceproductpolicy-
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceProductPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceProductPolicy).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceProductPolicy).
 
 Service: Apimanagement
 
@@ -4291,7 +4291,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacesubscription-d
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceSubscription).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceSubscription).
 
 Service: Apimanagement
 
@@ -4313,7 +4313,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacetag-disallow-p
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceTag.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceTag).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceTag).
 
 Service: Apimanagement
 
@@ -4335,7 +4335,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacetagapilink-dis
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceTagApiLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceTagApiLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceTagApiLink).
 
 Service: Apimanagement
 
@@ -4357,7 +4357,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacetagoperationli
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceTagOperationLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceTagOperationLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceTagOperationLink).
 
 Service: Apimanagement
 
@@ -4379,7 +4379,7 @@ Policy name: `azurenative-apimanagement-v20230301preview-workspacetagproductlink
 
 Code path: `azurenative.apimanagement.v20230301preview.WorkspaceTagProductLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (apimanagement.v20230301preview.WorkspaceTagProductLink).
+Disallow the use of non-stable (Preview) Azure resources (apimanagement.v20230301preview.WorkspaceTagProductLink).
 
 Service: Apimanagement
 
@@ -4405,7 +4405,7 @@ Policy name: `azurenative-app-v20220101preview-certificate-disallow-preview-reso
 
 Code path: `azurenative.app.v20220101preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20220101preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (app.v20220101preview.Certificate).
 
 Service: App
 
@@ -4427,7 +4427,7 @@ Policy name: `azurenative-app-v20220101preview-containerapp-disallow-preview-res
 
 Code path: `azurenative.app.v20220101preview.ContainerApp.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20220101preview.ContainerApp).
+Disallow the use of non-stable (Preview) Azure resources (app.v20220101preview.ContainerApp).
 
 Service: App
 
@@ -4449,7 +4449,7 @@ Policy name: `azurenative-app-v20220101preview-containerappsauthconfig-disallow-
 
 Code path: `azurenative.app.v20220101preview.ContainerAppsAuthConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20220101preview.ContainerAppsAuthConfig).
+Disallow the use of non-stable (Preview) Azure resources (app.v20220101preview.ContainerAppsAuthConfig).
 
 Service: App
 
@@ -4471,7 +4471,7 @@ Policy name: `azurenative-app-v20220101preview-containerappssourcecontrol-disall
 
 Code path: `azurenative.app.v20220101preview.ContainerAppsSourceControl.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20220101preview.ContainerAppsSourceControl).
+Disallow the use of non-stable (Preview) Azure resources (app.v20220101preview.ContainerAppsSourceControl).
 
 Service: App
 
@@ -4493,7 +4493,7 @@ Policy name: `azurenative-app-v20220101preview-daprcomponent-disallow-preview-re
 
 Code path: `azurenative.app.v20220101preview.DaprComponent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20220101preview.DaprComponent).
+Disallow the use of non-stable (Preview) Azure resources (app.v20220101preview.DaprComponent).
 
 Service: App
 
@@ -4515,7 +4515,7 @@ Policy name: `azurenative-app-v20220101preview-managedenvironment-disallow-previ
 
 Code path: `azurenative.app.v20220101preview.ManagedEnvironment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20220101preview.ManagedEnvironment).
+Disallow the use of non-stable (Preview) Azure resources (app.v20220101preview.ManagedEnvironment).
 
 Service: App
 
@@ -4537,7 +4537,7 @@ Policy name: `azurenative-app-v20220101preview-managedenvironmentsstorage-disall
 
 Code path: `azurenative.app.v20220101preview.ManagedEnvironmentsStorage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20220101preview.ManagedEnvironmentsStorage).
+Disallow the use of non-stable (Preview) Azure resources (app.v20220101preview.ManagedEnvironmentsStorage).
 
 Service: App
 
@@ -4561,7 +4561,7 @@ Policy name: `azurenative-app-v20230401preview-certificate-disallow-preview-reso
 
 Code path: `azurenative.app.v20230401preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.Certificate).
 
 Service: App
 
@@ -4583,7 +4583,7 @@ Policy name: `azurenative-app-v20230401preview-connectedenvironment-disallow-pre
 
 Code path: `azurenative.app.v20230401preview.ConnectedEnvironment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ConnectedEnvironment).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ConnectedEnvironment).
 
 Service: App
 
@@ -4605,7 +4605,7 @@ Policy name: `azurenative-app-v20230401preview-connectedenvironmentscertificate-
 
 Code path: `azurenative.app.v20230401preview.ConnectedEnvironmentsCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ConnectedEnvironmentsCertificate).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ConnectedEnvironmentsCertificate).
 
 Service: App
 
@@ -4627,7 +4627,7 @@ Policy name: `azurenative-app-v20230401preview-connectedenvironmentsdaprcomponen
 
 Code path: `azurenative.app.v20230401preview.ConnectedEnvironmentsDaprComponent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ConnectedEnvironmentsDaprComponent).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ConnectedEnvironmentsDaprComponent).
 
 Service: App
 
@@ -4649,7 +4649,7 @@ Policy name: `azurenative-app-v20230401preview-connectedenvironmentsstorage-disa
 
 Code path: `azurenative.app.v20230401preview.ConnectedEnvironmentsStorage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ConnectedEnvironmentsStorage).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ConnectedEnvironmentsStorage).
 
 Service: App
 
@@ -4671,7 +4671,7 @@ Policy name: `azurenative-app-v20230401preview-containerapp-disallow-preview-res
 
 Code path: `azurenative.app.v20230401preview.ContainerApp.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ContainerApp).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ContainerApp).
 
 Service: App
 
@@ -4693,7 +4693,7 @@ Policy name: `azurenative-app-v20230401preview-containerappsauthconfig-disallow-
 
 Code path: `azurenative.app.v20230401preview.ContainerAppsAuthConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ContainerAppsAuthConfig).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ContainerAppsAuthConfig).
 
 Service: App
 
@@ -4715,7 +4715,7 @@ Policy name: `azurenative-app-v20230401preview-containerappssourcecontrol-disall
 
 Code path: `azurenative.app.v20230401preview.ContainerAppsSourceControl.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ContainerAppsSourceControl).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ContainerAppsSourceControl).
 
 Service: App
 
@@ -4737,7 +4737,7 @@ Policy name: `azurenative-app-v20230401preview-daprcomponent-disallow-preview-re
 
 Code path: `azurenative.app.v20230401preview.DaprComponent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.DaprComponent).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.DaprComponent).
 
 Service: App
 
@@ -4759,7 +4759,7 @@ Policy name: `azurenative-app-v20230401preview-job-disallow-preview-resource`
 
 Code path: `azurenative.app.v20230401preview.Job.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.Job).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.Job).
 
 Service: App
 
@@ -4781,7 +4781,7 @@ Policy name: `azurenative-app-v20230401preview-managedcertificate-disallow-previ
 
 Code path: `azurenative.app.v20230401preview.ManagedCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ManagedCertificate).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ManagedCertificate).
 
 Service: App
 
@@ -4803,7 +4803,7 @@ Policy name: `azurenative-app-v20230401preview-managedenvironment-disallow-previ
 
 Code path: `azurenative.app.v20230401preview.ManagedEnvironment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ManagedEnvironment).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ManagedEnvironment).
 
 Service: App
 
@@ -4825,7 +4825,7 @@ Policy name: `azurenative-app-v20230401preview-managedenvironmentsstorage-disall
 
 Code path: `azurenative.app.v20230401preview.ManagedEnvironmentsStorage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230401preview.ManagedEnvironmentsStorage).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230401preview.ManagedEnvironmentsStorage).
 
 Service: App
 
@@ -4849,7 +4849,7 @@ Policy name: `azurenative-app-v20230502preview-certificate-disallow-preview-reso
 
 Code path: `azurenative.app.v20230502preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.Certificate).
 
 Service: App
 
@@ -4871,7 +4871,7 @@ Policy name: `azurenative-app-v20230502preview-connectedenvironment-disallow-pre
 
 Code path: `azurenative.app.v20230502preview.ConnectedEnvironment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ConnectedEnvironment).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ConnectedEnvironment).
 
 Service: App
 
@@ -4893,7 +4893,7 @@ Policy name: `azurenative-app-v20230502preview-connectedenvironmentscertificate-
 
 Code path: `azurenative.app.v20230502preview.ConnectedEnvironmentsCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ConnectedEnvironmentsCertificate).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ConnectedEnvironmentsCertificate).
 
 Service: App
 
@@ -4915,7 +4915,7 @@ Policy name: `azurenative-app-v20230502preview-connectedenvironmentsdaprcomponen
 
 Code path: `azurenative.app.v20230502preview.ConnectedEnvironmentsDaprComponent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ConnectedEnvironmentsDaprComponent).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ConnectedEnvironmentsDaprComponent).
 
 Service: App
 
@@ -4937,7 +4937,7 @@ Policy name: `azurenative-app-v20230502preview-connectedenvironmentsstorage-disa
 
 Code path: `azurenative.app.v20230502preview.ConnectedEnvironmentsStorage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ConnectedEnvironmentsStorage).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ConnectedEnvironmentsStorage).
 
 Service: App
 
@@ -4959,7 +4959,7 @@ Policy name: `azurenative-app-v20230502preview-containerapp-disallow-preview-res
 
 Code path: `azurenative.app.v20230502preview.ContainerApp.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ContainerApp).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ContainerApp).
 
 Service: App
 
@@ -4981,7 +4981,7 @@ Policy name: `azurenative-app-v20230502preview-containerappsauthconfig-disallow-
 
 Code path: `azurenative.app.v20230502preview.ContainerAppsAuthConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ContainerAppsAuthConfig).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ContainerAppsAuthConfig).
 
 Service: App
 
@@ -5003,7 +5003,7 @@ Policy name: `azurenative-app-v20230502preview-containerappssourcecontrol-disall
 
 Code path: `azurenative.app.v20230502preview.ContainerAppsSourceControl.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ContainerAppsSourceControl).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ContainerAppsSourceControl).
 
 Service: App
 
@@ -5025,7 +5025,7 @@ Policy name: `azurenative-app-v20230502preview-daprcomponent-disallow-preview-re
 
 Code path: `azurenative.app.v20230502preview.DaprComponent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.DaprComponent).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.DaprComponent).
 
 Service: App
 
@@ -5047,7 +5047,7 @@ Policy name: `azurenative-app-v20230502preview-job-disallow-preview-resource`
 
 Code path: `azurenative.app.v20230502preview.Job.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.Job).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.Job).
 
 Service: App
 
@@ -5069,7 +5069,7 @@ Policy name: `azurenative-app-v20230502preview-managedcertificate-disallow-previ
 
 Code path: `azurenative.app.v20230502preview.ManagedCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ManagedCertificate).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ManagedCertificate).
 
 Service: App
 
@@ -5091,7 +5091,7 @@ Policy name: `azurenative-app-v20230502preview-managedenvironment-disallow-previ
 
 Code path: `azurenative.app.v20230502preview.ManagedEnvironment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ManagedEnvironment).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ManagedEnvironment).
 
 Service: App
 
@@ -5113,7 +5113,7 @@ Policy name: `azurenative-app-v20230502preview-managedenvironmentsstorage-disall
 
 Code path: `azurenative.app.v20230502preview.ManagedEnvironmentsStorage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (app.v20230502preview.ManagedEnvironmentsStorage).
+Disallow the use of non-stable (Preview) Azure resources (app.v20230502preview.ManagedEnvironmentsStorage).
 
 Service: App
 
@@ -5139,7 +5139,7 @@ Policy name: `azurenative-appcomplianceautomation-v20221116preview-report-disall
 
 Code path: `azurenative.appcomplianceautomation.v20221116preview.Report.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appcomplianceautomation.v20221116preview.Report).
+Disallow the use of non-stable (Preview) Azure resources (appcomplianceautomation.v20221116preview.Report).
 
 Service: Appcomplianceautomation
 
@@ -5165,7 +5165,7 @@ Policy name: `azurenative-appplatform-v20210601preview-certificate-disallow-prev
 
 Code path: `azurenative.appplatform.v20210601preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20210601preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20210601preview.Certificate).
 
 Service: Appplatform
 
@@ -5189,7 +5189,7 @@ Policy name: `azurenative-appplatform-v20230501preview-apiportal-disallow-previe
 
 Code path: `azurenative.appplatform.v20230501preview.ApiPortal.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.ApiPortal).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.ApiPortal).
 
 Service: Appplatform
 
@@ -5211,7 +5211,7 @@ Policy name: `azurenative-appplatform-v20230501preview-apiportalcustomdomain-dis
 
 Code path: `azurenative.appplatform.v20230501preview.ApiPortalCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.ApiPortalCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.ApiPortalCustomDomain).
 
 Service: Appplatform
 
@@ -5233,7 +5233,7 @@ Policy name: `azurenative-appplatform-v20230501preview-apm-disallow-preview-reso
 
 Code path: `azurenative.appplatform.v20230501preview.Apm.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.Apm).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.Apm).
 
 Service: Appplatform
 
@@ -5255,7 +5255,7 @@ Policy name: `azurenative-appplatform-v20230501preview-app-disallow-preview-reso
 
 Code path: `azurenative.appplatform.v20230501preview.App.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.App).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.App).
 
 Service: Appplatform
 
@@ -5277,7 +5277,7 @@ Policy name: `azurenative-appplatform-v20230501preview-applicationaccelerator-di
 
 Code path: `azurenative.appplatform.v20230501preview.ApplicationAccelerator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.ApplicationAccelerator).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.ApplicationAccelerator).
 
 Service: Appplatform
 
@@ -5299,7 +5299,7 @@ Policy name: `azurenative-appplatform-v20230501preview-applicationliveview-disal
 
 Code path: `azurenative.appplatform.v20230501preview.ApplicationLiveView.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.ApplicationLiveView).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.ApplicationLiveView).
 
 Service: Appplatform
 
@@ -5321,7 +5321,7 @@ Policy name: `azurenative-appplatform-v20230501preview-binding-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230501preview.Binding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.Binding).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.Binding).
 
 Service: Appplatform
 
@@ -5343,7 +5343,7 @@ Policy name: `azurenative-appplatform-v20230501preview-buildserviceagentpool-dis
 
 Code path: `azurenative.appplatform.v20230501preview.BuildServiceAgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.BuildServiceAgentPool).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.BuildServiceAgentPool).
 
 Service: Appplatform
 
@@ -5365,7 +5365,7 @@ Policy name: `azurenative-appplatform-v20230501preview-buildservicebuild-disallo
 
 Code path: `azurenative.appplatform.v20230501preview.BuildServiceBuild.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.BuildServiceBuild).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.BuildServiceBuild).
 
 Service: Appplatform
 
@@ -5387,7 +5387,7 @@ Policy name: `azurenative-appplatform-v20230501preview-buildservicebuilder-disal
 
 Code path: `azurenative.appplatform.v20230501preview.BuildServiceBuilder.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.BuildServiceBuilder).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.BuildServiceBuilder).
 
 Service: Appplatform
 
@@ -5409,7 +5409,7 @@ Policy name: `azurenative-appplatform-v20230501preview-buildpackbinding-disallow
 
 Code path: `azurenative.appplatform.v20230501preview.BuildpackBinding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.BuildpackBinding).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.BuildpackBinding).
 
 Service: Appplatform
 
@@ -5431,7 +5431,7 @@ Policy name: `azurenative-appplatform-v20230501preview-certificate-disallow-prev
 
 Code path: `azurenative.appplatform.v20230501preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.Certificate).
 
 Service: Appplatform
 
@@ -5453,7 +5453,7 @@ Policy name: `azurenative-appplatform-v20230501preview-configserver-disallow-pre
 
 Code path: `azurenative.appplatform.v20230501preview.ConfigServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.ConfigServer).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.ConfigServer).
 
 Service: Appplatform
 
@@ -5475,7 +5475,7 @@ Policy name: `azurenative-appplatform-v20230501preview-configurationservice-disa
 
 Code path: `azurenative.appplatform.v20230501preview.ConfigurationService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.ConfigurationService).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.ConfigurationService).
 
 Service: Appplatform
 
@@ -5497,7 +5497,7 @@ Policy name: `azurenative-appplatform-v20230501preview-containerregistry-disallo
 
 Code path: `azurenative.appplatform.v20230501preview.ContainerRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.ContainerRegistry).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.ContainerRegistry).
 
 Service: Appplatform
 
@@ -5519,7 +5519,7 @@ Policy name: `azurenative-appplatform-v20230501preview-customdomain-disallow-pre
 
 Code path: `azurenative.appplatform.v20230501preview.CustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.CustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.CustomDomain).
 
 Service: Appplatform
 
@@ -5541,7 +5541,7 @@ Policy name: `azurenative-appplatform-v20230501preview-customizedaccelerator-dis
 
 Code path: `azurenative.appplatform.v20230501preview.CustomizedAccelerator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.CustomizedAccelerator).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.CustomizedAccelerator).
 
 Service: Appplatform
 
@@ -5563,7 +5563,7 @@ Policy name: `azurenative-appplatform-v20230501preview-deployment-disallow-previ
 
 Code path: `azurenative.appplatform.v20230501preview.Deployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.Deployment).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.Deployment).
 
 Service: Appplatform
 
@@ -5585,7 +5585,7 @@ Policy name: `azurenative-appplatform-v20230501preview-devtoolportal-disallow-pr
 
 Code path: `azurenative.appplatform.v20230501preview.DevToolPortal.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.DevToolPortal).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.DevToolPortal).
 
 Service: Appplatform
 
@@ -5607,7 +5607,7 @@ Policy name: `azurenative-appplatform-v20230501preview-gateway-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230501preview.Gateway.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.Gateway).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.Gateway).
 
 Service: Appplatform
 
@@ -5629,7 +5629,7 @@ Policy name: `azurenative-appplatform-v20230501preview-gatewaycustomdomain-disal
 
 Code path: `azurenative.appplatform.v20230501preview.GatewayCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.GatewayCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.GatewayCustomDomain).
 
 Service: Appplatform
 
@@ -5651,7 +5651,7 @@ Policy name: `azurenative-appplatform-v20230501preview-gatewayrouteconfig-disall
 
 Code path: `azurenative.appplatform.v20230501preview.GatewayRouteConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.GatewayRouteConfig).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.GatewayRouteConfig).
 
 Service: Appplatform
 
@@ -5673,7 +5673,7 @@ Policy name: `azurenative-appplatform-v20230501preview-monitoringsetting-disallo
 
 Code path: `azurenative.appplatform.v20230501preview.MonitoringSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.MonitoringSetting).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.MonitoringSetting).
 
 Service: Appplatform
 
@@ -5695,7 +5695,7 @@ Policy name: `azurenative-appplatform-v20230501preview-service-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230501preview.Service.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.Service).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.Service).
 
 Service: Appplatform
 
@@ -5717,7 +5717,7 @@ Policy name: `azurenative-appplatform-v20230501preview-serviceregistry-disallow-
 
 Code path: `azurenative.appplatform.v20230501preview.ServiceRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.ServiceRegistry).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.ServiceRegistry).
 
 Service: Appplatform
 
@@ -5739,7 +5739,7 @@ Policy name: `azurenative-appplatform-v20230501preview-storage-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230501preview.Storage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230501preview.Storage).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230501preview.Storage).
 
 Service: Appplatform
 
@@ -5763,7 +5763,7 @@ Policy name: `azurenative-appplatform-v20230701preview-apiportal-disallow-previe
 
 Code path: `azurenative.appplatform.v20230701preview.ApiPortal.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.ApiPortal).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.ApiPortal).
 
 Service: Appplatform
 
@@ -5785,7 +5785,7 @@ Policy name: `azurenative-appplatform-v20230701preview-apiportalcustomdomain-dis
 
 Code path: `azurenative.appplatform.v20230701preview.ApiPortalCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.ApiPortalCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.ApiPortalCustomDomain).
 
 Service: Appplatform
 
@@ -5807,7 +5807,7 @@ Policy name: `azurenative-appplatform-v20230701preview-apm-disallow-preview-reso
 
 Code path: `azurenative.appplatform.v20230701preview.Apm.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.Apm).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.Apm).
 
 Service: Appplatform
 
@@ -5829,7 +5829,7 @@ Policy name: `azurenative-appplatform-v20230701preview-app-disallow-preview-reso
 
 Code path: `azurenative.appplatform.v20230701preview.App.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.App).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.App).
 
 Service: Appplatform
 
@@ -5851,7 +5851,7 @@ Policy name: `azurenative-appplatform-v20230701preview-applicationaccelerator-di
 
 Code path: `azurenative.appplatform.v20230701preview.ApplicationAccelerator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.ApplicationAccelerator).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.ApplicationAccelerator).
 
 Service: Appplatform
 
@@ -5873,7 +5873,7 @@ Policy name: `azurenative-appplatform-v20230701preview-applicationliveview-disal
 
 Code path: `azurenative.appplatform.v20230701preview.ApplicationLiveView.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.ApplicationLiveView).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.ApplicationLiveView).
 
 Service: Appplatform
 
@@ -5895,7 +5895,7 @@ Policy name: `azurenative-appplatform-v20230701preview-binding-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230701preview.Binding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.Binding).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.Binding).
 
 Service: Appplatform
 
@@ -5917,7 +5917,7 @@ Policy name: `azurenative-appplatform-v20230701preview-buildserviceagentpool-dis
 
 Code path: `azurenative.appplatform.v20230701preview.BuildServiceAgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.BuildServiceAgentPool).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.BuildServiceAgentPool).
 
 Service: Appplatform
 
@@ -5939,7 +5939,7 @@ Policy name: `azurenative-appplatform-v20230701preview-buildservicebuild-disallo
 
 Code path: `azurenative.appplatform.v20230701preview.BuildServiceBuild.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.BuildServiceBuild).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.BuildServiceBuild).
 
 Service: Appplatform
 
@@ -5961,7 +5961,7 @@ Policy name: `azurenative-appplatform-v20230701preview-buildservicebuilder-disal
 
 Code path: `azurenative.appplatform.v20230701preview.BuildServiceBuilder.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.BuildServiceBuilder).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.BuildServiceBuilder).
 
 Service: Appplatform
 
@@ -5983,7 +5983,7 @@ Policy name: `azurenative-appplatform-v20230701preview-buildpackbinding-disallow
 
 Code path: `azurenative.appplatform.v20230701preview.BuildpackBinding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.BuildpackBinding).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.BuildpackBinding).
 
 Service: Appplatform
 
@@ -6005,7 +6005,7 @@ Policy name: `azurenative-appplatform-v20230701preview-certificate-disallow-prev
 
 Code path: `azurenative.appplatform.v20230701preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.Certificate).
 
 Service: Appplatform
 
@@ -6027,7 +6027,7 @@ Policy name: `azurenative-appplatform-v20230701preview-configserver-disallow-pre
 
 Code path: `azurenative.appplatform.v20230701preview.ConfigServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.ConfigServer).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.ConfigServer).
 
 Service: Appplatform
 
@@ -6049,7 +6049,7 @@ Policy name: `azurenative-appplatform-v20230701preview-configurationservice-disa
 
 Code path: `azurenative.appplatform.v20230701preview.ConfigurationService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.ConfigurationService).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.ConfigurationService).
 
 Service: Appplatform
 
@@ -6071,7 +6071,7 @@ Policy name: `azurenative-appplatform-v20230701preview-containerregistry-disallo
 
 Code path: `azurenative.appplatform.v20230701preview.ContainerRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.ContainerRegistry).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.ContainerRegistry).
 
 Service: Appplatform
 
@@ -6093,7 +6093,7 @@ Policy name: `azurenative-appplatform-v20230701preview-customdomain-disallow-pre
 
 Code path: `azurenative.appplatform.v20230701preview.CustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.CustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.CustomDomain).
 
 Service: Appplatform
 
@@ -6115,7 +6115,7 @@ Policy name: `azurenative-appplatform-v20230701preview-customizedaccelerator-dis
 
 Code path: `azurenative.appplatform.v20230701preview.CustomizedAccelerator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.CustomizedAccelerator).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.CustomizedAccelerator).
 
 Service: Appplatform
 
@@ -6137,7 +6137,7 @@ Policy name: `azurenative-appplatform-v20230701preview-deployment-disallow-previ
 
 Code path: `azurenative.appplatform.v20230701preview.Deployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.Deployment).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.Deployment).
 
 Service: Appplatform
 
@@ -6159,7 +6159,7 @@ Policy name: `azurenative-appplatform-v20230701preview-devtoolportal-disallow-pr
 
 Code path: `azurenative.appplatform.v20230701preview.DevToolPortal.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.DevToolPortal).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.DevToolPortal).
 
 Service: Appplatform
 
@@ -6181,7 +6181,7 @@ Policy name: `azurenative-appplatform-v20230701preview-gateway-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230701preview.Gateway.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.Gateway).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.Gateway).
 
 Service: Appplatform
 
@@ -6203,7 +6203,7 @@ Policy name: `azurenative-appplatform-v20230701preview-gatewaycustomdomain-disal
 
 Code path: `azurenative.appplatform.v20230701preview.GatewayCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.GatewayCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.GatewayCustomDomain).
 
 Service: Appplatform
 
@@ -6225,7 +6225,7 @@ Policy name: `azurenative-appplatform-v20230701preview-gatewayrouteconfig-disall
 
 Code path: `azurenative.appplatform.v20230701preview.GatewayRouteConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.GatewayRouteConfig).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.GatewayRouteConfig).
 
 Service: Appplatform
 
@@ -6247,7 +6247,7 @@ Policy name: `azurenative-appplatform-v20230701preview-monitoringsetting-disallo
 
 Code path: `azurenative.appplatform.v20230701preview.MonitoringSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.MonitoringSetting).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.MonitoringSetting).
 
 Service: Appplatform
 
@@ -6269,7 +6269,7 @@ Policy name: `azurenative-appplatform-v20230701preview-service-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230701preview.Service.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.Service).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.Service).
 
 Service: Appplatform
 
@@ -6291,7 +6291,7 @@ Policy name: `azurenative-appplatform-v20230701preview-serviceregistry-disallow-
 
 Code path: `azurenative.appplatform.v20230701preview.ServiceRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.ServiceRegistry).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.ServiceRegistry).
 
 Service: Appplatform
 
@@ -6313,7 +6313,7 @@ Policy name: `azurenative-appplatform-v20230701preview-storage-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230701preview.Storage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230701preview.Storage).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230701preview.Storage).
 
 Service: Appplatform
 
@@ -6337,7 +6337,7 @@ Policy name: `azurenative-appplatform-v20230901preview-apiportal-disallow-previe
 
 Code path: `azurenative.appplatform.v20230901preview.ApiPortal.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.ApiPortal).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.ApiPortal).
 
 Service: Appplatform
 
@@ -6359,7 +6359,7 @@ Policy name: `azurenative-appplatform-v20230901preview-apiportalcustomdomain-dis
 
 Code path: `azurenative.appplatform.v20230901preview.ApiPortalCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.ApiPortalCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.ApiPortalCustomDomain).
 
 Service: Appplatform
 
@@ -6381,7 +6381,7 @@ Policy name: `azurenative-appplatform-v20230901preview-apm-disallow-preview-reso
 
 Code path: `azurenative.appplatform.v20230901preview.Apm.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.Apm).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.Apm).
 
 Service: Appplatform
 
@@ -6403,7 +6403,7 @@ Policy name: `azurenative-appplatform-v20230901preview-app-disallow-preview-reso
 
 Code path: `azurenative.appplatform.v20230901preview.App.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.App).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.App).
 
 Service: Appplatform
 
@@ -6425,7 +6425,7 @@ Policy name: `azurenative-appplatform-v20230901preview-applicationaccelerator-di
 
 Code path: `azurenative.appplatform.v20230901preview.ApplicationAccelerator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.ApplicationAccelerator).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.ApplicationAccelerator).
 
 Service: Appplatform
 
@@ -6447,7 +6447,7 @@ Policy name: `azurenative-appplatform-v20230901preview-applicationliveview-disal
 
 Code path: `azurenative.appplatform.v20230901preview.ApplicationLiveView.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.ApplicationLiveView).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.ApplicationLiveView).
 
 Service: Appplatform
 
@@ -6469,7 +6469,7 @@ Policy name: `azurenative-appplatform-v20230901preview-binding-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230901preview.Binding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.Binding).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.Binding).
 
 Service: Appplatform
 
@@ -6491,7 +6491,7 @@ Policy name: `azurenative-appplatform-v20230901preview-buildserviceagentpool-dis
 
 Code path: `azurenative.appplatform.v20230901preview.BuildServiceAgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.BuildServiceAgentPool).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.BuildServiceAgentPool).
 
 Service: Appplatform
 
@@ -6513,7 +6513,7 @@ Policy name: `azurenative-appplatform-v20230901preview-buildservicebuild-disallo
 
 Code path: `azurenative.appplatform.v20230901preview.BuildServiceBuild.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.BuildServiceBuild).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.BuildServiceBuild).
 
 Service: Appplatform
 
@@ -6535,7 +6535,7 @@ Policy name: `azurenative-appplatform-v20230901preview-buildservicebuilder-disal
 
 Code path: `azurenative.appplatform.v20230901preview.BuildServiceBuilder.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.BuildServiceBuilder).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.BuildServiceBuilder).
 
 Service: Appplatform
 
@@ -6557,7 +6557,7 @@ Policy name: `azurenative-appplatform-v20230901preview-buildpackbinding-disallow
 
 Code path: `azurenative.appplatform.v20230901preview.BuildpackBinding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.BuildpackBinding).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.BuildpackBinding).
 
 Service: Appplatform
 
@@ -6579,7 +6579,7 @@ Policy name: `azurenative-appplatform-v20230901preview-certificate-disallow-prev
 
 Code path: `azurenative.appplatform.v20230901preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.Certificate).
 
 Service: Appplatform
 
@@ -6601,7 +6601,7 @@ Policy name: `azurenative-appplatform-v20230901preview-configserver-disallow-pre
 
 Code path: `azurenative.appplatform.v20230901preview.ConfigServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.ConfigServer).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.ConfigServer).
 
 Service: Appplatform
 
@@ -6623,7 +6623,7 @@ Policy name: `azurenative-appplatform-v20230901preview-configurationservice-disa
 
 Code path: `azurenative.appplatform.v20230901preview.ConfigurationService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.ConfigurationService).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.ConfigurationService).
 
 Service: Appplatform
 
@@ -6645,7 +6645,7 @@ Policy name: `azurenative-appplatform-v20230901preview-containerregistry-disallo
 
 Code path: `azurenative.appplatform.v20230901preview.ContainerRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.ContainerRegistry).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.ContainerRegistry).
 
 Service: Appplatform
 
@@ -6667,7 +6667,7 @@ Policy name: `azurenative-appplatform-v20230901preview-customdomain-disallow-pre
 
 Code path: `azurenative.appplatform.v20230901preview.CustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.CustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.CustomDomain).
 
 Service: Appplatform
 
@@ -6689,7 +6689,7 @@ Policy name: `azurenative-appplatform-v20230901preview-customizedaccelerator-dis
 
 Code path: `azurenative.appplatform.v20230901preview.CustomizedAccelerator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.CustomizedAccelerator).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.CustomizedAccelerator).
 
 Service: Appplatform
 
@@ -6711,7 +6711,7 @@ Policy name: `azurenative-appplatform-v20230901preview-deployment-disallow-previ
 
 Code path: `azurenative.appplatform.v20230901preview.Deployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.Deployment).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.Deployment).
 
 Service: Appplatform
 
@@ -6733,7 +6733,7 @@ Policy name: `azurenative-appplatform-v20230901preview-devtoolportal-disallow-pr
 
 Code path: `azurenative.appplatform.v20230901preview.DevToolPortal.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.DevToolPortal).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.DevToolPortal).
 
 Service: Appplatform
 
@@ -6755,7 +6755,7 @@ Policy name: `azurenative-appplatform-v20230901preview-gateway-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230901preview.Gateway.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.Gateway).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.Gateway).
 
 Service: Appplatform
 
@@ -6777,7 +6777,7 @@ Policy name: `azurenative-appplatform-v20230901preview-gatewaycustomdomain-disal
 
 Code path: `azurenative.appplatform.v20230901preview.GatewayCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.GatewayCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.GatewayCustomDomain).
 
 Service: Appplatform
 
@@ -6799,7 +6799,7 @@ Policy name: `azurenative-appplatform-v20230901preview-gatewayrouteconfig-disall
 
 Code path: `azurenative.appplatform.v20230901preview.GatewayRouteConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.GatewayRouteConfig).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.GatewayRouteConfig).
 
 Service: Appplatform
 
@@ -6821,7 +6821,7 @@ Policy name: `azurenative-appplatform-v20230901preview-monitoringsetting-disallo
 
 Code path: `azurenative.appplatform.v20230901preview.MonitoringSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.MonitoringSetting).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.MonitoringSetting).
 
 Service: Appplatform
 
@@ -6843,7 +6843,7 @@ Policy name: `azurenative-appplatform-v20230901preview-service-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230901preview.Service.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.Service).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.Service).
 
 Service: Appplatform
 
@@ -6865,7 +6865,7 @@ Policy name: `azurenative-appplatform-v20230901preview-serviceregistry-disallow-
 
 Code path: `azurenative.appplatform.v20230901preview.ServiceRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.ServiceRegistry).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.ServiceRegistry).
 
 Service: Appplatform
 
@@ -6887,7 +6887,7 @@ Policy name: `azurenative-appplatform-v20230901preview-storage-disallow-preview-
 
 Code path: `azurenative.appplatform.v20230901preview.Storage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (appplatform.v20230901preview.Storage).
+Disallow the use of non-stable (Preview) Azure resources (appplatform.v20230901preview.Storage).
 
 Service: Appplatform
 
@@ -6913,7 +6913,7 @@ Policy name: `azurenative-attestation-v20210601preview-attestationprovider-disal
 
 Code path: `azurenative.attestation.v20210601preview.AttestationProvider.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (attestation.v20210601preview.AttestationProvider).
+Disallow the use of non-stable (Preview) Azure resources (attestation.v20210601preview.AttestationProvider).
 
 Service: Attestation
 
@@ -6935,7 +6935,7 @@ Policy name: `azurenative-attestation-v20210601preview-privateendpointconnection
 
 Code path: `azurenative.attestation.v20210601preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (attestation.v20210601preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (attestation.v20210601preview.PrivateEndpointConnection).
 
 Service: Attestation
 
@@ -6961,7 +6961,7 @@ Policy name: `azurenative-authorization-v20171001preview-roleassignment-disallow
 
 Code path: `azurenative.authorization.v20171001preview.RoleAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20171001preview.RoleAssignment).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20171001preview.RoleAssignment).
 
 Service: Authorization
 
@@ -6985,7 +6985,7 @@ Policy name: `azurenative-authorization-v20200301preview-roleassignment-disallow
 
 Code path: `azurenative.authorization.v20200301preview.RoleAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20200301preview.RoleAssignment).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20200301preview.RoleAssignment).
 
 Service: Authorization
 
@@ -7009,7 +7009,7 @@ Policy name: `azurenative-authorization-v20200401preview-roleassignment-disallow
 
 Code path: `azurenative.authorization.v20200401preview.RoleAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20200401preview.RoleAssignment).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20200401preview.RoleAssignment).
 
 Service: Authorization
 
@@ -7033,7 +7033,7 @@ Policy name: `azurenative-authorization-v20201001preview-rolemanagementpolicyass
 
 Code path: `azurenative.authorization.v20201001preview.RoleManagementPolicyAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20201001preview.RoleManagementPolicyAssignment).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20201001preview.RoleManagementPolicyAssignment).
 
 Service: Authorization
 
@@ -7057,7 +7057,7 @@ Policy name: `azurenative-authorization-v20211201preview-accessreviewhistorydefi
 
 Code path: `azurenative.authorization.v20211201preview.AccessReviewHistoryDefinitionById.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20211201preview.AccessReviewHistoryDefinitionById).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20211201preview.AccessReviewHistoryDefinitionById).
 
 Service: Authorization
 
@@ -7079,7 +7079,7 @@ Policy name: `azurenative-authorization-v20211201preview-accessreviewscheduledef
 
 Code path: `azurenative.authorization.v20211201preview.AccessReviewScheduleDefinitionById.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20211201preview.AccessReviewScheduleDefinitionById).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20211201preview.AccessReviewScheduleDefinitionById).
 
 Service: Authorization
 
@@ -7101,7 +7101,7 @@ Policy name: `azurenative-authorization-v20211201preview-scopeaccessreviewhistor
 
 Code path: `azurenative.authorization.v20211201preview.ScopeAccessReviewHistoryDefinitionById.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20211201preview.ScopeAccessReviewHistoryDefinitionById).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20211201preview.ScopeAccessReviewHistoryDefinitionById).
 
 Service: Authorization
 
@@ -7123,7 +7123,7 @@ Policy name: `azurenative-authorization-v20211201preview-scopeaccessreviewschedu
 
 Code path: `azurenative.authorization.v20211201preview.ScopeAccessReviewScheduleDefinitionById.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20211201preview.ScopeAccessReviewScheduleDefinitionById).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20211201preview.ScopeAccessReviewScheduleDefinitionById).
 
 Service: Authorization
 
@@ -7147,7 +7147,7 @@ Policy name: `azurenative-authorization-v20220501preview-roledefinition-disallow
 
 Code path: `azurenative.authorization.v20220501preview.RoleDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20220501preview.RoleDefinition).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20220501preview.RoleDefinition).
 
 Service: Authorization
 
@@ -7171,7 +7171,7 @@ Policy name: `azurenative-authorization-v20220701preview-policyexemption-disallo
 
 Code path: `azurenative.authorization.v20220701preview.PolicyExemption.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20220701preview.PolicyExemption).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20220701preview.PolicyExemption).
 
 Service: Authorization
 
@@ -7195,7 +7195,7 @@ Policy name: `azurenative-authorization-v20220801preview-variable-disallow-previ
 
 Code path: `azurenative.authorization.v20220801preview.Variable.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20220801preview.Variable).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20220801preview.Variable).
 
 Service: Authorization
 
@@ -7217,7 +7217,7 @@ Policy name: `azurenative-authorization-v20220801preview-variableatmanagementgro
 
 Code path: `azurenative.authorization.v20220801preview.VariableAtManagementGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20220801preview.VariableAtManagementGroup).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20220801preview.VariableAtManagementGroup).
 
 Service: Authorization
 
@@ -7239,7 +7239,7 @@ Policy name: `azurenative-authorization-v20220801preview-variablevalue-disallow-
 
 Code path: `azurenative.authorization.v20220801preview.VariableValue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20220801preview.VariableValue).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20220801preview.VariableValue).
 
 Service: Authorization
 
@@ -7261,7 +7261,7 @@ Policy name: `azurenative-authorization-v20220801preview-variablevalueatmanageme
 
 Code path: `azurenative.authorization.v20220801preview.VariableValueAtManagementGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (authorization.v20220801preview.VariableValueAtManagementGroup).
+Disallow the use of non-stable (Preview) Azure resources (authorization.v20220801preview.VariableValueAtManagementGroup).
 
 Service: Authorization
 
@@ -7287,7 +7287,7 @@ Policy name: `azurenative-automanage-v20200630preview-account-disallow-preview-r
 
 Code path: `azurenative.automanage.v20200630preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (automanage.v20200630preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (automanage.v20200630preview.Account).
 
 Service: Automanage
 
@@ -7309,7 +7309,7 @@ Policy name: `azurenative-automanage-v20200630preview-configurationprofileprefer
 
 Code path: `azurenative.automanage.v20200630preview.ConfigurationProfilePreference.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (automanage.v20200630preview.ConfigurationProfilePreference).
+Disallow the use of non-stable (Preview) Azure resources (automanage.v20200630preview.ConfigurationProfilePreference).
 
 Service: Automanage
 
@@ -7335,7 +7335,7 @@ Policy name: `azurenative-automation-v20170515preview-softwareupdateconfiguratio
 
 Code path: `azurenative.automation.v20170515preview.SoftwareUpdateConfigurationByName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (automation.v20170515preview.SoftwareUpdateConfigurationByName).
+Disallow the use of non-stable (Preview) Azure resources (automation.v20170515preview.SoftwareUpdateConfigurationByName).
 
 Service: Automation
 
@@ -7359,7 +7359,7 @@ Policy name: `azurenative-automation-v20200113preview-privateendpointconnection-
 
 Code path: `azurenative.automation.v20200113preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (automation.v20200113preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (automation.v20200113preview.PrivateEndpointConnection).
 
 Service: Automation
 
@@ -7381,7 +7381,7 @@ Policy name: `azurenative-automation-v20200113preview-watcher-disallow-preview-r
 
 Code path: `azurenative.automation.v20200113preview.Watcher.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (automation.v20200113preview.Watcher).
+Disallow the use of non-stable (Preview) Azure resources (automation.v20200113preview.Watcher).
 
 Service: Automation
 
@@ -7407,7 +7407,7 @@ Policy name: `azurenative-autonomousdevelopmentplatform-v20211101preview-account
 
 Code path: `azurenative.autonomousdevelopmentplatform.v20211101preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (autonomousdevelopmentplatform.v20211101preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (autonomousdevelopmentplatform.v20211101preview.Account).
 
 Service: Autonomousdevelopmentplatform
 
@@ -7429,7 +7429,7 @@ Policy name: `azurenative-autonomousdevelopmentplatform-v20211101preview-datapoo
 
 Code path: `azurenative.autonomousdevelopmentplatform.v20211101preview.DataPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (autonomousdevelopmentplatform.v20211101preview.DataPool).
+Disallow the use of non-stable (Preview) Azure resources (autonomousdevelopmentplatform.v20211101preview.DataPool).
 
 Service: Autonomousdevelopmentplatform
 
@@ -7455,7 +7455,7 @@ Policy name: `azurenative-avs-v20210101preview-addon-disallow-preview-resource`
 
 Code path: `azurenative.avs.v20210101preview.Addon.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (avs.v20210101preview.Addon).
+Disallow the use of non-stable (Preview) Azure resources (avs.v20210101preview.Addon).
 
 Service: Avs
 
@@ -7477,7 +7477,7 @@ Policy name: `azurenative-avs-v20210101preview-workloadnetworkdhcp-disallow-prev
 
 Code path: `azurenative.avs.v20210101preview.WorkloadNetworkDhcp.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (avs.v20210101preview.WorkloadNetworkDhcp).
+Disallow the use of non-stable (Preview) Azure resources (avs.v20210101preview.WorkloadNetworkDhcp).
 
 Service: Avs
 
@@ -7503,7 +7503,7 @@ Policy name: `azurenative-azureactivedirectory-v20190101preview-b2ctenant-disall
 
 Code path: `azurenative.azureactivedirectory.v20190101preview.B2CTenant.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azureactivedirectory.v20190101preview.B2CTenant).
+Disallow the use of non-stable (Preview) Azure resources (azureactivedirectory.v20190101preview.B2CTenant).
 
 Service: Azureactivedirectory
 
@@ -7527,7 +7527,7 @@ Policy name: `azurenative-azureactivedirectory-v20230118preview-b2ctenant-disall
 
 Code path: `azurenative.azureactivedirectory.v20230118preview.B2CTenant.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azureactivedirectory.v20230118preview.B2CTenant).
+Disallow the use of non-stable (Preview) Azure resources (azureactivedirectory.v20230118preview.B2CTenant).
 
 Service: Azureactivedirectory
 
@@ -7549,7 +7549,7 @@ Policy name: `azurenative-azureactivedirectory-v20230118preview-guestusage-disal
 
 Code path: `azurenative.azureactivedirectory.v20230118preview.GuestUsage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azureactivedirectory.v20230118preview.GuestUsage).
+Disallow the use of non-stable (Preview) Azure resources (azureactivedirectory.v20230118preview.GuestUsage).
 
 Service: Azureactivedirectory
 
@@ -7575,7 +7575,7 @@ Policy name: `azurenative-azurearcdata-v20230115preview-activedirectoryconnector
 
 Code path: `azurenative.azurearcdata.v20230115preview.ActiveDirectoryConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurearcdata.v20230115preview.ActiveDirectoryConnector).
+Disallow the use of non-stable (Preview) Azure resources (azurearcdata.v20230115preview.ActiveDirectoryConnector).
 
 Service: Azurearcdata
 
@@ -7597,7 +7597,7 @@ Policy name: `azurenative-azurearcdata-v20230115preview-datacontroller-disallow-
 
 Code path: `azurenative.azurearcdata.v20230115preview.DataController.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurearcdata.v20230115preview.DataController).
+Disallow the use of non-stable (Preview) Azure resources (azurearcdata.v20230115preview.DataController).
 
 Service: Azurearcdata
 
@@ -7619,7 +7619,7 @@ Policy name: `azurenative-azurearcdata-v20230115preview-failovergroup-disallow-p
 
 Code path: `azurenative.azurearcdata.v20230115preview.FailoverGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurearcdata.v20230115preview.FailoverGroup).
+Disallow the use of non-stable (Preview) Azure resources (azurearcdata.v20230115preview.FailoverGroup).
 
 Service: Azurearcdata
 
@@ -7641,7 +7641,7 @@ Policy name: `azurenative-azurearcdata-v20230115preview-postgresinstance-disallo
 
 Code path: `azurenative.azurearcdata.v20230115preview.PostgresInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurearcdata.v20230115preview.PostgresInstance).
+Disallow the use of non-stable (Preview) Azure resources (azurearcdata.v20230115preview.PostgresInstance).
 
 Service: Azurearcdata
 
@@ -7663,7 +7663,7 @@ Policy name: `azurenative-azurearcdata-v20230115preview-sqlmanagedinstance-disal
 
 Code path: `azurenative.azurearcdata.v20230115preview.SqlManagedInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurearcdata.v20230115preview.SqlManagedInstance).
+Disallow the use of non-stable (Preview) Azure resources (azurearcdata.v20230115preview.SqlManagedInstance).
 
 Service: Azurearcdata
 
@@ -7685,7 +7685,7 @@ Policy name: `azurenative-azurearcdata-v20230115preview-sqlserverdatabase-disall
 
 Code path: `azurenative.azurearcdata.v20230115preview.SqlServerDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurearcdata.v20230115preview.SqlServerDatabase).
+Disallow the use of non-stable (Preview) Azure resources (azurearcdata.v20230115preview.SqlServerDatabase).
 
 Service: Azurearcdata
 
@@ -7707,7 +7707,7 @@ Policy name: `azurenative-azurearcdata-v20230115preview-sqlserverinstance-disall
 
 Code path: `azurenative.azurearcdata.v20230115preview.SqlServerInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurearcdata.v20230115preview.SqlServerInstance).
+Disallow the use of non-stable (Preview) Azure resources (azurearcdata.v20230115preview.SqlServerInstance).
 
 Service: Azurearcdata
 
@@ -7733,7 +7733,7 @@ Policy name: `azurenative-azuredata-v20190724preview-sqlserver-disallow-preview-
 
 Code path: `azurenative.azuredata.v20190724preview.SqlServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azuredata.v20190724preview.SqlServer).
+Disallow the use of non-stable (Preview) Azure resources (azuredata.v20190724preview.SqlServer).
 
 Service: Azuredata
 
@@ -7755,7 +7755,7 @@ Policy name: `azurenative-azuredata-v20190724preview-sqlserverregistration-disal
 
 Code path: `azurenative.azuredata.v20190724preview.SqlServerRegistration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azuredata.v20190724preview.SqlServerRegistration).
+Disallow the use of non-stable (Preview) Azure resources (azuredata.v20190724preview.SqlServerRegistration).
 
 Service: Azuredata
 
@@ -7781,7 +7781,7 @@ Policy name: `azurenative-azureplaywrightservice-v20231001preview-account-disall
 
 Code path: `azurenative.azureplaywrightservice.v20231001preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azureplaywrightservice.v20231001preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (azureplaywrightservice.v20231001preview.Account).
 
 Service: Azureplaywrightservice
 
@@ -7807,7 +7807,7 @@ Policy name: `azurenative-azuresphere-v20220901preview-catalog-disallow-preview-
 
 Code path: `azurenative.azuresphere.v20220901preview.Catalog.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azuresphere.v20220901preview.Catalog).
+Disallow the use of non-stable (Preview) Azure resources (azuresphere.v20220901preview.Catalog).
 
 Service: Azuresphere
 
@@ -7829,7 +7829,7 @@ Policy name: `azurenative-azuresphere-v20220901preview-deployment-disallow-previ
 
 Code path: `azurenative.azuresphere.v20220901preview.Deployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azuresphere.v20220901preview.Deployment).
+Disallow the use of non-stable (Preview) Azure resources (azuresphere.v20220901preview.Deployment).
 
 Service: Azuresphere
 
@@ -7851,7 +7851,7 @@ Policy name: `azurenative-azuresphere-v20220901preview-device-disallow-preview-r
 
 Code path: `azurenative.azuresphere.v20220901preview.Device.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azuresphere.v20220901preview.Device).
+Disallow the use of non-stable (Preview) Azure resources (azuresphere.v20220901preview.Device).
 
 Service: Azuresphere
 
@@ -7873,7 +7873,7 @@ Policy name: `azurenative-azuresphere-v20220901preview-devicegroup-disallow-prev
 
 Code path: `azurenative.azuresphere.v20220901preview.DeviceGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azuresphere.v20220901preview.DeviceGroup).
+Disallow the use of non-stable (Preview) Azure resources (azuresphere.v20220901preview.DeviceGroup).
 
 Service: Azuresphere
 
@@ -7895,7 +7895,7 @@ Policy name: `azurenative-azuresphere-v20220901preview-image-disallow-preview-re
 
 Code path: `azurenative.azuresphere.v20220901preview.Image.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azuresphere.v20220901preview.Image).
+Disallow the use of non-stable (Preview) Azure resources (azuresphere.v20220901preview.Image).
 
 Service: Azuresphere
 
@@ -7917,7 +7917,7 @@ Policy name: `azurenative-azuresphere-v20220901preview-product-disallow-preview-
 
 Code path: `azurenative.azuresphere.v20220901preview.Product.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azuresphere.v20220901preview.Product).
+Disallow the use of non-stable (Preview) Azure resources (azuresphere.v20220901preview.Product).
 
 Service: Azuresphere
 
@@ -7943,7 +7943,7 @@ Policy name: `azurenative-azurestack-v20200601preview-customersubscription-disal
 
 Code path: `azurenative.azurestack.v20200601preview.CustomerSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestack.v20200601preview.CustomerSubscription).
+Disallow the use of non-stable (Preview) Azure resources (azurestack.v20200601preview.CustomerSubscription).
 
 Service: Azurestack
 
@@ -7965,7 +7965,7 @@ Policy name: `azurenative-azurestack-v20200601preview-linkedsubscription-disallo
 
 Code path: `azurenative.azurestack.v20200601preview.LinkedSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestack.v20200601preview.LinkedSubscription).
+Disallow the use of non-stable (Preview) Azure resources (azurestack.v20200601preview.LinkedSubscription).
 
 Service: Azurestack
 
@@ -7987,7 +7987,7 @@ Policy name: `azurenative-azurestack-v20200601preview-registration-disallow-prev
 
 Code path: `azurenative.azurestack.v20200601preview.Registration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestack.v20200601preview.Registration).
+Disallow the use of non-stable (Preview) Azure resources (azurestack.v20200601preview.Registration).
 
 Service: Azurestack
 
@@ -8013,7 +8013,7 @@ Policy name: `azurenative-azurestackhci-v20210901preview-arcsetting-disallow-pre
 
 Code path: `azurenative.azurestackhci.v20210901preview.ArcSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20210901preview.ArcSetting).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20210901preview.ArcSetting).
 
 Service: Azurestackhci
 
@@ -8035,7 +8035,7 @@ Policy name: `azurenative-azurestackhci-v20210901preview-galleryimageretrieve-di
 
 Code path: `azurenative.azurestackhci.v20210901preview.GalleryimageRetrieve.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20210901preview.GalleryimageRetrieve).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20210901preview.GalleryimageRetrieve).
 
 Service: Azurestackhci
 
@@ -8057,7 +8057,7 @@ Policy name: `azurenative-azurestackhci-v20210901preview-marketplacegalleryimage
 
 Code path: `azurenative.azurestackhci.v20210901preview.Marketplacegalleryimage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20210901preview.Marketplacegalleryimage).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20210901preview.Marketplacegalleryimage).
 
 Service: Azurestackhci
 
@@ -8079,7 +8079,7 @@ Policy name: `azurenative-azurestackhci-v20210901preview-networkinterfaceretriev
 
 Code path: `azurenative.azurestackhci.v20210901preview.NetworkinterfaceRetrieve.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20210901preview.NetworkinterfaceRetrieve).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20210901preview.NetworkinterfaceRetrieve).
 
 Service: Azurestackhci
 
@@ -8101,7 +8101,7 @@ Policy name: `azurenative-azurestackhci-v20210901preview-storagecontainerretriev
 
 Code path: `azurenative.azurestackhci.v20210901preview.StoragecontainerRetrieve.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20210901preview.StoragecontainerRetrieve).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20210901preview.StoragecontainerRetrieve).
 
 Service: Azurestackhci
 
@@ -8123,7 +8123,7 @@ Policy name: `azurenative-azurestackhci-v20210901preview-virtualharddiskretrieve
 
 Code path: `azurenative.azurestackhci.v20210901preview.VirtualharddiskRetrieve.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20210901preview.VirtualharddiskRetrieve).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20210901preview.VirtualharddiskRetrieve).
 
 Service: Azurestackhci
 
@@ -8145,7 +8145,7 @@ Policy name: `azurenative-azurestackhci-v20210901preview-virtualmachineretrieve-
 
 Code path: `azurenative.azurestackhci.v20210901preview.VirtualmachineRetrieve.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20210901preview.VirtualmachineRetrieve).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20210901preview.VirtualmachineRetrieve).
 
 Service: Azurestackhci
 
@@ -8167,7 +8167,7 @@ Policy name: `azurenative-azurestackhci-v20210901preview-virtualnetworkretrieve-
 
 Code path: `azurenative.azurestackhci.v20210901preview.VirtualnetworkRetrieve.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20210901preview.VirtualnetworkRetrieve).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20210901preview.VirtualnetworkRetrieve).
 
 Service: Azurestackhci
 
@@ -8191,7 +8191,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-arcsetting-disallow-pre
 
 Code path: `azurenative.azurestackhci.v20221215preview.ArcSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.ArcSetting).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.ArcSetting).
 
 Service: Azurestackhci
 
@@ -8213,7 +8213,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-cluster-disallow-previe
 
 Code path: `azurenative.azurestackhci.v20221215preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.Cluster).
 
 Service: Azurestackhci
 
@@ -8235,7 +8235,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-extension-disallow-prev
 
 Code path: `azurenative.azurestackhci.v20221215preview.Extension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.Extension).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.Extension).
 
 Service: Azurestackhci
 
@@ -8257,7 +8257,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-galleryimage-disallow-p
 
 Code path: `azurenative.azurestackhci.v20221215preview.GalleryImage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.GalleryImage).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.GalleryImage).
 
 Service: Azurestackhci
 
@@ -8279,7 +8279,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-guestagent-disallow-pre
 
 Code path: `azurenative.azurestackhci.v20221215preview.GuestAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.GuestAgent).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.GuestAgent).
 
 Service: Azurestackhci
 
@@ -8301,7 +8301,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-hybrididentitymetadatum
 
 Code path: `azurenative.azurestackhci.v20221215preview.HybridIdentityMetadatum.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.HybridIdentityMetadatum).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.HybridIdentityMetadatum).
 
 Service: Azurestackhci
 
@@ -8323,7 +8323,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-machineextension-disall
 
 Code path: `azurenative.azurestackhci.v20221215preview.MachineExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.MachineExtension).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.MachineExtension).
 
 Service: Azurestackhci
 
@@ -8345,7 +8345,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-marketplacegalleryimage
 
 Code path: `azurenative.azurestackhci.v20221215preview.MarketplaceGalleryImage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.MarketplaceGalleryImage).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.MarketplaceGalleryImage).
 
 Service: Azurestackhci
 
@@ -8367,7 +8367,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-networkinterface-disall
 
 Code path: `azurenative.azurestackhci.v20221215preview.NetworkInterface.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.NetworkInterface).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.NetworkInterface).
 
 Service: Azurestackhci
 
@@ -8389,7 +8389,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-storagecontainer-disall
 
 Code path: `azurenative.azurestackhci.v20221215preview.StorageContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.StorageContainer).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.StorageContainer).
 
 Service: Azurestackhci
 
@@ -8411,7 +8411,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-update-disallow-preview
 
 Code path: `azurenative.azurestackhci.v20221215preview.Update.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.Update).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.Update).
 
 Service: Azurestackhci
 
@@ -8433,7 +8433,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-updaterun-disallow-prev
 
 Code path: `azurenative.azurestackhci.v20221215preview.UpdateRun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.UpdateRun).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.UpdateRun).
 
 Service: Azurestackhci
 
@@ -8455,7 +8455,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-updatesummary-disallow-
 
 Code path: `azurenative.azurestackhci.v20221215preview.UpdateSummary.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.UpdateSummary).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.UpdateSummary).
 
 Service: Azurestackhci
 
@@ -8477,7 +8477,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-virtualharddisk-disallo
 
 Code path: `azurenative.azurestackhci.v20221215preview.VirtualHardDisk.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.VirtualHardDisk).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.VirtualHardDisk).
 
 Service: Azurestackhci
 
@@ -8499,7 +8499,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-virtualmachine-disallow
 
 Code path: `azurenative.azurestackhci.v20221215preview.VirtualMachine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.VirtualMachine).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.VirtualMachine).
 
 Service: Azurestackhci
 
@@ -8521,7 +8521,7 @@ Policy name: `azurenative-azurestackhci-v20221215preview-virtualnetwork-disallow
 
 Code path: `azurenative.azurestackhci.v20221215preview.VirtualNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20221215preview.VirtualNetwork).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20221215preview.VirtualNetwork).
 
 Service: Azurestackhci
 
@@ -8545,7 +8545,7 @@ Policy name: `azurenative-azurestackhci-v20230701preview-galleryimage-disallow-p
 
 Code path: `azurenative.azurestackhci.v20230701preview.GalleryImage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20230701preview.GalleryImage).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20230701preview.GalleryImage).
 
 Service: Azurestackhci
 
@@ -8567,7 +8567,7 @@ Policy name: `azurenative-azurestackhci-v20230701preview-guestagent-disallow-pre
 
 Code path: `azurenative.azurestackhci.v20230701preview.GuestAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20230701preview.GuestAgent).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20230701preview.GuestAgent).
 
 Service: Azurestackhci
 
@@ -8589,7 +8589,7 @@ Policy name: `azurenative-azurestackhci-v20230701preview-marketplacegalleryimage
 
 Code path: `azurenative.azurestackhci.v20230701preview.MarketplaceGalleryImage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20230701preview.MarketplaceGalleryImage).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20230701preview.MarketplaceGalleryImage).
 
 Service: Azurestackhci
 
@@ -8611,7 +8611,7 @@ Policy name: `azurenative-azurestackhci-v20230701preview-networkinterface-disall
 
 Code path: `azurenative.azurestackhci.v20230701preview.NetworkInterface.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20230701preview.NetworkInterface).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20230701preview.NetworkInterface).
 
 Service: Azurestackhci
 
@@ -8633,7 +8633,7 @@ Policy name: `azurenative-azurestackhci-v20230701preview-storagecontainer-disall
 
 Code path: `azurenative.azurestackhci.v20230701preview.StorageContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20230701preview.StorageContainer).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20230701preview.StorageContainer).
 
 Service: Azurestackhci
 
@@ -8655,7 +8655,7 @@ Policy name: `azurenative-azurestackhci-v20230701preview-virtualharddisk-disallo
 
 Code path: `azurenative.azurestackhci.v20230701preview.VirtualHardDisk.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20230701preview.VirtualHardDisk).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20230701preview.VirtualHardDisk).
 
 Service: Azurestackhci
 
@@ -8677,7 +8677,7 @@ Policy name: `azurenative-azurestackhci-v20230701preview-virtualmachineinstance-
 
 Code path: `azurenative.azurestackhci.v20230701preview.VirtualMachineInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20230701preview.VirtualMachineInstance).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20230701preview.VirtualMachineInstance).
 
 Service: Azurestackhci
 
@@ -8699,7 +8699,7 @@ Policy name: `azurenative-azurestackhci-v20230701preview-virtualnetwork-disallow
 
 Code path: `azurenative.azurestackhci.v20230701preview.VirtualNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (azurestackhci.v20230701preview.VirtualNetwork).
+Disallow the use of non-stable (Preview) Azure resources (azurestackhci.v20230701preview.VirtualNetwork).
 
 Service: Azurestackhci
 
@@ -8725,7 +8725,7 @@ Policy name: `azurenative-billing-v20191001preview-billingroleassignmentbybillin
 
 Code path: `azurenative.billing.v20191001preview.BillingRoleAssignmentByBillingAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (billing.v20191001preview.BillingRoleAssignmentByBillingAccount).
+Disallow the use of non-stable (Preview) Azure resources (billing.v20191001preview.BillingRoleAssignmentByBillingAccount).
 
 Service: Billing
 
@@ -8747,7 +8747,7 @@ Policy name: `azurenative-billing-v20191001preview-billingroleassignmentbydepart
 
 Code path: `azurenative.billing.v20191001preview.BillingRoleAssignmentByDepartment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (billing.v20191001preview.BillingRoleAssignmentByDepartment).
+Disallow the use of non-stable (Preview) Azure resources (billing.v20191001preview.BillingRoleAssignmentByDepartment).
 
 Service: Billing
 
@@ -8769,7 +8769,7 @@ Policy name: `azurenative-billing-v20191001preview-billingroleassignmentbyenroll
 
 Code path: `azurenative.billing.v20191001preview.BillingRoleAssignmentByEnrollmentAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (billing.v20191001preview.BillingRoleAssignmentByEnrollmentAccount).
+Disallow the use of non-stable (Preview) Azure resources (billing.v20191001preview.BillingRoleAssignmentByEnrollmentAccount).
 
 Service: Billing
 
@@ -8795,7 +8795,7 @@ Policy name: `azurenative-blockchain-v20180601preview-blockchainmember-disallow-
 
 Code path: `azurenative.blockchain.v20180601preview.BlockchainMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (blockchain.v20180601preview.BlockchainMember).
+Disallow the use of non-stable (Preview) Azure resources (blockchain.v20180601preview.BlockchainMember).
 
 Service: Blockchain
 
@@ -8817,7 +8817,7 @@ Policy name: `azurenative-blockchain-v20180601preview-transactionnode-disallow-p
 
 Code path: `azurenative.blockchain.v20180601preview.TransactionNode.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (blockchain.v20180601preview.TransactionNode).
+Disallow the use of non-stable (Preview) Azure resources (blockchain.v20180601preview.TransactionNode).
 
 Service: Blockchain
 
@@ -8843,7 +8843,7 @@ Policy name: `azurenative-blueprint-v20181101preview-assignment-disallow-preview
 
 Code path: `azurenative.blueprint.v20181101preview.Assignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (blueprint.v20181101preview.Assignment).
+Disallow the use of non-stable (Preview) Azure resources (blueprint.v20181101preview.Assignment).
 
 Service: Blueprint
 
@@ -8865,7 +8865,7 @@ Policy name: `azurenative-blueprint-v20181101preview-blueprint-disallow-preview-
 
 Code path: `azurenative.blueprint.v20181101preview.Blueprint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (blueprint.v20181101preview.Blueprint).
+Disallow the use of non-stable (Preview) Azure resources (blueprint.v20181101preview.Blueprint).
 
 Service: Blueprint
 
@@ -8887,7 +8887,7 @@ Policy name: `azurenative-blueprint-v20181101preview-policyassignmentartifact-di
 
 Code path: `azurenative.blueprint.v20181101preview.PolicyAssignmentArtifact.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (blueprint.v20181101preview.PolicyAssignmentArtifact).
+Disallow the use of non-stable (Preview) Azure resources (blueprint.v20181101preview.PolicyAssignmentArtifact).
 
 Service: Blueprint
 
@@ -8909,7 +8909,7 @@ Policy name: `azurenative-blueprint-v20181101preview-publishedblueprint-disallow
 
 Code path: `azurenative.blueprint.v20181101preview.PublishedBlueprint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (blueprint.v20181101preview.PublishedBlueprint).
+Disallow the use of non-stable (Preview) Azure resources (blueprint.v20181101preview.PublishedBlueprint).
 
 Service: Blueprint
 
@@ -8931,7 +8931,7 @@ Policy name: `azurenative-blueprint-v20181101preview-roleassignmentartifact-disa
 
 Code path: `azurenative.blueprint.v20181101preview.RoleAssignmentArtifact.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (blueprint.v20181101preview.RoleAssignmentArtifact).
+Disallow the use of non-stable (Preview) Azure resources (blueprint.v20181101preview.RoleAssignmentArtifact).
 
 Service: Blueprint
 
@@ -8953,7 +8953,7 @@ Policy name: `azurenative-blueprint-v20181101preview-templateartifact-disallow-p
 
 Code path: `azurenative.blueprint.v20181101preview.TemplateArtifact.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (blueprint.v20181101preview.TemplateArtifact).
+Disallow the use of non-stable (Preview) Azure resources (blueprint.v20181101preview.TemplateArtifact).
 
 Service: Blueprint
 
@@ -8979,7 +8979,7 @@ Policy name: `azurenative-cache-v20201001preview-redisenterprise-disallow-previe
 
 Code path: `azurenative.cache.v20201001preview.RedisEnterprise.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20201001preview.RedisEnterprise).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20201001preview.RedisEnterprise).
 
 Service: Cache
 
@@ -9003,7 +9003,7 @@ Policy name: `azurenative-cache-v20230301preview-database-disallow-preview-resou
 
 Code path: `azurenative.cache.v20230301preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230301preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230301preview.Database).
 
 Service: Cache
 
@@ -9025,7 +9025,7 @@ Policy name: `azurenative-cache-v20230301preview-enterpriseprivateendpointconnec
 
 Code path: `azurenative.cache.v20230301preview.EnterprisePrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230301preview.EnterprisePrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230301preview.EnterprisePrivateEndpointConnection).
 
 Service: Cache
 
@@ -9047,7 +9047,7 @@ Policy name: `azurenative-cache-v20230301preview-redisenterprise-disallow-previe
 
 Code path: `azurenative.cache.v20230301preview.RedisEnterprise.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230301preview.RedisEnterprise).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230301preview.RedisEnterprise).
 
 Service: Cache
 
@@ -9071,7 +9071,7 @@ Policy name: `azurenative-cache-v20230501preview-accesspolicy-disallow-preview-r
 
 Code path: `azurenative.cache.v20230501preview.AccessPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230501preview.AccessPolicy).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230501preview.AccessPolicy).
 
 Service: Cache
 
@@ -9093,7 +9093,7 @@ Policy name: `azurenative-cache-v20230501preview-accesspolicyassignment-disallow
 
 Code path: `azurenative.cache.v20230501preview.AccessPolicyAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230501preview.AccessPolicyAssignment).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230501preview.AccessPolicyAssignment).
 
 Service: Cache
 
@@ -9115,7 +9115,7 @@ Policy name: `azurenative-cache-v20230501preview-firewallrule-disallow-preview-r
 
 Code path: `azurenative.cache.v20230501preview.FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230501preview.FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230501preview.FirewallRule).
 
 Service: Cache
 
@@ -9137,7 +9137,7 @@ Policy name: `azurenative-cache-v20230501preview-linkedserver-disallow-preview-r
 
 Code path: `azurenative.cache.v20230501preview.LinkedServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230501preview.LinkedServer).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230501preview.LinkedServer).
 
 Service: Cache
 
@@ -9159,7 +9159,7 @@ Policy name: `azurenative-cache-v20230501preview-patchschedule-disallow-preview-
 
 Code path: `azurenative.cache.v20230501preview.PatchSchedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230501preview.PatchSchedule).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230501preview.PatchSchedule).
 
 Service: Cache
 
@@ -9181,7 +9181,7 @@ Policy name: `azurenative-cache-v20230501preview-privateendpointconnection-disal
 
 Code path: `azurenative.cache.v20230501preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230501preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230501preview.PrivateEndpointConnection).
 
 Service: Cache
 
@@ -9203,7 +9203,7 @@ Policy name: `azurenative-cache-v20230501preview-redis-disallow-preview-resource
 
 Code path: `azurenative.cache.v20230501preview.Redis.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230501preview.Redis).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230501preview.Redis).
 
 Service: Cache
 
@@ -9227,7 +9227,7 @@ Policy name: `azurenative-cache-v20230801preview-database-disallow-preview-resou
 
 Code path: `azurenative.cache.v20230801preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230801preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230801preview.Database).
 
 Service: Cache
 
@@ -9249,7 +9249,7 @@ Policy name: `azurenative-cache-v20230801preview-enterpriseprivateendpointconnec
 
 Code path: `azurenative.cache.v20230801preview.EnterprisePrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230801preview.EnterprisePrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230801preview.EnterprisePrivateEndpointConnection).
 
 Service: Cache
 
@@ -9271,7 +9271,7 @@ Policy name: `azurenative-cache-v20230801preview-redisenterprise-disallow-previe
 
 Code path: `azurenative.cache.v20230801preview.RedisEnterprise.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cache.v20230801preview.RedisEnterprise).
+Disallow the use of non-stable (Preview) Azure resources (cache.v20230801preview.RedisEnterprise).
 
 Service: Cache
 
@@ -9297,7 +9297,7 @@ Policy name: `azurenative-cdn-v20230701preview-afdcustomdomain-disallow-preview-
 
 Code path: `azurenative.cdn.v20230701preview.AFDCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.AFDCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.AFDCustomDomain).
 
 Service: Cdn
 
@@ -9319,7 +9319,7 @@ Policy name: `azurenative-cdn-v20230701preview-afdendpoint-disallow-preview-reso
 
 Code path: `azurenative.cdn.v20230701preview.AFDEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.AFDEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.AFDEndpoint).
 
 Service: Cdn
 
@@ -9341,7 +9341,7 @@ Policy name: `azurenative-cdn-v20230701preview-afdorigin-disallow-preview-resour
 
 Code path: `azurenative.cdn.v20230701preview.AFDOrigin.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.AFDOrigin).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.AFDOrigin).
 
 Service: Cdn
 
@@ -9363,7 +9363,7 @@ Policy name: `azurenative-cdn-v20230701preview-afdorigingroup-disallow-preview-r
 
 Code path: `azurenative.cdn.v20230701preview.AFDOriginGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.AFDOriginGroup).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.AFDOriginGroup).
 
 Service: Cdn
 
@@ -9385,7 +9385,7 @@ Policy name: `azurenative-cdn-v20230701preview-customdomain-disallow-preview-res
 
 Code path: `azurenative.cdn.v20230701preview.CustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.CustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.CustomDomain).
 
 Service: Cdn
 
@@ -9407,7 +9407,7 @@ Policy name: `azurenative-cdn-v20230701preview-endpoint-disallow-preview-resourc
 
 Code path: `azurenative.cdn.v20230701preview.Endpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.Endpoint).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.Endpoint).
 
 Service: Cdn
 
@@ -9429,7 +9429,7 @@ Policy name: `azurenative-cdn-v20230701preview-keygroup-disallow-preview-resourc
 
 Code path: `azurenative.cdn.v20230701preview.KeyGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.KeyGroup).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.KeyGroup).
 
 Service: Cdn
 
@@ -9451,7 +9451,7 @@ Policy name: `azurenative-cdn-v20230701preview-origin-disallow-preview-resource`
 
 Code path: `azurenative.cdn.v20230701preview.Origin.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.Origin).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.Origin).
 
 Service: Cdn
 
@@ -9473,7 +9473,7 @@ Policy name: `azurenative-cdn-v20230701preview-origingroup-disallow-preview-reso
 
 Code path: `azurenative.cdn.v20230701preview.OriginGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.OriginGroup).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.OriginGroup).
 
 Service: Cdn
 
@@ -9495,7 +9495,7 @@ Policy name: `azurenative-cdn-v20230701preview-policy-disallow-preview-resource`
 
 Code path: `azurenative.cdn.v20230701preview.Policy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.Policy).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.Policy).
 
 Service: Cdn
 
@@ -9517,7 +9517,7 @@ Policy name: `azurenative-cdn-v20230701preview-profile-disallow-preview-resource
 
 Code path: `azurenative.cdn.v20230701preview.Profile.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.Profile).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.Profile).
 
 Service: Cdn
 
@@ -9539,7 +9539,7 @@ Policy name: `azurenative-cdn-v20230701preview-route-disallow-preview-resource`
 
 Code path: `azurenative.cdn.v20230701preview.Route.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.Route).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.Route).
 
 Service: Cdn
 
@@ -9561,7 +9561,7 @@ Policy name: `azurenative-cdn-v20230701preview-rule-disallow-preview-resource`
 
 Code path: `azurenative.cdn.v20230701preview.Rule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.Rule).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.Rule).
 
 Service: Cdn
 
@@ -9583,7 +9583,7 @@ Policy name: `azurenative-cdn-v20230701preview-ruleset-disallow-preview-resource
 
 Code path: `azurenative.cdn.v20230701preview.RuleSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.RuleSet).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.RuleSet).
 
 Service: Cdn
 
@@ -9605,7 +9605,7 @@ Policy name: `azurenative-cdn-v20230701preview-secret-disallow-preview-resource`
 
 Code path: `azurenative.cdn.v20230701preview.Secret.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.Secret).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.Secret).
 
 Service: Cdn
 
@@ -9627,7 +9627,7 @@ Policy name: `azurenative-cdn-v20230701preview-securitypolicy-disallow-preview-r
 
 Code path: `azurenative.cdn.v20230701preview.SecurityPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (cdn.v20230701preview.SecurityPolicy).
+Disallow the use of non-stable (Preview) Azure resources (cdn.v20230701preview.SecurityPolicy).
 
 Service: Cdn
 
@@ -9653,7 +9653,7 @@ Policy name: `azurenative-changeanalysis-v20200401preview-configurationprofile-d
 
 Code path: `azurenative.changeanalysis.v20200401preview.ConfigurationProfile.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (changeanalysis.v20200401preview.ConfigurationProfile).
+Disallow the use of non-stable (Preview) Azure resources (changeanalysis.v20200401preview.ConfigurationProfile).
 
 Service: Changeanalysis
 
@@ -9679,7 +9679,7 @@ Policy name: `azurenative-chaos-v20230415preview-capability-disallow-preview-res
 
 Code path: `azurenative.chaos.v20230415preview.Capability.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (chaos.v20230415preview.Capability).
+Disallow the use of non-stable (Preview) Azure resources (chaos.v20230415preview.Capability).
 
 Service: Chaos
 
@@ -9701,7 +9701,7 @@ Policy name: `azurenative-chaos-v20230415preview-experiment-disallow-preview-res
 
 Code path: `azurenative.chaos.v20230415preview.Experiment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (chaos.v20230415preview.Experiment).
+Disallow the use of non-stable (Preview) Azure resources (chaos.v20230415preview.Experiment).
 
 Service: Chaos
 
@@ -9723,7 +9723,7 @@ Policy name: `azurenative-chaos-v20230415preview-target-disallow-preview-resourc
 
 Code path: `azurenative.chaos.v20230415preview.Target.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (chaos.v20230415preview.Target).
+Disallow the use of non-stable (Preview) Azure resources (chaos.v20230415preview.Target).
 
 Service: Chaos
 
@@ -9749,7 +9749,7 @@ Policy name: `azurenative-communication-v20220701preview-domain-disallow-preview
 
 Code path: `azurenative.communication.v20220701preview.Domain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (communication.v20220701preview.Domain).
+Disallow the use of non-stable (Preview) Azure resources (communication.v20220701preview.Domain).
 
 Service: Communication
 
@@ -9773,7 +9773,7 @@ Policy name: `azurenative-communication-v20230401preview-communicationservice-di
 
 Code path: `azurenative.communication.v20230401preview.CommunicationService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (communication.v20230401preview.CommunicationService).
+Disallow the use of non-stable (Preview) Azure resources (communication.v20230401preview.CommunicationService).
 
 Service: Communication
 
@@ -9795,7 +9795,7 @@ Policy name: `azurenative-communication-v20230401preview-domain-disallow-preview
 
 Code path: `azurenative.communication.v20230401preview.Domain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (communication.v20230401preview.Domain).
+Disallow the use of non-stable (Preview) Azure resources (communication.v20230401preview.Domain).
 
 Service: Communication
 
@@ -9817,7 +9817,7 @@ Policy name: `azurenative-communication-v20230401preview-emailservice-disallow-p
 
 Code path: `azurenative.communication.v20230401preview.EmailService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (communication.v20230401preview.EmailService).
+Disallow the use of non-stable (Preview) Azure resources (communication.v20230401preview.EmailService).
 
 Service: Communication
 
@@ -9839,7 +9839,7 @@ Policy name: `azurenative-communication-v20230401preview-senderusername-disallow
 
 Code path: `azurenative.communication.v20230401preview.SenderUsername.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (communication.v20230401preview.SenderUsername).
+Disallow the use of non-stable (Preview) Azure resources (communication.v20230401preview.SenderUsername).
 
 Service: Communication
 
@@ -9915,7 +9915,7 @@ Policy name: `azurenative-confidentialledger-v20230126preview-ledger-disallow-pr
 
 Code path: `azurenative.confidentialledger.v20230126preview.Ledger.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (confidentialledger.v20230126preview.Ledger).
+Disallow the use of non-stable (Preview) Azure resources (confidentialledger.v20230126preview.Ledger).
 
 Service: Confidentialledger
 
@@ -9937,7 +9937,7 @@ Policy name: `azurenative-confidentialledger-v20230126preview-managedccf-disallo
 
 Code path: `azurenative.confidentialledger.v20230126preview.ManagedCCF.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (confidentialledger.v20230126preview.ManagedCCF).
+Disallow the use of non-stable (Preview) Azure resources (confidentialledger.v20230126preview.ManagedCCF).
 
 Service: Confidentialledger
 
@@ -9961,7 +9961,7 @@ Policy name: `azurenative-confidentialledger-v20230628preview-ledger-disallow-pr
 
 Code path: `azurenative.confidentialledger.v20230628preview.Ledger.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (confidentialledger.v20230628preview.Ledger).
+Disallow the use of non-stable (Preview) Azure resources (confidentialledger.v20230628preview.Ledger).
 
 Service: Confidentialledger
 
@@ -9983,7 +9983,7 @@ Policy name: `azurenative-confidentialledger-v20230628preview-managedccf-disallo
 
 Code path: `azurenative.confidentialledger.v20230628preview.ManagedCCF.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (confidentialledger.v20230628preview.ManagedCCF).
+Disallow the use of non-stable (Preview) Azure resources (confidentialledger.v20230628preview.ManagedCCF).
 
 Service: Confidentialledger
 
@@ -10009,7 +10009,7 @@ Policy name: `azurenative-confluent-v20200301preview-organization-disallow-previ
 
 Code path: `azurenative.confluent.v20200301preview.Organization.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (confluent.v20200301preview.Organization).
+Disallow the use of non-stable (Preview) Azure resources (confluent.v20200301preview.Organization).
 
 Service: Confluent
 
@@ -10035,7 +10035,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220110preview-machineextensi
 
 Code path: `azurenative.connectedvmwarevsphere.v20220110preview.MachineExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220110preview.MachineExtension).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220110preview.MachineExtension).
 
 Service: Connectedvmwarevsphere
 
@@ -10059,7 +10059,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-cluster-disall
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.Cluster).
 
 Service: Connectedvmwarevsphere
 
@@ -10081,7 +10081,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-datastore-disa
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.Datastore.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.Datastore).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.Datastore).
 
 Service: Connectedvmwarevsphere
 
@@ -10103,7 +10103,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-guestagent-dis
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.GuestAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.GuestAgent).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.GuestAgent).
 
 Service: Connectedvmwarevsphere
 
@@ -10125,7 +10125,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-host-disallow-
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.Host.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.Host).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.Host).
 
 Service: Connectedvmwarevsphere
 
@@ -10147,7 +10147,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-hybrididentity
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.HybridIdentityMetadatum.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.HybridIdentityMetadatum).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.HybridIdentityMetadatum).
 
 Service: Connectedvmwarevsphere
 
@@ -10169,7 +10169,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-inventoryitem-
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.InventoryItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.InventoryItem).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.InventoryItem).
 
 Service: Connectedvmwarevsphere
 
@@ -10191,7 +10191,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-machineextensi
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.MachineExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.MachineExtension).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.MachineExtension).
 
 Service: Connectedvmwarevsphere
 
@@ -10213,7 +10213,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-resourcepool-d
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.ResourcePool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.ResourcePool).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.ResourcePool).
 
 Service: Connectedvmwarevsphere
 
@@ -10235,7 +10235,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-vcenter-disall
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.VCenter.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.VCenter).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.VCenter).
 
 Service: Connectedvmwarevsphere
 
@@ -10257,7 +10257,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-virtualmachine
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.VirtualMachine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.VirtualMachine).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.VirtualMachine).
 
 Service: Connectedvmwarevsphere
 
@@ -10279,7 +10279,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-virtualmachine
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.VirtualMachineTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.VirtualMachineTemplate).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.VirtualMachineTemplate).
 
 Service: Connectedvmwarevsphere
 
@@ -10301,7 +10301,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20220715preview-virtualnetwork
 
 Code path: `azurenative.connectedvmwarevsphere.v20220715preview.VirtualNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20220715preview.VirtualNetwork).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20220715preview.VirtualNetwork).
 
 Service: Connectedvmwarevsphere
 
@@ -10325,7 +10325,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-cluster-disall
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.Cluster).
 
 Service: Connectedvmwarevsphere
 
@@ -10347,7 +10347,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-datastore-disa
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.Datastore.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.Datastore).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.Datastore).
 
 Service: Connectedvmwarevsphere
 
@@ -10369,7 +10369,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-guestagent-dis
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.GuestAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.GuestAgent).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.GuestAgent).
 
 Service: Connectedvmwarevsphere
 
@@ -10391,7 +10391,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-host-disallow-
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.Host.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.Host).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.Host).
 
 Service: Connectedvmwarevsphere
 
@@ -10413,7 +10413,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-hybrididentity
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.HybridIdentityMetadatum.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.HybridIdentityMetadatum).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.HybridIdentityMetadatum).
 
 Service: Connectedvmwarevsphere
 
@@ -10435,7 +10435,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-inventoryitem-
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.InventoryItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.InventoryItem).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.InventoryItem).
 
 Service: Connectedvmwarevsphere
 
@@ -10457,7 +10457,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-machineextensi
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.MachineExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.MachineExtension).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.MachineExtension).
 
 Service: Connectedvmwarevsphere
 
@@ -10479,7 +10479,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-resourcepool-d
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.ResourcePool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.ResourcePool).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.ResourcePool).
 
 Service: Connectedvmwarevsphere
 
@@ -10501,7 +10501,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-vcenter-disall
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.VCenter.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.VCenter).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.VCenter).
 
 Service: Connectedvmwarevsphere
 
@@ -10523,7 +10523,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-vminstancegues
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.VMInstanceGuestAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.VMInstanceGuestAgent).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.VMInstanceGuestAgent).
 
 Service: Connectedvmwarevsphere
 
@@ -10545,7 +10545,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-virtualmachine
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.VirtualMachine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.VirtualMachine).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.VirtualMachine).
 
 Service: Connectedvmwarevsphere
 
@@ -10567,7 +10567,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-virtualmachine
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.VirtualMachineInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.VirtualMachineInstance).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.VirtualMachineInstance).
 
 Service: Connectedvmwarevsphere
 
@@ -10589,7 +10589,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-virtualmachine
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.VirtualMachineTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.VirtualMachineTemplate).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.VirtualMachineTemplate).
 
 Service: Connectedvmwarevsphere
 
@@ -10611,7 +10611,7 @@ Policy name: `azurenative-connectedvmwarevsphere-v20230301preview-virtualnetwork
 
 Code path: `azurenative.connectedvmwarevsphere.v20230301preview.VirtualNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (connectedvmwarevsphere.v20230301preview.VirtualNetwork).
+Disallow the use of non-stable (Preview) Azure resources (connectedvmwarevsphere.v20230301preview.VirtualNetwork).
 
 Service: Connectedvmwarevsphere
 
@@ -10637,7 +10637,7 @@ Policy name: `azurenative-containerinstance-v20230201preview-containergroup-disa
 
 Code path: `azurenative.containerinstance.v20230201preview.ContainerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerinstance.v20230201preview.ContainerGroup).
+Disallow the use of non-stable (Preview) Azure resources (containerinstance.v20230201preview.ContainerGroup).
 
 Service: Containerinstance
 
@@ -10663,7 +10663,7 @@ Policy name: `azurenative-containerregistry-v20190601preview-agentpool-disallow-
 
 Code path: `azurenative.containerregistry.v20190601preview.AgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20190601preview.AgentPool).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20190601preview.AgentPool).
 
 Service: Containerregistry
 
@@ -10685,7 +10685,7 @@ Policy name: `azurenative-containerregistry-v20190601preview-task-disallow-previ
 
 Code path: `azurenative.containerregistry.v20190601preview.Task.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20190601preview.Task).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20190601preview.Task).
 
 Service: Containerregistry
 
@@ -10707,7 +10707,7 @@ Policy name: `azurenative-containerregistry-v20190601preview-taskrun-disallow-pr
 
 Code path: `azurenative.containerregistry.v20190601preview.TaskRun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20190601preview.TaskRun).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20190601preview.TaskRun).
 
 Service: Containerregistry
 
@@ -10731,7 +10731,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-cacherule-disallow-
 
 Code path: `azurenative.containerregistry.v20230101preview.CacheRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.CacheRule).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.CacheRule).
 
 Service: Containerregistry
 
@@ -10753,7 +10753,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-connectedregistry-d
 
 Code path: `azurenative.containerregistry.v20230101preview.ConnectedRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.ConnectedRegistry).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.ConnectedRegistry).
 
 Service: Containerregistry
 
@@ -10775,7 +10775,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-credentialset-disal
 
 Code path: `azurenative.containerregistry.v20230101preview.CredentialSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.CredentialSet).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.CredentialSet).
 
 Service: Containerregistry
 
@@ -10797,7 +10797,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-exportpipeline-disa
 
 Code path: `azurenative.containerregistry.v20230101preview.ExportPipeline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.ExportPipeline).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.ExportPipeline).
 
 Service: Containerregistry
 
@@ -10819,7 +10819,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-importpipeline-disa
 
 Code path: `azurenative.containerregistry.v20230101preview.ImportPipeline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.ImportPipeline).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.ImportPipeline).
 
 Service: Containerregistry
 
@@ -10841,7 +10841,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-pipelinerun-disallo
 
 Code path: `azurenative.containerregistry.v20230101preview.PipelineRun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.PipelineRun).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.PipelineRun).
 
 Service: Containerregistry
 
@@ -10863,7 +10863,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-privateendpointconn
 
 Code path: `azurenative.containerregistry.v20230101preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.PrivateEndpointConnection).
 
 Service: Containerregistry
 
@@ -10885,7 +10885,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-registry-disallow-p
 
 Code path: `azurenative.containerregistry.v20230101preview.Registry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.Registry).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.Registry).
 
 Service: Containerregistry
 
@@ -10907,7 +10907,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-replication-disallo
 
 Code path: `azurenative.containerregistry.v20230101preview.Replication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.Replication).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.Replication).
 
 Service: Containerregistry
 
@@ -10929,7 +10929,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-scopemap-disallow-p
 
 Code path: `azurenative.containerregistry.v20230101preview.ScopeMap.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.ScopeMap).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.ScopeMap).
 
 Service: Containerregistry
 
@@ -10951,7 +10951,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-token-disallow-prev
 
 Code path: `azurenative.containerregistry.v20230101preview.Token.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.Token).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.Token).
 
 Service: Containerregistry
 
@@ -10973,7 +10973,7 @@ Policy name: `azurenative-containerregistry-v20230101preview-webhook-disallow-pr
 
 Code path: `azurenative.containerregistry.v20230101preview.Webhook.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230101preview.Webhook).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230101preview.Webhook).
 
 Service: Containerregistry
 
@@ -10997,7 +10997,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-archife-disallow-pr
 
 Code path: `azurenative.containerregistry.v20230601preview.Archife.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.Archife).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.Archife).
 
 Service: Containerregistry
 
@@ -11019,7 +11019,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-archiveversion-disa
 
 Code path: `azurenative.containerregistry.v20230601preview.ArchiveVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.ArchiveVersion).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.ArchiveVersion).
 
 Service: Containerregistry
 
@@ -11041,7 +11041,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-cacherule-disallow-
 
 Code path: `azurenative.containerregistry.v20230601preview.CacheRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.CacheRule).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.CacheRule).
 
 Service: Containerregistry
 
@@ -11063,7 +11063,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-connectedregistry-d
 
 Code path: `azurenative.containerregistry.v20230601preview.ConnectedRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.ConnectedRegistry).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.ConnectedRegistry).
 
 Service: Containerregistry
 
@@ -11085,7 +11085,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-credentialset-disal
 
 Code path: `azurenative.containerregistry.v20230601preview.CredentialSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.CredentialSet).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.CredentialSet).
 
 Service: Containerregistry
 
@@ -11107,7 +11107,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-exportpipeline-disa
 
 Code path: `azurenative.containerregistry.v20230601preview.ExportPipeline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.ExportPipeline).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.ExportPipeline).
 
 Service: Containerregistry
 
@@ -11129,7 +11129,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-importpipeline-disa
 
 Code path: `azurenative.containerregistry.v20230601preview.ImportPipeline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.ImportPipeline).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.ImportPipeline).
 
 Service: Containerregistry
 
@@ -11151,7 +11151,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-pipelinerun-disallo
 
 Code path: `azurenative.containerregistry.v20230601preview.PipelineRun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.PipelineRun).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.PipelineRun).
 
 Service: Containerregistry
 
@@ -11173,7 +11173,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-privateendpointconn
 
 Code path: `azurenative.containerregistry.v20230601preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.PrivateEndpointConnection).
 
 Service: Containerregistry
 
@@ -11195,7 +11195,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-registry-disallow-p
 
 Code path: `azurenative.containerregistry.v20230601preview.Registry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.Registry).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.Registry).
 
 Service: Containerregistry
 
@@ -11217,7 +11217,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-replication-disallo
 
 Code path: `azurenative.containerregistry.v20230601preview.Replication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.Replication).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.Replication).
 
 Service: Containerregistry
 
@@ -11239,7 +11239,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-scopemap-disallow-p
 
 Code path: `azurenative.containerregistry.v20230601preview.ScopeMap.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.ScopeMap).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.ScopeMap).
 
 Service: Containerregistry
 
@@ -11261,7 +11261,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-token-disallow-prev
 
 Code path: `azurenative.containerregistry.v20230601preview.Token.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.Token).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.Token).
 
 Service: Containerregistry
 
@@ -11283,7 +11283,7 @@ Policy name: `azurenative-containerregistry-v20230601preview-webhook-disallow-pr
 
 Code path: `azurenative.containerregistry.v20230601preview.Webhook.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230601preview.Webhook).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230601preview.Webhook).
 
 Service: Containerregistry
 
@@ -11307,7 +11307,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-archife-disallow-pr
 
 Code path: `azurenative.containerregistry.v20230801preview.Archife.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.Archife).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.Archife).
 
 Service: Containerregistry
 
@@ -11329,7 +11329,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-archiveversion-disa
 
 Code path: `azurenative.containerregistry.v20230801preview.ArchiveVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.ArchiveVersion).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.ArchiveVersion).
 
 Service: Containerregistry
 
@@ -11351,7 +11351,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-cacherule-disallow-
 
 Code path: `azurenative.containerregistry.v20230801preview.CacheRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.CacheRule).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.CacheRule).
 
 Service: Containerregistry
 
@@ -11373,7 +11373,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-connectedregistry-d
 
 Code path: `azurenative.containerregistry.v20230801preview.ConnectedRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.ConnectedRegistry).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.ConnectedRegistry).
 
 Service: Containerregistry
 
@@ -11395,7 +11395,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-credentialset-disal
 
 Code path: `azurenative.containerregistry.v20230801preview.CredentialSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.CredentialSet).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.CredentialSet).
 
 Service: Containerregistry
 
@@ -11417,7 +11417,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-exportpipeline-disa
 
 Code path: `azurenative.containerregistry.v20230801preview.ExportPipeline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.ExportPipeline).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.ExportPipeline).
 
 Service: Containerregistry
 
@@ -11439,7 +11439,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-importpipeline-disa
 
 Code path: `azurenative.containerregistry.v20230801preview.ImportPipeline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.ImportPipeline).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.ImportPipeline).
 
 Service: Containerregistry
 
@@ -11461,7 +11461,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-pipelinerun-disallo
 
 Code path: `azurenative.containerregistry.v20230801preview.PipelineRun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.PipelineRun).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.PipelineRun).
 
 Service: Containerregistry
 
@@ -11483,7 +11483,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-privateendpointconn
 
 Code path: `azurenative.containerregistry.v20230801preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.PrivateEndpointConnection).
 
 Service: Containerregistry
 
@@ -11505,7 +11505,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-registry-disallow-p
 
 Code path: `azurenative.containerregistry.v20230801preview.Registry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.Registry).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.Registry).
 
 Service: Containerregistry
 
@@ -11527,7 +11527,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-replication-disallo
 
 Code path: `azurenative.containerregistry.v20230801preview.Replication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.Replication).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.Replication).
 
 Service: Containerregistry
 
@@ -11549,7 +11549,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-scopemap-disallow-p
 
 Code path: `azurenative.containerregistry.v20230801preview.ScopeMap.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.ScopeMap).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.ScopeMap).
 
 Service: Containerregistry
 
@@ -11571,7 +11571,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-token-disallow-prev
 
 Code path: `azurenative.containerregistry.v20230801preview.Token.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.Token).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.Token).
 
 Service: Containerregistry
 
@@ -11593,7 +11593,7 @@ Policy name: `azurenative-containerregistry-v20230801preview-webhook-disallow-pr
 
 Code path: `azurenative.containerregistry.v20230801preview.Webhook.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerregistry.v20230801preview.Webhook).
+Disallow the use of non-stable (Preview) Azure resources (containerregistry.v20230801preview.Webhook).
 
 Service: Containerregistry
 
@@ -11643,7 +11643,7 @@ Policy name: `azurenative-containerservice-v20191027preview-openshiftmanagedclus
 
 Code path: `azurenative.containerservice.v20191027preview.OpenShiftManagedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20191027preview.OpenShiftManagedCluster).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20191027preview.OpenShiftManagedCluster).
 
 Service: Containerservice
 
@@ -11667,7 +11667,7 @@ Policy name: `azurenative-containerservice-v20220402preview-agentpool-disallow-p
 
 Code path: `azurenative.containerservice.v20220402preview.AgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20220402preview.AgentPool).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20220402preview.AgentPool).
 
 Service: Containerservice
 
@@ -11691,7 +11691,7 @@ Policy name: `azurenative-containerservice-v20220702preview-fleet-disallow-previ
 
 Code path: `azurenative.containerservice.v20220702preview.Fleet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20220702preview.Fleet).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20220702preview.Fleet).
 
 Service: Containerservice
 
@@ -11713,7 +11713,7 @@ Policy name: `azurenative-containerservice-v20220702preview-fleetmember-disallow
 
 Code path: `azurenative.containerservice.v20220702preview.FleetMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20220702preview.FleetMember).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20220702preview.FleetMember).
 
 Service: Containerservice
 
@@ -11737,7 +11737,7 @@ Policy name: `azurenative-containerservice-v20230315preview-fleet-disallow-previ
 
 Code path: `azurenative.containerservice.v20230315preview.Fleet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230315preview.Fleet).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230315preview.Fleet).
 
 Service: Containerservice
 
@@ -11759,7 +11759,7 @@ Policy name: `azurenative-containerservice-v20230315preview-fleetmember-disallow
 
 Code path: `azurenative.containerservice.v20230315preview.FleetMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230315preview.FleetMember).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230315preview.FleetMember).
 
 Service: Containerservice
 
@@ -11781,7 +11781,7 @@ Policy name: `azurenative-containerservice-v20230315preview-updaterun-disallow-p
 
 Code path: `azurenative.containerservice.v20230315preview.UpdateRun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230315preview.UpdateRun).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230315preview.UpdateRun).
 
 Service: Containerservice
 
@@ -11805,7 +11805,7 @@ Policy name: `azurenative-containerservice-v20230502preview-agentpool-disallow-p
 
 Code path: `azurenative.containerservice.v20230502preview.AgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230502preview.AgentPool).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230502preview.AgentPool).
 
 Service: Containerservice
 
@@ -11827,7 +11827,7 @@ Policy name: `azurenative-containerservice-v20230502preview-maintenanceconfigura
 
 Code path: `azurenative.containerservice.v20230502preview.MaintenanceConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230502preview.MaintenanceConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230502preview.MaintenanceConfiguration).
 
 Service: Containerservice
 
@@ -11849,7 +11849,7 @@ Policy name: `azurenative-containerservice-v20230502preview-managedcluster-disal
 
 Code path: `azurenative.containerservice.v20230502preview.ManagedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230502preview.ManagedCluster).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230502preview.ManagedCluster).
 
 Service: Containerservice
 
@@ -11871,7 +11871,7 @@ Policy name: `azurenative-containerservice-v20230502preview-managedclustersnapsh
 
 Code path: `azurenative.containerservice.v20230502preview.ManagedClusterSnapshot.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230502preview.ManagedClusterSnapshot).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230502preview.ManagedClusterSnapshot).
 
 Service: Containerservice
 
@@ -11893,7 +11893,7 @@ Policy name: `azurenative-containerservice-v20230502preview-privateendpointconne
 
 Code path: `azurenative.containerservice.v20230502preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230502preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230502preview.PrivateEndpointConnection).
 
 Service: Containerservice
 
@@ -11915,7 +11915,7 @@ Policy name: `azurenative-containerservice-v20230502preview-snapshot-disallow-pr
 
 Code path: `azurenative.containerservice.v20230502preview.Snapshot.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230502preview.Snapshot).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230502preview.Snapshot).
 
 Service: Containerservice
 
@@ -11937,7 +11937,7 @@ Policy name: `azurenative-containerservice-v20230502preview-trustedaccessrolebin
 
 Code path: `azurenative.containerservice.v20230502preview.TrustedAccessRoleBinding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230502preview.TrustedAccessRoleBinding).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230502preview.TrustedAccessRoleBinding).
 
 Service: Containerservice
 
@@ -11961,7 +11961,7 @@ Policy name: `azurenative-containerservice-v20230602preview-agentpool-disallow-p
 
 Code path: `azurenative.containerservice.v20230602preview.AgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230602preview.AgentPool).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230602preview.AgentPool).
 
 Service: Containerservice
 
@@ -11983,7 +11983,7 @@ Policy name: `azurenative-containerservice-v20230602preview-maintenanceconfigura
 
 Code path: `azurenative.containerservice.v20230602preview.MaintenanceConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230602preview.MaintenanceConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230602preview.MaintenanceConfiguration).
 
 Service: Containerservice
 
@@ -12005,7 +12005,7 @@ Policy name: `azurenative-containerservice-v20230602preview-managedcluster-disal
 
 Code path: `azurenative.containerservice.v20230602preview.ManagedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230602preview.ManagedCluster).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230602preview.ManagedCluster).
 
 Service: Containerservice
 
@@ -12027,7 +12027,7 @@ Policy name: `azurenative-containerservice-v20230602preview-managedclustersnapsh
 
 Code path: `azurenative.containerservice.v20230602preview.ManagedClusterSnapshot.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230602preview.ManagedClusterSnapshot).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230602preview.ManagedClusterSnapshot).
 
 Service: Containerservice
 
@@ -12049,7 +12049,7 @@ Policy name: `azurenative-containerservice-v20230602preview-privateendpointconne
 
 Code path: `azurenative.containerservice.v20230602preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230602preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230602preview.PrivateEndpointConnection).
 
 Service: Containerservice
 
@@ -12071,7 +12071,7 @@ Policy name: `azurenative-containerservice-v20230602preview-snapshot-disallow-pr
 
 Code path: `azurenative.containerservice.v20230602preview.Snapshot.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230602preview.Snapshot).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230602preview.Snapshot).
 
 Service: Containerservice
 
@@ -12093,7 +12093,7 @@ Policy name: `azurenative-containerservice-v20230602preview-trustedaccessrolebin
 
 Code path: `azurenative.containerservice.v20230602preview.TrustedAccessRoleBinding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230602preview.TrustedAccessRoleBinding).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230602preview.TrustedAccessRoleBinding).
 
 Service: Containerservice
 
@@ -12117,7 +12117,7 @@ Policy name: `azurenative-containerservice-v20230615preview-fleet-disallow-previ
 
 Code path: `azurenative.containerservice.v20230615preview.Fleet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230615preview.Fleet).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230615preview.Fleet).
 
 Service: Containerservice
 
@@ -12139,7 +12139,7 @@ Policy name: `azurenative-containerservice-v20230615preview-fleetmember-disallow
 
 Code path: `azurenative.containerservice.v20230615preview.FleetMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230615preview.FleetMember).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230615preview.FleetMember).
 
 Service: Containerservice
 
@@ -12161,7 +12161,7 @@ Policy name: `azurenative-containerservice-v20230615preview-updaterun-disallow-p
 
 Code path: `azurenative.containerservice.v20230615preview.UpdateRun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230615preview.UpdateRun).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230615preview.UpdateRun).
 
 Service: Containerservice
 
@@ -12185,7 +12185,7 @@ Policy name: `azurenative-containerservice-v20230702preview-agentpool-disallow-p
 
 Code path: `azurenative.containerservice.v20230702preview.AgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230702preview.AgentPool).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230702preview.AgentPool).
 
 Service: Containerservice
 
@@ -12207,7 +12207,7 @@ Policy name: `azurenative-containerservice-v20230702preview-maintenanceconfigura
 
 Code path: `azurenative.containerservice.v20230702preview.MaintenanceConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230702preview.MaintenanceConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230702preview.MaintenanceConfiguration).
 
 Service: Containerservice
 
@@ -12229,7 +12229,7 @@ Policy name: `azurenative-containerservice-v20230702preview-managedcluster-disal
 
 Code path: `azurenative.containerservice.v20230702preview.ManagedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230702preview.ManagedCluster).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230702preview.ManagedCluster).
 
 Service: Containerservice
 
@@ -12251,7 +12251,7 @@ Policy name: `azurenative-containerservice-v20230702preview-managedclustersnapsh
 
 Code path: `azurenative.containerservice.v20230702preview.ManagedClusterSnapshot.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230702preview.ManagedClusterSnapshot).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230702preview.ManagedClusterSnapshot).
 
 Service: Containerservice
 
@@ -12273,7 +12273,7 @@ Policy name: `azurenative-containerservice-v20230702preview-privateendpointconne
 
 Code path: `azurenative.containerservice.v20230702preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230702preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230702preview.PrivateEndpointConnection).
 
 Service: Containerservice
 
@@ -12295,7 +12295,7 @@ Policy name: `azurenative-containerservice-v20230702preview-snapshot-disallow-pr
 
 Code path: `azurenative.containerservice.v20230702preview.Snapshot.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230702preview.Snapshot).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230702preview.Snapshot).
 
 Service: Containerservice
 
@@ -12317,7 +12317,7 @@ Policy name: `azurenative-containerservice-v20230702preview-trustedaccessrolebin
 
 Code path: `azurenative.containerservice.v20230702preview.TrustedAccessRoleBinding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230702preview.TrustedAccessRoleBinding).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230702preview.TrustedAccessRoleBinding).
 
 Service: Containerservice
 
@@ -12341,7 +12341,7 @@ Policy name: `azurenative-containerservice-v20230815preview-fleet-disallow-previ
 
 Code path: `azurenative.containerservice.v20230815preview.Fleet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230815preview.Fleet).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230815preview.Fleet).
 
 Service: Containerservice
 
@@ -12363,7 +12363,7 @@ Policy name: `azurenative-containerservice-v20230815preview-fleetmember-disallow
 
 Code path: `azurenative.containerservice.v20230815preview.FleetMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230815preview.FleetMember).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230815preview.FleetMember).
 
 Service: Containerservice
 
@@ -12385,7 +12385,7 @@ Policy name: `azurenative-containerservice-v20230815preview-fleetupdatestrategy-
 
 Code path: `azurenative.containerservice.v20230815preview.FleetUpdateStrategy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230815preview.FleetUpdateStrategy).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230815preview.FleetUpdateStrategy).
 
 Service: Containerservice
 
@@ -12407,7 +12407,7 @@ Policy name: `azurenative-containerservice-v20230815preview-updaterun-disallow-p
 
 Code path: `azurenative.containerservice.v20230815preview.UpdateRun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerservice.v20230815preview.UpdateRun).
+Disallow the use of non-stable (Preview) Azure resources (containerservice.v20230815preview.UpdateRun).
 
 Service: Containerservice
 
@@ -12433,7 +12433,7 @@ Policy name: `azurenative-containerstorage-v20230701preview-pool-disallow-previe
 
 Code path: `azurenative.containerstorage.v20230701preview.Pool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerstorage.v20230701preview.Pool).
+Disallow the use of non-stable (Preview) Azure resources (containerstorage.v20230701preview.Pool).
 
 Service: Containerstorage
 
@@ -12455,7 +12455,7 @@ Policy name: `azurenative-containerstorage-v20230701preview-snapshot-disallow-pr
 
 Code path: `azurenative.containerstorage.v20230701preview.Snapshot.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerstorage.v20230701preview.Snapshot).
+Disallow the use of non-stable (Preview) Azure resources (containerstorage.v20230701preview.Snapshot).
 
 Service: Containerstorage
 
@@ -12477,7 +12477,7 @@ Policy name: `azurenative-containerstorage-v20230701preview-volume-disallow-prev
 
 Code path: `azurenative.containerstorage.v20230701preview.Volume.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (containerstorage.v20230701preview.Volume).
+Disallow the use of non-stable (Preview) Azure resources (containerstorage.v20230701preview.Volume).
 
 Service: Containerstorage
 
@@ -12503,7 +12503,7 @@ Policy name: `azurenative-costmanagement-v20180801preview-connector-disallow-pre
 
 Code path: `azurenative.costmanagement.v20180801preview.Connector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20180801preview.Connector).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20180801preview.Connector).
 
 Service: Costmanagement
 
@@ -12525,7 +12525,7 @@ Policy name: `azurenative-costmanagement-v20180801preview-report-disallow-previe
 
 Code path: `azurenative.costmanagement.v20180801preview.Report.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20180801preview.Report).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20180801preview.Report).
 
 Service: Costmanagement
 
@@ -12547,7 +12547,7 @@ Policy name: `azurenative-costmanagement-v20180801preview-reportbybillingaccount
 
 Code path: `azurenative.costmanagement.v20180801preview.ReportByBillingAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20180801preview.ReportByBillingAccount).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20180801preview.ReportByBillingAccount).
 
 Service: Costmanagement
 
@@ -12569,7 +12569,7 @@ Policy name: `azurenative-costmanagement-v20180801preview-reportbydepartment-dis
 
 Code path: `azurenative.costmanagement.v20180801preview.ReportByDepartment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20180801preview.ReportByDepartment).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20180801preview.ReportByDepartment).
 
 Service: Costmanagement
 
@@ -12591,7 +12591,7 @@ Policy name: `azurenative-costmanagement-v20180801preview-reportbyresourcegroupn
 
 Code path: `azurenative.costmanagement.v20180801preview.ReportByResourceGroupName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20180801preview.ReportByResourceGroupName).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20180801preview.ReportByResourceGroupName).
 
 Service: Costmanagement
 
@@ -12615,7 +12615,7 @@ Policy name: `azurenative-costmanagement-v20190301preview-cloudconnector-disallo
 
 Code path: `azurenative.costmanagement.v20190301preview.CloudConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20190301preview.CloudConnector).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20190301preview.CloudConnector).
 
 Service: Costmanagement
 
@@ -12639,7 +12639,7 @@ Policy name: `azurenative-costmanagement-v20190401preview-budget-disallow-previe
 
 Code path: `azurenative.costmanagement.v20190401preview.Budget.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20190401preview.Budget).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20190401preview.Budget).
 
 Service: Costmanagement
 
@@ -12663,7 +12663,7 @@ Policy name: `azurenative-costmanagement-v20200301preview-costallocationrule-dis
 
 Code path: `azurenative.costmanagement.v20200301preview.CostAllocationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20200301preview.CostAllocationRule).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20200301preview.CostAllocationRule).
 
 Service: Costmanagement
 
@@ -12687,7 +12687,7 @@ Policy name: `azurenative-costmanagement-v20221005preview-markuprule-disallow-pr
 
 Code path: `azurenative.costmanagement.v20221005preview.MarkupRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20221005preview.MarkupRule).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20221005preview.MarkupRule).
 
 Service: Costmanagement
 
@@ -12709,7 +12709,7 @@ Policy name: `azurenative-costmanagement-v20221005preview-taginheritancesetting-
 
 Code path: `azurenative.costmanagement.v20221005preview.TagInheritanceSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20221005preview.TagInheritanceSetting).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20221005preview.TagInheritanceSetting).
 
 Service: Costmanagement
 
@@ -12731,7 +12731,7 @@ Policy name: `azurenative-costmanagement-v20221005preview-view-disallow-preview-
 
 Code path: `azurenative.costmanagement.v20221005preview.View.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20221005preview.View).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20221005preview.View).
 
 Service: Costmanagement
 
@@ -12753,7 +12753,7 @@ Policy name: `azurenative-costmanagement-v20221005preview-viewbyscope-disallow-p
 
 Code path: `azurenative.costmanagement.v20221005preview.ViewByScope.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20221005preview.ViewByScope).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20221005preview.ViewByScope).
 
 Service: Costmanagement
 
@@ -12777,7 +12777,7 @@ Policy name: `azurenative-costmanagement-v20230401preview-budget-disallow-previe
 
 Code path: `azurenative.costmanagement.v20230401preview.Budget.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20230401preview.Budget).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20230401preview.Budget).
 
 Service: Costmanagement
 
@@ -12799,7 +12799,7 @@ Policy name: `azurenative-costmanagement-v20230401preview-export-disallow-previe
 
 Code path: `azurenative.costmanagement.v20230401preview.Export.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20230401preview.Export).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20230401preview.Export).
 
 Service: Costmanagement
 
@@ -12821,7 +12821,7 @@ Policy name: `azurenative-costmanagement-v20230401preview-scheduledaction-disall
 
 Code path: `azurenative.costmanagement.v20230401preview.ScheduledAction.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20230401preview.ScheduledAction).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20230401preview.ScheduledAction).
 
 Service: Costmanagement
 
@@ -12843,7 +12843,7 @@ Policy name: `azurenative-costmanagement-v20230401preview-scheduledactionbyscope
 
 Code path: `azurenative.costmanagement.v20230401preview.ScheduledActionByScope.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20230401preview.ScheduledActionByScope).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20230401preview.ScheduledActionByScope).
 
 Service: Costmanagement
 
@@ -12865,7 +12865,7 @@ Policy name: `azurenative-costmanagement-v20230401preview-view-disallow-preview-
 
 Code path: `azurenative.costmanagement.v20230401preview.View.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20230401preview.View).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20230401preview.View).
 
 Service: Costmanagement
 
@@ -12887,7 +12887,7 @@ Policy name: `azurenative-costmanagement-v20230401preview-viewbyscope-disallow-p
 
 Code path: `azurenative.costmanagement.v20230401preview.ViewByScope.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (costmanagement.v20230401preview.ViewByScope).
+Disallow the use of non-stable (Preview) Azure resources (costmanagement.v20230401preview.ViewByScope).
 
 Service: Costmanagement
 
@@ -12913,7 +12913,7 @@ Policy name: `azurenative-customproviders-v20180901preview-association-disallow-
 
 Code path: `azurenative.customproviders.v20180901preview.Association.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (customproviders.v20180901preview.Association).
+Disallow the use of non-stable (Preview) Azure resources (customproviders.v20180901preview.Association).
 
 Service: Customproviders
 
@@ -12935,7 +12935,7 @@ Policy name: `azurenative-customproviders-v20180901preview-customresourceprovide
 
 Code path: `azurenative.customproviders.v20180901preview.CustomResourceProvider.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (customproviders.v20180901preview.CustomResourceProvider).
+Disallow the use of non-stable (Preview) Azure resources (customproviders.v20180901preview.CustomResourceProvider).
 
 Service: Customproviders
 
@@ -12961,7 +12961,7 @@ Policy name: `azurenative-dashboard-v20210901preview-grafana-disallow-preview-re
 
 Code path: `azurenative.dashboard.v20210901preview.Grafana.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dashboard.v20210901preview.Grafana).
+Disallow the use of non-stable (Preview) Azure resources (dashboard.v20210901preview.Grafana).
 
 Service: Dashboard
 
@@ -12987,7 +12987,7 @@ Policy name: `azurenative-databoxedge-v20210201preview-device-disallow-preview-r
 
 Code path: `azurenative.databoxedge.v20210201preview.Device.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20210201preview.Device).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20210201preview.Device).
 
 Service: Databoxedge
 
@@ -13009,7 +13009,7 @@ Policy name: `azurenative-databoxedge-v20210201preview-user-disallow-preview-res
 
 Code path: `azurenative.databoxedge.v20210201preview.User.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20210201preview.User).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20210201preview.User).
 
 Service: Databoxedge
 
@@ -13033,7 +13033,7 @@ Policy name: `azurenative-databoxedge-v20220401preview-device-disallow-preview-r
 
 Code path: `azurenative.databoxedge.v20220401preview.Device.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20220401preview.Device).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20220401preview.Device).
 
 Service: Databoxedge
 
@@ -13055,7 +13055,7 @@ Policy name: `azurenative-databoxedge-v20220401preview-order-disallow-preview-re
 
 Code path: `azurenative.databoxedge.v20220401preview.Order.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20220401preview.Order).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20220401preview.Order).
 
 Service: Databoxedge
 
@@ -13079,7 +13079,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-arcaddon-disallow-preview
 
 Code path: `azurenative.databoxedge.v20230101preview.ArcAddon.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.ArcAddon).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.ArcAddon).
 
 Service: Databoxedge
 
@@ -13101,7 +13101,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-bandwidthschedule-disallo
 
 Code path: `azurenative.databoxedge.v20230101preview.BandwidthSchedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.BandwidthSchedule).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.BandwidthSchedule).
 
 Service: Databoxedge
 
@@ -13123,7 +13123,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-cloudedgemanagementrole-d
 
 Code path: `azurenative.databoxedge.v20230101preview.CloudEdgeManagementRole.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.CloudEdgeManagementRole).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.CloudEdgeManagementRole).
 
 Service: Databoxedge
 
@@ -13145,7 +13145,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-container-disallow-previe
 
 Code path: `azurenative.databoxedge.v20230101preview.Container.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.Container).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.Container).
 
 Service: Databoxedge
 
@@ -13167,7 +13167,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-device-disallow-preview-r
 
 Code path: `azurenative.databoxedge.v20230101preview.Device.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.Device).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.Device).
 
 Service: Databoxedge
 
@@ -13189,7 +13189,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-fileeventtrigger-disallow
 
 Code path: `azurenative.databoxedge.v20230101preview.FileEventTrigger.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.FileEventTrigger).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.FileEventTrigger).
 
 Service: Databoxedge
 
@@ -13211,7 +13211,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-iotrole-disallow-preview-
 
 Code path: `azurenative.databoxedge.v20230101preview.IoTRole.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.IoTRole).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.IoTRole).
 
 Service: Databoxedge
 
@@ -13233,7 +13233,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-kubernetesrole-disallow-p
 
 Code path: `azurenative.databoxedge.v20230101preview.KubernetesRole.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.KubernetesRole).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.KubernetesRole).
 
 Service: Databoxedge
 
@@ -13255,7 +13255,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-mecrole-disallow-preview-
 
 Code path: `azurenative.databoxedge.v20230101preview.MECRole.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.MECRole).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.MECRole).
 
 Service: Databoxedge
 
@@ -13277,7 +13277,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-monitoringconfig-disallow
 
 Code path: `azurenative.databoxedge.v20230101preview.MonitoringConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.MonitoringConfig).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.MonitoringConfig).
 
 Service: Databoxedge
 
@@ -13299,7 +13299,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-order-disallow-preview-re
 
 Code path: `azurenative.databoxedge.v20230101preview.Order.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.Order).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.Order).
 
 Service: Databoxedge
 
@@ -13321,7 +13321,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-periodictimereventtrigger
 
 Code path: `azurenative.databoxedge.v20230101preview.PeriodicTimerEventTrigger.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.PeriodicTimerEventTrigger).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.PeriodicTimerEventTrigger).
 
 Service: Databoxedge
 
@@ -13343,7 +13343,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-share-disallow-preview-re
 
 Code path: `azurenative.databoxedge.v20230101preview.Share.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.Share).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.Share).
 
 Service: Databoxedge
 
@@ -13365,7 +13365,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-storageaccount-disallow-p
 
 Code path: `azurenative.databoxedge.v20230101preview.StorageAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.StorageAccount).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.StorageAccount).
 
 Service: Databoxedge
 
@@ -13387,7 +13387,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-storageaccountcredential-
 
 Code path: `azurenative.databoxedge.v20230101preview.StorageAccountCredential.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.StorageAccountCredential).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.StorageAccountCredential).
 
 Service: Databoxedge
 
@@ -13409,7 +13409,7 @@ Policy name: `azurenative-databoxedge-v20230101preview-user-disallow-preview-res
 
 Code path: `azurenative.databoxedge.v20230101preview.User.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databoxedge.v20230101preview.User).
+Disallow the use of non-stable (Preview) Azure resources (databoxedge.v20230101preview.User).
 
 Service: Databoxedge
 
@@ -13435,7 +13435,7 @@ Policy name: `azurenative-databricks-v20220401preview-accessconnector-disallow-p
 
 Code path: `azurenative.databricks.v20220401preview.AccessConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (databricks.v20220401preview.AccessConnector).
+Disallow the use of non-stable (Preview) Azure resources (databricks.v20220401preview.AccessConnector).
 
 Service: Databricks
 
@@ -13461,7 +13461,7 @@ Policy name: `azurenative-datalakeanalytics-v20191101preview-account-disallow-pr
 
 Code path: `azurenative.datalakeanalytics.v20191101preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datalakeanalytics.v20191101preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (datalakeanalytics.v20191101preview.Account).
 
 Service: Datalakeanalytics
 
@@ -13483,7 +13483,7 @@ Policy name: `azurenative-datalakeanalytics-v20191101preview-computepolicy-disal
 
 Code path: `azurenative.datalakeanalytics.v20191101preview.ComputePolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datalakeanalytics.v20191101preview.ComputePolicy).
+Disallow the use of non-stable (Preview) Azure resources (datalakeanalytics.v20191101preview.ComputePolicy).
 
 Service: Datalakeanalytics
 
@@ -13505,7 +13505,7 @@ Policy name: `azurenative-datalakeanalytics-v20191101preview-firewallrule-disall
 
 Code path: `azurenative.datalakeanalytics.v20191101preview.FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datalakeanalytics.v20191101preview.FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (datalakeanalytics.v20191101preview.FirewallRule).
 
 Service: Datalakeanalytics
 
@@ -13531,7 +13531,7 @@ Policy name: `azurenative-datamigration-v20211030preview-project-disallow-previe
 
 Code path: `azurenative.datamigration.v20211030preview.Project.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datamigration.v20211030preview.Project).
+Disallow the use of non-stable (Preview) Azure resources (datamigration.v20211030preview.Project).
 
 Service: Datamigration
 
@@ -13555,7 +13555,7 @@ Policy name: `azurenative-datamigration-v20220330preview-databasemigrationssqldb
 
 Code path: `azurenative.datamigration.v20220330preview.DatabaseMigrationsSqlDb.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datamigration.v20220330preview.DatabaseMigrationsSqlDb).
+Disallow the use of non-stable (Preview) Azure resources (datamigration.v20220330preview.DatabaseMigrationsSqlDb).
 
 Service: Datamigration
 
@@ -13577,7 +13577,7 @@ Policy name: `azurenative-datamigration-v20220330preview-file-disallow-preview-r
 
 Code path: `azurenative.datamigration.v20220330preview.File.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datamigration.v20220330preview.File).
+Disallow the use of non-stable (Preview) Azure resources (datamigration.v20220330preview.File).
 
 Service: Datamigration
 
@@ -13599,7 +13599,7 @@ Policy name: `azurenative-datamigration-v20220330preview-project-disallow-previe
 
 Code path: `azurenative.datamigration.v20220330preview.Project.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datamigration.v20220330preview.Project).
+Disallow the use of non-stable (Preview) Azure resources (datamigration.v20220330preview.Project).
 
 Service: Datamigration
 
@@ -13621,7 +13621,7 @@ Policy name: `azurenative-datamigration-v20220330preview-service-disallow-previe
 
 Code path: `azurenative.datamigration.v20220330preview.Service.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datamigration.v20220330preview.Service).
+Disallow the use of non-stable (Preview) Azure resources (datamigration.v20220330preview.Service).
 
 Service: Datamigration
 
@@ -13643,7 +13643,7 @@ Policy name: `azurenative-datamigration-v20220330preview-servicetask-disallow-pr
 
 Code path: `azurenative.datamigration.v20220330preview.ServiceTask.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datamigration.v20220330preview.ServiceTask).
+Disallow the use of non-stable (Preview) Azure resources (datamigration.v20220330preview.ServiceTask).
 
 Service: Datamigration
 
@@ -13665,7 +13665,7 @@ Policy name: `azurenative-datamigration-v20220330preview-sqlmigrationservice-dis
 
 Code path: `azurenative.datamigration.v20220330preview.SqlMigrationService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datamigration.v20220330preview.SqlMigrationService).
+Disallow the use of non-stable (Preview) Azure resources (datamigration.v20220330preview.SqlMigrationService).
 
 Service: Datamigration
 
@@ -13687,7 +13687,7 @@ Policy name: `azurenative-datamigration-v20220330preview-task-disallow-preview-r
 
 Code path: `azurenative.datamigration.v20220330preview.Task.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datamigration.v20220330preview.Task).
+Disallow the use of non-stable (Preview) Azure resources (datamigration.v20220330preview.Task).
 
 Service: Datamigration
 
@@ -13713,7 +13713,7 @@ Policy name: `azurenative-dataprotection-v20221101preview-resourceguard-disallow
 
 Code path: `azurenative.dataprotection.v20221101preview.ResourceGuard.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20221101preview.ResourceGuard).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20221101preview.ResourceGuard).
 
 Service: Dataprotection
 
@@ -13737,7 +13737,7 @@ Policy name: `azurenative-dataprotection-v20230401preview-backupinstance-disallo
 
 Code path: `azurenative.dataprotection.v20230401preview.BackupInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230401preview.BackupInstance).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230401preview.BackupInstance).
 
 Service: Dataprotection
 
@@ -13759,7 +13759,7 @@ Policy name: `azurenative-dataprotection-v20230401preview-backuppolicy-disallow-
 
 Code path: `azurenative.dataprotection.v20230401preview.BackupPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230401preview.BackupPolicy).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230401preview.BackupPolicy).
 
 Service: Dataprotection
 
@@ -13781,7 +13781,7 @@ Policy name: `azurenative-dataprotection-v20230401preview-backupvault-disallow-p
 
 Code path: `azurenative.dataprotection.v20230401preview.BackupVault.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230401preview.BackupVault).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230401preview.BackupVault).
 
 Service: Dataprotection
 
@@ -13803,7 +13803,7 @@ Policy name: `azurenative-dataprotection-v20230401preview-dppresourceguardproxy-
 
 Code path: `azurenative.dataprotection.v20230401preview.DppResourceGuardProxy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230401preview.DppResourceGuardProxy).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230401preview.DppResourceGuardProxy).
 
 Service: Dataprotection
 
@@ -13825,7 +13825,7 @@ Policy name: `azurenative-dataprotection-v20230401preview-resourceguard-disallow
 
 Code path: `azurenative.dataprotection.v20230401preview.ResourceGuard.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230401preview.ResourceGuard).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230401preview.ResourceGuard).
 
 Service: Dataprotection
 
@@ -13849,7 +13849,7 @@ Policy name: `azurenative-dataprotection-v20230601preview-backupinstance-disallo
 
 Code path: `azurenative.dataprotection.v20230601preview.BackupInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230601preview.BackupInstance).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230601preview.BackupInstance).
 
 Service: Dataprotection
 
@@ -13871,7 +13871,7 @@ Policy name: `azurenative-dataprotection-v20230601preview-backuppolicy-disallow-
 
 Code path: `azurenative.dataprotection.v20230601preview.BackupPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230601preview.BackupPolicy).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230601preview.BackupPolicy).
 
 Service: Dataprotection
 
@@ -13893,7 +13893,7 @@ Policy name: `azurenative-dataprotection-v20230601preview-backupvault-disallow-p
 
 Code path: `azurenative.dataprotection.v20230601preview.BackupVault.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230601preview.BackupVault).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230601preview.BackupVault).
 
 Service: Dataprotection
 
@@ -13915,7 +13915,7 @@ Policy name: `azurenative-dataprotection-v20230601preview-dppresourceguardproxy-
 
 Code path: `azurenative.dataprotection.v20230601preview.DppResourceGuardProxy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230601preview.DppResourceGuardProxy).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230601preview.DppResourceGuardProxy).
 
 Service: Dataprotection
 
@@ -13937,7 +13937,7 @@ Policy name: `azurenative-dataprotection-v20230601preview-resourceguard-disallow
 
 Code path: `azurenative.dataprotection.v20230601preview.ResourceGuard.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dataprotection.v20230601preview.ResourceGuard).
+Disallow the use of non-stable (Preview) Azure resources (dataprotection.v20230601preview.ResourceGuard).
 
 Service: Dataprotection
 
@@ -13963,7 +13963,7 @@ Policy name: `azurenative-datareplication-v20210216preview-dra-disallow-preview-
 
 Code path: `azurenative.datareplication.v20210216preview.Dra.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datareplication.v20210216preview.Dra).
+Disallow the use of non-stable (Preview) Azure resources (datareplication.v20210216preview.Dra).
 
 Service: Datareplication
 
@@ -13985,7 +13985,7 @@ Policy name: `azurenative-datareplication-v20210216preview-fabric-disallow-previ
 
 Code path: `azurenative.datareplication.v20210216preview.Fabric.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datareplication.v20210216preview.Fabric).
+Disallow the use of non-stable (Preview) Azure resources (datareplication.v20210216preview.Fabric).
 
 Service: Datareplication
 
@@ -14007,7 +14007,7 @@ Policy name: `azurenative-datareplication-v20210216preview-policy-disallow-previ
 
 Code path: `azurenative.datareplication.v20210216preview.Policy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datareplication.v20210216preview.Policy).
+Disallow the use of non-stable (Preview) Azure resources (datareplication.v20210216preview.Policy).
 
 Service: Datareplication
 
@@ -14029,7 +14029,7 @@ Policy name: `azurenative-datareplication-v20210216preview-protecteditem-disallo
 
 Code path: `azurenative.datareplication.v20210216preview.ProtectedItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datareplication.v20210216preview.ProtectedItem).
+Disallow the use of non-stable (Preview) Azure resources (datareplication.v20210216preview.ProtectedItem).
 
 Service: Datareplication
 
@@ -14051,7 +14051,7 @@ Policy name: `azurenative-datareplication-v20210216preview-replicationextension-
 
 Code path: `azurenative.datareplication.v20210216preview.ReplicationExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datareplication.v20210216preview.ReplicationExtension).
+Disallow the use of non-stable (Preview) Azure resources (datareplication.v20210216preview.ReplicationExtension).
 
 Service: Datareplication
 
@@ -14073,7 +14073,7 @@ Policy name: `azurenative-datareplication-v20210216preview-vault-disallow-previe
 
 Code path: `azurenative.datareplication.v20210216preview.Vault.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datareplication.v20210216preview.Vault).
+Disallow the use of non-stable (Preview) Azure resources (datareplication.v20210216preview.Vault).
 
 Service: Datareplication
 
@@ -14099,7 +14099,7 @@ Policy name: `azurenative-datashare-v20201001preview-adlsgen2storageaccountdatas
 
 Code path: `azurenative.datashare.v20201001preview.ADLSGen2StorageAccountDataSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datashare.v20201001preview.ADLSGen2StorageAccountDataSet).
+Disallow the use of non-stable (Preview) Azure resources (datashare.v20201001preview.ADLSGen2StorageAccountDataSet).
 
 Service: Datashare
 
@@ -14121,7 +14121,7 @@ Policy name: `azurenative-datashare-v20201001preview-adlsgen2storageaccountdatas
 
 Code path: `azurenative.datashare.v20201001preview.ADLSGen2StorageAccountDataSetMapping.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datashare.v20201001preview.ADLSGen2StorageAccountDataSetMapping).
+Disallow the use of non-stable (Preview) Azure resources (datashare.v20201001preview.ADLSGen2StorageAccountDataSetMapping).
 
 Service: Datashare
 
@@ -14143,7 +14143,7 @@ Policy name: `azurenative-datashare-v20201001preview-blobstorageaccountdataset-d
 
 Code path: `azurenative.datashare.v20201001preview.BlobStorageAccountDataSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datashare.v20201001preview.BlobStorageAccountDataSet).
+Disallow the use of non-stable (Preview) Azure resources (datashare.v20201001preview.BlobStorageAccountDataSet).
 
 Service: Datashare
 
@@ -14165,7 +14165,7 @@ Policy name: `azurenative-datashare-v20201001preview-blobstorageaccountdatasetma
 
 Code path: `azurenative.datashare.v20201001preview.BlobStorageAccountDataSetMapping.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (datashare.v20201001preview.BlobStorageAccountDataSetMapping).
+Disallow the use of non-stable (Preview) Azure resources (datashare.v20201001preview.BlobStorageAccountDataSetMapping).
 
 Service: Datashare
 
@@ -14191,7 +14191,7 @@ Policy name: `azurenative-dbformariadb-v20180601preview-configuration-disallow-p
 
 Code path: `azurenative.dbformariadb.v20180601preview.Configuration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformariadb.v20180601preview.Configuration).
+Disallow the use of non-stable (Preview) Azure resources (dbformariadb.v20180601preview.Configuration).
 
 Service: Dbformariadb
 
@@ -14213,7 +14213,7 @@ Policy name: `azurenative-dbformariadb-v20180601preview-database-disallow-previe
 
 Code path: `azurenative.dbformariadb.v20180601preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformariadb.v20180601preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (dbformariadb.v20180601preview.Database).
 
 Service: Dbformariadb
 
@@ -14235,7 +14235,7 @@ Policy name: `azurenative-dbformariadb-v20180601preview-firewallrule-disallow-pr
 
 Code path: `azurenative.dbformariadb.v20180601preview.FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformariadb.v20180601preview.FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (dbformariadb.v20180601preview.FirewallRule).
 
 Service: Dbformariadb
 
@@ -14257,7 +14257,7 @@ Policy name: `azurenative-dbformariadb-v20180601preview-server-disallow-preview-
 
 Code path: `azurenative.dbformariadb.v20180601preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformariadb.v20180601preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbformariadb.v20180601preview.Server).
 
 Service: Dbformariadb
 
@@ -14279,7 +14279,7 @@ Policy name: `azurenative-dbformariadb-v20180601preview-virtualnetworkrule-disal
 
 Code path: `azurenative.dbformariadb.v20180601preview.VirtualNetworkRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformariadb.v20180601preview.VirtualNetworkRule).
+Disallow the use of non-stable (Preview) Azure resources (dbformariadb.v20180601preview.VirtualNetworkRule).
 
 Service: Dbformariadb
 
@@ -14303,7 +14303,7 @@ Policy name: `azurenative-dbformariadb-v20180601privatepreview-privateendpointco
 
 Code path: `azurenative.dbformariadb.v20180601privatepreview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformariadb.v20180601privatepreview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (dbformariadb.v20180601privatepreview.PrivateEndpointConnection).
 
 Service: Dbformariadb
 
@@ -14327,7 +14327,7 @@ Policy name: `azurenative-dbformariadb-v20200101privatepreview-serverkey-disallo
 
 Code path: `azurenative.dbformariadb.v20200101privatepreview.ServerKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformariadb.v20200101privatepreview.ServerKey).
+Disallow the use of non-stable (Preview) Azure resources (dbformariadb.v20200101privatepreview.ServerKey).
 
 Service: Dbformariadb
 
@@ -14353,7 +14353,7 @@ Policy name: `azurenative-dbformysql-v20180601privatepreview-privateendpointconn
 
 Code path: `azurenative.dbformysql.v20180601privatepreview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20180601privatepreview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20180601privatepreview.PrivateEndpointConnection).
 
 Service: Dbformysql
 
@@ -14375,7 +14375,7 @@ Policy name: `azurenative-dbformysql-v20180601privatepreview-server-disallow-pre
 
 Code path: `azurenative.dbformysql.v20180601privatepreview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20180601privatepreview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20180601privatepreview.Server).
 
 Service: Dbformysql
 
@@ -14397,7 +14397,7 @@ Policy name: `azurenative-dbformysql-v20180601privatepreview-serveradministrator
 
 Code path: `azurenative.dbformysql.v20180601privatepreview.ServerAdministrator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20180601privatepreview.ServerAdministrator).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20180601privatepreview.ServerAdministrator).
 
 Service: Dbformysql
 
@@ -14419,7 +14419,7 @@ Policy name: `azurenative-dbformysql-v20180601privatepreview-virtualnetworkrule-
 
 Code path: `azurenative.dbformysql.v20180601privatepreview.VirtualNetworkRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20180601privatepreview.VirtualNetworkRule).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20180601privatepreview.VirtualNetworkRule).
 
 Service: Dbformysql
 
@@ -14443,7 +14443,7 @@ Policy name: `azurenative-dbformysql-v20200701preview-server-disallow-preview-re
 
 Code path: `azurenative.dbformysql.v20200701preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20200701preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20200701preview.Server).
 
 Service: Dbformysql
 
@@ -14467,7 +14467,7 @@ Policy name: `azurenative-dbformysql-v20200701privatepreview-configuration-disal
 
 Code path: `azurenative.dbformysql.v20200701privatepreview.Configuration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20200701privatepreview.Configuration).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20200701privatepreview.Configuration).
 
 Service: Dbformysql
 
@@ -14489,7 +14489,7 @@ Policy name: `azurenative-dbformysql-v20200701privatepreview-server-disallow-pre
 
 Code path: `azurenative.dbformysql.v20200701privatepreview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20200701privatepreview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20200701privatepreview.Server).
 
 Service: Dbformysql
 
@@ -14511,7 +14511,7 @@ Policy name: `azurenative-dbformysql-v20200701privatepreview-serverkey-disallow-
 
 Code path: `azurenative.dbformysql.v20200701privatepreview.ServerKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20200701privatepreview.ServerKey).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20200701privatepreview.ServerKey).
 
 Service: Dbformysql
 
@@ -14535,7 +14535,7 @@ Policy name: `azurenative-dbformysql-v20220930preview-privateendpointconnection-
 
 Code path: `azurenative.dbformysql.v20220930preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20220930preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20220930preview.PrivateEndpointConnection).
 
 Service: Dbformysql
 
@@ -14557,7 +14557,7 @@ Policy name: `azurenative-dbformysql-v20220930preview-server-disallow-preview-re
 
 Code path: `azurenative.dbformysql.v20220930preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20220930preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20220930preview.Server).
 
 Service: Dbformysql
 
@@ -14581,7 +14581,7 @@ Policy name: `azurenative-dbformysql-v20230601preview-azureadadministrator-disal
 
 Code path: `azurenative.dbformysql.v20230601preview.AzureADAdministrator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20230601preview.AzureADAdministrator).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20230601preview.AzureADAdministrator).
 
 Service: Dbformysql
 
@@ -14603,7 +14603,7 @@ Policy name: `azurenative-dbformysql-v20230601preview-configuration-disallow-pre
 
 Code path: `azurenative.dbformysql.v20230601preview.Configuration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20230601preview.Configuration).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20230601preview.Configuration).
 
 Service: Dbformysql
 
@@ -14625,7 +14625,7 @@ Policy name: `azurenative-dbformysql-v20230601preview-database-disallow-preview-
 
 Code path: `azurenative.dbformysql.v20230601preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20230601preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20230601preview.Database).
 
 Service: Dbformysql
 
@@ -14647,7 +14647,7 @@ Policy name: `azurenative-dbformysql-v20230601preview-firewallrule-disallow-prev
 
 Code path: `azurenative.dbformysql.v20230601preview.FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20230601preview.FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20230601preview.FirewallRule).
 
 Service: Dbformysql
 
@@ -14669,7 +14669,7 @@ Policy name: `azurenative-dbformysql-v20230601preview-server-disallow-preview-re
 
 Code path: `azurenative.dbformysql.v20230601preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbformysql.v20230601preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbformysql.v20230601preview.Server).
 
 Service: Dbformysql
 
@@ -14695,7 +14695,7 @@ Policy name: `azurenative-dbforpostgresql-v20171201preview-server-disallow-previ
 
 Code path: `azurenative.dbforpostgresql.v20171201preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20171201preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20171201preview.Server).
 
 Service: Dbforpostgresql
 
@@ -14717,7 +14717,7 @@ Policy name: `azurenative-dbforpostgresql-v20171201preview-serveradministrator-d
 
 Code path: `azurenative.dbforpostgresql.v20171201preview.ServerAdministrator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20171201preview.ServerAdministrator).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20171201preview.ServerAdministrator).
 
 Service: Dbforpostgresql
 
@@ -14739,7 +14739,7 @@ Policy name: `azurenative-dbforpostgresql-v20171201preview-serversecurityalertpo
 
 Code path: `azurenative.dbforpostgresql.v20171201preview.ServerSecurityAlertPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20171201preview.ServerSecurityAlertPolicy).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20171201preview.ServerSecurityAlertPolicy).
 
 Service: Dbforpostgresql
 
@@ -14761,7 +14761,7 @@ Policy name: `azurenative-dbforpostgresql-v20171201preview-virtualnetworkrule-di
 
 Code path: `azurenative.dbforpostgresql.v20171201preview.VirtualNetworkRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20171201preview.VirtualNetworkRule).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20171201preview.VirtualNetworkRule).
 
 Service: Dbforpostgresql
 
@@ -14785,7 +14785,7 @@ Policy name: `azurenative-dbforpostgresql-v20180601privatepreview-privateendpoin
 
 Code path: `azurenative.dbforpostgresql.v20180601privatepreview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20180601privatepreview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20180601privatepreview.PrivateEndpointConnection).
 
 Service: Dbforpostgresql
 
@@ -14809,7 +14809,7 @@ Policy name: `azurenative-dbforpostgresql-v20200214preview-server-disallow-previ
 
 Code path: `azurenative.dbforpostgresql.v20200214preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20200214preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20200214preview.Server).
 
 Service: Dbforpostgresql
 
@@ -14833,7 +14833,7 @@ Policy name: `azurenative-dbforpostgresql-v20200214privatepreview-serverkey-disa
 
 Code path: `azurenative.dbforpostgresql.v20200214privatepreview.ServerKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20200214privatepreview.ServerKey).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20200214privatepreview.ServerKey).
 
 Service: Dbforpostgresql
 
@@ -14857,7 +14857,7 @@ Policy name: `azurenative-dbforpostgresql-v20201005privatepreview-firewallrule-d
 
 Code path: `azurenative.dbforpostgresql.v20201005privatepreview.FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20201005privatepreview.FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20201005privatepreview.FirewallRule).
 
 Service: Dbforpostgresql
 
@@ -14879,7 +14879,7 @@ Policy name: `azurenative-dbforpostgresql-v20201005privatepreview-servergroup-di
 
 Code path: `azurenative.dbforpostgresql.v20201005privatepreview.ServerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20201005privatepreview.ServerGroup).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20201005privatepreview.ServerGroup).
 
 Service: Dbforpostgresql
 
@@ -14903,7 +14903,7 @@ Policy name: `azurenative-dbforpostgresql-v20210410privatepreview-server-disallo
 
 Code path: `azurenative.dbforpostgresql.v20210410privatepreview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20210410privatepreview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20210410privatepreview.Server).
 
 Service: Dbforpostgresql
 
@@ -14927,7 +14927,7 @@ Policy name: `azurenative-dbforpostgresql-v20210615privatepreview-migration-disa
 
 Code path: `azurenative.dbforpostgresql.v20210615privatepreview.Migration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20210615privatepreview.Migration).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20210615privatepreview.Migration).
 
 Service: Dbforpostgresql
 
@@ -14949,7 +14949,7 @@ Policy name: `azurenative-dbforpostgresql-v20210615privatepreview-server-disallo
 
 Code path: `azurenative.dbforpostgresql.v20210615privatepreview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20210615privatepreview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20210615privatepreview.Server).
 
 Service: Dbforpostgresql
 
@@ -14973,7 +14973,7 @@ Policy name: `azurenative-dbforpostgresql-v20220308preview-server-disallow-previ
 
 Code path: `azurenative.dbforpostgresql.v20220308preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20220308preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20220308preview.Server).
 
 Service: Dbforpostgresql
 
@@ -14997,7 +14997,7 @@ Policy name: `azurenative-dbforpostgresql-v20220501preview-migration-disallow-pr
 
 Code path: `azurenative.dbforpostgresql.v20220501preview.Migration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20220501preview.Migration).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20220501preview.Migration).
 
 Service: Dbforpostgresql
 
@@ -15021,7 +15021,7 @@ Policy name: `azurenative-dbforpostgresql-v20230301preview-administrator-disallo
 
 Code path: `azurenative.dbforpostgresql.v20230301preview.Administrator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20230301preview.Administrator).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20230301preview.Administrator).
 
 Service: Dbforpostgresql
 
@@ -15043,7 +15043,7 @@ Policy name: `azurenative-dbforpostgresql-v20230301preview-configuration-disallo
 
 Code path: `azurenative.dbforpostgresql.v20230301preview.Configuration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20230301preview.Configuration).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20230301preview.Configuration).
 
 Service: Dbforpostgresql
 
@@ -15065,7 +15065,7 @@ Policy name: `azurenative-dbforpostgresql-v20230301preview-database-disallow-pre
 
 Code path: `azurenative.dbforpostgresql.v20230301preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20230301preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20230301preview.Database).
 
 Service: Dbforpostgresql
 
@@ -15087,7 +15087,7 @@ Policy name: `azurenative-dbforpostgresql-v20230301preview-firewallrule-disallow
 
 Code path: `azurenative.dbforpostgresql.v20230301preview.FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20230301preview.FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20230301preview.FirewallRule).
 
 Service: Dbforpostgresql
 
@@ -15109,7 +15109,7 @@ Policy name: `azurenative-dbforpostgresql-v20230301preview-migration-disallow-pr
 
 Code path: `azurenative.dbforpostgresql.v20230301preview.Migration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20230301preview.Migration).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20230301preview.Migration).
 
 Service: Dbforpostgresql
 
@@ -15131,7 +15131,7 @@ Policy name: `azurenative-dbforpostgresql-v20230301preview-server-disallow-previ
 
 Code path: `azurenative.dbforpostgresql.v20230301preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dbforpostgresql.v20230301preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (dbforpostgresql.v20230301preview.Server).
 
 Service: Dbforpostgresql
 
@@ -15157,7 +15157,7 @@ Policy name: `azurenative-delegatednetwork-v20230518preview-controllerdetails-di
 
 Code path: `azurenative.delegatednetwork.v20230518preview.ControllerDetails.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (delegatednetwork.v20230518preview.ControllerDetails).
+Disallow the use of non-stable (Preview) Azure resources (delegatednetwork.v20230518preview.ControllerDetails).
 
 Service: Delegatednetwork
 
@@ -15179,7 +15179,7 @@ Policy name: `azurenative-delegatednetwork-v20230518preview-delegatedsubnetservi
 
 Code path: `azurenative.delegatednetwork.v20230518preview.DelegatedSubnetServiceDetails.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (delegatednetwork.v20230518preview.DelegatedSubnetServiceDetails).
+Disallow the use of non-stable (Preview) Azure resources (delegatednetwork.v20230518preview.DelegatedSubnetServiceDetails).
 
 Service: Delegatednetwork
 
@@ -15201,7 +15201,7 @@ Policy name: `azurenative-delegatednetwork-v20230518preview-orchestratorinstance
 
 Code path: `azurenative.delegatednetwork.v20230518preview.OrchestratorInstanceServiceDetails.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (delegatednetwork.v20230518preview.OrchestratorInstanceServiceDetails).
+Disallow the use of non-stable (Preview) Azure resources (delegatednetwork.v20230518preview.OrchestratorInstanceServiceDetails).
 
 Service: Delegatednetwork
 
@@ -15225,7 +15225,7 @@ Policy name: `azurenative-delegatednetwork-v20230627preview-controllerdetails-di
 
 Code path: `azurenative.delegatednetwork.v20230627preview.ControllerDetails.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (delegatednetwork.v20230627preview.ControllerDetails).
+Disallow the use of non-stable (Preview) Azure resources (delegatednetwork.v20230627preview.ControllerDetails).
 
 Service: Delegatednetwork
 
@@ -15247,7 +15247,7 @@ Policy name: `azurenative-delegatednetwork-v20230627preview-delegatedsubnetservi
 
 Code path: `azurenative.delegatednetwork.v20230627preview.DelegatedSubnetServiceDetails.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (delegatednetwork.v20230627preview.DelegatedSubnetServiceDetails).
+Disallow the use of non-stable (Preview) Azure resources (delegatednetwork.v20230627preview.DelegatedSubnetServiceDetails).
 
 Service: Delegatednetwork
 
@@ -15269,7 +15269,7 @@ Policy name: `azurenative-delegatednetwork-v20230627preview-orchestratorinstance
 
 Code path: `azurenative.delegatednetwork.v20230627preview.OrchestratorInstanceServiceDetails.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (delegatednetwork.v20230627preview.OrchestratorInstanceServiceDetails).
+Disallow the use of non-stable (Preview) Azure resources (delegatednetwork.v20230627preview.OrchestratorInstanceServiceDetails).
 
 Service: Delegatednetwork
 
@@ -15295,7 +15295,7 @@ Policy name: `azurenative-deploymentmanager-v20191101preview-artifactsource-disa
 
 Code path: `azurenative.deploymentmanager.v20191101preview.ArtifactSource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (deploymentmanager.v20191101preview.ArtifactSource).
+Disallow the use of non-stable (Preview) Azure resources (deploymentmanager.v20191101preview.ArtifactSource).
 
 Service: Deploymentmanager
 
@@ -15317,7 +15317,7 @@ Policy name: `azurenative-deploymentmanager-v20191101preview-rollout-disallow-pr
 
 Code path: `azurenative.deploymentmanager.v20191101preview.Rollout.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (deploymentmanager.v20191101preview.Rollout).
+Disallow the use of non-stable (Preview) Azure resources (deploymentmanager.v20191101preview.Rollout).
 
 Service: Deploymentmanager
 
@@ -15339,7 +15339,7 @@ Policy name: `azurenative-deploymentmanager-v20191101preview-service-disallow-pr
 
 Code path: `azurenative.deploymentmanager.v20191101preview.Service.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (deploymentmanager.v20191101preview.Service).
+Disallow the use of non-stable (Preview) Azure resources (deploymentmanager.v20191101preview.Service).
 
 Service: Deploymentmanager
 
@@ -15361,7 +15361,7 @@ Policy name: `azurenative-deploymentmanager-v20191101preview-servicetopology-dis
 
 Code path: `azurenative.deploymentmanager.v20191101preview.ServiceTopology.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (deploymentmanager.v20191101preview.ServiceTopology).
+Disallow the use of non-stable (Preview) Azure resources (deploymentmanager.v20191101preview.ServiceTopology).
 
 Service: Deploymentmanager
 
@@ -15383,7 +15383,7 @@ Policy name: `azurenative-deploymentmanager-v20191101preview-serviceunit-disallo
 
 Code path: `azurenative.deploymentmanager.v20191101preview.ServiceUnit.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (deploymentmanager.v20191101preview.ServiceUnit).
+Disallow the use of non-stable (Preview) Azure resources (deploymentmanager.v20191101preview.ServiceUnit).
 
 Service: Deploymentmanager
 
@@ -15405,7 +15405,7 @@ Policy name: `azurenative-deploymentmanager-v20191101preview-step-disallow-previ
 
 Code path: `azurenative.deploymentmanager.v20191101preview.Step.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (deploymentmanager.v20191101preview.Step).
+Disallow the use of non-stable (Preview) Azure resources (deploymentmanager.v20191101preview.Step).
 
 Service: Deploymentmanager
 
@@ -15431,7 +15431,7 @@ Policy name: `azurenative-desktopvirtualization-v20210201preview-scalingplan-dis
 
 Code path: `azurenative.desktopvirtualization.v20210201preview.ScalingPlan.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20210201preview.ScalingPlan).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20210201preview.ScalingPlan).
 
 Service: Desktopvirtualization
 
@@ -15455,7 +15455,7 @@ Policy name: `azurenative-desktopvirtualization-v20220210preview-scalingplan-dis
 
 Code path: `azurenative.desktopvirtualization.v20220210preview.ScalingPlan.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20220210preview.ScalingPlan).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20220210preview.ScalingPlan).
 
 Service: Desktopvirtualization
 
@@ -15479,7 +15479,7 @@ Policy name: `azurenative-desktopvirtualization-v20220401preview-applicationgrou
 
 Code path: `azurenative.desktopvirtualization.v20220401preview.ApplicationGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20220401preview.ApplicationGroup).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20220401preview.ApplicationGroup).
 
 Service: Desktopvirtualization
 
@@ -15501,7 +15501,7 @@ Policy name: `azurenative-desktopvirtualization-v20220401preview-hostpool-disall
 
 Code path: `azurenative.desktopvirtualization.v20220401preview.HostPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20220401preview.HostPool).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20220401preview.HostPool).
 
 Service: Desktopvirtualization
 
@@ -15525,7 +15525,7 @@ Policy name: `azurenative-desktopvirtualization-v20221014preview-application-dis
 
 Code path: `azurenative.desktopvirtualization.v20221014preview.Application.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20221014preview.Application).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20221014preview.Application).
 
 Service: Desktopvirtualization
 
@@ -15547,7 +15547,7 @@ Policy name: `azurenative-desktopvirtualization-v20221014preview-applicationgrou
 
 Code path: `azurenative.desktopvirtualization.v20221014preview.ApplicationGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20221014preview.ApplicationGroup).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20221014preview.ApplicationGroup).
 
 Service: Desktopvirtualization
 
@@ -15569,7 +15569,7 @@ Policy name: `azurenative-desktopvirtualization-v20221014preview-hostpool-disall
 
 Code path: `azurenative.desktopvirtualization.v20221014preview.HostPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20221014preview.HostPool).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20221014preview.HostPool).
 
 Service: Desktopvirtualization
 
@@ -15591,7 +15591,7 @@ Policy name: `azurenative-desktopvirtualization-v20221014preview-msixpackage-dis
 
 Code path: `azurenative.desktopvirtualization.v20221014preview.MSIXPackage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20221014preview.MSIXPackage).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20221014preview.MSIXPackage).
 
 Service: Desktopvirtualization
 
@@ -15613,7 +15613,7 @@ Policy name: `azurenative-desktopvirtualization-v20221014preview-privateendpoint
 
 Code path: `azurenative.desktopvirtualization.v20221014preview.PrivateEndpointConnectionByHostPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20221014preview.PrivateEndpointConnectionByHostPool).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20221014preview.PrivateEndpointConnectionByHostPool).
 
 Service: Desktopvirtualization
 
@@ -15635,7 +15635,7 @@ Policy name: `azurenative-desktopvirtualization-v20221014preview-privateendpoint
 
 Code path: `azurenative.desktopvirtualization.v20221014preview.PrivateEndpointConnectionByWorkspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20221014preview.PrivateEndpointConnectionByWorkspace).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20221014preview.PrivateEndpointConnectionByWorkspace).
 
 Service: Desktopvirtualization
 
@@ -15657,7 +15657,7 @@ Policy name: `azurenative-desktopvirtualization-v20221014preview-scalingplan-dis
 
 Code path: `azurenative.desktopvirtualization.v20221014preview.ScalingPlan.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20221014preview.ScalingPlan).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20221014preview.ScalingPlan).
 
 Service: Desktopvirtualization
 
@@ -15679,7 +15679,7 @@ Policy name: `azurenative-desktopvirtualization-v20221014preview-scalingplanpool
 
 Code path: `azurenative.desktopvirtualization.v20221014preview.ScalingPlanPooledSchedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20221014preview.ScalingPlanPooledSchedule).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20221014preview.ScalingPlanPooledSchedule).
 
 Service: Desktopvirtualization
 
@@ -15701,7 +15701,7 @@ Policy name: `azurenative-desktopvirtualization-v20221014preview-workspace-disal
 
 Code path: `azurenative.desktopvirtualization.v20221014preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20221014preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20221014preview.Workspace).
 
 Service: Desktopvirtualization
 
@@ -15725,7 +15725,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-application-dis
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.Application.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.Application).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.Application).
 
 Service: Desktopvirtualization
 
@@ -15747,7 +15747,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-applicationgrou
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.ApplicationGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.ApplicationGroup).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.ApplicationGroup).
 
 Service: Desktopvirtualization
 
@@ -15769,7 +15769,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-hostpool-disall
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.HostPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.HostPool).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.HostPool).
 
 Service: Desktopvirtualization
 
@@ -15791,7 +15791,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-msixpackage-dis
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.MSIXPackage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.MSIXPackage).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.MSIXPackage).
 
 Service: Desktopvirtualization
 
@@ -15813,7 +15813,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-privateendpoint
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.PrivateEndpointConnectionByHostPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.PrivateEndpointConnectionByHostPool).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.PrivateEndpointConnectionByHostPool).
 
 Service: Desktopvirtualization
 
@@ -15835,7 +15835,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-privateendpoint
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.PrivateEndpointConnectionByWorkspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.PrivateEndpointConnectionByWorkspace).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.PrivateEndpointConnectionByWorkspace).
 
 Service: Desktopvirtualization
 
@@ -15857,7 +15857,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-scalingplan-dis
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.ScalingPlan.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.ScalingPlan).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.ScalingPlan).
 
 Service: Desktopvirtualization
 
@@ -15879,7 +15879,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-scalingplanpers
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.ScalingPlanPersonalSchedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.ScalingPlanPersonalSchedule).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.ScalingPlanPersonalSchedule).
 
 Service: Desktopvirtualization
 
@@ -15901,7 +15901,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-scalingplanpool
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.ScalingPlanPooledSchedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.ScalingPlanPooledSchedule).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.ScalingPlanPooledSchedule).
 
 Service: Desktopvirtualization
 
@@ -15923,7 +15923,7 @@ Policy name: `azurenative-desktopvirtualization-v20230707preview-workspace-disal
 
 Code path: `azurenative.desktopvirtualization.v20230707preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (desktopvirtualization.v20230707preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (desktopvirtualization.v20230707preview.Workspace).
 
 Service: Desktopvirtualization
 
@@ -15949,7 +15949,7 @@ Policy name: `azurenative-devcenter-v20221111preview-devboxdefinition-disallow-p
 
 Code path: `azurenative.devcenter.v20221111preview.DevBoxDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20221111preview.DevBoxDefinition).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20221111preview.DevBoxDefinition).
 
 Service: Devcenter
 
@@ -15973,7 +15973,7 @@ Policy name: `azurenative-devcenter-v20230801preview-attachednetworkbydevcenter-
 
 Code path: `azurenative.devcenter.v20230801preview.AttachedNetworkByDevCenter.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.AttachedNetworkByDevCenter).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.AttachedNetworkByDevCenter).
 
 Service: Devcenter
 
@@ -15995,7 +15995,7 @@ Policy name: `azurenative-devcenter-v20230801preview-catalog-disallow-preview-re
 
 Code path: `azurenative.devcenter.v20230801preview.Catalog.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.Catalog).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.Catalog).
 
 Service: Devcenter
 
@@ -16017,7 +16017,7 @@ Policy name: `azurenative-devcenter-v20230801preview-devboxdefinition-disallow-p
 
 Code path: `azurenative.devcenter.v20230801preview.DevBoxDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.DevBoxDefinition).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.DevBoxDefinition).
 
 Service: Devcenter
 
@@ -16039,7 +16039,7 @@ Policy name: `azurenative-devcenter-v20230801preview-devcenter-disallow-preview-
 
 Code path: `azurenative.devcenter.v20230801preview.DevCenter.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.DevCenter).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.DevCenter).
 
 Service: Devcenter
 
@@ -16061,7 +16061,7 @@ Policy name: `azurenative-devcenter-v20230801preview-environmenttype-disallow-pr
 
 Code path: `azurenative.devcenter.v20230801preview.EnvironmentType.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.EnvironmentType).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.EnvironmentType).
 
 Service: Devcenter
 
@@ -16083,7 +16083,7 @@ Policy name: `azurenative-devcenter-v20230801preview-gallery-disallow-preview-re
 
 Code path: `azurenative.devcenter.v20230801preview.Gallery.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.Gallery).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.Gallery).
 
 Service: Devcenter
 
@@ -16105,7 +16105,7 @@ Policy name: `azurenative-devcenter-v20230801preview-networkconnection-disallow-
 
 Code path: `azurenative.devcenter.v20230801preview.NetworkConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.NetworkConnection).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.NetworkConnection).
 
 Service: Devcenter
 
@@ -16127,7 +16127,7 @@ Policy name: `azurenative-devcenter-v20230801preview-pool-disallow-preview-resou
 
 Code path: `azurenative.devcenter.v20230801preview.Pool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.Pool).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.Pool).
 
 Service: Devcenter
 
@@ -16149,7 +16149,7 @@ Policy name: `azurenative-devcenter-v20230801preview-project-disallow-preview-re
 
 Code path: `azurenative.devcenter.v20230801preview.Project.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.Project).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.Project).
 
 Service: Devcenter
 
@@ -16171,7 +16171,7 @@ Policy name: `azurenative-devcenter-v20230801preview-projectenvironmenttype-disa
 
 Code path: `azurenative.devcenter.v20230801preview.ProjectEnvironmentType.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.ProjectEnvironmentType).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.ProjectEnvironmentType).
 
 Service: Devcenter
 
@@ -16193,7 +16193,7 @@ Policy name: `azurenative-devcenter-v20230801preview-schedule-disallow-preview-r
 
 Code path: `azurenative.devcenter.v20230801preview.Schedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devcenter.v20230801preview.Schedule).
+Disallow the use of non-stable (Preview) Azure resources (devcenter.v20230801preview.Schedule).
 
 Service: Devcenter
 
@@ -16219,7 +16219,7 @@ Policy name: `azurenative-devhub-v20221011preview-workflow-disallow-preview-reso
 
 Code path: `azurenative.devhub.v20221011preview.Workflow.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devhub.v20221011preview.Workflow).
+Disallow the use of non-stable (Preview) Azure resources (devhub.v20221011preview.Workflow).
 
 Service: Devhub
 
@@ -16245,7 +16245,7 @@ Policy name: `azurenative-devices-v20200901preview-iotdpsresource-disallow-previ
 
 Code path: `azurenative.devices.v20200901preview.IotDpsResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20200901preview.IotDpsResource).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20200901preview.IotDpsResource).
 
 Service: Devices
 
@@ -16269,7 +16269,7 @@ Policy name: `azurenative-devices-v20210303preview-iothubresourceeventhubconsume
 
 Code path: `azurenative.devices.v20210303preview.IotHubResourceEventHubConsumerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20210303preview.IotHubResourceEventHubConsumerGroup).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20210303preview.IotHubResourceEventHubConsumerGroup).
 
 Service: Devices
 
@@ -16293,7 +16293,7 @@ Policy name: `azurenative-devices-v20220430preview-certificate-disallow-preview-
 
 Code path: `azurenative.devices.v20220430preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20220430preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20220430preview.Certificate).
 
 Service: Devices
 
@@ -16315,7 +16315,7 @@ Policy name: `azurenative-devices-v20220430preview-iothubresource-disallow-previ
 
 Code path: `azurenative.devices.v20220430preview.IotHubResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20220430preview.IotHubResource).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20220430preview.IotHubResource).
 
 Service: Devices
 
@@ -16337,7 +16337,7 @@ Policy name: `azurenative-devices-v20220430preview-iothubresourceeventhubconsume
 
 Code path: `azurenative.devices.v20220430preview.IotHubResourceEventHubConsumerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20220430preview.IotHubResourceEventHubConsumerGroup).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20220430preview.IotHubResourceEventHubConsumerGroup).
 
 Service: Devices
 
@@ -16359,7 +16359,7 @@ Policy name: `azurenative-devices-v20220430preview-privateendpointconnection-dis
 
 Code path: `azurenative.devices.v20220430preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20220430preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20220430preview.PrivateEndpointConnection).
 
 Service: Devices
 
@@ -16383,7 +16383,7 @@ Policy name: `azurenative-devices-v20221115preview-certificate-disallow-preview-
 
 Code path: `azurenative.devices.v20221115preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20221115preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20221115preview.Certificate).
 
 Service: Devices
 
@@ -16405,7 +16405,7 @@ Policy name: `azurenative-devices-v20221115preview-iothubresource-disallow-previ
 
 Code path: `azurenative.devices.v20221115preview.IotHubResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20221115preview.IotHubResource).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20221115preview.IotHubResource).
 
 Service: Devices
 
@@ -16427,7 +16427,7 @@ Policy name: `azurenative-devices-v20221115preview-iothubresourceeventhubconsume
 
 Code path: `azurenative.devices.v20221115preview.IotHubResourceEventHubConsumerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20221115preview.IotHubResourceEventHubConsumerGroup).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20221115preview.IotHubResourceEventHubConsumerGroup).
 
 Service: Devices
 
@@ -16449,7 +16449,7 @@ Policy name: `azurenative-devices-v20221115preview-privateendpointconnection-dis
 
 Code path: `azurenative.devices.v20221115preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20221115preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20221115preview.PrivateEndpointConnection).
 
 Service: Devices
 
@@ -16473,7 +16473,7 @@ Policy name: `azurenative-devices-v20230301preview-dpscertificate-disallow-previ
 
 Code path: `azurenative.devices.v20230301preview.DpsCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20230301preview.DpsCertificate).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20230301preview.DpsCertificate).
 
 Service: Devices
 
@@ -16495,7 +16495,7 @@ Policy name: `azurenative-devices-v20230301preview-iotdpsresource-disallow-previ
 
 Code path: `azurenative.devices.v20230301preview.IotDpsResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20230301preview.IotDpsResource).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20230301preview.IotDpsResource).
 
 Service: Devices
 
@@ -16517,7 +16517,7 @@ Policy name: `azurenative-devices-v20230301preview-iotdpsresourceprivateendpoint
 
 Code path: `azurenative.devices.v20230301preview.IotDpsResourcePrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20230301preview.IotDpsResourcePrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20230301preview.IotDpsResourcePrivateEndpointConnection).
 
 Service: Devices
 
@@ -16541,7 +16541,7 @@ Policy name: `azurenative-devices-v20230630preview-certificate-disallow-preview-
 
 Code path: `azurenative.devices.v20230630preview.Certificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20230630preview.Certificate).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20230630preview.Certificate).
 
 Service: Devices
 
@@ -16563,7 +16563,7 @@ Policy name: `azurenative-devices-v20230630preview-iothubresource-disallow-previ
 
 Code path: `azurenative.devices.v20230630preview.IotHubResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20230630preview.IotHubResource).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20230630preview.IotHubResource).
 
 Service: Devices
 
@@ -16585,7 +16585,7 @@ Policy name: `azurenative-devices-v20230630preview-iothubresourceeventhubconsume
 
 Code path: `azurenative.devices.v20230630preview.IotHubResourceEventHubConsumerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20230630preview.IotHubResourceEventHubConsumerGroup).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20230630preview.IotHubResourceEventHubConsumerGroup).
 
 Service: Devices
 
@@ -16607,7 +16607,7 @@ Policy name: `azurenative-devices-v20230630preview-privateendpointconnection-dis
 
 Code path: `azurenative.devices.v20230630preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (devices.v20230630preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (devices.v20230630preview.PrivateEndpointConnection).
 
 Service: Devices
 
@@ -16633,7 +16633,7 @@ Policy name: `azurenative-documentdb-v20210401preview-databaseaccount-disallow-p
 
 Code path: `azurenative.documentdb.v20210401preview.DatabaseAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20210401preview.DatabaseAccount).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20210401preview.DatabaseAccount).
 
 Service: Documentdb
 
@@ -16657,7 +16657,7 @@ Policy name: `azurenative-documentdb-v20210701preview-cassandracluster-disallow-
 
 Code path: `azurenative.documentdb.v20210701preview.CassandraCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20210701preview.CassandraCluster).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20210701preview.CassandraCluster).
 
 Service: Documentdb
 
@@ -16681,7 +16681,7 @@ Policy name: `azurenative-documentdb-v20230301preview-mongodbresourcemongorolede
 
 Code path: `azurenative.documentdb.v20230301preview.MongoDBResourceMongoRoleDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230301preview.MongoDBResourceMongoRoleDefinition).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230301preview.MongoDBResourceMongoRoleDefinition).
 
 Service: Documentdb
 
@@ -16705,7 +16705,7 @@ Policy name: `azurenative-documentdb-v20230315preview-cassandraresourcecassandra
 
 Code path: `azurenative.documentdb.v20230315preview.CassandraResourceCassandraKeyspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.CassandraResourceCassandraKeyspace).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.CassandraResourceCassandraKeyspace).
 
 Service: Documentdb
 
@@ -16727,7 +16727,7 @@ Policy name: `azurenative-documentdb-v20230315preview-cassandraresourcecassandra
 
 Code path: `azurenative.documentdb.v20230315preview.CassandraResourceCassandraTable.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.CassandraResourceCassandraTable).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.CassandraResourceCassandraTable).
 
 Service: Documentdb
 
@@ -16749,7 +16749,7 @@ Policy name: `azurenative-documentdb-v20230315preview-cassandraresourcecassandra
 
 Code path: `azurenative.documentdb.v20230315preview.CassandraResourceCassandraView.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.CassandraResourceCassandraView).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.CassandraResourceCassandraView).
 
 Service: Documentdb
 
@@ -16771,7 +16771,7 @@ Policy name: `azurenative-documentdb-v20230315preview-databaseaccount-disallow-p
 
 Code path: `azurenative.documentdb.v20230315preview.DatabaseAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.DatabaseAccount).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.DatabaseAccount).
 
 Service: Documentdb
 
@@ -16793,7 +16793,7 @@ Policy name: `azurenative-documentdb-v20230315preview-graphresourcegraph-disallo
 
 Code path: `azurenative.documentdb.v20230315preview.GraphResourceGraph.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.GraphResourceGraph).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.GraphResourceGraph).
 
 Service: Documentdb
 
@@ -16815,7 +16815,7 @@ Policy name: `azurenative-documentdb-v20230315preview-gremlinresourcegremlindata
 
 Code path: `azurenative.documentdb.v20230315preview.GremlinResourceGremlinDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.GremlinResourceGremlinDatabase).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.GremlinResourceGremlinDatabase).
 
 Service: Documentdb
 
@@ -16837,7 +16837,7 @@ Policy name: `azurenative-documentdb-v20230315preview-gremlinresourcegremlingrap
 
 Code path: `azurenative.documentdb.v20230315preview.GremlinResourceGremlinGraph.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.GremlinResourceGremlinGraph).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.GremlinResourceGremlinGraph).
 
 Service: Documentdb
 
@@ -16859,7 +16859,7 @@ Policy name: `azurenative-documentdb-v20230315preview-mongocluster-disallow-prev
 
 Code path: `azurenative.documentdb.v20230315preview.MongoCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.MongoCluster).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.MongoCluster).
 
 Service: Documentdb
 
@@ -16881,7 +16881,7 @@ Policy name: `azurenative-documentdb-v20230315preview-mongoclusterfirewallrule-d
 
 Code path: `azurenative.documentdb.v20230315preview.MongoClusterFirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.MongoClusterFirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.MongoClusterFirewallRule).
 
 Service: Documentdb
 
@@ -16903,7 +16903,7 @@ Policy name: `azurenative-documentdb-v20230315preview-mongodbresourcemongodbcoll
 
 Code path: `azurenative.documentdb.v20230315preview.MongoDBResourceMongoDBCollection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.MongoDBResourceMongoDBCollection).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.MongoDBResourceMongoDBCollection).
 
 Service: Documentdb
 
@@ -16925,7 +16925,7 @@ Policy name: `azurenative-documentdb-v20230315preview-mongodbresourcemongodbdata
 
 Code path: `azurenative.documentdb.v20230315preview.MongoDBResourceMongoDBDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.MongoDBResourceMongoDBDatabase).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.MongoDBResourceMongoDBDatabase).
 
 Service: Documentdb
 
@@ -16947,7 +16947,7 @@ Policy name: `azurenative-documentdb-v20230315preview-sqlresourcesqlcontainer-di
 
 Code path: `azurenative.documentdb.v20230315preview.SqlResourceSqlContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.SqlResourceSqlContainer).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.SqlResourceSqlContainer).
 
 Service: Documentdb
 
@@ -16969,7 +16969,7 @@ Policy name: `azurenative-documentdb-v20230315preview-sqlresourcesqldatabase-dis
 
 Code path: `azurenative.documentdb.v20230315preview.SqlResourceSqlDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.SqlResourceSqlDatabase).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.SqlResourceSqlDatabase).
 
 Service: Documentdb
 
@@ -16991,7 +16991,7 @@ Policy name: `azurenative-documentdb-v20230315preview-sqlresourcesqlstoredproced
 
 Code path: `azurenative.documentdb.v20230315preview.SqlResourceSqlStoredProcedure.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.SqlResourceSqlStoredProcedure).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.SqlResourceSqlStoredProcedure).
 
 Service: Documentdb
 
@@ -17013,7 +17013,7 @@ Policy name: `azurenative-documentdb-v20230315preview-sqlresourcesqltrigger-disa
 
 Code path: `azurenative.documentdb.v20230315preview.SqlResourceSqlTrigger.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.SqlResourceSqlTrigger).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.SqlResourceSqlTrigger).
 
 Service: Documentdb
 
@@ -17035,7 +17035,7 @@ Policy name: `azurenative-documentdb-v20230315preview-sqlresourcesqluserdefinedf
 
 Code path: `azurenative.documentdb.v20230315preview.SqlResourceSqlUserDefinedFunction.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.SqlResourceSqlUserDefinedFunction).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.SqlResourceSqlUserDefinedFunction).
 
 Service: Documentdb
 
@@ -17057,7 +17057,7 @@ Policy name: `azurenative-documentdb-v20230315preview-tableresourcetable-disallo
 
 Code path: `azurenative.documentdb.v20230315preview.TableResourceTable.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230315preview.TableResourceTable).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230315preview.TableResourceTable).
 
 Service: Documentdb
 
@@ -17081,7 +17081,7 @@ Policy name: `azurenative-documentdb-v20230915preview-cassandracluster-disallow-
 
 Code path: `azurenative.documentdb.v20230915preview.CassandraCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.CassandraCluster).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.CassandraCluster).
 
 Service: Documentdb
 
@@ -17103,7 +17103,7 @@ Policy name: `azurenative-documentdb-v20230915preview-cassandradatacenter-disall
 
 Code path: `azurenative.documentdb.v20230915preview.CassandraDataCenter.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.CassandraDataCenter).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.CassandraDataCenter).
 
 Service: Documentdb
 
@@ -17125,7 +17125,7 @@ Policy name: `azurenative-documentdb-v20230915preview-cassandraresourcecassandra
 
 Code path: `azurenative.documentdb.v20230915preview.CassandraResourceCassandraKeyspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.CassandraResourceCassandraKeyspace).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.CassandraResourceCassandraKeyspace).
 
 Service: Documentdb
 
@@ -17147,7 +17147,7 @@ Policy name: `azurenative-documentdb-v20230915preview-cassandraresourcecassandra
 
 Code path: `azurenative.documentdb.v20230915preview.CassandraResourceCassandraTable.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.CassandraResourceCassandraTable).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.CassandraResourceCassandraTable).
 
 Service: Documentdb
 
@@ -17169,7 +17169,7 @@ Policy name: `azurenative-documentdb-v20230915preview-cassandraresourcecassandra
 
 Code path: `azurenative.documentdb.v20230915preview.CassandraResourceCassandraView.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.CassandraResourceCassandraView).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.CassandraResourceCassandraView).
 
 Service: Documentdb
 
@@ -17191,7 +17191,7 @@ Policy name: `azurenative-documentdb-v20230915preview-databaseaccount-disallow-p
 
 Code path: `azurenative.documentdb.v20230915preview.DatabaseAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.DatabaseAccount).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.DatabaseAccount).
 
 Service: Documentdb
 
@@ -17213,7 +17213,7 @@ Policy name: `azurenative-documentdb-v20230915preview-graphresourcegraph-disallo
 
 Code path: `azurenative.documentdb.v20230915preview.GraphResourceGraph.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.GraphResourceGraph).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.GraphResourceGraph).
 
 Service: Documentdb
 
@@ -17235,7 +17235,7 @@ Policy name: `azurenative-documentdb-v20230915preview-gremlinresourcegremlindata
 
 Code path: `azurenative.documentdb.v20230915preview.GremlinResourceGremlinDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.GremlinResourceGremlinDatabase).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.GremlinResourceGremlinDatabase).
 
 Service: Documentdb
 
@@ -17257,7 +17257,7 @@ Policy name: `azurenative-documentdb-v20230915preview-gremlinresourcegremlingrap
 
 Code path: `azurenative.documentdb.v20230915preview.GremlinResourceGremlinGraph.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.GremlinResourceGremlinGraph).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.GremlinResourceGremlinGraph).
 
 Service: Documentdb
 
@@ -17279,7 +17279,7 @@ Policy name: `azurenative-documentdb-v20230915preview-mongocluster-disallow-prev
 
 Code path: `azurenative.documentdb.v20230915preview.MongoCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.MongoCluster).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.MongoCluster).
 
 Service: Documentdb
 
@@ -17301,7 +17301,7 @@ Policy name: `azurenative-documentdb-v20230915preview-mongoclusterfirewallrule-d
 
 Code path: `azurenative.documentdb.v20230915preview.MongoClusterFirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.MongoClusterFirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.MongoClusterFirewallRule).
 
 Service: Documentdb
 
@@ -17323,7 +17323,7 @@ Policy name: `azurenative-documentdb-v20230915preview-mongodbresourcemongodbcoll
 
 Code path: `azurenative.documentdb.v20230915preview.MongoDBResourceMongoDBCollection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.MongoDBResourceMongoDBCollection).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.MongoDBResourceMongoDBCollection).
 
 Service: Documentdb
 
@@ -17345,7 +17345,7 @@ Policy name: `azurenative-documentdb-v20230915preview-mongodbresourcemongodbdata
 
 Code path: `azurenative.documentdb.v20230915preview.MongoDBResourceMongoDBDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.MongoDBResourceMongoDBDatabase).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.MongoDBResourceMongoDBDatabase).
 
 Service: Documentdb
 
@@ -17367,7 +17367,7 @@ Policy name: `azurenative-documentdb-v20230915preview-mongodbresourcemongorolede
 
 Code path: `azurenative.documentdb.v20230915preview.MongoDBResourceMongoRoleDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.MongoDBResourceMongoRoleDefinition).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.MongoDBResourceMongoRoleDefinition).
 
 Service: Documentdb
 
@@ -17389,7 +17389,7 @@ Policy name: `azurenative-documentdb-v20230915preview-mongodbresourcemongouserde
 
 Code path: `azurenative.documentdb.v20230915preview.MongoDBResourceMongoUserDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.MongoDBResourceMongoUserDefinition).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.MongoDBResourceMongoUserDefinition).
 
 Service: Documentdb
 
@@ -17411,7 +17411,7 @@ Policy name: `azurenative-documentdb-v20230915preview-notebookworkspace-disallow
 
 Code path: `azurenative.documentdb.v20230915preview.NotebookWorkspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.NotebookWorkspace).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.NotebookWorkspace).
 
 Service: Documentdb
 
@@ -17433,7 +17433,7 @@ Policy name: `azurenative-documentdb-v20230915preview-privateendpointconnection-
 
 Code path: `azurenative.documentdb.v20230915preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.PrivateEndpointConnection).
 
 Service: Documentdb
 
@@ -17455,7 +17455,7 @@ Policy name: `azurenative-documentdb-v20230915preview-service-disallow-preview-r
 
 Code path: `azurenative.documentdb.v20230915preview.Service.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.Service).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.Service).
 
 Service: Documentdb
 
@@ -17477,7 +17477,7 @@ Policy name: `azurenative-documentdb-v20230915preview-sqlresourcesqlcontainer-di
 
 Code path: `azurenative.documentdb.v20230915preview.SqlResourceSqlContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.SqlResourceSqlContainer).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.SqlResourceSqlContainer).
 
 Service: Documentdb
 
@@ -17499,7 +17499,7 @@ Policy name: `azurenative-documentdb-v20230915preview-sqlresourcesqldatabase-dis
 
 Code path: `azurenative.documentdb.v20230915preview.SqlResourceSqlDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.SqlResourceSqlDatabase).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.SqlResourceSqlDatabase).
 
 Service: Documentdb
 
@@ -17521,7 +17521,7 @@ Policy name: `azurenative-documentdb-v20230915preview-sqlresourcesqlroleassignme
 
 Code path: `azurenative.documentdb.v20230915preview.SqlResourceSqlRoleAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.SqlResourceSqlRoleAssignment).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.SqlResourceSqlRoleAssignment).
 
 Service: Documentdb
 
@@ -17543,7 +17543,7 @@ Policy name: `azurenative-documentdb-v20230915preview-sqlresourcesqlroledefiniti
 
 Code path: `azurenative.documentdb.v20230915preview.SqlResourceSqlRoleDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.SqlResourceSqlRoleDefinition).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.SqlResourceSqlRoleDefinition).
 
 Service: Documentdb
 
@@ -17565,7 +17565,7 @@ Policy name: `azurenative-documentdb-v20230915preview-sqlresourcesqlstoredproced
 
 Code path: `azurenative.documentdb.v20230915preview.SqlResourceSqlStoredProcedure.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.SqlResourceSqlStoredProcedure).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.SqlResourceSqlStoredProcedure).
 
 Service: Documentdb
 
@@ -17587,7 +17587,7 @@ Policy name: `azurenative-documentdb-v20230915preview-sqlresourcesqltrigger-disa
 
 Code path: `azurenative.documentdb.v20230915preview.SqlResourceSqlTrigger.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.SqlResourceSqlTrigger).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.SqlResourceSqlTrigger).
 
 Service: Documentdb
 
@@ -17609,7 +17609,7 @@ Policy name: `azurenative-documentdb-v20230915preview-sqlresourcesqluserdefinedf
 
 Code path: `azurenative.documentdb.v20230915preview.SqlResourceSqlUserDefinedFunction.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.SqlResourceSqlUserDefinedFunction).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.SqlResourceSqlUserDefinedFunction).
 
 Service: Documentdb
 
@@ -17631,7 +17631,7 @@ Policy name: `azurenative-documentdb-v20230915preview-tableresourcetable-disallo
 
 Code path: `azurenative.documentdb.v20230915preview.TableResourceTable.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (documentdb.v20230915preview.TableResourceTable).
+Disallow the use of non-stable (Preview) Azure resources (documentdb.v20230915preview.TableResourceTable).
 
 Service: Documentdb
 
@@ -17657,7 +17657,7 @@ Policy name: `azurenative-dynamics365fraudprotection-v20210201preview-instancede
 
 Code path: `azurenative.dynamics365fraudprotection.v20210201preview.InstanceDetails.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (dynamics365fraudprotection.v20210201preview.InstanceDetails).
+Disallow the use of non-stable (Preview) Azure resources (dynamics365fraudprotection.v20210201preview.InstanceDetails).
 
 Service: Dynamics365fraudprotection
 
@@ -17683,7 +17683,7 @@ Policy name: `azurenative-easm-v20230401preview-labelbyworkspace-disallow-previe
 
 Code path: `azurenative.easm.v20230401preview.LabelByWorkspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (easm.v20230401preview.LabelByWorkspace).
+Disallow the use of non-stable (Preview) Azure resources (easm.v20230401preview.LabelByWorkspace).
 
 Service: Easm
 
@@ -17705,7 +17705,7 @@ Policy name: `azurenative-easm-v20230401preview-workspace-disallow-preview-resou
 
 Code path: `azurenative.easm.v20230401preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (easm.v20230401preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (easm.v20230401preview.Workspace).
 
 Service: Easm
 
@@ -17731,7 +17731,7 @@ Policy name: `azurenative-edgeorder-v20220501preview-address-disallow-preview-re
 
 Code path: `azurenative.edgeorder.v20220501preview.Address.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (edgeorder.v20220501preview.Address).
+Disallow the use of non-stable (Preview) Azure resources (edgeorder.v20220501preview.Address).
 
 Service: Edgeorder
 
@@ -17753,7 +17753,7 @@ Policy name: `azurenative-edgeorder-v20220501preview-orderitem-disallow-preview-
 
 Code path: `azurenative.edgeorder.v20220501preview.OrderItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (edgeorder.v20220501preview.OrderItem).
+Disallow the use of non-stable (Preview) Azure resources (edgeorder.v20220501preview.OrderItem).
 
 Service: Edgeorder
 
@@ -17779,7 +17779,7 @@ Policy name: `azurenative-education-v20211201preview-lab-disallow-preview-resour
 
 Code path: `azurenative.education.v20211201preview.Lab.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (education.v20211201preview.Lab).
+Disallow the use of non-stable (Preview) Azure resources (education.v20211201preview.Lab).
 
 Service: Education
 
@@ -17801,7 +17801,7 @@ Policy name: `azurenative-education-v20211201preview-student-disallow-preview-re
 
 Code path: `azurenative.education.v20211201preview.Student.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (education.v20211201preview.Student).
+Disallow the use of non-stable (Preview) Azure resources (education.v20211201preview.Student).
 
 Service: Education
 
@@ -17827,7 +17827,7 @@ Policy name: `azurenative-elastic-v20230615preview-monitor-disallow-preview-reso
 
 Code path: `azurenative.elastic.v20230615preview.Monitor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elastic.v20230615preview.Monitor).
+Disallow the use of non-stable (Preview) Azure resources (elastic.v20230615preview.Monitor).
 
 Service: Elastic
 
@@ -17849,7 +17849,7 @@ Policy name: `azurenative-elastic-v20230615preview-tagrule-disallow-preview-reso
 
 Code path: `azurenative.elastic.v20230615preview.TagRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elastic.v20230615preview.TagRule).
+Disallow the use of non-stable (Preview) Azure resources (elastic.v20230615preview.TagRule).
 
 Service: Elastic
 
@@ -17873,7 +17873,7 @@ Policy name: `azurenative-elastic-v20230701preview-monitor-disallow-preview-reso
 
 Code path: `azurenative.elastic.v20230701preview.Monitor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elastic.v20230701preview.Monitor).
+Disallow the use of non-stable (Preview) Azure resources (elastic.v20230701preview.Monitor).
 
 Service: Elastic
 
@@ -17895,7 +17895,7 @@ Policy name: `azurenative-elastic-v20230701preview-tagrule-disallow-preview-reso
 
 Code path: `azurenative.elastic.v20230701preview.TagRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elastic.v20230701preview.TagRule).
+Disallow the use of non-stable (Preview) Azure resources (elastic.v20230701preview.TagRule).
 
 Service: Elastic
 
@@ -17921,7 +17921,7 @@ Policy name: `azurenative-elasticsan-v20211120preview-elasticsan-disallow-previe
 
 Code path: `azurenative.elasticsan.v20211120preview.ElasticSan.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elasticsan.v20211120preview.ElasticSan).
+Disallow the use of non-stable (Preview) Azure resources (elasticsan.v20211120preview.ElasticSan).
 
 Service: Elasticsan
 
@@ -17943,7 +17943,7 @@ Policy name: `azurenative-elasticsan-v20211120preview-volume-disallow-preview-re
 
 Code path: `azurenative.elasticsan.v20211120preview.Volume.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elasticsan.v20211120preview.Volume).
+Disallow the use of non-stable (Preview) Azure resources (elasticsan.v20211120preview.Volume).
 
 Service: Elasticsan
 
@@ -17965,7 +17965,7 @@ Policy name: `azurenative-elasticsan-v20211120preview-volumegroup-disallow-previ
 
 Code path: `azurenative.elasticsan.v20211120preview.VolumeGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elasticsan.v20211120preview.VolumeGroup).
+Disallow the use of non-stable (Preview) Azure resources (elasticsan.v20211120preview.VolumeGroup).
 
 Service: Elasticsan
 
@@ -17989,7 +17989,7 @@ Policy name: `azurenative-elasticsan-v20221201preview-elasticsan-disallow-previe
 
 Code path: `azurenative.elasticsan.v20221201preview.ElasticSan.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elasticsan.v20221201preview.ElasticSan).
+Disallow the use of non-stable (Preview) Azure resources (elasticsan.v20221201preview.ElasticSan).
 
 Service: Elasticsan
 
@@ -18011,7 +18011,7 @@ Policy name: `azurenative-elasticsan-v20221201preview-privateendpointconnection-
 
 Code path: `azurenative.elasticsan.v20221201preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elasticsan.v20221201preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (elasticsan.v20221201preview.PrivateEndpointConnection).
 
 Service: Elasticsan
 
@@ -18033,7 +18033,7 @@ Policy name: `azurenative-elasticsan-v20221201preview-volume-disallow-preview-re
 
 Code path: `azurenative.elasticsan.v20221201preview.Volume.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elasticsan.v20221201preview.Volume).
+Disallow the use of non-stable (Preview) Azure resources (elasticsan.v20221201preview.Volume).
 
 Service: Elasticsan
 
@@ -18055,7 +18055,7 @@ Policy name: `azurenative-elasticsan-v20221201preview-volumegroup-disallow-previ
 
 Code path: `azurenative.elasticsan.v20221201preview.VolumeGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (elasticsan.v20221201preview.VolumeGroup).
+Disallow the use of non-stable (Preview) Azure resources (elasticsan.v20221201preview.VolumeGroup).
 
 Service: Elasticsan
 
@@ -18081,7 +18081,7 @@ Policy name: `azurenative-engagementfabric-v20180901preview-account-disallow-pre
 
 Code path: `azurenative.engagementfabric.v20180901preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (engagementfabric.v20180901preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (engagementfabric.v20180901preview.Account).
 
 Service: Engagementfabric
 
@@ -18103,7 +18103,7 @@ Policy name: `azurenative-engagementfabric-v20180901preview-channel-disallow-pre
 
 Code path: `azurenative.engagementfabric.v20180901preview.Channel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (engagementfabric.v20180901preview.Channel).
+Disallow the use of non-stable (Preview) Azure resources (engagementfabric.v20180901preview.Channel).
 
 Service: Engagementfabric
 
@@ -18129,7 +18129,7 @@ Policy name: `azurenative-eventgrid-v20200401preview-domain-disallow-preview-res
 
 Code path: `azurenative.eventgrid.v20200401preview.Domain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20200401preview.Domain).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20200401preview.Domain).
 
 Service: Eventgrid
 
@@ -18151,7 +18151,7 @@ Policy name: `azurenative-eventgrid-v20200401preview-topic-disallow-preview-reso
 
 Code path: `azurenative.eventgrid.v20200401preview.Topic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20200401preview.Topic).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20200401preview.Topic).
 
 Service: Eventgrid
 
@@ -18175,7 +18175,7 @@ Policy name: `azurenative-eventgrid-v20211015preview-eventchannel-disallow-previ
 
 Code path: `azurenative.eventgrid.v20211015preview.EventChannel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20211015preview.EventChannel).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20211015preview.EventChannel).
 
 Service: Eventgrid
 
@@ -18197,7 +18197,7 @@ Policy name: `azurenative-eventgrid-v20211015preview-partnerdestination-disallow
 
 Code path: `azurenative.eventgrid.v20211015preview.PartnerDestination.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20211015preview.PartnerDestination).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20211015preview.PartnerDestination).
 
 Service: Eventgrid
 
@@ -18219,7 +18219,7 @@ Policy name: `azurenative-eventgrid-v20211015preview-partnerregistration-disallo
 
 Code path: `azurenative.eventgrid.v20211015preview.PartnerRegistration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20211015preview.PartnerRegistration).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20211015preview.PartnerRegistration).
 
 Service: Eventgrid
 
@@ -18243,7 +18243,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-cacertificate-disallow-prev
 
 Code path: `azurenative.eventgrid.v20230601preview.CaCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.CaCertificate).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.CaCertificate).
 
 Service: Eventgrid
 
@@ -18265,7 +18265,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-channel-disallow-preview-re
 
 Code path: `azurenative.eventgrid.v20230601preview.Channel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.Channel).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.Channel).
 
 Service: Eventgrid
 
@@ -18287,7 +18287,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-client-disallow-preview-res
 
 Code path: `azurenative.eventgrid.v20230601preview.Client.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.Client).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.Client).
 
 Service: Eventgrid
 
@@ -18309,7 +18309,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-clientgroup-disallow-previe
 
 Code path: `azurenative.eventgrid.v20230601preview.ClientGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.ClientGroup).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.ClientGroup).
 
 Service: Eventgrid
 
@@ -18331,7 +18331,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-domain-disallow-preview-res
 
 Code path: `azurenative.eventgrid.v20230601preview.Domain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.Domain).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.Domain).
 
 Service: Eventgrid
 
@@ -18353,7 +18353,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-domaineventsubscription-dis
 
 Code path: `azurenative.eventgrid.v20230601preview.DomainEventSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.DomainEventSubscription).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.DomainEventSubscription).
 
 Service: Eventgrid
 
@@ -18375,7 +18375,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-domaintopic-disallow-previe
 
 Code path: `azurenative.eventgrid.v20230601preview.DomainTopic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.DomainTopic).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.DomainTopic).
 
 Service: Eventgrid
 
@@ -18397,7 +18397,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-domaintopiceventsubscriptio
 
 Code path: `azurenative.eventgrid.v20230601preview.DomainTopicEventSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.DomainTopicEventSubscription).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.DomainTopicEventSubscription).
 
 Service: Eventgrid
 
@@ -18419,7 +18419,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-eventsubscription-disallow-
 
 Code path: `azurenative.eventgrid.v20230601preview.EventSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.EventSubscription).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.EventSubscription).
 
 Service: Eventgrid
 
@@ -18441,7 +18441,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-namespace-disallow-preview-
 
 Code path: `azurenative.eventgrid.v20230601preview.Namespace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.Namespace).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.Namespace).
 
 Service: Eventgrid
 
@@ -18463,7 +18463,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-namespacetopic-disallow-pre
 
 Code path: `azurenative.eventgrid.v20230601preview.NamespaceTopic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.NamespaceTopic).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.NamespaceTopic).
 
 Service: Eventgrid
 
@@ -18485,7 +18485,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-namespacetopiceventsubscrip
 
 Code path: `azurenative.eventgrid.v20230601preview.NamespaceTopicEventSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.NamespaceTopicEventSubscription).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.NamespaceTopicEventSubscription).
 
 Service: Eventgrid
 
@@ -18507,7 +18507,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-partnerconfiguration-disall
 
 Code path: `azurenative.eventgrid.v20230601preview.PartnerConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.PartnerConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.PartnerConfiguration).
 
 Service: Eventgrid
 
@@ -18529,7 +18529,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-partnerdestination-disallow
 
 Code path: `azurenative.eventgrid.v20230601preview.PartnerDestination.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.PartnerDestination).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.PartnerDestination).
 
 Service: Eventgrid
 
@@ -18551,7 +18551,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-partnernamespace-disallow-p
 
 Code path: `azurenative.eventgrid.v20230601preview.PartnerNamespace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.PartnerNamespace).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.PartnerNamespace).
 
 Service: Eventgrid
 
@@ -18573,7 +18573,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-partnerregistration-disallo
 
 Code path: `azurenative.eventgrid.v20230601preview.PartnerRegistration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.PartnerRegistration).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.PartnerRegistration).
 
 Service: Eventgrid
 
@@ -18595,7 +18595,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-partnertopic-disallow-previ
 
 Code path: `azurenative.eventgrid.v20230601preview.PartnerTopic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.PartnerTopic).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.PartnerTopic).
 
 Service: Eventgrid
 
@@ -18617,7 +18617,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-partnertopiceventsubscripti
 
 Code path: `azurenative.eventgrid.v20230601preview.PartnerTopicEventSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.PartnerTopicEventSubscription).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.PartnerTopicEventSubscription).
 
 Service: Eventgrid
 
@@ -18639,7 +18639,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-permissionbinding-disallow-
 
 Code path: `azurenative.eventgrid.v20230601preview.PermissionBinding.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.PermissionBinding).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.PermissionBinding).
 
 Service: Eventgrid
 
@@ -18661,7 +18661,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-privateendpointconnection-d
 
 Code path: `azurenative.eventgrid.v20230601preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.PrivateEndpointConnection).
 
 Service: Eventgrid
 
@@ -18683,7 +18683,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-systemtopic-disallow-previe
 
 Code path: `azurenative.eventgrid.v20230601preview.SystemTopic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.SystemTopic).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.SystemTopic).
 
 Service: Eventgrid
 
@@ -18705,7 +18705,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-systemtopiceventsubscriptio
 
 Code path: `azurenative.eventgrid.v20230601preview.SystemTopicEventSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.SystemTopicEventSubscription).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.SystemTopicEventSubscription).
 
 Service: Eventgrid
 
@@ -18727,7 +18727,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-topic-disallow-preview-reso
 
 Code path: `azurenative.eventgrid.v20230601preview.Topic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.Topic).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.Topic).
 
 Service: Eventgrid
 
@@ -18749,7 +18749,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-topiceventsubscription-disa
 
 Code path: `azurenative.eventgrid.v20230601preview.TopicEventSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.TopicEventSubscription).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.TopicEventSubscription).
 
 Service: Eventgrid
 
@@ -18771,7 +18771,7 @@ Policy name: `azurenative-eventgrid-v20230601preview-topicspace-disallow-preview
 
 Code path: `azurenative.eventgrid.v20230601preview.TopicSpace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventgrid.v20230601preview.TopicSpace).
+Disallow the use of non-stable (Preview) Azure resources (eventgrid.v20230601preview.TopicSpace).
 
 Service: Eventgrid
 
@@ -18797,7 +18797,7 @@ Policy name: `azurenative-eventhub-v20180101preview-namespaceipfilterrule-disall
 
 Code path: `azurenative.eventhub.v20180101preview.NamespaceIpFilterRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20180101preview.NamespaceIpFilterRule).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20180101preview.NamespaceIpFilterRule).
 
 Service: Eventhub
 
@@ -18819,7 +18819,7 @@ Policy name: `azurenative-eventhub-v20180101preview-namespacevirtualnetworkrule-
 
 Code path: `azurenative.eventhub.v20180101preview.NamespaceVirtualNetworkRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20180101preview.NamespaceVirtualNetworkRule).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20180101preview.NamespaceVirtualNetworkRule).
 
 Service: Eventhub
 
@@ -18843,7 +18843,7 @@ Policy name: `azurenative-eventhub-v20221001preview-applicationgroup-disallow-pr
 
 Code path: `azurenative.eventhub.v20221001preview.ApplicationGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.ApplicationGroup).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.ApplicationGroup).
 
 Service: Eventhub
 
@@ -18865,7 +18865,7 @@ Policy name: `azurenative-eventhub-v20221001preview-cluster-disallow-preview-res
 
 Code path: `azurenative.eventhub.v20221001preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.Cluster).
 
 Service: Eventhub
 
@@ -18887,7 +18887,7 @@ Policy name: `azurenative-eventhub-v20221001preview-consumergroup-disallow-previ
 
 Code path: `azurenative.eventhub.v20221001preview.ConsumerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.ConsumerGroup).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.ConsumerGroup).
 
 Service: Eventhub
 
@@ -18909,7 +18909,7 @@ Policy name: `azurenative-eventhub-v20221001preview-disasterrecoveryconfig-disal
 
 Code path: `azurenative.eventhub.v20221001preview.DisasterRecoveryConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.DisasterRecoveryConfig).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.DisasterRecoveryConfig).
 
 Service: Eventhub
 
@@ -18931,7 +18931,7 @@ Policy name: `azurenative-eventhub-v20221001preview-eventhub-disallow-preview-re
 
 Code path: `azurenative.eventhub.v20221001preview.EventHub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.EventHub).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.EventHub).
 
 Service: Eventhub
 
@@ -18953,7 +18953,7 @@ Policy name: `azurenative-eventhub-v20221001preview-eventhubauthorizationrule-di
 
 Code path: `azurenative.eventhub.v20221001preview.EventHubAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.EventHubAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.EventHubAuthorizationRule).
 
 Service: Eventhub
 
@@ -18975,7 +18975,7 @@ Policy name: `azurenative-eventhub-v20221001preview-namespace-disallow-preview-r
 
 Code path: `azurenative.eventhub.v20221001preview.Namespace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.Namespace).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.Namespace).
 
 Service: Eventhub
 
@@ -18997,7 +18997,7 @@ Policy name: `azurenative-eventhub-v20221001preview-namespaceauthorizationrule-d
 
 Code path: `azurenative.eventhub.v20221001preview.NamespaceAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.NamespaceAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.NamespaceAuthorizationRule).
 
 Service: Eventhub
 
@@ -19019,7 +19019,7 @@ Policy name: `azurenative-eventhub-v20221001preview-namespacenetworkruleset-disa
 
 Code path: `azurenative.eventhub.v20221001preview.NamespaceNetworkRuleSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.NamespaceNetworkRuleSet).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.NamespaceNetworkRuleSet).
 
 Service: Eventhub
 
@@ -19041,7 +19041,7 @@ Policy name: `azurenative-eventhub-v20221001preview-privateendpointconnection-di
 
 Code path: `azurenative.eventhub.v20221001preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.PrivateEndpointConnection).
 
 Service: Eventhub
 
@@ -19063,7 +19063,7 @@ Policy name: `azurenative-eventhub-v20221001preview-schemaregistry-disallow-prev
 
 Code path: `azurenative.eventhub.v20221001preview.SchemaRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20221001preview.SchemaRegistry).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20221001preview.SchemaRegistry).
 
 Service: Eventhub
 
@@ -19087,7 +19087,7 @@ Policy name: `azurenative-eventhub-v20230101preview-applicationgroup-disallow-pr
 
 Code path: `azurenative.eventhub.v20230101preview.ApplicationGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.ApplicationGroup).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.ApplicationGroup).
 
 Service: Eventhub
 
@@ -19109,7 +19109,7 @@ Policy name: `azurenative-eventhub-v20230101preview-cluster-disallow-preview-res
 
 Code path: `azurenative.eventhub.v20230101preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.Cluster).
 
 Service: Eventhub
 
@@ -19131,7 +19131,7 @@ Policy name: `azurenative-eventhub-v20230101preview-consumergroup-disallow-previ
 
 Code path: `azurenative.eventhub.v20230101preview.ConsumerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.ConsumerGroup).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.ConsumerGroup).
 
 Service: Eventhub
 
@@ -19153,7 +19153,7 @@ Policy name: `azurenative-eventhub-v20230101preview-disasterrecoveryconfig-disal
 
 Code path: `azurenative.eventhub.v20230101preview.DisasterRecoveryConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.DisasterRecoveryConfig).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.DisasterRecoveryConfig).
 
 Service: Eventhub
 
@@ -19175,7 +19175,7 @@ Policy name: `azurenative-eventhub-v20230101preview-eventhub-disallow-preview-re
 
 Code path: `azurenative.eventhub.v20230101preview.EventHub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.EventHub).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.EventHub).
 
 Service: Eventhub
 
@@ -19197,7 +19197,7 @@ Policy name: `azurenative-eventhub-v20230101preview-eventhubauthorizationrule-di
 
 Code path: `azurenative.eventhub.v20230101preview.EventHubAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.EventHubAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.EventHubAuthorizationRule).
 
 Service: Eventhub
 
@@ -19219,7 +19219,7 @@ Policy name: `azurenative-eventhub-v20230101preview-namespace-disallow-preview-r
 
 Code path: `azurenative.eventhub.v20230101preview.Namespace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.Namespace).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.Namespace).
 
 Service: Eventhub
 
@@ -19241,7 +19241,7 @@ Policy name: `azurenative-eventhub-v20230101preview-namespaceauthorizationrule-d
 
 Code path: `azurenative.eventhub.v20230101preview.NamespaceAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.NamespaceAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.NamespaceAuthorizationRule).
 
 Service: Eventhub
 
@@ -19263,7 +19263,7 @@ Policy name: `azurenative-eventhub-v20230101preview-namespacenetworkruleset-disa
 
 Code path: `azurenative.eventhub.v20230101preview.NamespaceNetworkRuleSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.NamespaceNetworkRuleSet).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.NamespaceNetworkRuleSet).
 
 Service: Eventhub
 
@@ -19285,7 +19285,7 @@ Policy name: `azurenative-eventhub-v20230101preview-privateendpointconnection-di
 
 Code path: `azurenative.eventhub.v20230101preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.PrivateEndpointConnection).
 
 Service: Eventhub
 
@@ -19307,7 +19307,7 @@ Policy name: `azurenative-eventhub-v20230101preview-schemaregistry-disallow-prev
 
 Code path: `azurenative.eventhub.v20230101preview.SchemaRegistry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (eventhub.v20230101preview.SchemaRegistry).
+Disallow the use of non-stable (Preview) Azure resources (eventhub.v20230101preview.SchemaRegistry).
 
 Service: Eventhub
 
@@ -19333,7 +19333,7 @@ Policy name: `azurenative-extendedlocation-v20210831preview-customlocation-disal
 
 Code path: `azurenative.extendedlocation.v20210831preview.CustomLocation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (extendedlocation.v20210831preview.CustomLocation).
+Disallow the use of non-stable (Preview) Azure resources (extendedlocation.v20210831preview.CustomLocation).
 
 Service: Extendedlocation
 
@@ -19355,7 +19355,7 @@ Policy name: `azurenative-extendedlocation-v20210831preview-resourcesyncrule-dis
 
 Code path: `azurenative.extendedlocation.v20210831preview.ResourceSyncRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (extendedlocation.v20210831preview.ResourceSyncRule).
+Disallow the use of non-stable (Preview) Azure resources (extendedlocation.v20210831preview.ResourceSyncRule).
 
 Service: Extendedlocation
 
@@ -19381,7 +19381,7 @@ Policy name: `azurenative-fluidrelay-v20210615preview-fluidrelayserver-disallow-
 
 Code path: `azurenative.fluidrelay.v20210615preview.FluidRelayServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (fluidrelay.v20210615preview.FluidRelayServer).
+Disallow the use of non-stable (Preview) Azure resources (fluidrelay.v20210615preview.FluidRelayServer).
 
 Service: Fluidrelay
 
@@ -19407,7 +19407,7 @@ Policy name: `azurenative-hanaonazure-v20171103preview-hanainstance-disallow-pre
 
 Code path: `azurenative.hanaonazure.v20171103preview.HanaInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hanaonazure.v20171103preview.HanaInstance).
+Disallow the use of non-stable (Preview) Azure resources (hanaonazure.v20171103preview.HanaInstance).
 
 Service: Hanaonazure
 
@@ -19431,7 +19431,7 @@ Policy name: `azurenative-hanaonazure-v20200207preview-providerinstance-disallow
 
 Code path: `azurenative.hanaonazure.v20200207preview.ProviderInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hanaonazure.v20200207preview.ProviderInstance).
+Disallow the use of non-stable (Preview) Azure resources (hanaonazure.v20200207preview.ProviderInstance).
 
 Service: Hanaonazure
 
@@ -19453,7 +19453,7 @@ Policy name: `azurenative-hanaonazure-v20200207preview-sapmonitor-disallow-previ
 
 Code path: `azurenative.hanaonazure.v20200207preview.SapMonitor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hanaonazure.v20200207preview.SapMonitor).
+Disallow the use of non-stable (Preview) Azure resources (hanaonazure.v20200207preview.SapMonitor).
 
 Service: Hanaonazure
 
@@ -19479,7 +19479,7 @@ Policy name: `azurenative-hardwaresecuritymodules-v20220831preview-cloudhsmclust
 
 Code path: `azurenative.hardwaresecuritymodules.v20220831preview.CloudHsmCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hardwaresecuritymodules.v20220831preview.CloudHsmCluster).
+Disallow the use of non-stable (Preview) Azure resources (hardwaresecuritymodules.v20220831preview.CloudHsmCluster).
 
 Service: Hardwaresecuritymodules
 
@@ -19501,7 +19501,7 @@ Policy name: `azurenative-hardwaresecuritymodules-v20220831preview-cloudhsmclust
 
 Code path: `azurenative.hardwaresecuritymodules.v20220831preview.CloudHsmClusterPrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hardwaresecuritymodules.v20220831preview.CloudHsmClusterPrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (hardwaresecuritymodules.v20220831preview.CloudHsmClusterPrivateEndpointConnection).
 
 Service: Hardwaresecuritymodules
 
@@ -19527,7 +19527,7 @@ Policy name: `azurenative-hdinsight-v20230415preview-application-disallow-previe
 
 Code path: `azurenative.hdinsight.v20230415preview.Application.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hdinsight.v20230415preview.Application).
+Disallow the use of non-stable (Preview) Azure resources (hdinsight.v20230415preview.Application).
 
 Service: Hdinsight
 
@@ -19549,7 +19549,7 @@ Policy name: `azurenative-hdinsight-v20230415preview-cluster-disallow-preview-re
 
 Code path: `azurenative.hdinsight.v20230415preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hdinsight.v20230415preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (hdinsight.v20230415preview.Cluster).
 
 Service: Hdinsight
 
@@ -19571,7 +19571,7 @@ Policy name: `azurenative-hdinsight-v20230415preview-privateendpointconnection-d
 
 Code path: `azurenative.hdinsight.v20230415preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hdinsight.v20230415preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (hdinsight.v20230415preview.PrivateEndpointConnection).
 
 Service: Hdinsight
 
@@ -19595,7 +19595,7 @@ Policy name: `azurenative-hdinsight-v20230601preview-cluster-disallow-preview-re
 
 Code path: `azurenative.hdinsight.v20230601preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hdinsight.v20230601preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (hdinsight.v20230601preview.Cluster).
 
 Service: Hdinsight
 
@@ -19617,7 +19617,7 @@ Policy name: `azurenative-hdinsight-v20230601preview-clusterpool-disallow-previe
 
 Code path: `azurenative.hdinsight.v20230601preview.ClusterPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hdinsight.v20230601preview.ClusterPool).
+Disallow the use of non-stable (Preview) Azure resources (hdinsight.v20230601preview.ClusterPool).
 
 Service: Hdinsight
 
@@ -19641,7 +19641,7 @@ Policy name: `azurenative-hdinsight-v20230815preview-application-disallow-previe
 
 Code path: `azurenative.hdinsight.v20230815preview.Application.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hdinsight.v20230815preview.Application).
+Disallow the use of non-stable (Preview) Azure resources (hdinsight.v20230815preview.Application).
 
 Service: Hdinsight
 
@@ -19663,7 +19663,7 @@ Policy name: `azurenative-hdinsight-v20230815preview-cluster-disallow-preview-re
 
 Code path: `azurenative.hdinsight.v20230815preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hdinsight.v20230815preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (hdinsight.v20230815preview.Cluster).
 
 Service: Hdinsight
 
@@ -19685,7 +19685,7 @@ Policy name: `azurenative-hdinsight-v20230815preview-privateendpointconnection-d
 
 Code path: `azurenative.hdinsight.v20230815preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hdinsight.v20230815preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (hdinsight.v20230815preview.PrivateEndpointConnection).
 
 Service: Hdinsight
 
@@ -19711,7 +19711,7 @@ Policy name: `azurenative-healthbot-v20201208preview-bot-disallow-preview-resour
 
 Code path: `azurenative.healthbot.v20201208preview.Bot.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (healthbot.v20201208preview.Bot).
+Disallow the use of non-stable (Preview) Azure resources (healthbot.v20201208preview.Bot).
 
 Service: Healthbot
 
@@ -19737,7 +19737,7 @@ Policy name: `azurenative-healthcareapis-v20221001preview-analyticsconnector-dis
 
 Code path: `azurenative.healthcareapis.v20221001preview.AnalyticsConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (healthcareapis.v20221001preview.AnalyticsConnector).
+Disallow the use of non-stable (Preview) Azure resources (healthcareapis.v20221001preview.AnalyticsConnector).
 
 Service: Healthcareapis
 
@@ -19763,7 +19763,7 @@ Policy name: `azurenative-hybridcloud-v20230101preview-cloudconnection-disallow-
 
 Code path: `azurenative.hybridcloud.v20230101preview.CloudConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcloud.v20230101preview.CloudConnection).
+Disallow the use of non-stable (Preview) Azure resources (hybridcloud.v20230101preview.CloudConnection).
 
 Service: Hybridcloud
 
@@ -19785,7 +19785,7 @@ Policy name: `azurenative-hybridcloud-v20230101preview-cloudconnector-disallow-p
 
 Code path: `azurenative.hybridcloud.v20230101preview.CloudConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcloud.v20230101preview.CloudConnector).
+Disallow the use of non-stable (Preview) Azure resources (hybridcloud.v20230101preview.CloudConnector).
 
 Service: Hybridcloud
 
@@ -19811,7 +19811,7 @@ Policy name: `azurenative-hybridcompute-v20200815preview-machine-disallow-previe
 
 Code path: `azurenative.hybridcompute.v20200815preview.Machine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20200815preview.Machine).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20200815preview.Machine).
 
 Service: Hybridcompute
 
@@ -19833,7 +19833,7 @@ Policy name: `azurenative-hybridcompute-v20200815preview-machineextension-disall
 
 Code path: `azurenative.hybridcompute.v20200815preview.MachineExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20200815preview.MachineExtension).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20200815preview.MachineExtension).
 
 Service: Hybridcompute
 
@@ -19855,7 +19855,7 @@ Policy name: `azurenative-hybridcompute-v20200815preview-privateendpointconnecti
 
 Code path: `azurenative.hybridcompute.v20200815preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20200815preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20200815preview.PrivateEndpointConnection).
 
 Service: Hybridcompute
 
@@ -19877,7 +19877,7 @@ Policy name: `azurenative-hybridcompute-v20200815preview-privatelinkscope-disall
 
 Code path: `azurenative.hybridcompute.v20200815preview.PrivateLinkScope.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20200815preview.PrivateLinkScope).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20200815preview.PrivateLinkScope).
 
 Service: Hybridcompute
 
@@ -19899,7 +19899,7 @@ Policy name: `azurenative-hybridcompute-v20200815preview-privatelinkscopedresour
 
 Code path: `azurenative.hybridcompute.v20200815preview.PrivateLinkScopedResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20200815preview.PrivateLinkScopedResource).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20200815preview.PrivateLinkScopedResource).
 
 Service: Hybridcompute
 
@@ -19923,7 +19923,7 @@ Policy name: `azurenative-hybridcompute-v20220510preview-machine-disallow-previe
 
 Code path: `azurenative.hybridcompute.v20220510preview.Machine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20220510preview.Machine).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20220510preview.Machine).
 
 Service: Hybridcompute
 
@@ -19945,7 +19945,7 @@ Policy name: `azurenative-hybridcompute-v20220510preview-machineextension-disall
 
 Code path: `azurenative.hybridcompute.v20220510preview.MachineExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20220510preview.MachineExtension).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20220510preview.MachineExtension).
 
 Service: Hybridcompute
 
@@ -19969,7 +19969,7 @@ Policy name: `azurenative-hybridcompute-v20230620preview-license-disallow-previe
 
 Code path: `azurenative.hybridcompute.v20230620preview.License.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20230620preview.License).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20230620preview.License).
 
 Service: Hybridcompute
 
@@ -19991,7 +19991,7 @@ Policy name: `azurenative-hybridcompute-v20230620preview-licenseprofile-disallow
 
 Code path: `azurenative.hybridcompute.v20230620preview.LicenseProfile.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20230620preview.LicenseProfile).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20230620preview.LicenseProfile).
 
 Service: Hybridcompute
 
@@ -20013,7 +20013,7 @@ Policy name: `azurenative-hybridcompute-v20230620preview-machine-disallow-previe
 
 Code path: `azurenative.hybridcompute.v20230620preview.Machine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20230620preview.Machine).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20230620preview.Machine).
 
 Service: Hybridcompute
 
@@ -20035,7 +20035,7 @@ Policy name: `azurenative-hybridcompute-v20230620preview-machineextension-disall
 
 Code path: `azurenative.hybridcompute.v20230620preview.MachineExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20230620preview.MachineExtension).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20230620preview.MachineExtension).
 
 Service: Hybridcompute
 
@@ -20057,7 +20057,7 @@ Policy name: `azurenative-hybridcompute-v20230620preview-privateendpointconnecti
 
 Code path: `azurenative.hybridcompute.v20230620preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20230620preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20230620preview.PrivateEndpointConnection).
 
 Service: Hybridcompute
 
@@ -20079,7 +20079,7 @@ Policy name: `azurenative-hybridcompute-v20230620preview-privatelinkscope-disall
 
 Code path: `azurenative.hybridcompute.v20230620preview.PrivateLinkScope.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcompute.v20230620preview.PrivateLinkScope).
+Disallow the use of non-stable (Preview) Azure resources (hybridcompute.v20230620preview.PrivateLinkScope).
 
 Service: Hybridcompute
 
@@ -20105,7 +20105,7 @@ Policy name: `azurenative-hybridconnectivity-v20220501preview-endpoint-disallow-
 
 Code path: `azurenative.hybridconnectivity.v20220501preview.Endpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridconnectivity.v20220501preview.Endpoint).
+Disallow the use of non-stable (Preview) Azure resources (hybridconnectivity.v20220501preview.Endpoint).
 
 Service: Hybridconnectivity
 
@@ -20131,7 +20131,7 @@ Policy name: `azurenative-hybridcontainerservice-v20220501preview-agentpool-disa
 
 Code path: `azurenative.hybridcontainerservice.v20220501preview.AgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcontainerservice.v20220501preview.AgentPool).
+Disallow the use of non-stable (Preview) Azure resources (hybridcontainerservice.v20220501preview.AgentPool).
 
 Service: Hybridcontainerservice
 
@@ -20153,7 +20153,7 @@ Policy name: `azurenative-hybridcontainerservice-v20220501preview-hybrididentity
 
 Code path: `azurenative.hybridcontainerservice.v20220501preview.HybridIdentityMetadatum.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcontainerservice.v20220501preview.HybridIdentityMetadatum).
+Disallow the use of non-stable (Preview) Azure resources (hybridcontainerservice.v20220501preview.HybridIdentityMetadatum).
 
 Service: Hybridcontainerservice
 
@@ -20175,7 +20175,7 @@ Policy name: `azurenative-hybridcontainerservice-v20220501preview-provisionedclu
 
 Code path: `azurenative.hybridcontainerservice.v20220501preview.ProvisionedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcontainerservice.v20220501preview.ProvisionedCluster).
+Disallow the use of non-stable (Preview) Azure resources (hybridcontainerservice.v20220501preview.ProvisionedCluster).
 
 Service: Hybridcontainerservice
 
@@ -20199,7 +20199,7 @@ Policy name: `azurenative-hybridcontainerservice-v20220901preview-agentpool-disa
 
 Code path: `azurenative.hybridcontainerservice.v20220901preview.AgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcontainerservice.v20220901preview.AgentPool).
+Disallow the use of non-stable (Preview) Azure resources (hybridcontainerservice.v20220901preview.AgentPool).
 
 Service: Hybridcontainerservice
 
@@ -20221,7 +20221,7 @@ Policy name: `azurenative-hybridcontainerservice-v20220901preview-hybrididentity
 
 Code path: `azurenative.hybridcontainerservice.v20220901preview.HybridIdentityMetadatum.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcontainerservice.v20220901preview.HybridIdentityMetadatum).
+Disallow the use of non-stable (Preview) Azure resources (hybridcontainerservice.v20220901preview.HybridIdentityMetadatum).
 
 Service: Hybridcontainerservice
 
@@ -20243,7 +20243,7 @@ Policy name: `azurenative-hybridcontainerservice-v20220901preview-provisionedclu
 
 Code path: `azurenative.hybridcontainerservice.v20220901preview.ProvisionedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcontainerservice.v20220901preview.ProvisionedCluster).
+Disallow the use of non-stable (Preview) Azure resources (hybridcontainerservice.v20220901preview.ProvisionedCluster).
 
 Service: Hybridcontainerservice
 
@@ -20265,7 +20265,7 @@ Policy name: `azurenative-hybridcontainerservice-v20220901preview-storagespacere
 
 Code path: `azurenative.hybridcontainerservice.v20220901preview.StorageSpaceRetrieve.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcontainerservice.v20220901preview.StorageSpaceRetrieve).
+Disallow the use of non-stable (Preview) Azure resources (hybridcontainerservice.v20220901preview.StorageSpaceRetrieve).
 
 Service: Hybridcontainerservice
 
@@ -20287,7 +20287,7 @@ Policy name: `azurenative-hybridcontainerservice-v20220901preview-virtualnetwork
 
 Code path: `azurenative.hybridcontainerservice.v20220901preview.VirtualNetworkRetrieve.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridcontainerservice.v20220901preview.VirtualNetworkRetrieve).
+Disallow the use of non-stable (Preview) Azure resources (hybridcontainerservice.v20220901preview.VirtualNetworkRetrieve).
 
 Service: Hybridcontainerservice
 
@@ -20313,7 +20313,7 @@ Policy name: `azurenative-hybridnetwork-vendorskupreview-disallow-preview-resour
 
 Code path: `azurenative.hybridnetwork.VendorSkuPreview.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridnetwork.VendorSkuPreview).
+Disallow the use of non-stable (Preview) Azure resources (hybridnetwork.VendorSkuPreview).
 
 Service: Hybridnetwork
 
@@ -20337,7 +20337,7 @@ Policy name: `azurenative-hybridnetwork-v20220101preview-device-disallow-preview
 
 Code path: `azurenative.hybridnetwork.v20220101preview.Device.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridnetwork.v20220101preview.Device).
+Disallow the use of non-stable (Preview) Azure resources (hybridnetwork.v20220101preview.Device).
 
 Service: Hybridnetwork
 
@@ -20359,7 +20359,7 @@ Policy name: `azurenative-hybridnetwork-v20220101preview-networkfunction-disallo
 
 Code path: `azurenative.hybridnetwork.v20220101preview.NetworkFunction.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridnetwork.v20220101preview.NetworkFunction).
+Disallow the use of non-stable (Preview) Azure resources (hybridnetwork.v20220101preview.NetworkFunction).
 
 Service: Hybridnetwork
 
@@ -20381,7 +20381,7 @@ Policy name: `azurenative-hybridnetwork-v20220101preview-vendor-disallow-preview
 
 Code path: `azurenative.hybridnetwork.v20220101preview.Vendor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridnetwork.v20220101preview.Vendor).
+Disallow the use of non-stable (Preview) Azure resources (hybridnetwork.v20220101preview.Vendor).
 
 Service: Hybridnetwork
 
@@ -20403,7 +20403,7 @@ Policy name: `azurenative-hybridnetwork-v20220101preview-vendorskupreview-disall
 
 Code path: `azurenative.hybridnetwork.v20220101preview.VendorSkuPreview.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridnetwork.v20220101preview.VendorSkuPreview).
+Disallow the use of non-stable (Preview) Azure resources (hybridnetwork.v20220101preview.VendorSkuPreview).
 
 Service: Hybridnetwork
 
@@ -20425,7 +20425,7 @@ Policy name: `azurenative-hybridnetwork-v20220101preview-vendorskus-disallow-pre
 
 Code path: `azurenative.hybridnetwork.v20220101preview.VendorSkus.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (hybridnetwork.v20220101preview.VendorSkus).
+Disallow the use of non-stable (Preview) Azure resources (hybridnetwork.v20220101preview.VendorSkus).
 
 Service: Hybridnetwork
 
@@ -20451,7 +20451,7 @@ Policy name: `azurenative-insights-v20170501preview-subscriptiondiagnosticsettin
 
 Code path: `azurenative.insights.v20170501preview.SubscriptionDiagnosticSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20170501preview.SubscriptionDiagnosticSetting).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20170501preview.SubscriptionDiagnosticSetting).
 
 Service: Insights
 
@@ -20475,7 +20475,7 @@ Policy name: `azurenative-insights-v20180501preview-proactivedetectionconfigurat
 
 Code path: `azurenative.insights.v20180501preview.ProactiveDetectionConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20180501preview.ProactiveDetectionConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20180501preview.ProactiveDetectionConfiguration).
 
 Service: Insights
 
@@ -20499,7 +20499,7 @@ Policy name: `azurenative-insights-v20180601preview-guestdiagnosticssetting-disa
 
 Code path: `azurenative.insights.v20180601preview.GuestDiagnosticsSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20180601preview.GuestDiagnosticsSetting).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20180601preview.GuestDiagnosticsSetting).
 
 Service: Insights
 
@@ -20521,7 +20521,7 @@ Policy name: `azurenative-insights-v20180601preview-guestdiagnosticssettingsasso
 
 Code path: `azurenative.insights.v20180601preview.GuestDiagnosticsSettingsAssociation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20180601preview.GuestDiagnosticsSettingsAssociation).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20180601preview.GuestDiagnosticsSettingsAssociation).
 
 Service: Insights
 
@@ -20545,7 +20545,7 @@ Policy name: `azurenative-insights-v20191017preview-privateendpointconnection-di
 
 Code path: `azurenative.insights.v20191017preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20191017preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20191017preview.PrivateEndpointConnection).
 
 Service: Insights
 
@@ -20567,7 +20567,7 @@ Policy name: `azurenative-insights-v20191017preview-privatelinkscope-disallow-pr
 
 Code path: `azurenative.insights.v20191017preview.PrivateLinkScope.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20191017preview.PrivateLinkScope).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20191017preview.PrivateLinkScope).
 
 Service: Insights
 
@@ -20591,7 +20591,7 @@ Policy name: `azurenative-insights-v20200101preview-managementgroupdiagnosticset
 
 Code path: `azurenative.insights.v20200101preview.ManagementGroupDiagnosticSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20200101preview.ManagementGroupDiagnosticSetting).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20200101preview.ManagementGroupDiagnosticSetting).
 
 Service: Insights
 
@@ -20615,7 +20615,7 @@ Policy name: `azurenative-insights-v20200202preview-component-disallow-preview-r
 
 Code path: `azurenative.insights.v20200202preview.Component.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20200202preview.Component).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20200202preview.Component).
 
 Service: Insights
 
@@ -20639,7 +20639,7 @@ Policy name: `azurenative-insights-v20200301preview-componentlinkedstorageaccoun
 
 Code path: `azurenative.insights.v20200301preview.ComponentLinkedStorageAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20200301preview.ComponentLinkedStorageAccount).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20200301preview.ComponentLinkedStorageAccount).
 
 Service: Insights
 
@@ -20663,7 +20663,7 @@ Policy name: `azurenative-insights-v20200501preview-scheduledqueryrule-disallow-
 
 Code path: `azurenative.insights.v20200501preview.ScheduledQueryRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20200501preview.ScheduledQueryRule).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20200501preview.ScheduledQueryRule).
 
 Service: Insights
 
@@ -20687,7 +20687,7 @@ Policy name: `azurenative-insights-v20201005preview-webtest-disallow-preview-res
 
 Code path: `azurenative.insights.v20201005preview.WebTest.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20201005preview.WebTest).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20201005preview.WebTest).
 
 Service: Insights
 
@@ -20711,7 +20711,7 @@ Policy name: `azurenative-insights-v20210501preview-diagnosticsetting-disallow-p
 
 Code path: `azurenative.insights.v20210501preview.DiagnosticSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20210501preview.DiagnosticSetting).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20210501preview.DiagnosticSetting).
 
 Service: Insights
 
@@ -20733,7 +20733,7 @@ Policy name: `azurenative-insights-v20210501preview-managementgroupdiagnosticset
 
 Code path: `azurenative.insights.v20210501preview.ManagementGroupDiagnosticSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20210501preview.ManagementGroupDiagnosticSetting).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20210501preview.ManagementGroupDiagnosticSetting).
 
 Service: Insights
 
@@ -20755,7 +20755,7 @@ Policy name: `azurenative-insights-v20210501preview-subscriptiondiagnosticsettin
 
 Code path: `azurenative.insights.v20210501preview.SubscriptionDiagnosticSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20210501preview.SubscriptionDiagnosticSetting).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20210501preview.SubscriptionDiagnosticSetting).
 
 Service: Insights
 
@@ -20779,7 +20779,7 @@ Policy name: `azurenative-insights-v20210701preview-privateendpointconnection-di
 
 Code path: `azurenative.insights.v20210701preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20210701preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20210701preview.PrivateEndpointConnection).
 
 Service: Insights
 
@@ -20801,7 +20801,7 @@ Policy name: `azurenative-insights-v20210701preview-privatelinkscope-disallow-pr
 
 Code path: `azurenative.insights.v20210701preview.PrivateLinkScope.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20210701preview.PrivateLinkScope).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20210701preview.PrivateLinkScope).
 
 Service: Insights
 
@@ -20823,7 +20823,7 @@ Policy name: `azurenative-insights-v20210701preview-privatelinkscopedresource-di
 
 Code path: `azurenative.insights.v20210701preview.PrivateLinkScopedResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20210701preview.PrivateLinkScopedResource).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20210701preview.PrivateLinkScopedResource).
 
 Service: Insights
 
@@ -20847,7 +20847,7 @@ Policy name: `azurenative-insights-v20220801preview-scheduledqueryrule-disallow-
 
 Code path: `azurenative.insights.v20220801preview.ScheduledQueryRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20220801preview.ScheduledQueryRule).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20220801preview.ScheduledQueryRule).
 
 Service: Insights
 
@@ -20871,7 +20871,7 @@ Policy name: `azurenative-insights-v20230101preview-activitylogalert-disallow-pr
 
 Code path: `azurenative.insights.v20230101preview.ActivityLogAlert.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20230101preview.ActivityLogAlert).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20230101preview.ActivityLogAlert).
 
 Service: Insights
 
@@ -20895,7 +20895,7 @@ Policy name: `azurenative-insights-v20230315preview-scheduledqueryrule-disallow-
 
 Code path: `azurenative.insights.v20230315preview.ScheduledQueryRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20230315preview.ScheduledQueryRule).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20230315preview.ScheduledQueryRule).
 
 Service: Insights
 
@@ -20919,7 +20919,7 @@ Policy name: `azurenative-insights-v20230501preview-tenantactiongroup-disallow-p
 
 Code path: `azurenative.insights.v20230501preview.TenantActionGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (insights.v20230501preview.TenantActionGroup).
+Disallow the use of non-stable (Preview) Azure resources (insights.v20230501preview.TenantActionGroup).
 
 Service: Insights
 
@@ -20945,7 +20945,7 @@ Policy name: `azurenative-intune-v20150114preview-androidmampolicybyname-disallo
 
 Code path: `azurenative.intune.v20150114preview.AndroidMAMPolicyByName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (intune.v20150114preview.AndroidMAMPolicyByName).
+Disallow the use of non-stable (Preview) Azure resources (intune.v20150114preview.AndroidMAMPolicyByName).
 
 Service: Intune
 
@@ -20967,7 +20967,7 @@ Policy name: `azurenative-intune-v20150114preview-iomampolicybyname-disallow-pre
 
 Code path: `azurenative.intune.v20150114preview.IoMAMPolicyByName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (intune.v20150114preview.IoMAMPolicyByName).
+Disallow the use of non-stable (Preview) Azure resources (intune.v20150114preview.IoMAMPolicyByName).
 
 Service: Intune
 
@@ -20991,7 +20991,7 @@ Policy name: `azurenative-intune-v20150114privatepreview-androidmampolicybyname-
 
 Code path: `azurenative.intune.v20150114privatepreview.AndroidMAMPolicyByName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (intune.v20150114privatepreview.AndroidMAMPolicyByName).
+Disallow the use of non-stable (Preview) Azure resources (intune.v20150114privatepreview.AndroidMAMPolicyByName).
 
 Service: Intune
 
@@ -21013,7 +21013,7 @@ Policy name: `azurenative-intune-v20150114privatepreview-iomampolicybyname-disal
 
 Code path: `azurenative.intune.v20150114privatepreview.IoMAMPolicyByName.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (intune.v20150114privatepreview.IoMAMPolicyByName).
+Disallow the use of non-stable (Preview) Azure resources (intune.v20150114privatepreview.IoMAMPolicyByName).
 
 Service: Intune
 
@@ -21039,7 +21039,7 @@ Policy name: `azurenative-iotcentral-v20211101preview-app-disallow-preview-resou
 
 Code path: `azurenative.iotcentral.v20211101preview.App.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (iotcentral.v20211101preview.App).
+Disallow the use of non-stable (Preview) Azure resources (iotcentral.v20211101preview.App).
 
 Service: Iotcentral
 
@@ -21061,7 +21061,7 @@ Policy name: `azurenative-iotcentral-v20211101preview-privateendpointconnection-
 
 Code path: `azurenative.iotcentral.v20211101preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (iotcentral.v20211101preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (iotcentral.v20211101preview.PrivateEndpointConnection).
 
 Service: Iotcentral
 
@@ -21087,7 +21087,7 @@ Policy name: `azurenative-iotfirmwaredefense-v20230208preview-firmware-disallow-
 
 Code path: `azurenative.iotfirmwaredefense.v20230208preview.Firmware.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (iotfirmwaredefense.v20230208preview.Firmware).
+Disallow the use of non-stable (Preview) Azure resources (iotfirmwaredefense.v20230208preview.Firmware).
 
 Service: Iotfirmwaredefense
 
@@ -21109,7 +21109,7 @@ Policy name: `azurenative-iotfirmwaredefense-v20230208preview-workspace-disallow
 
 Code path: `azurenative.iotfirmwaredefense.v20230208preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (iotfirmwaredefense.v20230208preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (iotfirmwaredefense.v20230208preview.Workspace).
 
 Service: Iotfirmwaredefense
 
@@ -21135,7 +21135,7 @@ Policy name: `azurenative-kubernetes-v20220501preview-connectedcluster-disallow-
 
 Code path: `azurenative.kubernetes.v20220501preview.ConnectedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kubernetes.v20220501preview.ConnectedCluster).
+Disallow the use of non-stable (Preview) Azure resources (kubernetes.v20220501preview.ConnectedCluster).
 
 Service: Kubernetes
 
@@ -21159,7 +21159,7 @@ Policy name: `azurenative-kubernetes-v20221001preview-connectedcluster-disallow-
 
 Code path: `azurenative.kubernetes.v20221001preview.ConnectedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kubernetes.v20221001preview.ConnectedCluster).
+Disallow the use of non-stable (Preview) Azure resources (kubernetes.v20221001preview.ConnectedCluster).
 
 Service: Kubernetes
 
@@ -21185,7 +21185,7 @@ Policy name: `azurenative-kubernetesconfiguration-v20200701preview-extension-dis
 
 Code path: `azurenative.kubernetesconfiguration.v20200701preview.Extension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kubernetesconfiguration.v20200701preview.Extension).
+Disallow the use of non-stable (Preview) Azure resources (kubernetesconfiguration.v20200701preview.Extension).
 
 Service: Kubernetesconfiguration
 
@@ -21209,7 +21209,7 @@ Policy name: `azurenative-kubernetesconfiguration-v20211101preview-fluxconfigura
 
 Code path: `azurenative.kubernetesconfiguration.v20211101preview.FluxConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kubernetesconfiguration.v20211101preview.FluxConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (kubernetesconfiguration.v20211101preview.FluxConfiguration).
 
 Service: Kubernetesconfiguration
 
@@ -21233,7 +21233,7 @@ Policy name: `azurenative-kubernetesconfiguration-v20220101preview-fluxconfigura
 
 Code path: `azurenative.kubernetesconfiguration.v20220101preview.FluxConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kubernetesconfiguration.v20220101preview.FluxConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (kubernetesconfiguration.v20220101preview.FluxConfiguration).
 
 Service: Kubernetesconfiguration
 
@@ -21257,7 +21257,7 @@ Policy name: `azurenative-kubernetesconfiguration-v20220402preview-extension-dis
 
 Code path: `azurenative.kubernetesconfiguration.v20220402preview.Extension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kubernetesconfiguration.v20220402preview.Extension).
+Disallow the use of non-stable (Preview) Azure resources (kubernetesconfiguration.v20220402preview.Extension).
 
 Service: Kubernetesconfiguration
 
@@ -21279,7 +21279,7 @@ Policy name: `azurenative-kubernetesconfiguration-v20220402preview-privateendpoi
 
 Code path: `azurenative.kubernetesconfiguration.v20220402preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kubernetesconfiguration.v20220402preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (kubernetesconfiguration.v20220402preview.PrivateEndpointConnection).
 
 Service: Kubernetesconfiguration
 
@@ -21301,7 +21301,7 @@ Policy name: `azurenative-kubernetesconfiguration-v20220402preview-privatelinksc
 
 Code path: `azurenative.kubernetesconfiguration.v20220402preview.PrivateLinkScope.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kubernetesconfiguration.v20220402preview.PrivateLinkScope).
+Disallow the use of non-stable (Preview) Azure resources (kubernetesconfiguration.v20220402preview.PrivateLinkScope).
 
 Service: Kubernetesconfiguration
 
@@ -21327,7 +21327,7 @@ Policy name: `azurenative-kusto-v20180907preview-database-disallow-preview-resou
 
 Code path: `azurenative.kusto.v20180907preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kusto.v20180907preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (kusto.v20180907preview.Database).
 
 Service: Kusto
 
@@ -21349,7 +21349,7 @@ Policy name: `azurenative-kusto-v20180907preview-eventhubconnection-disallow-pre
 
 Code path: `azurenative.kusto.v20180907preview.EventHubConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (kusto.v20180907preview.EventHubConnection).
+Disallow the use of non-stable (Preview) Azure resources (kusto.v20180907preview.EventHubConnection).
 
 Service: Kusto
 
@@ -21375,7 +21375,7 @@ Policy name: `azurenative-loadtestservice-v20211201preview-loadtest-disallow-pre
 
 Code path: `azurenative.loadtestservice.v20211201preview.LoadTest.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (loadtestservice.v20211201preview.LoadTest).
+Disallow the use of non-stable (Preview) Azure resources (loadtestservice.v20211201preview.LoadTest).
 
 Service: Loadtestservice
 
@@ -21401,7 +21401,7 @@ Policy name: `azurenative-logic-v20150201preview-workflow-disallow-preview-resou
 
 Code path: `azurenative.logic.v20150201preview.Workflow.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logic.v20150201preview.Workflow).
+Disallow the use of non-stable (Preview) Azure resources (logic.v20150201preview.Workflow).
 
 Service: Logic
 
@@ -21423,7 +21423,7 @@ Policy name: `azurenative-logic-v20150201preview-workflowaccesskey-disallow-prev
 
 Code path: `azurenative.logic.v20150201preview.WorkflowAccessKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logic.v20150201preview.WorkflowAccessKey).
+Disallow the use of non-stable (Preview) Azure resources (logic.v20150201preview.WorkflowAccessKey).
 
 Service: Logic
 
@@ -21447,7 +21447,7 @@ Policy name: `azurenative-logic-v20150801preview-integrationaccount-disallow-pre
 
 Code path: `azurenative.logic.v20150801preview.IntegrationAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logic.v20150801preview.IntegrationAccount).
+Disallow the use of non-stable (Preview) Azure resources (logic.v20150801preview.IntegrationAccount).
 
 Service: Logic
 
@@ -21469,7 +21469,7 @@ Policy name: `azurenative-logic-v20150801preview-integrationaccountagreement-dis
 
 Code path: `azurenative.logic.v20150801preview.IntegrationAccountAgreement.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logic.v20150801preview.IntegrationAccountAgreement).
+Disallow the use of non-stable (Preview) Azure resources (logic.v20150801preview.IntegrationAccountAgreement).
 
 Service: Logic
 
@@ -21491,7 +21491,7 @@ Policy name: `azurenative-logic-v20150801preview-integrationaccountcertificate-d
 
 Code path: `azurenative.logic.v20150801preview.IntegrationAccountCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logic.v20150801preview.IntegrationAccountCertificate).
+Disallow the use of non-stable (Preview) Azure resources (logic.v20150801preview.IntegrationAccountCertificate).
 
 Service: Logic
 
@@ -21513,7 +21513,7 @@ Policy name: `azurenative-logic-v20150801preview-integrationaccountmap-disallow-
 
 Code path: `azurenative.logic.v20150801preview.IntegrationAccountMap.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logic.v20150801preview.IntegrationAccountMap).
+Disallow the use of non-stable (Preview) Azure resources (logic.v20150801preview.IntegrationAccountMap).
 
 Service: Logic
 
@@ -21535,7 +21535,7 @@ Policy name: `azurenative-logic-v20150801preview-integrationaccountpartner-disal
 
 Code path: `azurenative.logic.v20150801preview.IntegrationAccountPartner.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logic.v20150801preview.IntegrationAccountPartner).
+Disallow the use of non-stable (Preview) Azure resources (logic.v20150801preview.IntegrationAccountPartner).
 
 Service: Logic
 
@@ -21557,7 +21557,7 @@ Policy name: `azurenative-logic-v20150801preview-integrationaccountschema-disall
 
 Code path: `azurenative.logic.v20150801preview.IntegrationAccountSchema.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logic.v20150801preview.IntegrationAccountSchema).
+Disallow the use of non-stable (Preview) Azure resources (logic.v20150801preview.IntegrationAccountSchema).
 
 Service: Logic
 
@@ -21581,7 +21581,7 @@ Policy name: `azurenative-logic-v20180701preview-workflow-disallow-preview-resou
 
 Code path: `azurenative.logic.v20180701preview.Workflow.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logic.v20180701preview.Workflow).
+Disallow the use of non-stable (Preview) Azure resources (logic.v20180701preview.Workflow).
 
 Service: Logic
 
@@ -21607,7 +21607,7 @@ Policy name: `azurenative-logz-v20220101preview-metricssource-disallow-preview-r
 
 Code path: `azurenative.logz.v20220101preview.MetricsSource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logz.v20220101preview.MetricsSource).
+Disallow the use of non-stable (Preview) Azure resources (logz.v20220101preview.MetricsSource).
 
 Service: Logz
 
@@ -21629,7 +21629,7 @@ Policy name: `azurenative-logz-v20220101preview-metricssourcetagrule-disallow-pr
 
 Code path: `azurenative.logz.v20220101preview.MetricsSourceTagRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logz.v20220101preview.MetricsSourceTagRule).
+Disallow the use of non-stable (Preview) Azure resources (logz.v20220101preview.MetricsSourceTagRule).
 
 Service: Logz
 
@@ -21651,7 +21651,7 @@ Policy name: `azurenative-logz-v20220101preview-monitor-disallow-preview-resourc
 
 Code path: `azurenative.logz.v20220101preview.Monitor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logz.v20220101preview.Monitor).
+Disallow the use of non-stable (Preview) Azure resources (logz.v20220101preview.Monitor).
 
 Service: Logz
 
@@ -21673,7 +21673,7 @@ Policy name: `azurenative-logz-v20220101preview-subaccount-disallow-preview-reso
 
 Code path: `azurenative.logz.v20220101preview.SubAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logz.v20220101preview.SubAccount).
+Disallow the use of non-stable (Preview) Azure resources (logz.v20220101preview.SubAccount).
 
 Service: Logz
 
@@ -21695,7 +21695,7 @@ Policy name: `azurenative-logz-v20220101preview-subaccounttagrule-disallow-previ
 
 Code path: `azurenative.logz.v20220101preview.SubAccountTagRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logz.v20220101preview.SubAccountTagRule).
+Disallow the use of non-stable (Preview) Azure resources (logz.v20220101preview.SubAccountTagRule).
 
 Service: Logz
 
@@ -21717,7 +21717,7 @@ Policy name: `azurenative-logz-v20220101preview-tagrule-disallow-preview-resourc
 
 Code path: `azurenative.logz.v20220101preview.TagRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (logz.v20220101preview.TagRule).
+Disallow the use of non-stable (Preview) Azure resources (logz.v20220101preview.TagRule).
 
 Service: Logz
 
@@ -21743,7 +21743,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privateendp
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsAdtAPI.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsAdtAPI).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsAdtAPI).
 
 Service: M365securityandcompliance
 
@@ -21765,7 +21765,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privateendp
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsComp.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsComp).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsComp).
 
 Service: M365securityandcompliance
 
@@ -21787,7 +21787,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privateendp
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsForEDM.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsForEDM).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsForEDM).
 
 Service: M365securityandcompliance
 
@@ -21809,7 +21809,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privateendp
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsForMIPPolicySync.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsForMIPPolicySync).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsForMIPPolicySync).
 
 Service: M365securityandcompliance
 
@@ -21831,7 +21831,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privateendp
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsForSCCPowershell.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsForSCCPowershell).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsForSCCPowershell).
 
 Service: M365securityandcompliance
 
@@ -21853,7 +21853,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privateendp
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsSec.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsSec).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateEndpointConnectionsSec).
 
 Service: M365securityandcompliance
 
@@ -21875,7 +21875,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privatelink
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateLinkServicesForEDMUpload.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateLinkServicesForEDMUpload).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateLinkServicesForEDMUpload).
 
 Service: M365securityandcompliance
 
@@ -21897,7 +21897,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privatelink
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateLinkServicesForM365ComplianceCenter.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateLinkServicesForM365ComplianceCenter).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateLinkServicesForM365ComplianceCenter).
 
 Service: M365securityandcompliance
 
@@ -21919,7 +21919,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privatelink
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateLinkServicesForM365SecurityCenter.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateLinkServicesForM365SecurityCenter).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateLinkServicesForM365SecurityCenter).
 
 Service: M365securityandcompliance
 
@@ -21941,7 +21941,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privatelink
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateLinkServicesForMIPPolicySync.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateLinkServicesForMIPPolicySync).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateLinkServicesForMIPPolicySync).
 
 Service: M365securityandcompliance
 
@@ -21963,7 +21963,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privatelink
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateLinkServicesForO365ManagementActivityAPI.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateLinkServicesForO365ManagementActivityAPI).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateLinkServicesForO365ManagementActivityAPI).
 
 Service: M365securityandcompliance
 
@@ -21985,7 +21985,7 @@ Policy name: `azurenative-m365securityandcompliance-v20210325preview-privatelink
 
 Code path: `azurenative.m365securityandcompliance.v20210325preview.PrivateLinkServicesForSCCPowershell.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (m365securityandcompliance.v20210325preview.PrivateLinkServicesForSCCPowershell).
+Disallow the use of non-stable (Preview) Azure resources (m365securityandcompliance.v20210325preview.PrivateLinkServicesForSCCPowershell).
 
 Service: M365securityandcompliance
 
@@ -22011,7 +22011,7 @@ Policy name: `azurenative-machinelearning-v20160501preview-commitmentplan-disall
 
 Code path: `azurenative.machinelearning.v20160501preview.CommitmentPlan.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearning.v20160501preview.CommitmentPlan).
+Disallow the use of non-stable (Preview) Azure resources (machinelearning.v20160501preview.CommitmentPlan).
 
 Service: Machinelearning
 
@@ -22033,7 +22033,7 @@ Policy name: `azurenative-machinelearning-v20160501preview-webservice-disallow-p
 
 Code path: `azurenative.machinelearning.v20160501preview.WebService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearning.v20160501preview.WebService).
+Disallow the use of non-stable (Preview) Azure resources (machinelearning.v20160501preview.WebService).
 
 Service: Machinelearning
 
@@ -22059,7 +22059,7 @@ Policy name: `azurenative-machinelearningcompute-v20170801preview-operationaliza
 
 Code path: `azurenative.machinelearningcompute.v20170801preview.OperationalizationCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningcompute.v20170801preview.OperationalizationCluster).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningcompute.v20170801preview.OperationalizationCluster).
 
 Service: Machinelearningcompute
 
@@ -22085,7 +22085,7 @@ Policy name: `azurenative-machinelearningexperimentation-v20170501preview-accoun
 
 Code path: `azurenative.machinelearningexperimentation.v20170501preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningexperimentation.v20170501preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningexperimentation.v20170501preview.Account).
 
 Service: Machinelearningexperimentation
 
@@ -22107,7 +22107,7 @@ Policy name: `azurenative-machinelearningexperimentation-v20170501preview-projec
 
 Code path: `azurenative.machinelearningexperimentation.v20170501preview.Project.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningexperimentation.v20170501preview.Project).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningexperimentation.v20170501preview.Project).
 
 Service: Machinelearningexperimentation
 
@@ -22129,7 +22129,7 @@ Policy name: `azurenative-machinelearningexperimentation-v20170501preview-worksp
 
 Code path: `azurenative.machinelearningexperimentation.v20170501preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningexperimentation.v20170501preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningexperimentation.v20170501preview.Workspace).
 
 Service: Machinelearningexperimentation
 
@@ -22155,7 +22155,7 @@ Policy name: `azurenative-machinelearningservices-v20200501preview-machinelearni
 
 Code path: `azurenative.machinelearningservices.v20200501preview.MachineLearningDataset.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20200501preview.MachineLearningDataset).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20200501preview.MachineLearningDataset).
 
 Service: Machinelearningservices
 
@@ -22177,7 +22177,7 @@ Policy name: `azurenative-machinelearningservices-v20200501preview-machinelearni
 
 Code path: `azurenative.machinelearningservices.v20200501preview.MachineLearningDatastore.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20200501preview.MachineLearningDatastore).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20200501preview.MachineLearningDatastore).
 
 Service: Machinelearningservices
 
@@ -22201,7 +22201,7 @@ Policy name: `azurenative-machinelearningservices-v20200515preview-linkedworkspa
 
 Code path: `azurenative.machinelearningservices.v20200515preview.LinkedWorkspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20200515preview.LinkedWorkspace).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20200515preview.LinkedWorkspace).
 
 Service: Machinelearningservices
 
@@ -22225,7 +22225,7 @@ Policy name: `azurenative-machinelearningservices-v20200901preview-labelingjob-d
 
 Code path: `azurenative.machinelearningservices.v20200901preview.LabelingJob.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20200901preview.LabelingJob).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20200901preview.LabelingJob).
 
 Service: Machinelearningservices
 
@@ -22247,7 +22247,7 @@ Policy name: `azurenative-machinelearningservices-v20200901preview-linkedservice
 
 Code path: `azurenative.machinelearningservices.v20200901preview.LinkedService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20200901preview.LinkedService).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20200901preview.LinkedService).
 
 Service: Machinelearningservices
 
@@ -22269,7 +22269,7 @@ Policy name: `azurenative-machinelearningservices-v20200901preview-workspace-dis
 
 Code path: `azurenative.machinelearningservices.v20200901preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20200901preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20200901preview.Workspace).
 
 Service: Machinelearningservices
 
@@ -22293,7 +22293,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-batchdeployme
 
 Code path: `azurenative.machinelearningservices.v20210301preview.BatchDeployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.BatchDeployment).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.BatchDeployment).
 
 Service: Machinelearningservices
 
@@ -22315,7 +22315,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-batchendpoint
 
 Code path: `azurenative.machinelearningservices.v20210301preview.BatchEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.BatchEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.BatchEndpoint).
 
 Service: Machinelearningservices
 
@@ -22337,7 +22337,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-codecontainer
 
 Code path: `azurenative.machinelearningservices.v20210301preview.CodeContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.CodeContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.CodeContainer).
 
 Service: Machinelearningservices
 
@@ -22359,7 +22359,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-codeversion-d
 
 Code path: `azurenative.machinelearningservices.v20210301preview.CodeVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.CodeVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.CodeVersion).
 
 Service: Machinelearningservices
 
@@ -22381,7 +22381,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-datacontainer
 
 Code path: `azurenative.machinelearningservices.v20210301preview.DataContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.DataContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.DataContainer).
 
 Service: Machinelearningservices
 
@@ -22403,7 +22403,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-dataversion-d
 
 Code path: `azurenative.machinelearningservices.v20210301preview.DataVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.DataVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.DataVersion).
 
 Service: Machinelearningservices
 
@@ -22425,7 +22425,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-datastore-dis
 
 Code path: `azurenative.machinelearningservices.v20210301preview.Datastore.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.Datastore).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.Datastore).
 
 Service: Machinelearningservices
 
@@ -22447,7 +22447,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-environmentco
 
 Code path: `azurenative.machinelearningservices.v20210301preview.EnvironmentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.EnvironmentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.EnvironmentContainer).
 
 Service: Machinelearningservices
 
@@ -22469,7 +22469,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-environmentsp
 
 Code path: `azurenative.machinelearningservices.v20210301preview.EnvironmentSpecificationVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.EnvironmentSpecificationVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.EnvironmentSpecificationVersion).
 
 Service: Machinelearningservices
 
@@ -22491,7 +22491,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-job-disallow-
 
 Code path: `azurenative.machinelearningservices.v20210301preview.Job.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.Job).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.Job).
 
 Service: Machinelearningservices
 
@@ -22513,7 +22513,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-labelingjob-d
 
 Code path: `azurenative.machinelearningservices.v20210301preview.LabelingJob.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.LabelingJob).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.LabelingJob).
 
 Service: Machinelearningservices
 
@@ -22535,7 +22535,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-modelcontaine
 
 Code path: `azurenative.machinelearningservices.v20210301preview.ModelContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.ModelContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.ModelContainer).
 
 Service: Machinelearningservices
 
@@ -22557,7 +22557,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-modelversion-
 
 Code path: `azurenative.machinelearningservices.v20210301preview.ModelVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.ModelVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.ModelVersion).
 
 Service: Machinelearningservices
 
@@ -22579,7 +22579,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-onlinedeploym
 
 Code path: `azurenative.machinelearningservices.v20210301preview.OnlineDeployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.OnlineDeployment).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.OnlineDeployment).
 
 Service: Machinelearningservices
 
@@ -22601,7 +22601,7 @@ Policy name: `azurenative-machinelearningservices-v20210301preview-onlineendpoin
 
 Code path: `azurenative.machinelearningservices.v20210301preview.OnlineEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20210301preview.OnlineEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20210301preview.OnlineEndpoint).
 
 Service: Machinelearningservices
 
@@ -22625,7 +22625,7 @@ Policy name: `azurenative-machinelearningservices-v20220101preview-compute-disal
 
 Code path: `azurenative.machinelearningservices.v20220101preview.Compute.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220101preview.Compute).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220101preview.Compute).
 
 Service: Machinelearningservices
 
@@ -22647,7 +22647,7 @@ Policy name: `azurenative-machinelearningservices-v20220101preview-privateendpoi
 
 Code path: `azurenative.machinelearningservices.v20220101preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220101preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220101preview.PrivateEndpointConnection).
 
 Service: Machinelearningservices
 
@@ -22669,7 +22669,7 @@ Policy name: `azurenative-machinelearningservices-v20220101preview-workspace-dis
 
 Code path: `azurenative.machinelearningservices.v20220101preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220101preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220101preview.Workspace).
 
 Service: Machinelearningservices
 
@@ -22693,7 +22693,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-batchdeployme
 
 Code path: `azurenative.machinelearningservices.v20220201preview.BatchDeployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.BatchDeployment).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.BatchDeployment).
 
 Service: Machinelearningservices
 
@@ -22715,7 +22715,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-batchendpoint
 
 Code path: `azurenative.machinelearningservices.v20220201preview.BatchEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.BatchEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.BatchEndpoint).
 
 Service: Machinelearningservices
 
@@ -22737,7 +22737,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-codecontainer
 
 Code path: `azurenative.machinelearningservices.v20220201preview.CodeContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.CodeContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.CodeContainer).
 
 Service: Machinelearningservices
 
@@ -22759,7 +22759,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-codeversion-d
 
 Code path: `azurenative.machinelearningservices.v20220201preview.CodeVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.CodeVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.CodeVersion).
 
 Service: Machinelearningservices
 
@@ -22781,7 +22781,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-componentcont
 
 Code path: `azurenative.machinelearningservices.v20220201preview.ComponentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.ComponentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.ComponentContainer).
 
 Service: Machinelearningservices
 
@@ -22803,7 +22803,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-componentvers
 
 Code path: `azurenative.machinelearningservices.v20220201preview.ComponentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.ComponentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.ComponentVersion).
 
 Service: Machinelearningservices
 
@@ -22825,7 +22825,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-datacontainer
 
 Code path: `azurenative.machinelearningservices.v20220201preview.DataContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.DataContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.DataContainer).
 
 Service: Machinelearningservices
 
@@ -22847,7 +22847,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-dataversion-d
 
 Code path: `azurenative.machinelearningservices.v20220201preview.DataVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.DataVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.DataVersion).
 
 Service: Machinelearningservices
 
@@ -22869,7 +22869,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-datastore-dis
 
 Code path: `azurenative.machinelearningservices.v20220201preview.Datastore.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.Datastore).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.Datastore).
 
 Service: Machinelearningservices
 
@@ -22891,7 +22891,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-environmentco
 
 Code path: `azurenative.machinelearningservices.v20220201preview.EnvironmentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.EnvironmentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.EnvironmentContainer).
 
 Service: Machinelearningservices
 
@@ -22913,7 +22913,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-environmentve
 
 Code path: `azurenative.machinelearningservices.v20220201preview.EnvironmentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.EnvironmentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.EnvironmentVersion).
 
 Service: Machinelearningservices
 
@@ -22935,7 +22935,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-job-disallow-
 
 Code path: `azurenative.machinelearningservices.v20220201preview.Job.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.Job).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.Job).
 
 Service: Machinelearningservices
 
@@ -22957,7 +22957,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-modelcontaine
 
 Code path: `azurenative.machinelearningservices.v20220201preview.ModelContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.ModelContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.ModelContainer).
 
 Service: Machinelearningservices
 
@@ -22979,7 +22979,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-modelversion-
 
 Code path: `azurenative.machinelearningservices.v20220201preview.ModelVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.ModelVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.ModelVersion).
 
 Service: Machinelearningservices
 
@@ -23001,7 +23001,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-onlinedeploym
 
 Code path: `azurenative.machinelearningservices.v20220201preview.OnlineDeployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.OnlineDeployment).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.OnlineDeployment).
 
 Service: Machinelearningservices
 
@@ -23023,7 +23023,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-onlineendpoin
 
 Code path: `azurenative.machinelearningservices.v20220201preview.OnlineEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.OnlineEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.OnlineEndpoint).
 
 Service: Machinelearningservices
 
@@ -23045,7 +23045,7 @@ Policy name: `azurenative-machinelearningservices-v20220201preview-workspaceconn
 
 Code path: `azurenative.machinelearningservices.v20220201preview.WorkspaceConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20220201preview.WorkspaceConnection).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20220201preview.WorkspaceConnection).
 
 Service: Machinelearningservices
 
@@ -23069,7 +23069,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-batchdeployme
 
 Code path: `azurenative.machinelearningservices.v20230401preview.BatchDeployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.BatchDeployment).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.BatchDeployment).
 
 Service: Machinelearningservices
 
@@ -23091,7 +23091,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-batchendpoint
 
 Code path: `azurenative.machinelearningservices.v20230401preview.BatchEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.BatchEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.BatchEndpoint).
 
 Service: Machinelearningservices
 
@@ -23113,7 +23113,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-codecontainer
 
 Code path: `azurenative.machinelearningservices.v20230401preview.CodeContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.CodeContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.CodeContainer).
 
 Service: Machinelearningservices
 
@@ -23135,7 +23135,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-codeversion-d
 
 Code path: `azurenative.machinelearningservices.v20230401preview.CodeVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.CodeVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.CodeVersion).
 
 Service: Machinelearningservices
 
@@ -23157,7 +23157,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-componentcont
 
 Code path: `azurenative.machinelearningservices.v20230401preview.ComponentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.ComponentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.ComponentContainer).
 
 Service: Machinelearningservices
 
@@ -23179,7 +23179,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-componentvers
 
 Code path: `azurenative.machinelearningservices.v20230401preview.ComponentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.ComponentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.ComponentVersion).
 
 Service: Machinelearningservices
 
@@ -23201,7 +23201,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-compute-disal
 
 Code path: `azurenative.machinelearningservices.v20230401preview.Compute.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.Compute).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.Compute).
 
 Service: Machinelearningservices
 
@@ -23223,7 +23223,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-datacontainer
 
 Code path: `azurenative.machinelearningservices.v20230401preview.DataContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.DataContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.DataContainer).
 
 Service: Machinelearningservices
 
@@ -23245,7 +23245,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-dataversion-d
 
 Code path: `azurenative.machinelearningservices.v20230401preview.DataVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.DataVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.DataVersion).
 
 Service: Machinelearningservices
 
@@ -23267,7 +23267,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-datastore-dis
 
 Code path: `azurenative.machinelearningservices.v20230401preview.Datastore.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.Datastore).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.Datastore).
 
 Service: Machinelearningservices
 
@@ -23289,7 +23289,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-environmentco
 
 Code path: `azurenative.machinelearningservices.v20230401preview.EnvironmentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.EnvironmentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.EnvironmentContainer).
 
 Service: Machinelearningservices
 
@@ -23311,7 +23311,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-environmentve
 
 Code path: `azurenative.machinelearningservices.v20230401preview.EnvironmentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.EnvironmentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.EnvironmentVersion).
 
 Service: Machinelearningservices
 
@@ -23333,7 +23333,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-featuresetcon
 
 Code path: `azurenative.machinelearningservices.v20230401preview.FeaturesetContainerEntity.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.FeaturesetContainerEntity).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.FeaturesetContainerEntity).
 
 Service: Machinelearningservices
 
@@ -23355,7 +23355,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-featuresetver
 
 Code path: `azurenative.machinelearningservices.v20230401preview.FeaturesetVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.FeaturesetVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.FeaturesetVersion).
 
 Service: Machinelearningservices
 
@@ -23377,7 +23377,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-featurestoree
 
 Code path: `azurenative.machinelearningservices.v20230401preview.FeaturestoreEntityContainerEntity.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.FeaturestoreEntityContainerEntity).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.FeaturestoreEntityContainerEntity).
 
 Service: Machinelearningservices
 
@@ -23399,7 +23399,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-featurestoree
 
 Code path: `azurenative.machinelearningservices.v20230401preview.FeaturestoreEntityVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.FeaturestoreEntityVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.FeaturestoreEntityVersion).
 
 Service: Machinelearningservices
 
@@ -23421,7 +23421,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-job-disallow-
 
 Code path: `azurenative.machinelearningservices.v20230401preview.Job.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.Job).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.Job).
 
 Service: Machinelearningservices
 
@@ -23443,7 +23443,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-labelingjob-d
 
 Code path: `azurenative.machinelearningservices.v20230401preview.LabelingJob.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.LabelingJob).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.LabelingJob).
 
 Service: Machinelearningservices
 
@@ -23465,7 +23465,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-managednetwor
 
 Code path: `azurenative.machinelearningservices.v20230401preview.ManagedNetworkSettingsRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.ManagedNetworkSettingsRule).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.ManagedNetworkSettingsRule).
 
 Service: Machinelearningservices
 
@@ -23487,7 +23487,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-modelcontaine
 
 Code path: `azurenative.machinelearningservices.v20230401preview.ModelContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.ModelContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.ModelContainer).
 
 Service: Machinelearningservices
 
@@ -23509,7 +23509,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-modelversion-
 
 Code path: `azurenative.machinelearningservices.v20230401preview.ModelVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.ModelVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.ModelVersion).
 
 Service: Machinelearningservices
 
@@ -23531,7 +23531,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-onlinedeploym
 
 Code path: `azurenative.machinelearningservices.v20230401preview.OnlineDeployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.OnlineDeployment).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.OnlineDeployment).
 
 Service: Machinelearningservices
 
@@ -23553,7 +23553,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-onlineendpoin
 
 Code path: `azurenative.machinelearningservices.v20230401preview.OnlineEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.OnlineEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.OnlineEndpoint).
 
 Service: Machinelearningservices
 
@@ -23575,7 +23575,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-privateendpoi
 
 Code path: `azurenative.machinelearningservices.v20230401preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.PrivateEndpointConnection).
 
 Service: Machinelearningservices
 
@@ -23597,7 +23597,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registry-disa
 
 Code path: `azurenative.machinelearningservices.v20230401preview.Registry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.Registry).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.Registry).
 
 Service: Machinelearningservices
 
@@ -23619,7 +23619,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registrycodec
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryCodeContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryCodeContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryCodeContainer).
 
 Service: Machinelearningservices
 
@@ -23641,7 +23641,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registrycodev
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryCodeVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryCodeVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryCodeVersion).
 
 Service: Machinelearningservices
 
@@ -23663,7 +23663,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registrycompo
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryComponentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryComponentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryComponentContainer).
 
 Service: Machinelearningservices
 
@@ -23685,7 +23685,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registrycompo
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryComponentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryComponentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryComponentVersion).
 
 Service: Machinelearningservices
 
@@ -23707,7 +23707,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registrydatac
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryDataContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryDataContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryDataContainer).
 
 Service: Machinelearningservices
 
@@ -23729,7 +23729,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registrydatav
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryDataVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryDataVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryDataVersion).
 
 Service: Machinelearningservices
 
@@ -23751,7 +23751,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registryenvir
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryEnvironmentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryEnvironmentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryEnvironmentContainer).
 
 Service: Machinelearningservices
 
@@ -23773,7 +23773,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registryenvir
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryEnvironmentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryEnvironmentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryEnvironmentVersion).
 
 Service: Machinelearningservices
 
@@ -23795,7 +23795,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registrymodel
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryModelContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryModelContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryModelContainer).
 
 Service: Machinelearningservices
 
@@ -23817,7 +23817,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-registrymodel
 
 Code path: `azurenative.machinelearningservices.v20230401preview.RegistryModelVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.RegistryModelVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.RegistryModelVersion).
 
 Service: Machinelearningservices
 
@@ -23839,7 +23839,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-schedule-disa
 
 Code path: `azurenative.machinelearningservices.v20230401preview.Schedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.Schedule).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.Schedule).
 
 Service: Machinelearningservices
 
@@ -23861,7 +23861,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-workspace-dis
 
 Code path: `azurenative.machinelearningservices.v20230401preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.Workspace).
 
 Service: Machinelearningservices
 
@@ -23883,7 +23883,7 @@ Policy name: `azurenative-machinelearningservices-v20230401preview-workspaceconn
 
 Code path: `azurenative.machinelearningservices.v20230401preview.WorkspaceConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230401preview.WorkspaceConnection).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230401preview.WorkspaceConnection).
 
 Service: Machinelearningservices
 
@@ -23907,7 +23907,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-batchdeployme
 
 Code path: `azurenative.machinelearningservices.v20230601preview.BatchDeployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.BatchDeployment).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.BatchDeployment).
 
 Service: Machinelearningservices
 
@@ -23929,7 +23929,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-batchendpoint
 
 Code path: `azurenative.machinelearningservices.v20230601preview.BatchEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.BatchEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.BatchEndpoint).
 
 Service: Machinelearningservices
 
@@ -23951,7 +23951,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-codecontainer
 
 Code path: `azurenative.machinelearningservices.v20230601preview.CodeContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.CodeContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.CodeContainer).
 
 Service: Machinelearningservices
 
@@ -23973,7 +23973,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-codeversion-d
 
 Code path: `azurenative.machinelearningservices.v20230601preview.CodeVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.CodeVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.CodeVersion).
 
 Service: Machinelearningservices
 
@@ -23995,7 +23995,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-componentcont
 
 Code path: `azurenative.machinelearningservices.v20230601preview.ComponentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.ComponentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.ComponentContainer).
 
 Service: Machinelearningservices
 
@@ -24017,7 +24017,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-componentvers
 
 Code path: `azurenative.machinelearningservices.v20230601preview.ComponentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.ComponentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.ComponentVersion).
 
 Service: Machinelearningservices
 
@@ -24039,7 +24039,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-compute-disal
 
 Code path: `azurenative.machinelearningservices.v20230601preview.Compute.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.Compute).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.Compute).
 
 Service: Machinelearningservices
 
@@ -24061,7 +24061,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-datacontainer
 
 Code path: `azurenative.machinelearningservices.v20230601preview.DataContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.DataContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.DataContainer).
 
 Service: Machinelearningservices
 
@@ -24083,7 +24083,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-dataversion-d
 
 Code path: `azurenative.machinelearningservices.v20230601preview.DataVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.DataVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.DataVersion).
 
 Service: Machinelearningservices
 
@@ -24105,7 +24105,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-datastore-dis
 
 Code path: `azurenative.machinelearningservices.v20230601preview.Datastore.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.Datastore).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.Datastore).
 
 Service: Machinelearningservices
 
@@ -24127,7 +24127,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-environmentco
 
 Code path: `azurenative.machinelearningservices.v20230601preview.EnvironmentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.EnvironmentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.EnvironmentContainer).
 
 Service: Machinelearningservices
 
@@ -24149,7 +24149,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-environmentve
 
 Code path: `azurenative.machinelearningservices.v20230601preview.EnvironmentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.EnvironmentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.EnvironmentVersion).
 
 Service: Machinelearningservices
 
@@ -24171,7 +24171,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-featuresetcon
 
 Code path: `azurenative.machinelearningservices.v20230601preview.FeaturesetContainerEntity.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.FeaturesetContainerEntity).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.FeaturesetContainerEntity).
 
 Service: Machinelearningservices
 
@@ -24193,7 +24193,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-featuresetver
 
 Code path: `azurenative.machinelearningservices.v20230601preview.FeaturesetVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.FeaturesetVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.FeaturesetVersion).
 
 Service: Machinelearningservices
 
@@ -24215,7 +24215,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-featurestoree
 
 Code path: `azurenative.machinelearningservices.v20230601preview.FeaturestoreEntityContainerEntity.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.FeaturestoreEntityContainerEntity).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.FeaturestoreEntityContainerEntity).
 
 Service: Machinelearningservices
 
@@ -24237,7 +24237,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-featurestoree
 
 Code path: `azurenative.machinelearningservices.v20230601preview.FeaturestoreEntityVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.FeaturestoreEntityVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.FeaturestoreEntityVersion).
 
 Service: Machinelearningservices
 
@@ -24259,7 +24259,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-job-disallow-
 
 Code path: `azurenative.machinelearningservices.v20230601preview.Job.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.Job).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.Job).
 
 Service: Machinelearningservices
 
@@ -24281,7 +24281,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-labelingjob-d
 
 Code path: `azurenative.machinelearningservices.v20230601preview.LabelingJob.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.LabelingJob).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.LabelingJob).
 
 Service: Machinelearningservices
 
@@ -24303,7 +24303,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-managednetwor
 
 Code path: `azurenative.machinelearningservices.v20230601preview.ManagedNetworkSettingsRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.ManagedNetworkSettingsRule).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.ManagedNetworkSettingsRule).
 
 Service: Machinelearningservices
 
@@ -24325,7 +24325,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-modelcontaine
 
 Code path: `azurenative.machinelearningservices.v20230601preview.ModelContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.ModelContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.ModelContainer).
 
 Service: Machinelearningservices
 
@@ -24347,7 +24347,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-modelversion-
 
 Code path: `azurenative.machinelearningservices.v20230601preview.ModelVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.ModelVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.ModelVersion).
 
 Service: Machinelearningservices
 
@@ -24369,7 +24369,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-onlinedeploym
 
 Code path: `azurenative.machinelearningservices.v20230601preview.OnlineDeployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.OnlineDeployment).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.OnlineDeployment).
 
 Service: Machinelearningservices
 
@@ -24391,7 +24391,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-onlineendpoin
 
 Code path: `azurenative.machinelearningservices.v20230601preview.OnlineEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.OnlineEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.OnlineEndpoint).
 
 Service: Machinelearningservices
 
@@ -24413,7 +24413,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-privateendpoi
 
 Code path: `azurenative.machinelearningservices.v20230601preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.PrivateEndpointConnection).
 
 Service: Machinelearningservices
 
@@ -24435,7 +24435,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registry-disa
 
 Code path: `azurenative.machinelearningservices.v20230601preview.Registry.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.Registry).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.Registry).
 
 Service: Machinelearningservices
 
@@ -24457,7 +24457,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registrycodec
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryCodeContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryCodeContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryCodeContainer).
 
 Service: Machinelearningservices
 
@@ -24479,7 +24479,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registrycodev
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryCodeVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryCodeVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryCodeVersion).
 
 Service: Machinelearningservices
 
@@ -24501,7 +24501,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registrycompo
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryComponentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryComponentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryComponentContainer).
 
 Service: Machinelearningservices
 
@@ -24523,7 +24523,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registrycompo
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryComponentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryComponentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryComponentVersion).
 
 Service: Machinelearningservices
 
@@ -24545,7 +24545,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registrydatac
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryDataContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryDataContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryDataContainer).
 
 Service: Machinelearningservices
 
@@ -24567,7 +24567,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registrydatav
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryDataVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryDataVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryDataVersion).
 
 Service: Machinelearningservices
 
@@ -24589,7 +24589,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registryenvir
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryEnvironmentContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryEnvironmentContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryEnvironmentContainer).
 
 Service: Machinelearningservices
 
@@ -24611,7 +24611,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registryenvir
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryEnvironmentVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryEnvironmentVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryEnvironmentVersion).
 
 Service: Machinelearningservices
 
@@ -24633,7 +24633,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registrymodel
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryModelContainer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryModelContainer).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryModelContainer).
 
 Service: Machinelearningservices
 
@@ -24655,7 +24655,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-registrymodel
 
 Code path: `azurenative.machinelearningservices.v20230601preview.RegistryModelVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.RegistryModelVersion).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.RegistryModelVersion).
 
 Service: Machinelearningservices
 
@@ -24677,7 +24677,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-schedule-disa
 
 Code path: `azurenative.machinelearningservices.v20230601preview.Schedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.Schedule).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.Schedule).
 
 Service: Machinelearningservices
 
@@ -24699,7 +24699,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-workspace-dis
 
 Code path: `azurenative.machinelearningservices.v20230601preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.Workspace).
 
 Service: Machinelearningservices
 
@@ -24721,7 +24721,7 @@ Policy name: `azurenative-machinelearningservices-v20230601preview-workspaceconn
 
 Code path: `azurenative.machinelearningservices.v20230601preview.WorkspaceConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (machinelearningservices.v20230601preview.WorkspaceConnection).
+Disallow the use of non-stable (Preview) Azure resources (machinelearningservices.v20230601preview.WorkspaceConnection).
 
 Service: Machinelearningservices
 
@@ -24747,7 +24747,7 @@ Policy name: `azurenative-maintenance-v20221101preview-configurationassignment-d
 
 Code path: `azurenative.maintenance.v20221101preview.ConfigurationAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (maintenance.v20221101preview.ConfigurationAssignment).
+Disallow the use of non-stable (Preview) Azure resources (maintenance.v20221101preview.ConfigurationAssignment).
 
 Service: Maintenance
 
@@ -24769,7 +24769,7 @@ Policy name: `azurenative-maintenance-v20221101preview-configurationassignmentpa
 
 Code path: `azurenative.maintenance.v20221101preview.ConfigurationAssignmentParent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (maintenance.v20221101preview.ConfigurationAssignmentParent).
+Disallow the use of non-stable (Preview) Azure resources (maintenance.v20221101preview.ConfigurationAssignmentParent).
 
 Service: Maintenance
 
@@ -24791,7 +24791,7 @@ Policy name: `azurenative-maintenance-v20221101preview-maintenanceconfiguration-
 
 Code path: `azurenative.maintenance.v20221101preview.MaintenanceConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (maintenance.v20221101preview.MaintenanceConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (maintenance.v20221101preview.MaintenanceConfiguration).
 
 Service: Maintenance
 
@@ -24817,7 +24817,7 @@ Policy name: `azurenative-managednetwork-v20190601preview-managednetwork-disallo
 
 Code path: `azurenative.managednetwork.v20190601preview.ManagedNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetwork.v20190601preview.ManagedNetwork).
+Disallow the use of non-stable (Preview) Azure resources (managednetwork.v20190601preview.ManagedNetwork).
 
 Service: Managednetwork
 
@@ -24839,7 +24839,7 @@ Policy name: `azurenative-managednetwork-v20190601preview-managednetworkgroup-di
 
 Code path: `azurenative.managednetwork.v20190601preview.ManagedNetworkGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetwork.v20190601preview.ManagedNetworkGroup).
+Disallow the use of non-stable (Preview) Azure resources (managednetwork.v20190601preview.ManagedNetworkGroup).
 
 Service: Managednetwork
 
@@ -24861,7 +24861,7 @@ Policy name: `azurenative-managednetwork-v20190601preview-managednetworkpeeringp
 
 Code path: `azurenative.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetwork.v20190601preview.ManagedNetworkPeeringPolicy).
+Disallow the use of non-stable (Preview) Azure resources (managednetwork.v20190601preview.ManagedNetworkPeeringPolicy).
 
 Service: Managednetwork
 
@@ -24883,7 +24883,7 @@ Policy name: `azurenative-managednetwork-v20190601preview-scopeassignment-disall
 
 Code path: `azurenative.managednetwork.v20190601preview.ScopeAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetwork.v20190601preview.ScopeAssignment).
+Disallow the use of non-stable (Preview) Azure resources (managednetwork.v20190601preview.ScopeAssignment).
 
 Service: Managednetwork
 
@@ -24909,7 +24909,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-accesscontrollis
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.AccessControlList.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.AccessControlList).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.AccessControlList).
 
 Service: Managednetworkfabric
 
@@ -24931,7 +24931,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-externalnetwork-
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.ExternalNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.ExternalNetwork).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.ExternalNetwork).
 
 Service: Managednetworkfabric
 
@@ -24953,7 +24953,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-internalnetwork-
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.InternalNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.InternalNetwork).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.InternalNetwork).
 
 Service: Managednetworkfabric
 
@@ -24975,7 +24975,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-ipcommunity-disa
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.IpCommunity.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.IpCommunity).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.IpCommunity).
 
 Service: Managednetworkfabric
 
@@ -24997,7 +24997,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-ipextendedcommun
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.IpExtendedCommunity.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.IpExtendedCommunity).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.IpExtendedCommunity).
 
 Service: Managednetworkfabric
 
@@ -25019,7 +25019,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-ipprefix-disallo
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.IpPrefix.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.IpPrefix).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.IpPrefix).
 
 Service: Managednetworkfabric
 
@@ -25041,7 +25041,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-l2isolationdomai
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.L2IsolationDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.L2IsolationDomain).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.L2IsolationDomain).
 
 Service: Managednetworkfabric
 
@@ -25063,7 +25063,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-l3isolationdomai
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.L3IsolationDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.L3IsolationDomain).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.L3IsolationDomain).
 
 Service: Managednetworkfabric
 
@@ -25085,7 +25085,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-networkdevice-di
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.NetworkDevice.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.NetworkDevice).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.NetworkDevice).
 
 Service: Managednetworkfabric
 
@@ -25107,7 +25107,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-networkfabric-di
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.NetworkFabric.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.NetworkFabric).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.NetworkFabric).
 
 Service: Managednetworkfabric
 
@@ -25129,7 +25129,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-networkfabriccon
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.NetworkFabricController.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.NetworkFabricController).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.NetworkFabricController).
 
 Service: Managednetworkfabric
 
@@ -25151,7 +25151,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-networkinterface
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.NetworkInterface.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.NetworkInterface).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.NetworkInterface).
 
 Service: Managednetworkfabric
 
@@ -25173,7 +25173,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-networkrack-disa
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.NetworkRack.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.NetworkRack).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.NetworkRack).
 
 Service: Managednetworkfabric
 
@@ -25195,7 +25195,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-networktonetwork
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.NetworkToNetworkInterconnect.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.NetworkToNetworkInterconnect).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.NetworkToNetworkInterconnect).
 
 Service: Managednetworkfabric
 
@@ -25217,7 +25217,7 @@ Policy name: `azurenative-managednetworkfabric-v20230201preview-routepolicy-disa
 
 Code path: `azurenative.managednetworkfabric.v20230201preview.RoutePolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (managednetworkfabric.v20230201preview.RoutePolicy).
+Disallow the use of non-stable (Preview) Azure resources (managednetworkfabric.v20230201preview.RoutePolicy).
 
 Service: Managednetworkfabric
 
@@ -25243,7 +25243,7 @@ Policy name: `azurenative-maps-v20200201preview-creator-disallow-preview-resourc
 
 Code path: `azurenative.maps.v20200201preview.Creator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (maps.v20200201preview.Creator).
+Disallow the use of non-stable (Preview) Azure resources (maps.v20200201preview.Creator).
 
 Service: Maps
 
@@ -25265,7 +25265,7 @@ Policy name: `azurenative-maps-v20200201preview-privateatlase-disallow-preview-r
 
 Code path: `azurenative.maps.v20200201preview.PrivateAtlase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (maps.v20200201preview.PrivateAtlase).
+Disallow the use of non-stable (Preview) Azure resources (maps.v20200201preview.PrivateAtlase).
 
 Service: Maps
 
@@ -25289,7 +25289,7 @@ Policy name: `azurenative-maps-v20211201preview-account-disallow-preview-resourc
 
 Code path: `azurenative.maps.v20211201preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (maps.v20211201preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (maps.v20211201preview.Account).
 
 Service: Maps
 
@@ -25311,7 +25311,7 @@ Policy name: `azurenative-maps-v20211201preview-creator-disallow-preview-resourc
 
 Code path: `azurenative.maps.v20211201preview.Creator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (maps.v20211201preview.Creator).
+Disallow the use of non-stable (Preview) Azure resources (maps.v20211201preview.Creator).
 
 Service: Maps
 
@@ -25337,7 +25337,7 @@ Policy name: `azurenative-media-v20180330preview-streaminglocator-disallow-previ
 
 Code path: `azurenative.media.v20180330preview.StreamingLocator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (media.v20180330preview.StreamingLocator).
+Disallow the use of non-stable (Preview) Azure resources (media.v20180330preview.StreamingLocator).
 
 Service: Media
 
@@ -25361,7 +25361,7 @@ Policy name: `azurenative-media-v20180601preview-liveevent-disallow-preview-reso
 
 Code path: `azurenative.media.v20180601preview.LiveEvent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (media.v20180601preview.LiveEvent).
+Disallow the use of non-stable (Preview) Azure resources (media.v20180601preview.LiveEvent).
 
 Service: Media
 
@@ -25383,7 +25383,7 @@ Policy name: `azurenative-media-v20180601preview-streamingendpoint-disallow-prev
 
 Code path: `azurenative.media.v20180601preview.StreamingEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (media.v20180601preview.StreamingEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (media.v20180601preview.StreamingEndpoint).
 
 Service: Media
 
@@ -25407,7 +25407,7 @@ Policy name: `azurenative-media-v20190501preview-liveevent-disallow-preview-reso
 
 Code path: `azurenative.media.v20190501preview.LiveEvent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (media.v20190501preview.LiveEvent).
+Disallow the use of non-stable (Preview) Azure resources (media.v20190501preview.LiveEvent).
 
 Service: Media
 
@@ -25431,7 +25431,7 @@ Policy name: `azurenative-media-v20200201preview-mediagraph-disallow-preview-res
 
 Code path: `azurenative.media.v20200201preview.MediaGraph.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (media.v20200201preview.MediaGraph).
+Disallow the use of non-stable (Preview) Azure resources (media.v20200201preview.MediaGraph).
 
 Service: Media
 
@@ -25457,7 +25457,7 @@ Policy name: `azurenative-migrate-v20180901preview-migrateproject-disallow-previ
 
 Code path: `azurenative.migrate.v20180901preview.MigrateProject.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (migrate.v20180901preview.MigrateProject).
+Disallow the use of non-stable (Preview) Azure resources (migrate.v20180901preview.MigrateProject).
 
 Service: Migrate
 
@@ -25479,7 +25479,7 @@ Policy name: `azurenative-migrate-v20180901preview-solution-disallow-preview-res
 
 Code path: `azurenative.migrate.v20180901preview.Solution.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (migrate.v20180901preview.Solution).
+Disallow the use of non-stable (Preview) Azure resources (migrate.v20180901preview.Solution).
 
 Service: Migrate
 
@@ -25503,7 +25503,7 @@ Policy name: `azurenative-migrate-v20220501preview-migrateagent-disallow-preview
 
 Code path: `azurenative.migrate.v20220501preview.MigrateAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (migrate.v20220501preview.MigrateAgent).
+Disallow the use of non-stable (Preview) Azure resources (migrate.v20220501preview.MigrateAgent).
 
 Service: Migrate
 
@@ -25525,7 +25525,7 @@ Policy name: `azurenative-migrate-v20220501preview-modernizeproject-disallow-pre
 
 Code path: `azurenative.migrate.v20220501preview.ModernizeProject.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (migrate.v20220501preview.ModernizeProject).
+Disallow the use of non-stable (Preview) Azure resources (migrate.v20220501preview.ModernizeProject).
 
 Service: Migrate
 
@@ -25547,7 +25547,7 @@ Policy name: `azurenative-migrate-v20220501preview-workloaddeployment-disallow-p
 
 Code path: `azurenative.migrate.v20220501preview.WorkloadDeployment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (migrate.v20220501preview.WorkloadDeployment).
+Disallow the use of non-stable (Preview) Azure resources (migrate.v20220501preview.WorkloadDeployment).
 
 Service: Migrate
 
@@ -25569,7 +25569,7 @@ Policy name: `azurenative-migrate-v20220501preview-workloadinstance-disallow-pre
 
 Code path: `azurenative.migrate.v20220501preview.WorkloadInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (migrate.v20220501preview.WorkloadInstance).
+Disallow the use of non-stable (Preview) Azure resources (migrate.v20220501preview.WorkloadInstance).
 
 Service: Migrate
 
@@ -25595,7 +25595,7 @@ Policy name: `azurenative-mixedreality-v20210301preview-objectanchorsaccount-dis
 
 Code path: `azurenative.mixedreality.v20210301preview.ObjectAnchorsAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mixedreality.v20210301preview.ObjectAnchorsAccount).
+Disallow the use of non-stable (Preview) Azure resources (mixedreality.v20210301preview.ObjectAnchorsAccount).
 
 Service: Mixedreality
 
@@ -25617,7 +25617,7 @@ Policy name: `azurenative-mixedreality-v20210301preview-remoterenderingaccount-d
 
 Code path: `azurenative.mixedreality.v20210301preview.RemoteRenderingAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mixedreality.v20210301preview.RemoteRenderingAccount).
+Disallow the use of non-stable (Preview) Azure resources (mixedreality.v20210301preview.RemoteRenderingAccount).
 
 Service: Mixedreality
 
@@ -25639,7 +25639,7 @@ Policy name: `azurenative-mixedreality-v20210301preview-spatialanchorsaccount-di
 
 Code path: `azurenative.mixedreality.v20210301preview.SpatialAnchorsAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mixedreality.v20210301preview.SpatialAnchorsAccount).
+Disallow the use of non-stable (Preview) Azure resources (mixedreality.v20210301preview.SpatialAnchorsAccount).
 
 Service: Mixedreality
 
@@ -25665,7 +25665,7 @@ Policy name: `azurenative-mobilenetwork-v20220301preview-packetcorecontrolplane-
 
 Code path: `azurenative.mobilenetwork.v20220301preview.PacketCoreControlPlane.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220301preview.PacketCoreControlPlane).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220301preview.PacketCoreControlPlane).
 
 Service: Mobilenetwork
 
@@ -25687,7 +25687,7 @@ Policy name: `azurenative-mobilenetwork-v20220301preview-sim-disallow-preview-re
 
 Code path: `azurenative.mobilenetwork.v20220301preview.Sim.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220301preview.Sim).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220301preview.Sim).
 
 Service: Mobilenetwork
 
@@ -25711,7 +25711,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-attacheddatanetwork-dis
 
 Code path: `azurenative.mobilenetwork.v20220401preview.AttachedDataNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.AttachedDataNetwork).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.AttachedDataNetwork).
 
 Service: Mobilenetwork
 
@@ -25733,7 +25733,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-datanetwork-disallow-pr
 
 Code path: `azurenative.mobilenetwork.v20220401preview.DataNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.DataNetwork).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.DataNetwork).
 
 Service: Mobilenetwork
 
@@ -25755,7 +25755,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-mobilenetwork-disallow-
 
 Code path: `azurenative.mobilenetwork.v20220401preview.MobileNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.MobileNetwork).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.MobileNetwork).
 
 Service: Mobilenetwork
 
@@ -25777,7 +25777,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-packetcorecontrolplane-
 
 Code path: `azurenative.mobilenetwork.v20220401preview.PacketCoreControlPlane.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.PacketCoreControlPlane).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.PacketCoreControlPlane).
 
 Service: Mobilenetwork
 
@@ -25799,7 +25799,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-packetcoredataplane-dis
 
 Code path: `azurenative.mobilenetwork.v20220401preview.PacketCoreDataPlane.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.PacketCoreDataPlane).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.PacketCoreDataPlane).
 
 Service: Mobilenetwork
 
@@ -25821,7 +25821,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-service-disallow-previe
 
 Code path: `azurenative.mobilenetwork.v20220401preview.Service.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.Service).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.Service).
 
 Service: Mobilenetwork
 
@@ -25843,7 +25843,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-sim-disallow-preview-re
 
 Code path: `azurenative.mobilenetwork.v20220401preview.Sim.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.Sim).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.Sim).
 
 Service: Mobilenetwork
 
@@ -25865,7 +25865,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-simgroup-disallow-previ
 
 Code path: `azurenative.mobilenetwork.v20220401preview.SimGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.SimGroup).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.SimGroup).
 
 Service: Mobilenetwork
 
@@ -25887,7 +25887,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-simpolicy-disallow-prev
 
 Code path: `azurenative.mobilenetwork.v20220401preview.SimPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.SimPolicy).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.SimPolicy).
 
 Service: Mobilenetwork
 
@@ -25909,7 +25909,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-site-disallow-preview-r
 
 Code path: `azurenative.mobilenetwork.v20220401preview.Site.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.Site).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.Site).
 
 Service: Mobilenetwork
 
@@ -25931,7 +25931,7 @@ Policy name: `azurenative-mobilenetwork-v20220401preview-slice-disallow-preview-
 
 Code path: `azurenative.mobilenetwork.v20220401preview.Slice.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilenetwork.v20220401preview.Slice).
+Disallow the use of non-stable (Preview) Azure resources (mobilenetwork.v20220401preview.Slice).
 
 Service: Mobilenetwork
 
@@ -25957,7 +25957,7 @@ Policy name: `azurenative-mobilepacketcore-v20230515preview-networkfunction-disa
 
 Code path: `azurenative.mobilepacketcore.v20230515preview.NetworkFunction.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (mobilepacketcore.v20230515preview.NetworkFunction).
+Disallow the use of non-stable (Preview) Azure resources (mobilepacketcore.v20230515preview.NetworkFunction).
 
 Service: Mobilepacketcore
 
@@ -25983,7 +25983,7 @@ Policy name: `azurenative-netapp-v20210401preview-backuppolicy-disallow-preview-
 
 Code path: `azurenative.netapp.v20210401preview.BackupPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20210401preview.BackupPolicy).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20210401preview.BackupPolicy).
 
 Service: Netapp
 
@@ -26007,7 +26007,7 @@ Policy name: `azurenative-netapp-v20221101preview-account-disallow-preview-resou
 
 Code path: `azurenative.netapp.v20221101preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.Account).
 
 Service: Netapp
 
@@ -26029,7 +26029,7 @@ Policy name: `azurenative-netapp-v20221101preview-backup-disallow-preview-resour
 
 Code path: `azurenative.netapp.v20221101preview.Backup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.Backup).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.Backup).
 
 Service: Netapp
 
@@ -26051,7 +26051,7 @@ Policy name: `azurenative-netapp-v20221101preview-backuppolicy-disallow-preview-
 
 Code path: `azurenative.netapp.v20221101preview.BackupPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.BackupPolicy).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.BackupPolicy).
 
 Service: Netapp
 
@@ -26073,7 +26073,7 @@ Policy name: `azurenative-netapp-v20221101preview-backupvault-disallow-preview-r
 
 Code path: `azurenative.netapp.v20221101preview.BackupVault.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.BackupVault).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.BackupVault).
 
 Service: Netapp
 
@@ -26095,7 +26095,7 @@ Policy name: `azurenative-netapp-v20221101preview-pool-disallow-preview-resource
 
 Code path: `azurenative.netapp.v20221101preview.Pool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.Pool).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.Pool).
 
 Service: Netapp
 
@@ -26117,7 +26117,7 @@ Policy name: `azurenative-netapp-v20221101preview-snapshot-disallow-preview-reso
 
 Code path: `azurenative.netapp.v20221101preview.Snapshot.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.Snapshot).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.Snapshot).
 
 Service: Netapp
 
@@ -26139,7 +26139,7 @@ Policy name: `azurenative-netapp-v20221101preview-snapshotpolicy-disallow-previe
 
 Code path: `azurenative.netapp.v20221101preview.SnapshotPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.SnapshotPolicy).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.SnapshotPolicy).
 
 Service: Netapp
 
@@ -26161,7 +26161,7 @@ Policy name: `azurenative-netapp-v20221101preview-subvolume-disallow-preview-res
 
 Code path: `azurenative.netapp.v20221101preview.Subvolume.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.Subvolume).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.Subvolume).
 
 Service: Netapp
 
@@ -26183,7 +26183,7 @@ Policy name: `azurenative-netapp-v20221101preview-volume-disallow-preview-resour
 
 Code path: `azurenative.netapp.v20221101preview.Volume.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.Volume).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.Volume).
 
 Service: Netapp
 
@@ -26205,7 +26205,7 @@ Policy name: `azurenative-netapp-v20221101preview-volumegroup-disallow-preview-r
 
 Code path: `azurenative.netapp.v20221101preview.VolumeGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.VolumeGroup).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.VolumeGroup).
 
 Service: Netapp
 
@@ -26227,7 +26227,7 @@ Policy name: `azurenative-netapp-v20221101preview-volumequotarule-disallow-previ
 
 Code path: `azurenative.netapp.v20221101preview.VolumeQuotaRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (netapp.v20221101preview.VolumeQuotaRule).
+Disallow the use of non-stable (Preview) Azure resources (netapp.v20221101preview.VolumeQuotaRule).
 
 Service: Netapp
 
@@ -26253,7 +26253,7 @@ Policy name: `azurenative-network-v20200401preview-dnsforwardingruleset-disallow
 
 Code path: `azurenative.network.v20200401preview.DnsForwardingRuleset.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20200401preview.DnsForwardingRuleset).
+Disallow the use of non-stable (Preview) Azure resources (network.v20200401preview.DnsForwardingRuleset).
 
 Service: Network
 
@@ -26275,7 +26275,7 @@ Policy name: `azurenative-network-v20200401preview-inboundendpoint-disallow-prev
 
 Code path: `azurenative.network.v20200401preview.InboundEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20200401preview.InboundEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (network.v20200401preview.InboundEndpoint).
 
 Service: Network
 
@@ -26297,7 +26297,7 @@ Policy name: `azurenative-network-v20200401preview-outboundendpoint-disallow-pre
 
 Code path: `azurenative.network.v20200401preview.OutboundEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20200401preview.OutboundEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (network.v20200401preview.OutboundEndpoint).
 
 Service: Network
 
@@ -26319,7 +26319,7 @@ Policy name: `azurenative-network-v20200401preview-privateresolvervirtualnetwork
 
 Code path: `azurenative.network.v20200401preview.PrivateResolverVirtualNetworkLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20200401preview.PrivateResolverVirtualNetworkLink).
+Disallow the use of non-stable (Preview) Azure resources (network.v20200401preview.PrivateResolverVirtualNetworkLink).
 
 Service: Network
 
@@ -26343,7 +26343,7 @@ Policy name: `azurenative-network-v20210201preview-adminrule-disallow-preview-re
 
 Code path: `azurenative.network.v20210201preview.AdminRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.AdminRule).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.AdminRule).
 
 Service: Network
 
@@ -26365,7 +26365,7 @@ Policy name: `azurenative-network-v20210201preview-adminrulecollection-disallow-
 
 Code path: `azurenative.network.v20210201preview.AdminRuleCollection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.AdminRuleCollection).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.AdminRuleCollection).
 
 Service: Network
 
@@ -26387,7 +26387,7 @@ Policy name: `azurenative-network-v20210201preview-connectivityconfiguration-dis
 
 Code path: `azurenative.network.v20210201preview.ConnectivityConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.ConnectivityConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.ConnectivityConfiguration).
 
 Service: Network
 
@@ -26409,7 +26409,7 @@ Policy name: `azurenative-network-v20210201preview-networkgroup-disallow-preview
 
 Code path: `azurenative.network.v20210201preview.NetworkGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.NetworkGroup).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.NetworkGroup).
 
 Service: Network
 
@@ -26431,7 +26431,7 @@ Policy name: `azurenative-network-v20210201preview-networkmanager-disallow-previ
 
 Code path: `azurenative.network.v20210201preview.NetworkManager.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.NetworkManager).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.NetworkManager).
 
 Service: Network
 
@@ -26453,7 +26453,7 @@ Policy name: `azurenative-network-v20210201preview-networksecurityperimeter-disa
 
 Code path: `azurenative.network.v20210201preview.NetworkSecurityPerimeter.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.NetworkSecurityPerimeter).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.NetworkSecurityPerimeter).
 
 Service: Network
 
@@ -26475,7 +26475,7 @@ Policy name: `azurenative-network-v20210201preview-nspaccessrule-disallow-previe
 
 Code path: `azurenative.network.v20210201preview.NspAccessRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.NspAccessRule).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.NspAccessRule).
 
 Service: Network
 
@@ -26497,7 +26497,7 @@ Policy name: `azurenative-network-v20210201preview-nspassociation-disallow-previ
 
 Code path: `azurenative.network.v20210201preview.NspAssociation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.NspAssociation).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.NspAssociation).
 
 Service: Network
 
@@ -26519,7 +26519,7 @@ Policy name: `azurenative-network-v20210201preview-nsplink-disallow-preview-reso
 
 Code path: `azurenative.network.v20210201preview.NspLink.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.NspLink).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.NspLink).
 
 Service: Network
 
@@ -26541,7 +26541,7 @@ Policy name: `azurenative-network-v20210201preview-nspprofile-disallow-preview-r
 
 Code path: `azurenative.network.v20210201preview.NspProfile.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.NspProfile).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.NspProfile).
 
 Service: Network
 
@@ -26563,7 +26563,7 @@ Policy name: `azurenative-network-v20210201preview-userrulecollection-disallow-p
 
 Code path: `azurenative.network.v20210201preview.UserRuleCollection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210201preview.UserRuleCollection).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210201preview.UserRuleCollection).
 
 Service: Network
 
@@ -26587,7 +26587,7 @@ Policy name: `azurenative-network-v20210301preview-networksecurityperimeter-disa
 
 Code path: `azurenative.network.v20210301preview.NetworkSecurityPerimeter.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210301preview.NetworkSecurityPerimeter).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210301preview.NetworkSecurityPerimeter).
 
 Service: Network
 
@@ -26611,7 +26611,7 @@ Policy name: `azurenative-network-v20210501preview-adminrule-disallow-preview-re
 
 Code path: `azurenative.network.v20210501preview.AdminRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.AdminRule).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.AdminRule).
 
 Service: Network
 
@@ -26633,7 +26633,7 @@ Policy name: `azurenative-network-v20210501preview-adminrulecollection-disallow-
 
 Code path: `azurenative.network.v20210501preview.AdminRuleCollection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.AdminRuleCollection).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.AdminRuleCollection).
 
 Service: Network
 
@@ -26655,7 +26655,7 @@ Policy name: `azurenative-network-v20210501preview-connectivityconfiguration-dis
 
 Code path: `azurenative.network.v20210501preview.ConnectivityConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.ConnectivityConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.ConnectivityConfiguration).
 
 Service: Network
 
@@ -26677,7 +26677,7 @@ Policy name: `azurenative-network-v20210501preview-defaultadminrule-disallow-pre
 
 Code path: `azurenative.network.v20210501preview.DefaultAdminRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.DefaultAdminRule).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.DefaultAdminRule).
 
 Service: Network
 
@@ -26699,7 +26699,7 @@ Policy name: `azurenative-network-v20210501preview-defaultuserrule-disallow-prev
 
 Code path: `azurenative.network.v20210501preview.DefaultUserRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.DefaultUserRule).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.DefaultUserRule).
 
 Service: Network
 
@@ -26721,7 +26721,7 @@ Policy name: `azurenative-network-v20210501preview-networkgroup-disallow-preview
 
 Code path: `azurenative.network.v20210501preview.NetworkGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.NetworkGroup).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.NetworkGroup).
 
 Service: Network
 
@@ -26743,7 +26743,7 @@ Policy name: `azurenative-network-v20210501preview-networkmanager-disallow-previ
 
 Code path: `azurenative.network.v20210501preview.NetworkManager.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.NetworkManager).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.NetworkManager).
 
 Service: Network
 
@@ -26765,7 +26765,7 @@ Policy name: `azurenative-network-v20210501preview-securityadminconfiguration-di
 
 Code path: `azurenative.network.v20210501preview.SecurityAdminConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.SecurityAdminConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.SecurityAdminConfiguration).
 
 Service: Network
 
@@ -26787,7 +26787,7 @@ Policy name: `azurenative-network-v20210501preview-securityuserconfiguration-dis
 
 Code path: `azurenative.network.v20210501preview.SecurityUserConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.SecurityUserConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.SecurityUserConfiguration).
 
 Service: Network
 
@@ -26809,7 +26809,7 @@ Policy name: `azurenative-network-v20210501preview-userrule-disallow-preview-res
 
 Code path: `azurenative.network.v20210501preview.UserRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.UserRule).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.UserRule).
 
 Service: Network
 
@@ -26831,7 +26831,7 @@ Policy name: `azurenative-network-v20210501preview-userrulecollection-disallow-p
 
 Code path: `azurenative.network.v20210501preview.UserRuleCollection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20210501preview.UserRuleCollection).
+Disallow the use of non-stable (Preview) Azure resources (network.v20210501preview.UserRuleCollection).
 
 Service: Network
 
@@ -26855,7 +26855,7 @@ Policy name: `azurenative-network-v20220401preview-defaultuserrule-disallow-prev
 
 Code path: `azurenative.network.v20220401preview.DefaultUserRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20220401preview.DefaultUserRule).
+Disallow the use of non-stable (Preview) Azure resources (network.v20220401preview.DefaultUserRule).
 
 Service: Network
 
@@ -26877,7 +26877,7 @@ Policy name: `azurenative-network-v20220401preview-endpoint-disallow-preview-res
 
 Code path: `azurenative.network.v20220401preview.Endpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20220401preview.Endpoint).
+Disallow the use of non-stable (Preview) Azure resources (network.v20220401preview.Endpoint).
 
 Service: Network
 
@@ -26899,7 +26899,7 @@ Policy name: `azurenative-network-v20220401preview-networkgroup-disallow-preview
 
 Code path: `azurenative.network.v20220401preview.NetworkGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20220401preview.NetworkGroup).
+Disallow the use of non-stable (Preview) Azure resources (network.v20220401preview.NetworkGroup).
 
 Service: Network
 
@@ -26921,7 +26921,7 @@ Policy name: `azurenative-network-v20220401preview-profile-disallow-preview-reso
 
 Code path: `azurenative.network.v20220401preview.Profile.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20220401preview.Profile).
+Disallow the use of non-stable (Preview) Azure resources (network.v20220401preview.Profile).
 
 Service: Network
 
@@ -26943,7 +26943,7 @@ Policy name: `azurenative-network-v20220401preview-securityuserconfiguration-dis
 
 Code path: `azurenative.network.v20220401preview.SecurityUserConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20220401preview.SecurityUserConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (network.v20220401preview.SecurityUserConfiguration).
 
 Service: Network
 
@@ -26965,7 +26965,7 @@ Policy name: `azurenative-network-v20220401preview-trafficmanagerusermetricskey-
 
 Code path: `azurenative.network.v20220401preview.TrafficManagerUserMetricsKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20220401preview.TrafficManagerUserMetricsKey).
+Disallow the use of non-stable (Preview) Azure resources (network.v20220401preview.TrafficManagerUserMetricsKey).
 
 Service: Network
 
@@ -26987,7 +26987,7 @@ Policy name: `azurenative-network-v20220401preview-userrule-disallow-preview-res
 
 Code path: `azurenative.network.v20220401preview.UserRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20220401preview.UserRule).
+Disallow the use of non-stable (Preview) Azure resources (network.v20220401preview.UserRule).
 
 Service: Network
 
@@ -27009,7 +27009,7 @@ Policy name: `azurenative-network-v20220401preview-userrulecollection-disallow-p
 
 Code path: `azurenative.network.v20220401preview.UserRuleCollection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20220401preview.UserRuleCollection).
+Disallow the use of non-stable (Preview) Azure resources (network.v20220401preview.UserRuleCollection).
 
 Service: Network
 
@@ -27033,7 +27033,7 @@ Policy name: `azurenative-network-v20230701preview-dnssecconfig-disallow-preview
 
 Code path: `azurenative.network.v20230701preview.DnssecConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20230701preview.DnssecConfig).
+Disallow the use of non-stable (Preview) Azure resources (network.v20230701preview.DnssecConfig).
 
 Service: Network
 
@@ -27055,7 +27055,7 @@ Policy name: `azurenative-network-v20230701preview-recordset-disallow-preview-re
 
 Code path: `azurenative.network.v20230701preview.RecordSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20230701preview.RecordSet).
+Disallow the use of non-stable (Preview) Azure resources (network.v20230701preview.RecordSet).
 
 Service: Network
 
@@ -27077,7 +27077,7 @@ Policy name: `azurenative-network-v20230701preview-zone-disallow-preview-resourc
 
 Code path: `azurenative.network.v20230701preview.Zone.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (network.v20230701preview.Zone).
+Disallow the use of non-stable (Preview) Azure resources (network.v20230701preview.Zone).
 
 Service: Network
 
@@ -27103,7 +27103,7 @@ Policy name: `azurenative-networkcloud-v20221212preview-cluster-disallow-preview
 
 Code path: `azurenative.networkcloud.v20221212preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20221212preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20221212preview.Cluster).
 
 Service: Networkcloud
 
@@ -27125,7 +27125,7 @@ Policy name: `azurenative-networkcloud-v20221212preview-defaultcninetwork-disall
 
 Code path: `azurenative.networkcloud.v20221212preview.DefaultCniNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20221212preview.DefaultCniNetwork).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20221212preview.DefaultCniNetwork).
 
 Service: Networkcloud
 
@@ -27147,7 +27147,7 @@ Policy name: `azurenative-networkcloud-v20221212preview-hybridakscluster-disallo
 
 Code path: `azurenative.networkcloud.v20221212preview.HybridAksCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20221212preview.HybridAksCluster).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20221212preview.HybridAksCluster).
 
 Service: Networkcloud
 
@@ -27171,7 +27171,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-agentpool-disallow-previ
 
 Code path: `azurenative.networkcloud.v20230501preview.AgentPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.AgentPool).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.AgentPool).
 
 Service: Networkcloud
 
@@ -27193,7 +27193,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-baremetalmachine-disallo
 
 Code path: `azurenative.networkcloud.v20230501preview.BareMetalMachine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.BareMetalMachine).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.BareMetalMachine).
 
 Service: Networkcloud
 
@@ -27215,7 +27215,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-baremetalmachinekeyset-d
 
 Code path: `azurenative.networkcloud.v20230501preview.BareMetalMachineKeySet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.BareMetalMachineKeySet).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.BareMetalMachineKeySet).
 
 Service: Networkcloud
 
@@ -27237,7 +27237,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-bmckeyset-disallow-previ
 
 Code path: `azurenative.networkcloud.v20230501preview.BmcKeySet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.BmcKeySet).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.BmcKeySet).
 
 Service: Networkcloud
 
@@ -27259,7 +27259,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-cloudservicesnetwork-dis
 
 Code path: `azurenative.networkcloud.v20230501preview.CloudServicesNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.CloudServicesNetwork).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.CloudServicesNetwork).
 
 Service: Networkcloud
 
@@ -27281,7 +27281,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-cluster-disallow-preview
 
 Code path: `azurenative.networkcloud.v20230501preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.Cluster).
 
 Service: Networkcloud
 
@@ -27303,7 +27303,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-clustermanager-disallow-
 
 Code path: `azurenative.networkcloud.v20230501preview.ClusterManager.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.ClusterManager).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.ClusterManager).
 
 Service: Networkcloud
 
@@ -27325,7 +27325,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-console-disallow-preview
 
 Code path: `azurenative.networkcloud.v20230501preview.Console.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.Console).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.Console).
 
 Service: Networkcloud
 
@@ -27347,7 +27347,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-kubernetescluster-disall
 
 Code path: `azurenative.networkcloud.v20230501preview.KubernetesCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.KubernetesCluster).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.KubernetesCluster).
 
 Service: Networkcloud
 
@@ -27369,7 +27369,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-l2network-disallow-previ
 
 Code path: `azurenative.networkcloud.v20230501preview.L2Network.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.L2Network).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.L2Network).
 
 Service: Networkcloud
 
@@ -27391,7 +27391,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-l3network-disallow-previ
 
 Code path: `azurenative.networkcloud.v20230501preview.L3Network.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.L3Network).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.L3Network).
 
 Service: Networkcloud
 
@@ -27413,7 +27413,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-metricsconfiguration-dis
 
 Code path: `azurenative.networkcloud.v20230501preview.MetricsConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.MetricsConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.MetricsConfiguration).
 
 Service: Networkcloud
 
@@ -27435,7 +27435,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-rack-disallow-preview-re
 
 Code path: `azurenative.networkcloud.v20230501preview.Rack.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.Rack).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.Rack).
 
 Service: Networkcloud
 
@@ -27457,7 +27457,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-storageappliance-disallo
 
 Code path: `azurenative.networkcloud.v20230501preview.StorageAppliance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.StorageAppliance).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.StorageAppliance).
 
 Service: Networkcloud
 
@@ -27479,7 +27479,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-trunkednetwork-disallow-
 
 Code path: `azurenative.networkcloud.v20230501preview.TrunkedNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.TrunkedNetwork).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.TrunkedNetwork).
 
 Service: Networkcloud
 
@@ -27501,7 +27501,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-virtualmachine-disallow-
 
 Code path: `azurenative.networkcloud.v20230501preview.VirtualMachine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.VirtualMachine).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.VirtualMachine).
 
 Service: Networkcloud
 
@@ -27523,7 +27523,7 @@ Policy name: `azurenative-networkcloud-v20230501preview-volume-disallow-preview-
 
 Code path: `azurenative.networkcloud.v20230501preview.Volume.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (networkcloud.v20230501preview.Volume).
+Disallow the use of non-stable (Preview) Azure resources (networkcloud.v20230501preview.Volume).
 
 Service: Networkcloud
 
@@ -27549,7 +27549,7 @@ Policy name: `azurenative-notificationhubs-v20230101preview-namespace-disallow-p
 
 Code path: `azurenative.notificationhubs.v20230101preview.Namespace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (notificationhubs.v20230101preview.Namespace).
+Disallow the use of non-stable (Preview) Azure resources (notificationhubs.v20230101preview.Namespace).
 
 Service: Notificationhubs
 
@@ -27571,7 +27571,7 @@ Policy name: `azurenative-notificationhubs-v20230101preview-namespaceauthorizati
 
 Code path: `azurenative.notificationhubs.v20230101preview.NamespaceAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (notificationhubs.v20230101preview.NamespaceAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (notificationhubs.v20230101preview.NamespaceAuthorizationRule).
 
 Service: Notificationhubs
 
@@ -27593,7 +27593,7 @@ Policy name: `azurenative-notificationhubs-v20230101preview-notificationhub-disa
 
 Code path: `azurenative.notificationhubs.v20230101preview.NotificationHub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (notificationhubs.v20230101preview.NotificationHub).
+Disallow the use of non-stable (Preview) Azure resources (notificationhubs.v20230101preview.NotificationHub).
 
 Service: Notificationhubs
 
@@ -27615,7 +27615,7 @@ Policy name: `azurenative-notificationhubs-v20230101preview-notificationhubautho
 
 Code path: `azurenative.notificationhubs.v20230101preview.NotificationHubAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (notificationhubs.v20230101preview.NotificationHubAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (notificationhubs.v20230101preview.NotificationHubAuthorizationRule).
 
 Service: Notificationhubs
 
@@ -27637,7 +27637,7 @@ Policy name: `azurenative-notificationhubs-v20230101preview-privateendpointconne
 
 Code path: `azurenative.notificationhubs.v20230101preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (notificationhubs.v20230101preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (notificationhubs.v20230101preview.PrivateEndpointConnection).
 
 Service: Notificationhubs
 
@@ -27663,7 +27663,7 @@ Policy name: `azurenative-openenergyplatform-v20220404preview-energyservice-disa
 
 Code path: `azurenative.openenergyplatform.v20220404preview.EnergyService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (openenergyplatform.v20220404preview.EnergyService).
+Disallow the use of non-stable (Preview) Azure resources (openenergyplatform.v20220404preview.EnergyService).
 
 Service: Openenergyplatform
 
@@ -27689,7 +27689,7 @@ Policy name: `azurenative-operationalinsights-v20151101preview-datasource-disall
 
 Code path: `azurenative.operationalinsights.v20151101preview.DataSource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationalinsights.v20151101preview.DataSource).
+Disallow the use of non-stable (Preview) Azure resources (operationalinsights.v20151101preview.DataSource).
 
 Service: Operationalinsights
 
@@ -27711,7 +27711,7 @@ Policy name: `azurenative-operationalinsights-v20151101preview-linkedservice-dis
 
 Code path: `azurenative.operationalinsights.v20151101preview.LinkedService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationalinsights.v20151101preview.LinkedService).
+Disallow the use of non-stable (Preview) Azure resources (operationalinsights.v20151101preview.LinkedService).
 
 Service: Operationalinsights
 
@@ -27733,7 +27733,7 @@ Policy name: `azurenative-operationalinsights-v20151101preview-machinegroup-disa
 
 Code path: `azurenative.operationalinsights.v20151101preview.MachineGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationalinsights.v20151101preview.MachineGroup).
+Disallow the use of non-stable (Preview) Azure resources (operationalinsights.v20151101preview.MachineGroup).
 
 Service: Operationalinsights
 
@@ -27755,7 +27755,7 @@ Policy name: `azurenative-operationalinsights-v20151101preview-workspace-disallo
 
 Code path: `azurenative.operationalinsights.v20151101preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationalinsights.v20151101preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (operationalinsights.v20151101preview.Workspace).
 
 Service: Operationalinsights
 
@@ -27779,7 +27779,7 @@ Policy name: `azurenative-operationalinsights-v20190901preview-query-disallow-pr
 
 Code path: `azurenative.operationalinsights.v20190901preview.Query.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationalinsights.v20190901preview.Query).
+Disallow the use of non-stable (Preview) Azure resources (operationalinsights.v20190901preview.Query).
 
 Service: Operationalinsights
 
@@ -27801,7 +27801,7 @@ Policy name: `azurenative-operationalinsights-v20190901preview-querypack-disallo
 
 Code path: `azurenative.operationalinsights.v20190901preview.QueryPack.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationalinsights.v20190901preview.QueryPack).
+Disallow the use of non-stable (Preview) Azure resources (operationalinsights.v20190901preview.QueryPack).
 
 Service: Operationalinsights
 
@@ -27825,7 +27825,7 @@ Policy name: `azurenative-operationalinsights-v20211201preview-workspace-disallo
 
 Code path: `azurenative.operationalinsights.v20211201preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationalinsights.v20211201preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (operationalinsights.v20211201preview.Workspace).
 
 Service: Operationalinsights
 
@@ -27851,7 +27851,7 @@ Policy name: `azurenative-operationsmanagement-v20151101preview-managementassoci
 
 Code path: `azurenative.operationsmanagement.v20151101preview.ManagementAssociation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationsmanagement.v20151101preview.ManagementAssociation).
+Disallow the use of non-stable (Preview) Azure resources (operationsmanagement.v20151101preview.ManagementAssociation).
 
 Service: Operationsmanagement
 
@@ -27873,7 +27873,7 @@ Policy name: `azurenative-operationsmanagement-v20151101preview-managementconfig
 
 Code path: `azurenative.operationsmanagement.v20151101preview.ManagementConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationsmanagement.v20151101preview.ManagementConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (operationsmanagement.v20151101preview.ManagementConfiguration).
 
 Service: Operationsmanagement
 
@@ -27895,7 +27895,7 @@ Policy name: `azurenative-operationsmanagement-v20151101preview-solution-disallo
 
 Code path: `azurenative.operationsmanagement.v20151101preview.Solution.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (operationsmanagement.v20151101preview.Solution).
+Disallow the use of non-stable (Preview) Azure resources (operationsmanagement.v20151101preview.Solution).
 
 Service: Operationsmanagement
 
@@ -27921,7 +27921,7 @@ Policy name: `azurenative-portal-v20190101preview-dashboard-disallow-preview-res
 
 Code path: `azurenative.portal.v20190101preview.Dashboard.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (portal.v20190101preview.Dashboard).
+Disallow the use of non-stable (Preview) Azure resources (portal.v20190101preview.Dashboard).
 
 Service: Portal
 
@@ -27945,7 +27945,7 @@ Policy name: `azurenative-portal-v20200901preview-dashboard-disallow-preview-res
 
 Code path: `azurenative.portal.v20200901preview.Dashboard.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (portal.v20200901preview.Dashboard).
+Disallow the use of non-stable (Preview) Azure resources (portal.v20200901preview.Dashboard).
 
 Service: Portal
 
@@ -27967,7 +27967,7 @@ Policy name: `azurenative-portal-v20200901preview-tenantconfiguration-disallow-p
 
 Code path: `azurenative.portal.v20200901preview.TenantConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (portal.v20200901preview.TenantConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (portal.v20200901preview.TenantConfiguration).
 
 Service: Portal
 
@@ -27993,7 +27993,7 @@ Policy name: `azurenative-powerplatform-v20201030preview-account-disallow-previe
 
 Code path: `azurenative.powerplatform.v20201030preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (powerplatform.v20201030preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (powerplatform.v20201030preview.Account).
 
 Service: Powerplatform
 
@@ -28015,7 +28015,7 @@ Policy name: `azurenative-powerplatform-v20201030preview-enterprisepolicy-disall
 
 Code path: `azurenative.powerplatform.v20201030preview.EnterprisePolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (powerplatform.v20201030preview.EnterprisePolicy).
+Disallow the use of non-stable (Preview) Azure resources (powerplatform.v20201030preview.EnterprisePolicy).
 
 Service: Powerplatform
 
@@ -28037,7 +28037,7 @@ Policy name: `azurenative-powerplatform-v20201030preview-privateendpointconnecti
 
 Code path: `azurenative.powerplatform.v20201030preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (powerplatform.v20201030preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (powerplatform.v20201030preview.PrivateEndpointConnection).
 
 Service: Powerplatform
 
@@ -28063,7 +28063,7 @@ Policy name: `azurenative-professionalservice-v20230701preview-professionalservi
 
 Code path: `azurenative.professionalservice.v20230701preview.ProfessionalServiceSubscriptionLevel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (professionalservice.v20230701preview.ProfessionalServiceSubscriptionLevel).
+Disallow the use of non-stable (Preview) Azure resources (professionalservice.v20230701preview.ProfessionalServiceSubscriptionLevel).
 
 Service: Professionalservice
 
@@ -28089,7 +28089,7 @@ Policy name: `azurenative-providerhub-v20210501preview-operationbyproviderregist
 
 Code path: `azurenative.providerhub.v20210501preview.OperationByProviderRegistration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210501preview.OperationByProviderRegistration).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210501preview.OperationByProviderRegistration).
 
 Service: Providerhub
 
@@ -28113,7 +28113,7 @@ Policy name: `azurenative-providerhub-v20210901preview-defaultrollout-disallow-p
 
 Code path: `azurenative.providerhub.v20210901preview.DefaultRollout.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210901preview.DefaultRollout).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210901preview.DefaultRollout).
 
 Service: Providerhub
 
@@ -28135,7 +28135,7 @@ Policy name: `azurenative-providerhub-v20210901preview-notificationregistration-
 
 Code path: `azurenative.providerhub.v20210901preview.NotificationRegistration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210901preview.NotificationRegistration).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210901preview.NotificationRegistration).
 
 Service: Providerhub
 
@@ -28157,7 +28157,7 @@ Policy name: `azurenative-providerhub-v20210901preview-operationbyproviderregist
 
 Code path: `azurenative.providerhub.v20210901preview.OperationByProviderRegistration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210901preview.OperationByProviderRegistration).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210901preview.OperationByProviderRegistration).
 
 Service: Providerhub
 
@@ -28179,7 +28179,7 @@ Policy name: `azurenative-providerhub-v20210901preview-providerregistration-disa
 
 Code path: `azurenative.providerhub.v20210901preview.ProviderRegistration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210901preview.ProviderRegistration).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210901preview.ProviderRegistration).
 
 Service: Providerhub
 
@@ -28201,7 +28201,7 @@ Policy name: `azurenative-providerhub-v20210901preview-resourcetyperegistration-
 
 Code path: `azurenative.providerhub.v20210901preview.ResourceTypeRegistration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210901preview.ResourceTypeRegistration).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210901preview.ResourceTypeRegistration).
 
 Service: Providerhub
 
@@ -28223,7 +28223,7 @@ Policy name: `azurenative-providerhub-v20210901preview-skus-disallow-preview-res
 
 Code path: `azurenative.providerhub.v20210901preview.Skus.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210901preview.Skus).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210901preview.Skus).
 
 Service: Providerhub
 
@@ -28245,7 +28245,7 @@ Policy name: `azurenative-providerhub-v20210901preview-skusnestedresourcetypefir
 
 Code path: `azurenative.providerhub.v20210901preview.SkusNestedResourceTypeFirst.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210901preview.SkusNestedResourceTypeFirst).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210901preview.SkusNestedResourceTypeFirst).
 
 Service: Providerhub
 
@@ -28267,7 +28267,7 @@ Policy name: `azurenative-providerhub-v20210901preview-skusnestedresourcetypesec
 
 Code path: `azurenative.providerhub.v20210901preview.SkusNestedResourceTypeSecond.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210901preview.SkusNestedResourceTypeSecond).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210901preview.SkusNestedResourceTypeSecond).
 
 Service: Providerhub
 
@@ -28289,7 +28289,7 @@ Policy name: `azurenative-providerhub-v20210901preview-skusnestedresourcetypethi
 
 Code path: `azurenative.providerhub.v20210901preview.SkusNestedResourceTypeThird.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (providerhub.v20210901preview.SkusNestedResourceTypeThird).
+Disallow the use of non-stable (Preview) Azure resources (providerhub.v20210901preview.SkusNestedResourceTypeThird).
 
 Service: Providerhub
 
@@ -28315,7 +28315,7 @@ Policy name: `azurenative-purview-v20201201preview-account-disallow-preview-reso
 
 Code path: `azurenative.purview.v20201201preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (purview.v20201201preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (purview.v20201201preview.Account).
 
 Service: Purview
 
@@ -28341,7 +28341,7 @@ Policy name: `azurenative-quantum-v20220110preview-workspace-disallow-preview-re
 
 Code path: `azurenative.quantum.v20220110preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (quantum.v20220110preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (quantum.v20220110preview.Workspace).
 
 Service: Quantum
 
@@ -28367,7 +28367,7 @@ Policy name: `azurenative-quota-v20230601preview-groupquota-disallow-preview-res
 
 Code path: `azurenative.quota.v20230601preview.GroupQuota.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (quota.v20230601preview.GroupQuota).
+Disallow the use of non-stable (Preview) Azure resources (quota.v20230601preview.GroupQuota).
 
 Service: Quota
 
@@ -28389,7 +28389,7 @@ Policy name: `azurenative-quota-v20230601preview-groupquotasubscription-disallow
 
 Code path: `azurenative.quota.v20230601preview.GroupQuotaSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (quota.v20230601preview.GroupQuotaSubscription).
+Disallow the use of non-stable (Preview) Azure resources (quota.v20230601preview.GroupQuotaSubscription).
 
 Service: Quota
 
@@ -28415,7 +28415,7 @@ Policy name: `azurenative-recommendationsservice-v20220301preview-account-disall
 
 Code path: `azurenative.recommendationsservice.v20220301preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (recommendationsservice.v20220301preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (recommendationsservice.v20220301preview.Account).
 
 Service: Recommendationsservice
 
@@ -28437,7 +28437,7 @@ Policy name: `azurenative-recommendationsservice-v20220301preview-modeling-disal
 
 Code path: `azurenative.recommendationsservice.v20220301preview.Modeling.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (recommendationsservice.v20220301preview.Modeling).
+Disallow the use of non-stable (Preview) Azure resources (recommendationsservice.v20220301preview.Modeling).
 
 Service: Recommendationsservice
 
@@ -28459,7 +28459,7 @@ Policy name: `azurenative-recommendationsservice-v20220301preview-serviceendpoin
 
 Code path: `azurenative.recommendationsservice.v20220301preview.ServiceEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (recommendationsservice.v20220301preview.ServiceEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (recommendationsservice.v20220301preview.ServiceEndpoint).
 
 Service: Recommendationsservice
 
@@ -28485,7 +28485,7 @@ Policy name: `azurenative-redhatopenshift-v20230701preview-machinepool-disallow-
 
 Code path: `azurenative.redhatopenshift.v20230701preview.MachinePool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (redhatopenshift.v20230701preview.MachinePool).
+Disallow the use of non-stable (Preview) Azure resources (redhatopenshift.v20230701preview.MachinePool).
 
 Service: Redhatopenshift
 
@@ -28507,7 +28507,7 @@ Policy name: `azurenative-redhatopenshift-v20230701preview-openshiftcluster-disa
 
 Code path: `azurenative.redhatopenshift.v20230701preview.OpenShiftCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (redhatopenshift.v20230701preview.OpenShiftCluster).
+Disallow the use of non-stable (Preview) Azure resources (redhatopenshift.v20230701preview.OpenShiftCluster).
 
 Service: Redhatopenshift
 
@@ -28529,7 +28529,7 @@ Policy name: `azurenative-redhatopenshift-v20230701preview-secret-disallow-previ
 
 Code path: `azurenative.redhatopenshift.v20230701preview.Secret.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (redhatopenshift.v20230701preview.Secret).
+Disallow the use of non-stable (Preview) Azure resources (redhatopenshift.v20230701preview.Secret).
 
 Service: Redhatopenshift
 
@@ -28551,7 +28551,7 @@ Policy name: `azurenative-redhatopenshift-v20230701preview-syncidentityprovider-
 
 Code path: `azurenative.redhatopenshift.v20230701preview.SyncIdentityProvider.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (redhatopenshift.v20230701preview.SyncIdentityProvider).
+Disallow the use of non-stable (Preview) Azure resources (redhatopenshift.v20230701preview.SyncIdentityProvider).
 
 Service: Redhatopenshift
 
@@ -28573,7 +28573,7 @@ Policy name: `azurenative-redhatopenshift-v20230701preview-syncset-disallow-prev
 
 Code path: `azurenative.redhatopenshift.v20230701preview.SyncSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (redhatopenshift.v20230701preview.SyncSet).
+Disallow the use of non-stable (Preview) Azure resources (redhatopenshift.v20230701preview.SyncSet).
 
 Service: Redhatopenshift
 
@@ -28599,7 +28599,7 @@ Policy name: `azurenative-relay-v20180101preview-privateendpointconnection-disal
 
 Code path: `azurenative.relay.v20180101preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (relay.v20180101preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (relay.v20180101preview.PrivateEndpointConnection).
 
 Service: Relay
 
@@ -28625,7 +28625,7 @@ Policy name: `azurenative-resourceconnector-v20211031preview-appliance-disallow-
 
 Code path: `azurenative.resourceconnector.v20211031preview.Appliance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (resourceconnector.v20211031preview.Appliance).
+Disallow the use of non-stable (Preview) Azure resources (resourceconnector.v20211031preview.Appliance).
 
 Service: Resourceconnector
 
@@ -28651,7 +28651,7 @@ Policy name: `azurenative-resourcegraph-v20180901preview-graphquery-disallow-pre
 
 Code path: `azurenative.resourcegraph.v20180901preview.GraphQuery.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (resourcegraph.v20180901preview.GraphQuery).
+Disallow the use of non-stable (Preview) Azure resources (resourcegraph.v20180901preview.GraphQuery).
 
 Service: Resourcegraph
 
@@ -28675,7 +28675,7 @@ Policy name: `azurenative-resourcegraph-v20200401preview-graphquery-disallow-pre
 
 Code path: `azurenative.resourcegraph.v20200401preview.GraphQuery.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (resourcegraph.v20200401preview.GraphQuery).
+Disallow the use of non-stable (Preview) Azure resources (resourcegraph.v20200401preview.GraphQuery).
 
 Service: Resourcegraph
 
@@ -28701,7 +28701,7 @@ Policy name: `azurenative-resources-v20190601preview-templatespecversion-disallo
 
 Code path: `azurenative.resources.v20190601preview.TemplateSpecVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (resources.v20190601preview.TemplateSpecVersion).
+Disallow the use of non-stable (Preview) Azure resources (resources.v20190601preview.TemplateSpecVersion).
 
 Service: Resources
 
@@ -28725,7 +28725,7 @@ Policy name: `azurenative-resources-v20191001preview-azurecliscript-disallow-pre
 
 Code path: `azurenative.resources.v20191001preview.AzureCliScript.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (resources.v20191001preview.AzureCliScript).
+Disallow the use of non-stable (Preview) Azure resources (resources.v20191001preview.AzureCliScript).
 
 Service: Resources
 
@@ -28747,7 +28747,7 @@ Policy name: `azurenative-resources-v20191001preview-azurepowershellscript-disal
 
 Code path: `azurenative.resources.v20191001preview.AzurePowerShellScript.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (resources.v20191001preview.AzurePowerShellScript).
+Disallow the use of non-stable (Preview) Azure resources (resources.v20191001preview.AzurePowerShellScript).
 
 Service: Resources
 
@@ -28771,7 +28771,7 @@ Policy name: `azurenative-resources-v20220801preview-deploymentstackatmanagement
 
 Code path: `azurenative.resources.v20220801preview.DeploymentStackAtManagementGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (resources.v20220801preview.DeploymentStackAtManagementGroup).
+Disallow the use of non-stable (Preview) Azure resources (resources.v20220801preview.DeploymentStackAtManagementGroup).
 
 Service: Resources
 
@@ -28793,7 +28793,7 @@ Policy name: `azurenative-resources-v20220801preview-deploymentstackatresourcegr
 
 Code path: `azurenative.resources.v20220801preview.DeploymentStackAtResourceGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (resources.v20220801preview.DeploymentStackAtResourceGroup).
+Disallow the use of non-stable (Preview) Azure resources (resources.v20220801preview.DeploymentStackAtResourceGroup).
 
 Service: Resources
 
@@ -28815,7 +28815,7 @@ Policy name: `azurenative-resources-v20220801preview-deploymentstackatsubscripti
 
 Code path: `azurenative.resources.v20220801preview.DeploymentStackAtSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (resources.v20220801preview.DeploymentStackAtSubscription).
+Disallow the use of non-stable (Preview) Azure resources (resources.v20220801preview.DeploymentStackAtSubscription).
 
 Service: Resources
 
@@ -28841,7 +28841,7 @@ Policy name: `azurenative-scom-v20230707preview-instance-disallow-preview-resour
 
 Code path: `azurenative.scom.v20230707preview.Instance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scom.v20230707preview.Instance).
+Disallow the use of non-stable (Preview) Azure resources (scom.v20230707preview.Instance).
 
 Service: Scom
 
@@ -28863,7 +28863,7 @@ Policy name: `azurenative-scom-v20230707preview-managedgateway-disallow-preview-
 
 Code path: `azurenative.scom.v20230707preview.ManagedGateway.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scom.v20230707preview.ManagedGateway).
+Disallow the use of non-stable (Preview) Azure resources (scom.v20230707preview.ManagedGateway).
 
 Service: Scom
 
@@ -28885,7 +28885,7 @@ Policy name: `azurenative-scom-v20230707preview-monitoredresource-disallow-previ
 
 Code path: `azurenative.scom.v20230707preview.MonitoredResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scom.v20230707preview.MonitoredResource).
+Disallow the use of non-stable (Preview) Azure resources (scom.v20230707preview.MonitoredResource).
 
 Service: Scom
 
@@ -28911,7 +28911,7 @@ Policy name: `azurenative-scvmm-v20220521preview-availabilityset-disallow-previe
 
 Code path: `azurenative.scvmm.v20220521preview.AvailabilitySet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.AvailabilitySet).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.AvailabilitySet).
 
 Service: Scvmm
 
@@ -28933,7 +28933,7 @@ Policy name: `azurenative-scvmm-v20220521preview-cloud-disallow-preview-resource
 
 Code path: `azurenative.scvmm.v20220521preview.Cloud.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.Cloud).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.Cloud).
 
 Service: Scvmm
 
@@ -28955,7 +28955,7 @@ Policy name: `azurenative-scvmm-v20220521preview-guestagent-disallow-preview-res
 
 Code path: `azurenative.scvmm.v20220521preview.GuestAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.GuestAgent).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.GuestAgent).
 
 Service: Scvmm
 
@@ -28977,7 +28977,7 @@ Policy name: `azurenative-scvmm-v20220521preview-hybrididentitymetadata-disallow
 
 Code path: `azurenative.scvmm.v20220521preview.HybridIdentityMetadata.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.HybridIdentityMetadata).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.HybridIdentityMetadata).
 
 Service: Scvmm
 
@@ -28999,7 +28999,7 @@ Policy name: `azurenative-scvmm-v20220521preview-inventoryitem-disallow-preview-
 
 Code path: `azurenative.scvmm.v20220521preview.InventoryItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.InventoryItem).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.InventoryItem).
 
 Service: Scvmm
 
@@ -29021,7 +29021,7 @@ Policy name: `azurenative-scvmm-v20220521preview-machineextension-disallow-previ
 
 Code path: `azurenative.scvmm.v20220521preview.MachineExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.MachineExtension).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.MachineExtension).
 
 Service: Scvmm
 
@@ -29043,7 +29043,7 @@ Policy name: `azurenative-scvmm-v20220521preview-virtualmachine-disallow-preview
 
 Code path: `azurenative.scvmm.v20220521preview.VirtualMachine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.VirtualMachine).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.VirtualMachine).
 
 Service: Scvmm
 
@@ -29065,7 +29065,7 @@ Policy name: `azurenative-scvmm-v20220521preview-virtualmachinetemplate-disallow
 
 Code path: `azurenative.scvmm.v20220521preview.VirtualMachineTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.VirtualMachineTemplate).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.VirtualMachineTemplate).
 
 Service: Scvmm
 
@@ -29087,7 +29087,7 @@ Policy name: `azurenative-scvmm-v20220521preview-virtualnetwork-disallow-preview
 
 Code path: `azurenative.scvmm.v20220521preview.VirtualNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.VirtualNetwork).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.VirtualNetwork).
 
 Service: Scvmm
 
@@ -29109,7 +29109,7 @@ Policy name: `azurenative-scvmm-v20220521preview-vmmserver-disallow-preview-reso
 
 Code path: `azurenative.scvmm.v20220521preview.VmmServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20220521preview.VmmServer).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20220521preview.VmmServer).
 
 Service: Scvmm
 
@@ -29133,7 +29133,7 @@ Policy name: `azurenative-scvmm-v20230401preview-availabilityset-disallow-previe
 
 Code path: `azurenative.scvmm.v20230401preview.AvailabilitySet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.AvailabilitySet).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.AvailabilitySet).
 
 Service: Scvmm
 
@@ -29155,7 +29155,7 @@ Policy name: `azurenative-scvmm-v20230401preview-cloud-disallow-preview-resource
 
 Code path: `azurenative.scvmm.v20230401preview.Cloud.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.Cloud).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.Cloud).
 
 Service: Scvmm
 
@@ -29177,7 +29177,7 @@ Policy name: `azurenative-scvmm-v20230401preview-guestagent-disallow-preview-res
 
 Code path: `azurenative.scvmm.v20230401preview.GuestAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.GuestAgent).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.GuestAgent).
 
 Service: Scvmm
 
@@ -29199,7 +29199,7 @@ Policy name: `azurenative-scvmm-v20230401preview-hybrididentitymetadata-disallow
 
 Code path: `azurenative.scvmm.v20230401preview.HybridIdentityMetadata.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.HybridIdentityMetadata).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.HybridIdentityMetadata).
 
 Service: Scvmm
 
@@ -29221,7 +29221,7 @@ Policy name: `azurenative-scvmm-v20230401preview-inventoryitem-disallow-preview-
 
 Code path: `azurenative.scvmm.v20230401preview.InventoryItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.InventoryItem).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.InventoryItem).
 
 Service: Scvmm
 
@@ -29243,7 +29243,7 @@ Policy name: `azurenative-scvmm-v20230401preview-machineextension-disallow-previ
 
 Code path: `azurenative.scvmm.v20230401preview.MachineExtension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.MachineExtension).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.MachineExtension).
 
 Service: Scvmm
 
@@ -29265,7 +29265,7 @@ Policy name: `azurenative-scvmm-v20230401preview-vminstanceguestagent-disallow-p
 
 Code path: `azurenative.scvmm.v20230401preview.VMInstanceGuestAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.VMInstanceGuestAgent).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.VMInstanceGuestAgent).
 
 Service: Scvmm
 
@@ -29287,7 +29287,7 @@ Policy name: `azurenative-scvmm-v20230401preview-virtualmachine-disallow-preview
 
 Code path: `azurenative.scvmm.v20230401preview.VirtualMachine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.VirtualMachine).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.VirtualMachine).
 
 Service: Scvmm
 
@@ -29309,7 +29309,7 @@ Policy name: `azurenative-scvmm-v20230401preview-virtualmachineinstance-disallow
 
 Code path: `azurenative.scvmm.v20230401preview.VirtualMachineInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.VirtualMachineInstance).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.VirtualMachineInstance).
 
 Service: Scvmm
 
@@ -29331,7 +29331,7 @@ Policy name: `azurenative-scvmm-v20230401preview-virtualmachinetemplate-disallow
 
 Code path: `azurenative.scvmm.v20230401preview.VirtualMachineTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.VirtualMachineTemplate).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.VirtualMachineTemplate).
 
 Service: Scvmm
 
@@ -29353,7 +29353,7 @@ Policy name: `azurenative-scvmm-v20230401preview-virtualnetwork-disallow-preview
 
 Code path: `azurenative.scvmm.v20230401preview.VirtualNetwork.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.VirtualNetwork).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.VirtualNetwork).
 
 Service: Scvmm
 
@@ -29375,7 +29375,7 @@ Policy name: `azurenative-scvmm-v20230401preview-vmmserver-disallow-preview-reso
 
 Code path: `azurenative.scvmm.v20230401preview.VmmServer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (scvmm.v20230401preview.VmmServer).
+Disallow the use of non-stable (Preview) Azure resources (scvmm.v20230401preview.VmmServer).
 
 Service: Scvmm
 
@@ -29401,7 +29401,7 @@ Policy name: `azurenative-search-v20210401preview-service-disallow-preview-resou
 
 Code path: `azurenative.search.v20210401preview.Service.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (search.v20210401preview.Service).
+Disallow the use of non-stable (Preview) Azure resources (search.v20210401preview.Service).
 
 Service: Search
 
@@ -29427,7 +29427,7 @@ Policy name: `azurenative-security-v20170801preview-iotsecuritysolution-disallow
 
 Code path: `azurenative.security.v20170801preview.IotSecuritySolution.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20170801preview.IotSecuritySolution).
+Disallow the use of non-stable (Preview) Azure resources (security.v20170801preview.IotSecuritySolution).
 
 Service: Security
 
@@ -29449,7 +29449,7 @@ Policy name: `azurenative-security-v20170801preview-securitycontact-disallow-pre
 
 Code path: `azurenative.security.v20170801preview.SecurityContact.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20170801preview.SecurityContact).
+Disallow the use of non-stable (Preview) Azure resources (security.v20170801preview.SecurityContact).
 
 Service: Security
 
@@ -29471,7 +29471,7 @@ Policy name: `azurenative-security-v20170801preview-workspacesetting-disallow-pr
 
 Code path: `azurenative.security.v20170801preview.WorkspaceSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20170801preview.WorkspaceSetting).
+Disallow the use of non-stable (Preview) Azure resources (security.v20170801preview.WorkspaceSetting).
 
 Service: Security
 
@@ -29495,7 +29495,7 @@ Policy name: `azurenative-security-v20190101preview-alertssuppressionrule-disall
 
 Code path: `azurenative.security.v20190101preview.AlertsSuppressionRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20190101preview.AlertsSuppressionRule).
+Disallow the use of non-stable (Preview) Azure resources (security.v20190101preview.AlertsSuppressionRule).
 
 Service: Security
 
@@ -29517,7 +29517,7 @@ Policy name: `azurenative-security-v20190101preview-assessmentsmetadatasubscript
 
 Code path: `azurenative.security.v20190101preview.AssessmentsMetadataSubscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20190101preview.AssessmentsMetadataSubscription).
+Disallow the use of non-stable (Preview) Azure resources (security.v20190101preview.AssessmentsMetadataSubscription).
 
 Service: Security
 
@@ -29539,7 +29539,7 @@ Policy name: `azurenative-security-v20190101preview-automation-disallow-preview-
 
 Code path: `azurenative.security.v20190101preview.Automation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20190101preview.Automation).
+Disallow the use of non-stable (Preview) Azure resources (security.v20190101preview.Automation).
 
 Service: Security
 
@@ -29563,7 +29563,7 @@ Policy name: `azurenative-security-v20200101preview-connector-disallow-preview-r
 
 Code path: `azurenative.security.v20200101preview.Connector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20200101preview.Connector).
+Disallow the use of non-stable (Preview) Azure resources (security.v20200101preview.Connector).
 
 Service: Security
 
@@ -29585,7 +29585,7 @@ Policy name: `azurenative-security-v20200101preview-securitycontact-disallow-pre
 
 Code path: `azurenative.security.v20200101preview.SecurityContact.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20200101preview.SecurityContact).
+Disallow the use of non-stable (Preview) Azure resources (security.v20200101preview.SecurityContact).
 
 Service: Security
 
@@ -29609,7 +29609,7 @@ Policy name: `azurenative-security-v20210115preview-ingestionsetting-disallow-pr
 
 Code path: `azurenative.security.v20210115preview.IngestionSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20210115preview.IngestionSetting).
+Disallow the use of non-stable (Preview) Azure resources (security.v20210115preview.IngestionSetting).
 
 Service: Security
 
@@ -29633,7 +29633,7 @@ Policy name: `azurenative-security-v20210701preview-customassessmentautomation-d
 
 Code path: `azurenative.security.v20210701preview.CustomAssessmentAutomation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20210701preview.CustomAssessmentAutomation).
+Disallow the use of non-stable (Preview) Azure resources (security.v20210701preview.CustomAssessmentAutomation).
 
 Service: Security
 
@@ -29655,7 +29655,7 @@ Policy name: `azurenative-security-v20210701preview-customentitystoreassignment-
 
 Code path: `azurenative.security.v20210701preview.CustomEntityStoreAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20210701preview.CustomEntityStoreAssignment).
+Disallow the use of non-stable (Preview) Azure resources (security.v20210701preview.CustomEntityStoreAssignment).
 
 Service: Security
 
@@ -29677,7 +29677,7 @@ Policy name: `azurenative-security-v20210701preview-securityconnector-disallow-p
 
 Code path: `azurenative.security.v20210701preview.SecurityConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20210701preview.SecurityConnector).
+Disallow the use of non-stable (Preview) Azure resources (security.v20210701preview.SecurityConnector).
 
 Service: Security
 
@@ -29701,7 +29701,7 @@ Policy name: `azurenative-security-v20210801preview-assignment-disallow-preview-
 
 Code path: `azurenative.security.v20210801preview.Assignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20210801preview.Assignment).
+Disallow the use of non-stable (Preview) Azure resources (security.v20210801preview.Assignment).
 
 Service: Security
 
@@ -29723,7 +29723,7 @@ Policy name: `azurenative-security-v20210801preview-standard-disallow-preview-re
 
 Code path: `azurenative.security.v20210801preview.Standard.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20210801preview.Standard).
+Disallow the use of non-stable (Preview) Azure resources (security.v20210801preview.Standard).
 
 Service: Security
 
@@ -29747,7 +29747,7 @@ Policy name: `azurenative-security-v20220101preview-governanceassignment-disallo
 
 Code path: `azurenative.security.v20220101preview.GovernanceAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20220101preview.GovernanceAssignment).
+Disallow the use of non-stable (Preview) Azure resources (security.v20220101preview.GovernanceAssignment).
 
 Service: Security
 
@@ -29769,7 +29769,7 @@ Policy name: `azurenative-security-v20220101preview-governancerule-disallow-prev
 
 Code path: `azurenative.security.v20220101preview.GovernanceRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20220101preview.GovernanceRule).
+Disallow the use of non-stable (Preview) Azure resources (security.v20220101preview.GovernanceRule).
 
 Service: Security
 
@@ -29793,7 +29793,7 @@ Policy name: `azurenative-security-v20220701preview-application-disallow-preview
 
 Code path: `azurenative.security.v20220701preview.Application.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20220701preview.Application).
+Disallow the use of non-stable (Preview) Azure resources (security.v20220701preview.Application).
 
 Service: Security
 
@@ -29815,7 +29815,7 @@ Policy name: `azurenative-security-v20220701preview-securityconnectorapplication
 
 Code path: `azurenative.security.v20220701preview.SecurityConnectorApplication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20220701preview.SecurityConnectorApplication).
+Disallow the use of non-stable (Preview) Azure resources (security.v20220701preview.SecurityConnectorApplication).
 
 Service: Security
 
@@ -29839,7 +29839,7 @@ Policy name: `azurenative-security-v20221120preview-apicollection-disallow-previ
 
 Code path: `azurenative.security.v20221120preview.APICollection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20221120preview.APICollection).
+Disallow the use of non-stable (Preview) Azure resources (security.v20221120preview.APICollection).
 
 Service: Security
 
@@ -29863,7 +29863,7 @@ Policy name: `azurenative-security-v20230101preview-securityoperator-disallow-pr
 
 Code path: `azurenative.security.v20230101preview.SecurityOperator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20230101preview.SecurityOperator).
+Disallow the use of non-stable (Preview) Azure resources (security.v20230101preview.SecurityOperator).
 
 Service: Security
 
@@ -29887,7 +29887,7 @@ Policy name: `azurenative-security-v20230201preview-sqlvulnerabilityassessmentba
 
 Code path: `azurenative.security.v20230201preview.SqlVulnerabilityAssessmentBaselineRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20230201preview.SqlVulnerabilityAssessmentBaselineRule).
+Disallow the use of non-stable (Preview) Azure resources (security.v20230201preview.SqlVulnerabilityAssessmentBaselineRule).
 
 Service: Security
 
@@ -29911,7 +29911,7 @@ Policy name: `azurenative-security-v20230301preview-securityconnector-disallow-p
 
 Code path: `azurenative.security.v20230301preview.SecurityConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20230301preview.SecurityConnector).
+Disallow the use of non-stable (Preview) Azure resources (security.v20230301preview.SecurityConnector).
 
 Service: Security
 
@@ -29935,7 +29935,7 @@ Policy name: `azurenative-security-v20230901preview-devopsconfiguration-disallow
 
 Code path: `azurenative.security.v20230901preview.DevOpsConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (security.v20230901preview.DevOpsConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (security.v20230901preview.DevOpsConfiguration).
 
 Service: Security
 
@@ -29961,7 +29961,7 @@ Policy name: `azurenative-securitydevops-v20220901preview-azuredevopsconnector-d
 
 Code path: `azurenative.securitydevops.v20220901preview.AzureDevOpsConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securitydevops.v20220901preview.AzureDevOpsConnector).
+Disallow the use of non-stable (Preview) Azure resources (securitydevops.v20220901preview.AzureDevOpsConnector).
 
 Service: Securitydevops
 
@@ -29983,7 +29983,7 @@ Policy name: `azurenative-securitydevops-v20220901preview-githubconnector-disall
 
 Code path: `azurenative.securitydevops.v20220901preview.GitHubConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securitydevops.v20220901preview.GitHubConnector).
+Disallow the use of non-stable (Preview) Azure resources (securitydevops.v20220901preview.GitHubConnector).
 
 Service: Securitydevops
 
@@ -30009,7 +30009,7 @@ Policy name: `azurenative-securityinsights-v20190101preview-automationrule-disal
 
 Code path: `azurenative.securityinsights.v20190101preview.AutomationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20190101preview.AutomationRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20190101preview.AutomationRule).
 
 Service: Securityinsights
 
@@ -30031,7 +30031,7 @@ Policy name: `azurenative-securityinsights-v20190101preview-bookmark-disallow-pr
 
 Code path: `azurenative.securityinsights.v20190101preview.Bookmark.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20190101preview.Bookmark).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20190101preview.Bookmark).
 
 Service: Securityinsights
 
@@ -30053,7 +30053,7 @@ Policy name: `azurenative-securityinsights-v20190101preview-bookmarkrelation-dis
 
 Code path: `azurenative.securityinsights.v20190101preview.BookmarkRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20190101preview.BookmarkRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20190101preview.BookmarkRelation).
 
 Service: Securityinsights
 
@@ -30075,7 +30075,7 @@ Policy name: `azurenative-securityinsights-v20190101preview-ipsyncer-disallow-pr
 
 Code path: `azurenative.securityinsights.v20190101preview.IPSyncer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20190101preview.IPSyncer).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20190101preview.IPSyncer).
 
 Service: Securityinsights
 
@@ -30097,7 +30097,7 @@ Policy name: `azurenative-securityinsights-v20190101preview-watchlist-disallow-p
 
 Code path: `azurenative.securityinsights.v20190101preview.Watchlist.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20190101preview.Watchlist).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20190101preview.Watchlist).
 
 Service: Securityinsights
 
@@ -30121,7 +30121,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-aaddataconnector-dis
 
 Code path: `azurenative.securityinsights.v20210301preview.AADDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.AADDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.AADDataConnector).
 
 Service: Securityinsights
 
@@ -30143,7 +30143,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-aatpdataconnector-di
 
 Code path: `azurenative.securityinsights.v20210301preview.AATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.AATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.AATPDataConnector).
 
 Service: Securityinsights
 
@@ -30165,7 +30165,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-ascdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20210301preview.ASCDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.ASCDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.ASCDataConnector).
 
 Service: Securityinsights
 
@@ -30187,7 +30187,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-action-disallow-prev
 
 Code path: `azurenative.securityinsights.v20210301preview.Action.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.Action).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.Action).
 
 Service: Securityinsights
 
@@ -30209,7 +30209,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-activitycustomentity
 
 Code path: `azurenative.securityinsights.v20210301preview.ActivityCustomEntityQuery.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.ActivityCustomEntityQuery).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.ActivityCustomEntityQuery).
 
 Service: Securityinsights
 
@@ -30231,7 +30231,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-anomalies-disallow-p
 
 Code path: `azurenative.securityinsights.v20210301preview.Anomalies.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.Anomalies).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.Anomalies).
 
 Service: Securityinsights
 
@@ -30253,7 +30253,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-awscloudtraildatacon
 
 Code path: `azurenative.securityinsights.v20210301preview.AwsCloudTrailDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.AwsCloudTrailDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.AwsCloudTrailDataConnector).
 
 Service: Securityinsights
 
@@ -30275,7 +30275,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-codelessuidataconnec
 
 Code path: `azurenative.securityinsights.v20210301preview.CodelessUiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.CodelessUiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.CodelessUiDataConnector).
 
 Service: Securityinsights
 
@@ -30297,7 +30297,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-dynamics365dataconne
 
 Code path: `azurenative.securityinsights.v20210301preview.Dynamics365DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.Dynamics365DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.Dynamics365DataConnector).
 
 Service: Securityinsights
 
@@ -30319,7 +30319,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-entityanalytics-disa
 
 Code path: `azurenative.securityinsights.v20210301preview.EntityAnalytics.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.EntityAnalytics).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.EntityAnalytics).
 
 Service: Securityinsights
 
@@ -30341,7 +30341,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-eyeson-disallow-prev
 
 Code path: `azurenative.securityinsights.v20210301preview.EyesOn.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.EyesOn).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.EyesOn).
 
 Service: Securityinsights
 
@@ -30363,7 +30363,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-fusionalertrule-disa
 
 Code path: `azurenative.securityinsights.v20210301preview.FusionAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.FusionAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.FusionAlertRule).
 
 Service: Securityinsights
 
@@ -30385,7 +30385,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-incident-disallow-pr
 
 Code path: `azurenative.securityinsights.v20210301preview.Incident.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.Incident).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.Incident).
 
 Service: Securityinsights
 
@@ -30407,7 +30407,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-incidentcomment-disa
 
 Code path: `azurenative.securityinsights.v20210301preview.IncidentComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.IncidentComment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.IncidentComment).
 
 Service: Securityinsights
 
@@ -30429,7 +30429,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-incidentrelation-dis
 
 Code path: `azurenative.securityinsights.v20210301preview.IncidentRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.IncidentRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.IncidentRelation).
 
 Service: Securityinsights
 
@@ -30451,7 +30451,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-mcasdataconnector-di
 
 Code path: `azurenative.securityinsights.v20210301preview.MCASDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.MCASDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.MCASDataConnector).
 
 Service: Securityinsights
 
@@ -30473,7 +30473,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-mdatpdataconnector-d
 
 Code path: `azurenative.securityinsights.v20210301preview.MDATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.MDATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.MDATPDataConnector).
 
 Service: Securityinsights
 
@@ -30495,7 +30495,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-mlbehavioranalyticsa
 
 Code path: `azurenative.securityinsights.v20210301preview.MLBehaviorAnalyticsAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.MLBehaviorAnalyticsAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.MLBehaviorAnalyticsAlertRule).
 
 Service: Securityinsights
 
@@ -30517,7 +30517,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-mstidataconnector-di
 
 Code path: `azurenative.securityinsights.v20210301preview.MSTIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.MSTIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.MSTIDataConnector).
 
 Service: Securityinsights
 
@@ -30539,7 +30539,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-mtpdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20210301preview.MTPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.MTPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.MTPDataConnector).
 
 Service: Securityinsights
 
@@ -30561,7 +30561,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-metadata-disallow-pr
 
 Code path: `azurenative.securityinsights.v20210301preview.Metadata.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.Metadata).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.Metadata).
 
 Service: Securityinsights
 
@@ -30583,7 +30583,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-microsoftsecurityinc
 
 Code path: `azurenative.securityinsights.v20210301preview.MicrosoftSecurityIncidentCreationAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.MicrosoftSecurityIncidentCreationAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.MicrosoftSecurityIncidentCreationAlertRule).
 
 Service: Securityinsights
 
@@ -30605,7 +30605,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-officeatpdataconnect
 
 Code path: `azurenative.securityinsights.v20210301preview.OfficeATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.OfficeATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.OfficeATPDataConnector).
 
 Service: Securityinsights
 
@@ -30627,7 +30627,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-officedataconnector-
 
 Code path: `azurenative.securityinsights.v20210301preview.OfficeDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.OfficeDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.OfficeDataConnector).
 
 Service: Securityinsights
 
@@ -30649,7 +30649,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-scheduledalertrule-d
 
 Code path: `azurenative.securityinsights.v20210301preview.ScheduledAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.ScheduledAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.ScheduledAlertRule).
 
 Service: Securityinsights
 
@@ -30671,7 +30671,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-sentinelonboardingst
 
 Code path: `azurenative.securityinsights.v20210301preview.SentinelOnboardingState.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.SentinelOnboardingState).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.SentinelOnboardingState).
 
 Service: Securityinsights
 
@@ -30693,7 +30693,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-sourcecontrol-disall
 
 Code path: `azurenative.securityinsights.v20210301preview.SourceControl.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.SourceControl).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.SourceControl).
 
 Service: Securityinsights
 
@@ -30715,7 +30715,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-tidataconnector-disa
 
 Code path: `azurenative.securityinsights.v20210301preview.TIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.TIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.TIDataConnector).
 
 Service: Securityinsights
 
@@ -30737,7 +30737,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-threatintelligenceal
 
 Code path: `azurenative.securityinsights.v20210301preview.ThreatIntelligenceAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.ThreatIntelligenceAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.ThreatIntelligenceAlertRule).
 
 Service: Securityinsights
 
@@ -30759,7 +30759,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-titaxiidataconnector
 
 Code path: `azurenative.securityinsights.v20210301preview.TiTaxiiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.TiTaxiiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.TiTaxiiDataConnector).
 
 Service: Securityinsights
 
@@ -30781,7 +30781,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-ueba-disallow-previe
 
 Code path: `azurenative.securityinsights.v20210301preview.Ueba.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.Ueba).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.Ueba).
 
 Service: Securityinsights
 
@@ -30803,7 +30803,7 @@ Policy name: `azurenative-securityinsights-v20210301preview-watchlist-disallow-p
 
 Code path: `azurenative.securityinsights.v20210301preview.Watchlist.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210301preview.Watchlist).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210301preview.Watchlist).
 
 Service: Securityinsights
 
@@ -30827,7 +30827,7 @@ Policy name: `azurenative-securityinsights-v20210901preview-threatintelligencein
 
 Code path: `azurenative.securityinsights.v20210901preview.ThreatIntelligenceIndicator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20210901preview.ThreatIntelligenceIndicator).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20210901preview.ThreatIntelligenceIndicator).
 
 Service: Securityinsights
 
@@ -30851,7 +30851,7 @@ Policy name: `azurenative-securityinsights-v20211001preview-fusionalertrule-disa
 
 Code path: `azurenative.securityinsights.v20211001preview.FusionAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20211001preview.FusionAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20211001preview.FusionAlertRule).
 
 Service: Securityinsights
 
@@ -30873,7 +30873,7 @@ Policy name: `azurenative-securityinsights-v20211001preview-nrtalertrule-disallo
 
 Code path: `azurenative.securityinsights.v20211001preview.NrtAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20211001preview.NrtAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20211001preview.NrtAlertRule).
 
 Service: Securityinsights
 
@@ -30895,7 +30895,7 @@ Policy name: `azurenative-securityinsights-v20211001preview-watchlist-disallow-p
 
 Code path: `azurenative.securityinsights.v20211001preview.Watchlist.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20211001preview.Watchlist).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20211001preview.Watchlist).
 
 Service: Securityinsights
 
@@ -30919,7 +30919,7 @@ Policy name: `azurenative-securityinsights-v20220101preview-entityanalytics-disa
 
 Code path: `azurenative.securityinsights.v20220101preview.EntityAnalytics.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20220101preview.EntityAnalytics).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20220101preview.EntityAnalytics).
 
 Service: Securityinsights
 
@@ -30941,7 +30941,7 @@ Policy name: `azurenative-securityinsights-v20220101preview-watchlist-disallow-p
 
 Code path: `azurenative.securityinsights.v20220101preview.Watchlist.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20220101preview.Watchlist).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20220101preview.Watchlist).
 
 Service: Securityinsights
 
@@ -30965,7 +30965,7 @@ Policy name: `azurenative-securityinsights-v20230201preview-incident-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230201preview.Incident.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230201preview.Incident).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230201preview.Incident).
 
 Service: Securityinsights
 
@@ -30987,7 +30987,7 @@ Policy name: `azurenative-securityinsights-v20230201preview-metadata-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230201preview.Metadata.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230201preview.Metadata).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230201preview.Metadata).
 
 Service: Securityinsights
 
@@ -31011,7 +31011,7 @@ Policy name: `azurenative-securityinsights-v20230301preview-incident-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230301preview.Incident.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230301preview.Incident).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230301preview.Incident).
 
 Service: Securityinsights
 
@@ -31035,7 +31035,7 @@ Policy name: `azurenative-securityinsights-v20230501preview-sourcecontrol-disall
 
 Code path: `azurenative.securityinsights.v20230501preview.SourceControl.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230501preview.SourceControl).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230501preview.SourceControl).
 
 Service: Securityinsights
 
@@ -31059,7 +31059,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-aaddataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230601preview.AADDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.AADDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.AADDataConnector).
 
 Service: Securityinsights
 
@@ -31081,7 +31081,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-aatpdataconnector-di
 
 Code path: `azurenative.securityinsights.v20230601preview.AATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.AATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.AATPDataConnector).
 
 Service: Securityinsights
 
@@ -31103,7 +31103,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-ascdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230601preview.ASCDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.ASCDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.ASCDataConnector).
 
 Service: Securityinsights
 
@@ -31125,7 +31125,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-action-disallow-prev
 
 Code path: `azurenative.securityinsights.v20230601preview.Action.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Action).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Action).
 
 Service: Securityinsights
 
@@ -31147,7 +31147,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-activitycustomentity
 
 Code path: `azurenative.securityinsights.v20230601preview.ActivityCustomEntityQuery.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.ActivityCustomEntityQuery).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.ActivityCustomEntityQuery).
 
 Service: Securityinsights
 
@@ -31169,7 +31169,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-anomalies-disallow-p
 
 Code path: `azurenative.securityinsights.v20230601preview.Anomalies.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Anomalies).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Anomalies).
 
 Service: Securityinsights
 
@@ -31191,7 +31191,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-anomalysecuritymlana
 
 Code path: `azurenative.securityinsights.v20230601preview.AnomalySecurityMLAnalyticsSettings.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.AnomalySecurityMLAnalyticsSettings).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.AnomalySecurityMLAnalyticsSettings).
 
 Service: Securityinsights
 
@@ -31213,7 +31213,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-automationrule-disal
 
 Code path: `azurenative.securityinsights.v20230601preview.AutomationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.AutomationRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.AutomationRule).
 
 Service: Securityinsights
 
@@ -31235,7 +31235,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-awscloudtraildatacon
 
 Code path: `azurenative.securityinsights.v20230601preview.AwsCloudTrailDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.AwsCloudTrailDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.AwsCloudTrailDataConnector).
 
 Service: Securityinsights
 
@@ -31257,7 +31257,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-awss3dataconnector-d
 
 Code path: `azurenative.securityinsights.v20230601preview.AwsS3DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.AwsS3DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.AwsS3DataConnector).
 
 Service: Securityinsights
 
@@ -31279,7 +31279,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-bookmark-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230601preview.Bookmark.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Bookmark).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Bookmark).
 
 Service: Securityinsights
 
@@ -31301,7 +31301,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-bookmarkrelation-dis
 
 Code path: `azurenative.securityinsights.v20230601preview.BookmarkRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.BookmarkRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.BookmarkRelation).
 
 Service: Securityinsights
 
@@ -31323,7 +31323,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-codelessapipollingda
 
 Code path: `azurenative.securityinsights.v20230601preview.CodelessApiPollingDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.CodelessApiPollingDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.CodelessApiPollingDataConnector).
 
 Service: Securityinsights
 
@@ -31345,7 +31345,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-codelessuidataconnec
 
 Code path: `azurenative.securityinsights.v20230601preview.CodelessUiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.CodelessUiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.CodelessUiDataConnector).
 
 Service: Securityinsights
 
@@ -31367,7 +31367,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-contentpackage-disal
 
 Code path: `azurenative.securityinsights.v20230601preview.ContentPackage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.ContentPackage).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.ContentPackage).
 
 Service: Securityinsights
 
@@ -31389,7 +31389,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-contenttemplate-disa
 
 Code path: `azurenative.securityinsights.v20230601preview.ContentTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.ContentTemplate).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.ContentTemplate).
 
 Service: Securityinsights
 
@@ -31411,7 +31411,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-dynamics365dataconne
 
 Code path: `azurenative.securityinsights.v20230601preview.Dynamics365DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Dynamics365DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Dynamics365DataConnector).
 
 Service: Securityinsights
 
@@ -31433,7 +31433,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-entityanalytics-disa
 
 Code path: `azurenative.securityinsights.v20230601preview.EntityAnalytics.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.EntityAnalytics).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.EntityAnalytics).
 
 Service: Securityinsights
 
@@ -31455,7 +31455,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-eyeson-disallow-prev
 
 Code path: `azurenative.securityinsights.v20230601preview.EyesOn.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.EyesOn).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.EyesOn).
 
 Service: Securityinsights
 
@@ -31477,7 +31477,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-fileimport-disallow-
 
 Code path: `azurenative.securityinsights.v20230601preview.FileImport.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.FileImport).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.FileImport).
 
 Service: Securityinsights
 
@@ -31499,7 +31499,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-fusionalertrule-disa
 
 Code path: `azurenative.securityinsights.v20230601preview.FusionAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.FusionAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.FusionAlertRule).
 
 Service: Securityinsights
 
@@ -31521,7 +31521,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-gcpdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230601preview.GCPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.GCPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.GCPDataConnector).
 
 Service: Securityinsights
 
@@ -31543,7 +31543,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-hunt-disallow-previe
 
 Code path: `azurenative.securityinsights.v20230601preview.Hunt.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Hunt).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Hunt).
 
 Service: Securityinsights
 
@@ -31565,7 +31565,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-huntcomment-disallow
 
 Code path: `azurenative.securityinsights.v20230601preview.HuntComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.HuntComment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.HuntComment).
 
 Service: Securityinsights
 
@@ -31587,7 +31587,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-huntrelation-disallo
 
 Code path: `azurenative.securityinsights.v20230601preview.HuntRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.HuntRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.HuntRelation).
 
 Service: Securityinsights
 
@@ -31609,7 +31609,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-incident-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230601preview.Incident.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Incident).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Incident).
 
 Service: Securityinsights
 
@@ -31631,7 +31631,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-incidentcomment-disa
 
 Code path: `azurenative.securityinsights.v20230601preview.IncidentComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.IncidentComment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.IncidentComment).
 
 Service: Securityinsights
 
@@ -31653,7 +31653,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-incidentrelation-dis
 
 Code path: `azurenative.securityinsights.v20230601preview.IncidentRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.IncidentRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.IncidentRelation).
 
 Service: Securityinsights
 
@@ -31675,7 +31675,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-incidenttask-disallo
 
 Code path: `azurenative.securityinsights.v20230601preview.IncidentTask.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.IncidentTask).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.IncidentTask).
 
 Service: Securityinsights
 
@@ -31697,7 +31697,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-iotdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230601preview.IoTDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.IoTDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.IoTDataConnector).
 
 Service: Securityinsights
 
@@ -31719,7 +31719,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-mcasdataconnector-di
 
 Code path: `azurenative.securityinsights.v20230601preview.MCASDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.MCASDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.MCASDataConnector).
 
 Service: Securityinsights
 
@@ -31741,7 +31741,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-mdatpdataconnector-d
 
 Code path: `azurenative.securityinsights.v20230601preview.MDATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.MDATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.MDATPDataConnector).
 
 Service: Securityinsights
 
@@ -31763,7 +31763,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-mlbehavioranalyticsa
 
 Code path: `azurenative.securityinsights.v20230601preview.MLBehaviorAnalyticsAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.MLBehaviorAnalyticsAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.MLBehaviorAnalyticsAlertRule).
 
 Service: Securityinsights
 
@@ -31785,7 +31785,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-mstidataconnector-di
 
 Code path: `azurenative.securityinsights.v20230601preview.MSTIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.MSTIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.MSTIDataConnector).
 
 Service: Securityinsights
 
@@ -31807,7 +31807,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-mtpdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230601preview.MTPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.MTPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.MTPDataConnector).
 
 Service: Securityinsights
 
@@ -31829,7 +31829,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-metadata-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230601preview.Metadata.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Metadata).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Metadata).
 
 Service: Securityinsights
 
@@ -31851,7 +31851,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-microsoftpurviewinfo
 
 Code path: `azurenative.securityinsights.v20230601preview.MicrosoftPurviewInformationProtectionDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.MicrosoftPurviewInformationProtectionDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.MicrosoftPurviewInformationProtectionDataConnector).
 
 Service: Securityinsights
 
@@ -31873,7 +31873,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-microsoftsecurityinc
 
 Code path: `azurenative.securityinsights.v20230601preview.MicrosoftSecurityIncidentCreationAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.MicrosoftSecurityIncidentCreationAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.MicrosoftSecurityIncidentCreationAlertRule).
 
 Service: Securityinsights
 
@@ -31895,7 +31895,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-nrtalertrule-disallo
 
 Code path: `azurenative.securityinsights.v20230601preview.NrtAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.NrtAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.NrtAlertRule).
 
 Service: Securityinsights
 
@@ -31917,7 +31917,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-office365projectdata
 
 Code path: `azurenative.securityinsights.v20230601preview.Office365ProjectDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Office365ProjectDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Office365ProjectDataConnector).
 
 Service: Securityinsights
 
@@ -31939,7 +31939,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-officeatpdataconnect
 
 Code path: `azurenative.securityinsights.v20230601preview.OfficeATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.OfficeATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.OfficeATPDataConnector).
 
 Service: Securityinsights
 
@@ -31961,7 +31961,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-officedataconnector-
 
 Code path: `azurenative.securityinsights.v20230601preview.OfficeDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.OfficeDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.OfficeDataConnector).
 
 Service: Securityinsights
 
@@ -31983,7 +31983,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-officeirmdataconnect
 
 Code path: `azurenative.securityinsights.v20230601preview.OfficeIRMDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.OfficeIRMDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.OfficeIRMDataConnector).
 
 Service: Securityinsights
 
@@ -32005,7 +32005,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-officepowerbidatacon
 
 Code path: `azurenative.securityinsights.v20230601preview.OfficePowerBIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.OfficePowerBIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.OfficePowerBIDataConnector).
 
 Service: Securityinsights
 
@@ -32027,7 +32027,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-scheduledalertrule-d
 
 Code path: `azurenative.securityinsights.v20230601preview.ScheduledAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.ScheduledAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.ScheduledAlertRule).
 
 Service: Securityinsights
 
@@ -32049,7 +32049,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-sentinelonboardingst
 
 Code path: `azurenative.securityinsights.v20230601preview.SentinelOnboardingState.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.SentinelOnboardingState).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.SentinelOnboardingState).
 
 Service: Securityinsights
 
@@ -32071,7 +32071,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-tidataconnector-disa
 
 Code path: `azurenative.securityinsights.v20230601preview.TIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.TIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.TIDataConnector).
 
 Service: Securityinsights
 
@@ -32093,7 +32093,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-threatintelligenceal
 
 Code path: `azurenative.securityinsights.v20230601preview.ThreatIntelligenceAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.ThreatIntelligenceAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.ThreatIntelligenceAlertRule).
 
 Service: Securityinsights
 
@@ -32115,7 +32115,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-threatintelligencein
 
 Code path: `azurenative.securityinsights.v20230601preview.ThreatIntelligenceIndicator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.ThreatIntelligenceIndicator).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.ThreatIntelligenceIndicator).
 
 Service: Securityinsights
 
@@ -32137,7 +32137,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-titaxiidataconnector
 
 Code path: `azurenative.securityinsights.v20230601preview.TiTaxiiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.TiTaxiiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.TiTaxiiDataConnector).
 
 Service: Securityinsights
 
@@ -32159,7 +32159,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-ueba-disallow-previe
 
 Code path: `azurenative.securityinsights.v20230601preview.Ueba.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Ueba).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Ueba).
 
 Service: Securityinsights
 
@@ -32181,7 +32181,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-watchlist-disallow-p
 
 Code path: `azurenative.securityinsights.v20230601preview.Watchlist.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.Watchlist).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.Watchlist).
 
 Service: Securityinsights
 
@@ -32203,7 +32203,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-watchlistitem-disall
 
 Code path: `azurenative.securityinsights.v20230601preview.WatchlistItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.WatchlistItem).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.WatchlistItem).
 
 Service: Securityinsights
 
@@ -32225,7 +32225,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-workspacemanagerassi
 
 Code path: `azurenative.securityinsights.v20230601preview.WorkspaceManagerAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.WorkspaceManagerAssignment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.WorkspaceManagerAssignment).
 
 Service: Securityinsights
 
@@ -32247,7 +32247,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-workspacemanagerconf
 
 Code path: `azurenative.securityinsights.v20230601preview.WorkspaceManagerConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.WorkspaceManagerConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.WorkspaceManagerConfiguration).
 
 Service: Securityinsights
 
@@ -32269,7 +32269,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-workspacemanagergrou
 
 Code path: `azurenative.securityinsights.v20230601preview.WorkspaceManagerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.WorkspaceManagerGroup).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.WorkspaceManagerGroup).
 
 Service: Securityinsights
 
@@ -32291,7 +32291,7 @@ Policy name: `azurenative-securityinsights-v20230601preview-workspacemanagermemb
 
 Code path: `azurenative.securityinsights.v20230601preview.WorkspaceManagerMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230601preview.WorkspaceManagerMember).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230601preview.WorkspaceManagerMember).
 
 Service: Securityinsights
 
@@ -32315,7 +32315,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-aaddataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230701preview.AADDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.AADDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.AADDataConnector).
 
 Service: Securityinsights
 
@@ -32337,7 +32337,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-aatpdataconnector-di
 
 Code path: `azurenative.securityinsights.v20230701preview.AATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.AATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.AATPDataConnector).
 
 Service: Securityinsights
 
@@ -32359,7 +32359,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-ascdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230701preview.ASCDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.ASCDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.ASCDataConnector).
 
 Service: Securityinsights
 
@@ -32381,7 +32381,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-action-disallow-prev
 
 Code path: `azurenative.securityinsights.v20230701preview.Action.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Action).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Action).
 
 Service: Securityinsights
 
@@ -32403,7 +32403,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-activitycustomentity
 
 Code path: `azurenative.securityinsights.v20230701preview.ActivityCustomEntityQuery.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.ActivityCustomEntityQuery).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.ActivityCustomEntityQuery).
 
 Service: Securityinsights
 
@@ -32425,7 +32425,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-anomalies-disallow-p
 
 Code path: `azurenative.securityinsights.v20230701preview.Anomalies.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Anomalies).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Anomalies).
 
 Service: Securityinsights
 
@@ -32447,7 +32447,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-anomalysecuritymlana
 
 Code path: `azurenative.securityinsights.v20230701preview.AnomalySecurityMLAnalyticsSettings.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.AnomalySecurityMLAnalyticsSettings).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.AnomalySecurityMLAnalyticsSettings).
 
 Service: Securityinsights
 
@@ -32469,7 +32469,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-automationrule-disal
 
 Code path: `azurenative.securityinsights.v20230701preview.AutomationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.AutomationRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.AutomationRule).
 
 Service: Securityinsights
 
@@ -32491,7 +32491,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-awscloudtraildatacon
 
 Code path: `azurenative.securityinsights.v20230701preview.AwsCloudTrailDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.AwsCloudTrailDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.AwsCloudTrailDataConnector).
 
 Service: Securityinsights
 
@@ -32513,7 +32513,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-awss3dataconnector-d
 
 Code path: `azurenative.securityinsights.v20230701preview.AwsS3DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.AwsS3DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.AwsS3DataConnector).
 
 Service: Securityinsights
 
@@ -32535,7 +32535,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-bookmark-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230701preview.Bookmark.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Bookmark).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Bookmark).
 
 Service: Securityinsights
 
@@ -32557,7 +32557,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-bookmarkrelation-dis
 
 Code path: `azurenative.securityinsights.v20230701preview.BookmarkRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.BookmarkRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.BookmarkRelation).
 
 Service: Securityinsights
 
@@ -32579,7 +32579,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-codelessapipollingda
 
 Code path: `azurenative.securityinsights.v20230701preview.CodelessApiPollingDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.CodelessApiPollingDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.CodelessApiPollingDataConnector).
 
 Service: Securityinsights
 
@@ -32601,7 +32601,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-codelessuidataconnec
 
 Code path: `azurenative.securityinsights.v20230701preview.CodelessUiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.CodelessUiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.CodelessUiDataConnector).
 
 Service: Securityinsights
 
@@ -32623,7 +32623,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-contentpackage-disal
 
 Code path: `azurenative.securityinsights.v20230701preview.ContentPackage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.ContentPackage).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.ContentPackage).
 
 Service: Securityinsights
 
@@ -32645,7 +32645,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-contenttemplate-disa
 
 Code path: `azurenative.securityinsights.v20230701preview.ContentTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.ContentTemplate).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.ContentTemplate).
 
 Service: Securityinsights
 
@@ -32667,7 +32667,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-customizableconnecto
 
 Code path: `azurenative.securityinsights.v20230701preview.CustomizableConnectorDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.CustomizableConnectorDefinition).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.CustomizableConnectorDefinition).
 
 Service: Securityinsights
 
@@ -32689,7 +32689,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-dynamics365dataconne
 
 Code path: `azurenative.securityinsights.v20230701preview.Dynamics365DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Dynamics365DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Dynamics365DataConnector).
 
 Service: Securityinsights
 
@@ -32711,7 +32711,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-entityanalytics-disa
 
 Code path: `azurenative.securityinsights.v20230701preview.EntityAnalytics.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.EntityAnalytics).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.EntityAnalytics).
 
 Service: Securityinsights
 
@@ -32733,7 +32733,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-eyeson-disallow-prev
 
 Code path: `azurenative.securityinsights.v20230701preview.EyesOn.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.EyesOn).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.EyesOn).
 
 Service: Securityinsights
 
@@ -32755,7 +32755,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-fileimport-disallow-
 
 Code path: `azurenative.securityinsights.v20230701preview.FileImport.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.FileImport).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.FileImport).
 
 Service: Securityinsights
 
@@ -32777,7 +32777,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-fusionalertrule-disa
 
 Code path: `azurenative.securityinsights.v20230701preview.FusionAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.FusionAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.FusionAlertRule).
 
 Service: Securityinsights
 
@@ -32799,7 +32799,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-gcpdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230701preview.GCPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.GCPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.GCPDataConnector).
 
 Service: Securityinsights
 
@@ -32821,7 +32821,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-hunt-disallow-previe
 
 Code path: `azurenative.securityinsights.v20230701preview.Hunt.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Hunt).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Hunt).
 
 Service: Securityinsights
 
@@ -32843,7 +32843,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-huntcomment-disallow
 
 Code path: `azurenative.securityinsights.v20230701preview.HuntComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.HuntComment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.HuntComment).
 
 Service: Securityinsights
 
@@ -32865,7 +32865,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-huntrelation-disallo
 
 Code path: `azurenative.securityinsights.v20230701preview.HuntRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.HuntRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.HuntRelation).
 
 Service: Securityinsights
 
@@ -32887,7 +32887,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-incident-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230701preview.Incident.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Incident).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Incident).
 
 Service: Securityinsights
 
@@ -32909,7 +32909,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-incidentcomment-disa
 
 Code path: `azurenative.securityinsights.v20230701preview.IncidentComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.IncidentComment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.IncidentComment).
 
 Service: Securityinsights
 
@@ -32931,7 +32931,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-incidentrelation-dis
 
 Code path: `azurenative.securityinsights.v20230701preview.IncidentRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.IncidentRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.IncidentRelation).
 
 Service: Securityinsights
 
@@ -32953,7 +32953,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-incidenttask-disallo
 
 Code path: `azurenative.securityinsights.v20230701preview.IncidentTask.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.IncidentTask).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.IncidentTask).
 
 Service: Securityinsights
 
@@ -32975,7 +32975,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-iotdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230701preview.IoTDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.IoTDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.IoTDataConnector).
 
 Service: Securityinsights
 
@@ -32997,7 +32997,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-mcasdataconnector-di
 
 Code path: `azurenative.securityinsights.v20230701preview.MCASDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.MCASDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.MCASDataConnector).
 
 Service: Securityinsights
 
@@ -33019,7 +33019,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-mdatpdataconnector-d
 
 Code path: `azurenative.securityinsights.v20230701preview.MDATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.MDATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.MDATPDataConnector).
 
 Service: Securityinsights
 
@@ -33041,7 +33041,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-mlbehavioranalyticsa
 
 Code path: `azurenative.securityinsights.v20230701preview.MLBehaviorAnalyticsAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.MLBehaviorAnalyticsAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.MLBehaviorAnalyticsAlertRule).
 
 Service: Securityinsights
 
@@ -33063,7 +33063,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-mstidataconnector-di
 
 Code path: `azurenative.securityinsights.v20230701preview.MSTIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.MSTIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.MSTIDataConnector).
 
 Service: Securityinsights
 
@@ -33085,7 +33085,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-mtpdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230701preview.MTPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.MTPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.MTPDataConnector).
 
 Service: Securityinsights
 
@@ -33107,7 +33107,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-metadata-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230701preview.Metadata.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Metadata).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Metadata).
 
 Service: Securityinsights
 
@@ -33129,7 +33129,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-microsoftpurviewinfo
 
 Code path: `azurenative.securityinsights.v20230701preview.MicrosoftPurviewInformationProtectionDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.MicrosoftPurviewInformationProtectionDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.MicrosoftPurviewInformationProtectionDataConnector).
 
 Service: Securityinsights
 
@@ -33151,7 +33151,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-microsoftsecurityinc
 
 Code path: `azurenative.securityinsights.v20230701preview.MicrosoftSecurityIncidentCreationAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.MicrosoftSecurityIncidentCreationAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.MicrosoftSecurityIncidentCreationAlertRule).
 
 Service: Securityinsights
 
@@ -33173,7 +33173,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-nrtalertrule-disallo
 
 Code path: `azurenative.securityinsights.v20230701preview.NrtAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.NrtAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.NrtAlertRule).
 
 Service: Securityinsights
 
@@ -33195,7 +33195,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-office365projectdata
 
 Code path: `azurenative.securityinsights.v20230701preview.Office365ProjectDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Office365ProjectDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Office365ProjectDataConnector).
 
 Service: Securityinsights
 
@@ -33217,7 +33217,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-officeatpdataconnect
 
 Code path: `azurenative.securityinsights.v20230701preview.OfficeATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.OfficeATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.OfficeATPDataConnector).
 
 Service: Securityinsights
 
@@ -33239,7 +33239,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-officedataconnector-
 
 Code path: `azurenative.securityinsights.v20230701preview.OfficeDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.OfficeDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.OfficeDataConnector).
 
 Service: Securityinsights
 
@@ -33261,7 +33261,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-officeirmdataconnect
 
 Code path: `azurenative.securityinsights.v20230701preview.OfficeIRMDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.OfficeIRMDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.OfficeIRMDataConnector).
 
 Service: Securityinsights
 
@@ -33283,7 +33283,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-officepowerbidatacon
 
 Code path: `azurenative.securityinsights.v20230701preview.OfficePowerBIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.OfficePowerBIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.OfficePowerBIDataConnector).
 
 Service: Securityinsights
 
@@ -33305,7 +33305,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-scheduledalertrule-d
 
 Code path: `azurenative.securityinsights.v20230701preview.ScheduledAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.ScheduledAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.ScheduledAlertRule).
 
 Service: Securityinsights
 
@@ -33327,7 +33327,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-sentinelonboardingst
 
 Code path: `azurenative.securityinsights.v20230701preview.SentinelOnboardingState.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.SentinelOnboardingState).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.SentinelOnboardingState).
 
 Service: Securityinsights
 
@@ -33349,7 +33349,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-tidataconnector-disa
 
 Code path: `azurenative.securityinsights.v20230701preview.TIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.TIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.TIDataConnector).
 
 Service: Securityinsights
 
@@ -33371,7 +33371,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-threatintelligenceal
 
 Code path: `azurenative.securityinsights.v20230701preview.ThreatIntelligenceAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.ThreatIntelligenceAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.ThreatIntelligenceAlertRule).
 
 Service: Securityinsights
 
@@ -33393,7 +33393,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-threatintelligencein
 
 Code path: `azurenative.securityinsights.v20230701preview.ThreatIntelligenceIndicator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.ThreatIntelligenceIndicator).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.ThreatIntelligenceIndicator).
 
 Service: Securityinsights
 
@@ -33415,7 +33415,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-titaxiidataconnector
 
 Code path: `azurenative.securityinsights.v20230701preview.TiTaxiiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.TiTaxiiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.TiTaxiiDataConnector).
 
 Service: Securityinsights
 
@@ -33437,7 +33437,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-ueba-disallow-previe
 
 Code path: `azurenative.securityinsights.v20230701preview.Ueba.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Ueba).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Ueba).
 
 Service: Securityinsights
 
@@ -33459,7 +33459,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-watchlist-disallow-p
 
 Code path: `azurenative.securityinsights.v20230701preview.Watchlist.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.Watchlist).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.Watchlist).
 
 Service: Securityinsights
 
@@ -33481,7 +33481,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-watchlistitem-disall
 
 Code path: `azurenative.securityinsights.v20230701preview.WatchlistItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.WatchlistItem).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.WatchlistItem).
 
 Service: Securityinsights
 
@@ -33503,7 +33503,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-workspacemanagerassi
 
 Code path: `azurenative.securityinsights.v20230701preview.WorkspaceManagerAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.WorkspaceManagerAssignment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.WorkspaceManagerAssignment).
 
 Service: Securityinsights
 
@@ -33525,7 +33525,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-workspacemanagerconf
 
 Code path: `azurenative.securityinsights.v20230701preview.WorkspaceManagerConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.WorkspaceManagerConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.WorkspaceManagerConfiguration).
 
 Service: Securityinsights
 
@@ -33547,7 +33547,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-workspacemanagergrou
 
 Code path: `azurenative.securityinsights.v20230701preview.WorkspaceManagerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.WorkspaceManagerGroup).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.WorkspaceManagerGroup).
 
 Service: Securityinsights
 
@@ -33569,7 +33569,7 @@ Policy name: `azurenative-securityinsights-v20230701preview-workspacemanagermemb
 
 Code path: `azurenative.securityinsights.v20230701preview.WorkspaceManagerMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230701preview.WorkspaceManagerMember).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230701preview.WorkspaceManagerMember).
 
 Service: Securityinsights
 
@@ -33593,7 +33593,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-aaddataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230801preview.AADDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.AADDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.AADDataConnector).
 
 Service: Securityinsights
 
@@ -33615,7 +33615,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-aatpdataconnector-di
 
 Code path: `azurenative.securityinsights.v20230801preview.AATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.AATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.AATPDataConnector).
 
 Service: Securityinsights
 
@@ -33637,7 +33637,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-ascdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230801preview.ASCDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.ASCDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.ASCDataConnector).
 
 Service: Securityinsights
 
@@ -33659,7 +33659,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-action-disallow-prev
 
 Code path: `azurenative.securityinsights.v20230801preview.Action.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Action).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Action).
 
 Service: Securityinsights
 
@@ -33681,7 +33681,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-activitycustomentity
 
 Code path: `azurenative.securityinsights.v20230801preview.ActivityCustomEntityQuery.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.ActivityCustomEntityQuery).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.ActivityCustomEntityQuery).
 
 Service: Securityinsights
 
@@ -33703,7 +33703,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-anomalies-disallow-p
 
 Code path: `azurenative.securityinsights.v20230801preview.Anomalies.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Anomalies).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Anomalies).
 
 Service: Securityinsights
 
@@ -33725,7 +33725,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-anomalysecuritymlana
 
 Code path: `azurenative.securityinsights.v20230801preview.AnomalySecurityMLAnalyticsSettings.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.AnomalySecurityMLAnalyticsSettings).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.AnomalySecurityMLAnalyticsSettings).
 
 Service: Securityinsights
 
@@ -33747,7 +33747,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-automationrule-disal
 
 Code path: `azurenative.securityinsights.v20230801preview.AutomationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.AutomationRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.AutomationRule).
 
 Service: Securityinsights
 
@@ -33769,7 +33769,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-awscloudtraildatacon
 
 Code path: `azurenative.securityinsights.v20230801preview.AwsCloudTrailDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.AwsCloudTrailDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.AwsCloudTrailDataConnector).
 
 Service: Securityinsights
 
@@ -33791,7 +33791,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-awss3dataconnector-d
 
 Code path: `azurenative.securityinsights.v20230801preview.AwsS3DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.AwsS3DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.AwsS3DataConnector).
 
 Service: Securityinsights
 
@@ -33813,7 +33813,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-bookmark-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230801preview.Bookmark.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Bookmark).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Bookmark).
 
 Service: Securityinsights
 
@@ -33835,7 +33835,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-bookmarkrelation-dis
 
 Code path: `azurenative.securityinsights.v20230801preview.BookmarkRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.BookmarkRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.BookmarkRelation).
 
 Service: Securityinsights
 
@@ -33857,7 +33857,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-codelessapipollingda
 
 Code path: `azurenative.securityinsights.v20230801preview.CodelessApiPollingDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.CodelessApiPollingDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.CodelessApiPollingDataConnector).
 
 Service: Securityinsights
 
@@ -33879,7 +33879,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-codelessuidataconnec
 
 Code path: `azurenative.securityinsights.v20230801preview.CodelessUiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.CodelessUiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.CodelessUiDataConnector).
 
 Service: Securityinsights
 
@@ -33901,7 +33901,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-contentpackage-disal
 
 Code path: `azurenative.securityinsights.v20230801preview.ContentPackage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.ContentPackage).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.ContentPackage).
 
 Service: Securityinsights
 
@@ -33923,7 +33923,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-contenttemplate-disa
 
 Code path: `azurenative.securityinsights.v20230801preview.ContentTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.ContentTemplate).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.ContentTemplate).
 
 Service: Securityinsights
 
@@ -33945,7 +33945,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-customizableconnecto
 
 Code path: `azurenative.securityinsights.v20230801preview.CustomizableConnectorDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.CustomizableConnectorDefinition).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.CustomizableConnectorDefinition).
 
 Service: Securityinsights
 
@@ -33967,7 +33967,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-dynamics365dataconne
 
 Code path: `azurenative.securityinsights.v20230801preview.Dynamics365DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Dynamics365DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Dynamics365DataConnector).
 
 Service: Securityinsights
 
@@ -33989,7 +33989,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-entityanalytics-disa
 
 Code path: `azurenative.securityinsights.v20230801preview.EntityAnalytics.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.EntityAnalytics).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.EntityAnalytics).
 
 Service: Securityinsights
 
@@ -34011,7 +34011,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-eyeson-disallow-prev
 
 Code path: `azurenative.securityinsights.v20230801preview.EyesOn.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.EyesOn).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.EyesOn).
 
 Service: Securityinsights
 
@@ -34033,7 +34033,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-fileimport-disallow-
 
 Code path: `azurenative.securityinsights.v20230801preview.FileImport.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.FileImport).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.FileImport).
 
 Service: Securityinsights
 
@@ -34055,7 +34055,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-fusionalertrule-disa
 
 Code path: `azurenative.securityinsights.v20230801preview.FusionAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.FusionAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.FusionAlertRule).
 
 Service: Securityinsights
 
@@ -34077,7 +34077,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-gcpdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230801preview.GCPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.GCPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.GCPDataConnector).
 
 Service: Securityinsights
 
@@ -34099,7 +34099,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-hunt-disallow-previe
 
 Code path: `azurenative.securityinsights.v20230801preview.Hunt.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Hunt).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Hunt).
 
 Service: Securityinsights
 
@@ -34121,7 +34121,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-huntcomment-disallow
 
 Code path: `azurenative.securityinsights.v20230801preview.HuntComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.HuntComment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.HuntComment).
 
 Service: Securityinsights
 
@@ -34143,7 +34143,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-huntrelation-disallo
 
 Code path: `azurenative.securityinsights.v20230801preview.HuntRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.HuntRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.HuntRelation).
 
 Service: Securityinsights
 
@@ -34165,7 +34165,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-incident-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230801preview.Incident.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Incident).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Incident).
 
 Service: Securityinsights
 
@@ -34187,7 +34187,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-incidentcomment-disa
 
 Code path: `azurenative.securityinsights.v20230801preview.IncidentComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.IncidentComment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.IncidentComment).
 
 Service: Securityinsights
 
@@ -34209,7 +34209,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-incidentrelation-dis
 
 Code path: `azurenative.securityinsights.v20230801preview.IncidentRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.IncidentRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.IncidentRelation).
 
 Service: Securityinsights
 
@@ -34231,7 +34231,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-incidenttask-disallo
 
 Code path: `azurenative.securityinsights.v20230801preview.IncidentTask.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.IncidentTask).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.IncidentTask).
 
 Service: Securityinsights
 
@@ -34253,7 +34253,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-iotdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230801preview.IoTDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.IoTDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.IoTDataConnector).
 
 Service: Securityinsights
 
@@ -34275,7 +34275,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-mcasdataconnector-di
 
 Code path: `azurenative.securityinsights.v20230801preview.MCASDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.MCASDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.MCASDataConnector).
 
 Service: Securityinsights
 
@@ -34297,7 +34297,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-mdatpdataconnector-d
 
 Code path: `azurenative.securityinsights.v20230801preview.MDATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.MDATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.MDATPDataConnector).
 
 Service: Securityinsights
 
@@ -34319,7 +34319,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-mlbehavioranalyticsa
 
 Code path: `azurenative.securityinsights.v20230801preview.MLBehaviorAnalyticsAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.MLBehaviorAnalyticsAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.MLBehaviorAnalyticsAlertRule).
 
 Service: Securityinsights
 
@@ -34341,7 +34341,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-mstidataconnector-di
 
 Code path: `azurenative.securityinsights.v20230801preview.MSTIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.MSTIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.MSTIDataConnector).
 
 Service: Securityinsights
 
@@ -34363,7 +34363,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-mtpdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230801preview.MTPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.MTPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.MTPDataConnector).
 
 Service: Securityinsights
 
@@ -34385,7 +34385,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-metadata-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230801preview.Metadata.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Metadata).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Metadata).
 
 Service: Securityinsights
 
@@ -34407,7 +34407,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-microsoftpurviewinfo
 
 Code path: `azurenative.securityinsights.v20230801preview.MicrosoftPurviewInformationProtectionDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.MicrosoftPurviewInformationProtectionDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.MicrosoftPurviewInformationProtectionDataConnector).
 
 Service: Securityinsights
 
@@ -34429,7 +34429,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-microsoftsecurityinc
 
 Code path: `azurenative.securityinsights.v20230801preview.MicrosoftSecurityIncidentCreationAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.MicrosoftSecurityIncidentCreationAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.MicrosoftSecurityIncidentCreationAlertRule).
 
 Service: Securityinsights
 
@@ -34451,7 +34451,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-nrtalertrule-disallo
 
 Code path: `azurenative.securityinsights.v20230801preview.NrtAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.NrtAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.NrtAlertRule).
 
 Service: Securityinsights
 
@@ -34473,7 +34473,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-office365projectdata
 
 Code path: `azurenative.securityinsights.v20230801preview.Office365ProjectDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Office365ProjectDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Office365ProjectDataConnector).
 
 Service: Securityinsights
 
@@ -34495,7 +34495,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-officeatpdataconnect
 
 Code path: `azurenative.securityinsights.v20230801preview.OfficeATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.OfficeATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.OfficeATPDataConnector).
 
 Service: Securityinsights
 
@@ -34517,7 +34517,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-officedataconnector-
 
 Code path: `azurenative.securityinsights.v20230801preview.OfficeDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.OfficeDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.OfficeDataConnector).
 
 Service: Securityinsights
 
@@ -34539,7 +34539,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-officeirmdataconnect
 
 Code path: `azurenative.securityinsights.v20230801preview.OfficeIRMDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.OfficeIRMDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.OfficeIRMDataConnector).
 
 Service: Securityinsights
 
@@ -34561,7 +34561,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-officepowerbidatacon
 
 Code path: `azurenative.securityinsights.v20230801preview.OfficePowerBIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.OfficePowerBIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.OfficePowerBIDataConnector).
 
 Service: Securityinsights
 
@@ -34583,7 +34583,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-scheduledalertrule-d
 
 Code path: `azurenative.securityinsights.v20230801preview.ScheduledAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.ScheduledAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.ScheduledAlertRule).
 
 Service: Securityinsights
 
@@ -34605,7 +34605,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-sentinelonboardingst
 
 Code path: `azurenative.securityinsights.v20230801preview.SentinelOnboardingState.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.SentinelOnboardingState).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.SentinelOnboardingState).
 
 Service: Securityinsights
 
@@ -34627,7 +34627,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-tidataconnector-disa
 
 Code path: `azurenative.securityinsights.v20230801preview.TIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.TIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.TIDataConnector).
 
 Service: Securityinsights
 
@@ -34649,7 +34649,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-threatintelligenceal
 
 Code path: `azurenative.securityinsights.v20230801preview.ThreatIntelligenceAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.ThreatIntelligenceAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.ThreatIntelligenceAlertRule).
 
 Service: Securityinsights
 
@@ -34671,7 +34671,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-threatintelligencein
 
 Code path: `azurenative.securityinsights.v20230801preview.ThreatIntelligenceIndicator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.ThreatIntelligenceIndicator).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.ThreatIntelligenceIndicator).
 
 Service: Securityinsights
 
@@ -34693,7 +34693,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-titaxiidataconnector
 
 Code path: `azurenative.securityinsights.v20230801preview.TiTaxiiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.TiTaxiiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.TiTaxiiDataConnector).
 
 Service: Securityinsights
 
@@ -34715,7 +34715,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-ueba-disallow-previe
 
 Code path: `azurenative.securityinsights.v20230801preview.Ueba.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Ueba).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Ueba).
 
 Service: Securityinsights
 
@@ -34737,7 +34737,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-watchlist-disallow-p
 
 Code path: `azurenative.securityinsights.v20230801preview.Watchlist.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.Watchlist).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.Watchlist).
 
 Service: Securityinsights
 
@@ -34759,7 +34759,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-watchlistitem-disall
 
 Code path: `azurenative.securityinsights.v20230801preview.WatchlistItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.WatchlistItem).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.WatchlistItem).
 
 Service: Securityinsights
 
@@ -34781,7 +34781,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-workspacemanagerassi
 
 Code path: `azurenative.securityinsights.v20230801preview.WorkspaceManagerAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.WorkspaceManagerAssignment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.WorkspaceManagerAssignment).
 
 Service: Securityinsights
 
@@ -34803,7 +34803,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-workspacemanagerconf
 
 Code path: `azurenative.securityinsights.v20230801preview.WorkspaceManagerConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.WorkspaceManagerConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.WorkspaceManagerConfiguration).
 
 Service: Securityinsights
 
@@ -34825,7 +34825,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-workspacemanagergrou
 
 Code path: `azurenative.securityinsights.v20230801preview.WorkspaceManagerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.WorkspaceManagerGroup).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.WorkspaceManagerGroup).
 
 Service: Securityinsights
 
@@ -34847,7 +34847,7 @@ Policy name: `azurenative-securityinsights-v20230801preview-workspacemanagermemb
 
 Code path: `azurenative.securityinsights.v20230801preview.WorkspaceManagerMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230801preview.WorkspaceManagerMember).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230801preview.WorkspaceManagerMember).
 
 Service: Securityinsights
 
@@ -34871,7 +34871,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-aaddataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230901preview.AADDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.AADDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.AADDataConnector).
 
 Service: Securityinsights
 
@@ -34893,7 +34893,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-aatpdataconnector-di
 
 Code path: `azurenative.securityinsights.v20230901preview.AATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.AATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.AATPDataConnector).
 
 Service: Securityinsights
 
@@ -34915,7 +34915,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-ascdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230901preview.ASCDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.ASCDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.ASCDataConnector).
 
 Service: Securityinsights
 
@@ -34937,7 +34937,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-action-disallow-prev
 
 Code path: `azurenative.securityinsights.v20230901preview.Action.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Action).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Action).
 
 Service: Securityinsights
 
@@ -34959,7 +34959,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-activitycustomentity
 
 Code path: `azurenative.securityinsights.v20230901preview.ActivityCustomEntityQuery.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.ActivityCustomEntityQuery).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.ActivityCustomEntityQuery).
 
 Service: Securityinsights
 
@@ -34981,7 +34981,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-anomalies-disallow-p
 
 Code path: `azurenative.securityinsights.v20230901preview.Anomalies.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Anomalies).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Anomalies).
 
 Service: Securityinsights
 
@@ -35003,7 +35003,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-anomalysecuritymlana
 
 Code path: `azurenative.securityinsights.v20230901preview.AnomalySecurityMLAnalyticsSettings.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.AnomalySecurityMLAnalyticsSettings).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.AnomalySecurityMLAnalyticsSettings).
 
 Service: Securityinsights
 
@@ -35025,7 +35025,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-automationrule-disal
 
 Code path: `azurenative.securityinsights.v20230901preview.AutomationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.AutomationRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.AutomationRule).
 
 Service: Securityinsights
 
@@ -35047,7 +35047,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-awscloudtraildatacon
 
 Code path: `azurenative.securityinsights.v20230901preview.AwsCloudTrailDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.AwsCloudTrailDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.AwsCloudTrailDataConnector).
 
 Service: Securityinsights
 
@@ -35069,7 +35069,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-awss3dataconnector-d
 
 Code path: `azurenative.securityinsights.v20230901preview.AwsS3DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.AwsS3DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.AwsS3DataConnector).
 
 Service: Securityinsights
 
@@ -35091,7 +35091,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-bookmark-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230901preview.Bookmark.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Bookmark).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Bookmark).
 
 Service: Securityinsights
 
@@ -35113,7 +35113,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-bookmarkrelation-dis
 
 Code path: `azurenative.securityinsights.v20230901preview.BookmarkRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.BookmarkRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.BookmarkRelation).
 
 Service: Securityinsights
 
@@ -35135,7 +35135,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-codelessapipollingda
 
 Code path: `azurenative.securityinsights.v20230901preview.CodelessApiPollingDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.CodelessApiPollingDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.CodelessApiPollingDataConnector).
 
 Service: Securityinsights
 
@@ -35157,7 +35157,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-codelessuidataconnec
 
 Code path: `azurenative.securityinsights.v20230901preview.CodelessUiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.CodelessUiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.CodelessUiDataConnector).
 
 Service: Securityinsights
 
@@ -35179,7 +35179,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-contentpackage-disal
 
 Code path: `azurenative.securityinsights.v20230901preview.ContentPackage.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.ContentPackage).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.ContentPackage).
 
 Service: Securityinsights
 
@@ -35201,7 +35201,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-contenttemplate-disa
 
 Code path: `azurenative.securityinsights.v20230901preview.ContentTemplate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.ContentTemplate).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.ContentTemplate).
 
 Service: Securityinsights
 
@@ -35223,7 +35223,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-customizableconnecto
 
 Code path: `azurenative.securityinsights.v20230901preview.CustomizableConnectorDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.CustomizableConnectorDefinition).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.CustomizableConnectorDefinition).
 
 Service: Securityinsights
 
@@ -35245,7 +35245,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-dynamics365dataconne
 
 Code path: `azurenative.securityinsights.v20230901preview.Dynamics365DataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Dynamics365DataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Dynamics365DataConnector).
 
 Service: Securityinsights
 
@@ -35267,7 +35267,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-entityanalytics-disa
 
 Code path: `azurenative.securityinsights.v20230901preview.EntityAnalytics.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.EntityAnalytics).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.EntityAnalytics).
 
 Service: Securityinsights
 
@@ -35289,7 +35289,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-eyeson-disallow-prev
 
 Code path: `azurenative.securityinsights.v20230901preview.EyesOn.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.EyesOn).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.EyesOn).
 
 Service: Securityinsights
 
@@ -35311,7 +35311,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-fileimport-disallow-
 
 Code path: `azurenative.securityinsights.v20230901preview.FileImport.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.FileImport).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.FileImport).
 
 Service: Securityinsights
 
@@ -35333,7 +35333,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-fusionalertrule-disa
 
 Code path: `azurenative.securityinsights.v20230901preview.FusionAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.FusionAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.FusionAlertRule).
 
 Service: Securityinsights
 
@@ -35355,7 +35355,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-gcpdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230901preview.GCPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.GCPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.GCPDataConnector).
 
 Service: Securityinsights
 
@@ -35377,7 +35377,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-hunt-disallow-previe
 
 Code path: `azurenative.securityinsights.v20230901preview.Hunt.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Hunt).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Hunt).
 
 Service: Securityinsights
 
@@ -35399,7 +35399,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-huntcomment-disallow
 
 Code path: `azurenative.securityinsights.v20230901preview.HuntComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.HuntComment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.HuntComment).
 
 Service: Securityinsights
 
@@ -35421,7 +35421,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-huntrelation-disallo
 
 Code path: `azurenative.securityinsights.v20230901preview.HuntRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.HuntRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.HuntRelation).
 
 Service: Securityinsights
 
@@ -35443,7 +35443,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-incident-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230901preview.Incident.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Incident).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Incident).
 
 Service: Securityinsights
 
@@ -35465,7 +35465,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-incidentcomment-disa
 
 Code path: `azurenative.securityinsights.v20230901preview.IncidentComment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.IncidentComment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.IncidentComment).
 
 Service: Securityinsights
 
@@ -35487,7 +35487,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-incidentrelation-dis
 
 Code path: `azurenative.securityinsights.v20230901preview.IncidentRelation.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.IncidentRelation).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.IncidentRelation).
 
 Service: Securityinsights
 
@@ -35509,7 +35509,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-incidenttask-disallo
 
 Code path: `azurenative.securityinsights.v20230901preview.IncidentTask.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.IncidentTask).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.IncidentTask).
 
 Service: Securityinsights
 
@@ -35531,7 +35531,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-iotdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230901preview.IoTDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.IoTDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.IoTDataConnector).
 
 Service: Securityinsights
 
@@ -35553,7 +35553,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-mcasdataconnector-di
 
 Code path: `azurenative.securityinsights.v20230901preview.MCASDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.MCASDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.MCASDataConnector).
 
 Service: Securityinsights
 
@@ -35575,7 +35575,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-mdatpdataconnector-d
 
 Code path: `azurenative.securityinsights.v20230901preview.MDATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.MDATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.MDATPDataConnector).
 
 Service: Securityinsights
 
@@ -35597,7 +35597,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-mlbehavioranalyticsa
 
 Code path: `azurenative.securityinsights.v20230901preview.MLBehaviorAnalyticsAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.MLBehaviorAnalyticsAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.MLBehaviorAnalyticsAlertRule).
 
 Service: Securityinsights
 
@@ -35619,7 +35619,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-mstidataconnector-di
 
 Code path: `azurenative.securityinsights.v20230901preview.MSTIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.MSTIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.MSTIDataConnector).
 
 Service: Securityinsights
 
@@ -35641,7 +35641,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-mtpdataconnector-dis
 
 Code path: `azurenative.securityinsights.v20230901preview.MTPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.MTPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.MTPDataConnector).
 
 Service: Securityinsights
 
@@ -35663,7 +35663,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-metadata-disallow-pr
 
 Code path: `azurenative.securityinsights.v20230901preview.Metadata.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Metadata).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Metadata).
 
 Service: Securityinsights
 
@@ -35685,7 +35685,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-microsoftpurviewinfo
 
 Code path: `azurenative.securityinsights.v20230901preview.MicrosoftPurviewInformationProtectionDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.MicrosoftPurviewInformationProtectionDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.MicrosoftPurviewInformationProtectionDataConnector).
 
 Service: Securityinsights
 
@@ -35707,7 +35707,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-microsoftsecurityinc
 
 Code path: `azurenative.securityinsights.v20230901preview.MicrosoftSecurityIncidentCreationAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.MicrosoftSecurityIncidentCreationAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.MicrosoftSecurityIncidentCreationAlertRule).
 
 Service: Securityinsights
 
@@ -35729,7 +35729,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-nrtalertrule-disallo
 
 Code path: `azurenative.securityinsights.v20230901preview.NrtAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.NrtAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.NrtAlertRule).
 
 Service: Securityinsights
 
@@ -35751,7 +35751,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-office365projectdata
 
 Code path: `azurenative.securityinsights.v20230901preview.Office365ProjectDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Office365ProjectDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Office365ProjectDataConnector).
 
 Service: Securityinsights
 
@@ -35773,7 +35773,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-officeatpdataconnect
 
 Code path: `azurenative.securityinsights.v20230901preview.OfficeATPDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.OfficeATPDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.OfficeATPDataConnector).
 
 Service: Securityinsights
 
@@ -35795,7 +35795,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-officedataconnector-
 
 Code path: `azurenative.securityinsights.v20230901preview.OfficeDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.OfficeDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.OfficeDataConnector).
 
 Service: Securityinsights
 
@@ -35817,7 +35817,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-officeirmdataconnect
 
 Code path: `azurenative.securityinsights.v20230901preview.OfficeIRMDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.OfficeIRMDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.OfficeIRMDataConnector).
 
 Service: Securityinsights
 
@@ -35839,7 +35839,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-officepowerbidatacon
 
 Code path: `azurenative.securityinsights.v20230901preview.OfficePowerBIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.OfficePowerBIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.OfficePowerBIDataConnector).
 
 Service: Securityinsights
 
@@ -35861,7 +35861,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-scheduledalertrule-d
 
 Code path: `azurenative.securityinsights.v20230901preview.ScheduledAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.ScheduledAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.ScheduledAlertRule).
 
 Service: Securityinsights
 
@@ -35883,7 +35883,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-sentinelonboardingst
 
 Code path: `azurenative.securityinsights.v20230901preview.SentinelOnboardingState.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.SentinelOnboardingState).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.SentinelOnboardingState).
 
 Service: Securityinsights
 
@@ -35905,7 +35905,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-tidataconnector-disa
 
 Code path: `azurenative.securityinsights.v20230901preview.TIDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.TIDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.TIDataConnector).
 
 Service: Securityinsights
 
@@ -35927,7 +35927,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-threatintelligenceal
 
 Code path: `azurenative.securityinsights.v20230901preview.ThreatIntelligenceAlertRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.ThreatIntelligenceAlertRule).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.ThreatIntelligenceAlertRule).
 
 Service: Securityinsights
 
@@ -35949,7 +35949,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-threatintelligencein
 
 Code path: `azurenative.securityinsights.v20230901preview.ThreatIntelligenceIndicator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.ThreatIntelligenceIndicator).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.ThreatIntelligenceIndicator).
 
 Service: Securityinsights
 
@@ -35971,7 +35971,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-titaxiidataconnector
 
 Code path: `azurenative.securityinsights.v20230901preview.TiTaxiiDataConnector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.TiTaxiiDataConnector).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.TiTaxiiDataConnector).
 
 Service: Securityinsights
 
@@ -35993,7 +35993,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-ueba-disallow-previe
 
 Code path: `azurenative.securityinsights.v20230901preview.Ueba.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Ueba).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Ueba).
 
 Service: Securityinsights
 
@@ -36015,7 +36015,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-watchlist-disallow-p
 
 Code path: `azurenative.securityinsights.v20230901preview.Watchlist.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.Watchlist).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.Watchlist).
 
 Service: Securityinsights
 
@@ -36037,7 +36037,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-watchlistitem-disall
 
 Code path: `azurenative.securityinsights.v20230901preview.WatchlistItem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.WatchlistItem).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.WatchlistItem).
 
 Service: Securityinsights
 
@@ -36059,7 +36059,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-workspacemanagerassi
 
 Code path: `azurenative.securityinsights.v20230901preview.WorkspaceManagerAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.WorkspaceManagerAssignment).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.WorkspaceManagerAssignment).
 
 Service: Securityinsights
 
@@ -36081,7 +36081,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-workspacemanagerconf
 
 Code path: `azurenative.securityinsights.v20230901preview.WorkspaceManagerConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.WorkspaceManagerConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.WorkspaceManagerConfiguration).
 
 Service: Securityinsights
 
@@ -36103,7 +36103,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-workspacemanagergrou
 
 Code path: `azurenative.securityinsights.v20230901preview.WorkspaceManagerGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.WorkspaceManagerGroup).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.WorkspaceManagerGroup).
 
 Service: Securityinsights
 
@@ -36125,7 +36125,7 @@ Policy name: `azurenative-securityinsights-v20230901preview-workspacemanagermemb
 
 Code path: `azurenative.securityinsights.v20230901preview.WorkspaceManagerMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (securityinsights.v20230901preview.WorkspaceManagerMember).
+Disallow the use of non-stable (Preview) Azure resources (securityinsights.v20230901preview.WorkspaceManagerMember).
 
 Service: Securityinsights
 
@@ -36151,7 +36151,7 @@ Policy name: `azurenative-servicebus-v20180101preview-namespaceipfilterrule-disa
 
 Code path: `azurenative.servicebus.v20180101preview.NamespaceIpFilterRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20180101preview.NamespaceIpFilterRule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20180101preview.NamespaceIpFilterRule).
 
 Service: Servicebus
 
@@ -36173,7 +36173,7 @@ Policy name: `azurenative-servicebus-v20180101preview-namespacevirtualnetworkrul
 
 Code path: `azurenative.servicebus.v20180101preview.NamespaceVirtualNetworkRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20180101preview.NamespaceVirtualNetworkRule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20180101preview.NamespaceVirtualNetworkRule).
 
 Service: Servicebus
 
@@ -36197,7 +36197,7 @@ Policy name: `azurenative-servicebus-v20220101preview-disasterrecoveryconfig-dis
 
 Code path: `azurenative.servicebus.v20220101preview.DisasterRecoveryConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.DisasterRecoveryConfig).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.DisasterRecoveryConfig).
 
 Service: Servicebus
 
@@ -36219,7 +36219,7 @@ Policy name: `azurenative-servicebus-v20220101preview-migrationconfig-disallow-p
 
 Code path: `azurenative.servicebus.v20220101preview.MigrationConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.MigrationConfig).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.MigrationConfig).
 
 Service: Servicebus
 
@@ -36241,7 +36241,7 @@ Policy name: `azurenative-servicebus-v20220101preview-namespace-disallow-preview
 
 Code path: `azurenative.servicebus.v20220101preview.Namespace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.Namespace).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.Namespace).
 
 Service: Servicebus
 
@@ -36263,7 +36263,7 @@ Policy name: `azurenative-servicebus-v20220101preview-namespaceauthorizationrule
 
 Code path: `azurenative.servicebus.v20220101preview.NamespaceAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.NamespaceAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.NamespaceAuthorizationRule).
 
 Service: Servicebus
 
@@ -36285,7 +36285,7 @@ Policy name: `azurenative-servicebus-v20220101preview-namespacenetworkruleset-di
 
 Code path: `azurenative.servicebus.v20220101preview.NamespaceNetworkRuleSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.NamespaceNetworkRuleSet).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.NamespaceNetworkRuleSet).
 
 Service: Servicebus
 
@@ -36307,7 +36307,7 @@ Policy name: `azurenative-servicebus-v20220101preview-privateendpointconnection-
 
 Code path: `azurenative.servicebus.v20220101preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.PrivateEndpointConnection).
 
 Service: Servicebus
 
@@ -36329,7 +36329,7 @@ Policy name: `azurenative-servicebus-v20220101preview-queue-disallow-preview-res
 
 Code path: `azurenative.servicebus.v20220101preview.Queue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.Queue).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.Queue).
 
 Service: Servicebus
 
@@ -36351,7 +36351,7 @@ Policy name: `azurenative-servicebus-v20220101preview-queueauthorizationrule-dis
 
 Code path: `azurenative.servicebus.v20220101preview.QueueAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.QueueAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.QueueAuthorizationRule).
 
 Service: Servicebus
 
@@ -36373,7 +36373,7 @@ Policy name: `azurenative-servicebus-v20220101preview-rule-disallow-preview-reso
 
 Code path: `azurenative.servicebus.v20220101preview.Rule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.Rule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.Rule).
 
 Service: Servicebus
 
@@ -36395,7 +36395,7 @@ Policy name: `azurenative-servicebus-v20220101preview-subscription-disallow-prev
 
 Code path: `azurenative.servicebus.v20220101preview.Subscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.Subscription).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.Subscription).
 
 Service: Servicebus
 
@@ -36417,7 +36417,7 @@ Policy name: `azurenative-servicebus-v20220101preview-topic-disallow-preview-res
 
 Code path: `azurenative.servicebus.v20220101preview.Topic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.Topic).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.Topic).
 
 Service: Servicebus
 
@@ -36439,7 +36439,7 @@ Policy name: `azurenative-servicebus-v20220101preview-topicauthorizationrule-dis
 
 Code path: `azurenative.servicebus.v20220101preview.TopicAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20220101preview.TopicAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20220101preview.TopicAuthorizationRule).
 
 Service: Servicebus
 
@@ -36463,7 +36463,7 @@ Policy name: `azurenative-servicebus-v20221001preview-disasterrecoveryconfig-dis
 
 Code path: `azurenative.servicebus.v20221001preview.DisasterRecoveryConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.DisasterRecoveryConfig).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.DisasterRecoveryConfig).
 
 Service: Servicebus
 
@@ -36485,7 +36485,7 @@ Policy name: `azurenative-servicebus-v20221001preview-migrationconfig-disallow-p
 
 Code path: `azurenative.servicebus.v20221001preview.MigrationConfig.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.MigrationConfig).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.MigrationConfig).
 
 Service: Servicebus
 
@@ -36507,7 +36507,7 @@ Policy name: `azurenative-servicebus-v20221001preview-namespace-disallow-preview
 
 Code path: `azurenative.servicebus.v20221001preview.Namespace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.Namespace).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.Namespace).
 
 Service: Servicebus
 
@@ -36529,7 +36529,7 @@ Policy name: `azurenative-servicebus-v20221001preview-namespaceauthorizationrule
 
 Code path: `azurenative.servicebus.v20221001preview.NamespaceAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.NamespaceAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.NamespaceAuthorizationRule).
 
 Service: Servicebus
 
@@ -36551,7 +36551,7 @@ Policy name: `azurenative-servicebus-v20221001preview-namespacenetworkruleset-di
 
 Code path: `azurenative.servicebus.v20221001preview.NamespaceNetworkRuleSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.NamespaceNetworkRuleSet).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.NamespaceNetworkRuleSet).
 
 Service: Servicebus
 
@@ -36573,7 +36573,7 @@ Policy name: `azurenative-servicebus-v20221001preview-privateendpointconnection-
 
 Code path: `azurenative.servicebus.v20221001preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.PrivateEndpointConnection).
 
 Service: Servicebus
 
@@ -36595,7 +36595,7 @@ Policy name: `azurenative-servicebus-v20221001preview-queue-disallow-preview-res
 
 Code path: `azurenative.servicebus.v20221001preview.Queue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.Queue).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.Queue).
 
 Service: Servicebus
 
@@ -36617,7 +36617,7 @@ Policy name: `azurenative-servicebus-v20221001preview-queueauthorizationrule-dis
 
 Code path: `azurenative.servicebus.v20221001preview.QueueAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.QueueAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.QueueAuthorizationRule).
 
 Service: Servicebus
 
@@ -36639,7 +36639,7 @@ Policy name: `azurenative-servicebus-v20221001preview-rule-disallow-preview-reso
 
 Code path: `azurenative.servicebus.v20221001preview.Rule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.Rule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.Rule).
 
 Service: Servicebus
 
@@ -36661,7 +36661,7 @@ Policy name: `azurenative-servicebus-v20221001preview-subscription-disallow-prev
 
 Code path: `azurenative.servicebus.v20221001preview.Subscription.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.Subscription).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.Subscription).
 
 Service: Servicebus
 
@@ -36683,7 +36683,7 @@ Policy name: `azurenative-servicebus-v20221001preview-topic-disallow-preview-res
 
 Code path: `azurenative.servicebus.v20221001preview.Topic.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.Topic).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.Topic).
 
 Service: Servicebus
 
@@ -36705,7 +36705,7 @@ Policy name: `azurenative-servicebus-v20221001preview-topicauthorizationrule-dis
 
 Code path: `azurenative.servicebus.v20221001preview.TopicAuthorizationRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicebus.v20221001preview.TopicAuthorizationRule).
+Disallow the use of non-stable (Preview) Azure resources (servicebus.v20221001preview.TopicAuthorizationRule).
 
 Service: Servicebus
 
@@ -36731,7 +36731,7 @@ Policy name: `azurenative-servicefabric-v20200101preview-managedcluster-disallow
 
 Code path: `azurenative.servicefabric.v20200101preview.ManagedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20200101preview.ManagedCluster).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20200101preview.ManagedCluster).
 
 Service: Servicefabric
 
@@ -36755,7 +36755,7 @@ Policy name: `azurenative-servicefabric-v20201201preview-cluster-disallow-previe
 
 Code path: `azurenative.servicefabric.v20201201preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20201201preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20201201preview.Cluster).
 
 Service: Servicefabric
 
@@ -36779,7 +36779,7 @@ Policy name: `azurenative-servicefabric-v20221001preview-managedcluster-disallow
 
 Code path: `azurenative.servicefabric.v20221001preview.ManagedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20221001preview.ManagedCluster).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20221001preview.ManagedCluster).
 
 Service: Servicefabric
 
@@ -36803,7 +36803,7 @@ Policy name: `azurenative-servicefabric-v20230301preview-managedcluster-disallow
 
 Code path: `azurenative.servicefabric.v20230301preview.ManagedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230301preview.ManagedCluster).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230301preview.ManagedCluster).
 
 Service: Servicefabric
 
@@ -36825,7 +36825,7 @@ Policy name: `azurenative-servicefabric-v20230301preview-managedclusterapplicati
 
 Code path: `azurenative.servicefabric.v20230301preview.ManagedClusterApplication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230301preview.ManagedClusterApplication).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230301preview.ManagedClusterApplication).
 
 Service: Servicefabric
 
@@ -36847,7 +36847,7 @@ Policy name: `azurenative-servicefabric-v20230301preview-managedclusterapplicati
 
 Code path: `azurenative.servicefabric.v20230301preview.ManagedClusterApplicationType.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230301preview.ManagedClusterApplicationType).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230301preview.ManagedClusterApplicationType).
 
 Service: Servicefabric
 
@@ -36869,7 +36869,7 @@ Policy name: `azurenative-servicefabric-v20230301preview-managedclusterapplicati
 
 Code path: `azurenative.servicefabric.v20230301preview.ManagedClusterApplicationTypeVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230301preview.ManagedClusterApplicationTypeVersion).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230301preview.ManagedClusterApplicationTypeVersion).
 
 Service: Servicefabric
 
@@ -36891,7 +36891,7 @@ Policy name: `azurenative-servicefabric-v20230301preview-managedclusterservice-d
 
 Code path: `azurenative.servicefabric.v20230301preview.ManagedClusterService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230301preview.ManagedClusterService).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230301preview.ManagedClusterService).
 
 Service: Servicefabric
 
@@ -36913,7 +36913,7 @@ Policy name: `azurenative-servicefabric-v20230301preview-nodetype-disallow-previ
 
 Code path: `azurenative.servicefabric.v20230301preview.NodeType.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230301preview.NodeType).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230301preview.NodeType).
 
 Service: Servicefabric
 
@@ -36937,7 +36937,7 @@ Policy name: `azurenative-servicefabric-v20230701preview-managedcluster-disallow
 
 Code path: `azurenative.servicefabric.v20230701preview.ManagedCluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230701preview.ManagedCluster).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230701preview.ManagedCluster).
 
 Service: Servicefabric
 
@@ -36959,7 +36959,7 @@ Policy name: `azurenative-servicefabric-v20230701preview-managedclusterapplicati
 
 Code path: `azurenative.servicefabric.v20230701preview.ManagedClusterApplication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230701preview.ManagedClusterApplication).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230701preview.ManagedClusterApplication).
 
 Service: Servicefabric
 
@@ -36981,7 +36981,7 @@ Policy name: `azurenative-servicefabric-v20230701preview-managedclusterapplicati
 
 Code path: `azurenative.servicefabric.v20230701preview.ManagedClusterApplicationType.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230701preview.ManagedClusterApplicationType).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230701preview.ManagedClusterApplicationType).
 
 Service: Servicefabric
 
@@ -37003,7 +37003,7 @@ Policy name: `azurenative-servicefabric-v20230701preview-managedclusterapplicati
 
 Code path: `azurenative.servicefabric.v20230701preview.ManagedClusterApplicationTypeVersion.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230701preview.ManagedClusterApplicationTypeVersion).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230701preview.ManagedClusterApplicationTypeVersion).
 
 Service: Servicefabric
 
@@ -37025,7 +37025,7 @@ Policy name: `azurenative-servicefabric-v20230701preview-managedclusterservice-d
 
 Code path: `azurenative.servicefabric.v20230701preview.ManagedClusterService.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230701preview.ManagedClusterService).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230701preview.ManagedClusterService).
 
 Service: Servicefabric
 
@@ -37047,7 +37047,7 @@ Policy name: `azurenative-servicefabric-v20230701preview-nodetype-disallow-previ
 
 Code path: `azurenative.servicefabric.v20230701preview.NodeType.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabric.v20230701preview.NodeType).
+Disallow the use of non-stable (Preview) Azure resources (servicefabric.v20230701preview.NodeType).
 
 Service: Servicefabric
 
@@ -37073,7 +37073,7 @@ Policy name: `azurenative-servicefabricmesh-v20180901preview-application-disallo
 
 Code path: `azurenative.servicefabricmesh.v20180901preview.Application.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabricmesh.v20180901preview.Application).
+Disallow the use of non-stable (Preview) Azure resources (servicefabricmesh.v20180901preview.Application).
 
 Service: Servicefabricmesh
 
@@ -37095,7 +37095,7 @@ Policy name: `azurenative-servicefabricmesh-v20180901preview-gateway-disallow-pr
 
 Code path: `azurenative.servicefabricmesh.v20180901preview.Gateway.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabricmesh.v20180901preview.Gateway).
+Disallow the use of non-stable (Preview) Azure resources (servicefabricmesh.v20180901preview.Gateway).
 
 Service: Servicefabricmesh
 
@@ -37117,7 +37117,7 @@ Policy name: `azurenative-servicefabricmesh-v20180901preview-network-disallow-pr
 
 Code path: `azurenative.servicefabricmesh.v20180901preview.Network.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabricmesh.v20180901preview.Network).
+Disallow the use of non-stable (Preview) Azure resources (servicefabricmesh.v20180901preview.Network).
 
 Service: Servicefabricmesh
 
@@ -37139,7 +37139,7 @@ Policy name: `azurenative-servicefabricmesh-v20180901preview-secret-disallow-pre
 
 Code path: `azurenative.servicefabricmesh.v20180901preview.Secret.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabricmesh.v20180901preview.Secret).
+Disallow the use of non-stable (Preview) Azure resources (servicefabricmesh.v20180901preview.Secret).
 
 Service: Servicefabricmesh
 
@@ -37161,7 +37161,7 @@ Policy name: `azurenative-servicefabricmesh-v20180901preview-secretvalue-disallo
 
 Code path: `azurenative.servicefabricmesh.v20180901preview.SecretValue.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabricmesh.v20180901preview.SecretValue).
+Disallow the use of non-stable (Preview) Azure resources (servicefabricmesh.v20180901preview.SecretValue).
 
 Service: Servicefabricmesh
 
@@ -37183,7 +37183,7 @@ Policy name: `azurenative-servicefabricmesh-v20180901preview-volume-disallow-pre
 
 Code path: `azurenative.servicefabricmesh.v20180901preview.Volume.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicefabricmesh.v20180901preview.Volume).
+Disallow the use of non-stable (Preview) Azure resources (servicefabricmesh.v20180901preview.Volume).
 
 Service: Servicefabricmesh
 
@@ -37209,7 +37209,7 @@ Policy name: `azurenative-servicelinker-v20211101preview-linker-disallow-preview
 
 Code path: `azurenative.servicelinker.v20211101preview.Linker.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicelinker.v20211101preview.Linker).
+Disallow the use of non-stable (Preview) Azure resources (servicelinker.v20211101preview.Linker).
 
 Service: Servicelinker
 
@@ -37233,7 +37233,7 @@ Policy name: `azurenative-servicelinker-v20221101preview-connector-disallow-prev
 
 Code path: `azurenative.servicelinker.v20221101preview.Connector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicelinker.v20221101preview.Connector).
+Disallow the use of non-stable (Preview) Azure resources (servicelinker.v20221101preview.Connector).
 
 Service: Servicelinker
 
@@ -37255,7 +37255,7 @@ Policy name: `azurenative-servicelinker-v20221101preview-connectordryrun-disallo
 
 Code path: `azurenative.servicelinker.v20221101preview.ConnectorDryrun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicelinker.v20221101preview.ConnectorDryrun).
+Disallow the use of non-stable (Preview) Azure resources (servicelinker.v20221101preview.ConnectorDryrun).
 
 Service: Servicelinker
 
@@ -37277,7 +37277,7 @@ Policy name: `azurenative-servicelinker-v20221101preview-linker-disallow-preview
 
 Code path: `azurenative.servicelinker.v20221101preview.Linker.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicelinker.v20221101preview.Linker).
+Disallow the use of non-stable (Preview) Azure resources (servicelinker.v20221101preview.Linker).
 
 Service: Servicelinker
 
@@ -37299,7 +37299,7 @@ Policy name: `azurenative-servicelinker-v20221101preview-linkerdryrun-disallow-p
 
 Code path: `azurenative.servicelinker.v20221101preview.LinkerDryrun.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicelinker.v20221101preview.LinkerDryrun).
+Disallow the use of non-stable (Preview) Azure resources (servicelinker.v20221101preview.LinkerDryrun).
 
 Service: Servicelinker
 
@@ -37325,7 +37325,7 @@ Policy name: `azurenative-servicenetworking-v20221001preview-associationsinterfa
 
 Code path: `azurenative.servicenetworking.v20221001preview.AssociationsInterface.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicenetworking.v20221001preview.AssociationsInterface).
+Disallow the use of non-stable (Preview) Azure resources (servicenetworking.v20221001preview.AssociationsInterface).
 
 Service: Servicenetworking
 
@@ -37347,7 +37347,7 @@ Policy name: `azurenative-servicenetworking-v20221001preview-frontendsinterface-
 
 Code path: `azurenative.servicenetworking.v20221001preview.FrontendsInterface.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicenetworking.v20221001preview.FrontendsInterface).
+Disallow the use of non-stable (Preview) Azure resources (servicenetworking.v20221001preview.FrontendsInterface).
 
 Service: Servicenetworking
 
@@ -37369,7 +37369,7 @@ Policy name: `azurenative-servicenetworking-v20221001preview-trafficcontrollerin
 
 Code path: `azurenative.servicenetworking.v20221001preview.TrafficControllerInterface.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicenetworking.v20221001preview.TrafficControllerInterface).
+Disallow the use of non-stable (Preview) Azure resources (servicenetworking.v20221001preview.TrafficControllerInterface).
 
 Service: Servicenetworking
 
@@ -37393,7 +37393,7 @@ Policy name: `azurenative-servicenetworking-v20230501preview-associationsinterfa
 
 Code path: `azurenative.servicenetworking.v20230501preview.AssociationsInterface.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicenetworking.v20230501preview.AssociationsInterface).
+Disallow the use of non-stable (Preview) Azure resources (servicenetworking.v20230501preview.AssociationsInterface).
 
 Service: Servicenetworking
 
@@ -37415,7 +37415,7 @@ Policy name: `azurenative-servicenetworking-v20230501preview-frontendsinterface-
 
 Code path: `azurenative.servicenetworking.v20230501preview.FrontendsInterface.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicenetworking.v20230501preview.FrontendsInterface).
+Disallow the use of non-stable (Preview) Azure resources (servicenetworking.v20230501preview.FrontendsInterface).
 
 Service: Servicenetworking
 
@@ -37437,7 +37437,7 @@ Policy name: `azurenative-servicenetworking-v20230501preview-trafficcontrollerin
 
 Code path: `azurenative.servicenetworking.v20230501preview.TrafficControllerInterface.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (servicenetworking.v20230501preview.TrafficControllerInterface).
+Disallow the use of non-stable (Preview) Azure resources (servicenetworking.v20230501preview.TrafficControllerInterface).
 
 Service: Servicenetworking
 
@@ -37463,7 +37463,7 @@ Policy name: `azurenative-signalrservice-v20230301preview-signalr-disallow-previ
 
 Code path: `azurenative.signalrservice.v20230301preview.SignalR.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230301preview.SignalR).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230301preview.SignalR).
 
 Service: Signalrservice
 
@@ -37485,7 +37485,7 @@ Policy name: `azurenative-signalrservice-v20230301preview-signalrcustomcertifica
 
 Code path: `azurenative.signalrservice.v20230301preview.SignalRCustomCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230301preview.SignalRCustomCertificate).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230301preview.SignalRCustomCertificate).
 
 Service: Signalrservice
 
@@ -37507,7 +37507,7 @@ Policy name: `azurenative-signalrservice-v20230301preview-signalrcustomdomain-di
 
 Code path: `azurenative.signalrservice.v20230301preview.SignalRCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230301preview.SignalRCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230301preview.SignalRCustomDomain).
 
 Service: Signalrservice
 
@@ -37529,7 +37529,7 @@ Policy name: `azurenative-signalrservice-v20230301preview-signalrprivateendpoint
 
 Code path: `azurenative.signalrservice.v20230301preview.SignalRPrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230301preview.SignalRPrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230301preview.SignalRPrivateEndpointConnection).
 
 Service: Signalrservice
 
@@ -37551,7 +37551,7 @@ Policy name: `azurenative-signalrservice-v20230301preview-signalrreplica-disallo
 
 Code path: `azurenative.signalrservice.v20230301preview.SignalRReplica.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230301preview.SignalRReplica).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230301preview.SignalRReplica).
 
 Service: Signalrservice
 
@@ -37573,7 +37573,7 @@ Policy name: `azurenative-signalrservice-v20230301preview-signalrsharedprivateli
 
 Code path: `azurenative.signalrservice.v20230301preview.SignalRSharedPrivateLinkResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230301preview.SignalRSharedPrivateLinkResource).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230301preview.SignalRSharedPrivateLinkResource).
 
 Service: Signalrservice
 
@@ -37597,7 +37597,7 @@ Policy name: `azurenative-signalrservice-v20230601preview-signalr-disallow-previ
 
 Code path: `azurenative.signalrservice.v20230601preview.SignalR.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230601preview.SignalR).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230601preview.SignalR).
 
 Service: Signalrservice
 
@@ -37619,7 +37619,7 @@ Policy name: `azurenative-signalrservice-v20230601preview-signalrcustomcertifica
 
 Code path: `azurenative.signalrservice.v20230601preview.SignalRCustomCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230601preview.SignalRCustomCertificate).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230601preview.SignalRCustomCertificate).
 
 Service: Signalrservice
 
@@ -37641,7 +37641,7 @@ Policy name: `azurenative-signalrservice-v20230601preview-signalrcustomdomain-di
 
 Code path: `azurenative.signalrservice.v20230601preview.SignalRCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230601preview.SignalRCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230601preview.SignalRCustomDomain).
 
 Service: Signalrservice
 
@@ -37663,7 +37663,7 @@ Policy name: `azurenative-signalrservice-v20230601preview-signalrprivateendpoint
 
 Code path: `azurenative.signalrservice.v20230601preview.SignalRPrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230601preview.SignalRPrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230601preview.SignalRPrivateEndpointConnection).
 
 Service: Signalrservice
 
@@ -37685,7 +37685,7 @@ Policy name: `azurenative-signalrservice-v20230601preview-signalrreplica-disallo
 
 Code path: `azurenative.signalrservice.v20230601preview.SignalRReplica.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230601preview.SignalRReplica).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230601preview.SignalRReplica).
 
 Service: Signalrservice
 
@@ -37707,7 +37707,7 @@ Policy name: `azurenative-signalrservice-v20230601preview-signalrsharedprivateli
 
 Code path: `azurenative.signalrservice.v20230601preview.SignalRSharedPrivateLinkResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230601preview.SignalRSharedPrivateLinkResource).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230601preview.SignalRSharedPrivateLinkResource).
 
 Service: Signalrservice
 
@@ -37731,7 +37731,7 @@ Policy name: `azurenative-signalrservice-v20230801preview-signalr-disallow-previ
 
 Code path: `azurenative.signalrservice.v20230801preview.SignalR.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230801preview.SignalR).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230801preview.SignalR).
 
 Service: Signalrservice
 
@@ -37753,7 +37753,7 @@ Policy name: `azurenative-signalrservice-v20230801preview-signalrcustomcertifica
 
 Code path: `azurenative.signalrservice.v20230801preview.SignalRCustomCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230801preview.SignalRCustomCertificate).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230801preview.SignalRCustomCertificate).
 
 Service: Signalrservice
 
@@ -37775,7 +37775,7 @@ Policy name: `azurenative-signalrservice-v20230801preview-signalrcustomdomain-di
 
 Code path: `azurenative.signalrservice.v20230801preview.SignalRCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230801preview.SignalRCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230801preview.SignalRCustomDomain).
 
 Service: Signalrservice
 
@@ -37797,7 +37797,7 @@ Policy name: `azurenative-signalrservice-v20230801preview-signalrprivateendpoint
 
 Code path: `azurenative.signalrservice.v20230801preview.SignalRPrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230801preview.SignalRPrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230801preview.SignalRPrivateEndpointConnection).
 
 Service: Signalrservice
 
@@ -37819,7 +37819,7 @@ Policy name: `azurenative-signalrservice-v20230801preview-signalrreplica-disallo
 
 Code path: `azurenative.signalrservice.v20230801preview.SignalRReplica.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230801preview.SignalRReplica).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230801preview.SignalRReplica).
 
 Service: Signalrservice
 
@@ -37841,7 +37841,7 @@ Policy name: `azurenative-signalrservice-v20230801preview-signalrsharedprivateli
 
 Code path: `azurenative.signalrservice.v20230801preview.SignalRSharedPrivateLinkResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (signalrservice.v20230801preview.SignalRSharedPrivateLinkResource).
+Disallow the use of non-stable (Preview) Azure resources (signalrservice.v20230801preview.SignalRSharedPrivateLinkResource).
 
 Service: Signalrservice
 
@@ -37867,7 +37867,7 @@ Policy name: `azurenative-sql-v20150501preview-serverkey-disallow-preview-resour
 
 Code path: `azurenative.sql.v20150501preview.ServerKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20150501preview.ServerKey).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20150501preview.ServerKey).
 
 Service: Sql
 
@@ -37891,7 +37891,7 @@ Policy name: `azurenative-sql-v20170301preview-backuplongtermretentionpolicy-dis
 
 Code path: `azurenative.sql.v20170301preview.BackupLongTermRetentionPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20170301preview.BackupLongTermRetentionPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20170301preview.BackupLongTermRetentionPolicy).
 
 Service: Sql
 
@@ -37913,7 +37913,7 @@ Policy name: `azurenative-sql-v20170301preview-serversecurityalertpolicy-disallo
 
 Code path: `azurenative.sql.v20170301preview.ServerSecurityAlertPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20170301preview.ServerSecurityAlertPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20170301preview.ServerSecurityAlertPolicy).
 
 Service: Sql
 
@@ -37937,7 +37937,7 @@ Policy name: `azurenative-sql-v20180601preview-databasesecurityalertpolicy-disal
 
 Code path: `azurenative.sql.v20180601preview.DatabaseSecurityAlertPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20180601preview.DatabaseSecurityAlertPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20180601preview.DatabaseSecurityAlertPolicy).
 
 Service: Sql
 
@@ -37961,7 +37961,7 @@ Policy name: `azurenative-sql-v20190601preview-database-disallow-preview-resourc
 
 Code path: `azurenative.sql.v20190601preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20190601preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20190601preview.Database).
 
 Service: Sql
 
@@ -37985,7 +37985,7 @@ Policy name: `azurenative-sql-v20200202preview-database-disallow-preview-resourc
 
 Code path: `azurenative.sql.v20200202preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20200202preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20200202preview.Database).
 
 Service: Sql
 
@@ -38009,7 +38009,7 @@ Policy name: `azurenative-sql-v20200801preview-database-disallow-preview-resourc
 
 Code path: `azurenative.sql.v20200801preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20200801preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20200801preview.Database).
 
 Service: Sql
 
@@ -38033,7 +38033,7 @@ Policy name: `azurenative-sql-v20210201preview-managedinstance-disallow-preview-
 
 Code path: `azurenative.sql.v20210201preview.ManagedInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20210201preview.ManagedInstance).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20210201preview.ManagedInstance).
 
 Service: Sql
 
@@ -38057,7 +38057,7 @@ Policy name: `azurenative-sql-v20221101preview-backupshorttermretentionpolicy-di
 
 Code path: `azurenative.sql.v20221101preview.BackupShortTermRetentionPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.BackupShortTermRetentionPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.BackupShortTermRetentionPolicy).
 
 Service: Sql
 
@@ -38079,7 +38079,7 @@ Policy name: `azurenative-sql-v20221101preview-datamaskingpolicy-disallow-previe
 
 Code path: `azurenative.sql.v20221101preview.DataMaskingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.DataMaskingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.DataMaskingPolicy).
 
 Service: Sql
 
@@ -38101,7 +38101,7 @@ Policy name: `azurenative-sql-v20221101preview-database-disallow-preview-resourc
 
 Code path: `azurenative.sql.v20221101preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.Database).
 
 Service: Sql
 
@@ -38123,7 +38123,7 @@ Policy name: `azurenative-sql-v20221101preview-databaseadvisor-disallow-preview-
 
 Code path: `azurenative.sql.v20221101preview.DatabaseAdvisor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.DatabaseAdvisor).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.DatabaseAdvisor).
 
 Service: Sql
 
@@ -38145,7 +38145,7 @@ Policy name: `azurenative-sql-v20221101preview-databaseblobauditingpolicy-disall
 
 Code path: `azurenative.sql.v20221101preview.DatabaseBlobAuditingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.DatabaseBlobAuditingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.DatabaseBlobAuditingPolicy).
 
 Service: Sql
 
@@ -38167,7 +38167,7 @@ Policy name: `azurenative-sql-v20221101preview-databasesecurityalertpolicy-disal
 
 Code path: `azurenative.sql.v20221101preview.DatabaseSecurityAlertPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.DatabaseSecurityAlertPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.DatabaseSecurityAlertPolicy).
 
 Service: Sql
 
@@ -38189,7 +38189,7 @@ Policy name: `azurenative-sql-v20221101preview-databasesqlvulnerabilityassessmen
 
 Code path: `azurenative.sql.v20221101preview.DatabaseSqlVulnerabilityAssessmentRuleBaseline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.DatabaseSqlVulnerabilityAssessmentRuleBaseline).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.DatabaseSqlVulnerabilityAssessmentRuleBaseline).
 
 Service: Sql
 
@@ -38211,7 +38211,7 @@ Policy name: `azurenative-sql-v20221101preview-databasevulnerabilityassessment-d
 
 Code path: `azurenative.sql.v20221101preview.DatabaseVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.DatabaseVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.DatabaseVulnerabilityAssessment).
 
 Service: Sql
 
@@ -38233,7 +38233,7 @@ Policy name: `azurenative-sql-v20221101preview-databasevulnerabilityassessmentru
 
 Code path: `azurenative.sql.v20221101preview.DatabaseVulnerabilityAssessmentRuleBaseline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.DatabaseVulnerabilityAssessmentRuleBaseline).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.DatabaseVulnerabilityAssessmentRuleBaseline).
 
 Service: Sql
 
@@ -38255,7 +38255,7 @@ Policy name: `azurenative-sql-v20221101preview-distributedavailabilitygroup-disa
 
 Code path: `azurenative.sql.v20221101preview.DistributedAvailabilityGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.DistributedAvailabilityGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.DistributedAvailabilityGroup).
 
 Service: Sql
 
@@ -38277,7 +38277,7 @@ Policy name: `azurenative-sql-v20221101preview-elasticpool-disallow-preview-reso
 
 Code path: `azurenative.sql.v20221101preview.ElasticPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ElasticPool).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ElasticPool).
 
 Service: Sql
 
@@ -38299,7 +38299,7 @@ Policy name: `azurenative-sql-v20221101preview-encryptionprotector-disallow-prev
 
 Code path: `azurenative.sql.v20221101preview.EncryptionProtector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.EncryptionProtector).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.EncryptionProtector).
 
 Service: Sql
 
@@ -38321,7 +38321,7 @@ Policy name: `azurenative-sql-v20221101preview-extendeddatabaseblobauditingpolic
 
 Code path: `azurenative.sql.v20221101preview.ExtendedDatabaseBlobAuditingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ExtendedDatabaseBlobAuditingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ExtendedDatabaseBlobAuditingPolicy).
 
 Service: Sql
 
@@ -38343,7 +38343,7 @@ Policy name: `azurenative-sql-v20221101preview-extendedserverblobauditingpolicy-
 
 Code path: `azurenative.sql.v20221101preview.ExtendedServerBlobAuditingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ExtendedServerBlobAuditingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ExtendedServerBlobAuditingPolicy).
 
 Service: Sql
 
@@ -38365,7 +38365,7 @@ Policy name: `azurenative-sql-v20221101preview-failovergroup-disallow-preview-re
 
 Code path: `azurenative.sql.v20221101preview.FailoverGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.FailoverGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.FailoverGroup).
 
 Service: Sql
 
@@ -38387,7 +38387,7 @@ Policy name: `azurenative-sql-v20221101preview-firewallrule-disallow-preview-res
 
 Code path: `azurenative.sql.v20221101preview.FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.FirewallRule).
 
 Service: Sql
 
@@ -38409,7 +38409,7 @@ Policy name: `azurenative-sql-v20221101preview-geobackuppolicy-disallow-preview-
 
 Code path: `azurenative.sql.v20221101preview.GeoBackupPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.GeoBackupPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.GeoBackupPolicy).
 
 Service: Sql
 
@@ -38431,7 +38431,7 @@ Policy name: `azurenative-sql-v20221101preview-ipv6firewallrule-disallow-preview
 
 Code path: `azurenative.sql.v20221101preview.IPv6FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.IPv6FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.IPv6FirewallRule).
 
 Service: Sql
 
@@ -38453,7 +38453,7 @@ Policy name: `azurenative-sql-v20221101preview-instancefailovergroup-disallow-pr
 
 Code path: `azurenative.sql.v20221101preview.InstanceFailoverGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.InstanceFailoverGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.InstanceFailoverGroup).
 
 Service: Sql
 
@@ -38475,7 +38475,7 @@ Policy name: `azurenative-sql-v20221101preview-instancepool-disallow-preview-res
 
 Code path: `azurenative.sql.v20221101preview.InstancePool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.InstancePool).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.InstancePool).
 
 Service: Sql
 
@@ -38497,7 +38497,7 @@ Policy name: `azurenative-sql-v20221101preview-job-disallow-preview-resource`
 
 Code path: `azurenative.sql.v20221101preview.Job.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.Job).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.Job).
 
 Service: Sql
 
@@ -38519,7 +38519,7 @@ Policy name: `azurenative-sql-v20221101preview-jobagent-disallow-preview-resourc
 
 Code path: `azurenative.sql.v20221101preview.JobAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.JobAgent).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.JobAgent).
 
 Service: Sql
 
@@ -38541,7 +38541,7 @@ Policy name: `azurenative-sql-v20221101preview-jobcredential-disallow-preview-re
 
 Code path: `azurenative.sql.v20221101preview.JobCredential.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.JobCredential).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.JobCredential).
 
 Service: Sql
 
@@ -38563,7 +38563,7 @@ Policy name: `azurenative-sql-v20221101preview-jobstep-disallow-preview-resource
 
 Code path: `azurenative.sql.v20221101preview.JobStep.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.JobStep).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.JobStep).
 
 Service: Sql
 
@@ -38585,7 +38585,7 @@ Policy name: `azurenative-sql-v20221101preview-jobtargetgroup-disallow-preview-r
 
 Code path: `azurenative.sql.v20221101preview.JobTargetGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.JobTargetGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.JobTargetGroup).
 
 Service: Sql
 
@@ -38607,7 +38607,7 @@ Policy name: `azurenative-sql-v20221101preview-longtermretentionpolicy-disallow-
 
 Code path: `azurenative.sql.v20221101preview.LongTermRetentionPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.LongTermRetentionPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.LongTermRetentionPolicy).
 
 Service: Sql
 
@@ -38629,7 +38629,7 @@ Policy name: `azurenative-sql-v20221101preview-manageddatabase-disallow-preview-
 
 Code path: `azurenative.sql.v20221101preview.ManagedDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedDatabase).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedDatabase).
 
 Service: Sql
 
@@ -38651,7 +38651,7 @@ Policy name: `azurenative-sql-v20221101preview-manageddatabasesensitivitylabel-d
 
 Code path: `azurenative.sql.v20221101preview.ManagedDatabaseSensitivityLabel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedDatabaseSensitivityLabel).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedDatabaseSensitivityLabel).
 
 Service: Sql
 
@@ -38673,7 +38673,7 @@ Policy name: `azurenative-sql-v20221101preview-manageddatabasevulnerabilityasses
 
 Code path: `azurenative.sql.v20221101preview.ManagedDatabaseVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedDatabaseVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedDatabaseVulnerabilityAssessment).
 
 Service: Sql
 
@@ -38695,7 +38695,7 @@ Policy name: `azurenative-sql-v20221101preview-manageddatabasevulnerabilityasses
 
 Code path: `azurenative.sql.v20221101preview.ManagedDatabaseVulnerabilityAssessmentRuleBaseline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedDatabaseVulnerabilityAssessmentRuleBaseline).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedDatabaseVulnerabilityAssessmentRuleBaseline).
 
 Service: Sql
 
@@ -38717,7 +38717,7 @@ Policy name: `azurenative-sql-v20221101preview-managedinstance-disallow-preview-
 
 Code path: `azurenative.sql.v20221101preview.ManagedInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedInstance).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedInstance).
 
 Service: Sql
 
@@ -38739,7 +38739,7 @@ Policy name: `azurenative-sql-v20221101preview-managedinstanceadministrator-disa
 
 Code path: `azurenative.sql.v20221101preview.ManagedInstanceAdministrator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedInstanceAdministrator).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedInstanceAdministrator).
 
 Service: Sql
 
@@ -38761,7 +38761,7 @@ Policy name: `azurenative-sql-v20221101preview-managedinstanceazureadonlyauthent
 
 Code path: `azurenative.sql.v20221101preview.ManagedInstanceAzureADOnlyAuthentication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedInstanceAzureADOnlyAuthentication).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedInstanceAzureADOnlyAuthentication).
 
 Service: Sql
 
@@ -38783,7 +38783,7 @@ Policy name: `azurenative-sql-v20221101preview-managedinstancekey-disallow-previ
 
 Code path: `azurenative.sql.v20221101preview.ManagedInstanceKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedInstanceKey).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedInstanceKey).
 
 Service: Sql
 
@@ -38805,7 +38805,7 @@ Policy name: `azurenative-sql-v20221101preview-managedinstancelongtermretentionp
 
 Code path: `azurenative.sql.v20221101preview.ManagedInstanceLongTermRetentionPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedInstanceLongTermRetentionPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedInstanceLongTermRetentionPolicy).
 
 Service: Sql
 
@@ -38827,7 +38827,7 @@ Policy name: `azurenative-sql-v20221101preview-managedinstanceprivateendpointcon
 
 Code path: `azurenative.sql.v20221101preview.ManagedInstancePrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedInstancePrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedInstancePrivateEndpointConnection).
 
 Service: Sql
 
@@ -38849,7 +38849,7 @@ Policy name: `azurenative-sql-v20221101preview-managedinstancevulnerabilityasses
 
 Code path: `azurenative.sql.v20221101preview.ManagedInstanceVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedInstanceVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedInstanceVulnerabilityAssessment).
 
 Service: Sql
 
@@ -38871,7 +38871,7 @@ Policy name: `azurenative-sql-v20221101preview-managedserverdnsalias-disallow-pr
 
 Code path: `azurenative.sql.v20221101preview.ManagedServerDnsAlias.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ManagedServerDnsAlias).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ManagedServerDnsAlias).
 
 Service: Sql
 
@@ -38893,7 +38893,7 @@ Policy name: `azurenative-sql-v20221101preview-outboundfirewallrule-disallow-pre
 
 Code path: `azurenative.sql.v20221101preview.OutboundFirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.OutboundFirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.OutboundFirewallRule).
 
 Service: Sql
 
@@ -38915,7 +38915,7 @@ Policy name: `azurenative-sql-v20221101preview-privateendpointconnection-disallo
 
 Code path: `azurenative.sql.v20221101preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.PrivateEndpointConnection).
 
 Service: Sql
 
@@ -38937,7 +38937,7 @@ Policy name: `azurenative-sql-v20221101preview-sensitivitylabel-disallow-preview
 
 Code path: `azurenative.sql.v20221101preview.SensitivityLabel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.SensitivityLabel).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.SensitivityLabel).
 
 Service: Sql
 
@@ -38959,7 +38959,7 @@ Policy name: `azurenative-sql-v20221101preview-server-disallow-preview-resource`
 
 Code path: `azurenative.sql.v20221101preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.Server).
 
 Service: Sql
 
@@ -38981,7 +38981,7 @@ Policy name: `azurenative-sql-v20221101preview-serveradvisor-disallow-preview-re
 
 Code path: `azurenative.sql.v20221101preview.ServerAdvisor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerAdvisor).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerAdvisor).
 
 Service: Sql
 
@@ -39003,7 +39003,7 @@ Policy name: `azurenative-sql-v20221101preview-serverazureadadministrator-disall
 
 Code path: `azurenative.sql.v20221101preview.ServerAzureADAdministrator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerAzureADAdministrator).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerAzureADAdministrator).
 
 Service: Sql
 
@@ -39025,7 +39025,7 @@ Policy name: `azurenative-sql-v20221101preview-serverazureadonlyauthentication-d
 
 Code path: `azurenative.sql.v20221101preview.ServerAzureADOnlyAuthentication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerAzureADOnlyAuthentication).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerAzureADOnlyAuthentication).
 
 Service: Sql
 
@@ -39047,7 +39047,7 @@ Policy name: `azurenative-sql-v20221101preview-serverblobauditingpolicy-disallow
 
 Code path: `azurenative.sql.v20221101preview.ServerBlobAuditingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerBlobAuditingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerBlobAuditingPolicy).
 
 Service: Sql
 
@@ -39069,7 +39069,7 @@ Policy name: `azurenative-sql-v20221101preview-serverdnsalias-disallow-preview-r
 
 Code path: `azurenative.sql.v20221101preview.ServerDnsAlias.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerDnsAlias).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerDnsAlias).
 
 Service: Sql
 
@@ -39091,7 +39091,7 @@ Policy name: `azurenative-sql-v20221101preview-serverkey-disallow-preview-resour
 
 Code path: `azurenative.sql.v20221101preview.ServerKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerKey).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerKey).
 
 Service: Sql
 
@@ -39113,7 +39113,7 @@ Policy name: `azurenative-sql-v20221101preview-serversecurityalertpolicy-disallo
 
 Code path: `azurenative.sql.v20221101preview.ServerSecurityAlertPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerSecurityAlertPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerSecurityAlertPolicy).
 
 Service: Sql
 
@@ -39135,7 +39135,7 @@ Policy name: `azurenative-sql-v20221101preview-servertrustcertificate-disallow-p
 
 Code path: `azurenative.sql.v20221101preview.ServerTrustCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerTrustCertificate).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerTrustCertificate).
 
 Service: Sql
 
@@ -39157,7 +39157,7 @@ Policy name: `azurenative-sql-v20221101preview-servertrustgroup-disallow-preview
 
 Code path: `azurenative.sql.v20221101preview.ServerTrustGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerTrustGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerTrustGroup).
 
 Service: Sql
 
@@ -39179,7 +39179,7 @@ Policy name: `azurenative-sql-v20221101preview-servervulnerabilityassessment-dis
 
 Code path: `azurenative.sql.v20221101preview.ServerVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.ServerVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.ServerVulnerabilityAssessment).
 
 Service: Sql
 
@@ -39201,7 +39201,7 @@ Policy name: `azurenative-sql-v20221101preview-sqlvulnerabilityassessmentrulebas
 
 Code path: `azurenative.sql.v20221101preview.SqlVulnerabilityAssessmentRuleBaseline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.SqlVulnerabilityAssessmentRuleBaseline).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.SqlVulnerabilityAssessmentRuleBaseline).
 
 Service: Sql
 
@@ -39223,7 +39223,7 @@ Policy name: `azurenative-sql-v20221101preview-sqlvulnerabilityassessmentssettin
 
 Code path: `azurenative.sql.v20221101preview.SqlVulnerabilityAssessmentsSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.SqlVulnerabilityAssessmentsSetting).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.SqlVulnerabilityAssessmentsSetting).
 
 Service: Sql
 
@@ -39245,7 +39245,7 @@ Policy name: `azurenative-sql-v20221101preview-startstopmanagedinstanceschedule-
 
 Code path: `azurenative.sql.v20221101preview.StartStopManagedInstanceSchedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.StartStopManagedInstanceSchedule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.StartStopManagedInstanceSchedule).
 
 Service: Sql
 
@@ -39267,7 +39267,7 @@ Policy name: `azurenative-sql-v20221101preview-syncagent-disallow-preview-resour
 
 Code path: `azurenative.sql.v20221101preview.SyncAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.SyncAgent).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.SyncAgent).
 
 Service: Sql
 
@@ -39289,7 +39289,7 @@ Policy name: `azurenative-sql-v20221101preview-syncgroup-disallow-preview-resour
 
 Code path: `azurenative.sql.v20221101preview.SyncGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.SyncGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.SyncGroup).
 
 Service: Sql
 
@@ -39311,7 +39311,7 @@ Policy name: `azurenative-sql-v20221101preview-syncmember-disallow-preview-resou
 
 Code path: `azurenative.sql.v20221101preview.SyncMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.SyncMember).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.SyncMember).
 
 Service: Sql
 
@@ -39333,7 +39333,7 @@ Policy name: `azurenative-sql-v20221101preview-transparentdataencryption-disallo
 
 Code path: `azurenative.sql.v20221101preview.TransparentDataEncryption.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.TransparentDataEncryption).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.TransparentDataEncryption).
 
 Service: Sql
 
@@ -39355,7 +39355,7 @@ Policy name: `azurenative-sql-v20221101preview-virtualnetworkrule-disallow-previ
 
 Code path: `azurenative.sql.v20221101preview.VirtualNetworkRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.VirtualNetworkRule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.VirtualNetworkRule).
 
 Service: Sql
 
@@ -39377,7 +39377,7 @@ Policy name: `azurenative-sql-v20221101preview-workloadclassifier-disallow-previ
 
 Code path: `azurenative.sql.v20221101preview.WorkloadClassifier.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.WorkloadClassifier).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.WorkloadClassifier).
 
 Service: Sql
 
@@ -39399,7 +39399,7 @@ Policy name: `azurenative-sql-v20221101preview-workloadgroup-disallow-preview-re
 
 Code path: `azurenative.sql.v20221101preview.WorkloadGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20221101preview.WorkloadGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20221101preview.WorkloadGroup).
 
 Service: Sql
 
@@ -39423,7 +39423,7 @@ Policy name: `azurenative-sql-v20230201preview-backupshorttermretentionpolicy-di
 
 Code path: `azurenative.sql.v20230201preview.BackupShortTermRetentionPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.BackupShortTermRetentionPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.BackupShortTermRetentionPolicy).
 
 Service: Sql
 
@@ -39445,7 +39445,7 @@ Policy name: `azurenative-sql-v20230201preview-datamaskingpolicy-disallow-previe
 
 Code path: `azurenative.sql.v20230201preview.DataMaskingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.DataMaskingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.DataMaskingPolicy).
 
 Service: Sql
 
@@ -39467,7 +39467,7 @@ Policy name: `azurenative-sql-v20230201preview-database-disallow-preview-resourc
 
 Code path: `azurenative.sql.v20230201preview.Database.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.Database).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.Database).
 
 Service: Sql
 
@@ -39489,7 +39489,7 @@ Policy name: `azurenative-sql-v20230201preview-databaseadvisor-disallow-preview-
 
 Code path: `azurenative.sql.v20230201preview.DatabaseAdvisor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.DatabaseAdvisor).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.DatabaseAdvisor).
 
 Service: Sql
 
@@ -39511,7 +39511,7 @@ Policy name: `azurenative-sql-v20230201preview-databaseblobauditingpolicy-disall
 
 Code path: `azurenative.sql.v20230201preview.DatabaseBlobAuditingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.DatabaseBlobAuditingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.DatabaseBlobAuditingPolicy).
 
 Service: Sql
 
@@ -39533,7 +39533,7 @@ Policy name: `azurenative-sql-v20230201preview-databasesecurityalertpolicy-disal
 
 Code path: `azurenative.sql.v20230201preview.DatabaseSecurityAlertPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.DatabaseSecurityAlertPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.DatabaseSecurityAlertPolicy).
 
 Service: Sql
 
@@ -39555,7 +39555,7 @@ Policy name: `azurenative-sql-v20230201preview-databasesqlvulnerabilityassessmen
 
 Code path: `azurenative.sql.v20230201preview.DatabaseSqlVulnerabilityAssessmentRuleBaseline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.DatabaseSqlVulnerabilityAssessmentRuleBaseline).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.DatabaseSqlVulnerabilityAssessmentRuleBaseline).
 
 Service: Sql
 
@@ -39577,7 +39577,7 @@ Policy name: `azurenative-sql-v20230201preview-databasevulnerabilityassessment-d
 
 Code path: `azurenative.sql.v20230201preview.DatabaseVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.DatabaseVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.DatabaseVulnerabilityAssessment).
 
 Service: Sql
 
@@ -39599,7 +39599,7 @@ Policy name: `azurenative-sql-v20230201preview-databasevulnerabilityassessmentru
 
 Code path: `azurenative.sql.v20230201preview.DatabaseVulnerabilityAssessmentRuleBaseline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.DatabaseVulnerabilityAssessmentRuleBaseline).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.DatabaseVulnerabilityAssessmentRuleBaseline).
 
 Service: Sql
 
@@ -39621,7 +39621,7 @@ Policy name: `azurenative-sql-v20230201preview-distributedavailabilitygroup-disa
 
 Code path: `azurenative.sql.v20230201preview.DistributedAvailabilityGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.DistributedAvailabilityGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.DistributedAvailabilityGroup).
 
 Service: Sql
 
@@ -39643,7 +39643,7 @@ Policy name: `azurenative-sql-v20230201preview-elasticpool-disallow-preview-reso
 
 Code path: `azurenative.sql.v20230201preview.ElasticPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ElasticPool).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ElasticPool).
 
 Service: Sql
 
@@ -39665,7 +39665,7 @@ Policy name: `azurenative-sql-v20230201preview-encryptionprotector-disallow-prev
 
 Code path: `azurenative.sql.v20230201preview.EncryptionProtector.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.EncryptionProtector).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.EncryptionProtector).
 
 Service: Sql
 
@@ -39687,7 +39687,7 @@ Policy name: `azurenative-sql-v20230201preview-extendeddatabaseblobauditingpolic
 
 Code path: `azurenative.sql.v20230201preview.ExtendedDatabaseBlobAuditingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ExtendedDatabaseBlobAuditingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ExtendedDatabaseBlobAuditingPolicy).
 
 Service: Sql
 
@@ -39709,7 +39709,7 @@ Policy name: `azurenative-sql-v20230201preview-extendedserverblobauditingpolicy-
 
 Code path: `azurenative.sql.v20230201preview.ExtendedServerBlobAuditingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ExtendedServerBlobAuditingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ExtendedServerBlobAuditingPolicy).
 
 Service: Sql
 
@@ -39731,7 +39731,7 @@ Policy name: `azurenative-sql-v20230201preview-failovergroup-disallow-preview-re
 
 Code path: `azurenative.sql.v20230201preview.FailoverGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.FailoverGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.FailoverGroup).
 
 Service: Sql
 
@@ -39753,7 +39753,7 @@ Policy name: `azurenative-sql-v20230201preview-firewallrule-disallow-preview-res
 
 Code path: `azurenative.sql.v20230201preview.FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.FirewallRule).
 
 Service: Sql
 
@@ -39775,7 +39775,7 @@ Policy name: `azurenative-sql-v20230201preview-geobackuppolicy-disallow-preview-
 
 Code path: `azurenative.sql.v20230201preview.GeoBackupPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.GeoBackupPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.GeoBackupPolicy).
 
 Service: Sql
 
@@ -39797,7 +39797,7 @@ Policy name: `azurenative-sql-v20230201preview-ipv6firewallrule-disallow-preview
 
 Code path: `azurenative.sql.v20230201preview.IPv6FirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.IPv6FirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.IPv6FirewallRule).
 
 Service: Sql
 
@@ -39819,7 +39819,7 @@ Policy name: `azurenative-sql-v20230201preview-instancefailovergroup-disallow-pr
 
 Code path: `azurenative.sql.v20230201preview.InstanceFailoverGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.InstanceFailoverGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.InstanceFailoverGroup).
 
 Service: Sql
 
@@ -39841,7 +39841,7 @@ Policy name: `azurenative-sql-v20230201preview-instancepool-disallow-preview-res
 
 Code path: `azurenative.sql.v20230201preview.InstancePool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.InstancePool).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.InstancePool).
 
 Service: Sql
 
@@ -39863,7 +39863,7 @@ Policy name: `azurenative-sql-v20230201preview-job-disallow-preview-resource`
 
 Code path: `azurenative.sql.v20230201preview.Job.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.Job).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.Job).
 
 Service: Sql
 
@@ -39885,7 +39885,7 @@ Policy name: `azurenative-sql-v20230201preview-jobagent-disallow-preview-resourc
 
 Code path: `azurenative.sql.v20230201preview.JobAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.JobAgent).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.JobAgent).
 
 Service: Sql
 
@@ -39907,7 +39907,7 @@ Policy name: `azurenative-sql-v20230201preview-jobcredential-disallow-preview-re
 
 Code path: `azurenative.sql.v20230201preview.JobCredential.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.JobCredential).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.JobCredential).
 
 Service: Sql
 
@@ -39929,7 +39929,7 @@ Policy name: `azurenative-sql-v20230201preview-jobstep-disallow-preview-resource
 
 Code path: `azurenative.sql.v20230201preview.JobStep.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.JobStep).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.JobStep).
 
 Service: Sql
 
@@ -39951,7 +39951,7 @@ Policy name: `azurenative-sql-v20230201preview-jobtargetgroup-disallow-preview-r
 
 Code path: `azurenative.sql.v20230201preview.JobTargetGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.JobTargetGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.JobTargetGroup).
 
 Service: Sql
 
@@ -39973,7 +39973,7 @@ Policy name: `azurenative-sql-v20230201preview-longtermretentionpolicy-disallow-
 
 Code path: `azurenative.sql.v20230201preview.LongTermRetentionPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.LongTermRetentionPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.LongTermRetentionPolicy).
 
 Service: Sql
 
@@ -39995,7 +39995,7 @@ Policy name: `azurenative-sql-v20230201preview-manageddatabase-disallow-preview-
 
 Code path: `azurenative.sql.v20230201preview.ManagedDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedDatabase).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedDatabase).
 
 Service: Sql
 
@@ -40017,7 +40017,7 @@ Policy name: `azurenative-sql-v20230201preview-manageddatabasesensitivitylabel-d
 
 Code path: `azurenative.sql.v20230201preview.ManagedDatabaseSensitivityLabel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedDatabaseSensitivityLabel).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedDatabaseSensitivityLabel).
 
 Service: Sql
 
@@ -40039,7 +40039,7 @@ Policy name: `azurenative-sql-v20230201preview-manageddatabasevulnerabilityasses
 
 Code path: `azurenative.sql.v20230201preview.ManagedDatabaseVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedDatabaseVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedDatabaseVulnerabilityAssessment).
 
 Service: Sql
 
@@ -40061,7 +40061,7 @@ Policy name: `azurenative-sql-v20230201preview-manageddatabasevulnerabilityasses
 
 Code path: `azurenative.sql.v20230201preview.ManagedDatabaseVulnerabilityAssessmentRuleBaseline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedDatabaseVulnerabilityAssessmentRuleBaseline).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedDatabaseVulnerabilityAssessmentRuleBaseline).
 
 Service: Sql
 
@@ -40083,7 +40083,7 @@ Policy name: `azurenative-sql-v20230201preview-managedinstance-disallow-preview-
 
 Code path: `azurenative.sql.v20230201preview.ManagedInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedInstance).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedInstance).
 
 Service: Sql
 
@@ -40105,7 +40105,7 @@ Policy name: `azurenative-sql-v20230201preview-managedinstanceadministrator-disa
 
 Code path: `azurenative.sql.v20230201preview.ManagedInstanceAdministrator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedInstanceAdministrator).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedInstanceAdministrator).
 
 Service: Sql
 
@@ -40127,7 +40127,7 @@ Policy name: `azurenative-sql-v20230201preview-managedinstanceazureadonlyauthent
 
 Code path: `azurenative.sql.v20230201preview.ManagedInstanceAzureADOnlyAuthentication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedInstanceAzureADOnlyAuthentication).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedInstanceAzureADOnlyAuthentication).
 
 Service: Sql
 
@@ -40149,7 +40149,7 @@ Policy name: `azurenative-sql-v20230201preview-managedinstancekey-disallow-previ
 
 Code path: `azurenative.sql.v20230201preview.ManagedInstanceKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedInstanceKey).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedInstanceKey).
 
 Service: Sql
 
@@ -40171,7 +40171,7 @@ Policy name: `azurenative-sql-v20230201preview-managedinstancelongtermretentionp
 
 Code path: `azurenative.sql.v20230201preview.ManagedInstanceLongTermRetentionPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedInstanceLongTermRetentionPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedInstanceLongTermRetentionPolicy).
 
 Service: Sql
 
@@ -40193,7 +40193,7 @@ Policy name: `azurenative-sql-v20230201preview-managedinstanceprivateendpointcon
 
 Code path: `azurenative.sql.v20230201preview.ManagedInstancePrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedInstancePrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedInstancePrivateEndpointConnection).
 
 Service: Sql
 
@@ -40215,7 +40215,7 @@ Policy name: `azurenative-sql-v20230201preview-managedinstancevulnerabilityasses
 
 Code path: `azurenative.sql.v20230201preview.ManagedInstanceVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedInstanceVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedInstanceVulnerabilityAssessment).
 
 Service: Sql
 
@@ -40237,7 +40237,7 @@ Policy name: `azurenative-sql-v20230201preview-managedserverdnsalias-disallow-pr
 
 Code path: `azurenative.sql.v20230201preview.ManagedServerDnsAlias.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ManagedServerDnsAlias).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ManagedServerDnsAlias).
 
 Service: Sql
 
@@ -40259,7 +40259,7 @@ Policy name: `azurenative-sql-v20230201preview-outboundfirewallrule-disallow-pre
 
 Code path: `azurenative.sql.v20230201preview.OutboundFirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.OutboundFirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.OutboundFirewallRule).
 
 Service: Sql
 
@@ -40281,7 +40281,7 @@ Policy name: `azurenative-sql-v20230201preview-privateendpointconnection-disallo
 
 Code path: `azurenative.sql.v20230201preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.PrivateEndpointConnection).
 
 Service: Sql
 
@@ -40303,7 +40303,7 @@ Policy name: `azurenative-sql-v20230201preview-sensitivitylabel-disallow-preview
 
 Code path: `azurenative.sql.v20230201preview.SensitivityLabel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.SensitivityLabel).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.SensitivityLabel).
 
 Service: Sql
 
@@ -40325,7 +40325,7 @@ Policy name: `azurenative-sql-v20230201preview-server-disallow-preview-resource`
 
 Code path: `azurenative.sql.v20230201preview.Server.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.Server).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.Server).
 
 Service: Sql
 
@@ -40347,7 +40347,7 @@ Policy name: `azurenative-sql-v20230201preview-serveradvisor-disallow-preview-re
 
 Code path: `azurenative.sql.v20230201preview.ServerAdvisor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerAdvisor).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerAdvisor).
 
 Service: Sql
 
@@ -40369,7 +40369,7 @@ Policy name: `azurenative-sql-v20230201preview-serverazureadadministrator-disall
 
 Code path: `azurenative.sql.v20230201preview.ServerAzureADAdministrator.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerAzureADAdministrator).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerAzureADAdministrator).
 
 Service: Sql
 
@@ -40391,7 +40391,7 @@ Policy name: `azurenative-sql-v20230201preview-serverazureadonlyauthentication-d
 
 Code path: `azurenative.sql.v20230201preview.ServerAzureADOnlyAuthentication.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerAzureADOnlyAuthentication).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerAzureADOnlyAuthentication).
 
 Service: Sql
 
@@ -40413,7 +40413,7 @@ Policy name: `azurenative-sql-v20230201preview-serverblobauditingpolicy-disallow
 
 Code path: `azurenative.sql.v20230201preview.ServerBlobAuditingPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerBlobAuditingPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerBlobAuditingPolicy).
 
 Service: Sql
 
@@ -40435,7 +40435,7 @@ Policy name: `azurenative-sql-v20230201preview-serverdnsalias-disallow-preview-r
 
 Code path: `azurenative.sql.v20230201preview.ServerDnsAlias.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerDnsAlias).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerDnsAlias).
 
 Service: Sql
 
@@ -40457,7 +40457,7 @@ Policy name: `azurenative-sql-v20230201preview-serverkey-disallow-preview-resour
 
 Code path: `azurenative.sql.v20230201preview.ServerKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerKey).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerKey).
 
 Service: Sql
 
@@ -40479,7 +40479,7 @@ Policy name: `azurenative-sql-v20230201preview-serversecurityalertpolicy-disallo
 
 Code path: `azurenative.sql.v20230201preview.ServerSecurityAlertPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerSecurityAlertPolicy).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerSecurityAlertPolicy).
 
 Service: Sql
 
@@ -40501,7 +40501,7 @@ Policy name: `azurenative-sql-v20230201preview-servertrustcertificate-disallow-p
 
 Code path: `azurenative.sql.v20230201preview.ServerTrustCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerTrustCertificate).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerTrustCertificate).
 
 Service: Sql
 
@@ -40523,7 +40523,7 @@ Policy name: `azurenative-sql-v20230201preview-servertrustgroup-disallow-preview
 
 Code path: `azurenative.sql.v20230201preview.ServerTrustGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerTrustGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerTrustGroup).
 
 Service: Sql
 
@@ -40545,7 +40545,7 @@ Policy name: `azurenative-sql-v20230201preview-servervulnerabilityassessment-dis
 
 Code path: `azurenative.sql.v20230201preview.ServerVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.ServerVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.ServerVulnerabilityAssessment).
 
 Service: Sql
 
@@ -40567,7 +40567,7 @@ Policy name: `azurenative-sql-v20230201preview-sqlvulnerabilityassessmentrulebas
 
 Code path: `azurenative.sql.v20230201preview.SqlVulnerabilityAssessmentRuleBaseline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.SqlVulnerabilityAssessmentRuleBaseline).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.SqlVulnerabilityAssessmentRuleBaseline).
 
 Service: Sql
 
@@ -40589,7 +40589,7 @@ Policy name: `azurenative-sql-v20230201preview-sqlvulnerabilityassessmentssettin
 
 Code path: `azurenative.sql.v20230201preview.SqlVulnerabilityAssessmentsSetting.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.SqlVulnerabilityAssessmentsSetting).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.SqlVulnerabilityAssessmentsSetting).
 
 Service: Sql
 
@@ -40611,7 +40611,7 @@ Policy name: `azurenative-sql-v20230201preview-startstopmanagedinstanceschedule-
 
 Code path: `azurenative.sql.v20230201preview.StartStopManagedInstanceSchedule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.StartStopManagedInstanceSchedule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.StartStopManagedInstanceSchedule).
 
 Service: Sql
 
@@ -40633,7 +40633,7 @@ Policy name: `azurenative-sql-v20230201preview-syncagent-disallow-preview-resour
 
 Code path: `azurenative.sql.v20230201preview.SyncAgent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.SyncAgent).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.SyncAgent).
 
 Service: Sql
 
@@ -40655,7 +40655,7 @@ Policy name: `azurenative-sql-v20230201preview-syncgroup-disallow-preview-resour
 
 Code path: `azurenative.sql.v20230201preview.SyncGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.SyncGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.SyncGroup).
 
 Service: Sql
 
@@ -40677,7 +40677,7 @@ Policy name: `azurenative-sql-v20230201preview-syncmember-disallow-preview-resou
 
 Code path: `azurenative.sql.v20230201preview.SyncMember.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.SyncMember).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.SyncMember).
 
 Service: Sql
 
@@ -40699,7 +40699,7 @@ Policy name: `azurenative-sql-v20230201preview-transparentdataencryption-disallo
 
 Code path: `azurenative.sql.v20230201preview.TransparentDataEncryption.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.TransparentDataEncryption).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.TransparentDataEncryption).
 
 Service: Sql
 
@@ -40721,7 +40721,7 @@ Policy name: `azurenative-sql-v20230201preview-virtualnetworkrule-disallow-previ
 
 Code path: `azurenative.sql.v20230201preview.VirtualNetworkRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.VirtualNetworkRule).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.VirtualNetworkRule).
 
 Service: Sql
 
@@ -40743,7 +40743,7 @@ Policy name: `azurenative-sql-v20230201preview-workloadclassifier-disallow-previ
 
 Code path: `azurenative.sql.v20230201preview.WorkloadClassifier.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.WorkloadClassifier).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.WorkloadClassifier).
 
 Service: Sql
 
@@ -40765,7 +40765,7 @@ Policy name: `azurenative-sql-v20230201preview-workloadgroup-disallow-preview-re
 
 Code path: `azurenative.sql.v20230201preview.WorkloadGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sql.v20230201preview.WorkloadGroup).
+Disallow the use of non-stable (Preview) Azure resources (sql.v20230201preview.WorkloadGroup).
 
 Service: Sql
 
@@ -40791,7 +40791,7 @@ Policy name: `azurenative-sqlvirtualmachine-v20230101preview-availabilitygroupli
 
 Code path: `azurenative.sqlvirtualmachine.v20230101preview.AvailabilityGroupListener.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sqlvirtualmachine.v20230101preview.AvailabilityGroupListener).
+Disallow the use of non-stable (Preview) Azure resources (sqlvirtualmachine.v20230101preview.AvailabilityGroupListener).
 
 Service: Sqlvirtualmachine
 
@@ -40813,7 +40813,7 @@ Policy name: `azurenative-sqlvirtualmachine-v20230101preview-sqlvirtualmachine-d
 
 Code path: `azurenative.sqlvirtualmachine.v20230101preview.SqlVirtualMachine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sqlvirtualmachine.v20230101preview.SqlVirtualMachine).
+Disallow the use of non-stable (Preview) Azure resources (sqlvirtualmachine.v20230101preview.SqlVirtualMachine).
 
 Service: Sqlvirtualmachine
 
@@ -40835,7 +40835,7 @@ Policy name: `azurenative-sqlvirtualmachine-v20230101preview-sqlvirtualmachinegr
 
 Code path: `azurenative.sqlvirtualmachine.v20230101preview.SqlVirtualMachineGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (sqlvirtualmachine.v20230101preview.SqlVirtualMachineGroup).
+Disallow the use of non-stable (Preview) Azure resources (sqlvirtualmachine.v20230101preview.SqlVirtualMachineGroup).
 
 Service: Sqlvirtualmachine
 
@@ -40861,7 +40861,7 @@ Policy name: `azurenative-storagecache-v20230301preview-amlfilesystem-disallow-p
 
 Code path: `azurenative.storagecache.v20230301preview.AmlFilesystem.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (storagecache.v20230301preview.AmlFilesystem).
+Disallow the use of non-stable (Preview) Azure resources (storagecache.v20230301preview.AmlFilesystem).
 
 Service: Storagecache
 
@@ -40883,7 +40883,7 @@ Policy name: `azurenative-storagecache-v20230301preview-cache-disallow-preview-r
 
 Code path: `azurenative.storagecache.v20230301preview.Cache.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (storagecache.v20230301preview.Cache).
+Disallow the use of non-stable (Preview) Azure resources (storagecache.v20230301preview.Cache).
 
 Service: Storagecache
 
@@ -40909,7 +40909,7 @@ Policy name: `azurenative-storagemover-v20230701preview-agent-disallow-preview-r
 
 Code path: `azurenative.storagemover.v20230701preview.Agent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (storagemover.v20230701preview.Agent).
+Disallow the use of non-stable (Preview) Azure resources (storagemover.v20230701preview.Agent).
 
 Service: Storagemover
 
@@ -40931,7 +40931,7 @@ Policy name: `azurenative-storagemover-v20230701preview-endpoint-disallow-previe
 
 Code path: `azurenative.storagemover.v20230701preview.Endpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (storagemover.v20230701preview.Endpoint).
+Disallow the use of non-stable (Preview) Azure resources (storagemover.v20230701preview.Endpoint).
 
 Service: Storagemover
 
@@ -40953,7 +40953,7 @@ Policy name: `azurenative-storagemover-v20230701preview-jobdefinition-disallow-p
 
 Code path: `azurenative.storagemover.v20230701preview.JobDefinition.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (storagemover.v20230701preview.JobDefinition).
+Disallow the use of non-stable (Preview) Azure resources (storagemover.v20230701preview.JobDefinition).
 
 Service: Storagemover
 
@@ -40975,7 +40975,7 @@ Policy name: `azurenative-storagemover-v20230701preview-project-disallow-preview
 
 Code path: `azurenative.storagemover.v20230701preview.Project.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (storagemover.v20230701preview.Project).
+Disallow the use of non-stable (Preview) Azure resources (storagemover.v20230701preview.Project).
 
 Service: Storagemover
 
@@ -40997,7 +40997,7 @@ Policy name: `azurenative-storagemover-v20230701preview-storagemover-disallow-pr
 
 Code path: `azurenative.storagemover.v20230701preview.StorageMover.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (storagemover.v20230701preview.StorageMover).
+Disallow the use of non-stable (Preview) Azure resources (storagemover.v20230701preview.StorageMover).
 
 Service: Storagemover
 
@@ -41023,7 +41023,7 @@ Policy name: `azurenative-storagepool-v20200315preview-diskpool-disallow-preview
 
 Code path: `azurenative.storagepool.v20200315preview.DiskPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (storagepool.v20200315preview.DiskPool).
+Disallow the use of non-stable (Preview) Azure resources (storagepool.v20200315preview.DiskPool).
 
 Service: Storagepool
 
@@ -41045,7 +41045,7 @@ Policy name: `azurenative-storagepool-v20200315preview-iscsitarget-disallow-prev
 
 Code path: `azurenative.storagepool.v20200315preview.IscsiTarget.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (storagepool.v20200315preview.IscsiTarget).
+Disallow the use of non-stable (Preview) Azure resources (storagepool.v20200315preview.IscsiTarget).
 
 Service: Storagepool
 
@@ -41071,7 +41071,7 @@ Policy name: `azurenative-streamanalytics-v20170401preview-streamingjob-disallow
 
 Code path: `azurenative.streamanalytics.v20170401preview.StreamingJob.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (streamanalytics.v20170401preview.StreamingJob).
+Disallow the use of non-stable (Preview) Azure resources (streamanalytics.v20170401preview.StreamingJob).
 
 Service: Streamanalytics
 
@@ -41095,7 +41095,7 @@ Policy name: `azurenative-streamanalytics-v20200301preview-cluster-disallow-prev
 
 Code path: `azurenative.streamanalytics.v20200301preview.Cluster.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (streamanalytics.v20200301preview.Cluster).
+Disallow the use of non-stable (Preview) Azure resources (streamanalytics.v20200301preview.Cluster).
 
 Service: Streamanalytics
 
@@ -41117,7 +41117,7 @@ Policy name: `azurenative-streamanalytics-v20200301preview-privateendpoint-disal
 
 Code path: `azurenative.streamanalytics.v20200301preview.PrivateEndpoint.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (streamanalytics.v20200301preview.PrivateEndpoint).
+Disallow the use of non-stable (Preview) Azure resources (streamanalytics.v20200301preview.PrivateEndpoint).
 
 Service: Streamanalytics
 
@@ -41141,7 +41141,7 @@ Policy name: `azurenative-streamanalytics-v20211001preview-function-disallow-pre
 
 Code path: `azurenative.streamanalytics.v20211001preview.Function.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (streamanalytics.v20211001preview.Function).
+Disallow the use of non-stable (Preview) Azure resources (streamanalytics.v20211001preview.Function).
 
 Service: Streamanalytics
 
@@ -41163,7 +41163,7 @@ Policy name: `azurenative-streamanalytics-v20211001preview-input-disallow-previe
 
 Code path: `azurenative.streamanalytics.v20211001preview.Input.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (streamanalytics.v20211001preview.Input).
+Disallow the use of non-stable (Preview) Azure resources (streamanalytics.v20211001preview.Input).
 
 Service: Streamanalytics
 
@@ -41185,7 +41185,7 @@ Policy name: `azurenative-streamanalytics-v20211001preview-output-disallow-previ
 
 Code path: `azurenative.streamanalytics.v20211001preview.Output.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (streamanalytics.v20211001preview.Output).
+Disallow the use of non-stable (Preview) Azure resources (streamanalytics.v20211001preview.Output).
 
 Service: Streamanalytics
 
@@ -41207,7 +41207,7 @@ Policy name: `azurenative-streamanalytics-v20211001preview-streamingjob-disallow
 
 Code path: `azurenative.streamanalytics.v20211001preview.StreamingJob.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (streamanalytics.v20211001preview.StreamingJob).
+Disallow the use of non-stable (Preview) Azure resources (streamanalytics.v20211001preview.StreamingJob).
 
 Service: Streamanalytics
 
@@ -41233,7 +41233,7 @@ Policy name: `azurenative-synapse-v20210401preview-databaseprincipalassignment-d
 
 Code path: `azurenative.synapse.v20210401preview.DatabasePrincipalAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210401preview.DatabasePrincipalAssignment).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210401preview.DatabasePrincipalAssignment).
 
 Service: Synapse
 
@@ -41255,7 +41255,7 @@ Policy name: `azurenative-synapse-v20210401preview-kustopool-disallow-preview-re
 
 Code path: `azurenative.synapse.v20210401preview.KustoPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210401preview.KustoPool).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210401preview.KustoPool).
 
 Service: Synapse
 
@@ -41279,7 +41279,7 @@ Policy name: `azurenative-synapse-v20210601preview-bigdatapool-disallow-preview-
 
 Code path: `azurenative.synapse.v20210601preview.BigDataPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.BigDataPool).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.BigDataPool).
 
 Service: Synapse
 
@@ -41301,7 +41301,7 @@ Policy name: `azurenative-synapse-v20210601preview-eventgriddataconnection-disal
 
 Code path: `azurenative.synapse.v20210601preview.EventGridDataConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.EventGridDataConnection).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.EventGridDataConnection).
 
 Service: Synapse
 
@@ -41323,7 +41323,7 @@ Policy name: `azurenative-synapse-v20210601preview-eventhubdataconnection-disall
 
 Code path: `azurenative.synapse.v20210601preview.EventHubDataConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.EventHubDataConnection).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.EventHubDataConnection).
 
 Service: Synapse
 
@@ -41345,7 +41345,7 @@ Policy name: `azurenative-synapse-v20210601preview-integrationruntime-disallow-p
 
 Code path: `azurenative.synapse.v20210601preview.IntegrationRuntime.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.IntegrationRuntime).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.IntegrationRuntime).
 
 Service: Synapse
 
@@ -41367,7 +41367,7 @@ Policy name: `azurenative-synapse-v20210601preview-iothubdataconnection-disallow
 
 Code path: `azurenative.synapse.v20210601preview.IotHubDataConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.IotHubDataConnection).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.IotHubDataConnection).
 
 Service: Synapse
 
@@ -41389,7 +41389,7 @@ Policy name: `azurenative-synapse-v20210601preview-ipfirewallrule-disallow-previ
 
 Code path: `azurenative.synapse.v20210601preview.IpFirewallRule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.IpFirewallRule).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.IpFirewallRule).
 
 Service: Synapse
 
@@ -41411,7 +41411,7 @@ Policy name: `azurenative-synapse-v20210601preview-key-disallow-preview-resource
 
 Code path: `azurenative.synapse.v20210601preview.Key.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.Key).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.Key).
 
 Service: Synapse
 
@@ -41433,7 +41433,7 @@ Policy name: `azurenative-synapse-v20210601preview-kustopool-disallow-preview-re
 
 Code path: `azurenative.synapse.v20210601preview.KustoPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.KustoPool).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.KustoPool).
 
 Service: Synapse
 
@@ -41455,7 +41455,7 @@ Policy name: `azurenative-synapse-v20210601preview-kustopoolattacheddatabaseconf
 
 Code path: `azurenative.synapse.v20210601preview.KustoPoolAttachedDatabaseConfiguration.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.KustoPoolAttachedDatabaseConfiguration).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.KustoPoolAttachedDatabaseConfiguration).
 
 Service: Synapse
 
@@ -41477,7 +41477,7 @@ Policy name: `azurenative-synapse-v20210601preview-kustopooldatabaseprincipalass
 
 Code path: `azurenative.synapse.v20210601preview.KustoPoolDatabasePrincipalAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.KustoPoolDatabasePrincipalAssignment).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.KustoPoolDatabasePrincipalAssignment).
 
 Service: Synapse
 
@@ -41499,7 +41499,7 @@ Policy name: `azurenative-synapse-v20210601preview-kustopoolprincipalassignment-
 
 Code path: `azurenative.synapse.v20210601preview.KustoPoolPrincipalAssignment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.KustoPoolPrincipalAssignment).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.KustoPoolPrincipalAssignment).
 
 Service: Synapse
 
@@ -41521,7 +41521,7 @@ Policy name: `azurenative-synapse-v20210601preview-privateendpointconnection-dis
 
 Code path: `azurenative.synapse.v20210601preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.PrivateEndpointConnection).
 
 Service: Synapse
 
@@ -41543,7 +41543,7 @@ Policy name: `azurenative-synapse-v20210601preview-privatelinkhub-disallow-previ
 
 Code path: `azurenative.synapse.v20210601preview.PrivateLinkHub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.PrivateLinkHub).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.PrivateLinkHub).
 
 Service: Synapse
 
@@ -41565,7 +41565,7 @@ Policy name: `azurenative-synapse-v20210601preview-readonlyfollowingdatabase-dis
 
 Code path: `azurenative.synapse.v20210601preview.ReadOnlyFollowingDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.ReadOnlyFollowingDatabase).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.ReadOnlyFollowingDatabase).
 
 Service: Synapse
 
@@ -41587,7 +41587,7 @@ Policy name: `azurenative-synapse-v20210601preview-readwritedatabase-disallow-pr
 
 Code path: `azurenative.synapse.v20210601preview.ReadWriteDatabase.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.ReadWriteDatabase).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.ReadWriteDatabase).
 
 Service: Synapse
 
@@ -41609,7 +41609,7 @@ Policy name: `azurenative-synapse-v20210601preview-sqlpool-disallow-preview-reso
 
 Code path: `azurenative.synapse.v20210601preview.SqlPool.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.SqlPool).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.SqlPool).
 
 Service: Synapse
 
@@ -41631,7 +41631,7 @@ Policy name: `azurenative-synapse-v20210601preview-sqlpoolsensitivitylabel-disal
 
 Code path: `azurenative.synapse.v20210601preview.SqlPoolSensitivityLabel.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.SqlPoolSensitivityLabel).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.SqlPoolSensitivityLabel).
 
 Service: Synapse
 
@@ -41653,7 +41653,7 @@ Policy name: `azurenative-synapse-v20210601preview-sqlpooltransparentdataencrypt
 
 Code path: `azurenative.synapse.v20210601preview.SqlPoolTransparentDataEncryption.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.SqlPoolTransparentDataEncryption).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.SqlPoolTransparentDataEncryption).
 
 Service: Synapse
 
@@ -41675,7 +41675,7 @@ Policy name: `azurenative-synapse-v20210601preview-sqlpoolvulnerabilityassessmen
 
 Code path: `azurenative.synapse.v20210601preview.SqlPoolVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.SqlPoolVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.SqlPoolVulnerabilityAssessment).
 
 Service: Synapse
 
@@ -41697,7 +41697,7 @@ Policy name: `azurenative-synapse-v20210601preview-sqlpoolvulnerabilityassessmen
 
 Code path: `azurenative.synapse.v20210601preview.SqlPoolVulnerabilityAssessmentRuleBaseline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.SqlPoolVulnerabilityAssessmentRuleBaseline).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.SqlPoolVulnerabilityAssessmentRuleBaseline).
 
 Service: Synapse
 
@@ -41719,7 +41719,7 @@ Policy name: `azurenative-synapse-v20210601preview-sqlpoolworkloadclassifier-dis
 
 Code path: `azurenative.synapse.v20210601preview.SqlPoolWorkloadClassifier.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.SqlPoolWorkloadClassifier).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.SqlPoolWorkloadClassifier).
 
 Service: Synapse
 
@@ -41741,7 +41741,7 @@ Policy name: `azurenative-synapse-v20210601preview-sqlpoolworkloadgroup-disallow
 
 Code path: `azurenative.synapse.v20210601preview.SqlPoolWorkloadGroup.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.SqlPoolWorkloadGroup).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.SqlPoolWorkloadGroup).
 
 Service: Synapse
 
@@ -41763,7 +41763,7 @@ Policy name: `azurenative-synapse-v20210601preview-workspace-disallow-preview-re
 
 Code path: `azurenative.synapse.v20210601preview.Workspace.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.Workspace).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.Workspace).
 
 Service: Synapse
 
@@ -41785,7 +41785,7 @@ Policy name: `azurenative-synapse-v20210601preview-workspaceaadadmin-disallow-pr
 
 Code path: `azurenative.synapse.v20210601preview.WorkspaceAadAdmin.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.WorkspaceAadAdmin).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.WorkspaceAadAdmin).
 
 Service: Synapse
 
@@ -41807,7 +41807,7 @@ Policy name: `azurenative-synapse-v20210601preview-workspacemanagedsqlservervuln
 
 Code path: `azurenative.synapse.v20210601preview.WorkspaceManagedSqlServerVulnerabilityAssessment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.WorkspaceManagedSqlServerVulnerabilityAssessment).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.WorkspaceManagedSqlServerVulnerabilityAssessment).
 
 Service: Synapse
 
@@ -41829,7 +41829,7 @@ Policy name: `azurenative-synapse-v20210601preview-workspacesqlaadadmin-disallow
 
 Code path: `azurenative.synapse.v20210601preview.WorkspaceSqlAadAdmin.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (synapse.v20210601preview.WorkspaceSqlAadAdmin).
+Disallow the use of non-stable (Preview) Azure resources (synapse.v20210601preview.WorkspaceSqlAadAdmin).
 
 Service: Synapse
 
@@ -41855,7 +41855,7 @@ Policy name: `azurenative-syntex-v20220915preview-documentprocessor-disallow-pre
 
 Code path: `azurenative.syntex.v20220915preview.DocumentProcessor.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (syntex.v20220915preview.DocumentProcessor).
+Disallow the use of non-stable (Preview) Azure resources (syntex.v20220915preview.DocumentProcessor).
 
 Service: Syntex
 
@@ -41881,7 +41881,7 @@ Policy name: `azurenative-testbase-v20220401preview-customerevent-disallow-previ
 
 Code path: `azurenative.testbase.v20220401preview.CustomerEvent.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (testbase.v20220401preview.CustomerEvent).
+Disallow the use of non-stable (Preview) Azure resources (testbase.v20220401preview.CustomerEvent).
 
 Service: Testbase
 
@@ -41903,7 +41903,7 @@ Policy name: `azurenative-testbase-v20220401preview-favoriteprocess-disallow-pre
 
 Code path: `azurenative.testbase.v20220401preview.FavoriteProcess.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (testbase.v20220401preview.FavoriteProcess).
+Disallow the use of non-stable (Preview) Azure resources (testbase.v20220401preview.FavoriteProcess).
 
 Service: Testbase
 
@@ -41925,7 +41925,7 @@ Policy name: `azurenative-testbase-v20220401preview-package-disallow-preview-res
 
 Code path: `azurenative.testbase.v20220401preview.Package.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (testbase.v20220401preview.Package).
+Disallow the use of non-stable (Preview) Azure resources (testbase.v20220401preview.Package).
 
 Service: Testbase
 
@@ -41947,7 +41947,7 @@ Policy name: `azurenative-testbase-v20220401preview-testbaseaccount-disallow-pre
 
 Code path: `azurenative.testbase.v20220401preview.TestBaseAccount.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (testbase.v20220401preview.TestBaseAccount).
+Disallow the use of non-stable (Preview) Azure resources (testbase.v20220401preview.TestBaseAccount).
 
 Service: Testbase
 
@@ -41973,7 +41973,7 @@ Policy name: `azurenative-timeseriesinsights-v20210331preview-gen2environment-di
 
 Code path: `azurenative.timeseriesinsights.v20210331preview.Gen2Environment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (timeseriesinsights.v20210331preview.Gen2Environment).
+Disallow the use of non-stable (Preview) Azure resources (timeseriesinsights.v20210331preview.Gen2Environment).
 
 Service: Timeseriesinsights
 
@@ -41995,7 +41995,7 @@ Policy name: `azurenative-timeseriesinsights-v20210331preview-privateendpointcon
 
 Code path: `azurenative.timeseriesinsights.v20210331preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (timeseriesinsights.v20210331preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (timeseriesinsights.v20210331preview.PrivateEndpointConnection).
 
 Service: Timeseriesinsights
 
@@ -42019,7 +42019,7 @@ Policy name: `azurenative-timeseriesinsights-v20210630preview-accesspolicy-disal
 
 Code path: `azurenative.timeseriesinsights.v20210630preview.AccessPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (timeseriesinsights.v20210630preview.AccessPolicy).
+Disallow the use of non-stable (Preview) Azure resources (timeseriesinsights.v20210630preview.AccessPolicy).
 
 Service: Timeseriesinsights
 
@@ -42041,7 +42041,7 @@ Policy name: `azurenative-timeseriesinsights-v20210630preview-eventhubeventsourc
 
 Code path: `azurenative.timeseriesinsights.v20210630preview.EventHubEventSource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (timeseriesinsights.v20210630preview.EventHubEventSource).
+Disallow the use of non-stable (Preview) Azure resources (timeseriesinsights.v20210630preview.EventHubEventSource).
 
 Service: Timeseriesinsights
 
@@ -42063,7 +42063,7 @@ Policy name: `azurenative-timeseriesinsights-v20210630preview-gen1environment-di
 
 Code path: `azurenative.timeseriesinsights.v20210630preview.Gen1Environment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (timeseriesinsights.v20210630preview.Gen1Environment).
+Disallow the use of non-stable (Preview) Azure resources (timeseriesinsights.v20210630preview.Gen1Environment).
 
 Service: Timeseriesinsights
 
@@ -42085,7 +42085,7 @@ Policy name: `azurenative-timeseriesinsights-v20210630preview-gen2environment-di
 
 Code path: `azurenative.timeseriesinsights.v20210630preview.Gen2Environment.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (timeseriesinsights.v20210630preview.Gen2Environment).
+Disallow the use of non-stable (Preview) Azure resources (timeseriesinsights.v20210630preview.Gen2Environment).
 
 Service: Timeseriesinsights
 
@@ -42107,7 +42107,7 @@ Policy name: `azurenative-timeseriesinsights-v20210630preview-iothubeventsource-
 
 Code path: `azurenative.timeseriesinsights.v20210630preview.IoTHubEventSource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (timeseriesinsights.v20210630preview.IoTHubEventSource).
+Disallow the use of non-stable (Preview) Azure resources (timeseriesinsights.v20210630preview.IoTHubEventSource).
 
 Service: Timeseriesinsights
 
@@ -42129,7 +42129,7 @@ Policy name: `azurenative-timeseriesinsights-v20210630preview-referencedataset-d
 
 Code path: `azurenative.timeseriesinsights.v20210630preview.ReferenceDataSet.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (timeseriesinsights.v20210630preview.ReferenceDataSet).
+Disallow the use of non-stable (Preview) Azure resources (timeseriesinsights.v20210630preview.ReferenceDataSet).
 
 Service: Timeseriesinsights
 
@@ -42155,7 +42155,7 @@ Policy name: `azurenative-videoanalyzer-v20210501preview-video-disallow-preview-
 
 Code path: `azurenative.videoanalyzer.v20210501preview.Video.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20210501preview.Video).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20210501preview.Video).
 
 Service: Videoanalyzer
 
@@ -42177,7 +42177,7 @@ Policy name: `azurenative-videoanalyzer-v20210501preview-videoanalyzer-disallow-
 
 Code path: `azurenative.videoanalyzer.v20210501preview.VideoAnalyzer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20210501preview.VideoAnalyzer).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20210501preview.VideoAnalyzer).
 
 Service: Videoanalyzer
 
@@ -42201,7 +42201,7 @@ Policy name: `azurenative-videoanalyzer-v20211101preview-accesspolicy-disallow-p
 
 Code path: `azurenative.videoanalyzer.v20211101preview.AccessPolicy.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20211101preview.AccessPolicy).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20211101preview.AccessPolicy).
 
 Service: Videoanalyzer
 
@@ -42223,7 +42223,7 @@ Policy name: `azurenative-videoanalyzer-v20211101preview-edgemodule-disallow-pre
 
 Code path: `azurenative.videoanalyzer.v20211101preview.EdgeModule.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20211101preview.EdgeModule).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20211101preview.EdgeModule).
 
 Service: Videoanalyzer
 
@@ -42245,7 +42245,7 @@ Policy name: `azurenative-videoanalyzer-v20211101preview-livepipeline-disallow-p
 
 Code path: `azurenative.videoanalyzer.v20211101preview.LivePipeline.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20211101preview.LivePipeline).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20211101preview.LivePipeline).
 
 Service: Videoanalyzer
 
@@ -42267,7 +42267,7 @@ Policy name: `azurenative-videoanalyzer-v20211101preview-pipelinejob-disallow-pr
 
 Code path: `azurenative.videoanalyzer.v20211101preview.PipelineJob.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20211101preview.PipelineJob).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20211101preview.PipelineJob).
 
 Service: Videoanalyzer
 
@@ -42289,7 +42289,7 @@ Policy name: `azurenative-videoanalyzer-v20211101preview-pipelinetopology-disall
 
 Code path: `azurenative.videoanalyzer.v20211101preview.PipelineTopology.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20211101preview.PipelineTopology).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20211101preview.PipelineTopology).
 
 Service: Videoanalyzer
 
@@ -42311,7 +42311,7 @@ Policy name: `azurenative-videoanalyzer-v20211101preview-privateendpointconnecti
 
 Code path: `azurenative.videoanalyzer.v20211101preview.PrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20211101preview.PrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20211101preview.PrivateEndpointConnection).
 
 Service: Videoanalyzer
 
@@ -42333,7 +42333,7 @@ Policy name: `azurenative-videoanalyzer-v20211101preview-video-disallow-preview-
 
 Code path: `azurenative.videoanalyzer.v20211101preview.Video.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20211101preview.Video).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20211101preview.Video).
 
 Service: Videoanalyzer
 
@@ -42355,7 +42355,7 @@ Policy name: `azurenative-videoanalyzer-v20211101preview-videoanalyzer-disallow-
 
 Code path: `azurenative.videoanalyzer.v20211101preview.VideoAnalyzer.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (videoanalyzer.v20211101preview.VideoAnalyzer).
+Disallow the use of non-stable (Preview) Azure resources (videoanalyzer.v20211101preview.VideoAnalyzer).
 
 Service: Videoanalyzer
 
@@ -42381,7 +42381,7 @@ Policy name: `azurenative-visualstudio-v20171101preview-account-disallow-preview
 
 Code path: `azurenative.visualstudio.v20171101preview.Account.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (visualstudio.v20171101preview.Account).
+Disallow the use of non-stable (Preview) Azure resources (visualstudio.v20171101preview.Account).
 
 Service: Visualstudio
 
@@ -42403,7 +42403,7 @@ Policy name: `azurenative-visualstudio-v20171101preview-extension-disallow-previ
 
 Code path: `azurenative.visualstudio.v20171101preview.Extension.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (visualstudio.v20171101preview.Extension).
+Disallow the use of non-stable (Preview) Azure resources (visualstudio.v20171101preview.Extension).
 
 Service: Visualstudio
 
@@ -42429,7 +42429,7 @@ Policy name: `azurenative-voiceservices-v20221201preview-contact-disallow-previe
 
 Code path: `azurenative.voiceservices.v20221201preview.Contact.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (voiceservices.v20221201preview.Contact).
+Disallow the use of non-stable (Preview) Azure resources (voiceservices.v20221201preview.Contact).
 
 Service: Voiceservices
 
@@ -42451,7 +42451,7 @@ Policy name: `azurenative-voiceservices-v20221201preview-testline-disallow-previ
 
 Code path: `azurenative.voiceservices.v20221201preview.TestLine.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (voiceservices.v20221201preview.TestLine).
+Disallow the use of non-stable (Preview) Azure resources (voiceservices.v20221201preview.TestLine).
 
 Service: Voiceservices
 
@@ -42477,7 +42477,7 @@ Policy name: `azurenative-web-v20150801preview-connection-disallow-preview-resou
 
 Code path: `azurenative.web.v20150801preview.Connection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (web.v20150801preview.Connection).
+Disallow the use of non-stable (Preview) Azure resources (web.v20150801preview.Connection).
 
 Service: Web
 
@@ -42503,7 +42503,7 @@ Policy name: `azurenative-webpubsub-v20210401preview-webpubsub-disallow-preview-
 
 Code path: `azurenative.webpubsub.v20210401preview.WebPubSub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20210401preview.WebPubSub).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20210401preview.WebPubSub).
 
 Service: Webpubsub
 
@@ -42527,7 +42527,7 @@ Policy name: `azurenative-webpubsub-v20210601preview-webpubsub-disallow-preview-
 
 Code path: `azurenative.webpubsub.v20210601preview.WebPubSub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20210601preview.WebPubSub).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20210601preview.WebPubSub).
 
 Service: Webpubsub
 
@@ -42551,7 +42551,7 @@ Policy name: `azurenative-webpubsub-v20210901preview-webpubsub-disallow-preview-
 
 Code path: `azurenative.webpubsub.v20210901preview.WebPubSub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20210901preview.WebPubSub).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20210901preview.WebPubSub).
 
 Service: Webpubsub
 
@@ -42575,7 +42575,7 @@ Policy name: `azurenative-webpubsub-v20230301preview-webpubsub-disallow-preview-
 
 Code path: `azurenative.webpubsub.v20230301preview.WebPubSub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230301preview.WebPubSub).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230301preview.WebPubSub).
 
 Service: Webpubsub
 
@@ -42597,7 +42597,7 @@ Policy name: `azurenative-webpubsub-v20230301preview-webpubsubcustomcertificate-
 
 Code path: `azurenative.webpubsub.v20230301preview.WebPubSubCustomCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230301preview.WebPubSubCustomCertificate).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230301preview.WebPubSubCustomCertificate).
 
 Service: Webpubsub
 
@@ -42619,7 +42619,7 @@ Policy name: `azurenative-webpubsub-v20230301preview-webpubsubcustomdomain-disal
 
 Code path: `azurenative.webpubsub.v20230301preview.WebPubSubCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230301preview.WebPubSubCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230301preview.WebPubSubCustomDomain).
 
 Service: Webpubsub
 
@@ -42641,7 +42641,7 @@ Policy name: `azurenative-webpubsub-v20230301preview-webpubsubhub-disallow-previ
 
 Code path: `azurenative.webpubsub.v20230301preview.WebPubSubHub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230301preview.WebPubSubHub).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230301preview.WebPubSubHub).
 
 Service: Webpubsub
 
@@ -42663,7 +42663,7 @@ Policy name: `azurenative-webpubsub-v20230301preview-webpubsubprivateendpointcon
 
 Code path: `azurenative.webpubsub.v20230301preview.WebPubSubPrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230301preview.WebPubSubPrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230301preview.WebPubSubPrivateEndpointConnection).
 
 Service: Webpubsub
 
@@ -42685,7 +42685,7 @@ Policy name: `azurenative-webpubsub-v20230301preview-webpubsubreplica-disallow-p
 
 Code path: `azurenative.webpubsub.v20230301preview.WebPubSubReplica.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230301preview.WebPubSubReplica).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230301preview.WebPubSubReplica).
 
 Service: Webpubsub
 
@@ -42707,7 +42707,7 @@ Policy name: `azurenative-webpubsub-v20230301preview-webpubsubsharedprivatelinkr
 
 Code path: `azurenative.webpubsub.v20230301preview.WebPubSubSharedPrivateLinkResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230301preview.WebPubSubSharedPrivateLinkResource).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230301preview.WebPubSubSharedPrivateLinkResource).
 
 Service: Webpubsub
 
@@ -42731,7 +42731,7 @@ Policy name: `azurenative-webpubsub-v20230601preview-webpubsub-disallow-preview-
 
 Code path: `azurenative.webpubsub.v20230601preview.WebPubSub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230601preview.WebPubSub).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230601preview.WebPubSub).
 
 Service: Webpubsub
 
@@ -42753,7 +42753,7 @@ Policy name: `azurenative-webpubsub-v20230601preview-webpubsubcustomcertificate-
 
 Code path: `azurenative.webpubsub.v20230601preview.WebPubSubCustomCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230601preview.WebPubSubCustomCertificate).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230601preview.WebPubSubCustomCertificate).
 
 Service: Webpubsub
 
@@ -42775,7 +42775,7 @@ Policy name: `azurenative-webpubsub-v20230601preview-webpubsubcustomdomain-disal
 
 Code path: `azurenative.webpubsub.v20230601preview.WebPubSubCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230601preview.WebPubSubCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230601preview.WebPubSubCustomDomain).
 
 Service: Webpubsub
 
@@ -42797,7 +42797,7 @@ Policy name: `azurenative-webpubsub-v20230601preview-webpubsubhub-disallow-previ
 
 Code path: `azurenative.webpubsub.v20230601preview.WebPubSubHub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230601preview.WebPubSubHub).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230601preview.WebPubSubHub).
 
 Service: Webpubsub
 
@@ -42819,7 +42819,7 @@ Policy name: `azurenative-webpubsub-v20230601preview-webpubsubprivateendpointcon
 
 Code path: `azurenative.webpubsub.v20230601preview.WebPubSubPrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230601preview.WebPubSubPrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230601preview.WebPubSubPrivateEndpointConnection).
 
 Service: Webpubsub
 
@@ -42841,7 +42841,7 @@ Policy name: `azurenative-webpubsub-v20230601preview-webpubsubreplica-disallow-p
 
 Code path: `azurenative.webpubsub.v20230601preview.WebPubSubReplica.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230601preview.WebPubSubReplica).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230601preview.WebPubSubReplica).
 
 Service: Webpubsub
 
@@ -42863,7 +42863,7 @@ Policy name: `azurenative-webpubsub-v20230601preview-webpubsubsharedprivatelinkr
 
 Code path: `azurenative.webpubsub.v20230601preview.WebPubSubSharedPrivateLinkResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230601preview.WebPubSubSharedPrivateLinkResource).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230601preview.WebPubSubSharedPrivateLinkResource).
 
 Service: Webpubsub
 
@@ -42887,7 +42887,7 @@ Policy name: `azurenative-webpubsub-v20230801preview-webpubsub-disallow-preview-
 
 Code path: `azurenative.webpubsub.v20230801preview.WebPubSub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230801preview.WebPubSub).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230801preview.WebPubSub).
 
 Service: Webpubsub
 
@@ -42909,7 +42909,7 @@ Policy name: `azurenative-webpubsub-v20230801preview-webpubsubcustomcertificate-
 
 Code path: `azurenative.webpubsub.v20230801preview.WebPubSubCustomCertificate.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230801preview.WebPubSubCustomCertificate).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230801preview.WebPubSubCustomCertificate).
 
 Service: Webpubsub
 
@@ -42931,7 +42931,7 @@ Policy name: `azurenative-webpubsub-v20230801preview-webpubsubcustomdomain-disal
 
 Code path: `azurenative.webpubsub.v20230801preview.WebPubSubCustomDomain.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230801preview.WebPubSubCustomDomain).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230801preview.WebPubSubCustomDomain).
 
 Service: Webpubsub
 
@@ -42953,7 +42953,7 @@ Policy name: `azurenative-webpubsub-v20230801preview-webpubsubhub-disallow-previ
 
 Code path: `azurenative.webpubsub.v20230801preview.WebPubSubHub.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230801preview.WebPubSubHub).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230801preview.WebPubSubHub).
 
 Service: Webpubsub
 
@@ -42975,7 +42975,7 @@ Policy name: `azurenative-webpubsub-v20230801preview-webpubsubprivateendpointcon
 
 Code path: `azurenative.webpubsub.v20230801preview.WebPubSubPrivateEndpointConnection.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230801preview.WebPubSubPrivateEndpointConnection).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230801preview.WebPubSubPrivateEndpointConnection).
 
 Service: Webpubsub
 
@@ -42997,7 +42997,7 @@ Policy name: `azurenative-webpubsub-v20230801preview-webpubsubreplica-disallow-p
 
 Code path: `azurenative.webpubsub.v20230801preview.WebPubSubReplica.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230801preview.WebPubSubReplica).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230801preview.WebPubSubReplica).
 
 Service: Webpubsub
 
@@ -43019,7 +43019,7 @@ Policy name: `azurenative-webpubsub-v20230801preview-webpubsubsharedprivatelinkr
 
 Code path: `azurenative.webpubsub.v20230801preview.WebPubSubSharedPrivateLinkResource.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (webpubsub.v20230801preview.WebPubSubSharedPrivateLinkResource).
+Disallow the use of non-stable (Preview) Azure resources (webpubsub.v20230801preview.WebPubSubSharedPrivateLinkResource).
 
 Service: Webpubsub
 
@@ -43045,7 +43045,7 @@ Policy name: `azurenative-windowsesu-v20190916preview-multipleactivationkey-disa
 
 Code path: `azurenative.windowsesu.v20190916preview.MultipleActivationKey.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (windowsesu.v20190916preview.MultipleActivationKey).
+Disallow the use of non-stable (Preview) Azure resources (windowsesu.v20190916preview.MultipleActivationKey).
 
 Service: Windowsesu
 
@@ -43071,7 +43071,7 @@ Policy name: `azurenative-workloads-v20211201preview-phpworkload-disallow-previe
 
 Code path: `azurenative.workloads.v20211201preview.PhpWorkload.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (workloads.v20211201preview.PhpWorkload).
+Disallow the use of non-stable (Preview) Azure resources (workloads.v20211201preview.PhpWorkload).
 
 Service: Workloads
 
@@ -43093,7 +43093,7 @@ Policy name: `azurenative-workloads-v20211201preview-sapapplicationserverinstanc
 
 Code path: `azurenative.workloads.v20211201preview.SAPApplicationServerInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (workloads.v20211201preview.SAPApplicationServerInstance).
+Disallow the use of non-stable (Preview) Azure resources (workloads.v20211201preview.SAPApplicationServerInstance).
 
 Service: Workloads
 
@@ -43115,7 +43115,7 @@ Policy name: `azurenative-workloads-v20211201preview-wordpressinstance-disallow-
 
 Code path: `azurenative.workloads.v20211201preview.WordpressInstance.disallowPreviewResource`
 
-Disallow the use of non-stable (Preview) Azure resouces (workloads.v20211201preview.WordpressInstance).
+Disallow the use of non-stable (Preview) Azure resources (workloads.v20211201preview.WordpressInstance).
 
 Service: Workloads
 
