@@ -30,7 +30,7 @@ Policy name: `googlenative-accesscontextmanager-v1beta-accesslevel-disallow-beta
 
 Code path: `googlenative.accesscontextmanager.v1beta.AccessLevel.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (accesscontextmanager.v1beta.AccessLevel).
+Disallow the use of non-stable (Beta) resources (accesscontextmanager.v1beta.AccessLevel).
 
 Service: Accesscontextmanager
 
@@ -52,7 +52,7 @@ Policy name: `googlenative-accesscontextmanager-v1beta-accesspolicy-disallow-bet
 
 Code path: `googlenative.accesscontextmanager.v1beta.AccessPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (accesscontextmanager.v1beta.AccessPolicy).
+Disallow the use of non-stable (Beta) resources (accesscontextmanager.v1beta.AccessPolicy).
 
 Service: Accesscontextmanager
 
@@ -74,7 +74,7 @@ Policy name: `googlenative-accesscontextmanager-v1beta-serviceperimeter-disallow
 
 Code path: `googlenative.accesscontextmanager.v1beta.ServicePerimeter.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (accesscontextmanager.v1beta.ServicePerimeter).
+Disallow the use of non-stable (Beta) resources (accesscontextmanager.v1beta.ServicePerimeter).
 
 Service: Accesscontextmanager
 
@@ -100,7 +100,7 @@ Policy name: `googlenative-analyticshub-v1beta1-dataexchange-disallow-beta-resou
 
 Code path: `googlenative.analyticshub.v1beta1.DataExchange.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (analyticshub.v1beta1.DataExchange).
+Disallow the use of non-stable (Beta) resources (analyticshub.v1beta1.DataExchange).
 
 Service: Analyticshub
 
@@ -122,7 +122,7 @@ Policy name: `googlenative-analyticshub-v1beta1-dataexchangeiambinding-disallow-
 
 Code path: `googlenative.analyticshub.v1beta1.DataExchangeIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (analyticshub.v1beta1.DataExchangeIamBinding).
+Disallow the use of non-stable (Beta) resources (analyticshub.v1beta1.DataExchangeIamBinding).
 
 Service: Analyticshub
 
@@ -144,7 +144,7 @@ Policy name: `googlenative-analyticshub-v1beta1-dataexchangeiammember-disallow-b
 
 Code path: `googlenative.analyticshub.v1beta1.DataExchangeIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (analyticshub.v1beta1.DataExchangeIamMember).
+Disallow the use of non-stable (Beta) resources (analyticshub.v1beta1.DataExchangeIamMember).
 
 Service: Analyticshub
 
@@ -166,7 +166,7 @@ Policy name: `googlenative-analyticshub-v1beta1-dataexchangeiampolicy-disallow-b
 
 Code path: `googlenative.analyticshub.v1beta1.DataExchangeIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (analyticshub.v1beta1.DataExchangeIamPolicy).
+Disallow the use of non-stable (Beta) resources (analyticshub.v1beta1.DataExchangeIamPolicy).
 
 Service: Analyticshub
 
@@ -188,7 +188,7 @@ Policy name: `googlenative-analyticshub-v1beta1-dataexchangelistingiambinding-di
 
 Code path: `googlenative.analyticshub.v1beta1.DataExchangeListingIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (analyticshub.v1beta1.DataExchangeListingIamBinding).
+Disallow the use of non-stable (Beta) resources (analyticshub.v1beta1.DataExchangeListingIamBinding).
 
 Service: Analyticshub
 
@@ -210,7 +210,7 @@ Policy name: `googlenative-analyticshub-v1beta1-dataexchangelistingiammember-dis
 
 Code path: `googlenative.analyticshub.v1beta1.DataExchangeListingIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (analyticshub.v1beta1.DataExchangeListingIamMember).
+Disallow the use of non-stable (Beta) resources (analyticshub.v1beta1.DataExchangeListingIamMember).
 
 Service: Analyticshub
 
@@ -232,7 +232,7 @@ Policy name: `googlenative-analyticshub-v1beta1-dataexchangelistingiampolicy-dis
 
 Code path: `googlenative.analyticshub.v1beta1.DataExchangeListingIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (analyticshub.v1beta1.DataExchangeListingIamPolicy).
+Disallow the use of non-stable (Beta) resources (analyticshub.v1beta1.DataExchangeListingIamPolicy).
 
 Service: Analyticshub
 
@@ -254,7 +254,7 @@ Policy name: `googlenative-analyticshub-v1beta1-listing-disallow-beta-resource`
 
 Code path: `googlenative.analyticshub.v1beta1.Listing.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (analyticshub.v1beta1.Listing).
+Disallow the use of non-stable (Beta) resources (analyticshub.v1beta1.Listing).
 
 Service: Analyticshub
 
@@ -280,7 +280,7 @@ Policy name: `googlenative-apigateway-v1beta-api-disallow-beta-resource`
 
 Code path: `googlenative.apigateway.v1beta.Api.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.Api).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.Api).
 
 Service: Apigateway
 
@@ -302,7 +302,7 @@ Policy name: `googlenative-apigateway-v1beta-apiconfigiambinding-disallow-beta-r
 
 Code path: `googlenative.apigateway.v1beta.ApiConfigIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.ApiConfigIamBinding).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.ApiConfigIamBinding).
 
 Service: Apigateway
 
@@ -324,7 +324,7 @@ Policy name: `googlenative-apigateway-v1beta-apiconfigiammember-disallow-beta-re
 
 Code path: `googlenative.apigateway.v1beta.ApiConfigIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.ApiConfigIamMember).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.ApiConfigIamMember).
 
 Service: Apigateway
 
@@ -346,7 +346,7 @@ Policy name: `googlenative-apigateway-v1beta-apiconfigiampolicy-disallow-beta-re
 
 Code path: `googlenative.apigateway.v1beta.ApiConfigIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.ApiConfigIamPolicy).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.ApiConfigIamPolicy).
 
 Service: Apigateway
 
@@ -368,7 +368,7 @@ Policy name: `googlenative-apigateway-v1beta-apiiambinding-disallow-beta-resourc
 
 Code path: `googlenative.apigateway.v1beta.ApiIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.ApiIamBinding).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.ApiIamBinding).
 
 Service: Apigateway
 
@@ -390,7 +390,7 @@ Policy name: `googlenative-apigateway-v1beta-apiiammember-disallow-beta-resource
 
 Code path: `googlenative.apigateway.v1beta.ApiIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.ApiIamMember).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.ApiIamMember).
 
 Service: Apigateway
 
@@ -412,7 +412,7 @@ Policy name: `googlenative-apigateway-v1beta-apiiampolicy-disallow-beta-resource
 
 Code path: `googlenative.apigateway.v1beta.ApiIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.ApiIamPolicy).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.ApiIamPolicy).
 
 Service: Apigateway
 
@@ -434,7 +434,7 @@ Policy name: `googlenative-apigateway-v1beta-config-disallow-beta-resource`
 
 Code path: `googlenative.apigateway.v1beta.Config.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.Config).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.Config).
 
 Service: Apigateway
 
@@ -456,7 +456,7 @@ Policy name: `googlenative-apigateway-v1beta-gateway-disallow-beta-resource`
 
 Code path: `googlenative.apigateway.v1beta.Gateway.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.Gateway).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.Gateway).
 
 Service: Apigateway
 
@@ -478,7 +478,7 @@ Policy name: `googlenative-apigateway-v1beta-gatewayiambinding-disallow-beta-res
 
 Code path: `googlenative.apigateway.v1beta.GatewayIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.GatewayIamBinding).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.GatewayIamBinding).
 
 Service: Apigateway
 
@@ -500,7 +500,7 @@ Policy name: `googlenative-apigateway-v1beta-gatewayiammember-disallow-beta-reso
 
 Code path: `googlenative.apigateway.v1beta.GatewayIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.GatewayIamMember).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.GatewayIamMember).
 
 Service: Apigateway
 
@@ -522,7 +522,7 @@ Policy name: `googlenative-apigateway-v1beta-gatewayiampolicy-disallow-beta-reso
 
 Code path: `googlenative.apigateway.v1beta.GatewayIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (apigateway.v1beta.GatewayIamPolicy).
+Disallow the use of non-stable (Beta) resources (apigateway.v1beta.GatewayIamPolicy).
 
 Service: Apigateway
 
@@ -548,7 +548,7 @@ Policy name: `googlenative-appengine-v1alpha-authorizedcertificate-disallow-alph
 
 Code path: `googlenative.appengine.v1alpha.AuthorizedCertificate.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (appengine.v1alpha.AuthorizedCertificate).
+Disallow the use of non-stable (Alpha) resources (appengine.v1alpha.AuthorizedCertificate).
 
 Service: Appengine
 
@@ -570,7 +570,7 @@ Policy name: `googlenative-appengine-v1alpha-domainmapping-disallow-alpha-resour
 
 Code path: `googlenative.appengine.v1alpha.DomainMapping.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (appengine.v1alpha.DomainMapping).
+Disallow the use of non-stable (Alpha) resources (appengine.v1alpha.DomainMapping).
 
 Service: Appengine
 
@@ -594,7 +594,7 @@ Policy name: `googlenative-appengine-v1beta-app-disallow-beta-resource`
 
 Code path: `googlenative.appengine.v1beta.App.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (appengine.v1beta.App).
+Disallow the use of non-stable (Beta) resources (appengine.v1beta.App).
 
 Service: Appengine
 
@@ -616,7 +616,7 @@ Policy name: `googlenative-appengine-v1beta-application-disallow-beta-resource`
 
 Code path: `googlenative.appengine.v1beta.Application.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (appengine.v1beta.Application).
+Disallow the use of non-stable (Beta) resources (appengine.v1beta.Application).
 
 Service: Appengine
 
@@ -638,7 +638,7 @@ Policy name: `googlenative-appengine-v1beta-authorizedcertificate-disallow-beta-
 
 Code path: `googlenative.appengine.v1beta.AuthorizedCertificate.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (appengine.v1beta.AuthorizedCertificate).
+Disallow the use of non-stable (Beta) resources (appengine.v1beta.AuthorizedCertificate).
 
 Service: Appengine
 
@@ -660,7 +660,7 @@ Policy name: `googlenative-appengine-v1beta-domainmapping-disallow-beta-resource
 
 Code path: `googlenative.appengine.v1beta.DomainMapping.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (appengine.v1beta.DomainMapping).
+Disallow the use of non-stable (Beta) resources (appengine.v1beta.DomainMapping).
 
 Service: Appengine
 
@@ -682,7 +682,7 @@ Policy name: `googlenative-appengine-v1beta-ingressrule-disallow-beta-resource`
 
 Code path: `googlenative.appengine.v1beta.IngressRule.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (appengine.v1beta.IngressRule).
+Disallow the use of non-stable (Beta) resources (appengine.v1beta.IngressRule).
 
 Service: Appengine
 
@@ -704,7 +704,7 @@ Policy name: `googlenative-appengine-v1beta-version-disallow-beta-resource`
 
 Code path: `googlenative.appengine.v1beta.Version.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (appengine.v1beta.Version).
+Disallow the use of non-stable (Beta) resources (appengine.v1beta.Version).
 
 Service: Appengine
 
@@ -730,7 +730,7 @@ Policy name: `googlenative-artifactregistry-v1beta1-repository-disallow-beta-res
 
 Code path: `googlenative.artifactregistry.v1beta1.Repository.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta1.Repository).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta1.Repository).
 
 Service: Artifactregistry
 
@@ -752,7 +752,7 @@ Policy name: `googlenative-artifactregistry-v1beta1-repositoryiambinding-disallo
 
 Code path: `googlenative.artifactregistry.v1beta1.RepositoryIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta1.RepositoryIamBinding).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta1.RepositoryIamBinding).
 
 Service: Artifactregistry
 
@@ -774,7 +774,7 @@ Policy name: `googlenative-artifactregistry-v1beta1-repositoryiammember-disallow
 
 Code path: `googlenative.artifactregistry.v1beta1.RepositoryIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta1.RepositoryIamMember).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta1.RepositoryIamMember).
 
 Service: Artifactregistry
 
@@ -796,7 +796,7 @@ Policy name: `googlenative-artifactregistry-v1beta1-repositoryiampolicy-disallow
 
 Code path: `googlenative.artifactregistry.v1beta1.RepositoryIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta1.RepositoryIamPolicy).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta1.RepositoryIamPolicy).
 
 Service: Artifactregistry
 
@@ -818,7 +818,7 @@ Policy name: `googlenative-artifactregistry-v1beta1-tag-disallow-beta-resource`
 
 Code path: `googlenative.artifactregistry.v1beta1.Tag.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta1.Tag).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta1.Tag).
 
 Service: Artifactregistry
 
@@ -842,7 +842,7 @@ Policy name: `googlenative-artifactregistry-v1beta2-repository-disallow-beta-res
 
 Code path: `googlenative.artifactregistry.v1beta2.Repository.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta2.Repository).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta2.Repository).
 
 Service: Artifactregistry
 
@@ -864,7 +864,7 @@ Policy name: `googlenative-artifactregistry-v1beta2-repositoryiambinding-disallo
 
 Code path: `googlenative.artifactregistry.v1beta2.RepositoryIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta2.RepositoryIamBinding).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta2.RepositoryIamBinding).
 
 Service: Artifactregistry
 
@@ -886,7 +886,7 @@ Policy name: `googlenative-artifactregistry-v1beta2-repositoryiammember-disallow
 
 Code path: `googlenative.artifactregistry.v1beta2.RepositoryIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta2.RepositoryIamMember).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta2.RepositoryIamMember).
 
 Service: Artifactregistry
 
@@ -908,7 +908,7 @@ Policy name: `googlenative-artifactregistry-v1beta2-repositoryiampolicy-disallow
 
 Code path: `googlenative.artifactregistry.v1beta2.RepositoryIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta2.RepositoryIamPolicy).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta2.RepositoryIamPolicy).
 
 Service: Artifactregistry
 
@@ -930,7 +930,7 @@ Policy name: `googlenative-artifactregistry-v1beta2-tag-disallow-beta-resource`
 
 Code path: `googlenative.artifactregistry.v1beta2.Tag.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (artifactregistry.v1beta2.Tag).
+Disallow the use of non-stable (Beta) resources (artifactregistry.v1beta2.Tag).
 
 Service: Artifactregistry
 
@@ -956,7 +956,7 @@ Policy name: `googlenative-assuredworkloads-v1beta1-workload-disallow-beta-resou
 
 Code path: `googlenative.assuredworkloads.v1beta1.Workload.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (assuredworkloads.v1beta1.Workload).
+Disallow the use of non-stable (Beta) resources (assuredworkloads.v1beta1.Workload).
 
 Service: Assuredworkloads
 
@@ -982,7 +982,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appconnection-disallow-alpha-resou
 
 Code path: `googlenative.beyondcorp.v1alpha.AppConnection.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppConnection).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppConnection).
 
 Service: Beyondcorp
 
@@ -1004,7 +1004,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appconnectioniambinding-disallow-a
 
 Code path: `googlenative.beyondcorp.v1alpha.AppConnectionIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppConnectionIamBinding).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppConnectionIamBinding).
 
 Service: Beyondcorp
 
@@ -1026,7 +1026,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appconnectioniammember-disallow-al
 
 Code path: `googlenative.beyondcorp.v1alpha.AppConnectionIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppConnectionIamMember).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppConnectionIamMember).
 
 Service: Beyondcorp
 
@@ -1048,7 +1048,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appconnectioniampolicy-disallow-al
 
 Code path: `googlenative.beyondcorp.v1alpha.AppConnectionIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppConnectionIamPolicy).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppConnectionIamPolicy).
 
 Service: Beyondcorp
 
@@ -1070,7 +1070,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appconnector-disallow-alpha-resour
 
 Code path: `googlenative.beyondcorp.v1alpha.AppConnector.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppConnector).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppConnector).
 
 Service: Beyondcorp
 
@@ -1092,7 +1092,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appconnectoriambinding-disallow-al
 
 Code path: `googlenative.beyondcorp.v1alpha.AppConnectorIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppConnectorIamBinding).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppConnectorIamBinding).
 
 Service: Beyondcorp
 
@@ -1114,7 +1114,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appconnectoriammember-disallow-alp
 
 Code path: `googlenative.beyondcorp.v1alpha.AppConnectorIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppConnectorIamMember).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppConnectorIamMember).
 
 Service: Beyondcorp
 
@@ -1136,7 +1136,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appconnectoriampolicy-disallow-alp
 
 Code path: `googlenative.beyondcorp.v1alpha.AppConnectorIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppConnectorIamPolicy).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppConnectorIamPolicy).
 
 Service: Beyondcorp
 
@@ -1158,7 +1158,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appgateway-disallow-alpha-resource
 
 Code path: `googlenative.beyondcorp.v1alpha.AppGateway.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppGateway).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppGateway).
 
 Service: Beyondcorp
 
@@ -1180,7 +1180,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appgatewayiambinding-disallow-alph
 
 Code path: `googlenative.beyondcorp.v1alpha.AppGatewayIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppGatewayIamBinding).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppGatewayIamBinding).
 
 Service: Beyondcorp
 
@@ -1202,7 +1202,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appgatewayiammember-disallow-alpha
 
 Code path: `googlenative.beyondcorp.v1alpha.AppGatewayIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppGatewayIamMember).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppGatewayIamMember).
 
 Service: Beyondcorp
 
@@ -1224,7 +1224,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-appgatewayiampolicy-disallow-alpha
 
 Code path: `googlenative.beyondcorp.v1alpha.AppGatewayIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.AppGatewayIamPolicy).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.AppGatewayIamPolicy).
 
 Service: Beyondcorp
 
@@ -1246,7 +1246,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-applicationiambinding-disallow-alp
 
 Code path: `googlenative.beyondcorp.v1alpha.ApplicationIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ApplicationIamBinding).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ApplicationIamBinding).
 
 Service: Beyondcorp
 
@@ -1268,7 +1268,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-applicationiammember-disallow-alph
 
 Code path: `googlenative.beyondcorp.v1alpha.ApplicationIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ApplicationIamMember).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ApplicationIamMember).
 
 Service: Beyondcorp
 
@@ -1290,7 +1290,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-applicationiampolicy-disallow-alph
 
 Code path: `googlenative.beyondcorp.v1alpha.ApplicationIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ApplicationIamPolicy).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ApplicationIamPolicy).
 
 Service: Beyondcorp
 
@@ -1312,7 +1312,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-clientconnectorservice-disallow-al
 
 Code path: `googlenative.beyondcorp.v1alpha.ClientConnectorService.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ClientConnectorService).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ClientConnectorService).
 
 Service: Beyondcorp
 
@@ -1334,7 +1334,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-clientconnectorserviceiambinding-d
 
 Code path: `googlenative.beyondcorp.v1alpha.ClientConnectorServiceIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ClientConnectorServiceIamBinding).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ClientConnectorServiceIamBinding).
 
 Service: Beyondcorp
 
@@ -1356,7 +1356,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-clientconnectorserviceiammember-di
 
 Code path: `googlenative.beyondcorp.v1alpha.ClientConnectorServiceIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ClientConnectorServiceIamMember).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ClientConnectorServiceIamMember).
 
 Service: Beyondcorp
 
@@ -1378,7 +1378,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-clientconnectorserviceiampolicy-di
 
 Code path: `googlenative.beyondcorp.v1alpha.ClientConnectorServiceIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ClientConnectorServiceIamPolicy).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ClientConnectorServiceIamPolicy).
 
 Service: Beyondcorp
 
@@ -1400,7 +1400,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-clientgateway-disallow-alpha-resou
 
 Code path: `googlenative.beyondcorp.v1alpha.ClientGateway.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ClientGateway).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ClientGateway).
 
 Service: Beyondcorp
 
@@ -1422,7 +1422,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-clientgatewayiambinding-disallow-a
 
 Code path: `googlenative.beyondcorp.v1alpha.ClientGatewayIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ClientGatewayIamBinding).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ClientGatewayIamBinding).
 
 Service: Beyondcorp
 
@@ -1444,7 +1444,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-clientgatewayiammember-disallow-al
 
 Code path: `googlenative.beyondcorp.v1alpha.ClientGatewayIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ClientGatewayIamMember).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ClientGatewayIamMember).
 
 Service: Beyondcorp
 
@@ -1466,7 +1466,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-clientgatewayiampolicy-disallow-al
 
 Code path: `googlenative.beyondcorp.v1alpha.ClientGatewayIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ClientGatewayIamPolicy).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ClientGatewayIamPolicy).
 
 Service: Beyondcorp
 
@@ -1488,7 +1488,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-connection-disallow-alpha-resource
 
 Code path: `googlenative.beyondcorp.v1alpha.Connection.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.Connection).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.Connection).
 
 Service: Beyondcorp
 
@@ -1510,7 +1510,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-connectioniambinding-disallow-alph
 
 Code path: `googlenative.beyondcorp.v1alpha.ConnectionIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ConnectionIamBinding).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ConnectionIamBinding).
 
 Service: Beyondcorp
 
@@ -1532,7 +1532,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-connectioniammember-disallow-alpha
 
 Code path: `googlenative.beyondcorp.v1alpha.ConnectionIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ConnectionIamMember).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ConnectionIamMember).
 
 Service: Beyondcorp
 
@@ -1554,7 +1554,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-connectioniampolicy-disallow-alpha
 
 Code path: `googlenative.beyondcorp.v1alpha.ConnectionIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ConnectionIamPolicy).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ConnectionIamPolicy).
 
 Service: Beyondcorp
 
@@ -1576,7 +1576,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-connector-disallow-alpha-resource`
 
 Code path: `googlenative.beyondcorp.v1alpha.Connector.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.Connector).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.Connector).
 
 Service: Beyondcorp
 
@@ -1598,7 +1598,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-connectoriambinding-disallow-alpha
 
 Code path: `googlenative.beyondcorp.v1alpha.ConnectorIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ConnectorIamBinding).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ConnectorIamBinding).
 
 Service: Beyondcorp
 
@@ -1620,7 +1620,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-connectoriammember-disallow-alpha-
 
 Code path: `googlenative.beyondcorp.v1alpha.ConnectorIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ConnectorIamMember).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ConnectorIamMember).
 
 Service: Beyondcorp
 
@@ -1642,7 +1642,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-connectoriampolicy-disallow-alpha-
 
 Code path: `googlenative.beyondcorp.v1alpha.ConnectorIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ConnectorIamPolicy).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ConnectorIamPolicy).
 
 Service: Beyondcorp
 
@@ -1664,7 +1664,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-netconnectioniambinding-disallow-a
 
 Code path: `googlenative.beyondcorp.v1alpha.NetConnectionIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.NetConnectionIamBinding).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.NetConnectionIamBinding).
 
 Service: Beyondcorp
 
@@ -1686,7 +1686,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-netconnectioniammember-disallow-al
 
 Code path: `googlenative.beyondcorp.v1alpha.NetConnectionIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.NetConnectionIamMember).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.NetConnectionIamMember).
 
 Service: Beyondcorp
 
@@ -1708,7 +1708,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-netconnectioniampolicy-disallow-al
 
 Code path: `googlenative.beyondcorp.v1alpha.NetConnectionIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.NetConnectionIamPolicy).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.NetConnectionIamPolicy).
 
 Service: Beyondcorp
 
@@ -1730,7 +1730,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-proxyconfig-disallow-alpha-resourc
 
 Code path: `googlenative.beyondcorp.v1alpha.ProxyConfig.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.ProxyConfig).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.ProxyConfig).
 
 Service: Beyondcorp
 
@@ -1752,7 +1752,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-subscription-disallow-alpha-resour
 
 Code path: `googlenative.beyondcorp.v1alpha.Subscription.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.Subscription).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.Subscription).
 
 Service: Beyondcorp
 
@@ -1774,7 +1774,7 @@ Policy name: `googlenative-beyondcorp-v1alpha-tenant-disallow-alpha-resource`
 
 Code path: `googlenative.beyondcorp.v1alpha.Tenant.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (beyondcorp.v1alpha.Tenant).
+Disallow the use of non-stable (Alpha) resources (beyondcorp.v1alpha.Tenant).
 
 Service: Beyondcorp
 
@@ -1800,7 +1800,7 @@ Policy name: `googlenative-bigqueryconnection-v1beta1-connection-disallow-beta-r
 
 Code path: `googlenative.bigqueryconnection.v1beta1.Connection.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (bigqueryconnection.v1beta1.Connection).
+Disallow the use of non-stable (Beta) resources (bigqueryconnection.v1beta1.Connection).
 
 Service: Bigqueryconnection
 
@@ -1822,7 +1822,7 @@ Policy name: `googlenative-bigqueryconnection-v1beta1-connectioniambinding-disal
 
 Code path: `googlenative.bigqueryconnection.v1beta1.ConnectionIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (bigqueryconnection.v1beta1.ConnectionIamBinding).
+Disallow the use of non-stable (Beta) resources (bigqueryconnection.v1beta1.ConnectionIamBinding).
 
 Service: Bigqueryconnection
 
@@ -1844,7 +1844,7 @@ Policy name: `googlenative-bigqueryconnection-v1beta1-connectioniammember-disall
 
 Code path: `googlenative.bigqueryconnection.v1beta1.ConnectionIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (bigqueryconnection.v1beta1.ConnectionIamMember).
+Disallow the use of non-stable (Beta) resources (bigqueryconnection.v1beta1.ConnectionIamMember).
 
 Service: Bigqueryconnection
 
@@ -1866,7 +1866,7 @@ Policy name: `googlenative-bigqueryconnection-v1beta1-connectioniampolicy-disall
 
 Code path: `googlenative.bigqueryconnection.v1beta1.ConnectionIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (bigqueryconnection.v1beta1.ConnectionIamPolicy).
+Disallow the use of non-stable (Beta) resources (bigqueryconnection.v1beta1.ConnectionIamPolicy).
 
 Service: Bigqueryconnection
 
@@ -1892,7 +1892,7 @@ Policy name: `googlenative-bigqueryreservation-v1beta1-capacitycommitment-disall
 
 Code path: `googlenative.bigqueryreservation.v1beta1.CapacityCommitment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (bigqueryreservation.v1beta1.CapacityCommitment).
+Disallow the use of non-stable (Beta) resources (bigqueryreservation.v1beta1.CapacityCommitment).
 
 Service: Bigqueryreservation
 
@@ -1914,7 +1914,7 @@ Policy name: `googlenative-bigqueryreservation-v1beta1-reservation-disallow-beta
 
 Code path: `googlenative.bigqueryreservation.v1beta1.Reservation.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (bigqueryreservation.v1beta1.Reservation).
+Disallow the use of non-stable (Beta) resources (bigqueryreservation.v1beta1.Reservation).
 
 Service: Bigqueryreservation
 
@@ -1940,7 +1940,7 @@ Policy name: `googlenative-billingbudgets-v1beta1-budget-disallow-beta-resource`
 
 Code path: `googlenative.billingbudgets.v1beta1.Budget.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (billingbudgets.v1beta1.Budget).
+Disallow the use of non-stable (Beta) resources (billingbudgets.v1beta1.Budget).
 
 Service: Billingbudgets
 
@@ -1966,7 +1966,7 @@ Policy name: `googlenative-binaryauthorization-v1beta1-attestor-disallow-beta-re
 
 Code path: `googlenative.binaryauthorization.v1beta1.Attestor.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (binaryauthorization.v1beta1.Attestor).
+Disallow the use of non-stable (Beta) resources (binaryauthorization.v1beta1.Attestor).
 
 Service: Binaryauthorization
 
@@ -1988,7 +1988,7 @@ Policy name: `googlenative-binaryauthorization-v1beta1-attestoriambinding-disall
 
 Code path: `googlenative.binaryauthorization.v1beta1.AttestorIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (binaryauthorization.v1beta1.AttestorIamBinding).
+Disallow the use of non-stable (Beta) resources (binaryauthorization.v1beta1.AttestorIamBinding).
 
 Service: Binaryauthorization
 
@@ -2010,7 +2010,7 @@ Policy name: `googlenative-binaryauthorization-v1beta1-attestoriammember-disallo
 
 Code path: `googlenative.binaryauthorization.v1beta1.AttestorIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (binaryauthorization.v1beta1.AttestorIamMember).
+Disallow the use of non-stable (Beta) resources (binaryauthorization.v1beta1.AttestorIamMember).
 
 Service: Binaryauthorization
 
@@ -2032,7 +2032,7 @@ Policy name: `googlenative-binaryauthorization-v1beta1-attestoriampolicy-disallo
 
 Code path: `googlenative.binaryauthorization.v1beta1.AttestorIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (binaryauthorization.v1beta1.AttestorIamPolicy).
+Disallow the use of non-stable (Beta) resources (binaryauthorization.v1beta1.AttestorIamPolicy).
 
 Service: Binaryauthorization
 
@@ -2054,7 +2054,7 @@ Policy name: `googlenative-binaryauthorization-v1beta1-policyiambinding-disallow
 
 Code path: `googlenative.binaryauthorization.v1beta1.PolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (binaryauthorization.v1beta1.PolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (binaryauthorization.v1beta1.PolicyIamBinding).
 
 Service: Binaryauthorization
 
@@ -2076,7 +2076,7 @@ Policy name: `googlenative-binaryauthorization-v1beta1-policyiammember-disallow-
 
 Code path: `googlenative.binaryauthorization.v1beta1.PolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (binaryauthorization.v1beta1.PolicyIamMember).
+Disallow the use of non-stable (Beta) resources (binaryauthorization.v1beta1.PolicyIamMember).
 
 Service: Binaryauthorization
 
@@ -2098,7 +2098,7 @@ Policy name: `googlenative-binaryauthorization-v1beta1-policyiampolicy-disallow-
 
 Code path: `googlenative.binaryauthorization.v1beta1.PolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (binaryauthorization.v1beta1.PolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (binaryauthorization.v1beta1.PolicyIamPolicy).
 
 Service: Binaryauthorization
 
@@ -2124,7 +2124,7 @@ Policy name: `googlenative-cloudbuild-v1alpha1-workerpool-disallow-alpha-resourc
 
 Code path: `googlenative.cloudbuild.v1alpha1.WorkerPool.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (cloudbuild.v1alpha1.WorkerPool).
+Disallow the use of non-stable (Alpha) resources (cloudbuild.v1alpha1.WorkerPool).
 
 Service: Cloudbuild
 
@@ -2148,7 +2148,7 @@ Policy name: `googlenative-cloudbuild-v1alpha2-workerpool-disallow-alpha-resourc
 
 Code path: `googlenative.cloudbuild.v1alpha2.WorkerPool.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (cloudbuild.v1alpha2.WorkerPool).
+Disallow the use of non-stable (Alpha) resources (cloudbuild.v1alpha2.WorkerPool).
 
 Service: Cloudbuild
 
@@ -2172,7 +2172,7 @@ Policy name: `googlenative-cloudbuild-v1beta1-workerpool-disallow-beta-resource`
 
 Code path: `googlenative.cloudbuild.v1beta1.WorkerPool.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudbuild.v1beta1.WorkerPool).
+Disallow the use of non-stable (Beta) resources (cloudbuild.v1beta1.WorkerPool).
 
 Service: Cloudbuild
 
@@ -2198,7 +2198,7 @@ Policy name: `googlenative-cloudfunctions-v2alpha-function-disallow-alpha-resour
 
 Code path: `googlenative.cloudfunctions.v2alpha.Function.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (cloudfunctions.v2alpha.Function).
+Disallow the use of non-stable (Alpha) resources (cloudfunctions.v2alpha.Function).
 
 Service: Cloudfunctions
 
@@ -2220,7 +2220,7 @@ Policy name: `googlenative-cloudfunctions-v2alpha-functioniambinding-disallow-al
 
 Code path: `googlenative.cloudfunctions.v2alpha.FunctionIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (cloudfunctions.v2alpha.FunctionIamBinding).
+Disallow the use of non-stable (Alpha) resources (cloudfunctions.v2alpha.FunctionIamBinding).
 
 Service: Cloudfunctions
 
@@ -2242,7 +2242,7 @@ Policy name: `googlenative-cloudfunctions-v2alpha-functioniammember-disallow-alp
 
 Code path: `googlenative.cloudfunctions.v2alpha.FunctionIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (cloudfunctions.v2alpha.FunctionIamMember).
+Disallow the use of non-stable (Alpha) resources (cloudfunctions.v2alpha.FunctionIamMember).
 
 Service: Cloudfunctions
 
@@ -2264,7 +2264,7 @@ Policy name: `googlenative-cloudfunctions-v2alpha-functioniampolicy-disallow-alp
 
 Code path: `googlenative.cloudfunctions.v2alpha.FunctionIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (cloudfunctions.v2alpha.FunctionIamPolicy).
+Disallow the use of non-stable (Alpha) resources (cloudfunctions.v2alpha.FunctionIamPolicy).
 
 Service: Cloudfunctions
 
@@ -2288,7 +2288,7 @@ Policy name: `googlenative-cloudfunctions-v2beta-function-disallow-beta-resource
 
 Code path: `googlenative.cloudfunctions.v2beta.Function.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudfunctions.v2beta.Function).
+Disallow the use of non-stable (Beta) resources (cloudfunctions.v2beta.Function).
 
 Service: Cloudfunctions
 
@@ -2310,7 +2310,7 @@ Policy name: `googlenative-cloudfunctions-v2beta-functioniambinding-disallow-bet
 
 Code path: `googlenative.cloudfunctions.v2beta.FunctionIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudfunctions.v2beta.FunctionIamBinding).
+Disallow the use of non-stable (Beta) resources (cloudfunctions.v2beta.FunctionIamBinding).
 
 Service: Cloudfunctions
 
@@ -2332,7 +2332,7 @@ Policy name: `googlenative-cloudfunctions-v2beta-functioniammember-disallow-beta
 
 Code path: `googlenative.cloudfunctions.v2beta.FunctionIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudfunctions.v2beta.FunctionIamMember).
+Disallow the use of non-stable (Beta) resources (cloudfunctions.v2beta.FunctionIamMember).
 
 Service: Cloudfunctions
 
@@ -2354,7 +2354,7 @@ Policy name: `googlenative-cloudfunctions-v2beta-functioniampolicy-disallow-beta
 
 Code path: `googlenative.cloudfunctions.v2beta.FunctionIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudfunctions.v2beta.FunctionIamPolicy).
+Disallow the use of non-stable (Beta) resources (cloudfunctions.v2beta.FunctionIamPolicy).
 
 Service: Cloudfunctions
 
@@ -2380,7 +2380,7 @@ Policy name: `googlenative-cloudidentity-v1beta1-device-disallow-beta-resource`
 
 Code path: `googlenative.cloudidentity.v1beta1.Device.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudidentity.v1beta1.Device).
+Disallow the use of non-stable (Beta) resources (cloudidentity.v1beta1.Device).
 
 Service: Cloudidentity
 
@@ -2402,7 +2402,7 @@ Policy name: `googlenative-cloudidentity-v1beta1-group-disallow-beta-resource`
 
 Code path: `googlenative.cloudidentity.v1beta1.Group.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudidentity.v1beta1.Group).
+Disallow the use of non-stable (Beta) resources (cloudidentity.v1beta1.Group).
 
 Service: Cloudidentity
 
@@ -2424,7 +2424,7 @@ Policy name: `googlenative-cloudidentity-v1beta1-inboundsamlssoprofile-disallow-
 
 Code path: `googlenative.cloudidentity.v1beta1.InboundSamlSsoProfile.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudidentity.v1beta1.InboundSamlSsoProfile).
+Disallow the use of non-stable (Beta) resources (cloudidentity.v1beta1.InboundSamlSsoProfile).
 
 Service: Cloudidentity
 
@@ -2446,7 +2446,7 @@ Policy name: `googlenative-cloudidentity-v1beta1-inboundssoassignment-disallow-b
 
 Code path: `googlenative.cloudidentity.v1beta1.InboundSsoAssignment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudidentity.v1beta1.InboundSsoAssignment).
+Disallow the use of non-stable (Beta) resources (cloudidentity.v1beta1.InboundSsoAssignment).
 
 Service: Cloudidentity
 
@@ -2468,7 +2468,7 @@ Policy name: `googlenative-cloudidentity-v1beta1-membership-disallow-beta-resour
 
 Code path: `googlenative.cloudidentity.v1beta1.Membership.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudidentity.v1beta1.Membership).
+Disallow the use of non-stable (Beta) resources (cloudidentity.v1beta1.Membership).
 
 Service: Cloudidentity
 
@@ -2494,7 +2494,7 @@ Policy name: `googlenative-cloudresourcemanager-v1beta1-organizationiambinding-d
 
 Code path: `googlenative.cloudresourcemanager.v1beta1.OrganizationIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v1beta1.OrganizationIamBinding).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v1beta1.OrganizationIamBinding).
 
 Service: Cloudresourcemanager
 
@@ -2516,7 +2516,7 @@ Policy name: `googlenative-cloudresourcemanager-v1beta1-organizationiammember-di
 
 Code path: `googlenative.cloudresourcemanager.v1beta1.OrganizationIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v1beta1.OrganizationIamMember).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v1beta1.OrganizationIamMember).
 
 Service: Cloudresourcemanager
 
@@ -2538,7 +2538,7 @@ Policy name: `googlenative-cloudresourcemanager-v1beta1-organizationiampolicy-di
 
 Code path: `googlenative.cloudresourcemanager.v1beta1.OrganizationIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v1beta1.OrganizationIamPolicy).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v1beta1.OrganizationIamPolicy).
 
 Service: Cloudresourcemanager
 
@@ -2560,7 +2560,7 @@ Policy name: `googlenative-cloudresourcemanager-v1beta1-project-disallow-beta-re
 
 Code path: `googlenative.cloudresourcemanager.v1beta1.Project.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v1beta1.Project).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v1beta1.Project).
 
 Service: Cloudresourcemanager
 
@@ -2582,7 +2582,7 @@ Policy name: `googlenative-cloudresourcemanager-v1beta1-projectiambinding-disall
 
 Code path: `googlenative.cloudresourcemanager.v1beta1.ProjectIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v1beta1.ProjectIamBinding).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v1beta1.ProjectIamBinding).
 
 Service: Cloudresourcemanager
 
@@ -2604,7 +2604,7 @@ Policy name: `googlenative-cloudresourcemanager-v1beta1-projectiammember-disallo
 
 Code path: `googlenative.cloudresourcemanager.v1beta1.ProjectIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v1beta1.ProjectIamMember).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v1beta1.ProjectIamMember).
 
 Service: Cloudresourcemanager
 
@@ -2626,7 +2626,7 @@ Policy name: `googlenative-cloudresourcemanager-v1beta1-projectiampolicy-disallo
 
 Code path: `googlenative.cloudresourcemanager.v1beta1.ProjectIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v1beta1.ProjectIamPolicy).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v1beta1.ProjectIamPolicy).
 
 Service: Cloudresourcemanager
 
@@ -2650,7 +2650,7 @@ Policy name: `googlenative-cloudresourcemanager-v2beta1-folder-disallow-beta-res
 
 Code path: `googlenative.cloudresourcemanager.v2beta1.Folder.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v2beta1.Folder).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v2beta1.Folder).
 
 Service: Cloudresourcemanager
 
@@ -2672,7 +2672,7 @@ Policy name: `googlenative-cloudresourcemanager-v2beta1-folderiambinding-disallo
 
 Code path: `googlenative.cloudresourcemanager.v2beta1.FolderIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v2beta1.FolderIamBinding).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v2beta1.FolderIamBinding).
 
 Service: Cloudresourcemanager
 
@@ -2694,7 +2694,7 @@ Policy name: `googlenative-cloudresourcemanager-v2beta1-folderiammember-disallow
 
 Code path: `googlenative.cloudresourcemanager.v2beta1.FolderIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v2beta1.FolderIamMember).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v2beta1.FolderIamMember).
 
 Service: Cloudresourcemanager
 
@@ -2716,7 +2716,7 @@ Policy name: `googlenative-cloudresourcemanager-v2beta1-folderiampolicy-disallow
 
 Code path: `googlenative.cloudresourcemanager.v2beta1.FolderIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudresourcemanager.v2beta1.FolderIamPolicy).
+Disallow the use of non-stable (Beta) resources (cloudresourcemanager.v2beta1.FolderIamPolicy).
 
 Service: Cloudresourcemanager
 
@@ -2742,7 +2742,7 @@ Policy name: `googlenative-cloudscheduler-v1beta1-job-disallow-beta-resource`
 
 Code path: `googlenative.cloudscheduler.v1beta1.Job.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudscheduler.v1beta1.Job).
+Disallow the use of non-stable (Beta) resources (cloudscheduler.v1beta1.Job).
 
 Service: Cloudscheduler
 
@@ -2768,7 +2768,7 @@ Policy name: `googlenative-cloudsupport-v2beta-case-disallow-beta-resource`
 
 Code path: `googlenative.cloudsupport.v2beta.Case.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudsupport.v2beta.Case).
+Disallow the use of non-stable (Beta) resources (cloudsupport.v2beta.Case).
 
 Service: Cloudsupport
 
@@ -2794,7 +2794,7 @@ Policy name: `googlenative-cloudtasks-v2beta2-queue-disallow-beta-resource`
 
 Code path: `googlenative.cloudtasks.v2beta2.Queue.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta2.Queue).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta2.Queue).
 
 Service: Cloudtasks
 
@@ -2816,7 +2816,7 @@ Policy name: `googlenative-cloudtasks-v2beta2-queueiambinding-disallow-beta-reso
 
 Code path: `googlenative.cloudtasks.v2beta2.QueueIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta2.QueueIamBinding).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta2.QueueIamBinding).
 
 Service: Cloudtasks
 
@@ -2838,7 +2838,7 @@ Policy name: `googlenative-cloudtasks-v2beta2-queueiammember-disallow-beta-resou
 
 Code path: `googlenative.cloudtasks.v2beta2.QueueIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta2.QueueIamMember).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta2.QueueIamMember).
 
 Service: Cloudtasks
 
@@ -2860,7 +2860,7 @@ Policy name: `googlenative-cloudtasks-v2beta2-queueiampolicy-disallow-beta-resou
 
 Code path: `googlenative.cloudtasks.v2beta2.QueueIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta2.QueueIamPolicy).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta2.QueueIamPolicy).
 
 Service: Cloudtasks
 
@@ -2882,7 +2882,7 @@ Policy name: `googlenative-cloudtasks-v2beta2-task-disallow-beta-resource`
 
 Code path: `googlenative.cloudtasks.v2beta2.Task.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta2.Task).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta2.Task).
 
 Service: Cloudtasks
 
@@ -2906,7 +2906,7 @@ Policy name: `googlenative-cloudtasks-v2beta3-queue-disallow-beta-resource`
 
 Code path: `googlenative.cloudtasks.v2beta3.Queue.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta3.Queue).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta3.Queue).
 
 Service: Cloudtasks
 
@@ -2928,7 +2928,7 @@ Policy name: `googlenative-cloudtasks-v2beta3-queueiambinding-disallow-beta-reso
 
 Code path: `googlenative.cloudtasks.v2beta3.QueueIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta3.QueueIamBinding).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta3.QueueIamBinding).
 
 Service: Cloudtasks
 
@@ -2950,7 +2950,7 @@ Policy name: `googlenative-cloudtasks-v2beta3-queueiammember-disallow-beta-resou
 
 Code path: `googlenative.cloudtasks.v2beta3.QueueIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta3.QueueIamMember).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta3.QueueIamMember).
 
 Service: Cloudtasks
 
@@ -2972,7 +2972,7 @@ Policy name: `googlenative-cloudtasks-v2beta3-queueiampolicy-disallow-beta-resou
 
 Code path: `googlenative.cloudtasks.v2beta3.QueueIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta3.QueueIamPolicy).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta3.QueueIamPolicy).
 
 Service: Cloudtasks
 
@@ -2994,7 +2994,7 @@ Policy name: `googlenative-cloudtasks-v2beta3-task-disallow-beta-resource`
 
 Code path: `googlenative.cloudtasks.v2beta3.Task.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtasks.v2beta3.Task).
+Disallow the use of non-stable (Beta) resources (cloudtasks.v2beta3.Task).
 
 Service: Cloudtasks
 
@@ -3020,7 +3020,7 @@ Policy name: `googlenative-cloudtrace-v2beta1-tracesink-disallow-beta-resource`
 
 Code path: `googlenative.cloudtrace.v2beta1.TraceSink.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (cloudtrace.v2beta1.TraceSink).
+Disallow the use of non-stable (Beta) resources (cloudtrace.v2beta1.TraceSink).
 
 Service: Cloudtrace
 
@@ -3046,7 +3046,7 @@ Policy name: `googlenative-composer-v1beta1-environment-disallow-beta-resource`
 
 Code path: `googlenative.composer.v1beta1.Environment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (composer.v1beta1.Environment).
+Disallow the use of non-stable (Beta) resources (composer.v1beta1.Environment).
 
 Service: Composer
 
@@ -3072,7 +3072,7 @@ Policy name: `googlenative-compute-alpha-address-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Address.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Address).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Address).
 
 Service: Compute
 
@@ -3094,7 +3094,7 @@ Policy name: `googlenative-compute-alpha-autoscaler-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Autoscaler.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Autoscaler).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Autoscaler).
 
 Service: Compute
 
@@ -3116,7 +3116,7 @@ Policy name: `googlenative-compute-alpha-backendbucket-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.BackendBucket.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.BackendBucket).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.BackendBucket).
 
 Service: Compute
 
@@ -3138,7 +3138,7 @@ Policy name: `googlenative-compute-alpha-backendbucketiambinding-disallow-alpha-
 
 Code path: `googlenative.compute.alpha.BackendBucketIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.BackendBucketIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.BackendBucketIamBinding).
 
 Service: Compute
 
@@ -3160,7 +3160,7 @@ Policy name: `googlenative-compute-alpha-backendbucketiammember-disallow-alpha-r
 
 Code path: `googlenative.compute.alpha.BackendBucketIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.BackendBucketIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.BackendBucketIamMember).
 
 Service: Compute
 
@@ -3182,7 +3182,7 @@ Policy name: `googlenative-compute-alpha-backendbucketiampolicy-disallow-alpha-r
 
 Code path: `googlenative.compute.alpha.BackendBucketIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.BackendBucketIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.BackendBucketIamPolicy).
 
 Service: Compute
 
@@ -3204,7 +3204,7 @@ Policy name: `googlenative-compute-alpha-backendservice-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.BackendService.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.BackendService).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.BackendService).
 
 Service: Compute
 
@@ -3226,7 +3226,7 @@ Policy name: `googlenative-compute-alpha-backendserviceiambinding-disallow-alpha
 
 Code path: `googlenative.compute.alpha.BackendServiceIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.BackendServiceIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.BackendServiceIamBinding).
 
 Service: Compute
 
@@ -3248,7 +3248,7 @@ Policy name: `googlenative-compute-alpha-backendserviceiammember-disallow-alpha-
 
 Code path: `googlenative.compute.alpha.BackendServiceIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.BackendServiceIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.BackendServiceIamMember).
 
 Service: Compute
 
@@ -3270,7 +3270,7 @@ Policy name: `googlenative-compute-alpha-backendserviceiampolicy-disallow-alpha-
 
 Code path: `googlenative.compute.alpha.BackendServiceIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.BackendServiceIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.BackendServiceIamPolicy).
 
 Service: Compute
 
@@ -3292,7 +3292,7 @@ Policy name: `googlenative-compute-alpha-disk-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Disk.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Disk).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Disk).
 
 Service: Compute
 
@@ -3314,7 +3314,7 @@ Policy name: `googlenative-compute-alpha-diskiambinding-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.DiskIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.DiskIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.DiskIamBinding).
 
 Service: Compute
 
@@ -3336,7 +3336,7 @@ Policy name: `googlenative-compute-alpha-diskiammember-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.DiskIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.DiskIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.DiskIamMember).
 
 Service: Compute
 
@@ -3358,7 +3358,7 @@ Policy name: `googlenative-compute-alpha-diskiampolicy-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.DiskIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.DiskIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.DiskIamPolicy).
 
 Service: Compute
 
@@ -3380,7 +3380,7 @@ Policy name: `googlenative-compute-alpha-externalvpngateway-disallow-alpha-resou
 
 Code path: `googlenative.compute.alpha.ExternalVpnGateway.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ExternalVpnGateway).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ExternalVpnGateway).
 
 Service: Compute
 
@@ -3402,7 +3402,7 @@ Policy name: `googlenative-compute-alpha-firewall-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Firewall.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Firewall).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Firewall).
 
 Service: Compute
 
@@ -3424,7 +3424,7 @@ Policy name: `googlenative-compute-alpha-firewallpolicy-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.FirewallPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.FirewallPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.FirewallPolicy).
 
 Service: Compute
 
@@ -3446,7 +3446,7 @@ Policy name: `googlenative-compute-alpha-firewallpolicyiambinding-disallow-alpha
 
 Code path: `googlenative.compute.alpha.FirewallPolicyIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.FirewallPolicyIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.FirewallPolicyIamBinding).
 
 Service: Compute
 
@@ -3468,7 +3468,7 @@ Policy name: `googlenative-compute-alpha-firewallpolicyiammember-disallow-alpha-
 
 Code path: `googlenative.compute.alpha.FirewallPolicyIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.FirewallPolicyIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.FirewallPolicyIamMember).
 
 Service: Compute
 
@@ -3490,7 +3490,7 @@ Policy name: `googlenative-compute-alpha-firewallpolicyiampolicy-disallow-alpha-
 
 Code path: `googlenative.compute.alpha.FirewallPolicyIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.FirewallPolicyIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.FirewallPolicyIamPolicy).
 
 Service: Compute
 
@@ -3512,7 +3512,7 @@ Policy name: `googlenative-compute-alpha-forwardingrule-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.ForwardingRule.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ForwardingRule).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ForwardingRule).
 
 Service: Compute
 
@@ -3534,7 +3534,7 @@ Policy name: `googlenative-compute-alpha-futurereservation-disallow-alpha-resour
 
 Code path: `googlenative.compute.alpha.FutureReservation.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.FutureReservation).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.FutureReservation).
 
 Service: Compute
 
@@ -3556,7 +3556,7 @@ Policy name: `googlenative-compute-alpha-globaladdress-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.GlobalAddress.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.GlobalAddress).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.GlobalAddress).
 
 Service: Compute
 
@@ -3578,7 +3578,7 @@ Policy name: `googlenative-compute-alpha-globalforwardingrule-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.GlobalForwardingRule.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.GlobalForwardingRule).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.GlobalForwardingRule).
 
 Service: Compute
 
@@ -3600,7 +3600,7 @@ Policy name: `googlenative-compute-alpha-globalnetworkendpointgroup-disallow-alp
 
 Code path: `googlenative.compute.alpha.GlobalNetworkEndpointGroup.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.GlobalNetworkEndpointGroup).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.GlobalNetworkEndpointGroup).
 
 Service: Compute
 
@@ -3622,7 +3622,7 @@ Policy name: `googlenative-compute-alpha-globalpublicdelegatedprefix-disallow-al
 
 Code path: `googlenative.compute.alpha.GlobalPublicDelegatedPrefix.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.GlobalPublicDelegatedPrefix).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.GlobalPublicDelegatedPrefix).
 
 Service: Compute
 
@@ -3644,7 +3644,7 @@ Policy name: `googlenative-compute-alpha-healthcheck-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.HealthCheck.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.HealthCheck).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.HealthCheck).
 
 Service: Compute
 
@@ -3666,7 +3666,7 @@ Policy name: `googlenative-compute-alpha-httphealthcheck-disallow-alpha-resource
 
 Code path: `googlenative.compute.alpha.HttpHealthCheck.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.HttpHealthCheck).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.HttpHealthCheck).
 
 Service: Compute
 
@@ -3688,7 +3688,7 @@ Policy name: `googlenative-compute-alpha-httpshealthcheck-disallow-alpha-resourc
 
 Code path: `googlenative.compute.alpha.HttpsHealthCheck.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.HttpsHealthCheck).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.HttpsHealthCheck).
 
 Service: Compute
 
@@ -3710,7 +3710,7 @@ Policy name: `googlenative-compute-alpha-image-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Image.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Image).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Image).
 
 Service: Compute
 
@@ -3732,7 +3732,7 @@ Policy name: `googlenative-compute-alpha-imageiambinding-disallow-alpha-resource
 
 Code path: `googlenative.compute.alpha.ImageIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ImageIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ImageIamBinding).
 
 Service: Compute
 
@@ -3754,7 +3754,7 @@ Policy name: `googlenative-compute-alpha-imageiammember-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.ImageIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ImageIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ImageIamMember).
 
 Service: Compute
 
@@ -3776,7 +3776,7 @@ Policy name: `googlenative-compute-alpha-imageiampolicy-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.ImageIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ImageIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ImageIamPolicy).
 
 Service: Compute
 
@@ -3798,7 +3798,7 @@ Policy name: `googlenative-compute-alpha-instance-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Instance.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Instance).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Instance).
 
 Service: Compute
 
@@ -3820,7 +3820,7 @@ Policy name: `googlenative-compute-alpha-instancegroup-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.InstanceGroup.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceGroup).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceGroup).
 
 Service: Compute
 
@@ -3842,7 +3842,7 @@ Policy name: `googlenative-compute-alpha-instancegroupmanager-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.InstanceGroupManager.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceGroupManager).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceGroupManager).
 
 Service: Compute
 
@@ -3864,7 +3864,7 @@ Policy name: `googlenative-compute-alpha-instancegroupmanagerresizerequest-disal
 
 Code path: `googlenative.compute.alpha.InstanceGroupManagerResizeRequest.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceGroupManagerResizeRequest).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceGroupManagerResizeRequest).
 
 Service: Compute
 
@@ -3886,7 +3886,7 @@ Policy name: `googlenative-compute-alpha-instanceiambinding-disallow-alpha-resou
 
 Code path: `googlenative.compute.alpha.InstanceIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceIamBinding).
 
 Service: Compute
 
@@ -3908,7 +3908,7 @@ Policy name: `googlenative-compute-alpha-instanceiammember-disallow-alpha-resour
 
 Code path: `googlenative.compute.alpha.InstanceIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceIamMember).
 
 Service: Compute
 
@@ -3930,7 +3930,7 @@ Policy name: `googlenative-compute-alpha-instanceiampolicy-disallow-alpha-resour
 
 Code path: `googlenative.compute.alpha.InstanceIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceIamPolicy).
 
 Service: Compute
 
@@ -3952,7 +3952,7 @@ Policy name: `googlenative-compute-alpha-instancetemplate-disallow-alpha-resourc
 
 Code path: `googlenative.compute.alpha.InstanceTemplate.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceTemplate).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceTemplate).
 
 Service: Compute
 
@@ -3974,7 +3974,7 @@ Policy name: `googlenative-compute-alpha-instancetemplateiambinding-disallow-alp
 
 Code path: `googlenative.compute.alpha.InstanceTemplateIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceTemplateIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceTemplateIamBinding).
 
 Service: Compute
 
@@ -3996,7 +3996,7 @@ Policy name: `googlenative-compute-alpha-instancetemplateiammember-disallow-alph
 
 Code path: `googlenative.compute.alpha.InstanceTemplateIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceTemplateIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceTemplateIamMember).
 
 Service: Compute
 
@@ -4018,7 +4018,7 @@ Policy name: `googlenative-compute-alpha-instancetemplateiampolicy-disallow-alph
 
 Code path: `googlenative.compute.alpha.InstanceTemplateIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstanceTemplateIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstanceTemplateIamPolicy).
 
 Service: Compute
 
@@ -4040,7 +4040,7 @@ Policy name: `googlenative-compute-alpha-instantsnapshot-disallow-alpha-resource
 
 Code path: `googlenative.compute.alpha.InstantSnapshot.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstantSnapshot).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstantSnapshot).
 
 Service: Compute
 
@@ -4062,7 +4062,7 @@ Policy name: `googlenative-compute-alpha-instantsnapshotiambinding-disallow-alph
 
 Code path: `googlenative.compute.alpha.InstantSnapshotIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstantSnapshotIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstantSnapshotIamBinding).
 
 Service: Compute
 
@@ -4084,7 +4084,7 @@ Policy name: `googlenative-compute-alpha-instantsnapshotiammember-disallow-alpha
 
 Code path: `googlenative.compute.alpha.InstantSnapshotIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstantSnapshotIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstantSnapshotIamMember).
 
 Service: Compute
 
@@ -4106,7 +4106,7 @@ Policy name: `googlenative-compute-alpha-instantsnapshotiampolicy-disallow-alpha
 
 Code path: `googlenative.compute.alpha.InstantSnapshotIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InstantSnapshotIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InstantSnapshotIamPolicy).
 
 Service: Compute
 
@@ -4128,7 +4128,7 @@ Policy name: `googlenative-compute-alpha-interconnect-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Interconnect.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Interconnect).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Interconnect).
 
 Service: Compute
 
@@ -4150,7 +4150,7 @@ Policy name: `googlenative-compute-alpha-interconnectattachment-disallow-alpha-r
 
 Code path: `googlenative.compute.alpha.InterconnectAttachment.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InterconnectAttachment).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InterconnectAttachment).
 
 Service: Compute
 
@@ -4172,7 +4172,7 @@ Policy name: `googlenative-compute-alpha-interconnectattachmentiambinding-disall
 
 Code path: `googlenative.compute.alpha.InterconnectAttachmentIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InterconnectAttachmentIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InterconnectAttachmentIamBinding).
 
 Service: Compute
 
@@ -4194,7 +4194,7 @@ Policy name: `googlenative-compute-alpha-interconnectattachmentiammember-disallo
 
 Code path: `googlenative.compute.alpha.InterconnectAttachmentIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InterconnectAttachmentIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InterconnectAttachmentIamMember).
 
 Service: Compute
 
@@ -4216,7 +4216,7 @@ Policy name: `googlenative-compute-alpha-interconnectattachmentiampolicy-disallo
 
 Code path: `googlenative.compute.alpha.InterconnectAttachmentIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InterconnectAttachmentIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InterconnectAttachmentIamPolicy).
 
 Service: Compute
 
@@ -4238,7 +4238,7 @@ Policy name: `googlenative-compute-alpha-interconnectiambinding-disallow-alpha-r
 
 Code path: `googlenative.compute.alpha.InterconnectIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InterconnectIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InterconnectIamBinding).
 
 Service: Compute
 
@@ -4260,7 +4260,7 @@ Policy name: `googlenative-compute-alpha-interconnectiammember-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.InterconnectIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InterconnectIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InterconnectIamMember).
 
 Service: Compute
 
@@ -4282,7 +4282,7 @@ Policy name: `googlenative-compute-alpha-interconnectiampolicy-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.InterconnectIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.InterconnectIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.InterconnectIamPolicy).
 
 Service: Compute
 
@@ -4304,7 +4304,7 @@ Policy name: `googlenative-compute-alpha-license-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.License.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.License).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.License).
 
 Service: Compute
 
@@ -4326,7 +4326,7 @@ Policy name: `googlenative-compute-alpha-licensecodeiambinding-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.LicenseCodeIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.LicenseCodeIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.LicenseCodeIamBinding).
 
 Service: Compute
 
@@ -4348,7 +4348,7 @@ Policy name: `googlenative-compute-alpha-licensecodeiammember-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.LicenseCodeIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.LicenseCodeIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.LicenseCodeIamMember).
 
 Service: Compute
 
@@ -4370,7 +4370,7 @@ Policy name: `googlenative-compute-alpha-licensecodeiampolicy-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.LicenseCodeIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.LicenseCodeIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.LicenseCodeIamPolicy).
 
 Service: Compute
 
@@ -4392,7 +4392,7 @@ Policy name: `googlenative-compute-alpha-licenseiambinding-disallow-alpha-resour
 
 Code path: `googlenative.compute.alpha.LicenseIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.LicenseIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.LicenseIamBinding).
 
 Service: Compute
 
@@ -4414,7 +4414,7 @@ Policy name: `googlenative-compute-alpha-licenseiammember-disallow-alpha-resourc
 
 Code path: `googlenative.compute.alpha.LicenseIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.LicenseIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.LicenseIamMember).
 
 Service: Compute
 
@@ -4436,7 +4436,7 @@ Policy name: `googlenative-compute-alpha-licenseiampolicy-disallow-alpha-resourc
 
 Code path: `googlenative.compute.alpha.LicenseIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.LicenseIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.LicenseIamPolicy).
 
 Service: Compute
 
@@ -4458,7 +4458,7 @@ Policy name: `googlenative-compute-alpha-machineimage-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.MachineImage.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.MachineImage).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.MachineImage).
 
 Service: Compute
 
@@ -4480,7 +4480,7 @@ Policy name: `googlenative-compute-alpha-machineimageiambinding-disallow-alpha-r
 
 Code path: `googlenative.compute.alpha.MachineImageIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.MachineImageIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.MachineImageIamBinding).
 
 Service: Compute
 
@@ -4502,7 +4502,7 @@ Policy name: `googlenative-compute-alpha-machineimageiammember-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.MachineImageIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.MachineImageIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.MachineImageIamMember).
 
 Service: Compute
 
@@ -4524,7 +4524,7 @@ Policy name: `googlenative-compute-alpha-machineimageiampolicy-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.MachineImageIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.MachineImageIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.MachineImageIamPolicy).
 
 Service: Compute
 
@@ -4546,7 +4546,7 @@ Policy name: `googlenative-compute-alpha-network-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Network.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Network).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Network).
 
 Service: Compute
 
@@ -4568,7 +4568,7 @@ Policy name: `googlenative-compute-alpha-networkattachment-disallow-alpha-resour
 
 Code path: `googlenative.compute.alpha.NetworkAttachment.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkAttachment).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkAttachment).
 
 Service: Compute
 
@@ -4590,7 +4590,7 @@ Policy name: `googlenative-compute-alpha-networkattachmentiambinding-disallow-al
 
 Code path: `googlenative.compute.alpha.NetworkAttachmentIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkAttachmentIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkAttachmentIamBinding).
 
 Service: Compute
 
@@ -4612,7 +4612,7 @@ Policy name: `googlenative-compute-alpha-networkattachmentiammember-disallow-alp
 
 Code path: `googlenative.compute.alpha.NetworkAttachmentIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkAttachmentIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkAttachmentIamMember).
 
 Service: Compute
 
@@ -4634,7 +4634,7 @@ Policy name: `googlenative-compute-alpha-networkattachmentiampolicy-disallow-alp
 
 Code path: `googlenative.compute.alpha.NetworkAttachmentIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkAttachmentIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkAttachmentIamPolicy).
 
 Service: Compute
 
@@ -4656,7 +4656,7 @@ Policy name: `googlenative-compute-alpha-networkedgesecurityservice-disallow-alp
 
 Code path: `googlenative.compute.alpha.NetworkEdgeSecurityService.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkEdgeSecurityService).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkEdgeSecurityService).
 
 Service: Compute
 
@@ -4678,7 +4678,7 @@ Policy name: `googlenative-compute-alpha-networkendpointgroup-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.NetworkEndpointGroup.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkEndpointGroup).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkEndpointGroup).
 
 Service: Compute
 
@@ -4700,7 +4700,7 @@ Policy name: `googlenative-compute-alpha-networkfirewallpolicy-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.NetworkFirewallPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkFirewallPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkFirewallPolicy).
 
 Service: Compute
 
@@ -4722,7 +4722,7 @@ Policy name: `googlenative-compute-alpha-networkfirewallpolicyiambinding-disallo
 
 Code path: `googlenative.compute.alpha.NetworkFirewallPolicyIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkFirewallPolicyIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkFirewallPolicyIamBinding).
 
 Service: Compute
 
@@ -4744,7 +4744,7 @@ Policy name: `googlenative-compute-alpha-networkfirewallpolicyiammember-disallow
 
 Code path: `googlenative.compute.alpha.NetworkFirewallPolicyIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkFirewallPolicyIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkFirewallPolicyIamMember).
 
 Service: Compute
 
@@ -4766,7 +4766,7 @@ Policy name: `googlenative-compute-alpha-networkfirewallpolicyiampolicy-disallow
 
 Code path: `googlenative.compute.alpha.NetworkFirewallPolicyIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NetworkFirewallPolicyIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NetworkFirewallPolicyIamPolicy).
 
 Service: Compute
 
@@ -4788,7 +4788,7 @@ Policy name: `googlenative-compute-alpha-nodegroup-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.NodeGroup.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NodeGroup).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NodeGroup).
 
 Service: Compute
 
@@ -4810,7 +4810,7 @@ Policy name: `googlenative-compute-alpha-nodegroupiambinding-disallow-alpha-reso
 
 Code path: `googlenative.compute.alpha.NodeGroupIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NodeGroupIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NodeGroupIamBinding).
 
 Service: Compute
 
@@ -4832,7 +4832,7 @@ Policy name: `googlenative-compute-alpha-nodegroupiammember-disallow-alpha-resou
 
 Code path: `googlenative.compute.alpha.NodeGroupIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NodeGroupIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NodeGroupIamMember).
 
 Service: Compute
 
@@ -4854,7 +4854,7 @@ Policy name: `googlenative-compute-alpha-nodegroupiampolicy-disallow-alpha-resou
 
 Code path: `googlenative.compute.alpha.NodeGroupIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NodeGroupIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NodeGroupIamPolicy).
 
 Service: Compute
 
@@ -4876,7 +4876,7 @@ Policy name: `googlenative-compute-alpha-nodetemplate-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.NodeTemplate.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NodeTemplate).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NodeTemplate).
 
 Service: Compute
 
@@ -4898,7 +4898,7 @@ Policy name: `googlenative-compute-alpha-nodetemplateiambinding-disallow-alpha-r
 
 Code path: `googlenative.compute.alpha.NodeTemplateIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NodeTemplateIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NodeTemplateIamBinding).
 
 Service: Compute
 
@@ -4920,7 +4920,7 @@ Policy name: `googlenative-compute-alpha-nodetemplateiammember-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.NodeTemplateIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NodeTemplateIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NodeTemplateIamMember).
 
 Service: Compute
 
@@ -4942,7 +4942,7 @@ Policy name: `googlenative-compute-alpha-nodetemplateiampolicy-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.NodeTemplateIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.NodeTemplateIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.NodeTemplateIamPolicy).
 
 Service: Compute
 
@@ -4964,7 +4964,7 @@ Policy name: `googlenative-compute-alpha-organizationsecuritypolicy-disallow-alp
 
 Code path: `googlenative.compute.alpha.OrganizationSecurityPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.OrganizationSecurityPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.OrganizationSecurityPolicy).
 
 Service: Compute
 
@@ -4986,7 +4986,7 @@ Policy name: `googlenative-compute-alpha-packetmirroring-disallow-alpha-resource
 
 Code path: `googlenative.compute.alpha.PacketMirroring.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.PacketMirroring).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.PacketMirroring).
 
 Service: Compute
 
@@ -5008,7 +5008,7 @@ Policy name: `googlenative-compute-alpha-publicadvertisedprefix-disallow-alpha-r
 
 Code path: `googlenative.compute.alpha.PublicAdvertisedPrefix.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.PublicAdvertisedPrefix).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.PublicAdvertisedPrefix).
 
 Service: Compute
 
@@ -5030,7 +5030,7 @@ Policy name: `googlenative-compute-alpha-publicdelegatedprefix-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.PublicDelegatedPrefix.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.PublicDelegatedPrefix).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.PublicDelegatedPrefix).
 
 Service: Compute
 
@@ -5052,7 +5052,7 @@ Policy name: `googlenative-compute-alpha-regionautoscaler-disallow-alpha-resourc
 
 Code path: `googlenative.compute.alpha.RegionAutoscaler.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionAutoscaler).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionAutoscaler).
 
 Service: Compute
 
@@ -5074,7 +5074,7 @@ Policy name: `googlenative-compute-alpha-regionbackendservice-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.RegionBackendService.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionBackendService).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionBackendService).
 
 Service: Compute
 
@@ -5096,7 +5096,7 @@ Policy name: `googlenative-compute-alpha-regionbackendserviceiambinding-disallow
 
 Code path: `googlenative.compute.alpha.RegionBackendServiceIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionBackendServiceIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionBackendServiceIamBinding).
 
 Service: Compute
 
@@ -5118,7 +5118,7 @@ Policy name: `googlenative-compute-alpha-regionbackendserviceiammember-disallow-
 
 Code path: `googlenative.compute.alpha.RegionBackendServiceIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionBackendServiceIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionBackendServiceIamMember).
 
 Service: Compute
 
@@ -5140,7 +5140,7 @@ Policy name: `googlenative-compute-alpha-regionbackendserviceiampolicy-disallow-
 
 Code path: `googlenative.compute.alpha.RegionBackendServiceIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionBackendServiceIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionBackendServiceIamPolicy).
 
 Service: Compute
 
@@ -5162,7 +5162,7 @@ Policy name: `googlenative-compute-alpha-regioncommitment-disallow-alpha-resourc
 
 Code path: `googlenative.compute.alpha.RegionCommitment.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionCommitment).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionCommitment).
 
 Service: Compute
 
@@ -5184,7 +5184,7 @@ Policy name: `googlenative-compute-alpha-regiondisk-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.RegionDisk.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionDisk).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionDisk).
 
 Service: Compute
 
@@ -5206,7 +5206,7 @@ Policy name: `googlenative-compute-alpha-regiondiskiambinding-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.RegionDiskIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionDiskIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionDiskIamBinding).
 
 Service: Compute
 
@@ -5228,7 +5228,7 @@ Policy name: `googlenative-compute-alpha-regiondiskiammember-disallow-alpha-reso
 
 Code path: `googlenative.compute.alpha.RegionDiskIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionDiskIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionDiskIamMember).
 
 Service: Compute
 
@@ -5250,7 +5250,7 @@ Policy name: `googlenative-compute-alpha-regiondiskiampolicy-disallow-alpha-reso
 
 Code path: `googlenative.compute.alpha.RegionDiskIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionDiskIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionDiskIamPolicy).
 
 Service: Compute
 
@@ -5272,7 +5272,7 @@ Policy name: `googlenative-compute-alpha-regionhealthcheck-disallow-alpha-resour
 
 Code path: `googlenative.compute.alpha.RegionHealthCheck.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionHealthCheck).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionHealthCheck).
 
 Service: Compute
 
@@ -5294,7 +5294,7 @@ Policy name: `googlenative-compute-alpha-regionhealthcheckservice-disallow-alpha
 
 Code path: `googlenative.compute.alpha.RegionHealthCheckService.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionHealthCheckService).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionHealthCheckService).
 
 Service: Compute
 
@@ -5316,7 +5316,7 @@ Policy name: `googlenative-compute-alpha-regioninstancegroupmanager-disallow-alp
 
 Code path: `googlenative.compute.alpha.RegionInstanceGroupManager.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionInstanceGroupManager).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionInstanceGroupManager).
 
 Service: Compute
 
@@ -5338,7 +5338,7 @@ Policy name: `googlenative-compute-alpha-regioninstancetemplate-disallow-alpha-r
 
 Code path: `googlenative.compute.alpha.RegionInstanceTemplate.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionInstanceTemplate).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionInstanceTemplate).
 
 Service: Compute
 
@@ -5360,7 +5360,7 @@ Policy name: `googlenative-compute-alpha-regioninstantsnapshot-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.RegionInstantSnapshot.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionInstantSnapshot).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionInstantSnapshot).
 
 Service: Compute
 
@@ -5382,7 +5382,7 @@ Policy name: `googlenative-compute-alpha-regioninstantsnapshotiambinding-disallo
 
 Code path: `googlenative.compute.alpha.RegionInstantSnapshotIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionInstantSnapshotIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionInstantSnapshotIamBinding).
 
 Service: Compute
 
@@ -5404,7 +5404,7 @@ Policy name: `googlenative-compute-alpha-regioninstantsnapshotiammember-disallow
 
 Code path: `googlenative.compute.alpha.RegionInstantSnapshotIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionInstantSnapshotIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionInstantSnapshotIamMember).
 
 Service: Compute
 
@@ -5426,7 +5426,7 @@ Policy name: `googlenative-compute-alpha-regioninstantsnapshotiampolicy-disallow
 
 Code path: `googlenative.compute.alpha.RegionInstantSnapshotIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionInstantSnapshotIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionInstantSnapshotIamPolicy).
 
 Service: Compute
 
@@ -5448,7 +5448,7 @@ Policy name: `googlenative-compute-alpha-regionnetworkendpointgroup-disallow-alp
 
 Code path: `googlenative.compute.alpha.RegionNetworkEndpointGroup.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionNetworkEndpointGroup).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionNetworkEndpointGroup).
 
 Service: Compute
 
@@ -5470,7 +5470,7 @@ Policy name: `googlenative-compute-alpha-regionnetworkfirewallpolicy-disallow-al
 
 Code path: `googlenative.compute.alpha.RegionNetworkFirewallPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionNetworkFirewallPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionNetworkFirewallPolicy).
 
 Service: Compute
 
@@ -5492,7 +5492,7 @@ Policy name: `googlenative-compute-alpha-regionnetworkfirewallpolicyiambinding-d
 
 Code path: `googlenative.compute.alpha.RegionNetworkFirewallPolicyIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionNetworkFirewallPolicyIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionNetworkFirewallPolicyIamBinding).
 
 Service: Compute
 
@@ -5514,7 +5514,7 @@ Policy name: `googlenative-compute-alpha-regionnetworkfirewallpolicyiammember-di
 
 Code path: `googlenative.compute.alpha.RegionNetworkFirewallPolicyIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionNetworkFirewallPolicyIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionNetworkFirewallPolicyIamMember).
 
 Service: Compute
 
@@ -5536,7 +5536,7 @@ Policy name: `googlenative-compute-alpha-regionnetworkfirewallpolicyiampolicy-di
 
 Code path: `googlenative.compute.alpha.RegionNetworkFirewallPolicyIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionNetworkFirewallPolicyIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionNetworkFirewallPolicyIamPolicy).
 
 Service: Compute
 
@@ -5558,7 +5558,7 @@ Policy name: `googlenative-compute-alpha-regionnotificationendpoint-disallow-alp
 
 Code path: `googlenative.compute.alpha.RegionNotificationEndpoint.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionNotificationEndpoint).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionNotificationEndpoint).
 
 Service: Compute
 
@@ -5580,7 +5580,7 @@ Policy name: `googlenative-compute-alpha-regionsecuritypolicy-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.RegionSecurityPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionSecurityPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionSecurityPolicy).
 
 Service: Compute
 
@@ -5602,7 +5602,7 @@ Policy name: `googlenative-compute-alpha-regionsslcertificate-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.RegionSslCertificate.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionSslCertificate).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionSslCertificate).
 
 Service: Compute
 
@@ -5624,7 +5624,7 @@ Policy name: `googlenative-compute-alpha-regionsslpolicy-disallow-alpha-resource
 
 Code path: `googlenative.compute.alpha.RegionSslPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionSslPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionSslPolicy).
 
 Service: Compute
 
@@ -5646,7 +5646,7 @@ Policy name: `googlenative-compute-alpha-regiontargethttpproxy-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.RegionTargetHttpProxy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionTargetHttpProxy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionTargetHttpProxy).
 
 Service: Compute
 
@@ -5668,7 +5668,7 @@ Policy name: `googlenative-compute-alpha-regiontargethttpsproxy-disallow-alpha-r
 
 Code path: `googlenative.compute.alpha.RegionTargetHttpsProxy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionTargetHttpsProxy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionTargetHttpsProxy).
 
 Service: Compute
 
@@ -5690,7 +5690,7 @@ Policy name: `googlenative-compute-alpha-regiontargettcpproxy-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.RegionTargetTcpProxy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionTargetTcpProxy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionTargetTcpProxy).
 
 Service: Compute
 
@@ -5712,7 +5712,7 @@ Policy name: `googlenative-compute-alpha-regionurlmap-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.RegionUrlMap.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.RegionUrlMap).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.RegionUrlMap).
 
 Service: Compute
 
@@ -5734,7 +5734,7 @@ Policy name: `googlenative-compute-alpha-reservation-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Reservation.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Reservation).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Reservation).
 
 Service: Compute
 
@@ -5756,7 +5756,7 @@ Policy name: `googlenative-compute-alpha-reservationiambinding-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.ReservationIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ReservationIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ReservationIamBinding).
 
 Service: Compute
 
@@ -5778,7 +5778,7 @@ Policy name: `googlenative-compute-alpha-reservationiammember-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.ReservationIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ReservationIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ReservationIamMember).
 
 Service: Compute
 
@@ -5800,7 +5800,7 @@ Policy name: `googlenative-compute-alpha-reservationiampolicy-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.ReservationIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ReservationIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ReservationIamPolicy).
 
 Service: Compute
 
@@ -5822,7 +5822,7 @@ Policy name: `googlenative-compute-alpha-resourcepolicy-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.ResourcePolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ResourcePolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ResourcePolicy).
 
 Service: Compute
 
@@ -5844,7 +5844,7 @@ Policy name: `googlenative-compute-alpha-resourcepolicyiambinding-disallow-alpha
 
 Code path: `googlenative.compute.alpha.ResourcePolicyIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ResourcePolicyIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ResourcePolicyIamBinding).
 
 Service: Compute
 
@@ -5866,7 +5866,7 @@ Policy name: `googlenative-compute-alpha-resourcepolicyiammember-disallow-alpha-
 
 Code path: `googlenative.compute.alpha.ResourcePolicyIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ResourcePolicyIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ResourcePolicyIamMember).
 
 Service: Compute
 
@@ -5888,7 +5888,7 @@ Policy name: `googlenative-compute-alpha-resourcepolicyiampolicy-disallow-alpha-
 
 Code path: `googlenative.compute.alpha.ResourcePolicyIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ResourcePolicyIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ResourcePolicyIamPolicy).
 
 Service: Compute
 
@@ -5910,7 +5910,7 @@ Policy name: `googlenative-compute-alpha-route-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Route.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Route).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Route).
 
 Service: Compute
 
@@ -5932,7 +5932,7 @@ Policy name: `googlenative-compute-alpha-router-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Router.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Router).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Router).
 
 Service: Compute
 
@@ -5954,7 +5954,7 @@ Policy name: `googlenative-compute-alpha-securitypolicy-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.SecurityPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.SecurityPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.SecurityPolicy).
 
 Service: Compute
 
@@ -5976,7 +5976,7 @@ Policy name: `googlenative-compute-alpha-serviceattachment-disallow-alpha-resour
 
 Code path: `googlenative.compute.alpha.ServiceAttachment.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ServiceAttachment).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ServiceAttachment).
 
 Service: Compute
 
@@ -5998,7 +5998,7 @@ Policy name: `googlenative-compute-alpha-serviceattachmentiambinding-disallow-al
 
 Code path: `googlenative.compute.alpha.ServiceAttachmentIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ServiceAttachmentIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ServiceAttachmentIamBinding).
 
 Service: Compute
 
@@ -6020,7 +6020,7 @@ Policy name: `googlenative-compute-alpha-serviceattachmentiammember-disallow-alp
 
 Code path: `googlenative.compute.alpha.ServiceAttachmentIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ServiceAttachmentIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ServiceAttachmentIamMember).
 
 Service: Compute
 
@@ -6042,7 +6042,7 @@ Policy name: `googlenative-compute-alpha-serviceattachmentiampolicy-disallow-alp
 
 Code path: `googlenative.compute.alpha.ServiceAttachmentIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ServiceAttachmentIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ServiceAttachmentIamPolicy).
 
 Service: Compute
 
@@ -6064,7 +6064,7 @@ Policy name: `googlenative-compute-alpha-snapshot-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Snapshot.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Snapshot).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Snapshot).
 
 Service: Compute
 
@@ -6086,7 +6086,7 @@ Policy name: `googlenative-compute-alpha-snapshotiambinding-disallow-alpha-resou
 
 Code path: `googlenative.compute.alpha.SnapshotIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.SnapshotIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.SnapshotIamBinding).
 
 Service: Compute
 
@@ -6108,7 +6108,7 @@ Policy name: `googlenative-compute-alpha-snapshotiammember-disallow-alpha-resour
 
 Code path: `googlenative.compute.alpha.SnapshotIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.SnapshotIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.SnapshotIamMember).
 
 Service: Compute
 
@@ -6130,7 +6130,7 @@ Policy name: `googlenative-compute-alpha-snapshotiampolicy-disallow-alpha-resour
 
 Code path: `googlenative.compute.alpha.SnapshotIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.SnapshotIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.SnapshotIamPolicy).
 
 Service: Compute
 
@@ -6152,7 +6152,7 @@ Policy name: `googlenative-compute-alpha-sslcertificate-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.SslCertificate.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.SslCertificate).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.SslCertificate).
 
 Service: Compute
 
@@ -6174,7 +6174,7 @@ Policy name: `googlenative-compute-alpha-sslpolicy-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.SslPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.SslPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.SslPolicy).
 
 Service: Compute
 
@@ -6196,7 +6196,7 @@ Policy name: `googlenative-compute-alpha-storagepool-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.StoragePool.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.StoragePool).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.StoragePool).
 
 Service: Compute
 
@@ -6218,7 +6218,7 @@ Policy name: `googlenative-compute-alpha-storagepooliambinding-disallow-alpha-re
 
 Code path: `googlenative.compute.alpha.StoragePoolIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.StoragePoolIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.StoragePoolIamBinding).
 
 Service: Compute
 
@@ -6240,7 +6240,7 @@ Policy name: `googlenative-compute-alpha-storagepooliammember-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.StoragePoolIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.StoragePoolIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.StoragePoolIamMember).
 
 Service: Compute
 
@@ -6262,7 +6262,7 @@ Policy name: `googlenative-compute-alpha-storagepooliampolicy-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.StoragePoolIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.StoragePoolIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.StoragePoolIamPolicy).
 
 Service: Compute
 
@@ -6284,7 +6284,7 @@ Policy name: `googlenative-compute-alpha-subnetwork-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.Subnetwork.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.Subnetwork).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.Subnetwork).
 
 Service: Compute
 
@@ -6306,7 +6306,7 @@ Policy name: `googlenative-compute-alpha-subnetworkiambinding-disallow-alpha-res
 
 Code path: `googlenative.compute.alpha.SubnetworkIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.SubnetworkIamBinding).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.SubnetworkIamBinding).
 
 Service: Compute
 
@@ -6328,7 +6328,7 @@ Policy name: `googlenative-compute-alpha-subnetworkiammember-disallow-alpha-reso
 
 Code path: `googlenative.compute.alpha.SubnetworkIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.SubnetworkIamMember).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.SubnetworkIamMember).
 
 Service: Compute
 
@@ -6350,7 +6350,7 @@ Policy name: `googlenative-compute-alpha-subnetworkiampolicy-disallow-alpha-reso
 
 Code path: `googlenative.compute.alpha.SubnetworkIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.SubnetworkIamPolicy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.SubnetworkIamPolicy).
 
 Service: Compute
 
@@ -6372,7 +6372,7 @@ Policy name: `googlenative-compute-alpha-targetgrpcproxy-disallow-alpha-resource
 
 Code path: `googlenative.compute.alpha.TargetGrpcProxy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.TargetGrpcProxy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.TargetGrpcProxy).
 
 Service: Compute
 
@@ -6394,7 +6394,7 @@ Policy name: `googlenative-compute-alpha-targethttpproxy-disallow-alpha-resource
 
 Code path: `googlenative.compute.alpha.TargetHttpProxy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.TargetHttpProxy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.TargetHttpProxy).
 
 Service: Compute
 
@@ -6416,7 +6416,7 @@ Policy name: `googlenative-compute-alpha-targethttpsproxy-disallow-alpha-resourc
 
 Code path: `googlenative.compute.alpha.TargetHttpsProxy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.TargetHttpsProxy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.TargetHttpsProxy).
 
 Service: Compute
 
@@ -6438,7 +6438,7 @@ Policy name: `googlenative-compute-alpha-targetinstance-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.TargetInstance.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.TargetInstance).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.TargetInstance).
 
 Service: Compute
 
@@ -6460,7 +6460,7 @@ Policy name: `googlenative-compute-alpha-targetpool-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.TargetPool.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.TargetPool).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.TargetPool).
 
 Service: Compute
 
@@ -6482,7 +6482,7 @@ Policy name: `googlenative-compute-alpha-targetsslproxy-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.TargetSslProxy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.TargetSslProxy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.TargetSslProxy).
 
 Service: Compute
 
@@ -6504,7 +6504,7 @@ Policy name: `googlenative-compute-alpha-targettcpproxy-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.TargetTcpProxy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.TargetTcpProxy).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.TargetTcpProxy).
 
 Service: Compute
 
@@ -6526,7 +6526,7 @@ Policy name: `googlenative-compute-alpha-targetvpngateway-disallow-alpha-resourc
 
 Code path: `googlenative.compute.alpha.TargetVpnGateway.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.TargetVpnGateway).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.TargetVpnGateway).
 
 Service: Compute
 
@@ -6548,7 +6548,7 @@ Policy name: `googlenative-compute-alpha-urlmap-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.UrlMap.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.UrlMap).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.UrlMap).
 
 Service: Compute
 
@@ -6570,7 +6570,7 @@ Policy name: `googlenative-compute-alpha-vpngateway-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.VpnGateway.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.VpnGateway).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.VpnGateway).
 
 Service: Compute
 
@@ -6592,7 +6592,7 @@ Policy name: `googlenative-compute-alpha-vpntunnel-disallow-alpha-resource`
 
 Code path: `googlenative.compute.alpha.VpnTunnel.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.VpnTunnel).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.VpnTunnel).
 
 Service: Compute
 
@@ -6614,7 +6614,7 @@ Policy name: `googlenative-compute-alpha-zonequeuedresource-disallow-alpha-resou
 
 Code path: `googlenative.compute.alpha.ZoneQueuedResource.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (compute.alpha.ZoneQueuedResource).
+Disallow the use of non-stable (Alpha) resources (compute.alpha.ZoneQueuedResource).
 
 Service: Compute
 
@@ -6638,7 +6638,7 @@ Policy name: `googlenative-compute-beta-address-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Address.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Address).
+Disallow the use of non-stable (Beta) resources (compute.beta.Address).
 
 Service: Compute
 
@@ -6660,7 +6660,7 @@ Policy name: `googlenative-compute-beta-autoscaler-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Autoscaler.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Autoscaler).
+Disallow the use of non-stable (Beta) resources (compute.beta.Autoscaler).
 
 Service: Compute
 
@@ -6682,7 +6682,7 @@ Policy name: `googlenative-compute-beta-backendbucket-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.BackendBucket.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.BackendBucket).
+Disallow the use of non-stable (Beta) resources (compute.beta.BackendBucket).
 
 Service: Compute
 
@@ -6704,7 +6704,7 @@ Policy name: `googlenative-compute-beta-backendbucketiambinding-disallow-beta-re
 
 Code path: `googlenative.compute.beta.BackendBucketIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.BackendBucketIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.BackendBucketIamBinding).
 
 Service: Compute
 
@@ -6726,7 +6726,7 @@ Policy name: `googlenative-compute-beta-backendbucketiammember-disallow-beta-res
 
 Code path: `googlenative.compute.beta.BackendBucketIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.BackendBucketIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.BackendBucketIamMember).
 
 Service: Compute
 
@@ -6748,7 +6748,7 @@ Policy name: `googlenative-compute-beta-backendbucketiampolicy-disallow-beta-res
 
 Code path: `googlenative.compute.beta.BackendBucketIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.BackendBucketIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.BackendBucketIamPolicy).
 
 Service: Compute
 
@@ -6770,7 +6770,7 @@ Policy name: `googlenative-compute-beta-backendservice-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.BackendService.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.BackendService).
+Disallow the use of non-stable (Beta) resources (compute.beta.BackendService).
 
 Service: Compute
 
@@ -6792,7 +6792,7 @@ Policy name: `googlenative-compute-beta-backendserviceiambinding-disallow-beta-r
 
 Code path: `googlenative.compute.beta.BackendServiceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.BackendServiceIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.BackendServiceIamBinding).
 
 Service: Compute
 
@@ -6814,7 +6814,7 @@ Policy name: `googlenative-compute-beta-backendserviceiammember-disallow-beta-re
 
 Code path: `googlenative.compute.beta.BackendServiceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.BackendServiceIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.BackendServiceIamMember).
 
 Service: Compute
 
@@ -6836,7 +6836,7 @@ Policy name: `googlenative-compute-beta-backendserviceiampolicy-disallow-beta-re
 
 Code path: `googlenative.compute.beta.BackendServiceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.BackendServiceIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.BackendServiceIamPolicy).
 
 Service: Compute
 
@@ -6858,7 +6858,7 @@ Policy name: `googlenative-compute-beta-disk-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Disk.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Disk).
+Disallow the use of non-stable (Beta) resources (compute.beta.Disk).
 
 Service: Compute
 
@@ -6880,7 +6880,7 @@ Policy name: `googlenative-compute-beta-diskiambinding-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.DiskIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.DiskIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.DiskIamBinding).
 
 Service: Compute
 
@@ -6902,7 +6902,7 @@ Policy name: `googlenative-compute-beta-diskiammember-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.DiskIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.DiskIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.DiskIamMember).
 
 Service: Compute
 
@@ -6924,7 +6924,7 @@ Policy name: `googlenative-compute-beta-diskiampolicy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.DiskIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.DiskIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.DiskIamPolicy).
 
 Service: Compute
 
@@ -6946,7 +6946,7 @@ Policy name: `googlenative-compute-beta-externalvpngateway-disallow-beta-resourc
 
 Code path: `googlenative.compute.beta.ExternalVpnGateway.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ExternalVpnGateway).
+Disallow the use of non-stable (Beta) resources (compute.beta.ExternalVpnGateway).
 
 Service: Compute
 
@@ -6968,7 +6968,7 @@ Policy name: `googlenative-compute-beta-firewall-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Firewall.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Firewall).
+Disallow the use of non-stable (Beta) resources (compute.beta.Firewall).
 
 Service: Compute
 
@@ -6990,7 +6990,7 @@ Policy name: `googlenative-compute-beta-firewallpolicy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.FirewallPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.FirewallPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.FirewallPolicy).
 
 Service: Compute
 
@@ -7012,7 +7012,7 @@ Policy name: `googlenative-compute-beta-firewallpolicyiambinding-disallow-beta-r
 
 Code path: `googlenative.compute.beta.FirewallPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.FirewallPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.FirewallPolicyIamBinding).
 
 Service: Compute
 
@@ -7034,7 +7034,7 @@ Policy name: `googlenative-compute-beta-firewallpolicyiammember-disallow-beta-re
 
 Code path: `googlenative.compute.beta.FirewallPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.FirewallPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.FirewallPolicyIamMember).
 
 Service: Compute
 
@@ -7056,7 +7056,7 @@ Policy name: `googlenative-compute-beta-firewallpolicyiampolicy-disallow-beta-re
 
 Code path: `googlenative.compute.beta.FirewallPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.FirewallPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.FirewallPolicyIamPolicy).
 
 Service: Compute
 
@@ -7078,7 +7078,7 @@ Policy name: `googlenative-compute-beta-forwardingrule-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.ForwardingRule.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ForwardingRule).
+Disallow the use of non-stable (Beta) resources (compute.beta.ForwardingRule).
 
 Service: Compute
 
@@ -7100,7 +7100,7 @@ Policy name: `googlenative-compute-beta-globaladdress-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.GlobalAddress.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.GlobalAddress).
+Disallow the use of non-stable (Beta) resources (compute.beta.GlobalAddress).
 
 Service: Compute
 
@@ -7122,7 +7122,7 @@ Policy name: `googlenative-compute-beta-globalforwardingrule-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.GlobalForwardingRule.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.GlobalForwardingRule).
+Disallow the use of non-stable (Beta) resources (compute.beta.GlobalForwardingRule).
 
 Service: Compute
 
@@ -7144,7 +7144,7 @@ Policy name: `googlenative-compute-beta-globalnetworkendpointgroup-disallow-beta
 
 Code path: `googlenative.compute.beta.GlobalNetworkEndpointGroup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.GlobalNetworkEndpointGroup).
+Disallow the use of non-stable (Beta) resources (compute.beta.GlobalNetworkEndpointGroup).
 
 Service: Compute
 
@@ -7166,7 +7166,7 @@ Policy name: `googlenative-compute-beta-globalpublicdelegatedprefix-disallow-bet
 
 Code path: `googlenative.compute.beta.GlobalPublicDelegatedPrefix.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.GlobalPublicDelegatedPrefix).
+Disallow the use of non-stable (Beta) resources (compute.beta.GlobalPublicDelegatedPrefix).
 
 Service: Compute
 
@@ -7188,7 +7188,7 @@ Policy name: `googlenative-compute-beta-healthcheck-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.HealthCheck.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.HealthCheck).
+Disallow the use of non-stable (Beta) resources (compute.beta.HealthCheck).
 
 Service: Compute
 
@@ -7210,7 +7210,7 @@ Policy name: `googlenative-compute-beta-httphealthcheck-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.HttpHealthCheck.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.HttpHealthCheck).
+Disallow the use of non-stable (Beta) resources (compute.beta.HttpHealthCheck).
 
 Service: Compute
 
@@ -7232,7 +7232,7 @@ Policy name: `googlenative-compute-beta-httpshealthcheck-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.HttpsHealthCheck.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.HttpsHealthCheck).
+Disallow the use of non-stable (Beta) resources (compute.beta.HttpsHealthCheck).
 
 Service: Compute
 
@@ -7254,7 +7254,7 @@ Policy name: `googlenative-compute-beta-image-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Image.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Image).
+Disallow the use of non-stable (Beta) resources (compute.beta.Image).
 
 Service: Compute
 
@@ -7276,7 +7276,7 @@ Policy name: `googlenative-compute-beta-imageiambinding-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.ImageIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ImageIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.ImageIamBinding).
 
 Service: Compute
 
@@ -7298,7 +7298,7 @@ Policy name: `googlenative-compute-beta-imageiammember-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.ImageIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ImageIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.ImageIamMember).
 
 Service: Compute
 
@@ -7320,7 +7320,7 @@ Policy name: `googlenative-compute-beta-imageiampolicy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.ImageIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ImageIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.ImageIamPolicy).
 
 Service: Compute
 
@@ -7342,7 +7342,7 @@ Policy name: `googlenative-compute-beta-instance-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Instance.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Instance).
+Disallow the use of non-stable (Beta) resources (compute.beta.Instance).
 
 Service: Compute
 
@@ -7364,7 +7364,7 @@ Policy name: `googlenative-compute-beta-instancegroup-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.InstanceGroup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstanceGroup).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstanceGroup).
 
 Service: Compute
 
@@ -7386,7 +7386,7 @@ Policy name: `googlenative-compute-beta-instancegroupmanager-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.InstanceGroupManager.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstanceGroupManager).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstanceGroupManager).
 
 Service: Compute
 
@@ -7408,7 +7408,7 @@ Policy name: `googlenative-compute-beta-instanceiambinding-disallow-beta-resourc
 
 Code path: `googlenative.compute.beta.InstanceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstanceIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstanceIamBinding).
 
 Service: Compute
 
@@ -7430,7 +7430,7 @@ Policy name: `googlenative-compute-beta-instanceiammember-disallow-beta-resource
 
 Code path: `googlenative.compute.beta.InstanceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstanceIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstanceIamMember).
 
 Service: Compute
 
@@ -7452,7 +7452,7 @@ Policy name: `googlenative-compute-beta-instanceiampolicy-disallow-beta-resource
 
 Code path: `googlenative.compute.beta.InstanceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstanceIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstanceIamPolicy).
 
 Service: Compute
 
@@ -7474,7 +7474,7 @@ Policy name: `googlenative-compute-beta-instancetemplate-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.InstanceTemplate.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstanceTemplate).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstanceTemplate).
 
 Service: Compute
 
@@ -7496,7 +7496,7 @@ Policy name: `googlenative-compute-beta-instancetemplateiambinding-disallow-beta
 
 Code path: `googlenative.compute.beta.InstanceTemplateIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstanceTemplateIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstanceTemplateIamBinding).
 
 Service: Compute
 
@@ -7518,7 +7518,7 @@ Policy name: `googlenative-compute-beta-instancetemplateiammember-disallow-beta-
 
 Code path: `googlenative.compute.beta.InstanceTemplateIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstanceTemplateIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstanceTemplateIamMember).
 
 Service: Compute
 
@@ -7540,7 +7540,7 @@ Policy name: `googlenative-compute-beta-instancetemplateiampolicy-disallow-beta-
 
 Code path: `googlenative.compute.beta.InstanceTemplateIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstanceTemplateIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstanceTemplateIamPolicy).
 
 Service: Compute
 
@@ -7562,7 +7562,7 @@ Policy name: `googlenative-compute-beta-instantsnapshot-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.InstantSnapshot.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstantSnapshot).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstantSnapshot).
 
 Service: Compute
 
@@ -7584,7 +7584,7 @@ Policy name: `googlenative-compute-beta-instantsnapshotiambinding-disallow-beta-
 
 Code path: `googlenative.compute.beta.InstantSnapshotIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstantSnapshotIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstantSnapshotIamBinding).
 
 Service: Compute
 
@@ -7606,7 +7606,7 @@ Policy name: `googlenative-compute-beta-instantsnapshotiammember-disallow-beta-r
 
 Code path: `googlenative.compute.beta.InstantSnapshotIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstantSnapshotIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstantSnapshotIamMember).
 
 Service: Compute
 
@@ -7628,7 +7628,7 @@ Policy name: `googlenative-compute-beta-instantsnapshotiampolicy-disallow-beta-r
 
 Code path: `googlenative.compute.beta.InstantSnapshotIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InstantSnapshotIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.InstantSnapshotIamPolicy).
 
 Service: Compute
 
@@ -7650,7 +7650,7 @@ Policy name: `googlenative-compute-beta-interconnect-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Interconnect.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Interconnect).
+Disallow the use of non-stable (Beta) resources (compute.beta.Interconnect).
 
 Service: Compute
 
@@ -7672,7 +7672,7 @@ Policy name: `googlenative-compute-beta-interconnectattachment-disallow-beta-res
 
 Code path: `googlenative.compute.beta.InterconnectAttachment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.InterconnectAttachment).
+Disallow the use of non-stable (Beta) resources (compute.beta.InterconnectAttachment).
 
 Service: Compute
 
@@ -7694,7 +7694,7 @@ Policy name: `googlenative-compute-beta-license-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.License.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.License).
+Disallow the use of non-stable (Beta) resources (compute.beta.License).
 
 Service: Compute
 
@@ -7716,7 +7716,7 @@ Policy name: `googlenative-compute-beta-licenseiambinding-disallow-beta-resource
 
 Code path: `googlenative.compute.beta.LicenseIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.LicenseIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.LicenseIamBinding).
 
 Service: Compute
 
@@ -7738,7 +7738,7 @@ Policy name: `googlenative-compute-beta-licenseiammember-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.LicenseIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.LicenseIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.LicenseIamMember).
 
 Service: Compute
 
@@ -7760,7 +7760,7 @@ Policy name: `googlenative-compute-beta-licenseiampolicy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.LicenseIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.LicenseIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.LicenseIamPolicy).
 
 Service: Compute
 
@@ -7782,7 +7782,7 @@ Policy name: `googlenative-compute-beta-machineimage-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.MachineImage.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.MachineImage).
+Disallow the use of non-stable (Beta) resources (compute.beta.MachineImage).
 
 Service: Compute
 
@@ -7804,7 +7804,7 @@ Policy name: `googlenative-compute-beta-machineimageiambinding-disallow-beta-res
 
 Code path: `googlenative.compute.beta.MachineImageIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.MachineImageIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.MachineImageIamBinding).
 
 Service: Compute
 
@@ -7826,7 +7826,7 @@ Policy name: `googlenative-compute-beta-machineimageiammember-disallow-beta-reso
 
 Code path: `googlenative.compute.beta.MachineImageIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.MachineImageIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.MachineImageIamMember).
 
 Service: Compute
 
@@ -7848,7 +7848,7 @@ Policy name: `googlenative-compute-beta-machineimageiampolicy-disallow-beta-reso
 
 Code path: `googlenative.compute.beta.MachineImageIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.MachineImageIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.MachineImageIamPolicy).
 
 Service: Compute
 
@@ -7870,7 +7870,7 @@ Policy name: `googlenative-compute-beta-network-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Network.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Network).
+Disallow the use of non-stable (Beta) resources (compute.beta.Network).
 
 Service: Compute
 
@@ -7892,7 +7892,7 @@ Policy name: `googlenative-compute-beta-networkattachment-disallow-beta-resource
 
 Code path: `googlenative.compute.beta.NetworkAttachment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkAttachment).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkAttachment).
 
 Service: Compute
 
@@ -7914,7 +7914,7 @@ Policy name: `googlenative-compute-beta-networkattachmentiambinding-disallow-bet
 
 Code path: `googlenative.compute.beta.NetworkAttachmentIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkAttachmentIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkAttachmentIamBinding).
 
 Service: Compute
 
@@ -7936,7 +7936,7 @@ Policy name: `googlenative-compute-beta-networkattachmentiammember-disallow-beta
 
 Code path: `googlenative.compute.beta.NetworkAttachmentIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkAttachmentIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkAttachmentIamMember).
 
 Service: Compute
 
@@ -7958,7 +7958,7 @@ Policy name: `googlenative-compute-beta-networkattachmentiampolicy-disallow-beta
 
 Code path: `googlenative.compute.beta.NetworkAttachmentIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkAttachmentIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkAttachmentIamPolicy).
 
 Service: Compute
 
@@ -7980,7 +7980,7 @@ Policy name: `googlenative-compute-beta-networkedgesecurityservice-disallow-beta
 
 Code path: `googlenative.compute.beta.NetworkEdgeSecurityService.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkEdgeSecurityService).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkEdgeSecurityService).
 
 Service: Compute
 
@@ -8002,7 +8002,7 @@ Policy name: `googlenative-compute-beta-networkendpointgroup-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.NetworkEndpointGroup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkEndpointGroup).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkEndpointGroup).
 
 Service: Compute
 
@@ -8024,7 +8024,7 @@ Policy name: `googlenative-compute-beta-networkfirewallpolicy-disallow-beta-reso
 
 Code path: `googlenative.compute.beta.NetworkFirewallPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkFirewallPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkFirewallPolicy).
 
 Service: Compute
 
@@ -8046,7 +8046,7 @@ Policy name: `googlenative-compute-beta-networkfirewallpolicyiambinding-disallow
 
 Code path: `googlenative.compute.beta.NetworkFirewallPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkFirewallPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkFirewallPolicyIamBinding).
 
 Service: Compute
 
@@ -8068,7 +8068,7 @@ Policy name: `googlenative-compute-beta-networkfirewallpolicyiammember-disallow-
 
 Code path: `googlenative.compute.beta.NetworkFirewallPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkFirewallPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkFirewallPolicyIamMember).
 
 Service: Compute
 
@@ -8090,7 +8090,7 @@ Policy name: `googlenative-compute-beta-networkfirewallpolicyiampolicy-disallow-
 
 Code path: `googlenative.compute.beta.NetworkFirewallPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NetworkFirewallPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.NetworkFirewallPolicyIamPolicy).
 
 Service: Compute
 
@@ -8112,7 +8112,7 @@ Policy name: `googlenative-compute-beta-nodegroup-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.NodeGroup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NodeGroup).
+Disallow the use of non-stable (Beta) resources (compute.beta.NodeGroup).
 
 Service: Compute
 
@@ -8134,7 +8134,7 @@ Policy name: `googlenative-compute-beta-nodegroupiambinding-disallow-beta-resour
 
 Code path: `googlenative.compute.beta.NodeGroupIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NodeGroupIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.NodeGroupIamBinding).
 
 Service: Compute
 
@@ -8156,7 +8156,7 @@ Policy name: `googlenative-compute-beta-nodegroupiammember-disallow-beta-resourc
 
 Code path: `googlenative.compute.beta.NodeGroupIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NodeGroupIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.NodeGroupIamMember).
 
 Service: Compute
 
@@ -8178,7 +8178,7 @@ Policy name: `googlenative-compute-beta-nodegroupiampolicy-disallow-beta-resourc
 
 Code path: `googlenative.compute.beta.NodeGroupIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NodeGroupIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.NodeGroupIamPolicy).
 
 Service: Compute
 
@@ -8200,7 +8200,7 @@ Policy name: `googlenative-compute-beta-nodetemplate-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.NodeTemplate.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NodeTemplate).
+Disallow the use of non-stable (Beta) resources (compute.beta.NodeTemplate).
 
 Service: Compute
 
@@ -8222,7 +8222,7 @@ Policy name: `googlenative-compute-beta-nodetemplateiambinding-disallow-beta-res
 
 Code path: `googlenative.compute.beta.NodeTemplateIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NodeTemplateIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.NodeTemplateIamBinding).
 
 Service: Compute
 
@@ -8244,7 +8244,7 @@ Policy name: `googlenative-compute-beta-nodetemplateiammember-disallow-beta-reso
 
 Code path: `googlenative.compute.beta.NodeTemplateIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NodeTemplateIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.NodeTemplateIamMember).
 
 Service: Compute
 
@@ -8266,7 +8266,7 @@ Policy name: `googlenative-compute-beta-nodetemplateiampolicy-disallow-beta-reso
 
 Code path: `googlenative.compute.beta.NodeTemplateIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.NodeTemplateIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.NodeTemplateIamPolicy).
 
 Service: Compute
 
@@ -8288,7 +8288,7 @@ Policy name: `googlenative-compute-beta-organizationsecuritypolicy-disallow-beta
 
 Code path: `googlenative.compute.beta.OrganizationSecurityPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.OrganizationSecurityPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.OrganizationSecurityPolicy).
 
 Service: Compute
 
@@ -8310,7 +8310,7 @@ Policy name: `googlenative-compute-beta-packetmirroring-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.PacketMirroring.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.PacketMirroring).
+Disallow the use of non-stable (Beta) resources (compute.beta.PacketMirroring).
 
 Service: Compute
 
@@ -8332,7 +8332,7 @@ Policy name: `googlenative-compute-beta-publicadvertisedprefix-disallow-beta-res
 
 Code path: `googlenative.compute.beta.PublicAdvertisedPrefix.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.PublicAdvertisedPrefix).
+Disallow the use of non-stable (Beta) resources (compute.beta.PublicAdvertisedPrefix).
 
 Service: Compute
 
@@ -8354,7 +8354,7 @@ Policy name: `googlenative-compute-beta-publicdelegatedprefix-disallow-beta-reso
 
 Code path: `googlenative.compute.beta.PublicDelegatedPrefix.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.PublicDelegatedPrefix).
+Disallow the use of non-stable (Beta) resources (compute.beta.PublicDelegatedPrefix).
 
 Service: Compute
 
@@ -8376,7 +8376,7 @@ Policy name: `googlenative-compute-beta-regionautoscaler-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.RegionAutoscaler.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionAutoscaler).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionAutoscaler).
 
 Service: Compute
 
@@ -8398,7 +8398,7 @@ Policy name: `googlenative-compute-beta-regionbackendservice-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.RegionBackendService.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionBackendService).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionBackendService).
 
 Service: Compute
 
@@ -8420,7 +8420,7 @@ Policy name: `googlenative-compute-beta-regionbackendserviceiambinding-disallow-
 
 Code path: `googlenative.compute.beta.RegionBackendServiceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionBackendServiceIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionBackendServiceIamBinding).
 
 Service: Compute
 
@@ -8442,7 +8442,7 @@ Policy name: `googlenative-compute-beta-regionbackendserviceiammember-disallow-b
 
 Code path: `googlenative.compute.beta.RegionBackendServiceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionBackendServiceIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionBackendServiceIamMember).
 
 Service: Compute
 
@@ -8464,7 +8464,7 @@ Policy name: `googlenative-compute-beta-regionbackendserviceiampolicy-disallow-b
 
 Code path: `googlenative.compute.beta.RegionBackendServiceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionBackendServiceIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionBackendServiceIamPolicy).
 
 Service: Compute
 
@@ -8486,7 +8486,7 @@ Policy name: `googlenative-compute-beta-regioncommitment-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.RegionCommitment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionCommitment).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionCommitment).
 
 Service: Compute
 
@@ -8508,7 +8508,7 @@ Policy name: `googlenative-compute-beta-regiondisk-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.RegionDisk.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionDisk).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionDisk).
 
 Service: Compute
 
@@ -8530,7 +8530,7 @@ Policy name: `googlenative-compute-beta-regiondiskiambinding-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.RegionDiskIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionDiskIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionDiskIamBinding).
 
 Service: Compute
 
@@ -8552,7 +8552,7 @@ Policy name: `googlenative-compute-beta-regiondiskiammember-disallow-beta-resour
 
 Code path: `googlenative.compute.beta.RegionDiskIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionDiskIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionDiskIamMember).
 
 Service: Compute
 
@@ -8574,7 +8574,7 @@ Policy name: `googlenative-compute-beta-regiondiskiampolicy-disallow-beta-resour
 
 Code path: `googlenative.compute.beta.RegionDiskIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionDiskIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionDiskIamPolicy).
 
 Service: Compute
 
@@ -8596,7 +8596,7 @@ Policy name: `googlenative-compute-beta-regionhealthcheck-disallow-beta-resource
 
 Code path: `googlenative.compute.beta.RegionHealthCheck.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionHealthCheck).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionHealthCheck).
 
 Service: Compute
 
@@ -8618,7 +8618,7 @@ Policy name: `googlenative-compute-beta-regionhealthcheckservice-disallow-beta-r
 
 Code path: `googlenative.compute.beta.RegionHealthCheckService.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionHealthCheckService).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionHealthCheckService).
 
 Service: Compute
 
@@ -8640,7 +8640,7 @@ Policy name: `googlenative-compute-beta-regioninstancegroupmanager-disallow-beta
 
 Code path: `googlenative.compute.beta.RegionInstanceGroupManager.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionInstanceGroupManager).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionInstanceGroupManager).
 
 Service: Compute
 
@@ -8662,7 +8662,7 @@ Policy name: `googlenative-compute-beta-regioninstancetemplate-disallow-beta-res
 
 Code path: `googlenative.compute.beta.RegionInstanceTemplate.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionInstanceTemplate).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionInstanceTemplate).
 
 Service: Compute
 
@@ -8684,7 +8684,7 @@ Policy name: `googlenative-compute-beta-regioninstantsnapshot-disallow-beta-reso
 
 Code path: `googlenative.compute.beta.RegionInstantSnapshot.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionInstantSnapshot).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionInstantSnapshot).
 
 Service: Compute
 
@@ -8706,7 +8706,7 @@ Policy name: `googlenative-compute-beta-regioninstantsnapshotiambinding-disallow
 
 Code path: `googlenative.compute.beta.RegionInstantSnapshotIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionInstantSnapshotIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionInstantSnapshotIamBinding).
 
 Service: Compute
 
@@ -8728,7 +8728,7 @@ Policy name: `googlenative-compute-beta-regioninstantsnapshotiammember-disallow-
 
 Code path: `googlenative.compute.beta.RegionInstantSnapshotIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionInstantSnapshotIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionInstantSnapshotIamMember).
 
 Service: Compute
 
@@ -8750,7 +8750,7 @@ Policy name: `googlenative-compute-beta-regioninstantsnapshotiampolicy-disallow-
 
 Code path: `googlenative.compute.beta.RegionInstantSnapshotIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionInstantSnapshotIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionInstantSnapshotIamPolicy).
 
 Service: Compute
 
@@ -8772,7 +8772,7 @@ Policy name: `googlenative-compute-beta-regionnetworkendpointgroup-disallow-beta
 
 Code path: `googlenative.compute.beta.RegionNetworkEndpointGroup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionNetworkEndpointGroup).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionNetworkEndpointGroup).
 
 Service: Compute
 
@@ -8794,7 +8794,7 @@ Policy name: `googlenative-compute-beta-regionnetworkfirewallpolicy-disallow-bet
 
 Code path: `googlenative.compute.beta.RegionNetworkFirewallPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionNetworkFirewallPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionNetworkFirewallPolicy).
 
 Service: Compute
 
@@ -8816,7 +8816,7 @@ Policy name: `googlenative-compute-beta-regionnetworkfirewallpolicyiambinding-di
 
 Code path: `googlenative.compute.beta.RegionNetworkFirewallPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionNetworkFirewallPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionNetworkFirewallPolicyIamBinding).
 
 Service: Compute
 
@@ -8838,7 +8838,7 @@ Policy name: `googlenative-compute-beta-regionnetworkfirewallpolicyiammember-dis
 
 Code path: `googlenative.compute.beta.RegionNetworkFirewallPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionNetworkFirewallPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionNetworkFirewallPolicyIamMember).
 
 Service: Compute
 
@@ -8860,7 +8860,7 @@ Policy name: `googlenative-compute-beta-regionnetworkfirewallpolicyiampolicy-dis
 
 Code path: `googlenative.compute.beta.RegionNetworkFirewallPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionNetworkFirewallPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionNetworkFirewallPolicyIamPolicy).
 
 Service: Compute
 
@@ -8882,7 +8882,7 @@ Policy name: `googlenative-compute-beta-regionnotificationendpoint-disallow-beta
 
 Code path: `googlenative.compute.beta.RegionNotificationEndpoint.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionNotificationEndpoint).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionNotificationEndpoint).
 
 Service: Compute
 
@@ -8904,7 +8904,7 @@ Policy name: `googlenative-compute-beta-regionsecuritypolicy-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.RegionSecurityPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionSecurityPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionSecurityPolicy).
 
 Service: Compute
 
@@ -8926,7 +8926,7 @@ Policy name: `googlenative-compute-beta-regionsslcertificate-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.RegionSslCertificate.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionSslCertificate).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionSslCertificate).
 
 Service: Compute
 
@@ -8948,7 +8948,7 @@ Policy name: `googlenative-compute-beta-regionsslpolicy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.RegionSslPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionSslPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionSslPolicy).
 
 Service: Compute
 
@@ -8970,7 +8970,7 @@ Policy name: `googlenative-compute-beta-regiontargethttpproxy-disallow-beta-reso
 
 Code path: `googlenative.compute.beta.RegionTargetHttpProxy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionTargetHttpProxy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionTargetHttpProxy).
 
 Service: Compute
 
@@ -8992,7 +8992,7 @@ Policy name: `googlenative-compute-beta-regiontargethttpsproxy-disallow-beta-res
 
 Code path: `googlenative.compute.beta.RegionTargetHttpsProxy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionTargetHttpsProxy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionTargetHttpsProxy).
 
 Service: Compute
 
@@ -9014,7 +9014,7 @@ Policy name: `googlenative-compute-beta-regiontargettcpproxy-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.RegionTargetTcpProxy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionTargetTcpProxy).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionTargetTcpProxy).
 
 Service: Compute
 
@@ -9036,7 +9036,7 @@ Policy name: `googlenative-compute-beta-regionurlmap-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.RegionUrlMap.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.RegionUrlMap).
+Disallow the use of non-stable (Beta) resources (compute.beta.RegionUrlMap).
 
 Service: Compute
 
@@ -9058,7 +9058,7 @@ Policy name: `googlenative-compute-beta-reservation-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Reservation.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Reservation).
+Disallow the use of non-stable (Beta) resources (compute.beta.Reservation).
 
 Service: Compute
 
@@ -9080,7 +9080,7 @@ Policy name: `googlenative-compute-beta-reservationiambinding-disallow-beta-reso
 
 Code path: `googlenative.compute.beta.ReservationIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ReservationIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.ReservationIamBinding).
 
 Service: Compute
 
@@ -9102,7 +9102,7 @@ Policy name: `googlenative-compute-beta-reservationiammember-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.ReservationIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ReservationIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.ReservationIamMember).
 
 Service: Compute
 
@@ -9124,7 +9124,7 @@ Policy name: `googlenative-compute-beta-reservationiampolicy-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.ReservationIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ReservationIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.ReservationIamPolicy).
 
 Service: Compute
 
@@ -9146,7 +9146,7 @@ Policy name: `googlenative-compute-beta-resourcepolicy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.ResourcePolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ResourcePolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.ResourcePolicy).
 
 Service: Compute
 
@@ -9168,7 +9168,7 @@ Policy name: `googlenative-compute-beta-resourcepolicyiambinding-disallow-beta-r
 
 Code path: `googlenative.compute.beta.ResourcePolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ResourcePolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.ResourcePolicyIamBinding).
 
 Service: Compute
 
@@ -9190,7 +9190,7 @@ Policy name: `googlenative-compute-beta-resourcepolicyiammember-disallow-beta-re
 
 Code path: `googlenative.compute.beta.ResourcePolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ResourcePolicyIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.ResourcePolicyIamMember).
 
 Service: Compute
 
@@ -9212,7 +9212,7 @@ Policy name: `googlenative-compute-beta-resourcepolicyiampolicy-disallow-beta-re
 
 Code path: `googlenative.compute.beta.ResourcePolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ResourcePolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.ResourcePolicyIamPolicy).
 
 Service: Compute
 
@@ -9234,7 +9234,7 @@ Policy name: `googlenative-compute-beta-route-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Route.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Route).
+Disallow the use of non-stable (Beta) resources (compute.beta.Route).
 
 Service: Compute
 
@@ -9256,7 +9256,7 @@ Policy name: `googlenative-compute-beta-router-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Router.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Router).
+Disallow the use of non-stable (Beta) resources (compute.beta.Router).
 
 Service: Compute
 
@@ -9278,7 +9278,7 @@ Policy name: `googlenative-compute-beta-securitypolicy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.SecurityPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.SecurityPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.SecurityPolicy).
 
 Service: Compute
 
@@ -9300,7 +9300,7 @@ Policy name: `googlenative-compute-beta-serviceattachment-disallow-beta-resource
 
 Code path: `googlenative.compute.beta.ServiceAttachment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ServiceAttachment).
+Disallow the use of non-stable (Beta) resources (compute.beta.ServiceAttachment).
 
 Service: Compute
 
@@ -9322,7 +9322,7 @@ Policy name: `googlenative-compute-beta-serviceattachmentiambinding-disallow-bet
 
 Code path: `googlenative.compute.beta.ServiceAttachmentIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ServiceAttachmentIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.ServiceAttachmentIamBinding).
 
 Service: Compute
 
@@ -9344,7 +9344,7 @@ Policy name: `googlenative-compute-beta-serviceattachmentiammember-disallow-beta
 
 Code path: `googlenative.compute.beta.ServiceAttachmentIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ServiceAttachmentIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.ServiceAttachmentIamMember).
 
 Service: Compute
 
@@ -9366,7 +9366,7 @@ Policy name: `googlenative-compute-beta-serviceattachmentiampolicy-disallow-beta
 
 Code path: `googlenative.compute.beta.ServiceAttachmentIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.ServiceAttachmentIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.ServiceAttachmentIamPolicy).
 
 Service: Compute
 
@@ -9388,7 +9388,7 @@ Policy name: `googlenative-compute-beta-snapshot-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Snapshot.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Snapshot).
+Disallow the use of non-stable (Beta) resources (compute.beta.Snapshot).
 
 Service: Compute
 
@@ -9410,7 +9410,7 @@ Policy name: `googlenative-compute-beta-snapshotiambinding-disallow-beta-resourc
 
 Code path: `googlenative.compute.beta.SnapshotIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.SnapshotIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.SnapshotIamBinding).
 
 Service: Compute
 
@@ -9432,7 +9432,7 @@ Policy name: `googlenative-compute-beta-snapshotiammember-disallow-beta-resource
 
 Code path: `googlenative.compute.beta.SnapshotIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.SnapshotIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.SnapshotIamMember).
 
 Service: Compute
 
@@ -9454,7 +9454,7 @@ Policy name: `googlenative-compute-beta-snapshotiampolicy-disallow-beta-resource
 
 Code path: `googlenative.compute.beta.SnapshotIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.SnapshotIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.SnapshotIamPolicy).
 
 Service: Compute
 
@@ -9476,7 +9476,7 @@ Policy name: `googlenative-compute-beta-sslcertificate-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.SslCertificate.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.SslCertificate).
+Disallow the use of non-stable (Beta) resources (compute.beta.SslCertificate).
 
 Service: Compute
 
@@ -9498,7 +9498,7 @@ Policy name: `googlenative-compute-beta-sslpolicy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.SslPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.SslPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.SslPolicy).
 
 Service: Compute
 
@@ -9520,7 +9520,7 @@ Policy name: `googlenative-compute-beta-subnetwork-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.Subnetwork.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.Subnetwork).
+Disallow the use of non-stable (Beta) resources (compute.beta.Subnetwork).
 
 Service: Compute
 
@@ -9542,7 +9542,7 @@ Policy name: `googlenative-compute-beta-subnetworkiambinding-disallow-beta-resou
 
 Code path: `googlenative.compute.beta.SubnetworkIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.SubnetworkIamBinding).
+Disallow the use of non-stable (Beta) resources (compute.beta.SubnetworkIamBinding).
 
 Service: Compute
 
@@ -9564,7 +9564,7 @@ Policy name: `googlenative-compute-beta-subnetworkiammember-disallow-beta-resour
 
 Code path: `googlenative.compute.beta.SubnetworkIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.SubnetworkIamMember).
+Disallow the use of non-stable (Beta) resources (compute.beta.SubnetworkIamMember).
 
 Service: Compute
 
@@ -9586,7 +9586,7 @@ Policy name: `googlenative-compute-beta-subnetworkiampolicy-disallow-beta-resour
 
 Code path: `googlenative.compute.beta.SubnetworkIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.SubnetworkIamPolicy).
+Disallow the use of non-stable (Beta) resources (compute.beta.SubnetworkIamPolicy).
 
 Service: Compute
 
@@ -9608,7 +9608,7 @@ Policy name: `googlenative-compute-beta-targetgrpcproxy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.TargetGrpcProxy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.TargetGrpcProxy).
+Disallow the use of non-stable (Beta) resources (compute.beta.TargetGrpcProxy).
 
 Service: Compute
 
@@ -9630,7 +9630,7 @@ Policy name: `googlenative-compute-beta-targethttpproxy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.TargetHttpProxy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.TargetHttpProxy).
+Disallow the use of non-stable (Beta) resources (compute.beta.TargetHttpProxy).
 
 Service: Compute
 
@@ -9652,7 +9652,7 @@ Policy name: `googlenative-compute-beta-targethttpsproxy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.TargetHttpsProxy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.TargetHttpsProxy).
+Disallow the use of non-stable (Beta) resources (compute.beta.TargetHttpsProxy).
 
 Service: Compute
 
@@ -9674,7 +9674,7 @@ Policy name: `googlenative-compute-beta-targetinstance-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.TargetInstance.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.TargetInstance).
+Disallow the use of non-stable (Beta) resources (compute.beta.TargetInstance).
 
 Service: Compute
 
@@ -9696,7 +9696,7 @@ Policy name: `googlenative-compute-beta-targetpool-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.TargetPool.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.TargetPool).
+Disallow the use of non-stable (Beta) resources (compute.beta.TargetPool).
 
 Service: Compute
 
@@ -9718,7 +9718,7 @@ Policy name: `googlenative-compute-beta-targetsslproxy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.TargetSslProxy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.TargetSslProxy).
+Disallow the use of non-stable (Beta) resources (compute.beta.TargetSslProxy).
 
 Service: Compute
 
@@ -9740,7 +9740,7 @@ Policy name: `googlenative-compute-beta-targettcpproxy-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.TargetTcpProxy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.TargetTcpProxy).
+Disallow the use of non-stable (Beta) resources (compute.beta.TargetTcpProxy).
 
 Service: Compute
 
@@ -9762,7 +9762,7 @@ Policy name: `googlenative-compute-beta-targetvpngateway-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.TargetVpnGateway.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.TargetVpnGateway).
+Disallow the use of non-stable (Beta) resources (compute.beta.TargetVpnGateway).
 
 Service: Compute
 
@@ -9784,7 +9784,7 @@ Policy name: `googlenative-compute-beta-urlmap-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.UrlMap.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.UrlMap).
+Disallow the use of non-stable (Beta) resources (compute.beta.UrlMap).
 
 Service: Compute
 
@@ -9806,7 +9806,7 @@ Policy name: `googlenative-compute-beta-vpngateway-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.VpnGateway.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.VpnGateway).
+Disallow the use of non-stable (Beta) resources (compute.beta.VpnGateway).
 
 Service: Compute
 
@@ -9828,7 +9828,7 @@ Policy name: `googlenative-compute-beta-vpntunnel-disallow-beta-resource`
 
 Code path: `googlenative.compute.beta.VpnTunnel.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (compute.beta.VpnTunnel).
+Disallow the use of non-stable (Beta) resources (compute.beta.VpnTunnel).
 
 Service: Compute
 
@@ -9878,7 +9878,7 @@ Policy name: `googlenative-contactcenteraiplatform-v1alpha1-contactcenter-disall
 
 Code path: `googlenative.contactcenteraiplatform.v1alpha1.ContactCenter.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (contactcenteraiplatform.v1alpha1.ContactCenter).
+Disallow the use of non-stable (Alpha) resources (contactcenteraiplatform.v1alpha1.ContactCenter).
 
 Service: Contactcenteraiplatform
 
@@ -9904,7 +9904,7 @@ Policy name: `googlenative-container-v1beta1-cluster-disallow-beta-resource`
 
 Code path: `googlenative.container.v1beta1.Cluster.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (container.v1beta1.Cluster).
+Disallow the use of non-stable (Beta) resources (container.v1beta1.Cluster).
 
 Service: Container
 
@@ -9926,7 +9926,7 @@ Policy name: `googlenative-container-v1beta1-nodepool-disallow-beta-resource`
 
 Code path: `googlenative.container.v1beta1.NodePool.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (container.v1beta1.NodePool).
+Disallow the use of non-stable (Beta) resources (container.v1beta1.NodePool).
 
 Service: Container
 
@@ -9952,7 +9952,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-note-disallow-alpha-resour
 
 Code path: `googlenative.containeranalysis.v1alpha1.Note.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.Note).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.Note).
 
 Service: Containeranalysis
 
@@ -9974,7 +9974,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-noteiambinding-disallow-al
 
 Code path: `googlenative.containeranalysis.v1alpha1.NoteIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.NoteIamBinding).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.NoteIamBinding).
 
 Service: Containeranalysis
 
@@ -9996,7 +9996,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-noteiammember-disallow-alp
 
 Code path: `googlenative.containeranalysis.v1alpha1.NoteIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.NoteIamMember).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.NoteIamMember).
 
 Service: Containeranalysis
 
@@ -10018,7 +10018,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-noteiampolicy-disallow-alp
 
 Code path: `googlenative.containeranalysis.v1alpha1.NoteIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.NoteIamPolicy).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.NoteIamPolicy).
 
 Service: Containeranalysis
 
@@ -10040,7 +10040,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-occurrence-disallow-alpha-
 
 Code path: `googlenative.containeranalysis.v1alpha1.Occurrence.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.Occurrence).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.Occurrence).
 
 Service: Containeranalysis
 
@@ -10062,7 +10062,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-occurrenceiambinding-disal
 
 Code path: `googlenative.containeranalysis.v1alpha1.OccurrenceIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.OccurrenceIamBinding).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.OccurrenceIamBinding).
 
 Service: Containeranalysis
 
@@ -10084,7 +10084,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-occurrenceiammember-disall
 
 Code path: `googlenative.containeranalysis.v1alpha1.OccurrenceIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.OccurrenceIamMember).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.OccurrenceIamMember).
 
 Service: Containeranalysis
 
@@ -10106,7 +10106,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-occurrenceiampolicy-disall
 
 Code path: `googlenative.containeranalysis.v1alpha1.OccurrenceIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.OccurrenceIamPolicy).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.OccurrenceIamPolicy).
 
 Service: Containeranalysis
 
@@ -10128,7 +10128,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-providernoteiambinding-dis
 
 Code path: `googlenative.containeranalysis.v1alpha1.ProviderNoteIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.ProviderNoteIamBinding).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.ProviderNoteIamBinding).
 
 Service: Containeranalysis
 
@@ -10150,7 +10150,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-providernoteiammember-disa
 
 Code path: `googlenative.containeranalysis.v1alpha1.ProviderNoteIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.ProviderNoteIamMember).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.ProviderNoteIamMember).
 
 Service: Containeranalysis
 
@@ -10172,7 +10172,7 @@ Policy name: `googlenative-containeranalysis-v1alpha1-providernoteiampolicy-disa
 
 Code path: `googlenative.containeranalysis.v1alpha1.ProviderNoteIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (containeranalysis.v1alpha1.ProviderNoteIamPolicy).
+Disallow the use of non-stable (Alpha) resources (containeranalysis.v1alpha1.ProviderNoteIamPolicy).
 
 Service: Containeranalysis
 
@@ -10196,7 +10196,7 @@ Policy name: `googlenative-containeranalysis-v1beta1-note-disallow-beta-resource
 
 Code path: `googlenative.containeranalysis.v1beta1.Note.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (containeranalysis.v1beta1.Note).
+Disallow the use of non-stable (Beta) resources (containeranalysis.v1beta1.Note).
 
 Service: Containeranalysis
 
@@ -10218,7 +10218,7 @@ Policy name: `googlenative-containeranalysis-v1beta1-noteiambinding-disallow-bet
 
 Code path: `googlenative.containeranalysis.v1beta1.NoteIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (containeranalysis.v1beta1.NoteIamBinding).
+Disallow the use of non-stable (Beta) resources (containeranalysis.v1beta1.NoteIamBinding).
 
 Service: Containeranalysis
 
@@ -10240,7 +10240,7 @@ Policy name: `googlenative-containeranalysis-v1beta1-noteiammember-disallow-beta
 
 Code path: `googlenative.containeranalysis.v1beta1.NoteIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (containeranalysis.v1beta1.NoteIamMember).
+Disallow the use of non-stable (Beta) resources (containeranalysis.v1beta1.NoteIamMember).
 
 Service: Containeranalysis
 
@@ -10262,7 +10262,7 @@ Policy name: `googlenative-containeranalysis-v1beta1-noteiampolicy-disallow-beta
 
 Code path: `googlenative.containeranalysis.v1beta1.NoteIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (containeranalysis.v1beta1.NoteIamPolicy).
+Disallow the use of non-stable (Beta) resources (containeranalysis.v1beta1.NoteIamPolicy).
 
 Service: Containeranalysis
 
@@ -10284,7 +10284,7 @@ Policy name: `googlenative-containeranalysis-v1beta1-occurrence-disallow-beta-re
 
 Code path: `googlenative.containeranalysis.v1beta1.Occurrence.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (containeranalysis.v1beta1.Occurrence).
+Disallow the use of non-stable (Beta) resources (containeranalysis.v1beta1.Occurrence).
 
 Service: Containeranalysis
 
@@ -10306,7 +10306,7 @@ Policy name: `googlenative-containeranalysis-v1beta1-occurrenceiambinding-disall
 
 Code path: `googlenative.containeranalysis.v1beta1.OccurrenceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (containeranalysis.v1beta1.OccurrenceIamBinding).
+Disallow the use of non-stable (Beta) resources (containeranalysis.v1beta1.OccurrenceIamBinding).
 
 Service: Containeranalysis
 
@@ -10328,7 +10328,7 @@ Policy name: `googlenative-containeranalysis-v1beta1-occurrenceiammember-disallo
 
 Code path: `googlenative.containeranalysis.v1beta1.OccurrenceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (containeranalysis.v1beta1.OccurrenceIamMember).
+Disallow the use of non-stable (Beta) resources (containeranalysis.v1beta1.OccurrenceIamMember).
 
 Service: Containeranalysis
 
@@ -10350,7 +10350,7 @@ Policy name: `googlenative-containeranalysis-v1beta1-occurrenceiampolicy-disallo
 
 Code path: `googlenative.containeranalysis.v1beta1.OccurrenceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (containeranalysis.v1beta1.OccurrenceIamPolicy).
+Disallow the use of non-stable (Beta) resources (containeranalysis.v1beta1.OccurrenceIamPolicy).
 
 Service: Containeranalysis
 
@@ -10376,7 +10376,7 @@ Policy name: `googlenative-datacatalog-v1beta1-entry-disallow-beta-resource`
 
 Code path: `googlenative.datacatalog.v1beta1.Entry.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.Entry).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.Entry).
 
 Service: Datacatalog
 
@@ -10398,7 +10398,7 @@ Policy name: `googlenative-datacatalog-v1beta1-entrygroup-disallow-beta-resource
 
 Code path: `googlenative.datacatalog.v1beta1.EntryGroup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.EntryGroup).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.EntryGroup).
 
 Service: Datacatalog
 
@@ -10420,7 +10420,7 @@ Policy name: `googlenative-datacatalog-v1beta1-entrygroupiambinding-disallow-bet
 
 Code path: `googlenative.datacatalog.v1beta1.EntryGroupIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.EntryGroupIamBinding).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.EntryGroupIamBinding).
 
 Service: Datacatalog
 
@@ -10442,7 +10442,7 @@ Policy name: `googlenative-datacatalog-v1beta1-entrygroupiammember-disallow-beta
 
 Code path: `googlenative.datacatalog.v1beta1.EntryGroupIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.EntryGroupIamMember).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.EntryGroupIamMember).
 
 Service: Datacatalog
 
@@ -10464,7 +10464,7 @@ Policy name: `googlenative-datacatalog-v1beta1-entrygroupiampolicy-disallow-beta
 
 Code path: `googlenative.datacatalog.v1beta1.EntryGroupIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.EntryGroupIamPolicy).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.EntryGroupIamPolicy).
 
 Service: Datacatalog
 
@@ -10486,7 +10486,7 @@ Policy name: `googlenative-datacatalog-v1beta1-policytag-disallow-beta-resource`
 
 Code path: `googlenative.datacatalog.v1beta1.PolicyTag.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.PolicyTag).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.PolicyTag).
 
 Service: Datacatalog
 
@@ -10508,7 +10508,7 @@ Policy name: `googlenative-datacatalog-v1beta1-tagtemplate-disallow-beta-resourc
 
 Code path: `googlenative.datacatalog.v1beta1.TagTemplate.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TagTemplate).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TagTemplate).
 
 Service: Datacatalog
 
@@ -10530,7 +10530,7 @@ Policy name: `googlenative-datacatalog-v1beta1-tagtemplateiambinding-disallow-be
 
 Code path: `googlenative.datacatalog.v1beta1.TagTemplateIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TagTemplateIamBinding).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TagTemplateIamBinding).
 
 Service: Datacatalog
 
@@ -10552,7 +10552,7 @@ Policy name: `googlenative-datacatalog-v1beta1-tagtemplateiammember-disallow-bet
 
 Code path: `googlenative.datacatalog.v1beta1.TagTemplateIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TagTemplateIamMember).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TagTemplateIamMember).
 
 Service: Datacatalog
 
@@ -10574,7 +10574,7 @@ Policy name: `googlenative-datacatalog-v1beta1-tagtemplateiampolicy-disallow-bet
 
 Code path: `googlenative.datacatalog.v1beta1.TagTemplateIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TagTemplateIamPolicy).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TagTemplateIamPolicy).
 
 Service: Datacatalog
 
@@ -10596,7 +10596,7 @@ Policy name: `googlenative-datacatalog-v1beta1-taxonomy-disallow-beta-resource`
 
 Code path: `googlenative.datacatalog.v1beta1.Taxonomy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.Taxonomy).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.Taxonomy).
 
 Service: Datacatalog
 
@@ -10618,7 +10618,7 @@ Policy name: `googlenative-datacatalog-v1beta1-taxonomyiambinding-disallow-beta-
 
 Code path: `googlenative.datacatalog.v1beta1.TaxonomyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TaxonomyIamBinding).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TaxonomyIamBinding).
 
 Service: Datacatalog
 
@@ -10640,7 +10640,7 @@ Policy name: `googlenative-datacatalog-v1beta1-taxonomyiammember-disallow-beta-r
 
 Code path: `googlenative.datacatalog.v1beta1.TaxonomyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TaxonomyIamMember).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TaxonomyIamMember).
 
 Service: Datacatalog
 
@@ -10662,7 +10662,7 @@ Policy name: `googlenative-datacatalog-v1beta1-taxonomyiampolicy-disallow-beta-r
 
 Code path: `googlenative.datacatalog.v1beta1.TaxonomyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TaxonomyIamPolicy).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TaxonomyIamPolicy).
 
 Service: Datacatalog
 
@@ -10684,7 +10684,7 @@ Policy name: `googlenative-datacatalog-v1beta1-taxonomypolicytagiambinding-disal
 
 Code path: `googlenative.datacatalog.v1beta1.TaxonomyPolicyTagIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TaxonomyPolicyTagIamBinding).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TaxonomyPolicyTagIamBinding).
 
 Service: Datacatalog
 
@@ -10706,7 +10706,7 @@ Policy name: `googlenative-datacatalog-v1beta1-taxonomypolicytagiammember-disall
 
 Code path: `googlenative.datacatalog.v1beta1.TaxonomyPolicyTagIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TaxonomyPolicyTagIamMember).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TaxonomyPolicyTagIamMember).
 
 Service: Datacatalog
 
@@ -10728,7 +10728,7 @@ Policy name: `googlenative-datacatalog-v1beta1-taxonomypolicytagiampolicy-disall
 
 Code path: `googlenative.datacatalog.v1beta1.TaxonomyPolicyTagIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datacatalog.v1beta1.TaxonomyPolicyTagIamPolicy).
+Disallow the use of non-stable (Beta) resources (datacatalog.v1beta1.TaxonomyPolicyTagIamPolicy).
 
 Service: Datacatalog
 
@@ -10754,7 +10754,7 @@ Policy name: `googlenative-dataform-v1beta1-compilationresult-disallow-beta-reso
 
 Code path: `googlenative.dataform.v1beta1.CompilationResult.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.CompilationResult).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.CompilationResult).
 
 Service: Dataform
 
@@ -10776,7 +10776,7 @@ Policy name: `googlenative-dataform-v1beta1-releaseconfig-disallow-beta-resource
 
 Code path: `googlenative.dataform.v1beta1.ReleaseConfig.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.ReleaseConfig).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.ReleaseConfig).
 
 Service: Dataform
 
@@ -10798,7 +10798,7 @@ Policy name: `googlenative-dataform-v1beta1-repository-disallow-beta-resource`
 
 Code path: `googlenative.dataform.v1beta1.Repository.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.Repository).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.Repository).
 
 Service: Dataform
 
@@ -10820,7 +10820,7 @@ Policy name: `googlenative-dataform-v1beta1-repositoryiambinding-disallow-beta-r
 
 Code path: `googlenative.dataform.v1beta1.RepositoryIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.RepositoryIamBinding).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.RepositoryIamBinding).
 
 Service: Dataform
 
@@ -10842,7 +10842,7 @@ Policy name: `googlenative-dataform-v1beta1-repositoryiammember-disallow-beta-re
 
 Code path: `googlenative.dataform.v1beta1.RepositoryIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.RepositoryIamMember).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.RepositoryIamMember).
 
 Service: Dataform
 
@@ -10864,7 +10864,7 @@ Policy name: `googlenative-dataform-v1beta1-repositoryiampolicy-disallow-beta-re
 
 Code path: `googlenative.dataform.v1beta1.RepositoryIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.RepositoryIamPolicy).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.RepositoryIamPolicy).
 
 Service: Dataform
 
@@ -10886,7 +10886,7 @@ Policy name: `googlenative-dataform-v1beta1-repositoryworkspaceiambinding-disall
 
 Code path: `googlenative.dataform.v1beta1.RepositoryWorkspaceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.RepositoryWorkspaceIamBinding).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.RepositoryWorkspaceIamBinding).
 
 Service: Dataform
 
@@ -10908,7 +10908,7 @@ Policy name: `googlenative-dataform-v1beta1-repositoryworkspaceiammember-disallo
 
 Code path: `googlenative.dataform.v1beta1.RepositoryWorkspaceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.RepositoryWorkspaceIamMember).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.RepositoryWorkspaceIamMember).
 
 Service: Dataform
 
@@ -10930,7 +10930,7 @@ Policy name: `googlenative-dataform-v1beta1-repositoryworkspaceiampolicy-disallo
 
 Code path: `googlenative.dataform.v1beta1.RepositoryWorkspaceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.RepositoryWorkspaceIamPolicy).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.RepositoryWorkspaceIamPolicy).
 
 Service: Dataform
 
@@ -10952,7 +10952,7 @@ Policy name: `googlenative-dataform-v1beta1-workflowconfig-disallow-beta-resourc
 
 Code path: `googlenative.dataform.v1beta1.WorkflowConfig.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.WorkflowConfig).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.WorkflowConfig).
 
 Service: Dataform
 
@@ -10974,7 +10974,7 @@ Policy name: `googlenative-dataform-v1beta1-workflowinvocation-disallow-beta-res
 
 Code path: `googlenative.dataform.v1beta1.WorkflowInvocation.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.WorkflowInvocation).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.WorkflowInvocation).
 
 Service: Dataform
 
@@ -10996,7 +10996,7 @@ Policy name: `googlenative-dataform-v1beta1-workspace-disallow-beta-resource`
 
 Code path: `googlenative.dataform.v1beta1.Workspace.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataform.v1beta1.Workspace).
+Disallow the use of non-stable (Beta) resources (dataform.v1beta1.Workspace).
 
 Service: Dataform
 
@@ -11022,7 +11022,7 @@ Policy name: `googlenative-datafusion-v1beta1-instance-disallow-beta-resource`
 
 Code path: `googlenative.datafusion.v1beta1.Instance.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datafusion.v1beta1.Instance).
+Disallow the use of non-stable (Beta) resources (datafusion.v1beta1.Instance).
 
 Service: Datafusion
 
@@ -11044,7 +11044,7 @@ Policy name: `googlenative-datafusion-v1beta1-instanceiambinding-disallow-beta-r
 
 Code path: `googlenative.datafusion.v1beta1.InstanceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datafusion.v1beta1.InstanceIamBinding).
+Disallow the use of non-stable (Beta) resources (datafusion.v1beta1.InstanceIamBinding).
 
 Service: Datafusion
 
@@ -11066,7 +11066,7 @@ Policy name: `googlenative-datafusion-v1beta1-instanceiammember-disallow-beta-re
 
 Code path: `googlenative.datafusion.v1beta1.InstanceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datafusion.v1beta1.InstanceIamMember).
+Disallow the use of non-stable (Beta) resources (datafusion.v1beta1.InstanceIamMember).
 
 Service: Datafusion
 
@@ -11088,7 +11088,7 @@ Policy name: `googlenative-datafusion-v1beta1-instanceiampolicy-disallow-beta-re
 
 Code path: `googlenative.datafusion.v1beta1.InstanceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datafusion.v1beta1.InstanceIamPolicy).
+Disallow the use of non-stable (Beta) resources (datafusion.v1beta1.InstanceIamPolicy).
 
 Service: Datafusion
 
@@ -11110,7 +11110,7 @@ Policy name: `googlenative-datafusion-v1beta1-instancenamespaceiambinding-disall
 
 Code path: `googlenative.datafusion.v1beta1.InstanceNamespaceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datafusion.v1beta1.InstanceNamespaceIamBinding).
+Disallow the use of non-stable (Beta) resources (datafusion.v1beta1.InstanceNamespaceIamBinding).
 
 Service: Datafusion
 
@@ -11132,7 +11132,7 @@ Policy name: `googlenative-datafusion-v1beta1-instancenamespaceiammember-disallo
 
 Code path: `googlenative.datafusion.v1beta1.InstanceNamespaceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datafusion.v1beta1.InstanceNamespaceIamMember).
+Disallow the use of non-stable (Beta) resources (datafusion.v1beta1.InstanceNamespaceIamMember).
 
 Service: Datafusion
 
@@ -11154,7 +11154,7 @@ Policy name: `googlenative-datafusion-v1beta1-instancenamespaceiampolicy-disallo
 
 Code path: `googlenative.datafusion.v1beta1.InstanceNamespaceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datafusion.v1beta1.InstanceNamespaceIamPolicy).
+Disallow the use of non-stable (Beta) resources (datafusion.v1beta1.InstanceNamespaceIamPolicy).
 
 Service: Datafusion
 
@@ -11180,7 +11180,7 @@ Policy name: `googlenative-datalabeling-v1beta1-annotationspecset-disallow-beta-
 
 Code path: `googlenative.datalabeling.v1beta1.AnnotationSpecSet.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datalabeling.v1beta1.AnnotationSpecSet).
+Disallow the use of non-stable (Beta) resources (datalabeling.v1beta1.AnnotationSpecSet).
 
 Service: Datalabeling
 
@@ -11202,7 +11202,7 @@ Policy name: `googlenative-datalabeling-v1beta1-dataset-disallow-beta-resource`
 
 Code path: `googlenative.datalabeling.v1beta1.Dataset.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datalabeling.v1beta1.Dataset).
+Disallow the use of non-stable (Beta) resources (datalabeling.v1beta1.Dataset).
 
 Service: Datalabeling
 
@@ -11224,7 +11224,7 @@ Policy name: `googlenative-datalabeling-v1beta1-evaluationjob-disallow-beta-reso
 
 Code path: `googlenative.datalabeling.v1beta1.EvaluationJob.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datalabeling.v1beta1.EvaluationJob).
+Disallow the use of non-stable (Beta) resources (datalabeling.v1beta1.EvaluationJob).
 
 Service: Datalabeling
 
@@ -11246,7 +11246,7 @@ Policy name: `googlenative-datalabeling-v1beta1-feedbackmessage-disallow-beta-re
 
 Code path: `googlenative.datalabeling.v1beta1.FeedbackMessage.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datalabeling.v1beta1.FeedbackMessage).
+Disallow the use of non-stable (Beta) resources (datalabeling.v1beta1.FeedbackMessage).
 
 Service: Datalabeling
 
@@ -11268,7 +11268,7 @@ Policy name: `googlenative-datalabeling-v1beta1-instruction-disallow-beta-resour
 
 Code path: `googlenative.datalabeling.v1beta1.Instruction.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datalabeling.v1beta1.Instruction).
+Disallow the use of non-stable (Beta) resources (datalabeling.v1beta1.Instruction).
 
 Service: Datalabeling
 
@@ -11294,7 +11294,7 @@ Policy name: `googlenative-datamigration-v1beta1-connectionprofile-disallow-beta
 
 Code path: `googlenative.datamigration.v1beta1.ConnectionProfile.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datamigration.v1beta1.ConnectionProfile).
+Disallow the use of non-stable (Beta) resources (datamigration.v1beta1.ConnectionProfile).
 
 Service: Datamigration
 
@@ -11316,7 +11316,7 @@ Policy name: `googlenative-datamigration-v1beta1-connectionprofileiambinding-dis
 
 Code path: `googlenative.datamigration.v1beta1.ConnectionProfileIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datamigration.v1beta1.ConnectionProfileIamBinding).
+Disallow the use of non-stable (Beta) resources (datamigration.v1beta1.ConnectionProfileIamBinding).
 
 Service: Datamigration
 
@@ -11338,7 +11338,7 @@ Policy name: `googlenative-datamigration-v1beta1-connectionprofileiammember-disa
 
 Code path: `googlenative.datamigration.v1beta1.ConnectionProfileIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datamigration.v1beta1.ConnectionProfileIamMember).
+Disallow the use of non-stable (Beta) resources (datamigration.v1beta1.ConnectionProfileIamMember).
 
 Service: Datamigration
 
@@ -11360,7 +11360,7 @@ Policy name: `googlenative-datamigration-v1beta1-connectionprofileiampolicy-disa
 
 Code path: `googlenative.datamigration.v1beta1.ConnectionProfileIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datamigration.v1beta1.ConnectionProfileIamPolicy).
+Disallow the use of non-stable (Beta) resources (datamigration.v1beta1.ConnectionProfileIamPolicy).
 
 Service: Datamigration
 
@@ -11382,7 +11382,7 @@ Policy name: `googlenative-datamigration-v1beta1-migrationjob-disallow-beta-reso
 
 Code path: `googlenative.datamigration.v1beta1.MigrationJob.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datamigration.v1beta1.MigrationJob).
+Disallow the use of non-stable (Beta) resources (datamigration.v1beta1.MigrationJob).
 
 Service: Datamigration
 
@@ -11404,7 +11404,7 @@ Policy name: `googlenative-datamigration-v1beta1-migrationjobiambinding-disallow
 
 Code path: `googlenative.datamigration.v1beta1.MigrationJobIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datamigration.v1beta1.MigrationJobIamBinding).
+Disallow the use of non-stable (Beta) resources (datamigration.v1beta1.MigrationJobIamBinding).
 
 Service: Datamigration
 
@@ -11426,7 +11426,7 @@ Policy name: `googlenative-datamigration-v1beta1-migrationjobiammember-disallow-
 
 Code path: `googlenative.datamigration.v1beta1.MigrationJobIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datamigration.v1beta1.MigrationJobIamMember).
+Disallow the use of non-stable (Beta) resources (datamigration.v1beta1.MigrationJobIamMember).
 
 Service: Datamigration
 
@@ -11448,7 +11448,7 @@ Policy name: `googlenative-datamigration-v1beta1-migrationjobiampolicy-disallow-
 
 Code path: `googlenative.datamigration.v1beta1.MigrationJobIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (datamigration.v1beta1.MigrationJobIamPolicy).
+Disallow the use of non-stable (Beta) resources (datamigration.v1beta1.MigrationJobIamPolicy).
 
 Service: Datamigration
 
@@ -11474,7 +11474,7 @@ Policy name: `googlenative-dataproc-v1beta2-autoscalingpolicy-disallow-beta-reso
 
 Code path: `googlenative.dataproc.v1beta2.AutoscalingPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.AutoscalingPolicy).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.AutoscalingPolicy).
 
 Service: Dataproc
 
@@ -11496,7 +11496,7 @@ Policy name: `googlenative-dataproc-v1beta2-autoscalingpolicyiambinding-disallow
 
 Code path: `googlenative.dataproc.v1beta2.AutoscalingPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.AutoscalingPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.AutoscalingPolicyIamBinding).
 
 Service: Dataproc
 
@@ -11518,7 +11518,7 @@ Policy name: `googlenative-dataproc-v1beta2-autoscalingpolicyiammember-disallow-
 
 Code path: `googlenative.dataproc.v1beta2.AutoscalingPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.AutoscalingPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.AutoscalingPolicyIamMember).
 
 Service: Dataproc
 
@@ -11540,7 +11540,7 @@ Policy name: `googlenative-dataproc-v1beta2-autoscalingpolicyiampolicy-disallow-
 
 Code path: `googlenative.dataproc.v1beta2.AutoscalingPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.AutoscalingPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.AutoscalingPolicyIamPolicy).
 
 Service: Dataproc
 
@@ -11562,7 +11562,7 @@ Policy name: `googlenative-dataproc-v1beta2-cluster-disallow-beta-resource`
 
 Code path: `googlenative.dataproc.v1beta2.Cluster.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.Cluster).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.Cluster).
 
 Service: Dataproc
 
@@ -11584,7 +11584,7 @@ Policy name: `googlenative-dataproc-v1beta2-job-disallow-beta-resource`
 
 Code path: `googlenative.dataproc.v1beta2.Job.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.Job).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.Job).
 
 Service: Dataproc
 
@@ -11606,7 +11606,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionautoscalingpolicyiambinding-di
 
 Code path: `googlenative.dataproc.v1beta2.RegionAutoscalingPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionAutoscalingPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionAutoscalingPolicyIamBinding).
 
 Service: Dataproc
 
@@ -11628,7 +11628,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionautoscalingpolicyiammember-dis
 
 Code path: `googlenative.dataproc.v1beta2.RegionAutoscalingPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionAutoscalingPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionAutoscalingPolicyIamMember).
 
 Service: Dataproc
 
@@ -11650,7 +11650,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionautoscalingpolicyiampolicy-dis
 
 Code path: `googlenative.dataproc.v1beta2.RegionAutoscalingPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionAutoscalingPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionAutoscalingPolicyIamPolicy).
 
 Service: Dataproc
 
@@ -11672,7 +11672,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionclusteriambinding-disallow-bet
 
 Code path: `googlenative.dataproc.v1beta2.RegionClusterIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionClusterIamBinding).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionClusterIamBinding).
 
 Service: Dataproc
 
@@ -11694,7 +11694,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionclusteriammember-disallow-beta
 
 Code path: `googlenative.dataproc.v1beta2.RegionClusterIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionClusterIamMember).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionClusterIamMember).
 
 Service: Dataproc
 
@@ -11716,7 +11716,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionclusteriampolicy-disallow-beta
 
 Code path: `googlenative.dataproc.v1beta2.RegionClusterIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionClusterIamPolicy).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionClusterIamPolicy).
 
 Service: Dataproc
 
@@ -11738,7 +11738,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionjobiambinding-disallow-beta-re
 
 Code path: `googlenative.dataproc.v1beta2.RegionJobIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionJobIamBinding).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionJobIamBinding).
 
 Service: Dataproc
 
@@ -11760,7 +11760,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionjobiammember-disallow-beta-res
 
 Code path: `googlenative.dataproc.v1beta2.RegionJobIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionJobIamMember).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionJobIamMember).
 
 Service: Dataproc
 
@@ -11782,7 +11782,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionjobiampolicy-disallow-beta-res
 
 Code path: `googlenative.dataproc.v1beta2.RegionJobIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionJobIamPolicy).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionJobIamPolicy).
 
 Service: Dataproc
 
@@ -11804,7 +11804,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionoperationiambinding-disallow-b
 
 Code path: `googlenative.dataproc.v1beta2.RegionOperationIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionOperationIamBinding).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionOperationIamBinding).
 
 Service: Dataproc
 
@@ -11826,7 +11826,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionoperationiammember-disallow-be
 
 Code path: `googlenative.dataproc.v1beta2.RegionOperationIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionOperationIamMember).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionOperationIamMember).
 
 Service: Dataproc
 
@@ -11848,7 +11848,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionoperationiampolicy-disallow-be
 
 Code path: `googlenative.dataproc.v1beta2.RegionOperationIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionOperationIamPolicy).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionOperationIamPolicy).
 
 Service: Dataproc
 
@@ -11870,7 +11870,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionworkflowtemplateiambinding-dis
 
 Code path: `googlenative.dataproc.v1beta2.RegionWorkflowTemplateIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionWorkflowTemplateIamBinding).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionWorkflowTemplateIamBinding).
 
 Service: Dataproc
 
@@ -11892,7 +11892,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionworkflowtemplateiammember-disa
 
 Code path: `googlenative.dataproc.v1beta2.RegionWorkflowTemplateIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionWorkflowTemplateIamMember).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionWorkflowTemplateIamMember).
 
 Service: Dataproc
 
@@ -11914,7 +11914,7 @@ Policy name: `googlenative-dataproc-v1beta2-regionworkflowtemplateiampolicy-disa
 
 Code path: `googlenative.dataproc.v1beta2.RegionWorkflowTemplateIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.RegionWorkflowTemplateIamPolicy).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.RegionWorkflowTemplateIamPolicy).
 
 Service: Dataproc
 
@@ -11936,7 +11936,7 @@ Policy name: `googlenative-dataproc-v1beta2-workflowtemplate-disallow-beta-resou
 
 Code path: `googlenative.dataproc.v1beta2.WorkflowTemplate.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.WorkflowTemplate).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.WorkflowTemplate).
 
 Service: Dataproc
 
@@ -11958,7 +11958,7 @@ Policy name: `googlenative-dataproc-v1beta2-workflowtemplateiambinding-disallow-
 
 Code path: `googlenative.dataproc.v1beta2.WorkflowTemplateIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.WorkflowTemplateIamBinding).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.WorkflowTemplateIamBinding).
 
 Service: Dataproc
 
@@ -11980,7 +11980,7 @@ Policy name: `googlenative-dataproc-v1beta2-workflowtemplateiammember-disallow-b
 
 Code path: `googlenative.dataproc.v1beta2.WorkflowTemplateIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.WorkflowTemplateIamMember).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.WorkflowTemplateIamMember).
 
 Service: Dataproc
 
@@ -12002,7 +12002,7 @@ Policy name: `googlenative-dataproc-v1beta2-workflowtemplateiampolicy-disallow-b
 
 Code path: `googlenative.dataproc.v1beta2.WorkflowTemplateIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dataproc.v1beta2.WorkflowTemplateIamPolicy).
+Disallow the use of non-stable (Beta) resources (dataproc.v1beta2.WorkflowTemplateIamPolicy).
 
 Service: Dataproc
 
@@ -12028,7 +12028,7 @@ Policy name: `googlenative-datastream-v1alpha1-connectionprofile-disallow-alpha-
 
 Code path: `googlenative.datastream.v1alpha1.ConnectionProfile.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (datastream.v1alpha1.ConnectionProfile).
+Disallow the use of non-stable (Alpha) resources (datastream.v1alpha1.ConnectionProfile).
 
 Service: Datastream
 
@@ -12050,7 +12050,7 @@ Policy name: `googlenative-datastream-v1alpha1-privateconnection-disallow-alpha-
 
 Code path: `googlenative.datastream.v1alpha1.PrivateConnection.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (datastream.v1alpha1.PrivateConnection).
+Disallow the use of non-stable (Alpha) resources (datastream.v1alpha1.PrivateConnection).
 
 Service: Datastream
 
@@ -12072,7 +12072,7 @@ Policy name: `googlenative-datastream-v1alpha1-route-disallow-alpha-resource`
 
 Code path: `googlenative.datastream.v1alpha1.Route.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (datastream.v1alpha1.Route).
+Disallow the use of non-stable (Alpha) resources (datastream.v1alpha1.Route).
 
 Service: Datastream
 
@@ -12094,7 +12094,7 @@ Policy name: `googlenative-datastream-v1alpha1-stream-disallow-alpha-resource`
 
 Code path: `googlenative.datastream.v1alpha1.Stream.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (datastream.v1alpha1.Stream).
+Disallow the use of non-stable (Alpha) resources (datastream.v1alpha1.Stream).
 
 Service: Datastream
 
@@ -12120,7 +12120,7 @@ Policy name: `googlenative-deploymentmanager-alpha-compositetype-disallow-alpha-
 
 Code path: `googlenative.deploymentmanager.alpha.CompositeType.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (deploymentmanager.alpha.CompositeType).
+Disallow the use of non-stable (Alpha) resources (deploymentmanager.alpha.CompositeType).
 
 Service: Deploymentmanager
 
@@ -12142,7 +12142,7 @@ Policy name: `googlenative-deploymentmanager-alpha-deployment-disallow-alpha-res
 
 Code path: `googlenative.deploymentmanager.alpha.Deployment.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (deploymentmanager.alpha.Deployment).
+Disallow the use of non-stable (Alpha) resources (deploymentmanager.alpha.Deployment).
 
 Service: Deploymentmanager
 
@@ -12164,7 +12164,7 @@ Policy name: `googlenative-deploymentmanager-alpha-deploymentiambinding-disallow
 
 Code path: `googlenative.deploymentmanager.alpha.DeploymentIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (deploymentmanager.alpha.DeploymentIamBinding).
+Disallow the use of non-stable (Alpha) resources (deploymentmanager.alpha.DeploymentIamBinding).
 
 Service: Deploymentmanager
 
@@ -12186,7 +12186,7 @@ Policy name: `googlenative-deploymentmanager-alpha-deploymentiammember-disallow-
 
 Code path: `googlenative.deploymentmanager.alpha.DeploymentIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (deploymentmanager.alpha.DeploymentIamMember).
+Disallow the use of non-stable (Alpha) resources (deploymentmanager.alpha.DeploymentIamMember).
 
 Service: Deploymentmanager
 
@@ -12208,7 +12208,7 @@ Policy name: `googlenative-deploymentmanager-alpha-deploymentiampolicy-disallow-
 
 Code path: `googlenative.deploymentmanager.alpha.DeploymentIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (deploymentmanager.alpha.DeploymentIamPolicy).
+Disallow the use of non-stable (Alpha) resources (deploymentmanager.alpha.DeploymentIamPolicy).
 
 Service: Deploymentmanager
 
@@ -12230,7 +12230,7 @@ Policy name: `googlenative-deploymentmanager-alpha-typeprovider-disallow-alpha-r
 
 Code path: `googlenative.deploymentmanager.alpha.TypeProvider.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (deploymentmanager.alpha.TypeProvider).
+Disallow the use of non-stable (Alpha) resources (deploymentmanager.alpha.TypeProvider).
 
 Service: Deploymentmanager
 
@@ -12254,7 +12254,7 @@ Policy name: `googlenative-deploymentmanager-v2beta-compositetype-disallow-beta-
 
 Code path: `googlenative.deploymentmanager.v2beta.CompositeType.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (deploymentmanager.v2beta.CompositeType).
+Disallow the use of non-stable (Beta) resources (deploymentmanager.v2beta.CompositeType).
 
 Service: Deploymentmanager
 
@@ -12276,7 +12276,7 @@ Policy name: `googlenative-deploymentmanager-v2beta-deployment-disallow-beta-res
 
 Code path: `googlenative.deploymentmanager.v2beta.Deployment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (deploymentmanager.v2beta.Deployment).
+Disallow the use of non-stable (Beta) resources (deploymentmanager.v2beta.Deployment).
 
 Service: Deploymentmanager
 
@@ -12298,7 +12298,7 @@ Policy name: `googlenative-deploymentmanager-v2beta-deploymentiambinding-disallo
 
 Code path: `googlenative.deploymentmanager.v2beta.DeploymentIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (deploymentmanager.v2beta.DeploymentIamBinding).
+Disallow the use of non-stable (Beta) resources (deploymentmanager.v2beta.DeploymentIamBinding).
 
 Service: Deploymentmanager
 
@@ -12320,7 +12320,7 @@ Policy name: `googlenative-deploymentmanager-v2beta-deploymentiammember-disallow
 
 Code path: `googlenative.deploymentmanager.v2beta.DeploymentIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (deploymentmanager.v2beta.DeploymentIamMember).
+Disallow the use of non-stable (Beta) resources (deploymentmanager.v2beta.DeploymentIamMember).
 
 Service: Deploymentmanager
 
@@ -12342,7 +12342,7 @@ Policy name: `googlenative-deploymentmanager-v2beta-deploymentiampolicy-disallow
 
 Code path: `googlenative.deploymentmanager.v2beta.DeploymentIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (deploymentmanager.v2beta.DeploymentIamPolicy).
+Disallow the use of non-stable (Beta) resources (deploymentmanager.v2beta.DeploymentIamPolicy).
 
 Service: Deploymentmanager
 
@@ -12364,7 +12364,7 @@ Policy name: `googlenative-deploymentmanager-v2beta-typeprovider-disallow-beta-r
 
 Code path: `googlenative.deploymentmanager.v2beta.TypeProvider.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (deploymentmanager.v2beta.TypeProvider).
+Disallow the use of non-stable (Beta) resources (deploymentmanager.v2beta.TypeProvider).
 
 Service: Deploymentmanager
 
@@ -12390,7 +12390,7 @@ Policy name: `googlenative-dialogflow-v2beta1-context-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v2beta1.Context.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.Context).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.Context).
 
 Service: Dialogflow
 
@@ -12412,7 +12412,7 @@ Policy name: `googlenative-dialogflow-v2beta1-conversation-disallow-beta-resourc
 
 Code path: `googlenative.dialogflow.v2beta1.Conversation.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.Conversation).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.Conversation).
 
 Service: Dialogflow
 
@@ -12434,7 +12434,7 @@ Policy name: `googlenative-dialogflow-v2beta1-conversationprofile-disallow-beta-
 
 Code path: `googlenative.dialogflow.v2beta1.ConversationProfile.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.ConversationProfile).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.ConversationProfile).
 
 Service: Dialogflow
 
@@ -12456,7 +12456,7 @@ Policy name: `googlenative-dialogflow-v2beta1-document-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v2beta1.Document.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.Document).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.Document).
 
 Service: Dialogflow
 
@@ -12478,7 +12478,7 @@ Policy name: `googlenative-dialogflow-v2beta1-entitytype-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v2beta1.EntityType.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.EntityType).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.EntityType).
 
 Service: Dialogflow
 
@@ -12500,7 +12500,7 @@ Policy name: `googlenative-dialogflow-v2beta1-environment-disallow-beta-resource
 
 Code path: `googlenative.dialogflow.v2beta1.Environment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.Environment).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.Environment).
 
 Service: Dialogflow
 
@@ -12522,7 +12522,7 @@ Policy name: `googlenative-dialogflow-v2beta1-intent-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v2beta1.Intent.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.Intent).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.Intent).
 
 Service: Dialogflow
 
@@ -12544,7 +12544,7 @@ Policy name: `googlenative-dialogflow-v2beta1-knowledgebase-disallow-beta-resour
 
 Code path: `googlenative.dialogflow.v2beta1.KnowledgeBase.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.KnowledgeBase).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.KnowledgeBase).
 
 Service: Dialogflow
 
@@ -12566,7 +12566,7 @@ Policy name: `googlenative-dialogflow-v2beta1-participant-disallow-beta-resource
 
 Code path: `googlenative.dialogflow.v2beta1.Participant.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.Participant).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.Participant).
 
 Service: Dialogflow
 
@@ -12588,7 +12588,7 @@ Policy name: `googlenative-dialogflow-v2beta1-sessionentitytype-disallow-beta-re
 
 Code path: `googlenative.dialogflow.v2beta1.SessionEntityType.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.SessionEntityType).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.SessionEntityType).
 
 Service: Dialogflow
 
@@ -12610,7 +12610,7 @@ Policy name: `googlenative-dialogflow-v2beta1-version-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v2beta1.Version.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v2beta1.Version).
+Disallow the use of non-stable (Beta) resources (dialogflow.v2beta1.Version).
 
 Service: Dialogflow
 
@@ -12634,7 +12634,7 @@ Policy name: `googlenative-dialogflow-v3beta1-agent-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v3beta1.Agent.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.Agent).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.Agent).
 
 Service: Dialogflow
 
@@ -12656,7 +12656,7 @@ Policy name: `googlenative-dialogflow-v3beta1-entitytype-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v3beta1.EntityType.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.EntityType).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.EntityType).
 
 Service: Dialogflow
 
@@ -12678,7 +12678,7 @@ Policy name: `googlenative-dialogflow-v3beta1-environment-disallow-beta-resource
 
 Code path: `googlenative.dialogflow.v3beta1.Environment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.Environment).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.Environment).
 
 Service: Dialogflow
 
@@ -12700,7 +12700,7 @@ Policy name: `googlenative-dialogflow-v3beta1-experiment-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v3beta1.Experiment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.Experiment).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.Experiment).
 
 Service: Dialogflow
 
@@ -12722,7 +12722,7 @@ Policy name: `googlenative-dialogflow-v3beta1-flow-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v3beta1.Flow.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.Flow).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.Flow).
 
 Service: Dialogflow
 
@@ -12744,7 +12744,7 @@ Policy name: `googlenative-dialogflow-v3beta1-intent-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v3beta1.Intent.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.Intent).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.Intent).
 
 Service: Dialogflow
 
@@ -12766,7 +12766,7 @@ Policy name: `googlenative-dialogflow-v3beta1-page-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v3beta1.Page.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.Page).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.Page).
 
 Service: Dialogflow
 
@@ -12788,7 +12788,7 @@ Policy name: `googlenative-dialogflow-v3beta1-securitysetting-disallow-beta-reso
 
 Code path: `googlenative.dialogflow.v3beta1.SecuritySetting.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.SecuritySetting).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.SecuritySetting).
 
 Service: Dialogflow
 
@@ -12810,7 +12810,7 @@ Policy name: `googlenative-dialogflow-v3beta1-sessionentitytype-disallow-beta-re
 
 Code path: `googlenative.dialogflow.v3beta1.SessionEntityType.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.SessionEntityType).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.SessionEntityType).
 
 Service: Dialogflow
 
@@ -12832,7 +12832,7 @@ Policy name: `googlenative-dialogflow-v3beta1-testcase-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v3beta1.TestCase.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.TestCase).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.TestCase).
 
 Service: Dialogflow
 
@@ -12854,7 +12854,7 @@ Policy name: `googlenative-dialogflow-v3beta1-transitionroutegroup-disallow-beta
 
 Code path: `googlenative.dialogflow.v3beta1.TransitionRouteGroup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.TransitionRouteGroup).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.TransitionRouteGroup).
 
 Service: Dialogflow
 
@@ -12876,7 +12876,7 @@ Policy name: `googlenative-dialogflow-v3beta1-version-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v3beta1.Version.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.Version).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.Version).
 
 Service: Dialogflow
 
@@ -12898,7 +12898,7 @@ Policy name: `googlenative-dialogflow-v3beta1-webhook-disallow-beta-resource`
 
 Code path: `googlenative.dialogflow.v3beta1.Webhook.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dialogflow.v3beta1.Webhook).
+Disallow the use of non-stable (Beta) resources (dialogflow.v3beta1.Webhook).
 
 Service: Dialogflow
 
@@ -12924,7 +12924,7 @@ Policy name: `googlenative-discoveryengine-v1alpha-document-disallow-alpha-resou
 
 Code path: `googlenative.discoveryengine.v1alpha.Document.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (discoveryengine.v1alpha.Document).
+Disallow the use of non-stable (Alpha) resources (discoveryengine.v1alpha.Document).
 
 Service: Discoveryengine
 
@@ -12948,7 +12948,7 @@ Policy name: `googlenative-discoveryengine-v1beta-document-disallow-beta-resourc
 
 Code path: `googlenative.discoveryengine.v1beta.Document.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (discoveryengine.v1beta.Document).
+Disallow the use of non-stable (Beta) resources (discoveryengine.v1beta.Document).
 
 Service: Discoveryengine
 
@@ -12974,7 +12974,7 @@ Policy name: `googlenative-dns-v1beta2-change-disallow-beta-resource`
 
 Code path: `googlenative.dns.v1beta2.Change.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dns.v1beta2.Change).
+Disallow the use of non-stable (Beta) resources (dns.v1beta2.Change).
 
 Service: Dns
 
@@ -12996,7 +12996,7 @@ Policy name: `googlenative-dns-v1beta2-managedzone-disallow-beta-resource`
 
 Code path: `googlenative.dns.v1beta2.ManagedZone.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dns.v1beta2.ManagedZone).
+Disallow the use of non-stable (Beta) resources (dns.v1beta2.ManagedZone).
 
 Service: Dns
 
@@ -13018,7 +13018,7 @@ Policy name: `googlenative-dns-v1beta2-managedzoneiambinding-disallow-beta-resou
 
 Code path: `googlenative.dns.v1beta2.ManagedZoneIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dns.v1beta2.ManagedZoneIamBinding).
+Disallow the use of non-stable (Beta) resources (dns.v1beta2.ManagedZoneIamBinding).
 
 Service: Dns
 
@@ -13040,7 +13040,7 @@ Policy name: `googlenative-dns-v1beta2-managedzoneiammember-disallow-beta-resour
 
 Code path: `googlenative.dns.v1beta2.ManagedZoneIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dns.v1beta2.ManagedZoneIamMember).
+Disallow the use of non-stable (Beta) resources (dns.v1beta2.ManagedZoneIamMember).
 
 Service: Dns
 
@@ -13062,7 +13062,7 @@ Policy name: `googlenative-dns-v1beta2-managedzoneiampolicy-disallow-beta-resour
 
 Code path: `googlenative.dns.v1beta2.ManagedZoneIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dns.v1beta2.ManagedZoneIamPolicy).
+Disallow the use of non-stable (Beta) resources (dns.v1beta2.ManagedZoneIamPolicy).
 
 Service: Dns
 
@@ -13084,7 +13084,7 @@ Policy name: `googlenative-dns-v1beta2-policy-disallow-beta-resource`
 
 Code path: `googlenative.dns.v1beta2.Policy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dns.v1beta2.Policy).
+Disallow the use of non-stable (Beta) resources (dns.v1beta2.Policy).
 
 Service: Dns
 
@@ -13106,7 +13106,7 @@ Policy name: `googlenative-dns-v1beta2-resourcerecordset-disallow-beta-resource`
 
 Code path: `googlenative.dns.v1beta2.ResourceRecordSet.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dns.v1beta2.ResourceRecordSet).
+Disallow the use of non-stable (Beta) resources (dns.v1beta2.ResourceRecordSet).
 
 Service: Dns
 
@@ -13128,7 +13128,7 @@ Policy name: `googlenative-dns-v1beta2-responsepolicy-disallow-beta-resource`
 
 Code path: `googlenative.dns.v1beta2.ResponsePolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dns.v1beta2.ResponsePolicy).
+Disallow the use of non-stable (Beta) resources (dns.v1beta2.ResponsePolicy).
 
 Service: Dns
 
@@ -13150,7 +13150,7 @@ Policy name: `googlenative-dns-v1beta2-responsepolicyrule-disallow-beta-resource
 
 Code path: `googlenative.dns.v1beta2.ResponsePolicyRule.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (dns.v1beta2.ResponsePolicyRule).
+Disallow the use of non-stable (Beta) resources (dns.v1beta2.ResponsePolicyRule).
 
 Service: Dns
 
@@ -13176,7 +13176,7 @@ Policy name: `googlenative-documentai-v1beta3-processor-disallow-beta-resource`
 
 Code path: `googlenative.documentai.v1beta3.Processor.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (documentai.v1beta3.Processor).
+Disallow the use of non-stable (Beta) resources (documentai.v1beta3.Processor).
 
 Service: Documentai
 
@@ -13202,7 +13202,7 @@ Policy name: `googlenative-domains-v1alpha2-registration-disallow-alpha-resource
 
 Code path: `googlenative.domains.v1alpha2.Registration.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (domains.v1alpha2.Registration).
+Disallow the use of non-stable (Alpha) resources (domains.v1alpha2.Registration).
 
 Service: Domains
 
@@ -13224,7 +13224,7 @@ Policy name: `googlenative-domains-v1alpha2-registrationiambinding-disallow-alph
 
 Code path: `googlenative.domains.v1alpha2.RegistrationIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (domains.v1alpha2.RegistrationIamBinding).
+Disallow the use of non-stable (Alpha) resources (domains.v1alpha2.RegistrationIamBinding).
 
 Service: Domains
 
@@ -13246,7 +13246,7 @@ Policy name: `googlenative-domains-v1alpha2-registrationiammember-disallow-alpha
 
 Code path: `googlenative.domains.v1alpha2.RegistrationIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (domains.v1alpha2.RegistrationIamMember).
+Disallow the use of non-stable (Alpha) resources (domains.v1alpha2.RegistrationIamMember).
 
 Service: Domains
 
@@ -13268,7 +13268,7 @@ Policy name: `googlenative-domains-v1alpha2-registrationiampolicy-disallow-alpha
 
 Code path: `googlenative.domains.v1alpha2.RegistrationIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (domains.v1alpha2.RegistrationIamPolicy).
+Disallow the use of non-stable (Alpha) resources (domains.v1alpha2.RegistrationIamPolicy).
 
 Service: Domains
 
@@ -13292,7 +13292,7 @@ Policy name: `googlenative-domains-v1beta1-registration-disallow-beta-resource`
 
 Code path: `googlenative.domains.v1beta1.Registration.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (domains.v1beta1.Registration).
+Disallow the use of non-stable (Beta) resources (domains.v1beta1.Registration).
 
 Service: Domains
 
@@ -13314,7 +13314,7 @@ Policy name: `googlenative-domains-v1beta1-registrationiambinding-disallow-beta-
 
 Code path: `googlenative.domains.v1beta1.RegistrationIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (domains.v1beta1.RegistrationIamBinding).
+Disallow the use of non-stable (Beta) resources (domains.v1beta1.RegistrationIamBinding).
 
 Service: Domains
 
@@ -13336,7 +13336,7 @@ Policy name: `googlenative-domains-v1beta1-registrationiammember-disallow-beta-r
 
 Code path: `googlenative.domains.v1beta1.RegistrationIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (domains.v1beta1.RegistrationIamMember).
+Disallow the use of non-stable (Beta) resources (domains.v1beta1.RegistrationIamMember).
 
 Service: Domains
 
@@ -13358,7 +13358,7 @@ Policy name: `googlenative-domains-v1beta1-registrationiampolicy-disallow-beta-r
 
 Code path: `googlenative.domains.v1beta1.RegistrationIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (domains.v1beta1.RegistrationIamPolicy).
+Disallow the use of non-stable (Beta) resources (domains.v1beta1.RegistrationIamPolicy).
 
 Service: Domains
 
@@ -13384,7 +13384,7 @@ Policy name: `googlenative-eventarc-v1beta1-trigger-disallow-beta-resource`
 
 Code path: `googlenative.eventarc.v1beta1.Trigger.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (eventarc.v1beta1.Trigger).
+Disallow the use of non-stable (Beta) resources (eventarc.v1beta1.Trigger).
 
 Service: Eventarc
 
@@ -13406,7 +13406,7 @@ Policy name: `googlenative-eventarc-v1beta1-triggeriambinding-disallow-beta-reso
 
 Code path: `googlenative.eventarc.v1beta1.TriggerIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (eventarc.v1beta1.TriggerIamBinding).
+Disallow the use of non-stable (Beta) resources (eventarc.v1beta1.TriggerIamBinding).
 
 Service: Eventarc
 
@@ -13428,7 +13428,7 @@ Policy name: `googlenative-eventarc-v1beta1-triggeriammember-disallow-beta-resou
 
 Code path: `googlenative.eventarc.v1beta1.TriggerIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (eventarc.v1beta1.TriggerIamMember).
+Disallow the use of non-stable (Beta) resources (eventarc.v1beta1.TriggerIamMember).
 
 Service: Eventarc
 
@@ -13450,7 +13450,7 @@ Policy name: `googlenative-eventarc-v1beta1-triggeriampolicy-disallow-beta-resou
 
 Code path: `googlenative.eventarc.v1beta1.TriggerIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (eventarc.v1beta1.TriggerIamPolicy).
+Disallow the use of non-stable (Beta) resources (eventarc.v1beta1.TriggerIamPolicy).
 
 Service: Eventarc
 
@@ -13476,7 +13476,7 @@ Policy name: `googlenative-file-v1beta1-backup-disallow-beta-resource`
 
 Code path: `googlenative.file.v1beta1.Backup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (file.v1beta1.Backup).
+Disallow the use of non-stable (Beta) resources (file.v1beta1.Backup).
 
 Service: File
 
@@ -13498,7 +13498,7 @@ Policy name: `googlenative-file-v1beta1-instance-disallow-beta-resource`
 
 Code path: `googlenative.file.v1beta1.Instance.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (file.v1beta1.Instance).
+Disallow the use of non-stable (Beta) resources (file.v1beta1.Instance).
 
 Service: File
 
@@ -13520,7 +13520,7 @@ Policy name: `googlenative-file-v1beta1-share-disallow-beta-resource`
 
 Code path: `googlenative.file.v1beta1.Share.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (file.v1beta1.Share).
+Disallow the use of non-stable (Beta) resources (file.v1beta1.Share).
 
 Service: File
 
@@ -13542,7 +13542,7 @@ Policy name: `googlenative-file-v1beta1-snapshot-disallow-beta-resource`
 
 Code path: `googlenative.file.v1beta1.Snapshot.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (file.v1beta1.Snapshot).
+Disallow the use of non-stable (Beta) resources (file.v1beta1.Snapshot).
 
 Service: File
 
@@ -13568,7 +13568,7 @@ Policy name: `googlenative-firebase-v1beta1-androidapp-disallow-beta-resource`
 
 Code path: `googlenative.firebase.v1beta1.AndroidApp.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebase.v1beta1.AndroidApp).
+Disallow the use of non-stable (Beta) resources (firebase.v1beta1.AndroidApp).
 
 Service: Firebase
 
@@ -13590,7 +13590,7 @@ Policy name: `googlenative-firebase-v1beta1-iosapp-disallow-beta-resource`
 
 Code path: `googlenative.firebase.v1beta1.IosApp.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebase.v1beta1.IosApp).
+Disallow the use of non-stable (Beta) resources (firebase.v1beta1.IosApp).
 
 Service: Firebase
 
@@ -13612,7 +13612,7 @@ Policy name: `googlenative-firebase-v1beta1-webapp-disallow-beta-resource`
 
 Code path: `googlenative.firebase.v1beta1.WebApp.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebase.v1beta1.WebApp).
+Disallow the use of non-stable (Beta) resources (firebase.v1beta1.WebApp).
 
 Service: Firebase
 
@@ -13638,7 +13638,7 @@ Policy name: `googlenative-firebaseappcheck-v1beta-debugtoken-disallow-beta-reso
 
 Code path: `googlenative.firebaseappcheck.v1beta.DebugToken.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebaseappcheck.v1beta.DebugToken).
+Disallow the use of non-stable (Beta) resources (firebaseappcheck.v1beta.DebugToken).
 
 Service: Firebaseappcheck
 
@@ -13664,7 +13664,7 @@ Policy name: `googlenative-firebasedatabase-v1beta-instance-disallow-beta-resour
 
 Code path: `googlenative.firebasedatabase.v1beta.Instance.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebasedatabase.v1beta.Instance).
+Disallow the use of non-stable (Beta) resources (firebasedatabase.v1beta.Instance).
 
 Service: Firebasedatabase
 
@@ -13690,7 +13690,7 @@ Policy name: `googlenative-firebasehosting-v1beta1-channel-disallow-beta-resourc
 
 Code path: `googlenative.firebasehosting.v1beta1.Channel.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebasehosting.v1beta1.Channel).
+Disallow the use of non-stable (Beta) resources (firebasehosting.v1beta1.Channel).
 
 Service: Firebasehosting
 
@@ -13712,7 +13712,7 @@ Policy name: `googlenative-firebasehosting-v1beta1-domain-disallow-beta-resource
 
 Code path: `googlenative.firebasehosting.v1beta1.Domain.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebasehosting.v1beta1.Domain).
+Disallow the use of non-stable (Beta) resources (firebasehosting.v1beta1.Domain).
 
 Service: Firebasehosting
 
@@ -13734,7 +13734,7 @@ Policy name: `googlenative-firebasehosting-v1beta1-release-disallow-beta-resourc
 
 Code path: `googlenative.firebasehosting.v1beta1.Release.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebasehosting.v1beta1.Release).
+Disallow the use of non-stable (Beta) resources (firebasehosting.v1beta1.Release).
 
 Service: Firebasehosting
 
@@ -13756,7 +13756,7 @@ Policy name: `googlenative-firebasehosting-v1beta1-site-disallow-beta-resource`
 
 Code path: `googlenative.firebasehosting.v1beta1.Site.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebasehosting.v1beta1.Site).
+Disallow the use of non-stable (Beta) resources (firebasehosting.v1beta1.Site).
 
 Service: Firebasehosting
 
@@ -13778,7 +13778,7 @@ Policy name: `googlenative-firebasehosting-v1beta1-version-disallow-beta-resourc
 
 Code path: `googlenative.firebasehosting.v1beta1.Version.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebasehosting.v1beta1.Version).
+Disallow the use of non-stable (Beta) resources (firebasehosting.v1beta1.Version).
 
 Service: Firebasehosting
 
@@ -13804,7 +13804,7 @@ Policy name: `googlenative-firebaseml-v1beta2-model-disallow-beta-resource`
 
 Code path: `googlenative.firebaseml.v1beta2.Model.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firebaseml.v1beta2.Model).
+Disallow the use of non-stable (Beta) resources (firebaseml.v1beta2.Model).
 
 Service: Firebaseml
 
@@ -13830,7 +13830,7 @@ Policy name: `googlenative-firestore-v1beta1-index-disallow-beta-resource`
 
 Code path: `googlenative.firestore.v1beta1.Index.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firestore.v1beta1.Index).
+Disallow the use of non-stable (Beta) resources (firestore.v1beta1.Index).
 
 Service: Firestore
 
@@ -13854,7 +13854,7 @@ Policy name: `googlenative-firestore-v1beta2-index-disallow-beta-resource`
 
 Code path: `googlenative.firestore.v1beta2.Index.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (firestore.v1beta2.Index).
+Disallow the use of non-stable (Beta) resources (firestore.v1beta2.Index).
 
 Service: Firestore
 
@@ -13880,7 +13880,7 @@ Policy name: `googlenative-gameservices-v1beta-gameserverdeploymentiambinding-di
 
 Code path: `googlenative.gameservices.v1beta.GameServerDeploymentIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gameservices.v1beta.GameServerDeploymentIamBinding).
+Disallow the use of non-stable (Beta) resources (gameservices.v1beta.GameServerDeploymentIamBinding).
 
 Service: Gameservices
 
@@ -13902,7 +13902,7 @@ Policy name: `googlenative-gameservices-v1beta-gameserverdeploymentiammember-dis
 
 Code path: `googlenative.gameservices.v1beta.GameServerDeploymentIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gameservices.v1beta.GameServerDeploymentIamMember).
+Disallow the use of non-stable (Beta) resources (gameservices.v1beta.GameServerDeploymentIamMember).
 
 Service: Gameservices
 
@@ -13924,7 +13924,7 @@ Policy name: `googlenative-gameservices-v1beta-gameserverdeploymentiampolicy-dis
 
 Code path: `googlenative.gameservices.v1beta.GameServerDeploymentIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gameservices.v1beta.GameServerDeploymentIamPolicy).
+Disallow the use of non-stable (Beta) resources (gameservices.v1beta.GameServerDeploymentIamPolicy).
 
 Service: Gameservices
 
@@ -13950,7 +13950,7 @@ Policy name: `googlenative-genomics-v1alpha2-pipeline-disallow-alpha-resource`
 
 Code path: `googlenative.genomics.v1alpha2.Pipeline.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (genomics.v1alpha2.Pipeline).
+Disallow the use of non-stable (Alpha) resources (genomics.v1alpha2.Pipeline).
 
 Service: Genomics
 
@@ -13976,7 +13976,7 @@ Policy name: `googlenative-gkehub-v1alpha-binding-disallow-alpha-resource`
 
 Code path: `googlenative.gkehub.v1alpha.Binding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.Binding).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.Binding).
 
 Service: Gkehub
 
@@ -13998,7 +13998,7 @@ Policy name: `googlenative-gkehub-v1alpha-feature-disallow-alpha-resource`
 
 Code path: `googlenative.gkehub.v1alpha.Feature.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.Feature).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.Feature).
 
 Service: Gkehub
 
@@ -14020,7 +14020,7 @@ Policy name: `googlenative-gkehub-v1alpha-featureiambinding-disallow-alpha-resou
 
 Code path: `googlenative.gkehub.v1alpha.FeatureIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.FeatureIamBinding).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.FeatureIamBinding).
 
 Service: Gkehub
 
@@ -14042,7 +14042,7 @@ Policy name: `googlenative-gkehub-v1alpha-featureiammember-disallow-alpha-resour
 
 Code path: `googlenative.gkehub.v1alpha.FeatureIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.FeatureIamMember).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.FeatureIamMember).
 
 Service: Gkehub
 
@@ -14064,7 +14064,7 @@ Policy name: `googlenative-gkehub-v1alpha-featureiampolicy-disallow-alpha-resour
 
 Code path: `googlenative.gkehub.v1alpha.FeatureIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.FeatureIamPolicy).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.FeatureIamPolicy).
 
 Service: Gkehub
 
@@ -14086,7 +14086,7 @@ Policy name: `googlenative-gkehub-v1alpha-fleet-disallow-alpha-resource`
 
 Code path: `googlenative.gkehub.v1alpha.Fleet.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.Fleet).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.Fleet).
 
 Service: Gkehub
 
@@ -14108,7 +14108,7 @@ Policy name: `googlenative-gkehub-v1alpha-membership-disallow-alpha-resource`
 
 Code path: `googlenative.gkehub.v1alpha.Membership.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.Membership).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.Membership).
 
 Service: Gkehub
 
@@ -14130,7 +14130,7 @@ Policy name: `googlenative-gkehub-v1alpha-membershipiambinding-disallow-alpha-re
 
 Code path: `googlenative.gkehub.v1alpha.MembershipIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.MembershipIamBinding).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.MembershipIamBinding).
 
 Service: Gkehub
 
@@ -14152,7 +14152,7 @@ Policy name: `googlenative-gkehub-v1alpha-membershipiammember-disallow-alpha-res
 
 Code path: `googlenative.gkehub.v1alpha.MembershipIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.MembershipIamMember).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.MembershipIamMember).
 
 Service: Gkehub
 
@@ -14174,7 +14174,7 @@ Policy name: `googlenative-gkehub-v1alpha-membershipiampolicy-disallow-alpha-res
 
 Code path: `googlenative.gkehub.v1alpha.MembershipIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.MembershipIamPolicy).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.MembershipIamPolicy).
 
 Service: Gkehub
 
@@ -14196,7 +14196,7 @@ Policy name: `googlenative-gkehub-v1alpha-namespace-disallow-alpha-resource`
 
 Code path: `googlenative.gkehub.v1alpha.Namespace.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.Namespace).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.Namespace).
 
 Service: Gkehub
 
@@ -14218,7 +14218,7 @@ Policy name: `googlenative-gkehub-v1alpha-rbacrolebinding-disallow-alpha-resourc
 
 Code path: `googlenative.gkehub.v1alpha.Rbacrolebinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.Rbacrolebinding).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.Rbacrolebinding).
 
 Service: Gkehub
 
@@ -14240,7 +14240,7 @@ Policy name: `googlenative-gkehub-v1alpha-scope-disallow-alpha-resource`
 
 Code path: `googlenative.gkehub.v1alpha.Scope.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha.Scope).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha.Scope).
 
 Service: Gkehub
 
@@ -14264,7 +14264,7 @@ Policy name: `googlenative-gkehub-v1alpha2-membership-disallow-alpha-resource`
 
 Code path: `googlenative.gkehub.v1alpha2.Membership.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha2.Membership).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha2.Membership).
 
 Service: Gkehub
 
@@ -14286,7 +14286,7 @@ Policy name: `googlenative-gkehub-v1alpha2-membershipiambinding-disallow-alpha-r
 
 Code path: `googlenative.gkehub.v1alpha2.MembershipIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha2.MembershipIamBinding).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha2.MembershipIamBinding).
 
 Service: Gkehub
 
@@ -14308,7 +14308,7 @@ Policy name: `googlenative-gkehub-v1alpha2-membershipiammember-disallow-alpha-re
 
 Code path: `googlenative.gkehub.v1alpha2.MembershipIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha2.MembershipIamMember).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha2.MembershipIamMember).
 
 Service: Gkehub
 
@@ -14330,7 +14330,7 @@ Policy name: `googlenative-gkehub-v1alpha2-membershipiampolicy-disallow-alpha-re
 
 Code path: `googlenative.gkehub.v1alpha2.MembershipIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (gkehub.v1alpha2.MembershipIamPolicy).
+Disallow the use of non-stable (Alpha) resources (gkehub.v1alpha2.MembershipIamPolicy).
 
 Service: Gkehub
 
@@ -14354,7 +14354,7 @@ Policy name: `googlenative-gkehub-v1beta-binding-disallow-beta-resource`
 
 Code path: `googlenative.gkehub.v1beta.Binding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.Binding).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.Binding).
 
 Service: Gkehub
 
@@ -14376,7 +14376,7 @@ Policy name: `googlenative-gkehub-v1beta-feature-disallow-beta-resource`
 
 Code path: `googlenative.gkehub.v1beta.Feature.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.Feature).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.Feature).
 
 Service: Gkehub
 
@@ -14398,7 +14398,7 @@ Policy name: `googlenative-gkehub-v1beta-featureiambinding-disallow-beta-resourc
 
 Code path: `googlenative.gkehub.v1beta.FeatureIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.FeatureIamBinding).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.FeatureIamBinding).
 
 Service: Gkehub
 
@@ -14420,7 +14420,7 @@ Policy name: `googlenative-gkehub-v1beta-featureiammember-disallow-beta-resource
 
 Code path: `googlenative.gkehub.v1beta.FeatureIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.FeatureIamMember).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.FeatureIamMember).
 
 Service: Gkehub
 
@@ -14442,7 +14442,7 @@ Policy name: `googlenative-gkehub-v1beta-featureiampolicy-disallow-beta-resource
 
 Code path: `googlenative.gkehub.v1beta.FeatureIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.FeatureIamPolicy).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.FeatureIamPolicy).
 
 Service: Gkehub
 
@@ -14464,7 +14464,7 @@ Policy name: `googlenative-gkehub-v1beta-fleet-disallow-beta-resource`
 
 Code path: `googlenative.gkehub.v1beta.Fleet.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.Fleet).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.Fleet).
 
 Service: Gkehub
 
@@ -14486,7 +14486,7 @@ Policy name: `googlenative-gkehub-v1beta-membershipiambinding-disallow-beta-reso
 
 Code path: `googlenative.gkehub.v1beta.MembershipIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.MembershipIamBinding).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.MembershipIamBinding).
 
 Service: Gkehub
 
@@ -14508,7 +14508,7 @@ Policy name: `googlenative-gkehub-v1beta-membershipiammember-disallow-beta-resou
 
 Code path: `googlenative.gkehub.v1beta.MembershipIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.MembershipIamMember).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.MembershipIamMember).
 
 Service: Gkehub
 
@@ -14530,7 +14530,7 @@ Policy name: `googlenative-gkehub-v1beta-membershipiampolicy-disallow-beta-resou
 
 Code path: `googlenative.gkehub.v1beta.MembershipIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.MembershipIamPolicy).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.MembershipIamPolicy).
 
 Service: Gkehub
 
@@ -14552,7 +14552,7 @@ Policy name: `googlenative-gkehub-v1beta-namespace-disallow-beta-resource`
 
 Code path: `googlenative.gkehub.v1beta.Namespace.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.Namespace).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.Namespace).
 
 Service: Gkehub
 
@@ -14574,7 +14574,7 @@ Policy name: `googlenative-gkehub-v1beta-rbacrolebinding-disallow-beta-resource`
 
 Code path: `googlenative.gkehub.v1beta.Rbacrolebinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.Rbacrolebinding).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.Rbacrolebinding).
 
 Service: Gkehub
 
@@ -14596,7 +14596,7 @@ Policy name: `googlenative-gkehub-v1beta-scope-disallow-beta-resource`
 
 Code path: `googlenative.gkehub.v1beta.Scope.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta.Scope).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta.Scope).
 
 Service: Gkehub
 
@@ -14620,7 +14620,7 @@ Policy name: `googlenative-gkehub-v1beta1-membership-disallow-beta-resource`
 
 Code path: `googlenative.gkehub.v1beta1.Membership.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta1.Membership).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta1.Membership).
 
 Service: Gkehub
 
@@ -14642,7 +14642,7 @@ Policy name: `googlenative-gkehub-v1beta1-membershipiambinding-disallow-beta-res
 
 Code path: `googlenative.gkehub.v1beta1.MembershipIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta1.MembershipIamBinding).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta1.MembershipIamBinding).
 
 Service: Gkehub
 
@@ -14664,7 +14664,7 @@ Policy name: `googlenative-gkehub-v1beta1-membershipiammember-disallow-beta-reso
 
 Code path: `googlenative.gkehub.v1beta1.MembershipIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta1.MembershipIamMember).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta1.MembershipIamMember).
 
 Service: Gkehub
 
@@ -14686,7 +14686,7 @@ Policy name: `googlenative-gkehub-v1beta1-membershipiampolicy-disallow-beta-reso
 
 Code path: `googlenative.gkehub.v1beta1.MembershipIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (gkehub.v1beta1.MembershipIamPolicy).
+Disallow the use of non-stable (Beta) resources (gkehub.v1beta1.MembershipIamPolicy).
 
 Service: Gkehub
 
@@ -14712,7 +14712,7 @@ Policy name: `googlenative-healthcare-v1beta1-annotation-disallow-beta-resource`
 
 Code path: `googlenative.healthcare.v1beta1.Annotation.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.Annotation).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.Annotation).
 
 Service: Healthcare
 
@@ -14734,7 +14734,7 @@ Policy name: `googlenative-healthcare-v1beta1-annotationstore-disallow-beta-reso
 
 Code path: `googlenative.healthcare.v1beta1.AnnotationStore.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.AnnotationStore).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.AnnotationStore).
 
 Service: Healthcare
 
@@ -14756,7 +14756,7 @@ Policy name: `googlenative-healthcare-v1beta1-attributedefinition-disallow-beta-
 
 Code path: `googlenative.healthcare.v1beta1.AttributeDefinition.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.AttributeDefinition).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.AttributeDefinition).
 
 Service: Healthcare
 
@@ -14778,7 +14778,7 @@ Policy name: `googlenative-healthcare-v1beta1-consent-disallow-beta-resource`
 
 Code path: `googlenative.healthcare.v1beta1.Consent.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.Consent).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.Consent).
 
 Service: Healthcare
 
@@ -14800,7 +14800,7 @@ Policy name: `googlenative-healthcare-v1beta1-consentartifact-disallow-beta-reso
 
 Code path: `googlenative.healthcare.v1beta1.ConsentArtifact.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.ConsentArtifact).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.ConsentArtifact).
 
 Service: Healthcare
 
@@ -14822,7 +14822,7 @@ Policy name: `googlenative-healthcare-v1beta1-consentstore-disallow-beta-resourc
 
 Code path: `googlenative.healthcare.v1beta1.ConsentStore.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.ConsentStore).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.ConsentStore).
 
 Service: Healthcare
 
@@ -14844,7 +14844,7 @@ Policy name: `googlenative-healthcare-v1beta1-dataset-disallow-beta-resource`
 
 Code path: `googlenative.healthcare.v1beta1.Dataset.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.Dataset).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.Dataset).
 
 Service: Healthcare
 
@@ -14866,7 +14866,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetannotationstoreiambinding-d
 
 Code path: `googlenative.healthcare.v1beta1.DatasetAnnotationStoreIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetAnnotationStoreIamBinding).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetAnnotationStoreIamBinding).
 
 Service: Healthcare
 
@@ -14888,7 +14888,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetannotationstoreiammember-di
 
 Code path: `googlenative.healthcare.v1beta1.DatasetAnnotationStoreIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetAnnotationStoreIamMember).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetAnnotationStoreIamMember).
 
 Service: Healthcare
 
@@ -14910,7 +14910,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetannotationstoreiampolicy-di
 
 Code path: `googlenative.healthcare.v1beta1.DatasetAnnotationStoreIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetAnnotationStoreIamPolicy).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetAnnotationStoreIamPolicy).
 
 Service: Healthcare
 
@@ -14932,7 +14932,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetconsentstoreiambinding-disa
 
 Code path: `googlenative.healthcare.v1beta1.DatasetConsentStoreIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetConsentStoreIamBinding).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetConsentStoreIamBinding).
 
 Service: Healthcare
 
@@ -14954,7 +14954,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetconsentstoreiammember-disal
 
 Code path: `googlenative.healthcare.v1beta1.DatasetConsentStoreIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetConsentStoreIamMember).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetConsentStoreIamMember).
 
 Service: Healthcare
 
@@ -14976,7 +14976,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetconsentstoreiampolicy-disal
 
 Code path: `googlenative.healthcare.v1beta1.DatasetConsentStoreIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetConsentStoreIamPolicy).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetConsentStoreIamPolicy).
 
 Service: Healthcare
 
@@ -14998,7 +14998,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetdicomstoreiambinding-disall
 
 Code path: `googlenative.healthcare.v1beta1.DatasetDicomStoreIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetDicomStoreIamBinding).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetDicomStoreIamBinding).
 
 Service: Healthcare
 
@@ -15020,7 +15020,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetdicomstoreiammember-disallo
 
 Code path: `googlenative.healthcare.v1beta1.DatasetDicomStoreIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetDicomStoreIamMember).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetDicomStoreIamMember).
 
 Service: Healthcare
 
@@ -15042,7 +15042,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetdicomstoreiampolicy-disallo
 
 Code path: `googlenative.healthcare.v1beta1.DatasetDicomStoreIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetDicomStoreIamPolicy).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetDicomStoreIamPolicy).
 
 Service: Healthcare
 
@@ -15064,7 +15064,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetfhirstoreiambinding-disallo
 
 Code path: `googlenative.healthcare.v1beta1.DatasetFhirStoreIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetFhirStoreIamBinding).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetFhirStoreIamBinding).
 
 Service: Healthcare
 
@@ -15086,7 +15086,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetfhirstoreiammember-disallow
 
 Code path: `googlenative.healthcare.v1beta1.DatasetFhirStoreIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetFhirStoreIamMember).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetFhirStoreIamMember).
 
 Service: Healthcare
 
@@ -15108,7 +15108,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetfhirstoreiampolicy-disallow
 
 Code path: `googlenative.healthcare.v1beta1.DatasetFhirStoreIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetFhirStoreIamPolicy).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetFhirStoreIamPolicy).
 
 Service: Healthcare
 
@@ -15130,7 +15130,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasethl7v2storeiambinding-disall
 
 Code path: `googlenative.healthcare.v1beta1.DatasetHl7V2StoreIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetHl7V2StoreIamBinding).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetHl7V2StoreIamBinding).
 
 Service: Healthcare
 
@@ -15152,7 +15152,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasethl7v2storeiammember-disallo
 
 Code path: `googlenative.healthcare.v1beta1.DatasetHl7V2StoreIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetHl7V2StoreIamMember).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetHl7V2StoreIamMember).
 
 Service: Healthcare
 
@@ -15174,7 +15174,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasethl7v2storeiampolicy-disallo
 
 Code path: `googlenative.healthcare.v1beta1.DatasetHl7V2StoreIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetHl7V2StoreIamPolicy).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetHl7V2StoreIamPolicy).
 
 Service: Healthcare
 
@@ -15196,7 +15196,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetiambinding-disallow-beta-re
 
 Code path: `googlenative.healthcare.v1beta1.DatasetIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetIamBinding).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetIamBinding).
 
 Service: Healthcare
 
@@ -15218,7 +15218,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetiammember-disallow-beta-res
 
 Code path: `googlenative.healthcare.v1beta1.DatasetIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetIamMember).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetIamMember).
 
 Service: Healthcare
 
@@ -15240,7 +15240,7 @@ Policy name: `googlenative-healthcare-v1beta1-datasetiampolicy-disallow-beta-res
 
 Code path: `googlenative.healthcare.v1beta1.DatasetIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DatasetIamPolicy).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DatasetIamPolicy).
 
 Service: Healthcare
 
@@ -15262,7 +15262,7 @@ Policy name: `googlenative-healthcare-v1beta1-dicomstore-disallow-beta-resource`
 
 Code path: `googlenative.healthcare.v1beta1.DicomStore.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.DicomStore).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.DicomStore).
 
 Service: Healthcare
 
@@ -15284,7 +15284,7 @@ Policy name: `googlenative-healthcare-v1beta1-fhirstore-disallow-beta-resource`
 
 Code path: `googlenative.healthcare.v1beta1.FhirStore.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.FhirStore).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.FhirStore).
 
 Service: Healthcare
 
@@ -15306,7 +15306,7 @@ Policy name: `googlenative-healthcare-v1beta1-hl7v2store-disallow-beta-resource`
 
 Code path: `googlenative.healthcare.v1beta1.Hl7V2Store.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.Hl7V2Store).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.Hl7V2Store).
 
 Service: Healthcare
 
@@ -15328,7 +15328,7 @@ Policy name: `googlenative-healthcare-v1beta1-message-disallow-beta-resource`
 
 Code path: `googlenative.healthcare.v1beta1.Message.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.Message).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.Message).
 
 Service: Healthcare
 
@@ -15350,7 +15350,7 @@ Policy name: `googlenative-healthcare-v1beta1-userdatamapping-disallow-beta-reso
 
 Code path: `googlenative.healthcare.v1beta1.UserDataMapping.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (healthcare.v1beta1.UserDataMapping).
+Disallow the use of non-stable (Beta) resources (healthcare.v1beta1.UserDataMapping).
 
 Service: Healthcare
 
@@ -15376,7 +15376,7 @@ Policy name: `googlenative-integrations-v1alpha-authconfig-disallow-alpha-resour
 
 Code path: `googlenative.integrations.v1alpha.AuthConfig.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (integrations.v1alpha.AuthConfig).
+Disallow the use of non-stable (Alpha) resources (integrations.v1alpha.AuthConfig).
 
 Service: Integrations
 
@@ -15398,7 +15398,7 @@ Policy name: `googlenative-integrations-v1alpha-certificate-disallow-alpha-resou
 
 Code path: `googlenative.integrations.v1alpha.Certificate.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (integrations.v1alpha.Certificate).
+Disallow the use of non-stable (Alpha) resources (integrations.v1alpha.Certificate).
 
 Service: Integrations
 
@@ -15420,7 +15420,7 @@ Policy name: `googlenative-integrations-v1alpha-sfdcchannel-disallow-alpha-resou
 
 Code path: `googlenative.integrations.v1alpha.SfdcChannel.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (integrations.v1alpha.SfdcChannel).
+Disallow the use of non-stable (Alpha) resources (integrations.v1alpha.SfdcChannel).
 
 Service: Integrations
 
@@ -15442,7 +15442,7 @@ Policy name: `googlenative-integrations-v1alpha-sfdcinstance-disallow-alpha-reso
 
 Code path: `googlenative.integrations.v1alpha.SfdcInstance.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (integrations.v1alpha.SfdcInstance).
+Disallow the use of non-stable (Alpha) resources (integrations.v1alpha.SfdcInstance).
 
 Service: Integrations
 
@@ -15464,7 +15464,7 @@ Policy name: `googlenative-integrations-v1alpha-templatesversion-disallow-alpha-
 
 Code path: `googlenative.integrations.v1alpha.TemplatesVersion.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (integrations.v1alpha.TemplatesVersion).
+Disallow the use of non-stable (Alpha) resources (integrations.v1alpha.TemplatesVersion).
 
 Service: Integrations
 
@@ -15486,7 +15486,7 @@ Policy name: `googlenative-integrations-v1alpha-version-disallow-alpha-resource`
 
 Code path: `googlenative.integrations.v1alpha.Version.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (integrations.v1alpha.Version).
+Disallow the use of non-stable (Alpha) resources (integrations.v1alpha.Version).
 
 Service: Integrations
 
@@ -15512,7 +15512,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-backup-disallow-alpha-reso
 
 Code path: `googlenative.managedidentities.v1alpha1.Backup.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.Backup).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.Backup).
 
 Service: Managedidentities
 
@@ -15534,7 +15534,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-domain-disallow-alpha-reso
 
 Code path: `googlenative.managedidentities.v1alpha1.Domain.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.Domain).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.Domain).
 
 Service: Managedidentities
 
@@ -15556,7 +15556,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-domainbackupiambinding-dis
 
 Code path: `googlenative.managedidentities.v1alpha1.DomainBackupIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.DomainBackupIamBinding).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.DomainBackupIamBinding).
 
 Service: Managedidentities
 
@@ -15578,7 +15578,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-domainbackupiammember-disa
 
 Code path: `googlenative.managedidentities.v1alpha1.DomainBackupIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.DomainBackupIamMember).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.DomainBackupIamMember).
 
 Service: Managedidentities
 
@@ -15600,7 +15600,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-domainbackupiampolicy-disa
 
 Code path: `googlenative.managedidentities.v1alpha1.DomainBackupIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.DomainBackupIamPolicy).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.DomainBackupIamPolicy).
 
 Service: Managedidentities
 
@@ -15622,7 +15622,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-domainiambinding-disallow-
 
 Code path: `googlenative.managedidentities.v1alpha1.DomainIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.DomainIamBinding).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.DomainIamBinding).
 
 Service: Managedidentities
 
@@ -15644,7 +15644,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-domainiammember-disallow-a
 
 Code path: `googlenative.managedidentities.v1alpha1.DomainIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.DomainIamMember).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.DomainIamMember).
 
 Service: Managedidentities
 
@@ -15666,7 +15666,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-domainiampolicy-disallow-a
 
 Code path: `googlenative.managedidentities.v1alpha1.DomainIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.DomainIamPolicy).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.DomainIamPolicy).
 
 Service: Managedidentities
 
@@ -15688,7 +15688,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-peering-disallow-alpha-res
 
 Code path: `googlenative.managedidentities.v1alpha1.Peering.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.Peering).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.Peering).
 
 Service: Managedidentities
 
@@ -15710,7 +15710,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-peeringiambinding-disallow
 
 Code path: `googlenative.managedidentities.v1alpha1.PeeringIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.PeeringIamBinding).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.PeeringIamBinding).
 
 Service: Managedidentities
 
@@ -15732,7 +15732,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-peeringiammember-disallow-
 
 Code path: `googlenative.managedidentities.v1alpha1.PeeringIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.PeeringIamMember).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.PeeringIamMember).
 
 Service: Managedidentities
 
@@ -15754,7 +15754,7 @@ Policy name: `googlenative-managedidentities-v1alpha1-peeringiampolicy-disallow-
 
 Code path: `googlenative.managedidentities.v1alpha1.PeeringIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (managedidentities.v1alpha1.PeeringIamPolicy).
+Disallow the use of non-stable (Alpha) resources (managedidentities.v1alpha1.PeeringIamPolicy).
 
 Service: Managedidentities
 
@@ -15778,7 +15778,7 @@ Policy name: `googlenative-managedidentities-v1beta1-backup-disallow-beta-resour
 
 Code path: `googlenative.managedidentities.v1beta1.Backup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.Backup).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.Backup).
 
 Service: Managedidentities
 
@@ -15800,7 +15800,7 @@ Policy name: `googlenative-managedidentities-v1beta1-domain-disallow-beta-resour
 
 Code path: `googlenative.managedidentities.v1beta1.Domain.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.Domain).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.Domain).
 
 Service: Managedidentities
 
@@ -15822,7 +15822,7 @@ Policy name: `googlenative-managedidentities-v1beta1-domainbackupiambinding-disa
 
 Code path: `googlenative.managedidentities.v1beta1.DomainBackupIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.DomainBackupIamBinding).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.DomainBackupIamBinding).
 
 Service: Managedidentities
 
@@ -15844,7 +15844,7 @@ Policy name: `googlenative-managedidentities-v1beta1-domainbackupiammember-disal
 
 Code path: `googlenative.managedidentities.v1beta1.DomainBackupIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.DomainBackupIamMember).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.DomainBackupIamMember).
 
 Service: Managedidentities
 
@@ -15866,7 +15866,7 @@ Policy name: `googlenative-managedidentities-v1beta1-domainbackupiampolicy-disal
 
 Code path: `googlenative.managedidentities.v1beta1.DomainBackupIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.DomainBackupIamPolicy).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.DomainBackupIamPolicy).
 
 Service: Managedidentities
 
@@ -15888,7 +15888,7 @@ Policy name: `googlenative-managedidentities-v1beta1-domainiambinding-disallow-b
 
 Code path: `googlenative.managedidentities.v1beta1.DomainIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.DomainIamBinding).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.DomainIamBinding).
 
 Service: Managedidentities
 
@@ -15910,7 +15910,7 @@ Policy name: `googlenative-managedidentities-v1beta1-domainiammember-disallow-be
 
 Code path: `googlenative.managedidentities.v1beta1.DomainIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.DomainIamMember).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.DomainIamMember).
 
 Service: Managedidentities
 
@@ -15932,7 +15932,7 @@ Policy name: `googlenative-managedidentities-v1beta1-domainiampolicy-disallow-be
 
 Code path: `googlenative.managedidentities.v1beta1.DomainIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.DomainIamPolicy).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.DomainIamPolicy).
 
 Service: Managedidentities
 
@@ -15954,7 +15954,7 @@ Policy name: `googlenative-managedidentities-v1beta1-peering-disallow-beta-resou
 
 Code path: `googlenative.managedidentities.v1beta1.Peering.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.Peering).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.Peering).
 
 Service: Managedidentities
 
@@ -15976,7 +15976,7 @@ Policy name: `googlenative-managedidentities-v1beta1-peeringiambinding-disallow-
 
 Code path: `googlenative.managedidentities.v1beta1.PeeringIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.PeeringIamBinding).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.PeeringIamBinding).
 
 Service: Managedidentities
 
@@ -15998,7 +15998,7 @@ Policy name: `googlenative-managedidentities-v1beta1-peeringiammember-disallow-b
 
 Code path: `googlenative.managedidentities.v1beta1.PeeringIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.PeeringIamMember).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.PeeringIamMember).
 
 Service: Managedidentities
 
@@ -16020,7 +16020,7 @@ Policy name: `googlenative-managedidentities-v1beta1-peeringiampolicy-disallow-b
 
 Code path: `googlenative.managedidentities.v1beta1.PeeringIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (managedidentities.v1beta1.PeeringIamPolicy).
+Disallow the use of non-stable (Beta) resources (managedidentities.v1beta1.PeeringIamPolicy).
 
 Service: Managedidentities
 
@@ -16046,7 +16046,7 @@ Policy name: `googlenative-memcache-v1beta2-instance-disallow-beta-resource`
 
 Code path: `googlenative.memcache.v1beta2.Instance.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (memcache.v1beta2.Instance).
+Disallow the use of non-stable (Beta) resources (memcache.v1beta2.Instance).
 
 Service: Memcache
 
@@ -16072,7 +16072,7 @@ Policy name: `googlenative-metastore-v1alpha-backup-disallow-alpha-resource`
 
 Code path: `googlenative.metastore.v1alpha.Backup.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.Backup).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.Backup).
 
 Service: Metastore
 
@@ -16094,7 +16094,7 @@ Policy name: `googlenative-metastore-v1alpha-federation-disallow-alpha-resource`
 
 Code path: `googlenative.metastore.v1alpha.Federation.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.Federation).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.Federation).
 
 Service: Metastore
 
@@ -16116,7 +16116,7 @@ Policy name: `googlenative-metastore-v1alpha-federationiambinding-disallow-alpha
 
 Code path: `googlenative.metastore.v1alpha.FederationIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.FederationIamBinding).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.FederationIamBinding).
 
 Service: Metastore
 
@@ -16138,7 +16138,7 @@ Policy name: `googlenative-metastore-v1alpha-federationiammember-disallow-alpha-
 
 Code path: `googlenative.metastore.v1alpha.FederationIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.FederationIamMember).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.FederationIamMember).
 
 Service: Metastore
 
@@ -16160,7 +16160,7 @@ Policy name: `googlenative-metastore-v1alpha-federationiampolicy-disallow-alpha-
 
 Code path: `googlenative.metastore.v1alpha.FederationIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.FederationIamPolicy).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.FederationIamPolicy).
 
 Service: Metastore
 
@@ -16182,7 +16182,7 @@ Policy name: `googlenative-metastore-v1alpha-metadataimport-disallow-alpha-resou
 
 Code path: `googlenative.metastore.v1alpha.MetadataImport.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.MetadataImport).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.MetadataImport).
 
 Service: Metastore
 
@@ -16204,7 +16204,7 @@ Policy name: `googlenative-metastore-v1alpha-service-disallow-alpha-resource`
 
 Code path: `googlenative.metastore.v1alpha.Service.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.Service).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.Service).
 
 Service: Metastore
 
@@ -16226,7 +16226,7 @@ Policy name: `googlenative-metastore-v1alpha-servicebackupiambinding-disallow-al
 
 Code path: `googlenative.metastore.v1alpha.ServiceBackupIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceBackupIamBinding).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceBackupIamBinding).
 
 Service: Metastore
 
@@ -16248,7 +16248,7 @@ Policy name: `googlenative-metastore-v1alpha-servicebackupiammember-disallow-alp
 
 Code path: `googlenative.metastore.v1alpha.ServiceBackupIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceBackupIamMember).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceBackupIamMember).
 
 Service: Metastore
 
@@ -16270,7 +16270,7 @@ Policy name: `googlenative-metastore-v1alpha-servicebackupiampolicy-disallow-alp
 
 Code path: `googlenative.metastore.v1alpha.ServiceBackupIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceBackupIamPolicy).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceBackupIamPolicy).
 
 Service: Metastore
 
@@ -16292,7 +16292,7 @@ Policy name: `googlenative-metastore-v1alpha-servicedatabaseiambinding-disallow-
 
 Code path: `googlenative.metastore.v1alpha.ServiceDatabaseIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceDatabaseIamBinding).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceDatabaseIamBinding).
 
 Service: Metastore
 
@@ -16314,7 +16314,7 @@ Policy name: `googlenative-metastore-v1alpha-servicedatabaseiammember-disallow-a
 
 Code path: `googlenative.metastore.v1alpha.ServiceDatabaseIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceDatabaseIamMember).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceDatabaseIamMember).
 
 Service: Metastore
 
@@ -16336,7 +16336,7 @@ Policy name: `googlenative-metastore-v1alpha-servicedatabaseiampolicy-disallow-a
 
 Code path: `googlenative.metastore.v1alpha.ServiceDatabaseIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceDatabaseIamPolicy).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceDatabaseIamPolicy).
 
 Service: Metastore
 
@@ -16358,7 +16358,7 @@ Policy name: `googlenative-metastore-v1alpha-servicedatabasetableiambinding-disa
 
 Code path: `googlenative.metastore.v1alpha.ServiceDatabaseTableIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceDatabaseTableIamBinding).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceDatabaseTableIamBinding).
 
 Service: Metastore
 
@@ -16380,7 +16380,7 @@ Policy name: `googlenative-metastore-v1alpha-servicedatabasetableiammember-disal
 
 Code path: `googlenative.metastore.v1alpha.ServiceDatabaseTableIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceDatabaseTableIamMember).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceDatabaseTableIamMember).
 
 Service: Metastore
 
@@ -16402,7 +16402,7 @@ Policy name: `googlenative-metastore-v1alpha-servicedatabasetableiampolicy-disal
 
 Code path: `googlenative.metastore.v1alpha.ServiceDatabaseTableIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceDatabaseTableIamPolicy).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceDatabaseTableIamPolicy).
 
 Service: Metastore
 
@@ -16424,7 +16424,7 @@ Policy name: `googlenative-metastore-v1alpha-serviceiambinding-disallow-alpha-re
 
 Code path: `googlenative.metastore.v1alpha.ServiceIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceIamBinding).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceIamBinding).
 
 Service: Metastore
 
@@ -16446,7 +16446,7 @@ Policy name: `googlenative-metastore-v1alpha-serviceiammember-disallow-alpha-res
 
 Code path: `googlenative.metastore.v1alpha.ServiceIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceIamMember).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceIamMember).
 
 Service: Metastore
 
@@ -16468,7 +16468,7 @@ Policy name: `googlenative-metastore-v1alpha-serviceiampolicy-disallow-alpha-res
 
 Code path: `googlenative.metastore.v1alpha.ServiceIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (metastore.v1alpha.ServiceIamPolicy).
+Disallow the use of non-stable (Alpha) resources (metastore.v1alpha.ServiceIamPolicy).
 
 Service: Metastore
 
@@ -16492,7 +16492,7 @@ Policy name: `googlenative-metastore-v1beta-backup-disallow-beta-resource`
 
 Code path: `googlenative.metastore.v1beta.Backup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.Backup).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.Backup).
 
 Service: Metastore
 
@@ -16514,7 +16514,7 @@ Policy name: `googlenative-metastore-v1beta-federation-disallow-beta-resource`
 
 Code path: `googlenative.metastore.v1beta.Federation.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.Federation).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.Federation).
 
 Service: Metastore
 
@@ -16536,7 +16536,7 @@ Policy name: `googlenative-metastore-v1beta-federationiambinding-disallow-beta-r
 
 Code path: `googlenative.metastore.v1beta.FederationIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.FederationIamBinding).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.FederationIamBinding).
 
 Service: Metastore
 
@@ -16558,7 +16558,7 @@ Policy name: `googlenative-metastore-v1beta-federationiammember-disallow-beta-re
 
 Code path: `googlenative.metastore.v1beta.FederationIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.FederationIamMember).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.FederationIamMember).
 
 Service: Metastore
 
@@ -16580,7 +16580,7 @@ Policy name: `googlenative-metastore-v1beta-federationiampolicy-disallow-beta-re
 
 Code path: `googlenative.metastore.v1beta.FederationIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.FederationIamPolicy).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.FederationIamPolicy).
 
 Service: Metastore
 
@@ -16602,7 +16602,7 @@ Policy name: `googlenative-metastore-v1beta-metadataimport-disallow-beta-resourc
 
 Code path: `googlenative.metastore.v1beta.MetadataImport.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.MetadataImport).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.MetadataImport).
 
 Service: Metastore
 
@@ -16624,7 +16624,7 @@ Policy name: `googlenative-metastore-v1beta-service-disallow-beta-resource`
 
 Code path: `googlenative.metastore.v1beta.Service.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.Service).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.Service).
 
 Service: Metastore
 
@@ -16646,7 +16646,7 @@ Policy name: `googlenative-metastore-v1beta-servicebackupiambinding-disallow-bet
 
 Code path: `googlenative.metastore.v1beta.ServiceBackupIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceBackupIamBinding).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceBackupIamBinding).
 
 Service: Metastore
 
@@ -16668,7 +16668,7 @@ Policy name: `googlenative-metastore-v1beta-servicebackupiammember-disallow-beta
 
 Code path: `googlenative.metastore.v1beta.ServiceBackupIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceBackupIamMember).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceBackupIamMember).
 
 Service: Metastore
 
@@ -16690,7 +16690,7 @@ Policy name: `googlenative-metastore-v1beta-servicebackupiampolicy-disallow-beta
 
 Code path: `googlenative.metastore.v1beta.ServiceBackupIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceBackupIamPolicy).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceBackupIamPolicy).
 
 Service: Metastore
 
@@ -16712,7 +16712,7 @@ Policy name: `googlenative-metastore-v1beta-servicedatabaseiambinding-disallow-b
 
 Code path: `googlenative.metastore.v1beta.ServiceDatabaseIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceDatabaseIamBinding).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceDatabaseIamBinding).
 
 Service: Metastore
 
@@ -16734,7 +16734,7 @@ Policy name: `googlenative-metastore-v1beta-servicedatabaseiammember-disallow-be
 
 Code path: `googlenative.metastore.v1beta.ServiceDatabaseIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceDatabaseIamMember).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceDatabaseIamMember).
 
 Service: Metastore
 
@@ -16756,7 +16756,7 @@ Policy name: `googlenative-metastore-v1beta-servicedatabaseiampolicy-disallow-be
 
 Code path: `googlenative.metastore.v1beta.ServiceDatabaseIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceDatabaseIamPolicy).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceDatabaseIamPolicy).
 
 Service: Metastore
 
@@ -16778,7 +16778,7 @@ Policy name: `googlenative-metastore-v1beta-servicedatabasetableiambinding-disal
 
 Code path: `googlenative.metastore.v1beta.ServiceDatabaseTableIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceDatabaseTableIamBinding).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceDatabaseTableIamBinding).
 
 Service: Metastore
 
@@ -16800,7 +16800,7 @@ Policy name: `googlenative-metastore-v1beta-servicedatabasetableiammember-disall
 
 Code path: `googlenative.metastore.v1beta.ServiceDatabaseTableIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceDatabaseTableIamMember).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceDatabaseTableIamMember).
 
 Service: Metastore
 
@@ -16822,7 +16822,7 @@ Policy name: `googlenative-metastore-v1beta-servicedatabasetableiampolicy-disall
 
 Code path: `googlenative.metastore.v1beta.ServiceDatabaseTableIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceDatabaseTableIamPolicy).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceDatabaseTableIamPolicy).
 
 Service: Metastore
 
@@ -16844,7 +16844,7 @@ Policy name: `googlenative-metastore-v1beta-serviceiambinding-disallow-beta-reso
 
 Code path: `googlenative.metastore.v1beta.ServiceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceIamBinding).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceIamBinding).
 
 Service: Metastore
 
@@ -16866,7 +16866,7 @@ Policy name: `googlenative-metastore-v1beta-serviceiammember-disallow-beta-resou
 
 Code path: `googlenative.metastore.v1beta.ServiceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceIamMember).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceIamMember).
 
 Service: Metastore
 
@@ -16888,7 +16888,7 @@ Policy name: `googlenative-metastore-v1beta-serviceiampolicy-disallow-beta-resou
 
 Code path: `googlenative.metastore.v1beta.ServiceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (metastore.v1beta.ServiceIamPolicy).
+Disallow the use of non-stable (Beta) resources (metastore.v1beta.ServiceIamPolicy).
 
 Service: Metastore
 
@@ -16914,7 +16914,7 @@ Policy name: `googlenative-migrationcenter-v1alpha1-group-disallow-alpha-resourc
 
 Code path: `googlenative.migrationcenter.v1alpha1.Group.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (migrationcenter.v1alpha1.Group).
+Disallow the use of non-stable (Alpha) resources (migrationcenter.v1alpha1.Group).
 
 Service: Migrationcenter
 
@@ -16936,7 +16936,7 @@ Policy name: `googlenative-migrationcenter-v1alpha1-importdatafile-disallow-alph
 
 Code path: `googlenative.migrationcenter.v1alpha1.ImportDataFile.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (migrationcenter.v1alpha1.ImportDataFile).
+Disallow the use of non-stable (Alpha) resources (migrationcenter.v1alpha1.ImportDataFile).
 
 Service: Migrationcenter
 
@@ -16958,7 +16958,7 @@ Policy name: `googlenative-migrationcenter-v1alpha1-importjob-disallow-alpha-res
 
 Code path: `googlenative.migrationcenter.v1alpha1.ImportJob.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (migrationcenter.v1alpha1.ImportJob).
+Disallow the use of non-stable (Alpha) resources (migrationcenter.v1alpha1.ImportJob).
 
 Service: Migrationcenter
 
@@ -16980,7 +16980,7 @@ Policy name: `googlenative-migrationcenter-v1alpha1-preferenceset-disallow-alpha
 
 Code path: `googlenative.migrationcenter.v1alpha1.PreferenceSet.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (migrationcenter.v1alpha1.PreferenceSet).
+Disallow the use of non-stable (Alpha) resources (migrationcenter.v1alpha1.PreferenceSet).
 
 Service: Migrationcenter
 
@@ -17002,7 +17002,7 @@ Policy name: `googlenative-migrationcenter-v1alpha1-report-disallow-alpha-resour
 
 Code path: `googlenative.migrationcenter.v1alpha1.Report.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (migrationcenter.v1alpha1.Report).
+Disallow the use of non-stable (Alpha) resources (migrationcenter.v1alpha1.Report).
 
 Service: Migrationcenter
 
@@ -17024,7 +17024,7 @@ Policy name: `googlenative-migrationcenter-v1alpha1-reportconfig-disallow-alpha-
 
 Code path: `googlenative.migrationcenter.v1alpha1.ReportConfig.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (migrationcenter.v1alpha1.ReportConfig).
+Disallow the use of non-stable (Alpha) resources (migrationcenter.v1alpha1.ReportConfig).
 
 Service: Migrationcenter
 
@@ -17046,7 +17046,7 @@ Policy name: `googlenative-migrationcenter-v1alpha1-source-disallow-alpha-resour
 
 Code path: `googlenative.migrationcenter.v1alpha1.Source.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (migrationcenter.v1alpha1.Source).
+Disallow the use of non-stable (Alpha) resources (migrationcenter.v1alpha1.Source).
 
 Service: Migrationcenter
 
@@ -17072,7 +17072,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-hub-disallow-alpha-resou
 
 Code path: `googlenative.networkconnectivity.v1alpha1.Hub.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.Hub).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.Hub).
 
 Service: Networkconnectivity
 
@@ -17094,7 +17094,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-hubiambinding-disallow-a
 
 Code path: `googlenative.networkconnectivity.v1alpha1.HubIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.HubIamBinding).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.HubIamBinding).
 
 Service: Networkconnectivity
 
@@ -17116,7 +17116,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-hubiammember-disallow-al
 
 Code path: `googlenative.networkconnectivity.v1alpha1.HubIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.HubIamMember).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.HubIamMember).
 
 Service: Networkconnectivity
 
@@ -17138,7 +17138,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-hubiampolicy-disallow-al
 
 Code path: `googlenative.networkconnectivity.v1alpha1.HubIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.HubIamPolicy).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.HubIamPolicy).
 
 Service: Networkconnectivity
 
@@ -17160,7 +17160,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-internalrange-disallow-a
 
 Code path: `googlenative.networkconnectivity.v1alpha1.InternalRange.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.InternalRange).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.InternalRange).
 
 Service: Networkconnectivity
 
@@ -17182,7 +17182,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-internalrangeiambinding-
 
 Code path: `googlenative.networkconnectivity.v1alpha1.InternalRangeIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.InternalRangeIamBinding).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.InternalRangeIamBinding).
 
 Service: Networkconnectivity
 
@@ -17204,7 +17204,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-internalrangeiammember-d
 
 Code path: `googlenative.networkconnectivity.v1alpha1.InternalRangeIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.InternalRangeIamMember).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.InternalRangeIamMember).
 
 Service: Networkconnectivity
 
@@ -17226,7 +17226,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-internalrangeiampolicy-d
 
 Code path: `googlenative.networkconnectivity.v1alpha1.InternalRangeIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.InternalRangeIamPolicy).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.InternalRangeIamPolicy).
 
 Service: Networkconnectivity
 
@@ -17248,7 +17248,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-spoke-disallow-alpha-res
 
 Code path: `googlenative.networkconnectivity.v1alpha1.Spoke.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.Spoke).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.Spoke).
 
 Service: Networkconnectivity
 
@@ -17270,7 +17270,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-spokeiambinding-disallow
 
 Code path: `googlenative.networkconnectivity.v1alpha1.SpokeIamBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.SpokeIamBinding).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.SpokeIamBinding).
 
 Service: Networkconnectivity
 
@@ -17292,7 +17292,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-spokeiammember-disallow-
 
 Code path: `googlenative.networkconnectivity.v1alpha1.SpokeIamMember.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.SpokeIamMember).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.SpokeIamMember).
 
 Service: Networkconnectivity
 
@@ -17314,7 +17314,7 @@ Policy name: `googlenative-networkconnectivity-v1alpha1-spokeiampolicy-disallow-
 
 Code path: `googlenative.networkconnectivity.v1alpha1.SpokeIamPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (networkconnectivity.v1alpha1.SpokeIamPolicy).
+Disallow the use of non-stable (Alpha) resources (networkconnectivity.v1alpha1.SpokeIamPolicy).
 
 Service: Networkconnectivity
 
@@ -17340,7 +17340,7 @@ Policy name: `googlenative-networkmanagement-v1beta1-connectivitytest-disallow-b
 
 Code path: `googlenative.networkmanagement.v1beta1.ConnectivityTest.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkmanagement.v1beta1.ConnectivityTest).
+Disallow the use of non-stable (Beta) resources (networkmanagement.v1beta1.ConnectivityTest).
 
 Service: Networkmanagement
 
@@ -17362,7 +17362,7 @@ Policy name: `googlenative-networkmanagement-v1beta1-connectivitytestiambinding-
 
 Code path: `googlenative.networkmanagement.v1beta1.ConnectivityTestIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkmanagement.v1beta1.ConnectivityTestIamBinding).
+Disallow the use of non-stable (Beta) resources (networkmanagement.v1beta1.ConnectivityTestIamBinding).
 
 Service: Networkmanagement
 
@@ -17384,7 +17384,7 @@ Policy name: `googlenative-networkmanagement-v1beta1-connectivitytestiammember-d
 
 Code path: `googlenative.networkmanagement.v1beta1.ConnectivityTestIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkmanagement.v1beta1.ConnectivityTestIamMember).
+Disallow the use of non-stable (Beta) resources (networkmanagement.v1beta1.ConnectivityTestIamMember).
 
 Service: Networkmanagement
 
@@ -17406,7 +17406,7 @@ Policy name: `googlenative-networkmanagement-v1beta1-connectivitytestiampolicy-d
 
 Code path: `googlenative.networkmanagement.v1beta1.ConnectivityTestIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkmanagement.v1beta1.ConnectivityTestIamPolicy).
+Disallow the use of non-stable (Beta) resources (networkmanagement.v1beta1.ConnectivityTestIamPolicy).
 
 Service: Networkmanagement
 
@@ -17432,7 +17432,7 @@ Policy name: `googlenative-networksecurity-v1beta1-addressgroup-disallow-beta-re
 
 Code path: `googlenative.networksecurity.v1beta1.AddressGroup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.AddressGroup).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.AddressGroup).
 
 Service: Networksecurity
 
@@ -17454,7 +17454,7 @@ Policy name: `googlenative-networksecurity-v1beta1-addressgroupiambinding-disall
 
 Code path: `googlenative.networksecurity.v1beta1.AddressGroupIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.AddressGroupIamBinding).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.AddressGroupIamBinding).
 
 Service: Networksecurity
 
@@ -17476,7 +17476,7 @@ Policy name: `googlenative-networksecurity-v1beta1-addressgroupiammember-disallo
 
 Code path: `googlenative.networksecurity.v1beta1.AddressGroupIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.AddressGroupIamMember).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.AddressGroupIamMember).
 
 Service: Networksecurity
 
@@ -17498,7 +17498,7 @@ Policy name: `googlenative-networksecurity-v1beta1-addressgroupiampolicy-disallo
 
 Code path: `googlenative.networksecurity.v1beta1.AddressGroupIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.AddressGroupIamPolicy).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.AddressGroupIamPolicy).
 
 Service: Networksecurity
 
@@ -17520,7 +17520,7 @@ Policy name: `googlenative-networksecurity-v1beta1-authorizationpolicy-disallow-
 
 Code path: `googlenative.networksecurity.v1beta1.AuthorizationPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.AuthorizationPolicy).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.AuthorizationPolicy).
 
 Service: Networksecurity
 
@@ -17542,7 +17542,7 @@ Policy name: `googlenative-networksecurity-v1beta1-authorizationpolicyiambinding
 
 Code path: `googlenative.networksecurity.v1beta1.AuthorizationPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.AuthorizationPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.AuthorizationPolicyIamBinding).
 
 Service: Networksecurity
 
@@ -17564,7 +17564,7 @@ Policy name: `googlenative-networksecurity-v1beta1-authorizationpolicyiammember-
 
 Code path: `googlenative.networksecurity.v1beta1.AuthorizationPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.AuthorizationPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.AuthorizationPolicyIamMember).
 
 Service: Networksecurity
 
@@ -17586,7 +17586,7 @@ Policy name: `googlenative-networksecurity-v1beta1-authorizationpolicyiampolicy-
 
 Code path: `googlenative.networksecurity.v1beta1.AuthorizationPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.AuthorizationPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.AuthorizationPolicyIamPolicy).
 
 Service: Networksecurity
 
@@ -17608,7 +17608,7 @@ Policy name: `googlenative-networksecurity-v1beta1-clienttlspolicy-disallow-beta
 
 Code path: `googlenative.networksecurity.v1beta1.ClientTlsPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.ClientTlsPolicy).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.ClientTlsPolicy).
 
 Service: Networksecurity
 
@@ -17630,7 +17630,7 @@ Policy name: `googlenative-networksecurity-v1beta1-clienttlspolicyiambinding-dis
 
 Code path: `googlenative.networksecurity.v1beta1.ClientTlsPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.ClientTlsPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.ClientTlsPolicyIamBinding).
 
 Service: Networksecurity
 
@@ -17652,7 +17652,7 @@ Policy name: `googlenative-networksecurity-v1beta1-clienttlspolicyiammember-disa
 
 Code path: `googlenative.networksecurity.v1beta1.ClientTlsPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.ClientTlsPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.ClientTlsPolicyIamMember).
 
 Service: Networksecurity
 
@@ -17674,7 +17674,7 @@ Policy name: `googlenative-networksecurity-v1beta1-clienttlspolicyiampolicy-disa
 
 Code path: `googlenative.networksecurity.v1beta1.ClientTlsPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.ClientTlsPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.ClientTlsPolicyIamPolicy).
 
 Service: Networksecurity
 
@@ -17696,7 +17696,7 @@ Policy name: `googlenative-networksecurity-v1beta1-gatewaysecuritypolicy-disallo
 
 Code path: `googlenative.networksecurity.v1beta1.GatewaySecurityPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.GatewaySecurityPolicy).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.GatewaySecurityPolicy).
 
 Service: Networksecurity
 
@@ -17718,7 +17718,7 @@ Policy name: `googlenative-networksecurity-v1beta1-organizationaddressgroup-disa
 
 Code path: `googlenative.networksecurity.v1beta1.OrganizationAddressGroup.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.OrganizationAddressGroup).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.OrganizationAddressGroup).
 
 Service: Networksecurity
 
@@ -17740,7 +17740,7 @@ Policy name: `googlenative-networksecurity-v1beta1-rule-disallow-beta-resource`
 
 Code path: `googlenative.networksecurity.v1beta1.Rule.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.Rule).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.Rule).
 
 Service: Networksecurity
 
@@ -17762,7 +17762,7 @@ Policy name: `googlenative-networksecurity-v1beta1-servertlspolicy-disallow-beta
 
 Code path: `googlenative.networksecurity.v1beta1.ServerTlsPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.ServerTlsPolicy).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.ServerTlsPolicy).
 
 Service: Networksecurity
 
@@ -17784,7 +17784,7 @@ Policy name: `googlenative-networksecurity-v1beta1-servertlspolicyiambinding-dis
 
 Code path: `googlenative.networksecurity.v1beta1.ServerTlsPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.ServerTlsPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.ServerTlsPolicyIamBinding).
 
 Service: Networksecurity
 
@@ -17806,7 +17806,7 @@ Policy name: `googlenative-networksecurity-v1beta1-servertlspolicyiammember-disa
 
 Code path: `googlenative.networksecurity.v1beta1.ServerTlsPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.ServerTlsPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.ServerTlsPolicyIamMember).
 
 Service: Networksecurity
 
@@ -17828,7 +17828,7 @@ Policy name: `googlenative-networksecurity-v1beta1-servertlspolicyiampolicy-disa
 
 Code path: `googlenative.networksecurity.v1beta1.ServerTlsPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.ServerTlsPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.ServerTlsPolicyIamPolicy).
 
 Service: Networksecurity
 
@@ -17850,7 +17850,7 @@ Policy name: `googlenative-networksecurity-v1beta1-tlsinspectionpolicy-disallow-
 
 Code path: `googlenative.networksecurity.v1beta1.TlsInspectionPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.TlsInspectionPolicy).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.TlsInspectionPolicy).
 
 Service: Networksecurity
 
@@ -17872,7 +17872,7 @@ Policy name: `googlenative-networksecurity-v1beta1-urllist-disallow-beta-resourc
 
 Code path: `googlenative.networksecurity.v1beta1.UrlList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networksecurity.v1beta1.UrlList).
+Disallow the use of non-stable (Beta) resources (networksecurity.v1beta1.UrlList).
 
 Service: Networksecurity
 
@@ -17898,7 +17898,7 @@ Policy name: `googlenative-networkservices-v1beta1-endpointpolicy-disallow-beta-
 
 Code path: `googlenative.networkservices.v1beta1.EndpointPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.EndpointPolicy).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.EndpointPolicy).
 
 Service: Networkservices
 
@@ -17920,7 +17920,7 @@ Policy name: `googlenative-networkservices-v1beta1-endpointpolicyiambinding-disa
 
 Code path: `googlenative.networkservices.v1beta1.EndpointPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.EndpointPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.EndpointPolicyIamBinding).
 
 Service: Networkservices
 
@@ -17942,7 +17942,7 @@ Policy name: `googlenative-networkservices-v1beta1-endpointpolicyiammember-disal
 
 Code path: `googlenative.networkservices.v1beta1.EndpointPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.EndpointPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.EndpointPolicyIamMember).
 
 Service: Networkservices
 
@@ -17964,7 +17964,7 @@ Policy name: `googlenative-networkservices-v1beta1-endpointpolicyiampolicy-disal
 
 Code path: `googlenative.networkservices.v1beta1.EndpointPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.EndpointPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.EndpointPolicyIamPolicy).
 
 Service: Networkservices
 
@@ -17986,7 +17986,7 @@ Policy name: `googlenative-networkservices-v1beta1-gateway-disallow-beta-resourc
 
 Code path: `googlenative.networkservices.v1beta1.Gateway.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.Gateway).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.Gateway).
 
 Service: Networkservices
 
@@ -18008,7 +18008,7 @@ Policy name: `googlenative-networkservices-v1beta1-gatewayiambinding-disallow-be
 
 Code path: `googlenative.networkservices.v1beta1.GatewayIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.GatewayIamBinding).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.GatewayIamBinding).
 
 Service: Networkservices
 
@@ -18030,7 +18030,7 @@ Policy name: `googlenative-networkservices-v1beta1-gatewayiammember-disallow-bet
 
 Code path: `googlenative.networkservices.v1beta1.GatewayIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.GatewayIamMember).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.GatewayIamMember).
 
 Service: Networkservices
 
@@ -18052,7 +18052,7 @@ Policy name: `googlenative-networkservices-v1beta1-gatewayiampolicy-disallow-bet
 
 Code path: `googlenative.networkservices.v1beta1.GatewayIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.GatewayIamPolicy).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.GatewayIamPolicy).
 
 Service: Networkservices
 
@@ -18074,7 +18074,7 @@ Policy name: `googlenative-networkservices-v1beta1-grpcroute-disallow-beta-resou
 
 Code path: `googlenative.networkservices.v1beta1.GrpcRoute.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.GrpcRoute).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.GrpcRoute).
 
 Service: Networkservices
 
@@ -18096,7 +18096,7 @@ Policy name: `googlenative-networkservices-v1beta1-httproute-disallow-beta-resou
 
 Code path: `googlenative.networkservices.v1beta1.HttpRoute.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.HttpRoute).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.HttpRoute).
 
 Service: Networkservices
 
@@ -18118,7 +18118,7 @@ Policy name: `googlenative-networkservices-v1beta1-mesh-disallow-beta-resource`
 
 Code path: `googlenative.networkservices.v1beta1.Mesh.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.Mesh).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.Mesh).
 
 Service: Networkservices
 
@@ -18140,7 +18140,7 @@ Policy name: `googlenative-networkservices-v1beta1-meshiambinding-disallow-beta-
 
 Code path: `googlenative.networkservices.v1beta1.MeshIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.MeshIamBinding).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.MeshIamBinding).
 
 Service: Networkservices
 
@@ -18162,7 +18162,7 @@ Policy name: `googlenative-networkservices-v1beta1-meshiammember-disallow-beta-r
 
 Code path: `googlenative.networkservices.v1beta1.MeshIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.MeshIamMember).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.MeshIamMember).
 
 Service: Networkservices
 
@@ -18184,7 +18184,7 @@ Policy name: `googlenative-networkservices-v1beta1-meshiampolicy-disallow-beta-r
 
 Code path: `googlenative.networkservices.v1beta1.MeshIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.MeshIamPolicy).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.MeshIamPolicy).
 
 Service: Networkservices
 
@@ -18206,7 +18206,7 @@ Policy name: `googlenative-networkservices-v1beta1-servicebinding-disallow-beta-
 
 Code path: `googlenative.networkservices.v1beta1.ServiceBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.ServiceBinding).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.ServiceBinding).
 
 Service: Networkservices
 
@@ -18228,7 +18228,7 @@ Policy name: `googlenative-networkservices-v1beta1-servicebindingiambinding-disa
 
 Code path: `googlenative.networkservices.v1beta1.ServiceBindingIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.ServiceBindingIamBinding).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.ServiceBindingIamBinding).
 
 Service: Networkservices
 
@@ -18250,7 +18250,7 @@ Policy name: `googlenative-networkservices-v1beta1-servicebindingiammember-disal
 
 Code path: `googlenative.networkservices.v1beta1.ServiceBindingIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.ServiceBindingIamMember).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.ServiceBindingIamMember).
 
 Service: Networkservices
 
@@ -18272,7 +18272,7 @@ Policy name: `googlenative-networkservices-v1beta1-servicebindingiampolicy-disal
 
 Code path: `googlenative.networkservices.v1beta1.ServiceBindingIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.ServiceBindingIamPolicy).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.ServiceBindingIamPolicy).
 
 Service: Networkservices
 
@@ -18294,7 +18294,7 @@ Policy name: `googlenative-networkservices-v1beta1-tcproute-disallow-beta-resour
 
 Code path: `googlenative.networkservices.v1beta1.TcpRoute.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.TcpRoute).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.TcpRoute).
 
 Service: Networkservices
 
@@ -18316,7 +18316,7 @@ Policy name: `googlenative-networkservices-v1beta1-tlsroute-disallow-beta-resour
 
 Code path: `googlenative.networkservices.v1beta1.TlsRoute.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (networkservices.v1beta1.TlsRoute).
+Disallow the use of non-stable (Beta) resources (networkservices.v1beta1.TlsRoute).
 
 Service: Networkservices
 
@@ -18342,7 +18342,7 @@ Policy name: `googlenative-osconfig-v1alpha-ospolicyassignment-disallow-alpha-re
 
 Code path: `googlenative.osconfig.v1alpha.OsPolicyAssignment.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (osconfig.v1alpha.OsPolicyAssignment).
+Disallow the use of non-stable (Alpha) resources (osconfig.v1alpha.OsPolicyAssignment).
 
 Service: Osconfig
 
@@ -18366,7 +18366,7 @@ Policy name: `googlenative-osconfig-v1beta-guestpolicy-disallow-beta-resource`
 
 Code path: `googlenative.osconfig.v1beta.GuestPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (osconfig.v1beta.GuestPolicy).
+Disallow the use of non-stable (Beta) resources (osconfig.v1beta.GuestPolicy).
 
 Service: Osconfig
 
@@ -18388,7 +18388,7 @@ Policy name: `googlenative-osconfig-v1beta-patchdeployment-disallow-beta-resourc
 
 Code path: `googlenative.osconfig.v1beta.PatchDeployment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (osconfig.v1beta.PatchDeployment).
+Disallow the use of non-stable (Beta) resources (osconfig.v1beta.PatchDeployment).
 
 Service: Osconfig
 
@@ -18414,7 +18414,7 @@ Policy name: `googlenative-oslogin-v1alpha-sshpublickey-disallow-alpha-resource`
 
 Code path: `googlenative.oslogin.v1alpha.SshPublicKey.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (oslogin.v1alpha.SshPublicKey).
+Disallow the use of non-stable (Alpha) resources (oslogin.v1alpha.SshPublicKey).
 
 Service: Oslogin
 
@@ -18438,7 +18438,7 @@ Policy name: `googlenative-oslogin-v1beta-sshpublickey-disallow-beta-resource`
 
 Code path: `googlenative.oslogin.v1beta.SshPublicKey.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (oslogin.v1beta.SshPublicKey).
+Disallow the use of non-stable (Beta) resources (oslogin.v1beta.SshPublicKey).
 
 Service: Oslogin
 
@@ -18464,7 +18464,7 @@ Policy name: `googlenative-policysimulator-v1beta1-folderreplay-disallow-beta-re
 
 Code path: `googlenative.policysimulator.v1beta1.FolderReplay.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (policysimulator.v1beta1.FolderReplay).
+Disallow the use of non-stable (Beta) resources (policysimulator.v1beta1.FolderReplay).
 
 Service: Policysimulator
 
@@ -18486,7 +18486,7 @@ Policy name: `googlenative-policysimulator-v1beta1-organizationreplay-disallow-b
 
 Code path: `googlenative.policysimulator.v1beta1.OrganizationReplay.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (policysimulator.v1beta1.OrganizationReplay).
+Disallow the use of non-stable (Beta) resources (policysimulator.v1beta1.OrganizationReplay).
 
 Service: Policysimulator
 
@@ -18508,7 +18508,7 @@ Policy name: `googlenative-policysimulator-v1beta1-replay-disallow-beta-resource
 
 Code path: `googlenative.policysimulator.v1beta1.Replay.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (policysimulator.v1beta1.Replay).
+Disallow the use of non-stable (Beta) resources (policysimulator.v1beta1.Replay).
 
 Service: Policysimulator
 
@@ -18534,7 +18534,7 @@ Policy name: `googlenative-privateca-v1beta1-certificateauthoritycertificaterevo
 
 Code path: `googlenative.privateca.v1beta1.CertificateAuthorityCertificateRevocationListIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (privateca.v1beta1.CertificateAuthorityCertificateRevocationListIamBinding).
+Disallow the use of non-stable (Beta) resources (privateca.v1beta1.CertificateAuthorityCertificateRevocationListIamBinding).
 
 Service: Privateca
 
@@ -18556,7 +18556,7 @@ Policy name: `googlenative-privateca-v1beta1-certificateauthoritycertificaterevo
 
 Code path: `googlenative.privateca.v1beta1.CertificateAuthorityCertificateRevocationListIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (privateca.v1beta1.CertificateAuthorityCertificateRevocationListIamMember).
+Disallow the use of non-stable (Beta) resources (privateca.v1beta1.CertificateAuthorityCertificateRevocationListIamMember).
 
 Service: Privateca
 
@@ -18578,7 +18578,7 @@ Policy name: `googlenative-privateca-v1beta1-certificateauthoritycertificaterevo
 
 Code path: `googlenative.privateca.v1beta1.CertificateAuthorityCertificateRevocationListIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (privateca.v1beta1.CertificateAuthorityCertificateRevocationListIamPolicy).
+Disallow the use of non-stable (Beta) resources (privateca.v1beta1.CertificateAuthorityCertificateRevocationListIamPolicy).
 
 Service: Privateca
 
@@ -18600,7 +18600,7 @@ Policy name: `googlenative-privateca-v1beta1-certificateauthorityiambinding-disa
 
 Code path: `googlenative.privateca.v1beta1.CertificateAuthorityIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (privateca.v1beta1.CertificateAuthorityIamBinding).
+Disallow the use of non-stable (Beta) resources (privateca.v1beta1.CertificateAuthorityIamBinding).
 
 Service: Privateca
 
@@ -18622,7 +18622,7 @@ Policy name: `googlenative-privateca-v1beta1-certificateauthorityiammember-disal
 
 Code path: `googlenative.privateca.v1beta1.CertificateAuthorityIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (privateca.v1beta1.CertificateAuthorityIamMember).
+Disallow the use of non-stable (Beta) resources (privateca.v1beta1.CertificateAuthorityIamMember).
 
 Service: Privateca
 
@@ -18644,7 +18644,7 @@ Policy name: `googlenative-privateca-v1beta1-certificateauthorityiampolicy-disal
 
 Code path: `googlenative.privateca.v1beta1.CertificateAuthorityIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (privateca.v1beta1.CertificateAuthorityIamPolicy).
+Disallow the use of non-stable (Beta) resources (privateca.v1beta1.CertificateAuthorityIamPolicy).
 
 Service: Privateca
 
@@ -18666,7 +18666,7 @@ Policy name: `googlenative-privateca-v1beta1-reusableconfigiambinding-disallow-b
 
 Code path: `googlenative.privateca.v1beta1.ReusableConfigIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (privateca.v1beta1.ReusableConfigIamBinding).
+Disallow the use of non-stable (Beta) resources (privateca.v1beta1.ReusableConfigIamBinding).
 
 Service: Privateca
 
@@ -18688,7 +18688,7 @@ Policy name: `googlenative-privateca-v1beta1-reusableconfigiammember-disallow-be
 
 Code path: `googlenative.privateca.v1beta1.ReusableConfigIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (privateca.v1beta1.ReusableConfigIamMember).
+Disallow the use of non-stable (Beta) resources (privateca.v1beta1.ReusableConfigIamMember).
 
 Service: Privateca
 
@@ -18710,7 +18710,7 @@ Policy name: `googlenative-privateca-v1beta1-reusableconfigiampolicy-disallow-be
 
 Code path: `googlenative.privateca.v1beta1.ReusableConfigIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (privateca.v1beta1.ReusableConfigIamPolicy).
+Disallow the use of non-stable (Beta) resources (privateca.v1beta1.ReusableConfigIamPolicy).
 
 Service: Privateca
 
@@ -18736,7 +18736,7 @@ Policy name: `googlenative-pubsub-v1beta1a-subscription-disallow-beta-resource`
 
 Code path: `googlenative.pubsub.v1beta1a.Subscription.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta1a.Subscription).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta1a.Subscription).
 
 Service: Pubsub
 
@@ -18758,7 +18758,7 @@ Policy name: `googlenative-pubsub-v1beta1a-topic-disallow-beta-resource`
 
 Code path: `googlenative.pubsub.v1beta1a.Topic.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta1a.Topic).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta1a.Topic).
 
 Service: Pubsub
 
@@ -18782,7 +18782,7 @@ Policy name: `googlenative-pubsub-v1beta2-subscription-disallow-beta-resource`
 
 Code path: `googlenative.pubsub.v1beta2.Subscription.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta2.Subscription).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta2.Subscription).
 
 Service: Pubsub
 
@@ -18804,7 +18804,7 @@ Policy name: `googlenative-pubsub-v1beta2-subscriptioniambinding-disallow-beta-r
 
 Code path: `googlenative.pubsub.v1beta2.SubscriptionIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta2.SubscriptionIamBinding).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta2.SubscriptionIamBinding).
 
 Service: Pubsub
 
@@ -18826,7 +18826,7 @@ Policy name: `googlenative-pubsub-v1beta2-subscriptioniammember-disallow-beta-re
 
 Code path: `googlenative.pubsub.v1beta2.SubscriptionIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta2.SubscriptionIamMember).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta2.SubscriptionIamMember).
 
 Service: Pubsub
 
@@ -18848,7 +18848,7 @@ Policy name: `googlenative-pubsub-v1beta2-subscriptioniampolicy-disallow-beta-re
 
 Code path: `googlenative.pubsub.v1beta2.SubscriptionIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta2.SubscriptionIamPolicy).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta2.SubscriptionIamPolicy).
 
 Service: Pubsub
 
@@ -18870,7 +18870,7 @@ Policy name: `googlenative-pubsub-v1beta2-topic-disallow-beta-resource`
 
 Code path: `googlenative.pubsub.v1beta2.Topic.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta2.Topic).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta2.Topic).
 
 Service: Pubsub
 
@@ -18892,7 +18892,7 @@ Policy name: `googlenative-pubsub-v1beta2-topiciambinding-disallow-beta-resource
 
 Code path: `googlenative.pubsub.v1beta2.TopicIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta2.TopicIamBinding).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta2.TopicIamBinding).
 
 Service: Pubsub
 
@@ -18914,7 +18914,7 @@ Policy name: `googlenative-pubsub-v1beta2-topiciammember-disallow-beta-resource`
 
 Code path: `googlenative.pubsub.v1beta2.TopicIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta2.TopicIamMember).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta2.TopicIamMember).
 
 Service: Pubsub
 
@@ -18936,7 +18936,7 @@ Policy name: `googlenative-pubsub-v1beta2-topiciampolicy-disallow-beta-resource`
 
 Code path: `googlenative.pubsub.v1beta2.TopicIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (pubsub.v1beta2.TopicIamPolicy).
+Disallow the use of non-stable (Beta) resources (pubsub.v1beta2.TopicIamPolicy).
 
 Service: Pubsub
 
@@ -18962,7 +18962,7 @@ Policy name: `googlenative-recommendationengine-v1beta1-catalogitem-disallow-bet
 
 Code path: `googlenative.recommendationengine.v1beta1.CatalogItem.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (recommendationengine.v1beta1.CatalogItem).
+Disallow the use of non-stable (Beta) resources (recommendationengine.v1beta1.CatalogItem).
 
 Service: Recommendationengine
 
@@ -18988,7 +18988,7 @@ Policy name: `googlenative-redis-v1beta1-instance-disallow-beta-resource`
 
 Code path: `googlenative.redis.v1beta1.Instance.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (redis.v1beta1.Instance).
+Disallow the use of non-stable (Beta) resources (redis.v1beta1.Instance).
 
 Service: Redis
 
@@ -19014,7 +19014,7 @@ Policy name: `googlenative-remotebuildexecution-v1alpha-instance-disallow-alpha-
 
 Code path: `googlenative.remotebuildexecution.v1alpha.Instance.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (remotebuildexecution.v1alpha.Instance).
+Disallow the use of non-stable (Alpha) resources (remotebuildexecution.v1alpha.Instance).
 
 Service: Remotebuildexecution
 
@@ -19036,7 +19036,7 @@ Policy name: `googlenative-remotebuildexecution-v1alpha-workerpool-disallow-alph
 
 Code path: `googlenative.remotebuildexecution.v1alpha.WorkerPool.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (remotebuildexecution.v1alpha.WorkerPool).
+Disallow the use of non-stable (Alpha) resources (remotebuildexecution.v1alpha.WorkerPool).
 
 Service: Remotebuildexecution
 
@@ -19062,7 +19062,7 @@ Policy name: `googlenative-retail-v2alpha-control-disallow-alpha-resource`
 
 Code path: `googlenative.retail.v2alpha.Control.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (retail.v2alpha.Control).
+Disallow the use of non-stable (Alpha) resources (retail.v2alpha.Control).
 
 Service: Retail
 
@@ -19084,7 +19084,7 @@ Policy name: `googlenative-retail-v2alpha-model-disallow-alpha-resource`
 
 Code path: `googlenative.retail.v2alpha.Model.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (retail.v2alpha.Model).
+Disallow the use of non-stable (Alpha) resources (retail.v2alpha.Model).
 
 Service: Retail
 
@@ -19106,7 +19106,7 @@ Policy name: `googlenative-retail-v2alpha-product-disallow-alpha-resource`
 
 Code path: `googlenative.retail.v2alpha.Product.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (retail.v2alpha.Product).
+Disallow the use of non-stable (Alpha) resources (retail.v2alpha.Product).
 
 Service: Retail
 
@@ -19128,7 +19128,7 @@ Policy name: `googlenative-retail-v2alpha-servingconfig-disallow-alpha-resource`
 
 Code path: `googlenative.retail.v2alpha.ServingConfig.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (retail.v2alpha.ServingConfig).
+Disallow the use of non-stable (Alpha) resources (retail.v2alpha.ServingConfig).
 
 Service: Retail
 
@@ -19152,7 +19152,7 @@ Policy name: `googlenative-retail-v2beta-control-disallow-beta-resource`
 
 Code path: `googlenative.retail.v2beta.Control.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (retail.v2beta.Control).
+Disallow the use of non-stable (Beta) resources (retail.v2beta.Control).
 
 Service: Retail
 
@@ -19174,7 +19174,7 @@ Policy name: `googlenative-retail-v2beta-model-disallow-beta-resource`
 
 Code path: `googlenative.retail.v2beta.Model.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (retail.v2beta.Model).
+Disallow the use of non-stable (Beta) resources (retail.v2beta.Model).
 
 Service: Retail
 
@@ -19196,7 +19196,7 @@ Policy name: `googlenative-retail-v2beta-product-disallow-beta-resource`
 
 Code path: `googlenative.retail.v2beta.Product.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (retail.v2beta.Product).
+Disallow the use of non-stable (Beta) resources (retail.v2beta.Product).
 
 Service: Retail
 
@@ -19218,7 +19218,7 @@ Policy name: `googlenative-retail-v2beta-servingconfig-disallow-beta-resource`
 
 Code path: `googlenative.retail.v2beta.ServingConfig.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (retail.v2beta.ServingConfig).
+Disallow the use of non-stable (Beta) resources (retail.v2beta.ServingConfig).
 
 Service: Retail
 
@@ -19244,7 +19244,7 @@ Policy name: `googlenative-runtimeconfig-v1beta1-config-disallow-beta-resource`
 
 Code path: `googlenative.runtimeconfig.v1beta1.Config.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (runtimeconfig.v1beta1.Config).
+Disallow the use of non-stable (Beta) resources (runtimeconfig.v1beta1.Config).
 
 Service: Runtimeconfig
 
@@ -19266,7 +19266,7 @@ Policy name: `googlenative-runtimeconfig-v1beta1-configiambinding-disallow-beta-
 
 Code path: `googlenative.runtimeconfig.v1beta1.ConfigIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (runtimeconfig.v1beta1.ConfigIamBinding).
+Disallow the use of non-stable (Beta) resources (runtimeconfig.v1beta1.ConfigIamBinding).
 
 Service: Runtimeconfig
 
@@ -19288,7 +19288,7 @@ Policy name: `googlenative-runtimeconfig-v1beta1-configiammember-disallow-beta-r
 
 Code path: `googlenative.runtimeconfig.v1beta1.ConfigIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (runtimeconfig.v1beta1.ConfigIamMember).
+Disallow the use of non-stable (Beta) resources (runtimeconfig.v1beta1.ConfigIamMember).
 
 Service: Runtimeconfig
 
@@ -19310,7 +19310,7 @@ Policy name: `googlenative-runtimeconfig-v1beta1-configiampolicy-disallow-beta-r
 
 Code path: `googlenative.runtimeconfig.v1beta1.ConfigIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (runtimeconfig.v1beta1.ConfigIamPolicy).
+Disallow the use of non-stable (Beta) resources (runtimeconfig.v1beta1.ConfigIamPolicy).
 
 Service: Runtimeconfig
 
@@ -19332,7 +19332,7 @@ Policy name: `googlenative-runtimeconfig-v1beta1-variable-disallow-beta-resource
 
 Code path: `googlenative.runtimeconfig.v1beta1.Variable.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (runtimeconfig.v1beta1.Variable).
+Disallow the use of non-stable (Beta) resources (runtimeconfig.v1beta1.Variable).
 
 Service: Runtimeconfig
 
@@ -19354,7 +19354,7 @@ Policy name: `googlenative-runtimeconfig-v1beta1-waiter-disallow-beta-resource`
 
 Code path: `googlenative.runtimeconfig.v1beta1.Waiter.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (runtimeconfig.v1beta1.Waiter).
+Disallow the use of non-stable (Beta) resources (runtimeconfig.v1beta1.Waiter).
 
 Service: Runtimeconfig
 
@@ -19380,7 +19380,7 @@ Policy name: `googlenative-secretmanager-v1beta1-secret-disallow-beta-resource`
 
 Code path: `googlenative.secretmanager.v1beta1.Secret.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (secretmanager.v1beta1.Secret).
+Disallow the use of non-stable (Beta) resources (secretmanager.v1beta1.Secret).
 
 Service: Secretmanager
 
@@ -19402,7 +19402,7 @@ Policy name: `googlenative-secretmanager-v1beta1-secretiambinding-disallow-beta-
 
 Code path: `googlenative.secretmanager.v1beta1.SecretIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (secretmanager.v1beta1.SecretIamBinding).
+Disallow the use of non-stable (Beta) resources (secretmanager.v1beta1.SecretIamBinding).
 
 Service: Secretmanager
 
@@ -19424,7 +19424,7 @@ Policy name: `googlenative-secretmanager-v1beta1-secretiammember-disallow-beta-r
 
 Code path: `googlenative.secretmanager.v1beta1.SecretIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (secretmanager.v1beta1.SecretIamMember).
+Disallow the use of non-stable (Beta) resources (secretmanager.v1beta1.SecretIamMember).
 
 Service: Secretmanager
 
@@ -19446,7 +19446,7 @@ Policy name: `googlenative-secretmanager-v1beta1-secretiampolicy-disallow-beta-r
 
 Code path: `googlenative.secretmanager.v1beta1.SecretIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (secretmanager.v1beta1.SecretIamPolicy).
+Disallow the use of non-stable (Beta) resources (secretmanager.v1beta1.SecretIamPolicy).
 
 Service: Secretmanager
 
@@ -19472,7 +19472,7 @@ Policy name: `googlenative-securitycenter-v1beta1-organizationsourceiambinding-d
 
 Code path: `googlenative.securitycenter.v1beta1.OrganizationSourceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (securitycenter.v1beta1.OrganizationSourceIamBinding).
+Disallow the use of non-stable (Beta) resources (securitycenter.v1beta1.OrganizationSourceIamBinding).
 
 Service: Securitycenter
 
@@ -19494,7 +19494,7 @@ Policy name: `googlenative-securitycenter-v1beta1-organizationsourceiammember-di
 
 Code path: `googlenative.securitycenter.v1beta1.OrganizationSourceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (securitycenter.v1beta1.OrganizationSourceIamMember).
+Disallow the use of non-stable (Beta) resources (securitycenter.v1beta1.OrganizationSourceIamMember).
 
 Service: Securitycenter
 
@@ -19516,7 +19516,7 @@ Policy name: `googlenative-securitycenter-v1beta1-organizationsourceiampolicy-di
 
 Code path: `googlenative.securitycenter.v1beta1.OrganizationSourceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (securitycenter.v1beta1.OrganizationSourceIamPolicy).
+Disallow the use of non-stable (Beta) resources (securitycenter.v1beta1.OrganizationSourceIamPolicy).
 
 Service: Securitycenter
 
@@ -19538,7 +19538,7 @@ Policy name: `googlenative-securitycenter-v1beta1-source-disallow-beta-resource`
 
 Code path: `googlenative.securitycenter.v1beta1.Source.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (securitycenter.v1beta1.Source).
+Disallow the use of non-stable (Beta) resources (securitycenter.v1beta1.Source).
 
 Service: Securitycenter
 
@@ -19564,7 +19564,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-endpoint-disallow-beta-resou
 
 Code path: `googlenative.servicedirectory.v1beta1.Endpoint.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.Endpoint).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.Endpoint).
 
 Service: Servicedirectory
 
@@ -19586,7 +19586,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespace-disallow-beta-reso
 
 Code path: `googlenative.servicedirectory.v1beta1.Namespace.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.Namespace).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.Namespace).
 
 Service: Servicedirectory
 
@@ -19608,7 +19608,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceiambinding-disallow
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceIamBinding).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceIamBinding).
 
 Service: Servicedirectory
 
@@ -19630,7 +19630,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceiammember-disallow-
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceIamMember).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceIamMember).
 
 Service: Servicedirectory
 
@@ -19652,7 +19652,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceiampolicy-disallow-
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceIamPolicy).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceIamPolicy).
 
 Service: Servicedirectory
 
@@ -19674,7 +19674,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceserviceiambinding-d
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceServiceIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceServiceIamBinding).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceServiceIamBinding).
 
 Service: Servicedirectory
 
@@ -19696,7 +19696,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceserviceiammember-di
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceServiceIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceServiceIamMember).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceServiceIamMember).
 
 Service: Servicedirectory
 
@@ -19718,7 +19718,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceserviceiampolicy-di
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceServiceIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceServiceIamPolicy).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceServiceIamPolicy).
 
 Service: Servicedirectory
 
@@ -19740,7 +19740,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceserviceworkloadiamb
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceServiceWorkloadIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceServiceWorkloadIamBinding).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceServiceWorkloadIamBinding).
 
 Service: Servicedirectory
 
@@ -19762,7 +19762,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceserviceworkloadiamm
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceServiceWorkloadIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceServiceWorkloadIamMember).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceServiceWorkloadIamMember).
 
 Service: Servicedirectory
 
@@ -19784,7 +19784,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceserviceworkloadiamp
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceServiceWorkloadIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceServiceWorkloadIamPolicy).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceServiceWorkloadIamPolicy).
 
 Service: Servicedirectory
 
@@ -19806,7 +19806,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceworkloadiambinding-
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceWorkloadIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceWorkloadIamBinding).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceWorkloadIamBinding).
 
 Service: Servicedirectory
 
@@ -19828,7 +19828,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceworkloadiammember-d
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceWorkloadIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceWorkloadIamMember).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceWorkloadIamMember).
 
 Service: Servicedirectory
 
@@ -19850,7 +19850,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-namespaceworkloadiampolicy-d
 
 Code path: `googlenative.servicedirectory.v1beta1.NamespaceWorkloadIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.NamespaceWorkloadIamPolicy).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.NamespaceWorkloadIamPolicy).
 
 Service: Servicedirectory
 
@@ -19872,7 +19872,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-registrationpolicyiambinding
 
 Code path: `googlenative.servicedirectory.v1beta1.RegistrationPolicyIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.RegistrationPolicyIamBinding).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.RegistrationPolicyIamBinding).
 
 Service: Servicedirectory
 
@@ -19894,7 +19894,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-registrationpolicyiammember-
 
 Code path: `googlenative.servicedirectory.v1beta1.RegistrationPolicyIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.RegistrationPolicyIamMember).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.RegistrationPolicyIamMember).
 
 Service: Servicedirectory
 
@@ -19916,7 +19916,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-registrationpolicyiampolicy-
 
 Code path: `googlenative.servicedirectory.v1beta1.RegistrationPolicyIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.RegistrationPolicyIamPolicy).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.RegistrationPolicyIamPolicy).
 
 Service: Servicedirectory
 
@@ -19938,7 +19938,7 @@ Policy name: `googlenative-servicedirectory-v1beta1-service-disallow-beta-resour
 
 Code path: `googlenative.servicedirectory.v1beta1.Service.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (servicedirectory.v1beta1.Service).
+Disallow the use of non-stable (Beta) resources (servicedirectory.v1beta1.Service).
 
 Service: Servicedirectory
 
@@ -19964,7 +19964,7 @@ Policy name: `googlenative-sqladmin-v1beta4-backuprun-disallow-beta-resource`
 
 Code path: `googlenative.sqladmin.v1beta4.BackupRun.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (sqladmin.v1beta4.BackupRun).
+Disallow the use of non-stable (Beta) resources (sqladmin.v1beta4.BackupRun).
 
 Service: Sqladmin
 
@@ -19986,7 +19986,7 @@ Policy name: `googlenative-sqladmin-v1beta4-database-disallow-beta-resource`
 
 Code path: `googlenative.sqladmin.v1beta4.Database.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (sqladmin.v1beta4.Database).
+Disallow the use of non-stable (Beta) resources (sqladmin.v1beta4.Database).
 
 Service: Sqladmin
 
@@ -20008,7 +20008,7 @@ Policy name: `googlenative-sqladmin-v1beta4-instance-disallow-beta-resource`
 
 Code path: `googlenative.sqladmin.v1beta4.Instance.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (sqladmin.v1beta4.Instance).
+Disallow the use of non-stable (Beta) resources (sqladmin.v1beta4.Instance).
 
 Service: Sqladmin
 
@@ -20030,7 +20030,7 @@ Policy name: `googlenative-sqladmin-v1beta4-sslcert-disallow-beta-resource`
 
 Code path: `googlenative.sqladmin.v1beta4.SslCert.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (sqladmin.v1beta4.SslCert).
+Disallow the use of non-stable (Beta) resources (sqladmin.v1beta4.SslCert).
 
 Service: Sqladmin
 
@@ -20052,7 +20052,7 @@ Policy name: `googlenative-sqladmin-v1beta4-user-disallow-beta-resource`
 
 Code path: `googlenative.sqladmin.v1beta4.User.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (sqladmin.v1beta4.User).
+Disallow the use of non-stable (Beta) resources (sqladmin.v1beta4.User).
 
 Service: Sqladmin
 
@@ -20078,7 +20078,7 @@ Policy name: `googlenative-toolresults-v1beta3-execution-disallow-beta-resource`
 
 Code path: `googlenative.toolresults.v1beta3.Execution.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (toolresults.v1beta3.Execution).
+Disallow the use of non-stable (Beta) resources (toolresults.v1beta3.Execution).
 
 Service: Toolresults
 
@@ -20100,7 +20100,7 @@ Policy name: `googlenative-toolresults-v1beta3-history-disallow-beta-resource`
 
 Code path: `googlenative.toolresults.v1beta3.History.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (toolresults.v1beta3.History).
+Disallow the use of non-stable (Beta) resources (toolresults.v1beta3.History).
 
 Service: Toolresults
 
@@ -20122,7 +20122,7 @@ Policy name: `googlenative-toolresults-v1beta3-perfsampleseries-disallow-beta-re
 
 Code path: `googlenative.toolresults.v1beta3.PerfSampleSeries.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (toolresults.v1beta3.PerfSampleSeries).
+Disallow the use of non-stable (Beta) resources (toolresults.v1beta3.PerfSampleSeries).
 
 Service: Toolresults
 
@@ -20144,7 +20144,7 @@ Policy name: `googlenative-toolresults-v1beta3-step-disallow-beta-resource`
 
 Code path: `googlenative.toolresults.v1beta3.Step.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (toolresults.v1beta3.Step).
+Disallow the use of non-stable (Beta) resources (toolresults.v1beta3.Step).
 
 Service: Toolresults
 
@@ -20170,7 +20170,7 @@ Policy name: `googlenative-tpu-v1alpha1-node-disallow-alpha-resource`
 
 Code path: `googlenative.tpu.v1alpha1.Node.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (tpu.v1alpha1.Node).
+Disallow the use of non-stable (Alpha) resources (tpu.v1alpha1.Node).
 
 Service: Tpu
 
@@ -20194,7 +20194,7 @@ Policy name: `googlenative-tpu-v2alpha1-node-disallow-alpha-resource`
 
 Code path: `googlenative.tpu.v2alpha1.Node.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (tpu.v2alpha1.Node).
+Disallow the use of non-stable (Alpha) resources (tpu.v2alpha1.Node).
 
 Service: Tpu
 
@@ -20216,7 +20216,7 @@ Policy name: `googlenative-tpu-v2alpha1-queuedresource-disallow-alpha-resource`
 
 Code path: `googlenative.tpu.v2alpha1.QueuedResource.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (tpu.v2alpha1.QueuedResource).
+Disallow the use of non-stable (Alpha) resources (tpu.v2alpha1.QueuedResource).
 
 Service: Tpu
 
@@ -20242,7 +20242,7 @@ Policy name: `googlenative-translate-v3beta1-glossary-disallow-beta-resource`
 
 Code path: `googlenative.translate.v3beta1.Glossary.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (translate.v3beta1.Glossary).
+Disallow the use of non-stable (Beta) resources (translate.v3beta1.Glossary).
 
 Service: Translate
 
@@ -20268,7 +20268,7 @@ Policy name: `googlenative-vmmigration-v1alpha1-clonejob-disallow-alpha-resource
 
 Code path: `googlenative.vmmigration.v1alpha1.CloneJob.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (vmmigration.v1alpha1.CloneJob).
+Disallow the use of non-stable (Alpha) resources (vmmigration.v1alpha1.CloneJob).
 
 Service: Vmmigration
 
@@ -20290,7 +20290,7 @@ Policy name: `googlenative-vmmigration-v1alpha1-cutoverjob-disallow-alpha-resour
 
 Code path: `googlenative.vmmigration.v1alpha1.CutoverJob.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (vmmigration.v1alpha1.CutoverJob).
+Disallow the use of non-stable (Alpha) resources (vmmigration.v1alpha1.CutoverJob).
 
 Service: Vmmigration
 
@@ -20312,7 +20312,7 @@ Policy name: `googlenative-vmmigration-v1alpha1-datacenterconnector-disallow-alp
 
 Code path: `googlenative.vmmigration.v1alpha1.DatacenterConnector.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (vmmigration.v1alpha1.DatacenterConnector).
+Disallow the use of non-stable (Alpha) resources (vmmigration.v1alpha1.DatacenterConnector).
 
 Service: Vmmigration
 
@@ -20334,7 +20334,7 @@ Policy name: `googlenative-vmmigration-v1alpha1-group-disallow-alpha-resource`
 
 Code path: `googlenative.vmmigration.v1alpha1.Group.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (vmmigration.v1alpha1.Group).
+Disallow the use of non-stable (Alpha) resources (vmmigration.v1alpha1.Group).
 
 Service: Vmmigration
 
@@ -20356,7 +20356,7 @@ Policy name: `googlenative-vmmigration-v1alpha1-migratingvm-disallow-alpha-resou
 
 Code path: `googlenative.vmmigration.v1alpha1.MigratingVm.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (vmmigration.v1alpha1.MigratingVm).
+Disallow the use of non-stable (Alpha) resources (vmmigration.v1alpha1.MigratingVm).
 
 Service: Vmmigration
 
@@ -20378,7 +20378,7 @@ Policy name: `googlenative-vmmigration-v1alpha1-source-disallow-alpha-resource`
 
 Code path: `googlenative.vmmigration.v1alpha1.Source.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (vmmigration.v1alpha1.Source).
+Disallow the use of non-stable (Alpha) resources (vmmigration.v1alpha1.Source).
 
 Service: Vmmigration
 
@@ -20400,7 +20400,7 @@ Policy name: `googlenative-vmmigration-v1alpha1-targetproject-disallow-alpha-res
 
 Code path: `googlenative.vmmigration.v1alpha1.TargetProject.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (vmmigration.v1alpha1.TargetProject).
+Disallow the use of non-stable (Alpha) resources (vmmigration.v1alpha1.TargetProject).
 
 Service: Vmmigration
 
@@ -20422,7 +20422,7 @@ Policy name: `googlenative-vmmigration-v1alpha1-utilizationreport-disallow-alpha
 
 Code path: `googlenative.vmmigration.v1alpha1.UtilizationReport.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (vmmigration.v1alpha1.UtilizationReport).
+Disallow the use of non-stable (Alpha) resources (vmmigration.v1alpha1.UtilizationReport).
 
 Service: Vmmigration
 
@@ -20448,7 +20448,7 @@ Policy name: `googlenative-vpcaccess-v1beta1-connector-disallow-beta-resource`
 
 Code path: `googlenative.vpcaccess.v1beta1.Connector.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (vpcaccess.v1beta1.Connector).
+Disallow the use of non-stable (Beta) resources (vpcaccess.v1beta1.Connector).
 
 Service: Vpcaccess
 
@@ -20474,7 +20474,7 @@ Policy name: `googlenative-websecurityscanner-v1alpha-scanconfig-disallow-alpha-
 
 Code path: `googlenative.websecurityscanner.v1alpha.ScanConfig.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) resouces (websecurityscanner.v1alpha.ScanConfig).
+Disallow the use of non-stable (Alpha) resources (websecurityscanner.v1alpha.ScanConfig).
 
 Service: Websecurityscanner
 
@@ -20498,7 +20498,7 @@ Policy name: `googlenative-websecurityscanner-v1beta-scanconfig-disallow-beta-re
 
 Code path: `googlenative.websecurityscanner.v1beta.ScanConfig.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (websecurityscanner.v1beta.ScanConfig).
+Disallow the use of non-stable (Beta) resources (websecurityscanner.v1beta.ScanConfig).
 
 Service: Websecurityscanner
 
@@ -20524,7 +20524,7 @@ Policy name: `googlenative-workflowexecutions-v1beta-execution-disallow-beta-res
 
 Code path: `googlenative.workflowexecutions.v1beta.Execution.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workflowexecutions.v1beta.Execution).
+Disallow the use of non-stable (Beta) resources (workflowexecutions.v1beta.Execution).
 
 Service: Workflowexecutions
 
@@ -20550,7 +20550,7 @@ Policy name: `googlenative-workflows-v1beta-workflow-disallow-beta-resource`
 
 Code path: `googlenative.workflows.v1beta.Workflow.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workflows.v1beta.Workflow).
+Disallow the use of non-stable (Beta) resources (workflows.v1beta.Workflow).
 
 Service: Workflows
 
@@ -20576,7 +20576,7 @@ Policy name: `googlenative-workstations-v1beta-workstation-disallow-beta-resourc
 
 Code path: `googlenative.workstations.v1beta.Workstation.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workstations.v1beta.Workstation).
+Disallow the use of non-stable (Beta) resources (workstations.v1beta.Workstation).
 
 Service: Workstations
 
@@ -20598,7 +20598,7 @@ Policy name: `googlenative-workstations-v1beta-workstationcluster-disallow-beta-
 
 Code path: `googlenative.workstations.v1beta.WorkstationCluster.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workstations.v1beta.WorkstationCluster).
+Disallow the use of non-stable (Beta) resources (workstations.v1beta.WorkstationCluster).
 
 Service: Workstations
 
@@ -20620,7 +20620,7 @@ Policy name: `googlenative-workstations-v1beta-workstationclusterworkstationconf
 
 Code path: `googlenative.workstations.v1beta.WorkstationClusterWorkstationConfigIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workstations.v1beta.WorkstationClusterWorkstationConfigIamBinding).
+Disallow the use of non-stable (Beta) resources (workstations.v1beta.WorkstationClusterWorkstationConfigIamBinding).
 
 Service: Workstations
 
@@ -20642,7 +20642,7 @@ Policy name: `googlenative-workstations-v1beta-workstationclusterworkstationconf
 
 Code path: `googlenative.workstations.v1beta.WorkstationClusterWorkstationConfigIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workstations.v1beta.WorkstationClusterWorkstationConfigIamMember).
+Disallow the use of non-stable (Beta) resources (workstations.v1beta.WorkstationClusterWorkstationConfigIamMember).
 
 Service: Workstations
 
@@ -20664,7 +20664,7 @@ Policy name: `googlenative-workstations-v1beta-workstationclusterworkstationconf
 
 Code path: `googlenative.workstations.v1beta.WorkstationClusterWorkstationConfigIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workstations.v1beta.WorkstationClusterWorkstationConfigIamPolicy).
+Disallow the use of non-stable (Beta) resources (workstations.v1beta.WorkstationClusterWorkstationConfigIamPolicy).
 
 Service: Workstations
 
@@ -20686,7 +20686,7 @@ Policy name: `googlenative-workstations-v1beta-workstationclusterworkstationconf
 
 Code path: `googlenative.workstations.v1beta.WorkstationClusterWorkstationConfigWorkstationIamBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workstations.v1beta.WorkstationClusterWorkstationConfigWorkstationIamBinding).
+Disallow the use of non-stable (Beta) resources (workstations.v1beta.WorkstationClusterWorkstationConfigWorkstationIamBinding).
 
 Service: Workstations
 
@@ -20708,7 +20708,7 @@ Policy name: `googlenative-workstations-v1beta-workstationclusterworkstationconf
 
 Code path: `googlenative.workstations.v1beta.WorkstationClusterWorkstationConfigWorkstationIamMember.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workstations.v1beta.WorkstationClusterWorkstationConfigWorkstationIamMember).
+Disallow the use of non-stable (Beta) resources (workstations.v1beta.WorkstationClusterWorkstationConfigWorkstationIamMember).
 
 Service: Workstations
 
@@ -20730,7 +20730,7 @@ Policy name: `googlenative-workstations-v1beta-workstationclusterworkstationconf
 
 Code path: `googlenative.workstations.v1beta.WorkstationClusterWorkstationConfigWorkstationIamPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workstations.v1beta.WorkstationClusterWorkstationConfigWorkstationIamPolicy).
+Disallow the use of non-stable (Beta) resources (workstations.v1beta.WorkstationClusterWorkstationConfigWorkstationIamPolicy).
 
 Service: Workstations
 
@@ -20752,7 +20752,7 @@ Policy name: `googlenative-workstations-v1beta-workstationconfig-disallow-beta-r
 
 Code path: `googlenative.workstations.v1beta.WorkstationConfig.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) resouces (workstations.v1beta.WorkstationConfig).
+Disallow the use of non-stable (Beta) resources (workstations.v1beta.WorkstationConfig).
 
 Service: Workstations
 

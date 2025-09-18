@@ -12,7 +12,7 @@ menu:
 aliases:
     - /docs/using-pulumi/crossguard/compliance-ready-policies-kubernetes/
     - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-kubernetes/
-    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-kubernetes/    
+    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-kubernetes/
 ---
 There's a total of 237 Compliance Ready Policies for the Kubernetes provider.
 
@@ -30,7 +30,7 @@ Policy name: `kubernetes-admissionregistration-v1alpha1-validatingadmissionpolic
 
 Code path: `kubernetes.admissionregistration.v1alpha1.ValidatingAdmissionPolicy.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (admissionregistration.v1alpha1.ValidatingAdmissionPolicy).
+Disallow the use of non-stable (Alpha) Kubernetes resources (admissionregistration.v1alpha1.ValidatingAdmissionPolicy).
 
 Service: Admissionregistration
 
@@ -52,7 +52,7 @@ Policy name: `kubernetes-admissionregistration-v1alpha1-validatingadmissionpolic
 
 Code path: `kubernetes.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (admissionregistration.v1alpha1.ValidatingAdmissionPolicyBinding).
+Disallow the use of non-stable (Alpha) Kubernetes resources (admissionregistration.v1alpha1.ValidatingAdmissionPolicyBinding).
 
 Service: Admissionregistration
 
@@ -74,7 +74,7 @@ Policy name: `kubernetes-admissionregistration-v1alpha1-validatingadmissionpolic
 
 Code path: `kubernetes.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingList).
 
 Service: Admissionregistration
 
@@ -96,7 +96,7 @@ Policy name: `kubernetes-admissionregistration-v1alpha1-validatingadmissionpolic
 
 Code path: `kubernetes.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingPatch).
 
 Service: Admissionregistration
 
@@ -118,7 +118,7 @@ Policy name: `kubernetes-admissionregistration-v1alpha1-validatingadmissionpolic
 
 Code path: `kubernetes.admissionregistration.v1alpha1.ValidatingAdmissionPolicyList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (admissionregistration.v1alpha1.ValidatingAdmissionPolicyList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (admissionregistration.v1alpha1.ValidatingAdmissionPolicyList).
 
 Service: Admissionregistration
 
@@ -140,7 +140,7 @@ Policy name: `kubernetes-admissionregistration-v1alpha1-validatingadmissionpolic
 
 Code path: `kubernetes.admissionregistration.v1alpha1.ValidatingAdmissionPolicyPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (admissionregistration.v1alpha1.ValidatingAdmissionPolicyPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (admissionregistration.v1alpha1.ValidatingAdmissionPolicyPatch).
 
 Service: Admissionregistration
 
@@ -164,7 +164,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-mutatingwebhookconfigurat
 
 Code path: `kubernetes.admissionregistration.v1beta1.MutatingWebhookConfiguration.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.MutatingWebhookConfiguration).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.MutatingWebhookConfiguration).
 
 Service: Admissionregistration
 
@@ -186,7 +186,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-mutatingwebhookconfigurat
 
 Code path: `kubernetes.admissionregistration.v1beta1.MutatingWebhookConfigurationList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.MutatingWebhookConfigurationList).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.MutatingWebhookConfigurationList).
 
 Service: Admissionregistration
 
@@ -208,7 +208,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-mutatingwebhookconfigurat
 
 Code path: `kubernetes.admissionregistration.v1beta1.MutatingWebhookConfigurationPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.MutatingWebhookConfigurationPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.MutatingWebhookConfigurationPatch).
 
 Service: Admissionregistration
 
@@ -230,7 +230,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-validatingadmissionpolicy
 
 Code path: `kubernetes.admissionregistration.v1beta1.ValidatingAdmissionPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.ValidatingAdmissionPolicy).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.ValidatingAdmissionPolicy).
 
 Service: Admissionregistration
 
@@ -252,7 +252,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-validatingadmissionpolicy
 
 Code path: `kubernetes.admissionregistration.v1beta1.ValidatingAdmissionPolicyBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.ValidatingAdmissionPolicyBinding).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.ValidatingAdmissionPolicyBinding).
 
 Service: Admissionregistration
 
@@ -274,7 +274,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-validatingadmissionpolicy
 
 Code path: `kubernetes.admissionregistration.v1beta1.ValidatingAdmissionPolicyBindingList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.ValidatingAdmissionPolicyBindingList).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.ValidatingAdmissionPolicyBindingList).
 
 Service: Admissionregistration
 
@@ -296,7 +296,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-validatingadmissionpolicy
 
 Code path: `kubernetes.admissionregistration.v1beta1.ValidatingAdmissionPolicyBindingPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.ValidatingAdmissionPolicyBindingPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.ValidatingAdmissionPolicyBindingPatch).
 
 Service: Admissionregistration
 
@@ -318,7 +318,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-validatingadmissionpolicy
 
 Code path: `kubernetes.admissionregistration.v1beta1.ValidatingAdmissionPolicyList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.ValidatingAdmissionPolicyList).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.ValidatingAdmissionPolicyList).
 
 Service: Admissionregistration
 
@@ -340,7 +340,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-validatingadmissionpolicy
 
 Code path: `kubernetes.admissionregistration.v1beta1.ValidatingAdmissionPolicyPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.ValidatingAdmissionPolicyPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.ValidatingAdmissionPolicyPatch).
 
 Service: Admissionregistration
 
@@ -362,7 +362,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-validatingwebhookconfigur
 
 Code path: `kubernetes.admissionregistration.v1beta1.ValidatingWebhookConfiguration.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.ValidatingWebhookConfiguration).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.ValidatingWebhookConfiguration).
 
 Service: Admissionregistration
 
@@ -384,7 +384,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-validatingwebhookconfigur
 
 Code path: `kubernetes.admissionregistration.v1beta1.ValidatingWebhookConfigurationList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.ValidatingWebhookConfigurationList).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.ValidatingWebhookConfigurationList).
 
 Service: Admissionregistration
 
@@ -406,7 +406,7 @@ Policy name: `kubernetes-admissionregistration-v1beta1-validatingwebhookconfigur
 
 Code path: `kubernetes.admissionregistration.v1beta1.ValidatingWebhookConfigurationPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (admissionregistration.v1beta1.ValidatingWebhookConfigurationPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (admissionregistration.v1beta1.ValidatingWebhookConfigurationPatch).
 
 Service: Admissionregistration
 
@@ -432,7 +432,7 @@ Policy name: `kubernetes-apiextensions-v1beta1-customresourcedefinition-disallow
 
 Code path: `kubernetes.apiextensions.v1beta1.CustomResourceDefinition.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apiextensions.v1beta1.CustomResourceDefinition).
+Disallow the use of non-stable (Beta) Kubernetes resources (apiextensions.v1beta1.CustomResourceDefinition).
 
 Service: Apiextensions
 
@@ -454,7 +454,7 @@ Policy name: `kubernetes-apiextensions-v1beta1-customresourcedefinitionlist-disa
 
 Code path: `kubernetes.apiextensions.v1beta1.CustomResourceDefinitionList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apiextensions.v1beta1.CustomResourceDefinitionList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apiextensions.v1beta1.CustomResourceDefinitionList).
 
 Service: Apiextensions
 
@@ -476,7 +476,7 @@ Policy name: `kubernetes-apiextensions-v1beta1-customresourcedefinitionpatch-dis
 
 Code path: `kubernetes.apiextensions.v1beta1.CustomResourceDefinitionPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apiextensions.v1beta1.CustomResourceDefinitionPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apiextensions.v1beta1.CustomResourceDefinitionPatch).
 
 Service: Apiextensions
 
@@ -502,7 +502,7 @@ Policy name: `kubernetes-apiregistration-v1beta1-apiservice-disallow-beta-resour
 
 Code path: `kubernetes.apiregistration.v1beta1.APIService.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apiregistration.v1beta1.APIService).
+Disallow the use of non-stable (Beta) Kubernetes resources (apiregistration.v1beta1.APIService).
 
 Service: Apiregistration
 
@@ -524,7 +524,7 @@ Policy name: `kubernetes-apiregistration-v1beta1-apiservicelist-disallow-beta-re
 
 Code path: `kubernetes.apiregistration.v1beta1.APIServiceList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apiregistration.v1beta1.APIServiceList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apiregistration.v1beta1.APIServiceList).
 
 Service: Apiregistration
 
@@ -546,7 +546,7 @@ Policy name: `kubernetes-apiregistration-v1beta1-apiservicepatch-disallow-beta-r
 
 Code path: `kubernetes.apiregistration.v1beta1.APIServicePatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apiregistration.v1beta1.APIServicePatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apiregistration.v1beta1.APIServicePatch).
 
 Service: Apiregistration
 
@@ -794,7 +794,7 @@ Policy name: `kubernetes-apps-v1beta1-controllerrevision-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta1.ControllerRevision.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta1.ControllerRevision).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta1.ControllerRevision).
 
 Service: Apps
 
@@ -816,7 +816,7 @@ Policy name: `kubernetes-apps-v1beta1-controllerrevisionlist-disallow-beta-resou
 
 Code path: `kubernetes.apps.v1beta1.ControllerRevisionList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta1.ControllerRevisionList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta1.ControllerRevisionList).
 
 Service: Apps
 
@@ -838,7 +838,7 @@ Policy name: `kubernetes-apps-v1beta1-controllerrevisionpatch-disallow-beta-reso
 
 Code path: `kubernetes.apps.v1beta1.ControllerRevisionPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta1.ControllerRevisionPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta1.ControllerRevisionPatch).
 
 Service: Apps
 
@@ -860,7 +860,7 @@ Policy name: `kubernetes-apps-v1beta1-deployment-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta1.Deployment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta1.Deployment).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta1.Deployment).
 
 Service: Apps
 
@@ -882,7 +882,7 @@ Policy name: `kubernetes-apps-v1beta1-deploymentlist-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta1.DeploymentList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta1.DeploymentList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta1.DeploymentList).
 
 Service: Apps
 
@@ -904,7 +904,7 @@ Policy name: `kubernetes-apps-v1beta1-deploymentpatch-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta1.DeploymentPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta1.DeploymentPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta1.DeploymentPatch).
 
 Service: Apps
 
@@ -926,7 +926,7 @@ Policy name: `kubernetes-apps-v1beta1-statefulset-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta1.StatefulSet.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta1.StatefulSet).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta1.StatefulSet).
 
 Service: Apps
 
@@ -948,7 +948,7 @@ Policy name: `kubernetes-apps-v1beta1-statefulsetlist-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta1.StatefulSetList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta1.StatefulSetList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta1.StatefulSetList).
 
 Service: Apps
 
@@ -970,7 +970,7 @@ Policy name: `kubernetes-apps-v1beta1-statefulsetpatch-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta1.StatefulSetPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta1.StatefulSetPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta1.StatefulSetPatch).
 
 Service: Apps
 
@@ -994,7 +994,7 @@ Policy name: `kubernetes-apps-v1beta2-controllerrevision-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.ControllerRevision.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.ControllerRevision).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.ControllerRevision).
 
 Service: Apps
 
@@ -1016,7 +1016,7 @@ Policy name: `kubernetes-apps-v1beta2-controllerrevisionlist-disallow-beta-resou
 
 Code path: `kubernetes.apps.v1beta2.ControllerRevisionList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.ControllerRevisionList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.ControllerRevisionList).
 
 Service: Apps
 
@@ -1038,7 +1038,7 @@ Policy name: `kubernetes-apps-v1beta2-controllerrevisionpatch-disallow-beta-reso
 
 Code path: `kubernetes.apps.v1beta2.ControllerRevisionPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.ControllerRevisionPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.ControllerRevisionPatch).
 
 Service: Apps
 
@@ -1060,7 +1060,7 @@ Policy name: `kubernetes-apps-v1beta2-daemonset-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.DaemonSet.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.DaemonSet).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.DaemonSet).
 
 Service: Apps
 
@@ -1082,7 +1082,7 @@ Policy name: `kubernetes-apps-v1beta2-daemonsetlist-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.DaemonSetList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.DaemonSetList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.DaemonSetList).
 
 Service: Apps
 
@@ -1104,7 +1104,7 @@ Policy name: `kubernetes-apps-v1beta2-daemonsetpatch-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.DaemonSetPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.DaemonSetPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.DaemonSetPatch).
 
 Service: Apps
 
@@ -1126,7 +1126,7 @@ Policy name: `kubernetes-apps-v1beta2-deployment-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.Deployment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.Deployment).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.Deployment).
 
 Service: Apps
 
@@ -1148,7 +1148,7 @@ Policy name: `kubernetes-apps-v1beta2-deploymentlist-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.DeploymentList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.DeploymentList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.DeploymentList).
 
 Service: Apps
 
@@ -1170,7 +1170,7 @@ Policy name: `kubernetes-apps-v1beta2-deploymentpatch-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.DeploymentPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.DeploymentPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.DeploymentPatch).
 
 Service: Apps
 
@@ -1192,7 +1192,7 @@ Policy name: `kubernetes-apps-v1beta2-replicaset-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.ReplicaSet.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.ReplicaSet).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.ReplicaSet).
 
 Service: Apps
 
@@ -1214,7 +1214,7 @@ Policy name: `kubernetes-apps-v1beta2-replicasetlist-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.ReplicaSetList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.ReplicaSetList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.ReplicaSetList).
 
 Service: Apps
 
@@ -1236,7 +1236,7 @@ Policy name: `kubernetes-apps-v1beta2-replicasetpatch-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.ReplicaSetPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.ReplicaSetPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.ReplicaSetPatch).
 
 Service: Apps
 
@@ -1258,7 +1258,7 @@ Policy name: `kubernetes-apps-v1beta2-statefulset-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.StatefulSet.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.StatefulSet).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.StatefulSet).
 
 Service: Apps
 
@@ -1280,7 +1280,7 @@ Policy name: `kubernetes-apps-v1beta2-statefulsetlist-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.StatefulSetList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.StatefulSetList).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.StatefulSetList).
 
 Service: Apps
 
@@ -1302,7 +1302,7 @@ Policy name: `kubernetes-apps-v1beta2-statefulsetpatch-disallow-beta-resource`
 
 Code path: `kubernetes.apps.v1beta2.StatefulSetPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (apps.v1beta2.StatefulSetPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (apps.v1beta2.StatefulSetPatch).
 
 Service: Apps
 
@@ -1328,7 +1328,7 @@ Policy name: `kubernetes-auditregistration-v1alpha1-auditsink-disallow-alpha-res
 
 Code path: `kubernetes.auditregistration.v1alpha1.AuditSink.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (auditregistration.v1alpha1.AuditSink).
+Disallow the use of non-stable (Alpha) Kubernetes resources (auditregistration.v1alpha1.AuditSink).
 
 Service: Auditregistration
 
@@ -1350,7 +1350,7 @@ Policy name: `kubernetes-auditregistration-v1alpha1-auditsinklist-disallow-alpha
 
 Code path: `kubernetes.auditregistration.v1alpha1.AuditSinkList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (auditregistration.v1alpha1.AuditSinkList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (auditregistration.v1alpha1.AuditSinkList).
 
 Service: Auditregistration
 
@@ -1372,7 +1372,7 @@ Policy name: `kubernetes-auditregistration-v1alpha1-auditsinkpatch-disallow-alph
 
 Code path: `kubernetes.auditregistration.v1alpha1.AuditSinkPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (auditregistration.v1alpha1.AuditSinkPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (auditregistration.v1alpha1.AuditSinkPatch).
 
 Service: Auditregistration
 
@@ -1398,7 +1398,7 @@ Policy name: `kubernetes-autoscaling-v2beta1-horizontalpodautoscaler-disallow-be
 
 Code path: `kubernetes.autoscaling.v2beta1.HorizontalPodAutoscaler.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (autoscaling.v2beta1.HorizontalPodAutoscaler).
+Disallow the use of non-stable (Beta) Kubernetes resources (autoscaling.v2beta1.HorizontalPodAutoscaler).
 
 Service: Autoscaling
 
@@ -1420,7 +1420,7 @@ Policy name: `kubernetes-autoscaling-v2beta1-horizontalpodautoscalerlist-disallo
 
 Code path: `kubernetes.autoscaling.v2beta1.HorizontalPodAutoscalerList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (autoscaling.v2beta1.HorizontalPodAutoscalerList).
+Disallow the use of non-stable (Beta) Kubernetes resources (autoscaling.v2beta1.HorizontalPodAutoscalerList).
 
 Service: Autoscaling
 
@@ -1442,7 +1442,7 @@ Policy name: `kubernetes-autoscaling-v2beta1-horizontalpodautoscalerpatch-disall
 
 Code path: `kubernetes.autoscaling.v2beta1.HorizontalPodAutoscalerPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (autoscaling.v2beta1.HorizontalPodAutoscalerPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (autoscaling.v2beta1.HorizontalPodAutoscalerPatch).
 
 Service: Autoscaling
 
@@ -1466,7 +1466,7 @@ Policy name: `kubernetes-autoscaling-v2beta2-horizontalpodautoscaler-disallow-be
 
 Code path: `kubernetes.autoscaling.v2beta2.HorizontalPodAutoscaler.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (autoscaling.v2beta2.HorizontalPodAutoscaler).
+Disallow the use of non-stable (Beta) Kubernetes resources (autoscaling.v2beta2.HorizontalPodAutoscaler).
 
 Service: Autoscaling
 
@@ -1488,7 +1488,7 @@ Policy name: `kubernetes-autoscaling-v2beta2-horizontalpodautoscalerlist-disallo
 
 Code path: `kubernetes.autoscaling.v2beta2.HorizontalPodAutoscalerList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (autoscaling.v2beta2.HorizontalPodAutoscalerList).
+Disallow the use of non-stable (Beta) Kubernetes resources (autoscaling.v2beta2.HorizontalPodAutoscalerList).
 
 Service: Autoscaling
 
@@ -1510,7 +1510,7 @@ Policy name: `kubernetes-autoscaling-v2beta2-horizontalpodautoscalerpatch-disall
 
 Code path: `kubernetes.autoscaling.v2beta2.HorizontalPodAutoscalerPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (autoscaling.v2beta2.HorizontalPodAutoscalerPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (autoscaling.v2beta2.HorizontalPodAutoscalerPatch).
 
 Service: Autoscaling
 
@@ -1626,7 +1626,7 @@ Policy name: `kubernetes-batch-v1beta1-cronjob-disallow-beta-resource`
 
 Code path: `kubernetes.batch.v1beta1.CronJob.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (batch.v1beta1.CronJob).
+Disallow the use of non-stable (Beta) Kubernetes resources (batch.v1beta1.CronJob).
 
 Service: Batch
 
@@ -1648,7 +1648,7 @@ Policy name: `kubernetes-batch-v1beta1-cronjoblist-disallow-beta-resource`
 
 Code path: `kubernetes.batch.v1beta1.CronJobList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (batch.v1beta1.CronJobList).
+Disallow the use of non-stable (Beta) Kubernetes resources (batch.v1beta1.CronJobList).
 
 Service: Batch
 
@@ -1670,7 +1670,7 @@ Policy name: `kubernetes-batch-v1beta1-cronjobpatch-disallow-beta-resource`
 
 Code path: `kubernetes.batch.v1beta1.CronJobPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (batch.v1beta1.CronJobPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (batch.v1beta1.CronJobPatch).
 
 Service: Batch
 
@@ -1694,7 +1694,7 @@ Policy name: `kubernetes-batch-v2alpha1-cronjob-disallow-alpha-resource`
 
 Code path: `kubernetes.batch.v2alpha1.CronJob.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (batch.v2alpha1.CronJob).
+Disallow the use of non-stable (Alpha) Kubernetes resources (batch.v2alpha1.CronJob).
 
 Service: Batch
 
@@ -1716,7 +1716,7 @@ Policy name: `kubernetes-batch-v2alpha1-cronjoblist-disallow-alpha-resource`
 
 Code path: `kubernetes.batch.v2alpha1.CronJobList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (batch.v2alpha1.CronJobList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (batch.v2alpha1.CronJobList).
 
 Service: Batch
 
@@ -1738,7 +1738,7 @@ Policy name: `kubernetes-batch-v2alpha1-cronjobpatch-disallow-alpha-resource`
 
 Code path: `kubernetes.batch.v2alpha1.CronJobPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (batch.v2alpha1.CronJobPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (batch.v2alpha1.CronJobPatch).
 
 Service: Batch
 
@@ -1764,7 +1764,7 @@ Policy name: `kubernetes-certificates-v1alpha1-clustertrustbundle-disallow-alpha
 
 Code path: `kubernetes.certificates.v1alpha1.ClusterTrustBundle.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (certificates.v1alpha1.ClusterTrustBundle).
+Disallow the use of non-stable (Alpha) Kubernetes resources (certificates.v1alpha1.ClusterTrustBundle).
 
 Service: Certificates
 
@@ -1786,7 +1786,7 @@ Policy name: `kubernetes-certificates-v1alpha1-clustertrustbundlelist-disallow-a
 
 Code path: `kubernetes.certificates.v1alpha1.ClusterTrustBundleList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (certificates.v1alpha1.ClusterTrustBundleList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (certificates.v1alpha1.ClusterTrustBundleList).
 
 Service: Certificates
 
@@ -1808,7 +1808,7 @@ Policy name: `kubernetes-certificates-v1alpha1-clustertrustbundlepatch-disallow-
 
 Code path: `kubernetes.certificates.v1alpha1.ClusterTrustBundlePatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (certificates.v1alpha1.ClusterTrustBundlePatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (certificates.v1alpha1.ClusterTrustBundlePatch).
 
 Service: Certificates
 
@@ -1832,7 +1832,7 @@ Policy name: `kubernetes-certificates-v1beta1-certificatesigningrequest-disallow
 
 Code path: `kubernetes.certificates.v1beta1.CertificateSigningRequest.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (certificates.v1beta1.CertificateSigningRequest).
+Disallow the use of non-stable (Beta) Kubernetes resources (certificates.v1beta1.CertificateSigningRequest).
 
 Service: Certificates
 
@@ -1854,7 +1854,7 @@ Policy name: `kubernetes-certificates-v1beta1-certificatesigningrequestlist-disa
 
 Code path: `kubernetes.certificates.v1beta1.CertificateSigningRequestList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (certificates.v1beta1.CertificateSigningRequestList).
+Disallow the use of non-stable (Beta) Kubernetes resources (certificates.v1beta1.CertificateSigningRequestList).
 
 Service: Certificates
 
@@ -1876,7 +1876,7 @@ Policy name: `kubernetes-certificates-v1beta1-certificatesigningrequestpatch-dis
 
 Code path: `kubernetes.certificates.v1beta1.CertificateSigningRequestPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (certificates.v1beta1.CertificateSigningRequestPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (certificates.v1beta1.CertificateSigningRequestPatch).
 
 Service: Certificates
 
@@ -1902,7 +1902,7 @@ Policy name: `kubernetes-coordination-v1beta1-lease-disallow-beta-resource`
 
 Code path: `kubernetes.coordination.v1beta1.Lease.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (coordination.v1beta1.Lease).
+Disallow the use of non-stable (Beta) Kubernetes resources (coordination.v1beta1.Lease).
 
 Service: Coordination
 
@@ -1924,7 +1924,7 @@ Policy name: `kubernetes-coordination-v1beta1-leaselist-disallow-beta-resource`
 
 Code path: `kubernetes.coordination.v1beta1.LeaseList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (coordination.v1beta1.LeaseList).
+Disallow the use of non-stable (Beta) Kubernetes resources (coordination.v1beta1.LeaseList).
 
 Service: Coordination
 
@@ -1946,7 +1946,7 @@ Policy name: `kubernetes-coordination-v1beta1-leasepatch-disallow-beta-resource`
 
 Code path: `kubernetes.coordination.v1beta1.LeasePatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (coordination.v1beta1.LeasePatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (coordination.v1beta1.LeasePatch).
 
 Service: Coordination
 
@@ -2042,7 +2042,7 @@ Policy name: `kubernetes-discovery-v1beta1-endpointslice-disallow-beta-resource`
 
 Code path: `kubernetes.discovery.v1beta1.EndpointSlice.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (discovery.v1beta1.EndpointSlice).
+Disallow the use of non-stable (Beta) Kubernetes resources (discovery.v1beta1.EndpointSlice).
 
 Service: Discovery
 
@@ -2064,7 +2064,7 @@ Policy name: `kubernetes-discovery-v1beta1-endpointslicelist-disallow-beta-resou
 
 Code path: `kubernetes.discovery.v1beta1.EndpointSliceList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (discovery.v1beta1.EndpointSliceList).
+Disallow the use of non-stable (Beta) Kubernetes resources (discovery.v1beta1.EndpointSliceList).
 
 Service: Discovery
 
@@ -2086,7 +2086,7 @@ Policy name: `kubernetes-discovery-v1beta1-endpointslicepatch-disallow-beta-reso
 
 Code path: `kubernetes.discovery.v1beta1.EndpointSlicePatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (discovery.v1beta1.EndpointSlicePatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (discovery.v1beta1.EndpointSlicePatch).
 
 Service: Discovery
 
@@ -2112,7 +2112,7 @@ Policy name: `kubernetes-events-v1beta1-event-disallow-beta-resource`
 
 Code path: `kubernetes.events.v1beta1.Event.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (events.v1beta1.Event).
+Disallow the use of non-stable (Beta) Kubernetes resources (events.v1beta1.Event).
 
 Service: Events
 
@@ -2134,7 +2134,7 @@ Policy name: `kubernetes-events-v1beta1-eventlist-disallow-beta-resource`
 
 Code path: `kubernetes.events.v1beta1.EventList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (events.v1beta1.EventList).
+Disallow the use of non-stable (Beta) Kubernetes resources (events.v1beta1.EventList).
 
 Service: Events
 
@@ -2156,7 +2156,7 @@ Policy name: `kubernetes-events-v1beta1-eventpatch-disallow-beta-resource`
 
 Code path: `kubernetes.events.v1beta1.EventPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (events.v1beta1.EventPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (events.v1beta1.EventPatch).
 
 Service: Events
 
@@ -2182,7 +2182,7 @@ Policy name: `kubernetes-extensions-v1beta1-daemonset-disallow-beta-resource`
 
 Code path: `kubernetes.extensions.v1beta1.DaemonSet.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.DaemonSet).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.DaemonSet).
 
 Service: Extensions
 
@@ -2204,7 +2204,7 @@ Policy name: `kubernetes-extensions-v1beta1-daemonsetlist-disallow-beta-resource
 
 Code path: `kubernetes.extensions.v1beta1.DaemonSetList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.DaemonSetList).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.DaemonSetList).
 
 Service: Extensions
 
@@ -2226,7 +2226,7 @@ Policy name: `kubernetes-extensions-v1beta1-daemonsetpatch-disallow-beta-resourc
 
 Code path: `kubernetes.extensions.v1beta1.DaemonSetPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.DaemonSetPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.DaemonSetPatch).
 
 Service: Extensions
 
@@ -2248,7 +2248,7 @@ Policy name: `kubernetes-extensions-v1beta1-deployment-disallow-beta-resource`
 
 Code path: `kubernetes.extensions.v1beta1.Deployment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.Deployment).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.Deployment).
 
 Service: Extensions
 
@@ -2270,7 +2270,7 @@ Policy name: `kubernetes-extensions-v1beta1-deploymentlist-disallow-beta-resourc
 
 Code path: `kubernetes.extensions.v1beta1.DeploymentList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.DeploymentList).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.DeploymentList).
 
 Service: Extensions
 
@@ -2292,7 +2292,7 @@ Policy name: `kubernetes-extensions-v1beta1-deploymentpatch-disallow-beta-resour
 
 Code path: `kubernetes.extensions.v1beta1.DeploymentPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.DeploymentPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.DeploymentPatch).
 
 Service: Extensions
 
@@ -2314,7 +2314,7 @@ Policy name: `kubernetes-extensions-v1beta1-ingress-disallow-beta-resource`
 
 Code path: `kubernetes.extensions.v1beta1.Ingress.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.Ingress).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.Ingress).
 
 Service: Extensions
 
@@ -2336,7 +2336,7 @@ Policy name: `kubernetes-extensions-v1beta1-ingresslist-disallow-beta-resource`
 
 Code path: `kubernetes.extensions.v1beta1.IngressList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.IngressList).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.IngressList).
 
 Service: Extensions
 
@@ -2358,7 +2358,7 @@ Policy name: `kubernetes-extensions-v1beta1-ingresspatch-disallow-beta-resource`
 
 Code path: `kubernetes.extensions.v1beta1.IngressPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.IngressPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.IngressPatch).
 
 Service: Extensions
 
@@ -2380,7 +2380,7 @@ Policy name: `kubernetes-extensions-v1beta1-networkpolicy-disallow-beta-resource
 
 Code path: `kubernetes.extensions.v1beta1.NetworkPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.NetworkPolicy).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.NetworkPolicy).
 
 Service: Extensions
 
@@ -2402,7 +2402,7 @@ Policy name: `kubernetes-extensions-v1beta1-networkpolicylist-disallow-beta-reso
 
 Code path: `kubernetes.extensions.v1beta1.NetworkPolicyList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.NetworkPolicyList).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.NetworkPolicyList).
 
 Service: Extensions
 
@@ -2424,7 +2424,7 @@ Policy name: `kubernetes-extensions-v1beta1-networkpolicypatch-disallow-beta-res
 
 Code path: `kubernetes.extensions.v1beta1.NetworkPolicyPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.NetworkPolicyPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.NetworkPolicyPatch).
 
 Service: Extensions
 
@@ -2446,7 +2446,7 @@ Policy name: `kubernetes-extensions-v1beta1-podsecuritypolicy-disallow-beta-reso
 
 Code path: `kubernetes.extensions.v1beta1.PodSecurityPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.PodSecurityPolicy).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.PodSecurityPolicy).
 
 Service: Extensions
 
@@ -2468,7 +2468,7 @@ Policy name: `kubernetes-extensions-v1beta1-podsecuritypolicylist-disallow-beta-
 
 Code path: `kubernetes.extensions.v1beta1.PodSecurityPolicyList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.PodSecurityPolicyList).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.PodSecurityPolicyList).
 
 Service: Extensions
 
@@ -2490,7 +2490,7 @@ Policy name: `kubernetes-extensions-v1beta1-podsecuritypolicypatch-disallow-beta
 
 Code path: `kubernetes.extensions.v1beta1.PodSecurityPolicyPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.PodSecurityPolicyPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.PodSecurityPolicyPatch).
 
 Service: Extensions
 
@@ -2512,7 +2512,7 @@ Policy name: `kubernetes-extensions-v1beta1-replicaset-disallow-beta-resource`
 
 Code path: `kubernetes.extensions.v1beta1.ReplicaSet.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.ReplicaSet).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.ReplicaSet).
 
 Service: Extensions
 
@@ -2534,7 +2534,7 @@ Policy name: `kubernetes-extensions-v1beta1-replicasetlist-disallow-beta-resourc
 
 Code path: `kubernetes.extensions.v1beta1.ReplicaSetList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.ReplicaSetList).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.ReplicaSetList).
 
 Service: Extensions
 
@@ -2556,7 +2556,7 @@ Policy name: `kubernetes-extensions-v1beta1-replicasetpatch-disallow-beta-resour
 
 Code path: `kubernetes.extensions.v1beta1.ReplicaSetPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (extensions.v1beta1.ReplicaSetPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (extensions.v1beta1.ReplicaSetPatch).
 
 Service: Extensions
 
@@ -2582,7 +2582,7 @@ Policy name: `kubernetes-flowcontrol-v1alpha1-flowschema-disallow-alpha-resource
 
 Code path: `kubernetes.flowcontrol.v1alpha1.FlowSchema.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (flowcontrol.v1alpha1.FlowSchema).
+Disallow the use of non-stable (Alpha) Kubernetes resources (flowcontrol.v1alpha1.FlowSchema).
 
 Service: Flowcontrol
 
@@ -2604,7 +2604,7 @@ Policy name: `kubernetes-flowcontrol-v1alpha1-flowschemalist-disallow-alpha-reso
 
 Code path: `kubernetes.flowcontrol.v1alpha1.FlowSchemaList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (flowcontrol.v1alpha1.FlowSchemaList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (flowcontrol.v1alpha1.FlowSchemaList).
 
 Service: Flowcontrol
 
@@ -2626,7 +2626,7 @@ Policy name: `kubernetes-flowcontrol-v1alpha1-flowschemapatch-disallow-alpha-res
 
 Code path: `kubernetes.flowcontrol.v1alpha1.FlowSchemaPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (flowcontrol.v1alpha1.FlowSchemaPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (flowcontrol.v1alpha1.FlowSchemaPatch).
 
 Service: Flowcontrol
 
@@ -2648,7 +2648,7 @@ Policy name: `kubernetes-flowcontrol-v1alpha1-prioritylevelconfiguration-disallo
 
 Code path: `kubernetes.flowcontrol.v1alpha1.PriorityLevelConfiguration.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (flowcontrol.v1alpha1.PriorityLevelConfiguration).
+Disallow the use of non-stable (Alpha) Kubernetes resources (flowcontrol.v1alpha1.PriorityLevelConfiguration).
 
 Service: Flowcontrol
 
@@ -2670,7 +2670,7 @@ Policy name: `kubernetes-flowcontrol-v1alpha1-prioritylevelconfigurationlist-dis
 
 Code path: `kubernetes.flowcontrol.v1alpha1.PriorityLevelConfigurationList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (flowcontrol.v1alpha1.PriorityLevelConfigurationList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (flowcontrol.v1alpha1.PriorityLevelConfigurationList).
 
 Service: Flowcontrol
 
@@ -2692,7 +2692,7 @@ Policy name: `kubernetes-flowcontrol-v1alpha1-prioritylevelconfigurationpatch-di
 
 Code path: `kubernetes.flowcontrol.v1alpha1.PriorityLevelConfigurationPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (flowcontrol.v1alpha1.PriorityLevelConfigurationPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (flowcontrol.v1alpha1.PriorityLevelConfigurationPatch).
 
 Service: Flowcontrol
 
@@ -2716,7 +2716,7 @@ Policy name: `kubernetes-flowcontrol-v1beta1-flowschema-disallow-beta-resource`
 
 Code path: `kubernetes.flowcontrol.v1beta1.FlowSchema.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta1.FlowSchema).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta1.FlowSchema).
 
 Service: Flowcontrol
 
@@ -2738,7 +2738,7 @@ Policy name: `kubernetes-flowcontrol-v1beta1-flowschemalist-disallow-beta-resour
 
 Code path: `kubernetes.flowcontrol.v1beta1.FlowSchemaList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta1.FlowSchemaList).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta1.FlowSchemaList).
 
 Service: Flowcontrol
 
@@ -2760,7 +2760,7 @@ Policy name: `kubernetes-flowcontrol-v1beta1-flowschemapatch-disallow-beta-resou
 
 Code path: `kubernetes.flowcontrol.v1beta1.FlowSchemaPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta1.FlowSchemaPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta1.FlowSchemaPatch).
 
 Service: Flowcontrol
 
@@ -2782,7 +2782,7 @@ Policy name: `kubernetes-flowcontrol-v1beta1-prioritylevelconfiguration-disallow
 
 Code path: `kubernetes.flowcontrol.v1beta1.PriorityLevelConfiguration.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta1.PriorityLevelConfiguration).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta1.PriorityLevelConfiguration).
 
 Service: Flowcontrol
 
@@ -2804,7 +2804,7 @@ Policy name: `kubernetes-flowcontrol-v1beta1-prioritylevelconfigurationlist-disa
 
 Code path: `kubernetes.flowcontrol.v1beta1.PriorityLevelConfigurationList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta1.PriorityLevelConfigurationList).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta1.PriorityLevelConfigurationList).
 
 Service: Flowcontrol
 
@@ -2826,7 +2826,7 @@ Policy name: `kubernetes-flowcontrol-v1beta1-prioritylevelconfigurationpatch-dis
 
 Code path: `kubernetes.flowcontrol.v1beta1.PriorityLevelConfigurationPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta1.PriorityLevelConfigurationPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta1.PriorityLevelConfigurationPatch).
 
 Service: Flowcontrol
 
@@ -2850,7 +2850,7 @@ Policy name: `kubernetes-flowcontrol-v1beta2-flowschema-disallow-beta-resource`
 
 Code path: `kubernetes.flowcontrol.v1beta2.FlowSchema.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta2.FlowSchema).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta2.FlowSchema).
 
 Service: Flowcontrol
 
@@ -2872,7 +2872,7 @@ Policy name: `kubernetes-flowcontrol-v1beta2-flowschemalist-disallow-beta-resour
 
 Code path: `kubernetes.flowcontrol.v1beta2.FlowSchemaList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta2.FlowSchemaList).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta2.FlowSchemaList).
 
 Service: Flowcontrol
 
@@ -2894,7 +2894,7 @@ Policy name: `kubernetes-flowcontrol-v1beta2-flowschemapatch-disallow-beta-resou
 
 Code path: `kubernetes.flowcontrol.v1beta2.FlowSchemaPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta2.FlowSchemaPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta2.FlowSchemaPatch).
 
 Service: Flowcontrol
 
@@ -2916,7 +2916,7 @@ Policy name: `kubernetes-flowcontrol-v1beta2-prioritylevelconfiguration-disallow
 
 Code path: `kubernetes.flowcontrol.v1beta2.PriorityLevelConfiguration.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta2.PriorityLevelConfiguration).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta2.PriorityLevelConfiguration).
 
 Service: Flowcontrol
 
@@ -2938,7 +2938,7 @@ Policy name: `kubernetes-flowcontrol-v1beta2-prioritylevelconfigurationlist-disa
 
 Code path: `kubernetes.flowcontrol.v1beta2.PriorityLevelConfigurationList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta2.PriorityLevelConfigurationList).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta2.PriorityLevelConfigurationList).
 
 Service: Flowcontrol
 
@@ -2960,7 +2960,7 @@ Policy name: `kubernetes-flowcontrol-v1beta2-prioritylevelconfigurationpatch-dis
 
 Code path: `kubernetes.flowcontrol.v1beta2.PriorityLevelConfigurationPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta2.PriorityLevelConfigurationPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta2.PriorityLevelConfigurationPatch).
 
 Service: Flowcontrol
 
@@ -2984,7 +2984,7 @@ Policy name: `kubernetes-flowcontrol-v1beta3-flowschema-disallow-beta-resource`
 
 Code path: `kubernetes.flowcontrol.v1beta3.FlowSchema.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta3.FlowSchema).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta3.FlowSchema).
 
 Service: Flowcontrol
 
@@ -3006,7 +3006,7 @@ Policy name: `kubernetes-flowcontrol-v1beta3-flowschemalist-disallow-beta-resour
 
 Code path: `kubernetes.flowcontrol.v1beta3.FlowSchemaList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta3.FlowSchemaList).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta3.FlowSchemaList).
 
 Service: Flowcontrol
 
@@ -3028,7 +3028,7 @@ Policy name: `kubernetes-flowcontrol-v1beta3-flowschemapatch-disallow-beta-resou
 
 Code path: `kubernetes.flowcontrol.v1beta3.FlowSchemaPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta3.FlowSchemaPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta3.FlowSchemaPatch).
 
 Service: Flowcontrol
 
@@ -3050,7 +3050,7 @@ Policy name: `kubernetes-flowcontrol-v1beta3-prioritylevelconfiguration-disallow
 
 Code path: `kubernetes.flowcontrol.v1beta3.PriorityLevelConfiguration.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta3.PriorityLevelConfiguration).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta3.PriorityLevelConfiguration).
 
 Service: Flowcontrol
 
@@ -3072,7 +3072,7 @@ Policy name: `kubernetes-flowcontrol-v1beta3-prioritylevelconfigurationlist-disa
 
 Code path: `kubernetes.flowcontrol.v1beta3.PriorityLevelConfigurationList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta3.PriorityLevelConfigurationList).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta3.PriorityLevelConfigurationList).
 
 Service: Flowcontrol
 
@@ -3094,7 +3094,7 @@ Policy name: `kubernetes-flowcontrol-v1beta3-prioritylevelconfigurationpatch-dis
 
 Code path: `kubernetes.flowcontrol.v1beta3.PriorityLevelConfigurationPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (flowcontrol.v1beta3.PriorityLevelConfigurationPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (flowcontrol.v1beta3.PriorityLevelConfigurationPatch).
 
 Service: Flowcontrol
 
@@ -3120,7 +3120,7 @@ Policy name: `kubernetes-networking-v1alpha1-clustercidr-disallow-alpha-resource
 
 Code path: `kubernetes.networking.v1alpha1.ClusterCIDR.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (networking.v1alpha1.ClusterCIDR).
+Disallow the use of non-stable (Alpha) Kubernetes resources (networking.v1alpha1.ClusterCIDR).
 
 Service: Networking
 
@@ -3142,7 +3142,7 @@ Policy name: `kubernetes-networking-v1alpha1-clustercidrlist-disallow-alpha-reso
 
 Code path: `kubernetes.networking.v1alpha1.ClusterCIDRList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (networking.v1alpha1.ClusterCIDRList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (networking.v1alpha1.ClusterCIDRList).
 
 Service: Networking
 
@@ -3164,7 +3164,7 @@ Policy name: `kubernetes-networking-v1alpha1-clustercidrpatch-disallow-alpha-res
 
 Code path: `kubernetes.networking.v1alpha1.ClusterCIDRPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (networking.v1alpha1.ClusterCIDRPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (networking.v1alpha1.ClusterCIDRPatch).
 
 Service: Networking
 
@@ -3186,7 +3186,7 @@ Policy name: `kubernetes-networking-v1alpha1-ipaddress-disallow-alpha-resource`
 
 Code path: `kubernetes.networking.v1alpha1.IPAddress.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (networking.v1alpha1.IPAddress).
+Disallow the use of non-stable (Alpha) Kubernetes resources (networking.v1alpha1.IPAddress).
 
 Service: Networking
 
@@ -3208,7 +3208,7 @@ Policy name: `kubernetes-networking-v1alpha1-ipaddresslist-disallow-alpha-resour
 
 Code path: `kubernetes.networking.v1alpha1.IPAddressList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (networking.v1alpha1.IPAddressList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (networking.v1alpha1.IPAddressList).
 
 Service: Networking
 
@@ -3230,7 +3230,7 @@ Policy name: `kubernetes-networking-v1alpha1-ipaddresspatch-disallow-alpha-resou
 
 Code path: `kubernetes.networking.v1alpha1.IPAddressPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (networking.v1alpha1.IPAddressPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (networking.v1alpha1.IPAddressPatch).
 
 Service: Networking
 
@@ -3254,7 +3254,7 @@ Policy name: `kubernetes-networking-v1beta1-ingress-disallow-beta-resource`
 
 Code path: `kubernetes.networking.v1beta1.Ingress.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (networking.v1beta1.Ingress).
+Disallow the use of non-stable (Beta) Kubernetes resources (networking.v1beta1.Ingress).
 
 Service: Networking
 
@@ -3276,7 +3276,7 @@ Policy name: `kubernetes-networking-v1beta1-ingressclass-disallow-beta-resource`
 
 Code path: `kubernetes.networking.v1beta1.IngressClass.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (networking.v1beta1.IngressClass).
+Disallow the use of non-stable (Beta) Kubernetes resources (networking.v1beta1.IngressClass).
 
 Service: Networking
 
@@ -3298,7 +3298,7 @@ Policy name: `kubernetes-networking-v1beta1-ingressclasslist-disallow-beta-resou
 
 Code path: `kubernetes.networking.v1beta1.IngressClassList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (networking.v1beta1.IngressClassList).
+Disallow the use of non-stable (Beta) Kubernetes resources (networking.v1beta1.IngressClassList).
 
 Service: Networking
 
@@ -3320,7 +3320,7 @@ Policy name: `kubernetes-networking-v1beta1-ingressclasspatch-disallow-beta-reso
 
 Code path: `kubernetes.networking.v1beta1.IngressClassPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (networking.v1beta1.IngressClassPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (networking.v1beta1.IngressClassPatch).
 
 Service: Networking
 
@@ -3342,7 +3342,7 @@ Policy name: `kubernetes-networking-v1beta1-ingresslist-disallow-beta-resource`
 
 Code path: `kubernetes.networking.v1beta1.IngressList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (networking.v1beta1.IngressList).
+Disallow the use of non-stable (Beta) Kubernetes resources (networking.v1beta1.IngressList).
 
 Service: Networking
 
@@ -3364,7 +3364,7 @@ Policy name: `kubernetes-networking-v1beta1-ingresspatch-disallow-beta-resource`
 
 Code path: `kubernetes.networking.v1beta1.IngressPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (networking.v1beta1.IngressPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (networking.v1beta1.IngressPatch).
 
 Service: Networking
 
@@ -3390,7 +3390,7 @@ Policy name: `kubernetes-node-v1alpha1-runtimeclass-disallow-alpha-resource`
 
 Code path: `kubernetes.node.v1alpha1.RuntimeClass.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (node.v1alpha1.RuntimeClass).
+Disallow the use of non-stable (Alpha) Kubernetes resources (node.v1alpha1.RuntimeClass).
 
 Service: Node
 
@@ -3412,7 +3412,7 @@ Policy name: `kubernetes-node-v1alpha1-runtimeclasslist-disallow-alpha-resource`
 
 Code path: `kubernetes.node.v1alpha1.RuntimeClassList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (node.v1alpha1.RuntimeClassList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (node.v1alpha1.RuntimeClassList).
 
 Service: Node
 
@@ -3434,7 +3434,7 @@ Policy name: `kubernetes-node-v1alpha1-runtimeclasspatch-disallow-alpha-resource
 
 Code path: `kubernetes.node.v1alpha1.RuntimeClassPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (node.v1alpha1.RuntimeClassPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (node.v1alpha1.RuntimeClassPatch).
 
 Service: Node
 
@@ -3458,7 +3458,7 @@ Policy name: `kubernetes-node-v1beta1-runtimeclass-disallow-beta-resource`
 
 Code path: `kubernetes.node.v1beta1.RuntimeClass.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (node.v1beta1.RuntimeClass).
+Disallow the use of non-stable (Beta) Kubernetes resources (node.v1beta1.RuntimeClass).
 
 Service: Node
 
@@ -3480,7 +3480,7 @@ Policy name: `kubernetes-node-v1beta1-runtimeclasslist-disallow-beta-resource`
 
 Code path: `kubernetes.node.v1beta1.RuntimeClassList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (node.v1beta1.RuntimeClassList).
+Disallow the use of non-stable (Beta) Kubernetes resources (node.v1beta1.RuntimeClassList).
 
 Service: Node
 
@@ -3502,7 +3502,7 @@ Policy name: `kubernetes-node-v1beta1-runtimeclasspatch-disallow-beta-resource`
 
 Code path: `kubernetes.node.v1beta1.RuntimeClassPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (node.v1beta1.RuntimeClassPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (node.v1beta1.RuntimeClassPatch).
 
 Service: Node
 
@@ -3552,7 +3552,7 @@ Policy name: `kubernetes-policy-v1beta1-poddisruptionbudget-disallow-beta-resour
 
 Code path: `kubernetes.policy.v1beta1.PodDisruptionBudget.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (policy.v1beta1.PodDisruptionBudget).
+Disallow the use of non-stable (Beta) Kubernetes resources (policy.v1beta1.PodDisruptionBudget).
 
 Service: Policy
 
@@ -3574,7 +3574,7 @@ Policy name: `kubernetes-policy-v1beta1-poddisruptionbudgetlist-disallow-beta-re
 
 Code path: `kubernetes.policy.v1beta1.PodDisruptionBudgetList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (policy.v1beta1.PodDisruptionBudgetList).
+Disallow the use of non-stable (Beta) Kubernetes resources (policy.v1beta1.PodDisruptionBudgetList).
 
 Service: Policy
 
@@ -3596,7 +3596,7 @@ Policy name: `kubernetes-policy-v1beta1-poddisruptionbudgetpatch-disallow-beta-r
 
 Code path: `kubernetes.policy.v1beta1.PodDisruptionBudgetPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (policy.v1beta1.PodDisruptionBudgetPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (policy.v1beta1.PodDisruptionBudgetPatch).
 
 Service: Policy
 
@@ -3618,7 +3618,7 @@ Policy name: `kubernetes-policy-v1beta1-podsecuritypolicy-disallow-beta-resource
 
 Code path: `kubernetes.policy.v1beta1.PodSecurityPolicy.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (policy.v1beta1.PodSecurityPolicy).
+Disallow the use of non-stable (Beta) Kubernetes resources (policy.v1beta1.PodSecurityPolicy).
 
 Service: Policy
 
@@ -3640,7 +3640,7 @@ Policy name: `kubernetes-policy-v1beta1-podsecuritypolicylist-disallow-beta-reso
 
 Code path: `kubernetes.policy.v1beta1.PodSecurityPolicyList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (policy.v1beta1.PodSecurityPolicyList).
+Disallow the use of non-stable (Beta) Kubernetes resources (policy.v1beta1.PodSecurityPolicyList).
 
 Service: Policy
 
@@ -3662,7 +3662,7 @@ Policy name: `kubernetes-policy-v1beta1-podsecuritypolicypatch-disallow-beta-res
 
 Code path: `kubernetes.policy.v1beta1.PodSecurityPolicyPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (policy.v1beta1.PodSecurityPolicyPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (policy.v1beta1.PodSecurityPolicyPatch).
 
 Service: Policy
 
@@ -3688,7 +3688,7 @@ Policy name: `kubernetes-rbac-v1alpha1-clusterrole-disallow-alpha-resource`
 
 Code path: `kubernetes.rbac.v1alpha1.ClusterRole.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.ClusterRole).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.ClusterRole).
 
 Service: Rbac
 
@@ -3710,7 +3710,7 @@ Policy name: `kubernetes-rbac-v1alpha1-clusterrolebinding-disallow-alpha-resourc
 
 Code path: `kubernetes.rbac.v1alpha1.ClusterRoleBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.ClusterRoleBinding).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.ClusterRoleBinding).
 
 Service: Rbac
 
@@ -3732,7 +3732,7 @@ Policy name: `kubernetes-rbac-v1alpha1-clusterrolebindinglist-disallow-alpha-res
 
 Code path: `kubernetes.rbac.v1alpha1.ClusterRoleBindingList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.ClusterRoleBindingList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.ClusterRoleBindingList).
 
 Service: Rbac
 
@@ -3754,7 +3754,7 @@ Policy name: `kubernetes-rbac-v1alpha1-clusterrolebindingpatch-disallow-alpha-re
 
 Code path: `kubernetes.rbac.v1alpha1.ClusterRoleBindingPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.ClusterRoleBindingPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.ClusterRoleBindingPatch).
 
 Service: Rbac
 
@@ -3776,7 +3776,7 @@ Policy name: `kubernetes-rbac-v1alpha1-clusterrolelist-disallow-alpha-resource`
 
 Code path: `kubernetes.rbac.v1alpha1.ClusterRoleList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.ClusterRoleList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.ClusterRoleList).
 
 Service: Rbac
 
@@ -3798,7 +3798,7 @@ Policy name: `kubernetes-rbac-v1alpha1-clusterrolepatch-disallow-alpha-resource`
 
 Code path: `kubernetes.rbac.v1alpha1.ClusterRolePatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.ClusterRolePatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.ClusterRolePatch).
 
 Service: Rbac
 
@@ -3820,7 +3820,7 @@ Policy name: `kubernetes-rbac-v1alpha1-role-disallow-alpha-resource`
 
 Code path: `kubernetes.rbac.v1alpha1.Role.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.Role).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.Role).
 
 Service: Rbac
 
@@ -3842,7 +3842,7 @@ Policy name: `kubernetes-rbac-v1alpha1-rolebinding-disallow-alpha-resource`
 
 Code path: `kubernetes.rbac.v1alpha1.RoleBinding.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.RoleBinding).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.RoleBinding).
 
 Service: Rbac
 
@@ -3864,7 +3864,7 @@ Policy name: `kubernetes-rbac-v1alpha1-rolebindinglist-disallow-alpha-resource`
 
 Code path: `kubernetes.rbac.v1alpha1.RoleBindingList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.RoleBindingList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.RoleBindingList).
 
 Service: Rbac
 
@@ -3886,7 +3886,7 @@ Policy name: `kubernetes-rbac-v1alpha1-rolebindingpatch-disallow-alpha-resource`
 
 Code path: `kubernetes.rbac.v1alpha1.RoleBindingPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.RoleBindingPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.RoleBindingPatch).
 
 Service: Rbac
 
@@ -3908,7 +3908,7 @@ Policy name: `kubernetes-rbac-v1alpha1-rolelist-disallow-alpha-resource`
 
 Code path: `kubernetes.rbac.v1alpha1.RoleList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.RoleList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.RoleList).
 
 Service: Rbac
 
@@ -3930,7 +3930,7 @@ Policy name: `kubernetes-rbac-v1alpha1-rolepatch-disallow-alpha-resource`
 
 Code path: `kubernetes.rbac.v1alpha1.RolePatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (rbac.v1alpha1.RolePatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (rbac.v1alpha1.RolePatch).
 
 Service: Rbac
 
@@ -3954,7 +3954,7 @@ Policy name: `kubernetes-rbac-v1beta1-clusterrole-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.ClusterRole.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.ClusterRole).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.ClusterRole).
 
 Service: Rbac
 
@@ -3976,7 +3976,7 @@ Policy name: `kubernetes-rbac-v1beta1-clusterrolebinding-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.ClusterRoleBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.ClusterRoleBinding).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.ClusterRoleBinding).
 
 Service: Rbac
 
@@ -3998,7 +3998,7 @@ Policy name: `kubernetes-rbac-v1beta1-clusterrolebindinglist-disallow-beta-resou
 
 Code path: `kubernetes.rbac.v1beta1.ClusterRoleBindingList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.ClusterRoleBindingList).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.ClusterRoleBindingList).
 
 Service: Rbac
 
@@ -4020,7 +4020,7 @@ Policy name: `kubernetes-rbac-v1beta1-clusterrolebindingpatch-disallow-beta-reso
 
 Code path: `kubernetes.rbac.v1beta1.ClusterRoleBindingPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.ClusterRoleBindingPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.ClusterRoleBindingPatch).
 
 Service: Rbac
 
@@ -4042,7 +4042,7 @@ Policy name: `kubernetes-rbac-v1beta1-clusterrolelist-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.ClusterRoleList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.ClusterRoleList).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.ClusterRoleList).
 
 Service: Rbac
 
@@ -4064,7 +4064,7 @@ Policy name: `kubernetes-rbac-v1beta1-clusterrolepatch-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.ClusterRolePatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.ClusterRolePatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.ClusterRolePatch).
 
 Service: Rbac
 
@@ -4086,7 +4086,7 @@ Policy name: `kubernetes-rbac-v1beta1-role-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.Role.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.Role).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.Role).
 
 Service: Rbac
 
@@ -4108,7 +4108,7 @@ Policy name: `kubernetes-rbac-v1beta1-rolebinding-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.RoleBinding.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.RoleBinding).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.RoleBinding).
 
 Service: Rbac
 
@@ -4130,7 +4130,7 @@ Policy name: `kubernetes-rbac-v1beta1-rolebindinglist-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.RoleBindingList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.RoleBindingList).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.RoleBindingList).
 
 Service: Rbac
 
@@ -4152,7 +4152,7 @@ Policy name: `kubernetes-rbac-v1beta1-rolebindingpatch-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.RoleBindingPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.RoleBindingPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.RoleBindingPatch).
 
 Service: Rbac
 
@@ -4174,7 +4174,7 @@ Policy name: `kubernetes-rbac-v1beta1-rolelist-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.RoleList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.RoleList).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.RoleList).
 
 Service: Rbac
 
@@ -4196,7 +4196,7 @@ Policy name: `kubernetes-rbac-v1beta1-rolepatch-disallow-beta-resource`
 
 Code path: `kubernetes.rbac.v1beta1.RolePatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (rbac.v1beta1.RolePatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (rbac.v1beta1.RolePatch).
 
 Service: Rbac
 
@@ -4222,7 +4222,7 @@ Policy name: `kubernetes-resource-v1alpha1-podscheduling-disallow-alpha-resource
 
 Code path: `kubernetes.resource.v1alpha1.PodScheduling.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.PodScheduling).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.PodScheduling).
 
 Service: Resource
 
@@ -4244,7 +4244,7 @@ Policy name: `kubernetes-resource-v1alpha1-podschedulinglist-disallow-alpha-reso
 
 Code path: `kubernetes.resource.v1alpha1.PodSchedulingList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.PodSchedulingList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.PodSchedulingList).
 
 Service: Resource
 
@@ -4266,7 +4266,7 @@ Policy name: `kubernetes-resource-v1alpha1-podschedulingpatch-disallow-alpha-res
 
 Code path: `kubernetes.resource.v1alpha1.PodSchedulingPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.PodSchedulingPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.PodSchedulingPatch).
 
 Service: Resource
 
@@ -4288,7 +4288,7 @@ Policy name: `kubernetes-resource-v1alpha1-resourceclaim-disallow-alpha-resource
 
 Code path: `kubernetes.resource.v1alpha1.ResourceClaim.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.ResourceClaim).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.ResourceClaim).
 
 Service: Resource
 
@@ -4310,7 +4310,7 @@ Policy name: `kubernetes-resource-v1alpha1-resourceclaimlist-disallow-alpha-reso
 
 Code path: `kubernetes.resource.v1alpha1.ResourceClaimList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.ResourceClaimList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.ResourceClaimList).
 
 Service: Resource
 
@@ -4332,7 +4332,7 @@ Policy name: `kubernetes-resource-v1alpha1-resourceclaimpatch-disallow-alpha-res
 
 Code path: `kubernetes.resource.v1alpha1.ResourceClaimPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.ResourceClaimPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.ResourceClaimPatch).
 
 Service: Resource
 
@@ -4354,7 +4354,7 @@ Policy name: `kubernetes-resource-v1alpha1-resourceclaimtemplate-disallow-alpha-
 
 Code path: `kubernetes.resource.v1alpha1.ResourceClaimTemplate.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.ResourceClaimTemplate).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.ResourceClaimTemplate).
 
 Service: Resource
 
@@ -4376,7 +4376,7 @@ Policy name: `kubernetes-resource-v1alpha1-resourceclaimtemplatelist-disallow-al
 
 Code path: `kubernetes.resource.v1alpha1.ResourceClaimTemplateList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.ResourceClaimTemplateList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.ResourceClaimTemplateList).
 
 Service: Resource
 
@@ -4398,7 +4398,7 @@ Policy name: `kubernetes-resource-v1alpha1-resourceclaimtemplatepatch-disallow-a
 
 Code path: `kubernetes.resource.v1alpha1.ResourceClaimTemplatePatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.ResourceClaimTemplatePatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.ResourceClaimTemplatePatch).
 
 Service: Resource
 
@@ -4420,7 +4420,7 @@ Policy name: `kubernetes-resource-v1alpha1-resourceclass-disallow-alpha-resource
 
 Code path: `kubernetes.resource.v1alpha1.ResourceClass.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.ResourceClass).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.ResourceClass).
 
 Service: Resource
 
@@ -4442,7 +4442,7 @@ Policy name: `kubernetes-resource-v1alpha1-resourceclasslist-disallow-alpha-reso
 
 Code path: `kubernetes.resource.v1alpha1.ResourceClassList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.ResourceClassList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.ResourceClassList).
 
 Service: Resource
 
@@ -4464,7 +4464,7 @@ Policy name: `kubernetes-resource-v1alpha1-resourceclasspatch-disallow-alpha-res
 
 Code path: `kubernetes.resource.v1alpha1.ResourceClassPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha1.ResourceClassPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha1.ResourceClassPatch).
 
 Service: Resource
 
@@ -4488,7 +4488,7 @@ Policy name: `kubernetes-resource-v1alpha2-podschedulingcontext-disallow-alpha-r
 
 Code path: `kubernetes.resource.v1alpha2.PodSchedulingContext.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.PodSchedulingContext).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.PodSchedulingContext).
 
 Service: Resource
 
@@ -4510,7 +4510,7 @@ Policy name: `kubernetes-resource-v1alpha2-podschedulingcontextlist-disallow-alp
 
 Code path: `kubernetes.resource.v1alpha2.PodSchedulingContextList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.PodSchedulingContextList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.PodSchedulingContextList).
 
 Service: Resource
 
@@ -4532,7 +4532,7 @@ Policy name: `kubernetes-resource-v1alpha2-podschedulingcontextpatch-disallow-al
 
 Code path: `kubernetes.resource.v1alpha2.PodSchedulingContextPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.PodSchedulingContextPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.PodSchedulingContextPatch).
 
 Service: Resource
 
@@ -4554,7 +4554,7 @@ Policy name: `kubernetes-resource-v1alpha2-resourceclaim-disallow-alpha-resource
 
 Code path: `kubernetes.resource.v1alpha2.ResourceClaim.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.ResourceClaim).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.ResourceClaim).
 
 Service: Resource
 
@@ -4576,7 +4576,7 @@ Policy name: `kubernetes-resource-v1alpha2-resourceclaimlist-disallow-alpha-reso
 
 Code path: `kubernetes.resource.v1alpha2.ResourceClaimList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.ResourceClaimList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.ResourceClaimList).
 
 Service: Resource
 
@@ -4598,7 +4598,7 @@ Policy name: `kubernetes-resource-v1alpha2-resourceclaimpatch-disallow-alpha-res
 
 Code path: `kubernetes.resource.v1alpha2.ResourceClaimPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.ResourceClaimPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.ResourceClaimPatch).
 
 Service: Resource
 
@@ -4620,7 +4620,7 @@ Policy name: `kubernetes-resource-v1alpha2-resourceclaimtemplate-disallow-alpha-
 
 Code path: `kubernetes.resource.v1alpha2.ResourceClaimTemplate.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.ResourceClaimTemplate).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.ResourceClaimTemplate).
 
 Service: Resource
 
@@ -4642,7 +4642,7 @@ Policy name: `kubernetes-resource-v1alpha2-resourceclaimtemplatelist-disallow-al
 
 Code path: `kubernetes.resource.v1alpha2.ResourceClaimTemplateList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.ResourceClaimTemplateList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.ResourceClaimTemplateList).
 
 Service: Resource
 
@@ -4664,7 +4664,7 @@ Policy name: `kubernetes-resource-v1alpha2-resourceclaimtemplatepatch-disallow-a
 
 Code path: `kubernetes.resource.v1alpha2.ResourceClaimTemplatePatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.ResourceClaimTemplatePatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.ResourceClaimTemplatePatch).
 
 Service: Resource
 
@@ -4686,7 +4686,7 @@ Policy name: `kubernetes-resource-v1alpha2-resourceclass-disallow-alpha-resource
 
 Code path: `kubernetes.resource.v1alpha2.ResourceClass.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.ResourceClass).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.ResourceClass).
 
 Service: Resource
 
@@ -4708,7 +4708,7 @@ Policy name: `kubernetes-resource-v1alpha2-resourceclasslist-disallow-alpha-reso
 
 Code path: `kubernetes.resource.v1alpha2.ResourceClassList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.ResourceClassList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.ResourceClassList).
 
 Service: Resource
 
@@ -4730,7 +4730,7 @@ Policy name: `kubernetes-resource-v1alpha2-resourceclasspatch-disallow-alpha-res
 
 Code path: `kubernetes.resource.v1alpha2.ResourceClassPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (resource.v1alpha2.ResourceClassPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (resource.v1alpha2.ResourceClassPatch).
 
 Service: Resource
 
@@ -4756,7 +4756,7 @@ Policy name: `kubernetes-scheduling-v1alpha1-priorityclass-disallow-alpha-resour
 
 Code path: `kubernetes.scheduling.v1alpha1.PriorityClass.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (scheduling.v1alpha1.PriorityClass).
+Disallow the use of non-stable (Alpha) Kubernetes resources (scheduling.v1alpha1.PriorityClass).
 
 Service: Scheduling
 
@@ -4778,7 +4778,7 @@ Policy name: `kubernetes-scheduling-v1alpha1-priorityclasslist-disallow-alpha-re
 
 Code path: `kubernetes.scheduling.v1alpha1.PriorityClassList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (scheduling.v1alpha1.PriorityClassList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (scheduling.v1alpha1.PriorityClassList).
 
 Service: Scheduling
 
@@ -4800,7 +4800,7 @@ Policy name: `kubernetes-scheduling-v1alpha1-priorityclasspatch-disallow-alpha-r
 
 Code path: `kubernetes.scheduling.v1alpha1.PriorityClassPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (scheduling.v1alpha1.PriorityClassPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (scheduling.v1alpha1.PriorityClassPatch).
 
 Service: Scheduling
 
@@ -4824,7 +4824,7 @@ Policy name: `kubernetes-scheduling-v1beta1-priorityclass-disallow-beta-resource
 
 Code path: `kubernetes.scheduling.v1beta1.PriorityClass.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (scheduling.v1beta1.PriorityClass).
+Disallow the use of non-stable (Beta) Kubernetes resources (scheduling.v1beta1.PriorityClass).
 
 Service: Scheduling
 
@@ -4846,7 +4846,7 @@ Policy name: `kubernetes-scheduling-v1beta1-priorityclasslist-disallow-beta-reso
 
 Code path: `kubernetes.scheduling.v1beta1.PriorityClassList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (scheduling.v1beta1.PriorityClassList).
+Disallow the use of non-stable (Beta) Kubernetes resources (scheduling.v1beta1.PriorityClassList).
 
 Service: Scheduling
 
@@ -4868,7 +4868,7 @@ Policy name: `kubernetes-scheduling-v1beta1-priorityclasspatch-disallow-beta-res
 
 Code path: `kubernetes.scheduling.v1beta1.PriorityClassPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (scheduling.v1beta1.PriorityClassPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (scheduling.v1beta1.PriorityClassPatch).
 
 Service: Scheduling
 
@@ -4894,7 +4894,7 @@ Policy name: `kubernetes-settings-v1alpha1-podpreset-disallow-alpha-resource`
 
 Code path: `kubernetes.settings.v1alpha1.PodPreset.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (settings.v1alpha1.PodPreset).
+Disallow the use of non-stable (Alpha) Kubernetes resources (settings.v1alpha1.PodPreset).
 
 Service: Settings
 
@@ -4916,7 +4916,7 @@ Policy name: `kubernetes-settings-v1alpha1-podpresetlist-disallow-alpha-resource
 
 Code path: `kubernetes.settings.v1alpha1.PodPresetList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (settings.v1alpha1.PodPresetList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (settings.v1alpha1.PodPresetList).
 
 Service: Settings
 
@@ -4938,7 +4938,7 @@ Policy name: `kubernetes-settings-v1alpha1-podpresetpatch-disallow-alpha-resourc
 
 Code path: `kubernetes.settings.v1alpha1.PodPresetPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (settings.v1alpha1.PodPresetPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (settings.v1alpha1.PodPresetPatch).
 
 Service: Settings
 
@@ -4964,7 +4964,7 @@ Policy name: `kubernetes-storage-v1alpha1-volumeattachment-disallow-alpha-resour
 
 Code path: `kubernetes.storage.v1alpha1.VolumeAttachment.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (storage.v1alpha1.VolumeAttachment).
+Disallow the use of non-stable (Alpha) Kubernetes resources (storage.v1alpha1.VolumeAttachment).
 
 Service: Storage
 
@@ -4986,7 +4986,7 @@ Policy name: `kubernetes-storage-v1alpha1-volumeattachmentlist-disallow-alpha-re
 
 Code path: `kubernetes.storage.v1alpha1.VolumeAttachmentList.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (storage.v1alpha1.VolumeAttachmentList).
+Disallow the use of non-stable (Alpha) Kubernetes resources (storage.v1alpha1.VolumeAttachmentList).
 
 Service: Storage
 
@@ -5008,7 +5008,7 @@ Policy name: `kubernetes-storage-v1alpha1-volumeattachmentpatch-disallow-alpha-r
 
 Code path: `kubernetes.storage.v1alpha1.VolumeAttachmentPatch.disallowAlphaResource`
 
-Disallow the use of non-stable (Alpha) Kubernetes resouces (storage.v1alpha1.VolumeAttachmentPatch).
+Disallow the use of non-stable (Alpha) Kubernetes resources (storage.v1alpha1.VolumeAttachmentPatch).
 
 Service: Storage
 
@@ -5032,7 +5032,7 @@ Policy name: `kubernetes-storage-v1beta1-csidriver-disallow-beta-resource`
 
 Code path: `kubernetes.storage.v1beta1.CSIDriver.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.CSIDriver).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.CSIDriver).
 
 Service: Storage
 
@@ -5054,7 +5054,7 @@ Policy name: `kubernetes-storage-v1beta1-csidriverlist-disallow-beta-resource`
 
 Code path: `kubernetes.storage.v1beta1.CSIDriverList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.CSIDriverList).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.CSIDriverList).
 
 Service: Storage
 
@@ -5076,7 +5076,7 @@ Policy name: `kubernetes-storage-v1beta1-csidriverpatch-disallow-beta-resource`
 
 Code path: `kubernetes.storage.v1beta1.CSIDriverPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.CSIDriverPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.CSIDriverPatch).
 
 Service: Storage
 
@@ -5098,7 +5098,7 @@ Policy name: `kubernetes-storage-v1beta1-csinode-disallow-beta-resource`
 
 Code path: `kubernetes.storage.v1beta1.CSINode.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.CSINode).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.CSINode).
 
 Service: Storage
 
@@ -5120,7 +5120,7 @@ Policy name: `kubernetes-storage-v1beta1-csinodelist-disallow-beta-resource`
 
 Code path: `kubernetes.storage.v1beta1.CSINodeList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.CSINodeList).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.CSINodeList).
 
 Service: Storage
 
@@ -5142,7 +5142,7 @@ Policy name: `kubernetes-storage-v1beta1-csinodepatch-disallow-beta-resource`
 
 Code path: `kubernetes.storage.v1beta1.CSINodePatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.CSINodePatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.CSINodePatch).
 
 Service: Storage
 
@@ -5164,7 +5164,7 @@ Policy name: `kubernetes-storage-v1beta1-csistoragecapacity-disallow-beta-resour
 
 Code path: `kubernetes.storage.v1beta1.CSIStorageCapacity.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.CSIStorageCapacity).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.CSIStorageCapacity).
 
 Service: Storage
 
@@ -5186,7 +5186,7 @@ Policy name: `kubernetes-storage-v1beta1-csistoragecapacitylist-disallow-beta-re
 
 Code path: `kubernetes.storage.v1beta1.CSIStorageCapacityList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.CSIStorageCapacityList).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.CSIStorageCapacityList).
 
 Service: Storage
 
@@ -5208,7 +5208,7 @@ Policy name: `kubernetes-storage-v1beta1-csistoragecapacitypatch-disallow-beta-r
 
 Code path: `kubernetes.storage.v1beta1.CSIStorageCapacityPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.CSIStorageCapacityPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.CSIStorageCapacityPatch).
 
 Service: Storage
 
@@ -5230,7 +5230,7 @@ Policy name: `kubernetes-storage-v1beta1-storageclass-disallow-beta-resource`
 
 Code path: `kubernetes.storage.v1beta1.StorageClass.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.StorageClass).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.StorageClass).
 
 Service: Storage
 
@@ -5252,7 +5252,7 @@ Policy name: `kubernetes-storage-v1beta1-storageclasslist-disallow-beta-resource
 
 Code path: `kubernetes.storage.v1beta1.StorageClassList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.StorageClassList).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.StorageClassList).
 
 Service: Storage
 
@@ -5274,7 +5274,7 @@ Policy name: `kubernetes-storage-v1beta1-storageclasspatch-disallow-beta-resourc
 
 Code path: `kubernetes.storage.v1beta1.StorageClassPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.StorageClassPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.StorageClassPatch).
 
 Service: Storage
 
@@ -5296,7 +5296,7 @@ Policy name: `kubernetes-storage-v1beta1-volumeattachment-disallow-beta-resource
 
 Code path: `kubernetes.storage.v1beta1.VolumeAttachment.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.VolumeAttachment).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.VolumeAttachment).
 
 Service: Storage
 
@@ -5318,7 +5318,7 @@ Policy name: `kubernetes-storage-v1beta1-volumeattachmentlist-disallow-beta-reso
 
 Code path: `kubernetes.storage.v1beta1.VolumeAttachmentList.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.VolumeAttachmentList).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.VolumeAttachmentList).
 
 Service: Storage
 
@@ -5340,7 +5340,7 @@ Policy name: `kubernetes-storage-v1beta1-volumeattachmentpatch-disallow-beta-res
 
 Code path: `kubernetes.storage.v1beta1.VolumeAttachmentPatch.disallowBetaResource`
 
-Disallow the use of non-stable (Beta) Kubernetes resouces (storage.v1beta1.VolumeAttachmentPatch).
+Disallow the use of non-stable (Beta) Kubernetes resources (storage.v1beta1.VolumeAttachmentPatch).
 
 Service: Storage
 
