@@ -198,7 +198,7 @@ In the above example, the logical name for our `ResourceGroup` resource is **"we
 
 ## Create a storage account
 
-The next step will be to create an [Azure Blob Storage account](https://azure.microsoft.com/en-us/products/storage/blobs) that will be used to host the website. Once again, you can refer to the Pulumi registry, specificaly the [`azure-native.storage.StorageAccount` resource page](/registry/packages/azure-native/api-docs/storage/storageaccount/), to define your storage account as shown below:
+The next step will be to create an [Azure Blob Storage account](https://azure.microsoft.com/en-us/products/storage/blobs) that will be used to host the website. Once again, you can refer to the Pulumi registry, specifically the [`azure-native.storage.StorageAccount` resource page](/registry/packages/azure-native/api-docs/storage/storageaccount/), to define your storage account as shown below:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 

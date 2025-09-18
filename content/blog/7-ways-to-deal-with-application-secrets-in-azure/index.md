@@ -23,7 +23,7 @@ While the concepts are universally applicable, my code samples focus on a .NET a
 
 1. [Hard-Coded Application Secrets](/blog/7-ways-to-deal-with-application-secrets-in-azure/#1-hard-coded-application-secrets)
 2. [Configuration Files](/blog/7-ways-to-deal-with-application-secrets-in-azure/#2-configuration-files)
-3. [Environvment Variables](/blog/7-ways-to-deal-with-application-secrets-in-azure/#3-environment-variables)
+3. [Environment Variables](/blog/7-ways-to-deal-with-application-secrets-in-azure/#3-environment-variables)
 4. [Azure Key Vault](/blog/7-ways-to-deal-with-application-secrets-in-azure/#4-azure-key-vault)
 5. [Accessing Key Vault with Managed Identities](/blog/7-ways-to-deal-with-application-secrets-in-azure/#5-accessing-key-vault-with-managed-identities)
 6. [Accessing Key Vault from Application Settings](/blog/7-ways-to-deal-with-application-secrets-in-azure/#6-accessing-key-vault-from-application-settings)
