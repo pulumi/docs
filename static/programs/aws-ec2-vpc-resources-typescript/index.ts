@@ -6,7 +6,7 @@ const vpc = new aws.ec2.Vpc("vpc", {
     cidrBlock: "10.0.0.0/16",
 });
 
-// Create an an internet gateway.
+// Create an internet gateway.
 const gateway = new aws.ec2.InternetGateway("gateway", {
     vpcId: vpc.id,
 });

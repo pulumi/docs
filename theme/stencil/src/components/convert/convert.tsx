@@ -224,11 +224,11 @@ export class Convert {
         }
 
         if (!this.examples) {
-            console.warn("A list of examples was provided.");
+            console.warn("A list of examples was not provided.");
         }
 
         if (!this.theme) {
-            console.warn("A CodeMirror theme was not specified. The Using `material-ocean`.");
+            console.warn("A CodeMirror theme was not specified. Using `material-ocean`.");
         }
 
         if (errors.length) {

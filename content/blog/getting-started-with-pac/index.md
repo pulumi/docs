@@ -50,7 +50,7 @@ Then create the Policy Pack using `pulumi policy new`.
 $ pulumi policy new aws-typescript
 ```
 
-By default, this creates a policy that checks to see if the ACL sets the bucket to be publically accessible.
+By default, this creates a policy that checks to see if the ACL sets the bucket to be publicly accessible.
 
 ```ts
 new PolicyPack("aws-typescript", {
@@ -162,7 +162,7 @@ Policy Packs run:
 Permalink: https://app.pulumi.com/spara/elasticsearch/dev/previews/bb6df58f-69aa-485a-99a4-d076bc067b84
 ```
 
-AWSGuard flagged two recommended Elasticsearch best practices, encryption and deploying only within a VPC and not publically. By enabling encryption at rest, unauthorized users cannot read data in Elasticseach clusters, storage, indices, and log files. By enabling Elasticsearch’s built-in encryption, your deployment follows recommended practices that comply with [HIPAA](https://aspe.hhs.gov/reports/health-insurance-portability-accountability-act-1996) and [GDPR](https://gdprinfo.eu/). AWS VPCs can keep the network traffic between your applications and Elasticsearch cluster within your infrastructure’s network and not over the public internet. Isolating Elasticsearch within your infrastructure can help mitigate the likelihood of data exposure.
+AWSGuard flagged two recommended Elasticsearch best practices, encryption and deploying only within a VPC and not publicly. By enabling encryption at rest, unauthorized users cannot read data in Elasticsearch clusters, storage, indices, and log files. By enabling Elasticsearch’s built-in encryption, your deployment follows recommended practices that comply with [HIPAA](https://aspe.hhs.gov/reports/health-insurance-portability-accountability-act-1996) and [GDPR](https://gdprinfo.eu/). AWS VPCs can keep the network traffic between your applications and Elasticsearch cluster within your infrastructure’s network and not over the public internet. Isolating Elasticsearch within your infrastructure can help mitigate the likelihood of data exposure.
 
 ## CrossGuard available in Pulumi 2.0
 
