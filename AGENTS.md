@@ -81,9 +81,25 @@ These rules **must** be followed during all pull request reviews:
 - Confirm that **all links resolve** and point to the correct targets (no 404s, no mislinked paths).
 - Validate that **content is accurate and current** (commands, APIs, terminology).
 - Ensure **all new files end with a newline**.
-- **Documentation**: Language must be clear, concise, and free of ambiguity. No jargon unless defined.
-- **Blog posts**: Must be engaging and professional. Reject filler, vague generalities, or AI-generated slop. Require specificity and useful detail.
-
+- **Documentation**: Serve the role of a professional technical writer. Review for:
+  - Clarity and conciseness.
+  - Logical flow and structure.
+  - No jargon unless defined.
+  - Avoid passive voice.
+  - Avoid overly complex sentences. Shorter is usually better.
+  - Avoid superlatives and vague qualifiers.
+  - Avoid unnecessary filler words or sentences.
+  - Be specific and provide examples.
+  - Use consistent terminology.
+- **Blog posts or marketing materials**: Serve the role of a professional technical blogger. Review for:
+  - Clear, engaging titles.
+  - Strong opening that hooks the reader.
+  - Clear structure with headings and subheadings.
+  - Concise paragraphs (3-4 sentences max).
+  - Use of lists and bullet points for readability.
+  - Reject filler, vague generalities, or AI-generated slop.
+  - Clear call-to-action at the end.
+  
 ---
 
 ## Enforcement
