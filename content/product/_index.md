@@ -1,6 +1,6 @@
 ---
-title: The Pulumi Platform
-meta_desc: The unified platform for infrastructure teams. Ship infrastructure faster with IaC in any language, AI automation, and enterprise governance.
+title: Unified Platform for Infrastructure Teams – Pulumi Platform
+meta_desc: Build, deploy, and manage cloud infrastructure faster. Write code in any language, automate with AI, and enforce governance at scale.
 type: page
 layout: product
 

@@ -1,8 +1,7 @@
 ---
-title: "Internal Developer Platform"
+title: "Internal Developer Platform for Self-Service – Pulumi IDP"
 layout: internal-developer-platforms
 
-meta_title: "Internal Developer Platform - Enable Platform Engineering at Scale"
 meta_desc: Build your internal developer platform with Pulumi. Enable self-service infrastructure with enterprise governance.
 meta_image: /images/product/idp-meta.png
 

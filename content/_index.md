@@ -1,5 +1,5 @@
 ---
-title: Pulumi - Infrastructure as Code, Secrets Management, and AI
+title: Infrastructure as Code Platform with Agentic AI – Pulumi
 meta_desc: Pulumi is an infrastructure management platform to automate through infrastructure as code, secure with secrets management, and manage infrastructure with AI.
 
 include_organization_schema: true
