@@ -36,12 +36,13 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          pr_number: ${{ github.event.pull_request.number }}
           prompt: |
             Please review this pull request and provide feedback. 
             
             Use the repository's CLAUDE.md, AGENTS.md, and STYLE-GUIDE.md for guidance on style and conventions.
             
-            Be constructive and helpful in your feedback.
+            Be constructive and helpful in your feedback. Provide positive feedback on what was done well, not just criticisms.
             
             Provide your review as a single comment on the pull request, summarizing any issues found and suggesting improvements. Do not create multiple comments.
             
