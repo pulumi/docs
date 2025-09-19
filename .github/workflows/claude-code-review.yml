@@ -2,7 +2,7 @@ name: Claude Code Review
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened]
     # Optional: Only run on specific file changes
     # paths:
     #   - "src/**/*.ts"
@@ -37,18 +37,5 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
-            Please review this pull request and provide feedback on:
-            - Code quality and best practices
-            - Potential bugs or issues
-            - Performance considerations
-            - Security concerns
-            - Test coverage
-            
-            Use the repository's CLAUDE.md for guidance on style and conventions. Be constructive and helpful in your feedback.
-
-            Use `gh pr comment` with your Bash tool to leave your review as a comment on the PR.
-          
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
+            Please review this pull request using the pr-content-review subagent.
           claude_args: '--allowed-tools "Bash(gh issue view:*),Bash(gh search:*),Bash(gh issue list:*),Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),Bash(gh pr list:*)"'
-
