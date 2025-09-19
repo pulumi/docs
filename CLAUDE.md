@@ -4,9 +4,10 @@ In addition to the canonical instructions, the following rules apply to this dir
 
 ## PR Reviews
 
+When a review is requested, provide your review as a single comment, regardless of length. Be specific, provide actionable feedback, and provide line numbers where applicable.
+
 These rules **must** be followed during all pull request reviews:
 
-- Provide your review as a single GitHub Review, not as multiple comments.
 - Always enforce `STYLE-GUIDE.md`. If not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 - Check **spelling and grammar** in all files.
 - Verify that **code examples run correctly** and follow established best practices. Do not suggest untested code.
