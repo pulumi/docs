@@ -8,6 +8,14 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "KCD Sofia 2025"
+  title: "AI in a DevOps World"
+  url: "https://community.cncf.io/kcd-sofia/"
+  date: 2025-09-19T15:00:00.000-07:00
+- event: "KCD Sofia 2025"
+  title: "Lightning Talk: Abstract It: The Higher, The Faster!"
+  url: "https://community.cncf.io/kcd-sofia/"
+  date: 2025-09-19T15:00:00.000-07:00 
 - event: "ContainerDays Conference 2025"
   title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
   url: "https://www.containerdays.io/containerdays-conference-2025/agenda/"
