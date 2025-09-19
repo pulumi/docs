@@ -1,9 +1,8 @@
 ---
-title: "Secrets & Configuration"
+title: "Centralized Configuration & Secrets Management – Pulumi ESC"
 layout: secrets-management
 
-meta_title: "Secrets & Configuration - Pulumi Platform"
-meta_desc: Centralized secrets and configuration management. Connect any vault, eliminate secrets sprawl, secure every environment.
+meta_desc: Centralize secrets and configurations with Pulumi ESC. Connect any vault, eliminate secrets sprawl, secure every environment.
 meta_image: "/images/product/esc-octopus-diagram.png"
 aliases:
     - /esc

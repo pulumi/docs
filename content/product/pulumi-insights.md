@@ -1,5 +1,5 @@
 ---
-title: Insights & Governance
+title: Cloud Asset and Compliance Management – Pulumi Insights
 layout: pulumi-insights
 
 meta_desc: Search any cloud resource. Enforce policies as code. Track compliance. See everything in your infrastructure.
