@@ -229,7 +229,7 @@ As the scan progresses, you can monitor policy compliance in real-time through t
 
 ![Insights Policies - Policy Violations](/tutorials/eval-compliance-terraform/assets/insights-policy-violations.png)
 
-You should see a violation entry for the publically accessible security group in the list. Each violation entry provides detailed information about:
+You should see a violation entry for the publicly accessible security group in the list. Each violation entry provides detailed information about:
 
 - The specific resource that triggered the violation
 - Which policy rule was violated
