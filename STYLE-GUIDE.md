@@ -1,206 +1,138 @@
-# Style guide
+# Pulumi Documentation Style Guide
 
-This document outlines the Pulumi-specific style guidelines for our documentation. For topics not addressed here, refer to the [Google Developer Documentation Style Guide](https://developers.google.com/style) for additional guidance.
+This guide defines Pulumi-specific style rules for our documentation.  
+For topics not addressed here, refer to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 
-## Using inclusive language
+---
 
-Words are important. Pulumi strives to use language that is clear, harmonious, and friendly to all readers.  With these goals in mind, we use the following guidelines:
+## Inclusive Language
 
-* Avoid ableist language:
-  * Instead of _crazy_ try _wild_.
-  * Instead of _click_ use _select_.
-  * Instead of _dummy_ use _placeholder_.
-* Avoid unnecessarily gendered language: Instead of _guys_ try _folks_, _yall_, or _everyone_.
-* Avoid using violent language (e.g., _kill_).
-* Avoid pop-culture references as such references may not be familiar to all readers.
-* Instead of "go to," use "navigate".
-* Avoid directional words. Instead, link directly to the section you are referencing.
-* Avoid using "easy", "simple" or their adjectives, as they make a judgment about the difficulty of a concept explained, or the level of a reader's subject matter expertise. Often, you can omit these words entirely.
+Pulumi strives to use language that is clear, inclusive, and respectful.  
+
+- Avoid ableist terms.  
+  - Instead of _crazy_, use _wild_.  
+  - Instead of _dummy_, use _placeholder_.  
+- Avoid unnecessarily gendered language (e.g., use _folks_, _everyone_).  
+- Avoid violent or aggressive terms (e.g., avoid _kill_).  
+- Avoid pop-culture references that may not be globally understood.  
+- Instead of "click," use "select."  
+- Instead of "go to," use "navigate."  
+- Avoid directional terms (e.g., "see above"); link directly.  
+- Avoid words like "easy" or "simple." These judge difficulty and may alienate readers.
+
+---
 
 ## Headings
 
-* Top level headings use **Title Case**, where each word starts with a capital letter.
-* All other headings use **Sentence case**, where only the first word and any proper nouns have a capital letter.
-* Use capitalization only for a proper noun, and use throughout the heading. For example, "stack" should almost always be lowercase in text.
-* Ensure that readers are able to scan the headings of a page and get an effective overview of the page's content.
-* Every page should have exactly one `h1`. This is typically defined in the `title` attribute of the front matter on a Markdown page.
-* Headings levels must only increment one level at a time.  E.g., if your previous heading level was an `h2`, the next heading must be an `h2` or an `h3`, but not, e.g., an `h4` or `h5`.
-* Docs and registry headings should use sentence case (i.e., first letter of the first word is capitalized).
+- Exactly one H1 (`#`) per page, set in front matter `title`.  
+- H1: **Title Case**.  
+- H2 and deeper: **Sentence case**.  
+- Only increment one heading level at a time (no skipping levels).  
+- Use capitalization only for proper nouns. For example, use “stack” not “Stack.”
+
+---
 
 ## Links
 
-* Use Markdown links to link between pages on the site:
+- **Internal and external links**: use normal Markdown syntax.  
+  - `[Link text](/path/to/file)`  
+  - `[Link text](https://example.com)`  
+- Link text must be descriptive. Avoid vague text like _here_ or _click here_.  
+- When changing the URL of an existing page, add a redirect with a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
 
-    ```markdown
-    [Link text](/path/to/file)
-    ```
+---
 
-  Or to external sites:
+## Notes / Callouts
 
-    ```markdown
-    [Link text](https://example.com)
-    ```
+Use the `{{ notes }}` shortcode sparingly. Supported levels:
 
-* Link text should be descriptive and have meaning outside of the surrounding context: Avoid link text like _here_, _click here_, _see here_ and instead link to the title of the linked page, e.g. "see [Pulumi Pricing](https://www.pulumi.com/pricing/)". (While this practice benefits all readers, it is of particular importance for visually impaired users who use screen readers and often jump through the links of a document.)
-* When changing the URL for an already existing page (which includes moves and renames within the filesystem), add a redirect by using a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
+- `info` — general information  
+- `tip` — helpful hints  
+- `warning` — important cautions  
 
-## Notes
-
-Our docs support "callouts" with the `{{ notes }}` shortcode:
-
-* Use notes in general to communicate important information.
-* Try to limit the number of notes within a single page.
-* The following note levels are supported:
-  * Use `info`-level notes to convey general information.
-  * Use `tip`-level notes to convey helpful ideas.
-  * Use `warning`-level notes for information that, if missed, could lead to negative or unexpected consequences.
-
-### Examples
+**Example:**
 
 ```go
-{{% notes type="info" %}}
-This bit of info is important enough to call out, but not critical.
-{{% /notes %}}
-
 {{% notes type="tip" %}}
-This bit of info is a great idea, that might be really helpful.
-{{% /notes %}}
-
-{{% notes type="warning" %}}
-This bit of info is serious. If you missed it, bad things could happen.
+This is a useful suggestion.
 {{% /notes %}}
 ```
+
+---
 
 ## Paragraphs and Line Breaks
 
-* Keep paragraphs short, rarely use 4 or more sentences in a single paragraph.
-* When writing paragraphs and long sentences keep the entire paragraph on a single line and use "soft wrapping" in your IDE/editor.
+- Use **semantic line breaks**: start a new line for each sentence or phrase.  
+- Keep paragraphs short (ideally ≤3 sentences).
 
-## Blockquotes
-
-* Use blockquotes only when directly quoting content from another source.
-
-### Example
-
-> This is something a person said.
-
-## Diagrams
-
-We support two types of diagrams for visualizing concepts and architecture:
-
-* **GoAT (Go ASCII art Tool)**: Creates diagrams from ASCII art. Good for simple flowcharts, boxes, and connections.
-* **Mermaid**: Creates diagrams from a declarative syntax. Supports flowcharts, sequence diagrams, class diagrams, and more.
-
-### GoAT example
-
-```goat
-      .               .                .               .--- 1          .-- 1     / 1
-     / \              |                |           .---+            .-+         +
-    /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
-   +     +        |       |        |       |    ---+            ---+          +
-  / \   / \       |       |        |       |       |   .--- 3      |   .-- 3   \ / 3
- /   \ /   \      '---+---'         '--+--'        '---+            '-+         +
- 1   2 3   4          |                |               '--- 4          '-- 4     \ 4
-```
-
-For more details, see the [Hugo diagrams documentation](https://gohugo.io/content-management/diagrams/).
-
-### Mermaid example
-
-```mermaid
-graph TD
-    A[Christmas] -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
-    C -->|Three| F[fa:fa-car Car]
-```
-
-For more details, see the [Mermaid.js documentation](https://mermaid.js.org/).
+---
 
 ## Lists
 
-* Present instructional steps in lists.
-* All ordered list items should begin with `1.` regardless of their position in the list. They are rendered with correct numbering automatically.
+- Use ordered lists for steps.  
+- All items should begin with `1.` (Markdown will auto-number).  
 
-  **Example**  
+Example:
 
-  ```markdown
-  1. First item
-  1. Second item
-  1. Third item
-  1. Fourth item
-  ```
+```markdown
+1. First step
+1. Second step
+1. Third step
+```
 
-## Content design
+---
 
-* Lead with content that excites and engages, end with exactly one call-to-action.
-* Try and save links for the last 75% of the content.
-* Use headings and lists to make content scannable and consumable.
-* Use visuals: code, graphs, videos, architecture diagrams, etc.
-* Highlight important points.
-* Avoid emojis unless for notes or absolutely necessary.
+## Blockquotes
 
-## Product names and acronyms
+- Use blockquotes only for direct quotations.
 
-Pulumi's product names are:
+Example:
 
-* Pulumi IaC
-* Pulumi ESC
-* Pulumi IDP
-* Pulumi Insights
-* Pulumi Cloud
+> This is something a person said.
 
-These product names include acronyms, but have a different formatting style than acronyms, because we view the product name as an opaque identifier, not descriptive text. When referring to Pulumi products, always use the company name with the acronym, as a single term.
+---
 
-At first mention of a product, in any document, expand the acronym only, with the full form in parentheses after the product name:
+## Diagrams
 
-* **Correct at first usage**: Pulumi IaC (Infrastructure as Code)
-* **Correct at first usage**: Pulumi ESC (Environments, Secrets, and Configuration)
-* **Correct at first usage**: Pulumi IDP (Internal Developer Platform)
+We support two formats:
 
-After the first reference, use just the product name:
+- **GoAT (ASCII diagrams)** — good for simple flows.  
+- **Mermaid** — supports flowcharts, sequence diagrams, class diagrams, etc.  
 
-* **Correct for subsequent usage**: Pulumi IaC
-* **Correct for subsequent usage**: Pulumi ESC
-* **Correct for subsequent usage**: Pulumi IDP
+See [Hugo diagrams docs](https://gohugo.io/content-management/diagrams/) and [Mermaid docs](https://mermaid.js.org/).
 
-Always capitalize product names correctly. Do not use variations like "Pulumi IAC", "Pulumi iac", "pulumi IaC", etc.
+---
 
-### Acronym usage
+## Product Names and Acronyms
 
-For acronyms that are not part of Pulumi product names, follow standard grammatical practices:
+- Always capitalize Pulumi product names correctly.  
+  - Pulumi IaC (Infrastructure as Code)  
+  - Pulumi ESC (Environments, Secrets, and Configuration)  
+  - Pulumi IDP (Internal Developer Platform)  
+  - Pulumi Insights  
+  - Pulumi Cloud  
+- Expand product acronyms at first mention. Use just the product name after.  
+- For non-Pulumi acronyms: spell out on first use, then use the acronym.  
+  - Example: Virtual Private Cloud (VPC), then VPC.  
+- Widely known acronyms (API, HTTP, REST) don’t need expansion.
 
-At first mention of an acronym in a document, use the spelled-out term followed by the acronym in parentheses:
+---
 
-* **Correct**: Custom Resource Definition (CRD)
-* **Correct**: Virtual Private Cloud (VPC)
-* **Correct**: Platform as a Service (PaaS)
+## References to Commands or UI
 
-For subsequent mentions, use just the acronym:
+- CLI commands: wrap in backticks (e.g., `pulumi up`).  
+- UI elements: use **bold** (e.g., “Go to the **Account** page”).  
+- Navigation: use arrows (e.g., **Settings** → **API Keys**).
 
-* **Correct**: The CRD defines how the custom resource should be structured.
-* **Correct**: Deploy your application in a VPC for better security.
+---
 
-If an acronym is widely known and more commonly used than its spelled-out form (like API, HTTP, REST), you can use the acronym without spelling it out.
+## Tutorials
 
-This approach follows standard documentation practices like those in the [Google Developer Documentation Style Guide](https://developers.google.com/style/abbreviations). Feel free to reference the Google style guide for a longer, more nuanced explanation of correct usage for acronyms that are _not_ part of product names.
+- If the tutorial is followed by another, end with a **Next steps** section.  
+- If pointing to references or further reading, end with a **Learn more** section.
 
-### Referring to Pulumi commands or UI elements
+---
 
-* References to the Pulumi CLI or CLI commands should be enclosed in backticks (e.g., `pulumi up`).
-* References to UI elements within a webpage should be **bold**. (e.g., "Go to the **Account** page in the Pulumi Console and select **sync profile with GitHub**").
-* Use arrows to indicate a navigation. (e.g., "Go to **FooPage** &gt; **BarItem**").
+## Blog Posts
 
-### Sections in tutorials
-
-If a tutorial has more following tutorials, use a **Next steps** section at the end. If you're linking to other reference material, use **Learn more**.
-
-## Blog post authoring
-
-For instructions on contributing to the [Pulumi blog](https://www.pulumi.com/blog/), [see BLOGGING.md](BLOGGING.md).
-
-## Additional resources
-
-* Markdownlint will help enforce syntactically valid Markdown and is available as a [CLI tool](https://github.com/igorshubovych/markdownlint-cli#installation) or as a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
-* [Writing inclusive documentation](https://developers.google.com/style/inclusive-documentation) (Google).
+See [BLOGGING.md](BLOGGING.md) for guidance on writing Pulumi blog posts.

@@ -53,8 +53,6 @@ Do not substitute other tools or commands.
 - **Headings**:  
   - H1 = Title Case  
   - H2+ = Sentence case
-- **Links**: Always use Hugo `relref`. Example:  
-  `[Install guide]({{< relref "/docs/install" >}})`
 - **Code Examples**: Place in `/static/programs` with language suffix in filename.  
 - **TypeScript/JavaScript**: Must follow `tsconfig.json` settings. No comments unless explicitly requested.  
 - **File Placement**:  
