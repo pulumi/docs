@@ -43,7 +43,7 @@ Do not substitute other tools or commands.
 
 - **Package manager**: Do **not** change `package.json` to use pnpm. Yarn/npm only.  
 - **New files**: Must always end with a newline.  
-- **Internal links**: Never use raw Markdown links for docs. Always use Hugo’s `relref` shortcode.
+- **Internal links**: Never use raw Markdown links for docs. Always use Hugo’s `relref` shortcode. (This applies only to agents. Humans may use markdown links as described in STYLE-GUIDE.md.)
 
 ---
 
