@@ -1,6 +1,6 @@
 ---
 name: pr-content-reviewer
-description: Use this agent when reviewing pull requests for content quality, particularly for documentation, README files, blog posts, or any text-heavy changes. Examples: <example>Context: A GitHub Action is triggered when a new PR is opened containing documentation changes. assistant: 'I'll use the pr-content-reviewer agent to analyze the content changes in this pull request for clarity, conciseness, accuracy, and grammar.'</example> <example>Context: A PR contains updates to API documentation and error messages. assistant: 'Let me invoke the pr-content-reviewer agent to ensure the new content meets our quality standards for technical writing.'</example>
+description: Use this agent when reviewing pull requests
 model: sonnet
 color: green
 ---
