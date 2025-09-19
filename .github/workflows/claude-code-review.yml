@@ -2,7 +2,7 @@ name: Claude Code Review
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, reopened]
     # Optional: Only run on specific file changes
     # paths:
     #   - "src/**/*.ts"
@@ -47,7 +47,7 @@ jobs:
 
             Use the repository's CLAUDE.md for guidance on style and conventions. Be constructive and helpful in your feedback.
 
-            Use `gh pr comment` with your Bash tool to leave your review as a comment on the individual lines of the PR diff where applicable, 
+            Use `gh pr comment` with your Bash tool to leave your review as a comment on the individual lines of the PR diff whenever possible, 
             and a summary comment on the PR overall. If there are no comments, leave a summary comment stating that the PR looks good.
 
           
