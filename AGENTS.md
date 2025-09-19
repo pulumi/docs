@@ -98,8 +98,9 @@ These rules **must** be followed during all pull request reviews:
   - Concise paragraphs (3-4 sentences max).
   - Use of lists and bullet points for readability.
   - Reject filler, vague generalities, or AI-generated slop.
+  - Avoid clickbait phrasing.
   - Clear call-to-action at the end.
-  
+
 ---
 
 ## Enforcement
