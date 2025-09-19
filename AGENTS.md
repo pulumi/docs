@@ -1,7 +1,6 @@
 # AGENTS.md — Canonical Instructions for This Repository
 
-This file defines guidance for Claude Code and GitHub Copilot when working in this repository.  
-All automated or manual contributions must comply with these rules.
+This file defines guidance for AI agents like Claude Code and GitHub Copilot when working in this repository. All automated or manual contributions must comply with these rules.
 
 ---
 
@@ -17,8 +16,8 @@ Agents must use these exact commands:
 
 - Install deps: `make ensure`
 - Build site: `make build`
-- Serve locally:  
-  - Normal: `make serve`  
+- Serve locally on port 1313 (accessible with curl):  
+  - Normal: `make serve` 
   - With asset rebuilds: `make serve-all`
 - Lint: `make lint` (must pass before commit/merge)
 - Format: `make format`
