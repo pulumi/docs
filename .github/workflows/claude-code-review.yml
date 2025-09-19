@@ -37,10 +37,14 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
-            Please review this pull request and provide feedback. Use the repository's CLAUDE.md and AGENTS.md for guidance on style and conventions. Be constructive and helpful in your feedback.
+            Please review this pull request and provide feedback. 
             
-            Provide your review as a single comment on the pull request, summarizing any issues found and suggesting improvements. If everything looks good, say so!
-
+            Use the repository's CLAUDE.md, AGENTS.md, and STYLE-GUIDE.md for guidance on style and conventions.
+            
+            Be constructive and helpful in your feedback.
+            
+            Provide your review as a single comment on the pull request, summarizing any issues found and suggesting improvements. Do not create multiple comments.
+            
             These rules **must** be followed during all pull request reviews:
 
             - Always enforce `STYLE-GUIDE.md`. If not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
