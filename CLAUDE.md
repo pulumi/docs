@@ -1,7 +1,7 @@
 # CLAUDE.md - Guide for Working in this Repository
 
 ** IMPORTANT **
-- Read `@STYLE-GUIDE.md` for styling information.
+- When performing a review, read `STYLE-GUIDE.md` for styling information.
 - If the style guide doesn't cover a specific case, refer to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 - Do not change the package manager to pnpm in `package.json`.
 - Any new files must end with a newline.
