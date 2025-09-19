@@ -39,13 +39,15 @@ jobs:
           pr_number: ${{ github.event.pull_request.number }}
           prompt: |
             Please review this pull request (#${{ github.event.pull_request.number }}) and provide feedback.
-            
-            Use the repository's CLAUDE.md, AGENTS.md, and STYLE-GUIDE.md for guidance on style and conventions.
-            
-            Be constructive and helpful in your feedback. Provide positive feedback on what was done well, not just criticisms.
-            
+
             Provide your review as a single comment on the pull request, summarizing any issues found and suggesting improvements. Do not create multiple comments.
-            
+
+            Use the repository's CLAUDE.md, AGENTS.md, and STYLE-GUIDE.md for guidance on style and conventions.
+
+            Be constructive and helpful in your feedback.
+
+            Always provide relevant line numbers for any issues you identify.
+
             These rules **must** be followed during all pull request reviews:
 
             - Always enforce `STYLE-GUIDE.md`. If not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
