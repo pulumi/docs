@@ -4,7 +4,9 @@ In addition to the canonical instructions, the following rules apply to this dir
 
 ## PR Reviews
 
-When a review is requested, provide your review as a single comment, regardless of length. Be specific, provide actionable feedback, and provide line numbers where applicable.
+When a review is requested, provide your review as a single comment on the PR, regardless of length. The user should have ONE comment that lists ALL their issues in order to keep the conversation noise to a minimum. 
+
+When describing an issue, be specific, provide actionable feedback, and provide line numbers where applicable.
 
 These rules **must** be followed during all pull request reviews:
 
