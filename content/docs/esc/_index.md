@@ -110,7 +110,7 @@ sections:
   - icon: lightbulb-blue-21-21
     heading: Detailed overview of environments
     description: Learn more about managing environments using Pulumi ESC.
-    link: /docs/pulumi-cloud/esc/environments/
+    link: /docs/esc/environments/working-with-environments/
   - icon: terminal-blue-21-21
     heading: Integration with Docker
     description: Pulumi ESC integrates with Docker to manage configuration and secrets while running docker commands.
