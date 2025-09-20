@@ -38,7 +38,7 @@ main:
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-10-09T12:00:00-04:00
+    sortable_date: 2025-10-14T12:00:00-04:00
 
     # Duration of the webinar.
     duration: 90 minutes
@@ -76,8 +76,8 @@ form:
 
 event_data:
   name: "Getting Started with Infrastructure Agents"
-  start_date: 2025-10-09T12:00:00-04:00
-  end_date: 2025-10-09T13:30:00-04:00
+  start_date: 2025-10-14T12:00:00-04:00
+  end_date: 2025-10-14T13:30:00-04:00
   url: "https://www.pulumi.com/resources/getting-started-with-infrastructure-agents/"
   description: |
     Platform Engineering teams looking to add intelligent automation to their infrastructure workflows must first plan controls and human oversight into their process. In this session, we'll introduce considerations for setting up agentic workflows with a basic 'human in the loop' approval process and walk through a basic cloud deployment.

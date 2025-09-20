@@ -329,15 +329,21 @@ Select one of the following options to get started:
 
 Alternatively, you can watch the following video which provides a high level overview of how Pulumi works:
 
-<div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
-    <iframe
-        src="//www.youtube.com/embed/Q8tw6YTD3ac?rel=0"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-        allowfullscreen=""
-        title="Introduction to Pulumi in Three Minutes"
-        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/Q8tw6YTD3ac?autoplay=1><img src='/images/home/youtube-getting-started.png' alt='Introduction to Pulumi in Three Minutes'></a>">
-    </iframe>
-</div>
+<section id="demo-video" class="container mx-auto my-16 flex flex-col">
+    <div class="flex flex-col lg:flex-row px-8 items-center justify-center">
+        <div class="w-full mb-8 lg:mb-0">
+            <div id="video" style="position: relative; top: -100px;"></div>
+            <div class="responsive-video-container video-16-9 rounded-xl shadow-2xl relative h-0 overflow-hidden">
+                <iframe
+                src="https://www.youtube.com/embed/Q8tw6YTD3ac?rel=0"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                allowfullscreen=""
+                title="Introduction to Pulumi in Three Minutes"
+            ></iframe>
+            </div>
+        </div>
+    </div>
+</section>
 
 ## Pulumi Cloud
 
