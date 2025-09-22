@@ -1,5 +1,5 @@
 ---
-title: KubeCon 2024
+title: KubeCon 2025
 meta_desc: Scale Kubernetes operations with Neo - the first infrastructure AI agent built for K8s environments.
 meta_image: /images/kubecon/kubecon-meta-26.png
 type: page
@@ -8,7 +8,8 @@ layout: kubecon
 kubernetes_overview:
     title: Scale Kubernetes Operations with AI Intelligence, Not AI Features
     description: |
-      Neo for Kubernetes: The first purpose-built infrastructure AI agent that understands your K8s environment, cloud dependencies, and container policies—delivering expert-level automation for modern container workloads. Visit Pulumi booth #1045 at KubeCon Atlanta to see live demos.
+      Neo for Kubernetes: The first purpose-built infrastructure AI agent that understands your K8s environment, cloud dependencies, and container policies—delivering expert-level automation for modern container workloads.
+    emphasis: "Visit Pulumi booth #1045 at KubeCon Atlanta to see live demos."
 
 superpowers:
     - title: Turn Kubernetes Complexity into Competitive Advantage
@@ -20,8 +21,8 @@ superpowers:
       icon_type: delivery
       description:
         - 6+ years of production Kubernetes automation across AWS, Azure, GCP, and on-premises
-        - Proven results: Snowflake (1.5 weeks→1 day deployments), Starburst (112x faster), Unity (80% reduced deployment times)
         - Native K8s governance respects existing RBAC, network policies, and security constraints
+        - "Proven results: Snowflake (1.5 weeks→1 day deployments), Starburst (112x faster), Unity (80% reduced deployment times)"
 
     - title: Kubernetes-Native Integration
       icon_type: policy
@@ -42,9 +43,7 @@ detail_sections:
             icon: security
             icon_color: violet
             description: |
-              Join our Kubernetes Happy Hour
-
-              After a day diving deep into cloud-native tech at KubeCon, rise above the clouds with Pulumi, Buildkite, Oso, and Honeycomb for premium cocktails, stunning Atlanta skyline views, and networking at Glenn's Skylounge. Join us Tuesday, November 11, 7-9 PM for the perfect wind-down – 21+ only, first-come, first served!
+              Join Pulumi, Buildkite, Oso, and Honeycomb for premium cocktails and stunning Atlanta skyline views at Glenn's Skylounge. Tuesday, November 11, 7-9 PM – the perfect KubeCon wind-down! 21+ only, first-come, first served.
             link: https://buildkite.com/resources/events/25/kubecon-happy-hour/
             cta: RSVP to Happy Hour
 
@@ -56,13 +55,13 @@ detail_sections:
 
               Get a personalized demo showing how Neo handles your exact K8s use cases - from multi-cloud cluster management to application deployment automation, all within your governance framework.
             link: "https://calendly.com/pulumi-meetings/demo-pulumi-at-kubecon-atlanta"
-            cta: Schedule a Meeting
+            cta: Book your demo
 
           - title: "Join the Kubernetes Workshop: From Zero to Production in Kubernetes"
             icon: team
             icon_color: salmon
             description: |
-              Nov 20, 2024 9 am PT/Noon ET
+              Nov 20, 2025 9 am PT/Noon ET
 
               Join us to explore how agentic workflows and modern tooling accelerate Kubernetes deployments to production, covering multi-cloud management, large-scale operations, complex migrations, and enterprise-grade infrastructure coordination
             link: /events/from-zero-to-production-in-kubernetes/

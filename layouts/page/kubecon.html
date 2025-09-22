@@ -44,7 +44,7 @@
         <div class="lg:w-3/4">
             <div class="md:px-24 lg:px-4">
                 <h3>{{ .title }}</h3>
-                <p>{{ .description | markdownify }}</p>
+                <p>{{ .description | markdownify }}<strong class="pl-2">{{ .emphasis | markdownify }}</strong></p>
             </div>
         </div>
         {{ end }}

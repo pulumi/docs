@@ -62,8 +62,10 @@ main:
           photo: /images/team/meagan-cojocar.jpg
         - name: Marina Novikova
           role: Sr. Partner Solution Architect, AWS
+          photo: /images/team/marina-novikova.jpg
         - name: James Bland
-          role: WW Tech Lead Data& AI, AWS
+          role: WW Tech Lead Data & AI, AWS
+          photo: /images/team/james-bland.jpg
 
     # case-sensitive
     tags:
