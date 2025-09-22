@@ -44,7 +44,7 @@ Our new policy packs provide extensive, out-of-the-box coverage for some of the 
 
 ### Benefits of Pre-Built Packs
 
-* ***Accelerate Compliance:** Implement comprehensive governance controls in minutes without authoring hundreds of policies from scratch.
+* **Accelerate Compliance:** Implement comprehensive governance controls in minutes without authoring hundreds of policies from scratch.
 * **Leverage Expert Knowledge:** Packs are authored and maintained by Pulumi, incorporating deep expertise in cloud and the specific nuances of each framework.
 * **Codify Controls for Audits:** Demonstrate to auditors that specific compliance controls are consistently enforced through code, providing a clear and immutable evidence trail.
 * **Reduce Risk Proactively:** Catch common security risks and compliance violations before deployment, drastically reducing your organization's exposure.

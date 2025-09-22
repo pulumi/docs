@@ -51,6 +51,10 @@ You can enable audit scans for your IaC stacks by adding them to an **Audit Poli
 
 The next time any of the selected stacks completes a `pulumi up`, a post-deployment evaluation will be automatically triggered. The results will populate in the Policy Issues tab, ready for triage and remediation.
 
+{{< notes type="info" >}}  
+Audit policy scans consume workflow minutes from your Pulumi Cloud plan. Each scan counts toward your monthly quota based on the complexity and number of resources evaluated. See [pricing documentation](https://github.com/pulumi/docs-private/pull/107/link-to-pricing) for details.
+{{< /notes >}}
+
 **Add a note that this will consume workflow minutes**
 
 ### A Complete Governance Picture
