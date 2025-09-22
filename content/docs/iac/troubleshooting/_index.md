@@ -21,6 +21,7 @@ aliases:
 
 - **[Debugging](/docs/iac/troubleshooting/debugging/)** - Tools and techniques for diagnosing and fixing Pulumi programs
 - **[Common issues](/docs/iac/troubleshooting/common-issues/)** - Guide to fixing specific problems that may arise in Pulumi programs
+- **[Editing state files](/docs/iac/troubleshooting/debugging/manual-state-editing/)** - Advanced state repair techniques (last resort)
 
 ## Talk to a human
 
