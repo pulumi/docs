@@ -31,7 +31,7 @@ We are thrilled to announce Pulumi Governance - our comprehensive platform capab
 
 As we discussed when we [introduced Pulumi Neo](/blog/meet-neo-your-newest-platform-engineer/), the success of developer AI has become a critical challenge for platform teams. They are caught between the relentless pace of development and the absolute need for control. This leads to unwinnable situations:
 
-* **Platform Bottlenecks:** 45% of platform teams report they can't even measure their governance effectiveness. Lacking the right tools, they struggle to create the "golden paths" that developers actually want to use, leading to slow, manual review cycles that kill productivity.
+* **Platform Bottlenecks:** 45% of platform teams report they can't even measure their governance effectiveness [(State of Platform Engineering Report 2024}](https://platformengineering.org/blog/takeaways-from-state-of-platform-engineering-2024). Lacking the right tools, they struggle to create the "golden paths" that developers actually want to use, leading to slow, manual review cycles that kill productivity.
 * **Reactive Security Postures:** Security teams are drowning in alerts from CSPM tools that only find misconfigurations *after* deployment. It's a constant cycle of detection and remediation that leaves the organization perpetually exposed.
 * **Innovation vs. Risk Trade-off:** 68% of CIOs cite AI risks as a major concern. Without a way to embed governance directly into the AI-driven workflow, leadership is forced to slow down innovation to manage risk.
 
