@@ -19,25 +19,25 @@ tags:
 - platform-engineering
 --- 
 
-The era of AI-accelerated development is here. AI coding assistants are making developers 55% faster and halving merge times. But this incredible velocity has created a paradox: platform teams, the very people meant to enable this speed, are being overwhelmed. Every line of code shipped faster creates new demands for infrastructure, security, and compliance. Traditional, manual governance has become a velocity trap—a bottleneck that stifles the very innovation it's meant to protect.
+The era of AI-accelerated development is here. AI coding assistants show 55% faster task completion in controlled studios [(GitHub/Accenture enterprise study, 2024)](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-in-the-enterprise-with-accenture/) and halving merge times. But this incredible velocity has created a paradox: platform teams, the very people meant to enable this speed, are being overwhelmed. Every line of code shipped faster creates new demands for infrastructure, security, and compliance. Traditional, manual governance has become a velocity trap—a bottleneck that stifles the very innovation it's meant to protect.
 
 For the last couple of years, engineering leaders have faced a false choice: move fast with AI and accept the risk, or lock down the platform and sacrifice speed. Today, we end that compromise.
 
-We are thrilled to announce a massive leap forward with the **next generation of Pulumi Policies**, the engine that powers our comprehensive **Pulumi Governance** solution. This is not just an update; it's a new paradigm for cloud governance. We’re moving beyond reactive enforcement to proactive enablement, with AI-accelerated guardrails designed to scale *with* developer velocity, not restrict it. As you build faster with AI, you can now govern smarter, safer, and more efficiently.
+We are thrilled to announce Pulumi Governance - our comprehensive platform capability powered by the **next generation of Pulumi Policies**. This is not just an update; it's a new paradigm for cloud governance. We’re moving beyond reactive enforcement to proactive enablement, with AI-accelerated guardrails designed to scale *with* developer velocity, not restrict it. As you build faster with AI, you can now govern smarter, safer, and more efficiently.
 
 <!--more-->
 
 ## The Governance Crisis in the Age of AI
 
-As we discussed when we [introduced Pulumi Neo](<ins>/blog/meet-neo-your-newest-platform-engineer/</ins>), the success of developer AI has become a critical challenge for platform teams. They are caught between the relentless pace of development and the absolute need for control. This leads to unwinnable situations:
+As we discussed when we [introduced Pulumi Neo](/blog/meet-neo-your-newest-platform-engineer/), the success of developer AI has become a critical challenge for platform teams. They are caught between the relentless pace of development and the absolute need for control. This leads to unwinnable situations:
 
 * **Platform Bottlenecks:** 45% of platform teams report they can't even measure their governance effectiveness. Lacking the right tools, they struggle to create the "golden paths" that developers actually want to use, leading to slow, manual review cycles that kill productivity.
 * **Reactive Security Postures:** Security teams are drowning in alerts from CSPM tools that only find misconfigurations *after* deployment. It's a constant cycle of detection and remediation that leaves the organization perpetually exposed.
 * **Innovation vs. Risk Trade-off:** 68% of CIOs cite AI risks as a major concern. Without a way to embed governance directly into the AI-driven workflow, leadership is forced to slow down innovation to manage risk.
 
-## The Pulumi Difference: Policy as Real Code
+## The Pulumi Difference: Golden paths with real code guardrails
 
-Unlike other solutions that rely on restrictive DSLs or complex YAML, Pulumi Policies uses general-purpose programming languages like TypeScript and Python. This isn't just a language choice; it's a fundamental advantage that provides unmatched power and flexibility. You can express complex, nuanced rules that reflect your actual business logic. This approach allows you to:
+Unlike restrictive DSLs or complex YAML, Pulumi Policies uses general-purpose programming languages to create golden paths with guardrails. Using languages like TypeScript and Python is a fundamental advantage that provides unmatched power and flexibility, enabling you to express complex, nuanced rules that accurately reflect your business logic. This approach enables you to:
 
 * **Use conditional logic** to create sophisticated policies that can't be expressed in simple configuration files.
 * **Build reusable functions and abstractions** to create a shared, version-controlled library of your organization's governance rules.
@@ -58,7 +58,7 @@ Most importantly, these policies become the operational guardrails for **Pulumi 
 
 Today’s launch bundles several powerful new capabilities into a single, cohesive experience designed for the AI era.
 
-* **Simplified Policy Management & In-Console Marketplace****: As announced in September, Policy as Code is now available to all Team and Enterprise customers. Discovering, applying, and managing policies is radically simpler with a new marketplace directly in the Pulumi Cloud. You can browse, add, and configure expert-authored policy packs without ever touching the CLI.
+* **Simplified Policy Management & In-Console Marketplace****: As announced in September, Pulumi Policies is now available to all Team and Enterprise customers. Discovering, applying, and managing policies is radically simpler with a new marketplace directly in the Pulumi Cloud. You can browse, add, and configure expert-authored policy packs without ever touching the CLI.
 * **New Pre-Built Compliance Packs**: Accelerate your compliance journey from months to minutes. We are launching a new suite of expert-authored packs for **CIS Controls v8.1**, **NIST SP 800-53 Rev. 5**, and **PCI DSS v4.0**. These codify hundreds of controls, allowing you to enforce industry-standard baselines immediately.
 
 | Framework                 | AWS | Azure | Google Cloud |

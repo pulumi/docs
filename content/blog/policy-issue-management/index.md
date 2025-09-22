@@ -55,7 +55,7 @@ This is where your teams turn insight into action. The Issues tab is a collabora
 
 In any medium-to-large organization, thousands of cloud resources can lead to hundreds or even thousands of policy issues. Manually fixing them all is an impossible task, and in reality, most organizations can't keep up. The backlog grows, and the risk remains.
 
-This is where Pulumi Neo comes to the rescue. Pulumi Neo, our AI agent, is now integrated directly into the issue management workflow to automate the hardest part of the process: the fix itself. When viewing an issue, you can now trigger a Pulumi Neo remediation flow. Neo is smart enough to handle both resources already managed by Pulumi and those discovered via cloud scans.
+This is where Neo transforms governance from reactive to proactive. Pulumi Neo, our AI agent, is now integrated directly into the issue management workflow to automate the hardest part of the process: the fix itself. When viewing an issue, you can now trigger a Pulumi Neo remediation flow. Neo is smart enough to handle both resources already managed by Pulumi and those discovered via cloud scans.
 
 1. Analyze the non-compliant resource and the policy it's violating.
 2. Understand the required configuration to make it compliant.
@@ -63,10 +63,10 @@ This is where Pulumi Neo comes to the rescue. Pulumi Neo, our AI agent, is now i
 
 **Placeholder for a video**
 
-This is a revolutionary step forward. It turns a manual task that could take a developer hours into a simple review-and-merge process. With Pulumi Neo, you can finally burn down your issue backlog, drastically reduce your Mean Time to Remediate (MTTR), and achieve a state of continuous compliance at a scale that was previously unimaginable.
+This is a revolutionary step forward. It turns a manual task that could take a developer hours into a simple review-and-merge process. With Pulumi Neo, you can finally burn down your issue backlog and reduce manual remediation from hours to minutes through AI-powered automation, achieving a state of continuous compliance at a scale that was previously unimaginable.
 
 ### Conclusion
 
-Pulumi Policy is now an end-to-end governance solution that guides you from a high-level compliance overview, through collaborative triage, and all the way to an AI-generated fix.
+Pulumi Governance - through its Policies feature - is now an end-to-end governance solution that guides you from a high-level compliance overview, through collaborative triage, and all the way to an AI-generated fix.
 
 This powerful new experience is available today. Navigate to the **Policies > Findings** tab in the Pulumi Cloud to explore your new compliance dashboard and start turning your policy insights into action.

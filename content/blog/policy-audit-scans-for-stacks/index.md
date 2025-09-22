@@ -16,7 +16,7 @@ tags:
   - governance
 ---
 
-Today, as part of the Pulumi Policy as Code v2 launch, we're introducing a new capability: **Audit Policy Scans for IaC Stacks**. This feature allows you to run policy checks in Pulumi Cloud against the last successful deployment state, i.e., post-deployment of your stacks, completely independent of your CI/CD pipeline.
+Today, as part of the Pulumi Governance launch, we're introducing **Audit Policy Scans for Pulumi Stacks**. This capability uses the Policies feature to run compliance checks against the last successful deployment state of your stacks, providing continuous compliance monitoring alongside your existing CI/CD workflows..
 
 Until now, Pulumi’s preventative policies have served as a critical "shift-left" gate, blocking non-compliant changes during `pulumi up`. While essential, this created challenges for organizations wanting to roll out new governance across thousands of existing stacks or for teams looking to speed up deployment times. This new evaluation mode solves both problems, giving you a complete and continuous view of your IaC compliance posture without the friction.
 
@@ -26,7 +26,7 @@ Until now, Pulumi’s preventative policies have served as a critical "shift-lef
 
 Audit scans for IaC stacks are designed to unlock policy adoption at scale and accelerate developer velocity. Key use cases include:
 
-* **Gain an instant compliance overview across all existing stacks.** Organizations with hundreds of existing Pulumi stacks can apply policies centrally without performing a `pulumi up` on all of them. This gives an immediate, organization-wide compliance baseline without disrupting development.
+* **Gain an instant compliance overview across all existing stacks:** Organizations with hundreds of existing Pulumi stacks can apply policies centrally and get immediate visibility into their compliance posture without requiring redeployment of every stack.
 * **Accelerate developer workflows.** By decoupling policy evaluation from the critical deployment path, deployments become faster and developers are unblocked. Teams still get immediate feedback on the compliance of the deployed infrastructure without slowing down CI/CD pipelines.
 * **Ensure continuous compliance.** Post-deployment evaluation is automatically triggered whenever policy configurations change. This ensures the *latest policies* are always evaluated against the *latest deployed infrastructure*, providing a truly continuous, up-to-date view of your security posture.
 

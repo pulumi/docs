@@ -17,13 +17,13 @@ tags:
   - security
 ---
 
-We're excited to launch a new suite of pre-built compliance policy packs for **CIS Controls v8.1**, **NIST SP 800-53 Rev. 5**, and **PCI DSS v4.0**. These packs codify hundreds of industry-standard controls, allowing you to enforce critical security and compliance baselines across your cloud infrastructure in minutes, not months.
+We're excited to launch a new suite of pre-built compliance policy packs for **CIS Controls v8.1**, **NIST SP 800-53 Rev. 5**, and **PCI DSS v4.0**. These packs provide golden paths that codify hundreds of industry-standard controls, allowing you to enforce critical security and compliance baselines across your cloud infrastructure in minutes, not months.
 
 <!--more-->
 
 ### The Pulumi Difference: Prevent, Don't Just Detect
 
-Traditional security tools are reactive, scanning for problems *after* resources have been deployed. Pulumi Policy as Code lets you shift left by integrating governance directly into the infrastructure lifecycle, combining prevention with continuous auditing.
+Traditional security tools are reactive, scanning for problems *after* resources have been deployed. Policies create golden paths with built-in guardrails, letting you shift left by integrating governance directly into the infrastructure lifecycle, combining prevention with continuous auditing.
 
 * **Prevent Non-Compliance:** Policies act as guardrails during `pulumi up`, blocking non-compliant resources *before they are ever created*. This eliminates risk at the source.
 * **Audit for Full Coverage:** The same policies can be used to continuously audit your entire cloud estate, including resources managed by Pulumi and those created through other means.
