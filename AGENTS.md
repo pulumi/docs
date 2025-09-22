@@ -43,7 +43,6 @@ Do not substitute other tools or commands.
 
 - **Package manager**: Do **not** change `package.json` to use pnpm. Yarn/npm only.  
 - **New files**: Must always end with a newline.  
-- **Internal links**: Never use raw Markdown links for docs. Always use Hugo’s `relref` shortcode. (This applies only to agents. Humans may use markdown links as described in STYLE-GUIDE.md.)
 
 ---
 
@@ -65,6 +64,22 @@ Do not substitute other tools or commands.
 - **Naming**: Use lowercase for non-proper nouns (e.g. “stack,” not “Stack”).  
 - **Ordered Lists**: Every item begins with `1.` to minimize diff noise.
 - **Spelling/Grammar**: Always correct errors. Use American English spelling.
+
+---
+
+## Moving and Deleting Files
+
+- **Preserve file history**: When moving or renaming files within this repository, use `git mv` to preserve file history when possible.
+- **Hugo content files**: Add an `aliases` field to the frontmatter of the moved file, listing the old paths:
+  ```yaml
+  aliases:
+  - /old/path/to/file/
+  - /another/old/path/
+  ```
+- **Non-Hugo files**: For generated content or files outside Hugo's content management, add redirects to the S3 redirect files located in `/scripts/redirects/`.
+  - When adding S3 redirects, place entries in topic-appropriate files (e.g., `neo-redirects.txt` for Neo-related content).
+  - S3 redirect format: `source-path|destination-url` (e.g., `docs/old/path/index.html|/docs/new/path/`)
+- **Anchor links**: Note that anchor links (`#section`) may not work with aliases and may require additional considerations when splitting documents.
 
 ---
 
