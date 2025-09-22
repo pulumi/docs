@@ -86,4 +86,4 @@ It's time for platform engineering to keep pace instead of falling behind.
 
 Neo is available today in public preview. Ready to meet your newest platform engineer? Join thousands of teams already transforming their infrastructure workflows with the Pulumi platform.
 
-The future of platform engineering starts now, and it starts with [Neo](/docs/iac/neo/).
+The future of platform engineering starts now, and it starts with [Neo](/docs/pulumi-cloud/neo/).

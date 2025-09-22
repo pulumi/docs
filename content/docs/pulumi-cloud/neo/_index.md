@@ -5,11 +5,11 @@ title: Pulumi Neo
 h1: Pulumi Neo
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    cloud:
         name: Neo
-        parent: iac-home
-        weight: 22
-        identifier: iac-neo
+        parent: cloud-home
+        weight: 5
+        identifier: cloud-neo
 ---
 
 ## Overview
@@ -40,7 +40,7 @@ Neo handles routine infrastructure tasks that consume platform engineering time.
 
 #### Maintain Control and Compliance
 
-Every change Neo makes goes through [pull requests](/docs/iac/neo/pull-requests/), ensuring human review and your existing CI/CD pipeline validations. Neo operates within the [RBAC boundaries](/docs/pulumi-cloud/access-management/rbac/) of the user making the request and automatically enforces your [Pulumi policies](/docs/iac/crossguard/).
+Every change Neo makes goes through [pull requests](/docs/pulumi-cloud/neo/pull-requests/), ensuring human review and your existing CI/CD pipeline validations. Neo operates within the [RBAC boundaries](/docs/pulumi-cloud/access-management/rbac/) of the user making the request and automatically enforces your [Pulumi policies](/docs/iac/crossguard/).
 
 ## How Neo Fits into Pulumi
 
@@ -53,7 +53,7 @@ Neo complements and enhances your existing Pulumi workflows
 
 ## Tasks
 
-[Tasks](/docs/iac/neo/tasks/) are how Neo plans and executes multi-step operations while maintaining safety through comprehensive controls.
+[Tasks](/docs/pulumi-cloud/neo/tasks/) are how Neo plans and executes multi-step operations while maintaining safety through comprehensive controls.
 
 Safety is maintained through [policy controls](/docs/iac/crossguard/) that define guardrails for Neo's operations, ensuring all changes align with your organization's standards and compliance requirements.
 
@@ -62,7 +62,7 @@ Safety is maintained through [policy controls](/docs/iac/crossguard/) that defin
 Neo ensures that critical decisions require human approval and all infrastructure changes go through your existing review processes. This approach provides:
 
 - **Pull request-based changes**: All infrastructure modifications are proposed through PRs, maintaining your standard code review workflow
-- **Approval gates**: Intensive operations, such as running [Pulumi preview](/docs/iac/neo/running-previews/), pause for explicit human authorization before proceeding
+- **Approval gates**: Intensive operations, such as running [Pulumi preview](/docs/pulumi-cloud/neo/running-previews/), pause for explicit human authorization before proceeding
 - **Audit trails**: Complete visibility into what Neo planned, executed, and why
 
 This design gives you the benefits of automation while preserving the control and oversight essential for production infrastructure management.

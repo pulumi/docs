@@ -5,14 +5,11 @@ h1: Pull requests with Pulumi Neo
 meta_desc: Learn how Neo creates and manages pull requests to implement infrastructure changes through your existing review process.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    cloud:
         name: Pull requests
-        parent: iac-neo
+        parent: cloud-neo
         weight: 30
-        identifier: iac-neo-pull-requests
-    neo:
-        name: Pull requests
-        weight: 3
+        identifier: cloud-neo-pull-requests
 ---
 
 Pull requests are the bridge between Neo's AI capabilities and your production infrastructure. Every change Neo proposes goes through a PR, ensuring:
