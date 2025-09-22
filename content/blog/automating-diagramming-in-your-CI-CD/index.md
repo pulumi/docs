@@ -125,7 +125,7 @@ After each workflow run, you can download the generated diagrams from the Action
 
 For a more sophisticated setup, you could extend this workflow to automatically commit diagrams back to your repository, post them to Slack, or integrate them with your documentation system.
 
-![Pulumi Natively Generated Diagram](./pulumi_generated_diagram.png)
+![Pulumi Natively Generated Diagram](./architecture.png)
 
 ## AI-powered diagramming with Claude and Mermaid
 
