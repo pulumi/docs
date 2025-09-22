@@ -43,7 +43,6 @@ Do not substitute other tools or commands.
 
 - **Package manager**: Do **not** change `package.json` to use pnpm. Yarn/npm only.  
 - **New files**: Must always end with a newline.  
-- **Internal links**: Never use raw Markdown links for docs. Always use Hugo’s `relref` shortcode. (This applies only to agents. Humans may use markdown links as described in STYLE-GUIDE.md.)
 
 ---
 
@@ -65,6 +64,17 @@ Do not substitute other tools or commands.
 - **Naming**: Use lowercase for non-proper nouns (e.g. “stack,” not “Stack”).  
 - **Ordered Lists**: Every item begins with `1.` to minimize diff noise.
 - **Spelling/Grammar**: Always correct errors. Use American English spelling.
+
+---
+
+## Moving and Deleting Files
+
+- When moving, renaming, or deleting files, ensure all internal references are updated accordingly.
+- When moving files within this repository, use `git mv` to preserve file history.
+- Create redirects for any moved, renamed, or deleted files to maintain link integrity.
+- Redirects should be added to the S3 redirects files located in `/scripts/redirects/`.
+- When adding redirects, place the redirect entry in the appropriate file. If an appropriate file does not exist, create a new one. Name the new file in a way that reflects the content it manages (e.g., `neo-redirects.txt` for redirects related to Neo).
+- Each redirect entry must follow the format `source-path|destination-url`.
 
 ---
 
