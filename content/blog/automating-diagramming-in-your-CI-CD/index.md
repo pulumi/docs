@@ -12,15 +12,17 @@ summary: |
     Architecture diagrams are tedious to create and become outdated the moment infrastructure changes. When you manage infrastructure with Pulumi's infrastructure as code, you can automatically generate accurate diagrams directly from your IaC definitions. With Pulumi's preview capabilities, you can anticipate changes before deployment. Learn how to integrate automated diagram generation into your CI/CD pipeline using AI, Pulumi's native diagramming tools, and GitHub actions.
 ---
 
-Architecture diagrams are one of the most tedious aspects of infrastructure management. Teams spend countless hours manually creating and updating visual representations of their systems, only to watch them become stale the moment infrastructure changes.
+Architecture diagrams are one of the most tedious aspects of infrastructure management. Teams spend countless hours manually creating and updating visual representations of their systems, only to see them become outdated the moment infrastructure changes.
 
-When you manage your infrastructure in code, it's possible to automatically generate accurate, up-to-date diagrams directly from your IaC definitions and state. Pulumi's preview capabilities let you anticipate exactly what changes will result from code modifications before deployment, providing the perfect foundation for automated diagramming workflows.
+<!--more-->
+
+When you manage infrastructure as code, you can automatically generate accurate, up-to-date diagrams directly from your IaC definitions and state. Pulumi's preview capabilities let you anticipate exactly what changes will result from code modifications before deployment, providing the perfect foundation for automated diagramming workflows.
 
 In this post, we'll explore three practical approaches to automating diagram generation in your CI/CD pipeline:
 
 1. **Native Pulumi diagramming**: Using Pulumi's built-in diagramming capabilities to generate basic architecture diagrams that you can retrieve from GitHub Actions' artifact archive
-2. **AI-powered diagramming**: Leveraging the Claude app with Mermaid and Pulumi preview to generate detailed diagrams and automatically add them to pull requests for infrastructure changes
-3. **Pulumi Neo for enterprise diagramming**: Using Pulumi's AI-powered platform for organization-wide diagramming patterns, project-level and organization-level views, and intelligent customization for different stakeholders
+1. **AI-powered diagramming**: Leveraging the Claude app with Mermaid and Pulumi preview to generate detailed diagrams and automatically add them to pull requests for infrastructure changes
+1. **Pulumi Neo for enterprise diagramming**: Using Pulumi's AI-powered platform for organization-wide diagramming patterns, project-level and organization-level views, and intelligent customization for different stakeholders
 
 These approaches eliminate manual diagramming work while ensuring your documentation stays current with your actual infrastructure, from simple automation to enterprise-scale intelligent diagramming.
 
@@ -95,11 +97,11 @@ This workflow follows a straightforward pattern that ensures your diagrams alway
 
 1. **Deploy first**: The workflow uses the official `pulumi/actions@v5` action to deploy your infrastructure changes. This ensures the state reflects your latest code.
 
-2. **Generate diagram from state**: The `pulumi stack graph` command reads your deployed stack's state and generates a DOT format file containing the resource relationships and dependencies.
+1. **Generate diagram from state**: The `pulumi stack graph` command reads your deployed stack's state and generates a DOT format file containing the resource relationships and dependencies.
 
-3. **Convert to visual format**: Graphviz converts the DOT file into a PNG image that's easy to view and share.
+1. **Convert to visual format**: Graphviz converts the DOT file into a PNG image that's easy to view and share.
 
-4. **Archive as artifacts**: Both the raw DOT file and the rendered PNG are uploaded as GitHub Actions artifacts, making them downloadable from the workflow run.
+1. **Archive as artifacts**: Both the raw DOT file and the rendered PNG are uploaded as GitHub Actions artifacts, making them downloadable from the workflow run.
 
 ### Key advantages and limitations
 
@@ -226,15 +228,15 @@ jobs:
 
 1. **Automatic triggering**: When a pull request with infrastructure changes is opened, the auto-comment workflow adds a `@claude` mention, triggering Claude's analysis.
 
-2. **Infrastructure analysis**: Claude runs `pulumi preview --json` to get detailed information about planned infrastructure changes, including resource relationships and dependencies.
+1. **Infrastructure analysis**: Claude runs `pulumi preview --json` to get detailed information about planned infrastructure changes, including resource relationships and dependencies.
 
-3. **Intelligent diagram generation**: Claude analyzes the preview output and updates multiple Mermaid diagrams:
+1. **Intelligent diagram generation**: Claude analyzes the preview output and updates multiple Mermaid diagrams:
    - **AWS infrastructure diagram**: Technical view showing resources, networking, and data flow
    - **C4 diagrams**: Context, container, and component views for different stakeholder needs
 
-4. **Visual rendering**: The `mmdc` CLI converts Mermaid syntax to SVG files for immediate viewing.
+1. **Visual rendering**: The `mmdc` CLI converts Mermaid syntax to SVG files for immediate viewing.
 
-5. **PR integration**: Updated diagrams are committed directly to the pull request branch, making them visible in code review.
+1. **PR integration**: Updated diagrams are committed directly to the pull request branch, making them visible in code review.
 
 ### Example generated diagram
 
@@ -298,27 +300,27 @@ Pulumi Neo streamlines enterprise diagramming through an intelligent, organizati
 
    ![Folder Structure](./folder_structure.png)
 
-2. **Neo prompt engineering**: Use structured prompts to guide Neo's diagram generation with enterprise-grade specificity. You can also select your architecture diagram repository to tell Neo where to store his work:
+1. **Neo prompt engineering**: Use structured prompts to guide Neo's diagram generation with enterprise-grade specificity. You can also select your architecture diagram repository to tell Neo where to store his work:
 
    ```
    1. Scope: Create diagrams for all resources in my prod Pulumi stacks
-   2. Diagram Types:
+   1. Diagram Types:
      - Individual stack diagrams showing resources within each stack
      - Master overview diagram showing cross-stack dependencies and data flow
-   3. Visual Standards:
+   1. Visual Standards:
      - Use official AWS/Azure/GCP service icons from their architecture icon sets
      - Show resource relationships with labeled connections (security groups, subnets, etc.)
      - Group related resources visually (VPC boundaries, availability zones)
-   4. Content Focus:
+   1. Content Focus:
      - Infrastructure resources only (compute, storage, networking, databases)
      - Resource dependencies and data flow directions
      - Cross-stack references and shared resources
-   5. Format: Generate diagrams as Mermaid code that can be rendered in documentation
+   1. Format: Generate diagrams as Mermaid code that can be rendered in documentation
    ```
 
    ![Neo Prompt](./neo_prompt.png)
 
-3. **Automated pull request generation**: Neo analyzes your entire organization's infrastructure state, identifies changes, and automatically creates pull requests with updated diagrams for review and approval.
+1. **Automated pull request generation**: Neo analyzes your entire organization's infrastructure state, identifies changes, and automatically creates pull requests with updated diagrams for review and approval.
 
 {{% notes type="info" %}}
 **Complete example**: You can see my resulting architecture diagrams repository on [GitHub](https://github.com/Elisabeth-Team/Architecture-Diagrams).
@@ -342,7 +344,7 @@ Pulumi Neo offers the most sophisticated approach to infrastructure diagramming,
 
 However, Neo also has limitations:
 
-**AI interpretation risks**: Like the Claude approach, there's inherent risk in AI-generated diagrams potentially missing nuances or making incorrect assumptions about complex enterprise infrastructure relationships.
+**AI interpretation risks**: Like the Claude approach, AI-generated diagrams may miss nuances or making incorrect assumptions about complex enterprise infrastructure relationships.
 
 **Repository access requirements**: Neo requires permissions to open pull requests against your repository and access to your organization's infrastructure state, which may require additional security reviews in regulated environments.
 
