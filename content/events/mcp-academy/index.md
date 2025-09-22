@@ -1,8 +1,8 @@
 ---
 # Name of the event, <= 60 characters
-title: AWS re:Invent 2025
-meta_desc: "Visit Pulumi booth #1127 at AWS re:Invent"
-meta_image:
+title: MCP Academy PNW
+meta_desc: Learn from peers who are using the Model Context Protocol to get more value from AI, every day.
+meta_image: 
 
 # A featured webinar will display first in the list.
 featured: false
@@ -26,12 +26,12 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://reinvent.awsevents.com/
+url_slug: https://luma.com/mcpacademypnw
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: AWS re:Invent 2025
+    title: MCP Academy PNW
 
     event_type: event # workshop | event
 
@@ -39,15 +39,16 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-12-01T09:00:00-00:00
+    sortable_date: 2025-10-29T09:00:00-00:00
 
     # Duration of the webinar.
-    duration: 4 days
+    duration: 1 day
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: Las Vegas, NV
+    location: Seattle, WA
+
     # Description of the webinar.
-    description: "Visit Pulumi booth #1127 at AWS re:Invent, where pioneers gather from across the globe to hear the latest AWS innovations, peer-to-peer learning and invaluable networking opportunities."
+    description: Learn from peers who are using the Model Context Protocol to get more value from AI, every day.
 
     # The webinar presenters
     presenters:
@@ -57,7 +58,7 @@ main:
         level: # Beginner, Intermediate, Advanced
         topics: []
         languages: []
-        clouds: ["AWS"]
+        clouds: []
 
 # The right hand side form section.
 form:
