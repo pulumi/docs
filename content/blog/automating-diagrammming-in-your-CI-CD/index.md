@@ -126,6 +126,8 @@ After each workflow run, you can download the generated diagrams from the Action
 
 For a more sophisticated setup, you could extend this workflow to automatically commit diagrams back to your repository, post them to Slack, or integrate them with your documentation system.
 
+![Pulumi Natively Generated Diagram](./pulumi_generated_diagram.png)
+
 ## AI-powered diagramming with Claude and Mermaid
 
 The second approach leverages Claude's ability to analyze Pulumi preview output and generate aesthetically pleasing, contextually relevant diagrams using Mermaid syntax. This method addresses the styling limitations of native Pulumi diagrams while maintaining accuracy through `pulumi preview` integration.
