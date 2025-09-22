@@ -16,7 +16,7 @@ Architecture diagrams are one of the most tedious aspects of infrastructure mana
 
 <!--more-->
 
-When you manage infrastructure as code, you can automatically generate accurate, up-to-date diagrams directly from your IaC definitions and state. Pulumi's preview capabilities let you anticipate exactly what changes will result from code modifications before deployment, providing the perfect foundation for automated diagramming workflows.
+When you manage your infrastructure as code, you can automatically generate accurate, up-to-date diagrams directly from your IaC definitions and state. Pulumi's preview capabilities let you anticipate exactly what changes will result from code modifications before deployment, providing the perfect foundation for automated diagramming workflows.
 
 In this post, we'll explore three practical approaches to automating diagram generation in your CI/CD pipeline:
 
@@ -286,7 +286,7 @@ This approach works best for teams that value diagram aesthetics and need multip
 
 ## Pulumi Neo: Enterprise-scale intelligent diagramming
 
-Pulumi Neo represents the next evolution in infrastructure diagramming, bringing AI-powered intelligence to organization-wide diagram generation. Unlike the previous approaches that focus on individual stacks, Pulumi Neo provides enterprise-scale diagramming capabilities with intelligent customization for different stakeholders.
+Pulumi Neo brings the next evolution in infrastructure diagramming, with AI-powered intelligence that enables organization-wide diagram generation. Unlike the previous approaches that focus on individual stacks, Pulumi Neo provides enterprise-scale diagramming capabilities with intelligent customization for different stakeholders.
 
 ### How the workflow works
 
@@ -344,9 +344,9 @@ Pulumi Neo offers the most sophisticated approach to infrastructure diagramming,
 
 However, Neo also has limitations:
 
-**AI interpretation risks**: Like the Claude approach, AI-generated diagrams may miss nuances or making incorrect assumptions about complex enterprise infrastructure relationships.
+**AI interpretation risks**: Like the Claude approach, AI-generated diagrams may miss nuances or make incorrect assumptions about complex enterprise infrastructure relationships.
 
-**Repository access requirements**: Neo requires permissions to open pull requests against your repository and access to your organization's infrastructure state, which may require additional security reviews in regulated environments.
+**Repository access requirements**: Neo requires permissions to open pull requests against your repository.
 
 **Learning investment**: Getting maximum value from Neo requires developing sophisticated prompt engineering skills and understanding how to structure repositories for optimal AI comprehension.
 
