@@ -5,14 +5,11 @@ h1: Running previews with Pulumi Neo
 meta_desc: Learn how Neo uses Pulumi preview to validate infrastructure changes before creating pull requests.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    cloud:
         name: Previews
-        parent: iac-neo
+        parent: cloud-neo
         weight: 20
-        identifier: iac-neo-running-previews
-    neo:
-        name: Previews
-        weight: 2
+        identifier: cloud-neo-running-previews
 ---
 
 Neo can run [preview](/docs/iac/cli/commands/pulumi_preview/) directly from Pulumi Cloud to validate proposed infrastructure changes before creating pull requests. This capability provides confidence that suggested modifications do not result in unexpected resource changes and comply with [policies](/docs/iac/crossguard/).

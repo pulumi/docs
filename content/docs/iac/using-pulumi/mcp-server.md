@@ -24,7 +24,7 @@ The [Model Context Protocol (MCP)](https://modelcontextprotocol.io) is a specifi
 - **Validate infrastructure code** before deployment
 - **Catch and autofix IaC policy violations** using Pulumi's policy-as-code capabilities
 - **Debug deployment issues** with real-time feedback
-- **Interact with [Pulumi Neo](/docs/iac/neo)** for advanced infrastructure tasks
+- **Interact with [Pulumi Neo](/docs/pulumi-cloud/neo)** for advanced infrastructure tasks
 
 This enables a more intuitive, conversational approach to infrastructure development where you can describe what you want to build in natural language, and the AI assistant can discover resources, generate code, and manage deployments—all without leaving your editor.
 

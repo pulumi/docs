@@ -5,14 +5,11 @@ h1: Tasks in Pulumi Neo
 meta_desc: Learn about tasks, the primary entity for interacting with Neo to perform infrastructure operations.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    cloud:
         name: Tasks
-        parent: iac-neo
+        parent: cloud-neo
         weight: 15
-        identifier: iac-neo-tasks
-    neo:
-        name: Tasks
-        weight: 1.5
+        identifier: cloud-neo-tasks
 ---
 
 Tasks are Neo's primary unit of work. Each task represents a distinct conversation where you describe what you want to accomplish, and Neo plans and executes the necessary infrastructure changes. Tasks provide structure, context, and boundaries for Neo's operations.
@@ -50,11 +47,11 @@ Neo will seek approval before opening a PR or running a preview.
 
 ### Pulumi Previews
 
-At any time, you can explicitly ask Neo to run a [pulumi preview](/docs/iac/cli/commands/pulumi_preview/). As well, if Neo proposes code changes as part of a task, it will request to run a preview to help obtain feedback on the changes. [Learn more](/docs/iac/neo/running-previews/) about Neo and previews.
+At any time, you can explicitly ask Neo to run a [pulumi preview](/docs/iac/cli/commands/pulumi_preview/). As well, if Neo proposes code changes as part of a task, it will request to run a preview to help obtain feedback on the changes. [Learn more](/docs/pulumi-cloud/neo/running-previews/) about Neo and previews.
 
 ### Pull Requests
 
-If a task results in Neo proposing code modifications, it will offer to open a [pull request](/docs/iac/neo/pull-requests/) once the user is satisfied with the implementation. PRs can also be modified after they've been opened.
+If a task results in Neo proposing code modifications, it will offer to open a [pull request](/docs/pulumi-cloud/neo/pull-requests/) once the user is satisfied with the implementation. PRs can also be modified after they've been opened.
 
 ## Setting the Entity Context
 

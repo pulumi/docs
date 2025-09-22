@@ -98,7 +98,7 @@ learn:
             - link: https://www.youtube.com/watch?v=9GB9M2l1OgY
               type: primary
               action: See Neo in Action
-            - link: /docs/iac/neo/
+            - link: /docs/pulumi-cloud/neo/
               type: secondary
               action: Read the Docs
 ---

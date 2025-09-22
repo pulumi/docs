@@ -1,0 +1,12 @@
+docs/iac/neo/index.html|/docs/pulumi-cloud/neo/
+docs/iac/neo/|/docs/pulumi-cloud/neo/
+docs/iac/neo/get-started/index.html|/docs/pulumi-cloud/neo/get-started/
+docs/iac/neo/get-started/|/docs/pulumi-cloud/neo/get-started/
+docs/iac/neo/tasks/index.html|/docs/pulumi-cloud/neo/tasks/
+docs/iac/neo/tasks/|/docs/pulumi-cloud/neo/tasks/
+docs/iac/neo/pull-requests/index.html|/docs/pulumi-cloud/neo/pull-requests/
+docs/iac/neo/pull-requests/|/docs/pulumi-cloud/neo/pull-requests/
+docs/iac/neo/running-previews/index.html|/docs/pulumi-cloud/neo/running-previews/
+docs/iac/neo/running-previews/|/docs/pulumi-cloud/neo/running-previews/
+docs/neo/index.html|/docs/pulumi-cloud/neo/
+docs/neo/|/docs/pulumi-cloud/neo/
