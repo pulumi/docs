@@ -1,6 +1,6 @@
 ---
 title: KubeCon 2025
-meta_desc: Scale Kubernetes operations with Neo - the first infrastructure AI agent built for K8s environments.
+meta_desc: Discover how Pulumi transforms cloud infrastructure for the AI era at KubeCon, Booth 1045. Book your demo today.
 meta_image: /images/kubecon/kubecon-meta-26.png
 type: page
 layout: kubecon
