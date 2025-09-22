@@ -286,23 +286,67 @@ This approach works best for teams that value diagram aesthetics and need multip
 
 Pulumi Neo represents the next evolution in infrastructure diagramming, bringing AI-powered intelligence to organization-wide diagram generation. Unlike the previous approaches that focus on individual stacks, Pulumi Neo provides enterprise-scale diagramming capabilities with intelligent customization for different stakeholders.
 
-[Content for Pulumi Neo section to be added here]
+### How the workflow works
 
-### Organization-wide diagramming patterns
+Pulumi Neo streamlines enterprise diagramming through an intelligent, organization-aware approach that scales across multiple projects and stakeholders:
 
-[Content about organization-wide patterns to be added here]
+1. **Repository setup**: Create a dedicated repository to host your architecture diagrams and ensure your [GitHub App](https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/github-app/) has access. The repository structure helps Neo understand your diagramming patterns:
+   - `overview/` folder for organization-wide infrastructure views
+   - `stacks/` folder for individual stack diagrams
+   - Template files that Neo can model new diagrams from
+   - README documentation explaining the repository's purpose and conventions
 
-### Multi-level views: Project and organization perspectives
+   ![Folder Structure](./folder_structure.png)
 
-[Content about project and organization-level views to be added here]
+2. **Neo prompt engineering**: Use structured prompts to guide Neo's diagram generation with enterprise-grade specificity. You can also select your architecture diagram repository to tell Neo where to store his work:
 
-### Intelligent stakeholder customization
+   ```
+   1. Scope: Create diagrams for all resources in my prod Pulumi stacks
+   2. Diagram Types:
+     - Individual stack diagrams showing resources within each stack
+     - Master overview diagram showing cross-stack dependencies and data flow
+   3. Visual Standards:
+     - Use official AWS/Azure/GCP service icons from their architecture icon sets
+     - Show resource relationships with labeled connections (security groups, subnets, etc.)
+     - Group related resources visually (VPC boundaries, availability zones)
+   4. Content Focus:
+     - Infrastructure resources only (compute, storage, networking, databases)
+     - Resource dependencies and data flow directions
+     - Cross-stack references and shared resources
+   5. Format: Generate diagrams as Mermaid code that can be rendered in documentation
+   ```
 
-[Content about stakeholder-specific diagram customization to be added here]
+   ![Neo Prompt](./neo_prompt.png)
+
+3. **Automated pull request generation**: Neo analyzes your entire organization's infrastructure state, identifies changes, and automatically creates pull requests with updated diagrams for review and approval.
+
+### Key advantages and limitations
+
+Pulumi Neo offers the most sophisticated approach to infrastructure diagramming, particularly for enterprise environments:
+
+**Enterprise-scale intelligence**: Neo understands your entire organization's infrastructure landscape, generating diagrams that show cross-project dependencies and organization-wide resource relationships that individual stack-based approaches cannot capture.
+
+**Style customization**: Customize your prompts to request different styles of diagrams.
+
+**Organizational consistency**: Maintains consistent diagramming standards across teams and projects, ensuring visual coherence in large organizations with multiple infrastructure teams.
+
+**Cross-stack visibility**: Unlike single-stack approaches, Neo provides organization-wide infrastructure views showing how different projects and teams' resources interconnect.
+
+**Template-driven generation**: Learns from your existing diagram patterns and templates to maintain consistency with your established visual standards and conventions.
+
+**AI-powered context understanding**: Goes beyond simple resource mapping to understand business context, automatically highlighting critical paths, security boundaries, and architectural patterns.
+
+However, Neo also has limitations:
+
+**AI interpretation risks**: Like the Claude approach, there's inherent risk in AI-generated diagrams potentially missing nuances or making incorrect assumptions about complex enterprise infrastructure relationships.
+
+**Repository access requirements**: Neo requires permissions to open pull requests against your repository and access to your organization's infrastructure state, which may require additional security reviews in regulated environments.
+
+**Learning investment**: Getting maximum value from Neo requires developing sophisticated prompt engineering skills and understanding how to structure repositories for optimal AI comprehension.
 
 ## Conclusion
 
-Automating diagram generation transforms one of the most tedious aspects of infrastructure management into a seamless part of your development workflow. Both approaches eliminate the manual overhead of keeping architecture diagrams current while solving the core problem of documentation drift.
+Automating diagram generation transforms one of the most tedious aspects of infrastructure management into a seamless part of your development workflow. All three approaches eliminate the manual overhead of keeping architecture diagrams current while solving the core problem of documentation drift.
 
 **Choose native Pulumi diagramming** when accuracy is paramount and you need diagrams that perfectly reflect your deployed infrastructure. This approach offers the highest reliability with minimal setup complexity.
 
