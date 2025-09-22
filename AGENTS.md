@@ -69,12 +69,17 @@ Do not substitute other tools or commands.
 
 ## Moving and Deleting Files
 
-- When moving, renaming, or deleting files, ensure all internal references are updated accordingly.
-- When moving files within this repository, use `git mv` to preserve file history.
-- Create redirects for any moved, renamed, or deleted files to maintain link integrity.
-- Redirects should be added to the S3 redirects files located in `/scripts/redirects/`.
-- When adding redirects, place the redirect entry in the appropriate file. If an appropriate file does not exist, create a new one. Name the new file in a way that reflects the content it manages (e.g., `neo-redirects.txt` for redirects related to Neo).
-- Each redirect entry must follow the format `source-path|destination-url`.
+- **Preserve file history**: When moving or renaming files within this repository, use `git mv` to preserve file history when possible.
+- **Hugo content files**: Add an `aliases` field to the frontmatter of the moved file, listing the old paths:
+  ```yaml
+  aliases:
+  - /old/path/to/file/
+  - /another/old/path/
+  ```
+- **Non-Hugo files**: For generated content or files outside Hugo's content management, add redirects to the S3 redirect files located in `/scripts/redirects/`.
+  - When adding S3 redirects, place entries in topic-appropriate files (e.g., `neo-redirects.txt` for Neo-related content).
+  - S3 redirect format: `source-path|destination-url` (e.g., `docs/old/path/index.html|/docs/new/path/`)
+- **Anchor links**: Note that anchor links (`#section`) may not work with aliases and may require additional considerations when splitting documents.
 
 ---
 
