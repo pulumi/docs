@@ -5,7 +5,7 @@ authors:
   - "elisabeth-lichtie"
 tags: ["aws", "diagram", "architecture", "CI/CD", "anthropic", "claude", "github", "actions"]
 meta_desc: "Automate tedious diagramming work in your CI/CD pipelines to maintain always-accurate architecture diagrams."
-date: "2025-09-02"
+date: "2025-09-22"
 meta_image: "Automatic_Diagramming.png"
 
 summary: |
@@ -16,14 +16,13 @@ Architecture diagrams are one of the most tedious aspects of infrastructure mana
 
 When you manage your infrastructure in code, it's possible to automatically generate accurate, up-to-date diagrams directly from your IaC definitions and state. Pulumi's preview capabilities let you anticipate exactly what changes will result from code modifications before deployment, providing the perfect foundation for automated diagramming workflows.
 
-In this post, we'll explore two practical approaches to automating diagram generation in your CI/CD pipeline:
+In this post, we'll explore three practical approaches to automating diagram generation in your CI/CD pipeline:
 
 1. **Native Pulumi diagramming**: Using Pulumi's built-in diagramming capabilities to generate basic architecture diagrams that you can retrieve from GitHub Actions' artifact archive
 2. **AI-powered diagramming**: Leveraging the Claude app with Mermaid and Pulumi preview to generate detailed diagrams and automatically add them to pull requests for infrastructure changes
+3. **Pulumi Neo for enterprise diagramming**: Using Pulumi's AI-powered platform for organization-wide diagramming patterns, project-level and organization-level views, and intelligent customization for different stakeholders
 
-Both approaches eliminate manual diagramming work while ensuring your documentation stays current with your actual infrastructure.
-
-Pulumi's ongoing investment in AI capabilities will soon unlock even more powerful possibilities: organization-wide diagramming patterns and styles, project-level and organization-level views beyond individual stacks, and diagrams intelligently customized for different stakeholders with varying levels of detail and visibility. The examples in this post are just the beginning of how Pulumi's AI-enabled approach will transform infrastructure documentation.
+These approaches eliminate manual diagramming work while ensuring your documentation stays current with your actual infrastructure, from simple automation to enterprise-scale intelligent diagramming.
 
 ## Native Pulumi diagramming with GitHub Actions
 
@@ -283,6 +282,24 @@ However, this approach also has limitations:
 
 This approach works best for teams that value diagram aesthetics and need multiple architectural views for different stakeholders, while accepting slightly more complexity and potential accuracy trade-offs in exchange for significantly better visual presentation.
 
+## Pulumi Neo: Enterprise-scale intelligent diagramming
+
+Pulumi Neo represents the next evolution in infrastructure diagramming, bringing AI-powered intelligence to organization-wide diagram generation. Unlike the previous approaches that focus on individual stacks, Pulumi Neo provides enterprise-scale diagramming capabilities with intelligent customization for different stakeholders.
+
+[Content for Pulumi Neo section to be added here]
+
+### Organization-wide diagramming patterns
+
+[Content about organization-wide patterns to be added here]
+
+### Multi-level views: Project and organization perspectives
+
+[Content about project and organization-level views to be added here]
+
+### Intelligent stakeholder customization
+
+[Content about stakeholder-specific diagram customization to be added here]
+
 ## Conclusion
 
 Automating diagram generation transforms one of the most tedious aspects of infrastructure management into a seamless part of your development workflow. Both approaches eliminate the manual overhead of keeping architecture diagrams current while solving the core problem of documentation drift.
@@ -291,6 +308,8 @@ Automating diagram generation transforms one of the most tedious aspects of infr
 
 **Choose AI-powered diagramming** when you need polished, stakeholder-friendly diagrams and can accept slightly more complexity for significantly better aesthetics and multiple architectural perspectives.
 
-Regardless of which approach you choose, you'll eliminate hours of manual work while ensuring your documentation stays synchronized with your infrastructure changes. As Pulumi continues advancing its AI capabilities, the possibilities for intelligent, context-aware diagramming will only expand, making infrastructure documentation both effortless and incredibly powerful.
+**Choose Pulumi Neo** when you need enterprise-scale diagramming with organization-wide consistency, multi-level views across projects and stacks, and intelligent customization for different stakeholders with varying technical backgrounds.
 
-The future of infrastructure documentation is automated, intelligent, and always accurate. With these examples as your foundation, you're ready to transform how your team approaches architecture visualization.
+Regardless of which approach you choose, you'll eliminate hours of manual work while ensuring your documentation stays synchronized with your infrastructure changes. With Pulumi Neo's AI capabilities now available, intelligent, context-aware diagramming has moved from possibility to reality, making infrastructure documentation both effortless and incredibly powerful.
+
+The future of infrastructure documentation is here: automated, intelligent, and always accurate. With these examples as your foundation, you're ready to transform how your team approaches architecture visualization at any scale.
