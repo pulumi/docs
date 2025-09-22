@@ -1,5 +1,5 @@
 ---
-title: "Introducing Audit Policy Scans for IaC Stacks"
+title: "Introducing Audit Policy Scans for Pulumi Stacks"
 date: 2025-10-22
 authors:
   - levi-blackstone
@@ -27,7 +27,7 @@ Until now, Pulumi’s preventative policies have served as a critical "shift-lef
 Audit scans for IaC stacks are designed to unlock policy adoption at scale and accelerate developer velocity. Key use cases include:
 
 * **Gain an instant compliance overview across all existing stacks:** Organizations with hundreds of existing Pulumi stacks can apply policies centrally and get immediate visibility into their compliance posture without requiring redeployment of every stack.
-* **Accelerate developer workflows.** By decoupling policy evaluation from the critical deployment path, deployments become faster and developers are unblocked. Teams still get immediate feedback on the compliance of the deployed infrastructure without slowing down CI/CD pipelines.
+* **Accelerate policy rollouts:** By decoupling policy evaluation from the critical deployment path, deployments become faster and developers are unblocked. Teams still get immediate feedback on the compliance of the deployed infrastructure without slowing down CI/CD pipelines.
 * **Ensure continuous compliance.** Post-deployment evaluation is automatically triggered whenever policy configurations change. This ensures the *latest policies* are always evaluated against the *latest deployed infrastructure*, providing a truly continuous, up-to-date view of your security posture.
 
 ### How It Works
