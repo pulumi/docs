@@ -57,7 +57,7 @@ social:
 # for details, and please remove these comments before submitting for review.
 ---
 
-The Platform Engineering & DevOps in-person series launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” in which he discussed Cloud-Native Platforms, The Platform Maturity Model, and approaching Platforms as Products. 
+The Platform Engineering & DevOps in-person series launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” in which he discussed Cloud-Native Platforms, The Platform Maturity Model, and approaching Platforms as Products.
 
 In this article, you'll learn more about [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) and how to get involved with the CNCF Platform Working Group. Make sure to check our [Pulumi User Groups (PUGs)](https://www.meetup.com/pro/pugs/) to find a meetup near you.
 
@@ -91,7 +91,7 @@ A cloud-native platform is a strategic business initiative that enables organiza
 - **[Developer-centricity](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: The platform should empower developers to be more productive by providing self-service capabilities, streamlined workflows, and a consistent developer experience.
 - **[Operational efficiency](https://www.pulumi.com/blog/developer-portal-platform-teams/)**: The platform should simplify and automate the management and maintenance of the underlying infrastructure, allowing the organization to focus on delivering value to customers.
 - **Continuous improvement**: The platform should be designed with a mindset of continuous evolution, with regular updates and enhancements to address emerging needs and technologies.
-  
+
 By aligning with these principles, organizations can achieve faster time-to-market, improved developer productivity, and reduced operational overhead.
 
 ## The Platform Maturity Model: Charting the Path to Success

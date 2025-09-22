@@ -211,6 +211,7 @@ func main() {
 
 }
 ```
+
 {{% /choosable %}}
 
 ## Example Scenarios: Pulumi ESC SDK in Action

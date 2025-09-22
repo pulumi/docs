@@ -24,6 +24,7 @@ The [Model Context Protocol (MCP)](https://modelcontextprotocol.io) is a specifi
 - **Validate infrastructure code** before deployment
 - **Catch and autofix IaC policy violations** using Pulumi's policy-as-code capabilities
 - **Debug deployment issues** with real-time feedback
+- **Interact with [Pulumi Neo](/docs/iac/neo)** for advanced infrastructure tasks
 
 This enables a more intuitive, conversational approach to infrastructure development where you can describe what you want to build in natural language, and the AI assistant can discover resources, generate code, and manage deployments—all without leaving your editor.
 
@@ -140,14 +141,16 @@ In Windsurf, configure the MCP server through the IDE settings:
 
 1. Open Windsurf settings
 2. Navigate to MCP Servers section
-3. Add a new server with the following configuration:
+3. In `mcpServers` section, add a new server with the following configuration:
 
 ```json
-{
-  "name": "pulumi",
+"pulumi": {
   "command": "npx",
-  "args": ["@pulumi/mcp-server"],
-  "type": "stdio"
+  "args": [
+    "@pulumi/mcp-server",
+    "stdio"
+  ],
+  "env": {}
 }
 ```
 
@@ -231,6 +234,10 @@ Continue working conversationally:
 
 The assistant can make incremental changes, validate them, and update your infrastructure.
 
+## Integration with Pulumi Neo
+
+Pulumi MCP server handles basic infrastructure tasks directly, while also allowing you to delegate advanced scenarios to Pulumi Neo, Pulumi's purpose-built infrastructure automation agent. Simply tell your AI assistant to invoke Neo, and it will create a new task that you can complete in the Pulumi Console.
+
 ## Examples
 
 ### Provisioning an AKS cluster
@@ -259,6 +266,15 @@ Here's an example interaction for creating an Azure Kubernetes Service cluster:
 3. Links it to the existing web app
 4. Configures alert rules
 5. Previews and deploys the changes
+
+### Launching a Neo task
+
+**You:** "Ask Neo to find policy violations for my S3 buckets, and create a GitHub PR with the fix"
+
+**AI Assistant response:**
+
+1. Launches a new Neo task a invites you to navigate to the Pulumi Console using the provided link
+2. In the meantime, Neo immediately starts working on a task by creating a plan and completing it step by step
 
 ## Benefits
 

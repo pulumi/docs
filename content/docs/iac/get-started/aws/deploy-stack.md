@@ -43,7 +43,7 @@ Previewing update (dev):
 
      Type                 Name            Plan
  +   pulumi:pulumi:Stack  quickstart-dev  create
- +   └─ aws:s3:BucketV2   my-bucket       create
+ +   └─ aws:s3:Bucket     my-bucket       create
 
 Resources:
     + 2 to create
@@ -67,7 +67,7 @@ Updating (dev):
 
      Type                 Name            Status
  +   pulumi:pulumi:Stack  quickstart-dev  created (4s)
- +   └─ aws:s3:BucketV2   my-bucket       created (2s)
+ +   └─ aws:s3:Bucket     my-bucket       created (2s)
 
 Outputs:
     bucketName: "my-bucket-58ce361"

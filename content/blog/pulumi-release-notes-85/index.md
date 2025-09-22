@@ -145,7 +145,7 @@ Lean more in the [Remove the "yes, using Update Plans" prompt issue](https://git
 
 Building JSON from values and parsing strings into JSON are two of the most common operations in Pulumi programs. All programming languages have built-in libraries to do so. However, quite often JSON operations need to be combined with Pulumi [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/), which required writing a cumbersome combination of `Apply` and serialization method calls.
 
-To streamline this experience, Pulumi SDKs shipped helper serialization and deserialization functions that undertand the type `Output<T>` natively. Here is a simple usage example in Python, where `table.arn` is an output coming from another resource:
+To streamline this experience, Pulumi SDKs shipped helper serialization and deserialization functions that understand the type `Output<T>` natively. Here is a simple usage example in Python, where `table.arn` is an output coming from another resource:
 
 ```python
 policy = iam.Policy(

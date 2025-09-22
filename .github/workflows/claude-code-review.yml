@@ -1,0 +1,84 @@
+name: Claude Code Review
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+    # Optional: Only run on specific file changes
+    # paths:
+    #   - "src/**/*.ts"
+    #   - "src/**/*.tsx"
+    #   - "src/**/*.js"
+    #   - "src/**/*.jsx"
+
+jobs:
+  claude-review:
+    # Optional: Filter by PR author
+    # if: |
+    #   github.event.pull_request.user.login == 'external-contributor' ||
+    #   github.event.pull_request.user.login == 'new-developer' ||
+    #   github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR'
+    
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+      id-token: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run Claude Code Review
+        id: claude-review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Please review this pull request (#${{ github.event.pull_request.number }}) and provide feedback.
+
+            Provide your review as a single comment on the pull request, summarizing any issues found and suggesting improvements. Do not create multiple comments.
+
+            Use the repository's CLAUDE.md, AGENTS.md, and STYLE-GUIDE.md for guidance on style and conventions.
+
+            Be constructive and helpful in your feedback.
+
+            Always provide relevant line numbers for any issues you identify.
+
+            These rules **must** be followed during all pull request reviews:
+
+            - Always enforce `STYLE-GUIDE.md`. If not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
+            - Check **spelling and grammar** in all files.
+            - Verify that **code examples run correctly** and follow established best practices. Do not suggest untested code.
+            - Confirm that **all links resolve** and point to the correct targets (no 404s, no mislinked paths).
+            - Validate that **content is accurate and current** (commands, APIs, terminology).
+            - Ensure **all new files end with a newline**.
+            - **If files are moved, renamed, or deleted**:
+              - Ensure that all references to them are updated accordingly.
+              - Ensure that redirects are created for any moved or renamed files, if applicable.
+            - **Documentation**: Serve the role of a professional technical writer. Review for:
+              - Clarity and conciseness.
+              - Logical flow and structure.
+              - No jargon unless defined.
+              - Avoid passive voice.
+              - Avoid overly complex sentences. Shorter is usually better.
+              - Avoid superlatives and vague qualifiers.
+              - Avoid unnecessary filler words or sentences.
+              - Be specific and provide examples.
+              - Use consistent terminology.
+            - **Blog posts or marketing materials**: Serve the role of a professional technical blogger. Review for:
+              - Clear, engaging titles.
+              - Strong opening that hooks the reader.
+              - Clear structure with headings and subheadings.
+              - Concise paragraphs (3-4 sentences max).
+              - Use of lists and bullet points for readability.
+              - Reject filler, vague generalities, or AI-generated slop.
+              - Avoid clickbait phrasing.
+              - Clear call-to-action at the end.
+                      
+          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
+          # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
+          claude_args: '--allowed-tools "Bash(gh issue view:*),Bash(gh search:*),Bash(gh issue list:*),Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),Bash(gh pr list:*)"'
+

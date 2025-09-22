@@ -22,8 +22,9 @@ node_modules
 # it from being added mistakenly.
 /package-lock.json
 
-# Python's virtual env dir.
+# Python virtual env dirs.
 venv/
+.venv/
 
 # Pipenv
 .env
@@ -65,6 +66,6 @@ _vendor/
 
 # VScode solution files.
 *.sln
-**/.claude/settings.local.json
 
-.claude
+#Claude settings
+**/.claude/settings.local.json

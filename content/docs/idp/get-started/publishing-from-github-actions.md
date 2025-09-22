@@ -370,7 +370,7 @@ jobs:
 
 This workflow will be automatically triggered any time a tag is pushed. The easiest way to do that is via the GitHub web-ui, by clicking on "Releases" then "Draft a new Release", which will give a form that includes a new semver tag, name of the release, and release notes. When the release is made it will push a tag to the repo, which will then trigger this workflow. It can also be run manually.
 
-Similiarly to the testing workflow, we use a mix of Pulumi-specific GitHub Actions, as well as some off-the-shelf standard actions:
+Similarly to the testing workflow, we use a mix of Pulumi-specific GitHub Actions, as well as some off-the-shelf standard actions:
 
 - `actions/checkout@v4` - check out the code into the Github runner
 - `pulumi/auth-actions@v1` - authenticate with Pulumi Cloud

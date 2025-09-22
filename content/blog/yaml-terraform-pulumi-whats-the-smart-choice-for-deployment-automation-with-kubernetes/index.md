@@ -4,7 +4,7 @@ allow_long_title: true
 date: 2024-11-18T08:00:00+01:00
 draft: false
 
-meta_desc: "YAML and Kubernetes, like two peas in a pod. But is it the best way to manage your Kubernetes resources? Let's compare YAML, Terraform, and Pulumi and see which is best for managing your Kubernetes resources."
+meta_desc: "Compare YAML, Terraform, and Pulumi for Kubernetes deployment automation. Discover which approach is best for managing your Kubernetes resources efficiently."
 meta_image: meta.png
 
 authors:

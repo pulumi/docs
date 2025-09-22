@@ -3,7 +3,7 @@ title: "AI-Assisted Infrastructure as Code with Pulumi's Model Context Protocol 
 date: 2025-04-08
 draft: false
 allow_long_title: true
-meta_desc: Learn how integrating AI coding assistants like Cursor with Pulumi's Model Context Protocol (MCP) server can accelerate your IaC workflow, reducing context switching and improving developer experience.
+meta_desc: Learn how AI assistants like Cursor with Pulumi's MCP server accelerate IaC workflows and improve developer experience.
 meta_image: meta.png
 authors:
     - mikhail-shilkov
@@ -41,9 +41,9 @@ Before diving in, you typically need to configure your AI assistant to communica
 }
 ```
 
-3. Validating the connection within the assistant's settings (e.g., Cursor has a dedicated section to check the MCP connection status).
+Validate the connection within the assistant's settings (e.g., Cursor has a dedicated section to check the MCP connection status).
 
-    ![Cursor MCP Settings](cursor-mcp-settings.png)
+![Cursor MCP Settings](cursor-mcp-settings.png)
 
 Once configured, the AI assistant can leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
 

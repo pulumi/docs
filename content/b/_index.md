@@ -42,7 +42,7 @@ ai:
 embed:
   title: Build productive platforms for both developers and operators
   image: /blog/developer-portal-platform-teams/platform-teams.png
-  alt: a flowchart with arrows going from Automation API program to Infrasctucture as Code programs to Pulumi Engine deploys stacks
+  alt: a flowchart with arrows going from Automation API program to Infrastructure as Code programs to Pulumi Engine deploys stacks
   description: |
     Internal developer portals (IDPs) enable your developers to quickly provision security-compliant infrastructure, boost productivity with pre-configured architectures and automate testing and deployments, adhering to organizational standards.
 
@@ -83,7 +83,7 @@ customer_logos:
     - name: modular-ai
       link: /case-studies/
     - name: korber
-      link: /case-studies/    
+      link: /case-studies/
     - name: lemonade
       link: /case-studies/
     - name: pinecone

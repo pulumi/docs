@@ -8,9 +8,9 @@
 
   <ItemGroup>
     <PackageReference Include="Pulumi" Version="3.*" />
-    <PackageReference Include="Pulumi.Aws" Version="6.*" />
-    <PackageReference Include="Pulumi.Awsx" Version="2.*" />
-    <PackageReference Include="Pulumi.Eks" Version="2.*" />
+    <PackageReference Include="Pulumi.Aws" Version="7.*" />
+    <PackageReference Include="Pulumi.Awsx" Version="3.*" />
+    <PackageReference Include="Pulumi.Eks" Version="4.*" />
     <PackageReference Include="Pulumi.Kubernetes" Version="4.*" />
   </ItemGroup>
 

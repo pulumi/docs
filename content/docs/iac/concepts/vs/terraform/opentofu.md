@@ -49,7 +49,7 @@ Here is a summary of the key differences between OpenTofu and Terraform:
 | [Provider Support](#providers) | Support across multiple IaaS, SaaS, and PaaS providers. | Support across multiple IaaS, SaaS, and PaaS providers. |
 | [Cloud Native Support](#cloud-native) | Core API typed. Generic support for CRD. | Core API typed. Generic support for CRD. |
 | [Dynamic Provider Support](#dynamic-providers) | No | No |
-| [Infrastructure Reuse and Modularity](#reuse) | Constrained. Can only reuse Terraform modules. | Constrained. Can only reuse OpenTofu modules. |
+| [Infrastructure Reuse and Modularity](#reuse) | Constrained. Can only reuse OpenTofu modules. | Constrained. Can only reuse Terraform modules. |
 | [Testing and Validation](#testing) | Integration testing only. | Integration testing only. |
 | [Modes of Execution](#modes) | Run CLI commands only. | Run CLI commands or perform remote runs with SaaS offering. |
 | [Embed within Application Code](#embedding) | No | No |
@@ -142,7 +142,7 @@ Pulumi supports importing existing resources so that they can be managed. Pulumi
 
 ### Aliases
 
-Aliases help facilitate refactoring by allowing you to modify certain properties of a resource without risk of replacing it. With an alias, you can change the logical name of a given resource, change its parent (i.e., move it from one component to another), change its underlying resource type, or even move it to an entirely different project or stack. Pulumi support sthe notion of resource renaming and reparenting, including declaratively changing a resource's underlying type or moving it to another workspace. To learn more, see [Aliases](/docs/concepts/options/aliases/) in the Resource documentation.
+Aliases help facilitate refactoring by allowing you to modify certain properties of a resource without risk of replacing it. With an alias, you can change the logical name of a given resource, change its parent (i.e., move it from one component to another), change its underlying resource type, or even move it to an entirely different project or stack. Pulumi supports the notion of resource renaming and reparenting, including declaratively changing a resource's underlying type or moving it to another workspace. To learn more, see [Aliases](/docs/concepts/options/aliases/) in the Resource documentation.
 
 ### Transformations
 

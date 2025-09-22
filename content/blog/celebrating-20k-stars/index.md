@@ -3,7 +3,7 @@ title: "Celebrating 20,000 Stars: A Milestone for the Pulumi Community"
 allow_long_title: true
 date: 2024-05-23T18:48:50Z
 draft: false
-meta_desc: "Pulumi celebrates 20,000 stars on GitHub! We couldn't have reached this incredible milestone without y'all. Over the last 7 years, the project has had 4,400+ contributors, 75,000+ pull requests, and over 100 million downloads. Check out a quick recap of the journey, key futures, and future roadmap."
+meta_desc: "Pulumi celebrates 20,000 GitHub stars! A recap of 7 years, 4,400+ contributors, 75,000+ pull requests, 100M+ downloads, and our future roadmap."
 social_media: "We just past 20k stars on GitHub! We couldn't have reached this incredible milestone without y'all. Read a quick recap of the journey and key features"
 meta_image: meta.png
 authors:
@@ -18,9 +18,11 @@ Today, we're excited to announce that the [Pulumi open source project](https://g
 Since its inception, Pulumi's vision has been rooted in enabling teams to build and manage modern cloud infrastructure using familiar languages and tools. Over the years, your feedback, contributions, and passion have been invaluable in shaping Pulumi into what it is today. Seeing so many developers embrace our modern approach to cloud infrastructure management is really exciting. We are deeply grateful for the trust y'all have placed in us, and we will continue to push the boundaries in how teams manage cloud infrastructure.
 
 ## Fueled by Community Contributions
+
 Over the past 7 years, the Pulumi project has had 4,400+ contributors that made 75,000+ pull requests. Pulumi is depended upon by 6,600+ GitHub projects and supports over 160+ packages in the registry. It has been downloaded more than 100 million times by 170,000+ developers. In just the last month, Pulumi has been the most active Infrastructure as Code (IaC) open-source project compared to Terraform or OpenTofu. Pulumi has had 117 merged pull requests (67 TF, 83 OpenTofu), 82 closed issues (49 TF, 54 OpenTofu), and 53 new issues (27 TF, 29, OpenTofu).
 
 ## Notable Features and Milestones
+
 We also want to take this time to reflect on some of the notable features we shipped that got us here. The [Pulumi roadmap](https://github.com/orgs/pulumi/projects/44/views/1) is public so we can be transparent about the features being worked on and to encourage deeper collaboration with the community. Here are some of the most popular features that were added to Pulumi over the last 7 years.
 
 - Mar 2017 - Pulumi founded
@@ -61,6 +63,7 @@ We also want to take this time to reflect on some of the notable features we shi
 We also shipped many other features that didn’t make this post, so please see our [blog](https://www.pulumi.com/blog/) for all those details.
 
 ## A Heartfelt Thank You
+
 We are immensely grateful to our community for helping us reach this incredible milestone and making Pulumi a thriving ecosystem. Your contributions, feedback, and support have been invaluable in shaping Pulumi's journey. We also want to thank the [Puluminaries](https://www.pulumi.com/community/puluminaries/) - our community leaders and advocates whose contributions have been pivotal to our success.
 
 If you're passionate about cloud infrastructure, consider [joining the Puluminaries](mailto:da@pulumi.com). As a Puluminary, you’ll gain direct access to our engineering team, preview roadmaps, and help contribute to code, content, and community support.

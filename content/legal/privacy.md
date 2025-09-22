@@ -230,7 +230,7 @@ below.</p>
 <br />
 <p>Pulumi Privacy Officer
 <br />
-1525 4th Avenue, Suite 800
+601 Union St., Suite 1415
 <br />
 Seattle, WA 98101
 <br />

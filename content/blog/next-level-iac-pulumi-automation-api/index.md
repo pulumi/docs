@@ -157,6 +157,7 @@ app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`)
 })
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -226,6 +227,7 @@ async def delete(name: str, org: str, project: str, stack: str, region: str):
     stack.destroy(on_output=print)
     return {"message": "Stack destroyed"}
 ```
+
 {{% /choosable %}}
 
 Let us run the above Python example in a FastAPI server to see how the Automation API works in practice.
@@ -236,6 +238,7 @@ Let's start by creating a new Python file called `main.py` and pasting the above
 python3 -m venv ven
 source venv/bin/activate
 ```
+
 Create a new file called `requirements.txt` and paste the following dependencies into it:
 
 ```bash
@@ -596,7 +599,6 @@ Navigate to the [Swagger Editor](https://editor.swagger.io/) and paste the above
 ![Swagger Editor](swagger.png)
 
 ## Conclusion
-
 
 In this blog post, we've explored how Pulumi's Automation API can be used to build and expose a Service API within your organization. By embedding Pulumi as a library in any application, you can drive your Infrastructure as Code (IaC) deployments directly through code. This sets Pulumi apart from other tools like Terraform, which relies on static configuration files and a command-line interface.
 

@@ -107,7 +107,7 @@ By leveraging these four factors together, organizations can create internal dev
 
 ## Learn More
 
-To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/best-practices/patterns) library. 
+To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/best-practices/patterns) library.
 
 ### Additional Resources
 

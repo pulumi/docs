@@ -39,6 +39,6 @@ You’d think that when a particular tool is widely accepted as the industry sta
 
 Curious about how a big product gets built? Rahul Sharma is with us to talk about *How AWS architects APIs for hyper scale.* He won’t just be talking technology; we’ll also hear about the cultural changes required internally to launch a product, and how engagement with customers and partners helps shape the course of development.
 
-Last but certainly not least is Heidi Waterhouse presenting *The Future Should Be Uneven*, a talk about personalization and accessibility in web design. Accessibile design benefits us all, whether we actually *need* the accomodation or not. The sooner we all understand and embrace that, the better, so Heidi will walk us through some common accessibility settings that are really just good design for everyone.
+Last but certainly not least is Heidi Waterhouse presenting *The Future Should Be Uneven*, a talk about personalization and accessibility in web design. Accessible design benefits us all, whether we actually *need* the accommodation or not. The sooner we all understand and embrace that, the better, so Heidi will walk us through some common accessibility settings that are really just good design for everyone.
 
 Explore all of the rest of the great sessions, and don't forget to register for the cloud engineering summit!

@@ -92,7 +92,7 @@ $ pulumi import <type> <name> <id>
   ```
   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}
   ```
-  
+
   The `subscriptionId` parameter refers to your Azure subscription ID, the `resourceGroupName` parameter refers to the name of the resource group that the Storage Account lives in, and the `accountName` parameter refers to the name of your Storage Account.
 
 When put all together, the `import` command should look something like the following example, where `imported-storage-account` is the resource name that will be applied to the Storage Account once imported.
@@ -315,7 +315,7 @@ Now, navigate to your program code file and update the code with the following r
 
 {{< example-program path="azure-native-import-resource-group" >}}
 
-As you can see, the lookup property of the Resource Goup resource has been provided as the value of the `import` option in the resource definition.
+As you can see, the lookup property of the Resource Group resource has been provided as the value of the `import` option in the resource definition.
 
 At this point, the definition for the imported resources has only been written, meaning it has not yet been imported into your project's state and is therefore not yet under management by Pulumi. To complete the import process using this method, you will need to save your file and run the `pulumi up` command. You should see output resembling the following example:
 

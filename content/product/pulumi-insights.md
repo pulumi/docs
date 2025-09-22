@@ -1,73 +1,76 @@
 ---
-title: Pulumi Insights
+title: Cloud Asset and Compliance Management – Pulumi Insights
 layout: pulumi-insights
 
-meta_desc: Pulumi Insights is Intelligent Cloud Management. Gain security, compliance, and cost insights into your cloud, and automatically remediate issues.
+meta_desc: Search any cloud resource. Enforce policies as code. Track compliance. See everything in your infrastructure.
 
 aliases:
 - /insights
+- /product/pulumi-insights
+- /product/crossguard
+- /crossguard
 
 overview:
-    header: Intelligent Cloud Management
-    title: Asset management, compliance remediation, and AI insights over the cloud
+    header: Complete visibility and control for your cloud
+    title: See everything. Control everything. Ship with confidence.
     body: |
-      Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, HashiCorp Terraform, or even manually. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management. 
+      Get complete visibility into your cloud infrastructure - whether created with Pulumi IaC, Terraform, CloudFormation, or the console. Enforce policies as code, ensure compliance, and catch issues before they reach production. 
     items:
-        - title: Stay Secure
+        - title: Policy as Code
           icon: shield
           icon_color: purple
           description: |
-            Detect security violations and remediate using security best practices.  
+            Write policies in TypeScript or Python. Hundreds of built-in policies. Block bad configurations before they ship. Auto-remediate existing violations.
 
-        - title: Enforce Compliance
-          icon: gavel
+        - title: Cloud Resource Search
+          icon: eye
           icon_color: yellow
           description: |
-            Gain a comprehensive view of compliance policy violations across your organization and automate remediation. 
+            Search across all your clouds using structured queries or natural language. Find resources, track dependencies, identify security risks and compliance violations.
 
-        - title: Improve Efficiency
-          icon: cycle
+        - title: Complete Cloud Visibility
+          icon: global
           icon_color: blue
           description: |
-            Analyze and dig into your organization’s cloud usage and trends to optimize costs and improve productivity. 
+            See every resource across AWS, Azure, GCP, and thousands of providers. Track relationships, monitor drift, identify unused resources. 
 
 workflow:
   description: |
-      Making sense of the millions of cloud resources and resource updates per month, across hundreds of clouds, regions, and accounts is hard. Pulumi Insights provides you with the tools to to navigate all four phases of infrastructure management
+      From discovery to governance, get the visibility and control you need to manage cloud infrastructure at scale.
   items:
     - header: Discover
-      body: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your cloud footprint. 
-    - header: Understand
-      body: Find important insights about your cloud infrastructure so you can reach your business objectives faster. 
-    - header: Manage
-      body: Refactor and structure your infrastructure into logical resource groups that map key insights with business needs. 
-    - header: Improve
-      body: Execute improvement plans for each logical resource group to support business priorities. 
+      body: Automatically scan and catalog all cloud resources across AWS, Azure, GCP, and thousands of providers - regardless of how they were created.
+    - header: Govern
+      body: Enforce policies as code across your entire infrastructure. Prevent violations at deployment time, ensure compliance, maintain security standards.
+    - header: Analyze
+      body: Search and query your infrastructure. Understand relationships, track dependencies, identify security and compliance issues.
+    - header: Act
+      body: Fix policy violations, remediate security issues, clean up unused resources. Take action based on real data, not guesswork.
 
 features:
   - header: Resource Search
     subheader: Find anything in any cloud
-    body: Ask any questions about your infrastructure across more than 100 clouds, using either structured search queries or natural language prompts. Search helps you find that needle in the haystack – locating a single resource across many clouds and environments – as well as running sophisticated queries such as tracking down untagged or expensive resources across the whole organization.
+    body: Search your infrastructure across thousands of cloud providers using structured queries or natural language. Find specific resources across multiple clouds and environments. Track down untagged resources, identify security group violations, or locate idle infrastructure across your entire organization.
     graphic: /images/product/insights-resource-search.png
-  - header: Policy Violations
-    subheader: Discover violations and enforce compliance
-    body: Pulumi Insights provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure.
+  - header: Policy as Code
+    subheader: Enterprise governance using real programming languages
+    body: Write policies in TypeScript or Python - the same languages you use for infrastructure. Choose from hundreds of built-in policies or create custom rules. Block non-compliant resources during `pulumi up`. Auto-remediate existing violations. Meet SOC 2, HIPAA, and PCI-DSS requirements.
     graphic: /images/product/insights-policy.png
-  - header: AI Copilot
-    subheader: Converse about your infrastructure
-    body: Pulumi Copilot makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question. 
+  - header: Natural Language Search
+    subheader: Ask questions about your infrastructure
+    body: Search using plain English queries. "Which EC2 instances are publicly accessible?" "What changed in production last week?" "Show me resources without required tags." Get answers across all your clouds instantly.
     graphic: /images/product/insights-copilot.png
-  - header: Scan & Sync
-    subheader: Gain Visibility Across All Your Cloud Resources
-    body: Pulumi Insights scans and syncs your entire cloud infrastructure, including resources not managed Pulumi IaC. This brings all the features of Pulumi Insights to all your organization’s cloud infrastructure.
+  - header: Cloud Discovery
+    subheader: See everything, regardless of how it was created
+    body: Automatically discover and catalog resources created outside of Pulumi - whether from Terraform, CloudFormation, or manual console operations. Get complete visibility across your entire cloud estate. Apply policies and insights to all resources, not just Pulumi-managed ones.
     graphic: /images/product/insights-scan-sync.png
 
-ai:
-    title: AI
-    subtitle: Automate infrastructure with the power of AI
+governance:
+    title: Enterprise-Grade Governance
+    subtitle: Policy enforcement that doesn't slow you down
     image: https://www.pulumi.com/uploads/pulumi-insights-copilot.gif
     description: |
-        Automate infrastructure management tasks through AI. You can tap into the Pulumi Copilot's deep understanding of your user and organization context to gain visibility into your team's activity, discover cost saving opportunities, get compliant, and debug cloud failures. 
+        Shift security and compliance left with policy as code. Define guardrails in TypeScript or Python, enforce them at deployment time, and automatically remediate violations. Integrate with your existing compliance frameworks and get detailed audit trails for every policy decision. 
 
 customer_quotes:
   alkira:
@@ -77,19 +80,38 @@ customer_quotes:
     logo: alkira
 
 analytics:
-    title: Analytics
-    subtitle: Gain deeper insights into infrastructure as code
+    title: Analytics & Intelligence
+    subtitle: Data-driven infrastructure decisions
     image: /images/product/pulumi-insights-analytics.png
     description: |
-        Identify anomalies or trends in resource usage and dig into cost, security, and [compliance](/compliance/) concerns. You can programmatically query a REST API to add automation around search results or to integrate with internal platforms and dashboards. You can export data to other data warehouses including Snowflake, Amazon Redshift, Google BigQuery and Azure Synapse. You also have built-in dashboards that give you key insights about cloud usage.
+        Transform infrastructure data into actionable intelligence. Track costs, identify trends, detect anomalies, and measure compliance. Export to Snowflake, BigQuery, or any data warehouse. Build custom dashboards, automate reports, and integrate with your existing BI tools. Make informed decisions backed by comprehensive cloud analytics.
 
 pricing:
     title: Pricing
     description: |
-         Pulumi Insights is included for all resources managed by Pulumi Cloud. 
+         Insights & Governance capabilities are included with Pulumi Cloud. Get visibility and control over all your cloud resources, whether managed by Pulumi or not.
 
-get_started:
-    title: Get started today
-    description: |
-        Gain a deep understanding of your cloud usage, discover potential cost savings opportunities, and enforce compliance and security policies across your entire cloud.
+learn:
+    title: Take control of your cloud
+    items:
+        - title: Start with complete visibility
+          description: |
+            Get instant visibility into all your cloud resources. Add governance policies and optimize with AI-powered insights.
+          buttons:
+            - link: /docs/insights/get-started/
+              type: primary
+              action: Start Free
+            - link: /contact/?form=request-a-demo
+              type: secondary
+              action: Book a Demo
+        - title: Learn more
+          description: |
+            Discover how to implement policies, track compliance, and optimize costs across your entire cloud infrastructure.
+          buttons:
+            - link: /docs/pulumi-cloud/insights/
+              type: primary
+              action: Read the Docs
+            - link: /docs/iac/crossguard/
+              type: secondary
+              action: Policy Guide
 ---

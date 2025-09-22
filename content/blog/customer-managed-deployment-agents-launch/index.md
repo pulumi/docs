@@ -19,7 +19,7 @@ draft: false
 # of the content of the post, which is useful for targeting search results or
 # social-media previews. This field is required or the build will fail the
 # linter test. Max length is 160 characters.
-meta_desc: Customer-Managed Agents for Pulumi Deployments is now available, allowing users to self-host deployment agents and get the same power and flexibility of Pulumi Deployments.
+meta_desc: Customer-Managed Agents for Pulumi Deployments now available, letting users self-host agents with full power and flexibility.
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -71,7 +71,6 @@ Customer-Managed Agents support all the deployment triggers currently offered by
 {{% notes "info" %}}
 Customer-Managed Agents is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Agents. If you are a self-hosted Pulumi Cloud customer, please [get in touch](https://share.hsforms.com/1YajiJ73sSuGn5RoTkyvKxg2mxud) to be notified when it is available.
 {{% /notes %}}
-
 
 ## How to get started
 
@@ -135,8 +134,8 @@ On the deployments page, you can see all the deployments including pending deplo
 
 ![Deployments page](./view-deployment-status.png)
 
-
 ## Your Journey, Our Support
+
 Customer-Managed Agents empower you to align your deployment strategies with the specific requirements of your infrastructure. Whether it's ensuring compliance, enhancing security, or customizing deployment processes, Customer-Managed Agents provide the flexibility you need.
 
 Embark on this journey to simplify your infrastructure deployments with our new feature. We are here every step of the way to assist you. Share any feedback in the [Pulumi Cloud Requests repository](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose) with us.

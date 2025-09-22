@@ -24,7 +24,7 @@ aliases:
 ---
 
 {{% notes "info" %}}
-Currently, the functionality described in this topic is only supported for programs written in JavaScript or TypeScript. GitHub issues have been created to track support in [Python](https://github.com/pulumi/pulumi/issues/1064), [Go](https://github.com/pulumi/pulumi/issues/3820), and [.NET](https://github.com/pulumi/pulumi/issues/3640).
+Currently, the functionality described in this topic is only supported for programs written in JavaScript or TypeScript. Function Serialization is only available in Node.js and while it is still a supported feature, it is not an active area of development in the Pulumi product.
 {{% /notes %}}
 
 ## Overview

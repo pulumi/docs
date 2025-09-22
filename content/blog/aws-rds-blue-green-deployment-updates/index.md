@@ -1,7 +1,7 @@
 ---
 title: "AWS RDS - Blue/Green Deployments for Low-Downtime Updates"
 h1: "How to Achieve Low Downtime Updates on RDS with Blue/Green Deployments"
-authors: 
+authors:
   - "elisabeth-lichtie"
 tags: ["aws", "rds", "postgres"]
 meta_desc: "Pulumi can enable low downtime updates on your RDS instance using Blue/Green Deployments."
@@ -9,10 +9,10 @@ date: "2025-06-23"
 meta_image: "BlueGreenRDS.png"
 
 summary: |
-    AWS RDS supports blue/green deployments to support database maintainence. In a blue/green deployment, you have one production (blue) and one staging (green) database. You can safely make changes to the green instance without affecting production and promote it to be the main instance. When you enable blue/green updates, Pulumi will temporarily set up a blue/green deployment for the duration of the update to minimize downtime. 
+    AWS RDS supports blue/green deployments to support database maintenance. In a blue/green deployment, you have one production (blue) and one staging (green) database. You can safely make changes to the green instance without affecting production and promote it to be the main instance. When you enable blue/green updates, Pulumi will temporarily set up a blue/green deployment for the duration of the update to minimize downtime.
 ---
 
-AWS RDS supports [blue/green deployments](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html) to support database maintainence. In a blue/green deployment, you have one production (blue) and one staging (green) database. You can safely make changes to the green instance without affecting production and promote it to be the main instance. When you enable blue/green updates, Pulumi will temporarily set up a blue/green deployment for the duration of the update to minimize downtime.
+AWS RDS supports [blue/green deployments](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html) to support database maintenance. In a blue/green deployment, you have one production (blue) and one staging (green) database. You can safely make changes to the green instance without affecting production and promote it to be the main instance. When you enable blue/green updates, Pulumi will temporarily set up a blue/green deployment for the duration of the update to minimize downtime.
 
 There are many [benefits](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-overview.html#blue-green-deployments-benefits) to using blue/green deployments for updates, especially for critical databases that need to be kept available and safe from untested changes.
 
@@ -85,5 +85,5 @@ General [limitations and considerations for Amazon RDS blue/green deployments](h
 * **No Cluster Support**: This feature only works with database instances, not with clusters or instances that are in a cluster.
 * **Long Update Times**: Because the IaC program will deploy temporary resources before performing the update and destroy them after, blue/green updates will take considerably longer than their in-place counterparts.
 * **Manual Cleanup**: Because the green instance and blue/green deployment are temporary resources designed to decrease downtime during the update, they are not tracked in the IaC state. If the update fails partway through, these temporary resources may have to be cleaned up manually. If the update is interrupted, you can delete the blue/green deployment and green database to get back into a manageable state.
-* **Resource ID Change**: On an update, the resource ID of the database might change since a new instance has been created. The endpoint and other details about the database will be maintained by AWS during switchover, but the resource ID should be dynamically retreived from the stack outputs whenever it is used to ensure it stays up to date. Usually, no application or connection details will need to be updated since they don't rely on the resource ID itself.
-* **Types Of Updates**: The blue/green update strategy will be used for changes that require a maintainence window including updates to the engine version, parameter group, storage and performance settings, and optimized writes.
+* **Resource ID Change**: On an update, the resource ID of the database might change since a new instance has been created. The endpoint and other details about the database will be maintained by AWS during switchover, but the resource ID should be dynamically retrieved from the stack outputs whenever it is used to ensure it stays up to date. Usually, no application or connection details will need to be updated since they don't rely on the resource ID itself.
+* **Types Of Updates**: The blue/green update strategy will be used for changes that require a maintenance window including updates to the engine version, parameter group, storage and performance settings, and optimized writes.

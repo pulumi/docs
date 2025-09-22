@@ -3,7 +3,7 @@ title: "Pulumi Release Notes: Pulumi Copilot, Pulumi ESC Versioning, Pulumi ESC 
 allow_long_title: true
 date: 2024-06-24T11:06:04-08:00
 draft: false
-meta_desc: The latest Pulumi releases deliver a wave of powerful new features, including AI-powered cloud management, robust infrastructure lifecycle management capabilities, enhanced Pulumi ESC features (versioning, SDKs, and Pulumi Service Provider support), a new Docker Build provider, and more!
+meta_desc: Latest Pulumi releases include AI-powered Copilot, ESC versioning and SDKs, Docker Build provider, and infrastructure lifecycle management features.
 meta_image: meta.png
 authors:
     - arun-loganathan
@@ -42,7 +42,7 @@ What an incredible two months at Pulumi! From the revolutionary AI-powered Pulum
 
 ## AI
 
-### Pulumi Copilot: The Future of Cloud Infrastructure 
+### Pulumi Copilot: The Future of Cloud Infrastructure
 
 Pulumi Copilot is a game-changing conversational AI assistant for [Pulumi Cloud](/docs/pulumi-cloud/), leveraging large language models (LLMs) to simplify and enhance your cloud management experience. Get instant answers about your cloud by querying the state of any resource managed by Pulumi, across all your clouds and accounts. Explore historical data on stacks, projects, deployments, and more, gaining deep insights into your infrastructure. Write and deploy IaC with ease as Pulumi Copilot brings the power of Pulumi AI directly to your fingertips. Gain insights from cloud provider metadata as Pulumi Copilot integrates with AWS, Azure, Kubernetes, and more; to provide real-time insights into usage, costs, and your infrastructure.
 
@@ -71,7 +71,6 @@ Creating temporary environments is crucial for running experiments, testing new 
 #### Scheduled Deployments
 
 We also rolled out [Scheduled Deployments](/blog/scheduled-deployments/), extending the automation capabilities of Drift Detection and Remediation and Time-to-Live Stacks. Scheduled Deployments enable precise automation of cloud operations, allowing users to schedule any Pulumi operation—such as pulumi up, pulumi refresh, pulumi destroy, or pulumi preview—for any stack with Pulumi Deployments. This provides greater flexibility for managing your cloud operations, whether it's scheduling off-peak deployments, optimizing resource costs, or automating routine infrastructure updates. You can easily set up and manage Scheduled Deployments through the [Pulumi Cloud console](/docs/pulumi-cloud/deployments/schedules/#pulumi-cloud-ui), [REST API](/docs/pulumi-cloud/deployments/schedules/#setting-it-up-in-the-api), or directly within your code using the [Pulumi Service Provider](/registry/packages/pulumiservice/api-docs/deploymentschedule/).
-
 
 ### Pulumi ESC: New Features to Supercharge Your Secrets and Config Management
 
@@ -112,16 +111,19 @@ Pulumi now offers more control over error handling during deployments with the n
 {{< video title="Using pulumi new with the new AI option" src="/blog/continue-on-error/coe.mp4" controls="false" autoplay="true" loop="true" >}}
 
 ### Run Pulumi with Any TypeScript Version
+
 Previously, Pulumi's seamless TypeScript experience was limited to version 3.8, requiring manual build steps for newer versions. But now, with the release of the [Pulumi Node.js SDK 3.113.0](https://www.npmjs.com/package/@pulumi/pulumi), you can use any TypeScript version 3.8 or later, including the latest [TypeScript 5.4](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-4.html), by simply adding it as a dependency in your project's package.json file. Pulumi will automatically use the specified version for compilation, unlocking access to the newest TypeScript features and improved type checking. Read the [blog post](/blog/typescript-versions/) for a detailed example and instructions on upgrading your projects.
 
 ## Providers and Packages
 
 ### Next-Generation Docker Image Builds with Pulumi
+
 Pulumi introduces the new [Docker Build provider](/registry/packages/docker-build/), a dedicated package designed to modernize and streamline Docker image builds directly from your Pulumi programs. The new provider exposes Docker's next-generation buildx interface, unlocking advanced features such as multi-platform image support, advanced caching mechanisms, built-in support for build secrets, and seamless integration with Docker Build Cloud. This unlocks powerful scenarios, including building multi-architecture images and optimizing build performance with various cache backends. Read the [blog post](/blog/docker-build/) for detailed examples and migration guides.
 
 {{< video title="Docker Build Cloud" src="/blog/docker-build/dbc.mp4" autoplay="true" loop="true" >}}
 
 ### Using Pulumi with Azure Deployment Environments
+
 Pulumi now supports authoring [Azure Deployment Environments (ADE)](https://learn.microsoft.com/en-us/azure/deployment-environments/) environment definitions, empowering developers to self-serve the application infrastructure they need while maintaining centralized management and governance. This integration allows you to leverage Pulumi's familiar programming model and the full power of its Infrastructure as Code (IaC) platform to define and manage Azure resources within ADE environments.  You can define ADE environments using a simple YAML configuration file that references a Pulumi program written in any of Pulumi's supported languages, including C#, TypeScript, Python, Go, and YAML. Leveraging a dedicated Pulumi Docker image, ADE seamlessly executes the selected Pulumi program, provisioning the defined Azure resources. This streamlines the creation of new environments, enhances developer productivity, and ensures consistency and compliance with organizational standards. Read the [blog post](/blog/azure-deployment-environments/) for a detailed walkthrough and examples.
 
 #### Helm Chart v4 Resource

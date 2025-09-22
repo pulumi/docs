@@ -25,11 +25,9 @@ Pulumi Cloud Webhooks, including the Slack integration, are available to all Pul
 
 ![Example of the notifications in Slack](slack.png)
 
-Pulumi Slack notifications enable central visibility for your team. In addition to getting the notification of a successful or failed update, you will have links to take you directly to the stack and directly to the update itself. You can see what Pulumi operation was being run, which user initiated it and the number of resouces changed and unaffected. All of this information in one place lets you spend less time context switching and more time collaborating.
-
+Pulumi Slack notifications enable central visibility for your team. In addition to getting the notification of a successful or failed update, you will have links to take you directly to the stack and directly to the update itself. You can see what Pulumi operation was being run, which user initiated it and the number of resources changed and unaffected. All of this information in one place lets you spend less time context switching and more time collaborating.
 
 ### Setting up the Slack Integration
-
 
 Before today Pulumi customers used Pulumi Cloud Webhooks to set up generic JSON webhooks. When events occur, we send a HTTP POST request to any registered listeners. Webhooks can then be used to send notifications to an app (like Slack), start running automated tests, or even to update another stack! We have now built support for Slack-formatted webhooks, which allow you to quickly enable notifications about your Pulumi stacks and organizations into your Slack workspace by simply providing a [Slack incoming webhook URL](https://api.slack.com/messaging/webhooks).
 
