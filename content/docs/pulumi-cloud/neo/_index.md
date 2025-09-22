@@ -4,6 +4,9 @@ meta_desc: Pulumi Neo is an agentic AI that enables conversational infrastructur
 title: Pulumi Neo
 h1: Pulumi Neo
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/iac/neo/
+- /docs/neo/
 menu:
     cloud:
         name: Neo
