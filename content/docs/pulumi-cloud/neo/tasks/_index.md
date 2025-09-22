@@ -4,6 +4,8 @@ title_tag: Tasks in Pulumi Neo
 h1: Tasks in Pulumi Neo
 meta_desc: Learn about tasks, the primary entity for interacting with Neo to perform infrastructure operations.
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/iac/neo/tasks/
 menu:
     cloud:
         name: Tasks

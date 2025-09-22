@@ -4,6 +4,8 @@ title_tag: Pull requests with Pulumi Neo
 h1: Pull requests with Pulumi Neo
 meta_desc: Learn how Neo creates and manages pull requests to implement infrastructure changes through your existing review process.
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/iac/neo/pull-requests/
 menu:
     cloud:
         name: Pull requests
