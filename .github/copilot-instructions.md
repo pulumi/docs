@@ -13,6 +13,9 @@ These rules **must** be followed during all pull request reviews:
 - Confirm that **all links resolve** and point to the correct targets (no 404s, no mislinked paths).
 - Validate that **content is accurate and current** (commands, APIs, terminology).
 - Ensure **all new files end with a newline**.
+- **If files are moved, renamed, or deleted**:
+  - Ensure that all references to them are updated accordingly.
+  - Ensure that redirects are created for any moved or renamed files, if applicable.
 - **Documentation**: Serve the role of a professional technical writer. Review for:
   - Clarity and conciseness.
   - Logical flow and structure.
