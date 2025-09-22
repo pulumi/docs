@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: AWS re:Invent 2025
-meta_desc: "Visit Pulumi booth #1127 at AWS re:Invent"
+title: DevOps Days Philadelphia
+meta_desc: "Join Pulumi's Josh Kodroff, Principal Customer Success Architect, in Philadelphia as he presents \"From IaC to IDP: A Practical Guide to Self-Service Maturity.\""
 meta_image:
 
 # A featured webinar will display first in the list.
@@ -26,12 +26,12 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://reinvent.awsevents.com/
+url_slug: https://www.eventbrite.com/e/devopsdays-philadelphia-2025-september-30th-october-1st-2025-tickets-1549913154969
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: AWS re:Invent 2025
+    title: DevOps Days Philadelphia
 
     event_type: event # workshop | event
 
@@ -39,15 +39,15 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-12-01T09:00:00-00:00
+    sortable_date: 2025-09-30T09:00:00-00:00
 
     # Duration of the webinar.
-    duration: 4 days
+    duration: 2 days
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: Las Vegas, NV
+    location: Philadelphia, PA
     # Description of the webinar.
-    description: "Visit Pulumi booth #1127 at AWS re:Invent, where pioneers gather from across the globe to hear the latest AWS innovations, peer-to-peer learning and invaluable networking opportunities."
+    description: "Join Pulumi's Josh Kodroff, Principal Customer Success Architect, in Philadelphia as he presents \"From IaC to IDP: A Practical Guide to Self-Service Maturity.\""
 
     # The webinar presenters
     presenters:
@@ -57,7 +57,7 @@ main:
         level: # Beginner, Intermediate, Advanced
         topics: []
         languages: []
-        clouds: ["AWS"]
+        clouds: []
 
 # The right hand side form section.
 form:
