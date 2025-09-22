@@ -1,6 +1,6 @@
 ---
 title_tag: "Editing Pulumi State Files"
-meta_desc: "Learn how to safely edit Pulumi state files"
+meta_desc: "Learn how to safely edit Pulumi state files when necessary"
 title: Editing state files
 h1: Editing state files
 meta_image: /images/docs/meta-images/docs-meta.png
