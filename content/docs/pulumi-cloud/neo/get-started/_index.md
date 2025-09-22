@@ -5,14 +5,11 @@ h1: Getting started with Pulumi Neo
 meta_desc: Learn how to set up Pulumi Neo for your organization and run your first infrastructure task through conversational AI.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    cloud:
         name: Get started
-        parent: iac-neo
+        parent: cloud-neo
         weight: 10
-        identifier: iac-neo-get-started
-    neo:
-        name: Get started
-        weight: 1
+        identifier: cloud-neo-get-started
 ---
 
 ## Public Preview Access
@@ -57,7 +54,7 @@ Neo is automatically enabled for eligible organizations. To access Neo:
 
 Each conversation with Neo is called a "task" - a contained unit of work where Neo helps you accomplish a specific infrastructure goal.
 
-Let's run a simple infrastructure [task](/docs/iac/neo/tasks/) to see Neo in action
+Let's run a simple infrastructure [task](/docs/pulumi-cloud/neo/tasks/) to see Neo in action
 
 1. Start with a read-only analysis task by prompting Neo:
 
@@ -80,8 +77,8 @@ Let's run a simple infrastructure [task](/docs/iac/neo/tasks/) to see Neo in act
 
    - Ask for confirmation before making changes
    - Generate the necessary code modifications
-   - Request approval before opening a [pull request](/docs/iac/neo/pull-requests/)
-   - Create a [PR](/docs/iac/neo/pull-requests/) with clear documentation of the changes
+   - Request approval before opening a [pull request](/docs/pulumi-cloud/neo/pull-requests/)
+   - Create a [PR](/docs/pulumi-cloud/neo/pull-requests/) with clear documentation of the changes
 
 ## Considerations and Limitations
 
