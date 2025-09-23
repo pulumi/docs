@@ -29,6 +29,8 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 - H2 and deeper: **Sentence case**.  
 - Only increment one heading level at a time (no skipping levels).  
 - Use capitalization only for proper nouns. For example, use “stack” not “Stack.”
+- Do not end headings with punctuation.
+- Headings should be surrounded by blank lines.
 
 ---
 
@@ -62,7 +64,8 @@ This is a useful suggestion.
 
 ## Paragraphs and Line Breaks
 
-- Use **semantic line breaks**: start a new line for each sentence or phrase.  
+- Separate paragraphs with a blank line.  
+- Do not use line breaks within paragraphs. Let text wrap naturally.  
 - Keep paragraphs short (ideally ≤3 sentences).
 
 ---

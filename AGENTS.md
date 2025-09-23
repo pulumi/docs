@@ -48,7 +48,7 @@ Do not substitute other tools or commands.
 
 ## Code & Content Rules
 
-- **Markdown**: Semantic line breaks (one line per sentence/phrase).  
+- **Markdown**: Standard paragraph formatting.  
 - **Headings**:  
   - H1 = Title Case  
   - H2+ = Sentence case
