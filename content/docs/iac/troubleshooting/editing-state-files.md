@@ -21,14 +21,14 @@ You might need to edit your state file in the following situations:
 
 - You want to move resources between stacks in the course of refactoring of your Pulumi codebase(s)
 - You need to unprotect resources from deletion
-- A Pulumi command fails with an error indicating a corrupt state, for example if you see [an I/O error with the text `after mutation of snapshot`](/docs/iac/troubleshooting/common-problems/post-step-errors), which can occur in rare scenarios like a network partition during a state file update.
+- A Pulumi command fails with an error indicating a corrupt state, for example if you see [an I/O error with the text `after mutation of snapshot`](/docs/iac/troubleshooting#post-step-event), which can occur in rare scenarios like a network partition during a state file update.
 
 ## What to try before editing your state file
 
 Before manually editing your state file, consider these troubleshooting steps:
 
 1. Run the `pulumi refresh` command.
-1. Update to the latest version of the Pulumi CLI ([installation instructions](/docs/iac/cli/install/)) and attempt your operation again.
+1. Update to the latest version of the Pulumi CLI ([installation instructions](/docs/iac/download-install/)) and attempt your operation again.
 1. If a `pulumi update` failed and a resource was created and shows in your cloud console, but Pulumi is attempting to create the resource again, use the [`pulumi import`](/docs/iac/cli/commands/pulumi_import) command instead of editing your state file.
 1. If you have recently updated the Pulumi CLI, consider downgrading back to the previous known-good version and attempt your operation again.
 1. Update the Pulumi SDK to the version that matches the Pulumi CLI.
