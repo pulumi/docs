@@ -1,17 +1,8 @@
 ---
 title: "Pulumi Google Cloud Provider Version 9.0.0"
-# The date represents the post's publish date, and by default corresponds with
-# the date and time this file was generated. Dates are used for display and
-# ordering purposes only; they have no effect on whether or when a post is
-# published. To influence the ordering of posts published on the same date, use
-# the time portion of the date value; posts are sorted in descending order by
-# date/time.
 date: 2025-09-17T13:33:50-07:00
 draft: false
 meta_desc: "Release of the v9 version of the Pulumi Provider for Google Cloud"
-# The meta_image appears in social-media previews and on the blog home page. A
-# placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
 meta_image: meta.png
 authors:
     - guinevere-saenger, zaid-ajaj
