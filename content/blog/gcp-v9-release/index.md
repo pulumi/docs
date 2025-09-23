@@ -68,7 +68,7 @@ Multiple resources throughout the provider have improved validation and error me
 #### Increased field validation
 
 Several resource fields have been updated to reflect requirements of Google Cloud and will fail validation if not configured correctly, to avoid failures later on.
-Refer to the migration guide here for details TODO.
+Refer to the [migration guide for details.](https://www.pulumi.com/registry/packages/gcp/how-to-guides/9-0-migration/)
 
 ### Documentation Improvements
 
@@ -77,4 +77,20 @@ Among other improvemetns, this release adds 100 new top-level overview descripti
 
 ### Upgrading
 
-You can find the V9 Migration Guide on the Pulumi Registry TODO: add link once live
+You can find the [migration guide on the Pulumi registry.](https://www.pulumi.com/registry/packages/gcp/how-to-guides/9-0-migration/)
+
+### NEW! Use Pulumi Neo to assist with your upgrade
+
+You can use our new automation agent, [Neo](https://www.pulumi.com/docs/pulumi-cloud/neo/), to help you with your provider upgrade.
+In the Pulumi service, ask Neo to help you with your upgrade by providing the migration guide:
+
+![code-suggestion.png](./code-suggestion.png)
+
+Neo will look at the provided migration guide and your stack, and determine a plan of action.
+Here, Neo has discovered there were some breaking changes, needing updates to your program.
+
+![neo-plan.png](./neo-plan.png)
+
+And finally, Neo can open a pull request with the proposed changes to your code.
+
+![code-suggestion.png](./code-suggestion.png)
