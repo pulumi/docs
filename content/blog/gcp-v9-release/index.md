@@ -5,7 +5,8 @@ draft: false
 meta_desc: "Release of the v9 version of the Pulumi Provider for Google Cloud"
 meta_image: meta.png
 authors:
-    - guinevere-saenger, zaid-ajaj
+    - guinevere-saenger
+    - zaid-ajaj
 tags:
     - gcp
     - releases
