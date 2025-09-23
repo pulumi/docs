@@ -3,7 +3,6 @@ title: Pulumi IaC
 linktitle: Pulumi IaC
 docs_home: true
 notitle: true
-is_overview: true
 menu:
     iac:
         identifier: iac-home

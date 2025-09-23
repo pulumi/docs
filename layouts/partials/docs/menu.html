@@ -198,13 +198,15 @@
                 {{- end }}
                 {{- with .Children }}
                     <ul class="list-none">
-                        {{/* Add Overview link for pages marked as overview pages */}}
+                        {{/* Add Overview link for section index pages with child content */}}
                         {{- $overviewPage := "" }}
                         {{- if $currentMenuItem.URL }}
                             {{- $overviewPage = site.GetPage $currentMenuItem.URL }}
                         {{- end }}
 
-                        {{- if and $overviewPage $overviewPage.Params.is_overview }}
+                        {{/* Automatically detect if this is an overview page: _index.md with child content */}}
+                        {{- $isOverview := and $overviewPage $overviewPage.IsSection (or $overviewPage.Pages $overviewPage.Sections) }}
+                        {{- if $isOverview }}
                             <li data-menu-id="overview">
                                 <a href="{{ $overviewPage.RelPermalink }}"
                                     {{- if eq $page.RelPermalink $overviewPage.RelPermalink }}

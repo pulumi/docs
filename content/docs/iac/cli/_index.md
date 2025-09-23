@@ -5,7 +5,6 @@ title: Pulumi CLI
 h1: Pulumi CLI overview
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
-is_overview: true
 menu:
   iac:
     name: Pulumi CLI
