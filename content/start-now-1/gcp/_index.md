@@ -22,21 +22,27 @@ Get started with Pulumi Cloud for free. Includes state management, secrets, and 
 {{< chooser os "macos,linux,windows" >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -48,6 +54,7 @@ gcloud auth application-default login
 ```
 
 Or use a service account:
+
 ```bash
 export GOOGLE_CREDENTIALS=/path/to/service-account-key.json
 ```
@@ -59,12 +66,14 @@ export GOOGLE_CREDENTIALS=/path/to/service-account-key.json
 {{% choosable language typescript %}}
 
 Create a new project:
+
 ```bash
 mkdir my-gcp-app && cd my-gcp-app
 pulumi new gcp-typescript
 ```
 
 Example: Create a Storage Bucket
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -83,6 +92,7 @@ export const bucketUrl = pulumi.interpolate`gs://${bucket.name}`;
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -92,12 +102,14 @@ pulumi up
 {{% choosable language python %}}
 
 Create a new project:
+
 ```bash
 mkdir my-gcp-app && cd my-gcp-app
 pulumi new gcp-python
 ```
 
 Example: Create a Storage Bucket
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -115,6 +127,7 @@ pulumi.export("bucket_url", pulumi.Output.concat("gs://", bucket.name))
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -124,12 +137,14 @@ pulumi up
 {{% choosable language go %}}
 
 Create a new project:
+
 ```bash
 mkdir my-gcp-app && cd my-gcp-app
 pulumi new gcp-go
 ```
 
 Example: Create a Storage Bucket
+
 ```go
 package main
 
@@ -160,6 +175,7 @@ func main() {
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -169,12 +185,14 @@ pulumi up
 {{% choosable language csharp %}}
 
 Create a new project:
+
 ```bash
 mkdir my-gcp-app && cd my-gcp-app
 pulumi new gcp-csharp
 ```
 
 Example: Create a Storage Bucket
+
 ```csharp
 using Pulumi;
 using Pulumi.Gcp.Storage;
@@ -200,13 +218,14 @@ class MyStack : Stack
 
     [Output]
     public Output<string> BucketName { get; set; }
-    
+
     [Output]
     public Output<string> BucketUrl { get; set; }
 }
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -216,12 +235,14 @@ pulumi up
 {{% choosable language java %}}
 
 Create a new project:
+
 ```bash
 mkdir my-gcp-app && cd my-gcp-app
 pulumi new gcp-java
 ```
 
 Example: Create a Storage Bucket
+
 ```java
 package myproject;
 
@@ -254,6 +275,7 @@ public class App {
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -263,12 +285,14 @@ pulumi up
 {{% choosable language yaml %}}
 
 Create a new project:
+
 ```bash
 mkdir my-gcp-app && cd my-gcp-app
 pulumi new gcp-yaml
 ```
 
 Example: Create a Storage Bucket
+
 ```yaml
 name: my-gcp-app
 runtime: yaml
@@ -289,6 +313,7 @@ outputs:
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -297,14 +322,14 @@ pulumi up
 
 ## What's Next?
 
-- [**Follow the complete GCP tutorial →**](/docs/iac/get-started/gcp/)  
+- [**Follow the complete GCP tutorial →**](/docs/iac/get-started/gcp/)
   Learn how to build and deploy applications on Google Cloud
 
-- [**Explore GCP examples →**](https://github.com/pulumi/examples#gcp)  
+- [**Explore GCP examples →**](https://github.com/pulumi/examples#gcp)
   Browse production-ready examples for common GCP architectures
 
-- [**Learn Pulumi concepts →**](/docs/iac/concepts/)  
+- [**Learn Pulumi concepts →**](/docs/iac/concepts/)
   Understand stacks, state, configuration, and more
 
-- [**Join the community →**](https://slack.pulumi.com)  
+- [**Join the community →**](https://slack.pulumi.com)
   Get help and share knowledge with other Pulumi users

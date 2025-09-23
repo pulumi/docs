@@ -21,19 +21,25 @@ Choose your operating system:
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 Or download the [installer](https://github.com/pulumi/pulumi/releases)
 {{% /choosable %}}
 {{< /chooser >}}
@@ -55,45 +61,57 @@ Choose your preferred language:
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new kubernetes-typescript
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new kubernetes-python
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new kubernetes-go
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new kubernetes-csharp
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new kubernetes-java
 ```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new kubernetes-yaml
 ```
+
 {{% /choosable %}}
 
 ## Deploy Your Infrastructure
@@ -105,6 +123,7 @@ pulumi up
 ```
 
 This command:
+
 1. Shows a preview of the Kubernetes resources to be created
 2. Asks for your confirmation
 3. Creates your deployment in the Kubernetes cluster
@@ -112,17 +131,17 @@ This command:
 
 ## 🎉 Congratulations!
 
-You've just deployed your first infrastructure with Pulumi! 
+You've just deployed your first infrastructure with Pulumi!
 
 ### What's Next?
 
-- **[Complete Kubernetes Tutorial →](/docs/iac/get-started/kubernetes/)**  
+- **[Complete Kubernetes Tutorial →](/docs/iac/get-started/kubernetes/)**
   Learn how to deploy and manage applications on Kubernetes
-  
-- **[Browse Examples →](https://github.com/pulumi/examples#kubernetes)**  
+
+- **[Browse Examples →](https://github.com/pulumi/examples#kubernetes)**
   Explore production-ready Kubernetes examples
-  
-- **[Join the Community →](https://slack.pulumi.com)**  
+
+- **[Join the Community →](https://slack.pulumi.com)**
   Get help and share with 10,000+ developers
 
 ### Quick Tips

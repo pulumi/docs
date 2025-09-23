@@ -21,19 +21,25 @@ Choose your operating system:
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 Or download the [installer](https://github.com/pulumi/pulumi/releases)
 {{% /choosable %}}
 {{< /chooser >}}
@@ -47,6 +53,7 @@ aws configure
 ```
 
 Or set environment variables:
+
 ```bash
 export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
 export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
@@ -59,45 +66,57 @@ Choose your preferred language:
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new aws-typescript
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new aws-python
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new aws-go
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new aws-csharp
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new aws-java
 ```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new aws-yaml
 ```
+
 {{% /choosable %}}
 
 ## Deploy Your Infrastructure
@@ -109,6 +128,7 @@ pulumi up
 ```
 
 This command:
+
 1. Shows a preview of the S3 bucket to be created
 2. Asks for your confirmation
 3. Creates your S3 bucket in AWS
@@ -116,17 +136,17 @@ This command:
 
 ## 🎉 Congratulations!
 
-You've just deployed your first infrastructure with Pulumi! 
+You've just deployed your first infrastructure with Pulumi!
 
 ### What's Next?
 
-- **[Complete AWS Tutorial →](/docs/iac/get-started/aws/)**  
+- **[Complete AWS Tutorial →](/docs/iac/get-started/aws/)**
   Learn how to build a static website with S3 and CloudFront
-  
-- **[Browse Examples →](https://github.com/pulumi/examples#aws)**  
+
+- **[Browse Examples →](https://github.com/pulumi/examples#aws)**
   Explore production-ready AWS examples
-  
-- **[Join the Community →](https://slack.pulumi.com)**  
+
+- **[Join the Community →](https://slack.pulumi.com)**
   Get help and share with 10,000+ developers
 
 ### Quick Tips

@@ -22,21 +22,27 @@ Get started with Pulumi Cloud for free. Includes state management, secrets, and 
 {{< chooser os "macos,linux,windows" >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -44,6 +50,7 @@ choco install pulumi
 ### 3. Configure Kubernetes Access
 
 Ensure you have `kubectl` configured to connect to your cluster:
+
 ```bash
 kubectl cluster-info
 ```
@@ -57,12 +64,14 @@ Pulumi uses the same configuration as `kubectl` from `~/.kube/config`.
 {{% choosable language typescript %}}
 
 Create a new project:
+
 ```bash
 mkdir my-k8s-app && cd my-k8s-app
 pulumi new kubernetes-typescript
 ```
 
 Example: Deploy an NGINX application
+
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -99,6 +108,7 @@ export const url = service.status.loadBalancer.ingress[0].hostname;
 ```
 
 Deploy your application:
+
 ```bash
 pulumi up
 ```
@@ -108,12 +118,14 @@ pulumi up
 {{% choosable language python %}}
 
 Create a new project:
+
 ```bash
 mkdir my-k8s-app && cd my-k8s-app
 pulumi new kubernetes-python
 ```
 
 Example: Deploy an NGINX application
+
 ```python
 import pulumi
 import pulumi_kubernetes as kubernetes
@@ -159,6 +171,7 @@ pulumi.export("url", service.status.load_balancer.ingress[0].hostname)
 ```
 
 Deploy your application:
+
 ```bash
 pulumi up
 ```
@@ -168,12 +181,14 @@ pulumi up
 {{% choosable language go %}}
 
 Create a new project:
+
 ```bash
 mkdir my-k8s-app && cd my-k8s-app
 pulumi new kubernetes-go
 ```
 
 Example: Deploy an NGINX application
+
 ```go
 package main
 
@@ -245,6 +260,7 @@ func main() {
 ```
 
 Deploy your application:
+
 ```bash
 pulumi up
 ```
@@ -254,12 +270,14 @@ pulumi up
 {{% choosable language csharp %}}
 
 Create a new project:
+
 ```bash
 mkdir my-k8s-app && cd my-k8s-app
 pulumi new kubernetes-csharp
 ```
 
 Example: Deploy an NGINX application
+
 ```csharp
 using Pulumi;
 using Pulumi.Kubernetes.Apps.V1;
@@ -341,6 +359,7 @@ class MyStack : Stack
 ```
 
 Deploy your application:
+
 ```bash
 pulumi up
 ```
@@ -350,12 +369,14 @@ pulumi up
 {{% choosable language java %}}
 
 Create a new project:
+
 ```bash
 mkdir my-k8s-app && cd my-k8s-app
 pulumi new kubernetes-java
 ```
 
 Example: Deploy an NGINX application
+
 ```java
 package myproject;
 
@@ -421,6 +442,7 @@ public class App {
 ```
 
 Deploy your application:
+
 ```bash
 pulumi up
 ```
@@ -430,12 +452,14 @@ pulumi up
 {{% choosable language yaml %}}
 
 Create a new project:
+
 ```bash
 mkdir my-k8s-app && cd my-k8s-app
 pulumi new kubernetes-yaml
 ```
 
 Example: Deploy an NGINX application
+
 ```yaml
 name: my-k8s-app
 runtime: yaml
@@ -477,6 +501,7 @@ outputs:
 ```
 
 Deploy your application:
+
 ```bash
 pulumi up
 ```
@@ -485,14 +510,14 @@ pulumi up
 
 ## What's Next?
 
-- [**Follow the complete Kubernetes tutorial →**](/docs/iac/get-started/kubernetes/)  
+- [**Follow the complete Kubernetes tutorial →**](/docs/iac/get-started/kubernetes/)
   Learn how to deploy and manage applications on Kubernetes
 
-- [**Explore Kubernetes examples →**](https://github.com/pulumi/examples#kubernetes)  
+- [**Explore Kubernetes examples →**](https://github.com/pulumi/examples#kubernetes)
   Browse production-ready examples for Kubernetes workloads
 
-- [**Learn about Helm integration →**](/docs/iac/concepts/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/#helm-charts)  
+- [**Learn about Helm integration →**](/docs/iac/concepts/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/#helm-charts)
   Deploy existing Helm charts with Pulumi
 
-- [**Join the community →**](https://slack.pulumi.com)  
+- [**Join the community →**](https://slack.pulumi.com)
   Get help and share knowledge with other Pulumi users

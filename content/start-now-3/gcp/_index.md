@@ -21,19 +21,25 @@ Choose your operating system:
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 Or download the [installer](https://github.com/pulumi/pulumi/releases)
 {{% /choosable %}}
 {{< /chooser >}}
@@ -47,6 +53,7 @@ gcloud auth application-default login
 ```
 
 Or use a service account:
+
 ```bash
 export GOOGLE_CREDENTIALS=/path/to/service-account-key.json
 ```
@@ -58,45 +65,57 @@ Choose your preferred language:
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new gcp-typescript
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new gcp-python
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new gcp-go
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new gcp-csharp
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new gcp-java
 ```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new gcp-yaml
 ```
+
 {{% /choosable %}}
 
 ## Deploy Your Infrastructure
@@ -108,6 +127,7 @@ pulumi up
 ```
 
 This command:
+
 1. Shows a preview of the Cloud Storage bucket to be created
 2. Asks for your confirmation
 3. Creates your Cloud Storage bucket in Google Cloud (US region)
@@ -115,17 +135,17 @@ This command:
 
 ## 🎉 Congratulations!
 
-You've just deployed your first infrastructure with Pulumi! 
+You've just deployed your first infrastructure with Pulumi!
 
 ### What's Next?
 
-- **[Complete Google Cloud Tutorial →](/docs/iac/get-started/gcp/)**  
+- **[Complete Google Cloud Tutorial →](/docs/iac/get-started/gcp/)**
   Learn how to build and deploy applications on Google Cloud
-  
-- **[Browse Examples →](https://github.com/pulumi/examples#gcp)**  
+
+- **[Browse Examples →](https://github.com/pulumi/examples#gcp)**
   Explore production-ready Google Cloud examples
-  
-- **[Join the Community →](https://slack.pulumi.com)**  
+
+- **[Join the Community →](https://slack.pulumi.com)**
   Get help and share with 10,000+ developers
 
 ### Quick Tips

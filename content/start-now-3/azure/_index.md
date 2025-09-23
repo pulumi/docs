@@ -21,19 +21,25 @@ Choose your operating system:
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 Or download the [installer](https://github.com/pulumi/pulumi/releases)
 {{% /choosable %}}
 {{< /chooser >}}
@@ -47,6 +53,7 @@ az login
 ```
 
 Or use a service principal:
+
 ```bash
 export ARM_CLIENT_ID=<YOUR_CLIENT_ID>
 export ARM_CLIENT_SECRET=<YOUR_CLIENT_SECRET>
@@ -61,45 +68,57 @@ Choose your preferred language:
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new azure-typescript
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new azure-python
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new azure-go
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new azure-csharp
 ```
+
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new azure-java
 ```
+
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```bash
 mkdir quickstart && cd quickstart
 pulumi new azure-yaml
 ```
+
 {{% /choosable %}}
 
 ## Deploy Your Infrastructure
@@ -111,6 +130,7 @@ pulumi up
 ```
 
 This command:
+
 1. Shows a preview of the Resource Group and Storage Account to be created
 2. Asks for your confirmation
 3. Creates your Resource Group and StorageV2 Storage Account in Azure
@@ -118,17 +138,17 @@ This command:
 
 ## 🎉 Congratulations!
 
-You've just deployed your first infrastructure with Pulumi! 
+You've just deployed your first infrastructure with Pulumi!
 
 ### What's Next?
 
-- **[Complete Azure Tutorial →](/docs/iac/get-started/azure/)**  
+- **[Complete Azure Tutorial →](/docs/iac/get-started/azure/)**
   Learn how to build and deploy applications on Azure
-  
-- **[Browse Examples →](https://github.com/pulumi/examples#azure)**  
+
+- **[Browse Examples →](https://github.com/pulumi/examples#azure)**
   Explore production-ready Azure examples
-  
-- **[Join the Community →](https://slack.pulumi.com)**  
+
+- **[Join the Community →](https://slack.pulumi.com)**
   Get help and share with 10,000+ developers
 
 ### Quick Tips

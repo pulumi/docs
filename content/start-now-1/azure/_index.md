@@ -22,21 +22,27 @@ Get started with Pulumi Cloud for free. Includes state management, secrets, and 
 {{< chooser os "macos,linux,windows" >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -48,6 +54,7 @@ az login
 ```
 
 Or use a service principal:
+
 ```bash
 export ARM_CLIENT_ID=<YOUR_CLIENT_ID>
 export ARM_CLIENT_SECRET=<YOUR_CLIENT_SECRET>
@@ -62,12 +69,14 @@ export ARM_SUBSCRIPTION_ID=<YOUR_SUBSCRIPTION_ID>
 {{% choosable language typescript %}}
 
 Create a new project:
+
 ```bash
 mkdir my-azure-app && cd my-azure-app
 pulumi new azure-typescript
 ```
 
 Example: Create a Storage Account
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure-native";
@@ -89,6 +98,7 @@ export const primaryStorageKey = pulumi.secret(storageAccount.primaryAccessKey);
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -98,12 +108,14 @@ pulumi up
 {{% choosable language python %}}
 
 Create a new project:
+
 ```bash
 mkdir my-azure-app && cd my-azure-app
 pulumi new azure-python
 ```
 
 Example: Create a Storage Account
+
 ```python
 import pulumi
 from pulumi_azure_native import resources, storage
@@ -122,11 +134,12 @@ storage_account = storage.StorageAccount(
 )
 
 # Export the primary storage key
-pulumi.export("primary_storage_key", 
+pulumi.export("primary_storage_key",
               pulumi.Output.secret(storage_account.primary_access_key))
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -136,12 +149,14 @@ pulumi up
 {{% choosable language go %}}
 
 Create a new project:
+
 ```bash
 mkdir my-azure-app && cd my-azure-app
 pulumi new azure-go
 ```
 
 Example: Create a Storage Account
+
 ```go
 package main
 
@@ -179,6 +194,7 @@ func main() {
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -188,12 +204,14 @@ pulumi up
 {{% choosable language csharp %}}
 
 Create a new project:
+
 ```bash
 mkdir my-azure-app && cd my-azure-app
 pulumi new azure-csharp
 ```
 
 Example: Create a Storage Account
+
 ```csharp
 using Pulumi;
 using Pulumi.AzureNative.Resources;
@@ -228,6 +246,7 @@ class MyStack : Stack
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -237,12 +256,14 @@ pulumi up
 {{% choosable language java %}}
 
 Create a new project:
+
 ```bash
 mkdir my-azure-app && cd my-azure-app
 pulumi new azure-java
 ```
 
 Example: Create a Storage Account
+
 ```java
 package myproject;
 
@@ -272,13 +293,14 @@ public class App {
             .build());
 
         // Export the primary storage key
-        ctx.export("primaryStorageKey", 
+        ctx.export("primaryStorageKey",
                   storageAccount.primaryAccessKey().applyValue(key -> key));
     }
 }
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -288,12 +310,14 @@ pulumi up
 {{% choosable language yaml %}}
 
 Create a new project:
+
 ```bash
 mkdir my-azure-app && cd my-azure-app
 pulumi new azure-yaml
 ```
 
 Example: Create a Storage Account
+
 ```yaml
 name: my-azure-app
 runtime: yaml
@@ -320,6 +344,7 @@ outputs:
 ```
 
 Deploy your infrastructure:
+
 ```bash
 pulumi up
 ```
@@ -328,14 +353,14 @@ pulumi up
 
 ## What's Next?
 
-- [**Follow the complete Azure tutorial →**](/docs/iac/get-started/azure/)  
+- [**Follow the complete Azure tutorial →**](/docs/iac/get-started/azure/)
   Learn how to build and deploy applications on Azure
 
-- [**Explore Azure examples →**](https://github.com/pulumi/examples#azure)  
+- [**Explore Azure examples →**](https://github.com/pulumi/examples#azure)
   Browse production-ready examples for common Azure architectures
 
-- [**Learn Pulumi concepts →**](/docs/iac/concepts/)  
+- [**Learn Pulumi concepts →**](/docs/iac/concepts/)
   Understand stacks, state, configuration, and more
 
-- [**Join the community →**](https://slack.pulumi.com)  
+- [**Join the community →**](https://slack.pulumi.com)
   Get help and share knowledge with other Pulumi users

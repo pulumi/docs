@@ -35,19 +35,25 @@ Pulumi Cloud provides free state management, secrets encryption, and deployment 
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 
@@ -81,6 +87,7 @@ export const bucketUrl = pulumi.interpolate`http://${bucket.websiteEndpoint}`;
 ```
 
 Deploy it:
+
 ```bash
 pulumi up
 ```
@@ -117,19 +124,25 @@ Pulumi Cloud provides free state management, secrets encryption, and deployment 
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 
@@ -162,6 +175,7 @@ pulumi.export("bucket_url", pulumi.Output.concat("http://", bucket.website_endpo
 ```
 
 Deploy it:
+
 ```bash
 pulumi up
 ```
@@ -198,19 +212,25 @@ Pulumi Cloud provides free state management, secrets encryption, and deployment 
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 
@@ -256,6 +276,7 @@ func main() {
 ```
 
 Deploy it:
+
 ```bash
 pulumi up
 ```
@@ -292,19 +313,25 @@ Pulumi Cloud provides free state management, secrets encryption, and deployment 
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 
@@ -345,13 +372,14 @@ class MyStack : Stack
 
     [Output]
     public Output<string> BucketName { get; set; }
-    
+
     [Output]
     public Output<string> BucketUrl { get; set; }
 }
 ```
 
 Deploy it:
+
 ```bash
 pulumi up
 ```
@@ -389,19 +417,25 @@ Pulumi Cloud provides free state management, secrets encryption, and deployment 
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 
@@ -449,6 +483,7 @@ public class App {
 ```
 
 Deploy it:
+
 ```bash
 pulumi up
 ```
@@ -484,19 +519,25 @@ Pulumi Cloud provides free state management, secrets encryption, and deployment 
 
 {{< chooser os "macos,linux,windows" >}}
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 {{% choosable os windows %}}
+
 ```powershell
 choco install pulumi
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 
@@ -554,6 +595,7 @@ outputs:
 ```
 
 Deploy it:
+
 ```bash
 pulumi up
 ```
