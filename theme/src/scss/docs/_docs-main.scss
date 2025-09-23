@@ -323,19 +323,15 @@ body.section-registry {
         position: relative;
         min-width: 0;
 
-        .docs-content-width-expanded {
+        // Content defaults to expanded width - no JavaScript needed
+        .docs-main-content {
             @media (min-width: 1526px) {
                 max-width: 1200px !important;
-                &.expand-registry {
+
+                &.registry-package-list {
                     width: 100%;
                     max-width: 1200px !important;
                 }
-            }
-        }
-
-        .docs-content-width-collapsed {
-            @media (min-width: 1526px) {
-                max-width: 700px !important;
             }
         }
 

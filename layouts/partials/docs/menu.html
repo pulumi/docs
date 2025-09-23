@@ -21,6 +21,17 @@
 {{ end }}
 
 <nav class="text-sm mt-7 mr-2">
+    {{/* Search box moved from top nav */}}
+    <div class="docs-search mb-4">
+        <div
+            id="search"
+            data-app-id="{{ getenv "ALGOLIA_APP_ID" }}"
+            data-search-key="{{ getenv "ALGOLIA_APP_SEARCH_KEY" }}"
+            data-facets="Docs,Registry,Tutorials,Blog"
+            data-index="production"
+        ></div>
+    </div>
+
     <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
         <ul class="list-none pl-0">
 
