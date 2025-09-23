@@ -1,0 +1,29 @@
+{{ define "hero" }}
+    <header class="container mx-auto text-center py-8 border-b border-gray-200">
+        <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+        {{ if .Params.subtitle }}
+            <p class="text-lg text-gray-600">{{ .Params.subtitle }}</p>
+        {{ end }}
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <section class="container mx-auto px-4 py-8">
+        {{ if .Params.cloud_providers }}
+        <div class="max-w-2xl mx-auto">
+            <div class="grid grid-cols-2 gap-4">
+                {{ range .Params.cloud_providers.items }}
+                <a href="{{ .link }}" class="block group">
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-400 transition-colors duration-200 h-full flex flex-col items-center justify-between">
+                        <div class="h-5 flex items-center justify-center mb-3 mx-auto">
+                            <img src="{{ .logo }}" alt="{{ .name }} logo" class="h-5">
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 group-hover:text-blue-600 text-center">{{ .name }}</h3>
+                    </div>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </section>
+{{ end }}

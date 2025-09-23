@@ -1,0 +1,279 @@
+{{ define "hero" }}
+    <header class="container mx-auto text-center py-8 border-b border-gray-200">
+        <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+        {{ if .Params.subtitle }}
+            <p class="text-lg text-gray-600">{{ .Params.subtitle }}</p>
+        {{ end }}
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <style>
+        /* Typography improvements - matching main start-now pages */
+        .content-wrapper h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        /* Step-specific styling with numbered badges */
+        .content-wrapper h2:nth-of-type(1):not(#congratulations),
+        .content-wrapper h2:nth-of-type(2):not(#congratulations),
+        .content-wrapper h2:nth-of-type(3):not(#congratulations),
+        .content-wrapper h2:nth-of-type(4):not(#congratulations),
+        .content-wrapper h2:nth-of-type(5):not(#congratulations) {
+            position: relative;
+            padding-left: 3rem;
+            border-bottom: 2px solid #7c3aed;
+        }
+        
+        .content-wrapper h2:nth-of-type(1):not(#congratulations):before,
+        .content-wrapper h2:nth-of-type(2):not(#congratulations):before,
+        .content-wrapper h2:nth-of-type(3):not(#congratulations):before,
+        .content-wrapper h2:nth-of-type(4):not(#congratulations):before,
+        .content-wrapper h2:nth-of-type(5):not(#congratulations):before {
+            position: absolute;
+            left: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background: #7c3aed;
+            color: white;
+            font-weight: bold;
+            font-size: 0.875rem;
+            border-radius: 50%;
+        }
+        
+        /* Auto-number steps */
+        .content-wrapper h2:nth-of-type(1):not(#congratulations):before { content: "1"; }
+        .content-wrapper h2:nth-of-type(2):not(#congratulations):before { content: "2"; }
+        .content-wrapper h2:nth-of-type(3):not(#congratulations):before { content: "3"; }
+        .content-wrapper h2:nth-of-type(4):not(#congratulations):before { content: "4"; }
+        .content-wrapper h2:nth-of-type(5):not(#congratulations):before { content: "5"; }
+        
+        /* Congratulations section */
+        .content-wrapper h2:has(+ p:contains("Congratulations")),
+        .content-wrapper h2:contains("Congratulations"),
+        .content-wrapper h2#congratulations {
+            color: #059669;
+            border-bottom-color: #10b981;
+            font-size: 2rem;
+            text-align: center;
+            display: block;
+            padding-left: 0;
+        }
+        
+        .content-wrapper h2#congratulations:before {
+            display: none;
+        }
+        
+        .content-wrapper h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 1.75rem;
+            margin-bottom: 0.875rem;
+        }
+        
+        .content-wrapper h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4b5563;
+            margin-top: 1.25rem;
+            margin-bottom: 0.625rem;
+        }
+        
+        .content-wrapper p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            line-height: 1.75;
+        }
+        
+        /* Code blocks */
+        .content-wrapper pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-wrapper code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+        }
+        
+        .content-wrapper :not(pre) > code {
+            background-color: #f3f4f6;
+            color: #7c3aed;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        
+        /* Lists */
+        .content-wrapper ul, .content-wrapper ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: #4b5563;
+        }
+        
+        .content-wrapper li {
+            margin-bottom: 0.5rem;
+            line-height: 1.75;
+        }
+        
+        .content-wrapper ul {
+            list-style-type: disc;
+        }
+        
+        .content-wrapper ol {
+            list-style-type: decimal;
+        }
+        
+        /* Step instruction lists */
+        .content-wrapper h2[id^="step-"] + p + ol {
+            background-color: #f9fafb;
+            padding: 1rem 1rem 1rem 2rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid #7c3aed;
+        }
+        
+        /* Links */
+        .content-wrapper a:not(.btn-primary):not(.btn-secondary) {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+        
+        .content-wrapper a:not(.btn-primary):not(.btn-secondary):hover {
+            color: #1d4ed8;
+        }
+        
+        /* Buttons */
+        .content-wrapper .btn-primary, 
+        .content-wrapper a.btn-primary {
+            display: inline-block;
+            background-color: #7c3aed;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.2);
+        }
+        
+        .content-wrapper .btn-primary:hover,
+        .content-wrapper a.btn-primary:hover {
+            background-color: #6d28d9;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px -1px rgba(124, 58, 237, 0.3);
+        }
+        
+        .content-wrapper .btn-primary.btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+        
+        /* Chooser component styling */
+        .content-wrapper pulumi-chooser {
+            margin: 1.5rem 0;
+            display: block;
+        }
+        
+        /* Highlight blocks */
+        .content-wrapper .highlight {
+            margin: 1.5rem 0;
+        }
+        
+        /* First h2 no top margin */
+        .content-wrapper > h2:first-child {
+            margin-top: 0;
+        }
+        
+        /* Section spacing */
+        .content-wrapper > * + h2 {
+            margin-top: 3rem;
+        }
+        
+        /* What's Next section */
+        .content-wrapper h3:contains("What's Next"),
+        .content-wrapper h2:contains("What's Next") {
+            color: #2563eb;
+            margin-top: 3rem;
+        }
+        
+        .content-wrapper h3:contains("What's Next") + ul,
+        .content-wrapper h2:contains("What's Next") + ul {
+            background-color: #eff6ff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        /* Quick Tips section */
+        .content-wrapper h3:contains("Quick Tips") {
+            background-color: #fef3c7;
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .content-wrapper h3:contains("Quick Tips") + ul {
+            background-color: #fefce8;
+            padding: 1rem 1rem 1rem 2rem;
+            border-radius: 0.375rem;
+            margin-top: -0.5rem;
+        }
+        
+        /* Progress indicator (visual only) */
+        .content-wrapper {
+            position: relative;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .content-wrapper h2 {
+                font-size: 1.5rem;
+            }
+            
+            .content-wrapper h2[id^="step-"] {
+                padding-left: 3rem;
+            }
+            
+            .content-wrapper h2[id^="step-"]:before {
+                width: 2rem;
+                height: 2rem;
+                font-size: 0.875rem;
+            }
+            
+            .content-wrapper h3 {
+                font-size: 1.125rem;
+            }
+            
+            .content-wrapper pre {
+                padding: 0.75rem;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+    
+    <article class="container mx-auto px-6 py-12 max-w-4xl">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-8 lg:p-12">
+                <div class="content-wrapper">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </article>
+{{ end }}
