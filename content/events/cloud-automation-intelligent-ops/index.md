@@ -48,12 +48,13 @@ main:
 
     # Description of the webinar.
     description: |
-        Join Pulumi and AWS for an exclusive fireside chat on how next-generation AI capabilities are transforming infrastructure operations through intelligent automation. Discover how platform engineering teams can harness autonomous assistants that understand context, execute complex cloud operations, and adapt to your organization's unique requirements - all while maintaining enterprise-grade governance and security controls.
+        Join Pulumi and AWS for an exclusive fireside chat on how next-generation AI capabilities are transforming infrastructure operations through intelligent automation. Discover how platform engineering teams can harness Pulumi Neo and other autonomous assistants that understand context, execute complex cloud operations, and adapt to your organization's unique requirements—all while maintaining enterprise-grade governance and security controls. Learn how Neo's AI-powered infrastructure assistant is revolutionizing the way teams build, manage, and optimize cloud infrastructure through natural language interactions.
     learn:
-        - What is AIOps, and how does it impact your organization's operations
-        - Best practices for balancing automation with human oversight
-        - Strategies for incremental adoption of AI-powered infrastructure management
-        - How to prepare your organization for the next wave of infrastructure automation 
+        - Hear about the evolution of IaC automation with Pulumi and AI-powered assistance
+        - Discover how Neo's intelligent agent understands your infrastructure context and organizational patterns
+        - Understand how Pulumi Neo supports governance, compliance and best practices at scale through automated policy enforcement
+        - See live demonstrations of Pulumi Neo solving complex infrastructure challenges in minutes, from multi-cloud deployments to security remediation
+        - Learn how Neo's conversational interface transforms how teams interact with infrastructure, making complex operations accessible through natural language
 
     # The webinar presenters
     presenters:
