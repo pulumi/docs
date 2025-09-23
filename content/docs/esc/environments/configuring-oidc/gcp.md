@@ -58,7 +58,7 @@ Once you have created your workload identity pool and provider, you will be dire
 4. In the **Attribute name** dropdown, select **Subject**.
 5. In the **Attribute value** field, provide a valid subject claim (see examples at the end of this section). Then click **Save**.
 
-Make a note of the project ID, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
+Make a note of the project number, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
 
 ## Configure ESC for OIDC
 
