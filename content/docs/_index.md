@@ -8,7 +8,6 @@ aliases:
 - /docs/reference/
 notitle: true
 docs_home: true
-noleftnav: true
 norightnav: true
 nobreadcrumb: true
 h1: Pulumi Docs

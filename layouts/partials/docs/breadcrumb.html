@@ -17,5 +17,13 @@
                 {{ .p1.LinkTitle }}
             </a>
         </li>
+        {{/* Add Overview breadcrumb for section index pages when we're on that page */}}
+        {{ if and (eq .p1 .p2) (.p1.IsSection) (not (.p1.IsHome)) }}
+            <li class="active">
+                <a data-track="breadcrumb" href="{{ .p1.RelPermalink }}">
+                    Overview
+                </a>
+            </li>
+        {{ end }}
     {{ end }}
 {{ end }}

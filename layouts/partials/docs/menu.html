@@ -2,7 +2,9 @@
 
 {{/* Detect current section for auto-expansion */}}
 {{ $currentSection := "home" }}
-{{ if hasPrefix $page.Path "/docs/iac" }}
+{{ if eq $page.Path "/docs/" }}
+    {{ $currentSection = "docs" }}
+{{ else if hasPrefix $page.Path "/docs/iac" }}
     {{ $currentSection = "iac" }}
 {{ else if hasPrefix $page.Path "/docs/esc" }}
     {{ $currentSection = "esc" }}
@@ -21,6 +23,20 @@
 <nav class="text-sm mt-7 mr-2">
     <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
         <ul class="list-none pl-0">
+
+
+            <li class="expandable{{ if eq $currentSection "docs" }} expanded{{ end }}" data-menu-id="docs-home">
+                <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
+                    <button><i class="fa fa-caret-right"></i></button>
+                    <span>docs</span>
+                </a>
+                <ul class="list-none">
+                    <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
+                        <button><i class="fa fa-caret-right"></i></button>
+                        <span>Docs Home</span>
+                    </a></li>
+                </ul>
+            </li>
 
             {{/* Pulumi IaC Section */}}
             {{- with index site.Menus "iac" }}
