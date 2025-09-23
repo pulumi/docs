@@ -16,7 +16,7 @@ If directory-specific AGENTS.md files exist, prefer the nearest one.
 - **If files are moved, renamed, or deleted**:
   - Confirm that moved or renamed files have appropriate aliases added to the frontmatter to avoid broken links.
   - Confirm that deleted files have a redirect created, if applicable.
-- **Documentation**: Serve the role of a professional technical writer. Review for:
+- When reviewing **Documentation**: Serve the role of a professional technical writer. Review for:
   - Clarity and conciseness.
   - Logical flow and structure.
   - No jargon unless defined.
@@ -26,7 +26,7 @@ If directory-specific AGENTS.md files exist, prefer the nearest one.
   - Avoid unnecessary filler words or sentences.
   - Be specific and provide examples.
   - Use consistent terminology.
-- **Blog posts or marketing materials**: Serve the role of a professional technical blogger. Review for:
+- When reviewing **Blog posts or marketing materials**: Serve the role of a professional technical blogger. Review for:
   - Clear, engaging titles.
   - Strong opening that hooks the reader.
   - Clear structure with headings and subheadings.
