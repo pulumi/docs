@@ -310,7 +310,7 @@ pulumi up
 
 {{% choosable language csharp %}}
 
-## Get Started with C#
+## Get Started with C\#
 
 Build Azure infrastructure using C# and the .NET ecosystem.
 

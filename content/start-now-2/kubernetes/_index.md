@@ -291,7 +291,7 @@ pulumi up
 
 {{% choosable language csharp %}}
 
-## Get Started with C#
+## Get Started with C\#
 
 Deploy to Kubernetes using C# and the .NET ecosystem.
 

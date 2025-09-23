@@ -294,7 +294,7 @@ pulumi up
 
 {{% choosable language csharp %}}
 
-## Get Started with C#
+## Get Started with C\#
 
 Build Google Cloud infrastructure using C# and the .NET ecosystem.
 
