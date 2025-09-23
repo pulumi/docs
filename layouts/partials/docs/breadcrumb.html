@@ -12,13 +12,13 @@
         {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2) }}
     {{ end }}
     {{ if not (isset .p1.Params "redirect_to") }}
-        <li {{ if eq .p1 .p2 }}class="active"{{ end }}>
+        <li {{ if and (eq .p1 .p2) (not .p1.Params.is_overview) }}class="active"{{ end }}>
             <a data-track="breadcrumb" href="{{ .p1.RelPermalink }}">
                 {{ .p1.LinkTitle }}
             </a>
         </li>
-        {{/* Add Overview breadcrumb for section index pages when we're on that page */}}
-        {{ if and (eq .p1 .p2) (.p1.IsSection) (not (.p1.IsHome)) }}
+        {{/* Add Overview breadcrumb for pages marked as overview pages */}}
+        {{ if and (eq .p1 .p2) (.p1.Params.is_overview) }}
             <li class="active">
                 <a data-track="breadcrumb" href="{{ .p1.RelPermalink }}">
                     Overview

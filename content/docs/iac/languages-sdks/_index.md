@@ -4,6 +4,7 @@ meta_desc: An overview of how to use Node.js, Python, Go, .NET, Java, and YAML w
 title: Languages & SDKs
 h1: Pulumi languages & SDKs
 meta_image: /images/docs/meta-images/docs-meta.png
+is_overview: true
 menu:
     iac:
         name: Languages & SDKs

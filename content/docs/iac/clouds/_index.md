@@ -4,6 +4,7 @@ meta_desc: Pulumi supports AWS, Azure, Google Cloud, Kubernetes, and over 100 ot
 title: "Clouds"
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
+is_overview: true
 menu:
   iac:
     parent: iac-home

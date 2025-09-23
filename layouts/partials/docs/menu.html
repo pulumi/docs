@@ -27,7 +27,7 @@
 
             <li class="expandable{{ if eq $currentSection "docs" }} expanded{{ end }}" data-menu-id="docs-home">
                 <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button><i class="fa fa-caret-right"></i></button>
+                    <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
                     <span>docs</span>
                 </a>
                 <ul class="list-none">
@@ -42,7 +42,7 @@
             {{- with index site.Menus "iac" }}
                 <li class="expandable{{ if eq $currentSection "iac" }} expanded{{ end }}" data-menu-id="iac-top">
                     <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button><i class="fa fa-caret-right"></i></button>
+                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
                         <span>Pulumi IaC</span>
                     </a>
                     <ul class="list-none">
@@ -55,7 +55,7 @@
             {{- with index site.Menus "esc" }}
                 <li class="expandable{{ if eq $currentSection "esc" }} expanded{{ end }}" data-menu-id="esc-top">
                     <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button><i class="fa fa-caret-right"></i></button>
+                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
                         <span>Pulumi ESC</span>
                     </a>
                     <ul class="list-none">
@@ -68,7 +68,7 @@
             {{- with index site.Menus "cloud" }}
                 <li class="expandable{{ if eq $currentSection "cloud" }} expanded{{ end }}" data-menu-id="cloud-top">
                     <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button><i class="fa fa-caret-right"></i></button>
+                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
                         <span>Pulumi Cloud</span>
                     </a>
                     <ul class="list-none">
@@ -81,7 +81,7 @@
             {{- with index site.Menus "idp" }}
                 <li class="expandable{{ if eq $currentSection "idp" }} expanded{{ end }}" data-menu-id="idp-top">
                     <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button><i class="fa fa-caret-right"></i></button>
+                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
                         <span>Pulumi IDP</span>
                     </a>
                     <ul class="list-none">
@@ -94,7 +94,7 @@
             {{- with index site.Menus "insights" }}
                 <li class="expandable{{ if eq $currentSection "insights" }} expanded{{ end }}" data-menu-id="insights-top">
                     <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button><i class="fa fa-caret-right"></i></button>
+                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
                         <span>Pulumi Insights</span>
                     </a>
                     <ul class="list-none">
@@ -106,7 +106,7 @@
             {{/* Packages Section */}}
             <li class="expandable{{ if eq $currentSection "packages" }} expanded{{ end }}" data-menu-id="packages-top">
                 <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button><i class="fa fa-caret-right"></i></button>
+                    <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
                     <span>Packages</span>
                 </a>
                 <ul class="list-none">
@@ -120,7 +120,7 @@
             {{/* Tutorials Section */}}
             <li class="expandable{{ if eq $currentSection "tutorials" }} expanded{{ end }}" data-menu-id="tutorials-top">
                 <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button><i class="fa fa-caret-right"></i></button>
+                    <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
                     <span>Tutorials</span>
                 </a>
                 <ul class="list-none">
@@ -165,7 +165,7 @@
                 {{- if and .Children (ne .Identifier $rootMenuID) }}
                     {{/* Parent with children - make it clickable for expand/collapse but not navigation */}}
                     <a href="javascript:void(0)"{{- if $page.HasMenuCurrent .Menu . }} class="ancestor"{{ end }} onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button>
+                    <button style="pointer-events: none;">
                         <i class="fa fa-caret-right"></i>
                     </button>
                     <span>{{ $name }}</span>
@@ -187,31 +187,16 @@
                 {{- end }}
                 {{- with .Children }}
                     <ul class="list-none">
-                        {{/* Add Overview link as first child for main sections */}}
-                        {{- $overviewURL := "" }}
-
-                        {{- if eq $currentMenuItem.Identifier "iac-get-started" }}
-                            {{- $overviewURL = "/docs/iac/get-started/" }}
-                        {{- else if eq $currentMenuItem.Identifier "iac-concepts" }}
-                            {{- $overviewURL = "/docs/iac/concepts/" }}
-                        {{- else if eq $currentMenuItem.Identifier "iac-clouds" }}
-                            {{- $overviewURL = "/docs/iac/clouds/" }}
-                        {{- else if eq $currentMenuItem.Identifier "iac-using-pulumi" }}
-                            {{- $overviewURL = "/docs/iac/using-pulumi/" }}
-                        {{- else if eq $currentMenuItem.Identifier "iac-languages" }}
-                            {{- $overviewURL = "/docs/iac/languages/" }}
-                        {{- else if eq $currentMenuItem.Identifier "iac-cli" }}
-                            {{- $overviewURL = "/docs/iac/cli/" }}
-                        {{- else if eq $currentMenuItem.Identifier "iac-support" }}
-                            {{- $overviewURL = "/docs/iac/support/" }}
-                        {{- else if $currentMenuItem.URL }}
-                            {{- $overviewURL = $currentMenuItem.URL }}
+                        {{/* Add Overview link for pages marked as overview pages */}}
+                        {{- $overviewPage := "" }}
+                        {{- if $currentMenuItem.URL }}
+                            {{- $overviewPage = site.GetPage $currentMenuItem.URL }}
                         {{- end }}
 
-                        {{- if $overviewURL }}
+                        {{- if and $overviewPage $overviewPage.Params.is_overview }}
                             <li data-menu-id="overview">
-                                <a href="{{ $overviewURL }}"
-                                    {{- if eq $page.RelPermalink $overviewURL }}
+                                <a href="{{ $overviewPage.RelPermalink }}"
+                                    {{- if eq $page.RelPermalink $overviewPage.RelPermalink }}
                                         class="active" aria-current="page"
                                     {{- end }}
                                 >

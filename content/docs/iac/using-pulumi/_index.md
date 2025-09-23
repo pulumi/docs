@@ -4,6 +4,7 @@ meta_desc: Learn how to adopt Pulumi, organize projects & stacks, use the Automa
 title: Using Pulumi
 h1: Using Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
+is_overview: true
 menu:
     iac:
         name: Using Pulumi
