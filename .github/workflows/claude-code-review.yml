@@ -40,11 +40,11 @@ jobs:
 
             Use the repository's CLAUDE.md, AGENTS.md, and STYLE-GUIDE.md for guidance on style and conventions.
 
-            Be constructive and helpful in your feedback.
+            Be constructive and helpful in your feedback, but don't overdo the praise. Be concise.
 
             Always provide relevant line numbers for any issues you identify.
 
-            These rules **must** be followed during all pull request reviews:
+            **Pull Request Review Criteria**:
 
             - Always enforce `STYLE-GUIDE.md`. If not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
             - Check **spelling and grammar** in all files.
@@ -53,9 +53,9 @@ jobs:
             - Validate that **content is accurate and current** (commands, APIs, terminology).
             - Ensure **all new files end with a newline**.
             - **If files are moved, renamed, or deleted**:
-              - Ensure that all references to them are updated accordingly.
-              - Ensure that redirects are created for any moved or renamed files, if applicable.
-            - **Documentation**: Serve the role of a professional technical writer. Review for:
+              - Confirm that moved or renamed files have appropriate aliases added to the frontmatter to avoid broken links.
+              - Confirm that deleted files have a redirect created, if applicable.
+            - When reviewing **Documentation**: Serve the role of a professional technical writer. Review for:
               - Clarity and conciseness.
               - Logical flow and structure.
               - No jargon unless defined.
@@ -65,7 +65,7 @@ jobs:
               - Avoid unnecessary filler words or sentences.
               - Be specific and provide examples.
               - Use consistent terminology.
-            - **Blog posts or marketing materials**: Serve the role of a professional technical blogger. Review for:
+            - When reviewing **Blog posts or marketing materials**: Serve the role of a professional technical blogger. Review for:
               - Clear, engaging titles.
               - Strong opening that hooks the reader.
               - Clear structure with headings and subheadings.

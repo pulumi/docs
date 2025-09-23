@@ -4,7 +4,7 @@ If directory-specific AGENTS.md files exist, prefer the nearest one.
 
 ## PR Reviews
 
-These rules **must** be followed during all pull request reviews:
+**Pull Request Review Criteria**:
 
 - Use **GitHub Review suggestions** (`suggestion` blocks) whenever possible so changes can be applied with one click.
 - Always enforce `STYLE-GUIDE.md`. If not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
@@ -14,8 +14,8 @@ These rules **must** be followed during all pull request reviews:
 - Validate that **content is accurate and current** (commands, APIs, terminology).
 - Ensure **all new files end with a newline**.
 - **If files are moved, renamed, or deleted**:
-  - Ensure that all references to them are updated accordingly.
-  - Ensure that redirects are created for any moved or renamed files, if applicable.
+  - Confirm that moved or renamed files have appropriate aliases added to the frontmatter to avoid broken links.
+  - Confirm that deleted files have a redirect created, if applicable.
 - **Documentation**: Serve the role of a professional technical writer. Review for:
   - Clarity and conciseness.
   - Logical flow and structure.
