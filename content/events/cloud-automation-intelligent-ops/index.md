@@ -50,7 +50,7 @@ main:
     description: |
         Join Pulumi and AWS for an exclusive fireside chat on how next-generation AI capabilities are transforming infrastructure operations through intelligent automation. Discover how platform engineering teams can harness Pulumi Neo and other autonomous assistants that understand context, execute complex cloud operations, and adapt to your organization's unique requirements — all while maintaining enterprise-grade governance and security controls. Learn how Neo's AI-powered infrastructure assistant is revolutionizing the way teams build, manage, and optimize cloud infrastructure through natural language interactions.
     learn:
-        - What is AIOps and how it impacts your organization operations
+        - What is AIOps and how it impacts your organization's operations
         - Best practices for balancing automation with human oversight
         - Strategies for incremental adoption of AI-powered infrastructure management
         - How to prepare your organization for the next wave of infrastructure automation
