@@ -6,12 +6,12 @@ h1: Editing state files
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Editing State Files
+        name: Editing state Files
         parent: iac-troubleshooting
         weight: 30
 ---
 
-The Pulumi IaC engine computes the difference between your program's code (desired state) and your stack's stack file (current state) to make decisions about what resources to create, read, update, or delete, and in what order. In some cases, you may need to perform edits to your state file, either via the Pulumi CLI (preferred) or by editing the state file in a text editor (as a last resort).
+The Pulumi IaC engine computes the difference between your program's code (desired state) and your stack's state file (current state) to make decisions about what resources to create, read, update, or delete, and in what order. In some cases, you may need to perform edits to your state file, either via the Pulumi CLI (preferred) or by editing the state file in a text editor (as a last resort).
 
 This page is a guide on how to edit your state file as safely as possible.
 
@@ -19,7 +19,7 @@ This page is a guide on how to edit your state file as safely as possible.
 
 You might need to edit your state file in the following situations:
 
-- You want to move resources between stacks in the course of refactoring of your Pulumi codebase(s)
+- You want to move resources between stacks in the course of refactoring your Pulumi codebase(s)
 - You need to unprotect resources from deletion
 - A Pulumi command fails with an error indicating a corrupt state, for example if you see [an I/O error with the text `after mutation of snapshot`](/docs/iac/troubleshooting#post-step-event), which can occur in rare scenarios like a network partition during a state file update.
 
@@ -52,7 +52,7 @@ The following commands support the `--target` option:
 If you have determined that it is appropriate and necessary to edit your state file, follow these steps to do so safely:
 
 {{% notes type="info" %}}
-If possible, ensure that your team members do not attempt to make updates to your stack while you are editing your state file, e.g., by communicating your intent over a shared chat channel. Additional Pulumi operations (e.g., performed by other team members unaware that you are editing the state file) that write to the state file can invalidate the changes you are making.
+Ensure that your team members do not attempt to make updates to your stack while you are editing your state file, e.g., by communicating your intent over a shared chat channel. Pulumi operations performed, for example those performed by other team members who are unaware that you are editing the state file, that write to the state file can invalidate the changes you are making.
 {{% /notes %}}
 
 ### 1. Save a backup of your state file
@@ -124,7 +124,7 @@ The `resources` field is a list, not a set: The order of resources in the list i
 
 The possible fields of an entry in `resources` are:
 
-| Field |  Description |
+| Field | Description |
 | - | - |
 | `urn` | The resource URN, which is a Pulumi-specific universal resource identifier. |
 | `custom` | A boolean indicating whether or not this resource is a `custom` resource, which means that it uses a resource provider to operate. Component resources are not `custom`. |
