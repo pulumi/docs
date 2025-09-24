@@ -52,7 +52,7 @@ The following commands support the `--target` option:
 If you have determined that it is appropriate and necessary to edit your state file, follow these steps to do so safely:
 
 {{% notes type="info" %}}
-Ensure that your team members do not attempt to make updates to your stack while you are editing your state file, e.g., by communicating your intent over a shared chat channel. Pulumi operations performed, for example those performed by other team members who are unaware that you are editing the state file, that write to the state file can invalidate the changes you are making.
+Ensure that your team members do not attempt to make updates to your stack while you are editing your state file, e.g., by communicating your intent over a shared chat channel. If someone performs a Pulumi operation that writes to your state file in while you are in the process of editing it, important data loss may occur: either your changes or your teammate's risk being overwritten.
 {{% /notes %}}
 
 ### 1. Save a backup of your state file
