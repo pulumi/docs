@@ -95,7 +95,8 @@ dotnet --version
 {{% /choosable %}}
 
 {{% choosable language java %}}
-**Required:** 
+**Required:**
+
 - [Java](https://www.oracle.com/java/) 11 or later
 - [Maven](https://maven.apache.org/) 3.6.1 or later
 
