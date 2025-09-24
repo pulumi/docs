@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Google Cloud Provider Version 9.0.0"
-date: 2025-09-17T13:33:50-07:00
+date: 2025-09-23T13:33:50-07:00
 draft: false
 meta_desc: "Release of the v9 version of the Pulumi Provider for Google Cloud"
 meta_image: meta.png
@@ -29,7 +29,7 @@ Here are a few links to help you get started if you are new to Pulumi:
 - [Templates](https://www.pulumi.com/templates/serverless-application/gcp/) - Use a quickstart template to create a new project
 - [Pulumi Neo](https://www.pulumi.com/product/neo/) - Ask Pulumi Neo to help you with your project
 
-## In Case You missed It - New Modules
+## In case you missed it - new modules
 
 Throughout the past year, we have worked to keep this provider in sync with the upstream provider.
 Notable new modules are those supporting AI and Google Gemini.
@@ -41,8 +41,8 @@ New modules added since the last major release include:
 - [Developer Connect](https://www.pulumi.com/registry/packages/gcp/api-docs/developerconnect)
 - [Gemini](https://www.pulumi.com/registry/packages/gcp/api-docs/gemini)
 - [Lustre](https://www.pulumi.com/registry/packages/gcp/api-docs/lustre)
-- [Model armor](https://www.pulumi.com/registry/packages/gcp/api-docs/modelarmor)
-- [Oracle Database](pulumi.com/registry/packages/gcp/api-docs/oracledatabase)
+- [Model Armor](https://www.pulumi.com/registry/packages/gcp/api-docs/modelarmor)
+- [Oracle Database](https://www.pulumi.com/registry/packages/gcp/api-docs/oracledatabase)
 - [Parameter Manager](https://www.pulumi.com/registry/packages/gcp/api-docs/parametermanager)
 - [Transcoder](https://www.pulumi.com/registry/packages/gcp/api-docs/transcoder)
 
@@ -57,7 +57,7 @@ Some themes are:
 
 Multiple resources throughout the provider have improved validation and error messages to ensure the supplied GCP resource ID matches import formats specified in the documentation.
 
-#### Increased field validation
+#### Increased Field Validation
 
 Several resource fields have been updated to reflect requirements of Google Cloud and will fail validation if not configured correctly, to avoid failures later on.
 Refer to the [migration guide for details.](https://www.pulumi.com/registry/packages/gcp/how-to-guides/9-0-migration/)
@@ -65,7 +65,7 @@ Refer to the [migration guide for details.](https://www.pulumi.com/registry/pack
 ### Documentation Improvements
 
 We are always working on improving and updating our documentation.
-Among other improvemetns, this release adds 100 new top-level overview descriptions for resources and functions.
+Among other improvements, this release adds 100 new top-level overview descriptions for resources and functions.
 
 ### Upgrading
 
@@ -76,7 +76,7 @@ You can find the [migration guide on the Pulumi registry.](https://www.pulumi.co
 You can use our new automation agent, [Neo](https://www.pulumi.com/docs/pulumi-cloud/neo/), to help you with your provider upgrade.
 In the Pulumi service, ask Neo to help you with your upgrade by providing the migration guide:
 
-![code-suggestion.png](./code-suggestion.png)
+![migration-prompt.png](./migration-prompt.png)
 
 Neo will look at the provided migration guide and your stack, and determine a plan of action.
 Here, Neo has discovered there were some breaking changes, needing updates to your program.
