@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Google Cloud Provider Version 9.0.0"
-date: 2025-09-23T13:33:50-07:00
+date: 2025-09-24T13:33:50-07:00
 draft: false
 meta_desc: "Release of the v9 version of the Pulumi Provider for Google Cloud"
 meta_image: meta.png
