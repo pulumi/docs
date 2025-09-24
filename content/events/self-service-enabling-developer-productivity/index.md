@@ -41,7 +41,7 @@ main:
     sortable_date: 2025-11-06T12:00:00-05:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
@@ -77,7 +77,7 @@ form:
 event_data:
   name: "Self-Service - Enabling Developer Productivity"
   start_date: 2025-11-06T12:00:00-05:00
-  end_date: 2025-11-06T13:30:00-05:00
+  end_date: 2025-11-06T13:00:00-05:00
   url: "https://www.pulumi.com/resources/self-service-enabling-developer-productivity/"
   description: |
     Teams building Internal Developer Platforms are betting that standardization and self-service will bring improved productivity to their engineering organization. In this session, we'll explore how agents can help teams launch platforms faster by simplifying the process of creating reusable abstractions and templates that standardize self-service deployments.
