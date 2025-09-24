@@ -5,6 +5,7 @@ meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud u
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/reference/
+layout: main-home
 notitle: true
 docs_home: true
 nobreadcrumb: true

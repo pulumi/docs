@@ -3,6 +3,7 @@ title: Pulumi ESC
 linktitle: Pulumi ESC
 docs_home: true
 notitle: true
+norightnav: true
 menu:
   esc:
     identifier: esc-home

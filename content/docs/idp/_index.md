@@ -3,6 +3,7 @@ title: Pulumi IDP
 linktitle: Pulumi IDP
 docs_home: true
 notitle: true
+norightnav: true
 menu:
   idp:
     identifier: idp-home

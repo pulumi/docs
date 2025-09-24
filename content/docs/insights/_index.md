@@ -3,6 +3,7 @@ title: Pulumi Insights
 linktitle: Pulumi Insights
 docs_home: true
 notitle: true
+norightnav: true
 menu:
   insights:
     identifier: insights-home
