@@ -32,4 +32,4 @@ If you need to speak to a human about your problem:
 - The [Pulumi Community Slack](https://slack.pulumi.com) is free and open to anyone to ask questions to the Pulumi Community. The Slack is also regularly monitored by Pulumi employees. This is often the fastest way to get help with your Pulumi issues.
 - We also encourage everyone to contribute to the [Pulumi open source projects](https://github.com/pulumi) by [opening new issues](https://github.com/pulumi/pulumi/issues/new) and upvoting existing issues.
 
-If you need additional help or are interested in a paid support plan, reach out via our [contact us page](/contact/).
+For additional help or to inquire about paid support options, reach out via our [contact us page](/contact/).

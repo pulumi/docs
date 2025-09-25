@@ -9,11 +9,9 @@ menu:
         name: Post-Step Event Errors
         parent: iac-troubleshooting-common-issues
         weight: 30
-aliases:
-    - /docs/troubleshooting/#post-step-event
 ---
 
-If an I/O error occurs after "post-step event returned an error", you can safely re-start your update. If you see "after mutation of snapshot", you have hit a bug in Pulumi. You will possibly need to do some [manual intervention to repair your stack](/docs/iac/troubleshooting/debugging/manual-state-editing/).
+If an I/O error occurs after "post-step event returned an error", you can safely re-start your update. If you see "after mutation of snapshot", you have hit a bug in Pulumi. You will possibly need to do some [manual intervention to repair your stack](/docs/iac/troubleshooting/editing-state-files/).
 
 The Pulumi engine runs a small amount of code after every "step" that it performs. If this code fails for any reason, it will fail the entire update. One of the things that the Pulumi engine does before and after every step is a self-check on its internal data structures to ensure that they are in a consistent state. If they are not, Pulumi will issue an error and fail the deployment.
 
