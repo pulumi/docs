@@ -334,7 +334,6 @@ If registry queries return incomplete information:
 
 ## Learn more
 
-- [Pulumi MCP Server GitHub repository](https://github.com/pulumi/mcp-server)
 - [AI-Assisted Infrastructure as Code blog post](/blog/mcp-server-ai-assistants/)
 - [Model Context Protocol specification](https://modelcontextprotocol.io)
 - [Pulumi Registry](/registry/)
