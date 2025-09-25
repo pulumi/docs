@@ -1,0 +1,1 @@
+crosswalk/kubernetes/index.html|https://www.pulumi.com/docs/iac/clouds/kubernetes/
