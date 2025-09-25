@@ -4,6 +4,7 @@ allow_long_title: true
 meta_desc: "Implement automated drift detection for your IDP using Pulumi. Maintain infrastructure integrity with scheduled checks and real-time alerts."
 meta_image: meta.png
 date: 2024-12-02
+series: idp-best-practices
 authors:
     - engin-diri
 tags:
@@ -51,8 +52,6 @@ social:
 
         #InternalDeveloperPlatform #DriftDetection #InfrastructureAsCode #PlatformEngineering #DevOps #CloudNative #Automation #Pulumi
 ---
-
-**Maintaining Infrastructure Integrity with Automated Drift Detection**
 
 Welcome to the fourth post in our **IDP Best Practices** series. In this workshop, we explore **drift detection and remediation**: the critical day 2 operations that ensure your infrastructure stays aligned with your intended configuration long after initial deployment.
 
