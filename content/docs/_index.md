@@ -99,13 +99,13 @@ sections:
     primary_button_link: https://github.com/pulumi/pulumi/issues
   - heading: Troubleshooting Guide
     description: "Check out this list of known issues and how to resolve them."
-    link: https://www.pulumi.com/docs/iac/support/troubleshooting/
+    link: /docs/iac/support/troubleshooting/
     primary_button_label: Learn More
-    primary_button_link: https://www.pulumi.com/docs/iac/support/troubleshooting/
+    primary_button_link: /docs/iac/support/troubleshooting/
 
 - type: flat
   heading: Enterprise and Business Critical support
   description: |
-    <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="https://www.pulumi.com/pricing/">pricing page</a> for the support options available. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.</p>
+    <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="/pricing/">pricing page</a> for the support options available. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.</p>
 
 ---
