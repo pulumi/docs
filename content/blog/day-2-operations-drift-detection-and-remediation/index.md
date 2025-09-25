@@ -182,6 +182,8 @@ Manual drift detection doesn't scale. [Pulumi Deployments](/docs/pulumi-cloud/de
 
 First, connect Pulumi to your source control using [Deployment Settings](/docs/pulumi-cloud/deployments/get-started):
 
+![img.png](img.png)
+
 Pulumi provides native integrations with:
 
 * **GitHub**: Full app integration with [PR previews](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant)
@@ -192,43 +194,17 @@ Pulumi provides native integrations with:
 
 Configure [automated drift detection](/docs/pulumi-cloud/deployments/drift) to run periodically:
 
-```yaml
-# Drift Detection Schedule
-schedule:
-  type: drift
-  frequency: hourly  # or: "0 */2 * * *" for every 2 hours
-  
-  # Detection only - alerts but doesn't remediate
-  auto_remediate: false
-```
+![img_1.png](img_1.png)
 
 Or enable automatic remediation:
 
-```yaml
-# Drift Detection + Remediation Schedule
-schedule:
-  type: drift
-  frequency: "0 */6 * * *"  # Every 6 hours
-  
-  # Automatically remediate detected drift
-  auto_remediate: true
-```
+![img_2.png](img_2.png)
 
 #### Step 3: Configure Webhooks for Notifications
 
 Set up [notifications](/docs/pulumi-cloud/webhooks) when drift is detected or remediated:
 
-```yaml
-# Slack Webhook Configuration
-webhooks:
-  - type: slack
-    name: drift-alerts
-    url: https://hooks.slack.com/services/YOUR/WEBHOOK/URL
-    triggers:
-      - drift_detected
-      - drift_remediated
-      - drift_remediation_failed
-```
+![img_3.png](img_3.png)
 
 Available webhook types:
 
@@ -488,12 +464,7 @@ for env in environments:
 
 Begin with detection-only schedules to understand your drift patterns:
 
-```yaml
-schedule:
-  type: drift
-  frequency: "0 */2 * * *"  # Every 2 hours
-  auto_remediate: false     # Monitor only initially
-```
+![img_4.png](img_4.png)
 
 ### 2. Implement Gradual Remediation
 
