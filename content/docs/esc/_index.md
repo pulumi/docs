@@ -1,6 +1,6 @@
 ---
-title: Pulumi ESC
-linktitle: Pulumi ESC
+title: Secrets & Configuration
+linktitle: Secrets & Configuration
 docs_home: true
 notitle: true
 norightnav: true

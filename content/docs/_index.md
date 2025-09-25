@@ -23,7 +23,7 @@ sections:
     description: "Infrastructure as code for engineers in Node.js, Python, Go, .NET, Java, and YAML"
     link: /docs/iac/
     primary_button_label: Get Started
-    primary_button_link: /docs/iac/get-started/
+    primary_button_link: /docs/get-started/
     secondary_button_label: Install
     secondary_button_link: /docs/iac/download-install/
   - heading: Pulumi ESC

@@ -1,6 +1,6 @@
 ---
-title: Pulumi IDP
-linktitle: Pulumi IDP
+title: Internal Developer Platform
+linktitle: Internal Developer Platform
 docs_home: true
 notitle: true
 norightnav: true

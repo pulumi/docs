@@ -3,21 +3,31 @@
 {{/* Detect current section for auto-expansion */}}
 {{ $currentSection := "home" }}
 {{ if eq $page.Path "/docs/" }}
-    {{ $currentSection = "docs" }}
+    {{ $currentSection = "get-started" }}
+{{ else if hasPrefix $page.Path "/docs/get-started" }}
+    {{ $currentSection = "get-started" }}
 {{ else if hasPrefix $page.Path "/docs/iac" }}
     {{ $currentSection = "iac" }}
 {{ else if hasPrefix $page.Path "/docs/esc" }}
     {{ $currentSection = "esc" }}
-{{ else if hasPrefix $page.Path "/docs/idp" }}
-    {{ $currentSection = "idp" }}
-{{ else if hasPrefix $page.Path "/docs/pulumi-cloud" }}
-    {{ $currentSection = "cloud" }}
 {{ else if hasPrefix $page.Path "/docs/insights" }}
     {{ $currentSection = "insights" }}
+{{ else if hasPrefix $page.Path "/docs/idp" }}
+    {{ $currentSection = "idp" }}
+{{ else if hasPrefix $page.Path "/docs/ai" }}
+    {{ $currentSection = "ai" }}
+{{ else if hasPrefix $page.Path "/docs/migration" }}
+    {{ $currentSection = "migration" }}
+{{ else if hasPrefix $page.Path "/docs/administration" }}
+    {{ $currentSection = "administration" }}
+{{ else if hasPrefix $page.Path "/docs/reference" }}
+    {{ $currentSection = "reference" }}
+{{ else if hasPrefix $page.Path "/docs/support" }}
+    {{ $currentSection = "support" }}
 {{ else if hasPrefix $page.Path "/registry" }}
-    {{ $currentSection = "packages" }}
+    {{ $currentSection = "reference" }}
 {{ else if hasPrefix $page.Path "/tutorials" }}
-    {{ $currentSection = "tutorials" }}
+    {{ $currentSection = "get-started" }}
 {{ end }}
 
 <nav class="text-sm mt-5 mr-2">
@@ -36,111 +46,103 @@
         <ul class="list-none pl-0">
 
 
-            <li class="expandable{{ if eq $currentSection "docs" }} expanded{{ end }}" data-menu-id="docs-home">
-                <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                    <span>docs</span>
-                </a>
+            {{/* Get Started Section */}}
+            {{- with index site.Menus "get-started" }}
+            <li class="expandable expanded{{ if eq $currentSection "get-started" }} expanded{{ end }}" data-menu-id="get-started-top">
                 <ul class="list-none">
                     <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
                         <button><i class="fa fa-caret-right"></i></button>
-                        <span>Docs Home</span>
+                        <span>Get Started</span>
                     </a></li>
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "get-started" "menuEntries" .) }}
                 </ul>
             </li>
+            {{- end }}
 
-            {{/* Pulumi IaC Section */}}
+            {{/* Infrastructure as Code Section */}}
             {{- with index site.Menus "iac" }}
-                <li class="expandable{{ if eq $currentSection "iac" }} expanded{{ end }}" data-menu-id="iac-top">
-                    <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                        <span>Pulumi IaC</span>
-                    </a>
-                    <ul class="list-none">
-                        {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "iac" "menuEntries" .) }}
-                    </ul>
-                </li>
+            <li class="expandable expanded{{ if eq $currentSection "iac" }} expanded{{ end }}" data-menu-id="iac-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "iac" "menuEntries" . "forceTopLevelLabel" "Infrastructure as Code") }}
+                </ul>
+            </li>
             {{- end }}
 
-            {{/* Pulumi ESC Section */}}
+            {{/* Secrets & Configuration Section */}}
             {{- with index site.Menus "esc" }}
-                <li class="expandable{{ if eq $currentSection "esc" }} expanded{{ end }}" data-menu-id="esc-top">
-                    <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                        <span>Pulumi ESC</span>
-                    </a>
-                    <ul class="list-none">
-                        {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "esc" "menuEntries" .) }}
-                    </ul>
-                </li>
+            <li class="expandable expanded{{ if eq $currentSection "esc" }} expanded{{ end }}" data-menu-id="esc-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "esc" "menuEntries" .) }}
+                </ul>
+            </li>
             {{- end }}
 
-            {{/* Pulumi Cloud Section */}}
-            {{- with index site.Menus "cloud" }}
-                <li class="expandable{{ if eq $currentSection "cloud" }} expanded{{ end }}" data-menu-id="cloud-top">
-                    <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                        <span>Pulumi Cloud</span>
-                    </a>
-                    <ul class="list-none">
-                        {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "cloud" "menuEntries" .) }}
-                    </ul>
-                </li>
-            {{- end }}
-
-            {{/* Pulumi IDP Section */}}
-            {{- with index site.Menus "idp" }}
-                <li class="expandable{{ if eq $currentSection "idp" }} expanded{{ end }}" data-menu-id="idp-top">
-                    <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                        <span>Pulumi IDP</span>
-                    </a>
-                    <ul class="list-none">
-                        {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "idp" "menuEntries" .) }}
-                    </ul>
-                </li>
-            {{- end }}
-
-            {{/* Pulumi Insights Section */}}
+            {{/* Insights & Governance Section */}}
             {{- with index site.Menus "insights" }}
-                <li class="expandable{{ if eq $currentSection "insights" }} expanded{{ end }}" data-menu-id="insights-top">
-                    <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                        <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                        <span>Pulumi Insights</span>
-                    </a>
+            <li class="expandable expanded{{ if eq $currentSection "insights" }} expanded{{ end }}" data-menu-id="insights-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "insights" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Internal Developer Platform Section */}}
+            {{- with index site.Menus "idp" }}
+            <li class="expandable expanded{{ if eq $currentSection "idp" }} expanded{{ end }}" data-menu-id="idp-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "idp" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* AI-Driven Tasks Section */}}
+            {{- with index site.Menus "ai" }}
+            <li class="expandable expanded{{ if eq $currentSection "ai" }} expanded{{ end }}" data-menu-id="ai-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "ai" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Migration Section */}}
+            {{- with index site.Menus "migration" }}
+            <li class="expandable expanded{{ if eq $currentSection "migration" }} expanded{{ end }}" data-menu-id="migration-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "migration" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Administration Section */}}
+            {{- with index site.Menus "administration" }}
+            <li class="expandable expanded{{ if eq $currentSection "administration" }} expanded{{ end }}" data-menu-id="administration-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "administration" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Reference Section */}}
+            {{- with index site.Menus "reference" }}
+                <li class="expandable expanded{{ if eq $currentSection "reference" }} expanded{{ end }}" data-menu-id="reference-top">
                     <ul class="list-none">
-                        {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "insights" "menuEntries" .) }}
+                        <li><a href="/registry/">
+                            <button><i class="fa fa-caret-right"></i></button>
+                            <span>Package Registry</span>
+                        </a></li>
+                        {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "reference" "menuEntries" .) }}
                     </ul>
                 </li>
             {{- end }}
 
-            {{/* Packages Section */}}
-            <li class="expandable{{ if eq $currentSection "packages" }} expanded{{ end }}" data-menu-id="packages-top">
-                <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                    <span>Packages</span>
-                </a>
+            {{/* Support Section */}}
+            {{- with index site.Menus "support" }}
+            <li class="expandable expanded{{ if eq $currentSection "support" }} expanded{{ end }}" data-menu-id="support-top">
                 <ul class="list-none">
-                    <li><a href="/registry/">
-                        <button><i class="fa fa-caret-right"></i></button>
-                        <span>Browse Packages</span>
-                    </a></li>
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "support" "menuEntries" .) }}
                 </ul>
             </li>
-
-            {{/* Tutorials Section */}}
-            <li class="expandable{{ if eq $currentSection "tutorials" }} expanded{{ end }}" data-menu-id="tutorials-top">
-                <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                    <span>Tutorials</span>
-                </a>
-                <ul class="list-none">
-                    <li><a href="/tutorials/">
-                        <button><i class="fa fa-caret-right"></i></button>
-                        <span>All Tutorials</span>
-                    </a></li>
-                </ul>
-            </li>
+            {{- end }}
 
         </ul>
     </pulumi-docs-nav>

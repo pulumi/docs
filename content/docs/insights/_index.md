@@ -1,6 +1,6 @@
 ---
-title: Pulumi Insights
-linktitle: Pulumi Insights
+title: Insights & Governance
+linktitle: Insights & Governance
 docs_home: true
 notitle: true
 norightnav: true

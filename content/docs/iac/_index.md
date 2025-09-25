@@ -1,6 +1,6 @@
 ---
-title: Pulumi IaC
-linktitle: Pulumi IaC
+title: Infrastructure as Code
+linktitle: Infrastructure as Code
 docs_home: true
 notitle: true
 norightnav: true
