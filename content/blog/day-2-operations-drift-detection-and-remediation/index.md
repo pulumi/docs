@@ -6,7 +6,8 @@ meta_image: meta.png
 date: 2025-09-25
 series: idp-best-practices
 authors:
-    - engin-diri
+    - mitch-gerdisch
+    - josh-kodroff
 tags:
     - idp
     - drift-detection
