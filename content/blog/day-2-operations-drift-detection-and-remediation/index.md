@@ -1,12 +1,11 @@
 ---
 title: "Day 2 Operations: Drift Detection and Remediation | IDP Workshop"
 allow_long_title: true
-meta_desc: "Learn how to implement automated drift detection and remediation for your Internal Developer Platform using Pulumi. Maintain infrastructure integrity with scheduled checks, automatic remediation, and real-time alerts."
+meta_desc: "Implement automated drift detection for your IDP using Pulumi. Maintain infrastructure integrity with scheduled checks and real-time alerts."
 meta_image: meta.png
 date: 2024-12-02
 authors:
-    - mitch-gerdisch
-    - josh-kodroff
+    - engin-diri
 tags:
     - idp
     - drift-detection
@@ -62,6 +61,7 @@ Even well-designed platforms with robust guardrails face infrastructure drift. E
 <!--more-->
 
 This post is part of our IDP Best Practices series:
+
 * [How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control)
 * [Build Golden Paths with Infrastructure Components and Templates](/blog/golden-paths-infrastructure-components-and-templates)
 * [Deployment Guardrails with Policy as Code](/blog/deployment-guardrails-policy-as-code)
@@ -84,21 +84,24 @@ This represents drift in production environments. Day 2 operations prevent these
 Before diving into drift detection, let's understand where it fits in your platform strategy:
 
 ### Prevention: The First Line of Defense
-- **Code reviews**: Peer review of infrastructure changes
-- **Automated testing**: Validation before deployment
-- **Policy guardrails**: [CrossGuard policies](/docs/iac/packages-and-automation/crossguard) that block misconfigurations
-- **Golden paths**: [Standardized components](/blog/golden-paths-infrastructure-components-and-templates) that encode best practices
+
+* **Code reviews**: Peer review of infrastructure changes
+* **Automated testing**: Validation before deployment
+* **Policy guardrails**: [CrossGuard policies](/docs/iac/packages-and-automation/crossguard) that block misconfigurations
+* **Golden paths**: [Standardized components](/blog/golden-paths-infrastructure-components-and-templates) that encode best practices
 
 These preventative measures catch issues that flow through your IaC pipeline.
 
 ### Detection and Remediation: The Safety Net
+
 Drift detection functions as continuous verification. Prevention blocks most issues, while detection catches what slips through.
 
 Detection and remediation covers:
-- **Emergency changes** made during incidents
-- **Console modifications** bypassing IaC workflows
-- **External factors** like service limits or API changes
-- **Accidental modifications** by team members
+
+* **Emergency changes** made during incidents
+* **Console modifications** bypassing IaC workflows
+* **External factors** like service limits or API changes
+* **Accidental modifications** by team members
 
 No matter how robust your preventative controls, you need detective controls to maintain infrastructure integrity.
 
@@ -107,9 +110,10 @@ No matter how robust your preventative controls, you need detective controls to 
 At its core, **drift occurs when your actual infrastructure state doesn't match your declared state in code.**
 
 In Pulumi's architecture:
-- **Desired state**: What your Pulumi program declares
-- **Current state**: What Pulumi's [state file](/docs/iac/concepts/state-and-backends) tracks
-- **Actual state**: What exists in your cloud provider(s)
+
+* **Desired state**: What your Pulumi program declares
+* **Current state**: What Pulumi's [state file](/docs/iac/concepts/state-and-backends) tracks
+* **Actual state**: What exists in your cloud provider(s)
 
 The typical flow looks like this:
 
@@ -178,34 +182,60 @@ Manual drift detection doesn't scale. [Pulumi Deployments](/docs/pulumi-cloud/de
 
 First, connect Pulumi to your source control using [Deployment Settings](/docs/pulumi-cloud/deployments/get-started):
 
-![img.png](img.png)
-
 Pulumi provides native integrations with:
-- **GitHub**: Full app integration with [PR previews](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant)
-- **GitLab**: Merge request automation
-- **Raw Git**: Direct repository access with credentials
+
+* **GitHub**: Full app integration with [PR previews](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant)
+* **GitLab**: Merge request automation
+* **Raw Git**: Direct repository access with credentials
 
 #### Step 2: Create Drift Detection Schedules
 
 Configure [automated drift detection](/docs/pulumi-cloud/deployments/drift) to run periodically:
 
-![img_1.png](img_1.png)
+```yaml
+# Drift Detection Schedule
+schedule:
+  type: drift
+  frequency: hourly  # or: "0 */2 * * *" for every 2 hours
+  
+  # Detection only - alerts but doesn't remediate
+  auto_remediate: false
+```
 
 Or enable automatic remediation:
 
-![img_2.png](img_2.png)
+```yaml
+# Drift Detection + Remediation Schedule
+schedule:
+  type: drift
+  frequency: "0 */6 * * *"  # Every 6 hours
+  
+  # Automatically remediate detected drift
+  auto_remediate: true
+```
 
 #### Step 3: Configure Webhooks for Notifications
 
 Set up [notifications](/docs/pulumi-cloud/webhooks) when drift is detected or remediated:
 
-![img_3.png](img_3.png)
+```yaml
+# Slack Webhook Configuration
+webhooks:
+  - type: slack
+    name: drift-alerts
+    url: https://hooks.slack.com/services/YOUR/WEBHOOK/URL
+    triggers:
+      - drift_detected
+      - drift_remediated
+      - drift_remediation_failed
+```
 
 Available webhook types:
-- **Slack**: Direct integration with Slack channels
-- **Microsoft Teams**: Teams channel notifications
-- **Custom**: Generic webhooks for any system
-- **Deployment triggers**: Trigger other Pulumi stacks
+
+* **Slack**: Direct integration with Slack channels
+* **Microsoft Teams**: Teams channel notifications
+* **Custom**: Generic webhooks for any system
+* **Deployment triggers**: Trigger other Pulumi stacks
 
 ## Programmatic Drift Detection with Pulumi Service Provider
 
@@ -225,10 +255,10 @@ const driftSchedule = new pulumiservice.DriftSchedule("production-drift-detectio
     organization: "my-org",
     project: "core-infrastructure",
     stack: "production",
-    
+
     // Run every 4 hours
     scheduleCron: "0 */4 * * *",
-    
+
     // Automatically fix any drift found
     autoRemediate: true,
 });
@@ -248,10 +278,10 @@ drift_schedule = pulumiservice.DriftSchedule("production-drift-detection",
     organization="my-org",
     project="core-infrastructure",
     stack="production",
-    
+
     # Run every 4 hours
     schedule_cron="0 */4 * * *",
-    
+
     # Automatically fix any drift found
     auto_remediate=True
 )
@@ -277,10 +307,10 @@ func main() {
             Organization: pulumi.String("my-org"),
             Project: pulumi.String("core-infrastructure"),
             Stack: pulumi.String("production"),
-            
+
             // Run every 4 hours
             ScheduleCron: pulumi.String("0 */4 * * *"),
-            
+
             // Automatically fix any drift found
             AutoRemediate: pulumi.Bool(true),
         })
@@ -310,10 +340,10 @@ class Program
             Organization = "my-org",
             Project = "core-infrastructure",
             Stack = "production",
-            
+
             // Run every 4 hours
             ScheduleCron = "0 */4 * * *",
-            
+
             // Automatically fix any drift found
             AutoRemediate = true,
         });
@@ -346,10 +376,10 @@ public class App {
             .organization("my-org")
             .project("core-infrastructure")
             .stack("production")
-            
+
             // Run every 4 hours
             .scheduleCron("0 */4 * * *")
-            
+
             // Automatically fix any drift found
             .autoRemediate(true)
             .build());
@@ -374,10 +404,10 @@ resources:
       organization: my-org
       project: core-infrastructure
       stack: production
-      
+
       # Run every 4 hours
       scheduleCron: "0 */4 * * *"
-      
+
       # Automatically fix any drift found
       autoRemediate: true
 
@@ -407,7 +437,7 @@ const environments = ["dev", "staging", "production"];
 
 environments.forEach(env => {
     // More frequent checks for production
-    const cronSchedule = env === "production" 
+    const cronSchedule = env === "production"
         ? "0 * * * *"      // Every hour for production
         : "0 */6 * * *";   // Every 6 hours for others
 
@@ -416,7 +446,7 @@ environments.forEach(env => {
         project: "platform",
         stack: env,
         scheduleCron: cronSchedule,
-        
+
         // Only auto-remediate non-production
         autoRemediate: env !== "production",
     });
@@ -436,13 +466,13 @@ environments = ["dev", "staging", "production"]
 for env in environments:
     # More frequent checks for production
     cron_schedule = "0 * * * *" if env == "production" else "0 */6 * * *"
-    
+
     pulumiservice.DriftSchedule(f"{env}-drift-detection",
         organization="my-org",
         project="platform",
         stack=env,
         schedule_cron=cron_schedule,
-        
+
         # Only auto-remediate non-production
         auto_remediate=(env != "production")
     )
@@ -452,14 +482,18 @@ for env in environments:
 
 {{< /chooser >}}
 
-
 ## Best Practices for Drift Detection
 
 ### 1. Start with Detection Only
 
 Begin with detection-only schedules to understand your drift patterns:
 
-![img_4.png](img_4.png)
+```yaml
+schedule:
+  type: drift
+  frequency: "0 */2 * * *"  # Every 2 hours
+  auto_remediate: false     # Monitor only initially
+```
 
 ### 2. Implement Gradual Remediation
 
@@ -481,7 +515,7 @@ Mark critical resources as [protected](/docs/iac/concepts/options/protect) to pr
 ```typescript
 const database = new aws.rds.Instance("production-db", {
     // ... configuration
-}, { 
+}, {
     protect: true  // Prevents deletion even during drift remediation
 });
 ```
@@ -517,8 +551,8 @@ database, err := rds.NewInstance(ctx, "production-db", &rds.InstanceArgs{
 var database = new Aws.Rds.Instance("production-db", new InstanceArgs
 {
     // ... configuration
-}, new CustomResourceOptions 
-{ 
+}, new CustomResourceOptions
+{
     Protect = true  // Prevents deletion even during drift remediation
 });
 ```
@@ -543,10 +577,10 @@ interface DriftMetrics {
 async function trackDriftMetrics(metrics: DriftMetrics) {
     // Send to your monitoring system
     await prometheus.recordDriftEvent(metrics);
-    
+
     // Log for analysis
     console.log(`Drift detected: ${JSON.stringify(metrics)}`);
-    
+
     // Alert if drift is frequent
     if (await isDriftFrequent(metrics.stack)) {
         await alertOpsTeam({
@@ -577,18 +611,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Configure Pulumi
         uses: pulumi/actions@v5
         with:
           cloud-url: ${{ secrets.PULUMI_CLOUD_URL }}
-          
+
       - name: Detect Drift
         run: |
           pulumi refresh --stack production --preview-only
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          
+
       - name: Notify on Drift
         if: failure()
         uses: actions/slack@v1
@@ -605,16 +639,16 @@ Configure drift detection in [GitLab CI](/docs/iac/packages-and-automation/conti
 drift-detection:
   stage: monitor
   image: pulumi/pulumi:latest
-  
+
   script:
     - pulumi refresh --stack production --preview-only
-    
+
   only:
     - schedules  # Run on schedule only
-    
+
   variables:
     PULUMI_ACCESS_TOKEN: $PULUMI_ACCESS_TOKEN
-    
+
   after_script:
     - |
       if [ "$CI_JOB_STATUS" == "failed" ]; then
@@ -679,30 +713,33 @@ security_group = aws.ec2.SecurityGroup("app-sg",
 )
 ```
 
-
 ## The Value of Automated Drift Detection
 
 Implementing automated drift detection delivers immediate value:
 
 ### 1. Security Compliance
-- **Detect unauthorized changes** within minutes instead of weeks
-- **Maintain compliance** with security policies automatically
-- **Create audit trails** of all infrastructure changes
+
+* **Detect unauthorized changes** within minutes instead of weeks
+* **Maintain compliance** with security policies automatically
+* **Create audit trails** of all infrastructure changes
 
 ### 2. Operational Excellence
-- **Reduce incidents** caused by configuration drift
-- **Minimize MTTR** by quickly identifying unexpected changes
-- **Improve change management** with complete visibility
+
+* **Reduce incidents** caused by configuration drift
+* **Minimize MTTR** by quickly identifying unexpected changes
+* **Improve change management** with complete visibility
 
 ### 3. Cost Optimization
-- **Identify orphaned resources** created outside IaC
-- **Detect oversized instances** from manual scaling
-- **Prevent resource sprawl** from untracked changes
+
+* **Identify orphaned resources** created outside IaC
+* **Detect oversized instances** from manual scaling
+* **Prevent resource sprawl** from untracked changes
 
 ### 4. Team Productivity
-- **Eliminate manual checks** with automation
-- **Reduce debugging time** with clear drift reports
-- **Build confidence** in infrastructure state
+
+* **Eliminate manual checks** with automation
+* **Reduce debugging time** with clear drift reports
+* **Build confidence** in infrastructure state
 
 ## Getting Started with Drift Detection
 
@@ -711,38 +748,39 @@ Ready to implement drift detection for your IDP? Here's your action plan:
 ### Quick Start Checklist
 
 1. **Enable basic detection** (15 minutes)
+
    ```bash
    pulumi refresh --preview-only --stack production
    ```
 
 2. **Set up scheduled detection** (30 minutes)
-   - Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments/get-started)
-   - Create hourly detection schedule
-   - Configure Slack notifications
+   * Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments/get-started)
+   * Create hourly detection schedule
+   * Configure Slack notifications
 
 3. **Monitor for one week** (ongoing)
-   - Review drift patterns
-   - Identify common causes
-   - Document legitimate changes
+   * Review drift patterns
+   * Identify common causes
+   * Document legitimate changes
 
 4. **Implement remediation** (1-2 hours)
-   - Start with non-production environments
-   - Enable auto-remediation gradually
-   - Monitor remediation success
+   * Start with non-production environments
+   * Enable auto-remediation gradually
+   * Monitor remediation success
 
 5. **Optimize and scale** (ongoing)
-   - Adjust schedules based on patterns
-   - Implement custom workflows
-   - Expand to all environments
+   * Adjust schedules based on patterns
+   * Implement custom workflows
+   * Expand to all environments
 
 ## Conclusion: Day 2 Operations as a Competitive Advantage
 
 Drift detection and remediation provide competitive advantages. Teams with robust day 2 operations can:
 
-- **Move faster** with confidence in their infrastructure
-- **Recover quickly** from incidents and changes
-- **Maintain security** without slowing development
-- **Scale operations** without scaling headcount
+* **Move faster** with confidence in their infrastructure
+* **Recover quickly** from incidents and changes
+* **Maintain security** without slowing development
+* **Scale operations** without scaling headcount
 
 Automated drift detection reduces incidents, accelerates recovery, and improves team confidence.
 
@@ -751,14 +789,15 @@ Automated drift detection reduces incidents, accelerates recovery, and improves 
 Resources for implementing drift detection:
 
 ### 📚 Documentation
-- [Pulumi Deployments Drift Detection](/docs/pulumi-cloud/deployments/drift)
-- [Pulumi Refresh Command](/docs/iac/cli/commands/pulumi_refresh)
-- [Pulumi Service Provider](/registry/packages/pulumiservice)
-- [Automation API Guide](/docs/using-pulumi/automation-api)
+
+**[Pulumi Deployments Drift Detection](/docs/pulumi-cloud/deployments/drift)
+**[Pulumi Refresh Command](/docs/iac/cli/commands/pulumi_refresh)
+**[Pulumi Service Provider](/registry/packages/pulumiservice)
+**[Automation API Guide](/docs/using-pulumi/automation-api)
 
 ### 🎓 Workshops and Tutorials
-- [Drift Detection Tutorial](/tutorials/drift-detection-and-remediation)
 
+**[Drift Detection Tutorial](/tutorials/drift-detection-and-remediation)
 
 ## Coming Next in the Series
 
