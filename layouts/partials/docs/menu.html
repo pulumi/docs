@@ -3,7 +3,7 @@
 {{/* Detect current section for auto-expansion */}}
 {{ $currentSection := "home" }}
 {{ if eq $page.Path "/docs/" }}
-    {{ $currentSection = "get-started" }}
+    {{ $currentSection = "home" }}
 {{ else if hasPrefix $page.Path "/docs/get-started" }}
     {{ $currentSection = "get-started" }}
 {{ else if hasPrefix $page.Path "/docs/iac" }}
@@ -45,16 +45,20 @@
     <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
         <ul class="list-none pl-0">
 
+            <li class="" data-menu-id="docs-home">
+                <ul class="list-none">
+                    <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
+                        <button><i class="fa fa-caret-right"></i></button>
+                        <span>Docs Home</span>
+                    </a></li>
+                </ul>
+            </li>
 
             {{/* Get Started Section */}}
             {{- with index site.Menus "get-started" }}
             <li class="expandable expanded{{ if eq $currentSection "get-started" }} expanded{{ end }}" data-menu-id="get-started-top">
                 <ul class="list-none">
-                    <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
-                        <button><i class="fa fa-caret-right"></i></button>
-                        <span>Get Started</span>
-                    </a></li>
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "get-started" "menuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "get-started" "menuEntries" . "forceTopLevelLabel" "Get Started") }}
                 </ul>
             </li>
             {{- end }}
