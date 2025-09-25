@@ -221,4 +221,3 @@ used.
 - [Pulumi ESC FAQ](/docs/esc/faq/)
 - [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
 - [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)
-- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
