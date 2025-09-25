@@ -9,25 +9,26 @@ aliases:
   - /docs/administration/
 ---
 
-# Administration
-
 Comprehensive administration guide for Pulumi services across your organization.
 
 ## Core Administration Areas
 
 ### Identity & Access Management
+
 - User and team management
 - Role-based access control (RBAC)
 - SAML/SSO integration
 - Access tokens and API keys
 
 ### Platform Operations
+
 - Self-hosting Pulumi Cloud
 - Environment management
 - Audit logs and compliance
 - Customer managed keys
 
 ### Governance & Security
+
 - Policy enforcement
 - Security best practices
 - Compliance frameworks

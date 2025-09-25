@@ -9,8 +9,6 @@ aliases:
   - /docs/migration/
 ---
 
-# Migration
-
 Migrate your existing infrastructure to Pulumi from various tools and platforms.
 
 ## Migration Guides

@@ -9,8 +9,6 @@ aliases:
   - /docs/ai/
 ---
 
-# AI-Driven Tasks
-
 **Coming Soon!**
 
 Pulumi AI will help you build, deploy, and manage cloud infrastructure using artificial intelligence to:
