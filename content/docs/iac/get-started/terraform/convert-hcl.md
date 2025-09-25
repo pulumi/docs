@@ -1115,7 +1115,7 @@ For complex Terraform configurations, you can use AI tools like [Claude](https:/
 
 ### Using the Pulumi MCP server (recommended)
 
-The [Pulumi MCP server](https://github.com/pulumi/mcp-server) is an open-source tool that enables AI assistants to interact with Pulumi programmatically. Beyond conversion, it provides full infrastructure management capabilities including stack operations, resource querying, and automated deployments.
+The [Pulumi MCP server](/docs/iac/using-pulumi/mcp-server) enables AI assistants to interact with Pulumi programmatically. Beyond conversion, it provides full infrastructure management capabilities including stack operations, resource querying, and automated deployments.
 
 The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt that ensures:
 
@@ -1158,7 +1158,7 @@ The MCP server provides additional capabilities beyond conversion, including:
 
 If you prefer not to use the MCP server, you can access the conversion prompt directly:
 
-1. **Access the prompt**: The "convert-terraform-to-typescript" prompt is available in the [Pulumi MCP server repository](https://github.com/pulumi/mcp-server/blob/main/src/prompts/convert-terraform-to-typescript.md)
+1. **Access the prompt**: The "convert-terraform-to-typescript" prompt is available in the [Pulumi MCP server](/docs/iac/using-pulumi/mcp-server)
 
 2. **Prepare your Terraform code**: Gather your complete Terraform configuration files (`.tf`, `terraform.tfvars`, etc.)
 
