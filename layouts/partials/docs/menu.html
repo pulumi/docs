@@ -44,7 +44,7 @@
                 <ul class="list-none">
                     <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
                         <button><i class="fa fa-caret-right"></i></button>
-                        <span>Docs Home</span>
+                        <span>Overview</span>
                     </a></li>
                 </ul>
             </li>
@@ -135,10 +135,29 @@
                     <span>Tutorials</span>
                 </a>
                 <ul class="list-none">
-                    <li><a href="/tutorials/">
-                        <button><i class="fa fa-caret-right"></i></button>
-                        <span>All Tutorials</span>
-                    </a></li>
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "administration" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            <!-- {{/* Reference Section */}}
+            {{- with index site.Menus "reference" }}
+                <li class="expandable expanded{{ if eq $currentSection "reference" }} expanded{{ end }}" data-menu-id="reference-top">
+                    <ul class="list-none">
+                        <li><a href="/registry/">
+                            <button><i class="fa fa-caret-right"></i></button>
+                            <span>Package Registry</span>
+                        </a></li>
+                        {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "reference" "menuEntries" .) }}
+                    </ul>
+                </li>
+            {{- end }} -->
+
+            {{/* Support Section */}}
+            {{- with index site.Menus "support" }}
+            <li class="expandable expanded{{ if eq $currentSection "support" }} expanded{{ end }}" data-menu-id="support-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "support" "menuEntries" .) }}
                 </ul>
             </li>
 
