@@ -44,7 +44,7 @@
                 <ul class="list-none">
                     <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
                         <button><i class="fa fa-caret-right"></i></button>
-                        <span>Docs Home</span>
+                        <span>Overview</span>
                     </a></li>
                 </ul>
             </li>
@@ -113,34 +113,6 @@
                     </ul>
                 </li>
             {{- end }}
-
-            {{/* Packages Section */}}
-            <li class="expandable{{ if eq $currentSection "packages" }} expanded{{ end }}" data-menu-id="packages-top">
-                <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                    <span>Packages</span>
-                </a>
-                <ul class="list-none">
-                    <li><a href="/registry/">
-                        <button><i class="fa fa-caret-right"></i></button>
-                        <span>Browse Packages</span>
-                    </a></li>
-                </ul>
-            </li>
-
-            {{/* Tutorials Section */}}
-            <li class="expandable{{ if eq $currentSection "tutorials" }} expanded{{ end }}" data-menu-id="tutorials-top">
-                <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button style="pointer-events: none;"><i class="fa fa-caret-right"></i></button>
-                    <span>Tutorials</span>
-                </a>
-                <ul class="list-none">
-                    <li><a href="/tutorials/">
-                        <button><i class="fa fa-caret-right"></i></button>
-                        <span>All Tutorials</span>
-                    </a></li>
-                </ul>
-            </li>
 
         </ul>
     </pulumi-docs-nav>
