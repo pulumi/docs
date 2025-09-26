@@ -178,4 +178,3 @@ venv/bin/pip install -r requirements.txt
 - [Pulumi ESC FAQ](/docs/esc/faq/)
 - [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
 - [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
-- [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
