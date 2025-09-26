@@ -145,7 +145,7 @@ export interface AwsS3WebsiteArgs {
 export class AwsS3Website extends pulumi.ComponentResource {
     public readonly url: pulumi.Output<string>; // the S3 website url.
 
-    constructor(name: string, args: AwsS3WebsiteArgs, opts: pulumi.ComponentResourceOptions) {
+    constructor(name: string, args: AwsS3WebsiteArgs, opts?: pulumi.ComponentResourceOptions) {
         super("quickstart:index:AwsS3Website", name, args, opts);
 
         // Component initialization will go here next...
