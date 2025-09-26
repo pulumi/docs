@@ -122,7 +122,7 @@ PATCH /api/orgs/{organization}/members/{username}
 
 | Parameter      | Type   | In    | Description                                                  |
 |----------------|--------|-------|--------------------------------------------------------------|
-| `organization` | string | query | organization name to filter stacks by                        |
+| `organization` | string | path  | organization name to filter stacks by                        |
 | `username`     | string | path  | user name                                                    |
 | `role`         | string | body  | The role to assign - possible values are `admin` or `member` |
 
@@ -171,13 +171,14 @@ curl \
 List all access tokens for an organization.
 
 ```plain
-GET /api/orgs/{org}/tokens
+GET /api/orgs/{organization}/tokens
 ```
 
 #### Parameters
 
 | Parameter           | Type   | In    | Description                                                                                |
 |---------------------|--------|-------|--------------------------------------------------------------------------------------------|
+| `organization`.     | string | path  | Organization to list the access tokens for.                                                |
 | `show_expired`      | string | query | **Optional.** whether to return previously expired tokens with results. Defaults to false. |
 
 #### Example
@@ -304,7 +305,7 @@ curl \
 Get details about a specific team.
 
 ```plain
-Get /api/orgs/{org}/teams/{teamName}
+GET /api/orgs/{org}/teams/{teamName}
 ```
 
 #### Parameters
@@ -312,7 +313,7 @@ Get /api/orgs/{org}/teams/{teamName}
 | Parameter      | Type   | In   | Description                                                         |
 |----------------|--------|------|---------------------------------------------------------------------|
 | `organization` | string | path | organization name                                                   |
-| `teamName`     | string | body | team name                                                           |
+| `teamName`     | string | path | team name                                                           |
 
 #### Example
 
@@ -348,6 +349,48 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
+  https://api.pulumi.com/api/orgs/{org}/teams/{teamName}
+```
+
+## Team Management
+
+### Update Team Membership
+
+Add or remove a member of the organization to or from a team
+
+```plain
+PATCH /api/orgs/{organization}/teams/{team}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description                                                        |
+|----------------|--------|------|--------------------------------------------------------------------|
+| `organization` | string | path | organization name                                                  |
+| `team`         | string | path | team name                                                          |
+| `member`       | string | body | user name                                                          |
+| `memberAction` | string | body | add or remove user (available values are `add` or `remove`)        |
+
+#### Example
+
+```bash
+
+// To add an organization member to a team:
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  -d '{ "memberAction": "add", "member": "{username}" }' \
+  https://api.pulumi.com/api/orgs/{org}/teams/{teamName}
+
+// To remove an organization member from a team:
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  -d '{ "memberAction": "remove", "member": "{username}" }' \
   https://api.pulumi.com/api/orgs/{org}/teams/{teamName}
 ```
 
