@@ -351,6 +351,48 @@ curl \
   https://api.pulumi.com/api/orgs/{org}/teams/{teamName}
 ```
 
+## Team Management
+
+### Update Team Membership
+
+Add or remove a member of the organization to or from a team
+
+```plain
+PATCH /api/orgs/{organization}/teams/{team}
+```
+
+#### Parameters
+
+| Parameter      | Type   | In   | Description                                                        |
+|----------------|--------|------|--------------------------------------------------------------------|
+| `organization` | string | path | organization name                                                  |
+| `team`         | string | path | team name                                                          |
+| `member`       | string | body | user name                                                          |
+| `memberAction` | string | body | add or remove user (available values are `add` or `remove`)        |
+
+#### Example
+
+```bash
+
+// To add an organization member to a team:
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  -d '{memberAction: "add", member: "{username}"}' \
+  https://api.pulumi.com/api/orgs/{org}/teams/{teamName}
+
+// To remove an organization member from a team:
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request PATCH \
+  -d '{memberAction: "remove", member: "{username}"}' \
+  https://api.pulumi.com/api/orgs/{org}/teams/{teamName}
+```
+
 ## Webhooks
 
 ### Create Webhook
