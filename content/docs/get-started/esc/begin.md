@@ -5,9 +5,11 @@ h1: "Pulumi ESC: Before you begin"
 meta_desc: This page provides an overview on how to get started with Pulumi ESC.
 weight: 2
 menu:
-  esc:
+  get-started:
     parent: esc-get-started
     identifier: esc-get-started-begin
+aliases:
+  - /docs/esc/get-started/begin
 ---
 
 Before you get started using Pulumi ESC, let's run through a few quick steps to ensure your environment is set up correctly.

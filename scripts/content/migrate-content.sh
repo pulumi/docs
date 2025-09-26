@@ -112,8 +112,8 @@ if [[ -z "$SOURCE_PATH" || -z "$DEST_PATH" ]]; then
 fi
 
 # Convert paths to filesystem paths
-SOURCE_FS_PATH="${CONTENT_DIR}${SOURCE_PATH}"
-DEST_FS_PATH="${CONTENT_DIR}${DEST_PATH}"
+SOURCE_FS_PATH="${SOURCE_PATH}"
+DEST_FS_PATH="${DEST_PATH}"
 
 # Validation phase
 validate_migration() {
@@ -184,6 +184,7 @@ update_frontmatter() {
         local frontmatter_ended=false
         local aliases_added=false
         local menu_updated=false
+        local in_menu_section=false
 
         while IFS= read -r line; do
             # Track frontmatter boundaries
@@ -210,20 +211,38 @@ update_frontmatter() {
 
             # Process frontmatter lines
             if [[ "$in_frontmatter" = true && "$frontmatter_ended" = false ]]; then
-                # Update menu section if specified
-                if [[ -n "$OLD_MENU_SECTION" && -n "$NEW_MENU_SECTION" && "$line" =~ ^[[:space:]]*"$OLD_MENU_SECTION": ]]; then
+                # Track when we're in the menu section
+                if [[ "$line" =~ ^menu: ]]; then
+                    in_menu_section=true
+                    echo "$line" >> "$temp_file"
+                # Update nested menu section if specified and we're in menu section
+                elif [[ "$in_menu_section" = true && -n "$OLD_MENU_SECTION" && -n "$NEW_MENU_SECTION" && "$line" =~ ^[[:space:]]*"$OLD_MENU_SECTION": ]]; then
                     echo "$line" | sed "s/^\\([[:space:]]*\\)$OLD_MENU_SECTION:/\\1$NEW_MENU_SECTION:/" >> "$temp_file"
                     menu_updated=true
-                # Update menu parent if specified and this is a menu section
-                elif [[ -n "$MENU_PARENT" && "$line" =~ ^[[:space:]]*parent: ]]; then
-                    echo "        parent: $MENU_PARENT" >> "$temp_file"
-                # Handle existing aliases section
+                # Update menu parent if specified and this is a parent line in menu section
+                elif [[ "$in_menu_section" = true && -n "$MENU_PARENT" && "$line" =~ ^[[:space:]]*parent: ]]; then
+                    echo "    parent: $MENU_PARENT" >> "$temp_file"
+                # Exit menu section when we hit a non-indented line
+                elif [[ "$in_menu_section" = true && ! "$line" =~ ^[[:space:]] && "$line" != "" ]]; then
+                    in_menu_section=false
+                    # Handle existing aliases section
+                    if [[ "$line" =~ ^aliases: ]]; then
+                        echo "$line" >> "$temp_file"
+                        # Add our alias to existing aliases
+                        local relative_file_path="${file#$DEST_FS_PATH}"
+                        local old_file_path="${SOURCE_PATH}${relative_file_path}"
+                        echo "  - $old_file_path" >> "$temp_file"
+                        aliases_added=true
+                    else
+                        echo "$line" >> "$temp_file"
+                    fi
+                # Handle existing aliases section (when not in menu)
                 elif [[ "$line" =~ ^aliases: ]]; then
                     echo "$line" >> "$temp_file"
                     # Add our alias to existing aliases
                     local relative_file_path="${file#$DEST_FS_PATH}"
                     local old_file_path="${SOURCE_PATH}${relative_file_path}"
-                    echo "    - $old_file_path" >> "$temp_file"
+                    echo "  - $old_file_path" >> "$temp_file"
                     aliases_added=true
                 else
                     echo "$line" >> "$temp_file"

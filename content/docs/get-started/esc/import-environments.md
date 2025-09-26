@@ -5,9 +5,11 @@ h1: "Pulumi ESC: Import Environments"
 meta_desc: This page provides an overview on how to import environments in Pulumi ESC.
 weight: 5
 menu:
-  esc:
+  get-started:
     parent: esc-get-started
     identifier: esc-get-started-import-environments
+aliases:
+  - /docs/esc/get-started/import-environments
 ---
 
 ## Overview

@@ -5,10 +5,11 @@ h1: "Pulumi ESC: Store and Retrieve Secrets"
 meta_desc: This page provides an overview on how to store and retrieve secrets in Pulumi ESC.
 weight: 4
 menu:
-  esc:
+  get-started:
     parent: esc-get-started
     identifier: esc-get-started-store-retrieve-secrets
-
+aliases:
+  - /docs/esc/get-started/store-and-retrieve-secrets
 ---
 
 In an environment file, values are defined as a series of key-value pairs in YAML format. All variables will be defined under a top-level key named `values`. These values can be strings, numbers, or arrays, and they can be manually provided, dynamically generated from external sources, or referenced from other values in the file. They can also be stored in plain-text or as secrets.
