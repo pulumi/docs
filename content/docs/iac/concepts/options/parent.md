@@ -14,29 +14,24 @@ aliases:
 - /docs/concepts/options/parent/
 ---
 
-The `parent` resource option specifies a parent for a resource. It is used to associate children with the parents that encapsulate or are responsible for them. Good examples of this are [component resources](/docs/concepts/resources/components/). The default behavior is to parent each resource to the implicitly-created `pulumi:pulumi:Stack` component resource that is a root resource for all Pulumi stacks.
+The `parent` resource option specifies a parent for a resource, which has the following effects:
 
-{{% notes type="warning" %}}
-Although the `parent` resource option can be used to parent a resource to any other resource, it is strongly recommended to parent resources only to [component resources](/docs/concepts/resources/components/) when they are actually children.  Parenting a resource to another [custom resource](/docs/concepts/resources/) can in some cases result in undefined behavior.
-{{% /notes %}}
+* The child inherits additional resource options from its parent.
+* The Pulumi CLI shows the parent/child hierarchy in CLI output.
 
-For example, this code creates two resources, a parent and child, the latter of which is a child to the former:
+By default, resources are parented to the implicitly created `pulumi:pulumi:Stack` resource which is at the root of all Pulumi stacks. The most common use of explicitly setting the `parent` property is when authoring a [Component Resource](/docs/iac/concepts/components/). Resources that are part of a component should be explicitly parented to the component itself. This ensures that all resources within a component share desirable lifecycle behavior. (It is also possible to have multiple levels of nesting within a component for improved visual display in the CLI if desired.)
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+## Setting a resource's parent
 
-{{% choosable language javascript %}}
+The following example shows a simple parent/child relationship between two resources:
 
-```javascript
-let parent = new MyResource("parent", {/*...*/});
-let child = new MyResource("child", {/*...*/}, { parent: parent });
-```
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-let parent = new MyResource("parent", {/*...*/});
-let child = new MyResource("child", {/*...*/}, { parent: parent });
+const parent = new MyResource("parent", {/*...*/});
+const child = new MyResource("child", {/*...*/}, { parent: parent });
 ```
 
 {{% /choosable %}}
@@ -93,26 +88,30 @@ resources:
 
 {{< /chooser >}}
 
-Using parents can clarify causality or why a given resource was created in the first place. For example, this pulumi up output shows an AWS Virtual Private Cloud (VPC) with two subnets attached to it, and also shows that the VPC directly belongs to the implicit `pulumi:pulumi:Stack` resource:
+## Parent relationships in the CLI
+
+Specifying a resource's parent can help visually organize resources in the CLI. For example, the following `pulumi up` output shows an AWS Virtual Private Cloud (VPC) with two child subnets (and also shows the VPC's child relationship to the implicit `pulumi:pulumi:Stack` resource):
 
 ```bash
 Previewing update (dev):
 
-    Type                       Name                             Plan
-    pulumi:pulumi:Stack        parent-demo-dev
-+   ├─ awsx:x:ec2:Vpc          default-vpc-866580ff             create
-+   │  ├─ awsx:x:ec2:Subnet    default-vpc-866580ff-public-1    create
-+   │  └─ awsx:x:ec2:Subnet    default-vpc-866580ff-public-0    create
+    Type                    Name                             Plan
+    pulumi:pulumi:Stack     parent-demo-dev
++   ├─ aws:ec2:Vpc          default-vpc-866580ff             create
++   │  ├─ aws:ec2:Subnet    default-vpc-866580ff-public-1    create
++   │  └─ aws:ec2:Subnet    default-vpc-866580ff-public-0    create
 ```
 
-Child resources inherit default values for many other resource options from their `parent`, including:
+## Inherited resource options
 
-* [`provider`](/docs/concepts/options/provider):  The provider instance used to construct a resource is inherited from its parent, unless explicitly overridden by the child resource. The parent itself may have inherited the global [default provider](../providers/#default-provider-configuration) if no resource in the parent chain specified a provider instance for the corresponding provider type.
+Child resources inherit the following values from their `parent`:
 
-* [`aliases`](/docs/concepts/options/aliases):  Aliases applied to a parent are applied to all child resources, so that changing the type of a parent resource correctly changes the qualified type of a child resource, and changing the name of a parent resource correctly changes the name prefix of child resources.
+* [`provider`](/docs/concepts/options/provider): Child resources inherit their parent's provider in order to ensure that child resources are created in the same cloud context (account, region, etc.) as their parent.
 
-* [`protect`](/docs/concepts/options/protect):  A protected parent will protect all children.  This ensures that if a parent is marked as protected, none of it's children will be deleted ahead of the attempt to delete the parent failing.
+* [`aliases`](/docs/concepts/options/aliases): Aliases are inherited so that changing the type of a parent resource correctly changes the qualified type of a child resource, and changing the name of a parent resource correctly changes the name prefix of child resources.
 
-* [`transformations`](/docs/concepts/options/transformations):  Transformations applied to a parent will run on the parent and on all child resources. This allows a transformation to be applied to a component to intercept and modify any resources created by its children. As a special case, [Stack transformations](/docs/concepts/options/transformations#stack-transformations) will be applied to *all* resources (since all resources ultimately are parented directly or indirectly by the root stack resource). Prefer `transforms` if possible. `transformations` will be deprecated in the future in favor of `transforms`.
+* [`protect`](/docs/concepts/options/protect): Child resources inherit their parent's protection bit in order to ensure that deletions execute correctly. Children are deleted before their parent, so inheriting protection ensures that if a parent is marked as protected, none of its children will be deleted (because deleting the protected parent would fail).
 
 * [`transforms`](/docs/concepts/options/transforms):  Transforms applied to a parent will run on the parent and on all child resources. This allows a transform to be applied to a component to intercept and modify any resources created by its children. As a special case, [Stack transforms](/docs/concepts/options/transforms#stack-transforms) will be applied to *all* resources (since all resources ultimately are parented directly or indirectly by the root stack resource).
+
+* [`transformations`](/docs/concepts/options/transformations):  Transformations applied to a parent will run on the parent and on all child resources. This allows a transformation to be applied to a component to intercept and modify any resources created by its children. As a special case, [Stack transformations](/docs/concepts/options/transformations#stack-transformations) will be applied to *all* resources (since all resources ultimately are parented directly or indirectly by the root stack resource). Prefer `transforms` over `transformations` as the latter is deprecated.
