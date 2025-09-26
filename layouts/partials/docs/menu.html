@@ -49,7 +49,7 @@
                 <ul class="list-none">
                     <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
                         <button><i class="fa fa-caret-right"></i></button>
-                        <span>Docs Home</span>
+                        <span>Overview</span>
                     </a></li>
                 </ul>
             </li>
@@ -126,7 +126,7 @@
             </li>
             {{- end }}
 
-            {{/* Reference Section */}}
+            <!-- {{/* Reference Section */}}
             {{- with index site.Menus "reference" }}
                 <li class="expandable expanded{{ if eq $currentSection "reference" }} expanded{{ end }}" data-menu-id="reference-top">
                     <ul class="list-none">
@@ -137,7 +137,7 @@
                         {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "reference" "menuEntries" .) }}
                     </ul>
                 </li>
-            {{- end }}
+            {{- end }} -->
 
             {{/* Support Section */}}
             {{- with index site.Menus "support" }}

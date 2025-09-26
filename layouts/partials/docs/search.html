@@ -1,1 +1,18 @@
-{{/* Top navigation and search moved to left nav - this partial is now empty */}}
+<div class="docs-type-nav-search">
+    <div class="docs-type-nav overflow-x-auto">
+        {{ partial "docs/top-nav.html" . }}
+    </div>
+    <div class="docs-search">
+        <div
+            id="search"
+            data-app-id="{{ getenv "ALGOLIA_APP_ID" }}"
+            data-search-key="{{ getenv "ALGOLIA_APP_SEARCH_KEY" }}"
+            data-facets="Docs,Registry,Tutorials,Blog"
+            data-index="production"
+        ></div>
+    </div>
+    <div class="content-width-controls">
+        <div id="expand-content-button" class="icon icon-18-18 width-expand-18-18 expand-content" title="Expand content width"></div>
+        <div id="collapse-content-button" class="icon icon-18-18 width-collapse-18-18 collapse-content hide" title="Shrink content width"></div>
+    </div>
+</div>
