@@ -5,7 +5,7 @@ title: Destroy stack
 h1: "Pulumi & Azure: Destroy stack"
 weight: 8
 menu:
-    iac:
+    get-started:
         name: Destroy stack
         identifier: azure-get-started.destroy-stack
         parent: azure-get-started

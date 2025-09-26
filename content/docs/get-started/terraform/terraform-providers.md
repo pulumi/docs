@@ -5,7 +5,7 @@ h1: "Use Terraform Providers"
 meta_desc: Learn how to use any Terraform provider in Pulumi programs for accessing the full ecosystem of 3000+ providers.
 weight: 6
 menu:
-    iac:
+    get-started:
         name: Use Terraform Providers
         parent: terraform-get-started
         weight: 6

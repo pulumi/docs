@@ -5,7 +5,7 @@ h1: "Orchestrate Together"
 meta_desc: Learn advanced patterns for orchestrating Terraform and Pulumi deployments together in production environments.
 weight: 8
 menu:
-    iac:
+    get-started:
         name: Orchestrate Together
         parent: terraform-get-started
         weight: 8

@@ -5,14 +5,11 @@ title: Create project
 h1: "Pulumi & Kubernetes: Create project"
 weight: 3
 menu:
-  iac:
+  get-started:
     name: Create project
     identifier: kubernetes-get-started.create-project
     parent: kubernetes-get-started
     weight: 3
-  clouds:
-    parent: kubernetes-get-started
-    identifier: kubernetes-get-started-create-project
 
 aliases:
     - /docs/iac/get-started/kubernetes/create-project/

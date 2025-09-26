@@ -5,7 +5,7 @@ title: Create project
 h1: "Pulumi & Google Cloud: Create project"
 weight: 3
 menu:
-    iac:
+    get-started:
         name: Create project
         identifier: gcp-get-started.create-project
         parent: gcp-get-started

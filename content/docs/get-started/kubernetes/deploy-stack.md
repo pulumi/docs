@@ -5,14 +5,11 @@ title: Deploy stack
 h1: "Pulumi & Kubernetes: Deploy stack"
 weight: 5
 menu:
-    iac:
+    get-started:
         name: Deploy stack
         identifier: kubernetes-get-started.deploy-stack
         parent: kubernetes-get-started
         weight: 5
-    clouds:
-        parent: kubernetes-get-started
-        identifier: kubernetes-deploy-stack
 
 aliases:
     - /docs/iac/get-started/kubernetes/deploy-stack/

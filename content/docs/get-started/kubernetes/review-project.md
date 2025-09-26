@@ -5,14 +5,11 @@ title: Review project
 h1: "Pulumi & Kubernetes: Review project"
 weight: 4
 menu:
-    iac:
+    get-started:
         name: Review project
         identifier: kubernetes-get-started.review-project
         parent: kubernetes-get-started
         weight: 4
-    clouds:
-        parent: kubernetes-get-started
-        identifier: kubernetes-review-project-get-started
 
 aliases:
     - /docs/iac/get-started/kubernetes/review-project/

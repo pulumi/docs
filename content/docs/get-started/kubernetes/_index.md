@@ -9,10 +9,6 @@ menu:
         identifier: kubernetes-get-started
         parent: get-started-home
         weight: 5
-    clouds:
-        identifier: kubernetes-get-started
-        parent: kube
-        weight: 4
 aliases:
     - /docs/iac/get-started/kubernetes/
     - /docs/quickstart/kubernetes/

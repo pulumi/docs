@@ -5,14 +5,11 @@ title: Modify program
 h1: "Pulumi & Kubernetes: Modify program"
 weight: 6
 menu:
-    iac:
+    get-started:
         name: Modify program
         identifier: kubernetes-get-started.modify-program
         parent: kubernetes-get-started
         weight: 6
-    clouds:
-        parent: kubernetes-get-started
-        identifier: kubernetes-modify-program
 
 aliases:
     - /docs/iac/get-started/kubernetes/modify-program/

@@ -5,7 +5,7 @@ h1: "Next Steps"
 meta_desc: Explore advanced Pulumi features and resources for Terraform users ready to deepen their integration or consider migration.
 weight: 9
 menu:
-    iac:
+    get-started:
         name: Next Steps
         parent: terraform-get-started
         weight: 9

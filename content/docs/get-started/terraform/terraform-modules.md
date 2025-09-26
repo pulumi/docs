@@ -5,7 +5,7 @@ h1: "Import Terraform Modules"
 meta_desc: Learn how to use existing Terraform modules directly in Pulumi programs, leveraging the Terraform Registry ecosystem.
 weight: 5
 menu:
-    iac:
+    get-started:
         name: Import Terraform Modules
         parent: terraform-get-started
         weight: 5

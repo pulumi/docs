@@ -6,14 +6,11 @@ title: Next steps
 h1: "Pulumi & Kubernetes: Next steps"
 weight: 9
 menu:
-  iac:
+  get-started:
     name: Next steps
     identifier: kubernetes-get-started.next-steps
     parent: kubernetes-get-started
     weight: 9
-  clouds:
-    parent: kubernetes-get-started
-    identifier: kubernetes-next-steps
 
 aliases:
     - /docs/iac/get-started/kubernetes/next-steps/

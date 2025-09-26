@@ -5,7 +5,7 @@ title: Before you begin
 h1: "Pulumi & Azure: Before you begin"
 weight: 2
 menu:
-    iac:
+    get-started:
         name: Install Pulumi
         identifier: azure-get-started.begin
         parent: azure-get-started

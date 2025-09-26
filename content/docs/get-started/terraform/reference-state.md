@@ -5,7 +5,7 @@ h1: "Reference Terraform State"
 meta_desc: Learn how to read from existing Terraform state files in Pulumi for seamless coexistence.
 weight: 4
 menu:
-    iac:
+    get-started:
         name: Reference Terraform State
         parent: terraform-get-started
         weight: 4

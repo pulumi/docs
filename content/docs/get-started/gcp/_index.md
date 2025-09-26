@@ -9,10 +9,6 @@ menu:
         identifier: gcp-get-started
         parent: get-started-home
         weight: 4
-    clouds:
-        parent: google-cloud
-        identifier: google-cloud-get-started
-        weight: 3
 aliases:
     - /docs/iac/get-started/gcp/
     - /docs/quickstart/gcp/

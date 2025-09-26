@@ -5,14 +5,11 @@ title: Review project
 h1: "Pulumi & Google Cloud: Review project"
 weight: 4
 menu:
-    iac:
+    get-started:
         name: Review project
         identifier: gcp-get-started.review-project
         parent: gcp-get-started
         weight: 4
-    clouds:
-        parent: google-cloud-get-started
-        identifier: gcp-review-project
 
 aliases:
     - /docs/iac/get-started/gcp/review-project/

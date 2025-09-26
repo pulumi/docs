@@ -5,14 +5,11 @@ title: Before you begin
 h1: "Pulumi & Kubernetes: Before you begin"
 weight: 2
 menu:
-  iac:
+  get-started:
     name: Install Pulumi
     identifier: kubernetes-get-started.begin
     parent: kubernetes-get-started
     weight: 2
-  clouds:
-    parent: kubernetes-get-started
-    identifier: kubernetes-begin
 
 aliases:
     - /docs/iac/get-started/kubernetes/begin/

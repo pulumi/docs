@@ -5,7 +5,7 @@ title: Deploy changes
 h1: "Pulumi & Azure: Deploy changes"
 weight: 7
 menu:
-    iac:
+    get-started:
         name: Deploy changes
         identifier: azure-get-started.deploy-changes
         parent: azure-get-started

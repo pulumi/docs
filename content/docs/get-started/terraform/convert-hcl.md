@@ -5,7 +5,7 @@ h1: "Convert HCL Code"
 meta_desc: Learn when and how to convert existing Terraform HCL code to Pulumi programs using automated tools and manual techniques.
 weight: 7
 menu:
-    iac:
+    get-started:
         name: Convert HCL Code
         parent: terraform-get-started
         weight: 7

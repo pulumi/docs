@@ -5,7 +5,7 @@ title: Create project
 h1: "Pulumi & Azure: Create project"
 weight: 3
 menu:
-    iac:
+    get-started:
         name: Create project
         identifier: azure-get-started.create-project
         parent: azure-get-started

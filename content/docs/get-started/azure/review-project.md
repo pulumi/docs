@@ -5,14 +5,11 @@ title: Review project
 h1: "Pulumi & Azure: Review project"
 weight: 4
 menu:
-    iac:
+    get-started:
         name: Review project
         identifier: azure-get-started.review-project
         parent: azure-get-started
         weight: 4
-    clouds:
-        parent: azure-get-started
-        identifier: azure-review-project
 
 aliases:
     - /docs/iac/get-started/azure/review-project/

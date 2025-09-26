@@ -6,7 +6,7 @@ stepper_link: "I'm ready to begin"
 meta_desc: This page provides setup instructions for Pulumi alongside existing Terraform infrastructure.
 weight: 2
 menu:
-    iac:
+    get-started:
         name: Install and Configure
         parent: terraform-get-started
         weight: 2
