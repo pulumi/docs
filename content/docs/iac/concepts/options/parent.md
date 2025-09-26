@@ -104,7 +104,7 @@ Previewing update (dev):
 
 ## Inherited resource options
 
-Child resources always inherit the following resource options from their `parent`:
+Child resources inherit the following values from their `parent`:
 
 * [`provider`](/docs/iac/concepts/options/provider): Child resources inherit their parent's provider in order to ensure that child resources are created in the same cloud context (account, region, etc.) as their parent.
 
