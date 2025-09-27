@@ -29,8 +29,8 @@
                 {{ $sidenav_selected = "active" }}
             {{ end }}
             <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
-                <a href="{{ $toc_section_link }}">{{ $toc_name }}</a>
-                {{ if and ($toc_section_link) (ne $toc_name "Get started") }}
+                <span class="section-header">{{ $toc_name }}</span>
+                {{ if $toc_section_link }}
                     <span class="toggleButton-topLevel down">
                         <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
                     </span>
@@ -41,13 +41,34 @@
             </div>
 
             <div class="top-level-container">
-                {{ template "toc" (dict "page" $toc_page "menu" $toc_menu) }}
+                {{ template "toc" (dict "page" $toc_page "menu" $toc_menu "section_link" $toc_section_link) }}
             </div>
         {{ end }}
     {{ end }}
 
     {{ define "toc" }}
         {{ $page := .page }}
+        {{ $section_link := .section_link }}
+
+        {{/* Add Overview link as first item if section_link exists */}}
+        {{ if $section_link }}
+            {{ $sidenav_selected := "" }}
+            {{ if eq $page.RelPermalink $section_link }}
+                {{ $sidenav_selected = "active" }}
+            {{ end }}
+            <ul id="toc-expandable-menu-overview" class="toggleVisible">
+                <ul class="collapsed">
+                    <li class="sidenav-topic {{ $sidenav_selected }}">
+                        <a href="{{ $section_link }}" data-track="toc-overview">Overview</a>
+                    </li>
+                </ul>
+                <ul class="expanded">
+                    <li class="sidenav-topic {{ $sidenav_selected }}">
+                        <a href="{{ $section_link }}" data-track="toc-overview">Overview</a>
+                    </li>
+                </ul>
+            </ul>
+        {{ end }}
 
         {{ range .menu }}
             {{/* Note that we skip "Overview" pages, since they are linked to from above */}}
@@ -94,7 +115,7 @@
                         </li>
                         {{ if .HasChildren }}
                             <div class="sidenav-subsection">
-                                {{ template "toc" (dict "page" $page "menu" .Children) }}
+                                {{ template "toc" (dict "page" $page "menu" .Children "section_link" nil) }}
                             </div>
                         {{ end }}
                     </ul>

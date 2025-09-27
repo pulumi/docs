@@ -5,6 +5,7 @@ title: Pulumi Cloud
 h1: Pulumi Cloud Overview
 docs_home: true
 notitle: true
+norightnav: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     cloud:
