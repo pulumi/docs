@@ -453,7 +453,7 @@ For additional options and details, see `esc run --help`.
 Pulumi ESC lets you define common configuration values once as reusable environments and then import them into other environments to avoid duplication, delegate ownership, and share settings (including secrets) across applications.
 
 {{% notes type="info" %}}
-For a detailed description on how to work with imports, please refer to [Importing other Environments](./imports.md) documentation page.
+For a detailed description on how to work with imports, please refer to [Importing other Environments](../imports) documentation page.
 {{% /notes %}}
 
 In the following example, two environments, `aws/dev` and `stripe/dev`, are used to compose a third environment, `myapp/dev`:
