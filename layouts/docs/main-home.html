@@ -1,0 +1,149 @@
+{{ define "main" }}
+    <div class="docs-list-main">
+        {{ if not .Params.noleftnav }}
+        <div class="docs-main-nav-toggle-wrapper">
+            <div class="docs-main-nav-wrapper">
+                <div id="docs-main-nav" class="docs-main-nav">
+                    {{ partial "docs/menu.html" (dict "page" .) }}
+                </div>
+            </div>
+            <div class="docs-nav-toggle">
+                <div class="docs-nav-toggle-icon icon icon-24-24"></div>
+            </div>
+        </div>
+        {{ end }}
+
+        <div class="docs-main-content-wrapper">
+            <div class="docs-main-content">
+                {{ $primary_link_button := .Params.link_buttons.primary }}
+                {{ $secondary_link_button := .Params.link_buttons.secondary }}
+
+                <section class="docs-home mx-auto my-1">
+
+            <div class="header bg-blue-100 bg-right">
+                {{ $h1 := split .Params.h1 " " }}
+                <h1>{{ index $h1 0 }}<strong> {{ index $h1 1 }}</strong></h1>
+                {{ .Params.description | safeHTML }}
+                <div class="link-buttons">
+                    {{ if $primary_link_button }}
+                    <a class="docs-primary-link-btn" href="{{ $primary_link_button.link }}">{{ $primary_link_button.label }}</a>
+                    {{ end }}
+                    {{ if $secondary_link_button }}
+                    <a class="docs-secondary-link-btn" href="{{ $secondary_link_button.link }}">{{ $secondary_link_button.label }}</a>
+                    {{ end }}
+                </div>
+            </div>
+
+            {{ range .Params.sections }}
+                {{ if eq .type "cards-logo-label-link" }}
+                    <div class="docs-home-section">
+                        <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                        {{ if .description }}
+                            {{ .description | safeHTML }}
+                        {{ end }}
+                        <div class="cards-logo-label-link {{ anchorize .heading }}">
+                            {{ range .cards }}
+                                <a href="{{ .link }}">
+                                    <div>
+                                        <div class="card-icon">
+                                            {{ if .image }}
+                                            <div style="
+                                                display: block;
+                                                position: relative;
+                                                text-indent: -9999px;
+                                                background: url({{ .image }});
+                                                width: {{ .image_x }};
+                                                height: {{ .image_y }};
+                                                background-size: {{ .image_x }} {{ .image_y }};"></div>
+                                            {{ else if .icon }}
+                                            <div class="icon {{ .icon }}"></div>
+                                            {{ end }}
+                                                </div>
+                                        <div class="label">{{ .label }}</div>
+                                    </div>
+                                </a>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ else if eq .type "full-width-cards" }}
+                    <div class="docs-home-section">
+                        <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                        {{ range .cards }}
+                            <a class="full-width-card" href="{{ .link }}">
+                                <div class="icon-heading">
+                                    <div class="icon icon-21-21 {{ .icon }}"></div>
+                                    <h3 id="{{ anchorize .heading }}">{{ .heading }}</h3>
+                                </div>
+                                <p>{{ .description }}</p>
+                            </a>
+                        {{ end }}
+                    </div>
+                {{ else if eq .type "button-cards" }}
+                <div class="docs-home-section">
+                    <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                    {{ if .description }}
+                        {{ .description | safeHTML }}
+                    {{ else if .description_md }}
+                        {{ .description_md | markdownify }}
+                    {{ end }}
+
+                    <div class="tiles flex-wrap justify-left items-stretch mt-4">
+                        {{ range .cards }}
+                        <div class="pb-4 md:pr-4 md:w-1/2">
+                            <div class="tile h-full">
+                                <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                                    <a href="{{ .link }}">
+                                        <h4 class="no-anchor">
+                                            {{ .heading }}
+                                    </h4>
+                                    <p class="pb-4">
+                                    {{ if .description }}
+                                        {{ .description | safeHTML }}
+                                    {{ end }}
+                                    </p>
+                                </a>
+                                <div class="flex space-x-2 flex-grow items-end">
+                                        {{ if .primary_button_link }}
+                                        <a href="{{ .primary_button_link }}" class="btn btn-primary">{{ .primary_button_label }}</a>
+                                        {{ end }}
+                                        {{ if .secondary_button_link }}
+                                        <a href="{{ .secondary_button_link }}" class="btn btn-secondary">{{ .secondary_button_label }}</a>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ else if eq .type "blue-sparkle" }}
+                    <div class="blue-sparkle docs-home-section">
+                        <div class="heading">
+                            <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                            <div class="sparkle"></div>
+                        </div>
+                        <p>{{ .description }}</p>
+                        {{ if .raw_html }}
+                        {{ .raw_html | safeHTML }}
+                        {{ end }}
+                    </div>
+                {{ else if eq .type "flat" }}
+                    <div class="docs-home-section">
+                        <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                        {{ if .description }}
+                            {{ .description | safeHTML }}
+                        {{ else if .description_md }}
+                            {{ .description_md | markdownify }}
+                        {{ end }}
+                    </div>
+                {{ end }}
+            {{ end }}
+        </section>
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "footer" }}
+    {{ partial "docs/footer.html" . }}
+{{ end }}
