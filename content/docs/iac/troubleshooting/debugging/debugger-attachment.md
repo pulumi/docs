@@ -1,19 +1,18 @@
 ---
 title_tag: "Debugging Pulumi Programs"
 meta_desc: "Guide to attaching a debugger to Pulumi programs and stepping through the code."
-title: Debugging
-h1: Debugging Pulumi programs
+title: Attaching a debugger
+h1: Attaching a debugger to a Pulumi program
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        Name: Debugging
-        parent: iac-concepts
-        weight: 160
-    usingpulumi:
-        identifier: debugging
-        weight: 9
+        name: Attaching a Debugger
+        parent: iac-troubleshooting-debugging
+        weight: 20
 aliases:
     - /docs/using-pulumi/debugging/
+    - /docs/concepts/debugging/
+    - /docs/iac/concepts/debugging/
 ---
 
 Because Pulumi uses general purpose programming languages to provision cloud resources, you can take advantage of native debugging tools to troubleshoot your infrastructure definitions.
@@ -44,26 +43,26 @@ The extension automatically generates a debug configuration to run `pulumi up` o
 3. Choose __Show all automatic debug configurations__.
 4. Select "Pulumi..." then "pulumi preview" or "pulumi up".  Debugging will start automatically.
 
-    ![Automatic Debug Configuration](./automatic-1.png)
+    ![Automatic Debug Configuration](/docs/iac/troubleshooting/debugging/images/automatic-1.png)
 
-    ![Automatic Debug Configuration](./automatic-2.png)
+    ![Automatic Debug Configuration](/docs/iac/troubleshooting/debugging/images/automatic-2.png)
 
 5. Select or create a stack if prompted to do so.
 
-    ![Stack Selection](./stack-selection-1.png)
+    ![Stack Selection](/docs/iac/troubleshooting/debugging/images/stack-selection-1.png)
 
 ### Debug your Program
 
 Set breakpoints in your program code and enjoy the full functionality of the VS Code debugger.
 See [VS Code Debugging](https://code.visualstudio.com/docs/editor/debugging) for more information.
 
-![Debugging](./debugging.png)
+![Debugging](/docs/iac/troubleshooting/debugging/images/debugging.png)
 
 ### Pulumi CLI Output
 
 Access the CLI output via the Debug Console view.
 
-![Debug Console](./debug-console.png)
+![Debug Console](/docs/iac/troubleshooting/debugging/images/debug-console.png)
 
 ## Debugging with other IDEs
 
@@ -79,3 +78,34 @@ You can use any other IDE or editor that supports attaching to running programs 
 8. Change your program and repeat the process if needed.
 
 Note that `pulumi up` runs your program twice: once for preview, and once for update, and both will trigger the debugger. Use `pulumi preview --attach-debugger` or `pulumi up --skip-preview --attach-debugger` to pick one of the two modes.
+
+## Manual debugger setup
+
+For a manual setup approach, create or update `.vscode/launch.json` with the following configuration to enable debugging:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Pulumi Program (debug)",
+            "type": "node",
+            "request": "attach",
+            "continueOnAttach": true,
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "${workspaceFolder}/lib/**/*.js",
+                "<node_internals>/**/*.js"
+            ]
+        }
+    ]
+}
+```
+
+Open your program and set breakpoints by clicking in the gutter next to the line numbers.
+
+In a terminal run `NODE_OPTIONS="--inspect-brk" pulumi up` to start the deployment process in debug mode. This will cause Pulumi to pause execution and wait for a debugger to attach.
+
+Press `F5` in VS Code to start debugging. VS Code will attach to the waiting Node.js process, and execution will continue until reaching the first breakpoint you have set.
+
+For a step-by-step guide for attaching a debugger to a Pulumi TypeScript program, check out this [blog on breakpoint debugging.](/blog/next-level-iac-breakpoint-debugging/)
