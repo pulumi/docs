@@ -11,15 +11,13 @@
     {{ if and .p1.Parent (ne .p1.Parent .p1.Site.Home) }}
         {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2) }}
     {{ end }}
-    {{ if not (and (isset .p1.Params "redirect_to") (not .p1.Params.no_overview)) }}
-        <li {{ if eq .p1 .p2 }}class="active"{{ end }}>
-            {{ if or .p1.Params.no_overview (isset .p1.Params "redirect_to") }}
-                <a data-track="breadcrumb" style="text-decoration: none; cursor: default;">{{ .p1.LinkTitle }}</a>
-            {{ else }}
-                <a data-track="breadcrumb" href="{{ .p1.RelPermalink }}">
-                    {{ .p1.LinkTitle }}
-                </a>
-            {{ end }}
-        </li>
-    {{ end }}
+    <li {{ if eq .p1 .p2 }}class="active"{{ end }}>
+        {{ if or .p1.Params.no_overview (isset .p1.Params "redirect_to") }}
+            <a data-track="breadcrumb" style="text-decoration: none; cursor: default;">{{ .p1.LinkTitle }}</a>
+        {{ else }}
+            <a data-track="breadcrumb" href="{{ .p1.RelPermalink }}">
+                {{ .p1.LinkTitle }}
+            </a>
+        {{ end }}
+    </li>
 {{ end }}
