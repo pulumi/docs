@@ -6,8 +6,8 @@ meta_desc: A comprehensive guide for Terraform users to learn Pulumi through coe
 menu:
     get-started:
         name: Terraform Users
-        parent: get-started-home
-        weight: 6
+        parent: iac-get-started
+        weight: 5
         identifier: terraform-get-started
 
 aliases:

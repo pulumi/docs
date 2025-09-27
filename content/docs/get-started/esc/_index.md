@@ -1,7 +1,7 @@
 ---
-title: Get started
-title_tag: Get Started with Pulumi ESC (Environments, Secrets, and Configuration)
-h1: Get Started with Pulumi ESC (Environments, Secrets, and Configuration)
+title: Secrets and Configuration
+title_tag: Get Started with Secrets and Configuration
+h1: Get Started with Secrets and Configuration
 meta_desc: Learn how to manage secrets and hierarchical configuration with Pulumi ESC.
 menu:
   get-started:

@@ -211,7 +211,7 @@
                         {{- end }}
 
                         {{/* Automatically detect if this is an overview page: _index.md with child content */}}
-                        {{- $isOverview := and $overviewPage $overviewPage.IsSection (or $overviewPage.Pages $overviewPage.Sections) }}
+                        {{- $isOverview := and $overviewPage $overviewPage.IsSection (or $overviewPage.Pages $overviewPage.Sections) (not $overviewPage.Params.no_overview) }}
                         {{- if $isOverview }}
                             <li data-menu-id="overview">
                                 <a href="{{ $overviewPage.RelPermalink }}"

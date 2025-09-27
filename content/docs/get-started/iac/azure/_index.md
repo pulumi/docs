@@ -6,9 +6,9 @@ h1: Get started with Pulumi & Azure
 menu:
     get-started:
         name: Azure
-        parent: get-started-home
+        parent: iac-get-started
         identifier: azure-get-started
-        weight: 3
+        weight: 2
 aliases:
     - /docs/iac/get-started/azure/
     - /docs/quickstart/azure/

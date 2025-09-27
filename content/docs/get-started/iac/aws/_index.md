@@ -6,8 +6,8 @@ meta_desc: This page provides an overview and guide on how to get started with A
 menu:
     get-started:
         name: AWS
-        parent: get-started-home
-        weight: 2
+        parent: iac-get-started
+        weight: 1
         identifier: aws-get-started
 
 aliases:

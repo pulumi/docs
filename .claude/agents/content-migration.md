@@ -25,6 +25,18 @@ menu:
     weight: 1              →      weight: 2
 ```
 
+**Menu Hierarchy Creation:**
+- Creating collapsible parent menu items that contain child sections
+- Understanding parent-child relationships using `parent: parent-identifier`
+- Knowledge that Hugo automatically creates hierarchical menus based on parent relationships
+- Creating organizational parent sections without landing pages using `no_overview: true`
+
+**Hugo Menu Template Behavior:**
+- Hugo's menu partial (`layouts/partials/docs/menu.html`) automatically creates "Overview" links for section index pages
+- Override this behavior using `no_overview: true` parameter in frontmatter
+- Understanding the detection logic: `_index.md` + child content = automatic Overview link
+- Menu template modification to check `(not $overviewPage.Params.no_overview)` condition
+
 **Alias Management:**
 - Expertise in Hugo's `aliases` field for URL redirects
 - Understanding that aliases use URL paths (no `.md` extensions)
@@ -115,6 +127,30 @@ menu:
     weight: 2
     params:
       section: esc
+```
+
+**Menu Reorganization Examples:**
+```yaml
+# Creating organizational parent sections (e.g., Infrastructure as Code)
+# Parent section (_index.md):
+---
+title: Infrastructure as Code
+no_overview: true
+menu:
+  get-started:
+    name: Infrastructure as Code
+    parent: get-started-home
+    identifier: iac-get-started
+    weight: 3
+---
+
+# Child sections (aws/_index.md):
+menu:
+  get-started:
+    name: AWS
+    parent: iac-get-started  # Points to parent identifier
+    weight: 1
+    identifier: aws-get-started
 ```
 
 ## Migration Workflow
@@ -272,6 +308,15 @@ Ensures compatibility with Hugo build process:
 - Verifies alias functionality
 - Tests responsive design with new navigation
 
+### Template Modification Expertise
+
+When migrations require changes to Hugo templates:
+- Understanding of Hugo template syntax and logic
+- Modification of menu partials (`layouts/partials/docs/menu.html`)
+- Adding support for new frontmatter parameters (e.g., `no_overview`)
+- Template debugging and testing with live reload
+- Knowledge of Hugo's menu system internals and rendering logic
+
 ## Best Practices and Conventions
 
 ### Menu Identifier Patterns
@@ -309,6 +354,11 @@ Ensures compatibility with Hugo build process:
 - Use consistent indentation (2 spaces)
 - Maintain logical field ordering
 - Group related fields together
+
+**Special Parameters:**
+- Use `no_overview: true` for organizational parent sections that shouldn't show Overview links
+- Apply `_build: {list: false, render: false}` for pure organizational sections (use sparingly)
+- Consider `aliases` for preserving old URL paths during restructuring
 
 ## Reporting and Documentation
 
@@ -366,7 +416,43 @@ migrate-guides --source multiple-dirs --dest unified-guides --merge-menus
 
 # Category redistribution
 migrate-category --from tutorials --to guides --filter by-topic
+
+# Menu reorganization workflow
+create-parent-section --identifier iac-get-started --title "Infrastructure as Code" --no-overview
+move-sections --parent iac-get-started --sections aws,azure,gcp,kubernetes,terraform
+update-landing-pages --fix-links --new-paths
 ```
+
+**Menu Reorganization Workflow Example:**
+Based on the Infrastructure as Code reorganization in get-started:
+
+1. **Create Parent Section:**
+   ```bash
+   mkdir -p content/docs/get-started/iac
+   # Create _index.md with no_overview: true
+   ```
+
+2. **Move Child Sections:**
+   ```bash
+   git mv content/docs/get-started/aws content/docs/get-started/iac/aws
+   git mv content/docs/get-started/azure content/docs/get-started/iac/azure
+   # Continue for all sections...
+   ```
+
+3. **Update Menu Hierarchies:**
+   - Change `parent: get-started-home` to `parent: iac-get-started`
+   - Reweight sections (1, 2, 3, etc.)
+   - Update identifiers if needed
+
+4. **Update Landing Page Links:**
+   - Fix hardcoded links in main landing page
+   - Update relative references
+   - Test all navigation paths
+
+5. **Template Updates (if needed):**
+   - Modify menu partials for new parameters
+   - Add support for organizational sections
+   - Test menu rendering
 
 ### Quality Assurance
 

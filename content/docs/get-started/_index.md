@@ -32,7 +32,7 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="aws-get-started" href="/docs/get-started/aws/" class="tile h-full">
+        <a data-track="aws-get-started" href="/docs/get-started/iac/aws/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Pulumi IaC</h4>
                 <p>If you are new to Pulumi, this guide helps you install Pulumi IaC, configure AWS, and run your first update.</p>
@@ -105,7 +105,7 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="azure-get-started" href="/docs/get-started/azure/" class="tile h-full">
+        <a data-track="azure-get-started" href="/docs/get-started/iac/azure/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
                 <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Azure, and run your first update.</p>
@@ -180,7 +180,7 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="google-get-started" href="/docs/get-started/gcp/" class="tile h-full">
+        <a data-track="google-get-started" href="/docs/get-started/iac/gcp/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
                 <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Google Cloud, and run your first update.</p>
@@ -255,7 +255,7 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="kubernetes-get-started" href="/docs/get-started/kubernetes/" class="tile h-full">
+        <a data-track="kubernetes-get-started" href="/docs/get-started/iac/kubernetes/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
                 <p>If you are new to Pulumi, this guide helps you install Pulumi, configure the Kubernetes Provider, and run your first update.</p>
