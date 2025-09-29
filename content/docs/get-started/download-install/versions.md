@@ -6,6 +6,7 @@ menu:
     weight: 1
 
 aliases:
+- /docs/iac/download-install/versions/
 - /docs/reference/changelog/
 - /docs/get-started/install/versions/
 - /docs/install/versions/

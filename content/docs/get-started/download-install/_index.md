@@ -1,24 +1,24 @@
 ---
 title_tag: "Download & Install Pulumi"
 meta_desc: This page contains detailed instructions for downloading and installing Pulumi.
-title: "Download & install"
-h1: Download & install Pulumi
+title: "Download & Install Pulumi"
+h1: Download & Install Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        parent: iac-home
-        weight: 5
-        identifier: iac-install
+    get-started:
+        parent: get-started-home
+        weight: 1
+        identifier: download-install
     install:
         name: Overview
         weight: 1
 
 aliases:
-- /get-started/install/
-- /docs/reference/install/
-- /docs/get-started/install/
-- /install/
-- /docs/install
+  - /docs/iac/download-install/
+  - /get-started/install/
+  - /docs/reference/install/
+  - /install/
+  - /docs/install
 
 search:
    boost: true
