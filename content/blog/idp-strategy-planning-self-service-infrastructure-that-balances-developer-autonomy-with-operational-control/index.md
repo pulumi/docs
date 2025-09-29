@@ -80,7 +80,7 @@ These lessons come from real-world implementations across industries and company
 This post is part of our IDP Best Practices series. You can explore the full series below:
 
 - **How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure** (you are here)
-- [Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/)
+- [Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates](/blog/golden-paths-infrastructure-components-and-templates/)
 - [Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails](/blog/deployment-guardrails-with-policy-as-code)
 - Day 2 Platform Operations: Automating Drift Detection and Remediation
 - Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
