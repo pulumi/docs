@@ -96,9 +96,9 @@
 {{ $uniqueResources := slice }}
 {{ $seenIds := slice }}
 {{ range $resources }}
-  {{ if not (in $seenIds .["@id"]) }}
+  {{ if not (in $seenIds (index . "@id")) }}
     {{ $uniqueResources = $uniqueResources | append . }}
-    {{ $seenIds = $seenIds | append .["@id"] }}
+    {{ $seenIds = $seenIds | append (index . "@id") }}
   {{ end }}
 {{ end }}
 

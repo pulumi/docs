@@ -3,36 +3,6 @@
 {{ $content := lower .Content }}
 {{ $title := lower .Title }}
 
-{{/* Major Cloud Providers */}}
-{{ if or (in $content "aws") (in $content "amazon web services") (in $title "aws") }}
-  {{ $entities = $entities | append (dict
-    "@type" "Thing"
-    "@id" "https://en.wikipedia.org/wiki/Amazon_Web_Services"
-    "name" "Amazon Web Services"
-    "alternateName" "AWS"
-    "sameAs" "https://www.wikidata.org/wiki/Q456157"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "azure") (in $content "microsoft azure") (in $title "azure") }}
-  {{ $entities = $entities | append (dict
-    "@type" "Thing"
-    "@id" "https://en.wikipedia.org/wiki/Microsoft_Azure"
-    "name" "Microsoft Azure"
-    "alternateName" "Azure"
-    "sameAs" "https://www.wikidata.org/wiki/Q1063364"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "gcp") (in $content "google cloud") (in $title "gcp") (in $title "google cloud") }}
-  {{ $entities = $entities | append (dict
-    "@type" "Thing"
-    "@id" "https://en.wikipedia.org/wiki/Google_Cloud_Platform"
-    "name" "Google Cloud Platform"
-    "alternateName" "GCP"
-    "sameAs" "https://www.wikidata.org/wiki/Q14055576"
-  ) }}
-{{ end }}
 
 {{/* Container & Orchestration */}}
 {{ if or (in $content "kubernetes") (in $content "k8s") (in $title "kubernetes") }}
@@ -203,59 +173,6 @@
   ) }}
 {{ end }}
 
-{{/* Serverless & Functions */}}
-{{ if or (in $content "lambda") (in $content "aws lambda") (in $title "lambda") }}
-  {{ $entities = $entities | append (dict
-    "@type" "SoftwareApplication"
-    "@id" "https://en.wikipedia.org/wiki/AWS_Lambda"
-    "name" "AWS Lambda"
-    "sameAs" "https://www.wikidata.org/wiki/Q28759395"
-  ) }}
-{{ end }}
 
-{{ if or (in $content "azure functions") (in $title "azure functions") }}
-  {{ $entities = $entities | append (dict
-    "@type" "SoftwareApplication"
-    "name" "Azure Functions"
-    "sameAs" "https://www.wikidata.org/wiki/Q56881017"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "cloud functions") (in $title "cloud functions") }}
-  {{ $entities = $entities | append (dict
-    "@type" "SoftwareApplication"
-    "name" "Google Cloud Functions"
-    "sameAs" "https://www.wikidata.org/wiki/Q56880996"
-  ) }}
-{{ end }}
-
-{{/* IaC Concepts */}}
-{{ if or (in $content "infrastructure as code") (in $content "iac") }}
-  {{ $entities = $entities | append (dict
-    "@type" "Thing"
-    "@id" "https://en.wikipedia.org/wiki/Infrastructure_as_code"
-    "name" "Infrastructure as Code"
-    "alternateName" "IaC"
-    "sameAs" "https://www.wikidata.org/wiki/Q6036788"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "devops") (in $title "devops") }}
-  {{ $entities = $entities | append (dict
-    "@type" "Thing"
-    "@id" "https://en.wikipedia.org/wiki/DevOps"
-    "name" "DevOps"
-    "sameAs" "https://www.wikidata.org/wiki/Q11271660"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "cloud native") (in $title "cloud native") }}
-  {{ $entities = $entities | append (dict
-    "@type" "Thing"
-    "@id" "https://en.wikipedia.org/wiki/Cloud_native_computing"
-    "name" "Cloud Native Computing"
-    "sameAs" "https://www.wikidata.org/wiki/Q55641291"
-  ) }}
-{{ end }}
 
 {{ return $entities }}

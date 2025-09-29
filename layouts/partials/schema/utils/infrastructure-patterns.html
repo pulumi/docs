@@ -115,8 +115,16 @@
   ) }}
 {{ end }}
 
-{{/* API Gateway Pattern */}}
-{{ if or (in $content "api gateway") (in $content "api management") }}
+{{/* API Gateway Pattern - Very specific detection to avoid false positives */}}
+{{ if or 
+    (in $content "api gateway pattern")
+    (in $content "implements api gateway")
+    (in $content "api gateway architecture") 
+    (in $content "single entry point for all client requests")
+    (in $content "api management pattern")
+    (and (in $title "api gateway") (not (in $title "vpc")))
+    (in $url "/api-gateway/")
+}}
   {{ $patterns = $patterns | append (dict
     "@type" "DefinedTerm"
     "@id" "https://en.wikipedia.org/wiki/API_management"
