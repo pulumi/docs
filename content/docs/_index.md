@@ -3,13 +3,11 @@ title: Documentation
 linktitle: Docs
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 meta_image: /images/docs/meta-images/docs-meta.png
-layout: home
 aliases:
 - /docs/reference/
+layout: main-home
 notitle: true
 docs_home: true
-noleftnav: true
-norightnav: true
 nobreadcrumb: true
 h1: Pulumi Docs
 description: <p>Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> platform for <a href="/docs/iac">automating</a>, <a href="/docs/esc">securing</a>, and <a href="/docs/pulumi-cloud">managing</a> cloud resources, configuration, and secrets, using your favorite <a href="/docs/iac/languages-sdks/">programming languages.</a></p>
@@ -25,7 +23,7 @@ sections:
     description: "Infrastructure as code for engineers in Node.js, Python, Go, .NET, Java, and YAML"
     link: /docs/iac/
     primary_button_label: Get Started
-    primary_button_link: /docs/iac/get-started/
+    primary_button_link: /docs/get-started/
     secondary_button_label: Install
     secondary_button_link: /docs/iac/download-install/
   - heading: Pulumi ESC
@@ -87,23 +85,6 @@ sections:
       </iframe>
     </div>
 - type: button-cards
-  heading: PulumiTV Featured Playlists
-  description:  |
-    <p>If a picture is worth 1000 words, these videos deliver information at 30fps. So, that's like reading 30000 words a second.</p>
-  cards:
-  - heading: Modern Infrastructure
-    description: <img src="/images/docs/pulumitv/Modern_Infrastructure_YT_Playlist.jpg" />
-    link: https://www.youtube.com/watch?v=YpW_bOaiBIg&list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw
-  - heading: AI / ML Essentials
-    description: <img src="/images/docs/pulumitv/AI_ML_YT_Playlist.jpg" />
-    link: https://www.youtube.com/watch?v=F7xE_e3cReE&list=PLyy8Vx2ZoWloabJJW13bcLStud4LxJ0Cw
-  - heading: DevOps / Platform Engineering
-    description: <img src="/images/docs/pulumitv/DevOps_Platform_YT_Playlist.jpg" />
-    link: https://www.youtube.com/watch?v=NUPK5CCm6XA&list=PLyy8Vx2ZoWlrf74lghqGc171NCtLgZyVd
-- type: flat
-  heading: Support
-  description: <p>We’re here to help! Try reviewing our <a href="https://www.pulumi.com/docs/iac/support/faq/">FAQ</a> or reach out at <a href="mailto:support@pulumi.com">support@pulumi</a>.com.</p>
-- type: button-cards
   heading: Community and Free Tier support
   cards:
   - heading: Pulumi Community Slack
@@ -118,13 +99,13 @@ sections:
     primary_button_link: https://github.com/pulumi/pulumi/issues
   - heading: Troubleshooting Guide
     description: "Check out this list of known issues and how to resolve them."
-    link: https://www.pulumi.com/docs/iac/troubleshooting/
+    link: /docs/iac/support/troubleshooting/
     primary_button_label: Learn More
-    primary_button_link: https://www.pulumi.com/docs/iac/troubleshooting/
+    primary_button_link: /docs/iac/support/troubleshooting/
 
 - type: flat
   heading: Enterprise and Business Critical support
   description: |
-    <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="https://www.pulumi.com/pricing/">pricing page</a> for the support options available. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.</p>
+    <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="/pricing/">pricing page</a> for the support options available. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.</p>
 
 ---

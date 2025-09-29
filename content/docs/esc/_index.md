@@ -1,16 +1,13 @@
 ---
-title: Pulumi ESC
-linktitle: Pulumi ESC
+title: Secrets & Configuration
+linktitle: Secrets & Configuration
 docs_home: true
 notitle: true
+norightnav: true
 menu:
   esc:
     identifier: esc-home
     weight: 1
-expanded_menu_ids:
-    - esc-environments
-    - esc-integrations
-    - esc-development
 aliases:
   - /docs/pulumi-cloud/esc/
 

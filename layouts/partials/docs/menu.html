@@ -1,81 +1,235 @@
 {{- $page := .page }}
-{{- $menuID := .menu }}
 
-{{/* If a valid menu choice was passed in, use that. Otherwise, try to derive
-one from the current path. If that doesn't work, don't show a menu. (TODO: Would
-it be helpful to be able to set the menu somehow in the frontmatter?) */}}
-
-{{ $validMenus := slice "iac" "esc" "idp" "cloud" "insights"}}
-
-{{ if not (in $validMenus $menuID) }}
-    {{ $menuID = "" }}
+{{/* Detect current section for auto-expansion */}}
+{{ $currentSection := "home" }}
+{{ if eq $page.Path "/docs/" }}
+    {{ $currentSection = "home" }}
+{{ else if hasPrefix $page.Path "/docs/get-started" }}
+    {{ $currentSection = "get-started" }}
+{{ else if hasPrefix $page.Path "/docs/iac" }}
+    {{ $currentSection = "iac" }}
+{{ else if hasPrefix $page.Path "/docs/esc" }}
+    {{ $currentSection = "esc" }}
+{{ else if hasPrefix $page.Path "/docs/insights" }}
+    {{ $currentSection = "insights" }}
+{{ else if hasPrefix $page.Path "/docs/idp" }}
+    {{ $currentSection = "idp" }}
+{{ else if hasPrefix $page.Path "/docs/ai" }}
+    {{ $currentSection = "ai" }}
+{{ else if hasPrefix $page.Path "/docs/migration" }}
+    {{ $currentSection = "migration" }}
+{{ else if hasPrefix $page.Path "/docs/administration" }}
+    {{ $currentSection = "administration" }}
+{{ else if hasPrefix $page.Path "/docs/reference" }}
+    {{ $currentSection = "reference" }}
+{{ else if hasPrefix $page.Path "/docs/support" }}
+    {{ $currentSection = "support" }}
+{{ else if hasPrefix $page.Path "/registry" }}
+    {{ $currentSection = "reference" }}
+{{ else if hasPrefix $page.Path "/tutorials" }}
+    {{ $currentSection = "get-started" }}
 {{ end }}
 
-{{ if eq $menuID "" }}
-    {{ $segments := split $page.Path "/"}}
+<nav class="text-sm mt-5 mr-2">
+    {{/* Search box moved from top nav */}}
+    <div class="docs-search mb-4">
+        <div
+            id="search"
+            data-app-id="{{ getenv "ALGOLIA_APP_ID" }}"
+            data-search-key="{{ getenv "ALGOLIA_APP_SEARCH_KEY" }}"
+            data-facets="Docs,Registry,Tutorials,Blog"
+            data-index="production"
+        ></div>
+    </div>
 
-    {{ if eq (index $segments 1) "docs" }}
-        {{ $section := index $segments 2 }}
+    <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
+        <ul class="list-none pl-0">
 
-        {{/* Little hack to handle prevent colliding with the existing `pulumi-cloud` menu. */}}
-        {{ if eq $section "pulumi-cloud" }}
-            {{ $section = "cloud" }}
-        {{ end }}
+            <li class="" data-menu-id="docs-home">
+                <ul class="list-none">
+                    <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
+                        <button><i class="fa fa-caret-right"></i></button>
+                        <span>Overview</span>
+                    </a></li>
+                </ul>
+            </li>
 
-        {{ if in $validMenus $section }}
-            {{ $menuID = $section }}
-        {{ end }}
-    {{ end }}
-{{ end }}
+            {{/* Get Started Section */}}
+            {{- with index site.Menus "get-started" }}
+            <li class="expandable expanded{{ if eq $currentSection "get-started" }} expanded{{ end }}" data-menu-id="get-started-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "get-started" "menuEntries" . "forceTopLevelLabel" "Get Started") }}
+                </ul>
+            </li>
+            {{- end }}
 
-{{- with index site.Menus $menuID }}
-    <nav class="text-sm mt-7 mr-2">
-        <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
-            <ul class="list-none pl-0">
-                {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuID "menuEntries" .) }}
-            </ul>
-        </pulumi-docs-nav>
-    </nav>
-{{- end }}
+            {{/* Infrastructure as Code Section */}}
+            {{- with index site.Menus "iac" }}
+            <li class="expandable expanded{{ if eq $currentSection "iac" }} expanded{{ end }}" data-menu-id="iac-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "iac" "menuEntries" . "forceTopLevelLabel" "Infrastructure as Code") }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Secrets & Configuration Section */}}
+            {{- with index site.Menus "esc" }}
+            <li class="expandable expanded{{ if eq $currentSection "esc" }} expanded{{ end }}" data-menu-id="esc-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "esc" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Insights & Governance Section */}}
+            {{- with index site.Menus "insights" }}
+            <li class="expandable expanded{{ if eq $currentSection "insights" }} expanded{{ end }}" data-menu-id="insights-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "insights" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Internal Developer Platform Section */}}
+            {{- with index site.Menus "idp" }}
+            <li class="expandable expanded{{ if eq $currentSection "idp" }} expanded{{ end }}" data-menu-id="idp-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "idp" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* AI-Driven Tasks Section */}}
+            {{- with index site.Menus "ai" }}
+            <li class="expandable expanded{{ if eq $currentSection "ai" }} expanded{{ end }}" data-menu-id="ai-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "ai" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Migration Section */}}
+            {{- with index site.Menus "migration" }}
+            <li class="expandable expanded{{ if eq $currentSection "migration" }} expanded{{ end }}" data-menu-id="migration-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "migration" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            {{/* Administration Section */}}
+            {{- with index site.Menus "administration" }}
+            <li class="expandable expanded{{ if eq $currentSection "administration" }} expanded{{ end }}" data-menu-id="administration-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "administration" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+            <!-- {{/* Reference Section */}}
+            {{- with index site.Menus "reference" }}
+                <li class="expandable expanded{{ if eq $currentSection "reference" }} expanded{{ end }}" data-menu-id="reference-top">
+                    <ul class="list-none">
+                        <li><a href="/registry/">
+                            <button><i class="fa fa-caret-right"></i></button>
+                            <span>Package Registry</span>
+                        </a></li>
+                        {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "reference" "menuEntries" .) }}
+                    </ul>
+                </li>
+            {{- end }} -->
+
+            {{/* Support Section */}}
+            {{- with index site.Menus "support" }}
+            <li class="expandable expanded{{ if eq $currentSection "support" }} expanded{{ end }}" data-menu-id="support-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "support" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
+        </ul>
+    </pulumi-docs-nav>
+</nav>
 
 {{- define "partials/inline/menu/walk.html" }}
     {{- $page := .page }}
-    {{- $rootMenuID := (printf "%s-home" .rootMenuID) }}
+    {{- $rootMenuID := .rootMenuID }}
 
     {{- range .menuEntries }}
-        {{- $attrs := dict "href" .URL }}
-        {{- if $page.IsMenuCurrent .Menu . }}
-            {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-        {{- else if $page.HasMenuCurrent .Menu .}}
-            {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
-        {{- end }}
-        {{- $name := .Name }}
-        {{- with .Identifier }}
-            {{- with T . }}
-                {{- $name = . }}
+        {{/* Skip Overview pages since we add them manually */}}
+        {{/* Skip root home items that we've already created manually */}}
+        {{- if and (ne .Name "Overview") (ne .Identifier $rootMenuID) }}
+            {{- $attrs := dict "href" .URL }}
+            {{- if $page.IsMenuCurrent .Menu . }}
+                {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+            {{- else if $page.HasMenuCurrent .Menu .}}
+                {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
             {{- end }}
-        {{- end }}
+            {{- $name := .Name }}
+            {{- with .Identifier }}
+                {{- with T . }}
+                    {{- $name = . }}
+                {{- end }}
+            {{- end }}
 
-        <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="expandable" {{ end }}
-            {{ if .Identifier }} data-menu-id="{{ .Identifier }}" {{ end }}
-            >
-            <a
-                {{- range $k, $v := $attrs }}
-                    {{- with $v }}
-                        {{- printf " %s=%q" $k $v | safeHTMLAttr }}
-                    {{- end }}
-                {{- end -}}
-            >
-            <button>
-                <i class="fa fa-caret-right"></i>
-            </button>
-            <span>{{ $name }}</span>
-            </a>
-            {{- with .Children }}
-                <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-                </ul>
-            {{- end }}
-        </li>
+            {{/* Store the current menu item before entering Children context */}}
+            {{- $currentMenuItem := . }}
+
+            <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="expandable" {{ end }}
+                {{ if .Identifier }} data-menu-id="{{ .Identifier }}" {{ end }}
+                >
+                {{- if and .Children (ne .Identifier $rootMenuID) }}
+                    {{/* Parent with children - make it clickable for expand/collapse but not navigation */}}
+                    <a href="javascript:void(0)"{{- if $page.HasMenuCurrent .Menu . }} class="ancestor"{{ end }} onclick="this.closest('li').classList.toggle('expanded'); return false;">
+                    <button style="pointer-events: none;">
+                        <i class="fa fa-caret-right"></i>
+                    </button>
+                    <span>{{ $name }}</span>
+                    </a>
+                {{- else }}
+                    {{/* Regular link or root menu item */}}
+                    <a
+                        {{- range $k, $v := $attrs }}
+                            {{- with $v }}
+                                {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+                            {{- end }}
+                        {{- end -}}
+                    >
+                    <button>
+                        <i class="fa fa-caret-right"></i>
+                    </button>
+                    <span>{{ $name }}</span>
+                    </a>
+                {{- end }}
+                {{- with .Children }}
+                    <ul class="list-none">
+                        {{/* Add Overview link for section index pages with child content */}}
+                        {{- $overviewPage := "" }}
+                        {{- if $currentMenuItem.URL }}
+                            {{- $overviewPage = site.GetPage $currentMenuItem.URL }}
+                        {{- end }}
+
+                        {{/* Automatically detect if this is an overview page: _index.md with child content */}}
+                        {{- $isOverview := and $overviewPage $overviewPage.IsSection (or $overviewPage.Pages $overviewPage.Sections) (not $overviewPage.Params.no_overview) }}
+                        {{- if $isOverview }}
+                            <li data-menu-id="overview">
+                                <a href="{{ $overviewPage.RelPermalink }}"
+                                    {{- if eq $page.RelPermalink $overviewPage.RelPermalink }}
+                                        class="active" aria-current="page"
+                                    {{- end }}
+                                >
+                                <button>
+                                    <i class="fa fa-caret-right"></i>
+                                </button>
+                                <span>Overview</span>
+                                </a>
+                            </li>
+                        {{- end }}
+                        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID) }}
+                    </ul>
+                {{- end }}
+            </li>
+        {{- end }}
     {{- end }}
 {{- end }}

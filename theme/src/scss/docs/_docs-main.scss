@@ -346,7 +346,7 @@ body.section-registry {
             width: 700px;
             max-width: 700px;
             min-width: 0;
-            margin: 32px 24px 0 16px;
+            margin: 1rem 1.5rem 0 1rem;
             padding-bottom: 24px;
             min-height: 100vh;
 
@@ -468,12 +468,12 @@ body.section-registry {
             }
 
             .docs-table-of-contents {
-                margin-top: 38px;
-                padding: 16px 0 16px 0;
+                margin-top: 1rem;
+                padding: 1rem 0;
                 overflow-y: auto;
                 height: 90vh;
                 position: sticky;
-                top: 94px;
+                top: 3.5rem;
                 display: block;
                 margin-right: 10px;
 
