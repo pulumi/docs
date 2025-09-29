@@ -4,8 +4,10 @@ title: Before you begin
 h1: "Before you begin"
 meta_desc: This page provides an overview on how to get started with Pulumi IDP.
 weight: 2
+aliases:
+  - /docs/idp/get-started/begin/
 menu:
-  idp:
+  get-started:
     parent: idp-get-started
     identifier: idp-get-started-begin
 ---

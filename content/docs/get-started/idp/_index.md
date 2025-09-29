@@ -1,13 +1,16 @@
 ---
-title: Get Started
+title: Internal Developer Platform
 title_tag: Get Started with Pulumi IDP
-h1: Pulumi IDP Approach
+h1: Get started with Pulumi IDP
 meta_desc: Learn how to build an internal developer platform with Pulumi IDP.
 menu:
-  idp:
-    parent: idp-home
+  get-started:
+    name: Internal Developer Platform
+    parent: get-started-home
     identifier: idp-get-started
-    weight: 20
+    weight: 30
+aliases:
+    - /docs/idp/get-started/
 ---
 
 Pulumi IDP is a bottom-up approach for platform teams to provide self-service workflows to their users, from Day 0 to Day 2. Unlike an Internal Developer Portal, Pulumi IDP facilitates concrete outcomes, not just information consumption.

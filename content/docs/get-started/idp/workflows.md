@@ -4,8 +4,10 @@ title: Workflows
 h1: "Workflows"
 meta_desc: This page provides an overview on Pulumi IDP Workflows.
 weight: 4
+aliases:
+  - /docs/idp/get-started/workflows/
 menu:
-  idp:
+  get-started:
     parent: idp-get-started
     identifier: idp-get-started-workflows
 ---

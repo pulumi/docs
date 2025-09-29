@@ -4,8 +4,10 @@ title: Private Registry
 h1: "Private Registry"
 meta_desc: This page provides an overview on how to get started with Pulumi IDP Private Registry.
 weight: 3
+aliases:
+  - /docs/idp/get-started/private-registry/
 menu:
-  idp:
+  get-started:
     parent: idp-get-started
     identifier: idp-get-started-private-registry
 ---
