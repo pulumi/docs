@@ -1,7 +1,7 @@
 {{/* Consolidated Event Schema - Handles workshops, webinars, and exhibitions */}}
 
-{{/* Only process if not external */}}
-{{ if not .Params.external }}
+{{/* Only process if not external and has physical location (Google requires physical events) */}}
+{{ if and (not .Params.external) .Params.main .Params.main.location (ne .Params.main.location "virtual") }}
   {{/* Get event data from various possible locations */}}
   {{ $eventData := or .Params.event_data .Params.exhibition_data .Params.main }}
   
@@ -30,12 +30,30 @@
     
     {{/* Add start date */}}
     {{ with or $eventData.start_date $eventData.sortable_date }}
-      {{ $schema = merge $schema (dict "startDate" .) }}
+      {{ $startDate := . }}
+      {{/* Ensure ISO-8601 format with timezone */}}
+      {{ if $startDate }}
+        {{ $timeObj := time.AsTime $startDate }}
+        {{ if $timeObj }}
+          {{ $schema = merge $schema (dict "startDate" ($timeObj.Format "2006-01-02T15:04:05Z07:00")) }}
+        {{ else }}
+          {{ $schema = merge $schema (dict "startDate" $startDate) }}
+        {{ end }}
+      {{ end }}
     {{ end }}
     
     {{/* Add end date */}}
     {{ with $eventData.end_date }}
-      {{ $schema = merge $schema (dict "endDate" .) }}
+      {{ $endDate := . }}
+      {{/* Ensure ISO-8601 format with timezone */}}
+      {{ if $endDate }}
+        {{ $timeObj := time.AsTime $endDate }}
+        {{ if $timeObj }}
+          {{ $schema = merge $schema (dict "endDate" ($timeObj.Format "2006-01-02T15:04:05Z07:00")) }}
+        {{ else }}
+          {{ $schema = merge $schema (dict "endDate" $endDate) }}
+        {{ end }}
+      {{ end }}
     {{ end }}
     
     {{/* Process duration */}}
@@ -118,13 +136,15 @@
     
     {{/* Add offers for gated/ticketed events */}}
     {{ if or .Params.gated (eq $eventType "ExhibitionEvent") }}
+      {{ $validDate := .Date }}
+      {{ if not $validDate }}{{ $validDate = now }}{{ end }}
       {{ $schema = merge $schema (dict "offers" (dict
         "@type" "Offer"
         "price" "0"
         "priceCurrency" "USD"
         "availability" "https://schema.org/InStock"
         "url" .Permalink
-        "validFrom" (.Date.Format "2006-01-02")
+        "validFrom" ($validDate.Format "2006-01-02T15:04:05Z07:00")
       )) }}
     {{ end }}
     

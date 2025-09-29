@@ -152,6 +152,7 @@
       "@type" "Organization"
       "@id" "https://www.pulumi.com/#organization"
       "name" "Pulumi"
+      "url" "https://www.pulumi.com"
     )
     "hasCourseInstance" (dict
       "@type" "CourseInstance"
@@ -172,7 +173,6 @@
     )
     "timeRequired" $duration
     "isAccessibleForFree" true
-    "availableLanguage" (slice "en-US")
     "audience" (dict
       "@type" "Audience"
       "audienceType" "Developers"
@@ -239,7 +239,7 @@
 
   {{/* Add related content for knowledge graph connections */}}
   {{ if $relatedContent }}
-    {{ $schema = merge $schema (dict "relatedLink" $relatedContent) }}
+    {{ $schema = merge $schema (dict "citation" $relatedContent) }}
   {{ end }}
   
   {{/* Cloud provider information now handled in mentions for semantic accuracy */}}
