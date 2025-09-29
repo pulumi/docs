@@ -158,8 +158,9 @@
       "courseMode" "online"
       "courseWorkload" $duration
       "instructor" (dict
-        "@type" "Organization"
-        "@id" "https://www.pulumi.com/#organization"
+        "@type" "Person"
+        "name" "Pulumi Team"
+        "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
       )
     )
     "educationalLevel" $level
@@ -216,6 +217,9 @@
   {{ if $cloudResources.cloudServices }}
     {{ $allMentions = $allMentions | append $cloudResources.cloudServices }}
   {{ end }}
+  {{ if $infraPatterns }}
+    {{ $allMentions = $allMentions | append $infraPatterns }}
+  {{ end }}
   
   {{/* Deduplicate mentions by @id or name */}}
   {{ if $allMentions }}
@@ -238,19 +242,9 @@
     {{ $schema = merge $schema (dict "relatedLink" $relatedContent) }}
   {{ end }}
   
-  {{/* Add cloud provider as targetPlatform */}}
-  {{ if $cloudProviders.primary }}
-    {{ $schema = merge $schema (dict "targetPlatform" $cloudProviders.primary) }}
-  {{ end }}
+  {{/* Cloud provider information now handled in mentions for semantic accuracy */}}
   
-  {{/* Add infrastructure patterns as applicationCategory */}}
-  {{ if $infraPatterns }}
-    {{ $categories := slice }}
-    {{ range $infraPatterns }}
-      {{ $categories = $categories | append .name }}
-    {{ end }}
-    {{ $schema = merge $schema (dict "applicationCategory" $categories) }}
-  {{ end }}
+  {{/* Infrastructure patterns now handled in mentions section for semantic accuracy */}}
   
   {{/* Add software requirements based on detected packages */}}
   {{ $requirements := slice }}

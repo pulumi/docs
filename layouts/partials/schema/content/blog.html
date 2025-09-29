@@ -88,7 +88,7 @@
   {{/* AI Enhancement: Add speakable specification */}}
   {{ $schema = merge $schema (dict "speakable" (dict
     "@type" "SpeakableSpecification"
-    "cssSelector" (slice ".article-summary" ".blog-content h2" ".blog-content h3")
+    "cssSelector" (slice "article h1" "article h2" "article p:first-of-type")
   )) }}
 
   {{/* AI Enhancement: Add articleBody for context */}}
@@ -119,6 +119,9 @@
   {{ if $cloudResources.cloudServices }}
     {{ $allMentions = $allMentions | append $cloudResources.cloudServices }}
   {{ end }}
+  {{ if $infraPatterns }}
+    {{ $allMentions = $allMentions | append $infraPatterns }}
+  {{ end }}
   
   {{/* Deduplicate mentions by @id or name */}}
   {{ if $allMentions }}
@@ -139,22 +142,12 @@
   {{/* Get related content relationships */}}
   {{ $relatedContent := partial "schema/utils/related-content.html" . }}
   {{ if $relatedContent }}
-    {{ $schema = merge $schema (dict "relatedLink" $relatedContent) }}
+    {{ $schema = merge $schema (dict "citation" $relatedContent) }}
   {{ end }}
   
-  {{/* Add cloud provider as targetPlatform */}}
-  {{ if $cloudProviders.primary }}
-    {{ $schema = merge $schema (dict "targetPlatform" $cloudProviders.primary) }}
-  {{ end }}
+  {{/* Cloud provider information now handled in mentions for semantic accuracy */}}
   
-  {{/* Add infrastructure patterns as applicationCategory */}}
-  {{ if $infraPatterns }}
-    {{ $categories := slice }}
-    {{ range $infraPatterns }}
-      {{ $categories = $categories | append .name }}
-    {{ end }}
-    {{ $schema = merge $schema (dict "applicationCategory" $categories) }}
-  {{ end }}
+  {{/* Infrastructure patterns now handled in mentions section for semantic accuracy */}}
   
   {{/* Add software requirements based on detected packages */}}
   {{ $requirements := slice }}

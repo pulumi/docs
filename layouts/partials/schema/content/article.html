@@ -107,7 +107,7 @@
   "inLanguage" "en-US"
   "speakable" (dict
     "@type" "SpeakableSpecification"
-    "cssSelector" (slice ".summary" "h2" "h3" "pre code")
+    "cssSelector" (slice "h1" "h2" "p:first-of-type")
   )
   "about" (dict
     "@type" "SoftwareApplication"
@@ -131,13 +131,15 @@
   {{ $schema = merge $schema (dict "programmingLanguage" $languages) }}
 {{ end }}
 
-{{/* Add proficiency level for technical content */}}
-{{ $schema = merge $schema (dict "proficiencyLevel" $level) }}
+{{/* Proficiency level is not a standard schema.org property - removed for compliance */}}
 
 {{/* Add technology entity mentions with Wikipedia/Wikidata links */}}
 {{ $allMentions := $mentions }}
 {{ if $cloudResources.cloudServices }}
   {{ $allMentions = $allMentions | append $cloudResources.cloudServices }}
+{{ end }}
+{{ if $infraPatterns }}
+  {{ $allMentions = $allMentions | append $infraPatterns }}
 {{ end }}
 
 {{/* Deduplicate mentions by @id or name */}}
@@ -169,18 +171,9 @@
 {{ end }}
 
 {{/* Add infrastructure patterns as keywords */}}
-{{ if $infraPatterns }}
-  {{ $patternNames := slice }}
-  {{ range $infraPatterns }}
-    {{ $patternNames = $patternNames | append .name }}
-  {{ end }}
-  {{ $schema = merge $schema (dict "applicationCategory" $patternNames) }}
-{{ end }}
+{{/* Infrastructure patterns now handled in mentions section for semantic accuracy */}}
 
-{{/* Add cloud provider information */}}
-{{ if $cloudProviders }}
-  {{ $schema = merge $schema (dict "targetPlatform" $cloudProviders) }}
-{{ end }}
+{{/* Cloud provider information moved to mentions for semantic accuracy */}}
 
 {{/* Add learning resource schema for tutorials/guides */}}
 {{ if or (in .Section "tutorials") (in .Section "guides") (in .Params.tags "tutorial") }}
@@ -193,7 +186,7 @@
 
 {{/* Add related content (prerequisites, next steps) */}}
 {{ if $relatedContent }}
-  {{ $schema = merge $schema (dict "relatedLink" $relatedContent) }}
+  {{ $schema = merge $schema (dict "citation" $relatedContent) }}
 {{ end }}
 
 {{/* Add citation for documentation authority */}}

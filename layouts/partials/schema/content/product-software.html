@@ -64,7 +64,6 @@
     "softwareRequirements" "Modern web browser or Pulumi CLI"
     "inLanguage" "en-US"
     "isAccessibleForFree" false
-    "availableLanguage" (slice "en-US")
     "audience" (dict
       "@type" "Audience"
       "audienceType" "Developers, DevOps Engineers, Platform Engineers"
@@ -126,10 +125,7 @@
     )) }}
   {{ end }}
   
-  {{/* Add related products */}}
-  {{ if $relatedProducts }}
-    {{ $schema = merge $schema (dict "isRelatedTo" $relatedProducts) }}
-  {{ end }}
+  {{/* Related products are now handled through isPartOf relationship for semantic accuracy */}}
   
   <script type="application/ld+json">
   {{ $schema | jsonify | safeJS }}
