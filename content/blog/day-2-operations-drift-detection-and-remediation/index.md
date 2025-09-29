@@ -196,263 +196,6 @@ Detecting drift is only valuable if the right people know about it. Pulumi's [we
 
 You can route notifications wherever your team actually pays attention. Send alerts directly to Slack channels where your ops team congregates. Push notifications to Microsoft Teams if that's your collaboration platform. Use custom webhooks to integrate with PagerDuty, Datadog, or any other monitoring system. You can even use deployment triggers to automatically run dependent stacks when drift is detected and fixed.
 
-## Programmatic Drift Detection with Pulumi Service Provider
-
-While the Pulumi Console provides a user-friendly interface for configuring drift detection, many teams prefer to manage everything as code. The [Pulumi Service Provider](/registry/packages/pulumiservice) brings infrastructure-as-code principles to drift detection itself, allowing you to define and manage drift schedules programmatically.
-
-### Creating Drift Schedules with Code
-
-Instead of clicking through UI screens, you can define your drift detection schedules in the same code that defines your infrastructure. This approach ensures your drift detection configuration is version-controlled, reviewable, and reproducible:
-
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as pulumiservice from "@pulumi/pulumiservice";
-
-const driftSchedule = new pulumiservice.DriftSchedule("production-drift-detection", {
-    organization: "my-org",
-    project: "core-infrastructure",
-    stack: "production",
-
-    // Run every 4 hours
-    scheduleCron: "0 */4 * * *",
-
-    // Automatically fix any drift found
-    autoRemediate: true,
-});
-
-export const scheduleId = driftSchedule.scheduleId;
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-import pulumi
-import pulumi_pulumiservice as pulumiservice
-
-drift_schedule = pulumiservice.DriftSchedule("production-drift-detection",
-    organization="my-org",
-    project="core-infrastructure",
-    stack="production",
-
-    # Run every 4 hours
-    schedule_cron="0 */4 * * *",
-
-    # Automatically fix any drift found
-    auto_remediate=True
-)
-
-pulumi.export('schedule_id', drift_schedule.schedule_id)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-    "github.com/pulumi/pulumi-pulumiservice/sdk/go/pulumiservice"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        driftSchedule, err := pulumiservice.NewDriftSchedule(ctx, "production-drift-detection", &pulumiservice.DriftScheduleArgs{
-            Organization: pulumi.String("my-org"),
-            Project: pulumi.String("core-infrastructure"),
-            Stack: pulumi.String("production"),
-
-            // Run every 4 hours
-            ScheduleCron: pulumi.String("0 */4 * * *"),
-
-            // Automatically fix any drift found
-            AutoRemediate: pulumi.Bool(true),
-        })
-        if err != nil {
-            return err
-        }
-
-        ctx.Export("scheduleId", driftSchedule.ScheduleId)
-        return nil
-    })
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-using Pulumi;
-using PulumiService = Pulumi.PulumiService;
-
-class Program
-{
-    static Task<int> Main() => Deployment.RunAsync(() => {
-        var driftSchedule = new PulumiService.DriftSchedule("production-drift-detection", new PulumiService.DriftScheduleArgs
-        {
-            Organization = "my-org",
-            Project = "core-infrastructure",
-            Stack = "production",
-
-            // Run every 4 hours
-            ScheduleCron = "0 */4 * * *",
-
-            // Automatically fix any drift found
-            AutoRemediate = true,
-        });
-
-        return new Dictionary<string, object?>
-        {
-            { "scheduleId", driftSchedule.ScheduleId }
-        };
-    });
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-```java
-import com.pulumi.Context;
-import com.pulumi.Pulumi;
-import com.pulumi.pulumiservice.DriftSchedule;
-import com.pulumi.pulumiservice.DriftScheduleArgs;
-
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-
-    private static void stack(Context ctx) {
-        var driftSchedule = new DriftSchedule("production-drift-detection", DriftScheduleArgs.builder()
-            .organization("my-org")
-            .project("core-infrastructure")
-            .stack("production")
-
-            // Run every 4 hours
-            .scheduleCron("0 */4 * * *")
-
-            // Automatically fix any drift found
-            .autoRemediate(true)
-            .build());
-
-        ctx.export("scheduleId", driftSchedule.scheduleId());
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-name: drift-detection
-runtime: yaml
-
-resources:
-  production-drift-detection:
-    type: pulumiservice:index:DriftSchedule
-    properties:
-      organization: my-org
-      project: core-infrastructure
-      stack: production
-
-      # Run every 4 hours
-      scheduleCron: "0 */4 * * *"
-
-      # Automatically fix any drift found
-      autoRemediate: true
-
-outputs:
-  scheduleId: ${production-drift-detection.scheduleId}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-## Integrating with CI/CD Pipelines
-
-While Pulumi Deployments provides excellent built-in scheduling, many teams prefer to integrate drift detection into their existing CI/CD pipelines. This approach gives you more control over the detection process and integrates naturally with your existing workflows.
-
-### GitHub Actions Integration
-
-For teams using GitHub Actions, adding drift detection to your [existing workflows](/docs/iac/packages-and-automation/continuous-delivery/github-actions) is straightforward:
-
-```yaml
-name: Drift Detection
-
-on:
-  schedule:
-    # Run every 4 hours
-    - cron: '0 */4 * * *'
-  workflow_dispatch: # Allow manual triggers
-
-jobs:
-  detect-drift:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Configure Pulumi
-        uses: pulumi/actions@v5
-        with:
-          cloud-url: ${{ secrets.PULUMI_CLOUD_URL }}
-
-      - name: Detect Drift
-        run: |
-          pulumi refresh --stack production --preview-only
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-
-      - name: Notify on Drift
-        if: failure()
-        uses: actions/slack@v1
-        with:
-          webhook: ${{ secrets.SLACK_WEBHOOK }}
-          message: "⚠️ Drift detected in production infrastructure"
-```
-
-This workflow runs every four hours and can also be triggered manually when needed. When drift is detected, it automatically sends a notification to your Slack channel, ensuring your team knows immediately.
-
-### GitLab CI Integration
-
-GitLab users can achieve similar functionality with [GitLab CI](/docs/iac/packages-and-automation/continuous-delivery/gitlab-ci):
-
-```yaml
-drift-detection:
-  stage: monitor
-  image: pulumi/pulumi:latest
-
-  script:
-    - pulumi refresh --stack production --preview-only
-
-  only:
-    - schedules  # Run on schedule only
-
-  variables:
-    PULUMI_ACCESS_TOKEN: $PULUMI_ACCESS_TOKEN
-
-  after_script:
-    - |
-      if [ "$CI_JOB_STATUS" == "failed" ]; then
-        curl -X POST $SLACK_WEBHOOK \
-          -H 'Content-Type: application/json' \
-          -d '{"text":"⚠️ Drift detected in production"}'
-      fi
-```
-
-The GitLab configuration uses scheduled pipelines to run drift detection and sends notifications when drift is found. The `after_script` section ensures notifications are sent even if the drift detection itself fails.
-
 ## Handling Common Drift Scenarios
 
 Every organization faces similar drift scenarios. Understanding how to handle these common cases will prepare you for real-world operations.
@@ -518,23 +261,17 @@ By externalizing configuration values, you make them easier to update without co
 
 ## The Value of Automated Drift Detection
 
-After implementing drift detection for hundreds of stacks, the value becomes undeniable. Organizations consistently report four major areas of improvement.
+After implementing drift detection for hundreds of stacks, patterns emerge that tell a compelling story about its value. The transformation begins subtly but grows profound as teams discover what they've been missing.
 
-### 1. Security Compliance
+The first change most organizations notice is in their security posture. Where once unauthorized changes might lurk undetected for weeks, only surfacing during quarterly audits or worse, during incident investigations, now they're caught within minutes. Security teams who previously dreaded audit season find themselves with continuous compliance data at their fingertips. Every change, whether legitimate or not, creates an audit trail that transforms compliance reporting from a scrambling fire drill into a routine export of already-collected data.
 
-Security teams sleep better knowing that unauthorized changes are detected within minutes, not discovered weeks later during an audit. Compliance becomes automatic rather than a quarterly fire drill. Every infrastructure change leaves an audit trail, making compliance reporting straightforward and comprehensive.
+As teams settle into this new reality, operational improvements become apparent. Incidents that used to take hours to diagnose now resolve in minutes because engineers can immediately check whether drift contributed to the problem. One team reported that their mean time to recovery dropped by 40% simply because they could eliminate drift as a cause within seconds rather than spending hours manually comparing configurations. Change management, once a bureaucratic nightmare of spreadsheets and approval chains, transforms into an automated system where every modification is tracked, timestamped, and traceable to its source.
 
-### 2. Operational Excellence
+Then come the unexpected discoveries. Drift detection becomes a cost optimization tool that nobody anticipated. It uncovers orphaned resources spinning away forgotten in some corner of your cloud account, created during a debugging session six months ago. It catches that instance someone manually upgraded to a larger size during a performance investigation and forgot to downsize. One organization discovered they were spending $15,000 monthly on resources that weren't even supposed to exist, all caught by their drift detection system in its first week of operation.
 
-Incidents caused by configuration drift drop dramatically. When issues do occur, MTTR improves because teams can quickly check whether drift contributed to the problem. Change management transforms from a bureaucratic process to an automated system with complete visibility into what changed, when, and why.
+Perhaps most importantly, drift detection changes how teams work. Engineers stop wasting time on manual infrastructure audits. Debugging accelerates when you have clear reports showing exactly what changed and when. The constant anxiety about whether production matches your code disappears, replaced by confidence that any discrepancies will be caught and reported immediately. Teams report feeling more empowered to move quickly, knowing they have a safety net that will catch configuration drift before it causes problems.
 
-### 3. Cost Optimization
-
-Drift detection regularly uncovers cost savings. Orphaned resources created outside IaC get identified and cleaned up. Oversized instances from manual scaling get right-sized. Resource sprawl from untracked changes gets prevented before it impacts your cloud bill.
-
-### 4. Team Productivity
-
-Engineers stop wasting time on manual infrastructure checks. Debugging becomes faster with clear drift reports showing exactly what changed. Teams build confidence in their infrastructure state, knowing that drift detection has their back.
+The cumulative effect is transformative. Organizations running drift detection report not just fewer incidents and lower costs, but a fundamental shift in how they think about infrastructure management. It becomes proactive rather than reactive, confident rather than anxious, automated rather than manual. What starts as a simple scheduled check evolves into a cornerstone of operational excellence.
 
 ## Getting Started with Drift Detection
 
@@ -559,20 +296,6 @@ Drift detection and remediation represent more than just good hygiene; they're c
 Teams with robust day 2 operations move faster because they have confidence in their infrastructure state. They recover quickly from incidents because they can immediately identify what changed. They maintain security without slowing development by automatically detecting and reverting unauthorized modifications. Most importantly, they scale operations without scaling headcount, automating work that would otherwise require armies of engineers manually checking infrastructure.
 
 The math is compelling. A single undetected security group change could lead to a breach costing millions. One overlooked configuration drift might cause hours of downtime. Yet implementing comprehensive drift detection takes just hours of setup and minutes of ongoing maintenance. The ROI is immediate and substantial.
-
-## Next Steps
-
-Your journey to comprehensive drift detection starts with these resources:
-
-### 📚 Essential Documentation
-
-Dive deep into [Pulumi Deployments Drift Detection](/docs/pulumi-cloud/deployments/drift) for complete configuration options. Master the [Pulumi Refresh Command](/docs/iac/cli/commands/pulumi_refresh) that powers all drift detection. Explore the [Pulumi Service Provider](/registry/packages/pulumiservice) for managing drift detection as code. For advanced scenarios, the [Automation API Guide](/docs/using-pulumi/automation-api) shows how to build custom drift workflows.
-
-### 🎓 Hands-On Learning
-
-The [Drift Detection Tutorial](/tutorials/drift-detection-and-remediation) provides step-by-step guidance for implementing drift detection in your environment.
-
-## Coming Next in the Series
 
 Our IDP journey continues with **"Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls"**. As AI workloads become central to modern applications, we'll explore how to adapt your platform for machine learning workflows. You'll learn about GPU orchestration, model deployment pipelines, and the unique cost management challenges that AI infrastructure presents.
 
