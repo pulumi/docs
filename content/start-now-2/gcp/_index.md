@@ -95,6 +95,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete Google Cloud TypeScript Tutorial →](/docs/iac/get-started/gcp/)
 - [Browse Google Cloud TypeScript Examples →](https://github.com/pulumi/examples#typescript)
 - [Learn Pulumi TypeScript Concepts →](/docs/iac/concepts/languages/javascript/)
@@ -184,6 +186,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete Google Cloud Python Tutorial →](/docs/iac/get-started/gcp/)
 - [Browse Google Cloud Python Examples →](https://github.com/pulumi/examples#python)
 - [Learn Pulumi Python Concepts →](/docs/iac/concepts/languages/python/)
@@ -286,6 +290,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete Google Cloud Go Tutorial →](/docs/iac/get-started/gcp/)
 - [Browse Google Cloud Go Examples →](https://github.com/pulumi/examples#go)
 - [Learn Pulumi Go Concepts →](/docs/iac/concepts/languages/go/)
@@ -390,6 +396,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete Google Cloud C# Tutorial →](/docs/iac/get-started/gcp/)
 - [Browse Google Cloud C# Examples →](https://github.com/pulumi/examples#dotnet)
 - [Learn Pulumi C# Concepts →](/docs/iac/concepts/languages/dotnet/)
@@ -495,6 +503,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete Google Cloud Java Tutorial →](/docs/iac/get-started/gcp/)
 - [Browse Google Cloud Java Examples →](https://github.com/pulumi/examples#java)
 - [Learn Pulumi Java Concepts →](/docs/iac/concepts/languages/java/)
@@ -586,6 +596,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete Google Cloud YAML Tutorial →](/docs/iac/get-started/gcp/)
 - [Browse Google Cloud YAML Examples →](https://github.com/pulumi/examples#yaml)
 - [Learn Pulumi YAML Concepts →](/docs/iac/concepts/languages/yaml/)

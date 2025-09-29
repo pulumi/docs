@@ -204,6 +204,9 @@ You've just deployed your first infrastructure with Pulumi!
 
 ### What's Next?
 
+- **[View your stack in Pulumi Cloud →](https://app.pulumi.com/stacks)**
+  Explore resource details, deployment history, and manage your infrastructure
+
 - **[Complete Kubernetes Tutorial →](/docs/iac/get-started/kubernetes/)**
   Learn how to deploy and manage applications on Kubernetes
 

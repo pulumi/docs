@@ -20,4 +20,7 @@ cloud_providers:
     - name: Kubernetes
       logo: /logos/pkg/kubernetes.svg
       link: /start-now-2/kubernetes/
+    - name: Oracle Cloud
+      logo: /logos/pkg/oci.svg
+      link: /start-now-2/oci/
 ---

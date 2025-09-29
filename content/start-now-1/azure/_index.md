@@ -353,6 +353,9 @@ pulumi up
 
 ## What's Next?
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
+
 - [**Follow the complete Azure tutorial →**](/docs/iac/get-started/azure/)
   Learn how to build and deploy applications on Azure
 

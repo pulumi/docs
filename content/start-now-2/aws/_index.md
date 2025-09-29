@@ -94,6 +94,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete AWS TypeScript Tutorial →](/docs/iac/get-started/aws/)
 - [Browse AWS TypeScript Examples →](https://github.com/pulumi/examples#typescript)
 - [Learn Pulumi TypeScript Concepts →](/docs/iac/concepts/languages/javascript/)
@@ -182,6 +184,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete AWS Python Tutorial →](/docs/iac/get-started/aws/)
 - [Browse AWS Python Examples →](https://github.com/pulumi/examples#python)
 - [Learn Pulumi Python Concepts →](/docs/iac/concepts/languages/python/)
@@ -283,6 +287,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete AWS Go Tutorial →](/docs/iac/get-started/aws/)
 - [Browse AWS Go Examples →](https://github.com/pulumi/examples#go)
 - [Learn Pulumi Go Concepts →](/docs/iac/concepts/languages/go/)
@@ -386,6 +392,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete AWS C# Tutorial →](/docs/iac/get-started/aws/)
 - [Browse AWS C# Examples →](https://github.com/pulumi/examples#dotnet)
 - [Learn Pulumi C# Concepts →](/docs/iac/concepts/languages/dotnet/)
@@ -490,6 +498,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete AWS Java Tutorial →](/docs/iac/get-started/aws/)
 - [Browse AWS Java Examples →](https://github.com/pulumi/examples#java)
 - [Learn Pulumi Java Concepts →](/docs/iac/concepts/languages/java/)
@@ -580,6 +590,8 @@ pulumi up
 
 ### Next Steps
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
 - [Complete AWS YAML Tutorial →](/docs/iac/get-started/aws/)
 - [Browse AWS YAML Examples →](https://github.com/pulumi/examples#yaml)
 - [Learn Pulumi YAML Concepts →](/docs/iac/concepts/languages/yaml/)

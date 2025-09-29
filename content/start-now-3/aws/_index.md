@@ -209,6 +209,9 @@ You've just deployed your first infrastructure with Pulumi!
 
 ### What's Next?
 
+- **[View your stack in Pulumi Cloud →](https://app.pulumi.com/stacks)**
+  Explore resource details, deployment history, and manage your infrastructure
+
 - **[Complete AWS Tutorial →](/docs/iac/get-started/aws/)**
   Learn how to build a static website with S3 and CloudFront
 

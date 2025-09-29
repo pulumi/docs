@@ -208,6 +208,9 @@ You've just deployed your first infrastructure with Pulumi!
 
 ### What's Next?
 
+- **[View your stack in Pulumi Cloud →](https://app.pulumi.com/stacks)**
+  Explore resource details, deployment history, and manage your infrastructure
+
 - **[Complete Google Cloud Tutorial →](/docs/iac/get-started/gcp/)**
   Learn how to build and deploy applications on Google Cloud
 

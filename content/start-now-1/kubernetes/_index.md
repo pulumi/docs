@@ -510,6 +510,9 @@ pulumi up
 
 ## What's Next?
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
+
 - [**Follow the complete Kubernetes tutorial →**](/docs/iac/get-started/kubernetes/)
   Learn how to deploy and manage applications on Kubernetes
 

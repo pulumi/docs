@@ -14,11 +14,8 @@
             <div class="grid grid-cols-2 gap-4">
                 {{ range .Params.cloud_providers.items }}
                 <a href="{{ .link }}" class="block group">
-                    <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-400 transition-colors duration-200 h-full flex flex-col items-center justify-between">
-                        <div class="h-5 flex items-center justify-center mb-3 mx-auto">
-                            <img src="{{ .logo }}" alt="{{ .name }} logo" class="h-5">
-                        </div>
-                        <h3 class="text-lg font-medium text-gray-900 group-hover:text-blue-600 text-center">{{ .name }}</h3>
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-400 transition-colors duration-200 h-full flex items-center justify-center">
+                        <img src="{{ .logo }}" alt="{{ .name }}" class="h-8">
                     </div>
                 </a>
                 {{ end }}

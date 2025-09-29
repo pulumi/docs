@@ -317,6 +317,9 @@ pulumi up
 
 ## What's Next?
 
+- [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
+  Explore resource details, deployment history, and manage your infrastructure
+
 - [**Follow the complete AWS tutorial →**](/docs/iac/get-started/aws/)
   Learn how to build a static website on AWS with S3 and CloudFront
 
