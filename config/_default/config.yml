@@ -86,6 +86,14 @@ params:
     meta_desc: |
         Pulumi's open source infrastructure as code SDK enables you to create, deploy,
         and manage infrastructure on any cloud, using your favorite languages.
+    
+    # Schema.org configuration
+    schema:
+        # Pulumi CLI version - dynamically updated by CI/CD
+        pulumi_version: "3.198.0"
+        
+        # Performance optimization
+        max_content_scan_length: 5000
 
 minify:
   tdewolff:

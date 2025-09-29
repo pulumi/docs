@@ -14,17 +14,9 @@
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "priceValidUntil": "2099-12-31"
+    "availability": "https://schema.org/InStock"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "1250",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "softwareVersion": "{{ .Site.Params.latest_version | default "3.198.0" }}",
+  "softwareVersion": "{{ .Site.Params.schema.pulumi_version | default "3.198.0" }}",
   "downloadUrl": "https://get.pulumi.com/",
   "installUrl": "https://www.pulumi.com/docs/iac/download-install/",
   "releaseNotes": "https://www.pulumi.com/docs/reference/changelog/",

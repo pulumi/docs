@@ -90,8 +90,8 @@
   
   {{/* Combine all mentions and deduplicate */}}
   {{ $allMentions := $mentions }}
-  {{ if $cloudResources.services }}
-    {{ $allMentions = $allMentions | append $cloudResources.services }}
+  {{ if $cloudResources.cloudServices }}
+    {{ $allMentions = $allMentions | append $cloudResources.cloudServices }}
   {{ end }}
   
   {{/* Deduplicate mentions by @id or name */}}

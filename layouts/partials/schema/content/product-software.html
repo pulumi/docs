@@ -76,16 +76,6 @@
     {{ $schema = merge $schema (dict "applicationSubCategory" $applicationSubCategory) }}
   {{ end }}
   
-  {{/* Add aggregate rating for established products */}}
-  {{ if not (in .RelPermalink "/private-previews/") }}
-    {{ $schema = merge $schema (dict "aggregateRating" (dict
-      "@type" "AggregateRating"
-      "ratingValue" "4.7"
-      "ratingCount" "850"
-      "bestRating" "5"
-      "worstRating" "1"
-    )) }}
-  {{ end }}
   
   {{/* Add software version if applicable */}}
   {{ if in .RelPermalink "/infrastructure-as-code/" }}

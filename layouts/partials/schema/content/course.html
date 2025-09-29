@@ -187,8 +187,8 @@
 
   {{/* Combine and deduplicate technology entity mentions */}}
   {{ $allMentions := $techEntities }}
-  {{ if $cloudResources.services }}
-    {{ $allMentions = $allMentions | append $cloudResources.services }}
+  {{ if $cloudResources.cloudServices }}
+    {{ $allMentions = $allMentions | append $cloudResources.cloudServices }}
   {{ end }}
   
   {{/* Deduplicate mentions by @id or name */}}
@@ -245,11 +245,11 @@
   {{ end }}
   
   {{/* Add Pulumi resource types if detected */}}
-  {{ if $cloudResources.resourceTypes }}
+  {{ if $cloudResources.pulumiTypes }}
     {{ $schema = merge $schema (dict "additionalProperty" (dict
       "@type" "PropertyValue"
       "name" "pulumiResourceTypes"
-      "value" $cloudResources.resourceTypes
+      "value" $cloudResources.pulumiTypes
     )) }}
   {{ end }}
 

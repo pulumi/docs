@@ -1,303 +1,119 @@
-{{/* Extract and categorize cloud resource types from content */}}
+{{/* Cloud Resource Type Extractor - Data-driven approach for maintainability */}}
+{{/* Detects cloud services and Pulumi resource types mentioned in content */}}
+
+{{/* Load cloud resources configuration from data file */}}
+{{ $cloudResources := .Site.Data.cloud_resources.resources }}
+
+{{/* Performance optimization: limit content scanning */}}
+{{ $maxLength := .Site.Params.schema.max_content_scan_length | default 5000 }}
+{{ $content := substr .Content 0 $maxLength | lower }}
+{{ $url := .Permalink | lower }}
+{{ $title := .Title | lower }}
+
+{{/* Initialize result arrays */}}
 {{ $resources := slice }}
-{{ $content := lower .Content }}
-{{ $url := .RelPermalink }}
-
-{{/* AWS Resource Types */}}
-{{ if or (in $content "aws:s3") (in $content "s3.bucket") (in $content "s3 bucket") (in $url "/s3/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/s3/"
-    "name" "Amazon S3"
-    "description" "Object Storage Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "Storage"
-    "sameAs" "https://www.wikidata.org/wiki/Q201490"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aws:ec2") (in $content "ec2.instance") (in $content "ec2 instance") (in $url "/ec2/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/ec2/"
-    "name" "Amazon EC2"
-    "description" "Elastic Compute Cloud"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "Compute"
-    "sameAs" "https://www.wikidata.org/wiki/Q507639"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aws:lambda") (in $content "lambda.function") (in $url "/lambda/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/lambda/"
-    "name" "AWS Lambda"
-    "description" "Serverless Computing Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "Serverless"
-    "sameAs" "https://www.wikidata.org/wiki/Q28759395"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aws:rds") (in $content "rds.instance") (in $url "/rds/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/rds/"
-    "name" "Amazon RDS"
-    "description" "Relational Database Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "Database"
-    "sameAs" "https://www.wikidata.org/wiki/Q2833151"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aws:dynamodb") (in $content "dynamodb.table") (in $url "/dynamodb/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/dynamodb/"
-    "name" "Amazon DynamoDB"
-    "description" "NoSQL Database Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "Database"
-    "sameAs" "https://www.wikidata.org/wiki/Q3039881"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aws:eks") (in $content "eks.cluster") (in $url "/eks/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/eks/"
-    "name" "Amazon EKS"
-    "description" "Elastic Kubernetes Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "Container Orchestration"
-    "sameAs" "https://www.wikidata.org/wiki/Q60748224"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aws:ecs") (in $content "ecs.cluster") (in $content "ecs.service") (in $url "/ecs/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/ecs/"
-    "name" "Amazon ECS"
-    "description" "Elastic Container Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "Container Management"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aws:apigateway") (in $content "api gateway") (in $url "/api-gateway/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/apigateway/"
-    "name" "Amazon API Gateway"
-    "description" "API Management Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "API Management"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aws:iam") (in $content "iam.role") (in $content "iam.policy") (in $url "/iam/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/iam/"
-    "name" "AWS IAM"
-    "description" "Identity and Access Management"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "Security"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aws:vpc") (in $content "vpc") (in $content "subnet") (in $url "/vpc/") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.aws.amazon.com/vpc/"
-    "name" "Amazon VPC"
-    "description" "Virtual Private Cloud"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q456157")
-    "applicationCategory" "Networking"
-  ) }}
-{{ end }}
-
-{{/* Azure Resource Types */}}
-{{ if or (in $content "azure:storage") (in $content "storage.account") (in $content "blob storage") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.microsoft.com/azure/storage/"
-    "name" "Azure Storage"
-    "description" "Cloud Storage Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q1063364")
-    "applicationCategory" "Storage"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "azure:compute") (in $content "virtualmachine") (in $content "azure vm") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.microsoft.com/azure/virtual-machines/"
-    "name" "Azure Virtual Machines"
-    "description" "Virtual Machine Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q1063364")
-    "applicationCategory" "Compute"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "azure:web") (in $content "azure functions") (in $content "function app") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.microsoft.com/azure/azure-functions/"
-    "name" "Azure Functions"
-    "description" "Serverless Computing Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q1063364")
-    "applicationCategory" "Serverless"
-    "sameAs" "https://www.wikidata.org/wiki/Q56881017"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "azure:sql") (in $content "sql database") (in $content "azure sql") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.microsoft.com/azure/sql-database/"
-    "name" "Azure SQL Database"
-    "description" "Managed SQL Database Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q1063364")
-    "applicationCategory" "Database"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "azure:cosmosdb") (in $content "cosmos db") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.microsoft.com/azure/cosmos-db/"
-    "name" "Azure Cosmos DB"
-    "description" "Multi-model Database Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q1063364")
-    "applicationCategory" "Database"
-    "sameAs" "https://www.wikidata.org/wiki/Q30315706"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "aks") (in $content "azure kubernetes") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://docs.microsoft.com/azure/aks/"
-    "name" "Azure Kubernetes Service"
-    "description" "Managed Kubernetes Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q1063364")
-    "applicationCategory" "Container Orchestration"
-  ) }}
-{{ end }}
-
-{{/* Google Cloud Resource Types */}}
-{{ if or (in $content "gcp:storage") (in $content "cloud storage") (in $content "gcs bucket") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://cloud.google.com/storage/docs"
-    "name" "Google Cloud Storage"
-    "description" "Object Storage Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q14055576")
-    "applicationCategory" "Storage"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "gcp:compute") (in $content "compute engine") (in $content "gce instance") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://cloud.google.com/compute/docs"
-    "name" "Google Compute Engine"
-    "description" "Virtual Machine Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q14055576")
-    "applicationCategory" "Compute"
-    "sameAs" "https://www.wikidata.org/wiki/Q16926954"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "cloud functions") (in $content "gcp:cloudfunctions") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://cloud.google.com/functions/docs"
-    "name" "Google Cloud Functions"
-    "description" "Serverless Computing Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q14055576")
-    "applicationCategory" "Serverless"
-    "sameAs" "https://www.wikidata.org/wiki/Q56880996"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "cloud sql") (in $content "gcp:sql") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://cloud.google.com/sql/docs"
-    "name" "Google Cloud SQL"
-    "description" "Managed SQL Database Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q14055576")
-    "applicationCategory" "Database"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "gke") (in $content "google kubernetes engine") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://cloud.google.com/kubernetes-engine/docs"
-    "name" "Google Kubernetes Engine"
-    "description" "Managed Kubernetes Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q14055576")
-    "applicationCategory" "Container Orchestration"
-    "sameAs" "https://www.wikidata.org/wiki/Q60748142"
-  ) }}
-{{ end }}
-
-{{ if or (in $content "bigquery") (in $content "gcp:bigquery") }}
-  {{ $resources = $resources | append (dict
-    "@type" "WebAPI"
-    "@id" "https://cloud.google.com/bigquery/docs"
-    "name" "Google BigQuery"
-    "description" "Data Warehouse Service"
-    "provider" (dict "@id" "https://www.wikidata.org/wiki/Q14055576")
-    "applicationCategory" "Analytics"
-    "sameAs" "https://www.wikidata.org/wiki/Q4835850"
-  ) }}
-{{ end }}
-
-{{/* Parse Pulumi resource types from content */}}
 {{ $pulumiResources := slice }}
-{{ if in $content "aws:s3/bucket:bucket" }}
-  {{ $pulumiResources = $pulumiResources | append "aws:s3/bucket:Bucket" }}
-{{ end }}
-{{ if in $content "aws:ec2/instance:instance" }}
-  {{ $pulumiResources = $pulumiResources | append "aws:ec2/instance:Instance" }}
-{{ end }}
-{{ if in $content "aws:lambda/function:function" }}
-  {{ $pulumiResources = $pulumiResources | append "aws:lambda/function:Function" }}
-{{ end }}
-{{ if in $content "aws:rds/instance:instance" }}
-  {{ $pulumiResources = $pulumiResources | append "aws:rds/instance:Instance" }}
-{{ end }}
-{{ if in $content "azure:storage/account:account" }}
-  {{ $pulumiResources = $pulumiResources | append "azure:storage/account:Account" }}
-{{ end }}
-{{ if in $content "gcp:storage/bucket:bucket" }}
-  {{ $pulumiResources = $pulumiResources | append "gcp:storage/bucket:Bucket" }}
+
+{{/* Loop through all defined cloud resources */}}
+{{ range $cloudResources }}
+  {{ $matched := false }}
+  
+  {{/* Check content patterns */}}
+  {{ range .patterns }}
+    {{ if in $content . }}
+      {{ $matched = true }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Check URL pattern if provided and not already matched */}}
+  {{ if and (not $matched) .url_pattern (ne .url_pattern "") }}
+    {{ if in $url .url_pattern }}
+      {{ $matched = true }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Check title patterns for additional coverage */}}
+  {{ if and (not $matched) .patterns }}
+    {{ range .patterns }}
+      {{ if in $title . }}
+        {{ $matched = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Add resource to results if matched */}}
+  {{ if $matched }}
+    {{ $resources = $resources | append (dict
+      "@type" .schema.type
+      "@id" .schema.id
+      "name" .schema.name
+      "description" .schema.description
+      "provider" (dict "@id" .schema.provider_id)
+      "applicationCategory" .schema.category
+      "sameAs" .schema.same_as
+    ) }}
+  {{ end }}
 {{ end }}
 
-{{/* Deduplicate resources by name */}}
-{{ $resourceNames := slice }}
+{{/* Detect specific Pulumi resource types (format: provider:service/resource:resourceType) */}}
+{{ $pulumiPatterns := slice 
+  "aws:s3/bucket:bucket"
+  "aws:ec2/instance:instance"
+  "aws:lambda/function:function"
+  "aws:rds/instance:instance"
+  "aws:dynamodb/table:table"
+  "aws:eks/cluster:cluster"
+  "aws:ecs/cluster:cluster"
+  "aws:apigateway/restapi:restApi"
+  "aws:iam/role:role"
+  "aws:iam/policy:policy"
+  "azure:storage/account:storageAccount"
+  "azure:compute/virtualmachine:virtualMachine"
+  "azure:web/appservice:appService"
+  "azure:sql/server:sqlServer"
+  "azure:cosmosdb/account:cosmosAccount"
+  "azure:containerservice/managedcluster:managedCluster"
+  "gcp:storage/bucket:bucket"
+  "gcp:compute/instance:instance"
+  "gcp:cloudfunctions/function:function"
+  "gcp:sql/databaseinstance:databaseInstance"
+  "gcp:bigquery/dataset:dataset"
+  "gcp:container/cluster:cluster"
+  "kubernetes:apps/v1:deployment"
+  "kubernetes:v1:service"
+  "kubernetes:v1:configmap"
+  "kubernetes:v1:secret"
+}}
+
+{{/* Check for Pulumi resource type patterns */}}
+{{ range $pulumiPatterns }}
+  {{ if in $content . }}
+    {{ $pulumiResources = $pulumiResources | append . }}
+  {{ end }}
+{{ end }}
+
+{{/* Deduplicate cloud service resources by @id */}}
 {{ $uniqueResources := slice }}
+{{ $seenIds := slice }}
 {{ range $resources }}
-  {{ if not (in $resourceNames .name) }}
+  {{ if not (in $seenIds .["@id"]) }}
     {{ $uniqueResources = $uniqueResources | append . }}
-    {{ $resourceNames = $resourceNames | append .name }}
+    {{ $seenIds = $seenIds | append .["@id"] }}
   {{ end }}
 {{ end }}
 
-{{/* Deduplicate Pulumi resource types */}}
+{{/* Deduplicate Pulumi resources by name */}}
 {{ $uniquePulumiResources := slice }}
+{{ $seenPulumi := slice }}
 {{ range $pulumiResources }}
-  {{ if not (in $uniquePulumiResources .) }}
+  {{ if not (in $seenPulumi .) }}
     {{ $uniquePulumiResources = $uniquePulumiResources | append . }}
+    {{ $seenPulumi = $seenPulumi | append . }}
   {{ end }}
 {{ end }}
 
-{{ $result := dict "services" $uniqueResources "resourceTypes" $uniquePulumiResources }}
-{{ return $result }}
+{{/* Return combined results */}}
+{{ return (dict 
+  "cloudServices" $uniqueResources 
+  "pulumiTypes" $uniquePulumiResources
+) }}

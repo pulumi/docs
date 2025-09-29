@@ -1,7 +1,9 @@
 {{/* Detect cloud provider from URL path and frontmatter */}}
+{{/* Performance optimization: limit content scanning to improve build times */}}
 {{ $provider := dict }}
 {{ $url := .RelPermalink }}
-{{ $content := lower .Content }}
+{{ $maxLength := .Site.Params.schema.max_content_scan_length | default 5000 }}
+{{ $content := substr .Content 0 $maxLength | lower }}
 
 {{/* Check frontmatter first */}}
 {{ with .Params.cloud }}
@@ -101,7 +103,18 @@
   {{ end }}
 {{ end }}
 
-{{/* Check content for multi-cloud scenarios */}}
+{{/* Multi-cloud Detection Strategy */}}
+{{/* 
+  Multi-cloud scenario detection:
+  1. If a primary provider is already identified (from URL/frontmatter)
+  2. Scan content for references to OTHER cloud providers
+  3. Use specific patterns to avoid false positives:
+     - " aws " (with spaces to avoid partial matches)
+     - "@pulumi/aws" (package references)
+     - "aws:" (Pulumi resource type prefixes)
+  4. Only add providers that are different from the primary provider
+  5. This helps identify content that covers multiple cloud platforms
+*/}}
 {{ $additionalProviders := slice }}
 {{ if $provider }}
   {{ if and $provider.name (not (in $provider.name "Amazon")) }}

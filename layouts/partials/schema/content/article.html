@@ -108,11 +108,20 @@
 
 {{/* Add technology entity mentions with Wikipedia/Wikidata links */}}
 {{ $allMentions := $mentions }}
-{{ if $cloudResources.services }}
-  {{ $allMentions = $allMentions | append $cloudResources.services }}
+{{ if $cloudResources.cloudServices }}
+  {{ $allMentions = $allMentions | append $cloudResources.cloudServices }}
 {{ end }}
 
 {{/* Deduplicate mentions by @id or name */}}
+{{/* 
+  Deduplication Algorithm:
+  1. Combine mentions from multiple sources (technology entities, cloud services, infrastructure patterns)
+  2. Use @id as primary identifier (preferred for schema.org entities with Wikidata links)
+  3. Fall back to name field if @id is not available (for simpler entities)
+  4. Track seen identifiers in $mentionIds slice to prevent duplicates
+  5. Only append to $uniqueMentions if identifier hasn't been seen before
+  This ensures clean schema.org output without duplicate entities in the mentions array
+*/}}
 {{ if $allMentions }}
   {{ $mentionIds := slice }}
   {{ $uniqueMentions := slice }}
@@ -180,11 +189,11 @@
 {{ end }}
 
 {{/* Add Pulumi resource types if detected */}}
-{{ if $cloudResources.resourceTypes }}
+{{ if $cloudResources.pulumiTypes }}
   {{ $schema = merge $schema (dict "additionalProperty" (dict
     "@type" "PropertyValue"
     "name" "pulumiResourceTypes"
-    "value" $cloudResources.resourceTypes
+    "value" $cloudResources.pulumiTypes
   )) }}
 {{ end }}
 

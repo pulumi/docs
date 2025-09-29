@@ -1,6 +1,8 @@
 {{/* Detect infrastructure patterns and architectural styles from content */}}
+{{/* Performance optimization: limit content scanning to improve build times */}}
 {{ $patterns := slice }}
-{{ $content := lower .Content }}
+{{ $maxLength := .Site.Params.schema.max_content_scan_length | default 5000 }}
+{{ $content := substr .Content 0 $maxLength | lower }}
 {{ $title := lower .Title }}
 {{ $url := .RelPermalink }}
 

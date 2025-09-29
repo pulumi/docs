@@ -1,0 +1,355 @@
+# Cloud Resources Configuration for Schema.org Detection
+# This file defines cloud services and resources for automatic detection in content
+# Each resource includes patterns for content/URL matching and schema.org metadata
+
+resources:
+  # AWS Resources
+  - id: aws_s3
+    patterns:
+      - "aws:s3"
+      - "s3.bucket"
+      - "s3 bucket"
+    url_pattern: "/s3/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/s3/"
+      name: "Amazon S3"
+      description: "Object Storage Service"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "Storage"
+      same_as: "https://www.wikidata.org/wiki/Q201490"
+  
+  - id: aws_ec2
+    patterns:
+      - "aws:ec2"
+      - "ec2.instance"
+      - "ec2 instance"
+    url_pattern: "/ec2/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/ec2/"
+      name: "Amazon EC2"
+      description: "Elastic Compute Cloud"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "Compute"
+      same_as: "https://www.wikidata.org/wiki/Q507639"
+  
+  - id: aws_lambda
+    patterns:
+      - "aws:lambda"
+      - "lambda.function"
+    url_pattern: "/lambda/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/lambda/"
+      name: "AWS Lambda"
+      description: "Serverless Computing Service"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "Serverless"
+      same_as: "https://www.wikidata.org/wiki/Q28759395"
+  
+  - id: aws_rds
+    patterns:
+      - "aws:rds"
+      - "rds.instance"
+    url_pattern: "/rds/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/rds/"
+      name: "Amazon RDS"
+      description: "Relational Database Service"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "Database"
+      same_as: "https://www.wikidata.org/wiki/Q2833151"
+  
+  - id: aws_dynamodb
+    patterns:
+      - "aws:dynamodb"
+      - "dynamodb.table"
+    url_pattern: "/dynamodb/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/dynamodb/"
+      name: "Amazon DynamoDB"
+      description: "NoSQL Database Service"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "Database"
+      same_as: "https://www.wikidata.org/wiki/Q3630640"
+  
+  - id: aws_eks
+    patterns:
+      - "aws:eks"
+      - "eks.cluster"
+    url_pattern: "/eks/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/eks/"
+      name: "Amazon EKS"
+      description: "Managed Kubernetes Service"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "Container"
+      same_as: "https://www.wikidata.org/wiki/Q56309299"
+  
+  - id: aws_ecs
+    patterns:
+      - "aws:ecs"
+      - "ecs.cluster"
+      - "ecs.service"
+    url_pattern: "/ecs/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/ecs/"
+      name: "Amazon ECS"
+      description: "Container Orchestration Service"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "Container"
+      same_as: "https://www.wikidata.org/wiki/Q21166058"
+  
+  - id: aws_api_gateway
+    patterns:
+      - "aws:apigateway"
+      - "api gateway"
+    url_pattern: "/api-gateway/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/apigateway/"
+      name: "Amazon API Gateway"
+      description: "API Management Service"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "API"
+      same_as: "https://www.wikidata.org/wiki/Q21166062"
+  
+  - id: aws_iam
+    patterns:
+      - "aws:iam"
+      - "iam.role"
+      - "iam.policy"
+    url_pattern: "/iam/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/iam/"
+      name: "AWS IAM"
+      description: "Identity and Access Management"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "Security"
+      same_as: "https://www.wikidata.org/wiki/Q4654926"
+  
+  - id: aws_vpc
+    patterns:
+      - "aws:vpc"
+      - "vpc"
+      - "subnet"
+    url_pattern: "/vpc/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/vpc/"
+      name: "Amazon VPC"
+      description: "Virtual Private Cloud"
+      provider_id: "https://www.wikidata.org/wiki/Q456157"
+      category: "Networking"
+      same_as: "https://www.wikidata.org/wiki/Q7932203"
+  
+  # Azure Resources
+  - id: azure_storage
+    patterns:
+      - "azure:storage"
+      - "storage.account"
+      - "blob storage"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/storage/"
+      name: "Azure Storage"
+      description: "Cloud Storage Service"
+      provider_id: "https://www.wikidata.org/wiki/Q1063364"
+      category: "Storage"
+      same_as: "https://www.wikidata.org/wiki/Q28403817"
+  
+  - id: azure_compute
+    patterns:
+      - "azure:compute"
+      - "virtualmachine"
+      - "azure vm"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/virtual-machines/"
+      name: "Azure Virtual Machines"
+      description: "Cloud Compute Service"
+      provider_id: "https://www.wikidata.org/wiki/Q1063364"
+      category: "Compute"
+      same_as: "https://www.wikidata.org/wiki/Q28403835"
+  
+  - id: azure_functions
+    patterns:
+      - "azure:web"
+      - "azure functions"
+      - "function app"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/azure-functions/"
+      name: "Azure Functions"
+      description: "Serverless Computing Service"
+      provider_id: "https://www.wikidata.org/wiki/Q1063364"
+      category: "Serverless"
+      same_as: "https://www.wikidata.org/wiki/Q28403841"
+  
+  - id: azure_sql
+    patterns:
+      - "azure:sql"
+      - "sql database"
+      - "azure sql"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/sql-database/"
+      name: "Azure SQL Database"
+      description: "Managed Relational Database"
+      provider_id: "https://www.wikidata.org/wiki/Q1063364"
+      category: "Database"
+      same_as: "https://www.wikidata.org/wiki/Q28403850"
+  
+  - id: azure_cosmos
+    patterns:
+      - "azure:cosmosdb"
+      - "cosmos db"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/cosmos-db/"
+      name: "Azure Cosmos DB"
+      description: "NoSQL Database Service"
+      provider_id: "https://www.wikidata.org/wiki/Q1063364"
+      category: "Database"
+      same_as: "https://www.wikidata.org/wiki/Q28403854"
+  
+  - id: azure_aks
+    patterns:
+      - "aks"
+      - "azure kubernetes"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/aks/"
+      name: "Azure Kubernetes Service"
+      description: "Managed Kubernetes Service"
+      provider_id: "https://www.wikidata.org/wiki/Q1063364"
+      category: "Container"
+      same_as: "https://www.wikidata.org/wiki/Q47513312"
+  
+  # Google Cloud Resources
+  - id: gcp_storage
+    patterns:
+      - "gcp:storage"
+      - "cloud storage"
+      - "gcs bucket"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://cloud.google.com/storage/docs"
+      name: "Google Cloud Storage"
+      description: "Object Storage Service"
+      provider_id: "https://www.wikidata.org/wiki/Q14055576"
+      category: "Storage"
+      same_as: "https://www.wikidata.org/wiki/Q28524083"
+  
+  - id: gcp_compute
+    patterns:
+      - "gcp:compute"
+      - "compute engine"
+      - "gce instance"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://cloud.google.com/compute/docs"
+      name: "Google Compute Engine"
+      description: "Virtual Machine Service"
+      provider_id: "https://www.wikidata.org/wiki/Q14055576"
+      category: "Compute"
+      same_as: "https://www.wikidata.org/wiki/Q28524086"
+  
+  - id: gcp_functions
+    patterns:
+      - "cloud functions"
+      - "gcp:cloudfunctions"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://cloud.google.com/functions/docs"
+      name: "Google Cloud Functions"
+      description: "Serverless Computing Service"
+      provider_id: "https://www.wikidata.org/wiki/Q14055576"
+      category: "Serverless"
+      same_as: "https://www.wikidata.org/wiki/Q28524092"
+  
+  - id: gcp_sql
+    patterns:
+      - "cloud sql"
+      - "gcp:sql"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://cloud.google.com/sql/docs"
+      name: "Google Cloud SQL"
+      description: "Managed Relational Database"
+      provider_id: "https://www.wikidata.org/wiki/Q14055576"
+      category: "Database"
+      same_as: "https://www.wikidata.org/wiki/Q28524095"
+  
+  - id: gcp_bigquery
+    patterns:
+      - "bigquery"
+      - "gcp:bigquery"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://cloud.google.com/bigquery/docs"
+      name: "Google BigQuery"
+      description: "Data Warehouse Service"
+      provider_id: "https://www.wikidata.org/wiki/Q14055576"
+      category: "Analytics"
+      same_as: "https://www.wikidata.org/wiki/Q4903817"
+  
+  - id: gcp_gke
+    patterns:
+      - "gke"
+      - "google kubernetes engine"
+    url_pattern: ""
+    schema:
+      type: "WebAPI"
+      id: "https://cloud.google.com/kubernetes-engine/docs"
+      name: "Google Kubernetes Engine"
+      description: "Managed Kubernetes Service"
+      provider_id: "https://www.wikidata.org/wiki/Q14055576"
+      category: "Container"
+      same_as: "https://www.wikidata.org/wiki/Q28524102"
+  
+  # Other Cloud Providers
+  - id: kubernetes
+    patterns:
+      - "kubernetes"
+      - "k8s"
+    url_pattern: "/kubernetes/"
+    schema:
+      type: "SoftwareApplication"
+      id: "https://kubernetes.io/"
+      name: "Kubernetes"
+      description: "Container Orchestration Platform"
+      provider_id: "https://www.wikidata.org/wiki/Q1063364"
+      category: "Container"
+      same_as: "https://www.wikidata.org/wiki/Q22661583"
+  
+  - id: digitalocean
+    patterns:
+      - "digitalocean"
+      - "do:"
+    url_pattern: "/digitalocean/"
+    schema:
+      type: "Organization"
+      id: "https://www.digitalocean.com/"
+      name: "DigitalOcean"
+      description: "Cloud Infrastructure Provider"
+      provider_id: "https://www.wikidata.org/wiki/Q7728797"
+      category: "Cloud"
+      same_as: "https://www.wikidata.org/wiki/Q7728797"
