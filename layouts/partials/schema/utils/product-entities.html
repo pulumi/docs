@@ -1,5 +1,9 @@
 {{/* Generate product entities with comprehensive relationships for knowledge graphs */}}
 
+{{/* Get aggregated content using the content aggregator */}}
+{{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+{{ $effectiveContent := $aggregatedContent.content }}
+
 {{/* Define all Pulumi products with their relationships */}}
 {{ $pulumiCLI := dict
   "@type" "SoftwareApplication"
@@ -31,43 +35,19 @@
     "@id" "https://www.pulumi.com/product/#pulumi-platform"
     "name" "Pulumi Platform"
   )
-  "hasPart" (slice
-    (dict "@id" "https://www.pulumi.com/product/pulumi-deployments/#software")
-    (dict "@id" "https://www.pulumi.com/product/pulumi-insights/#software")
-    (dict "@id" "https://www.pulumi.com/product/secrets-management/#software")
-  )
-}}
-
-{{ $pulumiDeployments := dict
-  "@type" "SoftwareApplication"
-  "@id" "https://www.pulumi.com/product/pulumi-deployments/#software"
-  "name" "Pulumi Deployments"
-  "applicationCategory" "Continuous Deployment"
-  "url" "https://www.pulumi.com/product/pulumi-deployments/"
-  "isPartOf" (dict "@id" "https://www.pulumi.com/product/pulumi-cloud/#software")
-  "requires" (dict "@id" "https://www.pulumi.com/#pulumi-cli")
 }}
 
 {{ $pulumiESC := dict
   "@type" "SoftwareApplication"
-  "@id" "https://www.pulumi.com/product/secrets-management/#software"
+  "@id" "https://www.pulumi.com/product/esc/#software"
   "name" "Pulumi ESC"
+  "alternateName" "Pulumi Environments, Secrets, and Configuration"
   "applicationCategory" "Secrets Management"
-  "url" "https://www.pulumi.com/product/secrets-management/"
-  "isPartOf" (dict "@id" "https://www.pulumi.com/product/pulumi-cloud/#software")
-  "interactsWith" (dict "@id" "https://www.pulumi.com/#pulumi-cli")
-}}
-
-{{ $pulumiNeo := dict
-  "@type" "SoftwareApplication"
-  "@id" "https://www.pulumi.com/product/neo/#software"
-  "name" "Pulumi Neo"
-  "applicationCategory" "AI Infrastructure Assistant"
-  "url" "https://www.pulumi.com/product/neo/"
-  "isPartOf" (dict "@id" "https://www.pulumi.com/product/#pulumi-platform")
-  "uses" (slice
-    (dict "@type" "Technology" "name" "Large Language Models")
-    (dict "@type" "Technology" "name" "Natural Language Processing")
+  "url" "https://www.pulumi.com/product/esc/"
+  "isPartOf" (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "name" "Pulumi Platform"
   )
 }}
 
@@ -75,74 +55,73 @@
   "@type" "SoftwareApplication"
   "@id" "https://www.pulumi.com/product/pulumi-insights/#software"
   "name" "Pulumi Insights"
-  "applicationCategory" "Infrastructure Intelligence"
+  "applicationCategory" "Cloud Intelligence Platform"
   "url" "https://www.pulumi.com/product/pulumi-insights/"
-  "isPartOf" (dict "@id" "https://www.pulumi.com/product/pulumi-cloud/#software")
+  "isPartOf" (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "name" "Pulumi Platform"
+  )
 }}
 
-{{/* Detect which product is being referenced based on page context */}}
-{{ $product := "" }}
+{{/* Determine which product is being discussed */}}
+{{ $mainProduct := false }}
 {{ $relatedProducts := slice }}
+{{ $url := .Permalink }}
 
-{{/* Check URL path */}}
-{{ if in .RelPermalink "/product/infrastructure-as-code" }}
-  {{ $product = $pulumiCLI }}
-  {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiDeployments }}
-{{ else if in .RelPermalink "/product/pulumi-cloud" }}
-  {{ $product = $pulumiCloud }}
-  {{ $relatedProducts = slice $pulumiCLI $pulumiDeployments $pulumiInsights $pulumiESC }}
-{{ else if in .RelPermalink "/product/pulumi-deployments" }}
-  {{ $product = $pulumiDeployments }}
-  {{ $relatedProducts = slice $pulumiCloud $pulumiCLI }}
-{{ else if in .RelPermalink "/product/secrets-management" }}
-  {{ $product = $pulumiESC }}
-  {{ $relatedProducts = slice $pulumiCloud $pulumiCLI }}
-{{ else if in .RelPermalink "/product/neo" }}
-  {{ $product = $pulumiNeo }}
-  {{ $relatedProducts = slice $pulumiCLI $pulumiCloud }}
-{{ else if in .RelPermalink "/product/pulumi-insights" }}
-  {{ $product = $pulumiInsights }}
-  {{ $relatedProducts = slice $pulumiCloud $pulumiCLI }}
-{{ end }}
-
-{{/* Check content for product mentions */}}
-{{ if and (not $product) .Content }}
-  {{ $content := lower .Content }}
-  
-  {{ if in $content "pulumi deployments" }}
-    {{ $relatedProducts = $relatedProducts | append $pulumiDeployments }}
-  {{ end }}
-  
-  {{ if or (in $content "pulumi esc") (in $content "secrets management") }}
-    {{ $relatedProducts = $relatedProducts | append $pulumiESC }}
-  {{ end }}
-  
-  {{ if or (in $content "pulumi cloud") (in $content "pulumi service") }}
-    {{ $relatedProducts = $relatedProducts | append $pulumiCloud }}
-  {{ end }}
-  
-  {{ if or (in $content "pulumi neo") (in $content "ai assistant") }}
-    {{ $relatedProducts = $relatedProducts | append $pulumiNeo }}
-  {{ end }}
-  
-  {{ if or (in $content "pulumi insights") (in $content "infrastructure intelligence") }}
-    {{ $relatedProducts = $relatedProducts | append $pulumiInsights }}
-  {{ end }}
-  
-  {{ if or (in $content "pulumi cli") (in $content "infrastructure as code") }}
-    {{ if not $product }}
-      {{ $relatedProducts = $relatedProducts | append $pulumiCLI }}
-    {{ end }}
+{{/* Check URL patterns for product detection */}}
+{{ if in $url "/docs/iac/" }}
+  {{ $mainProduct = $pulumiCLI }}
+  {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+{{ else if in $url "/docs/esc/" }}
+  {{ $mainProduct = $pulumiESC }}
+  {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
+{{ else if in $url "/docs/insights/" }}
+  {{ $mainProduct = $pulumiInsights }}
+  {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiESC }}
+{{ else if in $url "/docs/pulumi-cloud/" }}
+  {{ $mainProduct = $pulumiCloud }}
+  {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
+{{ else if in $url "/product/" }}
+  {{/* For product pages, determine based on URL */}}
+  {{ if in $url "/infrastructure-as-code/" }}
+    {{ $mainProduct = $pulumiCLI }}
+    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+  {{ else if in $url "/pulumi-cloud/" }}
+    {{ $mainProduct = $pulumiCloud }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
+  {{ else if in $url "/esc/" }}
+    {{ $mainProduct = $pulumiESC }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
+  {{ else if in $url "/insights/" }}
+    {{ $mainProduct = $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiESC }}
+  {{ else }}
+    {{/* Default to CLI for general product pages */}}
+    {{ $mainProduct = $pulumiCLI }}
+    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
   {{ end }}
 {{ end }}
 
-{{/* Return the main product and related products */}}
-{{ $result := dict }}
-{{ if $product }}
-  {{ $result = merge $result (dict "mainProduct" $product) }}
-{{ end }}
-{{ if $relatedProducts }}
-  {{ $result = merge $result (dict "relatedProducts" $relatedProducts) }}
+{{/* If no product matched by URL, check content using aggregated content */}}
+{{ if and (not $mainProduct) $effectiveContent }}
+  {{ $content := lower $effectiveContent }}
+  {{ $title := lower .Title }}
+  
+  {{ if or (in $content "pulumi cloud") (in $title "pulumi cloud") }}
+    {{ $mainProduct = $pulumiCloud }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
+  {{ else if or (in $content "pulumi esc") (in $content "environments secrets configuration") (in $title "esc") }}
+    {{ $mainProduct = $pulumiESC }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
+  {{ else if or (in $content "pulumi insights") (in $title "insights") }}
+    {{ $mainProduct = $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiESC }}
+  {{ else if or (in $content "pulumi cli") (in $content "pulumi command") (in $title "cli") }}
+    {{ $mainProduct = $pulumiCLI }}
+    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+  {{ end }}
 {{ end }}
 
-{{ return $result }}
+{{/* Return structured result with mainProduct and relatedProducts */}}
+{{ return (dict "mainProduct" $mainProduct "relatedProducts" $relatedProducts) }}

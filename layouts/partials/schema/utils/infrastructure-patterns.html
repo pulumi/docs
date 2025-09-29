@@ -1,8 +1,13 @@
 {{/* Detect infrastructure patterns and architectural styles from content */}}
+
+{{/* Get aggregated content using the content aggregator */}}
+{{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+{{ $effectiveContent := $aggregatedContent.content }}
+
 {{/* Performance optimization: limit content scanning to improve build times */}}
 {{ $patterns := slice }}
 {{ $maxLength := .Site.Params.schema.max_content_scan_length | default 5000 }}
-{{ $content := substr .Content 0 $maxLength | lower }}
+{{ $content := substr $effectiveContent 0 $maxLength | lower }}
 {{ $title := lower .Title }}
 {{ $url := .RelPermalink }}
 
@@ -23,185 +28,95 @@
     "@type" "DefinedTerm"
     "@id" "https://en.wikipedia.org/wiki/OS-level_virtualization"
     "name" "Containerization"
-    "description" "Operating system virtualization method for deploying and running applications"
-    "sameAs" "https://www.wikidata.org/wiki/Q1051282"
+    "description" "Operating-system-level virtualization for deploying and running applications"
+    "sameAs" "https://www.wikidata.org/wiki/Q1143001"
   ) }}
 {{ end }}
 
 {{/* Microservices */}}
-{{ if or (in $content "microservice") (in $content "micro-service") }}
+{{ if or (in $content "microservice") (in $content "micro-service") (in $content "service mesh") (in $title "microservice") }}
   {{ $patterns = $patterns | append (dict
     "@type" "DefinedTerm"
     "@id" "https://en.wikipedia.org/wiki/Microservices"
     "name" "Microservices Architecture"
-    "description" "Architectural style that structures an application as a collection of services"
+    "description" "Architectural style that structures applications as a collection of loosely coupled services"
     "sameAs" "https://www.wikidata.org/wiki/Q18344624"
   ) }}
 {{ end }}
 
 {{/* Infrastructure as Code */}}
-{{ if or (in $content "infrastructure as code") (in $content " iac ") (in $content "gitops") (in $title "iac") (in $url "/iac/") }}
+{{ if or (in $content "infrastructure as code") (in $content "infrastructure-as-code") (in $content " iac ") (in $content "pulumi") (in $content "terraform") (in $title "iac") (in $title "infrastructure as code") }}
   {{ $patterns = $patterns | append (dict
     "@type" "DefinedTerm"
     "@id" "https://en.wikipedia.org/wiki/Infrastructure_as_code"
     "name" "Infrastructure as Code"
     "alternateName" "IaC"
-    "description" "Managing and provisioning infrastructure through code instead of manual processes"
-    "sameAs" "https://www.wikidata.org/wiki/Q6036788"
+    "description" "Managing and provisioning computing infrastructure through machine-readable definition files"
+    "sameAs" "https://www.wikidata.org/wiki/Q6036587"
   ) }}
 {{ end }}
 
-{{/* Event-Driven Architecture */}}
-{{ if or (in $content "event-driven") (in $content "event driven") (in $content "message queue") (in $content "pub/sub") (in $content "pubsub") }}
-  {{ $patterns = $patterns | append (dict
-    "@type" "DefinedTerm"
-    "@id" "https://en.wikipedia.org/wiki/Event-driven_architecture"
-    "name" "Event-Driven Architecture"
-    "description" "Software architecture pattern promoting production and consumption of events"
-    "sameAs" "https://www.wikidata.org/wiki/Q1384890"
-  ) }}
-{{ end }}
-
-{{/* CI/CD Patterns */}}
-{{ if or (in $content "ci/cd") (in $content "continuous integration") (in $content "continuous deployment") (in $content "continuous delivery") }}
+{{/* CI/CD */}}
+{{ if or (in $content "continuous integration") (in $content "continuous deployment") (in $content "continuous delivery") (in $content " ci/cd") (in $content "cicd") (in $content "github actions") (in $content "jenkins") (in $content "gitlab ci") (in $title "ci/cd") (in $title "cicd") }}
   {{ $patterns = $patterns | append (dict
     "@type" "DefinedTerm"
     "@id" "https://en.wikipedia.org/wiki/CI/CD"
     "name" "CI/CD"
-    "description" "Combined practices of continuous integration and continuous delivery/deployment"
-    "sameAs" "https://www.wikidata.org/wiki/Q80775479"
+    "description" "Continuous Integration and Continuous Delivery/Deployment practices"
+    "sameAs" "https://www.wikidata.org/wiki/Q7562215"
   ) }}
 {{ end }}
 
-{{/* DevOps */}}
-{{ if or (in $content "devops") (in $content "dev ops") }}
+{{/* Event-Driven Architecture */}}
+{{ if or (in $content "event-driven") (in $content "event driven") (in $content "message queue") (in $content "event bus") (in $content "pub/sub") (in $content "publish-subscribe") (in $title "event-driven") }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://en.wikipedia.org/wiki/Event-driven_architecture"
+    "name" "Event-Driven Architecture"
+    "description" "Software architecture pattern promoting the production, detection, and reaction to events"
+    "sameAs" "https://www.wikidata.org/wiki/Q1384209"
+  ) }}
+{{ end }}
+
+{{/* API Gateway Pattern - More specific to avoid false positives */}}
+{{ if or (in $content "api gateway pattern") (in $content "implements api gateway") (in $content "api gateway as a pattern") (in $content "api management") (and (in $content "api gateway") (or (in $content "pattern") (in $content "microservice") (in $content "architecture"))) }}
+  {{ $patterns = $patterns | append (dict
+    "@type" "DefinedTerm"
+    "@id" "https://microservices.io/patterns/apigateway.html"
+    "name" "API Gateway Pattern"
+    "description" "Single entry point for all clients in microservices architecture"
+  ) }}
+{{ end }}
+
+{{/* DevOps Practices */}}
+{{ if or (in $content "devops") (in $content "dev ops") (in $content "devsecops") (in $title "devops") }}
   {{ $patterns = $patterns | append (dict
     "@type" "DefinedTerm"
     "@id" "https://en.wikipedia.org/wiki/DevOps"
     "name" "DevOps"
     "description" "Set of practices combining software development and IT operations"
-    "sameAs" "https://www.wikidata.org/wiki/Q11271660"
+    "sameAs" "https://www.wikidata.org/wiki/Q548486"
   ) }}
 {{ end }}
 
-{{/* Cloud Native */}}
-{{ if or (in $content "cloud native") (in $content "cloud-native") }}
+{{/* GitOps */}}
+{{ if or (in $content "gitops") (in $content "git ops") (in $content "git-ops") (in $title "gitops") }}
   {{ $patterns = $patterns | append (dict
     "@type" "DefinedTerm"
-    "@id" "https://en.wikipedia.org/wiki/Cloud_native_computing"
-    "name" "Cloud Native"
-    "description" "Approach to building and running applications that exploits advantages of cloud computing"
-    "sameAs" "https://www.wikidata.org/wiki/Q55641291"
-  ) }}
-{{ end }}
-
-{{/* Multi-Cloud */}}
-{{ if or (in $content "multi-cloud") (in $content "multicloud") (in $content "hybrid cloud") }}
-  {{ $patterns = $patterns | append (dict
-    "@type" "DefinedTerm"
-    "name" "Multi-Cloud Strategy"
-    "description" "Using multiple cloud computing services from different providers"
-  ) }}
-{{ end }}
-
-{{/* Static Sites */}}
-{{ if or (in $content "static site") (in $content "static website") (in $content "jamstack") }}
-  {{ $patterns = $patterns | append (dict
-    "@type" "DefinedTerm"
-    "@id" "https://en.wikipedia.org/wiki/Static_web_page"
-    "name" "Static Site Architecture"
-    "description" "Web development architecture based on pre-built markup"
-    "sameAs" "https://www.wikidata.org/wiki/Q7604038"
-  ) }}
-{{ end }}
-
-{{/* API Gateway Pattern - Very specific detection to avoid false positives */}}
-{{ if or 
-    (in $content "api gateway pattern")
-    (in $content "implements api gateway")
-    (in $content "api gateway architecture") 
-    (in $content "single entry point for all client requests")
-    (in $content "api management pattern")
-    (and (in $title "api gateway") (not (in $title "vpc")))
-    (in $url "/api-gateway/")
-}}
-  {{ $patterns = $patterns | append (dict
-    "@type" "DefinedTerm"
-    "@id" "https://en.wikipedia.org/wiki/API_management"
-    "name" "API Gateway Pattern"
-    "description" "Single entry point for all client requests to backend services"
-    "sameAs" "https://www.wikidata.org/wiki/Q4650723"
+    "@id" "https://www.weave.works/technologies/gitops/"
+    "name" "GitOps"
+    "description" "Operational framework using Git as a single source of truth for declarative infrastructure"
   ) }}
 {{ end }}
 
 {{/* Service Mesh */}}
-{{ if or (in $content "service mesh") (in $content "istio") (in $content "linkerd") }}
+{{ if or (in $content "service mesh") (in $content "istio") (in $content "linkerd") (in $content "consul connect") (in $title "service mesh") }}
   {{ $patterns = $patterns | append (dict
     "@type" "DefinedTerm"
     "@id" "https://en.wikipedia.org/wiki/Service_mesh"
     "name" "Service Mesh"
-    "description" "Infrastructure layer for facilitating service-to-service communications"
-    "sameAs" "https://www.wikidata.org/wiki/Q60748819"
-  ) }}
-{{ end }}
-
-{{/* Data Pipeline */}}
-{{ if or (in $content "data pipeline") (in $content "etl") (in $content "data processing") }}
-  {{ $patterns = $patterns | append (dict
-    "@type" "DefinedTerm"
-    "name" "Data Pipeline Architecture"
-    "description" "Set of data processing elements connected in series"
-  ) }}
-{{ end }}
-
-{{/* Machine Learning */}}
-{{ if or (in $content "machine learning") (in $content "ml ops") (in $content "mlops") (in $content "ai/ml") }}
-  {{ $patterns = $patterns | append (dict
-    "@type" "DefinedTerm"
-    "@id" "https://en.wikipedia.org/wiki/Machine_learning"
-    "name" "Machine Learning Infrastructure"
-    "description" "Infrastructure and practices for deploying machine learning models"
-    "sameAs" "https://www.wikidata.org/wiki/Q2539"
-  ) }}
-{{ end }}
-
-{{/* Edge Computing */}}
-{{ if or (in $content "edge computing") (in $content "edge deployment") (in $content "cdn") }}
-  {{ $patterns = $patterns | append (dict
-    "@type" "DefinedTerm"
-    "@id" "https://en.wikipedia.org/wiki/Edge_computing"
-    "name" "Edge Computing"
-    "description" "Distributed computing paradigm bringing computation closer to data sources"
-    "sameAs" "https://www.wikidata.org/wiki/Q5336619"
-  ) }}
-{{ end }}
-
-{{/* Compliance and Security Patterns */}}
-{{ $compliance := slice }}
-{{ if or (in $content "pci-dss") (in $content "pci dss") }}
-  {{ $compliance = $compliance | append "PCI-DSS" }}
-{{ end }}
-{{ if or (in $content "hipaa") }}
-  {{ $compliance = $compliance | append "HIPAA" }}
-{{ end }}
-{{ if or (in $content "gdpr") }}
-  {{ $compliance = $compliance | append "GDPR" }}
-{{ end }}
-{{ if or (in $content "iso-27001") (in $content "iso 27001") }}
-  {{ $compliance = $compliance | append "ISO-27001" }}
-{{ end }}
-{{ if or (in $content "soc 2") (in $content "soc2") }}
-  {{ $compliance = $compliance | append "SOC-2" }}
-{{ end }}
-{{ if or (in $content "fedramp") }}
-  {{ $compliance = $compliance | append "FedRAMP" }}
-{{ end }}
-
-{{ if $compliance }}
-  {{ $patterns = $patterns | append (dict
-    "@type" "DefinedTerm"
-    "name" "Security Compliance"
-    "description" (printf "Infrastructure patterns for %s compliance" (delimit $compliance ", "))
+    "description" "Infrastructure layer for service-to-service communication in microservices"
+    "sameAs" "https://www.wikidata.org/wiki/Q85759716"
   ) }}
 {{ end }}
 

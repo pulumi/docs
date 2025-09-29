@@ -2,8 +2,13 @@
 {{/* Performance optimization: limit content scanning to improve build times */}}
 {{ $provider := dict }}
 {{ $url := .RelPermalink }}
+
+{{/* Get aggregated content using the content aggregator */}}
+{{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+{{ $effectiveContent := $aggregatedContent.content }}
+
 {{ $maxLength := .Site.Params.schema.max_content_scan_length | default 5000 }}
-{{ $content := substr .Content 0 $maxLength | lower }}
+{{ $content := substr $effectiveContent 0 $maxLength | lower }}
 
 {{/* Check frontmatter first */}}
 {{ with .Params.cloud }}

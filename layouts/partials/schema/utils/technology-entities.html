@@ -1,6 +1,11 @@
 {{/* Map technology terms to their Wikipedia/Wikidata URIs for entity disambiguation */}}
 {{ $entities := slice }}
-{{ $content := lower .Content }}
+
+{{/* Get aggregated content using the content aggregator */}}
+{{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+{{ $effectiveContent := $aggregatedContent.content }}
+
+{{ $content := lower $effectiveContent }}
 {{ $title := lower .Title }}
 
 

@@ -1,18 +1,37 @@
 {{/* Cloud Resource Type Extractor - Data-driven approach for maintainability */}}
 {{/* Detects cloud services and Pulumi resource types mentioned in content */}}
 
+{{/* Get aggregated content using the content aggregator */}}
+{{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+{{ $effectiveContent := $aggregatedContent.content }}
+{{ $cloudServicesFromAggregator := $aggregatedContent.cloudServices }}
+
 {{/* Load cloud resources configuration from data file */}}
 {{ $cloudResources := .Site.Data.cloud_resources.resources }}
 
 {{/* Performance optimization: limit content scanning */}}
 {{ $maxLength := .Site.Params.schema.max_content_scan_length | default 5000 }}
-{{ $content := substr .Content 0 $maxLength | lower }}
+{{ $content := substr $effectiveContent 0 $maxLength | lower }}
 {{ $url := .Permalink | lower }}
 {{ $title := .Title | lower }}
 
 {{/* Initialize result arrays */}}
 {{ $resources := slice }}
 {{ $pulumiResources := slice }}
+
+{{/* Add cloud services from cloud overview pages */}}
+{{ range $cloudServicesFromAggregator }}
+  {{ $serviceName := . | lower }}
+  {{/* Map component names to cloud resources - flexible matching */}}
+  {{ range $cloudResources }}
+    {{ $resourceName := .schema.name | lower }}
+    {{ $resourceId := .id | lower }}
+    {{/* Match by name (partial) or by ID keywords */}}
+    {{ if or (in $resourceName $serviceName) (in $serviceName $resourceName) (in $resourceId $serviceName) }}
+      {{ $resources = $resources | append .schema }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 {{/* Loop through all defined cloud resources */}}
 {{ range $cloudResources }}
@@ -32,88 +51,57 @@
     {{ end }}
   {{ end }}
   
-  {{/* Check title patterns for additional coverage */}}
-  {{ if and (not $matched) .patterns }}
-    {{ range .patterns }}
-      {{ if in $title . }}
-        {{ $matched = true }}
-      {{ end }}
+  {{/* Check title pattern if provided and not already matched */}}
+  {{ if and (not $matched) .title_pattern (ne .title_pattern "") }}
+    {{ if in $title .title_pattern }}
+      {{ $matched = true }}
     {{ end }}
   {{ end }}
   
-  {{/* Add resource to results if matched */}}
+  {{/* If matched, add to appropriate array based on type */}}
   {{ if $matched }}
-    {{ $resources = $resources | append (dict
-      "@type" .schema.type
-      "@id" .schema.id
-      "name" .schema.name
-      "description" .schema.description
-      "provider" (dict "@id" .schema.provider_id)
-      "applicationCategory" .schema.category
-      "sameAs" .schema.same_as
-    ) }}
+    {{ if eq .type "pulumi-resource" }}
+      {{ $pulumiResources = $pulumiResources | append . }}
+    {{ else }}
+      {{ $resources = $resources | append .schema }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
-{{/* Detect specific Pulumi resource types (format: provider:service/resource:resourceType) */}}
-{{ $pulumiPatterns := slice 
-  "aws:s3/bucket:bucket"
-  "aws:ec2/instance:instance"
-  "aws:lambda/function:function"
-  "aws:rds/instance:instance"
-  "aws:dynamodb/table:table"
-  "aws:eks/cluster:cluster"
-  "aws:ecs/cluster:cluster"
-  "aws:apigateway/restapi:restApi"
-  "aws:iam/role:role"
-  "aws:iam/policy:policy"
-  "azure:storage/account:storageAccount"
-  "azure:compute/virtualmachine:virtualMachine"
-  "azure:web/appservice:appService"
-  "azure:sql/server:sqlServer"
-  "azure:cosmosdb/account:cosmosAccount"
-  "azure:containerservice/managedcluster:managedCluster"
-  "gcp:storage/bucket:bucket"
-  "gcp:compute/instance:instance"
-  "gcp:cloudfunctions/function:function"
-  "gcp:sql/databaseinstance:databaseInstance"
-  "gcp:bigquery/dataset:dataset"
-  "gcp:container/cluster:cluster"
-  "kubernetes:apps/v1:deployment"
-  "kubernetes:v1:service"
-  "kubernetes:v1:configmap"
-  "kubernetes:v1:secret"
-}}
-
-{{/* Check for Pulumi resource type patterns */}}
-{{ range $pulumiPatterns }}
-  {{ if in $content . }}
-    {{ $pulumiResources = $pulumiResources | append . }}
+{{/* Special handling for Registry pages */}}
+{{ if in $url "/registry/packages/" }}
+  {{ $packageName := replaceRE ".*?/registry/packages/([^/]+).*" "$1" $url }}
+  
+  {{/* Try to find a matching package in our data */}}
+  {{ range $cloudResources }}
+    {{ if and (eq .type "pulumi-resource") (eq .provider $packageName) }}
+      {{ $pulumiResources = $pulumiResources | append . }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
-{{/* Deduplicate cloud service resources by @id */}}
-{{ $uniqueResources := slice }}
+{{/* Remove duplicates and prepare final schema entities */}}
 {{ $seenIds := slice }}
+{{ $cloudServices := slice }}
+
 {{ range $resources }}
-  {{ if not (in $seenIds (index . "@id")) }}
-    {{ $uniqueResources = $uniqueResources | append . }}
-    {{ $seenIds = $seenIds | append (index . "@id") }}
+  {{ $resourceId := .id | default .name }}
+  {{ if not (in $seenIds $resourceId) }}
+    {{ $seenIds = $seenIds | append $resourceId }}
+    {{ $cloudServices = $cloudServices | append . }}
   {{ end }}
 {{ end }}
 
-{{/* Deduplicate Pulumi resources by name */}}
-{{ $uniquePulumiResources := slice }}
-{{ $seenPulumi := slice }}
+{{ $seenIds = slice }}
+{{ $pulumiResourceList := slice }}
+
 {{ range $pulumiResources }}
-  {{ if not (in $seenPulumi .) }}
-    {{ $uniquePulumiResources = $uniquePulumiResources | append . }}
-    {{ $seenPulumi = $seenPulumi | append . }}
+  {{ $identifier := printf "%s-%s" .provider .resource }}
+  {{ if not (in $seenIds $identifier) }}
+    {{ $seenIds = $seenIds | append $identifier }}
+    {{ $pulumiResourceList = $pulumiResourceList | append . }}
   {{ end }}
 {{ end }}
 
-{{/* Return combined results */}}
-{{ return (dict 
-  "cloudServices" $uniqueResources 
-  "pulumiTypes" $uniquePulumiResources
-) }}
+{{/* Return results */}}
+{{ return (dict "cloudServices" $cloudServices "pulumiResources" $pulumiResourceList) }}

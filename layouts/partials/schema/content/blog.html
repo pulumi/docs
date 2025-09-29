@@ -1,6 +1,32 @@
 {{/* Enhanced BlogPosting Schema - Migrated from head.html with AI optimizations */}}
 
 {{ if and (eq .Type "blog") .IsPage }}
+  {{/* Get aggregated content using the content aggregator */}}
+  {{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+  {{ $effectiveContent := $aggregatedContent.content }}
+  {{ $effectiveWordCount := $aggregatedContent.wordCount }}
+
+  {{/* Enhanced date handling with fallbacks */}}
+  {{ $publishDate := .Date }}
+  {{ $modifiedDate := or .Lastmod .Date }}
+
+  {{/* Handle invalid/zero dates with fallbacks */}}
+  {{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
+    {{ if and .GitInfo .GitInfo.AuthorDate }}
+      {{ $publishDate = .GitInfo.AuthorDate }}
+    {{ else }}
+      {{ $publishDate = now }}
+    {{ end }}
+  {{ end }}
+
+  {{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
+    {{ if and .GitInfo .GitInfo.AuthorDate }}
+      {{ $modifiedDate = .GitInfo.AuthorDate }}
+    {{ else }}
+      {{ $modifiedDate = $publishDate }}
+    {{ end }}
+  {{ end }}
+
   {{/* Handle image */}}
   {{ $image := .Params.meta_image | default "/logos/brand/og-default.png" }}
   {{ if not (hasPrefix $image "http") }}
@@ -20,15 +46,15 @@
     "@id" (printf "%s#article" .Permalink)
     "headline" .Title
     "description" (or .Params.meta_desc .Summary)
-    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
-    "dateModified" ((or .Lastmod .Date).Format "2006-01-02T15:04:05Z07:00")
+    "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
     "mainEntityOfPage" (dict
       "@type" "WebPage"
       "@id" .Permalink
     )
     "image" $image
     "url" .Permalink
-    "wordCount" .WordCount
+    "wordCount" $effectiveWordCount
     "articleSection" "Engineering Blog"
     "inLanguage" "en-US"
     "publisher" (dict
@@ -66,7 +92,7 @@
   )) }}
 
   {{/* AI Enhancement: Add articleBody for context */}}
-  {{ $content := .Content | plainify | truncate 5000 }}
+  {{ $content := $effectiveContent | plainify | truncate 5000 }}
   {{ $schema = merge $schema (dict "articleBody" $content) }}
 
   {{/* AI Enhancement: Add about and mentions */}}

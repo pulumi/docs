@@ -1,6 +1,32 @@
 {{/* Course Schema for Tutorials - Required for Course rich results */}}
 
 {{ if eq .Type "tutorials" }}
+  {{/* Get aggregated content using the content aggregator */}}
+  {{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+  {{ $effectiveContent := $aggregatedContent.content }}
+  {{ $effectiveWordCount := $aggregatedContent.wordCount }}
+
+  {{/* Enhanced date handling with fallbacks */}}
+  {{ $publishDate := .Date }}
+  {{ $modifiedDate := or .Lastmod .Date }}
+
+  {{/* Handle invalid/zero dates with fallbacks */}}
+  {{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
+    {{ if and .GitInfo .GitInfo.AuthorDate }}
+      {{ $publishDate = .GitInfo.AuthorDate }}
+    {{ else }}
+      {{ $publishDate = now }}
+    {{ end }}
+  {{ end }}
+
+  {{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
+    {{ if and .GitInfo .GitInfo.AuthorDate }}
+      {{ $modifiedDate = .GitInfo.AuthorDate }}
+    {{ else }}
+      {{ $modifiedDate = $publishDate }}
+    {{ end }}
+  {{ end }}
+
   {{/* Get technology entities with Wikipedia/Wikidata links */}}
   {{ $techEntities := partial "schema/utils/technology-entities.html" . }}
   
@@ -24,7 +50,7 @@
   {{/* Auto-detect what this tutorial teaches */}}
   {{ $teaches := slice }}
   {{ $titleLower := lower .Title }}
-  {{ $content := .Content | plainify }}
+  {{ $content := $effectiveContent | plainify }}
   
   {{ if in $titleLower "aws" }}
     {{ $teaches = $teaches | append "AWS Infrastructure" }}
@@ -106,7 +132,7 @@
     {{ $duration = . }}
   {{ else }}
     {{/* Estimate based on word count */}}
-    {{ $readTime := div .WordCount 150 }}
+    {{ $readTime := div $effectiveWordCount 150 }}
     {{ if lt $readTime 30 }}{{ $readTime = 30 }}{{ end }}
     {{ if gt $readTime 120 }}{{ $readTime = 120 }}{{ end }}
     {{ $duration = printf "PT%dM" $readTime }}
@@ -120,8 +146,8 @@
     "description" (or .Params.meta_desc .Summary (printf "Learn %s with this hands-on Pulumi tutorial" .Title))
     "url" .Permalink
     "image" $image
-    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
-    "dateModified" ((or .Lastmod .Date).Format "2006-01-02T15:04:05Z07:00")
+    "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
     "provider" (dict
       "@type" "Organization"
       "@id" "https://www.pulumi.com/#organization"

@@ -5,25 +5,32 @@
   {{ $image = printf "https://www.pulumi.com%s" $image }}
 {{ end }}
 
+{{/* Get aggregated content using the content aggregator */}}
+{{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+{{ $effectiveContent := $aggregatedContent.content }}
+{{ $effectiveWordCount := $aggregatedContent.wordCount }}
+{{ $cloudServicesFromOverview := $aggregatedContent.cloudServices }}
+
 {{/* Auto-detect programming languages from content */}}
 {{ $languages := slice }}
-{{ $content := .Content | plainify }}
-{{ if or (in .Content "```typescript") (in .Content "```ts") (in .Content "```javascript") (in .Content "```js") }}
+{{ $content := $effectiveContent | plainify }}
+{{ $rawContent := .Content }}
+{{ if or (in $rawContent "```typescript") (in $rawContent "```ts") (in $rawContent "```javascript") (in $rawContent "```js") }}
   {{ $languages = $languages | append "TypeScript" }}
 {{ end }}
-{{ if or (in .Content "```python") (in .Content "```py") }}
+{{ if or (in $rawContent "```python") (in $rawContent "```py") }}
   {{ $languages = $languages | append "Python" }}
 {{ end }}
-{{ if in .Content "```go" }}
+{{ if in $rawContent "```go" }}
   {{ $languages = $languages | append "Go" }}
 {{ end }}
-{{ if or (in .Content "```csharp") (in .Content "```cs") }}
+{{ if or (in $rawContent "```csharp") (in $rawContent "```cs") }}
   {{ $languages = $languages | append "C#" }}
 {{ end }}
-{{ if in .Content "```java" }}
+{{ if in $rawContent "```java" }}
   {{ $languages = $languages | append "Java" }}
 {{ end }}
-{{ if or (in .Content "```yaml") (in .Content "```yml") }}
+{{ if or (in $rawContent "```yaml") (in $rawContent "```yml") }}
   {{ $languages = $languages | append "YAML" }}
 {{ end }}
 
@@ -59,14 +66,35 @@
 {{/* Detect infrastructure patterns */}}
 {{ $infraPatterns := partial "schema/utils/infrastructure-patterns.html" . }}
 
+{{/* Enhanced date handling with fallbacks */}}
+{{ $publishDate := .Date }}
+{{ $modifiedDate := or .Lastmod .Date }}
+
+{{/* Handle invalid/zero dates with fallbacks */}}
+{{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
+  {{ if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $publishDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $publishDate = now }}
+  {{ end }}
+{{ end }}
+
+{{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
+  {{ if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $modifiedDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $modifiedDate = $publishDate }}
+  {{ end }}
+{{ end }}
+
 {{ $schema := dict
   "@context" "https://schema.org"
   "@type" "Article"
   "@id" (printf "%s#article" .Permalink)
   "headline" .Title
   "description" (or .Params.meta_desc .Summary (printf "Learn about %s with Pulumi Infrastructure as Code" .Title))
-  "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
-  "dateModified" ((or .Lastmod .Date).Format "2006-01-02T15:04:05Z07:00")
+  "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
   "author" (dict "@id" "https://www.pulumi.com/#organization")
   "publisher" (dict "@id" "https://www.pulumi.com/#organization")
   "image" (slice $image)
@@ -75,7 +103,7 @@
     "@id" .Permalink
   )
   "articleBody" (substr $content 0 5000)
-  "wordCount" .WordCount
+  "wordCount" $effectiveWordCount
   "inLanguage" "en-US"
   "speakable" (dict
     "@type" "SpeakableSpecification"
@@ -117,214 +145,58 @@
   Deduplication Algorithm:
   1. Combine mentions from multiple sources (technology entities, cloud services, infrastructure patterns)
   2. Use @id as primary identifier (preferred for schema.org entities with Wikidata links)
-  3. Fall back to name field if @id is not available (for simpler entities)
-  4. Track seen identifiers in $mentionIds slice to prevent duplicates
-  5. Only append to $uniqueMentions if identifier hasn't been seen before
-  This ensures clean schema.org output without duplicate entities in the mentions array
+  3. Fall back to name for entities without @id
+  4. Build a seen set to track uniqueness
+  5. Only include first occurrence of each entity
 */}}
-{{ if $allMentions }}
-  {{ $mentionIds := slice }}
-  {{ $uniqueMentions := slice }}
-  {{ range $allMentions }}
-    {{ $identifier := or (index . "@id") .name }}
-    {{ if not (in $mentionIds $identifier) }}
-      {{ $uniqueMentions = $uniqueMentions | append . }}
-      {{ $mentionIds = $mentionIds | append $identifier }}
-    {{ end }}
-  {{ end }}
-  {{ if $uniqueMentions }}
-    {{ $schema = merge $schema (dict "mentions" $uniqueMentions) }}
+{{ $seenIds := slice }}
+{{ $uniqueMentions := slice }}
+
+{{ range $allMentions }}
+  {{/* Use @id as primary identifier, fall back to name */}}
+  {{ $identifier := or (index . "@id") .name }}
+  
+  {{/* Only add if not seen before */}}
+  {{ if not (in $seenIds $identifier) }}
+    {{ $seenIds = $seenIds | append $identifier }}
+    {{ $uniqueMentions = $uniqueMentions | append . }}
   {{ end }}
 {{ end }}
 
-{{/* Add related content for knowledge graph connections */}}
+{{/* Add mentions/about if there are any unique mentions */}}
+{{ if $uniqueMentions }}
+  {{ $schema = merge $schema (dict "mentions" $uniqueMentions) }}
+{{ end }}
+
+{{/* Add infrastructure patterns as keywords */}}
+{{ if $infraPatterns }}
+  {{ $patternNames := slice }}
+  {{ range $infraPatterns }}
+    {{ $patternNames = $patternNames | append .name }}
+  {{ end }}
+  {{ $schema = merge $schema (dict "applicationCategory" $patternNames) }}
+{{ end }}
+
+{{/* Add cloud provider information */}}
+{{ if $cloudProviders }}
+  {{ $schema = merge $schema (dict "targetPlatform" $cloudProviders) }}
+{{ end }}
+
+{{/* Add learning resource schema for tutorials/guides */}}
+{{ if or (in .Section "tutorials") (in .Section "guides") (in .Params.tags "tutorial") }}
+  {{ $schema = merge $schema (dict
+    "@type" (slice "Article" "LearningResource")
+    "learningResourceType" "Tutorial"
+    "educationalLevel" $level
+  ) }}
+{{ end }}
+
+{{/* Add related content (prerequisites, next steps) */}}
 {{ if $relatedContent }}
   {{ $schema = merge $schema (dict "relatedLink" $relatedContent) }}
 {{ end }}
 
-{{/* Add cloud provider as targetPlatform */}}
-{{ if $cloudProviders.primary }}
-  {{ $schema = merge $schema (dict "targetPlatform" $cloudProviders.primary) }}
-{{ end }}
-
-{{/* Add additional cloud providers if multi-cloud */}}
-{{ if $cloudProviders.additional }}
-  {{ $additionalPlatforms := slice }}
-  {{ range $cloudProviders.additional }}
-    {{ $additionalPlatforms = $additionalPlatforms | append . }}
-  {{ end }}
-  {{ if $additionalPlatforms }}
-    {{ $schema = merge $schema (dict "additionalProperty" (dict
-      "@type" "PropertyValue"
-      "name" "additionalPlatforms"
-      "value" $additionalPlatforms
-    )) }}
-  {{ end }}
-{{ end }}
-
-{{/* Add infrastructure patterns as applicationCategory */}}
-{{ if $infraPatterns }}
-  {{ $categories := slice }}
-  {{ range $infraPatterns }}
-    {{ $categories = $categories | append .name }}
-  {{ end }}
-  {{ $schema = merge $schema (dict "applicationCategory" $categories) }}
-  
-  {{/* Also add detailed pattern definitions as keywords */}}
-  {{ $patternKeywords := slice }}
-  {{ range $infraPatterns }}
-    {{ if .alternateName }}
-      {{ $patternKeywords = $patternKeywords | append .name | append .alternateName }}
-    {{ else }}
-      {{ $patternKeywords = $patternKeywords | append .name }}
-    {{ end }}
-  {{ end }}
-  {{ if $patternKeywords }}
-    {{ if $schema.keywords }}
-      {{ $schema = merge $schema (dict "keywords" (printf "%s, %s" $schema.keywords (delimit $patternKeywords ", "))) }}
-    {{ else }}
-      {{ $schema = merge $schema (dict "keywords" (delimit $patternKeywords ", ")) }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* Add Pulumi resource types if detected */}}
-{{ if $cloudResources.pulumiTypes }}
-  {{ $schema = merge $schema (dict "additionalProperty" (dict
-    "@type" "PropertyValue"
-    "name" "pulumiResourceTypes"
-    "value" $cloudResources.pulumiTypes
-  )) }}
-{{ end }}
-
-{{/* Add software requirements based on detected packages */}}
-{{ $requirements := slice }}
-{{ if in .Content "@pulumi/aws" }}
-  {{ $requirements = $requirements | append "@pulumi/aws" }}
-{{ end }}
-{{ if in .Content "@pulumi/azure" }}
-  {{ $requirements = $requirements | append "@pulumi/azure" }}
-{{ end }}
-{{ if in .Content "@pulumi/gcp" }}
-  {{ $requirements = $requirements | append "@pulumi/gcp" }}
-{{ end }}
-{{ if in .Content "@pulumi/kubernetes" }}
-  {{ $requirements = $requirements | append "@pulumi/kubernetes" }}
-{{ end }}
-{{ if in .Content "pulumi-aws" }}
-  {{ $requirements = $requirements | append "pulumi-aws (Python)" }}
-{{ end }}
-{{ if in .Content "pulumi-azure" }}
-  {{ $requirements = $requirements | append "pulumi-azure (Python)" }}
-{{ end }}
-{{ if in .Content "Pulumi.Aws" }}
-  {{ $requirements = $requirements | append "Pulumi.Aws (.NET)" }}
-{{ end }}
-{{ if in .Content "github.com/pulumi/pulumi-aws" }}
-  {{ $requirements = $requirements | append "github.com/pulumi/pulumi-aws (Go)" }}
-{{ end }}
-{{ if $requirements }}
-  {{ $schema = merge $schema (dict "softwareRequirements" (delimit $requirements ", ")) }}
-{{ end }}
-
-{{/* Add time required - estimate based on word count or frontmatter */}}
-{{ $timeRequired := "" }}
-{{ with .Params.duration }}
-  {{ $timeRequired = . }}
-{{ else }}
-  {{/* Estimate: 250 words per minute reading speed */}}
-  {{ $readTime := div .WordCount 250 }}
-  {{ if lt $readTime 5 }}{{ $readTime = 5 }}{{ end }}
-  {{ if gt $readTime 60 }}{{ $readTime = 60 }}{{ end }}
-  {{ $timeRequired = printf "PT%dM" $readTime }}
-{{ end }}
-{{ $schema = merge $schema (dict "timeRequired" $timeRequired) }}
-
-{{/* Add teaches property for educational content */}}
-{{ $teaches := slice }}
-{{ if in .RelPermalink "/get-started/" }}
-  {{ $teaches = $teaches | append "Getting Started with Pulumi" }}
-{{ end }}
-{{ if in .RelPermalink "/concepts/" }}
-  {{ $teaches = $teaches | append "Infrastructure as Code Concepts" }}
-{{ end }}
-{{ if in .RelPermalink "/guides/" }}
-  {{ $teaches = $teaches | append "Cloud Infrastructure Best Practices" }}
-{{ end }}
-{{ if $teaches }}
-  {{ $schema = merge $schema (dict "teaches" $teaches) }}
-{{ end }}
-
-{{/* Phase 4: Advanced Semantic Layer */}}
-
-{{/* Add work examples if code blocks exist */}}
-{{ if in .Content "```" }}
-  {{ $examples := slice }}
-  {{ if in .Content "```typescript" }}
-    {{ $examples = $examples | append (dict 
-      "@type" "SoftwareSourceCode"
-      "programmingLanguage" "TypeScript"
-      "codeRepository" "https://github.com/pulumi/examples"
-    ) }}
-  {{ end }}
-  {{ if in .Content "```python" }}
-    {{ $examples = $examples | append (dict 
-      "@type" "SoftwareSourceCode"
-      "programmingLanguage" "Python"
-      "codeRepository" "https://github.com/pulumi/examples"
-    ) }}
-  {{ end }}
-  {{ if $examples }}
-    {{ $schema = merge $schema (dict "workExample" $examples) }}
-  {{ end }}
-{{ end }}
-
-{{/* Add potential actions */}}
-{{ $actions := slice }}
-{{ if in .RelPermalink "/get-started/" }}
-  {{ $actions = $actions | append (dict
-    "@type" "DownloadAction"
-    "target" "https://get.pulumi.com/"
-    "name" "Install Pulumi CLI"
-  ) }}
-{{ end }}
-{{ if in .RelPermalink "/concepts/" }}
-  {{ $actions = $actions | append (dict
-    "@type" "ReadAction"
-    "target" .Permalink
-    "name" "Learn Infrastructure as Code Concepts"
-  ) }}
-{{ end }}
-{{ if $actions }}
-  {{ $schema = merge $schema (dict "potentialAction" $actions) }}
-{{ end }}
-
-{{/* Add isBasedOn for documentation based on specific versions */}}
-{{ if .Params.version }}
-  {{ $schema = merge $schema (dict "isBasedOn" (dict
-    "@type" "SoftwareSourceCode"
-    "name" (printf "Pulumi %s" .Params.version)
-    "url" "https://github.com/pulumi/pulumi"
-  )) }}
-{{ end }}
-
-{{/* Add hasPart for multi-section documentation */}}
-{{ if .TableOfContents }}
-  {{ $parts := slice }}
-  {{ $headings := findRE "<h[2-3][^>]*>(.*?)</h[2-3]>" .TableOfContents }}
-  {{ range first 5 $headings }}
-    {{ $heading := replaceRE "<[^>]+>" "" . }}
-    {{ $parts = $parts | append (dict
-      "@type" "WebPageElement"
-      "name" $heading
-    ) }}
-  {{ end }}
-  {{ if $parts }}
-    {{ $schema = merge $schema (dict "hasPart" $parts) }}
-  {{ end }}
-{{ end }}
-
-{{/* Add citation for authoritative documentation */}}
+{{/* Add citation for documentation authority */}}
 {{ $schema = merge $schema (dict "citation" (dict
   "@type" "CreativeWork"
   "name" "Pulumi Official Documentation"
@@ -332,6 +204,32 @@
   "publisher" (dict "@id" "https://www.pulumi.com/#organization")
 )) }}
 
+{{/* Add time to complete for tutorials */}}
+{{ with .Params.estimated_time }}
+  {{ $schema = merge $schema (dict "timeRequired" (printf "PT%dM" .)) }}
+{{ else }}
+  {{/* Auto-estimate based on word count */}}
+  {{ $minutes := div $effectiveWordCount 200 }}
+  {{ if lt $minutes 1 }}{{ $minutes = 1 }}{{ end }}
+  {{ $schema = merge $schema (dict "timeRequired" (printf "PT%dM" $minutes)) }}
+{{ end }}
+
+{{/* Add Pulumi Resources if detected */}}
+{{ if $cloudResources.pulumiResources }}
+  {{ $pulumiServices := slice }}
+  {{ range $cloudResources.pulumiResources }}
+    {{ $pulumiServices = $pulumiServices | append (dict
+      "@type" "SoftwareSourceCode"
+      "name" (printf "pulumi.%s.%s" .provider .resource)
+      "programmingLanguage" $languages
+      "codeRepository" .repository
+    ) }}
+  {{ end }}
+  {{ if $pulumiServices }}
+    {{ $schema = merge $schema (dict "hasPart" $pulumiServices) }}
+  {{ end }}
+{{ end }}
+
 <script type="application/ld+json">
-{{ $schema | jsonify | safeJS }}
+{{ $schema | jsonify (dict "prefix" "" "indent" "  ") | safeJS }}
 </script>
