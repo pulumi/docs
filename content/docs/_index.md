@@ -118,9 +118,9 @@ sections:
     primary_button_link: https://github.com/pulumi/pulumi/issues
   - heading: Troubleshooting Guide
     description: "Check out this list of known issues and how to resolve them."
-    link: https://www.pulumi.com/docs/iac/support/troubleshooting/
+    link: https://www.pulumi.com/docs/iac/troubleshooting/
     primary_button_label: Learn More
-    primary_button_link: https://www.pulumi.com/docs/iac/support/troubleshooting/
+    primary_button_link: https://www.pulumi.com/docs/iac/troubleshooting/
 
 - type: flat
   heading: Enterprise and Business Critical support
