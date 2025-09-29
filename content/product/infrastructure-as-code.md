@@ -204,7 +204,7 @@ key_features_below:
                     Never lose state again. Automatic versioning and encryption at rest. Pulumi Cloud handles it all, or self-host with S3/Azure Blob.
               - title: Secrets that actually work
                 description: |
-                    No more secrets in plaintext. Automatic encryption for sensitive values. Integrate with AWS Secrets Manager, Azure Key Vault, or use [Pulumi ESC](/product/secrets-configuration/) for centralized secrets.
+                    No more secrets in plaintext. Automatic encryption for sensitive values. Integrate with AWS Secrets Manager, Azure Key Vault, or use [Pulumi ESC](/product/secrets-management/) for centralized secrets.
               - title: Ship with confidence
                 description: |
                     Review every change before it ships. Full history and audit logs. Roll back to any previous state when needed.
