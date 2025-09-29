@@ -71,6 +71,7 @@ oci setup config
 ```
 
 This will prompt you for:
+
 - User OCID
 - Tenancy OCID
 - Region

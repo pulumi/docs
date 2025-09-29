@@ -30,21 +30,27 @@ Build Oracle Cloud infrastructure using familiar TypeScript syntax and tooling.
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1; .\install.ps1
 ```
+
 {{% /choosable %}}
 
 ### Configure OCI Access
@@ -62,6 +68,7 @@ oci setup config
 ```
 
 This will prompt for:
+
 - User OCID: `ocid1.user.oc1..xxxxx`
 - Tenancy OCID: `ocid1.tenancy.oc1..xxxxx`
 - Region: `us-ashburn-1`
@@ -151,6 +158,7 @@ pulumi up
 ```
 
 This command:
+
 1. Shows a preview of resources to be created
 2. Asks for your confirmation
 3. Creates the VCN and bucket in OCI
@@ -183,21 +191,27 @@ Build Oracle Cloud infrastructure using familiar Python syntax and tooling.
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1; .\install.ps1
 ```
+
 {{% /choosable %}}
 
 ### Configure OCI Access
@@ -215,6 +229,7 @@ oci setup config
 ```
 
 This will prompt for:
+
 - User OCID: `ocid1.user.oc1..xxxxx`
 - Tenancy OCID: `ocid1.tenancy.oc1..xxxxx`
 - Region: `us-ashburn-1`
@@ -310,6 +325,7 @@ pulumi up
 ```
 
 This command:
+
 1. Shows a preview of resources to be created
 2. Asks for your confirmation
 3. Creates the VCN and bucket in OCI
@@ -342,21 +358,27 @@ Build Oracle Cloud infrastructure using Go's type safety and performance.
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1; .\install.ps1
 ```
+
 {{% /choosable %}}
 
 ### Configure OCI Access
@@ -374,6 +396,7 @@ oci setup config
 ```
 
 This will prompt for:
+
 - User OCID: `ocid1.user.oc1..xxxxx`
 - Tenancy OCID: `ocid1.tenancy.oc1..xxxxx`
 - Region: `us-ashburn-1`
@@ -416,7 +439,7 @@ package main
 import (
     "fmt"
     "time"
-    
+
     "github.com/pulumi/pulumi-oci/sdk/v2/go/oci/core"
     "github.com/pulumi/pulumi-oci/sdk/v2/go/oci/objectstorage"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
@@ -495,6 +518,7 @@ pulumi up
 ```
 
 This command:
+
 1. Shows a preview of resources to be created
 2. Asks for your confirmation
 3. Creates the VCN and bucket in OCI
@@ -527,21 +551,27 @@ Build Oracle Cloud infrastructure using C# and .NET ecosystem.
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1; .\install.ps1
 ```
+
 {{% /choosable %}}
 
 ### Configure OCI Access
@@ -559,6 +589,7 @@ oci setup config
 ```
 
 This will prompt for:
+
 - User OCID: `ocid1.user.oc1..xxxxx`
 - Tenancy OCID: `ocid1.tenancy.oc1..xxxxx`
 - Region: `us-ashburn-1`
@@ -680,6 +711,7 @@ pulumi up
 ```
 
 This command:
+
 1. Shows a preview of resources to be created
 2. Asks for your confirmation
 3. Creates the VCN and bucket in OCI
@@ -713,21 +745,27 @@ Build Oracle Cloud infrastructure using Java and familiar build tools.
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1; .\install.ps1
 ```
+
 {{% /choosable %}}
 
 ### Configure OCI Access
@@ -745,6 +783,7 @@ oci setup config
 ```
 
 This will prompt for:
+
 - User OCID: `ocid1.user.oc1..xxxxx`
 - Tenancy OCID: `ocid1.tenancy.oc1..xxxxx`
 - Region: `us-ashburn-1`
@@ -860,6 +899,7 @@ pulumi up
 ```
 
 This command:
+
 1. Shows a preview of resources to be created
 2. Asks for your confirmation
 3. Creates the VCN and bucket in OCI
@@ -891,21 +931,27 @@ Define Oracle Cloud infrastructure using simple, declarative YAML configuration.
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1; .\install.ps1
 ```
+
 {{% /choosable %}}
 
 ### Configure OCI Access
@@ -923,6 +969,7 @@ oci setup config
 ```
 
 This will prompt for:
+
 - User OCID: `ocid1.user.oc1..xxxxx`
 - Tenancy OCID: `ocid1.tenancy.oc1..xxxxx`
 - Region: `us-ashburn-1`

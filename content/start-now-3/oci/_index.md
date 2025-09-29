@@ -22,21 +22,27 @@ This covers the fundamentals: authentication, defining resources, and deploying 
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
+
 ```bash
 brew install pulumi/tap/pulumi
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
+
 ```powershell
 Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1; .\install.ps1
 ```
+
 {{% /choosable %}}
 
 Verify the installation:
@@ -123,15 +129,19 @@ Set up your OCI credentials for Pulumi to use:
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
+
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
+
 {{% /choosable %}}
 
 {{% choosable os linux %}}
+
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
+
 {{% /choosable %}}
 
 {{% choosable os windows %}}
@@ -145,6 +155,7 @@ oci setup config
 ```
 
 This will prompt you for:
+
 - **User OCID**: Find in OCI Console → Identity → Users → Your User
 - **Tenancy OCID**: Find in OCI Console → Administration → Tenancy Details
 - **Region**: e.g., `us-ashburn-1`
@@ -163,12 +174,14 @@ You should see a list of available OCI regions.
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
+
 ```bash
 mkdir oci-quickstart && cd oci-quickstart
 pulumi new oci-typescript
 ```
 
 This creates:
+
 - `index.ts` - Your infrastructure code
 - `package.json` - Node.js dependencies
 - `Pulumi.yaml` - Project configuration
@@ -207,12 +220,14 @@ pulumi config set compartmentId <your-compartment-ocid>
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```bash
 mkdir oci-quickstart && cd oci-quickstart
 pulumi new oci-python
 ```
 
 This creates:
+
 - `__main__.py` - Your infrastructure code
 - `requirements.txt` - Python dependencies
 - `Pulumi.yaml` - Project configuration
@@ -252,12 +267,14 @@ pulumi config set compartmentId <your-compartment-ocid>
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```bash
 mkdir oci-quickstart && cd oci-quickstart
 pulumi new oci-go
 ```
 
 This creates:
+
 - `main.go` - Your infrastructure code
 - `go.mod` - Go module dependencies
 - `Pulumi.yaml` - Project configuration
@@ -270,7 +287,7 @@ package main
 import (
     "fmt"
     "time"
-    
+
     "github.com/pulumi/pulumi-oci/sdk/v2/go/oci/objectstorage"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
@@ -281,13 +298,13 @@ func main() {
         // Get configuration
         cfg := config.New(ctx, "")
         compartmentId := cfg.Require("compartmentId")
-        
+
         // Get the namespace for Object Storage
         namespace, err := objectstorage.GetNamespace(ctx, nil)
         if err != nil {
             return err
         }
-        
+
         // Create an Object Storage bucket
         bucketName := fmt.Sprintf("my-bucket-%d", time.Now().Unix())
         bucket, err := objectstorage.NewBucket(ctx, "my-bucket", &objectstorage.BucketArgs{
@@ -299,10 +316,10 @@ func main() {
         if err != nil {
             return err
         }
-        
+
         // Export the bucket name
         ctx.Export("bucketName", bucket.Name)
-        
+
         return nil
     })
 }
@@ -317,12 +334,14 @@ pulumi config set compartmentId <your-compartment-ocid>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```bash
 mkdir oci-quickstart && cd oci-quickstart
 pulumi new oci-csharp
 ```
 
 This creates:
+
 - `Program.cs` - Your infrastructure code
 - `*.csproj` - .NET project file
 - `Pulumi.yaml` - Project configuration
@@ -347,10 +366,10 @@ class MyStack : Stack
         // Get configuration
         var config = new Config();
         var compartmentId = config.Require("compartmentId");
-        
+
         // Get the namespace for Object Storage
         var @namespace = GetNamespace.Invoke();
-        
+
         // Create an Object Storage bucket
         var bucketName = $"my-bucket-{DateTimeOffset.UtcNow.ToUnixTimeSeconds()}";
         var bucket = new Bucket("my-bucket", new BucketArgs
@@ -360,11 +379,11 @@ class MyStack : Stack
             Name = bucketName,
             AccessType = "NoPublicAccess",
         });
-        
+
         // Export the bucket name
         this.BucketName = bucket.Name;
     }
-    
+
     [Output]
     public Output<string> BucketName { get; set; }
 }
@@ -379,12 +398,14 @@ pulumi config set compartmentId <your-compartment-ocid>
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
 ```bash
 mkdir oci-quickstart && cd oci-quickstart
 pulumi new oci-java
 ```
 
 This creates:
+
 - `src/main/java/myproject/App.java` - Your infrastructure code
 - `pom.xml` - Maven configuration
 - `Pulumi.yaml` - Project configuration
@@ -404,15 +425,15 @@ public class App {
     public static void main(String[] args) {
         Pulumi.run(App::stack);
     }
-    
+
     public static void stack(Context ctx) {
         // Get configuration
         var config = ctx.config();
         var compartmentId = config.require("compartmentId");
-        
+
         // Get the namespace for Object Storage
         var namespace = ObjectstorageFunctions.getNamespace();
-        
+
         // Create an Object Storage bucket
         var bucketName = "my-bucket-" + System.currentTimeMillis();
         var bucket = new Bucket("my-bucket", BucketArgs.builder()
@@ -421,7 +442,7 @@ public class App {
             .name(bucketName)
             .accessType("NoPublicAccess")
             .build());
-        
+
         // Export the bucket name
         ctx.export("bucketName", bucket.name());
     }
@@ -437,12 +458,14 @@ pulumi config set compartmentId <your-compartment-ocid>
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 ```bash
 mkdir oci-quickstart && cd oci-quickstart
 pulumi new oci-yaml
 ```
 
 This creates:
+
 - `Pulumi.yaml` - Project configuration and resources
 - `Pulumi.dev.yaml` - Stack configuration
 
