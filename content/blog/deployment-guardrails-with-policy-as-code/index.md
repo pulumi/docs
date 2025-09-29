@@ -1,7 +1,7 @@
 ---
 title: "How to Implement Robust Security Guardrails Using Policy as Code"
 allow_long_title: true
-date: 2025-08-14T09:00:00Z
+date: 2025-09-30
 draft: false
 meta_desc: "Implement deployment guardrails with Pulumi CrossGuard to create safe self-service infrastructure balancing developer autonomy and control."
 meta_image: meta.png
