@@ -10,7 +10,7 @@ menu:
     weight: 1
 ---
 
-The `imports` top-level key is a list of other environments that this environment imports. Imported environments are evaluated and merged to form the basis for the current environment, which is then evaluated and merged with the imported values. Merging is performed using the [JSON Merge Patch](https://www.rfc-editor.org/rfc/rfc7386) algorithm.
+The `imports` top-level key is a list of other environments that this environment imports. Imported environments are evaluated and merged to form the basis for the current environment, which is then evaluated and merged with the imported values. Merging is performed using the [JSON Merge Patch](https://www.rfc-editor.org/rfc/rfc7396) algorithm.
 
 ## Environment names
 
