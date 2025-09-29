@@ -5,9 +5,9 @@ title: Kubernetes YAML & Helm Charts
 h1: Migrating from Kubernetes YAML or Helm Charts to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    migration:
         name: Kubernetes YAML or Helm Charts
-        parent: iac-adopting-migrate
+        parent: migration-home-migrate
         weight: 4
     usingpulumi:
         parent: migrating
@@ -15,6 +15,7 @@ menu:
 aliases:
 - /docs/guides/adopting/from_kubernetes/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/
+- /docs/iac/adopting-pulumi/migrating-to-pulumi/from-kubernetes/
 ---
 
 <img src="/logos/tech/k8s.svg" align="right" class="h-16 px-8 pb-4">

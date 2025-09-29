@@ -5,9 +5,9 @@ title: Azure Resource Manager
 h1: From Azure Resource Manager (ARM) to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    migration:
         name: Azure Resource Manager
-        parent: iac-adopting-migrate
+        parent: migration-home-migrate
         weight: 3
     usingpulumi:
         parent: migrating
@@ -15,6 +15,7 @@ menu:
 aliases:
 - /docs/guides/adopting/from_azure/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/
+- /docs/iac/adopting-pulumi/migrating-to-pulumi/from-azure/
 ---
 
 <img src="/logos/tech/azure_arm.png" align="right" class="h-32 px-8 pb-4">

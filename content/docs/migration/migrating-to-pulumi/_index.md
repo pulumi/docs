@@ -4,12 +4,14 @@ meta_desc: Migrate from an existing infrastructure management solution to Pulumi
 title: "Migrate from..."
 h1: Migrating from other solutions to Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
+no_overview: true
+redirect_to: /docs/migration/
 menu:
-    iac:
+    migration:
         name: Migrating from...
-        parent: iac-adopting
+        parent: migration-home
         weight: 1
-        identifier: iac-adopting-migrate
+        identifier: migration-home-migrate
     usingpulumi:
         identifier: migrating
         parent: adopting-pulumi
@@ -17,6 +19,7 @@ menu:
 aliases:
 - /docs/guides/adopting/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/
+- /docs/iac/adopting-pulumi/
 ---
 
 Learn how Pulumi compares to other solutions, how to migrate to Pulumi, use the converters to convert your code to Pulumi, and use import to import your resource to Pulumi.

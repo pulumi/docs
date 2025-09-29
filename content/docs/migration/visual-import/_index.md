@@ -5,9 +5,9 @@ title: Using Visual Import
 h1: Using Visual Import
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac: 
+    migration:
         name: Using Visual Import        
-        parent: iac-adopting
+        parent: migration-home
         weight: 2 
     usingpulumi: 
         parent: adopting-pulumi    

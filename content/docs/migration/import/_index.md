@@ -5,9 +5,9 @@ title: "Import resources"
 h1: "Importing resources"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    migration:
         name: Importing resources
-        parent: iac-adopting
+        parent: migration-home
         weight: 2
     usingpulumi:
         parent: adopting-pulumi
@@ -15,6 +15,7 @@ menu:
 aliases:
 - /docs/guides/adopting/import/
 - /docs/using-pulumi/adopting-pulumi/import/
+- /docs/iac/adopting-pulumi/import/
 ---
 
 Most infrastructure as code projects require working with existing cloud resources, whether those resources were originally created with another IaC tool or manually provisioned with a cloud provider console or CLI. Interacting with a previously created cloud resource with Pulumi typically happens in one of two ways:
