@@ -216,7 +216,7 @@ update_frontmatter() {
                     in_menu_section=true
                     echo "$line" >> "$temp_file"
                 # Update nested menu section if specified and we're in menu section
-                elif [[ "$in_menu_section" = true && -n "$OLD_MENU_SECTION" && -n "$NEW_MENU_SECTION" && "$line" =~ ^[[:space:]]*"$OLD_MENU_SECTION": ]]; then
+                elif [[ "$in_menu_section" = true && -n "$OLD_MENU_SECTION" && -n "$NEW_MENU_SECTION" && "$line" =~ ^[[:space:]]*$OLD_MENU_SECTION: ]]; then
                     echo "$line" | sed "s/^\\([[:space:]]*\\)$OLD_MENU_SECTION:/\\1$NEW_MENU_SECTION:/" >> "$temp_file"
                     menu_updated=true
                 # Update menu parent if specified and this is a parent line in menu section
