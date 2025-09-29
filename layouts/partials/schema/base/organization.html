@@ -1,0 +1,63 @@
+{{/* Enhanced Organization Schema - Singleton with knowledge graph properties */}}
+
+{{/* Only output full schema on homepage or pages with the flag (backward compatibility) */}}
+{{ if or .IsHome (eq .Params.include_organization_schema true) }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "Corporation"],
+  "@id": "https://www.pulumi.com/#organization",
+  "name": "Pulumi Corporation",
+  "legalName": "Pulumi Corporation",
+  "alternateName": "Pulumi",
+  "url": "https://www.pulumi.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.pulumi.com/logos/brand/logo.png",
+    "width": 600,
+    "height": 60
+  },
+  "description": "Pulumi enables cloud infrastructure teams to define, deploy, and manage cloud resources using familiar programming languages. The Pulumi Platform enables customers to manage 10x more resources at lower cost than traditional tools.",
+  "foundingDate": "2017",
+  "founders": [
+    {"@type": "Person", "name": "Joe Duffy"},
+    {"@type": "Person", "name": "Eric Rudder"}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1525 4th Ave Suite 800",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "postalCode": "98101",
+    "addressCountry": "US"
+  },
+  "email": "team@pulumi.com",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "sales@pulumi.com",
+    "url": "https://www.pulumi.com/contact"
+  },
+  "sameAs": [
+    "https://github.com/pulumi",
+    "https://twitter.com/PulumiCorp",
+    "https://www.linkedin.com/company/pulumi",
+    "https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw"
+  ],
+  "knowsAbout": [
+    "Infrastructure as Code",
+    "Cloud Computing",
+    "DevOps",
+    "Platform Engineering",
+    "Cloud Security",
+    "Kubernetes",
+    "Serverless Computing",
+    "Multi-Cloud Architecture"
+  ],
+  "owns": {
+    "@type": "SoftwareApplication",
+    "@id": "https://www.pulumi.com/#pulumi-cli"
+  }
+}
+</script>
+{{ end }}

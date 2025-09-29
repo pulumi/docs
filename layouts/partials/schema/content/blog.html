@@ -1,0 +1,220 @@
+{{/* Enhanced BlogPosting Schema - Migrated from head.html with AI optimizations */}}
+
+{{ if and (eq .Type "blog") .IsPage }}
+  {{/* Handle image */}}
+  {{ $image := .Params.meta_image | default "/logos/brand/og-default.png" }}
+  {{ if not (hasPrefix $image "http") }}
+    {{ if in "blog templates" .Section }}
+      {{ with .Resources.GetMatch .Params.meta_image }}
+        {{ $image = .Permalink }}
+      {{ end }}
+    {{ else }}
+      {{ $image = printf "https://www.pulumi.com%s" $image }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Build schema */}}
+  {{ $schema := dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "@id" (printf "%s#article" .Permalink)
+    "headline" .Title
+    "description" (or .Params.meta_desc .Summary)
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" ((or .Lastmod .Date).Format "2006-01-02T15:04:05Z07:00")
+    "mainEntityOfPage" (dict
+      "@type" "WebPage"
+      "@id" .Permalink
+    )
+    "image" $image
+    "url" .Permalink
+    "wordCount" .WordCount
+    "articleSection" "Engineering Blog"
+    "inLanguage" "en-US"
+    "publisher" (dict
+      "@type" "Organization"
+      "@id" "https://www.pulumi.com/#organization"
+      "name" "Pulumi"
+      "logo" (dict
+        "@type" "ImageObject"
+        "url" "https://www.pulumi.com/logos/brand/logo.png"
+      )
+    )
+  }}
+
+  {{/* Get enhanced author entities with knowledge graph properties */}}
+  {{ $authors := partial "schema/utils/author-entities.html" . }}
+  
+  {{ if $authors }}
+    {{ $schema = merge $schema (dict "author" $authors) }}
+  {{ else }}
+    {{ $schema = merge $schema (dict "author" (dict
+      "@type" "Organization"
+      "@id" "https://www.pulumi.com/#organization"
+    )) }}
+  {{ end }}
+
+  {{/* Add tags as keywords */}}
+  {{ with .Params.tags }}
+    {{ $schema = merge $schema (dict "keywords" (delimit . ", ")) }}
+  {{ end }}
+
+  {{/* AI Enhancement: Add speakable specification */}}
+  {{ $schema = merge $schema (dict "speakable" (dict
+    "@type" "SpeakableSpecification"
+    "cssSelector" (slice ".article-summary" ".blog-content h2" ".blog-content h3")
+  )) }}
+
+  {{/* AI Enhancement: Add articleBody for context */}}
+  {{ $content := .Content | plainify | truncate 5000 }}
+  {{ $schema = merge $schema (dict "articleBody" $content) }}
+
+  {{/* AI Enhancement: Add about and mentions */}}
+  {{ $schema = merge $schema (dict "about" (dict
+    "@type" "Thing"
+    "name" "Infrastructure as Code"
+    "@id" "https://www.pulumi.com/#pulumi-cli"
+  )) }}
+
+  {{/* Get technology entities with Wikipedia/Wikidata links */}}
+  {{ $mentions := partial "schema/utils/technology-entities.html" . }}
+  
+  {{/* Detect cloud providers */}}
+  {{ $cloudProviders := partial "schema/utils/cloud-provider-detector.html" . }}
+  
+  {{/* Extract cloud resource types and services */}}
+  {{ $cloudResources := partial "schema/utils/resource-type-extractor.html" . }}
+  
+  {{/* Detect infrastructure patterns */}}
+  {{ $infraPatterns := partial "schema/utils/infrastructure-patterns.html" . }}
+  
+  {{/* Combine all mentions and deduplicate */}}
+  {{ $allMentions := $mentions }}
+  {{ if $cloudResources.services }}
+    {{ $allMentions = $allMentions | append $cloudResources.services }}
+  {{ end }}
+  
+  {{/* Deduplicate mentions by @id or name */}}
+  {{ if $allMentions }}
+    {{ $mentionIds := slice }}
+    {{ $uniqueMentions := slice }}
+    {{ range $allMentions }}
+      {{ $identifier := or (index . "@id") .name }}
+      {{ if not (in $mentionIds $identifier) }}
+        {{ $uniqueMentions = $uniqueMentions | append . }}
+        {{ $mentionIds = $mentionIds | append $identifier }}
+      {{ end }}
+    {{ end }}
+    {{ if $uniqueMentions }}
+      {{ $schema = merge $schema (dict "mentions" $uniqueMentions) }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Get related content relationships */}}
+  {{ $relatedContent := partial "schema/utils/related-content.html" . }}
+  {{ if $relatedContent }}
+    {{ $schema = merge $schema (dict "relatedLink" $relatedContent) }}
+  {{ end }}
+  
+  {{/* Add cloud provider as targetPlatform */}}
+  {{ if $cloudProviders.primary }}
+    {{ $schema = merge $schema (dict "targetPlatform" $cloudProviders.primary) }}
+  {{ end }}
+  
+  {{/* Add infrastructure patterns as applicationCategory */}}
+  {{ if $infraPatterns }}
+    {{ $categories := slice }}
+    {{ range $infraPatterns }}
+      {{ $categories = $categories | append .name }}
+    {{ end }}
+    {{ $schema = merge $schema (dict "applicationCategory" $categories) }}
+  {{ end }}
+  
+  {{/* Add software requirements based on detected packages */}}
+  {{ $requirements := slice }}
+  {{ if in .Content "@pulumi/aws" }}
+    {{ $requirements = $requirements | append "@pulumi/aws" }}
+  {{ end }}
+  {{ if in .Content "@pulumi/azure" }}
+    {{ $requirements = $requirements | append "@pulumi/azure" }}
+  {{ end }}
+  {{ if in .Content "@pulumi/gcp" }}
+    {{ $requirements = $requirements | append "@pulumi/gcp" }}
+  {{ end }}
+  {{ if in .Content "@pulumi/kubernetes" }}
+    {{ $requirements = $requirements | append "@pulumi/kubernetes" }}
+  {{ end }}
+  {{ if $requirements }}
+    {{ $schema = merge $schema (dict "softwareRequirements" (delimit $requirements ", ")) }}
+  {{ end }}
+
+  {{/* Phase 4: Advanced Semantic Layer */}}
+  
+  {{/* Add discussionUrl if comments are enabled */}}
+  {{ if .Params.comments }}
+    {{ $schema = merge $schema (dict "discussionUrl" (printf "%s#comments" .Permalink)) }}
+  {{ end }}
+  
+  {{/* Add potential actions for blog posts */}}
+  {{ $actions := slice (dict
+    "@type" "ReadAction"
+    "target" .Permalink
+    "name" "Read Article"
+  ) }}
+  
+  {{ if .Params.github_url }}
+    {{ $actions = $actions | append (dict
+      "@type" "ViewAction"
+      "target" .Params.github_url
+      "name" "View Code on GitHub"
+    ) }}
+  {{ end }}
+  
+  {{ $schema = merge $schema (dict "potentialAction" $actions) }}
+  
+  {{/* Add work examples for technical blog posts */}}
+  {{ if in .Content "```" }}
+    {{ $examples := slice }}
+    {{ if in .Content "pulumi new" }}
+      {{ $examples = $examples | append (dict
+        "@type" "HowToStep"
+        "name" "Create Pulumi Project"
+        "text" "Initialize a new Pulumi project"
+        "tool" (dict "@id" "https://www.pulumi.com/#pulumi-cli")
+      ) }}
+    {{ end }}
+    {{ if in .Content "pulumi up" }}
+      {{ $examples = $examples | append (dict
+        "@type" "HowToStep"
+        "name" "Deploy Infrastructure"
+        "text" "Deploy infrastructure using Pulumi"
+        "tool" (dict "@id" "https://www.pulumi.com/#pulumi-cli")
+      ) }}
+    {{ end }}
+    {{ if $examples }}
+      {{ $schema = merge $schema (dict "step" $examples) }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Add isPartOf for blog series */}}
+  {{ with .Params.series }}
+    {{ $schema = merge $schema (dict "isPartOf" (dict
+      "@type" "BlogPosting"
+      "name" .
+      "url" (printf "https://www.pulumi.com/blog/series/%s/" (urlize .))
+    )) }}
+  {{ end }}
+  
+  {{/* Add backstory/context for announcement posts */}}
+  {{ if or (in .Title "Announcing") (in .Title "Introducing") }}
+    {{ $schema = merge $schema (dict "backstory" (dict
+      "@type" "CreativeWork"
+      "name" "Product Development"
+      "creator" (dict "@id" "https://www.pulumi.com/#organization")
+    )) }}
+  {{ end }}
+
+  <script type="application/ld+json">
+  {{ $schema | jsonify | safeJS }}
+  </script>
+{{ end }}

@@ -1,0 +1,137 @@
+{{/* Detect cloud provider from URL path and frontmatter */}}
+{{ $provider := dict }}
+{{ $url := .RelPermalink }}
+{{ $content := lower .Content }}
+
+{{/* Check frontmatter first */}}
+{{ with .Params.cloud }}
+  {{ if or (eq .slug "aws") (in (lower .name) "amazon") (in (lower .name) "aws") }}
+    {{ $provider = dict
+      "@type" "Organization"
+      "@id" "https://www.wikidata.org/wiki/Q456157"
+      "name" "Amazon Web Services"
+      "alternateName" "AWS"
+      "url" "https://aws.amazon.com"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/Amazon_Web_Services" "https://www.wikidata.org/wiki/Q456157")
+    }}
+  {{ else if or (eq .slug "azure") (in (lower .name) "azure") (in (lower .name) "microsoft") }}
+    {{ $provider = dict
+      "@type" "Organization"
+      "@id" "https://www.wikidata.org/wiki/Q1063364"
+      "name" "Microsoft Azure"
+      "alternateName" "Azure"
+      "url" "https://azure.microsoft.com"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/Microsoft_Azure" "https://www.wikidata.org/wiki/Q1063364")
+    }}
+  {{ else if or (eq .slug "gcp") (eq .slug "google-cloud") (in (lower .name) "google") (in (lower .name) "gcp") }}
+    {{ $provider = dict
+      "@type" "Organization"
+      "@id" "https://www.wikidata.org/wiki/Q14055576"
+      "name" "Google Cloud Platform"
+      "alternateName" "GCP"
+      "url" "https://cloud.google.com"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/Google_Cloud_Platform" "https://www.wikidata.org/wiki/Q14055576")
+    }}
+  {{ end }}
+{{ end }}
+
+{{/* If not in frontmatter, detect from URL */}}
+{{ if not $provider }}
+  {{ if or (in $url "/aws/") (in $url "/clouds/aws/") (in $url "/get-started/aws/") }}
+    {{ $provider = dict
+      "@type" "Organization"
+      "@id" "https://www.wikidata.org/wiki/Q456157"
+      "name" "Amazon Web Services"
+      "alternateName" "AWS"
+      "url" "https://aws.amazon.com"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/Amazon_Web_Services" "https://www.wikidata.org/wiki/Q456157")
+    }}
+  {{ else if or (in $url "/azure/") (in $url "/clouds/azure/") (in $url "/get-started/azure/") }}
+    {{ $provider = dict
+      "@type" "Organization"
+      "@id" "https://www.wikidata.org/wiki/Q1063364"
+      "name" "Microsoft Azure"
+      "alternateName" "Azure"
+      "url" "https://azure.microsoft.com"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/Microsoft_Azure" "https://www.wikidata.org/wiki/Q1063364")
+    }}
+  {{ else if or (in $url "/gcp/") (in $url "/clouds/gcp/") (in $url "/get-started/gcp/") (in $url "/google-cloud/") }}
+    {{ $provider = dict
+      "@type" "Organization"
+      "@id" "https://www.wikidata.org/wiki/Q14055576"
+      "name" "Google Cloud Platform"
+      "alternateName" "GCP"
+      "url" "https://cloud.google.com"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/Google_Cloud_Platform" "https://www.wikidata.org/wiki/Q14055576")
+    }}
+  {{ else if or (in $url "/kubernetes/") (in $url "/k8s/") }}
+    {{ $provider = dict
+      "@type" "SoftwareApplication"
+      "@id" "https://www.wikidata.org/wiki/Q22661306"
+      "name" "Kubernetes"
+      "alternateName" "K8s"
+      "url" "https://kubernetes.io"
+      "applicationCategory" "Container Orchestration"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/Kubernetes" "https://www.wikidata.org/wiki/Q22661306")
+    }}
+  {{ else if in $url "/digitalocean/" }}
+    {{ $provider = dict
+      "@type" "Organization"
+      "@id" "https://www.wikidata.org/wiki/Q14080290"
+      "name" "DigitalOcean"
+      "url" "https://www.digitalocean.com"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/DigitalOcean" "https://www.wikidata.org/wiki/Q14080290")
+    }}
+  {{ else if in $url "/linode/" }}
+    {{ $provider = dict
+      "@type" "Organization"
+      "@id" "https://www.wikidata.org/wiki/Q1825436"
+      "name" "Linode"
+      "url" "https://www.linode.com"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/Linode" "https://www.wikidata.org/wiki/Q1825436")
+    }}
+  {{ else if or (in $url "/cloudflare/") (in $content "cloudflare") }}
+    {{ $provider = dict
+      "@type" "Organization"
+      "@id" "https://www.wikidata.org/wiki/Q16832215"
+      "name" "Cloudflare"
+      "url" "https://www.cloudflare.com"
+      "sameAs" (slice "https://en.wikipedia.org/wiki/Cloudflare" "https://www.wikidata.org/wiki/Q16832215")
+    }}
+  {{ end }}
+{{ end }}
+
+{{/* Check content for multi-cloud scenarios */}}
+{{ $additionalProviders := slice }}
+{{ if $provider }}
+  {{ if and $provider.name (not (in $provider.name "Amazon")) }}
+    {{ if or (in $content " aws ") (in $content "@pulumi/aws") (in $content "aws:") }}
+      {{ $additionalProviders = $additionalProviders | append (dict
+        "@type" "Organization"
+        "@id" "https://www.wikidata.org/wiki/Q456157"
+        "name" "Amazon Web Services"
+      ) }}
+    {{ end }}
+  {{ end }}
+  {{ if and $provider.name (not (in $provider.name "Azure")) }}
+    {{ if or (in $content " azure ") (in $content "@pulumi/azure") (in $content "azure:") }}
+      {{ $additionalProviders = $additionalProviders | append (dict
+        "@type" "Organization"
+        "@id" "https://www.wikidata.org/wiki/Q1063364"
+        "name" "Microsoft Azure"
+      ) }}
+    {{ end }}
+  {{ end }}
+  {{ if and $provider.name (not (in $provider.name "Google")) }}
+    {{ if or (in $content " gcp ") (in $content "google cloud") (in $content "@pulumi/gcp") (in $content "gcp:") }}
+      {{ $additionalProviders = $additionalProviders | append (dict
+        "@type" "Organization"
+        "@id" "https://www.wikidata.org/wiki/Q14055576"
+        "name" "Google Cloud Platform"
+      ) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $result := dict "primary" $provider "additional" $additionalProviders }}
+{{ return $result }}
