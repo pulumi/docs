@@ -328,4 +328,183 @@ resources:
       name: "DigitalOcean"
       description: "Cloud Infrastructure Provider"
       applicationCategory: "Cloud"
-      sameAs: "https://www.wikidata.org/wiki/Q7728797"
+
+  # Modern AI/ML Services
+  - id: aws_bedrock
+    patterns:
+      - "bedrock"
+      - "aws:bedrock"
+      - "amazon bedrock"
+    url_pattern: "/bedrock/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/bedrock/"
+      name: "Amazon Bedrock"
+      description: "Fully managed service for foundation models"
+      applicationCategory: "AI/ML"
+      sameAs: "https://www.wikidata.org/wiki/Q124358384"
+
+  - id: aws_sagemaker
+    patterns:
+      - "sagemaker"
+      - "aws:sagemaker"
+    url_pattern: "/sagemaker/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/sagemaker/"
+      name: "Amazon SageMaker"
+      description: "Machine Learning Platform"
+      applicationCategory: "AI/ML"
+      sameAs: "https://www.wikidata.org/wiki/Q46831741"
+
+  - id: azure_openai
+    patterns:
+      - "azure openai"
+      - "azure:openai"
+      - "azure cognitive services openai"
+    url_pattern: "/azure-openai/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/cognitive-services/openai/"
+      name: "Azure OpenAI Service"
+      description: "Azure OpenAI Service for GPT models"
+      applicationCategory: "AI/ML"
+      sameAs: "https://www.wikidata.org/wiki/Q112916447"
+
+  - id: azure_ml
+    patterns:
+      - "azure ml"
+      - "azure machine learning"
+      - "azure:machinelearning"
+    url_pattern: "/azure-ml/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/machine-learning/"
+      name: "Azure Machine Learning"
+      description: "Cloud-based machine learning service"
+      applicationCategory: "AI/ML"
+      sameAs: "https://www.wikidata.org/wiki/Q85754434"
+
+  - id: gcp_vertex_ai
+    patterns:
+      - "vertex ai"
+      - "gcp:vertexai"
+      - "google vertex"
+    url_pattern: "/vertex-ai/"
+    schema:
+      type: "WebAPI"
+      id: "https://cloud.google.com/vertex-ai/docs"
+      name: "Google Vertex AI"
+      description: "Unified AI platform for ML workflows"
+      applicationCategory: "AI/ML"
+      sameAs: "https://www.wikidata.org/wiki/Q107417512"
+
+  # Container Orchestration Services
+  - id: aws_eks
+    patterns:
+      - "eks"
+      - "aws:eks"
+      - "elastic kubernetes service"
+    url_pattern: "/eks/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/eks/"
+      name: "Amazon EKS"
+      description: "Managed Kubernetes Service"
+      applicationCategory: "Container"
+      sameAs: "https://www.wikidata.org/wiki/Q53628743"
+
+  - id: azure_aks
+    patterns:
+      - "aks"
+      - "azure:aks"
+      - "azure kubernetes service"
+    url_pattern: "/aks/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/aks/"
+      name: "Azure Kubernetes Service"
+      description: "Managed Kubernetes Service"
+      applicationCategory: "Container"
+      sameAs: "https://www.wikidata.org/wiki/Q60748086"
+
+  - id: aws_ecs
+    patterns:
+      - "ecs"
+      - "aws:ecs"
+      - "elastic container service"
+    url_pattern: "/ecs/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/ecs/"
+      name: "Amazon ECS"
+      description: "Container Management Service"
+      applicationCategory: "Container"
+      sameAs: "https://www.wikidata.org/wiki/Q24935329"
+
+  # Observability Platforms
+  - id: datadog
+    patterns:
+      - "datadog"
+      - "dd:"
+    url_pattern: "/datadog/"
+    schema:
+      type: "SoftwareApplication"
+      id: "https://www.datadoghq.com/"
+      name: "Datadog"
+      description: "Monitoring and Analytics Platform"
+      applicationCategory: "Observability"
+      sameAs: "https://www.wikidata.org/wiki/Q5227881"
+
+  - id: new_relic
+    patterns:
+      - "new relic"
+      - "newrelic"
+    url_pattern: "/newrelic/"
+    schema:
+      type: "SoftwareApplication"
+      id: "https://newrelic.com/"
+      name: "New Relic"
+      description: "Application Performance Monitoring"
+      applicationCategory: "Observability"
+      sameAs: "https://www.wikidata.org/wiki/Q1983322"
+
+  - id: grafana
+    patterns:
+      - "grafana"
+    url_pattern: "/grafana/"
+    schema:
+      type: "SoftwareApplication"
+      id: "https://grafana.com/"
+      name: "Grafana"
+      description: "Open source analytics and monitoring"
+      applicationCategory: "Observability"
+      sameAs: "https://www.wikidata.org/wiki/Q19881875"
+
+  # Edge Computing
+  - id: aws_cloudfront
+    patterns:
+      - "cloudfront"
+      - "aws:cloudfront"
+    url_pattern: "/cloudfront/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.aws.amazon.com/cloudfront/"
+      name: "Amazon CloudFront"
+      description: "Content Delivery Network"
+      applicationCategory: "CDN"
+      sameAs: "https://www.wikidata.org/wiki/Q4740915"
+
+  - id: azure_frontdoor
+    patterns:
+      - "front door"
+      - "azure:frontdoor"
+      - "azure front door"
+    url_pattern: "/frontdoor/"
+    schema:
+      type: "WebAPI"
+      id: "https://docs.microsoft.com/azure/frontdoor/"
+      name: "Azure Front Door"
+      description: "Global content delivery network"
+      applicationCategory: "CDN"
+      sameAs: "https://www.wikidata.org/wiki/Q104767091"

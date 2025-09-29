@@ -44,6 +44,25 @@
     {{ partial "schema/content/qa.html" . }}
   {{ end }}
 
+  {{/* Video schema for YouTube embeds */}}
+  {{ if or (in .RawContent "{{< youtube") (in .Content "youtube.com/embed") }}
+    {{ partial "schema/content/video.html" . }}
+  {{ end }}
+
+  {{/* HowTo schema for step-by-step tutorials */}}
+  {{ if and .IsPage (or (in .Content "1. ") (in .Content "Step 1")) }}
+    {{ if or (eq .Type "docs") (eq .Type "tutorials") }}
+      {{ partial "schema/content/howto.html" . }}
+    {{ end }}
+  {{ end }}
+
+  {{/* SoftwareSourceCode schema for code examples */}}
+  {{ if and .IsPage (in .Content "```") }}
+    {{ if or (eq .Type "docs") (eq .Type "tutorials") (eq .Type "blog") }}
+      {{ partial "schema/content/code.html" . }}
+    {{ end }}
+  {{ end }}
+
   {{/* Keep backward compatibility for existing event schemas */}}
   {{ if or .Params.event_data .Params.exhibition_data }}
     {{ if not .Params.external }}
