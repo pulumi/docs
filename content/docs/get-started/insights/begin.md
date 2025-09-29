@@ -5,7 +5,7 @@ h1: "Pulumi Insights: Before you begin"
 meta_desc: This page provides an overview on how to get started with Pulumi Insights Accounts.
 weight: 2
 menu:
-  insights:
+  get-started:
     parent: insights-get-started
     identifier: insights-get-started-begin
     weight: 2

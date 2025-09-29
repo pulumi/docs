@@ -5,7 +5,7 @@ h1: "Pulumi Insights: Using Policies and Policy Remediation"
 meta_desc: Learn how to use Pulumi CrossGuard policies to evaluate cloud resources discovered through Pulumi Insights account discovery.
 weight: 6
 menu:
-  insights:
+  get-started:
     parent: insights-get-started
     identifier: insights-get-started-policies 
     weight: 6

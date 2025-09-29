@@ -5,7 +5,7 @@ h1: "Pulumi Insights: Manage Accounts and Scans"
 meta_desc: This page provides an overview on how to manage Pulumi Insights Accounts.
 weight: 4
 menu:
-  insights:
+  get-started:
     parent: insights-get-started
     identifier: insights-get-started-manage-accounts
     weight: 4

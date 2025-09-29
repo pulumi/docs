@@ -54,7 +54,7 @@ Select one of the following options to get started:
         </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="insights-get-started" href="/docs/insights/get-started/" class="tile h-full">
+        <a data-track="insights-get-started" href="/docs/get-started/insights/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-search-plus text-blue-400 pr-2"></i>Pulumi Insights</h4>
                 <p>This guide helps you get started with Pulumi Insight to discover and manage any cloud infrastructure</p>
@@ -127,7 +127,7 @@ Select one of the following options to get started:
         </a>
     </div>
         <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="insights-get-started" href="/docs/insights/get-started/" class="tile h-full">
+        <a data-track="insights-get-started" href="/docs/get-started/insights/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-search-plus text-blue-400 pr-2"></i>Pulumi Insights</h4>
                 <p>This guide helps you get started with Pulumi Insight to discover and manage any cloud infrastructure</p>
@@ -202,7 +202,7 @@ Select one of the following options to get started:
         </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="insights-get-started" href="/docs/insights/get-started/" class="tile h-full">
+        <a data-track="insights-get-started" href="/docs/get-started/insights/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-search-plus text-blue-400 pr-2"></i>Pulumi Insights</h4>
                 <p>This guide helps you get started with Pulumi Insight to discover and manage any cloud infrastructure</p>
@@ -277,7 +277,7 @@ Select one of the following options to get started:
         </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="insights-get-started" href="/docs/insights/get-started/" class="tile h-full">
+        <a data-track="insights-get-started" href="/docs/get-started/insights/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-search-plus text-blue-400 pr-2"></i>Pulumi Insights</h4>
                 <p>This guide helps you get started with Pulumi Insight to discover and manage any cloud infrastructure</p>

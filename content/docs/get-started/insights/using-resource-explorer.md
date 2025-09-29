@@ -5,7 +5,7 @@ h1: "Pulumi Insights: Using Resources Explorer"
 meta_desc: This page provides an overview on how to get started with Pulumi Insights Accounts.
 weight: 5
 menu:
-  insights:
+  get-started:
     parent: insights-get-started
     identifier: insights-get-started-resource-explorer
     weight: 5
