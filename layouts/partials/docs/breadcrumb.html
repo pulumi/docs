@@ -12,7 +12,7 @@
         {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2) }}
     {{ end }}
     {{ if not (isset .p1.Params "redirect_to") }}
-        <li {{ if eq .p1 .p2 }}class="active"{{ end }}>
+        <li {{ if eq .p1 .p2 }}class="active" aria-current="page"{{ end }}>
             <a data-track="breadcrumb" href="{{ .p1.RelPermalink }}">
                 {{ .p1.LinkTitle }}
             </a>

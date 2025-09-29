@@ -5,14 +5,14 @@
         {{ end }}
         <div id="accordion-table-of-contents" class="accordion">
             <div>
-                <input type="checkbox" id="accordion-checkbox-table-of-contents" />
+                <input type="checkbox" id="accordion-checkbox-table-of-contents" aria-expanded="false" aria-controls="toc-content" />
                 <label for="accordion-checkbox-table-of-contents" class="show">
                     <div class="heading">
                         <div class="icon-heading-wrapper">
                             <div class="icon icon-12-12 icon-on-this-page"></div>
                             <h2 class="no-anchor">On this page</h2>
                         </div>
-                        <div class="icon icon-18-18 expand-more-18-18"></div>
+                        <div class="icon icon-18-18 expand-more-18-18" aria-hidden="true"></div>
                     </div>
                 </label>
                 <label for="accordion-checkbox-table-of-contents" class="hide">
@@ -21,10 +21,10 @@
                             <div class="icon icon-12-12 icon-on-this-page"></div>
                             <h2 class="no-anchor">On this page</h2>
                         </div>
-                        <div class="icon icon-18-18 expand-more-18-18"></div>
+                        <div class="icon icon-18-18 expand-more-18-18" aria-hidden="true"></div>
                     </div>
                 </label>
-                <div class="accordion-content flex">
+                <div id="toc-content" class="accordion-content flex">
                     <div class="content">
                         <ul class="table-of-contents-list">
                             {{/* This will be populated dynamically with all H2s and H3s on the page; see ts/misc.ts */}}

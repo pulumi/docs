@@ -23,6 +23,17 @@
     <!-- Our CSS and JS bundles. -->
     {{ partial "assets" . }}
 
+    <!-- Enhanced robots meta tag for better crawl control -->
+    {{ if and (not .Params.block_external_search_index) (not .Data.Singular) }}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    {{ end }}
+
+    <!-- Preconnect hints for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.segment.com" crossorigin>
+    {{ if getenv "ALGOLIA_APP_ID" }}
+        <link rel="preconnect" href="https://{{ getenv "ALGOLIA_APP_ID" }}-dsn.algolia.net" crossorigin>
+    {{ end }}
 
     <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
     <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
