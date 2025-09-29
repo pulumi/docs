@@ -9,4 +9,6 @@ menu:
         parent: get-started-home
         identifier: iac-get-started
         weight: 20
+aliases:
+    - /docs/iac/get-started/
 ---

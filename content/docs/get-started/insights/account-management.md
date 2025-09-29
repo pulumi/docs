@@ -9,6 +9,8 @@ menu:
     parent: insights-get-started
     identifier: insights-get-started-manage-accounts
     weight: 4
+aliases:
+    - /docs/insights/get-started/account-management
 ---
 
 Now that you have created a new account you can click on the **Accounts** page to see a list of all your created accounts, the last update and number of resources discovered.

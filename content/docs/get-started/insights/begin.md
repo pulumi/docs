@@ -9,6 +9,8 @@ menu:
     parent: insights-get-started
     identifier: insights-get-started-begin
     weight: 2
+aliases:
+    - /docs/insights/get-started/begin
 ---
 
 ## Before you begin
