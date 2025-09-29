@@ -173,13 +173,13 @@ learn:
               type: secondary
               action: Book a Demo
         - title: Learn more
-          description: Explore the documentation and migration guides to implement ESC in your infrastructure.
+          description: Explore the documentation and Get Started guides to implement ESC in your infrastructure.
           buttons:
             - link: /docs/esc/
               type: primary
               action: Read the Docs
-            - link: /docs/esc/get-started/migrate/
+            - link: /docs/esc/get-started/
               type: secondary
-              action: Migration Guide
+              action: Get Started
 
 ---
