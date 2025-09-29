@@ -8,7 +8,7 @@ menu:
         name: Kubernetes
         identifier: kubernetes-get-started
         parent: iac-get-started
-        weight: 4
+        weight: 40
 aliases:
     - /docs/iac/get-started/kubernetes/
     - /docs/quickstart/kubernetes/

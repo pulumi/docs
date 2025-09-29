@@ -8,5 +8,5 @@ menu:
         name: Infrastructure as Code
         parent: get-started-home
         identifier: iac-get-started
-        weight: 3
+        weight: 20
 ---

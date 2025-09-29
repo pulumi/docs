@@ -7,7 +7,7 @@ menu:
     get-started:
         name: Terraform Users
         parent: iac-get-started
-        weight: 5
+        weight: 50
         identifier: terraform-get-started
 
 aliases:

@@ -8,7 +8,7 @@ menu:
         name: Google Cloud
         identifier: gcp-get-started
         parent: iac-get-started
-        weight: 3
+        weight: 30
 aliases:
     - /docs/iac/get-started/gcp/
     - /docs/quickstart/gcp/

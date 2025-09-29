@@ -7,7 +7,7 @@ menu:
   get-started:
     parent: get-started-home
     identifier: esc-get-started
-    weight: 2
+    weight: 30
 aliases:
   - /docs/esc/get-started/
   - /docs/pulumi-cloud/esc/get-started/
