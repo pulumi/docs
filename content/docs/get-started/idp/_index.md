@@ -8,7 +8,7 @@ menu:
     name: Internal Developer Platform
     parent: get-started-home
     identifier: idp-get-started
-    weight: 30
+    weight: 50
 aliases:
     - /docs/idp/get-started/
 ---
