@@ -44,7 +44,7 @@
     "@context" "https://schema.org"
     "@type" "BlogPosting"
     "@id" (printf "%s#article" .Permalink)
-    "headline" .Title
+    "headline" (or .Params.h1 .Title)
     "description" (or .Params.meta_desc .Summary)
     "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
     "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
