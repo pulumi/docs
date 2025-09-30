@@ -9,7 +9,7 @@ menu:
     parent: esc-get-started
     identifier: esc-get-started-import-environments
 aliases:
-  - /docs/esc/get-started/import-environments
+  - /docs/esc/get-started/import-environments/
 ---
 
 ## Overview
