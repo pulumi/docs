@@ -6,12 +6,13 @@ h1: Resource options
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
-    parent: iac-concepts
+    parent: iac-concepts-resources
     identifier: options-concepts
     weight: 50
 aliases:
-- /docs/intro/concepts/resources/options/
-- /docs/concepts/options/
+  - /docs/iac/concepts/options/
+  - /docs/intro/concepts/resources/options/
+  - /docs/concepts/options/
 ---
 
 All Pulumi IaC resources support a common set of options that allow you to customize how your resources are managed. Resource options allow you to do things like protect resources from being deleted, express more fine-grained control to the order in which resources are changed, or apply custom code that will allow you to change the properties of your resources.

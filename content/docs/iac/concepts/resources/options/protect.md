@@ -10,8 +10,9 @@ menu:
     parent: options-concepts
     weight: 11
 aliases:
-- /docs/intro/concepts/resources/options/protect/
-- /docs/concepts/options/protect/
+  - /docs/iac/concepts/options/protect/
+  - /docs/intro/concepts/resources/options/protect/
+  - /docs/concepts/options/protect/
 ---
 
 The `protect` resource option marks a resource as protected. A protected resource cannot be deleted directly, and it will be an error to do a Pulumi deployment which tries to delete a protected resource for any reason.

@@ -10,8 +10,9 @@ menu:
     parent: options-concepts
     weight: 7
 aliases:
-- /docs/intro/concepts/resources/options/hooks/
-- /docs/concepts/options/hooks/
+  - /docs/iac/concepts/options/hooks/
+  - /docs/intro/concepts/resources/options/hooks/
+  - /docs/concepts/options/hooks/
 ---
 
 The `hooks` resource option provides a set of resource hooks linked to a resource. Hooks are used to execute custom logic at specific points in the resource lifecycle, such as before or after creation, update, or deletion.

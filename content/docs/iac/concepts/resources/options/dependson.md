@@ -10,8 +10,9 @@ menu:
     parent: options-concepts
     weight: 6
 aliases:
-- /docs/intro/concepts/resources/options/dependson/
-- /docs/concepts/options/dependson/
+  - /docs/iac/concepts/options/dependson/
+  - /docs/intro/concepts/resources/options/dependson/
+  - /docs/concepts/options/dependson/
 ---
 
 The `dependsOn` resource option creates a list of explicit dependencies between resources.

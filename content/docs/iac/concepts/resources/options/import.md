@@ -10,8 +10,9 @@ menu:
     parent: options-concepts
     weight: 9
 aliases:
-- /docs/intro/concepts/resources/options/import/
-- /docs/concepts/options/import/
+  - /docs/iac/concepts/options/import/
+  - /docs/intro/concepts/resources/options/import/
+  - /docs/concepts/options/import/
 ---
 
 The `import` resource option imports an existing cloud resource so that Pulumi can manage it. Imported resources can have been provisioned by any other method, including manually in the cloud console or with the cloud CLI.

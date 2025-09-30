@@ -10,8 +10,8 @@ menu:
     parent: options-concepts
     weight: 4
 aliases:
-- /docs/intro/concepts/resources/options/deletebeforereplace/
-- /docs/concepts/options/deletebeforereplace/
+  - /docs/intro/concepts/resources/options/deletebeforereplace/
+  - /docs/concepts/options/deletebeforereplace/
 ---
 
 A resource may need to be replaced if an immutable property changes. In these cases, cloud providers do not support updating an existing resource so a new instance will be created and the old one deleted. By default, to minimize downtime, Pulumi creates new instances of resources before deleting old ones.

@@ -10,6 +10,7 @@ menu:
     parent: options-concepts
     weight: 2
 aliases:
+  - /docs/iac/concepts/options/aliases/
   - /docs/intro/concepts/resources/#aliases
   - /docs/intro/concepts/resources/options/aliases/
   - /docs/concepts/options/aliases/
