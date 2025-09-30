@@ -75,6 +75,8 @@ resources:
     patterns:
       - "aws:eks"
       - "eks.cluster"
+      - "eks"
+      - "elastic kubernetes service"
     url_pattern: "/eks/"
     schema:
       type: "WebAPI"
@@ -82,13 +84,15 @@ resources:
       name: "Amazon EKS"
       description: "Managed Kubernetes Service"
       applicationCategory: "Container"
-      sameAs: "https://www.wikidata.org/wiki/Q56309299"
+      sameAs: "https://www.wikidata.org/wiki/Q53628743"
   
   - id: aws_ecs
     patterns:
       - "aws:ecs"
       - "ecs.cluster"
       - "ecs.service"
+      - "ecs"
+      - "elastic container service"
     url_pattern: "/ecs/"
     schema:
       type: "WebAPI"
@@ -96,7 +100,7 @@ resources:
       name: "Amazon ECS"
       description: "Container Orchestration Service"
       applicationCategory: "Container"
-      sameAs: "https://www.wikidata.org/wiki/Q21166058"
+      sameAs: "https://www.wikidata.org/wiki/Q24935329"
   
   - id: aws_api_gateway
     patterns:
@@ -145,7 +149,7 @@ resources:
       - "azure:storage"
       - "storage.account"
       - "blob storage"
-    url_pattern: ""
+    url_pattern: "/storage/"
     schema:
       type: "WebAPI"
       id: "https://docs.microsoft.com/azure/storage/"
@@ -159,7 +163,7 @@ resources:
       - "azure:compute"
       - "virtualmachine"
       - "azure vm"
-    url_pattern: ""
+    url_pattern: "/compute/"
     schema:
       type: "WebAPI"
       id: "https://docs.microsoft.com/azure/virtual-machines/"
@@ -173,7 +177,7 @@ resources:
       - "azure:web"
       - "azure functions"
       - "function app"
-    url_pattern: ""
+    url_pattern: "/functions/"
     schema:
       type: "WebAPI"
       id: "https://docs.microsoft.com/azure/azure-functions/"
@@ -187,7 +191,7 @@ resources:
       - "azure:sql"
       - "sql database"
       - "azure sql"
-    url_pattern: ""
+    url_pattern: "/sql/"
     schema:
       type: "WebAPI"
       id: "https://docs.microsoft.com/azure/sql-database/"
@@ -200,7 +204,7 @@ resources:
     patterns:
       - "azure:cosmosdb"
       - "cosmos db"
-    url_pattern: ""
+    url_pattern: "/cosmosdb/"
     schema:
       type: "WebAPI"
       id: "https://docs.microsoft.com/azure/cosmos-db/"
@@ -213,14 +217,16 @@ resources:
     patterns:
       - "aks"
       - "azure kubernetes"
-    url_pattern: ""
+      - "azure:aks"
+      - "azure kubernetes service"
+    url_pattern: "/aks/"
     schema:
       type: "WebAPI"
       id: "https://docs.microsoft.com/azure/aks/"
       name: "Azure Kubernetes Service"
       description: "Managed Kubernetes Service"
       applicationCategory: "Container"
-      sameAs: "https://www.wikidata.org/wiki/Q47513312"
+      sameAs: "https://www.wikidata.org/wiki/Q60748086"
   
   # Google Cloud Resources
   - id: gcp_storage
@@ -228,7 +234,7 @@ resources:
       - "gcp:storage"
       - "cloud storage"
       - "gcs bucket"
-    url_pattern: ""
+    url_pattern: "/storage/"
     schema:
       type: "WebAPI"
       id: "https://cloud.google.com/storage/docs"
@@ -242,7 +248,7 @@ resources:
       - "gcp:compute"
       - "compute engine"
       - "gce instance"
-    url_pattern: ""
+    url_pattern: "/compute/"
     schema:
       type: "WebAPI"
       id: "https://cloud.google.com/compute/docs"
@@ -255,7 +261,7 @@ resources:
     patterns:
       - "cloud functions"
       - "gcp:cloudfunctions"
-    url_pattern: ""
+    url_pattern: "/functions/"
     schema:
       type: "WebAPI"
       id: "https://cloud.google.com/functions/docs"
@@ -268,7 +274,7 @@ resources:
     patterns:
       - "cloud sql"
       - "gcp:sql"
-    url_pattern: ""
+    url_pattern: "/sql/"
     schema:
       type: "WebAPI"
       id: "https://cloud.google.com/sql/docs"
@@ -281,7 +287,7 @@ resources:
     patterns:
       - "bigquery"
       - "gcp:bigquery"
-    url_pattern: ""
+    url_pattern: "/bigquery/"
     schema:
       type: "WebAPI"
       id: "https://cloud.google.com/bigquery/docs"
@@ -294,7 +300,7 @@ resources:
     patterns:
       - "gke"
       - "google kubernetes engine"
-    url_pattern: ""
+    url_pattern: "/gke/"
     schema:
       type: "WebAPI"
       id: "https://cloud.google.com/kubernetes-engine/docs"
@@ -399,49 +405,7 @@ resources:
       applicationCategory: "AI/ML"
       sameAs: "https://www.wikidata.org/wiki/Q107417512"
 
-  # Container Orchestration Services
-  - id: aws_eks
-    patterns:
-      - "eks"
-      - "aws:eks"
-      - "elastic kubernetes service"
-    url_pattern: "/eks/"
-    schema:
-      type: "WebAPI"
-      id: "https://docs.aws.amazon.com/eks/"
-      name: "Amazon EKS"
-      description: "Managed Kubernetes Service"
-      applicationCategory: "Container"
-      sameAs: "https://www.wikidata.org/wiki/Q53628743"
-
-  - id: azure_aks
-    patterns:
-      - "aks"
-      - "azure:aks"
-      - "azure kubernetes service"
-    url_pattern: "/aks/"
-    schema:
-      type: "WebAPI"
-      id: "https://docs.microsoft.com/azure/aks/"
-      name: "Azure Kubernetes Service"
-      description: "Managed Kubernetes Service"
-      applicationCategory: "Container"
-      sameAs: "https://www.wikidata.org/wiki/Q60748086"
-
-  - id: aws_ecs
-    patterns:
-      - "ecs"
-      - "aws:ecs"
-      - "elastic container service"
-    url_pattern: "/ecs/"
-    schema:
-      type: "WebAPI"
-      id: "https://docs.aws.amazon.com/ecs/"
-      name: "Amazon ECS"
-      description: "Container Management Service"
-      applicationCategory: "Container"
-      sameAs: "https://www.wikidata.org/wiki/Q24935329"
-
+  # Container Orchestration Services (moved to main sections above)
   # Observability Platforms
   - id: datadog
     patterns:
