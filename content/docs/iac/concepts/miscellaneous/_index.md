@@ -3,6 +3,8 @@ title_tag: Miscellaneous
 meta_desc: Learn more about miscellaneous concepts in Pulumi.
 title: Miscellaneous
 h1: Miscellaneous Concepts
+no_overview: true
+redirect_to: /docs/iac/concepts
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
