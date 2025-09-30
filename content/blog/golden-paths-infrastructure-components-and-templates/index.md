@@ -41,7 +41,7 @@ This post is part of our IDP Best Practices series:
 - Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
 
 {{% notes type="tip" %}}
-**Want hands-on experience?** Enroll in the free [IDP Builder Workshop Series](https://info.pulumi.com/idp/internal-developer-platform-workshops-course) to access recordings, demo code, slides, and hands-on guidance. The complete code examples from this post are available on [GitHub](https://github.com/pulumi/workshops/tree/main/golden-paths-infrastructure-components-and-templates).
+The complete code examples from this post are available on [GitHub](https://github.com/pulumi/workshops/tree/main/golden-paths-infrastructure-components-and-templates).
 {{% /notes %}}
 
 ## The Platform Engineering Layer Cake: A Model for IDPs
