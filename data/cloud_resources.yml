@@ -11,7 +11,7 @@ resources:
       - "s3 bucket"
     url_pattern: "/s3/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/s3/"
       name: "Amazon S3"
       description: "Object Storage Service"
@@ -25,7 +25,7 @@ resources:
       - "ec2 instance"
     url_pattern: "/ec2/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/ec2/"
       name: "Amazon EC2"
       description: "Elastic Compute Cloud"
@@ -38,7 +38,7 @@ resources:
       - "lambda.function"
     url_pattern: "/lambda/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/lambda/"
       name: "AWS Lambda"
       description: "Serverless Computing Service"
@@ -51,7 +51,7 @@ resources:
       - "rds.instance"
     url_pattern: "/rds/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/rds/"
       name: "Amazon RDS"
       description: "Relational Database Service"
@@ -64,7 +64,7 @@ resources:
       - "dynamodb.table"
     url_pattern: "/dynamodb/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/dynamodb/"
       name: "Amazon DynamoDB"
       description: "NoSQL Database Service"
@@ -79,7 +79,7 @@ resources:
       - "elastic kubernetes service"
     url_pattern: "/eks/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/eks/"
       name: "Amazon EKS"
       description: "Managed Kubernetes Service"
@@ -95,7 +95,7 @@ resources:
       - "elastic container service"
     url_pattern: "/ecs/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/ecs/"
       name: "Amazon ECS"
       description: "Container Orchestration Service"
@@ -108,7 +108,7 @@ resources:
       - "api gateway"
     url_pattern: "/api-gateway/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/apigateway/"
       name: "Amazon API Gateway"
       description: "API Management Service"
@@ -122,7 +122,7 @@ resources:
       - "iam.policy"
     url_pattern: "/iam/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/iam/"
       name: "AWS IAM"
       description: "Identity and Access Management"
@@ -136,7 +136,7 @@ resources:
       - "subnet"
     url_pattern: "/vpc/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/vpc/"
       name: "Amazon VPC"
       description: "Virtual Private Cloud"
@@ -151,7 +151,7 @@ resources:
       - "blob storage"
     url_pattern: "/storage/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.microsoft.com/azure/storage/"
       name: "Azure Storage"
       description: "Cloud Storage Service"
@@ -165,7 +165,7 @@ resources:
       - "azure vm"
     url_pattern: "/compute/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.microsoft.com/azure/virtual-machines/"
       name: "Azure Virtual Machines"
       description: "Cloud Compute Service"
@@ -179,7 +179,7 @@ resources:
       - "function app"
     url_pattern: "/functions/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.microsoft.com/azure/azure-functions/"
       name: "Azure Functions"
       description: "Serverless Computing Service"
@@ -193,7 +193,7 @@ resources:
       - "azure sql"
     url_pattern: "/sql/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.microsoft.com/azure/sql-database/"
       name: "Azure SQL Database"
       description: "Managed Relational Database"
@@ -206,7 +206,7 @@ resources:
       - "cosmos db"
     url_pattern: "/cosmosdb/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.microsoft.com/azure/cosmos-db/"
       name: "Azure Cosmos DB"
       description: "NoSQL Database Service"
@@ -221,7 +221,7 @@ resources:
       - "azure kubernetes service"
     url_pattern: "/aks/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.microsoft.com/azure/aks/"
       name: "Azure Kubernetes Service"
       description: "Managed Kubernetes Service"
@@ -236,7 +236,7 @@ resources:
       - "gcs bucket"
     url_pattern: "/storage/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://cloud.google.com/storage/docs"
       name: "Google Cloud Storage"
       description: "Object Storage Service"
@@ -250,7 +250,7 @@ resources:
       - "gce instance"
     url_pattern: "/compute/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://cloud.google.com/compute/docs"
       name: "Google Compute Engine"
       description: "Virtual Machine Service"
@@ -263,7 +263,7 @@ resources:
       - "gcp:cloudfunctions"
     url_pattern: "/functions/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://cloud.google.com/functions/docs"
       name: "Google Cloud Functions"
       description: "Serverless Computing Service"
@@ -276,7 +276,7 @@ resources:
       - "gcp:sql"
     url_pattern: "/sql/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://cloud.google.com/sql/docs"
       name: "Google Cloud SQL"
       description: "Managed Relational Database"
@@ -289,7 +289,7 @@ resources:
       - "gcp:bigquery"
     url_pattern: "/bigquery/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://cloud.google.com/bigquery/docs"
       name: "Google BigQuery"
       description: "Data Warehouse Service"
@@ -302,7 +302,7 @@ resources:
       - "google kubernetes engine"
     url_pattern: "/gke/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://cloud.google.com/kubernetes-engine/docs"
       name: "Google Kubernetes Engine"
       description: "Managed Kubernetes Service"
@@ -343,7 +343,7 @@ resources:
       - "amazon bedrock"
     url_pattern: "/bedrock/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/bedrock/"
       name: "Amazon Bedrock"
       description: "Fully managed service for foundation models"
@@ -356,7 +356,7 @@ resources:
       - "aws:sagemaker"
     url_pattern: "/sagemaker/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/sagemaker/"
       name: "Amazon SageMaker"
       description: "Machine Learning Platform"
@@ -370,7 +370,7 @@ resources:
       - "azure cognitive services openai"
     url_pattern: "/azure-openai/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.microsoft.com/azure/cognitive-services/openai/"
       name: "Azure OpenAI Service"
       description: "Azure OpenAI Service for GPT models"
@@ -384,7 +384,7 @@ resources:
       - "azure:machinelearning"
     url_pattern: "/azure-ml/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.microsoft.com/azure/machine-learning/"
       name: "Azure Machine Learning"
       description: "Cloud-based machine learning service"
@@ -398,7 +398,7 @@ resources:
       - "google vertex"
     url_pattern: "/vertex-ai/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://cloud.google.com/vertex-ai/docs"
       name: "Google Vertex AI"
       description: "Unified AI platform for ML workflows"
@@ -452,7 +452,7 @@ resources:
       - "aws:cloudfront"
     url_pattern: "/cloudfront/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.aws.amazon.com/cloudfront/"
       name: "Amazon CloudFront"
       description: "Content Delivery Network"
@@ -466,7 +466,7 @@ resources:
       - "azure front door"
     url_pattern: "/frontdoor/"
     schema:
-      type: "WebAPI"
+      type: "SoftwareApplication"
       id: "https://docs.microsoft.com/azure/frontdoor/"
       name: "Azure Front Door"
       description: "Global content delivery network"

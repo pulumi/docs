@@ -78,7 +78,7 @@
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": {{ $breadcrumbs | jsonify }}
+  "itemListElement": {{ $breadcrumbs | jsonify | safeJS }}
 }
 </script>
 {{ end }}
