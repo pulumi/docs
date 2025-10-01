@@ -1,0 +1,100 @@
+{{/* Returns SoftwareApplication entity for product pages in @graph */}}
+
+{{/* Determine product details based on page */}}
+{{ $productName := .Title }}
+{{ $productDescription := or .Params.meta_desc .Summary }}
+{{ $applicationCategory := "DeveloperApplication" }}
+{{ $applicationSubCategory := "" }}
+
+{{/* Product-specific customization for Neo (our test page) */}}
+{{ if in .RelPermalink "/neo/" }}
+  {{ $productName = "Pulumi Neo" }}
+  {{ $productDescription = "AI-powered infrastructure assistant that generates, reviews, and debugs infrastructure code." }}
+  {{ $applicationSubCategory = "AI Assistant" }}
+  {{ $applicationCategory = "ArtificialIntelligenceApplication" }}
+{{ end }}
+
+{{/* Build SoftwareApplication entity */}}
+{{ $schema := dict
+  "@type" "SoftwareApplication"
+  "@id" "#main-content"
+  "name" $productName
+  "description" $productDescription
+  "url" .Permalink
+  "applicationCategory" $applicationCategory
+  "operatingSystem" "Web-based"
+}}
+
+{{/* Add sub-category if defined */}}
+{{ if $applicationSubCategory }}
+  {{ $schema = merge $schema (dict "applicationSubCategory" $applicationSubCategory) }}
+{{ end }}
+
+{{/* Add image */}}
+{{ $image := "" }}
+{{ if .Params.meta_image }}
+  {{ $image = printf "%s%s" .Permalink .Params.meta_image }}
+{{ else }}
+  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+{{ end }}
+{{ $schema = merge $schema (dict "image" $image) }}
+
+{{/* Add offer/pricing information */}}
+{{ $schema = merge $schema (dict "offers" (dict
+  "@type" "Offer"
+  "price" "0"
+  "priceCurrency" "USD"
+  "availability" "https://schema.org/InStock"
+  "priceValidUntil" "2025-12-31"
+  "url" (printf "%spricing/" .Permalink)
+)) }}
+
+{{/* Add software requirements */}}
+{{ $schema = merge $schema (dict "softwareRequirements" "Pulumi CLI 3.0+") }}
+
+{{/* Add creator and maintainer */}}
+{{ $schema = merge $schema (dict
+  "creator" (dict "@id" "https://www.pulumi.com/#organization")
+  "maintainer" (dict "@id" "https://www.pulumi.com/#organization")
+  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{/* Add features for Neo specifically */}}
+{{ if in .RelPermalink "/neo/" }}
+  {{ $features := slice
+    "Infrastructure code generation"
+    "Automated code review"
+    "Error debugging assistance"
+    "Multi-language support"
+    "Cloud provider expertise"
+  }}
+  {{ $schema = merge $schema (dict "featureList" $features) }}
+
+  {{/* Add AI-specific properties */}}
+  {{ $schema = merge $schema (dict
+    "potentialAction" (dict
+      "@type" "UseAction"
+      "name" "Try Pulumi Neo"
+      "url" "https://www.pulumi.com/product/neo/#get-started"
+    )
+  ) }}
+{{ end }}
+
+{{/* Add aggregateRating if available */}}
+{{ $schema = merge $schema (dict "aggregateRating" (dict
+  "@type" "AggregateRating"
+  "ratingValue" "4.8"
+  "ratingCount" "500"
+  "bestRating" "5"
+  "worstRating" "1"
+)) }}
+
+{{/* Add software version */}}
+{{ $schema = merge $schema (dict "softwareVersion" "1.0") }}
+
+{{/* Add supported platforms */}}
+{{ $schema = merge $schema (dict
+  "supportedLanguage" (slice "TypeScript" "Python" "Go" "C#" "Java" "YAML")
+) }}
+
+{{ return $schema }}

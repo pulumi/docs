@@ -1,0 +1,106 @@
+{{/* Returns BlogPosting entity for @graph */}}
+
+{{/* Get content for analysis */}}
+{{ $content := .Content | plainify }}
+{{ $wordCount := $content | countwords }}
+{{ if not $wordCount }}
+  {{ $wordCount = 500 }}
+{{ end }}
+
+{{/* Build BlogPosting entity */}}
+{{ $schema := dict
+  "@type" "BlogPosting"
+  "@id" "#main-content"
+  "headline" .Title
+  "url" .Permalink
+  "wordCount" $wordCount
+  "inLanguage" "en-US"
+  "articleSection" "Engineering Blog"
+}}
+
+{{/* Add dates */}}
+{{ $publishDate := .PublishDate }}
+{{ $modifiedDate := .Lastmod }}
+{{ if not $modifiedDate }}
+  {{ $modifiedDate = $publishDate }}
+{{ end }}
+{{ $schema = merge $schema (dict
+  "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
+) }}
+
+{{/* Add description */}}
+{{ with (or .Params.meta_desc .Summary) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{/* Add image */}}
+{{ $image := "" }}
+{{ if .Params.meta_image }}
+  {{ $image = printf "%s%s" .Permalink .Params.meta_image }}
+{{ else }}
+  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+{{ end }}
+{{ $schema = merge $schema (dict "image" $image) }}
+
+{{/* Add keywords from tags */}}
+{{ with .Params.tags }}
+  {{ $keywords := delimit . ", " }}
+  {{ $schema = merge $schema (dict "keywords" $keywords) }}
+{{ end }}
+
+{{/* Add author */}}
+{{ $authors := slice }}
+{{ with .Params.authors }}
+  {{ range . }}
+    {{ $authorName := . }}
+    {{ $authorEntity := dict
+      "@type" "Person"
+      "@id" (printf "https://www.pulumi.com/authors/%s/#person" (. | urlize))
+      "name" $authorName
+      "url" (printf "https://www.pulumi.com/authors/%s/" (. | urlize))
+      "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+    }}
+    {{ $authors = $authors | append $authorEntity }}
+  {{ end }}
+{{ else }}
+  {{ $authors = $authors | append (dict
+    "@type" "Person"
+    "name" "Pulumi Team"
+    "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+  ) }}
+{{ end }}
+{{ if $authors }}
+  {{ $schema = merge $schema (dict "author" $authors) }}
+{{ end }}
+
+{{/* Add publisher reference */}}
+{{ $schema = merge $schema (dict
+  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{/* Add speakable for voice search */}}
+{{ $schema = merge $schema (dict "speakable" (dict
+  "@type" "SpeakableSpecification"
+  "cssSelector" (slice "article h1" "article h2" "article p:first-of-type")
+)) }}
+
+{{/* Add about field for main topic */}}
+{{ $schema = merge $schema (dict
+  "about" (dict
+    "@type" "Thing"
+    "@id" "https://www.pulumi.com/#pulumi-cli"
+    "name" "Infrastructure as Code"
+  )
+) }}
+
+{{/* Add article body (truncated for schema) */}}
+{{ $articleBody := $content | truncate 5000 }}
+{{ $schema = merge $schema (dict "articleBody" $articleBody) }}
+
+{{/* Add mainEntityOfPage reference */}}
+{{ $schema = merge $schema (dict
+  "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink))
+) }}
+
+{{ return $schema }}

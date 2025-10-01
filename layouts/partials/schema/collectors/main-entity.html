@@ -1,0 +1,23 @@
+{{/* Returns main content entity based on page type */}}
+
+{{ $entity := dict }}
+
+{{/* Determine entity based on page type */}}
+{{ if and (eq .Type "blog") .IsPage }}
+  {{ $entity = partial "schema/collectors/blog-entity.html" . }}
+
+{{ else if eq .Type "tutorials" }}
+  {{ $entity = partial "schema/collectors/course-entity.html" . }}
+
+{{ else if eq .Type "docs" }}
+  {{ $entity = partial "schema/collectors/article-entity.html" . }}
+
+{{ else if eq .Section "product" }}
+  {{ $entity = partial "schema/collectors/product-entity.html" . }}
+
+{{ else if .IsHome }}
+  {{/* Homepage doesn't have a main content entity, handled separately in graph-builder */}}
+  {{ $entity = dict }}
+{{ end }}
+
+{{ return $entity }}

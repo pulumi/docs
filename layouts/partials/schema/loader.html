@@ -3,6 +3,26 @@
 {{/* Skip schemas for external content */}}
 {{ if not .Params.external }}
 
+  {{/* Feature flag for @graph implementation on test pages */}}
+  {{ $enableGraph := false }}
+  {{ $testPages := slice
+      "/blog/pulumi-neo/"
+      "/tutorials/creating-resources-aws/"
+      "/docs/iac/clouds/aws/guides/cdk/"
+      "/product/neo/"
+      "/"
+  }}
+
+  {{/* Check if current page is in test group */}}
+  {{ if in $testPages .RelPermalink }}
+    {{ $enableGraph = true }}
+  {{ end }}
+
+  {{/* Use @graph for test pages */}}
+  {{ if $enableGraph }}
+    {{ partial "schema/graph-builder.html" . }}
+  {{ else }}
+
   {{/* Homepage: Load all base schemas */}}
   {{ if .IsHome }}
     {{ partial "schema/base/website.html" . }}
@@ -69,5 +89,7 @@
       {{ partial "schema/content/event.html" . }}
     {{ end }}
   {{ end }}
+
+  {{ end }}{{/* End else for graph mode */}}
 
 {{ end }}

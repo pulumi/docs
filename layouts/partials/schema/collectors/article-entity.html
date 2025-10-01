@@ -1,0 +1,99 @@
+{{/* Returns Article entity for @graph */}}
+
+{{/* Get content for analysis */}}
+{{ $content := .Content | plainify }}
+{{ $wordCount := $content | countwords }}
+{{ if not $wordCount }}
+  {{ $wordCount = 500 }}
+{{ end }}
+
+{{/* Build Article entity */}}
+{{ $schema := dict
+  "@type" "Article"
+  "@id" "#main-content"
+  "headline" .Title
+  "url" .Permalink
+  "wordCount" $wordCount
+  "inLanguage" "en-US"
+}}
+
+{{/* Add dates */}}
+{{ $publishDate := .PublishDate }}
+{{ $modifiedDate := .Lastmod }}
+{{ if not $modifiedDate }}
+  {{ $modifiedDate = $publishDate }}
+{{ end }}
+{{ $schema = merge $schema (dict
+  "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
+) }}
+
+{{/* Add description */}}
+{{ with (or .Params.meta_desc .Summary) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{/* Add image */}}
+{{ $image := "" }}
+{{ if .Params.meta_image }}
+  {{ $image = printf "%s%s" .Permalink .Params.meta_image }}
+{{ else if in .RelPermalink "/docs/clouds/aws/" }}
+  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-clouds-aws-meta-image.png" }}
+{{ else }}
+  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+{{ end }}
+{{ $schema = merge $schema (dict "image" (slice $image)) }}
+
+{{/* Add keywords */}}
+{{ $schema = merge $schema (dict "keywords" "infrastructure as code, cloud, devops, automation") }}
+
+{{/* Calculate reading time */}}
+{{ $readTime := div $wordCount 200 }}
+{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+{{ $duration := printf "PT%dM" $readTime }}
+{{ $schema = merge $schema (dict "timeRequired" $duration) }}
+
+{{/* Add author as organization for docs */}}
+{{ $schema = merge $schema (dict
+  "author" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{/* Add publisher reference */}}
+{{ $schema = merge $schema (dict
+  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{/* Add speakable for voice search */}}
+{{ $schema = merge $schema (dict "speakable" (dict
+  "@type" "SpeakableSpecification"
+  "cssSelector" (slice "h1" "h2" "p:first-of-type")
+)) }}
+
+{{/* Add about field */}}
+{{ $schema = merge $schema (dict
+  "about" (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://www.pulumi.com/#pulumi-cli"
+  )
+) }}
+
+{{/* Add article body (truncated for schema) */}}
+{{ $articleBody := $content | truncate 5000 }}
+{{ $schema = merge $schema (dict "articleBody" $articleBody) }}
+
+{{/* Add mainEntityOfPage reference */}}
+{{ $schema = merge $schema (dict
+  "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink))
+) }}
+
+{{/* Add citation for official documentation */}}
+{{ $schema = merge $schema (dict
+  "citation" (dict
+    "@type" "CreativeWork"
+    "name" "Pulumi Official Documentation"
+    "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+    "url" "https://www.pulumi.com/docs/"
+  )
+) }}
+
+{{ return $schema }}

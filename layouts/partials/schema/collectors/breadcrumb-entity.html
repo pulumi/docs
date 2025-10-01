@@ -1,0 +1,111 @@
+{{/* Returns breadcrumb entity for @graph (not full JSON-LD) */}}
+
+{{ $breadcrumbs := slice }}
+{{ $position := 0 }}
+
+{{/* Home is always the first item */}}
+{{ $position = add $position 1 }}
+{{ $breadcrumbs = $breadcrumbs | append (dict
+  "@type" "ListItem"
+  "position" $position
+  "name" "Home"
+  "item" "https://www.pulumi.com"
+) }}
+
+{{/* Process parent sections */}}
+{{ if eq .Type "blog" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Blog"
+    "item" "https://www.pulumi.com/blog/"
+  ) }}
+
+{{ else if eq .Type "tutorials" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Pulumi Tutorials"
+    "item" "https://www.pulumi.com/tutorials/"
+  ) }}
+
+{{ else if eq .Type "docs" }}
+  {{/* Build docs hierarchy */}}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Documentation"
+    "item" "https://www.pulumi.com/docs/"
+  ) }}
+
+  {{/* Add Pulumi IaC if in the docs/iac section */}}
+  {{ if in .RelPermalink "/docs/iac/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Pulumi IaC"
+      "item" "https://www.pulumi.com/docs/iac/"
+    ) }}
+
+    {{/* Add Clouds if in clouds section */}}
+    {{ if in .RelPermalink "/docs/iac/clouds/" }}
+      {{ $position = add $position 1 }}
+      {{ $breadcrumbs = $breadcrumbs | append (dict
+        "@type" "ListItem"
+        "position" $position
+        "name" "Clouds"
+        "item" "https://www.pulumi.com/docs/iac/clouds/"
+      ) }}
+
+      {{/* Add specific cloud provider */}}
+      {{ if in .RelPermalink "/clouds/aws/" }}
+        {{ $position = add $position 1 }}
+        {{ $breadcrumbs = $breadcrumbs | append (dict
+          "@type" "ListItem"
+          "position" $position
+          "name" "AWS"
+          "item" "https://www.pulumi.com/docs/iac/clouds/aws/"
+        ) }}
+
+        {{/* Add Guides if in guides section */}}
+        {{ if in .RelPermalink "/guides/" }}
+          {{ $position = add $position 1 }}
+          {{ $breadcrumbs = $breadcrumbs | append (dict
+            "@type" "ListItem"
+            "position" $position
+            "name" "Guides"
+            "item" "https://www.pulumi.com/docs/iac/clouds/aws/guides/"
+          ) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+{{ else if eq .Section "product" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Product"
+    "item" "https://www.pulumi.com/product/"
+  ) }}
+{{ end }}
+
+{{/* Add current page (without URL for last item) */}}
+{{ $position = add $position 1 }}
+{{ $breadcrumbs = $breadcrumbs | append (dict
+  "@type" "ListItem"
+  "position" $position
+  "name" .Title
+) }}
+
+{{/* Return breadcrumb entity */}}
+{{ return dict
+  "@type" "BreadcrumbList"
+  "@id" "#breadcrumb"
+  "itemListElement" $breadcrumbs
+}}
