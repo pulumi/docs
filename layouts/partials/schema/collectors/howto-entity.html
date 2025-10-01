@@ -1,0 +1,200 @@
+{{/* Returns HowTo entity for tutorials in @graph */}}
+
+{{/* Get content for analysis */}}
+{{ $content := .Content | plainify }}
+{{ $wordCount := $content | countwords }}
+{{ if not $wordCount }}
+  {{ $wordCount = 500 }}
+{{ end }}
+
+{{/* Build HowTo entity */}}
+{{ $schema := dict
+  "@type" "HowTo"
+  "@id" "#main-content"
+  "name" .Title
+  "url" .Permalink
+  "inLanguage" "en-US"
+}}
+
+{{/* Add description */}}
+{{ with (or .Params.meta_desc .Summary (printf "Learn how to %s with Pulumi" .Title)) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{/* Generate generic steps for tutorials */}}
+{{/* Since tutorials may not have explicit numbered steps, we create high-level steps */}}
+{{ $steps := slice }}
+
+{{/* Step 1: Prerequisites */}}
+{{ $steps = $steps | append (dict
+  "@type" "HowToStep"
+  "name" "Prerequisites"
+  "text" "Install Pulumi CLI and configure your cloud provider credentials"
+  "position" 1
+) }}
+
+{{/* Step 2: Create Project */}}
+{{ if in $content "pulumi new" }}
+  {{ $steps = $steps | append (dict
+    "@type" "HowToStep"
+    "name" "Create Pulumi Project"
+    "text" "Initialize a new Pulumi project with the appropriate template"
+    "position" 2
+  ) }}
+{{ end }}
+
+{{/* Step 3: Write Infrastructure Code */}}
+{{ $steps = $steps | append (dict
+  "@type" "HowToStep"
+  "name" "Define Infrastructure"
+  "text" "Write infrastructure as code using your preferred programming language"
+  "position" 3
+) }}
+
+{{/* Step 4: Deploy */}}
+{{ if in $content "pulumi up" }}
+  {{ $steps = $steps | append (dict
+    "@type" "HowToStep"
+    "name" "Deploy Infrastructure"
+    "text" "Deploy your infrastructure using pulumi up command"
+    "position" 4
+  ) }}
+{{ end }}
+
+{{/* Step 5: Verify */}}
+{{ $steps = $steps | append (dict
+  "@type" "HowToStep"
+  "name" "Verify Deployment"
+  "text" "Verify your infrastructure was created successfully"
+  "position" 5
+) }}
+
+{{ $schema = merge $schema (dict "step" $steps) }}
+
+{{/* Calculate total time */}}
+{{ $totalTime := "" }}
+{{ with .Params.estimated_time }}
+  {{ $totalTime = printf "PT%dM" . }}
+{{ else with .Params.duration }}
+  {{ $totalTime = . }}
+{{ else }}
+  {{/* Estimate based on word count */}}
+  {{ $minutes := div $wordCount 200 }}
+  {{ if lt $minutes 10 }}{{ $minutes = 10 }}{{ end }}
+  {{ if gt $minutes 60 }}{{ $minutes = 60 }}{{ end }}
+  {{ $totalTime = printf "PT%dM" $minutes }}
+{{ end }}
+{{ $schema = merge $schema (dict "totalTime" $totalTime) }}
+
+{{/* Add tools/prerequisites */}}
+{{ $tools := slice }}
+
+{{/* Auto-detect common tools */}}
+{{ if or (in $content "Pulumi CLI") (in $content "pulumi new") }}
+  {{ $tools = $tools | append (dict
+    "@type" "HowToTool"
+    "name" "Pulumi CLI"
+  ) }}
+{{ end }}
+
+{{ if in $content "AWS account" }}
+  {{ $tools = $tools | append (dict
+    "@type" "HowToTool"
+    "name" "AWS Account"
+  ) }}
+{{ end }}
+
+{{ if in $content "Azure account" }}
+  {{ $tools = $tools | append (dict
+    "@type" "HowToTool"
+    "name" "Azure Account"
+  ) }}
+{{ end }}
+
+{{ if in $content "Google Cloud account" }}
+  {{ $tools = $tools | append (dict
+    "@type" "HowToTool"
+    "name" "Google Cloud Account"
+  ) }}
+{{ end }}
+
+{{ if or (in $content "Node.js") (in $content "npm") }}
+  {{ $tools = $tools | append (dict
+    "@type" "HowToTool"
+    "name" "Node.js"
+  ) }}
+{{ end }}
+
+{{ if in $content "Python" }}
+  {{ $tools = $tools | append (dict
+    "@type" "HowToTool"
+    "name" "Python"
+  ) }}
+{{ end }}
+
+{{ if $tools }}
+  {{ $schema = merge $schema (dict "tool" $tools) }}
+{{ end }}
+
+{{/* Add image */}}
+{{ $image := "" }}
+{{ if .Params.meta_image }}
+  {{/* Fix URL concatenation to avoid double slashes */}}
+  {{ $baseURL := .Permalink }}
+  {{ if not (strings.HasSuffix $baseURL "/") }}
+    {{ $baseURL = printf "%s/" $baseURL }}
+  {{ end }}
+  {{ $imagePath := .Params.meta_image }}
+  {{ if strings.HasPrefix $imagePath "/" }}
+    {{ $imagePath = strings.TrimPrefix "/" $imagePath }}
+  {{ end }}
+  {{ $image = printf "%s%s" $baseURL $imagePath }}
+{{ else }}
+  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+{{ end }}
+{{ $schema = merge $schema (dict "image" $image) }}
+
+{{/* Add dates */}}
+{{ $publishDate := .PublishDate }}
+{{ $modifiedDate := .Lastmod }}
+
+{{/* Fix invalid dates */}}
+{{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
+  {{ if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $publishDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $publishDate = now }}
+  {{ end }}
+{{ end }}
+
+{{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
+  {{ if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $modifiedDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $modifiedDate = $publishDate }}
+  {{ end }}
+{{ end }}
+
+{{ $schema = merge $schema (dict
+  "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
+) }}
+
+{{/* Add keywords */}}
+{{ $keywords := "infrastructure as code, cloud, devops, tutorial, pulumi" }}
+{{ with .Params.tags }}
+  {{ $keywords = delimit . ", " }}
+{{ end }}
+{{ $schema = merge $schema (dict "keywords" $keywords) }}
+
+{{/* Add supply/yield (what the tutorial produces) */}}
+{{ $titleLower := lower .Title }}
+{{ if in $titleLower "creating resources" }}
+  {{ $schema = merge $schema (dict "yield" "Cloud infrastructure resources deployed and managed through code") }}
+{{ else if in $titleLower "import" }}
+  {{ $schema = merge $schema (dict "yield" "Existing infrastructure imported into Pulumi management") }}
+{{ else }}
+  {{ $schema = merge $schema (dict "yield" "Infrastructure deployed using Pulumi") }}
+{{ end }}
+
+{{ return $schema }}

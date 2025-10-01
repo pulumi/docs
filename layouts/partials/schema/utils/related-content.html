@@ -1,0 +1,110 @@
+{{/* Generate related content links based on tags/categories/content */}}
+{{ $relatedContent := slice }}
+
+{{/* Link tutorials to related documentation */}}
+{{ if eq .Type "tutorials" }}
+  {{/* Try to find related docs based on title/content */}}
+  {{ $tutorialTitle := lower .Title }}
+  {{ if in $tutorialTitle "aws" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "Article"
+      "@id" "https://www.pulumi.com/docs/clouds/aws/get-started/#article"
+      "name" "AWS Documentation"
+    ) }}
+  {{ else if in $tutorialTitle "azure" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "Article"
+      "@id" "https://www.pulumi.com/docs/clouds/azure/get-started/#article"
+      "name" "Azure Documentation"
+    ) }}
+  {{ else if in $tutorialTitle "gcp" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "Article"
+      "@id" "https://www.pulumi.com/docs/clouds/gcp/get-started/#article"
+      "name" "Google Cloud Documentation"
+    ) }}
+  {{ else if in $tutorialTitle "kubernetes" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "Article"
+      "@id" "https://www.pulumi.com/docs/clouds/kubernetes/#article"
+      "name" "Kubernetes Documentation"
+    ) }}
+  {{ end }}
+  
+  {{/* Link to main getting started */}}
+  {{ $relatedContent = $relatedContent | append (dict
+    "@type" "Article"
+    "@id" "https://www.pulumi.com/docs/get-started/#article"
+    "name" "Getting Started with Pulumi"
+  ) }}
+{{ end }}
+
+{{/* Link blog posts to related products */}}
+{{ if eq .Type "blog" }}
+  {{ $content := .Content }}
+  
+  {{ if in $content "Pulumi Cloud" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "SoftwareApplication"
+      "@id" "https://www.pulumi.com/product/pulumi-cloud/#software"
+      "name" "Pulumi Cloud"
+    ) }}
+  {{ end }}
+  
+  {{ if in $content "Pulumi Deployments" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "SoftwareApplication"
+      "@id" "https://www.pulumi.com/product/pulumi-deployments/#software"
+      "name" "Pulumi Deployments"
+    ) }}
+  {{ end }}
+  
+  {{ if in $content "Pulumi ESC" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "SoftwareApplication"
+      "@id" "https://www.pulumi.com/product/secrets-management/#software"
+      "name" "Pulumi ESC"
+    ) }}
+  {{ end }}
+  
+  {{ if in $content "Pulumi Neo" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "SoftwareApplication"
+      "@id" "https://www.pulumi.com/product/neo/#software"
+      "name" "Pulumi Neo"
+    ) }}
+  {{ end }}
+{{ end }}
+
+{{/* Link documentation to related tutorials */}}
+{{ if eq .Type "docs" }}
+  {{ $docPath := .RelPermalink }}
+  
+  {{ if in $docPath "/aws/" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "Course"
+      "@id" "https://www.pulumi.com/tutorials/creating-resources-aws/#course"
+      "name" "Creating AWS Resources Tutorial"
+    ) }}
+  {{ else if in $docPath "/azure/" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "Course"
+      "@id" "https://www.pulumi.com/tutorials/creating-resources-azure/#course"
+      "name" "Creating Azure Resources Tutorial"
+    ) }}
+  {{ else if in $docPath "/gcp/" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "Course"
+      "@id" "https://www.pulumi.com/tutorials/creating-resources-gcp/#course"
+      "name" "Creating GCP Resources Tutorial"
+    ) }}
+  {{ else if in $docPath "/kubernetes/" }}
+    {{ $relatedContent = $relatedContent | append (dict
+      "@type" "Course"
+      "@id" "https://www.pulumi.com/tutorials/creating-resources-kubernetes/#course"
+      "name" "Creating Kubernetes Resources Tutorial"
+    ) }}
+  {{ end }}
+{{ end }}
+
+{{ return $relatedContent }}

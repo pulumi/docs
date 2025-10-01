@@ -1,0 +1,127 @@
+{{/* Generate product entities with comprehensive relationships for knowledge graphs */}}
+
+{{/* Get aggregated content using the content aggregator */}}
+{{ $aggregatedContent := partial "schema/utils/content-aggregator.html" . }}
+{{ $effectiveContent := $aggregatedContent.content }}
+
+{{/* Define all Pulumi products with their relationships */}}
+{{ $pulumiCLI := dict
+  "@type" "SoftwareApplication"
+  "@id" "https://www.pulumi.com/#pulumi-cli"
+  "name" "Pulumi CLI"
+  "applicationCategory" "Infrastructure as Code"
+  "operatingSystem" (slice "macOS" "Windows" "Linux")
+  "url" "https://www.pulumi.com/product/infrastructure-as-code/"
+  "sameAs" (slice 
+    "https://github.com/pulumi/pulumi"
+    "https://en.wikipedia.org/wiki/Pulumi_(software)"
+    "https://www.wikidata.org/wiki/Q85792810"
+  )
+  "isPartOf" (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "name" "Pulumi Platform"
+  )
+}}
+
+{{ $pulumiCloud := dict
+  "@type" "SoftwareApplication"
+  "@id" "https://www.pulumi.com/product/pulumi-cloud/#software"
+  "name" "Pulumi Cloud"
+  "applicationCategory" "Cloud Management Platform"
+  "url" "https://www.pulumi.com/product/pulumi-cloud/"
+  "isPartOf" (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "name" "Pulumi Platform"
+  )
+}}
+
+{{ $pulumiESC := dict
+  "@type" "SoftwareApplication"
+  "@id" "https://www.pulumi.com/product/esc/#software"
+  "name" "Pulumi ESC"
+  "alternateName" "Pulumi Environments, Secrets, and Configuration"
+  "applicationCategory" "Secrets Management"
+  "url" "https://www.pulumi.com/product/esc/"
+  "isPartOf" (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "name" "Pulumi Platform"
+  )
+}}
+
+{{ $pulumiInsights := dict
+  "@type" "SoftwareApplication"
+  "@id" "https://www.pulumi.com/product/pulumi-insights/#software"
+  "name" "Pulumi Insights"
+  "applicationCategory" "Cloud Intelligence Platform"
+  "url" "https://www.pulumi.com/product/pulumi-insights/"
+  "isPartOf" (dict
+    "@type" "SoftwareApplication"
+    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "name" "Pulumi Platform"
+  )
+}}
+
+{{/* Determine which product is being discussed */}}
+{{ $mainProduct := false }}
+{{ $relatedProducts := slice }}
+{{ $url := .Permalink }}
+
+{{/* Check URL patterns for product detection */}}
+{{ if in $url "/docs/iac/" }}
+  {{ $mainProduct = $pulumiCLI }}
+  {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+{{ else if in $url "/docs/esc/" }}
+  {{ $mainProduct = $pulumiESC }}
+  {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
+{{ else if in $url "/docs/insights/" }}
+  {{ $mainProduct = $pulumiInsights }}
+  {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiESC }}
+{{ else if in $url "/docs/pulumi-cloud/" }}
+  {{ $mainProduct = $pulumiCloud }}
+  {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
+{{ else if in $url "/product/" }}
+  {{/* For product pages, determine based on URL */}}
+  {{ if in $url "/infrastructure-as-code/" }}
+    {{ $mainProduct = $pulumiCLI }}
+    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+  {{ else if in $url "/pulumi-cloud/" }}
+    {{ $mainProduct = $pulumiCloud }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
+  {{ else if in $url "/esc/" }}
+    {{ $mainProduct = $pulumiESC }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
+  {{ else if in $url "/insights/" }}
+    {{ $mainProduct = $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiESC }}
+  {{ else }}
+    {{/* Default to CLI for general product pages */}}
+    {{ $mainProduct = $pulumiCLI }}
+    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+  {{ end }}
+{{ end }}
+
+{{/* If no product matched by URL, check content using aggregated content */}}
+{{ if and (not $mainProduct) $effectiveContent }}
+  {{ $content := lower $effectiveContent }}
+  {{ $title := lower .Title }}
+  
+  {{ if or (in $content "pulumi cloud") (in $title "pulumi cloud") }}
+    {{ $mainProduct = $pulumiCloud }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
+  {{ else if or (in $content "pulumi esc") (in $content "environments secrets configuration") (in $title "esc") }}
+    {{ $mainProduct = $pulumiESC }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
+  {{ else if or (in $content "pulumi insights") (in $title "insights") }}
+    {{ $mainProduct = $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiESC }}
+  {{ else if or (in $content "pulumi cli") (in $content "pulumi command") (in $title "cli") }}
+    {{ $mainProduct = $pulumiCLI }}
+    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+  {{ end }}
+{{ end }}
+
+{{/* Return structured result with mainProduct and relatedProducts */}}
+{{ return (dict "mainProduct" $mainProduct "relatedProducts" $relatedProducts) }}

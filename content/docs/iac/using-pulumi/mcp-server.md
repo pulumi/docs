@@ -122,10 +122,13 @@ Add to your VS Code settings.json:
 
 ```json
 {
-  "mcp.servers": {
+  "servers": {
     "pulumi": {
       "command": "npx",
-      "args": ["@pulumi/mcp-server"],
+      "args": [
+        "@pulumi/mcp-server",
+        "stdio"
+      ],
       "type": "stdio"
     }
   }
