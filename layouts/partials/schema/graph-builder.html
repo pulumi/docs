@@ -32,27 +32,26 @@
 {{/* Add WebPage to graph */}}
 {{ $graph = $graph | append $webpage }}
 
-{{/* Add Organization entity (deduplicated) */}}
-{{ $org := dict
-  "@type" "Organization"
-  "@id" "https://www.pulumi.com/#organization"
-  "name" "Pulumi"
-  "url" "https://www.pulumi.com"
-  "logo" (dict
-    "@type" "ImageObject"
-    "url" "https://www.pulumi.com/logos/brand/logo.png"
-  )
-  "sameAs" (slice
-    "https://twitter.com/PulumiCorp"
-    "https://github.com/pulumi"
-    "https://www.linkedin.com/company/pulumi"
-    "https://www.youtube.com/c/PulumiTV"
-  )
-}}
-{{ $graph = $graph | append $org }}
-
-{{/* For homepage, add Website and SoftwareApplication schemas */}}
+{{/* For homepage, add Organization, Website and SoftwareApplication schemas */}}
 {{ if .IsHome }}
+  {{/* Add Organization entity - only on homepage per Google best practices */}}
+  {{ $org := dict
+    "@type" "Organization"
+    "@id" "https://www.pulumi.com/#organization"
+    "name" "Pulumi"
+    "url" "https://www.pulumi.com"
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" "https://www.pulumi.com/logos/brand/logo.png"
+    )
+    "sameAs" (slice
+      "https://twitter.com/PulumiCorp"
+      "https://github.com/pulumi"
+      "https://www.linkedin.com/company/pulumi"
+      "https://www.youtube.com/c/PulumiTV"
+    )
+  }}
+  {{ $graph = $graph | append $org }}
   {{/* Website schema */}}
   {{ $website := dict
     "@type" "WebSite"
