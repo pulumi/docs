@@ -3,12 +3,10 @@ title: Get Started with Pulumi & Oracle Cloud
 meta_desc: Create, deploy, and manage infrastructure on Oracle Cloud Infrastructure using Pulumi - progressive guide with language-specific examples
 type: page
 layout: cloud-progressive
-subtitle: Build infrastructure on Oracle Cloud with your favorite language
+no_on_this_page: true
 
-cloud:
-  name: Oracle Cloud Infrastructure
-  slug: oci
-  provider: oci
+cloud_name: Oracle Cloud
+subtitle: Choose your language and deploy Oracle Cloud infrastructure in minutes
 ---
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
@@ -25,7 +23,15 @@ Build Oracle Cloud infrastructure using familiar TypeScript syntax and tooling.
 - **Oracle Cloud account**: [Sign up for free tier](https://signup.cloud.oracle.com/)
 - **OCI credentials**: configured locally
 
-### Install Pulumi
+### Quick Start
+
+#### 1. Sign up for Pulumi Cloud (Free)
+
+<a href="https://app.pulumi.com/signup" class="btn-primary">Create Free Account</a>
+
+Pulumi Cloud provides free state management, secrets encryption, and deployment history.
+
+#### 2. Install Pulumi
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -53,15 +59,15 @@ Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1
 
 {{% /choosable %}}
 
-### Configure OCI Access
+#### 3. Configure OCI Access
 
-#### 1. Install OCI CLI
+##### 1. Install OCI CLI
 
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
 
-#### 2. Configure Credentials
+##### 2. Configure Credentials
 
 ```bash
 oci setup config
@@ -80,9 +86,9 @@ Verify:
 oci iam region list
 ```
 
-### Create Your First Project
+#### 4. Create Your First Project
 
-#### 1. New Project
+##### 1. New Project
 
 ```bash
 mkdir pulumi-oci-quickstart
@@ -90,7 +96,7 @@ cd pulumi-oci-quickstart
 pulumi new oci-typescript
 ```
 
-#### 2. Project Structure
+##### 2. Project Structure
 
 ```
 pulumi-oci-quickstart/
@@ -101,7 +107,7 @@ pulumi-oci-quickstart/
 └── tsconfig.json     # TypeScript config
 ```
 
-#### 3. Define Infrastructure
+##### 3. Define Infrastructure
 
 Replace `index.ts` with:
 
@@ -151,7 +157,7 @@ Set your compartment ID:
 pulumi config set compartmentId <your-compartment-ocid>
 ```
 
-#### 4. Deploy Infrastructure
+##### 4. Deploy Infrastructure
 
 ```bash
 pulumi up
@@ -186,7 +192,15 @@ Build Oracle Cloud infrastructure using familiar Python syntax and tooling.
 - **Oracle Cloud account**: [Sign up for free tier](https://signup.cloud.oracle.com/)
 - **OCI credentials**: configured locally
 
-### Install Pulumi
+### Quick Start
+
+#### 1. Sign up for Pulumi Cloud (Free)
+
+<a href="https://app.pulumi.com/signup" class="btn-primary">Create Free Account</a>
+
+Pulumi Cloud provides free state management, secrets encryption, and deployment history.
+
+#### 2. Install Pulumi
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -214,15 +228,15 @@ Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1
 
 {{% /choosable %}}
 
-### Configure OCI Access
+#### 3. Configure OCI Access
 
-#### 1. Install OCI CLI
+##### 1. Install OCI CLI
 
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
 
-#### 2. Configure Credentials
+##### 2. Configure Credentials
 
 ```bash
 oci setup config
@@ -241,9 +255,9 @@ Verify:
 oci iam region list
 ```
 
-### Create Your First Project
+#### 4. Create Your First Project
 
-#### 1. New Project
+##### 1. New Project
 
 ```bash
 mkdir pulumi-oci-quickstart
@@ -251,7 +265,7 @@ cd pulumi-oci-quickstart
 pulumi new oci-python
 ```
 
-#### 2. Project Structure
+##### 2. Project Structure
 
 ```
 pulumi-oci-quickstart/
@@ -262,7 +276,7 @@ pulumi-oci-quickstart/
 └── venv/                 # Virtual environment
 ```
 
-#### 3. Define Infrastructure
+##### 3. Define Infrastructure
 
 Replace `__main__.py` with:
 
@@ -318,7 +332,7 @@ Set your compartment ID:
 pulumi config set compartmentId <your-compartment-ocid>
 ```
 
-#### 4. Deploy Infrastructure
+##### 4. Deploy Infrastructure
 
 ```bash
 pulumi up
@@ -353,7 +367,15 @@ Build Oracle Cloud infrastructure using Go's type safety and performance.
 - **Oracle Cloud account**: [Sign up for free tier](https://signup.cloud.oracle.com/)
 - **OCI credentials**: configured locally
 
-### Install Pulumi
+### Quick Start
+
+#### 1. Sign up for Pulumi Cloud (Free)
+
+<a href="https://app.pulumi.com/signup" class="btn-primary">Create Free Account</a>
+
+Pulumi Cloud provides free state management, secrets encryption, and deployment history.
+
+#### 2. Install Pulumi
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -381,15 +403,15 @@ Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1
 
 {{% /choosable %}}
 
-### Configure OCI Access
+#### 3. Configure OCI Access
 
-#### 1. Install OCI CLI
+##### 1. Install OCI CLI
 
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
 
-#### 2. Configure Credentials
+##### 2. Configure Credentials
 
 ```bash
 oci setup config
@@ -408,9 +430,9 @@ Verify:
 oci iam region list
 ```
 
-### Create Your First Project
+#### 4. Create Your First Project
 
-#### 1. New Project
+##### 1. New Project
 
 ```bash
 mkdir pulumi-oci-quickstart
@@ -418,7 +440,7 @@ cd pulumi-oci-quickstart
 pulumi new oci-go
 ```
 
-#### 2. Project Structure
+##### 2. Project Structure
 
 ```
 pulumi-oci-quickstart/
@@ -429,7 +451,7 @@ pulumi-oci-quickstart/
 └── go.sum            # Go dependencies
 ```
 
-#### 3. Define Infrastructure
+##### 3. Define Infrastructure
 
 Replace `main.go` with:
 
@@ -511,7 +533,7 @@ Set your compartment ID:
 pulumi config set compartmentId <your-compartment-ocid>
 ```
 
-#### 4. Deploy Infrastructure
+##### 4. Deploy Infrastructure
 
 ```bash
 pulumi up
@@ -546,7 +568,15 @@ Build Oracle Cloud infrastructure using C# and .NET ecosystem.
 - **Oracle Cloud account**: [Sign up for free tier](https://signup.cloud.oracle.com/)
 - **OCI credentials**: configured locally
 
-### Install Pulumi
+### Quick Start
+
+#### 1. Sign up for Pulumi Cloud (Free)
+
+<a href="https://app.pulumi.com/signup" class="btn-primary">Create Free Account</a>
+
+Pulumi Cloud provides free state management, secrets encryption, and deployment history.
+
+#### 2. Install Pulumi
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -574,15 +604,15 @@ Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1
 
 {{% /choosable %}}
 
-### Configure OCI Access
+#### 3. Configure OCI Access
 
-#### 1. Install OCI CLI
+##### 1. Install OCI CLI
 
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
 
-#### 2. Configure Credentials
+##### 2. Configure Credentials
 
 ```bash
 oci setup config
@@ -601,9 +631,9 @@ Verify:
 oci iam region list
 ```
 
-### Create Your First Project
+#### 4. Create Your First Project
 
-#### 1. New Project
+##### 1. New Project
 
 ```bash
 mkdir pulumi-oci-quickstart
@@ -611,7 +641,7 @@ cd pulumi-oci-quickstart
 pulumi new oci-csharp
 ```
 
-#### 2. Project Structure
+##### 2. Project Structure
 
 ```
 pulumi-oci-quickstart/
@@ -621,7 +651,7 @@ pulumi-oci-quickstart/
 ├── pulumi-oci-quickstart.csproj  # .NET project file
 ```
 
-#### 3. Define Infrastructure
+##### 3. Define Infrastructure
 
 Replace `Program.cs` with:
 
@@ -704,7 +734,7 @@ Set your compartment ID:
 pulumi config set compartmentId <your-compartment-ocid>
 ```
 
-#### 4. Deploy Infrastructure
+##### 4. Deploy Infrastructure
 
 ```bash
 pulumi up
@@ -740,7 +770,15 @@ Build Oracle Cloud infrastructure using Java and familiar build tools.
 - **Oracle Cloud account**: [Sign up for free tier](https://signup.cloud.oracle.com/)
 - **OCI credentials**: configured locally
 
-### Install Pulumi
+### Quick Start
+
+#### 1. Sign up for Pulumi Cloud (Free)
+
+<a href="https://app.pulumi.com/signup" class="btn-primary">Create Free Account</a>
+
+Pulumi Cloud provides free state management, secrets encryption, and deployment history.
+
+#### 2. Install Pulumi
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -768,15 +806,15 @@ Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1
 
 {{% /choosable %}}
 
-### Configure OCI Access
+#### 3. Configure OCI Access
 
-#### 1. Install OCI CLI
+##### 1. Install OCI CLI
 
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
 
-#### 2. Configure Credentials
+##### 2. Configure Credentials
 
 ```bash
 oci setup config
@@ -795,9 +833,9 @@ Verify:
 oci iam region list
 ```
 
-### Create Your First Project
+#### 4. Create Your First Project
 
-#### 1. New Project
+##### 1. New Project
 
 ```bash
 mkdir pulumi-oci-quickstart
@@ -805,7 +843,7 @@ cd pulumi-oci-quickstart
 pulumi new oci-java
 ```
 
-#### 2. Project Structure
+##### 2. Project Structure
 
 ```
 pulumi-oci-quickstart/
@@ -819,7 +857,7 @@ pulumi-oci-quickstart/
                 └── App.java   # Infrastructure code
 ```
 
-#### 3. Define Infrastructure
+##### 3. Define Infrastructure
 
 Replace `src/main/java/myproject/App.java` with:
 
@@ -892,7 +930,7 @@ Set your compartment ID:
 pulumi config set compartmentId <your-compartment-ocid>
 ```
 
-#### 4. Deploy Infrastructure
+##### 4. Deploy Infrastructure
 
 ```bash
 pulumi up
@@ -926,7 +964,15 @@ Define Oracle Cloud infrastructure using simple, declarative YAML configuration.
 - **Oracle Cloud account**: [Sign up for free tier](https://signup.cloud.oracle.com/)
 - **OCI credentials**: configured locally
 
-### Install Pulumi
+### Quick Start
+
+#### 1. Sign up for Pulumi Cloud (Free)
+
+<a href="https://app.pulumi.com/signup" class="btn-primary">Create Free Account</a>
+
+Pulumi Cloud provides free state management, secrets encryption, and deployment history.
+
+#### 2. Install Pulumi
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -954,15 +1000,15 @@ Invoke-WebRequest -Uri "https://get.pulumi.com/install.ps1" -OutFile install.ps1
 
 {{% /choosable %}}
 
-### Configure OCI Access
+#### 3. Configure OCI Access
 
-#### 1. Install OCI CLI
+##### 1. Install OCI CLI
 
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
 
-#### 2. Configure Credentials
+##### 2. Configure Credentials
 
 ```bash
 oci setup config
@@ -981,9 +1027,9 @@ Verify:
 oci iam region list
 ```
 
-### Create Your First Project
+#### 4. Create Your First Project
 
-#### 1. New Project
+##### 1. New Project
 
 ```bash
 mkdir pulumi-oci-quickstart
@@ -991,7 +1037,7 @@ cd pulumi-oci-quickstart
 pulumi new oci-yaml
 ```
 
-#### 2. Project Structure
+##### 2. Project Structure
 
 ```
 pulumi-oci-quickstart/
@@ -999,7 +1045,7 @@ pulumi-oci-quickstart/
 └── Pulumi.dev.yaml   # Stack configuration
 ```
 
-#### 3. Define Infrastructure
+##### 3. Define Infrastructure
 
 Your project includes example YAML to create OCI resources:
 
@@ -1065,7 +1111,7 @@ Set your compartment ID:
 pulumi config set compartmentId <your-compartment-ocid>
 ```
 
-#### 4. Deploy Infrastructure
+##### 4. Deploy Infrastructure
 
 Deploy it:
 

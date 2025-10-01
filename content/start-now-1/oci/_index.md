@@ -3,15 +3,21 @@ title: Get Started with Pulumi & Oracle Cloud
 meta_desc: Create, deploy, and manage infrastructure on Oracle Cloud Infrastructure using Pulumi - unified guide with examples in multiple languages
 type: page
 layout: cloud-unified
-subtitle: Your first Oracle Cloud infrastructure in 5 minutes
+no_on_this_page: true
 
-cloud:
-  name: Oracle Cloud Infrastructure
-  slug: oci
-  provider: oci
+cloud_name: Oracle Cloud
+subtitle: Deploy your first Oracle Cloud resources in under 5 minutes
 ---
 
-## Install Pulumi
+## Quick Setup
+
+### 1. Sign up for Pulumi (Free)
+
+Get started with Pulumi Cloud for free. Includes state management, secrets, and more.
+
+<a href="https://app.pulumi.com/signup" class="btn-primary">Create Free Account</a>
+
+### 2. Install Pulumi CLI
 
 {{< chooser os "macos,linux,windows" / >}}
 
@@ -54,11 +60,11 @@ Verify installation:
 pulumi version
 ```
 
-## Configure Oracle Cloud Credentials
+### 3. Configure Oracle Cloud Credentials
 
 Configure your Oracle Cloud Infrastructure credentials using one of these methods:
 
-### Option 1: OCI CLI Configuration (Recommended)
+#### Option 1: OCI CLI Configuration (Recommended)
 
 First install and configure the OCI CLI:
 
@@ -77,7 +83,7 @@ This will prompt you for:
 - Region
 - Path to your API signing key
 
-### Option 2: Environment Variables
+#### Option 2: Environment Variables
 
 Set the required environment variables:
 
@@ -95,7 +101,7 @@ Verify your configuration:
 oci iam region list
 ```
 
-## Create Your Project
+### 4. Deploy Your First Resource
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 

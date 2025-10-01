@@ -3,13 +3,17 @@ title: Get Started with Pulumi & Oracle Cloud
 meta_desc: Set up Pulumi to manage infrastructure on Oracle Cloud Infrastructure - follow these 6 simple steps
 type: page
 layout: cloud-integrated
-subtitle: 6 simple steps
+no_on_this_page: true
 
-cloud:
-  name: Oracle Cloud Infrastructure
-  slug: oci
-  provider: oci
+cloud_name: Oracle Cloud
+subtitle: Deploy your first Oracle Cloud resources in 6 simple steps
 ---
+
+## Sign up for Pulumi Cloud (Free)
+
+Start with Pulumi Cloud for free - manage state, encrypt secrets, and track deployment history.
+
+<a href="https://app.pulumi.com/signup" class="btn-primary btn-lg">Create Free Account</a>
 
 ## What You'll Build
 
