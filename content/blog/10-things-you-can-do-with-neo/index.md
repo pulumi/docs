@@ -45,7 +45,7 @@ Instead of starting from scratch or hunting through documentation, describe what
 
 ## 4. Automate CI/CD Pipeline Generation
 
-Neo creates complete GitHub Actions workflows configured specifically for Pulumi deployments, with proper preview and production stages.
+Neo creates complete GitHub Actions workflows configured specifically for Pulumi deployments, with proper preview stages.
 
 Setting up CI/CD for infrastructure projects usually involves copying workflows from other repos and adapting them. Neo generates purpose-built pipelines that understand your stack structure and deployment patterns. Ask Neo: *"Create a GitHub Actions pipeline for this Pulumi project with preview and production stages"* and it produces workflows with proper secrets management, approval gates, and deployment strategies.
 
