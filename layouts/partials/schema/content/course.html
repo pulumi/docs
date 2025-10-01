@@ -247,22 +247,8 @@
   {{/* Infrastructure patterns now handled in mentions section for semantic accuracy */}}
   
   {{/* Add software requirements based on detected packages */}}
-  {{ $requirements := slice }}
-  {{ if in .Content "@pulumi/aws" }}
-    {{ $requirements = $requirements | append "@pulumi/aws" }}
-  {{ end }}
-  {{ if in .Content "@pulumi/azure" }}
-    {{ $requirements = $requirements | append "@pulumi/azure" }}
-  {{ end }}
-  {{ if in .Content "@pulumi/gcp" }}
-    {{ $requirements = $requirements | append "@pulumi/gcp" }}
-  {{ end }}
-  {{ if in .Content "@pulumi/kubernetes" }}
-    {{ $requirements = $requirements | append "@pulumi/kubernetes" }}
-  {{ end }}
-  {{ if $requirements }}
-    {{ $schema = merge $schema (dict "softwareRequirements" (delimit $requirements ", ")) }}
-  {{ end }}
+  {{/* Software requirements are not valid for Course type - removed to fix validation warning */}}
+  {{/* Previously detected packages like @pulumi/aws are now included as part of the course description */}}
   
   {{/* Add Pulumi resource types if detected */}}
   {{ if $cloudResources.pulumiTypes }}
