@@ -72,6 +72,7 @@ template:
 ```
 
 The above snippet includes:
+
 - `displayName` and `description` for the template (optional but recommended)
 - An `aws:region` configuration value with a default value of `us-west-2`
 - A `myAccessToken` secret without a default value
@@ -79,9 +80,9 @@ The above snippet includes:
 
 When a project is created from a template, the resulting project will include:
 
-* A modified `Pulumi.yaml` file, which reflects the new project's name and description.
-* A new `Pulumi.<stack>.yaml` file, which includes populated configuration values as specified in the `template` section of the source `Pulumi.yaml`.
-* A copy of all other files co-located with the source `Pulumi.yaml`.
+- A modified `Pulumi.yaml` file, which reflects the new project's name and description.
+- A new `Pulumi.<stack>.yaml` file, which includes populated configuration values as specified in the `template` section of the source `Pulumi.yaml`.
+- A copy of all other files co-located with the source `Pulumi.yaml`.
 
 Any occurrences of `${PROJECT}` or `${DESCRIPTION}` -- in `Pulumi.yaml` or any other files -- will be replaced with their respective values.
 
@@ -169,9 +170,9 @@ Organization templates are available to users in the [private registry](/docs/id
 
 By doing publishing organization templates, your organization's members will be able to:
 
-* Discover template in the [private registry](/docs/idp/get-started/private-registry/).
-* Configure and launch new Pulumi projects from their browser.
-* Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments) to automatically work with new projects.
+- Discover template in the [private registry](/docs/idp/get-started/private-registry/).
+- Configure and launch new Pulumi projects from their browser.
+- Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments) to automatically work with new projects.
 
 ## Configuring VCS-backed Templates
 
@@ -218,8 +219,8 @@ If you grant the app access to _all_ repos, the New Project Wizard will allow us
 Navigate to the "Integrations" tab to configure the Pulumi New Project Wizard to define your Organization Templates Source.
 Enter sources as `github.com/<owner>/<repo>/<optional subdirectory>`. A source can be a directory containing either a `Pulumi.yaml`, or other subdirectories with their own `Pulumi.yaml` files. For example, these are both valid sources:
 
-* `github.com/pulumi/templates` (all public Pulumi templates)
-* `github.com/pulumi/templates/aws-typescript` (a specific public template)
+- `github.com/pulumi/templates` (all public Pulumi templates)
+- `github.com/pulumi/templates/aws-typescript` (a specific public template)
 
 Private repositories work similarly as long as your GitHub user has access to the repository.
 
