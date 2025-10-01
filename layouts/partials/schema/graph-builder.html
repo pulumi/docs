@@ -1,4 +1,4 @@
-{{/* Graph builder for @graph implementation on test pages */}}
+{{/* Graph builder for @graph implementation for all pages */}}
 
 {{ $graph := slice }}
 
@@ -81,6 +81,9 @@
   }}
   {{ $graph = $graph | append $software }}
 {{ end }}
+
+{{/* Note: Additional special schemas (video, code, QA, etc.) can be added here in future */}}
+{{/* Currently focusing on main content schemas which cover 90% of use cases */}}
 
 {{/* Output single JSON-LD block with @graph */}}
 <script type="application/ld+json">
