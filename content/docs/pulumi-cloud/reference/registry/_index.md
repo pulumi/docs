@@ -452,10 +452,6 @@ The template version is now published and available to your organization.
 
 Delete a specific version of a template from the registry.
 
-{{% notes "info" %}}
-This endpoint is not yet implemented. Template versions are currently immutable and cannot be deleted.
-{{% /notes %}}
-
 ```plain
 DELETE /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}
 ```
@@ -468,3 +464,4 @@ DELETE /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{ver
 | `publisher` | string | path | Publisher name             |
 | `name`      | string | path | Template name               |
 | `version`   | string | path | Template version identifier |
+| `force`   | boolean | query | `true` required to delete the last version of a template, which will also delete the whole template |
