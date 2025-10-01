@@ -117,6 +117,8 @@ After adding the configuration:
 
 GitHub Copilot's MCP support is available through compatible editors. Configure in your editor's MCP settings:
 
+TEST
+
 **VS Code with Copilot:**
 Add to your VS Code settings.json:
 
