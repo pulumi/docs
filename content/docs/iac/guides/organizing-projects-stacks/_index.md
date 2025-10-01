@@ -8,8 +8,9 @@ menu:
     iac:
         name: Organizing Projects & Stacks
         parent: iac-using-pulumi
-        weight: 1
+        weight: 50
 aliases:
+- /docs/iac/using-pulumi/organizing-projects-stacks/
 - /docs/reference/organizing-stacks-projects/
 - /docs/intro/concepts/organizing-stacks-projects/
 - /docs/guides/organizing-projects-stacks/

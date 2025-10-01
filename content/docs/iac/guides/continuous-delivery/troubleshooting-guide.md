@@ -10,6 +10,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 99
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/troubleshooting-guide/
 - /docs/guides/continuous-delivery/troubleshooting-guide/
 - /docs/using-pulumi/continuous-delivery/troubleshooting-guide/
 - /docs/iac/packages-and-automation/continuous-delivery/troubleshooting-guide/

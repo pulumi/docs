@@ -10,6 +10,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 5
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/codefresh/
 - /docs/reference/cd-codefresh/
 - /docs/console/continuous-delivery/codefresh/
 - /docs/guides/continuous-delivery/codefresh/

@@ -11,6 +11,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 8
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/gitlab-app/
 - /docs/guides/continuous-delivery/gitlab-app/
 - /docs/using-pulumi/continuous-delivery/gitlab-app/
 - /docs/iac/packages-and-automation/continuous-delivery/gitlab-app/

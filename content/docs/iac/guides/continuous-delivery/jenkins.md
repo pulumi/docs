@@ -13,6 +13,7 @@ menu:
         parent: cont_delivery
         weight: 1
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/jenkins/
 - /docs/console/continuous-delivery/jenkins/
 - /docs/guides/continuous-delivery/jenkins/
 - /docs/using-pulumi/continuous-delivery/jenkins/

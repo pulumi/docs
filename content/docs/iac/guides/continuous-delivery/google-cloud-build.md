@@ -10,6 +10,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 10
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/google-cloud-build/
 - /docs/reference/cd-google-cloud-build/
 - /docs/console/continuous-delivery/google-cloud-build/
 - /docs/guides/continuous-delivery/google-cloud-build/

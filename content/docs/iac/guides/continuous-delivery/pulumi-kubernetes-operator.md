@@ -11,6 +11,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 13
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
 - /docs/guides/continuous-delivery/pulumi-kubernetes-operator/
 - /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
 - /docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/

@@ -5,6 +5,8 @@ meta_desc: This page details how to use Harness CI/CD to deploy infrastructure w
 title: Harness
 h1: Pulumi CI/CD & Harness
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/iac/using-pulumi/continuous-delivery/harness/
 menu:
     iac:
         name: Harness

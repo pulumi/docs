@@ -4,6 +4,8 @@ meta_desc: This page details how to use Bitbucket Pipelines to manage deploying 
 title: Bitbucket Pipelines
 h1: Pulumi CI/CD with Bitbucket Pipelines
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/iac/using-pulumi/continuous-delivery/bitbucket/
 menu:
     iac:
         name: Bitbucket Pipelines

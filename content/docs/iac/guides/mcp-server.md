@@ -5,11 +5,13 @@ title: MCP server
 h1: Pulumi Model Context Protocol server
 meta_image: /images/docs/meta-images/docs-meta.png
 weight: 6
+aliases:
+- /docs/iac/using-pulumi/mcp-server/
 menu:
     iac:
         name: MCP server
         parent: iac-using-pulumi
-        weight: 6
+        weight: 40
 ---
 
 The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to help you codify cloud architectures and get diffs for infrastructure changes right in your development environment, much in the same way you already do for code changes thanks to Git. This integration ensures that as you build cloud applications, your infrastructure is repeatable and follows best practices and policies, while dramatically reducing context switching and accelerating Infrastructure as Code (IaC) development workflows.

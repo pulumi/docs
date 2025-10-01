@@ -11,6 +11,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 1
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/aws-code-services/
 - /docs/reference/cd-aws-code-services/
 - /docs/console/continuous-delivery/aws-code-services/
 - /docs/guides/continuous-delivery/aws-code-services/

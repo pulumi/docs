@@ -8,7 +8,9 @@ menu:
     iac:
         name: Least privilege security
         parent: iac-using-pulumi
-        weight: 2
+        weight: 30
+aliases:
+- /docs/iac/using-pulumi/iac-least-privileges/
 ---
 
 When using Pulumi Infrastructure as Code (IaC) alongside Pulumi ESC (Environments, Secrets, and Config), adopting a **least privilege security posture** ensures infrastructure security and compliance while enabling efficient developer workflows.

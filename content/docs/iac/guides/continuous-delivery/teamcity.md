@@ -10,6 +10,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 15
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/teamcity/
 - /docs/guides/continuous-delivery/teamcity/
 - /docs/using-pulumi/continuous-delivery/teamcity/
 - /docs/iac/packages-and-automation/continuous-delivery/teamcity/

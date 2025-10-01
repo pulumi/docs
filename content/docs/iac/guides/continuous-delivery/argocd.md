@@ -10,6 +10,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 2
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/argocd/
 - /docs/guides/continuous-delivery/argocd/
 - /docs/using-pulumi/continuous-delivery/argocd/
 - /docs/iac/packages-and-automation/continuous-delivery/argocd/

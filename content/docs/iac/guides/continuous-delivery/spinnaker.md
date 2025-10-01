@@ -10,6 +10,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 14
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/spinnaker/
 - /docs/guides/continuous-delivery/spinnaker/
 - /docs/using-pulumi/continuous-delivery/spinnaker/
 - /docs/iac/packages-and-automation/continuous-delivery/spinnaker/

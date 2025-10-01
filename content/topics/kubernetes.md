@@ -236,7 +236,7 @@ superpowers:
 
     - title: Automate Delivery
       cta: Learn more
-      cta_url: "/docs/iac/using-pulumi/continuous-delivery/"
+      cta_url: "/docs/iac/guides/continuous-delivery/"
       icon_type: delivery
       icon_color: blue
       description: |

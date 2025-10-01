@@ -11,6 +11,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 2
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/azure-devops/
 - /docs/reference/cd-azure-devops/
 - /docs/console/continuous-delivery/azure-devops/
 - /docs/guides/continuous-delivery/azure-devops/

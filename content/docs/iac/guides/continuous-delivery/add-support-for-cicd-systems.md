@@ -11,6 +11,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 98
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/add-support-for-cicd-systems/
 - /docs/reference/cd-supporting-new-ci/
 - /docs/console/continuous-delivery/other/
 - /docs/guides/continuous-delivery/other/

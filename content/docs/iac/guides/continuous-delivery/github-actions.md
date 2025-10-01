@@ -11,6 +11,7 @@ menu:
         parent: iac-using-pulumi-cicd
         weight: 6
 aliases:
+- /docs/iac/using-pulumi/continuous-delivery/github-actions/
 - /docs/reference/cd-github-actions/
 - /docs/console/continuous-delivery/github-actions/
 - /docs/guides/continuous-delivery/github-actions/
