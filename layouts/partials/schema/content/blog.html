@@ -148,24 +148,9 @@
   {{/* Cloud provider information now handled in mentions for semantic accuracy */}}
   
   {{/* Infrastructure patterns now handled in mentions section for semantic accuracy */}}
-  
-  {{/* Add software requirements based on detected packages */}}
-  {{ $requirements := slice }}
-  {{ if in .Content "@pulumi/aws" }}
-    {{ $requirements = $requirements | append "@pulumi/aws" }}
-  {{ end }}
-  {{ if in .Content "@pulumi/azure" }}
-    {{ $requirements = $requirements | append "@pulumi/azure" }}
-  {{ end }}
-  {{ if in .Content "@pulumi/gcp" }}
-    {{ $requirements = $requirements | append "@pulumi/gcp" }}
-  {{ end }}
-  {{ if in .Content "@pulumi/kubernetes" }}
-    {{ $requirements = $requirements | append "@pulumi/kubernetes" }}
-  {{ end }}
-  {{ if $requirements }}
-    {{ $schema = merge $schema (dict "softwareRequirements" (delimit $requirements ", ")) }}
-  {{ end }}
+
+  {{/* Note: softwareRequirements is not a valid property for BlogPosting schema type */}}
+  {{/* Package dependencies are better represented through mentions and citations */}}
 
   {{/* Phase 4: Advanced Semantic Layer */}}
   

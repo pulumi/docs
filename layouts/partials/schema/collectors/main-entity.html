@@ -7,7 +7,7 @@
   {{ $entity = partial "schema/collectors/blog-entity.html" . }}
 
 {{ else if eq .Type "tutorials" }}
-  {{ $entity = partial "schema/collectors/course-entity.html" . }}
+  {{ $entity = partial "schema/collectors/howto-entity.html" . }}
 
 {{ else if eq .Type "docs" }}
   {{ $entity = partial "schema/collectors/article-entity.html" . }}

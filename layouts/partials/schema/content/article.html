@@ -1,4 +1,4 @@
-{{/* Article Schema for Documentation - Optimized for AI and technical content */}}
+{{/* TechArticle Schema for Documentation - Optimized for AI and technical content */}}
 
 {{ $image := .Params.meta_image | default "/images/docs/meta-images/docs-meta.png" }}
 {{ if not (hasPrefix $image "http") }}
@@ -89,7 +89,7 @@
 
 {{ $schema := dict
   "@context" "https://schema.org"
-  "@type" "Article"
+  "@type" "TechArticle"
   "@id" (printf "%s#article" .Permalink)
   "headline" (or .Params.h1 .Title)
   "description" (or .Params.meta_desc .Summary (printf "Learn about %s with Pulumi Infrastructure as Code" .Title))
@@ -178,7 +178,7 @@
 {{/* Add learning resource schema for tutorials/guides */}}
 {{ if or (in .Section "tutorials") (in .Section "guides") (in .Params.tags "tutorial") }}
   {{ $schema = merge $schema (dict
-    "@type" (slice "Article" "LearningResource")
+    "@type" (slice "TechArticle" "LearningResource")
     "learningResourceType" "Tutorial"
     "educationalLevel" $level
   ) }}

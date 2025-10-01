@@ -33,7 +33,16 @@
 {{/* Add image */}}
 {{ $image := "" }}
 {{ if .Params.meta_image }}
-  {{ $image = printf "%s%s" .Permalink .Params.meta_image }}
+  {{/* Fix URL concatenation to avoid double slashes */}}
+  {{ $baseURL := .Permalink }}
+  {{ if not (strings.HasSuffix $baseURL "/") }}
+    {{ $baseURL = printf "%s/" $baseURL }}
+  {{ end }}
+  {{ $imagePath := .Params.meta_image }}
+  {{ if strings.HasPrefix $imagePath "/" }}
+    {{ $imagePath = strings.TrimPrefix "/" $imagePath }}
+  {{ end }}
+  {{ $image = printf "%s%s" $baseURL $imagePath }}
 {{ else }}
   {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
 {{ end }}
@@ -80,21 +89,13 @@
   ) }}
 {{ end }}
 
-{{/* Add aggregateRating if available */}}
-{{ $schema = merge $schema (dict "aggregateRating" (dict
-  "@type" "AggregateRating"
-  "ratingValue" "4.8"
-  "ratingCount" "500"
-  "bestRating" "5"
-  "worstRating" "1"
-)) }}
+{{/* Only add aggregateRating if real data is available */}}
+{{/* Removed hardcoded fake ratings - should come from actual user reviews */}}
 
 {{/* Add software version */}}
 {{ $schema = merge $schema (dict "softwareVersion" "1.0") }}
 
-{{/* Add supported platforms */}}
-{{ $schema = merge $schema (dict
-  "supportedLanguage" (slice "TypeScript" "Python" "Go" "C#" "Java" "YAML")
-) }}
+{{/* Note: Programming languages are already covered in featureList as "Multi-language support" */}}
+{{/* supportedLanguage is not a valid property for SoftwareApplication schema type */}}
 
 {{ return $schema }}

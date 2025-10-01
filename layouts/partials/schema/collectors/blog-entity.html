@@ -18,12 +18,27 @@
   "articleSection" "Engineering Blog"
 }}
 
-{{/* Add dates */}}
+{{/* Add dates with proper fallback handling */}}
 {{ $publishDate := .PublishDate }}
 {{ $modifiedDate := .Lastmod }}
-{{ if not $modifiedDate }}
-  {{ $modifiedDate = $publishDate }}
+
+{{/* Fix invalid dates */}}
+{{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
+  {{ if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $publishDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $publishDate = now }}
+  {{ end }}
 {{ end }}
+
+{{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
+  {{ if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $modifiedDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $modifiedDate = $publishDate }}
+  {{ end }}
+{{ end }}
+
 {{ $schema = merge $schema (dict
   "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
   "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
@@ -37,7 +52,16 @@
 {{/* Add image */}}
 {{ $image := "" }}
 {{ if .Params.meta_image }}
-  {{ $image = printf "%s%s" .Permalink .Params.meta_image }}
+  {{/* Fix URL concatenation to avoid double slashes */}}
+  {{ $baseURL := .Permalink }}
+  {{ if not (strings.HasSuffix $baseURL "/") }}
+    {{ $baseURL = printf "%s/" $baseURL }}
+  {{ end }}
+  {{ $imagePath := .Params.meta_image }}
+  {{ if strings.HasPrefix $imagePath "/" }}
+    {{ $imagePath = strings.TrimPrefix "/" $imagePath }}
+  {{ end }}
+  {{ $image = printf "%s%s" $baseURL $imagePath }}
 {{ else }}
   {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
 {{ end }}
