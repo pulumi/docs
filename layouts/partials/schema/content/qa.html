@@ -1,0 +1,115 @@
+{{/* Q&A Schema for FAQ sections - Using Q&A instead of restricted FAQPage */}}
+
+{{ if .Params.faq }}
+  {{/* Build Q&A items from FAQ data */}}
+  {{ $mainEntity := slice }}
+  
+  {{/* Handle different FAQ structures */}}
+  {{ if reflect.IsSlice .Params.faq }}
+    {{/* FAQ is array of categories */}}
+    {{ range .Params.faq }}
+      {{ if .items }}
+        {{ range .items }}
+          {{ $mainEntity = $mainEntity | append (dict
+            "@type" "Question"
+            "name" .question
+            "acceptedAnswer" (dict
+              "@type" "Answer"
+              "text" (.answer | plainify)
+            )
+          ) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else if .Params.faq.items }}
+    {{/* FAQ has single items array */}}
+    {{ range .Params.faq.items }}
+      {{ $mainEntity = $mainEntity | append (dict
+        "@type" "Question"
+        "name" .question
+        "acceptedAnswer" (dict
+          "@type" "Answer"
+          "text" (.answer | plainify)
+        )
+      ) }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Only output if we have questions */}}
+  {{ if $mainEntity }}
+    {{/* For pricing page, wrap in Product schema */}}
+    {{ if eq .RelPermalink "/pricing/" }}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}#webpage",
+        "name": "{{ .Title }}",
+        "description": "{{ or .Params.meta_desc .Summary }}",
+        "url": "{{ .Permalink }}",
+        "mainEntity": [
+          {
+            "@type": "Product",
+            "@id": "https://www.pulumi.com/pricing/#team",
+            "name": "Pulumi Team",
+            "description": "Everything you need to get started with team collaboration",
+            "brand": {"@id": "https://www.pulumi.com/#organization"},
+            "offers": {
+              "@type": "Offer",
+              "price": "40",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.pulumi.com/pricing/",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "40",
+                "priceCurrency": "USD",
+                "unitText": "per month",
+                "unitCode": "MON"
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://www.pulumi.com/pricing/#enterprise",
+            "name": "Pulumi Enterprise",
+            "description": "Security and collaboration for large teams",
+            "brand": {"@id": "https://www.pulumi.com/#organization"},
+            "offers": {
+              "@type": "Offer",
+              "price": "400",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.pulumi.com/pricing/",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "400",
+                "priceCurrency": "USD",
+                "unitText": "per month",
+                "unitCode": "MON"
+              }
+            }
+          },
+          {{ range $index, $item := $mainEntity }}
+            {{ $item | jsonify }}{{ if lt $index (sub (len $mainEntity) 1) }},{{ end }}
+          {{ end }}
+        ]
+      }
+      </script>
+    {{ else }}
+      {{/* Regular Q&A page */}}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "QAPage",
+        "name": "{{ .Title }}",
+        "description": "{{ or .Params.meta_desc .Summary }}",
+        "url": "{{ .Permalink }}",
+        "mainEntity": {{ $mainEntity | jsonify }}
+      }
+      </script>
+    {{ end }}
+  {{ end }}
+{{ end }}

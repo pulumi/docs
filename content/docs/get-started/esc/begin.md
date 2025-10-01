@@ -9,7 +9,7 @@ menu:
     parent: esc-get-started
     identifier: esc-get-started-begin
 aliases:
-  - /docs/esc/get-started/begin
+  - /docs/esc/get-started/begin/
 ---
 
 Before you get started using Pulumi ESC, let's run through a few quick steps to ensure your environment is set up correctly.

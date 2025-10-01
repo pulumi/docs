@@ -9,7 +9,7 @@ menu:
     parent: esc-get-started
     identifier: esc-get-started-use-short-term-credentials
 aliases:
-  - /docs/esc/get-started/use-short-term-credentials
+  - /docs/esc/get-started/use-short-term-credentials/
 ---
 
 Managing cloud credentials presents significant challenges for organizations of all sizes. Static, long-lived credentials, especially those stored in local environments introduce security risks and operational issues. Pulumi ESC’s built-in support for [dynamic login providers](/docs/esc/integrations/dynamic-login-credentials/), allows you to generate short-term, scoped credentials via OIDC. These credentials can then be used in your CLI workflows, CI/CD, Pulumi IaC, and more!

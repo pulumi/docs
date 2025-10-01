@@ -9,7 +9,7 @@ menu:
     parent: esc-get-started
     identifier: esc-get-started-integrate-with-pulumi-iac
 aliases:
-  - /docs/esc/get-started/integrate-with-pulumi-iac
+  - /docs/esc/get-started/integrate-with-pulumi-iac/
 ---
 
 ## Overview

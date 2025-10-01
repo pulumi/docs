@@ -133,5 +133,6 @@
 {{ end }}
 
 {{ define "footer" }}
-
+    {{/* Include Course List Schema for SEO */}}
+    {{ partial "schema/content/course-list.html" . }}
 {{ end }}

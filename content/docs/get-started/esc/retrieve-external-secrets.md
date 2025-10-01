@@ -9,7 +9,7 @@ menu:
     parent: esc-get-started
     identifier: esc-get-started-retrieve-external-secrets
 aliases:
-  - /docs/esc/get-started/retrieve-external-secrets
+  - /docs/esc/get-started/retrieve-external-secrets/
 ---
 
 ## Overview

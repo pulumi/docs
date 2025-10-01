@@ -9,7 +9,7 @@ menu:
     parent: esc-get-started
     identifier: esc-get-started-create-environment
 aliases:
-  - /docs/esc/get-started/create-environment
+  - /docs/esc/get-started/create-environment/
 ---
 
 ## Overview
