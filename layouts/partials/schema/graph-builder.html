@@ -1,0 +1,93 @@
+{{/* Graph builder for @graph implementation for all pages */}}
+
+{{ $graph := slice }}
+
+{{/* Create WebPage entity as the main container */}}
+{{ $webpage := dict
+  "@type" "WebPage"
+  "@id" (printf "%s#webpage" .Permalink)
+  "url" .Permalink
+  "name" .Title
+}}
+
+{{/* Add description if available */}}
+{{ with (or .Params.meta_desc .Summary) }}
+  {{ $webpage = merge $webpage (dict "description" .) }}
+{{ end }}
+
+{{/* Collect breadcrumb for non-home pages */}}
+{{ if not .IsHome }}
+  {{ $breadcrumb := partial "schema/collectors/breadcrumb-entity.html" . }}
+  {{ $graph = $graph | append $breadcrumb }}
+  {{ $webpage = merge $webpage (dict "breadcrumb" (dict "@id" "#breadcrumb")) }}
+{{ end }}
+
+{{/* Collect main content entity based on page type */}}
+{{ $mainEntity := partial "schema/collectors/main-entity.html" . }}
+{{ if $mainEntity }}
+  {{ $graph = $graph | append $mainEntity }}
+  {{ $webpage = merge $webpage (dict "mainEntity" (dict "@id" "#main-content")) }}
+{{ end }}
+
+{{/* Add WebPage to graph */}}
+{{ $graph = $graph | append $webpage }}
+
+{{/* For homepage, add Organization, Website and SoftwareApplication schemas */}}
+{{ if .IsHome }}
+  {{/* Add Organization entity - only on homepage per Google best practices */}}
+  {{ $org := dict
+    "@type" "Organization"
+    "@id" "https://www.pulumi.com/#organization"
+    "name" "Pulumi"
+    "url" "https://www.pulumi.com"
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" "https://www.pulumi.com/logos/brand/logo.png"
+    )
+    "sameAs" (slice
+      "https://twitter.com/PulumiCorp"
+      "https://github.com/pulumi"
+      "https://www.linkedin.com/company/pulumi"
+      "https://www.youtube.com/c/PulumiTV"
+    )
+  }}
+  {{ $graph = $graph | append $org }}
+  {{/* Website schema */}}
+  {{ $website := dict
+    "@type" "WebSite"
+    "@id" "https://www.pulumi.com/#website"
+    "url" "https://www.pulumi.com"
+    "name" "Pulumi"
+    "description" "Infrastructure as Code in any programming language. Build, deploy, and manage modern cloud applications and infrastructure using familiar languages."
+    "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+  }}
+  {{ $graph = $graph | append $website }}
+
+  {{/* SoftwareApplication schema for Pulumi CLI */}}
+  {{ $software := dict
+    "@type" "SoftwareApplication"
+    "@id" "https://www.pulumi.com/#pulumi-cli"
+    "name" "Pulumi"
+    "applicationCategory" "DeveloperApplication"
+    "operatingSystem" "Windows, macOS, Linux"
+    "offers" (dict
+      "@type" "Offer"
+      "price" "0"
+      "priceCurrency" "USD"
+    )
+    "creator" (dict "@id" "https://www.pulumi.com/#organization")
+    "maintainer" (dict "@id" "https://www.pulumi.com/#organization")
+  }}
+  {{ $graph = $graph | append $software }}
+{{ end }}
+
+{{/* Note: Additional special schemas (video, code, QA, etc.) can be added here in future */}}
+{{/* Currently focusing on main content schemas which cover 90% of use cases */}}
+
+{{/* Output single JSON-LD block with @graph */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": {{ $graph | jsonify | safeJS }}
+}
+</script>
