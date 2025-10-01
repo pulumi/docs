@@ -1,0 +1,84 @@
+{{/* Automatic Breadcrumb Generator - Creates navigation hierarchy for all pages */}}
+
+{{ $breadcrumbs := slice }}
+{{ $position := 1 }}
+
+{{/* Always start with home */}}
+{{ $breadcrumbs = $breadcrumbs | append (dict
+  "@type" "ListItem"
+  "position" $position
+  "name" "Home"
+  "item" "https://www.pulumi.com"
+) }}
+
+{{/* Build breadcrumbs from URL path */}}
+{{ $currentPath := "" }}
+{{ $pathSegments := split (trim .RelPermalink "/") "/" }}
+
+{{ range $index, $segment := $pathSegments }}
+  {{ if $segment }}
+    {{ $position = add $position 1 }}
+    {{ $currentPath = printf "%s/%s" $currentPath $segment }}
+    
+    {{/* Get proper name for segment */}}
+    {{ $name := humanize $segment }}
+    
+    {{/* Try to get actual page title */}}
+    {{ with $.Site.GetPage $currentPath }}
+      {{ $name = .Title }}
+    {{ else }}
+      {{/* Common path name mappings */}}
+      {{ $nameMap := dict
+        "docs" "Documentation"
+        "blog" "Blog"
+        "tutorials" "Tutorials"
+        "reference" "API Reference"
+        "pkg" "Packages"
+        "esc" "Pulumi ESC"
+        "iac" "Infrastructure as Code"
+        "guides" "Guides"
+        "get-started" "Getting Started"
+        "aws" "AWS"
+        "azure" "Azure"
+        "gcp" "Google Cloud"
+        "kubernetes" "Kubernetes"
+        "product" "Products"
+        "pricing" "Pricing"
+        "events" "Events"
+        "careers" "Careers"
+        "templates" "Templates"
+        "case-studies" "Case Studies"
+        "webinars" "Webinars"
+        "pulumi-cloud" "Pulumi Cloud"
+      }}
+      {{ with index $nameMap $segment }}
+        {{ $name = . }}
+      {{ end }}
+    {{ end }}
+    
+    {{/* Create breadcrumb item */}}
+    {{ $item := dict
+      "@type" "ListItem"
+      "position" $position
+      "name" $name
+    }}
+    
+    {{/* Add URL for all items except the current page (last item) */}}
+    {{ if ne $index (sub (len $pathSegments) 1) }}
+      {{ $item = merge $item (dict "item" (printf "https://www.pulumi.com%s/" $currentPath)) }}
+    {{ end }}
+    
+    {{ $breadcrumbs = $breadcrumbs | append $item }}
+  {{ end }}
+{{ end }}
+
+{{/* Only output if we have more than just home */}}
+{{ if gt (len $breadcrumbs) 1 }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": {{ $breadcrumbs | jsonify | safeJS }}
+}
+</script>
+{{ end }}
