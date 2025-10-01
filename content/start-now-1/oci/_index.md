@@ -1,5 +1,5 @@
 ---
-title: Get Started with Pulumi & Oracle Cloud
+title: Get Started with Pulumi and Oracle Cloud
 meta_desc: Create, deploy, and manage infrastructure on Oracle Cloud Infrastructure using Pulumi - unified guide with examples in multiple languages
 type: page
 layout: cloud-unified
@@ -511,7 +511,7 @@ pulumi up
 
 {{% /choosable %}}
 
-## What's Next?
+## What's next?
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure

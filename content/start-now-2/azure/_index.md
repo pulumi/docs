@@ -96,7 +96,7 @@ Deploy it:
 pulumi up
 ```
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -193,7 +193,7 @@ Deploy it:
 pulumi up
 ```
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -304,7 +304,7 @@ Deploy it:
 pulumi up
 ```
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -412,7 +412,7 @@ Deploy it:
 pulumi up
 ```
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -523,7 +523,7 @@ Deploy it:
 pulumi up
 ```
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -622,7 +622,7 @@ Deploy it:
 pulumi up
 ```
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure

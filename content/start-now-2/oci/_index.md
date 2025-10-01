@@ -1,5 +1,5 @@
 ---
-title: Get Started with Pulumi & Oracle Cloud
+title: Get Started with Pulumi and Oracle Cloud
 meta_desc: Create, deploy, and manage infrastructure on Oracle Cloud Infrastructure using Pulumi - progressive guide with language-specific examples
 type: page
 layout: cloud-progressive
@@ -170,7 +170,7 @@ This command:
 3. Creates the VCN and bucket in OCI
 4. Outputs the resource IDs
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -345,7 +345,7 @@ This command:
 3. Creates the VCN and bucket in OCI
 4. Outputs the resource IDs
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -546,7 +546,7 @@ This command:
 3. Creates the VCN and bucket in OCI
 4. Outputs the resource IDs
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -747,7 +747,7 @@ This command:
 3. Creates the VCN and bucket in OCI
 4. Outputs the resource IDs
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -943,7 +943,7 @@ This command:
 3. Creates the VCN and bucket in OCI
 4. Outputs the resource IDs
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure
@@ -1119,7 +1119,7 @@ Deploy it:
 pulumi up
 ```
 
-### Next Steps
+### Next steps
 
 - [**View your stack in Pulumi Cloud →**](https://app.pulumi.com/stacks)
   Explore resource details, deployment history, and manage your infrastructure

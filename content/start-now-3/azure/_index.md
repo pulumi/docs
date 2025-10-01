@@ -209,7 +209,7 @@ This command:
 
 You've just deployed your first infrastructure with Pulumi!
 
-### What's Next?
+### What's next?
 
 - **[View your stack in Pulumi Cloud →](https://app.pulumi.com/stacks)**
   Explore resource details, deployment history, and manage your infrastructure
