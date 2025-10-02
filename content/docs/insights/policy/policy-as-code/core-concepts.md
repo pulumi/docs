@@ -109,8 +109,8 @@ This table summarizes the primary differences between the two types:
 {{% notes type="info" %}}
 **Stack Policy Timing**: The timing of stack policy execution differs between `pulumi preview` and `pulumi update`:
 
-  - During `pulumi preview`: Stack policies run after the preview completes, using whatever output values are already known from previously provisioned resources. Since no new resources are actually created during preview, stack policies are typically most useful when run during `preview` for catching violations before any resource provisioning occurs.
-  - During `pulumi update`: Stack policies run after all resources have been provisioned, but before the update operation completes. This means non-compliant resources may already be created by the time the policy violation is detected.
+- During `pulumi preview`: Stack policies run after the preview completes, using whatever output values are already known from previously provisioned resources. Since no new resources are actually created during preview, stack policies are typically most useful when run during `preview` for catching violations before any resource provisioning occurs.
+- During `pulumi update`: Stack policies run after all resources have been provisioned, but before the update operation completes. This means non-compliant resources may already be created by the time the policy violation is detected.
 
 For this reason, stack policies are most often used with `pulumi preview` to identify issues before resources are actually provisioned.
 {{% /notes %}}
@@ -119,10 +119,10 @@ For this reason, stack policies are most often used with `pulumi preview` to ide
 
 A policy has one of the following *enforcement levels*:
 
-  - {{< policy-enforcementlevel-advisory >}} prints a warning message when there is a violation.
-  - {{< policy-enforcementlevel-mandatory >}} halts an update before creating a resource that violates that policy.
-  - {{< policy-enforcementlevel-remediate >}} is stricter than mandatory and enables policy remediations where available.
-  - {{< policy-enforcementlevel-disabled >}} prevents the policy from running.
+- {{< policy-enforcementlevel-advisory >}} prints a warning message when there is a violation.
+- {{< policy-enforcementlevel-mandatory >}} halts an update before creating a resource that violates that policy.
+- {{< policy-enforcementlevel-remediate >}} is stricter than mandatory and enables policy remediations where available.
+- {{< policy-enforcementlevel-disabled >}} prevents the policy from running.
 
 The enforcement level can be specified in multiple ways: on the definition of a policy, on the Policy Pack as a whole, or through [*Policy Configuration*](/docs/using-pulumi/crossguard/configuration/) for either. If the enforcement is set in multiple places, the most granular setting for any given policy is used (so, policy-specific configuration overrides the Policy Pack-wide configuration). The default enforcement level is {{< policy-enforcementlevel-advisory >}} if no enforcement level is specified on either the policy pack or policy.
 

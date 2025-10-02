@@ -175,7 +175,7 @@ venv/bin/pip install -r requirements.txt
 
 ## More FAQ
 
-  - [Pulumi IaC FAQ](/docs/iac/support/faq/)
-  - [Pulumi ESC FAQ](/docs/esc/faq/)
-  - [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
-  - [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
+- [Pulumi IaC FAQ](/docs/iac/support/faq/)
+- [Pulumi ESC FAQ](/docs/esc/faq/)
+- [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
+- [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
