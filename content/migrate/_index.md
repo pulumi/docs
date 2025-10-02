@@ -31,7 +31,7 @@ capabilities:
 migrations:
     - title: HashiCorp Terraform
       image: /logos/tech/terraform.svg
-      selfServeUrl: /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform
+      selfServeUrl: /docs/migration/migrating-to-pulumi/from-terraform
       selfServeWebUrl: /migrate/tf2pulumi
       comparisonUrl: /docs/concepts/vs/terraform
     - title: AWS CloudFormation
