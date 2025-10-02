@@ -33,7 +33,7 @@ This enables a more intuitive, conversational approach to infrastructure develop
 The Pulumi MCP server works with various AI-powered development tools:
 
 - **[Cursor](https://cursor.sh/)** - AI-first code editor
-- **[Anthropic's Claude](https://claude.ai/code)** - AI assistant for coding
+- **[Anthropic's Claude Code](https://claude.ai/code)** - AI assistant for coding
 - **[GitHub Copilot](https://github.com/features/copilot)** - AI pair programmer
 - **[Windsurf](https://codeium.com/windsurf)** - AI development environment
 - **[Devin](https://app.devin.ai/)** - The AI
