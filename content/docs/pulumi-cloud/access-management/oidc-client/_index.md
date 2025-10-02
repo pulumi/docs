@@ -24,6 +24,16 @@ Pulumi supports establishing trust relationships with third party OIDC providers
 
 For third party services that have capabilities to issue OIDC id_tokens, it is possible to register them as a trusted OIDC Issuer to leverage these tokens to be exchanged by a short-lived Pulumi access token automatically to avoid having to store hardcoded credentials.
 
+## Token types by edition
+
+The available OIDC token types vary depending on your Pulumi edition:
+
+- **Individual**: `personal` tokens only
+- **Team**: `personal` and `organization` tokens
+- **Enterprise and Business Critical**: `personal`, `organization`, and `team` tokens
+
+When configuring authorization policies and requesting tokens, ensure you select a token type that is available for your edition.
+
 ## Configuring trust relationships
 
 ### Register the OIDC issuer

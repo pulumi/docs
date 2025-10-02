@@ -18,6 +18,10 @@ This document outlines the steps required to configure Pulumi to accept Google K
 
 See ["Bound Tokens"](https://cloud.google.com/blog/products/containers-kubernetes/kubernetes-bound-service-account-tokens) for more background.
 
+{{< notes type="info" >}}
+This guide demonstrates using `organization` tokens. Depending on your [Pulumi edition](/docs/pulumi-cloud/access-management/oidc-client/#token-types-by-edition), you may also use `personal` or `team` tokens by adjusting the token type in the authorization policies and the `requested_token_type` parameter.
+{{< /notes >}}
+
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
