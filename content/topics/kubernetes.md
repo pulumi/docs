@@ -255,7 +255,7 @@ superpowers:
 
     - title: Be Proactive, Not Reactive
       cta: Learn more
-      cta_url: "/docs/iac/crossguard/"
+      cta_url: "/docs/insights/policy/policy-as-code/"
       icon_type: shield
       icon_color: yellow
       description: |

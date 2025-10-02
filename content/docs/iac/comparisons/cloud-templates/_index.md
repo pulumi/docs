@@ -4,11 +4,18 @@ meta_desc: Learn about the major differences between Pulumi and cloud templating
 title: Cloud Templates
 h1: Pulumi vs. Cloud templates
 meta_image: /images/docs/meta-images/docs-meta.png
+menu:
+    iac:
+        name: Cloud Templates
+        parent: iac-comparisons
+        weight: 3
+        identifier: iac-comparisons-cloud-templates
 aliases:
 - /docs/reference/vs/cloud_templates/
 - /docs/intro/vs/cloud_templates/
 - /docs/intro/vs/cloud-templates/
 - /docs/concepts/vs/cloud-templates/
+- /docs/iac/concepts/vs/cloud-templates/
 ---
 
 Several cloud providers offer their own form of infrastructure-as-code, typically by way of JSON- or YAML-based templating solutions. Examples include AWS CloudFormation for Amazon Web Services and Azure Resource Manager (ARM) for Microsoft Azure. Template files containing cloud resource configurations are usually uploaded to a hosted service in the target cloud, which then processes the files to create, update, or delete cloud infrastructure resources as necessary.
@@ -21,4 +28,4 @@ While these template-based solutions are often easy to get started with, they ca
 
 Unlike many of these provider-specific services, Pulumi is [open source](https://github.com/pulumi/pulumi) and community-driven. To learn more about how Pulumi compares to some of these services in detail, see the following comparison docs:
 
-* [Pulumi vs. AWS CloudFormation](/docs/concepts/vs/cloud-templates/cloudformation/)
+* [Pulumi vs. AWS CloudFormation](/docs/iac/comparisons/cloud-templates/cloudformation/)

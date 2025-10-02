@@ -7,15 +7,16 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: AWS CloudFormation
-        parent: iac-concepts-compare
+        parent: iac-comparisons-cloud-templates
         weight: 2
-        identifier: iac-concepts-compare-cloudformation
+        identifier: iac-comparisons-cloudformation
     concepts:
         parent: vs
         weight: 2
 aliases:
 - /docs/intro/vs/cloud-templates/cloudformation/
 - /docs/concepts/vs/cloud-templates/cloudformation/
+- /docs/iac/concepts/vs/cloud-templates/cloudformation/
 ---
 
 <style>

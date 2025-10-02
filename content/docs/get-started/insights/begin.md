@@ -6,10 +6,12 @@ meta_desc: This page provides an overview on how to get started with Pulumi Insi
 weight: 2
 menu:
   get-started:
+    name: Before you begin
     parent: insights-get-started
     identifier: insights-get-started-begin
     weight: 2
 aliases:
+    - /docs/get-started/insights/begin/
     - /docs/insights/get-started/begin/
 ---
 

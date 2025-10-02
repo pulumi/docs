@@ -7,15 +7,16 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Cloud Template Transpilers
-        parent: iac-concepts-compare
-        identifier: cloud-template-transpilers
-        weight: 2
+        parent: iac-comparisons
+        identifier: iac-comparisons-transpilers
+        weight: 4
     concepts:
         parent: vs
         weight: 2
 aliases:
 - /docs/intro/vs/cloud_template_transpilers/
 - /docs/concepts/vs/cloud-template-transpilers/
+- /docs/iac/concepts/vs/cloud-template-transpilers/
 ---
 
 Because of [the challenges of writing raw YAML/JSON by hand](/docs/concepts/vs/cloud-templates), two notable

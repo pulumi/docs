@@ -6,14 +6,15 @@ h1: List of Compliance Ready Policies for Azure Native
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: Azure Native Policies
-        parent: iac-policy-compliance
+        parent: insights-policy-as-code-compliance
         weight: 5
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-azurenative/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azurenative/
-    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-azurenative/
+  - /docs/iac/crossguard/compliance-ready-policies-azurenative/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-azurenative/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azurenative/
+  - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-azurenative/
 ---
 There's a total of 1914 Compliance Ready Policies for the Azurenative provider.
 

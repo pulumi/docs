@@ -7,16 +7,16 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Kubernetes YAML
-        parent: iac-concepts-compare
+        parent: iac-comparisons
         weight: 7
     concepts:
         parent: vs
         weight: 8
-
 aliases:
 - /docs/reference/vs/k8s_yaml_dsls/
 - /docs/intro/vs/k8s_yaml_dsls/
 - /docs/concepts/vs/k8s-yaml-dsls/
+- /docs/iac/concepts/vs/k8s-yaml-dsls/
 ---
 
 Kubernetes offers YAML configuration out of the box. This is great as an "assembly language" for configuring

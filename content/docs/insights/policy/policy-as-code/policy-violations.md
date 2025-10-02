@@ -6,14 +6,15 @@ h1: Policy Violations
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: Policy violations
-        parent: iac-policy
+        parent: insights-policy-as-code
         weight: 3
 aliases:
-    - /docs/using-pulumi/crossguard/policy-violations/
-    - /docs/iac/packages-and-automation/crossguard/policy-violations/
-    - /docs/iac/using-pulumi/crossguard/policy-violations/
+  - /docs/iac/crossguard/policy-violations/
+  - /docs/using-pulumi/crossguard/policy-violations/
+  - /docs/iac/packages-and-automation/crossguard/policy-violations/
+  - /docs/iac/using-pulumi/crossguard/policy-violations/
 ---
 
 ## Overview

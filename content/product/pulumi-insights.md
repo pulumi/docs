@@ -111,7 +111,7 @@ learn:
             - link: /docs/pulumi-cloud/insights/
               type: primary
               action: Read the Docs
-            - link: /docs/iac/crossguard/
+            - link: /docs/insights/policy/policy-as-code/
               type: secondary
               action: Policy Guide
 ---

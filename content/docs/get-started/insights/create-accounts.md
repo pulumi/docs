@@ -6,10 +6,12 @@ meta_desc: This page provides an overview on how to get started with Pulumi Insi
 weight: 3
 menu:
   get-started:
+    name: Create Accounts
     parent: insights-get-started
     identifier: insights-get-started-accounts
     weight: 3
 aliases:
+    - /docs/get-started/insights/create-accounts/
     - /docs/insights/get-started/create-accounts/
 ---
 

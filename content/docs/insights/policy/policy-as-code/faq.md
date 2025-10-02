@@ -6,17 +6,18 @@ h1: Pulumi CrossGuard (Policy as code) FAQ
 weight: 7
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: FAQ
-        parent: iac-policy
+        parent: insights-policy-as-code
         weight: 8
         identifier: iac-policy-faq
 aliases:
-- /docs/guides/crossguard/faq/
-- /docs/using-pulumi/crossguard/faq/
-- /docs/iac/packages-and-automation/crossguard/
-- /docs/iac/packages-and-automation/crossguard/faq/
-- /docs/iac/using-pulumi/crossguard/faq/
+  - /docs/iac/crossguard/faq/
+  - /docs/guides/crossguard/faq/
+  - /docs/using-pulumi/crossguard/faq/
+  - /docs/iac/packages-and-automation/crossguard/
+  - /docs/iac/packages-and-automation/crossguard/faq/
+  - /docs/iac/using-pulumi/crossguard/faq/
 ---
 
 ## Is CrossGuard open source?
@@ -174,7 +175,7 @@ venv/bin/pip install -r requirements.txt
 
 ## More FAQ
 
-- [Pulumi IaC FAQ](/docs/iac/support/faq/)
-- [Pulumi ESC FAQ](/docs/esc/faq/)
-- [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
-- [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
+  - [Pulumi IaC FAQ](/docs/iac/support/faq/)
+  - [Pulumi ESC FAQ](/docs/esc/faq/)
+  - [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
+  - [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)

@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Pulumi terminology
-        parent: iac-concepts-compare-terraform
+        parent: iac-comparisons-terraform
         weight: 2
     concepts:
         parent: vs-terraform
@@ -15,6 +15,7 @@ menu:
 aliases:
 - /docs/intro/vs/terraform/terminology/
 - /docs/concepts/vs/terraform/terminology/
+- /docs/iac/concepts/vs/terraform/terminology/
 ---
 
 <style>

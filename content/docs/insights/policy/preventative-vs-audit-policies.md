@@ -5,8 +5,10 @@ h1: Preventative vs. Audit Policies
 meta_desc: Learn the difference between preventative and audit policy enforcement in Pulumi to shift left and maintain continuous compliance.
 menu:
   insights:
-    parent: policy-as-code
-    weight: 1
+    parent: insights-policy
+    weight: 30
+aliases:
+  - /docs/insights/preventative-vs-audit-policies/
 ---
 
 Pulumi Policies enables organizations to enforce compliance and best practices using various policy packs. There are two main approaches to policy enforcement: preventative and audit. This guide explains the differences between them and provides guidance on when to use each.

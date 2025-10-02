@@ -6,10 +6,12 @@ meta_desc: This page provides an overview on how to manage Pulumi Insights Accou
 weight: 4
 menu:
   get-started:
+    name: Manage Accounts and Scans
     parent: insights-get-started
     identifier: insights-get-started-manage-accounts
     weight: 4
 aliases:
+    - /docs/get-started/insights/account-management/
     - /docs/insights/get-started/account-management/
 ---
 

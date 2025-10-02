@@ -6,14 +6,15 @@ h1: Policy Manager
 weight: 1
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: Policy manager
-        parent: iac-policy-compliance
+        parent: insights-policy-as-code-compliance
         weight: 1
 aliases:
-    - /docs/using-pulumi/crossguard/api-policy-manager/
-    - /docs/iac/packages-and-automation/crossguard/api-policy-manager/
-    - /docs/iac/using-pulumi/crossguard/api-policy-manager/
+  - /docs/iac/crossguard/api-policy-manager/
+  - /docs/using-pulumi/crossguard/api-policy-manager/
+  - /docs/iac/packages-and-automation/crossguard/api-policy-manager/
+  - /docs/iac/using-pulumi/crossguard/api-policy-manager/
 ---
 ## Classes
 

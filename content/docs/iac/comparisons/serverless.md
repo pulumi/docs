@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Serverless Framework
-        parent: iac-concepts-compare
+        parent: iac-comparisons
         weight: 5
     concepts:
         parent: vs
@@ -16,6 +16,7 @@ aliases:
 - /docs/reference/vs/serverless/
 - /docs/intro/vs/serverless/
 - /docs/concepts/vs/serverless/
+- /docs/iac/concepts/vs/serverless/
 ---
 
 The Serverless Framework is a tool that makes programming AWS Lambda, Azure Functions, and Google Cloud Functions

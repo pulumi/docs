@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Cloud SDKs
-        parent: iac-concepts-compare
+        parent: iac-comparisons
         weight: 4
     concepts:
         parent: vs
@@ -16,6 +16,7 @@ aliases:
 - /docs/reference/vs/cloud_sdks/
 - /docs/intro/vs/cloud_sdks/
 - /docs/concepts/vs/cloud-sdks/
+- /docs/iac/concepts/vs/cloud-sdks/
 ---
 
 The cloud providers offer SDKs in multiple languages, including AWS Boto (Python), and many unnamed libraries for

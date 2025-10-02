@@ -5,14 +5,15 @@ title: Compliance Ready AWS Cloud Control Policies
 h1: List of Compliance Ready Policies for AWS Cloud Control
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: AWS Cloud Control Policies
-        parent: iac-policy-compliance
+        parent: insights-policy-as-code-compliance
         weight: 3
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-awsnative
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-awsnative/
-    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-awsnative/
+  - /docs/iac/crossguard/compliance-ready-policies-awsnative/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-awsnative
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-awsnative/
+  - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-awsnative/
 ---
 There's a total of 54 Compliance Ready Policies for the AWS Cloud Control provider.
 

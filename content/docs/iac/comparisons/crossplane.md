@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Crossplane
-        parent: iac-concepts-compare
+        parent: iac-comparisons
         weight: 9
     concepts:
         parent: vs
@@ -16,6 +16,7 @@ aliases:
 - /docs/reference/vs/crossplane/
 - /docs/intro/vs/crossplane/
 - /docs/concepts/vs/crossplane/
+- /docs/iac/concepts/vs/crossplane/
 ---
 
 <style>

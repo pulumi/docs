@@ -6,10 +6,12 @@ meta_desc: Use pre-built policy packs to apply industry-standard compliance and 
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
-    parent: policy-as-code
+    parent: insights-policy-as-code
     weight: 5
 aliases:
   - /docs/pulumi-cloud/insights/pre-built-packs/
+  - /docs/iac/crossguard/pre-built-packs/
+  - /docs/insights/pre-built-packs/
 ---
 
 Pulumi Cloud comes with pre-built policy packs that codify best practices for common security and compliance frameworks. These packs allow you to quickly evaluate your organization's compliance posture and "shift left," embedding continuous compliance directly into your IaC workflow. Proactively enforce controls, reduce misconfiguration risks before deployment, and help your organization meet its regulatory obligations with confidence.
@@ -47,7 +49,7 @@ Enabling Pulumi policy packs ensures consistent governance, simplifies complianc
 
 Our pre-built packs provide a strong foundation for cloud governance by covering common controls for major frameworks. However, every organization has unique requirements.
 
-We recommend that you enhance these pre-built packs with your own custom policies tailored to your specific business, security, and operational needs. Pulumi's flexible Policy as Code framework allows you to [author your own packs](/docs/iac/crossguard/get-started/#creating-a-policy-pack) and add them to the same Policy Groups alongside pre-built packs, giving you complete and comprehensive coverage.
+We recommend that you enhance these pre-built packs with your own custom policies tailored to your specific business, security, and operational needs. Pulumi's flexible Policy as Code framework allows you to [author your own packs](/docs/insights/policy/policy-as-code/get-started/#creating-a-policy-pack) and add them to the same Policy Groups alongside pre-built packs, giving you complete and comprehensive coverage.
 
 ### Frequently Asked Questions (FAQ)
 
@@ -59,4 +61,4 @@ Policy Packs in the Pulumi Registry follow semantic versioning. We release new v
 
 They are designed to work together. You can add both a pre-built pack (like Pulumi Best Practices) and your own custom-authored policy pack to the same Policy Group. This allows you to enforce both general best practices and your organization-specific rules on the same set of stacks.
 
-For more information on authoring custom policy packs, see our [Policy as Code get started guide](/docs/iac/crossguard/get-started/).
+For more information on authoring custom policy packs, see our [Policy as Code get started guide](/docs/insights/policy/policy-as-code/get-started/).

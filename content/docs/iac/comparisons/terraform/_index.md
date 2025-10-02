@@ -7,9 +7,9 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Terraform
-        parent: iac-concepts-compare
+        parent: iac-comparisons
         weight: 1
-        identifier: iac-concepts-compare-terraform
+        identifier: iac-comparisons-terraform
     concepts:
         identifier: vs-terraform
         parent: vs
@@ -18,6 +18,7 @@ aliases:
 - /docs/reference/vs/terraform/
 - /docs/intro/vs/terraform/
 - /docs/concepts/vs/terraform/
+- /docs/iac/concepts/vs/terraform/
 ---
 
 <style>

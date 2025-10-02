@@ -6,15 +6,16 @@ h1: Configuring policy packs
 weight: 5
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: Policy configuration
-        parent: iac-policy
+        parent: insights-policy-as-code
         weight: 4
 aliases:
-- /docs/guides/crossguard/configuration/
-- /docs/using-pulumi/crossguard/configuration/
-- /docs/iac/packages-and-automation/crossguard/configuration/
-- /docs/iac/using-pulumi/crossguard/configuration/
+  - /docs/iac/crossguard/configuration/
+  - /docs/guides/crossguard/configuration/
+  - /docs/using-pulumi/crossguard/configuration/
+  - /docs/iac/packages-and-automation/crossguard/configuration/
+  - /docs/iac/using-pulumi/crossguard/configuration/
 ---
 
 <!-- markdownlint-disable ul code -->

@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Custom solutions
-        parent: iac-concepts-compare
+        parent: iac-comparisons
         weight: 10
     concepts:
         parent: vs
@@ -16,6 +16,7 @@ aliases:
 - /docs/reference/vs/custom/
 - /docs/intro/vs/custom/
 - /docs/concepts/vs/custom/
+- /docs/iac/concepts/vs/custom/
 ---
 
 Many organizations start out by manually managing their infrastructure. This often begins by pointing and clicking in

@@ -6,17 +6,18 @@ title: Policy as code
 h1: Pulumi policy as code
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
-        name: Policy as code
-        parent: iac-home
-        weight: 55
-        identifier: iac-policy
+    insights:
+        name: Policy as Code
+        parent: insights-policy
+        weight: 10
+        identifier: insights-policy-as-code
 aliases:
-- /docs/guides/crossguard/
-- /policy-as-code/
-- /docs/using-pulumi/crossguard/
-- /docs/iac/packages-and-automation/crossguard/
-- /docs/iac/using-pulumi/crossguard/
+  - /docs/guides/crossguard/
+  - /policy-as-code/
+  - /docs/using-pulumi/crossguard/
+  - /docs/iac/packages-and-automation/crossguard/
+  - /docs/iac/using-pulumi/crossguard/
+  - /docs/iac/crossguard/
 ---
 
 CrossGuard is Pulumi's Policy as Code offering. CrossGuard empowers you to set guardrails to enforce compliance for resources so developers within an organization can provision their own infrastructure while sticking to best practices and security compliance. Using Policy as Code, you can write flexible business or security policies.

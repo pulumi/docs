@@ -5,14 +5,15 @@ title: Compliance Ready Azure Policies
 h1: List of Compliance Ready Policies for Azure
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: Azure Policies
-        parent: iac-policy-compliance
+        parent: insights-policy-as-code-compliance
         weight: 4
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-azure/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azure/
-    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-azure/
+  - /docs/iac/crossguard/compliance-ready-policies-azure/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-azure/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azure/
+  - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-azure/
 ---
 There's a total of 3 Compliance Ready Policies for the Azure provider.
 

@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: OpenTofu
-        parent: iac-concepts-compare
+        parent: iac-comparisons
         weight: 6
     concepts:
         identifier: vs-opentofu
@@ -17,6 +17,7 @@ aliases:
 - /docs/reference/vs/opentofu/
 - /docs/intro/vs/opentofu/
 - /docs/concepts/vs/opentofu/
+- /docs/iac/concepts/vs/opentofu/
 ---
 
 <style>

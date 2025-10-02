@@ -6,11 +6,14 @@ meta_desc: This page describes how to create accounts used by Pulumi Insights to
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
+    name: Discovery
     parent: insights-home
-    weight: 3
+    weight: 30
+    identifier: insights-discovery
 aliases:
   - /docs/pulumi-cloud/insights/accounts/
   - /docs/pulumi-cloud/insights/import/
+  - /docs/insights/accounts/
 ---
 
 This document outlines the steps required to create and manage a Pulumi Insights account used to scan provider resources.

@@ -7,15 +7,16 @@ h1: AWSGuard policies
 weight: 3
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: AWSGuard
-        parent: iac-policy
+        parent: insights-policy-as-code
         weight: 6
 aliases:
-- /docs/guides/crossguard/awsguard/
-- /docs/using-pulumi/crossguard/awsguard/
-- /docs/iac/packages-and-automation/crossguard/awsguard/
-- /docs/iac/using-pulumi/crossguard/awsguard/
+  - /docs/iac/crossguard/awsguard/
+  - /docs/guides/crossguard/awsguard/
+  - /docs/using-pulumi/crossguard/awsguard/
+  - /docs/iac/packages-and-automation/crossguard/awsguard/
+  - /docs/iac/using-pulumi/crossguard/awsguard/
 ---
 <!-- markdownlint-disable ul code -->
 

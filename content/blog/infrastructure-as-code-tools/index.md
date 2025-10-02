@@ -407,7 +407,7 @@ Organizations like Unity, Snowflake, and Starburst have reported significant pro
 License: Business Source License (BSL) 1.1 (Not Open Source)  
 Best For: Teams with existing Terraform expertise and established workflows
 
-[Terraform](/docs/iac/concepts/vs/terraform/) uses HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. However, its 2023 licensing change to BSL (no longer open source) and inherent limitations with domain-specific languages create challenges for teams requiring advanced software engineering practices.
+[Terraform](/docs/iac/comparisons/terraform/) uses HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. However, its 2023 licensing change to BSL (no longer open source) and inherent limitations with domain-specific languages create challenges for teams requiring advanced software engineering practices.
 
 Key Features:
 

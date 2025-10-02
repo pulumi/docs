@@ -5,14 +5,15 @@ title: Compliance Ready Gcp Policies
 h1: List of Compliance Ready Policies for Gcp
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: GCP Policies
-        parent: iac-policy-compliance
+        parent: insights-policy-as-code-compliance
         weight: 6
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-gcp/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-gcp/
-    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-gcp/
+  - /docs/iac/crossguard/compliance-ready-policies-gcp/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-gcp/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-gcp/
+  - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-gcp/
 ---
 There's a total of 1 Compliance Ready Policies for the Gcp provider.
 

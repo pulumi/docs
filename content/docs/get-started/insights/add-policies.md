@@ -6,10 +6,12 @@ meta_desc: Learn how to use Pulumi CrossGuard policies to evaluate cloud resourc
 weight: 6
 menu:
   get-started:
+    name: Add Policies
     parent: insights-get-started
     identifier: insights-get-started-policies
     weight: 6
 aliases:
+    - /docs/get-started/insights/add-policies/
     - /docs/insights/get-started/add-policies/
 ---
 

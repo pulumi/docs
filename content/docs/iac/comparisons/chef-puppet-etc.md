@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Chef & Puppet
-        parent: iac-concepts-compare
+        parent: iac-comparisons
         weight: 8
     concepts:
         parent: vs
@@ -16,6 +16,7 @@ aliases:
 - /docs/reference/vs/chef_puppet_etc/
 - /docs/intro/vs/chef_puppet_etc/
 - /docs/concepts/vs/chef-puppet-etc/
+- /docs/iac/concepts/vs/chef-puppet-etc/
 ---
 
 Chef, Puppet, Ansible, and Salt are all popular _configuration management tools_. These tools help you install and

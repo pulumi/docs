@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: OpenTofu vs. Terraform
-        parent: iac-concepts-compare-terraform
+        parent: iac-comparisons-terraform
         weight: 2
     concepts:
         parent: vs-terraform
@@ -15,6 +15,7 @@ menu:
 aliases:
     - /docs/intro/vs/terraform/opentofu/
     - /docs/concepts/vs/terraform/opentofu/
+    - /docs/iac/concepts/vs/terraform/opentofu/
 ---
 
 <style>

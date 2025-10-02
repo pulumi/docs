@@ -6,10 +6,12 @@ meta_desc: This page provides an overview on how to get started with Pulumi Insi
 weight: 5
 menu:
   get-started:
+    name: Using Resource Explorer
     parent: insights-get-started
     identifier: insights-get-started-resource-explorer
     weight: 5
 aliases:
+    - /docs/get-started/insights/using-resource-explorer/
     - /docs/insights/get-started/using-resource-explorer/
 ---
 

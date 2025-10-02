@@ -496,7 +496,7 @@ comparison_table:
                   - content: Pulumi Best Practices
                   - content: Pulumi Best Practices, HITRUST CSF
               - title: Custom Policy Packs
-                link: /docs/iac/crossguard/get-started/#creating-a-policy-pack
+                link: /docs/insights/policy/policy-as-code/get-started/#creating-a-policy-pack
                 items:
                   - content: _blank
                   - content: 1 pack<br>up to 25 policies

@@ -5,14 +5,15 @@ title: Compliance Ready Googlenative Policies
 h1: List of Compliance Ready Policies for Googlenative
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: Google Native Policies
-        parent: iac-policy-compliance
+        parent: insights-policy-as-code-compliance
         weight: 7
 aliases:
-    - /docs/using-pulumi/crossguard/compliance-ready-policies-googlenative/
-    - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-googlenative/
-    - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-googlenative/
+  - /docs/iac/crossguard/compliance-ready-policies-googlenative/
+  - /docs/using-pulumi/crossguard/compliance-ready-policies-googlenative/
+  - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-googlenative/
+  - /docs/iac/using-pulumi/crossguard/compliance-ready-policies-googlenative/
 ---
 There's a total of 926 Compliance Ready Policies for the Googlenative provider.
 

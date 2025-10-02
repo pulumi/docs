@@ -7,20 +7,21 @@ h1: Get started with Pulumi policy as code
 weight: 1
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    iac:
+    insights:
         name: Get started
-        parent: iac-policy
+        parent: insights-policy-as-code
         weight: 1
 aliases:
-- /docs/get-started/policy-as-code
-- /docs/get-started/crossguard
-- /docs/get-started/crossguard/authoring-a-policy-pack
-- /docs/get-started/crossguard/enforcing-a-policy-pack
-- /docs/guides/crossguard/get-started/
-- /docs/using-pulumi/crossguard/get-started/
-- /docs/iac/packages-and-automation/crossguard/get-started/
-- /docs/iac/using-pulumi/crossguard/get-started/
-- /docs/iac/packages-and-automation/crossguard/get-started/
+  - /docs/iac/crossguard/get-started/
+  - /docs/get-started/policy-as-code
+  - /docs/get-started/crossguard
+  - /docs/get-started/crossguard/authoring-a-policy-pack
+  - /docs/get-started/crossguard/enforcing-a-policy-pack
+  - /docs/guides/crossguard/get-started/
+  - /docs/using-pulumi/crossguard/get-started/
+  - /docs/iac/packages-and-automation/crossguard/get-started/
+  - /docs/iac/using-pulumi/crossguard/get-started/
+  - /docs/iac/packages-and-automation/crossguard/get-started/
 ---
 
 Pulumi CrossGuard is a product that provides gated deployments via Policy as Code.
