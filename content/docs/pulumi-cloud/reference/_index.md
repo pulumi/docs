@@ -56,3 +56,4 @@ The Pulumi Cloud REST API is organized into the following resource categories:
 - [Stack Tags](/docs/pulumi-cloud/reference/stack-tags/) - Manage metadata tags on stacks
 - [Stack Updates](/docs/pulumi-cloud/reference/stack-updates/) - Manage the update lifecycle for stacks
 - [Stacks](/docs/pulumi-cloud/reference/stacks/) - Create, update, and manage Pulumi stacks
+- [Webhooks](/docs/pulumi-cloud/reference/webhooks/) - Create and manage webhooks for organizations and stacks
