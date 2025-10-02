@@ -8,9 +8,11 @@ authors: ["erin-krengel"]
 tags: ["policy-as-code", "features", "pulumi-news"]
 ---
 
-> [!INFO]
-> This blog post discusses CrossGuard in "preview" status. CrossGuard is now fully released and integrated into Pulumi. For current information about Pulumi's policy as code capabilities, please refer to the [latest CrossGuard documentation](/docs/using-pulumi/crossguard/).
+{{%% notes type="info" %%}}
 
+This blog post discusses CrossGuard in "preview" status. CrossGuard is now fully released and integrated into Pulumi. For current information about Pulumi's policy as code capabilities, please refer to the [latest CrossGuard documentation](/docs/using-pulumi/crossguard/).
+
+{{%% /notes %%}}
 Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using CrossGuard, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they are applied to your resources. CrossGuard is 100% open source and available to all users of Pulumi, including the Individual Edition. Advanced organization-wide policy management features are available to Enterprise customers.
 
 <!--more-->

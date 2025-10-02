@@ -150,9 +150,11 @@ Currently, there are issues with autoscaling based on the metrics, which makes p
 
 ## AWS Pricing
 
-> [!INFO]
-> The pricing information in this section is outdated. For the most current AWS Lambda pricing, including Provisioned Concurrency costs, please refer to the [official AWS Lambda pricing page](https://aws.amazon.com/lambda/pricing/).
+{{%% notes type="info" %%}}
 
+The pricing information in this section is outdated. For the most current AWS Lambda pricing, including Provisioned Concurrency costs, please refer to the [official AWS Lambda pricing page](https://aws.amazon.com/lambda/pricing/).
+
+{{%% /notes %%}}
 While hand-crafted Lambda warmers are virtually free, provisioned concurrency can be costly. The pricing model for Provisioned Concurrency differs from the standard on-demand Lambda model: Instead of purely per-call billing, AWS charges per hour for provisioned capacity.
 
 You pay for the Provisioned Concurrency you configure, even if a worker handled zero requests, plus a reduced rate for actual usage of those pre-provisioned instances.

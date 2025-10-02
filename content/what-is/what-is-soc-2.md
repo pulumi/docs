@@ -23,9 +23,11 @@ In this comprehensive guide to SOC 2, we'll explore:
 
 SOC 2 is an auditing framework developed by the AICPA that verifies service providers have established robust controls to ensure the security, availability, processing integrity, confidentiality, and privacy of customer data. It is specifically designed for service providers that store customer data in the cloud.
 
-> [!INFO]
-> Unlike compliance frameworks like PCI DSS that have prescriptive requirements, SOC 2 is based on Trust Services Criteria and allows organizations flexibility in how they implement controls to meet these principles.
+{{%% notes type="info" %%}}
 
+Unlike compliance frameworks like PCI DSS that have prescriptive requirements, SOC 2 is based on Trust Services Criteria and allows organizations flexibility in how they implement controls to meet these principles.
+
+{{%% /notes %%}}
 SOC 2 compliance has become increasingly important for several compelling reasons:
 
 * **Customer trust** - Provides independent verification that a service provider prioritizes security and data protection

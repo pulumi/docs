@@ -9,9 +9,11 @@ tags:
    - features
    - ai
 ---
-> [!INFO]
-> This post is out-of-date. For the latest pricing and editions, please visit the [Pulumi Pricing page](/pricing/).
+{{%% notes type="info" %%}}
 
+This post is out-of-date. For the latest pricing and editions, please visit the [Pulumi Pricing page](/pricing/).
+
+{{%% /notes %%}}
 Today we are launching **Pulumi Team Edition**, a new way for teams to adopt and use Pulumi and the Pulumi Service to collaborate on building, managing and deploying cloud infrastructure as code. Pulumi Team Edition is priced based on the number of cloud resources under management, with a generous free tier to ensure that teams can get up and running with Pulumi Team Edition at no cost.
 
 **Pulumi Enterprise Edition**, which offers larger organizations advanced security, policy, access control, support and billing options, is also now available with usage-based pricing, including prepaid options with bulk discounts available.

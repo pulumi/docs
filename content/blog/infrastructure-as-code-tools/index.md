@@ -822,9 +822,11 @@ output "instance_ip" {
 License: GPL v3  
 Best For: Configuration management with some infrastructure provisioning capabilities
 
-> [!INFO]
-> Ansible is primarily a configuration management tool, not a pure Infrastructure as Code tool. While Ansible can provision some cloud resources, its core strength lies in configuring and managing software on existing systems rather than comprehensive infrastructure provisioning.
+{{%% notes type="info" %%}}
 
+Ansible is primarily a configuration management tool, not a pure Infrastructure as Code tool. While Ansible can provision some cloud resources, its core strength lies in configuring and managing software on existing systems rather than comprehensive infrastructure provisioning.
+
+{{%% /notes %%}}
 Ansible provides configuration management and limited infrastructure provisioning through its agentless architecture and simple YAML-based playbooks.
 
 Pulumi Integration: Rather than competing with Ansible, Pulumi complements it perfectly. Use Pulumi for infrastructure provisioning and Ansible for configuration management. Pulumi's Command provider can execute Ansible playbooks as part of your infrastructure deployment, and many Pulumi customers use both tools together for comprehensive infrastructure automation. [See example: Deploy WordPress to AWS using Pulumi and Ansible](/blog/deploy-wordpress-aws-pulumi-ansible/).
@@ -867,9 +869,11 @@ Code Example:
 License: Apache 2.0  
 Best For: Complex configuration management scenarios requiring programmable logic
 
-> [!INFO]
-> Chef is a configuration management tool, not an Infrastructure as Code tool. Chef focuses on configuring and maintaining software, services, and system settings on existing infrastructure rather than provisioning cloud resources.
+{{%% notes type="info" %%}}
 
+Chef is a configuration management tool, not an Infrastructure as Code tool. Chef focuses on configuring and maintaining software, services, and system settings on existing infrastructure rather than provisioning cloud resources.
+
+{{%% /notes %%}}
 Chef provides configuration management and system automation using Ruby-based recipes and cookbooks, offering powerful programmability for complex configuration scenarios.
 
 Key Features:
@@ -906,9 +910,11 @@ end
 License: Apache 2.0  
 Best For: Enterprise environments requiring strong governance and compliance
 
-> [!INFO]
-> Puppet is a configuration management tool, not an Infrastructure as Code tool. Puppet specializes in maintaining desired configuration state on existing systems and ensuring compliance, rather than provisioning cloud infrastructure.
+{{%% notes type="info" %%}}
 
+Puppet is a configuration management tool, not an Infrastructure as Code tool. Puppet specializes in maintaining desired configuration state on existing systems and ensuring compliance, rather than provisioning cloud infrastructure.
+
+{{%% /notes %%}}
 Puppet offers enterprise-grade configuration management with a focus on compliance, governance, and declarative system state management.
 
 Key Features:
@@ -949,9 +955,11 @@ class webserver {
 License: Apache 2.0  
 Best For: Python-oriented teams requiring high-performance configuration management
 
-> [!INFO]
-> Salt is primarily a configuration management and remote execution tool, not a pure Infrastructure as Code tool. While Salt can manage some infrastructure components, its primary focus is on configuring systems and executing commands across large infrastructures.
+{{%% notes type="info" %%}}
 
+Salt is primarily a configuration management and remote execution tool, not a pure Infrastructure as Code tool. While Salt can manage some infrastructure components, its primary focus is on configuring systems and executing commands across large infrastructures.
+
+{{%% /notes %%}}
 Salt provides fast, scalable configuration management and remote execution using Python, designed for high-performance system automation at scale.
 
 Key Features:
