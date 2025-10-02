@@ -1,7 +1,7 @@
 ---
 title: Organizations
 title_tag: "Pulumi Cloud REST API: Organizations"
-meta_desc: Learn about the Pulumi Cloud REST API endpoints for managing organizations, teams, members, and organization-level access tokens and webhooks.
+meta_desc: Learn about the Pulumi Cloud REST API endpoints for managing organizations, teams, members, and organization-level access tokens.
 menu:
     cloud:
         parent: pulumi-cloud-reference
@@ -18,7 +18,6 @@ The API provides endpoints for the following categories of operations:
 - Managing organization access tokens
 - Creating and managing teams
 - Managing team access tokens
-- Creating and managing webhooks
 
 ## User Management
 
@@ -396,64 +395,4 @@ curl \
 
 ## Webhooks
 
-### Create Webhook
-
-Create a new webhook for an organization or stack.
-
-```plain
-// To create an organization webhook
-POST /api/orgs/{organization}/hooks
-
-// To create a stack webhook
-POST /api/stacks/{organization}/{project}/{stack}/hooks
-```
-
-#### Parameters
-
-| Parameter          | Type          | In   | Description                                                                                                                                                                     |
-|--------------------|---------------|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `active`           | boolean       | body | enable webhook                                                                                                                                                                  |
-| `displayName`      | string        | body | name of webhook                                                                                                                                                                 |
-| `organizationName` | string        | body | organization name                                                                                                                                                               |
-| `payloadUrl`       | string        | body | URL to send request to                                                                                                                                                          |
-| `projectName`      | string        | body | **Optional.** project name (required for stack webhooks)                                                                                                                        |
-| `stackName`        | string        | body | **Optional.** stack name (required for stack webhooks)                                                                                                                          |
-| `format`           | string        | body | **Optional.** format of the payload. Possible values are `raw`, `slack`, `ms_teams` or `pulumi_deployments`. Default is `raw`.                                                  |
-| `filters`          | array[string] | body | **Optional.** list of filters for events the webhook should receive. See [webhook docs](/docs/pulumi-cloud/webhooks#filters) for more information on what filters are available |
-| `secret`           | string        | body | **Optional.** secret used as the HMAC key. See [webhook docs](/docs/pulumi-cloud/webhooks#headers) for more information                                                         |
-
-### List Webhooks
-
-List all webhooks for an organization or stack.
-
-```plain
-// List organization webhooks
-GET /api/orgs/{organization}/hooks
-
-// List stack webhooks
-GET /api/stacks/{organization}/{project}/{stack}/hooks
-```
-
-### Get Webhook
-
-Get details about a specific webhook.
-
-```plain
-// Get organization webhook
-GET /api/orgs/{organization}/hooks/{webhookname}
-
-// Get stack webhook
-GET /api/stacks/{organization}/{project}/{stack}/hooks/{webhookname}
-```
-
-### Ping Webhook
-
-Send a test ping to a webhook to validate it's working.
-
-```plain
-// Ping organization webhook
-POST /api/orgs/{organization}/hooks/{webhookname}/ping
-
-// Ping stack webhook
-POST /api/stacks/{organization}/{project}/{stack}/hooks/{webhookname}/ping
-```
+For comprehensive information about webhooks including setup, configuration, event filtering, and complete API reference, see the [Webhooks documentation](/docs/pulumi-cloud/webhooks/) and [Webhooks REST API reference](/docs/pulumi-cloud/reference/webhooks/).
