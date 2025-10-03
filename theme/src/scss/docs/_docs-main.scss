@@ -343,21 +343,21 @@ body.section-registry {
             min-width: 0;
             flex-shrink: 1;
             flex-grow: 1;
-            width: 700px;
-            max-width: 700px;
+            width: 1200px;
+            max-width: 1200px;
             min-width: 0;
             margin: 1rem 1.5rem 0 1rem;
             padding-bottom: 24px;
             min-height: 100vh;
 
             @media (min-width: 1024px) {
-                max-width: 634px;
+                max-width: 1200px;
                 flex-direction: column;
             }
 
             @media (min-width: 1024px) {
                 margin-left: 24px;
-                max-width: 700px;
+                max-width: 1200px;
                 min-width: 0;
             }
 
