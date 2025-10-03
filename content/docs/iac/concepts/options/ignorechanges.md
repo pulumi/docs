@@ -26,7 +26,7 @@ After the resource is created, Pulumi relies on the last recorded state for ever
 
 Because Pulumi reuses the value stored in the state, an external system can safely update the live resource as long as you synchronize the stack before the next update. Run `pulumi refresh` (or `pulumi up --refresh`) to pull the latest provider values into the state. Skipping the refresh step leaves stale values in the state, and Pulumi will continue to send those stale values to the provider during subsequent updates, which can overwrite the drift you meant to preserve.
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 When you skip `pulumi refresh` (or `pulumi up --refresh`) after `ignoreChanges` has been set, Pulumi keeps using the previous state value when it performs an update. Providers that require full object replacements—such as AWS load balancer listeners where the entire target group array is sent on every update—will receive the stale values from the state and may reset the live configuration.
 {{% /notes %}}
 
@@ -107,7 +107,7 @@ resources:
 
 {{< /chooser >}}
 
-One reason you would use the `ignoreChanges` option is to ignore changes in properties that lead to diffs. Another reason is to change the defaults for a property without forcing all existing deployed stacks to update or replace the affected resource. This is common after you’ve imported existing infrastructure provisioned by another method into Pulumi. In these cases, there may be historical drift that you’d prefer to retain, rather than replacing and reconstructing critical parts of your infrastructure.
+One reason you would use the `ignoreChanges` option is to ignore changes in properties that lead to diffs. Another reason is to change the defaults for a property without forcing all existing deployed stacks to update or replace the affected resource. This commonly occurs after importing existing infrastructure provisioned by another method into Pulumi. In these cases, there may be historical drift that you’d prefer to retain, rather than replacing and reconstructing critical parts of your infrastructure.
 
 ## Example: Preserve externally managed weights
 
@@ -145,6 +145,8 @@ const frontEndListener = new aws.lb.Listener("frontEndListener", {
             ],
         },
     }],
+}, {
+    ignoreChanges: ['defaultActions[*].forward.targetGroups[*].weight']
 });
 
 ```
@@ -180,7 +182,8 @@ front_end_listener = aws.lb.Listener("frontEndListener",
                 },
             ],
         },
-    }])
+    }],
+    opts=ResourceOptions(ignore_changes=["defaultActions[*].forward.targetGroups[*].weight"]))
 
 ```
 
@@ -233,7 +236,7 @@ func main() {
 					},
 				},
 			},
-		})
+		}, pulumi.IgnoreChanges([]string{"defaultActions[*].forward.targetGroups[*].weight"}))
 		if err != nil {
 			return err
 		}
@@ -291,7 +294,8 @@ return await Deployment.RunAsync(() =>
                 },
             },
         },
-    });
+    },
+    new CustomResourceOptions { IgnoreChanges = { "defaultActions[*].forward.targetGroups[*].weight" } });
 
 });
 
@@ -353,7 +357,10 @@ public class App {
                             .build())
                     .build())
                 .build())
-            .build());
+            .build(),
+            CustomResourceOptions.builder()
+                .ignoreChanges("prop")
+                .build());
 
     }
 }
@@ -402,17 +409,17 @@ resources:
 
 After the initial deployment, an external process could change the weights (for example, to a 50/50 split). Before you next run `pulumi up` to add a third target group, run `pulumi refresh` so that the stack captures the live weights. Without the refresh, Pulumi retains the original `100` and `0` values in state and will resend them to the AWS API on the next update, resetting the weights you meant to preserve.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The `ignoreChanges` option only applies to resource inputs, not outputs.
 {{% /notes %}}
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The `ignoreChanges` resource option does not apply to inputs to component resources.  If `ignoreChanges` is passed to a component resource, it is up to that component's implementation to decide what if anything it will do.
 {{% /notes %}}
 
 In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/iac/concepts/miscellaneous/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 For arrays with different lengths, only changes for elements that are in both arrays are ignored. If the new input array is longer, additional elements will be taken from the new array. If the new array is shorter, we only take that number of elements from the original array.
 
 For example `ignoreChanges` on an old array `[1, 2]` and a new array `[a, b, c]` results in `[1, 2, c]`, and an old array `[1, 2, 3]` and a new array `[a, b]` results in `[1, 2]`.
