@@ -27,7 +27,7 @@ After the resource is created, Pulumi relies on the last recorded state for ever
 Because Pulumi reuses the value stored in the state, an external system can safely update the live resource as long as you synchronize the stack before the next update. Run `pulumi refresh` (or `pulumi up --refresh`) to pull the latest provider values into the state. Skipping the refresh step leaves stale values in the state, and Pulumi will continue to send those stale values to the provider during subsequent updates, which can overwrite the drift you meant to preserve.
 
 {{% notes type="warning" %}}
-When you skip `pulumi refresh` (or `pulumi up --refresh`) after `ignoreChanges` has been set, Pulumi keeps using the previous state value when it performs an update. Providers that require full object replacements—such as AWS load balancer listeners where the entire target group array is sent on every update—will receive the stale values from the state and may reset the live configuration.
+When you skip `pulumi refresh` (or `pulumi up --refresh`) after `ignoreChanges` has been set, Pulumi keeps using the previous state value when it performs an update. This can lead to unintentional changes if the cloud state has been changed (either through intentional external management, or unintentional drift). Providers that require full object replacements—such as AWS load balancer listeners where the entire target group array is sent on every update—will receive the potentially stale values from the state and may reset the live configuration.
 {{% /notes %}}
 
 For instance, in this example, the resource’s prop property "new-value" will be set when Pulumi initially creates the resource, but from then on, any updates will ignore it:
