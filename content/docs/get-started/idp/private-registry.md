@@ -83,15 +83,45 @@ pulumi package publish COMPONENT_LOCATION
 
 ## Pulumi Templates
 
-[Pulumi Templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#defining-an-organization-template) are an efficient way to scaffold new Pulumi Programs. Organization Templates are sourced from GitHub repositories and are available to users in the private registry and [New Project Wizard](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/new-project-wizard/).
-
-### Template Publishing
+[Pulumi Templates](/docs/pulumi-cloud/developer-portals/templates/) are an efficient way to scaffold new Pulumi programs. Templates are available to users in the private registry and [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/).
 
 {{% notes type="info" %}}
 Organization templates require the Enterprise or Business Critical plan
 {{% /notes %}}
 
-To publish templates in the private registry, follow [this integration guide](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/#prerequisites). Once the integration is complete, discovered templates will appear in the private registry.
+### Template publishing
+
+Pulumi supports two approaches for template management:
+
+#### Registry-backed templates
+
+Registry-backed templates are published directly to the Private Registry using the `pulumi template publish` command.
+
+**Publishing a template:**
+
+```bash
+pulumi template publish <directory> --name <template-name> --version <version>
+```
+
+**Example:**
+
+```bash
+pulumi template publish ./my-template --name my-template --version 1.0.0
+```
+
+This approach provides:
+
+- Full semantic versioning support
+- Immutable version storage
+- Simple single-command publishing
+
+For detailed information, see [Publishing Registry-backed Templates](/docs/pulumi-cloud/developer-portals/templates/#publishing-registry-backed-templates).
+
+#### VCS-backed templates
+
+VCS-backed templates are sourced from configured GitHub or GitLab repositories.
+
+To configure VCS-backed templates, follow [this integration guide](/docs/pulumi-cloud/developer-portals/templates/#configuring-vcs-backed-templates).
 
 ### Components in Templates
 

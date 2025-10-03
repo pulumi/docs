@@ -31,7 +31,10 @@ The API provides endpoints for the following operations:
 - Retrieving package version metadata
 - Publishing new package versions
 - Deleting package versions
-- Retrieving template information
+- Listing registry templates
+- Retrieving template version information
+- Publishing new template versions
+- Deleting template versions
 
 ## List Registry Packages
 
@@ -219,9 +222,61 @@ curl \
   https://api.pulumi.com/preview/registry/packages/{source}/{publisher}/{name}/versions/{version}
 ```
 
-## Get Registry Template
+## List Registry Templates
 
-Retrieve template information.
+List all registry templates visible to the user.
+
+```plain
+GET /api/preview/registry/templates
+```
+
+### Parameters
+
+| Parameter           | Type    | In    | Description                                                                                                  |
+|---------------------|---------|-------|--------------------------------------------------------------------------------------------------------------|
+| `orgLogin`          | string  | query | **Optional.** Filter results to templates owned by this organization                                          |
+| `continuationToken` | string  | query | **Optional.** The continuation token to use for retrieving the next set of results if results were truncated |
+
+### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/preview/registry/templates?orgLogin=my-org
+```
+
+### Default response
+
+```plain
+Status: 200 OK
+```
+
+```json
+{
+  "templates": [
+    {
+      "name": "my-template",
+      "publisher": "my-org",
+      "source": "private",
+      "displayName": "My Template",
+      "description": "A template for AWS projects",
+      "runtime": {
+        "name": "nodejs"
+      },
+      "language": "typescript",
+      "readmeURL": "https://artifacts.pulumi.com/templates/.../README.md",
+      "downloadURL": "https://artifacts.pulumi.com/templates/.../archive.tar.gz",
+      "visibility": "private",
+      "createdAt": "2025-10-01T10:00:00Z"
+    }
+  ]
+}
+```
+
+## Get Registry Template Version
+
+Retrieve metadata for a specific template version.
 
 ```plain
 GET /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}
@@ -231,9 +286,9 @@ GET /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{versio
 
 | Parameter   | Type   | In   | Description      |
 |-------------|--------|------|------------------|
-| `source`    | string | path | Registry source  |
-| `publisher` | string | path | Publisher name   |
-| `name`      | string | path | Template name    |
+| `source`    | string | path | Registry source (e.g., `private`, `github`, `gitlab`)  |
+| `publisher` | string | path | Publisher/organization name   |
+| `name`      | string | path | Template name (URL-encoded for VCS templates with paths)    |
 | `version`   | string | path | Template version (SemVer) or 'latest' |
 
 ### Example
@@ -242,7 +297,7 @@ GET /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{versio
 curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}
+  https://api.pulumi.com/api/preview/registry/templates/private/my-org/my-template/versions/1.0.0
 ```
 
 ### Default response
@@ -250,6 +305,41 @@ curl \
 ```plain
 Status: 200 OK
 ```
+
+**Registry-backed template (source: `private`):**
+
+```json
+{
+    "name": "my-template",
+    "publisher": "my-org",
+    "source": "private",
+    "displayName": "My Template",
+    "description": "A template for AWS projects",
+    "runtime": {
+      "name": "nodejs",
+      "options": {
+        "typescript": true
+      }
+    },
+    "language": "typescript",
+    "readmeURL": "https://artifacts.pulumi.com/templates/.../README.md",
+    "downloadURL": "https://artifacts.pulumi.com/templates/.../archive.tar.gz",
+    "visibility": "private",
+    "createdAt": "2025-10-01T10:00:00Z",
+    "metadata": {
+      "category": "infrastructure",
+      "framework": "aws"
+    },
+    "config": {
+      "aws:region": {
+        "description": "The AWS region to deploy into",
+        "default": "us-west-2"
+      }
+    }
+}
+```
+
+**VCS-backed template (source: `github` or `gitlab`):**
 
 ```json
 {
@@ -266,3 +356,112 @@ Status: 200 OK
     "updatedAt": "2025-05-12T20:53:05.016991943Z"
 }
 ```
+
+## Publish Registry Template Version
+
+Initiates the process of publishing a new version of a template to the registry.
+
+```plain
+POST /api/preview/registry/templates/{source}/{publisher}/{name}/versions
+```
+
+### Parameters
+
+| Parameter   | Type   | In   | Description      |
+|-------------|--------|------|------------------|
+| `source`    | string | path | Registry source (must be `private` for publishing)  |
+| `publisher` | string | path | Publisher/organization name   |
+| `name`      | string | path | Template name     |
+| `version`   | string | body | Version number (SemVer) of the template to publish |
+
+### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  --request POST \
+  --data '{"version":"1.0.0"}' \
+  https://api.pulumi.com/api/preview/registry/templates/private/my-org/my-template/versions
+```
+
+### Default response
+
+```plain
+Status: 202 Accepted
+```
+
+```json
+{
+  "operationID": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "uploadURL": "https://s3.aws.amazon.com/..."
+}
+```
+
+After receiving the upload URL:
+
+1. Upload your template archive (tar.gz) to the `uploadURL`
+1. Call the [Complete Registry Template Publish](#complete-registry-template-publish) endpoint
+
+## Complete Registry Template Publish
+
+Complete the template publishing process after uploading the template archive.
+
+```plain
+POST /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}/complete
+```
+
+### Parameters
+
+| Parameter   | Type   | In   | Description                |
+|-------------|--------|------|----------------------------|
+| `source`    | string | path | Registry source (must be `private`)            |
+| `publisher` | string | path | Publisher/organization name             |
+| `name`      | string | path | Template name               |
+| `version`   | string | path | Template version identifier |
+| `operationID`| string | body | The operation ID received from the publish initiation |
+
+### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  --request POST \
+  --data '{"operationID":"a1b2c3d4-e5f6-7890-abcd-ef1234567890"}' \
+  https://api.pulumi.com/api/preview/registry/templates/private/my-org/my-template/versions/1.0.0/complete
+```
+
+### Default response
+
+```plain
+Status: 200 OK
+```
+
+The template version is now published and available to your organization.
+
+### Template archive requirements
+
+- Must be a gzip-compressed tar archive (`.tar.gz`)
+- Must contain a `Pulumi.yaml` at the root with a `template` section
+- Can include a `README.md` (recommended) for documentation
+
+## Delete Registry Template Version
+
+Delete a specific version of a template from the registry.
+
+```plain
+DELETE /api/preview/registry/templates/{source}/{publisher}/{name}/versions/{version}
+```
+
+### Parameters
+
+| Parameter   | Type   | In   | Description                |
+|-------------|--------|------|----------------------------|
+| `source`    | string | path | Registry source            |
+| `publisher` | string | path | Publisher name             |
+| `name`      | string | path | Template name               |
+| `version`   | string | path | Template version identifier |
+| `force`   | boolean | query | `true` required to delete the last version of a template, which will also delete the whole template |
