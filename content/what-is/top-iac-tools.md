@@ -60,7 +60,7 @@ OpenTofu is a recent fork of Terraform 1.6.x. It shares many core functionalitie
 
 While OpenTofu aims to maintain compatibility with Terraform, it's expected to develop its own unique features and community-driven improvements over time. The primary difference currently lies in the licensing model, with OpenTofu using the Mozilla Public License 2.0.
 
-For a more detailed comparison between OpenTofu and other IaC tools, including Terraform and Pulumi, please refer to our in-depth article: [Terraform vs.OpenTofu](/docs/iac/concepts/vs/terraform/opentofu/).
+For a more detailed comparison between OpenTofu and other IaC tools, including Terraform and Pulumi, please refer to our in-depth article: [Terraform vs.OpenTofu](/docs/iac/comparisons/terraform/opentofu/).
 
 - **Flexibility**: Utilizes HCL, offering similar capabilities to Terraform in terms of infrastructure definition.
 - **Multi-cloud**: Supports multiple cloud providers, mirroring Terraform's broad compatibility.

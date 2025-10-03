@@ -1,14 +1,13 @@
 ---
-title: Pulumi IaC
-linktitle: Pulumi IaC
+title: Infrastructure as Code
+linktitle: Infrastructure as Code
 docs_home: true
 notitle: true
+norightnav: true
 menu:
     iac:
         identifier: iac-home
         weight: 1
-expanded_menu_ids:
-    - iac-get-started
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Pulumi IaC docs

@@ -1,8 +1,8 @@
 ---
 title_tag: "Pulumi Insights Overview"
 meta_desc: Pulumi Insights provides advanced search, analytics, and AI for your infrastructure as code.
-title: Pulumi Insights Concepts
-h1: Pulumi Insights Concepts
+title: Concepts
+h1: Concepts
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:

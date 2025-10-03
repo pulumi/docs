@@ -208,7 +208,7 @@ get_started:
       avatar: https://pbs.twimg.com/profile_images/1146562967317520385/wuPwKFUZ_400x400.jpg
       link: https://twitter.com/rybavery/status/1576987704189128704
       text: |
-        our team at @devseed is now gravitating toward using https://pulumi.com/docs/concepts/vs/terraform/ instead of terraform because it's all in python so it is easier to onboard new people to the tool and makes it easier to manage the same infra definition in different test, staging, and deploy envs.
+        our team at @devseed is now gravitating toward using https://pulumi.com/docs/iac/comparisons/terraform/ instead of terraform because it's all in python so it is easier to onboard new people to the tool and makes it easier to manage the same infra definition in different test, staging, and deploy envs.
     -
       source: twitter
       username: "@SparkyCodes"

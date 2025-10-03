@@ -217,7 +217,7 @@ kubernetes_overview:
 superpowers:
     - title: Run On Any Cloud
       cta: Learn more
-      cta_url: "/docs/iac/get-started/kubernetes/"
+      cta_url: "/docs/get-started/iac/kubernetes/"
       icon_type: cloud
       icon_color: salmon
       description: |
@@ -236,7 +236,7 @@ superpowers:
 
     - title: Automate Delivery
       cta: Learn more
-      cta_url: "/docs/iac/using-pulumi/continuous-delivery/"
+      cta_url: "/docs/iac/guides/continuous-delivery/"
       icon_type: delivery
       icon_color: blue
       description: |
@@ -255,7 +255,7 @@ superpowers:
 
     - title: Be Proactive, Not Reactive
       cta: Learn more
-      cta_url: "/docs/iac/crossguard/"
+      cta_url: "/docs/insights/policy/policy-as-code/"
       icon_type: shield
       icon_color: yellow
       description: |

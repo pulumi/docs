@@ -114,6 +114,11 @@
             }
         }
     }
+
+    // Add border only for docs pages
+    &.actually-docs {
+        border-bottom: 1px solid #e5e5e9;
+    }
 }
 
 .logo-nav-bg-mask {
