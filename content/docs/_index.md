@@ -62,16 +62,16 @@ sections:
   cards:
   - label: AWS & Pulumi
     icon: aws-40
-    link: /docs/clouds/aws/
+    link: /docs/iac/clouds/aws/
   - label: Azure & Pulumi
     icon: azure-40
-    link: /docs/clouds/azure/
+    link: /docs/iac/clouds/azure/
   - label: Google Cloud & Pulumi
     icon: google-cloud-40
-    link: /docs/clouds/gcp/
+    link: /docs/iac/clouds/gcp/
   - label: Kubernetes & Pulumi
     icon: kubernetes-40
-    link: /docs/clouds/kubernetes/
+    link: /docs/iac/clouds/kubernetes/
 - type: blue-sparkle
   heading: Why Pulumi?
   description: | 
@@ -125,6 +125,6 @@ sections:
 - type: flat
   heading: Enterprise and Business Critical support
   description: |
-    <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="https://www.pulumi.com/pricing/">pricing page</a> for the support options available. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.</p>
+    <p>Pulumi provides a range of support options such as dedicated 24x7 support, premium training, onboarding, and professional services. Please see our <a href="/pricing/">pricing page</a> for the support options available. To open a support ticket or view service status, please visit our <a href="https://support.pulumi.com/hc/en-us">enterprise support portal</a>.</p>
 
 ---
