@@ -9,9 +9,11 @@ tags: ["Kubernetes", "cloud-native"]
 canonical_url: "https://www.pulumi.com/docs/iac/clouds/kubernetes/"
 ---
 
-> [!INFO]
-> This article references ksonnet, which was deprecated in 2019. For the most up-to-date information on using Pulumi with Kubernetes, see our [Kubernetes documentation](/docs/clouds/kubernetes/).
+{{%% notes type="info" %%}}
 
+This article references ksonnet, which was deprecated in 2019. For the most up-to-date information on using Pulumi with Kubernetes, see our [Kubernetes documentation](/docs/clouds/kubernetes/).
+
+{{%% /notes %%}}
 The Kubernetes landscape is constantly evolving as end users and
 developers search for the right tools, approaches, and abstractions to
 help them manage Cloud Native infrastructure in production.

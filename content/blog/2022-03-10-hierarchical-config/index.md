@@ -9,9 +9,11 @@ authors: ["david-flanagan"]
 tags: ["config"]
 ---
 
-> [!INFO]
-> This blog post discusses hierarchical config before Pulumi ESC was released. ESC makes hierarchical config [easy](/blog/environments-secrets-configurations-management/).
+{{%% notes type="info" %%}}
 
+This blog post discusses hierarchical config before Pulumi ESC was released. ESC makes hierarchical config [easy](/blog/environments-secrets-configurations-management/).
+
+{{%% /notes %%}}
 A really common question that we receive on the Pulumi team is, "How can we set config at a project level, that can be used across all stacks?".
 
 When I say "really common" ... I mean really, really common.
