@@ -107,7 +107,11 @@ resources:
 
 {{< /chooser >}}
 
-One reason you would use the `ignoreChanges` option is to ignore changes in properties that lead to diffs. Another reason is to change the defaults for a property without forcing all existing deployed stacks to update or replace the affected resource. This commonly occurs after importing existing infrastructure provisioned by another method into Pulumi. In these cases, there may be historical drift that you’d prefer to retain, rather than replacing and reconstructing critical parts of your infrastructure.
+Some common reasons to use the `ignoreChanges` option are:
+
+- Ignoring changes to properties that lead to diffs.
+- Changing the defaults for a property without forcing all existing deployed stacks to update or replace the affected resource. This commonly occurs after importing existing infrastructure provisioned by another method into Pulumi. In these cases, there may be historical drift that you’d prefer to retain, rather than replacing and reconstructing critical parts of your infrastructure.
+- Allowing an external system to manage aspects of the resource. In these cases you do not want Pulumi to reset values to their original Pulumi value.
 
 ## Example: Preserve externally managed weights
 
