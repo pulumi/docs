@@ -28,7 +28,7 @@ Following industry trends and feedback from users and partners, we're introducin
 
 ## Why Remote MCP?
 
-The Pulumi Remote MCP Server runs as a hosted service, providing **accessibility**—one endpoint works everywhere, for everyone. Instead of managing local installations, you get automatic updates and consistent functionality across all your development environments.
+The Pulumi Remote MCP Server runs as a hosted service. Instead of managing local installations, you configure it once and get automatic updates and consistent functionality across all your development environments.
 
 ### Zero Local Setup, Universal Access
 
@@ -40,8 +40,6 @@ Instead of installing npm packages, you simply configure your AI assistant with 
 
 For instructions on how to configure different AI assistants, see [Pulumi MCP Server](docs/iac/using-pulumi/mcp-server).
 
-That same configuration works identically on every developer's machine, every CI/CD agent, and every deployment environment—no version drift, no local dependencies to troubleshoot.
-
 ### Centralized Authentication & Secrets
 
 Remote MCP also solves a critical security challenge: credential management. Instead of scattering Pulumi Access Tokens across laptops, containers, and scripts, the Remote MCP Server uses OAuth-based authentication with your Pulumi Cloud organization.
@@ -50,7 +48,7 @@ When you first connect, a browser window opens where you:
 
 1. Enter your Pulumi Access Token (which is validated server-side)
 2. Select which organization to access
-3. Return to your AI assistant—now authenticated
+3. Return to your AI assistant - now authenticated
 
 Your credentials are stored securely in Pulumi Cloud, not on your individual machine.
 
@@ -65,7 +63,7 @@ Your AI assistant can instantly explore what you've deployed across your entire 
 **Inventory your resources:**
 
 - List all stacks in your organization with `get-stacks`
-- Search for specific resources across all stacks using `resource-search` with Lucene queries
+- Search for specific resources across all stacks using `resource-search`
 - Find resources by type, name, tags, or any property: `type:aws:s3/bucket:Bucket AND acl:public-read`
 
 **Audit and compliance:**
@@ -97,7 +95,7 @@ Your AI assistant can:
 - Include proper configurations, security settings, and best practices
 - Reference real documentation and examples
 
-This means code generation is always accurate and up-to-date with the latest provider versions.
+This means code generation is more accurate and up-to-date with the latest provider versions.
 
 ### Autonomous Infrastructure with Pulumi Neo
 

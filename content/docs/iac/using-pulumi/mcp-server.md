@@ -82,14 +82,9 @@ Launch Claude Code, enter the `/mcp` slash-command, select "pulumi" and connect 
 
 For Claude Desktop, add the MCP server to your configuration file:
 
-**On macOS:**
-
-<div style="text-align: center; width: 50%; margin: 0 auto;">
-    <img src="claude-desktop-setup.png" alt="" style="width: 100%;">
-    <figcaption>
-        <i>Claude Desktop setup</i>
-    </figcaption>
-</div>
+<p align="center">
+  <img src="claude-desktop-setup.png" alt="Claude Desktop setup" width="50%">
+</p>
 
 After adding the configuration:
 
@@ -142,9 +137,9 @@ These tools launch and manage automated infrastructure tasks via Pulumi Neo:
 
 - **`neo-get-tasks`** - List your Neo tasks and their current status.
 
-- **`neo-continue-task`** - Approve and continue a Neo task that's waiting for approval.
+- **`neo-continue-task`** - Continue with or switch to another Neo task.
 
-- **`neo-reset-conversation`** - Reset the conversation context for Neo tasks (advanced use).
+- **`neo-reset-conversation`** - Reset the conversation context for Neo tasks.
 
 ### Registry tools
 
