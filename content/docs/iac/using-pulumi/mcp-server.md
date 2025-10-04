@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi MCP Server | AI-Assisted Infrastructure as Code"
-meta_desc: "Learn how to use Pulumi's Model Context Protocol (MCP) server to integrate AI assistants like Cursor, Claude Code, and GitHub Copilot with your Pulumi workflow."
+meta_desc: "Learn how to use Pulumi's Model Context Protocol (MCP) server to integrate AI assistants like Cursor, Claude Code, and Windsurf with your Pulumi Cloud workflow."
 title: MCP server
 h1: Pulumi Model Context Protocol server
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -108,12 +108,12 @@ In Windsurf, configure the MCP server through the IDE settings:
 ```json
 {
   "pulumi": {
-    "serverUrl": "https://mcp.ai.pulumi.com/mcp",
+    "serverUrl": "https://mcp.ai.pulumi.com/mcp"
   }
 }
 ```
 
-1. Authenticate via browser when prompted
+After adding the configuration, authenticate via browser when prompted.
 
 ## Available tools
 
@@ -180,7 +180,7 @@ Here's a typical workflow using an AI assistant with the Pulumi MCP server:
 
 When you first connect, you'll see a browser window open:
 
-> A browser window opens prompting for authentication
+*A browser window opens prompting for authentication*
 
 1. Enter your [Pulumi Access Token](https://app.pulumi.com/account/tokens)
 2. Select which organization to use
@@ -190,11 +190,11 @@ When you first connect, you'll see a browser window open:
 
 Ask your AI assistant to explore what you have deployed:
 
-> "What stacks do I have in my Pulumi organization?"
+**"What stacks do I have in my Pulumi organization?"**
 
 The assistant will use `get-stacks` to list all your stacks.
 
-> "Show me all the S3 buckets across my stacks"
+**"Show me all the S3 buckets across my stacks"**
 
 The assistant will use `resource-search` with the query `type:aws:s3/bucket:Bucket` to find all S3 buckets.
 
@@ -202,7 +202,7 @@ The assistant will use `resource-search` with the query `type:aws:s3/bucket:Buck
 
 Use natural language to describe what you want to build:
 
-> "I need to create an AWS Lambda function that processes S3 events. Look up the Lambda and S3 bucket properties and generate the TypeScript code."
+**"I need to create an AWS Lambda function that processes S3 events. Look up the Lambda and S3 bucket properties and generate the TypeScript code."**
 
 The AI assistant will:
 
@@ -214,7 +214,7 @@ The AI assistant will:
 
 For complex infrastructure tasks, delegate to Neo:
 
-> "Ask Neo to analyze all my S3 buckets for security issues and create a pull request with fixes"
+**"Ask Neo to analyze all my S3 buckets for security issues and create a pull request with fixes"**
 
 The assistant will:
 
@@ -381,4 +381,4 @@ Now that you have the Pulumi MCP server set up, explore these related topics:
 - [Pulumi Neo](/docs/pulumi-cloud/neo/) for autonomous infrastructure automation
 - [Pulumi concepts](/docs/iac/concepts/) to understand core IaC principles
 - [Getting started guides](/docs/iac/get-started/) for your preferred cloud provider
-- [Policy as Code](/docs/using-pulumi/crossguard/) for infrastructure compliance
+- [Policy as Code](/docs/iac/crossguard/) for infrastructure compliance
