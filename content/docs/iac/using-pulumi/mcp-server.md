@@ -12,21 +12,21 @@ menu:
         weight: 6
 ---
 
-The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to help you codify cloud architectures and get diffs for infrastructure changes right in your development environment, much in the same way you already do for code changes thanks to Git. This integration ensures that as you build cloud applications, your infrastructure is repeatable and follows best practices and policies, while dramatically reducing context switching and accelerating Infrastructure as Code (IaC) development workflows.
+The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to access your Pulumi Cloud resources and delegate infrastructure tasks to [Pulumi Neo](/docs/pulumi-cloud/neo/). This integration allows you to query your cloud infrastructure, search for resources, and launch automated infrastructure workflows - all from within the AI assistant of your choice.
 
 ## What is the Pulumi MCP server?
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io) is a specification that allows language models to interact with external tools and data sources in a structured way. Pulumi's MCP server implementation provides AI assistants with the ability to:
 
-- **Query the Pulumi Registry** for resource information, properties, and documentation
-- **Execute Pulumi CLI commands** like `pulumi preview`, `pulumi up`, and `pulumi destroy`
-- **Access stack outputs** and configuration values
-- **Validate infrastructure code** before deployment
-- **Catch and autofix IaC policy violations** using Pulumi's policy-as-code capabilities
-- **Debug deployment issues** with real-time feedback
-- **Interact with [Pulumi Neo](/docs/pulumi-cloud/neo)** for advanced infrastructure tasks
+- **Query your Pulumi Cloud stacks** and their resources
+- **Search across all cloud resources** in your organization using advanced queries
+- **Access the Pulumi Registry** for resource information, properties, and documentation
+- **Get policy violation reports** for your infrastructure
+- **Manage organization members** and their access
+- **Delegate complex infrastructure tasks to [Pulumi Neo](/docs/pulumi-cloud/neo)** for automated execution
+- **Generate infrastructure code** using Registry tools and best practices
 
-This enables a more intuitive, conversational approach to infrastructure development where you can describe what you want to build in natural language, and the AI assistant can discover resources, generate code, and manage deployments—all without leaving your editor.
+This enables a more intuitive, conversational approach to infrastructure development where you can describe what you want to build in natural language, and the AI assistant can discover resources, generate code, and launch automated workflows—all without leaving your editor.
 
 ## Supported AI assistants
 
@@ -34,262 +34,272 @@ The Pulumi MCP server works with various AI-powered development tools:
 
 - **[Cursor](https://cursor.sh/)** - AI-first code editor
 - **[Anthropic's Claude Code](https://claude.ai/code)** - AI assistant for coding
-- **[GitHub Copilot](https://github.com/features/copilot)** - AI pair programmer
 - **[Windsurf](https://codeium.com/windsurf)** - AI development environment
-- **[Devin](https://app.devin.ai/)** - The AI
-software engineer
-- Any other AI assistant that supports the Model Context Protocol
-
-## Installation
-
-The Pulumi MCP server is distributed as an npm package. You can install it globally or use it directly with `npx`:
-
-```bash
-# Install globally
-npm install -g @pulumi/mcp-server
-
-# Or use with npx (recommended)
-npx @pulumi/mcp-server
-```
+- **[Claude Desktop](https://claude.ai/download)** - Desktop app for Claude
+- Any other AI assistant that supports the Model Context Protocol with OAuth
 
 ## Configuration
+
+The Pulumi MCP server is hosted at `https://mcp.ai.pulumi.com/mcp` and uses OAuth authentication. When you first connect, a web page will open where you'll enter your Pulumi Access Token and select which organization to use.
 
 ### Cursor
 
 Add the Pulumi MCP server to Cursor by clicking the following button:
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=pulumi&config=eyJjb21tYW5kIjoibnB4IEBwdWx1bWkvbWNwLXNlcnZlckBsYXRlc3Qgc3RkaW8ifQ%3D%3D)
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=pulumi&config=eyJ0cmFuc3BvcnQiOiJodHRwIiwidXJsIjoiaHR0cHM6Ly9tY3AuYWkucHVsdW1pLmNvbS9tY3AifQ%3D%3D)
 
-Alternatively, create a `mcp.json` file in the `.cursor` directory at your project root:
+Alternatively, add the Pulumi MCP server to your Cursor configuration. Create or edit `.cursor/mcp.json` in your home directory or project root:
 
 ```json
 {
-    "mcpServers": {
-        "pulumi": {
-            "type": "stdio",
-            "command": "npx",
-            "args": ["@pulumi/mcp-server"]
-        }
+  "mcpServers": {
+    "pulumi": {
+      "transport": "http",
+      "url": "https://mcp.ai.pulumi.com/mcp"
     }
-}
-```
-
-After creating the configuration file:
-
-1. Restart Cursor
-2. Open the Cursor settings
-3. Navigate to the MCP section to verify the connection status
-4. The Pulumi MCP server should appear as connected
-
-### Claude Code
-
-Add the Pulumi MCP server to Claude Code by running the following command:
-
-```bash
-$ claude mcp add -s user pulumi -- npx @pulumi/mcp-server@latest stdio
-```
-
-### Claude Desktop
-
-For Claude Desktop, add the MCP server to your Claude configuration file:
-
-**On macOS/Linux:**
-Add to `~/.config/claude/mcp_servers.json`:
-
-```json
-{
-  "pulumi": {
-    "command": "npx",
-    "args": ["@pulumi/mcp-server"],
-    "env": {}
-  }
-}
-```
-
-**On Windows:**
-Add to `%APPDATA%\Claude\mcp_servers.json`:
-
-```json
-{
-  "pulumi": {
-    "command": "npx",
-    "args": ["@pulumi/mcp-server"],
-    "env": {}
   }
 }
 ```
 
 After adding the configuration:
 
-1. Restart Claude Code
-2. Verify the connection in the MCP section of Claude's settings
-3. The Pulumi MCP server should appear as an available tool
+1. Click "Connect" button on the "Tools & MCP" page
+2. Enter your [Pulumi Access Token](https://app.pulumi.com/account/tokens)
+3. Select your organization
+4. Verify the connection in Cursor's MCP section
 
-### GitHub Copilot
+### Claude Code
 
-GitHub Copilot's MCP support is available through compatible editors. Configure in your editor's MCP settings:
+Add the Pulumi MCP server to Claude Code by running:
 
-**VS Code with Copilot:**
-Add to your VS Code settings.json:
-
-```json
-{
-  "servers": {
-    "pulumi": {
-      "command": "npx",
-      "args": [
-        "@pulumi/mcp-server",
-        "stdio"
-      ],
-      "type": "stdio"
-    }
-  }
-}
+```bash
+claude mcp add pulumi https://mcp.ai.pulumi.com/mcp
 ```
 
-**Other editors:**
-Refer to your editor's specific MCP integration documentation for configuration details.
+Launch Claude Code, enter the `/mcp` slash-command, select "pulumi" and connect it. Authenticate via the browser popup.
+
+### Claude Desktop
+
+For Claude Desktop, add the MCP server to your configuration file:
+
+**On macOS:**
+
+<div style="text-align: center; width: 50%; margin: 0 auto;">
+    <img src="claude-desktop-setup.png" alt="" style="width: 100%;">
+    <figcaption>
+        <i>Claude Desktop setup</i>
+    </figcaption>
+</div>
+
+After adding the configuration:
+
+1. Restart Claude Desktop
+2. Authenticate via the browser popup when prompted
+3. Verify the connection in Claude's settings
 
 ### Windsurf
 
 In Windsurf, configure the MCP server through the IDE settings:
 
-1. Open Windsurf settings
-2. Navigate to MCP Servers section
-3. In `mcpServers` section, add a new server with the following configuration:
+1. Open Windsurf Settings (Cmd/Ctrl + ,)
+2. Navigate to "MCP Servers" section
+3. Add a new server configuration:
 
 ```json
-"pulumi": {
-  "command": "npx",
-  "args": [
-    "@pulumi/mcp-server",
-    "stdio"
-  ],
-  "env": {}
+{
+  "pulumi": {
+    "serverUrl": "https://mcp.ai.pulumi.com/mcp",
+  }
 }
 ```
 
-### Devin
-
-To configure the Pulumi MCP server for Devin:
-
-1. Navigate to [Devin Marketplace](https://app.devin.ai/settings/mcp-marketplace/setup/pulumi)
-2. Provide your [Pulumi access token](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/#creating-personal-access-tokens), which can be obtained from the Access tokens section in the sidebar of the Pulumi Console
-3. Click "Enable"
+1. Authenticate via browser when prompted
 
 ## Available tools
 
 The Pulumi MCP server provides several tools that AI assistants can use to interact with your Pulumi infrastructure:
 
+### Pulumi Cloud tools
+
+These tools query your Pulumi Cloud organization:
+
+- **`get-stacks`** - List all Pulumi stacks in your organization. Returns stack names, descriptions, last update times, and resource counts.
+
+- **`resource-search`** - Search and analyze Pulumi-managed cloud resources across all stacks using Lucene query syntax. Query by resource type, name, tags, properties, or any combination. Examples:
+  - Find all S3 buckets: `type:aws:s3/bucket:Bucket`
+  - Search by name: `name:*production*`
+  - Find untagged resources: `NOT _exists_:tags`
+
+- **`get-policy-violations`** - Get policy violations for your stacks. Returns violations detected by Pulumi's policy-as-code engine.
+
+- **`get-users`** - List members of your Pulumi organization with their roles and details.
+
+### Neo delegation tools
+
+These tools launch and manage automated infrastructure tasks via Pulumi Neo:
+
+- **`neo-bridge`** - Launch a new Pulumi Neo task. Neo will analyze your request, create a plan, and execute it autonomously. Returns a link to track progress in Pulumi Console.
+
+- **`neo-get-tasks`** - List your Neo tasks and their current status.
+
+- **`neo-continue-task`** - Approve and continue a Neo task that's waiting for approval.
+
+- **`neo-reset-conversation`** - Reset the conversation context for Neo tasks (advanced use).
+
 ### Registry tools
 
-- **`pulumi-registry-get-type`** - Get the JSON schema for a specific JSON schema type reference.
-- **`pulumi-registry-get-resource`** - Returns information about a Pulumi Registry resource.
-- **`pulumi-registry-list-resources`** - List all resource types for a given provider and module.
+These tools query the Pulumi Registry for resource information:
 
-### CLI tools
+- **`get-type`** - Get the JSON schema for a specific type reference.
 
-- **`pulumi-cli-preview`** - Run `pulumi preview` for a given project and stack.
-- **`pulumi-cli-up`** - Run `pulumi up` for a given project and stack.
-- **`pulumi-cli-refresh`** - Run `pulumi refresh` for a given project and stack.
-- **`pulumi-cli-stack-output`** - Get the output value(s) of a given stack.
+- **`get-resource`** - Get detailed information about a Pulumi Registry resource, including all properties, methods, and examples.
+
+- **`get-function`** - Get information about a Pulumi function (data source).
+
+- **`list-resources`** - List all resource types for a given provider and module.
+
+- **`list-functions`** - List all functions for a given provider and module.
 
 ### Deployment tools
 
-- **`deploy-to-aws`** - Automatically analyzes your application files and provisions the appropriate AWS resources (S3, Lambda, EC2, etc.) based on what it finds.
+- **`deploy-to-aws`** - Automatically analyzes your application files and generates Pulumi infrastructure code for AWS deployment.
 
 ## Available prompts
 
-The Pulumi MCP server also provides prompts that AI assistants can use for common workflows:
+The Pulumi MCP server provides prompts for common workflows:
 
 - **`deploy-to-aws`** - Deploy application code to AWS by generating Pulumi infrastructure
-- **`convert-terraform-to-typescript`** - Converts a Terraform file to TypeScript. Takes an optional outputDir parameter for specifying where to output the TypeScript code.
+
+- **`convert-terraform-to-typescript`** - Converts Terraform HCL code to Pulumi TypeScript
 
 ## Getting started
 
 Here's a typical workflow using an AI assistant with the Pulumi MCP server:
 
-### 1. Initialize a new project
+### 1. Authentication
 
-Start by asking your AI assistant to help set up a new Pulumi project:
+When you first connect, you'll see a browser window open:
 
-> "Create a new Pulumi project in TypeScript for AWS infrastructure."
+> A browser window opens prompting for authentication
 
-The assistant can guide you through project initialization and basic setup.
+1. Enter your [Pulumi Access Token](https://app.pulumi.com/account/tokens)
+2. Select which organization to use
+3. Return to your AI assistant—it's now connected
 
-### 2. Describe your infrastructure needs
+### 2. Discover your infrastructure
+
+Ask your AI assistant to explore what you have deployed:
+
+> "What stacks do I have in my Pulumi organization?"
+
+The assistant will use `get-stacks` to list all your stacks.
+
+> "Show me all the S3 buckets across my stacks"
+
+The assistant will use `resource-search` with the query `type:aws:s3/bucket:Bucket` to find all S3 buckets.
+
+### 3. Generate infrastructure code
 
 Use natural language to describe what you want to build:
 
-> "I need an AWS S3 bucket with public read access for hosting a static website. Please look up the resource properties and create the code."
+> "I need to create an AWS Lambda function that processes S3 events. Look up the Lambda and S3 bucket properties and generate the TypeScript code."
 
 The AI assistant will:
 
-- Use `pulumi-registry-list-resources` to find available AWS resources
-- Use `pulumi-registry-get-resource` to get detailed S3 bucket property information
-- Generate the appropriate TypeScript code
+- Use `list-resources` to find AWS Lambda and S3 resources
+- Use `get-resource` to get detailed property information
+- Generate TypeScript code with proper types and configurations
 
-### 3. Validate and deploy
+### 4. Delegate to Neo for execution
 
-Ask the assistant to validate and deploy your infrastructure:
+For complex infrastructure tasks, delegate to Neo:
 
-> "Please run a preview to check the changes, then deploy if everything looks good."
+> "Ask Neo to analyze all my S3 buckets for security issues and create a pull request with fixes"
 
 The assistant will:
 
-- Use `pulumi-cli-preview` to show planned changes
-- Use `pulumi-cli-up` to deploy the infrastructure
-- Provide feedback on the deployment status
-
-### 4. Manage and iterate
-
-Continue working conversationally:
-
-> "Add a CloudFront distribution in front of the S3 bucket and export the distribution URL."
-
-The assistant can make incremental changes, validate them, and update your infrastructure.
+- Use `neo-bridge` to launch a Neo task
+- Provide a link to track Neo's progress in Pulumi Console
+- Neo will autonomously create a plan, analyze buckets, generate fixes, and create a PR
 
 ## Integration with Pulumi Neo
 
-Pulumi MCP server handles basic infrastructure tasks directly, while also allowing you to delegate advanced scenarios to Pulumi Neo, Pulumi's purpose-built infrastructure automation agent. Simply tell your AI assistant to invoke Neo, and it will create a new task that you can complete in the Pulumi Console.
+The Pulumi MCP server enables seamless delegation to Pulumi Neo for complex infrastructure automation. Simply tell your AI assistant to invoke Neo, and it will create a task that executes autonomously in Pulumi Cloud.
+
+### When to use Neo
+
+Delegate to Neo for tasks that require:
+
+- **Multi-step automation** - Complex workflows across multiple resources
+- **Policy compliance** - Scanning and fixing policy violations
+- **Code generation at scale** - Creating or modifying infrastructure across many stacks
+- **Pull request workflows** - Automated changes with Git integration
+- **Advanced analysis** - Security scans, cost optimization, resource cleanup
 
 ## Examples
 
-### Provisioning an AKS cluster
+### Finding and analyzing resources
 
-Here's an example interaction for creating an Azure Kubernetes Service cluster:
-
-**You:** "I have an empty Pulumi project with TypeScript. Please provision an AKS cluster for a temporary experiment. Export its kubeconfig when done."
+**You:** "Do I have any S3 buckets with public access enabled? If so, which stacks are they in?"
 
 **AI Assistant response:**
 
-1. Searches the Pulumi Registry for Azure container service resources
-2. Retrieves detailed information about the `ManagedCluster` resource
-3. Generates TypeScript code with appropriate configuration
-4. Runs `pulumi-cli-preview` to validate the changes
-5. Deploys with `pulumi-cli-up`
-6. Retrieves the kubeconfig using `pulumi-cli-stack-output`
+1. Uses `resource-search` with query: `type:aws:s3/bucket:Bucket AND acl:public-read`
+2. Lists the buckets found with their stack names
+3. Provides details about their configuration
 
-### Adding monitoring to existing infrastructure
+### Generating infrastructure with Registry lookup
 
-**You:** "Add Application Insights monitoring to my existing Azure web app and configure alerts for high response times."
+**You:** "I need to set up an Azure Container Registry with geo-replication. Look up the properties and generate the code."
 
 **AI Assistant response:**
 
-1. Searches for Azure Application Insights resources
-2. Generates code to create Application Insights instance
-3. Links it to the existing web app
-4. Configures alert rules
-5. Previews and deploys the changes
+1. Uses `list-resources` to find Azure container registry resources
+2. Uses `get-resource` to retrieve detailed property information
+3. Generates TypeScript code with geo-replication configuration
+4. Includes explanation of key properties
 
-### Launching a Neo task
+### Delegating security fixes to Neo
 
-**You:** "Ask Neo to find policy violations for my S3 buckets, and create a GitHub PR with the fix"
+**You:** "Ask Neo to find all my AWS security groups that allow SSH from 0.0.0.0/0 and create a PR restricting them to my office IP range"
 
 **AI Assistant response:**
 
-1. Launches a new Neo task a invites you to navigate to the Pulumi Console using the provided link
-2. In the meantime, Neo immediately starts working on a task by creating a plan and completing it step by step
+1. Uses `neo-bridge` to launch a task with the instructions
+2. Provides link: "Neo task created: https://app.pulumi.com/pulumi/tasks/abc123"
+3. Neo autonomously:
+   - Searches for security groups with overly permissive SSH rules
+   - Creates a plan to restrict access
+   - Generates the infrastructure code changes
+   - Creates a pull request with the fixes
+   - Comments on the PR with explanation
+
+### Delegating infrastructure migration to Neo
+
+**You:** "Ask Neo to migrate all my Lambda functions from Python 3.8 to Python 3.12, test them, and create PRs for each stack"
+
+**AI Assistant response:**
+
+1. Uses `neo-bridge` to launch the migration task
+2. Neo creates a plan covering:
+   - Finding all Lambda functions with Python 3.8 runtime
+   - Updating runtime to Python 3.12
+   - Checking for compatibility issues
+   - Running tests
+   - Creating separate PRs for each affected stack
+3. Executes the plan autonomously
+4. Reports progress and results
+
+### Checking policy compliance
+
+**You:** "What policy violations do I have in my production stacks?"
+
+**AI Assistant response:**
+
+1. Uses `get-stacks` to find stacks with "production" in the name
+2. Uses `get-policy-violations` to retrieve violations
+3. Groups and summarizes violations by type
+4. Suggests: "Would you like Neo to fix these violations automatically?"
 
 ## Benefits
 
@@ -297,68 +307,78 @@ Using the Pulumi MCP server with AI assistants provides several key advantages:
 
 ### Reduced context switching
 
-- Stay in your editor instead of switching between documentation, CLI, and code
-- Get real-time answers about resource properties and configurations
-- Instant feedback on infrastructure changes
+- Query your infrastructure without leaving your editor
+- Get real-time answers about deployed resources
+- Access organization information instantly
 
 ### Accelerated development
 
 - Faster resource discovery through AI-powered search
-- Automated code generation based on best practices
-- Real-time validation and error detection
+- Automated code generation based on Registry schemas
+- Quick access to documentation and examples
+
+### Autonomous infrastructure automation
+
+- Delegate complex tasks to Neo for hands-free execution
+- Multi-step workflows completed automatically
+- Pull request generation with explanations
 
 ### Enhanced learning
 
 - Learn Pulumi concepts through conversational interaction
-- Understand resource relationships and dependencies
-- Get explanations of complex infrastructure patterns
-
-### Improved reliability
-
-- Validate changes before deployment with integrated previews
-- Catch configuration errors early in the development process
-- Access to comprehensive Pulumi Registry information
+- Understand resource relationships across your infrastructure
+- Get explanations of deployed infrastructure patterns
 
 ## Troubleshooting
 
+### Authentication issues
+
+If you're having trouble authenticating:
+
+1. **Verify your Pulumi Access Token**: Ensure your token is valid at [app.pulumi.com/account/tokens](https://app.pulumi.com/account/tokens)
+2. **Check organization access**: Verify you're a member of the organization you're trying to access
+3. **Clear browser cache**: Clear your browser cache and retry authentication
+4. **Check token permissions**: Ensure your token has appropriate permissions for your organization
+
 ### MCP server not connecting
 
-If your AI assistant can't connect to the Pulumi MCP server:
+If your AI assistant can't connect to the MCP server:
 
-1. **Verify installation**: Ensure `@pulumi/mcp-server` is installed and accessible
-2. **Check configuration**: Validate your `mcp.json` configuration file syntax
+1. **Check network connectivity**: Ensure you can access `https://mcp.ai.pulumi.com`
+2. **Verify configuration**: Check your MCP configuration file syntax
 3. **Restart your editor**: Restart your AI assistant or editor application
-4. **Check logs**: Look for error messages in your editor's console or logs
+4. **Check firewall**: Ensure your firewall allows HTTPS connections to pulumi.com domains
 
-### Pulumi CLI commands failing
+### Resource queries returning no results
 
-If CLI commands executed through the MCP server fail:
+If `resource-search` isn't finding resources:
 
-1. **Verify Pulumi installation**: Ensure Pulumi CLI is installed and in your PATH
-2. **Check authentication**: Verify you're logged into Pulumi Cloud or have proper credentials
-3. **Validate project**: Ensure you're in a valid Pulumi project directory
-4. **Check stack selection**: Verify the correct stack is selected
+1. **Verify stack has resources**: Use `get-stacks` to confirm stacks exist and have resources
+2. **Check query syntax**: Ensure your Lucene query syntax is correct
+3. **Try broader queries**: Start with `*` to find all resources, then narrow down
+4. **Check organization**: Verify you're connected to the correct organization
 
-### Missing registry information
+### Neo tasks not starting
 
-If registry queries return incomplete information:
+If `neo-bridge` fails to launch tasks:
 
-1. **Check network connectivity**: Ensure you can access the Pulumi Registry
-2. **Update MCP server**: Use the latest version of `@pulumi/mcp-server`
-3. **Clear cache**: Try clearing any local caches or restarting the MCP server
+1. **Check Neo access**: Verify you have access to Pulumi Neo in your organization
+2. **Verify task description**: Ensure your task instructions are clear and actionable
+3. **Check organization limits**: Some organizations may have task limits
+4. **Review error message**: Check the error details for specific issues
 
 ## Learn more
 
-- [AI-Assisted Infrastructure as Code blog post](/blog/mcp-server-ai-assistants/)
+- [Pulumi Neo documentation](/docs/pulumi-cloud/neo/)
 - [Model Context Protocol specification](https://modelcontextprotocol.io)
 - [Pulumi Registry](/registry/)
-- [Pulumi CLI reference](/docs/cli/)
+- [Pulumi Cloud API](https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/)
 
 ## Next steps
 
 Now that you have the Pulumi MCP server set up, explore these related topics:
 
+- [Pulumi Neo](/docs/pulumi-cloud/neo/) for autonomous infrastructure automation
 - [Pulumi concepts](/docs/iac/concepts/) to understand core IaC principles
 - [Getting started guides](/docs/iac/get-started/) for your preferred cloud provider
-- [Automation API](/docs/iac/automation-api/) for programmatic infrastructure management
-- [Continuous delivery](/docs/iac/using-pulumi/continuous-delivery/) for production deployments
+- [Policy as Code](/docs/using-pulumi/crossguard/) for infrastructure compliance
