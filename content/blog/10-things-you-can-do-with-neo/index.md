@@ -11,6 +11,10 @@ tags:
     - platform-engineering
     - pulumi-neo
     - aws
+
+social:
+    twitter: "10 concrete workflows you can use Pulumi Neo for: auto-fix AWS Config violations, upgrade Lambda runtimes across accounts, generate infrastructure templates, respond to CVEs. Neo generates PRs, not production changes."
+    linkedin: "10 concrete workflows platform teams can use Pulumi Neo for right now. From auto-remediating AWS Config violations to upgrading Lambda runtimes across multiple accounts, Neo handles tasks that used to take days. Neo generates PRs, not one-way tickets. You stay in control while AI does the heavy lifting. Each workflow is designed to save hours of manual work while keeping humans in the driver seat."
 ---
 
 Since launching [Pulumi Neo](/blog/pulumi-neo/) two weeks ago, we've seen platform teams discover creative ways to put their newest AI teammate to work. We have also been using Neo internally for a handful of use cases. Neo shifts the conversation from "what could AI do for infrastructure?" to "what can I actually accomplish with Neo today?"
