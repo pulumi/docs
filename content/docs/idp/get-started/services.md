@@ -7,7 +7,7 @@ weight: 5
 aliases:
   - /docs/idp/get-started/services/
 menu:
-  get-started:
+  idp:
     parent: idp-get-started
     identifier: idp-get-started-services
 ---

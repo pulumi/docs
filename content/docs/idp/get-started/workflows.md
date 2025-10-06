@@ -7,7 +7,7 @@ weight: 4
 aliases:
   - /docs/idp/get-started/workflows/
 menu:
-  get-started:
+  idp:
     parent: idp-get-started
     identifier: idp-get-started-workflows
 ---

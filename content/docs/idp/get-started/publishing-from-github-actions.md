@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
   - /docs/idp/get-started/publishing-from-github-actions/
 menu:
-  get-started:
+  idp:
     parent: idp-get-started
     identifier: idp-publishing-github-actions
     weight: 6

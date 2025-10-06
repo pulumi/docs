@@ -5,14 +5,12 @@ h1: "Pulumi Insights: Manage Accounts and Scans"
 meta_desc: This page provides an overview on how to manage Pulumi Insights Accounts.
 weight: 4
 menu:
-  get-started:
+  insights:
     name: Manage Accounts and Scans
     parent: insights-get-started
     identifier: insights-get-started-manage-accounts
     weight: 4
 aliases:
-    - /docs/get-started/insights/account-management/
-    - /docs/insights/get-started/account-management/
 ---
 
 Now that you have created a new account you can click on the **Accounts** page to see a list of all your created accounts, the last update and number of resources discovered.

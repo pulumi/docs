@@ -7,7 +7,7 @@ weight: 3
 aliases:
   - /docs/idp/get-started/private-registry/
 menu:
-  get-started:
+  idp:
     parent: idp-get-started
     identifier: idp-get-started-private-registry
 ---
