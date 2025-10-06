@@ -39,12 +39,12 @@ sections:
   heading: Featured Capabilities
   cards:
   - heading: Pulumi Copilot
-    link: /docs/pulumi-cloud/copilot/
+    link: /docs/ai/copilot/
     description: Generative AI-powered intelligent cloud management
     primary_button_label: Get Started
-    primary_button_link: /docs/pulumi-cloud/copilot/
+    primary_button_link: /docs/ai/copilot/
     secondary_button_label: Learn More
-    secondary_button_link: /docs/pulumi-cloud/copilot/#frequently-asked-questions
+    secondary_button_link: /docs/ai/copilot/#frequently-asked-questions
   - heading: Pulumi CrossGuard
     description: Enforce guardrails for security and compliance using policies in standard languages
     link: /docs/iac/packages-and-automation/crossguard/

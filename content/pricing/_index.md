@@ -514,7 +514,7 @@ comparison_table:
             subheader: Intelligent assistance across all platform capabilities
             rows:
               - title: Pulumi Neo
-                link: /docs/pulumi-cloud/neo/
+                link: /docs/ai/neo/
                 items:
                   - content: _blank
                   - content: _check

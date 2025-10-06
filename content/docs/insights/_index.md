@@ -66,7 +66,7 @@ sections:
   - icon: lightbulb-blue-21-21
     heading: Pulumi Copilot AI
     description: Use Pulumi Copilot to ask detailed questions like "Find all untagged resources in AWS" to uncover insights and actionable recommendations.
-    link: /docs/pulumi-cloud/copilot/
+    link: /docs/ai/copilot/
 
 - type: blue-sparkle
   heading: Why Pulumi Insights?
