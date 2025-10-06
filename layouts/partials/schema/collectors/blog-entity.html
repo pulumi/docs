@@ -11,7 +11,7 @@
 {{ $schema := dict
   "@type" "BlogPosting"
   "@id" "#main-content"
-  "headline" (or .Params.h1 .Title)
+  "headline" .Title
   "url" .Permalink
   "wordCount" $wordCount
   "inLanguage" "en-US"

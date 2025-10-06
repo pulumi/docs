@@ -11,7 +11,7 @@
 {{ $schema := dict
   "@type" "HowTo"
   "@id" "#main-content"
-  "name" (or .Params.h1 .Title)
+  "name" .Title
   "url" .Permalink
   "inLanguage" "en-US"
 }}
@@ -21,55 +21,8 @@
   {{ $schema = merge $schema (dict "description" .) }}
 {{ end }}
 
-{{/* Generate generic steps for tutorials */}}
-{{/* Since tutorials may not have explicit numbered steps, we create high-level steps */}}
-{{ $steps := slice }}
-
-{{/* Step 1: Prerequisites */}}
-{{ $steps = $steps | append (dict
-  "@type" "HowToStep"
-  "name" "Prerequisites"
-  "text" "Install Pulumi CLI and configure your cloud provider credentials"
-  "position" 1
-) }}
-
-{{/* Step 2: Create Project */}}
-{{ if in $content "pulumi new" }}
-  {{ $steps = $steps | append (dict
-    "@type" "HowToStep"
-    "name" "Create Pulumi Project"
-    "text" "Initialize a new Pulumi project with the appropriate template"
-    "position" 2
-  ) }}
-{{ end }}
-
-{{/* Step 3: Write Infrastructure Code */}}
-{{ $steps = $steps | append (dict
-  "@type" "HowToStep"
-  "name" "Define Infrastructure"
-  "text" "Write infrastructure as code using your preferred programming language"
-  "position" 3
-) }}
-
-{{/* Step 4: Deploy */}}
-{{ if in $content "pulumi up" }}
-  {{ $steps = $steps | append (dict
-    "@type" "HowToStep"
-    "name" "Deploy Infrastructure"
-    "text" "Deploy your infrastructure using pulumi up command"
-    "position" 4
-  ) }}
-{{ end }}
-
-{{/* Step 5: Verify */}}
-{{ $steps = $steps | append (dict
-  "@type" "HowToStep"
-  "name" "Verify Deployment"
-  "text" "Verify your infrastructure was created successfully"
-  "position" 5
-) }}
-
-{{ $schema = merge $schema (dict "step" $steps) }}
+{{/* Note: Steps omitted - tutorials don't have consistently structured steps that can be extracted reliably */}}
+{{/* Future improvement: Extract real steps from content if structure allows */}}
 
 {{/* Calculate total time */}}
 {{ $totalTime := "" }}
@@ -154,31 +107,7 @@
 {{ end }}
 {{ $schema = merge $schema (dict "image" $image) }}
 
-{{/* Add dates */}}
-{{ $publishDate := .PublishDate }}
-{{ $modifiedDate := .Lastmod }}
-
-{{/* Fix invalid dates */}}
-{{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
-  {{ if and .GitInfo .GitInfo.AuthorDate }}
-    {{ $publishDate = .GitInfo.AuthorDate }}
-  {{ else }}
-    {{ $publishDate = now }}
-  {{ end }}
-{{ end }}
-
-{{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
-  {{ if and .GitInfo .GitInfo.AuthorDate }}
-    {{ $modifiedDate = .GitInfo.AuthorDate }}
-  {{ else }}
-    {{ $modifiedDate = $publishDate }}
-  {{ end }}
-{{ end }}
-
-{{ $schema = merge $schema (dict
-  "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
-  "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
-) }}
+{{/* Note: Dates omitted for tutorial pages - they're evergreen content without meaningful publication dates */}}
 
 {{/* Add keywords */}}
 {{ $keywords := "infrastructure as code, cloud, devops, tutorial, pulumi" }}

@@ -36,7 +36,7 @@
 {{ if .IsHome }}
   {{/* Add Organization entity - only on homepage per Google best practices */}}
   {{ $org := dict
-    "@type" (slice "Organization" "Corporation")
+    "@type" "Corporation"
     "@id" "https://www.pulumi.com/#organization"
     "name" "Pulumi Corporation"
     "legalName" "Pulumi Corporation"

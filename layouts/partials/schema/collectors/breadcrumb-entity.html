@@ -71,14 +71,14 @@
       "item" "https://www.pulumi.com/docs/esc/"
     ) }}
 
-  {{/* Add Pulumi Copilot if in the docs/copilot section */}}
-  {{ else if in .RelPermalink "/docs/copilot/" }}
+  {{/* Add Pulumi Cloud if in the docs/pulumi-cloud section */}}
+  {{ else if in .RelPermalink "/docs/pulumi-cloud/" }}
     {{ $position = add $position 1 }}
     {{ $breadcrumbs = $breadcrumbs | append (dict
       "@type" "ListItem"
       "position" $position
-      "name" "Pulumi Copilot"
-      "item" "https://www.pulumi.com/docs/copilot/"
+      "name" "Pulumi Cloud"
+      "item" "https://www.pulumi.com/docs/pulumi-cloud/"
     ) }}
 
   {{/* Add Pulumi CrossGuard if in the docs/crossguard section */}}
