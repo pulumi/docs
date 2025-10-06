@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title "subtitle" .Params.overview.title) }}
+    {{ partial "hero" (dict "title" (or .Params.heading "Internal Developer Platform") "subtitle" (or .Params.subheading .Params.overview.title)) }}
 {{ end }}
 
 {{ define "main" }}
