@@ -15,7 +15,7 @@ description: <p>Pulumi IaC is an <a href="https://github.com/pulumi/pulumi" targ
 link_buttons:
   primary:
     label: Get Started
-    link: /docs/iac/get-started/
+    link: /docs/get-started/
   secondary:
     label: Install
     link: /docs/iac/download-install/

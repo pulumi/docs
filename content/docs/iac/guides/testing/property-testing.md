@@ -8,7 +8,7 @@ weight: 2
 menu:
     iac:
         name: Property testing
-        parent: iac-concepts-testing
+        parent: iac-guides-testing
         weight: 2
     usingpulumi:
         parent: testing

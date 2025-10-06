@@ -12,8 +12,8 @@
         {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2) }}
     {{ end }}
     <li {{ if eq .p1 .p2 }}class="active"{{ end }}>
-        {{ if .p1.Params.no_overview }}
-            <a data-track="breadcrumb" style="text-decoration: none; cursor: default;">{{ .p1.LinkTitle }}</a>
+        {{ if or .p1.Params.no_overview .p1.Params.No_overview }}
+            <a data-track="breadcrumb" style="pointer-events: none; cursor: default;">{{ .p1.LinkTitle }}</a>
         {{ else }}
             <a data-track="breadcrumb" href="{{ .p1.RelPermalink }}">
                 {{ .p1.LinkTitle }}

@@ -8,7 +8,7 @@ menu:
     iac:
         name: Components
         parent: iac-concepts
-        weight: 70
+        weight: 100
         identifier: iac-concepts-components
 aliases:
 - /docs/intro/concepts/resources/components/

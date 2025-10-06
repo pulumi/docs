@@ -8,7 +8,7 @@ weight: 3
 menu:
     iac:
         name: Integration testing
-        parent: iac-concepts-testing
+        parent: iac-guides-testing
         weight: 3
     usingpulumi:
         parent: testing

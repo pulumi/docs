@@ -4,6 +4,8 @@ meta_desc: Step-by-step guides for creating, deploying, and managing infrastruct
 title: Get started
 h1: Get started with Pulumi
 no_on_this_page: true
+no_overview: true
+redirect_to: /docs/get-started/
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -14,8 +16,4 @@ menu:
     getstarted:
         name: Overview
         weight: 2
-aliases:
-    - /docs/quickstart/
-    - /start/
-    - /getting-started/
 ---

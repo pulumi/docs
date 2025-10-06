@@ -1,12 +1,12 @@
 ---
-title_tag: Build with Pulumi
+title_tag: Extending Pulumi
 meta_desc: Pulumi offers a number of ways to extend its functionality via providers, components, packages, and more, in any Pulumi language.
-title: Build with Pulumi
-h1: Build with Pulumi
+title: Extending Pulumi
+h1: Extending Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Build with Pulumi
+        name: Extending Pulumi
         parent: iac-home
         weight: 30
         identifier: iac-build-with-pulumi
@@ -15,7 +15,7 @@ aliases:
 - /docs/iac/extending-pulumi/
 ---
 
-Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), [packages](/docs/iac/concepts/packages/), and more.
+Pulumi offers a number of ways to extend its functionality including [providers](/docs/iac/concepts/resources/providers/), [components](/docs/iac/concepts/resources/components/), [packages](/docs/iac/guides/packages/), and more.
 
 ## What are my options?
 
@@ -69,7 +69,7 @@ This matters when we talk about components and providers because Pulumi Deployme
 
 ## Packaging and Publishing
 
-Pulumi [*packages*](/docs/iac/concepts/packages/) are a standardized way to share providers and components. After building a provider or component, the next steps involve generating docs and end-user SDK code in various target languages, both of which are based on the [`schema.json` file](schema/). Those user-facing assets are packaged up in a tarball. Once you have a package, this can either be used locally or shared via the Pulumi Registry.
+Pulumi [*packages*](/docs/iac/guides/packages/) are a standardized way to share providers and components. After building a provider or component, the next steps involve generating docs and end-user SDK code in various target languages, both of which are based on the [`schema.json` file](schema/). Those user-facing assets are packaged up in a tarball. Once you have a package, this can either be used locally or shared via the Pulumi Registry.
 
 Learn more in the [package documentation](/docs/iac/concepts/packages).
 
@@ -83,7 +83,7 @@ When extending Pulumi, you get the same great flexibility, with some caveats:
 
 - [Components](/docs/iac/concepts/resources/components/) can be written and used in any of Pulumi's supported languages except for JavaScript.
 - [Providers](/docs/iac/concepts/resources/providers/) can be written in Go, and used in any of Pulumi's supported languages.
-- [Dynamic Providers](/docs/iac/concepts/resources/dynamic-providers) can be written in TypeScript, JavaScript, and Python, and can only be used in the same language they were authored in. Also, the code [must be serializable](/docs/iac/concepts/miscellaneous/function-serialization/).
+- [Dynamic Providers](/docs/iac/concepts/resources/dynamic-providers) can be written in TypeScript, JavaScript, and Python, and can only be used in the same language they were authored in. Also, the code [must be serializable](/docs/iac/concepts/functions/function-serialization/).
 
 This flexibility is made possible through code generation. When you author a component or provider, the `schema.json` is used to generate docs and SDKs in all target languages. Those SDKs are included in the Pulumi package, and the docs generated and published in the Pulumi Registry, making it very easy for end users to consume your code.
 

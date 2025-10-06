@@ -7,11 +7,12 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Update plans
-        parent: iac-concepts
-        weight: 130
+        parent: iac-using-pulumi
+        weight: 60
     concepts:
         weight: 11
 aliases:
+- /docs/iac/guides/update-plans/
 - /updateplans/
 - /docs/intro/concepts/plans/
 - /docs/intro/concepts/update-plans/

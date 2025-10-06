@@ -8,7 +8,7 @@ weight: 1
 menu:
     iac:
         name: Unit testing
-        parent: iac-concepts-testing
+        parent: iac-guides-testing
         weight: 1
     usingpulumi:
         parent: testing

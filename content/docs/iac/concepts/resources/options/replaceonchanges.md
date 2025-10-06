@@ -118,7 +118,7 @@ var widget = new com.pulumi.kubernetes.apiextensions.CustomResource("widget",
 
 {{< /chooser >}}
 
-The [property paths](/docs/iac/concepts/miscellaneous/property-paths/) provided as input to `replaceOnChanges` can each describe a subset of the properties of the resource which should trigger a replacement on changes.  The `*` wildcard can be used in any part of a path.  A few examples of what changes will trigger replacement for a given property path string are:
+The [property paths](/docs/iac/concepts/inputs-outputs/property-paths/) provided as input to `replaceOnChanges` can each describe a subset of the properties of the resource which should trigger a replacement on changes.  The `*` wildcard can be used in any part of a path.  A few examples of what changes will trigger replacement for a given property path string are:
 
 - `*`: any property change
 - `spec`: any change to the `spec` property or any of its children

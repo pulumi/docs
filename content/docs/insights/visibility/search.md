@@ -279,7 +279,7 @@ If you would like to use it, [contact us](/contact?form=sales) to upgrade.
 Property search allows you to query resources by their inputs and outputs.
 
 A property query is similar to a field query but it is triggered by a leading `.` followed by a
-[property path](/docs/iac/concepts/miscellaneous/property-paths/):
+[property path](/docs/iac/concepts/inputs-outputs/property-paths/):
 
 > .\<property path>:<value?>
 

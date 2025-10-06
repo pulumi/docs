@@ -7,13 +7,14 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Testing
-        parent: iac-concepts
-        weight: 150
-        identifier: iac-concepts-testing
+        parent: iac-using-pulumi
+        weight: 50
+        identifier: iac-guides-testing
     usingpulumi:
         identifier: testing
         weight: 8
 aliases:
+- /docs/iac/guides/testing/
 - /docs/guides/testing/
 - /docs/using-pulumi/testing/
 ---
@@ -30,7 +31,7 @@ Similarly, Pulumi provides multiple testing styles for cloud programs:
 
 The following table summarizes the differences between the three approaches:
 
-|                                | [**Unit Tests**](/docs/iac/concepts/testing/unit)    | [**Property Tests**](/docs/iac/concepts/testing/property-testing)  | [**Integration Tests**](/docs/iac/concepts/testing/integration)  |
+|                                | [**Unit Tests**](/docs/iac/guides/testing/unit)    | [**Property Tests**](/docs/iac/guides/testing/property-testing)  | [**Integration Tests**](/docs/iac/guides/testing/integration)  |
 |--------------------------------|---------------|---------|----------|
 | Provision real infrastructure  | No            | Yes     | Yes      |
 | Require the Pulumi CLI         | No            | Yes     | Yes      |

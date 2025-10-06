@@ -103,7 +103,7 @@ The `ignoreChanges` option only applies to resource inputs, not outputs.
 The `ignoreChanges` resource option does not apply to inputs to component resources.  If `ignoreChanges` is passed to a component resource, it is up to that component's implementation to decide what if anything it will do.
 {{% /notes %}}
 
-In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/iac/concepts/miscellaneous/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
+In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/iac/concepts/inputs-outputs/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
 
 {{% notes "info" %}}
 For arrays with different lengths, only changes for elements that are in both arrays are ignored. If the new input array is longer, additional elements will be taken from the new array. If the new array is shorter, we only take that number of elements from the original array.

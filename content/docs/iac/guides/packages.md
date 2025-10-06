@@ -7,11 +7,12 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Packages
-        parent: iac-concepts
-        weight: 110
+        parent: iac-using-pulumi
+        weight: 40
     concepts:
         weight: 10
 aliases:
+- /docs/iac/guides/packages/
 - /docs/guides/pulumi-packages/
 - /docs/using-pulumi/pulumi-packages/
 - /docs/iac/packages-and-automation/pulumi-packages/

@@ -7,8 +7,11 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Property Paths
-        parent: miscellaneous-concepts
-        weight: 2
+        parent: iac-concepts-inputs-outputs
+        weight: 3
+aliases:
+- /docs/iac/concepts/resources/options/property-paths/
+- /docs/iac/concepts/miscellaneous/property-paths/
 ---
 
 Property paths represent a key or series of keys that one can use to refer to elements in an object or array.

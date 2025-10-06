@@ -12,9 +12,10 @@ keywords:
 menu:
     iac:
         name: Function serialization
-        parent: miscellaneous-concepts
-        weight: 1
+        parent: iac-concepts-functions
+        weight: 4
 aliases:
+- /docs/iac/concepts/functions/function-serialization/
 - /docs/reference/serializing-functions/
 - /docs/tutorials/aws/serializing-functions/
 - /docs/intro/concepts/function-serialization/

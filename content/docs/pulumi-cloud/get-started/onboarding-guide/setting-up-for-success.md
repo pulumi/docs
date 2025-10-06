@@ -50,7 +50,7 @@ Implement a three-tier testing approach:
 
 Build sophisticated test strategies on this foundation. Options include fuzz testing to verify your infrastructure configurations react correctly to varying inputs, or chaos testing that destroys infrastructure components to test system responses.
 
-Also consider using linters and static analysis tools to enforce industry standards and your team's coding guidelines. See the [Testing Pulumi programs guide](https://www.pulumi.com/docs/iac/concepts/testing/) for more details.
+Also consider using linters and static analysis tools to enforce industry standards and your team's coding guidelines. See the [Testing Pulumi programs guide](https://www.pulumi.com/docs/iac/guides/testing/) for more details.
 
 ## Share and reuse code effectively
 

@@ -42,7 +42,7 @@ Running `pulumi preview` works great for existing projects to detect any unexpec
 
 Set up **integration tests** using tools like:
 
-- Language-specific [unit testing](/docs/iac/concepts/testing/unit/) tools
+- Language-specific [unit testing](/docs/iac/guides/testing/unit/) tools
 - Local test benches ([see below](#yaml-test-benches))
 - CI/CD workflows (like [GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/)) that validate downstream usage
 
@@ -59,7 +59,7 @@ Features:
 - Assert on created resources and their outputs
 - Validate behavior across versions and configs
 
-See ["Integration Testing"](/docs/iac/concepts/testing/integration/) and [`pulumi-go-provider/integration`](https://github.com/pulumi/pulumi-go-provider/tree/main/integration) for usage examples.
+See ["Integration Testing"](/docs/iac/guides/testing/integration/) and [`pulumi-go-provider/integration`](https://github.com/pulumi/pulumi-go-provider/tree/main/integration) for usage examples.
 
 ## Prevention Strategies
 
@@ -108,7 +108,7 @@ policy.resourceOfType("aws:ec2/instance:Instance", (args, reportViolation) => {
 });
 ```
 
-Use policies to enforce security, cost, or compliance constraints that complement component-level modeling. Suppose a component author had changed the input enum accidentally. This policy would catch that at runtime, preventing the costly cloud resources from being created and alerting the end user to the issue. Policies can function as always-on unit tests in that way. Read more about about this in ["Property Testing"](/docs/iac/concepts/testing/property-testing/).
+Use policies to enforce security, cost, or compliance constraints that complement component-level modeling. Suppose a component author had changed the input enum accidentally. This policy would catch that at runtime, preventing the costly cloud resources from being created and alerting the end user to the issue. Policies can function as always-on unit tests in that way. Read more about about this in ["Property Testing"](/docs/iac/guides/testing/property-testing/).
 
 ## Debugging Strategies
 
@@ -160,5 +160,5 @@ This provides essential details for debugging interop issues and schema mismatch
 ## Learn more
 
 - [Build a Component](/docs/iac/using-pulumi/build-a-component/)
-- [Testing Pulumi Programs](/docs/iac/concepts/testing/)
+- [Testing Pulumi Programs](/docs/iac/guides/testing/)
 - [Pulumi Provider SDK](/docs/iac/build-with-pulumi/pulumi-provider-sdk/)
