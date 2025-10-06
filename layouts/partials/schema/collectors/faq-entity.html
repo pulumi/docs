@@ -30,11 +30,11 @@
   {{ if strings.HasPrefix $line "### " }}
     {{/* Save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim }}
+      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | strings.TrimSpace }}
       {{ if $answerText }}
         {{ $qa := dict
           "@type" "Question"
-          "name" (strings.TrimPrefix "### " $currentQuestion | trim)
+          "name" (strings.TrimPrefix "### " $currentQuestion | strings.TrimSpace)
           "acceptedAnswer" (dict
             "@type" "Answer"
             "text" $answerText
@@ -50,11 +50,11 @@
   {{ else if strings.HasPrefix $line "## " }}
     {{/* New section, save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim }}
+      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | strings.TrimSpace }}
       {{ if $answerText }}
         {{ $qa := dict
           "@type" "Question"
-          "name" (strings.TrimPrefix "### " $currentQuestion | trim)
+          "name" (strings.TrimPrefix "### " $currentQuestion | strings.TrimSpace)
           "acceptedAnswer" (dict
             "@type" "Answer"
             "text" $answerText
@@ -68,7 +68,7 @@
     {{ $inQuestion = false }}
   {{ else if $inQuestion }}
     {{/* Add to current answer if we're in a question and line isn't empty */}}
-    {{ $trimmedLine := trim $line }}
+    {{ $trimmedLine := strings.TrimSpace $line }}
     {{ if $trimmedLine }}
       {{/* Skip markdown links to other FAQ sections */}}
       {{ if not (and (strings.Contains $trimmedLine "[") (strings.Contains $trimmedLine "/faq/")) }}
@@ -80,11 +80,11 @@
 
 {{/* Save last Q&A if exists */}}
 {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-  {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim }}
+  {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | strings.TrimSpace }}
   {{ if $answerText }}
     {{ $qa := dict
       "@type" "Question"
-      "name" (strings.TrimPrefix "### " $currentQuestion | trim)
+      "name" (strings.TrimPrefix "### " $currentQuestion | strings.TrimSpace)
       "acceptedAnswer" (dict
         "@type" "Answer"
         "text" $answerText
