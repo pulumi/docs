@@ -21,8 +21,89 @@
   {{ $schema = merge $schema (dict "description" .) }}
 {{ end }}
 
-{{/* Note: Steps omitted - tutorials don't have consistently structured steps that can be extracted reliably */}}
-{{/* Future improvement: Extract real steps from content if structure allows */}}
+{{/* Extract real steps from content */}}
+{{ $steps := slice }}
+{{ $rawContent := .RawContent }}
+{{ $lines := split $rawContent "\n" }}
+
+{{/* Look for numbered lists (1., 2., etc.) or step-like headers */}}
+{{ $currentStep := dict }}
+{{ $stepNumber := 0 }}
+{{ $inNumberedList := false }}
+{{ $stepText := slice }}
+
+{{ range $index, $line := $lines }}
+  {{/* Check for numbered list items */}}
+  {{ if findRE `^\d+\.\s+` $line }}
+    {{/* Save previous step if exists */}}
+    {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
+      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim }}
+      {{ if $stepContent }}
+        {{ $step := dict
+          "@type" "HowToStep"
+          "position" $stepNumber
+          "name" (printf "Step %d" $stepNumber)
+          "text" $stepContent
+        }}
+        {{ $steps = $steps | append $step }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Start new step */}}
+    {{ $stepNumber = add $stepNumber 1 }}
+    {{ $stepText = slice (replaceRE `^\d+\.\s+` "" $line) }}
+    {{ $inNumberedList = true }}
+
+  {{ else if and $inNumberedList (not (eq $line "")) (not (strings.HasPrefix $line "#")) }}
+    {{/* Continue current step if we're in a numbered list and line is not empty or a header */}}
+    {{ if not (strings.HasPrefix $line "```") }}
+      {{ $trimmedLine := trim $line }}
+      {{ if $trimmedLine }}
+        {{ $stepText = $stepText | append $trimmedLine }}
+      {{ end }}
+    {{ end }}
+
+  {{ else if or (eq $line "") (strings.HasPrefix $line "#") }}
+    {{/* End current step on empty line or new section */}}
+    {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
+      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim }}
+      {{ if $stepContent }}
+        {{ $step := dict
+          "@type" "HowToStep"
+          "position" $stepNumber
+          "name" (printf "Step %d" $stepNumber)
+          "text" $stepContent
+        }}
+        {{ $steps = $steps | append $step }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Reset if we hit a header */}}
+    {{ if strings.HasPrefix $line "#" }}
+      {{ $inNumberedList = false }}
+      {{ $stepText = slice }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Save last step if exists */}}
+{{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
+  {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim }}
+  {{ if $stepContent }}
+    {{ $step := dict
+      "@type" "HowToStep"
+      "position" $stepNumber
+      "name" (printf "Step %d" $stepNumber)
+      "text" $stepContent
+    }}
+    {{ $steps = $steps | append $step }}
+  {{ end }}
+{{ end }}
+
+{{/* Add steps to schema if we found any */}}
+{{ if $steps }}
+  {{ $schema = merge $schema (dict "step" $steps) }}
+{{ end }}
 
 {{/* Calculate total time */}}
 {{ $totalTime := "" }}

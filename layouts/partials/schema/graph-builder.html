@@ -88,6 +88,14 @@
       "Serverless Computing"
       "Multi-Cloud Architecture"
     )
+    "award" (slice
+      (dict
+        "@type" "AwardOrHonor"
+        "name" "SOC 2 Type II Certified"
+        "description" "Successful completion of SOC 2 Type II audit for security, availability, and confidentiality"
+        "url" "https://www.pulumi.com/security/"
+      )
+    )
   }}
   {{ $graph = $graph | append $org }}
   {{/* Website schema */}}
@@ -163,8 +171,13 @@
   {{ $graph = $graph | append $software }}
 {{ end }}
 
-{{/* Note: Additional special schemas (video, code, QA, etc.) can be added here in future */}}
-{{/* Currently focusing on main content schemas which cover 90% of use cases */}}
+{{/* Add video schema if page contains YouTube videos */}}
+{{ if not .IsHome }}
+  {{ $videoEntity := partial "schema/collectors/video-entity.html" . }}
+  {{ if and $videoEntity (ne $videoEntity (dict)) }}
+    {{ $graph = $graph | append $videoEntity }}
+  {{ end }}
+{{ end }}
 
 {{/* Output single JSON-LD block with @graph */}}
 <script type="application/ld+json">
