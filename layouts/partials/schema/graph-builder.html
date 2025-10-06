@@ -126,7 +126,7 @@
     "applicationCategory" "DeveloperApplication"
     "applicationSubCategory" "Infrastructure as Code"
     "operatingSystem" (slice "Windows" "macOS" "Linux")
-    "softwareVersion" .Site.Params.latest_version
+    "softwareVersion" (readFile "static/latest-version" | default "3.198.0")
     "downloadUrl" "https://get.pulumi.com/"
     "installUrl" "https://www.pulumi.com/docs/iac/download-install/"
     "releaseNotes" "https://www.pulumi.com/docs/reference/changelog/"

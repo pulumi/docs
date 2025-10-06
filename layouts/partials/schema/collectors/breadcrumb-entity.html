@@ -90,9 +90,11 @@
       "name" "Pulumi CrossGuard"
       "item" "https://www.pulumi.com/docs/crossguard/"
     ) }}
+
+  {{/* End of main docs sections (IaC, Insights, ESC, Pulumi Cloud, CrossGuard) */}}
   {{ end }}
 
-  {{/* Add Clouds if in clouds section (only for IaC docs) */}}
+  {{/* Additional nesting for IaC Clouds section only - this is separate from the main section logic above */}}
   {{ if and (in .RelPermalink "/docs/iac/") (in .RelPermalink "/docs/iac/clouds/") }}
       {{ $position = add $position 1 }}
       {{ $breadcrumbs = $breadcrumbs | append (dict
@@ -123,6 +125,8 @@
           ) }}
         {{ end }}
       {{ end }}
+
+    {{/* End of IaC Clouds section additional nesting */}}
     {{ end }}
 
 {{ else if eq .Section "product" }}
