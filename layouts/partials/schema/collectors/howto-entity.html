@@ -11,7 +11,7 @@
 {{ $schema := dict
   "@type" "HowTo"
   "@id" "#main-content"
-  "name" .Title
+  "name" (or .Params.h1 .Title)
   "url" .Permalink
   "inLanguage" "en-US"
 }}

@@ -11,7 +11,7 @@
 {{ $schema := dict
   "@type" "TechArticle"
   "@id" "#main-content"
-  "headline" .Title
+  "headline" (or .Params.h1 .Title)
   "url" .Permalink
   "wordCount" $wordCount
   "inLanguage" "en-US"
@@ -87,19 +87,8 @@
   "publisher" (dict "@id" "https://www.pulumi.com/#organization")
 ) }}
 
-{{/* Add speakable for voice search */}}
-{{ $schema = merge $schema (dict "speakable" (dict
-  "@type" "SpeakableSpecification"
-  "cssSelector" (slice "h1" "h2" "p:first-of-type")
-)) }}
-
-{{/* Add about field */}}
-{{ $schema = merge $schema (dict
-  "about" (dict
-    "@type" "SoftwareApplication"
-    "@id" "https://www.pulumi.com/#pulumi-cli"
-  )
-) }}
+{{/* Note: Removed speakable schema - not needed for developer tools */}}
+{{/* Note: Removed generic about field - was incorrectly claiming all articles are about Pulumi CLI */}}
 
 {{/* Add article body (truncated for schema) */}}
 {{ $articleBody := $content | truncate 5000 }}
