@@ -30,7 +30,7 @@ Following industry trends and feedback from users and partners, we're introducin
 
 The Pulumi Remote MCP Server runs as a hosted service. Instead of managing local installations, you configure it once and get automatic updates and consistent functionality across all your development environments.
 
-### Zero Local Setup, Universal Access
+### Zero local setup, universal access
 
 Instead of installing npm packages, you simply configure your AI assistant with a single URL: `https://mcp.ai.pulumi.com/mcp`. That's it.
 
@@ -38,9 +38,9 @@ Instead of installing npm packages, you simply configure your AI assistant with 
 - **No manual updates** - New features and improvements roll out automatically to all users
 - **Works with any MCP-compatible AI assistant** - Cursor, Claude Code, Windsurf, Claude Desktop, and more
 
-For instructions on how to configure different AI assistants, see [Pulumi MCP Server](docs/iac/using-pulumi/mcp-server).
+For instructions on how to configure different AI assistants, see [Pulumi MCP Server](/docs/iac/using-pulumi/mcp-server).
 
-### Centralized Authentication & Secrets
+### Centralized authentication & secrets
 
 Remote MCP also solves a critical security challenge: credential management. Instead of scattering Pulumi Access Tokens across laptops, containers, and scripts, the Remote MCP Server uses OAuth-based authentication with your Pulumi Cloud organization.
 
@@ -56,7 +56,7 @@ Your credentials are stored securely in Pulumi Cloud, not on your individual mac
 
 The Remote MCP Server is your AI assistant's gateway to your entire Pulumi infrastructure. It combines real-time access to your cloud resources with the power of autonomous infrastructure automation through Pulumi Neo.
 
-### Discover and Query Infrastructure
+### Discover and query infrastructure
 
 Your AI assistant can instantly explore what you've deployed across your entire organization:
 
@@ -78,7 +78,7 @@ Ask questions like:
 - "Which stacks have resources in us-east-1?"
 - "Find all Lambda functions using deprecated runtimes"
 
-### Generate Infrastructure Code
+### Generate infrastructure code
 
 The MCP server connects directly to the [Pulumi Registry](https://www.pulumi.com/registry/), giving your AI assistant access to thousands of cloud resources with complete type information:
 
@@ -97,7 +97,7 @@ Your AI assistant can:
 
 This means code generation is more accurate and up-to-date with the latest provider versions.
 
-### Autonomous Infrastructure with Pulumi Neo
+### Autonomous infrastructure with Pulumi Neo
 
 This is where the Remote MCP Server truly shines. For complex infrastructure tasks that require multiple steps, code changes, testing, and pull requests, your AI assistant can delegate directly to [Pulumi Neo](https://www.pulumi.com/docs/pulumi-cloud/neo/)—Pulumi's autonomous infrastructure AI agent.
 
