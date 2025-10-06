@@ -51,8 +51,49 @@
       "item" "https://www.pulumi.com/docs/iac/"
     ) }}
 
-    {{/* Add Clouds if in clouds section */}}
-    {{ if in .RelPermalink "/docs/iac/clouds/" }}
+  {{/* Add Pulumi Insights if in the docs/insights section */}}
+  {{ else if in .RelPermalink "/docs/insights/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Pulumi Insights"
+      "item" "https://www.pulumi.com/docs/insights/"
+    ) }}
+
+  {{/* Add Pulumi ESC if in the docs/esc section */}}
+  {{ else if in .RelPermalink "/docs/esc/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Pulumi ESC"
+      "item" "https://www.pulumi.com/docs/esc/"
+    ) }}
+
+  {{/* Add Pulumi Copilot if in the docs/copilot section */}}
+  {{ else if in .RelPermalink "/docs/copilot/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Pulumi Copilot"
+      "item" "https://www.pulumi.com/docs/copilot/"
+    ) }}
+
+  {{/* Add Pulumi CrossGuard if in the docs/crossguard section */}}
+  {{ else if in .RelPermalink "/docs/crossguard/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Pulumi CrossGuard"
+      "item" "https://www.pulumi.com/docs/crossguard/"
+    ) }}
+  {{ end }}
+
+  {{/* Add Clouds if in clouds section (only for IaC docs) */}}
+  {{ if and (in .RelPermalink "/docs/iac/") (in .RelPermalink "/docs/iac/clouds/") }}
       {{ $position = add $position 1 }}
       {{ $breadcrumbs = $breadcrumbs | append (dict
         "@type" "ListItem"
@@ -83,7 +124,6 @@
         {{ end }}
       {{ end }}
     {{ end }}
-  {{ end }}
 
 {{ else if eq .Section "product" }}
   {{ $position = add $position 1 }}
