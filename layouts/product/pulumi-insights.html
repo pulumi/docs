@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title "subtitle" .Params.overview.header) }}
+    {{ partial "hero" (dict "title" (or .Params.heading "Pulumi Insights") "subtitle" (or .Params.subheading .Params.overview.header)) }}
 {{ end }}
 
 {{ define "main" }}
