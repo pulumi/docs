@@ -217,7 +217,7 @@ kubernetes_overview:
 superpowers:
     - title: Run On Any Cloud
       cta: Learn more
-      cta_url: "/docs/get-started/iac/kubernetes/"
+      cta_url: "/docs/iac/get-started/kubernetes/"
       icon_type: cloud
       icon_color: salmon
       description: |
