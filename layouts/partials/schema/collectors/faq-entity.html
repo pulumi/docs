@@ -1,0 +1,112 @@
+{{/* Returns FAQPage entity for FAQ pages in @graph */}}
+
+{{/* Initialize FAQ schema */}}
+{{ $schema := dict
+  "@type" "FAQPage"
+  "@id" "#main-content"
+  "url" .Permalink
+  "name" (or .Params.title_tag .Title)
+  "inLanguage" "en-US"
+}}
+
+{{/* Add description if available */}}
+{{ with (or .Params.meta_desc .Summary) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{/* Extract Q&A pairs from content */}}
+{{ $questions := slice }}
+{{ $rawContent := .RawContent }}
+
+{{/* Parse markdown content for questions and answers */}}
+{{/* Questions are typically ### headers, answers are the content following them */}}
+{{ $lines := split $rawContent "\n" }}
+{{ $currentQuestion := "" }}
+{{ $currentAnswer := slice }}
+{{ $inQuestion := false }}
+
+{{ range $index, $line := $lines }}
+  {{/* Check if this is a question (### header) */}}
+  {{ if strings.HasPrefix $line "### " }}
+    {{/* Save previous Q&A if exists */}}
+    {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
+      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+      {{ if $answerText }}
+        {{ $qa := dict
+          "@type" "Question"
+          "name" (strings.TrimPrefix "### " $currentQuestion | trim " \t\n\r")
+          "acceptedAnswer" (dict
+            "@type" "Answer"
+            "text" $answerText
+          )
+        }}
+        {{ $questions = $questions | append $qa }}
+      {{ end }}
+    {{ end }}
+    {{/* Start new question */}}
+    {{ $currentQuestion = $line }}
+    {{ $currentAnswer = slice }}
+    {{ $inQuestion = true }}
+  {{ else if strings.HasPrefix $line "## " }}
+    {{/* New section, save previous Q&A if exists */}}
+    {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
+      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+      {{ if $answerText }}
+        {{ $qa := dict
+          "@type" "Question"
+          "name" (strings.TrimPrefix "### " $currentQuestion | trim " \t\n\r")
+          "acceptedAnswer" (dict
+            "@type" "Answer"
+            "text" $answerText
+          )
+        }}
+        {{ $questions = $questions | append $qa }}
+      {{ end }}
+    {{ end }}
+    {{ $currentQuestion = "" }}
+    {{ $currentAnswer = slice }}
+    {{ $inQuestion = false }}
+  {{ else if $inQuestion }}
+    {{/* Add to current answer if we're in a question and line isn't empty */}}
+    {{ $trimmedLine := trim $line " \t\n\r" }}
+    {{ if $trimmedLine }}
+      {{/* Skip markdown links to other FAQ sections */}}
+      {{ if not (and (strings.Contains $trimmedLine "[") (strings.Contains $trimmedLine "/faq/")) }}
+        {{ $currentAnswer = $currentAnswer | append $trimmedLine }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Save last Q&A if exists */}}
+{{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
+  {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+  {{ if $answerText }}
+    {{ $qa := dict
+      "@type" "Question"
+      "name" (strings.TrimPrefix "### " $currentQuestion | trim " \t\n\r")
+      "acceptedAnswer" (dict
+        "@type" "Answer"
+        "text" $answerText
+      )
+    }}
+    {{ $questions = $questions | append $qa }}
+  {{ end }}
+{{ end }}
+
+{{/* Add mainEntity with questions if we found any */}}
+{{ if $questions }}
+  {{ $schema = merge $schema (dict "mainEntity" $questions) }}
+{{ end }}
+
+{{/* Add publisher reference */}}
+{{ $schema = merge $schema (dict
+  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{/* Add breadcrumb reference if it exists */}}
+{{ $schema = merge $schema (dict
+  "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
+) }}
+
+{{ return $schema }}

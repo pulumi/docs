@@ -9,6 +9,10 @@
 {{ else if eq .Type "tutorials" }}
   {{ $entity = partial "schema/collectors/howto-entity.html" . }}
 
+{{ else if and (eq .Type "docs") (or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq")) }}
+  {{/* FAQ pages get FAQPage schema */}}
+  {{ $entity = partial "schema/collectors/faq-entity.html" . }}
+
 {{ else if eq .Type "docs" }}
   {{ $entity = partial "schema/collectors/article-entity.html" . }}
 
