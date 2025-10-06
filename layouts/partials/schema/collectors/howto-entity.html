@@ -37,7 +37,7 @@
   {{ if findRE `^\d+\.\s+` $line }}
     {{/* Save previous step if exists */}}
     {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
-      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | strings.TrimSpace }}
+      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
       {{ if $stepContent }}
         {{ $step := dict
           "@type" "HowToStep"
@@ -57,7 +57,7 @@
   {{ else if and $inNumberedList (not (eq $line "")) (not (strings.HasPrefix $line "#")) }}
     {{/* Continue current step if we're in a numbered list and line is not empty or a header */}}
     {{ if not (strings.HasPrefix $line "```") }}
-      {{ $trimmedLine := strings.TrimSpace $line }}
+      {{ $trimmedLine := trim $line " \t\n\r" }}
       {{ if $trimmedLine }}
         {{ $stepText = $stepText | append $trimmedLine }}
       {{ end }}
@@ -66,7 +66,7 @@
   {{ else if or (eq $line "") (strings.HasPrefix $line "#") }}
     {{/* End current step on empty line or new section */}}
     {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
-      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | strings.TrimSpace }}
+      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
       {{ if $stepContent }}
         {{ $step := dict
           "@type" "HowToStep"
@@ -88,7 +88,7 @@
 
 {{/* Save last step if exists */}}
 {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
-  {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | strings.TrimSpace }}
+  {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
   {{ if $stepContent }}
     {{ $step := dict
       "@type" "HowToStep"
