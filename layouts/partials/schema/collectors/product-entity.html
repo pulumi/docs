@@ -48,18 +48,35 @@
 {{ end }}
 {{ $schema = merge $schema (dict "image" $image) }}
 
-{{/* Add offer/pricing information */}}
-{{ $schema = merge $schema (dict "offers" (dict
-  "@type" "Offer"
-  "price" "0"
-  "priceCurrency" "USD"
-  "availability" "https://schema.org/InStock"
-  "priceValidUntil" "2025-12-31"
-  "url" (printf "%spricing/" .Permalink)
-)) }}
+{{/* Add offer/pricing information - only for free products or if pricing is explicitly defined */}}
+{{ if in .RelPermalink "/neo/" }}
+  {{/* Neo is part of paid tiers, starting with Team tier */}}
+  {{ $schema = merge $schema (dict "offers" (dict
+    "@type" "AggregateOffer"
+    "priceCurrency" "USD"
+    "lowPrice" "40"
+    "highPrice" "400"
+    "availability" "https://schema.org/InStock"
+    "url" "https://www.pulumi.com/pricing/"
+    "offerCount" 3
+  )) }}
+{{ else }}
+  {{/* Generic product offer - avoid hardcoding prices */}}
+  {{ $schema = merge $schema (dict "offers" (dict
+    "@type" "Offer"
+    "priceCurrency" "USD"
+    "availability" "https://schema.org/InStock"
+    "url" "https://www.pulumi.com/pricing/"
+  )) }}
+{{ end }}
 
-{{/* Add software requirements */}}
-{{ $schema = merge $schema (dict "softwareRequirements" "Pulumi CLI 3.0+") }}
+{{/* Add software requirements based on product type */}}
+{{ if in .RelPermalink "/neo/" }}
+  {{ $schema = merge $schema (dict "softwareRequirements" "Modern web browser with JavaScript enabled") }}
+{{ else }}
+  {{/* For most Pulumi products */}}
+  {{ $schema = merge $schema (dict "softwareRequirements" "Modern web browser") }}
+{{ end }}
 
 {{/* Add creator and maintainer */}}
 {{ $schema = merge $schema (dict
@@ -92,8 +109,7 @@
 {{/* Only add aggregateRating if real data is available */}}
 {{/* Removed hardcoded fake ratings - should come from actual user reviews */}}
 
-{{/* Add software version */}}
-{{ $schema = merge $schema (dict "softwareVersion" "1.0") }}
+{{/* Note: Removed hardcoded softwareVersion - should use actual version from site params if needed */}}
 
 {{/* Note: Programming languages are already covered in featureList as "Multi-language support" */}}
 {{/* supportedLanguage is not a valid property for SoftwareApplication schema type */}}
