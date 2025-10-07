@@ -23,11 +23,13 @@ The answer is quite a bit. Here are 10 concrete workflows that platform teams ca
 
 <!--more-->
 
-## 1. Explain infrastructure in plain English
+## 1. Explain infrastructure in plain English or diagrams
 
 Neo answers questions about your infrastructure instantly, turning complex resource relationships into conversational insights (and diagrams!).
 
-No more digging through AWS consoles or parsing state files to understand what you have deployed. Neo speaks your language about your infrastructure. Ask questions like *"What databases do we have?"*, *"Which S3 buckets aren't encrypted?"*, or *"Show me all resources in us-east-1"* and get immediate, accurate answers.
+No more digging through AWS consoles or parsing state files to understand what you have deployed. Neo speaks your language about your infrastructure. Ask questions like *"What databases do we have?"*, *"Which S3 buckets aren't encrypted?"*, *"Show me all resources in us-east-1"* or "draw an architecture diagram of our service" and get immediate, accurate answers.
+
+![Neo explaining and diagramming infrastructure](neo-diagram.png)
 
 ## 2. Generate infrastructure code from natural language
 
@@ -39,7 +41,7 @@ Instead of starting from scratch or hunting through documentation, describe what
 
 ## 3. Assist with Terraform to Pulumi migration
 
-Neo analyzes existing Terraform code and state to generate the equivalent Pulumi program, accelerating migration without starting from scratch.
+Neo analyzes existing Terraform code (and/or state files) and generates equivalent Pulumi programs, accelerating migration without starting from scratch.
 
 Migrating from Terraform to Pulumi traditionally means rewriting everything. Neo understands both languages and can convert HCL to TypeScript, Python, or Go while preserving your infrastructure patterns. You can also use the Terraform state file. Ask Neo: *"Analyze the provided terraform state. Based on it, generate a python pulumi program that imports the resources without requiring updates."* and it generates equivalent code with proper typing and best practices.
 
