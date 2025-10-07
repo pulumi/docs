@@ -1,8 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: KubeCon North America
-meta_desc: Pulumi will be a Silver Sponsor of the Cloud Native Computing Foundation's flagship conference in North America.
-meta_image:
+title: "Agents on Cloud Run: Simplify Deploying Agentic Apps with Cloud Run and Pulumi"
+meta_desc: Leverage Pulumi and Cloud Run to build a platform where agentic workloads can be reliably deployed.
 
 # A featured webinar will display first in the list.
 featured: false
@@ -26,12 +25,12 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://www.pulumi.com/kubecon/
+url_slug: https://rsvp.withgoogle.com/events/agentic-apps-with-cloud-run-and-pulumi
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: KubeCon North America
+    title: "Agents on Cloud Run: Simplify Deploying Agentic Apps with Cloud Run and Pulumi"
 
     event_type: event # workshop | event
 
@@ -39,16 +38,16 @@ main:
     youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-11-10T09:00:00-07:00
+    sortable_date: 2025-10-29T12:00:00-00:00
 
     # Duration of the webinar.
-    duration: 2 days
+    duration: 1 hour
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
-    location: Atlanta, GA
+    location: virtual
 
     # Description of the webinar.
-    description: Pulumi will be a Silver Sponsor of the Cloud Native Computing Foundation's flagship conference in North America, bringing together adopters and technologies from leading open-source and cloud-native communities.
+    description: When developers build Generative AI Apps or Agentic Apps on Google Cloud, they need a reliable experience. As a platform engineers, you must ensure that you provide the right resources with the right guardrails and also unblock developers from having to handle the underlying infrastructure. We will show you how you can leverage Pulumi and Cloud Run to build a platform where agentic workloads can be reliably deployed.
 
     # The webinar presenters
     presenters:
@@ -56,8 +55,9 @@ main:
     # case-sensitive
     tags:
         level: # Beginner, Intermediate, Advanced
-        topics: ["Kubernetes"]
+        topics: []
         languages: []
+        clouds: []
 
 # The right hand side form section.
 form:
