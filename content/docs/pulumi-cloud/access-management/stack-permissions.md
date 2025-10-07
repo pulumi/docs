@@ -74,5 +74,5 @@ By default, the user who creates a stack is granted admin permissions on that st
 ## Related Resources
 
 - [Teams](/docs/pulumi-cloud/access-management/teams)
-- [Projects & Stacks](/docs/pulumi-cloud/projects-and-stacks)
+- [Projects & Stacks](/docs/platform/projects-and-stacks)
 - [Access Tokens](/docs/pulumi-cloud/access-management/access-tokens)

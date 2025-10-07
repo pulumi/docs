@@ -3,11 +3,14 @@ title: Customer-managed agents
 title_tag: Get started with customer-managed agents
 meta_desc: Customer-managed agents allows you to self-host deployment agents and get all the power and flexibility of Pulumi Deployments in your isolated environments
 menu:
-  cloud:
+  platform:
     name: Customer-managed agents
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 40
-    identifier: pulumi-cloud-deployments-customer-managed-agents
+    identifier: platform-deployments-customer-managed-agents
+
+aliases:
+- /docs/pulumi-cloud/deployments/customer-managed-agents/
 ---
 
 Customer-Managed Agents allow you to self-host deployment agents bringing the same power and flexibility as Pulumi-hosted deployments. Self-hosting your agents comes with many benefits:
@@ -20,7 +23,7 @@ Customer-Managed Agents allow you to self-host deployment agents bringing the sa
 
 <sup>1</sup> *Currently Linux and MacOS are supported*
 
-Customer-Managed Agents support all the [deployment triggers](/docs/pulumi-cloud/deployments/#deployment-triggers) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API.
+Customer-Managed Agents support all the [deployment triggers](/docs/platform/deployments/#deployment-triggers) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API.
 
 {{% notes "info" %}}
 Customer-Managed Agents is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Agents.
@@ -28,7 +31,7 @@ Customer-Managed Agents is available on the Business Critical edition of Pulumi 
 
 ## Using Customer-Managed Agents
 
-Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and updated the [source control settings](/docs/pulumi-cloud/deployments/get-started) of the stack you want to use Deployment agents. [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) is a requirement for running the agent.
+Before you begin, ensure you have installed the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and updated the [source control settings](/docs/platform/deployments/get-started) of the stack you want to use Deployment agents. [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) is a requirement for running the agent.
 
 1. Go to **Deployment runners** under Organization Settings
 2. Create a new pool. Ensure to copy and save the token

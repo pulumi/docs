@@ -4,12 +4,14 @@ meta_desc: Pull request environments that deploy application and infrastructure 
 title: "Review stacks"
 h1: "Review stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/review-stacks/
 menu:
-  cloud:
+  platform:
     name: Review stacks
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 70
-    identifier: pulumi-cloud-deployments-review-stacks
+    identifier: platform-deployments-review-stacks
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VvQcx51YL4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -22,12 +24,12 @@ Review stacks enable you to iterate on both application code changes and infrast
 
 ## Configuring Review Stacks
 
-Review Stacks are powered by Pulumi Deployments, and require that your stacks are configured with [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings). Review Stacks are configured at the branch level. If you utilize multiple branches for your development and release process, you will need to configure a Review Stack template for each one.
+Review Stacks are powered by Pulumi Deployments, and require that your stacks are configured with [Deployment Settings](/docs/platform/deployments/reference/#deployment-settings). Review Stacks are configured at the branch level. If you utilize multiple branches for your development and release process, you will need to configure a Review Stack template for each one.
 
 Configuring Review Stacks is a simple three-step process:
 
 1. Create a new stack, by convention named `pr`, and corresponding `Pulumi.pr.yaml` configuration file - this config will be copied into every review stack that gets created, and can even be modified within a PR.
-2. Configure [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings) for the stack - this specifies how to acquire source code, cloud credentials and more when deploying via Pulumi Deployments.
+2. Configure [Deployment Settings](/docs/platform/deployments/reference/#deployment-settings) for the stack - this specifies how to acquire source code, cloud credentials and more when deploying via Pulumi Deployments.
 3. Set the `pullRequestTemplate` Deployment Setting to true - this indicates that all pull requests against this stack’s branch should reference this stack as a Review Stack template.
 
 You can use an existing stack as a Review Stack template, as long as it has Deployment Settings configured. This will result in Review Stacks being deployed into the same cloud account. If you want to separate the cloud resources in your production stack from the resources created via Review Stacks then you can create a separate stack and template that references a different cloud account (AWS, Azure, GCP, etc).
@@ -42,7 +44,7 @@ It is just one click to turn on Review Stacks via the Pulumi Cloud console.
 
 ### REST API
 
-You can programmatically configure Review Stacks and Deployment Settings at scale across thousands of projects using the [Deployments REST API](/docs/pulumi-cloud/deployments/api/#patch-settings).
+You can programmatically configure Review Stacks and Deployment Settings at scale across thousands of projects using the [Deployments REST API](/docs/platform/deployments/api/#patch-settings).
 
 ```
 curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \

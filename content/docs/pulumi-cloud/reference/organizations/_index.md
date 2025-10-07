@@ -395,4 +395,4 @@ curl \
 
 ## Webhooks
 
-For comprehensive information about webhooks including setup, configuration, event filtering, and complete API reference, see the [Webhooks documentation](/docs/pulumi-cloud/webhooks/) and [Webhooks REST API reference](/docs/pulumi-cloud/reference/webhooks/).
+For comprehensive information about webhooks including setup, configuration, event filtering, and complete API reference, see the [Webhooks documentation](/docs/platform/webhooks/) and [Webhooks REST API reference](/docs/pulumi-cloud/reference/webhooks/).

@@ -5,12 +5,13 @@ title: Azure
 h1: Configuring OpenID Connect for Azure with Pulumi Deployments
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  platform:
     name: Azure
-    parent: pulumi-cloud-deployments-oidc
+    parent: platform-deployments-oidc
     weight: 2
-    identifier: pulumi-cloud-deployments-oidc-azure
+    identifier: platform-deployments-oidc-azure
 aliases:
+- /docs/pulumi-cloud/deployments/oidc/azure/
 - /docs/guides/oidc/provider/azure
 - /docs/intro/deployments/oidc/provider/azure/
 - /docs/pulumi-cloud/deployments/oidc/provider/azure/
@@ -20,7 +21,7 @@ aliases:
 ---
 
 {{% notes type="info" %}}
-There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/pulumi-cloud/deployments/cloud-credentials/).
+There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/platform/deployments/cloud-credentials/).
 {{% /notes %}}
 
 This document outlines the steps required to configure Pulumi Deployments to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via a Microsoft Entra App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by Pulumi Cloud.
@@ -90,7 +91,7 @@ To provide Pulumi services the ability to deploy, manage, and interact with Azur
 ## Configure OIDC in the Pulumi console
 
 {{% notes "info" %}}
-In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
+In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/platform/deployments/api/#patchsettings).
 {{% /notes %}}
 
 1. Navigate to your stack in the [Pulumi Console](https://app.pulumi.com/).

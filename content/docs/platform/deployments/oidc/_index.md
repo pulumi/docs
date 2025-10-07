@@ -5,11 +5,11 @@ title: OIDC Setup
 h1: OIDC Setup for Pulumi Deployments
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  platform:
     name: OIDC Setup
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 60
-    identifier: pulumi-cloud-deployments-oidc
+    identifier: platform-deployments-oidc
 aliases:
 - /docs/pulumi-cloud/oidc/
 - /docs/pulumi-cloud/access-management/oidc/
@@ -20,7 +20,7 @@ aliases:
 Pulumi Deployments supports OpenID Connect (OIDC) integration with popular cloud providers. In order for a Pulumi IaC operation like `update` or `preview` to work, the Pulumi CLI must be able to access credentials that will allow it to perform the necessary CRUD operations on the resources in your stack. Pulumi Deployments' OIDC integrations allow your your deployments to use dynamic, short-lived cloud credentials for supported clouds instead of static credentials which are less secure and difficult to rotate. This page explains how to set up OIDC for Pulumi Deployments to access resources in your cloud provider accounts.
 
 {{% notes type="info" %}}
-There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/pulumi-cloud/deployments/cloud-credentials/).
+There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/platform/deployments/cloud-credentials/).
 {{% /notes %}}
 
 ## Overview
@@ -29,7 +29,7 @@ Pulumi Deployments can act as an OIDC provider, issuing signed, short-lived toke
 
 Every time a deployment runs, Pulumi Cloud issues a new OIDC token specific to that run. The OIDC token is a short-lived, signed [JSON Web Token](https://jwt.io) that contains information about the deployment, and that can be exchanged for credentials from a cloud provider. For AWS, Azure, and Google Cloud, this credential exchange can be done automatically as part of the deployment setup.
 
-If you're looking for information about the permissions a deployment has within Pulumi Cloud itself (rather than cloud provider permissions), see the [Deployment Permissions documentation](/docs/pulumi-cloud/deployments/reference/#deployment-permissions).
+If you're looking for information about the permissions a deployment has within Pulumi Cloud itself (rather than cloud provider permissions), see the [Deployment Permissions documentation](/docs/platform/deployments/reference/#deployment-permissions).
 
 {{% notes type="info" %}}
 Pulumi Cloud can also act as an OIDC client, accepting tokens from trusted identity providers. This is a separate feature from the Deployments OIDC integration and is documented in the [OIDC Client documentation](/docs/pulumi-cloud/access-management/oidc/client/).
@@ -80,6 +80,6 @@ The Subject and custom claims are particularly useful for configuring trust rela
 
 To configure OIDC for your cloud provider with Pulumi Deployments, refer to one of these guides:
 
-* [Configure OpenID Connect for AWS with Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/provider/aws/)
-* [Configure OpenID Connect for Azure with Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/provider/azure/)
-* [Configure OpenID Connect for Google Cloud with Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/provider/gcp/)
+* [Configure OpenID Connect for AWS with Pulumi Deployments](/docs/platform/deployments/oidc/provider/aws/)
+* [Configure OpenID Connect for Azure with Pulumi Deployments](/docs/platform/deployments/oidc/provider/azure/)
+* [Configure OpenID Connect for Google Cloud with Pulumi Deployments](/docs/platform/deployments/oidc/provider/gcp/)

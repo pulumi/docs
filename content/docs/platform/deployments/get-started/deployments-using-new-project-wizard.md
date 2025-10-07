@@ -3,12 +3,14 @@ title: Use Pulumi Deployments with the New Project Wizard
 title_tag: Use Pulumi Deployments with the New Project Wizard
 meta_desc: Learn how to use Pulumi Deployments with the New Project Wizard
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/get-started/deployments-using-new-project-wizard/
 menu:
-  cloud:
+  platform:
     name: New Project Wizard
-    parent: pulumi-cloud-deployments-get-started
+    parent: platform-deployments-get-started
     weight: 1
-    identifier: pulumi-cloud-deployments-get-started-npw
+    identifier: platform-deployments-get-started-npw
 ---
 
 This guide describes how to start using Pulumi Deployments with a new Pulumi IaC project created via the Pulumi Cloud [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/).
@@ -35,7 +37,7 @@ If you select "Use a template" but your organization doesn't have custom templat
 On the next screen, select "Pulumi Deployments" as your deployment method.
 
 {{% notes "info" %}}
-You may need to [install the Pulumi GitHub app](/docs/pulumi-cloud/deployments/reference/#github-app-installation) if you haven't already.
+You may need to [install the Pulumi GitHub app](/docs/platform/deployments/reference/#github-app-installation) if you haven't already.
 {{% /notes %}}
 
 You'll now be prompted to enter some information about the project you're about to create.
@@ -74,7 +76,7 @@ The GitHub owner is not configurable, as that must match the Pulumi GitHub app's
 
 After you've configured your project settings, you will be able to configure the behavior of Deployments, including when to trigger new Deployments and environment variables to include with your updates.
 
-A full description of each setting is available in [Pulumi Deployment Settings](/docs/pulumi-cloud/deployments/using/settings).
+A full description of each setting is available in [Pulumi Deployment Settings](/docs/platform/deployments/using/settings).
 
 After you've configured everything, you should see a new Deployment of your project.
 

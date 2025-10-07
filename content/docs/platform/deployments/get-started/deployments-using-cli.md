@@ -3,12 +3,14 @@ title: Use Pulumi Deployments with the Pulumi and GitHub CLIs
 title_tag: Use Pulumi Deployments with the Pulumi and GitHub CLIs
 meta_desc: Learn how to use Pulumi Deployments the Pulumi and GitHub CLIs
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/get-started/deployments-using-cli/
 menu:
-  cloud:
+  platform:
     name: Pulumi and GitHub CLIs
-    parent: pulumi-cloud-deployments-get-started
+    parent: platform-deployments-get-started
     weight: 1
-    identifier: pulumi-cloud-deployments-get-started-cli
+    identifier: platform-deployments-get-started-cli
 ---
 
 ## Creating a new project manually
@@ -17,7 +19,7 @@ This walk-through shows you how to create a new project using `pulumi new`, uplo
 
 ### Prerequisites
 
-Before you start, see the GitHub app [installation instructions](/docs/pulumi-cloud/deployments/reference/#github-app-installation) to configure your Pulumi organization to work seamlessly with Deployments.
+Before you start, see the GitHub app [installation instructions](/docs/platform/deployments/reference/#github-app-installation) to configure your Pulumi organization to work seamlessly with Deployments.
 
 You will need the following tools to complete this tutorial:
 
@@ -151,9 +153,9 @@ Alternatively, you can navigate to `https://app.pulumi.com`, select `Stacks` in 
 
 * Now configure settings specific to your Deployment, such as:
   * [OIDC Connect](/docs/pulumi-cloud/oidc/)
-  * [Environment Variables](/docs/pulumi-cloud/deployments/reference/#environment-variables)
+  * [Environment Variables](/docs/platform/deployments/reference/#environment-variables)
 
-See [Pulumi Deployment Settings](/docs/pulumi-cloud/deployments/using/settings) for more information about all of the available settings.
+See [Pulumi Deployment Settings](/docs/platform/deployments/using/settings) for more information about all of the available settings.
 
 Finally, click the `Save deployment configuration` button to save our settings, and click the "Deploy" button in the top right to trigger a deployment.
 

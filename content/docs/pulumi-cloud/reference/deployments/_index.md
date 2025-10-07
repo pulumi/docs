@@ -7,8 +7,8 @@ menu:
         parent: pulumi-cloud-reference
         weight: 4.5
 aliases:
-  - /docs/pulumi-cloud/deployments/api
-  - /docs/pulumi-cloud/deployments/api/
+  - /docs/platform/deployments/api
+  - /docs/platform/deployments/api/
   - /docs/reference/deployments-rest-api
   - /docs/reference/deployments-rest-api/
   - /docs/intro/deployments/api

@@ -4,12 +4,14 @@ meta_desc: Set a time-to-live on a stack, automatically destroying it when the o
 title: "Time-to-live stacks"
 h1: "Time-to-live stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/ttl/
 menu:
-  cloud:
+  platform:
     name: Time-to-live stacks
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 80
-    identifier: pulumi-cloud-deployments-ttl
+    identifier: platform-deployments-ttl
 ---
 
 Time-to-live (TTL) Stacks in enable the automated management of a stack's lifecycle by specifying a date and time after which the stack is automatically torn down. TTL stacks allow platform teams to control costs, improve security posture, and reduce operational overhead by ensuring temporary or ephemeral cloud resources (like development environments) are automatically de-provisioned.
@@ -20,7 +22,7 @@ Time-to-live (TTL) Stacks in enable the automated management of a stack's lifecy
 
 In order to set up Time-to-Live Stacks in the Pulumi Cloud console, follow these steps:
 
-1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/pulumi-cloud/deployments/reference)
+1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/platform/deployments/reference)
 2. Navigate to the Stack > Settings > Schedules
 3. Select "Time-to-Live"
 4. (Optional) Turn on "Delete After Destroy" if applicable

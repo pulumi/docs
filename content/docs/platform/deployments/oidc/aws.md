@@ -5,12 +5,13 @@ title: AWS
 h1: Configuring OpenID Connect for AWS with Pulumi Deployments
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  platform:
     name: AWS
-    parent: pulumi-cloud-deployments-oidc
+    parent: platform-deployments-oidc
     weight: 1
-    identifier: pulumi-cloud-deployments-oidc-aws
+    identifier: platform-deployments-oidc-aws
 aliases:
+- /docs/pulumi-cloud/deployments/oidc/aws/
 - /docs/guides/oidc/provider/aws
 - /docs/intro/deployments/oidc/provider/aws/
 - /docs/pulumi-cloud/deployments/oidc/provider/aws/
@@ -20,7 +21,7 @@ aliases:
 ---
 
 {{% notes type="info" %}}
-There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/pulumi-cloud/deployments/cloud-credentials/).
+There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/platform/deployments/cloud-credentials/).
 {{% /notes %}}
 
 This document outlines the steps required to configure Pulumi Deployments to use OpenID Connect to authenticate with AWS. OIDC in AWS uses a web identity provider to assume an IAM role. Access to the IAM role is authorized using a trust policy that validates the contents of the OIDC token issued by Pulumi Cloud.
@@ -54,7 +55,7 @@ Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your 
 
 ### Restricting role assumption to Pulumi Cloud scopes
 
-For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/pulumi-cloud/deployments/oidc/#custom-claims). The subject (`sub`) claim can be customized to allow a role to be assumed via OIDC only for specific projects or stacks.
+For more granular access control, edit the trust policy of your IAM role with [Token claims](/docs/platform/deployments/oidc/#custom-claims). The subject (`sub`) claim can be customized to allow a role to be assumed via OIDC only for specific projects or stacks.
 
 The following IAM policy snippet for role assumption restricts role assumption to any stack within the `Core` project of the `contoso` organization:
 
@@ -72,7 +73,7 @@ The following IAM policy snippet for role assumption restricts role assumption t
 ## Configure OIDC via the Pulumi console
 
 {{% notes "info" %}}
-In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/pulumi-cloud/deployments/api/#patchsettings).
+In addition to the Pulumi Console, deployment settings including OIDC can be configured for a stack using the [pulumiservice.DeploymentSettings](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or via the [REST API](/docs/platform/deployments/api/#patchsettings).
 {{% /notes %}}
 
 1. Navigate to your stack in the Pulumi Console.

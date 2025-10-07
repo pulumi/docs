@@ -5,12 +5,13 @@ title: "Projects & stacks"
 h1: "Projects & stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  platform:
     name: "Projects & stacks"
-    parent: cloud-home
-    weight: 2
-    identifier: pulumi-cloud-projects-and-stacks
+    parent: platform-home
+    weight: 30
+    identifier: platform-projects-and-stacks
 aliases:
+- /docs/pulumi-cloud/projects-and-stacks/
 - /docs/intro/console/project-and-stack-management/
 - /docs/reference/service/roles-and-access-controls/
 - /docs/console/collaboration/stack-permissions/

@@ -5,12 +5,13 @@ title: "Using Deployments"
 h1: "Using Pulumi Deployments"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  platform:
     name: Using Deployments
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 20
-    identifier: pulumi-cloud-deployments-using
+    identifier: platform-deployments-using
 aliases:
+- /docs/pulumi-cloud/deployments/using/
   - /docs/intro/deployments/reference/
   - /docs/pulumi-cloud/deployments/reference/
   - /docs/pulumi-cloud/deployments/using-deployments/
@@ -31,7 +32,7 @@ Pulumi Deployments are configured on a per-stack basis. To use Deployments effec
    - [Review stacks](../review-stacks) for temporary environments on PRs
    - [TTL stacks](../ttl) for ephemeral environments
    - [Post-deployment automation](./post-automation) to create webhooks to trigger additional actions, like updating additional stacks
-   - [Webhooks](/docs/pulumi-cloud/webhooks/#deployment-webhooks) for custom automation
+   - [Webhooks](/docs/platform/webhooks/#deployment-webhooks) for custom automation
 
 ## Automating at Scale
 

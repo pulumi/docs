@@ -5,12 +5,13 @@ title: "Vs. Traditional CI/CD"
 h1: "Pulumi Deployments vs. Traditional CI/CD"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  platform:
     name: Vs. Traditional CI/CD
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 110
-    identifier: pulumi-cloud-deployments-versus
+    identifier: platform-deployments-versus
 aliases:
+- /docs/pulumi-cloud/deployments/versus/
   - /docs/intro/deployments/versus/
 ---
 

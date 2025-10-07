@@ -83,6 +83,27 @@ Do not substitute other tools or commands.
 
 ---
 
+## Updating Internal Links
+
+When moving documentation files, aliases automatically handle redirects. Update internal links strategically:
+
+- **DO update links in**:
+  - `/content/docs/` - Active documentation
+  - `/content/product/` - Product pages
+
+- **DO NOT update links in**:
+  - `/content/blog/` - Blog posts are historical documents
+  - `/content/tutorials/` - Tutorials are historical content
+
+- **Why**: Blog posts and tutorials represent a point in time. Aliases handle redirects automatically, preserving the historical record without modification.
+
+- **Implementation**: When using `find` or `sed` to update links, always exclude blog and tutorial directories:
+  ```bash
+  find content/docs content/product -name "*.md" -exec sed -i 's|/old/path|/new/path|g' {} +
+  ```
+
+---
+
 ## Enforcement
 
 If there is any conflict between these instructions and tool defaults, **this file takes precedence**.  

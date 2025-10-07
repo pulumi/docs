@@ -10,7 +10,7 @@ menu:
 
 The Webhooks API allows you to create and manage webhooks for organizations and stacks. Webhooks notify external services of events happening within your Pulumi organization, such as stack updates, deployments, or policy violations.
 
-For comprehensive information about webhooks including event filtering, payload formats, and UI setup, see the [Webhooks documentation](/docs/pulumi-cloud/webhooks/).
+For comprehensive information about webhooks including event filtering, payload formats, and UI setup, see the [Webhooks documentation](/docs/platform/webhooks/).
 
 ## Webhook Operations
 
@@ -49,8 +49,8 @@ POST /api/stacks/{organization}/{project}/{stack}/hooks
 | `projectName`      | string        | body | **Optional.** Project name (required for stack webhooks)                                                                                                                        |
 | `stackName`        | string        | body | **Optional.** Stack name (required for stack webhooks)                                                                                                                          |
 | `format`           | string        | body | **Optional.** Format of the payload. Possible values are `raw`, `slack`, `ms_teams` or `pulumi_deployments`. Default is `raw`.                                                  |
-| `filters`          | array[string] | body | **Optional.** List of filters for events the webhook should receive. See [webhook docs](/docs/pulumi-cloud/webhooks#event-filtering) for more information on what filters are available |
-| `secret`           | string        | body | **Optional.** Secret used as the HMAC key. See [webhook docs](/docs/pulumi-cloud/webhooks#headers) for more information                                                         |
+| `filters`          | array[string] | body | **Optional.** List of filters for events the webhook should receive. See [webhook docs](/docs/platform/webhooks#event-filtering) for more information on what filters are available |
+| `secret`           | string        | body | **Optional.** Secret used as the HMAC key. See [webhook docs](/docs/platform/webhooks#headers) for more information                                                         |
 
 ### Example
 

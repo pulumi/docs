@@ -4,9 +4,11 @@ meta_desc: Learn how to configure and use Deployment Triggers for Pulumi Deploym
 title: "Deployment Triggers"
 h1: "Deployment Triggers"
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/using/triggers/
 menu:
-  cloud:
-    parent: pulumi-cloud-deployments-using
+  platform:
+    parent: platform-deployments-using
     weight: 2
 ---
 
@@ -55,17 +57,17 @@ GitHub Push to Deploy can also be configured to run a `pulumi update` for a stac
 
 ## Scheduled Deployments
 
-[Scheduled Deployments](/docs/pulumi-cloud/deployments/schedules) allow you to define Pulumi Deployments operations that you want to occur on a regular basis. For example, you may want to schedule a nightly deployment for a shared QA environment.
+[Scheduled Deployments](/docs/platform/deployments/schedules) allow you to define Pulumi Deployments operations that you want to occur on a regular basis. For example, you may want to schedule a nightly deployment for a shared QA environment.
 
-[Drift Detection](/docs/pulumi-cloud/deployments/drift) is a specialized case of a Scheduled Deployment that allows you to ensure that your declared state in your Pulumi program has not diverged from the actual state of your resources.
+[Drift Detection](/docs/platform/deployments/drift) is a specialized case of a Scheduled Deployment that allows you to ensure that your declared state in your Pulumi program has not diverged from the actual state of your resources.
 
 ## TTL Stacks
 
-[TTL (Time to Live) Stacks](/docs/pulumi-cloud/deployments/ttl) are temporary stacks that are automatically destroyed after a specified period of time. TTL Stacks are useful for controlling cloud costs and improving security posture by ensuring resources are torn down once they are no longer needed.
+[TTL (Time to Live) Stacks](/docs/platform/deployments/ttl) are temporary stacks that are automatically destroyed after a specified period of time. TTL Stacks are useful for controlling cloud costs and improving security posture by ensuring resources are torn down once they are no longer needed.
 
 ## Review Stacks
 
-[Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) are dedicated cloud environments that get created automatically every time a pull request is opened. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and the Pulumi GitHub App will add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
+[Review Stacks](/docs/platform/deployments/review-stacks) are dedicated cloud environments that get created automatically every time a pull request is opened. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and the Pulumi GitHub App will add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
 
 ![Review Stack Pull Request Comment](../../comment.png)
 
@@ -77,7 +79,7 @@ For more information, see [Create Deployment](/docs/pulumi-cloud/reference/deplo
 
 ## Deployment Webhooks
 
-[Deployment Webhooks](/docs/pulumi-cloud/webhooks/#deployment-webhooks) allow you to trigger Deployments on other stacks when a given event or occurs. Common use cases include:
+[Deployment Webhooks](/docs/platform/webhooks/#deployment-webhooks) allow you to trigger Deployments on other stacks when a given event or occurs. Common use cases include:
 
 - Update a dependent stack when an upstream stack (e.g. one that is referenced via a Stack Reference) changes.
 - Update a higher environment (e.g. staging) when a lower environment (e.g. QA) successfully updates.

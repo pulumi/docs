@@ -4,12 +4,14 @@ title_tag: "Schedules"
 h1: "Schedules"
 meta_desc: Schedule any Pulumi operation to occur at any time.
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/schedules/
 menu:
-  cloud:
+  platform:
     name: Schedules
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 90
-    identifier: pulumi-cloud-deployments-schedules
+    identifier: platform-deployments-schedules
 ---
 
 Scheduled Deployments in Pulumi Cloud introduce a robust capability to automate cloud operations, enabling more control over when and how infrastructure updates are applied. This feature is ideal for teams looking to enhance operational efficiency by automating routine tasks and ensuring that changes are made during optimal times, such as off-peak hours or predetermined maintenance windows.
@@ -21,7 +23,7 @@ Users can easily define schedules for any stack with Pulumi Deployments configur
 In order to set up a deployment schedule in the Pulumi Cloud console, follow these steps:
 
 <!-- markdownlint-disable ol-prefix -->
-1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/pulumi-cloud/deployments/reference)
+1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/platform/deployments/reference)
 2. Navigate to the Stack > Settings > Schedules
 
 ![Schedule](../schedule.png)
@@ -55,7 +57,7 @@ curl \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/schedules
 ```
 
-Refer to the [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api) for more details on how to use the REST API to manage Scheduled Deployments.
+Refer to the [Pulumi Deployments REST API documentation](/docs/platform/deployments/api) for more details on how to use the REST API to manage Scheduled Deployments.
 
 ### Pulumi Cloud Service provider
 

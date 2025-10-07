@@ -4,17 +4,19 @@ meta_desc: This page explains the options for supplying cloud credentials to a P
 title: Supplying Cloud Credentials to Pulumi Deployments
 h1: Supplying Cloud Credentials to Pulumi Deployments
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/cloud-credentials/
 menu:
-  cloud:
+  platform:
     name: Cloud Credentials
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 30
-    identifier: pulumi-cloud-deployments-cloud-credentials
+    identifier: platform-deployments-cloud-credentials
 ---
 
 In order for a Pulumi IaC operation like `update` or `preview` work, the Pulumi CLI must be able to access credentials that will allow it to perform the necessary CRUD operations on the resources in your stack. In order for Pulumi Deployments to access the necessary cloud credentials to run your Pulumi operation there are two common approaches you can take:
 
-1. **Use [Pulumi Deployments' OIDC integration](/docs/pulumi-cloud/deployments/oidc/)** where possible (we support [AWS](/docs/pulumi-cloud/deployments/oidc/aws/), [Azure](/docs/pulumi-cloud/deployments/oidc/azure/), and [Google Cloud](/docs/pulumi-cloud/deployments/oidc/gcp/)), and store any remaining required secrets or configuration in [Pulumi Deployments Environment Variables](/docs/pulumi-cloud/deployments/reference/#deployment-settings).
+1. **Use [Pulumi Deployments' OIDC integration](/docs/platform/deployments/oidc/)** where possible (we support [AWS](/docs/platform/deployments/oidc/aws/), [Azure](/docs/platform/deployments/oidc/azure/), and [Google Cloud](/docs/platform/deployments/oidc/gcp/)), and store any remaining required secrets or configuration in [Pulumi Deployments Environment Variables](/docs/platform/deployments/reference/#deployment-settings).
 2. **Use [Pulumi ESC](/docs/esc/)** to define an Environment (or Environments), and [import the environment(s) into your stack](/docs/esc/get-started/integrate-with-pulumi-iac/).
 
 ## Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC
@@ -43,9 +45,9 @@ pulumi env run my-esc-project/my-esc-environment -- npm install
 Both Pulumi Deployments OIDC and Pulumi ESC require configuring an OIDC Identity Provider in your cloud environment in order to enable the secure exchange of tokens between Pulumi Cloud and your cloud provider in order to obtain temporary credentials. For more information:
 
 - If using Pulumi ESC, see [Configuring OpenID Connect for Pulumi ESC](/docs/esc/environments/configuring-oidc/).
-- If using Pulumi Deployments OIDC, see [OIDC Setup for Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/).
+- If using Pulumi Deployments OIDC, see [OIDC Setup for Pulumi Deployments](/docs/platform/deployments/oidc/).
 
 After an OIDC Identity Provider has been configured:
 
-- If you are using Pulumi ESC, ensure that your Pulumi Deployments token has permissions to open any imported Pulumi ESC Environments. For more information, see [Deployment Permissions](/docs/pulumi-cloud/deployments/reference/#deployment-permissions)
-- If you are using Pulumi Deployments OIDC, set up your [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings) for your stack to use your OIDC configuration.
+- If you are using Pulumi ESC, ensure that your Pulumi Deployments token has permissions to open any imported Pulumi ESC Environments. For more information, see [Deployment Permissions](/docs/platform/deployments/reference/#deployment-permissions)
+- If you are using Pulumi Deployments OIDC, set up your [Deployment Settings](/docs/platform/deployments/reference/#deployment-settings) for your stack to use your OIDC configuration.

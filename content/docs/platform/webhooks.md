@@ -5,12 +5,13 @@ title: "Webhooks"
 h1: Pulumi Cloud Webhooks
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  platform:
     name: Webhooks
-    parent: cloud-home
-    weight: 6
-    identifier: pulumi-cloud-webhooks
+    parent: platform-home
+    weight: 20
+    identifier: platform-webhooks
 aliases:
+- /docs/pulumi-cloud/webhooks/
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/
 - /docs/intro/console/extensions/webhooks/
@@ -217,9 +218,9 @@ and optionally choosing which events you want delivered using [event groups and 
 
 ### Deployment Webhooks
 
-The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/pulumi-cloud/deployments/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
+The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/platform/deployments/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
 
-Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings).
+Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/platform/deployments/reference/#deployment-settings).
 
 ### Generic JSON Webhooks
 

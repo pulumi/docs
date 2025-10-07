@@ -4,9 +4,11 @@ meta_desc: Learn how to configure and manage permissions for Pulumi Deployments
 title: "Deployment Permissions"
 h1: "Deployment Permissions"
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/permissions/
 menu:
-  cloud:
-    parent: pulumi-cloud-deployments
+  platform:
+    parent: platform-deployments
     weight: 35
 ---
 

@@ -32,17 +32,17 @@ Pulumi Cloud has a rich set of features around identity, authentication, organiz
 
 * [Organizations](/docs/pulumi-cloud/organizations/) and [Accounts](/docs/pulumi-cloud/accounts/)
 * [Teams](/docs/pulumi-cloud/access-management/teams/) and [Roles](/docs/pulumi-cloud/organizations/#organization-roles) Management
-* [Project and Stack Management](/docs/pulumi-cloud/projects-and-stacks/)
+* [Project and Stack Management](/docs/platform/projects-and-stacks/)
 * [SAML](/docs/pulumi-cloud/access-management/saml/) and [OIDC](/docs/pulumi-cloud/oidc/) Integrations
 
 ### Hosted Deployments service and CI/CD integrations
 
-Pulumi Cloud offers a flexible and convenient [hosted deployment service](/docs/pulumi-cloud/deployments/). Pulumi Cloud can also integrate with your current continuous delivery pipeline, and provides tools to build your own extensions, and create reusable templates.
+Pulumi Cloud offers a flexible and convenient [hosted deployment service](/docs/platform/deployments/). Pulumi Cloud can also integrate with your current continuous delivery pipeline, and provides tools to build your own extensions, and create reusable templates.
 
-* [Pulumi Deployments](/docs/pulumi-cloud/deployments/)
-* [Continuous Delivery](/docs/using-pulumi/continuous-delivery/) and the [CI/CD Integration Assistant](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/)
+* [Pulumi Deployments](/docs/platform/deployments/)
+* [Continuous Delivery](/docs/using-pulumi/continuous-delivery/) and the [CI/CD Integration Assistant](/docs/platform/deployments/ci-cd-integration-assistant/)
 * [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
-* [Webhooks](/docs/pulumi-cloud/webhooks/)
+* [Webhooks](/docs/platform/webhooks/)
 
 ### Pulumi ESC Integration
 

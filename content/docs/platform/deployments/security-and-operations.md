@@ -5,19 +5,20 @@ title: Security and operations
 h1: Pulumi Deployments Security and Operations
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  platform:
     name: Security and operations
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 100
-    identifier: pulumi-cloud-deployments-security-operations
+    identifier: platform-deployments-security-operations
 aliases:
+- /docs/pulumi-cloud/deployments/security-and-operations/
   - /docs/intro/deployments/faq/
   - /docs/pulumi-cloud/deployments/faq/
 ---
 
 ## Security and Isolation
 
-Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. In addition, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. It is also possible to use [self-hosted runners](/docs/pulumi-cloud/deployments/customer-managed-agents/) if you require additional isolation.
+Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. In addition, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. It is also possible to use [self-hosted runners](/docs/platform/deployments/customer-managed-agents/) if you require additional isolation.
 
 ## Deployment queue
 

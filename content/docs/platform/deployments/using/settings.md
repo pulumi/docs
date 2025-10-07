@@ -4,9 +4,11 @@ meta_desc: Learn how to configure Deployment Settings for Pulumi Deployments
 title: "Deployments Settings"
 h1: "Pulumi Deployment Settings"
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/using/settings/
 menu:
-  cloud:
-    parent: pulumi-cloud-deployments-using
+  platform:
+    parent: platform-deployments-using
     weight: 1
 ---
 
@@ -133,17 +135,17 @@ Additionally, we only support static credentials in custom executor images.
 Pulumi Deployments supports OIDC for authenticating with cloud providers. This enables your deployments to access your cloud resources without storing static credentials in Pulumi Cloud.
 
 {{% notes type="info" %}}
-There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/pulumi-cloud/deployments/cloud-credentials/).
+There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/platform/deployments/cloud-credentials/).
 {{% /notes %}}
 
-For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/pulumi-cloud/deployments/oidc/).
+For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/platform/deployments/oidc/).
 
 ## Dependency Caching
 
 When using Pulumi-managed deployment agents, you have the option to speed up deployments using dependency caching.
 
 {{% notes type="info" %}}
-If you have configured the stack to use a [Customer-managed agent](/docs/pulumi-cloud/deployments/customer-managed-agents/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
+If you have configured the stack to use a [Customer-managed agent](/docs/platform/deployments/customer-managed-agents/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
 {{% /notes %}}
 
 The caching method is simple: during the first deployment, the deployment agent will automatically detect downloaded dependencies using lock files, zip them up and store the archive in blob storage. During all subsequent deployments, agents will pull such an archive down and unpack it, saving time it would normally take to download those dependencies. When your dependencies change, deployment agents will automatically invalidate the old cache and create a new one.

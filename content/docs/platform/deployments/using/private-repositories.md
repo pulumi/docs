@@ -4,9 +4,11 @@ meta_desc: Learn how to configure Pulumi Deployments to access private Git repos
 title: "Private Git Repositories"
 h1: "Private Git Repositories"
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/using/private-repositories/
 menu:
-  cloud:
-    parent: pulumi-cloud-deployments-using
+  platform:
+    parent: platform-deployments-using
     weight: 3
 ---
 

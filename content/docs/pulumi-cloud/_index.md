@@ -54,9 +54,9 @@ sections:
     secondary_button_link: /docs/iac/packages-and-automation/crossguard/core-concepts/
   - heading: Pulumi Deployments
     description: Automate deployment and operational workflows for cloud infrastructure
-    link: /docs/pulumi-cloud/deployments/
+    link: /docs/platform/deployments/
     primary_button_label: Get Started
-    primary_button_link: /docs/pulumi-cloud/deployments/get-started/
+    primary_button_link: /docs/platform/deployments/get-started/
     secondary_button_label: Learn More
-    secondary_button_link: /docs/pulumi-cloud/deployments/reference/
+    secondary_button_link: /docs/platform/deployments/reference/
 ---

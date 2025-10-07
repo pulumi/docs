@@ -5,12 +5,13 @@ title: "CI/CD assistant"
 h1: "CI/CD integration assistant"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  cloud:
+  platform:
     name: CI/CD assistant
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 120
-    identifier: pulumi-cloud-deployments-ci-cd-integration-assistant
+    identifier: platform-deployments-ci-cd-integration-assistant
 aliases:
+- /docs/pulumi-cloud/deployments/ci-cd-integration-assistant/
 - /docs/intro/console/extensions/
 - /docs/intro/console/extensions/ci-cd-integration-assistant/
 - /docs/intro/console/ci-cd-integration-assistant/

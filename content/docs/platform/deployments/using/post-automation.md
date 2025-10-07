@@ -4,9 +4,11 @@ meta_desc: Learn how to configure post-deployment automation with Pulumi Deploym
 title: "Post-Deployment Automation"
 h1: "Post-Deployment Automation"
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/using/post-automation/
 menu:
-  cloud:
-    parent: pulumi-cloud-deployments-using
+  platform:
+    parent: platform-deployments-using
     weight: 4
 ---
 
@@ -16,14 +18,14 @@ After a deployment completes successfully, you may want to trigger additional ac
 
 Pulumi Deployments can be used to automatically deploy dependent stacks via Deployment Webhooks. This enables you to keep your infrastructure up-to-date across stack reference boundaries. This can be configured in one of two ways:
 
-1. [Deployment Webhook Destinations](/docs/pulumi-cloud/webhooks/#deployment-webhooks)
+1. [Deployment Webhook Destinations](/docs/platform/webhooks/#deployment-webhooks)
 2. [The Pulumi Auto Deploy Package](/registry/packages/auto-deploy)
 
-Either method requires that your stacks are configured with [Deployment Settings](/docs/pulumi-cloud/deployments/using/settings/).
+Either method requires that your stacks are configured with [Deployment Settings](/docs/platform/deployments/using/settings/).
 
 ### Deployment Webhook Destinations
 
-[Deployment Webhook Destinations](/docs/pulumi-cloud/webhooks/#deployment-webhooks) allow you to pick one or more event types on a stack (i.e. `update succeeded`, or `refresh failed`) and automatically deliver an event to a destination - in this case the Create Deployment API for another Stack.
+[Deployment Webhook Destinations](/docs/platform/webhooks/#deployment-webhooks) allow you to pick one or more event types on a stack (i.e. `update succeeded`, or `refresh failed`) and automatically deliver an event to a destination - in this case the Create Deployment API for another Stack.
 
 {{< chooser language "typescript,python,go,csharp,yaml" >}}
 

@@ -4,12 +4,14 @@ title_tag: "Drift detection"
 h1: "Drift detection"
 meta_desc: Track changes in your cloud infrastructure compared to your Pulumi state.
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+- /docs/pulumi-cloud/deployments/drift/
 menu:
-  cloud:
+  platform:
     name: Drift detection
-    parent: pulumi-cloud-deployments
+    parent: platform-deployments
     weight: 50
-    identifier: pulumi-cloud-deployments-drift
+    identifier: platform-deployments-drift
 ---
 
 Drift detection is the process of identifying changes in the actual state of your cloud environment that deviate from the expected state stored in Pulumi Cloud. This deviation can occur for various reasons, including manual adjustments made directly in the cloud provider’s console, unintended consequences of scripts, or unauthorized changes.
@@ -45,7 +47,7 @@ Regardless of how a drift run is initiated, all results will appear in this tab.
 In order to set up Drift Detection and Remediation in the Pulumi Cloud console, follow these steps:
 
 <!-- markdownlint-disable ol-prefix -->
-1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/pulumi-cloud/deployments/reference)
+1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/platform/deployments/reference)
 2. Navigate to the Stack > Settings > Schedules
 
 ![Schedule](../schedule.png)
@@ -86,7 +88,7 @@ For those who prefer to automate and script their infrastructure tasks, Drift De
 * Pause or resume a drift schedule
 * List all schedules (includes raw Pulumi operations and Time-to-Live schedules)
 
-Below is an example of setting up Drift Detection and Remediation on a stack, see the [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api) for more details on how to set Drift Detection and Remediation up programmatically.
+Below is an example of setting up Drift Detection and Remediation on a stack, see the [Pulumi Deployments REST API documentation](/docs/platform/deployments/api) for more details on how to set Drift Detection and Remediation up programmatically.
 
 **Create a Drift Detection and Remediation schedule:**
 
