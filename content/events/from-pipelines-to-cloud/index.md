@@ -38,7 +38,7 @@ main:
     youtube_url: 
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2025-11-04T12:00:00-01:00
+    sortable_date: 2025-11-04T11:00:00-06:00
 
     # Duration of the webinar.
     duration: 60 minutes
@@ -79,8 +79,8 @@ form:
 
 event_data:
   name: "From Pipelines to Cloud: Master IaC with Azure DevOps"
-  start_date: 2025-11-04T12:00:00
-  end_date: 2025-11-04T13:00:00
+  start_date: 2025-11-04T11:00:00
+  end_date: 2025-11-04T12:00:00
   url: "https://www.pulumi.com/resources/from-pipelines-to-cloud/"
   description: |
         Get hands-on experience automating Azure infrastructure directly from Azure DevOps pipelines.  
