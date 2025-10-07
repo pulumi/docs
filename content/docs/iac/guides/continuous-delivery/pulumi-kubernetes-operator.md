@@ -155,7 +155,7 @@ Use `spec.envRefs` to attach credentials and to set environment variables for th
 
 See ["States & Backends"][states-backends] for more information.
 
-[tokens]: https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/
+[tokens]: https://www.pulumi.com/docs/administration/access-identity/access-tokens/
 [states-backends]: https://www.pulumi.com/docs/iac/concepts/state-and-backends/
 
 ## Create a Stack Resource

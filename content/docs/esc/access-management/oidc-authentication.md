@@ -13,4 +13,4 @@ menu:
 
 Pulumi supports secure authentication by integrating with trusted external identity providers using OpenID Connect (OIDC). When configured as an OIDC client, Pulumi establishes a trust relationship with third-party providers such as Google, AWS or GitHub to accept and validate their issued OIDC tokens. After validation, these tokens are exchanged for short-lived Pulumi access tokens, which removes the need for hardcoded credentials.
 
-To integrate Pulumi with a third-party identity provider, see the detailed [OIDC Client documentation](/docs/pulumi-cloud/access-management/oidc/client/).
+To integrate Pulumi with a third-party identity provider, see the detailed [OIDC Client documentation](/docs/administration/access-identity/oidc/client/).

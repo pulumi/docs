@@ -21,7 +21,7 @@ This guide walks through setting up automated testing and publishing workflows t
 - A Pulumi component authored and working locally (see [Build a Component](/docs/iac/using-pulumi/build-a-component))
 - A [GitHub repository](https://github.com/pulumi/pulumi-component-lifecycle-example) containing your component code
 - Access to a [Pulumi Cloud private registry](/docs/idp/get-started/private-registry)
-- Configure Pulumi and GitHub integrations: [OIDC](/docs/pulumi-cloud/access-management/oidc-client/github/), [GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/), etc.
+- Configure Pulumi and GitHub integrations: [OIDC](/docs/administration/access-identity/oidc-client/github/), [GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/), etc.
 - Component [documentation](https://github.com/pulumi/pulumi-component-lifecycle-example#static-page-component) written and committed to your repository
 
 ## Development Workflow Overview
@@ -299,7 +299,7 @@ In this workflow, we use some [Pulumi-specific GitHub Actions](/docs/iac/using-p
 For the integration tests:
 
 - [`actions/checkout`](https://github.com/actions/checkout) - check out the code into the Github runner
-- [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) - authenticate with Pulumi Cloud (make sure to [setup GitHub OIDC](/docs/pulumi-cloud/access-management/oidc-client/github/))
+- [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) - authenticate with Pulumi Cloud (make sure to [setup GitHub OIDC](/docs/administration/access-identity/oidc-client/github/))
 - [`aws-actions/configure-aws-credentials`](https://github.com/aws-actions/configure-aws-credentials) - set up AWS credentials
 - [`pulumi/actions`](https://github.com/pulumi/actions) - Run a Pulumi command, in this case, `pulumi preview`
 

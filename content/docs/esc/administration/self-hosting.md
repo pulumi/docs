@@ -30,4 +30,4 @@ Self-hosting Pulumi ESC means your organization is responsible for deploying, ma
 
 ## Self-hosting documentation
 
-See the [Self-hosting Pulumi ESC](/docs/pulumi-cloud/admin/self-hosted/) documentation for complete deployment instructions, maintenance guidelines, and upgrade procedures.
+See the [Self-hosting Pulumi ESC](/docs/administration/self-hosting/pulumi-cloud/) documentation for complete deployment instructions, maintenance guidelines, and upgrade procedures.

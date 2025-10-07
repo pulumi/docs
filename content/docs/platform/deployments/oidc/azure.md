@@ -17,7 +17,7 @@ aliases:
 - /docs/pulumi-cloud/deployments/oidc/provider/azure/
 - /docs/pulumi-cloud/oidc/provider/azure/
 - /docs/pulumi-cloud/oidc/azure/
-- /docs/pulumi-cloud/access-management/oidc/provider/azure/
+- /docs/administration/access-identity/oidc/provider/azure/
 ---
 
 {{% notes type="info" %}}

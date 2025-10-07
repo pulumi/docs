@@ -307,14 +307,14 @@ products:
           details:
             - title: Set up identity and access controls
               description: |
-                Integrate SSO and your [identity provider](/docs/pulumi-cloud/access-management/scim/) with Pulumi, set [user permissions](/docs/pulumi-cloud/access-management/teams/) for each stack, and track user activity with [audit logs](/docs/pulumi-cloud/audit-logs/).
+                Integrate SSO and your [identity provider](/docs/administration/access-identity/scim/) with Pulumi, set [user permissions](/docs/administration/organizations-teams/teams/) for each stack, and track user activity with [audit logs](/docs/pulumi-cloud/audit-logs/).
 
               more_info: |
-                Single sign-on with any [SAML 2.0](/docs/pulumi-cloud/access-management/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
+                Single sign-on with any [SAML 2.0](/docs/administration/access-identity/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
 
-                Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/pulumi-cloud/access-management/scim/).
+                Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/administration/access-identity/scim/).
 
-                Set [role-based access controls](/docs/pulumi-cloud/access-management/teams/) that limit who can access infrastructure.
+                Set [role-based access controls](/docs/administration/organizations-teams/teams/) that limit who can access infrastructure.
 
                 Track the activity of users within your organization with [audit logs](/docs/pulumi-cloud/audit-logs/).
             - title: Collaborate better within teams

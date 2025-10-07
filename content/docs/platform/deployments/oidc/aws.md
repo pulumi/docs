@@ -17,7 +17,7 @@ aliases:
 - /docs/pulumi-cloud/deployments/oidc/provider/aws/
 - /docs/pulumi-cloud/oidc/provider/aws/
 - /docs/pulumi-cloud/oidc/aws/
-- /docs/pulumi-cloud/access-management/oidc/provider/aws/
+- /docs/administration/access-identity/oidc/provider/aws/
 ---
 
 {{% notes type="info" %}}

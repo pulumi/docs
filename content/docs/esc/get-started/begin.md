@@ -15,7 +15,7 @@ Before you get started using Pulumi ESC, let's run through a few quick steps to 
 
 ### Create a Pulumi account
 
-Pulumi ESC is a service of Pulumi Cloud, meaning you will need to create a Pulumi account to be able to use it. To do so, navigate to the [Pulumi Cloud console](https://app.pulumi.com) and create a new account. Once created, you can [optionally create an access token](/docs/pulumi-cloud/access-management/access-tokens/). Doing so will provide you an alternative way to sign into the Pulumi Cloud via the CLI. The token can also be used to automate your usage of the Pulumi Cloud using the REST API.
+Pulumi ESC is a service of Pulumi Cloud, meaning you will need to create a Pulumi account to be able to use it. To do so, navigate to the [Pulumi Cloud console](https://app.pulumi.com) and create a new account. Once created, you can [optionally create an access token](/docs/administration/access-identity/access-tokens/). Doing so will provide you an alternative way to sign into the Pulumi Cloud via the CLI. The token can also be used to automate your usage of the Pulumi Cloud using the REST API.
 
 ### Install the Pulumi ESC CLI
 

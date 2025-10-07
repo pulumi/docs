@@ -219,5 +219,5 @@ used.
 
 - [Pulumi IaC FAQ](/docs/iac/support/faq/)
 - [Pulumi ESC FAQ](/docs/esc/faq/)
-- [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)
+- [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
 - [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)

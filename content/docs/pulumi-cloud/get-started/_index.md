@@ -20,7 +20,7 @@ In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">ap
 When you sign in to Pulumi Cloud, a personal organization is automatically
 created on the **Individual** Edition. The Pulumi Individual Edition is free forever for unlimited individual use.
 
-You can create an unlimited number of stacks, encrypt configuration and resource secrets, and browse stack history. To collaborate with other developers or use advanced features like [SAML SSO](/docs/pulumi-cloud/access-management/saml/), you'll need to create a Pulumi [organization](/docs/pulumi-cloud/organizations/).
+You can create an unlimited number of stacks, encrypt configuration and resource secrets, and browse stack history. To collaborate with other developers or use advanced features like [SAML SSO](/docs/administration/access-identity/saml/), you'll need to create a Pulumi [organization](/docs/pulumi-cloud/organizations/).
 
 ## Key features
 
@@ -28,12 +28,12 @@ Explore the following sections to learn more about the features and benefits of 
 
 ### Identity and organizations
 
-Pulumi Cloud has a rich set of features around identity, authentication, organizations, teams, roles, and user management. Pulumi Cloud integrates with many popular identity providers like [GitHub](/docs/pulumi-cloud/admin/organizations/#github-identity-provider), [GitLab](/docs/pulumi-cloud/admin/organizations/#gitlab-identity-provider). Pulumi Cloud provides RBAC (Role-based Access Control) for your organization can also do things like [import your teams directly from GitHub](/docs/pulumi-cloud/access-management/teams/#github-based-teams).
+Pulumi Cloud has a rich set of features around identity, authentication, organizations, teams, roles, and user management. Pulumi Cloud integrates with many popular identity providers like [GitHub](/docs/administration/organizations-teams/organizations/#github-identity-provider), [GitLab](/docs/administration/organizations-teams/organizations/#gitlab-identity-provider). Pulumi Cloud provides RBAC (Role-based Access Control) for your organization can also do things like [import your teams directly from GitHub](/docs/administration/organizations-teams/teams/#github-based-teams).
 
 * [Organizations](/docs/pulumi-cloud/organizations/) and [Accounts](/docs/pulumi-cloud/accounts/)
-* [Teams](/docs/pulumi-cloud/access-management/teams/) and [Roles](/docs/pulumi-cloud/organizations/#organization-roles) Management
+* [Teams](/docs/administration/organizations-teams/teams/) and [Roles](/docs/pulumi-cloud/organizations/#organization-roles) Management
 * [Project and Stack Management](/docs/platform/projects-and-stacks/)
-* [SAML](/docs/pulumi-cloud/access-management/saml/) and [OIDC](/docs/pulumi-cloud/oidc/) Integrations
+* [SAML](/docs/administration/access-identity/saml/) and [OIDC](/docs/pulumi-cloud/oidc/) Integrations
 
 ### Hosted Deployments service and CI/CD integrations
 

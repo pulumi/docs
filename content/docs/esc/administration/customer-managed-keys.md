@@ -46,5 +46,5 @@ This approach enhances data security and aligns with organizational or regulator
 
 ## Customer Managed Keys documentation
 
-See the [Customer Managed Keys](/docs/pulumi-cloud/admin/customer-managed-keys/) documentation for complete usage
+See the [Customer Managed Keys](/docs/administration/security-compliance/customer-managed-keys/) documentation for complete usage
 instructions.

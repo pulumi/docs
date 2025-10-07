@@ -3,7 +3,8 @@ title: Administration
 meta_desc: Administer Pulumi Cloud, ESC, and other Pulumi services across your organization.
 menu:
   administration:
-    identifier: administration
+    name: Administration
+    identifier: administration-home
     weight: 1
 aliases:
   - /docs/administration/

@@ -62,7 +62,7 @@ Choose [self-hosted Pulumi Cloud](https://www.pulumi.com/product/self-hosted/) i
 
 {{% notes type="info" %}}
 
-To get started with self-hosted Pulumi Cloud, follow the guides to set up your [state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#logging-into-the-aws-s3-backend) and [self-hosting infrastructure](https://www.pulumi.com/docs/pulumi-cloud/admin/self-hosted/)
+To get started with self-hosted Pulumi Cloud, follow the guides to set up your [state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#logging-into-the-aws-s3-backend) and [self-hosting infrastructure](https://www.pulumi.com/docs/administration/self-hosting/pulumi-cloud/)
 
 {{% /notes %}}
 
@@ -92,7 +92,7 @@ If you are using a self-hosted installation of the Pulumi platform, the URLs use
 
 ### Create your account
 
-Sign up using your email address and password, or connect with your GitHub, GitLab, or Atlassian identity at [app.pulumi.com/signup](http://app.pulumi.com/signup). After signup, you can configure SAML/SSO for team onboarding. Learn more about [account management](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/).
+Sign up using your email address and password, or connect with your GitHub, GitLab, or Atlassian identity at [app.pulumi.com/signup](http://app.pulumi.com/signup). After signup, you can configure SAML/SSO for team onboarding. Learn more about [account management](https://www.pulumi.com/docs/administration/organizations-teams/teams/).
 
 ### Explore the console
 

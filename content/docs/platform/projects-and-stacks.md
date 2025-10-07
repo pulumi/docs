@@ -43,7 +43,7 @@ To create a project:
 
 ## Stack Access Control
 
-Stacks support fine-grained access controls through permissions. For detailed information about stack permissions, including permission levels and how to manage them, see [Stack permissions](/docs/pulumi-cloud/access-management/stack-permissions).
+Stacks support fine-grained access controls through permissions. For detailed information about stack permissions, including permission levels and how to manage them, see [Stack permissions](/docs/administration/access-identity/stack-permissions).
 
 ## Viewing Stacks
 

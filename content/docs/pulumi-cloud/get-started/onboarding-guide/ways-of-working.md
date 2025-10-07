@@ -72,13 +72,13 @@ Organizations and their capabilities are a paid feature of Pulumi Cloud. Creatin
 
 ### Creating teams
 
-Teams are groups of individual users that typically reflect your company's structure or working groups. By organizing members into teams, you can control which projects, stacks, and environments they can access, and with what permissions, through role-based access control (RBAC). Teams and roles change frequently, so Pulumi Cloud makes it easy to reconfigure teams or automatically sync with your identity provider. [Learn more about teams](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/).
+Teams are groups of individual users that typically reflect your company's structure or working groups. By organizing members into teams, you can control which projects, stacks, and environments they can access, and with what permissions, through role-based access control (RBAC). Teams and roles change frequently, so Pulumi Cloud makes it easy to reconfigure teams or automatically sync with your identity provider. [Learn more about teams](https://www.pulumi.com/docs/administration/organizations-teams/teams/).
 
 ### Configuring Single Sign-On (SSO)
 
-Many organizations prefer to use Single Sign-On (SSO) with identity providers like Microsoft Entra ID, Google Workspace, Okta, or any SAML 2.0 compliant provider. If you have SSO with System for Cross-domain Identity Management (SCIM) enabled, onboarding and offboarding happen automatically. Otherwise, you can continue using email, GitHub, GitLab, or Atlassian identity. [Learn about configuring SSO](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/).
+Many organizations prefer to use Single Sign-On (SSO) with identity providers like Microsoft Entra ID, Google Workspace, Okta, or any SAML 2.0 compliant provider. If you have SSO with System for Cross-domain Identity Management (SCIM) enabled, onboarding and offboarding happen automatically. Otherwise, you can continue using email, GitHub, GitLab, or Atlassian identity. [Learn about configuring SSO](https://www.pulumi.com/docs/administration/access-identity/saml/).
 
-Once you've completed the setup steps, you're ready to invite your team. Refer to [Inviting members to an organization](https://www.pulumi.com/docs/pulumi-cloud/admin/organizations/#inviting-members-to-an-organization) for detailed instructions.
+Once you've completed the setup steps, you're ready to invite your team. Refer to [Inviting members to an organization](https://www.pulumi.com/docs/administration/organizations-teams/organizations/#inviting-members-to-an-organization) for detailed instructions.
 
 ### Creating productive developer experiences
 
@@ -135,7 +135,7 @@ While most teams start by running the Pulumi CLI manually, you'll eventually wan
 1. Choose your platform
 2. Define your branching strategy (e.g., does main map to production?)
 3. Configure your pipelines and testing strategies
-4. Set up [Pulumi Cloud access tokens](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/) for automation
+4. Set up [Pulumi Cloud access tokens](https://www.pulumi.com/docs/administration/access-identity/access-tokens/) for automation
 
 ### Guarding against drift
 

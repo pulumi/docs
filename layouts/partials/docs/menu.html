@@ -132,7 +132,7 @@
             {{- with index site.Menus "administration" }}
             <li class="expandable expanded{{ if eq $currentSection "administration" }} expanded{{ end }}" data-menu-id="administration-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "administration" "menuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "administration" "menuEntries" . "forceTopLevelLabel" "Administration") }}
                 </ul>
             </li>
             {{- end }}

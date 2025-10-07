@@ -17,7 +17,7 @@ aliases:
 - /docs/pulumi-cloud/deployments/oidc/provider/gcp/
 - /docs/pulumi-cloud/oidc/provider/gcp/
 - /docs/pulumi-cloud/oidc/gcp/
-- /docs/pulumi-cloud/access-management/oidc/provider/gcp/
+- /docs/administration/access-identity/oidc/provider/gcp/
 ---
 
 {{% notes type="info" %}}

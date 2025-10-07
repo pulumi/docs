@@ -225,7 +225,7 @@ PATCH /api/orgs/{organization}/auth/policies/{policyId}
 | `policy.authorizedPermissions`  | array[string] | body  | permissions allowed by the policy (only `admin` is supported for organization tokens)  |
 | `policy.rules`      | object        | body  |  rules to match the token claims |
 
-For more information about authorization rules, refer to [its documentation](/docs/pulumi-cloud/access-management/oidc/client/#configure-the-authorization-policies).
+For more information about authorization rules, refer to [its documentation](/docs/administration/access-identity/oidc/client/#configure-the-authorization-policies).
 
 ### Example
 
