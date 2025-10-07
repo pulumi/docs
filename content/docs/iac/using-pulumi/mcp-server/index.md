@@ -132,8 +132,7 @@ After adding the configuration, authenticate via browser when prompted.
 ```
 
 > [!INFO]
-> Kiro currently supports local stdio MCP servers, however you can add remote MCP servers by leveraging the [mcp-remote npm package](https://www.npmjs.com/package/mcp-remote) to make requests to the remote MCP endpoint. 
->
+> Kiro currently supports local stdio MCP servers, however you can add remote MCP servers by leveraging the [mcp-remote npm package](https://www.npmjs.com/package/mcp-remote) to make requests to the remote MCP endpoint.
 > For more information, see [Remote MCP Servers](https://kiro.dev/docs/mcp/servers/#remote-mcp-servers) in the Kiro documentation.
 
 The `mcp.json` configuration file can be placed in several locations. See [Configuration Locations](https://kiro.dev/docs/mcp/configuration/#configuration-locations) in the Kiro documentation for details on where to place this file.
