@@ -19,7 +19,7 @@
 {{ $rawContent := .RawContent }}
 
 {{/* Parse markdown content for questions and answers */}}
-{{/* Questions are typically ### headers, answers are the content following them */}}
+{{/* Questions are H3 headers or H2 headers ending with ?, answers are the content following them */}}
 {{ $lines := split $rawContent "\n" }}
 {{ $currentQuestion := "" }}
 {{ $currentAnswer := slice }}
@@ -98,9 +98,16 @@
 {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
   {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
   {{ if $answerText }}
+    {{ $questionText := $currentQuestion }}
+    {{/* Remove the heading prefix */}}
+    {{ if strings.HasPrefix $questionText "### " }}
+      {{ $questionText = strings.TrimPrefix "### " $questionText }}
+    {{ else if strings.HasPrefix $questionText "## " }}
+      {{ $questionText = strings.TrimPrefix "## " $questionText }}
+    {{ end }}
     {{ $qa := dict
       "@type" "Question"
-      "name" (strings.TrimPrefix "### " $currentQuestion | trim " \t\n\r")
+      "name" (trim $questionText " \t\n\r")
       "acceptedAnswer" (dict
         "@type" "Answer"
         "text" $answerText
