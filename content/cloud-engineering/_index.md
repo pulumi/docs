@@ -1,6 +1,6 @@
 ---
 title: Cloud Engineering
-meta_desc: Transform infrastructure into business acceleration with modern tooling, AI-powered operations, and 2-3x ROI.
+meta_desc: Transform infrastructure into business acceleration with modern tooling, AI-powered operations, and 224% ROI.
 
 type: page
 layout: cloud-engineering
@@ -8,7 +8,7 @@ layout: cloud-engineering
 overview:
     title: Modern Infrastructure Platform for the AI Era
     description: |
-        Pulumi transforms how organizations build, deploy, and manage cloud infrastructure using real programming languages, comprehensive governance, and AI-powered operations. Join industry leaders achieving 2-3x ROI through modern infrastructure practices.
+        Pulumi transforms how organizations build, deploy, and manage cloud infrastructure using real programming languages, comprehensive governance, and AI-powered operations. Join industry leaders achieving 224% ROI through modern infrastructure practices.
 
 maturity_stages:
     title: Where are you in your platform engineering journey?
@@ -32,7 +32,7 @@ strategic_business_value:
     description: |
         Organizations using Pulumi's modern infrastructure platform achieve measurable business outcomes that drive competitive advantage and operational excellence.
     items:
-        - title: 2-3x ROI over three years with 6-month payback period
+        - title: 224% ROI over three years with 6-month payback period
           icon: guage
           icon_color: green
           description: |
@@ -184,7 +184,7 @@ competitive_differentiation:
 
         - title: Proven Business Impact vs. Operational Metrics
           description: |
-            Modern (Pulumi): Measurable ROI (2-3x) with comprehensive business outcome tracking
+            Modern (Pulumi): Measurable ROI (224%) with comprehensive business outcome tracking
             Legacy: Limited visibility into business impact and value creation
 
 benefits:
@@ -224,7 +224,7 @@ benefits:
           icon: team
           icon_color: blue
           description: |
-            Predictable 2-3x ROI with 6-month payback period through unified tooling and automation
+            Predictable 224% ROI with 6-month payback period through unified tooling and automation
             
             Scalable platform capabilities that grow without proportional team growth
 
@@ -273,7 +273,7 @@ modernization_pathways:
             Best for: Organizations ready for comprehensive modernization and maximum benefits
             Approach: Complete migration to unified modern infrastructure platform with AI-powered operations
             Timeline: 6-12 months for full transformation with 6-month ROI payback
-            Outcome: 2-3x ROI with complete platform engineering transformation
+            Outcome: 224% ROI with complete platform engineering transformation
 
 use_cases:
     title: Use cases
