@@ -19,7 +19,7 @@ Complete reference documentation for all Pulumi tools and services.
 
 ## API Documentation
 
-- **Pulumi Cloud REST API**: Programmatic access to Pulumi Cloud
+- **[Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)**: Programmatic access to Pulumi Cloud
 - **Automation API**: Infrastructure as code programmatically
 - **ESC API**: Environment management API
 

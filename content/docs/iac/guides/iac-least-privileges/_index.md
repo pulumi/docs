@@ -94,7 +94,7 @@ Choose one of these secure deployment approaches in your sensitive environments:
 
 **Learn more:** [Pulumi Deployments GitHub Integration](/docs/iac/using-pulumi/continuous-delivery/github-app/)
 
-**REST API documentation:** [Pulumi Deployments REST API](/docs/pulumi-cloud/reference/deployments/)
+**REST API documentation:** [Pulumi Deployments REST API](/docs/reference/cloud-rest-api/deployments/)
 
 ---
 

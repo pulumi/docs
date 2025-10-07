@@ -13,7 +13,7 @@ This guide introduces a framework for building with Pulumi IDP that leverages fo
 
 ## Templates
 
-[Templates](/docs/pulumi-cloud/developer-platforms/templates/) are user-configurable scaffolding that creates new instances of infrastructure resources. They serve as the entry point for developers to quickly bootstrap new projects or components with pre-configured settings and best practices baked in.
+[Templates](/docs/platform/developer-platforms/templates/) are user-configurable scaffolding that creates new instances of infrastructure resources. They serve as the entry point for developers to quickly bootstrap new projects or components with pre-configured settings and best practices baked in.
 
 Key characteristics:
 

@@ -53,7 +53,7 @@ sections:
     description: "Managed service for using Pulumi open source at scale. Use SaaS or self-host"
     link: /docs/pulumi-cloud/
     primary_button_label: Get Started
-    primary_button_link: /docs/pulumi-cloud/get-started/
+    primary_button_link: /docs/platform/get-started/
     secondary_button_label: Create an account
     secondary_button_link: https://app.pulumi.com/signup
 - type: cards-logo-label-link

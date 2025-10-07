@@ -125,5 +125,5 @@ Yes. In addition to the SCIM-managed teams, one can also configure and manage Pu
 
 - [Pulumi IaC FAQ](/docs/iac/support/faq/)
 - [Pulumi ESC FAQ](/docs/esc/faq/)
-- [Pulumi Cloud FAQ](/docs/pulumi-cloud/faq/)
+- [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
 - [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)

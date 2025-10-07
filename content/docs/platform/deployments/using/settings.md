@@ -26,7 +26,7 @@ From the Pulumi Console, a stack's deployment settings can be accessed via the `
 
 ### From the API
 
-Alternatively, a stack's deployment settings may be defined and subsequently modified using the REST API. For more information, see [Patch Settings](/docs/pulumi-cloud/reference/deployments/#patch-settings) in the [Pulumi Deployments REST API docs](/docs/pulumi-cloud/reference/deployments).
+Alternatively, a stack's deployment settings may be defined and subsequently modified using the REST API. For more information, see [Patch Settings](/docs/reference/cloud-rest-api/deployments/#patch-settings) in the [Pulumi Deployments REST API docs](/docs/reference/cloud-rest-api/deployments).
 
 ### Defined as Code with the Pulumi Cloud provider
 
