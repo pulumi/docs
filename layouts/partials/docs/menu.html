@@ -74,6 +74,15 @@
             </li>
             {{- end }}
 
+            {{/* Platform Features Section */}}
+            {{- with index site.Menus "platform" }}
+            <li class="expandable expanded{{ if eq $currentSection "platform" }} expanded{{ end }}" data-menu-id="platform-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "platform" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
+
             {{/* Secrets & Configuration Section */}}
             {{- with index site.Menus "esc" }}
             <li class="expandable expanded{{ if eq $currentSection "esc" }} expanded{{ end }}" data-menu-id="esc-top">
@@ -106,15 +115,6 @@
             <li class="expandable expanded{{ if eq $currentSection "ai" }} expanded{{ end }}" data-menu-id="ai-top">
                 <ul class="list-none">
                     {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "ai" "menuEntries" .) }}
-                </ul>
-            </li>
-            {{- end }}
-
-            {{/* Platform Features Section */}}
-            {{- with index site.Menus "platform" }}
-            <li class="expandable expanded{{ if eq $currentSection "platform" }} expanded{{ end }}" data-menu-id="platform-top">
-                <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "platform" "menuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
