@@ -112,6 +112,34 @@ In Windsurf, configure the MCP server through the IDE settings:
 
 After adding the configuration, authenticate via browser when prompted.
 
+### Kiro
+
+[Kiro](https://kiro.dev/) is an AI coding assistant that supports MCP servers. To configure the Pulumi MCP server in Kiro, add the following to your `mcp.json` configuration file:
+
+```json
+{
+  "mcpServers": {
+    "pulumi": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.ai.pulumi.com/mcp"
+      ],
+      "disabled": false
+    }
+  }
+}
+```
+
+> [!INFO]
+> Kiro currently supports local stdio MCP servers, however you can add remote MCP servers by leveraging the [mcp-remote npm package](https://www.npmjs.com/package/mcp-remote) to make requests to the remote MCP endpoint. 
+>
+> For more information, see [Remote MCP Servers](https://kiro.dev/docs/mcp/servers/#remote-mcp-servers) in the Kiro documentation.
+
+The `mcp.json` configuration file can be placed in several locations. See [Configuration Locations](https://kiro.dev/docs/mcp/configuration/#configuration-locations) in the Kiro documentation for details on where to place this file.
+
+After adding the configuration, authenticate via the browser popup when prompted.
+
 ## Available tools
 
 The Pulumi MCP server provides several tools that AI assistants can use to interact with your Pulumi infrastructure:
