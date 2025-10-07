@@ -137,13 +137,13 @@ Security vulnerabilities require immediate response across your entire infrastru
 
 ![Neo identifying and remediating CVE vulnerabilities](neo-cves.png)
 
-## 8. Automatically remediate AWS config violations
+## 8. Remediate policy violations
 
 Neo detects non-compliant resources and generates pull requests to fix them, turning compliance headaches into automated workflows.
 
-When your AWS Config rules flag violations—unencrypted EBS volumes, overly permissive security groups, or missing resource tags—Neo identifies the issues and proposes specific fixes. Ask Neo: *"Fix all AWS Config violations in our production account"* and it analyzes your compliance dashboard, identifies the problematic resources, and creates PRs with the exact changes needed.
+When your policy violations detect unencrypted EBS volumes, overly permissive security groups, or missing resource tags, Neo identifies the issues and proposes specific fixes. Ask Neo: *"Fix all policy violations in our production account"* and it analyzes your compliance dashboard, identifies the problematic resources, and creates PRs with the exact changes needed.
 
-![Neo identifying and fixing AWS Config violations](neo-aws-config.png)
+![Neo identifying and fixing policy violations](neo-policies.png)
 
 ## 9. Update Lambda runtimes across multiple accounts
 
