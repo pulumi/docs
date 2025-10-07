@@ -7,7 +7,7 @@ meta_image: /images/product/idp-meta.png
 
 heading: Internal Developer Platform
 subheading: |
-    Accelerate Cloud Delivery with Secure Developer Self-Service
+    Accelerate cloud delivery with secure developer self-service
 
 aliases:
     - /solutions/platforms/
