@@ -39,7 +39,7 @@ Instead of starting from scratch or hunting through documentation, describe what
 
 ## 3. Assist with Terraform to Pulumi migration
 
-Neo analyzes existing Terraform code and generates equivalent Pulumi programs, accelerating migration without starting from scratch.
+Neo analyzes existing Terraform code and state to generate the equivalent Pulumi program, accelerating migration without starting from scratch.
 
 Migrating from Terraform to Pulumi traditionally means rewriting everything. Neo understands both languages and can convert HCL to TypeScript, Python, or Go while preserving your infrastructure patterns. You can also use the Terraform state file. Ask Neo: *"Analyze the provided terraform state. Based on it, generate a python pulumi program that imports the resources without requiring updates."* and it generates equivalent code with proper typing and best practices.
 
