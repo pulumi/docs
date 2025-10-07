@@ -7,7 +7,7 @@ meta_image: /images/product/idp-meta.png
 
 heading: Internal Developer Platform
 subheading: |
-    The fastest, most secure way to deliver cloud infrastructure
+    Accelerate cloud delivery with secure developer self-service
 
 aliases:
     - /solutions/platforms/
