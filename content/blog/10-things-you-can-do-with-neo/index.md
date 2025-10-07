@@ -23,7 +23,7 @@ The answer is quite a bit. Here are 10 concrete workflows that platform teams ca
 
 <!--more-->
 
-## 1. Automatically Remediate AWS Config Violations
+## 1. Automatically remediate AWS config violations
 
 Neo detects non-compliant resources and generates pull requests to fix them, turning compliance headaches into automated workflows.
 
@@ -31,7 +31,7 @@ When your AWS Config rules flag violations—unencrypted EBS volumes, overly per
 
 ![Neo identifying and fixing AWS Config violations](neo-aws-config.png)
 
-## 2. Update Lambda Runtimes Across Multiple Accounts
+## 2. Update Lambda runtimes across multiple accounts
 
 Neo identifies outdated Lambda runtimes, stages updates, and manages the rollout across your entire AWS organization.
 
@@ -63,7 +63,7 @@ const lambdaFunction = new aws.lambda.Function("emailProcessor", {
 });
 ```
 
-## 3. Generate Infrastructure Code from Natural Language
+## 3. Generate infrastructure code from natural language
 
 Neo turns plain English descriptions into production-ready Pulumi code, eliminating the blank-page problem that slows down new projects.
 
@@ -71,7 +71,7 @@ Instead of starting from scratch or hunting through documentation, describe what
 
 ![Neo generating infrastructure code for a serverless API with PostgreSQL and Redis](neo-postgresql-redis.png)
 
-## 4. Automate CI/CD Pipeline Generation
+## 4. Automate CI/CD pipeline generation
 
 Neo creates complete GitHub Actions workflows configured specifically for Pulumi deployments, with proper preview stages.
 
@@ -118,13 +118,13 @@ jobs:
         working-directory: ./infrastructure
 ```
 
-## 5. Explain Infrastructure in Plain English
+## 5. Explain infrastructure in plain English
 
 Neo answers questions about your infrastructure instantly, turning complex resource relationships into conversational insights (and diagrams!).
 
 No more digging through AWS consoles or parsing state files to understand what you have deployed. Neo speaks your language about your infrastructure. Ask questions like *"What databases do we have?"*, *"Which S3 buckets aren't encrypted?"*, or *"Show me all resources in us-east-1"* and get immediate, accurate answers.
 
-## 6. Identify Inefficient Infrastructure Patterns
+## 6. Identify inefficient infrastructure patterns
 
 Neo analyzes your infrastructure and spots patterns that create unnecessary management overhead, helping you consolidate and optimize.
 
@@ -151,19 +151,19 @@ Neo identified these optimization opportunities:
    • Benefits: Easier rule management, reduced complexity
 ```
 
-## 7. Enforce Multi-Account Policy Compliance
+## 7. Enforce multi-account policy compliance
 
 Neo applies organizational policies across your entire AWS Organizations structure, ensuring governance at scale without creating bottlenecks.
 
 Large organizations struggle to maintain consistent policies across dozens of AWS accounts. Neo understands your organizational structure and can enforce tagging standards, encryption requirements, and security policies uniformly. Ask Neo: *"Ensure all accounts follow our tagging and encryption policies"* and it audits compliance across your organization.
 
-## 8. Upgrade EKS/Kubernetes Clusters
+## 8. Upgrade EKS/Kubernetes clusters
 
 Neo manages Kubernetes version upgrades across multiple clusters, planning upgrade paths and validating compatibility.
 
 Kubernetes upgrades are complex, especially across multiple clusters with different workloads. Neo analyzes your cluster configurations, identifies upgrade blockers, and creates systematic upgrade plans. Ask Neo: *"Plan an upgrade path for our EKS clusters from 1.27 to 1.28"* and it maps dependencies, checks add-on compatibility, and sequences the upgrades.
 
-## 9. Assist with Terraform to Pulumi Migration
+## 9. Assist with Terraform to Pulumi migration
 
 Neo analyzes existing Terraform code and generates equivalent Pulumi programs, accelerating migration without starting from scratch.
 
@@ -173,7 +173,7 @@ Using this prompt with a Terraform state file containing EC2 instances and suppo
 
 ![Neo converting Terraform state to Pulumi code](tf-up.png)
 
-## 10. Respond to Security Vulnerabilities
+## 10. Respond to security vulnerabilities
 
 When CVEs are announced, Neo can help security teams move at machine speed addressing them.
 
@@ -181,9 +181,9 @@ Security vulnerabilities require immediate response across your entire infrastru
 
 ![Neo identifying and remediating CVE vulnerabilities](neo-cves.png)
 
-## Your Newest Platform Engineer
+## Your newest platform engineer
 
-These workflows represent just the beginning of what's possible when AI agents understands infrastructure context.
+These workflows represent just the beginning of what's possible when an AI agent deeply understands infrastructure context.
 
 The outcome is simple: spend less time on operational toil and more time on the architecture and policies that make your organizations successful.
 
