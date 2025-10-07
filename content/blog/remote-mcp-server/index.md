@@ -60,16 +60,11 @@ The Remote MCP Server is your AI assistant's gateway to your entire Pulumi infra
 
 Your AI assistant can instantly explore what you've deployed across your entire organization:
 
-**Inventory your resources:**
-
-- List all stacks in your organization with `get-stacks`
-- Search for specific resources across all stacks using `resource-search`
-- Find resources by type, name, tags, or any property: `type:aws:s3/bucket:Bucket AND acl:public-read`
-
-**Audit and compliance:**
-
-- Check for policy violations with `get-policy-violations`
-- View organization members and their roles with `get-users`
+- List all stacks in your organization
+- Search for specific resources across all stacks
+- Find resources by type, name, tags, or any property
+- Check for policy violations
+- View organization members and their roles
 - Identify security gaps, untagged resources, or misconfigured infrastructure
 
 Ask questions like:
@@ -82,10 +77,8 @@ Ask questions like:
 
 The MCP server connects directly to the [Pulumi Registry](https://www.pulumi.com/registry/), giving your AI assistant access to thousands of cloud resources with complete type information:
 
-**Registry-powered code generation:**
-
-- Browse available resources with `list-resources` and `list-functions`
-- Get detailed schemas with `get-resource` and `get-type`
+- Browse available resources
+- Get detailed resource schemas
 - Access property documentation, input/output types, and examples
 
 Your AI assistant can:
@@ -109,7 +102,7 @@ Neo isn't just an AI that writes code—it's an AI that *ships* infrastructure c
 - **Code generation at scale** - Works across multiple stacks and repositories
 - **Automated testing** - Validates changes before creating pull requests
 - **Pull request workflows** - Creates PRs with detailed explanations and comments
-- **Continuous execution** - Runs in Pulumi Cloud, not blocking your AI assistant
+- **Continuous execution** - Runs in Pulumi Cloud, not consuming your local resources
 - **Human-in-the-loop** - Pauses for approval on critical changes
 
 **Real-world Neo examples:**
