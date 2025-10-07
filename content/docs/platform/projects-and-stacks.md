@@ -314,4 +314,4 @@ To restore a stack:
 
 ## Related Docs
 
-* [New Project Wizard](/docs/platform/developer-platforms/new-project-wizard/)
+* [New Project Wizard](/docs/idp/developer-portals/new-project-wizard/)

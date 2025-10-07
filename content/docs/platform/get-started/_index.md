@@ -51,14 +51,14 @@ Pulumi Cloud offers a flexible and convenient [hosted deployment service](/docs/
 [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) allows teams to tackle configuration complexity at scale, alleviating maintenance and operational burden and reducing costly mistakes, and creating a more secure by default posture.
 
 * [Pulumi ESC](/docs/esc/)
-* [Pulumi ESC Syntax Reference](/docs/esc/reference/)
+* [Pulumi ESC Syntax Reference](/docs/reference/esc-syntax/)
 
 ### Building developer portals
 
 Dealing with a larger organization? Pulumi Cloud offers all the features you need to build an effective internal developer portal (IDP).
 
-* [New Project Wizard](/docs/platform/developer-platforms/new-project-wizard) and [Organization Templates](/docs/platform/developer-platforms/templates)
-* [Pulumi Backstage Plugin](/docs/platform/developer-platforms/backstage)
+* [New Project Wizard](/docs/idp/developer-portals/new-project-wizard) and [Organization Templates](/docs/idp/developer-portals/templates)
+* [Pulumi Backstage Plugin](/docs/idp/developer-portals/backstage)
 * [Pulumi Insights: Resource Search, Data Export](/docs/intro/insights)
 
 ### Security and compliance

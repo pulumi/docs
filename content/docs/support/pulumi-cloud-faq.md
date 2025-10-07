@@ -6,9 +6,9 @@ meta_desc: A collection of Frequently Asked Questions (FAQ) about Pulumi Cloud.
 menu:
     support:
         name: Pulumi Cloud FAQ
-        parent: support-home
-        weight: 2
-        identifier: pulumi-cloud-faq
+        parent: support-faq
+        weight: 5
+        identifier: support-faq-pulumi-cloud
 aliases:
   - /docs/support/pulumi-cloud-faq/
 ---
@@ -220,6 +220,6 @@ used.
 ## More FAQ
 
 - [Pulumi IaC FAQ](/docs/iac/support/faq/)
-- [Pulumi ESC FAQ](/docs/esc/faq/)
+- [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
 - [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
 - [Pulumi CrossGuard FAQ](/docs/using-pulumi/crossguard/faq/)

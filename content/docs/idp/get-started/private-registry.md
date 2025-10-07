@@ -12,7 +12,7 @@ menu:
     identifier: idp-get-started-private-registry
 ---
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/platform/developer-platforms/templates/) that power golden path workflows in Pulumi. Platform engineers can codify organizational standards in their building blocks using features like [Pulumi ESC](/docs/esc/) and [Pulumi IaC Policies](/docs/insights/get-started/add-policies/), ensuring that all infrastructure users provision is compliant from the beginning.
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. Platform engineers can codify organizational standards in their building blocks using features like [Pulumi ESC](/docs/esc/) and [Pulumi IaC Policies](/docs/insights/get-started/add-policies/), ensuring that all infrastructure users provision is compliant from the beginning.
 
 Developers leverage templates and components in their preferred workflows, whether it be incorporating components into Pulumi programs, scaffolding a low-code program with components and YAML, or using the Pulumi console for no-code deployments. The private registry is also a resource for developers to discover components and templates, browse their APIs, and use READMEs to understand how to use them.
 
@@ -83,7 +83,7 @@ pulumi package publish COMPONENT_LOCATION
 
 ## Pulumi Templates
 
-[Pulumi Templates](/docs/platform/developer-platforms/templates/) are an efficient way to scaffold new Pulumi programs. Templates are available to users in the private registry and [New Project Wizard](/docs/platform/developer-platforms/new-project-wizard/).
+[Pulumi Templates](/docs/idp/developer-portals/templates/) are an efficient way to scaffold new Pulumi programs. Templates are available to users in the private registry and [New Project Wizard](/docs/idp/developer-portals/new-project-wizard/).
 
 {{% notes type="info" %}}
 Organization templates require the Enterprise or Business Critical plan
@@ -115,13 +115,13 @@ This approach provides:
 - Immutable version storage
 - Simple single-command publishing
 
-For detailed information, see [Publishing Registry-backed Templates](/docs/platform/developer-platforms/templates/#publishing-registry-backed-templates).
+For detailed information, see [Publishing Registry-backed Templates](/docs/idp/developer-portals/templates/#publishing-registry-backed-templates).
 
 #### VCS-backed templates
 
 VCS-backed templates are sourced from configured GitHub or GitLab repositories.
 
-To configure VCS-backed templates, follow [this integration guide](/docs/platform/developer-platforms/templates/#configuring-vcs-backed-templates).
+To configure VCS-backed templates, follow [this integration guide](/docs/idp/developer-portals/templates/#configuring-vcs-backed-templates).
 
 ### Components in Templates
 

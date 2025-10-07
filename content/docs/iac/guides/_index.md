@@ -25,6 +25,7 @@ Learn best practices to use Pulumi.
 - [Build a Component](/docs/iac/guides/build-a-component/)
 - [Least privilege security](/docs/iac/guides/iac-least-privileges/)
 - [MCP server](/docs/iac/guides/mcp-server/)
+- [Migration](/docs/iac/guides/migration/)
 - [Organizing projects & stacks](/docs/iac/guides/organizing-projects-stacks/)
 - [Packages](/docs/iac/guides/packages/)
 - [Pulumi and Continuous delivery](/docs/iac/guides/continuous-delivery/)

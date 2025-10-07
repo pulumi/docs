@@ -13,7 +13,7 @@ aliases:
 
 ## Overview
 
-With Pulumi ESC, you can [safely store configuration values as plaintext or as secrets](/docs/esc/faq/#is-it-safe-to-use-pulumi-esc-for-my-production-stacks) directly in the environment file. You also have the option to dynamically import secrets from external sources such as:
+With Pulumi ESC, you can [safely store configuration values as plaintext or as secrets](/docs/support/faq/secrets-config/#is-it-safe-to-use-pulumi-esc-for-my-production-stacks) directly in the environment file. You also have the option to dynamically import secrets from external sources such as:
 
 - AWS Secrets Manager
 - Azure Key Vault

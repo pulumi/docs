@@ -137,18 +137,14 @@
             </li>
             {{- end }}
 
-            <!-- {{/* Reference Section */}}
+            {{/* Reference Section */}}
             {{- with index site.Menus "reference" }}
-                <li class="expandable expanded{{ if eq $currentSection "reference" }} expanded{{ end }}" data-menu-id="reference-top">
-                    <ul class="list-none">
-                        <li><a href="/registry/">
-                            <button><i class="fa fa-caret-right"></i></button>
-                            <span>Package Registry</span>
-                        </a></li>
-                        {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "reference" "menuEntries" .) }}
-                    </ul>
-                </li>
-            {{- end }} -->
+            <li class="expandable expanded{{ if eq $currentSection "reference" }} expanded{{ end }}" data-menu-id="reference-top">
+                <ul class="list-none">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "reference" "menuEntries" .) }}
+                </ul>
+            </li>
+            {{- end }}
 
             {{/* Support Section */}}
             {{- with index site.Menus "support" }}

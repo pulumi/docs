@@ -1,6 +1,6 @@
 ---
-title: Platform Features
-linktitle: Platform Features
+title: Cloud Platform
+linktitle: Cloud Platform
 docs_home: true
 notitle: true
 norightnav: true
@@ -10,7 +10,7 @@ menu:
     weight: 1
 meta_desc: Pulumi Platform provides cloud-hosted capabilities that extend infrastructure as code with managed deployments, drift detection, and operational automation.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Pulumi Platform Features
+h1: Pulumi Cloud Platform
 description: <p>Cloud-hosted capabilities that extend Pulumi's infrastructure as code with managed deployments, drift detection, and operational automation.</p>
 aliases:
   - /docs/pulumi-cloud/
