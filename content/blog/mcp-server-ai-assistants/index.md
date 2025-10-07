@@ -27,17 +27,13 @@ Several AI coding assistants like GitHub Copilot, Anthropic's Claude Code, Winds
 
 ## Setting up the Pulumi MCP Integration in Cursor
 
-Before diving in, you typically need to configure your AI assistant to communicate with the Pulumi MCP server. For Cursor, you can do so by visiting the following link:
+Before diving in, you typically need to configure your AI assistant to communicate with the Pulumi MCP server. For Cursor, you can do so by clicking the following button:
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=pulumi&config=eyJ0eXBlIjoic3RkaW8iLCJjb21tYW5kIjoibnB4IEBwdWx1bWkvbWNwLXNlcnZlciJ9)
-
-Once set up, validate the connection within the assistant's settings to ensure that the server is properly working. Cursor has a dedicated section to check the MCP connection status:
-
-![Cursor MCP Settings](cursor-mcp-settings.png)
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=pulumi&config=eyJ0cmFuc3BvcnQiOiJodHRwIiwidXJsIjoiaHR0cHM6Ly9tY3AuYWkucHVsdW1pLmNvbS9tY3AifQ%3D%3D)
 
 The assistant can now leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
 
-For help on setting up the MCP server with other IDEs such as Claude Code and Windsurf, see the [Pulumi MCP](https://www.pulumi.com/docs/iac/using-pulumi/mcp-server/) docs.
+For detailed setup instructions for Cursor, Claude Code, Windsurf, Claude Desktop, and other AI assistants, see the [Pulumi MCP Server documentation](/docs/iac/using-pulumi/mcp-server/).
 
 ## The Goal: Provisioning an AKS Cluster
 
