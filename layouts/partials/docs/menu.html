@@ -239,7 +239,7 @@
                                 <button>
                                     <i class="fa fa-caret-right"></i>
                                 </button>
-                                <span>Overview</span>
+                                <span>{{ if $overviewPage.Params.overview_name }}{{ $overviewPage.Params.overview_name }}{{ else }}Overview{{ end }}</span>
                                 </a>
                             </li>
                         {{- end }}
