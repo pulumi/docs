@@ -6,7 +6,7 @@ h1: Download & Install Pulumi ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
-    parent: esc-home
+    parent: esc-cli-overview
     weight: 1
 search:
    boost: true
@@ -17,6 +17,7 @@ search:
 aliases:
 - /docs/install/esc/
 - /docs/esc/install
+- /docs/esc/download-install/
 ---
 
 ## Select an Operating System

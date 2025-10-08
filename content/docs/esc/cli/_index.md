@@ -20,11 +20,15 @@ aliases:
 Pulumi ESC is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi Cloud
 to help your team manage environment complexity.
 
+{{% notes type="info" %}}
+The standalone ESC CLI is only required if you're working with Pulumi ESC without the Pulumi IaC CLI. If you already have the [Pulumi IaC CLI](/docs/iac/cli/) installed, you can use `pulumi env` commands instead of `esc env` commands—there's no need to install the ESC CLI separately.
+{{% /notes %}}
+
 ## Installation
 
 The Pulumi ESC CLI is open source and free to use:
 
-<a class="btn btn-secondary" href="/docs/esc/download-install/">Install Pulumi ESC</a>
+<a class="btn btn-secondary" href="/docs/esc/cli/download-install/">Install Pulumi ESC</a>
 
 ## Common Commands
 
