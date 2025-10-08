@@ -20,7 +20,7 @@ We’re excited to announce a new feature for Pulumi ESC: [Open approvals](/docs
 
 ## Expanding on our mission to enforce compliance and security without slowing teams down
 
-You may recall that earlier this year we introduced [Approvals for updates](../approvals-in-pulumi-esc), which allows teams to require review and sign-off before applying modifications to environment configurations. We are now extending Pulumi ESC auditing and governance capabilities.
+You may recall that earlier this year we introduced [Approvals for updates](../approvals-in-pulumi-esc), which allows teams to require review and sign-off before applying modifications to environment configurations. We are now extending Pulumi ESC auditing and governance capabilities to enable JIT access control.
 
 Many organizations require more robust guardrails around when an environment becomes active or accessible. Some of the key considerations include:
 
