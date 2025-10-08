@@ -10,45 +10,42 @@ menu:
     weight: 1
 
 
-meta_desc: Pulumi IDP enables you to build secure, scalable, and flexible developer workflows.
+meta_desc: Build secure, scalable, and flexible developer workflows with self-service infrastructure provisioning.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Pulumi IDP Docs
-description: <p>Pulumi IDP enables you to build secure, scalable, and flexible developer workflows.</p>
+h1: Internal Developer Platform
+description: <p>Build secure, compliant golden paths for infrastructure provisioning with self-service workflows and reusable building blocks.</p>
 
 link_buttons:
   primary:
     label: Get Started
     link: /docs/idp/get-started/
-  secondary:
-    label: Create an Account
-    link: https://app.pulumi.com/signup
 
 sections:
 - type: flat
   heading: Overview
   description_md: |
-    Pulumi IDP (Internal Developer Platform) gives platform teams the ability to build secure, compliant, and customizable golden paths for provisioning infrastructure. It uses a bottom-up approach, ensuring best practices are codified from the start. 
-    
-    Platform teams define building blocks using components and templates, enabling developers to provision infrastructure in the way that best suits them. Developers can leverage components when writing Pulumi programs in their preferred programming language, scaffold components using low-code YAML templates, or deploy no-code programs from the Pulumi console.
+    Build secure, compliant, and customizable golden paths for provisioning infrastructure with a bottom-up approach that codifies best practices from the start.
+
+    Platform teams define reusable building blocks using components and templates. Developers can leverage components when writing programs in their preferred programming language, scaffold infrastructure using low-code YAML templates, or deploy no-code programs from the console.
 
 - type: button-cards
   heading: Getting Started
   cards:
   - heading: Overview
     link: /docs/idp/get-started/
-    description: Learn how Pulumi IDP supports building bottom-up developers workflows.
-  
+    description: Learn how to build bottom-up developer workflows with self-service infrastructure.
+
   - heading: Private Registry
     link: /docs/idp/get-started/private-registry/
-    description: Pulumi Private Registry is the source of truth for an organization’s infrastructure building blocks that power provisioning workflows in Pulumi.
-  
+    description: Centralized registry for your organization's infrastructure building blocks and reusable components.
+
   - heading: Workflows
     link: /docs/idp/get-started/workflows/
     description: Discover how developers can utilize templates and components in any workflow.
-    
+
   - heading: Services
     link: /docs/idp/get-started/services/
-    description: Bring organizational context to Pulumi through Services, the logical grouping of Pulumi entities.
+    description: Bring organizational context to your infrastructure through Services, a logical grouping of related entities.
   
   - heading: Publishing from GitHub Actions
     link: /docs/idp/get-started/publishing-from-github-actions/

@@ -8,35 +8,30 @@ menu:
   insights:
     identifier: insights-home
     weight: 1
-meta_desc: Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure.
+meta_desc: Intelligent infrastructure management to discover, understand, manage, and improve any cloud infrastructure.
 meta_image: /images/docs/meta-images/insights-meta.png
-h1: Pulumi Insights Documentation
+h1: Insights & Governance
 description: |
-  Pulumi Insights offers an intelligent platform for discovering, understanding, and managing cloud infrastructure with AI-powered asset and compliance management.
+  Discover, understand, and manage cloud infrastructure with AI-powered asset and compliance management across all your resources.
 
 link_buttons:
   primary:
     label: Get Started
     link: /docs/insights/get-started/
-  secondary:
-    label: Create an Account
-    link: https://app.pulumi.com/signup
 
 sections:
 - type: flat
   heading: Overview
   description_md: |
-    Pulumi Insights is an intelligent infrastructure management service to discover, understand, manage, and improve any cloud infrastructure, including resources not provisioned by Pulumi IaC such as AWS CloudFormation, Microsoft ARM, Terraform, or those created manually. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
+    Discover, understand, manage, and improve any cloud infrastructure—including resources provisioned by AWS CloudFormation, Microsoft ARM, Terraform, or created manually. Get AI-powered asset and compliance management across your entire infrastructure footprint.
 
-    With Pulumi Insights, you can:
+    Key capabilities:
     - **Stay secure**: Detect security violations and remediate using security best practices.
     - **Enforce compliance**: Gain a comprehensive view of compliance policy violations across your organization and automate remediation.
-    - **Improve efficiency**: Analyze and dig into your organization’s cloud usage and trends to optimize costs and improve productivity.
-
-    Insights is your single pane of glass for understanding and improving your cloud infrastructure.
+    - **Improve efficiency**: Analyze cloud usage and trends to optimize costs and improve productivity.
 
 - type: button-cards
-  heading: Featured Capabilities
+  heading: Capabilities
   cards:
   - heading: Discover
     link: /docs/insights/concepts/
@@ -53,29 +48,20 @@ sections:
     link: /docs/insights/get-started/using-resource-explorer/
 
 - type: full-width-cards
-  heading: Featured docs
+  heading: Resources
   cards:
-  - icon: cloud-blue-21-21
+  - emoji: 🔍
     heading: Account Discovery
     description: Automatically scan and sync your accounts to bring all cloud resources into the Insights platform.
     link: /docs/insights/accounts/
-  - icon: code-tree-blue-21-21
+  - emoji: 🗂️
     heading: Resource Explorer
     description: Resource Search allows you to explore your resources, stacks and projects in detail.
     link: /docs/insights/search/
-  - icon: lightbulb-blue-21-21
-    heading: Pulumi Copilot AI
-    description: Use Pulumi Copilot to ask detailed questions like "Find all untagged resources in AWS" to uncover insights and actionable recommendations.
+  - emoji: 🤖
+    heading: Copilot AI
+    description: Ask natural language questions like "Find all untagged resources in AWS" to uncover insights and actionable recommendations.
     link: /docs/ai/copilot/
-
-- type: blue-sparkle
-  heading: Why Pulumi Insights?
-  description: Pulumi Insights transforms cloud management with a focus on security, compliance, and efficiency. By discovering resources across multiple providers and accounts, it simplifies managing complex cloud environments, helping teams make informed business decisions and moving their projects forward.
-
-- type: flat
-  heading: Get Started
-  description: |
-    <p>Check out the <a href="/docs/insights/get-started/">getting started guide</a> to set up Pulumi Insights and explore its powerful features.</p>
 
 - type: flat
   heading: Have questions?

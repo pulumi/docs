@@ -9,6 +9,10 @@ menu:
     parent: esc-home
     identifier: esc-cli-overview
     weight: 7
+  reference:
+    name: ESC CLI
+    parent: reference-cli
+    weight: 2
 aliases:
     - /docs/esc-cli/
 ---

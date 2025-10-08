@@ -43,7 +43,11 @@
                 {{ range .cards }}
                     <a class="full-width-card" href="{{ .link }}">
                         <div class="icon-heading">
-                            <div class="icon icon-21-21 {{ .icon }}"></div>
+                            {{ if .emoji }}
+                                <span class="text-2xl mr-2">{{ .emoji }}</span>
+                            {{ else if .icon }}
+                                <div class="icon icon-21-21 {{ .icon }}"></div>
+                            {{ end }}
                             <h3 id="{{ anchorize .heading }}">{{ .heading }}</h3>
                         </div>
                         <p>{{ .description }}</p>

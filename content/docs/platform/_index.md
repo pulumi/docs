@@ -17,11 +17,8 @@ aliases:
 
 link_buttons:
   primary:
-    label: Get Started with Pulumi Cloud
+    label: Get Started
     link: /docs/platform/get-started/
-  secondary:
-    label: Learn About Deployments
-    link: /docs/platform/deployments/
 
 sections:
 - type: flat
@@ -30,21 +27,21 @@ sections:
     Pulumi Platform features extend your infrastructure as code workflows with cloud-hosted automation, state management, and operational capabilities. These features run in Pulumi Cloud and integrate seamlessly with your IaC programs to provide enterprise-grade deployment automation, drift detection, and governance.
 
 - type: full-width-cards
-  heading: Platform Capabilities
+  heading: Capabilities
   cards:
-  - icon: deploy-blue-21-21
+  - emoji: 🚀
     heading: Deployments
     description: Managed CI/CD platform purpose-built for infrastructure as code with automated deployments, drift detection, review stacks, and scheduled operations.
     link: /docs/platform/deployments/
-  - icon: terminal-blue-21-21
+  - emoji: 🔔
     heading: Webhooks
     description: Integrate Pulumi operations with external systems through webhooks and event notifications.
     link: /docs/platform/webhooks/
-  - icon: stack-blue-21-21
+  - emoji: 📚
     heading: Projects & stacks
     description: Manage your infrastructure projects and stacks through the Pulumi Cloud interface with stack permissions and access controls.
     link: /docs/platform/projects-and-stacks/
-  - icon: code-blue-21-21
+  - emoji: 🔘
     heading: Deploy with Pulumi button
     description: Enable one-click deployments from GitHub repositories, gists, or web pages with embeddable deployment buttons.
     link: /docs/platform/pulumi-button/

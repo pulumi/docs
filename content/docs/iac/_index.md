@@ -10,73 +10,67 @@ menu:
         weight: 1
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Pulumi IaC docs
-description: <p>Pulumi IaC is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code tool for creating, deploying, and managing cloud infrastructure.</p>
+h1: Infrastructure as Code
+description: <p>Define and manage cloud infrastructure using familiar programming languages. Pulumi's <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code SDK supports TypeScript, Python, Go, .NET, Java, and YAML.</p>
 link_buttons:
   primary:
     label: Get Started
     link: /docs/get-started/
-  secondary:
-    label: Install
-    link: /docs/iac/download-install/
 
 sections:
 - type: cards-logo-label-link
   heading: Clouds
-  description: <p>Pulumi IaC supports AWS, Azure, Google Cloud, Kubernetes, and <a href="/registry/">120+ packages</a>.</p>
+  description: <p>Manage infrastructure across AWS, Azure, Google Cloud, Kubernetes, and <a href="/registry/">120+ cloud providers</a>.</p>
   cards:
   - label: AWS & Pulumi
     icon: aws-40
-    link: /docs/clouds/aws/
+    link: /docs/iac/clouds/aws/
   - label: Azure & Pulumi
     icon: azure-40
-    link: /docs/clouds/azure/
+    link: /docs/iac/clouds/azure/
   - label: Google Cloud & Pulumi
     icon: google-cloud-40
-    link: /docs/clouds/gcp/
+    link: /docs/iac/clouds/gcp/
   - label: Kubernetes & Pulumi
     icon: kubernetes-40
-    link: /docs/clouds/kubernetes/
+    link: /docs/iac/clouds/kubernetes/
 - type: cards-logo-label-link
   heading: Languages
   description: Build infrastructure intuitively on any cloud using familiar languages.
   cards:
   - label: Node.js
     icon: icon-32-32 node-color-32-32
-    link: /docs/languages-sdks/javascript/
+    link: /docs/iac/languages-sdks/javascript/
   - label: Python
     icon: icon-32-32 python-color-32-32
-    link: /docs/languages-sdks/python/
+    link: /docs/iac/languages-sdks/python/
   - label: Go
     icon: icon-32-32 go-color-32-32
-    link: /docs/languages-sdks/go/
+    link: /docs/iac/languages-sdks/go/
   - label: .NET
     icon: icon-32-32 dotnet-color-32-32
-    link: /docs/languages-sdks/dotnet/
+    link: /docs/iac/languages-sdks/dotnet/
   - label: Java
     icon: icon-32-32 java-color-32-32
-    link: /docs/languages-sdks/java/
+    link: /docs/iac/languages-sdks/java/
   - label: YAML
     icon: icon-32-32 yaml-color-32-32
-    link: /docs/languages-sdks/yaml/
+    link: /docs/iac/languages-sdks/yaml/
 - type: full-width-cards
-  heading: Featured docs
+  heading: Resources
   cards:
-  - icon: lightbulb-blue-21-21
+  - emoji: 💡
     heading: Concepts
-    description: Dive deeper into what Pulumi IaC is and how it works.
+    description: Dive deeper into how infrastructure as code works with Pulumi.
     link: /docs/iac/concepts/
-  - icon: terminal-blue-21-21
+  - emoji: 💻
     heading: Pulumi CLI
     description: Browse the complete documentation of available CLI commands.
-    link: /docs/cli/
-  - icon: swap-blue-21-21
-    heading: Adopting Pulumi
+    link: /docs/iac/cli/
+  - emoji: 🔄
+    heading: Migration
     description: Migrate any infrastructure to Pulumi with comprehensive guides.
-    link: /docs/using-pulumi/adopting-pulumi/
-- type: blue-sparkle
-  heading: Why Pulumi IaC?
-  description: Pulumi IaC enables developers to deploy infrastructure in any cloud environment with one common approach. Leverage familiar languages to make the most of abstractions and reuse while enjoying access in your favorite IDEs, and testing tools!
+    link: /docs/iac/guides/migration/
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>

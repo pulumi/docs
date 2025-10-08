@@ -11,29 +11,26 @@ menu:
 aliases:
   - /docs/pulumi-cloud/esc/
 
-meta_desc: Learn how to tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications with Pulumi ESC.
+meta_desc: Learn how to tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Pulumi ESC Docs
-description: <p>Pulumi ESC is a secrets management & orchestration service for environments, secrets, and configurations.</p>
+h1: Secrets & Configuration
+description: <p>Centralized secrets management and orchestration for environments, secrets, and configuration across all your infrastructure and applications.</p>
 
 link_buttons:
   primary:
     label: Get Started
     link: /docs/esc/get-started/
-  secondary:
-    label: Install
-    link: /docs/esc/download-install/
 
 sections:
 - type: flat
   heading: Overview
   description_md: |
-    Pulumi ESC (Environments, Secrets, and Configuration) allows teams to tackle secrets and configuration complexity for modern cloud environments, alleviating maintenance burden and reducing costly mistakes, and creating a “secure by default” posture.
+    Manage secrets and configuration complexity for modern cloud environments with centralized orchestration that creates a "secure by default" posture.
 
-    Pulumi ESC is a new category of configuration as code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.
+    ESC (Environments, Secrets, and Configuration) provides configuration as code to tackle secrets sprawl and reduce costly mistakes. Pull and sync secrets from popular stores, use dynamic credentials with OIDC, and manage configuration across your infrastructure and applications.
 - type: cards-logo-label-link
   heading: Secrets Integrations
-  description: <p>Pulumi ESC integrates with all of the most popular secrets stores to pull and synchronize secrets and configuration data, including <a href="/docs/esc/integrations/dynamic-secrets/aws-secrets/">AWS Secrets Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/azure-secrets/">Azure Key Vault</a>, <a href="/docs/esc/integrations/dynamic-secrets/gcp-secrets/">GCP Secret Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/vault-secrets/">HashiCorp Vault</a>, and <a href="/docs/esc/integrations/dynamic-secrets/1password-secrets/">1Password</a>.</p>
+  description: <p>Integrate with popular secrets stores to pull and synchronize secrets and configuration data, including <a href="/docs/esc/integrations/dynamic-secrets/aws-secrets/">AWS Secrets Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/azure-secrets/">Azure Key Vault</a>, <a href="/docs/esc/integrations/dynamic-secrets/gcp-secrets/">GCP Secret Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/vault-secrets/">HashiCorp Vault</a>, and <a href="/docs/esc/integrations/dynamic-secrets/1password-secrets/">1Password</a>.</p>
   cards:
   - label: AWS Secrets Manager
     icon: aws-40
@@ -47,25 +44,6 @@ sections:
   - label: HashiCorp Vault
     icon: vault-40
     link: /docs/esc/integrations/dynamic-secrets/vault-secrets/
-  # - label: 1Password
-  #   icon: onepassword-40
-  #   link: /docs/esc/integrations/dynamic-secrets/1password-secrets/
-# - type: cards-logo-label-link
-#   heading: Clouds
-#   description: <p>Pulumi ESC supports AWS, Azure, Google Cloud, Kubernetes, and <a href="/docs/esc/integrations/">more</a>.</p>
-#   cards:
-#   - label: AWS & Pulumi ESC
-#     icon: aws-40
-#     link: /docs/esc/integrations/dynamic-login-credentials/aws-login/
-#   - label: Azure & Pulumi ESC
-#     icon: azure-40
-#     link: /docs/esc/integrations/dynamic-login-credentials/azure-login/
-#   - label: Google Cloud & Pulumi ESC
-#     icon: google-cloud-40
-#     link: /docs/esc/integrations/dynamic-login-credentials/gcp-login/
-#   - label: Kubernetes & Pulumi ESC
-#     icon: kubernetes-40
-#     link: /docs/esc/integrations/kubernetes/
 - type: cards-logo-label-link
   heading: Languages
   description: Manage configuration and secrets intuitively on any cloud using familiar languages.
@@ -83,42 +61,35 @@ sections:
     icon: icon-32-32 yaml-color-32-32
     link: /docs/reference/esc-syntax/
 - type: button-cards
-  heading: Featured Capabilities
+  heading: Capabilities
   cards:
   - heading: ESC CLI
     link: /docs/esc/cli/
-    description: An overview of the Pulumi ESC CLI.
-    primary_button_label: Get Started
-    primary_button_link: /docs/esc/cli/
-    secondary_button_label: Install
-    secondary_button_link: /docs/esc/download-install/
+    description: Command-line interface for managing environments, secrets, and configuration.
   - heading: Dynamic Login Credentials
     description: Support for short-lived OIDC login credentials for popular cloud providers.
     link: /docs/esc/integrations/dynamic-login-credentials/
   - heading: Dynamic Secrets Providers
-    description: Support for dynamic configuration providers allow Pulumi ESC to integrate with secrets stored in any other provider.
+    description: Integrate with secrets stored in external providers using dynamic configuration providers.
     link: /docs/esc/integrations/dynamic-secrets/
   - heading: ESC Webhooks
     description: Automate your processes with environment event webhooks.
     link: /docs/esc/environments/webhooks/
 - type: full-width-cards
-  heading: Featured docs
+  heading: Resources
   cards:
-  - icon: lightbulb-blue-21-21
-    heading: Detailed overview of environments
-    description: Learn more about managing environments using Pulumi ESC.
-    link: /docs/pulumi-cloud/esc/environments/
-  - icon: terminal-blue-21-21
-    heading: Integration with Docker
-    description: Pulumi ESC integrates with Docker to manage configuration and secrets while running docker commands.
+  - emoji: 📁
+    heading: Environments
+    description: Learn how to manage environments for organizing secrets and configuration.
+    link: /docs/esc/environments/
+  - emoji: 🐳
+    heading: Docker Integration
+    description: Manage configuration and secrets for Docker workflows.
     link: /docs/esc/integrations/dev-tools/docker/
-  - icon: swap-blue-21-21
-    heading: Pulumi ESC vs HashiCorp Vault
-    description: Learn about the major differences between Pulumi ESC and HashiCorp Vault.
+  - emoji: ⚖️
+    heading: ESC vs HashiCorp Vault
+    description: Learn about the major differences between ESC and HashiCorp Vault.
     link: /docs/esc/vs/vault/
-- type: blue-sparkle
-  heading: Why Pulumi ESC?
-  description: Pulumi ESC is a centralized secrets management & orchestration service. Easily access, share, and manage secrets securely on any cloud using your favorite programming languages. Pull and sync secrets with any secrets store, and consume secrets in any application, tool, or CI/CD platform.
 # - type: full-width-cards
 #   heading: Reference
 #   cards:
