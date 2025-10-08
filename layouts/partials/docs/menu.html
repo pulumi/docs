@@ -51,7 +51,7 @@
                 <ul class="list-none">
                     <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
                         <button><i class="fa fa-caret-right"></i></button>
-                        <span>Overview</span>
+                        <span>Docs Home</span>
                     </a></li>
                 </ul>
             </li>
@@ -145,6 +145,16 @@
                 </ul>
             </li>
             {{- end }}
+
+            {{/* Tutorials External Link */}}
+            <li class="" data-menu-id="tutorials-external">
+                <ul class="list-none">
+                    <li><a href="https://www.pulumi.com/tutorials/" target="_blank" rel="noopener noreferrer">
+                        <button><i class="fa fa-caret-right"></i></button>
+                        <span>Tutorials 🔗</span>
+                    </a></li>
+                </ul>
+            </li>
 
             {{/* Support Section */}}
             {{- with index site.Menus "support" }}
