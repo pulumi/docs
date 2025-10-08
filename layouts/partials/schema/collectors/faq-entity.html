@@ -26,8 +26,16 @@
 {{ $inQuestion := false }}
 
 {{ range $index, $line := $lines }}
-  {{/* Check if this is a question (H2 ending with ? or H3 header) */}}
-  {{ $isH3Question := strings.HasPrefix $line "### " }}
+  {{/* Check if this is a question (H2 ending with ? or context-aware H3) */}}
+  {{/* Context-aware H3 detection:
+       - In FAQ pages (/faq in URL): All H3s are treated as questions
+       - Elsewhere: H3 must end with ? to be a question */}}
+  {{ $isH3Question := false }}
+  {{ if strings.Contains (lower $.RelPermalink) "/faq" }}
+    {{ $isH3Question = strings.HasPrefix $line "### " }}
+  {{ else }}
+    {{ $isH3Question = and (strings.HasPrefix $line "### ") (strings.HasSuffix (strings.TrimSpace $line) "?") }}
+  {{ end }}
   {{ $isH2Question := and (strings.HasPrefix $line "## ") (strings.HasSuffix (strings.TrimSpace $line) "?") }}
   {{ if or $isH3Question $isH2Question }}
     {{/* Save previous Q&A if exists */}}
