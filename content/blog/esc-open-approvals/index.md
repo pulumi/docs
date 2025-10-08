@@ -20,13 +20,9 @@ We’re excited to announce a new feature for Pulumi ESC: [Open approvals](/docs
 
 ## Expanding on our mission to enforce compliance and security without slowing teams down
 
-You may recall that earlier this year we introduced [Approvals for updates](../approvals-in-pulumi-esc), which allows teams to require review and sign-off before applying modifications to environment configurations. We are now extending Pulumi ESC auditing and governance capabilities to enable JIT access control.
+You may recall that earlier this year we introduced [Approvals for updates](../approvals-in-pulumi-esc), which allows teams to require review and sign-off before applying modifications to environment configurations. We are now extending Pulumi ESC auditing and governance capabilities to enable Just in time (JIT) access control.
 
-Many organizations require more robust guardrails around when an environment becomes active or accessible. Some of the key considerations include:
-
-- A staging or production environment should never be opened accidentally or without explicit oversight.
-- Opening an environment may launch connections, credentials, or external access that must be governed.
-- A clear, auditable trail is critical: logging who approved the open, when, and why.
+Many organizations require more robust guardrails around when an environment becomes active or accessible. Open Approvals introduces a gate before environment activation, enforcing that every environment open is intentional, reviewed, and governed.
 
 Open Approvals introduces a gate before environment activation, enforcing that every environment open is intentional, reviewed, and governed.
 
