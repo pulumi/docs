@@ -3,7 +3,7 @@ title: Get started with Pulumi Cloud
 meta_desc: How to set up an account and get started with Pulumi Cloud.
 menu:
     platform:
-        name: Get started
+        name: Get Started
         parent: platform-home
         weight: 1
         identifier: platform-get-started

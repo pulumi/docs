@@ -9,7 +9,7 @@ redirect_to: /docs/get-started/
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Get started
+        name: Get Started
         identifier: iac-get-started
         parent: iac-home
         weight: 10

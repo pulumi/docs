@@ -8,7 +8,7 @@ no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     get-started:
-        name: Get started
+        name: Get Started
         identifier: get-started-home
         weight: 1
 aliases:

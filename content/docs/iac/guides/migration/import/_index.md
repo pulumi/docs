@@ -6,7 +6,7 @@ h1: "Importing resources"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Importing resources
+        name: Importing Resources
         parent: iac-guides-migration
         weight: 2
 aliases:

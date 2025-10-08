@@ -10,7 +10,7 @@ aliases:
 - /docs/ai/neo/get-started/
 menu:
     ai:
-        name: Get started
+        name: Get Started
         parent: ai-home
         weight: 10
         identifier: ai-get-started

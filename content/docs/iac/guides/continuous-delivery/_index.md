@@ -6,7 +6,7 @@ h1: Pulumi & Continuous delivery
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Continuous delivery
+        name: Continuous Delivery
         parent: iac-using-pulumi
         weight: 20
         identifier: iac-using-pulumi-cicd

@@ -6,7 +6,7 @@ h1: Least privilege security for Pulumi IaC and ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Least privilege security
+        name: Least Privilege Security
         parent: iac-guides-basics
         weight: 30
 aliases:
