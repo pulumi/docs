@@ -191,14 +191,14 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that's supported
         by an active community. We maintain a [public roadmap](https://github.com/orgs/pulumi/projects/44) and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "350,000+"
+        description: engineers building with Pulumi
     company:
-        number: "3,000s"
-        description: of companies
+        number: "3,700+"
+        description: companies in production
     integration:
-        number: "170+"
-        description: Cloud and service integrations
+        number: "1,000s"
+        description: of cloud and service providers
 
 key_features_below:
     items:
