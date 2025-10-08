@@ -107,7 +107,7 @@ clean:
 
 ### Unit Tests
 
-Write unit tests that validate your component's logic without creating cloud resources by using the `integration` library from the [Pulumi Provider SDK](/docs/iac/build-with-pulumi/pulumi-provider-sdk/). Here we can set up a mock provider server to catch calls for resource creation and return mock resources back.
+Write unit tests that validate your component's logic without creating cloud resources by using the `integration` library from the [Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/). Here we can set up a mock provider server to catch calls for resource creation and return mock resources back.
 
 ```go
 // ./main_test.go

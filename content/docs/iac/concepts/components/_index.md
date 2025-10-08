@@ -701,7 +701,7 @@ Under the hood, Pulumi:
 - Makes the generated SDK available to your Pulumi program in your chosen language
 
 {{< notes type="info" >}}
-For detailed information about working with local packages, including SDK generation and dependency management, see the [Local Packages](/docs/iac/build-with-pulumi/local-packages/) guide.
+For detailed information about working with local packages, including SDK generation and dependency management, see the [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) guide.
 {{< /notes >}}
 
 #### Referencing Components Locally
