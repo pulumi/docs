@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Organizing Projects & Stacks
-        parent: iac-using-pulumi
+        parent: iac-guides-basics
         weight: 50
 aliases:
 - /docs/iac/using-pulumi/organizing-projects-stacks/

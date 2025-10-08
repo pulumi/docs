@@ -1,8 +1,8 @@
 ---
-title_tag: "AI Tasks & Neo"
+title_tag: "Infrastructure AI"
 meta_desc: Pulumi Neo is an agentic AI that enables conversational infrastructure management through natural language interactions.
-title: AI Tasks & Neo
-h1: AI Tasks & Neo
+title: Infrastructure AI
+h1: Infrastructure AI
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/neo/

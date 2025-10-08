@@ -3,10 +3,11 @@ title: Local Packages
 meta_desc: This page provides an overview of working with locally generated Pulumi packages.
 menu:
   iac:
-    parent: iac-build-with-pulumi
+    parent: iac-guides-packages
     weight: 65
 aliases:
   - /docs/using-pulumi/pulumi-packages/local-packages/
+  - /docs/iac/build-with-pulumi/local-packages/
 ---
 
 Pulumi Packages are the core technology that enables cloud infrastructure resource provisioning to be defined once and made available to users in all Pulumi languages. While many packages are published to the [Pulumi Registry](/registry/), there are cases where you might need to work with locally generated packages that haven't been published.

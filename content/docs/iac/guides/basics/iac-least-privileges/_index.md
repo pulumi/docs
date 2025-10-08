@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Least privilege security
-        parent: iac-using-pulumi
+        parent: iac-guides-basics
         weight: 30
 aliases:
 - /docs/iac/using-pulumi/iac-least-privileges/

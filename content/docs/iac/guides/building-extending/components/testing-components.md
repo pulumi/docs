@@ -7,10 +7,11 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Testing Components
-        parent: iac-build-with-pulumi
+        parent: iac-guides-components
         weight: 20
 aliases:
 - /docs/iac/concepts/components/testing-components/
+- /docs/iac/build-with-pulumi/testing-components/
 ---
 
 When authoring Pulumi components, it's critical to ensure that changes won't unintentionally break Pulumi programs that consume your components, nor violate organizational policies. This page outlines different testing strategies and tools you can use to confidently update and maintain components.

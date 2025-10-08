@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Publishing packages
-        parent: iac-build-with-pulumi
+        parent: iac-guides-packages
         weight: 60
 aliases:
 - /docs/guides/pulumi-packages/how-to-author/
@@ -18,6 +18,7 @@ aliases:
 - /docs/iac/using-pulumi/pulumi-packages/authoring/
 - /docs/iac/using-pulumi/extending-pulumi/publishing-packages/
 - /docs/iac/extending-pulumi/publishing-packages/
+- /docs/iac/build-with-pulumi/publishing-packages/
 ---
 
 This guide will take you step-by-step through creating and publishing a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a component, custom provider, or an existing Terraform provider packaged for use within Pulumi. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.

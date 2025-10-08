@@ -20,14 +20,28 @@ aliases:
 
 Learn best practices to use Pulumi.
 
-## Guides
+## Categories
 
-- [Build a Component](/docs/iac/guides/build-a-component/)
-- [Least privilege security](/docs/iac/guides/iac-least-privileges/)
-- [MCP server](/docs/iac/guides/mcp-server/)
-- [Migration](/docs/iac/guides/migration/)
-- [Organizing projects & stacks](/docs/iac/guides/organizing-projects-stacks/)
-- [Packages](/docs/iac/guides/packages/)
-- [Pulumi and Continuous delivery](/docs/iac/guides/continuous-delivery/)
-- [Testing](/docs/iac/guides/testing/)
-- [Update plans](/docs/iac/guides/update-plans/)
+### [Basics](/docs/iac/guides/basics/)
+
+Fundamental guides for working with Pulumi projects and stacks.
+
+### [Building & Extending](/docs/iac/guides/building-extending/)
+
+Build custom components, providers, and packages to extend Pulumi's capabilities.
+
+### [Migration](/docs/iac/guides/migration/)
+
+Migrate to Pulumi from other infrastructure tools and platforms.
+
+### [Testing](/docs/iac/guides/testing/)
+
+Test your infrastructure code to ensure reliability and correctness.
+
+### [Continuous Delivery](/docs/iac/guides/continuous-delivery/)
+
+Integrate Pulumi into your CI/CD pipelines and workflows.
+
+### [AI Integration](/docs/iac/guides/ai-integration/)
+
+Integrate Pulumi with AI tools and workflows.

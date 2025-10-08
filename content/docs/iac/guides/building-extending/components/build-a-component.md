@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Build a Component
-        parent: iac-using-pulumi
+        parent: iac-guides-components
         weight: 10
 aliases:
 - /docs/iac/using-pulumi/build-a-component/

@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Packages
-        parent: iac-using-pulumi
+        parent: iac-guides-packages
         weight: 40
     concepts:
         weight: 10

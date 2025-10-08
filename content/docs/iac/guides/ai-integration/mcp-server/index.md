@@ -8,7 +8,7 @@ weight: 6
 menu:
     iac:
         name: MCP server
-        parent: iac-using-pulumi
+        parent: iac-guides-ai-integration
         weight: 6
 aliases:
 - /docs/iac/using-pulumi/mcp-server/
