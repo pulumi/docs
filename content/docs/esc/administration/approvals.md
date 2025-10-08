@@ -44,7 +44,7 @@ Approvals in Pulumi ESC are configured at the environment level using **approval
 
 ![Approvals ruleset configuration](/images/docs/esc/approvals/approvals-ruleset.png)
 
-### Configuring a Ruleset
+### Configuring a ruleset
 
 When creating or editing a ruleset, you can:
 
@@ -81,7 +81,7 @@ Once configured, any attempt to open the environment without an active access gr
 
 #### From the Pulumi Cloud console
 
-1. Navigate to the environment you need to access.
+1. In the Pulumi Cloud console, navigate to the environment you need to access.
 1. Select **Request Open Access**.
 1. Fill in the request form:
    - **Description**: Explain why you need access (e.g., "Investigating production API errors").
@@ -109,7 +109,7 @@ Open requests use two time-based controls to limit access:
 - **Grant expiration**: How long you have to activate (first open) the grant after it's approved. This accounts for delays in the approval process and allows you to request access in advance.
 - **Access duration**: How long the grant remains valid after you first open the environment. Once activated, the grant remains valid for the full access duration, even if that extends beyond the original expiration time.
 
-**Example**: You submit a request with a 24-hour grant expiration and a 2-hour access duration at 9:00 AM. The request is approved and applied at 11:00 AM. You now have until 11:00 AM the next day to first open the environment. If you first open it at 10:00 AM the next day (23 hours later, just before expiration), your access remains valid until 12:00 PM (2 hours after first use), even though that's one hour past the original expiration time.
+**Example**: You submit a request for a 2-hour access duration and a 24-hour grant expiration. Once the request is approved and applied, you have 24 hours to open the environment. When you first open it, you can continue to access it for 2 hours.
 
 ### Approving and applying open requests
 

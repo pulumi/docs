@@ -43,4 +43,4 @@ In many organizations, certain environments contain sensitive credentials or con
 
 Pulumi ESC supports just-in-time (JIT) access by allowing you to require approval before an environment can be opened. When enabled, users must submit an access request specifying why they need access and how long they need it. Once approved, they receive temporary access for the specified duration. All access requests and approvals are logged for full auditability.
 
-To learn how to configure and use JIT access, see [Open approvals in Pulumi ESC](/docs/esc/administration/approvals#open-approvals). 
+To learn how to configure and use JIT access, see [Open approvals in Pulumi ESC](/docs/esc/administration/approvals#open-approvals).
