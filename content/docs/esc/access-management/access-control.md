@@ -36,3 +36,11 @@ You can grant environment-wise permissions to members of a Team. There are four 
 * `Environment opener`: Team members will have `open` permissions
 * `Environment editor`: Team members will have `write` permissions
 * `Environment admin`: Team members will have `write` and `delete` permissions
+
+### Just-in-time access
+
+In many organizations, certain environments contain sensitive credentials or configuration that should only be accessible on a temporary, as-needed basis. For example, an on-call engineer may need to open a production environment to troubleshoot an incident, but shouldn't have standing access outside of those situations.
+
+Pulumi ESC supports just-in-time (JIT) access by allowing you to require approval before an environment can be opened. When enabled, users must submit an access request specifying why they need access and how long they need it. Once approved, they receive temporary access for the specified duration. All access requests and approvals are logged for full auditability.
+
+To learn how to configure and use JIT access, see [Open approvals in Pulumi ESC](/docs/esc/administration/approvals#open-approvals). 

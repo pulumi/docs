@@ -54,4 +54,83 @@ When creating or editing a ruleset, you can:
 - **Allow or prevent self‑approval**, determining if the request creator can approve their own changes.
 - **Require re‑approval when changes are modified**, ensuring that updates to an approved request must be reviewed again.
 
-Once a ruleset is enabled, direct writes to the environment will be blocked. Instead, users will create **change requests**, which must be reviewed and approved according to the rules you’ve defined. After the required approvals are granted, the changes can be applied to the environment.
+Once a ruleset is enabled, direct writes to the environment will be blocked. Instead, users will create **change requests**, which must be reviewed and approved according to the rules you've defined. After the required approvals are granted, the changes can be applied to the environment.
+
+## Open approvals
+
+Open approvals extend Pulumi ESC's approval system to control when environments can be opened (activated). While update approvals govern configuration changes, open approvals enable just-in-time (JIT) access patterns by requiring review and sign-off before users can access an environment's secrets and credentials. Open approvals are useful when you want to grant temporary, auditable access to sensitive environments.
+
+### How open approvals work
+
+Open approvals add an additional gate on top of standard permission checks. Users must have `open` permission on an environment and an active access grant to open it.
+
+When an open approval ruleset is enabled on an environment, users with `open` permission cannot open the environment directly. Instead, they must:
+
+1. Submit an **open request** specifying the reason for access and desired access duration.
+1. Wait for the required approvals from designated reviewers.
+1. Once approved, apply the request to activate the access grant.
+1. Open the environment within the granted time window.
+
+### Configuring open approvals
+
+Open approvals use the same ruleset configuration as update approvals. To enable open approvals, follow the steps in [Configuring a Ruleset](#configuring-a-ruleset), but select **Open** (instead of **Update**) for the **Action**.
+
+Once configured, any attempt to open the environment without an active access grant will be denied.
+
+### Creating open requests
+
+#### From the Pulumi Cloud console
+
+1. Navigate to the environment you need to access.
+1. Select **Request Open Access**.
+1. Fill in the request form:
+   - **Description**: Explain why you need access (e.g., "Investigating production API errors").
+   - **Access duration**: How long you need access after first opening the environment (e.g., 2 hours).
+   - **Grant expiration**: How long the approval remains valid before it must be activated (e.g., 24 hours).
+1. Submit the request.
+
+The request will appear in the **Approvals** tab for designated reviewers.
+
+#### From the CLI
+
+Use the `esc env open-request` command to create an access request:
+
+```bash
+esc env open-request my-org/my-project/prod-env \
+  --access-duration=2h \
+  --grant-expiration=24h \
+  --description="Investigating production issue #1234"
+```
+
+### Understanding duration and expiration
+
+Open requests use two time-based controls to limit access:
+
+- **Grant expiration**: How long you have to activate (first open) the grant after it's approved. This accounts for delays in the approval process and allows you to request access in advance.
+- **Access duration**: How long the grant remains valid after you first open the environment. Once activated, the grant remains valid for the full access duration, even if that extends beyond the original expiration time.
+
+**Example**: You submit a request with a 24-hour grant expiration and a 2-hour access duration at 9:00 AM. The request is approved and applied at 11:00 AM. You now have until 11:00 AM the next day to first open the environment. If you first open it at 10:00 AM the next day (23 hours later, just before expiration), your access remains valid until 12:00 PM (2 hours after first use), even though that's one hour past the original expiration time.
+
+### Approving and applying open requests
+
+Reviewers can approve open requests from the **Approvals** tab in Pulumi Cloud. Once the required number of approvals is met, the request must be applied to activate the access grant. You can apply the request from the Pulumi Cloud console by selecting the approved request and choosing **Apply**.
+
+### Opening an environment with an active grant
+
+Once your open request is applied, you can open the environment normally:
+
+```bash
+esc env open my-org/my-project/prod-env
+```
+
+The environment will open successfully as long as:
+
+- You have `open` permission on the environment.
+- You have activated your access grant within the grant expiration window.
+- You are within the access duration window after first opening the environment.
+
+If you try to open the environment without an active grant, you'll receive an error message indicating that approval is required.
+
+### Imported environments
+
+If an environment imports other environments that also have open approval rulesets enabled, you'll need valid access grants for all of them. When you create an open request, Pulumi ESC automatically creates requests for any imported environments that require approval, making the process more convenient. However, each request must be approved and applied separately by the appropriate reviewers.
