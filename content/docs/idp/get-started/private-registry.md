@@ -86,13 +86,13 @@ export class PetAbstracted extends pulumi.ComponentResource {
 {{% choosable language python %}}
 
 ```python
-## Use Python docstrings to annotate inputs and outputs.
+# Use Python docstrings to annotate inputs and outputs.
 class PetAbstractedArgs(TypedDict):
     size: pulumi.Input[str]
     """This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name."""
 
 class AppImage(pulumi.ComponentResource):
-    public readonly pet_name: pulumi.Output[str]
+    pet_name: pulumi.Output[str]
     """This output provides the generated pet name."""
 ```
 
@@ -105,7 +105,7 @@ type PetAbstractedArgs struct {
 	Size pulumi.StringInput 	`pulumi:"size"`
 }
 
-func (f *StackSettingsArgs) Annotate(a infer.Annotator) {
+func (f *PetAbstractedArgs) Annotate(a infer.Annotator) {
 	a.Describe(&f.Size, "This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name.")
 }
 
