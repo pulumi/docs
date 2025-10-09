@@ -22,7 +22,7 @@ This creates:
 Run the verification script to check all renamed content files:
 
 ```bash
-./verify-aliases.sh
+python3 verify-aliases.py
 ```
 
 This will output:
@@ -70,11 +70,26 @@ Total content files renamed: 341
   ⚠️  aliases-suspicious.txt
 ```
 
+## Fixing Issues
+
+If the verification script finds MISSING or SUSPICIOUS files:
+
+```bash
+# Generate fixes for all issues
+python3 generate-fixes.py
+
+# Review the sample fixes shown, then apply
+python3 apply-fixes.py
+
+# Re-verify to confirm 100% correct
+python3 verify-aliases.py
+```
+
 ## Workflow
 
 1. Make file renames/moves in your branch
 2. Run `./extract-renames.sh`
-3. Run `./verify-aliases.sh`
-4. Fix any MISSING or SUSPICIOUS files
-5. Re-run `./verify-aliases.sh` until it passes (exit 0)
+3. Run `python3 verify-aliases.py`
+4. If issues found, use `generate-fixes.py` and `apply-fixes.py`
+5. Re-run `python3 verify-aliases.py` until it passes (exit 0)
 6. Merge your PR with confidence!

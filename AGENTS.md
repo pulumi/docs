@@ -69,6 +69,8 @@ Do not substitute other tools or commands.
 
 ## Moving and Deleting Files
 
+**⚠️ SEO CRITICAL**: Missing aliases on moved files will break search engine rankings and external links. Always verify aliases after file moves.
+
 - **Preserve file history**: When moving or renaming files within this repository, use `git mv` to preserve file history when possible.
 - **Hugo content files**: Add an `aliases` field to the frontmatter of the moved file, listing the old paths:
   ```yaml
@@ -76,6 +78,7 @@ Do not substitute other tools or commands.
   - /old/path/to/file/
   - /another/old/path/
   ```
+- **Verification toolset**: After moving files, use the scripts in `/scripts/alias-verification/` to verify all moved files have proper aliases. See the README in that directory for usage details.
 - **Non-Hugo files**: For generated content or files outside Hugo's content management, add redirects to the S3 redirect files located in `/scripts/redirects/`.
   - When adding S3 redirects, place entries in topic-appropriate files (e.g., `neo-redirects.txt` for Neo-related content).
   - S3 redirect format: `source-path|destination-url` (e.g., `docs/old/path/index.html|/docs/new/path/`)
