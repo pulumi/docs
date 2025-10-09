@@ -69,3 +69,6 @@ _vendor/
 
 #Claude settings
 **/.claude/settings.local.json
+
+# mise local
+mise.local.toml

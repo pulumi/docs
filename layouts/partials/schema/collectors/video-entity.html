@@ -50,7 +50,7 @@
     "@id" (printf "%s#video" .Permalink)
     "name" $videoTitle
     "description" $videoDescription
-    "uploadDate" ($publishDate.Format "2006-01-02")
+    "uploadDate" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
     "thumbnailUrl" (printf "https://img.youtube.com/vi/%s/maxresdefault.jpg" $primaryVideoId)
     "embedUrl" (printf "https://www.youtube.com/embed/%s" $primaryVideoId)
     "contentUrl" (printf "https://www.youtube.com/watch?v=%s" $primaryVideoId)
