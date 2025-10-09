@@ -10,7 +10,7 @@ menu:
     weight: 1
 meta_desc: Pulumi Platform provides cloud-hosted capabilities that extend infrastructure as code with managed deployments, drift detection, and operational automation.
 meta_image: /images/docs/meta-images/docs-meta.png
-h1: Pulumi Platform
+h1: Pulumi Cloud Platform
 description: <p>Cloud-hosted capabilities that extend Pulumi's infrastructure as code with managed deployments, drift detection, and operational automation.</p>
 aliases:
   - /docs/pulumi-cloud/
@@ -24,7 +24,7 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Pulumi Platform features extend your infrastructure as code workflows with cloud-hosted automation, state management, and operational capabilities. These features run in Pulumi Cloud and integrate seamlessly with your IaC programs to provide enterprise-grade deployment automation, drift detection, and governance.
+    The Pulumi Cloud platform extends your infrastructure as code workflows with cloud-hosted automation, state management, and operational capabilities. These features run in Pulumi Cloud and integrate seamlessly with your IaC programs to provide enterprise-grade deployment automation, drift detection, and governance.
 
 - type: full-width-cards
   heading: Capabilities
