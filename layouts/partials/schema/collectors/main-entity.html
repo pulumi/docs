@@ -9,8 +9,12 @@
 {{ else if eq .Type "tutorials" }}
   {{ $entity = partial "schema/collectors/howto-entity.html" . }}
 
-{{ else if and (eq .Type "docs") (or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq")) }}
-  {{/* FAQ pages get FAQPage schema */}}
+{{ else if or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq") (strings.Contains (lower .Title) "frequently asked") (eq .Type "what-is") }}
+  {{/* Pages with FAQ content get FAQPage schema:
+       - Pages with /faq in URL
+       - Pages with "faq" or "frequently asked" in title
+       - All what-is pages (consistent Q&A format)
+  */}}
   {{ $entity = partial "schema/collectors/faq-entity.html" . }}
 
 {{ else if eq .Type "docs" }}
