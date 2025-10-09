@@ -22,7 +22,7 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/concepts/state/).
 {{% /notes %}}
 
-[Pulumi Deployments](/docs/platform/deployments/) is fully supported in Kubernetes-managed self-hosted environments. If you're using Kubernetes to manage your self-hosted Pulumi Cloud installation, you can enable Pulumi Deployments features by configuring a Kubernetes-native deployment pool in Pulumi Cloud and installing one or more [customer-managed agents](/docs/platform/deployments/customer-managed-agents/) into your installation's Kubernetes cluster.
+[Pulumi Deployments](/docs/deployments/deployments/) is fully supported in Kubernetes-managed self-hosted environments. If you're using Kubernetes to manage your self-hosted Pulumi Cloud installation, you can enable Pulumi Deployments features by configuring a Kubernetes-native deployment pool in Pulumi Cloud and installing one or more [customer-managed agents](/docs/deployments/deployments/customer-managed-agents/) into your installation's Kubernetes cluster.
 
 To do so, follow these steps:
 

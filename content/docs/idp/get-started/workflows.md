@@ -24,7 +24,7 @@ No-code workflows are currently available for projects created through the [New 
 To create a no-code stack, start by selecting New Project in the left navigation. Choose a template from the catalog, and select next. Provide any required configuration, and select “Deployments - no-code” as the deployment method. Select the Create Project button, which will deploy the stack and store the config in ESC – no VCS commits required.
 
 {{% notes type="info" %}}
-No-code workflows require [Pulumi Deployments](/docs/platform/deployments/)
+No-code workflows require [Pulumi Deployments](/docs/deployments/deployments/)
 {{% /notes %}}
 
 To create additional stacks in the project, navigate to a project and select Add Stack in the top right corner. From there, select the Pulumi Deployments No-code option and deploy the stack.

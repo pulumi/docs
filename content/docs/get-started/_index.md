@@ -23,7 +23,7 @@ aliases:
 
 Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-code/) and [secrets management](/what-is/what-is-secrets-management/) platform that allows you to use familiar programming languages and tools to automate, secure and manage everything you run in the cloud.
 
-Pulumi IaC is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Platform](/docs/platform/) to make managing infrastructure secure, reliable, and hassle-free.
+Pulumi IaC is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Platform](/docs/deployments/) to make managing infrastructure secure, reliable, and hassle-free.
 
 Select one of the following options to get started:
 

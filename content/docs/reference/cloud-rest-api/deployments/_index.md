@@ -8,8 +8,8 @@ menu:
         weight: 4.5
 aliases:
   - /docs/reference/cloud-rest-api/deployments/
-  - /docs/platform/deployments/api
-  - /docs/platform/deployments/api/
+  - /docs/deployments/deployments/api
+  - /docs/deployments/deployments/api/
   - /docs/reference/deployments-rest-api
   - /docs/reference/deployments-rest-api/
   - /docs/intro/deployments/api

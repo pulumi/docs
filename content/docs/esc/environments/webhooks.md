@@ -39,7 +39,7 @@ Organization webhooks can be managed on the Organization Settings page. Environm
 
 ![Organization webhooks](/images/docs/reference/service/webhooks/org-webhooks.png)
 
-Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/platform/webhooks).
+Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/deployments/webhooks).
 
 {{% notes "info" %}}
 Webhooks do not guarantee event order. You should not assume events will be received in the order they occurred.
@@ -210,9 +210,9 @@ and optionally choosing which events you want delivered using [event groups and 
 
 ### Deployment Webhooks
 
-The Deployment webhook destination lets you trigger updates on your stacks via [Pulumi Deployments](/docs/platform/deployments/), usually in response to `environment_revision_created` or `imported_environment_changed` events. This enables you to keep dependent stacks up to date with your environment changes automatically.
+The Deployment webhook destination lets you trigger updates on your stacks via [Pulumi Deployments](/docs/deployments/deployments/), usually in response to `environment_revision_created` or `imported_environment_changed` events. This enables you to keep dependent stacks up to date with your environment changes automatically.
 
-Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/platform/deployments/reference/#deployment-settings).
+Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/deployments/deployments/reference/#deployment-settings).
 
 ### Generic JSON Webhooks
 

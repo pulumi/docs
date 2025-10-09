@@ -206,8 +206,8 @@ in the "OAuth App Policy" settings.
 
 ##### GitHub App
 
-You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/platform/deployments/reference/#deployment-settings) on new projects.
-See the GitHub app [installation instructions](/docs/platform/deployments/reference/#github-app-installation) for more details.
+You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/deployments/deployments/reference/#deployment-settings) on new projects.
+See the GitHub app [installation instructions](/docs/deployments/deployments/reference/#github-app-installation) for more details.
 
 {{% notes "info" %}}
 Granting the app access to _some_ or _all_ of your GitHub repos will impact how the New Project Wizard behaves.

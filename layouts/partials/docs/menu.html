@@ -16,8 +16,8 @@
     {{ $currentSection = "idp" }}
 {{ else if hasPrefix $page.Path "/docs/ai" }}
     {{ $currentSection = "ai" }}
-{{ else if hasPrefix $page.Path "/docs/platform" }}
-    {{ $currentSection = "platform" }}
+{{ else if hasPrefix $page.Path "/docs/deployments" }}
+    {{ $currentSection = "deployments" }}
 {{ else if hasPrefix $page.Path "/docs/migration" }}
     {{ $currentSection = "migration" }}
 {{ else if hasPrefix $page.Path "/docs/administration" }}
@@ -74,11 +74,11 @@
             </li>
             {{- end }}
 
-            {{/* Platform Features Section */}}
-            {{- with index site.Menus "platform" }}
-            <li class="expandable expanded{{ if eq $currentSection "platform" }} expanded{{ end }}" data-menu-id="platform-top">
+            {{/* Deployments & Workflows Section */}}
+            {{- with index site.Menus "deployments" }}
+            <li class="expandable expanded{{ if eq $currentSection "deployments" }} expanded{{ end }}" data-menu-id="deployments-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "platform" "menuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "deployments" "menuEntries" .) }}
                 </ul>
             </li>
             {{- end }}

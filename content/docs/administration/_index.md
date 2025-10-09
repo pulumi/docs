@@ -8,6 +8,7 @@ menu:
     weight: 1
 aliases:
   - /docs/administration/
+  - /docs/pulumi-cloud/
 ---
 
 Comprehensive administration guide for Pulumi services across your organization.

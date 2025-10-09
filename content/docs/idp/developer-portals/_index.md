@@ -37,7 +37,7 @@ We support Organization Templates on the Enterprise and Business Critical editio
 
 ## New Project Wizard
 
-The [New Project Wizard](/docs/idp/developer-portals/new-project-wizard) allows anyone in your organization to pick a template they want to install and walk through configuring the deployment of that template. There is support for configuring [Pulumi Deployments](/docs/platform/deployments/get-started/#new-project-wizard) automatically so that the template can be deployed without needing the Pulumi CLI locally or any other CI/CD configuration.  Just a few clicks, and you have deployed your infrastructure.
+The [New Project Wizard](/docs/idp/developer-portals/new-project-wizard) allows anyone in your organization to pick a template they want to install and walk through configuring the deployment of that template. There is support for configuring [Pulumi Deployments](/docs/deployments/deployments/get-started/#new-project-wizard) automatically so that the template can be deployed without needing the Pulumi CLI locally or any other CI/CD configuration.  Just a few clicks, and you have deployed your infrastructure.
 
 ## Pulumi Backstage Plugin
 

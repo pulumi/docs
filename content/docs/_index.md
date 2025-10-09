@@ -29,7 +29,7 @@ sections:
     link: /docs/esc/
   - heading: Platform
     description: "Cloud-hosted deployments, drift detection, state management, and operational automation"
-    link: /docs/platform/
+    link: /docs/deployments/
   - heading: Internal Developer Platform
     description: "Self-service infrastructure with templates, guardrails, and developer portals at scale"
     link: /docs/idp/

@@ -19,7 +19,7 @@ Pulumi Cloud provides a New Project Wizard to help walk your organization's memb
 By using the wizard, users can generate projects from your [Organization Templates](/docs/idp/developer-portals/templates), commit and push code to GitHub, and trigger an initial deployment -- all in a few clicks and without leaving the browser.
 
 {{% notes "info" %}}
-Make sure you [install](/docs/platform/deployments/reference/#github-app-installation) the Pulumi GitHub App to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/pulumi-cloud/deployments).
+Make sure you [install](/docs/deployments/deployments/reference/#github-app-installation) the Pulumi GitHub App to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/pulumi-cloud/deployments).
 {{% /notes %}}
 
 The New Project Wizard can be found in the left sidebar:
@@ -34,7 +34,7 @@ If you've configured your Pulumi organization to work with [Pulumi Deployments](
 
 ![New Project Wizard Deployment Method](/docs/idp/developer-portals/new-project-wizard/npw-deploy-method.png)
 
-For more detailed instructions on how to use the New Project Wizard with Pulumi Deployments, see [Get Started with Deployments](/docs/platform/deployments/get-started/#new-project-wizard).
+For more detailed instructions on how to use the New Project Wizard with Pulumi Deployments, see [Get Started with Deployments](/docs/deployments/deployments/get-started/#new-project-wizard).
 
 ## GitHub OAuth Application
 

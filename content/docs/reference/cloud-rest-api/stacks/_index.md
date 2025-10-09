@@ -660,7 +660,7 @@ Status: 200 OK
 
 ## Transfer Stack
 
-Transfers the stack from one organization in the Pulumi Cloud to a different organization. The user calling this operation must have the necessary [stack permissions](/docs/platform/projects-and-stacks#stack-permissions) for this operation to be successful.
+Transfers the stack from one organization in the Pulumi Cloud to a different organization. The user calling this operation must have the necessary [stack permissions](/docs/deployments/projects-and-stacks#stack-permissions) for this operation to be successful.
 
 This operation will return a 409 response error if an update is currently in progress.
 

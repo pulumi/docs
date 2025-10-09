@@ -269,3 +269,30 @@ iac:
     url: https://www.pulumi.com/docs/reference/pkg/java/
     weight: 1
     identifier: iac-languages-java-sdk
+
+reference:
+  - name: TypeScript (Node.js)
+    parent: reference-sdks
+    url: https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/
+    weight: 1
+    identifier: reference-sdks-javascript
+  - name: Python
+    parent: reference-sdks
+    url: https://www.pulumi.com/docs/reference/pkg/python/pulumi/
+    weight: 2
+    identifier: reference-sdks-python
+  - name: Go
+    parent: reference-sdks
+    url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
+    weight: 3
+    identifier: reference-sdks-go
+  - name: .NET
+    parent: reference-sdks
+    url: https://www.pulumi.com/docs/reference/pkg/dotnet/Pulumi/Pulumi.html
+    weight: 4
+    identifier: reference-sdks-dotnet
+  - name: Java
+    parent: reference-sdks
+    url: https://www.pulumi.com/docs/reference/pkg/java/
+    weight: 5
+    identifier: reference-sdks-java

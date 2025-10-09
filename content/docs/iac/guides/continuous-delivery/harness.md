@@ -730,6 +730,6 @@ For additional troubleshooting, see our [CI/CD troubleshooting guide](/docs/iac/
 
 - Explore the [Pulumi Harness provider documentation](/registry/packages/harness/)
 - Learn about [Pulumi ESC](/docs/esc/) for advanced secrets and configuration management
-- Check out [Pulumi Deployments](/docs/platform/deployments/) for additional CI/CD capabilities
+- Check out [Pulumi Deployments](/docs/deployments/deployments/) for additional CI/CD capabilities
 - Review [Harness CI/CD documentation](https://docs.harness.io/category/zgffarnh1m-ci-category) for platform-specific features
 - Explore [Harness IDP documentation](https://developer.harness.io/docs/internal-developer-portal) for internal developer platform capabilities

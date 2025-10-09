@@ -110,7 +110,7 @@ To transfer a stack from your individual account to an organization, navigate to
 
 From there, select the transfer destination and tick any stacks you'd like to transfer.
 
-To learn more about this process, see [Transferring Stacks](/docs/platform/projects-and-stacks#transferring-stacks).
+To learn more about this process, see [Transferring Stacks](/docs/deployments/projects-and-stacks#transferring-stacks).
 
 ## Pricing
 

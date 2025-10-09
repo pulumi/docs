@@ -140,7 +140,7 @@ POST /api/stacks/{organization}/{project}/{stack}/deployments/schedules
 | `stack`             | string                                                                           | path  | stack name                                                                                          |
 | `scheduleCron`      | string                                                                           | body  | cron expression for when to run the pulumi operation                                                |
 | `scheduleOnce`      | string                                                                           | body  | ISO 8601 timestamp specifying when to run the pulumi operation. Example: `2024-04-20T00:00:00.000Z` |
-| `request`           | [CreateDeploymentRequest](/docs/platform/deployments/api/#create-deployment) | body  | The create deployment request object that will be executed on every invocation                      |
+| `request`           | [CreateDeploymentRequest](/docs/deployments/deployments/api/#create-deployment) | body  | The create deployment request object that will be executed on every invocation                      |
 
 Note: Exactly one of `scheduleCron` and `scheduleOnce` must be set.
 
@@ -162,7 +162,7 @@ POST /api/stacks/{organization}/{project}/{stack}/deployments/schedules/{schedul
 | `scheduleID`        | string                                                                           | path  | schedule ID that you want to update                                                                 |
 | `scheduleCron`      | string                                                                           | body  | cron expression for when to run the pulumi operation                                                |
 | `scheduleOnce`      | string                                                                           | body  | ISO 8601 timestamp specifying when to run the pulumi operation. Example: `2024-04-20T00:00:00.000Z` |
-| `request`           | [CreateDeploymentRequest](/docs/platform/deployments/api/#create-deployment) | body  | The create deployment request object that will be executed on every invocation                      |
+| `request`           | [CreateDeploymentRequest](/docs/deployments/deployments/api/#create-deployment) | body  | The create deployment request object that will be executed on every invocation                      |
 
 ## Schedule Management
 

@@ -24,9 +24,9 @@ allow_long_title: true
 
 ## What is Pulumi Deployments?
 
-[Pulumi Deployments](/docs/platform/deployments/) is a fully managed service designed to automate cloud infrastructure. Pulumi Deployments provides the building blocks designed for scaling your cloud infrastructure, with tools to power public and private cloud platforms, APIs, and self-service infrastructure portals. These options provide flexibility to incorporate Pulumi Deployments into your existing workflows.
+[Pulumi Deployments](/docs/pulumi-cloud/deployments/) is a fully managed service designed to automate cloud infrastructure. Pulumi Deployments provides the building blocks designed for scaling your cloud infrastructure, with tools to power public and private cloud platforms, APIs, and self-service infrastructure portals. These options provide flexibility to incorporate Pulumi Deployments into your existing workflows.
 
-Deployments can be triggered through multiple methods: using the [REST API](/docs/platform/deployments/reference/#deployments-rest-api), integrating with GitHub via [push-to-deploy](/docs/platform/deployments/reference/#github-app-installation), or initiating directly from the [Pulumi Cloud console](/docs/platform/deployments/reference/#pulumi-console).
+Deployments can be triggered through multiple methods: using the [REST API](/docs/pulumi-cloud/deployments/reference/#deployments-rest-api), integrating with GitHub via [push-to-deploy](/docs/pulumi-cloud/deployments/reference/#github-app-installation), or initiating directly from the [Pulumi Cloud console](/docs/pulumi-cloud/deployments/reference/#pulumi-console).
 
 ## Set up a new Pulumi Deployment
 
@@ -83,7 +83,7 @@ Configure the behavior of Deployments, including when to trigger new Deployments
 Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end-to-end with Pulumi and can be set on each stack. However, by creating an [environment](/docs/pulumi-cloud/esc) with Pulumi ESC, you can centralize secrets and set up OIDC for secure authentication. This allows you to manage and share sensitive configuration data across multiple stacks efficiently.
 {{% /notes %}}
 
-A full description of each setting is available on the [deployment settings](/docs/platform/deployments/reference/#deployment-settings) docs page.
+A full description of each setting is available on the [deployment settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings) docs page.
 
 ### Deployment method
 
@@ -91,7 +91,7 @@ Finally, select Pulumi Deployments as the deployment method and **Create project
 
 ![Animation of how to create a new project in Pulumi](./pulumi-new-project-wizard.gif)
 
-When your deployment is complete, you can manage and deploy your infrastructure from the Pulumi Cloud console. For example, in the stack's **Actions** tab, you can use the **[Click to Deploy](https://www.pulumi.com/docs/platform/deployments/reference/#click-to-deploy)** button to trigger another deployment.
+When your deployment is complete, you can manage and deploy your infrastructure from the Pulumi Cloud console. For example, in the stack's **Actions** tab, you can use the **[Click to Deploy](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#click-to-deploy)** button to trigger another deployment.
 
 This feature is useful for day-to-day operational tasks, such as debugging a stuck stack or rectifying drift by performing a refresh. With click to deploy, you can execute these actions without needing to pull the stack and its source code onto your local machine.
 
@@ -115,6 +115,6 @@ In this tutorial, you set up a basic click to deploy stack using Pulumi’s new 
 
 To learn more about creating and managing deployments with Pulumi Cloud, take a look at the following resources:
 
-- **Deployment Triggers**: Understand the different methods to trigger a deployment, such as using the REST API, clicking a button in the Pulumi Console, or using GitHub push-to-deploy. Check out the [Pulumi documentation](https://www.pulumi.com/docs/platform/deployments/reference/#deployment-triggers).
+- **Deployment Triggers**: Understand the different methods to trigger a deployment, such as using the REST API, clicking a button in the Pulumi Console, or using GitHub push-to-deploy. Check out the [Pulumi documentation](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#deployment-triggers).
 
-- **Deployment permissions**: Configure and manage deployment permissions to control access and ensure security. Detailed information is available in the [Pulumi documentation](https://www.pulumi.com/docs/platform/deployments/reference/#deployment-permissions).
+- **Deployment permissions**: Configure and manage deployment permissions to control access and ensure security. Detailed information is available in the [Pulumi documentation](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#deployment-permissions).

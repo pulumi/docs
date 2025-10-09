@@ -76,5 +76,5 @@ By default, the user who creates a stack is granted admin permissions on that st
 ## Related Resources
 
 - [Teams](/docs/administration/organizations-teams/teams)
-- [Projects & Stacks](/docs/platform/projects-and-stacks)
+- [Projects & Stacks](/docs/deployments/projects-and-stacks)
 - [Access Tokens](/docs/administration/access-identity/access-tokens)

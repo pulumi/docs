@@ -398,4 +398,4 @@ curl \
 
 ## Webhooks
 
-For comprehensive information about webhooks including setup, configuration, event filtering, and complete API reference, see the [Webhooks documentation](/docs/platform/webhooks/) and [Webhooks REST API reference](/docs/reference/cloud-rest-api/webhooks/).
+For comprehensive information about webhooks including setup, configuration, event filtering, and complete API reference, see the [Webhooks documentation](/docs/deployments/webhooks/) and [Webhooks REST API reference](/docs/reference/cloud-rest-api/webhooks/).
