@@ -12,6 +12,7 @@ menu:
     identifier: pulumi-cloud-access-management-oidc-client-github
 aliases:
 - /docs/pulumi-cloud/oidc/client/github/
+- /docs/pulumi-cloud/access-management/oidc-client/github/
 ---
 
 This document outlines the steps required to configure Pulumi to accept Github id_tokens to be exchanged by Organization access tokens.

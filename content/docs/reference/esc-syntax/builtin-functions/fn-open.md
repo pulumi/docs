@@ -3,6 +3,8 @@ title: fn::open
 title_tag: fn::open
 h1: fn::open
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/builtin-functions/fn-open/
 menu:
   reference:
     parent: esc-ref-builtin-functions

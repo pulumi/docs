@@ -14,6 +14,7 @@ aliases:
     - /docs/using-pulumi/debugging/
     - /docs/concepts/debugging/
     - /docs/iac/concepts/debugging/
+    - /docs/iac/troubleshooting/debugging/debugger-attachment/
 ---
 
 Because Pulumi uses general purpose programming languages to provision cloud resources, you can take advantage of native debugging tools to troubleshoot your infrastructure definitions.

@@ -8,6 +8,7 @@ menu:
         weight: 19
 aliases:
   - /docs/reference/cloud-rest-api/services/
+  - /docs/pulumi-cloud/reference/services/
 ---
 
 Services are a way to group and organize related resources in Pulumi Cloud. The Services API allows you to create, manage, and organize collections of resources that work together to provide a specific capability.

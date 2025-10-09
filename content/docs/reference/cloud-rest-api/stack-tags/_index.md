@@ -8,6 +8,7 @@ menu:
         weight: 22
 aliases:
   - /docs/reference/cloud-rest-api/stack-tags/
+  - /docs/pulumi-cloud/reference/stack-tags/
 ---
 
 Stack tags are key-value metadata attached to Pulumi stacks. They can be used for organization, filtering, and to store additional information about your stacks.

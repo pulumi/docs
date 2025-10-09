@@ -8,6 +8,7 @@ menu:
         weight: 1
 aliases:
   - /docs/reference/cloud-rest-api/api-basics/
+  - /docs/pulumi-cloud/reference/api-basics/
 ---
 
 This page covers the fundamental requirements for using the Pulumi Cloud REST API, including endpoint URLs, authentication, and required headers.

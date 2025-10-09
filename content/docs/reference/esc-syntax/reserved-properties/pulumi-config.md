@@ -3,6 +3,8 @@ title: pulumiConfig
 title_tag: pulumiConfig
 h1: pulumiConfig
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/reserved-properties/pulumi-config/
 menu:
   reference:
     parent: esc-ref-reserved-properties

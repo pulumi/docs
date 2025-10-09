@@ -22,6 +22,7 @@ aliases:
 - /docs/intro/pulumi-service/organizations/
 - /docs/intro/pulumi-cloud/organizations/
 - /docs/pulumi-cloud/organizations/
+- /docs/pulumi-cloud/admin/organizations/
 ---
 
 Organizations are a space for you to collaborate on shared projects and stacks.

@@ -16,6 +16,7 @@ aliases:
 - /docs/console/accounts/saml/aad/
 - /docs/guides/saml/aad/
 - /docs/administration/access-identity/saml/aad/
+- /docs/pulumi-cloud/access-management/saml/entra/
 ---
 
 This guide walks you through configuring Microsoft Entra ID as a SAML SSO identity provider

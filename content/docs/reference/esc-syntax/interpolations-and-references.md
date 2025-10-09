@@ -3,6 +3,8 @@ title: Interpolations and References
 title_tag: Interpolations and References
 h1: Interpolations and References
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/interpolations-and-references/
 menu:
   reference:
     parent: reference-esc-syntax

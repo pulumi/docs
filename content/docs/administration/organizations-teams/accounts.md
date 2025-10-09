@@ -19,6 +19,7 @@ aliases:
 - /docs/intro/pulumi-service/accounts/
 - /docs/intro/pulumi-cloud/accounts/
 - /docs/pulumi-cloud/accounts/
+- /docs/pulumi-cloud/access-management/accounts/
 ---
 
 To create your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.com) and sign up. You may use any of the following identities to sign up:

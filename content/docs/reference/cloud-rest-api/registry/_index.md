@@ -8,6 +8,7 @@ menu:
         weight: 14
 aliases:
   - /docs/reference/cloud-rest-api/registry/
+  - /docs/pulumi-cloud/reference/registry/
 ---
 
 The Pulumi Registry hosts reusable packages and templates for infrastructure deployments. The Registry API allows you to list, retrieve, publish, and manage packages and templates in the Pulumi Registry.

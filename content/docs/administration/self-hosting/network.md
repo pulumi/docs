@@ -15,6 +15,7 @@ aliases:
   - /docs/guides/self-hosted/requirements/network/
   - /docs/pulumi-cloud/self-hosted/network/
   - /docs/administration/self-hosting/network/
+  - /docs/pulumi-cloud/admin/self-hosted/network/
 ---
 
 {{% notes type="info" %}}

@@ -11,6 +11,7 @@ menu:
         weight: 10
 aliases:
     - /docs/troubleshooting/#conflict
+    - /docs/iac/troubleshooting/common-issues/update-conflicts/
 ---
 
 Run `pulumi cancel` to cancel the update.

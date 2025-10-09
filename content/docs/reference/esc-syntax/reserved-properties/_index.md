@@ -3,6 +3,8 @@ title: Reserved Properties
 title_tag: Reserved Properties
 h1: Reserved Properties
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/reserved-properties/
 menu:
   reference:
     parent: reference-esc-syntax

@@ -12,6 +12,7 @@ menu:
     identifier: pulumi-cloud-access-management-rbac-teams
 aliases:
 - /docs/administration/access-identity/rbac/teams/
+- /docs/pulumi-cloud/access-management/rbac/teams/
 ---
 
 {{% notes "info" %}}

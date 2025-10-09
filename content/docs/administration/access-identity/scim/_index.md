@@ -11,6 +11,7 @@ menu:
     identifier: administration-access-identity-scim
 aliases:
   - /docs/guides/scim/
+  - /docs/pulumi-cloud/access-management/scim/
 ---
 
 The [Pulumi Cloud](https://app.pulumi.com) supports System for Cross-domain Identity Management (SCIM) 2.0 integration with different identity providers. SCIM enables you to manage your users and groups centrally in your Identity Provider (IdP) and then synchronize those users and groups to the Pulumi Cloud. This support requires Pulumi Business Critical. To learn more about the capabilities of Pulumi Business Critical, see the [pricing page](/pricing/).

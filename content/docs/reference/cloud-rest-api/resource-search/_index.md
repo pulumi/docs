@@ -8,6 +8,7 @@ menu:
         weight: 15
 aliases:
   - /docs/reference/cloud-rest-api/resource-search/
+  - /docs/pulumi-cloud/reference/resource-search/
 ---
 
 Resource Search provides powerful querying capabilities for resources managed by Pulumi. The Resource Search API allows you to find resources across your organization using various filters and criteria.

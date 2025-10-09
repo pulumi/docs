@@ -22,6 +22,7 @@ aliases:
 - /docs/concepts/inputs-outputs/function-serialization/
 - /docs/concepts/function-serialization/
 - /docs/iac/concepts/function-serialization/
+- /docs/iac/concepts/miscellaneous/function-serialization/
 ---
 
 {{% notes "info" %}}

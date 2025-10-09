@@ -15,6 +15,7 @@ aliases:
 - /docs/guides/adopting/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/
 - /docs/iac/adopting-pulumi/
+- /docs/iac/adopting-pulumi/migrating-to-pulumi/
 ---
 
 Learn how Pulumi compares to other solutions, how to migrate to Pulumi, use the converters to convert your code to Pulumi, and use import to import your resource to Pulumi.

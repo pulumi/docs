@@ -3,6 +3,8 @@ title: environments
 title_tag: environments
 h1: environments
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/builtin-properties/environments/
 menu:
   reference:
     parent: esc-ref-builtin-properties

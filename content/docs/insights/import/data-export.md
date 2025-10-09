@@ -11,6 +11,7 @@ menu:
 aliases:
   - /docs/intro/insights/export/
   - /docs/pulumi-cloud/insights/export/
+  - /docs/insights/export/
 ---
 
 Pulumi Insights data export allows you to export any set of Pulumi Insights search results to a CSV file. You can, in turn, use this CSV file to join to any external data in a data warehouse, perform ETL transforms, etc.

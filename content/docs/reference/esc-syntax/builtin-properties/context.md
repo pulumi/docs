@@ -3,6 +3,8 @@ title: context
 title_tag: context
 h1: context
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/builtin-properties/context/
 menu:
   reference:
     parent: esc-ref-builtin-properties

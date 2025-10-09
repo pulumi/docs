@@ -9,6 +9,7 @@ menu:
         identifier: pulumi-onboarding-guide
 aliases:
   - /docs/platform/get-started/onboarding-guide/
+  - /docs/pulumi-cloud/get-started/onboarding-guide/
 ---
 
 In this guide, you’ll find everything you need to know about using Pulumi within your organization, from setting things up to recommended usage patterns and practices.

@@ -3,6 +3,8 @@ title: fn::concat
 title_tag: fn::concat
 h1: fn::concat
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/builtin-functions/fn-concat/
 menu:
   reference:
     parent: esc-ref-builtin-functions

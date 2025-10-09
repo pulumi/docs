@@ -8,6 +8,7 @@ menu:
         weight: 23
 aliases:
   - /docs/reference/cloud-rest-api/stack-updates/
+  - /docs/pulumi-cloud/reference/stack-updates/
 ---
 
 Stack updates are operations that create, update, or delete resources in a Pulumi stack. The Stack Updates API allows you to list updates, check status, and view detailed events for each operation.

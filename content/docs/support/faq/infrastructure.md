@@ -17,6 +17,7 @@ aliases:
     - /docs/support/faq/
     - /docs/iac/support/faq/
     - /docs/iac/support/version-support/
+    - /docs/iac/faq/
 ---
 
 ## Automatic Rollbacks

@@ -12,6 +12,7 @@ menu:
         identifier: pulumi-cloud-what-is-it
 aliases:
   - /docs/platform/get-started/what-is-it/
+  - /docs/pulumi-cloud/get-started/what-is-it/
 ---
 
 So you've chosen to use Pulumi infrastructure as code, and are now deciding how to manage your state and whether Pulumi Cloud is a good fit? Or you've heard Pulumi is open source but aren't entirely clear on what part is fully open and free, and what is a paid Pulumi product? This page will give you a better understanding about the answers to these questions and everything in between.

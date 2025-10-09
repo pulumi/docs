@@ -15,6 +15,7 @@ menu:
 aliases:
 - /docs/intro/pulumi-cloud/accounts/saml/
 - /docs/guides/saml/sso/
+- /docs/pulumi-cloud/access-management/saml/sso/
 ---
 
 This document walks through the important aspects of configuring any SAML (Security Assertion Markup Language) 2.0 identity provider to work

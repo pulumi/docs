@@ -17,6 +17,7 @@ aliases:
 - /docs/intro/pulumi-service/audit-logs/
 - /docs/intro/pulumi-cloud/audit-logs/
 - /docs/pulumi-cloud/audit-logs/
+- /docs/pulumi-cloud/admin/audit-logs/
 ---
 {{% notes "info" %}}
 Audit Logs are available to organizations using the Enterprise and Business Critical editions.

@@ -8,6 +8,7 @@ menu:
         weight: 21
 aliases:
   - /docs/reference/cloud-rest-api/stack-policy/
+  - /docs/pulumi-cloud/reference/stack-policy/
 ---
 
 Stack policy APIs allow you to retrieve information about policy groups and policy packs associated with a Pulumi stack. Policies define governance rules that are enforced during stack updates.

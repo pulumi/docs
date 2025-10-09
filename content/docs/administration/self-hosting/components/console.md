@@ -13,6 +13,7 @@ menu:
 aliases:
   - /docs/guides/self-hosted/components/console/
   - /docs/pulumi-cloud/self-hosted/components/console/
+  - /docs/pulumi-cloud/admin/self-hosted/components/console/
 ---
 
 {{% notes type="info" %}}

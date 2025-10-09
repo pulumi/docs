@@ -8,6 +8,7 @@ menu:
         weight: 16
 aliases:
   - /docs/reference/cloud-rest-api/resources-under-management/
+  - /docs/pulumi-cloud/reference/resources-under-management/
 ---
 
 Resources Under Management (RUM) provides information about the cloud resources managed by Pulumi across your organization. The RUM API allows you to track resource counts over time with various time aggregations.

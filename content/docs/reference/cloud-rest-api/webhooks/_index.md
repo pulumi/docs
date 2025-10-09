@@ -8,6 +8,7 @@ menu:
         weight: 30
 aliases:
   - /docs/reference/cloud-rest-api/webhooks/
+  - /docs/pulumi-cloud/reference/webhooks/
 ---
 
 The Webhooks API allows you to create and manage webhooks for organizations and stacks. Webhooks notify external services of events happening within your Pulumi organization, such as stack updates, deployments, or policy violations.

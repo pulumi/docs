@@ -12,6 +12,7 @@ menu:
     identifier: pulumi-cloud-access-management-rbac-permissions
 aliases:
 - /docs/administration/access-identity/rbac/permissions/
+- /docs/pulumi-cloud/access-management/rbac/permissions/
 ---
 
 Permissions in Pulumi Cloud are predefined bundles of [scopes](../scopes) that are commonly used together. They provide a convenient way to grant related access rights to an [entity](./#entities) (resource) or set of entities (resources).

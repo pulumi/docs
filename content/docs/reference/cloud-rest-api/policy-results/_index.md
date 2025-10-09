@@ -8,6 +8,7 @@ menu:
         weight: 13
 aliases:
   - /docs/reference/cloud-rest-api/policy-results/
+  - /docs/pulumi-cloud/reference/policy-results/
 ---
 
 Policy Results is a part of Pulumi Insights that provides information about policy violations detected during stack updates and resource scanning. The Policy Results API allows you to retrieve information about policy violations across your organization, enabling governance and compliance monitoring through the Pulumi Insights platform.

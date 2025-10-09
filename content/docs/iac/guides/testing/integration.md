@@ -15,6 +15,7 @@ menu:
 aliases:
     - /docs/guides/testing/integration/
     - /docs/using-pulumi/testing/integration/
+    - /docs/iac/concepts/testing/integration/
 ---
 
 Integration testing focuses on black-box testing of Pulumi programs. An integration test runs the program in combination with the Pulumi CLI to deploy infrastructure to an ephemeral environment. It verifies the properties of the created resources and then destroys the infrastructure again.

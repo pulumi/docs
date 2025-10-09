@@ -8,6 +8,7 @@ menu:
         weight: 7
 aliases:
   - /docs/reference/cloud-rest-api/oauth-token-exchange/
+  - /docs/pulumi-cloud/reference/oauth-token-exchange/
 ---
 
 The OAuth Token Exchange API allows you to exchange external identity tokens (like those from OIDC providers) for Pulumi access tokens. This enables automated workflows to authenticate with Pulumi Cloud without storing long-lived credentials.

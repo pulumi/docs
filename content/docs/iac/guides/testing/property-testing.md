@@ -15,6 +15,7 @@ menu:
 aliases:
     - /docs/guides/testing/property-testing/
     - /docs/using-pulumi/testing/property-testing/
+    - /docs/iac/concepts/testing/property-testing/
 ---
 
 [Policy as Code](/docs/using-pulumi/crossguard/) (also known as "CrossGuard") is Pulumi's offering to set guardrails and enforce compliance for cloud resources. Typically, policy packs would run across multiple projects and stacks to apply organization-wide rules.

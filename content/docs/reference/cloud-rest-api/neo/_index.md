@@ -8,6 +8,7 @@ menu:
         weight: 4.5
 aliases:
   - /docs/reference/cloud-rest-api/neo/
+  - /docs/pulumi-cloud/reference/neo/
 ---
 
 The Agent Tasks API allows you to create and manage AI agent tasks in Pulumi Cloud. These endpoints enable you to create tasks, monitor their status, respond to agent requests, and retrieve task events.

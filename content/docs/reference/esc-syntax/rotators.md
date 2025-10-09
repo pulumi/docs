@@ -3,6 +3,8 @@ title: Rotators
 title_tag: Rotators
 h1: Rotators
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/rotators/
 menu:
   reference:
     parent: reference-esc-syntax

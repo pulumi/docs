@@ -3,6 +3,8 @@ title: environmentVariables
 title_tag: environmentVariables
 h1: environmentVariables
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/reserved-properties/environment-variables/
 menu:
   reference:
     parent: esc-ref-reserved-properties

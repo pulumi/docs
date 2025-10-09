@@ -13,6 +13,7 @@ menu:
 aliases:
 - /docs/intro/pulumi-service/scopes/org-settings
 - /docs/intro/pulumi-cloud/scopes/org-settings
+- /docs/pulumi-cloud/access-management/rbac/scopes/org-settings/
 ---
 
 This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../../permissions#entity-types) and group.

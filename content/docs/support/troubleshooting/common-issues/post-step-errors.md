@@ -4,6 +4,8 @@ meta_desc: "Learn how to handle post-step event errors and determine if you've e
 title: Post-step event errors
 h1: Post-step event returned an error
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+  - /docs/iac/troubleshooting/common-issues/post-step-errors/
 menu:
     support:
         name: Post-Step Event Errors

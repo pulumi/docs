@@ -8,6 +8,7 @@ menu:
         weight: 2
 aliases:
   - /docs/reference/cloud-rest-api/audit-logs/
+  - /docs/pulumi-cloud/reference/audit-logs/
 ---
 
 Audit Logs provide a record of user actions and system events within Pulumi Cloud. The Audit Logs API allows you to retrieve and export audit log entries for compliance, security, and monitoring purposes.

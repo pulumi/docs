@@ -3,6 +3,8 @@ title: fn::fromJSON
 title_tag: fn::fromJSON
 h1: fn::fromJSON
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/builtin-functions/fn-from-json/
 menu:
   reference:
     parent: esc-ref-builtin-functions

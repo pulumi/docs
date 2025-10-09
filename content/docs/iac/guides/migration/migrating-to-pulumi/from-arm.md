@@ -13,6 +13,7 @@ aliases:
 - /docs/guides/adopting/from_azure/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-azure/
+- /docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/
 ---
 
 <img src="/logos/tech/azure_arm.png" align="right" class="h-32 px-8 pb-4">

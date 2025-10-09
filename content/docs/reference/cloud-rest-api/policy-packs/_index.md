@@ -8,6 +8,7 @@ menu:
         weight: 12
 aliases:
   - /docs/reference/cloud-rest-api/policy-packs/
+  - /docs/pulumi-cloud/reference/policy-packs/
 ---
 
 Policy Packs are collections of policies that define governance rules for infrastructure deployments. The Policy Packs API allows you to create, manage, and apply policy packs to enforce governance rules across your organization.

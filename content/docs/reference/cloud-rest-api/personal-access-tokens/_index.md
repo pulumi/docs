@@ -8,6 +8,7 @@ menu:
         weight: 10
 aliases:
   - /docs/reference/cloud-rest-api/personal-access-tokens/
+  - /docs/pulumi-cloud/reference/personal-access-tokens/
 ---
 
 Personal Access Tokens (PATs) are credentials that can be used to authenticate with the Pulumi Cloud API instead of using interactive login flows. The Personal Access Tokens API allows you to manage these tokens programmatically.

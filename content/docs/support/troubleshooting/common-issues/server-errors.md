@@ -11,6 +11,7 @@ menu:
         weight: 20
 aliases:
     - /docs/troubleshooting/#internal-server-error
+    - /docs/iac/troubleshooting/common-issues/server-errors/
 ---
 
 The Pulumi CLI interacts with the Pulumi web service throughout the course of an update. If the service is unable to process an update, it is possible that users of the CLI may see this error message throughout the course of an update.

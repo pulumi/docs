@@ -12,6 +12,7 @@ aliases:
   - /docs/intro/insights/search/
   - /docs/pulumi
   - /docs/pulumi-cloud/insights/search/
+  - /docs/insights/search/
 ---
 
 Resource Search allows you to explore your resources, stacks and projects in detail.

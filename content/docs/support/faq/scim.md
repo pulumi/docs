@@ -13,6 +13,7 @@ menu:
 aliases:
   - /docs/administration/access-identity/scim/faq/
   - /docs/guides/scim/faq/
+  - /docs/pulumi-cloud/access-management/scim/faq/
 ---
 
 ## FAQ

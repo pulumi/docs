@@ -3,6 +3,8 @@ title: files
 title_tag: files
 h1: files
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/reserved-properties/files/
 menu:
   reference:
     parent: esc-ref-reserved-properties

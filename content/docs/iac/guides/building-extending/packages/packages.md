@@ -17,6 +17,7 @@ aliases:
 - /docs/using-pulumi/pulumi-packages/
 - /docs/iac/packages-and-automation/pulumi-packages/
 - /docs/iac/using-pulumi/pulumi-packages/
+- /docs/iac/concepts/packages/
 ---
 
 Pulumi Packages are the core technology that enables cloud infrastructure resource provisioning to be defined once, and made available to users in all Pulumi languages. With Pulumi Packages, [Resources and Components](/docs/concepts/resources/) can be written once, in your preferred language, and made available in all the other languages supported by Pulumi.

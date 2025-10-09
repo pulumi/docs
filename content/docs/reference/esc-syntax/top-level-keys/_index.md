@@ -3,6 +3,8 @@ title: Top-Level Keys
 title_tag: Top-Level Keys
 h1: Top-Level Keys
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/top-level-keys/
 menu:
   reference:
     parent: reference-esc-syntax

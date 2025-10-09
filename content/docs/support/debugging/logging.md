@@ -14,6 +14,7 @@ aliases:
 - /docs/intro/concepts/logging/
 - /docs/concepts/logging/
 - /docs/iac/concepts/logging/
+- /docs/iac/troubleshooting/debugging/logging/
 ---
 
 Pulumi provides two main types of logging to help with debugging and troubleshooting: CLI logging for diagnosing Pulumi engine operations and program logging for emitting custom diagnostics from your Pulumi programs.

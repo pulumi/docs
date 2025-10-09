@@ -13,6 +13,7 @@ menu:
 aliases:
   - /docs/guides/self-hosted/components/api/
   - /docs/pulumi-cloud/self-hosted/components/api/
+  - /docs/pulumi-cloud/admin/self-hosted/components/api/
 ---
 
 {{% notes type="info" %}}

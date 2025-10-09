@@ -8,6 +8,7 @@ menu:
         weight: 17
 aliases:
   - /docs/reference/cloud-rest-api/schedules/
+  - /docs/pulumi-cloud/reference/schedules/
 ---
 
 Schedules allow you to automate recurring operations on your Pulumi stacks. The Schedules API provides endpoints for creating and managing drift detection, time-to-live (TTL), and custom scheduled operations.

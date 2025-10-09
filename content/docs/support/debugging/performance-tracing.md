@@ -4,6 +4,8 @@ meta_desc: "Learn how to trace Pulumi deployments to understand performance bott
 title: Performance and tracing
 h1: Performance and tracing
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+  - /docs/iac/troubleshooting/debugging/performance-tracing/
 menu:
     support:
         name: Performance and Tracing

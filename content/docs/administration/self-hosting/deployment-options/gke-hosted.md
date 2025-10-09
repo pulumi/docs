@@ -13,6 +13,7 @@ menu:
 aliases:
   - /docs/guides/self-hosted/gke-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/gke-hosted/
+  - /docs/pulumi-cloud/admin/self-hosted/deployment-options/gke-hosted/
 ---
 
 The [GKE-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/gke-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Google Kubernetes Engine (GKE).

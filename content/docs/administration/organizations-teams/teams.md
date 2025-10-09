@@ -9,5 +9,7 @@ aliases:
   - /docs/intro/console/teams/
   - /docs/intro/pulumi-service/teams/
   - /docs/intro/pulumi-cloud/teams/
+  - /docs/pulumi-cloud/access-management/teams/
 redirect_to: /docs/pulumi-cloud/access-management/rbac/teams
 ---
+

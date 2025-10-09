@@ -4,6 +4,8 @@ meta_desc: Learn about role-based access control in Pulumi Cloud and how it help
 title: "Role-Based Access Control (RBAC)"
 h1: "Role-Based Access Control (RBAC)"
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+  - /docs/pulumi-cloud/access-management/rbac/
 menu:
   administration:
     parent: administration-access-identity

@@ -13,6 +13,7 @@ menu:
 aliases:
   - /docs/support/faq/secrets-config/
   - /docs/pulumi-cloud/esc/faq
+  - /docs/esc/faq/
 ---
 
 ## Why did Pulumi launch ESC?

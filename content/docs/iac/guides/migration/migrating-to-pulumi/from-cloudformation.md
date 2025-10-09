@@ -13,6 +13,7 @@ aliases:
 - /docs/guides/adopting/from_aws/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-aws/
+- /docs/iac/adopting-pulumi/migrating-to-pulumi/from-cloudformation/
 ---
 
 <img src="/logos/tech/aws_cloudformation.png" align="right" class="h-32 px-8 pb-4">

@@ -11,6 +11,7 @@ menu:
 aliases:
   - /docs/reference/esc-syntax/
   - /docs/esc/syntax-reference
+  - /docs/esc/reference/
 ---
 
 This is a reference for the various constructs defined by ESC.

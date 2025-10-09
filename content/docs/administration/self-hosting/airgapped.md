@@ -12,6 +12,7 @@ menu:
         identifier: administration-security-compliance-self-hosted-airgapped
 aliases:
 - /docs/administration/self-hosting/airgapped/
+- /docs/pulumi-cloud/admin/self-hosted/airgapped/
 ---
 
 {{% notes type="info" %}}

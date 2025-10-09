@@ -17,6 +17,7 @@ aliases:
 - /docs/iac/guides/testing/
 - /docs/guides/testing/
 - /docs/using-pulumi/testing/
+- /docs/iac/concepts/testing/
 ---
 
 Because Pulumi uses general purpose programming languages to provision cloud resources, you can take advantage of native testing frameworks and perform **automated tests** of your infrastructure.

@@ -18,6 +18,7 @@ aliases:
 - /docs/intro/pulumi-cloud/team-access-tokens/
 - /docs/pulumi-cloud/access-management/organization-access-tokens/
 - /docs/pulumi-cloud/access-management/team-access-tokens/
+- /docs/pulumi-cloud/access-management/access-tokens/
 ---
 
 Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usage of the Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/pulumi-cloud/cloud-rest-api/).

@@ -8,6 +8,7 @@ menu:
         weight: 24
 aliases:
   - /docs/reference/cloud-rest-api/stacks/
+  - /docs/pulumi-cloud/reference/stacks/
 ---
 
 The Stacks API allows you to create and manage Pulumi stacks, which are isolated, independently configurable instances of your Pulumi program.

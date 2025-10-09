@@ -12,6 +12,7 @@ menu:
     identifier: pulumi-cloud-access-management-rbac-roles
 aliases:
 - /docs/administration/access-identity/rbac/roles/
+- /docs/pulumi-cloud/access-management/rbac/roles/
 ---
 
 A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or machine token) can access and what they can do with them. Roles allow you to apply [permissions](../permissions) to a set of [entities](../permissions#entities) and assign this access to a principal.

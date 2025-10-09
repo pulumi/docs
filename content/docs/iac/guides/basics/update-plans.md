@@ -19,6 +19,7 @@ aliases:
 - /docs/intro/vs/
 - /docs/concepts/plans/
 - /docs/concepts/update-plans/
+- /docs/iac/concepts/update-plans/
 ---
 
 The result of previews can be saved to an _update plan_, this can then be used during a later update to

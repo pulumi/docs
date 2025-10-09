@@ -15,6 +15,7 @@ aliases:
 - /docs/reference/service/saml-okta/
 - /docs/console/accounts/saml/okta/
 - /docs/guides/saml/okta/
+- /docs/pulumi-cloud/access-management/saml/okta/
 ---
 
 This guide walks you through configuring Okta as a SAML SSO identity provider (IdP) for the Pulumi Cloud.

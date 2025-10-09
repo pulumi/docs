@@ -12,6 +12,7 @@ menu:
     identifier: pulumi-cloud-access-management-scim-onelogin
 aliases:
   - /docs/guides/scim/onelogin/
+  - /docs/pulumi-cloud/access-management/scim/onelogin/
 ---
 
 This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.

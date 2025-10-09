@@ -3,6 +3,8 @@ title: fn::toBase64
 title_tag: fn::toBase64
 h1: fn::toBase64
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/builtin-functions/fn-to-base64/
 menu:
   reference:
     parent: esc-ref-builtin-functions

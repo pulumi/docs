@@ -13,6 +13,7 @@ menu:
 aliases:
 - /docs/intro/pulumi-service/scopes/environments
 - /docs/intro/pulumi-cloud/scopes/environments
+- /docs/pulumi-cloud/access-management/rbac/scopes/environments/
 ---
 
 This document defines all the available [scopes](../) in Pulumi Cloud assignable to specific environments or sets of environments.

@@ -11,6 +11,7 @@ menu:
         identifier: support-faq-pulumi-cloud
 aliases:
   - /docs/support/pulumi-cloud-faq/
+  - /docs/pulumi-cloud/faq/
 ---
 
 ## General

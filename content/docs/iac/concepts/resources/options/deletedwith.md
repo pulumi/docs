@@ -12,6 +12,7 @@ menu:
 aliases:
   - /docs/intro/concepts/resources/options/deletedwith/
   - /docs/concepts/options/deletedwith/
+  - /docs/iac/concepts/options/deletedwith/
 ---
 
 The `deletedWith` resource option allows you to skip resource deletion if a another resource is being deleted as well.

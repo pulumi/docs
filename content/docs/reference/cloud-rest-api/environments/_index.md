@@ -8,6 +8,7 @@ menu:
         weight: 5
 aliases:
   - /docs/reference/cloud-rest-api/environments/
+  - /docs/pulumi-cloud/reference/environments/
 ---
 
 Pulumi ESC (Environments, Secrets, and Configuration) provides a centralized way to manage infrastructure configuration. The Environments API allows you to create, manage, and use environments for your Pulumi deployments.

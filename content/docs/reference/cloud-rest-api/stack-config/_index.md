@@ -8,6 +8,7 @@ menu:
         weight: 20
 aliases:
   - /docs/reference/cloud-rest-api/stack-config/
+  - /docs/pulumi-cloud/reference/stack-config/
 ---
 
 {{% notes type="info" %}}

@@ -13,6 +13,7 @@ menu:
 aliases:
 - /docs/intro/pulumi-service/scopes/stacks
 - /docs/intro/pulumi-cloud/scopes/stacks
+- /docs/pulumi-cloud/access-management/rbac/scopes/stacks/
 ---
 
 This document defines all the available [scopes](../) in Pulumi Cloud assignable to specific stacks or sets of stacks.

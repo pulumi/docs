@@ -8,6 +8,7 @@ menu:
         weight: 9
 aliases:
   - /docs/reference/cloud-rest-api/organizations/
+  - /docs/pulumi-cloud/reference/organizations/
 ---
 
 The Organizations API allows you to manage Pulumi Cloud organizations, including members, teams, access tokens, and webhooks. Organizations are the primary management boundary in Pulumi Cloud.

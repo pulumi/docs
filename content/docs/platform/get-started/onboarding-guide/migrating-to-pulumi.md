@@ -1,6 +1,8 @@
 ---
 title: Migrating to Pulumi
 meta_desc: Focus on building momentum with early wins while establishing practices that will scale with your organization.
+aliases:
+  - /docs/pulumi-cloud/get-started/onboarding-guide/migrating-to-pulumi/
 weight: 4
 menu:
     cloud:

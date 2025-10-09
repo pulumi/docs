@@ -11,6 +11,7 @@ menu:
     identifier: administration-security-compliance-customer-managed-keys
 aliases:
   - /docs/pulumi-cloud/customer-managed-keys/
+  - /docs/pulumi-cloud/admin/customer-managed-keys/
 ---
 
 {{% notes "info" %}}

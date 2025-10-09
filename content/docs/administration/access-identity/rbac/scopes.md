@@ -12,6 +12,7 @@ menu:
 aliases:
 - /docs/intro/pulumi-service/scopes/
 - /docs/intro/pulumi-cloud/scopes/
+- /docs/pulumi-cloud/access-management/rbac/scopes/
 ---
 
 Scopes are the most granular level of access control in Pulumi Cloud's RBAC system. Each scope represents a specific action that can be performed on a resource, such as reading stack configurations or updating environment settings. Scopes are the building blocks of [permissions](../permissions), which are then bundled into [roles](../roles) to create comprehensive access control configurations.

@@ -8,6 +8,7 @@ menu:
         weight: 6
 aliases:
   - /docs/reference/cloud-rest-api/insight-accounts/
+  - /docs/pulumi-cloud/reference/insight-accounts/
 ---
 
 Pulumi Insights enables visibility into cloud resources and compliance monitoring. The Insights Accounts API allows you to create, list, and manage accounts for various cloud providers.

@@ -9,6 +9,7 @@ menu:
         identifier: platform-get-started
 aliases:
   - /docs/platform/get-started/
+  - /docs/pulumi-cloud/get-started/
 ---
 
 {{% notes type="info" %}}

@@ -14,6 +14,7 @@ aliases:
   - /docs/reference/deployments-rest-api/
   - /docs/intro/deployments/api
   - /docs/intro/deployments/api/
+  - /docs/pulumi-cloud/reference/deployments/
 ---
 
 The Deployments API allows you to configure and manage Pulumi Deployments, which enable you to execute Pulumi updates and other operations through the Pulumi Cloud. With this API, you can configure deployment settings for your stacks, trigger deployments, view deployment status and logs, and manage deployment execution.

@@ -8,6 +8,7 @@ menu:
         weight: 3
 aliases:
   - /docs/reference/cloud-rest-api/data-export/
+  - /docs/pulumi-cloud/reference/data-export/
 ---
 
 Data Export allows you to download resource data from Pulumi Cloud for offline analysis or integration with other systems. The Data Export API provides endpoints for exporting resource data in various formats.

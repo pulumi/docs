@@ -12,6 +12,7 @@ menu:
 aliases:
   - /docs/intro/concepts/resources/options/parent/
   - /docs/concepts/options/parent/
+  - /docs/iac/concepts/options/parent/
 ---
 
 The `parent` resource option specifies a parent for a resource, which has the following effects:

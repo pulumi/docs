@@ -12,6 +12,7 @@ menu:
     identifier: administration-security-compliance-customer-managed-keys-aws-kms
 aliases:
   - /docs/pulumi-cloud/customer-managed-keys/aws-kms/
+  - /docs/pulumi-cloud/admin/customer-managed-keys/aws-kms/
 ---
 
 This guide provides step-by-step instructions for configuring AWS Key Management Service (KMS) to use [Customer Managed

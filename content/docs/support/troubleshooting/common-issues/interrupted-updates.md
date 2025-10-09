@@ -11,6 +11,7 @@ menu:
         weight: 60
 aliases:
     - /docs/troubleshooting/#interrupted-update-recovery
+    - /docs/iac/troubleshooting/common-issues/interrupted-updates/
 ---
 
 If the Pulumi CLI is interrupted when performing a deployment, you may see a warning message that looks something like this on your next update:

@@ -13,6 +13,7 @@ menu:
 aliases:
 - /docs/intro/pulumi-service/scopes/insights-accounts
 - /docs/intro/pulumi-cloud/scopes/insights-accounts
+- /docs/pulumi-cloud/access-management/rbac/scopes/insights-accounts/
 ---
 
 This document defines all the available [scopes](../) in Pulumi Cloud assignable to specific insights accounts or sets of insights accounts.

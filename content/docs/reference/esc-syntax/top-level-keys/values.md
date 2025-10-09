@@ -3,6 +3,8 @@ title: values
 title_tag: values
 h1: values
 meta_desc: Pulumi ESC allows you to compose and manage hierarchical collections of configuration and secrets and consume them in various ways.
+aliases:
+  - /docs/esc/reference/top-level-keys/values/
 menu:
   reference:
     parent: esc-ref-top-level-keys
