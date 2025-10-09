@@ -249,4 +249,3 @@ VPC-enabled Lambda functions need to create Elastic Network Interfaces (ENIs) on
 
 **Can I use the same security group for Lambda and RDS?**
 No, it's better practice to use separate security groups. Configure your RDS security group to allow inbound traffic from the Lambda security group on the database port (e.g., 5432 for PostgreSQL).
-

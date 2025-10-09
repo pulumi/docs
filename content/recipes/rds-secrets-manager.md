@@ -172,4 +172,3 @@ When you enable manageMasterUserPassword, AWS can automatically rotate the passw
 
 **What happens to my current password when I enable this feature?**
 When you enable manageMasterUserPassword on an existing instance, AWS generates a new random password and stores it in Secrets Manager. Your old password is no longer valid. Ensure your applications are configured to use Secrets Manager before enabling this feature.
-

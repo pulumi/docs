@@ -217,4 +217,3 @@ Use aws.autoscaling.Policy resources to define target tracking or step scaling p
 
 **Can I use Auto Scaling with a load balancer?**
 Yes, and it's recommended for production. Attach your Auto Scaling Group to an Application Load Balancer or Network Load Balancer. The load balancer distributes traffic across healthy instances, and you can configure health checks to let Auto Scaling know when to replace unhealthy instances.
-

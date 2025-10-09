@@ -297,4 +297,3 @@ Yes, you can add custom domain names (CNAMEs) to your CloudFront distribution. Y
 
 **How much does CloudFront cost compared to serving directly from S3?**
 CloudFront costs approximately $0.085/GB for the first 10TB in the US (cheaper for higher volumes), compared to S3's $0.09/GB for data transfer out to the internet. CloudFront is usually cost-effective for frequently accessed content due to caching, and provides better performance globally.
-

@@ -354,4 +354,3 @@ Your VPC must have at least two subnets in different availability zones for high
 
 **How do I access my EKS cluster after creation?**
 Use kubectl with the AWS CLI to authenticate. Run 'aws eks update-kubeconfig --name your-cluster-name' to add the cluster to your kubeconfig. You may also need to configure the aws-auth ConfigMap to grant access to additional IAM users or roles.
-
