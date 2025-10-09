@@ -1,0 +1,54 @@
+{{/* Returns HowTo entity with FAQ questions for recipe pages */}}
+
+{{/* Initialize HowTo schema for recipes - these are instructional content */}}
+{{ $schema := dict
+  "@type" "HowTo"
+  "@id" "#main-content"
+  "url" .Permalink
+  "name" (or .Params.title_tag .Title)
+  "inLanguage" "en-US"
+}}
+
+{{/* Add description if available */}}
+{{ with (or .Params.meta_desc .Summary) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{/* Build FAQ questions from front matter */}}
+{{ if .Params.faq }}
+  {{ $questions := slice }}
+
+  {{ range .Params.faq }}
+    {{ $qa := dict
+      "@type" "Question"
+      "name" .question
+      "acceptedAnswer" (dict
+        "@type" "Answer"
+        "text" (.answer | plainify)
+      )
+    }}
+    {{ $questions = $questions | append $qa }}
+  {{ end }}
+
+  {{/* Add questions as mainEntity if we have any */}}
+  {{ if $questions }}
+    {{ $schema = merge $schema (dict "mainEntity" $questions) }}
+  {{ end }}
+{{ end }}
+
+{{/* Add publisher reference */}}
+{{ $schema = merge $schema (dict
+  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{/* Add breadcrumb reference */}}
+{{ $schema = merge $schema (dict
+  "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
+) }}
+
+{{/* Add keywords from tags */}}
+{{ with .Params.tags }}
+  {{ $schema = merge $schema (dict "keywords" (delimit . ", ")) }}
+{{ end }}
+
+{{ return $schema }}

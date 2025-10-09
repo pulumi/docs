@@ -1,0 +1,87 @@
+{{ define "hero" }}
+    <div class="bg-gradient-to-br from-purple-600 to-blue-600 py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">{{ .Title }}</h1>
+            <p class="text-xl md:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto">{{ .Params.meta_desc }}</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/docs/get-started/" class="inline-flex items-center px-6 py-3 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl">
+                    <i class="fas fa-rocket mr-2"></i>Get started
+                </a>
+                <a href="/registry/" class="inline-flex items-center px-6 py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition-all shadow-lg hover:shadow-xl">
+                    <i class="fas fa-book mr-2"></i>Browse registry
+                </a>
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "main" }}
+    <div class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 mb-12 prose prose-lg max-w-none">
+                {{ .Content }}
+            </div>
+
+            {{ if .Pages }}
+            {{ $categories := dict }}
+            {{ range .Pages }}
+                {{ $cat := .Params.category | default "General" }}
+                {{ $list := index $categories $cat | default slice }}
+                {{ $categories = merge $categories (dict $cat ($list | append .)) }}
+            {{ end }}
+
+            {{ range $category, $pages := $categories }}
+            <div class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                    {{ if eq $category "Compute" }}
+                        <i class="fas fa-microchip text-purple-600 mr-3"></i>
+                    {{ else if eq $category "Database" }}
+                        <i class="fas fa-database text-blue-600 mr-3"></i>
+                    {{ else if eq $category "Storage" }}
+                        <i class="fas fa-hdd text-green-600 mr-3"></i>
+                    {{ else if eq $category "Networking" }}
+                        <i class="fas fa-network-wired text-orange-600 mr-3"></i>
+                    {{ else }}
+                        <i class="fas fa-layer-group text-gray-600 mr-3"></i>
+                    {{ end }}
+                    {{ $category }}
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    {{ range $pages }}
+                    <a href="{{ .RelPermalink }}" class="block bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200 hover:border-purple-300 group">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                                {{ .Title }}
+                                <i class="fas fa-arrow-right text-purple-600 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-block"></i>
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">{{ .Params.meta_desc }}</p>
+                            {{ if .Params.tags }}
+                            <div class="flex flex-wrap gap-2">
+                                {{ range .Params.tags }}
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                                    {{ . }}
+                                </span>
+                                {{ end }}
+                            </div>
+                            {{ end }}
+                        </div>
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+
+            <div class="bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg shadow-lg p-8 md:p-12 text-center mt-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to get started?</h2>
+                <p class="text-lg md:text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                    Deploy your infrastructure in minutes using Pulumi's modern infrastructure as code platform.
+                </p>
+                <a href="/docs/get-started/" class="inline-flex items-center px-8 py-4 bg-white text-purple-700 font-bold rounded-lg hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl text-lg">
+                    <i class="fas fa-rocket mr-2"></i>Start your journey
+                </a>
+            </div>
+        </div>
+    </div>
+{{ end }}

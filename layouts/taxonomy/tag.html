@@ -1,13 +1,53 @@
 {{ define "main" }}
-    <div class="container mx-auto px-4 py-8">
-        <div class="lg:flex">
-            <div class="lg:w-3/12 pr-8">
-                {{ partial "blog/series-list-sidebar.html" . }}
-            </div>
+    {{ $recipePosts := where .Data.Pages "Section" "recipes" }}
+    {{ $blogPosts := where .Data.Pages "Section" "blog" }}
 
-            <div class="lg:w-7/12">
-                {{ $authorData := index $.Site.Data.team.team .Data.Term }}
-                {{ $blogPosts := where .Data.Pages "Section" "blog" }}
+    {{ if gt (len $recipePosts) 0 }}
+        {{/* Recipe Tag Page */}}
+        <div class="bg-gradient-to-br from-purple-600 to-blue-600">
+            <div class="container mx-auto px-4 py-12 text-white text-center">
+                <h1 class="text-4xl font-bold mb-4 text-white no-anchor">
+                    {{ .Data.Term }}
+                </h1>
+                <p class="text-xl text-purple-100">
+                    {{ len $recipePosts }} recipe{{ if ne (len $recipePosts) 1 }}s{{ end }} found
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-gray-50 py-12">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {{ range $recipePosts }}
+                        <a href="{{ .RelPermalink }}" class="group block bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg hover:border-purple-300 transition-all">
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-3">
+                                {{ .Title }}
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                                {{ .Params.meta_desc }}
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                {{ range .Params.tags }}
+                                    <span class="text-xs px-2 py-1 rounded-full bg-purple-50 text-purple-700">
+                                        {{ . }}
+                                    </span>
+                                {{ end }}
+                            </div>
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{ else if gt (len $blogPosts) 0 }}
+        {{/* Blog Tag Page - Original Code */}}
+        <div class="container mx-auto px-4 py-8">
+            <div class="lg:flex">
+                <div class="lg:w-3/12 pr-8">
+                    {{ partial "blog/series-list-sidebar.html" . }}
+                </div>
+
+                <div class="lg:w-7/12">
+                    {{ $authorData := index $.Site.Data.team.team .Data.Term }}
                 
                 <!-- List of tags that should be displayed in chronological order (oldest first) -->
                 {{ $chronologicalTags := slice }}
@@ -106,4 +146,10 @@
             <div class="lg:w-2/12 pl-8"></div>
         </div>
     </div>
+    {{ else }}
+        {{/* No pages found */}}
+        <div class="container mx-auto px-4 py-12">
+            <h1 class="text-3xl font-bold mb-4">No pages found for tag: {{ .Data.Term }}</h1>
+        </div>
+    {{ end }}
 {{ end }}
