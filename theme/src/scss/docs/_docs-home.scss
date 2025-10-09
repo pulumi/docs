@@ -40,7 +40,6 @@ section.docs-home {
         @screen xl {
             .docs-content-width-expanded & {
                 background-image: url("/images/docs/docs-home-header-background-desktop-wide.svg");
-                @apply bg-right;
             }
         }
 
