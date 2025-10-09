@@ -34,13 +34,13 @@
   {{ if strings.Contains (lower $.RelPermalink) "/faq" }}
     {{ $isH3Question = strings.HasPrefix $line "### " }}
   {{ else }}
-    {{ $isH3Question = and (strings.HasPrefix $line "### ") (strings.HasSuffix (strings.TrimSpace $line) "?") }}
+    {{ $isH3Question = and (strings.HasPrefix $line "### ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
   {{ end }}
-  {{ $isH2Question := and (strings.HasPrefix $line "## ") (strings.HasSuffix (strings.TrimSpace $line) "?") }}
+  {{ $isH2Question := and (strings.HasPrefix $line "## ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
   {{ if or $isH3Question $isH2Question }}
     {{/* Save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | strings.TrimSpace }}
+      {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
       {{ if $answerText }}
         {{ $questionText := $currentQuestion }}
         {{/* Remove the heading prefix */}}
@@ -51,7 +51,7 @@
         {{ end }}
         {{ $qa := dict
           "@type" "Question"
-          "name" (strings.TrimSpace $questionText)
+          "name" (trim $questionText " \t\n\r")
           "acceptedAnswer" (dict
             "@type" "Answer"
             "text" $answerText
@@ -67,7 +67,7 @@
   {{ else if strings.HasPrefix $line "## " }}
     {{/* New section, save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | strings.TrimSpace }}
+      {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
       {{ if $answerText }}
         {{ $questionText := $currentQuestion }}
         {{/* Remove the heading prefix */}}
@@ -78,7 +78,7 @@
         {{ end }}
         {{ $qa := dict
           "@type" "Question"
-          "name" (strings.TrimSpace $questionText)
+          "name" (trim $questionText " \t\n\r")
           "acceptedAnswer" (dict
             "@type" "Answer"
             "text" $answerText
