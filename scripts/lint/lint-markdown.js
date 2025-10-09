@@ -299,6 +299,10 @@ const opts = {
         MD034: false,
         // Allow bold/italicized paragraphs
         MD036: false,
+        // Allow code blocks without blank lines around them (Hugo shortcodes like choosable)
+        MD031: false,
+        // Allow multiple top level headings (for CLAUDE.md guideline files)
+        MD025: false,
     },
     customRules: [
         {
