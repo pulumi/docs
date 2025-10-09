@@ -1,6 +1,6 @@
 ---
 title: "How to Auto-Scale EC2 Instances with AWS Auto Scaling Groups"
-meta_desc: "Automatically scale EC2 instances up or down based on demand using AWS Auto Scaling Groups with launch templates and Pulumi in TypeScript, Python, Go, C#, or Java."
+meta_desc: "Scale EC2 instances based on demand using AWS Auto Scaling Groups with launch templates and Pulumi."
 canonical_url: "https://www.pulumi.com/recipes/aws/ec2-auto-scaling"
 date: 2025-10-08
 category: "Compute"

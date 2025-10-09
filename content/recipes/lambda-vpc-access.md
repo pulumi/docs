@@ -1,6 +1,6 @@
 ---
-title: "How to Connect AWS Lambda to Private VPC Resources with Pulumi"
-meta_desc: "Deploy AWS Lambda functions that access private VPC resources like RDS databases, ElastiCache, or internal APIs using Pulumi in TypeScript, Python, Go, C#, or Java."
+title: "Connect AWS Lambda to Private VPC Resources"
+meta_desc: "Deploy Lambda functions that access private VPC resources like RDS, ElastiCache, or internal APIs with Pulumi."
 canonical_url: "https://www.pulumi.com/recipes/aws/lambda-vpc-access"
 date: 2025-10-08
 category: "Compute"
