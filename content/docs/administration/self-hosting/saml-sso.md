@@ -7,19 +7,20 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: SAML SSO
-        parent: administration-security-compliance-self-hosted
+        parent: administration-self-hosting
         weight: 3
         identifier: administration-security-compliance-self-hosted-saml-sso
 aliases:
   - /docs/guides/self-hosted/saml-sso/
   - /docs/pulumi-cloud/self-hosted/saml-sso/
+  - /docs/administration/self-hosting/pulumi-cloud/saml-sso/
 ---
 
-The self-hosted option allows you to control various aspects of the Pulumi Cloud including how users will sign in to the [Pulumi Cloud](/docs/administration/self-hosting/pulumi-cloud/components/console/).
+The self-hosted option allows you to control various aspects of the Pulumi Cloud including how users will sign in to the [Pulumi Cloud](/docs/administration/self-hosting/components/console/).
 
 ## Creating The Keys
 
-Before you can use SAML SSO to logon to the Console, you will need to ensure that the [API service](/docs/administration/self-hosting/pulumi-cloud/components/api/) has a pair of keys that will be used to sign
+Before you can use SAML SSO to logon to the Console, you will need to ensure that the [API service](/docs/administration/self-hosting/components/api/) has a pair of keys that will be used to sign
 and validate requests/responses, regardless of the IdP you choose to use.
 
 The credentials are a public/private key pair that are supplied as environment variables to the API service.
@@ -66,5 +67,5 @@ For these values to take effect, you will need to restart the API Service.
 ## Enabling SAML SSO as an identity option
 
 By default, the SAML SSO signin/signup option is not displayed to end users of the Console service.
-To enable this, set the `SAML_SSO_ENABLED` environment variable for the [console](/docs/administration/self-hosting/pulumi-cloud/components/console/) container to `true`
+To enable this, set the `SAML_SSO_ENABLED` environment variable for the [console](/docs/administration/self-hosting/components/console/) container to `true`
 and restart the service.

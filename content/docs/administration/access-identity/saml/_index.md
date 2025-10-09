@@ -19,7 +19,7 @@ aliases:
 
 The [Pulumi Cloud](https://app.pulumi.com) can be configured to work with any SAML 2.0 identity provider. SAML support requires Pulumi Enterprise or Pulumi Business Critical. To learn more about the capabilities of Pulumi Enterprise or Pulumi Business Critical, refer to the [pricing page](/pricing/).
 
-> Looking for information on how to enable SAML SSO for self-hosted Pulumi? Learn more [here](/docs/administration/self-hosting/pulumi-cloud/saml-sso/).
+> Looking for information on how to enable SAML SSO for self-hosted Pulumi? Learn more [here](/docs/administration/self-hosting/saml-sso/).
 
 ## Single Sign-On (SSO)
 

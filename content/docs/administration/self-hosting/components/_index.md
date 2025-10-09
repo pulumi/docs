@@ -6,13 +6,14 @@ h1: Pulumi Cloud self-hosted components
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
-    parent: administration-security-compliance-self-hosted
+    parent: administration-self-hosting
     weight: 2
     identifier: administration-security-compliance-self-hosted-components
 aliases:
 - /docs/guides/self-hosted/console/
 - /docs/guides/self-hosted/components/
 - /docs/pulumi-cloud/self-hosted/components/
+- /docs/administration/self-hosting/components/
 ---
 
 {{% notes type="info" %}}
@@ -21,8 +22,8 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 
 | Component                                                         | Repository                                                                                 |
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [API](/docs/administration/self-hosting/pulumi-cloud/components/api/)             | [https://hub.docker.com/r/pulumi/service/](https://hub.docker.com/r/pulumi/service/)       |
-| [Web console](/docs/administration/self-hosting/pulumi-cloud/components/console/) | [https://hub.docker.com/r/pulumi/console/](https://hub.docker.com/r/pulumi/console/)       |
+| [API](/docs/administration/self-hosting/components/api/)             | [https://hub.docker.com/r/pulumi/service/](https://hub.docker.com/r/pulumi/service/)       |
+| [Web console](/docs/administration/self-hosting/components/console/) | [https://hub.docker.com/r/pulumi/console/](https://hub.docker.com/r/pulumi/console/)       |
 | Migrations                                                        | [https://hub.docker.com/r/pulumi/migrations/](https://hub.docker.com/r/pulumi/migrations/) |
-| [Search](/docs/administration/self-hosting/pulumi-cloud/components/search/)       |                                                                                            |
-| [Deployments](/docs/administration/self-hosting/pulumi-cloud/components/deployments/) |                                                                                         |
+| [Search](/docs/administration/self-hosting/components/search/)       |                                                                                            |
+| [Deployments](/docs/administration/self-hosting/components/deployments/) |                                                                                         |

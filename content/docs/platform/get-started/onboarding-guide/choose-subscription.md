@@ -62,7 +62,7 @@ Choose [self-hosted Pulumi Cloud](https://www.pulumi.com/product/self-hosted/) i
 
 {{% notes type="info" %}}
 
-To get started with self-hosted Pulumi Cloud, follow the guides to set up your [state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#logging-into-the-aws-s3-backend) and [self-hosting infrastructure](https://www.pulumi.com/docs/administration/self-hosting/pulumi-cloud/)
+To get started with self-hosted Pulumi Cloud, follow the guides to set up your [state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#logging-into-the-aws-s3-backend) and [self-hosting infrastructure](https://www.pulumi.com/docs/administration/self-hosting/)
 
 {{% /notes %}}
 

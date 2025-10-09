@@ -7,11 +7,11 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: Air-Gapped
-        parent: administration-security-compliance-self-hosted
+        parent: administration-self-hosting
         weight: 5
         identifier: administration-security-compliance-self-hosted-airgapped
 aliases:
-- /docs/administration/self-hosting/pulumi-cloud/airgapped/
+- /docs/administration/self-hosting/airgapped/
 ---
 
 {{% notes type="info" %}}
@@ -52,7 +52,7 @@ Here are the general areas to consider when preparing to use Pulumi in an air-ga
 ### Obtain Pulumi Self-Hosted License Key and Images
 
 Ensure you have access to Pulumi Self-Hosted which requires a license key as well as the
-[Pulumi Cloud Docker images](/docs/administration/self-hosting/pulumi-cloud/components/) for the various backend services. If you
+[Pulumi Cloud Docker images](/docs/administration/self-hosting/components/) for the various backend services. If you
 don't have these, [contact us](/contact) and/or [request a license key here](/product/self-hosted/#self-hosted-trial).
 
 ### Provision Internal Infrastructure and Install Pulumi Cloud
@@ -68,7 +68,7 @@ The complete infrastructure required typically includes:
 * *Internal Package Management*: To host Pulumi SDKs and required language runtimes, as external package managers (npm, PyPI, etc.) won't be accessible.
 * *Automation and CI/CD Setup*: Configured to run within the air-gapped network for secure infrastructure deployments.
 
-Pulumi supports many [deployment options](/docs/administration/self-hosting/pulumi-cloud/deployment-options) so it is a good idea to consult with your Pulumi representative on what approach will best meet your needs.
+Pulumi supports many [deployment options](/docs/administration/self-hosting/deployment-options) so it is a good idea to consult with your Pulumi representative on what approach will best meet your needs.
 
 ### Create and Configure Artifact Mirrors
 
@@ -91,10 +91,10 @@ Pulumi Self-Hosted can be installed using Kubernetes, Docker, or virtual machine
 1. Set up storage services.
     * MySQL 8.0+ for application data storage.
     * Object storage for state management, for instance, MinIO or an internal S3-compatible service.
-2. Download the [Pulumi Self-Hosted images](/docs/administration/self-hosting/pulumi-cloud/components)
+2. Download the [Pulumi Self-Hosted images](/docs/administration/self-hosting/components)
     * Retrieve the necessary installation files and images from a networked machine.
     * Transfer them to your air-gapped environment using an offline medium (USB drive, offline repository, etc.).
-3. Install Pulumi Self-Hosted (for instance, on Kubernetes) per [these instructions](/docs/administration/self-hosting/pulumi-cloud/deployment-options)
+3. Install Pulumi Self-Hosted (for instance, on Kubernetes) per [these instructions](/docs/administration/self-hosting/deployment-options)
     * Deploy the Pulumi API server, database, and storage backend using Helm or static manifests.
     * Configure internal object storage (e.g., MinIO or an internal S3-compatible service) for state management.
 4. Configure Authentication and Access Control

@@ -8,12 +8,14 @@
         <div class="w-full md:w-2/3">
             {{ .Params.description | safeHTML }}
         </div>
+        {{ if $primary_link_button.link }}
         <div class="link-buttons">
             <a class="docs-primary-link-btn" href="{{ $primary_link_button.link }}">{{ $primary_link_button.label }}</a>
             {{ if $secondary_link_button.link }}
             <a class="docs-secondary-link-btn" href="{{ $secondary_link_button.link }}">{{ $secondary_link_button.label }}</a>
             {{ end }}
         </div>
+        {{ end }}
     </div>
 
     {{ range .Params.sections }}

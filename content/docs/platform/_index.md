@@ -1,6 +1,6 @@
 ---
 title: Platform
-linktitle: Platform
+linktitle: Platform Features
 docs_home: true
 notitle: true
 norightnav: true

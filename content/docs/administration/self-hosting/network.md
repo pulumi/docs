@@ -7,22 +7,23 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: Network reqs
-        parent: administration-security-compliance-self-hosted
+        parent: administration-self-hosting
         weight: 4
         identifier: administration-security-compliance-self-hosted-network
 aliases:
   - /docs/guides/self-hosted/requirements/
   - /docs/guides/self-hosted/requirements/network/
   - /docs/pulumi-cloud/self-hosted/network/
+  - /docs/administration/self-hosting/network/
 ---
 
 {{% notes type="info" %}}
 Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
-Self-hosted Pulumi Cloud comprises [three containers](/docs/administration/self-hosting/pulumi-cloud/components): the API, Console, and Migrations. These containers require several kinds of incoming and outgoing network access as well as access to various services depending on where you're deploying it to.
+Self-hosted Pulumi Cloud comprises [three containers](/docs/administration/self-hosting/components): the API, Console, and Migrations. These containers require several kinds of incoming and outgoing network access as well as access to various services depending on where you're deploying it to.
 
-Although these containers require networking access by default, self-hosted Pulumi Cloud can configured to run in an air-gapped environment without external ingress and egress. Learn more in the [Deploying Pulumi Self-Hosted in Air-Gapped Environments guide](/docs/administration/self-hosting/pulumi-cloud/airgapped).
+Although these containers require networking access by default, self-hosted Pulumi Cloud can configured to run in an air-gapped environment without external ingress and egress. Learn more in the [Deploying Pulumi Self-Hosted in Air-Gapped Environments guide](/docs/administration/self-hosting/airgapped).
 
 ## Ingress
 

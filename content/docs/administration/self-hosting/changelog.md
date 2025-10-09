@@ -7,11 +7,12 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: Changelog
-        parent: administration-security-compliance-self-hosted
+        parent: administration-self-hosting
         weight: 5
         identifier: administration-security-compliance-self-hosted-changelog
 aliases:
   - /docs/pulumi-cloud/self-hosted/changelog/
+  - /docs/administration/self-hosting/pulumi-cloud/changelog/
 ---
 
 {{% notes type="info" %}}

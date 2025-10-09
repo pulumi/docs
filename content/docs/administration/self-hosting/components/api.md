@@ -21,7 +21,7 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/concepts/state/).
 {{% /notes %}}
 
-The Pulumi API is one of the components required for self-hosting the Pulumi Cloud in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](/docs/administration/self-hosting/pulumi-cloud/components/console/).
+The Pulumi API is one of the components required for self-hosting the Pulumi Cloud in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](/docs/administration/self-hosting/components/console/).
 
 ## Prerequisites
 
@@ -205,11 +205,11 @@ Only required if using GitLab as the backing identity provider for your organiza
 | GITHUB_OAUTH_ENDPOINT         | Used for GitHub API calls.                                                                                                                                                                                                                             |
 | PULUMI_DATABASE_USER_NAME     | Name of the database user the Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                     |
 | PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                 |
-| PULUMI_DISABLE_EMAIL_LOGIN    | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/pulumi-cloud/components/console#email-identity) for the Console.   |
-| PULUMI_DISABLE_EMAIL_SIGNUP   | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/pulumi-cloud/components/console#email-identity) for the Console. |
-| RECAPTCHA_SECRET_KEY          | Used for password reset requests by users. [Create a Cloudflare Turnstile Widget](https://www.cloudflare.com/application-services/products/turnstile/) to generate the `Secret Key`. See also [Console Component](/docs/administration/self-hosting/pulumi-cloud/components/console#environment-variables-for-identities).                                                                                          |
-| SAML_CERTIFICATE_PUBLIC_KEY   | Public key used by the [IdP](/docs/concepts/glossary/#idp) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY](/docs/administration/self-hosting/pulumi-cloud/saml-sso/).                                                                                |
-| SAML_CERTIFICATE_PRIVATE_KEY  | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY](/docs/administration/self-hosting/pulumi-cloud/saml-sso/).                                                                                       |
+| PULUMI_DISABLE_EMAIL_LOGIN    | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/components/console#email-identity) for the Console.   |
+| PULUMI_DISABLE_EMAIL_SIGNUP   | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/components/console#email-identity) for the Console. |
+| RECAPTCHA_SECRET_KEY          | Used for password reset requests by users. [Create a Cloudflare Turnstile Widget](https://www.cloudflare.com/application-services/products/turnstile/) to generate the `Secret Key`. See also [Console Component](/docs/administration/self-hosting/components/console#environment-variables-for-identities).                                                                                          |
+| SAML_CERTIFICATE_PUBLIC_KEY   | Public key used by the [IdP](/docs/concepts/glossary/#idp) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY](/docs/administration/self-hosting/saml-sso/).                                                                                |
+| SAML_CERTIFICATE_PRIVATE_KEY  | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY](/docs/administration/self-hosting/saml-sso/).                                                                                       |
 
 ## TLS Environment Variables
 
@@ -305,7 +305,7 @@ The following environment variables are needed to configure OpenTelemetry in the
 | PULUMI_ENABLE_DEPRECATED_METRICS | (Optional) Whether to continue emitting API service metrics in a log-based format. Defaults to `true`. |
 | METRICS_WEBHOOK_SECRET | Required to successfully authenticate to the `/metrics` endpoint. The Authorization header should be set as follows: `Authorization: webhook-token <METRICS_WEBHOOK_SECRET>`. |
 
-OpenTelemetry is not yet available for the [console service](/docs/administration/self-hosting/pulumi-cloud/components/console/).
+OpenTelemetry is not yet available for the [console service](/docs/administration/self-hosting/components/console/).
 
 ### Metrics endpoint
 

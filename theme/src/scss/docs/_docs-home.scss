@@ -21,6 +21,7 @@ section.docs-home {
 
     div.header {
         @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-right-bottom;
+        min-height: 200px;
 
         background-image: url("/images/docs/docs-home-header-background-mobile.svg");
 

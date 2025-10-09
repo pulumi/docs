@@ -6,8 +6,13 @@ h1: Self-hosting Pulumi ESC
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     esc:
+        name: Self-Hosting
         parent: pulumi-esc-admin
         weight: 4
+    administration:
+        name: ESC Self-Hosting
+        parent: administration-self-hosting
+        weight: 2
 ---
 
 {{% notes type="info" %}}
@@ -30,4 +35,4 @@ Self-hosting Pulumi ESC means your organization is responsible for deploying, ma
 
 ## Self-hosting documentation
 
-See the [Self-hosting Pulumi ESC](/docs/administration/self-hosting/pulumi-cloud/) documentation for complete deployment instructions, maintenance guidelines, and upgrade procedures.
+See the [Self-hosting Pulumi ESC](/docs/administration/self-hosting/) documentation for complete deployment instructions, maintenance guidelines, and upgrade procedures.
