@@ -76,3 +76,10 @@ _vendor/
 
 # mise local
 mise.local.toml
+
+# alias verification outputs
+scripts/alias-verification/aliases-correct.txt
+scripts/alias-verification/aliases-missing.txt
+scripts/alias-verification/aliases-suspicious.txt
+scripts/alias-verification/deletes.txt
+scripts/alias-verification/renames.txt

@@ -3,6 +3,8 @@ title_tag: "AI Integration | Guides"
 meta_desc: Learn how to integrate Pulumi with AI tools and workflows.
 title: AI Integration
 h1: AI Integration
+no_overview: true
+redirect_to: /docs/iac/guides/ai-integration/mcp-server/
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
