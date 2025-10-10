@@ -24,8 +24,6 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Build secure, compliant, and customizable golden paths for provisioning infrastructure with a bottom-up approach that codifies best practices from the start.
-
     Platform teams define reusable building blocks using components and templates. Developers can leverage components when writing programs in their preferred programming language, scaffold infrastructure using low-code YAML templates, or deploy no-code programs from the console.
 
 - type: button-cards

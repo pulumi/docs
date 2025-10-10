@@ -56,7 +56,7 @@ sections:
   - label: YAML
     icon: icon-32-32 yaml-color-32-32
     link: /docs/iac/languages-sdks/yaml/
-- type: full-width-cards
+- type: button-cards
   heading: Resources
   cards:
   - emoji: 💡
@@ -70,22 +70,28 @@ sections:
 - type: button-cards
   heading: Guides
   cards:
-  - heading: Basics
+  - emoji: 📚
+    heading: Basics
     description: Essential practices for organizing projects and securing infrastructure.
     link: /docs/iac/guides/basics/
-  - heading: Building & Extending
+  - emoji: 🔧
+    heading: Building & Extending
     description: Create custom components, providers, and packages.
     link: /docs/iac/guides/building-extending/
-  - heading: Testing
+  - emoji: 🧪
+    heading: Testing
     description: Unit, property, and integration testing for infrastructure code.
     link: /docs/iac/guides/testing/
-  - heading: Continuous Delivery
+  - emoji: 🚀
+    heading: Continuous Delivery
     description: Integrate Pulumi with your CI/CD platform.
     link: /docs/iac/guides/continuous-delivery/
-  - heading: Migration
+  - emoji: 📦
+    heading: Migration
     description: Move existing infrastructure to Pulumi.
     link: /docs/iac/guides/migration/
-  - heading: AI Integration
+  - emoji: 🤖
+    heading: AI Integration
     description: Integrate AI assistants with Pulumi infrastructure.
     link: /docs/iac/guides/ai-integration/
 - type: flat

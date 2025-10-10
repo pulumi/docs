@@ -22,12 +22,6 @@ link_buttons:
     link: /docs/esc/get-started/
 
 sections:
-- type: flat
-  heading: Overview
-  description_md: |
-    Manage secrets and configuration complexity for modern cloud environments with centralized orchestration that creates a "secure by default" posture.
-
-    ESC (Environments, Secrets, and Configuration) provides configuration as code to tackle secrets sprawl and reduce costly mistakes. Pull and sync secrets from popular stores, use dynamic credentials with OIDC, and manage configuration across your infrastructure and applications.
 - type: cards-logo-label-link
   heading: Secrets Integrations
   description: <p>Integrate with popular secrets stores to pull and synchronize secrets and configuration data, including <a href="/docs/esc/integrations/dynamic-secrets/aws-secrets/">AWS Secrets Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/azure-secrets/">Azure Key Vault</a>, <a href="/docs/esc/integrations/dynamic-secrets/gcp-secrets/">GCP Secret Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/vault-secrets/">HashiCorp Vault</a>, and <a href="/docs/esc/integrations/dynamic-secrets/1password-secrets/">1Password</a>.</p>
@@ -63,33 +57,41 @@ sections:
 - type: button-cards
   heading: Capabilities
   cards:
-  - heading: ESC CLI
+  - emoji: 💻
+    heading: ESC CLI
     link: /docs/esc/cli/
     description: Command-line interface for managing environments, secrets, and configuration.
-  - heading: Dynamic Login Credentials
+  - emoji: 🔑
+    heading: Dynamic Login Credentials
     description: Support for short-lived OIDC login credentials for popular cloud providers.
     link: /docs/esc/integrations/dynamic-login-credentials/
-  - heading: Dynamic Secrets Providers
+  - emoji: 🔐
+    heading: Dynamic Secrets Providers
     description: Integrate with secrets stored in external providers using dynamic configuration providers.
     link: /docs/esc/integrations/dynamic-secrets/
-  - heading: ESC Webhooks
+  - emoji: 🔔
+    heading: ESC Webhooks
     description: Automate your processes with environment event webhooks.
     link: /docs/esc/environments/webhooks/
-- type: full-width-cards
+- type: button-cards
   heading: Resources
   cards:
+  - emoji: 💡
+    heading: Concepts
+    description: Understand core ESC concepts including environments, sources, targets, and management.
+    link: /docs/esc/concepts/
   - emoji: 📁
     heading: Environments
-    description: Learn how to manage environments for organizing secrets and configuration.
+    description: Create and manage environments for organizing secrets and configuration.
     link: /docs/esc/environments/
-  - emoji: 🐳
-    heading: Docker Integration
-    description: Manage configuration and secrets for Docker workflows.
-    link: /docs/esc/integrations/dev-tools/docker/
-  - emoji: ⚖️
-    heading: ESC vs HashiCorp Vault
-    description: Learn about the major differences between ESC and HashiCorp Vault.
-    link: /docs/esc/vs/vault/
+  - emoji: 🔗
+    heading: Integrations
+    description: Connect to external secret stores, cloud providers, and development tools.
+    link: /docs/esc/integrations/
+  - emoji: 🛠️
+    heading: Development
+    description: Use SDKs, Pulumi Service Provider, and Automation API for programmatic access.
+    link: /docs/esc/development/
 # - type: full-width-cards
 #   heading: Reference
 #   cards:

@@ -8,7 +8,7 @@ menu:
   deployments:
     name: "Projects & stacks"
     parent: deployments-home
-    weight: 30
+    weight: 10
     identifier: deployments-projects-and-stacks
 aliases:
 - /docs/pulumi-cloud/projects-and-stacks/

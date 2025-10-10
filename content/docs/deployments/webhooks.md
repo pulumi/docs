@@ -8,7 +8,7 @@ menu:
   deployments:
     name: Webhooks
     parent: deployments-home
-    weight: 20
+    weight: 30
     identifier: deployments-webhooks
 aliases:
 - /docs/pulumi-cloud/webhooks/

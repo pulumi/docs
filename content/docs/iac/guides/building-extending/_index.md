@@ -16,22 +16,42 @@ aliases:
   - /docs/iac/extending-pulumi/
 ---
 
-Extend Pulumi's capabilities by building custom components, providers, and packages.
+Pulumi's extensibility model allows you to build reusable abstractions, integrate new platforms, and share infrastructure patterns across your organization.
 
-## Categories
+These guides show you how to create custom components that encapsulate best practices, build providers for platforms not yet supported, package your work for distribution, and integrate existing infrastructure tools into your Pulumi programs.
 
-### [Components](/docs/iac/guides/building-extending/components/)
+## Components
 
 Build reusable infrastructure components to encapsulate and share infrastructure patterns.
 
-### [Providers](/docs/iac/guides/building-extending/providers/)
+**[Build a Component](/docs/iac/guides/building-extending/components/build-a-component/)** - Learn the process for creating custom Pulumi components that bundle multiple resources into reusable abstractions with built-in best practices.
+
+**[Testing Components](/docs/iac/guides/building-extending/components/testing-components/)** - Write automated tests for your components to ensure they work correctly and maintain quality as they evolve.
+
+## Providers
 
 Create custom providers to integrate new cloud platforms and services with Pulumi.
 
-### [Packages](/docs/iac/guides/building-extending/packages/)
+**[Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/)** - Step-by-step guide to building a Pulumi provider that enables infrastructure management for any API or service.
+
+**[Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
+
+**[Debugging Providers](/docs/iac/guides/building-extending/providers/debugging-providers/)** - Techniques and tools for troubleshooting provider development and diagnosing issues.
+
+## Packages
 
 Package and distribute your components and providers for use across teams and projects.
 
-### [Using Existing Tools](/docs/iac/guides/building-extending/using-existing-tools/)
+**[Pulumi Packages](/docs/iac/guides/building-extending/packages/packages/)** - Overview of Pulumi packages and how they enable sharing infrastructure code across all Pulumi languages.
+
+**[Local Packages](/docs/iac/guides/building-extending/packages/local-packages/)** - Develop and test packages locally before publishing them to registries.
+
+**[Publishing Packages](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Distribute your packages to npm, NuGet, PyPI, and other registries for team and community use.
+
+**[Schema](/docs/iac/guides/building-extending/packages/schema/)** - Define package schemas that drive SDK generation and documentation for all supported languages.
+
+## Using Existing Tools
 
 Leverage existing infrastructure tools and modules within Pulumi programs.
+
+**[Use Terraform Module](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/)** - Integrate Terraform modules into Pulumi programs to reuse existing infrastructure code without rewriting it.

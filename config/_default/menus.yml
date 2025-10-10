@@ -14,6 +14,22 @@ iac:
     parent: iac-using-pulumi
     identifier: iac-guides-ai-integration
     weight: 60
+  - name: Components
+    parent: iac-guides-building-extending
+    identifier: iac-guides-components
+    weight: 1
+  - name: Providers
+    parent: iac-guides-building-extending
+    identifier: iac-guides-providers
+    weight: 2
+  - name: Packages
+    parent: iac-guides-building-extending
+    identifier: iac-guides-packages
+    weight: 3
+  - name: Using Existing Tools
+    parent: iac-guides-building-extending
+    identifier: iac-guides-using-existing-tools
+    weight: 4
   - name: Migrating from...
     parent: iac-guides-migration
     identifier: iac-guides-migration-from

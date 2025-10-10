@@ -11,7 +11,7 @@ menu:
 meta_desc: Cloud-hosted deployment automation, drift detection, and workflow management for infrastructure as code.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Deployments & Workflows
-description: <p>Cloud-hosted capabilities that extend Pulumi's infrastructure as code with managed deployments, drift detection, and operational automation.</p>
+description: <p>Operational tools for managing infrastructure projects, automating deployments, and integrating workflows.</p>
 aliases:
   - /docs/platform/
 
@@ -21,29 +21,24 @@ link_buttons:
     link: /docs/deployments/get-started/
 
 sections:
-- type: flat
-  heading: Overview
-  description_md: |
-    The Pulumi Cloud platform extends your infrastructure as code workflows with cloud-hosted automation, state management, and operational capabilities. These features run in Pulumi Cloud and integrate seamlessly with your IaC programs to provide enterprise-grade deployment automation, drift detection, and governance.
-
-- type: full-width-cards
+- type: button-cards
   heading: Capabilities
   cards:
+  - emoji: 📚
+    heading: Projects & Stacks
+    description: Manage infrastructure projects and stacks through the Pulumi Cloud web interface with role-based access controls, team permissions, and stack tagging.
+    link: /docs/deployments/projects-and-stacks/
   - emoji: 🚀
     heading: Deployments
-    description: Managed CI/CD platform purpose-built for infrastructure as code with automated deployments, drift detection, review stacks, and scheduled operations.
+    description: Managed CI/CD platform with git integration, automated drift detection and remediation, ephemeral review stacks for pull requests, scheduled operations, and TTL-based cleanup for temporary infrastructure.
     link: /docs/deployments/deployments/
   - emoji: 🔔
     heading: Webhooks
-    description: Integrate Pulumi operations with external systems through webhooks and event notifications.
+    description: Trigger external systems and workflows in response to stack updates, deployments, drift detection, and policy violations. Integrates with Slack, Microsoft Teams, or custom webhooks.
     link: /docs/deployments/webhooks/
-  - emoji: 📚
-    heading: Projects & stacks
-    description: Manage your infrastructure projects and stacks through the Pulumi Cloud interface with stack permissions and access controls.
-    link: /docs/deployments/projects-and-stacks/
   - emoji: 🔘
-    heading: Deploy with Pulumi button
-    description: Enable one-click deployments from GitHub repositories, gists, or web pages with embeddable deployment buttons.
+    heading: Deploy with Pulumi Button
+    description: Enable one-click infrastructure deployments from GitHub repositories, gists, or any web page using embeddable deployment buttons.
     link: /docs/deployments/pulumi-button/
 
 - type: flat

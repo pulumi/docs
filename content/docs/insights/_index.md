@@ -23,7 +23,7 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Discover, understand, manage, and improve any cloud infrastructure—including resources provisioned by AWS CloudFormation, Microsoft ARM, Terraform, or created manually. Get AI-powered asset and compliance management across your entire infrastructure footprint.
+    Discover, understand, manage, and improve any cloud infrastructure—including resources provisioned by AWS CloudFormation, Microsoft ARM, Terraform, or created manually.
 
     Key capabilities:
     - **Stay secure**: Detect security violations and remediate using security best practices.

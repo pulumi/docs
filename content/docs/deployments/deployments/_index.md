@@ -9,7 +9,7 @@ menu:
     name: Deployments
     parent: deployments-home
     identifier: deployments-deployments
-    weight: 10
+    weight: 20
 aliases:
 - /docs/pulumi-cloud/deployments/
 - /docs/intro/pulumi-service/deployments/
