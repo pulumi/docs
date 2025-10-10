@@ -20,6 +20,10 @@
 - [ ] Run page through [Google Search Console](https://search.google.com/search-console?resource_id=sc-domain%3Apulumi.com) to submit / verify that it has been indexed
 - [ ] Make sure [PageSpeed Insights](https://pagespeed.web.dev/) renders page load speed <2 seconds, interaction delay <100ms, and layout shift is minimal
 - [ ] Add [structured data markup](https://developers.google.com/search/docs/appearance/structured-data/search-gallery) where applicable and [test schema](https://search.google.com/test/rich-results)
+  - The site automatically generates appropriate schema.org markup (FAQ, Article, Event, HowTo, etc.)
+  - You can override auto-detection with `schema_type` in frontmatter (see [SCHEMA.md](./SCHEMA.md))
+  - Always test with [Google Rich Results Test](https://search.google.com/test/rich-results) before publishing
+  - For FAQ pages: ensure H2/H3 headers end with `?` for proper question detection
 
 ---
 More comprehensive info: [SEO Content Guidelines](https://docs.google.com/presentation/d/1OvdLR_25BXrAvozYt5XzMNGBVuy9a_NL4gsnEz1_uZA/edit#slide=id.gd0fdebba44_2_96)
