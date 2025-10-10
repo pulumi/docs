@@ -8,6 +8,10 @@ menu:
   esc:
     parent: pulumi-esc-admin
     weight: 3
+  administration:
+    name: ESC Customer Managed Keys
+    parent: administration-security-compliance
+    weight: 12
 ---
 
 {{% notes "info" %}}

@@ -9,6 +9,10 @@ menu:
         name: Audit Logs
         parent: pulumi-esc-admin
         weight: 1
+    administration:
+        name: ESC Audit Logs
+        parent: administration-security-compliance
+        weight: 11
 ---
 
 {{% notes "info" %}}

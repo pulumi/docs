@@ -5,7 +5,7 @@ aliases:
   - /docs/pulumi-cloud/get-started/onboarding-guide/ways-of-working/
 weight: 2
 menu:
-    cloud:
+    deployments:
         name: Ways of working
         parent: pulumi-onboarding-guide
         identifier: ways-of-working

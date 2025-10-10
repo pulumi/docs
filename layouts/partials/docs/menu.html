@@ -78,7 +78,7 @@
             {{- with index site.Menus "get-started" }}
             <li class="expandable expanded{{ if eq $currentSection "get-started" }} expanded{{ end }}" data-menu-id="get-started-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "get-started" "menuEntries" . "allMenuEntries" . "forceTopLevelLabel" "Get Started") }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "get-started" "currentSection" $currentSection "menuEntries" . "allMenuEntries" . "forceTopLevelLabel" "Get Started") }}
                 </ul>
             </li>
             {{- end }}
@@ -87,7 +87,7 @@
             {{- with index site.Menus "iac" }}
             <li class="expandable expanded{{ if eq $currentSection "iac" }} expanded{{ end }}" data-menu-id="iac-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "iac" "menuEntries" . "allMenuEntries" . "forceTopLevelLabel" "Infrastructure as Code") }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "iac" "currentSection" $currentSection "menuEntries" . "allMenuEntries" . "forceTopLevelLabel" "Infrastructure as Code") }}
                 </ul>
             </li>
             {{- end }}
@@ -96,7 +96,7 @@
             {{- with index site.Menus "deployments" }}
             <li class="expandable expanded{{ if eq $currentSection "deployments" }} expanded{{ end }}" data-menu-id="deployments-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "deployments" "menuEntries" . "allMenuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "deployments" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
@@ -105,7 +105,7 @@
             {{- with index site.Menus "esc" }}
             <li class="expandable expanded{{ if eq $currentSection "esc" }} expanded{{ end }}" data-menu-id="esc-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "esc" "menuEntries" . "allMenuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "esc" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
@@ -114,7 +114,7 @@
             {{- with index site.Menus "insights" }}
             <li class="expandable expanded{{ if eq $currentSection "insights" }} expanded{{ end }}" data-menu-id="insights-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "insights" "menuEntries" . "allMenuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "insights" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
@@ -123,7 +123,7 @@
             {{- with index site.Menus "idp" }}
             <li class="expandable expanded{{ if eq $currentSection "idp" }} expanded{{ end }}" data-menu-id="idp-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "idp" "menuEntries" . "allMenuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "idp" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
@@ -132,7 +132,7 @@
             {{- with index site.Menus "ai" }}
             <li class="expandable expanded{{ if eq $currentSection "ai" }} expanded{{ end }}" data-menu-id="ai-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "ai" "menuEntries" . "allMenuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "ai" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
@@ -141,7 +141,7 @@
             {{- with index site.Menus "migration" }}
             <li class="expandable expanded{{ if eq $currentSection "migration" }} expanded{{ end }}" data-menu-id="migration-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "migration" "menuEntries" . "allMenuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "migration" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
@@ -150,7 +150,7 @@
             {{- with index site.Menus "administration" }}
             <li class="expandable expanded{{ if eq $currentSection "administration" }} expanded{{ end }}" data-menu-id="administration-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "administration" "menuEntries" . "allMenuEntries" . "forceTopLevelLabel" "Administration") }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "administration" "currentSection" $currentSection "menuEntries" . "allMenuEntries" . "forceTopLevelLabel" "Administration") }}
                 </ul>
             </li>
             {{- end }}
@@ -159,7 +159,7 @@
             {{- with index site.Menus "reference" }}
             <li class="expandable expanded{{ if eq $currentSection "reference" }} expanded{{ end }}" data-menu-id="reference-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "reference" "menuEntries" . "allMenuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "reference" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
@@ -178,7 +178,7 @@
             {{- with index site.Menus "support" }}
             <li class="expandable expanded{{ if eq $currentSection "support" }} expanded{{ end }}" data-menu-id="support-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "support" "menuEntries" . "allMenuEntries" .) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" "support" "currentSection" $currentSection "menuEntries" . "allMenuEntries" .) }}
                 </ul>
             </li>
             {{- end }}
@@ -247,6 +247,7 @@
                 Only collect breadcrumbs if:
                 1. This menu item is an ancestor of the current page (HasMenuCurrent returns true)
                 2. AND the page is actually in this menu (either in frontmatter OR in menus.yml)
+                3. AND the menu being walked matches the current section
 
                 This prevents collecting breadcrumbs from multiple menus when parent pages
                 are in multiple menus (e.g., /docs/iac/cli/ is in both iac and reference menus).
@@ -255,7 +256,8 @@
             {{- $isAncestor := $page.HasMenuCurrent $menuName $currentMenuItem }}
             {{- $pageHasThisMenu := isset $page.Params.menu $menuName }}
             {{- $pageInMenuYML := index ($page.Scratch.Get (printf "menuURLs-%s" $menuName)) $page.RelPermalink }}
-            {{- if and $isAncestor (or $pageHasThisMenu $pageInMenuYML) }}
+            {{- $menuMatchesSection := eq $rootMenuID $.currentSection }}
+            {{- if and $isAncestor (or $pageHasThisMenu $pageInMenuYML) $menuMatchesSection }}
                 {{- $page.Scratch.Add "breadcrumbs" (dict "name" $currentMenuItem.Name "url" $currentMenuItem.URL) }}
             {{- end }}
 
@@ -305,7 +307,7 @@
                                 </li>
                             {{- end }}
                         {{- end }}
-                        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID "allMenuEntries" $allMenuEntries) }}
+                        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID "currentSection" $.currentSection "allMenuEntries" $allMenuEntries) }}
                     </ul>
                 {{- end }}
             </li>

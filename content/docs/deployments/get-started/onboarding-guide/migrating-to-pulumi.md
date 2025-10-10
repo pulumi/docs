@@ -5,7 +5,7 @@ aliases:
   - /docs/pulumi-cloud/get-started/onboarding-guide/migrating-to-pulumi/
 weight: 4
 menu:
-    cloud:
+    deployments:
         name: Migrating to Pulumi
         parent: pulumi-onboarding-guide
         identifier: migrating-to-pulumi

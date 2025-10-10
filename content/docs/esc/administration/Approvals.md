@@ -9,6 +9,10 @@ menu:
   esc:
     parent: pulumi-esc-admin
     weight: 2
+  administration:
+    name: ESC Approvals
+    parent: administration-security-compliance
+    weight: 10
 ---
 
 {{% notes "info" %}}

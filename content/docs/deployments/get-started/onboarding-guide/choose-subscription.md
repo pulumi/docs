@@ -5,8 +5,8 @@ aliases:
   - /docs/pulumi-cloud/get-started/onboarding-guide/choose-subscription/
 weight: 1
 menu:
-    cloud:
-        name: Select the right model 
+    deployments:
+        name: Select the right model
         parent: pulumi-onboarding-guide
         identifier: select-a-model
 ---

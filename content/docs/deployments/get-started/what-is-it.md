@@ -1,12 +1,12 @@
 ---
-title_tag: "Pulumi Cloud: What is it?"
+title_tag: Pulumi Cloud and Open Source Pulumi
 meta_desc: Learn how Pulumi Cloud relates to the open source Pulumi infrastructure as code tool.
-title: "What is it?"
-h1: "What is Pulumi Cloud, and how does it relate to Pulumi's open source IaC tool?"
+title: Pulumi Cloud and Open Source Pulumi
+h1: Pulumi Cloud and Open Source Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     deployments:
-        name: "What is it?"
+        name: Pulumi Cloud and Open Source Pulumi
         parent: deployments-get-started
         weight: 1
         identifier: pulumi-cloud-what-is-it

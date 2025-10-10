@@ -5,7 +5,7 @@ aliases:
   - /docs/pulumi-cloud/get-started/onboarding-guide/setting-up-for-success/
 weight: 3
 menu:
-    cloud:
+    deployments:
         name: Setting up for success
         parent: pulumi-onboarding-guide
         identifier: setting-up-for-success
