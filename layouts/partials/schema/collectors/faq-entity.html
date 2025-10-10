@@ -125,19 +125,23 @@
   {{ end }}
 {{ end }}
 
-{{/* Add mainEntity with questions if we found any */}}
+{{/* Only return FAQPage schema if we have questions */}}
 {{ if $questions }}
+  {{/* Add mainEntity with questions */}}
   {{ $schema = merge $schema (dict "mainEntity" $questions) }}
+
+  {{/* Add publisher reference */}}
+  {{ $schema = merge $schema (dict
+    "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+  ) }}
+
+  {{/* Add breadcrumb reference if it exists */}}
+  {{ $schema = merge $schema (dict
+    "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
+  ) }}
+{{ else }}
+  {{/* No questions found, don't generate FAQPage schema */}}
+  {{ $schema = dict }}
 {{ end }}
-
-{{/* Add publisher reference */}}
-{{ $schema = merge $schema (dict
-  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
-) }}
-
-{{/* Add breadcrumb reference if it exists */}}
-{{ $schema = merge $schema (dict
-  "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
-) }}
 
 {{ return $schema }}
