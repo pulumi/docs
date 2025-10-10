@@ -29,7 +29,7 @@ These pain points can slow down your ability to get actionable insights from you
 
 The [tap-pulumi-cloud connector](https://github.com/pulumi/tap-pulumi-cloud) is designed to address these challenges head-on by offering a simple solution for automating the process of accessing infrastructure data.
 <!--more-->
-Leveraging Pulumi Cloud data about your infrastructure instead of going directly to the provider eliminates the need for custom API integrations and handles the data consistency problem. And while all this data existed before today, by using the [Pulumi Cloud console](https://app.pulumi.com) or [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api) directly, the `tap-pulumi-cloud` connector handles complex interactions with the API, transforming the raw data into a structured format that’s ready for analysis as soon as it lands in your data warehouse. This means less time spent on data wrangling and more time on generating insights.
+Leveraging Pulumi Cloud data about your infrastructure instead of going directly to the provider eliminates the need for custom API integrations and handles the data consistency problem. And while all this data existed before by using the [Pulumi Cloud console](https://app.pulumi.com) or [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api) directly, the `tap-pulumi-cloud` connector handles complex interactions with the API, transforming the raw data into a structured format that’s ready for analysis as soon as it lands in your data warehouse. This means less time spent on data wrangling and more time on generating insights.
 
 A few examples of the types of analytics you can build on top Pulumi Cloud data:
 
