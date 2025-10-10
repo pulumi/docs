@@ -10,15 +10,11 @@ menu:
 meta_desc: Complete reference documentation for Pulumi CLI, Cloud REST API, language SDKs, and configuration syntax.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Reference Documentation
-description: <p>Complete reference documentation for Pulumi command-line tools, REST APIs, language SDKs, and configuration syntax.</p>
+description: <p>Reference documentation for Pulumi command-line tools, REST APIs, language SDKs, and configuration syntax.</p>
 aliases:
   - /docs/reference/
 
 sections:
-- type: flat
-  heading: Overview
-  description_md: |
-    Reference documentation provides detailed technical specifications for all Pulumi tools, APIs, and configuration formats. Use these resources when you need precise syntax, available options, or API specifications.
 
 - type: full-width-cards
   heading: Command-Line Tools

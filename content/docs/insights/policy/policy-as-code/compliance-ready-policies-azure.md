@@ -1,5 +1,5 @@
 ---
-title_tag: "Compliance Ready Policies (Azure) | CrossGuard"
+title_tag: "Compliance Ready Policies (Azure) | Pulumi Policy"
 meta_desc: This page contains the list of Compliance Ready Policies for Azure.
 title: Compliance Ready Azure Policies
 h1: List of Compliance Ready Policies for Azure

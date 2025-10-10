@@ -1,5 +1,5 @@
 ---
-title_tag: "Compliance Ready Policies (AWS) | CrossGuard"
+title_tag: "Compliance Ready Policies (AWS) | Pulumi Policy"
 meta_desc: This page contains the list of Compliance Ready Policies for AWS.
 title: Compliance Ready AWS Policies
 h1: List of Compliance Ready Policies for AWS

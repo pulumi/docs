@@ -8,7 +8,7 @@ menu:
   insights:
     name: Discovery
     parent: insights-home
-    weight: 30
+    weight: 10
     identifier: insights-discovery
 aliases:
   - /docs/pulumi-cloud/insights/accounts/

@@ -8,11 +8,11 @@ menu:
   insights:
     identifier: insights-home
     weight: 1
-meta_desc: Intelligent infrastructure management to discover, understand, manage, and improve any cloud infrastructure.
+meta_desc: Discover, secure, and govern cloud infrastructure with comprehensive visibility and policy enforcement across all your resources.
 meta_image: /images/docs/meta-images/insights-meta.png
 h1: Insights & Governance
 description: |
-  Discover, understand, and manage cloud infrastructure with AI-powered asset and compliance management across all your resources.
+  Comprehensive cloud visibility and policy enforcement—discover all infrastructure and ensure compliance, regardless of how resources were created.
 
 link_buttons:
   primary:
@@ -23,45 +23,51 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Discover, understand, manage, and improve any cloud infrastructure—including resources provisioned by AWS CloudFormation, Microsoft ARM, Terraform, or created manually.
+    Pulumi Cloud provides complete visibility and control over your cloud infrastructure, whether resources were provisioned by Pulumi, Terraform, CloudFormation, or created manually.
 
-    Key capabilities:
-    - **Stay secure**: Detect security violations and remediate using security best practices.
-    - **Enforce compliance**: Gain a comprehensive view of compliance policy violations across your organization and automate remediation.
-    - **Improve efficiency**: Analyze cloud usage and trends to optimize costs and improve productivity.
+    **Two ways to get started:**
+    - **New to Pulumi?** Start with [Discovery](/docs/insights/discovery/accounts/) to scan existing infrastructure, then add Policy enforcement.
+    - **Already using Pulumi IaC?** Add [Policy](/docs/insights/policy-as-code/) to enforce compliance before deployments reach production.
 
 - type: button-cards
-  heading: Capabilities
-  cards:
-  - heading: Discover
-    link: /docs/insights/concepts/
-    description: Scan and sync all of your infrastructure to bring it under a single pane of glass, so you can understand the structure and status of your footprint.
-  - heading: Advanced Resource Search
-    description: Find important insights about your cloud infrastructure using structured queries or natural language via Pulumi AI Assist to quickly locate resources.
-    
-    link: /docs/insights/search/
-  - heading: Manage
-    description: Refactor and structure your infrastructure into logical resource groups that map key insights with business needs.
-    link: /docs/insights/get-started/account-management/
-  - heading: Improve
-    description: Execute improvement plans for each logical resource group to support business priorities.
-    link: /docs/insights/get-started/using-resource-explorer/
-
-- type: full-width-cards
-  heading: Resources
+  heading: Core capabilities
   cards:
   - emoji: 🔍
-    heading: Account Discovery
-    description: Automatically scan and sync your accounts to bring all cloud resources into the Insights platform.
-    link: /docs/insights/accounts/
-  - emoji: 🗂️
-    heading: Resource Explorer
-    description: Resource Search allows you to explore your resources, stacks and projects in detail.
+    heading: Discovery
+    link: /docs/insights/discovery/accounts/
+    description: Automatically scan and sync cloud accounts to bring all resources under management, regardless of how they were created.
+  - emoji: 🛡️
+    heading: Policy Enforcement
+    description: Prevent and detect security violations with pre-built compliance packs or custom policies in TypeScript, Python, or Go.
+    link: /docs/insights/policy-as-code/
+  - emoji: 🔎
+    heading: Resource Search
+    description: Find resources using structured queries or natural language with Pulumi Copilot AI.
     link: /docs/insights/search/
+  - emoji: 📊
+    heading: Visual Import
+    description: Import existing cloud resources into Pulumi management with an intuitive visual interface.
+    link: /docs/insights/import/
+
+- type: full-width-cards
+  heading: Key features
+  cards:
+  - emoji: 🎯
+    heading: Pre-built Compliance Packs
+    description: Enforce CIS Benchmarks, PCI DSS, SOC 2, ISO 27001, and other compliance frameworks out of the box.
+    link: /docs/insights/policy/policy-as-code/compliance-ready-policies/
+  - emoji: 🔄
+    heading: Preventative and Audit Policies
+    description: Block violations before deployment (preventative) or scan existing resources (audit mode) for comprehensive coverage.
+    link: /docs/insights/policy/preventative-vs-audit-policies/
   - emoji: 🤖
-    heading: Copilot AI
-    description: Ask natural language questions like "Find all untagged resources in AWS" to uncover insights and actionable recommendations.
+    heading: AI-Powered Insights
+    description: Ask Pulumi Copilot questions like "Show me all untagged EC2 instances" or "Find resources violating our tagging policy."
     link: /docs/ai/copilot/
+  - emoji: 📤
+    heading: Export and Integrate
+    description: Export resource data, integrate with webhooks, or use the REST API for custom workflows.
+    link: /docs/insights/import/data-export/
 
 - type: flat
   heading: Have questions?

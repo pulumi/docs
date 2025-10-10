@@ -1,6 +1,6 @@
 ---
-title_tag: Get Started with Policy as Code | CrossGuard
-meta_desc: Pulumi CrossGuard is a product that provides gated deployments via Policy as Code. Enforce best practices
+title_tag: Get Started with Policy as Code | Pulumi Policy
+meta_desc: Pulumi Policy is a product that provides gated deployments via Policy as Code. Enforce best practices
            and security compliance when creating cloud resources.
 title: Get started
 h1: Get started with Pulumi policy as code
@@ -24,11 +24,11 @@ aliases:
   - /docs/iac/packages-and-automation/crossguard/get-started/
 ---
 
-Pulumi CrossGuard is a product that provides gated deployments via Policy as Code.
+Pulumi Policy is a product that provides gated deployments via Policy as Code.
 
-Often organizations want to empower developers to manage their infrastructure yet are concerned about giving them full access. CrossGuard allows administrators to provide autonomy to their developers while ensuring compliance to defined organization policies.
+Often organizations want to empower developers to manage their infrastructure yet are concerned about giving them full access. Pulumi Policy allows administrators to provide autonomy to their developers while ensuring compliance to defined organization policies.
 
-Using Policy as Code, users can express business or security rules as functions that are executed against resources in their stacks or accounts. Then using CrossGuard, organization administrators can apply these rules to particular stacks or accounts within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
+Using Policy as Code, users can express business or security rules as functions that are executed against resources in their stacks or accounts. Then using Pulumi Policy, organization administrators can apply these rules to particular stacks or accounts within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
 
 Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/guides/crossguard#languages).
 
@@ -334,4 +334,4 @@ Learn more about Policy Groups and other core concepts in the [Policy as Code co
 
 ## Next Steps
 
-Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide](/docs/using-pulumi/crossguard/).
+Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [Pulumi Policy guide](/docs/using-pulumi/crossguard/).

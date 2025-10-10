@@ -8,13 +8,13 @@ menu:
   insights:
     name: Policy
     parent: insights-home
-    weight: 20
+    weight: 15
     identifier: insights-policy
 ---
 
-Policy as Code (PaC) for discovered resources extends [Pulumi Crossguard](/docs/iac/using-pulumi/crossguard/) policy enforcement capabilities beyond Pulumi managed infrastructure as code (IaC) to include resources discovered through Pulumi Insights. This feature enables organizations to maintain consistent compliance and governance across their entire cloud infrastructure, regardless of how resources were provisioned.
+Policy as Code (PaC) for discovered resources extends [Pulumi Policy](/docs/iac/using-pulumi/crossguard/) policy enforcement capabilities beyond Pulumi managed infrastructure as code (IaC) to include resources discovered through Pulumi Insights. This feature enables organizations to maintain consistent compliance and governance across their entire cloud infrastructure, regardless of how resources were provisioned.
 
-For a detailed overview of CrossGuard, including supported languages for policy authoring, policy enforcement levels, best practices, API workflows, and integrations, please refer to our comprehensive [CrossGuard documentation](/docs/iac/using-pulumi/crossguard/)
+For a detailed overview of Pulumi Policy, including supported languages for policy authoring, policy enforcement levels, best practices, API workflows, and integrations, please refer to our comprehensive [Pulumi Policy documentation](/docs/iac/using-pulumi/crossguard/)
 
 {{% notes type="info" %}}
 For a detailed guide on how to get started with Pulumi Insights, including step-by-step instructions to configure your first policy, visit our [Pulumi Insights get started](/docs/insights/get-started/).

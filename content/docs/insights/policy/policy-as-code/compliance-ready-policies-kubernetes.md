@@ -1,5 +1,5 @@
 ---
-title_tag: "Compliance Ready Policies (Kubernetes) | CrossGuard"
+title_tag: "Compliance Ready Policies (Kubernetes) | Pulumi Policy"
 meta_desc: This page contains the list of Compliance Ready Policies for Kubernetes.
 title: Compliance Ready Kubernetes Policies
 h1: List of Compliance Ready Policies for Kubernetes

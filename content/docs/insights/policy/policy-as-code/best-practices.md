@@ -1,5 +1,5 @@
 ---
-title_tag: "Tips for Writing Policy Packs | CrossGuard"
+title_tag: "Tips for Writing Policy Packs | Pulumi Policy"
 meta_desc: This page contains best practices for writing policy packs in Pulumi.
 title: Best practices
 h1: Policy pack best practices

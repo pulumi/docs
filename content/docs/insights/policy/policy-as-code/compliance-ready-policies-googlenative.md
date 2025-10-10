@@ -1,5 +1,5 @@
 ---
-title_tag: "Compliance Ready Policies (Googlenative) | CrossGuard"
+title_tag: "Compliance Ready Policies (Googlenative) | Pulumi Policy"
 meta_desc: This page contains the list of Compliance Ready Policies for Googlenative.
 title: Compliance Ready Googlenative Policies
 h1: List of Compliance Ready Policies for Googlenative

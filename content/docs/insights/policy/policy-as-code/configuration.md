@@ -1,5 +1,5 @@
 ---
-title_tag: "Configurable Policy Packs | CrossGuard"
+title_tag: "Configurable Policy Packs | Pulumi Policy"
 meta_desc: Configuration allows you to write flexible policies that can be reused across you organization.
 title: Config
 h1: Configuring policy packs

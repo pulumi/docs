@@ -1,5 +1,5 @@
 ---
-title_tag: "Compliance Ready Policies (Gcp) | CrossGuard"
+title_tag: "Compliance Ready Policies (Gcp) | Pulumi Policy"
 meta_desc: This page contains the list of Compliance Ready Policies for Gcp.
 title: Compliance Ready Gcp Policies
 h1: List of Compliance Ready Policies for Gcp

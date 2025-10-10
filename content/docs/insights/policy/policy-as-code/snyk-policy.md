@@ -1,5 +1,5 @@
 ---
-title_tag: "Snyk Container Scanning | CrossGuard"
+title_tag: "Snyk Container Scanning | Pulumi Policy"
 meta_desc: Snyk container scanning helps you ensure that your Docker images are secure.
 title: Snyk Container Scanning
 h1: Snyk Container Scanning

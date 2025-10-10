@@ -1,6 +1,6 @@
 ---
-title_tag: "Policy Violations | Pulumi CrossGuard"
-meta_desc: Learn about Policy Violations in Pulumi CrossGuard and how to manage compliance in your cloud infrastructure.
+title_tag: "Policy Violations | Pulumi Policy"
+meta_desc: Learn about Policy Violations in Pulumi Policy and how to manage compliance in your cloud infrastructure.
 title: Policy Violations
 h1: Policy Violations
 weight: 2

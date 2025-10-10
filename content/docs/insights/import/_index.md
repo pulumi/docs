@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: insights-home
-    weight: 50
+    weight: 40
 aliases:
 - /docs/pulumi-cloud/import/
 - /docs/iac/adopting-pulumi/visual-iac-import/

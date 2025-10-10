@@ -1,5 +1,5 @@
 ---
-title_tag: "Compliance Ready Policies | CrossGuard"
+title_tag: "Compliance Ready Policies | Pulumi Policy"
 meta_desc: This page contains the documentation for Pulumi Compliance Ready Policies.
 title: Compliance Ready Policies
 h1: Compliance Ready Policies

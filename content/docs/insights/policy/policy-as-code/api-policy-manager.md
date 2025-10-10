@@ -1,5 +1,5 @@
 ---
-title_tag: "Compliance Ready Policies (Policy Manager) | CrossGuard"
+title_tag: "Compliance Ready Policies (Policy Manager) | Pulumi Policy"
 meta_desc: This page contains the API reference for Policy Manager.
 title: Policy Manager
 h1: Policy Manager
