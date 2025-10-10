@@ -17,3 +17,4 @@ Tools and techniques for diagnosing and fixing Pulumi programs, including debugg
 - **[Logging](/docs/iac/troubleshooting/debugging/logging/)** - CLI verbose logging and program logging for debugging and diagnostics
 - **[Attaching a debugger](/docs/iac/troubleshooting/debugging/debugger-attachment/)** - Set up debugger attachment for step-by-step program debugging
 - **[Performance and tracing](/docs/iac/troubleshooting/debugging/performance-tracing/)** - Analyze deployment performance and trace operations
+- **[Debugging providers](/docs/iac/troubleshooting/debugging/debugging-providers/)** - Debug Pulumi providers locally during development
