@@ -6,7 +6,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     reference:
         parent: reference-home
-        weight: 2
+        weight: 3
         identifier: cloud-rest-api
 aliases:
   - /docs/reference/service-rest-api/

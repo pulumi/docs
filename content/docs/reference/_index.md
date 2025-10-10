@@ -32,23 +32,23 @@ sections:
   heading: Language SDKs
   cards:
   - emoji: 📘
-    heading: TypeScript (Node.js)
+    heading: TypeScript (Node.js) ↗
     description: API reference for the Node.js SDK with TypeScript and JavaScript support.
     link: /docs/reference/pkg/nodejs/pulumi/pulumi/
   - emoji: 🐍
-    heading: Python
+    heading: Python ↗
     description: API reference for the Python SDK.
     link: /docs/reference/pkg/python/pulumi/
   - emoji: 🔷
-    heading: Go
+    heading: Go ↗
     description: API reference for the Go SDK.
     link: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
   - emoji: 💠
-    heading: .NET (C#, F#, VB)
+    heading: .NET (C#, F#, VB) ↗
     description: API reference for the .NET SDK supporting C#, F#, and Visual Basic.
     link: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
   - emoji: ☕
-    heading: Java
+    heading: Java ↗
     description: API reference for the Java SDK.
     link: /docs/reference/pkg/java/
 
