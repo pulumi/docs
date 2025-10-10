@@ -67,10 +67,27 @@ sections:
     heading: Pulumi CLI
     description: Browse the complete documentation of available CLI commands.
     link: /docs/iac/cli/
-  - emoji: 🔄
-    heading: Migration
-    description: Migrate any infrastructure to Pulumi with comprehensive guides.
+- type: button-cards
+  heading: Guides
+  cards:
+  - heading: Basics
+    description: Essential practices for organizing projects and securing infrastructure.
+    link: /docs/iac/guides/basics/
+  - heading: Building & Extending
+    description: Create custom components, providers, and packages.
+    link: /docs/iac/guides/building-extending/
+  - heading: Testing
+    description: Unit, property, and integration testing for infrastructure code.
+    link: /docs/iac/guides/testing/
+  - heading: Continuous Delivery
+    description: Integrate Pulumi with your CI/CD platform.
+    link: /docs/iac/guides/continuous-delivery/
+  - heading: Migration
+    description: Move existing infrastructure to Pulumi.
     link: /docs/iac/guides/migration/
+  - heading: AI Integration
+    description: Integrate AI assistants with Pulumi infrastructure.
+    link: /docs/iac/guides/ai-integration/
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>

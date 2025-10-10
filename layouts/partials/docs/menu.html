@@ -14,6 +14,12 @@
 {{/* Initialize empty breadcrumb list - will be populated as menu renders */}}
 {{ $page.Scratch.Set "breadcrumbs" slice }}
 
+{{/* Build URL lookup maps per menu for performance */}}
+{{ range $menuName, $menuEntries := site.Menus }}
+    {{ $page.Scratch.Set (printf "menuURLs-%s" $menuName) dict }}
+    {{ partial "inline/menu/collecturls" (dict "menuName" $menuName "menuEntries" $menuEntries "page" $page) }}
+{{ end }}
+
 {{/* Detect current section for auto-expansion */}}
 {{ $currentSection := "home" }}
 {{ if eq $page.Path "/docs/" }}
@@ -197,14 +203,15 @@
 {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" $page.LinkTitle "url" $page.RelPermalink) }}
 {{ $page.Scratch.Set "breadcrumbs" $finalBreadcrumbs }}
 
-{{- define "partials/inline/menu/checkurl" }}
-    {{- $pageURL := .pageURL }}
+{{- define "partials/inline/menu/collecturls" }}
+    {{- $menuName := .menuName }}
     {{- $page := .page }}
     {{- range .menuEntries }}
-        {{- if eq .URL $pageURL }}
-            {{- $page.Scratch.Set "menuURLFound" true }}
-        {{- else if .Children }}
-            {{- partial "inline/menu/checkurl" (dict "pageURL" $pageURL "menuEntries" .Children "page" $page) }}
+        {{- if .URL }}
+            {{- $page.Scratch.SetInMap (printf "menuURLs-%s" $menuName) .URL true }}
+        {{- end }}
+        {{- with .Children }}
+            {{- partial "inline/menu/collecturls" (dict "menuName" $menuName "menuEntries" . "page" $page) }}
         {{- end }}
     {{- end }}
 {{- end }}
@@ -247,9 +254,7 @@
             {{- $menuName := .Menu }}
             {{- $isAncestor := $page.HasMenuCurrent $menuName $currentMenuItem }}
             {{- $pageHasThisMenu := isset $page.Params.menu $menuName }}
-            {{- $page.Scratch.Set "menuURLFound" false }}
-            {{- partial "inline/menu/checkurl" (dict "pageURL" $page.RelPermalink "menuEntries" $allMenuEntries "page" $page) }}
-            {{- $pageInMenuYML := $page.Scratch.Get "menuURLFound" }}
+            {{- $pageInMenuYML := index ($page.Scratch.Get (printf "menuURLs-%s" $menuName)) $page.RelPermalink }}
             {{- if and $isAncestor (or $pageHasThisMenu $pageInMenuYML) }}
                 {{- $page.Scratch.Add "breadcrumbs" (dict "name" $currentMenuItem.Name "url" $currentMenuItem.URL) }}
             {{- end }}
@@ -282,27 +287,23 @@
                 {{- end }}
                 {{- with .Children }}
                     <ul class="list-none">
-                        {{/* Add Overview link for section index pages with child content */}}
-                        {{- $overviewPage := "" }}
+                        {{/* Add Overview link for parent pages that have a URL */}}
                         {{- if $currentMenuItem.URL }}
-                            {{- $overviewPage = site.GetPage $currentMenuItem.URL }}
-                        {{- end }}
-
-                        {{/* Automatically detect if this is an overview page: _index.md with child content */}}
-                        {{- $isOverview := and $overviewPage $overviewPage.IsSection (or $overviewPage.Pages $overviewPage.Sections) }}
-                        {{- if $isOverview }}
-                            <li data-menu-id="overview">
-                                <a href="{{ $overviewPage.RelPermalink }}"
-                                    {{- if eq $page.RelPermalink $overviewPage.RelPermalink }}
-                                        class="active" aria-current="page"
-                                    {{- end }}
-                                >
-                                <button>
-                                    <i class="fa fa-caret-right"></i>
-                                </button>
-                                <span>{{ if $overviewPage.Params.overview_name }}{{ $overviewPage.Params.overview_name }}{{ else }}Overview{{ end }}</span>
-                                </a>
-                            </li>
+                            {{- $overviewPage := site.GetPage $currentMenuItem.URL }}
+                            {{- if $overviewPage }}
+                                <li data-menu-id="overview">
+                                    <a href="{{ $overviewPage.RelPermalink }}"
+                                        {{- if eq $page.RelPermalink $overviewPage.RelPermalink }}
+                                            class="active" aria-current="page"
+                                        {{- end }}
+                                    >
+                                    <button>
+                                        <i class="fa fa-caret-right"></i>
+                                    </button>
+                                    <span>{{ if $overviewPage.Params.overview_name }}{{ $overviewPage.Params.overview_name }}{{ else }}Overview{{ end }}</span>
+                                    </a>
+                                </li>
+                            {{- end }}
                         {{- end }}
                         {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID "allMenuEntries" $allMenuEntries) }}
                     </ul>
