@@ -11,21 +11,21 @@
 {{ define "breadcrumbnav" }}
     <!-- Don't include the website home page in the breadcrumb. -->
     {{ if and .p1.Parent (ne .p1.Parent .p1.Site.Home) }}
-        {{ if (isset . "collectionTitle") }}
+        {{ if .collectionTitle }}
             {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 "collectionTitle" .collectionTitle) }}
         {{ else }}
             {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2) }}
         {{ end }}
     {{ end }}
     <!-- If the page is a redirect page, don't include it in the breadcrumb. -->
-    {{ if not (isset .p1.Params "redirect_to") }}
+    {{ if not .p1.Params.redirect_to }}
         {{ $linkTitle := .p1.LinkTitle }}
         {{ $href := .p1.RelPermalink }}
 
         {{ if or (eq $linkTitle "Providers") (eq $linkTitle "Collections") }}
             {{ $linkTitle = "Tutorials"}}
             {{ $href = "/tutorials/" }}
-        {{ else if (isset . "collectionTitle") }}
+        {{ else if .collectionTitle }}
             {{ $linkTitle = .collectionTitle }}
         {{ end }}
 

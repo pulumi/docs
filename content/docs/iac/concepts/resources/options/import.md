@@ -6,7 +6,7 @@ h1: "Resource option: import"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
-    identifier: import
+    identifier: resource-option-import
     parent: options-concepts
     weight: 9
 aliases:

@@ -6,7 +6,7 @@ h1: "Resource option: version"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
-    identifier: version
+    identifier: resource-option-version
     parent: options-concepts
     weight: 17
 aliases:
