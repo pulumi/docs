@@ -10,6 +10,11 @@ unlisted: false
 block_external_search_index: true
 redirect_to: "/"
 
+# Schema type for structured data (SEO). Options: auto, faq, article, blog, howto, product, event, none
+# Events typically use 'event' schema. Leave as 'auto' (or omit) for intelligent detection.
+# See SCHEMA.md for details.
+schema_type: auto
+
 # Event information
 event:
     # The type of activities we will be doing at the event.
