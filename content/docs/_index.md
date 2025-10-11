@@ -38,7 +38,7 @@ sections:
     description: Self-service infrastructure with templates, guardrails, and developer portals.
     link: /docs/idp/
   - emoji: 🤖
-    heading: AI
+    heading: Infrastructure AI
     description: Infrastructure automation with Pulumi Copilot and natural language assistance.
     link: /docs/ai/
   - emoji: 🛡️
