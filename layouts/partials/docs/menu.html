@@ -254,7 +254,7 @@
             */}}
             {{- $menuName := .Menu }}
             {{- $isAncestor := $page.HasMenuCurrent $menuName $currentMenuItem }}
-            {{- $pageHasThisMenu := isset $page.Params.menu $menuName }}
+            {{- $pageHasThisMenu := and $page.Params.menu (index $page.Params.menu $menuName) }}
             {{- $pageInMenuYML := index ($page.Scratch.Get (printf "menuURLs-%s" $menuName)) $page.RelPermalink }}
             {{- $menuMatchesSection := eq $rootMenuID $.currentSection }}
             {{- if and $isAncestor (or $pageHasThisMenu $pageInMenuYML) $menuMatchesSection }}
