@@ -47,7 +47,7 @@ section.docs-home {
         @screen xxl {
             .docs-content-width-expanded & {
                 p {
-                    @apply max-w-lg;
+                    @apply max-w-2xl;
                 }
             }
         }
