@@ -1,8 +1,13 @@
 ---
 title: Troubleshooting
 title_tag: Pulumi Troubleshooting Guide
+linktitle: Troubleshooting
+docs_home: true
+notitle: true
+norightnav: true
 meta_desc: Comprehensive troubleshooting guides for common issues with Pulumi infrastructure, deployments, and configuration.
 h1: Troubleshooting Guide
+description: <p>Resources for diagnosing and resolving issues with Pulumi programs and deployments.</p>
 menu:
   support:
     parent: support-home
@@ -14,19 +19,34 @@ aliases:
   - /docs/troubleshooting/
   - /docs/troubleshooting/overview/
   - /docs/iac/support/
+
+sections:
+- type: button-cards
+  heading: Getting started
+  cards:
+  - emoji: ⚠️
+    heading: Common Issues
+    link: /docs/support/troubleshooting/common-issues/
+    description: Guide to fixing specific problems that may arise in Pulumi programs.
+
+  - emoji: 🔄
+    heading: CI/CD Troubleshooting
+    link: /docs/support/troubleshooting/ci-cd/
+    description: Resolve continuous integration and deployment pipeline issues.
+
+  - emoji: 📝
+    heading: Editing State Files
+    link: /docs/support/troubleshooting/editing-state-files/
+    description: Safe techniques for modifying Pulumi state files when necessary.
+
+- type: flat
+  heading: Need more help?
+  description_md: |
+    - Join [Community Slack](https://slack.pulumi.com) for fast community support
+    - Open [GitHub Issues](https://github.com/pulumi/pulumi/issues/new) to report bugs
+    - [Contact us](/contact/) for paid support options
+
+- type: flat
+  heading: Have questions?
+  description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
 ---
-
-This section provides resources for diagnosing and resolving issues with Pulumi programs and deployments:
-
-- **[Common issues](/docs/support/troubleshooting/common-issues/)** - Guide to fixing specific problems that may arise in Pulumi programs
-- **[CI/CD Troubleshooting](/docs/support/troubleshooting/ci-cd/)** - Resolve continuous integration and deployment issues with Pulumi in your CI/CD pipelines
-- **[Editing state files](/docs/support/troubleshooting/editing-state-files/)** - Safe techniques for modifying Pulumi state files when necessary
-
-## Talk to a human
-
-If you need to speak to a human about your problem:
-
-- The [Pulumi Community Slack](https://slack.pulumi.com) is free and open to anyone to ask questions to the Pulumi Community. The Slack is also regularly monitored by Pulumi employees. This is often the fastest way to get help with your Pulumi issues.
-- We also encourage everyone to contribute to the [Pulumi open source projects](https://github.com/pulumi) by [opening new issues](https://github.com/pulumi/pulumi/issues/new) and upvoting existing issues.
-
-For additional help or to inquire about paid support options, reach out via our [contact us page](/contact/).

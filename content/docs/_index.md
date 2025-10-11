@@ -21,43 +21,70 @@ sections:
 - type: button-cards
   heading: Capabilities
   cards:
-  - heading: Infrastructure as Code
-    description: "Define and manage cloud infrastructure using TypeScript, Python, Go, .NET, Java, and YAML"
+  - emoji: 🏗️
+    heading: Infrastructure as Code
+    description: Define and manage cloud infrastructure using TypeScript, Python, Go, .NET, Java, and YAML.
     link: /docs/iac/
-  - heading: Secrets & Configuration
-    description: "Centralized secrets and configuration management with environments across all your infrastructure"
+  - emoji: 🔐
+    heading: Secrets & Configuration
+    description: Centralized secrets and configuration management with environments.
     link: /docs/esc/
-  - heading: Platform
-    description: "Cloud-hosted deployments, drift detection, state management, and operational automation"
+  - emoji: 🚀
+    heading: Deployments & Workflows
+    description: Cloud-hosted deployments, drift detection, state management, and automation.
     link: /docs/deployments/
-  - heading: Internal Developer Platform
-    description: "Self-service infrastructure with templates, guardrails, and developer portals at scale"
+  - emoji: 🎯
+    heading: Internal Developer Platform
+    description: Self-service infrastructure with templates, guardrails, and developer portals.
     link: /docs/idp/
-  - heading: AI
-    description: "AI-powered infrastructure automation with Pulumi Copilot and natural language assistance"
+  - emoji: 🤖
+    heading: AI
+    description: Infrastructure automation with Pulumi Copilot and natural language assistance.
     link: /docs/ai/
-  - heading: Insights & Governance
-    description: "Search, compliance, policy enforcement, and AI-powered insights across your cloud infrastructure"
+  - emoji: 🛡️
+    heading: Insights & Governance
+    description: Search, compliance, and policy enforcement across your cloud infrastructure.
     link: /docs/insights/
 - type: button-cards
   heading: Community & Support
   cards:
-  - heading: Pulumi Community Slack
-    description: "Join the Pulumi Community on Slack where you can ask questions or share ideas about infrastructure as code. The community is vibrant and we are excited to have you. Welcome!"
+  - emoji: 💬
+    heading: Community Slack
+    description: Ask questions and share ideas about infrastructure as code.
     link: https://slack.pulumi.com
-  - heading: Pulumi GitHub
-    description: "Pulumi is open-source and open-minded. Got a question, idea, or problem to report? Leave us an issue in our GitHub repo!"
+  - emoji: 🐙
+    heading: GitHub
+    description: Report bugs, request features, and contribute to the open source project.
     link: https://github.com/pulumi
-  - heading: Troubleshooting Guide
-    description: "Check out this list of known issues and how to resolve them."
+  - emoji: 🔧
+    heading: Troubleshooting Guide
+    description: Debug and resolve common issues with Pulumi programs and deployments.
     link: /docs/support/troubleshooting/
-- type: flat
+- type: button-cards
   heading: Learning Resources
-  description: |
-    <p><a href="https://www.pulumi.com/tutorials/">Tutorials</a> - Step-by-step guides for building real-world infrastructure with Pulumi</p>
-- type: flat
+  cards:
+  - emoji: 🎓
+    heading: Tutorials
+    description: Step-by-step guides for building real-world infrastructure with Pulumi.
+    link: https://www.pulumi.com/tutorials/
+- type: button-cards
   heading: Browse Documentation
-  description: |
-    <p><a href="/docs/administration/">Administration</a> • <a href="/docs/reference/">Reference</a> • <a href="/docs/iac/guides/migration/">Migration</a> • <a href="/docs/support/">Support</a></p>
+  cards:
+  - emoji: 🏢
+    heading: Administration
+    description: Manage organizations, access, security, and self-hosting.
+    link: /docs/administration/
+  - emoji: 📚
+    heading: Reference
+    description: CLI, SDK, and API reference documentation.
+    link: /docs/reference/
+  - emoji: 🔄
+    heading: Migration
+    description: Migrate from Terraform, CloudFormation, and other tools.
+    link: /docs/iac/guides/migration/
+  - emoji: 🆘
+    heading: Support
+    description: Get help through troubleshooting guides, FAQs, and community resources.
+    link: /docs/support/
 
 ---

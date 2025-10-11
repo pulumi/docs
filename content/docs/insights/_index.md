@@ -30,44 +30,36 @@ sections:
     - **Already using Pulumi IaC?** Add [Policy](/docs/insights/policy-as-code/) to enforce compliance before deployments reach production.
 
 - type: button-cards
-  heading: Core capabilities
+  heading: Getting started
   cards:
+  - emoji: 🚀
+    heading: Get Started
+    link: /docs/insights/get-started/
+    description: Learn how Insights & Governance provides visibility and policy enforcement for cloud infrastructure.
   - emoji: 🔍
     heading: Discovery
     link: /docs/insights/discovery/accounts/
-    description: Automatically scan and sync cloud accounts to bring all resources under management, regardless of how they were created.
+    description: Scan and sync cloud accounts to bring all resources under management.
   - emoji: 🛡️
-    heading: Policy Enforcement
-    description: Prevent and detect security violations with pre-built compliance packs or custom policies in TypeScript, Python, or Go.
+    heading: Policy as Code
     link: /docs/insights/policy-as-code/
+    description: Enforce compliance with pre-built packs (CIS, PCI DSS, SOC 2) or custom policies.
+  - emoji: 🔄
+    heading: Preventative vs Audit
+    link: /docs/insights/policy/preventative-vs-audit-policies/
+    description: Block violations before deployment or scan existing resources in audit mode.
   - emoji: 🔎
-    heading: Resource Search
-    description: Find resources using structured queries or natural language with Pulumi Copilot AI.
+    heading: Search
     link: /docs/insights/search/
+    description: Find resources using structured queries or natural language.
   - emoji: 📊
     heading: Visual Import
-    description: Import existing cloud resources into Pulumi management with an intuitive visual interface.
     link: /docs/insights/import/
-
-- type: full-width-cards
-  heading: Key features
-  cards:
-  - emoji: 🎯
-    heading: Pre-built Compliance Packs
-    description: Enforce CIS Benchmarks, PCI DSS, SOC 2, ISO 27001, and other compliance frameworks out of the box.
-    link: /docs/insights/policy/policy-as-code/compliance-ready-policies/
-  - emoji: 🔄
-    heading: Preventative and Audit Policies
-    description: Block violations before deployment (preventative) or scan existing resources (audit mode) for comprehensive coverage.
-    link: /docs/insights/policy/preventative-vs-audit-policies/
-  - emoji: 🤖
-    heading: AI-Powered Insights
-    description: Ask Pulumi Copilot questions like "Show me all untagged EC2 instances" or "Find resources violating our tagging policy."
-    link: /docs/ai/copilot/
+    description: Import existing cloud resources into Pulumi management.
   - emoji: 📤
-    heading: Export and Integrate
-    description: Export resource data, integrate with webhooks, or use the REST API for custom workflows.
+    heading: Data Export
     link: /docs/insights/import/data-export/
+    description: Export resource data to CSV or integrate via REST API.
 
 - type: flat
   heading: Have questions?

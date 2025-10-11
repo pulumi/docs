@@ -33,36 +33,28 @@ sections:
     Neo works across your entire infrastructure, understanding dependencies and creating execution plans that go through pull requests for review, ensuring human oversight while automating complex multi-step workflows.
 
 - type: button-cards
-  heading: Capabilities
-  cards:
-  - heading: Tasks
-    link: /docs/ai/tasks/
-    description: Multi-step AI operations for maintenance, analysis, and infrastructure changes with built-in safety controls.
-  - heading: Pull Requests
-    link: /docs/ai/pull-requests/
-    description: AI-proposed infrastructure changes submitted through pull requests for human review and approval.
-  - heading: Previews
-    link: /docs/ai/running-previews/
-    description: AI-powered infrastructure preview generation with approval gates for resource-intensive operations.
-  - heading: Copilot
-    link: /docs/ai/copilot/
-    description: Natural language infrastructure queries and insights using Pulumi Copilot AI assistance.
-
-- type: full-width-cards
-  heading: Key Benefits
+  heading: Getting started
   cards:
   - emoji: 🚀
-    heading: Accelerate Delivery
-    description: Automate multi-step workflows and routine maintenance to respond faster to infrastructure requirements.
+    heading: Get Started
+    link: /docs/ai/get-started/
+    description: Learn how to use Pulumi Neo for AI-powered infrastructure automation.
+  - emoji: 📋
+    heading: Tasks
     link: /docs/ai/tasks/
-  - emoji: 🔒
-    heading: Maintain Control
-    description: Every change goes through pull requests with your existing CI/CD validations and policy enforcement.
+    description: Multi-step operations for maintenance, analysis, and infrastructure changes.
+  - emoji: 🔀
+    heading: Pull Requests
     link: /docs/ai/pull-requests/
-  - emoji: ☁️
-    heading: Work Across Infrastructure
-    description: Neo understands dependencies across multiple repositories, clouds, and stacks without context switching.
-    link: /docs/ai/tasks/
+    description: AI-proposed changes submitted as pull requests for review.
+  - emoji: 👁️
+    heading: Previews
+    link: /docs/ai/running-previews/
+    description: Generate infrastructure previews with approval gates.
+  - emoji: 💬
+    heading: Copilot
+    link: /docs/ai/copilot/
+    description: Natural language queries and insights for your infrastructure.
 
 - type: flat
   heading: Have questions?

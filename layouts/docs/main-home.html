@@ -93,7 +93,7 @@
                                 <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                                     <a href="{{ .link }}">
                                         <h4 class="no-anchor">
-                                            {{ .heading }}
+                                            {{ if .emoji }}<span class="emoji">{{ .emoji }}</span> {{ end }}{{ .heading }}
                                     </h4>
                                     <p class="pb-4">
                                     {{ if .description }}
