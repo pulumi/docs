@@ -25,14 +25,18 @@ sections:
     heading: Infrastructure as Code
     description: Define and manage cloud infrastructure using TypeScript, Python, Go, .NET, Java, and YAML.
     link: /docs/iac/
-  - emoji: 🔐
-    heading: Secrets & Configuration
-    description: Centralized secrets and configuration management with environments.
-    link: /docs/esc/
   - emoji: 🚀
     heading: Deployments & Workflows
     description: Cloud-hosted deployments, drift detection, state management, and automation.
     link: /docs/deployments/
+  - emoji: 🔐
+    heading: Secrets & Configuration
+    description: Centralized secrets and configuration management with environments.
+    link: /docs/esc/
+  - emoji: 🛡️
+    heading: Insights & Governance
+    description: Search, compliance, and policy enforcement across your cloud infrastructure.
+    link: /docs/insights/
   - emoji: 🎯
     heading: Internal Developer Platform
     description: Self-service infrastructure with templates, guardrails, and developer portals.
@@ -41,25 +45,6 @@ sections:
     heading: Infrastructure AI
     description: Infrastructure automation with Pulumi Copilot and natural language assistance.
     link: /docs/ai/
-  - emoji: 🛡️
-    heading: Insights & Governance
-    description: Search, compliance, and policy enforcement across your cloud infrastructure.
-    link: /docs/insights/
-- type: button-cards
-  heading: Community & Support
-  cards:
-  - emoji: 💬
-    heading: Community Slack
-    description: Ask questions and share ideas about infrastructure as code.
-    link: https://slack.pulumi.com
-  - emoji: 🐙
-    heading: GitHub
-    description: Report bugs, request features, and contribute to the open source project.
-    link: https://github.com/pulumi
-  - emoji: 🔧
-    heading: Troubleshooting Guide
-    description: Debug and resolve common issues with Pulumi programs and deployments.
-    link: /docs/support/troubleshooting/
 - type: button-cards
   heading: Learning Resources
   cards:
@@ -68,7 +53,7 @@ sections:
     description: Step-by-step guides for building real-world infrastructure with Pulumi.
     link: https://www.pulumi.com/tutorials/
 - type: button-cards
-  heading: Browse Documentation
+  heading: More Documentation
   cards:
   - emoji: 🏢
     heading: Administration
