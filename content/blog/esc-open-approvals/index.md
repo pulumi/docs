@@ -1,7 +1,6 @@
 ---
 title: "Pulumi ESC: Open Approvals"
-date: 2025-10-17T12:00:00-03:00
-draft: false
+date: 2025-10-13T16:00:00-03:00
 meta_desc: Open Approvals enable strict, auditable approval workflows for environment activation, ensuring governance and safer infrastructure operations.
 meta_image: meta.png
 authors:
