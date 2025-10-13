@@ -29,6 +29,16 @@ Tasks are completely isolated between users:
 
 This isolation prevents the opportunity for escalation.
 
+### Task Modes
+
+Neo utilizes modes to determine the level of autonomy for a given task. At any time during a task lifecycle, the operating mode can be set to:
+
+- Review mode (default): The proposed task plan, running pulumi preview, running pulumi up, and opening a PR all require approval.
+- Balanced Mode: Neo will only request approvals before running up.
+- Auto Mode: Neo will not ask for any approvals.
+
+![The modes Neo can operate in.](neo-operating-modes.png)
+
 ### Task Plans
 
 When you give Neo a complex request, it creates a task plan outlining the steps it will take to accomplish your goal. This plan provides transparency into Neo's approach and gives you the opportunity to adjust the strategy before execution begins.
