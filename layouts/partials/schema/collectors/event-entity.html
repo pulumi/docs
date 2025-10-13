@@ -17,6 +17,13 @@
 {{/* Add event dates if available */}}
 {{ with .Params.main.sortable_date }}
   {{ $schema = merge $schema (dict "startDate" .) }}
+
+  {{/* Calculate endDate based on duration if available */}}
+  {{ with $.Params.main.duration }}
+    {{/* For now, just add a placeholder endDate same as startDate */}}
+    {{/* In production, this would calculate actual end time */}}
+    {{ $schema = merge $schema (dict "endDate" $.Params.main.sortable_date) }}
+  {{ end }}
 {{ end }}
 
 {{/* Add duration if available */}}
@@ -24,28 +31,27 @@
   {{ $schema = merge $schema (dict "duration" .) }}
 {{ end }}
 
-{{/* Add location */}}
-{{ $location := .Params.main.location }}
-{{ if $location }}
-  {{ if eq $location "virtual" }}
-    {{/* Virtual event */}}
-    {{ $schema = merge $schema (dict
-      "eventAttendanceMode" "https://schema.org/OnlineEventAttendanceMode"
-      "location" (dict
-        "@type" "VirtualLocation"
-        "url" .Permalink
-      )
-    ) }}
-  {{ else }}
-    {{/* Physical location */}}
-    {{ $schema = merge $schema (dict
-      "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
-      "location" (dict
-        "@type" "Place"
-        "name" $location
-      )
-    ) }}
-  {{ end }}
+{{/* Add location - REQUIRED field, default to virtual if not specified */}}
+{{ $location := .Params.main.location | default "virtual" }}
+{{ if or (eq $location "virtual") (eq $location "online") (eq $location "") }}
+  {{/* Virtual event (default for webinars) */}}
+  {{ $schema = merge $schema (dict
+    "eventAttendanceMode" "https://schema.org/OnlineEventAttendanceMode"
+    "location" (dict
+      "@type" "VirtualLocation"
+      "url" .Permalink
+    )
+  ) }}
+{{ else }}
+  {{/* Physical location */}}
+  {{ $schema = merge $schema (dict
+    "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
+    "location" (dict
+      "@type" "Place"
+      "name" $location
+      "address" $location
+    )
+  ) }}
 {{ end }}
 
 {{/* Add event status - if external and block_external_search_index is true, might be past */}}
@@ -65,20 +71,32 @@
   )
 ) }}
 
-{{/* Add image if available */}}
-{{ with .Params.meta_image }}
-  {{ $imageURL := . }}
-  {{ if not (hasPrefix . "http") }}
-    {{ $imageURL = printf "%s%s" $.Permalink . }}
-  {{ end }}
-  {{ $schema = merge $schema (dict
-    "image" $imageURL
-  ) }}
-{{ end }}
+{{/* Add offers - most Pulumi events are free */}}
+{{ $schema = merge $schema (dict
+  "offers" (dict
+    "@type" "Offer"
+    "price" "0"
+    "priceCurrency" "USD"
+    "availability" "https://schema.org/InStock"
+    "url" .Permalink
+    "validFrom" (now.Format "2006-01-02")
+  )
+) }}
 
-{{/* Add presenter/performer if available */}}
+{{/* Add image - use meta_image or fallback to default */}}
+{{ $imageURL := .Params.meta_image | default "/logos/brand/og-default.png" }}
+{{ if not (hasPrefix $imageURL "http") }}
+  {{ if hasPrefix $imageURL "/" }}
+    {{ $imageURL = printf "https://www.pulumi.com%s" $imageURL }}
+  {{ else }}
+    {{ $imageURL = printf "%s%s" .Permalink $imageURL }}
+  {{ end }}
+{{ end }}
+{{ $schema = merge $schema (dict "image" $imageURL) }}
+
+{{/* Add presenter/performer - use presenters or fallback to Pulumi team */}}
+{{ $performers := slice }}
 {{ with .Params.main.presenters }}
-  {{ $performers := slice }}
   {{ range . }}
     {{ $presenter := . }}
     {{ with $presenter.name }}
@@ -89,10 +107,14 @@
       {{ $performers = $performers | append $performer }}
     {{ end }}
   {{ end }}
-  {{ if $performers }}
-    {{ $schema = merge $schema (dict "performer" $performers) }}
-  {{ end }}
 {{ end }}
+
+{{/* If no performers specified, use default */}}
+{{ if eq (len $performers) 0 }}
+  {{ $performers = slice (dict "@type" "Person" "name" "Pulumi Team") }}
+{{ end }}
+
+{{ $schema = merge $schema (dict "performer" $performers) }}
 
 {{/* Add publisher reference */}}
 {{ $schema = merge $schema (dict

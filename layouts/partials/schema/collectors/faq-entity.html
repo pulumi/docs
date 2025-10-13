@@ -41,17 +41,20 @@
     {{/* Save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
       {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
-      {{ if $answerText }}
-        {{ $questionText := $currentQuestion }}
-        {{/* Remove the heading prefix */}}
-        {{ if strings.HasPrefix $questionText "### " }}
-          {{ $questionText = strings.TrimPrefix "### " $questionText }}
-        {{ else if strings.HasPrefix $questionText "## " }}
-          {{ $questionText = strings.TrimPrefix "## " $questionText }}
-        {{ end }}
+      {{ $questionText := $currentQuestion }}
+      {{/* Remove the heading prefix */}}
+      {{ if strings.HasPrefix $questionText "### " }}
+        {{ $questionText = strings.TrimPrefix "### " $questionText }}
+      {{ else if strings.HasPrefix $questionText "## " }}
+        {{ $questionText = strings.TrimPrefix "## " $questionText }}
+      {{ end }}
+      {{ $questionText = trim $questionText " \t\n\r" }}
+
+      {{/* Only add if both question and answer have actual content after trimming */}}
+      {{ if and (gt (len $questionText) 0) (gt (len $answerText) 0) }}
         {{ $qa := dict
           "@type" "Question"
-          "name" (trim $questionText " \t\n\r")
+          "name" $questionText
           "acceptedAnswer" (dict
             "@type" "Answer"
             "text" $answerText
@@ -68,17 +71,20 @@
     {{/* New section, save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
       {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
-      {{ if $answerText }}
-        {{ $questionText := $currentQuestion }}
-        {{/* Remove the heading prefix */}}
-        {{ if strings.HasPrefix $questionText "### " }}
-          {{ $questionText = strings.TrimPrefix "### " $questionText }}
-        {{ else if strings.HasPrefix $questionText "## " }}
-          {{ $questionText = strings.TrimPrefix "## " $questionText }}
-        {{ end }}
+      {{ $questionText := $currentQuestion }}
+      {{/* Remove the heading prefix */}}
+      {{ if strings.HasPrefix $questionText "### " }}
+        {{ $questionText = strings.TrimPrefix "### " $questionText }}
+      {{ else if strings.HasPrefix $questionText "## " }}
+        {{ $questionText = strings.TrimPrefix "## " $questionText }}
+      {{ end }}
+      {{ $questionText = trim $questionText " \t\n\r" }}
+
+      {{/* Only add if both question and answer have actual content after trimming */}}
+      {{ if and (gt (len $questionText) 0) (gt (len $answerText) 0) }}
         {{ $qa := dict
           "@type" "Question"
-          "name" (trim $questionText " \t\n\r")
+          "name" $questionText
           "acceptedAnswer" (dict
             "@type" "Answer"
             "text" $answerText
@@ -105,17 +111,20 @@
 {{/* Save last Q&A if exists */}}
 {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
   {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
-  {{ if $answerText }}
-    {{ $questionText := $currentQuestion }}
-    {{/* Remove the heading prefix */}}
-    {{ if strings.HasPrefix $questionText "### " }}
-      {{ $questionText = strings.TrimPrefix "### " $questionText }}
-    {{ else if strings.HasPrefix $questionText "## " }}
-      {{ $questionText = strings.TrimPrefix "## " $questionText }}
-    {{ end }}
+  {{ $questionText := $currentQuestion }}
+  {{/* Remove the heading prefix */}}
+  {{ if strings.HasPrefix $questionText "### " }}
+    {{ $questionText = strings.TrimPrefix "### " $questionText }}
+  {{ else if strings.HasPrefix $questionText "## " }}
+    {{ $questionText = strings.TrimPrefix "## " $questionText }}
+  {{ end }}
+  {{ $questionText = trim $questionText " \t\n\r" }}
+
+  {{/* Only add if both question and answer have actual content after trimming */}}
+  {{ if and (gt (len $questionText) 0) (gt (len $answerText) 0) }}
     {{ $qa := dict
       "@type" "Question"
-      "name" (trim $questionText " \t\n\r")
+      "name" $questionText
       "acceptedAnswer" (dict
         "@type" "Answer"
         "text" $answerText
