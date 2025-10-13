@@ -62,7 +62,17 @@
         ></div>
     </div>
 
-    <pulumi-docs-nav expanded-menu-ids="{{ delimit (default slice $page.Params.expanded_menu_ids) "," }}">
+    {{/* Build list of menu IDs that should be expanded */}}
+    {{ $expandedIDs := default slice $page.Params.expanded_menu_ids }}
+
+    {{/* Auto-expand CLI command menus for pages defined only in menus.yml */}}
+    {{ if hasPrefix $page.Path "/docs/iac/cli/commands/" }}
+        {{ $expandedIDs = $expandedIDs | append "iac-cli" | append "iac-cli-commands" }}
+    {{ else if hasPrefix $page.Path "/docs/esc/cli/commands/" }}
+        {{ $expandedIDs = $expandedIDs | append "esc-cli-overview" | append "esc-cli-commands" }}
+    {{ end }}
+
+    <pulumi-docs-nav expanded-menu-ids="{{ delimit $expandedIDs "," }}">
         <ul class="list-none pl-0">
 
             <li class="" data-menu-id="docs-home">
@@ -230,6 +240,9 @@
                 {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
             {{- else if $page.HasMenuCurrent .Menu .}}
                 {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+            {{- else if eq $page.RelPermalink .URL }}
+                {{/* Fallback for pages without frontmatter menu (e.g., CLI commands) */}}
+                {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
             {{- end }}
             {{- $name := .Name }}
             {{- with .Identifier }}
