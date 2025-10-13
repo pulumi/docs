@@ -26,13 +26,21 @@
 {{ $inQuestion := false }}
 
 {{ range $index, $line := $lines }}
-  {{/* Check if this is a question (H2 ending with ? or H3 header) */}}
-  {{ $isH3Question := strings.HasPrefix $line "### " }}
+  {{/* Check if this is a question (H2 ending with ? or context-aware H3) */}}
+  {{/* Context-aware H3 detection:
+       - In FAQ pages (/faq in URL): All H3s are treated as questions
+       - Elsewhere: H3 must end with ? to be a question */}}
+  {{ $isH3Question := false }}
+  {{ if strings.Contains (lower $.RelPermalink) "/faq" }}
+    {{ $isH3Question = strings.HasPrefix $line "### " }}
+  {{ else }}
+    {{ $isH3Question = and (strings.HasPrefix $line "### ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+  {{ end }}
   {{ $isH2Question := and (strings.HasPrefix $line "## ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
   {{ if or $isH3Question $isH2Question }}
     {{/* Save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+      {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
       {{ if $answerText }}
         {{ $questionText := $currentQuestion }}
         {{/* Remove the heading prefix */}}
@@ -59,7 +67,7 @@
   {{ else if strings.HasPrefix $line "## " }}
     {{/* New section, save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-      {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+      {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
       {{ if $answerText }}
         {{ $questionText := $currentQuestion }}
         {{/* Remove the heading prefix */}}
@@ -96,7 +104,7 @@
 
 {{/* Save last Q&A if exists */}}
 {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-  {{ $answerText := delimit $currentAnswer " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+  {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
   {{ if $answerText }}
     {{ $questionText := $currentQuestion }}
     {{/* Remove the heading prefix */}}
@@ -117,19 +125,23 @@
   {{ end }}
 {{ end }}
 
-{{/* Add mainEntity with questions if we found any */}}
+{{/* Only return FAQPage schema if we have questions */}}
 {{ if $questions }}
+  {{/* Add mainEntity with questions */}}
   {{ $schema = merge $schema (dict "mainEntity" $questions) }}
+
+  {{/* Add publisher reference */}}
+  {{ $schema = merge $schema (dict
+    "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+  ) }}
+
+  {{/* Add breadcrumb reference if it exists */}}
+  {{ $schema = merge $schema (dict
+    "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
+  ) }}
+{{ else }}
+  {{/* No questions found, don't generate FAQPage schema */}}
+  {{ $schema = dict }}
 {{ end }}
-
-{{/* Add publisher reference */}}
-{{ $schema = merge $schema (dict
-  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
-) }}
-
-{{/* Add breadcrumb reference if it exists */}}
-{{ $schema = merge $schema (dict
-  "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
-) }}
 
 {{ return $schema }}
