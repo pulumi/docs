@@ -2,26 +2,78 @@
 
 {{ $entity := dict }}
 
-{{/* Determine entity based on page type */}}
-{{ if and (eq .Type "blog") .IsPage }}
-  {{ $entity = partial "schema/collectors/blog-entity.html" . }}
+{{/* Check for explicit schema declaration in frontmatter */}}
+{{ $explicitSchema := .Params.schema_type }}
 
-{{ else if eq .Type "tutorials" }}
-  {{ $entity = partial "schema/collectors/howto-entity.html" . }}
+{{ if ne $explicitSchema "none" }}
+  {{ if and $explicitSchema (ne $explicitSchema "auto") }}
+    {{/* Use explicit schema type declaration */}}
+    {{ if eq $explicitSchema "faq" }}
+      {{ $entity = partial "schema/collectors/faq-entity.html" . }}
+    {{ else if eq $explicitSchema "article" }}
+      {{ $entity = partial "schema/collectors/article-entity.html" . }}
+    {{ else if eq $explicitSchema "blog" }}
+      {{ $entity = partial "schema/collectors/blog-entity.html" . }}
+    {{ else if eq $explicitSchema "howto" }}
+      {{ $entity = partial "schema/collectors/howto-entity.html" . }}
+    {{ else if eq $explicitSchema "product" }}
+      {{ $entity = partial "schema/collectors/product-entity.html" . }}
+    {{ else if eq $explicitSchema "event" }}
+      {{ $entity = partial "schema/collectors/event-entity.html" . }}
+    {{ end }}
 
-{{ else if and (eq .Type "docs") (or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq")) }}
-  {{/* FAQ pages get FAQPage schema */}}
-  {{ $entity = partial "schema/collectors/faq-entity.html" . }}
+  {{ else }}
+    {{/* Auto-detection logic (explicit "auto" or no schema_type specified) */}}
 
-{{ else if eq .Type "docs" }}
-  {{ $entity = partial "schema/collectors/article-entity.html" . }}
+    {{ if and (eq .Type "blog") .IsPage }}
+      {{/* Blog posts get BlogPosting schema */}}
+      {{ $entity = partial "schema/collectors/blog-entity.html" . }}
 
-{{ else if eq .Section "product" }}
-  {{ $entity = partial "schema/collectors/product-entity.html" . }}
+    {{ else if eq .Type "tutorials" }}
+      {{/* Tutorial pages get HowTo schema */}}
+      {{ $entity = partial "schema/collectors/howto-entity.html" . }}
 
-{{ else if .IsHome }}
-  {{/* Homepage doesn't have a main content entity, handled separately in graph-builder */}}
-  {{ $entity = dict }}
+    {{ else if eq .Type "webinars" }}
+      {{/* Webinars and events get Event schema */}}
+      {{ $entity = partial "schema/collectors/event-entity.html" . }}
+
+    {{ else if or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq") (strings.Contains (lower .Title) "frequently asked") }}
+      {{/* Pages explicitly marked as FAQ */}}
+      {{ $faqEntity := partial "schema/collectors/faq-entity.html" . }}
+      {{ if $faqEntity }}
+        {{ $entity = $faqEntity }}
+      {{ else }}
+        {{/* FAQ page with no questions - fall back to article */}}
+        {{ $entity = partial "schema/collectors/article-entity.html" . }}
+      {{ end }}
+
+    {{ else if eq .Type "what-is" }}
+      {{/* What-is pages: try FAQ first (if they have questions), fallback to Article */}}
+      {{ $faqEntity := partial "schema/collectors/faq-entity.html" . }}
+      {{ if $faqEntity }}
+        {{ $entity = $faqEntity }}
+      {{ else }}
+        {{/* No questions found - treat as educational article */}}
+        {{ $entity = partial "schema/collectors/article-entity.html" . }}
+      {{ end }}
+
+    {{ else if eq .Type "docs" }}
+      {{/* Documentation pages get TechArticle schema */}}
+      {{ $entity = partial "schema/collectors/article-entity.html" . }}
+
+    {{ else if eq .Section "product" }}
+      {{/* Product pages get SoftwareApplication schema */}}
+      {{ $entity = partial "schema/collectors/product-entity.html" . }}
+
+    {{ else if eq .Section "case-studies" }}
+      {{/* Case studies get Article schema */}}
+      {{ $entity = partial "schema/collectors/article-entity.html" . }}
+
+    {{ else if .IsHome }}
+      {{/* Homepage doesn't have a main content entity, handled separately in graph-builder */}}
+      {{ $entity = dict }}
+    {{ end }}
+  {{ end }}
 {{ end }}
 
 {{ return $entity }}
