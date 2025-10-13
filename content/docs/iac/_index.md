@@ -28,38 +28,38 @@ sections:
   cards:
   - label: AWS & Pulumi
     icon: aws-40
-    link: /docs/clouds/aws/
+    link: /docs/iac/clouds/aws/
   - label: Azure & Pulumi
     icon: azure-40
-    link: /docs/clouds/azure/
+    link: /docs/iac/clouds/azure/
   - label: Google Cloud & Pulumi
     icon: google-cloud-40
-    link: /docs/clouds/gcp/
+    link: /docs/iac/clouds/gcp/
   - label: Kubernetes & Pulumi
     icon: kubernetes-40
-    link: /docs/clouds/kubernetes/
+    link: /docs/iac/clouds/kubernetes/
 - type: cards-logo-label-link
   heading: Languages
   description: Build infrastructure intuitively on any cloud using familiar languages.
   cards:
   - label: Node.js
     icon: icon-32-32 node-color-32-32
-    link: /docs/languages-sdks/javascript/
+    link: /docs/iac/languages-sdks/javascript/
   - label: Python
     icon: icon-32-32 python-color-32-32
-    link: /docs/languages-sdks/python/
+    link: /docs/iac/languages-sdks/python/
   - label: Go
     icon: icon-32-32 go-color-32-32
-    link: /docs/languages-sdks/go/
+    link: /docs/iac/languages-sdks/go/
   - label: .NET
     icon: icon-32-32 dotnet-color-32-32
-    link: /docs/languages-sdks/dotnet/
+    link: /docs/iac/languages-sdks/dotnet/
   - label: Java
     icon: icon-32-32 java-color-32-32
-    link: /docs/languages-sdks/java/
+    link: /docs/iac/languages-sdks/java/
   - label: YAML
     icon: icon-32-32 yaml-color-32-32
-    link: /docs/languages-sdks/yaml/
+    link: /docs/iac/languages-sdks/yaml/
 - type: full-width-cards
   heading: Featured docs
   cards:
@@ -70,11 +70,11 @@ sections:
   - icon: terminal-blue-21-21
     heading: Pulumi CLI
     description: Browse the complete documentation of available CLI commands.
-    link: /docs/cli/
+    link: /docs/iac/cli/
   - icon: swap-blue-21-21
     heading: Adopting Pulumi
     description: Migrate any infrastructure to Pulumi with comprehensive guides.
-    link: /docs/using-pulumi/adopting-pulumi/
+    link: /docs/iac/adopting-pulumi/
 - type: blue-sparkle
   heading: Why Pulumi IaC?
   description: Pulumi IaC enables developers to deploy infrastructure in any cloud environment with one common approach. Leverage familiar languages to make the most of abstractions and reuse while enjoying access in your favorite IDEs, and testing tools!
