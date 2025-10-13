@@ -1,7 +1,7 @@
 ---
-title: "How to Create an AWS EKS Kubernetes Cluster with Pulumi"
+title: "Deploy a Managed Kubernetes Cluster with EKS"
 meta_desc: "Deploy a managed Kubernetes cluster on AWS using EKS with Pulumi for container orchestration."
-canonical_url: "https://www.pulumi.com/recipes/aws/eks-cluster-basic"
+canonical_url: "https://www.pulumi.com/guides/aws/eks-cluster-basic"
 date: 2025-10-08
 category: "Compute"
 tags: ["aws", "eks", "kubernetes", "containers", "orchestration"]

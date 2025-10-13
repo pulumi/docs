@@ -1,21 +1,21 @@
 ---
-title: "Pulumi Recipes Content Guidelines"
-meta_desc: "Mandatory guidelines for creating and editing Pulumi Recipes content with code sourcing requirements"
+title: "Pulumi Guides Content Guidelines"
+meta_desc: "Mandatory guidelines for creating and editing Pulumi Guides content with code sourcing requirements"
 draft: true
 _build:
   render: never
   list: never
 ---
 
-# Pulumi Recipes Content Guidelines
+# Pulumi Guides Content Guidelines
 
 **CRITICAL REQUIREMENT: NO SELF-GENERATED CODE**
 
-This file contains mandatory guidelines for creating and editing Pulumi Recipes content.
+This file contains mandatory guidelines for creating and editing Pulumi Guides content.
 
 ## Code Examples: The Golden Rule
 
-**ALL code examples in recipes MUST come from verified sources. NEVER generate code examples yourself.**
+**ALL code examples in guides MUST come from verified sources. NEVER generate code examples yourself.**
 
 ### Approved Sources for Code Examples
 
@@ -32,14 +32,14 @@ This file contains mandatory guidelines for creating and editing Pulumi Recipes 
 
 ### Code Review Checklist
 
-Before submitting a recipe:
+Before submitting a guide:
 
 - [ ] Code examples are sourced from Pulumi Registry
 - [ ] ALL 5 languages are present (TypeScript, Python, Go, C#, Java)
 - [ ] Registry source URL is documented
 - [ ] No self-generated or modified code is included
 
-## Recipe Structure
+## Guide Structure
 
 ### Required Frontmatter
 
@@ -47,7 +47,7 @@ Before submitting a recipe:
 ---
 title: "Short title (max 60 characters)"
 meta_desc: "Brief description (max 160 characters)"
-canonical_url: "https://www.pulumi.com/recipes/[provider]/[recipe-name]"
+canonical_url: "https://www.pulumi.com/guides/[provider]/[guide-name]"
 date: YYYY-MM-DD
 category: "[Compute|Database|Storage|Networking|Security]"
 tags: ["provider", "service", "feature"]
@@ -85,7 +85,7 @@ Tags should be **interactive** - clicking a tag navigates to `/blog/tag/[tagname
 
 ### Schema Markup
 
-- Use the integrated schema system (see `/layouts/partials/schema/collectors/recipes-entity.html`)
+- Use the integrated schema system (see `/layouts/partials/schema/collectors/guides-entity.html`)
 - Do NOT create custom schema - use the existing automation
 - FAQ data in front matter automatically generates schema.org JSON-LD
 
@@ -97,7 +97,7 @@ Tags should be **interactive** - clicking a tag navigates to `/blog/tag/[tagname
 
 ## Enforcement
 
-These guidelines are **mandatory**. Code reviews will reject any recipes that:
+These guidelines are **mandatory**. Code reviews will reject any guides that:
 
 - Contain self-generated code examples
 - Are missing any of the 5 required languages

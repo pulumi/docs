@@ -1,7 +1,7 @@
 ---
-title: "How to Auto-Scale EC2 Instances with AWS Auto Scaling Groups"
+title: "Auto-Scale EC2 Instances"
 meta_desc: "Scale EC2 instances based on demand using AWS Auto Scaling Groups with launch templates and Pulumi."
-canonical_url: "https://www.pulumi.com/recipes/aws/ec2-auto-scaling"
+canonical_url: "https://www.pulumi.com/guides/aws/ec2-auto-scaling"
 date: 2025-10-08
 category: "Compute"
 tags: ["aws", "ec2", "auto-scaling", "high-availability", "elasticity"]

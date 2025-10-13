@@ -1,7 +1,7 @@
 ---
-title: "Connect AWS Lambda to Private VPC Resources"
+title: "Connect Lambda to Private VPC Resources"
 meta_desc: "Deploy Lambda functions that access private VPC resources like RDS, ElastiCache, or internal APIs with Pulumi."
-canonical_url: "https://www.pulumi.com/recipes/aws/lambda-vpc-access"
+canonical_url: "https://www.pulumi.com/guides/aws/lambda-vpc-access"
 date: 2025-10-08
 category: "Compute"
 tags: ["aws", "lambda", "vpc", "networking", "rds", "compute", "serverless"]

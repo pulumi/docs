@@ -1,7 +1,7 @@
 ---
 title: "Secure RDS Passwords with AWS Secrets Manager"
 meta_desc: "Automatically manage RDS passwords with AWS Secrets Manager for improved security and compliance using Pulumi."
-canonical_url: "https://www.pulumi.com/recipes/aws/rds-secrets-manager"
+canonical_url: "https://www.pulumi.com/guides/aws/rds-secrets-manager"
 date: 2025-10-08
 category: "Database"
 tags: ["aws", "rds", "secrets-manager", "security", "database"]

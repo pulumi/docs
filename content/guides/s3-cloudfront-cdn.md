@@ -1,7 +1,7 @@
 ---
-title: "How to Serve S3 Content Through CloudFront CDN with Pulumi"
+title: "Serve S3 Content Through CloudFront CDN"
 meta_desc: "Distribute static website content globally with low latency using AWS CloudFront CDN and S3 bucket as origin with Pulumi in TypeScript, Python, Go, C#, or Java."
-canonical_url: "https://www.pulumi.com/recipes/aws/s3-cloudfront-cdn"
+canonical_url: "https://www.pulumi.com/guides/aws/s3-cloudfront-cdn"
 date: 2025-10-08
 category: "Storage"
 tags: ["aws", "s3", "cloudfront", "cdn", "static-website"]

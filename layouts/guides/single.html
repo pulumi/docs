@@ -7,7 +7,7 @@
                 <svg class="w-4 h-4 mx-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
-                <a href="/recipes/" class="text-gray-500 hover:text-purple-600 transition-colors">Recipes</a>
+                <a href="/guides/" class="text-gray-500 hover:text-purple-600 transition-colors">Guides</a>
                 <svg class="w-4 h-4 mx-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
@@ -44,16 +44,16 @@
             <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
                 <!-- Main Content -->
                 <article class="flex-1 min-w-0">
-                    <div class="recipe-content space-y-8">
+                    <div class="guide-content space-y-8">
                         {{ .Content }}
                     </div>
 
                     <!-- Bottom CTA -->
                     <div class="mt-16 p-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-xl text-white">
                         <h3 class="text-2xl font-bold mb-2 text-white">Ready to deploy?</h3>
-                        <p class="text-purple-100 mb-4">Get started with Pulumi in minutes. Create your free account and deploy this recipe today.</p>
-                        <a href="/docs/get-started/" class="inline-flex items-center px-6 py-3 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl">
-                            Get started free
+                        <p class="text-purple-100 mb-4">Sign up for Pulumi Cloud and start building.</p>
+                        <a href="https://app.pulumi.com/signup" class="inline-flex items-center px-6 py-3 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl">
+                            Create free account
                         </a>
                     </div>
                 </article>
@@ -65,7 +65,7 @@
                         <div class="bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl shadow-lg p-6 text-white text-center">
                             <h4 class="font-bold text-lg text-white mb-3">Deploy with Pulumi</h4>
                             <p class="text-purple-100 text-sm mb-4 leading-relaxed">
-                                Start deploying this recipe in minutes with Pulumi Cloud.
+                                Start deploying this guide in minutes with Pulumi Cloud.
                             </p>
                             <a href="https://app.pulumi.com/signup" class="block w-full text-center px-4 py-3 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-all shadow-md hover:shadow-xl transform hover:scale-105">
                                 Start free
@@ -83,7 +83,7 @@
                                 </svg>
                                 <h4 class="text-sm font-bold text-gray-900 uppercase tracking-wider">On this page</h4>
                             </div>
-                            <nav class="recipe-toc text-sm">
+                            <nav class="guide-toc text-sm">
                                 {{ .TableOfContents }}
                             </nav>
                         </div>
@@ -109,11 +109,11 @@
                                     </svg>
                                     Browse registry
                                 </a>
-                                <a href="/recipes/" class="flex items-center text-sm text-gray-700 hover:text-purple-600 transition-colors group">
+                                <a href="/guides/" class="flex items-center text-sm text-gray-700 hover:text-purple-600 transition-colors group">
                                     <svg class="w-4 h-4 mr-3 text-gray-400 group-hover:text-purple-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                     </svg>
-                                    All recipes
+                                    All guides
                                 </a>
                                 <hr class="my-3 border-gray-200">
                                 <a href="https://github.com/pulumi/docs/edit/master/content/{{ .File.Path }}" class="flex items-center text-sm text-gray-700 hover:text-purple-600 transition-colors group">

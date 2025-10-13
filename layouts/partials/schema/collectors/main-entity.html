@@ -19,9 +19,9 @@
 {{ else if eq .Section "product" }}
   {{ $entity = partial "schema/collectors/product-entity.html" . }}
 
-{{ else if eq .Section "recipes" }}
-  {{/* Recipe pages get HowTo schema with FAQ questions */}}
-  {{ $entity = partial "schema/collectors/recipes-entity.html" . }}
+{{ else if eq .Section "guides" }}
+  {{/* Guide pages get HowTo schema with FAQ questions */}}
+  {{ $entity = partial "schema/collectors/guides-entity.html" . }}
 
 {{ else if .IsHome }}
   {{/* Homepage doesn't have a main content entity, handled separately in graph-builder */}}
