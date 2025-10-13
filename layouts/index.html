@@ -30,8 +30,7 @@
 {{ end }}
 
 {{ define "main" }}
-<div id="main-content"
-    style="transition: opacity 0.3s ease, transform 0.3s ease; max-width: 100vw; overflow-x: hidden;">
+<div id="main-content">
     {{ $pageContext := . }}
     <!-- Logos carousel -->
     <section class="container mx-auto text-center overflow-hidden px-3 mt-12" style="margin-bottom: -35px;">
@@ -344,55 +343,35 @@
 </div>
 
 <!-- Neo mode fixed div -->
-<div id="neo-mode-toggle" onclick="toggleNeoMode()"
-    style="position: fixed; top: 200px; right: 20px; display: flex; padding: 12px 16px; flex-direction: row; justify-content: space-between; align-items: center; gap: 12px; background: var(--violet-secondary, #805AC3); border: 2px solid var(--violet-secondary, #805AC3); border-radius: 8px; cursor: pointer; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); z-index: 999; transition: all 0.3s ease; max-width: calc(100vw - 40px);">
-
+<div id="neo-mode-toggle" onclick="toggleNeoMode()">
     <!-- Left side: Icon and text -->
-    <div style="display: flex; align-items: center; gap: 8px;">
-        <div style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" fill="white" />
-                <circle cx="12" cy="12" r="8" fill="#8b5cf6" />
-                <circle cx="12" cy="8" r="3" fill="white" />
-                <path d="M12 11c-2 0-4 2-4 4h8c0-2-2-4-4-4z" fill="white" />
-            </svg>
+    <div class="neo-icon-text-group">
+        <div class="neo-icon-container">
+            <img src="/icons/pdi-neo-purple.svg" alt="Pulumi Neo">
         </div>
-        <div style="display: flex; flex-direction: column; align-items: flex-start;">
-            <div style="color: white; font-weight: 600; font-size: 14px;">Neo mode</div>
-            <div style="color: white; font-size: 11px; opacity: 0.9;">AI agent</div>
+        <div class="neo-text-container text-violet-600">
+            <div class="text-lg font-semibold">Neo mode</div>
+            <div class="text-sm">AI agent</div>
         </div>
     </div>
 
     <!-- Right side: Icon (visible on hover) -->
-    <div id="neo-hover-icon"
-        style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; opacity: 0; transform: scale(0.8); transition: all 0.2s ease; pointer-events: none;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 18l6-6-6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+    <div class="neo-hover-icon">
+        <img class="toggle-on" src="/icons/toggle-on.svg" alt="toggle on">
+        <img class="toggle-off" src="/icons/toggle-off.svg" alt="toggle off">
     </div>
 </div>
 
 <!-- Neo Interface (hidden by default) -->
-<div id="neo-interface"
-    style="display: none; position: fixed; top: 224px; left: 0; width: 100%; height: calc(100vh - 224px); background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #f3e8ff 100%); z-index: 998; overflow: hidden; opacity: 0; transform: translateY(20px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-    <div
-        style="height: calc(100vh - 224px); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px; opacity: 0; transform: translateY(30px); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;">
-        <div style="text-align: center; max-width: 600px;">
-            <h1
-                style="font-size: 48px; font-weight: 700; background: linear-gradient(135deg, #8b5cf6, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 16px;">
-                What cloud infrastructure would you like today?
-            </h1>
-            <p style="font-size: 18px; color: #6b7280; margin-bottom: 32px;">
-                Use Neo to build, deploy, and manage your cloud infrastructure.
-            </p>
-            <div style="display: flex; justify-content: center; margin-bottom: 60px;">
-                <div
-                    style="display: flex; align-items: center; background: white; border-radius: 12px; border: 2px solid #8b5cf6; padding: 12px 20px; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);">
-                    <input type="text" placeholder="Describe your infrastructure needs..."
-                        style="border: none; outline: none; font-size: 16px; width: 400px; background: transparent;"
-                        id="neo-input">
-                    <button onclick="submitNeoQuery()"
-                        style="background: linear-gradient(135deg, #8b5cf6, #a855f7); border: none; border-radius: 8px; padding: 8px 12px; margin-left: 12px; cursor: pointer; transition: all 0.2s ease;">
+<div id="neo-interface">
+    <div class="neo-content-container">
+        <div class="neo-content">
+            <h1>What cloud infrastructure would you like today?</h1>
+            <p class="text-gray-700 text-lg mb-16">Use Neo to build, deploy, and manage your cloud infrastructure.</p>
+            <div class="neo-input-container">
+                <div class="neo-input-wrapper">
+                    <input type="text" placeholder="Describe your infrastructure needs..." id="neo-input">
+                    <button onclick="submitNeoQuery()" class="neo-submit-btn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -400,32 +379,17 @@
                     </button>
                 </div>
             </div>
-            <div style="text-align: center;">
-                <p style="color: #6b7280; font-size: 14px;">
-                    New to Pulumi Neo? <a href="/neo" style="color: #8b5cf6; text-decoration: underline;">Learn more
-                        about Neo</a> or <a href="/docs" style="color: #8b5cf6; text-decoration: underline;">read the
-                        docs</a>.
+            <div class="neo-footer">
+                <p class="text-base">
+                    New to Pulumi Neo? <a href="/neo" class="no-underline font-bold text-violet-600">Learn more about
+                        Neo</a> or <a href="/docs/pulumi-cloud/neo/" class="no-underline font-bold text-violet-600">read
+                        the docs</a>.
                 </p>
             </div>
         </div>
     </div>
 </div>
 
-<style>
-    body {
-        overflow-x: hidden;
-        max-width: 100vw;
-    }
-
-    #neo-mode-toggle {
-        position: relative;
-    }
-
-    #neo-mode-toggle:hover #neo-hover-icon {
-        opacity: 1;
-        transform: scale(1);
-    }
-</style>
 
 <script>
     let isNeoMode = false;
@@ -439,44 +403,11 @@
         isNeoMode = !isNeoMode;
 
         if (isNeoMode) {
-            // Show Neo interface with animation
-            neoInterface.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-            neoToggle.style.background = 'var(--violet-secondary, #805AC3)';
-            neoToggle.style.borderColor = 'var(--violet-secondary, #805AC3)';
-            neoToggle.classList.add('neo-active');
-
-            // Fade out main content
-            mainContent.style.opacity = '0.3';
-            mainContent.style.transform = 'scale(0.98)';
-
-            // Trigger Neo interface animation after display is set
-            requestAnimationFrame(() => {
-                neoInterface.style.opacity = '1';
-                neoInterface.style.transform = 'translateY(0)';
-                neoContent.style.opacity = '1';
-                neoContent.style.transform = 'translateY(0)';
-            });
+            // Add neo-active class to body to trigger all styling
+            document.body.classList.add('neo-active');
         } else {
-            // Hide Neo interface with animation
-            neoInterface.style.opacity = '0';
-            neoInterface.style.transform = 'translateY(20px)';
-            neoContent.style.opacity = '0';
-            neoContent.style.transform = 'translateY(30px)';
-
-            // Restore main content
-            mainContent.style.opacity = '1';
-            mainContent.style.transform = 'scale(1)';
-
-            // Wait for animation to complete before hiding
-            setTimeout(() => {
-                neoInterface.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }, 400);
-
-            neoToggle.style.background = 'var(--violet-secondary, #805AC3)';
-            neoToggle.style.borderColor = 'var(--violet-secondary, #805AC3)';
-            neoToggle.classList.remove('neo-active');
+            // Remove neo-active class to restore normal state
+            document.body.classList.remove('neo-active');
         }
     }
 
@@ -485,10 +416,10 @@
         const query = input.value.trim();
 
         if (query) {
-            // Here you would typically send the query to your Neo backend
-            console.log('Neo query:', query);
-            // For now, just show an alert
-            alert('Neo query submitted: ' + query);
+            // Encode the query for URL safety
+            const encodedQuery = encodeURIComponent(query);
+            // Redirect to Pulumi Neo app with the query
+            window.location.href = `https://app.pulumi.com/neo?prompt=${encodedQuery}`;
         }
     }
 
