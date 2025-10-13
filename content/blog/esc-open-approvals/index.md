@@ -11,7 +11,7 @@ tags:
     - esc
 ---
 
-Many teams live with the fear that an environment, staging or production, **might be accidentally opened, exposing credentials or sensitive systems before anyone even notices**.
+Many teams live with the fear that a production environment **might be accidentally opened, exposing credentials or sensitive systems before anyone even notices**.
 
 We’re excited to announce a new feature for Pulumi ESC: [Open approvals](/docs/esc/administration/approvals). A **governance capability that lets organizations require review and sign-off before an environment is opened** (i.e. activated or exposed)
 
