@@ -919,6 +919,10 @@ body .btn-secondary-home-action:focus{
   background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
 }
 
+.section- pulumi-copilot{
+  display:none
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
