@@ -106,7 +106,6 @@ body #neo-mode-toggle {
 }
 
 body #neo-interface {
-    display: none;
     position: fixed;
     top: $TOP_MARGIN;
     left: 0;
@@ -120,8 +119,9 @@ body #neo-interface {
     z-index: 30;
     overflow: hidden;
     opacity: 0;
+    visibility: hidden;
     transform: translateY(20px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
 
     .neo-content-container {
         height: calc(100vh - $TOP_MARGIN);
@@ -236,9 +236,10 @@ body {
  }
         // Show and animate Neo interface
         #neo-interface {
-            display: block;
             opacity: 1;
+            visibility: visible;
             transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
 
             .neo-content-container {
                 opacity: 1;
