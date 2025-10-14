@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: AWS re:Invent
 meta_desc: "Visit Pulumi booth #370 to learn how to automate, secure and manage everything you run in AWS."
-meta_image: /images/reinvent/reinvent-meta-25.png
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false
