@@ -26,7 +26,7 @@ section.docs-home {
         background-image: url("/images/docs/docs-home-header-background-mobile.svg");
 
         p {
-            @apply max-w-md;
+            @apply max-w-2xl;
         }
 
         @screen md {
