@@ -51,13 +51,21 @@
 <nav class="text-sm mt-5 mr-2">
     {{/* Search box moved from top nav */}}
     <div class="docs-search mb-4">
-        <div
-            id="search"
-            data-app-id="{{ getenv "ALGOLIA_APP_ID" }}"
-            data-search-key="{{ getenv "ALGOLIA_APP_SEARCH_KEY" }}"
-            data-facets="Docs,Registry,Tutorials,Blog"
-            data-index="production"
-        ></div>
+        {{ if getenv "ALGOLIA_APP_ID" }}
+            <div
+                id="search"
+                data-app-id="{{ getenv "ALGOLIA_APP_ID" }}"
+                data-search-key="{{ getenv "ALGOLIA_APP_SEARCH_KEY" }}"
+                data-facets="Docs,Registry,Tutorials,Blog"
+                data-index="production"
+            ></div>
+        {{ else }}
+            <!-- Visual placeholder styled like real search input -->
+            <div class="border border-gray-300 rounded bg-gray-50 px-3 py-2">
+                <div class="text-gray-500 text-sm">🔍 Search box location</div>
+                <div class="text-xs text-gray-400 mt-1">Algolia search would render here in production</div>
+            </div>
+        {{ end }}
     </div>
 
     {{/* Build list of menu IDs that should be expanded */}}
