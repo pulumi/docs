@@ -166,4 +166,4 @@ Find out more:
 
 - Get the [example code on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins)
 - Read the docs on [Kubernetes](/registry/packages/kubernetes/api-docs/)
-- See the tutorial on [building components](/registry/packages/aws/how-to-guides/s3-folder-component/)
+- See the tutorial on [building components](/docs/iac/using-pulumi/build-a-component/)
