@@ -60,7 +60,83 @@ pulumi package publish github.com/acme/k8s-cluster --readme README_LOCATION
 
 #### Component API Docs
 
-In addition to the component README, when a new component or component version is published, API documentation is automatically generated for each of the supported Pulumi languages
+In addition to the component README, when a new component or component version is published, API documentation is automatically generated listing the component's inputs and outputs.
+
+Additionally, input and output descriptions are generated based on annotations in the code as follows:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// Use JSDocs-like comments to annotate inputs and outputs.
+export interface PetAbstractedArgs {
+    /**
+     * This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name.
+     **/
+    size: string;
+}
+
+export class PetAbstracted extends pulumi.ComponentResource {
+    /**
+     * This output provides the generated pet name.
+     **/
+    public readonly petName: pulumi.Output<string>;
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+# Use Python docstrings to annotate inputs and outputs.
+class PetAbstractedArgs(TypedDict):
+    size: pulumi.Input[str]
+    """This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name."""
+
+class AppImage(pulumi.ComponentResource):
+    pet_name: pulumi.Output[str]
+    """This output provides the generated pet name."""
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+// Use Annotate() to create annotations for go component inputs and outputs.
+type PetAbstractedArgs struct {
+	Size pulumi.StringInput 	`pulumi:"size"`
+}
+
+func (f *PetAbstractedArgs) Annotate(a infer.Annotator) {
+	a.Describe(&f.Size, "This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name.")
+}
+
+type PetAbstractedOutputs struct {
+  PetName pulumi.StringOutput `pulumi:"petName"`
+}
+func (f *PetAbstractedOutputs) Annotate(a infer.Annotator) {
+	a.Describe(&f.PetName, "This output provides the generated pet name.")
+}
+
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+// Component API Docs annotations are not currently supported in .NET.
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// Component API Docs annotations are not currently supported in Java.
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 #### Specifying an Organization
 

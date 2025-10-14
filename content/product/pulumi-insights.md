@@ -2,7 +2,7 @@
 title: Cloud Asset and Compliance Management – Pulumi Insights
 layout: pulumi-insights
 
-heading: Pulumi Insights
+heading: Insights & Governance
 subheading: |
     Complete visibility and control for your cloud
 
