@@ -56,11 +56,11 @@ There are four qualified entity types in Pulumi, these are:
   * Audit logs
   * Integration configurations
 
-## Default Permissions
+## Default permissions
 
 Pulumi Cloud provides several default permissions that you can use to quickly get started:
 
-### Stack Permissions
+### Stack permissions
 
 | Permission | Description | Included Scopes |
 |------------|-------------|----------------|
@@ -68,7 +68,7 @@ Pulumi Cloud provides several default permissions that you can use to quickly ge
 | `Stack Write` | Ability to update stack configurations and run stack updates. | Stack Read, + `stack:import`, `stack:cancel_update`, `stack:write`, `stack_deployment_settings:write`, `stack_deployment_settings:encrypt`, `stack_deployment_cache:read`, `stack_tags:update`, `stack_annotations:update`, `stack_schedule:update`, `stack_schedule:create`, `stack_schedule:pause`, `stack_schedule:resume`, `stack_schedule:delete`, `stack_deployment:create`, `stack_webhook:create`, `stack_webhook:update`, `stack_webhook:delete`, `stack_webhook:read` |
 | `Stack Admin` | Grants full control over stack operations. | Stack Write, + `stack:delete`, `stack_access:update`, `stack:transfer`, `stack:rename` |
 
-### Environment Permissions
+### Environment permissions
 
 | Permission | Description | Included Scopes |
 |------------|-------------|----------------|
@@ -77,7 +77,7 @@ Pulumi Cloud provides several default permissions that you can use to quickly ge
 | `Environment Write` | Ability to modify environment settings | Environment Open, + `environment:write`, `environment:rotate`, `environment_version:create`, `environment_version:update`, `environment_version:delete`, `environment_version:retract`, `environment_tag:create`, `environment_tag:update`, `environment_tag:delete`, `environment_schedule:create`, `environment_schedule:update`, `environment_schedule:pause`, `environment_schedule:resume`, `environment_schedule:delete`, `environment_webhook:read`, `environment_webhook:create`, `environment_webhook:update`, `environment_webhook:delete` |
 | `Environment Admin` | Full control over environment operations | Environment Write, + `environment:delete` |
 
-### Insights Account Permissions
+### Insights account permissions
 
 | Permission | Description | Included Scopes |
 |------------|-------------|----------------|
@@ -85,14 +85,14 @@ Pulumi Cloud provides several default permissions that you can use to quickly ge
 | `Account Write` | Ability to modify insights accounts | Account Read, + `insights_account:update_policy_results`, `insights_account:update`, `insights_account:scan`, `insights_account_scan:update`, `insights_account_scan:cancel`, `insights_account_scan:pause`, `insights_account_scan:resume` |
 | `Account Admin` | Full control over insights accounts | Account Write, + `insights_account:delete`, `insights_account_access:update` |
 
-## Custom Permissions
+## Custom permissions
 
 {{% notes "info" %}}
 Custom permissions are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.
 To learn more about editions visit the [pricing page](/pricing/).
 {{% /notes %}}
 
-### Creating Custom Permissions
+### Creating custom permissions
 
 To create a custom permission, you must be an organization admin.
 
@@ -116,7 +116,7 @@ Once you've selected the preferred scopes, click **Create permission**. The pane
 
 You can now assign this custom permission to roles within your organization.
 
-## Related Resources
+## Related resources
 
 * [Teams](/docs/administration/access-identity/rbac/teams)
 * [Roles](/docs/administration/access-identity/rbac/roles)

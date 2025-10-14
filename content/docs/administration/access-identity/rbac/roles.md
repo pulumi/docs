@@ -17,11 +17,11 @@ aliases:
 
 A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or machine token) can access and what they can do with them. Roles allow you to apply [permissions](../permissions) to a set of [entities](../permissions#entities) and assign this access to a principal.
 
-## Default Roles
+## Default roles
 
 Pulumi Cloud provides several default roles that you can use to quickly get started:
 
-### Organization Roles
+### Organization roles
 
 | <div style="width: 200px;">Role</div>| Description |
 |------|-------------|
@@ -29,7 +29,7 @@ Pulumi Cloud provides several default roles that you can use to quickly get star
 | `Member` | Basic access to view organization resources and participate in stack operations. Cannot modify organization settings. Default access for members to organization entities can be controlled via the **Access management** page under **Settings**.</div> |
 | `Billing Manager` | Access to view and manage billing information. Cannot modify other organization settings or resources.</div> |
 
-## Custom Roles
+## Custom roles
 
 {{% notes "info" %}}
 Custom roles are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.
@@ -41,7 +41,7 @@ You can create and manage custom roles to define more granular access controls f
 - Bundle specific permissions for different resource types
 - Control access to like resources or groups of resources
 
-### Creating Custom Roles
+### Creating custom roles
 
 To create a custom role, you must be an organization admin.
 
@@ -73,11 +73,11 @@ When done, click **Create role**. You should be taken back to the Roles page, wh
 
 You can now assign this role to principals in your organization.
 
-### Managing Custom Roles
+### Managing custom roles
 
 To update or delete a custom role, simply click on the ellipsis icon next to the role on the Roles page.
 
-## Role Assignment
+## Role assignment
 
 Currently, roles can be assigned to organization tokens. When early access has ended for this feature, you will be able to assign roles to teams or individual users in your organization.
 
@@ -95,7 +95,7 @@ Note that you will have the ability to provide a role. Choose a default or custo
 
 Proceed with creating the token. The access token you have created will be narrowed in scope according to the permissions of the role within your organization.
 
-## Best Practices
+## Best practices
 
 When working with roles in Pulumi Cloud, consider these best practices:
 
@@ -104,7 +104,7 @@ When working with roles in Pulumi Cloud, consider these best practices:
 3. **Regular Review**: Periodically schedule reviews of role assignments and scopes.
 4. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
 
-## Related Resources
+## Related resources
 
 - [Teams](/docs/administration/access-identity/rbac/teams)
 - [Permissions](/docs/administration/access-identity/rbac/permissions)
