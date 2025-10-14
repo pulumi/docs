@@ -366,8 +366,8 @@
 <div id="neo-interface">
     <div class="neo-content-container">
         <div class="neo-content">
-            <h1 class="text-xl md:text-4xl lg:text-6xl font-semibold">What cloud infrastructure would you like today?
-            </h1>
+            <h2 class="text-3xl md:text-4xl lg:text-6xl font-semibold">What cloud infrastructure would you like today?
+            </h2>
             <p class="text-gray-700 text-lg mb-16">Use Neo to build, deploy, and manage your cloud infrastructure.</p>
             <div class="neo-input-container">
                 <div class="neo-input-wrapper">
@@ -379,6 +379,20 @@
                         </svg>
                     </button>
                 </div>
+            </div>
+            <div class="neo-suggestions">
+                <button class="neo-suggestion-pill"
+                    onclick="populateNeoInput('I\'d like to understand my infrastructure. Let\'s start at a high level, discussing the primary infrastructure components, and then we can explore more from there. As well, let\'s focus on production infrastructure for the time being.')">
+                    Infrastructure overview
+                </button>
+                <button class="neo-suggestion-pill"
+                    onclick="populateNeoInput('I\'d like to address an open policy issue. If I don\'t have any policy issues, could you highlight opportunities to start leveraging policies for my most critical infrastructure?')">
+                    Address a policy issue
+                </button>
+                <button class="neo-suggestion-pill"
+                    onclick="populateNeoInput('Analyze my production infrastructure. Is any of the infrastructure more than a major version behind?')">
+                    Address outdated versions
+                </button>
             </div>
             <div class="neo-footer">
                 <p class="text-base">
@@ -406,9 +420,30 @@
         if (isNeoMode) {
             // Add neo-active class to body to trigger all styling
             document.body.classList.add('neo-active');
+            // Focus the input when opening neo mode
+            setTimeout(() => {
+                const input = document.getElementById('neo-input');
+                if (input) {
+                    input.focus();
+                    console.log('Neo input focused'); // Debug log
+
+                    // Double-check focus worked, retry if needed
+                    setTimeout(() => {
+                        if (document.activeElement !== input) {
+                            input.focus();
+                            console.log('Neo input re-focused'); // Debug log
+                        }
+                    }, 100);
+                }
+            }, 600); // Wait for full animation duration (0.4s + 0.1s delay + buffer)
         } else {
             // Remove neo-active class to restore normal state
             document.body.classList.remove('neo-active');
+            // Clear the input when closing neo mode
+            const input = document.getElementById('neo-input');
+            if (input) {
+                input.value = '';
+            }
         }
     }
 
@@ -422,6 +457,12 @@
             // Redirect to Pulumi Neo app with the query
             window.location.href = `https://app.pulumi.com/neo?prompt=${encodedQuery}`;
         }
+    }
+
+    function populateNeoInput(prompt) {
+        const input = document.getElementById('neo-input');
+        input.value = prompt;
+        input.focus();
     }
 
     // Allow Enter key to submit
