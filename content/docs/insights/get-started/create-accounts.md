@@ -6,9 +6,11 @@ meta_desc: This page provides an overview on how to get started with Pulumi Insi
 weight: 3
 menu:
   insights:
+    name: Create Accounts
     parent: insights-get-started
     identifier: insights-get-started-accounts
     weight: 3
+aliases:
 ---
 
 Now that you have set up your ESC and your cloud account, let’s create your first Pulumi Insights account and kick off a discovery scan. In this example you will see the steps for AWS and you can follow along with any cloud provider.

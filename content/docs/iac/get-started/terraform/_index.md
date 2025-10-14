@@ -7,11 +7,10 @@ menu:
     iac:
         name: Terraform Users
         parent: iac-get-started
-        weight: 5
+        weight: 50
         identifier: terraform-get-started
 
 aliases:
-    - /docs/iac/get-started/terraform/
 ---
 
 **Use Pulumi alongside your existing Terraform infrastructure** rather than replacing it entirely.
