@@ -7,6 +7,8 @@ weight: 6
 menu:
   esc:
     parent: esc-get-started
+    identifier: esc-get-started-use-short-term-credentials
+aliases:
 ---
 
 Managing cloud credentials presents significant challenges for organizations of all sizes. Static, long-lived credentials, especially those stored in local environments introduce security risks and operational issues. Pulumi ESC’s built-in support for [dynamic login providers](/docs/esc/integrations/dynamic-login-credentials/), allows you to generate short-term, scoped credentials via OIDC. These credentials can then be used in your CLI workflows, CI/CD, Pulumi IaC, and more!
@@ -26,8 +28,11 @@ To use dynamic credentials, you need to configure OpenID Connect (OIDC) between 
 2. In the navigation pane, choose **Identity providers**, then **Add provider**
 3. Select **OpenID Connect** as the provider type
 4. For the Provider URL, enter: `https://api.pulumi.com/oidc`
-5. For the Audience, enter your Pulumi organization name
+5. For the Audience, enter the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`)
 6. Click **Add provider**
+{{< notes type="info" >}}
+For legacy ESC Environments in the `default` project, the audience will use just the Pulumi organization name.
+{{< /notes >}}
 
 ### Create the IAM role
 
@@ -35,7 +40,7 @@ To use dynamic credentials, you need to configure OpenID Connect (OIDC) between 
 2. Select **Create a new role**
 3. Ensure **Web identity** is selected, and verify that
    - `api.pulumi.com/oidc` provider is selected
-   - Your Pulumi organization is selected as the audience
+   - Your Pulumi organization (prefixed with `aws:`) is selected as the audience
 4. Click **Next**
 5. Select the permissions your role needs (e.g. **AmazonS3FullAccess** for S3 operations)
 6. Click **Next**

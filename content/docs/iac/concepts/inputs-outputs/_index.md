@@ -6,7 +6,7 @@ h1: "Inputs & outputs"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Inputs & outputs
+        name: Inputs & Outputs
         parent: iac-concepts
         weight: 60
         identifier: iac-concepts-inputs-outputs

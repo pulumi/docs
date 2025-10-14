@@ -11,7 +11,6 @@ menu:
         weight: 9
 
 aliases:
-- /docs/iac/get-started/terraform/next-steps/
 ---
 
 ## Congratulations!
@@ -356,7 +355,7 @@ Reach out to us via these support channels:
 We always welcome contributions, especially from our more advanced users who have practical experience building with both Terraform and Pulumi. Here are some ways you can contribute to the Pulumi ecosystem:
 
 * **[Contribute to Pulumi](https://github.com/pulumi/pulumi/blob/master/CONTRIBUTING.md)**: Help improve Pulumi
-* **[Provider Development](/docs/iac/build-with-pulumi/)**: Create new providers
+* **[Building & Extending](/docs/iac/guides/building-extending/)**: Create new providers and components
 * **[Examples and Templates](https://github.com/pulumi/examples/blob/master/CONTRIBUTING.md)**: Share your patterns
 
 ### Community engagement

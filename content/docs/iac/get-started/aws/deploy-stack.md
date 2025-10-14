@@ -7,14 +7,13 @@ weight: 5
 menu:
     iac:
         name: Deploy
-        parent: aws-b-get-started
+        parent: aws-get-started
         weight: 5
 
 aliases:
-- /docs/iac/get-started/aws/b/deploy-stack/
-- /docs/quickstart/aws/deploy-stack/
-- /docs/get-started/aws/deploy-stack/
-- /docs/clouds/aws/get-started/deploy-stack/
+    - /docs/iac/get-started/aws/b/deploy-stack/
+    - /docs/quickstart/aws/deploy-stack/
+    - /docs/clouds/aws/get-started/deploy-stack/
 ---
 
 ## Deploy to AWS

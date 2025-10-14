@@ -69,6 +69,8 @@ Do not substitute other tools or commands.
 
 ## Moving and Deleting Files
 
+**⚠️ SEO CRITICAL**: Missing aliases on moved files will break search engine rankings and external links. Always verify aliases after file moves.
+
 - **Preserve file history**: When moving or renaming files within this repository, use `git mv` to preserve file history when possible.
 - **Hugo content files**: Add an `aliases` field to the frontmatter of the moved file, listing the old paths:
   ```yaml
@@ -76,10 +78,32 @@ Do not substitute other tools or commands.
   - /old/path/to/file/
   - /another/old/path/
   ```
+- **Verification toolset**: After moving files, use the scripts in `/scripts/alias-verification/` to verify all moved files have proper aliases. See the README in that directory for usage details.
 - **Non-Hugo files**: For generated content or files outside Hugo's content management, add redirects to the S3 redirect files located in `/scripts/redirects/`.
   - When adding S3 redirects, place entries in topic-appropriate files (e.g., `neo-redirects.txt` for Neo-related content).
   - S3 redirect format: `source-path|destination-url` (e.g., `docs/old/path/index.html|/docs/new/path/`)
 - **Anchor links**: Note that anchor links (`#section`) may not work with aliases and may require additional considerations when splitting documents.
+
+---
+
+## Updating Internal Links
+
+When moving documentation files, aliases automatically handle redirects. Update internal links strategically:
+
+- **DO update links in**:
+  - `/content/docs/` - Active documentation
+  - `/content/product/` - Product pages
+
+- **DO NOT update links in**:
+  - `/content/blog/` - Blog posts are historical documents
+  - `/content/tutorials/` - Tutorials are historical content
+
+- **Why**: Blog posts and tutorials represent a point in time. Aliases handle redirects automatically, preserving the historical record without modification.
+
+- **Implementation**: When using `find` or `sed` to update links, always exclude blog and tutorial directories:
+  ```bash
+  find content/docs content/product -name "*.md" -exec sed -i 's|/old/path|/new/path|g' {} +
+  ```
 
 ---
 

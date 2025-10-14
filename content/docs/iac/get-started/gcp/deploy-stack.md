@@ -10,14 +10,10 @@ menu:
         identifier: gcp-get-started.deploy-stack
         parent: gcp-get-started
         weight: 5
-    clouds:
-        parent: google-cloud-get-started
-        identifier: gcp-deploy-stack
 
 aliases:
-- /docs/quickstart/gcp/deploy-stack/
-- /docs/get-started/gcp/deploy-stack/
-- /docs/clouds/gcp/get-started/deploy-stack/
+    - /docs/quickstart/gcp/deploy-stack/
+    - /docs/clouds/gcp/get-started/deploy-stack/
 ---
 
 Let's go ahead and deploy your stack:

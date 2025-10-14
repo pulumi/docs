@@ -8,7 +8,7 @@ menu:
     iac:
         name: Components
         parent: iac-concepts
-        weight: 70
+        weight: 100
         identifier: iac-concepts-components
 aliases:
 - /docs/intro/concepts/resources/components/
@@ -125,8 +125,6 @@ A component resource must register a unique type name with the base constructor.
 {{< notes type="info" >}}
 For a complete end-to-end walkthrough of building a component from scratch, including setup, implementation, and publishing, see the [Build a Component](/docs/iac/using-pulumi/build-a-component/) guide.
 {{< /notes >}}
-
-For more information about component resources, see the [S3 Folder Pulumi Component](/registry/packages/aws/how-to-guides/s3-folder-component/) guide.
 
 ## Creating Child Resources
 
@@ -678,7 +676,7 @@ Once a component is authored, it can be published to the [IDP Private Registry](
 
 #### Private Registry Publishing
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/pulumi-cloud/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/get-started/private-registry/).
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/get-started/private-registry/).
 
 #### Consumption
 
@@ -701,7 +699,7 @@ Under the hood, Pulumi:
 - Makes the generated SDK available to your Pulumi program in your chosen language
 
 {{< notes type="info" >}}
-For detailed information about working with local packages, including SDK generation and dependency management, see the [Local Packages](/docs/iac/build-with-pulumi/local-packages/) guide.
+For detailed information about working with local packages, including SDK generation and dependency management, see the [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) guide.
 {{< /notes >}}
 
 #### Referencing Components Locally

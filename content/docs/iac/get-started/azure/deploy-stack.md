@@ -11,9 +11,8 @@ menu:
         parent: azure-get-started
         weight: 5
 aliases:
-- /docs/quickstart/azure/deploy-stack/
-- /docs/get-started/azure/deploy-stack/
-- /docs/clouds/azure/get-started/deploy-stack/
+    - /docs/quickstart/azure/deploy-stack/
+    - /docs/clouds/azure/get-started/deploy-stack/
 ---
 
 Let's go ahead and deploy your stack:
