@@ -11,15 +11,11 @@ menu:
         parent: gcp-get-started
         weight: 2
 aliases:
-- /docs/quickstart/gcp/begin/
-- /docs/quickstart/gcp/install-pulumi/
-- /docs/quickstart/gcp/install-language-runtime/
-- /docs/quickstart/gcp/configure/
-- /docs/get-started/gcp/install-pulumi/
-- /docs/get-started/gcp/install-language-runtime/
-- /docs/get-started/gcp/configure
-- /docs/get-started/gcp/begin/
-- /docs/clouds/gcp/get-started/begin/
+    - /docs/quickstart/gcp/begin/
+    - /docs/quickstart/gcp/install-pulumi/
+    - /docs/quickstart/gcp/install-language-runtime/
+    - /docs/quickstart/gcp/configure/
+    - /docs/clouds/gcp/get-started/begin/
 ---
 
 Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.

@@ -236,7 +236,7 @@ superpowers:
 
     - title: Automate Delivery
       cta: Learn more
-      cta_url: "/docs/iac/using-pulumi/continuous-delivery/"
+      cta_url: "/docs/iac/guides/continuous-delivery/"
       icon_type: delivery
       icon_color: blue
       description: |
@@ -255,7 +255,7 @@ superpowers:
 
     - title: Be Proactive, Not Reactive
       cta: Learn more
-      cta_url: "/docs/iac/crossguard/"
+      cta_url: "/docs/insights/policy/policy-as-code/"
       icon_type: shield
       icon_color: yellow
       description: |

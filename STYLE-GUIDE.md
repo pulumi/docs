@@ -24,23 +24,45 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 
 ## Headings
 
-- Exactly one H1 (`#`) per page, set in front matter `title`.  
-- H1: **Title Case**.  
-- H2 and deeper: **Sentence case**.  
-- Only increment one heading level at a time (no skipping levels).  
-- Use capitalization only for proper nouns. For example, use “stack” not “Stack.”
+- Exactly one H1 (`#`) per page, set in front matter `title`.
+- H1: **Title Case**.
+- H2 and deeper: **Sentence case**.
+- Only increment one heading level at a time (no skipping levels).
+- Use capitalization only for proper nouns. For example, use "stack" not "Stack."
 - Do not end headings with punctuation.
 - Headings should be surrounded by blank lines.
+
+**Navigation menu items**: Use **Title Case** for all `menu.name` entries in frontmatter. Navigation items are UI labels, not prose headings, and follow Title Case conventions consistent with industry standards.
 
 ---
 
 ## Links
 
-- **Internal and external links**: use normal Markdown syntax.  
-  - `[Link text](/path/to/file)`  
-  - `[Link text](https://example.com)`  
-- Link text must be descriptive. Avoid vague text like _here_ or _click here_.  
+- **Internal and external links**: use normal Markdown syntax.
+  - `[Link text](/path/to/file)`
+  - `[Link text](https://example.com)`
+- Link text must be descriptive. Avoid vague text like _here_ or _click here_.
 - When changing the URL of an existing page, add a redirect with a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
+
+### External Link Indicator
+
+Links that navigate users to a different UI/experience (different from the main docs site) should include the ↗ (U+2197 North East Arrow) symbol to indicate this transition.
+
+**When to use ↗:**
+- Links to generated API documentation (`/docs/reference/pkg/*`)
+- Links to external sites (e.g., pkg.go.dev)
+- Links to Tutorials (different UI)
+- Any link that takes users away from the main docs experience
+
+**Placement:**
+- In menu configurations (`config/_default/menus.yml`): append to the `name` field with a space
+  - Example: `name: SDK docs ↗`
+- In landing page cards: append to the `heading` field with a space
+  - Example: `heading: Python ↗`
+- In prose text: append after the link text with a space
+  - Example: `[Go SDK ↗](https://pkg.go.dev/...)`
+
+**Rationale:** The ↗ symbol is the web-standard indicator for external links and helps users understand they're navigating to a different UI, preventing surprise when the page appearance changes.
 
 ---
 

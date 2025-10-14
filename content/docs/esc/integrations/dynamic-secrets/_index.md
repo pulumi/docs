@@ -5,7 +5,7 @@ h1: Import and use secrets from providers
 meta_desc: Pulumi ESC enables integration with secrets providers like 1Password, AWS, Azure, Google Cloud, and Vault, to securely manage secrets in your environments.
 menu:
   esc:
-    name: Dynamic secrets
+    name: Dynamic Secrets
     identifier: esc-dynamic-secrets
     parent: esc-integrations
     weight: 2

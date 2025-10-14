@@ -11,7 +11,6 @@ menu:
         weight: 4
 
 aliases:
-- /docs/iac/get-started/terraform/reference-state/
 ---
 
 ## Why reference state?
