@@ -28,6 +28,9 @@ To use dynamic credentials, you need to configure OpenID Connect (OIDC) between 
 4. For the Provider URL, enter: `https://api.pulumi.com/oidc`
 5. For the Audience, enter the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`)
 6. Click **Add provider**
+{{< notes type="info" >}}
+For legacy ESC Environments in the `default` project, the audience will use just the Pulumi organization name.
+{{< /notes >}}
 
 ### Create the IAM role
 
