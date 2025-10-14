@@ -304,21 +304,24 @@
                     <ul class="list-none">
                         {{/* Add Overview link for parent pages that have a URL */}}
                         {{- if $currentMenuItem.URL }}
-                            {{- $overviewPage := site.GetPage $currentMenuItem.URL }}
-                            {{- if $overviewPage }}
-                                <li data-menu-id="overview">
-                                    <a href="{{ $overviewPage.RelPermalink }}"
-                                        {{- if eq $page.RelPermalink $overviewPage.RelPermalink }}
-                                            class="active" aria-current="page"
-                                        {{- end }}
-                                    >
-                                    <button>
-                                        <i class="fa fa-caret-right"></i>
-                                    </button>
-                                    <span>{{ if $overviewPage.Params.overview_name }}{{ $overviewPage.Params.overview_name }}{{ else }}Overview{{ end }}</span>
-                                    </a>
-                                </li>
+                            {{- $overviewLabel := "Overview" }}
+                            {{- if eq $page.RelPermalink $currentMenuItem.URL }}
+                                {{- with $page.Params.overview_label }}
+                                    {{- $overviewLabel = . }}
+                                {{- end }}
                             {{- end }}
+                            <li data-menu-id="overview">
+                                <a href="{{ $currentMenuItem.URL }}"
+                                    {{- if eq $page.RelPermalink $currentMenuItem.URL }}
+                                        class="active" aria-current="page"
+                                    {{- end }}
+                                >
+                                <button>
+                                    <i class="fa fa-caret-right"></i>
+                                </button>
+                                <span>{{ $overviewLabel }}</span>
+                                </a>
+                            </li>
                         {{- end }}
                         {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID "currentSection" $.currentSection "allMenuEntries" $allMenuEntries) }}
                     </ul>

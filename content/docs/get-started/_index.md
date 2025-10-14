@@ -1,9 +1,9 @@
 ---
 title_tag: Get Started with Pulumi
 meta_desc: Step-by-step guides for creating, deploying, and managing infrastructure with Pulumi on the cloud using your favorite language.
-title: Get started
-h1: Get Started with Pulumi
-overview_name: Get Started with Pulumi
+title: Get Started #Breadcrumb
+h1: Get Started with Pulumi # Page title
+overview_label: Get Started with Pulumi #Menu heading
 no_on_this_page: true
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
