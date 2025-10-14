@@ -10,14 +10,9 @@ menu:
     identifier: kubernetes-get-started.deploy-changes
     parent: kubernetes-get-started
     weight: 7
-  clouds:
-    parent: kubernetes-get-started
-    identifier: kubernetes-deploy-changes
 
 aliases:
-- /docs/quickstart/kubernetes/deploy-changes/
-- /docs/get-started/kubernetes/deploy-changes/
-- /docs/iac/get-started/kubernetes/deploy-changes/
+    - /docs/quickstart/kubernetes/deploy-changes/
 ---
 
 Deploy the stack changes.

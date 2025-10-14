@@ -6,8 +6,12 @@
 
 {{/* Get the pages in the current directory. */}}
 {{ $unsortedPages := slice $currentPage }}
-{{ if eq $currentPage.File.Dir $currentPage.Parent.File.Dir }}
-    {{ $unsortedPages = $unsortedPages | append $currentPage.Parent }}
+{{ if $currentPage.Parent }}
+    {{ if $currentPage.Parent.File }}
+        {{ if eq $currentPage.File.Dir $currentPage.Parent.File.Dir }}
+            {{ $unsortedPages = $unsortedPages | append $currentPage.Parent }}
+        {{ end }}
+    {{ end }}
 {{ end }}
 {{ range $index, $page := .Page.CurrentSection.Pages }}
     {{ if and (gt $page.Weight 0) (ne $page.RelPermalink $currentPage.RelPermalink) }}

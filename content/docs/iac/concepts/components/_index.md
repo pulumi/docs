@@ -8,7 +8,7 @@ menu:
     iac:
         name: Components
         parent: iac-concepts
-        weight: 70
+        weight: 100
         identifier: iac-concepts-components
 aliases:
 - /docs/intro/concepts/resources/components/
@@ -676,7 +676,7 @@ Once a component is authored, it can be published to the [IDP Private Registry](
 
 #### Private Registry Publishing
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/pulumi-cloud/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/get-started/private-registry/).
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/docs/idp/get-started/private-registry/).
 
 #### Consumption
 
@@ -699,7 +699,7 @@ Under the hood, Pulumi:
 - Makes the generated SDK available to your Pulumi program in your chosen language
 
 {{< notes type="info" >}}
-For detailed information about working with local packages, including SDK generation and dependency management, see the [Local Packages](/docs/iac/build-with-pulumi/local-packages/) guide.
+For detailed information about working with local packages, including SDK generation and dependency management, see the [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) guide.
 {{< /notes >}}
 
 #### Referencing Components Locally

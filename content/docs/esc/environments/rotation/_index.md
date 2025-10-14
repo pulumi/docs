@@ -5,7 +5,7 @@ h1: Rotating secrets
 meta_desc: Pulumi ESC allows you to rotate secrets on a pre-defined schedule.
 menu:
   esc:
-    name: Rotating secrets
+    name: Rotating Secrets
     identifier: esc-rotating-secrets
     parent: esc-environments
     weight: 4

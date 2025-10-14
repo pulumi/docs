@@ -11,7 +11,6 @@ menu:
         weight: 5
 
 aliases:
-- /docs/iac/get-started/terraform/terraform-modules/
 ---
 
 ## Leverage the module ecosystem

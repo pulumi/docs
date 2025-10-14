@@ -162,7 +162,7 @@ key_features:
                     Every infrastructure change is a pull request. Review, comment, approve. Full audit trail built in.
               - title: Catch bugs before production
                 description: |
-                    Run [unit tests](/docs/iac/concepts/testing/unit/) in milliseconds. Spin up ephemeral environments for [integration tests](/docs/iac/concepts/testing/integration/). Fail fast, fix fast.
+                    Run [unit tests](/docs/iac/guides/testing/unit/) in milliseconds. Spin up ephemeral environments for [integration tests](/docs/iac/guides/testing/integration/). Fail fast, fix fast.
               - title: Works with your CI/CD
                 description: |
                     Integrates with [any CI/CD system](/docs/iac/packages-and-automation/continuous-delivery/). GitHub Actions, GitLab, Jenkins, CircleCI - your choice. Or use the [Kubernetes operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) for GitOps.
