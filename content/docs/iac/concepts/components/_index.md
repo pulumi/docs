@@ -126,8 +126,6 @@ A component resource must register a unique type name with the base constructor.
 For a complete end-to-end walkthrough of building a component from scratch, including setup, implementation, and publishing, see the [Build a Component](/docs/iac/using-pulumi/build-a-component/) guide.
 {{< /notes >}}
 
-For more information about component resources, see the [S3 Folder Pulumi Component](/registry/packages/aws/how-to-guides/s3-folder-component/) guide.
-
 ## Creating Child Resources
 
 Component resources often contain child resources. The names of child resources are often derived from the component resources's name to ensure uniqueness. For example, you might use the component resource's name as a prefix. Also, when constructing a resource, children must be registered as such. To do this, pass the component resource itself as the `parent` option.
