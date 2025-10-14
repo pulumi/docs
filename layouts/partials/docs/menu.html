@@ -46,8 +46,6 @@
     {{ $currentSection = "reference" }}
 {{ else if hasPrefix $page.Path "/docs/support" }}
     {{ $currentSection = "support" }}
-{{ else if hasPrefix $page.Path "/tutorials" }}
-    {{ $currentSection = "get-started" }}
 {{ end }}
 
 <nav class="text-sm mt-5 mr-2">

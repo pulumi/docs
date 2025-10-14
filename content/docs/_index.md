@@ -49,9 +49,9 @@ sections:
   heading: Learning Resources
   cards:
   - emoji: 🎓
-    heading: Tutorials
+    heading: Tutorials ↗ 
     description: Step-by-step guides for building real-world infrastructure with Pulumi.
-    link: https://www.pulumi.com/tutorials/
+    link: /tutorials/
 - type: button-cards
   heading: More Documentation
   cards:
