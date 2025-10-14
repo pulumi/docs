@@ -1,7 +1,14 @@
-// Neo Mode Styles
+$TOP_MARGIN: 260px;
+$TOP_MARGIN_MOBILE: 160px;
+$TOGGLE_MARGIN: 60px;
+$TOGGLE_MARGIN_MOBILE: 20px;
+
 body #neo-mode-toggle {
     position: fixed;
-    top: 200px;
+    top: calc($TOP_MARGIN + $TOGGLE_MARGIN);
+    @media (max-width: 1023px) {
+        top: calc($TOP_MARGIN_MOBILE + $TOGGLE_MARGIN_MOBILE);
+    }
     right: 0px;
     display: flex;
     padding: 12px 16px;
@@ -16,11 +23,34 @@ body #neo-mode-toggle {
     border-radius: 8px 0px 0px 8px;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
-    z-index: 999;
+    z-index: 35;
     transition: all 0.3s ease;
     max-width: calc(100vw - 40px);
-    width: 215px;
+    width: 180px;
     height: auto;
+    white-space: nowrap;
+
+    &:hover {
+        width: 215px;
+    }
+
+    // Mobile: icon-only version
+    @media (max-width: 768px) {
+        width: 64px;
+        padding: 12px;
+        
+        &:hover {
+            width: 64px; // Keep compact on mobile hover
+        }
+
+        .neo-text-container {
+            display: none;
+        }
+
+        .neo-hover-icon {
+            display: none; // Hide hover icon on mobile
+        }
+    }
 
     .neo-hover-icon {
         opacity: 0;
@@ -78,19 +108,26 @@ body #neo-mode-toggle {
 body #neo-interface {
     display: none;
     position: fixed;
-    top: 224px;
+    top: $TOP_MARGIN;
     left: 0;
     width: 100%;
-    height: calc(100vh - 224px);
+    height: calc(100vh - $TOP_MARGIN);
+    @media (max-width: 1023px) {
+        top: $TOP_MARGIN_MOBILE;
+        height: calc(100vh - $TOP_MARGIN_MOBILE);
+    }
     background: #F6F5FF;
-    z-index: 998;
+    z-index: 30;
     overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     .neo-content-container {
-        height: calc(100vh - 224px);
+        height: calc(100vh - $TOP_MARGIN);
+        @media (max-width: 1023px) {
+            height: calc(100vh - $TOP_MARGIN_MOBILE);
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -104,10 +141,11 @@ body #neo-interface {
         margin-top: 96px;
         text-align: center;
         max-width: 50%;
+        @media (max-width: 1536px) {
+            max-width: 100%;
+        }
 
         h1 {
-            font-size: 64px;
-            font-weight: 700;
             background: linear-gradient(135deg, #8b5cf6, #ec4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -218,6 +256,16 @@ body {
         #neo-mode-toggle {
             .neo-text-container {
                 color: white;
+            }
+
+            // Mobile: expand to show text when active
+            @media (max-width: 768px) {
+                width: 180px;
+                padding: 12px 16px;
+
+                .neo-text-container {
+                    display: block;
+                }
             }
 
         }
