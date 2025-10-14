@@ -112,6 +112,4 @@ Their success with Pulumi reflects Wiz's customer centric mindset and need to se
 
 The story of Wiz and Pulumi isn't just about managing thousands of  Kubernetes clusters, it's about building infrastructure systems that can adapt, scale, and evolve with business requirements, securely and productively. In an era where infrastructure agility can determine competitive advantage, Wiz's innovative approach to using Pulumi represents the future of modern cloud infrastructure management at scale.
 
-
-
 Wiz secures everything built and run in the cloud. The platform powers a new operating model for security, development, and ops teams by providing a holistic view of risk. Wiz gives everyone clear visibility into their cloud and AI environments, enriched with context so they can prioritize what matters most.
