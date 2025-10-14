@@ -26,7 +26,7 @@ To use dynamic credentials, you need to configure OpenID Connect (OIDC) between 
 2. In the navigation pane, choose **Identity providers**, then **Add provider**
 3. Select **OpenID Connect** as the provider type
 4. For the Provider URL, enter: `https://api.pulumi.com/oidc`
-5. For the Audience, enter your Pulumi organization name
+5. For the Audience, enter the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`)
 6. Click **Add provider**
 
 ### Create the IAM role
@@ -35,7 +35,7 @@ To use dynamic credentials, you need to configure OpenID Connect (OIDC) between 
 2. Select **Create a new role**
 3. Ensure **Web identity** is selected, and verify that
    - `api.pulumi.com/oidc` provider is selected
-   - Your Pulumi organization is selected as the audience
+   - Your Pulumi organization (prefixed with `aws:`) is selected as the audience
 4. Click **Next**
 5. Select the permissions your role needs (e.g. **AmazonS3FullAccess** for S3 operations)
 6. Click **Next**
