@@ -59,6 +59,10 @@ sections:
     heading: Administration
     description: Manage organizations, access, security, and self-hosting.
     link: /docs/administration/
+  - emoji: 📦
+    heading: Registry ↗
+    description: Browse and search Pulumi packages for 150+ cloud providers and services.
+    link: /registry/
   - emoji: 📚
     heading: Reference
     description: CLI, SDK, and API reference documentation.
