@@ -72,12 +72,14 @@
             </div>
             {{ end }}
         </div>
-    </section>
+        {{ end }}
+    </div>
+</section>
 
-    <!-- Snowflake quote - Platform validation -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
-    </section>
+<!-- Snowflake quote - Platform validation -->
+<section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
+    {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
+</section>
 
     <!-- Infrastructure as Code (Text Left, Image Right) -->
     <section
@@ -134,7 +136,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Neo (Image Left, Text Right) -->
     <section
@@ -145,22 +148,22 @@
                     <img src="{{ .Params.neo.image }}" alt="{{ .Params.neo.alt }}" />
                 </div>
 
-                <div class="w-full lg:w-1/2 z-10 px-8 order-2">
-                    <h3>{{ .Params.neo.title }}</h3>
-                    <p class="text-gray-700">{{ .Params.neo.description | markdownify }}</p>
-                    <div class="mt-8">
-                        <span class="text-gray-700">Learn more: </span>
-                        <a href="/product/neo" class="underline">Pulumi Neo<i class="fa fa-arrow-right ml-2"></i></a>
-                    </div>
+            <div class="w-full lg:w-1/2 z-10 px-8 order-2">
+                <h3>{{ .Params.neo.title }}</h3>
+                <p class="text-gray-700">{{ .Params.neo.description | markdownify }}</p>
+                <div class="mt-8">
+                    <span class="text-gray-700">Learn more: </span>
+                    <a href="/product/neo" class="underline">Pulumi Neo<i class="fa fa-arrow-right ml-2"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Boost Insurance quote - Neo validation -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.boost) }}
-    </section>
+<!-- Boost Insurance quote - Neo validation -->
+<section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
+    {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.boost) }}
+</section>
 
     <!-- Secrets & Configuration (Text Left, Image Right) -->
     <section
@@ -194,6 +197,7 @@
                         <img src="{{ .Params.insights.image }}" alt="{{ .Params.insights.alt }}" />
                     </div>
                 </div>
+            </div>
 
                 <div class="w-full lg:w-5/12 z-10 px-8 order-2">
                     <h3>{{ .Params.insights.title }}</h3>
@@ -206,7 +210,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Internal Developer Platforms (Text Left, Image Right) -->
     <section
@@ -222,18 +227,19 @@
                                 class="fa fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
+            </div>
 
-                <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2 order-1 lg:order-2">
-                    <img class="h-96" src="{{ .Params.idp.image }}" />
-                </div>
+            <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2 order-1 lg:order-2">
+                <img class="h-96" src="{{ .Params.idp.image }}" />
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CLEAR quote - IDP validation -->
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
-        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.clear) }}
-    </section>
+<!-- CLEAR quote - IDP validation -->
+<section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
+    {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.clear) }}
+</section>
 
     <!-- Built by engineers + tweets -->
     <section class="mt-16 mb-36 relative flex flex-col">
@@ -246,6 +252,7 @@
                     <p class="text-white text-lg mx-auto my-0 lg:mx-0 lg:my-auto"> and let’s build together.</p>
                 </div>
             </div>
+        </div>
 
             <div class="w-full order-first lg:hidden">
                 <pulumi-swiper slides="1" centered-slides="true" initial-slide="3" loop="true" autoplay="true"
@@ -314,7 +321,8 @@
                 </pulumi-swiper>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- CTAs -->
     <section class="container mx-auto my-24 px-6">
