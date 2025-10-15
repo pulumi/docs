@@ -14,14 +14,6 @@
                     @apply relative flex items-center text-gray-800 rounded no-underline transition-all;
                     padding: 6px 12px;
 
-                    &:hover {
-                        @apply bg-blue-100 text-blue-800;
-
-                        i {
-                            @apply text-blue-900;
-                        }
-                    }
-
                     &.active {
                         @apply bg-blue-200 text-blue-900;
                     }
@@ -33,6 +25,15 @@
 
                     span {
                         @apply pl-2;
+                    }
+                }
+
+                // Only apply hover to non-expandable (document) links
+                &:not(.expandable) a:hover {
+                    @apply bg-blue-100 text-blue-800;
+
+                    i {
+                        @apply text-blue-900;
                     }
                 }
 
@@ -66,6 +67,11 @@
                         > button {
                             @apply block;
                         }
+                    }
+
+                    // Add bold on hover for collapsed expandable items
+                    &:not(.expanded):hover > a > span {
+                        @apply font-semibold;
                     }
                 }
             }

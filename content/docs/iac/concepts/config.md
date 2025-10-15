@@ -8,7 +8,7 @@ menu:
     iac:
         name: Configuration
         parent: iac-concepts
-        weight: 65
+        weight: 40
     concepts:
         weight: 6
 aliases:

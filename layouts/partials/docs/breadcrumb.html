@@ -1,21 +1,32 @@
-<!-- Based on https://gohugo.io/content-management/sections/#example-breadcrumb-navigation -->
+{{/*
+    BREADCRUMB RENDERING
 
+    This partial renders the breadcrumb navigation trail built by menu.html.
+    The breadcrumb data is retrieved from .Scratch (page-scoped temporary storage).
+
+    Structure: Each breadcrumb is a dict with "name" and "url" keys.
+    - Items with a URL are rendered as clickable links
+    - Items without a URL (menu-only groupings) are rendered as non-clickable text
+*/}}
+
+{{ $breadcrumbs := .Scratch.Get "breadcrumbs" }}
+{{ if $breadcrumbs }}
 <ol class="docs-breadcrumb">
-    {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
-</ol>
+    {{ $lastIndex := sub (len $breadcrumbs) 1 }}
 
-{{/*  TODO: Can we modify this to use the existing menus temporarily instead?  */}}
-
-{{ define "breadcrumbnav" }}
-    <!-- Don't include the website home page in the breadcrumb. -->
-    {{ if and .p1.Parent (ne .p1.Parent .p1.Site.Home) }}
-        {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2) }}
-    {{ end }}
-    {{ if not (isset .p1.Params "redirect_to") }}
-        <li {{ if eq .p1 .p2 }}class="active"{{ end }}>
-            <a data-track="breadcrumb" href="{{ .p1.RelPermalink }}">
-                {{ .p1.LinkTitle }}
-            </a>
+    {{ range $index, $crumb := $breadcrumbs }}
+        {{ $isActive := eq $index $lastIndex }}
+        <li {{ if $isActive }}class="active"{{ end }}>
+            {{ if $crumb.url }}
+                <a data-track="breadcrumb" href="{{ $crumb.url }}">
+                    {{ $crumb.name }}
+                </a>
+            {{ else }}
+                <a data-track="breadcrumb" style="pointer-events: none; cursor: default;">
+                    {{ $crumb.name }}
+                </a>
+            {{ end }}
         </li>
     {{ end }}
+</ol>
 {{ end }}

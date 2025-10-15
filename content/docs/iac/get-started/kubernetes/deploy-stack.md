@@ -10,14 +10,9 @@ menu:
         identifier: kubernetes-get-started.deploy-stack
         parent: kubernetes-get-started
         weight: 5
-    clouds:
-        parent: kubernetes-get-started
-        identifier: kubernetes-deploy-stack
 
 aliases:
-- /docs/quickstart/kubernetes/deploy-stack/
-- /docs/get-started/kubernetes/deploy-stack/
-- /docs/iac/get-started/kubernetes/deploy-stack/
+    - /docs/quickstart/kubernetes/deploy-stack/
 ---
 
 Deploy the stack:

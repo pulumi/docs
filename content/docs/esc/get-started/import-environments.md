@@ -8,6 +8,7 @@ menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-import-environments
+aliases:
 ---
 
 ## Overview

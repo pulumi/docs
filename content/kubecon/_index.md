@@ -6,7 +6,7 @@ type: page
 layout: kubecon
 
 kubernetes_overview:
-    title: Scale Kubernetes Operations with AI Intelligence, Not AI Features
+    title: Scale Kubernetes Operations with Agentic AI, Not AI Features
     description: |
       Neo for Kubernetes: The first purpose-built infrastructure AI agent that understands your K8s environment, cloud dependencies, and container policies—delivering expert-level automation for modern container workloads.
     emphasis: "Visit Pulumi booth #1045 at KubeCon Atlanta to see live demos."

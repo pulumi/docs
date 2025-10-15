@@ -7,14 +7,13 @@ weight: 8
 menu:
     iac:
         name: Cleanup & destroy
-        parent: aws-b-get-started
+        parent: aws-get-started
         weight: 8
 
 aliases:
-- /docs/iac/get-started/aws/b/destroy-stack/
-- /docs/quickstart/aws/destroy-stack/
-- /docs/get-started/aws/destroy-stack/
-- /docs/clouds/aws/get-started/destroy-stack/
+    - /docs/iac/get-started/aws/b/destroy-stack/
+    - /docs/quickstart/aws/destroy-stack/
+    - /docs/clouds/aws/get-started/destroy-stack/
 ---
 
 ## Cleanup & destroy the stack

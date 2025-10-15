@@ -14,8 +14,8 @@ menu:
         identifier: azure-get-started
         weight: 2
 aliases:
-    - /docs/quickstart/azure/
     - /docs/get-started/azure/
+    - /docs/quickstart/azure/
     - /docs/clouds/azure/get-started/
 ---
 

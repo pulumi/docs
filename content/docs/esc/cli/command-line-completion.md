@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: esc-command-line-completion
     parent: esc-cli-overview
-    weight: 2
+    weight: 3
 aliases:
     - /docs/esc-cli/command-line-completion/
 ---

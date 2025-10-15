@@ -11,7 +11,6 @@ menu:
         weight: 7
 
 aliases:
-- /docs/iac/get-started/terraform/convert-hcl/
 ---
 
 ## When to convert

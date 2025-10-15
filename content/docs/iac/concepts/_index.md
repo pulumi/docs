@@ -151,7 +151,7 @@ The following topics provide more details on the core concepts of Pulumi and how
         <p>Look up definitions to commonly used terms.</p>
     </div>
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/concepts/vs"><i class="fas fa-table pr-2"></i>Compare</a></h3>
-        <p>Learn about how Pulumi compares to other solutions.</p>
+        <h3 class="no-anchor pt-4"><a href="/docs/iac/comparisons/"><i class="fas fa-table pr-2"></i>Comparisons</a></h3>
+        <p>Learn about how Pulumi compares to other infrastructure tools.</p>
     </div>
 </div>

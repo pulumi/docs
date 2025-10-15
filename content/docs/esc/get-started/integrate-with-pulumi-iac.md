@@ -8,6 +8,7 @@ menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-integrate-with-pulumi-iac
+aliases:
 ---
 
 ## Overview

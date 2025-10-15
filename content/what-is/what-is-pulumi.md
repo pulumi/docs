@@ -78,7 +78,7 @@ Using familiar programming languages means developers can apply existing skills 
 
 The ability to use standard programming constructs like loops, conditionals, and functions enables dynamic infrastructure definitions that would be difficult or impossible with templating-based approaches. For example, you might programmatically create resources based on environment variables, implement complex business logic within your infrastructure code, or generate resources based on external data sources.
 
-Furthermore, Pulumi's language support extends beyond basic resource definitions to include comprehensive [testing capabilities](/docs/iac/concepts/testing/). Teams can write unit tests for their infrastructure code, validate resource configurations before deployment, and implement integration tests to ensure their infrastructure behaves correctly in different scenarios.
+Furthermore, Pulumi's language support extends beyond basic resource definitions to include comprehensive [testing capabilities](/docs/iac/guides/testing/). Teams can write unit tests for their infrastructure code, validate resource configurations before deployment, and implement integration tests to ensure their infrastructure behaves correctly in different scenarios.
 
 ## Advanced platform capabilities
 

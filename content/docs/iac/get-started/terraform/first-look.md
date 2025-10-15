@@ -7,9 +7,11 @@ meta_desc: Compare Terraform HCL to Pulumi programs with a basic example showing
 weight: 3
 menu:
     iac:
-        name: First Look - Terraform HCL vs Pulumi Programs
+        name: First Look
         parent: terraform-get-started
         weight: 3
+        identifier: terraform-get-started.first-look
+aliases:
 ---
 
 Let's try creating the same resources using both Terraform HCL and a Pulumi program. This basic example will also serve to verify your cloud connectivity.

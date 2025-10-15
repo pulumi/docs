@@ -2,7 +2,7 @@
 title: Cloud Asset and Compliance Management – Pulumi Insights
 layout: pulumi-insights
 
-heading: Pulumi Insights
+heading: Insights & Governance
 subheading: |
     Complete visibility and control for your cloud
 
@@ -115,7 +115,7 @@ learn:
             - link: /docs/pulumi-cloud/insights/
               type: primary
               action: Read the Docs
-            - link: /docs/iac/crossguard/
+            - link: /docs/insights/policy/policy-as-code/
               type: secondary
               action: Policy Guide
 ---

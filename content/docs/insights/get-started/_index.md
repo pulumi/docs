@@ -9,6 +9,7 @@ menu:
     parent: insights-home
     identifier: insights-get-started
     weight: 1
+aliases:
 ---
  
 Pulumi Insights is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.

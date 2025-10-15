@@ -7,14 +7,13 @@ weight: 6
 menu:
     iac:
         name: Make an update
-        parent: aws-b-get-started
+        parent: aws-get-started
         weight: 6
 
 aliases:
-- /docs/iac/get-started/aws/b/modify-program/
-- /docs/quickstart/aws/modify-program/
-- /docs/get-started/aws/modify-program/
-- /docs/clouds/aws/get-started/modify-program/
+    - /docs/iac/get-started/aws/b/modify-program/
+    - /docs/quickstart/aws/modify-program/
+    - /docs/clouds/aws/get-started/modify-program/
 ---
 
 ## Make an update

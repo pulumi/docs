@@ -10,14 +10,9 @@ menu:
     identifier: kubernetes-get-started.create-project
     parent: kubernetes-get-started
     weight: 3
-  clouds:
-    parent: kubernetes-get-started
-    identifier: kubernetes-get-started-create-project
 
 aliases:
-- /docs/quickstart/kubernetes/create-project/
-- /docs/get-started/kubernetes/create-project/
-- /docs/iac/get-started/kubernetes/create-project/
+    - /docs/quickstart/kubernetes/create-project/
 ---
 Now that you have set up your environment let's create your first Pulumi program.
 
