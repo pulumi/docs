@@ -5,7 +5,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIAnswersRewriteAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
-import { CannedAcl } from "@pulumi/aws/s3";
 
 const stackConfig = new pulumi.Config();
 
@@ -172,7 +171,7 @@ const uploadsBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("uploa
 
 const uploadsBucketAcl = new aws.s3.BucketAclV2("uploads-bucket-acl", {
     bucket: uploadsBucket.id,
-    acl: CannedAcl.PublicRead,
+    acl: aws.s3.CannedAcl.PublicRead,
 }, {
     dependsOn: [uploadsBucketPublicAccessBlock, uploadsBucketOwnershipControls],
 });
@@ -190,7 +189,7 @@ if (config.makeFallbackBucket) {
     const fallbackBucket = new aws.s3.Bucket(
         "fallback-bucket", {
             bucket: config.websiteDomain,
-            acl: CannedAcl.PublicRead,
+            acl: aws.s3.CannedAcl.PublicRead,
             website: {
                 indexDocument: "index.html",
                 errorDocument: "404.html",
