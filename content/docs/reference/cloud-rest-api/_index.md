@@ -13,7 +13,6 @@ aliases:
   - /docs/intro/insights/api/
   - /docs/reference/cloud-rest-api/
   - /docs/pulumi-cloud/cloud-rest-api/
-  - /docs/reference/cloud-rest-api/
   - /docs/pulumi-cloud/reference/
 ---
 
