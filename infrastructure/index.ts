@@ -236,30 +236,55 @@ const websiteLogsBucket = new aws.s3.Bucket(
     },
 );
 
+// Enable ACLs on the logs bucket to support CloudWatch Logs delivery with bucket-owner-full-control ACL
+const logsBucketOwnershipControls = new aws.s3.BucketOwnershipControls("logs-bucket-ownership-controls", {
+    bucket: websiteLogsBucket.id,
+    rule: {
+        objectOwnership: "BucketOwnerPreferred"
+    }
+});
+
 // Grant the CloudWatch Logs delivery service permission to write CloudFront logs to the bucket.
 // Uses the new CloudWatch Logs infrastructure v2 for S3 delivery.
 // https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
 const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
     bucket: websiteLogsBucket.id,
     policy: config.enableDataWarehouseAccess && airflowTaskRoleArn
-        ? pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), aws.getRegion(), airflowTaskRoleArn])
-            .apply(([bucketArn, caller, region, airflowRole]) => {
+        ? pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), airflowTaskRoleArn])
+            .apply(([bucketArn, caller, airflowRole]) => {
                 const statements: any[] = [
                     {
-                        Sid: "AWSLogDeliveryWrite",
+                        Sid: "AWSLogDeliveryWriteObjects",
                         Effect: "Allow",
                         Principal: {
                             Service: "delivery.logs.amazonaws.com"
                         },
-                        Action: ["s3:PutObject", "s3:ListBucket"],
-                        Resource: [`${bucketArn}/*`, bucketArn],
+                        Action: "s3:PutObject",
+                        Resource: `${bucketArn}/*`,
                         Condition: {
                             StringEquals: {
                                 "s3:x-amz-acl": "bucket-owner-full-control",
                                 "aws:SourceAccount": caller.accountId
                             },
                             ArnLike: {
-                                "aws:SourceArn": `arn:aws:logs:${region.name}:${caller.accountId}:delivery-source:*`
+                                "aws:SourceArn": `arn:aws:logs:us-east-1:${caller.accountId}:delivery-source:*`
+                            }
+                        }
+                    },
+                    {
+                        Sid: "AWSLogDeliveryListBucket",
+                        Effect: "Allow",
+                        Principal: {
+                            Service: "delivery.logs.amazonaws.com"
+                        },
+                        Action: "s3:ListBucket",
+                        Resource: bucketArn,
+                        Condition: {
+                            StringEquals: {
+                                "aws:SourceAccount": caller.accountId
+                            },
+                            ArnLike: {
+                                "aws:SourceArn": `arn:aws:logs:us-east-1:${caller.accountId}:delivery-source:*`
                             }
                         }
                     },
@@ -302,24 +327,41 @@ const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
                     Statement: statements
                 });
             })
-        : pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), aws.getRegion()])
-            .apply(([bucketArn, caller, region]) => {
+        : pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity()])
+            .apply(([bucketArn, caller]) => {
                 const statements: any[] = [
                     {
-                        Sid: "AWSLogDeliveryWrite",
+                        Sid: "AWSLogDeliveryWriteObjects",
                         Effect: "Allow",
                         Principal: {
                             Service: "delivery.logs.amazonaws.com"
                         },
-                        Action: ["s3:PutObject", "s3:ListBucket"],
-                        Resource: [`${bucketArn}/*`, bucketArn],
+                        Action: "s3:PutObject",
+                        Resource: `${bucketArn}/*`,
                         Condition: {
                             StringEquals: {
                                 "s3:x-amz-acl": "bucket-owner-full-control",
                                 "aws:SourceAccount": caller.accountId
                             },
                             ArnLike: {
-                                "aws:SourceArn": `arn:aws:logs:${region.name}:${caller.accountId}:delivery-source:*`
+                                "aws:SourceArn": `arn:aws:logs:us-east-1:${caller.accountId}:delivery-source:*`
+                            }
+                        }
+                    },
+                    {
+                        Sid: "AWSLogDeliveryListBucket",
+                        Effect: "Allow",
+                        Principal: {
+                            Service: "delivery.logs.amazonaws.com"
+                        },
+                        Action: "s3:ListBucket",
+                        Resource: bucketArn,
+                        Condition: {
+                            StringEquals: {
+                                "aws:SourceAccount": caller.accountId
+                            },
+                            ArnLike: {
+                                "aws:SourceArn": `arn:aws:logs:us-east-1:${caller.accountId}:delivery-source:*`
                             }
                         }
                     },
@@ -773,10 +815,10 @@ const cdnLogDeliveryDestination = new aws.cloudwatch.LogDeliveryDestination("cdn
     name: "cdn-s3-destination",
     outputFormat: "parquet",
     deliveryDestinationConfiguration: {
-        destinationResourceArn: pulumi.interpolate`${websiteLogsBucket.arn}/${config.websiteDomain}`,
+        destinationResourceArn: websiteLogsBucket.arn,
     },
 }, {
-    dependsOn: [logsBucketPolicy],
+    dependsOn: [logsBucketPolicy, logsBucketOwnershipControls],
 });
 
 const cdnLogDelivery = new aws.cloudwatch.LogDelivery("cdn-log-delivery", {
@@ -785,7 +827,7 @@ const cdnLogDelivery = new aws.cloudwatch.LogDelivery("cdn-log-delivery", {
     deliveryDestinationArn: cdnLogDeliveryDestination.arn,
     s3DeliveryConfigurations: [{
         suffixPath: pulumi.all([aws.getCallerIdentity(), cdn.id]).apply(([caller, distributionId]) =>
-            `/${caller.accountId}/${distributionId}/{yyyy}/{MM}/{dd}/{HH}`
+            `/${config.websiteDomain}/${caller.accountId}/${distributionId}/{yyyy}/{MM}/{dd}/{HH}`
         ),
         enableHiveCompatiblePath: false,
     }],
