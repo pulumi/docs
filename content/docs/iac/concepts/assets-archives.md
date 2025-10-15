@@ -8,7 +8,7 @@ menu:
     iac:
         name: Assets & archives
         parent: iac-concepts
-        weight: 140
+        weight: 110
     concepts:
         weight: 13
 search:

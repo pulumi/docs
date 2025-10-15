@@ -8,7 +8,7 @@ menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-create-environment
-
+aliases:
 ---
 
 ## Overview

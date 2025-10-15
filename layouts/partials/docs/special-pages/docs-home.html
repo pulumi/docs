@@ -4,15 +4,18 @@
 
 <section class="content docs-home">
     <div id="docs-home-banner" class="header bg-blue-100 bg-right">
-        {{ $h1 := split .Params.h1 " " }}
-        <h1>{{ index $h1 0 }}<strong> {{ index $h1 1 }}</strong> docs</h1>
+        <h1><strong>{{ .Params.h1 }}</strong></h1>
         <div class="w-full md:w-2/3">
             {{ .Params.description | safeHTML }}
         </div>
+        {{ if $primary_link_button.link }}
         <div class="link-buttons">
             <a class="docs-primary-link-btn" href="{{ $primary_link_button.link }}">{{ $primary_link_button.label }}</a>
+            {{ if $secondary_link_button.link }}
             <a class="docs-secondary-link-btn" href="{{ $secondary_link_button.link }}">{{ $secondary_link_button.label }}</a>
+            {{ end }}
         </div>
+        {{ end }}
     </div>
 
     {{ range .Params.sections }}
@@ -41,7 +44,11 @@
                 {{ range .cards }}
                     <a class="full-width-card" href="{{ .link }}">
                         <div class="icon-heading">
-                            <div class="icon icon-21-21 {{ .icon }}"></div>
+                            {{ if .emoji }}
+                                <span class="text-2xl mr-2">{{ .emoji }}</span>
+                            {{ else if .icon }}
+                                <div class="icon icon-21-21 {{ .icon }}"></div>
+                            {{ end }}
                             <h3 id="{{ anchorize .heading }}">{{ .heading }}</h3>
                         </div>
                         <p>{{ .description }}</p>
@@ -59,6 +66,11 @@
                         <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                             <a href="{{ .link }}">
                                 <h4 class="no-anchor">
+                                    {{ if .emoji }}
+                                        <span class="text-2xl mr-2">{{ .emoji }}</span>
+                                    {{ else if .icon }}
+                                        <div class="icon icon-21-21 {{ .icon }}"></div>
+                                    {{ end }}
                                     {{ .heading }}
                             </h4>
                             <p class="pb-4">

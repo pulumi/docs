@@ -8,7 +8,7 @@ menu:
   esc:
     parent: esc-get-started
     identifier: esc-get-started-store-retrieve-secrets
-
+aliases:
 ---
 
 In an environment file, values are defined as a series of key-value pairs in YAML format. All variables will be defined under a top-level key named `values`. These values can be strings, numbers, or arrays, and they can be manually provided, dynamically generated from external sources, or referenced from other values in the file. They can also be stored in plain-text or as secrets.

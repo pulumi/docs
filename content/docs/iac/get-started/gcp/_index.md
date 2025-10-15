@@ -14,8 +14,8 @@ menu:
         identifier: google-cloud-get-started
         weight: 3
 aliases:
-    - /docs/quickstart/gcp/
     - /docs/get-started/gcp/
+    - /docs/quickstart/gcp/
     - /docs/clouds/get-started/gcp
     - /docs/clouds/gcp/get-started/
 ---

@@ -11,9 +11,8 @@ menu:
         parent: azure-get-started
         weight: 7
 aliases:
-- /docs/quickstart/azure/deploy-changes/
-- /docs/get-started/azure/deploy-changes/
-- /docs/clouds/azure/get-started/deploy-changes/
+    - /docs/quickstart/azure/deploy-changes/
+    - /docs/clouds/azure/get-started/deploy-changes/
 ---
 
 Deploy your changes by using `pulumi up` again.

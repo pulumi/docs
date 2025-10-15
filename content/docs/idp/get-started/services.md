@@ -4,6 +4,8 @@ title: Services
 h1: "Services"
 meta_desc: This page provides an overview on how to get started with Pulumi IDP Service.
 weight: 5
+aliases:
+  - /docs/idp/get-started/services/
 menu:
   idp:
     parent: idp-get-started

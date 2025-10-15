@@ -10,14 +10,10 @@ menu:
         identifier: gcp-get-started.deploy-changes
         parent: gcp-get-started
         weight: 7
-    clouds:
-        parent: google-cloud-get-started
-        identifier: gcp-deploy-changes
 
 aliases:
-- /docs/quickstart/gcp/deploy-changes/
-- /docs/get-started/gcp/deploy-changes/
-- /docs/clouds/gcp/get-started/deploy-changes/
+    - /docs/quickstart/gcp/deploy-changes/
+    - /docs/clouds/gcp/get-started/deploy-changes/
 ---
 
 Now let's deploy your changes.

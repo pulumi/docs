@@ -21,7 +21,7 @@ aliases:
 
 <img src="/logos/tech/dotnet.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports writing your infrastructure as code in any .NET language programs running on dotnet using any [supported version](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle).
+Pulumi supports writing your infrastructure as code in any .NET language using any [supported version](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle).
 
 You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
 
@@ -151,70 +151,68 @@ End Module
 
 {{% /chooser %}}
 
-## C\#, F\#, and VB Templates
+## C#, F#, and VB Templates
 
-You can write Pulumi programs in your favorite .NET language to get additional verification and tooling benefits. The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project.
+The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project.
 
 {{< chooser language "csharp,fsharp,visualbasic" >}}
 
 {{% choosable language csharp %}}
-You can write Pulumi programs in **C#**. From an empty directory, create a new C# project:
+From an empty directory, create a new C# project:
 
 ```bash
 $ mkdir myproject && cd myproject
 $ pulumi new csharp
 ```
 
-This will create a `Pulumi.yaml` [project file](/docs/concepts/projects/) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.csproj` file that holds references used by the project, a `Program.cs` file, containing the program entry point and resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `csproj` file name.
+This creates a `Pulumi.yaml` [project file](/docs/concepts/projects/), an `myproject.csproj` file, and a `Program.cs` file containing the program entry point and resource definitions. The directory name becomes the project name in `Pulumi.yaml` and the `csproj` file name.
 
-To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
+Additional cloud-specific templates are available:
 
-This `csharp` template is cloud agnostic, and you will need to install NuGet packages for the cloud provider of your choice. Additional templates are available:
-
-* `pulumi new aws-csharp`: creates a starter AWS C# project
-* `pulumi new azure-csharp`: creates a starter Azure C# project
-* `pulumi new gcp-csharp`: creates a starter Google Cloud C# project
+* `pulumi new aws-csharp`
+* `pulumi new azure-csharp`
+* `pulumi new gcp-csharp`
 {{% /choosable %}}
 
 {{% choosable language fsharp %}}
-You can write Pulumi programs in **F#**. From an empty directory, create a new F# project:
+From an empty directory, create a new F# project:
 
 ```bash
 $ mkdir myproject && cd myproject
 $ pulumi new fsharp
 ```
 
-This will create a `Pulumi.yaml` [project file](/docs/concepts/projects/) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.fsproj` file that holds references used by the project, and a `Program.fs` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml` and as the `fsproj` file name.
+This creates a `Pulumi.yaml` [project file](/docs/concepts/projects/), an `myproject.fsproj` file, and a `Program.fs` file containing your program. The directory name becomes the project name in `Pulumi.yaml` and the `fsproj` file name.
 
-To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
+Additional cloud-specific templates are available:
 
-This `fsharp` template is cloud agnostic, and you will need to install NuGet packages for the cloud provider of your choice. Additional templates are available:
-
-* `pulumi new aws-fsharp`: creates a starter AWS F# project
-* `pulumi new azure-fsharp`: creates a starter Azure F# project
-* `pulumi new gcp-fsharp`: creates a starter Google Cloud F# project
+* `pulumi new aws-fsharp`
+* `pulumi new azure-fsharp`
+* `pulumi new gcp-fsharp`
 {{% /choosable %}}
 
 {{% choosable language visualbasic %}}
-You can write Pulumi programs in **Visual Basic**. From an empty directory, create a new Visual Basic project:
+From an empty directory, create a new Visual Basic project:
 
 ```bash
 $ mkdir myproject && cd myproject
 $ pulumi new visualbasic
 ```
 
-This will create a `Pulumi.yaml` [project file](/docs/concepts/projects/) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.vbproj` file that holds references used by the project, a `Program.vb` file, containing the program entry point and resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `vbproj` file name.
+This creates a `Pulumi.yaml` [project file](/docs/concepts/projects/), an `myproject.vbproj` file, and a `Program.vb` file containing the program entry point and resource definitions. The directory name becomes the project name in `Pulumi.yaml` and the `vbproj` file name.
 
-To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
+Additional cloud-specific templates are available:
 
-This `visualbasic` template is cloud agnostic, and you will need to install NuGet packages for the cloud provider of your choice. Additional templates are available:
-
-* `pulumi new aws-visualbasic`: creates a starter AWS Visual Basic project
-* `pulumi new azure-visualbasic`: creates a starter Azure Visual Basic project
-* `pulumi new gcp-visualbasic`: creates a starter Google Cloud Visual Basic project
+* `pulumi new aws-visualbasic`
+* `pulumi new azure-classic-visualbasic`
+* `pulumi new gcp-visualbasic`
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+To deploy your infrastructure, run `pulumi up`. The Pulumi engine automatically runs `dotnet build` as part of the deployment.
+
+The base templates are cloud agnostic. To use cloud-specific resources, install the appropriate NuGet packages for your cloud provider or use one of the cloud-specific templates listed above.
 
 ## .NET Tools
 
@@ -261,12 +259,6 @@ If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number o
 
 ## Package Documentation
 
-SDK reference documentation, organized by language.
-
-## Dev Versions
-
-Pulumi SDKs also publish pre-release versions, that include all the latest changes from the main development branch.  To use them you can use the `--prerelease` flag.  For example `dotnet add package Pulumi --prerelease`.
-
 ### Standard Packages
 
 In addition to the standard packages the [Pulumi Registry](/registry/) houses 100+ .NET packages.
@@ -280,11 +272,15 @@ In addition to the standard packages the [Pulumi Registry](/registry/) houses 10
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.html">Pulumi.Automation</a></dd>
 </dl>
 
+### Dev Versions
+
+Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch. To use them, add the `--prerelease` flag. For example: `dotnet add package Pulumi --prerelease`.
+
 ## Troubleshooting
 
-### What .NET framework do I need to have installed?
+### What .NET version do I need to have installed?
 
-While we will always officially support the [current set of .NET Frameworks that are supported by Microsoft](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle), that isn't what is always in use at the moment. Pulumi supports multiple side-by-side versions of the .NET runtime at once. You might be supporting multiple programs that depend on different runtimes. Luckily, Pulumi actually is able to use a wide range of .NET runtime versions side-by-side.
+While we will always officially support the [current set of .NET versions that are supported by Microsoft](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle), that isn't what is always in use at the moment. Pulumi supports multiple side-by-side versions of the .NET runtime at once. You might be supporting multiple programs that depend on different runtimes. Luckily, Pulumi actually is able to use a wide range of .NET runtime versions side-by-side.
 
 This can get confusing. You may encounter an error like this:
 
@@ -300,7 +296,7 @@ The specified framework can be found at:
 error: an unhandled error occurred: Program exited with non-zero exit code: 150
 ```
 
-What this error is telling you is that the Pulumi program you're trying to run was defined as a .NET 3 app but the installed version of .NET you have is .NET 5. There are two ways to resolve that, either you can install the version of .NET that the program expects, or you can update the program to use the version you have. The framework version is defined in your `.csproj`/`.fsproj` file like this:
+This error means the Pulumi program requires .NET Core 3.1, but you have .NET 5 installed. You can either install .NET Core 3.1 or update the program to use your installed version. The target version is defined in your `.csproj`/`.fsproj`/`.vbproj` file:
 
 ```
 <Project Sdk="Microsoft.NET.Sdk">
@@ -314,7 +310,7 @@ What this error is telling you is that the Pulumi program you're trying to run w
 </Project>
 ```
 
-Here the `<TargetFramework>` value is set to `net8.0` indicating that this code requires the .NET 8 framework to run. Depending on the code you're using, this could be any version of the .NET runtime from .NET 3 to .NET 9. You need to have the version installed that matches the project file.
+The `<TargetFramework>` value `net8.0` indicates this code requires .NET 8. Depending on your project, this could be .NET 6 through .NET 9. Install the version that matches your project file.
 
 To see the versions you have installed, run `dotnet --info`:
 
@@ -364,7 +360,7 @@ Host:
   Microsoft.NETCore.App 7.0.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-Notice that the `SDKs`, `NETCore.App`, and `AspNetCore.App` runtimes are all listed separately. Look closely at the error message Pulumi gave you and try to determine exactly which one of those you are missing, then download and install the correct version. For example, some installers don't install the ASP.net runtime, which can leave you scratching your head if your project depends on it, and you have the right SDK version installed, but not the ASP.net runtime!
+Notice that SDKs, `NETCore.App`, and `AspNetCore.App` runtimes are listed separately. Check the error message to determine which you're missing, then install it. Some installers don't include the ASP.NET Core runtime, which can be confusing if your project needs it but you have the SDK installed.
 
 At the time of this writing, .NET 8 is the current long-term support version, and all of our built-in .NET templates have been upgraded to require .NET 8. If you have an older version like .NET 6 installed, you might need to upgrade your runtime before using a template, or it could give you an error. Always check the project file first! You can also try setting the project file back to .NET 6. We currently test on .NET 6 and .NET 8 so rolling it back to .NET 6 is likely to be fine and would be a simple edit to the project file's `<TargetFramework>` property.
 
