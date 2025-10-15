@@ -15,7 +15,11 @@
             </p>
         </div>
         <div class="container mx-auto text-center pt-8 w-9/12">
+            {{ if in .RelPermalink "/gads/neo" }}
+            <a href="https://app.pulumi.com/signup" class="btn-primary">Try Neo for FREE</a>
+            {{ else }}
             <a href="https://app.pulumi.com/signup" class="btn-primary">Try Pulumi Cloud for FREE</a>
+            {{ end }}
         </div>
     </section>
 
