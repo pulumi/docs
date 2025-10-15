@@ -826,7 +826,7 @@ const cdnLogDelivery = new aws.cloudwatch.LogDelivery("cdn-log-delivery", {
     deliveryDestinationArn: cdnLogDeliveryDestination.arn,
     s3DeliveryConfigurations: [{
         suffixPath: pulumi.all([aws.getCallerIdentity(), cdn.id]).apply(([caller, distributionId]) =>
-            `/${config.websiteDomain}/${caller.accountId}/${distributionId}/{yyyy}/{MM}/{dd}/{HH}`
+            `${config.websiteDomain}/${caller.accountId}/${distributionId}/{yyyy}/{MM}/{dd}/{HH}`
         ),
         enableHiveCompatiblePath: false,
     }],
