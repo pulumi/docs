@@ -61,11 +61,21 @@ const config = {
     // the marketing portal stack to reference to allow the marketing portal
     // to add items to the uploads bucket.
     marketingPortalStack: stackConfig.get("marketingPortalStack"),
+
+    // Enable data warehouse access to CloudFront logs
+    enableDataWarehouseAccess: stackConfig.getBoolean("enableDataWarehouseAccess") || false,
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const aiAppDomain = aiAppStack.requireOutput('aiAppDistributionDomain');
 const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
+
+// Reference to the Airflow stack for data warehouse access (only if enabled)
+let airflowTaskRoleArn: pulumi.Output<any> | undefined;
+if (config.enableDataWarehouseAccess) {
+    const airflowStack = new pulumi.StackReference('pulumi/dwh-workflows-orchestrate-airflow/production');
+    airflowTaskRoleArn = airflowStack.getOutput('airflowTaskRoleArn');
+}
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
 // website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
@@ -231,31 +241,108 @@ const websiteLogsBucket = new aws.s3.Bucket(
 // https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
 const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
     bucket: websiteLogsBucket.id,
-    policy: pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), aws.getRegion()])
-        .apply(([bucketArn, caller, region]) => JSON.stringify({
-            Version: "2012-10-17",
-            Id: "AWSLogDeliveryWrite20150319",
-            Statement: [
-                {
-                    Sid: "AWSLogDeliveryWrite",
-                    Effect: "Allow",
-                    Principal: {
-                        Service: "delivery.logs.amazonaws.com"
-                    },
-                    Action: "s3:PutObject",
-                    Resource: `${bucketArn}/*`,
-                    Condition: {
-                        StringEquals: {
-                            "s3:x-amz-acl": "bucket-owner-full-control",
-                            "aws:SourceAccount": caller.accountId
+    policy: config.enableDataWarehouseAccess && airflowTaskRoleArn
+        ? pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), aws.getRegion(), airflowTaskRoleArn])
+            .apply(([bucketArn, caller, region, airflowRole]) => {
+                const statements: any[] = [
+                    {
+                        Sid: "AWSLogDeliveryWrite",
+                        Effect: "Allow",
+                        Principal: {
+                            Service: "delivery.logs.amazonaws.com"
                         },
-                        ArnLike: {
-                            "aws:SourceArn": `arn:aws:logs:${region.name}:${caller.accountId}:delivery-source:*`
+                        Action: ["s3:PutObject", "s3:ListBucket"],
+                        Resource: [`${bucketArn}/*`, bucketArn],
+                        Condition: {
+                            StringEquals: {
+                                "s3:x-amz-acl": "bucket-owner-full-control",
+                                "aws:SourceAccount": caller.accountId
+                            },
+                            ArnLike: {
+                                "aws:SourceArn": `arn:aws:logs:${region.name}:${caller.accountId}:delivery-source:*`
+                            }
+                        }
+                    },
+                    // Data warehouse (Airflow) read access
+                    {
+                        Sid: "DataWarehouseReadObjects",
+                        Effect: "Allow",
+                        Principal: {
+                            AWS: airflowRole
+                        },
+                        Action: ["s3:GetObject", "s3:GetObjectVersion"],
+                        Resource: `${bucketArn}/*`
+                    },
+                    {
+                        Sid: "DataWarehouseListBucket",
+                        Effect: "Allow",
+                        Principal: {
+                            AWS: airflowRole
+                        },
+                        Action: ["s3:ListBucket", "s3:GetBucketLocation"],
+                        Resource: bucketArn
+                    },
+                    // Enforce TLS
+                    {
+                        Sid: "RestrictToTLSRequestsOnly",
+                        Effect: "Deny",
+                        Principal: "*",
+                        Action: "s3:*",
+                        Resource: [bucketArn, `${bucketArn}/*`],
+                        Condition: {
+                            Bool: {
+                                "aws:SecureTransport": "false"
+                            }
                         }
                     }
-                }
-            ]
-        }))
+                ];
+
+                return JSON.stringify({
+                    Version: "2012-10-17",
+                    Statement: statements
+                });
+            })
+        : pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), aws.getRegion()])
+            .apply(([bucketArn, caller, region]) => {
+                const statements: any[] = [
+                    {
+                        Sid: "AWSLogDeliveryWrite",
+                        Effect: "Allow",
+                        Principal: {
+                            Service: "delivery.logs.amazonaws.com"
+                        },
+                        Action: ["s3:PutObject", "s3:ListBucket"],
+                        Resource: [`${bucketArn}/*`, bucketArn],
+                        Condition: {
+                            StringEquals: {
+                                "s3:x-amz-acl": "bucket-owner-full-control",
+                                "aws:SourceAccount": caller.accountId
+                            },
+                            ArnLike: {
+                                "aws:SourceArn": `arn:aws:logs:${region.name}:${caller.accountId}:delivery-source:*`
+                            }
+                        }
+                    },
+                    // Enforce TLS
+                    {
+                        Sid: "RestrictToTLSRequestsOnly",
+                        Effect: "Deny",
+                        Principal: "*",
+                        Action: "s3:*",
+                        Resource: [bucketArn, `${bucketArn}/*`],
+                        Condition: {
+                            Bool: {
+                                "aws:SecureTransport": "false"
+                            }
+                        }
+                    }
+                ];
+
+                return JSON.stringify({
+                    Version: "2012-10-17",
+                    Statement: statements
+                });
+            })
 });
 
 const fiveMinutes = 60 * 5;
