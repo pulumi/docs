@@ -6,9 +6,11 @@ $TOGGLE_TOP_MOBILE: 125px;
 body #neo-mode-toggle {
     position: fixed;
     top: calc($TOP_MARGIN + $TOGGLE_MARGIN);
+
     @media (max-width: 1023px) {
         top: $TOGGLE_TOP_MOBILE;
     }
+
     right: 0px;
     display: flex;
     padding: 12px 16px;
@@ -38,7 +40,7 @@ body #neo-mode-toggle {
     @media (max-width: 1023px) {
         width: 64px;
         padding: 12px;
-        
+
         &:hover {
             width: 64px; // Keep compact on mobile hover
         }
@@ -55,9 +57,11 @@ body #neo-mode-toggle {
     .neo-hover-icon {
         opacity: 0;
         transform: translateX(10px) scale(0.9);
-        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-                    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        .toggle-on, .toggle-off {
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        .toggle-on,
+        .toggle-off {
             display: none;
         }
     }
@@ -65,6 +69,7 @@ body #neo-mode-toggle {
     &:hover .neo-hover-icon {
         opacity: 1;
         transform: translateX(0) scale(1);
+
         .toggle-off {
             display: block;
             opacity: 1;
@@ -111,23 +116,28 @@ body #neo-interface {
     left: 0;
     width: 100%;
     height: calc(100vh - $TOP_MARGIN);
+
     @media (max-width: 1023px) {
         top: $TOP_MARGIN_MOBILE;
         height: calc(100vh - $TOP_MARGIN_MOBILE);
     }
+
     background: #F6F5FF;
     z-index: 30;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.4s;
 
     .neo-content-container {
         height: calc(100vh - $TOP_MARGIN);
+
         @media (max-width: 1023px) {
             height: calc(100vh - $TOP_MARGIN_MOBILE);
         }
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -254,34 +264,39 @@ body {
     overflow-x: hidden;
     max-width: 100vw;
 
-   
+
 
     // Neo mode active state - controls all dynamic styling
     &.neo-active {
         overflow: hidden; // Prevent scrolling when Neo is active
- #neo-mode-toggle {
-        background: var(--violet-secondary, #805AC3);
 
-    .neo-hover-icon {
-        opacity: 0;
-        transform: translateX(10px) scale(0.9);
-        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+        #neo-mode-toggle {
+            background: var(--violet-secondary, #805AC3);
+
+            .neo-hover-icon {
+                opacity: 0;
+                transform: translateX(10px) scale(0.9);
+                transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
                     transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        .toggle-on, .toggle-off {
-            display: none;
-        }
-    }
 
-    &:hover .neo-hover-icon {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-        .toggle-on {
-            display: block;
-            opacity: 1;
-            transform: scale(1);
+                .toggle-on,
+                .toggle-off {
+                    display: none;
+                }
+            }
+
+            &:hover .neo-hover-icon {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+
+                .toggle-on {
+                    display: block;
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
         }
-    }
- }
+
         // Show and animate Neo interface
         #neo-interface {
             opacity: 1;
@@ -297,7 +312,10 @@ body {
 
         // Fade out main content
         #main-content {
-            opacity: 0.3;
+            opacity: 0.1;
+            pointer-events: none;
+            touch-action: none;
+            user-select: none;
             transform: scale(0.98);
         }
 
