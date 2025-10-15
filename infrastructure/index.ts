@@ -5,6 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIAnswersRewriteAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
+import { CannedAcl } from "@pulumi/aws/s3";
 
 const stackConfig = new pulumi.Config();
 
@@ -161,7 +162,7 @@ const uploadsBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("uploa
 
 const uploadsBucketAcl = new aws.s3.BucketAclV2("uploads-bucket-acl", {
     bucket: uploadsBucket.id,
-    acl: aws.s3.PublicReadAcl,
+    acl: CannedAcl.PublicRead,
 }, {
     dependsOn: [uploadsBucketPublicAccessBlock, uploadsBucketOwnershipControls],
 });
@@ -179,7 +180,7 @@ if (config.makeFallbackBucket) {
     const fallbackBucket = new aws.s3.Bucket(
         "fallback-bucket", {
             bucket: config.websiteDomain,
-            acl: aws.s3.PublicReadAcl,
+            acl: CannedAcl.PublicRead,
             website: {
                 indexDocument: "index.html",
                 errorDocument: "404.html",
@@ -225,47 +226,36 @@ const websiteLogsBucket = new aws.s3.Bucket(
     },
 );
 
-// This needs to be set in order to allow the use of ACLs. This was added to update our infrastructure to be
-// compatible with the default S3 settings from AWS' April update. `ObjectWriter` was the prior default, so
-// changing it to that here to match the configuration prior to the update.
-// https://aws.amazon.com/blogs/aws/heads-up-amazon-s3-security-changes-are-coming-in-april-of-2023/
-const logsBucketOwnershipControls = new aws.s3.BucketOwnershipControls("logs-bucket-ownership-controls", {
+// Grant the CloudWatch Logs delivery service permission to write CloudFront logs to the bucket.
+// Uses the new CloudWatch Logs infrastructure v2 for S3 delivery.
+// https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
+const logsBucketPolicy = new aws.s3.BucketPolicy("logs-bucket-policy", {
     bucket: websiteLogsBucket.id,
-    rule: {
-        objectOwnership: "ObjectWriter"
-    }
-});
-
-const logsBucketACL = new aws.s3.BucketAclV2("logs-bucket-acl", {
-    bucket: websiteLogsBucket.id,
-    acl: aws.s3.PrivateAcl,
-}, {
-    dependsOn: [logsBucketOwnershipControls],
-});
-
-// The canonical user ID for the account.
-const owner = aws.s3.getCanonicalUserId({});
-// Grant the CloudFront log delivery account permission to write to the bucket.
-const logsBucketDeliveryACL = new aws.s3.BucketAclV2("logs-bucket-delivery-acl", {
-    bucket: websiteLogsBucket.id,
-    accessControlPolicy: {
-        grants: [
-            {
-                grantee: {
-                    // The canconical ID for the `awslogsdelivery` account.
-                    // see: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html#AccessLogsOverview
-                    id: "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0",
-                    type: "CanonicalUser",
-                },
-                permission: "WRITE",
-            },
-        ],
-        owner: {
-            id: owner.then(owner => owner.id),
-        },
-    },
-}, {
-    dependsOn: [logsBucketOwnershipControls],
+    policy: pulumi.all([websiteLogsBucket.arn, aws.getCallerIdentity(), aws.getRegion()])
+        .apply(([bucketArn, caller, region]) => JSON.stringify({
+            Version: "2012-10-17",
+            Id: "AWSLogDeliveryWrite20150319",
+            Statement: [
+                {
+                    Sid: "AWSLogDeliveryWrite",
+                    Effect: "Allow",
+                    Principal: {
+                        Service: "delivery.logs.amazonaws.com"
+                    },
+                    Action: "s3:PutObject",
+                    Resource: `${bucketArn}/*`,
+                    Condition: {
+                        StringEquals: {
+                            "s3:x-amz-acl": "bucket-owner-full-control",
+                            "aws:SourceAccount": caller.accountId
+                        },
+                        ArnLike: {
+                            "aws:SourceArn": `arn:aws:logs:${region.name}:${caller.accountId}:delivery-source:*`
+                        }
+                    }
+                }
+            ]
+        }))
 });
 
 const fiveMinutes = 60 * 5;
@@ -670,12 +660,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         sslSupportMethod: "sni-only",
         minimumProtocolVersion: "TLSv1.2_2021",
     },
-
-    loggingConfig: {
-        bucket: websiteLogsBucket.bucketDomainName,
-        includeCookies: false,
-        prefix: `${config.websiteDomain}/`,
-    },
 };
 
 // cdn is the CloudFront distribution that serves the content of the website.
@@ -687,6 +671,38 @@ const cdn = new aws.cloudfront.Distribution(
         dependsOn: [ websiteLogsBucket ],
     },
 );
+
+// Configure CloudFront v2 logging to S3 using CloudWatch Log Delivery
+// https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
+const cdnLogDeliverySource = new aws.cloudwatch.LogDeliverySource("cdn-log-delivery-source", {
+    region: "us-east-1",
+    name: pulumi.interpolate`${cdn.id}-access-logs`,
+    logType: "ACCESS_LOGS",
+    resourceArn: cdn.arn,
+});
+
+const cdnLogDeliveryDestination = new aws.cloudwatch.LogDeliveryDestination("cdn-log-delivery-destination", {
+    region: "us-east-1",
+    name: "cdn-s3-destination",
+    outputFormat: "parquet",
+    deliveryDestinationConfiguration: {
+        destinationResourceArn: pulumi.interpolate`${websiteLogsBucket.arn}/${config.websiteDomain}`,
+    },
+}, {
+    dependsOn: [logsBucketPolicy],
+});
+
+const cdnLogDelivery = new aws.cloudwatch.LogDelivery("cdn-log-delivery", {
+    region: "us-east-1",
+    deliverySourceName: cdnLogDeliverySource.name,
+    deliveryDestinationArn: cdnLogDeliveryDestination.arn,
+    s3DeliveryConfigurations: [{
+        suffixPath: pulumi.all([aws.getCallerIdentity(), cdn.id]).apply(([caller, distributionId]) =>
+            `/${caller.accountId}/${distributionId}/{yyyy}/{MM}/{dd}/{HH}`
+        ),
+        enableHiveCompatiblePath: false,
+    }],
+});
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".
