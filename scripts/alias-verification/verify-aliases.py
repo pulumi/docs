@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Alias Verification Script
-Checks if renamed files have proper aliases pointing to their old locations.
+Checks if renamed and deleted files have proper aliases pointing to their old locations.
 """
 
 import sys
@@ -63,6 +63,19 @@ def extract_aliases(filepath):
 
     return aliases
 
+def find_alias_in_content(repo_root, expected_alias):
+    """Search all content/docs files for a specific alias."""
+    content_dir = repo_root / 'content' / 'docs'
+    if not content_dir.exists():
+        return None
+
+    for md_file in content_dir.rglob('*.md'):
+        aliases = extract_aliases(md_file)
+        if expected_alias in aliases:
+            return md_file.relative_to(repo_root)
+
+    return None
+
 def main():
     script_dir = Path(__file__).parent
     renames_file = script_dir / 'renames.txt'
@@ -74,10 +87,14 @@ def main():
         sys.exit(1)
 
     # Counters
-    correct = 0
-    missing = 0
-    suspicious = 0
-    total_content = 0
+    correct_renames = 0
+    missing_renames = 0
+    suspicious_renames = 0
+    total_renames = 0
+
+    correct_deletes = 0
+    missing_deletes = 0
+    total_deletes = 0
 
     # Output files
     correct_log = script_dir / 'aliases-correct.txt'
@@ -88,80 +105,118 @@ def main():
     missing_log.write_text('')
     suspicious_log.write_text('')
 
-    print("Verifying aliases for renamed content files...")
+    print("Verifying aliases for renamed and deleted content files...")
     print()
 
-    # Process each rename
+    # Process renames and deletes
     with open(renames_file, 'r') as f:
         for line in f:
             line = line.strip()
-            if not line.startswith('R'):
-                continue
 
-            parts = line.split('\t')
-            if len(parts) != 3:
-                continue
+            # Handle renames (R status)
+            if line.startswith('R'):
+                parts = line.split('\t')
+                if len(parts) != 3:
+                    continue
 
-            _similarity, old_path, new_path = parts
+                _, old_path, new_path = parts
 
-            # Skip non-content files
-            if not old_path.startswith('content/docs/'):
-                continue
+                # Skip non-content files
+                if not old_path.startswith('content/docs/'):
+                    continue
 
-            total_content += 1
+                total_renames += 1
 
-            # Convert old path to expected URL
-            expected_alias = path_to_url(old_path)
+                # Convert old path to expected URL
+                expected_alias = path_to_url(old_path)
 
-            # Check if new file exists
-            new_file = repo_root / new_path
-            if not new_file.exists():
-                print(f"Warning: New file doesn't exist: {new_file}", file=sys.stderr)
-                continue
+                # Check if new file exists
+                new_file = repo_root / new_path
+                if not new_file.exists():
+                    print(f"Warning: New file doesn't exist: {new_file}", file=sys.stderr)
+                    continue
 
-            # Extract aliases from frontmatter
-            aliases = extract_aliases(new_file)
+                # Extract aliases from frontmatter
+                aliases = extract_aliases(new_file)
 
-            # Check if expected alias is present
-            if not aliases:
-                missing += 1
-                with open(missing_log, 'a') as log:
-                    log.write(f"❌ MISSING: {new_path}\n")
-                    log.write(f"   OLD: {old_path} → EXPECTED ALIAS: {expected_alias}\n\n")
-            elif expected_alias in aliases:
-                correct += 1
-                with open(correct_log, 'a') as log:
-                    log.write(f"✓ {new_path}\n")
-            else:
-                suspicious += 1
-                with open(suspicious_log, 'a') as log:
-                    log.write(f"⚠️  SUSPICIOUS: {new_path}\n")
-                    log.write(f"   OLD: {old_path} → EXPECTED ALIAS: {expected_alias}\n")
-                    log.write(f"   HAS: {', '.join(aliases)}\n\n")
+                # Check if expected alias is present
+                if not aliases:
+                    missing_renames += 1
+                    with open(missing_log, 'a') as log:
+                        log.write(f"❌ MISSING (RENAME): {new_path}\n")
+                        log.write(f"   OLD: {old_path} → EXPECTED ALIAS: {expected_alias}\n\n")
+                elif expected_alias in aliases:
+                    correct_renames += 1
+                    with open(correct_log, 'a') as log:
+                        log.write(f"✓ RENAME: {new_path}\n")
+                else:
+                    suspicious_renames += 1
+                    with open(suspicious_log, 'a') as log:
+                        log.write(f"⚠️  SUSPICIOUS (RENAME): {new_path}\n")
+                        log.write(f"   OLD: {old_path} → EXPECTED ALIAS: {expected_alias}\n")
+                        log.write(f"   HAS: {', '.join(aliases)}\n\n")
+
+            # Handle deletes (D status)
+            elif line.startswith('D'):
+                parts = line.split('\t')
+                if len(parts) != 2:
+                    continue
+
+                _, old_path = parts
+
+                # Skip non-content files
+                if not old_path.startswith('content/docs/'):
+                    continue
+
+                total_deletes += 1
+
+                # Convert old path to expected URL
+                expected_alias = path_to_url(old_path)
+
+                # Search for this alias in all current content files
+                found_in = find_alias_in_content(repo_root, expected_alias)
+
+                if found_in:
+                    correct_deletes += 1
+                    with open(correct_log, 'a') as log:
+                        log.write(f"✓ DELETE: {old_path}\n")
+                        log.write(f"   ALIAS FOUND IN: {found_in}\n")
+                else:
+                    missing_deletes += 1
+                    with open(missing_log, 'a') as log:
+                        log.write(f"❌ MISSING (DELETE): {old_path}\n")
+                        log.write(f"   EXPECTED ALIAS: {expected_alias}\n")
+                        log.write(f"   Not found in any current content file\n\n")
 
             # Progress indicator
-            if total_content % 50 == 0:
-                print(f"Processed {total_content} files...", file=sys.stderr)
+            total = total_renames + total_deletes
+            if total % 50 == 0 and total > 0:
+                print(f"Processed {total} files...", file=sys.stderr)
 
     # Print summary
     print("=== VERIFICATION SUMMARY ===")
-    print(f"Total content files renamed: {total_content}")
+    print(f"Renamed files: {total_renames}")
+    print(f"Deleted files: {total_deletes}")
+    print(f"Total files:   {total_renames + total_deletes}")
     print()
-    print(f"✓ CORRECT:    {correct}")
-    print(f"❌ MISSING:    {missing}")
-    print(f"⚠️  SUSPICIOUS: {suspicious}")
+    print(f"✓ CORRECT:    {correct_renames + correct_deletes} (Renames: {correct_renames}, Deletes: {correct_deletes})")
+    print(f"❌ MISSING:    {missing_renames + missing_deletes} (Renames: {missing_renames}, Deletes: {missing_deletes})")
+    print(f"⚠️  SUSPICIOUS: {suspicious_renames} (Renames only)")
     print()
 
-    if missing == 0 and suspicious == 0:
-        print(f"🎉 ALL ALIASES VERIFIED! All {correct} files have correct aliases.")
+    total_missing = missing_renames + missing_deletes
+    total_correct = correct_renames + correct_deletes
+
+    if total_missing == 0 and suspicious_renames == 0:
+        print(f"🎉 ALL ALIASES VERIFIED! All {total_correct} files have correct aliases.")
         sys.exit(0)
     else:
         print("❌ ISSUES FOUND - Details in:")
-        if correct > 0:
+        if total_correct > 0:
             print(f"  ✓ {correct_log}")
-        if missing > 0:
+        if total_missing > 0:
             print(f"  ❌ {missing_log}")
-        if suspicious > 0:
+        if suspicious_renames > 0:
             print(f"  ⚠️  {suspicious_log}")
         sys.exit(1)
 

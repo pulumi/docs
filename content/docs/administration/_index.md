@@ -15,6 +15,7 @@ description: <p>Manage your Pulumi Cloud organization, control access, configure
 aliases:
   - /docs/administration/
   - /docs/pulumi-cloud/
+  - /docs/pulumi-cloud/admin/
 
 link_buttons:
   primary:
