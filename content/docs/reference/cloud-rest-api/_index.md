@@ -13,7 +13,7 @@ aliases:
   - /docs/intro/insights/api/
   - /docs/reference/cloud-rest-api/
   - /docs/pulumi-cloud/cloud-rest-api/
-  - /docs/reference/cloud-rest-api/
+  - /docs/pulumi-cloud/reference/
 ---
 
 The Pulumi Cloud REST API allows you to automate and integrate with Pulumi Cloud programmatically. The API is used by the Pulumi CLI to interact with Pulumi Cloud, but it's also available for users to create their own custom automation and integrations.
