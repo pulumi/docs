@@ -14,8 +14,9 @@ menu:
     parent: openid-connect-client
     weight: 1
 aliases:
-- /docs/pulumi-cloud/oidc/client/kubernetes-eks/
-- /docs/pulumi-cloud/access-management/oidc-client/kubernetes-eks/
+  - /docs/pulumi-cloud/access-management/oidc-client/kubernetes-eks/
+  - /docs/pulumi-cloud/access-management/oidc/client/kubernetes-eks/
+  - /docs/pulumi-cloud/oidc/client/kubernetes-eks/
 ---
 
 This document outlines the steps required to configure Pulumi to accept Elastic Kubernetes Service (EKS) id_tokens to be exchanged for a personal access token. With this configuration, Kubernetes pods authenticate to Pulumi Cloud using OIDC tokens issued by EKS.

@@ -84,3 +84,7 @@ scripts/alias-verification/aliases-suspicious.txt
 scripts/alias-verification/deletes.txt
 scripts/alias-verification/renames.txt
 scripts/alias-verification/fixes-data.txt
+scripts/alias-verification/historical-aliases-correct.txt
+scripts/alias-verification/historical-aliases-missing.txt
+scripts/alias-verification/historical-aliases-report.txt
+scripts/alias-verification/historical-fixes.json

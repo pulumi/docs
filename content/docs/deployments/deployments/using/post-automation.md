@@ -5,7 +5,8 @@ title: "Post-Deployment Automation"
 h1: "Post-Deployment Automation"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
-- /docs/pulumi-cloud/deployments/using/post-automation/
+  - /docs/pulumi-cloud/deployments/reference/
+  - /docs/pulumi-cloud/deployments/using/post-automation/
 menu:
   deployments:
     parent: deployments-deployments-using
