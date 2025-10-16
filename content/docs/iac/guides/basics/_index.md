@@ -10,6 +10,8 @@ menu:
         parent: iac-using-pulumi
         weight: 10
         identifier: iac-guides-basics
+aliases:
+    - /docs/iac/using-pulumi/
 ---
 
 Whether you're just starting with Pulumi or looking to refine your workflow, these guides cover essential practices for organizing infrastructure code, securing deployments, and managing changes with confidence.
