@@ -7,14 +7,15 @@ menu:
         parent: cloud-rest-api
         weight: 4.5
 aliases:
-  - /docs/reference/cloud-rest-api/deployments/
   - /docs/deployments/deployments/api
   - /docs/deployments/deployments/api/
-  - /docs/reference/deployments-rest-api
-  - /docs/reference/deployments-rest-api/
   - /docs/intro/deployments/api
   - /docs/intro/deployments/api/
+  - /docs/pulumi-cloud/deployments/api/
   - /docs/pulumi-cloud/reference/deployments/
+  - /docs/reference/cloud-rest-api/deployments/
+  - /docs/reference/deployments-rest-api
+  - /docs/reference/deployments-rest-api/
 ---
 
 The Deployments API allows you to configure and manage Pulumi Deployments, which enable you to execute Pulumi updates and other operations through the Pulumi Cloud. With this API, you can configure deployment settings for your stacks, trigger deployments, view deployment status and logs, and manage deployment execution.

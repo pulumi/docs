@@ -11,11 +11,12 @@ menu:
     weight: 60
     identifier: deployments-deployments-oidc
 aliases:
-- /docs/pulumi-cloud/oidc/
-- /docs/administration/access-identity/oidc/
-- /docs/pulumi-cloud/oidc/provider/
-- /docs/administration/access-identity/oidc/provider/
-- /docs/pulumi-cloud/deployments/oidc/
+  - /docs/administration/access-identity/oidc/
+  - /docs/administration/access-identity/oidc/provider/
+  - /docs/pulumi-cloud/access-management/oidc/provider/
+  - /docs/pulumi-cloud/deployments/oidc/
+  - /docs/pulumi-cloud/oidc/
+  - /docs/pulumi-cloud/oidc/provider/
 ---
 
 Pulumi Deployments supports OpenID Connect (OIDC) integration with popular cloud providers. In order for a Pulumi IaC operation like `update` or `preview` to work, the Pulumi CLI must be able to access credentials that will allow it to perform the necessary CRUD operations on the resources in your stack. Pulumi Deployments' OIDC integrations allow your your deployments to use dynamic, short-lived cloud credentials for supported clouds instead of static credentials which are less secure and difficult to rotate. This page explains how to set up OIDC for Pulumi Deployments to access resources in your cloud provider accounts.
