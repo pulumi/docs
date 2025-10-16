@@ -42,7 +42,7 @@ Do not substitute other tools or commands.
 ## Absolute Prohibitions
 
 - **Package manager**: Do **not** change `package.json` to use pnpm. Yarn/npm only.  
-- **New files**: Must always end with a newline.  
+- **Markdown (.md) files**: Must always end with a newline.  
 
 ---
 

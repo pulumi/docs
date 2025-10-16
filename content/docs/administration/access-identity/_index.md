@@ -13,6 +13,8 @@ menu:
     identifier: administration-access-identity
 h1: Access & Identity
 description: <p>Configure access control, authentication methods, and identity management for your Pulumi Cloud organization.</p>
+aliases:
+  - /docs/pulumi-cloud/access-management/
 
 sections:
 - type: button-cards

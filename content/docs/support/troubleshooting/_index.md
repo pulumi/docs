@@ -19,6 +19,7 @@ aliases:
   - /docs/troubleshooting/
   - /docs/troubleshooting/overview/
   - /docs/iac/support/
+  - /docs/iac/troubleshooting/
 
 sections:
 - type: button-cards
