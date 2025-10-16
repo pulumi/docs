@@ -37,11 +37,11 @@ def get_file_history(repo_root: Path, current_path: Path) -> Set[str]:
     """
     try:
         # Use --follow to track renames, --name-only to get just paths
-        # --all to check all branches, not just current
+        # origin/master to check only published history (not dev branches)
         # --since="6 months ago" to limit scope to recent history
         # -M30% to detect renames even when content changed significantly (e.g., revamps)
         result = subprocess.run(
-            ['git', 'log', '--follow', '-M30%', '--all', '--since=6 months ago', '--name-only', '--format=', '--', str(current_path.relative_to(repo_root))],
+            ['git', 'log', '--follow', '-M30%', 'origin/master', '--since=6 months ago', '--name-only', '--format=', '--', str(current_path.relative_to(repo_root))],
             cwd=repo_root,
             capture_output=True,
             text=True,

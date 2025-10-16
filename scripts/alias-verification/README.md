@@ -118,7 +118,8 @@ python3 verify-all-historical-aliases.py
 
 This script:
 - Checks the **complete git history** of every file (limited to past 6 months)
-- Uses `git log --follow -M30% --all` to track all historical paths
+- Uses `git log --follow -M30% origin/master` to track all historical paths
+- **Only checks master branch** - ignores development branches that were never merged/published
 - **30% similarity detection** catches files that were significantly rewritten during moves (e.g., documentation revamps)
 - Checks both frontmatter aliases AND S3 redirect files (`scripts/redirects/*.txt`)
 - Identifies files missing any historical alias
@@ -178,12 +179,14 @@ Total missing aliases:               ❌ 82
 ### What Gets Checked
 
 The comprehensive verification checks:
-1. **Git History**: All paths a file has had in the past 6 months
+1. **Git History**: All paths a file has had in the past 6 months on the master branch
 1. **Frontmatter Aliases**: The `aliases:` field in markdown frontmatter
 1. **S3 Redirects**: Redirect mappings in `scripts/redirects/*.txt` files
 1. **Multi-hop Moves**: Files moved multiple times (A→B→C)
 1. **Pre-reorg Moves**: Files moved on master before your branch existed
 1. **Low-Similarity Renames**: Files that were significantly rewritten during moves using git's 30% similarity detection (catches delete+add operations that are actually content revamps)
+
+**Note**: The script only checks `origin/master` history, not development branches. This prevents false positives from paths that only existed during development and were never published.
 
 ### Differences from Branch Verification
 
