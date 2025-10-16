@@ -169,7 +169,7 @@ const uploadsBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("uploa
     blockPublicAcls: false,
 });
 
-const uploadsBucketAcl = new aws.s3.BucketAclV2("uploads-bucket-acl", {
+const uploadsBucketAcl = new aws.s3.BucketAcl("uploads-bucket-acl", {
     bucket: uploadsBucket.id,
     acl: aws.s3.CannedAcl.PublicRead,
 }, {
