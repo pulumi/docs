@@ -155,6 +155,44 @@ This script:
 
 **⚠️ WARNING**: This modifies files in place. Make sure to commit any important changes first!
 
+#### Step 3.5: Review for False Positives (IMPORTANT)
+
+Before committing the changes, **you must review them for false positives**. The 30% similarity detection can occasionally match unrelated files that happen to have similar content patterns.
+
+```bash
+git diff
+```
+
+**Common false positive patterns to watch for:**
+
+1. **Unrelated file replacements**: Files with similar names but completely different purposes
+   - Example: `doppler.md` matched with historical path `infisical.md` (different products)
+   - Example: CLI commands that were never actually renamed (e.g., `pulumi_project` ← `pulumi_env_init`)
+
+2. **Content rewrites that aren't renames**: Files that were deleted and recreated with new content
+   - Low similarity can match files that share some boilerplate but are fundamentally different
+
+3. **Development-only paths**: Should be rare now that we only check master, but verify paths make sense
+
+**How to remove false positive aliases:**
+
+If you find an incorrect alias, simply edit the file and remove it from the `aliases:` list in the frontmatter.
+
+**Example of removing a false positive:**
+
+```yaml
+# Before (with false positive)
+aliases:
+  - /docs/esc/integrations/dynamic-login-credentials/infisical-login/  # ← FALSE POSITIVE
+  - /docs/esc/providers/doppler-login/
+
+# After (false positive removed)
+aliases:
+  - /docs/esc/providers/doppler-login/
+```
+
+After removing false positives, re-run the apply script if needed, or proceed to verification.
+
 #### Step 4: Re-verify
 
 ```bash

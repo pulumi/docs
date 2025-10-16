@@ -11,13 +11,14 @@ menu:
     weight: 1
     identifier: deployments-deployments-oidc-aws
 aliases:
-- /docs/pulumi-cloud/deployments/oidc/aws/
-- /docs/guides/oidc/provider/aws
-- /docs/intro/deployments/oidc/provider/aws/
-- /docs/pulumi-cloud/deployments/oidc/provider/aws/
-- /docs/pulumi-cloud/oidc/provider/aws/
-- /docs/pulumi-cloud/oidc/aws/
-- /docs/administration/access-identity/oidc/provider/aws/
+  - /docs/administration/access-identity/oidc/provider/aws/
+  - /docs/guides/oidc/provider/aws
+  - /docs/intro/deployments/oidc/provider/aws/
+  - /docs/pulumi-cloud/access-management/oidc/provider/aws/
+  - /docs/pulumi-cloud/deployments/oidc/aws/
+  - /docs/pulumi-cloud/deployments/oidc/provider/aws/
+  - /docs/pulumi-cloud/oidc/aws/
+  - /docs/pulumi-cloud/oidc/provider/aws/
 ---
 
 {{% notes type="info" %}}
