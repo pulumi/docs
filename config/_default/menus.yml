@@ -340,8 +340,3 @@ reference:
     url: https://www.pulumi.com/docs/reference/pkg/python/pulumi_policy/
     weight: 7
     identifier: reference-sdks-python-policy
-  - name: Registry ↗
-    parent: reference-home
-    url: /registry/
-    weight: 3
-    identifier: reference-registry
