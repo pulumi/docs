@@ -800,14 +800,13 @@ const cdn = new aws.cloudfront.Distribution(
     },
 );
 
-// Configure CloudFront v2 logging to S3 using CloudWatch Log Delivery
+// The Cdn Log Delivery Source was configured outside of Pulumi
 // https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
-const cdnLogDeliverySource = new aws.cloudwatch.LogDeliverySource("cdn-log-delivery-source", {
-    region: "us-east-1",
-    name: pulumi.interpolate`${cdn.id}-access-logs`,
-    logType: "ACCESS_LOGS",
-    resourceArn: cdn.arn,
-});
+
+const cdnLogDeliverySource = aws.cloudwatch.LogDeliverySource.get(
+    "CreatedByCloudFront-E3PRSXO1BZJEEY",
+    "cloudfront_logs"
+);
 
 const cdnLogDeliveryDestination = new aws.cloudwatch.LogDeliveryDestination("cdn-log-delivery-destination", {
     region: "us-east-1",
