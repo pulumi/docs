@@ -14,9 +14,9 @@ jobs:
         id: esc-secrets
         uses: pulumi/esc-action@v1
       - name: Install Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
-          node-version: '18.x'
+          node-version: '22.x'
 
       - name: Check out the repo
         uses: actions/checkout@v2
