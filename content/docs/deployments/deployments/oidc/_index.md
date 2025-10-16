@@ -81,6 +81,6 @@ The Subject and custom claims are particularly useful for configuring trust rela
 
 To configure OIDC for your cloud provider with Pulumi Deployments, refer to one of these guides:
 
-* [Configure OpenID Connect for AWS with Pulumi Deployments](/docs/deployments/deployments/oidc/provider/aws/)
-* [Configure OpenID Connect for Azure with Pulumi Deployments](/docs/deployments/deployments/oidc/provider/azure/)
-* [Configure OpenID Connect for Google Cloud with Pulumi Deployments](/docs/deployments/deployments/oidc/provider/gcp/)
+* [Configure OpenID Connect for AWS with Pulumi Deployments](/docs/deployments/deployments/oidc/aws/)
+* [Configure OpenID Connect for Azure with Pulumi Deployments](/docs/deployments/deployments/oidc/azure/)
+* [Configure OpenID Connect for Google Cloud with Pulumi Deployments](/docs/deployments/deployments/oidc/gcp/)
