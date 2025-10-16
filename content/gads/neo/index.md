@@ -41,31 +41,31 @@ why_neo:
       icon: rocketship
       color: salmon
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/signup?prompt=Provision%20an%20EKS%20cluster%20with%20preview%20and%20an%20audit%20trail"
+      button_url: "https://app.pulumi.com/pulumi/neo?prompt=Provision%20an%20EKS%20cluster%20with%20preview%20and%20an%20audit%20trail&prefer_signup=true"
     - title: Enforce Guardrails by Default
-      description: "Neo won’t propose or apply changes that violate your policies—RBAC, compliance, and approvals are built in."
+      description: "Neo won't propose or apply changes that violate your policies—RBAC, compliance, and approvals are built in."
       icon: shield
       color: blue
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/signup?prompt=Run%20a%20policy%20check%20for%20my%20account%20and%20block%20violations"
+      button_url: "https://app.pulumi.com/pulumi/neo?prompt=Run%20a%20policy%20check%20for%20my%20account%20and%20block%20violations&prefer_signup=true"
     - title: Debug Incidents Faster
       description: "Ask in plain English—trace 5xx errors, inspect security groups, surface misconfigurations, and apply fixes with approval."
       icon: nodes
       color: yellow
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/signup?prompt=Help%20me%20debug%20a%20networking%20issue%20causing%205xx%20errors"
+      button_url: "https://app.pulumi.com/pulumi/neo?prompt=Help%20me%20debug%20a%20networking%20issue%20causing%205xx%20errors&prefer_signup=true"
     - title: Cut Cloud Waste
       description: "Find idle or oversized resources across AWS, Azure, and Google Cloud, then right-size or remove safely."
       icon: cycle
       color: fuchsia
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/signup?prompt=Find%20idle%20and%20oversized%20resources%20and%20propose%20rightsizing"
+      button_url: "https://app.pulumi.com/pulumi/neo?prompt=Find%20idle%20and%20oversized%20resources%20and%20propose%20rightsizing&prefer_signup=true"
     - title: Works Where You Work
       description: "Use Neo in Pulumi Cloud and your IDEs (VS Code, Cursor, Claude Code, Windsurf) via MCP."
       icon: team
       color: violet
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/signup?prompt=Show%20me%20how%20to%20use%20Neo%20in%20VS%20Code%20via%20MCP"
+      button_url: "https://app.pulumi.com/pulumi/neo?prompt=Show%20me%20how%20to%20use%20Neo%20in%20VS%20Code%20via%20MCP&prefer_signup=true"
 
 
 neo_search:

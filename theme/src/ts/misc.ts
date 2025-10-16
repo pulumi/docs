@@ -150,64 +150,60 @@ export function generateOnThisPage() {
     }
 }
 
-// Sticky header observer - runs without jQuery dependency for GADS pages
-const observer = new IntersectionObserver(
-    ([e]) => {
-        e.target.classList.toggle("is-pinned", e.intersectionRatio < 1);
-        const pinnedSearchContainerEl = document.querySelector(".header-pinned");
-        const dotOverlay = document.querySelector(".hide-on-pinned");
-        const heroTitle = document.querySelector(".header-hero-title");
-
-        if (e.isIntersecting) {
-            pinnedSearchContainerEl?.classList.add("hidden");
-            pinnedSearchContainerEl?.classList.remove("flex");
-
-            dotOverlay?.classList.remove("hidden");
-            dotOverlay?.classList.add("flex");
-
-            heroTitle?.classList.remove("hidden");
-            heroTitle?.classList.add("flex");
-
-        } else {
-            pinnedSearchContainerEl?.classList.remove("hidden");
-            pinnedSearchContainerEl?.classList.add("flex");
-
-            dotOverlay?.classList.add("hidden");
-            dotOverlay?.classList.remove("flex");
-
-            heroTitle?.classList.add("hidden");
-            heroTitle?.classList.remove("flex");
-
-        }
-    },
-    { threshold: [1] },
-);
-
-const headerContainerEl = document.querySelector(".header-container");
-// The header-container won't be available in the registry.
-// If the registry's top nav bar is available attach the observer to that.
-if (!headerContainerEl) {
-    const registryNavBar = document.querySelector(".top-nav-bar.registry");
-    if (registryNavBar) {
-        observer.observe(registryNavBar);
-    }
-} else {
-    observer.observe(headerContainerEl);
-}
-
-// Set up toggle functionality - runs without jQuery
-bindToggles(".toggle");
-bindToggles(".toggleVisible");
-
-bindTopLevelToggles(".toggle-topLevel");
-bindTopLevelToggles(".toggleVisible-topLevel");
-
-// Create "On This Page" in the right nav.
-generateOnThisPage();
-
-// jQuery-dependent code - only runs if jQuery is available
-if (typeof jQuery !== 'undefined') {
 (function ($) {
+    const observer = new IntersectionObserver(
+        ([e]) => {
+            e.target.classList.toggle("is-pinned", e.intersectionRatio < 1);
+            const pinnedSearchContainerEl = document.querySelector(".header-pinned");
+            const dotOverlay = document.querySelector(".hide-on-pinned");
+            const heroTitle = document.querySelector(".header-hero-title");
+
+            if (e.isIntersecting) {
+                $(pinnedSearchContainerEl).addClass("hidden");
+                $(pinnedSearchContainerEl).removeClass("flex");
+
+                $(dotOverlay).removeClass("hidden");
+                $(dotOverlay).addClass("flex");
+
+                $(heroTitle).removeClass("hidden");
+                $(heroTitle).addClass("flex");
+
+            } else {
+                $(pinnedSearchContainerEl).removeClass("hidden");
+                $(pinnedSearchContainerEl).addClass("flex");
+
+                $(dotOverlay).addClass("hidden");
+                $(dotOverlay).removeClass("flex");
+
+                $(heroTitle).addClass("hidden");
+                $(heroTitle).removeClass("flex");
+
+            }
+        },
+        { threshold: [1] },
+    );
+
+    const headerContainerEl = document.querySelector(".header-container");
+    // The header-container won't be available in the registry.
+    // If the registry's top nav bar is available attach the observer to that.
+    if (!headerContainerEl) {
+        const registryNavBar = document.querySelector(".top-nav-bar.registry");
+        if (registryNavBar) {
+            observer.observe(registryNavBar);
+        }
+    } else {
+        observer.observe(headerContainerEl);
+    }
+
+    // Set up toggle functionality.
+    bindToggles(".toggle");
+    bindToggles(".toggleVisible");
+
+    bindTopLevelToggles(".toggle-topLevel");
+    bindTopLevelToggles(".toggleVisible-topLevel");
+
+    // Create "On This Page" in the right nav.
+    generateOnThisPage();
 
     // Mobile menu toggles.
     $(".nav-header-toggle").click(function () {
@@ -264,4 +260,3 @@ if (typeof jQuery !== 'undefined') {
         .find(".property-indicator")
         .replaceWith("<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>");
 })(jQuery);
-}
