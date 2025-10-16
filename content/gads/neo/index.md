@@ -7,7 +7,7 @@ block_external_search_index: true
 
 heading: Pulumi Neo
 subheading: |
-    Your AI infrastructure engineer. Ship infrastructure faster, safely.
+    Your AI infrastructure engineer. Ship infra faster, safely.
 
 meta_title: "Pulumi Neo - Your AI Platform Engineer"
 meta_desc: "Meet Neo, your AI platform engineer. Automate infrastructure provisioning, governance, and optimization with enterprise controls."
