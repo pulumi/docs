@@ -800,9 +800,11 @@ const cdn = new aws.cloudfront.Distribution(
     },
 );
 
-// The Cdn Log Delivery Source was configured outside of Pulumi
 // https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
 
+// Reference the CloudFront-created log delivery source
+// ID: CreatedByCloudFront-E3PRSXO1BZJEEY (created automatically by CloudFront)
+// Resource name in Pulumi state: cloudfront_logs
 const cdnLogDeliverySource = aws.cloudwatch.LogDeliverySource.get(
     "CreatedByCloudFront-E3PRSXO1BZJEEY",
     "cloudfront_logs"
