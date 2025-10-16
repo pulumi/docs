@@ -49,6 +49,11 @@
                     <div class="mt-6">
                         <p>{{ $item.description | markdownify }}</p>
                     </div>
+                    {{ if $item.button_url }}
+                    <div class="mt-8 text-center">
+                        <a href="{{ $item.button_url }}" class="btn-primary hover:opacity-90 transition-opacity">{{ $item.button_text }}</a>
+                    </div>
+                    {{ end }}
                 </div>
             </div>
             {{ end }}
@@ -71,6 +76,11 @@
                         <div class="mt-6">
                             <p>{{ $item.description | markdownify }}</p>
                         </div>
+                        {{ if $item.button_url }}
+                        <div class="mt-8 text-center">
+                            <a href="{{ $item.button_url }}" class="btn-primary hover:opacity-90 transition-opacity">{{ $item.button_text }}</a>
+                        </div>
+                        {{ end }}
                     </div>
                 </div>
                 {{ end }}
@@ -92,6 +102,11 @@
                         <div class="mt-6">
                             <p>{{ $item.description | markdownify }}</p>
                         </div>
+                        {{ if $item.button_url }}
+                        <div class="mt-8 text-center">
+                            <a href="{{ $item.button_url }}" class="btn-primary hover:opacity-90 transition-opacity">{{ $item.button_text }}</a>
+                        </div>
+                        {{ end }}
                     </div>
                 </div>
                 {{ end }}

@@ -7,39 +7,49 @@ block_external_search_index: true
 
 heading: Pulumi Neo
 subheading: |
-    Your AI platform engineer. Ship infrastructure faster, safely.
+    Your AI infrastructure engineer. Ship infrastructure faster, safely.
 
 meta_title: "Pulumi Neo - Your AI Platform Engineer"
 meta_desc: "Meet Neo, your AI platform engineer. Automate infrastructure provisioning, governance, and optimization with enterprise controls."
 meta_image: /images/product/neo-meta.png
 
 overview:
-  title: Your AI platform engineer. Ship infrastructure faster, safely.
-
+  title: Ship infrastructure faster and safer with AI.
 why_neo:
-  title: Why Platform Teams Choose Neo
-  description: Neo is the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Unlike generic AI tools, Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
+  title: Why Choose Neo
+  description: Neo is an AI agent built from the ground up to help you with cloud infrastructure.
   benefits:
-    - title: 18x Faster Provisioning
-      description: Werner Enterprises reduced provisioning time from 3 days to 4 hours. Automate complex multi-cloud deployments in minutes.
+    - title: Provision a Kubernetes Cluster
+      description: "Go from prompt to a running EKS cluster with plan/preview and a full audit trail."
       icon: rocketship
       color: salmon
-    - title: 90% Fewer Policy Violations
-      description: Neo enforces your governance policies automatically. RBAC, compliance rules, and security standards built into every action.
+      button_text: Try This in Neo
+      button_url: "https://app.pulumi.com/neo?prompt=Provision%20an%20EKS%20cluster%20with%20preview%20and%20an%20audit%20trail"
+    - title: Enforce Guardrails by Default
+      description: "Neo won’t propose or apply changes that violate your policies—RBAC, compliance, and approvals are built in."
       icon: shield
       color: blue
-    - title: End-to-End Automation
-      description: From provisioning to updates to debugging. Neo handles the full infrastructure lifecycle, not just code generation.
+      button_text: Try This in Neo
+      button_url: "https://app.pulumi.com/neo?prompt=Run%20a%20policy%20check%20for%20my%20account%20and%20block%20violations"
+    - title: Debug Incidents Faster
+      description: "Ask in plain English—trace 5xx errors, inspect security groups, surface misconfigurations, and apply fixes with approval."
       icon: nodes
       color: yellow
-    - title: Proven at Scale
-      description: "\"Our goal has always been to minimize the time it takes an engineer to go from an idea to an experiment in production. We're excited to see Pulumi pushing automation further.\" — Jk Jensen, Team Lead at Mysten Labs"
+      button_text: Try This in Neo
+      button_url: "https://app.pulumi.com/neo?prompt=Help%20me%20debug%20a%20networking%20issue%20causing%205xx%20errors"
+    - title: Cut Cloud Waste
+      description: "Find idle or oversized resources across AWS, Azure, and Google Cloud, then right-size or remove safely."
       icon: cycle
       color: fuchsia
-    - title: Works With Your Tools
-      description: Available in Pulumi Cloud, VS Code, Cursor, Claude Code, and Windsurf through our MCP server.
+      button_text: Try This in Neo
+      button_url: "https://app.pulumi.com/neo?prompt=Find%20idle%20and%20oversized%20resources%20and%20propose%20rightsizing"
+    - title: Works Where You Work
+      description: "Use Neo in Pulumi Cloud and your IDEs (VS Code, Cursor, Claude Code, Windsurf) via MCP."
       icon: team
       color: violet
+      button_text: Try This in Neo
+      button_url: "https://app.pulumi.com/neo?prompt=Show%20me%20how%20to%20use%20Neo%20in%20VS%20Code%20via%20MCP"
+
 
 demo_video:
     title: Unveiling Neo – Your Newest Platform Engineer
