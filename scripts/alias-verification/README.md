@@ -93,3 +93,103 @@ python3 verify-aliases.py
 4. If issues found, use `generate-fixes.py` and `apply-fixes.py`
 5. Re-run `python3 verify-aliases.py` until it passes (exit 0)
 6. Merge your PR with confidence!
+
+---
+
+## Comprehensive Historical Verification
+
+The scripts above check **branch-level changes** (current branch vs master). However, they can miss **pre-reorg moves** - files that were moved on master before your branch was created, or multi-hop moves (A→B→C where only B is aliased).
+
+### When to Use Historical Verification
+
+Use these scripts when:
+- You've completed a major documentation reorganization
+- You want to ensure ALL historical paths have aliases (not just recent branch changes)
+- You're investigating reports of missing aliases that the branch verification missed
+
+### Comprehensive Verification Workflow
+
+#### Step 1: Verify All Historical Aliases
+
+```bash
+cd scripts/alias-verification
+python3 verify-all-historical-aliases.py
+```
+
+This script:
+- Checks the **complete git history** of every file (limited to past 6 months)
+- Uses `git log --follow --all` to track all historical paths
+- Checks both frontmatter aliases AND S3 redirect files (`scripts/redirects/*.txt`)
+- Identifies files missing any historical alias
+
+Output files:
+- `historical-aliases-missing.txt` - Files with missing historical aliases ❌
+- `historical-aliases-correct.txt` - Files with complete coverage ✓
+- `historical-aliases-report.txt` - Detailed analysis with git history
+
+#### Step 2: Generate Fixes
+
+```bash
+python3 generate-historical-fixes.py
+```
+
+This script:
+- Parses the missing aliases log
+- Reads current aliases from each file
+- Generates a combined list of all aliases (existing + missing)
+- Outputs `historical-fixes.json` with the complete fix data
+
+#### Step 3: Apply Fixes
+
+```bash
+python3 apply-historical-fixes.py
+```
+
+This script:
+- Reads `historical-fixes.json`
+- Updates each file's frontmatter to add missing aliases
+- Prompts for confirmation before modifying files
+- Reports success/failure for each file
+
+**⚠️ WARNING**: This modifies files in place. Make sure to commit any important changes first!
+
+#### Step 4: Re-verify
+
+```bash
+python3 verify-all-historical-aliases.py
+```
+
+Run the comprehensive verification again to confirm all aliases are now present.
+
+### Example Output
+
+```
+================================================================================
+=== VERIFICATION SUMMARY ===
+================================================================================
+Total markdown files scanned:        699
+Files with historical moves:         353
+Files with complete aliases:         ✓ 271
+Files with missing aliases:          ❌ 82
+Total missing aliases:               ❌ 82
+```
+
+### What Gets Checked
+
+The comprehensive verification checks:
+1. **Git History**: All paths a file has had in the past 6 months
+1. **Frontmatter Aliases**: The `aliases:` field in markdown frontmatter
+1. **S3 Redirects**: Redirect mappings in `scripts/redirects/*.txt` files
+1. **Multi-hop Moves**: Files moved multiple times (A→B→C)
+1. **Pre-reorg Moves**: Files moved on master before your branch existed
+
+### Differences from Branch Verification
+
+| Feature | Branch Verification | Historical Verification |
+|---------|-------------------|------------------------|
+| Scope | Current branch vs master | Complete git history |
+| Time Range | Branch lifetime | Past 6 months |
+| Catches pre-reorg moves | ❌ No | ✓ Yes |
+| Catches multi-hop moves | ❌ No | ✓ Yes |
+| Checks S3 redirects | ❌ No | ✓ Yes |
+| When to use | Every PR with file moves | After major reorgs |
