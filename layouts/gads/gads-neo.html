@@ -19,68 +19,103 @@
 {{ define "main" }}
 {{ $pageContext := . }}
 
-<section id="neo-search" class="container mx-auto my-16 px-4">
-    {{ with .Params.neo_search }}
+<section id="prompt-section" class="container mx-auto my-16 px-4">
+    {{ with .Params.prompt_section }}
     <style>
+        .neo-prompt-container {
+            background: #faf5ff;
+            border-radius: 16px;
+            padding: 32px 24px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.08);
+        }
         .gads-neo-search-input-wrapper {
             display: flex;
             align-items: center;
             background: white;
-            border-radius: 12px;
-            border: 2px solid #8b5cf6;
-            padding: 12px 14px;
-            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+            border-radius: 14px;
+            border: 2px solid transparent;
+            background-image: linear-gradient(white, white), linear-gradient(135deg, #8b5cf6, #a855f7);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            padding: 16px 18px;
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.15);
             max-width: 700px;
             margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+        .gads-neo-search-input-wrapper:hover {
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);
         }
         .gads-neo-search-input-wrapper input {
             border: none;
             outline: none;
-            font-size: 16px;
+            font-size: 17px;
             width: 100%;
             background: transparent;
             flex-grow: 1;
+            color: #1f2937;
         }
         .gads-neo-search-input-wrapper input::placeholder {
-            color: #757576;
+            color: #9ca3af;
         }
         .gads-neo-search-submit-btn {
             background: linear-gradient(135deg, #8b5cf6, #a855f7);
             border: none;
-            border-radius: 8px;
-            padding: 8px 12px;
+            border-radius: 10px;
+            padding: 10px 20px;
             margin-left: 12px;
             cursor: pointer;
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: 600;
+            color: white;
+            font-size: 15px;
+            white-space: nowrap;
         }
         .gads-neo-search-submit-btn:hover {
-            opacity: 0.9;
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+        .gads-neo-search-submit-btn:active {
+            transform: scale(0.98);
         }
         .gads-neo-suggestions {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
             justify-content: center;
-            margin-top: 24px;
+            margin-top: 28px;
+        }
+        .neo-examples-label {
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            display: block;
+            text-align: center;
         }
         .gads-neo-suggestion-pill {
             background: white;
-            border: 2px solid #8b5cf6;
+            border: 1.5px solid #e5e7eb;
             border-radius: 24px;
-            padding: 12px 20px;
+            padding: 10px 18px;
             font-size: 14px;
             font-weight: 500;
-            color: #374151;
+            color: #4b5563;
             cursor: pointer;
             transition: all 0.2s ease;
             white-space: nowrap;
         }
         .gads-neo-suggestion-pill:hover {
-            color: #8b5cf6;
+            border-color: #a78bfa;
+            color: #7c3aed;
             background: #faf5ff;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
         }
         @media (max-width: 768px) {
             .gads-neo-suggestions {
@@ -98,24 +133,27 @@
         }
     </style>
 
-    <div class="max-w-4xl mx-auto text-center">
-        <p class="text-xl font-semibold text-gray-800 mb-8">{{ .description }}</p>
+    <div class="neo-prompt-container">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-xl font-semibold text-gray-800 mb-8">{{ .heading }}</p>
 
-        <div class="gads-neo-search-input-wrapper">
-            <input type="text" placeholder="{{ .placeholder }}" id="gads-neo-input">
-            <button onclick="gadsSubmitNeoQuery()" class="gads-neo-search-submit-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
+            <div class="gads-neo-search-input-wrapper">
+                <input type="text" placeholder="{{ .placeholder }}" id="gads-neo-input">
+                <button onclick="gadsSubmitNeoQuery()" class="gads-neo-search-submit-btn">
+                    {{ .button_text }}
+                </button>
+            </div>
 
-        <div class="gads-neo-suggestions">
-            {{ range .suggestions }}
-            <button class="gads-neo-suggestion-pill" onclick="gadsPopulateNeoInput('{{ .prompt }}')">
-                {{ .text }}
-            </button>
-            {{ end }}
+            <div>
+                <p class="neo-examples-label">{{ .examples_label }}</p>
+                <div class="gads-neo-suggestions">
+                    {{ range .examples }}
+                    <button class="gads-neo-suggestion-pill" onclick="window.location.href='{{ .url }}'">
+                        {{ .text }}
+                    </button>
+                    {{ end }}
+                </div>
+            </div>
         </div>
     </div>
 
@@ -126,14 +164,6 @@
             if (query) {
                 const encodedQuery = encodeURIComponent(query);
                 window.location.href = 'https://app.pulumi.com/neo?prompt=' + encodedQuery;
-            }
-        }
-
-        function gadsPopulateNeoInput(prompt) {
-            const input = document.getElementById('gads-neo-input');
-            if (input) {
-                input.value = prompt;
-                input.focus();
             }
         }
 

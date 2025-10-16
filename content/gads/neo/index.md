@@ -7,11 +7,26 @@ block_external_search_index: true
 
 heading: Pulumi Neo
 subheading: |
-    Your AI infrastructure engineer. Ship infra faster, safely.
+    Your AI infrastructure engineer — ship infrastructure faster, safely.
 
 meta_title: "Pulumi Neo - Your AI Platform Engineer"
 meta_desc: "Meet Neo, your AI platform engineer. Automate infrastructure provisioning, governance, and optimization with enterprise controls."
 meta_image: /images/product/neo-meta.png
+
+prompt_section:
+  heading: "Ask Neo to plan, deploy, or troubleshoot — always under your control."
+  placeholder: "Describe your infrastructure goal..."
+  button_text: "Run in Neo"
+  examples_label: "✨ Examples of what Neo can do:"
+  examples:
+    - text: "Provision a production-ready EKS cluster"
+      url: "https://app.pulumi.com/neo?prompt=Provision%20a%20production-ready%20EKS%20cluster"
+    - text: "Identify idle resources for cost optimization"
+      url: "https://app.pulumi.com/neo?prompt=Identify%20idle%20resources%20for%20cost%20optimization"
+    - text: "Enforce policies across multiple environments"
+      url: "https://app.pulumi.com/neo?prompt=Enforce%20policies%20across%20multiple%20environments"
+    - text: "Explain a failed deployment"
+      url: "https://app.pulumi.com/neo?prompt=Explain%20a%20failed%20deployment"
 
 overview:
   title: Ship infrastructure faster and safer with AI.
