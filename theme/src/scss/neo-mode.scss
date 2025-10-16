@@ -13,7 +13,7 @@ body #neo-mode-toggle {
 
     right: 0px;
     display: flex;
-    padding: 12px 16px;
+    padding: 8px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -28,12 +28,12 @@ body #neo-mode-toggle {
     z-index: 35;
     transition: all 0.3s ease;
     max-width: calc(100vw - 40px);
-    width: 180px;
+    width: 140px;
     height: auto;
     white-space: nowrap;
 
     &:hover {
-        width: 215px;
+        width: 175px;
     }
 
     // Mobile: icon-only version

@@ -45,7 +45,7 @@ $(function () {
             // Encode the query for URL safety
             const encodedQuery = encodeURIComponent(query);
             // Redirect to Pulumi Neo app with the query
-            window.location.href = `https://app.pulumi.com/neo?prompt=${encodedQuery}`;
+            window.location.href = `https://app.pulumi.com/neo?prompt=${encodedQuery}&prefer_signup=true`;
         }
     }
 
