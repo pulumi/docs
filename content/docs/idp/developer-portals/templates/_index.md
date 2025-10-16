@@ -2,7 +2,7 @@
 title: Organization templates
 title_tag: Get started with organization templates
 h1: Building developer portals with organization templates
-meta_desc: Lean how to build template projects and configure them to work with your Pulumi organization.
+meta_desc: Learn how to build template projects and configure them to work with your Pulumi organization.
 menu:
   idp:
     name: Organization templates
@@ -12,6 +12,7 @@ menu:
 aliases:
   - /docs/idp/developer-portals/templates/
   - /docs/pulumi-cloud/developer-platforms/templates/
+  - /docs/pulumi-cloud/developer-portals/templates/
 ---
 
 {{% notes "info" %}}

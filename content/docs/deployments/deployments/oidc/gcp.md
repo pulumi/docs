@@ -11,13 +11,14 @@ menu:
     weight: 3
     identifier: deployments-deployments-oidc-gcp
 aliases:
-- /docs/pulumi-cloud/deployments/oidc/gcp/
-- /docs/guides/oidc/provider/gcp
-- /docs/intro/deployments/oidc/provider/gcp/
-- /docs/pulumi-cloud/deployments/oidc/provider/gcp/
-- /docs/pulumi-cloud/oidc/provider/gcp/
-- /docs/pulumi-cloud/oidc/gcp/
-- /docs/administration/access-identity/oidc/provider/gcp/
+  - /docs/administration/access-identity/oidc/provider/gcp/
+  - /docs/guides/oidc/provider/gcp
+  - /docs/intro/deployments/oidc/provider/gcp/
+  - /docs/pulumi-cloud/access-management/oidc/provider/gcp/
+  - /docs/pulumi-cloud/deployments/oidc/gcp/
+  - /docs/pulumi-cloud/deployments/oidc/provider/gcp/
+  - /docs/pulumi-cloud/oidc/gcp/
+  - /docs/pulumi-cloud/oidc/provider/gcp/
 ---
 
 {{% notes type="info" %}}

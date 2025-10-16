@@ -11,13 +11,14 @@ menu:
     weight: 2
     identifier: deployments-deployments-oidc-azure
 aliases:
-- /docs/pulumi-cloud/deployments/oidc/azure/
-- /docs/guides/oidc/provider/azure
-- /docs/intro/deployments/oidc/provider/azure/
-- /docs/pulumi-cloud/deployments/oidc/provider/azure/
-- /docs/pulumi-cloud/oidc/provider/azure/
-- /docs/pulumi-cloud/oidc/azure/
-- /docs/administration/access-identity/oidc/provider/azure/
+  - /docs/administration/access-identity/oidc/provider/azure/
+  - /docs/guides/oidc/provider/azure
+  - /docs/intro/deployments/oidc/provider/azure/
+  - /docs/pulumi-cloud/access-management/oidc/provider/azure/
+  - /docs/pulumi-cloud/deployments/oidc/azure/
+  - /docs/pulumi-cloud/deployments/oidc/provider/azure/
+  - /docs/pulumi-cloud/oidc/azure/
+  - /docs/pulumi-cloud/oidc/provider/azure/
 ---
 
 {{% notes type="info" %}}
