@@ -1,201 +1,367 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.hero.title) }}
+<header class="page-hero flex justify-center items-center">
+    <div class="w-full flex flex-col md:flex-row py-16 items-start justify-center px-4 gap-8"
+        style="background: linear-gradient(90deg, white 0%, #ddd6fe 50%, white 100%);">
+        <div class="flex w-full mt-0 md:mt-4  md:w-1/2 justify-end">
+            <div class="flex flex-col justify-start items-start gap-y-4" style="max-width: 600px;">
+                <div class="font-medium text-violet-600 uppercase text-base font-body">Official AWS Partnership</div>
+                <h1 class="text-4xl m-0 font-semibold">Deploy AWS Infrastructure at the Speed of AI</h1>
+                <p class="text-gray-700 text-lg m-0">Built on 8 years of infrastructure-as-code expertise and enhanced
+                    with
+                    AI-powered automation. Pulumi automates AWS
+                    deployments while maintaining enterprise governance and compliance.</p>
+                <div class="flex flex-col md:flex-row gap-4 mt-4">
+                    <a href="https://www.pulumi.com/docs/iac/clouds/aws/" class="btn-primary">Get Started</a>
+                    <a href="https://app.pulumi.com/signup" target="_blank" class="btn-secondary">Try Pulumi Cloud</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col w-full md:w-1/2 gap-8 items-center">
+            <div class="w-full" style="max-width: 650px;">
+                <div id="video" style="position: relative; top: -100px;"></div>
+                <div class="responsive-video-container video-16-9 rounded-xl shadow-2xl relative h-0 overflow-hidden">
+                    {{ $videoID := index (split .Params.demo_video.image "?v=") 1 }}
+                    <iframe src="https://www.youtube.com/embed/g2ECmfQ6nL0?si=R4jnMQWcAqNcvv0X?rel=0"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen="" title="AWS + Pulumi Better Together"></iframe>
+                </div>
+            </div>
+            <a href="https://aws.amazon.com/marketplace/seller-profile?id=b3d56f96-ff1e-4284-9585-5ef58df12266"
+                target="_blank"
+                class="text-white border-2 rounded-lg cursor-pointer z-auto whitespace-normal p-4 text-center"
+                style="background-color: #FF9400; width: 150px; border-color: #FF9400;">Buy with AWS</a>
+        </div>
+    </div>
+</header>
 {{ end }}
 
 {{ define "main" }}
-    {{ $pageContext := . }}
 
-
-    <section id="overview" class="my-16">
-        <div class="flex flex-wrap container mx-auto">
-            <div class="w-full order-first lg:mt-0 lg:order-first lg:w-1/2 px-5">
-                <h2>{{ .Params.hero.subtitle }}</h2>
-                <p class="mr-4">{{ .Params.hero.description | markdownify }}</p>
-                <div>
-                    <div class="flex justify-start items-start mt-8">
-                        <div class="flex flex-col lg:flex-row items-start">
-                            <a class="btn-primary mr-4" href="/docs/iac/get-started/aws/">Get Started</a>
-                            <a class="btn-secondary" href="/request-a-demo">Request a Demo</a>
-                        </div>
+<section class="container mx-auto my-16 text-center">
+    <h2>Why Pulumi + AWS?</h2>
+    <div class="flex flex-wrap justify-center items-stretch text-left mt-8">
+        <div class="w-full lg:w-1/3 p-3">
+            <div class="card text-center p-6 relative h-full mx-auto" style="max-width: 400px;">
+                <div class="icon-section flex justify-left mb-8">
+                    <div class="flex items-center justify-center rounded-full bg-blue-100"
+                        style="width: 80px; height: 80px;">
+                        {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "blue") }}
                     </div>
                 </div>
-            </div>
-            <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2">
-                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                    <pulumi-choosable type="language" class="highlight" value="typescript">
-                        {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="python">
-                        {{ partial "code" (dict "code" .Params.awsx.py "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="go">
-                        {{ partial "code" (dict "code" .Params.awsx.go "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="csharp">
-                        {{ partial "code" (dict "code" .Params.awsx.csharp "lang" "csharp") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="java">
-                        {{ partial "code" (dict "code" .Params.awsx.java "lang" "java") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="yaml">
-                        {{ partial "code" (dict "code" .Params.awsx.yaml "lang" "yaml") }}
-                    </pulumi-choosable>
-                </pulumi-chooser>
+                <div>
+                    <h5 class="text-display text-left px-3">100% AWS Coverage
+                        from Day One</h5>
+                </div>
+                <div class="description text-left px-3">
+                    <p>The only infrastructure platform with same-day support for every AWS service launch. When AWS
+                        ships it, Pulumi supports
+                        it.</p>
+                </div>
             </div>
         </div>
-    </section>
-
-    <div class="container mx-auto carousel-always-visible mb-24">
-        {{ range .Params.sections }}
-            <section class="w-full text-center my-16">
+        <div class="w-full lg:w-1/3 p-3">
+            <div class="card text-center p-6 relative h-full mx-auto" style="max-width: 400px;">
+                <div class="icon-section flex justify-left mb-8">
+                    <div class="flex items-center justify-center rounded-full bg-orange-100"
+                        style="width: 80px; height: 80px;">
+                        {{ partial "color-icon.html" (dict "icon" "coding" "icon_color" "orange") }}
+                    </div>
+                </div>
                 <div>
-                    {{ partial "color-icon.html" (dict "icon" .icon "icon_color" .color) }}
-                    <h2>{{ .title }}</h2>
+                    <h5 class="text-display text-left px-3">Code Infrastructure in Languages You Already Know</h5>
                 </div>
-                <h4 class="w-10/12 mx-auto mt-0">{{ .subtitle }}</h4>
-                <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
-                    {{ .description | markdownify }}
-                </p>
-                <div class="flex flex-col xl:flex-row xl:mt-12">
-                    <div class="w-full p-5 xl:p-0 xl:w-1/2">
-                            {{ if eq .image "home/ide" }}
-                                <div class="flex flex-col sm:flex-row xl:flex-col">
-                                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl w-full sm:w-1/2 xl:w-full mr-1 xl:mr-0">
-                                        {{ partial .image .}}
-                                    </div>
-                                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl w-full sm:w-1/2 xl:w-full">
-                                        {{ partial "home/cli"}}
-                                    </div>
-                                </div>
-                            {{ else }}
-                                <div class="flex justify-center">
-                                    <img class="rounded-lg" src="{{ .image }}"/>
-                                </div>
-                            {{ end }}
-                    </div>
-
-                    <div class="w-full xl:w-1/2 text-left px-10">
-                        <div class="flex flex-row flex-wrap xl:flex-col w-full">
-                            {{ range $point := .points }}
-                                <div class="xs:w-full sm:w-1/3 xl:w-full mt-4 xl:mt-0 px-4">
-                                    <h5>{{ $point.header }}</h5>
-                                    <p>{{ $point.body | markdownify }}</p>
-                                </div>
-                            {{ end }}
-                        </div>
+                <div class="description text-left px-3">
+                    <p>Use TypeScript, Python, or Go with your existing IDE, testing tools, and package managers. No
+                        YAML. No proprietary DSLs.
+                        Just real code.</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/3 p-3">
+            <div class="card text-center p-6 relative h-full mx-auto" style="max-width: 400px;">
+                <div class="icon-section flex justify-left mb-8">
+                    <div class="flex items-center justify-center rounded-full bg-purple-100"
+                        style="width: 80px; height: 80px;">
+                        {{ partial "color-icon.html" (dict "icon" "shield" "icon_color" "violet") }}
                     </div>
                 </div>
-            </section>
-        {{ end }}
+                <div>
+                    <h5 class="text-display text-left px-3">Enterprise Security & Compliance Built In</h5>
+                </div>
+                <div class="description text-left px-3">
+                    <p>Manage AWS secrets, enforce policies, and maintain audit trails without external tools. SOC2,
+                        HIPAA, and PCI compliance
+                        included.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Customer logos -->
-    <section class="my-16 px-4">
-        <h3 class="mt-12 mb-8 text-center">Trusted by top engineering teams</h3>
-        <div class="container mx-auto">
-            <div class="flex items-center flex-wrap justify-center my-4">
-                {{ range .Params.customers }}
-                    {{ if .link }}
-                        <a data-track="customer-logo" href="{{ .link }}" target="_blank" rel="noreferrer noopener">
-                            <img class="m-4 h-12" src="{{ .logo }}" alt="{{ .name }}" title="{{ .name }}" />
-                        </a>
-                    {{ else }}
-                        <img class="m-4 h-12" src="{{ .logo }}" alt="{{ .name }}" title="{{ .name }}" />
-                    {{ end }}
-                {{ end }}
-            </div>
+</section>
+
+<section class="w-full my-16 py-16 px-8 md:px-32" style="background: linear-gradient(90deg, #A25BA8 0%, #673EAC 100%);">
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-16">
+        <div class=" flex flex-col m-0 lg:mr-32">
+            <h3 class="text-white my-2 text-4xl">Meet us at AWS re:Invent | Booth #1127</h3>
+            <p class="text-white my-1 text-display text-3xl">Infrastructure as Code. Now with Agentic AI</p>
+            <p class="text-white my-2 text-base">Deploy and manage AWS infrastructure with autonomous AI agents that
+                understand your intent and execute complex
+                infrastructure tasks without intervention but keeping you in the loop.</p> <a href="/reinvent"
+                class="btn-secondary mt-6" style="min-width: 300px; width: 300px;">Join the Fun at re:Invent 2025</a>
         </div>
-        <p class="text-blue-500 text-center font-bold mt-10">
-            <a class="link" data-track="logos-case-study" href="/case-studies/">Read our customer use cases</a> &rarr;
-        </p>
-        <img class="w-40 mt-16 mx-auto" src="/images/partners/aws-devops-badge.png" alt="AWS Devops Badge" />
-    </section>
+        <img src="/images/reinvent-logo-white.png" alt="AWS re:Invent" class="w-1/2" style="width: 328px" />
+    </div>
+</section>
 
-    <!-- Automation API -->
-    <section id="automation-api" class="container mx-auto mt-24 mb-12 px-8 lg:px-0">
-        {{ with .Params.automation_api }}
-            <div class="flex flex-col lg:flex-row">
-                <div class="w-full lg:w-5/12 px-8">
-                    <h3>{{ .header }}</h3>
-                    <p>{{ .body | markdownify}}</p>
-                    {{ partial "sparkle-arrow-cta" (dict "url" .link "text" .cta "textColor" "grey" "textAlign" "left") }}
+<section class="container mx-auto my-16 text-center">
+    <h2 class="mb-16">Plan your re:Invent with Pulumi</h2>
+    <div class="lg:flex lg:flex-wrap justify-center items-stretch">
+        <div class="lg:w-1/2 px-3 py-6 mb-32" style="max-width: 550px;">
+            <div class="card text-left py-6 px-16 relative h-full" style="padding-top: 80px;">
+                <div class="absolute flex items-center justify-center rounded-full"
+                    style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #805AC3;">
+                    <img src="/images/aws/smart_toy.svg" alt="Robot" style="width: 72px; height: 72px;" />
                 </div>
-
-                <div class="w-full mt-8 lg:mt-0 lg:w-7/12">
-                    <img class="shadow-xl rounded" src="https://www.pulumi.com/uploads/content/blog/automation-api/http.gif" alt="Pulumi over HTTP" />
+                <div>
+                    <h5 class="font-body">Automate AWS Operations with Agentic AI</h5>
                 </div>
-            </div>
-        {{ end }}
-    </section>
-
-    <!-- AWSX -->
-    <section id="awsx" class="container mx-auto text-center mt-24 mb-12 px-8 xl:px-0">
-        <h3>{{ .Params.crosswalk.header }}</h3>
-        <p class="mt-0 mb-0 xl:mb-12">{{ .Params.crosswalk.body | markdownify }}</p>
-        <div class="flex flex-col xl:flex-row">
-            <div class="w-full mt-8 xl:mt-0 xl:w-1/2">
-                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                    <pulumi-choosable type="language" class="highlight" value="typescript">
-                        {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="python">
-                        {{ partial "code" (dict "code" .Params.awsx.py "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="go">
-                        {{ partial "code" (dict "code" .Params.awsx.go "lang" "go") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="csharp">
-                        {{ partial "code" (dict "code" .Params.awsx.csharp "lang" "csharp") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="java">
-                        {{ partial "code" (dict "code" .Params.awsx.java "lang" "java") }}
-                    </pulumi-choosable>
-
-                    <pulumi-choosable type="language" class="highlight" value="yaml">
-                        {{ partial "code" (dict "code" .Params.awsx.yaml "lang" "yaml") }}
-                    </pulumi-choosable>
-                </pulumi-chooser>
-            </div>
-            {{ with .Params.crosswalk }}
-                <div class="w-full pt-3 text-left xl:order-last xl:w-1/2 px-8">
-                    {{ range .points }}
-                        <h5>{{ .header }}</h5>
-                        <p>{{ .body | markdownify }}</p>
-                    {{ end }}
-                    {{ partial "sparkle-arrow-cta" (dict "url" .link "text" .cta "textColor" "grey" "textAlign" "left") }}
-                </div>
-            {{ end }}
-        </div>
-    </section>
-
-    <section id="get-started" class="container mx-auto my-16">
-        <h2 class="mb-8 text-center">{{ .Params.get_started.title }}</h2>
-        <div class="lg:flex lg:flex-wrap items-stretch">
-            <div class="w-full lg:w-1/2 p-3">
-                <div class="h-full bg-violet-600 p-8 lg:p-12 rounded-xl">
-                    <h4 class="text-white">{{ .Params.get_started.get_started.title }}</h4>
-                    <p class="mb-24 text-white">{{ .Params.get_started.get_started.description }}</p>
-                    <a href="/docs/get-started" class="btn-secondary">{{ .Params.get_started.get_started.cta_text }}</a>
-                </div>
-            </div>
-            <div class="w-full lg:w-1/2 p-3">
-                <div class="h-full card p-8 lg:p-12">
-                    <h4>{{ .Params.get_started.migrate.title }}</h4>
-                    <p class="mb-16 pb-1">{{ .Params.get_started.migrate.description }}</p>
-                    <a href="/docs/iac/adopting-pulumi/converters" class="btn-secondary">{{ .Params.get_started.migrate.cta_text }}</a>
+                <div class="description">
+                    <p class="leading-7">Neo with AgentCore introduces autonomous capabilities that perform
+                        infrastructure tasks - from
+                        resource provisioning and
+                        configuration to AI-driven optimization, automated security reviews, and AWS service upgrades.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="lg:w-1/2 px-3 py-6 mb-32" style="max-width: 550px;">
+            <div class="card text-left py-6 px-16 relative h-full" style="padding-top: 80px;">
+                <div class="absolute flex items-center justify-center rounded-full"
+                    style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #3545D7;">
+                    <img src="/images/aws/pdi_security.svg" alt="Shield" style="width: 72px; height: 72px;" />
+                </div>
+                <div>
+                    <h5 class="font-body">Enterprise Security Without Compromise</h5>
+                </div>
+                <div class="description">
+                    <p class="leading-7">Secure your infrastructure with built-in Policy as Code, vulnerability
+                        scanning, and compliance
+                        automation to detect,
+                        prioritize, and remediate security issues – all within existing developer workflows.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="lg:w-1/2 px-3 py-6 mb-32 lg:mb-0" style="max-width: 550px;">
+            <div class="card text-left py-6 px-16 relative h-full" style="padding-top: 80px;">
+                <div class="absolute flex items-center justify-center rounded-full"
+                    style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #A25BA8;">
+                    <img src="/images/aws/psychology.svg" alt="Psychology" style="width: 72px; height: 72px;" />
+                </div>
+                <div>
+                    <h5 class="font-body">Cut AWS Costs with Intelligent Monitoring</h5>
+                </div>
+                <div class="description">
+                    <p class="leading-7">Neo continuously analyzes your AWS spending patterns, rightsizes resources
+                        automatically, and
+                        provides predictive
+                        insights to optimize costs while maintaining performance across all your AWS environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="lg:w-1/2 px-3 py-6" style="max-width: 550px;">
+            <div class="card text-left py-6 px-16 relative h-full" style="padding-top: 80px;">
+                <div class="absolute flex items-center justify-center rounded-full"
+                    style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #F7BF2A;">
+                    <img src="/images/aws/flash_on.svg" alt="Lightning" style="width: 72px; height: 72px;" />
+                </div>
+                <div>
+                    <h5 class="font-body m-0 my-3">One Platform for All AWS Workloads</h5>
+                </div>
+                <div class="description">
+                    <p class="leading-7">Deploy better infrastructure faster with Pulumi's comprehensive AI-powered IaC
+                        platform and
+                        Neo's autonomous agents in
+                        one shared workflow optimized for AWS.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    {{ partial "hand-raise-section" . }}
+<section class="w-full my-16 py-16 px-8 bg-violet-600">
+    <div class="flex flex-col lg:flex-row justify-center items-center">
+        <div class="container flex flex-col m-0 lg:mr-32" style="width: auto; max-width: 1000px;">
+            <h3 class="text-white my-2 text-4xl">Agentic AI with Built-In Governance</h3>
+            <p class="text-white my-2 text-base leading-7">Neo automates AWS operations while respecting your policies,
+                compliance
+                requirements, and approval workflows. From
+                Lambda runtime updates to security remediation, Neo generates infrastructure changes as pull
+                requests—giving your team
+                full visibility and control before any changes reach production.</p>
+        </div>
+        <a href="/contact/" class="btn-secondary mt-6" style="min-width: 193px;">Contact Us to Learn More</a>
+    </div>
+</section>
+
+<section class="container mx-auto my-16 text-center">
+    <h2 class="mb-16">See Neo in Action</h2>
+    <div class="flex flex-col lg:flex-row px-8 items-center justify-center">
+        <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+            <div id="video" style="position: relative; top: -100px;"></div>
+            <div class="responsive-video-container video-16-9 rounded-xl shadow-2xl relative h-0 overflow-hidden">
+                <iframe src="https://www.youtube.com/embed/9GB9M2l1OgY"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""
+                    title="Unveiling Neo – Your Newest Platform Engineer"></iframe>
+            </div>
+        </div>
+    </div>
+    <a href="/request-a-demo/" class="btn-primary inline-flex mt-8">Schedule a Live Demo</a>
+</section>
+
+<section class="container mx-auto my-16 px-4 lg:px-32 text-center">
+    <h2>AWS + Pulumi Resources</h2>
+    <p class="mb-16 text-lg">Comprehensive guides, insights, and proven strategies for modern infrastructure automation
+        on AWS</p>
+
+    <div class="flex flex-col md:flex-row gap-16">
+        <div class="bg-white rounded-lg shadow-lg p-10 w-full xl:w-1/2 flex flex-col"
+            style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
+            <div class="flex items-start justify-between mb-2 p-0">
+                <span
+                    class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Ebook</span>
+            </div>
+            <h3 class="text-xl font-body font-medium mb-2 text-left p-0">AWS & Pulumi: Better Together for AI-Powered
+                Infrastructure</h3>
+
+            <p class="text-base/8 text-gray-700 text-left leading-7 mb-4">See how AWS and Pulumi unite AI capabilities
+                with
+                infrastructure expertise, combining Bedrock and AgentCore with Pulumi
+                Infrastructure as Code to deliver platform engineering that accelerates innovation while maintaining
+                enterprise
+                security, compliance, and governance.</p>
+
+            <a href="/resources/aws-pulumi-better-together-for-ai-powered-infrastructure/"
+                class="btn-primary inline-flex" style="width: fit-content;">Download
+                Ebook</a>
+
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-10 w-full xl:w-1/2 flex flex-col"
+            style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
+            <div class="flex items-start justify-between mb-2 p-0">
+                <span
+                    class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Solutions
+                    Brief</span>
+            </div>
+            <h3 class="text-xl font-body font-medium mb-2 text-left p-0">The Evolution of Infrastructure as Code --
+                Powered by AWS + Pulumi</h3>
+
+            <p class="text-base/8 text-gray-700 text-left leading-7 mb-4">Learn how Pulumi Neo, built on Amazon Bedrock
+                and AgentCore, delivers intelligent automation, governance, and developer
+                self-service across AWS environments.</p>
+
+            <a href="" class="btn-primary inline-flex" style="width: fit-content;">Get Solutions Brief</a>
+
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto my-16 text-center">
+    <h2>Why Pulumi + AWS?</h2>
+    <div class="flex flex-wrap justify-center items-stretch text-left mt-8">
+        <div class="w-full lg:w-1/3 p-3">
+            <div class="card text-left p-6 flex flex-col items-start h-full justify-between" style="max-width: 400px;">
+                <div class="flex flex-col gap-8">
+                    <img src="/logos/customers/snowflake-logo.svg" alt="Snowflake"
+                        style="height: 72px; width: auto; object-fit: contain; align-self: flex-start;" />
+                    <div>
+                        <h5 class="text-display">From 1.5 Weeks to 1-day Deployments</h5>
+                    </div>
+                    <div class="description">
+                        <p>Snowflake uses Pulumi to allow their application and infrastructure teams to truly treat
+                            their
+                            infrastructure as
+                            software.</p>
+                    </div>
+                </div>
+
+                <a href="/case-studies/snowflake/" class="btn-primary" style="width: fit-content;">Read Case Study</a>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/3 p-3">
+            <div class="card text-left p-6 flex flex-col items-start h-full justify-between" style="max-width: 400px;">
+                <div class="flex flex-col gap-8">
+                    <img src="/logos/customers/modivcare.png" alt="Modivcare"
+                        style="height: 72px; width: auto; object-fit: contain; align-self: flex-start;" />
+                    <div>
+                        <h5 class="text-display">25% Cost Reductions</h5>
+                    </div>
+                    <div class="description">
+                        <p>Modivcare used Pulumi to transform fragmented acquisition-built infrastructure into a unified
+                            platform without service
+                            disruption, achieving up to 25% cost reductions and enabling developer self-service.</p>
+                    </div>
+                </div>
+
+                <a href="/case-studies/modivcare/" class="btn-primary" style="width: fit-content;">Read Case Study</a>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/3 p-3">
+            <div class="card text-left p-6 flex flex-col items-start h-full justify-between" style="max-width: 400px;">
+                <div class="flex flex-col gap-8">
+                    <img src="/logos/customers/bmw.svg" alt="BMW"
+                        style="height: 72px; width: auto; object-fit: contain; align-self: flex-start;" />
+                    <div>
+                        <h5 class="text-display">Unified Solution For All Services</h5>
+                    </div>
+                    <div class="description">
+                        <p>BMW used Pulumi to build a scalable and resilient hybrid cloud implementation that could
+                            handle
+                            more than eleven
+                            thousand developers.</p>
+                    </div>
+                </div>
+
+                <a href="/case-studies/bmw/" class="btn-primary" style="width: fit-content;">Read Case Study</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="w-full bg-violet-600 relative h-96">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 ">
+        <div class="flex flex-col text-white w-full xl:w-1/2 py-4 px-4 md:py-16 md:px-8">
+            <h3 class="text-white my-2 text-2xl md:text-4xl">Interested in learning more about Neo + Amazon Bedrock
+                AgentCore?</h3>
+            <p class="text-white my-4 text-lg">Request a session with one of our solution architects for a customized
+                demo.</p>
+            <!-- <pulumi-hubspot-form form-id="557ca037-a774-430d-8de7-2832b7414a19"></pulumi-hubspot-form> -->
+            <!-- <a href="/request-a-demo/" class="btn-secondary mt-2 md:mt-6 self-start">Request a Demo</a> -->
+        </div>
+    </div>
+    <div class="hidden xl:flex absolute right-0 top-1/2 transform -translate-y-1/2 flex gap-4 items-center">
+        <img src="/images/reinvent/amazon-bedrock.png" alt="Amazon Bedrock"
+            class="h-36 xxl:h-48 w-auto object-cover mb-6" />
+        <img src="/images/reinvent/pulumipus-neo.png" alt="Neo" class="h-96 w-auto object-cover" />
+    </div>
+</section>
+
+<section class="container mx-auto my-16 text-left">
+    <div class=" flex flex-col items-start gap-6 px-8 lg:mr-32">
+        <h3 class="my-2 text-4xl">Get started with Pulumi and AWS joint solutions</h3>
+        <p class="my-2 text-xl">Ready to deploy AWS infrastructure at AI speed? Start with our quickstart
+            guide, explore workshops, or talk to our AWS
+            specialists about your specific needs.</p> <a
+            href="https://aws.amazon.com/marketplace/seller-profile?id=b3d56f96-ff1e-4284-9585-5ef58df12266"
+            target="_blank"
+            class="text-white border-2 rounded-lg cursor-pointer z-auto whitespace-normal p-4 text-center"
+            style="background-color: #FF9400; width: 150px; border-color: #FF9400;">AWS Partner</a>
+    </div>
+</section>
+
+
 {{ end }}
