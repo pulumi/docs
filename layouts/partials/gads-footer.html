@@ -13,3 +13,12 @@
         </div>
     </div>
 </nav>
+
+<script>
+    // Dispatch the "rendered" event for Stencil components initialization
+    // This is normally triggered by jQuery-dependent code, but GADS pages don't load jQuery
+    document.addEventListener('DOMContentLoaded', function() {
+        const event = new CustomEvent('rendered');
+        document.dispatchEvent(event);
+    });
+</script>

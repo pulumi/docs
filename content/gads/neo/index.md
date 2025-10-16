@@ -7,26 +7,28 @@ block_external_search_index: true
 
 heading: Pulumi Neo
 subheading: |
-    Your AI infrastructure engineer — ship infrastructure faster, safely.
+    Your AI infrastructure engineer. Ship infra faster, safely.
 
 meta_title: "Pulumi Neo - Your AI Platform Engineer"
 meta_desc: "Meet Neo, your AI platform engineer. Automate infrastructure provisioning, governance, and optimization with enterprise controls."
 meta_image: /images/product/neo-meta.png
 
 prompt_section:
-  heading: "Ask Neo to plan, deploy, or troubleshoot — always under your control."
+  heading: "Ask Neo anything about your cloud infrastructure."
   placeholder: "Describe your infrastructure goal..."
   button_text: "Run in Neo"
   examples_label: "✨ Examples of what Neo can do:"
   examples:
-    - text: "Provision a production-ready EKS cluster"
-      url: "https://app.pulumi.com/neo?prompt=Provision%20a%20production-ready%20EKS%20cluster"
-    - text: "Identify idle resources for cost optimization"
-      url: "https://app.pulumi.com/neo?prompt=Identify%20idle%20resources%20for%20cost%20optimization"
-    - text: "Enforce policies across multiple environments"
-      url: "https://app.pulumi.com/neo?prompt=Enforce%20policies%20across%20multiple%20environments"
-    - text: "Explain a failed deployment"
-      url: "https://app.pulumi.com/neo?prompt=Explain%20a%20failed%20deployment"
+    - text: "Provision an EKS cluster"
+      prompt: "Provision an EKS cluster"
+    - text: "Run a policy check"
+      prompt: "Run a policy check"
+    - text: "Debug networking issues"
+      prompt: "Debug networking issues"
+    - text: "Find idle resources"
+      prompt: "Find idle resources"
+    - text: "Use Neo in VS Code"
+      prompt: "Use Neo in VS Code"
 
 overview:
   title: Ship infrastructure faster and safer with AI.
@@ -39,31 +41,31 @@ why_neo:
       icon: rocketship
       color: salmon
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/neo?prompt=Provision%20an%20EKS%20cluster%20with%20preview%20and%20an%20audit%20trail"
+      button_url: "https://app.pulumi.com/signup?prompt=Provision%20an%20EKS%20cluster%20with%20preview%20and%20an%20audit%20trail"
     - title: Enforce Guardrails by Default
       description: "Neo won’t propose or apply changes that violate your policies—RBAC, compliance, and approvals are built in."
       icon: shield
       color: blue
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/neo?prompt=Run%20a%20policy%20check%20for%20my%20account%20and%20block%20violations"
+      button_url: "https://app.pulumi.com/signup?prompt=Run%20a%20policy%20check%20for%20my%20account%20and%20block%20violations"
     - title: Debug Incidents Faster
       description: "Ask in plain English—trace 5xx errors, inspect security groups, surface misconfigurations, and apply fixes with approval."
       icon: nodes
       color: yellow
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/neo?prompt=Help%20me%20debug%20a%20networking%20issue%20causing%205xx%20errors"
+      button_url: "https://app.pulumi.com/signup?prompt=Help%20me%20debug%20a%20networking%20issue%20causing%205xx%20errors"
     - title: Cut Cloud Waste
       description: "Find idle or oversized resources across AWS, Azure, and Google Cloud, then right-size or remove safely."
       icon: cycle
       color: fuchsia
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/neo?prompt=Find%20idle%20and%20oversized%20resources%20and%20propose%20rightsizing"
+      button_url: "https://app.pulumi.com/signup?prompt=Find%20idle%20and%20oversized%20resources%20and%20propose%20rightsizing"
     - title: Works Where You Work
       description: "Use Neo in Pulumi Cloud and your IDEs (VS Code, Cursor, Claude Code, Windsurf) via MCP."
       icon: team
       color: violet
       button_text: Try This in Neo
-      button_url: "https://app.pulumi.com/neo?prompt=Show%20me%20how%20to%20use%20Neo%20in%20VS%20Code%20via%20MCP"
+      button_url: "https://app.pulumi.com/signup?prompt=Show%20me%20how%20to%20use%20Neo%20in%20VS%20Code%20via%20MCP"
 
 
 neo_search:
