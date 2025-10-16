@@ -63,6 +63,10 @@ const config = {
 
     // Enable data warehouse access to CloudFront logs
     enableDataWarehouseAccess: stackConfig.getBoolean("enableDataWarehouseAccess") || false,
+
+    // cdnLogDeliverySourceName is the name of the CloudFront-created log delivery source.
+    // If not set, CDN log delivery configuration will be skipped.
+    cdnLogDeliverySourceName: stackConfig.get("cdnLogDeliverySourceName") || undefined,
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
@@ -800,37 +804,40 @@ const cdn = new aws.cloudfront.Distribution(
     },
 );
 
-// Configure CloudFront v2 logging to S3 using CloudWatch Log Delivery
 // https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
-const cdnLogDeliverySource = new aws.cloudwatch.LogDeliverySource("cdn-log-delivery-source", {
-    region: "us-east-1",
-    name: pulumi.interpolate`${cdn.id}-access-logs`,
-    logType: "ACCESS_LOGS",
-    resourceArn: cdn.arn,
-});
 
-const cdnLogDeliveryDestination = new aws.cloudwatch.LogDeliveryDestination("cdn-log-delivery-destination", {
-    region: "us-east-1",
-    name: "cdn-s3-destination",
-    outputFormat: "parquet",
-    deliveryDestinationConfiguration: {
-        destinationResourceArn: websiteLogsBucket.arn,
-    },
-}, {
-    dependsOn: [logsBucketPolicy, logsBucketOwnershipControls],
-});
+// Configure CDN log delivery if cdnLogDeliverySourceName is set
+if (config.cdnLogDeliverySourceName) {
+    // Reference the CloudFront-created log delivery source
+    // Resource name in Pulumi state: cloudfront_logs
+    const cdnLogDeliverySource = aws.cloudwatch.LogDeliverySource.get(
+        config.cdnLogDeliverySourceName,
+        "cloudfront_logs"
+    );
 
-const cdnLogDelivery = new aws.cloudwatch.LogDelivery("cdn-log-delivery", {
-    region: "us-east-1",
-    deliverySourceName: cdnLogDeliverySource.name,
-    deliveryDestinationArn: cdnLogDeliveryDestination.arn,
-    s3DeliveryConfigurations: [{
-        suffixPath: pulumi.all([aws.getCallerIdentity(), cdn.id]).apply(([caller, distributionId]) =>
-            `${config.websiteDomain}/${caller.accountId}/${distributionId}/{yyyy}/{MM}/{dd}/{HH}`
-        ),
-        enableHiveCompatiblePath: false,
-    }],
-});
+    const cdnLogDeliveryDestination = new aws.cloudwatch.LogDeliveryDestination("cdn-log-delivery-destination", {
+        region: "us-east-1",
+        name: "cdn-s3-destination",
+        outputFormat: "parquet",
+        deliveryDestinationConfiguration: {
+            destinationResourceArn: websiteLogsBucket.arn,
+        },
+    }, {
+        dependsOn: [logsBucketPolicy, logsBucketOwnershipControls],
+    });
+
+    const cdnLogDelivery = new aws.cloudwatch.LogDelivery("cdn-log-delivery", {
+        region: "us-east-1",
+        deliverySourceName: cdnLogDeliverySource.name,
+        deliveryDestinationArn: cdnLogDeliveryDestination.arn,
+        s3DeliveryConfigurations: [{
+            suffixPath: pulumi.all([aws.getCallerIdentity(), cdn.id]).apply(([caller, distributionId]) =>
+                `${config.websiteDomain}/${caller.accountId}/${distributionId}/{yyyy}/{MM}/{dd}/{HH}`
+            ),
+            enableHiveCompatiblePath: false,
+        }],
+    });
+}
 
 // Split a domain name into its subdomain and parent domain names.
 // e.g. "www.example.com" => "www", "example.com".
