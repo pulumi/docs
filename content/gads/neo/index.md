@@ -51,6 +51,22 @@ why_neo:
       button_url: "https://app.pulumi.com/neo?prompt=Show%20me%20how%20to%20use%20Neo%20in%20VS%20Code%20via%20MCP"
 
 
+neo_search:
+  title: Try Neo Now
+  description: Ask Neo anything about your cloud infrastructure.
+  placeholder: Describe your infrastructure needs...
+  suggestions:
+    - text: Provision an EKS cluster
+      prompt: Provision an EKS cluster with preview and an audit trail
+    - text: Run a policy check
+      prompt: Run a policy check for my account and block violations
+    - text: Debug networking issues
+      prompt: Help me debug a networking issue causing 5xx errors
+    - text: Find idle resources
+      prompt: Find idle and oversized resources and propose rightsizing
+    - text: Use Neo in VS Code
+      prompt: Show me how to use Neo in VS Code via MCP
+
 demo_video:
     title: Unveiling Neo – Your Newest Platform Engineer
     subtitle: Breaking news from Pulumi – platform engineering is about to change.
