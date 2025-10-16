@@ -51,19 +51,19 @@ nav.actually-docs {
 
         div.get-started {
             a.get-started-header-button {
-                @apply rounded-lg;
-
                 width: auto;
                 height: auto;
                 display: flex;
                 box-shadow: none;
-                color: #131314;
+                color: #fff;
                 padding: 8px 16px;
                 border: 1px solid #805ac3;
+                border-radius: 20px;
+                background: linear-gradient(90deg,#be5188,#805ac3) border-box;
 
                 &:hover {
-                    color: #fff;
-                    background: linear-gradient(90deg,#be5188,#805ac3) border-box;
+                    color: #131314;
+                    background: transparent;
                 }
             }
         }
