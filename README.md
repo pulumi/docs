@@ -264,3 +264,5 @@ Delve deeper into Pulumi with additional resources:
 ## Pulumi roadmap
 
 Review the planned work for the upcoming quarter and a selected backlog of issues that are on our mind but not yet scheduled on the [Pulumi Roadmap.](https://github.com/orgs/pulumi/projects/44)
+
+<!-- Test change for GitHub workflows verification -->
