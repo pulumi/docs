@@ -39,7 +39,7 @@ jobs:
           prompt: |
             You are reviewing pull request #${{ github.event.pull_request.number }}. Use the /docs-review command, defined in this repository at `.claude/commands/docs-review.md`, to guide your review.
 
-            Provide your review as a GitHub single pull request review comment, not multiple comments.
+            Provide your review as a single GitHub pull request review comment, not multiple comments.
             
             Use ````suggestion` blocks for any code suggestions.
 
