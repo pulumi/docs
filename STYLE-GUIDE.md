@@ -32,7 +32,7 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 - Do not end headings with punctuation.
 - Headings should be surrounded by blank lines.
 
-**Navigation menu items**: Use **Title Case** for all `menu.name` entries in frontmatter. Navigation items are UI labels, not prose headings, and follow Title Case conventions consistent with industry standards.
+**Navigation menu items**: Use **Title Case** for all menu headings. Navigation items are UI labels, not prose headings, and follow Title Case conventions consistent with industry standards.
 
 ---
 
