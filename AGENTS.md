@@ -42,13 +42,14 @@ Do not substitute other tools or commands.
 ## Absolute Prohibitions
 
 - **Package manager**: Do **not** change `package.json` to use pnpm. Yarn/npm only.  
-- **Markdown (.md) files**: Must always end with a newline.  
 
 ---
 
 ## Code & Content Rules
 
-- **Markdown**: Standard paragraph formatting.  
+- **Markdown**:
+  - Standard paragraph formatting.  
+  - Must always end with a newline.  
 - **Headings**:  
   - H1 = Title Case  
   - H2+ = Sentence case
@@ -104,6 +105,12 @@ When moving documentation files, aliases automatically handle redirects. Update 
   ```bash
   find content/docs content/product -name "*.md" -exec sed -i 's|/old/path|/new/path|g' {} +
   ```
+
+---
+
+## Reviewing changes
+
+When reviewing PRs and changes, follow the instructions in `.claude/commands/docs-review.md`.
 
 ---
 
