@@ -31,21 +31,40 @@ jobs:
       - name: Run Claude Code Review
         id: claude-review
         uses: anthropics/claude-code-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # The /docs-review command (defined in .claude/commands/docs-review.md) contains the
-          # canonical review criteria for this repository. This workflow invokes it
-          # with PR-specific context.
+          # The canonical review criteria are defined in .claude/commands/docs-review.md.
+          # This prompt directs Claude to read that file as the source of truth.
           prompt: |
-            You are reviewing pull request #${{ github.event.pull_request.number }}. Use the /docs-review command, defined in this repository at `.claude/commands/docs-review.md`, to guide your review.
+            You are reviewing pull request #${{ github.event.pull_request.number }}.
 
-            Provide your review as a single GitHub pull request review comment, not multiple comments.
-            
-            Use ````suggestion` blocks for any code suggestions.
+            **CI Efficiency Guidelines (IMPORTANT - minimize token usage):**
+            1. Start by running `gh pr view ${{ github.event.pull_request.number }} --json title,body,files,additions,deletions` to get PR metadata
+            2. Get the full diff with `gh pr diff ${{ github.event.pull_request.number }}`
+            3. Work primarily from the diff output - this is much more efficient than reading full files
+            4. Only use the Read tool on specific files when the diff doesn't provide enough context
+            5. Do NOT attempt to run `make serve`, `make lint`, or `make build` - these commands are not available in CI and will fail
+            6. Focus your review on the changed lines shown in the diff, not entire files
+            7. Use Grep sparingly - only when absolutely necessary to understand context
 
-            Include an instruction at the end of your review that informs the author how they can request additional reviews or have you apply your suggestions.
+            **Review Criteria:**
+            Read `.claude/commands/docs-review.md` for the complete, canonical review criteria. Use those criteria to guide your review.
+
+            **Posting Your Review:**
+            After completing your review, post it to the PR by running:
+            ```
+            gh pr comment ${{ github.event.pull_request.number }} --body "YOUR_REVIEW_CONTENT_HERE"
+            ```
+
+            Your review should include:
+            - Issues found with specific line numbers
+            - Constructive suggestions using ````suggestion` blocks
+            - An instruction at the end telling the author how to request additional reviews
 
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
-          claude_args: '--allowed-tools "Bash(gh issue view:*),Bash(gh search:*),Bash(gh issue list:*),Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),Bash(gh pr list:*)"'
+          # Allow essential file reading tools (Read, Glob, Grep) and gh commands for PR interaction
+          claude_args: '--allowed-tools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr comment:*),Bash(gh issue view:*)"'
 
