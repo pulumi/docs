@@ -13,7 +13,7 @@
     fieldset {
         @apply block;
 
-        &:not(.form-columns-1) > .field:first-child {
+        &:not(.form-columns-1)>.field:first-child {
             @apply pr-2;
         }
 
@@ -48,6 +48,7 @@
         textarea,
         select {
             @apply border border-gray-300 rounded p-2 bg-white;
+
             &:focus {
                 @apply outline-none ring;
             }
@@ -96,7 +97,7 @@
 
         .hs-email {
             @apply pt-0.5;
-            
+
             input {
                 @apply h-10;
             }
@@ -181,16 +182,18 @@
     .hs-richtext {
         @apply opacity-50 text-xs font-normal my-0;
 
-            a {
-                @apply underline;
-            }
+        a {
+            @apply underline;
+        }
     }
 
     .hs-form-field {
         @apply my-3;
     }
 
-    .hs-button, .primary, .large {
+    .hs-button,
+    .primary,
+    .large {
         @apply mt-6
     }
 
@@ -199,15 +202,16 @@
     }
 
     input,
-        textarea,
-        select {
-            @apply border border-gray-300 rounded p-2 bg-white;
-            &:focus {
-                @apply outline-none ring;
-            }
-        }
+    textarea,
+    select {
+        @apply border border-gray-300 rounded p-2 bg-white;
 
-        select {
-            @apply py-1 px-3;
+        &:focus {
+            @apply outline-none ring;
         }
+    }
+
+    select {
+        @apply py-1 px-3;
+    }
 }

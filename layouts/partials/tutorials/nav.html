@@ -1,11 +1,24 @@
-<div class="docs-list-main">
-    <div class="docs-main-nav-toggle-wrapper">
-        <div class="docs-main-nav-wrapper">
-            <div class="docs-main-nav">
-                <nav class="main-nav">
+{{/* Search box moved from top nav */}}
+<div class="docs-search mb-4">
+    {{ if getenv "ALGOLIA_APP_ID" }}
+        <div
+            id="search"
+            data-app-id="{{ getenv "ALGOLIA_APP_ID" }}"
+            data-search-key="{{ getenv "ALGOLIA_APP_SEARCH_KEY" }}"
+            data-facets="Docs,Registry,Tutorials,Blog"
+            data-index="production"
+        ></div>
+    {{ else }}
+        <!-- Visual placeholder styled like real search input -->
+        <div class="border border-gray-300 rounded bg-gray-50 px-3 py-2">
+            <div class="text-gray-500 text-sm">🔍 Search box location</div>
+            <div class="text-xs text-gray-400 mt-1">Algolia search would render here in production</div>
+        </div>
+    {{ end }}
+</div>
 
-                    {{ $menuItems := slice }}
-                    {{ $currentPath := .RelPermalink}}
+{{ $menuItems := slice }}
+{{ $currentPath := .RelPermalink}}
 
                     {{/* On the home page and collection pages, show the getting-started guides and a list of non-empty collections. */}}
                     {{ if or (eq $currentPath "/tutorials/") (eq .Kind "term") }}
@@ -68,15 +81,7 @@
 
                     {{ end }}
 
-                    {{ template "tutorials-menu" (dict "items" $menuItems) }}
-                </nav>
-            </div>
-        </div>
-        <div class="docs-nav-toggle">
-            <div class="docs-nav-toggle-icon icon icon-24-24 open-docs-main-nav"></div>
-        </div>
-    </div>
-</div>
+{{ template "tutorials-menu" (dict "items" $menuItems) }}
 
 {{ define "tutorials-menu" }}
     {{ range $item := .items }}

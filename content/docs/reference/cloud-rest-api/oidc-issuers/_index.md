@@ -177,7 +177,7 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/{organization}/oidc/issuers
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers
 ```
 
 ## Get the issuer's auth policies
