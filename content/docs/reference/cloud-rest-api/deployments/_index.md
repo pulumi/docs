@@ -804,7 +804,7 @@ POST https://api.pulumi.com/api/orgs/{organization}/deployments/resume
 ```shell
 curl -i -XPOST -H "Content-Type: application/json" \
 -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/stack/my-org/aws-ts-s3-folder/dev/deployments/resume"
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/resume"
 ```
 
 ## Get Deployments Metadata
@@ -834,7 +834,7 @@ GET https://api.pulumi.com/api/orgs/{organization}/deployments/metadata
 ```shell
 curl -XGET -H "Content-Type: application/json" \
 -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/stack/my-org/aws-ts-s3-folder/dev/deployments/metadata"
+--location "https://api.pulumi.com/api/stacks/my-org/aws-ts-s3-folder/dev/deployments/metadata"
 ```
 
 #### Response
