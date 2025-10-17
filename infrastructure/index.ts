@@ -808,12 +808,6 @@ const cdn = new aws.cloudfront.Distribution(
 
 // Configure CDN log delivery if cdnLogDeliverySourceName is set
 if (config.cdnLogDeliverySourceName) {
-    // Reference the CloudFront-created log delivery source
-    // Resource name in Pulumi state: cloudfront_logs
-    const cdnLogDeliverySource = aws.cloudwatch.LogDeliverySource.get(
-        config.cdnLogDeliverySourceName,
-        "cloudfront_logs"
-    );
 
     const cdnLogDeliveryDestination = new aws.cloudwatch.LogDeliveryDestination("cdn-log-delivery-destination", {
         region: "us-east-1",
@@ -826,9 +820,10 @@ if (config.cdnLogDeliverySourceName) {
         dependsOn: [logsBucketPolicy, logsBucketOwnershipControls],
     });
 
+    // Reference the CloudFront-created log delivery source
     const cdnLogDelivery = new aws.cloudwatch.LogDelivery("cdn-log-delivery", {
         region: "us-east-1",
-        deliverySourceName: cdnLogDeliverySource.name,
+        deliverySourceName: config.cdnLogDeliverySourceName,
         deliveryDestinationArn: cdnLogDeliveryDestination.arn,
         s3DeliveryConfigurations: [{
             suffixPath: pulumi.all([aws.getCallerIdentity(), cdn.id]).apply(([caller, distributionId]) =>
