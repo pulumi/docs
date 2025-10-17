@@ -16,8 +16,8 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col w-full md:w-1/2 gap-8 items-center">
-            <div class="w-full" style="max-width: 650px;">
+        <div class="flex flex-col w-full md:w-1/2 gap-8">
+            <div class="w-full" style="max-width: 850px;">
                 <div id="video" style="position: relative; top: -100px;"></div>
                 <div class="responsive-video-container video-16-9 rounded-xl shadow-2xl relative h-0 overflow-hidden">
                     {{ $videoID := index (split .Params.demo_video.image "?v=") 1 }}
@@ -29,7 +29,8 @@
             <a href="https://aws.amazon.com/marketplace/seller-profile?id=b3d56f96-ff1e-4284-9585-5ef58df12266"
                 target="_blank"
                 class="text-white border-2 rounded-lg cursor-pointer z-auto whitespace-normal p-4 text-center"
-                style="background-color: #FF9400; width: 150px; border-color: #FF9400;">Buy with AWS</a>
+                style="background-color: #FF9400; width: 150px; border-color: #FF9400;">Buy with
+                AWS</a>
         </div>
     </div>
 </header>
@@ -212,9 +213,9 @@
         <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
             <div id="video" style="position: relative; top: -100px;"></div>
             <div class="responsive-video-container video-16-9 rounded-xl shadow-2xl relative h-0 overflow-hidden">
-                <iframe src="https://www.youtube.com/embed/9GB9M2l1OgY"
+                <iframe src="https://www.youtube.com/embed/2EthETfXjnI?si=D_5PcnGN7KDy4Kbi "
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""
-                    title="Unveiling Neo – Your Newest Platform Engineer"></iframe>
+                    title="Using Neo to Detect and Automatically Upgrade AWS Lambda Runtimes"></iframe>
             </div>
         </div>
     </div>
@@ -227,44 +228,56 @@
         on AWS</p>
 
     <div class="flex flex-col md:flex-row gap-16">
-        <div class="bg-white rounded-lg shadow-lg p-10 w-full xl:w-1/2 flex flex-col"
-            style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
-            <div class="flex items-start justify-between mb-2 p-0">
-                <span
-                    class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Ebook</span>
+        <div class="w-full xl:w-1/2 flex">
+            <div class="bg-white rounded-lg shadow-lg p-10 w-full flex flex-col justify-between"
+                style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
+                <div class="flex flex-col">
+                    <div class="flex items-start justify-between mb-2 p-0">
+                        <span
+                            class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Ebook</span>
+                    </div>
+                    <h3 class="text-xl font-body font-medium mb-2 text-left p-0">AWS & Pulumi: Better Together for
+                        AI-Powered
+                        Infrastructure</h3>
+
+                    <p class="text-base/8 text-gray-700 text-left leading-7 mb-4">See how AWS and Pulumi unite AI
+                        capabilities
+                        with
+                        infrastructure expertise, combining Bedrock and AgentCore with Pulumi
+                        Infrastructure as Code to deliver platform engineering that accelerates innovation while
+                        maintaining
+                        enterprise
+                        security, compliance, and governance.</p>
+                </div>
+
+                <a href="https://info.pulumi.com/ebook/download-aws-pulumi-better-together-for-ai-powered-infrastructure"
+                    target="_blank" class="btn-primary inline-flex" style="width: fit-content;">Download
+                    Ebook</a>
             </div>
-            <h3 class="text-xl font-body font-medium mb-2 text-left p-0">AWS & Pulumi: Better Together for AI-Powered
-                Infrastructure</h3>
-
-            <p class="text-base/8 text-gray-700 text-left leading-7 mb-4">See how AWS and Pulumi unite AI capabilities
-                with
-                infrastructure expertise, combining Bedrock and AgentCore with Pulumi
-                Infrastructure as Code to deliver platform engineering that accelerates innovation while maintaining
-                enterprise
-                security, compliance, and governance.</p>
-
-            <a href="/resources/aws-pulumi-better-together-for-ai-powered-infrastructure/"
-                class="btn-primary inline-flex" style="width: fit-content;">Download
-                Ebook</a>
-
         </div>
 
-        <div class="bg-white rounded-lg shadow-lg p-10 w-full xl:w-1/2 flex flex-col"
-            style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
-            <div class="flex items-start justify-between mb-2 p-0">
-                <span
-                    class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Solutions
-                    Brief</span>
+        <div class="w-full xl:w-1/2 flex">
+            <div class="bg-white rounded-lg shadow-lg p-10 w-full flex flex-col justify-between"
+                style="border-top: 4px solid; border-image: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #673EAC 74.48%, #3545D7 100%) 1;">
+                <div class="flex flex-col">
+                    <div class="flex items-start justify-between mb-2 p-0">
+                        <span
+                            class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Solutions
+                            Brief</span>
+                    </div>
+                    <h3 class="text-xl font-body font-medium mb-2 text-left p-0">The Evolution of Infrastructure as Code
+                        --
+                        Powered by AWS + Pulumi</h3>
+
+                    <p class="text-base/8 text-gray-700 text-left leading-7 mb-4">Learn how Pulumi Neo, built on Amazon
+                        Bedrock
+                        and AgentCore, delivers intelligent automation, governance, and developer
+                        self-service across AWS environments.</p>
+                </div>
+
+                <a href="https://info.pulumi.com/ebook/integrated-solutions-brief-aws-and-pulumi-for-ai-era-infrastructure"
+                    target="_blank" class="btn-primary inline-flex" style="width: fit-content;">Get Solutions Brief</a>
             </div>
-            <h3 class="text-xl font-body font-medium mb-2 text-left p-0">The Evolution of Infrastructure as Code --
-                Powered by AWS + Pulumi</h3>
-
-            <p class="text-base/8 text-gray-700 text-left leading-7 mb-4">Learn how Pulumi Neo, built on Amazon Bedrock
-                and AgentCore, delivers intelligent automation, governance, and developer
-                self-service across AWS environments.</p>
-
-            <a href="" class="btn-primary inline-flex" style="width: fit-content;">Get Solutions Brief</a>
-
         </div>
     </div>
 </section>
