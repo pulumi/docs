@@ -6,10 +6,8 @@ meta_desc: This page describes how to create accounts used by Pulumi Insights to
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
-    name: Discovery
-    parent: insights-home
-    weight: 10
-    identifier: insights-discovery
+    parent: insights-discovery
+    weight: 20
 aliases:
   - /docs/pulumi-cloud/insights/accounts/
   - /docs/pulumi-cloud/insights/import/
