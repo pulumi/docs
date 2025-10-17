@@ -222,7 +222,7 @@ curl \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
-  https://api.pulumi.com/api/{organization}/{project}/{stack}/hooks/{webhookname}
+  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/hooks/{webhookname}
 ```
 
 ## Ping Webhook
