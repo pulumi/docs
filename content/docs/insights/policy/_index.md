@@ -48,7 +48,7 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
 To get started with Pulumi Policy, [download and install Pulumi](/docs/install/), then try the [Policy Get Started guide](/docs/insights/policy/get-started/).
 
-For a detailed guide on configuring policies for discovered resources, visit the [Insights Get Started tutorial](/docs/insights/get-started/).
+For a detailed guide on configuring policies for discovered resources, visit the [Insights Get Started tutorial](/docs/insights/discovery/get-started/).
 
 ## How to configure policies
 
