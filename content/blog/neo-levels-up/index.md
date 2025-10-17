@@ -56,6 +56,6 @@ Neo now runs on Anthropic's Sonnet 4.5 by default. Sonnet 4.5 delivers better pe
 
 **Ready to try these features?**
 
-* [Sign in to Pulumi Cloud](https://app.pulumi.com/signin?product=neo) and start a Neo task  
-* [Read the Neo documentation](https://www.pulumi.com/docs/pulumi-cloud/neo/) for detailed guides  
+* [Sign in to Pulumi Cloud](https://app.pulumi.com/signin) and start a Neo task  
+* [Read the Neo documentation](/docs/ai/) for detailed guides  
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
