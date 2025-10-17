@@ -12,12 +12,12 @@ meta_desc: Discover, secure, and govern cloud infrastructure with comprehensive 
 meta_image: /images/docs/meta-images/insights-meta.png
 h1: Insights & Governance
 description: |
-  Comprehensive cloud visibility and policy enforcement—discover all infrastructure and ensure compliance, regardless of how resources were created.
+  Pulumi Insights & Governance provides comprehensive cloud visibility and policy enforcement—discover all infrastructure and ensure compliance, regardless of how resources were created.
 
 link_buttons:
   primary:
     label: Get Started
-    link: /docs/insights/get-started/
+    link: /docs/insights/discovery/get-started/
 
 sections:
 - type: flat
@@ -26,40 +26,56 @@ sections:
     Pulumi Cloud provides complete visibility and control over your cloud infrastructure, whether resources were provisioned by Pulumi, Terraform, CloudFormation, or created manually.
 
     **Two ways to get started:**
-    - **New to Pulumi?** Start with [Discovery](/docs/insights/discovery/accounts/) to scan existing infrastructure, then add Policy enforcement.
-    - **Already using Pulumi IaC?** Add [Policy](/docs/insights/policy-as-code/) to enforce compliance before deployments reach production.
+    - **New to Pulumi?** Start with [Discovery](/docs/insights/discovery/) to scan existing infrastructure, then add Policy enforcement.
+    - **Already using Pulumi IaC?** Add [Policy](/docs/insights/policy/) to enforce compliance before deployments reach production.
 
 - type: button-cards
-  heading: Getting started
+  heading: Discovery
   cards:
   - emoji: 🚀
     heading: Get Started
-    link: /docs/insights/get-started/
-    description: Learn how Insights & Governance provides visibility and policy enforcement for cloud infrastructure.
-  - emoji: 🔍
-    heading: Discovery
+    link: /docs/insights/discovery/get-started/
+    description: Scan your cloud accounts and discover all infrastructure resources.
+  - emoji: 💡
+    heading: How Discovery Works
+    link: /docs/insights/discovery/
+    description: Learn how Discovery scans cloud accounts and organizes resources for visibility and import.
+  - emoji: 🔗
+    heading: Accounts
     link: /docs/insights/discovery/accounts/
-    description: Scan and sync cloud accounts to bring all resources under management.
-  - emoji: 🛡️
-    heading: Policy as Code
-    link: /docs/insights/policy-as-code/
-    description: Enforce compliance with pre-built packs (CIS, PCI DSS, SOC 2) or custom policies.
+    description: Connect cloud accounts to sync and monitor infrastructure resources.
+  - emoji: 🔎
+    heading: Resource Search
+    link: /docs/insights/discovery/search/
+    description: Find resources using structured queries or natural language.
+  - emoji: 📊
+    heading: Visual Import
+    link: /docs/insights/discovery/visual-import/
+    description: Import existing cloud resources into Pulumi management.
+  - emoji: 📤
+    heading: Data Export
+    link: /docs/insights/discovery/data-export/
+    description: Export resource data to CSV or integrate via REST API.
+
+- type: button-cards
+  heading: Policy
+  cards:
+  - emoji: 🚀
+    heading: Get Started
+    link: /docs/insights/policy/get-started/
+    description: Enforce compliance policies across your infrastructure.
+  - emoji: 💡
+    heading: Policy Concepts
+    link: /docs/insights/policy/
+    description: Understand policy modes, enforcement levels, and how to write and manage policy packs.
   - emoji: 🔄
     heading: Preventative vs Audit
     link: /docs/insights/policy/preventative-vs-audit-policies/
     description: Block violations before deployment or scan existing resources in audit mode.
-  - emoji: 🔎
-    heading: Search
-    link: /docs/insights/search/
-    description: Find resources using structured queries or natural language.
-  - emoji: 📊
-    heading: Visual Import
-    link: /docs/insights/import/
-    description: Import existing cloud resources into Pulumi management.
-  - emoji: 📤
-    heading: Data Export
-    link: /docs/insights/import/data-export/
-    description: Export resource data to CSV or integrate via REST API.
+  - emoji: ⚠️
+    heading: Policy Violations
+    link: /docs/insights/policy/policy-violations/
+    description: View, manage, and remediate policy violations across your infrastructure.
 
 - type: flat
   heading: Have questions?
