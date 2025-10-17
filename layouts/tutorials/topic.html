@@ -1,11 +1,19 @@
 {{ define "main" }}
-    <div class="flex mb-16 docs-list-main">
-        <div class="sticky top-12 max-h-75 xl:w-2/12">
-            <div class="xl:w-56 xl:px-4">
-                {{ partial "tutorials/nav.html" . }}
+    <div class="docs-list-main">
+        <div class="docs-main-nav-toggle-wrapper">
+            <div class="docs-main-nav-wrapper">
+                <div id="docs-main-nav" class="docs-main-nav">
+                    <nav class="main-nav">
+                        {{ partial "tutorials/nav.html" . }}
+                    </nav>
+                </div>
+            </div>
+            <div class="docs-nav-toggle">
+                <div class="docs-nav-toggle-icon icon icon-24-24"></div>
             </div>
         </div>
-        <div class="mr-6 ml-4 flex justify-center xl:w-8/12 docs-main-content-wrapper">
+
+        <div class="docs-main-content-wrapper">
             <div class="max-w-3xl docs-main-content">
                 <header class="mb-6">
                     {{ partial "tutorials/breadcrumb.html" . }}
@@ -25,10 +33,11 @@
                     {{ .Content }}
                 </div>
             </div>
-        </div>
-        <div class="sticky top-10 pt-8 max-h-75 xl:w-2/12 hidden xl:block">
-            {{ partial "tutorials/feedback.html" . }}
-            {{ partial "tutorials/right-nav-ad.html" }}
+
+            <div class="docs-table-of-contents docs-toc-desktop">
+                {{ partial "tutorials/feedback.html" . }}
+                {{ partial "tutorials/right-nav-ad.html" }}
+            </div>
         </div>
     </div>
 {{ end }}
