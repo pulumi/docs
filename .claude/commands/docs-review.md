@@ -6,7 +6,7 @@ description: Review `pulumi/docs` changes for style, accuracy, and best practice
 # Local: /docs-review
 # CI: Automatically runs on PRs
 
-Please review the code changes in this repository and provide feedback on style, accuracy, and best practices. If there are no uncommitted changes, compare the current branch against the `master` branch.
+Please review the code changes in this repository and provide feedback on style, accuracy, and best practices. Compare the current branch against the `master` branch (or review uncommitted changes if present).
 
 Provide your review as a single summary, highlighting any issues found and suggesting improvements.
 
