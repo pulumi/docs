@@ -10,7 +10,14 @@
         background: linear-gradient(90deg, map-get($brand, "yellow") 0%, map-get($brand, "salmon") 18.23%, map-get($brand, "fuchsia-darker") 38.02%, map-get($brand, "purple") 53.65%, map-get($brand, "violet") 74.48%, map-get($brand, "blue-lighter") 100%);
     }
 
+    // Adjust search box spacing in tutorials
+    .docs-search {
+        @apply mr-4;
+    }
+
     nav.main-nav {
+        padding-top: 1.5rem !important;
+
         div.toc-header {
             @apply ml-0;
 
