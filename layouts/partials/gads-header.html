@@ -6,14 +6,18 @@
                 <!-- Keep only the logo -->
                 <div class="logo-container">
                     <a data-track="header-pulumi-logo" class="block" href="/">
-                        <img class="normal-logo h-8" src="/images/logo/logo-on-white.svg" alt="Pulumi logo" />
-                        <img class="dark-logo hidden h-8" src="/images/logo/logo-on-black.svg" alt="Pulumi logo" />
+                        <img class="normal-logo h-8" src="/images/logo/logo-on-white.svg" alt="Pulumi logo" width="128" height="32" />
+                        <img class="dark-logo hidden h-8" src="/images/logo/logo-on-black.svg" alt="Pulumi logo" width="128" height="32" />
                     </a>
                 </div>
                 
                 <!-- Keep only Sign Up CTA -->
                 <div class="cta-container">
+                    {{ if in .RelPermalink "/gads/neo" }}
+                    <a data-track="header-signup" href="https://app.pulumi.com/pulumi/neo?prefer_signup=true" class="btn-primary">Try Neo for FREE</a>
+                    {{ else }}
                     <a data-track="header-signup" href="https://app.pulumi.com/signup" class="btn-primary">Try Pulumi Cloud for FREE</a>
+                    {{ end }}
                 </div>
             </div>
         </header>
