@@ -6,13 +6,20 @@ heading: Insights & Governance
 subheading: |
     Complete visibility and control for your cloud
 
-meta_desc: Search any cloud resource. Enforce policies as code. Track compliance. See everything in your infrastructure.
+meta_desc: Join us on November 5 to see how Neo helps you get clean and stay clean - automatically. Watch it in action. Live demo + Q&A.
+meta_image: /images/product/insights-neo-launch-meta.png
 
 aliases:
 - /insights
 - /product/pulumi-insights
 - /product/crossguard
 - /crossguard
+
+preview:
+  header:  Pulumi Neo just got smarter about infrastructure policy automation
+  description: Join us on November 5 to see how Neo helps you get clean and stay clean - automatically. Watch it in action. Live demo + Q&A.  
+  hubspotID: 4031229e-1370-4118-9379-ee2be1fd64fd
+  videoID: mwcrOTEf1EQ?si=Fx77RxM-uCjJLN-6
 
 overview:
     header: Complete visibility and control for your cloud
