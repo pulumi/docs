@@ -37,11 +37,13 @@ jobs:
           # canonical review criteria for this repository. This workflow invokes it
           # with PR-specific context.
           prompt: |
-            /docs-review
+            You are reviewing pull request #${{ github.event.pull_request.number }}. Use the /docs-review command, defined in this repository at `.claude/commands/docs-review.md`, to guide your review.
 
-            You are reviewing pull request #${{ github.event.pull_request.number }}.
+            Provide your review as a GitHub pull request review comment with an "Approve", "Request Changes", or "Comment" decision. Use ````suggestion` blocks for any code suggestions.
 
-            Provide your review as a single comment on the pull request (not multiple comments).
+            Provide all your feedback as a single review comment, not multiple comments.
+
+            Include an instruction at the end of your review that informs the author how to request a new review from you after they have addressed your feedback.
 
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options

@@ -1,5 +1,5 @@
 ---
-description: Review code changes for style, accuracy, and best practices
+description: Review `pulumi/docs` changes for style, accuracy, and best practices
 ---
 
 # Usage
