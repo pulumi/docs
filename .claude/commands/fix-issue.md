@@ -30,7 +30,7 @@ Review and follow:
 
 Create a detailed, step-by-step plan that includes:
 
-1. **Root Cause Analysis**: Clearly identify what's causing the issue
+1. **Analysis**: Clearly identify what's causing the issue or the gap in functionality
 1. **Proposed Solution**: Describe the approach to fix the issue
 1. **Files to Modify**: List specific files and line numbers that need changes
 1. **Implementation Steps**: Break down the work into logical, sequential tasks
