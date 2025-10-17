@@ -35,6 +35,17 @@ $(function () {
                 input.value = '';
             }
         }
+
+        // Track analytics if data-track is present
+        const analytics = (window as any).analytics;
+        const analyticsAvailable = analytics && analytics.track && typeof analytics.track === "function";
+
+        if (analyticsAvailable) {
+            const trackData = {
+                neoModeActive: isNeoMode ? "true" : "false",
+            };
+            analytics.track("neo-mode-toggle", trackData);
+        }
     }
 
     function submitNeoQuery() {
