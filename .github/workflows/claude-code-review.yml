@@ -61,7 +61,7 @@ jobs:
             Your review should include:
             - Issues found with specific line numbers
             - Constructive suggestions using ````suggestion` blocks
-            - An instruction at the end telling the author how to request additional reviews
+            - An instruction to mention you ('@claude') if the author wants additional reviews or fixes
 
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
