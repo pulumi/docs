@@ -7,9 +7,11 @@ authors: ["luke-hoban"]
 tags: ["features", "continuous-delivery"]
 ---
 
-> [!INFO]
-> This blog post refers to an outdated version of Pulumi (0.15). For current features and capabilities, please refer to the [latest documentation](/docs/) and [current release notes](https://github.com/pulumi/pulumi/releases).
+{{%% notes type="info" %%}}
 
+This blog post refers to an outdated version of Pulumi (0.15). For current features and capabilities, please refer to the [latest documentation](/docs/) and [current release notes](https://github.com/pulumi/pulumi/releases).
+
+{{%% /notes %%}}
 Just over a month ago we publicly launched
 Pulumi, a new cloud native development
 platform.  The response has been overwhelming and we've been hard at
