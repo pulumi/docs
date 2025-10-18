@@ -36,7 +36,7 @@ Before you start, ensure you have at least one [Pulumi Insights account](/docs/i
 
 This opens the Visual Import workflow.
 
-![Pulumi Import](import-left-nav.png)
+![Pulumi Import](/docs/insights/assets/import-left-nav.png)
 
 ### Step 1: Select resources
 
@@ -50,7 +50,7 @@ You begin by selecting the cloud resources you want to convert to code.
 
 Once you've selected the resources, click **Next** to proceed.
 
-![Pulumi Import](import-select-resources.png)
+![Pulumi Import](/docs/insights/assets/import-select-resources.png)
 
 ### Step 2: Review referenced resources
 
@@ -66,7 +66,7 @@ The referenced resources will show a direction: 'from' or 'to'. 'from' refers to
 
 You can deselect referenced resources if needed. When you're ready, click **Next**.
 
-![Pulumi Import](import-select-references.png)
+![Pulumi Import](/docs/insights/assets/import-select-references.png)
 
 ### Step 3: Generate and review code
 
@@ -75,13 +75,13 @@ This step lets you create, review, and refine the generated Pulumi IaC code.
 * Choose the target language (e.g., TypeScript, Python, Go, C\#, Java, YAML)
 * The editor displays the generated code as a single file and enables you to edit the code to ensure seamless integration into existing code
 
-![Pulumi Import](import-review-code.png)
+![Pulumi Import](/docs/insights/assets/import-review-code.png)
 
 ### Step 4: Copilot enhance
 
 The Copilot Enhance button enables Pulumi Copilot to take an additional pass over the generated code to improve formatting, provide more meaningful variable names and comments, and add references between selected components if available.
 
-![Pulumi Import](import-review-enhance.png)
+![Pulumi Import](/docs/insights/assets/import-review-enhance.png)
 
 ### Step 5: Integrate code
 
