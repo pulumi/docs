@@ -43,6 +43,7 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
   - `[Link text](https://example.com)`
 - Link text must be descriptive. Avoid vague text like _here_ or _click here_.
 - When changing the URL of an existing page, add a redirect with a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
+- **Documentation should not link to marketing pages**. Pages within `/docs` should link to other documentation pages (`/docs/*`) or reference material (`/registry/*`), not to marketing pages (e.g., `/pricing`, `/contact`, `/product`, `/templates`, `/blog`, `/case-studies`, `/what-is`). If you need to reference a topic covered in a marketing page, create appropriate documentation content instead.
 
 ### External Link Indicator
 
