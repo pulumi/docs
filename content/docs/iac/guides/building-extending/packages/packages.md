@@ -23,11 +23,10 @@ Pulumi Packages are the core technology that enables Pulumi [resources](/docs/ia
 
 ## How packages work
 
-Pulumi packages consist of three parts that allow them to be consumed in any Pulumi language:
+Pulumi packages consist of two parts that allow them to be consumed in any Pulumi language:
 
 1. **The provider plugin** which contains Pulumi resources/functions and can be written in any language Pulumi supports. These resources may be custom resources (the base Pulumi resource type, where you define the CRUD operations), or, more commonly, components (which encapsulate custom resources or even other components).
-1. **A Pulumi package schema**, a JSON document which provides a public interface for the Pulumi engine to interact with your provider in order to create, update, and delete the resources your package defines.
-1. **An SDK** in the language of the consuming program, which is generated from the schema. SDKs may be published and hosted on package feeds (npm, PyPI, etc.) or they may be generated locally by the Pulumi CLI when the package is added to your Pulumi program.
+1. **An SDK** in the language of the consuming program, which is generated from the provider's schema file. SDKs may be published and hosted on package feeds (npm, PyPI, etc.) or they may be generated locally by the Pulumi CLI (in combination with the package schema) when the package is added to your Pulumi program.
 
 ## Consuming packages
 
