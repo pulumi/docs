@@ -19,18 +19,18 @@ aliases:
 - /docs/iac/guides/building-extending/packages/
 ---
 
-Pulumi Packages are the core technology that enables Pulumi [resources](/docs/iac/concepts/resources/), [components](/docs/iac/concepts/components/), and [functions](/docs/iac/concepts/functions/) to be defined once and made available to users in all Pulumi languages.
+Pulumi Packages are the core technology that enables Pulumi [resources](/docs/iac/concepts/resources/), [components](/docs/iac/concepts/components/), and [functions](/docs/iac/concepts/functions/) to be defined once and used in all Pulumi languages.
 
 ## How packages work
 
 Pulumi packages consist of two parts that allow them to be consumed in any Pulumi language:
 
-1. **The provider plugin** which contains Pulumi code and can be written in any language Pulumi supports. The Pulumi code in the provider plugin is comprised of some combination of custom resources (the most basic Pulumi resource type where you define the CRUD operations), functions (which allow you to query cloud providers for resources) or components (which encapsulate custom resources or even other components).
+1. **The provider plugin** which contains Pulumi code and can be written in any language Pulumi supports. The provider plugin contains custom resources, functions, and components. Custom resources define CRUD operations for infrastructure resources. Functions query cloud providers for resource data. Components encapsulate custom resources or other components into reusable abstractions.
 1. **An SDK** in the language of the consuming program, which is generated from the provider's schema file. SDKs may be published and hosted on package feeds (npm, PyPI, etc.) or they may be generated locally by the Pulumi CLI (in combination with the package schema) when the package is added to your Pulumi program.
 
 ## Consuming packages
 
-The method of consuming a Pulumi package depends on whether the package has published SDKs or not:
+How you consume a Pulumi package depends on whether it has published SDKs:
 
 - For packages with published SDKs, you can consume the package by adding a reference to the published SDK from the package feed, e.g. `npm install`, `dotnet package add`, etc. The published SDKs contain commands to automatically download the provider code/binary.
 - For packages without published SDKs, called [local packages](/docs/iac/guides/building-extending/packages/local-packages/#updating-local-packages), you can consume a package via the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command, which will download the provider plugin and generate a local SDK. Generated local SDKs may be committed to version control, or they can be regenerated at any time with the [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) command.
@@ -75,15 +75,15 @@ If you are authoring a Pulumi component to be shared within your team or organiz
 For an example of building and publishing a component with local packages, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
 
 {{% notes type="info" %}}
-It is technically possible to author a Pulumi provider in any language, create a hand-authored schema, then generate and publish SDKs from the hand-authored schema. Most organizations will find this approach difficult to manage at scale.
+You can author a Pulumi provider in any language, create a hand-authored schema, then generate and publish SDKs from that schema. However, this approach requires significant effort to manage at scale, as you'll need to maintain the schema manually and ensure it stays synchronized with your provider code.
 {{% /notes %}}
 
-However, there are some circumstances when using Pulumi Provider SDK and publishing SDKs may be a better option:
+However, using Pulumi Provider SDK and publishing SDKs might work better when:
 
 - If the component is intended for internal use and your organization has security policies that restrict the ability of developers to install software on their devices (specifically, a required runtime for your package), writing your component in Go and publishing it as a binary with published SDKs hosted in an internal package feed will make it easier for consumers to use your package.
 - If you are intending to publish your component(s) in the Pulumi Registry for general public consumption, you should write your component in Go, and publish it as a binary with published SDKs hosted in the standard public package feeds (i.e., npm, PyPI, etc.). Note that the Pulumi Registry requires package contributors to generate SDKs in all languages Pulumi supports.
 - Your team is comfortable writing and maintaining code in Go.
-- Your organization already has the package feeds necessary to host SDKs in all languages in which the component may be consumed.
+- Your organization already has the package feeds necessary to host SDKs in all languages that might consume the component.
 
 ### Authoring a Pulumi provider
 
