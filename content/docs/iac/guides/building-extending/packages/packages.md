@@ -41,9 +41,18 @@ Some common use cases for local packages include:
 1. Using the [Azure Native provider](/registry/packages/azure-native/) to [generate a local SDK for a specific version of the Azure API](/registry/packages/azure-native/version-guide/#accessing-any-api-version-via-local-packages).
 1. Consuming a Pulumi component published in [Pulumi IDP](/docs/idp/), or directly via a Git reference.
 
-In order to consume a Pulumi package, you must have the runtime installed for the language in which the provider is written. For example, if a package is written in TypeScript, any consumers of the package will require the NodeJS runtime to be installed in order to use the package.
+In order to consume a Pulumi package, there may be additional runtime requirements. Runtime requirements differ by the language in which the package is written:
 
-Go compiles to a native binary and does not require a runtime, and thus has the lowest overhead for package consumers. Most Pulumi packages in the Pulumi Registry (including all of the packages for the major cloud providers) are written in Go.
+- TypeScript packages require the NodeJS runtime.
+- Python packages require a Python interpreter.
+- Go packages do not require a runtime if they are compiled. If they are referenced via source (e.g. a Pulumi component published via Pulumi IDP), they require a compatible version the Go language to be installed.
+- .NET packages do not require a runtime if they are compiled as runtime-included binaries, which is Pulumi's recommended approach. .NET packages compiled as runtime-dependent binaries require a runtime.
+- Java packages require a JVM runtime.
+- YAML packages do not have any specific runtime requirements.
+
+{{% notes type="info" %}}
+Packages in the Pulumi Registry are typically written in Go and are compiled, and therefore do not require a runtime. This includes all packages for popular cloud and SaaS providers.
+{{% /notes %}}
 
 ## The Pulumi Registry
 
