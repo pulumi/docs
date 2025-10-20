@@ -37,8 +37,8 @@ The method of consuming a Pulumi package depends on whether the package has publ
 
 Some common use cases for local packages include:
 
-1. Using the Any Terraform provider to generate a local SDK for a Terraform provider. (This feature allows you to consume any Terraform provider in a Pulumi program.)
-1. Using the Azure Native provider to generate a local SDK for a specific version of the Azure API.
+1. Using the [Any Terraform provider](/registry/packages/terraform-provider/) to generate a local SDK for a Terraform provider. (This feature allows you to consume any Terraform provider in a Pulumi program.)
+1. Using the [Azure Native provider](/registry/packages/azure-native/) to [generate a local SDK for a specific version of the Azure API](/registry/packages/azure-native/version-guide/#accessing-any-api-version-via-local-packages).
 1. Consuming a Pulumi component published in [Pulumi IDP](/docs/idp/).
 
 In order to consume a Pulumi package, you must have the runtime installed for the language in which the provider is written. For example, if a package is written in TypeScript, any consumers of the package will require the NodeJS runtime to be installed in order to use the package.
