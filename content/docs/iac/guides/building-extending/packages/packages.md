@@ -47,7 +47,7 @@ Go compiles to a native binary and does not require a runtime, and thus has the 
 
 ## The Pulumi Registry
 
-The Pulumi Registry contains a listing of popular Pulumi packages, and each package's Installation & Configuration page contains instructions on how to install the SDK for the provider ([example](/registry/packages/aws/installation-configuration/)). Most packages in the Pulumi Registry have published SDKs, including all of the packages for the major cloud providers. For packages that do not have published SDKs, the package's main page will show how to generate an SDK ([example](/registry/packages/terraform-provider/installation-configuration/#usage)).
+The Pulumi Registry contains a listing of popular Pulumi packages, and each package's Installation & Configuration page contains instructions on how to install the SDK for the provider ([example](/registry/packages/aws/installation-configuration/)). Most packages in the Pulumi Registry have published SDKs, including all of the packages for the major cloud providers. For packages that do not have published SDKs, the package's main page will show how to generate an SDK ([example](/registry/packages/honeycombio/#generate-provider)).
 
 ## Authoring packages
 
