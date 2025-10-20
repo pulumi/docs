@@ -46,7 +46,7 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 
 ### External Link Indicator
 
-Links that navigate users to a different UI/experience (different from the main docs site) should include the ↗ (U+2197 North East Arrow) symbol to indicate this transition.
+Links that navigate users to a different UI/experience (different from the main docs site) should include the ↗ (U+2197 North East Arrow) symbol to indicate this transition when linking from navigation menus or landing page cards.
 
 **When to use ↗:**
 - Links to generated API documentation (`/docs/reference/pkg/*`)
@@ -59,8 +59,8 @@ Links that navigate users to a different UI/experience (different from the main 
   - Example: `name: SDK docs ↗`
 - In landing page cards: append to the `heading` field with a space
   - Example: `heading: Python ↗`
-- In prose text: append after the link text with a space
-  - Example: `[Go SDK ↗](https://pkg.go.dev/...)`
+
+The symbol is not needed in regular in-text links within documentation pages.
 
 **Rationale:** The ↗ symbol is the web-standard indicator for external links and helps users understand they're navigating to a different UI, preventing surprise when the page appearance changes.
 
