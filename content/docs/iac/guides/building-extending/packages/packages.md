@@ -33,7 +33,7 @@ Pulumi packages consist of two parts that allow them to be consumed in any Pulum
 The method of consuming a Pulumi package depends on whether the package has published SDKs or not:
 
 - For packages with published SDKs, you can consume the package by adding a reference to the published SDK from the package feed, e.g. `npm install`, `dotnet package add`, etc. The published SDKs contain commands to automatically download the provider code/binary.
-- For packages without published SDKs, called [local packages](/docs/iac/guides/building-extending/packages/local-packages/#updating-local-packages), you can consume a package via the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command, which will download the package, either read (or dynamically generate) its schema, and generate a local SDK based on the schema file. The local SDKs may be committed to version control, or they can be regenerated at any time with the [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) command.
+- For packages without published SDKs, called [local packages](/docs/iac/guides/building-extending/packages/local-packages/#updating-local-packages), you can consume a package via the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command, which will download the provider plugin and generate a local SDK. Generated local SDKs may be committed to version control, or they can be regenerated at any time with the [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) command.
 
 Some common use cases for local packages include:
 
