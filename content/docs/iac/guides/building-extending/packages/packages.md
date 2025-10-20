@@ -19,13 +19,13 @@ aliases:
 - /docs/iac/guides/building-extending/packages/
 ---
 
-Pulumi Packages are the core technology that enables Pulumi [resources](/docs/iac/concepts/resources/) and [components](/docs/iac/concepts/components/) to be defined once and made available to users in all Pulumi languages.
+Pulumi Packages are the core technology that enables Pulumi [resources](/docs/iac/concepts/resources/), [components](/docs/iac/concepts/components/), and [functions](/docs/iac/concepts/functions/) to be defined once and made available to users in all Pulumi languages.
 
 ## How packages work
 
 Pulumi packages consist of three parts that allow them to be consumed in any Pulumi language:
 
-1. **The provider** which contains Pulumi resources and can be written in any language Pulumi supports. These resources may be custom resources (the base Pulumi resource type, where you define the CRUD operations), or, more commonly, components (which encapsulate custom resources or even other components).
+1. **The provider plugin** which contains Pulumi resources/functions and can be written in any language Pulumi supports. These resources may be custom resources (the base Pulumi resource type, where you define the CRUD operations), or, more commonly, components (which encapsulate custom resources or even other components).
 1. **A Pulumi package schema**, a JSON document which provides a public interface for the Pulumi engine to interact with your provider in order to create, update, and delete the resources your package defines.
 1. **An SDK** in the language of the consuming program, which is generated from the schema. SDKs may be published and hosted on package feeds (npm, PyPI, etc.) or they may be generated locally by the Pulumi CLI when the package is added to your Pulumi program.
 
