@@ -80,7 +80,8 @@ It is technically possible to author a Pulumi provider in any language, create a
 
 However, there are some circumstances when using Pulumi Provider SDK and publishing SDKs may be a better option:
 
-- The requirement for consumers to install the package language's runtime is onerous. This may be because you have a large number of development teams that all want to write Pulumi in different languages, or you are writing a component for public consumption. The [Pulumi EKS package](/registry/packages/eks/) is an example of the latter use case.
+- If the component is intended for internal use and your organization has security policies that restrict the ability of developers to install software on their devices (specifically, a required runtime for your package), writing your component in Go and publishing it as a binary with published SDKs hosted in an internal package feed will make it easier for consumers to use your package.
+- If you are intending to publish your component(s) in the Pulumi Registry for general public consumption, you should write your component in Go, and publish it as a binary with published SDKs hosted in the standard public package feeds (i.e., npm, PyPI, etc.). Note that the Pulumi Registry requires package contributors to generate SDKs in all languages Pulumi supports.
 - Your team is comfortable writing and maintaining code in Go.
 - Your organization already has the package feeds necessary to host SDKs in all languages in which the component may be consumed.
 
