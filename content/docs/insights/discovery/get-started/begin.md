@@ -101,37 +101,39 @@ values:
 
 {{% choosable cloud azure %}}
 
-To configure Pulumi Insights with Azure, you will use [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc/) for authentication. Follow these steps:
+To configure Pulumi Insights with Azure, you can use either OpenID Connect (OIDC) or client secret authentication. **We recommend using OIDC** for passwordless authentication, as it is more secure and eliminates the need to store and manage long-lived credentials.
 
-1. Create a Service Principal in Azure, then generate the following values:
-   - **clientId** (also called **appId** in the Azure UI)
-   - **tenantId**
-   - **subscriptionId**
-   - **clientSecret** (also called **password** in the Azure UI)
+**Option 1: OIDC authentication (recommended)**
 
-Next, go back to Pulumi ESC and configure your cloud credentials and trust relationship you just created:
+1. Create a Microsoft Entra application and configure federated credentials
+1. Assign the appropriate role to your service principal (e.g., Reader role for read-only access)
+1. Configure your ESC environment with OIDC settings
+
+Example ESC configuration for OIDC:
 
 ```yaml
 values:
   azure:
-    fn::open::azure-login:
-      clientId: <YOUR_CLIENT_ID>
-      tenantId: <YOUR_TENANT_ID>
-      subscriptionId: <YOUR_SUBSCRIPTION_ID>
-      clientSecret:
-        'fn::secret': <INSERT_CLIENT_SECRET_HERE>
+    login:
+      fn::open::azure-login:
+        clientId: <YOUR_CLIENT_ID>
+        tenantId: <YOUR_TENANT_ID>
+        subscriptionId: <YOUR_SUBSCRIPTION_ID>
+        oidc: true
   environmentVariables:
-    ARM_CLIENT_ID: ${azure.clientId}
-    AZURE_CLIENT_ID: ${azure.clientId}
-    ARM_TENANT_ID: ${azure.tenantId}
-    AZURE_TENANT_ID: ${azure.tenantId}
-    ARM_SUBSCRIPTION_ID: ${azure.subscriptionId}
-    ARM_CLIENT_SECRET: ${azure.clientSecret}
-    AZURE_CLIENT_SECRET: ${azure.clientSecret}
+    ARM_USE_OIDC: 'true'
+    ARM_CLIENT_ID: ${azure.login.clientId}
+    ARM_TENANT_ID: ${azure.login.tenantId}
+    ARM_OIDC_TOKEN: ${azure.login.oidc.token}
+    ARM_SUBSCRIPTION_ID: ${azure.login.subscriptionId}
 ```
 
+**Option 2: Client secret authentication**
+
+Alternatively, you can use a Service Principal with a client secret. This requires generating a client secret in Azure and storing it securely in ESC.
+
 {{< notes type="info" >}}
-  For more details on configuring Azure credentials with ESC, refer to [ESC Azure provider documentation](/docs/esc/environments/configuring-oidc/azure/).
+  For complete step-by-step instructions on configuring Azure credentials for Pulumi Insights, including detailed setup for both OIDC and client secret authentication, see the [Azure configuration guide](/docs/insights/discovery/accounts/#azure).
 {{< /notes >}}
 
 {{% /choosable %}}
