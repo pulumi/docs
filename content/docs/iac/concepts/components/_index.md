@@ -156,10 +156,15 @@ The following types are supported in component arguments:
 
 The following types are not supported in component arguments:
 
-- **Union types**: TypeScript union types like `string | number` cannot be serialized
-- **Functions/callbacks**: Functions cannot be passed as component arguments
-- **Complex generic types**: Deeply nested or complex generic types may not serialize correctly
-- **Platform-specific types**: Types that exist only in one language and cannot be translated
+- **Union types**: TypeScript union types like `string | number` are not supported due to limitations in schema inference.
+- **Functions/callbacks**: Functions cannot be used in component arguments as they cannot be represented in the schema.
+- **Platform-specific types**: Types that exist only in one language and cannot be translated.
+
+### Design recommendations
+
+For better usability and maintainability:
+
+- **Avoid deeply nested types**: While complex generic types can be serialized, deeply nested structures make components harder to use and understand. Keep argument structures simple and flat when possible.
 
 **Example of unsupported TypeScript types:**
 
@@ -181,21 +186,8 @@ export interface MyComponentArgs {
 
 Each language has specific requirements for component constructors to ensure proper schema generation:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-{{% choosable language javascript %}}
-
-JavaScript components should follow the same pattern as TypeScript, with the constructor accepting `name`, `args`, and `opts` parameters.
-
-```javascript
-class MyComponent extends pulumi.ComponentResource {
-    constructor(name, args, opts) {
-        super("pkg:index:MyComponent", name, {}, opts);
-    }
-}
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 **Requirements:**
@@ -303,11 +295,11 @@ class MyComponentArgs extends ResourceArgs {
 
 When designing component arguments:
 
-1. **Use Input types**: Always wrap your arguments in the language's input type (e.g., `pulumi.Input<string>`) to support both plain values and outputs from other resources
-1. **Keep types simple**: Stick to primitive types, arrays, and simple objects
-1. **Avoid union types**: If you need multiple possible types, consider using separate properties or creating multiple component variants
-1. **Document required vs. optional**: Clearly document which arguments are required and which have defaults
-1. **Follow language conventions**: Use camelCase for schema properties but follow language-specific naming in implementation (snake_case in Python, PascalCase in .NET)
+1. **Wrap all scalar members in Input types**: Every scalar argument should be wrapped in the language's input type (e.g., `pulumi.Input<string>`). This allows users to pass both plain values and outputs from other resources, avoiding the need to use `apply` for resource composition.
+1. **Use basic types**: Stick to primitive types, arrays, and basic objects.
+1. **Avoid union types**: If you need multiple possible types, consider using separate properties or creating multiple component variants.
+1. **Document required vs. optional**: Clearly document which arguments are required and which have defaults.
+1. **Follow language conventions**: Use camelCase for schema properties but follow language-specific naming in implementation (snake_case in Python, PascalCase in .NET).
 
 ## Creating Child Resources
 

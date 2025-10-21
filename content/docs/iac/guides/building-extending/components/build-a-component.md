@@ -661,7 +661,7 @@ export interface StaticPageArgs {
 }
 ```
 
-Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. This means certain types like union types (e.g., `string | number`) and functions are not supported. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
+Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. Certain types like union types (e.g., `string | number`) and functions are not supported due to schema inference limitations. For details on type requirements and limitations, see [Component arguments and type requirements](/docs/iac/concepts/components/#component-arguments-and-type-requirements).
 
 {{% /choosable %}}
 
