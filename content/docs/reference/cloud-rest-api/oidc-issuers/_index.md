@@ -19,6 +19,7 @@ The API provides endpoints for the following operations:
 
 - Registering new OIDC issuers
 - Updating and deleting issuers
+- Regenerating issuer thumbprints
 - Getting issuer details
 - Listing all issuers for an organization
 - Managing authentication policies for issuers
@@ -103,6 +104,32 @@ curl \
   --request PATCH \
   --data '{ "name":"GitHub", "maxExpiration": 3600 }' \
   https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/{issuerId}
+```
+
+## Regenerate issuer thumbprints
+
+Regenerate the TLS certificate thumbprints for an existing OIDC issuer. This operation will automatically fetch and update the thumbprints from the issuer's current TLS certificates.
+
+```plain
+POST /api/orgs/{organization}/oidc/issuers/{issuerId}/regenerate-thumbprints
+```
+
+### Parameters
+
+| Parameter           | Type          | In    | Description         |
+|---------------------|---------------|-------|---------------------|
+| `organization`      | string        | path  | organization name   |
+| `issuerId`          | string        | path  | issuer id to update |
+
+### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  https://api.pulumi.com/api/orgs/{organization}/oidc/issuers/{issuerId}/regenerate-thumbprints
 ```
 
 ## Delete an issuer
