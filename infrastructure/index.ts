@@ -842,6 +842,9 @@ const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
                         StringNotEquals: {
                             "aws:PrincipalAccount": awsCallerIdentityResult.accountId,
                         },
+                        "Null": {
+                            "AWS:SourceArn": "true",
+                        },
                     },
                 },
             ],
