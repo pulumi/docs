@@ -17,8 +17,7 @@ You will review documentation changes and provide feedback on style, accuracy, a
 
 **If no PR number is provided**:
 - Use `git status` to check for uncommitted changes
-- Use `git diff master` to compare current branch against master
-- If on master with uncommitted changes, review those changes
+- Use `git diff master...HEAD` to compare current branch against master
 - Review the changes according to the criteria below
 
 ## Review Criteria
