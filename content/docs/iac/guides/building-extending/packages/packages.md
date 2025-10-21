@@ -69,13 +69,13 @@ There are two common cases for authoring packages:
 
 If you are authoring a Pulumi component to be shared within your team or organization, you will need to decide whether to use local packages or publish SDKs. **Most component authors will want consumers to use local packages** for the following reasons:
 
-- The overhead of publishing SDKs can be significant: your CI/CD process will need to generate SDKs for all Pulumi languages (or at least all the languages your package consumers will use) and you will need package feeds to host those published SDKs.
-- Pulumi only offers tooling for writing packages with published SDKs in Go, the [Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/).
+- Most component authors will want to use local packages because publishing SDKs requires significant overhead: your CI/CD process will need to generate SDKs for all Pulumi languages (or at least all the languages your package consumers will use) and you will need package feeds to host those published SDKs.
+- If you are authoring **components only** (not custom resources), you can write them in any Pulumi language. However, if you want to publish SDKs for your components, you'll need to use the [Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/) (written in Go) to generate the schema that enables multi-language SDK generation. For components, this added complexity is usually not worth the effort compared to using local packages.
 
 For an example of building and publishing a component with local packages, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
 
 {{% notes type="info" %}}
-You can author a Pulumi provider in any language, create a hand-authored schema, then generate and publish SDKs from that schema. However, this approach requires significant effort to manage at scale, as you'll need to maintain the schema manually and ensure it stays synchronized with your provider code.
+You can author a Pulumi package in any language, create a hand-authored schema, then generate and publish SDKs from that schema. However, this approach requires significant effort to manage at scale, as you'll need to maintain the schema manually and ensure it stays synchronized with your provider code.
 {{% /notes %}}
 
 However, using Pulumi Provider SDK and publishing SDKs might work better when:
