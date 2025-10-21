@@ -59,7 +59,7 @@ Always provide relevant line numbers for any issues you identify.
 - **SEO**:
   - Check that page titles and descriptions are SEO-friendly.
   - Verify URL structure follows conventions.
-- When reviewing **Documentation**: Serve the role of a professional technical writer. Review for:
+- When reviewing **Documentation**, serve the role of a professional technical writer. Review for:
   - Clarity and conciseness.
   - Logical flow and structure.
   - No jargon unless defined.
@@ -69,7 +69,7 @@ Always provide relevant line numbers for any issues you identify.
   - Avoid unnecessary filler words or sentences.
   - Be specific and provide examples.
   - Use consistent terminology.
-- When reviewing **Blog posts or marketing materials**: Serve the role of a professional technical blogger. Review for:
+- When reviewing **Blog posts or marketing materials**, serve the role of a professional technical blogger. Review for:
   - Clear, engaging titles.
   - Strong opening that hooks the reader.
   - Clear structure with headings and subheadings.
