@@ -9,9 +9,9 @@ authors:
   - engin-diri
 ---
 
-Ask ChatGPT to "fix my broken deployment," and you'll get generic advice. Ask Pulumi Neo the same question, and you'll get a fix plan grounded in your actual infrastructure state.
+Ask a generic LLM to "fix my broken deployment," and you'll get generic advice. Ask Pulumi Neo the same question, and you'll get a fix plan grounded in your actual infrastructure state.
 
-The difference isn't about better prompts or newer models. It's about what the AI actually knows. ChatGPT has been trained on the internet. Neo has been trained on your infrastructure.
+The difference isn't about better prompts or newer models. It's about what the AI actually knows. Generic LLMs have been trained on the internet. Neo has been trained on your infrastructure.
 <!--more-->
 This distinction matters more than you'd think.
 
@@ -31,7 +31,7 @@ This is what makes it grounded AI: it's anchored to the reality of your infrastr
 
 The foundation matters more than you'd think.
 
-Traditional AI tools fail in DevOps because they operate in a vacuum. Ask ChatGPT to "fix my broken deployment," and you'll get generic advice that ignores your specific infrastructure, your state, your constraints.
+Traditional AI tools fail in DevOps because they operate in a vacuum. Ask a generic LLM to "fix my broken deployment," and you'll get generic advice that ignores your specific infrastructure, your state, your constraints.
 
 The difference with systems like Pulumi Neo comes down to what powers them: not just data, but **context**.
 
@@ -51,41 +51,37 @@ Pulumi's approach builds on this principle. Your infrastructure programs, state 
 
 This is the architectural shift that makes AI-powered DevOps actually work. AI agents are only as effective as the context they can access and the guardrails you have in place to keep them in check. You're not just automating actions anymore. You're automating understanding.
 
-## When pipelines learn to reason
+## Grounded reasoning in practice
 
-During a recent panel on AI-powered DevOps, one speaker described the pattern perfectly: early DevOps automated actions, while modern AI agents automate decisions.
+Early DevOps automated actions. Modern AI agents automate decisions. But grounded AI does something different: it automates understanding.
 
-In traditional environments, AI helps by predicting failures or recommending optimizations. But when you combine observability data, infrastructure-as-code templates, and event streams into a single reasoning loop grounded in a context lake, the line between DevOps and AI operations starts to blur.
+When you combine observability data, infrastructure-as-code programs, and deployment history into a context lake, the AI doesn't just predict what might happen. It reasons about what is happening based on your actual infrastructure state.
 
-For example, [Neo can watch infrastructure drift](/blog/10-things-you-can-do-with-neo/), identify whether it stems from a human push or a misconfigured resource, and generate a fix plan that maps back to your Pulumi program. That feedback isn't magic. It's grounded in the same infrastructure metadata developers already use. The context lake ensures Neo isn't guessing. It's reasoning from your specific infrastructure truth.
+[Neo can watch infrastructure drift](/blog/10-things-you-can-do-with-neo/), identify whether it stems from a manual change or a misconfigured resource, and generate a fix plan that maps back to your Pulumi program. That feedback isn't guesswork. It's grounded in the same infrastructure metadata developers already use. The context lake ensures Neo isn't making probabilistic predictions. It's reasoning from your specific infrastructure truth.
 
 ![img_2.png](img_2.png)
 
-This is the new cognitive layer of DevOps. A system that doesn't simply automate deployment, but understands the intent behind it.
+This is what separates grounded AI from generic LLMs. Neo doesn't just automate deployment. It understands the intent behind it.
 
-## Why engineers still matter
+## The human layer stays critical
 
-Every engineer who's tried to prompt an LLM to "write a Pulumi program for me" knows how quickly hallucinations creep in. You still need human context: the judgment to choose the right platform, the discipline to model dependencies, the awareness of compliance and cost.
+Grounded AI doesn't replace engineering judgment. Every engineer who's tried to prompt a generic LLM to "write a Pulumi program for me" knows how quickly hallucinations creep in. You still need human context: the judgment to choose the right platform, the discipline to model dependencies, the awareness of compliance and cost.
 
-That's where Pulumi Neo fits best. It's not a chatbot for infrastructure. [It's an extension of your own reasoning](/docs/ai/get-started/).
+That's where grounded AI like Neo fits best. It's not a chatbot for infrastructure. [It's an extension of your own reasoning](/docs/ai/get-started/).
 
-Neo learns from the same program graph and state data you already manage, drawing from a continuously updated context lake of your infrastructure reality. Its recommendations stay grounded in your environment, not a generic prompt window trained on the public internet.
+Neo learns from the same program graph and state data you already manage, drawing from a continuously updated context lake of your infrastructure reality. Its recommendations stay grounded in your environment, not floating in a generic prompt window trained on the public internet.
 
-The real opportunity isn't about fewer engineers. It's about smarter loops between human expertise and machine feedback.
+The opportunity isn't about replacing engineers. It's about creating smarter feedback loops between human expertise and AI that actually understands your infrastructure.
 
-## Where this goes next
+## What grounded AI enables
 
-If the first generation of DevOps automated deployment, the next generation automates understanding.
+The first generation of DevOps automated deployment. Grounded AI automates understanding.
 
-We're entering a phase where infrastructure as code becomes infrastructure as cognition.
-
-AI-powered observability will learn to correlate incidents before they cascade. CI/CD will become continuous reasoning rather than continuous execution. [Platform teams](/blog/why-every-platform-engineer-should-care-about-kubernetes-operators/) will spend less time fighting YAML and more time guiding systems that can think with them.
+Infrastructure becomes queryable. AI-powered observability correlates incidents before they cascade. CI/CD becomes continuous reasoning rather than continuous execution. [Platform teams](/blog/why-every-platform-engineer-should-care-about-kubernetes-operators/) spend less time fighting YAML and more time guiding systems that reason alongside them.
 
 The context lake architecture makes this possible. Instead of static documentation and scattered tribal knowledge, your infrastructure context becomes something AI agents can actually query and reason over.
 
-So no, AI won't kill DevOps.
-
-But it might finally force us to admit what the job actually is: understanding systems, not just running them.
+Grounded AI won't replace engineers. But it will change what engineering means: less time translating intent into YAML, more time reasoning about systems at a higher level.
 
 ## Try it yourself
 
