@@ -1,10 +1,10 @@
 ---
-title: "Bicep Alternative | Pulumi"
+title: "Chef Alternative | Pulumi"
 meta_desc: Infrastructure as Code in any programming language. Enable your team to get code to any cloud productively, securely, and reliably.
 layout: gads-template
 block_external_search_index: true
 
-heading: "Bicep Alternative"
+heading: "Chef Alternative"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
@@ -12,7 +12,7 @@ subheading: |
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Bicep alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Chef alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
 
 key_features_above:
     items:
@@ -23,7 +23,7 @@ key_features_above:
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-bicep"
+            link: "https://app.pulumi.com/signup?utm_source=gads-chef"
           features:
               - title: Code faster
                 description: |
@@ -140,7 +140,7 @@ key_features:
                   kubeconfig: ${cluster.kubeconfig}
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-bicep"
+            link: "https://app.pulumi.com/signup?utm_source=gads-chef"
           features:
               - title: Native cloud providers
                 description: |
@@ -159,7 +159,7 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-bicep"
+            link: "https://app.pulumi.com/signup?utm_source=gads-chef"
           features:
               - title: Version and review
                 description: |
@@ -195,7 +195,7 @@ key_features_below:
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-bicep"
+            link: "https://app.pulumi.com/signup?utm_source=gads-chef"
           features:
               - title: Pulumi IaC
                 description: |
