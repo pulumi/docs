@@ -1,5 +1,5 @@
 ---
-title: "Context is King: Why Neo Understands Your Infrastructure"
+title: "Grounded AI: Why Neo Knows Your Infrastructure"
 meta_desc: "Pulumi Neo doesn't just generate code—it reasons about your actual infrastructure using context lakes. Learn why grounded AI beats generic LLMs for DevOps."
 date: 2025-10-21
 draft: false
@@ -15,17 +15,17 @@ The difference isn't about better prompts or newer models. It's about what the A
 <!--more-->
 This distinction matters more than you'd think.
 
-## The shift beneath the headline
+## The grounding problem
 
-Look at any recent hiring trend and you'll notice something strange. The "DevOps Engineer" title is disappearing from job boards, yet the work has never been more relevant. Those same responsibilities are now spread across platform engineers, cloud engineers, SREs, and AI-driven automation specialists.
+Most AI tools treat infrastructure like a text generation problem. You describe what you want, the model produces code, and you hope it works.
 
-The old idea of DevOps as "the people who deploy" is dissolving into something broader. Pipelines are no longer static YAML files; they're becoming interactive systems that respond, adapt, and even reason.
+This approach fails more often than it succeeds because the AI has no connection to your actual infrastructure. It doesn't know what resources you've already deployed, what dependencies exist, or what policies you need to follow. It's generating code from patterns it learned on the internet, not from understanding your environment.
 
-A few years ago, you'd build a Jenkins pipeline, test it, and hope it didn't break during a release. Today, teams using Pulumi Cloud can wire [Pulumi Neo](/blog/pulumi-neo/) (an AI agent trained on infrastructure context) directly into that workflow.
+[Pulumi Neo](/blog/pulumi-neo/) takes a different approach. It's trained on your infrastructure context: your programs, your state, your resource relationships. When you ask Neo about drift, it doesn't guess. It queries your actual deployment history. When it suggests a fix, it reasons from your program graph, not generic examples.
 
 Neo doesn't just autocomplete code. It [understands state, resources, dependencies](/docs/ai/), and cloud behavior. When something fails, Neo explains why, not just what.
 
-That's not a replacement. That's cognition layered on top of automation.
+This is what makes it grounded AI: it's anchored to the reality of your infrastructure, not floating in a sea of internet-trained probabilities.
 
 ## What makes Neo different
 
