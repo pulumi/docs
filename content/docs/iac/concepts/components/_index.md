@@ -132,7 +132,7 @@ When authoring components that will be consumed across different languages (mult
 
 ### Serialization requirements
 
-Component arguments must be serializable, meaning they need to be convertible to a format that can be transmitted and reconstructed. This is necessary because:
+Component arguments must be serializable, meaning you must convert them to a format that the engine can transmit and reconstruct. This is necessary because:
 
 1. The Pulumi engine needs to understand and validate the inputs
 1. Multi-language components need to translate arguments between languages
@@ -142,9 +142,9 @@ Component arguments must be serializable, meaning they need to be convertible to
 
 The following types are supported in component arguments:
 
-- **Primitive types**: `string`, `number`/`int`, `boolean`
-- **Arrays/lists**: Arrays of any supported type
-- **Objects/maps**: Objects with properties of supported types
+- **Primitive types**: `string`, `number`/`int`, `boolean`.
+- **Arrays/lists**: Arrays of any supported type.
+- **Objects/maps**: Objects with properties of supported types.
 - **Input wrappers**: Language-specific input types that wrap values:
   - TypeScript/JavaScript: `pulumi.Input<T>`
   - Python: `pulumi.Input[T]`
@@ -156,10 +156,10 @@ The following types are supported in component arguments:
 
 The following types are not supported in component arguments:
 
-- **Union types**: TypeScript union types like `string | number` cannot be serialized
-- **Functions/callbacks**: Functions cannot be passed as component arguments
-- **Complex generic types**: Deeply nested or complex generic types may not serialize correctly
-- **Platform-specific types**: Types that exist only in one language and cannot be translated
+- **Union types**: TypeScript union types like `string | number` cannot be serialized.
+- **Functions/callbacks**: Functions cannot be passed as component arguments.
+- **Complex generic types**: Deeply nested or complex generic types may not serialize correctly.
+- **Platform-specific types**: Types that exist only in one language and cannot be translated.
 
 **Example of unsupported TypeScript types:**
 
@@ -303,11 +303,11 @@ class MyComponentArgs extends ResourceArgs {
 
 When designing component arguments:
 
-1. **Use Input types**: Always wrap your arguments in the language's input type (e.g., `pulumi.Input<string>`) to support both plain values and outputs from other resources
-1. **Keep types simple**: Stick to primitive types, arrays, and simple objects
-1. **Avoid union types**: If you need multiple possible types, consider using separate properties or creating multiple component variants
-1. **Document required vs. optional**: Clearly document which arguments are required and which have defaults
-1. **Follow language conventions**: Use camelCase for schema properties but follow language-specific naming in implementation (snake_case in Python, PascalCase in .NET)
+1. **Use Input types**: Always wrap your arguments in the language's input type (e.g., `pulumi.Input<string>`) to support both plain values and outputs from other resources.
+1. **Use basic types**: Stick to primitive types, arrays, and basic objects.
+1. **Avoid union types**: If you need multiple possible types, consider using separate properties or creating multiple component variants.
+1. **Document required vs. optional**: Clearly document which arguments are required and which have defaults.
+1. **Follow language conventions**: Use camelCase for schema properties but follow language-specific naming in implementation (snake_case in Python, PascalCase in .NET).
 
 ## Creating Child Resources
 
