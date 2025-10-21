@@ -132,7 +132,7 @@ When authoring components that will be consumed across different languages (mult
 
 ### Serialization requirements
 
-Component arguments must be serializable, meaning they need to be convertible to a format that can be transmitted and reconstructed. This is necessary because:
+Component arguments must be serializable, meaning you must convert them to a format that the engine can transmit and reconstruct. This is necessary because:
 
 1. The Pulumi engine needs to understand and validate the inputs
 1. Multi-language components need to translate arguments between languages
@@ -142,9 +142,9 @@ Component arguments must be serializable, meaning they need to be convertible to
 
 The following types are supported in component arguments:
 
-- **Primitive types**: `string`, `number`/`int`, `boolean`
-- **Arrays/lists**: Arrays of any supported type
-- **Objects/maps**: Objects with properties of supported types
+- **Primitive types**: `string`, `number`/`int`, `boolean`.
+- **Arrays/lists**: Arrays of any supported type.
+- **Objects/maps**: Objects with properties of supported types.
 - **Input wrappers**: Language-specific input types that wrap values:
   - TypeScript/JavaScript: `pulumi.Input<T>`
   - Python: `pulumi.Input[T]`
