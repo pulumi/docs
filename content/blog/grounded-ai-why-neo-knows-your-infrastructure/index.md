@@ -1,7 +1,7 @@
 ---
 title: "Grounded AI: Why Neo Knows Your Infrastructure"
 meta_desc: "Pulumi Neo doesn't just generate code—it reasons about your actual infrastructure using context lakes. Learn why grounded AI beats generic LLMs for DevOps."
-date: 2025-10-21
+date: 2025-10-24
 draft: false
 meta_image: meta.png
 tags: ["ai", "devops", "pulumi-neo", "platform-engineering", "infrastructure-as-code", "context-lake"]
