@@ -791,13 +791,13 @@ const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
             Version: "2012-10-17",
             Statement: [
                 {
-                    Sid: "AllowCloudFrontServicePrincipal",
+                    Sid: "AllowCloudFrontServicePrincipalReadOnly",
                     Effect: "Allow",
                     Principal: {
                         Service: "cloudfront.amazonaws.com",
                     },
-                    Action: "s3:GetObject",
-                    Resource: `${bucketArn}/*`,
+                    Action: ["s3:GetObject", "s3:ListBucket"],
+                    Resource: [bucketArn, `${bucketArn}/*`],
                     Condition: {
                         StringEquals: {
                             "AWS:SourceArn": distributionArn,
