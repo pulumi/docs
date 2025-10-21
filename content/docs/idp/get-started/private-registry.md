@@ -4,13 +4,15 @@ title: Private Registry
 h1: "Private Registry"
 meta_desc: This page provides an overview on how to get started with Pulumi IDP Private Registry.
 weight: 3
+aliases:
+  - /docs/idp/get-started/private-registry/
 menu:
   idp:
     parent: idp-get-started
     identifier: idp-get-started-private-registry
 ---
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/pulumi-cloud/developer-portals/templates/) that power golden path workflows in Pulumi. Platform engineers can codify organizational standards in their building blocks using features like [Pulumi ESC](/docs/esc/) and [Pulumi IaC Policies](/docs/insights/get-started/add-policies/), ensuring that all infrastructure users provision is compliant from the beginning.
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. Platform engineers can codify organizational standards in their building blocks using features like [Pulumi ESC](/docs/esc/) and [Pulumi IaC Policies](/docs/insights/get-started/add-policies/), ensuring that all infrastructure users provision is compliant from the beginning.
 
 Developers leverage templates and components in their preferred workflows, whether it be incorporating components into Pulumi programs, scaffolding a low-code program with components and YAML, or using the Pulumi console for no-code deployments. The private registry is also a resource for developers to discover components and templates, browse their APIs, and use READMEs to understand how to use them.
 
@@ -58,7 +60,83 @@ pulumi package publish github.com/acme/k8s-cluster --readme README_LOCATION
 
 #### Component API Docs
 
-In addition to the component README, when a new component or component version is published, API documentation is automatically generated for each of the supported Pulumi languages
+In addition to the component README, when a new component or component version is published, API documentation is automatically generated listing the component's inputs and outputs.
+
+Additionally, input and output descriptions are generated based on annotations in the code as follows:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// Use JSDocs-like comments to annotate inputs and outputs.
+export interface PetAbstractedArgs {
+    /**
+     * This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name.
+     **/
+    size: string;
+}
+
+export class PetAbstracted extends pulumi.ComponentResource {
+    /**
+     * This output provides the generated pet name.
+     **/
+    public readonly petName: pulumi.Output<string>;
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+# Use Python docstrings to annotate inputs and outputs.
+class PetAbstractedArgs(TypedDict):
+    size: pulumi.Input[str]
+    """This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name."""
+
+class AppImage(pulumi.ComponentResource):
+    pet_name: pulumi.Output[str]
+    """This output provides the generated pet name."""
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+// Use Annotate() to create annotations for go component inputs and outputs.
+type PetAbstractedArgs struct {
+	Size pulumi.StringInput 	`pulumi:"size"`
+}
+
+func (f *PetAbstractedArgs) Annotate(a infer.Annotator) {
+	a.Describe(&f.Size, "This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name.")
+}
+
+type PetAbstractedOutputs struct {
+  PetName pulumi.StringOutput `pulumi:"petName"`
+}
+func (f *PetAbstractedOutputs) Annotate(a infer.Annotator) {
+	a.Describe(&f.PetName, "This output provides the generated pet name.")
+}
+
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+// Component API Docs annotations are not currently supported in .NET.
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// Component API Docs annotations are not currently supported in Java.
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 #### Specifying an Organization
 
@@ -81,7 +159,7 @@ pulumi package publish COMPONENT_LOCATION
 
 ## Pulumi Templates
 
-[Pulumi Templates](/docs/pulumi-cloud/developer-portals/templates/) are an efficient way to scaffold new Pulumi programs. Templates are available to users in the private registry and [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/).
+[Pulumi Templates](/docs/idp/developer-portals/templates/) are an efficient way to scaffold new Pulumi programs. Templates are available to users in the private registry and [New Project Wizard](/docs/idp/developer-portals/new-project-wizard/).
 
 {{% notes type="info" %}}
 Organization templates require the Enterprise or Business Critical plan
@@ -113,13 +191,13 @@ This approach provides:
 - Immutable version storage
 - Simple single-command publishing
 
-For detailed information, see [Publishing Registry-backed Templates](/docs/pulumi-cloud/developer-portals/templates/#publishing-registry-backed-templates).
+For detailed information, see [Publishing Registry-backed Templates](/docs/idp/developer-portals/templates/#publishing-registry-backed-templates).
 
 #### VCS-backed templates
 
 VCS-backed templates are sourced from configured GitHub or GitLab repositories.
 
-To configure VCS-backed templates, follow [this integration guide](/docs/pulumi-cloud/developer-portals/templates/#configuring-vcs-backed-templates).
+To configure VCS-backed templates, follow [this integration guide](/docs/idp/developer-portals/templates/#configuring-vcs-backed-templates).
 
 ### Components in Templates
 

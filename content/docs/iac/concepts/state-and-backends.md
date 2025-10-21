@@ -12,7 +12,7 @@ menu:
     iac:
         name: State & backends
         parent: iac-concepts
-        weight: 100
+        weight: 70
     concepts:
         weight: 9
 

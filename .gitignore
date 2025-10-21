@@ -40,6 +40,10 @@ Pipfile.lock
 static/css/styles.*.css
 static/js/bundle.min.*.js
 
+# Ignore webpack-generated assets from the build process.
+/assets/css/
+/assets/js/
+
 # Ignore Cypress-generated content.
 cypress/videos
 cypress/screenshots
@@ -72,3 +76,15 @@ _vendor/
 
 # mise local
 mise.local.toml
+
+# alias verification outputs
+scripts/alias-verification/aliases-correct.txt
+scripts/alias-verification/aliases-missing.txt
+scripts/alias-verification/aliases-suspicious.txt
+scripts/alias-verification/deletes.txt
+scripts/alias-verification/renames.txt
+scripts/alias-verification/fixes-data.txt
+scripts/alias-verification/historical-aliases-correct.txt
+scripts/alias-verification/historical-aliases-missing.txt
+scripts/alias-verification/historical-aliases-report.txt
+scripts/alias-verification/historical-fixes.json

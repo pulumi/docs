@@ -4,6 +4,8 @@ title_tag: Publishing Pulumi Components from GitHub Actions to Private Registry
 h1: Publishing Components from GitHub Actions
 meta_desc: Learn how to set up automated publishing of Pulumi components from GitHub Actions to your Pulumi Cloud private registry.
 meta_image: /images/docs/meta-images/docs-meta.png
+aliases:
+  - /docs/idp/get-started/publishing-from-github-actions/
 menu:
   idp:
     parent: idp-get-started
@@ -19,7 +21,7 @@ This guide walks through setting up automated testing and publishing workflows t
 - A Pulumi component authored and working locally (see [Build a Component](/docs/iac/using-pulumi/build-a-component))
 - A [GitHub repository](https://github.com/pulumi/pulumi-component-lifecycle-example) containing your component code
 - Access to a [Pulumi Cloud private registry](/docs/idp/get-started/private-registry)
-- Configure Pulumi and GitHub integrations: [OIDC](/docs/pulumi-cloud/access-management/oidc-client/github/), [GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/), etc.
+- Configure Pulumi and GitHub integrations: [OIDC](/docs/administration/access-identity/oidc-client/github/), [GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/), etc.
 - Component [documentation](https://github.com/pulumi/pulumi-component-lifecycle-example#static-page-component) written and committed to your repository
 
 ## Development Workflow Overview
@@ -105,7 +107,7 @@ clean:
 
 ### Unit Tests
 
-Write unit tests that validate your component's logic without creating cloud resources by using the `integration` library from the [Pulumi Provider SDK](/docs/iac/build-with-pulumi/pulumi-provider-sdk/). Here we can set up a mock provider server to catch calls for resource creation and return mock resources back.
+Write unit tests that validate your component's logic without creating cloud resources by using the `integration` library from the [Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/). Here we can set up a mock provider server to catch calls for resource creation and return mock resources back.
 
 ```go
 // ./main_test.go
@@ -297,7 +299,7 @@ In this workflow, we use some [Pulumi-specific GitHub Actions](/docs/iac/using-p
 For the integration tests:
 
 - [`actions/checkout`](https://github.com/actions/checkout) - check out the code into the Github runner
-- [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) - authenticate with Pulumi Cloud (make sure to [setup GitHub OIDC](/docs/pulumi-cloud/access-management/oidc-client/github/))
+- [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) - authenticate with Pulumi Cloud (make sure to [setup GitHub OIDC](/docs/administration/access-identity/oidc-client/github/))
 - [`aws-actions/configure-aws-credentials`](https://github.com/aws-actions/configure-aws-credentials) - set up AWS credentials
 - [`pulumi/actions`](https://github.com/pulumi/actions) - Run a Pulumi command, in this case, `pulumi preview`
 
@@ -418,7 +420,7 @@ jobs:
 
 Once your automated publishing workflow is established, consider these enhancements:
 
-- **Deployment Hooks**: Set up Pulumi Cloud [webhooks](/docs/pulumi-cloud/deployments/using/triggers/#deployment-webhooks) to trigger deployments when new component versions are published
+- **Deployment Hooks**: Set up Pulumi Cloud [webhooks](/docs/deployments/deployments/using/triggers/#deployment-webhooks) to trigger deployments when new component versions are published
 - **Version Compatibility Testing**: Test new versions against existing consumer programs
 - **Progressive Rollouts**: Implement canary releases and blue/green deployments for high-impact components
 - **Integration with Policies**: Create [Pulumi Crossguard](/docs/iac/crossguard/) policies that ensure only *approved* component versions are deployed

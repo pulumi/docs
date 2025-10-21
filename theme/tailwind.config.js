@@ -160,6 +160,10 @@ const green = {
 };
 
 module.exports = {
+    // ⚠️ CACHE BUST: October 2025 - Force new CSS fingerprint to invalidate CloudFront cache
+    // This is a temporary fix for the reinvent page missing CSS classes.
+    // See GitHub issue #16274 for long-term architectural fix.
+    // TODO: Remove this unused color after proper fingerprinting is implemented.
     purge: false,
     theme: {
         extend: {
@@ -170,6 +174,10 @@ module.exports = {
             },
             boxShadow: {
                 "3xl": "0 35px 70px -20px rgba(0, 0, 0, 0.5)",
+            },
+            // Unused color added solely to bust CloudFront CSS cache - See #16274
+            colors: {
+                'cache-bust-2025-10': '#000001',
             },
         },
         rgbColors: {

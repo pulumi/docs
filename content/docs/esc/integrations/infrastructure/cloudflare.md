@@ -205,7 +205,7 @@ ESC_ENV=my-project/pulumi-environment
 esc env init ${ESC_ENV}
 ```
 
-Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. These values are to be consumed by a Pulumi program hence they are placed under the `pulumiConfig` section. See the [syntax reference](https://www.pulumi.com/docs/esc/reference/) for more options.
+Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. These values are to be consumed by a Pulumi program hence they are placed under the `pulumiConfig` section. See the [syntax reference](https://www.pulumi.com/docs/reference/esc-syntax/) for more options.
 
 ```yaml
 values:

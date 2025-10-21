@@ -5,7 +5,7 @@ h1: Rotate credentials for external services
 meta_desc: Pulumi ESC enables credential rotation for various external services.
 menu:
   esc:
-    name: Rotated secrets
+    name: Rotated Secrets
     identifier: esc-rotated-secrets
     parent: esc-integrations
     weight: 2

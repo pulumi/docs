@@ -24,7 +24,7 @@ Since version `0.10.0` External Secrets Operator supports [Pulumi ESC as a secre
 
 ## Authentication
 
-Pulumi [Access Tokens](/docs/pulumi-cloud/access-management/access-tokens/) are recommended to access Pulumi ESC.
+Pulumi [Access Tokens](/docs/administration/access-identity/access-tokens/) are recommended to access Pulumi ESC.
 
 ## Creating a SecretStore
 

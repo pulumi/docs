@@ -95,11 +95,11 @@ products:
               more_info: |
                 Work with existing tools like IDEs, test frameworks, and package managers.
 
-                Integrate your [source control system](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
+                Integrate your [source control system](/docs/platform/deployments/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
 
                 Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/iac/packages-and-automation/continuous-delivery/).
 
-                Use event-based [webhooks](/docs/pulumi-cloud/webhooks/) to notify external services like Slack or continuous integration tools.
+                Use event-based [webhooks](/docs/platform/webhooks/) to notify external services like Slack or continuous integration tools.
 
                 Use [the Service API](/blog/pulumi-rest-api/) to manage stacks, updates, teams, and more.
         - header: Pulumi ESC
@@ -214,7 +214,7 @@ products:
           details:
             - title: Run cloud infrastructure operations remotely
               description: |
-                [Run remote infrastructure commands](/docs/pulumi-cloud/deployments/) to provision, configure, and destroy cloud resources, all executed in a secure cloud environment.
+                [Run remote infrastructure commands](/docs/platform/deployments/) to provision, configure, and destroy cloud resources, all executed in a secure cloud environment.
 
               more_info: |
                 Trigger deployments via REST API, click to deploy from Pulumi Cloud's console, Git Push to Deploy, Remote Automation API, and other programmatic building blocks.
@@ -223,12 +223,12 @@ products:
 
             - title: Manage infrastructure operations at high scale with Deployments-as-a-Service
               description: |
-                Use the [Pulumi Deployments REST API](/docs/pulumi-cloud/deployments/api/) to programmatically trigger deployments for high volume infrastructure automation use cases.
+                Use the [Pulumi Deployments REST API](/docs/platform/deployments/api/) to programmatically trigger deployments for high volume infrastructure automation use cases.
 
               more_info: |
-                Call Pulumi's [REST API endpoint](/docs/pulumi-cloud/deployments/api/) to trigger Pulumi commands that run in Pulumi Cloud (e.g., update, destroy, refresh, preview).
+                Call Pulumi's [REST API endpoint](/docs/platform/deployments/api/) to trigger Pulumi commands that run in Pulumi Cloud (e.g., update, destroy, refresh, preview).
 
-                Offload your local Automation API deployment workloads to Pulumi Cloud via the [Remote Automation API feature](/docs/pulumi-cloud/deployments/#deployment-triggers).
+                Offload your local Automation API deployment workloads to Pulumi Cloud via the [Remote Automation API feature](/docs/platform/deployments/#deployment-triggers).
         - header: Pulumi Copilot
           tabid: copilot-select
           subheader: AI-powered infrastructure management
@@ -307,14 +307,14 @@ products:
           details:
             - title: Set up identity and access controls
               description: |
-                Integrate SSO and your [identity provider](/docs/pulumi-cloud/access-management/scim/) with Pulumi, set [user permissions](/docs/pulumi-cloud/access-management/teams/) for each stack, and track user activity with [audit logs](/docs/pulumi-cloud/audit-logs/).
+                Integrate SSO and your [identity provider](/docs/administration/access-identity/scim/) with Pulumi, set [user permissions](/docs/administration/organizations-teams/teams/) for each stack, and track user activity with [audit logs](/docs/pulumi-cloud/audit-logs/).
 
               more_info: |
-                Single sign-on with any [SAML 2.0](/docs/pulumi-cloud/access-management/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
+                Single sign-on with any [SAML 2.0](/docs/administration/access-identity/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
 
-                Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/pulumi-cloud/access-management/scim/).
+                Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/administration/access-identity/scim/).
 
-                Set [role-based access controls](/docs/pulumi-cloud/access-management/teams/) that limit who can access infrastructure.
+                Set [role-based access controls](/docs/administration/organizations-teams/teams/) that limit who can access infrastructure.
 
                 Track the activity of users within your organization with [audit logs](/docs/pulumi-cloud/audit-logs/).
             - title: Collaborate better within teams
@@ -324,7 +324,7 @@ products:
               more_info: |
                 Invite new team members and share projects to collaborate on infrastructure.
 
-                View [timelines](/docs/pulumi-cloud/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
+                View [timelines](/docs/platform/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
 
                 [Tag stacks](/docs/concepts/stack/#stack-tags) for easier filtering and searching.
 

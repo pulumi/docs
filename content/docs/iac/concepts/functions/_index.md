@@ -8,7 +8,7 @@ menu:
     iac:
         name: Functions
         parent: iac-concepts
-        weight: 60
+        weight: 90
         identifier: iac-concepts-functions
     concepts:
         name: Functions

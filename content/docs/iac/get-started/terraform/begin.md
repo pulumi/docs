@@ -12,7 +12,6 @@ menu:
         weight: 2
 
 aliases:
-- /docs/iac/get-started/terraform/begin/
 ---
 
 ## Install Pulumi
