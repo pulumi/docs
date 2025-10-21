@@ -425,6 +425,28 @@ const SecurityHeadersPolicy = newSecurityHeadersPolicy('security-headers', confi
 // Copilot lives in an iframe
 const CopilotSecurityHeadersPolicy = newSecurityHeadersPolicy('copilot-security-headers', 'SAMEORIGIN');
 
+// CloudFront Function to append index.html to directory paths
+// This restores S3 website endpoint behavior when using OAC with REST API endpoint
+const indexRewriteFunction = new aws.cloudfront.Function("index-rewrite-function", {
+    runtime: "cloudfront-js-1.0",
+    comment: "Append index.html to directory paths",
+    code: `function handler(event) {
+    var request = event.request;
+    var uri = request.uri;
+
+    // Check whether the URI is missing a file name
+    if (uri.endsWith('/')) {
+        request.uri += 'index.html';
+    }
+    // Check whether the URI is missing a file extension (likely a directory)
+    else if (!uri.includes('.')) {
+        request.uri += '/index.html';
+    }
+
+    return request;
+}`,
+});
+
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
     compress: true,
@@ -446,6 +468,12 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
     defaultTtl: fiveMinutes,
     maxTtl: fiveMinutes,
     lambdaFunctionAssociations: config.doEdgeRedirects ? [getEdgeRedirectAssociation()] : [],
+    functionAssociations: [
+        {
+            eventType: "viewer-request",
+            functionArn: indexRewriteFunction.arn,
+        },
+    ],
     responseHeadersPolicyId: SecurityHeadersPolicy.id,
 };
 
