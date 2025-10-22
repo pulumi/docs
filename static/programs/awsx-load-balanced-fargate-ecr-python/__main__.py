@@ -28,8 +28,8 @@ service = awsx.ecs.FargateService(
             container=awsx.ecs.TaskDefinitionContainerDefinitionArgs(
                 name="my-service",
                 image=image.image_uri,
-                cpu=512,
-                memory=128,
+                cpu=256,
+                memory=512,
                 essential=True,
                 port_mappings=[
                     awsx.ecs.TaskDefinitionPortMappingArgs(

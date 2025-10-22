@@ -54,7 +54,7 @@ See below how Organization Access Tokens appears in Audit Logs:
 
 Learn more about using this feature in our [Access Token documentation](/docs/pulumi-cloud/access-management/organization-access-tokens/).
 
-Let's explore how one of our customers is adopting Organization Access Tokens in the Pulumi Service. [Fauna](https://fauna.com/), a Pulumi customer, is a distributed document relational database, delivered as a Cloud API. A native serverless architecture means no operations are required. Developers choose Fauna to build new applications faster and confidently scale existing ones across regions and the globe.
+Let's explore how one of our customers is adopting Organization Access Tokens in the Pulumi Service. [Fauna](https://faunadb.org/), a Pulumi customer, is a distributed document relational database, delivered as a Cloud API. A native serverless architecture means no operations are required. Developers choose Fauna to build new applications faster and confidently scale existing ones across regions and the globe.
 
 Previously, Fauna created a user on the Pulumi Service under a shared email account and generated a Personal Access Token for that account to manage their organization wide access. This worked well as it meant the access token was not tied to a specific user. However, when they migrated to using the Pulumi Service single sign-on (SSO) for their Organization, this approach no longer worked since all Pulumi users were now attached to their SSO provider. “This will immediately solve the issues we have. This is an improvement over the process we’re using today,” said Ben Cohen, Software Engineer at Fauna.
 

@@ -4,7 +4,7 @@ description: A program to create a Lambda write to S3 workflow on AWS
 
 resources:
   my-bucket:
-    type: aws:s3:BucketV2
+    type: aws:s3:Bucket
 
   lambda-role:
     type: aws:iam:Role

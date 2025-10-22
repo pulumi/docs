@@ -223,7 +223,7 @@ public createMxRecord(name: string, priority: number, value: string): void {
 }
 ```
 
-It's very similiar to our `createRecord` function, only this one has the `emailDisabled` check to ensure our consumers don't try to do the silly thing. We also increment our MX counter to keep track of how many MX records we've created, so that records with the same priority can be distinguished and have unique URNs when created.
+It's very similar to our `createRecord` function, only this one has the `emailDisabled` check to ensure our consumers don't try to do the silly thing. We also increment our MX counter to keep track of how many MX records we've created, so that records with the same priority can be distinguished and have unique URNs when created.
 
 ## What's Next?
 

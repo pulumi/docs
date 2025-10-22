@@ -21,11 +21,12 @@ section.docs-home {
 
     div.header {
         @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-right-bottom;
+        min-height: 200px;
 
         background-image: url("/images/docs/docs-home-header-background-mobile.svg");
 
         p {
-            @apply max-w-md;
+            @apply max-w-2xl;
         }
 
         @screen md {
@@ -40,14 +41,13 @@ section.docs-home {
         @screen xl {
             .docs-content-width-expanded & {
                 background-image: url("/images/docs/docs-home-header-background-desktop-wide.svg");
-                @apply bg-right;
             }
         }
 
         @screen xxl {
             .docs-content-width-expanded & {
                 p {
-                    @apply max-w-lg;
+                    @apply max-w-2xl;
                 }
             }
         }
@@ -227,3 +227,4 @@ section.docs-home {
         margin-bottom: 12px !important;
     }
 }
+

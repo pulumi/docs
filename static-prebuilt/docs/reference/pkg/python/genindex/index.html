@@ -73,6 +73,7 @@
 
 <div class="genindex-jumpbox">
  <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
@@ -105,6 +106,8 @@
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.add_environments">add_environments() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.add_environments">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.add_environments">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
@@ -114,6 +117,12 @@
         <li><a href="../pulumi_policy/#pulumi_policy.PolicyResourceOptions.additional_secret_outputs">(pulumi_policy.PolicyResourceOptions attribute)</a>
 </li>
       </ul></li>
+      <li><a href="../pulumi/#pulumi.ResourceHookBinding.after_create">after_create (pulumi.ResourceHookBinding attribute)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceHookBinding.after_delete">after_delete (pulumi.ResourceHookBinding attribute)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceHookBinding.after_update">after_update (pulumi.ResourceHookBinding attribute)</a>
+</li>
       <li><a href="../pulumi/#pulumi.Alias">Alias (class in pulumi)</a>
 </li>
       <li><a href="../pulumi/#pulumi.ResourceOptions.aliases">aliases (pulumi.ResourceOptions attribute)</a>
@@ -126,12 +135,12 @@
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.ApiAttributeError">ApiAttributeError</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient">ApiClient (class in pulumi_esc_sdk)</a>
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.ApiException">ApiException</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.ApiKeyError">ApiKeyError</a>
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.ApiResponse">ApiResponse (class in pulumi_esc_sdk)</a>
@@ -165,6 +174,20 @@
   </ul></td>
 </tr></table>
 
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../pulumi/#pulumi.ResourceHookBinding.before_create">before_create (pulumi.ResourceHookBinding attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../pulumi/#pulumi.ResourceHookBinding.before_delete">before_delete (pulumi.ResourceHookBinding attribute)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceHookBinding.before_update">before_update (pulumi.ResourceHookBinding attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -180,10 +203,16 @@
 </li>
       <li><a href="../pulumi/#pulumi.runtime.call_single">call_single() (in module pulumi.runtime)</a>
 </li>
+      <li><a href="../pulumi/#pulumi.ResourceHook.callback">callback (pulumi.ResourceHook attribute)</a>
+</li>
       <li><a href="../pulumi/#pulumi.provider.CallResult">CallResult (class in pulumi.provider)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.RemoteStack.cancel">cancel() (pulumi.automation.RemoteStack method)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.cancel">(pulumi.automation.Stack method)</a>
 </li>
+      </ul></li>
       <li><a href="../pulumi/#pulumi.automation.CancelEvent">CancelEvent (class in pulumi.automation)</a>
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.cert_file">cert_file (pulumi_esc_sdk.Configuration attribute)</a>
@@ -270,8 +299,12 @@
 </li>
       <li><a href="../pulumi/#pulumi.provider.ConstructResult">ConstructResult (class in pulumi.provider)</a>
 </li>
-      <li><a href="../pulumi/#pulumi.dynamic.ResourceProvider.create">create() (pulumi.dynamic.ResourceProvider method)</a>
+      <li><a href="../pulumi/#pulumi.automation.Stack.create">create() (pulumi.automation.Stack class method)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.dynamic.ResourceProvider.create">(pulumi.dynamic.ResourceProvider method)</a>
 </li>
+      </ul></li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment">create_environment() (pulumi_esc_sdk.EscApi method)</a>
 
       <ul>
@@ -301,6 +334,8 @@
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_with_http_info">create_environment_with_http_info() (pulumi_esc_sdk.EscApi method)</a>
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.create_environment_without_preload_content">create_environment_without_preload_content() (pulumi_esc_sdk.EscApi method)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.automation.Stack.create_or_select">create_or_select() (pulumi.automation.Stack class method)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.create_or_select_remote_stack_git_source">create_or_select_remote_stack_git_source() (in module pulumi.automation)</a>
 </li>
@@ -390,14 +425,14 @@
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_revision_tag_without_preload_content">delete_environment_revision_tag_without_preload_content() (pulumi_esc_sdk.EscApi method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_tag">delete_environment_tag() (pulumi_esc_sdk.EscApi method)</a>
 
       <ul>
         <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.delete_environment_tag">(pulumi_esc_sdk.EscClient method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_tag_with_http_info">delete_environment_tag_with_http_info() (pulumi_esc_sdk.EscApi method)</a>
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.delete_environment_tag_without_preload_content">delete_environment_tag_without_preload_content() (pulumi_esc_sdk.EscApi method)</a>
@@ -425,7 +460,11 @@
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.deserialize">deserialize() (pulumi_esc_sdk.ApiClient method)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.RemoteStack.destroy">destroy() (pulumi.automation.RemoteStack method)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.destroy">(pulumi.automation.Stack method)</a>
 </li>
+      </ul></li>
       <li><a href="../pulumi/#pulumi.automation.DestroyResult">DestroyResult (class in pulumi.automation)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.DiagnosticEvent">DiagnosticEvent (class in pulumi.automation)</a>
@@ -435,6 +474,8 @@
       <li><a href="../pulumi/#pulumi.automation.DiffKind">DiffKind (class in pulumi.automation)</a>
 </li>
       <li><a href="../pulumi/#pulumi.dynamic.DiffResult">DiffResult (class in pulumi.dynamic)</a>
+</li>
+      <li><a href="../pulumi_policy/#pulumi_policy.Policy.display_name">display_name (pulumi_policy.Policy attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -466,10 +507,10 @@
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentRevisionTags">EnvironmentRevisionTags (class in pulumi_esc_sdk)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EnvironmentTag">EnvironmentTag (class in pulumi_esc_sdk)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.Error">Error (class in pulumi_esc_sdk)</a>
 </li>
       <li><a href="../pulumi/#pulumi.error">error() (in module pulumi)</a>
@@ -488,6 +529,8 @@
 
       <ul>
         <li><a href="../pulumi/#pulumi.automation.RemoteStack.export_stack">(pulumi.automation.RemoteStack method)</a>
+</li>
+        <li><a href="../pulumi/#pulumi.automation.Stack.export_stack">(pulumi.automation.Stack method)</a>
 </li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.export_stack">(pulumi.automation.Workspace method)</a>
 </li>
@@ -515,6 +558,8 @@
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.files_parameters">files_parameters() (pulumi_esc_sdk.ApiClient method)</a>
 </li>
       <li><a href="../pulumi/#pulumi.Output.format">format() (pulumi.Output static method)</a>
+</li>
+      <li><a href="../pulumi_policy/#pulumi_policy.Policy.framework">framework (pulumi_policy.Policy attribute)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.ProjectBackend.from_dict">from_dict() (pulumi.automation.ProjectBackend static method)</a>
 
@@ -697,6 +742,8 @@
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.get_all_config">get_all_config() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.get_all_config">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.get_all_config">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
@@ -710,6 +757,8 @@
 
       <ul>
         <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.get_config">(pulumi.automation.LocalWorkspace method)</a>
+</li>
+        <li><a href="../pulumi/#pulumi.automation.Stack.get_config">(pulumi.automation.Stack method)</a>
 </li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.get_config">(pulumi.automation.Workspace method)</a>
 </li>
@@ -808,8 +857,12 @@
 </li>
       <li><a href="../pulumi_terraform/#pulumi_terraform.state.get_remote_reference_output">get_remote_reference_output() (in module pulumi_terraform.state)</a>
 </li>
-      <li><a href="../pulumi/#pulumi.runtime.get_root_directory">get_root_directory() (in module pulumi.runtime)</a>
+      <li><a href="../pulumi/#pulumi.get_root_directory">get_root_directory() (in module pulumi)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.runtime.get_root_directory">(in module pulumi.runtime)</a>
 </li>
+      </ul></li>
       <li><a href="../pulumi/#pulumi.runtime.get_root_resource">get_root_resource() (in module pulumi.runtime)</a>
 </li>
       <li><a href="../pulumi/#pulumi.Config.get_secret">get_secret() (pulumi.Config method)</a>
@@ -827,6 +880,8 @@
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.get_tag">get_tag() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.get_tag">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.get_tag">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
@@ -844,10 +899,18 @@
 <h2 id="H">H</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../pulumi/#pulumi.automation.RemoteStack.history">history() (pulumi.automation.RemoteStack method)</a>
+      <li><a href="../pulumi/#pulumi.ResourceOptions.hide_diffs">hide_diffs (pulumi.ResourceOptions attribute)</a>
 </li>
+      <li><a href="../pulumi/#pulumi.automation.RemoteStack.history">history() (pulumi.automation.RemoteStack method)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.history">(pulumi.automation.Stack method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../pulumi/#pulumi.ResourceOptions.hooks">hooks (pulumi.ResourceOptions attribute)</a>
+</li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.host">host (pulumi_esc_sdk.Configuration property)</a>
 </li>
   </ul></td>
@@ -863,6 +926,8 @@
 </li>
         <li><a href="../pulumi/#pulumi.dynamic.ReadResult.id">(pulumi.dynamic.ReadResult attribute)</a>
 </li>
+        <li><a href="../pulumi/#pulumi.ResourceHookArgs.id">(pulumi.ResourceHookArgs attribute)</a>
+</li>
         <li><a href="../pulumi/#pulumi.ResourceOptions.id">(pulumi.ResourceOptions attribute)</a>
 </li>
       </ul></li>
@@ -874,16 +939,24 @@
       </ul></li>
       <li><a href="../pulumi/#pulumi.ResourceOptions.import_">import_ (pulumi.ResourceOptions attribute)</a>
 </li>
+      <li><a href="../pulumi/#pulumi.automation.Stack.import_resources">import_resources() (pulumi.automation.Stack method)</a>
+</li>
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.import_stack">import_stack() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
         <li><a href="../pulumi/#pulumi.automation.RemoteStack.import_stack">(pulumi.automation.RemoteStack method)</a>
 </li>
+        <li><a href="../pulumi/#pulumi.automation.Stack.import_stack">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.import_stack">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
       <li><a href="../pulumi/#pulumi.info">info() (in module pulumi)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.info">(pulumi.automation.Stack method)</a>
 </li>
+      </ul></li>
       <li><a href="../pulumi/#pulumi.automation.InlineSourceRuntimeError">InlineSourceRuntimeError</a>
 </li>
       <li><a href="../pulumi/#pulumi.input_type">input_type() (in module pulumi)</a>
@@ -894,12 +967,12 @@
 </li>
       <li><a href="../pulumi/#pulumi.InputPropertyErrorDetails">InputPropertyErrorDetails (class in pulumi)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi/#pulumi.dynamic.CheckResult.inputs">inputs (pulumi.dynamic.CheckResult attribute)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.PulumiCommand.install">install() (pulumi.automation.PulumiCommand class method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.install_plugin">install_plugin() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
@@ -1009,6 +1082,8 @@
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.list_environments">list_environments() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.list_environments">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.list_environments">(pulumi.automation.Workspace method)</a>
 </li>
         <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscApi.list_environments">(pulumi_esc_sdk.EscApi method)</a>
@@ -1037,6 +1112,8 @@
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.list_tags">list_tags() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.list_tags">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.list_tags">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
@@ -1186,6 +1263,10 @@
       <ul>
         <li><a href="../pulumi/#pulumi.Config.name">(pulumi.Config attribute)</a>
 </li>
+        <li><a href="../pulumi/#pulumi.ResourceHook.name">(pulumi.ResourceHook attribute)</a>
+</li>
+        <li><a href="../pulumi/#pulumi.ResourceHookArgs.name">(pulumi.ResourceHookArgs attribute)</a>
+</li>
         <li><a href="../pulumi/#pulumi.ResourceTransformArgs.name">(pulumi.ResourceTransformArgs attribute)</a>
 </li>
         <li><a href="../pulumi/#pulumi.ResourceTransformationArgs.name">(pulumi.ResourceTransformationArgs attribute)</a>
@@ -1193,6 +1274,8 @@
         <li><a href="../pulumi/#pulumi.StackReference.name">(pulumi.StackReference attribute)</a>
 </li>
         <li><a href="../pulumi_policy/#pulumi_policy.Policy.name">(pulumi_policy.Policy attribute)</a>
+</li>
+        <li><a href="../pulumi_policy/#pulumi_policy.PolicyComplianceFramework.name">(pulumi_policy.PolicyComplianceFramework attribute)</a>
 </li>
         <li><a href="../pulumi_policy/#pulumi_policy.PolicyProviderResource.name">(pulumi_policy.PolicyProviderResource attribute)</a>
 </li>
@@ -1211,14 +1294,30 @@
         <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.CreateEnvironment.name_validate_regular_expression">(pulumi_esc_sdk.CreateEnvironment class method)</a>
 </li>
       </ul></li>
+      <li><a href="../pulumi/#pulumi.ResourceHookArgs.new_inputs">new_inputs (pulumi.ResourceHookArgs attribute)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceHookArgs.new_outputs">new_outputs (pulumi.ResourceHookArgs attribute)</a>
+</li>
       <li><a href="../pulumi/#pulumi.runtime.Mocks.new_resource">new_resource() (pulumi.runtime.Mocks method)</a>
 </li>
+      <li><a href="../pulumi_policy/#pulumi_policy.ResourceValidationArgs.not_applicable">not_applicable() (pulumi_policy.ResourceValidationArgs method)</a>
+
+      <ul>
+        <li><a href="../pulumi_policy/#pulumi_policy.StackValidationArgs.not_applicable">(pulumi_policy.StackValidationArgs method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../pulumi/#pulumi.ResourceHookArgs.old_inputs">old_inputs (pulumi.ResourceHookArgs attribute)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceHookArgs.old_outputs">old_outputs (pulumi.ResourceHookArgs attribute)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceHookOptions.on_dry_run">on_dry_run (pulumi.ResourceHookOptions attribute)</a>
+</li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.open_and_read_environment">open_and_read_environment() (pulumi_esc_sdk.EscClient method)</a>
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.open_and_read_environment_at_version">open_and_read_environment_at_version() (pulumi_esc_sdk.EscClient method)</a>
@@ -1288,7 +1387,11 @@
 </li>
       </ul></li>
       <li><a href="../pulumi/#pulumi.automation.RemoteStack.outputs">outputs() (pulumi.automation.RemoteStack method)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.outputs">(pulumi.automation.Stack method)</a>
 </li>
+      </ul></li>
       <li><a href="../pulumi/#pulumi.dynamic.CreateResult.outs">outs (pulumi.dynamic.CreateResult attribute)</a>
 
       <ul>
@@ -1335,6 +1438,8 @@
       </ul></li>
       <li><a href="../pulumi_policy/#pulumi_policy.Policy">Policy (class in pulumi_policy)</a>
 </li>
+      <li><a href="../pulumi_policy/#pulumi_policy.PolicyComplianceFramework">PolicyComplianceFramework (class in pulumi_policy)</a>
+</li>
       <li><a href="../pulumi_policy/#pulumi_policy.PolicyConfigSchema">PolicyConfigSchema (class in pulumi_policy)</a>
 </li>
       <li><a href="../pulumi_policy/#pulumi_policy.PolicyCustomTimeouts">PolicyCustomTimeouts (class in pulumi_policy)</a>
@@ -1362,6 +1467,14 @@
       <li><a href="../pulumi/#pulumi.automation.PreludeEvent">PreludeEvent (class in pulumi.automation)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.RemoteStack.preview">preview() (pulumi.automation.RemoteStack method)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.preview">(pulumi.automation.Stack method)</a>
+</li>
+      </ul></li>
+      <li><a href="../pulumi/#pulumi.automation.Stack.preview_destroy">preview_destroy() (pulumi.automation.Stack method)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.automation.Stack.preview_refresh">preview_refresh() (pulumi.automation.Stack method)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.PreviewResult">PreviewResult (class in pulumi.automation)</a>
 </li>
@@ -1401,12 +1514,12 @@
       </ul></li>
       <li><a href="../pulumi/#pulumi.property">property() (in module pulumi)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi_policy/#pulumi_policy.PolicyResource.property_dependencies">property_dependencies (pulumi_policy.PolicyResource attribute)</a>
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.PropertyAccessor">PropertyAccessor (class in pulumi_esc_sdk)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../pulumi/#pulumi.automation.PropertyDiff">PropertyDiff (class in pulumi.automation)</a>
 </li>
       <li><a href="../pulumi/#pulumi.ResourceTransformArgs.props">props (pulumi.ResourceTransformArgs attribute)</a>
@@ -1574,13 +1687,21 @@
       </ul></li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.Reference">Reference (class in pulumi_esc_sdk)</a>
 </li>
-      <li><a href="../pulumi/#pulumi.automation.RemoteStack.refresh">refresh() (pulumi.automation.RemoteStack method)</a>
+      <li><a href="../pulumi_policy/#pulumi_policy.PolicyComplianceFramework.reference">reference (pulumi_policy.PolicyComplianceFramework attribute)</a>
 </li>
+      <li><a href="../pulumi/#pulumi.automation.RemoteStack.refresh">refresh() (pulumi.automation.RemoteStack method)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.refresh">(pulumi.automation.Stack method)</a>
+</li>
+      </ul></li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.refresh_api_key_hook">refresh_api_key_hook (pulumi_esc_sdk.Configuration attribute)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.refresh_config">refresh_config() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.refresh_config">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.refresh_config">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
@@ -1596,6 +1717,8 @@
 </li>
       <li><a href="../pulumi/#pulumi.runtime.register_stack_transformation">register_stack_transformation() (in module pulumi.runtime)</a>
 </li>
+      <li><a href="../pulumi_policy/#pulumi_policy.Policy.remediation_steps">remediation_steps (pulumi_policy.Policy attribute)</a>
+</li>
       <li><a href="../pulumi/#pulumi.RemoteArchive">RemoteArchive (class in pulumi)</a>
 </li>
       <li><a href="../pulumi/#pulumi.RemoteAsset">RemoteAsset (class in pulumi)</a>
@@ -1609,18 +1732,24 @@
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.remove_all_config">remove_all_config() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.remove_all_config">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.remove_all_config">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.remove_config">remove_config() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.remove_config">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.remove_config">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.remove_environment">remove_environment() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.remove_environment">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.remove_environment">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
@@ -1639,13 +1768,17 @@
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.remove_tag">remove_tag() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.remove_tag">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.remove_tag">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
-      <li><a href="../pulumi/#pulumi.ResourceOptions.replace_on_changes">replace_on_changes (pulumi.ResourceOptions attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../pulumi/#pulumi.automation.Stack.rename">rename() (pulumi.automation.Stack method)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceOptions.replace_on_changes">replace_on_changes (pulumi.ResourceOptions attribute)</a>
+</li>
       <li><a href="../pulumi/#pulumi.dynamic.DiffResult.replaces">replaces (pulumi.dynamic.DiffResult attribute)</a>
 </li>
       <li><a href="../pulumi/#pulumi.Config.require">require() (pulumi.Config method)</a>
@@ -1696,6 +1829,14 @@
         <li><a href="../pulumi_policy/#pulumi_policy.ResourceValidationArgs.resource_type">(pulumi_policy.ResourceValidationArgs attribute)</a>
 </li>
       </ul></li>
+      <li><a href="../pulumi/#pulumi.ResourceHook">ResourceHook (class in pulumi)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceHookArgs">ResourceHookArgs (class in pulumi)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceHookBinding">ResourceHookBinding (class in pulumi)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.ResourceHookOptions">ResourceHookOptions (class in pulumi)</a>
+</li>
       <li><a href="../pulumi/#pulumi.runtime.ResourceModule">ResourceModule (class in pulumi.runtime)</a>
 </li>
       <li><a href="../pulumi/#pulumi.ResourceOptions">ResourceOptions (class in pulumi)</a>
@@ -1774,6 +1915,8 @@
 </li>
       <li><a href="../pulumi/#pulumi.automation.Workspace.secrets_provider">secrets_provider (pulumi.automation.Workspace attribute)</a>
 </li>
+      <li><a href="../pulumi/#pulumi.automation.Stack.select">select() (pulumi.automation.Stack class method)</a>
+</li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.select_header_accept">select_header_accept() (pulumi_esc_sdk.ApiClient method)</a>
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.ApiClient.select_header_content_type">select_header_content_type() (pulumi_esc_sdk.ApiClient method)</a>
@@ -1807,13 +1950,25 @@
       <ul>
         <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.set_all_config">(pulumi.automation.LocalWorkspace method)</a>
 </li>
+        <li><a href="../pulumi/#pulumi.automation.Stack.set_all_config">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.set_all_config">(pulumi.automation.Workspace method)</a>
+</li>
+      </ul></li>
+      <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.set_all_config_json">set_all_config_json() (pulumi.automation.LocalWorkspace method)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.set_all_config_json">(pulumi.automation.Stack method)</a>
+</li>
+        <li><a href="../pulumi/#pulumi.automation.Workspace.set_all_config_json">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
       <li><a href="../pulumi/#pulumi.runtime.set_config">set_config() (in module pulumi.runtime)</a>
 
       <ul>
         <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.set_config">(pulumi.automation.LocalWorkspace method)</a>
+</li>
+        <li><a href="../pulumi/#pulumi.automation.Stack.set_config">(pulumi.automation.Stack method)</a>
 </li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.set_config">(pulumi.automation.Workspace method)</a>
 </li>
@@ -1831,12 +1986,20 @@
       <li><a href="../pulumi/#pulumi.automation.LocalWorkspace.set_tag">set_tag() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.set_tag">(pulumi.automation.Stack method)</a>
+</li>
         <li><a href="../pulumi/#pulumi.automation.Workspace.set_tag">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
       <li><a href="../pulumi/#pulumi.runtime.Settings">Settings (class in pulumi.runtime)</a>
 </li>
+      <li><a href="../pulumi_policy/#pulumi_policy.Severity">Severity (class in pulumi_policy)</a>
+</li>
+      <li><a href="../pulumi_policy/#pulumi_policy.Policy.severity">severity (pulumi_policy.Policy attribute)</a>
+</li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.socket_options">socket_options (pulumi_esc_sdk.Configuration attribute)</a>
+</li>
+      <li><a href="../pulumi_policy/#pulumi_policy.PolicyComplianceFramework.specification">specification (pulumi_policy.PolicyComplianceFramework attribute)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.RemoteGitAuth.ssh_private_key">ssh_private_key (pulumi.automation.RemoteGitAuth attribute)</a>
 </li>
@@ -1845,6 +2008,8 @@
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.ssl_ca_cert">ssl_ca_cert (pulumi_esc_sdk.Configuration attribute)</a>
 </li>
       <li><a href="../pulumi/#pulumi.dynamic.DiffResult.stables">stables (pulumi.dynamic.DiffResult attribute)</a>
+</li>
+      <li><a href="../pulumi/#pulumi.automation.Stack">Stack (class in pulumi.automation)</a>
 </li>
       <li><a href="../pulumi/#pulumi.Alias.stack">stack (pulumi.Alias attribute)</a>
 </li>
@@ -1900,6 +2065,8 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../pulumi_policy/#pulumi_policy.Policy.tags">tags (pulumi_policy.Policy attribute)</a>
+</li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.Configuration.temp_folder_path">temp_folder_path (pulumi_esc_sdk.Configuration attribute)</a>
 </li>
       <li><a href="../pulumi/#pulumi.runtime.test">test() (in module pulumi.runtime)</a>
@@ -2154,6 +2321,8 @@
         <li><a href="../pulumi/#pulumi.StackReference.translate_output_property">(pulumi.StackReference method)</a>
 </li>
       </ul></li>
+      <li><a href="../pulumi/#pulumi.ResourceHookArgs.type">type (pulumi.ResourceHookArgs attribute)</a>
+</li>
       <li><a href="../pulumi/#pulumi.Alias.type_">type_ (pulumi.Alias attribute)</a>
 
       <ul>
@@ -2173,7 +2342,11 @@
       <li><a href="../pulumi/#pulumi.Output.unsecret">unsecret() (pulumi.Output static method)</a>
 </li>
       <li><a href="../pulumi/#pulumi.automation.RemoteStack.up">up() (pulumi.automation.RemoteStack method)</a>
+
+      <ul>
+        <li><a href="../pulumi/#pulumi.automation.Stack.up">(pulumi.automation.Stack method)</a>
 </li>
+      </ul></li>
       <li><a href="../pulumi/#pulumi.dynamic.ResourceProvider.update">update() (pulumi.dynamic.ResourceProvider method)</a>
 </li>
       <li><a href="../pulumi_esc_sdk/#pulumi_esc_sdk.EscClient.update_environment">update_environment() (pulumi_esc_sdk.EscClient method)</a>
@@ -2226,10 +2399,14 @@
 </li>
       <li><a href="../pulumi/#pulumi.automation.UpResult">UpResult (class in pulumi.automation)</a>
 </li>
+      <li><a href="../pulumi_policy/#pulumi_policy.Policy.url">url (pulumi_policy.Policy attribute)</a>
+</li>
       <li><a href="../pulumi/#pulumi.provider.ConstructResult.urn">urn (pulumi.provider.ConstructResult attribute)</a>
 
       <ul>
         <li><a href="../pulumi/#pulumi.Resource.urn">(pulumi.Resource property)</a>
+</li>
+        <li><a href="../pulumi/#pulumi.ResourceHookArgs.urn">(pulumi.ResourceHookArgs attribute)</a>
 </li>
         <li><a href="../pulumi/#pulumi.ResourceOptions.urn">(pulumi.ResourceOptions attribute)</a>
 </li>
@@ -2266,6 +2443,8 @@
 
       <ul>
         <li><a href="../pulumi/#pulumi.ResourceOptions.version">(pulumi.ResourceOptions attribute)</a>
+</li>
+        <li><a href="../pulumi_policy/#pulumi_policy.PolicyComplianceFramework.version">(pulumi_policy.PolicyComplianceFramework attribute)</a>
 </li>
       </ul></li>
   </ul></td>

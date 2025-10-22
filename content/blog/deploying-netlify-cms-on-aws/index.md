@@ -51,7 +51,7 @@ Simplifying the file and deleting unneeded parameters produces this:
 
 ![File Structure](./file-structure.jpg)
 
-The `./src/index.js` file is the entry point for React to create the App class inside `./public/index.html`'s  `<div id=root>`. `App` (defined in `./src/App.js`) is a React Component that returns the `NetlifyCMS` React component defined inside `./src/components/NetlifyCMS/index.js`. We can also specify the [custom preview](https://docs.netlify.com/create/cloud-project/previewing/) and [custom widget](https://docs.netlify.com/) for the CMS app in this file.
+The `./src/index.js` file is the entry point for React to create the App class inside `./public/index.html`'s  `<div id=root>`. `App` (defined in `./src/App.js`) is a React Component that returns the `NetlifyCMS` React component defined inside `./src/components/NetlifyCMS/index.js`. We can also specify the [custom preview](https://docs.netlify.com/manage/visual-editor/cloud-setup/previewing/) and [custom widget](https://docs.netlify.com/) for the CMS app in this file.
 
 To preview the CMS app content, run `yarn start`.
 

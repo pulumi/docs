@@ -1,0 +1,118 @@
+{{/* Returns BlogPosting entity for @graph */}}
+
+{{/* Get content for analysis */}}
+{{ $content := .Content | plainify }}
+{{ $wordCount := $content | countwords }}
+{{ if not $wordCount }}
+  {{ $wordCount = 500 }}
+{{ end }}
+
+{{/* Build BlogPosting entity */}}
+{{ $schema := dict
+  "@type" "BlogPosting"
+  "@id" "#main-content"
+  "headline" .Title
+  "url" .Permalink
+  "wordCount" $wordCount
+  "inLanguage" "en-US"
+  "articleSection" "Engineering Blog"
+}}
+
+{{/* Add dates with proper fallback handling */}}
+{{ $publishDate := .PublishDate }}
+{{ $modifiedDate := .Lastmod }}
+
+{{/* Fix invalid dates */}}
+{{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
+  {{ if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $publishDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $publishDate = now }}
+  {{ end }}
+{{ end }}
+
+{{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
+  {{ if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $modifiedDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $modifiedDate = $publishDate }}
+  {{ end }}
+{{ end }}
+
+{{ $schema = merge $schema (dict
+  "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
+) }}
+
+{{/* Add description */}}
+{{ with (or .Params.meta_desc .Summary) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{/* Add image */}}
+{{ $image := "" }}
+{{ if .Params.meta_image }}
+  {{/* Fix URL concatenation to avoid double slashes */}}
+  {{ $baseURL := .Permalink }}
+  {{ if not (strings.HasSuffix $baseURL "/") }}
+    {{ $baseURL = printf "%s/" $baseURL }}
+  {{ end }}
+  {{ $imagePath := .Params.meta_image }}
+  {{ if strings.HasPrefix $imagePath "/" }}
+    {{ $imagePath = strings.TrimPrefix "/" $imagePath }}
+  {{ end }}
+  {{ $image = printf "%s%s" $baseURL $imagePath }}
+{{ else }}
+  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+{{ end }}
+{{ $schema = merge $schema (dict "image" $image) }}
+
+{{/* Add keywords from tags */}}
+{{ with .Params.tags }}
+  {{ $keywords := delimit . ", " }}
+  {{ $schema = merge $schema (dict "keywords" $keywords) }}
+{{ end }}
+
+{{/* Add author */}}
+{{ $authors := slice }}
+{{ with .Params.authors }}
+  {{ range . }}
+    {{ $authorName := . }}
+    {{ $authorEntity := dict
+      "@type" "Person"
+      "@id" (printf "https://www.pulumi.com/authors/%s/#person" (. | urlize))
+      "name" $authorName
+      "url" (printf "https://www.pulumi.com/authors/%s/" (. | urlize))
+      "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+    }}
+    {{ $authors = $authors | append $authorEntity }}
+  {{ end }}
+{{ else }}
+  {{ $authors = $authors | append (dict
+    "@type" "Person"
+    "name" "Pulumi Team"
+    "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
+  ) }}
+{{ end }}
+{{ if $authors }}
+  {{ $schema = merge $schema (dict "author" $authors) }}
+{{ end }}
+
+{{/* Add publisher reference */}}
+{{ $schema = merge $schema (dict
+  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{/* Note: Removed speakable schema - not needed for developer tools */}}
+{{/* Note: Removed generic about field - was incorrectly claiming all blog posts are about Pulumi CLI */}}
+
+{{/* Add article body (truncated for schema) */}}
+{{ $articleBody := $content | truncate 5000 }}
+{{ $schema = merge $schema (dict "articleBody" $articleBody) }}
+
+{{/* Add mainEntityOfPage reference */}}
+{{ $schema = merge $schema (dict
+  "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink))
+) }}
+
+{{ return $schema }}

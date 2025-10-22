@@ -1,0 +1,109 @@
+{{/* Generate enhanced author entities with knowledge graph properties */}}
+{{ $authors := slice }}
+
+{{ with .Params.authors }}
+  {{ range . }}
+    {{ with index $.Site.Data.team.team . }}
+      {{/* Build author entity with comprehensive knowledge graph properties */}}
+      {{ $author := dict "@type" "Person" }}
+      {{ $author = merge $author (dict "@id" (printf "https://www.pulumi.com/authors/%s/#person" .id)) }}
+      {{ $author = merge $author (dict "name" .name) }}
+      
+      {{/* Add job title and organization */}}
+      {{ with .title }}
+        {{ $author = merge $author (dict "jobTitle" .) }}
+      {{ end }}
+      
+      {{ $author = merge $author (dict "worksFor" (dict
+        "@type" "Organization"
+        "@id" "https://www.pulumi.com/#organization"
+        "name" "Pulumi"
+      )) }}
+      
+      {{/* Add social profiles for entity disambiguation */}}
+      {{ $sameAs := slice }}
+      {{ with .social }}
+        {{ with .github }}
+          {{ $sameAs = $sameAs | append (printf "https://github.com/%s" .) }}
+        {{ end }}
+        {{ with .twitter }}
+          {{ $sameAs = $sameAs | append (printf "https://twitter.com/%s" .) }}
+        {{ end }}
+        {{ with .x }}
+          {{ $sameAs = $sameAs | append (printf "https://x.com/%s" .) }}
+        {{ end }}
+        {{ with .linkedin }}
+          {{ $sameAs = $sameAs | append (printf "https://linkedin.com/in/%s" .) }}
+        {{ end }}
+      {{ end }}
+      
+      {{ if $sameAs }}
+        {{ $author = merge $author (dict "sameAs" $sameAs) }}
+      {{ end }}
+      
+      {{/* Add URL to author page */}}
+      {{ $author = merge $author (dict "url" (printf "https://www.pulumi.com/authors/%s/" .id)) }}
+      
+      {{/* Add image if available */}}
+      {{ with .image }}
+        {{ $author = merge $author (dict "image" (printf "https://www.pulumi.com%s" .)) }}
+      {{ end }}
+      
+      {{/* Add expertise based on title */}}
+      {{ $knowsAbout := slice "Infrastructure as Code" "Cloud Computing" "DevOps" }}
+      {{ $titleLower := lower (or .title "") }}
+      
+      {{ if in $titleLower "engineer" }}
+        {{ $knowsAbout = $knowsAbout | append "Software Engineering" }}
+      {{ end }}
+      {{ if in $titleLower "manager" }}
+        {{ $knowsAbout = $knowsAbout | append "Engineering Management" }}
+      {{ end }}
+      {{ if in $titleLower "product" }}
+        {{ $knowsAbout = $knowsAbout | append "Product Management" }}
+      {{ end }}
+      {{ if in $titleLower "design" }}
+        {{ $knowsAbout = $knowsAbout | append "Design" "User Experience" }}
+      {{ end }}
+      {{ if in $titleLower "marketing" }}
+        {{ $knowsAbout = $knowsAbout | append "Marketing" "Content Marketing" }}
+      {{ end }}
+      {{ if in $titleLower "sales" }}
+        {{ $knowsAbout = $knowsAbout | append "Sales" "Enterprise Sales" }}
+      {{ end }}
+      {{ if in $titleLower "developer advocate" }}
+        {{ $knowsAbout = $knowsAbout | append "Developer Relations" "Technical Writing" }}
+      {{ end }}
+      {{ if in $titleLower "sre" }}
+        {{ $knowsAbout = $knowsAbout | append "Site Reliability Engineering" "Platform Engineering" }}
+      {{ end }}
+      {{ if in $titleLower "security" }}
+        {{ $knowsAbout = $knowsAbout | append "Security" "Cloud Security" }}
+      {{ end }}
+      {{ if or (in $titleLower "ceo") (in $titleLower "cto") (in $titleLower "vp") }}
+        {{ $knowsAbout = $knowsAbout | append "Leadership" "Strategy" }}
+      {{ end }}
+      
+      {{ $author = merge $author (dict "knowsAbout" $knowsAbout) }}
+      
+      {{/* Mark as founder if applicable */}}
+      {{ if or (eq .id "joe-duffy") (eq .id "eric-rudder") (eq .id "luke-hoban") }}
+        {{ $author = merge $author (dict "founder" (dict
+          "@type" "Organization"
+          "@id" "https://www.pulumi.com/#organization"
+        )) }}
+      {{ end }}
+      
+      {{/* Add affiliation */}}
+      {{ $author = merge $author (dict "affiliation" (dict
+        "@type" "Organization"
+        "@id" "https://www.pulumi.com/#organization"
+        "name" "Pulumi"
+      )) }}
+      
+      {{ $authors = $authors | append $author }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $authors }}

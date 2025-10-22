@@ -8,7 +8,7 @@ menu:
     iac:
         name: Projects
         parent: iac-concepts
-        weight: 1
+        weight: 20
         identifier: iac-concepts-projects
     concepts:
         identifier: projects
@@ -93,7 +93,7 @@ The following are other examples of `Pulumi.yaml` files that define project conf
     runtime: yaml
     resources:
       bucket:
-        type: aws:s3:BucketV2
+        type: aws:s3:Bucket
     ```
 
 For more information on valid Pulumi project metadata, see the [Pulumi.yaml reference](/docs/reference/pulumi-yaml/).
@@ -103,6 +103,14 @@ For more information on valid Pulumi project metadata, see the [Pulumi.yaml refe
 When your Pulumi program refers to resources in the local filesystem, paths are always relative to the working directory. In the following example, the `aws.ecr.Image` resource refers to a subfolder of the working directory named `app` that contains a `Dockerfile`:
 
 {{< example-program path="awsx-ecr-image" >}}
+
+## Root-relative paths
+
+You can get the directory containing the `Pulumi.yaml` file, which may differ from your working directory if it specified a `main` option (see [main attribute](/docs/reference/pulumi-yaml/#attributes)), with the `ProjectDirectory` function.
+
+The path returned is an absolute path. When using this in resource properties, ensure it's relative to the working directory. This prevents diffs from running the project on multiple machines with different roots.
+
+{{< example-program path="awsx-root-directory" >}}
 
 ## Getting the current project programmatically
 
@@ -166,7 +174,6 @@ variables:
 ## Stack settings files {#stack-settings-file}
 
 Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` that contains the configuration specific to this stack. This file typically resides in the root of the project directory.
-To change the location where stack configuration files are stored for a given project, set the `stackConfigDir` metadata attribute to a relative directory.
 
 For stacks that are actively developed by multiple members of a team, the recommended practice is to check them into source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings. When using ephemeral stacks, the stack settings are typically not checked into source control.
 

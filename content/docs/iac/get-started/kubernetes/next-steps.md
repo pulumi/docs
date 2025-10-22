@@ -6,14 +6,14 @@ title: Next steps
 h1: "Pulumi & Kubernetes: Next steps"
 weight: 9
 menu:
-  clouds:
+  iac:
+    name: Next steps
+    identifier: kubernetes-get-started.next-steps
     parent: kubernetes-get-started
-    identifier: kubernetes-next-steps
+    weight: 9
 
 aliases:
-- /docs/quickstart/kubernetes/next-steps/
-- /docs/get-started/kubernetes/next-steps/
-- /docs/iac/get-started/kubernetes/next-steps/
+    - /docs/quickstart/kubernetes/next-steps/
 ---
 
 Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.
@@ -24,9 +24,9 @@ Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are
 
 With Pulumi ESC you can:
 
-- **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
-- **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
-- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+    - **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
+    - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
+    - **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
 
 {{< get-started-next-step path="/docs/esc/get-started" label="Learn more about Pulumi ESC" ref="gs-k8-esc" >}}
 

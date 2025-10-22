@@ -1,5 +1,6 @@
 ---
 title: "Tap-Pulumi-Cloud: Simplifying Pulumi Cloud Data Integration"
+updated: 2025-10-10
 date: 2024-09-03T09:00:00-07:00
 draft: false
 meta_desc: We have released a tap-pulumi-cloud connector to be able to export Pulumi Cloud data into your own Data Warehouse.
@@ -18,7 +19,7 @@ social:
   twitter: "Your Pulumi Data in your Warehouse: See how the tap-pulumi-cloud extractor helps you export your Pulumi data into your own Data Warehouse."
   linkedin: |
     See how the tap-pulumi-cloud extractor helps you export your Pulumi data into your own Data Warehouse.
-    We show how you can use this connector to download Pulumi Cloud data into any destination of your choice; helping you to track infrastructure metrics alongside the rest of your data.
+    We show how you can use this connector to download Pulumi Cloud data into any destination of your choice, helping you to track infrastructure metrics alongside the rest of your data.
 
 ---
 
@@ -26,9 +27,9 @@ Integrating various infrastructure data sources into your data warehouse has lon
 
 These pain points can slow down your ability to get actionable insights from your infrastructure data, leaving you with more questions than answers.
 
-The [tap-pulumi-cloud connector](https://github.com/pulumi/tap-pulumi-cloud), announced today, is designed to address these challenges head-on by offering a simple solution for automating the process of accessing infrastructure data.
+The [tap-pulumi-cloud connector](https://github.com/pulumi/tap-pulumi-cloud) is designed to address these challenges head-on by offering a simple solution for automating the process of accessing infrastructure data.
 <!--more-->
-Leveraging Pulumi Cloud data about your infrastructure instead of going directly to the provider eliminates the need for custom API integrations and handles the data consistency problem. And while all this data existed before today, by using the [Pulumi Cloud console](https://app.pulumi.com) or [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api) directly, the `tap-pulumi-cloud` connector handles complex interactions with the API, transforming the raw data into a structured format that’s ready for analysis as soon as it lands in your data warehouse. This means less time spent on data wrangling and more time on generating insights.
+Leveraging Pulumi Cloud data about your infrastructure instead of going directly to the provider eliminates the need for custom API integrations and handles the data consistency problem. And while all this data existed before by using the [Pulumi Cloud console](https://app.pulumi.com) or [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api) directly, the `tap-pulumi-cloud` connector handles complex interactions with the API, transforming the raw data into a structured format that’s ready for analysis as soon as it lands in your data warehouse. This means less time spent on data wrangling and more time on generating insights.
 
 A few examples of the types of analytics you can build on top Pulumi Cloud data:
 
@@ -40,7 +41,7 @@ A few examples of the types of analytics you can build on top Pulumi Cloud data:
 
 As it is built on the [Meltano SDK](https://sdk.meltano.com/en/latest/index.html), you can use [tap-pulumi-cloud](https://github.com/pulumi/tap-pulumi-cloud) with loaders such as [target-snowflake](https://hub.meltano.com/loaders/target-snowflake), [target-bigquery](https://hub.meltano.com/loaders/target-bigquery), [target-redshift](https://hub.meltano.com/loaders/target-redshift) or even [target-postgres](https://hub.meltano.com/loaders/target-postgres); allowing us to load the data into our own data warehouse easily.
 
-## Set up
+## Setup
 
 Firstly, set up your environment [by following Meltano's installation guide](https://docs.meltano.com/guide/installation-guide). Once this is done, continue by adding `tap-pulumi-cloud` and your choice of loader into your environment, we'll use `target-duckdb` for this example:
 

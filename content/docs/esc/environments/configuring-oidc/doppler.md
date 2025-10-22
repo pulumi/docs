@@ -107,7 +107,7 @@ the [relevant Pulumi documentation](/docs/esc/integrations/)
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/customizing-oidc-claims/) the subject claim in the OIDC token to control
+You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control
 which Pulumi environments or users are allowed to assume a given identity. This allows for more granular access control
 than the default organization-level permissions.
 

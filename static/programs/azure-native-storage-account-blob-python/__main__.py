@@ -31,5 +31,5 @@ blob_resource = azure_native.storage.Blob("blobresource",
 )
 
 pulumi.export("resourceGroupName", resource_group.name)
-pulumi.export("storageName", storage_account.name)
-pulumi.export("containerName", blob_container.name)
+pulumi.export("storageAccountName", storage_account.name)
+pulumi.export("blobContainerName", blob_container.name)

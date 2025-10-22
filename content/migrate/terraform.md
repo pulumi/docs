@@ -111,7 +111,7 @@ examples:
             import * as aws from "@pulumi/aws";
 
             // Create an S3 Bucket.
-            const bucket = new aws.s3.BucketV2("mybucket");
+            const bucket = new aws.s3.Bucket("mybucket");
 
             // Register a Lambda to handle the Bucket notification.
             bucket.onObjectCreated("newObj", async (ev, ctx) => {

@@ -5,14 +5,15 @@ title: Deploy stack
 h1: "Pulumi & Google Cloud: Deploy stack"
 weight: 5
 menu:
-  clouds:
-    parent: google-cloud-get-started
-    identifier: gcp-deploy-stack
+    iac:
+        name: Deploy stack
+        identifier: gcp-get-started.deploy-stack
+        parent: gcp-get-started
+        weight: 5
 
 aliases:
-- /docs/quickstart/gcp/deploy-stack/
-- /docs/get-started/gcp/deploy-stack/
-- /docs/clouds/gcp/get-started/deploy-stack/
+    - /docs/quickstart/gcp/deploy-stack/
+    - /docs/clouds/gcp/get-started/deploy-stack/
 ---
 
 Let's go ahead and deploy your stack:

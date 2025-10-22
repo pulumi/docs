@@ -5,14 +5,14 @@ title: Destroy stack
 h1: "Pulumi & Kubernetes: Destroy stack"
 weight: 8
 menu:
-  clouds:
+  iac:
+    name: Destroy stack
+    identifier: kubernetes-get-started.destroy-stack
     parent: kubernetes-get-started
-    identifier: kubernetes-destroy-stack
+    weight: 8
 
 aliases:
-- /docs/quickstart/kubernetes/destroy-stack/
-- /docs/get-started/kubernetes/destroy-stack/
-- /docs/iac/get-started/kubernetes/destroy-stack/
+    - /docs/quickstart/kubernetes/destroy-stack/
 ---
 
 Now that we've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of our stack.

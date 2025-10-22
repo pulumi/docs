@@ -13,6 +13,12 @@ tags:
   - hackathon
 ---
 
+{{% notes type="info" %}}
+
+This blog post originated from a hackathon and exploratory exercise, and should be considered in that context. None of the solutions exist in the Pulumi SDKs. For more information on this, please view our [blog post on Circular Dependencies](/blog/exploring-circular-dependencies/).
+
+{{% /notes %}}
+
 As part of our hackathon near the end of last year, we decided to explore solutions to a common problem when people are using Pulumi for their systems. A question that’s been asked in a few different forms is how to resolve circular dependencies between resources in a Pulumi program.
 
 A simple example of this idea is a modern web application with a static front-end and an API, where the front-end needs to know the URL of the API to be able to call it and the API needs to know the source domain of the front-end to allow it access via CORS. As these two resources rely on one another to be created, they are circular dependencies.

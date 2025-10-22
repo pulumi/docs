@@ -421,7 +421,7 @@ do absolutely anything that you'd like.
 
 ### REST APIs
 
-[ [Runnable Example](https://github.com/pulumi/examples/tree/master/cloud-js-api) ]
+[ [Runnable Example](https://github.com/pulumi/examples/tree/5f3eae87bb132595e4c60d2d5f8e8ee1473f6a7b/cloud-js-api) ]
 
 Us Node.js programmers love web frameworks, whether that be serving
 static content using a single page application (SPA) built using
@@ -509,7 +509,7 @@ more clouds are on their way!
 
 ### Easy Deployment
 
-[ [Runnable Example](https://github.com/pulumi/examples/tree/master/cloud-js-containers) ]
+[ [Runnable Example](https://github.com/pulumi/examples/tree/5f3eae87bb132595e4c60d2d5f8e8ee1473f6a7b/cloud-js-containers) ]
 
 Let's shift gears again and take a look at containers. Pulumi supports
 programming against raw container orchestrators -- Amazon's ECS, Azure's
@@ -648,7 +648,7 @@ easy as can be to connect your microservices.
 
 ### Long Running Containers as Tasks
 
-[ [Runnable Example](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) ]
+[ [Runnable Example](https://github.com/pulumi/examples/tree/5f3eae87bb132595e4c60d2d5f8e8ee1473f6a7b/cloud-js-thumbnailer) ]
 
 The above examples are great if what you want is a load balanced,
 long-running service. Sometimes a container is useful simply for
@@ -862,7 +862,7 @@ pitfalls.
 
 ### Give Components Runtime APIs
 
-[ [Runnable Example](https://github.com/pulumi/examples/blob/master/cloud-ts-url-shortener-cache/cache.ts) ]
+[ [Runnable Example](https://github.com/pulumi/examples/blob/5f3eae87bb132595e4c60d2d5f8e8ee1473f6a7b/cloud-ts-url-shortener-cache/cache.ts) ]
 
 As our final example, let's see how to give your own components APIs
 that can be invoked at runtime. We've already seen this a few times now,

@@ -9,17 +9,17 @@ tags:
     - cloud engineering
 ---
 
-All software is cloud software. All modern applications interact with the cloud in some way, whether it's using cloud for storage, compute capabilities, or with rich cloud services for data, AI/ML, and so much more, to deliver amazing new experiences. As a result, all developers today are cloud developers, and infrastructure teams are key to enabling innovation across the entire organization. I had a great time telling this story at the [Cloud Engineering Summit](https://cloudengineeringsummit.com) today and wanted to take a moment to put pen to paper.
+All software is cloud software. All modern applications interact with the cloud in some way, whether it's using cloud for storage, compute capabilities, or with rich cloud services for data, AI/ML, and so much more, to deliver amazing new experiences. As a result, all developers today are cloud developers, and infrastructure teams are key to enabling innovation across the entire organization. I had a great time telling this story at the [Cloud Engineering Summit](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlodkVaCTO3Y-3vya68J2c6y) today and wanted to take a moment to put pen to paper.
 
 <!--more-->
 
 ## Introduction
 
-The cloud is the world's biggest supercomputer. Although the cloud broke our architectures, workflows, and teams, we are now amidst a rennaisance of rebuilding new ways to create truly cloud-native applications and experiences.
+The cloud is the world's biggest supercomputer. Although the cloud broke our architectures, workflows, and teams, we are now amidst a renaissance of rebuilding new ways to create truly cloud-native applications and experiences.
 
-We conceived of the Cloud Engineering Summit to celebrate this rennaisance. The talks throughout the day explore how we build _architectures_ and applications. We also explore how to operate those cloud architectures in a team setting through _workflows_ using automation and processes to build, deploy, and manage those applications and their infrastructure. Finally, _teams_ are working together more closely and in new ways in order to collaborate to deliver applications and infrastructure across all cloud engineering disciplines.
+We conceived of the Cloud Engineering Summit to celebrate this renaissance. The talks throughout the day explore how we build _architectures_ and applications. We also explore how to operate those cloud architectures in a team setting through _workflows_ using automation and processes to build, deploy, and manage those applications and their infrastructure. Finally, _teams_ are working together more closely and in new ways in order to collaborate to deliver applications and infrastructure across all cloud engineering disciplines.
 
-This is what we are calling *Cloud Engineering*: the next quantum leap in how we build cloud software. Cloud engineering means bringing the cloud closer to application development and infusing its capabilities to create new cloud-enabled experiences. Cloud engineering also means bringing more engineering practies to infrastructure, enabling us to leverage infrastructure as not just code but software. And finally, cloud engineering enables us to unlock collaboration, enabling the entire team to move faster with confidence.
+This is what we are calling *Cloud Engineering*: the next quantum leap in how we build cloud software. Cloud engineering means bringing the cloud closer to application development and infusing its capabilities to create new cloud-enabled experiences. Cloud engineering also means bringing more engineering practices to infrastructure, enabling us to leverage infrastructure as not just code but software. And finally, cloud engineering enables us to unlock collaboration, enabling the entire team to move faster with confidence.
 
 ## Cloud Engineering in Practice
 
@@ -95,7 +95,7 @@ Despite the clear gaps, it is clear we've taken some major steps in the directio
 
 As we've seen, the future of cloud engineering is already here in a very real way. The cloud is being infused into application development, we are increasingly treating cloud infrastructure as software, and teams are embracing new ways of working together.
 
-We hope you enjoyed learning more about cloud engineering architectures, workflows, and teams. [Watch the Cloud Engineering Summit Keynote here](https://cloudengineeringsummit.com/talks/welcome-keynote/) or check out [one of the many amazing Cloud Engineering talks now](https://cloudengineeringsummit.com/schedule/)!
+We hope you enjoyed learning more about cloud engineering architectures, workflows, and teams. [Watch the Cloud Engineering Summit Keynote here](https://www.youtube.com/watch?v=w6Dj2zf-39M&list=PLyy8Vx2ZoWlodkVaCTO3Y-3vya68J2c6y&index=2) or check out [one of the many amazing Cloud Engineering talks now](hhttps://www.youtube.com/playlist?list=PLyy8Vx2ZoWlodkVaCTO3Y-3vya68J2c6y)!
 
 This event would not have been possible without the participation and support of our top sponsors:
 

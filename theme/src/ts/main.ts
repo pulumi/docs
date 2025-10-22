@@ -16,7 +16,6 @@ import "./code-tabbed";
 import "./resources";
 import "./packages";
 import "./pricing-trial";
-import "./pricing";
 import "./pulumi-cloud";
 import "./developer-advocates";
 import "./toc";
@@ -24,6 +23,8 @@ import "./docs-main";
 import "./redirects";
 import "./algolia/autocomplete";
 import "./terraform-compare";
+import "./external-links";
+import "./neo-mode";
 
 // Register all Stencil components.
 defineCustomElements();

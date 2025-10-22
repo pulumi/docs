@@ -71,7 +71,7 @@ Our API docs are getting a major overhaul! The new design uses a more resource-o
 
 We continue to make progress on our multi-language library architecture. This will enable us to bring your favorite packages like EKS and AWSX to new languages, including Python, C#, and Go, in addition to eventually letting you write your own. This has been a long journey as we figure out how to correctly build this capability, however we will be bringing [EKS](https://github.com/pulumi/pulumi-eks) to Python first.
 
-Our [`tf2pulumi` tool](https://github.com/pulumi/tf2pulumi), which converts any Terraform HCL to Pulumi code, is currently getting a fresh coat of paint. Look for HCL2 support and Python code-generation soon.
+Our `tf2pulumi` tool, which converts any Terraform HCL to Pulumi code, is currently getting a fresh coat of paint. Look for HCL2 support and Python code-generation soon.
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.

@@ -48,7 +48,7 @@ import os
 from pulumi import export, FileAsset
 from pulumi_aws import s3
 
-bucket = s3.BucketV2('s3-bucket')
+bucket = s3.Bucket('s3-bucket')
 
 content_dir = "www"
 for file in os.listdir(content_dir):

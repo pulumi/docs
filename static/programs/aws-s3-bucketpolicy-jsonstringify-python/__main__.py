@@ -7,7 +7,7 @@ account_id = aws.get_caller_identity_output().apply(
 )
 
 # Create an S3 bucket.
-bucket = aws.s3.BucketV2("my-bucket")
+bucket = aws.s3.Bucket("my-bucket")
 
 # Create an S3 bucket policy allowing anyone in the account to list the contents of the bucket.
 policy = aws.s3.BucketPolicy(

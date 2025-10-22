@@ -46,7 +46,7 @@ If you are curious to see all new functionality, learn more about CLI improvemen
 - Pulumi CLI and core technologies
   - [Pulumi YAML improvements](#pulumi-yaml-improvements)
   - [Allow `pulumi refresh` to resolve pending creates](#allow-pulumi-refresh-to-resolve-pending-creates)
-  - [Re-implementing `pulumi `watch](#reimplementing-pulumi-watch)
+  - [Re-implementing `pulumi watch`](#reimplementing-pulumi-watch)
   - [Automation API Python parallel inline programs](#automation-api-python-parallel-inline-programs)
   - [getOrganizations from inside a stack](#getorganizations-from-inside-a-stack)
   - [Control logging and tracing within Automation API](#control-logging-and-tracing-within-automation-api)

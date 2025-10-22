@@ -42,7 +42,7 @@ ai:
 embed:
   title: Build productive platforms for both developers and operators
   image: /blog/developer-portal-platform-teams/platform-teams.png
-  alt: a flowchart with arrows going from Automation API program to Infrasctucture as Code programs to Pulumi Engine deploys stacks
+  alt: a flowchart with arrows going from Automation API program to Infrastructure as Code programs to Pulumi Engine deploys stacks
   description: |
     Internal developer portals (IDPs) enable your developers to quickly provision security-compliant infrastructure, boost productivity with pre-configured architectures and automate testing and deployments, adhering to organizational standards.
 
@@ -83,7 +83,7 @@ customer_logos:
     - name: modular-ai
       link: /case-studies/
     - name: korber
-      link: /case-studies/    
+      link: /case-studies/
     - name: lemonade
       link: /case-studies/
     - name: pinecone
@@ -208,7 +208,7 @@ get_started:
       avatar: https://pbs.twimg.com/profile_images/1146562967317520385/wuPwKFUZ_400x400.jpg
       link: https://twitter.com/rybavery/status/1576987704189128704
       text: |
-        our team at @devseed is now gravitating toward using https://pulumi.com/docs/concepts/vs/terraform/ instead of terraform because it's all in python so it is easier to onboard new people to the tool and makes it easier to manage the same infra definition in different test, staging, and deploy envs.
+        our team at @devseed is now gravitating toward using https://pulumi.com/docs/iac/comparisons/terraform/ instead of terraform because it's all in python so it is easier to onboard new people to the tool and makes it easier to manage the same infra definition in different test, staging, and deploy envs.
     -
       source: twitter
       username: "@SparkyCodes"

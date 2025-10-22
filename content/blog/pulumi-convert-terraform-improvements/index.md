@@ -1,6 +1,7 @@
 ---
 title: "Converting Terraform to Pulumi Just Got Easier"
 date: 2025-03-04
+updated: 2025-09-17
 meta_desc: "Pulumi's conversion tools now automatically handle any Terraform provider, making migration easier than ever"
 meta_image: meta.png
 authors:
@@ -10,7 +11,7 @@ tags:
   - terraform
   - features
 ---
-Big news for infrastructure teams looking to migrate – we've just supercharged Pulumi's Terraform conversion capabilities, making it easier than ever to modernize your infrastructure as code.
+Big news for infrastructure teams looking to migrate – we've significantly improved Pulumi's Terraform conversion capabilities, making modernization smoother and reducing the amount of manual work usually required.
 
 Pulumi already lets you use [any Terraform/OpenTofu provider](/blog/any-terraform-provider/) in your existing projects, and now we've taken it to the next level. With [Pulumi CLI version 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0) and above, you can now automatically convert **ANY** Terraform project to Pulumi _and_ import its resources - even if it uses providers that don't have native Pulumi equivalents!
 
@@ -22,9 +23,9 @@ This means you can finally:
 - Maintain access to the Terraform providers you leverage
 - Modernize your infrastructure deployment while keeping your existing resources
 
-## Try It Now (It's Easy!)
+## Try It Now: Use 'pulumi convert'
 
-Ready to see it in action? Just grab the latest version of Pulumi and run:
+Ready to give it a spin? After installing the latest Pulumi CLI, you can start the conversion with:
 
 {{% chooser language "javascript,typescript,python,go,java,yaml" %}}
 
@@ -84,7 +85,7 @@ You can then run `pulumi preview` to see if the project can deploy successfully.
 
 ## See It In Action: A Real-World Example
 
-Let's look at something cool – we'll convert a project that combines Google Cloud with PlanetScale (a provider that isn't available in the Pulumi registry yet!). This example shows how the new converter handles mixed provider scenarios effortlessly.
+Let's look at something cool – we'll convert a project that combines Google Cloud with PlanetScale (a provider that isn't available in the Pulumi registry yet!). This example shows how the new converter can handle mixed provider scenarios with far less manual setup than before.
 
 Here is the Terraform code in a single `main.tf` file:
 
@@ -463,9 +464,9 @@ With the release of [Pulumi 3.153.0](https://github.com/pulumi/pulumi/releases/t
 ## What's Really New Here? 🚀
 
 1. **Automatic Provider Bridging**: The converter now automatically handles any Terraform provider, even ones without Pulumi equivalents
-1. **Increased Terraform Compatibility**: As part of this effort, we've bumped up our coverage of built in Terraform functions to over 90% using code generation and our [`pulumi-std` Provider](github.com/pulumi/pulumi-std)
+1. **Increased Terraform Compatibility**: As part of this effort, we've bumped up our coverage of built in Terraform functions to over 90% using code generation and our [`pulumi-std` Provider](https://github.com/pulumi/pulumi-std)
 1. **Improved Import Support**: With [Pulumi 3.153.0](https://github.com/pulumi/pulumi/releases/tag/v3.153.0), you can now import resources from any Terraform provider
-1. **Seamless Integration**: Generated code works right out of the box with minimal to no tweaking needed
+1. **Seamless Integration**: Generated code is designed to work out of the box for many cases, though some tweaking may still be needed, especially for complex or less common providers.
 
 ## The Road Ahead
 

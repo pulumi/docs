@@ -4,10 +4,15 @@ meta_desc: This page provides an overview of how to destroy a Pulumi stack of an
 title: Destroy stack
 h1: "Pulumi & Azure: Destroy stack"
 weight: 8
+menu:
+    iac:
+        name: Destroy stack
+        identifier: azure-get-started.destroy-stack
+        parent: azure-get-started
+        weight: 8
 aliases:
-- /docs/quickstart/azure/destroy-stack/
-- /docs/get-started/azure/destroy-stack/
-- /docs/clouds/azure/get-started/destroy-stack/
+    - /docs/quickstart/azure/destroy-stack/
+    - /docs/clouds/azure/get-started/destroy-stack/
 ---
 
 Now that you've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of your stack.
@@ -62,11 +67,11 @@ entirely from Pulumi Cloud, along with all of its update history.
 
 Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
 
-- Created a Pulumi new project.
-- Provisioned a new Azure storage account and container.
-- Added an `index.html` file to your container.
-- Served the `index.html` as a static website.
-- Destroyed the resources you've provisioned.
+    - Created a Pulumi new project.
+    - Provisioned a new Azure storage account and container.
+    - Added an `index.html` file to your container.
+    - Served the `index.html` as a static website.
+    - Destroyed the resources you've provisioned.
 
 On the next page, we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
 

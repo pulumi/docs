@@ -3,7 +3,7 @@ title: "Pulumi - Automate, Secure, and Manage Everything You Run in the Cloud"
 allow_long_title: True
 date: 2024-09-18T9:00:00-00:00
 draft: false
-meta_desc: At PulumiUP 2024, we announced a new vision for Pulumi's vision, including Pulumi ESC general availability and Pulumi Insights 2.0 for visibility over your infrastructure.
+meta_desc: "PulumiUP 2024 unveils Pulumi's new vision: ESC GA, Insights 2.0, and a comprehensive platform to automate, secure, and manage cloud infrastructure."
 meta_image: meta.png
 authors:
     - joe-duffy

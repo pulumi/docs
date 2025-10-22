@@ -5,10 +5,15 @@ meta_desc: This page provides a list of tutorials that take a deeper dive into
 title: Next steps
 h1: "Pulumi & Azure: Next steps"
 weight: 9
+menu:
+    iac:
+        name: Next steps
+        identifier: azure-get-started.next-steps
+        parent: azure-get-started
+        weight: 9
 aliases:
-- /docs/quickstart/azure/next-steps/
-- /docs/get-started/azure/next-steps/
-- /docs/clouds/azure/get-started/next-steps/
+    - /docs/quickstart/azure/next-steps/
+    - /docs/clouds/azure/get-started/next-steps/
 ---
 
 Congrats! You've deployed your first project on Microsoft Azure with Pulumi. Here are some next steps, depending on your learning style.
@@ -19,9 +24,9 @@ Congrats! You've deployed your first project on Microsoft Azure with Pulumi. Her
 
 With Pulumi ESC you can:
 
-- **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
-- **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
-- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+    - **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
+    - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
+    - **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
 
 {{< get-started-next-step path="/docs/esc/get-started/" label="Learn more about Pulumi ESC" ref="gs-azure-esc" >}}
 

@@ -127,7 +127,7 @@ state:
 
 | Property    | Type                                                | Description                      |
 |-------------|-----------------------------------------------------|----------------------------------|
-| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig) | An [AWS Lambda connector](/docs/esc/environment/rotation/aws-lambda) needs to be setup |
+| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig) | An [AWS Lambda connector](/docs/esc/environments/rotation/aws-lambda) needs to be setup |
 
 ### AWSLambdaConfig
 

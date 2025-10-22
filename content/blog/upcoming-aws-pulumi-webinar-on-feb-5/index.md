@@ -11,7 +11,7 @@ Pulumi is hosting a webinar with AWS Fargate **on
 February 5th, 10AM PST** (register
 [here](https://www.pulumi.com/resources/#upcoming)).
 We'll be chatting about how to implement cloud native infrastructure
-across your organization using [AWS and Pulumi](/crosswalk/aws/): general purpose programming
+across your organization using [AWS and Pulumi](/docs/iac/clouds/aws/guides/): general purpose programming
 languages to deliver everything from VMs to Kubernetes to Serverless.
 <!--more-->
 

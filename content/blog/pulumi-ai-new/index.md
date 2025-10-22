@@ -49,7 +49,7 @@ Going from natural language idea to running cloud infrastructure in just seconds
 
 ## Deploying Cloud Infrastructure with Pulumi AI
 
-Thousands of developers are already discovering answers to their questions via Pulumi AI, and we’ve been expanding on this with links to Pulumi AI from the Pulumi Registry API docs and with the archive of high quality questions and answers as part of [Pulumi AI Answers](/ai/answers).  To date, users have used these answers to then copy/paste code snippets into their own Pulumi programs, presenting something of a small but meaningful barrier to entry to quickly experimenting with the resulting infrastructure.
+Thousands of developers are already discovering answers to their questions via Pulumi AI, and we’ve been expanding on this with links to Pulumi AI from the Pulumi Registry API docs and with the archive of high quality questions and answers as part of Pulumi AI Answers.  To date, users have used these answers to then copy/paste code snippets into their own Pulumi programs, presenting something of a small but meaningful barrier to entry to quickly experimenting with the resulting infrastructure.
 
 Now, every Pulumi AI and Pulumi AI Answers page includes its own Deploy with Pulumi button.  The Deploy with Pulumi button can be used along with any template or Pulumi code example to deploy that code using Pulumi Cloud via the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard).  We’ve extended that to support deploying projects defined by a Pulumi AI answer.  This includes the code snippet, but also the project dependencies, a useful description, and language-specific project files.
 
@@ -83,19 +83,24 @@ With just a few clicks, we went from a natural language idea to running cloud in
 
 ## FAQs: Pulumi AI and Cloud Deployment
 
-#### What is Pulumi AI?
+### What is Pulumi AI?
+
 Pulumi AI is an AI-powered assistant that generates Infrastructure as Code (IaC) from natural language prompts.
 
-#### How does pulumi new --ai work?
+### How does pulumi new --ai work?
+
 The pulumi new --ai command allows you to generate and deploy cloud infrastructure using a natural language description instead of selecting a pre-defined template.
 
-#### Which cloud providers does Pulumi AI support?
+### Which cloud providers does Pulumi AI support?
+
 Pulumi AI supports AWS, Azure, Google Cloud, and other major platforms.
 
-#### Can I modify the AI-generated infrastructure before deployment?
+### Can I modify the AI-generated infrastructure before deployment?
+
 Yes! You can revise the AI-generated code before deployment to match your needs.
 
-#### Where can I provide feedback on Pulumi AI?
+### Where can I provide feedback on Pulumi AI?
+
 Join the [Pulumi Community Slack](https://slack.pulumi.com/) or join the [GitHub Discussions](https://github.com/pulumi/pulumi/discussions).
 
 ## Looking Ahead: The Future of Pulumi AI

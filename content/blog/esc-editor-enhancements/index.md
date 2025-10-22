@@ -32,10 +32,10 @@ Tap 'Ctrl+Space' in the editor reveal the list of functions and properties.
 
 We have also added support for accessing contextual information from within an ESC environment such as the current user, organization, and environment name. You can use this information to enrich audit logs, refine OIDC claims for more granular access, and more! This information is available by accessing the `context` property, and contains the following information:
 
-* `context.rootEnvironment.name`: the name of the root environment being evaluated
-* `context.currentEnvironment.name`: the name of the current environment being evaluated
-* `context.user.login`: the login of the user evaluating the environment
-* `context.organization.login`: the name of the user's organization
+- `context.rootEnvironment.name`: the name of the root environment being evaluated
+- `context.currentEnvironment.name`: the name of the current environment being evaluated
+- `context.user.login`: the login of the user evaluating the environment
+- `context.organization.login`: the name of the user's organization
 
 ```yaml
 values:

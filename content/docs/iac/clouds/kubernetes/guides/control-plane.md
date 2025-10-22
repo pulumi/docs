@@ -698,7 +698,7 @@ general best-practices and recommendations to configure in the cluster.
 * (Optional) Configure private accessibility of the control plane /
   API Server endpoint to prevent it from being publicly exposed on the
   Internet. To enable this feature, additional networking is required,
-  and a [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/architecture.html) would be needed to access the control plane.
+  and a [bastion host](https://aws-ia.github.io/cfn-ps-linux-bastion/#_architecture) would be needed to access the control plane.
 
     ```typescript
     import * as eks from "@pulumi/eks";

@@ -4,7 +4,7 @@ using Pulumi.Aws.S3;
 
 return await Deployment.RunAsync(() =>
 {
-    var bucket = new BucketV2("bucket");
+    var bucket = new Bucket("bucket");
 
     var file = new BucketObject("bucket-object", new BucketObjectArgs
     {

@@ -8,9 +8,13 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     name: Pulumi CLI
-    weight: 80
+    weight: 45
     identifier: iac-cli
     parent: iac-home
+  reference:
+    name: Pulumi CLI
+    parent: reference-cli
+    weight: 1
 aliases:
     - /docs/reference/commands/
     - /docs/tour/basics-deploying/

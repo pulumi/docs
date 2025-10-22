@@ -38,7 +38,7 @@ Adopting Pulumi up until the introduction of Pulumi YAML required operations tea
 
 Pulumi YAML is also a powerful interchange format for programmatic tools. Since YAML can be easily interpreted by machines, it is the perfect tool to support custom CLIs,  REST APIs and embedding within custom data formats.  For example, the Pulumi Kubernetes Operator now uses Pulumi YAML to embed Pulumi programs [within a `pulumi.com/v1/Program` CRD](#pulumi-kubernetes-operator-inline-program-support).
 
-Critically, Pulumi YAML is designed to work with Pulumi’s [CrossCode](https://www.pulumi.com/crosscode/) technology. You can write a complex component in Go, TypeScript or Python, and expose a simple user interface in YAML - realizing both the power and encapsulation of programming languages with the simplicity of a familiar markup language.
+Critically, Pulumi YAML is designed to work with Pulumi's CrossCode technology. You can write a complex component in Go, TypeScript or Python, and expose a simple user interface in YAML - realizing both the power and encapsulation of programming languages with the simplicity of a familiar markup language.
 
 ## Pulumi YAML 1.0
 

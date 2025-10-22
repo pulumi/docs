@@ -1,86 +1,99 @@
 ---
-title: "Pulumi IDP"
+title: "Internal Developer Platform for Self-Service – Pulumi IDP"
 layout: internal-developer-platforms
 
-meta_title: "Pulumi IDP"
-meta_desc: The Fastest, Most Secure Way to Deliver Cloud Infrastructure
+meta_desc: Build your internal developer platform with Pulumi. Enable self-service infrastructure with enterprise governance.
 meta_image: /images/product/idp-meta.png
+
+heading: Internal Developer Platform
+subheading: |
+    Everything platform engineers need to build an IDP
 
 aliases:
     - /solutions/platforms/
+    - /product/idp
+    - /product/pulumi-idp
 
 overview:
-  title: Accelerate Cloud Delivery with Secure Developer Self-Service
-  description: Pulumi IDP is a modern internal developer platform built on Pulumi’s flagship infrastructure as code technology. It delivers flexible self-service infrastructure access to developers, data scientists, and more while enabling platform teams to embed security, compliance, and operational controls by design. Organizations can go from idea to cloud in minutes, not months.
-  cta: Get Started with Pulumi IDP
+  title: Everything platform engineers need to build an IDP
+  description: Create golden paths with reusable components and templates. Enable self-service infrastructure through code, YAML, or developer portals. Enforce standards automatically with policies. Ship infrastructure faster while maintaining control.
+  cta: Start Building Your IDP
   link: /docs/idp/get-started/
+  cta_secondary: Get a Demo
+  link_secondary: /contact/?form=request-a-demo
 
 why_idp:
-  title: Why Pulumi IDP?
-  description: Pulumi IDP eliminates the trade-off between building a custom internal developer platform and adopting a rigid off-the-shelf solution. Platform engineering teams define reusable best practices and guardrails, while developers gain flexible, self-service access to production-ready cloud infrastructure that meets enterprise standards out of the box.
+  title: Why engineers choose Pulumi for platform engineering
+  description: Build your IDP on infrastructure as code in any programming language. Create golden paths that engineers actually want to use. Enforce standards without slowing teams down.
   benefits:
-    - title: Faster Delivery
-      description: Go from idea to cloud in minutes, not months, with golden paths and reusable building blocks.
+    - title: Ship Faster
+      description: Golden paths and reusable components get engineers from idea to production in minutes.
       icon: rocketship
       color: salmon
-    - title: Built-in Governance
-      description: Enforce security, compliance, cost, and operational best practices automatically.
-      icon: security
+    - title: Automatic Governance
+      description: Policy as code enforces security, compliance, and operational standards without manual reviews.
+      icon: shield
       color: blue
-    - title: Flexible Self-Service
-      description: Let teams work how they want – via code, YAML, UI, or APIs – governed by consistent standards and policies.
+    - title: Engineer-Friendly
+      description: Engineers work how they prefer – code, YAML, UI, or APIs – all with consistent governance.
       icon: nodes-and-rays
       color: yellow
-    - title: Full Lifecycle Management
-      description: Manage Day 0 setup, Day 1 provisioning, and Day 2+ operations with confidence.
+    - title: Day 2 Ready
+      description: Handle provisioning, updates, drift detection, and compliance from day one.
       icon: cycle
       color: fuchsia
 
 demo_video:
-    title: See Pulumi IDP in Action
-    subtitle: Watch how platform teams build secure, standardized infrastructure
+    title: See Platform Engineering in Action
+    subtitle: Watch how teams build internal developer platforms with Pulumi
     image: https://www.youtube.com/watch?v=3gZmKaAeppc
 
 building_blocks:
-  title: "Pulumi IDP: Building Blocks for Your Internal Developer Platform"
+  title: "Core building blocks for your IDP"
   items:
-    - header: "Codify and Enforce Organizational Best Practices Using Components, Templates, Policies"
-      subheader: "Platform engineers define infrastructure standards as building blocks:"
+    - header: "Create golden paths with components and templates"
+      subheader: "Platform engineers define infrastructure patterns once, engineers use them everywhere:"
       body:
-        - "**Components**: Encapsulate infrastructure best practices in reusable building blocks written in any language."
-        - "**Templates**: Scaffold new projects (applications, microservices, clusters) using standardized blueprints."
-        - "**Policies**: Automatically enforce security, compliance, cost, and operational rules across all infrastructure."
-      graphic: /images/product/idp-components.png
-    - header: Enable Flexible Developer Self-Service with Guardrails
-      subheader: "Developers can provision and manage cloud resources using their preferred interface:"
+        - "**Components**: Reusable infrastructure building blocks in any language. Package your well-architected patterns."
+        - "**Templates**: Scaffold entire projects with one command. Applications, microservices, clusters – all standardized."
+        - "**Policies**: Enforce security and compliance automatically. Block non-compliant infrastructure before it ships."
+      graphic: /images/product/idp-services-home.jpg
+    - header: Self-service infrastructure, multiple interfaces
+      subheader: "Engineers provision infrastructure using their preferred approach:"
       body:
-        - "**Code**: Directly write infrastructure as code in preferred programming languages."
-        - "**Low-Code**: Use simple YAML templates with CI/CD pipelines created by platform teams for fast provisioning."
-        - "**No-Code**: Deploy infrastructure with Pulumi’s new project wizard or a custom developer portal."
-        - "**REST API**: Programmatically manage infrastructure via standard HTTP requests."
+        - "**Code**: Write infrastructure in TypeScript, Python, Go, .NET, or Java. Full programming power."
+        - "**Low-Code**: Simple YAML for standard patterns. Platform teams create the templates, engineers fill in the values."
+        - "**No-Code**: Deploy through Pulumi's project wizard or integrate with Backstage. Click to provision."
+        - "**REST API**: Programmatic access for custom tools and workflows. Build your own interfaces."
       graphic: /images/product/idp-flexible-interfaces.png
-    - header: Secure and Scale Your Day Two Operations and Beyond
-      subheader: Pulumi IDP goes beyond provisioning with built-in tools to help teams secure, govern, and evolve infrastructure as their environments grow.
+    - header: Built for Day 2 operations
+      subheader: Platform engineering doesn't stop at provisioning. Handle the full infrastructure lifecycle.
       body:
-        - "**Drift and Compliance Management**: Detect configuration drift and enforce policies across existing infrastructure."
-        - "**Visual Importer**: Discover unmanaged resources, generate IaC code, and bring them under Pulumi management with a few clicks."
-        - "**Usage and Change Controls**: Understand package and version usage to drive update and deprecation workflows with built-in approvals and audit trails."
-        - "**Enterprise-Grade IAM**: Define fine-grained access with custom roles, team permissions, and SAML/SSO integration."
+        - "**Drift Detection**: Know when infrastructure diverges from code. Fix drift automatically or alert the team."
+        - "**Import Existing Resources**: Bring unmanaged infrastructure under control. Generate code from existing resources."
+        - "**Dependency Management**: Track component usage across teams. Safely deprecate old versions."
+        - "**Enterprise RBAC**: Fine-grained permissions, SAML/SSO, audit logs. Control who can change what."
       graphic: /images/product/idp-day-two.png
 
 learn:
-    title: Get Started
+    title: Start building your IDP
     items:
-        - title: Unlock Secure, Standardized Self-Service Infrastructure
-          description: Pulumi IDP is the fastest, most secure way to deliver cloud infrastructure at scale. Empower your platform and development teams to collaborate, innovate, and ship faster with built-in security, governance, and full lifecycle control.
+        - title: Start building your platform today
+          description: Build your internal developer platform with Pulumi Cloud. Start with our free tier and scale when you need enterprise features.
           buttons:
             - link: https://app.pulumi.com/
               type: primary
-              action: Try Pulumi IDP
-        - title: Documentation
-          description: Review our documentation to learn more about Pulumi IDP.
+              action: Start Free
+            - link: /contact/?form=request-a-demo
+              type: secondary
+              action: Book a Demo
+        - title: Platform engineering guide
+          description: Learn how to build an IDP with components, templates, policies, and self-service patterns.
           buttons:
             - link: /docs/idp/get-started/
+              type: primary
+              action: Read the Docs
+            - link: https://info.pulumi.com/whitepaper/accelerating-business-value-at-every-stage-of-idp-maturity
               type: secondary
-              action: Pulumi IDP Docs
+              action: Get the Whitepaper
 ---

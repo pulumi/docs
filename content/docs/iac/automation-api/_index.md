@@ -8,7 +8,7 @@ menu:
     iac:
         name: Automation API
         parent: iac-home
-        weight: 55
+        weight: 50
         identifier: iac-automation-api
 aliases:
 - /docs/guides/automation-api/
@@ -17,7 +17,7 @@ aliases:
 - /docs/iac/using-pulumi/automation-api/
 ---
 
-The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. Conceptually, this can be thought of as encapsulating the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, etc.) but with more flexibility. It is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers, without requiring invoking the CLI from a shell process.
+The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. Conceptually, this can be thought of as encapsulating the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, etc.) but with more flexibility. It is a strongly typed and a safe way to use Pulumi in embedded contexts such as web servers, without requiring the user to run the `pulumi` CLI from a shell process manually.
 
 ![automation-api](automation-api.png)
 

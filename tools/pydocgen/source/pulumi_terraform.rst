@@ -1,6 +1,6 @@
-*************
+****************
 pulumi_terraform
-*************
+****************
 
 .. automodule:: pulumi_terraform
     :members:

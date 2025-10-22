@@ -16,7 +16,7 @@ Hi everyone, I’m [Hitesh Boinpally](https://www.linkedin.com/in/hitesh-boinpal
 
 ## Technical Work
 
-My overall project was to build a test harness for Pulumi’s converter tools such as [`arm2pulumi`](https://github.com/pulumi/arm2pulumi) and [`tf2pulumi`](https://github.com/pulumi/tf2pulumi). The project involved several pieces, all of which meant learning about technologies I hadn’t encountered before.
+My overall project was to build a test harness for Pulumi's converter tools such as [`arm2pulumi`](https://github.com/pulumi/arm2pulumi) and tf2pulumi. The project involved several pieces, all of which meant learning about technologies I hadn't encountered before.
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.
@@ -30,7 +30,7 @@ All of these were fascinating to learn about and stretched my knowledge in direc
 
 I began with setting up the harness for [`arm2pulumi`](https://github.com/pulumi/arm2pulumi). The Go program had already been written, so I needed to focus on the GitHub Actions for CI and cloud infrastructure aspects. I set up the CI quickly, but the cloud infrastructure took some time. Wrangling with AWS’s different IAM roles, cross-account permissions, and how to utilize the different tools was complex and challenging. However, I learned a lot about these different spaces and gained valuable experience. Further, I appreciated the advantages of Pulumi, as I could quickly undo/redo changes incrementally, rather than making manual changes in the AWS Console.
 
-Once I built the arm2pulumi coverage tracker end-to-end, I shifted to [`tf2pulumi`](https://github.com/pulumi/tf2pulumi). Unlike `arm2pulumi`, there was no code to inherit, and I had to write out the entire workflow from scratch. The Go program was the real challenge, as the CI work and cloud infrastructure I had written was reusable. I got a much better hang of Go as a language and the advantages that came with it. I also got to leverage Pulumi’s [Automation API](/docs/using-pulumi/automation-api/) and the power of having multiple, configurable stacks through Pulumi to significantly simplify the process of deploying `tf2pulumi`’s (and any other converter’s) coverage report cloud infrastructure. Overall, I explored various new technologies, many of which I’ve used in personal projects since, and plan to continue to do so.
+Once I built the arm2pulumi coverage tracker end-to-end, I shifted to tf2pulumi. Unlike `arm2pulumi`, there was no code to inherit, and I had to write out the entire workflow from scratch. The Go program was the real challenge, as the CI work and cloud infrastructure I had written was reusable. I got a much better hang of Go as a language and the advantages that came with it. I also got to leverage Pulumi’s [Automation API](/docs/using-pulumi/automation-api/) and the power of having multiple, configurable stacks through Pulumi to significantly simplify the process of deploying `tf2pulumi`’s (and any other converter’s) coverage report cloud infrastructure. Overall, I explored various new technologies, many of which I’ve used in personal projects since, and plan to continue to do so.
 
 ## Day to Day Work
 

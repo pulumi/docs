@@ -23,7 +23,7 @@ need to operate your own container repositories or worry about scaling
 the underlying infrastructure. ECR hosts your images in a highly
 available and scalable architecture, allowing you to reliably deploy
 containers for your applications. In this article, we'll see how
-[Pulumi Crosswalk for AWS](/crosswalk/aws/) lets you use
+[Pulumi Crosswalk for AWS](/docs/iac/clouds/aws/guides/) lets you use
 infrastructure as code to easily build, publish, and pull from private
 ECR repositories.
 <!--more-->
@@ -208,7 +208,7 @@ manually going and cleaning up the stale garbage in the future.
 
 ## Next Steps
 
-We've shown how [Pulumi Crosswalk for AWS](/crosswalk/aws/)
+We've shown how [Pulumi Crosswalk for AWS](/docs/iac/clouds/aws/guides/)
 can create a tight developer inner
 loop for building, publishing, and consuming Docker images, using
 private ECR repositories, while keeping all your ECS or EKS services and

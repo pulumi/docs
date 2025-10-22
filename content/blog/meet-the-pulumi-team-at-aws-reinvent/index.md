@@ -12,9 +12,9 @@ on bag? Or maybe you just like purple.
 
 Whatever the reason, the Pulumi team will be there all week at **Booth
 316, Startup Central, Aria Quad, **and we'd love to chat with you about
-[AWS and Pulumi](/crosswalk/aws/).
+[AWS and Pulumi](/docs/iac/clouds/aws/guides/).
 
-Catch up with us on serverless functions, [containers](/containers/) and
+Catch up with us on serverless functions, containers and
 [Kubernetes](/kubernetes/), managed services and
 any other cloud native infrastructure as code, and see how you can more
 productively manage your AWS cloud resources with general purpose

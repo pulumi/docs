@@ -1,14 +1,14 @@
 ---
-title_tag: "Secrets | Pulumi Concepts"
+title_tag: "Secrets Handling | Pulumi Concepts"
 meta_desc: This page provides an overview of how Pulumi manages sensitive configuration data using secrets.
-title: Secrets
-h1: Secrets
+title: Secrets Handling
+h1: Secrets Handling
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Secrets
+        name: Secrets Handling
         parent: iac-concepts
-        weight: 7
+        weight: 80
     concepts:
         weight: 7
 aliases:
@@ -222,6 +222,10 @@ For example, this command sets a configuration variable named `dbPassword` to th
 ```bash
 $ pulumi config set --secret dbPassword S3cr37
 ```
+
+{{% notes "warning" %}}
+When storing secret values containing special characters (such as `$`, `!`, `@`, `#`, etc.), be aware that shell interpretation may modify the value before it reaches Pulumi. Consider using quotes around the value or escaping special characters according to your shell's requirements. For complex values, you may want to use input redirection or pipe the value from a file to avoid shell interpretation entirely.
+{{% /notes %}}
 
 If we list the configuration for our stack, the plain-text value for `dbPassword` will not be printed:
 
@@ -619,7 +623,7 @@ config:
     secure: AAABAIIlW0ewSuZ1FJxw/+Rpw6BNqTUvGJ30O8WkpL2hB4aPyS7UU68=
 ```
 
-Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/pulumi-cloud/projects-and-stacks/#stack-permissions) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
+Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/deployments/projects-and-stacks/#stack-permissions) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
 
 It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/cli/commands/pulumi_config_refresh/).
 
