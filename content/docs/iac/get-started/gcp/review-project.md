@@ -1,6 +1,6 @@
 ---
 title_tag: Review the New Project | Google Cloud
-meta_desc: This page provides an overview on how to a review a new Google Cloud project.
+meta_desc: This page provides an overview on how to review a new Google Cloud project.
 title: Review project
 h1: "Pulumi & Google Cloud: Review project"
 weight: 4
@@ -48,7 +48,7 @@ Let's review some of the generated project files:
 
 {{% choosable language "javascript,typescript,go,csharp,java" %}}
 
-<!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
+<!-- The wrapping spans are unfortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
 
 {{% /choosable %}}
