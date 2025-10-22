@@ -810,12 +810,12 @@ const cdn = new aws.cloudfront.Distribution(
     },
 );
 
-// Configure bucket policy to allow CloudFront OAC access and deny direct access
+// Configure bucket policy to allow CloudFront OAC access
 // This must be created after the distribution so we can reference its ARN
 const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
     bucket: originBucket.bucket,
-    policy: pulumi.all([originBucket.arn, cdn.arn, aws.getCallerIdentity()])
-        .apply(([bucketArn, distributionArn, awsCallerIdentityResult]) => JSON.stringify({
+    policy: pulumi.all([originBucket.arn, cdn.arn])
+        .apply(([bucketArn, distributionArn]) => JSON.stringify({
             Version: "2012-10-17",
             Statement: [
                 {
@@ -829,21 +829,6 @@ const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
                     Condition: {
                         StringEquals: {
                             "AWS:SourceArn": distributionArn,
-                        },
-                    },
-                },
-                {
-                    Sid: "DenyDirectListBucket",
-                    Effect: "Deny",
-                    Principal: "*",
-                    Action: "s3:ListBucket",
-                    Resource: bucketArn,
-                    Condition: {
-                        StringNotEquals: {
-                            "aws:PrincipalAccount": awsCallerIdentityResult.accountId,
-                        },
-                        "Null": {
-                            "AWS:SourceArn": "true",
                         },
                     },
                 },
