@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: "Cloud Automation: AWS and Pulumi’s Path to Intelligent Ops"
-meta_desc: Join Pulumi and AWS for a chat on how next-generation AI capabilities are transforming infrastructure operations.
+meta_desc: Join Pulumi and AWS for a discussion on how next-generation AI capabilities are transforming infrastructure operations.
 meta_image: aws-webinar-big-aligned.png
 
 # A featured webinar will display first in the list.
@@ -48,7 +48,7 @@ main:
 
     # Description of the webinar.
     description: |
-        Join Pulumi and [AWS](https://www.pulumi.com/aws#video) for an exclusive chat on how next-generation AI capabilities are transforming infrastructure operations through intelligent automation. Discover how platform engineering teams can harness [Pulumi Neo](https://www.pulumi.com/product/neo/) and other autonomous assistants that understand context, execute complex cloud operations, and adapt to your organization's unique requirements — all while maintaining enterprise-grade governance and security controls. Learn how Neo's AI-powered infrastructure assistant is revolutionizing the way teams build, manage, and optimize cloud infrastructure through natural language interactions.
+        Join Pulumi and [AWS](https://www.pulumi.com/aws#video) for an exclusive discussion on how next-generation AI capabilities are transforming infrastructure operations through intelligent automation. Discover how platform engineering teams can harness [Pulumi Neo](https://www.pulumi.com/product/neo/) and other autonomous assistants that understand context, execute complex cloud operations, and adapt to your organization's unique requirements — all while maintaining enterprise-grade governance and security controls. Learn how Neo's AI-powered infrastructure assistant is revolutionizing the way teams build, manage, and optimize cloud infrastructure through natural language interactions.
     learn:
         - What is AIOps and how it impacts your organization's operations
         - Best practices for balancing automation with human oversight
