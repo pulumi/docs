@@ -12,7 +12,7 @@ subheading: |
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">an Infrastructure as Code solution</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">an Infrastructure as Code solution</span>? Pulumi Cloud is the most comprehensive way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
 
 key_features_above:
     items:
@@ -188,7 +188,7 @@ stats:
 
 key_features_below:
     items:
-        - title: "The fastest and easiest way to use Pulumi IaC at scale"
+        - title: "Use Pulumi IaC at scale"
           sub_title: "Pulumi Cloud"
           description: |
              A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
@@ -208,7 +208,7 @@ key_features_below:
                     Orchestrate secure deployment workflows through GitHub or an API.
               - title: Search and analytics
                 description: |
-                    View resources from any cloud in one place. Search for resources across clouds with simple queries and filters.
+                    View resources from any cloud in one place. Search for resources across clouds with powerful queries and filters.
               - title: Pulumi Automation API
                 description: |
                     Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
