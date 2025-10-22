@@ -297,7 +297,7 @@ When designing component arguments:
 
 1. **Wrap all scalar members in Input types**: Every scalar argument should be wrapped in the language's input type (e.g., `pulumi.Input<string>`). This allows users to pass both plain values and outputs from other resources, avoiding the need to use `apply` for resource composition.
 1. **Use basic types**: Stick to primitive types, arrays, and basic objects.
-1. **Avoid union types**: If you need multiple possible types, consider using separate properties or creating multiple component variants.
+1. **Avoid union types**: Instead of a single value with multiple types, consider multiple, mutually exclusive argument members and validate that only one of them has a value in your component constructor.
 1. **Document required vs. optional**: Clearly document which arguments are required and which have defaults.
 1. **Follow language conventions**: Use camelCase for schema properties but follow language-specific naming in implementation (snake_case in Python, PascalCase in .NET).
 
