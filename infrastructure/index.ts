@@ -205,14 +205,27 @@ if (config.makeFallbackBucket) {
     );
 }
 
-// Create an Origin Access Control for CloudFront to access S3
-// OAC is the recommended modern approach, replacing the legacy OAI
-const originAccessControl = new aws.cloudfront.OriginAccessControl("origin-access-control", {
-    name: pulumi.interpolate`oac-${config.websiteDomain}`,
-    description: pulumi.interpolate`OAC for ${config.websiteDomain}`,
-    originAccessControlOriginType: "s3",
-    signingBehavior: "always",
-    signingProtocol: "sigv4",
+// We deny the s3:ListBucket permission to anyone but account users to prevent unintended
+// disclosure of the bucket's contents.
+const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
+    bucket: originBucket.bucket,
+    policy: pulumi.all([originBucket.arn, aws.getCallerIdentity()])
+        .apply(([arn, awsCallerIdentityResult]) => JSON.stringify({
+            Version: "2008-10-17",
+            Statement: [
+                {
+                    Effect: "Deny",
+                    Principal: "*",
+                    Action: "s3:ListBucket",
+                    Resource: arn,
+                    Condition: {
+                        StringNotEquals: {
+                            "aws:PrincipalAccount": awsCallerIdentityResult.accountId,
+                        },
+                    },
+                },
+            ],
+    })),
 });
 
 // websiteLogsBucket stores the request logs for incoming requests.
@@ -425,28 +438,6 @@ const SecurityHeadersPolicy = newSecurityHeadersPolicy('security-headers', confi
 // Copilot lives in an iframe
 const CopilotSecurityHeadersPolicy = newSecurityHeadersPolicy('copilot-security-headers', 'SAMEORIGIN');
 
-// CloudFront Function to append index.html to directory paths
-// This restores S3 website endpoint behavior when using OAC with REST API endpoint
-const indexRewriteFunction = new aws.cloudfront.Function("index-rewrite-function", {
-    runtime: "cloudfront-js-1.0",
-    comment: "Append index.html to directory paths",
-    code: `function handler(event) {
-    var request = event.request;
-    var uri = request.uri;
-
-    // Check whether the URI is missing a file name
-    if (uri.endsWith('/')) {
-        request.uri += 'index.html';
-    }
-    // Check whether the URI is missing a file extension (likely a directory)
-    else if (!uri.includes('.')) {
-        request.uri += '/index.html';
-    }
-
-    return request;
-}`,
-});
-
 const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBehavior = {
     targetOriginId: originBucket.arn,
     compress: true,
@@ -468,12 +459,6 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
     defaultTtl: fiveMinutes,
     maxTtl: fiveMinutes,
     lambdaFunctionAssociations: config.doEdgeRedirects ? [getEdgeRedirectAssociation()] : [],
-    functionAssociations: [
-        {
-            eventType: "viewer-request",
-            functionArn: indexRewriteFunction.arn,
-        },
-    ],
     responseHeadersPolicyId: SecurityHeadersPolicy.id,
 };
 
@@ -538,8 +523,17 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     origins: [
         {
             originId: originBucket.arn,
-            domainName: originBucket.bucketRegionalDomainName,
-            originAccessControlId: originAccessControl.id,
+            domainName: originBucket.websiteEndpoint,
+            customOriginConfig: {
+                // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify
+                // > HTTP Only. Amazon S3 doesn't support HTTPS connections in that configuration.
+                // tslint:disable-next-line: max-line-length
+                // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginProtocolPolicy
+                originProtocolPolicy: "http-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            },
         },
         {
             originId: uploadsBucket.arn,
@@ -809,32 +803,6 @@ const cdn = new aws.cloudfront.Distribution(
         dependsOn: [ websiteLogsBucket ],
     },
 );
-
-// Configure bucket policy to allow CloudFront OAC access
-// This must be created after the distribution so we can reference its ARN
-const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
-    bucket: originBucket.bucket,
-    policy: pulumi.all([originBucket.arn, cdn.arn])
-        .apply(([bucketArn, distributionArn]) => JSON.stringify({
-            Version: "2012-10-17",
-            Statement: [
-                {
-                    Sid: "AllowCloudFrontServicePrincipalReadOnly",
-                    Effect: "Allow",
-                    Principal: {
-                        Service: "cloudfront.amazonaws.com",
-                    },
-                    Action: ["s3:GetObject", "s3:ListBucket"],
-                    Resource: [bucketArn, `${bucketArn}/*`],
-                    Condition: {
-                        StringEquals: {
-                            "AWS:SourceArn": distributionArn,
-                        },
-                    },
-                },
-            ],
-    })),
-});
 
 // https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-infrastructure-V2-S3.html
 
