@@ -10,7 +10,7 @@ menu:
     insights:
         name: Get Started
         parent: insights-policy
-        weight: 1
+        weight: 10
 aliases:
   - /docs/insights/policy/policy-as-code/get-started/
   - /docs/iac/crossguard/get-started/

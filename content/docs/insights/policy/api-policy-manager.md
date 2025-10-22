@@ -8,8 +8,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Policy Manager
-        parent: insights-policy
-        weight: 11
+        parent: deprecated
+        weight: 105
 aliases:
   - /docs/insights/policy/policy-as-code/api-policy-manager/
   - /docs/iac/crossguard/api-policy-manager/

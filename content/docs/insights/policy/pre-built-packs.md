@@ -6,8 +6,8 @@ meta_desc: Use pre-built policy packs to apply industry-standard compliance and 
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
-    parent: insights-policy
-    weight: 8
+    parent: policy-packs
+    weight: 1
 aliases:
   - /docs/insights/policy/policy-as-code/pre-built-packs/
   - /docs/pulumi-cloud/insights/pre-built-packs/

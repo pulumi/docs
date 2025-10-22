@@ -9,8 +9,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: AWSGuard
-        parent: insights-policy
-        weight: 9
+        parent: deprecated
+        weight: 104
 aliases:
   - /docs/insights/policy/policy-as-code/awsguard/
   - /docs/iac/crossguard/awsguard/

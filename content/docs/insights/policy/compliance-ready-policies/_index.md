@@ -8,8 +8,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Compliance-Ready Policies
-        parent: insights-policy
-        weight: 7
+        parent: deprecated
+        weight: 106
         identifier: insights-policy-compliance
 aliases:
   - /docs/insights/policy/policy-as-code/compliance-ready-policies/

@@ -6,7 +6,7 @@ meta_desc: Learn the difference between preventative and audit policy enforcemen
 menu:
   insights:
     parent: insights-policy
-    weight: 3
+    weight: 30
 aliases:
   - /docs/insights/preventative-vs-audit-policies/
 ---

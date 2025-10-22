@@ -9,8 +9,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Concepts
-        parent: insights-policy
-        weight: 2
+        parent: deprecated
+        weight: 101
         identifier: iac-policy-concepts
 aliases:
   - /docs/insights/policy/policy-as-code/core-concepts/

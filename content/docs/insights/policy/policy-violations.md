@@ -7,9 +7,9 @@ weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
-        name: Policy Violations
+        name: Policy Findings
         parent: insights-policy
-        weight: 6
+        weight: 40
 aliases:
   - /docs/insights/policy/policy-as-code/policy-violations/
   - /docs/iac/crossguard/policy-violations/

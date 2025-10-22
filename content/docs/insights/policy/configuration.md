@@ -8,8 +8,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Policy Configuration
-        parent: insights-policy
-        weight: 4
+        parent: deprecated
+        weight: 102
 aliases:
   - /docs/insights/policy/policy-as-code/configuration/
   - /docs/iac/crossguard/configuration/

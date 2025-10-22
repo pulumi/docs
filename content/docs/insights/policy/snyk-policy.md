@@ -8,8 +8,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Snyk Container Scanning
-        parent: insights-policy
-        weight: 10
+        parent: integrations
+        weight: 1
 aliases:
   - /docs/insights/policy/policy-as-code/snyk-policy/
   - /docs/iac/crossguard/snyk-policy/

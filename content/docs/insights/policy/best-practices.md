@@ -8,8 +8,8 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Best Practices
-        parent: insights-policy
-        weight: 5
+        parent: deprecated
+        weight: 103
 aliases:
   - /docs/insights/policy/policy-as-code/best-practices/
   - /docs/iac/crossguard/best-practices/
