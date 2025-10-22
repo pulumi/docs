@@ -11,9 +11,13 @@ curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg \
 sudo apt-get update -y
 sudo apt-get install -y google-cloud-cli
 
+# Install TypeScript
+npm install -g typescript
 
+# Install Pulumi CLI
 curl -fsSL https://get.pulumi.com | sh
 echo 'export PATH=$HOME/.pulumi/bin:$PATH' >> ~/.bashrc
 echo 'export PATH=$HOME/.pulumi/bin:$PATH' >> ~/.profile
 export PATH=$HOME/.pulumi/bin:$PATH
 pulumi version
+
