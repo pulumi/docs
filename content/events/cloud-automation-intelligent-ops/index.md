@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: "Cloud Automation: AWS and Pulumi’s Path to Intelligent Ops"
 meta_desc: Join Pulumi and AWS for a chat on how next-generation AI capabilities are transforming infrastructure operations.
-meta_image:
+meta_image: aws-webinar-big-aligned.png
 
 # A featured webinar will display first in the list.
 featured: false
@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/89CYZ5XTbXg?si=dao9Y47h6qBEb4Jh
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-10-09T12:00:00-04:00
@@ -70,7 +70,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["AI", "Automation", " AWS Bedrock", "DevOps"]
+        topics:  ["AI", "Automation", "AWS Bedrock", "DevOps"]
         languages: ["Any"]
         clouds: ["AWS"]
 
