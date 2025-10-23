@@ -206,10 +206,41 @@ When working with local packages, it's important to understand how breaking chan
   To ensure stability, you should specify the version of both:
 
   ```bash
-  pulumi package add terraform-provider hashicorp/random --version=3.5.1
+  pulumi package add terraform-provider hashicorp/random 3.5.1
   ```
 
   This pins the Terraform provider version, protecting you from unexpected breaking changes when the underlying provider is updated.
+
+## Using components with local packages {#components-with-local-packages}
+
+When creating a component that contains a local package, you must ensure the generated SDK is available to consumers of your component. This applies when your component uses:
+
+- Any Terraform provider via [`terraform-provider`](/registry/packages/terraform-provider/)
+- Another component that itself contains a local package
+- Any other dynamically generated SDK
+
+### Requirements
+
+1. You must be using Pulumi 3.200.0 or later.
+1. In your component code, run `pulumi package add` to generate the upstream SDK.
+1. Ensure the generated code in the `sdk` folder is committed to version control.
+
+### Why this is necessary
+
+When someone consumes your component, they need access to all the SDKs your component depends on. For published packages from the Pulumi Registry, these dependencies are automatically resolved. However, for local packages generated within your component, the generated SDK code must be available in your repository so that consumers can use it.
+
+### Example workflow
+
+If you're building a component that uses a Terraform provider:
+
+```bash
+cd my-component
+pulumi package add terraform-provider hashicorp/random 3.5.1
+git add sdk/
+git commit -m "Add generated SDK for terraform-provider random"
+```
+
+Consumers of your component will then be able to use it without needing to regenerate the SDK themselves.
 
 ## See also
 
