@@ -83,7 +83,7 @@ curl \
   https://api.pulumi.com/api/preview/agents/my-org/tasks
 ```
 
-### Default response
+### Response
 
 ```plain
 Status: 201 Created
@@ -134,7 +134,7 @@ curl \
   https://api.pulumi.com/api/preview/agents/my-org/tasks/task_abc123
 ```
 
-### Default response
+### Response
 
 ```plain
 Status: 200 OK
@@ -186,8 +186,8 @@ GET /api/preview/agents/{orgName}/tasks
 | Parameter | Type | In | Description |
 |-----------|------|----|--------------|
 | `orgName` | string | path | The organization name |
-| `continuationToken` | string | query | **Optional.** Token to fetch the next page of results |
-| `pageSize` | integer | query | **Optional.** Number of items per page (1-1000, default: 100) |
+| `continuationToken` | string | query | Optional. Token to fetch the next page of results |
+| `pageSize` | integer | query | Optional. Number of items per page (1-1000, default: 100) |
 
 ### Example
 
@@ -199,7 +199,7 @@ curl \
   https://api.pulumi.com/api/preview/agents/my-org/tasks?pageSize=50
 ```
 
-### Default response
+### Response
 
 ```plain
 Status: 200 OK
@@ -266,7 +266,7 @@ curl \
   https://api.pulumi.com/api/preview/agents/my-org/tasks/task_abc123
 ```
 
-### Default response
+### Response
 
 ```plain
 Status: 202 Accepted
@@ -296,8 +296,8 @@ GET /api/preview/agents/{orgName}/tasks/{taskID}/events
 |-----------|------|----|--------------|
 | `orgName` | string | path | The organization name |
 | `taskID` | string | path | The task identifier |
-| `continuationToken` | string | query | **Optional.** Token to fetch the next page of results |
-| `pageSize` | integer | query | **Optional.** Number of items per page (1-1000, default: 100) |
+| `continuationToken` | string | query | Optional. Token to fetch the next page of results |
+| `pageSize` | integer | query | Optional. Number of items per page (1-1000, default: 100) |
 
 ### Example
 
@@ -309,7 +309,7 @@ curl \
   https://api.pulumi.com/api/preview/agents/my-org/tasks/task_abc123/events?pageSize=50
 ```
 
-### Default response
+### Response
 
 ```plain
 Status: 200 OK
