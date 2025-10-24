@@ -13,23 +13,15 @@ aliases:
 
 The Agent Tasks API allows you to create and manage AI agent tasks in Pulumi Cloud. These endpoints enable you to create tasks, monitor their status, respond to agent requests, and retrieve task events.
 
-## Authentication
+## Agent Task Operations
 
-All requests must be authenticated using a token via the `Authorization` HTTP header:
+The API provides endpoints for the following operations:
 
-```plain
-Authorization: token {token}
-```
-
-## Base URL
-
-For Managed Pulumi Cloud (app.pulumi.com):
-
-```plain
-https://api.pulumi.com
-```
-
-For Self-Hosted Pulumi Cloud, use your configured API endpoint.
+- Creating new agent tasks
+- Listing available tasks
+- Getting task details and metadata
+- Responding to agent requests
+- Retrieving task events
 
 ---
 
@@ -37,40 +29,35 @@ For Self-Hosted Pulumi Cloud, use your configured API endpoint.
 
 Creates a new agent task for the specified organization.
 
-### Endpoint
-
 ```plain
-POST /preview/agents/{orgName}/tasks
+POST /api/preview/agents/{orgName}/tasks
 ```
 
 ### Parameters
 
-#### Path Parameters
-
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `orgName` | string | Yes | The organization name |
+| Parameter | Type | In | Description |
+|-----------|------|----|--------------|
+| `orgName` | string | path | The organization name |
 
 ### Request Body
 
 ```json
 {
-  "content": "string",
-  "entity_diff": {
-    "add": [
-      {
-        "type": "string",
-        "id": "string"
-      }
-    ],
-    "remove": [
-      {
-        "type": "string",
-        "id": "string"
-      }
-    ]
-  },
-  "timestamp": "2025-01-15T00:00:00Z"
+  "message": {
+    "type": "user_message",
+    "content": "Help me optimize my Pulumi stack",
+    "timestamp": "2025-01-15T10:30:00Z",
+    "entity_diff": {
+      "add": [
+        {
+          "type": "stack",
+          "name": "my-stack",
+          "project": "my-project"
+        }
+      ],
+      "remove": []
+    }
+  }
 }
 ```
 
@@ -78,19 +65,33 @@ POST /preview/agents/{orgName}/tasks
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `content` | string | Yes | The exact natural language instruction from the user |
-| `entity_diff` | object | No | Entities to add or remove from the agent |
-| `timestamp` | string (ISO 8601) | Yes | When the event occurred |
+| `message` | object | Yes | The user event message to start the task |
+| `message.type` | string | Yes | Type of event (must be "user_message") |
+| `message.content` | string | Yes | The exact natural language instruction from the user |
+| `message.timestamp` | string (ISO 8601) | Yes | When the event occurred |
+| `message.entity_diff` | object | No | Entities to add or remove from the agent. See [Entity Types](#entity-types) for details |
+
+### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"message":{"type":"user_message","content":"Help me optimize my Pulumi stack","timestamp":"2025-01-15T10:30:00Z"}}' \
+  https://api.pulumi.com/api/preview/agents/my-org/tasks
+```
 
 ### Response
 
+```plain
+Status: 201 Created
+```
+
 ```json
 {
-  "id": "task_abc123",
-  "name": "Task name",
-  "status": "pending",
-  "createdAt": "2025-01-15T00:00:00Z",
-  "entities": []
+  "taskId": "task_abc123"
 }
 ```
 
@@ -98,24 +99,7 @@ POST /preview/agents/{orgName}/tasks
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `id` | string | Unique identifier for the task |
-| `name` | string | Human-readable name for the task |
-| `status` | string | Current status of the task (pending, running, completed, failed) |
-| `createdAt` | string (ISO 8601) | When the task was created |
-| `entities` | array | List of entities associated with the task |
-
-### Example Request
-
-```bash
-curl -X POST \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/preview/agents/my-org/tasks \
-  -d '{
-    "content": "Help me optimize my Pulumi stack",
-    "timestamp": "2025-01-15T10:30:00Z"
-  }'
-```
+| `taskId` | string | Unique identifier for the created task |
 
 ### Error Responses
 
@@ -129,22 +113,32 @@ curl -X POST \
 
 Retrieves metadata for a specific task.
 
-### Endpoint
-
-```
-GET /preview/agents/{orgName}/tasks/{taskID}
+```plain
+GET /api/preview/agents/{orgName}/tasks/{taskID}
 ```
 
 ### Parameters
 
-#### Path Parameters
+| Parameter | Type | In | Description |
+|-----------|------|----|--------------|
+| `orgName` | string | path | The organization name |
+| `taskID` | string | path | The task identifier |
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `orgName` | string | Yes | The organization name |
-| `taskID` | string | Yes | The task identifier |
+### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/preview/agents/my-org/tasks/task_abc123
+```
 
 ### Response
+
+```plain
+Status: 200 OK
+```
 
 ```json
 {
@@ -161,13 +155,15 @@ GET /preview/agents/{orgName}/tasks/{taskID}
 }
 ```
 
-### Example Request
+#### Response Fields
 
-```bash
-curl -X GET \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/preview/agents/my-org/tasks/task_abc123
-```
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | string | Unique identifier for the task |
+| `name` | string | Human-readable name for the task |
+| `status` | string | Current status of the task ("running" or "idle") |
+| `createdAt` | string (ISO 8601) | When the task was created |
+| `entities` | array | List of entities associated with the task |
 
 ### Error Responses
 
@@ -181,28 +177,33 @@ curl -X GET \
 
 Lists all tasks for the specified organization.
 
-### Endpoint
-
-```
-GET /preview/agents/{orgName}/tasks
+```plain
+GET /api/preview/agents/{orgName}/tasks
 ```
 
 ### Parameters
 
-#### Path Parameters
+| Parameter | Type | In | Description |
+|-----------|------|----|--------------|
+| `orgName` | string | path | The organization name |
+| `continuationToken` | string | query | Optional. Token to fetch the next page of results |
+| `pageSize` | integer | query | Optional. Number of items per page (1-1000, default: 100) |
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `orgName` | string | Yes | The organization name |
+### Example
 
-#### Query Parameters
-
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `continuationToken` | string | No | Token to fetch the next page of results |
-| `pageSize` | integer | No | Number of items per page (1-1000, default: 100) |
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/preview/agents/my-org/tasks?pageSize=50
+```
 
 ### Response
+
+```plain
+Status: 200 OK
+```
 
 ```json
 {
@@ -210,7 +211,7 @@ GET /preview/agents/{orgName}/tasks
     {
       "id": "task_abc123",
       "name": "Task name",
-      "status": "completed",
+      "status": "running",
       "createdAt": "2025-01-15T00:00:00Z",
       "entities": []
     }
@@ -226,14 +227,6 @@ GET /preview/agents/{orgName}/tasks
 | `tasks` | array | List of tasks for this page |
 | `continuationToken` | string | Token to fetch the next page (null if no more results) |
 
-### Example Request
-
-```bash
-curl -X GET \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  "https://api.pulumi.com/preview/agents/my-org/tasks?pageSize=50"
-```
-
 ### Error Responses
 
 - `400 Bad Request`: Invalid pageSize parameter
@@ -246,60 +239,37 @@ curl -X GET \
 
 Allows users to respond to an ongoing agent task with additional input or instructions.
 
-### Endpoint
-
-```
-POST /preview/agents/{orgName}/tasks/{taskID}
+```plain
+POST /api/preview/agents/{orgName}/tasks/{taskID}
 ```
 
 ### Parameters
 
-#### Path Parameters
-
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `orgName` | string | Yes | The organization name |
-| `taskID` | string | Yes | The task identifier |
+| Parameter | Type | In | Description |
+|-----------|------|----|--------------|
+| `orgName` | string | path | The organization name |
+| `taskID` | string | path | The task identifier |
 
 ### Request Body
 
-```json
-{
-  "event": {
-    "type": "user_input",
-    "content": "string",
-    "timestamp": "2025-01-15T00:00:00Z"
-  }
-}
+The request body contains an `event` object with different subtypes based on the type of response. See the [User Event Types](#user-event-types) section for detailed information about each event type.
+
+### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{"event":{"type":"user_message","content":"Yes, please proceed with the optimization","timestamp":"2025-01-15T10:35:00Z"}}' \
+  https://api.pulumi.com/api/preview/agents/my-org/tasks/task_abc123
 ```
-
-#### Request Fields
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `event` | object | Yes | The user event to append to the task |
-| `event.type` | string | Yes | Type of event (e.g., "user_input") |
-| `event.content` | string | Yes | The user's response or additional instructions |
-| `event.timestamp` | string (ISO 8601) | Yes | When the event occurred |
 
 ### Response
 
-Returns `202 Accepted` with no body on success.
-
-### Example Request
-
-```bash
-curl -X POST \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/preview/agents/my-org/tasks/task_abc123 \
-  -d '{
-    "event": {
-      "type": "user_input",
-      "content": "Yes, please proceed with the optimization",
-      "timestamp": "2025-01-15T10:35:00Z"
-    }
-  }'
+```plain
+Status: 202 Accepted
 ```
 
 ### Error Responses
@@ -316,44 +286,53 @@ curl -X POST \
 
 Retrieves the event stream for a specific task.
 
-### Endpoint
-
-```
-GET /preview/agents/{orgName}/tasks/{taskID}/events
+```plain
+GET /api/preview/agents/{orgName}/tasks/{taskID}/events
 ```
 
 ### Parameters
 
-#### Path Parameters
+| Parameter | Type | In | Description |
+|-----------|------|----|--------------|
+| `orgName` | string | path | The organization name |
+| `taskID` | string | path | The task identifier |
+| `continuationToken` | string | query | Optional. Token to fetch the next page of results |
+| `pageSize` | integer | query | Optional. Number of items per page (1-1000, default: 100) |
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `orgName` | string | Yes | The organization name |
-| `taskID` | string | Yes | The task identifier |
+### Example
 
-#### Query Parameters
-
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `continuationToken` | string | No | Token to fetch the next page of results |
-| `pageSize` | integer | No | Number of items per page (1-1000, default: 100) |
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/preview/agents/my-org/tasks/task_abc123/events?pageSize=50
+```
 
 ### Response
+
+```plain
+Status: 200 OK
+```
 
 ```json
 {
   "events": [
     {
-      "type": "console_output",
-      "timestamp": "2025-01-15T10:30:00Z",
-      "content": "Processing request...",
-      "sequence": 1
+      "id": "event_123",
+      "type": "agentResponse",
+      "eventBody": {
+        "content": "I'll help you optimize your Pulumi stack. Let me analyze the current configuration...",
+        "timestamp": "2025-01-15T10:30:00Z"
+      }
     },
     {
-      "type": "user_input",
-      "timestamp": "2025-01-15T10:35:00Z",
-      "content": "Continue with optimization",
-      "sequence": 2
+      "id": "event_124",
+      "type": "userInput",
+      "eventBody": {
+        "content": "Continue with optimization",
+        "timestamp": "2025-01-15T10:35:00Z"
+      }
     }
   ],
   "continuationToken": "next_page_token"
@@ -364,20 +343,11 @@ GET /preview/agents/{orgName}/tasks/{taskID}/events
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `events` | array | List of console events for this page |
-| `events[].type` | string | Type of event (console_output, user_input, etc.) |
-| `events[].timestamp` | string (ISO 8601) | When the event occurred |
-| `events[].content` | string | The event content |
-| `events[].sequence` | integer | Sequence number for ordering events |
+| `events` | array | List of events for this page |
+| `events[].id` | string | Unique identifier for the event |
+| `events[].type` | string | Type of event ("agentResponse" or "userInput") |
+| `events[].eventBody` | object | The event content and metadata |
 | `continuationToken` | string | Token to fetch the next page (null if no more results) |
-
-### Example Request
-
-```bash
-curl -X GET \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  "https://api.pulumi.com/preview/agents/my-org/tasks/task_abc123/events?pageSize=50"
-```
 
 ### Error Responses
 
@@ -388,19 +358,180 @@ curl -X GET \
 
 ---
 
-## Authorization
+## User Event Types
 
-The Agent Tasks API uses the following authorization requirements:
+When responding to agent tasks, you can send different types of user events. Each event type has specific fields and use cases.
 
-- **Read Operations** (GET endpoints): Require `AgentsReadAuth` permission
-- **Write Operations** (POST endpoints): Require `AgentsReadWriteAuth` permission
+### User Message Event
 
-Users must have the appropriate permissions for the specified organization to access these endpoints.
+Send a user message event to provide additional instructions or responses to the agent.
 
-## Rate Limiting
+```json
+{
+  "event": {
+    "type": "user_message",
+    "content": "Yes, please proceed with the optimization",
+    "timestamp": "2025-01-15T10:35:00Z",
+    "entity_diff": {
+      "add": [
+        {
+          "type": "stack",
+          "name": "my-stack",
+          "project": "my-project"
+        }
+      ],
+      "remove": []
+    }
+  }
+}
+```
 
-API requests are subject to rate limiting. If you exceed the rate limit, you'll receive a `429 Too Many Requests` response. Please implement exponential backoff and retry logic in your applications.
+#### Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | string | Yes | Must be "user_message" |
+| `content` | string | Yes | The user's response or additional instructions |
+| `timestamp` | string (ISO 8601) | Yes | When the event occurred |
+| `entity_diff` | object | No | Entities to add or remove from the agent context |
+
+### User Confirmation Event
+
+Send a user confirmation event to respond to an agent's approval request.
+
+```json
+{
+  "event": {
+    "type": "user_confirmation",
+    "approval_request_id": "req_123",
+    "timestamp": "2025-01-15T10:35:00Z"
+  }
+}
+```
+
+#### Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | string | Yes | Must be "user_confirmation" |
+| `approval_request_id` | string | Yes | ID to correlate the question the user is responding to |
+| `timestamp` | string (ISO 8601) | Yes | When the event occurred |
+
+### User Cancel Event
+
+Send a user cancel event to cancel the current agent task.
+
+```json
+{
+  "event": {
+    "type": "user_cancel",
+    "timestamp": "2025-01-15T10:35:00Z"
+  }
+}
+```
+
+#### Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | string | Yes | Must be "user_cancel" |
+| `timestamp` | string (ISO 8601) | Yes | When the event occurred |
+
+---
+
+## Entity Types
+
+Entities represent resources that the agent can work with. Different entity types provide different capabilities and context to the agent.
+
+### Stack Entity
+
+Represents a Pulumi stack that the agent can analyze and modify.
+
+```json
+{
+  "type": "stack",
+  "name": "my-stack",
+  "project": "my-project"
+}
+```
+
+#### Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | string | Yes | Must be "stack" |
+| `name` | string | Yes | The name of the Pulumi stack |
+| `project` | string | Yes | The project name containing the stack |
+
+### Repository Entity
+
+Represents a source code repository that the agent can analyze and work with.
+
+```json
+{
+  "type": "repository",
+  "name": "my-repo",
+  "owner": "my-org",
+  "forge": "github"
+}
+```
+
+#### Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | string | Yes | Must be "repository" |
+| `name` | string | Yes | The name of the repository |
+| `owner` | string | Yes | The owner of the repository |
+| `forge` | string | Yes | The forge/provider where the repository is hosted (e.g., "github") |
+
+### Pull Request Entity
+
+Represents a pull request that the agent can analyze and work with.
+
+```json
+{
+  "type": "pull_request",
+  "number": 123,
+  "repository": {
+    "name": "my-repo",
+    "owner": "my-org",
+    "forge": "github"
+  }
+}
+```
+
+#### Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | string | Yes | Must be "pull_request" |
+| `number` | integer | Yes | The pull request number |
+| `repository` | object | Yes | The repository information |
+| `repository.name` | string | Yes | The name of the repository |
+| `repository.owner` | string | Yes | The owner of the repository |
+| `repository.forge` | string | Yes | The forge/provider where the repository is hosted |
+
+### Policy Issue Entity
+
+Represents a policy issue that the agent can analyze and help resolve.
+
+```json
+{
+  "type": "policy_issue",
+  "id": "issue_123"
+}
+```
+
+#### Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | string | Yes | Must be "policy_issue" |
+| `id` | string | Yes | The unique identifier for the policy issue |
+
+---
 
 ## Preview Status
 
-These endpoints are currently in preview status (`/preview/agents/...`). The API may change before general availability. Please check the documentation regularly for updates.
+These endpoints are currently in preview status (`/api/preview/agents/...`). The API may change before general availability. Please check the documentation regularly for updates.
