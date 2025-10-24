@@ -44,6 +44,8 @@ helm repo update
 
 helm upgrade --install external-secrets external-secrets/external-secrets \
     --namespace external-secrets \
+    --set installCRDs=true \
+    --version 0.10.4 \
     --create-namespace \
     --wait
 ```
