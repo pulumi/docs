@@ -12,9 +12,11 @@ tags:
     - config
 ---
 
-> [!INFO]
-> This blog post discusses project-level config before Pulumi ESC was released. ESC makes this and hierarchical config [easy](/blog/environments-secrets-configurations-management/).
+{{%% notes type="info" %%}}
 
+This blog post discusses project-level config before Pulumi ESC was released. ESC makes this and hierarchical config [easy](/blog/environments-secrets-configurations-management/).
+
+{{%% /notes %%}}
 One of our most up-voted feature requests (with 78 thumbs ups) is to [support hierarchical config](https://github.com/pulumi/pulumi/issues/2307). We're happy to announce that we've now released the first part of plans to support this feature.
 
 Pulumi will now allow you to set configuration values in your `Pulumi.yaml` file, using the given value as a default for all stacks in the project. While we expect even this first level of support will be incredibly useful to many people we also want to assure you that we have many more plans in place to make this feature even better.

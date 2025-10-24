@@ -8,9 +8,11 @@ meta_desc: "Today we are announcing Pulumi 2.0, a modern infrastructure as code 
 meta_image: "pulumi-2-0.png"
 ---
 
-> [!INFO]
-> This blog post announces Pulumi 2.0, which has been superseded by newer versions. For information about the latest Pulumi release, please refer to the [current documentation](/docs/) and [recent release notes](https://github.com/pulumi/pulumi/releases).
+{{%% notes type="info" %%}}
 
+This blog post announces Pulumi 2.0, which has been superseded by newer versions. For information about the latest Pulumi release, please refer to the [current documentation](/docs/) and [recent release notes](https://github.com/pulumi/pulumi/releases).
+
+{{%% /notes %%}}
 Today we are excited to announce Pulumi 2.0, the next major stage in our journey as an open source project, company, and community. This release expands on our original vision of using your favorite languages and tools to do all things infrastructure as code, now with new cloud engineering superpowers that will help you and your team adopt modern cloud architectures.
 
 <!--more-->
