@@ -126,6 +126,181 @@ A component resource must register a unique type name with the base constructor.
 For a complete end-to-end walkthrough of building a component from scratch, including setup, implementation, and publishing, see the [Build a Component](/docs/iac/using-pulumi/build-a-component/) guide.
 {{< /notes >}}
 
+## Component arguments and type requirements
+
+When authoring components that will be consumed across different languages (multi-language components), the arguments class has specific requirements and limitations due to the need for serialization. These constraints ensure that component arguments can be transmitted to the Pulumi engine and reconstructed across language boundaries.
+
+### Serialization requirements
+
+Component arguments must be serializable, meaning you must convert them to a format that the engine can transmit and reconstruct. This is necessary because:
+
+1. The Pulumi engine needs to understand and validate the inputs
+1. Multi-language components need to translate arguments between languages
+1. The state needs to be stored and retrieved across deployments
+
+### Supported types
+
+The following types are supported in component arguments:
+
+- **Primitive types**: `string`, `number`/`int`, `boolean`.
+- **Arrays/lists**: Arrays of any supported type.
+- **Objects/maps**: Objects with properties of supported types.
+- **Input wrappers**: Language-specific input types that wrap values:
+  - TypeScript/JavaScript: `pulumi.Input<T>`
+  - Python: `pulumi.Input[T]`
+  - Go: `pulumi.StringInput`, `pulumi.IntInput`, etc.
+  - .NET: `Input<T>`
+  - Java: `Output<T>`
+
+### Unsupported types
+
+The following types are not supported in component arguments:
+
+- **Union types**: TypeScript union types like `string | number` are not supported due to limitations in schema inference.
+- **Functions/callbacks**: Functions cannot be used in component arguments as they cannot be represented in the schema.
+- **Platform-specific types**: Types that exist only in one language and cannot be translated.
+
+### Design recommendations
+
+For better usability and maintainability:
+
+- **Avoid deeply nested types**: While complex generic types can be serialized, deeply nested structures make components harder to use and understand. Keep argument structures simple and flat when possible.
+
+**Example of unsupported TypeScript types:**
+
+```typescript
+// ❌ This will NOT work - union types are not supported
+export interface MyComponentArgs {
+    value: string | number;  // Union type - unsupported
+    callback: () => void;    // Function - unsupported
+}
+
+// ✅ This WILL work - use primitives or Input types
+export interface MyComponentArgs {
+    value: pulumi.Input<string>;
+    count: pulumi.Input<number>;
+}
+```
+
+### Constructor requirements by language
+
+Each language has specific requirements for component constructors to ensure proper schema generation:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+**Requirements:**
+
+- The constructor must have an argument named exactly `args`
+- The `args` parameter must have a type declaration (e.g., `args: MyComponentArgs`)
+
+```typescript
+class MyComponent extends pulumi.ComponentResource {
+    constructor(name: string, args: MyComponentArgs, opts?: pulumi.ComponentResourceOptions) {
+        super("pkg:index:MyComponent", name, {}, opts);
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+**Requirements:**
+
+- The `__init__` method must have an argument named exactly `args`
+- The `args` parameter must have a type annotation (e.g., `args: MyComponentArgs`)
+
+```python
+class MyComponent(pulumi.ComponentResource):
+    def __init__(self, name: str, args: MyComponentArgs, opts: Optional[pulumi.ResourceOptions] = None):
+        super().__init__('pkg:index:MyComponent', name, None, opts)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+**Requirements:**
+
+- The constructor function should accept a context, name, args struct, and variadic resource options
+- The args should be a struct type
+
+```go
+func NewMyComponent(ctx *pulumi.Context, name string, args *MyComponentArgs, opts ...pulumi.ResourceOption) (*MyComponent, error) {
+    myComponent := &MyComponent{}
+    err := ctx.RegisterComponentResource("pkg:index:MyComponent", name, myComponent, opts...)
+    if err != nil {
+        return nil, err
+    }
+    return myComponent, nil
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+**Requirements:**
+
+- The constructor must have exactly 3 arguments:
+  1. A `string` for the name (or any unspecified first argument)
+  1. An argument that is assignable from `ResourceArgs` (must extend `ResourceArgs`)
+  1. An argument that is assignable from `ComponentResourceOptions`
+
+```csharp
+public class MyComponent : ComponentResource
+{
+    public MyComponent(string name, MyComponentArgs args, ComponentResourceOptions? opts = null)
+        : base("pkg:index:MyComponent", name, opts)
+    {
+    }
+}
+
+public sealed class MyComponentArgs : ResourceArgs
+{
+    [Input("value")]
+    public Input<string>? Value { get; set; }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+**Requirements:**
+
+- The constructor must have exactly one argument that extends `ResourceArgs`
+- Other arguments (name, options) are not restricted but typically follow the standard pattern
+
+```java
+public class MyComponent extends ComponentResource {
+    public MyComponent(String name, MyComponentArgs args, ComponentResourceOptions opts) {
+        super("pkg:index:MyComponent", name, null, opts);
+    }
+}
+
+class MyComponentArgs extends ResourceArgs {
+    @Import(name = "value")
+    private Output<String> value;
+
+    public Output<String> getValue() {
+        return this.value;
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### Best practices
+
+When designing component arguments:
+
+1. **Wrap all scalar members in Input types**: Every scalar argument should be wrapped in the language's input type (e.g., `pulumi.Input<string>`). This allows users to pass both plain values and outputs from other resources, avoiding the need to use `apply` for resource composition.
+1. **Use basic types**: Stick to primitive types, arrays, and basic objects.
+1. **Avoid union types**: Instead of a single value with multiple types, consider multiple, mutually exclusive argument members and validate that only one of them has a value in your component constructor.
+1. **Document required vs. optional**: Clearly document which arguments are required and which have defaults.
+1. **Follow language conventions**: Use camelCase for schema properties but follow language-specific naming in implementation (snake_case in Python, PascalCase in .NET).
+
 ## Creating Child Resources
 
 Component resources often contain child resources. The names of child resources are often derived from the component resources's name to ensure uniqueness. For example, you might use the component resource's name as a prefix. Also, when constructing a resource, children must be registered as such. To do this, pass the component resource itself as the `parent` option.
