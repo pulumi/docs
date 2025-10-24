@@ -43,7 +43,7 @@ sections:
     link: /docs/idp/
   - emoji: 🤖
     heading: Infrastructure AI
-    description: Infrastructure automation with Pulumi Copilot and natural language assistance.
+    description: Infrastructure automation with Pulumi Neo and natural language assistance.
     link: /docs/ai/
 - type: button-cards
   heading: Learning Resources

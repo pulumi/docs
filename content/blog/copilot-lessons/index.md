@@ -20,6 +20,11 @@ social:
         One memorable turning point came from user feedback: "Your tool doesn't know anything!" Instead of seeing it as failure, we saw opportunity—leading to significant improvements.
         Curious how we turned unexpected challenges into product breakthroughs? Learn more: https://www.pulumi.com/blog/copilot-lessons/
 ---
+
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 Building AI-powered developer tools comes with unique challenges, and now that we've **[launched our REST API](/blog/pulumi-copilot-rest/)**, we want to share some lessons we've learned building Pulumi Copilot, an AI assistant for cloud infrastructure.
 
 One of the big challenges was determining what 'working' really meant. So when a message landed in our feedback channel after months of rigorous testing - 'Your tool doesn't know anything!' - it caused some mild panic. We'd just made some changes, so we braced for the worst. But our evals were still looking strong, so what was going on?

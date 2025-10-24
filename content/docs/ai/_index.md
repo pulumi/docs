@@ -14,6 +14,10 @@ aliases:
 - /docs/iac/neo/
 - /docs/neo/
 - /docs/ai/neo/
+- /docs/ai/copilot/
+- /docs/pulumi-cloud/copilot/
+- /docs/intro/copilot/
+- /docs/intro/pulumi-cloud/copilot/
 menu:
     ai:
         identifier: ai-home
@@ -51,10 +55,6 @@ sections:
     heading: Previews
     link: /docs/ai/running-previews/
     description: Generate infrastructure previews with approval gates.
-  - emoji: 💬
-    heading: Copilot
-    link: /docs/ai/copilot/
-    description: Natural language queries and insights for your infrastructure.
 
 - type: flat
   heading: Have questions?
