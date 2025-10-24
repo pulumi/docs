@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -35,13 +35,13 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/-P3aBpE0CYE?si=6mjMdwfSGkDUmiyg
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-10-23T12:00:00-04:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
@@ -64,7 +64,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Policy as Code", "Platform Engineering"]
+        topics:  ["AI", "Pulumi Neo", "Policy as Code", "Platform Engineering"]
         languages: ["Any"]
         clouds: ["AWS"]
 
