@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: "Enterprise Guardrails for Agent-driven Operations"
 meta_desc: Learn how to balance team velocity with security and compliance by implementing governance frameworks for AI agents and policy as code.
-meta_image: Enterprise-guardrails.png‎
+meta_image: Enterprise-guardrails.png
 
 # A featured webinar will display first in the list.
 featured: false
@@ -51,7 +51,7 @@ main:
         Platform Engineers must often balance enabling team velocity without losing control of [security and compliance for their infrastructure](https://www.pulumi.com/product/pulumi-insights/). In this session, we'll demonstrate how to augment infrastructure agents, enabling faster time to market with common-sense policy controls that balance speed and safety.
     learn:
         - Designing governance frameworks for AI agents
-        - [Use prompts to create a Pulumi program that deploys Ollama GPU server on AWS](https://hubs.ly/Q03Q2mgC0)
+        - "[Use prompts to create a Pulumi program that deploys Ollama GPU server on AWS](https://hubs.ly/Q03Q2mgC0)"
         - Set [Policy as code](https://www.pulumi.com/docs/insights/policy/get-started/) for agentic workflows
         - Role-based access controls for agentic workflows
         - Audit trails and compliance in autonomous operations
