@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: "Getting Started with Infrastructure Agents"
 meta_desc: Learn to add intelligent automation to infrastructure workflows with proper controls and human oversight.
-meta_image:
+meta_image: get-started-ai-agent.png
 
 # A featured webinar will display first in the list.
 featured: false
