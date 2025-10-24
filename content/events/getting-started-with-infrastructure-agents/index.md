@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: "Getting Started with Infrastructure Agents"
 meta_desc: Learn to add intelligent automation to infrastructure workflows with proper controls and human oversight.
-meta_image:
+meta_image: /images/resources/get-started-ai-agent.png
 
 # A featured webinar will display first in the list.
 featured: false
@@ -12,7 +12,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -35,13 +35,13 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url: https://www.youtube.com/embed/_6abaK-dCz0?si=3assXiKb1H-jKMF7
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-10-14T12:00:00-04:00
 
     # Duration of the webinar.
-    duration: 90 minutes
+    duration: 60 minutes
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: virtual
@@ -64,7 +64,7 @@ main:
     # case-sensitive
     tags:
         level: Beginner # Beginner, Intermediate, Advanced
-        topics:  ["Pulumi MCP Server"]
+        topics:  ["AI", "Infrastructure as Code", "Platform Engineering", "Pulumi Neo"]
         languages: ["Any"]
         clouds: ["AWS"]
 
