@@ -50,8 +50,7 @@ main:
     description: |
         Platform Engineering teams looking to add intelligent automation to their infrastructure workflows must first plan controls and human oversight into their process. In this session, we'll introduce considerations for setting up agentic workflows with a basic 'human in the loop' approval process and walk through a basic cloud deployment.
     learn:
-        - Introduction to [Pulumi Neo](https://www.pulumi.com/product/neo/) and MCP Server concepts and considerations
-        - "[Use prompts to Create AWS Static Website + S3 Hosting + ESC Auth + README](https://hubs.ly/Q03Q2mgC0)"
+        - Introduction to Pulumi Neo and MCP Server concepts and considerations
         - Configuring agents within your environment
         - Understanding Pulumi's core platform engineering capabilities and architecture
         - "Your first autonomous infrastructure workflow: provisioning cloud resources with a basic pull request approval workflow"
