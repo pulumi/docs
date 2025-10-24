@@ -51,7 +51,7 @@ helm upgrade --install external-secrets external-secrets/external-secrets \
 #### Create secret containing Pulumi access token
 
 ```bash
-kubectl create secret generic pulumi-access-token -from-literal=PULUMI_ACCESS_TOKEN=${PULUMI_ACCESS_TOKEN} \
+kubectl create secret generic pulumi-access-token --from-literal=PULUMI_ACCESS_TOKEN=${PULUMI_ACCESS_TOKEN} \
     --namespace external-secrets
 ```
 
