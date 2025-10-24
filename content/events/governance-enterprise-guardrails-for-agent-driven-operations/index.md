@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: "Enterprise Guardrails for Agent-driven Operations"
 meta_desc: Learn how to balance team velocity with security and compliance by implementing governance frameworks for AI agents and policy as code.
-meta_image:
+meta_image: Enterprise-guardrails.png‎
 
 # A featured webinar will display first in the list.
 featured: false
