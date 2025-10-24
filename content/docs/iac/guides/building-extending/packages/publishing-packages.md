@@ -21,13 +21,25 @@ aliases:
 - /docs/iac/build-with-pulumi/publishing-packages/
 ---
 
-This guide will take you step-by-step through creating and publishing a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a component, custom provider, or an existing Terraform provider packaged for use within Pulumi. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
+This guide will take you through the process to create and publish a [Pulumi Package](/docs/iac/concepts/packages) to the [Pulumi Registry](/registry). You can use this guide to publish the following types of Pulumi Packages:
+
+- A [component](/docs/iac/concepts/components) or related group of components
+- A custom provider where you define the CRUD operations for each resource type
+- A bridged provider, which wraps an existing Terraform provider and leverages its code to perform the CRUD operations for each resource type
 
 {{% notes type="info" %}}
-If you are a cloud or SaaS provider interested in publishing a Pulumi provider or component, please [reach out partners team](/contact/?form=registry) to start publishing to the Pulumi Registry.
+This guide is for creating packages for public consumption. If you are a looking for information on how to create and publish components for use within your organization, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component).
+{{% /notes %}}
+
+{{% notes type="info" %}}
+If you are a cloud or SaaS provider interested in publishing a Pulumi provider or component, please [reach out to our partners team](/contact).
 {{% /notes %}}
 
 ## Prerequisites
+
+{{% notes type="info" %}}
+This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
+{{% /notes %}}
 
 - You need to [install Pulumi](/docs/install/).
 - You should be familiar with the Pulumi [Resource and Component model](/docs/concepts/resources/).
@@ -46,7 +58,7 @@ We've created some template repositories for you to use as a starting point for 
 - Bridge an existing Terraform Provider to use with Pulumi: [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate)
 
 {{% notes type="info" %}}
-If you need access to a Terraform provider, but don't need the full customisation of a published provider, the ["Any Terraform Provider" Pulumi Provider](/registry/packages/terraform-provider) can provide instant access via locally generating SDKs.
+If you need access to a Terraform provider, but don't need the full customization of a published provider, the ["Any Terraform Provider" Pulumi Provider](/registry/packages/terraform-provider) can provide instant access via locally generating SDKs.
 {{% /notes %}}
 
 ### Name your provider and repository
