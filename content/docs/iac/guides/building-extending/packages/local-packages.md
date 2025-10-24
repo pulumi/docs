@@ -66,10 +66,10 @@ This clones the repo and executes the source, enabling you to use packages from 
 #### Using `terraform-provider`
 
 ```bash
-pulumi package add terraform-provider hashicorp/random
+pulumi package add terraform-provider hashicorp/random 3.5.1
 ```
 
-Refer to the [Terraform Provider documentation](/docs/iac/using-pulumi/pulumi-packages/terraform-provider/) for more details.
+Refer to the [Any Terraform Provider documentation](/docs/iac/using-pulumi/pulumi-packages/terraform-provider/) for more details.
 
 ## Using generated SDKs
 
@@ -217,7 +217,7 @@ When creating a component that contains a local package, you must ensure the gen
 
 - Any Terraform provider via [`terraform-provider`](/registry/packages/terraform-provider/)
 - Another component that itself contains a local package
-- Any other dynamically generated SDK
+- Any other Pulumi plugin that generates code in the `sdk` folder
 
 ### Requirements
 
