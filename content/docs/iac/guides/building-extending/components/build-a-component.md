@@ -41,6 +41,10 @@ Pulumi Components are implemented as custom classes in any Pulumi-supported lang
 
 Pulumi Components inherently support multi-language use. Regardless of the language a component was written in, it is a fast one-step process to generate a SDK, allowing you to use it in all Pulumi-supported languages.
 
+{{< notes type="warning" >}}
+If your component uses a local package (such as any Terraform provider via `terraform-provider`, or another component that contains a local package), you must commit the generated SDK code to version control. See [Using components with local packages](/docs/iac/guides/building-extending/packages/local-packages/#components-with-local-packages) for details.
+{{< /notes >}}
+
 ## Structure of a Component
 
 A Pulumi Component consists of three main parts:
