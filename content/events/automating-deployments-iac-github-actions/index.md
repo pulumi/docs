@@ -37,7 +37,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-02-05T09:00:00-08:00
@@ -51,9 +51,9 @@ main:
     # Description of the webinar.
     description: |
        For organizations already using Infrastructure as Code (IaC), the next crucial step is establishing reliable, secure deployment pipelines. This workshop bridges the gap between basic IaC adoption and production-grade infrastructure automation.
-       
+
        You'll learn how to transform manual or partially automated infrastructure processes into fully automated, secure delivery pipelines. Through hands-on demos using Pulumi and GitHub Actions, you will learn how to implement enterprise-grade practices including repeatable deployments of infrastructure pipelines, automated drift detection, and secure credential handling. Discover how to overcome common challenges in infrastructure automation while building deployment workflows that enhance security, improve reliability, and reduce operational overhead.
-       
+
        This workshop is ideal for teams looking to mature their IaC practices and establish repeatable, secure infrastructure delivery processes.
 
     learn:
@@ -63,7 +63,7 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Rob Smith 
+        - name: Rob Smith
           role: Solutions Architect, Pulumi
           photo: /images/team/Rob-Smith.png
 
@@ -87,8 +87,8 @@ event_data:
   url: "https://www.pulumi.com/resources/automating-deployments-iac-github-actions/"
   description: |
     For organizations already using Infrastructure as Code (IaC), the next crucial step is establishing reliable, secure deployment pipelines. This workshop bridges the gap between basic IaC adoption and production-grade infrastructure automation.
-    
+
     You'll learn how to transform manual or partially automated infrastructure processes into fully automated, secure delivery pipelines. Through hands-on demos using Pulumi and GitHub Actions, you will learn how to implement enterprise-grade practices including repeatable deployments of infrastructure pipelines, automated drift detection, and secure credential handling. Discover how to overcome common challenges in infrastructure automation while building deployment workflows that enhance security, improve reliability, and reduce operational overhead.
-    
+
     This workshop is ideal for teams looking to mature their IaC practices and establish repeatable, secure infrastructure delivery processes.
 ---

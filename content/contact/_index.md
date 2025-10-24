@@ -11,7 +11,7 @@ form:
     - key: sales
       label: I want to talk to someone in Sales
       hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
-    
+
     - key: support
       label: I need help with Support
       hubspot_form_id: cta1

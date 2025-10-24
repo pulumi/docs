@@ -9,7 +9,7 @@ menu:
         name: Organizations
         parent: administration-organizations-teams
         weight: 1
-        
+
 aliases:
 - /docs/administration/organizations-teams/organizations/
 - /docs/reference/service/orgs/

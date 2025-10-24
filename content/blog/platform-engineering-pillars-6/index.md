@@ -19,7 +19,7 @@ social:
 
       🔥 The Challenge:
       - Tool sprawl across metrics, logs, and traces
-      - Alert fatigue from context-free notifications  
+      - Alert fatigue from context-free notifications
       - Reactive debugging instead of proactive prevention
       - Manual instrumentation gaps in new services
 
@@ -164,19 +164,19 @@ To ensure your observability practices truly empower engineering teams, it's ess
 
 Key metrics to measure observability enablement include:
 
-- **Mean Time to Detection (MTTD)**:  
+- **Mean Time to Detection (MTTD)**:
   How quickly are issues identified after they occur? Effective observability should significantly reduce the time it takes to detect problems, enabling faster responses and minimizing user impact.
 
-- **Mean Time to Resolution (MTTR)**:  
+- **Mean Time to Resolution (MTTR)**:
   How quickly are issues resolved once detected? With clear, actionable insights and unified observability, your teams should resolve issues faster, reducing downtime and improving reliability.
 
-- **Engineering Team Satisfaction with Observability Tools**:  
+- **Engineering Team Satisfaction with Observability Tools**:
   Regularly survey your teams to gauge their satisfaction with observability tools and workflows. Higher satisfaction indicates that observability is effectively embedded into engineering workflows, reducing friction and increasing productivity.
 
-- **Adoption Rate of Observability Tools and Dashboards**:  
+- **Adoption Rate of Observability Tools and Dashboards**:
   Track how widely observability tools and dashboards are adopted across teams. Increased adoption indicates that your teams find these tools valuable, intuitive, and helpful in their daily work.
 
-- **Reduction in Alert Noise and False Positives**:  
+- **Reduction in Alert Noise and False Positives**:
   Measure the volume and accuracy of alerts over time. Effective observability should reduce noisy, irrelevant alerts, ensuring your teams focus on meaningful, actionable notifications.
 
 Tracking these metrics helps you continuously improve your observability practices, ensuring they remain effective and empowering. By regularly reviewing and acting on these insights, you can proactively enhance team productivity, reliability, and overall satisfaction.
@@ -196,13 +196,13 @@ Tracking these metrics helps you continuously improve your observability practic
 
 Pulumi’s platform features let you explore observability without bolting on extra tools. Key Pulumi features that enable observability include:
 
-- **Pulumi Insights**:  
+- **Pulumi Insights**:
   Provides unified visibility and powerful search across all your cloud resources. Your teams can quickly discover, explore, and understand their infrastructure, eliminating manual searches and reducing cognitive load.
 - **Centralized Service List**:
   Pulumi IDP’s Services portal gives you a single place to register each microservice, database, or cloud resource and link to its dashboards, logs, and traces.
-- **Pulumi Co-Pilot**:  
+- **Pulumi Co-Pilot**:
   Delivers AI-powered troubleshooting and insights directly within your workflows. Your teams can ask natural-language questions about their infrastructure (such as "What infrastructure changed yesterday?") and receive immediate, actionable answers.
-- **Built-In Instrumentation via IDP Components**:  
+- **Built-In Instrumentation via IDP Components**:
   When you author components and templates in Pulumi IDP, you can bake in standard logging, metrics, and tracing hooks. Every service spun up from those templates ships with consistent instrumentation on day one.
 
 With Pulumi, observability can become an integrated part of your platform, accelerating innovation, improving reliability, and empowering engineering teams to confidently build, deploy, and operate software.

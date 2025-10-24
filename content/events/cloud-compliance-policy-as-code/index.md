@@ -37,7 +37,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-02-19T09:00:00-08:00
@@ -51,9 +51,9 @@ main:
     # Description of the webinar.
     description: |
        As organizations scale their cloud infrastructure, maintaining security and compliance becomes increasingly complex. This workshop explores how Policy as Code (PaC) transforms traditional manual compliance processes into automated, version-controlled, and programmatically enforced guardrails
-       
+
        Participants will learn how to implement effective cloud governance strategies using modern PaC approaches, including writing custom policies, integrating them into CI/CD pipelines, and establishing automated enforcement mechanisms. Through practical demonstrations using Pulumi's CrossGuard, you'll discover how to bridge the gap between security requirements and infrastructure deployment while maintaining development velocity.
-       
+
        Whether you're dealing with cost management, security compliance, or architectural standards, you'll leave with actionable insights to implement PaC in your organization.
 
     learn:
@@ -87,8 +87,8 @@ event_data:
   url: "https://www.pulumi.com/resources/cloud-compliance-policy-as-code/"
   description: |
     As organizations scale their cloud infrastructure, maintaining security and compliance becomes increasingly complex. This workshop explores how Policy as Code (PaC) transforms traditional manual compliance processes into automated, version-controlled, and programmatically enforced guardrails.
-    
+
     Participants will learn how to implement effective cloud governance strategies using modern PaC approaches, including writing custom policies, integrating them into CI/CD pipelines, and establishing automated enforcement mechanisms. Through practical demonstrations using Pulumi's CrossGuard, you'll discover how to bridge the gap between security requirements and infrastructure deployment while maintaining development velocity.
-    
+
     Whether you're dealing with cost management, security compliance, or architectural standards, you'll leave with actionable insights to implement PaC in your organization.
 ---

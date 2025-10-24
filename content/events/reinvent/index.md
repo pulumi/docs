@@ -42,7 +42,7 @@ main:
     sortable_date: 2024-12-02T09:00:00-08:00
 
     # Duration of the webinar.
-    duration: 
+    duration:
 
     # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
     location: Las Vegas

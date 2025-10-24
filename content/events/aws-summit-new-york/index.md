@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: AWS Summit New York
 meta_desc: Visit with Pulumi experts and executives at AWS Summit New York (Booth 562)
-meta_image: 
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false

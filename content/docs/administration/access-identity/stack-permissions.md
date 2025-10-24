@@ -9,7 +9,7 @@ menu:
     name: "Stack permissions"
     parent: administration-access-identity
     weight: 2
-    
+
 aliases:
 - /docs/administration/access-identity/stack-permissions/
 - /docs/console/collaboration/stack-permissions/

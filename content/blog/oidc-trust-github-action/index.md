@@ -3,7 +3,7 @@ title: "Simplify OIDC Trust with the New Pulumi GitHub Action"
 
 date: 2024-05-20T21:45:13Z
 
-meta_desc: Introducing Pulumi GitHub Action for OIDC Trust Relationships 
+meta_desc: Introducing Pulumi GitHub Action for OIDC Trust Relationships
 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
@@ -16,7 +16,7 @@ meta_image: meta.png
 authors:
     - german-lena
     - arun-loganathan
-    
+
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:

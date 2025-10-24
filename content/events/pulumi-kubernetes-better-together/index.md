@@ -50,11 +50,11 @@ main:
     # Description of the webinar.
     description: |
         Explore the powerful combination of Kubernetes and Pulumi for modern cloud-native application deployment and management.
-        
+
         Kubernetes has become the de facto standard for container orchestration, offering scalability, portability, and efficient resource utilization. However, organizations often face challenges in managing complex Kubernetes configurations and integrating with various cloud services. This is where Pulumi steps in, providing a revolutionary approach to infrastructure as code.
-        
+
         Pulumi empowers developers to define and manage Kubernetes resources using familiar general-purpose programming languages, eliminating the need for lengthy YAML configurations. This workshop demonstrates how Pulumi's unified platform enables teams to manage not only Kubernetes resources but also cloud provider services and SaaS offerings through a single, consistent toolchain.
-        
+
         Participants will gain hands-on experience using Pulumi to deploy and manage Kubernetes applications and learn best practices for creating maintainable and scalable infrastructure code. You will learn how, by using Pulumi, organizations can streamline their infrastructure management, improve collaboration between development and operations teams, and accelerate their cloud-native journey.
 
     learn:
@@ -86,10 +86,10 @@ event_data:
   url: "https://www.pulumi.com/resources/pulumi-kubernetes-better-together/"
   description: |
     Explore the powerful combination of Kubernetes and Pulumi for modern cloud-native application deployment and management.
-        
+
     Kubernetes has become the de facto standard for container orchestration, offering scalability, portability, and efficient resource utilization. However, organizations often face challenges in managing complex Kubernetes configurations and integrating with various cloud services. This is where Pulumi steps in, providing a revolutionary approach to infrastructure as code.
-        
+
     Pulumi empowers developers to define and manage Kubernetes resources using familiar general-purpose programming languages, eliminating the need for lengthy YAML configurations. This workshop demonstrates how Pulumi's unified platform enables teams to manage not only Kubernetes resources but also cloud provider services and SaaS offerings through a single, consistent toolchain.
-        
+
     Participants will gain hands-on experience using Pulumi to deploy and manage Kubernetes applications and learn best practices for creating maintainable and scalable infrastructure code. You will learn how, by using Pulumi, organizations can streamline their infrastructure management, improve collaboration between development and operations teams, and accelerate their cloud-native journey.
 ---

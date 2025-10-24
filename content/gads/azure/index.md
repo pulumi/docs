@@ -29,14 +29,14 @@ key_features_above:
                 using Pulumi;
                 using Pulumi.AzureNative.Storage;
                 using Pulumi.AzureNative.Storage.Inputs;
-                
+
                 class MyStack : Stack
                 {
                     public MyStack()
                     {
                       var config = new Config();
                       var resourceGroupNameParam = config.Require("resourceGroupNameParam");
-                      var storagecreatedbyarm = new StorageAccount("mystorage", 
+                      var storagecreatedbyarm = new StorageAccount("mystorage",
                       new StorageAccountArgs
                       {
                           AccountName = "mystorage",
@@ -53,7 +53,7 @@ key_features_above:
           button:
             text: "Try Pulumi Cloud for FREE"
             link: "https://app.pulumi.com/signup"
-        
+
 key_features:
     title: Key features
     items:
@@ -67,7 +67,7 @@ key_features:
               code: |
                 using Pulumi;
                 using AzureNative = Pulumi.AzureNative;
-                
+
                 class MyStack : Stack
                 {
                     public MyStack()
@@ -92,7 +92,7 @@ key_features:
               code: |
                 import * as pulumi from "@pulumi/pulumi";
                 import * as azure_native from "@pulumi/azure-native";
-                
+
                 const config = new pulumi.Config();
                 const resourceGroupNameParam = config.require("resourceGroupNameParam");
                 const storagecreatedbyarm = new azure_native.storage.StorageAccount("storagecreatedbyarm", {
@@ -108,13 +108,13 @@ key_features:
               language: go
               code: |
                 package main
-                
+
                 import (
                 	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
                 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
                 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
                 )
-                
+
                 func main() {
                 	pulumi.Run(func(ctx *pulumi.Context) error {
                 		cfg := config.New(ctx, "")
@@ -141,7 +141,7 @@ key_features:
               code: |
                 import pulumi
                 import pulumi_azure_native as azure_native
-                
+
                 config = pulumi.Config()
                 resource_group_name_param = config.require("resourceGroupNameParam")
                 storagecreatedbyarm = azure_native.storage.StorageAccount("storagecreatedbyarm",

@@ -45,7 +45,7 @@ tags:
 social:
     twitter: |
         Perfect architecture is a myth. Simen's take: Make 👏 Change 👏 Cheap 👏
-        
+
         Read this candid take on why designing for change beats trying to
         predict the future - and why your over-engineered system might be holding you back.
     linkedin: |

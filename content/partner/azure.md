@@ -25,13 +25,13 @@ hero:
                 using Pulumi.AzureNative.Resources;
                 using Pulumi.AzureNative.Storage;
                 using Pulumi.AzureNative.Storage.Inputs;
-    
+
                 class MyStack : Stack
                 {
                     public MyStack()
                     {
                         var resourceGroup = new ResourceGroup("resourceGroup");
-    
+
                         var storageAccount = new StorageAccount("sa", new StorageAccountArgs
                         {
                             ResourceGroupName = resourceGroup.Name,
@@ -190,7 +190,7 @@ detail_sections:
           icon: security
           icon_color: salmon
           description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
-    
+
         - title: Multi Cloud
           icon: cloud
           icon_color: blue

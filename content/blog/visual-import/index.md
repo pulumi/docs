@@ -67,12 +67,12 @@ Whether you're consolidating legacy environments, auditing infrastructure before
 ### Increased Developer Productivity
 
 Manually transitioning existing infrastructure to code often pulls developers away from their primary focus—building and improving services. By automating code generation and applying intelligent AI enhancements, Visual Import lets teams spend less time writing boilerplate code and fighting resource drift, and more time shipping meaningful changes.
-  
+
 Pulumi Copilot adds a layer of polish that typically requires hands-on review and iteration, saving your team valuable time while helping new contributors write clear, consistent infrastructure code from the start.
 
 ### Consistent, Reliable Infrastructure
 
-Unifying your cloud environments under a single IaC framework brings consistency, accountability, and repeatability to operations. Pulumi's typed IaC model makes configurations explicit and auditable, while policies and CI/CD integrations enforce best practices from the start.  
+Unifying your cloud environments under a single IaC framework brings consistency, accountability, and repeatability to operations. Pulumi's typed IaC model makes configurations explicit and auditable, while policies and CI/CD integrations enforce best practices from the start.
 
 By codifying your infrastructure, you reduce the risk of configuration drift, simplify onboarding, and ensure reproducibility across staging and production.
 

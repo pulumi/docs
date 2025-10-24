@@ -31,7 +31,7 @@ url_slug: advanced-infrastructure-as-code-workshop-with-luke-hoban
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: Advanced Infrastructure as Code - Workshop with Luke 
+    title: Advanced Infrastructure as Code - Workshop with Luke
 
     event_type: workshop # workshop | event
 

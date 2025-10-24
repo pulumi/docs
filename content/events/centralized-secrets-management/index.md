@@ -37,7 +37,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-03-12T09:00:00-07:00
@@ -51,7 +51,7 @@ main:
     # Description of the webinar.
     description: |
        In modern cloud-native environments, managing secrets across multiple teams, applications, and environments has become increasingly complex. This workshop explores best practices for implementing centralized secrets management that balances security requirements with developer productivity. You'll learn how to establish a unified approach to handling configuration values, static secrets, and dynamic credentials while maintaining proper access controls and audit capabilities.
-       
+
        Through practical demonstrations using Pulumi ESC, we'll explore how to consolidate secrets from various sources, implement role-based access controls, and seamlessly integrate with existing CI/CD pipelines. This workshop is designed for organizations looking to mature their infrastructure as code practices by establishing a robust secrets management strategy that scales with their team.
 
     learn:
@@ -61,7 +61,7 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Josh Kodroff 
+        - name: Josh Kodroff
           role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
 
@@ -85,6 +85,6 @@ event_data:
   url: "https://www.pulumi.com/resources/centralized-secrets-management/"
   description: |
     In modern cloud-native environments, managing secrets across multiple teams, applications, and environments has become increasingly complex. This workshop explores best practices for implementing centralized secrets management that balances security requirements with developer productivity. You'll learn how to establish a unified approach to handling configuration values, static secrets, and dynamic credentials while maintaining proper access controls and audit capabilities.
-    
+
     Through practical demonstrations using Pulumi ESC, we'll explore how to consolidate secrets from various sources, implement role-based access controls, and seamlessly integrate with existing CI/CD pipelines. This workshop is designed for organizations looking to mature their infrastructure as code practices by establishing a robust secrets management strategy that scales with their team.
 ---

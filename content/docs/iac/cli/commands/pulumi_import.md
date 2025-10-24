@@ -37,7 +37,7 @@ To fully specify parent and/or provider, subsitute the <urn> for each into the f
      pulumi import 'aws:iam/user:User' name id --parent 'parent=<urn>' --provider 'admin=<urn>'
 
 When importing multiple resources at once the `--file` option can be used to pass a JSON file
-containing multiple resources: 
+containing multiple resources:
      pulumi import --file import.json
 
 Where import.json is a file that matches the following JSON format:

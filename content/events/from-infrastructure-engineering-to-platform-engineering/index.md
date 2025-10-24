@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         Platform Engineering is transforming how teams build and manage infrastructure at scale. In this panel, leaders from Clear, Modivcare, and Sokkel share how they evolved from traditional infrastructure practices to modern [internal developer platforms (IDPs)](/product/internal-developer-platforms/)—with real-world lessons on scaling self-service, improving developer experience, and maintaining governance.
-    
+
     learn:
         - How organizations move from DevOps tooling to full platform teams
         - The role of Infrastructure as Code (IaC) and Pulumi in platform maturity

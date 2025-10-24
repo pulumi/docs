@@ -4,7 +4,7 @@ date: 2021-09-29T08:00:00-07:00
 draft: false
 meta_desc: Announcing a new public roadmap for Pulumi, where you can follow along with and influence our plans for the Pulumi Cloud Engineering Platform.
 meta_image: meta.png
-authors: 
+authors:
     - alex-mullans
 tags:
     - pulumi-news

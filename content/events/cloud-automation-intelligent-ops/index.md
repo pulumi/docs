@@ -54,7 +54,7 @@ main:
         - Best practices for balancing automation with human oversight
         - Strategies for incremental adoption of AI-powered infrastructure management
         - How to prepare your organization for the next wave of infrastructure automation
-        
+
     # The webinar presenters
     presenters:
         - name: Meagan Cojocar

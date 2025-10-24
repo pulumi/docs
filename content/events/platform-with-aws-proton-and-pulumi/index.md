@@ -49,7 +49,7 @@ main:
     # Description of the webinar.
     description: |
         In this workshop, you will learn how to enable self-service infrastructure for your organization using AWS Proton and Pulumi. The workshop will include a brief introduction to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud managed service for self-service infrastructure templates.
-    
+
         This 200-level workshop is designed to help users who have basic familiarity with Pulumi effectively handle real-world use cases. We will guide you through using AWS Proton and Pulumi with diagrams and a series of labs to help accelerate your organization's platform engineering efforts.
 
     learn:

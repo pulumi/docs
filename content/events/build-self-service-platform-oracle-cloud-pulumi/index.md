@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: Build a Self-Service Platform for Oracle Cloud with Pulumi
 meta_desc: Building a Self-Service Platform for Oracle Cloud Infrastructure (OCI) Services with Backstage and Pulumi
-meta_image: 
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false

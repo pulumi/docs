@@ -13,10 +13,10 @@ Set the local default organization for the current backend
 
 Set the local default organization for the current backend.
 
-This command is used to set your local default organization in which to create 
+This command is used to set your local default organization in which to create
 projects and stacks for the current backend.
 
-Currently, only the managed and self-hosted backends support organizations. If you try and set a default organization for a backend that does not 
+Currently, only the managed and self-hosted backends support organizations. If you try and set a default organization for a backend that does not
 support create organizations, then an error will be returned by the CLI
 
 ```

@@ -792,7 +792,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		
+
 		ctx.Export("url", ingress.Status.ApplyT(func(status networkingv1.IngressStatus) (*string, error) {
 			return &status.LoadBalancer.Ingress[0].Hostname, nil
 		}).(pulumi.StringPtrOutput))

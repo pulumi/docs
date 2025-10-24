@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-01-22T13:00:00+11:00
@@ -68,7 +68,7 @@ main:
         - name: Aurélien Requiem
           role: Customer Engineer, Pulumi
           photo: /images/team/aurelien-requiem.jpg
-        - name: Josh Kodroff 
+        - name: Josh Kodroff
           role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
 

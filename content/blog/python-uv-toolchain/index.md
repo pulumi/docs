@@ -12,7 +12,7 @@ tags:
     - infrastructure-as-code
 social:
     twitter: "Pulumi + uv: Announcing fast Python package management with uv, now fully integrated with Pulumi. See Adam and Julien discuss the new functionality in this video, or read our blog: www.pulumi.com//blog/python-uv-toolchain"
-    linkedin: "We're thrilled to announce built-in support for uv in Pulumi! 
+    linkedin: "We're thrilled to announce built-in support for uv in Pulumi!
 
     uv is an ultra-fast Python package manager written in Rust that can install dependencies up to 100x faster than traditional tools. Now fully integrated with Pulumi, it provides one of the fastest ways to manage your Python dependencies and virtual environments.
 

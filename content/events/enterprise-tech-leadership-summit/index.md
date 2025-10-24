@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: Enterprise Tech Leadership Summit
 meta_desc: Join Pulumi at the Enterprise Tech Leadership Summit to help redefine how complex enterprises deliver software for speed and market success.
-meta_image: 
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false

@@ -48,16 +48,16 @@ main:
 
     # Description of the webinar.
     description: |
-        Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi. We'll use three components to complete our ETL pipeline-to-be: 
-        
+        Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi. We'll use three components to complete our ETL pipeline-to-be:
+
         ▪️ A Glue crawler. The crawler is responsible for fetching data from some external source (for us, an S3 bucket) and importing it into a Glue catalog.
-        
+
         ▪️ A Glue job. The job is responsible for running an ETL script (e.g., on a schedule) to process the data imported by the crawler into the catalog.
-        
+
         ▪️ A Glue script. The script is where the ETL magic happens. Ours will be written in Python and be responsible for extracting data from the catalog, applying some slight transformations, and loading the transformed data into Redshift.
-        
-        ► [Get the code](https://www.pulumi.com/blog/redshift-etl-with-pulumi-and-aws-glue/) to follow along 
-        
+
+        ► [Get the code](https://www.pulumi.com/blog/redshift-etl-with-pulumi-and-aws-glue/) to follow along
+
         ✅ [Get Started with Pulumi](https://pulumip.us/Get-Started)
 
         The first in a series of videos, we'll use a fictional company named Zephyr to explore common questions that users ask when working with Pulumi. Zephyr wants to increase development velocity and flexibly scale different aspects of its online store. The demo will show deploying Zephyr's application, their online store.

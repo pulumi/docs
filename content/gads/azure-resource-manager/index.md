@@ -42,7 +42,7 @@ key_features_above:
                     integration tests. Preview changes before deploying.
                 icon: eye
                 color: yellow
-        
+
 key_features:
     title: Key features
     items:

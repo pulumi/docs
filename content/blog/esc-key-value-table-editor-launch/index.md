@@ -31,7 +31,7 @@ The Table Editor we are launching today introduces an alternate visual interface
 
 ![Table Editor](esc-key-value-table-editor.png)
 
-In the current release of the Table view, [provider configurations](/docs/esc/integrations) and functions are set to read-only.  
+In the current release of the Table view, [provider configurations](/docs/esc/integrations) and functions are set to read-only.
 
 ## What’s Next?
 

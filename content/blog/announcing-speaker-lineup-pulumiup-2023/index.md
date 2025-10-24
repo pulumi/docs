@@ -33,43 +33,43 @@ You'll hear from innovators, leaders, and experts from multiple industries and l
 
 ### Sam Cogan - Solution Architect, WTW
 
-_Talk: Keeping your Infrastructure Code DRY (Don't Repeat Yourself)_  
+_Talk: Keeping your Infrastructure Code DRY (Don't Repeat Yourself)_
 Sam is a Solution Architect with [WTW](https://www.wtwco.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) and a Microsoft Azure MVP. Sam is focused on delivering applications into the cloud using IaaS, PaaS, Serverless, Containers, and Kubernetes. Sam is particularly focused on automation and DevOps, including Infrastructure as Code, Cloud automation tooling, PowerShell, and CI/CD tooling.
 
 ### Dennis Sauvé - DevOps Engineer, Washington Trust Bank
 
-_Talk: How a Bank Modernized its Software Engineering with Infrastructure as Code Automation_  
+_Talk: How a Bank Modernized its Software Engineering with Infrastructure as Code Automation_
 Dennis is a development operations engineer at [Washington Trust Bank](https://www.watrust.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) in Spokane, WA. With years of experience in software development and cloud engineering, he works to streamline deployment pipelines and create solutions for developers.
 
 ### Ala Shiban - Co-Founder & CEO, Klotho
 
-_Talk: Creating a 'Cloud-Aware' Code Solution_  
+_Talk: Creating a 'Cloud-Aware' Code Solution_
 Ala is the co-founder of [Klotho](https://klo.dev/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP), a startup that transforms plain code to cloud-native code. He started his journey on Commodore64 with cassette tapes and (much) more recently worked on distributed systems, developer tools, and large-scale web, cloud, and microservice backends.
 
 He's led smaller teams and larger organizations at Microsoft's Developer Division and Riot Games' Infrastructure Platform organization.
 
 ### Matt Stephenson - Sr. Principal Software Engineer, Starburst Data
 
-_Talk: Creating Infrastructure Automation Magic with Code_  
+_Talk: Creating Infrastructure Automation Magic with Code_
 Matt is a Sr. Principal Software Engineer at [Starburst Data](https://www.starburst.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP). He's responsible for Starburst's infrastructure architecture. He's worked at many tech companies, including Square, Oracle, Google, and Amazon. Aside from technology, Matt is a pilot and helps build The Man for Burning Man each year.
 
 ### Tim Holm - Co-Founder & CTO, Nitric
 
-_Talk: Engineering a Multi-cloud Platform_  
+_Talk: Engineering a Multi-cloud Platform_
 Tim Holm is the Co-founder and CTO at [Nitric](https://nitric.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP), with 12 years of experience in software engineering and cloud development. In disciplines ranging from Server and Storage Virtualisation and Automation, Mobile Application development, Full-stack application development, and Cloud infrastructure automation. Before founding Nitric, Tim worked to deliver critical infrastructure projects in Government and Fintech.
 
 In his spare time, Tim enjoys video games, building Lego, and mountain biking.
 
 ### Tyler Scheuble - Head of Platform, People Data Labs
 
-_Talk: Using Monorepos to Level-up your Infrastructure as Code and Software Delivery_  
+_Talk: Using Monorepos to Level-up your Infrastructure as Code and Software Delivery_
 Tyler possesses a genuine enthusiasm for technology. At [People Data Labs](https://www.peopledatalabs.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP), he has designed petabyte-scale data pipelines and high-performance APIs with demanding availability requirements, which informed his approach to leading the development of the next generation of the startup's development pipelines and environments.
 
 Tyler is passionate about finding simple solutions to cross-cutting concerns such as security, observability, and development velocity.
 
 ### Sefi Genis - Co-Founder & CTO, Firefly
 
-_Talk: Lessons Learned from Writing Thousands of Lines of IaC_  
+_Talk: Lessons Learned from Writing Thousands of Lines of IaC_
 Sefi is the CTO and Co-Founder at [Firefly](https://www.gofirefly.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP). He started his career in the 8200 Unit of the Israeli Intelligence Corps and then continued on to security and developer tooling companies.
 
 Sefi was a founding engineer at Dome9 Security (later acquired by Checkpoint), where he led  the Backend Infrastructure of the product post-acquisition. Before founding Firefly, he became Head of Engineering in an Israeli cybersecurity startup company. Today he is building Firefly to help engineers manage the new reality of cloud-native operations.
@@ -95,13 +95,13 @@ Luke is CTO at Pulumi. He has worked on developer tools his entire career. He st
 Thank you to our amazing partners for supporting PulumiUP! Visit these booths for tech talks, demos and Q&A about your favorite cloud platforms and developer tools:
 
 * [AWS](https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - Solutions Architects will be on hand to demo the latest AWS and Pulumi capabilities and help you get the most from the AWS platform.
-* [Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - Customer Engineers will help you accelerate your cloud journey with helpful tips and Q&A.  
+* [Google Cloud](https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - Customer Engineers will help you accelerate your cloud journey with helpful tips and Q&A.
 * [Microsoft](http://azure.microsoft.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - Cloud Advocates will be available to show you how to kickstart your projects on Azure.
 * [Equinix](https://www.equinix.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - Stop by the Equinix booth to learn all about the new Equinix Pulumi provider.
-* [CircleCI](https://circleci.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - Stop by the CircleCI booth to learn best practices for adopting CI/CD in your organization.  
+* [CircleCI](https://circleci.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - Stop by the CircleCI booth to learn best practices for adopting CI/CD in your organization.
 * [New Relic](https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - The New Relic team will demonstrate how to get started with Observability as Code with Pulumi and New Relic.
 * [Firefly](https://www.gofirefly.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - If you have existing cloud resources you can convert them to Pulumi code easily with Firefly. Stop by the Firefly booth for a demo.
-* [Nitric](https://nitric.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - The Nitric team will be on site to show you how to create cloud-agnostic infrastructure code from your application code.  
+* [Nitric](https://nitric.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - The Nitric team will be on site to show you how to create cloud-agnostic infrastructure code from your application code.
 * [Klotho](https://klo.dev/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - The Klotho team will show you how devops teams an application teams can easily collaborate to moderize and scale infrastructure without disruptions.
 * [Port](https://www.getport.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP) - Join the Port team to learn how to setup a self-service portal for your developers.
 

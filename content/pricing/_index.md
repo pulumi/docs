@@ -422,7 +422,7 @@ comparison_table:
                   - content: _check
                   - content: _check
                   - content: _check
-              
+
           ## Pulumi Insights Table
           - header: Insights & Governance
             subheader: Visibility and governance across your entire cloud estate
@@ -439,7 +439,7 @@ comparison_table:
                   - content: 500 free
                   - content: $0.01<br>3,000 included
                   - content: $0.01 / Custom<br>3,000 included
-                  - content: $0.01 / Custom<br>3,000 included                  
+                  - content: $0.01 / Custom<br>3,000 included
               - title: Resource search
                 link: /docs/insights/search/
                 items:
@@ -469,28 +469,28 @@ comparison_table:
                   - content: _check
               - title: Policy Enforcement
                 link: /docs/insights/policy-as-code
-                items: 
+                items:
                   - content: "Manual"
                   - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
                   - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
                   - content: "[Organization-managed](/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack)"
               - title: Preventative Policies
                 link: /docs/insights/preventative-vs-audit-policies/
-                items: 
+                items:
                   - content: Manual
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Audit Policies
                 link: /docs/insights/preventative-vs-audit-policies/
-                items: 
+                items:
                   - content: _blank
                   - content: _blank
                   - content: _blank
                   - content: _check
               - title: Pre-built Policy Packs
                 link: /docs/insights/pre-built-packs
-                items: 
+                items:
                   - content: _blank
                   - content: Pulumi Best Practices
                   - content: Pulumi Best Practices
@@ -508,7 +508,7 @@ comparison_table:
                   - content: _blank
                   - content: Advisory & Mandatory
                   - content: Advisory & Mandatory
-                  - content: Advisory, Mandatory & Remediation 
+                  - content: Advisory, Mandatory & Remediation
           ## Pulumi Neo Table
           - header: Infrastructure AI
             subheader: Intelligent assistance across all platform capabilities
@@ -531,7 +531,7 @@ comparison_table:
                   - content: Host private templates
                   - content: Host private templates
           - header: Support
-            subheader: 
+            subheader:
             rows:
               - title: Support
                 items:
@@ -639,7 +639,7 @@ faq:
         - question: How are ESC secrets billed?
           answer: |
             ESC secrets are billed hourly at the rate of $0.000685 for Team ($0.50 per secret per month) and $0.001 for Enterprise ($0.75 per secret per month). This is the cost of managing an ESC secret for a full hour.
-            
+
             For example, if you have your secrets stored for 4 days on Pulumi Cloud Team Edition, the price you pay would be 4 x 24 x 0.5 / 730 = $0.0657
 
             Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.

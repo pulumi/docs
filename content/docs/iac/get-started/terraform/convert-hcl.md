@@ -1131,7 +1131,7 @@ The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt
    ```bash
    $ claude mcp add -s user pulumi -- npx @pulumi/mcp-server@latest stdio
    ```
-  
+
    Follow the complete setup instructions in the [Pulumi MCP server docs](/docs/iac/using-pulumi/mcp-server).
 
 2. **Prepare your Terraform code**: Gather your complete Terraform configuration files (`.tf`, `terraform.tfvars`, etc.)

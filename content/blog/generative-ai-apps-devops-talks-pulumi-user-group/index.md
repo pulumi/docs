@@ -80,7 +80,7 @@ You can see the breakdown of the lessons per role below, and find the code examp
 - Run your own local LLM (using Ollama)
 - Track your calls and log them to a file (using a callback handler)
 - Impose output structure (as JSON) and have the LLM retry if it's not correct
-  
+
 ### Security
 
 - Explain the OWASP top 10 for LLMS

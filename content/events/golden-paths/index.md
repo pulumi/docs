@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-08-06T12:00:00-04:00
@@ -82,4 +82,4 @@ event_data:
   url: "https://www.pulumi.com/resources/golden-paths/"
   description: |
         Golden paths are the foundation of successful Internal Developer Platforms—providing developers with pre-approved, production-ready infrastructure patterns they can self-serve. This hands-on workshop teaches you to build reusable Pulumi components and templates that encapsulate your organization's best practices. You'll learn to create composable building blocks that make the right thing the easy thing, reducing cognitive load for developers while maintaining operational excellence.
---- 
+---

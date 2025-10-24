@@ -76,10 +76,10 @@ This guide covers the following infrastructure as code tools and platforms:
 9. **[Crossplane](#9-crossplane)** - Kubernetes as universal control plane
 10. **[OpenTofu](#10-opentofu)** - Open-source Terraform alternative
 
-### Configuration Management Tools  
+### Configuration Management Tools
 
 - **[Chef](#chef)** - Configuration management and compliance automation
-- **[Puppet](#puppet)** - Configuration management and compliance automation  
+- **[Puppet](#puppet)** - Configuration management and compliance automation
 - **[Salt](#salt)** - Configuration management and remote execution
 
 ### Application and Platform Management Tools
@@ -107,7 +107,7 @@ This guide covers the following infrastructure as code tools and platforms:
 
 ### 1. Pulumi
 
-License: Apache 2.0  
+License: Apache 2.0
 Best For: Teams who want flexible, language-agnostic IaC for infrastructure and operations
 
 Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
@@ -404,7 +404,7 @@ Organizations like Unity, Snowflake, and Starburst have reported significant pro
 
 ### 2. Terraform
 
-License: Business Source License (BSL) 1.1 (Not Open Source)  
+License: Business Source License (BSL) 1.1 (Not Open Source)
 Best For: Teams with existing Terraform expertise and established workflows
 
 [Terraform](/docs/iac/comparisons/terraform/) uses HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. However, its 2023 licensing change to BSL (no longer open source) and inherent limitations with domain-specific languages create challenges for teams requiring advanced software engineering practices.
@@ -457,7 +457,7 @@ resource "aws_subnet" "public" {
 
 ### 3. AWS Cloud Development Kit (CDK)
 
-License: Apache 2.0  
+License: Apache 2.0
 Best For: AWS-focused teams who prefer programming languages over templates
 
 AWS CDK allows you to define AWS infrastructure using familiar programming languages, synthesizing CloudFormation templates for deployment while providing higher-level abstractions. CDK addresses many limitations of traditional template-based approaches by enabling general-purpose programming languages.
@@ -518,7 +518,7 @@ export class MyStack extends cdk.Stack {
 
 ### 4. AWS CloudFormation
 
-License: Proprietary (AWS Service)  
+License: Proprietary (AWS Service)
 Best For: AWS-only deployments requiring deep service integration
 
 AWS CloudFormation provides the foundation for infrastructure as code on AWS, offering native integration with all AWS services and deep platform-specific features.
@@ -557,7 +557,7 @@ Resources:
 
 ### 5. Azure Resource Manager (ARM)
 
-License: Proprietary (Microsoft Service)  
+License: Proprietary (Microsoft Service)
 Best For: Azure-native deployments requiring comprehensive platform integration
 
 Azure Resource Manager provides the foundational infrastructure as code solution for Microsoft Azure, offering complete support for Azure services through JSON-based ARM templates. As Azure's native IaC solution, ARM templates provide the most comprehensive coverage of Azure services and features.
@@ -595,7 +595,7 @@ Code Example:
 
 ### 6. Azure Bicep
 
-License: MIT  
+License: MIT
 Best For: Azure deployments requiring improved readability and developer experience
 
 Azure Bicep is a domain-specific language (DSL) that simplifies Azure Resource Manager template authoring. Bicep files compile transparently to ARM templates, providing all the capabilities of ARM with significantly improved syntax and developer experience.
@@ -636,7 +636,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
 
 ### 7. Google Cloud Infrastructure Manager
 
-License: Proprietary (Google Service)  
+License: Proprietary (Google Service)
 Best For: Google Cloud Platform deployments using Terraform
 
 Google Cloud Infrastructure Manager automates the deployment and management of Google Cloud infrastructure resources using Terraform configurations, representing Google's modern approach to infrastructure as code. Infrastructure Manager replaces Google Cloud Deployment Manager, which will reach end of support on December 31, 2025.
@@ -685,7 +685,7 @@ output "instance_ip" {
 
 ### 8. Kubernetes YAML
 
-License: Apache 2.0  
+License: Apache 2.0
 Best For: Teams managing container-native applications and cloud-native infrastructure
 
 Kubernetes YAML manifests represent one of the most widely adopted forms of infrastructure as code, enabling teams to define, version, and manage containerized applications and their supporting infrastructure through declarative configuration files.
@@ -745,7 +745,7 @@ spec:
 
 ### 9. Crossplane
 
-License: Apache 2.0  
+License: Apache 2.0
 Best For: Kubernetes-first organizations managing multi-cloud infrastructure
 
 Crossplane is a Cloud-Native Framework for Platform Engineering that extends Kubernetes to help organizations build custom infrastructure management platforms, allowing teams to provision and manage cloud resources using Kubernetes APIs and patterns.
@@ -778,7 +778,7 @@ spec:
 
 ### 10. OpenTofu
 
-License: Mozilla Public License 2.0  
+License: Mozilla Public License 2.0
 Best For: Teams seeking an open-source Terraform alternative with community governance
 
 OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/concepts/vs/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
@@ -819,7 +819,7 @@ output "instance_ip" {
 
 ### Ansible
 
-License: GPL v3  
+License: GPL v3
 Best For: Configuration management with some infrastructure provisioning capabilities
 
 > [!INFO]
@@ -864,7 +864,7 @@ Code Example:
 
 ### Chef
 
-License: Apache 2.0  
+License: Apache 2.0
 Best For: Complex configuration management scenarios requiring programmable logic
 
 > [!INFO]
@@ -903,7 +903,7 @@ end
 
 ### Puppet
 
-License: Apache 2.0  
+License: Apache 2.0
 Best For: Enterprise environments requiring strong governance and compliance
 
 > [!INFO]
@@ -946,7 +946,7 @@ class webserver {
 
 ### Salt
 
-License: Apache 2.0  
+License: Apache 2.0
 Best For: Python-oriented teams requiring high-performance configuration management
 
 > [!INFO]
@@ -985,7 +985,7 @@ nginx:
 
 ### Kubernetes - Container Orchestration Platform
 
-License: Apache 2.0  
+License: Apache 2.0
 Best For: Container-native infrastructure and application management
 
 While primarily a [container orchestration](/topics/containers/) platform, Kubernetes itself serves as an infrastructure as code tool through its declarative YAML manifests and API-driven resource management.
@@ -1040,25 +1040,25 @@ While the tools above focus on provisioning and managing infrastructure, a compl
 
 ### Security Scanning Tools
 
-Snyk - License: Proprietary  
+Snyk - License: Proprietary
 Leading developer security platform that includes comprehensive infrastructure as code scanning alongside container and application security. Provides real-time vulnerability detection, compliance checking, and automated remediation guidance. Integrates with popular development tools and CI/CD pipelines with extensive enterprise adoption.
 
-Wiz - License: Proprietary  
+Wiz - License: Proprietary
 Comprehensive cloud security platform that includes infrastructure as code scanning capabilities. Provides vulnerability management, compliance monitoring, and security posture assessment across cloud environments. Offers integration with development workflows and supports multiple IaC formats with strong enterprise presence.
 
-Checkov - License: Apache 2.0  
+Checkov - License: Apache 2.0
 Popular open-source static analysis tool for infrastructure as code that scans cloud infrastructure configurations for security and compliance issues. Supports Terraform, CloudFormation, Kubernetes, Helm, ARM templates, and more. Integrates with CI/CD pipelines and provides over 1000+ built-in policies covering CIS benchmarks, PCI DSS, and GDPR compliance.
 
 ### Linting and Validation Tools
 
-TFLint - License: MPL 2.0  
+TFLint - License: MPL 2.0
 Terraform linter focused on possible errors, best practices, and security issues in Terraform configurations. Provides pluggable rule sets for cloud providers (AWS, Azure, GCP) and helps enforce coding standards, detect deprecated syntax, and prevent common configuration errors.
 
 These security tools integrate into CI/CD pipelines alongside your chosen IaC tool to provide comprehensive security coverage throughout the infrastructure lifecycle.
 
 ### Pulumi ESC
 
-License: Apache 2.0 (Open Source) / Proprietary (SaaS)  
+License: Apache 2.0 (Open Source) / Proprietary (SaaS)
 Best For: Teams needing centralized configuration and secrets management across environments and tools
 
 Pulumi ESC (Environments, Secrets, and Configuration) is a comprehensive platform for managing configuration data, secrets, and environment variables across your entire infrastructure and application stack. ESC provides a single source of truth for configuration that works with any infrastructure tool, not just Pulumi.
@@ -1089,7 +1089,7 @@ imports:
 
 ### Pulumi Insights
 
-License: Proprietary (SaaS)  
+License: Proprietary (SaaS)
 Best For: Organizations needing comprehensive cloud resource visibility, search, and compliance monitoring
 
 Pulumi Insights provides cloud resource search, analytics, and compliance capabilities across your entire multi-cloud infrastructure, regardless of how resources were provisioned. It offers a unified view of your cloud resources with powerful search, cost analysis, and policy enforcement.
@@ -1135,7 +1135,7 @@ Key Features:
 
 Pulumi IaC works with or without Pulumi Cloud - you can use DIY backends (S3, Azure Blob, etc.) or the managed service. However, Pulumi Cloud becomes the default experience when you install the Pulumi CLI, providing instant collaboration capabilities without the overhead of building and maintaining your own infrastructure management platform.
 
-HashiCorp Cloud Platform (HCP) - License: Proprietary (SaaS)  
+HashiCorp Cloud Platform (HCP) - License: Proprietary (SaaS)
 Best For: Organizations standardizing on HashiCorp tools across infrastructure and security lifecycle management
 
 HashiCorp Cloud Platform (HCP) is an enterprise-grade SaaS platform that provides unified lifecycle management for infrastructure and security operations. HCP Terraform (formerly Terraform Cloud) serves as the managed service for Terraform/OpenTofu workflows, while the broader platform integrates multiple HashiCorp tools.

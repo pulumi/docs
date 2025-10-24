@@ -64,7 +64,7 @@ For the Pulumi preview command to run, you need to add a GitLab pipeline file to
           - merge_request
 
     ```
-  
+
 5. Commit the file
 
 ## Configuring the GitLab Webhook

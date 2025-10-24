@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-11-04T11:00:00-06:00
@@ -48,8 +48,8 @@ main:
 
     # Description of the webinar.
     description: |
-        Get hands-on experience automating Azure infrastructure directly from Azure DevOps pipelines.  
-        
+        Get hands-on experience automating Azure infrastructure directly from Azure DevOps pipelines.
+
         In this practical workshop, you’ll set up an Azure DevOps project that builds and deploys cloud resources automatically, with no manual portal clicks required. Along the way, you’ll explore how Infrastructure as Code tools like Pulumi make it simple to version, preview, and safely update your cloud environments. By the end, you’ll have a fully functional DevOps pipeline that provisions real Azure infrastructure and the confidence to extend it for larger projects.
     learn:
         - How to go from zero to a working Azure DevOps pipeline that deploys real cloud infrastructure
@@ -83,7 +83,7 @@ event_data:
   end_date: 2025-11-04T12:00:00
   url: "https://www.pulumi.com/resources/from-pipelines-to-cloud/"
   description: |
-        Get hands-on experience automating Azure infrastructure directly from Azure DevOps pipelines.  
-        
+        Get hands-on experience automating Azure infrastructure directly from Azure DevOps pipelines.
+
         In this practical workshop, you’ll set up an Azure DevOps project that builds and deploys cloud resources automatically, with no manual portal clicks required. Along the way, you’ll explore how Infrastructure as Code tools like Pulumi make it simple to version, preview, and safely update your cloud environments. By the end, you’ll have a fully functional DevOps pipeline that provisions real Azure infrastructure and the confidence to extend it for larger projects.
 ---

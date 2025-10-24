@@ -620,7 +620,7 @@ It is possible to trigger a stack update for a stack at any time by applying
 the `pulumi.com/reconciliation-request` annotation:
 
 ```bash
-kubectl annotate stack $STACK_NAME "pulumi.com/reconciliation-request=$(date)" --overwrite  
+kubectl annotate stack $STACK_NAME "pulumi.com/reconciliation-request=$(date)" --overwrite
 ```
 
 The value of the annotation is arbitrary, and we recommend using a timestamp.

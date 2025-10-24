@@ -20,11 +20,11 @@ tags:
 
 social:
   twitter: |
-    Get rid of secrets sprawl and regain your productivity. 
-    Learn how to overcome secrets sprawl and regain your productivity with Pulumi ESC. 
+    Get rid of secrets sprawl and regain your productivity.
+    Learn how to overcome secrets sprawl and regain your productivity with Pulumi ESC.
   linkedin: |
-    Secrets sprawl is a real problem that can slow down our teams and impact our productivity. 
-    But it also affects how fast an organization can scale its development and operations teams. 
+    Secrets sprawl is a real problem that can slow down our teams and impact our productivity.
+    But it also affects how fast an organization can scale its development and operations teams.
     Learn how to overcome secrets sprawl and regain your productivity.
 ---
 

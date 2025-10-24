@@ -86,7 +86,7 @@ AWS CloudFormation supports JSON or YAML. Like Pulumi and Terraform, it has a de
 
 CloudFormation can be used to create and manage Amazon EKS (Elastic Kubernetes Service) clusters, although it has limited direct support for managing individual Kubernetes resources within a cluster. For more granular Kubernetes resource management, AWS offers AWS Controllers for Kubernetes (ACK), which allows managing AWS resources using Kubernetes custom resources.
 
-Managing complex templates can be challenging, and template size limitations and cryptic error messages are among the most common online complaints. Managing dependencies between resources can become complex past a certain scale, and testing capabilities for templates are limited. Despite its limitations, AWS CloudFormation is favored by those deeply invested in the AWS ecosystem who want a platform native tool.  
+Managing complex templates can be challenging, and template size limitations and cryptic error messages are among the most common online complaints. Managing dependencies between resources can become complex past a certain scale, and testing capabilities for templates are limited. Despite its limitations, AWS CloudFormation is favored by those deeply invested in the AWS ecosystem who want a platform native tool.
 
 - **Flexibility**: Some support for abstraction and modularity through nested stacks and reusable templates.
 - **Integration**:  Integrates well with AWS-native CI/CD and supports Amazon EKS for Kubernetes cluster management, though it has limited direct support for managing individual Kubernetes resources.

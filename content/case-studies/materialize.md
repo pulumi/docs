@@ -3,8 +3,8 @@ title_tag: Materialize | Case Studies
 title: Materialize Streamlines Multi-Region Kubernetes Operations
 layout: case-studies
 description: |
-    Materialize uses Pulumi to manage multi-region Kubernetes, leading to better developer self-service and deployment consistency. 
-meta_desc: Learn how Pulumi supports Materialize in operating multi-cluster Kubernetes environments at scale. 
+    Materialize uses Pulumi to manage multi-region Kubernetes, leading to better developer self-service and deployment consistency.
+meta_desc: Learn how Pulumi supports Materialize in operating multi-cluster Kubernetes environments at scale.
 
 customer_name: Materialize
 customer_logo: /logos/customers/materialize.svg
@@ -61,8 +61,8 @@ Materialize maintains a strict "no ClickOps" policy, relying on Pulumi to manage
 
 Using Pulumi to manage Kubernetes infrastructure has unlocked far-reaching benefits for Materialize. The company has been able to standardize its cluster configuration so it's easy for developers to maintain and is reliable in production.
 
-> "Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It's hugely benefited productivity and our service’s reliability,"  
-> "Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."  
+> "Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all in one stack. It's hugely benefited productivity and our service’s reliability,"
+> "Without Pulumi, we know that scaling and maintaining Materialize would be much harder for the team."
 > --- Paul Hemberger, Engineering Manager for Materialize's cloud team
 
 The decision to use Python as their infrastructure programming language has proven particularly beneficial. Developers leverage familiar tools within the Python ecosystem, including formatters, linters, and code quality scanners—capabilities that would be unavailable with traditional domain-specific language solutions. This familiarity accelerates the onboarding process for new engineers, who can typically begin contributing meaningful work within their first week. By ramping up new developers more quickly, Materialize has also improved engineer productivity, agility and time to market for its new product releases.

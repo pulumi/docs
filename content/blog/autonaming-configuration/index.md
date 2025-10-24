@@ -13,7 +13,7 @@ canonical_url: "https://www.pulumi.com/docs/iac/concepts/resources/names/"
 social:
     twitter: |
         🎉 New in Pulumi: Flexible Resource Auto-naming!
-        
+
         Finally, full control over your cloud resource names:
         ✨ Custom naming patterns
         🎯 Verbatim mode
@@ -23,16 +23,16 @@ social:
 
         Read more ⬇️
     linkedin: >
-        🚀 We're excited to announce Flexible Resource Auto-naming in Pulumi! 
-        
+        🚀 We're excited to announce Flexible Resource Auto-naming in Pulumi!
+
         This highly anticipated feature gives you complete control over how your cloud resources are named across all cloud providers. Whether you want to enforce enterprise naming standards, ensure compliance, or maintain consistent naming patterns - we've got you covered.
-        
+
         Key capabilities:
         - Custom naming patterns with static text, resource information, and random components
         - Verbatim mode for exact logical name matching
         - Option to disable auto-naming entirely
         - Support across all cloud providers
-        
+
         Ready to try it out? Check out our latest blog post to learn more about this game-changing feature for infrastructure management.
 ---
 

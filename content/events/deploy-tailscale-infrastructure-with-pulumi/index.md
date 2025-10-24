@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2024-10-15T09:00:00-07:00
@@ -61,7 +61,7 @@ main:
         - name: Lee Briggs
           role: Sales Engineering Manager, Tailscale
           photo: /images/team/lee-briggs.jpg
-        - name: Josh Kodroff 
+        - name: Josh Kodroff
           role: Sr Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
 

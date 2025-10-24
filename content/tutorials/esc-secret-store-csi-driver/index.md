@@ -16,8 +16,8 @@ summary: |
   ## Combining CSI, Kubernetes and Secrets = Secret Store CSI Driver
 
   The Kubernetes Secret Store CSI Driver allows you to mount secrets, certificates, and keys from external secret stores into Kubernetes pods as volumes. After attaching the volume, the system mounts the secrets into the container file system.
-  
-  The benefits of using the Secret Store CSI Driver are that you manage the lifecycle of the secrets outside of Kubernetes while still providing a Kubernetes-native experience of using the secrets in your pods.    
+
+  The benefits of using the Secret Store CSI Driver are that you manage the lifecycle of the secrets outside of Kubernetes while still providing a Kubernetes-native experience of using the secrets in your pods.
 
 youll_learn:
   - How to deploy the Secret Store CSI Driver and Pulumi ESC Provider using Helm or Pulumi

@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: O11y & Infrastructure AI Marathon - Portland '25
 meta_desc: "Writing Durable AI Agents for Business Process Automation"
-meta_image: 
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false

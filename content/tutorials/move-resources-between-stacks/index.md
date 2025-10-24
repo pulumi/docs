@@ -25,7 +25,7 @@ weight: 999
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
     There are certain scenarios in which you might need to move resources between different project stacks without recreating them, such as when refactoring a Pulumi project from a monolithic structure to micro-stacks. While it is possible to accomplish this by manually modifying Pulumi state files, doing so requires significant effort, can be error prone, and can be very time consuming.
-    
+
     In this tutorial, you will learn how to move your resources using the `pulumi state move` command instead.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.

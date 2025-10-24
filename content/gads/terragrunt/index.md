@@ -40,7 +40,7 @@ key_features_above:
                     Secure, reliable state management with automatic locking and encryption, no extra tooling required.
                 icon: eye
                 color: yellow
-        
+
 key_features:
     title: Key features
     items:
@@ -275,7 +275,7 @@ key_features:
                   vpcCidr:
                     type: string
                     default: "10.0.0.0/16"
-                
+
                 resources:
                   vpc:
                     type: aws:ec2:Vpc
@@ -285,7 +285,7 @@ key_features:
                       tags:
                         Environment: ${pulumi.stack}
                         ManagedBy: Pulumi
-                  
+
                   webInstance:
                     type: aws:ec2:Instance
                     properties:
@@ -295,7 +295,7 @@ key_features:
                       tags:
                         Environment: ${pulumi.stack}
                         Name: web-server-${pulumi.stack}
-                
+
                 outputs:
                   vpcId: ${vpc.id}
                   instanceId: ${webInstance.id}

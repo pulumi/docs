@@ -6,7 +6,7 @@ meta_image: "meta.png"
 
 authors:
     - "robbie-mckinstry"
-        
+
 tags:
     - "cli"
     - "stack-init"

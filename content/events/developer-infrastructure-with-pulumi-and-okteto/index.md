@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         In this workshop, you will learn the essentials of automating cloud resource provisioning with Pulumi and Okteto. This hands-on session is tailored for developers and platform engineers eager to adopt Infrastructure as Code (IaC) practices using familiar programming languages. Learn how to deploy cloud resources efficiently across any cloud provider and enhance your development workflow with Okteto's on-demand environments.
-    
+
         Perfect for those looking to streamline their development process and foster better collaboration between teams, this workshop promises to equip you with practical skills for more effective cloud resource management.
 
     learn:

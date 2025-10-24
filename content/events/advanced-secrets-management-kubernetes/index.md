@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-04-09T15:00:00+02:00
@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         Secrets management on Kubernetes does not have to be a chore. In this hands-on workshop, you will learn how to secure and inject secrets into Kubernetes applications using External Secrets Operator and Secret Store CSI Driver.
-        
+
         We will provision the infrastructure with Pulumi, then walk through retrieving both static and dynamic secrets to demonstrate how each approach can reduce the surface area for secrets injection. By the end of this session, you will have a practical understanding of modern secrets management patterns that keep sensitive data safe and manageable at scale.
 
     learn:

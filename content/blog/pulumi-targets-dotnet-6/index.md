@@ -63,7 +63,7 @@ return await Deployment.RunAsync(async() =>
 {
     var vpc = await GetVpc.InvokeAsync(new()
     {
-        Default = true  
+        Default = true
     });
 
     var zones = await GetAvailabilityZones.InvokeAsync();

@@ -100,12 +100,12 @@ But secure defaults aren't enough. You still need automated guardrails. Policy-a
 
 For Example:
 
-* **IAM Roles with Least Privilege:**  
-  * **Secure Default (Module):** The platform team's IAM module automatically generates roles with least-privilege permissions. Developers don't specify IAM roles directly.  
+* **IAM Roles with Least Privilege:**
+  * **Secure Default (Module):** The platform team's IAM module automatically generates roles with least-privilege permissions. Developers don't specify IAM roles directly.
   * **Policy-as-Code (Additional Guardrail):** A policy explicitly checks all IAM roles provisioned by the platform, ensuring no role grants overly broad permissions (e.g., no wildcard permissions). If a module is accidentally modified or misconfigured, the policy catches it immediately.
 
-* **Mandatory Encryption at Rest:**  
-  * **Secure Default (Module):** The platform team's database module automatically provisions databases with encryption at rest enabled. Developers don't specify encryption settings directly.  
+* **Mandatory Encryption at Rest:**
+  * **Secure Default (Module):** The platform team's database module automatically provisions databases with encryption at rest enabled. Developers don't specify encryption settings directly.
   * **Policy-as-Code (Additional Guardrail):** A policy explicitly checks all storage resources to ensure encryption at rest is always enabled. If a developer or platform engineer accidentally modifies the module or bypasses it, the policy immediately flags the issue.
 
 When you add Policy-as-Code to your platform, security becomes automatic and clear. Developers get instant feedback they can trust, and security teams maintain control without slowing things down. Your teams can move fast without taking shortcuts that create risk.
@@ -156,10 +156,10 @@ But how do you know if your security practices are truly enabling your teams? To
 
 To check if your security approach works, track two things:
 
-* **Security Incident Rate:**  
+* **Security Incident Rate:**
   Count how many security problems reach production. Fewer incidents means your security is working.
 
-* **Developer Security Friction Score:**  
+* **Developer Security Friction Score:**
   Include security questions in your regular developer surveys. Ask how much security processes slow their work or cause frustration. Improving scores show that security fits naturally into their workflow.
 
 These two measures combined tell you your security works and at what cost, so your team can build good software fast.

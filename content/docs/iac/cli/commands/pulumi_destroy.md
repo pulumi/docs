@@ -22,7 +22,7 @@ Deletes all the resources in the selected stack.  The current state is
 loaded from the associated state file in the workspace.  After running to completion,
 all of this stack's resources and associated state are deleted.
 
-The stack itself is not deleted. Use `pulumi stack rm` or the 
+The stack itself is not deleted. Use `pulumi stack rm` or the
 `--remove` flag to delete the stack and its config file.
 
 Warning: this command is generally irreversible and should be used with great care.

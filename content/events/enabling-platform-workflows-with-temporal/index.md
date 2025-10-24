@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-06-24T12:00:00-04:00
@@ -49,7 +49,7 @@ main:
     # Description of the webinar.
     description: |
         Platform Engineering teams are responsible for giving developers clear, repeatable playbooks for orchestrating resilient, scalable applications. When using Temporal Cloud, managing Namespaces, Task Queues, and Worker configurations effectively is crucial to ensuring reliability and performance.
-        
+
         In this workshop, we’ll explore how Pulumi empowers teams to define, provision, and manage Temporal Cloud resources using modern Infrastructure as Code (IaC) practices. You'll learn how to automate resource lifecycles, enforce policies, and integrate Temporal Cloud into platform engineering workflows—ensuring developers have a seamless and self-service experience.
 
     learn:
@@ -87,6 +87,6 @@ event_data:
   url: "https://www.pulumi.com/resources/enabling-platform-workflows-with-temporal/"
   description: |
     Platform Engineering teams are responsible for giving developers clear, repeatable playbooks for orchestrating resilient, scalable applications. When using Temporal Cloud, managing Namespaces, Task Queues, and Worker configurations effectively is crucial to ensuring reliability and performance.
-    
+
     In this workshop, we’ll explore how Pulumi empowers teams to define, provision, and manage Temporal Cloud resources using modern Infrastructure as Code (IaC) practices. You'll learn how to automate resource lifecycles, enforce policies, and integrate Temporal Cloud into platform engineering workflows—ensuring developers have a seamless and self-service experience.
 ---

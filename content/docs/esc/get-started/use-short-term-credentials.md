@@ -79,7 +79,7 @@ If you want to set environment level or even granular permissions in your trust 
 
 ## Create a Pulumi ESC environment
 
-1. Navigate to the [Pulumi Cloud Console](https://app.pulumi.com/)  
+1. Navigate to the [Pulumi Cloud Console](https://app.pulumi.com/)
 2. Click **Environments** and then **Create environment**
 3. Enter a name for your environment (e.g., `aws-s3-access`)
 4. Click **Create environment**

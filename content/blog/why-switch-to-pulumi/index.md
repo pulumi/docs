@@ -11,7 +11,7 @@ tags:
     - ai
 
 social:
-    twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits. 
+    twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits.
     linkedin:
 ---
 

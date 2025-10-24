@@ -32,9 +32,9 @@ Policy guardrails provide the answer. Pulumi’s Policy as Code (PaC) framework 
 
 Unlike many other policy solutions, Pulumi Policy uses general-purpose programming languages such as TypeScript and Python rather than restrictive DSLs or YAML. This unlocks richer and more flexible capabilities, including:
 
-- **Conditional logic** to codify your organization's nuanced rules.  
-- **Reusable functions and abstractions** to create a shared library of policies.  
-- **Unit tests** to validate policy behavior before rollout.  
+- **Conditional logic** to codify your organization's nuanced rules.
+- **Reusable functions and abstractions** to create a shared library of policies.
+- **Unit tests** to validate policy behavior before rollout.
 
 With today’s updates, this foundation is easier to adopt and scale across your teams than ever before.
 
@@ -71,7 +71,7 @@ The new policy management experience dramatically simplifies policy application:
 
 ### Preventative and Audit Approaches
 
-Pulumi Policy supports two complementary approaches to governance.  
+Pulumi Policy supports two complementary approaches to governance.
 
 - **Preventative policies**: Block non-compliant deployments during `pulumi up`, providing real-time guardrails for developers and AI agents.
 - **Audit policies**: Continuously scan existing resources for ongoing compliance monitoring, giving you a complete picture of your cloud security posture.
@@ -96,6 +96,6 @@ To ensure every organization can build with confidence, these policy management 
 
 ## Conclusion
 
-Governance doesn’t need to be a roadblock—it can be a foundation that accelerates innovation. With enhanced policy management and ready-to-use guardrails, Pulumi helps your teams and AI agents like Neo move fast while staying secure, compliant, and cost effective.  
+Governance doesn’t need to be a roadblock—it can be a foundation that accelerates innovation. With enhanced policy management and ready-to-use guardrails, Pulumi helps your teams and AI agents like Neo move fast while staying secure, compliant, and cost effective.
 
 Try the new experience in Pulumi Cloud today, and let us know what you think in the [Pulumi Community Slack](https://slack.pulumi.com/).

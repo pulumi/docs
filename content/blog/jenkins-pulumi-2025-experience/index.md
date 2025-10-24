@@ -54,44 +54,44 @@ tags:
 social:
     twitter: |
         I tried Jenkins in 2025 with Pulumi and here's what happened
-        
-        • Deployed Jenkins on Kubernetes using Python 
+
+        • Deployed Jenkins on Kubernetes using Python
         • Created ephemeral agents for Pulumi deployments
         • Built complete IaC CI/CD pipeline
-        
+
         TL;DR: Jenkins still works, but would I choose it for greenfield?
-        
+
         Read the full experience: [link]
     linkedin: |
         I recently revisited Jenkins after years away, but this time with a modern twist: deploying it on Kubernetes using Pulumi's infrastructure-as-code approach.
-        
+
         Here's what I discovered:
-        
+
         **What worked brilliantly:**
         • Complete Jenkins deployment defined in Python code
         • Ephemeral Kubernetes agents that spin up only when needed
         • Jenkins Configuration as Code (JCasC) eliminating manual setup
         • Production-ready RBAC and security by default
         • Perfect isolation between pipeline runs
-        
+
         **The modern approach:**
         Instead of clicking through GUIs or managing VMs, everything is declarative:
         - Helm charts deployed via Pulumi
         - Kubernetes-native storage and networking
         - Multi-language Pulumi pipeline support (Python, TypeScript, Go)
         - Manual approval gates with infrastructure previews
-        
+
         **The honest verdict:**
         Jenkins has adapted remarkably well to the cloud-native era. It's still the reliable workhorse it always was, now with Kubernetes superpowers.
-        
+
         But would I choose it for a greenfield project in 2025? Probably not. GitHub Actions, GitLab CI/CD, and cloud-native solutions like Tekton offer simpler, more integrated experiences without infrastructure overhead.
-        
+
         However, if you're working with legacy systems or need Jenkins' ultimate flexibility, this approach proves it can absolutely hold its own in modern environments.
-        
+
         The real lesson? Infrastructure-as-code principles apply regardless of your CI/CD platform choice. Whether Jenkins, GitHub Actions, or anything else - define declaratively, version control everything, automate the deployment.
-        
+
         Read the full technical deep-dive with complete code examples: [link]
-        
+
         #DevOps #InfrastructureAsCode #Jenkins #Kubernetes #Pulumi #CI_CD
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md

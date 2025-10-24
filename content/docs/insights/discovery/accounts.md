@@ -25,26 +25,26 @@ This document outlines the steps required to create and manage a Pulumi Insights
 
 {{< video title="Column Selection" src="https://pulumi.com/uploads/insights-create-account.mp4" autoplay="true" loop="false" >}}
 
-1. After logging into the Pulumi Cloud Console, navigate to the **Accounts** tab.  
-2. On this page, click the **Create Account** button to access the account creation screen.  
+1. After logging into the Pulumi Cloud Console, navigate to the **Accounts** tab.
+2. On this page, click the **Create Account** button to access the account creation screen.
 3. Select your provider.
-{{< notes type="info" >}}  
-  Currently, Pulumi supports AWS, Azure, Oracle Cloud, and Kubernetes as providers for Insights accounts.  
+{{< notes type="info" >}}
+  Currently, Pulumi supports AWS, Azure, Oracle Cloud, and Kubernetes as providers for Insights accounts.
 {{< /notes >}}
-4. Select or create an ESC environment that has the correct credentials to scan the selected provider.  
-{{< notes type="info" >}}  
-  See below for details on how to set up the ESC environment for each provider.  
+4. Select or create an ESC environment that has the correct credentials to scan the selected provider.
+{{< notes type="info" >}}
+  See below for details on how to set up the ESC environment for each provider.
 {{< /notes >}}
 5. Enter a unique name for the account. The name cannot contain a `/`.
-{{< notes type="info" >}}  
-  Pulumi automatically names child accounts using `/`. For more information, see **Account Hierarchies** below.  
+{{< notes type="info" >}}
+  Pulumi automatically names child accounts using `/`. For more information, see **Account Hierarchies** below.
 {{< /notes >}}
 6. Add any provider-specific configuration, such as the regions to scan for AWS.
 7. Choose whether to enable scheduled scans or run them manually.
-When scheduled scans are enabled, Pulumi automatically scans the account every 24 hours.  
+When scheduled scans are enabled, Pulumi automatically scans the account every 24 hours.
 8. Click `create`. You should see a success notification and arrive on the details page of the account you have created.
 
-{{< notes type="info" >}}  
+{{< notes type="info" >}}
   A scan should be kicked off immediately, if you are creating a new Insights account for AWS, see the **child accounts** (one for each region) for scan status.
 {{< /notes >}}
 
@@ -58,36 +58,36 @@ Pulumi automatically creates child accounts when applicable. For instance, in AW
 
 For example:
 
-* Parent account: `my-aws-account`  
-* Child account (region): `my-aws-account/us-east-1`  
+* Parent account: `my-aws-account`
+* Child account (region): `my-aws-account/us-east-1`
 * Sub-child account (K8s cluster): `my-aws-account/us-east-1/my-cluster`
 
 If you scan or delete the `my-aws-account` Insights account, Pulumi applies this action to all child accounts. However, you can still scan or delete `my-aws-account/us-east-1` without affecting other children of `my-aws-account` and future scans of `my-aws-account` will no longer include `us-east-1` unless it is updated.
 
 Key benefits of child accounts include:
 
-* **Flexible hierarchy**: You can create custom account structures for organization and aggregation.  
-* **Cascade actions**: Performing actions (e.g., scanning or deletion) on a parent account propagates to all its children.  
-* **Granular control**: Actions can also target specific child accounts, affecting only them and their children.  
+* **Flexible hierarchy**: You can create custom account structures for organization and aggregation.
+* **Cascade actions**: Performing actions (e.g., scanning or deletion) on a parent account propagates to all its children.
+* **Granular control**: Actions can also target specific child accounts, affecting only them and their children.
 * **Configuration inheritance**: Child accounts can inherit ESC credentials and other configurations from their parent account.
 
 ## Resources
 
-All scanned resources are displayed on the **Resources** page in Pulumi Cloud.  
+All scanned resources are displayed on the **Resources** page in Pulumi Cloud.
 
 ### Viewing resources in the grid
 
-* **Grid structure**:  
-  * **Project column**: Displays the ultimate parent account name.  
-  * **Stack/Account column**: Displays the full child account path. For example:  
-    * **Project**: `my-aws-account`  
+* **Grid structure**:
+  * **Project column**: Displays the ultimate parent account name.
+  * **Stack/Account column**: Displays the full child account path. For example:
+    * **Project**: `my-aws-account`
     * **Stack/Account**: `us-east-1/my-cluster`
 
 ![Resources page](/docs/insights/assets/insights-resource-explorer.png)
 
-* **Resource navigation**: Click on a resource's name to view its **Resource Details** page. This page includes:  
-  * **Resource history**: Pulumi tracks and displays all versions of a resource, with changes based on property updates.  
-  * **Properties**: View detailed properties for each resource version.  
+* **Resource navigation**: Click on a resource's name to view its **Resource Details** page. This page includes:
+  * **Resource history**: Pulumi tracks and displays all versions of a resource, with changes based on property updates.
+  * **Properties**: View detailed properties for each resource version.
   * **References**: See edges (relationships) to other resources in the same account.
 
 ![Resource details page](/docs/insights/assets/insights-resources.png)
@@ -120,9 +120,9 @@ The AWS scanner for Pulumi Cloud requires access to the AWS account you want to 
     }
     ```
 
-2. **Assign permissions**: Give that IAM role the right permissions to allow Pulumi access to scan resources. Use the `ReadOnlyAccess` managed policy for quick setup.  
-{{< notes type="info" >}}  
-  Learn more about the [AWS ReadOnlyAccess policy](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/ReadOnlyAccess.html).  
+2. **Assign permissions**: Give that IAM role the right permissions to allow Pulumi access to scan resources. Use the `ReadOnlyAccess` managed policy for quick setup.
+{{< notes type="info" >}}
+  Learn more about the [AWS ReadOnlyAccess policy](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/ReadOnlyAccess.html).
 {{< /notes >}}
 
 3. **Create an ESC environment**: Configure it to assume the role via OIDC. See [ESC AWS provider documentation](/docs/esc/environments/configuring-oidc/aws/).

@@ -17,7 +17,6 @@ aliases:
 **Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
 {{< /notes >}}
 
-
 <dl class="tabular tabular-5-col break-words">
     <dt>
         <span class="font-mono">

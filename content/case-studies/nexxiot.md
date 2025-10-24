@@ -12,10 +12,10 @@ customer_url: https://www.nexxiot.com/
 
 quote_block:
   quote: >
-        You will run into limits with Terraform. 
-        
-        You will run into limits with CDK. 
-        
+        You will run into limits with Terraform.
+
+        You will run into limits with CDK.
+
         Your biggest chance to not run into troubles and limitations is to use Pulumi. It is the most powerful and versatile tool out there.
   quote_attrib: Alexander Berger, Site Reliability Engineer, Nexxiot
   headline_stat: 100%

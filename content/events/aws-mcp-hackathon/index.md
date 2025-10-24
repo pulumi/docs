@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: AWS MCP Hackathon
 meta_desc: Join us to build cutting-edge AI agents that push the limits of LLMs and AI applications!
-meta_image: 
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false

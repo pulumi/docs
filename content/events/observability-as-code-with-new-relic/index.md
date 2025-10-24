@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: Observability as Code with Pulumi and New Relic
 meta_desc: Observability is a key component of any site reliability strategy and New Relic and Pulumi make it easier than ever to define metrics, alerts, and dashboards.
-meta_image: 
+meta_image:
 # A featured webinar will display first in the list.
 featured: false
 

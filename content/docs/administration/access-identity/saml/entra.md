@@ -1,6 +1,6 @@
 ---
 title_tag: Configuring Microsoft Entra ID | SAML SSO
-meta_desc: This page provides a walkthrough important aspects of configuring 
+meta_desc: This page provides a walkthrough important aspects of configuring
            Entra ID as a SAML SSO identity provider (IDP).
 title: Microsoft Entra ID
 h1: "SAML: Configuring Microsoft Entra ID"

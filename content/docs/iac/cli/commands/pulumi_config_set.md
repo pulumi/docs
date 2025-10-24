@@ -11,7 +11,7 @@ Set configuration value
 
 ## Synopsis
 
-Configuration values can be accessed when a stack is being deployed and used to configure behavior. 
+Configuration values can be accessed when a stack is being deployed and used to configure behavior.
 If a value is not present on the command line, pulumi will prompt for the value. Multi-line values
 may be set by piping a file to standard in.
 
@@ -19,7 +19,7 @@ The `--path` flag can be used to set a value inside a map or list:
 
   - `pulumi config set --path 'names[0]' a` will set the value to a list with the first item `a`.
   - `pulumi config set --path parent.nested value` will set the value of `parent` to a map `nested: value`.
-  - `pulumi config set --path '["parent.name"]["nested.name"]' value` will set the value of 
+  - `pulumi config set --path '["parent.name"]["nested.name"]' value` will set the value of
     `parent.name` to a map `nested.name: value`.
 
 When setting the config for a path, "true" and "false" are treated as boolean values, and

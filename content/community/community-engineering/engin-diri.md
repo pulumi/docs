@@ -19,37 +19,37 @@ talks:
 - event: "KCD Sofia 2025"
   title: "Lightning Talk: Abstract It: The Higher, The Faster!"
   url: "https://community.cncf.io/kcd-sofia/"
-  date: 2025-09-19T15:00:00.000-07:00 
+  date: 2025-09-19T15:00:00.000-07:00
 - event: "ContainerDays Conference 2025"
   title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
   url: "https://www.containerdays.io/containerdays-conference-2025/agenda/"
-  date: 2025-09-10T15:00:00.000-07:00 
+  date: 2025-09-10T15:00:00.000-07:00
 - event: "Cloud Native Summit Munich 2025"
   title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
   url: "https://www.kcdmunich.de/"
-  date: 2025-07-22T15:00:00.000-07:00 
+  date: 2025-07-22T15:00:00.000-07:00
 - event: "WAX CONFÉRENCE 2025"
   title: "Internal Developer Platforms : choisir la bonne voie pour votre organisation"
   url: "https://www.waxconf.fr/schedule/wax-conference-2025"
-  date: 2025-06-24T15:00:00.000-07:00 
+  date: 2025-06-24T15:00:00.000-07:00
 - event: "KCD New York 2025"
   title: "Is There AI in the Future of Infrastructure as Code?"
   url: "https://kcdnewyork2025.sessionize.com/session/865201"
-  date: 2025-06-04T15:00:00.000-07:00 
+  date: 2025-06-04T15:00:00.000-07:00
 - event: "PlatforMA 2025"
   title: "Augmenting Platform Engineering: Leveraging AI to Enhance DevEx & Operational Efficiency"
   url: "https://www.platfor-ma.com"
-  date: 2025-05-20T15:00:00.000-07:00 
+  date: 2025-05-20T15:00:00.000-07:00
 - event: "KCD Texas"
   title: "Platform Engineering’s Missing Piece: A Deep Dive into Kubernetes Abstraction"
   url: "https://kcdtexas2025.sessionize.com/session/861657"
-  date: 2025-05-15T15:00:00.000-07:00 
+  date: 2025-05-15T15:00:00.000-07:00
 - event: "Mastering GitOps 2025"
   title: "GitOps Evolution: Moderne Infrastruktur-Pipelines mit Pulumi und Argo CD"
   url: "https://www.mastering-gitops.de/veranstaltung-83394-se-0-gitops-evolution-moderne-infrastruktur-pipelines-mit-pulumi-und-argo-cd.html"
-  date: 2025-04-30T15:00:00.000-07:00  
+  date: 2025-04-30T15:00:00.000-07:00
 - event: "stackconf 2025"
-  title: "Abstract It: The Higher, The Faster!"  
+  title: "Abstract It: The Higher, The Faster!"
   url: "https://stackconf.eu/talks/abstract-it-the-higher-the-faster/?occurrence=2025-04-29"
   date: 2025-04-29T15:00:00.000-07:00
 - event: "Cloud Native Rejekts - Europe 2025"
@@ -63,11 +63,11 @@ talks:
 - event: Kargo Community Meeting
   title: Pulumi + Kargo
   url: https://x.com/akuityio/status/1894765745499689426
-  date: 2025-02-26T15:00:00.000-07:00  
+  date: 2025-02-26T15:00:00.000-07:00
 - event: "Konstruct Live Stream"
   title: "Progressive Infrastructure Delivery using Kargo and Argo CD"
   url: "https://www.youtube.com/watch?v=zoL4N7EyLGU"
-  date: 2025-02-13T15:00:00.000-07:00  
+  date: 2025-02-13T15:00:00.000-07:00
 - event: "CfgMgmtCamp 2025 Ghent"
   title: "Discover Pulumi Through Hands-On Practice"
   url: "https://cfp.cfgmgmtcamp.org/ghent2025/talk/SAMLJM/"
@@ -75,7 +75,7 @@ talks:
 - event: "CfgMgmtCamp 2025 Ghent"
   title: "Progressive Infrastructure Delivery using Kargo and Argo CD"
   url: "https://cfp.cfgmgmtcamp.org/ghent2025/talk/DGYEV7/"
-  date: 2025-02-04T15:00:00.000-07:00  
+  date: 2025-02-04T15:00:00.000-07:00
 - event: "CfgMgmtCamp 2025 Ghent"
   title: "Got a Secret, Can You Keep It? - Mastering Secret Management in Kubernetes"
   url: "https://cfp.cfgmgmtcamp.org/ghent2025/talk/HS8ELE/"
@@ -129,7 +129,7 @@ talks:
   title: "The Power of the KEBAP Stack"
   url: "https://www.linkedin.com/posts/platformers-community_engin-diri-customer-experience-architect-activity-7212732472592142336-Dd_R"
   date: 2024-07-10T18:00:00.000-07:00
-  slides: null  
+  slides: null
 - event: "KCD Munich"
   title: "Pulumi ❤️ Kubernetes: Different Ways to Deploy Your Workload to Kubernetes"
   url: "https://www.kcdmunich.de"
@@ -139,7 +139,7 @@ talks:
   title: "Pulumi ❤️ Azure: Getting Started with Modern Infrastructure as Code"
   url: https://www.meetup.com/mtg-bordeaux/events/300232411/
   date: 2024-06-11T18:00:00.000-07:00
-  slides: null  
+  slides: null
 - event: "AWS Community Day Turkiye 20024"
   title: "The Million-Dollar Mistake: A Tale of DevOps and Skyrocketing AWS Bills"
   url: https://aws.cloudturkey.io/#schedules
