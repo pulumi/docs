@@ -25,7 +25,6 @@ Check out all the new features empowering teams to build better cloud infrastruc
 **Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
 {{< /notes >}}
 
-
 As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered in the last half of the year. Some key highlights:
 
 - Pulumi Visual Studio Code Extension
