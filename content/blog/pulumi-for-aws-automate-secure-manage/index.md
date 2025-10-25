@@ -13,7 +13,7 @@ tags:
 ---
 
 {{< notes type="info" >}}
-**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
 {{< /notes >}}
 
 Pulumi is excited to be at [AWS re:Invent](/reinvent/) this week, where we’re showcasing our broad and deep support for AWS across all our products. From automating infrastructure with Pulumi IaC to securing secrets with Pulumi ESC to managing cloud assets with Pulumi Insights, Pulumi makes AWS a competitive advantage. Whether you’re a developer, DevOps pro, or platform engineer, Pulumi delivers the tools you need to build and manage modern cloud applications with ease.

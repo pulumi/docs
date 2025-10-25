@@ -15,7 +15,7 @@ tags:
 ---
 
 {{< notes type="info" >}}
-**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
 {{< /notes >}}
 
 AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception.  Last year we launched [Pulumi AI](/ai/) to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using Infrastructure-as-Code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.

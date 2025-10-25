@@ -13,7 +13,7 @@ aliases:
 ---
 
 {{< notes type="info" >}}
-**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
 {{< /notes >}}
 
 Pulumi Cloud is a managed service that provides state management, secrets handling, team collaboration, and automation capabilities for infrastructure as code. It works seamlessly with Pulumi's open source IaC tool to help teams build, deploy, and manage cloud infrastructure.

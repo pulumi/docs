@@ -14,7 +14,7 @@ tags:
 ---
 
 {{< notes type="info" >}}
-**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
 {{< /notes >}}
 
 We are excited to announce a new feature for Pulumi Copilot: System Prompts. This enhancement empowers organizations to customize Pulumi Copilot's responses for your organization, making your interactions with our AI assistant even more personalized to save you even more time.

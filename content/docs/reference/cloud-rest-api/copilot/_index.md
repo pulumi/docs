@@ -13,7 +13,7 @@ aliases:
 ---
 
 {{< notes type="info" >}}
-**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
 {{< /notes >}}
 
 The Pulumi Copilot API provides endpoints for integrating Pulumi's AI-powered infrastructure assistance capabilities with your applications and platforms. It allows you to programmatically access Pulumi Copilot's natural language understanding to analyze infrastructure, answer questions about Pulumi, and even generate infrastructure as code.

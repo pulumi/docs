@@ -22,7 +22,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
 {{< /notes >}}
 
 Building AI-powered developer tools comes with unique challenges, and now that we've **[launched our REST API](/blog/pulumi-copilot-rest/)**, we want to share some lessons we've learned building Pulumi Copilot, an AI assistant for cloud infrastructure.
