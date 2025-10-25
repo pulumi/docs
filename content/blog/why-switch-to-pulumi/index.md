@@ -11,9 +11,13 @@ tags:
     - ai
 
 social:
-    twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits. 
+    twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits.
     linkedin:
 ---
+
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
 
 The cloud promised to revolutionize your business.
 

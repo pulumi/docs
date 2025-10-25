@@ -15,6 +15,10 @@ aliases:
   - /docs/pulumi-cloud/get-started/what-is-it/
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 So you've chosen to use Pulumi infrastructure as code, and are now deciding how to manage your state and whether Pulumi Cloud is a good fit? Or you've heard Pulumi is open source but aren't entirely clear on what part is fully open and free, and what is a paid Pulumi product? This page will give you a better understanding about the answers to these questions and everything in between.
 
 ## In Summary

@@ -12,6 +12,10 @@ tags:
     - llm
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 {{% notes type="info" %}}
 There are new intelligent cloud management capabilities available in [**Pulumi Copilot**](/blog/pulumi-copilot).
 {{% /notes %}}

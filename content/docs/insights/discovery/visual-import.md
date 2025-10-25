@@ -15,6 +15,10 @@ aliases:
 - /docs/insights/import/
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 Pulumi Visual Import allows platform and development teams to leverage [Pulumi Insights](/docs/insights/) to generate [Pulumi Infrastructure as Code (IaC)](/docs/iac/) from [discovered resources](/docs/insights/discovery/#how-discovery-works) in your cloud accounts. Visual Import provides an intuitive 5-step process to start managing your infrastructure resources using Pulumi IaC.
 
 1. Discover and select existing cloud resources across accounts

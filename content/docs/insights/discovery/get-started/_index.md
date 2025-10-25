@@ -13,7 +13,11 @@ menu:
 aliases:
   - /docs/insights/get-started/
 ---
- 
+
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 Pulumi Insights is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
 Pulumi Insights gives you the tools to:

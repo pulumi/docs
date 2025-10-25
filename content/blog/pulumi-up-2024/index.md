@@ -14,6 +14,10 @@ tags:
     - insights
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 At our fourth annual PulumiUP conference, we unveiled a new vision for Pulumi, going beyond infrastructure as code to a comprehensive product suite. Pulumi’s platform now consists of three core products: Pulumi IaC is open source infrastructure as code in any programming language; Pulumi ESC is centralized secrets management that scales; and Pulumi Insights delivers instant visibility, intelligence, and control over all of your infrastructure. Each product can be adopted independently but is better together. In this post, we will share more about how Pulumi is your trusted partner to automate, secure, and manage everything you run in the cloud.
 
 <!--more-->

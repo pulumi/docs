@@ -16,6 +16,10 @@ menu:
         identifier: ai-get-started
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 ## Public Preview Access
 
 Neo is in public preview and currently free to use. Users will receive ample warning before any pricing changes go into effect. Using Neo to optionally run [`pulumi preview`](/docs/iac/neo/running-previews/) consumes workflow minutes. Learn more about workflow minutes on our [pricing page](https://www.pulumi.com/pricing/#faq-pricing).

@@ -5,7 +5,9 @@ aliases:
 meta_desc: "Preview changes to your infrastructure before deploying. See what will be created, updated, or deleted."
 ---
 
-
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
 
 Show a preview of updates to a stack's resources
 

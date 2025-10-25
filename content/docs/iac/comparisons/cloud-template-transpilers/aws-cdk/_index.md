@@ -18,6 +18,10 @@ aliases:
 - /docs/iac/concepts/vs/cloud-template-transpilers/aws-cdk/
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 <style>
     main table {
         font-size: 0.94em;

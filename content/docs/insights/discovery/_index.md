@@ -16,6 +16,10 @@ aliases:
 - /docs/insights/concepts/how-insights-works/
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 Pulumi Insights Discovery enables organizations to gain complete visibility into their cloud infrastructure by scanning cloud provider accounts and building a comprehensive inventory of all resources—regardless of how those resources were created or are currently managed.
 
 ## How discovery works

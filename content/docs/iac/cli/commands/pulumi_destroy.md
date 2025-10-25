@@ -5,7 +5,9 @@ aliases:
 meta_desc: "Delete all resources in a stack. Safely tear down your cloud infrastructure."
 ---
 
-
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
 
 Destroy all existing resources in the stack
 
@@ -17,7 +19,7 @@ Deletes all the resources in the selected stack.  The current state is
 loaded from the associated state file in the workspace.  After running to completion,
 all of this stack's resources and associated state are deleted.
 
-The stack itself is not deleted. Use `pulumi stack rm` or the 
+The stack itself is not deleted. Use `pulumi stack rm` or the
 `--remove` flag to delete the stack and its config file.
 
 Warning: this command is generally irreversible and should be used with great care.
