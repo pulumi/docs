@@ -13,7 +13,7 @@ tags:
     - performance
 social:
     twitter: "Faster. IaC. Secrets.
-    
+
     We've optimized secrets management in Pulumi IaC to reduce deployment times while maintaining security. Stacks with many secrets can save up to 10 seconds per operation. Update to version 3.155.0 to experience these performance improvements."
     linkedin: "Pulumi Infrastructure as Code now processes stack secrets more efficiently, reducing deployment times while maintaining robust security. Our latest update optimizes encryption and decryption operations through intelligent batching and smart change detection, eliminating unnecessary processing during updates. For stacks with many secrets, these improvements can save up to 10 seconds per operation, which adds up to significant time savings across your deployment pipeline. Update to version 3.155.0 today to experience these performance improvements without any configuration changes required."
 ---

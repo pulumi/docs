@@ -15,16 +15,16 @@ tags:
 
 social:
   twitter: |
-    We just launched the Pulumi Puluminaries 2.0 Program, our way of spotlighting and supporting dedicated leaders in the Pulumi community. Want to learn more or nominate someone? Check out our blog post. 
+    We just launched the Pulumi Puluminaries 2.0 Program, our way of spotlighting and supporting dedicated leaders in the Pulumi community. Want to learn more or nominate someone? Check out our blog post.
   linkedin: |
     We are thrilled to announce the Pulumi Puluminaries 2.0 Program, designed to celebrate the dedication and expertise of our amazing community. Similar to how other ambassador programs bring together dedicated advocates, this initiative unites those who champion Pulumi’s approach to cloud engineering.
 
     By participating, you will gain early access to new features, collaborate one-on-one with our team, and share your unique insights with fellow Pulumi users. If you have been creating content, helping others adopt Pulumi, or promoting best practices, we want to hear your story.
-    
+
     Check out our latest blog post to learn how you can apply or nominate someone who embodies the Pulumi spirit: <link>
-    
+
     Ready to build the future of cloud engineering with us? Join the Pulumi Puluminaries 2.0 Program today.
-    
+
 ---
 
 We are excited to announce the Pulumi Puluminaries 2.0 Program. This is a fresh and revitalized way to celebrate and support Pulumi’s most passionate community members. Pulumi Puluminaries are individuals who demonstrate leadership in the Pulumi ecosystem by sharing best practices, creating valuable content, and helping fellow practitioners succeed.

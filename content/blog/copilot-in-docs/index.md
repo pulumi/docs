@@ -16,6 +16,10 @@ social:
     twitter: "Pulumi Copilot is now available across Pulumi Documentation and pulumi.com, and comes equipped with a powerful new Documentation Skill! Learn more by reading our blog:"
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 [Pulumi Copilot](/docs/pulumi-cloud/copilot/) has been making our customers' day-to-day tasks easier since its release, and today we’re excited to expand its capabilities—Pulumi Copilot is now available across Pulumi Documentation and pulumi.com, and comes equipped with a powerful new Documentation Skill!
 
 <!--more-->

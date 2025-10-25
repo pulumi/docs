@@ -313,17 +313,17 @@ detail_sections:
           - title: Run Compliance Checks
             icon: testing
             icon_color: purple
-            description: Pulumi Copilot leverages knowledge about compliance frameworks to analyze your infrastructure and check for policy compliance. 
+            description: Pulumi Copilot leverages knowledge about compliance frameworks to analyze your infrastructure and check for policy compliance.
 
           - title: Debug Cloud Failures
             icon: cloud-with-nodes
             icon_color: salmon
-            description: Pulumi Copilot can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures. 
+            description: Pulumi Copilot can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures.
 
           - title: Stay Secure
             icon: shield
             icon_color: yellow
-            description: Pulumi Copilot combines Pulumi's supergraph of your cloud infrastructure and knowledge about security best practices to identify security violations and and detect anomalous activity. 
+            description: Pulumi Copilot combines Pulumi's supergraph of your cloud infrastructure and knowledge about security best practices to identify security violations and and detect anomalous activity.
 
 contact_us_form:
     section_id: contact

@@ -56,9 +56,9 @@ How can we overcome the learning curve? Picking up and mastering a new tool can 
 
 > ### Tech learning hacks:
 >
-> 🏆 Do: Start  
-> 🔨 Use: Helpful Tools  
-> 🥅 Make: Achievable Goals  
+> 🏆 Do: Start
+> 🔨 Use: Helpful Tools
+> 🥅 Make: Achievable Goals
 > 🎉 Win: Celebrate Successes
 
 Recognizing achievable goals can be tricky when you are learning something new. Always over-estimate the complexity of each step. If you overestimate how complicated a task might be, the biggest risk is accomplishing the goal faster than you think! Either way, the learning journey should be enjoyable and rewarding by following this rule.

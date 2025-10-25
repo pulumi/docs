@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-02-12T09:00:00-08:00
@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         In this workshop, you'll discover how Pulumi empowers Java development teams to confidently manage cloud infrastructure while maintaining enterprise-grade security and control. As organizations face increasing complexity in cloud operations, Pulumi's Cloud Engineering platform offers a natural path forward by allowing your developers to use familiar Java skills to manage cloud resources - eliminating the need to learn new domain-specific languages.
-    
+
         This session is designed for engineering leaders and developers looking to modernize their cloud infrastructure practices. Through practical demonstrations and real-world examples, you'll see how Pulumi's enterprise platform streamlines cloud operations by unifying infrastructure management, security controls, and secrets management in a single dashboard. We'll also explore proven strategies for adopting Pulumi within your organization, including practical approaches for transitioning from existing tools like Terraform while maintaining business continuity.
 
     learn:
@@ -60,7 +60,7 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Josh Kodroff 
+        - name: Josh Kodroff
           role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
 
@@ -84,6 +84,6 @@ event_data:
   url: "https://www.pulumi.com/resources/getting-started-with-aws-java/"
   description: |
     In this workshop, you'll discover how Pulumi empowers Java development teams to confidently manage cloud infrastructure while maintaining enterprise-grade security and control. As organizations face increasing complexity in cloud operations, Pulumi's Cloud Engineering platform offers a natural path forward by allowing your developers to use familiar Java skills to manage cloud resources - eliminating the need to learn new domain-specific languages.
-    
+
     This session is designed for engineering leaders and developers looking to modernize their cloud infrastructure practices. Through practical demonstrations and real-world examples, you'll see how Pulumi's enterprise platform streamlines cloud operations by unifying infrastructure management, security controls, and secrets management in a single dashboard. We'll also explore proven strategies for adopting Pulumi within your organization, including practical approaches for transitioning from existing tools like Terraform while maintaining business continuity.
 ---

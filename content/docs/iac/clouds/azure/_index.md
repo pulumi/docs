@@ -20,7 +20,7 @@ providers:
   provider_list:
   - display_name: Azure Native
     recommended: true
-    content_links: 
+    content_links:
     - display_name: Overview
       icon: page-small-black
       url: azure-native/

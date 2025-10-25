@@ -70,5 +70,5 @@ main:
 form:
     # HubSpot form id.
     hubspot_form_id: d4661871-731d-43c1-948e-4da5b35ff6ee
-    salesforce_campaign_id: 
+    salesforce_campaign_id:
 ---

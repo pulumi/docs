@@ -80,7 +80,7 @@ Let's look at a practical example of how to create, read, update, and delete a K
 3. Verify the contents:
 
     ```bash
-    $ kubectl describe secrets shhhhhh  
+    $ kubectl describe secrets shhhhhh
     ```
 
 ### Reading a Kubernetes Secret

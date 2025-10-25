@@ -19,7 +19,7 @@ Valid source languages: yaml, terraform, bicep, arm, kubernetes
 
 Valid target languages: typescript, python, csharp, go, java, yaml
 Example command usage:
-    pulumi convert --from yaml --language java --out . 
+    pulumi convert --from yaml --language java --out .
 
 
 ```

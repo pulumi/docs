@@ -59,7 +59,7 @@ schedule:
   heading: Schedule At A Glance
   subheading: Get inspired! Dive into the stories and experiences of innovators and experts, from Startup Founders to Industry Leaders.
   items:
-    - title: 
+    - title:
       description:
       time: "Europe & Americas"
       time2: "Asia Pacific"
@@ -68,7 +68,7 @@ schedule:
       description:
       time: "9:00 AM ET"
       time2: "4:00 PM PT"
-    
+
     - title: Real-world Enterprise Platform Engineering Success Stories
       description:
       time: "9:40 AM ET"
@@ -166,7 +166,7 @@ workshops:
     meta_desc: Deliver "observability as code" with Pulumi and Honeycomb. Automate SLOs, detect critical issues, and transform your platform engineering approach.
     datetime: 2025-07-17T09:00:00-04:00
     link: /events/workload-observability-with-pulumi-and-honeycomb/
-  
+
 
 block_external_search_index: true
 

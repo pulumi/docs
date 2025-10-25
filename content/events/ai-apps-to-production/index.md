@@ -40,7 +40,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2023-12-14T09:00:00.000-08:00
@@ -61,13 +61,13 @@ main:
         - The basics of infrastructure as code and the Pulumi programming model
         - How to provision, update, and destroy AWS resources (Amazon ECS clusters, networking infrastructure, messaging queues, and Amazon RDS Postgres databases)
         - How to create and manage Pinecone indexes
-       
+
     # The webinar presenters
     presenters:
         - name: Scott Lowe
           role: Principal Community Engineer, Pulumi
           photo: /images/team/scott-lowe.jpg
-        - name: Zach Proser 
+        - name: Zach Proser
           role: Staff Developer Advocate, Pinecone
 
     # case-sensitive

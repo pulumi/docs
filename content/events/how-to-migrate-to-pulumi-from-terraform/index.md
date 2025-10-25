@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         Many organizations are intrigued by the power of using general purpose languages with Pulumi to manage their infrastructure, but have a large existing investment in Terraform codebases. In this workshop, you'll learn how you can build on top of your existing Terraform code with Pulumi or replace Terraform entirely.
-    
+
     learn:
         - Approaches to using resources managed outside of Pulumi in Pulumi programs.
         - How to leverage your organization's existing Terraform by consuming TF outputs in Pulumi programs.

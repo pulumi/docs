@@ -179,7 +179,7 @@ After regenerating the SDK, ensure you reinstall or relink the SDK in your proje
 
 - For native providers (e.g., `azure-native`, `aws-native`), versioning is managed via the language package manager (e.g., `npm`, `pip`, etc.).
 - For the `terraform-provider` specifically, you can specify a version with the `--version` flag:
-  
+
   ```bash
   pulumi package add terraform-provider hashicorp/random --version=3.5.1
   ```

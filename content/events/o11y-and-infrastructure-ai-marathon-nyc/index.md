@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: O11y & Infrastructure AI Marathon - NYC '25
 meta_desc: "Accelerating AI-Powered Applications to Production: Building IDPs to Amplify Developer Velocity"
-meta_image: 
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false

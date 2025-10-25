@@ -19,7 +19,7 @@ weight: 999
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
     In Pulumi, each stack within your project has a settings file, and this file contains a collection of values intended to capture the configuration details needed to work with a particular environment. These can be plain-text values like server names, environment types (ex: dev, test, prod), region names and so on. They can also be sensitive values such as database passwords or service tokens.
-    
+
     In this tutorial, we'll demonstrate how to create and utilize configuration and secret values in Pulumi.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
@@ -55,8 +55,8 @@ This command will walk you through creating a new Pulumi project.
 Enter a value or leave blank to accept the (default), and press <ENTER>.
 Press ^C at any time to quit.
 
-project name (pulumi-dev):  
-project description (A minimal Python Pulumi program):  
+project name (pulumi-dev):
+project description (A minimal Python Pulumi program):
 Created project 'pulumi-dev'
 
 Please enter your desired stack name.

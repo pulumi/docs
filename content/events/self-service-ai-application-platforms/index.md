@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-09-09T12:00:00-04:00
@@ -78,4 +78,4 @@ event_data:
   url: "https://www.pulumi.com/resources/self-service-ai-application-platforms/"
   description: |
         The rise of LLM applications creates new infrastructure challenges related to GPU resources, model serving, and cost management. This cutting-edge workshop demonstrates how to extend your IDP to support AI application teams with self-service infrastructure for AI-powered applications and agents. You'll learn to create templates for model serving, implement cost controls for GPU resources, and provide integration patterns for common use cases.
---- 
+---

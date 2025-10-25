@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         In this workshop, you will learn the fundamentals of infrastructure as code through guided exercises. You will be introduced to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
-    
+
         This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy resources on AWS. We will guide you through the Pulumi platform with diagrams and a series of labs to help accelerate your cloud projects.
 
     learn:

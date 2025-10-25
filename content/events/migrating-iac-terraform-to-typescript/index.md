@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-01-29T09:00:00-08:00
@@ -50,9 +50,9 @@ main:
     # Description of the webinar.
     description: |
        Organizations often find themselves constrained by domain-specific languages when managing cloud infrastructure, leading to complex workarounds and maintenance challenges. This workshop demonstrates how transitioning to a general-purpose programming language can transform your infrastructure management, making common tasks more intuitive and maintainable.
-       
+
        You'll discover how TypeScript's rich ecosystem of libraries and familiar syntax can simplify everything from dynamic resource creation to complex configuration management. Through practical examples, we'll explore strategies for gradually migrating existing infrastructure code while maintaining operational stability.
-       
+
        Whether you're dealing with repetitive boilerplate, struggling with complex state management, or seeking more flexibility in your infrastructure automation, you'll learn how to leverage TypeScript's capabilities to build more elegant and powerful infrastructure solutions that scale with your organization's needs.
 
     learn:
@@ -62,7 +62,7 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Josh Kodroff 
+        - name: Josh Kodroff
           role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
 
@@ -86,8 +86,8 @@ event_data:
   url: "https://www.pulumi.com/resources/migrating-iac-terraform-to-typescript/"
   description: |
     Organizations often find themselves constrained by domain-specific languages when managing cloud infrastructure, leading to complex workarounds and maintenance challenges. This workshop demonstrates how transitioning to a general-purpose programming language can transform your infrastructure management, making common tasks more intuitive and maintainable.
-    
+
     You'll discover how TypeScript's rich ecosystem of libraries and familiar syntax can simplify everything from dynamic resource creation to complex configuration management. Through practical examples, we'll explore strategies for gradually migrating existing infrastructure code while maintaining operational stability.
-    
+
     Whether you're dealing with repetitive boilerplate, struggling with complex state management, or seeking more flexibility in your infrastructure automation, you'll learn how to leverage TypeScript's capabilities to build more elegant and powerful infrastructure solutions that scale with your organization's needs.
 ---

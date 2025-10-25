@@ -2,7 +2,7 @@
 title: The Easier Way to Create Pulumi Providers in Go
 allow_long_title: true
 date: 2023-01-19
-authors: 
+authors:
   - kyle-dixler
 tags:
   - go

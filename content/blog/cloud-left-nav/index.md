@@ -94,12 +94,12 @@ By consolidating related features, the left navigation UI is easier to scan and 
 
 Pulumi Cloud is used by teams managing everything from a handful of resources to thousands across multiple clouds and environments. This navigation update scales with you, helping teams quickly navigate between the services they need without slowing down as usage grows.
 
-At Pulumi, we believe infrastructure as code should accelerate, not slow down, how teams deliver in the cloud. By simplifying navigation and surfacing the most important actions, Pulumi Cloud becomes an even faster, more reliable place to manage your infrastructure.  
+At Pulumi, we believe infrastructure as code should accelerate, not slow down, how teams deliver in the cloud. By simplifying navigation and surfacing the most important actions, Pulumi Cloud becomes an even faster, more reliable place to manage your infrastructure.
 
 This update is another step toward our mission: enabling teams everywhere to build, deploy, and manage cloud infrastructure with greater speed, confidence, and joy.
 
 ## Try It Out
 
-The new navigation is available today for all Pulumi Cloud users. Sign in to [Pulumi Cloud](https://app.pulumi.com) and experience the streamlined workflow for yourself. For more details, check out the [docs](https://www.pulumi.com/docs/).  
+The new navigation is available today for all Pulumi Cloud users. Sign in to [Pulumi Cloud](https://app.pulumi.com) and experience the streamlined workflow for yourself. For more details, check out the [docs](https://www.pulumi.com/docs/).
 
 We’d love your feedback as we continue to make Pulumi Cloud the best platform for modern infrastructure as code.

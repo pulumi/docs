@@ -7,7 +7,7 @@ meta_image: meta.png
 
 authors:
     - idp-team
-    
+
 tags:
     - idp
     - platform teams
@@ -65,7 +65,7 @@ Driving standardized component and template utilization through the registry als
 
 ![Pulumi IDP Insights](registry-insights.jpg)
 
-## Flexible Self-Service Workflows  
+## Flexible Self-Service Workflows
 
 To ensure that users can consume packages and templates ergonomically, we’re introducing new flexible workflow tools to meet the needs of any persona.
 

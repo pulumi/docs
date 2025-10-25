@@ -42,7 +42,7 @@ You can create secrets via [Wrangler](https://developers.cloudflare.com/workers/
 - Login to your Cloudflare account and authorize Wrangler:
 
     ```bash
-    $ npx wrangler login  
+    $ npx wrangler login
     # Confirm authorization to Wrangler
     ```
 
@@ -134,7 +134,7 @@ Using Cloudflare secrets comes with particular challenges and considerations:
 Addressing these challenges and considerations requires a thoughtful approach to [secrets management](
 /what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices. A beta product to facilitate secrets management and tackle the above challenges is available for Cloudflare as the [Cloudflare Secrets Store](https://blog.cloudflare.com/secrets-store/).
 
-## Conclusion  
+## Conclusion
 
 Following security best practices for Cloudflare secrets are crucial in managing sensitive information in your solutions, applications, and cloud environments.
 

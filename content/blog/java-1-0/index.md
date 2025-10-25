@@ -17,7 +17,7 @@ tags:
 social:
     twitter: "☕ The Pulumi Java SDK is now Generally Available! Manage your infrastructure using the composable, strongly typed programming language you already know and love - now including the powerful Pulumi Automation API!"
     linkedin: "Java, the world’s most trusted enterprise programming language, is now generally available in Pulumi. You can now leverage Java’s familiar, expressive, and safe syntax to manage your infrastructure in a composable and scalable way.
-    
+
     Learn more about automating everything you run in the cloud with Java: [Link]"
 ---
 

@@ -103,7 +103,7 @@ Inspect the service to ensure it is running.
 ```bash
 $ docker service ps myservice
 ID             NAME          IMAGE          NODE                                            DESIRED STATE   CURRENT STATE            ERROR     PORTS
-kf8ysfgiipkb   myservice.1   nginx:latest   ip-172-31-30-90.eu-central-1.compute.internal   Running         Running 35 seconds ago  
+kf8ysfgiipkb   myservice.1   nginx:latest   ip-172-31-30-90.eu-central-1.compute.internal   Running         Running 35 seconds ago
 ```
 
 ### Accessing configs inside a container

@@ -15,7 +15,7 @@ Remove multiple configuration values.
 
 The `--path` flag indicates that keys should be parsed within maps or lists:
 
-  - `pulumi config rm-all --path  outer.inner 'foo[0]' key1` will remove the 
+  - `pulumi config rm-all --path  outer.inner 'foo[0]' key1` will remove the
     `inner` key of the `outer` map, the first key of the `foo` list and `key1`.
   - `pulumi config rm-all outer.inner 'foo[0]' key1` will remove the literal    `outer.inner`, `foo[0]` and `key1` keys
 

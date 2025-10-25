@@ -26,15 +26,15 @@ event_links:
             Meet Thoughtworks Distinguished Engineer and author, Kief Morris, who will be signing the latest edition of his O’Reilly book: Infrastructure as Code. We’ll have limited copies available in the booth at no cost on a first-come-first-served basis.
           link: https://4429525.fs1.hubspotusercontent-na1.net/hubfs/4429525/Meet-Kief-Morris-Infrastructure-as-Code-Book-Signing.ics
           cta: Add to Calendar
-          
+
         - title: "KubeCon London: Drinks on the Docks"
           icon: ship
           icon_color: violet
           description: |
             Apr 3, 2025 6pm BST
-            
+
             ​Join Incident.io, Kong, Oso, Pulumi and Sentry for an exclusive dockside happy hour as we unwind after KubeCon with great drinks, great company, and unbeatable waterfront views.
-            
+
             The Oiler Bar, Royal Victoria Docks, London
           link: https://lu.ma/jc9diqel
           cta: RSVP to Happy Hour

@@ -26,18 +26,18 @@ social:
     Excited to share our latest blog post on how to set up and run DeepSeek R1—a cutting-edge open-source AI model—on an AWS EC2 instance using Pulumi and Ollama.
 
     Why DeepSeek R1? DeepSeek R1 has quickly become a standout in the AI community, offering exceptional performance and reasoning capabilities. Competing with industry giants like OpenAI and Meta, it excels in benchmarks such as AIME 2024 for mathematics, Codeforces for coding, and MMUL for general knowledge.
-    
+
     What You'll Learn:
-    
+
         Infrastructure as Code with Pulumi: Automate the deployment of your AWS EC2 instances seamlessly.
         Managing LLMs with Ollama: Simplify the process of running and managing large language models.
         Hands-On Setup: Step-by-step instructions with code snippets in TypeScript, Python, Go, C#, and YAML.
         Performance Insights: Understand how DeepSeek R1 outperforms rivals in key areas.
-    
+
     Why Pulumi and AWS EC2? Leveraging Pulumi's Infrastructure as Code (IaC) capabilities with AWS EC2 provides a robust and scalable environment for running advanced AI models like DeepSeek R1. This combination ensures flexibility, reliability, and ease of management.
-    
+
     Get Started: Whether you're looking to experiment with AI models or scale your applications in the cloud, this guide has you covered. From setting up your environment to deploying and accessing the DeepSeek Web UI, you'll find all the resources you need.
-    
+
     Read the full blog post here: <link>
 ---
 

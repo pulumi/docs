@@ -17,16 +17,16 @@ social:
         Most platform engineering advice assumes you're building for one product. But what if you have 20+ independent projects with different tech stacks? SEITENBAU built an infrastructure "buffet" with Pulumi that lets teams pick what they need.
     linkedin: |
         Most platform engineering stories focus on supporting microservices for a single product—think Spotify or Netflix. But what happens when you need to support 20+ completely independent projects?
-        
+
         SEITENBAU, a German software company, faced exactly this challenge. Government projects on-premises, cloud-native apps on Kubernetes, legacy VMs with Ansible—each with unique requirements.
-        
+
         Their solution? An infrastructure "buffet" built with Pulumi, offering pre-configured components teams can mix and match. No forced standardization, just flexible building blocks that work together seamlessly.
-        
+
         Key insights from their 2-year journey:
         • Centralized configuration as a single source of truth
         • Reusable Pulumi components that encapsulate complexity
         • Python + type safety for maintainable infrastructure code
-        
+
         Perfect read if you're dealing with diverse infrastructure requirements: https://www.pulumi.com/blog/platform-engineering-buffet/
 ---
 *This post is based on my video interview with Nico Thomas, a platform engineer at SEITENBAU. In this article, Nico shares how he and his team built a flexible, reusable platform to support 20+ diverse projects using Pulumi. Watch the video below or read on for Nico’s take on building an infrastructure buffet. - Adam Gordon Bell*

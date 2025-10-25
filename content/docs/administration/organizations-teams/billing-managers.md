@@ -9,7 +9,7 @@ menu:
     name: Billing managers
     parent: administration-organizations-teams
     weight: 5
-    
+
 aliases:
 - /docs/pulumi-cloud/access-management/billing-managers/
 - /docs/intro/pulumi-service/billing-managers/

@@ -9,7 +9,7 @@ menu:
         name: Accounts
         parent: administration-organizations-teams
         weight: 1
-        
+
 aliases:
 - /docs/administration/organizations-teams/accounts/
 - /docs/intro/console/accounts/

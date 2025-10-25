@@ -6,7 +6,7 @@ meta_image: meta.png
 meta_desc: See deployment times across different types of cloud provider resources.
 authors:
     - kyle-dixler
-tags: 
+tags:
   - pulumi
   - features
 ---

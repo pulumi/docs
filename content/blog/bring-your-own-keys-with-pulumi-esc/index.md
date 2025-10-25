@@ -25,8 +25,8 @@ Customer-Managed Keys integrate seamlessly with your Pulumi Cloud Organization. 
 
 Setting it up takes just a few minutes:
 
-1. **Create** a KMS key in your AWS account.  
-2. **Grant access** to the KMS key using OIDC in your AWS account.  
+1. **Create** a KMS key in your AWS account.
+2. **Grant access** to the KMS key using OIDC in your AWS account.
 3. **Configure** your Pulumi Cloud organization to use your new KMS key.
 
 ## Available Today
@@ -35,14 +35,14 @@ Customer-Managed Keys with support for AWS KMS are available today for all organ
 
 We expect to add support for more cloud providers in the future. Please vote on the following GitHub issues for your favorite to support prioritization:
 
-* [Azure Key Vault](https://github.com/pulumi/pulumi-cloud-requests/issues/521)  
+* [Azure Key Vault](https://github.com/pulumi/pulumi-cloud-requests/issues/521)
 * [Google Cloud KMS](https://github.com/pulumi/pulumi-cloud-requests/issues/522)
 
 ## Share Your Feedback
 
 We’re excited to see how Customer-Managed Keys help you and your organization meet your compliance goals with Pulumi Cloud. Your feedback is essential as we continue to evolve this feature:
 
-* Connect with us in the [Pulumi Community Slack](https://slack.pulumi.com)  
+* Connect with us in the [Pulumi Community Slack](https://slack.pulumi.com)
 * Open an issue on [GitHub](https://github.com/pulumi/pulumi)
 * Read the full documentation on [Customer-Managed Keys](https://www.pulumi.com/docs/pulumi-cloud/admin/customer-managed-keys)
 

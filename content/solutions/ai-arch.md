@@ -32,7 +32,7 @@ benefits:
           icon: code
           icon_color: yellow
           description: |
-            Easy to author IaC with standard programming languages like Python. 
+            Easy to author IaC with standard programming languages like Python.
 
         - title: Ship Faster with Guardrails
           icon: global
@@ -44,7 +44,7 @@ benefits:
           icon: puzzle
           icon_color: yellow
           description: |
-            Always know and enforce what's going on in your organization. 
+            Always know and enforce what's going on in your organization.
 
 
 get_started:

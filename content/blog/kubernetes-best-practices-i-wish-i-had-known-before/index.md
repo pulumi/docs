@@ -25,7 +25,7 @@ social:
     Kubernetes Best Practices I Wish I Had Known Before
 
     Embarking on your Kubernetes journey? Trust me, it can feel like climbing Mount Everest in flip-flops! Through years of hands-on experience in production environments, I've compiled a list of essential Kubernetes best practices that can save you time, money, and countless headaches.
-    
+
     Whether you're just starting or looking to refine your Kubernetes setup, these insights will help you navigate the complexities and harness the full power of Kubernetes.
     <link>
 ---
@@ -231,7 +231,7 @@ The old adage for servers—“treat them like cattle, not pets”—applies to 
 - Avoid sneaky “quick fixes” on a running container—those changes will vanish the moment Kubernetes restarts the Pod.
 - Embrace ephemeral environments and dynamic scaling. That’s what Kubernetes does best!
 
-## 16. Consider a Higher-Level Approach for Complex Deployments  
+## 16. Consider a Higher-Level Approach for Complex Deployments
 
 While native YAML manifests can work for smaller Kubernetes deployments, they often become unwieldy as your projects and teams grow. [Pulumi](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/) provides a powerful alternative for deployment automation, offering:
 

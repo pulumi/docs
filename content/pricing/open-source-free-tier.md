@@ -29,11 +29,11 @@ requirements:
 
         - You must be the maintainer or core contributor for the project.
 
-        - Project must be active and more than 30 days old. 
+        - Project must be active and more than 30 days old.
 
         - Pulumi code for your automation must be publicly available.
 
-        - Chat with someone from the Pulumi Developer Relations team once every 90 days. 
+        - Chat with someone from the Pulumi Developer Relations team once every 90 days.
 
 contact:
     title: Application Process

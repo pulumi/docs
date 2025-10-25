@@ -45,6 +45,10 @@ sections:
       anchor: conclusion
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 ## About Unity
 
 [Unity](https://unity.com/) is the world's leading platform for creating and operating interactive, real-time 3D (RT3D) content. In November 2022, Unity merged with ironSource to help mobile content creators prosper with a leading business platform designed to turn any app into a successful business. Today, 84 of the top 100 games use the [Unity Grow](https://unity.com/grow) platform as part of their monetization strategy.

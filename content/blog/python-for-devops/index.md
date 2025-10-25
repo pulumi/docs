@@ -3,7 +3,7 @@ title: "Top 15 Python Tools for DevOps"
 date: 2025-01-06T00:23:24-05:00
 updated: 2025-03-21
 draft: false
-meta_desc: From quick fixes to scalable enterprise solutions—explore 15 essential Python tools for automation, monitoring, and cloud deployment. 
+meta_desc: From quick fixes to scalable enterprise solutions—explore 15 essential Python tools for automation, monitoring, and cloud deployment.
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -214,7 +214,7 @@ Now, #1 and it’s IaC time. I can get my dashboard onto AWS in a lambda using P
 # Build and push the Docker image to ECR
 image = awsx.ecr.Image("app-server-image",
     repository_url=repository.repository_url,
-    context="..",  
+    context="..",
     dockerfile="Dockerfile",
     platform="linux/amd64"
 )

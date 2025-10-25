@@ -54,7 +54,7 @@ main:
     # Description of the webinar.
     description: |
         Evan Boyle and Casey Huang give you a guided tour of the Pulumi Automation API and Pulumi Deployments.
-        Pulumi's Automation API allows you to embed Pulumi within your application code, making it easy to create custom experiences on top of Pulumi that are tailored to your use case, domain, and team. 
+        Pulumi's Automation API allows you to embed Pulumi within your application code, making it easy to create custom experiences on top of Pulumi that are tailored to your use case, domain, and team.
 
     # The webinar presenters
     presenters:

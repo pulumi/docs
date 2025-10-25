@@ -43,9 +43,9 @@ By introducing a controlled review process, Approvals let developers propose upd
 
 To get started, navigate to your environment’s **Settings → Approval Rulesets**, where you can define approval requirements such as:
 
-- Number of required reviewers  
-- Specific teams or individuals allowed to approve  
-- Whether self-approval is permitted  
+- Number of required reviewers
+- Specific teams or individuals allowed to approve
+- Whether self-approval is permitted
 - Whether changes require reapproval if modified
 
 ![Pulumi Ruleset configuration](approvals-ruleset.png)

@@ -112,7 +112,7 @@ Neo identified these optimization opportunities:
    • Recommendation: Consolidate into an Auto Scaling Group
    • Benefits: Simplified management, automatic scaling, reduced configuration drift
 
-2. Scattered Lambda Functions (Medium Priority)  
+2. Scattered Lambda Functions (Medium Priority)
    • Found 12 Lambda functions with identical runtime and dependencies
    • Recommendation: Combine into a single function with routing logic
    • Benefits: Reduced cold starts, simplified monitoring, easier updates

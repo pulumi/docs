@@ -9,7 +9,7 @@ meta_image: meta.png
 authors:
     - eron-wright
 tags:
-    - releases 
+    - releases
     - platform-teams
     - features
     - iac

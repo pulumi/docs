@@ -21,6 +21,10 @@ Key highlights include:
 Check out all the new features empowering teams to build better cloud infrastructure."
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered in the last half of the year. Some key highlights:
 
 - Pulumi Visual Studio Code Extension
@@ -34,11 +38,11 @@ As we wrap up 2024, let's look back at the significant features and improvements
 
 ### Kubernetes Enhancements
 
-- **[Pulumi Kubernetes Operator 2.0](/blog/pulumi-kubernetes-operator-2-0/)**  
+- **[Pulumi Kubernetes Operator 2.0](/blog/pulumi-kubernetes-operator-2-0/)**
   Major update introducing a horizontally scalable architecture, enhanced security features, and improved customization for the Pulumi Kubernetes Operator.
-- **[EKS Auto Mode](/blog/aws-eks-auto-mode/)**  
+- **[EKS Auto Mode](/blog/aws-eks-auto-mode/)**
   A groundbreaking feature that simplifies EKS cluster management by automatically handling compute, storage, and networking configurations based on AWS’s operational expertise.
-- **[Pulumi EKS 3.0 Release](/blog/eks-v3-release/)**  
+- **[Pulumi EKS 3.0 Release](/blog/eks-v3-release/)**
   Update introducing support for Amazon Linux 2023, Access Entries for IAM integration, EKS managed addons, and enhanced security features.
 - **[Pulumi Kubernetes Await Logic](/blog/improved-kubernetes-await-logic/)**
   Better resource dependency tracking, improved error reporting, faster deletions with propagation policies, and custom readiness criteria support.
@@ -49,7 +53,7 @@ As we wrap up 2024, let's look back at the significant features and improvements
   Automatic generation of Pulumi providers from any Terraform provider, dramatically expanding the ecosystem of available resources.
 - **[AWS CDK On Pulumi 1.0](/blog/aws-cdk-on-pulumi-1.0/)**
   Expanded compatibility with AWS CDK features and construct hub integration, allowing developers to continue using familiar AWS CDK patterns within Pulumi.
-- **[Azure v6 Release](/blog/azure-v6-release/)**  
+- **[Azure v6 Release](/blog/azure-v6-release/)**
   Major update ensuring compatibility with the latest Azure services, improved error messages, and new resource types.
 - **[Google Cloud Provider v8.0.0](/blog/gcp-v8-release/)**
   Comprehensive support for new Google Cloud services and improved resource management capabilities.
@@ -58,13 +62,13 @@ As we wrap up 2024, let's look back at the significant features and improvements
 
 ### Core Platform Features
 
-- **[Pulumi Visual Studio Code Extension](/blog/pulumi-vscode-extension/)**  
+- **[Pulumi Visual Studio Code Extension](/blog/pulumi-vscode-extension/)**
   Enhanced IaC debugging in the IDE, Pulumi YAML support, and ESC management within VS Code.
-- **[Pulumi Docker Image Improvements](/blog/docker-containers/)**  
+- **[Pulumi Docker Image Improvements](/blog/docker-containers/)**
   Versioned images with pre-installed tools for Python, Node.js, and .NET. Pulumi Deployments now supports setting the version of the Node.js and Python runtimes used in the Deployment environment.
-- **[Python UV Support](/blog/python-uv-toolchain/)**  
+- **[Python UV Support](/blog/python-uv-toolchain/)**
   Built-in support for uv, an extremely fast Python package manager that speeds up dependency installation by up to 100x compared to traditional tools.
-- **DependsOn for Provider Functions**  
+- **DependsOn for Provider Functions**
   Manage explicit dependencies between provider functions for more accurate execution in complex deployments.
 
 ---
@@ -73,22 +77,22 @@ As we wrap up 2024, let's look back at the significant features and improvements
 
 ### General Availability & Key Enhancements
 
-- **[ESC General Availability](/blog/pulumi-esc-ga/)**  
+- **[ESC General Availability](/blog/pulumi-esc-ga/)**
   GA of Pulumi ESC - redefining secrets management with features like dynamic credentials, hierarchical environments, a secrets broker with external stores like AWS Secrets Manager, and Kubernetes operators for runtime integration.
-- **[ESC Projects & Environment Tags](/blog/esc-projects-environment-tags-launch/)**  
+- **[ESC Projects & Environment Tags](/blog/esc-projects-environment-tags-launch/)**
   Organize secrets and configurations at scale with new grouping capabilities.
-- **[ESC Webhooks](/blog/esc-webhooks-launch/)**  
+- **[ESC Webhooks](/blog/esc-webhooks-launch/)**
   Real-time notifications and automated actions based on environment changes.
-- **[AWS Parameter Store Integration](/blog/pulumi-esc-aws-parameter-store-support/)**  
+- **[AWS Parameter Store Integration](/blog/pulumi-esc-aws-parameter-store-support/)**
   Native integration with AWS Systems Manager Parameter Store for seamless import of parameters and secrets into ESC environments.
-- **[Environment Import Discovery](/blog/esc-imports-discoverability/)**  
+- **[Environment Import Discovery](/blog/esc-imports-discoverability/)**
   Enhanced visibility into environment dependencies with new features to track downstream usage, version tags, and impact analysis for configuration changes.
 
 ### Deployment Improvements
 
-- **[Dependency Caching](/blog/announcing-dependency-caching-deployments/)**  
+- **[Dependency Caching](/blog/announcing-dependency-caching-deployments/)**
   Speed up deployments by up to 80% by caching dependencies between runs, with support for npm, pip, and go modules.
-- **[Kubernetes-native Agent](/blog/customer-managed-agents-kubernetes/)**  
+- **[Kubernetes-native Agent](/blog/customer-managed-agents-kubernetes/)**
   Purpose-built agent for Kubernetes environments, enabling self-hosted deployment agents within your Kubernetes clusters without requiring Docker in Docker or privileged execution.
 
 ---
@@ -97,9 +101,9 @@ As we wrap up 2024, let's look back at the significant features and improvements
 
 ### Pulumi Insights 2.0
 
-- **[Resource Explorer](/blog/insights-resources-v2/)**  
+- **[Resource Explorer](/blog/insights-resources-v2/)**
   Enhanced visual interface for exploring cloud resources with new features like customizable columns, nested grouping capabilities, advanced filtering, and shareable saved views across your organization.
-- **[Account Discovery Preview](/blog/insights-cloud-account-discovery/)**  
+- **[Account Discovery Preview](/blog/insights-cloud-account-discovery/)**
   New capability to discover and manage all cloud resources regardless of how they were created, with AI-powered search and comprehensive resource visibility across your infrastructure.
 
 ### Pulumi Copilot Enhancements

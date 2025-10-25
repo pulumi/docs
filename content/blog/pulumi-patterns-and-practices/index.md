@@ -18,6 +18,10 @@ tags:
     - devops
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 Infrastructure management is all fun and games until you find yourself scrolling through 1000+ resources in your AWS console. Worse, when one rogue product team wants to use Azure and your data team wants to be on GCP, you're ARM wrestling in Azure and watching your economies of scale tip the wrong direction as you're copy-pasting CloudFormation templates into yet another git repo. This. Needs. To. Be. A. Platform!
 
 <!--more-->

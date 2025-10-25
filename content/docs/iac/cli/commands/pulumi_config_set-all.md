@@ -13,18 +13,18 @@ Set multiple configuration values
 
 pulumi set-all allows you to set multiple configuration values in one command.
 
-Each key-value pair must be preceded by either the `--secret` or the `--plaintext` flag to denote whether 
+Each key-value pair must be preceded by either the `--secret` or the `--plaintext` flag to denote whether
 it should be encrypted:
 
   - `pulumi config set-all --secret key1=value1 --plaintext key2=value --secret key3=value3`
 
 The `--path` flag can be used to set values inside a map or list:
 
-  - `pulumi config set-all --path --plaintext "names[0]"=a --plaintext "names[1]"=b` 
+  - `pulumi config set-all --path --plaintext "names[0]"=a --plaintext "names[1]"=b`
     will set the value to a list with the first item `a` and second item `b`.
-  - `pulumi config set-all --path --plaintext parent.nested=value --plaintext parent.other=value2` 
+  - `pulumi config set-all --path --plaintext parent.nested=value --plaintext parent.other=value2`
     will set the value of `parent` to a map `{nested: value, other: value2}`.
-  - `pulumi config set-all --path --plaintext '["parent.name"].["nested.name"]'=value` will set the 
+  - `pulumi config set-all --path --plaintext '["parent.name"].["nested.name"]'=value` will set the
     value of `parent.name` to a map `nested.name: value`.
 
 The `--json` flag can be used to pass a JSON string from which values should be read.

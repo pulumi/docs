@@ -11,6 +11,10 @@ tags:
     - pulumi-cloud
 ---
 
+{{< notes type="info" >}}
+**Note:** Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+{{< /notes >}}
+
 **Pulumi Cloud empowers engineers to automate, secure, and manage modern infrastructure platforms.**
 
 Many companies are building internal developer platforms or modern infrastructure platforms to provide developer self-service while maintaining security and compliance. Companies adopt Pulumi IaC so they can apply software engineering practices to their infrastructure scaling problems and because it is fully open source with a strong community and [public roadmap](https://github.com/orgs/pulumi/projects/44/).

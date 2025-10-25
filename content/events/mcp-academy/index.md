@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: MCP Academy PNW
 meta_desc: Learn from peers who are using the Model Context Protocol to get more value from AI, every day.
-meta_image: 
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false

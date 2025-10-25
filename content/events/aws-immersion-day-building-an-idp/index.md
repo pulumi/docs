@@ -84,4 +84,4 @@ event_data:
   url: "https://www.pulumi.com/resources/aws-immersion-day-building-an-idp/"
   description: |
     Learn how to streamline platform engineering on AWS with an Internal Developer Platform (IDP). This AWS Immersion Day workshop covers best practices for platform engineering on AWS, using Infrastructure as Code (IaC) components to automate infrastructure and codify best practices, strengthen security with short-lived credentials, and gain visibility into AWS environments with Pulumi Insights.
---- 
+---

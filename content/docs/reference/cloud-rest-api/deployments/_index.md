@@ -917,7 +917,7 @@ The Settings object is the top-level configuration for deployment settings that 
     // See SourceContext schema below
   },
   "operationContext": {
-    // See OperationContext schema below  
+    // See OperationContext schema below
   },
   "executorContext": {
     // See ExecutorContext schema below

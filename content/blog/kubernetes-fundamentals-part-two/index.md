@@ -198,7 +198,7 @@ export const serviceName = service.metadata.apply(m => m.name);
 export const servicePublicIP = service.status.apply(s => s.loadBalancer.ingress[0].ip)
 ```
 
-Here, we're creating a [namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) and adding an NGINX [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) with an accompanying LoadBalancer [service](https://kubernetes.io/docs/concepts/services-networking/service/) and exporting everything we need to run it. Run `pulumi up` once again, double-check the preview, and select `yes` to update the deployment. Now everything's up and running on a managed Kubernetes service that you didn't have to stand up by hand, and won't have to expend as much effort maintaining.  
+Here, we're creating a [namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) and adding an NGINX [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) with an accompanying LoadBalancer [service](https://kubernetes.io/docs/concepts/services-networking/service/) and exporting everything we need to run it. Run `pulumi up` once again, double-check the preview, and select `yes` to update the deployment. Now everything's up and running on a managed Kubernetes service that you didn't have to stand up by hand, and won't have to expend as much effort maintaining.
 
 ## Talking to the Cluster
 

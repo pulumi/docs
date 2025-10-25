@@ -49,7 +49,7 @@ main:
 
     # Description of the webinar.
     description: |
-        What does it take to go from an idea in a notebook to an application handling real-world traffic? In this workshop, the Pinecone and Pulumi teams will explore the infrastructure and service architecture you need to scale AI apps in production. 
+        What does it take to go from an idea in a notebook to an application handling real-world traffic? In this workshop, the Pinecone and Pulumi teams will explore the infrastructure and service architecture you need to scale AI apps in production.
 
         This workshop is designed to help AI developers and engineers build and scale AI infrastructure. We will guide you through the Pulumi platform with diagrams and a series of labs to help accelerate your AI app
 

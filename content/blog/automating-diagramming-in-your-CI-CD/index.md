@@ -1,7 +1,7 @@
 ---
 title: "Automatic Diagram Generation for Always-Accurate Diagrams"
 h1: "Automatic Diagram Generation for Always-Accurate Diagrams"
-authors: 
+authors:
   - "elisabeth-lichtie"
 tags: ["aws", "diagram", "architecture", "CI/CD", "anthropic", "claude", "github", "actions"]
 meta_desc: "Automate tedious diagramming work in your CI/CD pipelines to maintain always-accurate architecture diagrams."

@@ -9,7 +9,7 @@ menu:
         name: Audit Logs
         parent: administration-security-compliance
         weight: 3
-        
+
 aliases:
 - /docs/administration/security-compliance/audit-logs/
 - /docs/intro/console/collaboration/auditing/

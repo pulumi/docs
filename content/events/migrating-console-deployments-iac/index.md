@@ -36,7 +36,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-01-15T09:00:00-08:00
@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
        As organizations scale their cloud operations, managing infrastructure through manual console deployments becomes increasingly risky and time-consuming. This workshop bridges the gap between click-ops and modern infrastructure automation, providing both technical guidance and business context for adopting Infrastructure as Code (IaC).
-       
+
        Participants will learn how platform engineering practices can accelerate delivery while improving reliability and security. Through hands-on demonstrations using Pulumi, attendees will discover practical strategies for transitioning existing console-created resources to code, establishing repeatable deployment patterns, and building a foundation for scalable infrastructure management. The session combines technical demonstrations with real-world business cases, making it valuable for both technical practitioners and decision-makers looking to modernize their infrastructure practices.
 
     learn:
@@ -60,7 +60,7 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Josh Kodroff 
+        - name: Josh Kodroff
           role: Principal Solutions Architect, Pulumi
           photo: /images/team/josh-kodroff.jpg
         - name: Torian Crane

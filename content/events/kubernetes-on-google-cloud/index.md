@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         In this workshop, you will learn how to deploy a Kubernetes cluster on Google Cloud and run containerized applications on the cluster. The workshop will include a brief introduction to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
-        
+
         This 200-level workshop is designed to help users who have basic familiarity with Pulumi effectively handle real-world use cases. We will guide you through the process with diagrams and a series of labs to help accelerate your cloud projects.
 
     learn:

@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-08-20T12:00:00-04:00
@@ -82,4 +82,4 @@ event_data:
   url: "https://www.pulumi.com/resources/day-2-operations/"
   description: |
     Building an IDP is just the beginning—maintaining it reliably requires robust Day 2 operations. This workshop focuses on the operational aspects that keep your platform running smoothly: detecting infrastructure drift, automating remediation, and providing visibility into platform health. You'll learn to catch issues before they impact developers, ensuring your IDP remains a trusted foundation for your organization's infrastructure.
---- 
+---

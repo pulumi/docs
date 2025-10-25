@@ -26,7 +26,7 @@ social:
     twitter: |
         Your infrastructure components now document themselves.
         Publish to your Pulumi private registry → get instant multi-language API docs.
-        Platform teams, this one's for you ↓ 
+        Platform teams, this one's for you ↓
         [link]
 
     linkedin: |
@@ -72,7 +72,7 @@ When you [publish a component](/docs/idp/get-started/publishing-from-github-acti
 With automatic API documentation, your [private registry](/blog/announcing-pulumi-private-registry/) transforms from a simple package repository into a comprehensive catalog. Developers can:
 
 * Browse available components and immediately understand their purpose and usage
-* See all available configuration options with type information  
+* See all available configuration options with type information
 * Evaluate what infrastructure each component provisions before choosing to adopt it
 
 This dramatically reduces the time from component discovery to successful deployment, accelerating your organization's [infrastructure velocity](/blog/platform-engineering-pillars-2/).

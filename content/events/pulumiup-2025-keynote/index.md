@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         Experience Pulumi's evolution with three game-changing additions to their infrastructure as code ecosystem. This keynote showcases Visual Import for seamless migration, Private Registry for organizing cloud components, and Pulumi IDP—a complete internal developer platform.
-        
+
         Watch demos that illustrate how these tools unite platform teams, security teams, and developers to deliver compliant cloud infrastructure at scale. With 350K+ community members and trusted by companies like NVIDIA and Docker, see why Pulumi is becoming the platform of choice for modern cloud engineering.
 
         For more details, read the [Pulumi IDP announcement](/blog/announcing-pulumi-idp/).

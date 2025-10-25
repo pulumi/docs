@@ -50,7 +50,7 @@ main:
     # Description of the webinar.
     description: |
         In today's cloud-native landscape, organizations struggle with managing infrastructure, securing secrets, and maintaining visibility across their Google Cloud environments. This hands-on workshop demonstrates how modern platform teams can leverage Pulumi's comprehensive suite to address these challenges using familiar programming languages and tools.
-        
+
         Through practical examples and live demonstrations, you'll discover how to automate Google Cloud infrastructure deployment, centralize secrets management, and gain real-time insights into your cloud assets. We'll explore how these capabilities work together to create a more efficient, secure, and observable cloud operations practice.
 
 
@@ -86,7 +86,7 @@ event_data:
   url: "https://www.pulumi.com/events/modernizing-cloud-operations-google-cloud/"
   description: |
     In today's cloud-native landscape, organizations struggle with managing infrastructure, securing secrets, and maintaining visibility across their Google Cloud environments. This hands-on workshop demonstrates how modern platform teams can leverage Pulumi's comprehensive suite to address these challenges using familiar programming languages and tools.
-    
+
     Through practical examples and live demonstrations, you'll discover how to automate Google Cloud infrastructure deployment, centralize secrets management, and gain real-time insights into your cloud assets. We'll explore how these capabilities work together to create a more efficient, secure, and observable cloud operations practice.
 
 ---

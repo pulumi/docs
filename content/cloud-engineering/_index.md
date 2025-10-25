@@ -27,7 +27,7 @@ build:
         - title: General-Purpose Programming Languages
           description: |
             Define infrastructure with general-purpose programming languages like TypeScript/JavaScript, Python, Go, .NET, and Java and use standard constructs like loops
-            and conditionals. This gives you more flexibility and reduces complexity compared to domain-specific languages. You could also use markup languages like YAML as a simple way for consuming complex infrastructure modeled in general-purpose languages. 
+            and conditionals. This gives you more flexibility and reduces complexity compared to domain-specific languages. You could also use markup languages like YAML as a simple way for consuming complex infrastructure modeled in general-purpose languages.
 
         - title: Broad Development Ecosystem
           description: |

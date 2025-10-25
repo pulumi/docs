@@ -19,28 +19,28 @@ tags:
 social:
     twitter: |
         🎯 Precise resource control is here!
-        
+
         Pulumi CLI v3.192.0 adds `pulumi state taint` and `pulumi state untaint` commands.
-        
+
         Mark resources for replacement without changing your code. Perfect for corrupted VMs, expired certs, or stuck Kubernetes objects.
-        
+
         [link]
-    
+
     linkedin: |
         🚀 New in Pulumi CLI v3.192.0: Surgical Infrastructure Replacement
-        
+
         Sometimes the fastest path to healthy infrastructure is a targeted replacement. A VM with a corrupted disk, a certificate that needs regeneration, or a Kubernetes object stuck in a bad state.
-        
+
         Now you can handle these scenarios without refactoring code or editing state files:
-        
+
         ✅ `pulumi state taint <resource-urn>` - Mark for replacement
-        ✅ `pulumi state untaint <resource-urn>` - Cancel the replacement  
+        ✅ `pulumi state untaint <resource-urn>` - Cancel the replacement
         ✅ Normal `pulumi preview` and `pulumi up` workflow
-        
+
         Clean, surgical, predictable. The way infrastructure management should be.
-        
+
         Available now in CLI v3.192.0 → [link]
-        
+
         #InfrastructureAsCode #DevOps #Pulumi
 
 ---

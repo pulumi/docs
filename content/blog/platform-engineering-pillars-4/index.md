@@ -109,8 +109,8 @@ One of the fastest ways to improve **time to first commit** is to standardize lo
 
 Your service templates provide the ideal mechanism for simplifying how quickly developers can get projects running locally. By embedding standardized local-development tooling into these templates, you ensure they're available consistently across your service catalog. Good templates typically contain:
 
-- **A preconfigured, containerized environments:** Using Dev Containers, Docker Compose, or similar tools lets developers launch an environment that closely resembles production with minimal friction, completely avoiding dependency drift or local environment inconsistencies.  
-- **Simple, standardized command runner:** Makefiles, just scripts, package.json scripts—whatever works as they're consistently documented and easy to run commands such as `make build`, `make test`, or `make lint`. Teams might diverge on preferred tooling over time; if so, simply record clearly in the project's readme (and thus in your service catalog) exactly what's needed.  
+- **A preconfigured, containerized environments:** Using Dev Containers, Docker Compose, or similar tools lets developers launch an environment that closely resembles production with minimal friction, completely avoiding dependency drift or local environment inconsistencies.
+- **Simple, standardized command runner:** Makefiles, just scripts, package.json scripts—whatever works as they're consistently documented and easy to run commands such as `make build`, `make test`, or `make lint`. Teams might diverge on preferred tooling over time; if so, simply record clearly in the project's readme (and thus in your service catalog) exactly what's needed.
 - **Built-in documentation:** Each service template includes clear instructions in a README outlining step-by-step processes for setup, running tests, and other everyday developer tasks.
 
 With these pieces fully integrated into your catalog and templates, you significantly reduce friction and speed up development cycles, moving you meaningfully closer to improving your core developer-experience metrics.
@@ -123,13 +123,13 @@ Experienced developers cite unreliable or slow pipelines as major productivity k
 
 A strong **internal developer platform** integrates fast, stable, and predictable CI/CD processes:
 
-- **Stable, Fast Feedback:**  
+- **Stable, Fast Feedback:**
   Every new service comes pre-configured with build acceleration strategies like intelligent caching (Gradle, Bazel, Docker layers) and automatic parallel test execution. Stable and speedy pipelines help teams iterate quickly and confidently.
 
-- **Ephemeral, Self-service Environments:**  
+- **Ephemeral, Self-service Environments:**
   Instead of battling shared staging environments – which get blocked by other teams— developers spin up short-lived testing environments directly from pull requests. Need to test your payment-service changes against the latest user-authentication service? Create a dedicated, temporary environment on-the-fly, validate interactions, then shut it down automatically when finished.
 
-- **Test Reliability:**  
+- **Test Reliability:**
   Strictly enforce policies to quarantine flaky tests, quickly escalate notifications to responsible developers, and provide clear paths for fixing instabilities. Proactive flakiness management ensures credibility and reliability for test pipelines over time.
 
 Reliable CI/CD pipelines protect developer focus, reduce cognitive load, maintain **developer velocity**, and prevent wasted time, increasing **developer productivity**.

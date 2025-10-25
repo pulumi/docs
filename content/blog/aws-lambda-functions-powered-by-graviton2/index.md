@@ -156,7 +156,7 @@ class LambdaStack : Stack
         {
             Role = role.Name,
             PolicyArn = "arn:aws:iam::aws:policy/AWSLambda_FullAccess",
-        });  
+        });
     }
 }
 ```

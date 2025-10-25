@@ -134,7 +134,7 @@ The resolved value of the above environment at `open` time would be:
 Compare this to the resolved value of the `myapp/dev` environment example from the explicit imports section, where each imported environment is merged into the current environment:
 
 ```json
-{  
+{
   "stripe": {
     "apiURL": "https://api.stripe.com",
     "apiKey": "sk_XemWAl12i4x3hZhp4vBKDEXAMPLE"

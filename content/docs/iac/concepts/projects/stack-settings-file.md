@@ -41,7 +41,7 @@ The stack settings file must be named exactly `Pulumi.<stack-name>.yaml` where `
 The `secretsprovider` attribute specifies which secrets provider to use for encrypting sensitive configuration values. Common values include:
 
 - `default`: Uses the Pulumi Cloud's default encryption
-- `passphrase`: Uses a local passphrase for encryption  
+- `passphrase`: Uses a local passphrase for encryption
 - `awskms://alias/my-key`: Uses AWS KMS with the specified key
 - `azurekeyvault://vault-name/key-name`: Uses Azure Key Vault
 - `gcpkms://projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-key`: Uses Google Cloud KMS
@@ -112,7 +112,7 @@ config:
 secretsprovider: passphrase
 encryptionsalt: v1:BNJOCpOPGV4=:v1:9jpeMm7HcnK+6+Wt:gcfklR9vOw==
 config:
-  myproject:name: my-application  
+  myproject:name: my-application
   myproject:api-key:
     secure: v1:LToJ+3kqSG30mW3P:6F1Gm7QFBUwKOBPBz[...encrypted...]
   aws:region: us-west-2

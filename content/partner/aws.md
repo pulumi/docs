@@ -94,7 +94,7 @@ automation_api:
     cta: Learn More About Automation API
     link: /blog/automation-api/
 
-crosswalk: 
+crosswalk:
     header: Use Well-Architected Practices
     body: Pulumi Crosswalk for AWS is a collection of libraries that use automatic well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure. Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
     points:

@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-07-30T12:00:00-04:00
@@ -83,4 +83,4 @@ event_data:
   url: "https://www.pulumi.com/resources/idp-strategy/"
   description: |
       Building an Internal Developer Platform requires more than just tools—it demands a strategic approach that balances developer velocity with operational governance. This foundational workshop explores the essential planning, organizational alignment, and architectural decisions needed to create successful self-service infrastructure. You'll learn how to assess your current state, plan golden paths, and create an IDP strategy that scales with your organization while maintaining security and compliance standards.
---- 
+---

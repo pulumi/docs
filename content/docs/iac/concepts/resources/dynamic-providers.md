@@ -885,7 +885,7 @@ const PulumiEnvironmentProvider = {
 
   //*** CREATE ***//
   async create(inputs) {
-  
+
     // It is important to set up the headers in the action as opposed to outside of the provider so that the environment variable reference is
     // stored in state instead of the actual credential value.
     const headers = {
@@ -974,7 +974,7 @@ const PulumiEnvironmentProvider: pulumi.dynamic.ResourceProvider = {
 
   //*** CREATE ***//
   async create(inputs: PulumiEnvironmentProviderArgs): Promise<CreateResult> {
-  
+
     // Use environment variable for authentication.
     // This keeps the actual PULUMI_ACCESS_TOKEN value out of state and instead only the env variable reference is kept in state.
     // Therefore, if the token is changed between the create and the destroy, the destroy will use the new creds.

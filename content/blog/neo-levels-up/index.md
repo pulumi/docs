@@ -32,8 +32,8 @@ The same action has different risks in different contexts. Building a new dev en
 
 Operating Modes let you adjust autonomy based on context:
 
-* **Review Mode**: You approve the task plan, preview, and PR. You see everything before it happens.  
-* **Balanced Mode**: Neo handles planning and previews. You approve mutating operations, such as updates or destroys. Less friction, control where it matters.  
+* **Review Mode**: You approve the task plan, preview, and PR. You see everything before it happens.
+* **Balanced Mode**: Neo handles planning and previews. You approve mutating operations, such as updates or destroys. Less friction, control where it matters.
 * **Auto Mode**: Neo runs without stopping. For when you need speed and trust the outcome.
 
 You can use Review Mode when Neo is updating production infrastructure. Use Balanced Mode when deploying application updates where you want to verify destructive changes but trust routine operations. Switch to Auto Mode when spinning up temporary dev environments for testing. You pick the mode that matches your situation. The same agent, flexible levels of autonomy.
@@ -56,6 +56,6 @@ Neo now runs on Anthropic's Sonnet 4.5 by default. Sonnet 4.5 delivers better pe
 
 **Ready to try these features?**
 
-* [Sign in to Pulumi Cloud](https://app.pulumi.com/signin) and start a Neo task  
-* [Read the Neo documentation](/docs/ai/) for detailed guides  
+* [Sign in to Pulumi Cloud](https://app.pulumi.com/signin) and start a Neo task
+* [Read the Neo documentation](/docs/ai/) for detailed guides
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features

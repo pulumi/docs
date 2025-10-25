@@ -162,7 +162,7 @@ application:
   scaling:
     min: 2
     max: 10
-  
+
 integrations:
   - module: kafka
     topics:
@@ -171,12 +171,12 @@ integrations:
       - name: processed-orders
         partitions: 3
     consumer_group: order-processors
-  
+
   - module: postgresql
     database: orders_db
     size: medium
     backup: enabled
-  
+
   - module: redis
     size: small
     ttl: 3600

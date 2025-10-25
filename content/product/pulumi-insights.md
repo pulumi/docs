@@ -17,7 +17,7 @@ aliases:
 
 preview:
   header:  Pulumi Neo just got smarter about infrastructure policy automation
-  description: Join us on November 5 to see how Neo helps you get clean and stay clean - automatically. Watch it in action. Live demo + Q&A.  
+  description: Join us on November 5 to see how Neo helps you get clean and stay clean - automatically. Watch it in action. Live demo + Q&A.
   hubspotID: 4031229e-1370-4118-9379-ee2be1fd64fd
   videoID: mwcrOTEf1EQ?si=Fx77RxM-uCjJLN-6
 
@@ -25,7 +25,7 @@ overview:
     header: Complete visibility and control for your cloud
     title: See everything. Control everything. Ship with confidence.
     body: |
-      Get complete visibility into your cloud infrastructure - whether created with Pulumi IaC, Terraform, CloudFormation, or the console. Enforce policies as code, ensure compliance, and catch issues before they reach production. 
+      Get complete visibility into your cloud infrastructure - whether created with Pulumi IaC, Terraform, CloudFormation, or the console. Enforce policies as code, ensure compliance, and catch issues before they reach production.
     items:
         - title: Policy as Code
           icon: shield
@@ -43,7 +43,7 @@ overview:
           icon: global
           icon_color: blue
           description: |
-            See every resource across AWS, Azure, GCP, and thousands of providers. Track relationships, monitor drift, identify unused resources. 
+            See every resource across AWS, Azure, GCP, and thousands of providers. Track relationships, monitor drift, identify unused resources.
 
 workflow:
   description: |
@@ -81,7 +81,7 @@ governance:
     subtitle: Policy enforcement that doesn't slow you down
     image: https://www.pulumi.com/uploads/pulumi-insights-copilot.gif
     description: |
-        Shift security and compliance left with policy as code. Define guardrails in TypeScript or Python, enforce them at deployment time, and automatically remediate violations. Integrate with your existing compliance frameworks and get detailed audit trails for every policy decision. 
+        Shift security and compliance left with policy as code. Define guardrails in TypeScript or Python, enforce them at deployment time, and automatically remediate violations. Integrate with your existing compliance frameworks and get detailed audit trails for every policy decision.
 
 customer_quotes:
   alkira:

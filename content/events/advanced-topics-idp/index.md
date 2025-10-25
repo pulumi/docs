@@ -35,7 +35,7 @@ main:
     event_type: workshop # workshop | event
 
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2025-09-17T12:00:00-04:00
@@ -78,4 +78,4 @@ event_data:
   url: "https://www.pulumi.com/resources/advanced-topics-idp/"
   description: |
         Many organizations have significant investments in legacy IaC platforms like Terraform but want to modernize their approach to include Internal Developer Platforms. This workshop shows how to build next-generation IDPs with Pulumi while leveraging existing Terraform infrastructure and team knowledge. You'll learn interoperability patterns, and how Pulumi creates a clear path from static infrastructure as code to dynamic, self-service platforms.
---- 
+---

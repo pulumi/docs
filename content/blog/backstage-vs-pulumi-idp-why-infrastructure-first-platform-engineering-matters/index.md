@@ -67,17 +67,17 @@ But without a strong [infrastructure foundation](/what-is/what-is-infrastructure
 
 Platform teams consistently make four critical mistakes:
 
-1. **Neglecting Infrastructure Foundations**  
+1. **Neglecting Infrastructure Foundations**
    Over-focusing on the developer portal experience while letting infrastructure governance and scalability lag behind.
 
-2. **Ignoring Cost Efficiency**  
-   Prioritizing productivity at the expense of [cloud cost management](/blog/finops-with-pulumi).  
+2. **Ignoring Cost Efficiency**
+   Prioritizing productivity at the expense of [cloud cost management](/blog/finops-with-pulumi).
    Example: One company considered giving every developer their own cluster, a scaling nightmare both technically and financially.
 
-3. **Treating Security & Governance as Add-Ons**  
+3. **Treating Security & Governance as Add-Ons**
    Bolting on compliance after launch leads to constant firefighting and [security debt](/blog/devsecops-strategy-security-automation-tivity-health).
 
-4. **Building for Yesterday's Architecture**  
+4. **Building for Yesterday's Architecture**
    Designing general-purpose platforms that can't keep up with [Kubernetes-native workloads](/docs/iac/clouds/kubernetes).
 
 ## Portal-first vs infrastructure-first platform engineering

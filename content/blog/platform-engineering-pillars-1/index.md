@@ -13,7 +13,7 @@ series: platform-engineering-pillars
 social:
     twitter: >
         Introducing our new series on Platform Engineering Pillars! Learn how to transform infrastructure chaos and developer friction into a streamlined development experience. Dive into the 6 essential capabilities every successful platform needs.
-    linkedin: > 
+    linkedin: >
         Platform Engineering is transforming how organizations build and deliver software. But what makes a successful developer platform?
 
         In this new series, we explore the 6 essential pillars of Platform Engineering - from infrastructure automation to governance at scale. Learn how to overcome common challenges and create a platform that truly empowers developers.

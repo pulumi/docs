@@ -53,7 +53,7 @@ main:
 
     learn:
         - How to get started with NoSQL using Redis Cloud.
-        - Defining and deploying Redis Cloud resources using popular programming languages 
+        - Defining and deploying Redis Cloud resources using popular programming languages
         - How to use Pulumi and Redis together.
 
     # The webinar presenters

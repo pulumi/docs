@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: DevOps Days Dallas
 meta_desc: Pulumi is proud to be a Silver sponsor of DevOps Days Dallas at the Plano Events Center.
-meta_image: 
+meta_image:
 
 # A featured webinar will display first in the list.
 featured: false
