@@ -69,6 +69,10 @@
       {{/* Case studies get Article schema */}}
       {{ $entity = partial "schema/collectors/article-entity.html" . }}
 
+    {{ else if eq .Section "guides" }}
+      {{/* Guide pages get HowTo schema with FAQ questions */}}
+      {{ $entity = partial "schema/collectors/guides-entity.html" . }}
+
     {{ else if .IsHome }}
       {{/* Homepage doesn't have a main content entity, handled separately in graph-builder */}}
       {{ $entity = dict }}
