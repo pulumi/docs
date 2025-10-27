@@ -23,7 +23,7 @@ key_features_above:
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-engineering"
+            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
           features:
               - title: Code faster
                 description: |
@@ -140,7 +140,7 @@ key_features:
                   kubeconfig: ${cluster.kubeconfig}
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-engineering"
+            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
           features:
               - title: Native cloud providers
                 description: |
@@ -159,7 +159,7 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-engineering"
+            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
           features:
               - title: Version and review
                 description: |
@@ -172,7 +172,7 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Open source. Enterprise ready.
+    title: Enterprise ready.
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
         by an active community. We maintain a public roadmap and welcome feedback and contributions.
@@ -195,7 +195,7 @@ key_features_below:
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           button:
             text: "Try Pulumi Cloud for FREE"
-            link: "https://app.pulumi.com/signup?utm_source=gads-platform-engineering"
+            link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
           features:
               - title: Pulumi IaC
                 description: |
