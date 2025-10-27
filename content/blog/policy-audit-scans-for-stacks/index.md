@@ -1,6 +1,6 @@
 ---
 title: "Introducing Audit Policy Scans for Pulumi Stacks"
-date: 2025-10-22T00:04:00
+date: 2025-11-05T00:04:00
 authors:
   - levi-blackstone
   - arun-loganathan
