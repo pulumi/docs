@@ -16,6 +16,10 @@ aliases:
 - /docs/insights/concepts/how-insights-works/
 ---
 
+{{< notes type="info" >}}
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 Pulumi Insights Discovery enables organizations to gain complete visibility into their cloud infrastructure by scanning cloud provider accounts and building a comprehensive inventory of all resources—regardless of how those resources were created or are currently managed.
 
 ## How discovery works

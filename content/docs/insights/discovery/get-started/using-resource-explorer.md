@@ -14,6 +14,10 @@ aliases:
   - /docs/insights/get-started/using-resource-explorer/
 ---
 
+{{< notes type="info" >}}
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 [Pulumi Resource Explorer](/docs/insights/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
 
 ![Insights Account Discovery Scan](/docs/insights/assets/insights-resource-explorer.png)

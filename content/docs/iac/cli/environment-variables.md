@@ -13,6 +13,10 @@ aliases:
     - /docs/cli/environment-variables/
 ---
 
+{{< notes type="info" >}}
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 <dl class="tabular tabular-5-col break-words">
     <dt>
         <span class="font-mono">

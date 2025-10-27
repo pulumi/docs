@@ -5,7 +5,9 @@ aliases:
 meta_desc: "Preview changes to your infrastructure before deploying. See what will be created, updated, or deleted."
 ---
 
-
+{{< notes type="info" >}}
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
 
 Show a preview of updates to a stack's resources
 
