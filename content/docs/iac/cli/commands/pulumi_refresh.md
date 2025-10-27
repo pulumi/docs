@@ -5,7 +5,9 @@ aliases:
 meta_desc: "Learn about the pulumi refresh command."
 ---
 
-
+{{< notes type="info" >}}
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
 
 Refresh the resources in a stack
 

@@ -42,11 +42,16 @@ tags:
 
 social:
     twitter: "🎉 Pulumi Copilot is now available in Visual Studio Code! Offload tasks to Pulumi Copilot right in your IDE by typing @pulumi in Copilot Chat. Build, deploy, and manage cloud infrastructure more efficiently than ever."
-    linkedin: "Exciting news! Pulumi Copilot is now available in Visual Studio Code Copilot, bringing AI-powered cloud infrastructure management directly to your IDE. Simply install the Pulumi extension and type @pulumi in Copilot Chat to access Pulumi's cloud intelligence and streamline your infrastructure workflows. 
-    
+    linkedin: "Exciting news! Pulumi Copilot is now available in Visual Studio Code Copilot, bringing AI-powered cloud infrastructure management directly to your IDE. Simply install the Pulumi extension and type @pulumi in Copilot Chat to access Pulumi's cloud intelligence and streamline your infrastructure workflows.
+
     Learn how Pulumi Copilot is revolutionizing cloud development: [Link]"
 
 ---
+
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 Programming languages offer dozens of advantages for writing Infrastructure as Code (IaC). One of them is that Large Language Models are  effective at using general-purpose programming languages, thanks to the vast amount of high-quality training data available. Building on this advantage, we introduced Pulumi AI and Pulumi Copilot last year to enhance Infrastructure-as-Code development with generative AI capabilities. These tools have significantly streamlined infrastructure deployment for tens of thousands of developers.
 
 Today, we are thrilled to announce that Pulumi Copilot is now available directly within [Pulumi Copilot Chat Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.pulumi-vscode-copilot). By simply typing @pulumi in Copilot Chat, developers can now access the power of Pulumi Copilot right within their IDE, saving them time on writing IaC and getting infrastructure deployed.

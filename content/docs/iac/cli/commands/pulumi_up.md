@@ -5,7 +5,9 @@ aliases:
 meta_desc: "Create or update resources in a stack. Deploy your infrastructure changes to the cloud."
 ---
 
-
+{{< notes type="info" >}}
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
 
 Create or update the resources in a stack
 
