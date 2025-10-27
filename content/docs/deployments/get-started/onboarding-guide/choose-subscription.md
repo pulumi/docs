@@ -12,7 +12,7 @@ menu:
 ---
 
 {{< notes type="info" >}}
-**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+Pulumi Copilot is now Pulumi Neo. [Learn about Neo's capabilities →](/docs/ai/)
 {{< /notes >}}
 
 Setting up your Pulumi Cloud account will lay the foundation for onboarding your team and enabling collaboration. Understanding your deployment options, subscription tiers, and support needs will help you choose the right approach for your organization.

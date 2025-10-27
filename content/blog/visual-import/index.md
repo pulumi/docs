@@ -22,7 +22,7 @@ aliases:
 ---
 
 {{< notes type="info" >}}
-**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+Note: This post references Pulumi Copilot, now known as Pulumi Neo.
 {{< /notes >}}
 
 Pulumi is excited to announce the release of **Visual Import**, a new feature that transforms the way platform teams onboard existing cloud infrastructure into Pulumi. With Visual Import, you can discover unmanaged cloud resources across your organization, organize them into logical units, and instantly generate high-quality Pulumi code—with AI enhancements built in.

@@ -49,7 +49,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+Note: This post references Pulumi Copilot, now known as Pulumi Neo.
 {{< /notes >}}
 
 Programming languages offer dozens of advantages for writing Infrastructure as Code (IaC). One of them is that Large Language Models are  effective at using general-purpose programming languages, thanks to the vast amount of high-quality training data available. Building on this advantage, we introduced Pulumi AI and Pulumi Copilot last year to enhance Infrastructure-as-Code development with generative AI capabilities. These tools have significantly streamlined infrastructure deployment for tens of thousands of developers.

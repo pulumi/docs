@@ -10,7 +10,7 @@ tags:
 ---
 
 {{< notes type="info" >}}
-**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+Note: This post references Pulumi Copilot, now known as Pulumi Neo.
 {{< /notes >}}
 
 [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) has revolutionized how cloud resources are managed, allowing for more efficient, scalable, and repeatable deployments. We designed [Pulumi IaC](/product/infrastructure-as-code/) to let you program cloud infrastructure using familiar programming languages like TypeScript, JavaScript, Python, Go, .NET, Java, and YAML. This approach not only simplifies the process but also integrates seamlessly with existing development tools and ecosystems (e.g., IDEs, standard unit test frameworks, integration test). You can define infrastructure with code, often in just one line, for serverless, Kubernetes, AI/ML, databases, and more. You can also preview changes before deploying unlike many other IaC solutions. Pulumi IaC is fully open source with a [public roadmap](https://github.com/orgs/pulumi/projects/44/). We value working with the community to shape the product through feedback and contributions.

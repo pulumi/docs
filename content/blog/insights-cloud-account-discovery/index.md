@@ -57,7 +57,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+Note: This post references Pulumi Copilot, now known as Pulumi Neo.
 {{< /notes >}}
 
 Enterprise cloud infrastructures are complex environments that are evolved over time and made up of thousands of different kinds of resources. Enabling customers to wrap their arms around this complexity and get a complete understanding of the scope and structure is the goal of the Pulumi Insights 2.0 product.

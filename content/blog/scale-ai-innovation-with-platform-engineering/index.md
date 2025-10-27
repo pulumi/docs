@@ -29,7 +29,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+Note: This post references Pulumi Copilot, now known as Pulumi Neo.
 {{< /notes >}}
 
 As leadership teams continue to bet big on AI, the tradeoffs between how much to invest and when to expect a reasonable return are ever-present. While exploring scenarios for accelerating this return on investment, organizations are discovering some unique ways to accelerate their AI payback with Platform Engineering.

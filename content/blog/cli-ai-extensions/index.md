@@ -19,7 +19,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+Note: This post references Pulumi Copilot, now known as Pulumi Neo.
 {{< /notes >}}
 
 We're excited to announce the new AI capabilities for Pulumi CLI powered by Pulumi Copilot that translate complex infrastructure changes into clear, human-readable explanations and help resolve deployment errors with actionable guidance. Enable these preview features with the `--copilot` flag.

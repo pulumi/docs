@@ -46,7 +46,7 @@ sections:
 ---
 
 {{< notes type="info" >}}
-**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+Pulumi Copilot is now Pulumi Neo. [Learn about Neo's capabilities →](/docs/ai/)
 {{< /notes >}}
 
 ## About Unity

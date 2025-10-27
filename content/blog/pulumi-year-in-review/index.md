@@ -57,7 +57,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-**Note:** Pulumi Copilot has evolved into [Pulumi Neo](/product/neo/), your AI platform engineer. Some features or functionality described here may differ from the latest version.
+Note: This post references Pulumi Copilot, now known as Pulumi Neo.
 {{< /notes >}}
 
 It's the end of 2024, and like everyone, we're counting down until 2025 while looking back at our year. We've had a very exciting year, from unveiling a bold new vision for Pulumi to delivering cutting-edge updates across our Pulumi Cloud.
