@@ -17,7 +17,7 @@ aliases:
 
 preview:
   header:  Pulumi Neo just got smarter about infrastructure policy automation
-  description: Join us on November 5 at 10:00 AM PT / 18:00 (UTC +0) for Pulumi Policies: Get Clean and Stay Clean Automatically. Watch it in action. Live demo + Q&A.  
+  description: Join us on November 5 at 10:00 AM PT | 18:00 UTC for Pulumi Policies: Get Clean and Stay Clean Automatically. Watch it in action. Live demo + Q&A.
   hubspotID: 4031229e-1370-4118-9379-ee2be1fd64fd
   videoID: mwcrOTEf1EQ?si=Fx77RxM-uCjJLN-6
 
