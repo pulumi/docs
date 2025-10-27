@@ -20,6 +20,12 @@ If you need to access and use multiple outputs together, the `all` function acts
 
 This can be used to compute an entirely new output value, such as creating a new string by adding or concatenating outputs from two different resources together, or by creating a new data structure that uses their values. Just like with `apply`, the result of `all` is itself an Output<T>.
 
+{{< notes type="warning" >}}
+Creating resources inside an `all` callback should be avoided whenever possible. Resources created inside `all` will not appear in `pulumi preview` unless all output values are already known. This means the preview output may not match the actual changes when `pulumi up` is run, making it difficult to understand what changes will be made to your infrastructure.
+
+If you need to create a resource that depends on output values, pass the outputs directly as inputs to the resource instead of using `all`. Pulumi will automatically handle the dependency tracking and ensure resources are created in the correct order.
+{{< /notes >}}
+
 ## Creating a new string
 
 Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/concepts/inputs-outputs/apply/).
@@ -74,7 +80,7 @@ let connectionString = pulumi.all([sqlServer.name, database.name])
 
 {{% choosable language python %}}
 
-In python, you can pass in unnamed arguments to `Output.all` to create an Output list, for example:
+In Python, you can pass in unnamed arguments to `Output.all` to create an Output list, for example:
 
 ```python
 from pulumi import Output
@@ -139,7 +145,7 @@ var connectionString3 = Output.Tuple(sqlServer.name, database.name).Apply(t =>
 
 // When all the input values have the same type, Output.all can be used
 var connectionString = Output.all(sqlServer.name(), database.name())
-        .applyValue(t -> String.format("Server=tcp:%s.database.windows.net;initial catalog=%s;", t.get(0), t.get(1));
+        .applyValue(t -> String.format("Server=tcp:%s.database.windows.net;initial catalog=%s;", t.get(0), t.get(1)));
 
 // For more flexibility, 'Output.tuple' is used so that each unwrapped value will preserve their distinct type.
 var connectionString2 = Output.tuple(sqlServer.name, database.name)
@@ -264,7 +270,7 @@ connectionDetails := pulumi.All(sqlServer.IpAddress, database.Port).ApplyT(
     	ipAddress := args[0].(string)
 		port := args[1].(string)
     	return map[string]interface{}{
-    		"server_ip":     ipAddress),
+    		"server_ip":     ipAddress,
     		"database_port": port,
     	}
     }
@@ -334,9 +340,3 @@ This example is not applicable in Pulumi YAML.
 {{% /choosable %}}
 
 {{< /chooser >}}
-
-## Creating a JSON object
-
-You can also [create JSON objects](/docs/concepts/inputs-outputs/apply/#outputs-and-json) using multiple output values in Pulumi. Doing so requires the use of `apply` or one of Pulumi's [JSON-specific helpers](/docs/concepts/inputs-outputs/apply/#converting-outputs-to-json).
-
-{{< example-program path="aws-s3websitebucket-oai-bucketpolicy" >}}
