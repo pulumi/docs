@@ -48,6 +48,8 @@ generate:
 	NOBUILD=true ./scripts/run_typedoc.sh
 	./scripts/generate_python_docs.sh
 	PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/cli/commands
+	@echo -e "\033[0;32mAdding canonical tags to static HTML files...\033[0m"
+	node ./scripts/add-canonical-tags.js
 
 .PHONY: build
 build:
