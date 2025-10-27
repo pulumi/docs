@@ -13,7 +13,7 @@ tags:
 ---
 
 {{< notes type="info" >}}
-Note: This post references Pulumi Copilot, now known as Pulumi Neo.
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 By this point in 2025, we've all heard about "vibe coding": the AI-fueled craze that enables even my 2 year old nephew to build new applications by simply giving into the vibes, embracing exponentials, and forgetting that the code even exists. Vibe coding enables anybody who can type on a keyboard or speak to a computer to build IPO-worthy software businesses overnight. Today we are excited to introduce vibe coding's similarly revolutionary close cousin: **"vibe clouding"**. By giving into the vibes, you can now spin up cloud infrastructure anywhere and everywhere, all by just saying stuff, copy and pasting stuff, and vibing. And even better, it _mostly_ works! Read on to learn more, or just watch the video below.

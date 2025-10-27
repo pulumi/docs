@@ -22,7 +22,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-Note: This post references Pulumi Copilot, now known as Pulumi Neo.
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 We built Pulumi Copilot to automate a broad spectrum of cloud management activities using the power of LLMs. Since its initial release earlier this year, hundreds of customers have used Pulumi Copilot to understand and manage cloud infrastructure more effectively and securely, and it is only getting better by the day.

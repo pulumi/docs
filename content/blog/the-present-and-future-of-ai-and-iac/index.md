@@ -12,7 +12,7 @@ tags:
 ---
 
 {{< notes type="info" >}}
-Note: This post references Pulumi Copilot, now known as Pulumi Neo.
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 AI is impacting almost every industry today, and for good reason - we are seeing fundamentally new experiences being made possible across a wide variety of products, and a set of new AI capabilities that promise even more incredible change in the near future.

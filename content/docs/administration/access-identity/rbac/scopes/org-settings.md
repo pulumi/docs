@@ -17,7 +17,7 @@ aliases:
 ---
 
 {{< notes type="info" >}}
-Pulumi Copilot is now Pulumi Neo. [Learn about Neo's capabilities →](/docs/ai/)
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../../permissions#entity-types) and group.

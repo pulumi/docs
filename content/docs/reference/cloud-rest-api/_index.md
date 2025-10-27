@@ -17,7 +17,7 @@ aliases:
 ---
 
 {{< notes type="info" >}}
-Pulumi Copilot is now Pulumi Neo. [Learn about Neo's capabilities →](/docs/ai/)
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 The Pulumi Cloud REST API allows you to automate and integrate with Pulumi Cloud programmatically. The API is used by the Pulumi CLI to interact with Pulumi Cloud, but it's also available for users to create their own custom automation and integrations.

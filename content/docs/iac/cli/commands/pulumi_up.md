@@ -6,7 +6,7 @@ meta_desc: "Create or update resources in a stack. Deploy your infrastructure ch
 ---
 
 {{< notes type="info" >}}
-Pulumi Copilot is now Pulumi Neo. [Learn about Neo's capabilities →](/docs/ai/)
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 Create or update the resources in a stack

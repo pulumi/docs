@@ -13,7 +13,7 @@ tags:
 ---
 
 {{< notes type="info" >}}
-Note: This post references Pulumi Copilot, now known as Pulumi Neo.
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 What an incredible two months at Pulumi! From the revolutionary AI-powered Pulumi Copilot to robust infrastructure lifecycle management, enhanced Pulumi ESC with versioning and SDKs, and a brand-new Docker Build provider, this release cycle is packed with high-impact features delivered at an unprecedented pace. Ready to see all the details? We've got a lot to cover, so let's jump right into the highlights of this action-packed release.

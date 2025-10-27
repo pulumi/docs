@@ -6,7 +6,7 @@ meta_desc: "Preview changes to your infrastructure before deploying. See what wi
 ---
 
 {{< notes type="info" >}}
-Pulumi Copilot is now Pulumi Neo. [Learn about Neo's capabilities →](/docs/ai/)
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 Show a preview of updates to a stack's resources

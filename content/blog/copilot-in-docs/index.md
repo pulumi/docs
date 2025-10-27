@@ -17,7 +17,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-Note: This post references Pulumi Copilot, now known as Pulumi Neo.
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 [Pulumi Copilot](/docs/pulumi-cloud/copilot/) has been making our customers' day-to-day tasks easier since its release, and today we’re excited to expand its capabilities—Pulumi Copilot is now available across Pulumi Documentation and pulumi.com, and comes equipped with a powerful new Documentation Skill!

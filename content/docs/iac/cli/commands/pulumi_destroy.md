@@ -6,7 +6,7 @@ meta_desc: "Delete all resources in a stack. Safely tear down your cloud infrast
 ---
 
 {{< notes type="info" >}}
-Pulumi Copilot is now Pulumi Neo. [Learn about Neo's capabilities →](/docs/ai/)
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
 Destroy all existing resources in the stack
