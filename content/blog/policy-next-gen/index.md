@@ -1,15 +1,14 @@
---- 
-title: "Announcing the Next Generation of Pulumi Policies: AI-Accelerated Governance for the Cloud"
-date: 2025-10-22T8:59:00-00:00
+---
+title: "Announcing Neo Powered Compliance Remediation and the Next Generation of Pulumi Policies"
 authors: 
-- craig-symonds
-- tyler-dunkel
+- craig-symonds  
+- tyler-dunkel  
 - arun-loganathan
-meta_desc: "Launching the next generation of Pulumi Governance, powered by Pulumi Policies. Turn governance from a blocker into a business accelerator." 
+date: 2025-10-22T00:05:00
+meta_desc: "Launching the governance lifecycle: AI-powered remediation, pre-built compliance packs, continuous auditing, and a new Policy Findings hub."
 allow_long_title: true
-meta_image: "meta.png" 
-tags: 
-- pulumi-service
+meta_image: "meta.png"
+tags:
 - policy-as-code
 - features
 - compliance
@@ -17,64 +16,77 @@ tags:
 - pulumi-neo
 - ai
 - platform-engineering
---- 
+---
 
-The era of AI-accelerated development is here. AI coding assistants show 55% faster task completion in controlled studios [(GitHub/Accenture enterprise study, 2024)](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-in-the-enterprise-with-accenture/) and halving merge times. But this incredible velocity has created a paradox: platform teams, the very people meant to enable this speed, are being overwhelmed. Every line of code shipped faster creates new demands for infrastructure, security, and compliance. Traditional, manual governance has become a velocity trap—a bottleneck that stifles the very innovation it's meant to protect.
+The era of AI-accelerated development has created a paradox: the faster developers move, the bigger the governance challenge becomes. For years, security and platform teams have worked to "shift left," but the tools available have been incomplete. Most focus on detection, which is necessary but not sufficient. They identify thousands of policy violations across an organization's infrastructure but leave teams with an overwhelming backlog and no scalable way to remediate it. This creates a persistent gap between finding a problem and fixing it. The result is an impossible choice between development velocity and organizational control, forcing leadership to slow down innovation to manage risk.
 
-For the last couple of years, engineering leaders have faced a false choice: move fast with AI and accept the risk, or lock down the platform and sacrifice speed. Today, we end that compromise.
-
-We are thrilled to announce Pulumi Governance - our comprehensive platform capability powered by the **next generation of Pulumi Policies**. This is not just an update; it's a new paradigm for cloud governance. We’re moving beyond reactive enforcement to proactive enablement, with AI-accelerated guardrails designed to scale *with* developer velocity, not restrict it. As you build faster with AI, you can now govern smarter, safer, and more efficiently.
+Today, we end that compromise.
 
 <!--more-->
 
-## The Governance Crisis in the Age of AI
+We are thrilled to announce the next generation of Pulumi Policies, a comprehensive governance solution that moves beyond detection to deliver AI-powered remediation at scale. We’re introducing a new lifecycle to secure your cloud: first, **Get Clean** by using AI to fix your existing policy violations. Second, **Stay Clean** by using policy as a universal guardrail that makes AI-driven development not just fast, but fundamentally safe. These are not strictly sequential steps; you can begin enforcing "Stay Clean" policies for all new infrastructure while you simultaneously work on the "Get Clean" process for your existing footprint.
 
-As we discussed when we [introduced Pulumi Neo](/blog/meet-neo-your-newest-platform-engineer/), the success of developer AI has become a critical challenge for platform teams. They are caught between the relentless pace of development and the absolute need for control. This leads to unwinnable situations:
+Watch our Launch Video:
 
-* **Platform Bottlenecks:** 45% of platform teams report they can't even measure their governance effectiveness [(State of Platform Engineering Report 2024}](https://platformengineering.org/blog/takeaways-from-state-of-platform-engineering-2024). Lacking the right tools, they struggle to create the "golden paths" that developers actually want to use, leading to slow, manual review cycles that kill productivity.
-* **Reactive Security Postures:** Security teams are drowning in alerts from CSPM tools that only find misconfigurations *after* deployment. It's a constant cycle of detection and remediation that leaves the organization perpetually exposed.
-* **Innovation vs. Risk Trade-off:** 68% of CIOs cite AI risks as a major concern. Without a way to embed governance directly into the AI-driven workflow, leadership is forced to slow down innovation to manage risk.
+**Add a link to the Youtube video**
 
-## The Pulumi Difference: Golden paths with real code guardrails
+## Part 1: Get Clean - From Thousands of Issues to a Compliance State
 
-Unlike restrictive DSLs or complex YAML, Pulumi Policies uses general-purpose programming languages to create golden paths with guardrails. Using languages like TypeScript and Python is a fundamental advantage that provides unmatched power and flexibility, enabling you to express complex, nuanced rules that accurately reflect your business logic. This approach enables you to:
+The first step to a secure cloud is tackling the mountain of existing misconfigurations spread across your environments.
 
-* **Use conditional logic** to create sophisticated policies that can't be expressed in simple configuration files.
-* **Build reusable functions and abstractions** to create a shared, version-controlled library of your organization's governance rules.
-* **Write unit tests** to validate your policy behavior before you ever roll it out, ensuring your guardrails are reliable and correct.
+### First, Gain Complete Visibility with the New Policy Findings Hub
 
-This "Policy as *Real* Code" approach provides a robust foundation that is essential for governing modern, complex cloud environments.
+To fix your issues, you first need to see them clearly. We have introduced a powerful **Policy Findings Hub** designed to give every stakeholder the exact view they need.
 
-## Pulumi Governance: The Unified Control Plane for Your Organization
+* **The Overview Tab:** A high-level dashboard with compliance scores for leadership to track trends and measure your organization's posture.
+* **The Compliance Tab:** A control-centric view for auditors and infosec teams, grouping findings by policy (e.g., CIS, NIST) to simplify evidence gathering and prove compliance.
+* **The Issues Tab:** A collaborative workspace for platform and development teams to triage, assign, prioritize, and track the remediation of every policy issue.
 
-Pulumi Governance is a core pillar of the entire Pulumi platform, designed to solve these challenges with a unified control plane. It’s what makes a secure and compliant platform possible. **Pulumi Policies** is the feature that brings this vision to life, creating a web of trust that connects the entire platform:
+This hub is powered by our flexible audit capabilities. With **Audit Scans for IaC Stacks**, you can get an instant compliance baseline on all your existing Pulumi-managed infrastructure without blocking developers or re-deploying thousands of stacks. This is combined with discovery scans of your cloud accounts to give you a single, unified view of every resource, whether managed by Pulumi or not.
 
-* **Pulumi IaC:** Policies are applied directly to your infrastructure code, preventing non-compliant resources from ever being created. It's the ultimate shift-left, enforcing standards at the source.
-* **Pulumi IDP:** Policies are the built-in guardrails for your "golden path" components and templates. They ensure that every piece of infrastructure developers self-service—whether through a template or a no-code workflow—is compliant by design.
+### The Solution to Remediation at Scale: AI-Powered Fixes with Pulumi Neo
 
-Most importantly, these policies become the operational guardrails for **Pulumi Neo**. When our AI agent automates infrastructure tasks, it runs within the bounds you've already defined, ensuring every AI-generated change is secure, compliant, and trustworthy by default. Your investment in governance directly accelerates safe AI adoption.
+Visibility creates a new problem: an overwhelming backlog. Manually fixing thousands of issues is an impossible task.
 
-## What's New: The Next Generation of Pulumi Policies
+This is where Pulumi Neo provides a powerful solution.
 
-Today’s launch bundles several powerful new capabilities into a single, cohesive experience designed for the AI era.
+Pulumi Neo, our AI platform engineer, is now integrated directly into the Policy Findings hub to automate the most difficult part of the process: the fix itself. From the Issues tab, your teams can now select a group of policy issues, assign them to Neo, and trigger a remediation flow.
 
-* **Simplified Policy Management & In-Console Marketplace****: As announced in September, Pulumi Policies is now available to all Team and Enterprise customers. Discovering, applying, and managing policies is radically simpler with a new marketplace directly in the Pulumi Cloud. You can browse, add, and configure expert-authored policy packs without ever touching the CLI.
-* **New Pre-Built Compliance Packs**: Accelerate your compliance journey from months to minutes. We are launching a new suite of expert-authored packs for **CIS Controls v8.1**, **NIST SP 800-53 Rev. 5**, and **PCI DSS v4.0**. These codify hundreds of controls, allowing you to enforce industry-standard baselines immediately.
+Neo is smart. It will:
 
-| Framework                 | AWS | Azure | Google Cloud |
+1. Analyze the non-compliant resources and the policies they are violating.
+2. Understand the required configuration to make them compliant.
+3. **Generate a pull request with the exact code changes needed to fix the issues.**
+
+Most powerfully, for an unmanaged resource discovered via a cloud scan, Neo will generate the code to **import the resource into a Pulumi stack and apply the fix.** This "Import and Fix" workflow transforms unmanaged infrastructure into governed, compliant code, turning a task that could take a developer hours into a simple review-and-merge process. Your teams can finally burn down their issue backlog and achieve a state of continuous compliance.
+
+## Part 2: Stay Clean - The Universal Guardrail for Humans and AI
+
+Once you begin cleaning your environment, the next challenge is to *stay* clean. As AI accelerates infrastructure creation, you need robust guardrails to ensure it doesn't also accelerate the creation of security risks.
+
+The answer is **Policy as *Real* Code.** Pulumi Policies uses general-purpose languages like TypeScript and Python to create sophisticated guardrails that govern every change. To help you establish these controls immediately, we are launching a new suite of pre-built compliance packs authored and maintained by Pulumi experts.
+
+| Framework                 | AWS | Azure | Google Cloud |
 | ------------------------- |:---:|:-----:|:------------:|
-| **CIS Controls v8.1**      | ✅  |   ✅  |      ✅      |
-| **NIST SP 800-53 Rev. 5**  | ✅  |       |              |
-| **PCI DSS v4.0**           | ✅  |       |              |
-| **HITRUST CSF v11.5**      | ✅  |   ✅  |      ✅      |
-| **Pulumi Best Practices**  | ✅  |   ✅  |      ✅      |
+| **CIS Controls v8.1**      | ✅  |   ✅  |      ✅      |
+| **NIST SP 800-53 Rev. 5**  | ✅  |       |              |
+| **PCI DSS v4.0**           | ✅  |       |              |
+| **HITRUST CSF v11.5**      | ✅  |   ✅  |      ✅      |
+| **Pulumi Best Practices**  | ✅  |   ✅  |      ✅      |
 
-* **Audit Scans for IaC Stacks**: Gain complete compliance visibility without sacrificing developer speed. You can now run policy checks against the last successful deployment state of any stack, completely decoupled from your CI/CD pipeline. This provides an instant compliance baseline and ensures developer workflows remain fast.
-* **The New Policy Findings Hub**: Move from alerts to action. We’ve replaced the old violations view with a powerful **Policy Findings** hub. It provides an executive overview with compliance scores, an auditor-friendly view grouped by controls, and a collaborative issue management workspace to triage, assign, and track every finding.
-* **The Remediation Engine: AI-Powered Fixes with Pulumi Neo**: This is the game-changer. Finding thousands of issues is useless if you can't fix them. **Pulumi Neo is now integrated directly into our issue management workflow to provide AI-powered remediation.** Instead of just telling you what's wrong, Neo generates a pull request with the exact code needed to fix it. For discovered resources, Neo will even generate the code to **import the resource into Pulumi and apply the fix in a single PR**, closing the loop from detection to remediation and turning unmanaged infrastructure into governed code.
+These policies act as a universal guardrail for your entire organization by blocking non-compliant changes during `pulumi up`, before they are ever created.
 
-## Embrace Governance That Accelerates You
+And now, you can even use **Neo to author new policies**. You can ask Neo in plain English to "create a policy that prevents overly permissive IAM roles," and it will generate the code for you. This creates a powerful, dynamic governance system where AI can help you build the very rules that then govern its own actions. If you then ask Neo to create an admin role, the deployment will be blocked by the policy it just helped write. This is how we make AI safe to go fast.
 
-The age of AI-driven development demands AI-driven governance. With this new generation of Pulumi Policies, we are providing the essential infrastructure for platform engineering teams to not just survive, but thrive. You can finally build golden paths with guardrails that developers love, secure your cloud at scale, and transform governance from a cost center into a competitive advantage.
+## A New Era of Collaboration
+
+This "Get Clean, Stay Clean" lifecycle transforms how teams work together:
+
+* **Platform Teams** lead prevention by building real-code guardrails, proving their value with measurable compliance scores.
+* **Security Teams** drive the "Get Clean" process with continuous, non-blocking audit scans and use the Findings hub to manage compliance without slowing development.
+
+## Governance That Accelerates You
+
+The age of AI-driven development demands AI-powered governance. With this new generation of Pulumi Policies, we are providing the essential infrastructure for platform engineering teams to not just survive, but thrive. You can finally build preventative guardrails that developers love, secure your cloud at scale, and transform governance from a blocker into a business accelerator.
 
 This powerful new experience is available today. Navigate to the **Policies** tab in the Pulumi Cloud to explore your new governance capabilities and meet the future of platform engineering.

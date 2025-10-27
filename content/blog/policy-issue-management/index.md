@@ -1,10 +1,10 @@
 ---
-title: "From Insight to Action: Introducing Advanced Policy Issue Management and AI-Powered Remediation"
-date: 2025-10-22
+title: "Announcing the New Policy Findings Hub"
+date: 2025-10-22T00:03:00
 authors:
   - alejandro-cotroneo
   - arun-loganathan
-meta_desc: "Announcing Pulumi's Policy Findings hub, advanced issue management, and AI-powered remediation with Pulumi Neo to fix compliance issues at scale."
+meta_desc: "Move from alert fatigue to action. Announcing Pulumi's new Policy Findings hub, a collaborative workspace for triaging, managing, and fixing compliance issues."
 allow_long_title: true
 meta_image: "meta.png"
 tags:
@@ -17,56 +17,48 @@ tags:
   - ai
 ---
 
-For any organization serious about cloud governance, identifying a policy violation is only the beginning. The real challenge comes next: managing the flood of alerts, prioritizing what matters most, and actually fixing the issues. Without the right tools, this process quickly leads to alert fatigue, slow remediation times, and a perpetually insecure compliance posture.
+For platform and security teams, enabling robust cloud scanning often creates a new problem: an unmanageable firehose of policy alerts. Identifying a violation is only the first step. Without a system to manage the lifecycle of these findings, teams are quickly overwhelmed, leading to prioritization paralysis and a perpetually growing backlog.
 
-Today, as part of the Pulumi Policy v2 launch, we are transforming this experience. We're excited to introduce a completely redesigned **Policy Findings** hub for advanced issue management and, most powerfully, **AI-powered remediation with Pulumi Neo** to help you solve these issues at scale.
+Today, we're introducing the solution to this alert fatigue. The new **Policy Findings** hub is a purpose-built, collaborative workspace that transforms a noisy list of violations into an organized and actionable set of tasks. It guides your team from initial discovery all the way to a verified fix.
 
 <!--more-->
 
-### A New Hub for Policy Insights
+## From Raw Data to Actionable Insights
 
-We've replaced the old Policy Violations page with a new hub called **Policy Findings**, designed to give every stakeholder—from security leader to auditor to developer—the exact view they need. The Findings page is organized into three distinct tabs.
+The Policy Findings hub is designed with distinct views for every stakeholder involved in the governance lifecycle.
 
-#### 1. The Overview Tab: Your Compliance Command Center
+### 1. The Overview Tab: A Dashboard for Leaders
 
-The Overview tab provides a high-level dashboard of your organization's compliance health. It's designed to give you an instant, at-a-glance understanding of your posture with key metrics:
+For a platform lead or security manager, the goal is to understand the big picture. The Overview tab provides a high-level dashboard of your organization's compliance health, answering key questions at a glance:
 
-* **Policy Compliance Score:** The percentage of your enabled policy rules that are currently passing.
-* **Resource Compliance Score:** The percentage of your governed resources that are fully compliant.
+* What is our overall resource compliance score?
+* Are we trending in the right direction?
+* Which parts of our cloud infrastructure (stacks, accounts, etc.) carry the most risk?
 
-This view helps leaders track trends, identify macro-level problem areas, and direct strategic efforts. The dashboard provides breakdowns by your Stacks and Cloud Accounts, and we will be adding more options to filter and group data to help you slice and dice the information you need.
+This view helps leadership track progress and make data-driven decisions about where to focus engineering efforts.
 
-#### 2. The Compliance Tab: An Auditor's View
+### 2. The Compliance Tab: The Auditor and Infosec Workspace
 
-Designed for security and compliance teams, this tab provides a policy-centric view of your findings. It groups results by policy, showing exactly which controls are passing and which are failing across your environment. This is invaluable during audits, where you need to go control-by-control through a standard like CIS or NIST to provide evidence of compliance.
+For the infosec members and auditors, context is everything. Simply listing thousands of violations is not helpful. The Compliance tab provides a policy-centric view, grouping all findings by the specific control they violated (e.g., a specific rule within CIS or NIST).
 
-#### 3. The Issues Tab: Your Collaborative Triage Board
+This is crucial when preparing for an audit or assessing adherence to a specific security framework, as it allows you to see exactly where you are compliant and where you have gaps, control by control.
 
-This is where your teams turn insight into action. The Issues tab is a collaborative workspace for triaging, assigning, and tracking the remediation of every policy issue. We've significantly enhanced it to support the full lifecycle of an issue:
+### 3. The Issues Tab: The Team's Daily Workspace
 
-* **Rich Context:** Every issue now includes a wealth of contextual data and a detailed drill-down screen to help you understand the problem's impact.
-* **Ownership and Collaboration:** Assign issues to specific members of your organization to ensure clear ownership and accountability.
-* **Prioritization:** Set a priority level from P0 (critical) to P4 (low) to help teams focus on the most important fixes first.
-* **Lifecycle Management:** Mark an issue as "Ignored" with a justification. This is critical for cases where a violation is intentional or "by design," allowing you to maintain an accurate compliance picture while acknowledging necessary exceptions.
+This is space where insight is turned into action. The Issues tab is a collaborative triage board designed for the day-to-day workflow of platform and development teams. It provides the full toolset needed to manage the lifecycle of an issue from start to finish:
 
-**Placeholder for a video**
+* **Triage and Prioritize:** Filter issues by severity, resource type, or policy to focus on what matters most. Set a priority level from P0 (critical) to P4 (low).
+* **Assign Ownership:** Assign issues to specific team members to ensure clear ownership and accountability.
+* **Manage Lifecycle:** Mark an issue as "Ignored" with a justification. This is a critical workflow for acknowledging intentional exceptions, which cleans up your dashboard and allows the team to focus on legitimate issues.
 
-### The Remediation Game-Changer: Pulumi Neo
-
-In any medium-to-large organization, thousands of cloud resources can lead to hundreds or even thousands of policy issues. Manually fixing them all is an impossible task, and in reality, most organizations can't keep up. The backlog grows, and the risk remains.
-
-This is where Neo transforms governance from reactive to proactive. Pulumi Neo, our AI agent, is now integrated directly into the issue management workflow to automate the hardest part of the process: the fix itself. When viewing an issue, you can now trigger a Pulumi Neo remediation flow. Neo is smart enough to handle both resources already managed by Pulumi and those discovered via cloud scans.
-
-1. Analyze the non-compliant resource and the policy it's violating.
-2. Understand the required configuration to make it compliant.
-3. **Generate a pull request with the exact code changes needed to fix the issue.** For a discovered resource, Neo will even generate the code to import it into a Pulumi stack *and* fix the violation in the same pull request, bringing your unmanaged resources under compliant management.
+And for the most critical part of the workflow—the fix itself—we've integrated our AI agent, **Pulumi Neo**, directly into this view.
 
 **Placeholder for a video**
 
-This is a revolutionary step forward. It turns a manual task that could take a developer hours into a simple review-and-merge process. With Pulumi Neo, you can finally burn down your issue backlog and reduce manual remediation from hours to minutes through AI-powered automation, achieving a state of continuous compliance at a scale that was previously unimaginable.
+After selecting one or more issues, your team can assign the task to Neo. It will analyze the violations and automatically generate a pull request with the necessary code changes. For unmanaged resources, Neo will even generate the code to import them into Pulumi and apply the fix. This turns a complex manual task into a simple review-and-merge process, allowing your team to finally burn down the backlog.
 
-### Conclusion
+## Conclusion
 
-Pulumi Governance - through its Policies feature - is now an end-to-end governance solution that guides you from a high-level compliance overview, through collaborative triage, and all the way to an AI-generated fix.
+Effective governance requires more than just detection; it requires a robust system for managing, prioritizing, and resolving issues at scale. The new Policy Findings hub provides that end-to-end experience. It's a collaborative environment that brings clarity to your compliance posture and provides the tools—including AI-powered assistance—to take decisive action.
 
-This powerful new experience is available today. Navigate to the **Policies > Findings** tab in the Pulumi Cloud to explore your new compliance dashboard and start turning your policy insights into action.
+This powerful new experience is available today. Navigate to the **Policies > Findings** tab in the Pulumi Cloud to explore your new compliance dashboard and transform alert fatigue into action.
