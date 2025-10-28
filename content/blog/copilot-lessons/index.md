@@ -13,13 +13,18 @@ tags:
     - ai
     - iac
 social:
-    twitter: > 
+    twitter: >
         Building Pulumi Copilot taught us key lessons about AI-powered tools: hallucinations reveal missing features, prompt engineering isn’t always the answer, and balancing LLMs with traditional code is critical. Learn more: https://www.pulumi.com/blog/copilot-lessons/
     linkedin: |
         Building AI-powered tools often brings unexpected challenges—and valuable lessons. While developing Pulumi Copilot, we encountered surprising insights: hallucinations revealed missing product features, prompt engineering wasn't always the fix, and balancing LLM capabilities with traditional code proved essential.
         One memorable turning point came from user feedback: "Your tool doesn't know anything!" Instead of seeing it as failure, we saw opportunity—leading to significant improvements.
         Curious how we turned unexpected challenges into product breakthroughs? Learn more: https://www.pulumi.com/blog/copilot-lessons/
 ---
+
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 Building AI-powered developer tools comes with unique challenges, and now that we've **[launched our REST API](/blog/pulumi-copilot-rest/)**, we want to share some lessons we've learned building Pulumi Copilot, an AI assistant for cloud infrastructure.
 
 One of the big challenges was determining what 'working' really meant. So when a message landed in our feedback channel after months of rigorous testing - 'Your tool doesn't know anything!' - it caused some mild panic. We'd just made some changes, so we braced for the worst. But our evals were still looking strong, so what was going on?
@@ -62,7 +67,7 @@ These early experiences showed the value of Copilot. But they also revealed the 
 
 ## Skillful Slicing: Modular Mastery
 
-As Copilot grew, we broke it into smaller pieces we call skills. Each skill does one specific job. The Insights skill handles queries about resource usage and configuration ("How many S3 buckets do I have?"), the Cloud Skill interacts with the Pulumi Service API to manage infrastructure ("Show me my stacks."), the Code Skill generates Pulumi code snippets ("Write a Typescript program..."), and the Docs Skill retrieves information from Pulumi documentation ("How do I use [update plans](https://www.pulumi.com/docs/iac/concepts/update-plans/)?").  
+As Copilot grew, we broke it into smaller pieces we call skills. Each skill does one specific job. The Insights skill handles queries about resource usage and configuration ("How many S3 buckets do I have?"), the Cloud Skill interacts with the Pulumi Service API to manage infrastructure ("Show me my stacks."), the Code Skill generates Pulumi code snippets ("Write a Typescript program..."), and the Docs Skill retrieves information from Pulumi documentation ("How do I use [update plans](https://www.pulumi.com/docs/iac/concepts/update-plans/)?").
 
 When you ask Copilot something, it figures out what you need and picks the right skill for the job – like a manager deciding which expert to send your question to. This [function-calling](https://platform.openai.com/docs/guides/function-calling) approach, orchestrated by a component we call the "outer loop," allows Copilot to access and process information beyond its internal knowledge base.
 
