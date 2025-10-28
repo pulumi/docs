@@ -12,6 +12,10 @@ aliases:
   - /docs/pulumi-cloud/reference/copilot/
 ---
 
+{{< notes type="info" >}}
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 The Pulumi Copilot API provides endpoints for integrating Pulumi's AI-powered infrastructure assistance capabilities with your applications and platforms. It allows you to programmatically access Pulumi Copilot's natural language understanding to analyze infrastructure, answer questions about Pulumi, and even generate infrastructure as code.
 
 {{% notes "info" %}}

@@ -11,6 +11,10 @@ tags:
     - insights
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 Pulumi Insights 2.0 brings the power of Insights to all of your cloud infrastructure, not just the infrastructure managed by Pulumi IaC. Insights 2.0 also brings an exciting new suite of tools that make it easy to discover your entire infrastructure, assess security and efficiency of it, and bring it under management of IaC for best-in-class infrastructure management practices.
 
 <!--more-->
