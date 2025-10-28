@@ -16,10 +16,6 @@ aliases:
 - /docs/pulumi-cloud/access-management/rbac/scopes/org-settings/
 ---
 
-{{< notes type="info" >}}
-Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
-{{< /notes >}}
-
 This document defines all the available scopes in Pulumi Cloud, organized by [entity type](../../permissions#entity-types) and group.
 
 ## Agent Pools
