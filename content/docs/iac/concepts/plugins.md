@@ -80,8 +80,8 @@ Most users will not need to run the [`pulumi plugin install`](/docs/iac/cli/comm
 
 Plugins are stored in different locations depending on their type:
 
-- **Resource plugins** (providers) and **converter plugins** are cached in `~/.pulumi/plugins`
-- **Language plugins** and **policy plugins** are stored in `~/.pulumi/bin`
+- All plugins that ship with the Pulumi CLI, including all of our supported **Language plugins** and **policy plugins** are stored in `~/.pulumi/bin`
+- All plugins that are installed by the user, whether explicitly or automatically by the Pulumi CLI, are cached in `~/.pulumi/plugins`
 
 ### Plugin management commands
 
