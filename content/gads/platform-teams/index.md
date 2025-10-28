@@ -40,11 +40,6 @@ key_features_above:
                     Developers get infrastructure on-demand while platform engineers maintain control and governance
                 icon: security
                 color: yellow
-              - title: Scale without headcount
-                description: |
-                    Support 10x more teams without growing your platform engineering org
-                icon: rocketship
-                color: yellow
 
 key_features:
     title: Key features

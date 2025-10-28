@@ -28,7 +28,7 @@ key_features_above:
               - title: AI-powered infrastructure
                 description: |
                     Generate Pulumi code from natural language or convert existing Terraform with Neo AI
-                icon: bot
+                icon: lightning
                 color: yellow
               - title: Deploy to any cloud in minutes
                 description: |

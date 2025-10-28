@@ -40,11 +40,6 @@ key_features_above:
                     Write governance policies once and apply them consistently across all clouds and environments
                 icon: shield
                 color: yellow
-              - title: Unified secrets management
-                description: |
-                    Built-in secrets encryption works across every provider without separate KMS configuration per cloud
-                icon: lock
-                color: yellow
 
 key_features:
     title: Key features
