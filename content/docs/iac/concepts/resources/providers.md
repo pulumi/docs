@@ -42,7 +42,7 @@ The most common method of installing a provider is to use your language's packag
 - .NET: `Pulumi.Aws`
 - Java: `com.pulumi.aws`
 
-After installing the provider using your package manager, you reference the provider in your Pulumi program to define the desired state of the resources for that provider. When you install the SDK for a provider (e.g., via `npm install <package_name>` in Node.js), the package manager (npm in this example) automatically downloads and installs the provider executable along with the SDK if the executable is not already cached on your system.
+After installing the provider using your package manager, you reference the provider in your Pulumi program to define the desired state of the resources for that provider. When you first run `pulumi preview` or `pulumi up`, the Pulumi CLI will install any required providers that are not already in your plugin cache.
 
 ### Installing a Parameterized Provider via `pulumi package add`
 
