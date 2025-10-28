@@ -16,7 +16,7 @@ aliases:
 - /docs/iac/adopting-pulumi/converters/
 ---
 
-The `pulumi convert` command allows you translate supported sources to the various [languages that Pulumi supports](/docs/languages-sdks/), such as TypeScript, JavaScript, Go, Python, C#, or Java.). Conversion sources are supported via a plugin model, and include other IaC tools like Terraform. Pulumi YAML programs can also be converted to any other supported Pulumi language.
+The `pulumi convert` command allows you to translate supported sources to the various [languages that Pulumi supports](/docs/languages-sdks/), such as TypeScript, JavaScript, Go, Python, C#, or Java. Conversion sources are supported via [Pulumi plugins](/docs/iac/concepts/plugins/#converter-plugins), and include the ability to convert code from other IaC tools like Terraform and Azure Bicep. Pulumi YAML programs can also be converted to any other supported Pulumi language.
 
 For the detailed usage of this command and options, refer to the [pulumi convert CLI documentation.](https://www.pulumi.com/docs/cli/commands/pulumi_convert/)
 
@@ -39,17 +39,14 @@ For the detailed usage of this command and options, refer to the [pulumi convert
 
 ### Use cases for using pulumi convert
 
-The `pulumi convert` subcommand is designed to address a variety of migration and conversion scenarios where IaC practices evolve alongside your project needs. Here are some common use cases:
+The `pulumi convert` command is designed to address a variety of migration and conversion scenarios where IaC practices evolve alongside your project needs. Here are some common use cases:
 
 * **Migrating from other IaC tools:** If you're looking to transition your infrastructure definitions from tools like Terraform, Bicep, or ARM templates into Pulumi.
 * **Converting from Pulumi YAML:** If you started your project with Pulumi YAML and find your requirements have evolved, you can convert and take advantage of the benefits offered by popular programming languages, such as complex logic capabilities and the flexibility to create modular and reusable components.
 
 ### Additional conversion tools and resources
 
-The following list of web-based tools and resources can quickly help you convert your source IaC languages or formats for use with the `pulumi convert --from` command. The resulting file can be copied or downloaded for use with a [new Pulumi project](/docs/get-started/).
+In addition to the converter plugins, Pulumi offers the following standalone tools for converting code from other IaC tools to Pulumi:
 
-* [Terraform to Pulumi](/tf2pulumi/)
-* [ARM to Pulumi](/arm2pulumi)
 * [Kubernetes CustomResources to Pulumi](/blog/introducing-crd2pulumi/)
 * [CloudFormation to Pulumi](/cf2pulumi/)
-* [Kubernetes YAML to Pulumi](/kube2pulumi/)
