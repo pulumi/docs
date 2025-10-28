@@ -13,11 +13,6 @@ aliases:
 - /docs/esc/webhooks/
 ---
 
-{{% notes "info" %}}
-ESC Webhooks is a feature available on the Pulumi Team, Enterprise and Business Critical editions.
-To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
-{{% /notes %}}
-
 ESC Webhooks allow you to notify external services of events
 happening within your ESC environments. For example,
 you can trigger a notification whenever a new revision of an environment is created.
@@ -25,24 +20,19 @@ When an event occurs, Pulumi will notify the registered webhook listeners via a 
 request with metadata about the event. The webhook can then be used to emit a
 notification, start running integration tests, or even update Pulumi stacks.
 
-There are large number of real life applications for webhooks including serving as the foundation
-of most _ChatOps_ workflows.
-
 ## Overview
 
-ESC Webhooks can be attached to either an environment or an organization. Environment webhooks
-will be notified of events specific to the environment. Organization
-webhooks will be notified for events happening within each of the organization's
-environments.
+ESC Webhooks can be attached to either an environment or a Pulumi Cloud organization:
 
-Organization webhooks can be managed on the Organization Settings page. Environment webhooks can be managed from the webhooks tab on each Environment's detail page.
-
-![Organization webhooks](/images/docs/reference/service/webhooks/org-webhooks.png)
-
-Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/deployments/webhooks).
+- **Environment webhooks** will fire in response to events you specify for a single ESC environment.
+- **Organization webhooks** can be configured to trigger in response to events you specify for _all_ environments in your Pulumi Cloud organization, in addition to other organization-wide events.
 
 {{% notes "info" %}}
-Webhooks do not guarantee event order. You should not assume events will be received in the order they occurred.
+Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/deployments/webhooks).
+{{% /notes %}}
+
+{{% notes "info" %}}
+Webhooks do not guarantee ordered delivery of events. That is, you should not assume events will be received in the order in which they occurred.
 {{% /notes %}}
 
 ### Create a Webhook
@@ -50,32 +40,36 @@ Webhooks do not guarantee event order. You should not assume events will be rece
 Pulumi Webhooks may be created through any of the following methods:
 
 1. Manually, in the Pulumi Cloud UI using the steps outlined in [Create an Organization Webhook in the Pulumi Cloud UI](#create-an-organization-webhook-in-the-pulumi-cloud-ui) or [Create an Environment Webhook in Pulumi Cloud in the Pulumi Cloud UI](#create-an-environment-webhook-in-the-pulumi-cloud-ui).
-1. Declaratively, as part of a [Pulumi IaC](/docs/iac) program as shown in [Create an Webhook in a Pulumi IaC Program](#create-an-webhook-in-a-pulumi-iac-program)
-1. By invoking the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
-
-#### Create an Organization Webhook in the Pulumi Cloud UI
-
-1. Navigate to **Settings** > **Webhooks**.
-2. Select **Create webhook**.
-3. Under Destination, choose **Webhook**, **Slack** or **Microsoft Teams**.
-    1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
-    2. For Slack webhooks, provide a Slack webhook URL and a display name.
-    3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
-4. Choose which events you would like to receive using groups and filters menu.
+1. Declaratively, as part of a [Pulumi IaC](/docs/iac) program as shown in [Create a Webhook in a Pulumi IaC Program](#create-a-webhook-in-a-pulumi-iac-program)
+1. By invoking the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/webhooks/#create-webhook) directly.
 
 #### Create an Environment Webhook in the Pulumi Cloud UI
 
-1. Navigate to your environment.
-2. Navigate to **Webhooks** tab.
-3. Select **Create webhook**.
-4. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams** or **Deployment**
+1. Navigate to the environment you wish to create a webhook for.
+1. Navigate to **Webhooks** tab.
+1. Select **Create webhook**.
+1. Under Destination, choose **Webhook**, **Slack**, **Microsoft Teams** or **Deployment**
    1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
-   2. For Slack webhooks, provide a Slack webhook URL and a display name.
-   3. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
-   4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
-5. Choose which events you would like to receive using groups and filters menu.
+   1. For Slack webhooks, provide a Slack webhook URL and a display name.
+   1. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
+   1. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
+1. Choose which events you would like to receive using groups and filters menu.
 
-#### Create an Webhook in a Pulumi IaC Program
+#### Create an Organization Webhook in the Pulumi Cloud UI
+
+{{% notes "info" %}}
+You must be an admin of the organization to create organization webhooks.
+{{% /notes %}}
+
+1. Select **Settings** > **Integrations** > **Webhooks**.
+1. Select **Create webhook**.
+1. Under Destination, choose **Webhook**, **Slack** or **Microsoft Teams**.
+    1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
+    1. For Slack webhooks, provide a Slack webhook URL and a display name.
+    1. For Microsoft Teams webhooks, provide a Microsoft Teams webhook URL and a display name.
+1. Choose which events you would like to receive using groups and filters menu.
+
+#### Create a Webhook in a Pulumi IaC Program
 
 The following example shows how to create an Environment webhook in a Pulumi IaC program by declaring a [Webhook resource](/registry/packages/pulumiservice/api-docs/webhook/) with the [Pulumi Cloud provider](/registry/packages/pulumiservice).
 
@@ -101,13 +95,13 @@ const webhook = new pulumiservice.Webhook("example-webhook", {
 
 ```python
 import pulumi
-import pulumi_pulumiservice
-webhook = pulumi_service.Webhook("example-webhook",
-    active: True,
-    display_name: "webhook example",
-    organization_name: "example",
-    environmentName: "my-environment",
-    payload_url: "https://example.com/webhook",
+import pulumi_pulumiservice as pcloud
+webhook = pcloud.Webhook("example-webhook",
+    active=True,
+    display_name="webhook example",
+    organization_name="example",
+    environment_name="my-environment",
+    payload_url="https://example.com/webhook"
 )
 ```
 
@@ -419,5 +413,5 @@ func computeSignature(payload []byte, secret string) string {
 
 ## Additional Resources
 
-* [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
-* [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
+- [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
+- [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
