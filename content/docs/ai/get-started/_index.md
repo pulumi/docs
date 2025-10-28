@@ -16,10 +16,6 @@ menu:
         identifier: ai-get-started
 ---
 
-{{< notes type="info" >}}
-Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
-{{< /notes >}}
-
 ## Public Preview Access
 
 Neo is in public preview and currently free to use. Users will receive ample warning before any pricing changes go into effect. Using Neo to optionally run [`pulumi preview`](/docs/iac/neo/running-previews/) consumes workflow minutes. Learn more about workflow minutes on our [pricing page](https://www.pulumi.com/pricing/#faq-pricing).
