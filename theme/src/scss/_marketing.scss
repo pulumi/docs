@@ -84,7 +84,7 @@ body {
     }
 
     .btn-secondary {
-        @apply bg-white text-violet-500 border-2 border-violet-500;
+        @apply bg-white text-violet-600 border-2 border-violet-600;
         @include transition;
 
         &.disabled {
@@ -92,11 +92,11 @@ body {
         }
 
         &:hover {
-            @apply bg-violet-100 text-violet-500;
+            @apply bg-violet-600 text-white;
         }
 
         &:focus {
-            @apply bg-violet-200 text-violet-500;
+            @apply bg-violet-700 text-white;
         }
     }
 
@@ -107,7 +107,7 @@ body {
 
     // white secondary button for violet-600 background
     .btn-secondary-home-action {
-        @apply bg-violet-500 text-white border-2 border-white whitespace-normal;
+        @apply bg-violet-600 text-white border-2 border-white whitespace-normal;
         @include transition;
 
         &.disabled {
