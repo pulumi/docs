@@ -16,288 +16,33 @@ aliases:
     - /docs/concepts/inputs-outputs/apply/
 ---
 
-[Outputs](/docs/concepts/inputs-outputs/#outputs) are asynchronous, meaning their actual plain values are not immediately available. Their values will only become available once the resource has finished provisioning. The asynchronous nature of Outputs is also why, when certain operations such as [`pulumi preview`](/docs/cli/commands/pulumi_preview/) runs, the outputs for a new resource do not yet have any possible values. As such, there are limitations on the ways in which you can retrieve and interact with these values.
+The `apply` method is used to access the plain value of a single [output](/docs/iac/concepts/inputs-outputs/#outputs) and perform operations on it. Because outputs are asynchronous values that only become known after a resource has finished provisioning, you cannot directly access or manipulate their values using standard language operations (like printing or string concatenation). The `apply` method solves this by waiting for the output value to become available and then executing a function with that plain value.
 
-To demonstrate, let's say you have the following simple program that creates an [AWSX VPC resource](/registry/packages/awsx/api-docs/ec2/vpc/) in AWS. In this program, you want to view all of the properties of this resource, so you have added a print/log statement to print the `vpc` variable.
+The `apply` method is typically used for:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
+- [Printing output values](#accessing-single-output-values) for debugging Pulumi programs
+- [Accessing nested values](#accessing-nested-output-values) in complex types (outputs that are objects or dictionaries)
+- [Transforming an output](#creating-new-output-values) by referencing its plain value
 
-{{% choosable language javascript %}}
+For more information about what outputs are and why they are necessary in Pulumi programs, see [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/).
 
-```javascript
-{{< example-program-snippet path="awsx-vpc" language="javascript" from="1" to="3" >}}
+{{% notes type="info" %}}
+The `apply` method is designed for accessing single output values. If you need to access multiple output values across multiple resources, use Pulumi's [`all` method](/docs/concepts/inputs-outputs/all/) instead.
+{{% /notes %}}
 
-{{< example-program-snippet path="awsx-vpc" language="javascript" from="6" to="6" >}}
+{{% notes type="warning" %}}
+Creating resources inside an `apply` should be avoided whenever possible. Resources created inside `apply` will not appear in `pulumi preview` unless the output's value is already known. This means the preview output may not match the actual changes when `pulumi up` is run, making it difficult to understand what changes will be made to your infrastructure.
 
-console.log(vpc);
-```
+If you need to create a resource that depends on an output value, pass the output directly as an input to the resource instead of using `apply`. Pulumi will automatically handle the dependency tracking and ensure resources are created in the correct order.
+{{% /notes %}}
 
-{{% /choosable %}}
-
-{{% choosable language typescript %}}
-
-```typescript
-{{< example-program-snippet path="awsx-vpc" language="typescript" from="1" to="2" >}}
-
-{{< example-program-snippet path="awsx-vpc" language="typescript" from="5" to="5" >}}
-
-console.log(vpc);
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-{{< example-program-snippet path="awsx-vpc" language="python" from="1" to="2" >}}
-
-{{< example-program-snippet path="awsx-vpc" language="python" from="5" to="5" >}}
-
-print(vpc)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-{{< example-program-snippet path="awsx-vpc" language="go" from="1" to="3" >}}
-    "fmt"
-{{< example-program-snippet path="awsx-vpc" language="go" from="4" to="10" >}}
-{{< example-program-snippet path="awsx-vpc" language="go" from="12" to="15" >}}
-
-        fmt.Println(vpc)
-
-{{< example-program-snippet path="awsx-vpc" language="go" from="21" to="23" >}}
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-{{< example-program-snippet path="awsx-vpc" language="csharp" from="1" to="6" >}}
-{{< example-program-snippet path="awsx-vpc" language="csharp" from="8" to="8" >}}
-
-    Console.WriteLine(vpc);
-
-{{< example-program-snippet path="awsx-vpc" language="csharp" from="17" to="17" >}}
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-```java
-{{< example-program-snippet path="awsx-vpc" language="java" from="1" to="9" >}}
-{{< example-program-snippet path="awsx-vpc" language="java" from="11" to="11" >}}
-
-            System.out.println(vpc);
-
-{{< example-program-snippet path="awsx-vpc" language="java" from="17" to="19" >}}
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-This example is not applicable in YAML.
-```
-
-{{% /choosable %}}
-
-However, deploying this program will show CLI output similar to the following:
-
-{{% choosable language javascript %}}
-
-```bash
-# Example CLI output (truncated)
-Updating (pulumi/dev)
-    Type                                          Name           Status              Info
- +   pulumi:pulumi:Stack                           aws-js-dev     created (1s)        391 messages
- +   └─ awsx:ec2:Vpc                               vpc            created (1s)
-    ...
-    ...
-
-Diagnostics:
-  pulumi:pulumi:Stack (aws-js-dev):
-    <ref *1> Vpc {
-          __pulumiResource: true,
-          __pulumiType: 'awsx:ec2:Vpc',
-          ...
-          ...
-          vpc: OutputImpl {
-            __pulumiOutput: true,
-            resources: [Function (anonymous)],
-            allResources: [Function (anonymous)],
-            isKnown: Promise { <pending> },
-            ...
-            ...
-          },
-          ...
-        }
-Resources:
-    + 34 created
-
-Duration: 2m17s
-```
-
-{{< notes type="info" >}}
-You can see an example of the complete Diagnostics CLI output in [this gist](https://gist.github.com/toriancrane/be03601a7b9f0fd2e197d55ed5a41b31).
-{{< /notes >}}
-
-{{% /choosable %}}
-
-{{% choosable language typescript %}}
-
-```bash
-# Example CLI output (truncated)
-Updating (pulumi/dev)
-    Type                                          Name           Status              Info
- +   pulumi:pulumi:Stack                           aws-ts-dev     created (1s)        391 messages
- +   └─ awsx:ec2:Vpc                               vpc            created (1s)
-    ...
-    ...
-
-Diagnostics:
-  pulumi:pulumi:Stack (aws-ts-dev):
-    <ref *1> Vpc {
-          __pulumiResource: true,
-          __pulumiType: 'awsx:ec2:Vpc',
-          ...
-          ...
-          vpc: OutputImpl {
-            __pulumiOutput: true,
-            resources: [Function (anonymous)],
-            allResources: [Function (anonymous)],
-            isKnown: Promise { <pending> },
-            ...
-            ...
-          },
-          ...
-        }
-Resources:
-    + 34 created
-
-Duration: 2m17s
-```
-
-{{< notes type="info" >}}
-You can see an example of the complete Diagnostics output in [this gist](https://gist.github.com/toriancrane/4aba791447af71a67cce06715a282a19).
-{{< /notes >}}
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```bash
-# Example CLI output (truncated)
-Updating (pulumi/dev)
-    Type                                          Name           Status              Info
- +   pulumi:pulumi:Stack                           aws-py-dev     created (1s)        391 messages
- +   └─ awsx:ec2:Vpc                               vpc            created (1s)
-    ...
-    ...
-
-Diagnostics:
-  pulumi:pulumi:Stack (aws-py-dev):
-    <pulumi_awsx.ec2.vpc.Vpc object at 0x7f77ac256130>
-
-Resources:
-    + 34 created
-
-Duration: 2m17s
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```bash
-# Example CLI output (truncated)
-Updating (pulumi/dev)
-    Type                                          Name           Status              Info
- +   pulumi:pulumi:Stack                           aws-go-dev     created (1s)        391 messages
- +   └─ awsx:ec2:Vpc                               vpc            created (1s)
-    ...
-    ...
-
-Diagnostics:
-  pulumi:pulumi:Stack (aws-go-dev):
-    &{{{} {{0 0} 0 0 {{} 0} {{} 0}} {0xc000196e00} {0xc000196d90} map[] map[] <nil>   [] vpc [] true} {0xc0001961c0} {0xc000196230} {0xc0001962a0} {0xc000196460} {0xc0001964d0} {0xc000196690} {0xc000196700} {0xc0001967e0} {0xc000196850} {0xc0001968c0} {0xc000196930} {0xc000196a10} {0xc000196a80} {0xc000196b60}}
-
-Resources:
-    + 34 created
-
-Duration: 3m7s
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```bash
-# Example CLI output (truncated)
-Updating (pulumi/dev)
-    Type                                          Name           Status              Info
- +   pulumi:pulumi:Stack                           aws-csharp-dev     created (1s)        391 messages
- +   └─ awsx:ec2:Vpc                               vpc            created (1s)
-    ...
-    ...
-
-Diagnostics:
-  pulumi:pulumi:Stack (aws-csharp-dev):
-    Pulumi.Awsx.Ec2.Vpc
-
-Resources:
-    34 created
-
-Duration: 3m7s
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-```bash
-# Example CLI output (truncated)
-Updating (pulumi/dev)
-    Type                                          Name           Status              Info
- +   pulumi:pulumi:Stack                           aws-java-dev     created (1s)        391 messages
- +   └─ awsx:ec2:Vpc                               vpc            created (1s)
-...
-...
-
-# Nothing is printed
-
-Resources:
-    + 34 created
-
-Duration: 2m17s
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-This example is not applicable in YAML.
-```
-
-{{% /choosable %}}
-
-As shown above, using this method will not provide a JSON representation of the VPC resource complete with its properties and associated property values. This is because, when it comes to Pulumi resource classes, there is no way to output this kind of JSON representation for a resource.
-
-Ultimately, if you want to view the properties of a resource, you will need to access them at the individual property level. The rest of this guide will demonstrate how to access and interact with a single property using {{< pulumi-apply >}}.
-
-{{< notes type="info" >}}
-The `apply` method is great for when you need to access single values. However, if you need to access multiple output values across multiple resources, you will need to use Pulumi's [`all` method](/docs/concepts/inputs-outputs/all) instead.
-{{< /notes >}}
+{{% notes type="warning" %}}
+You cannot create [stack outputs](/docs/iac/concepts/stacks/#outputs) (using `export` in TypeScript/JavaScript, `pulumi.export()` in Python, `ctx.Export()` in Go, etc.) inside an `apply`. Stack outputs must be created at the top level of your Pulumi program. If you need to export a value that depends on an output, you can export the output directly—Pulumi will automatically handle resolving the value when the stack output is accessed.
+{{% /notes %}}
 
 ## Accessing single output values { search.keywords="pulumi.apply" }
 
-Let's say you want to print the ID of the VPC you've created. Given that this is an individual resource property and not the entire resource itself, you might try logging the value like normal:
+Suppose you want to print the ID of a resource you've created. These kinds of values are outputs - values that cannot be known until after a resource is provisioned. You might try logging the value like you would any other string:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
@@ -378,7 +123,7 @@ print(vpc.vpc_id)
 
 {{% /choosable %}}
 
-However, if you update the program as shown above and run `pulumi up`, you will still not receive the value you are looking for as shown in the following CLI output:
+However, if you run the program as shown with `pulumi up`, you will receive something like the following CLI output:
 
 {{% choosable language javascript %}}
 
@@ -491,84 +236,9 @@ This example is not applicable in YAML.
 
 {{% /choosable %}}
 
-This is where {{< pulumi-apply >}} comes into play. There are many resources that have properties of type Output<T>, meaning these property values only become known after the infrastructure has been provisioned. When a Pulumi program is executed with `pulumi up`, the {{< pulumi-apply >}} function will wait for the resource to be created and for its properties to be resolved before printing the desired value of the property. This is not something a standard `print | log` statement is capable of doing.
+This is where {{< pulumi-apply >}} comes into play: When a Pulumi program is executed with `pulumi up`, the {{< pulumi-apply >}} function will wait for the resource to be created and for its properties to be resolved before printing the desired value of the property.
 
-The syntax of {{< pulumi-apply >}} is shown below:
-
-{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-<resource>.<property-name>.apply(<property-name> => <function-to-apply>)
-```
-
-{{% /choosable %}}
-
-{{% choosable language typescript %}}
-
-```typescript
-<resource>.<property-name>.apply(<property-name> => <function-to-apply>)
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-<resource>.<property-name>.apply(lambda <property-name>: <function-to-apply>)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-<resource>.<property-name>.ApplyT(func(<property-name> string) error {
-    <function-to-apply>
-    return nil
-})
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-<resource>.<property-name>.Apply(<property-name> => {
-    <function-to-apply>;
-    return <property-name>;
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-```java
-<resource>.<property-name>().applyValue(<property-name> -> {
-    <function-to-apply>;
-    return null;
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-You can directly access resource properties without the use of Apply in YAML.
-```
-
-{{% /choosable %}}
-
-The breakdown of the different parts of the syntax is as follows:
-
-- `<resource>` is the name of the resource (i.e. `vpc`)
-- `<property-name>` is the name of the property to retrieve (i.e. `vpc_id`)
-- `<function-to-apply>` is the function to apply against the value of the property
-
-This means that if you want to print out the value of the VPC ID, the program needs to look like the following:
+To print out the value of the VPC ID, use the `apply` function:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
@@ -625,7 +295,7 @@ vpc.vpc_id.apply(lambda id: print('VPC ID:', id))
 ```
 
 {{% notes %}}
-**A note on error handling** The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accommodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. Error handling may also be achieved using an `error` `chan`.
+The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accommodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. Error handling may also be achieved using an `error` `chan`.
 {{% /notes %}}
 
 {{% /choosable %}}
@@ -682,18 +352,11 @@ Updating (pulumi/dev)
 Diagnostics:
   pulumi:pulumi:Stack (aws-iac-dev):
     VPC ID: vpc-0f8a025738f2fbf2f
-
-Resources:
-    34 unchanged
-
-Duration: 12s
 ```
-
-You can now see the value of the VPC ID property that you couldn't see before when using a regular `print | log` statement.
 
 ## Accessing nested output values
 
-Sometimes an output has an object with deeply nested values, and there may be times where the values of these nested properties need to be passed as inputs to other resources. For example, let's say you have created an [AWS Certificate Manager certificate resource](/registry/packages/aws/api-docs/acm/certificate/) as shown below:
+Sometimes a resource has an output property that is an array or a more complex object multiple levels of nested values. For example, if you created an [AWS Certificate Manager certificate resource](/registry/packages/aws/api-docs/acm/certificate/) as shown below:
 
 {{< example-program path="aws-acm-certificate" >}}
 
@@ -827,7 +490,17 @@ This example is not applicable in YAML.
 
 {{< /chooser >}}
 
-An easier way to access deeply nested properties is by using _lifting_. Lifting allows you to access properties and elements directly from the {{< pulumi-output >}} itself without needing {{< pulumi-apply >}}. Returning to the example above, your code can now be simplified as shown below:
+### Using lifting to simplify nested access
+
+An easier way to access deeply nested properties is by using _lifting_. Lifting allows you to access properties and elements directly from a {{< pulumi-output >}} without needing an {{< pulumi-apply >}}.
+
+Lifting is handled automatically by Pulumi's type system, making it largely transparent to use. When you access a property or array element on an output value, Pulumi automatically "lifts" that access into the output context, returning a new output that will resolve to that nested value. This approach is easier to read and write and does not lose any important dependency information that is needed to properly create and maintain the stack.
+
+{{% notes type="info" %}}
+Lifting works in most scenarios for accessing nested properties and array elements. However, you may occasionally encounter runtime errors with lifting depending on your language. For example, in TypeScript, if an output resolves to `undefined`, using lifting to reference `outputThatResolvesToUndefined.someProperty` would cause a runtime error. In such cases, use `apply` with appropriate null checking instead.
+{{% /notes %}}
+
+Returning to the certificate validation example from the previous section, you can use lifting to simplify the code as shown below:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
@@ -836,6 +509,9 @@ An easier way to access deeply nested properties is by using _lifting_. Lifting 
 ```javascript
 let certValidation = new aws.route53.Record("cert_validation", {
     records: [
+        // Lifting: Access nested property directly, without apply
+        // Type: certCertificate.domainValidationOptions is Output<Array>
+        // Result: certCertificate.domainValidationOptions[0].resourceRecordValue is Output<string>
         certCertificate.domainValidationOptions[0].resourceRecordValue
     ],
 ...
@@ -848,6 +524,9 @@ let certValidation = new aws.route53.Record("cert_validation", {
 ```typescript
 let certValidation = new aws.route53.Record("cert_validation", {
     records: [
+        // Lifting: Access nested property directly, without apply
+        // Type: certCertificate.domainValidationOptions is Output<Array>
+        // Result: certCertificate.domainValidationOptions[0].resourceRecordValue is Output<string>
         certCertificate.domainValidationOptions[0].resourceRecordValue
     ],
 ...
@@ -860,13 +539,16 @@ let certValidation = new aws.route53.Record("cert_validation", {
 ```python
 record = aws.route53.Record('validation',
     records=[
+        # Lifting: Access nested property directly, without apply
+        # Type: certificate.domain_validation_options is Output[List]
+        # Result: certificate.domain_validation_options[0].resource_record_value is Output[str]
         certificate.domain_validation_options[0].resource_record_value
     ],
 ...
 ```
 
 {{< notes type="warning" >}}
-Note that in Python, output lifting is implemented by overriding the special `__getattr__` method on resources so that the expression `resource.output` (which results in a call to `resource.__getattr__("output")`) becomes `resource.apply(lambda r: r.output)`. This means that using `hasattr`, which calls `__getattr__` under the hood and looks for an `AttributeError` to determine whether or not a property exists, will not work as expected on resource outputs.
+**Python implementation note**: In Python, output lifting is implemented by overriding the special `__getattr__` method on resources. The expression `resource.output` (which results in a call to `resource.__getattr__("output")`) becomes `resource.apply(lambda r: r.output)`. This means that using `hasattr`, which calls `__getattr__` under the hood and looks for an `AttributeError` to determine whether or not a property exists, will not work as expected on resource outputs.
 {{< /notes >}}
 
 {{% /choosable %}}
@@ -876,10 +558,14 @@ Note that in Python, output lifting is implemented by overriding the special `__
 ```go
 record, err := route53.NewRecord(ctx, "validation", &route53.RecordArgs{
     Records: pulumi.StringArray{
-        // Notes:
+        // Lifting: Access nested property through helper methods
+        // Type: cert.DomainValidationOptions is pulumi.ArrayOutput
+        // Operations:
         // * `Index` looks up an index in an `ArrayOutput` and returns a new `Output`.
-        // * Accessor methods like `ResourceRecordValue` lookup properties of a custom struct `Output` and return a new `Output`.
+        // * `ResourceRecordValue` is an accessor method that looks up a property of a
+        //   custom struct `Output` and returns a new `Output`.
         // * `Elem` dereferences a `PtrOutput` to an `Output`, equivalent to `*`.
+        // Result: pulumi.StringOutput
         cert.DomainValidationOptions.Index(pulumi.Int(0)).ResourceRecordValue().Elem(),
     },
     ...
@@ -896,10 +582,12 @@ if err != nil {
 ```csharp
 var record = new Record("validation", new RecordArgs
 {
-    // Notes:
+    // Lifting: Partial support in C#
+    // Type: cert.DomainValidationOptions is Output<ImmutableArray<T>>
+    // Operations:
     // * `GetAt` looks up an index in an `Output<ImmutableArray<T>>` and returns a new `Output<T>`
-    // * There are not yet accessor methods for referencing properties like `ResourceRecordValue` on an `Output<T>` directly,
-    //   so the `Apply` is still needed for the property access.
+    // * There are not yet accessor methods for referencing properties like `ResourceRecordValue`
+    //   on an `Output<T>` directly, so `Apply` is still needed for the property access.
     Records = cert.DomainValidationOptions.GetAt(0).Apply(opt => opt.ResourceRecordValue!),
 });
 ```
@@ -910,6 +598,7 @@ var record = new Record("validation", new RecordArgs
 
 ```java
 // Lifting is currently not supported in Java.
+// Use apply as shown in the previous section.
 ```
 
 {{% /choosable %}}
@@ -928,14 +617,14 @@ resources:
     properties:
       records:
         # YAML handles inputs and outputs transparently.
+        # Type: cert.domainValidationOptions is an array output
+        # Result: A string output that resolves to the resource record value
         - ${cert.domainValidationOptions[0].resourceRecordValue}
 ```
 
 {{% /choosable %}}
 
 {{< /chooser >}}
-
-This approach is easier to read and write and does not lose any important dependency information that is needed to properly create and maintain the stack. This approach doesn’t work in all cases, but when it does, it can be a great help.
 
 ## Creating new output values
 
@@ -1067,26 +756,17 @@ Outputs:
 Duration: 5s
 ```
 
-The result of the call to {{< pulumi-apply >}} is a new Output<T>, meaning the `url` variable is now of type Output. This variable will wait for the new value to be returned from the {{< pulumi-apply >}} function, and any [dependencies](/docs) of the original output (i.e. the `public DNS` property of the `server` resource) are also kept in the resulting Output<T>.
+The returned value of the call to {{< pulumi-apply >}} is a new `pulumi.Output<string>`, meaning the `url` variable is now of an Output. This variable will wait for the new value to be returned from the {{< pulumi-apply >}} function, and any dependencies of the original output (i.e. the `public DNS` property of the `server` resource) are also kept in the resulting `pulumi.Output<string>`.
 
 ### Outputs and JSON
 
-Often in the course of working with web technologies, you encounter JavaScript Object Notation (JSON) which is a popular specification for representing data. In many scenarios, you'll need to embed resource outputs into a JSON string. In these scenarios, you need to first _wait for the returned_ output, _then_ build the JSON string.
-
-For example, let's say you want to create an S3 bucket and a bucket policy that allows the Lambda service to write objects to that bucket. The example below shows how to use `apply` to create the bucket policy JSON object using an output value from the S3 bucket resource (in this case the bucket's ARN):
-
-{{< example-program path="aws-s3bucket-bucketpolicy" >}}
-
-This operation is so common that Pulumi provides first-class helper functions to make it much easier. These helper functions can:
-
-- convert native objects into JSON strings (i.e., serialization)
-- convert JSON strings into native objects (i.e., deserialization)
+Many cloud resources require JavaScript Object Notation (JSON) documents, such as policies that control access to resources. The Pulumi SDK provides helper methods in most languages to make it easier to work with Pulumi outputs and JSON documents. These helper methods have similar names and function signatures to their plain-value analogues.
 
 #### Converting JSON objects to strings
 
-If you need to construct a JSON string using output values from Pulumi resources, you can easily do so using a JSON stringify helper. These helpers unwrap Pulumi outputs without requiring the use of `apply` and produce JSON string outputs suitable for passing to other resources as inputs.
+If you need to construct a JSON string using output values from Pulumi resources, you can do so using a JSON stringify helper that is defined in the Pulumi SDK. These helpers unwrap Pulumi outputs without requiring the use of `apply` and produce JSON string outputs suitable for passing to other resources as inputs.
 
-In this example, a JSON string for an S3 bucket policy is composed with two outputs: the authenticated user's account ID and the bucket's computed Amazon Resource Name (ARN). Here, since the statement's `Resource` property uses only an ARN, the ARN output can be passed as a value directly. To compose more complex values, you can either use `apply` or [`all`](/docs/concepts/inputs-outputs/all/) to assemble and return a new output or, for string values, use a string helper such as below, which composes the ARN for the `Principal` property using the account ID output:
+The following example demonstrates using helper methods for JSON serialization:
 
 {{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="javascript,typescript,python,go,csharp" >}}
 
@@ -1094,7 +774,7 @@ In this example, a JSON string for an S3 bucket policy is composed with two outp
 
 If you have an output in the form of a JSON string and you need to interact with it like you would a regular JSON object, you can use Pulumi's parsing helper function.
 
-In the example below, you can parse a JSON string into a JSON object and then, inside of an `apply`, manipulate the object to remove all of the policy statements:
+The following example shows how to use a helper method to parse an IAM policy defined as a `pulumi.Output<string>` into a native object and then manipulate that object to remove all of the policy statements:
 
 {{< example-program path="aws-iampolicy-jsonparse" >}}
 
