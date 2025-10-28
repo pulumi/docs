@@ -36,7 +36,7 @@ When you install a provider SDK package (for example, via `npm install @pulumi/a
 Language plugins (also known as language hosts) host programs written in specific languages, enabling the Pulumi engine to execute your Pulumi code without understanding language-specific details. As described in [How Pulumi works](/docs/iac/concepts/how-pulumi-works/#language-hosts), language plugins consist of:
 
 1. A language executor binary named `pulumi-language-<language-name>`, which Pulumi uses to launch the runtime for your program's language (e.g., Node.js or Python). This binary is distributed with the Pulumi CLI.
-1. A language SDK that prepares your program for execution and observes resource registrations.
+1. For all languages except YAML, a language SDK that prepares your program for execution and observes resource registrations.
 
 Pulumi-supported language plugins are installed automatically with the Pulumi CLI. Community-supported language plugins can be installed separately.
 
