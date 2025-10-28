@@ -22,11 +22,11 @@
 }
 
 @mixin gradient-background() {
-    background: linear-gradient(90deg, #be5188 0%, theme("colors.violet.600") 100%);
+    background: linear-gradient(90deg, #be5188 0%, theme("colors.violet.500") 100%);
 }
 
 @mixin gradient-button {
-    @apply relative text-white bg-violet-600 border-violet-600 border-2 rounded-lg cursor-pointer z-auto;
+    @apply relative text-white bg-violet-500 border-violet-500 border-2 rounded-lg cursor-pointer z-auto;
 
     &:hover {
         @apply no-underline;

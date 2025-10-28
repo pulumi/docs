@@ -10,7 +10,7 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
-    title: Enable Self-Service Infrastructure<br/>Without Scaling Your Platform Team
+    title: Enable self-service infrastructure<br/>without scaling your platform team
     description: |
         Looking for <span id="dki-placeholder" style="font-weight: bold;">a platform engineering solution</span>? Build internal developer platforms that let engineers provision infrastructure safely, with policies, guardrails, and full auditability built in.
 

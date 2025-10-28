@@ -10,7 +10,7 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
-    title: One Platform for AWS, Azure, GCP,<br/>and 170+ Providers
+    title: One platform for AWS, Azure, GCP,<br/>and 170+ providers
     description: |
         Looking for <span id="dki-placeholder" style="font-weight: bold;">a multicloud solution</span>? Stop maintaining separate toolchains for each cloud. Manage multicloud and hybrid infrastructure with a single workflow, consistent policies, and unified visibility.
 

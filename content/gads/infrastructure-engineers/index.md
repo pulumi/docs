@@ -10,7 +10,7 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
-    title: Ship Infrastructure 3-5x Faster<br/>With Real Programming Languages
+    title: Ship infrastructure 3-5x faster<br/>with real programming languages
     description: |
         Looking for <span id="dki-placeholder" style="font-weight: bold;">a robust IaC solution</span>? Stop wrestling with YAML and proprietary DSLs. Use TypeScript, Python, Go, or C# to build, test, and deploy cloud infrastructure the way you write application code.
 
