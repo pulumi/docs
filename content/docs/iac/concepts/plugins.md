@@ -29,7 +29,7 @@ Pulumi supports five categories of plugins:
 
 Resource plugins (also known as [providers](/docs/iac/concepts/resources/providers/)) expose standardized interfaces for managing cloud resources. A listing of providers is available in the [Pulumi Registry](/registry/).
 
-When you install a provider SDK package (for example, via `npm install @pulumi/aws` in Node.js), the package manager automatically downloads and installs the provider plugin executable along with the SDK if it's not already cached on your system.
+When you first run `pulumi preview` or `pulumi up`, the Pulumi CLI will install any required providers that are not already in your plugin cache.
 
 ### Language plugins
 
@@ -62,7 +62,7 @@ Tool plugins enable integration between Pulumi and external tools, extending Pul
 
 The Pulumi CLI normally handles plugin installation automatically. For example:
 
-- **Resource plugins** (provider binaries) are installed automatically when you install dependencies in a Pulumi program using your language's package manager (e.g., `npm install`, `pip install`)
+- **Resource plugins** (provider binaries) are installed automatically when you first run `pulumi preview` or `pulumi up` if they are not already present in the plugin cache
 - **Language plugins** are installed with the Pulumi CLI
 - **Policy plugins** are installed with the Pulumi CLI
 - The Pulumi CLI ensures your resource plugins are present when you run your Pulumi program
