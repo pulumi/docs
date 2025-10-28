@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "Cloud Native Denmark 2025"
+  title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
+  url: "https://cloudnativedenmark.dk/schedule/#913410"
+  date: 2025-10-08T15:30:00.000+02:00
 - event: "KCD Sofia 2025"
   title: "AI in a DevOps World"
   url: "https://community.cncf.io/kcd-sofia/"

@@ -12,6 +12,10 @@ aliases:
   - /docs/pulumi-cloud/get-started/
 ---
 
+{{< notes type="info" >}}
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 Pulumi Cloud is a managed service that provides state management, secrets handling, team collaboration, and automation capabilities for infrastructure as code. It works seamlessly with Pulumi's open source IaC tool to help teams build, deploy, and manage cloud infrastructure.
 
 ## Is Pulumi Cloud right for you?

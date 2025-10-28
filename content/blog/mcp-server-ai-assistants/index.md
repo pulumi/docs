@@ -17,6 +17,10 @@ social:
     linkedin: "Discover how integrating AI coding assistants (like Cursor, Copilot, etc.) with Pulumi's Model Context Protocol (MCP) server transforms Infrastructure as Code development. This post walks through a real-world example of provisioning an AKS cluster, showcasing reduced context switching, faster discovery, and tighter feedback loops—all within the editor. Boost your team's productivity and improve the developer experience with AI-assisted IaC."
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 Infrastructure as Code (IaC) has revolutionized how we manage cloud resources, but navigating complex cloud provider APIs, writing boilerplate code, and iterating through deployment cycles can still be time-consuming. Pulumi offers a fantastic developer experience using familiar programming languages. But what if we could make it even *faster* and more intuitive by integrating powerful AI assistants directly into the development loop?
 
 <!--more-->

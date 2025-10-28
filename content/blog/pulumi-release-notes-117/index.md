@@ -16,6 +16,10 @@ social:
     linkedin: "Pulumi Release Notes are out! Take a look at the improvements we have shipped in the last two months across the Pulumi ecosystem! From AI-assisted IaC with our MCP Server to new cross-language components to powerful new capabilities in Pulumi ESC and Insights, these updates deliver on our commitment to making cloud management more powerful, accessible, and secure. Check out our latest release notes to see what's new!"
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 We've been busy over the past two months, shipping significant enhancements across the Pulumi ecosystem. From major improvements to our core IaC platform with Azure Native V3 and cross-language Components to powerful new capabilities in Pulumi ESC and Insights, these updates deliver on our commitment to making cloud management more powerful, accessible, and secure. We're particularly excited about our AI integration through the MCP Server, enabling developers to work with infrastructure in a more intuitive, contextual way. Let's dive into the details of what's new.
 
 <!--more-->
