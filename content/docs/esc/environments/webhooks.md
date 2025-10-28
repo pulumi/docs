@@ -57,7 +57,11 @@ Pulumi Webhooks may be created through any of the following methods:
 
 #### Create an Organization Webhook in the Pulumi Cloud UI
 
-1. In the main Pulumi Cloud navigation, select **Integrations** > **Webhooks**.
+{{% notes "info" %}}
+You must be an admin of the organization to create organization webhooks.
+{{% /notes %}}
+
+1. Select **Settings** > **Integrations** > **Webhooks**.
 1. Select **Create webhook**.
 1. Under Destination, choose **Webhook**, **Slack** or **Microsoft Teams**.
     1. For generic JSON webhooks, provide a display name, payload URL, and optionally a secret.
