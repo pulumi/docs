@@ -19,7 +19,7 @@ Most Pulumi users don't need to understand plugins in depth, as most plugin inst
 If you're interested in learning more about Pulumi internals, see the [Pulumi Developer Documentation](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/plugins.html).
 {{% /notes %}}
 
-Plugins are Pulumi's core extensibility mechanism, allowing the Pulumi engine to communicate in a uniform manner with various languages, resource providers, and other tools. Plugins typically run as separate processes and often use gRPC for communication with the Pulumi engine.
+Plugins are Pulumi's core extensibility mechanism, allowing the Pulumi engine to communicate in a uniform manner with various languages, resource providers, and other tools. Plugins always run as separate processes and mostly use gRPC for communication with the Pulumi engine.
 
 ## Plugin types
 
