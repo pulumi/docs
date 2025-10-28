@@ -60,9 +60,9 @@ kubectl create secret generic pulumi-access-token --from-literal=PULUMI_ACCESS_T
 
 #### Create ClusterSecretStore
 
-You can create a [SecretStore](https://external-secrets.io/main/api/secretstore/) resource to notify External Secrets Operator to use Pulumi ESC as a secret provider for a specific namespace.
+You can create a [SecretStore](https://external-secrets.io/main/api/secretstore/) resource to notify the External Secrets Operator to use Pulumi ESC as a secret provider for a specific namespace.
 
-However if you want to expand the scope to entire cluster, you can use a [ClusterSecretStore](https://external-secrets.io/main/api/clustersecretstore/) resource, instead.
+However, if you want to expand the scope to entire cluster, you can use a [ClusterSecretStore](https://external-secrets.io/main/api/clustersecretstore/) resource instead.
 
 ```yaml
 cat <<EOF | kubectl apply -f -
@@ -87,7 +87,7 @@ EOF
 
 Please replace `${PULUMI_ORG_NAME}`, `${ESC_PROJECT_NAME}`, `${ESC_ENV_NAME}` with your Pulumi organization, project, and environment names.
 
-For demo purposes, we assume that we already have an [ESC environment](/docs/esc/get-started/create-environment/) `my-org/my-project/my-env` with a secret `my-secret` that we want to manage using External Secrets Operator.
+For demo purposes, we assume that we already have an [ESC environment](/docs/esc/get-started/create-environment/) `my-org/my-project/my-env` with a secret `my-secret` that we want to manage using the External Secrets Operator.
 
 ```yaml
 values:
