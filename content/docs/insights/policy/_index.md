@@ -22,6 +22,10 @@ aliases:
 
 Pulumi Policy empowers you to set guardrails to enforce compliance across your entire cloud infrastructure—whether resources are managed by Pulumi IaC, provisioned by other tools like Terraform or CloudFormation, or created manually. Using Policy as Code, you can write flexible business and security policies that protect your organization.
 
+{{% notes type="info" %}}
+Policy as Code is implemented via [analyzer plugins](/docs/iac/concepts/plugins/#analyzer-plugins), which are installed automatically with the Pulumi CLI.
+{{% /notes %}}
+
 Policy enforcement works in two modes:
 
 - **Preventative policies**: Block non-compliant resources before deployment, enforcing compliance on Pulumi stack updates
