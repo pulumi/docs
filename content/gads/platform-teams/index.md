@@ -4,43 +4,46 @@ meta_desc: Infrastructure as Code in any programming language. Enable your team 
 layout: gads-template
 block_external_search_index: true
 
-heading: "Platform Engineering"
+heading: "Platform engineering"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
+    title: Enable Self-Service Infrastructure<br/>Without Scaling Your Platform Team
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a platform engineering solution</span>? Pulumi Cloud is the most comprehensive way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a platform engineering solution</span>? Build internal developer platforms that let engineers provision infrastructure safely, with policies, guardrails, and full auditability built in.
 
 key_features_above:
     items:
-        - title: "Author in any language, deploy to any cloud"
+        - title: "Empower developers with guardrails"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+            Write policies in TypeScript, Python, or Go to define what teams can provision, then let them self-service within boundaries
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Try Pulumi Cloud for FREE"
             link: "https://app.pulumi.com/signup?utm_source=gads-platform-teams"
           features:
-              - title: Code faster
+              - title: Empower developers with guardrails
                 description: |
-                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, and YAML using your IDE and any language ecosystem tools.
+                    Write policies in TypeScript, Python, or Go to define what teams can provision, then let them self-service within boundaries
                 icon: code
                 color: yellow
-              - title: Build on any cloud
+              - title: Prove platform ROI with metrics
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
-                    a complete and consistent SDK interface.
-                icon: global
+                    Track adoption, cost, and compliance across every stack and environment with centralized visibility
+                icon: monitor
                 color: yellow
-              - title: Preview and test changes
+              - title: Reduce ticket backlog
                 description: |
-                    Test and validate infrastructure with standard unit test frameworks and
-                    integration tests. Preview changes before deploying.
-                icon: eye
+                    Developers get infrastructure on-demand while platform engineers maintain control and governance
+                icon: security
+                color: yellow
+              - title: Scale without headcount
+                description: |
+                    Support 10x more teams without growing your platform engineering org
+                icon: rocketship
                 color: yellow
 
 key_features:
@@ -172,16 +175,16 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Enterprise ready.
+    title: Trusted by thousands
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
         by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "150,000+"
+        description: developers
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,000+"
+        description: organizations
     integration:
         number: "170+"
         description: Cloud and service integrations
@@ -262,5 +265,5 @@ case_studies:
           link: /case-studies/snowflake/
           logo: snowflake
           description: |
-            Built a multi-cloud, Kubernetes-based platform to standardize all deployments
+            Built a multicloud, Kubernetes-based platform to standardize all deployments
 ---

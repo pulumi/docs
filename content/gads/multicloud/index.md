@@ -4,43 +4,46 @@ meta_desc: Infrastructure as Code in any programming language. Enable your team 
 layout: gads-template
 block_external_search_index: true
 
-heading: "Multicloud"
+heading: "Multicloud infrastructure"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
+    title: One Platform for AWS, Azure, GCP,<br/>and 170+ Providers
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a multicloud solution</span>? Pulumi Cloud is the most comprehensive way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a multicloud solution</span>? Stop maintaining separate toolchains for each cloud. Manage multicloud and hybrid infrastructure with a single workflow, consistent policies, and unified visibility.
 
 key_features_above:
     items:
-        - title: "Author in any language, deploy to any cloud"
+        - title: "Single workflow across clouds"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+            Use the same languages, tools, and processes whether you're deploying to AWS, Azure, GCP, or on-premises
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Try Pulumi Cloud for FREE"
             link: "https://app.pulumi.com/signup?utm_source=gads-multicloud"
           features:
-              - title: Code faster
+              - title: Single workflow across clouds
                 description: |
-                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, and YAML using your IDE and any language ecosystem tools.
+                    Use the same languages, tools, and processes whether you're deploying to AWS, Azure, GCP, or on-premises
                 icon: code
                 color: yellow
-              - title: Build on any cloud
+              - title: Prevent cloud lock-in
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
-                    a complete and consistent SDK interface.
+                    Abstract cloud-specific differences with reusable components while maintaining access to every provider API
                 icon: global
                 color: yellow
-              - title: Preview and test changes
+              - title: Enforce policies everywhere
                 description: |
-                    Test and validate infrastructure with standard unit test frameworks and
-                    integration tests. Preview changes before deploying.
-                icon: eye
+                    Write governance policies once and apply them consistently across all clouds and environments
+                icon: shield
+                color: yellow
+              - title: Unified secrets management
+                description: |
+                    Built-in secrets encryption works across every provider without separate KMS configuration per cloud
+                icon: lock
                 color: yellow
 
 key_features:
@@ -172,16 +175,16 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Enterprise ready.
+    title: Trusted by thousands
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
         by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "150,000+"
+        description: developers
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,000+"
+        description: organizations
     integration:
         number: "170+"
         description: Cloud and service integrations
@@ -262,5 +265,5 @@ case_studies:
           link: /case-studies/snowflake/
           logo: snowflake
           description: |
-            Built a multi-cloud, Kubernetes-based platform to standardize all deployments
+            Built a multicloud, Kubernetes-based platform to standardize all deployments
 ---

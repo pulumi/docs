@@ -10,13 +10,13 @@ subheading: |
     make managing infrastructure secure, reliable, and hassle-free.
 
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
+    title: Ship Infrastructure 3-5x Faster<br/>With Real Programming Languages
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">an Infrastructure as Code solution</span>? Pulumi Cloud is the most comprehensive way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a robust IaC solution</span>? Stop wrestling with YAML and proprietary DSLs. Use TypeScript, Python, Go, or C# to build, test, and deploy cloud infrastructure the way you write application code.
 
 key_features_above:
     items:
-        - title: "Author in any language, deploy to any cloud"
+        - title: "Write infrastructure like software"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
             Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
@@ -25,22 +25,20 @@ key_features_above:
             text: "Try Pulumi Cloud for FREE"
             link: "https://app.pulumi.com/signup?utm_source=gads-infrastructure-engineers"
           features:
-              - title: Code faster
+              - title: AI-powered infrastructure
                 description: |
-                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, and YAML using your IDE and any language ecosystem tools.
-                icon: code
+                    Generate Pulumi code from natural language or convert existing Terraform with Neo AI
+                icon: bot
                 color: yellow
-              - title: Build on any cloud
+              - title: Deploy to any cloud in minutes
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
-                    a complete and consistent SDK interface.
-                icon: global
+                    170+ providers including AWS, Azure, GCP, Kubernetes, and every major SaaS platform
+                icon: cloud
                 color: yellow
-              - title: Preview and test changes
+              - title: Catch errors before deployment
                 description: |
-                    Test and validate infrastructure with standard unit test frameworks and
-                    integration tests. Preview changes before deploying.
-                icon: eye
+                    Type-checking, unit tests, and policy validation prevent misconfigurations from reaching production
+                icon: shield
                 color: yellow
 
 key_features:
@@ -172,16 +170,16 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Enterprise ready.
+    title: Trusted by thousands
     description: |
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
         by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
-        number: "10,000s"
-        description: of community members
+        number: "150,000+"
+        description: developers
     company:
-        number: "1,000s"
-        description: of companies
+        number: "3,000+"
+        description: organizations
     integration:
         number: "170+"
         description: Cloud and service integrations
