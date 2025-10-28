@@ -14,6 +14,10 @@ tags:
     - data-and-analytics
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 {{% notes type="info" %}}
 You can now get Insights capabilities on all your cloud infrastructure, even resources not managed by Pulumi IaC. [Get started with Insights 2.0](/docs/insights/get-started/)
 

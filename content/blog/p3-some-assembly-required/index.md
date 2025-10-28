@@ -18,6 +18,10 @@ tags:
     - devops
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 Setting up an internal developer platform (IDP) can be a daunting task. There are a lot of tools out there that do some of the work for you, but none of them do all of it. Pulumi P3 is no different. Pulumi Patterns & Practices Platform (P3) is a [reference architecture](https://www.pulumi.com/blog/pulumi-patterns-and-practices/) that we will be describing, and providing code for, through this series of articles.
 
 <!--more-->

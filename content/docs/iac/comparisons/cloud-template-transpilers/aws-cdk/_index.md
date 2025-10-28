@@ -18,6 +18,10 @@ aliases:
 - /docs/iac/concepts/vs/cloud-template-transpilers/aws-cdk/
 ---
 
+{{< notes type="info" >}}
+Pulumi Neo is our AI platform engineer, replacing Pulumi Copilot with expanded capabilities. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 <style>
     main table {
         font-size: 0.94em;

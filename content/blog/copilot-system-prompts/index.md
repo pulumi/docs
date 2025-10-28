@@ -13,6 +13,10 @@ tags:
     - releases
 ---
 
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
+
 We are excited to announce a new feature for Pulumi Copilot: System Prompts. This enhancement empowers organizations to customize Pulumi Copilot's responses for your organization, making your interactions with our AI assistant even more personalized to save you even more time.
 
 <!--more-->

@@ -11,9 +11,13 @@ tags:
     - ai
 
 social:
-    twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits. 
+    twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits.
     linkedin:
 ---
+
+{{< notes type="info" >}}
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+{{< /notes >}}
 
 The cloud promised to revolutionize your business.
 
