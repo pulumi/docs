@@ -96,7 +96,7 @@ You can manage your local plugin cache using the following CLI commands:
 Plugins are deployed through two approaches:
 
 - **Executables** following the naming convention `pulumi-<kind>-<name>` (e.g., `pulumi-resource-aws`)
-- **Directory-based plugins** containing a `PulumiPlugin.yaml` configuration file, where the engine uses the specified runtime to execute the plugin through the language plugin's interface (a "shimless" approach)
+- **Directory-based plugins** containing a `PulumiPlugin.yaml` configuration file, where the engine uses the specified runtime to execute the plugin through the language plugin's interface
 
 For more details about Pulumi plugin architecture and how to contribute to plugin development, see the [Pulumi Developer Documentation](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/plugins.html).
 
