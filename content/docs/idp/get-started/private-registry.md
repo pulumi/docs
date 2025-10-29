@@ -138,6 +138,18 @@ func (f *PetAbstractedOutputs) Annotate(a infer.Annotator) {
 
 {{< /chooser >}}
 
+#### Component usage tracking
+
+Each component in the private registry includes a usage tab that shows which stacks are using that component. This helps platform teams understand component adoption and assess the impact of changes before updating versions.
+
+The usage tab displays:
+
+- Stack name and project
+- Component version in use
+- Last update timestamp
+
+This information helps you identify stacks that may need updating when releasing new component versions and provides visibility into which teams are adopting standardized components.
+
 #### Specifying an Organization
 
 If you're part of multiple organizations and do not have a [default organization](/docs/iac/cli/commands/pulumi_org_set-default/) set, you must specify the org by using the `--publisher` flag.
