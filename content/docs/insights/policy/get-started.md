@@ -4,7 +4,6 @@ meta_desc: Pulumi Policy is a product that provides gated deployments via Policy
            and security compliance when creating cloud resources.
 title: Get Started
 h1: Get Started with Pulumi Policy as Code
-weight: 1
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
@@ -25,314 +24,115 @@ aliases:
   - /docs/iac/packages-and-automation/crossguard/get-started/
 ---
 
-Pulumi Policy is a product that provides gated deployments via Policy as Code.
+Pulumi Policy enforces compliance, security, and best practices across your cloud infrastructure—whether managed by Pulumi, provisioned by other tools, or created manually.
 
-Often organizations want to empower developers to manage their infrastructure yet are concerned about giving them full access. Pulumi Policy allows administrators to provide autonomy to their developers while ensuring compliance to defined organization policies.
+Policy enforcement is applied in two ways:
 
-Using Policy as Code, users can express business or security rules as functions that are executed against resources in their stacks or accounts. Then using Pulumi Policy, organization administrators can apply these rules to particular stacks or accounts within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
+- **Preventative**: Blocking non-compliant resources before deployment during Pulumi stack updates
+- **Audit**: Continuously scan existing resources discovered through [Insights Discovery](/docs/insights/discovery/) to identify violations
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/guides/crossguard#languages).
+This guide walks you through getting started with Pulumi Policy using both preventative and audit policies.
 
-## Terminology
+## Prerequisites
 
-* **Policy Pack** - a set of related policies - i.e. “Security”, “Cost Optimization”, “Data Location”. The categorization of policies into a policy pack is left up to the user.
-* **Policy** - an individual policy - i.e. “prohibit use of instances larger than t3.medium”.
-* **Enforcement Level** - the impact of a policy violation - i.e. “mandatory” or “advisory”.
+To follow this guide, ensure you have:
 
-Learn more about [Policy as Code core concepts](/docs/using-pulumi/crossguard/core-concepts/).
+- Access to Pulumi Cloud with Policy enabled for your organization.
+- **For preventative policies**: One or more Pulumi stacks.
+- **For audit policies**: Cloud accounts connected via [Insights Discovery](/docs/insights/discovery/).
+- Organization admin permissions to configure policies.
 
-## Creating a policy pack
+Don't have access? [Learn about Pulumi editions](/pricing/).
 
-Let's start with authoring your first Policy Pack.
+## Understanding the Policies page
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. [More information on language support for policies](/docs/using-pulumi/crossguard#languages).
+The Policies page is the central hub for managing Pulumi Policy. To get there, navigate to **Management** > **Policies** in the left navigation.
 
-{{< chooser language "typescript,python" >}}
+The page displays two tabs: **Policy Packs** and **Policy Groups**.
 
-{{% choosable language typescript %}}
+### Policy Packs
 
-1. Install prerequisites.
+The Policy Packs tab has two switchable views:
 
-   * [Install Pulumi](/docs/install/)
-   * [Install Node.js](https://nodejs.org/en/download/)
+- **Organization**: Policy packs published to your organization and ready to apply. This includes:
+  - Custom policy packs you've authored and published
+  - Pulumi-provided policy packs you've added from the marketplace
+- **Available**: Pre-authored policy packs from Pulumi that you can add to your organization
 
-1. Create a directory for your new Policy Pack, and change into it.
+Click any policy pack in either view to see its details across three tabs:
 
-    ```sh
-    $ mkdir policypack && cd policypack
-    ```
-
-1. Run the `pulumi policy new` command.
-
-    ```sh
-    $ pulumi policy new aws-typescript
-    ```
-
-1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled.
-
-    Each Policy must have a unique name, description, and validation function. Here we use the `validateResourceOfType` helper so that our validation function is only called for AWS S3 bucket resources. An enforcement level can be set on the Policy Pack (applies to all policies) and/or on each individual policy (overriding any Policy Pack value).
-
-    ```typescript
-    // Create a new Policy Pack.
-    new PolicyPack("policy-pack-typescript", {
-        // Specify the Policies in the Policy Pack.
-        policies: [{
-            // The name for the Policy must be unique within the Pack.
-            name: "s3-no-public-read",
-
-            // The description should document what the Policy does and why it exists.
-            description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
-
-            // The enforcement level can be "advisory", "mandatory", or "disabled". An "advisory" enforcement level
-            // simply prints a warning for users, while a "mandatory" policy will block an update from proceeding, and
-            // "disabled" disables the policy from running.
-            enforcementLevel: "mandatory",
-
-            // The validateResourceOfType function allows you to filter resources. In this case, the rule only
-            // applies to S3 buckets and reports a violation if the acl is "public-read" or "public-read-write".
-            validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
-                if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
-                    reportViolation(
-                        "You cannot set public-read or public-read-write on an S3 bucket. " +
-                        "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html");
-                }
-            }),
-        }],
-    });
-    ```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-1. Install prerequisites.
-
-   * [Install Pulumi](/docs/install/)
-   * [Install Python](https://www.python.org/downloads/)
-
-1. Create a directory for your new Policy Pack, and change into it.
-
-    ```sh
-    $ mkdir policypack && cd policypack
-    ```
-
-1. Run the `pulumi policy new` command.
-
-    ```sh
-    $ pulumi policy new aws-python
-    ```
-
-1. Tweak the Policy Pack in the `__main__.py` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled.
-
-    Each Policy must have a unique name, description, and validation function. An enforcement level can be set on the Policy Pack (applies to all policies) and/or on each individual policy (overriding any Policy Pack value).
-
-    ```python
-    # The validation function is called before each resource is created or updated.
-    # In this case, the rule only applies to S3 buckets and reports a violation if the
-    # acl is "public-read" or "public-read-write".
-    def s3_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
-        if args.resource_type == "aws:s3/bucket:Bucket" and "acl" in args.props:
-            acl = args.props["acl"]
-            if acl == "public-read" or acl == "public-read-write":
-                report_violation(
-                    "You cannot set public-read or public-read-write on an S3 bucket. " +
-                    "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html")
-
-    s3_no_public_read = ResourceValidationPolicy(
-        # The name for the Policy must be unique within the Pack.
-        name="s3-no-public-read",
-
-        # The description should document what the Policy does and why it exists.
-        description="Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
-
-        # The enforcement level can be ADVISORY, MANDATORY, or DISABLED. An ADVISORY enforcement level
-        # simply prints a warning for users, while a MANDATORY policy will block an update from proceeding, and
-        # DISABLED disables the policy from running.
-        enforcement_level=EnforcementLevel.MANDATORY,
-
-        # The validation function, defined above.
-        validate=s3_no_public_read_validator,
-    )
-
-    # Create a new Policy Pack.
-    PolicyPack(
-        name="policy-pack-python",
-        # Specify the Policies in the Policy Pack.
-        policies=[
-            s3_no_public_read,
-        ],
-    )
-    ```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices](/docs/using-pulumi/crossguard/best-practices/) details the best practices for writing a Policy Pack.
-
-### Running locally {#running-locally}
-
-Now let's take a look at how to run the Policy Pack locally against a Pulumi program.
-
-{{< chooser language "typescript,python" >}}
-
-{{% choosable language typescript %}}
-
-1. Use the `--policy-pack` flag with `pulumi preview` or `pulumi up` to specify the path to the directory containing your Policy Pack when previewing/updating a Pulumi program.
-
-    If you don’t have a Pulumi program readily available, you can create a new program for testing by running `pulumi new aws-typescript` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
-
-    ```sh
-    $ mkdir test-program && cd test-program
-    $ pulumi new aws-typescript
-    ```
-
-    In the Pulumi program's directory run:
-
-    ```sh
-    $ pulumi preview --policy-pack <path-to-policy-pack-directory>
-    ```
-
-    If the Pulumi stack is in compliance, we expect the output to tell us which Policy Packs were run.
-
-        Previewing update (dev):
-             Type                 Name          Plan
-         +   pulumi:pulumi:Stack  test-dev      create
-         +   └─ aws:s3:Bucket     my-bucket     create
-
-        Resources:
-            + 2 to create
-
-        Policy Packs run:
-            Name                                                 Version
-            aws-typescript (/Users/user/path/to/policy-pack)     (local)
-
-1. We can then edit the stack code to specify the ACL to be public-read.
-
-    ```typescript
-    const bucket = new aws.s3.Bucket("my-bucket", {
-        acl: "public-read",
-    });
-    ```
-
-1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
-
-        Previewing update (dev):
-             Type                 Name          Plan       Info
-         +   pulumi:pulumi:Stack  test-dev      create     1 error
-         +   └─ aws:s3:Bucket     my-bucket     create
-
-        Diagnostics:
-          pulumi:pulumi:Stack (test-dev):
-            error: preview failed
-
-        Policy Violations:
-            [mandatory]  aws-typescript v0.0.1  s3-no-public-read (my-bucket: aws:s3/bucket:Bucket)
-            Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.
-            You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-1. Use the `--policy-pack` flag with `pulumi preview` or `pulumi up` to specify the path to the directory containing your Policy Pack when previewing/updating a Pulumi program.
-
-    If you don’t have a Pulumi program readily available, you can create a new program for testing by running `pulumi new aws-python` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
-
-    ```sh
-    $ mkdir test-program && cd test-program
-    $ pulumi new aws-python
-    ```
-
-    In the Pulumi program's directory, run:
-
-    ```sh
-    $ pulumi preview --policy-pack <path-to-policy-pack-directory>
-    ```
-
-    If the Pulumi stack is in compliance, we expect the output to tell us which Policy Packs were run.
-
-        Previewing update (dev):
-             Type                 Name          Plan
-         +   pulumi:pulumi:Stack  test-dev      create
-         +   └─ aws:s3:Bucket     my-bucket     create
-
-        Resources:
-            + 2 to create
-
-        Policy Packs run:
-            Name                                             Version
-            aws-python (/Users/user/path/to/policy-pack)     (local)
-
-1. We can then edit the stack code to specify the ACL to be public-read.
-
-    ```python
-    bucket = s3.Bucket('my-bucket', acl="public-read")
-    ```
-
-1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
-
-        Previewing update (dev):
-             Type                 Name          Plan       Info
-         +   pulumi:pulumi:Stack  test-dev      create     1 error
-         +   └─ aws:s3:Bucket     my-bucket     create
-
-        Diagnostics:
-          pulumi:pulumi:Stack (test-dev):
-            error: preview failed
-
-        Policy Violations:
-            [mandatory]  aws-python v0.0.1  s3-no-public-read (my-bucket: aws:s3/bucket:Bucket)
-            Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.
-            You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-Now that your Policy Pack is ready to go, let's enforce the pack across your organization.
-
-## Enforcing a policy pack
+- **Overview**: Displays pack metadata including name, publisher, version, source, and tags
+- **Policies**: Lists individual policies in the pack with their descriptions and enforcement levels
+- **Entities Applied**: Shows which stacks or accounts use this pack and which policy groups apply it (disabled in the Available view)
 
 {{% notes type="info" %}}
-Server-side enforcement of policy packs across an organization is only available in **Pulumi Business Critical**. See [pricing](/pricing/) for more details.
+You may not see any packs in the Organization view until you add some from the Available view or publish your own.
 {{% /notes %}}
 
-Once you’ve validated the behavior of your policies, an organization administrator can publish them to Pulumi Cloud to be enforced across your organization. Any Pulumi client (a developer’s workstation, CI/CD tool, etc) that interacts with a stack via Pulumi Cloud will have policy enforcement during the execution of `preview` and `update`. Policy Packs are versioned by Pulumi Cloud so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
+### Policy Groups
 
-1. From within the Policy Pack directory, run the following command to publish your pack:
+Policy groups enforce policy packs across stacks or accounts within your organization. The Policy Groups tab displays two types:
 
-    ```sh
-    $ pulumi policy publish <org-name>
-    ```
+- **Preventative Policy Groups**: Automatically apply policy packs to stacks during `pulumi preview` or `pulumi up`
+- **Audit Policy Groups**: Continuously apply policy packs to discovered cloud resources across accounts
 
-    The output will tell you what version of the Policy Pack you just published. Pulumi Cloud provides a monotonic version number for Policy Packs.
+The policy groups table shows:
 
-    ```
-    Obtaining policy metadata from policy plugin
-    Compressing policy pack
-    Uploading policy pack to Pulumi Cloud
-    Publishing my-policy-pack to myorg
-    Published as version 1.0.0
-    ```
+- **Name**: The policy group identifier, with default groups marked with a badge
+- **Policy Group Type**: Either Preventative (for stacks) or Audit (for accounts)
+- **Entities Applied**: Number of stacks or accounts governed by this group
+- **Policy Packs**: Number of policy packs included in this group
 
-    The Policy Pack version is specified in the `package.json` file for TypeScript/JavaScript (Node.js) packs and in the `PulumiPolicy.yaml` file for Python packs. A version can only be used one time and once published the version can never be used by that Policy Pack again.
+Your organization includes a default policy group for each type: one for preventative policies (applies to all stacks) and one for audit policies (applies to all accounts). These default groups automatically include new stacks and accounts as they're created.
 
-    <!-- markdownlint-disable ul -->
-1. You can enable this Policy Pack to your organization’s default Policy Group by running:
+#### Creating a preventative policy group
 
-    ```sh
-    $ pulumi policy enable <org-name>/<policy-pack-name> <latest|version>
-    ```
+To create a policy group for stacks:
 
-    For example, to enable the Policy Pack created in the previous step:
+1. Click **Create preventative policy group**
+1. **Name**: Enter a descriptive name for the policy group
+1. **Entities**: Click **Choose stacks** to select which stacks this group will govern
+1. **Policy Packs**: Click **Select policy packs** to choose which policy packs to enforce
+1. Configure enforcement level (Advisory or Mandatory) for each policy pack
+1. Click **Save Policy Group**
 
-    ```sh
-    $ pulumi policy enable myorg/my-policy-pack latest
-    ```
+#### Creating an audit policy group
 
-    The CLI by default enables the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can use the `--policy-group` flag.
+To create a policy group for cloud accounts:
 
-Learn more about Policy Groups and other core concepts in the [Policy as Code core concepts](/docs/using-pulumi/crossguard/core-concepts/) documentation.
+1. Click **Create audit policy group**
+1. **Name**: Enter a descriptive name for the policy group
+1. **Entities**: Click **Choose accounts** to select which cloud accounts this group will scan
+1. **Policy Packs**: Click **Select policy packs** to choose which policy packs to enforce
+1. Configure enforcement level (Advisory or Mandatory) for each policy pack
+1. Click **Save Policy Group**
 
-## Next steps
+## Monitor compliance
 
-Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [Pulumi Policy guide](/docs/using-pulumi/crossguard/).
+After setting up your policy groups, view violations and take action from the Policy Findings page.
+
+To access policy findings:
+
+1. Navigate to **Policy Findings** in the left navigation
+1. View compliance issues organized by policy, resource, or account
+
+Each policy violation creates an issue that you can act on:
+
+- **Assign to team members**: Delegate remediation to the appropriate owner
+- **Fix violations yourself**: Update the non-compliant resources directly
+- **Assign to Pulumi Neo**: Let Pulumi's AI agent analyze and fix the violation automatically
+
+This workflow—setting up policies, monitoring findings, and taking action—forms the core compliance management cycle in Pulumi Policy.
+
+For detailed information on managing findings, see [Policy Violations](/docs/insights/policy/policy-violations/).
+
+## Learn more
+
+To deepen your understanding of Pulumi Policy:
+
+- **Write custom policies**: [Authoring Guide](/docs/insights/policy/authoring/)
+- **Explore pre-built policy packs**: [Pre-built Policy Packs](/docs/insights/policy/pre-built-packs/)
+- **View and manage policy findings**: [Policy Violations](/docs/insights/policy/policy-violations/)
+- **Learn about enforcement modes**: [Preventative vs. Audit Policies](/docs/insights/policy/preventative-vs-audit-policies/)
+- **Configure policy pack settings**: [Policy Configuration](/docs/insights/policy/configuration/)
+- **Understand core concepts in depth**: [Policy Concepts](/docs/using-pulumi/crossguard/core-concepts/)
