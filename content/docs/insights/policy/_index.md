@@ -80,13 +80,19 @@ Before configuring policies, ensure:
 
 For more details about policy configuration and enforcement modes, see [Preventative vs. Audit Policies](/docs/insights/policy/preventative-vs-audit-policies/).
 
-## Policy violations
+## Policy findings
 
-When policies are enforced, violations appear on the **Policy Violations** page in Pulumi Cloud, providing a centralized view across your organization. You can filter and group violations by policy pack, project, stack/account, and enforcement level.
+Policy findings provide a centralized hub for managing compliance across your organization. The **Policy Findings** page in Pulumi Cloud offers three distinct views:
 
-![Insights Policy Violations](/docs/insights/assets/insights-policy-violations.png)
+- **Overview tab:** High-level compliance metrics and trends for your organization
+- **Compliance tab:** Policy-centric view for auditing and compliance reporting
+- **Issues tab:** Collaborative workspace for triaging, assigning, and resolving policy issues with support for priorities, assignments, and lifecycle management
 
-Policy violations can also be accessed programmatically via the [Pulumi API](/docs/pulumi-cloud/cloud-rest-api/#list-policy-violations) for custom workflows and integrations.
+For organizations using Pulumi Neo, policy issues can be automatically remediated through AI-powered code generation that creates pull requests with the necessary fixes.
+
+![Policy Findings](/images/docs/guides/crossguard/policy-findings-overview.png)
+
+Learn more about [Policy Findings](/docs/insights/policy/policy-findings/) or access them programmatically via the [Policy Results API](/docs/reference/cloud-rest-api/policy-results/).
 
 ## Compliance ready policy packs
 
