@@ -5,25 +5,6 @@
 {{ define "main" }}
 {{ $pageContext := . }}
 
-<!-- <section id="demo-video" class="container mx-auto my-16 flex flex-col">
-    <div class="flex flex-col lg:flex-row px-8 w-full py-24 px-12"
-        style="background: linear-gradient(90deg, white 0%, #ddd6fe 50%, white 100%);">
-        <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first flex flex-col justify-center">
-            <h5 class="text-gray-800 text-display text-2xl">{{ .Params.preview.header | markdownify }}</h5>
-            <p class="text-gray-600 text-xl mb-8">{{ .Params.preview.description | markdownify }}</p>
-            <pulumi-hubspot-form form-id="{{ .Params.preview.hubspotID }}"
-                class="newsletter newsletter-dark-border insights-preview-form"></pulumi-hubspot-form>
-        </div>
-        <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-            <div id="video" style="position: relative; top: -100px;"></div>
-            <div class="responsive-video-container video-16-9 rounded-xl shadow-2xl relative h-0 overflow-hidden">
-                <iframe src="https://www.youtube.com/embed/{{ .Params.preview.videoID }}?rel=0"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""
-                    title="{{ .Params.preview.title }}"></iframe>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <section id="description" class="container mx-auto my-32 flex flex-col">
     <h4 class="hidden lg:block xl:hidden text-center mb-4">{{ .Params.overview.title }}</h4>
@@ -47,27 +28,10 @@
             </div>
         </div>
     </div>
-    <!-- <div class="flex flex-wrap justify-content items-stretch text-left mt-16">
-        {{ range $item := .Params.overview.items }}
-        <div class="w-full lg:w-1/3 p-3">
-            <div class="h-full card bg-white p-12">
-                <div class="icon-section my-">
-                    {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
-                </div>
-                <div class="mt-8">
-                    <h5>{{ $item.title }}</h5>
-                </div>
-                <div>
-                    <p>{{ $item.description | markdownify }}</p>
-                </div>
-            </div>
-        </div>
-        {{ end }}
-    </div> -->
 </section>
 
 
-<section id="search " class="container my-32 mx-auto text-center px-6">
+<section id="search " class="container my-32 mx-auto px-6">
     <h2 class="text-center">Key Features</h2>
     {{ range $index, $feature := .Params.features }}
     {{ $order := "lg:order-first lg:pr-4" }}
@@ -76,11 +40,11 @@
     {{ $order = "lg:order-last lg:pl-4"}}
     {{ $padding = "lg:pr-16" }}
     {{ end }}
-    <div class="container mx-auto flex flex-col text-center items-center lg:flex-row my-32">
+    <div class="container mx-auto flex flex-col lg:flex-row my-32">
         <div class="w-full lg:w-1/2 lg:content-center {{ $padding }}">
             <h3 class="m-0 p-0">{{ $feature.header }}</h3>
             <h4 class="p-0 m-0 text-gray-800">{{ $feature.subheader }}</h4>
-            <div class="max-w-4xl mx-auto my-8">{{ $feature.body | markdownify }}</div>
+            <div class="my-8">{{ $feature.body | markdownify }}</div>
             {{ if $feature.items }}
             <ul class="text-left list-disc pl-6 space-y-2">
                 {{ range $item := $feature.items }}
@@ -90,17 +54,17 @@
             {{ end }}
         </div>
         <div class="w-full lg:w-1/2 {{ $order }}">
-            <img class="mx-auto" src="{{ $feature.graphic }}" />
+            <img class="mx-auto shadow-lg rounded-lg" src="{{ $feature.graphic }}" />
         </div>
     </div>
     {{ end }}
 </section>
 
-<section id="compliance-frameworks" class="container my-32 mx-auto text-center">
+<section id="compliance-frameworks" class="container my-32 mx-auto">
     {{ with .Params.compliance_frameworks }}
     <div class="card p-6 lg:p-16 bg-white">
-        <h2 class="m-0 p-0">{{ .title }}</h2>
-        <p class="mx-auto">{{ .description | markdownify }}</p>
+        <h2 class="m-0 p-0 text-center">{{ .title }}</h2>
+        <p>{{ .description | markdownify }}</p>
         {{ if .items }}
         <div class="hidden md:flex flex-wrap justify-center items-center gap-8 mt-12 mb-8">
             {{ range $item := .items }}
@@ -110,7 +74,7 @@
             {{ end }}
         </div>
         {{ end }}
-        <div class="mt-12">
+        <div class="mt-12 text-center">
             <a href="/docs/reference/cloud-rest-api/policy-packs/" class="btn-primary">Explore the Policy Packs</a>
         </div>
     </div>
@@ -119,7 +83,7 @@
 
 <!-- spear quote -->
 <section class="bg-gradient-to-r from-white from-0% via-violet-100 via-50% to-white to-100% py-16">
-    <div class="container text-center mx-auto w-full md:w-2/3 mb-4 px-6">
+    <div class="container mx-auto w-full md:w-2/3 mb-4 px-6">
         {{ with .Params.customer_quotes.spear }}
         <p class="text-xl description">{{ .text | markdownify }}</p>
         <p class="text-lg font-semibold description">{{ .author }}</p>
@@ -136,7 +100,7 @@
             <div class="rounded-lg bg-white flex flex-wrap mx-auto p-4">
                 {{ range $feature := .Params.governance.items }}
                 <div class="w-1/2 md:w-1/3 lg:w-1/3 p-4">
-                    <div class="text-center h-full">
+                    <div class="h-full">
                         <h5>{{ $feature.header }}</h5>
                         <p>{{ $feature.body }}</p>
                     </div>
@@ -144,28 +108,28 @@
                 {{ end }}
             </div>
         </div>
-        <div class="mt-8 text-center">
-            <img class="mx-auto w-full rounded-xl shadow-lg" src="{{ .Params.governance.image }}"
+        <div class="mt-8">
+            <img class="w-full rounded-xl shadow-lg" src="{{ .Params.governance.image }}"
                 alt="{{ .Params.governance.title }}" />
         </div>
     </div>
 </section>
 
-<section id="pricing" class="container my-32 mx-auto text-center">
+<section id="pricing" class="container my-32 mx-auto">
     {{ with .Params.pricing }}
     <div class="card p-6 lg:p-16 bg-white">
-        <h2 class="m-0 p-0">{{ .title }}</h2>
-        <p class="mx-auto">{{ .description | markdownify }}</p>
-        <div class="mt-12">
+        <h2 class="m-0 p-0 text-center">{{ .title }}</h2>
+        <p>{{ .description | markdownify }}</p>
+        <div class="mt-12 text-center">
             <a href="/pricing" class="btn-secondary">View Pricing</a>
         </div>
     </div>
     {{ end }}
 </section>
 
-<section id="learn" class="container mx-auto text-center my-32 px-6">
-    <div class="max-w-5xl mx-auto text-center px-6">
-        <h2>{{ .Params.learn.title }}</h2>
+<section id="learn" class="container mx-auto my-32 px-6">
+    <div class="px-6">
+        <h2 class="text-center">{{ .Params.learn.title }}</h2>
     </div>
     <div class="flex flex-wrap justify-content items-stretch text-left my-4">
         {{ range $index, $item := .Params.learn.items }}

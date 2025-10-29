@@ -23,8 +23,8 @@ preview:
 
 overview:
     header: Complete visibility and control for your cloud
-    title: See everything. Control everything. Ship with confidence.
-    subtitle: Continuous Compliance, By Construction
+    title: Continuous Compliance, By Construction
+    subtitle: See everything. Control everything. Ship with confidence.
     body: |
       Stop compliance violations before they become problems. Pulumi Insights & Governance provides a complete lifecycle for auditing existing infrastructure, fixing violations with AI-powered remediation, and preventing future infrastructure issues using policy-as-code guardrails.
       
@@ -53,7 +53,9 @@ overview:
 features:
   - header: Audit Existing Infrastructure Against Compliance Standards
     body: |
-      Continuous audit scans evaluate your entire infrastructure, whether managed by Pulumi, Terraform, CloudFormation, or created manually, against industry frameworks without disrupting deployment pipelines. Non-blocking compliance checks provide instant visibility into your security posture across CIS Controls, NIST SP 800-53, HITRUST CSF, and PCI DSS standards.
+      Works with ANY infrastructure—Pulumi, Terraform, CloudFormation, or manual deployments.
+
+      Continuous audit scans evaluate your entire infrastructure against industry frameworks without disrupting deployment pipelines. Non-blocking compliance checks provide instant visibility into your security posture across CIS Controls, NIST SP 800-53, HITRUST CSF, and PCI DSS standards.
     items:
       - Pre-built compliance frameworks ready to deploy
       - Evaluate existing infrastructure on demand with audit mode
@@ -86,8 +88,8 @@ features:
     - Configuration change history
     - Resource relationship mapping
     graphic: /images/product/insights-search.png
-  - header: Embed Governance Into Developer Workflows
-    body: Security and compliance become enablers, not blockers. Developers get clear policy guidance during local development, immediate feedback during deployments, and AI-assisted remediation when issues arise. Platform teams prove measurable value through compliance metrics while maintaining development velocity.
+  - header: Give Developers AI-Powered Guardrails, Not Red Tape
+    body: Developers get immediate policy feedback during deployment, with AI-generated fixes when issues arise. Platform teams get measurable compliance improvements without becoming bottlenecks. Policy enforcement accelerates development velocity.
     items:
     - Shift-left security with pre-deployment validation
     - Clear, actionable error messages
