@@ -97,6 +97,14 @@ features:
 compliance_frameworks:
     title: Pre-Built Compliance Frameworks Ready to Deploy
     description: Stop building compliance policies from scratch. Deploy expert-authored policy packs that map directly to industry standards and audit requirements.
+    items:
+    - /images/product/cis.png
+    - /images/product/nist.png
+    - /images/product/pci-dss.png
+    - /images/product/hitrust.png
+    - /images/product/aicpa.png
+    - /images/product/fedramp.png
+    - /images/product/iso-20071.png
 
 governance:
     title: The Complete Governance Lifecycle

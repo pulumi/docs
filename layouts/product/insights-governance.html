@@ -25,7 +25,7 @@
     </div>
 </section> -->
 
-<section id="description" class="container mx-auto my-16 flex flex-col">
+<section id="description" class="container mx-auto my-32 flex flex-col">
     <h4 class="hidden lg:block xl:hidden text-center mb-4">{{ .Params.overview.title }}</h4>
     <h5 class="hidden lg:block xl:hidden text-center mt-4 mb-8">{{ .Params.overview.subtitle | markdownify }}</h5>
     <div class="flex flex-col lg:flex-row px-8">
@@ -67,7 +67,7 @@
 </section>
 
 
-<section id="search " class="container my-20 mx-auto text-center px-6">
+<section id="search " class="container my-32 mx-auto text-center px-6">
     <h2 class="text-center">Key Features</h2>
     {{ range $index, $feature := .Params.features }}
     {{ $order := "lg:order-first lg:pr-4" }}
@@ -76,7 +76,7 @@
     {{ $order = "lg:order-last lg:pl-4"}}
     {{ $padding = "lg:pr-16" }}
     {{ end }}
-    <div class="container mx-auto flex flex-col text-center items-center lg:flex-row my-16">
+    <div class="container mx-auto flex flex-col text-center items-center lg:flex-row my-32">
         <div class="w-full lg:w-1/2 lg:content-center {{ $padding }}">
             <h3 class="m-0 p-0">{{ $feature.header }}</h3>
             <h4 class="p-0 m-0 text-gray-800">{{ $feature.subheader }}</h4>
@@ -96,20 +96,29 @@
     {{ end }}
 </section>
 
-<section id="compliance-frameworks" class="container my-20 mx-auto text-center">
+<section id="compliance-frameworks" class="container my-32 mx-auto text-center">
     {{ with .Params.compliance_frameworks }}
     <div class="card p-6 lg:p-16 bg-white">
         <h2 class="m-0 p-0">{{ .title }}</h2>
         <p class="mx-auto">{{ .description | markdownify }}</p>
+        {{ if .items }}
+        <div class="hidden md:flex flex-wrap justify-center items-center gap-8 mt-12 mb-8">
+            {{ range $item := .items }}
+            <div class="flex items-center justify-center h-16">
+                <img src="{{ $item }}" alt="Compliance Framework" class="h-full object-contain" />
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
         <div class="mt-12">
-            <a href="/docs/reference/cloud-rest-api/policy-packs/" class="btn-secondary">Explore the Policy Packs</a>
+            <a href="/docs/reference/cloud-rest-api/policy-packs/" class="btn-primary">Explore the Policy Packs</a>
         </div>
     </div>
     {{ end }}
 </section>
 
 <!-- spear quote -->
-<section class="bg-gradient-to-r from-white from-0% via-violet-100 via-50% to-white to-100% py-8">
+<section class="bg-gradient-to-r from-white from-0% via-violet-100 via-50% to-white to-100% py-16">
     <div class="container text-center mx-auto w-full md:w-2/3 mb-4 px-6">
         {{ with .Params.customer_quotes.spear }}
         <p class="text-xl description">{{ .text | markdownify }}</p>
@@ -119,9 +128,9 @@
     </div>
 </section>
 
-<section id="governance" class="my-20 px-4">
+<section id="governance" class="my-32 px-4">
     <div class="container mx-auto">
-        <h2 class="text-center mb-4">{{ .Params.governance.title }}</h2>
+        <h2 class="text-center mb-24">{{ .Params.governance.title }}</h2>
         <div class="p-0.5 rounded-lg"
             style="background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);">
             <div class="rounded-lg bg-white flex flex-wrap mx-auto p-4">
@@ -136,13 +145,13 @@
             </div>
         </div>
         <div class="mt-8 text-center">
-            <img class="mx-auto rounded-xl shadow-lg" src="{{ .Params.governance.image }}"
+            <img class="mx-auto w-full rounded-xl shadow-lg" src="{{ .Params.governance.image }}"
                 alt="{{ .Params.governance.title }}" />
         </div>
     </div>
 </section>
 
-<section id="pricing" class="container my-20 mx-auto text-center">
+<section id="pricing" class="container my-32 mx-auto text-center">
     {{ with .Params.pricing }}
     <div class="card p-6 lg:p-16 bg-white">
         <h2 class="m-0 p-0">{{ .title }}</h2>
@@ -154,7 +163,7 @@
     {{ end }}
 </section>
 
-<section id="learn" class="container mx-auto text-center mt-16 px-6">
+<section id="learn" class="container mx-auto text-center my-32 px-6">
     <div class="max-w-5xl mx-auto text-center px-6">
         <h2>{{ .Params.learn.title }}</h2>
     </div>
