@@ -1,5 +1,5 @@
 ---
-title: "Day 2 Operations: Drift Detection and Remediation | IDP Workshop"
+title: "Day 2 Operations: Drift Detection and Remediation"
 allow_long_title: true
 meta_desc: "Implement automated drift detection for your IDP using Pulumi. Maintain infrastructure integrity with scheduled checks and real-time alerts."
 meta_image: meta.png
@@ -22,7 +22,7 @@ tags:
 
 social:
     twitter: |
-        Day 2 Operations: Drift Detection and Remediation | IDP Workshop
+        Day 2 Operations: Drift Detection and Remediation
 
         Learn how to maintain infrastructure integrity with automated drift detection:
         • Understand drift in cloud infrastructure
@@ -34,7 +34,7 @@ social:
 
         #IDP #DriftDetection #PlatformEngineering #InfrastructureAsCode #DevOps
     linkedin: |
-        **Day 2 Operations: Drift Detection and Remediation | IDP Workshop**
+        **Day 2 Operations: Drift Detection and Remediation**
 
         In the fourth post of our IDP Best Practices series, we explore the critical day 2 operations that ensure your infrastructure stays aligned with your intended configuration long after initial deployment.
 

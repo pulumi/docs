@@ -4,6 +4,10 @@ meta_desc: This page provides an list of available versions of the Pulumi CLI.
 menu:
   install:
     weight: 1
+  iac:
+    name: Available versions
+    weight: 4
+    parent: iac-cli
 
 aliases:
 - /docs/iac/download-install/versions/
@@ -24,6 +28,7 @@ The current stable version of Pulumi is **{{< latest-version >}}**.
         </tr>
     </thead>
     <tbody>
+        {{< changelog-table-row version="3.204.0" date="2025-10-23" showChecksum="true" >}}
         {{< changelog-table-row version="3.203.0" date="2025-10-16" showChecksum="true" >}}
         {{< changelog-table-row version="3.202.0" date="2025-10-10" showChecksum="true" >}}
         {{< changelog-table-row version="3.201.0" date="2025-10-06" showChecksum="true" >}}

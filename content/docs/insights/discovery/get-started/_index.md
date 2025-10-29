@@ -13,7 +13,7 @@ menu:
 aliases:
   - /docs/insights/get-started/
 ---
- 
+
 Pulumi Insights is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
 Pulumi Insights gives you the tools to:
