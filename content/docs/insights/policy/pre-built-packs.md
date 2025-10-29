@@ -30,7 +30,10 @@ The following pre-built policy packs are available today out of the box in Pulum
 
 | Framework | Supported Cloud Providers | Description |
 | ----- | ----- | ----- |
+| **CIS 8.1** | AWS, Azure, Google Cloud | Enforces CIS 8.1 controls to help organizations implement industry-recognized security best practices and benchmarks across multiple cloud providers. |
 | **HITRUST CSF 11.5** | AWS, Azure, Google Cloud | Provides predefined controls that align cloud resources with HITRUST CSF requirements, helping organizations enforce security and compliance baselines across multiple providers. |
+| **NIST SP 800-53** | AWS | Enforces NIST SP 800-53 rev. 5 security and privacy controls for AWS resources, helping federal agencies and organizations meet rigorous compliance requirements. |
+| **PCI DSS v4.0.1** | AWS | Enforces PCI DSS v4.0.1 compliance controls for AWS resources, ensuring payment card data security and helping organizations meet payment card industry standards. |
 | **Pulumi Best Practices** | AWS, Azure, Google Cloud | Offers a foundational set of recommended governance and security controls, serving as a strong starting point for organizations seeking comprehensive security coverage. |
 
 ### Enabling Pulumi policy packs for your organization
