@@ -1,7 +1,7 @@
 ---
-title: terraform-state
 title_tag: terraform-state Pulumi ESC Provider
 meta_desc: The terraform-state provider enables you to read outputs from Terraform state files stored in S3 or Terraform Cloud.
+title: terraform-state
 h1: terraform-state
 menu:
   esc:
@@ -11,12 +11,11 @@ menu:
 aliases:
   - /docs/pulumi-cloud/esc/providers/terraform-state/
   - /docs/esc/providers/terraform-state/
-
 ---
 
 The `terraform-state` provider enables you to read outputs from Terraform state files stored in S3 or Terraform Cloud.
 
-## Examples
+## Example
 
 ### S3 backend
 
@@ -91,3 +90,4 @@ The `backend` property must contain exactly one of the following:
 | `outputs` | object | A map of all outputs from the Terraform state. |
 
 The provider preserves the sensitive flag for any outputs marked as sensitive in the Terraform state.
+
