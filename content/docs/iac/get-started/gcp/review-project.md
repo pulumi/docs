@@ -20,8 +20,6 @@ Let's review some of the generated project files:
 
 {{% choosable language "javascript,typescript,python,go,csharp,java" %}}
 
-<!-- Please note that all the bullet points (like the line below) MUST NOT have any tabs before the hyphen, otherwise Hugo will think it's code that needs syntax highlighting applied. -->
-
 - `Pulumi.yaml` defines the [project](/docs/concepts/projects/).
 
 {{% /choosable %}}
@@ -48,7 +46,7 @@ Let's review some of the generated project files:
 
 {{% choosable language "javascript,typescript,go,csharp,java" %}}
 
-- {{< langfile >}} is the Pulumi program that defines your stack resources.
+- <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
 
 {{% /choosable %}}
 

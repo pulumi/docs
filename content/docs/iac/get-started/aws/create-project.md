@@ -229,24 +229,23 @@ If you list the contents of your directory, you'll see some key files:
 
 {{% choosable language java %}}
 
-    - `src/main/java/myproject` is the project's Java package root
+- `src/main/java/myproject` is the project's Java package root
 
 {{% /choosable %}}
 
 {{% choosable language "javascript,typescript,python,go,csharp,java" %}}
 
-    - {{< langfile >}} contains your project's main code that declares a new S3 bucket
-    - `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project like its name
+- <span>{{< langfile >}}</span> contains your project's main code that declares a new S3 bucket
+- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project like its name
 
 {{% /choosable %}}
 {{% choosable language "yaml" %}}
 
-    - `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project, like its name,
-  as well as declaring your project's resources
+- `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project, like its name, as well as declaring your project's resources
 
 {{% /choosable %}}
 
-    - `Pulumi.dev.yaml` contains configuration values for the stack you just initialized
+- `Pulumi.dev.yaml` contains configuration values for the stack you just initialized
 
 Now examine the code in {{< langfile >}}:
 
