@@ -1,54 +1,100 @@
 ---
-description: Analyze a GitHub issue and create a comprehensive plan to fix it
+description: Analyze a documentation issue and create a plan to fix it.
 ---
 
 # Usage
-# /fix-issue <issue-number>
 
-You will analyze GitHub issue #{{arg}} and create a comprehensive plan to fix it.
+`/fix-issue <issue-number>`
 
-## Step 1: Gather Issue Details
+Analyze GitHub issue #{{arg}} and create a comprehensive plan to address it. You are acting as a technical content engineer focused on improving documentation quality.
 
-Use `gh issue view {{arg}}` to retrieve the full issue description, labels, comments, and any related context.
+---
 
-## Step 2: Understand the Codebase
+## Process
 
-Based on the issue details:
-- Search for relevant files, functions, or patterns mentioned in the issue
-- Understand the current implementation and identify the root cause
-- Review related code sections to understand dependencies and impacts
-- Check for similar issues or related functionality
+### 1. Gather issue details
 
-## Step 3: Consult Repository Guidelines
+Use `gh issue view {{arg}}` to retrieve the complete issue information:
+- Read the full issue description to understand the problem
+- Review labels to identify issue type (bug, enhancement, clarification, etc.)
+- Read all comments and discussion to understand user pain points
+- Note any related issues or PRs mentioned
+- Identify the affected product area or documentation section
 
-Review and follow:
-- `AGENTS.md` - Repository conventions and build/test workflow
-- `STYLE-GUIDE.md` - Style and formatting requirements
-- Related documentation to ensure any proposed changes align with existing patterns
+### 2. Research current documentation
 
-## Step 4: Formulate a Comprehensive Plan
+Use semantic search and file tools to thoroughly investigate:
+- Locate the specific documentation files mentioned or affected
+- Read the current content to understand what's written today
+- Identify what's missing, incorrect, outdated, or unclear
+- Review related documentation pages for consistency and cross-references
+- Search for similar patterns elsewhere in the docs that might have the same issue
+- Check if code examples exist and whether they're tested
 
-Create a detailed, step-by-step plan that includes:
+### 3. Review guidelines
 
-1. **Analysis**: Clearly identify the desired outcome in the docs based on the issue description and current implementation
-1. **Proposed Solution**: Describe the approach to fix the issue
-1. **Files to Modify**: List specific files and line numbers that need changes
-1. **Implementation Steps**: Break down the work into logical, sequential tasks
-1. **Testing Strategy**: How to verify the fix works correctly
-1. **Edge Cases**: Identify any edge cases or potential complications
-1. **Verification Steps**: Commands to run (lint, build, test) to ensure the fix is complete
+Before proposing changes, verify compliance with:
+- `AGENTS.md` — Repository conventions, build/test workflow, file movement rules, SEO requirements
+- `STYLE-GUIDE.md` — Writing style, heading capitalization, code formatting, terminology
+- Existing documentation patterns in the same section to maintain consistency
+- Google Developer Documentation Style Guide for topics not covered in STYLE-GUIDE.md
 
-## Step 5: Present the Plan
+### 4. Create implementation plan
 
-Present the plan to the user using the `ExitPlanMode` tool. Include:
-- Clear, concise steps
-- Relevant file paths with line numbers
-- Commands that will be run
-- Any assumptions or decisions that may need user input
+Develop a detailed plan with these components:
 
-**Important**:
-- Do NOT start implementing without user approval
-- If the issue is ambiguous, ask clarifying questions before planning
-- If multiple approaches are viable, present options and ask for the user's preference
-- Be specific about what will change and why
-- Ensure all changes comply with `STYLE-GUIDE.md` and `AGENTS.md`
+1. **Analysis** — Clearly explain:
+   - What the current documentation says (or doesn't say)
+   - Why it's problematic for users
+   - What impact this has on the user experience
+   - The root cause of the issue
+
+2. **Solution** — Describe the specific changes:
+   - New content to write (with outline of key points)
+   - Sections to restructure (with proposed new organization)
+   - Text to clarify (with examples of better wording)
+   - Outdated content to remove
+   - Code examples to add or fix
+
+3. **Files to modify** — List exact file paths and locations:
+   - Full paths from repository root (e.g., `content/docs/clouds/aws/get-started.md`)
+   - Specific section headings where changes occur
+   - Line numbers if known
+
+4. **Implementation steps** — Break work into logical, ordered tasks:
+   - Update section headings and structure
+   - Rewrite or add explanatory content
+   - Add, update, or fix code examples in `/static/programs`
+   - Add cross-references and internal links
+   - Update or create diagrams/images (if needed - Be wary of images due to maintenance overhead)
+   - Add aliases if moving files (critical for SEO)
+   - Update related documentation for consistency
+
+5. **Verification** — Define how to validate the fix:
+   - Run `make lint` to check for errors
+   - Run `make serve` to preview rendering at http://localhost:1313
+   - Test any code examples using program tests
+   - Verify all links work (internal and external)
+   - Confirm technical accuracy with subject matter experts if needed
+   - Check readability and clarity from user perspective
+
+6. **Considerations** — Note special requirements or impacts:
+   - Version-specific changes needed across multiple doc versions
+   - Related docs that need updates for consistency
+   - Breaking changes or deprecations to communicate
+   - SEO implications (aliases, redirects) if moving or deleting content
+   - Localization impacts if docs are translated
+   - Whether this reveals a larger documentation gap to address separately
+
+### 5. Present for approval
+
+**IMPORTANT: Do NOT implement without user approval.**
+
+Present the complete plan to the user including:
+- Clear, numbered steps in logical order
+- Exact file paths with section headings or line numbers
+- Specific commands that will be run (e.g., `make lint`, `make serve`)
+- Any assumptions made or decisions that need user input
+- Estimated scope (minor fix vs. major restructuring)
+
+If the issue is ambiguous, ask clarifying questions before creating the plan. If multiple valid approaches exist, present options with pros/cons and ask for the user's preference.
