@@ -17,6 +17,7 @@ aliases:
   - /docs/using-pulumi/crossguard/configuration/
   - /docs/iac/packages-and-automation/crossguard/configuration/
   - /docs/iac/using-pulumi/crossguard/configuration/
+  - /docs/insights/policy/configuration/
 ---
 
 <!-- markdownlint-disable ul code -->

@@ -9,6 +9,8 @@ menu:
     name: Wiz Integration
     parent: integrations
     weight: 2
+aliases:
+  - /docs/insights/policy/wiz-integration/
 ---
 
 <!-- TODO: This is a stub for future Wiz integration documentation -->

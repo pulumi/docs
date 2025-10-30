@@ -16,6 +16,7 @@ aliases:
   - /docs/using-pulumi/crossguard/api-policy-manager/
   - /docs/iac/packages-and-automation/crossguard/api-policy-manager/
   - /docs/iac/using-pulumi/crossguard/api-policy-manager/
+  - /docs/insights/policy/api-policy-manager/
 ---
 ## Classes
 

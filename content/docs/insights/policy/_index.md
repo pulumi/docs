@@ -33,7 +33,7 @@ Policy enforcement works in two modes:
 
 Organization administrators can apply policies to specific stacks and cloud accounts. When policies execute during deployments, violations can gate or block updates from proceeding. Policy remediations also allow you to automatically fix violations.
 
-Learn more about [Policy as Code core concepts](/docs/insights/policy/core-concepts/).
+Learn more about [Policy as Code core concepts](/docs/insights/policy/deprecated/core-concepts/).
 
 ## Languages
 
@@ -61,7 +61,7 @@ For a detailed guide on configuring policies for discovered resources, visit the
 Before configuring policies, ensure:
 
 - Appropriate permissions to configure policies
-- One or more policy packs ([pre-built](/docs/insights/policy/pre-built-packs/) or custom) added to the organization
+- One or more policy packs ([pre-built](/docs/insights/policy/policy-packs/pre-built-packs/) or custom) added to the organization
 - One cloud account or Pulumi Stack:
   - For audit policies: Cloud accounts connected to Pulumi Cloud
   - For preventative policies: One or more Pulumi stacks
@@ -96,15 +96,15 @@ Learn more about [Policy Findings](/docs/insights/policy/policy-findings/) or ac
 
 ## Compliance ready policy packs
 
-Pulumi provides comprehensive predefined policies for AWS, Azure, Google Cloud, and Kubernetes through [Compliance Ready Policies](/docs/insights/policy/compliance-ready-policies/). These policies help you enforce security frameworks like CIS, PCI DSS, and SOC 2 with minimal configuration.
+Pulumi provides comprehensive predefined policies for AWS, Azure, Google Cloud, and Kubernetes through [Compliance Ready Policies](/docs/insights/policy/deprecated/compliance-ready-policies/). These policies help you enforce security frameworks like CIS, PCI DSS, and SOC 2 with minimal configuration.
 
 ## AWSGuard
 
-[AWSGuard](/docs/insights/policy/awsguard/) is a configurable policy library that codifies best practices for AWS resources. You can adopt and customize AWSGuard policies in your own policy packs to enforce AWS-specific compliance requirements.
+[AWSGuard](/docs/insights/policy/deprecated/awsguard/) is a configurable policy library that codifies best practices for AWS resources. You can adopt and customize AWSGuard policies in your own policy packs to enforce AWS-specific compliance requirements.
 
 ## Configuring policy packs
 
-Policy packs support configuration to make them reusable across your organization. By default, fields like enforcement level are configurable, and you can specify custom variables alongside each policy. Learn more about [configurable policy packs](/docs/insights/policy/configuration/).
+Policy packs support configuration to make them reusable across your organization. By default, fields like enforcement level are configurable, and you can specify custom variables alongside each policy. Learn more about [configurable policy packs](/docs/insights/policy/deprecated/configuration/).
 
 ## Examples
 

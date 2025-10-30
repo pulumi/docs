@@ -73,9 +73,9 @@ sections:
     link: /docs/insights/policy/preventative-vs-audit-policies/
     description: Block violations before deployment or scan existing resources in audit mode.
   - emoji: ⚠️
-    heading: Policy Violations
-    link: /docs/insights/policy/policy-violations/
-    description: View, manage, and remediate policy violations across your infrastructure.
+    heading: Policy Findings
+    link: /docs/insights/policy/policy-findings/
+    description: View, manage, and remediate policy findings across your infrastructure.
 
 - type: flat
   heading: Have questions?

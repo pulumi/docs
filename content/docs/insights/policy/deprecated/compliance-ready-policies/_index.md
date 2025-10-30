@@ -17,6 +17,7 @@ aliases:
   - /docs/iac/using-pulumi/crossguard/compliance-ready-policies/
   - /docs/using-pulumi/crossguard/compliance-ready-policies/
   - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies/
+  - /docs/insights/policy/compliance-ready-policies/
 ---
 
 Pulumi Compliance Ready Policies, with a comprehensive coverage of AWS, Azure, Google, and Kubernetes, provide

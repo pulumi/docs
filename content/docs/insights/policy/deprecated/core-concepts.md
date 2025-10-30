@@ -19,6 +19,7 @@ aliases:
   - /docs/using-pulumi/crossguard/core-concepts/
   - /docs/iac/packages-and-automation/crossguard/core-concepts/
   - /docs/iac/using-pulumi/crossguard/core-concepts/
+  - /docs/insights/policy/core-concepts/
 ---
 
 Pulumi Policy provides policy as code capabilities that can be used in two key ways:

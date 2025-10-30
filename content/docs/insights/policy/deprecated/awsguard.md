@@ -18,6 +18,7 @@ aliases:
   - /docs/using-pulumi/crossguard/awsguard/
   - /docs/iac/packages-and-automation/crossguard/awsguard/
   - /docs/iac/using-pulumi/crossguard/awsguard/
+  - /docs/insights/policy/awsguard/
 ---
 <!-- markdownlint-disable ul code -->
 

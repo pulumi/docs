@@ -1,8 +1,8 @@
 ---
-title_tag: "Policy Violations | Pulumi Policy"
-meta_desc: Learn about Policy Violations in Pulumi Policy and how to manage compliance in your cloud infrastructure.
-title: Policy Violations
-h1: Policy Violations
+title_tag: "Policy Findings | Pulumi Policy"
+meta_desc: Learn about Policy Findings in Pulumi Policy and how to manage compliance in your cloud infrastructure.
+title: Policy Findings
+h1: Policy Findings
 weight: 2
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
@@ -16,6 +16,8 @@ aliases:
   - /docs/using-pulumi/crossguard/policy-violations/
   - /docs/iac/packages-and-automation/crossguard/policy-violations/
   - /docs/iac/using-pulumi/crossguard/policy-violations/
+  - /docs/insights/policy/policy-violations/
+  - /docs/insights/policy/policy-packs/policy-violations/
 ---
 
 ## Overview
@@ -92,7 +94,7 @@ These fields can be edited directly from the Issues tab or from the individual i
 
 ### Issue details
 
-Selecting an issue from the table opens the issue detail view, which provides comprehensive context about the violation. The detail view displays:
+Selecting an issue from the table opens the issue detail view, which provides comprehensive context about the finding. The detail view displays:
 
 - **Policy information:** Policy pack name and version, policy group, policy group type (Audit or Preventative), and severity
 - **Resource information:** Entity type (Stack or Insights-Account), entity project, entity name, issue resource ID, and cloud provider
@@ -109,7 +111,7 @@ From this view, you can also assign the issue, update its status and priority, o
 1. Navigate to the stack with a policy violation.
 2. It will show on the bottom of the Overview page.
 
-Clicking on a resource in a violated state will also show the policy violation on the Resource page. Viewing a stack update where a policy violation occurred will detail the policy violation.
+Clicking on a resource in a violated state will also show the policy finding on the Resource page. Viewing a stack update where a policy violation occurred will detail the policy finding.
 
 ## Accessing Policy Findings via API
 

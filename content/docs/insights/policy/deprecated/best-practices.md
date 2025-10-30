@@ -17,6 +17,7 @@ aliases:
   - /docs/using-pulumi/crossguard/best-practices/
   - /docs/iac/packages-and-automation/crossguard/best-practices/
   - /docs/iac/using-pulumi/crossguard/best-practices/
+  - /docs/insights/policy/best-practices/
 ---
 
 ## Naming policies

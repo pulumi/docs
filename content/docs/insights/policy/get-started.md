@@ -24,7 +24,7 @@ aliases:
   - /docs/iac/packages-and-automation/crossguard/get-started/
 ---
 
-Pulumi Policy enforces compliance, security, and best practices across your cloud infrastructure—whether managed by Pulumi, provisioned by other tools, or created manually.
+Pulumi Policy enforces compliance, security, and best practices across your cloud infrastructure, whether managed by Pulumi, provisioned by other tools, or created manually.
 
 Policy enforcement is applied in two ways:
 
@@ -42,8 +42,6 @@ To follow this guide, ensure you have:
 - **For audit policies**: Cloud accounts connected via [Insights Discovery](/docs/insights/discovery/).
 - Organization admin permissions to configure policies.
 
-Don't have access? [Learn about Pulumi editions](/pricing/).
-
 ## Understanding the Policies page
 
 The Policies page is the central hub for managing Pulumi Policy. To get there, navigate to **Management** > **Policies** in the left navigation.
@@ -52,6 +50,8 @@ The page displays two tabs: **Policy Packs** and **Policy Groups**.
 
 ### Policy Packs
 
+![The Policies page with the Policy Packs tab selected](../media/policy-packs.png)
+
 The Policy Packs tab has two switchable views:
 
 - **Organization**: Policy packs published to your organization and ready to apply. This includes:
@@ -59,7 +59,7 @@ The Policy Packs tab has two switchable views:
   - Pulumi-provided policy packs you've added from the marketplace
 - **Available**: Pre-authored policy packs from Pulumi that you can add to your organization
 
-Click any policy pack in either view to see its details across three tabs:
+Select any policy pack in either view to see its details across three tabs:
 
 - **Overview**: Displays pack metadata including name, publisher, version, source, and tags
 - **Policies**: Lists individual policies in the pack with their descriptions and enforcement levels
@@ -70,6 +70,8 @@ You may not see any packs in the Organization view until you add some from the A
 {{% /notes %}}
 
 ### Policy Groups
+
+![The Policies page with the Policy Groups tab selected](../media/policy-groups.png)
 
 Policy groups enforce policy packs across stacks or accounts within your organization. The Policy Groups tab displays two types:
 
@@ -89,23 +91,23 @@ Your organization includes a default policy group for each type: one for prevent
 
 To create a policy group for stacks:
 
-1. Click **Create preventative policy group**
+1. Select **Create preventative policy group**
 1. **Name**: Enter a descriptive name for the policy group
-1. **Entities**: Click **Choose stacks** to select which stacks this group will govern
-1. **Policy Packs**: Click **Select policy packs** to choose which policy packs to enforce
+1. **Entities**: Select **Choose stacks** to select which stacks this group will govern
+1. **Policy Packs**: Select **Select policy packs** to choose which policy packs to enforce
 1. Configure enforcement level (Advisory or Mandatory) for each policy pack
-1. Click **Save Policy Group**
+1. Select **Save Policy Group**
 
 #### Creating an audit policy group
 
 To create a policy group for cloud accounts:
 
-1. Click **Create audit policy group**
+1. Select **Create audit policy group**
 1. **Name**: Enter a descriptive name for the policy group
-1. **Entities**: Click **Choose accounts** to select which cloud accounts this group will scan
-1. **Policy Packs**: Click **Select policy packs** to choose which policy packs to enforce
+1. **Entities**: Select **Choose accounts** to select which cloud accounts this group will scan
+1. **Policy Packs**: Select **Select policy packs** to choose which policy packs to enforce
 1. Configure enforcement level (Advisory or Mandatory) for each policy pack
-1. Click **Save Policy Group**
+1. Select **Save Policy Group**
 
 ## Monitor compliance
 
@@ -124,15 +126,15 @@ Each policy violation creates an issue that you can act on:
 
 This workflow—setting up policies, monitoring findings, and taking action—forms the core compliance management cycle in Pulumi Policy.
 
-For detailed information on managing findings, see [Policy Violations](/docs/insights/policy/policy-violations/).
+For detailed information on managing findings, see [Policy Findings](/docs/insights/policy/policy-findings/).
 
 ## Learn more
 
 To deepen your understanding of Pulumi Policy:
 
-- **Write custom policies**: [Authoring Guide](/docs/insights/policy/authoring/)
-- **Explore pre-built policy packs**: [Pre-built Policy Packs](/docs/insights/policy/pre-built-packs/)
-- **View and manage policy findings**: [Policy Violations](/docs/insights/policy/policy-violations/)
+- **Write custom policies**: [Authoring Guide](/docs/insights/policy/policy-packs/authoring/)
+- **Explore pre-built policy packs**: [Pre-built Policy Packs](/docs/insights/policy/policy-packs/pre-built-packs/)
+- **View and manage policy findings**: [Policy Findings](/docs/insights/policy/policy-findings/)
 - **Learn about enforcement modes**: [Preventative vs. Audit Policies](/docs/insights/policy/preventative-vs-audit-policies/)
-- **Configure policy pack settings**: [Policy Configuration](/docs/insights/policy/configuration/)
+- **Configure policy pack settings**: [Policy Configuration](/docs/insights/policy/deprecated/configuration/)
 - **Understand core concepts in depth**: [Policy Concepts](/docs/using-pulumi/crossguard/core-concepts/)

@@ -18,6 +18,7 @@ aliases:
   - /docs/using-pulumi/crossguard/snyk-policy/
   - /docs/iac/packages-and-automation/crossguard/snyk-policy/
   - /docs/iac/using-pulumi/crossguard/snyk-policy/
+  - /docs/insights/policy/snyk-policy/
 ---
 <!-- markdownlint-disable ul code -->
 
