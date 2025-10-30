@@ -235,7 +235,7 @@ If you list the contents of your directory, you'll see some key files:
 
 {{% choosable language "javascript,typescript,python,go,csharp,java" %}}
 
-    - <span>{{< langfile >}}</span> contains your project's main code that declares a new S3 bucket
+    - {{< langfile >}} contains your project's main code that declares a new S3 bucket
     - `Pulumi.yaml` is a [project file](/docs/iac/concepts/projects/project-file) containing metadata about your project like its name
 
 {{% /choosable %}}
